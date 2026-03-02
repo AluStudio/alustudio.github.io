@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import "../assets/scss/HeroBanner.scss";
-const heroImg = `${import.meta.env.BASE_URL}iOSview.png`
 const HeroBanner = () => {
   const { t } = useTranslation();
 
@@ -19,30 +18,36 @@ const HeroBanner = () => {
             <p className="lead mb-5 subtitle-text">{t("banner.subtitle")}</p>
 
             <div className="download-buttons d-flex flex-wrap gap-3">
-  {/* App Store */}
-  <a href="#" className="btn download-btn d-flex align-items-center py-2 px-3">
-    <i className="bi bi-apple fs-2 me-2"></i>
-    <div className="btn-text-container">
-      <small>{t("banner.app_store.sub")}</small>
-      <strong>{t("banner.app_store.main")}</strong>
-    </div>
-  </a>
+              {/* App Store */}
+              <a
+                href="#"
+                className="btn download-btn d-flex align-items-center py-2 px-3"
+              >
+                <i className="bi bi-apple fs-2 me-2"></i>
+                <div className="btn-text-container">
+                  <small>{t("banner.app_store.sub")}</small>
+                  <strong>{t("banner.app_store.main")}</strong>
+                </div>
+              </a>
 
-  {/* Play Store */}
-  <a href="#" className="btn download-btn d-flex align-items-center py-2 px-3">
-    <i className="bi bi-google-play fs-3 me-2"></i>
-    <div className="btn-text-container">
-      <small>{t("banner.play_store.sub")}</small>
-      <strong>{t("banner.play_store.main")}</strong>
-    </div>
-  </a>
-</div>
+              {/* Play Store */}
+              <a
+                href="#"
+                className="btn download-btn d-flex align-items-center py-2 px-3"
+              >
+                <i className="bi bi-google-play fs-3 me-2"></i>
+                <div className="btn-text-container">
+                  <small>{t("banner.play_store.sub")}</small>
+                  <strong>{t("banner.play_store.main")}</strong>
+                </div>
+              </a>
+            </div>
           </div>
 
           <div className="col-lg-6 text-center position-relative">
             <div className="hero-img-wrapper">
               <img
-                src={heroImg}
+                src="iOSview.png"
                 alt="App Preview"
                 className="img-fluid floating-mockup ios-view-image"
               />
