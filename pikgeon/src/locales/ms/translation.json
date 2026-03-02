@@ -1,0 +1,77 @@
+{
+  "title": "Helo Pikgeon",
+  "nav": {
+    "features": "Ciri-ciri",
+    "statistics": "Statistik",
+    "privacy": "Privasi",
+    "languages": "Bahasa",
+    "download": "Muat turun"
+  },
+  "banner": {
+    "title": "Susun kenangan kad pos anda dengan teratur.",
+    "subtitle": "Pengecaman OCR pintar untuk menjejaki perjalanan penghantaran anda. Pemprosesan tempatan sepenuhnya untuk melindungi privasi anda.",
+    "app_store": { "sub": "Muat turun di", "main": "App Store" },
+    "play_store": { "sub": "DAPATKAN DI", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Ciri Pengecaman Teras",
+    "subtitle": "Buat log digital dengan mudah untuk menjejaki pertukaran kad pos anda.",
+    "step1": {
+      "title": "Kongsi ke App",
+      "desc": "Pilih foto dalam galeri anda dan kongsi terus ke app untuk bermula."
+    },
+    "step2": {
+      "title": "Imbasan OCR Pintar",
+      "desc": "OCR luar talian terkemuka mengekstrak tarikh, lokasi dan teks secara automatik."
+    },
+    "step3": {
+      "title": "Jana Log Penghantaran",
+      "desc": "Padankan rakan dan tarikh secara automatik untuk membina senarai mel digital yang teratur."
+    }
+  },
+  "stats": {
+    "title": "Statistik & Pandangan",
+    "subtitle": "Menjejaki setiap hubungan, memvisualisasikan perjalanan anda.",
+    "ranking_friends": {
+      "title": "Kedudukan Rakan Terbaik",
+      "desc": "Siapa hubungan anda yang paling kerap? Lihat tahap keintiman berdasarkan kekerapan penghantaran."
+    },
+    "ranking_postcards": {
+      "title": "Kad Pos Paling Banyak Dihantar",
+      "desc": "Reka bentuk mana yang paling popular? Jejaki gaya dan tema kegemaran anda sekilas pandang."
+    },
+    "monthly_trend": {
+      "title": "Trend Penghantaran Bulanan",
+      "desc": "Visualisasikan tabiat mel anda melalui carta dan tangkap irama hubungan anda."
+    }
+  },
+  "privacy": {
+    "title": "Privasi & Keselamatan Data",
+    "subtitle": "Data anda kekal di bawah kawalan anda. Kami berjanji:",
+    "local_storage": {
+      "title": "Storan 100% Tempatan",
+      "desc": "Semua sejarah pengecaman dan tetapan disimpan secara eksklusif pada peranti anda dan tidak pernah dimuat naik ke mana-mana pelayan."
+    },
+    "offline_ocr": {
+      "title": "Teknologi OCR Luar Talian",
+      "desc": "Pengecaman imej diproses sepenuhnya pada peranti. Imej dipadamkan dari memori serta-merta selepas pemprosesan."
+    },
+    "no_tracking": {
+      "title": "Perlindungan Penjejakan Sifar",
+      "desc": "Kami tidak mengumpul sebarang data tingkah laku. Privasi anda kekal selamat walaupun dalam mod luar talian."
+    }
+  },
+  "download": {
+    "title": "Muat Turun App",
+    "subTitle": "Alami set ciri penuh di iOS dan Android dan sentiasa dikemas kini di mana sahaja.",
+    "download_action": "Muat turun",
+    "download_iOS_action": "Muat turun iOS",
+    "download_android_action": "Muat turun Android"
+  },
+  "footer": {
+    "goal": "Pengurus Kad Pos Pikmin",
+    "copyright": "Alu Studio Semua hak terpelihara",
+    "contact": "Hubungi Kami",
+    "unofficialNotice": "Pengurus kad pos Pikmin untuk peminat. Ini adalah alat tidak rasmi."
+  }
+}

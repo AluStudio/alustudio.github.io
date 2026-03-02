@@ -1,0 +1,77 @@
+{
+  "title": "Kamusta Pikgeon",
+  "nav": {
+    "features": "Mga Tampok",
+    "statistics": "Estadistika",
+    "privacy": "Privacy",
+    "languages": "Mga Wika",
+    "download": "I-download"
+  },
+  "banner": {
+    "title": "Panatilihing organisado ang iyong mga alaala ng postcard.",
+    "subtitle": "Matalinong OCR na pagkilala para subaybayan ang iyong paglalakbay sa pagpapadala. Ganap na lokal na pagpoproseso upang protektahan ang iyong privacy.",
+    "app_store": { "sub": "I-download sa", "main": "App Store" },
+    "play_store": { "sub": "MAKUHA SA", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Mga Pangunahing Tampok ng Pagkilala",
+    "subtitle": "Madaling lumikha ng mga digital na log para subaybayan ang iyong mga palitan ng postcard.",
+    "step1": {
+      "title": "Ibahagi sa App",
+      "desc": "Pumili ng larawan sa iyong gallery at ibahagi nang direkta sa app para magsimula."
+    },
+    "step2": {
+      "title": "Matalinong OCR Scan",
+      "desc": "Nangungunang offline na OCR ay awtomatikong kumukuha ng mga petsa, lokasyon, at teksto."
+    },
+    "step3": {
+      "title": "Bumuo ng Mga Log ng Paghahatid",
+      "desc": "Awtomatikong itutugma ang mga kaibigan at petsa upang bumuo ng isang nakaayos na digital na listahan ng koreo."
+    }
+  },
+  "stats": {
+    "title": "Estadistika at Mga Pananaw",
+    "subtitle": "Sinusubaybayan ang bawat koneksyon, binabanghay ang iyong paglalakbay.",
+    "ranking_friends": {
+      "title": "Pinakamataas na Ranggo ng mga Kaibigan",
+      "desc": "Sino ang iyong pinaka-madalas na koneksyon? Tingnan ang mga antas ng intimacy batay sa dalas ng paghahatid."
+    },
+    "ranking_postcards": {
+      "title": "Pinaka-Ipinadaling mga Postcard",
+      "desc": "Aling mga disenyo ang pinakasikat? Subaybayan ang iyong mga paboritong estilo at tema sa isang tingin."
+    },
+    "monthly_trend": {
+      "title": "Buwanang Mga Trend ng Pagpapadala",
+      "desc": "Biswal na ipakita ang iyong mga gawi sa pagpapadala sa pamamagitan ng mga tsart at makuha ang ritmo ng iyong mga koneksyon."
+    }
+  },
+  "privacy": {
+    "title": "Privacy at Seguridad ng Data",
+    "subtitle": "Ang iyong data ay nananatili sa ilalim ng iyong kontrol. Nangangako kami:",
+    "local_storage": {
+      "title": "100% Lokal na Imbakan",
+      "desc": "Lahat ng kasaysayan ng pagkilala at mga setting ay nakaimbak nang eksklusibo sa iyong device at hindi kailanman ina-upload sa anumang server."
+    },
+    "offline_ocr": {
+      "title": "Teknolohiya ng Offline OCR",
+      "desc": "Ang pagkilala ng imahe ay pinoproseso nang ganap sa device. Ang mga imahe ay tinatanggal sa memorya kaagad pagkatapos ng pagpoproseso."
+    },
+    "no_tracking": {
+      "title": "Zero Tracking Protection",
+      "desc": "Hindi kami nangongolekta ng anumang data ng pag-uugali. Ang iyong privacy ay nananatiling ligtas kahit offline."
+    }
+  },
+  "download": {
+    "title": "I-download ang App",
+    "subTitle": "Maranasan ang buong hanay ng tampok sa iOS at Android at manatiling updated kahit saan.",
+    "download_action": "I-download",
+    "download_iOS_action": "I-download ang iOS",
+    "download_android_action": "I-download ang Android"
+  },
+  "footer": {
+    "goal": "Pikmin Postcard Manager",
+    "copyright": "Alu Studio Lahat ng karapatan ay nakalaan",
+    "contact": "Makipag-ugnayan sa Amin",
+    "unofficialNotice": "Pikmin postcard manager para sa mga fans. Ito ay isang hindi opisyal na tool."
+  }
+}

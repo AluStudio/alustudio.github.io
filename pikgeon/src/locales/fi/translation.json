@@ -1,0 +1,77 @@
+{
+  "title": "Hei Pikgeon",
+  "nav": {
+    "features": "Ominaisuudet",
+    "statistics": "Tilastot",
+    "privacy": "Yksityisyys",
+    "languages": "Kielet",
+    "download": "Lataa"
+  },
+  "banner": {
+    "title": "Pidä postikortin muistosi järjestyksessä.",
+    "subtitle": "Älykäs OCR-tunnistus lähettämismatkasi seuraamiseen. Täysin paikallinen käsittely yksityisyytesi suojaamiseksi.",
+    "app_store": { "sub": "Lataa", "main": "App Storesta" },
+    "play_store": { "sub": "HANKI", "main": "Google Playsta" }
+  },
+  "features": {
+    "title": "Ydintunnistusominaisuudet",
+    "subtitle": "Luo helposti digitaalisia lokeja postikorttivaihtojesi seuraamiseksi.",
+    "step1": {
+      "title": "Jaa sovellukseen",
+      "desc": "Valitse kuva galleriastasi ja jaa se suoraan sovellukseen aloittaaksesi."
+    },
+    "step2": {
+      "title": "Älykäs OCR-skannaus",
+      "desc": "Johtava offline-OCR poimii automaattisesti päivämäärät, sijainnit ja tekstin."
+    },
+    "step3": {
+      "title": "Luo toimituslokeja",
+      "desc": "Yhdistää automaattisesti ystävät ja päivämäärät rakentaakseen jäsennellyn digitaalisen postituslistan."
+    }
+  },
+  "stats": {
+    "title": "Tilastot ja oivallukset",
+    "subtitle": "Seuraa jokaista yhteyttä, visualisoi matkasi.",
+    "ranking_friends": {
+      "title": "Parhaiden ystävien ranking",
+      "desc": "Kuka on yleisin yhteytesi? Katso läheisyystasot toimitustiheyden perusteella."
+    },
+    "ranking_postcards": {
+      "title": "Eniten lähetetyt postikortit",
+      "desc": "Mitkä mallit ovat suosituimpia? Seuraa suosikkityylejäsi ja -teemojasi yhdellä silmäyksellä."
+    },
+    "monthly_trend": {
+      "title": "Kuukausittaiset lähetystrendit",
+      "desc": "Visualisoi postitustottumuksesi kaavioiden avulla ja tavoita yhteyksiesi rytmi."
+    }
+  },
+  "privacy": {
+    "title": "Yksityisyys ja tietoturva",
+    "subtitle": "Tietosi pysyvät hallinnassasi. Lupaamme:",
+    "local_storage": {
+      "title": "100% paikallinen tallennus",
+      "desc": "Kaikki tunnistushistoria ja asetukset tallennetaan yksinomaan laitteellesi, eikä niitä koskaan ladata palvelimelle."
+    },
+    "offline_ocr": {
+      "title": "Offline OCR -teknologia",
+      "desc": "Kuvantunnistus käsitellään kokonaan laitteella. Kuvat poistetaan muistista välittömästi käsittelyn jälkeen."
+    },
+    "no_tracking": {
+      "title": "Nollasuojaus seurannalta",
+      "desc": "Emme kerää käyttäytymistietoja. Yksityisyytesi pysyy turvassa myös offline-tilassa."
+    }
+  },
+  "download": {
+    "title": "Lataa sovellus",
+    "subTitle": "Koe täysi ominaisuusvalikoima iOS:lla ja Androidilla ja pysy ajan tasalla missä tahansa.",
+    "download_action": "Lataa",
+    "download_iOS_action": "Lataa iOS",
+    "download_android_action": "Lataa Android"
+  },
+  "footer": {
+    "goal": "Pikmin-postikorttihallinta",
+    "copyright": "Alu Studio Kaikki oikeudet pidätetään",
+    "contact": "Ota yhteyttä",
+    "unofficialNotice": "Pikmin-postikorttihallinta faneille. Tämä on epävirallinen työkalu."
+  }
+}

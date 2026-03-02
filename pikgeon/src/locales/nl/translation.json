@@ -1,0 +1,77 @@
+{
+  "title": "Hallo Pikgeon",
+  "nav": {
+    "features": "Functies",
+    "statistics": "Statistieken",
+    "privacy": "Privacy",
+    "languages": "Talen",
+    "download": "Downloaden"
+  },
+  "banner": {
+    "title": "Houd je ansichtkaart-herinneringen georganiseerd.",
+    "subtitle": "Slimme OCR-herkenning om je verzendtraject bij te houden. Volledig lokale verwerking om je privacy te beschermen.",
+    "app_store": { "sub": "Download in de", "main": "App Store" },
+    "play_store": { "sub": "BESCHIKBAAR OP", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Kern-Herkenningsmogelijkheden",
+    "subtitle": "Maak eenvoudig digitale logboeken om je ansichtkaartuitwisselingen bij te houden.",
+    "step1": {
+      "title": "Delen met de App",
+      "desc": "Selecteer een foto in je galerij en deel deze direct met de app om te beginnen."
+    },
+    "step2": {
+      "title": "Slimme OCR-scan",
+      "desc": "Toonaangevende offline OCR haalt automatisch datums, locaties en tekst op."
+    },
+    "step3": {
+      "title": "Afleveringslogboeken Genereren",
+      "desc": "Koppelt automatisch vrienden en datums om een gestructureerde digitale verzendlijst te maken."
+    }
+  },
+  "stats": {
+    "title": "Statistieken & Inzichten",
+    "subtitle": "Elke verbinding bijhouden, je reis visualiseren.",
+    "ranking_friends": {
+      "title": "Top Vrienden Ranglijst",
+      "desc": "Wie is je meest frequente connectie? Bekijk intimiteitslevels op basis van verzendfrequentie."
+    },
+    "ranking_postcards": {
+      "title": "Meest Verzonden Ansichtkaarten",
+      "desc": "Welke ontwerpen zijn het populairst? Volg je favoriete stijlen en thema's in één oogopslag."
+    },
+    "monthly_trend": {
+      "title": "Maandelijkse Verzendtrends",
+      "desc": "Visualiseer je verzendgewoonten via grafieken en vang het ritme van je verbindingen."
+    }
+  },
+  "privacy": {
+    "title": "Privacy & Gegevensbeveiliging",
+    "subtitle": "Je gegevens blijven onder jouw controle. We beloven:",
+    "local_storage": {
+      "title": "100% Lokale Opslag",
+      "desc": "Alle herkenningsgeschiedenissen en instellingen worden uitsluitend op je apparaat opgeslagen en nooit naar een server geüpload."
+    },
+    "offline_ocr": {
+      "title": "Offline OCR-technologie",
+      "desc": "Beeldherkenning wordt volledig op het apparaat verwerkt. Afbeeldingen worden onmiddellijk na verwerking uit het geheugen verwijderd."
+    },
+    "no_tracking": {
+      "title": "Nul-Tracking Bescherming",
+      "desc": "We verzamelen geen gedragsgegevens. Je privacy blijft veilig, zelfs offline."
+    }
+  },
+  "download": {
+    "title": "App Downloaden",
+    "subTitle": "Ervaar de volledige functieset op iOS en Android en blijf altijd en overal up-to-date.",
+    "download_action": "Downloaden",
+    "download_iOS_action": "iOS downloaden",
+    "download_android_action": "Android downloaden"
+  },
+  "footer": {
+    "goal": "Pikmin Ansichtkaart Manager",
+    "copyright": "Alu Studio Alle rechten voorbehouden",
+    "contact": "Neem contact op",
+    "unofficialNotice": "Pikmin ansichtkaart manager voor fans. Dit is een onofficieel hulpmiddel."
+  }
+}
