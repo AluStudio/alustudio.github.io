@@ -1,0 +1,77 @@
+{
+  "title": "Hello Pikgeon",
+  "nav": {
+    "features": "機能",
+    "statistics": "統計",
+    "privacy": "プライバシー",
+    "languages": "言語",
+    "download": "ダウンロード"
+  },
+  "banner": {
+    "title": "ポストカードの思い出を、スマートに整理。",
+    "subtitle": "スマートOCR認識で郵送の軌跡を記録。プライバシーを守る完全ローカル処理。",
+    "app_store": { "sub": "App Store から", "main": "ダウンロード" },
+    "play_store": { "sub": "Google Play で", "main": "手に入れよう" }
+  },
+  "features": {
+    "title": "コア認識機能",
+    "subtitle": "デジタルログを簡単に作成し、ポストカードの交換をスムーズに記録します。",
+    "step1": {
+      "title": "アプリに共有",
+      "desc": "ギャラリーから写真を選択し、アプリに直接共有して開始します。"
+    },
+    "step2": {
+      "title": "スマートOCRスキャン",
+      "desc": "最先端のオフラインOCRが日付、場所、テキストを自動抽出します。"
+    },
+    "step3": {
+      "title": "生成配送ログ",
+      "desc": "友人や日付を自動照合し、構造化されたデジタル郵送リストを作成します。"
+    }
+  },
+  "stats": {
+    "title": "統計とインサイト",
+    "subtitle": "すべての繋がりを追跡し、あなたの歩みを可視化します。",
+    "ranking_friends": {
+      "title": "親友ランキング",
+      "desc": "最も頻繁にやり取りしているのは誰？配送頻度に基づいた親密度を確認。"
+    },
+    "ranking_postcards": {
+      "title": "最も送られたカード",
+      "desc": "どのデザインが一番人気？お気に入りのスタイルやテーマを一目で把握。"
+    },
+    "monthly_trend": {
+      "title": "月間配送トレンド",
+      "desc": "チャートを通じて郵送の習慣を可視化し、繋がりのリズムを捉えます。"
+    }
+  },
+  "privacy": {
+    "title": "プライバシーとデータセキュリティ",
+    "subtitle": "データはあなたの管理下にあります。私たちの約束：",
+    "local_storage": {
+      "title": "100% ローカル保存",
+      "desc": "すべての認識履歴と設定はデバイス内にのみ保存され、サーバーにアップロードされることはありません。"
+    },
+    "offline_ocr": {
+      "title": "オフラインOCR技術",
+      "desc": "画像認識はすべてデバイス上で処理されます。処理後すぐにメモリから消去され、デジタルの足跡を残しません。"
+    },
+    "no_tracking": {
+      "title": "ゼロトラッキング保護",
+      "desc": "行動データは一切収集しません。オフラインでもプライバシーは安全に守られます。"
+    }
+  },
+  "download": {
+    "title": "アプリをダウンロード",
+    "subTitle": "iOSとAndroidで全機能を体験。いつでもどこでも最新情報をチェック。",
+    "download_action": "ダウンロード",
+    "download_iOS_action": "iOS版をダウンロード",
+    "download_android_action": "Android版をダウンロード"
+  },
+  "footer": {
+    "goal": "Pikmin ポストカードマネージャー",
+    "copyright": "Alu Studio All rights reserved",
+    "contact": "お問い合わせ",
+    "unofficialNotice": "ファンのためのPikminポストカードマネージャー。これは非公式のツールです。"
+  }
+}

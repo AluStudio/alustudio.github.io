@@ -4,15 +4,21 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./locales/en/translation.json";
 import zh from "./locales/zh/translation.json";
+import ja from "./locales/ja/translation.json";
+import ko from "./locales/ko/translation.json";
 
 export const supportedLanguages = [
   { code: "zh", label: "繁體中文" },
-  { code: "en", label: "English" }
+  { code: "en", label: "English" },
+  { code: "ja", label: "日本語" },
+  { code: "ko", label: "한국어" },
 ];
 
 const resources = {
   en: { translation: en },
-  zh: { translation: zh }
+  zh: { translation: zh },
+  ja: { translation: ja },
+  ko: { translation: ko },
 };
 
 i18n
