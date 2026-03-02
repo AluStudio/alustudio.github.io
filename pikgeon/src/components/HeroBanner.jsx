@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "../assets/scss/HeroBanner.scss";
-import heroImg from "../assets/images/iOSview.png"
+const heroImg = `${import.meta.env.BASE_URL}iOSview.png`
 const HeroBanner = () => {
   const { t } = useTranslation();
 
