@@ -1,0 +1,77 @@
+{
+  "title": "Hallo Pikgeon",
+  "nav": {
+    "features": "Funktionen",
+    "statistics": "Statistiken",
+    "privacy": "Datenschutz",
+    "languages": "Sprachen",
+    "download": "Herunterladen"
+  },
+  "banner": {
+    "title": "Behalte deine Postkarten-Erinnerungen im Überblick.",
+    "subtitle": "Intelligente OCR-Erkennung zur Verfolgung deiner Versandreise. Vollständige lokale Verarbeitung zum Schutz deiner Privatsphäre.",
+    "app_store": { "sub": "Laden im", "main": "App Store" },
+    "play_store": { "sub": "JETZT BEI", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Kern-Erkennungsfunktionen",
+    "subtitle": "Erstelle mühelos digitale Protokolle zur Verfolgung deines Postkartenaustauschs.",
+    "step1": {
+      "title": "Mit App teilen",
+      "desc": "Wähle ein Foto in deiner Galerie aus und teile es direkt mit der App."
+    },
+    "step2": {
+      "title": "Intelligenter OCR-Scan",
+      "desc": "Führendes Offline-OCR extrahiert automatisch Daten, Orte und Text."
+    },
+    "step3": {
+      "title": "Versandprotokoll erstellen",
+      "desc": "Gleicht automatisch Freunde und Daten ab, um eine strukturierte digitale Versandliste zu erstellen."
+    }
+  },
+  "stats": {
+    "title": "Statistiken & Einblicke",
+    "subtitle": "Jede Verbindung verfolgen, deine Reise visualisieren.",
+    "ranking_friends": {
+      "title": "Top-Freunde-Ranking",
+      "desc": "Wer ist deine häufigste Verbindung? Sieh Vertrautheitslevel basierend auf Versandhäufigkeit."
+    },
+    "ranking_postcards": {
+      "title": "Meistversendete Postkarten",
+      "desc": "Welche Designs sind am beliebtesten? Verfolge deine Lieblingsstile auf einen Blick."
+    },
+    "monthly_trend": {
+      "title": "Monatliche Versandtrends",
+      "desc": "Visualisiere deine Versandgewohnheiten durch Diagramme und erfasse den Rhythmus deiner Verbindungen."
+    }
+  },
+  "privacy": {
+    "title": "Datenschutz & Datensicherheit",
+    "subtitle": "Deine Daten bleiben unter deiner Kontrolle. Wir versprechen:",
+    "local_storage": {
+      "title": "100% Lokale Speicherung",
+      "desc": "Alle Erkennungsverläufe und Einstellungen werden ausschließlich auf deinem Gerät gespeichert und niemals hochgeladen."
+    },
+    "offline_ocr": {
+      "title": "Offline-OCR-Technologie",
+      "desc": "Die Bilderkennung wird vollständig auf dem Gerät verarbeitet. Bilder werden sofort nach der Verarbeitung aus dem Speicher gelöscht."
+    },
+    "no_tracking": {
+      "title": "Null-Tracking-Schutz",
+      "desc": "Wir erfassen keine Verhaltensdaten. Deine Privatsphäre bleibt auch offline geschützt."
+    }
+  },
+  "download": {
+    "title": "App herunterladen",
+    "subTitle": "Erlebe den vollen Funktionsumfang auf iOS und Android – jederzeit und überall.",
+    "download_action": "Herunterladen",
+    "download_iOS_action": "iOS herunterladen",
+    "download_android_action": "Android herunterladen"
+  },
+  "footer": {
+    "goal": "Pikmin Postkarten-Manager",
+    "copyright": "Alu Studio Alle Rechte vorbehalten",
+    "contact": "Kontakt",
+    "unofficialNotice": "Pikmin-Postkarten-Manager für Fans. Dies ist ein inoffizielles Tool."
+  }
+}

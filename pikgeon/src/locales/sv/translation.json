@@ -1,0 +1,77 @@
+{
+  "title": "Hej Pikgeon",
+  "nav": {
+    "features": "Funktioner",
+    "statistics": "Statistik",
+    "privacy": "Integritet",
+    "languages": "Språk",
+    "download": "Ladda ner"
+  },
+  "banner": {
+    "title": "Håll dina vykorts-minnen organiserade.",
+    "subtitle": "Smart OCR-igenkänning för att spåra din sändningsresa. Helt lokal bearbetning för att skydda din integritet.",
+    "app_store": { "sub": "Ladda ner på", "main": "App Store" },
+    "play_store": { "sub": "HÄMTA PÅ", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Kärn-Igenkänningsfunktioner",
+    "subtitle": "Skapa enkelt digitala loggar för att spåra dina vykortutbyten.",
+    "step1": {
+      "title": "Dela till App",
+      "desc": "Välj ett foto i ditt galleri och dela det direkt till appen för att starta."
+    },
+    "step2": {
+      "title": "Smart OCR-skanning",
+      "desc": "Ledande offline-OCR extraherar automatiskt datum, platser och text."
+    },
+    "step3": {
+      "title": "Generera Leveransloggar",
+      "desc": "Matchar automatiskt vänner och datum för att bygga en strukturerad digital sändlista."
+    }
+  },
+  "stats": {
+    "title": "Statistik & Insikter",
+    "subtitle": "Spåra varje anslutning, visualisera din resa.",
+    "ranking_friends": {
+      "title": "Topprankade Vänner",
+      "desc": "Vem är din mest frekventa anslutning? Se intimitetsniåer baserat på leveransfrekvens."
+    },
+    "ranking_postcards": {
+      "title": "Mest Skickade Vykort",
+      "desc": "Vilka designer är mest populära? Spåra dina favoritstilarna och teman i en blick."
+    },
+    "monthly_trend": {
+      "title": "Månatliga Leveranstrender",
+      "desc": "Visualisera dina postvanor genom diagram och fånga rytmen av dina anslutningar."
+    }
+  },
+  "privacy": {
+    "title": "Integritet & Datasäkerhet",
+    "subtitle": "Dina data förblir under din kontroll. Vi lovar:",
+    "local_storage": {
+      "title": "100% Lokal Lagring",
+      "desc": "All igenkänningshistorik och inställningar lagras uteslutande på din enhet och laddas aldrig upp till någon server."
+    },
+    "offline_ocr": {
+      "title": "Offline OCR-teknik",
+      "desc": "Bildigenkänning bearbetas helt på enheten. Bilder rensas från minnet omedelbart efter bearbetning."
+    },
+    "no_tracking": {
+      "title": "Noll-Spårningsskydd",
+      "desc": "Vi samlar inte in några beteendedata. Din integritet förblir säker även offline."
+    }
+  },
+  "download": {
+    "title": "Ladda ner App",
+    "subTitle": "Upplev den fullständiga funktionsuppsättningen på iOS och Android och håll dig uppdaterad var som helst.",
+    "download_action": "Ladda ner",
+    "download_iOS_action": "Ladda ner iOS",
+    "download_android_action": "Ladda ner Android"
+  },
+  "footer": {
+    "goal": "Pikmin Vykort Manager",
+    "copyright": "Alu Studio Alla rättigheter förbehållna",
+    "contact": "Kontakta oss",
+    "unofficialNotice": "Pikmin vykort manager för fans. Detta är ett inofficiellt verktyg."
+  }
+}

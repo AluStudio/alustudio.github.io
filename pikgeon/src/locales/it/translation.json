@@ -1,0 +1,77 @@
+{
+  "title": "Ciao Pikgeon",
+  "nav": {
+    "features": "Funzionalità",
+    "statistics": "Statistiche",
+    "privacy": "Privacy",
+    "languages": "Lingue",
+    "download": "Scarica"
+  },
+  "banner": {
+    "title": "Tieni organizzati i tuoi ricordi di cartoline.",
+    "subtitle": "Riconoscimento OCR intelligente per tracciare il tuo percorso di invio. Elaborazione completamente locale per proteggere la tua privacy.",
+    "app_store": { "sub": "Scarica su", "main": "App Store" },
+    "play_store": { "sub": "DISPONIBILE SU", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Funzionalità Principali di Riconoscimento",
+    "subtitle": "Crea facilmente registri digitali per tracciare i tuoi scambi di cartoline.",
+    "step1": {
+      "title": "Condividi con l'App",
+      "desc": "Seleziona una foto nella tua galleria e condividila direttamente con l'app per iniziare."
+    },
+    "step2": {
+      "title": "Scansione OCR Intelligente",
+      "desc": "L'OCR offline leader estrae automaticamente date, luoghi e testo."
+    },
+    "step3": {
+      "title": "Genera Registri di Invio",
+      "desc": "Abbina automaticamente amici e date per creare un elenco di spedizione digitale strutturato."
+    }
+  },
+  "stats": {
+    "title": "Statistiche e Approfondimenti",
+    "subtitle": "Tracciando ogni connessione, visualizzando il tuo percorso.",
+    "ranking_friends": {
+      "title": "Classifica Migliori Amici",
+      "desc": "Chi è la tua connessione più frequente? Visualizza i livelli di intimità in base alla frequenza di invio."
+    },
+    "ranking_postcards": {
+      "title": "Cartoline Più Inviate",
+      "desc": "Quali design sono i più popolari? Tieni traccia dei tuoi stili e temi preferiti a colpo d'occhio."
+    },
+    "monthly_trend": {
+      "title": "Tendenze Mensili di Invio",
+      "desc": "Visualizza le tue abitudini di spedizione attraverso grafici e cattura il ritmo delle tue connessioni."
+    }
+  },
+  "privacy": {
+    "title": "Privacy e Sicurezza dei Dati",
+    "subtitle": "I tuoi dati rimangono sotto il tuo controllo. Ti promettiamo:",
+    "local_storage": {
+      "title": "Archiviazione 100% Locale",
+      "desc": "Tutta la cronologia di riconoscimento e le impostazioni sono archiviate esclusivamente sul tuo dispositivo e non vengono mai caricate su alcun server."
+    },
+    "offline_ocr": {
+      "title": "Tecnologia OCR Offline",
+      "desc": "Il riconoscimento delle immagini viene elaborato interamente sul dispositivo. Le immagini vengono cancellate dalla memoria immediatamente dopo l'elaborazione."
+    },
+    "no_tracking": {
+      "title": "Protezione Zero Tracciamento",
+      "desc": "Non raccogliamo dati comportamentali. La tua privacy rimane al sicuro anche offline."
+    }
+  },
+  "download": {
+    "title": "Scarica l'App",
+    "subTitle": "Sperimenta tutte le funzionalità su iOS e Android e rimani aggiornato ovunque tu sia.",
+    "download_action": "Scarica",
+    "download_iOS_action": "Scarica iOS",
+    "download_android_action": "Scarica Android"
+  },
+  "footer": {
+    "goal": "Gestore Cartoline Pikmin",
+    "copyright": "Alu Studio Tutti i diritti riservati",
+    "contact": "Contattaci",
+    "unofficialNotice": "Gestore di cartoline Pikmin per i fan. Questo è uno strumento non ufficiale."
+  }
+}

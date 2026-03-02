@@ -1,0 +1,77 @@
+{
+  "title": "Olá Pikgeon",
+  "nav": {
+    "features": "Funcionalidades",
+    "statistics": "Estatísticas",
+    "privacy": "Privacidade",
+    "languages": "Idiomas",
+    "download": "Descarregar"
+  },
+  "banner": {
+    "title": "Mantém as tuas memórias de postal organizadas.",
+    "subtitle": "Reconhecimento OCR inteligente para acompanhar a tua jornada de envios. Processamento totalmente local para proteger a tua privacidade.",
+    "app_store": { "sub": "Descarregar na", "main": "App Store" },
+    "play_store": { "sub": "DISPONÍVEL NO", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Funcionalidades Principais de Reconhecimento",
+    "subtitle": "Cria registos digitais facilmente para acompanhar as tuas trocas de postais.",
+    "step1": {
+      "title": "Partilhar com a App",
+      "desc": "Seleciona uma foto na tua galeria e partilha-a diretamente com a app para começar."
+    },
+    "step2": {
+      "title": "Digitalização OCR Inteligente",
+      "desc": "O OCR offline líder extrai automaticamente datas, locais e texto."
+    },
+    "step3": {
+      "title": "Gerar Registos de Envio",
+      "desc": "Emparelha automaticamente amigos e datas para criar uma lista de correio digital estruturada."
+    }
+  },
+  "stats": {
+    "title": "Estatísticas e Informações",
+    "subtitle": "Rastreando cada ligação, visualizando a tua jornada.",
+    "ranking_friends": {
+      "title": "Ranking de Melhores Amigos",
+      "desc": "Quem é a tua ligação mais frequente? Vê os níveis de intimidade com base na frequência de envios."
+    },
+    "ranking_postcards": {
+      "title": "Postais Mais Enviados",
+      "desc": "Quais os designs mais populares? Acompanha os teus estilos e temas favoritos de relance."
+    },
+    "monthly_trend": {
+      "title": "Tendências Mensais de Envio",
+      "desc": "Visualiza os teus hábitos de correio através de gráficos e capta o ritmo das tuas ligações."
+    }
+  },
+  "privacy": {
+    "title": "Privacidade e Segurança de Dados",
+    "subtitle": "Os teus dados ficam sob o teu controlo. Prometemos:",
+    "local_storage": {
+      "title": "Armazenamento 100% Local",
+      "desc": "Todo o histórico de reconhecimento e configurações são armazenados exclusivamente no teu dispositivo e nunca são enviados para qualquer servidor."
+    },
+    "offline_ocr": {
+      "title": "Tecnologia OCR Offline",
+      "desc": "O reconhecimento de imagens é processado inteiramente no dispositivo. As imagens são apagadas da memória imediatamente após o processamento."
+    },
+    "no_tracking": {
+      "title": "Proteção Zero Rastreio",
+      "desc": "Não recolhemos quaisquer dados de comportamento. A tua privacidade permanece segura mesmo offline."
+    }
+  },
+  "download": {
+    "title": "Descarregar a App",
+    "subTitle": "Experimenta todas as funcionalidades no iOS e Android e mantém-te atualizado em qualquer lugar.",
+    "download_action": "Descarregar",
+    "download_iOS_action": "Descarregar iOS",
+    "download_android_action": "Descarregar Android"
+  },
+  "footer": {
+    "goal": "Gestor de Postais Pikmin",
+    "copyright": "Alu Studio Todos os direitos reservados",
+    "contact": "Contacta-nos",
+    "unofficialNotice": "Gestor de postais Pikmin para fãs. Esta é uma ferramenta não oficial."
+  }
+}

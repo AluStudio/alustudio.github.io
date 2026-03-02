@@ -1,0 +1,77 @@
+{
+  "title": "Bonjour Pikgeon",
+  "nav": {
+    "features": "Fonctionnalités",
+    "statistics": "Statistiques",
+    "privacy": "Confidentialité",
+    "languages": "Langues",
+    "download": "Télécharger"
+  },
+  "banner": {
+    "title": "Gardez vos souvenirs de cartes postales organisés.",
+    "subtitle": "Reconnaissance OCR intelligente pour suivre votre parcours d'envoi. Traitement entièrement local pour protéger votre vie privée.",
+    "app_store": { "sub": "Télécharger sur l'", "main": "App Store" },
+    "play_store": { "sub": "DISPONIBLE SUR", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Fonctionnalités Principales de Reconnaissance",
+    "subtitle": "Créez facilement des journaux numériques pour suivre vos échanges de cartes postales.",
+    "step1": {
+      "title": "Partager avec l'App",
+      "desc": "Sélectionnez une photo dans votre galerie et partagez-la directement avec l'app pour commencer."
+    },
+    "step2": {
+      "title": "Scan OCR Intelligent",
+      "desc": "L'OCR hors ligne de pointe extrait automatiquement les dates, les lieux et le texte."
+    },
+    "step3": {
+      "title": "Générer des Journaux d'Envoi",
+      "desc": "Associe automatiquement amis et dates pour créer une liste d'envoi numérique structurée."
+    }
+  },
+  "stats": {
+    "title": "Statistiques & Aperçus",
+    "subtitle": "Suivre chaque connexion, visualiser votre parcours.",
+    "ranking_friends": {
+      "title": "Classement des Meilleurs Amis",
+      "desc": "Qui est votre connexion la plus fréquente ? Consultez les niveaux d'intimité selon la fréquence d'envoi."
+    },
+    "ranking_postcards": {
+      "title": "Cartes Postales les Plus Envoyées",
+      "desc": "Quels designs sont les plus populaires ? Suivez vos styles et thèmes préférés en un coup d'œil."
+    },
+    "monthly_trend": {
+      "title": "Tendances Mensuelles d'Envoi",
+      "desc": "Visualisez vos habitudes d'envoi à travers des graphiques et captez le rythme de vos connexions."
+    }
+  },
+  "privacy": {
+    "title": "Confidentialité et Sécurité des Données",
+    "subtitle": "Vos données restent sous votre contrôle. Nous promettons :",
+    "local_storage": {
+      "title": "Stockage 100% Local",
+      "desc": "Tout l'historique de reconnaissance et les paramètres sont stockés exclusivement sur votre appareil et ne sont jamais téléchargés sur un serveur."
+    },
+    "offline_ocr": {
+      "title": "Technologie OCR Hors Ligne",
+      "desc": "La reconnaissance d'images est traitée entièrement sur l'appareil. Les images sont effacées de la mémoire immédiatement après le traitement."
+    },
+    "no_tracking": {
+      "title": "Protection Zéro Suivi",
+      "desc": "Nous ne collectons aucune donnée comportementale. Votre vie privée reste sécurisée même hors ligne."
+    }
+  },
+  "download": {
+    "title": "Télécharger l'App",
+    "subTitle": "Découvrez toutes les fonctionnalités sur iOS et Android et restez à jour où que vous soyez.",
+    "download_action": "Télécharger",
+    "download_iOS_action": "Télécharger iOS",
+    "download_android_action": "Télécharger Android"
+  },
+  "footer": {
+    "goal": "Gestionnaire de Cartes Postales Pikmin",
+    "copyright": "Alu Studio Tous droits réservés",
+    "contact": "Nous contacter",
+    "unofficialNotice": "Gestionnaire de cartes postales Pikmin pour les fans. Ceci est un outil non officiel."
+  }
+}
