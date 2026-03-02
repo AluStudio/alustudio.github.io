@@ -1,0 +1,175 @@
+/* 連結 & icon 顏色：滾動前 */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-brand,
+.navbar-scroll .navbar-toggler .bi {
+  color: #262626;
+}
+
+/* navbar 背景：滾動前（綠色漸層＋玻璃感） */
+.navbar-scroll {
+  /* 這裡使用線性漸層：從左上到右下，並帶有 0.85 的透明度 */
+  background-image: linear-gradient(
+    200deg, 
+    rgba(138, 196, 76, 0.9) 0%,   /* 你的 Primary 綠 */
+    rgba(138, 196, 76, 0.6) 0%  /* 稍微加深一點點的綠，增加層次感 */
+  );
+  
+  /* 玻璃擬態效果 */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  /* 平滑轉換 */
+  transition: background-image 0.4s ease, background-color 0.4s ease, backdrop-filter 0.3s ease;
+}
+
+/* 連結 & icon 顏色：滾動後 */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .navbar-toggler .bi {
+  color: #262626;
+}
+
+/* navbar 背景：滾動後（白色玻璃） */
+.navbar-scrolled {
+  /* 滾動後通常建議改回單色或極淺漸層，維持資訊易讀性 */
+  background-image: none; 
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* 可選：滾動後高度調整 */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+.navbar-brand {
+  font-size: unset;
+  height: 3.5rem;
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* 如果要讓按鈕背景也完全透明（只剩 icon） */
+.navbar-toggler {
+  background-color: transparent;
+}
+
+/* 讓語系選單更融合 navbar */
+select.form-select-sm {
+  background-color: transparent;
+  border: 1px solid rgba(138, 196, 76, 0.9);
+  cursor: pointer;
+  &:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,0.3);
+  }
+}
+
+/* 讓全域滾動變得平滑 */
+html {
+  scroll-behavior: smooth;
+}
+
+.main-content {
+  padding-top: var(--navbar-height);
+}
+
+section {
+  scroll-margin-top: var(--navbar-height);
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+/* underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background: #8ac44c;
+
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+/* 定義顏色變數 (方便統一管理) */
+:root {
+  --primary-color: #8ac44c;
+  --icon-gray: #6c757d; // 灰
+}
+
+/* 主題切換按鈕基礎樣式 */
+.btn-toggle-theme {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important; /* 呈現正圓 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* 極細邊框增加層次 */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 !important;
+  
+  i {
+    font-size: 1.2rem;
+    transition: transform 0.4s ease, color 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 196, 76, 0.3);
+    border-color: var(--primary-color);
+    
+    i {
+      color: var(--primary-color) !important;
+      transform: rotate(15deg);
+    }
+  }
+}
+
+/* Light Mode 樣式 */
+[data-theme='light'], :root:not([data-theme='dark']) {
+  .btn-toggle-theme {
+    background-color: #ffffff;
+    i { color: var(--icon-gray); }
+  }
+}
+
+/* Dark Mode 樣式 */
+[data-theme='dark'] {
+  .btn-toggle-theme {
+    background-color: #000000;
+    border-color: rgba(255, 255, 255, 0.1);
+    
+    i { color: var(--icon-gray); }
+
+    &:hover {
+      background-color: #1a1a1a; /* 深色模式懸浮時背景稍微亮一點點 */
+      box-shadow: 0 4px 12px rgba(138, 196, 76, 0.2);
+    }
+  }
+}

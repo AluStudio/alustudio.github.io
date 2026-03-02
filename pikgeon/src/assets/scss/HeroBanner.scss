@@ -1,0 +1,145 @@
+.hero-banner {
+    min-height: 85vh;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+
+    // 1. 標題文字：深色模式下讓漸層色更亮
+    .main-title {
+        color: #2d3436; // 淺色預設
+        background: linear-gradient(120deg, #2d3436 60%, var(--bs-primary) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        // 當處於深色模式時切換標題色
+        [data-bs-theme="dark"] & {
+            color: #f8f9fa;
+            background: linear-gradient(120deg, #f8f9fa 60%, var(--bs-primary) 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .subtitle-text {
+        color: #636e72;
+
+        [data-bs-theme="dark"] & {
+            color: #b2bec3;
+        }
+    }
+
+    // 2. 下載按鈕
+    .download-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        width: 100%;
+        max-width: 500px; // 限制按鈕群組最大寬度，避免在寬螢幕拉太長
+
+        .download-btn {
+            flex: 1; // 核心：讓兩顆按鈕平分空間，寬度自動一致
+            min-width: 180px; // 防止語系文字太長時擠壓，低於此寬度會自動換行 (Wrap)
+            white-space: nowrap; // 確保文字不會折行，維持按鈕美觀
+
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border: 1px solid transparent;
+            justify-content: center; // 讓圖示與文字組件在按鈕內居中
+
+            // 確保內部結構對齊
+            .btn-text-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            small {
+                font-size: 0.65rem;
+                line-height: 1;
+                margin-bottom: 2px;
+            }
+
+            strong {
+                font-size: 1rem;
+                line-height: 1;
+            }
+
+            [data-bs-theme="dark"] & {
+                background-color: #ffffff;
+                color: #1a1a1a;
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                background-color: var(--bs-primary) !important;
+                color: #fff !important;
+            }
+        }
+    }
+
+    // 手機版微調
+    @media (max-width: 576px) {
+        .download-buttons {
+            .download-btn {
+                flex: 0 0 100%; // 手機上讓按鈕撐滿 100%，垂直排列
+            }
+        }
+    }
+
+    // 3. 圖片處理
+    .ios-view-image {
+        max-height: 500px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+
+        [data-bs-theme="dark"] & {
+            // 圖片邊緣，加一個非常淡的發光，讓它在深色背景中自然浮現
+            filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 0.1));
+        }
+    }
+}
+
+/* 右側圖片漂浮動畫 */
+
+.hero-img-wrapper {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 20px;
+        background: rgba(0, 0, 0, 0.1);
+        filter: blur(15px);
+        border-radius: 50%;
+    }
+}
+
+
+
+.floating-mockup {
+    animation: floatImg 4s infinite ease-in-out;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+
+
+@keyframes floatImg {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+}

@@ -1,0 +1,67 @@
+.lang-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    /* 電腦版間距 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.lang-content {
+    padding: 20px 30px;
+    /* 電腦版較大 */
+    background-color: rgba(var(--bs-primary-rgb), 0.15);
+    color: var(--bs-primary);
+    border-radius: 60% 40% 70% 30% / 40% 50% 60% 70%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- 手機版優化 (Breakpoint: 576px) --- */
+@media (max-width: 576px) {
+    .lang-grid {
+        gap: 8px;
+        /* 縮小間距以擠下更多 */
+        padding: 10px;
+    }
+
+    .lang-item {
+        /* 讓每個 item 佔約 23% (扣除 gap 後大約一排四個) */
+        flex: 0 0 calc(25% - 10px);
+        min-width: fit-content;
+    }
+
+    .lang-content {
+        /* 縮小內距，確保文字不截斷 */
+        padding: 12px 8px;
+        min-height: 70px;
+        /* 縮小字體 */
+        font-size: 0.75rem;
+    }
+
+    /* 國旗圖示在手機版縮小 */
+    .lang-content span:first-child {
+        font-size: 1.2rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .lang-text {
+        font-weight: 500;
+        /* 強制不換行且不截斷 */
+        white-space: nowrap;
+    }
+}
+
+/* Hover 光暈效果 (不分裝置) */
+.lang-item:hover .lang-content {
+    background-color: var(--bs-primary);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(var(--bs-primary-rgb), 0.7);
+    transform: scale(1.1);
+}

@@ -1,0 +1,77 @@
+{
+  "title": "哈囉 Pikgeon",
+  "nav": {
+    "features": "核心功能",
+    "statistics": "數據統計",
+    "privacy": "隱私說明",
+    "languages": "支援語系",
+    "download": "立即下載"
+  },
+  "banner": {
+    "title": "讓明信片的回憶，更有條理地延續。",
+    "subtitle": "智慧 OCR 辨識，輕鬆紀錄每一份寄送情誼。完全本地處理，守護您的隱私安全。",
+    "app_store": { "sub": "從", "main": "App Store 下載" },
+    "play_store": { "sub": "從", "main": "Google Play 下載" }
+  },
+  "features": {
+    "title": "核心辨識技術",
+    "subtitle": "輕鬆建立數位日誌，有條理地追蹤每一份寄送情誼。",
+    "step1": {
+      "title": "分享至 App",
+      "desc": "在相簿選中明信片照片，直接分享至 App，開啟自動化流程。"
+    },
+    "step2": {
+      "title": "智慧 OCR 辨識",
+      "desc": "技術領先的離線 OCR，自動抓取明信片上的日期、地點與內文。"
+    },
+    "step3": {
+      "title": "建立寄送紀錄",
+      "desc": "自動配對好友與日期，為您整理出一目瞭然的數位寄送清單。"
+    }
+  },
+  "stats": {
+    "title": "數據統計回顧",
+    "subtitle": "紀錄每一份情誼，看見寄送的足跡。",
+    "ranking_friends": {
+      "title": "好友寄送排行",
+      "desc": "誰是你最常互動的靈魂伴侶？從寄送次數一覽與好友間的親密度。"
+    },
+    "ranking_postcards": {
+      "title": "明信片收藏排行",
+      "desc": "哪些款式的明信片最受歡迎？統計你最愛使用的設計風格與主題。"
+    },
+    "monthly_trend": {
+      "title": "月度寄送趨勢",
+      "desc": "透過圖表觀察每個月的寄送脈絡，捕捉那些特別忙碌或充滿溫情的時刻。"
+    }
+  },
+  "privacy": {
+    "title": "隱私權與資料安全",
+    "subtitle": "您的資料由您掌控，我們承諾：",
+    "local_storage": {
+      "title": "完全本地存儲",
+      "desc": "所有辨識紀錄與設定僅儲存於您的裝置中，不會上傳至任何伺服器。"
+    },
+    "offline_ocr": {
+      "title": "離線 OCR 技術",
+      "desc": "圖片辨識完全在本地端完成，處理後立即從記憶體釋放，不留任何圖片殘影。"
+    },
+    "no_tracking": {
+      "title": "零追蹤保護",
+      "desc": "我們不收集您的行為數據，您的隱私在斷網狀態下依然安全。"
+    }
+  },
+  "download": {
+    "title": "下載我們的 App",
+    "subTitle": "在 iOS 與 Android 上體驗完整功能，隨時隨地掌握最新資訊。",
+    "download_action": "下載",
+    "download_iOS_action": "下載 iOS",
+    "download_android_action": "下載 Android"
+  },
+  "footer": {
+    "goal": "皮克敏明信片管理",
+    "copyright": "Alu Studio 保留所有權利",
+    "contact": "聯絡我們",
+    "unofficialNotice": "為皮克敏玩家打造的明信片管理工具。非官方網站。"
+  }
+}

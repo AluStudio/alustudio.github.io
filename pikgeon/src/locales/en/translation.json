@@ -1,0 +1,77 @@
+{
+  "title": "Hello Pikgeon",
+  "nav": {
+    "features": "Features",
+    "statistics": "Statistics",
+    "privacy": "Privacy",
+    "languages": "Languages",
+    "download": "Download"
+  },
+  "banner": {
+    "title": "Keep Your Postcard Memories Organized.",
+    "subtitle": "Smart OCR recognition to track your mailing journey. Fully local processing to protect your privacy.",
+    "app_store": { "sub": "Download on the", "main": "App Store" },
+    "play_store": { "sub": "GET IT ON", "main": "Google Play" }
+  },
+  "features": {
+    "title": "Core Recognition Features",
+    "subtitle": "Easily create digital logs to track your postcard exchanges with ease.",
+    "step1": {
+      "title": "Share to App",
+      "desc": "Select a photo in your gallery and share it directly to the app to start."
+    },
+    "step2": {
+      "title": "Smart OCR Scanning",
+      "desc": "Leading offline OCR automatically extracts dates, locations, and text."
+    },
+    "step3": {
+      "title": "Generate Delivery Logs",
+      "desc": "Automatically match friends and dates to build a structured digital mailing list."
+    }
+  },
+  "stats": {
+    "title": "Statistics & Insights",
+    "subtitle": "Tracking every connection, visualizing your journey.",
+    "ranking_friends": {
+      "title": "Top Friends Ranking",
+      "desc": "Who is your most frequent connection? View intimacy levels based on delivery frequency."
+    },
+    "ranking_postcards": {
+      "title": "Most Sent Postcards",
+      "desc": "Which designs are the most popular? Track your favorite styles and themes at a glance."
+    },
+    "monthly_trend": {
+      "title": "Monthly Delivery Trends",
+      "desc": "Visualize your mailing habits through charts and capture the rhythm of your connections."
+    }
+  },
+  "privacy": {
+    "title": "Privacy & Data Security",
+    "subtitle": "Your data stays under your control. We promise:",
+    "local_storage": {
+      "title": "100% Local Storage",
+      "desc": "All recognition history and settings are stored exclusively on your device and are never uploaded to any server."
+    },
+    "offline_ocr": {
+      "title": "Offline OCR Technology",
+      "desc": "Image recognition is processed entirely on-device. Images are cleared from memory immediately after processing, leaving no digital footprint."
+    },
+    "no_tracking": {
+      "title": "Zero Tracking Protection",
+      "desc": "We do not collect any behavioral data. Your privacy remains secure even when you are offline."
+    }
+  },
+  "download": {
+    "title": "Download App",
+    "subTitle": "Experience the full feature set on iOS and Android and stay up to date anytime, anywhere.",
+    "download_action": "Download",
+    "download_iOS_action": "Download iOS",
+    "download_android_action": "Download Android"
+  },
+  "footer": {
+    "goal": "Pikmin Postcard Manager",
+    "copyright": "Alu Studio All rights reserved",
+    "contact": "Contact Us",
+    "unofficialNotice": "Pikmin postcard manager for fans. This is an unofficial tool."
+  }
+}
