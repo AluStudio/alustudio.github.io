@@ -1,5 +1,5 @@
 import "./assets/scss/all.scss";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import HeroBanner from "./components/HeroBanner";
 import Features from "./components/Features";
 import Stats from "./components/Stats";
