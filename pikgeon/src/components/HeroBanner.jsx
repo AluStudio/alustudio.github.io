@@ -20,7 +20,7 @@ const HeroBanner = () => {
             <div className="download-buttons d-flex flex-wrap gap-3">
               {/* App Store */}
               <a
-                href="#"
+                href="https://apps.apple.com/ca/app/pikgeon/id6759579587"
                 className="btn download-btn d-flex align-items-center py-2 px-3"
               >
                 <i className="bi bi-apple fs-2 me-2"></i>

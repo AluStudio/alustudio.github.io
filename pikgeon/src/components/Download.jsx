@@ -28,7 +28,7 @@ function Download() {
                 {/* Apple 區塊 */}
                 <div className="download-item">
                   <a
-                    href="https://apps.apple.com/us/iphone/today"
+                    href="https://apps.apple.com/ca/app/pikgeon/id6759579587"
                     className="btn btn-outline-primary d-flex align-items-center justify-content-center px-3 mb-3"
                     target="_blank"
                     rel="noopener"
