@@ -10,8 +10,14 @@
   "banner": {
     "title": "Behalte deine Postkarten-Erinnerungen im Überblick.",
     "subtitle": "Intelligente OCR-Erkennung zur Verfolgung deiner Versandreise. Vollständige lokale Verarbeitung zum Schutz deiner Privatsphäre.",
-    "app_store": { "sub": "Laden im", "main": "App Store" },
-    "play_store": { "sub": "JETZT BEI", "main": "Google Play" }
+    "app_store": {
+      "sub": "Laden im",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "JETZT BEI",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Kern-Erkennungsfunktionen",
@@ -66,7 +72,10 @@
     "subTitle": "Erlebe den vollen Funktionsumfang auf iOS und Android – jederzeit und überall.",
     "download_action": "Herunterladen",
     "download_iOS_action": "iOS herunterladen",
-    "download_android_action": "Android herunterladen"
+    "download_android_action": "Android herunterladen",
+    "android_coming_soon": "Demnächst",
+    "android_beta_invite": "Hilf uns beim Testen der Android-App!",
+    "android_beta_link": "Beta testen"
   },
   "footer": {
     "goal": "Pikmin Postkarten-Manager",

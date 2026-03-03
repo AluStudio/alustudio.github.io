@@ -10,8 +10,14 @@
   "banner": {
     "title": "엽서의 추억을 스마트하게 정리하세요.",
     "subtitle": "스마트 OCR 인식으로 우편 여정을 기록하세요. 개인정보 보호를 위한 완전 로컬 처리.",
-    "app_store": { "sub": "App Store에서", "main": "다운로드 하기" },
-    "play_store": { "sub": "Google Play", "main": "번호 받기" }
+    "app_store": {
+      "sub": "App Store에서",
+      "main": "다운로드 하기"
+    },
+    "play_store": {
+      "sub": "Google Play",
+      "main": "번호 받기"
+    }
   },
   "features": {
     "title": "핵심 인식 기능",
@@ -66,7 +72,10 @@
     "subTitle": "iOS 및 Android에서 모든 기능을 경험하고 언제 어디서나 최신 상태를 유지하세요.",
     "download_action": "다운로드",
     "download_iOS_action": "iOS 다운로드",
-    "download_android_action": "Android 다운로드"
+    "download_android_action": "Android 다운로드",
+    "android_coming_soon": "출시 예정",
+    "android_beta_invite": "Android 앱을 먼저 테스트해 보세요!",
+    "android_beta_link": "베타 참여"
   },
   "footer": {
     "goal": "Pikmin 엽서 관리자",

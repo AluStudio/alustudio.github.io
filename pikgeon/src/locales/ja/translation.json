@@ -10,8 +10,14 @@
   "banner": {
     "title": "ポストカードの思い出を、スマートに整理。",
     "subtitle": "スマートOCR認識で郵送の軌跡を記録。プライバシーを守る完全ローカル処理。",
-    "app_store": { "sub": "App Store から", "main": "ダウンロード" },
-    "play_store": { "sub": "Google Play で", "main": "手に入れよう" }
+    "app_store": {
+      "sub": "App Store から",
+      "main": "ダウンロード"
+    },
+    "play_store": {
+      "sub": "Google Play で",
+      "main": "手に入れよう"
+    }
   },
   "features": {
     "title": "コア認識機能",
@@ -66,7 +72,10 @@
     "subTitle": "iOSとAndroidで全機能を体験。いつでもどこでも最新情報をチェック。",
     "download_action": "ダウンロード",
     "download_iOS_action": "iOS版をダウンロード",
-    "download_android_action": "Android版をダウンロード"
+    "download_android_action": "Android版をダウンロード",
+    "android_coming_soon": "近日公開",
+    "android_beta_invite": "Androidのテストにご協力いただけますか？",
+    "android_beta_link": "ベータ参加"
   },
   "footer": {
     "goal": "Pikmin ポストカードマネージャー",

@@ -10,8 +10,14 @@
   "banner": {
     "title": "Tieni organizzati i tuoi ricordi di cartoline.",
     "subtitle": "Riconoscimento OCR intelligente per tracciare il tuo percorso di invio. Elaborazione completamente locale per proteggere la tua privacy.",
-    "app_store": { "sub": "Scarica su", "main": "App Store" },
-    "play_store": { "sub": "DISPONIBILE SU", "main": "Google Play" }
+    "app_store": {
+      "sub": "Scarica su",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "DISPONIBILE SU",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Funzionalità Principali di Riconoscimento",
@@ -66,7 +72,10 @@
     "subTitle": "Sperimenta tutte le funzionalità su iOS e Android e rimani aggiornato ovunque tu sia.",
     "download_action": "Scarica",
     "download_iOS_action": "Scarica iOS",
-    "download_android_action": "Scarica Android"
+    "download_android_action": "Scarica Android",
+    "android_coming_soon": "Prossimamente",
+    "android_beta_invite": "Vuoi testare l'app Android in anteprima?",
+    "android_beta_link": "Partecipa alla beta"
   },
   "footer": {
     "goal": "Gestore Cartoline Pikmin",

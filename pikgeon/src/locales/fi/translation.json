@@ -10,8 +10,14 @@
   "banner": {
     "title": "Pidä postikortin muistosi järjestyksessä.",
     "subtitle": "Älykäs OCR-tunnistus lähettämismatkasi seuraamiseen. Täysin paikallinen käsittely yksityisyytesi suojaamiseksi.",
-    "app_store": { "sub": "Lataa", "main": "App Storesta" },
-    "play_store": { "sub": "HANKI", "main": "Google Playsta" }
+    "app_store": {
+      "sub": "Lataa",
+      "main": "App Storesta"
+    },
+    "play_store": {
+      "sub": "HANKI",
+      "main": "Google Playsta"
+    }
   },
   "features": {
     "title": "Ydintunnistusominaisuudet",
@@ -66,7 +72,10 @@
     "subTitle": "Koe täysi ominaisuusvalikoima iOS:lla ja Androidilla ja pysy ajan tasalla missä tahansa.",
     "download_action": "Lataa",
     "download_iOS_action": "Lataa iOS",
-    "download_android_action": "Lataa Android"
+    "download_android_action": "Lataa Android",
+    "android_coming_soon": "Tulossa pian",
+    "android_beta_invite": "Haluatko testata Android-sovellusta?",
+    "android_beta_link": "Liity betatestiin"
   },
   "footer": {
     "goal": "Pikmin-postikorttihallinta",
