@@ -10,8 +10,14 @@
   "banner": {
     "title": "Susun kenangan kad pos anda dengan teratur.",
     "subtitle": "Pengecaman OCR pintar untuk menjejaki perjalanan penghantaran anda. Pemprosesan tempatan sepenuhnya untuk melindungi privasi anda.",
-    "app_store": { "sub": "Muat turun di", "main": "App Store" },
-    "play_store": { "sub": "DAPATKAN DI", "main": "Google Play" }
+    "app_store": {
+      "sub": "Muat turun di",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "DAPATKAN DI",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Ciri Pengecaman Teras",
@@ -66,7 +72,10 @@
     "subTitle": "Alami set ciri penuh di iOS dan Android dan sentiasa dikemas kini di mana sahaja.",
     "download_action": "Muat turun",
     "download_iOS_action": "Muat turun iOS",
-    "download_android_action": "Muat turun Android"
+    "download_android_action": "Muat turun Android",
+    "android_coming_soon": "Akan Datang",
+    "android_beta_invite": "Bantu kami menguji apl Android!",
+    "android_beta_link": "Sertai Beta"
   },
   "footer": {
     "goal": "Pengurus Kad Pos Pikmin",

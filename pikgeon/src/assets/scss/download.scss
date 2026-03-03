@@ -23,6 +23,64 @@
     border-color: #dee2e6;
 }
 
+/* Android Coming Soon */
+.android-disabled-btn {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+.coming-soon-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff;
+  border-radius: 20px;
+  padding: 1px 7px;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+.beta-invite-card {
+  width: 100%;
+  background: linear-gradient(135deg, #fff7ed, #fef3c7);
+  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+.beta-invite-text {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #92400e;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.btn-beta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #fff;
+  border: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  }
+}
+
 /* 手機預設：上下堆疊，兩個 item 直向排 */
 .download-wrapper {
     display: flex;

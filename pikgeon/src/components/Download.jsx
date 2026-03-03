@@ -57,19 +57,34 @@ function Download() {
 
                 {/* Android 區塊 */}
                 <div className="download-item">
-                  <a
-                    href="https://play.google.com/store/apps/details?id=your.app.id"
-                    className="btn btn-outline-primary d-flex align-items-center justify-content-center px-3 mb-3"
-                    target="_blank"
-                    rel="noopener"
-                  >
+                  {/* Coming Soon button */}
+                  <div className="btn btn-outline-secondary d-flex align-items-center justify-content-center px-3 mb-2 android-disabled-btn">
                     <i className="bi bi-google-play me-2"></i>
-                    <span>
+                    <span className="d-flex align-items-center gap-2">
                       <small className="d-block">
                         {t("download.download_action")}
                       </small>
+                      <span className="coming-soon-tag">
+                        {t("download.android_coming_soon")}
+                      </span>
                     </span>
-                  </a>
+                  </div>
+
+                  {/* Beta tester invite */}
+                  <div className="beta-invite-card mb-2">
+                    <p className="beta-invite-text">
+                      {t("download.android_beta_invite")}
+                    </p>
+                    <a
+                      href="https://play.google.com/apps/internaltest/4701026660821795019"
+                      className="btn btn-beta"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-bug-fill me-1"></i>
+                      {t("download.android_beta_link")}
+                    </a>
+                  </div>
 
                   <div className="border bg-white p-2 text-center">
                     <div className="mb-1">

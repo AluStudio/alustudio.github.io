@@ -10,8 +10,14 @@
   "banner": {
     "title": "Houd je ansichtkaart-herinneringen georganiseerd.",
     "subtitle": "Slimme OCR-herkenning om je verzendtraject bij te houden. Volledig lokale verwerking om je privacy te beschermen.",
-    "app_store": { "sub": "Download in de", "main": "App Store" },
-    "play_store": { "sub": "BESCHIKBAAR OP", "main": "Google Play" }
+    "app_store": {
+      "sub": "Download in de",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "BESCHIKBAAR OP",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Kern-Herkenningsmogelijkheden",
@@ -66,7 +72,10 @@
     "subTitle": "Ervaar de volledige functieset op iOS en Android en blijf altijd en overal up-to-date.",
     "download_action": "Downloaden",
     "download_iOS_action": "iOS downloaden",
-    "download_android_action": "Android downloaden"
+    "download_android_action": "Android downloaden",
+    "android_coming_soon": "Binnenkort",
+    "android_beta_invite": "Help ons de Android-app te testen!",
+    "android_beta_link": "Meedoen aan beta"
   },
   "footer": {
     "goal": "Pikmin Ansichtkaart Manager",

@@ -10,8 +10,14 @@
   "banner": {
     "title": "Håll dina vykorts-minnen organiserade.",
     "subtitle": "Smart OCR-igenkänning för att spåra din sändningsresa. Helt lokal bearbetning för att skydda din integritet.",
-    "app_store": { "sub": "Ladda ner på", "main": "App Store" },
-    "play_store": { "sub": "HÄMTA PÅ", "main": "Google Play" }
+    "app_store": {
+      "sub": "Ladda ner på",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "HÄMTA PÅ",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Kärn-Igenkänningsfunktioner",
@@ -66,7 +72,10 @@
     "subTitle": "Upplev den fullständiga funktionsuppsättningen på iOS och Android och håll dig uppdaterad var som helst.",
     "download_action": "Ladda ner",
     "download_iOS_action": "Ladda ner iOS",
-    "download_android_action": "Ladda ner Android"
+    "download_android_action": "Ladda ner Android",
+    "android_coming_soon": "Kommer snart",
+    "android_beta_invite": "Hjälp oss testa Android-appen!",
+    "android_beta_link": "Gå med i beta"
   },
   "footer": {
     "goal": "Pikmin Vykort Manager",

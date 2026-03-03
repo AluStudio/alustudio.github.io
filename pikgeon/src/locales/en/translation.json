@@ -10,8 +10,14 @@
   "banner": {
     "title": "Keep Your Postcard Memories Organized.",
     "subtitle": "Smart OCR recognition to track your mailing journey. Fully local processing to protect your privacy.",
-    "app_store": { "sub": "Download on the", "main": "App Store" },
-    "play_store": { "sub": "GET IT ON", "main": "Google Play" }
+    "app_store": {
+      "sub": "Download on the",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "GET IT ON",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Core Recognition Features",
@@ -66,7 +72,10 @@
     "subTitle": "Experience the full feature set on iOS and Android and stay up to date anytime, anywhere.",
     "download_action": "Download",
     "download_iOS_action": "Download iOS",
-    "download_android_action": "Download Android"
+    "download_android_action": "Download Android",
+    "android_coming_soon": "Coming Soon",
+    "android_beta_invite": "Want to be an early Android tester?",
+    "android_beta_link": "Join Beta Test"
   },
   "footer": {
     "goal": "Pikmin Postcard Manager",

@@ -10,8 +10,14 @@
   "banner": {
     "title": "จัดระเบียบความทรงจำโปสการ์ดของคุณ",
     "subtitle": "การจดจำ OCR อัจฉริยะเพื่อติดตามการส่งของคุณ ประมวลผลในเครื่องทั้งหมดเพื่อปกป้องความเป็นส่วนตัว",
-    "app_store": { "sub": "ดาวน์โหลดบน", "main": "App Store" },
-    "play_store": { "sub": "รับได้ที่", "main": "Google Play" }
+    "app_store": {
+      "sub": "ดาวน์โหลดบน",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "รับได้ที่",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "คุณสมบัติการจดจำหลัก",
@@ -66,7 +72,10 @@
     "subTitle": "สัมผัสชุดคุณสมบัติเต็มรูปแบบบน iOS และ Android ทุกที่ทุกเวลา",
     "download_action": "ดาวน์โหลด",
     "download_iOS_action": "ดาวน์โหลด iOS",
-    "download_android_action": "ดาวน์โหลด Android"
+    "download_android_action": "ดาวน์โหลด Android",
+    "android_coming_soon": "เร็วๆ นี้",
+    "android_beta_invite": "ช่วยเราทดสอบแอป Android ได้เลย!",
+    "android_beta_link": "เข้าร่วมทดสอบ"
   },
   "footer": {
     "goal": "ผู้จัดการโปสการ์ด Pikmin",

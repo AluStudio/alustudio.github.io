@@ -10,8 +10,14 @@
   "banner": {
     "title": "Mantén organizados tus recuerdos de postales.",
     "subtitle": "Reconocimiento OCR inteligente para rastrear tu viaje de envíos. Procesamiento completamente local para proteger tu privacidad.",
-    "app_store": { "sub": "Descargar en el", "main": "App Store" },
-    "play_store": { "sub": "DISPONIBLE EN", "main": "Google Play" }
+    "app_store": {
+      "sub": "Descargar en el",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "DISPONIBLE EN",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Funciones Principales de Reconocimiento",
@@ -66,7 +72,10 @@
     "subTitle": "Experimenta todas las funciones en iOS y Android y mantente al día en cualquier lugar.",
     "download_action": "Descargar",
     "download_iOS_action": "Descargar iOS",
-    "download_android_action": "Descargar Android"
+    "download_android_action": "Descargar Android",
+    "android_coming_soon": "Próximamente",
+    "android_beta_invite": "¿Quieres ser un tester anticipado de Android?",
+    "android_beta_link": "Unirse a la beta"
   },
   "footer": {
     "goal": "Gestor de Postales Pikmin",

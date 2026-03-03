@@ -10,8 +10,14 @@
   "banner": {
     "title": "Gardez vos souvenirs de cartes postales organisés.",
     "subtitle": "Reconnaissance OCR intelligente pour suivre votre parcours d'envoi. Traitement entièrement local pour protéger votre vie privée.",
-    "app_store": { "sub": "Télécharger sur l'", "main": "App Store" },
-    "play_store": { "sub": "DISPONIBLE SUR", "main": "Google Play" }
+    "app_store": {
+      "sub": "Télécharger sur l'",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "DISPONIBLE SUR",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Fonctionnalités Principales de Reconnaissance",
@@ -66,7 +72,10 @@
     "subTitle": "Découvrez toutes les fonctionnalités sur iOS et Android et restez à jour où que vous soyez.",
     "download_action": "Télécharger",
     "download_iOS_action": "Télécharger iOS",
-    "download_android_action": "Télécharger Android"
+    "download_android_action": "Télécharger Android",
+    "android_coming_soon": "Bientôt",
+    "android_beta_invite": "Envie de tester l'app Android en avant-première ?",
+    "android_beta_link": "Rejoindre la bêta"
   },
   "footer": {
     "goal": "Gestionnaire de Cartes Postales Pikmin",

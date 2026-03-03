@@ -10,8 +10,14 @@
   "banner": {
     "title": "Panatilihing organisado ang iyong mga alaala ng postcard.",
     "subtitle": "Matalinong OCR na pagkilala para subaybayan ang iyong paglalakbay sa pagpapadala. Ganap na lokal na pagpoproseso upang protektahan ang iyong privacy.",
-    "app_store": { "sub": "I-download sa", "main": "App Store" },
-    "play_store": { "sub": "MAKUHA SA", "main": "Google Play" }
+    "app_store": {
+      "sub": "I-download sa",
+      "main": "App Store"
+    },
+    "play_store": {
+      "sub": "MAKUHA SA",
+      "main": "Google Play"
+    }
   },
   "features": {
     "title": "Mga Pangunahing Tampok ng Pagkilala",
@@ -66,7 +72,10 @@
     "subTitle": "Maranasan ang buong hanay ng tampok sa iOS at Android at manatiling updated kahit saan.",
     "download_action": "I-download",
     "download_iOS_action": "I-download ang iOS",
-    "download_android_action": "I-download ang Android"
+    "download_android_action": "I-download ang Android",
+    "android_coming_soon": "Malapit na",
+    "android_beta_invite": "Tulungan kami na subukan ang Android app!",
+    "android_beta_link": "Sumali sa Beta"
   },
   "footer": {
     "goal": "Pikmin Postcard Manager",
