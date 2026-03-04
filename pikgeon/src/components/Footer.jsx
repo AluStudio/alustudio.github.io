@@ -1,9 +1,11 @@
 import "../assets/scss/footer.scss";
 import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 function Footer() {
   const thisYear = new Date().getFullYear();
   const { t } = useTranslation();
+  const isRtl = i18n.language === 'ar';
 
   return (
     <>
@@ -11,16 +13,16 @@ function Footer() {
         <div className="container">
           <div className="d-flex justify-content-between">
             <h1>Pikgeon</h1>
-            <a className="mailto fs-5" href="mailto:alustudio14@gmail.com?subject=[Pikgeon] Support">
+            <a className={`mailto fs-5 ${isRtl ? 'rtl-text' : ''}`} href="mailto:alustudio14@gmail.com?subject=[Pikgeon] Support">
               {t("footer.contact")}
             </a>
           </div>
-          <p>{t("footer.goal")}</p>
-          <span>
+          <p className={`rtl-right-only ${isRtl ? 'rtl-text' : ''}`}>{t("footer.goal")}</p>
+          <p className={`${isRtl ? 'rtl-text' : ''}`}>
             &copy; {thisYear} {t("footer.copyright")}
-          </span>
+          </p>
           <br />
-          <span className="text-muted">{t("footer.unofficialNotice")}</span>
+          <p className={`text-muted ${isRtl ? 'rtl-text' : ''}`}>{t("footer.unofficialNotice")}</p>
         </div>
       </footer>
     </>

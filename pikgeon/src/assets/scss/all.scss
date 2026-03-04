@@ -1,3 +1,32 @@
 @import "bootstrap/scss/functions";
 @import "./variables";
 @import "bootstrap/scss/bootstrap";
+
+/* 針對阿拉伯文的特殊處理 */
+.rtl-text {
+  /* 讓文字從右邊開始讀 */
+  direction: rtl;
+  
+  /* 如果原本是 text-start (左對齊)，在 RTL 下要變右對齊 */
+  &.text-start {
+    text-align: right !important;
+  }
+
+  /* 下載按鈕內部的圖示與文字順序翻轉 */
+  &.download-btn {
+    flex-direction: row-reverse; // 讓 icon 跑去文字右邊
+    
+    .text-start {
+      text-align: right !important; // 按鈕內小字大字靠右
+    }
+    
+    i {
+      margin-right: 0 !important;
+      margin-left: 0.5rem; // 原本是 me-2，現在要變 ms-2
+    }
+  }
+}
+
+.rtl-text.rtl-right-only {
+  text-align: right !important;
+}

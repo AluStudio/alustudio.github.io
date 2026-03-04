@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "../assets/scss/stats.scss";
+import i18n from "../i18n";
 function Stats() {
   const { t } = useTranslation();
   const statsList = [
@@ -7,6 +8,7 @@ function Stats() {
     { key: "ranking_postcards", icon: "bi-card-image" },
     { key: "monthly_trend", icon: "bi-graph-up-arrow" },
   ];
+  const isRtl = i18n.language === 'ar';
   return (
     <>
       <section id="stats" className="stats-section py-5">
@@ -35,10 +37,10 @@ function Stats() {
                       <i className={`bi ${item.icon}`}></i>
                     </div>
                     <div>
-                      <h4 className="fw-bold mb-1">
+                      <h4 className={`fw-bold mb-1 ${isRtl ? 'rtl-text' : ''}`}>
                         {t(`stats.${item.key}.title`)}
                       </h4>
-                      <p className="text-secondary mb-0">
+                      <p className={`text-secondary mb-0 ${isRtl ? 'rtl-text' : ''}`}>
                         {t(`stats.${item.key}.desc`)}
                       </p>
                     </div>
