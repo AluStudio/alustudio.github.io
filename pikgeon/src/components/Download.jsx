@@ -1,8 +1,10 @@
 import "../assets/scss/download.scss"
 import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 function Download() {
   const { t } = useTranslation();
+  const isRtl = i18n.language === 'ar';
   return (
     <>
       <section id="download" className="bg-light py-5">
@@ -17,10 +19,10 @@ function Download() {
             </div>
 
             <div className="col-md-6">
-              <h2 className="mb-3 text-center text-md-start">
+              <h2 className={`mb-3 text-center text-md-start ${isRtl ? 'rtl-text' : ''}`}>
                 {t("download.title")}
               </h2>
-              <p className="mb-4 text-center text-md-start">
+              <p className={`mb-4 text-center text-md-start  ${isRtl ? 'rtl-text' : ''}`}>
                 {t("download.subTitle")}
               </p>
 
@@ -43,7 +45,7 @@ function Download() {
 
                   <div className="border bg-white p-2 text-center">
                     <div className="mb-1">
-                      <small className="text-muted">
+                      <small className={`text-muted ${isRtl ? 'rtl-text' : ''}`}>
                         {t("download.download_iOS_action")}
                       </small>
                     </div>
@@ -88,7 +90,7 @@ function Download() {
 
                   <div className="border bg-white p-2 text-center">
                     <div className="mb-1">
-                      <small className="text-muted">
+                      <small className={`text-muted ${isRtl ? 'rtl-text' : ''}`}>
                         {t("download.download_android_action")}
                       </small>
                     </div>

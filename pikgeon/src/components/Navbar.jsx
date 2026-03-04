@@ -17,7 +17,7 @@ function getInitialTheme() {
 }
 
 function Navbar() {
-      const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const handleChangeLang = (e) => {
     const lang = e.target.value;
