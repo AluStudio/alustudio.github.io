@@ -39,6 +39,8 @@ jobs:
           cp -r app-ads.txt _site/ 2>/dev/null || true
           # pikgeon build output
           cp -r pikgeon/dist/* _site/pikgeon/
+          # SPA fallback: copy 404.html to root for GitHub Pages
+          cp pikgeon/dist/404.html _site/404.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

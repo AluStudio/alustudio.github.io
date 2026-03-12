@@ -1,30 +1,15 @@
-import "./assets/scss/all.scss";
-import Navbar from "./components/Navbar";
-import HeroBanner from "./components/HeroBanner";
-import Features from "./components/Features";
-import Stats from "./components/Stats";
-import Privacy from "./components/Privacy";
-import Languages from "./components/Languages";
-import Download from "./components/Download";
-import Footer from "./components/Footer";
-import "./assets/scss/footer.scss";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <main className="main-content">
-        <div className="container">
-          <HeroBanner />
-          <Features />
-          <Stats />
-          <Privacy />
-          <Languages />
-          <Download />
-        </div>
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
+      <Route path="/terms" element={<TermsPage />} />
+    </Routes>
   );
 }
 
