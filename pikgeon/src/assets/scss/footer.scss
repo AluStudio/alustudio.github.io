@@ -24,3 +24,14 @@ footer {
         color: #f4f0eb;
     }
 }
+
+.footer-legal-links {
+    a {
+        color: $dark;
+        text-decoration: none;
+        font-size: 0.9rem;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

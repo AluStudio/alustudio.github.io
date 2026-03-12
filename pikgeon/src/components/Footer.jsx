@@ -1,5 +1,6 @@
 import "../assets/scss/footer.scss";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import i18n from "../i18n";
 
 function Footer() {
@@ -18,6 +19,11 @@ function Footer() {
             </a>
           </div>
           <p className={`rtl-right-only ${isRtl ? 'rtl-text' : ''}`}>{t("footer.goal")}</p>
+          <div className="footer-legal-links mb-2">
+            <Link to="/privacy">{t("footer.privacy_policy")}</Link>
+            <span className="mx-2">•</span>
+            <Link to="/terms">{t("footer.terms_of_use")}</Link>
+          </div>
           <p className={`${isRtl ? 'rtl-text' : ''}`}>
             &copy; {thisYear} {t("footer.copyright")}
           </p>
