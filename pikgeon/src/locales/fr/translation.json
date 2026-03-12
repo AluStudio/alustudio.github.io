@@ -81,6 +81,136 @@
     "goal": "Gestionnaire de Cartes Postales Pikmin",
     "copyright": "Alu Studio Tous droits réservés",
     "contact": "Nous contacter",
-    "unofficialNotice": "Gestionnaire de cartes postales Pikmin pour les fans. Ceci est un outil non officiel."
+    "unofficialNotice": "Gestionnaire de cartes postales Pikmin pour les fans. Ceci est un outil non officiel.",
+    "privacy_policy": "Politique de Confidentialité",
+    "terms_of_use": "Conditions d'Utilisation"
+  },
+  "privacy_policy": {
+    "title": "Politique de Confidentialité",
+    "effective_date": "Date d'entrée en vigueur : 11 mars 2026",
+    "intro": "La présente politique de confidentialité s'applique à l'application Pikgeon (« Application ») pour appareils mobiles, créée par Alu Studio (« Prestataire de Services ») en tant que service gratuit. Ce service est destiné à être utilisé « EN L'ÉTAT ». En utilisant l'Application, vous acceptez la collecte et l'utilisation des informations telles que décrites dans la présente politique.",
+    "info_collection": {
+      "title": "Collecte et utilisation des informations",
+      "desc": "L'Application peut collecter automatiquement certaines informations lors de son téléchargement et de son utilisation. Ces informations peuvent inclure :",
+      "items": [
+        "L'adresse de Protocole Internet de votre appareil (adresse IP)",
+        "Le type d'appareil, la version du système d'exploitation et les identifiants uniques de l'appareil",
+        "L'identifiant publicitaire (IDFA sur iOS, GAID sur Android)",
+        "Les données d'utilisation telles que les pages visitées dans l'Application, la date et l'heure des visites, et le temps passé sur les pages",
+        "Les journaux de plantage et les diagnostics de performances"
+      ],
+      "no_location": "L'Application ne collecte pas d'informations de localisation précises depuis votre appareil mobile."
+    },
+    "advertising": {
+      "title": "Publicité",
+      "desc": "L'Application utilise Google AdMob pour afficher des publicités. AdMob peut collecter et utiliser certaines données pour diffuser des annonces personnalisées ou non personnalisées, notamment :",
+      "items": [
+        "L'identifiant publicitaire (IDFA/GAID) pour le ciblage des annonces et la limitation de la fréquence d'exposition",
+        "L'adresse IP pour le ciblage géographique approximatif",
+        "Les informations sur l'appareil (modèle, version du système d'exploitation, taille de l'écran) pour le formatage des annonces",
+        "Les données d'interaction (vues et clics sur les annonces) pour la mesure des performances"
+      ],
+      "personalized": "Sur iOS, l'Application respecte le cadre App Tracking Transparency (ATT). Si vous refusez l'autorisation de suivi, seules des annonces non personnalisées seront diffusées. Vous pouvez également ajuster les paramètres de personnalisation des annonces sur votre appareil à tout moment."
+    },
+    "third_party": {
+      "title": "Services tiers",
+      "desc": "L'Application utilise les services tiers suivants, chacun disposant de sa propre politique de confidentialité régissant la façon dont ils traitent les données :"
+    },
+    "cookies": {
+      "title": "Cookies et technologies similaires",
+      "desc": "L'Application elle-même n'utilise pas explicitement de cookies. Cependant, les services tiers intégrés à l'Application (tels qu'AdMob) peuvent utiliser des cookies, des identifiants d'appareils et des technologies de suivi similaires pour collecter des informations et diffuser des publicités ciblées. Vous pouvez gérer vos préférences en matière de cookies via les paramètres de votre appareil."
+    },
+    "data_retention": {
+      "title": "Conservation des données",
+      "desc": "Toutes les données de reconnaissance de cartes postales et les paramètres de l'application sont stockés localement sur votre appareil et ne sont jamais transmis à nos serveurs. Les données collectées par des services tiers (AdMob, Firebase) sont conservées conformément à leurs politiques de conservation des données respectives. Si vous souhaitez supprimer vos données locales, vous pouvez désinstaller l'Application ou effacer ses données via les paramètres de votre appareil."
+    },
+    "children": {
+      "title": "Confidentialité des enfants",
+      "desc": "L'Application ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas sciemment des informations d'identification personnelle auprès d'enfants de moins de 13 ans. Si nous découvrons qu'un enfant de moins de 13 ans nous a fourni des informations personnelles, nous les supprimerons immédiatement. Si vous êtes un parent ou un tuteur et pensez que votre enfant nous a communiqué des informations personnelles, veuillez nous contacter à l'adresse alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Vos droits et options",
+      "desc": "En fonction de votre lieu de résidence, vous pouvez disposer de certains droits concernant vos données personnelles :",
+      "gdpr_title": "Pour les utilisateurs de l'UE/EEE (RGPD)",
+      "gdpr_items": [
+        "Droit d'accès à vos données personnelles",
+        "Droit de rectification des données personnelles inexactes",
+        "Droit à l'effacement (« droit à l'oubli »)",
+        "Droit de restriction ou d'opposition au traitement des données",
+        "Droit à la portabilité des données"
+      ],
+      "ccpa_title": "Pour les utilisateurs de Californie (CCPA)",
+      "ccpa_desc": "Vous avez le droit de savoir quelles informations personnelles sont collectées, de demander la suppression de vos informations personnelles et de vous opposer à la vente de vos informations personnelles. Nous ne vendons pas vos informations personnelles.",
+      "opt_out_title": "Options de désinscription",
+      "opt_out_items": [
+        "iOS : Accédez à Réglages → Confidentialité et sécurité → Suivi pour gérer les autorisations de suivi des applications, ou à Réglages → Confidentialité et sécurité → Publicité Apple pour limiter le suivi publicitaire",
+        "Android : Accédez à Paramètres → Confidentialité → Annonces pour désactiver la personnalisation des annonces ou réinitialiser votre identifiant publicitaire",
+        "Paramètres des annonces Google : Visitez https://adssettings.google.com pour gérer vos préférences publicitaires Google",
+        "Désinstallation : Vous pouvez arrêter toute collecte de données en désinstallant l'Application"
+      ]
+    },
+    "security": {
+      "title": "Sécurité",
+      "desc": "Nous accordons une grande importance à la sécurité de vos informations et mettons en œuvre des mesures raisonnables sur le plan commercial pour les protéger. Cependant, aucune méthode de transmission électronique ou de stockage n'est sécurisée à 100 %. Bien que nous nous efforcions de protéger vos informations personnelles, nous ne pouvons garantir une sécurité absolue."
+    },
+    "changes": {
+      "title": "Modifications de la présente Politique de Confidentialité",
+      "desc": "Nous pouvons mettre à jour la présente Politique de Confidentialité périodiquement. Les modifications seront publiées sur cette page avec une date d'entrée en vigueur mise à jour. Nous vous encourageons à consulter régulièrement cette page. L'utilisation continue de l'Application après les modifications vaut acceptation de la politique mise à jour."
+    },
+    "contact": {
+      "title": "Nous contacter",
+      "desc": "Si vous avez des questions concernant la présente Politique de Confidentialité ou vos données, veuillez nous contacter à"
+    }
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "effective_date": "Date d'entrée en vigueur : 11 mars 2026",
+    "intro": "Les présentes conditions générales s'appliquent à l'application Pikgeon (« Application ») pour appareils mobiles, créée par Alu Studio (« Prestataire de Services ») en tant que service gratuit. En téléchargeant ou en utilisant l'Application, vous acceptez ces conditions.",
+    "license": {
+      "title": "Licence d'utilisation",
+      "desc": "Le Prestataire de Services vous accorde une licence limitée, non exclusive, non transférable et révocable pour utiliser l'Application à des fins personnelles et non commerciales, conformément aux présentes conditions."
+    },
+    "restrictions": {
+      "title": "Restrictions",
+      "desc": "Vous vous engagez à ne pas :",
+      "items": [
+        "Copier, modifier ou créer des œuvres dérivées basées sur l'Application",
+        "Tenter d'extraire le code source de l'Application",
+        "Traduire l'Application dans d'autres langues ou créer des versions dérivées",
+        "Utiliser l'Application à des fins illicites ou en violation de toute loi applicable"
+      ]
+    },
+    "third_party": {
+      "title": "Services tiers",
+      "desc": "L'Application utilise des services tiers qui disposent de leurs propres conditions générales :"
+    },
+    "device_security": {
+      "title": "Sécurité de l'appareil",
+      "desc": "Vous êtes responsable du maintien de la sécurité de votre appareil et de l'accès à l'Application. Nous vous déconseillons vivement de débrider (jailbreak) ou de rooter votre appareil, car cela peut compromettre les fonctions de sécurité et entraîner des dysfonctionnements de l'Application."
+    },
+    "connectivity": {
+      "title": "Connexion Internet",
+      "desc": "Certaines fonctionnalités de l'Application nécessitent une connexion Internet active. Le Prestataire de Services n'est pas responsable du fonctionnement de l'Application à capacité réduite en raison d'un manque d'accès à Internet. Si vous utilisez l'Application en dehors d'une zone Wi-Fi, les conditions et les frais de données de votre opérateur de réseau mobile peuvent s'appliquer."
+    },
+    "updates": {
+      "title": "Mises à jour de l'Application",
+      "desc": "Le Prestataire de Services peut publier des mises à jour de l'Application périodiquement. Vous acceptez de recevoir les mises à jour lorsqu'elles sont disponibles. Le Prestataire de Services peut également mettre fin à l'Application à tout moment sans préavis. À la résiliation, vos droits en vertu des présentes conditions prendront fin et vous devrez cesser d'utiliser et supprimer l'Application."
+    },
+    "disclaimer": {
+      "title": "Clause de non-responsabilité",
+      "desc": "L'Application est fournie « EN L'ÉTAT », sans garantie d'aucune sorte, expresse ou implicite. Le Prestataire de Services ne garantit pas que l'Application sera exempte d'erreurs, ininterrompue ou dépourvue de composants nuisibles."
+    },
+    "liability": {
+      "title": "Limitation de responsabilité",
+      "desc": "Dans toute la mesure permise par la loi, le Prestataire de Services ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs, ni de toute perte de bénéfices ou de revenus résultant de votre utilisation de l'Application."
+    },
+    "changes": {
+      "title": "Modifications des présentes Conditions",
+      "desc": "Le Prestataire de Services peut mettre à jour les présentes Conditions périodiquement. Les modifications seront publiées sur cette page. L'utilisation continue de l'Application après les modifications vaut acceptation des conditions mises à jour."
+    },
+    "contact": {
+      "title": "Nous contacter",
+      "desc": "Si vous avez des questions concernant les présentes Conditions, veuillez nous contacter à"
+    }
   }
 }

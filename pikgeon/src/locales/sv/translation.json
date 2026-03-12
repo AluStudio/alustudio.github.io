@@ -81,6 +81,136 @@
     "goal": "Pikmin Vykort Manager",
     "copyright": "Alu Studio Alla rättigheter förbehållna",
     "contact": "Kontakta oss",
-    "unofficialNotice": "Pikmin vykort manager för fans. Detta är ett inofficiellt verktyg."
+    "unofficialNotice": "Pikmin vykort manager för fans. Detta är ett inofficiellt verktyg.",
+    "privacy_policy": "Integritetspolicy",
+    "terms_of_use": "Användarvillkor"
+  },
+  "privacy_policy": {
+    "title": "Integritetspolicy",
+    "effective_date": "Ikraftträdandedatum: 11 mars 2026",
+    "intro": "Denna integritetspolicy gäller för Pikgeon-appen (\"Applikationen\") för mobila enheter, skapad av Alu Studio (\"Tjänsteleverantören\") som en gratis tjänst. Tjänsten är avsedd att användas \"I BEFINTLIGT SKICK\". Genom att använda Applikationen samtycker du till insamling och användning av information enligt beskrivningen i denna policy.",
+    "info_collection": {
+      "title": "Insamling och användning av information",
+      "desc": "Applikationen kan automatiskt samla in viss information när du laddar ner och använder den. Denna information kan inkludera:",
+      "items": [
+        "Din enhets Internet Protocol-adress (IP-adress)",
+        "Enhetstyp, operativsystemversion och unika enhetsidentifierare",
+        "Annonsidentifierare (IDFA på iOS, GAID på Android)",
+        "Användningsdata såsom besökta sidor i Applikationen, tid och datum för besök, och tid spenderad på sidor",
+        "Kraschloggar och prestandadiagnostik"
+      ],
+      "no_location": "Applikationen samlar inte in exakt platsinformation från din mobila enhet."
+    },
+    "advertising": {
+      "title": "Annonsering",
+      "desc": "Applikationen använder Google AdMob för att visa annonser. AdMob kan samla in och använda vissa uppgifter för att visa personanpassade eller icke-personanpassade annonser, inklusive:",
+      "items": [
+        "Annons-ID (IDFA/GAID) för annonsinriktning och frekvensbegränsning",
+        "IP-adress för ungefärlig geografisk inriktning",
+        "Enhetsinformation (modell, OS-version, skärmstorlek) för annonsformatering",
+        "Interaktionsdata (annonsvisningar, klick) för prestandamätning"
+      ],
+      "personalized": "På iOS respekterar Applikationen ramverket App Tracking Transparency (ATT). Om du avböjer spårningstillstånd visas endast icke-personanpassade annonser. Du kan också justera inställningarna för annonsanpassning på din enhet när som helst."
+    },
+    "third_party": {
+      "title": "Tredjepartstjänster",
+      "desc": "Applikationen använder följande tredjepartstjänster, var och en med sina egna integritetspolicyer som reglerar hur de hanterar uppgifter:"
+    },
+    "cookies": {
+      "title": "Cookies och liknande tekniker",
+      "desc": "Applikationen själv använder inte cookies (Cookie) explicit. Tredjepartstjänster som är integrerade i Applikationen (såsom AdMob) kan dock använda cookies, enhetsidentifierare och liknande spårningstekniker för att samla in information och visa riktade annonser. Du kan hantera dina cookieinställningar via enhetens inställningar."
+    },
+    "data_retention": {
+      "title": "Datalagring",
+      "desc": "All vykortsigenkänningsdata och appinställningar lagras lokalt på din enhet och överförs aldrig till våra servrar. Data som samlas in av tredjepartstjänster (AdMob, Firebase) lagras i enlighet med respektive tjänsts datalagringspolicy. Om du vill radera dina lokala data kan du avinstallera Applikationen eller rensa dess data via enhetens inställningar."
+    },
+    "children": {
+      "title": "Barns integritet",
+      "desc": "Applikationen riktar sig inte till barn under 13 år. Vi samlar inte medvetet in personligt identifierbar information från barn under 13 år. Om vi upptäcker att ett barn under 13 år har lämnat personuppgifter kommer vi omedelbart att radera dem. Om du är förälder eller vårdnadshavare och tror att ditt barn har gett oss personuppgifter, vänligen kontakta oss på alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Dina rättigheter och val",
+      "desc": "Beroende på din plats kan du ha vissa rättigheter avseende dina personuppgifter:",
+      "gdpr_title": "För EU/EES-användare (GDPR)",
+      "gdpr_items": [
+        "Rätt att få tillgång till dina personuppgifter",
+        "Rätt att rätta felaktiga personuppgifter",
+        "Rätt till radering (\"rätten att bli bortglömd\")",
+        "Rätt att begränsa eller invända mot databehandling",
+        "Rätt till dataportabilitet"
+      ],
+      "ccpa_title": "För användare i Kalifornien (CCPA)",
+      "ccpa_desc": "Du har rätt att veta vilken personlig information som samlas in, begära radering av din personliga information och välja bort försäljning av din personliga information. Vi säljer inte din personliga information.",
+      "opt_out_title": "Alternativ för att välja bort",
+      "opt_out_items": [
+        "iOS: Gå till Inställningar → Sekretess och säkerhet → Spårning för att hantera apptillstånd för spårning, eller Inställningar → Sekretess och säkerhet → Apple-annonsering för att begränsa annonsspårning",
+        "Android: Gå till Inställningar → Sekretess → Annonser för att välja bort annonsanpassning eller återställa ditt annons-ID",
+        "Google Annonsinställningar: Besök https://adssettings.google.com för att hantera dina Google-annonsinställningar",
+        "Avinstallera: Du kan stoppa all datainsamling genom att avinstallera Applikationen"
+      ]
+    },
+    "security": {
+      "title": "Säkerhet",
+      "desc": "Vi värdesätter säkerheten för din information och vidtar kommersiellt rimliga åtgärder för att skydda den. Ingen metod för elektronisk överföring eller lagring är dock 100% säker. Även om vi strävar efter att skydda din personliga information kan vi inte garantera absolut säkerhet."
+    },
+    "changes": {
+      "title": "Ändringar i denna integritetspolicy",
+      "desc": "Vi kan uppdatera denna integritetspolicy från tid till annan. Ändringar kommer att publiceras på denna sida med ett uppdaterat ikraftträdandedatum. Vi uppmuntrar dig att regelbundet granska denna sida. Fortsatt användning av Applikationen efter ändringar innebär godkännande av den uppdaterade policyn."
+    },
+    "contact": {
+      "title": "Kontakta oss",
+      "desc": "Om du har frågor om denna integritetspolicy eller dina uppgifter, vänligen kontakta oss på"
+    }
+  },
+  "terms": {
+    "title": "Användarvillkor",
+    "effective_date": "Ikraftträdandedatum: 11 mars 2026",
+    "intro": "Dessa villkor gäller för Pikgeon-appen (\"Applikationen\") för mobila enheter, skapad av Alu Studio (\"Tjänsteleverantören\") som en gratis tjänst. Genom att ladda ner eller använda Applikationen godkänner du dessa villkor.",
+    "license": {
+      "title": "Användarlicens",
+      "desc": "Tjänsteleverantören beviljar dig en begränsad, icke-exklusiv, icke-överlåtbar, återkallbar licens att använda Applikationen för personliga, icke-kommersiella ändamål i enlighet med dessa villkor."
+    },
+    "restrictions": {
+      "title": "Begränsningar",
+      "desc": "Du samtycker till att inte:",
+      "items": [
+        "Kopiera, modifiera eller skapa avledda verk baserade på Applikationen",
+        "Försöka extrahera källkoden för Applikationen",
+        "Översätta Applikationen till andra språk eller skapa avledda versioner",
+        "Använda Applikationen för något olagligt syfte eller i strid med tillämplig lagstiftning"
+      ]
+    },
+    "third_party": {
+      "title": "Tredjepartstjänster",
+      "desc": "Applikationen använder tredjepartstjänster som har sina egna villkor:"
+    },
+    "device_security": {
+      "title": "Enhetssäkerhet",
+      "desc": "Du är ansvarig för att upprätthålla säkerheten för din enhet och åtkomsten till Applikationen. Vi avråder starkt från att jailbreaka eller roota din enhet, eftersom det kan äventyra säkerhetsfunktioner och orsaka att Applikationen slutar fungera."
+    },
+    "connectivity": {
+      "title": "Internetanslutning",
+      "desc": "Vissa funktioner i Applikationen kräver en aktiv internetanslutning. Tjänsteleverantören ansvarar inte för att Applikationen inte fungerar med full kapacitet på grund av bristande internetåtkomst. Om du använder Applikationen utanför ett Wi-Fi-område kan din mobilnätoperatörs villkor och datakostnader gälla."
+    },
+    "updates": {
+      "title": "Applikationsuppdateringar",
+      "desc": "Tjänsteleverantören kan från tid till annan släppa uppdateringar av Applikationen. Du samtycker till att acceptera uppdateringar när de är tillgängliga. Tjänsteleverantören kan också avveckla Applikationen när som helst utan föregående meddelande. Vid avslutning upphör dina rättigheter enligt dessa villkor och du måste sluta använda och radera Applikationen."
+    },
+    "disclaimer": {
+      "title": "Friskrivning",
+      "desc": "Applikationen tillhandahålls \"I BEFINTLIGT SKICK\" utan garantier av något slag, varken uttryckliga eller underförstådda. Tjänsteleverantören garanterar inte att Applikationen kommer att vara felfri, oavbruten eller fri från skadliga komponenter."
+    },
+    "liability": {
+      "title": "Ansvarsbegränsning",
+      "desc": "I den maximala utsträckning som tillåts av lag ska Tjänsteleverantören inte vara ansvarig för några indirekta, oavsiktliga, särskilda, följdskador eller straffskadestånd, eller förlust av vinst eller intäkter som uppstår från din användning av Applikationen."
+    },
+    "changes": {
+      "title": "Ändringar i dessa villkor",
+      "desc": "Tjänsteleverantören kan uppdatera dessa villkor från tid till annan. Ändringar kommer att publiceras på denna sida. Fortsatt användning av Applikationen efter ändringar innebär godkännande av de uppdaterade villkoren."
+    },
+    "contact": {
+      "title": "Kontakta oss",
+      "desc": "Om du har frågor om dessa villkor, vänligen kontakta oss på"
+    }
   }
 }

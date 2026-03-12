@@ -81,6 +81,136 @@
     "goal": "Pikmin Postcard Manager",
     "copyright": "Alu Studio Lahat ng karapatan ay nakalaan",
     "contact": "Makipag-ugnayan sa Amin",
-    "unofficialNotice": "Pikmin postcard manager para sa mga fans. Ito ay isang hindi opisyal na tool."
+    "unofficialNotice": "Pikmin postcard manager para sa mga fans. Ito ay isang hindi opisyal na tool.",
+    "privacy_policy": "Patakaran sa Pagkapribado",
+    "terms_of_use": "Mga Tuntunin ng Paggamit"
+  },
+  "privacy_policy": {
+    "title": "Patakaran sa Pagkapribado",
+    "effective_date": "Petsa ng Bisa: Marso 11, 2026",
+    "intro": "Ang patakarang ito sa pagkapribado ay naaangkop sa Pikgeon app (\"Aplikasyon\") para sa mga mobile device, na nilikha ng Alu Studio (\"Tagapagbigay ng Serbisyo\") bilang libreng serbisyo. Ang serbisyong ito ay nilayong gamitin \"TULAD NG KUNG ANO ITO\". Sa paggamit ng Aplikasyon, sumasang-ayon ka sa pangongolekta at paggamit ng impormasyon ayon sa inilarawan sa patakarang ito.",
+    "info_collection": {
+      "title": "Pangongolekta at Paggamit ng Impormasyon",
+      "desc": "Maaaring awtomatikong mangolekta ang Aplikasyon ng ilang impormasyon kapag dina-download at ginagamit ito. Maaaring kabilang dito ang:",
+      "items": [
+        "Ang Internet Protocol address (IP address) ng iyong device",
+        "Uri ng device, bersyon ng operating system, at mga natatanging identifier ng device",
+        "Identifier ng advertising (IDFA sa iOS, GAID sa Android)",
+        "Data ng paggamit tulad ng mga pahina na binisita sa loob ng Aplikasyon, oras at petsa ng mga pagbisita, at oras na ginugol sa mga pahina",
+        "Mga crash log at diagnostic ng performance"
+      ],
+      "no_location": "Hindi nangongolekta ang Aplikasyon ng tumpak na impormasyon ng lokasyon mula sa iyong mobile device."
+    },
+    "advertising": {
+      "title": "Pag-advertise",
+      "desc": "Gumagamit ang Aplikasyon ng Google AdMob para magpakita ng mga advertisement. Maaaring mangolekta at gumamit ang AdMob ng ilang data para magsilbi ng personalisado o hindi personalisadong mga ad, kabilang ang:",
+      "items": [
+        "Advertising ID (IDFA/GAID) para sa pag-target ng ad at paglilimita ng dalas",
+        "IP address para sa tinatayang geographic na pag-target",
+        "Impormasyon ng device (modelo, bersyon ng OS, laki ng screen) para sa pag-format ng ad",
+        "Data ng interaksyon (mga panonood ng ad, mga click) para sa pagsukat ng performance"
+      ],
+      "personalized": "Sa iOS, iginagalang ng Aplikasyon ang App Tracking Transparency (ATT) framework. Kung tatanggihan mo ang pahintulot sa pagsubaybay, mga hindi personalisadong ad lamang ang ipapakita. Maaari ka ring mag-adjust ng mga setting ng personalisasyon ng ad sa iyong device anumang oras."
+    },
+    "third_party": {
+      "title": "Mga Serbisyo ng Ikatlong Partido",
+      "desc": "Gumagamit ang Aplikasyon ng mga sumusunod na serbisyo ng ikatlong partido, bawat isa ay may kani-kanilang mga patakaran sa pagkapribado na namamahala sa kung paano nila hinahawakan ang data:"
+    },
+    "cookies": {
+      "title": "Mga Cookie at Katulad na Teknolohiya",
+      "desc": "Ang Aplikasyon mismo ay hindi tahasang gumagamit ng mga Cookie. Gayunpaman, ang mga serbisyo ng ikatlong partido na isinama sa Aplikasyon (tulad ng AdMob) ay maaaring gumamit ng mga cookie, identifier ng device, at katulad na mga teknolohiya sa pagsubaybay para mangolekta ng impormasyon at magsilbi ng mga naka-target na advertisement. Maaari mong pamahalaan ang mga kagustuhan sa cookie sa pamamagitan ng mga setting ng iyong device."
+    },
+    "data_retention": {
+      "title": "Pagpapanatili ng Data",
+      "desc": "Ang lahat ng data ng pagkilala sa postcard at mga setting ng app ay lokal na naka-imbak sa iyong device at hindi kailanman ipinapadala sa aming mga server. Ang data na kinokolekta ng mga serbisyo ng ikatlong partido (AdMob, Firebase) ay pinapanatili ayon sa kani-kanilang mga patakaran sa pagpapanatili ng data. Kung nais mong burahin ang iyong lokal na data, maaari mong i-uninstall ang Aplikasyon o i-clear ang data nito sa pamamagitan ng mga setting ng iyong device."
+    },
+    "children": {
+      "title": "Pagkapribado ng mga Bata",
+      "desc": "Ang Aplikasyon ay hindi naglalayong maabot ang mga batang wala pang 13 taong gulang. Hindi kami sadyang nangongolekta ng personal na nakakakilalang impormasyon mula sa mga batang wala pang 13 taong gulang. Kung matuklasan namin na isang bata na wala pang 13 taong gulang ay nagbigay ng personal na impormasyon, agad namin itong burahin. Kung ikaw ay isang magulang o tagapag-alaga at naniniwala kang ang iyong anak ay nagbigay sa amin ng personal na impormasyon, mangyaring makipag-ugnayan sa amin sa alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Iyong mga Karapatan at Pagpipilian",
+      "desc": "Depende sa iyong lokasyon, maaaring mayroon kang ilang mga karapatan patungkol sa iyong personal na data:",
+      "gdpr_title": "Para sa mga Gumagamit ng EU/EEA (GDPR)",
+      "gdpr_items": [
+        "Karapatan na ma-access ang iyong personal na data",
+        "Karapatan na ituwid ang hindi tumpak na personal na data",
+        "Karapatan sa pagbubura (\"karapatang makalimutan\")",
+        "Karapatan na paghigpitan o tumutol sa pagpoproseso ng data",
+        "Karapatan sa portability ng data"
+      ],
+      "ccpa_title": "Para sa mga Gumagamit ng California (CCPA)",
+      "ccpa_desc": "Mayroon kang karapatang malaman kung anong personal na impormasyon ang kinokolekta, humiling ng pagtanggal ng iyong personal na impormasyon, at mag-opt out sa pagbebenta ng iyong personal na impormasyon. Hindi namin ibinebenta ang iyong personal na impormasyon.",
+      "opt_out_title": "Mga Opsyon sa Opt-Out",
+      "opt_out_items": [
+        "iOS: Pumunta sa Settings → Privacy & Security → Tracking para pamahalaan ang mga pahintulot sa pagsubaybay ng app, o Settings → Privacy & Security → Apple Advertising para limitahan ang pagsubaybay ng ad",
+        "Android: Pumunta sa Settings → Privacy → Ads para mag-opt out sa personalisasyon ng ad o i-reset ang iyong advertising ID",
+        "Mga Setting ng Google Ads: Bisitahin ang https://adssettings.google.com para pamahalaan ang iyong mga kagustuhan sa ad ng Google",
+        "I-uninstall: Maaari mong ihinto ang lahat ng pangongolekta ng data sa pamamagitan ng pag-uninstall ng Aplikasyon"
+      ]
+    },
+    "security": {
+      "title": "Seguridad",
+      "desc": "Pinahahalagahan namin ang seguridad ng iyong impormasyon at gumagamit ng mga komersyal na makatuwirang hakbang upang protektahan ito. Gayunpaman, walang paraan ng electronic na pagpapadala o pag-iimbak na 100% secure. Habang nagsisikap kaming protektahan ang iyong personal na impormasyon, hindi namin magagarantiyahan ang ganap na seguridad."
+    },
+    "changes": {
+      "title": "Mga Pagbabago sa Patakarang ito sa Pagkapribado",
+      "desc": "Maaari naming i-update ang Patakarang ito sa Pagkapribado paminsan-minsan. Ang mga pagbabago ay ipapaskil sa pahinang ito na may na-update na petsa ng bisa. Hinihikayat ka naming suriin ang pahinang ito nang pana-panahon. Ang patuloy na paggamit ng Aplikasyon pagkatapos ng mga pagbabago ay bumubuo ng pagtanggap sa na-update na patakaran."
+    },
+    "contact": {
+      "title": "Makipag-ugnayan sa Amin",
+      "desc": "Kung mayroon kang mga katanungan tungkol sa Patakarang ito sa Pagkapribado o sa iyong data, mangyaring makipag-ugnayan sa amin sa"
+    }
+  },
+  "terms": {
+    "title": "Mga Tuntunin ng Paggamit",
+    "effective_date": "Petsa ng Bisa: Marso 11, 2026",
+    "intro": "Ang mga tuntunin at kundisyong ito ay naaangkop sa Pikgeon app (\"Aplikasyon\") para sa mga mobile device, na nilikha ng Alu Studio (\"Tagapagbigay ng Serbisyo\") bilang libreng serbisyo. Sa pag-download o paggamit ng Aplikasyon, sumasang-ayon ka sa mga tuntuning ito.",
+    "license": {
+      "title": "Lisensya sa Paggamit",
+      "desc": "Ang Tagapagbigay ng Serbisyo ay nagbibigay sa iyo ng limitado, hindi eksklusibo, hindi maaaring ilipat, at mababawing lisensya para gamitin ang Aplikasyon para sa mga personal, hindi komersyal na layunin alinsunod sa mga tuntuning ito."
+    },
+    "restrictions": {
+      "title": "Mga Paghihigpit",
+      "desc": "Sumasang-ayon kang huwag:",
+      "items": [
+        "Kopyahin, baguhin, o lumikha ng mga derivative na gawa batay sa Aplikasyon",
+        "Subukang kunin ang source code ng Aplikasyon",
+        "I-translate ang Aplikasyon sa ibang mga wika o lumikha ng mga derivative na bersyon",
+        "Gamitin ang Aplikasyon para sa anumang layuning ilegal o sa paglabag sa anumang naaangkop na batas"
+      ]
+    },
+    "third_party": {
+      "title": "Mga Serbisyo ng Ikatlong Partido",
+      "desc": "Ang Aplikasyon ay gumagamit ng mga serbisyo ng ikatlong partido na may kani-kanilang mga tuntunin at kundisyon:"
+    },
+    "device_security": {
+      "title": "Seguridad ng Device",
+      "desc": "Ikaw ang responsable sa pagpapanatili ng seguridad ng iyong device at access sa Aplikasyon. Lubos naming inirerekomenda na huwag mag-jailbreak o mag-root ng iyong device, dahil maaari itong makompromiso ang mga tampok ng seguridad at magdulot ng pagkabigo ng Aplikasyon."
+    },
+    "connectivity": {
+      "title": "Koneksyon sa Internet",
+      "desc": "Ang ilang mga tampok ng Aplikasyon ay nangangailangan ng aktibong koneksyon sa internet. Ang Tagapagbigay ng Serbisyo ay hindi responsable para sa Aplikasyon na hindi gumagana sa buong kapasidad dahil sa kawalan ng access sa internet. Kung gagamitin mo ang Aplikasyon sa labas ng Wi-Fi area, ang mga tuntunin ng iyong mobile network provider at mga bayad sa data ay maaaring ilapat."
+    },
+    "updates": {
+      "title": "Mga Update sa Aplikasyon",
+      "desc": "Ang Tagapagbigay ng Serbisyo ay maaaring maglabas ng mga update sa Aplikasyon paminsan-minsan. Sumasang-ayon kang tanggapin ang mga update kapag available. Maaari ring ihinto ng Tagapagbigay ng Serbisyo ang Aplikasyon anumang oras nang walang abiso. Sa pagtatapos, ang iyong mga karapatan sa ilalim ng mga tuntuning ito ay magtatapos, at kailangan mong ihinto ang paggamit at burahin ang Aplikasyon."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "desc": "Ang Aplikasyon ay ibinibigay \"TULAD NG KUNG ANO ITO\" nang walang anumang warranty, alinman sa hayagan o ipinahiwatig. Ang Tagapagbigay ng Serbisyo ay hindi nagga-garantiya na ang Aplikasyon ay magiging malaya sa error, walang patid, o walang mapanganib na mga bahagi."
+    },
+    "liability": {
+      "title": "Limitasyon ng Pananagutan",
+      "desc": "Sa pinakamataas na lawak na pinahihintulutan ng batas, ang Tagapagbigay ng Serbisyo ay hindi mananagot para sa anumang hindi direkta, nagkataon, espesyal, nagbubunga, o punitive na pinsala, o anumang pagkawala ng kita na nagmumula sa iyong paggamit ng Aplikasyon."
+    },
+    "changes": {
+      "title": "Mga Pagbabago sa Mga Tuntuning Ito",
+      "desc": "Maaaring i-update ng Tagapagbigay ng Serbisyo ang mga Tuntuning ito paminsan-minsan. Ang mga pagbabago ay ipapaskil sa pahinang ito. Ang patuloy na paggamit ng Aplikasyon pagkatapos ng mga pagbabago ay bumubuo ng pagtanggap sa na-update na mga tuntunin."
+    },
+    "contact": {
+      "title": "Makipag-ugnayan sa Amin",
+      "desc": "Kung mayroon kang mga katanungan tungkol sa Mga Tuntuning ito, mangyaring makipag-ugnayan sa amin sa"
+    }
   }
 }

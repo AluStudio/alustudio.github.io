@@ -81,6 +81,136 @@
     "goal": "Pikmin-postikorttihallinta",
     "copyright": "Alu Studio Kaikki oikeudet pidätetään",
     "contact": "Ota yhteyttä",
-    "unofficialNotice": "Pikmin-postikorttihallinta faneille. Tämä on epävirallinen työkalu."
+    "unofficialNotice": "Pikmin-postikorttihallinta faneille. Tämä on epävirallinen työkalu.",
+    "privacy_policy": "Tietosuojakäytäntö",
+    "terms_of_use": "Käyttöehdot"
+  },
+  "privacy_policy": {
+    "title": "Tietosuojakäytäntö",
+    "effective_date": "Voimaantulopäivä: 11. maaliskuuta 2026",
+    "intro": "Tämä tietosuojakäytäntö koskee Pikgeon-sovellusta (\"Sovellus\") mobiililaitteille, jonka Alu Studio (\"Palveluntarjoaja\") on luonut ilmaisena palveluna. Tämä palvelu on tarkoitettu käytettäväksi \"SELLAISENAAN\". Käyttämällä Sovellusta hyväksyt tietojen keräämisen ja käytön tässä käytännössä kuvatulla tavalla.",
+    "info_collection": {
+      "title": "Tietojen kerääminen ja käyttö",
+      "desc": "Sovellus saattaa kerätä tiettyjä tietoja automaattisesti, kun lataat ja käytät sitä. Nämä tiedot voivat sisältää:",
+      "items": [
+        "Laitteesi Internet Protocol -osoitteen (IP-osoitteen)",
+        "Laitteen tyypin, käyttöjärjestelmän version ja yksilölliset laitetunnisteet",
+        "Mainostunnisteen (IDFA iOS:ssa, GAID Androidissa)",
+        "Käyttötietoja, kuten Sovelluksessa vieraillut sivut, vierailujen aika ja päivämäärä sekä sivuilla vietetty aika",
+        "Kaatumislokit ja suorituskykydiagnostiikka"
+      ],
+      "no_location": "Sovellus ei kerää tarkkoja sijaintitietoja mobiililaitteeltasi."
+    },
+    "advertising": {
+      "title": "Mainonta",
+      "desc": "Sovellus käyttää Google AdMobia mainosten näyttämiseen. AdMob saattaa kerätä ja käyttää tiettyjä tietoja kohdennettujen tai ei-kohdennettujen mainosten näyttämiseen, mukaan lukien:",
+      "items": [
+        "Mainostunniste (IDFA/GAID) mainosten kohdentamiseen ja taajuuden rajoittamiseen",
+        "IP-osoite likimääräiseen maantieteelliseen kohdentamiseen",
+        "Laitetiedot (malli, käyttöjärjestelmän versio, näytön koko) mainosten muotoiluun",
+        "Vuorovaikutustiedot (mainosnäytöt, klikkaukset) suorituskyvyn mittaamiseen"
+      ],
+      "personalized": "iOS:ssa Sovellus noudattaa App Tracking Transparency (ATT) -kehystä. Jos kieltäydyt seurantaluvasta, näytetään vain ei-kohdennettuja mainoksia. Voit myös säätää mainosten personointiasetuksia laitteellasi milloin tahansa."
+    },
+    "third_party": {
+      "title": "Kolmansien osapuolten palvelut",
+      "desc": "Sovellus käyttää seuraavia kolmansien osapuolten palveluja, joilla kullakin on omat tietosuojakäytäntönsä tietojen käsittelystä:"
+    },
+    "cookies": {
+      "title": "Evästeet ja vastaavat teknologiat",
+      "desc": "Sovellus itsessään ei käytä evästeitä (Cookie) nimenomaisesti. Sovellukseen integroidut kolmansien osapuolten palvelut (kuten AdMob) voivat kuitenkin käyttää evästeitä, laitetunnisteita ja vastaavia seurantateknologioita tietojen keräämiseen ja kohdennettujen mainosten näyttämiseen. Voit hallita evästeasetuksiasi laitteesi asetuksista."
+    },
+    "data_retention": {
+      "title": "Tietojen säilyttäminen",
+      "desc": "Kaikki postikorttien tunnistustiedot ja sovelluksen asetukset tallennetaan paikallisesti laitteellesi eikä niitä koskaan lähetetä palvelimillemme. Kolmansien osapuolten palvelujen (AdMob, Firebase) keräämät tiedot säilytetään niiden omien tietojen säilytyskäytäntöjen mukaisesti. Jos haluat poistaa paikalliset tietosi, voit poistaa Sovelluksen tai tyhjentää sen tiedot laitteesi asetuksista."
+    },
+    "children": {
+      "title": "Lasten yksityisyys",
+      "desc": "Sovellus ei ole suunnattu alle 13-vuotiaille lapsille. Emme tietoisesti kerää henkilökohtaisia tunnistetietoja alle 13-vuotiailta lapsilta. Jos havaitsemme, että alle 13-vuotias lapsi on antanut henkilökohtaisia tietoja, poistamme ne viipymättä. Jos olet vanhempi tai huoltaja ja uskot lapsesi antaneen meille henkilökohtaisia tietoja, ota meihin yhteyttä osoitteessa alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Sinun oikeutesi ja valintasi",
+      "desc": "Sijaintisi mukaan sinulla voi olla tiettyjä oikeuksia henkilötietojesi suhteen:",
+      "gdpr_title": "EU/ETA-käyttäjille (GDPR)",
+      "gdpr_items": [
+        "Oikeus saada pääsy henkilötietoihisi",
+        "Oikeus oikaista virheellisiä henkilötietoja",
+        "Oikeus tietojen poistamiseen (\"oikeus tulla unohdetuksi\")",
+        "Oikeus rajoittaa tietojen käsittelyä tai vastustaa sitä",
+        "Oikeus tietojen siirrettävyyteen"
+      ],
+      "ccpa_title": "Kalifornian käyttäjille (CCPA)",
+      "ccpa_desc": "Sinulla on oikeus tietää, mitä henkilötietoja kerätään, pyytää henkilötietojesi poistamista sekä kieltäytyä henkilötietojesi myynnistä. Emme myy henkilötietojasi.",
+      "opt_out_title": "Opt-out-vaihtoehdot",
+      "opt_out_items": [
+        "iOS: Siirry kohtaan Asetukset → Tietosuoja ja turvallisuus → Seuranta hallitaksesi sovelluksen seurantalupia, tai Asetukset → Tietosuoja ja turvallisuus → Apple-mainonta rajoittaaksesi mainosten seurantaa",
+        "Android: Siirry kohtaan Asetukset → Tietosuoja → Mainokset kieltäytyäksesi mainosten personoinnista tai nollataksesi mainostunnuksesi",
+        "Google-mainosasetukset: Siirry osoitteeseen https://adssettings.google.com hallitaksesi Google-mainosmieltymyksiäsi",
+        "Poista asennus: Voit lopettaa kaiken tietojen keräämisen poistamalla Sovelluksen"
+      ]
+    },
+    "security": {
+      "title": "Turvallisuus",
+      "desc": "Arvostamme tietojesi turvallisuutta ja käytämme kaupallisesti kohtuullisia toimenpiteitä niiden suojaamiseksi. Mikään sähköisen tiedonsiirron tai tallennuksen menetelmä ei kuitenkaan ole 100% turvallinen. Vaikka pyrimme suojaamaan henkilötietojasi, emme voi taata ehdotonta turvallisuutta."
+    },
+    "changes": {
+      "title": "Muutokset tähän tietosuojakäytäntöön",
+      "desc": "Saatamme päivittää tätä tietosuojakäytäntöä ajoittain. Muutokset julkaistaan tällä sivulla päivitetyllä voimaantulopäivällä. Kannustamme sinua tarkistamaan tämän sivun säännöllisesti. Sovelluksen jatkuva käyttö muutosten jälkeen merkitsee päivitetyn käytännön hyväksymistä."
+    },
+    "contact": {
+      "title": "Ota yhteyttä",
+      "desc": "Jos sinulla on kysymyksiä tästä tietosuojakäytännöstä tai tiedoistasi, ota meihin yhteyttä osoitteessa"
+    }
+  },
+  "terms": {
+    "title": "Käyttöehdot",
+    "effective_date": "Voimaantulopäivä: 11. maaliskuuta 2026",
+    "intro": "Nämä ehdot koskevat Pikgeon-sovellusta (\"Sovellus\") mobiililaitteille, jonka Alu Studio (\"Palveluntarjoaja\") on luonut ilmaisena palveluna. Lataamalla tai käyttämällä Sovellusta hyväksyt nämä ehdot.",
+    "license": {
+      "title": "Käyttölisenssi",
+      "desc": "Palveluntarjoaja myöntää sinulle rajoitetun, ei-yksinomaisen, ei-siirrettävän, peruutettavissa olevan lisenssin käyttää Sovellusta henkilökohtaisiin, ei-kaupallisiin tarkoituksiin näiden ehtojen mukaisesti."
+    },
+    "restrictions": {
+      "title": "Rajoitukset",
+      "desc": "Sitoudut olemaan tekemättä seuraavaa:",
+      "items": [
+        "Kopioi, muokkaa tai luo johdannaisteoksia Sovelluksen pohjalta",
+        "Yritä poimia Sovelluksen lähdekoodia",
+        "Käännä Sovellusta muille kielille tai luo johdannaisversioita",
+        "Käytä Sovellusta mihinkään laittomaan tarkoitukseen tai sovellettavien lakien vastaisesti"
+      ]
+    },
+    "third_party": {
+      "title": "Kolmansien osapuolten palvelut",
+      "desc": "Sovellus käyttää kolmansien osapuolten palveluja, joilla on omat ehtonsa:"
+    },
+    "device_security": {
+      "title": "Laitteen turvallisuus",
+      "desc": "Olet vastuussa laitteesi turvallisuuden ja Sovelluksen käyttöoikeuden ylläpitämisestä. Suosittelemme vahvasti, ettet tee laitteellesi jailbreakia tai rootausta, sillä se voi vaarantaa turvallisuusominaisuudet ja aiheuttaa Sovelluksen toimintahäiriöitä."
+    },
+    "connectivity": {
+      "title": "Internet-yhteys",
+      "desc": "Jotkin Sovelluksen ominaisuudet edellyttävät aktiivista Internet-yhteyttä. Palveluntarjoaja ei ole vastuussa Sovelluksen toimimattomuudesta täydellä kapasiteetilla Internet-yhteyden puuttumisen vuoksi. Jos käytät Sovellusta Wi-Fi-alueen ulkopuolella, matkapuhelinoperaattorisi ehdot ja datamaksut voivat tulla sovellettaviksi."
+    },
+    "updates": {
+      "title": "Sovelluspäivitykset",
+      "desc": "Palveluntarjoaja saattaa julkaista Sovellukseen päivityksiä ajoittain. Sitoudut hyväksymään päivitykset niiden saatavuuden mukaan. Palveluntarjoaja voi myös lopettaa Sovelluksen milloin tahansa ilman ennakkoilmoitusta. Lopetuksen yhteydessä näiden ehtojen mukaiset oikeutesi päättyvät, ja sinun on lopetettava Sovelluksen käyttö ja poistettava se."
+    },
+    "disclaimer": {
+      "title": "Vastuuvapauslauseke",
+      "desc": "Sovellus tarjotaan \"SELLAISENAAN\" ilman minkäänlaisia takuita, olivatpa ne nimenomaisia tai implisiittisiä. Palveluntarjoaja ei takaa, että Sovellus on virheetön, keskeytyksetön tai vapaa haitallisista komponenteista."
+    },
+    "liability": {
+      "title": "Vastuun rajoittaminen",
+      "desc": "Lain sallimassa enimmäislaajuudessa Palveluntarjoaja ei ole vastuussa mistään epäsuorista, satunnaisista, erityisistä, seurauksellisista tai rankaisevista vahingoista taikka voittojen tai tuottojen menetyksistä, jotka johtuvat Sovelluksen käytöstäsi."
+    },
+    "changes": {
+      "title": "Muutokset näihin ehtoihin",
+      "desc": "Palveluntarjoaja saattaa päivittää näitä ehtoja ajoittain. Muutokset julkaistaan tällä sivulla. Sovelluksen jatkuva käyttö muutosten jälkeen merkitsee päivitettyjen ehtojen hyväksymistä."
+    },
+    "contact": {
+      "title": "Ota yhteyttä",
+      "desc": "Jos sinulla on kysymyksiä näistä ehdoista, ota meihin yhteyttä osoitteessa"
+    }
   }
 }

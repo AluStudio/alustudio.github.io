@@ -81,6 +81,136 @@
     "goal": "Pikmin Postkarten-Manager",
     "copyright": "Alu Studio Alle Rechte vorbehalten",
     "contact": "Kontakt",
-    "unofficialNotice": "Pikmin-Postkarten-Manager für Fans. Dies ist ein inoffizielles Tool."
+    "unofficialNotice": "Pikmin-Postkarten-Manager für Fans. Dies ist ein inoffizielles Tool.",
+    "privacy_policy": "Datenschutzrichtlinie",
+    "terms_of_use": "Nutzungsbedingungen"
+  },
+  "privacy_policy": {
+    "title": "Datenschutzrichtlinie",
+    "effective_date": "Gültig ab: 11. März 2026",
+    "intro": "Diese Datenschutzrichtlinie gilt für die Pikgeon-App (\"Anwendung\") für mobile Geräte, die von Alu Studio (\"Dienstleister\") als kostenloser Dienst entwickelt wurde. Dieser Dienst ist zur Nutzung \"WIE BESEHEN\" vorgesehen. Durch die Nutzung der Anwendung stimmen Sie der Erhebung und Verwendung von Informationen gemäß dieser Richtlinie zu.",
+    "info_collection": {
+      "title": "Informationserhebung und -nutzung",
+      "desc": "Die Anwendung kann beim Herunterladen und Verwenden automatisch bestimmte Informationen erfassen. Zu diesen Informationen können gehören:",
+      "items": [
+        "Die Internetprotokolladresse Ihres Geräts (IP-Adresse)",
+        "Gerätetyp, Betriebssystemversion und eindeutige Gerätekennungen",
+        "Werbekennung (IDFA unter iOS, GAID unter Android)",
+        "Nutzungsdaten wie besuchte Seiten innerhalb der Anwendung, Datum und Uhrzeit der Besuche sowie die auf den Seiten verbrachte Zeit",
+        "Absturzprotokolle und Leistungsdiagnosen"
+      ],
+      "no_location": "Die Anwendung erfasst keine genauen Standortinformationen von Ihrem Mobilgerät."
+    },
+    "advertising": {
+      "title": "Werbung",
+      "desc": "Die Anwendung verwendet Google AdMob zur Anzeige von Werbung. AdMob kann bestimmte Daten erfassen und verwenden, um personalisierte oder nicht personalisierte Anzeigen zu schalten, darunter:",
+      "items": [
+        "Werbe-ID (IDFA/GAID) für Ad-Targeting und Häufigkeitsbegrenzung",
+        "IP-Adresse für ungefähres geografisches Targeting",
+        "Geräteinformationen (Modell, Betriebssystemversion, Bildschirmgröße) für die Anzeigenformatierung",
+        "Interaktionsdaten (Anzeigenaufrufe, Klicks) zur Leistungsmessung"
+      ],
+      "personalized": "Unter iOS berücksichtigt die Anwendung das App-Tracking-Transparenz-Framework (ATT). Wenn Sie die Tracking-Berechtigung ablehnen, werden nur nicht personalisierte Anzeigen geschaltet. Sie können die Einstellungen zur Anzeigenpersonalisierung auf Ihrem Gerät jederzeit anpassen."
+    },
+    "third_party": {
+      "title": "Dienste Dritter",
+      "desc": "Die Anwendung verwendet die folgenden Drittanbieterdienste, die jeweils über eigene Datenschutzrichtlinien zur Regelung des Umgangs mit Daten verfügen:"
+    },
+    "cookies": {
+      "title": "Cookies und ähnliche Technologien",
+      "desc": "Die Anwendung selbst verwendet keine Cookies. Jedoch können in die Anwendung integrierte Drittanbieterdienste (wie AdMob) Cookies, Gerätekennungen und ähnliche Tracking-Technologien verwenden, um Informationen zu erfassen und zielgerichtete Werbung zu schalten. Sie können Cookie-Einstellungen über Ihre Geräteeinstellungen verwalten."
+    },
+    "data_retention": {
+      "title": "Datenspeicherung",
+      "desc": "Alle Postkarten-Erkennungsdaten und App-Einstellungen werden lokal auf Ihrem Gerät gespeichert und niemals an unsere Server übertragen. Von Drittanbieterdiensten (AdMob, Firebase) erfasste Daten werden gemäß deren jeweiligen Datenspeicherungsrichtlinien aufbewahrt. Wenn Sie Ihre lokalen Daten löschen möchten, können Sie die Anwendung deinstallieren oder ihre Daten über Ihre Geräteeinstellungen löschen."
+    },
+    "children": {
+      "title": "Datenschutz für Kinder",
+      "desc": "Die Anwendung richtet sich nicht an Kinder unter 13 Jahren. Wir erfassen wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Sollten wir feststellen, dass ein Kind unter 13 Jahren personenbezogene Daten angegeben hat, werden wir diese unverzüglich löschen. Wenn Sie Elternteil oder Erziehungsberechtigter sind und glauben, dass Ihr Kind uns personenbezogene Daten übermittelt hat, wenden Sie sich bitte an alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Ihre Rechte und Wahlmöglichkeiten",
+      "desc": "Je nach Ihrem Standort haben Sie möglicherweise bestimmte Rechte in Bezug auf Ihre personenbezogenen Daten:",
+      "gdpr_title": "Für EU/EWR-Nutzer (DSGVO)",
+      "gdpr_items": [
+        "Recht auf Auskunft über Ihre personenbezogenen Daten",
+        "Recht auf Berichtigung unrichtiger personenbezogener Daten",
+        "Recht auf Löschung (\"Recht auf Vergessenwerden\")",
+        "Recht auf Einschränkung oder Widerspruch gegen die Datenverarbeitung",
+        "Recht auf Datenübertragbarkeit"
+      ],
+      "ccpa_title": "Für Nutzer in Kalifornien (CCPA)",
+      "ccpa_desc": "Sie haben das Recht zu erfahren, welche personenbezogenen Daten erfasst werden, die Löschung Ihrer personenbezogenen Daten zu verlangen und der Weitergabe Ihrer personenbezogenen Daten zu widersprechen. Wir verkaufen Ihre personenbezogenen Daten nicht.",
+      "opt_out_title": "Opt-out-Optionen",
+      "opt_out_items": [
+        "iOS: Gehen Sie zu Einstellungen → Datenschutz & Sicherheit → Tracking, um App-Tracking-Berechtigungen zu verwalten, oder zu Einstellungen → Datenschutz & Sicherheit → Apple-Werbung, um Ad-Tracking einzuschränken",
+        "Android: Gehen Sie zu Einstellungen → Datenschutz → Anzeigen, um die Anzeigenpersonalisierung zu deaktivieren oder Ihre Werbe-ID zurückzusetzen",
+        "Google-Anzeigeneinstellungen: Besuchen Sie https://adssettings.google.com, um Ihre Google-Anzeigenpräferenzen zu verwalten",
+        "Deinstallation: Sie können die gesamte Datenerfassung stoppen, indem Sie die Anwendung deinstallieren"
+      ]
+    },
+    "security": {
+      "title": "Sicherheit",
+      "desc": "Wir legen großen Wert auf die Sicherheit Ihrer Informationen und setzen handelsüblich angemessene Maßnahmen zu deren Schutz ein. Jedoch ist keine Methode der elektronischen Übertragung oder Speicherung zu 100 % sicher. Wir bemühen uns um den Schutz Ihrer personenbezogenen Daten, können jedoch keine absolute Sicherheit garantieren."
+    },
+    "changes": {
+      "title": "Änderungen dieser Datenschutzrichtlinie",
+      "desc": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten Gültigkeitsdatum veröffentlicht. Wir empfehlen Ihnen, diese Seite regelmäßig zu überprüfen. Die weitere Nutzung der Anwendung nach Änderungen gilt als Zustimmung zur aktualisierten Richtlinie."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "desc": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie oder Ihren Daten haben, kontaktieren Sie uns bitte unter"
+    }
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "effective_date": "Gültig ab: 11. März 2026",
+    "intro": "Diese Nutzungsbedingungen gelten für die Pikgeon-App (\"Anwendung\") für mobile Geräte, die von Alu Studio (\"Dienstleister\") als kostenloser Dienst entwickelt wurde. Durch das Herunterladen oder die Nutzung der Anwendung stimmen Sie diesen Bedingungen zu.",
+    "license": {
+      "title": "Nutzungslizenz",
+      "desc": "Der Dienstleister gewährt Ihnen eine eingeschränkte, nicht exklusive, nicht übertragbare, widerrufliche Lizenz zur Nutzung der Anwendung für persönliche, nicht-kommerzielle Zwecke gemäß diesen Bedingungen."
+    },
+    "restrictions": {
+      "title": "Einschränkungen",
+      "desc": "Sie verpflichten sich, Folgendes zu unterlassen:",
+      "items": [
+        "Kopieren, Modifizieren oder Erstellen von abgeleiteten Werken auf Basis der Anwendung",
+        "Versuche, den Quellcode der Anwendung zu extrahieren",
+        "Übersetzen der Anwendung in andere Sprachen oder Erstellen abgeleiteter Versionen",
+        "Nutzung der Anwendung für illegale Zwecke oder unter Verstoß gegen anwendbare Gesetze"
+      ]
+    },
+    "third_party": {
+      "title": "Dienste Dritter",
+      "desc": "Die Anwendung nutzt Drittanbieterdienste, die eigene Nutzungsbedingungen haben:"
+    },
+    "device_security": {
+      "title": "Gerätesicherheit",
+      "desc": "Sie sind verantwortlich für die Aufrechterhaltung der Sicherheit Ihres Geräts und des Zugangs zur Anwendung. Wir raten dringend davon ab, Ihr Gerät zu jailbreaken oder zu rooten, da dies Sicherheitsfunktionen beeinträchtigen und zu Fehlfunktionen der Anwendung führen kann."
+    },
+    "connectivity": {
+      "title": "Internetverbindung",
+      "desc": "Einige Funktionen der Anwendung erfordern eine aktive Internetverbindung. Der Dienstleister übernimmt keine Verantwortung dafür, dass die Anwendung aufgrund fehlenden Internetzugangs nicht voll funktionsfähig ist. Wenn Sie die Anwendung außerhalb eines WLAN-Bereichs nutzen, können die Bedingungen und Datengebühren Ihres Mobilfunkanbieters gelten."
+    },
+    "updates": {
+      "title": "Anwendungsaktualisierungen",
+      "desc": "Der Dienstleister kann von Zeit zu Zeit Updates für die Anwendung veröffentlichen. Sie stimmen zu, Updates bei Verfügbarkeit zu akzeptieren. Der Dienstleister kann die Anwendung auch jederzeit ohne Vorankündigung einstellen. Bei Beendigung erlöschen Ihre Rechte gemäß diesen Bedingungen, und Sie müssen die Anwendung nicht mehr verwenden und löschen."
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "desc": "Die Anwendung wird \"WIE BESEHEN\" ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt. Der Dienstleister garantiert nicht, dass die Anwendung fehlerfrei, unterbrechungsfrei oder frei von schädlichen Komponenten ist."
+    },
+    "liability": {
+      "title": "Haftungsbeschränkung",
+      "desc": "Im größtmöglichen gesetzlich zulässigen Umfang haftet der Dienstleister nicht für mittelbare, zufällige, besondere, Folge- oder Strafschäden oder für entgangene Gewinne oder Einnahmen, die aus Ihrer Nutzung der Anwendung entstehen."
+    },
+    "changes": {
+      "title": "Änderungen dieser Bedingungen",
+      "desc": "Der Dienstleister kann diese Bedingungen von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite veröffentlicht. Die weitere Nutzung der Anwendung nach Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "desc": "Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte unter"
+    }
   }
 }

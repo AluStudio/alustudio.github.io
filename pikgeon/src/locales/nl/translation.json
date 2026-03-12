@@ -81,6 +81,136 @@
     "goal": "Pikmin Ansichtkaart Manager",
     "copyright": "Alu Studio Alle rechten voorbehouden",
     "contact": "Neem contact op",
-    "unofficialNotice": "Pikmin ansichtkaart manager voor fans. Dit is een onofficieel hulpmiddel."
+    "unofficialNotice": "Pikmin ansichtkaart manager voor fans. Dit is een onofficieel hulpmiddel.",
+    "privacy_policy": "Privacybeleid",
+    "terms_of_use": "Gebruiksvoorwaarden"
+  },
+  "privacy_policy": {
+    "title": "Privacybeleid",
+    "effective_date": "Ingangsdatum: 11 maart 2026",
+    "intro": "Dit privacybeleid is van toepassing op de Pikgeon-app (\"Applicatie\") voor mobiele apparaten, ontwikkeld door Alu Studio (\"Dienstverlener\") als gratis dienst. Deze dienst is bedoeld voor gebruik \"ZOALS HET IS\". Door de Applicatie te gebruiken, stemt u in met het verzamelen en gebruiken van informatie zoals beschreven in dit beleid.",
+    "info_collection": {
+      "title": "Informatie verzamelen en gebruik",
+      "desc": "De Applicatie kan automatisch bepaalde informatie verzamelen wanneer u deze downloadt en gebruikt. Deze informatie kan het volgende bevatten:",
+      "items": [
+        "Het Internet Protocol-adres (IP-adres) van uw apparaat",
+        "Apparaattype, versie van het besturingssysteem en unieke apparaat-ID's",
+        "Advertentie-ID (IDFA op iOS, GAID op Android)",
+        "Gebruiksgegevens zoals bezochte pagina's in de Applicatie, tijdstip en datum van bezoeken, en tijd besteed op pagina's",
+        "Crashlogboeken en prestatiegegevens"
+      ],
+      "no_location": "De Applicatie verzamelt geen nauwkeurige locatiegegevens van uw mobiele apparaat."
+    },
+    "advertising": {
+      "title": "Reclame",
+      "desc": "De Applicatie maakt gebruik van Google AdMob om advertenties weer te geven. AdMob kan bepaalde gegevens verzamelen en gebruiken om gepersonaliseerde of niet-gepersonaliseerde advertenties te tonen, waaronder:",
+      "items": [
+        "Advertentie-ID (IDFA/GAID) voor advertentietargeting en frequentiebeperking",
+        "IP-adres voor geografische targeting bij benadering",
+        "Apparaatinformatie (model, OS-versie, schermgrootte) voor advertentieopmaak",
+        "Interactiegegevens (advertentieweergaven, klikken) voor prestatiemeting"
+      ],
+      "personalized": "Op iOS respecteert de Applicatie het App Tracking Transparency (ATT)-framework. Als u toestemming voor tracking weigert, worden alleen niet-gepersonaliseerde advertenties getoond. U kunt de instellingen voor advertentiepersonalisatie op uw apparaat ook op elk moment aanpassen."
+    },
+    "third_party": {
+      "title": "Diensten van derden",
+      "desc": "De Applicatie maakt gebruik van de volgende diensten van derden, elk met hun eigen privacybeleid dat regelt hoe zij omgaan met gegevens:"
+    },
+    "cookies": {
+      "title": "Cookies en vergelijkbare technologieën",
+      "desc": "De Applicatie zelf gebruikt geen cookies (Cookie) expliciet. Echter, diensten van derden die in de Applicatie zijn geïntegreerd (zoals AdMob) kunnen cookies, apparaat-ID's en vergelijkbare trackingtechnologieën gebruiken om informatie te verzamelen en gerichte advertenties te tonen. U kunt uw cookievoorkeuren beheren via de instellingen van uw apparaat."
+    },
+    "data_retention": {
+      "title": "Gegevensbewaring",
+      "desc": "Alle postkaartherkenningsgegevens en app-instellingen worden lokaal op uw apparaat opgeslagen en worden nooit naar onze servers verzonden. Gegevens die door diensten van derden (AdMob, Firebase) worden verzameld, worden bewaard volgens hun respectieve gegevensbewaringsbeleid. Als u uw lokale gegevens wilt verwijderen, kunt u de Applicatie verwijderen of de gegevens wissen via de instellingen van uw apparaat."
+    },
+    "children": {
+      "title": "Privacy van kinderen",
+      "desc": "De Applicatie is niet gericht op kinderen onder de 13 jaar. Wij verzamelen niet bewust persoonlijk identificeerbare informatie van kinderen onder de 13 jaar. Als wij ontdekken dat een kind onder de 13 jaar persoonlijke informatie heeft verstrekt, zullen wij deze onmiddellijk verwijderen. Als u een ouder of voogd bent en gelooft dat uw kind ons persoonlijke informatie heeft verstrekt, neem dan contact met ons op via alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Uw rechten en keuzes",
+      "desc": "Afhankelijk van uw locatie heeft u mogelijk bepaalde rechten met betrekking tot uw persoonsgegevens:",
+      "gdpr_title": "Voor EU/EEA-gebruikers (GDPR)",
+      "gdpr_items": [
+        "Recht op toegang tot uw persoonsgegevens",
+        "Recht op rectificatie van onjuiste persoonsgegevens",
+        "Recht op verwijdering (\"recht om te worden vergeten\")",
+        "Recht om de verwerking van gegevens te beperken of er bezwaar tegen te maken",
+        "Recht op dataportabiliteit"
+      ],
+      "ccpa_title": "Voor gebruikers in Californië (CCPA)",
+      "ccpa_desc": "U heeft het recht te weten welke persoonlijke informatie wordt verzameld, verwijdering van uw persoonlijke informatie te verzoeken en u af te melden voor de verkoop van uw persoonlijke informatie. Wij verkopen uw persoonlijke informatie niet.",
+      "opt_out_title": "Opt-out opties",
+      "opt_out_items": [
+        "iOS: Ga naar Instellingen → Privacy & Beveiliging → Tracking om app-trackingmachtigingen te beheren, of Instellingen → Privacy & Beveiliging → Apple Advertising om advertentietracking te beperken",
+        "Android: Ga naar Instellingen → Privacy → Advertenties om u af te melden voor advertentiepersonalisatie of uw advertentie-ID opnieuw in te stellen",
+        "Google Advertentie-instellingen: Bezoek https://adssettings.google.com om uw Google-advertentievoorkeuren te beheren",
+        "Verwijderen: U kunt alle gegevensverzameling stoppen door de Applicatie te verwijderen"
+      ]
+    },
+    "security": {
+      "title": "Beveiliging",
+      "desc": "Wij hechten waarde aan de beveiliging van uw informatie en nemen commercieel redelijke maatregelen om deze te beschermen. Echter, geen enkele methode van elektronische overdracht of opslag is 100% veilig. Hoewel wij ernaar streven uw persoonlijke informatie te beschermen, kunnen wij geen absolute beveiliging garanderen."
+    },
+    "changes": {
+      "title": "Wijzigingen in dit privacybeleid",
+      "desc": "Wij kunnen dit Privacybeleid van tijd tot tijd bijwerken. Wijzigingen worden op deze pagina gepubliceerd met een bijgewerkte ingangsdatum. Wij raden u aan deze pagina periodiek te raadplegen. Voortgezet gebruik van de Applicatie na wijzigingen houdt aanvaarding van het bijgewerkte beleid in."
+    },
+    "contact": {
+      "title": "Neem contact met ons op",
+      "desc": "Als u vragen heeft over dit Privacybeleid of uw gegevens, neem dan contact met ons op via"
+    }
+  },
+  "terms": {
+    "title": "Gebruiksvoorwaarden",
+    "effective_date": "Ingangsdatum: 11 maart 2026",
+    "intro": "Deze algemene voorwaarden zijn van toepassing op de Pikgeon-app (\"Applicatie\") voor mobiele apparaten, ontwikkeld door Alu Studio (\"Dienstverlener\") als gratis dienst. Door de Applicatie te downloaden of te gebruiken, stemt u in met deze voorwaarden.",
+    "license": {
+      "title": "Gebruikslicentie",
+      "desc": "De Dienstverlener verleent u een beperkte, niet-exclusieve, niet-overdraagbare, herroepbare licentie om de Applicatie te gebruiken voor persoonlijke, niet-commerciële doeleinden in overeenstemming met deze voorwaarden."
+    },
+    "restrictions": {
+      "title": "Beperkingen",
+      "desc": "U gaat ermee akkoord het volgende niet te doen:",
+      "items": [
+        "De Applicatie kopiëren, aanpassen of afgeleide werken maken op basis van de Applicatie",
+        "Proberen de broncode van de Applicatie te extraheren",
+        "De Applicatie vertalen naar andere talen of afgeleide versies maken",
+        "De Applicatie gebruiken voor onwettige doeleinden of in strijd met van toepassing zijnde wetgeving"
+      ]
+    },
+    "third_party": {
+      "title": "Diensten van derden",
+      "desc": "De Applicatie maakt gebruik van diensten van derden met hun eigen algemene voorwaarden:"
+    },
+    "device_security": {
+      "title": "Apparaatbeveiliging",
+      "desc": "U bent verantwoordelijk voor het handhaven van de beveiliging van uw apparaat en de toegang tot de Applicatie. Wij raden sterk af uw apparaat te jailbreaken of te rooten, omdat dit beveiligingsfuncties kan aantasten en de Applicatie kan verstoren."
+    },
+    "connectivity": {
+      "title": "Internetverbinding",
+      "desc": "Sommige functies van de Applicatie vereisen een actieve internetverbinding. De Dienstverlener is niet verantwoordelijk als de Applicatie niet volledig functioneert vanwege gebrek aan internettoegang. Als u de Applicatie buiten een Wi-Fi-gebied gebruikt, kunnen de voorwaarden van uw mobiele netwerkprovider en datakosten van toepassing zijn."
+    },
+    "updates": {
+      "title": "Applicatie-updates",
+      "desc": "De Dienstverlener kan van tijd tot tijd updates voor de Applicatie uitbrengen. U gaat ermee akkoord updates te accepteren wanneer deze beschikbaar zijn. De Dienstverlener kan de Applicatie ook op elk moment zonder kennisgeving stopzetten. Bij beëindiging eindigen uw rechten onder deze voorwaarden en moet u stoppen met het gebruik van de Applicatie en deze verwijderen."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "desc": "De Applicatie wordt aangeboden \"ZOALS HET IS\" zonder garanties van welke aard dan ook, expliciet of impliciet. De Dienstverlener garandeert niet dat de Applicatie foutvrij, ononderbroken of vrij van schadelijke componenten zal zijn."
+    },
+    "liability": {
+      "title": "Beperking van aansprakelijkheid",
+      "desc": "Voor zover maximaal toegestaan door de wet, is de Dienstverlener niet aansprakelijk voor indirecte, incidentele, bijzondere, gevolgschade of punitieve schade, of enig verlies van winst of inkomsten die voortvloeien uit uw gebruik van de Applicatie."
+    },
+    "changes": {
+      "title": "Wijzigingen in deze voorwaarden",
+      "desc": "De Dienstverlener kan deze Voorwaarden van tijd tot tijd bijwerken. Wijzigingen worden op deze pagina gepubliceerd. Voortgezet gebruik van de Applicatie na wijzigingen houdt aanvaarding van de bijgewerkte voorwaarden in."
+    },
+    "contact": {
+      "title": "Neem contact met ons op",
+      "desc": "Als u vragen heeft over deze Voorwaarden, neem dan contact met ons op via"
+    }
   }
 }

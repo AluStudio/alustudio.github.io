@@ -81,6 +81,136 @@
     "goal": "Gestor de Postales Pikmin",
     "copyright": "Alu Studio Todos los derechos reservados",
     "contact": "Contáctanos",
-    "unofficialNotice": "Gestor de postales Pikmin para fans. Esta es una herramienta no oficial."
+    "unofficialNotice": "Gestor de postales Pikmin para fans. Esta es una herramienta no oficial.",
+    "privacy_policy": "Política de Privacidad",
+    "terms_of_use": "Términos de Uso"
+  },
+  "privacy_policy": {
+    "title": "Política de Privacidad",
+    "effective_date": "Fecha de vigencia: 11 de marzo de 2026",
+    "intro": "Esta política de privacidad se aplica a la aplicación Pikgeon (\"Aplicación\") para dispositivos móviles, creada por Alu Studio (\"Proveedor de Servicios\") como un servicio gratuito. Este servicio está destinado a usarse \"TAL CUAL\". Al utilizar la Aplicación, usted acepta la recopilación y el uso de información conforme a lo descrito en esta política.",
+    "info_collection": {
+      "title": "Recopilación y uso de información",
+      "desc": "La Aplicación puede recopilar automáticamente cierta información cuando la descarga y la utiliza. Dicha información puede incluir:",
+      "items": [
+        "La dirección de Protocolo de Internet de su dispositivo (dirección IP)",
+        "Tipo de dispositivo, versión del sistema operativo e identificadores únicos del dispositivo",
+        "Identificador publicitario (IDFA en iOS, GAID en Android)",
+        "Datos de uso, como páginas visitadas dentro de la Aplicación, fecha y hora de las visitas, y tiempo dedicado a cada página",
+        "Registros de fallos y diagnósticos de rendimiento"
+      ],
+      "no_location": "La Aplicación no recopila información de ubicación precisa de su dispositivo móvil."
+    },
+    "advertising": {
+      "title": "Publicidad",
+      "desc": "La Aplicación utiliza Google AdMob para mostrar anuncios. AdMob puede recopilar y utilizar ciertos datos para mostrar anuncios personalizados o no personalizados, incluyendo:",
+      "items": [
+        "ID publicitario (IDFA/GAID) para segmentación de anuncios y limitación de frecuencia",
+        "Dirección IP para segmentación geográfica aproximada",
+        "Información del dispositivo (modelo, versión del SO, tamaño de pantalla) para el formato de anuncios",
+        "Datos de interacción (visualizaciones y clics en anuncios) para la medición del rendimiento"
+      ],
+      "personalized": "En iOS, la Aplicación respeta el marco de Transparencia de Seguimiento de Aplicaciones (ATT). Si rechaza el permiso de seguimiento, solo se mostrarán anuncios no personalizados. También puede ajustar la configuración de personalización de anuncios en su dispositivo en cualquier momento."
+    },
+    "third_party": {
+      "title": "Servicios de terceros",
+      "desc": "La Aplicación utiliza los siguientes servicios de terceros, cada uno con sus propias políticas de privacidad que rigen el tratamiento de sus datos:"
+    },
+    "cookies": {
+      "title": "Cookies y tecnologías similares",
+      "desc": "La Aplicación en sí no utiliza cookies de forma explícita. Sin embargo, los servicios de terceros integrados en la Aplicación (como AdMob) pueden utilizar cookies, identificadores de dispositivo y tecnologías de seguimiento similares para recopilar información y mostrar publicidad dirigida. Puede gestionar las preferencias de cookies a través de la configuración de su dispositivo."
+    },
+    "data_retention": {
+      "title": "Retención de datos",
+      "desc": "Todos los datos de reconocimiento de postales y la configuración de la aplicación se almacenan localmente en su dispositivo y nunca se transmiten a nuestros servidores. Los datos recopilados por servicios de terceros (AdMob, Firebase) se conservan de acuerdo con sus respectivas políticas de retención de datos. Si desea eliminar sus datos locales, puede desinstalar la Aplicación o borrar sus datos desde la configuración del dispositivo."
+    },
+    "children": {
+      "title": "Privacidad de los menores",
+      "desc": "La Aplicación no está dirigida a menores de 13 años. No recopilamos conscientemente información de identificación personal de menores de 13 años. Si descubrimos que un menor de 13 años ha facilitado información personal, la eliminaremos de inmediato. Si usted es padre, madre o tutor y cree que su hijo nos ha proporcionado información personal, póngase en contacto con nosotros en alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Sus derechos y opciones",
+      "desc": "Dependiendo de su ubicación, puede tener ciertos derechos con respecto a sus datos personales:",
+      "gdpr_title": "Para usuarios de la UE/EEE (RGPD)",
+      "gdpr_items": [
+        "Derecho de acceso a sus datos personales",
+        "Derecho a rectificar datos personales inexactos",
+        "Derecho de supresión (\"derecho al olvido\")",
+        "Derecho a restringir u oponerse al tratamiento de datos",
+        "Derecho a la portabilidad de datos"
+      ],
+      "ccpa_title": "Para usuarios de California (CCPA)",
+      "ccpa_desc": "Tiene derecho a saber qué información personal se recopila, a solicitar la eliminación de su información personal y a oponerse a la venta de su información personal. No vendemos su información personal.",
+      "opt_out_title": "Opciones de exclusión",
+      "opt_out_items": [
+        "iOS: Vaya a Configuración → Privacidad y seguridad → Seguimiento para gestionar los permisos de seguimiento de aplicaciones, o a Configuración → Privacidad y seguridad → Publicidad de Apple para limitar el seguimiento publicitario",
+        "Android: Vaya a Configuración → Privacidad → Anuncios para optar por no recibir publicidad personalizada o restablecer su ID publicitario",
+        "Configuración de anuncios de Google: Visite https://adssettings.google.com para gestionar sus preferencias de anuncios de Google",
+        "Desinstalar: Puede detener toda la recopilación de datos desinstalando la Aplicación"
+      ]
+    },
+    "security": {
+      "title": "Seguridad",
+      "desc": "Valoramos la seguridad de su información y empleamos medidas razonables desde el punto de vista comercial para protegerla. Sin embargo, ningún método de transmisión electrónica o almacenamiento es 100% seguro. Aunque nos esforzamos por proteger su información personal, no podemos garantizar una seguridad absoluta."
+    },
+    "changes": {
+      "title": "Cambios en esta Política de Privacidad",
+      "desc": "Podemos actualizar esta Política de Privacidad periódicamente. Los cambios se publicarán en esta página con una fecha de vigencia actualizada. Le recomendamos que revise esta página periódicamente. El uso continuado de la Aplicación tras los cambios implica la aceptación de la política actualizada."
+    },
+    "contact": {
+      "title": "Contacto",
+      "desc": "Si tiene alguna pregunta sobre esta Política de Privacidad o sobre sus datos, comuníquese con nosotros en"
+    }
+  },
+  "terms": {
+    "title": "Términos de Uso",
+    "effective_date": "Fecha de vigencia: 11 de marzo de 2026",
+    "intro": "Estos términos y condiciones se aplican a la aplicación Pikgeon (\"Aplicación\") para dispositivos móviles, creada por Alu Studio (\"Proveedor de Servicios\") como un servicio gratuito. Al descargar o utilizar la Aplicación, usted acepta estos términos.",
+    "license": {
+      "title": "Licencia de uso",
+      "desc": "El Proveedor de Servicios le otorga una licencia limitada, no exclusiva, intransferible y revocable para utilizar la Aplicación con fines personales y no comerciales, de conformidad con estos términos."
+    },
+    "restrictions": {
+      "title": "Restricciones",
+      "desc": "Usted acepta no:",
+      "items": [
+        "Copiar, modificar o crear obras derivadas basadas en la Aplicación",
+        "Intentar extraer el código fuente de la Aplicación",
+        "Traducir la Aplicación a otros idiomas o crear versiones derivadas",
+        "Utilizar la Aplicación con fines ilegales o en violación de las leyes aplicables"
+      ]
+    },
+    "third_party": {
+      "title": "Servicios de terceros",
+      "desc": "La Aplicación utiliza servicios de terceros que tienen sus propios términos y condiciones:"
+    },
+    "device_security": {
+      "title": "Seguridad del dispositivo",
+      "desc": "Usted es responsable de mantener la seguridad de su dispositivo y el acceso a la Aplicación. Desaconsejamos enérgicamente el jailbreak o rooting de su dispositivo, ya que puede comprometer las funciones de seguridad y provocar un mal funcionamiento de la Aplicación."
+    },
+    "connectivity": {
+      "title": "Conexión a Internet",
+      "desc": "Algunas funciones de la Aplicación requieren una conexión a Internet activa. El Proveedor de Servicios no es responsable de que la Aplicación no funcione a plena capacidad por falta de acceso a Internet. Si utiliza la Aplicación fuera de una zona Wi-Fi, pueden aplicarse los términos y cargos por datos de su proveedor de red móvil."
+    },
+    "updates": {
+      "title": "Actualizaciones de la Aplicación",
+      "desc": "El Proveedor de Servicios puede publicar actualizaciones de la Aplicación periódicamente. Usted acepta aceptar las actualizaciones cuando estén disponibles. El Proveedor de Servicios también puede descontinuar la Aplicación en cualquier momento sin previo aviso. Tras la rescisión, sus derechos bajo estos términos cesarán y deberá dejar de usar y eliminar la Aplicación."
+    },
+    "disclaimer": {
+      "title": "Descargo de responsabilidad",
+      "desc": "La Aplicación se proporciona \"TAL CUAL\", sin garantías de ningún tipo, ya sean expresas o implícitas. El Proveedor de Servicios no garantiza que la Aplicación esté libre de errores, sea ininterrumpida o carezca de componentes dañinos."
+    },
+    "liability": {
+      "title": "Limitación de responsabilidad",
+      "desc": "En la medida máxima permitida por la ley, el Proveedor de Servicios no será responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos, ni de pérdida de beneficios o ingresos derivados del uso de la Aplicación."
+    },
+    "changes": {
+      "title": "Cambios en estos Términos",
+      "desc": "El Proveedor de Servicios puede actualizar estos Términos periódicamente. Los cambios se publicarán en esta página. El uso continuado de la Aplicación tras los cambios implica la aceptación de los términos actualizados."
+    },
+    "contact": {
+      "title": "Contacto",
+      "desc": "Si tiene alguna pregunta sobre estos Términos, comuníquese con nosotros en"
+    }
   }
 }

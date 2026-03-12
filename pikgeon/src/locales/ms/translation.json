@@ -81,6 +81,136 @@
     "goal": "Pengurus Kad Pos Pikmin",
     "copyright": "Alu Studio Semua hak terpelihara",
     "contact": "Hubungi Kami",
-    "unofficialNotice": "Pengurus kad pos Pikmin untuk peminat. Ini adalah alat tidak rasmi."
+    "unofficialNotice": "Pengurus kad pos Pikmin untuk peminat. Ini adalah alat tidak rasmi.",
+    "privacy_policy": "Dasar Privasi",
+    "terms_of_use": "Terma Penggunaan"
+  },
+  "privacy_policy": {
+    "title": "Dasar Privasi",
+    "effective_date": "Tarikh Berkuat Kuasa: 11 Mac 2026",
+    "intro": "Dasar privasi ini terpakai kepada aplikasi Pikgeon (\"Aplikasi\") untuk peranti mudah alih, yang dicipta oleh Alu Studio (\"Pembekal Perkhidmatan\") sebagai perkhidmatan percuma. Perkhidmatan ini bertujuan untuk digunakan \"SEBAGAIMANA ADANYA\". Dengan menggunakan Aplikasi ini, anda bersetuju dengan pengumpulan dan penggunaan maklumat seperti yang dinyatakan dalam dasar ini.",
+    "info_collection": {
+      "title": "Pengumpulan dan Penggunaan Maklumat",
+      "desc": "Aplikasi ini mungkin mengumpul maklumat tertentu secara automatik apabila anda memuat turun dan menggunakannya. Maklumat ini mungkin termasuk:",
+      "items": [
+        "Alamat Protokol Internet (IP) peranti anda",
+        "Jenis peranti, versi sistem pengendalian, dan pengecam peranti yang unik",
+        "Pengecam pengiklanan (IDFA pada iOS, GAID pada Android)",
+        "Data penggunaan seperti halaman yang dilawati dalam Aplikasi, masa dan tarikh lawatan, serta masa yang dihabiskan di halaman",
+        "Log ranap dan diagnostik prestasi"
+      ],
+      "no_location": "Aplikasi ini tidak mengumpul maklumat lokasi yang tepat daripada peranti mudah alih anda."
+    },
+    "advertising": {
+      "title": "Pengiklanan",
+      "desc": "Aplikasi ini menggunakan Google AdMob untuk memaparkan iklan. AdMob mungkin mengumpul dan menggunakan data tertentu untuk menyajikan iklan diperibadikan atau tidak diperibadikan, termasuk:",
+      "items": [
+        "ID Pengiklanan (IDFA/GAID) untuk penyasaran iklan dan pengehadan kekerapan",
+        "Alamat IP untuk penyasaran geografi anggaran",
+        "Maklumat peranti (model, versi OS, saiz skrin) untuk pemformatan iklan",
+        "Data interaksi (paparan iklan, klik) untuk pengukuran prestasi"
+      ],
+      "personalized": "Pada iOS, Aplikasi ini menghormati rangka kerja App Tracking Transparency (ATT). Jika anda menolak kebenaran penjejakan, hanya iklan yang tidak diperibadikan akan disajikan. Anda juga boleh melaraskan tetapan pemperibadian iklan pada peranti anda pada bila-bila masa."
+    },
+    "third_party": {
+      "title": "Perkhidmatan Pihak Ketiga",
+      "desc": "Aplikasi ini menggunakan perkhidmatan pihak ketiga berikut, masing-masing dengan dasar privasi mereka sendiri yang mengawal cara mereka mengendalikan data:"
+    },
+    "cookies": {
+      "title": "Kuki dan Teknologi Serupa",
+      "desc": "Aplikasi ini sendiri tidak menggunakan kuki (Cookie) secara eksplisit. Walau bagaimanapun, perkhidmatan pihak ketiga yang disepadukan ke dalam Aplikasi (seperti AdMob) mungkin menggunakan kuki, pengecam peranti, dan teknologi penjejakan serupa untuk mengumpul maklumat dan menyajikan iklan yang disasarkan. Anda boleh mengurus keutamaan kuki melalui tetapan peranti anda."
+    },
+    "data_retention": {
+      "title": "Pengekalan Data",
+      "desc": "Semua data pengecaman poskad dan tetapan aplikasi disimpan secara tempatan pada peranti anda dan tidak pernah dihantar ke pelayan kami. Data yang dikumpul oleh perkhidmatan pihak ketiga (AdMob, Firebase) disimpan mengikut dasar pengekalan data masing-masing. Jika anda ingin memadamkan data tempatan anda, anda boleh menyahpasang Aplikasi atau mengosongkan datanya melalui tetapan peranti anda."
+    },
+    "children": {
+      "title": "Privasi Kanak-Kanak",
+      "desc": "Aplikasi ini tidak ditujukan kepada kanak-kanak di bawah umur 13 tahun. Kami tidak mengumpul dengan sengaja maklumat yang mengenal pasti peribadi daripada kanak-kanak di bawah 13 tahun. Jika kami mendapati bahawa seorang kanak-kanak di bawah 13 tahun telah memberikan maklumat peribadi, kami akan segera memadamkannya. Jika anda seorang ibu bapa atau penjaga dan percaya bahawa anak anda telah memberikan kami maklumat peribadi, sila hubungi kami di alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Hak dan Pilihan Anda",
+      "desc": "Bergantung pada lokasi anda, anda mungkin mempunyai hak tertentu berkaitan data peribadi anda:",
+      "gdpr_title": "Untuk Pengguna EU/EEA (GDPR)",
+      "gdpr_items": [
+        "Hak untuk mengakses data peribadi anda",
+        "Hak untuk membetulkan data peribadi yang tidak tepat",
+        "Hak untuk pemadaman (\"hak untuk dilupakan\")",
+        "Hak untuk menyekat atau membantah pemprosesan data",
+        "Hak untuk mudah alih data"
+      ],
+      "ccpa_title": "Untuk Pengguna California (CCPA)",
+      "ccpa_desc": "Anda berhak mengetahui maklumat peribadi yang dikumpul, meminta pemadaman maklumat peribadi anda, dan memilih untuk tidak terlibat dalam penjualan maklumat peribadi anda. Kami tidak menjual maklumat peribadi anda.",
+      "opt_out_title": "Pilihan Opt-Out",
+      "opt_out_items": [
+        "iOS: Pergi ke Tetapan → Privasi & Keselamatan → Penjejakan untuk mengurus kebenaran penjejakan aplikasi, atau Tetapan → Privasi & Keselamatan → Pengiklanan Apple untuk mengehadkan penjejakan iklan",
+        "Android: Pergi ke Tetapan → Privasi → Iklan untuk memilih keluar daripada pemperibadian iklan atau menetapkan semula ID pengiklanan anda",
+        "Tetapan Iklan Google: Lawati https://adssettings.google.com untuk mengurus keutamaan iklan Google anda",
+        "Nyahpasang: Anda boleh menghentikan semua pengumpulan data dengan menyahpasang Aplikasi"
+      ]
+    },
+    "security": {
+      "title": "Keselamatan",
+      "desc": "Kami menghargai keselamatan maklumat anda dan menggunakan langkah-langkah yang munasabah secara komersial untuk melindunginya. Walau bagaimanapun, tiada kaedah penghantaran atau penyimpanan elektronik yang 100% selamat. Walaupun kami berusaha untuk melindungi maklumat peribadi anda, kami tidak dapat menjamin keselamatan mutlak."
+    },
+    "changes": {
+      "title": "Perubahan kepada Dasar Privasi Ini",
+      "desc": "Kami mungkin mengemas kini Dasar Privasi ini dari semasa ke semasa. Perubahan akan disiarkan di halaman ini dengan tarikh berkuat kuasa yang dikemas kini. Kami menggalakkan anda untuk menyemak halaman ini secara berkala. Penggunaan Aplikasi yang berterusan selepas perubahan membentuk penerimaan dasar yang dikemas kini."
+    },
+    "contact": {
+      "title": "Hubungi Kami",
+      "desc": "Jika anda mempunyai sebarang soalan tentang Dasar Privasi ini atau data anda, sila hubungi kami di"
+    }
+  },
+  "terms": {
+    "title": "Terma Penggunaan",
+    "effective_date": "Tarikh Berkuat Kuasa: 11 Mac 2026",
+    "intro": "Terma dan syarat ini terpakai kepada aplikasi Pikgeon (\"Aplikasi\") untuk peranti mudah alih, yang dicipta oleh Alu Studio (\"Pembekal Perkhidmatan\") sebagai perkhidmatan percuma. Dengan memuat turun atau menggunakan Aplikasi ini, anda bersetuju dengan terma ini.",
+    "license": {
+      "title": "Lesen Penggunaan",
+      "desc": "Pembekal Perkhidmatan memberikan anda lesen yang terhad, bukan eksklusif, tidak boleh dipindahkan, dan boleh dibatalkan untuk menggunakan Aplikasi bagi tujuan peribadi dan bukan komersial selaras dengan terma ini."
+    },
+    "restrictions": {
+      "title": "Sekatan",
+      "desc": "Anda bersetuju untuk tidak:",
+      "items": [
+        "Menyalin, mengubah suai, atau mencipta karya terbitan berdasarkan Aplikasi",
+        "Cuba mengekstrak kod sumber Aplikasi",
+        "Menterjemahkan Aplikasi ke dalam bahasa lain atau mencipta versi terbitan",
+        "Menggunakan Aplikasi untuk sebarang tujuan yang menyalahi undang-undang atau melanggar mana-mana undang-undang yang terpakai"
+      ]
+    },
+    "third_party": {
+      "title": "Perkhidmatan Pihak Ketiga",
+      "desc": "Aplikasi ini menggunakan perkhidmatan pihak ketiga yang mempunyai terma dan syarat mereka sendiri:"
+    },
+    "device_security": {
+      "title": "Keselamatan Peranti",
+      "desc": "Anda bertanggungjawab untuk mengekalkan keselamatan peranti anda dan akses kepada Aplikasi. Kami sangat menasihatkan agar tidak melakukan jailbreaking atau rooting pada peranti anda, kerana ia boleh menjejaskan ciri-ciri keselamatan dan menyebabkan Aplikasi tidak berfungsi dengan betul."
+    },
+    "connectivity": {
+      "title": "Sambungan Internet",
+      "desc": "Sesetengah ciri Aplikasi memerlukan sambungan internet yang aktif. Pembekal Perkhidmatan tidak bertanggungjawab jika Aplikasi tidak berfungsi pada kapasiti penuh akibat kekurangan akses internet. Jika anda menggunakan Aplikasi di luar kawasan Wi-Fi, terma pembekal rangkaian mudah alih anda dan caj data mungkin terpakai."
+    },
+    "updates": {
+      "title": "Kemas Kini Aplikasi",
+      "desc": "Pembekal Perkhidmatan mungkin mengeluarkan kemas kini kepada Aplikasi dari semasa ke semasa. Anda bersetuju untuk menerima kemas kini apabila tersedia. Pembekal Perkhidmatan juga mungkin menghentikan Aplikasi pada bila-bila masa tanpa notis. Selepas penamatan, hak anda di bawah terma ini akan tamat, dan anda mesti berhenti menggunakan dan memadam Aplikasi."
+    },
+    "disclaimer": {
+      "title": "Penafian",
+      "desc": "Aplikasi ini disediakan \"SEBAGAIMANA ADANYA\" tanpa sebarang jaminan, sama ada nyata atau tersirat. Pembekal Perkhidmatan tidak menjamin bahawa Aplikasi akan bebas daripada ralat, tidak terganggu, atau bebas daripada komponen yang berbahaya."
+    },
+    "liability": {
+      "title": "Had Liabiliti",
+      "desc": "Setakat maksimum yang dibenarkan oleh undang-undang, Pembekal Perkhidmatan tidak akan bertanggungjawab atas sebarang kerosakan tidak langsung, sampingan, khas, berbangkit, atau punitif, atau sebarang kehilangan keuntungan atau pendapatan yang timbul daripada penggunaan Aplikasi anda."
+    },
+    "changes": {
+      "title": "Perubahan kepada Terma Ini",
+      "desc": "Pembekal Perkhidmatan mungkin mengemas kini Terma ini dari semasa ke semasa. Perubahan akan disiarkan di halaman ini. Penggunaan Aplikasi yang berterusan selepas perubahan membentuk penerimaan terma yang dikemas kini."
+    },
+    "contact": {
+      "title": "Hubungi Kami",
+      "desc": "Jika anda mempunyai sebarang soalan tentang Terma ini, sila hubungi kami di"
+    }
   }
 }
