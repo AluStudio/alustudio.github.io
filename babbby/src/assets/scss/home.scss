@@ -1,86 +1,157 @@
 @import "./all";
 
+/* ── Hero ─────────────────────────────────── */
+
 .hero-section {
-  min-height: 70vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 1rem;
+  gap: 3rem;
+  padding: 5rem 0 3rem;
+  min-height: 70vh;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-icon {
+  border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
 }
 
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #FF6B4A;
+  color: $babbby-coral;
   letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  color: #71717A;
-  max-width: 540px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.7;
+  font-size: 1.15rem;
+  color: $babbby-ink-400;
+  line-height: 1.75;
+  max-width: 440px;
+  margin-bottom: 2rem;
 }
 
+/* App Store badge */
+.hero-actions {
+  margin-bottom: 1.5rem;
+}
+
+.appstore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.4rem;
+  background: $babbby-ink-800;
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  i {
+    font-size: 1.6rem;
+  }
+
+  .badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+
+    small {
+      font-size: 0.65rem;
+      opacity: 0.8;
+    }
+
+    strong {
+      font-size: 1rem;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Legal links */
 .hero-links {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .hero-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.75rem;
-  border-radius: 12px;
-  font-weight: 600;
+  color: $babbby-ink-400;
   text-decoration: none;
-  transition: all 0.25s ease;
-  font-size: 1rem;
-}
-
-.hero-link--primary {
-  background: #FF6B4A;
-  color: #fff;
+  font-size: 0.9rem;
+  transition: color 0.2s;
 
   &:hover {
-    background: #F17B54;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 74, 0.35);
+    color: $babbby-coral;
   }
 }
 
-.hero-link--outline {
-  background: transparent;
-  color: #FF6B4A;
-  border: 2px solid #FF6B4A;
-
-  &:hover {
-    background: #FF6B4A;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 74, 0.25);
-  }
+.hero-link-sep {
+  color: $babbby-ink-400;
+  opacity: 0.4;
+  font-size: 0.8rem;
 }
 
-/* Responsive */
-@media (max-width: 576px) {
+/* Phone screenshot */
+.hero-right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-frame {
+  width: 280px;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  background: #fff;
+}
+
+.hero-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Responsive ───────────────────────────── */
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 0 2rem;
+    min-height: auto;
+    gap: 2.5rem;
+  }
+
   .hero-title {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.05rem;
   }
 
   .hero-links {
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+  }
+
+  .phone-frame {
+    width: 240px;
   }
 }

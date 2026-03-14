@@ -7,8 +7,28 @@
   "landing": {
     "title": "Babbby",
     "subtitle": "為 0–6 歲寶貝量身推薦每日活動靈感。紀錄成長、建立日常，讓每一天都有意義。",
+    "appstore_sub": "下載自",
+    "appstore_main": "App Store",
     "privacy_link": "隱私權政策",
     "terms_link": "使用條款"
+  },
+  "features": {
+    "daily_plan": {
+      "title": "每天幫你排好了",
+      "desc": "打開 app，今天的活動已經準備好。不用再想「跟寶寶玩什麼」，直接開始。"
+    },
+    "library": {
+      "title": "340+ 種活動，隨時翻",
+      "desc": "大肢體、小肌肉、語言、感官⋯⋯ 八大類別，依年齡自動匹配。"
+    },
+    "materials": {
+      "title": "家裡有什麼就玩什麼",
+      "desc": "選好手邊的材料——蠟筆、紙箱、積木——只看你現在能做的活動。"
+    },
+    "stats": {
+      "title": "成長不漏記",
+      "desc": "完成的活動、類別分布、每日趨勢，一目了然。回頭看，每一步都記著。"
+    }
   },
   "footer": {
     "tagline": "家長的每日活動夥伴",
