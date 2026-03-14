@@ -1,3 +1,8 @@
+---
+summary: What the Babbby support page must do — user stories, acceptance criteria, legal content scope
+read_when: Planning or reviewing the babbby/ support site features and legal pages
+---
+
 # Requirements: Babbby Support Page
 
 ## Summary

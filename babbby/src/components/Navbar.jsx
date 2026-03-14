@@ -1,13 +1,11 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import i18n, { supportedLanguages } from "../i18n.js";
 import "../assets/scss/navbar.scss";
 
 function Navbar() {
   const { t } = useTranslation();
-  const location = useLocation();
-  const isHome = location.pathname === "/" || location.pathname === "";
 
   const handleChangeLang = (e) => {
     const lang = e.target.value;

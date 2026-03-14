@@ -1,3 +1,8 @@
+---
+summary: Technical approach, architecture decisions, file changes for the Babbby support page
+read_when: Implementing or modifying the babbby/ project structure, styling, or CI/CD
+---
+
 # Plan: Babbby Support Page
 
 ## Technical Approach

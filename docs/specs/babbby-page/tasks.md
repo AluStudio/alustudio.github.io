@@ -1,3 +1,8 @@
+---
+summary: Phased implementation checklist for the Babbby support page
+read_when: Tracking build progress or picking up remaining work on babbby/
+---
+
 # Tasks: Babbby Support Page
 
 ## Phase 1: Project Scaffold
