@@ -1,0 +1,101 @@
+@import "./all";
+
+/* Navbar base: coral gradient glass */
+.navbar-scroll {
+  background-image: linear-gradient(
+    200deg,
+    rgba(255, 107, 74, 0.9) 0%,
+    rgba(241, 123, 84, 0.7) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-image 0.4s ease, background-color 0.4s ease;
+}
+
+/* Scrolled: white glass */
+.navbar-scrolled {
+  background-image: none;
+  background-color: rgba(255, 248, 242, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* Link colors: pre-scroll (white on coral) */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-brand,
+.navbar-scroll .navbar-toggler .bi {
+  color: #fff;
+}
+
+/* Link colors: post-scroll (dark) */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .navbar-toggler .bi {
+  color: #3F4345;
+}
+
+.navbar-brand {
+  font-size: unset;
+  height: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Language select */
+select.form-select-sm {
+  background-color: transparent;
+  border: 1px solid rgba(255, 107, 74, 0.6);
+  cursor: pointer;
+  &:focus {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-content {
+  padding-top: var(--navbar-height);
+}
+
+section {
+  scroll-margin-top: var(--navbar-height);
+}
+
+/* Nav-link underline animation */
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #FF6B4A;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}

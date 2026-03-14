@@ -1,0 +1,173 @@
+{
+  "nav": {
+    "home": "Home",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "landing": {
+    "title": "Babbby",
+    "subtitle": "Daily activity ideas for your little one, ages 0–6. Track milestones, build routines, and make every day count.",
+    "privacy_link": "Privacy Policy",
+    "terms_link": "Terms of Use"
+  },
+  "footer": {
+    "tagline": "Daily activity companion for parents",
+    "copyright": "Alu Studio. All rights reserved.",
+    "contact": "Contact Us",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use"
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy",
+    "effective_date": "Effective Date: March 13, 2026",
+    "intro": "This privacy policy applies to the Babbby app (\"Application\") for iOS, created by Alu Studio (\"Service Provider\") as a free service. This service is intended for use \"AS IS\". By using the Application, you agree to the collection and use of information as described in this policy.",
+    "info_collection": {
+      "title": "Information Collection and Use",
+      "desc": "The Application may collect certain information automatically when you download and use it, through integrated third-party services. This information may include:",
+      "items": [
+        "Your device's Internet Protocol address (IP address)",
+        "Device type, operating system version, and unique device identifiers",
+        "Usage data such as app feature interactions, session duration, and screens visited",
+        "Crash logs and performance diagnostics"
+      ],
+      "no_ads": "The Application does not use advertising services and does not collect advertising identifiers (IDFA)."
+    },
+    "local_storage": {
+      "title": "Local Data Storage",
+      "desc": "All user-created content — including children's profiles, activity logs, completion records, and statistics — is stored exclusively on your device using a local database (GRDB/SQLite). This data is never transmitted to Alu Studio's servers or any third party. If you uninstall the Application, all local data will be permanently deleted."
+    },
+    "iap": {
+      "title": "In-App Purchases",
+      "desc": "The Application offers an optional one-time sponsor purchase (\"Buy the Developer a Coffee\") through Apple's StoreKit. All payment processing is handled entirely by Apple. Alu Studio does not collect, store, or have access to any payment information, credit card details, or Apple ID credentials."
+    },
+    "activity_disclaimer": {
+      "title": "Activity Recommendations",
+      "desc": "Activity recommendations provided by the Application are generated algorithmically for inspiration purposes only. They do not constitute medical, educational, psychological, or child-development advice. Parents and guardians are solely responsible for evaluating the suitability of any activity for their child."
+    },
+    "third_party": {
+      "title": "Third-Party Services",
+      "desc": "The Application uses the following third-party services, each with their own privacy policies governing how they handle data:",
+      "services": [
+        {
+          "name": "Firebase Analytics",
+          "url": "https://firebase.google.com/support/privacy/"
+        },
+        {
+          "name": "Firebase Crashlytics",
+          "url": "https://firebase.google.com/support/privacy/"
+        }
+      ]
+    },
+    "data_retention": {
+      "title": "Data Retention",
+      "desc": "All activity data and app settings are stored locally on your device and are never transmitted to our servers. Data collected by third-party services (Firebase Analytics, Firebase Crashlytics) is retained according to their respective data retention policies. To delete local data, uninstall the Application or clear its data through your device settings."
+    },
+    "children": {
+      "title": "Children's Privacy",
+      "desc": "The Application is a tool designed for parents and guardians to plan activities for their children (ages 0–6). It is not intended for direct use by children. We do not knowingly collect personally identifiable information from children under 13. Children's profile information (name, birth date) is stored only on the device and never transmitted. If you believe a child has provided personal information to us, please contact us at alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Your Rights and Choices",
+      "desc": "Depending on your location, you may have certain rights regarding your personal data:",
+      "gdpr_title": "For EU/EEA Users (GDPR)",
+      "gdpr_items": [
+        "Right to access your personal data",
+        "Right to rectify inaccurate personal data",
+        "Right to erasure (\"right to be forgotten\")",
+        "Right to restrict or object to data processing",
+        "Right to data portability"
+      ],
+      "ccpa_title": "For California Users (CCPA)",
+      "ccpa_desc": "You have the right to know what personal information is collected, request deletion of your personal information, and opt out of the sale of your personal information. We do not sell your personal information.",
+      "opt_out_title": "Opt-Out Options",
+      "opt_out_items": [
+        "iOS: Go to Settings → Privacy & Security → Analytics & Improvements to manage analytics data sharing",
+        "Uninstall: You can stop all data collection by uninstalling the Application"
+      ]
+    },
+    "security": {
+      "title": "Security",
+      "desc": "We value the security of your information. All user data is stored locally on your device and protected by iOS's built-in security measures. However, no method of electronic storage is 100% secure, and we cannot guarantee absolute security."
+    },
+    "changes": {
+      "title": "Changes to This Privacy Policy",
+      "desc": "We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. We encourage you to review this page periodically. Continued use of the Application after changes constitutes acceptance of the updated policy."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "desc": "If you have any questions about this Privacy Policy or your data, please contact us at"
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "effective_date": "Effective Date: March 13, 2026",
+    "intro": "These terms and conditions apply to the Babbby app (\"Application\") for iOS, created by Alu Studio (\"Service Provider\") as a free service. By downloading or using the Application, you agree to these terms.",
+    "license": {
+      "title": "Use License",
+      "desc": "The Service Provider grants you a limited, non-exclusive, non-transferable, revocable license to use the Application for personal, non-commercial purposes in accordance with these terms."
+    },
+    "restrictions": {
+      "title": "Restrictions",
+      "desc": "You agree not to:",
+      "items": [
+        "Copy, modify, or create derivative works based on the Application",
+        "Attempt to extract the source code of the Application",
+        "Translate the Application into other languages or create derivative versions",
+        "Use the Application for any unlawful purpose or in violation of any applicable laws"
+      ]
+    },
+    "activity_disclaimer": {
+      "title": "Activity Recommendations Disclaimer",
+      "desc": "The Application provides age-based activity suggestions. By using the Application, you acknowledge and agree that:",
+      "items": [
+        "Activity ideas are provided for inspiration only and do not constitute professional advice on health, education, psychology, or child development",
+        "Parents and guardians are solely responsible for supervising their children during any activity suggested by the Application",
+        "Age-based recommendations are general guidelines; every child develops differently, and parents must assess suitability for their specific child",
+        "The Application does not replace consultation with pediatricians, therapists, or other qualified professionals",
+        "The developer assumes no liability for any injury, harm, or outcome resulting from performing suggested activities"
+      ]
+    },
+    "third_party": {
+      "title": "Third-Party Services",
+      "desc": "The Application utilizes third-party services that have their own terms and conditions:",
+      "services": [
+        {
+          "name": "Firebase Analytics",
+          "url": "https://firebase.google.com/terms/"
+        },
+        {
+          "name": "Firebase Crashlytics",
+          "url": "https://firebase.google.com/terms/crashlytics"
+        }
+      ]
+    },
+    "device_security": {
+      "title": "Device Security",
+      "desc": "You are responsible for maintaining the security of your device and access to the Application. We strongly advise against jailbreaking your device, as it may compromise security features and cause the Application to malfunction."
+    },
+    "connectivity": {
+      "title": "Internet Connection",
+      "desc": "Some features of the Application may require an active internet connection (e.g., in-app purchases, analytics). The Service Provider is not responsible for the Application not functioning at full capacity due to lack of internet access."
+    },
+    "updates": {
+      "title": "Application Updates",
+      "desc": "The Service Provider may release updates to the Application from time to time. You agree to accept updates when available. The Service Provider may also discontinue the Application at any time without notice. Upon termination, your rights under these terms will end, and you must stop using and delete the Application."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "desc": "The Application is provided \"AS IS\" without warranties of any kind, either express or implied. The Service Provider does not guarantee that the Application will be error-free, uninterrupted, or free from harmful components."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "desc": "To the maximum extent permitted by law, the Service Provider shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues arising from your use of the Application."
+    },
+    "changes": {
+      "title": "Changes to These Terms",
+      "desc": "The Service Provider may update these Terms from time to time. Changes will be posted on this page. Continued use of the Application after changes constitutes acceptance of the updated terms."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "desc": "If you have any questions about these Terms, please contact us at"
+    }
+  }
+}
