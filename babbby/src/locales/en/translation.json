@@ -7,8 +7,28 @@
   "landing": {
     "title": "Babbby",
     "subtitle": "Daily activity ideas for your little one, ages 0–6. Track milestones, build routines, and make every day count.",
+    "appstore_sub": "Download on the",
+    "appstore_main": "App Store",
     "privacy_link": "Privacy Policy",
     "terms_link": "Terms of Use"
+  },
+  "features": {
+    "daily_plan": {
+      "title": "Today's plan, done.",
+      "desc": "Open the app — activities are ready. No more \"what should we do today?\" Just start playing."
+    },
+    "library": {
+      "title": "340+ activities to pick from",
+      "desc": "Gross motor, fine motor, language, sensory… 8 categories, matched to your child's age."
+    },
+    "materials": {
+      "title": "Filter by what you have",
+      "desc": "Pick the stuff at hand — crayons, cardboard, blocks — and see only activities you can do right now."
+    },
+    "stats": {
+      "title": "Track it all",
+      "desc": "Completed activities, category breakdown, daily trends. Look back and see every step."
+    }
   },
   "footer": {
     "tagline": "Daily activity companion for parents",
