@@ -6,6 +6,8 @@ import Features from "../components/Features";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+const base = import.meta.env.BASE_URL;
+
 function HomePage() {
   const { t } = useTranslation();
 
@@ -18,7 +20,7 @@ function HomePage() {
           <section className="hero-section">
             <div className="hero-left">
               <img
-                src="app-icon.png"
+                src={`${base}app-icon.png`}
                 alt="Babbby"
                 className="hero-icon"
                 width="96"
@@ -54,7 +56,7 @@ function HomePage() {
             <div className="hero-right">
               <div className="phone-frame">
                 <img
-                  src="screenshot-today.png"
+                  src={`${base}screenshot-today.png`}
                   alt="Babbby Today view"
                   className="hero-screenshot"
                 />
