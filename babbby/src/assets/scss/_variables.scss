@@ -1,0 +1,16 @@
+// Babbby brand tokens (from AppColor.swift)
+$babbby-peach:     #FFF8F2;
+$babbby-coral:     #FF6B4A;
+$babbby-coral-700: #F17B54;
+$babbby-ink-800:   #3F4345;
+$babbby-ink-400:   #71717A;
+$babbby-snow:      #FEFEFA;
+
+// Bootstrap overrides
+$primary:    $babbby-coral;
+$body-bg:    $babbby-peach;
+$body-color: $babbby-ink-800;
+$link-color: $babbby-coral;
+
+// Font
+$font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
