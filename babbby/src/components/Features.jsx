@@ -4,19 +4,19 @@ import "../assets/scss/features.scss";
 const features = [
   {
     key: "daily_plan",
-    emoji: "☀️",
+    icon: "bi-calendar2-check",
   },
   {
     key: "library",
-    emoji: "📚",
+    icon: "bi-collection",
   },
   {
     key: "materials",
-    emoji: "🧶",
+    icon: "bi-box-seam",
   },
   {
     key: "stats",
-    emoji: "📊",
+    icon: "bi-bar-chart-line",
   },
 ];
 
@@ -28,7 +28,9 @@ function Features() {
       <div className="features-grid">
         {features.map((f) => (
           <div className="feature-card" key={f.key}>
-            <span className="feature-emoji">{f.emoji}</span>
+            <div className="feature-icon">
+              <i className={`bi ${f.icon}`}></i>
+            </div>
             <h3 className="feature-title">
               {t(`features.${f.key}.title`)}
             </h3>
