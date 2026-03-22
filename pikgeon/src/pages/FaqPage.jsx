@@ -171,6 +171,7 @@ function FaqItem({ item, isOpen, onToggle, t }) {
         className="faq-card__header"
         onClick={onToggle}
         aria-expanded={isOpen}
+        aria-controls={`faq-body-${item.id}`}
       >
         <div className="faq-card__icon">
           <i className={`bi ${item.icon}`}></i>
@@ -188,8 +189,13 @@ function FaqItem({ item, isOpen, onToggle, t }) {
         <i className={`bi bi-chevron-down faq-card__chevron`}></i>
       </button>
 
-      <div className="faq-card__body-wrapper">
-        <div className="faq-card__body">
+      {isOpen && (
+        <div
+          id={`faq-body-${item.id}`}
+          className="faq-card__body"
+          role="region"
+          aria-labelledby={`faq-header-${item.id}`}
+        >
           <p className="faq-card__answer">
             {t(`faq.items.${item.id}.answer`)}
           </p>
@@ -255,7 +261,7 @@ function FaqItem({ item, isOpen, onToggle, t }) {
             </p>
           )}
         </div>
-      </div>
+      )}
     </div>
   );
 }

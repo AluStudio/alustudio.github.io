@@ -213,5 +213,47 @@
       "title": "Makipag-ugnayan sa Amin",
       "desc": "Kung mayroon kang mga katanungan tungkol sa Mga Tuntuning ito, mangyaring makipag-ugnayan sa amin sa"
     }
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "May tanong? Narito ang mga sagot sa pinakakaraniwang tanong.",
+    "contact_prompt": "Hindi mo nahanap ang sagot? Makipag-ugnayan sa amin:",
+    "tab_video": "Video",
+    "tab_steps": "Step by Step",
+    "items": {
+      "shortcut_tutorial": {
+        "title": "iPhone Shortcut: Back Tap Quick Import",
+        "badge": "Requires v1.5+",
+        "answer": "Combine an iPhone Shortcut with the Back Tap accessibility feature — tap the back of your phone while viewing a postcard in Pikmin Bloom to automatically screenshot and import it into Pikgeon.",
+        "bullets": [
+          "Make sure Pikgeon is updated to v1.5 or later",
+          "Download the shortcut file below, then open the Shortcuts app to install it",
+          "Go to Settings → Accessibility → Touch → Back Tap",
+          "Set Double Tap or Triple Tap to the \"Import to Pikgeon\" shortcut"
+        ],
+        "download_shortcut": "Download Shortcut File",
+        "step1_caption": "Settings → Accessibility",
+        "step2_caption": "Touch → Back Tap",
+        "step3_caption": "Triple Tap → Import to Pikgeon",
+        "note": "This feature requires Pikgeon v1.5 or later. Please update from the App Store if you haven't already."
+      },
+      "merge_friends": {
+        "title": "Where is the Merge Friends feature?",
+        "answer": "On the Records page, tap the merge icon in the top-right corner to access the Merge Friends feature.",
+        "caption": "Tap the circled icon in the top-right to merge friends",
+        "note": "Merging is irreversible — please confirm the friends you want to merge before proceeding."
+      },
+      "recognition_fail": {
+        "title": "Why did postcard recognition fail?",
+        "answer": "The most common reason is that the postcard image doesn't contain a sender or recipient friend name. Pikgeon needs the \"From / To\" friend name info on the postcard to correctly recognize and create a delivery record.",
+        "bullets": [
+          "Postcards shared from Pikmin Bloom must include the sending friend's name",
+          "Some images (e.g. Décor Pikmin gallery, challenge results) don't contain friend info and can't be recognized",
+          "When taking a screenshot, make sure the full postcard is visible — don't crop the friend name area"
+        ],
+        "caption_1": "This postcard has no friend name — the sender can't be identified",
+        "caption_2": "Gallery or challenge screenshots don't contain friend info"
+      }
+    }
   }
 }
