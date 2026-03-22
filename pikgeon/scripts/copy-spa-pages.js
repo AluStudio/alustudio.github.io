@@ -15,7 +15,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
 const src = join(dist, "index.html");
 
-const routes = ["privacy", "terms"];
+const routes = ["privacy", "terms", "faq"];
 
 for (const route of routes) {
   const dest = join(dist, route, "index.html");

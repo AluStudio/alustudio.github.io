@@ -5,7 +5,8 @@
     "statistics": "數據統計",
     "privacy": "隱私說明",
     "languages": "支援語系",
-    "download": "立即下載"
+    "download": "立即下載",
+    "faq": "常見問題"
   },
   "banner": {
     "title": "讓明信片的回憶，更有條理地延續。",
@@ -211,6 +212,48 @@
     "contact": {
       "title": "聯絡我們",
       "desc": "若您對本使用條款有任何疑問，請透過以下電子郵件與我們聯繫："
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "subtitle": "使用上有疑問？以下整理了常見問題與解答。",
+    "contact_prompt": "沒有找到你的問題？歡迎來信詢問：",
+    "tab_video": "影片教學",
+    "tab_steps": "圖文步驟",
+    "items": {
+      "shortcut_tutorial": {
+        "title": "iPhone 捷徑：背面輕點快速匯入",
+        "badge": "需要 v1.5 以上版本",
+        "answer": "透過 iPhone 捷徑搭配「背面輕點」功能，在 Pikmin Bloom 查看明信片時輕敲手機背面就能自動截圖並匯入 Pikgeon。",
+        "bullets": [
+          "請先確認 Pikgeon 已更新至 v1.5 以上版本",
+          "下載捷徑檔案後，打開「捷徑」App 完成安裝",
+          "前往「設定 → 輔助使用 → 觸控 → 背面輕點」",
+          "將「點兩下」或「點三下」設定為「匯入到 Pikgeon」捷徑"
+        ],
+        "download_shortcut": "下載捷徑檔案",
+        "step1_caption": "設定 → 輔助使用",
+        "step2_caption": "觸控 → 背面輕點",
+        "step3_caption": "點三下 → 匯入到 Pikgeon",
+        "note": "此功能需要 Pikgeon v1.5 以上版本。如果你尚未更新，請先至 App Store 更新。"
+      },
+      "merge_friends": {
+        "title": "合併好友功能在哪裡？",
+        "answer": "在「紀錄」頁面的右上角，點擊人形合併圖示即可進入合併好友功能。",
+        "caption": "點擊右上角圈起的圖示進入合併好友",
+        "note": "合併後無法復原，請確認要合併的好友後再操作。"
+      },
+      "recognition_fail": {
+        "title": "為什麼明信片辨識失敗？",
+        "answer": "最常見的原因是明信片上沒有顯示寄送者或收件者的好友名稱。Pikgeon 需要明信片上包含「From / To」的好友名稱資訊才能正確辨識並建立寄送紀錄。",
+        "bullets": [
+          "從 Pikmin Bloom 分享的明信片，必須包含寄送好友的名稱",
+          "部分明信片（例如圖鑑截圖、挑戰結果）不含好友資訊，無法辨識",
+          "截圖時確保明信片完整顯示，不要裁切到好友名稱區域"
+        ],
+        "caption_1": "此明信片不含好友名稱，無法辨識寄送者",
+        "caption_2": "圖鑑或挑戰截圖不含好友資訊"
+      }
     }
   }
 }

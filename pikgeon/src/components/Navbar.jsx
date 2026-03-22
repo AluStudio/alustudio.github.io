@@ -126,6 +126,11 @@ function Navbar() {
                   {t("nav.languages")}
                 </a>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link text-center" to="/faq">
+                  {t("nav.faq")}
+                </Link>
+              </li>
             </ul>
             <div className="text-center">
               <a
