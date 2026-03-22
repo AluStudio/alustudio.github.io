@@ -5,7 +5,8 @@
     "statistics": "Statistics",
     "privacy": "Privacy",
     "languages": "Languages",
-    "download": "Download"
+    "download": "Download",
+    "faq": "FAQ"
   },
   "banner": {
     "title": "Keep Your Postcard Memories Organized.",
@@ -211,6 +212,30 @@
     "contact": {
       "title": "Contact Us",
       "desc": "If you have any questions about these Terms, please contact us at"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Got questions? Here are answers to the most common ones.",
+    "contact_prompt": "Didn't find your answer? Reach out to us:",
+    "items": {
+      "merge_friends": {
+        "title": "Where is the Merge Friends feature?",
+        "answer": "On the Records page, tap the merge icon in the top-right corner to access the Merge Friends feature.",
+        "caption": "Tap the circled icon in the top-right to merge friends",
+        "note": "Merging is irreversible — please confirm the friends you want to merge before proceeding."
+      },
+      "recognition_fail": {
+        "title": "Why did postcard recognition fail?",
+        "answer": "The most common reason is that the postcard image doesn't contain a sender or recipient friend name. Pikgeon needs the \"From / To\" friend name info on the postcard to correctly recognize and create a delivery record.",
+        "bullets": [
+          "Postcards shared from Pikmin Bloom must include the sending friend's name",
+          "Some images (e.g. Décor Pikmin gallery, challenge results) don't contain friend info and can't be recognized",
+          "When taking a screenshot, make sure the full postcard is visible — don't crop the friend name area"
+        ],
+        "caption_1": "This postcard has no friend name — the sender can't be identified",
+        "caption_2": "Gallery or challenge screenshots don't contain friend info"
+      }
     }
   }
 }

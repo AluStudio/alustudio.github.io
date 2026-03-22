@@ -23,6 +23,8 @@ function Footer() {
             <Link to="/privacy">{t("footer.privacy_policy")}</Link>
             <span className="mx-2">•</span>
             <Link to="/terms">{t("footer.terms_of_use")}</Link>
+            <span className="mx-2">•</span>
+            <Link to="/faq">{t("nav.faq")}</Link>
           </div>
           <p className={`${isRtl ? 'rtl-text' : ''}`}>
             &copy; {thisYear} {t("footer.copyright")}
