@@ -29,7 +29,7 @@ function Navbar() {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
   };
-  const currentLang = i18n.language.startsWith("zh") ? "zh" : i18n.language;
+  const currentLang = i18n.resolvedLanguage || i18n.language;
 
   const [theme, setTheme] = useState(getInitialTheme);
 

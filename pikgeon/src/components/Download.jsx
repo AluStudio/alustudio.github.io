@@ -4,7 +4,7 @@ import i18n from "../i18n";
 
 function Download() {
   const { t } = useTranslation();
-  const isRtl = i18n.language === 'ar';
+  const isRtl = (i18n.resolvedLanguage || i18n.language) === 'ar';
   return (
     <>
       <section id="download" className="bg-light py-5">

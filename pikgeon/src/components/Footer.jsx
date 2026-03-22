@@ -6,7 +6,7 @@ import i18n from "../i18n";
 function Footer() {
   const thisYear = new Date().getFullYear();
   const { t } = useTranslation();
-  const isRtl = i18n.language === 'ar';
+  const isRtl = (i18n.resolvedLanguage || i18n.language) === 'ar';
 
   return (
     <>

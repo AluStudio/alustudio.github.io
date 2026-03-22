@@ -8,7 +8,7 @@ function Stats() {
     { key: "ranking_postcards", icon: "bi-card-image" },
     { key: "monthly_trend", icon: "bi-graph-up-arrow" },
   ];
-  const isRtl = i18n.language === 'ar';
+  const isRtl = (i18n.resolvedLanguage || i18n.language) === 'ar';
   return (
     <>
       <section id="stats" className="stats-section py-5">

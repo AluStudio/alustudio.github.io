@@ -63,6 +63,8 @@ i18n
   .init({
     resources,
     fallbackLng: "zh",  // 找不到時退回語言
+    supportedLngs: supportedLanguages.map((l) => l.code),
+    load: "languageOnly", // en-US → en, zh-TW → zh
     interpolation: {
       escapeValue: false
     },
