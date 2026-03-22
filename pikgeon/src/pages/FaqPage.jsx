@@ -13,11 +13,45 @@ const base = import.meta.env.BASE_URL;
  * To add a new FAQ: append an object here and add matching i18n keys.
  *
  * Supported fields per item:
- *   id        — unique key (matches translation namespace)
- *   icon      — Bootstrap Icons class
- *   images    — array of { src, alt, caption? }  (optional)
+ *   id          — unique key (matches translation namespace)
+ *   icon        — Bootstrap Icons class
+ *   badge       — { labelKey, variant } version/requirement badge (optional)
+ *   video       — { src, poster? }  embedded video (optional)
+ *   steps       — array of { src, alt, captionKey }  numbered step images (optional)
+ *   images      — array of { src, alt, captionKey? }  gallery images (optional)
+ *   downloads   — array of { href, labelKey, icon }  download buttons (optional)
  */
 const faqItems = [
+  {
+    id: "shortcut_tutorial",
+    icon: "bi-arrow-repeat",
+    badge: { labelKey: "faq.items.shortcut_tutorial.badge", variant: "warning" },
+    video: { src: `${base}faq/shortcut-tutorial.mp4` },
+    steps: [
+      {
+        src: `${base}faq/shortcut-step1.png`,
+        alt: "shortcut-step-1",
+        captionKey: "faq.items.shortcut_tutorial.step1_caption",
+      },
+      {
+        src: `${base}faq/shortcut-step2.png`,
+        alt: "shortcut-step-2",
+        captionKey: "faq.items.shortcut_tutorial.step2_caption",
+      },
+      {
+        src: `${base}faq/shortcut-step3.png`,
+        alt: "shortcut-step-3",
+        captionKey: "faq.items.shortcut_tutorial.step3_caption",
+      },
+    ],
+    downloads: [
+      {
+        href: `${base}faq/import-to-pikgeon.shortcut`,
+        labelKey: "faq.items.shortcut_tutorial.download_shortcut",
+        icon: "bi-download",
+      },
+    ],
+  },
   {
     id: "merge_friends",
     icon: "bi-people",
@@ -47,6 +81,89 @@ const faqItems = [
   },
 ];
 
+function TutorialTabs({ item, t }) {
+  const [tab, setTab] = useState("video");
+  const hasVideo = !!item.video;
+  const hasSteps = item.steps && item.steps.length > 0;
+
+  // If only one type, skip tabs
+  if (!hasVideo && !hasSteps) return null;
+  if (hasVideo && !hasSteps) {
+    return (
+      <div className="faq-card__video-wrap">
+        <video
+          src={item.video.src}
+          controls
+          playsInline
+          preload="metadata"
+          className="faq-card__video"
+        />
+      </div>
+    );
+  }
+  if (!hasVideo && hasSteps) {
+    return <StepImages steps={item.steps} t={t} />;
+  }
+
+  return (
+    <div className="faq-tutorial">
+      <div className="faq-tutorial__tabs">
+        <button
+          className={`faq-tutorial__tab ${tab === "video" ? "faq-tutorial__tab--active" : ""}`}
+          onClick={() => setTab("video")}
+        >
+          <i className="bi bi-play-circle"></i>
+          {t("faq.tab_video")}
+        </button>
+        <button
+          className={`faq-tutorial__tab ${tab === "steps" ? "faq-tutorial__tab--active" : ""}`}
+          onClick={() => setTab("steps")}
+        >
+          <i className="bi bi-images"></i>
+          {t("faq.tab_steps")}
+        </button>
+      </div>
+
+      {tab === "video" && (
+        <div className="faq-card__video-wrap">
+          <video
+            src={item.video.src}
+            controls
+            playsInline
+            preload="metadata"
+            className="faq-card__video"
+          />
+        </div>
+      )}
+
+      {tab === "steps" && <StepImages steps={item.steps} t={t} />}
+    </div>
+  );
+}
+
+function StepImages({ steps, t }) {
+  return (
+    <div className="faq-steps">
+      {steps.map((step, i) => (
+        <figure key={i} className="faq-steps__item">
+          <div className="faq-steps__badge">{i + 1}</div>
+          <img
+            src={step.src}
+            alt={step.alt}
+            className="faq-steps__img"
+            loading="lazy"
+          />
+          {step.captionKey && (
+            <figcaption className="faq-steps__caption">
+              {t(step.captionKey)}
+            </figcaption>
+          )}
+        </figure>
+      ))}
+    </div>
+  );
+}
+
 function FaqItem({ item, isOpen, onToggle, t }) {
   return (
     <div className={`faq-card ${isOpen ? "faq-card--open" : ""}`}>
@@ -58,9 +175,16 @@ function FaqItem({ item, isOpen, onToggle, t }) {
         <div className="faq-card__icon">
           <i className={`bi ${item.icon}`}></i>
         </div>
-        <h2 className="faq-card__title">
-          {t(`faq.items.${item.id}.title`)}
-        </h2>
+        <div className="faq-card__header-text">
+          <h2 className="faq-card__title">
+            {t(`faq.items.${item.id}.title`)}
+          </h2>
+          {item.badge && (
+            <span className={`faq-card__badge faq-card__badge--${item.badge.variant || "info"}`}>
+              {t(item.badge.labelKey)}
+            </span>
+          )}
+        </div>
         <i className={`bi bi-chevron-down faq-card__chevron`}></i>
       </button>
 
@@ -82,7 +206,27 @@ function FaqItem({ item, isOpen, onToggle, t }) {
               </ul>
             )}
 
-          {/* Render images */}
+          {/* Download buttons */}
+          {item.downloads && item.downloads.length > 0 && (
+            <div className="faq-card__downloads">
+              {item.downloads.map((dl, i) => (
+                <a
+                  key={i}
+                  href={dl.href}
+                  download
+                  className="faq-card__download-btn"
+                >
+                  <i className={`bi ${dl.icon}`}></i>
+                  {t(dl.labelKey)}
+                </a>
+              ))}
+            </div>
+          )}
+
+          {/* Tutorial: video + step tabs */}
+          <TutorialTabs item={item} t={t} />
+
+          {/* Render gallery images */}
           {item.images && item.images.length > 0 && (
             <div className="faq-card__images">
               {item.images.map((img, i) => (

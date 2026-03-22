@@ -218,7 +218,25 @@
     "title": "常見問題",
     "subtitle": "使用上有疑問？以下整理了常見問題與解答。",
     "contact_prompt": "沒有找到你的問題？歡迎來信詢問：",
+    "tab_video": "影片教學",
+    "tab_steps": "圖文步驟",
     "items": {
+      "shortcut_tutorial": {
+        "title": "iPhone 捷徑：背面輕點快速匯入",
+        "badge": "需要 v1.5 以上版本",
+        "answer": "透過 iPhone 捷徑搭配「背面輕點」功能，在 Pikmin Bloom 查看明信片時輕敲手機背面就能自動截圖並匯入 Pikgeon。",
+        "bullets": [
+          "請先確認 Pikgeon 已更新至 v1.5 以上版本",
+          "下載捷徑檔案後，打開「捷徑」App 完成安裝",
+          "前往「設定 → 輔助使用 → 觸控 → 背面輕點」",
+          "將「點兩下」或「點三下」設定為「匯入到 Pikgeon」捷徑"
+        ],
+        "download_shortcut": "下載捷徑檔案",
+        "step1_caption": "設定 → 輔助使用",
+        "step2_caption": "觸控 → 背面輕點",
+        "step3_caption": "點三下 → 匯入到 Pikgeon",
+        "note": "此功能需要 Pikgeon v1.5 以上版本。如果你尚未更新，請先至 App Store 更新。"
+      },
       "merge_friends": {
         "title": "合併好友功能在哪裡？",
         "answer": "在「紀錄」頁面的右上角，點擊人形合併圖示即可進入合併好友功能。",
