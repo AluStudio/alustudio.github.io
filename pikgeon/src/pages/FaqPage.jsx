@@ -77,6 +77,11 @@ const faqItems = [
         alt: "postcard-without-friend-name-2",
         captionKey: "faq.items.recognition_fail.caption_2",
       },
+      {
+        src: `${base}faq/long-name-too-small.png`,
+        alt: "postcard-with-long-name-too-small",
+        captionKey: "faq.items.recognition_fail.caption_3",
+      },
     ],
   },
 ];

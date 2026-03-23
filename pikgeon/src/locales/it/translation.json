@@ -249,10 +249,12 @@
         "bullets": [
           "Postcards shared from Pikmin Bloom must include the sending friend's name",
           "Some images (e.g. Décor Pikmin gallery, challenge results) don't contain friend info and can't be recognized",
-          "When taking a screenshot, make sure the full postcard is visible — don't crop the friend name area"
+          "When taking a screenshot, make sure the full postcard is visible — don't crop the friend name area",
+          "Quando il nome di un amico è molto lungo, il testo sulla cartolina diventa molto piccolo e l'OCR non riesce a riconoscerlo"
         ],
         "caption_1": "This postcard has no friend name — the sender can't be identified",
-        "caption_2": "Gallery or challenge screenshots don't contain friend info"
+        "caption_2": "Gallery or challenge screenshots don't contain friend info",
+        "caption_3": "Il nome dell'amico è troppo lungo — il testo diventa troppo piccolo per essere riconosciuto"
       }
     }
   }
