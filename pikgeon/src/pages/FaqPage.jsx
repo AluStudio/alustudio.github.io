@@ -274,12 +274,7 @@ function FaqPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Auto-open first item
-  useEffect(() => {
-    if (faqItems.length > 0) {
-      setOpenId(faqItems[0].id);
-    }
-  }, []);
+  // All items collapsed by default
 
   const handleToggle = (id) => {
     setOpenId((prev) => (prev === id ? null : id));
