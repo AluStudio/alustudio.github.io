@@ -15,10 +15,12 @@ function HomePage() {
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
-      requestAnimationFrame(() => {
-        const el = document.querySelector(hash);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      });
+      const id = hash.slice(1); // strip leading '#'
+      if (id) {
+        requestAnimationFrame(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        });
+      }
     }
   }, []);
 

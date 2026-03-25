@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "react-router-dom";
+import { Collapse } from "bootstrap";
 import i18n, { supportedLanguages } from "../i18n.js";
 import "../assets/scss/navbar.scss";
 
@@ -31,8 +32,7 @@ function Navbar() {
   const collapseNav = () => {
     const el = document.getElementById("navbarSupportedContent");
     if (el && el.classList.contains("show")) {
-      const bsCollapse = window.bootstrap?.Collapse.getInstance(el);
-      if (bsCollapse) bsCollapse.hide();
+      Collapse.getInstance(el)?.hide();
     }
   };
 
