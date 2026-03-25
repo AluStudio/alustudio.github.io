@@ -22,8 +22,19 @@ function Navbar() {
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "";
 
-  // On subpages, anchor links should navigate to home first
-  const anchor = (hash) => (isHome ? `#${hash}` : `/#${hash}`);
+  // On subpages, anchor links must include the basename so <a> tags stay
+  // inside the SPA instead of navigating to the domain root.
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const anchor = (hash) => (isHome ? `#${hash}` : `${base}/#${hash}`);
+
+  // Collapse mobile navbar when a nav link is tapped
+  const collapseNav = () => {
+    const el = document.getElementById("navbarSupportedContent");
+    if (el && el.classList.contains("show")) {
+      const bsCollapse = window.bootstrap?.Collapse.getInstance(el);
+      if (bsCollapse) bsCollapse.hide();
+    }
+  };
 
   const handleChangeLang = (e) => {
     const lang = e.target.value;
@@ -107,27 +118,27 @@ function Navbar() {
           >
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link text-center" href={anchor("features")}>
+                <a className="nav-link text-center" href={anchor("features")} onClick={collapseNav}>
                   {t("nav.features")}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-center" href={anchor("stats")}>
+                <a className="nav-link text-center" href={anchor("stats")} onClick={collapseNav}>
                   {t("nav.statistics")}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-center" href={anchor("privacy")}>
+                <a className="nav-link text-center" href={anchor("privacy")} onClick={collapseNav}>
                   {t("nav.privacy")}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-center" href={anchor("languages")}>
+                <a className="nav-link text-center" href={anchor("languages")} onClick={collapseNav}>
                   {t("nav.languages")}
                 </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-center" to="/faq">
+                <Link className="nav-link text-center" to="/faq" onClick={collapseNav}>
                   {t("nav.faq")}
                 </Link>
               </li>
@@ -137,6 +148,7 @@ function Navbar() {
                 href={anchor("download")}
                 className="btn btn-primary ms-lg-3 mt-2 mt-lg-0"
                 style={{ color: "black", textDecoration: "none" }}
+                onClick={collapseNav}
               >
                 {t("nav.download")}
               </a>

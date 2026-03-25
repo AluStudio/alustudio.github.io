@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../assets/scss/all.scss";
 import Navbar from "../components/Navbar";
 import HeroBanner from "../components/HeroBanner";
@@ -10,6 +11,17 @@ import Footer from "../components/Footer";
 import "../assets/scss/footer.scss";
 
 function HomePage() {
+  // Scroll to hash target after render (covers cross-page anchor nav)
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      requestAnimationFrame(() => {
+        const el = document.querySelector(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  }, []);
+
   return (
     <>
       <Navbar />
