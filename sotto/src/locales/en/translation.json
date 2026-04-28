@@ -6,35 +6,35 @@
   },
   "hero": {
     "tagline": "Remember the details that matter",
-    "description": "Sotto is a personal CRM that helps you record body measurements, preferences, and notes for the people in your life. All data stays on your device — your privacy is in your hands.",
+    "description": "Everyone carries little details worth remembering. Sotto keeps them safe for you — heights, preferences, the things only you would know. All data stays on your phone, quietly helping you remember.",
     "download": "Download on the App Store"
   },
   "features": {
-    "title": "Designed for You",
-    "subtitle": "Simple, elegant, and privacy-first",
+    "title": "Designed for the People You Care About",
+    "subtitle": "Simple, gentle, and yours alone",
     "profiles": {
-      "title": "Personal Profiles",
-      "desc": "Create detailed profiles with photos, bios, and custom fields for everyone you care about."
+      "title": "A Page for Every Person",
+      "desc": "Create a little world for each person you care about — photos, bios, and the details that make them who they are."
     },
     "measurements": {
-      "title": "Body Measurements",
-      "desc": "Track height, weight, chest, waist, hip, shoe size, ring size, and 27+ data fields with real-time unit conversion."
+      "title": "Remember Their Sizes",
+      "desc": "Height, weight, shoe size, ring size… Never secretly ask again when buying gifts. 27+ data fields with real-time unit conversion."
     },
     "themes": {
-      "title": "Curated Themes",
-      "desc": "7 carefully crafted color themes to match your aesthetic. Make the app truly yours."
+      "title": "The Look You Love",
+      "desc": "7 carefully crafted color themes so every screen feels like yours."
     },
     "privacy": {
-      "title": "Privacy First",
-      "desc": "All data stored entirely on your device. Face ID / Touch ID app lock keeps your information secure."
+      "title": "These Are Your Secrets",
+      "desc": "All data stored entirely on your phone. No uploads, no tracking. Face ID / Touch ID lock means only you can see."
     },
     "notes": {
-      "title": "Personal Notes",
-      "desc": "Jot down what matters — preferences, anniversaries, special needs. Always there when you need them."
+      "title": "Write Down What Matters",
+      "desc": "Their favorite coffee, her anniversary, something they once said — jot it down so you never forget."
     },
     "search": {
-      "title": "Instant Search",
-      "desc": "Find anyone quickly by name or bio. No more scrolling through your contacts."
+      "title": "Find Them in a Second",
+      "desc": "Type a name or keyword and they're right there. No more scrolling through your contacts."
     }
   },
   "footer": {
