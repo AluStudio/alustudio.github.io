@@ -1,0 +1,59 @@
+@import "./variables";
+
+footer {
+  background: $charcoal;
+  color: rgba($cream-light, 0.8);
+  padding: 3rem 0 2rem;
+
+  h2 {
+    font-family: $headings-font-family;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $cream-light;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-desc {
+    font-size: 0.88rem;
+    color: rgba($cream-light, 0.5);
+    max-width: 360px;
+  }
+
+  .footer-links {
+    a {
+      color: rgba($cream-light, 0.65);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $gold-light;
+      }
+    }
+
+    .separator {
+      color: rgba($cream-light, 0.2);
+      margin: 0 0.75rem;
+    }
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+    color: rgba($cream-light, 0.35);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba($cream-light, 0.08);
+  }
+
+  .footer-contact {
+    a {
+      color: $gold-light;
+      text-decoration: none;
+      font-size: 0.88rem;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+}

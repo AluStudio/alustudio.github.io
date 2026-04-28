@@ -1,0 +1,43 @@
+{
+  "nav": { "features": "Fonctionnalités", "privacy": "Confidentialité", "terms": "Conditions d'utilisation" },
+  "hero": {
+    "tagline": "Retiens les détails qui comptent",
+    "description": "Chaque personne porte en elle de petits détails qui méritent d'être retenus. Sotto les garde précieusement pour toi — tailles, préférences, ces choses que toi seul connais. Toutes les données restent sur ton téléphone, en toute discrétion.",
+    "download": "Télécharger sur l'App Store"
+  },
+  "features": {
+    "title": "Conçu pour ceux qui comptent",
+    "subtitle": "Simple, chaleureux et rien qu'à toi",
+    "profiles": { "title": "Une page pour chaque personne", "desc": "Crée un petit univers pour chaque personne qui compte — photos, descriptions et les détails qui la rendent unique." },
+    "measurements": { "title": "Toujours la bonne taille", "desc": "Taille, poids, pointure, tour de doigt… Plus besoin de demander en secret pour les cadeaux. 27+ champs avec conversion d'unités en temps réel." },
+    "themes": { "title": "Le look que tu aimes", "desc": "7 thèmes de couleurs soigneusement conçus pour que chaque écran te ressemble." },
+    "privacy": { "title": "Ce sont tes secrets", "desc": "Toutes les données uniquement sur ton téléphone. Pas d'envoi, pas de suivi. Verrouillage Face ID / Touch ID — toi seul peux voir." },
+    "notes": { "title": "Note ce qui compte", "desc": "Son café préféré, son anniversaire, quelque chose qu'on t'a dit un jour — note-le pour ne jamais oublier." },
+    "search": { "title": "Trouve en une seconde", "desc": "Tape un nom ou un mot-clé et c'est trouvé, instantanément." }
+  },
+  "footer": { "tagline": "Retiens les détails qui comptent.", "contact": "Contact", "privacy_policy": "Confidentialité", "terms_of_use": "Conditions d'utilisation", "copyright": "ALU Studio. Tous droits réservés." },
+  "privacy": {
+    "title": "Politique de Confidentialité", "effective_date": "Date d'effet : 28 avril 2026",
+    "intro": "ALU Studio (« nous ») a développé Sotto (l'« App »). Cette Politique de Confidentialité explique comment nous traitons vos informations. Nous croyons que la vie privée est un droit fondamental, et Sotto est conçu dès l'origine pour protéger la vôtre.",
+    "local_storage": { "title": "Comment vos données sont stockées", "desc": "Sotto stocke toutes vos données localement sur votre appareil. Nous ne téléchargeons rien sur aucun serveur. Les informations saisies incluent :", "items": ["Noms, photos et descriptions des contacts", "Mensurations (taille, poids, tour de poitrine, etc.)", "Notes personnelles", "Préférences de l'app (thèmes, unités, etc.)"] },
+    "no_collection": { "title": "Informations non collectées", "desc": "Sotto ne collecte, transmet ni partage aucune donnée personnelle :", "items": ["Collecte d'informations identifiantes", "Suivi de localisation", "Utilisation de SDK publicitaires ou analytiques", "Envoi de données à des tiers", "Utilisation de cookies ou technologies de suivi"] },
+    "biometric": { "title": "Authentification biométrique", "desc": "Sotto propose un verrouillage optionnel via Face ID ou Touch ID. Les données biométriques sont gérées par le framework LocalAuthentication d'Apple et stockées dans l'enclave sécurisée de votre appareil." },
+    "icloud": { "title": "Sauvegarde iCloud", "desc": "Si la sauvegarde iCloud est activée, les données de votre appareil peuvent être incluses dans les sauvegardes Apple. Ceci est régi par la politique de confidentialité d'Apple." },
+    "third_party": { "title": "Services tiers", "desc": "Sotto n'intègre aucun service d'analyse, de publicité ou de suivi tiers. L'app fonctionne de manière totalement indépendante, sans connexion internet." },
+    "children": { "title": "Vie privée des enfants", "desc": "Sotto ne collectant aucune donnée utilisateur, aucune information personnelle d'enfants n'est recueillie." },
+    "changes": { "title": "Modifications", "desc": "En cas de modifications importantes, nous vous informerons via une mise à jour de l'app." },
+    "contact": { "title": "Contact", "desc": "Pour toute question concernant cette Politique de Confidentialité, contactez-nous à :" }
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation", "effective_date": "Date d'effet : 28 avril 2026",
+    "intro": "Bienvenue sur Sotto. Veuillez lire ces Conditions d'Utilisation avant d'utiliser l'App. En téléchargeant, installant ou utilisant Sotto, vous acceptez ces conditions.",
+    "license": { "title": "Licence d'utilisation", "desc": "ALU Studio vous accorde une licence limitée, non exclusive et non transférable pour utiliser Sotto sur votre appareil personnel. Usage personnel et non commercial uniquement." },
+    "restrictions": { "title": "Restrictions", "desc": "En utilisant l'App, vous vous engagez à ne pas :", "items": ["Procéder à l'ingénierie inverse, décompilation ou désassemblage", "Modifier, traduire ou créer des œuvres dérivées", "Supprimer les mentions de droits d'auteur", "Utiliser l'App à des fins illégales"] },
+    "user_data": { "title": "Vos données", "desc": "Toutes les données saisies dans Sotto sont sous votre seule responsabilité. Elles sont stockées uniquement sur votre appareil. La suppression de l'App entraîne la perte définitive de toutes les données, sauf sauvegarde iCloud." },
+    "updates": { "title": "Mises à jour", "desc": "Nous pouvons publier des mises à jour pour améliorer les fonctionnalités, corriger des problèmes ou renforcer la sécurité." },
+    "disclaimer": { "title": "Avertissement", "desc": "Sotto est fourni « en l'état » sans garantie d'aucune sorte. Nous ne garantissons pas un fonctionnement ininterrompu ou sans erreur." },
+    "liability": { "title": "Limitation de responsabilité", "desc": "La responsabilité d'ALU Studio pour tout dommage lié à l'utilisation de l'App ne saurait excéder le montant payé pour l'App." },
+    "changes": { "title": "Modifications", "desc": "Nous nous réservons le droit de modifier ces Conditions d'Utilisation à tout moment. Les modifications prennent effet dès leur publication sur cette page." },
+    "contact": { "title": "Contact", "desc": "Pour toute question sur ces Conditions d'Utilisation, contactez-nous à :" }
+  }
+}

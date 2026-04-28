@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "features": "Features",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "hero": {
+    "tagline": "Remember the details that matter",
+    "description": "Everyone carries little details worth remembering. Sotto keeps them safe for you — heights, preferences, the things only you would know. All data stays on your phone, quietly helping you remember.",
+    "download": "Download on the App Store"
+  },
+  "features": {
+    "title": "Designed for the People You Care About",
+    "subtitle": "Simple, gentle, and yours alone",
+    "profiles": {
+      "title": "A Page for Every Person",
+      "desc": "Create a little world for each person you care about — photos, bios, and the details that make them who they are."
+    },
+    "measurements": {
+      "title": "Never Guess a Size",
+      "desc": "Height, weight, shoe size, ring size… Never secretly ask again when buying gifts. 27+ data fields with real-time unit conversion."
+    },
+    "themes": {
+      "title": "The Look You Love",
+      "desc": "7 carefully crafted color themes so every screen feels like yours."
+    },
+    "privacy": {
+      "title": "These Are Your Secrets",
+      "desc": "All data stored entirely on your phone. No uploads, no tracking. Face ID / Touch ID lock means only you can see."
+    },
+    "notes": {
+      "title": "Write Down What Matters",
+      "desc": "Their favorite coffee, her anniversary, something they once said — jot it down so you never forget."
+    },
+    "search": {
+      "title": "Find Them in a Second",
+      "desc": "Type a name or keyword and they're right there, instantly."
+    }
+  },
+  "footer": {
+    "tagline": "Remember the details that matter.",
+    "contact": "Contact Us",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use",
+    "copyright": "ALU Studio. All rights reserved."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "effective_date": "Effective Date: April 28, 2026",
+    "intro": "ALU Studio (\"we\", \"our\", or \"us\") developed Sotto (the \"App\"). This Privacy Policy explains how we handle your information when you use our App. We believe privacy is a fundamental right, and Sotto is designed from the ground up to protect yours.",
+    "local_storage": {
+      "title": "How Your Data Is Stored",
+      "desc": "Sotto stores all of your data locally on your device. We do not upload your data to any server. Information you enter in the App includes:",
+      "items": [
+        "Contact names, photos, and bios",
+        "Body measurements (height, weight, chest, waist, etc.)",
+        "Personal notes",
+        "App preferences and settings (themes, units, etc.)"
+      ]
+    },
+    "no_collection": {
+      "title": "Information We Do Not Collect",
+      "desc": "Sotto does not collect, transmit, or share any of your personal data. Specifically, we do not:",
+      "items": [
+        "Collect any personally identifiable information",
+        "Track your location",
+        "Use any advertising or analytics SDKs",
+        "Send your data to third parties",
+        "Use cookies or any tracking technologies"
+      ]
+    },
+    "biometric": {
+      "title": "Biometric Authentication",
+      "desc": "Sotto offers an optional App Lock feature using Face ID or Touch ID. Biometric data is handled entirely by Apple's LocalAuthentication framework and is stored in the secure enclave on your device. We cannot access, collect, or store any biometric data."
+    },
+    "icloud": {
+      "title": "iCloud Backup",
+      "desc": "If you have iCloud Backup enabled, data on your device may be included in Apple's iCloud backups. This is governed by Apple's privacy policy, not our App. You can manage this in your device's iCloud settings."
+    },
+    "third_party": {
+      "title": "Third-Party Services",
+      "desc": "Sotto does not integrate any third-party analytics, advertising, or tracking services. The App operates entirely independently and all features work without an internet connection."
+    },
+    "children": {
+      "title": "Children's Privacy",
+      "desc": "Since Sotto does not collect any user data, the App does not collect personal information from children."
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "desc": "If we make material changes to this Privacy Policy, we will notify you through an App update. We encourage you to review this policy periodically."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "desc": "If you have any questions or suggestions regarding this Privacy Policy, please contact us at:"
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "effective_date": "Effective Date: April 28, 2026",
+    "intro": "Welcome to Sotto. Please read these Terms of Use carefully before using the App. By downloading, installing, or using Sotto, you agree to be bound by these terms.",
+    "license": {
+      "title": "License to Use",
+      "desc": "ALU Studio grants you a limited, non-exclusive, non-transferable license to use Sotto on your personal device. This license is for personal, non-commercial use only."
+    },
+    "restrictions": {
+      "title": "Restrictions",
+      "desc": "When using the App, you agree not to:",
+      "items": [
+        "Reverse engineer, decompile, or disassemble the App",
+        "Modify, translate, or create derivative works",
+        "Remove any copyright notices or labels from the App",
+        "Use the App for any unlawful purpose"
+      ]
+    },
+    "user_data": {
+      "title": "Your Data",
+      "desc": "All data you enter in Sotto is your sole responsibility. All data is stored only on your device. If you delete the App or clear App data, all stored information will be permanently lost unless you have an iCloud backup. We cannot recover any data for you."
+    },
+    "updates": {
+      "title": "App Updates",
+      "desc": "We may release updates from time to time to improve functionality, fix issues, or enhance security. We recommend keeping the App up to date for the best experience."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "desc": "Sotto is provided \"as is\" without warranties of any kind, either express or implied. We do not guarantee the App will operate uninterrupted or error-free. To the maximum extent permitted by law, we are not liable for any direct, indirect, incidental, or consequential damages arising from the use of the App."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "desc": "In no event shall ALU Studio's liability for any damages arising from the use or inability to use the App exceed the amount you paid for the App. This includes but is not limited to data loss, device damage, or any other losses."
+    },
+    "changes": {
+      "title": "Changes to These Terms",
+      "desc": "We reserve the right to modify these Terms of Use at any time. Updated terms will take effect immediately upon posting on this page. Your continued use of the App constitutes acceptance of the revised terms."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "desc": "If you have any questions about these Terms of Use, please contact us at:"
+    }
+  }
+}

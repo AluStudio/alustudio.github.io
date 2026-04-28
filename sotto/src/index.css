@@ -1,0 +1,4 @@
+/* Reset — covered by Bootstrap, this file left intentionally minimal */
+:root {
+  --navbar-height: 72px;
+}

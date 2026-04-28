@@ -1,0 +1,43 @@
+{
+  "nav": { "features": "Funzionalità", "privacy": "Privacy", "terms": "Termini d'uso" },
+  "hero": {
+    "tagline": "Ricorda i dettagli che contano",
+    "description": "Ogni persona porta con sé piccoli dettagli che meritano di essere ricordati. Sotto li custodisce per te — altezze, preferenze, quelle cose che solo tu conosci. Tutti i dati restano sul tuo telefono, in silenzio.",
+    "download": "Scarica dall'App Store"
+  },
+  "features": {
+    "title": "Progettato per chi ti sta a cuore",
+    "subtitle": "Semplice, delicato e solo tuo",
+    "profiles": { "title": "Una pagina per ogni persona", "desc": "Crea un piccolo mondo per ogni persona a cui tieni — foto, biografie e i dettagli che la rendono unica." },
+    "measurements": { "title": "Sempre la misura giusta", "desc": "Altezza, peso, taglia scarpe, misura anello… Non chiedere più di nascosto per i regali. 27+ campi dati con conversione in tempo reale." },
+    "themes": { "title": "Il look che ami", "desc": "7 temi colore curati con attenzione perché ogni schermata rispecchi il tuo gusto." },
+    "privacy": { "title": "Questi sono i tuoi segreti", "desc": "Tutti i dati solo sul tuo telefono. Nessun caricamento, nessun tracciamento. Blocco Face ID / Touch ID — solo tu puoi vedere." },
+    "notes": { "title": "Scrivi quello che conta", "desc": "Il suo caffè preferito, il suo anniversario, qualcosa che qualcuno ha detto — annotalo per non dimenticare mai." },
+    "search": { "title": "Trovalo in un secondo", "desc": "Digita un nome o una parola chiave e appare subito." }
+  },
+  "footer": { "tagline": "Ricorda i dettagli che contano.", "contact": "Contattaci", "privacy_policy": "Privacy", "terms_of_use": "Termini d'uso", "copyright": "ALU Studio. Tutti i diritti riservati." },
+  "privacy": {
+    "title": "Informativa sulla Privacy", "effective_date": "Data di efficacia: 28 aprile 2026",
+    "intro": "ALU Studio (\"noi\") ha sviluppato Sotto (l'\"App\"). Questa Informativa sulla Privacy spiega come gestiamo le tue informazioni. Crediamo che la privacy sia un diritto fondamentale e Sotto è progettato fin dall'inizio per proteggere la tua.",
+    "local_storage": { "title": "Come vengono conservati i tuoi dati", "desc": "Sotto conserva tutti i tuoi dati localmente sul tuo dispositivo. Non carichiamo dati su alcun server. Le informazioni inserite includono:", "items": ["Nomi, foto e biografie dei contatti", "Misure corporee (altezza, peso, petto, vita, ecc.)", "Note personali", "Preferenze dell'app (temi, unità, ecc.)"] },
+    "no_collection": { "title": "Informazioni che non raccogliamo", "desc": "Sotto non raccoglie, trasmette né condivide alcun dato personale:", "items": ["Raccolta di informazioni identificabili", "Tracciamento della posizione", "Uso di SDK pubblicitari o analitici", "Invio di dati a terze parti", "Uso di cookie o tecnologie di tracciamento"] },
+    "biometric": { "title": "Autenticazione biometrica", "desc": "Sotto offre un blocco opzionale tramite Face ID o Touch ID. I dati biometrici sono gestiti dal framework LocalAuthentication di Apple e conservati nel secure enclave del dispositivo." },
+    "icloud": { "title": "Backup iCloud", "desc": "Se il backup iCloud è attivato, i dati del dispositivo potrebbero essere inclusi nei backup Apple. Questo è regolato dalla politica sulla privacy di Apple." },
+    "third_party": { "title": "Servizi di terze parti", "desc": "Sotto non integra alcun servizio di analisi, pubblicità o tracciamento di terze parti. L'app funziona in modo completamente indipendente, senza connessione internet." },
+    "children": { "title": "Privacy dei minori", "desc": "Poiché Sotto non raccoglie dati utente, non vengono raccolte informazioni personali di minori." },
+    "changes": { "title": "Modifiche", "desc": "In caso di modifiche significative, ti informeremo tramite un aggiornamento dell'app." },
+    "contact": { "title": "Contattaci", "desc": "Per domande su questa Informativa sulla Privacy, contattaci a:" }
+  },
+  "terms": {
+    "title": "Termini d'Uso", "effective_date": "Data di efficacia: 28 aprile 2026",
+    "intro": "Benvenuto in Sotto. Leggi questi Termini d'Uso prima di usare l'App. Scaricando, installando o usando Sotto, accetti questi termini.",
+    "license": { "title": "Licenza d'uso", "desc": "ALU Studio ti concede una licenza limitata, non esclusiva e non trasferibile per usare Sotto sul tuo dispositivo personale. Solo per uso personale e non commerciale." },
+    "restrictions": { "title": "Restrizioni", "desc": "Usando l'App, accetti di non:", "items": ["Effettuare reverse engineering, decompilare o disassemblare l'App", "Modificare, tradurre o creare opere derivate", "Rimuovere avvisi di copyright", "Usare l'App per scopi illegali"] },
+    "user_data": { "title": "I tuoi dati", "desc": "Tutti i dati inseriti in Sotto sono sotto la tua responsabilità. I dati sono conservati solo sul dispositivo. L'eliminazione dell'App comporta la perdita permanente di tutti i dati, salvo backup iCloud." },
+    "updates": { "title": "Aggiornamenti", "desc": "Potremmo rilasciare aggiornamenti per migliorare funzionalità, correggere problemi o migliorare la sicurezza." },
+    "disclaimer": { "title": "Esclusione di garanzia", "desc": "Sotto è fornito \"così com'è\" senza garanzie di alcun tipo. Non garantiamo un funzionamento ininterrotto o privo di errori." },
+    "liability": { "title": "Limitazione di responsabilità", "desc": "La responsabilità di ALU Studio per danni derivanti dall'uso dell'App non supererà l'importo pagato per l'App." },
+    "changes": { "title": "Modifiche", "desc": "Ci riserviamo il diritto di modificare questi Termini d'Uso in qualsiasi momento. Le modifiche avranno effetto immediato alla pubblicazione su questa pagina." },
+    "contact": { "title": "Contattaci", "desc": "Per domande su questi Termini d'Uso, contattaci a:" }
+  }
+}

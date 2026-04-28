@@ -1,0 +1,197 @@
+@import "./variables";
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4rem 0;
+
+  // Diagonal split background — echoes the app icon
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.6) 48%,
+      rgba($cream-dark, 0.4) 52%,
+      rgba($cream-dark, 0.4) 100%
+    );
+    z-index: 0;
+  }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 640px;
+  padding: 0 1.5rem;
+}
+
+.hero-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 26px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+  animation: icon-float 3s ease-in-out infinite;
+}
+
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.hero-title {
+  font-family: $headings-font-family;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $charcoal;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+  font-family: $headings-font-family;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: $gold-dark;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: $charcoal-mid;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: $charcoal;
+  color: $cream-light !important;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: lighten($charcoal, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .bi {
+    font-size: 1.2rem;
+  }
+}
+
+.hero-divider {
+  width: 48px;
+  height: 2px;
+  background: $gold;
+  margin: 0 auto 2.5rem;
+  border: none;
+}
+
+// ── Features section ──
+.features-section {
+  padding: 5rem 0;
+}
+
+.features-title {
+  font-family: $headings-font-family;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.features-subtitle {
+  text-align: center;
+  color: $warm-gray;
+  font-size: 0.95rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba($cream-dark, 0.4);
+  transition: all 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba($gold, 0.08);
+    border-color: rgba($gold, 0.2);
+  }
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, $cream, $cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+
+  .bi {
+    font-size: 1.4rem;
+    color: $gold-dark;
+  }
+}
+
+.feature-card h3 {
+  font-family: $headings-font-family;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: $charcoal-mid;
+  line-height: 1.7;
+  margin: 0;
+}
+
+// ── Responsive ──
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 3rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+  }
+
+  .hero-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+  }
+}
