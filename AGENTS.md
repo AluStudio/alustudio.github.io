@@ -24,6 +24,18 @@ make st   # → http://localhost:5173/sotto/
 
 Auto-installs `node_modules` if missing.
 
+### Background Dev Server (for browser-tools / screenshots)
+
+`make pk` etc. are foreground — they die when the shell exits.  
+When you need a server that survives across tool calls (e.g. for `browser-screenshot.js`):
+
+```bash
+cd <app> && nohup npx vite preview --port 4173 --host > /dev/null 2>&1 &
+disown
+```
+
+Without `nohup` + `disown`, background processes receive SIGHUP when the `Bash` tool's shell session ends.
+
 ## Deploy
 
 Push to `main` → GitHub Actions builds all apps, assembles `_site/`, deploys to Pages.  
@@ -31,7 +43,7 @@ No manual deploy. No preview script needed — `make pk` / `make bb` covers dev 
 
 ## Sub-app Notes
 
-- Both use `base: '/<app-name>/'` in `vite.config.ts` — paths are sub-directory scoped.
+- Each uses `base: '/<app-name>/'` in `vite.config.js` — paths are sub-directory scoped.
 - Each has its own `package.json` / `package-lock.json` — no shared root deps.
 - Runtime: Node 22, npm.
 
