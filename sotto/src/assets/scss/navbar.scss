@@ -5,7 +5,9 @@
   background-color: transparent;
   border-bottom: none !important;
 
-  &.navbar-scrolled {
+  &.navbar-scrolled,
+  &:has(.navbar-collapse.show),
+  &:has(.navbar-collapse.collapsing) {
     background-color: rgba($cream-light, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
