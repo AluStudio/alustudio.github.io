@@ -36,6 +36,12 @@ disown
 
 Without `nohup` + `disown`, background processes receive SIGHUP when the `Bash` tool's shell session ends.
 
+Stop it:
+
+```bash
+kill $(lsof -t -i :4173)
+```
+
 ## Deploy
 
 Push to `main` → GitHub Actions builds all apps, assembles `_site/`, deploys to Pages.  
