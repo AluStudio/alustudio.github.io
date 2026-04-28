@@ -13,7 +13,7 @@
     "themes": { "title": "Il look che ami", "desc": "7 temi colore curati con attenzione perché ogni schermata rispecchi il tuo gusto." },
     "privacy": { "title": "Questi sono i tuoi segreti", "desc": "Tutti i dati solo sul tuo telefono. Nessun caricamento, nessun tracciamento. Blocco Face ID / Touch ID — solo tu puoi vedere." },
     "notes": { "title": "Scrivi quello che conta", "desc": "Il suo caffè preferito, il suo anniversario, qualcosa che qualcuno ha detto — annotalo per non dimenticare mai." },
-    "search": { "title": "Trovalo in un secondo", "desc": "Digita un nome o una parola chiave e appare subito. Niente più scorrimenti nei contatti." }
+    "search": { "title": "Trovalo in un secondo", "desc": "Digita un nome o una parola chiave e appare subito." }
   },
   "footer": { "tagline": "Ricorda i dettagli che contano.", "contact": "Contattaci", "privacy_policy": "Privacy", "terms_of_use": "Termini d'uso", "copyright": "ALU Studio. Tutti i diritti riservati." },
   "privacy": {

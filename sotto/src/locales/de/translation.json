@@ -13,7 +13,7 @@
     "themes": { "title": "Dein Lieblingslook", "desc": "7 sorgfältig gestaltete Farbthemen, damit jeder Bildschirm nach deinem Geschmack aussieht." },
     "privacy": { "title": "Das sind deine Geheimnisse", "desc": "Alle Daten nur auf deinem Handy. Kein Upload, kein Tracking. Face ID / Touch ID Sperre - nur du kannst sehen." },
     "notes": { "title": "Schreib auf, was zählt", "desc": "Sein Lieblingskaffee, ihr Jahrestag, etwas, das jemand einmal gesagt hat - notiere es, damit du es nie vergisst." },
-    "search": { "title": "In einer Sekunde finden", "desc": "Gib einen Namen oder ein Stichwort ein und finde sofort. Kein Scrollen durch Kontakte mehr." }
+    "search": { "title": "In einer Sekunde finden", "desc": "Gib einen Namen oder ein Stichwort ein — sofort gefunden." }
   },
   "footer": { "tagline": "Erinnere dich an die Details, die zählen.", "contact": "Kontakt", "privacy_policy": "Datenschutz", "terms_of_use": "Nutzungsbedingungen", "copyright": "ALU Studio. Alle Rechte vorbehalten." },
   "privacy": {
