@@ -63,10 +63,25 @@ i18n
         // zh-TW / zh-HK → zh-Hant; zh-CN / zh-SG → zh-Hans; pt-BR stays
         if (/^zh-(TW|HK|MO|Hant)/i.test(lng)) return "zh-Hant";
         if (/^zh/i.test(lng)) return "zh-Hans";
-        if (/^pt-BR/i.test(lng)) return "pt-BR";
+        if (/^pt/i.test(lng)) return "pt-BR";
         return lng.split("-")[0];
       },
     }
   });
+
+// Sync <html lang> and dir on language change
+const RTL_LANGS = new Set(["ar"]);
+
+function syncDocumentLang(lng) {
+  const resolved = lng || i18n.resolvedLanguage || i18n.language;
+  if (resolved) {
+    document.documentElement.lang = resolved;
+    document.documentElement.dir = RTL_LANGS.has(resolved) ? "rtl" : "ltr";
+  }
+}
+
+i18n.on("languageChanged", syncDocumentLang);
+// Set initial value
+syncDocumentLang(i18n.resolvedLanguage || i18n.language);
 
 export default i18n;

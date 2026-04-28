@@ -46,11 +46,11 @@ function HomePage() {
           <p className="hero-tagline">{t("hero.tagline")}</p>
           <hr className="hero-divider" />
           <p className="hero-desc">{t("hero.description")}</p>
+          {/* TODO: replace '#' with real App Store URL after launch */}
           <a
-            href="https://apps.apple.com/app/sotto"
+            href="#"
             className="hero-cta"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={(e) => e.preventDefault()}
           >
             <i className="bi bi-apple"></i>
             {t("hero.download")}
