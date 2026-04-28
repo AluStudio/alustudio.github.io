@@ -1,0 +1,72 @@
+@import "./variables";
+
+.navbar-scroll {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+  border-bottom: none !important;
+
+  &.navbar-scrolled {
+    background-color: rgba($cream-light, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba($gold, 0.15);
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  color: $charcoal !important;
+
+  img {
+    border-radius: 12px;
+  }
+}
+
+.navbar .nav-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: $charcoal-mid;
+  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+
+  &:hover,
+  &:focus {
+    color: $gold-dark;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.4rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  .bi-list {
+    font-size: 1.5rem;
+    color: $charcoal;
+  }
+}
+
+.lang-select {
+  background: transparent;
+  border: 1px solid rgba($gold, 0.3);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.5rem;
+  color: $charcoal-mid;
+  cursor: pointer;
+  outline: none;
+
+  &:focus {
+    border-color: $gold;
+  }
+}

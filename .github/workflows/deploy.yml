@@ -27,6 +27,7 @@ jobs:
           cache-dependency-path: |
             pikgeon/package-lock.json
             babbby/package-lock.json
+            sotto/package-lock.json
 
       - name: Install & build pikgeon
         working-directory: pikgeon
@@ -40,15 +41,23 @@ jobs:
           npm ci
           npm run build
 
+      - name: Install & build sotto
+        working-directory: sotto
+        run: |
+          npm ci
+          npm run build
+
       - name: Assemble site
         run: |
-          mkdir -p _site/pikgeon _site/babbby
+          mkdir -p _site/pikgeon _site/babbby _site/sotto
           # root-level static files
           cp -r app-ads.txt _site/ 2>/dev/null || true
           # pikgeon build output
           cp -r pikgeon/dist/* _site/pikgeon/
           # babbby build output
           cp -r babbby/dist/* _site/babbby/
+          # sotto build output
+          cp -r sotto/dist/* _site/sotto/
           # SPA fallback: copy 404.html to root for GitHub Pages
           cp pikgeon/dist/404.html _site/404.html
 

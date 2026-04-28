@@ -1,6 +1,6 @@
 # AGENTS.md — alustudio.github.io
 
-Static site hosting two Vite + React sub-apps on GitHub Pages.
+Static site hosting three Vite + React sub-apps on GitHub Pages.
 
 ## Structure
 
@@ -8,9 +8,10 @@ Static site hosting two Vite + React sub-apps on GitHub Pages.
 /
 ├── pikgeon/          # Pikgeon support site — Vite + React + Bootstrap
 ├── babbby/           # Babbby support site  — same stack
+├── sotto/            # Sotto support site   — same stack
 ├── app-ads.txt       # Root-level static file
 ├── Makefile           # Dev shortcuts
-└── .github/workflows/ # CI: build both → assemble _site/ → deploy Pages
+└── .github/workflows/ # CI: build all → assemble _site/ → deploy Pages
 ```
 
 ## Local Dev
@@ -18,13 +19,14 @@ Static site hosting two Vite + React sub-apps on GitHub Pages.
 ```bash
 make pk   # → http://localhost:5173/pikgeon/
 make bb   # → http://localhost:5173/babbby/
+make st   # → http://localhost:5173/sotto/
 ```
 
 Auto-installs `node_modules` if missing.
 
 ## Deploy
 
-Push to `main` → GitHub Actions builds both apps, assembles `_site/`, deploys to Pages.  
+Push to `main` → GitHub Actions builds all apps, assembles `_site/`, deploys to Pages.  
 No manual deploy. No preview script needed — `make pk` / `make bb` covers dev workflow.
 
 ## Sub-app Notes

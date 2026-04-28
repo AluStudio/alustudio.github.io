@@ -1,0 +1,30 @@
+// Sotto — editorial palette inspired by the app icon
+// Cream / warm white / gold accent / charcoal text
+
+$cream:        #f5f0e8;
+$cream-light:  #faf8f3;
+$cream-dark:   #e8e0d0;
+$gold:         #b09a6a;
+$gold-light:   #c4b48a;
+$gold-dark:    #8a7a52;
+$charcoal:     #2c2c2c;
+$charcoal-mid: #4a4a4a;
+$warm-gray:    #9a9287;
+
+// Bootstrap overrides
+$primary:       $gold;
+$body-bg:       $cream-light;
+$body-color:    $charcoal;
+$link-color:    $gold-dark;
+
+$font-family-sans-serif: "Noto Sans TC", system-ui, -apple-system, sans-serif;
+$headings-font-family:   "Cormorant Garamond", "Noto Sans TC", Georgia, serif;
+$headings-font-weight:   600;
+$headings-color:         $charcoal;
+
+$border-radius:    0.75rem;
+$border-radius-lg: 1rem;
+
+// Navbar
+$navbar-light-color:        $charcoal;
+$navbar-light-active-color:  $gold-dark;
