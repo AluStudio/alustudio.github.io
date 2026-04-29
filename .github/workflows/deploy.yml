@@ -52,6 +52,7 @@ jobs:
           mkdir -p _site/pikgeon _site/babbby _site/sotto
           # root-level static files
           cp -r app-ads.txt _site/ 2>/dev/null || true
+          cp -r google9c954b37d1869b6e.html _site/ 2>/dev/null || true
           # pikgeon build output
           cp -r pikgeon/dist/* _site/pikgeon/
           # babbby build output
