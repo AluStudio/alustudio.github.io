@@ -62,6 +62,18 @@ function PrivacyPage() {
             </section>
 
             <section className="legal-section">
+              <h2>{t("privacy.analytics.title")}</h2>
+              <p>{t("privacy.analytics.desc")}</p>
+              <ul>
+                <li>{t("privacy.analytics.items.0")}</li>
+                <li>{t("privacy.analytics.items.1")}</li>
+                <li>{t("privacy.analytics.items.2")}</li>
+                <li>{t("privacy.analytics.items.3")}</li>
+              </ul>
+              <p>{t("privacy.analytics.note")}</p>
+            </section>
+
+            <section className="legal-section">
               <h2>{t("privacy.third_party.title")}</h2>
               <p>{t("privacy.third_party.desc")}</p>
             </section>

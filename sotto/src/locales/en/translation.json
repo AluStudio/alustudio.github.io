@@ -46,7 +46,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "effective_date": "Effective Date: April 28, 2026",
+    "effective_date": "Effective Date: April 30, 2026",
     "intro": "ALU Studio (\"we\", \"our\", or \"us\") developed Sotto (the \"App\"). This Privacy Policy explains how we handle your information when you use our App. We believe privacy is a fundamental right, and Sotto is designed from the ground up to protect yours.",
     "local_storage": {
       "title": "How Your Data Is Stored",
@@ -60,12 +60,12 @@
     },
     "no_collection": {
       "title": "Information We Do Not Collect",
-      "desc": "Sotto does not collect, transmit, or share any of your personal data. Specifically, we do not:",
+      "desc": "Sotto does not collect, transmit, or share any of your personal content. Specifically, we do not:",
       "items": [
         "Collect any personally identifiable information",
         "Track your location",
-        "Use any advertising or analytics SDKs",
-        "Send your data to third parties",
+        "Use any advertising SDKs",
+        "Share your personal content (contacts, measurements, notes) with any third party",
         "Use cookies or any tracking technologies"
       ]
     },
@@ -77,13 +77,24 @@
       "title": "iCloud Backup",
       "desc": "If you have iCloud Backup enabled, data on your device may be included in Apple's iCloud backups. This is governed by Apple's privacy policy, not our App. You can manage this in your device's iCloud settings."
     },
+    "analytics": {
+      "title": "Analytics & Crash Reporting",
+      "desc": "Sotto uses Firebase Analytics and Firebase Crashlytics, provided by Google, to help us understand how the App is used and to identify and fix crashes. These services collect:",
+      "items": [
+        "Anonymous usage data (e.g., which features are used, session duration)",
+        "Crash reports (e.g., stack traces, device model, OS version)",
+        "Device information (e.g., device type, operating system, app version)",
+        "A randomly generated instance identifier (not linked to your identity)"
+      ],
+      "note": "This data is anonymous and does not include any personal content you enter in the App (such as contacts, measurements, or notes). For more information, see Google's Privacy Policy: https://policies.google.com/privacy."
+    },
     "third_party": {
       "title": "Third-Party Services",
-      "desc": "Sotto does not integrate any third-party analytics, advertising, or tracking services. The App operates entirely independently and all features work without an internet connection."
+      "desc": "Sotto integrates Firebase Analytics and Firebase Crashlytics by Google solely for anonymous usage analytics and crash reporting. No other third-party services are used. All core features of the App work without an internet connection."
     },
     "children": {
       "title": "Children's Privacy",
-      "desc": "Since Sotto does not collect any user data, the App does not collect personal information from children."
+      "desc": "Sotto does not collect personal information from children. The anonymous analytics data collected by Firebase does not identify individual users of any age."
     },
     "changes": {
       "title": "Changes to This Policy",
@@ -96,7 +107,7 @@
   },
   "terms": {
     "title": "Terms of Use",
-    "effective_date": "Effective Date: April 28, 2026",
+    "effective_date": "Effective Date: April 30, 2026",
     "intro": "Welcome to Sotto. Please read these Terms of Use carefully before using the App. By downloading, installing, or using Sotto, you agree to be bound by these terms.",
     "license": {
       "title": "License to Use",
@@ -114,7 +125,7 @@
     },
     "user_data": {
       "title": "Your Data",
-      "desc": "All data you enter in Sotto is your sole responsibility. All data is stored only on your device. If you delete the App or clear App data, all stored information will be permanently lost unless you have an iCloud backup. We cannot recover any data for you."
+      "desc": "All personal content you enter in Sotto (contacts, measurements, notes) is stored only on your device and is your sole responsibility. If you delete the App or clear App data, all stored information will be permanently lost unless you have an iCloud backup. We cannot recover any data for you. Anonymous usage analytics and crash reports are sent to Firebase servers to help us improve the App."
     },
     "updates": {
       "title": "App Updates",
