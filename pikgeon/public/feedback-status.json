@@ -1,5 +1,5 @@
 {
-  "recognition_open": false,
+  "recognition_open": true,
   "message": {
     "zh-Hant": "超出負荷啦～ 正在努力處理回報，暫停收件中 🐦💨",
     "en": "Overloaded! We’re catching up — submissions paused 🐦💨"
