@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "bio": "Indie-App-Studio — Werkzeuge für den Alltag"
+  },
+  "pikgeon": {
+    "tagline": "Behalte deine Postkarten-Erinnerungen im Überblick",
+    "desc": "Intelligente OCR-Erkennung zur Verfolgung deiner Versandreise. Vollständige lokale Verarbeitung zum Schutz deiner Privatsphäre."
+  },
+  "babbby": {
+    "tagline": "Tägliche Aktivitätsideen für 0–6 Jahre",
+    "desc": "Meilensteine festhalten, Routinen aufbauen und jeden Tag sinnvoll gestalten — mit über 340 Aktivitäten."
+  },
+  "sotto": {
+    "tagline": "Erinnere dich an die Details, die zählen",
+    "desc": "Größe, Vorlieben, Dinge die nur du weißt — sicher auf deinem Handy für die Menschen, die dir wichtig sind."
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

@@ -1,4 +1,11 @@
-.PHONY: pk bb st install-pk install-bb install-st
+.PHONY: hm pk bb st install-hm install-pk install-bb install-st
+
+# ── Home ─────────────────────────────────────
+hm: install-hm
+	cd home && npm run dev
+
+install-hm:
+	@test -d home/node_modules || (cd home && npm ci)
 
 # ── Pikgeon ──────────────────────────────────
 pk: install-pk

@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "bio": "Studio indie di app — strumenti per la vita di tutti i giorni"
+  },
+  "pikgeon": {
+    "tagline": "Tieni organizzati i tuoi ricordi di cartoline",
+    "desc": "Riconoscimento OCR intelligente per tracciare il tuo percorso di invio. Elaborazione completamente locale per proteggere la tua privacy."
+  },
+  "babbby": {
+    "tagline": "Idee di attività quotidiane per 0–6 anni",
+    "desc": "Registra le tappe, crea routine e rendi ogni giorno speciale con oltre 340 attività selezionate."
+  },
+  "sotto": {
+    "tagline": "Ricorda i dettagli che contano",
+    "desc": "Altezza, preferenze, le cose che solo tu sai — custodite nel tuo telefono per le persone a cui tieni."
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati."
+  }
+}

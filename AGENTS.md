@@ -6,6 +6,7 @@ Static site hosting three Vite + React sub-apps on GitHub Pages.
 
 ```
 /
+├── home/             # Alu Studio profile — Vite + React (link-in-bio)
 ├── pikgeon/          # Pikgeon support site — Vite + React + Bootstrap
 ├── babbby/           # Babbby support site  — same stack
 ├── sotto/            # Sotto support site   — same stack
@@ -17,6 +18,7 @@ Static site hosting three Vite + React sub-apps on GitHub Pages.
 ## Local Dev
 
 ```bash
+make hm   # → http://localhost:5173/home/
 make pk   # → http://localhost:5173/pikgeon/
 make bb   # → http://localhost:5173/babbby/
 make st   # → http://localhost:5173/sotto/

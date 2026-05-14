@@ -1,0 +1,389 @@
+// ─── Design Tokens ──────────────────────────────────────────────
+$bg-deep: #0a0a0f;
+$bg-card: rgba(255, 255, 255, 0.04);
+$bg-card-hover: rgba(255, 255, 255, 0.07);
+$border-card: rgba(255, 255, 255, 0.08);
+$border-card-hover: rgba(255, 255, 255, 0.14);
+$text-primary: #f0f0f5;
+$text-secondary: #9a9ab0;
+$text-muted: #8282a0;
+$radius-lg: 20px;
+$radius-md: 14px;
+$radius-sm: 10px;
+$font-stack: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+// ─── Reset & Base ───────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-stack;
+  background: $bg-deep;
+  color: $text-primary;
+  min-height: 100dvh;
+  line-height: 1.5;
+}
+
+// ─── Page & Ambient ─────────────────────────────────────────────
+.page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+}
+
+.ambient-glow {
+  position: fixed;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(124, 140, 248, 0.12) 0%,
+    rgba(232, 164, 74, 0.06) 40%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+// ─── Container ──────────────────────────────────────────────────
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  padding: 48px 20px 40px;
+}
+
+// ─── Language Picker ────────────────────────────────────────────
+.lang-picker {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: $radius-sm;
+    background: transparent;
+    color: $text-muted;
+    font-size: 0.78rem;
+    font-family: $font-stack;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-secondary;
+    }
+
+    .bi {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    min-width: 160px;
+    max-height: 320px;
+    overflow-y: auto;
+    margin-top: 4px;
+    padding: 6px;
+    list-style: none;
+    background: #1a1a24;
+    border: 1px solid $border-card;
+    border-radius: $radius-md;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+    // Scrollbar
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: $text-secondary;
+    font-size: 0.82rem;
+    font-family: $font-stack;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: $text-primary;
+    }
+
+    &.active {
+      color: $text-primary;
+      font-weight: 600;
+    }
+  }
+}
+
+// ─── Profile ────────────────────────────────────────────────────
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+
+  &__avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+
+  &__bio {
+    font-size: 0.95rem;
+    color: $text-secondary;
+    margin-bottom: 12px;
+  }
+
+  &__contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: $text-muted;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-secondary;
+    }
+  }
+}
+
+// ─── Apps Section ───────────────────────────────────────────────
+.apps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// ─── App Card ───────────────────────────────────────────────────
+.app-card {
+  background: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: $radius-lg;
+  padding: 24px;
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    transform 0.25s;
+  will-change: transform;
+
+  &:hover {
+    background: $bg-card-hover;
+    border-color: $border-card-hover;
+    transform: translateY(-2px);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: $radius-md;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  &__info {
+    min-width: 0;
+  }
+
+  &__name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 2px;
+  }
+
+  &__tagline {
+    font-size: 0.82rem;
+    color: var(--accent, $text-secondary);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  &__desc {
+    font-size: 0.88rem;
+    color: $text-secondary;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+// ─── Store Button ───────────────────────────────────────────────
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: $radius-sm;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: $text-primary;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: $font-stack;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+  cursor: pointer;
+
+  min-height: 44px;
+
+  .bi {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: $text-primary;
+  }
+}
+
+.store-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(232, 164, 74, 0.2);
+  color: #e8a44a;
+}
+
+// ─── Support Link ───────────────────────────────────────────────
+.support-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: $text-muted;
+  text-decoration: none;
+  border-radius: $radius-sm;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $text-secondary;
+  }
+}
+
+// ─── Footer ─────────────────────────────────────────────────────
+.footer {
+  text-align: center;
+  margin-top: 48px;
+  padding-bottom: 24px;
+
+  p {
+    font-size: 0.75rem;
+    color: $text-muted;
+  }
+}
+
+// ─── Entrance Animation ─────────────────────────────────────────
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+.app-card {
+  animation: fadeUp 0.6s ease-out both;
+
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+}
+
+.footer {
+  animation: fadeUp 0.6s ease-out 0.4s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile,
+  .app-card,
+  .footer {
+    animation: none;
+  }
+}

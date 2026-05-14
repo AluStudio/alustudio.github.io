@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "bio": "Studio indie d'apps — des outils pour le quotidien"
+  },
+  "pikgeon": {
+    "tagline": "Gardez vos souvenirs de cartes postales organisés",
+    "desc": "Reconnaissance OCR intelligente pour suivre votre parcours d'envoi. Traitement entièrement local pour protéger votre vie privée."
+  },
+  "babbby": {
+    "tagline": "Idées d'activités quotidiennes pour les 0–6 ans",
+    "desc": "Suivez les étapes clés, créez des routines et rendez chaque jour utile avec plus de 340 activités."
+  },
+  "sotto": {
+    "tagline": "Retiens les détails qui comptent",
+    "desc": "Taille, préférences, les choses que vous seul connaissez — gardées sur votre téléphone pour ceux qui comptent."
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}
