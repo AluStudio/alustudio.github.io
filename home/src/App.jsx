@@ -49,7 +49,7 @@ const apps = [
       {
         platform: "ios",
         label: "App Store",
-        url: "https://apps.apple.com/app/babbby/id6744145981",
+        url: "https://apps.apple.com/tw/app/babbby-daily-baby-activities/id6760455078",
         icon: "bi-apple",
       },
     ],
