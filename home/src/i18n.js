@@ -59,4 +59,14 @@ i18n
     },
   });
 
+function syncDocumentLang(lng) {
+  const resolved = lng || i18n.resolvedLanguage || i18n.language;
+  if (resolved) {
+    document.documentElement.lang = resolved;
+  }
+}
+
+i18n.on("languageChanged", syncDocumentLang);
+syncDocumentLang(i18n.resolvedLanguage || i18n.language);
+
 export default i18n;
