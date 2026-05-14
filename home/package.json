@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.13.1",
+    "i18next": "^26.1.0",
+    "i18next-browser-languagedetector": "^8.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-i18next": "^17.0.7",
     "sass": "^1.97.3"
   },
   "devDependencies": {

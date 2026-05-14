@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "bio": "Estudio indie de apps — herramientas para la vida diaria"
+  },
+  "pikgeon": {
+    "tagline": "Mantén organizados tus recuerdos de postales",
+    "desc": "Reconocimiento OCR inteligente para rastrear tu viaje de envíos. Procesamiento completamente local para proteger tu privacidad."
+  },
+  "babbby": {
+    "tagline": "Ideas de actividades diarias para 0–6 años",
+    "desc": "Registra hitos, crea rutinas y haz que cada día cuente con más de 340 actividades seleccionadas."
+  },
+  "sotto": {
+    "tagline": "Recuerda los detalles que importan",
+    "desc": "Estatura, preferencias, las cosas que solo tú sabes — guardadas en tu teléfono para las personas que te importan."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

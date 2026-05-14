@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "bio": "Estúdio indie de apps — ferramentas para o dia a dia"
+  },
+  "pikgeon": {
+    "tagline": "Mantenha suas memórias de postal organizadas",
+    "desc": "Reconhecimento OCR inteligente para acompanhar sua jornada de envios. Processamento totalmente local para proteger sua privacidade."
+  },
+  "babbby": {
+    "tagline": "Ideias de atividades diárias para 0–6 anos",
+    "desc": "Registre marcos, crie rotinas e faça cada dia valer a pena com mais de 340 atividades selecionadas."
+  },
+  "sotto": {
+    "tagline": "Lembre-se dos detalhes que importam",
+    "desc": "Altura, preferências, coisas que só você sabe — guardadas no seu celular para as pessoas que você ama."
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

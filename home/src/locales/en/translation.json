@@ -1,0 +1,20 @@
+{
+  "profile": {
+    "bio": "Indie app studio — tools for everyday life"
+  },
+  "pikgeon": {
+    "tagline": "Keep Your Postcard Memories Organized",
+    "desc": "Smart OCR recognition to track your Pikmin Bloom mailing journey. Fully local processing to protect your privacy."
+  },
+  "babbby": {
+    "tagline": "Daily Activity Ideas for Ages 0–6",
+    "desc": "Track milestones, build routines, and make every day count with 340+ curated activities."
+  },
+  "sotto": {
+    "tagline": "Remember the Details That Matter",
+    "desc": "Heights, preferences, the things only you would know — kept safe on your phone for the people you care about."
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
