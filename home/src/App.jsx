@@ -7,6 +7,20 @@ const base = import.meta.env.BASE_URL;
 
 const apps = [
   {
+    id: "sotto",
+    name: "Sotto",
+    icon: `${base}sotto-icon.png`,
+    color: "#7c8cf8",
+    stores: [
+      {
+        platform: "ios",
+        label: "App Store",
+        url: "https://apps.apple.com/tw/app/sotto-for-the-people-you-love/id6763928854",
+        icon: "bi-apple",
+      },
+    ],
+  },
+  {
     id: "pikgeon",
     name: "Pikgeon",
     icon: `${base}pikgeon-icon.png`,
@@ -36,20 +50,6 @@ const apps = [
         platform: "ios",
         label: "App Store",
         url: "https://apps.apple.com/app/babbby/id6744145981",
-        icon: "bi-apple",
-      },
-    ],
-  },
-  {
-    id: "sotto",
-    name: "Sotto",
-    icon: `${base}sotto-icon.png`,
-    color: "#7c8cf8",
-    stores: [
-      {
-        platform: "ios",
-        label: "App Store",
-        url: "https://apps.apple.com/tw/app/sotto-for-the-people-you-love/id6763928854",
         icon: "bi-apple",
       },
     ],
