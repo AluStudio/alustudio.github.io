@@ -15,7 +15,7 @@ const apps = [
       {
         platform: "ios",
         label: "App Store",
-        url: "https://apps.apple.com/tw/app/sotto-for-the-people-you-love/id6763928854",
+        url: "https://apps.apple.com/app/sotto-for-the-people-you-love/id6763928854",
         icon: "bi-apple",
       },
     ],
@@ -29,7 +29,7 @@ const apps = [
       {
         platform: "ios",
         label: "App Store",
-        url: "https://apps.apple.com/ca/app/pikgeon/id6759579587",
+        url: "https://apps.apple.com/app/pikgeon/id6759579587",
         icon: "bi-apple",
       },
       {
@@ -49,7 +49,7 @@ const apps = [
       {
         platform: "ios",
         label: "App Store",
-        url: "https://apps.apple.com/tw/app/babbby-daily-baby-activities/id6760455078",
+        url: "https://apps.apple.com/app/babbby-daily-baby-activities/id6760455078",
         icon: "bi-apple",
       },
     ],
