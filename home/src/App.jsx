@@ -110,7 +110,7 @@ function AppCard({ app }) {
   const { t } = useTranslation();
 
   return (
-    <article className="app-card" style={{ "--accent": app.color }}>
+    <article className="app-card" data-app-id={app.id} style={{ "--accent": app.color }}>
       <div className="app-card__header">
         <img
           src={app.icon}
