@@ -111,7 +111,8 @@
         "Maklumat peranti (model, versi OS, saiz skrin) untuk pemformatan iklan",
         "Data interaksi (paparan iklan, klik) untuk pengukuran prestasi"
       ],
-      "personalized": "Pada iOS, Aplikasi ini menghormati rangka kerja App Tracking Transparency (ATT). Jika anda menolak kebenaran penjejakan, hanya iklan yang tidak diperibadikan akan disajikan. Anda juga boleh melaraskan tetapan pemperibadian iklan pada peranti anda pada bila-bila masa."
+      "personalized": "Pada iOS, Aplikasi ini menghormati rangka kerja App Tracking Transparency (ATT). Jika anda menolak kebenaran penjejakan, hanya iklan yang tidak diperibadikan akan disajikan. Anda juga boleh melaraskan tetapan pemperibadian iklan pada peranti anda pada bila-bila masa.",
+      "consent_management": "Tetapan Privasi Iklan Dalam Aplikasi: Buka aplikasi Pikgeon dan pergi ke 'Tetapan → Mengenai → Privasi Iklan' untuk menyemak atau menarik balik persetujuan anda pada bila-bila masa."
     },
     "third_party": {
       "title": "Perkhidmatan Pihak Ketiga",

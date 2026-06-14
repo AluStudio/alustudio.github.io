@@ -111,7 +111,8 @@
         "Geräteinformationen (Modell, Betriebssystemversion, Bildschirmgröße) für die Anzeigenformatierung",
         "Interaktionsdaten (Anzeigenaufrufe, Klicks) zur Leistungsmessung"
       ],
-      "personalized": "Unter iOS berücksichtigt die Anwendung das App-Tracking-Transparenz-Framework (ATT). Wenn Sie die Tracking-Berechtigung ablehnen, werden nur nicht personalisierte Anzeigen geschaltet. Sie können die Einstellungen zur Anzeigenpersonalisierung auf Ihrem Gerät jederzeit anpassen."
+      "personalized": "Unter iOS berücksichtigt die Anwendung das App-Tracking-Transparenz-Framework (ATT). Wenn Sie die Tracking-Berechtigung ablehnen, werden nur nicht personalisierte Anzeigen geschaltet. Sie können die Einstellungen zur Anzeigenpersonalisierung auf Ihrem Gerät jederzeit anpassen.",
+      "consent_management": "Werbe-Datenschutz in der App: Öffnen Sie Pikgeon und gehen Sie zu „Einstellungen → Über → Werbe-Datenschutz“, um Ihre Einwilligung jederzeit einzusehen oder zu widerrufen."
     },
     "third_party": {
       "title": "Dienste Dritter",

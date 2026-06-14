@@ -111,7 +111,8 @@
         "Informações do dispositivo (modelo, versão do SO, tamanho da tela) para formatação de anúncios",
         "Dados de interação (visualizações e cliques em anúncios) para medição de desempenho"
       ],
-      "personalized": "No iOS, o Aplicativo respeita o framework de Transparência de Rastreamento de Aplicativos (ATT). Se você recusar a permissão de rastreamento, somente anúncios não personalizados serão exibidos. Você também pode ajustar as configurações de personalização de anúncios no seu dispositivo a qualquer momento."
+      "personalized": "No iOS, o Aplicativo respeita o framework de Transparência de Rastreamento de Aplicativos (ATT). Se você recusar a permissão de rastreamento, somente anúncios não personalizados serão exibidos. Você também pode ajustar as configurações de personalização de anúncios no seu dispositivo a qualquer momento.",
+      "consent_management": "Definições de privacidade dos anúncios na app: Abra o Pikgeon e aceda a «Definições → Sobre → Privacidade dos anúncios» para rever ou revogar o seu consentimento a qualquer momento."
     },
     "third_party": {
       "title": "Serviços de terceiros",

@@ -111,7 +111,8 @@
         "Informazioni sul dispositivo (modello, versione del SO, dimensione dello schermo) per la formattazione degli annunci",
         "Dati di interazione (visualizzazioni e clic sugli annunci) per la misurazione delle prestazioni"
       ],
-      "personalized": "Su iOS, l'Applicazione rispetta il framework App Tracking Transparency (ATT). Se l'utente rifiuta l'autorizzazione al tracciamento, verranno mostrati solo annunci non personalizzati. È possibile modificare le impostazioni di personalizzazione degli annunci sul proprio dispositivo in qualsiasi momento."
+      "personalized": "Su iOS, l'Applicazione rispetta il framework App Tracking Transparency (ATT). Se l'utente rifiuta l'autorizzazione al tracciamento, verranno mostrati solo annunci non personalizzati. È possibile modificare le impostazioni di personalizzazione degli annunci sul proprio dispositivo in qualsiasi momento.",
+      "consent_management": "Impostazioni di privacy degli annunci nell'app: apri Pikgeon e vai a «Impostazioni → Informazioni → Privacy degli annunci» per rivedere o revocare il tuo consenso in qualsiasi momento."
     },
     "third_party": {
       "title": "Servizi di terze parti",

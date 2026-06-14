@@ -111,7 +111,8 @@
         "Les informations sur l'appareil (modèle, version du système d'exploitation, taille de l'écran) pour le formatage des annonces",
         "Les données d'interaction (vues et clics sur les annonces) pour la mesure des performances"
       ],
-      "personalized": "Sur iOS, l'Application respecte le cadre App Tracking Transparency (ATT). Si vous refusez l'autorisation de suivi, seules des annonces non personnalisées seront diffusées. Vous pouvez également ajuster les paramètres de personnalisation des annonces sur votre appareil à tout moment."
+      "personalized": "Sur iOS, l'Application respecte le cadre App Tracking Transparency (ATT). Si vous refusez l'autorisation de suivi, seules des annonces non personnalisées seront diffusées. Vous pouvez également ajuster les paramètres de personnalisation des annonces sur votre appareil à tout moment.",
+      "consent_management": "Paramètres de confidentialité publicitaire dans l'application : ouvrez Pikgeon et accédez à « Paramètres → À propos → Confidentialité des annonces » pour consulter ou révoquer votre consentement à tout moment."
     },
     "third_party": {
       "title": "Services tiers",

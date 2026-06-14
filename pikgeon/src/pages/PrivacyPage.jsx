@@ -56,6 +56,7 @@ function PrivacyPage() {
                 <li>{t("privacy_policy.advertising.items.3")}</li>
               </ul>
               <p>{t("privacy_policy.advertising.personalized")}</p>
+              <p>{t("privacy_policy.advertising.consent_management")}</p>
             </section>
 
             {/* Third-Party Services */}

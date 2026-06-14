@@ -111,7 +111,8 @@
         "Device information (model, OS version, screen size) for ad formatting",
         "Interaction data (ad views, clicks) for performance measurement"
       ],
-      "personalized": "On iOS, the Application respects the App Tracking Transparency (ATT) framework. If you decline tracking permission, only non-personalized ads will be served. You can also adjust ad personalization settings on your device at any time."
+      "personalized": "On iOS, the Application respects the App Tracking Transparency (ATT) framework. If you decline tracking permission, only non-personalized ads will be served. You can also adjust ad personalization settings on your device at any time.",
+      "consent_management": "In-App Ad Privacy Settings: To review or revoke your consent at any time, open the Pikgeon app and go to Settings → About → Manage Ad Privacy."
     },
     "third_party": {
       "title": "Third-Party Services",

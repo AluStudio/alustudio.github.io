@@ -111,7 +111,8 @@
         "Impormasyon ng device (modelo, bersyon ng OS, laki ng screen) para sa pag-format ng ad",
         "Data ng interaksyon (mga panonood ng ad, mga click) para sa pagsukat ng performance"
       ],
-      "personalized": "Sa iOS, iginagalang ng Aplikasyon ang App Tracking Transparency (ATT) framework. Kung tatanggihan mo ang pahintulot sa pagsubaybay, mga hindi personalisadong ad lamang ang ipapakita. Maaari ka ring mag-adjust ng mga setting ng personalisasyon ng ad sa iyong device anumang oras."
+      "personalized": "Sa iOS, iginagalang ng Aplikasyon ang App Tracking Transparency (ATT) framework. Kung tatanggihan mo ang pahintulot sa pagsubaybay, mga hindi personalisadong ad lamang ang ipapakita. Maaari ka ring mag-adjust ng mga setting ng personalisasyon ng ad sa iyong device anumang oras.",
+      "consent_management": "In-App na Setting ng Privacy ng Ad: Buksan ang Pikgeon at pumunta sa 'Mga Setting → Tungkol → Privacy ng Ad' para suriin o bawiin ang iyong pahintulot anumang oras."
     },
     "third_party": {
       "title": "Mga Serbisyo ng Ikatlong Partido",

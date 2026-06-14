@@ -111,7 +111,8 @@
         "Laitetiedot (malli, käyttöjärjestelmän versio, näytön koko) mainosten muotoiluun",
         "Vuorovaikutustiedot (mainosnäytöt, klikkaukset) suorituskyvyn mittaamiseen"
       ],
-      "personalized": "iOS:ssa Sovellus noudattaa App Tracking Transparency (ATT) -kehystä. Jos kieltäydyt seurantaluvasta, näytetään vain ei-kohdennettuja mainoksia. Voit myös säätää mainosten personointiasetuksia laitteellasi milloin tahansa."
+      "personalized": "iOS:ssa Sovellus noudattaa App Tracking Transparency (ATT) -kehystä. Jos kieltäydyt seurantaluvasta, näytetään vain ei-kohdennettuja mainoksia. Voit myös säätää mainosten personointiasetuksia laitteellasi milloin tahansa.",
+      "consent_management": "Mainosten yksityisyysasetukset sovelluksessa: avaa Pikgeon ja siirry kohtaan ”Asetukset → Tietoja → Mainosten yksityisyys” tarkistaaksesi tai peruuttaaksesi suostumuksesi milloin tahansa."
     },
     "third_party": {
       "title": "Kolmansien osapuolten palvelut",

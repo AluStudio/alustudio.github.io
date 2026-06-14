@@ -111,7 +111,8 @@
         "Enhetsinformation (modell, OS-version, skärmstorlek) för annonsformatering",
         "Interaktionsdata (annonsvisningar, klick) för prestandamätning"
       ],
-      "personalized": "På iOS respekterar Applikationen ramverket App Tracking Transparency (ATT). Om du avböjer spårningstillstånd visas endast icke-personanpassade annonser. Du kan också justera inställningarna för annonsanpassning på din enhet när som helst."
+      "personalized": "På iOS respekterar Applikationen ramverket App Tracking Transparency (ATT). Om du avböjer spårningstillstånd visas endast icke-personanpassade annonser. Du kan också justera inställningarna för annonsanpassning på din enhet när som helst.",
+      "consent_management": "Annonsintegritet i appen: öppna Pikgeon och gå till ”Inställningar → Om → Annonsintegritet” för att granska eller återkalla ditt samtycke när som helst."
     },
     "third_party": {
       "title": "Tredjepartstjänster",

@@ -111,7 +111,8 @@
         "Apparaatinformatie (model, OS-versie, schermgrootte) voor advertentieopmaak",
         "Interactiegegevens (advertentieweergaven, klikken) voor prestatiemeting"
       ],
-      "personalized": "Op iOS respecteert de Applicatie het App Tracking Transparency (ATT)-framework. Als u toestemming voor tracking weigert, worden alleen niet-gepersonaliseerde advertenties getoond. U kunt de instellingen voor advertentiepersonalisatie op uw apparaat ook op elk moment aanpassen."
+      "personalized": "Op iOS respecteert de Applicatie het App Tracking Transparency (ATT)-framework. Als u toestemming voor tracking weigert, worden alleen niet-gepersonaliseerde advertenties getoond. U kunt de instellingen voor advertentiepersonalisatie op uw apparaat ook op elk moment aanpassen.",
+      "consent_management": "Advertentieprivacy in de app: open Pikgeon en ga naar 'Instellingen → Over → Advertentieprivacy' om je toestemming op elk moment te bekijken of in te trekken."
     },
     "third_party": {
       "title": "Diensten van derden",
