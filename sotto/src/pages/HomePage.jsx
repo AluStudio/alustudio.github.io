@@ -28,7 +28,6 @@ function HomePage() {
     { icon: "bi-palette2",          key: "themes" },
     { icon: "bi-shield-lock",       key: "privacy" },
     { icon: "bi-journal-text",      key: "notes" },
-    { icon: "bi-search",            key: "search" },
   ];
 
   return (
@@ -73,11 +72,15 @@ function HomePage() {
                   </div>
                   <h3>{t(`features.${f.key}.title`)}</h3>
                   <p>{t(`features.${f.key}.desc`)}</p>
+                  {f.key === "prompts" && (
+                    <p className="feature-card-credits">
+                      {t("features.prompts.credits")}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
           </div>
-          <p className="features-credits">{t("features.credits")}</p>
         </div>
       </section>
 

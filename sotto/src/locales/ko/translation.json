@@ -14,7 +14,8 @@
     "subtitle": "심플하고, 따뜻하고, 오직 당신만의 것",
     "prompts": {
       "title": "한 마디 꺼낼 질문",
-      "desc": "무엇부터 물어야 할지 막막할 때, 엄선된 질문 중 하나를 골라보세요. 질문이 미리 채워진 메모가 열리고, 그 사람의 답을 적어 두기만 하면 됩니다."
+      "desc": "무엇부터 물어야 할지 막막할 때, 엄선된 질문 중 하나를 골라보세요. 질문이 미리 채워진 메모가 열리고, 그 사람의 답을 적어 두기만 하면 됩니다.",
+      "credits": "질문 카탈로그는 Aron의 36 Questions(1997), Gottman의 Love Maps, NYT의 13 Questions, Gary Chapman의 《The 5 Love Languages》(1992), 그리고 Threads 사용자 hey.roseline이 정리해 공유한 자료에서 영감을 받았습니다."
     },
     "profiles": {
       "title": "한 사람만을 위한 페이지",
@@ -35,12 +36,7 @@
     "notes": {
       "title": "기억하고 싶은 것을 적으세요",
       "desc": "좋아하는 커피, 기념일, 그 사람이 했던 말 — 적어두면 잊지 않아요."
-    },
-    "search": {
-      "title": "1초 만에 찾기",
-      "desc": "이름이나 키워드를 입력하면, 찾고 싶은 사람이 바로 나타나요."
-    },
-    "credits": "질문 카탈로그는 Aron의 36 Questions(1997), Gottman의 Love Maps, NYT의 13 Questions, Gary Chapman의 《The 5 Love Languages》(1992), 그리고 Threads 사용자 hey.roseline이 정리해 공유한 자료에서 영감을 받았습니다."
+    }
   },
   "footer": {
     "tagline": "소중한 디테일을 기억하세요.",

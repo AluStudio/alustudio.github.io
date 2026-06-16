@@ -14,7 +14,8 @@
     "subtitle": "简单、温柔、只属于你",
     "prompts": {
       "title": "挑一题开口",
-      "desc": "不知道从何聊起？从精选题库挑一题，预填到一则新笔记里，等你写下他的回答。"
+      "desc": "不知道从何聊起？从精选题库挑一题，预填到一则新笔记里，等你写下他的回答。",
+      "credits": "题库设计受惠于 Aron 36 Questions（1997）、Gottman Love Map、NYT 13 Questions、Gary Chapman《The 5 Love Languages》（1992），以及 Threads 用户 hey.roseline 的整理分享。"
     },
     "profiles": {
       "title": "每个人的专属页面",
@@ -35,12 +36,7 @@
     "notes": {
       "title": "写下想记住的事",
       "desc": "他喜欢什么咖啡、她的纪念日是哪天、那个人说过的一句话--随手记下,不再遗忘。"
-    },
-    "search": {
-      "title": "一秒找到那个人",
-      "desc": "输入名字或关键字,想找的人立刻出现。"
-    },
-    "credits": "题库设计受惠于 Aron 36 Questions（1997）、Gottman Love Map、NYT 13 Questions、Gary Chapman《The 5 Love Languages》（1992），以及 Threads 用户 hey.roseline 的整理分享。"
+    }
   },
   "footer": {
     "tagline": "记住每一个重要的细节。",

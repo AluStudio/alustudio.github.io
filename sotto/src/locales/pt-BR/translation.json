@@ -14,7 +14,8 @@
     "subtitle": "Simples, acolhedor e só seu",
     "prompts": {
       "title": "Uma pergunta para começar",
-      "desc": "Sem saber por onde começar? Escolha uma pergunta no catálogo — uma nota nova abre já com a pergunta dentro, pronta para a resposta."
+      "desc": "Sem saber por onde começar? Escolha uma pergunta no catálogo — uma nota nova abre já com a pergunta dentro, pronta para a resposta.",
+      "credits": "O catálogo de perguntas se inspira nas 36 Perguntas de Aron (1997), nos Love Maps de Gottman, nas 13 Perguntas do The New York Times, em As 5 Linguagens do Amor de Gary Chapman (1992) e na curadoria compartilhada pela usuária do Threads hey.roseline."
     },
     "profiles": {
       "title": "Uma página para cada pessoa",
@@ -35,12 +36,7 @@
     "notes": {
       "title": "Anote o que importa",
       "desc": "O café favorito dele, o aniversário dela, algo que alguém disse uma vez — anote pra nunca esquecer."
-    },
-    "search": {
-      "title": "Encontre em um segundo",
-      "desc": "Digite um nome ou palavra-chave e pronto, na hora."
-    },
-    "credits": "O catálogo de perguntas se inspira nas 36 Perguntas de Aron (1997), nos Love Maps de Gottman, nas 13 Perguntas do The New York Times, em As 5 Linguagens do Amor de Gary Chapman (1992) e na curadoria compartilhada pela usuária do Threads hey.roseline."
+    }
   },
   "footer": {
     "tagline": "Lembre dos detalhes que importam.",

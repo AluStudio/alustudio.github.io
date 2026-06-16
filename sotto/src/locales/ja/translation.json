@@ -14,7 +14,8 @@
     "subtitle": "シンプル、やさしく、あなただけのもの",
     "prompts": {
       "title": "話の入口を一つ",
-      "desc": "何から聞いていいか迷うとき、厳選された題目から一つ選べば、その問いがすでに書き込まれたメモが開く——あとは彼／彼女の答えを書き留めるだけ。"
+      "desc": "何から聞いていいか迷うとき、厳選された題目から一つ選べば、その問いがすでに書き込まれたメモが開く——あとは彼／彼女の答えを書き留めるだけ。",
+      "credits": "題目集は Aron『36 Questions』（1997）、Gottman の Love Maps、NYT『13 Questions』、Gary Chapman『The 5 Love Languages』（1992）、および Threads ユーザー hey.roseline によるまとめを参考にしています。"
     },
     "profiles": {
       "title": "一人ひとりの専用ページ",
@@ -35,12 +36,7 @@
     "notes": {
       "title": "覚えておきたいことを書き留める",
       "desc": "好きなコーヒー、記念日、あの人が言った一言——忘れないように書き留めましょう。"
-    },
-    "search": {
-      "title": "一秒で見つける",
-      "desc": "名前やキーワードを入力すれば、探している人がすぐ見つかります。"
-    },
-    "credits": "題目集は Aron『36 Questions』（1997）、Gottman の Love Maps、NYT『13 Questions』、Gary Chapman『The 5 Love Languages』（1992）、および Threads ユーザー hey.roseline によるまとめを参考にしています。"
+    }
   },
   "footer": {
     "tagline": "大切なディテールを覚えておく。",

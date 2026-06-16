@@ -14,7 +14,8 @@
     "subtitle": "Einfach, warmherzig und ganz deins",
     "prompts": {
       "title": "Eine Frage zum Anfangen",
-      "desc": "Du weißt nicht, was du fragen sollst? Wähle eine Frage aus dem Katalog — eine neue Notiz öffnet sich mit der Frage darin, bereit für seine oder ihre Antwort."
+      "desc": "Du weißt nicht, was du fragen sollst? Wähle eine Frage aus dem Katalog — eine neue Notiz öffnet sich mit der Frage darin, bereit für seine oder ihre Antwort.",
+      "credits": "Der Fragenkatalog ist inspiriert von Arons 36 Fragen (1997), Gottmans Love Maps, den 13 Fragen der New York Times, Gary Chapmans Die 5 Sprachen der Liebe (1992) sowie der Zusammenstellung der Threads-Nutzerin hey.roseline."
     },
     "profiles": {
       "title": "Eine Seite für jeden Menschen",
@@ -35,12 +36,7 @@
     "notes": {
       "title": "Schreib auf, was zählt",
       "desc": "Sein Lieblingskaffee, ihr Jahrestag, etwas, das jemand einmal gesagt hat - notiere es, damit du es nie vergisst."
-    },
-    "search": {
-      "title": "In einer Sekunde finden",
-      "desc": "Gib einen Namen oder ein Stichwort ein — sofort gefunden."
-    },
-    "credits": "Der Fragenkatalog ist inspiriert von Arons 36 Fragen (1997), Gottmans Love Maps, den 13 Fragen der New York Times, Gary Chapmans Die 5 Sprachen der Liebe (1992) sowie der Zusammenstellung der Threads-Nutzerin hey.roseline."
+    }
   },
   "footer": {
     "tagline": "Erinnere dich an die Details, die zählen.",

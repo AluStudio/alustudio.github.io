@@ -14,7 +14,8 @@
     "subtitle": "Semplice, delicato e solo tuo",
     "prompts": {
       "title": "Una domanda per cominciare",
-      "desc": "Non sai cosa chiedere? Scegli una domanda dal catalogo: si aprirà una nota già precompilata, pronta per la sua risposta."
+      "desc": "Non sai cosa chiedere? Scegli una domanda dal catalogo: si aprirà una nota già precompilata, pronta per la sua risposta.",
+      "credits": "Il catalogo di domande si ispira alle 36 Domande di Aron (1997), alle Love Maps di Gottman, alle 13 Domande del New York Times, a I 5 Linguaggi dell'Amore di Gary Chapman (1992) e alla raccolta condivisa dall'utente Threads hey.roseline."
     },
     "profiles": {
       "title": "Una pagina per ogni persona",
@@ -35,12 +36,7 @@
     "notes": {
       "title": "Scrivi quello che conta",
       "desc": "Il suo caffè preferito, il suo anniversario, qualcosa che qualcuno ha detto — annotalo per non dimenticare mai."
-    },
-    "search": {
-      "title": "Trovalo in un secondo",
-      "desc": "Digita un nome o una parola chiave e appare subito."
-    },
-    "credits": "Il catalogo di domande si ispira alle 36 Domande di Aron (1997), alle Love Maps di Gottman, alle 13 Domande del New York Times, a I 5 Linguaggi dell'Amore di Gary Chapman (1992) e alla raccolta condivisa dall'utente Threads hey.roseline."
+    }
   },
   "footer": {
     "tagline": "Ricorda i dettagli che contano.",

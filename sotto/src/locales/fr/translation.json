@@ -14,7 +14,8 @@
     "subtitle": "Simple, chaleureux et rien qu'à toi",
     "prompts": {
       "title": "Une question pour commencer",
-      "desc": "Vous ne savez pas par où commencer ? Choisissez une question dans le catalogue : une note s'ouvre déjà préremplie, prête à recevoir sa réponse."
+      "desc": "Vous ne savez pas par où commencer ? Choisissez une question dans le catalogue : une note s'ouvre déjà préremplie, prête à recevoir sa réponse.",
+      "credits": "Le catalogue de questions s'inspire des 36 Questions d'Aron (1997), des Love Maps de Gottman, des 13 Questions du New York Times, des 5 Langages de l'Amour de Gary Chapman (1992), ainsi que de la sélection partagée par hey.roseline sur Threads."
     },
     "profiles": {
       "title": "Une page pour chaque personne",
@@ -35,12 +36,7 @@
     "notes": {
       "title": "Note ce qui compte",
       "desc": "Son café préféré, son anniversaire, quelque chose qu'on t'a dit un jour — note-le pour ne jamais oublier."
-    },
-    "search": {
-      "title": "Trouve en une seconde",
-      "desc": "Tape un nom ou un mot-clé et c'est trouvé, instantanément."
-    },
-    "credits": "Le catalogue de questions s'inspire des 36 Questions d'Aron (1997), des Love Maps de Gottman, des 13 Questions du New York Times, des 5 Langages de l'Amour de Gary Chapman (1992), ainsi que de la sélection partagée par hey.roseline sur Threads."
+    }
   },
   "footer": {
     "tagline": "Retiens les détails qui comptent.",
