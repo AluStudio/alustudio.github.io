@@ -12,6 +12,10 @@
   "features": {
     "title": "為你在乎的人而設計",
     "subtitle": "簡單、溫柔、只屬於你",
+    "prompts": {
+      "title": "挑一題開口",
+      "desc": "不知道從何聊起？從精選題庫挑一題，預填到一則新筆記裡，等你寫下他的回答。"
+    },
     "profiles": {
       "title": "每個人的專屬頁面",
       "desc": "為你在乎的人建立一個小天地——照片、簡介，以及那些讓這個人與眾不同的細節。"
@@ -35,7 +39,8 @@
     "search": {
       "title": "一秒找到那個人",
       "desc": "輸入名字或關鍵字，想找的人立刻出現。"
-    }
+    },
+    "credits": "題庫設計受惠於 Aron 36 Questions（1997）、Gottman Love Map、NYT 13 Questions、Gary Chapman《The 5 Love Languages》（1992），以及 Threads 使用者 hey.roseline 的整理分享。"
   },
   "footer": {
     "tagline": "記住每一個重要的細節。",

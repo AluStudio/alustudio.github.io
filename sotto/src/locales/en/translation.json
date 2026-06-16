@@ -12,6 +12,10 @@
   "features": {
     "title": "Designed for the People You Care About",
     "subtitle": "Simple, gentle, and yours alone",
+    "prompts": {
+      "title": "A Question to Open With",
+      "desc": "Stuck for what to ask? Pick one from a curated catalog — a fresh note opens prefilled with the question, ready for their answer."
+    },
     "profiles": {
       "title": "A Page for Every Person",
       "desc": "Create a little world for each person you care about — photos, bios, and the details that make them who they are."
@@ -35,7 +39,8 @@
     "search": {
       "title": "Find Them in a Second",
       "desc": "Type a name or keyword and they're right there, instantly."
-    }
+    },
+    "credits": "Question catalog informed by Aron's 36 Questions (1997), Gottman's Love Maps, NYT's 13 Questions, Gary Chapman's The 5 Love Languages (1992), and the curation shared by Threads user hey.roseline."
   },
   "footer": {
     "tagline": "Remember the details that matter.",

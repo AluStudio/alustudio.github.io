@@ -22,6 +22,7 @@ function HomePage() {
   }, []);
 
   const features = [
+    { icon: "bi-chat-heart",        key: "prompts" },
     { icon: "bi-person-lines-fill", key: "profiles" },
     { icon: "bi-rulers",            key: "measurements" },
     { icon: "bi-palette2",          key: "themes" },
@@ -76,6 +77,7 @@ function HomePage() {
               </div>
             ))}
           </div>
+          <p className="features-credits">{t("features.credits")}</p>
         </div>
       </section>
 

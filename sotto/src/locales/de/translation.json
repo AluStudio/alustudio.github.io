@@ -1,5 +1,9 @@
 {
-  "nav": { "features": "Funktionen", "privacy": "Datenschutz", "terms": "Nutzungsbedingungen" },
+  "nav": {
+    "features": "Funktionen",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen"
+  },
   "hero": {
     "tagline": "Erinnere dich an die Details, die zählen",
     "description": "Jeder Mensch trägt kleine Details, die es wert sind, erinnert zu werden. Sotto bewahrt sie für dich auf - Größe, Vorlieben, Dinge, die nur du weißt. Alle Daten bleiben auf deinem Handy, still und sicher.",
@@ -8,37 +12,145 @@
   "features": {
     "title": "Für die Menschen, die dir wichtig sind",
     "subtitle": "Einfach, warmherzig und ganz deins",
-    "profiles": { "title": "Eine Seite für jeden Menschen", "desc": "Erstelle eine kleine Welt für jeden, der dir wichtig ist - Fotos, Beschreibungen und die Details, die ihn besonders machen." },
-    "measurements": { "title": "Nie die falsche Größe", "desc": "Größe, Gewicht, Schuhgröße, Ringgröße... Beim Geschenkekauf nie wieder heimlich fragen. 27+ Datenfelder mit Echtzeit-Umrechnung." },
-    "themes": { "title": "Dein Lieblingslook", "desc": "7 sorgfältig gestaltete Farbthemen, damit jeder Bildschirm nach deinem Geschmack aussieht." },
-    "privacy": { "title": "Das sind deine Geheimnisse", "desc": "Alle Daten nur auf deinem Handy. Kein Upload, kein Tracking. Face ID / Touch ID Sperre - nur du kannst sehen." },
-    "notes": { "title": "Schreib auf, was zählt", "desc": "Sein Lieblingskaffee, ihr Jahrestag, etwas, das jemand einmal gesagt hat - notiere es, damit du es nie vergisst." },
-    "search": { "title": "In einer Sekunde finden", "desc": "Gib einen Namen oder ein Stichwort ein — sofort gefunden." }
+    "prompts": {
+      "title": "Eine Frage zum Anfangen",
+      "desc": "Du weißt nicht, was du fragen sollst? Wähle eine Frage aus dem Katalog — eine neue Notiz öffnet sich mit der Frage darin, bereit für seine oder ihre Antwort."
+    },
+    "profiles": {
+      "title": "Eine Seite für jeden Menschen",
+      "desc": "Erstelle eine kleine Welt für jeden, der dir wichtig ist - Fotos, Beschreibungen und die Details, die ihn besonders machen."
+    },
+    "measurements": {
+      "title": "Nie die falsche Größe",
+      "desc": "Größe, Gewicht, Schuhgröße, Ringgröße... Beim Geschenkekauf nie wieder heimlich fragen. 27+ Datenfelder mit Echtzeit-Umrechnung."
+    },
+    "themes": {
+      "title": "Dein Lieblingslook",
+      "desc": "7 sorgfältig gestaltete Farbthemen, damit jeder Bildschirm nach deinem Geschmack aussieht."
+    },
+    "privacy": {
+      "title": "Das sind deine Geheimnisse",
+      "desc": "Alle Daten nur auf deinem Handy. Kein Upload, kein Tracking. Face ID / Touch ID Sperre - nur du kannst sehen."
+    },
+    "notes": {
+      "title": "Schreib auf, was zählt",
+      "desc": "Sein Lieblingskaffee, ihr Jahrestag, etwas, das jemand einmal gesagt hat - notiere es, damit du es nie vergisst."
+    },
+    "search": {
+      "title": "In einer Sekunde finden",
+      "desc": "Gib einen Namen oder ein Stichwort ein — sofort gefunden."
+    },
+    "credits": "Der Fragenkatalog ist inspiriert von Arons 36 Fragen (1997), Gottmans Love Maps, den 13 Fragen der New York Times, Gary Chapmans Die 5 Sprachen der Liebe (1992) sowie der Zusammenstellung der Threads-Nutzerin hey.roseline."
   },
-  "footer": { "tagline": "Erinnere dich an die Details, die zählen.", "contact": "Kontakt", "privacy_policy": "Datenschutz", "terms_of_use": "Nutzungsbedingungen", "copyright": "ALU Studio. Alle Rechte vorbehalten." },
+  "footer": {
+    "tagline": "Erinnere dich an die Details, die zählen.",
+    "contact": "Kontakt",
+    "privacy_policy": "Datenschutz",
+    "terms_of_use": "Nutzungsbedingungen",
+    "copyright": "ALU Studio. Alle Rechte vorbehalten."
+  },
   "privacy": {
-    "title": "Datenschutzerklärung", "effective_date": "Gültig ab: 30. April 2026",
+    "title": "Datenschutzerklärung",
+    "effective_date": "Gültig ab: 30. April 2026",
     "intro": "ALU Studio (\"wir\") hat Sotto (die \"App\") entwickelt. Diese Datenschutzerklärung erklärt, wie wir mit Ihren Informationen umgehen. Wir glauben, dass Datenschutz ein Grundrecht ist, und Sotto wurde von Grund auf zum Schutz Ihrer Privatsphäre entwickelt.",
-    "local_storage": { "title": "Wie Ihre Daten gespeichert werden", "desc": "Sotto speichert alle Ihre Daten lokal auf Ihrem Gerät. Wir laden Ihre Daten nicht auf Server hoch. Informationen, die Sie in der App eingeben:", "items": ["Kontaktnamen, Fotos und Beschreibungen", "Körpermaße (Größe, Gewicht, Brust, Taille usw.)", "Persönliche Notizen", "App-Einstellungen (Themen, Einheiten usw.)"] },
-    "no_collection": { "title": "Informationen, die wir nicht erheben", "desc": "Sotto erhebt, überträgt oder teilt keine Ihrer persönlichen Inhalte:", "items": ["Erhebung personenbezogener Daten", "Standortverfolgung", "Verwendung von Werbe-SDKs", "Weitergabe Ihrer persönlichen Inhalte (Kontakte, Messdaten, Notizen) an Dritte", "Verwendung von Cookies oder Tracking-Technologien"] },
-    "biometric": { "title": "Biometrische Authentifizierung", "desc": "Sotto bietet eine optionale App-Sperre mit Face ID oder Touch ID. Biometrische Daten werden ausschließlich von Apples LocalAuthentication-Framework verarbeitet und in der Secure Enclave Ihres Geräts gespeichert." },
-    "icloud": { "title": "iCloud-Backup", "desc": "Bei aktiviertem iCloud-Backup können Ihre Gerätedaten in Apples iCloud-Backups enthalten sein. Dies unterliegt Apples Datenschutzrichtlinie." },
-    "analytics": { "title": "Analyse & Absturzmeldungen", "desc": "Sotto verwendet Firebase Analytics und Firebase Crashlytics von Google, um die App-Nutzung zu verstehen und Abstürze zu identifizieren und zu beheben. Diese Dienste erheben:", "items": ["Anonyme Nutzungsdaten (z.B. verwendete Funktionen, Sitzungsdauer)", "Absturzberichte (z.B. Stack-Traces, Gerätemodell, OS-Version)", "Geräteinformationen (z.B. Gerätetyp, Betriebssystem, App-Version)", "Eine zufällig generierte Instanz-ID (nicht mit Ihrer Identität verknüpft)"], "note": "Diese Daten sind anonym und enthalten keine persönlichen Inhalte, die Sie in der App eingeben (wie Kontakte, Messdaten oder Notizen). Weitere Informationen finden Sie in der Datenschutzrichtlinie von Google: https://policies.google.com/privacy." },
-    "third_party": { "title": "Drittanbieterdienste", "desc": "Sotto integriert ausschließlich Firebase Analytics und Firebase Crashlytics von Google für anonyme Nutzungsanalysen und Absturzmeldungen. Keine weiteren Drittanbieterdienste werden verwendet. Alle Kernfunktionen der App funktionieren ohne Internetverbindung." },
-    "children": { "title": "Datenschutz für Kinder", "desc": "Sotto erhebt keine persönlichen Daten von Kindern. Die von Firebase erhobenen anonymen Analysedaten identifizieren keine einzelnen Nutzer gleich welchen Alters." },
-    "changes": { "title": "Änderungen", "desc": "Bei wesentlichen Änderungen dieser Datenschutzerklärung werden wir Sie über ein App-Update informieren." },
-    "contact": { "title": "Kontakt", "desc": "Bei Fragen zu dieser Datenschutzerklärung kontaktieren Sie uns unter:" }
+    "local_storage": {
+      "title": "Wie Ihre Daten gespeichert werden",
+      "desc": "Sotto speichert alle Ihre Daten lokal auf Ihrem Gerät. Wir laden Ihre Daten nicht auf Server hoch. Informationen, die Sie in der App eingeben:",
+      "items": [
+        "Kontaktnamen, Fotos und Beschreibungen",
+        "Körpermaße (Größe, Gewicht, Brust, Taille usw.)",
+        "Persönliche Notizen",
+        "App-Einstellungen (Themen, Einheiten usw.)"
+      ]
+    },
+    "no_collection": {
+      "title": "Informationen, die wir nicht erheben",
+      "desc": "Sotto erhebt, überträgt oder teilt keine Ihrer persönlichen Inhalte:",
+      "items": [
+        "Erhebung personenbezogener Daten",
+        "Standortverfolgung",
+        "Verwendung von Werbe-SDKs",
+        "Weitergabe Ihrer persönlichen Inhalte (Kontakte, Messdaten, Notizen) an Dritte",
+        "Verwendung von Cookies oder Tracking-Technologien"
+      ]
+    },
+    "biometric": {
+      "title": "Biometrische Authentifizierung",
+      "desc": "Sotto bietet eine optionale App-Sperre mit Face ID oder Touch ID. Biometrische Daten werden ausschließlich von Apples LocalAuthentication-Framework verarbeitet und in der Secure Enclave Ihres Geräts gespeichert."
+    },
+    "icloud": {
+      "title": "iCloud-Backup",
+      "desc": "Bei aktiviertem iCloud-Backup können Ihre Gerätedaten in Apples iCloud-Backups enthalten sein. Dies unterliegt Apples Datenschutzrichtlinie."
+    },
+    "analytics": {
+      "title": "Analyse & Absturzmeldungen",
+      "desc": "Sotto verwendet Firebase Analytics und Firebase Crashlytics von Google, um die App-Nutzung zu verstehen und Abstürze zu identifizieren und zu beheben. Diese Dienste erheben:",
+      "items": [
+        "Anonyme Nutzungsdaten (z.B. verwendete Funktionen, Sitzungsdauer)",
+        "Absturzberichte (z.B. Stack-Traces, Gerätemodell, OS-Version)",
+        "Geräteinformationen (z.B. Gerätetyp, Betriebssystem, App-Version)",
+        "Eine zufällig generierte Instanz-ID (nicht mit Ihrer Identität verknüpft)"
+      ],
+      "note": "Diese Daten sind anonym und enthalten keine persönlichen Inhalte, die Sie in der App eingeben (wie Kontakte, Messdaten oder Notizen). Weitere Informationen finden Sie in der Datenschutzrichtlinie von Google: https://policies.google.com/privacy."
+    },
+    "third_party": {
+      "title": "Drittanbieterdienste",
+      "desc": "Sotto integriert ausschließlich Firebase Analytics und Firebase Crashlytics von Google für anonyme Nutzungsanalysen und Absturzmeldungen. Keine weiteren Drittanbieterdienste werden verwendet. Alle Kernfunktionen der App funktionieren ohne Internetverbindung."
+    },
+    "children": {
+      "title": "Datenschutz für Kinder",
+      "desc": "Sotto erhebt keine persönlichen Daten von Kindern. Die von Firebase erhobenen anonymen Analysedaten identifizieren keine einzelnen Nutzer gleich welchen Alters."
+    },
+    "changes": {
+      "title": "Änderungen",
+      "desc": "Bei wesentlichen Änderungen dieser Datenschutzerklärung werden wir Sie über ein App-Update informieren."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "desc": "Bei Fragen zu dieser Datenschutzerklärung kontaktieren Sie uns unter:"
+    }
   },
   "terms": {
-    "title": "Nutzungsbedingungen", "effective_date": "Gültig ab: 30. April 2026",
+    "title": "Nutzungsbedingungen",
+    "effective_date": "Gültig ab: 30. April 2026",
     "intro": "Willkommen bei Sotto. Bitte lesen Sie diese Nutzungsbedingungen sorgfältig. Durch Herunterladen, Installieren oder Nutzen von Sotto stimmen Sie diesen Bedingungen zu.",
-    "license": { "title": "Nutzungslizenz", "desc": "ALU Studio gewährt Ihnen eine eingeschränkte, nicht-exklusive, nicht übertragbare Lizenz zur Nutzung von Sotto auf Ihrem persönlichen Gerät. Nur für persönliche, nicht-kommerzielle Nutzung." },
-    "restrictions": { "title": "Einschränkungen", "desc": "Sie stimmen zu, Folgendes nicht zu tun:", "items": ["Reverse Engineering, Dekompilierung oder Disassemblierung der App", "Änderung, Übersetzung oder Erstellung abgeleiteter Werke", "Entfernung von Urheberrechtshinweisen", "Nutzung für rechtswidrige Zwecke"] },
-    "user_data": { "title": "Ihre Daten", "desc": "Alle persönlichen Inhalte, die Sie in Sotto eingeben (Kontakte, Messdaten, Notizen), werden nur auf Ihrem Gerät gespeichert und liegen in Ihrer Verantwortung. Bei Löschung der App gehen alle Daten unwiderruflich verloren, sofern kein iCloud-Backup vorhanden ist. Anonyme Nutzungsanalysen und Absturzberichte werden zur Verbesserung der App an Firebase-Server gesendet." },
-    "updates": { "title": "App-Updates", "desc": "Wir können von Zeit zu Zeit Updates bereitstellen, um Funktionen zu verbessern, Fehler zu beheben oder die Sicherheit zu erhöhen." },
-    "disclaimer": { "title": "Haftungsausschluss", "desc": "Sotto wird \"wie besehen\" ohne jegliche Gewährleistung bereitgestellt. Wir garantieren keinen unterbrechungsfreien oder fehlerfreien Betrieb." },
-    "liability": { "title": "Haftungsbeschränkung", "desc": "Die Haftung von ALU Studio für Schäden aus der Nutzung der App ist auf den von Ihnen für die App gezahlten Betrag beschränkt." },
-    "changes": { "title": "Änderungen", "desc": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Geänderte Bedingungen treten mit Veröffentlichung auf dieser Seite sofort in Kraft." },
-    "contact": { "title": "Kontakt", "desc": "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns unter:" }
+    "license": {
+      "title": "Nutzungslizenz",
+      "desc": "ALU Studio gewährt Ihnen eine eingeschränkte, nicht-exklusive, nicht übertragbare Lizenz zur Nutzung von Sotto auf Ihrem persönlichen Gerät. Nur für persönliche, nicht-kommerzielle Nutzung."
+    },
+    "restrictions": {
+      "title": "Einschränkungen",
+      "desc": "Sie stimmen zu, Folgendes nicht zu tun:",
+      "items": [
+        "Reverse Engineering, Dekompilierung oder Disassemblierung der App",
+        "Änderung, Übersetzung oder Erstellung abgeleiteter Werke",
+        "Entfernung von Urheberrechtshinweisen",
+        "Nutzung für rechtswidrige Zwecke"
+      ]
+    },
+    "user_data": {
+      "title": "Ihre Daten",
+      "desc": "Alle persönlichen Inhalte, die Sie in Sotto eingeben (Kontakte, Messdaten, Notizen), werden nur auf Ihrem Gerät gespeichert und liegen in Ihrer Verantwortung. Bei Löschung der App gehen alle Daten unwiderruflich verloren, sofern kein iCloud-Backup vorhanden ist. Anonyme Nutzungsanalysen und Absturzberichte werden zur Verbesserung der App an Firebase-Server gesendet."
+    },
+    "updates": {
+      "title": "App-Updates",
+      "desc": "Wir können von Zeit zu Zeit Updates bereitstellen, um Funktionen zu verbessern, Fehler zu beheben oder die Sicherheit zu erhöhen."
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "desc": "Sotto wird \"wie besehen\" ohne jegliche Gewährleistung bereitgestellt. Wir garantieren keinen unterbrechungsfreien oder fehlerfreien Betrieb."
+    },
+    "liability": {
+      "title": "Haftungsbeschränkung",
+      "desc": "Die Haftung von ALU Studio für Schäden aus der Nutzung der App ist auf den von Ihnen für die App gezahlten Betrag beschränkt."
+    },
+    "changes": {
+      "title": "Änderungen",
+      "desc": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Geänderte Bedingungen treten mit Veröffentlichung auf dieser Seite sofort in Kraft."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "desc": "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns unter:"
+    }
   }
 }
