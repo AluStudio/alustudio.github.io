@@ -44,7 +44,6 @@ function HomePage() {
       {/* Hero */}
       <section className="hero">
         <div className="hero-inner">
-          <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
           <h1 className="hero-title">
             <img
               src={`${import.meta.env.BASE_URL}logo.png`}
@@ -52,6 +51,7 @@ function HomePage() {
               className="hero-logo"
             />
           </h1>
+          <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
           <p className="hero-tagline">{t("hero.tagline")}</p>
           <p className="hero-desc">{t("hero.description")}</p>
           {/* TODO: replace '#' with real App Store URL after launch */}
