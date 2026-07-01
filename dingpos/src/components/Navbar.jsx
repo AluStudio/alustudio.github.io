@@ -19,6 +19,13 @@ function Navbar() {
     }
   };
 
+  const handleHome = () => {
+    collapseNav();
+    if (isHome) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const handleChangeLang = (e) => {
     i18n.changeLanguage(e.target.value);
   };
@@ -52,14 +59,12 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-scroll fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/" onClick={handleHome}>
           <img
-            src={`${import.meta.env.BASE_URL}app-icon-sm.png`}
+            src={`${import.meta.env.BASE_URL}logo.png`}
             alt="DingPOS"
-            width="40"
-            height="40"
+            className="navbar-logo"
           />
-          DingPOS
         </Link>
 
         <button
@@ -77,9 +82,9 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link text-center" href={anchor("features")} onClick={collapseNav}>
-                {t("nav.features")}
-              </a>
+              <Link className="nav-link text-center" to="/" onClick={handleHome}>
+                {t("nav.home")}
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link text-center" href={anchor("pricing")} onClick={collapseNav}>

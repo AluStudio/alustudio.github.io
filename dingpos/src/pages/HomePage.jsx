@@ -21,14 +21,21 @@ function HomePage() {
     }
   }, []);
 
-  const features = [
-    { icon: "bi-wifi-off",         key: "offline" },
-    { icon: "bi-rocket-takeoff",   key: "setup" },
+  const groups = [
+    { icon: "bi-rocket-takeoff",   key: "onboarding" },
     { icon: "bi-basket3",          key: "cashier" },
-    { icon: "bi-box-seam",         key: "inventory" },
+    { icon: "bi-box-seam",         key: "products" },
+    { icon: "bi-boxes",            key: "inventory" },
     { icon: "bi-tags",             key: "promotion" },
-    { icon: "bi-cloud-check",      key: "sync" },
+    { icon: "bi-person-badge",     key: "loyalty" },
+    { icon: "bi-graph-up-arrow",   key: "reports" },
+    { icon: "bi-cloud-check",      key: "backup" },
   ];
+
+  const items = (key) => {
+    const value = t(`features.${key}.items`, { returnObjects: true });
+    return Array.isArray(value) ? value : [];
+  };
 
   return (
     <>
@@ -39,11 +46,18 @@ function HomePage() {
         <div className="hero-inner">
           <img
             src={`${import.meta.env.BASE_URL}app-icon.png`}
-            alt="DingPOS"
+            alt=""
+            aria-hidden="true"
             className="hero-icon"
           />
           <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
-          <h1 className="hero-title">DingPOS</h1>
+          <h1 className="hero-title">
+            <img
+              src={`${import.meta.env.BASE_URL}logo.png`}
+              alt="DingPOS"
+              className="hero-logo"
+            />
+          </h1>
           <p className="hero-tagline">{t("hero.tagline")}</p>
           <p className="hero-desc">{t("hero.description")}</p>
           {/* TODO: replace '#' with real App Store URL after launch */}
@@ -60,20 +74,24 @@ function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="features-section" id="features">
+      <section className="capabilities" id="features">
         <div className="container">
           <h2 className="features-title">{t("features.title")}</h2>
           <p className="features-subtitle">{t("features.subtitle")}</p>
-          <div className="row g-4">
-            {features.map((f) => (
-              <div className="col-md-6 col-lg-4" key={f.key}>
-                <div className="feature-card">
-                  <div className="feature-icon">
-                    <i className={`bi ${f.icon}`}></i>
-                  </div>
-                  <h3>{t(`features.${f.key}.title`)}</h3>
-                  <p>{t(`features.${f.key}.desc`)}</p>
+          <div className="cap-grid">
+            {groups.map((g) => (
+              <div className="cap-card" key={g.key}>
+                <div className="cap-head">
+                  <span className="cap-icon">
+                    <i className={`bi ${g.icon}`}></i>
+                  </span>
+                  <h3>{t(`features.${g.key}.title`)}</h3>
                 </div>
+                <ul className="cap-list">
+                  {items(g.key).map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

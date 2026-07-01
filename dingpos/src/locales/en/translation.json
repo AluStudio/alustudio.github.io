@@ -1,6 +1,6 @@
 {
   "nav": {
-    "features": "Features",
+    "home": "Home",
     "pricing": "Pricing",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
@@ -15,29 +15,91 @@
   "features": {
     "title": "Everything you need to open a store",
     "subtitle": "From checkout to inventory, promotions to backup — all on a single iPad",
-    "offline": {
-      "title": "No network, no account",
-      "desc": "Checkout works even without WiFi. No sign-up, no cloud service to bind — just open the app and start selling."
-    },
-    "setup": {
-      "title": "Open in 10 minutes",
-      "desc": "A guided setup wizard fills in your currency and tax rate from your country, adds your store name and a few products, and you're ready to take your first payment."
+    "onboarding": {
+      "title": "Fast onboarding",
+      "items": [
+        "Pick your country; currency, tax mode, and tax rate are filled in",
+        "Set your store name and logo",
+        "Guided creation of your first few products — skippable",
+        "About 10 minutes end to end, then start selling"
+      ]
     },
     "cashier": {
-      "title": "Multi-cart checkout & discounts",
-      "desc": "Run up to 10 carts at once, with product search, variant picking, item and cart discounts, and cash change. Every sale ends with a satisfying \"Ding!\""
+      "title": "Checkout",
+      "items": [
+        "Up to 10 carts running at the same time",
+        "Product search by name and barcode, as you type",
+        "Item and cart discounts, fixed amount or percentage",
+        "Inclusive / exclusive tax calculated automatically",
+        "Cash change and custom payment-method labels",
+        "Every sale ends with a \"Ding!\" and haptic feedback"
+      ]
+    },
+    "products": {
+      "title": "Products & variants",
+      "items": [
+        "Category management and filtering",
+        "Variants (e.g. size × color), each with its own price and cost",
+        "Barcodes by manual entry or camera scan, duplicates blocked",
+        "Product photos with thumbnails generated on save"
+      ]
     },
     "inventory": {
-      "title": "Products, variants & stock",
-      "desc": "Multi-axis variants (size / color), barcode scanning, product photos, plus per-product stock tracking with a full movement ledger."
+      "title": "Inventory",
+      "items": [
+        "Per-product stock tracking toggle",
+        "Independent stock per variant",
+        "Negative stock allowed — checkout is never blocked",
+        "Low-stock color warnings",
+        "Full movement ledger: sale, void, manual adjustment"
+      ]
     },
     "promotion": {
-      "title": "Promotion engine & loyalty",
-      "desc": "Set up threshold discounts, buy-one-get-one, happy hours, member tiers, and points rewards. They apply automatically at checkout — no coupon codes to type."
+      "title": "Promotion engine",
+      "items": [
+        "Cart subtotal thresholds trigger automatically",
+        "Cart or item discounts (fixed amount or percentage)",
+        "Buy-one-get-one and Nth-item offers",
+        "Points multipliers",
+        "Happy Hour windows — cross-midnight, selectable weekdays",
+        "Priority, stackable, and stop-after controls",
+        "Usage limits (total or per customer)",
+        "Applied automatically at checkout — no coupon codes"
+      ]
     },
-    "sync": {
-      "title": "Cloud backup, your provider",
-      "desc": "Choose iCloud, Google Drive, or Dropbox. Backups go into your own cloud account. Switch devices, reconnect, and everything restores."
+    "loyalty": {
+      "title": "Members & points",
+      "items": [
+        "Member sign-up: name, optional phone and email",
+        "Earn Y points per X spent",
+        "Redeem N points for M off, with an optional cap",
+        "New members get a welcome bonus automatically",
+        "Member tiers that promotions can target",
+        "Voiding an order reverses earned and redeemed points"
+      ]
+    },
+    "reports": {
+      "title": "Reports & orders",
+      "items": [
+        "Today: order count, revenue, gross profit, discount, payment mix",
+        "Top 5 products by quantity",
+        "Day / week / month ranges",
+        "Revenue and gross-profit trend charts",
+        "Chronological order list, filter by date and payment method",
+        "Void with confirmation — stock and points restored automatically"
+      ]
+    },
+    "backup": {
+      "title": "Backup & privacy",
+      "items": [
+        "Choose one of iCloud, Google Drive, or Dropbox",
+        "Scheduled automatic plus manual backup",
+        "Keeps the latest 5 snapshots",
+        "Conflicts prompt you to choose — never a silent overwrite",
+        "Incremental image sync",
+        "No account; data on-device, backups in your own cloud",
+        "Fully functional offline"
+      ]
     }
   },
   "pricing": {
