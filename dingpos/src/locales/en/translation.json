@@ -93,7 +93,7 @@
       "title": "Backup & privacy",
       "items": [
         "Choose one of iCloud, Google Drive, or Dropbox",
-        "Scheduled automatic plus manual backup",
+        "Manual backup, on demand",
         "Keeps the latest 5 snapshots",
         "Conflicts prompt you to choose — never a silent overwrite",
         "Incremental image sync",
