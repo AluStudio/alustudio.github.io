@@ -44,12 +44,6 @@ function HomePage() {
       {/* Hero */}
       <section className="hero">
         <div className="hero-inner">
-          <img
-            src={`${import.meta.env.BASE_URL}app-icon.png`}
-            alt=""
-            aria-hidden="true"
-            className="hero-icon"
-          />
           <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
           <h1 className="hero-title">
             <img
