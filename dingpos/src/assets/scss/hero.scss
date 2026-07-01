@@ -1,0 +1,273 @@
+@import "./variables";
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5rem 0 4rem;
+  background: $neutral-50;
+
+  // Layered depth: diagonal slate wash + fine dotted grid (retail-tech texture)
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 18% 20%, rgba($accent-300, 0.28) 0%, transparent 42%),
+      radial-gradient(circle at 85% 88%, rgba($accent-500, 0.22) 0%, transparent 46%),
+      linear-gradient(160deg, $neutral-0 0%, $neutral-50 55%, $accent-100 100%);
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba($accent-700, 0.10) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 70%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 70%);
+    z-index: 0;
+  }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 680px;
+  padding: 0 1.5rem;
+}
+
+.hero-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 116px;
+  height: 116px;
+  border-radius: 26px;
+  box-shadow:
+    0 18px 48px rgba($accent-800, 0.22),
+    0 4px 12px rgba($accent-900, 0.12);
+  margin-bottom: 2rem;
+  animation: icon-float 3.4s ease-in-out infinite;
+}
+
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $accent-600;
+  background: rgba($accent-200, 0.4);
+  border: 1px solid rgba($accent-400, 0.35);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: $headings-font-family;
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: $ink;
+  margin-bottom: 0.75rem;
+  line-height: 1.02;
+}
+
+.hero-tagline {
+  font-family: $headings-font-family;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $accent-600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-desc {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: $ink-mid;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: $accent-600;
+  color: $neutral-0 !important;
+  padding: 0.9rem 2.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px rgba($accent-700, 0.3);
+
+  &:hover {
+    background: $accent-700;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba($accent-800, 0.36);
+  }
+
+  .bi {
+    font-size: 1.2rem;
+  }
+}
+
+.hero-note {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: $ink-soft;
+  font-weight: 500;
+}
+
+// ── Features section ──
+.features-section {
+  padding: 5.5rem 0;
+  background: $neutral-0;
+  border-top: 1px solid $neutral-100;
+}
+
+.features-title {
+  font-family: $headings-font-family;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.features-subtitle {
+  text-align: center;
+  color: $ink-soft;
+  font-size: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.feature-card {
+  text-align: left;
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  background: $neutral-0;
+  border: 1px solid $neutral-100;
+  transition: all 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba($accent-800, 0.1);
+    border-color: rgba($accent-400, 0.5);
+  }
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  background: linear-gradient(140deg, $accent-500, $accent-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 6px 16px rgba($accent-700, 0.28);
+
+  .bi {
+    font-size: 1.4rem;
+    color: $neutral-0;
+  }
+}
+
+.feature-card h3 {
+  font-family: $headings-font-family;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
+  color: $ink;
+}
+
+.feature-card p {
+  font-size: 0.92rem;
+  color: $ink-mid;
+  line-height: 1.7;
+  margin: 0;
+}
+
+// ── Pricing strip ──
+.pricing-strip {
+  padding: 4.5rem 0;
+  background: linear-gradient(150deg, $accent-700 0%, $accent-800 60%, $accent-900 100%);
+  color: $neutral-0;
+  text-align: center;
+}
+
+.pricing-inner {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.pricing-title {
+  font-family: $headings-font-family;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $neutral-0;
+  margin-bottom: 1rem;
+}
+
+.pricing-price {
+  font-size: 1.15rem;
+  color: rgba($neutral-0, 0.82);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+
+  strong {
+    color: $neutral-0;
+    font-weight: 700;
+  }
+}
+
+.pricing-sub {
+  font-size: 0.9rem;
+  color: rgba($neutral-0, 0.55);
+  margin: 0;
+}
+
+// ── Responsive ──
+@media (max-width: 768px) {
+  .hero {
+    min-height: 78vh;
+    padding: 4rem 0 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+  }
+
+  .hero-icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 20px;
+  }
+
+  .features-title {
+    font-size: 1.75rem;
+  }
+}

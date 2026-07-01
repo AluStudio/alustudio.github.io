@@ -1,4 +1,4 @@
-.PHONY: hm pk bb st install-hm install-pk install-bb install-st
+.PHONY: hm pk bb st dp install-hm install-pk install-bb install-st install-dp
 
 # ── Home ─────────────────────────────────────
 hm: install-hm
@@ -27,3 +27,10 @@ st: install-st
 
 install-st:
 	@test -d sotto/node_modules || (cd sotto && npm ci)
+
+# ── DingPOS ──────────────────────────────────
+dp: install-dp
+	cd dingpos && npm run dev
+
+install-dp:
+	@test -d dingpos/node_modules || (cd dingpos && npm ci)

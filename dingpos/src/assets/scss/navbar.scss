@@ -1,0 +1,74 @@
+@import "./variables";
+
+.navbar-scroll {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+  border-bottom: none !important;
+
+  &.navbar-scrolled,
+  &:has(.navbar-collapse.show),
+  &:has(.navbar-collapse.collapsing) {
+    background-color: rgba($neutral-0, 0.9);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 1px 0 rgba($accent-500, 0.14);
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: $headings-font-family;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  color: $ink !important;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.navbar .nav-link {
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: $ink-mid;
+  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+
+  &:hover,
+  &:focus {
+    color: $accent-600;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.4rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  .bi-list {
+    font-size: 1.5rem;
+    color: $ink;
+  }
+}
+
+.lang-select {
+  background: transparent;
+  border: 1px solid rgba($accent-400, 0.4);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  padding: 0.3rem 1.6rem 0.3rem 0.6rem;
+  color: $ink-mid;
+  cursor: pointer;
+  outline: none;
+
+  &:focus {
+    border-color: $accent-500;
+  }
+}

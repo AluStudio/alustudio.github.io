@@ -1,0 +1,51 @@
+// DingPOS — professional retail palette mirroring the app's design tokens
+// Blue-grey neutrals + low-chroma slate-blue accent (OKLCH hue ~255)
+
+// Neutral scale (blue-grey backbone)
+$neutral-0:   #f8f9fc;
+$neutral-50:  #f0f2f7;
+$neutral-100: #e3e6ee;
+$neutral-200: #ccd1dc;
+$neutral-300: #a8aebb;
+$neutral-400: #808898;
+$neutral-500: #616978;
+$neutral-600: #474f5f;
+$neutral-700: #303846;
+$neutral-800: #1f2530;
+$neutral-900: #14181f;
+
+// Accent scale (slate blue)
+$accent-100: #d6e1ee;
+$accent-200: #b3c7dd;
+$accent-300: #8dabc6;
+$accent-400: #6c8dad;
+$accent-500: #4f6d8e;
+$accent-600: #3e5774;
+$accent-700: #2f435b;
+$accent-800: #223145;
+$accent-900: #172130;
+
+// Semantic aliases
+$body-bg-color:  $neutral-50;
+$surface:        $neutral-0;
+$ink:            $neutral-800;
+$ink-mid:        $neutral-600;
+$ink-soft:       $neutral-400;
+
+// Bootstrap overrides
+$primary:       $accent-500;
+$body-bg:       $neutral-50;
+$body-color:    $ink;
+$link-color:    $accent-600;
+
+$font-family-sans-serif: "Manrope", "Noto Sans TC", system-ui, -apple-system, sans-serif;
+$headings-font-family:   "Manrope", "Noto Sans TC", system-ui, sans-serif;
+$headings-font-weight:   700;
+$headings-color:         $ink;
+
+$border-radius:    0.5rem;
+$border-radius-lg: 0.75rem;
+
+// Navbar
+$navbar-light-color:        $ink-mid;
+$navbar-light-active-color:  $accent-600;
