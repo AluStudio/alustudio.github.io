@@ -275,7 +275,25 @@ body {
   &__actions {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 8px;
+  }
+
+  &__website {
+    margin-left: auto;
+
+    .bi {
+      font-size: 0.75rem;
+      transition: transform 0.2s;
+    }
+
+    &:hover {
+      color: var(--accent, $text-secondary);
+
+      .bi {
+        transform: translate(1px, -1px);
+      }
+    }
   }
 }
 

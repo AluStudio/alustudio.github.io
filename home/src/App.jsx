@@ -11,6 +11,7 @@ const apps = [
     name: "Sotto",
     icon: `${base}sotto-icon.png`,
     color: "#7c8cf8",
+    website: "/sotto/",
     stores: [
       {
         platform: "ios",
@@ -25,6 +26,7 @@ const apps = [
     name: "Pikgeon",
     icon: `${base}pikgeon-icon.png`,
     color: "#4aba7a",
+    website: "/pikgeon/",
     stores: [
       {
         platform: "ios",
@@ -45,6 +47,7 @@ const apps = [
     name: "Babbby",
     icon: `${base}babbby-icon.png`,
     color: "#e8a44a",
+    website: "/babbby/",
     stores: [
       {
         platform: "ios",
@@ -139,6 +142,12 @@ function AppCard({ app }) {
             <span>{store.label}</span>
           </a>
         ))}
+        {app.website && (
+          <a href={app.website} className="support-link app-card__website">
+            <span>{t("common.website")}</span>
+            <i className="bi bi-arrow-up-right"></i>
+          </a>
+        )}
       </div>
     </article>
   );
