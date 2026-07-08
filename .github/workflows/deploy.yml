@@ -67,6 +67,11 @@ jobs:
           # root-level static files
           cp -r app-ads.txt _site/ 2>/dev/null || true
           cp -r google9c954b37d1869b6e.html _site/ 2>/dev/null || true
+          # root index: redirect / to /home/
+          cp index.html _site/index.html
+          # site-wide SPA fallback: known sub-apps get query-string redirect,
+          # unknown paths go to /home/
+          cp 404.html _site/404.html
           # home build output
           cp -r home/dist/* _site/home/
           # pikgeon build output
@@ -77,8 +82,6 @@ jobs:
           cp -r sotto/dist/* _site/sotto/
           # dingpos build output
           cp -r dingpos/dist/* _site/dingpos/
-          # SPA fallback: copy 404.html to root for GitHub Pages
-          cp pikgeon/dist/404.html _site/404.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

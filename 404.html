@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Alu Studio</title>
+    <script>
+      // GitHub Pages SPA fallback (site-wide, served for every 404).
+      // Known sub-apps: convert the path to a query string so the app's
+      // index.html can restore it (rafgraph/spa-github-pages pattern).
+      // Anything else: go to /home/ to avoid a redirect loop.
+      var apps = ['home', 'pikgeon', 'babbby', 'sotto', 'dingpos'];
+      var l = window.location;
+      var segments = l.pathname.split('/').filter(Boolean);
+      if (segments.length > 0 && apps.indexOf(segments[0]) !== -1) {
+        l.replace(
+          l.protocol + '//' + l.host + '/' + segments[0] + '/?/' +
+          segments.slice(1).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      } else {
+        l.replace('/home/');
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
