@@ -1,0 +1,325 @@
+@import "./variables";
+
+.hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3.5rem 0 3.5rem;
+  background: $neutral-50;
+
+  // Layered depth: diagonal slate wash + fine dotted grid (retail-tech texture)
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 18% 20%, rgba($accent-300, 0.28) 0%, transparent 42%),
+      radial-gradient(circle at 85% 88%, rgba($accent-500, 0.22) 0%, transparent 46%),
+      linear-gradient(160deg, $neutral-0 0%, $neutral-50 55%, $accent-100 100%);
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba($accent-700, 0.10) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 70%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 70%);
+    z-index: 0;
+  }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 680px;
+  padding: 0 1.5rem;
+}
+
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $accent-600;
+  background: rgba($accent-200, 0.4);
+  border: 1px solid rgba($accent-400, 0.35);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  margin: 0 0 1.5rem;
+}
+
+.hero-title {
+  margin: 0 0 1.25rem;
+  line-height: 1;
+}
+
+.hero-logo {
+  display: block;
+  width: 300px;
+  max-width: 78vw;
+  height: auto;
+  margin: 0 auto;
+  animation: icon-float 3.4s ease-in-out infinite;
+}
+
+.hero-tagline {
+  font-family: $headings-font-family;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $accent-600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-desc {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: $ink-mid;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: $accent-600;
+  color: $neutral-0 !important;
+  padding: 0.9rem 2.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px rgba($accent-700, 0.3);
+
+  &:hover {
+    background: $accent-700;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba($accent-800, 0.36);
+  }
+
+  .bi {
+    font-size: 1.2rem;
+  }
+}
+
+.hero-note {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: $ink-soft;
+  font-weight: 500;
+}
+
+// ── Capabilities section ──
+.capabilities {
+  padding: 5.5rem 0;
+  background: $neutral-0;
+  border-top: 1px solid $neutral-100;
+}
+
+.features-title {
+  font-family: $headings-font-family;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.features-subtitle {
+  text-align: center;
+  color: $ink-soft;
+  font-size: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.cap-card {
+  position: relative;
+  padding: 1.9rem 1.85rem;
+  border-radius: 18px;
+  background: $neutral-0;
+  border: 1px solid $neutral-100;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+
+  // Accent rail on the left edge
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.9rem;
+    bottom: 1.9rem;
+    width: 3px;
+    border-radius: 3px;
+    background: linear-gradient(180deg, $accent-400, $accent-700);
+    opacity: 0;
+    transition: opacity 0.28s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 44px rgba($accent-800, 0.1);
+    border-color: rgba($accent-400, 0.5);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.cap-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
+}
+
+.cap-icon {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(140deg, $accent-500, $accent-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba($accent-700, 0.28);
+
+  .bi {
+    font-size: 1.3rem;
+    color: $neutral-0;
+  }
+}
+
+.cap-head h3 {
+  font-family: $headings-font-family;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: $ink;
+}
+
+.cap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.65rem;
+    margin-bottom: 0.62rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: $ink-mid;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "\f633"; // bootstrap-icons check-lg
+      font-family: "bootstrap-icons";
+      position: absolute;
+      left: 0;
+      top: 0.05rem;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: $accent-500;
+    }
+  }
+}
+
+// ── Pricing strip ──
+.pricing-strip {
+  padding: 4.5rem 0;
+  background: linear-gradient(150deg, $accent-700 0%, $accent-800 60%, $accent-900 100%);
+  color: $neutral-0;
+  text-align: center;
+}
+
+.pricing-inner {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.pricing-title {
+  font-family: $headings-font-family;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $neutral-0;
+  margin-bottom: 1rem;
+}
+
+.pricing-price {
+  font-size: 1.15rem;
+  color: rgba($neutral-0, 0.82);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+
+  strong {
+    color: $neutral-0;
+    font-weight: 700;
+  }
+}
+
+.pricing-sub {
+  font-size: 0.9rem;
+  color: rgba($neutral-0, 0.55);
+  margin: 0;
+}
+
+// ── Responsive ──
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding: 3rem 0 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+  }
+
+  .hero-logo {
+    width: 230px;
+  }
+
+  .features-title {
+    font-size: 1.75rem;
+  }
+
+  .cap-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .cap-card {
+    padding: 1.6rem 1.5rem;
+  }
+}

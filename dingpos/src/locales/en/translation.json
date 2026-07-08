@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "hero": {
+    "eyebrow": "Point of Sale for iPad",
+    "tagline": "Open your store in 10 minutes. Your data, your control.",
+    "description": "DingPOS is a server-less point of sale for iPad. No account, no cloud lock-in, and it keeps working with no internet. Your products, orders, and customers all stay on your own device.",
+    "download": "Download on the App Store",
+    "note": "30-day full-feature free trial. No credit card required."
+  },
+  "features": {
+    "title": "Everything you need to open a store",
+    "subtitle": "From checkout to inventory, promotions to backup — all on a single iPad",
+    "onboarding": {
+      "title": "Fast onboarding",
+      "items": [
+        "Pick your country; currency, tax mode, and tax rate are filled in",
+        "Set your store name and logo",
+        "About 10 minutes end to end, then start selling"
+      ]
+    },
+    "cashier": {
+      "title": "Checkout",
+      "items": [
+        "Up to 10 carts running at the same time",
+        "Product search by name and barcode, as you type",
+        "Item and cart discounts, fixed amount or percentage",
+        "Inclusive / exclusive tax calculated automatically",
+        "Cash change and custom payment-method labels",
+        "Every sale ends with a \"Ding!\" and haptic feedback"
+      ]
+    },
+    "products": {
+      "title": "Products & variants",
+      "items": [
+        "Category management and filtering",
+        "Variants (e.g. size × color), each with its own price and cost",
+        "Barcodes by manual entry or camera scan, duplicates blocked",
+        "Product photos with thumbnails generated on save"
+      ]
+    },
+    "inventory": {
+      "title": "Inventory",
+      "items": [
+        "Per-product stock tracking toggle",
+        "Independent stock per variant",
+        "Negative stock allowed — checkout is never blocked",
+        "Low-stock color warnings",
+        "Full movement ledger: sale, void, manual adjustment"
+      ]
+    },
+    "promotion": {
+      "title": "Promotion engine",
+      "items": [
+        "Cart subtotal thresholds trigger automatically",
+        "Cart or item discounts (fixed amount or percentage)",
+        "Buy-one-get-one and Nth-item offers",
+        "Points multipliers",
+        "Happy Hour windows — cross-midnight, selectable weekdays",
+        "Priority, stackable, and stop-after controls",
+        "Usage limits (total or per customer)",
+        "Applied automatically at checkout — no coupon codes"
+      ]
+    },
+    "loyalty": {
+      "title": "Members & points",
+      "items": [
+        "Member sign-up: name, optional phone and email",
+        "Earn Y points per X spent",
+        "Redeem N points for M off, with an optional cap",
+        "New members get a welcome bonus automatically",
+        "Member tiers that promotions can target",
+        "Voiding an order reverses earned and redeemed points"
+      ]
+    },
+    "reports": {
+      "title": "Reports & orders",
+      "items": [
+        "Today: order count, revenue, gross profit, discount, payment mix",
+        "Top 5 products by quantity",
+        "Day / week / month ranges",
+        "Revenue and gross-profit trend charts",
+        "Chronological order list, filter by date and payment method",
+        "Void with confirmation — stock and points restored automatically"
+      ]
+    },
+    "backup": {
+      "title": "Backup & privacy",
+      "items": [
+        "Choose one of iCloud, Google Drive, or Dropbox",
+        "Manual backup, on demand",
+        "Keeps the latest 5 snapshots",
+        "Conflicts prompt you to choose — never a silent overwrite",
+        "Incremental image sync",
+        "No account; data on-device, backups in your own cloud",
+        "Fully functional offline"
+      ]
+    }
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "price": "30-day full-feature free trial, then NT$299 per month.",
+    "sub": "No transaction fees, no hidden charges. Your data is always kept after the trial — resubscribe anytime."
+  },
+  "footer": {
+    "tagline": "Open your store in 10 minutes. Your data, your control.",
+    "contact": "Contact Us",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use",
+    "copyright": "ALU Studio. All rights reserved."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "effective_date": "Effective date: July 1, 2026",
+    "intro": "ALU Studio (\"we\") developed DingPOS (\"the app\"). DingPOS is a point of sale built with privacy at its core — your business data belongs to you. This Privacy Policy explains how we handle your information when you use the app.",
+    "local_storage": {
+      "title": "How your data is stored",
+      "desc": "DingPOS stores all of your business data locally on your device. Unless you actively enable cloud backup, this data never leaves your device. The data you create in the app includes:",
+      "items": [
+        "Store settings (store name, currency, tax rate, logo)",
+        "Product data (name, price, cost, barcode, photo, category, variants, stock)",
+        "Order and transaction records (including discounts, tax, payment method)",
+        "Customer and membership data (name, optional phone and email, points)",
+        "Promotion rules and member-tier settings"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Cloud backup (optional)",
+      "desc": "You can optionally enable cloud backup and choose one of iCloud, Google Drive, or Dropbox as the storage location. Backups are written to your own cloud account and remain fully under your control. We never handle, store, or access the contents of these backups. Whether to enable backup, and which provider to use, is entirely your choice and can be turned off at any time."
+    },
+    "no_collection": {
+      "title": "What we do not collect",
+      "desc": "DingPOS does not collect, transmit, or share any of your business content. Specifically, we do not:",
+      "items": [
+        "Collect your product, order, customer, or membership data",
+        "Touch any payment flow or credit card information (the app does not process actual card payments)",
+        "Track your location",
+        "Share your business data with any third party"
+      ]
+    },
+    "camera": {
+      "title": "Camera & photos",
+      "desc": "DingPOS requests camera access only when you actively use \"scan barcode\" or \"take a product photo\". Barcode recognition and photos are processed locally on your device and are never uploaded to our servers. Product photos are only written to your own cloud account as part of a backup, if you enable cloud backup."
+    },
+    "subscription": {
+      "title": "Subscription & purchases",
+      "desc": "DingPOS offers a subscription through Apple App Store In-App Purchase (IAP), using RevenueCat to manage subscription status. Payment is handled by Apple; we never receive your credit card or payment details. RevenueCat receives only an anonymous identifier tied to subscription status, used to verify whether your subscription is active."
+    },
+    "analytics": {
+      "title": "Analytics & crash reporting",
+      "desc": "DingPOS uses Firebase Analytics and Firebase Crashlytics, provided by Google, to help us understand how the app is used and to identify and fix crashes. These services collect:",
+      "items": [
+        "Anonymous usage data (e.g. which features are used, session length)",
+        "Crash reports (e.g. stack traces, device model, OS version)",
+        "Device information (e.g. device type, OS, app version)",
+        "A randomly generated instance identifier (not linked to your identity)"
+      ],
+      "note": "This data is anonymous and does not include any of your business content (such as products, orders, customers, or members). To learn more about how Google handles this data, see Google's Privacy Policy: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Children's privacy",
+      "desc": "DingPOS is a commercial point-of-sale tool. It is not designed for children and does not collect children's personal information."
+    },
+    "changes": {
+      "title": "Changes to this policy",
+      "desc": "If we make material changes to this Privacy Policy, we will notify you through an app update. We recommend reviewing this policy periodically."
+    },
+    "contact": {
+      "title": "Contact us",
+      "desc": "If you have any questions or suggestions about this Privacy Policy, please contact us at:"
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "effective_date": "Effective date: July 1, 2026",
+    "intro": "Welcome to DingPOS. Please read the following Terms of Use carefully before using the app. By downloading, installing, or using DingPOS, you agree to be bound by these terms.",
+    "license": {
+      "title": "License",
+      "desc": "ALU Studio grants you a limited, non-exclusive, non-transferable license to use DingPOS on your devices to run your business. This license is for your retail operations."
+    },
+    "subscription": {
+      "title": "Subscription & payment",
+      "desc": "DingPOS offers a 30-day full-feature free trial from first install. After the trial, a subscription of NT$299 per month (via App Store In-App Purchase) is required to continue using checkout; browsing and product management remain available and your data is never deleted. The subscription renews automatically unless you cancel at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time in your device's App Store account settings. Purchased subscriptions support restore."
+    },
+    "restrictions": {
+      "title": "Restrictions",
+      "desc": "When using the app, you agree not to:",
+      "items": [
+        "Reverse engineer, disassemble, or decompile the app",
+        "Modify, translate, or create derivative works",
+        "Remove any copyright notices or labels within the app",
+        "Use the app for any unlawful purpose"
+      ]
+    },
+    "user_data": {
+      "title": "Your data & backups",
+      "desc": "All business content you create in DingPOS (products, orders, customers, members, and settings) is stored on your device and is your sole responsibility. If you delete the app or clear its data, all stored information is permanently lost unless you have enabled cloud backup. Cloud backups reside in the cloud account you choose (iCloud / Google Drive / Dropbox) and their availability and retention are governed by that provider's terms of service. We cannot recover any data for you. You are also responsible for complying with the tax, invoicing, and consumer-protection laws applicable to where you operate."
+    },
+    "updates": {
+      "title": "App updates",
+      "desc": "We may release app updates from time to time to improve features, fix issues, or enhance security. We recommend keeping the app up to date for the best experience."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "desc": "DingPOS is provided \"as is\", without warranties of any kind, express or implied. We do not guarantee that the app will operate uninterrupted or be entirely error-free. DingPOS is a tool to assist your operations; the ultimate accuracy of tax calculations, stock quantities, and all amounts, as well as compliance with local regulations, remain your responsibility to verify. To the maximum extent permitted by law, we are not liable for any direct, indirect, incidental, or consequential damages arising from your use of the app."
+    },
+    "liability": {
+      "title": "Limitation of liability",
+      "desc": "In no event shall ALU Studio's liability for any damages arising from the use of, or inability to use, the app exceed the amount you paid for the app in the 12 months preceding the event. This includes, but is not limited to, data loss, lost revenue, device damage, or any other loss."
+    },
+    "changes": {
+      "title": "Changes to these terms",
+      "desc": "We reserve the right to modify these Terms of Use at any time. Modified terms take effect immediately upon posting on this page. Your continued use of the app constitutes acceptance of the modified terms."
+    },
+    "contact": {
+      "title": "Contact us",
+      "desc": "If you have any questions about these Terms of Use, please contact us at:"
+    }
+  }
+}

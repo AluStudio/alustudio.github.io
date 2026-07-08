@@ -29,6 +29,7 @@ jobs:
             pikgeon/package-lock.json
             babbby/package-lock.json
             sotto/package-lock.json
+            dingpos/package-lock.json
 
       - name: Install & build home
         working-directory: home
@@ -54,9 +55,15 @@ jobs:
           npm ci
           npm run build
 
+      - name: Install & build dingpos
+        working-directory: dingpos
+        run: |
+          npm ci
+          npm run build
+
       - name: Assemble site
         run: |
-          mkdir -p _site/home _site/pikgeon _site/babbby _site/sotto
+          mkdir -p _site/home _site/pikgeon _site/babbby _site/sotto _site/dingpos
           # root-level static files
           cp -r app-ads.txt _site/ 2>/dev/null || true
           cp -r google9c954b37d1869b6e.html _site/ 2>/dev/null || true
@@ -68,6 +75,8 @@ jobs:
           cp -r babbby/dist/* _site/babbby/
           # sotto build output
           cp -r sotto/dist/* _site/sotto/
+          # dingpos build output
+          cp -r dingpos/dist/* _site/dingpos/
           # SPA fallback: copy 404.html to root for GitHub Pages
           cp pikgeon/dist/404.html _site/404.html
 
