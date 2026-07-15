@@ -89,6 +89,16 @@
       ],
       "note": "Estos datos son anónimos y no incluyen ningún contenido personal ingresado en la App (como contactos, medidas o notas). Para más información, consulte la Política de Privacidad de Google: https://policies.google.com/privacy."
     },
+    "data_deletion": {
+      "title": "Eliminación de datos",
+      "intro": "Todos los datos personales en Sotto — perfiles de contactos, medidas, notas, campos personalizados, preferencias y tokens de OAuth — se almacenan solo en su dispositivo. Nuestros servidores nunca reciben estos datos.",
+      "how_title": "Para eliminar todos sus datos",
+      "how_desc": "Desinstale Sotto o use “Borrar datos de la app” en la configuración del sistema de su dispositivo. Esta acción es irreversible.",
+      "analytics_title": "Estadísticas anónimas recopiladas por Firebase Analytics",
+      "analytics_desc": "El install ID es un identificador anónimo generado aleatoriamente para cada instalación. No está vinculado a su cuenta de Google ni a ninguna información personal. Desinstalar la app invalida este ID, y una nueva instalación genera uno nuevo. Los eventos registrados anteriormente son eliminados automáticamente por Google después de 14 meses.",
+      "backup_title": "Archivos de copia de seguridad en la nube (si activó la copia de seguridad)",
+      "backup_desc": "Los archivos de copia de seguridad se almacenan en su propia cuenta de Google Drive o Dropbox. Para eliminarlos, borre los archivos directamente en ese servicio."
+    },
     "third_party": {
       "title": "Servicios de terceros",
       "desc": "Sotto integra únicamente Firebase Analytics y Firebase Crashlytics de Google para análisis de uso anónimo e informes de fallos. No se utilizan otros servicios de terceros. Todas las funciones principales de la App funcionan sin conexión a internet."
