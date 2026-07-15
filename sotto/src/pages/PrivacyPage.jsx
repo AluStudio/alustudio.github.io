@@ -10,6 +10,15 @@ function PrivacyPage() {
   const { t } = useTranslation();
 
   useEffect(() => {
+    // Honor deep links like /privacy#data-deletion (used by Play Console).
+    const { hash } = window.location;
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) {
+        el.scrollIntoView();
+        return;
+      }
+    }
     window.scrollTo(0, 0);
   }, []);
 
@@ -71,6 +80,17 @@ function PrivacyPage() {
                 <li>{t("privacy.analytics.items.3")}</li>
               </ul>
               <p>{t("privacy.analytics.note")}</p>
+            </section>
+
+            <section className="legal-section" id="data-deletion">
+              <h2>{t("privacy.data_deletion.title")}</h2>
+              <p>{t("privacy.data_deletion.intro")}</p>
+              <h3>{t("privacy.data_deletion.how_title")}</h3>
+              <p>{t("privacy.data_deletion.how_desc")}</p>
+              <h3>{t("privacy.data_deletion.analytics_title")}</h3>
+              <p>{t("privacy.data_deletion.analytics_desc")}</p>
+              <h3>{t("privacy.data_deletion.backup_title")}</h3>
+              <p>{t("privacy.data_deletion.backup_desc")}</p>
             </section>
 
             <section className="legal-section">

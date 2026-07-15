@@ -89,6 +89,16 @@
       ],
       "note": "这些数据是匿名的,不包含您在应用中输入的任何个人内容（例如联系人、测量数据或笔记）。如需了解更多关于 Google 如何处理这些数据的信息,请参阅 Google 的隐私政策:https://policies.google.com/privacy。"
     },
+    "data_deletion": {
+      "title": "数据删除",
+      "intro": "Sotto 的所有个人数据（联系人资料、测量数据、笔记、自定义字段、设置以及 OAuth 令牌）都只存储在您的设备本地,我们的服务器从不接收这些数据。",
+      "how_title": "如需删除您的所有数据",
+      "how_desc": "卸载 Sotto,或在设备的系统设置中使用「清除应用数据」。此操作不可恢复。",
+      "analytics_title": "关于 Firebase Analytics 收集的匿名统计数据",
+      "analytics_desc": "install ID 是每次安装时随机生成的匿名标识符,不会关联您的 Google 账号或任何个人信息。卸载应用后该 ID 即失效,重新安装会生成新的 ID。此前记录的事件数据会在 14 个月后由 Google 自动删除。",
+      "backup_title": "关于云端备份文件（若您曾启用备份）",
+      "backup_desc": "备份文件存储在您自己的 Google Drive 或 Dropbox 账号中。如需删除,请直接在该服务中删除相应文件。"
+    },
     "third_party": {
       "title": "第三方服务",
       "desc": "Sotto 仅集成 Google 的 Firebase Analytics 和 Firebase Crashlytics,用于匿名使用分析和崩溃报告。未使用任何其他第三方服务。应用的所有核心功能无需网络连接即可运作。"

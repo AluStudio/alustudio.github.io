@@ -28,6 +28,8 @@
 
 .legal-section {
   margin-bottom: 2rem;
+  // Keep anchored sections (e.g. #data-deletion) clear of the fixed navbar.
+  scroll-margin-top: 82px;
 
   h2 {
     font-family: $headings-font-family;

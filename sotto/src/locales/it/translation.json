@@ -89,6 +89,16 @@
       ],
       "note": "Questi dati sono anonimi e non includono alcun contenuto personale inserito nell'App (come contatti, misurazioni o note). Per maggiori informazioni, consulta l'Informativa sulla Privacy di Google: https://policies.google.com/privacy."
     },
+    "data_deletion": {
+      "title": "Eliminazione dei dati",
+      "intro": "Tutti i dati personali in Sotto — profili dei contatti, misurazioni, note, campi personalizzati, impostazioni e token OAuth — sono archiviati solo sul tuo dispositivo. I nostri server non ricevono mai questi dati.",
+      "how_title": "Per eliminare tutti i tuoi dati",
+      "how_desc": "Disinstalla Sotto oppure usa “Cancella dati app” nelle impostazioni di sistema del tuo dispositivo. Questa azione è irreversibile.",
+      "analytics_title": "Statistiche anonime raccolte da Firebase Analytics",
+      "analytics_desc": "L'install ID è un identificatore anonimo generato casualmente per ogni installazione. Non è collegato al tuo account Google né ad alcuna informazione personale. Disinstallando l'app questo ID viene invalidato e una nuova installazione ne genera uno nuovo. Gli eventi registrati in precedenza vengono eliminati automaticamente da Google dopo 14 mesi.",
+      "backup_title": "File di backup su cloud (se hai attivato il backup)",
+      "backup_desc": "I file di backup sono archiviati nel tuo account Google Drive o Dropbox. Per eliminarli, rimuovi i file direttamente in quel servizio."
+    },
     "third_party": {
       "title": "Servizi di terze parti",
       "desc": "Sotto integra esclusivamente Firebase Analytics e Firebase Crashlytics di Google per analisi anonime d'utilizzo e segnalazioni di crash. Nessun altro servizio di terze parti viene utilizzato. Tutte le funzionalità principali dell'App funzionano senza connessione internet."
