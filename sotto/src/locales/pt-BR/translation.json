@@ -7,7 +7,8 @@
   "hero": {
     "tagline": "Lembre dos detalhes que importam",
     "description": "Cada pessoa carrega pequenos detalhes que valem a pena lembrar. O Sotto guarda eles pra você — alturas, preferências, aquelas coisas que só você sabe. Todos os dados ficam no seu celular, te acompanhando em silêncio.",
-    "download": "Baixar na App Store"
+    "download": "Baixar na App Store",
+    "downloadAndroid": "Disponível no Google Play"
   },
   "features": {
     "title": "Feito para quem você se importa",

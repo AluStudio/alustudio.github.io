@@ -7,7 +7,8 @@
   "hero": {
     "tagline": "소중한 디테일을 기억하세요",
     "description": "모든 사람에게는 기억할 만한 작은 것들이 있습니다. Sotto는 그런 디테일을 소중히 지켜줍니다 — 키, 취향, 당신만 아는 것들. 모든 데이터는 당신의 폰에만 조용히 머뭅니다.",
-    "download": "App Store에서 다운로드"
+    "download": "App Store에서 다운로드",
+    "downloadAndroid": "Google Play에서 다운로드"
   },
   "features": {
     "title": "소중한 사람을 위한 디자인",

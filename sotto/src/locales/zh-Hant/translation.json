@@ -7,7 +7,8 @@
   "hero": {
     "tagline": "記住每一個重要的細節",
     "description": "每個人身上都有值得被記住的小事。Sotto 幫你珍藏這些細節——身高、喜好、那些只有你知道的事。所有資料只留在你的手機裡，安靜地陪你記得。",
-    "download": "App Store 下載"
+    "download": "App Store 下載",
+    "downloadAndroid": "Google Play 下載"
   },
   "features": {
     "title": "為你在乎的人而設計",

@@ -7,7 +7,8 @@
   "hero": {
     "tagline": "记住每一个重要的细节",
     "description": "每个人身上都有值得被记住的小事。Sotto 帮你珍藏这些细节--身高、喜好、那些只有你知道的事。所有数据只留在你的手机里,安静地陪你记得。",
-    "download": "App Store 下载"
+    "download": "App Store 下载",
+    "downloadAndroid": "Google Play 下载"
   },
   "features": {
     "title": "为你在乎的人而设计",

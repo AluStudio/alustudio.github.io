@@ -7,7 +7,8 @@
   "hero": {
     "tagline": "Recuerda los detalles que importan",
     "description": "Cada persona lleva consigo pequeños detalles que vale la pena recordar. Sotto los guarda por ti — estaturas, gustos, esas cosas que solo tú sabes. Todos los datos se quedan en tu teléfono, acompañándote en silencio.",
-    "download": "Descargar en el App Store"
+    "download": "Descargar en el App Store",
+    "downloadAndroid": "Disponible en Google Play"
   },
   "features": {
     "title": "Diseñado para quienes te importan",

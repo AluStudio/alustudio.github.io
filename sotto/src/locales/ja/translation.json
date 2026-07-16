@@ -7,7 +7,8 @@
   "hero": {
     "tagline": "大切なディテールを覚えておく",
     "description": "誰もが覚えておきたい小さなことを持っています。Sotto はそんな細部を大切に守ります——身長、好み、あなただけが知っていること。すべてのデータはあなたのスマホだけに、静かに寄り添います。",
-    "download": "App Store でダウンロード"
+    "download": "App Store でダウンロード",
+    "downloadAndroid": "Google Play で手に入れよう"
   },
   "features": {
     "title": "大切な人のために設計",

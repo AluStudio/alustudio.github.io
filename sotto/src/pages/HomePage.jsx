@@ -46,15 +46,26 @@ function HomePage() {
           <p className="hero-tagline">{t("hero.tagline")}</p>
           <hr className="hero-divider" />
           <p className="hero-desc">{t("hero.description")}</p>
-          {/* TODO: replace '#' with real App Store URL after launch */}
-          <a
-            href="#"
-            className="hero-cta"
-            onClick={(e) => e.preventDefault()}
-          >
-            <i className="bi bi-apple"></i>
-            {t("hero.download")}
-          </a>
+          <div className="hero-actions">
+            <a
+              href="https://apps.apple.com/app/sotto-for-the-people-you-love/id6763928854"
+              className="hero-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-apple"></i>
+              {t("hero.download")}
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.alustudio.sotto"
+              className="hero-cta hero-cta--android"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-google-play"></i>
+              {t("hero.downloadAndroid")}
+            </a>
+          </div>
         </div>
       </section>
 

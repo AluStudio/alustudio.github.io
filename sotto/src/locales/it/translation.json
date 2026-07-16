@@ -7,7 +7,8 @@
   "hero": {
     "tagline": "Ricorda i dettagli che contano",
     "description": "Ogni persona porta con sé piccoli dettagli che meritano di essere ricordati. Sotto li custodisce per te — altezze, preferenze, quelle cose che solo tu conosci. Tutti i dati restano sul tuo telefono, in silenzio.",
-    "download": "Scarica dall'App Store"
+    "download": "Scarica dall'App Store",
+    "downloadAndroid": "Disponibile su Google Play"
   },
   "features": {
     "title": "Progettato per chi ti sta a cuore",

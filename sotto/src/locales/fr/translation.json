@@ -7,7 +7,8 @@
   "hero": {
     "tagline": "Retiens les détails qui comptent",
     "description": "Chaque personne porte en elle de petits détails qui méritent d'être retenus. Sotto les garde précieusement pour toi — tailles, préférences, ces choses que toi seul connais. Toutes les données restent sur ton téléphone, en toute discrétion.",
-    "download": "Télécharger sur l'App Store"
+    "download": "Télécharger sur l'App Store",
+    "downloadAndroid": "Disponible sur Google Play"
   },
   "features": {
     "title": "Conçu pour ceux qui comptent",
