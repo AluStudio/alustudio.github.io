@@ -19,6 +19,12 @@ const apps = [
         url: "https://apps.apple.com/app/sotto-for-the-people-you-love/id6763928854",
         icon: "bi-apple",
       },
+      {
+        platform: "android",
+        label: "Google Play",
+        url: "https://play.google.com/store/apps/details?id=com.alustudio.sotto",
+        icon: "bi-google-play",
+      },
     ],
   },
   {
