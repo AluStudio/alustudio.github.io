@@ -7,7 +7,7 @@ read_when:
 
 # GitHub Pages → Cloudflare Workers 遷移計劃
 
-**Status**: ✅ **已上線（2026-07-25）**。Phase 1+2 全數完成並 merge 進 `main`；Phase 3 hard gate **通過**（舊網域 301 保留 path+query），301 監控已武裝。剩餘僅 GSC Change of Address / ASC Marketing URL / Play Console 三項 Ohlulu-only 外部操作 — critic 2 rounds 完成，8 findings 全數採納（見 Review Dispositions）
+**Status**: ✅ **已上線（2026-07-25）**。Phase 1+2 全數完成並 merge 進 `main`；Phase 3 hard gate **通過**（舊網域 301 保留 path+query），301 監控已武裝；GSC 新 property 已驗證並提交 sitemap。剩餘僅 **ASC Marketing URL** 與 **Play Console Developer website**（皆為 AdMob `app-ads.txt` 爬取來源，非 SEO；兩域目前都正常供應且內容一致，故不阻塞）。GSC Change of Address **已評估後放棄**，理由見 Decision Record — critic 2 rounds 完成，8 findings 全數採納（見 Review Dispositions）
 **目標網域**: `alu-studio.com`（apex 為 canonical，`www` 301 到 apex）
 **目的**: 自有網域 + SEO/AEO 基礎建設 + 未來擴展能力（redirect/headers/動態端點）
 
@@ -162,7 +162,7 @@ https://alustudio.github.io/pikgeon/privacy?x=1 → 301 保留 path+query（Phas
 | Workers static assets 行為假設有誤（run_worker_first、trailing slash） | 實作時對照官方文件；redirect/headers 全在 Worker code，不依賴 `_redirects`/`_headers` |
 | 子頁 canonical 錯指首頁 → 法律頁被視為重複內容 | copy script 改寫 per-route canonical；sitemap 只列 self-canonical URL |
 | app-ads.txt 爬取中斷影響廣告收益 | 新舊兩域持續供應；ASC + Play Console 網址都要更新；robots.txt 放行 `Google-adstxt` |
-| GSC Change of Address 前排名波動 | 301 + canonical 雙保險；舊站 redirect 不拆除 |
+| 搬遷期間排名波動 | 301 + canonical 雙保險；舊站 redirect 永不拆除（此為主要保障——Change of Address 已放棄，見 Decision Record） |
 
 ## Rollback（依序執行，缺一不可）
 
@@ -172,7 +172,7 @@ https://alustudio.github.io/pikgeon/privacy?x=1 → 301 保留 path+query（Phas
    - **分支 A — 保留新網域**：`alu-studio.com` DNS 指回 GitHub Pages（4 筆 A records + `www` CNAME），repo Settings 的 Pages custom domain **保留** `alu-studio.com`，等 GitHub TLS 重簽。此分支下 `alustudio.github.io` 持續 301 到 apex 是**預期行為**。
    - **分支 B — 放棄新網域**：**清除** repo Settings 的 Pages custom domain 設定，讓 `alustudio.github.io` 恢復直接服務內容；`alu-studio.com` DNS 停用或另作他用。
 4. 依所選分支驗證：分支 A → `curl -IL https://alu-studio.com/pikgeon/` 最終 200；分支 B → `curl -I https://alustudio.github.io/pikgeon/` 直接 200（無 301）
-5. 確認 GSC 未執行或撤回 Change of Address
+5. ~~確認 GSC 未執行或撤回 Change of Address~~ — **現為 no-op**：Change of Address 從未執行（已放棄）。若未來曾補做，rollback 時需回到此步撤回
 
 ## Review Dispositions
 

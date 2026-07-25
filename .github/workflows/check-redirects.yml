@@ -55,6 +55,8 @@ jobs:
           #
           # Parallel indexed arrays, not an associative array, so this also
           # runs on bash 3.2 (e.g. for local testing on macOS).
+          CANONICAL_HOST="alu-studio.com"
+
           old_urls=(
             "https://alustudio.github.io/"
             "https://alustudio.github.io/pikgeon/privacy?x=1"
@@ -90,11 +92,20 @@ jobs:
             final_url="${final%|*}"
             final_code="${final##*|}"
 
+            # Extract the landing hostname. Checking only for an https://
+            # prefix would accept ANY https host, so a misconfigured route
+            # or a hijacked hop could pass silently. Path is deliberately
+            # not compared here (trailing-slash normalization and / -> /home/
+            # are both legitimate), but the host must be exact.
+            final_host="${final_url#https://}"
+            final_host="${final_host#http://}"
+            final_host="${final_host%%/*}"
+
             echo "status=$status"
             echo "location=$location"
             echo "location_target=$location_target"
             echo "expected_target=$expected"
-            echo "final_url=$final_url (code=$final_code)"
+            echo "final_url=$final_url (code=$final_code, host=$final_host)"
 
             if [[ "$status" != "301" ]]; then
               echo "FAIL: first hop should be 301 (SEO weight transfer), got $status"
@@ -104,6 +115,9 @@ jobs:
               failed=1
             elif [[ "$final_url" != https://* ]]; then
               echo "FAIL: chain ends on a non-https URL ('$final_url') — visitors would terminate on plaintext while the page canonical declares https"
+              failed=1
+            elif [[ "$final_host" != "$CANONICAL_HOST" ]]; then
+              echo "FAIL: chain ended on host '$final_host', expected '$CANONICAL_HOST' — the old domain must land on the canonical host, nowhere else"
               failed=1
             elif [[ "$final_code" != "200" ]]; then
               echo "FAIL: chain ends with HTTP $final_code, expected 200"
