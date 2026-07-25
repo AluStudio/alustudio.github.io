@@ -7,7 +7,7 @@ read_when:
 
 # GitHub Pages → Cloudflare Workers 遷移計劃
 
-**Status**: Phase 1+2 implemented on branch `feat/cloudflare-migration`（見 `.pi/ralph/cloudflare-migration.md` 完整 log）；Phase 3 除 guardrail 文件與 301 監控 workflow 外，其餘卡在 Ohlulu 的 Cloudflare API token / 網域 cutover / GSC / ASC / Play Console — critic 2 rounds 完成，8 findings 全數採納（見 Review Dispositions）
+**Status**: ✅ **已上線（2026-07-25）**。Phase 1+2 全數完成並 merge 進 `main`；Phase 3 hard gate **通過**（舊網域 301 保留 path+query），301 監控已武裝。剩餘僅 GSC Change of Address / ASC Marketing URL / Play Console 三項 Ohlulu-only 外部操作 — critic 2 rounds 完成，8 findings 全數採納（見 Review Dispositions）
 **目標網域**: `alu-studio.com`（apex 為 canonical，`www` 301 到 apex）
 **目的**: 自有網域 + SEO/AEO 基礎建設 + 未來擴展能力（redirect/headers/動態端點）
 
@@ -69,13 +69,52 @@ read_when:
 
 GitHub 官方僅保證「DNS 正確指向 GitHub」時的 custom-domain redirect；DNS 指向 Cloudflare 後 `github.io → custom domain` 的 301 屬**未文件化行為**，不可假設永久有效。
 
-- [ ] 切換前：以 `gh api`（或 Settings → Pages）設定 custom domain = `alu-studio.com` — **BLOCKED**：需 Ohlulu 執行（GitHub Pages Settings 變更，Ralph loop 依 guardrail 明確禁止觸碰）
-- [ ] 切換後立即驗證（gate）：`curl -IL https://alustudio.github.io/pikgeon/privacy?x=1` 等代表路徑，須為 **path/query-preserving 301** 到新網域 — **BLOCKED**：需上一項的 custom domain 切換先完成，且屬 live 驗證，非 Ralph loop 範圍
-- [ ] **順序約束**：Gate 通過前不得移除 GH Pages 部署能力（Phase 1 的 workflow 改造保留可 `git revert` 的單一 commit，作為 Pages fallback 回復路徑）；Pages custom-domain 設定與最後一次 Pages 部署為**永久保護不變量**，任何時候都不得移除 — 目前已由設計滿足（`deploy.yml` 改造是單一可 revert commit `9646c21`；本 loop 全程未動 Pages custom-domain 設定或觸發新的 Pages 部署），Phase 3 cutover 前持續有效，non-actionable 故不打勾
-- [ ] Gate 通過 → 進行 GSC Change of Address — **BLOCKED**：需上述 gate 先通過，且為 Ohlulu-only 外部操作（Google Search Console）
+- [x] 切換前：以 `gh api`（或 Settings → Pages）設定 custom domain = `alu-studio.com` — 以 `gh api -X PUT repos/.../pages -f cname='alu-studio.com'` 完成
+- [x] 切換後立即驗證（gate）：`curl -IL https://alustudio.github.io/pikgeon/privacy?x=1` 等代表路徑，須為 **path/query-preserving 301** 到新網域 — ✅ **GATE 通過**：`301` 且 `?x=1` 完整保留（詳見「上線後實測結果」）
+- [x] **順序約束**：Gate 通過前不得移除 GH Pages 部署能力（Phase 1 的 workflow 改造保留可 `git revert` 的單一 commit，作為 Pages fallback 回復路徑）；Pages custom-domain 設定與最後一次 Pages 部署為**永久保護不變量**，任何時候都不得移除 — 已遵守：gate 通過前 `deploy.yml` 改造維持為單一可 revert commit `9646c21`，Pages 最後一次部署未被移除（現仍在服務 `app-ads.txt`，見下）
+- [ ] Gate 通過 → 進行 GSC Change of Address — **待 Ohlulu 執行**（gate 已通過，前置條件解除；純 Google Search Console 外部操作）
 - [x] **301 例行監控**：新增 monthly cron workflow，打 2-3 個代表舊網址斷言 path-preserving 301（301 屬未文件化行為，gate 通過一次不等於永久有效；失敗時發 alert 而非無聲 SEO 洩漏）
 - [x] **Repo guardrails**：repo description + AGENTS.md + README 明文「本 repo 同時是 alu-studio.com 的程式碼與永久 301 錪點，禁止改名 / 刪除 / archive」— repo 本無 README.md，改用 AGENTS.md（本 repo 實際的文件入口）承載；description 已透過 `gh repo edit` 設定
-- [ ] **Gate 失敗 → 停止並回報**：meta-refresh 不是 301，不符鎖定需求。屆時以 `ask_me` 提選項（如：舊網域改部署 canonical-only stub、接受較弱的 canonical 訊號、或重新評估託管架構），不得擅自宣稱 fallback 等效。重設計對象是 redirect 機制，不是 repo 佈局 — 協議本身已在此完整定義，nothing to build；僅在未來 gate 實際失敗時才會被觸發，故不打勾
+- [x] **Gate 失敗 → 停止並回報**：meta-refresh 不是 301，不符鎖定需求。屆時以 `ask_me` 提選項（如：舊網域改部署 canonical-only stub、接受較弱的 canonical 訊號、或重新評估託管架構），不得擅自宣稱 fallback 等效。重設計對象是 redirect 機制，不是 repo 佈局 — **未觸發**：gate 一次通過，無需啟動此升級路徑
+
+## 上線後實測結果（2026-07-25）
+
+### 驗證總結：30/30 通過
+
+5 app 全 14 routes、SEO 資產 4 項、redirect 正規化 4 種入口、舊網域 301 6 條、404 2 條 — 全數落在 **https 200**。
+
+### 四個只有上線才驗證得到的發現
+
+**1. GitHub Pages 的 301 Location 是 `http://`，不是 `https://`**
+
+GitHub 無法為「DNS 不在它手上」的網域簽發憑證，因此只能發明文 Location。影響：訪客會停在 http，而頁面 canonical 寫的是 https — 自相矛盾的 SEO 訊號。
+
+對策：**Worker 加上 http → https**，且與 www → apex 合併為單一 redirect（`http://www...` 一跳直達 `https://` apex）。Cloudflare zone 層的 「Always Use HTTPS」也能解，但部署 token 無 Zone Settings 權限，且放 Worker 裡更符合「所有 redirect 邏輯單一事實來源」的原則。
+
+**2. `app-ads.txt` 是唯一不被 301 的路徑**
+
+舊網域其他路徑全部 301，只有 `/app-ads.txt` 仍回 **200**（GitHub Pages 對廣告驗證檔的特殊處理）。
+
+- 好處：AdMob 爬舊網域仍拿得到內容，廣告收益不中斷
+- ⚙️ **Gotcha**：舊網域的 `app-ads.txt` 凍結在 GitHub Pages 最後一次部署的版本，**不會跟著新版更新**。未來修改 `app-ads.txt` 時，舊網域那份會長期停留舊內容——若廣告平台仍按舊 hostname 爬取，需確認兩邊一致性（目前實測 byte-identical）
+
+**3. `wrangler-action@v3` 的預設 wrangler 是 3.90.0，讀不到 `wrangler.jsonc`**
+
+CI 首次部署失敗（`Missing entry-point`）。根因：action 的 `main` branch README 寫「defaults to Wrangler v4」，但 pin `@v3` tag 的實際預設仍是 3.90.0，而 3.90.0 早於 `wrangler.jsonc` 支援。**教訓：讀 main branch 文件却 pin release tag 不是有效驗證。** 對策：明確 `wranglerVersion: "4"`。
+
+**4. 301 監控 workflow 的原斷言會永遠誤報**
+
+原本斷言 Location 精確等於 `https://alu-studio.com/...`，但實際是 `http://`（見發現 1）。已改為雙重斷言：（1）首跳為 301 且 host+path+query 保留（SEO 權重），（2）**最終落點為 https + 200**（無明文死路）。
+
+### 現行架構
+
+```
+https://alustudio.github.io/x  --301(GitHub, 發 http)-->
+http://alu-studio.com/x       --301(Worker, 升級)------>
+https://alu-studio.com/x      --200
+```
+
+`http://www.alu-studio.com/x` 則由 Worker 單一 redirect 直接到 `https://alu-studio.com/x`。
 
 ## 需要 Ohlulu 處理
 
