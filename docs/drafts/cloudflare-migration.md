@@ -72,7 +72,7 @@ GitHub 官方僅保證「DNS 正確指向 GitHub」時的 custom-domain redirect
 - [x] 切換前：以 `gh api`（或 Settings → Pages）設定 custom domain = `alu-studio.com` — 以 `gh api -X PUT repos/.../pages -f cname='alu-studio.com'` 完成
 - [x] 切換後立即驗證（gate）：`curl -IL https://alustudio.github.io/pikgeon/privacy?x=1` 等代表路徑，須為 **path/query-preserving 301** 到新網域 — ✅ **GATE 通過**：`301` 且 `?x=1` 完整保留（詳見「上線後實測結果」）
 - [x] **順序約束**：Gate 通過前不得移除 GH Pages 部署能力（Phase 1 的 workflow 改造保留可 `git revert` 的單一 commit，作為 Pages fallback 回復路徑）；Pages custom-domain 設定與最後一次 Pages 部署為**永久保護不變量**，任何時候都不得移除 — 已遵守：gate 通過前 `deploy.yml` 改造維持為單一可 revert commit `9646c21`，Pages 最後一次部署未被移除（現仍在服務 `app-ads.txt`，見下）
-- [ ] Gate 通過 → 進行 GSC Change of Address — **待 Ohlulu 執行**（gate 已通過，前置條件解除；純 Google Search Console 外部操作）
+- [x] ~~Gate 通過 → 進行 GSC Change of Address~~ — **評估後決定不做**（2026-07-25，見下方 Decision Record）。舊 property 從未建立，而舊網域已全面 301，重建驗證的成本遠大於效益
 - [x] **301 例行監控**：新增 monthly cron workflow，打 2-3 個代表舊網址斷言 path-preserving 301（301 屬未文件化行為，gate 通過一次不等於永久有效；失敗時發 alert 而非無聲 SEO 洩漏）
 - [x] **Repo guardrails**：repo description + AGENTS.md + README 明文「本 repo 同時是 alu-studio.com 的程式碼與永久 301 錪點，禁止改名 / 刪除 / archive」— repo 本無 README.md，改用 AGENTS.md（本 repo 實際的文件入口）承載；description 已透過 `gh repo edit` 設定
 - [x] **Gate 失敗 → 停止並回報**：meta-refresh 不是 301，不符鎖定需求。屆時以 `ask_me` 提選項（如：舊網域改部署 canonical-only stub、接受較弱的 canonical 訊號、或重新評估託管架構），不得擅自宣稱 fallback 等效。重設計對象是 redirect 機制，不是 repo 佈局 — **未觸發**：gate 一次通過，無需啟動此升級路徑
@@ -121,7 +121,7 @@ https://alu-studio.com/x      --200
 | # | 事項 | 說明 |
 |---|---|---|
 | 1 | Cloudflare API token | Workers Scripts:Edit + DNS:Edit 權限。給我 token，我用 `gh secret set` 塞 `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` |
-| 2 | Google Search Console | 新增 `alu-studio.com` Domain property（Cloudflare DNS TXT 驗證）→ 提交 sitemap → Phase 3 gate 通過後對舊 property 執行 Change of Address |
+| 2 | Google Search Console | ✅ 已建 `alu-studio.com` Domain property（DNS TXT 驗證完成）+ 提交 sitemap。~~Change of Address~~ 已評估後放棄，見 Decision Record |
 | 3 | App Store Connect | 各 iOS app 的 **Marketing URL** 改為 `https://alu-studio.com/<app>/`（AdMob 依此 hostname 爬 app-ads.txt） |
 | 4 | Google Play Console | Sotto（及其他 Android app）Store listing → contact details → **Developer website** 改為 `https://alu-studio.com/<app>/` |
 | 5 | AdMob | 商店網址更新後，重新檢查各 app 的 app-ads.txt 狀態 |
@@ -208,3 +208,19 @@ Final：8 findings 全數採納並落實於本文，無未解爭議。
 辩論產出的新執行項（已併入 Phase 3）：monthly 301 監控 cron、repo guardrail 文件、gate 通過前保留 Pages fallback 回復路徑。
 
 完整報告：`argue view argue_1784947897383_285744`
+
+### 放棄 GSC Change of Address（2026-07-25）
+
+問題：上線後發現 GSC 帳號（`z30262226@gmail.com`）下**根本沒有 `alustudio.github.io` 這個 property**。repo 裡雖有 `google9c954b37d1869b6e.html`（2026-04-29 加入），但推斷當時只放了檔案、未回 GSC 完成驗證。
+
+而 Change of Address 的**硬性前提是舊 property 已驗證**。現在要補驗證卡在：舊網域已全面 301，Google 抓驗證檔會被導走，這種情況通常判定驗證失敗；站上又沒有 GA/GTM 可做替代驗證管道。
+
+可行但被放棄的路徑：暫時清除 Pages custom domain（恢復舊內容直接可存取）→ 驗證 → 設回。若 Google 發的是新檔名，還得額外 revert workflow 讓 Pages 重新部署一次。
+
+決定：**不做**。理由：
+- **301 本身就會傳遞權重**，這是 Google 明確立場；Change of Address 是加速與明確化工具，**非權重轉移的必要條件**
+- 舊網域是 `github.io` 子網域，自身累積的網域權重有限；內容以 app 隱私權/條款/FAQ 為主，自然搜尋流量本小
+- 本專案的 301 是**永久性的**（repo guardrail + monthly 監控在守），Google 有充足時間自行完成轉移
+- 為此暫時拆掉 301 反而引入真實風險（中斷期間的爬取、誤操作 Pages 設定），風險/效益不對等
+
+若未來真的需要（例如發現舊網域有可觀残留流量），此路徑隨時可重啟，成本不隨時間增加。
