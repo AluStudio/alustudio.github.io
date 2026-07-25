@@ -100,3 +100,9 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # MUST be pinned. wrangler-action@v3's own default is wrangler
+          # 3.90.0, which predates wrangler.jsonc support and fails with
+          # "Missing entry-point" because it cannot read this repo's
+          # wrangler.jsonc at all. Keep this in the 4.x line, matching the
+          # `wrangler` devDependency in the root package.json.
+          wranglerVersion: "4"
