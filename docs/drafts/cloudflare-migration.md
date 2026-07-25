@@ -17,6 +17,7 @@ read_when:
 - Build 流程留在 GitHub Actions，只換最後的 deploy 步驟
 - Canonical host = `https://alu-studio.com`（apex，非 www）
 - 舊網址 `alustudio.github.io/*` 需 301 導向新網域，轉移 SEO 權重（可行性見 Phase 3 hard gate）
+- **單一 repo**：程式碼 + Cloudflare CI + 301 錨點同住 `alustudio.github.io`，不拆新 repo（argue 辩論全票共識，見 Decision Record）
 
 ## 現況盤點
 
@@ -70,8 +71,11 @@ GitHub 官方僅保證「DNS 正確指向 GitHub」時的 custom-domain redirect
 
 - [ ] 切換前：以 `gh api`（或 Settings → Pages）設定 custom domain = `alu-studio.com`
 - [ ] 切換後立即驗證（gate）：`curl -IL https://alustudio.github.io/pikgeon/privacy?x=1` 等代表路徑，須為 **path/query-preserving 301** 到新網域
-- [ ] Gate 通過 → 進行 GSC Change of Address；並將此驗證加入日後例行檢查（GitHub 可能日後變更行為）
-- [ ] **Gate 失敗 → 停止並回報**：meta-refresh 不是 301，不符鎖定需求。屆時以 `ask_me` 提選項（如：舊網域改部署 canonical-only stub、接受較弱的 canonical 訊號、或重新評估託管架構），不得擅自宣稱 fallback 等效
+- [ ] **順序約束**：Gate 通過前不得移除 GH Pages 部署能力（Phase 1 的 workflow 改造保留可 `git revert` 的單一 commit，作為 Pages fallback 回復路徑）；Pages custom-domain 設定與最後一次 Pages 部署為**永久保護不變量**，任何時候都不得移除
+- [ ] Gate 通過 → 進行 GSC Change of Address
+- [ ] **301 例行監控**：新增 monthly cron workflow，打 2-3 個代表舊網址斷言 path-preserving 301（301 屬未文件化行為，gate 通過一次不等於永久有效；失敗時發 alert 而非無聲 SEO 洩漏）
+- [ ] **Repo guardrails**：repo description + AGENTS.md + README 明文「本 repo 同時是 alu-studio.com 的程式碼與永久 301 錪點，禁止改名 / 刪除 / archive」
+- [ ] **Gate 失敗 → 停止並回報**：meta-refresh 不是 301，不符鎖定需求。屆時以 `ask_me` 提選項（如：舊網域改部署 canonical-only stub、接受較弱的 canonical 訊號、或重新評估託管架構），不得擅自宣稱 fallback 等效。重設計對象是 redirect 機制，不是 repo 佈局
 
 ## 需要 Ohlulu 處理
 
@@ -147,3 +151,21 @@ Critic：`openai-codex/gpt-5.6-sol`，2 rounds。Round 1 verdict：NEEDS-REVISIO
 | 8 | P2 Rollback 過度簡化 | Accept → 5 步有序 rollback。Round 2: HOLD（分支間 custom domain 設定與驗證目標矛盾）→ **接受 HOLD，已修正**：Rollback §3/§4 拆為分支 A/B，各自定義 custom domain 設定歸屬與對應驗證。 |
 
 Final：8 findings 全數採納並落實於本文，無未解爭議。
+
+## Decision Record
+
+### 單一 repo vs 拆分 301 stub（argue 辩論，2026-07-25）
+
+問題：程式碼留在 `alustudio.github.io`（A），或拆新 repo + 現有 repo 只留 301（B）？
+
+結果：**全票共識選 A**（claude-fable-5 + codex gpt-5.5，3 rounds + final vote，7 claims 全數 2/2 accept）。
+
+核心理由：
+- 301 依賴的是「user-site repo 永久存在 + Pages 設定完整」——**B 並沒有移除這個脆弱依賴，只是把它藏進一個看起來可丟的空殼 stub**，反而更容易被未來的清理動作（人或 AI agent）誤刪
+- 拆分成本真實（新 repo、secrets/CI/remote 重設、舊 commit 連結斷鏈）但功能增益為零
+- 命名語意問題用文件 guardrail 解決，比拆 repo 便宜且安全
+- A → B 可逆：未來真有動態功能 / 團隊需求再拆，成本不變（YAGNI）
+
+辩論產出的新執行項（已併入 Phase 3）：monthly 301 監控 cron、repo guardrail 文件、gate 通過前保留 Pages fallback 回復路徑。
+
+完整報告：`argue view argue_1784947897383_285744`
