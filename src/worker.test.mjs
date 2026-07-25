@@ -34,28 +34,53 @@ function mockEnv() {
 }
 
 test("www -> apex 301, path + query preserved", async () => {
-  const req = new Request("http://www.alu-studio.com/pikgeon/privacy?x=1");
+  const req = new Request("https://www.alu-studio.com/pikgeon/privacy?x=1");
   const res = await worker.fetch(req, mockEnv(), {});
   assert.equal(res.status, 301);
-  assert.equal(res.headers.get("location"), "http://alu-studio.com/pikgeon/privacy?x=1");
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/pikgeon/privacy?x=1");
 });
 
 test("/ -> /home/ 301", async () => {
-  const req = new Request("http://alu-studio.com/");
+  const req = new Request("https://alu-studio.com/");
   const res = await worker.fetch(req, mockEnv(), {});
   assert.equal(res.status, 301);
-  assert.equal(res.headers.get("location"), "http://alu-studio.com/home/");
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/home/");
 });
 
 test("www root -> apex root (www check must run before root check)", async () => {
-  const req = new Request("http://www.alu-studio.com/");
+  const req = new Request("https://www.alu-studio.com/");
   const res = await worker.fetch(req, mockEnv(), {});
   assert.equal(res.status, 301);
-  assert.equal(res.headers.get("location"), "http://alu-studio.com/");
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/");
+});
+
+// The old-domain GitHub Pages 301 lands on http://alu-studio.com/... , so
+// the http upgrade is what stops visitors terminating on plaintext while the
+// page's own canonical says https. Regression-guards that whole chain.
+test("http -> https 301, path + query preserved", async () => {
+  const req = new Request("http://alu-studio.com/pikgeon/privacy?x=1");
+  const res = await worker.fetch(req, mockEnv(), {});
+  assert.equal(res.status, 301);
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/pikgeon/privacy?x=1");
+});
+
+test("http + www collapses to https + apex in a SINGLE hop", async () => {
+  const req = new Request("http://www.alu-studio.com/sotto/terms/");
+  const res = await worker.fetch(req, mockEnv(), {});
+  assert.equal(res.status, 301);
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/sotto/terms/");
+});
+
+test("http root -> https /home/ (scheme upgrade takes precedence, no plaintext hop)", async () => {
+  const req = new Request("http://alu-studio.com/");
+  const res = await worker.fetch(req, mockEnv(), {});
+  assert.equal(res.status, 301);
+  // First hop normalizes the origin; the / -> /home/ hop happens after.
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/");
 });
 
 test("known route served with HTML no-cache header", async () => {
-  const req = new Request("http://alu-studio.com/home/");
+  const req = new Request("https://alu-studio.com/home/");
   const res = await worker.fetch(req, mockEnv(), {});
   assert.equal(res.status, 200);
   assert.equal(await res.text(), "<html>home</html>");
@@ -63,20 +88,20 @@ test("known route served with HTML no-cache header", async () => {
 });
 
 test("hashed asset gets immutable cache header", async () => {
-  const req = new Request("http://alu-studio.com/assets/index-B3f9x1kQ.css");
+  const req = new Request("https://alu-studio.com/assets/index-B3f9x1kQ.css");
   const res = await worker.fetch(req, mockEnv(), {});
   assert.equal(res.headers.get("cache-control"), "public, max-age=31536000, immutable");
 });
 
 test("unknown path returns real 404 status + 404.html body (no client-side redirect script)", async () => {
-  const req = new Request("http://alu-studio.com/pikgeon/nonexistent");
+  const req = new Request("https://alu-studio.com/pikgeon/nonexistent");
   const res = await worker.fetch(req, mockEnv(), {});
   assert.equal(res.status, 404);
   assert.equal(await res.text(), "<html>404 not found</html>");
 });
 
 test("security headers present on every response", async () => {
-  const req = new Request("http://alu-studio.com/home/");
+  const req = new Request("https://alu-studio.com/home/");
   const res = await worker.fetch(req, mockEnv(), {});
   assert.equal(res.headers.get("x-content-type-options"), "nosniff");
   assert.equal(res.headers.get("x-frame-options"), "DENY");

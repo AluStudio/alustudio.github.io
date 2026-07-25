@@ -4,7 +4,8 @@
  * Runs BEFORE static assets (assets.run_worker_first: true in wrangler.jsonc),
  * so every request hits this handler first. Responsibilities, in order:
  *
- *   1. www.alu-studio.com -> alu-studio.com, 301, path + query preserved.
+ *   1. Canonical origin -> https://alu-studio.com, 301, path + query
+ *      preserved (upgrades http, and folds www into the apex host).
  *   2. / -> /home/, 301 (root landing redirect).
  *   3. Everything else -> served from the ASSETS binding (the `_site/` build).
  *   4. Asset 404 -> real 404.html body, real 404 status (no client-side
@@ -30,8 +31,16 @@ export default {
   async fetch(request, env, _ctx) {
     const url = new URL(request.url);
 
-    // 1. www -> apex (preserve path + query)
-    if (url.hostname === WWW_HOST) {
+    // 1. Canonical origin: force https AND the apex host in ONE redirect.
+    //    Combining them matters: the GitHub Pages 301 from the old domain
+    //    lands on http://alu-studio.com/... (GitHub cannot emit an https
+    //    Location for a domain whose DNS it does not control), so without
+    //    the http upgrade visitors would terminate on plaintext while every
+    //    canonical/og:url on the page declares https — a self-contradicting
+    //    signal. Handling both here also keeps http://www... to a single
+    //    hop instead of two.
+    if (url.protocol === "http:" || url.hostname === WWW_HOST) {
+      url.protocol = "https:";
       url.hostname = APEX_HOST;
       return Response.redirect(url.toString(), 301);
     }
