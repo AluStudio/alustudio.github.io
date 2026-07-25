@@ -1,18 +1,31 @@
 # AGENTS.md — alustudio.github.io
 
-Static site hosting three Vite + React sub-apps on GitHub Pages.
+Static site hosting Alu Studio's four support/profile sites, deployed as a Cloudflare Worker (static assets) under `alu-studio.com`.
+
+## ⚠️ Repo Guardrails
+
+**This repo must never be renamed, deleted, or archived.** It is simultaneously:
+1. The source repo for `alu-studio.com` (Cloudflare Worker + all sub-apps).
+2. GitHub's permanent `alustudio.github.io` 301 redirect anchor for `alu-studio.com` — this is undocumented-but-relied-upon GitHub Pages behavior (see `docs/drafts/cloudflare-migration.md` Phase 3), and it only exists as long as this exact repo exists at this exact name with GitHub Pages custom-domain still configured.
+
+Deleting/renaming/archiving this repo silently breaks the old-domain 301 and leaks accumulated SEO authority with no way to recover it. If a restructure ever seems warranted, read the Decision Record in `docs/drafts/cloudflare-migration.md` first — a single-repo-vs-split-repo tradeoff was already debated and decided against splitting (`argue` debate, unanimous).
 
 ## Structure
 
 ```
 /
-├── home/             # Alu Studio profile — Vite + React (link-in-bio)
-├── pikgeon/          # Pikgeon support site — Vite + React + Bootstrap
-├── babbby/           # Babbby support site  — same stack
-├── sotto/            # Sotto support site   — same stack
-├── app-ads.txt       # Root-level static file
-├── Makefile           # Dev shortcuts
-└── .github/workflows/ # CI: build all → assemble _site/ → deploy Pages
+├── home/               # Alu Studio profile — Vite + React (link-in-bio)
+├── pikgeon/            # Pikgeon support site — Vite + React + Bootstrap
+├── babbby/             # Babbby support site  — same stack
+├── sotto/              # Sotto support site   — same stack
+├── dingpos/            # DingPOS support site  — same stack
+├── src/worker.js       # Cloudflare Worker: host/path redirects, asset serving, 404
+├── wrangler.jsonc      # Worker + static-assets config (routes, bindings)
+├── scripts/            # Shared build-time helpers (e.g. rewrite-seo-tags.mjs)
+├── robots.txt, sitemap.xml, llms.txt, index.html, 404.html   # Root-level static files
+├── app-ads.txt         # Root-level static file
+├── Makefile            # Dev shortcuts
+└── .github/workflows/  # CI: test → build all apps → assemble _site/ → wrangler deploy
 ```
 
 ## Local Dev
@@ -22,6 +35,7 @@ make hm   # → http://localhost:5173/home/
 make pk   # → http://localhost:5173/pikgeon/
 make bb   # → http://localhost:5173/babbby/
 make st   # → http://localhost:5173/sotto/
+make dp   # → http://localhost:5173/dingpos/
 ```
 
 Auto-installs `node_modules` if missing.
@@ -46,13 +60,16 @@ kill $(lsof -t -i :4173)
 
 ## Deploy
 
-Push to `main` → GitHub Actions builds all apps, assembles `_site/`, deploys to Pages.  
-No manual deploy. No preview script needed — `make pk` / `make bb` covers dev workflow.
+Push to `main` → GitHub Actions builds all apps, assembles `_site/`, and runs `wrangler deploy` (Cloudflare Worker with static assets) under `alu-studio.com`.
+No manual deploy. No preview script needed — `make pk` / `make bb` / etc. covers dev workflow.
+
+Root-level Worker logic (`src/worker.js`) owns all redirect/header behavior — no `_redirects`/`_headers` files. Run its regression tests with `npm test` (repo root).
 
 ## Sub-app Notes
 
 - Each uses `base: '/<app-name>/'` in `vite.config.js` — paths are sub-directory scoped.
 - Each has its own `package.json` / `package-lock.json` — no shared root deps.
+- Each app's `scripts/copy-spa-pages.js` rewrites per-route `canonical`/`og:url` on copy (via the shared `scripts/rewrite-seo-tags.mjs` helper) — every route ships a real, self-canonical HTML file, no client-side SPA fallback.
 - Runtime: Node 22, npm.
 
 ## Conventions
