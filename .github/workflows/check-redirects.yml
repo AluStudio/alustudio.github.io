@@ -39,27 +39,37 @@ jobs:
         run: |
           set -u
 
-          # old_urls[i] -> expected_urls[i] (path + query preserved, host
-          # swapped). Parallel indexed arrays, not an associative array, so
-          # this also runs on bash 3.2 (e.g. for local testing on macOS).
-          # These mirror the exact examples in
-          # docs/drafts/cloudflare-migration.md's verification checklist and
-          # Phase 3 hard gate.
+          # old_urls[i] -> expected_targets[i], written WITHOUT a scheme.
+          #
+          # Scheme is deliberately excluded from the comparison: GitHub Pages
+          # emits `Location: http://alu-studio.com/...` (plaintext) because it
+          # cannot issue an https Location for a domain whose DNS it does not
+          # control. That is expected and unavoidable. The Worker then upgrades
+          # http -> https on the next hop, so what actually matters is checked
+          # in two separate assertions below:
+          #   (a) first hop is a 301 preserving host+path+query  -> SEO weight
+          #   (b) the FINAL landing URL is https and returns 200 -> no plaintext
+          #       dead end, and no contradiction with the page's https canonical
+          # Asserting an exact `https://...` Location here would fail forever
+          # against correct production behavior.
+          #
+          # Parallel indexed arrays, not an associative array, so this also
+          # runs on bash 3.2 (e.g. for local testing on macOS).
           old_urls=(
             "https://alustudio.github.io/"
             "https://alustudio.github.io/pikgeon/privacy?x=1"
             "https://alustudio.github.io/sotto/terms/"
           )
-          expected_urls=(
-            "https://alu-studio.com/"
-            "https://alu-studio.com/pikgeon/privacy?x=1"
-            "https://alu-studio.com/sotto/terms/"
+          expected_targets=(
+            "alu-studio.com/"
+            "alu-studio.com/pikgeon/privacy?x=1"
+            "alu-studio.com/sotto/terms/"
           )
 
           failed=0
           for i in "${!old_urls[@]}"; do
             old_url="${old_urls[$i]}"
-            expected="${expected_urls[$i]}"
+            expected="${expected_targets[$i]}"
             echo "::group::$old_url"
 
             headers=$(curl -sS -I --max-time 15 "$old_url") || {
@@ -71,16 +81,32 @@ jobs:
 
             status=$(echo "$headers" | head -n 1 | awk '{print $2}')
             location=$(echo "$headers" | grep -i "^location:" | tail -n 1 | sed 's/^[Ll]ocation:[[:space:]]*//' | tr -d '\r\n')
+            # Strip the scheme before comparing — see the note above.
+            location_target="${location#http://}"
+            location_target="${location_target#https://}"
+
+            # (b) follow the whole chain to wherever a real visitor ends up.
+            final=$(curl -sS -o /dev/null -L --max-time 25 -w '%{url_effective}|%{http_code}' "$old_url" 2>/dev/null) || final="|000"
+            final_url="${final%|*}"
+            final_code="${final##*|}"
 
             echo "status=$status"
             echo "location=$location"
-            echo "expected=$expected"
+            echo "location_target=$location_target"
+            echo "expected_target=$expected"
+            echo "final_url=$final_url (code=$final_code)"
 
             if [[ "$status" != "301" ]]; then
-              echo "FAIL: expected 301, got $status"
+              echo "FAIL: first hop should be 301 (SEO weight transfer), got $status"
               failed=1
-            elif [[ "$location" != "$expected" ]]; then
-              echo "FAIL: expected Location '$expected', got '$location'"
+            elif [[ "$location_target" != "$expected" ]]; then
+              echo "FAIL: host/path/query not preserved — expected '$expected', got '$location_target'"
+              failed=1
+            elif [[ "$final_url" != https://* ]]; then
+              echo "FAIL: chain ends on a non-https URL ('$final_url') — visitors would terminate on plaintext while the page canonical declares https"
+              failed=1
+            elif [[ "$final_code" != "200" ]]; then
+              echo "FAIL: chain ends with HTTP $final_code, expected 200"
               failed=1
             else
               echo "OK"
