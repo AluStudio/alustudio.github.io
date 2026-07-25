@@ -2,26 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Alu Studio</title>
-    <script>
-      // GitHub Pages SPA fallback (site-wide, served for every 404).
-      // Known sub-apps: convert the path to a query string so the app's
-      // index.html can restore it (rafgraph/spa-github-pages pattern).
-      // Anything else: go to /home/ to avoid a redirect loop.
-      var apps = ['home', 'pikgeon', 'babbby', 'sotto', 'dingpos'];
-      var l = window.location;
-      var segments = l.pathname.split('/').filter(Boolean);
-      if (segments.length > 0 && apps.indexOf(segments[0]) !== -1) {
-        l.replace(
-          l.protocol + '//' + l.host + '/' + segments[0] + '/?/' +
-          segments.slice(1).join('/').replace(/&/g, '~and~') +
-          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-          l.hash
-        );
-      } else {
-        l.replace('/home/');
+    <title>Page Not Found — Alu Studio</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        text-align: center;
+        color: #1a1a1a;
       }
-    </script>
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: #666;
+      }
+      a {
+        color: #0066cc;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>404 — Page Not Found</h1>
+    <p>The page you're looking for doesn't exist.</p>
+    <p><a href="/home/">Go to Alu Studio</a></p>
+  </body>
 </html>

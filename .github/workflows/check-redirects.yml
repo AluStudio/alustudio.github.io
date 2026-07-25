@@ -1,0 +1,101 @@
+name: Check old-domain redirect (301)
+
+# Monitors that alustudio.github.io/* still 301s (path/query-preserving) to
+# alu-studio.com/*. This is GitHub Pages' own custom-domain redirect
+# behavior — it is UNDOCUMENTED per GitHub's official support commitment
+# (which only covers "DNS correctly points at GitHub"; once alu-studio.com's
+# DNS points at Cloudflare instead, github.io -> custom-domain redirect is
+# not a guaranteed-forever behavior). See docs/drafts/cloudflare-migration.md
+# Phase 3 for the full rationale.
+#
+# IMPORTANT — this check only becomes meaningful AFTER Phase 3's live domain
+# cutover (GitHub Pages custom domain set to alu-studio.com on this repo).
+# Before cutover, alustudio.github.io still serves its original content
+# directly with no redirect at all, so this check is EXPECTED to fail — that
+# is by design, not a regression, and the workflow intentionally does not go
+# red for it (see the MIGRATION_CUTOVER_DONE gate below; avoids alert
+# fatigue on a known, expected pre-cutover state).
+#
+# To arm this check for real once cutover has happened: add a repository
+# variable named MIGRATION_CUTOVER_DONE with value "true"
+# (Settings -> Secrets and variables -> Actions -> Variables tab). From then
+# on a redirect failure is a genuine regression and the workflow fails loud.
+
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the 1st of every month
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check-redirects:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assert representative old-domain URLs 301 to the new domain
+        env:
+          CUTOVER_DONE: ${{ vars.MIGRATION_CUTOVER_DONE }}
+        run: |
+          set -u
+
+          # old_urls[i] -> expected_urls[i] (path + query preserved, host
+          # swapped). Parallel indexed arrays, not an associative array, so
+          # this also runs on bash 3.2 (e.g. for local testing on macOS).
+          # These mirror the exact examples in
+          # docs/drafts/cloudflare-migration.md's verification checklist and
+          # Phase 3 hard gate.
+          old_urls=(
+            "https://alustudio.github.io/"
+            "https://alustudio.github.io/pikgeon/privacy?x=1"
+            "https://alustudio.github.io/sotto/terms/"
+          )
+          expected_urls=(
+            "https://alu-studio.com/"
+            "https://alu-studio.com/pikgeon/privacy?x=1"
+            "https://alu-studio.com/sotto/terms/"
+          )
+
+          failed=0
+          for i in "${!old_urls[@]}"; do
+            old_url="${old_urls[$i]}"
+            expected="${expected_urls[$i]}"
+            echo "::group::$old_url"
+
+            headers=$(curl -sS -I --max-time 15 "$old_url") || {
+              echo "curl request itself failed"
+              failed=1
+              echo "::endgroup::"
+              continue
+            }
+
+            status=$(echo "$headers" | head -n 1 | awk '{print $2}')
+            location=$(echo "$headers" | grep -i "^location:" | tail -n 1 | sed 's/^[Ll]ocation:[[:space:]]*//' | tr -d '\r\n')
+
+            echo "status=$status"
+            echo "location=$location"
+            echo "expected=$expected"
+
+            if [[ "$status" != "301" ]]; then
+              echo "FAIL: expected 301, got $status"
+              failed=1
+            elif [[ "$location" != "$expected" ]]; then
+              echo "FAIL: expected Location '$expected', got '$location'"
+              failed=1
+            else
+              echo "OK"
+            fi
+            echo "::endgroup::"
+          done
+
+          if [[ "$failed" -eq 1 ]]; then
+            if [[ "$CUTOVER_DONE" == "true" ]]; then
+              echo "::error::Old-domain redirect check failed AFTER cutover (MIGRATION_CUTOVER_DONE=true) — this is a real regression, not the expected pre-cutover state."
+              exit 1
+            else
+              echo "::warning::Old-domain redirect check failed, but MIGRATION_CUTOVER_DONE is not 'true' yet — expected pre-cutover state (alustudio.github.io still serves its original content directly, no redirect configured). Not failing the workflow. Set the MIGRATION_CUTOVER_DONE repo variable to 'true' once Phase 3's cutover is live to arm this check for real."
+              exit 0
+            fi
+          fi
+
+          echo "All checked URLs correctly 301 to alu-studio.com."

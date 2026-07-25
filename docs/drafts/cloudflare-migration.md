@@ -7,7 +7,7 @@ read_when:
 
 # GitHub Pages → Cloudflare Workers 遷移計劃
 
-**Status**: Reviewed — critic 2 rounds 完成，8 findings 全數採納（見 Review Dispositions）
+**Status**: Phase 1+2 implemented on branch `feat/cloudflare-migration`（見 `.pi/ralph/cloudflare-migration.md` 完整 log）；Phase 3 除 guardrail 文件與 301 監控 workflow 外，其餘卡在 Ohlulu 的 Cloudflare API token / 網域 cutover / GSC / ASC / Play Console — critic 2 rounds 完成，8 findings 全數採納（見 Review Dispositions）
 **目標網域**: `alu-studio.com`（apex 為 canonical，`www` 301 到 apex）
 **目的**: 自有網域 + SEO/AEO 基礎建設 + 未來擴展能力（redirect/headers/動態端點）
 
@@ -41,41 +41,41 @@ read_when:
 
 ## Phase 1 — Cloudflare 部署基礎（我做）
 
-- [ ] `wrangler.jsonc`：
+- [x] `wrangler.jsonc`：
   - `main`（Worker entry）、`assets.directory = "_site"`、`assets.binding = "ASSETS"`、`assets.run_worker_first = true`
   - `routes`：`alu-studio.com` + `www.alu-studio.com`，`custom_domain: true`（網域在同帳號，Cloudflare 自動建 DNS）
-- [ ] Worker fetch handler，依序：
+- [x] Worker fetch handler，依序：
   1. host 為 `www` → 301 到 apex（保留 path + query）
   2. path 為 `/` → 301 到 `/home/`
   3. `env.ASSETS.fetch()` 回應資產（含 CF 的 auto-trailing-slash 行為）
   4. asset 404 → 回傳新版 `404.html` body（無任何 redirect script）+ 404 status
   5. 回應統一補 headers：hashed assets `immutable` cache、HTML `no-cache`、基本安全 headers
   - **不使用 `_redirects` / `_headers` 檔**：`_redirects` 不支援 domain-level redirect，headers 一併在 Worker 內處理，單一事實來源
-- [ ] 改 `.github/workflows/deploy.yml`：**wrangler deploy 併入 build job 最後一步**（`_site` 在同一 runner），移除 `upload-pages-artifact` 與獨立 deploy job
+- [x] 改 `.github/workflows/deploy.yml`：**wrangler deploy 併入 build job 最後一步**（`_site` 在同一 runner），移除 `upload-pages-artifact` 與獨立 deploy job
 
 ## Phase 2 — SEO/AEO 資產（我做）
 
-- [ ] babbby 補 `copy-spa-pages.js`（routes：privacy、terms）+ 掛進 build script，與其他 app 對齊
-- [ ] 各 app `index.html` 補 self-referencing `<link rel="canonical">`、`og:url`、`og:title`、`og:description`（`https://alu-studio.com/<app>/`）
-- [ ] **copy script 升級**：複製時改寫每個子頁的 canonical / og:url 為該 route 自身（trailing-slash 形式，如 `https://alu-studio.com/pikgeon/privacy/`），不得沿用 app 首頁 canonical
-- [ ] 根 `index.html`：meta-refresh 移除（Worker 已 301），僅留 canonical → `https://alu-studio.com/home/`
-- [ ] 新版 `404.html`：純靜態、無 redirect script
-- [ ] 移除 pikgeon / babbby 的 `?/` 還原 script
-- [ ] `robots.txt`（含 Sitemap 行；不得 block `Google-adstxt`）+ 靜態 `sitemap.xml`：僅列「有實體 HTML 且 self canonical」的 14 個 URL（home 1 + pikgeon 4 + babbby 3 + sotto 3 + dingpos 3，均為 trailing-slash 形式）
-- [ ] `llms.txt`（AEO：站台結構與各 app 一句話描述）
-- [ ] `app-ads.txt`、`google9c954b37d1869b6e.html` 保留於 assemble 輸出
+- [x] babbby 補 `copy-spa-pages.js`（routes：privacy、terms）+ 掛進 build script，與其他 app 對齊
+- [x] 各 app `index.html` 補 self-referencing `<link rel="canonical">`、`og:url`、`og:title`、`og:description`（`https://alu-studio.com/<app>/`）
+- [x] **copy script 升級**：複製時改寫每個子頁的 canonical / og:url 為該 route 自身（trailing-slash 形式，如 `https://alu-studio.com/pikgeon/privacy/`），不得沿用 app 首頁 canonical
+- [x] 根 `index.html`：meta-refresh 移除（Worker 已 301），僅留 canonical → `https://alu-studio.com/home/`
+- [x] 新版 `404.html`：純靜態、無 redirect script
+- [x] 移除 pikgeon / babbby 的 `?/` 還原 script
+- [x] `robots.txt`（含 Sitemap 行；不得 block `Google-adstxt`）+ 靜態 `sitemap.xml`：僅列「有實體 HTML 且 self canonical」的 14 個 URL（home 1 + pikgeon 4 + babbby 3 + sotto 3 + dingpos 3，均為 trailing-slash 形式）
+- [x] `llms.txt`（AEO：站台結構與各 app 一句話描述）
+- [x] `app-ads.txt`、`google9c954b37d1869b6e.html` 保留於 assemble 輸出
 
 ## Phase 3 — 舊網域 301（hard gate）
 
 GitHub 官方僅保證「DNS 正確指向 GitHub」時的 custom-domain redirect；DNS 指向 Cloudflare 後 `github.io → custom domain` 的 301 屬**未文件化行為**，不可假設永久有效。
 
-- [ ] 切換前：以 `gh api`（或 Settings → Pages）設定 custom domain = `alu-studio.com`
-- [ ] 切換後立即驗證（gate）：`curl -IL https://alustudio.github.io/pikgeon/privacy?x=1` 等代表路徑，須為 **path/query-preserving 301** 到新網域
-- [ ] **順序約束**：Gate 通過前不得移除 GH Pages 部署能力（Phase 1 的 workflow 改造保留可 `git revert` 的單一 commit，作為 Pages fallback 回復路徑）；Pages custom-domain 設定與最後一次 Pages 部署為**永久保護不變量**，任何時候都不得移除
-- [ ] Gate 通過 → 進行 GSC Change of Address
-- [ ] **301 例行監控**：新增 monthly cron workflow，打 2-3 個代表舊網址斷言 path-preserving 301（301 屬未文件化行為，gate 通過一次不等於永久有效；失敗時發 alert 而非無聲 SEO 洩漏）
-- [ ] **Repo guardrails**：repo description + AGENTS.md + README 明文「本 repo 同時是 alu-studio.com 的程式碼與永久 301 錪點，禁止改名 / 刪除 / archive」
-- [ ] **Gate 失敗 → 停止並回報**：meta-refresh 不是 301，不符鎖定需求。屆時以 `ask_me` 提選項（如：舊網域改部署 canonical-only stub、接受較弱的 canonical 訊號、或重新評估託管架構），不得擅自宣稱 fallback 等效。重設計對象是 redirect 機制，不是 repo 佈局
+- [ ] 切換前：以 `gh api`（或 Settings → Pages）設定 custom domain = `alu-studio.com` — **BLOCKED**：需 Ohlulu 執行（GitHub Pages Settings 變更，Ralph loop 依 guardrail 明確禁止觸碰）
+- [ ] 切換後立即驗證（gate）：`curl -IL https://alustudio.github.io/pikgeon/privacy?x=1` 等代表路徑，須為 **path/query-preserving 301** 到新網域 — **BLOCKED**：需上一項的 custom domain 切換先完成，且屬 live 驗證，非 Ralph loop 範圍
+- [ ] **順序約束**：Gate 通過前不得移除 GH Pages 部署能力（Phase 1 的 workflow 改造保留可 `git revert` 的單一 commit，作為 Pages fallback 回復路徑）；Pages custom-domain 設定與最後一次 Pages 部署為**永久保護不變量**，任何時候都不得移除 — 目前已由設計滿足（`deploy.yml` 改造是單一可 revert commit `9646c21`；本 loop 全程未動 Pages custom-domain 設定或觸發新的 Pages 部署），Phase 3 cutover 前持續有效，non-actionable 故不打勾
+- [ ] Gate 通過 → 進行 GSC Change of Address — **BLOCKED**：需上述 gate 先通過，且為 Ohlulu-only 外部操作（Google Search Console）
+- [x] **301 例行監控**：新增 monthly cron workflow，打 2-3 個代表舊網址斷言 path-preserving 301（301 屬未文件化行為，gate 通過一次不等於永久有效；失敗時發 alert 而非無聲 SEO 洩漏）
+- [x] **Repo guardrails**：repo description + AGENTS.md + README 明文「本 repo 同時是 alu-studio.com 的程式碼與永久 301 錪點，禁止改名 / 刪除 / archive」— repo 本無 README.md，改用 AGENTS.md（本 repo 實際的文件入口）承載；description 已透過 `gh repo edit` 設定
+- [ ] **Gate 失敗 → 停止並回報**：meta-refresh 不是 301，不符鎖定需求。屆時以 `ask_me` 提選項（如：舊網域改部署 canonical-only stub、接受較弱的 canonical 訊號、或重新評估託管架構），不得擅自宣稱 fallback 等效。重設計對象是 redirect 機制，不是 repo 佈局 — 協議本身已在此完整定義，nothing to build；僅在未來 gate 實際失敗時才會被觸發，故不打勾
 
 ## 需要 Ohlulu 處理
 

@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "alu-studio-site",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-07-25",
+
+  // Static site output from `_site/` (assembled by .github/workflows/deploy.yml).
+  // run_worker_first: true routes every request through the Worker below FIRST,
+  // so it can handle host/path redirects and the true-404 response before
+  // falling back to env.ASSETS.fetch() for the static files themselves.
+  // See docs/drafts/cloudflare-migration.md Phase 1 for the reviewed design
+  // (critic-flagged: do not rely on `_redirects`/`_headers` for domain-level
+  // redirects — Cloudflare static assets does not support host-level redirects
+  // there, so all redirect/header logic lives in the Worker instead).
+  "assets": {
+    "directory": "./_site",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+
+  // alu-studio.com (apex) is canonical; www redirects to it in the Worker.
+  // Both are registered as custom domains on this Worker.
+  "routes": [
+    { "pattern": "alu-studio.com", "custom_domain": true },
+    { "pattern": "www.alu-studio.com", "custom_domain": true }
+  ]
+}

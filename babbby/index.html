@@ -7,22 +7,14 @@
     <link rel="apple-touch-icon" href="/babbby/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Babbby</title>
+    <meta name="description" content="Babbby — 為 0–6 歲寶貝量身推薦每日活動靈感。紀錄成長、建立日常，讓每一天都有意義。" />
+    <link rel="canonical" href="https://alu-studio.com/babbby/" />
+    <meta property="og:url" content="https://alu-studio.com/babbby/" />
+    <meta property="og:title" content="Babbby" />
+    <meta property="og:description" content="Babbby — 為 0–6 歲寶貝量身推薦每日活動靈感。紀錄成長、建立日常，讓每一天都有意義。" />
   </head>
   <body>
     <div id="root"></div>
-    <!-- GitHub Pages SPA redirect: restore path from query string -->
-    <script>
-      (function(l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&');
-          }).join('?');
-          window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location));
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

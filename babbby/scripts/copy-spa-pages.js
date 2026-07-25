@@ -1,8 +1,12 @@
 /**
  * Post-build: copy index.html into sub-route directories so the site
- * serves HTTP 200 (not 404) for SPA routes like /sotto/privacy, and
+ * serves HTTP 200 (not 404) for SPA routes like /babbby/privacy, and
  * rewrite each copy's canonical/og:url to its own route URL (not the
  * app root) so search engines don't see duplicate-content canonicals.
+ *
+ * Bots (Google Play, App Store review) don't execute JavaScript, so a
+ * client-side redirect trick won't work for them — a real index.html at
+ * each route path is required.
  */
 
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -14,7 +18,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
 const src = join(dist, "index.html");
 
-const BASE_URL = "https://alu-studio.com/sotto";
+const BASE_URL = "https://alu-studio.com/babbby";
 const routes = ["privacy", "terms"];
 
 for (const route of routes) {
