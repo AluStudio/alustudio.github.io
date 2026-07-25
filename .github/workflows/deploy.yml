@@ -1,21 +1,22 @@
-name: Deploy to GitHub Pages
+name: Deploy to Cloudflare
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
+# This action authenticates via the CLOUDFLARE_API_TOKEN secret, not GitHub's
+# OIDC/Pages integration, so no pages:write / id-token:write permissions are
+# needed (see cloudflare/wrangler-action README).
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,6 +31,9 @@ jobs:
             babbby/package-lock.json
             sotto/package-lock.json
             dingpos/package-lock.json
+
+      - name: Test Worker + shared scripts
+        run: npm test
 
       - name: Install & build home
         working-directory: home
@@ -67,10 +71,18 @@ jobs:
           # root-level static files
           cp -r app-ads.txt _site/ 2>/dev/null || true
           cp -r google9c954b37d1869b6e.html _site/ 2>/dev/null || true
-          # root index: redirect / to /home/
+          cp -r robots.txt _site/ 2>/dev/null || true
+          cp -r sitemap.xml _site/ 2>/dev/null || true
+          cp -r llms.txt _site/ 2>/dev/null || true
+          # root index: canonical-only fallback. The Worker (src/worker.js)
+          # issues the real "/" -> "/home/" redirect before this file's body
+          # is reached in normal browsing; this only serves the literal
+          # /index.html path, which Cloudflare's default html_handling
+          # normalizes back to "/" anyway.
           cp index.html _site/index.html
-          # site-wide SPA fallback: known sub-apps get query-string redirect,
-          # unknown paths go to /home/
+          # 404: static body only, no client-side redirect logic. The Worker
+          # serves this with a real 404 status for any unmatched path — every
+          # sub-app route already has a real HTML file (see src/worker.js).
           cp 404.html _site/404.html
           # home build output
           cp -r home/dist/* _site/home/
@@ -83,16 +95,8 @@ jobs:
           # dingpos build output
           cp -r dingpos/dist/* _site/dingpos/
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v3
         with:
-          path: _site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
