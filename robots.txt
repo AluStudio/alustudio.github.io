@@ -1,6 +1,63 @@
+# Alu Studio — crawler policy
+#
+# Decision (2026-07): fully open. Every crawler, including AI training crawlers,
+# may access this site. These are public marketing and support pages; maximising
+# discovery and AI citation outweighs withholding them from training corpora.
+#
+# `User-agent: *` below already grants this to everyone. The named groups are
+# documentation of intent, so that narrowing the policy later is a deliberate
+# edit rather than an accident. robots.txt is advisory only — actual enforcement
+# for AI crawlers lives in Cloudflare AI Crawl Control (dashboard), which can
+# override anything stated here.
+
 User-agent: *
 Allow: /
 
+# AI search / answer engines — these produce citations and referral traffic.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI training crawlers — allowed per the decision above.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Google needs this to read app-ads.txt.
 User-agent: Google-adstxt
 Allow: /
 
