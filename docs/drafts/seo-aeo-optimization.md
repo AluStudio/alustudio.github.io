@@ -197,11 +197,12 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 
 - [ ] T0 Bing WMT 驗證 + sitemap 提交 + 基線快照（含 AI 查詢集記錄）
 - [ ] T1 Cloudflare AI Crawl Control 確認 + 截圖記錄
-- [ ] T2 robots.txt 政策（含訓練類 bot 決策）
-- [ ] T3 pikgeon FAQ 答案常駐 DOM
-- [ ] T4a prerender + assemble 腳本 + CI 配套（root deps、fetch flow、make target）
-- [ ] T4b pikgeon pilot 通過全部 gate
-- [ ] T4c 全站 rollout（home/babbby/sotto/dingpos）
+- [x] T2 robots.txt 政策（全開放，含訓練類）— `4a3f17d`
+- [x] T3 pikgeon FAQ 答案常駐 DOM（3 題 3 答案入 HTML，互動仍正常）— `01db015`
+- [x] T4a prerender + assemble 腳本 + CI 配套（root deps、puppeteer cache、`make site`）— `b546045`
+- [x] T4b pikgeon pilot 通過全部 gate（1,010 → 14,710 bytes）
+- [x] T4c 全站 rollout — 14/14 路由通過，babbby 固定 zh-Hant、其餘 en
+- [x] 順手修得的真 bug：pikgeon 子路由 favicon 全數 404（相對路徑）— `39573b4`
 - [ ] T5 route metadata manifest x5 apps
 - [ ] T6 app manifest（驗證商店 URL）+ JSON-LD 注入規則 + babbby 死連結修正
 - [ ] T7 og:image x5 + meta 補全
