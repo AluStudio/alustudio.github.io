@@ -1,5 +1,5 @@
 .PHONY: hm pk bb st dp install-hm install-pk install-bb install-st install-dp \
-        build-apps assemble prerender verify-seo site serve-site
+        build-apps assemble structured-data prerender verify-seo site serve-site
 
 # ── Home ─────────────────────────────────────
 hm: install-hm
@@ -40,7 +40,7 @@ install-dp:
 # `make site` reproduces the CI pipeline locally: build every app, assemble
 # _site/, then prerender each sitemap route to static HTML. Use it before
 # pushing anything that touches the build, prerender, or SEO tag scripts.
-site: assemble prerender verify-seo
+site: assemble structured-data prerender verify-seo
 
 build-apps:
 	@for app in home pikgeon babbby sotto dingpos; do \
@@ -52,6 +52,9 @@ assemble: build-apps
 	node scripts/assemble-site.mjs
 
 # Requires _site/ to exist already (run `make assemble` first, or use `make site`).
+structured-data:
+	node scripts/inject-structured-data.mjs
+
 prerender:
 	@test -d node_modules || npm ci
 	node scripts/prerender.mjs

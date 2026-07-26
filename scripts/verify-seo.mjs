@@ -23,6 +23,23 @@ function extract(html, re) {
   return match ? match[1].trim() : null;
 }
 
+/** Parse every JSON-LD block on the page. Returns { blocks, parseErrors }. */
+function extractJsonLd(html) {
+  const blocks = [];
+  const parseErrors = [];
+  const re = /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g;
+  for (const match of html.matchAll(re)) {
+    const raw = match[1].replace(/<\\\//g, "</");
+    try {
+      const parsed = JSON.parse(raw);
+      blocks.push(...(Array.isArray(parsed) ? parsed : [parsed]));
+    } catch (err) {
+      parseErrors.push(err.message);
+    }
+  }
+  return { blocks, parseErrors };
+}
+
 async function readRoutes() {
   const xml = await readFile(join(siteDir, "sitemap.xml"), "utf8");
   const locs = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1]);
@@ -33,11 +50,14 @@ async function readRoutes() {
     const appName = pathname.split("/").filter(Boolean)[0];
     const file = join(siteDir, pathname, "index.html");
     const html = await readFile(file, "utf8");
+    const { blocks, parseErrors } = extractJsonLd(html);
     routes.push({
       loc,
       pathname,
       appName,
       isAppRoot: pathname === `/${appName}/`,
+      jsonLd: blocks,
+      jsonLdParseErrors: parseErrors,
       title: extract(html, /<title>([\s\S]*?)<\/title>/),
       description: extract(html, /<meta name="description" content="([^"]*)"/),
       ogTitle: extract(html, /<meta property="og:title" content="([^"]*)"/),
@@ -72,6 +92,43 @@ function checkRoutes(routes) {
   }
   for (const [title, paths] of byTitle) {
     if (paths.length > 1) problems.push(`duplicate <title> "${title}" on: ${paths.join(", ")}`);
+  }
+
+  // Structured data: valid JSON, on the right routes, with no invented ratings.
+  for (const route of routes) {
+    for (const message of route.jsonLdParseErrors) {
+      problems.push(`${route.pathname}: invalid JSON-LD (${message})`);
+    }
+
+    const types = route.jsonLd.map((block) => block["@type"]);
+    const isStudioRoot = route.appName === "home" && route.isAppRoot;
+
+    if (route.isAppRoot && !isStudioRoot && !types.includes("MobileApplication")) {
+      problems.push(`${route.pathname}: app landing route is missing MobileApplication JSON-LD`);
+    }
+    if (!route.isAppRoot && types.includes("MobileApplication")) {
+      problems.push(
+        `${route.pathname}: MobileApplication JSON-LD leaked onto a non-landing route`
+      );
+    }
+    if (isStudioRoot) {
+      for (const required of ["Organization", "WebSite"]) {
+        if (!types.includes(required)) {
+          problems.push(`${route.pathname}: studio page is missing ${required} JSON-LD`);
+        }
+      }
+    }
+
+    // Guard against fabricated social proof: aggregateRating/reviewCount must
+    // never appear unless a real, synced store rating backs it.
+    const serialized = JSON.stringify(route.jsonLd);
+    for (const banned of ["aggregateRating", "ratingValue", "reviewCount"]) {
+      if (serialized.includes(banned)) {
+        problems.push(
+          `${route.pathname}: JSON-LD contains ${banned} — only allowed with a verified, synced store rating (see scripts/app-manifest.mjs)`
+        );
+      }
+    }
   }
 
   // A sub-route must not inherit its app homepage's description or title.

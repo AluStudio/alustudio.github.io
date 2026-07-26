@@ -80,6 +80,12 @@ jobs:
       - name: Assemble site
         run: node scripts/assemble-site.mjs
 
+      # Must run after assemble (so it only touches app landing routes, not the
+      # sub-route copies made during each app's own build) and before prerender
+      # (which snapshots the DOM).
+      - name: Inject JSON-LD structured data
+        run: node scripts/inject-structured-data.mjs
+
       # Every app is a client-side-rendered SPA, so its shipped HTML has an
       # empty #root. AI crawlers do not execute JavaScript, so without this
       # step they index a blank page. Fails the build if any sitemap route
