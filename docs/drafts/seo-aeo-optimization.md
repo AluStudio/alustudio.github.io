@@ -203,14 +203,67 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 - [x] T4b pikgeon pilot 通過全部 gate（1,010 → 14,710 bytes）
 - [x] T4c 全站 rollout — 14/14 路由通過，babbby 固定 zh-Hant、其餘 en
 - [x] 順手修得的真 bug：pikgeon 子路由 favicon 全數 404（相對路徑）— `39573b4`
-- [ ] T5 route metadata manifest x5 apps
-- [ ] T6 app manifest（驗證商店 URL）+ JSON-LD 注入規則 + babbby 死連結修正
-- [ ] T7 og:image x5 + meta 補全
-- [ ] T8 sitemap lastmod 自動化（輸出比對）
-- [ ] T9 FAQ x3 新增（四層同步）+ 答案導向文案
-- [ ] T10 home entity 強化
+- [x] T5 route metadata manifest x5 apps + 跨路由 gate `verify-seo.mjs` — `def5b6e`, `6b38e47`
+- [x] T6 app manifest（商店 URL 已驗証）+ JSON-LD landing-only 注入 + babbby 死連結修正 — `1bf51d1`
+- [x] T7 og:image x5（1200x630，各 app 品牌色/字體）+ social meta 全數补齊 — `41b4b75`
+- [x] T8 sitemap lastmod 自動化（輸出比對，9 則純函式測試）— `39ce5f6`
+- [ ] T9 FAQ x3 新增（四層同步）+ 答案導向文案 — **未做，見 §8 交接**
+- [ ] T10 home entity 強化 — **未做，見 §8 交接**
 - [ ] T11 首次 30 天 KPI 記錄
 - [ ] T12 (optional) IndexNow
+
+## 8. 交接（2026-07-27）
+
+分支 `aeo-seo`，9 個實作 commit（+2 個文件 commit）。**尚未 merge 到 main，因此尚未部署**。
+
+### 已上車（本機全綠）
+
+模組流程：`build apps → assemble → inject-structured-data → prerender → update-sitemap-lastmod → verify-seo`，deploy.yml 與 `make site` 完全一致（本機可重现 CI）。
+
+| 驗証 | 結果 |
+|------|------|
+| `node scripts/prerender.mjs` | 14/14 路由 |
+| `node scripts/verify-seo.mjs` | 14/14 路由 |
+| `npm test` | 26/26 |
+| `make site` | 端到端綠燈 |
+
+成果：`/pikgeon/` 從 **1,010 bytes 空殼變成 14,710 bytes 實內容**；FAQ 3 題答案全數進 HTML；每路由有獨立 title/description/og；landing 路由有 MobileApplication JSON-LD（法律頁零洩漏）；home 有 Organization + WebSite；5 張 og:image；sitemap 有準確 lastmod。
+
+### 順手抓到的真 bug
+
+1. **pikgeon 子路由 favicon 全數 404** — `LOGO.PNG` 是相對路徑，被複製到 `privacy/`、`terms/`、`faq/` 後解析錯誤。prerender gate 抳出來的。
+2. **babbby 自己頁面的 App Store 按鈕是死連結** — `id6744145981` 回 404，正確為 `id6760455078`（經 iTunes lookup 驗証）。
+3. **pikgeon FAQ 答案本來永遠不進 HTML** — `{isOpen && ...}` 條件 render，收合時只有問題沒有答案。
+
+### 需你審核（草稿）
+
+- **文案**：全部 route title / description（包含 5 個 root title 改寫）。內容都依據各 app 真實 locale 字串而寫，但語氣與措詞請你定調。
+- **og:image x5**：`<app>/public/og-image.png`。重新產生：`npm run og-images`（改 `scripts/generate-og-images.mjs` 的 `CARDS` 調顏色/文字）。
+
+### 剩下的人工步驟
+
+順序重要：**T0 基線必須在 merge 前做**，否則永遠失去對照組。
+
+1. **T0 基線**（merge 前）— Bing WMT 驗証網域 + 提交 sitemap；記錄 GSC / Bing / Cloudflare AI Crawl Control 目前數字；固定查詢集（"Pikgeon"、"Pikgeon app"、"postcard tracking app" 等）跑一轪 ChatGPT / Perplexity / Google AI 並記日期。
+2. **T1 Cloudflare** — AI Crawl Control 確認 AI search 類為 Allow（訓練類依 §5 決議也是 allow），確認 Bot Fight Mode 未誤傷，managed robots.txt 維持關閉。截圖存檔。
+3. **審核上述草稿** → merge `aeo-seo` → 自動部署。
+4. **merge 後驗証**（我可代勞）— 線上 curl 斷言、Rich Results / Schema Validator、社群連結預覽。這些 gate 在分支上跑不了（`deploy.yml` 只在 push to main 觸發）。
+
+### T9 / T10 未做的原因
+
+不是技術阻塞，是**工作型態不同**：
+
+- sotto 有 **12 個語言**、home 有 **10 個**。T9（每 app 5-8 題 FAQ）對 sotto 就是 60-96 條翻譯，T10 也要 10 語。這是 `l10n-translator` 並行 fan-out（一語一 child）的工作，不是單一 session 的。
+- FAQ 內容需要**真實 support 問題**。我只能從產品描述推測，你手上才有使用者實際在問什麼——而這正是 AEO 引用價值最高的內容。
+
+執行方式：`/ralph resume seo-aeo-tail`（新 session，task file 已記錄 15/24 進度與全部決策）。建議先給我各 app 的常見問題（中文就好），再由 l10n-translator 撑多語。
+
+### 已知待追事項（不阻塞）
+
+- `home/src/App.jsx` 只列 sotto/pikgeon/babbby，**沒有 DingPOS**；home 的 og:description 也只提三個 app。T10 順便修。
+- dingpos hero 下載按鈕是 `href="#"`（未上架，但是線上死連結）。
+- `aggregateRating` 全部省略：商店目前 Pikgeon/Babbby 0 評分、Sotto 1 評分，沒有誠實的聚合值可發。`verify-seo` 會在出现評分欄位時 fail，防止日後造假。等評分數有意義後再加（需同步機制）。
+- `1bf51d1` 的 commit message 寫「tests 21/21」，實際是 17/17（当时）。已 push，修正需 force-push——未自行處理。
 
 ## Review Dispositions
 
