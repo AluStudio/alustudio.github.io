@@ -130,9 +130,21 @@
   }
 }
 
-/* Body (conditionally rendered when open) */
+/* Body: always rendered so prerendered HTML carries every answer (AI crawlers
+   do not execute JS). Collapsed purely via CSS — visibility:hidden also keeps
+   collapsed links out of the tab order. */
 .faq-card__body {
-  padding: 0 1.25rem 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding: 0 1.25rem;
+
+  .faq-card--open & {
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+    padding-bottom: 1.25rem;
+  }
 }
 
 .faq-card__answer {
@@ -412,7 +424,11 @@
   }
 
   .faq-card__body {
-    padding: 0 1rem 1rem;
+    padding: 0 1rem;
+
+    .faq-card--open & {
+      padding-bottom: 1rem;
+    }
   }
 
   .faq-card__figure {
