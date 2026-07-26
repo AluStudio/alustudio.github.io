@@ -87,6 +87,12 @@ jobs:
       - name: Prerender sitemap routes to static HTML
         run: node scripts/prerender.mjs
 
+      # Cross-route invariants prerender cannot see from a single route:
+      # unique titles, no route inheriting the app homepage's description,
+      # canonical matching the route.
+      - name: Verify cross-route SEO invariants
+        run: node scripts/verify-seo.mjs
+
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
