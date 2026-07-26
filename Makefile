@@ -1,4 +1,5 @@
-.PHONY: hm pk bb st dp install-hm install-pk install-bb install-st install-dp
+.PHONY: hm pk bb st dp install-hm install-pk install-bb install-st install-dp \
+        build-apps assemble prerender site serve-site
 
 # ── Home ─────────────────────────────────────
 hm: install-hm
@@ -34,3 +35,27 @@ dp: install-dp
 
 install-dp:
 	@test -d dingpos/node_modules || (cd dingpos && npm ci)
+
+# ── Full site (what CI deploys) ───────────────
+# `make site` reproduces the CI pipeline locally: build every app, assemble
+# _site/, then prerender each sitemap route to static HTML. Use it before
+# pushing anything that touches the build, prerender, or SEO tag scripts.
+site: assemble prerender
+
+build-apps:
+	@for app in home pikgeon babbby sotto dingpos; do \
+		echo "── building $$app"; \
+		( cd $$app && (test -d node_modules || npm ci) && npm run build ) || exit 1; \
+	done
+
+assemble: build-apps
+	node scripts/assemble-site.mjs
+
+# Requires _site/ to exist already (run `make assemble` first, or use `make site`).
+prerender:
+	@test -d node_modules || npm ci
+	node scripts/prerender.mjs
+
+# Serve the assembled site for manual inspection of the deployed layout.
+serve-site:
+	npx --yes http-server _site -p 4173 -c-1
