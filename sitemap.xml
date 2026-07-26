@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This file is the hand-maintained list of which routes exist. Adding a route
+  here is deliberate: scripts/prerender.mjs treats it as the source of truth and
+  fails the build if a listed route has no HTML on disk.
+
+  <lastmod> is deliberately absent. scripts/update-sitemap-lastmod.mjs derives it
+  at build time by comparing the freshly prerendered HTML against what is live,
+  and writes the dated sitemap into _site/. Do not add dates by hand.
+
+  A new sub-route also needs: the app's React route, its copy-spa-pages.js route
+  list, and a nav link. Missing any of those makes the URL 404 in production.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://alu-studio.com/home/</loc></url>
   <url><loc>https://alu-studio.com/pikgeon/</loc></url>

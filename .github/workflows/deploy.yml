@@ -93,6 +93,12 @@ jobs:
       - name: Prerender sitemap routes to static HTML
         run: node scripts/prerender.mjs
 
+      # Compares each prerendered route against what is live to decide whether
+      # its lastmod should move. Never fails the build: an unreachable origin
+      # just means no date can be derived.
+      - name: Update sitemap lastmod
+        run: node scripts/update-sitemap-lastmod.mjs
+
       # Cross-route invariants prerender cannot see from a single route:
       # unique titles, no route inheriting the app homepage's description,
       # canonical matching the route.
