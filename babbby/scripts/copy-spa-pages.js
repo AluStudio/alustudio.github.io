@@ -34,6 +34,11 @@ const ROUTE_META = {
     description:
       "下載或使用 Babbby（Alu Studio 開發的免費 iOS 應用程式）時適用的使用條款。",
   },
+  faq: {
+    title: "常見問題 — Babbby",
+    description:
+      "Babbby 常見問題：適用年齡 0–6 歲、資料全部存在裝置本地不上雲、免費無訂閱制、340 種以上活動依手邊材料篩選。",
+  },
 };
 
 const routes = Object.keys(ROUTE_META);

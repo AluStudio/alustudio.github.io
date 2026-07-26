@@ -76,6 +76,11 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
+              <Link className="nav-link text-center" to="/faq">
+                {t("nav.faq")}
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link text-center" to="/privacy">
                 {t("nav.privacy")}
               </Link>

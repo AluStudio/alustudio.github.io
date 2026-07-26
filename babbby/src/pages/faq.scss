@@ -1,0 +1,118 @@
+@import "../assets/scss/all";
+
+$faq-accent: #FF6B4A;
+
+.faq-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  line-height: 1.8;
+}
+
+.faq-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid $faq-accent;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.faq-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+
+  &--open {
+    border-color: rgba($faq-accent, 0.45);
+  }
+}
+
+.faq-card__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.faq-card__chevron {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  opacity: 0.4;
+  transition: transform 0.3s ease;
+
+  .faq-card--open & {
+    transform: rotate(180deg);
+  }
+}
+
+/* Body: always rendered so prerendered HTML carries every answer (AI crawlers
+   do not execute JS). Collapsed purely via CSS — visibility:hidden also keeps
+   collapsed content out of the tab order. */
+.faq-card__body {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding: 0 1.25rem;
+
+  .faq-card--open & {
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.faq-card__answer {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 576px) {
+  .faq-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .faq-card__title {
+    font-size: 0.98rem;
+  }
+
+  .faq-card__body {
+    padding: 0 1rem;
+
+    .faq-card--open & {
+      padding-bottom: 1rem;
+    }
+  }
+}

@@ -2,7 +2,8 @@
   "nav": {
     "home": "Home",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "faq": "FAQ"
   },
   "landing": {
     "title": "Babbby",
@@ -188,6 +189,40 @@
     "contact": {
       "title": "Contact Us",
       "desc": "If you have any questions about these Terms, please contact us at"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the questions parents ask most about Babbby.",
+    "items": {
+      "ages": {
+        "q": "What ages is Babbby for?",
+        "a": "Ages 0–6. Activities are matched to your child's age automatically, so you only see suggestions that fit their current stage. Babbby is a tool for parents and caregivers, not an app for children to use directly."
+      },
+      "privacy": {
+        "q": "Is my activity history uploaded to the cloud?",
+        "a": "No. Child profiles, activity records, completion history and statistics are all stored in a local database (GRDB/SQLite) on your device, and are never sent to Alu Studio's servers or any third party. Uninstalling the app deletes that local data permanently."
+      },
+      "price": {
+        "q": "Does Babbby cost anything?",
+        "a": "No. Babbby is free to download and use, with no subscription. The only purchase is an optional one-time tip (\"buy the developer a coffee\") handled entirely through Apple's StoreKit — Alu Studio never collects or sees any payment information."
+      },
+      "activity_count": {
+        "q": "How many activities are there?",
+        "a": "Over 340, across eight categories including gross motor, fine motor, language and sensory play. Babbby filters them by age automatically, and you can also browse the full library yourself."
+      },
+      "materials": {
+        "q": "Can I use Babbby without special toys or equipment?",
+        "a": "Yes. Pick the materials you already have — crayons, a cardboard box, building blocks — and Babbby shows only the activities you can do right now. Nothing needs to be bought first."
+      },
+      "professional": {
+        "q": "Are the activity suggestions professional child development advice?",
+        "a": "No. Every suggestion is generated algorithmically and is meant as inspiration only. It does not constitute medical, educational, psychological or child development advice. Parents and guardians decide whether any activity suits their child."
+      },
+      "android": {
+        "q": "Is there an Android version?",
+        "a": "Not yet — Babbby is currently available on iOS through the App Store."
+      }
     }
   }
 }

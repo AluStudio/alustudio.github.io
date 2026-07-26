@@ -31,6 +31,16 @@ const siteDir = join(repoRoot, "_site");
 
 /** Minimum rendered text length (chars) for a route to count as non-empty. */
 const MIN_TEXT_LENGTH = 200;
+
+/**
+ * Share of CJK characters expected in the rendered text, by script of the app's
+ * canonical locale. A truthful `<html lang>` is not enough on its own: an app
+ * whose client-side detector picks the wrong language will happily render
+ * English under a zh-Hant attribute. Measured spread on this site is 0-0.8% for
+ * Latin pages (a few CJK glyphs come from the language switcher labels) and
+ * 68-75% for Chinese pages, so these bounds have a wide margin.
+ */
+const CJK_RATIO_BOUNDS = { cjk: { min: 0.3 }, latin: { max: 0.1 } };
 const NAV_TIMEOUT_MS = 30_000;
 
 /**
@@ -39,8 +49,8 @@ const NAV_TIMEOUT_MS = 30_000;
  * its own tag (`zh-Hant`); the assertion still compares against the canonical tag.
  */
 const BROWSER_LOCALE = {
-  en: { lang: "en-US", accept: "en-US,en;q=0.9" },
-  "zh-Hant": { lang: "zh-TW", accept: "zh-TW,zh;q=0.9" },
+  en: { lang: "en-US", languages: ["en-US", "en"], accept: "en-US,en;q=0.9" },
+  "zh-Hant": { lang: "zh-TW", languages: ["zh-TW", "zh"], accept: "zh-TW,zh;q=0.9" },
 };
 
 const MIME = {
@@ -179,7 +189,20 @@ async function prerenderRoute(browser, port, route) {
   });
 
   try {
-    await page.setExtraHTTPHeaders({ "Accept-Language": BROWSER_LOCALE[app.locale].accept });
+    const browserLocale = BROWSER_LOCALE[app.locale];
+    await page.setExtraHTTPHeaders({ "Accept-Language": browserLocale.accept });
+    // Chrome's --lang flag does not reliably change navigator.language in headless
+    // mode, and Accept-Language only affects HTTP requests. Client-side language
+    // detectors read navigator, so without this override an app can quietly
+    // render a different language than the one this route is indexed in.
+    await page.evaluateOnNewDocument(
+      (lang, languages) => {
+        Object.defineProperty(navigator, "language", { get: () => lang });
+        Object.defineProperty(navigator, "languages", { get: () => languages });
+      },
+      browserLocale.lang,
+      browserLocale.languages
+    );
     const response = await page.goto(`http://127.0.0.1:${port}${pathname}`, {
       waitUntil: "networkidle0",
       timeout: NAV_TIMEOUT_MS,
@@ -198,8 +221,11 @@ async function prerenderRoute(browser, port, route) {
 
     const metrics = await page.evaluate(() => {
       const root = document.getElementById("root");
+      const compact = (root ? root.textContent : "").replace(/\s/g, "");
+      const cjkCount = (compact.match(/[\u4e00-\u9fff]/g) || []).length;
       return {
         lang: document.documentElement.lang,
+        cjkRatio: compact.length > 0 ? cjkCount / compact.length : 0,
         // textContent (not innerText) on purpose: it includes text that is
         // collapsed by CSS, which is exactly what a crawler reads.
         textLength: root ? root.textContent.trim().length : 0,
@@ -212,6 +238,19 @@ async function prerenderRoute(browser, port, route) {
 
     if (metrics.lang !== app.locale) {
       errors.push(`<html lang> is "${metrics.lang}", expected "${app.locale}"`);
+    }
+
+    const expectsCjk = app.locale.startsWith("zh") || app.locale.startsWith("ja");
+    const percent = (metrics.cjkRatio * 100).toFixed(1);
+    if (expectsCjk && metrics.cjkRatio < CJK_RATIO_BOUNDS.cjk.min) {
+      errors.push(
+        `rendered text is only ${percent}% CJK but the canonical locale is "${app.locale}" — the app resolved a different language`
+      );
+    }
+    if (!expectsCjk && metrics.cjkRatio > CJK_RATIO_BOUNDS.latin.max) {
+      errors.push(
+        `rendered text is ${percent}% CJK but the canonical locale is "${app.locale}" — the app resolved a different language`
+      );
     }
     if (metrics.textLength < MIN_TEXT_LENGTH) {
       errors.push(`rendered text too short (${metrics.textLength} < ${MIN_TEXT_LENGTH})`);
@@ -278,7 +317,8 @@ async function main() {
           results.push(result);
           const mark = result.ok ? "ok  " : "FAIL";
           const detail = result.metrics
-            ? `${result.metrics.textLength} chars, ${result.metrics.headings} headings, lang=${result.metrics.lang}`
+            ? `${result.metrics.textLength} chars, ${result.metrics.headings} headings, ` +
+              `lang=${result.metrics.lang}, cjk=${(result.metrics.cjkRatio * 100).toFixed(0)}%`
             : "";
           console.log(`  ${mark} ${result.pathname} ${detail}`);
           for (const err of result.errors ?? []) console.log(`       - ${err}`);
