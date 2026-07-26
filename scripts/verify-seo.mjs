@@ -10,7 +10,7 @@
  * Exits non-zero on any violation.
  */
 
-import { readFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { APPS, SITE_ORIGIN } from "./site-config.mjs";
@@ -63,9 +63,52 @@ async function readRoutes() {
       ogTitle: extract(html, /<meta property="og:title" content="([^"]*)"/),
       ogDescription: extract(html, /<meta property="og:description" content="([^"]*)"/),
       canonical: extract(html, /<link rel="canonical" href="([^"]*)"/),
+      ogImage: extract(html, /<meta property="og:image" content="([^"]*)"/),
+      ogType: extract(html, /<meta property="og:type" content="([^"]*)"/),
+      ogSiteName: extract(html, /<meta property="og:site_name" content="([^"]*)"/),
+      twitterCard: extract(html, /<meta name="twitter:card" content="([^"]*)"/),
     });
   }
   return routes;
+}
+
+/** PNG dimensions straight from the IHDR chunk — no image library needed. */
+async function pngSize(file) {
+  const buffer = await readFile(file);
+  if (buffer.length < 24 || buffer.readUInt32BE(12) !== 0x49484452) return null;
+  return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+}
+
+async function checkOgImages(routes) {
+  const problems = [];
+  const checked = new Set();
+
+  for (const route of routes) {
+    if (!route.ogImage) continue;
+    if (!route.ogImage.startsWith(SITE_ORIGIN)) {
+      // Social scrapers do not resolve relative og:image URLs.
+      problems.push(`${route.pathname}: og:image is not an absolute ${SITE_ORIGIN} URL`);
+      continue;
+    }
+    const imagePath = new URL(route.ogImage).pathname;
+    if (checked.has(imagePath)) continue;
+    checked.add(imagePath);
+
+    const file = join(siteDir, imagePath);
+    try {
+      await stat(file);
+    } catch {
+      problems.push(`${route.pathname}: og:image ${imagePath} is not in _site/`);
+      continue;
+    }
+    const size = await pngSize(file);
+    if (!size) {
+      problems.push(`${imagePath}: not a readable PNG`);
+    } else if (size.width !== 1200 || size.height !== 630) {
+      problems.push(`${imagePath}: is ${size.width}x${size.height}, expected 1200x630`);
+    }
+  }
+  return problems;
 }
 
 function checkRoutes(routes) {
@@ -73,8 +116,21 @@ function checkRoutes(routes) {
 
   // Every route must carry the basic set.
   for (const route of routes) {
-    for (const field of ["title", "description", "ogTitle", "ogDescription", "canonical"]) {
+    for (const field of [
+      "title",
+      "description",
+      "ogTitle",
+      "ogDescription",
+      "canonical",
+      "ogImage",
+      "ogType",
+      "ogSiteName",
+      "twitterCard",
+    ]) {
       if (!route[field]) problems.push(`${route.pathname}: missing ${field}`);
+    }
+    if (route.twitterCard && route.twitterCard !== "summary_large_image") {
+      problems.push(`${route.pathname}: twitter:card is "${route.twitterCard}"`);
     }
     if (route.canonical && route.canonical !== `${SITE_ORIGIN}${route.pathname}`) {
       problems.push(
@@ -155,7 +211,7 @@ async function main() {
     process.exit(1);
   }
 
-  const problems = checkRoutes(routes);
+  const problems = [...checkRoutes(routes), ...(await checkOgImages(routes))];
 
   for (const route of routes) {
     console.log(`  ${route.pathname}\n      title: ${route.title}`);
