@@ -84,7 +84,7 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 - Gate：dashboard 設定截圖記錄於本 draft 或 baseline 文件。（crawler 實際來訪量 → T11 KPI。）
 
 **T2. robots.txt AI 政策文件化 + 訓練類 bot 決策**（15 分鐘）
-- 決策（Ohlulu）：訓練類 bot（GPTBot、ClaudeBot、CCBot、Google-Extended、Bytespider）allow 或 disallow。
+- 決策（已定，見 §5）：訓練類 bot 全部 allow。
 - 依決策寫入 robots.txt；搜尋類顯式 Allow 為政策文件化（現行 `*` Allow 已覆蓋，無行為變化）。
 - Gate：`curl https://alu-studio.com/robots.txt` 與決策一致。
 
@@ -98,8 +98,8 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
   - 根目錄 `package.json` 加 `puppeteer` devDependency + lockfile；deploy.yml 加 root `npm ci`。
   - `_site/` 組裝從 workflow inline shell 抽成共用腳本（`scripts/assemble-site.mjs` 或 make target），本機與 CI 共用；prerender 接在 assemble 後。
   - Makefile 加對應 target 供本機驗證。
-- **語言固定**：每 app 指定唯一 canonical 語言（決策表見 §Open questions）。Prerender 以乾淨 profile（無 localStorage/cookie）+ 明確 Chrome locale + `Accept-Language` 執行；斷言 rendered DOM 語言與該 app `<html lang>` 一致（babbby 的 lang 屬性依決策修正）。
-- 訪客體驗：使用者曾手選其他語言時，首屏為 canonical 語言、hydration 後切換 — 可接受；不做 per-locale URL（見 Open questions 未來項）。
+- **語言固定**：每 app 的 canonical 語言已定（見 §5）：babbby zh-Hant（含 meta/title 同步），其餘 en。Prerender 以乾淨 profile（無 localStorage/cookie）+ 明確 Chrome locale + `Accept-Language` 執行；斷言 rendered DOM 語言與該 app `<html lang>` 一致。
+- 訪客體驗：使用者曾手選其他語言時，首屏為 canonical 語言、hydration 後切換 — 可接受；不做 per-locale URL（見 §5 未來項）。
 - React `createRoot` 對 prerendered DOM 整棵重繪（一次閃替）可接受；後續可改 `hydrateRoot`（獨立任務，非阻塞）。
 - Pilot：pikgeon 先行 → 驗證後套用其餘四個 app。
 - Gate（逐 sitemap URL 斷言，寫成可重跑腳本）：
@@ -159,12 +159,12 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 
 **T12.（可選）IndexNow**：deploy workflow 加 ping。僅在 Bing 收錄遲緩時做。
 
-## 5. Open questions（Ohlulu 決策）
+## 5. Decisions（已決議，2026-07-27 Ohlulu）
 
-| # | 問題 | 建議 |
+| # | 問題 | 決議 |
 |---|------|------|
-| 1 | 每 app 的 canonical 索引語言：現況 meta/llms.txt 全英文，babbby `lang="zh-Hant"`、pikgeon fallback zh。en 通吃 or babbby（育兒，台灣市場？）用 zh-Hant？ | 依各 app 主要市場定；名字有主市場者用該語言，全球市場用 en。多語 hreflang URL 留待 90 天 KPI 後評估 |
-| 2 | 訓練類 bot（GPTBot、ClaudeBot、CCBot、Google-Extended、Bytespider）allow 或 disallow？ | 個人偏好題：要曝光極大化就全 allow；介意內容餵訓練就 disallow 訓練類、保留搜尋類 |
+| 1 | 每 app 的 canonical 索引語言 | **babbby 用 zh-Hant（meta/title/description 同步改 zh-Hant）；home/pikgeon/sotto/dingpos 用 en**。多語 hreflang URL 留待 90 天 KPI 後評估 |
+| 2 | 訓練類 bot（GPTBot、ClaudeBot、CCBot、Google-Extended、Bytespider） | **全部 allow**（曝光極大化）；T2 依此寫入 robots.txt |
 
 ## 6. 風險
 
