@@ -7,7 +7,7 @@ read_when:
 
 # SEO + AEO Optimization Plan
 
-**Status**: In-flight draft
+**Status**: In-flight draft（critic 審查後 rev 2）
 **Scope**: alu-studio.com 全站（home + pikgeon + babbby + sotto + dingpos）
 
 ## 1. 背景與目標
@@ -25,9 +25,9 @@ Vercel + MERJ 以 5 億+ 次真實 crawler 請求分析（[The rise of the AI cr
 
 **實測本站**：`https://alu-studio.com/pikgeon/` 回應總共 1,010 bytes，body 可見文字為空、無 JSON-LD、無 og:image。AI crawler 只看得到 `<title>` 和 meta description，其餘全部不可見。
 
-### 2b. ChatGPT 高度依賴 Bing index
+### 2b. ChatGPT 的內容取得路徑都不執行 JS
 
-約 92% 的 ChatGPT 網路搜尋回答來自 Bing index（多來源；ChatGPT browsing 打 Bing API 再由 ChatGPT-User 即時抓頁面，同樣不執行 JS）。Bingbot 的 JS rendering 能力有限。→ Bing Webmaster Tools 與 initial HTML 內容對 AI 可見度至關重要。
+ChatGPT search 有多條獨立取得路徑：Bing index、OpenAI 自有搜尋爬蟲 OAI-SearchBot（官方明言直接供 ChatGPT search results 使用）、即時抓頁的 ChatGPT-User — 三條路徑都不執行 JS，Bingbot 本身 JS rendering 能力也有限。→ Bing Webmaster Tools 與 OAI-SearchBot 可及性是兩條獨立的分發渠道，initial HTML 完整性同時決定三條路徑的成敗。
 
 ### 2c. Cloudflare 預設封鎖 AI crawlers（本站託管於 Cloudflare）
 
@@ -43,113 +43,195 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 
 ### 2f. 其他已確認事實
 
-- JSON-LD 必須在 initial HTML 內，client-side 注入的 structured data 不可靠。
-- `SoftwareApplication`/`MobileApplication` schema 要出 Google rich result 需 `aggregateRating`（或 review）+ `offers`；沒有評分資料時 schema 本身仍有效（entity 理解用）。
+- Structured data：Google 可以處理 render 後 DOM 的 JSON-LD，但 AI crawlers 不執行 JS — **本站策略選擇 JSON-LD 進 initial HTML**，同時覆蓋兩者（這是本站取捨，非通則）。
+- `SoftwareApplication`/`MobileApplication` schema 要出 Google rich result 需 `aggregateRating`（或 review）+ `offers`；沒有評分資料時 markup 仍是有效的 entity 訊號，但不具 rich-result 資格。
 - sitemap `lastmod` 要準確（內容真的變才更新）；Google 與 Bing 都明確重視，Bing 指出 AI 搜尋依內容變化近即時調整（[Bing 官方部落格](https://blogs.bing.com/webmaster/July-2025/Keeping-Content-Discoverable-with-Sitemaps-in-AI-Powered-Search)）。`changefreq`/`priority` 基本被忽略。
 - AEO 內容模式：問句式標題（"What is X?" 優於 "X Overview"）、答案先行（標題下 2-3 句直接回答）、可獨立引用的具體句子（含數據/事實優於模糊形容）。
-- robots.txt AI 政策：搜尋/引用類 bot（OAI-SearchBot、ChatGPT-User、PerplexityBot、Claude-SearchBot）與訓練類 bot（GPTBot、ClaudeBot、Google-Extended、CCBot）應分開決策 — 要 AI 可見度就 allow 搜尋類；訓練類是獨立的授權選擇。
+- robots.txt AI 政策：搜尋/引用類 bot（OAI-SearchBot、ChatGPT-User、PerplexityBot、Claude-SearchBot）與訓練類 bot（GPTBot、ClaudeBot、Google-Extended、CCBot）應分開決策。本站 robots.txt 已是 `User-agent: * Allow: /`，顯式列 bot 是政策文件化而非行為修復；真正改變行為的是訓練類 Disallow 與 Cloudflare edge 設定。
 - IndexNow 對小型靜態站效益有限（官方生態文件：傳統 crawling 已足夠），可後補。
 
 ## 3. 現況缺口
 
 | # | 缺口 | 影響 |
 |---|------|------|
-| 1 | CSR 空殼 HTML（body 無內容） | AI 引擎完全看不到內容；Bing 部分看不到 | 
+| 1 | CSR 空殼 HTML（body 無內容） | AI 引擎完全看不到內容；Bing 部分看不到 |
 | 2 | Cloudflare AI crawler 設定未確認 | 可能在 edge 層直接擋掉真 AI bot，robots.txt 再開放也沒用 |
-| 3 | 無 JSON-LD（Organization / MobileApplication / WebSite） | 搜尋引擎與 AI 缺乏 entity 資訊 |
-| 4 | 無 og:image / twitter:card / og:type / og:site_name | 社群與 AI 答案卡片無視覺呈現 |
-| 5 | sitemap 無 `lastmod` | 重爬優先序差，AI 搜尋 freshness 訊號缺失 |
-| 6 | 內容非答案導向；babbby / sotto / dingpos 無 FAQ 頁 | 缺乏可被 AI 引用的問答格式內容 |
-| 7 | Bing Webmaster Tools 未確認提交 | ChatGPT 引用鏈路的上游缺口 |
+| 3 | 所有子路由共用 app root 的 title/description（rewrite-seo-tags.mjs 只改 canonical/og:url） | privacy/terms/faq 無法以自身主題被搜到 |
+| 4 | 語言由 client-side 偵測（i18next localStorage/navigator），每路由單一 URL；babbby `<html lang="zh-Hant">` 但 meta 全英文 | prerender 會固化隨機語言；語言訊號自相矛盾 |
+| 5 | 無 JSON-LD（Organization / MobileApplication / WebSite） | 搜尋引擎與 AI 缺乏 entity 資訊 |
+| 6 | 無 og:image / twitter:card / og:type / og:site_name | 社群與 AI 答案卡片無視覺呈現 |
+| 7 | sitemap 無 `lastmod` | 重爬優先序差，AI 搜尋 freshness 訊號缺失 |
+| 8 | FAQ 答案只在展開時 render（`isOpen &&`）；babbby/sotto/dingpos 無 FAQ 頁 | prerender 也抓不到答案；缺可引用問答內容 |
+| 9 | babbby 頁面 App Store 連結是死的（`id6744145981` 回 404；正確為 `id6760455078`，經 iTunes lookup 驗證） | 使用者點擊直接失敗；entity 訊號錯誤 |
+| 10 | Bing Webmaster Tools 未確認提交；無任何成效基線 | ChatGPT 引用鏈路上游缺口；改動後無法量化 lift |
 
 ## 4. 實作計劃
 
-### P0 — 讓內容可被看見（最高影響）
+### 驗收框架：Release gate vs KPI
+
+每任務的「驗收」都是**部署時可確定驗證的 release gate**（HTTP 回應、HTML 內容斷言、validator、dashboard 設定截圖）。crawler 是否來訪、是否被引用、索引率——這些是**不可控的長期結果**，一律歸入 T11 的 30/60/90 天 KPI 監測，不作為任務完成門檻。
+
+### P0 — 基線與可見性
+
+**T0. 成效基線（改動前必做，否則永久失去對照組）**
+- Bing Webmaster Tools 驗證網域 + 提交 sitemap（可從 GSC 匯入）。
+- 記錄基線快照（存 `docs/drafts/seo-aeo-baseline.md` 或表格）：GSC 曝光/點擊 by page、Bing WMT 索引數、Cloudflare AI Crawl Control 各 crawler 請求數、固定查詢集（"Pikgeon"、"Pikgeon app"、"postcard tracking app"、各 app 品牌詞）在 ChatGPT/Perplexity/Google AI 的回答記錄（含日期）。
+- Gate：基線文件存在、查詢集固定、日期標記。
 
 **T1. 確認 Cloudflare AI 存取設定**（人工，10 分鐘）
-- Dashboard → alu-studio.com zone → AI Crawl Control → Crawlers：確認 AI search/assistant 類（OAI-SearchBot、ChatGPT-User、PerplexityBot、Claude 系列）為 Allow。
+- Dashboard → alu-studio.com zone → AI Crawl Control → Crawlers：AI search/assistant 類（OAI-SearchBot、ChatGPT-User、PerplexityBot、Claude 系列）設為 Allow；訓練類依 T2 決策。
 - 確認 Bot Fight Mode / Block AI Bots 未誤傷；managed robots.txt 維持關閉（自管 robots.txt）。
-- 驗收：AI Crawl Control 顯示 allowed requests > 0（部署後數週觀察）。
+- Gate：dashboard 設定截圖記錄於本 draft 或 baseline 文件。（crawler 實際來訪量 → T11 KPI。）
 
-**T2. Post-build prerender — 每個路由輸出完整 HTML**（核心工程項）
-- 方案：新增共用 `scripts/prerender.mjs` — CI build 後以 headless Chrome（puppeteer）serve `_site/` → render 每個 sitemap 路由 → 將 rendered DOM 寫回各路由的 `index.html`。現有 `copy-spa-pages.js` + `rewrite-seo-tags.mjs` 流程不變，prerender 接在其後。
-- 不採 vite-react-ssg：需改造 5 個 app 的進入點與路由結構，改動面大；post-build prerender 零 app 程式碼變更，一支腳本全站受益。
-- React `createRoot` 對 prerendered DOM 會整棵重繪（一次閃替），對靜態內容站可接受；若要消除可後續改 `hydrateRoot`（獨立任務，非阻塞）。
+**T2. robots.txt AI 政策文件化 + 訓練類 bot 決策**（15 分鐘）
+- 決策（Ohlulu）：訓練類 bot（GPTBot、ClaudeBot、CCBot、Google-Extended、Bytespider）allow 或 disallow。
+- 依決策寫入 robots.txt；搜尋類顯式 Allow 為政策文件化（現行 `*` Allow 已覆蓋，無行為變化）。
+- Gate：`curl https://alu-studio.com/robots.txt` 與決策一致。
+
+**T3. FAQ 答案常駐 DOM**（pikgeon，prerender 前置條件）
+- `FaqPage.jsx` 改為答案永遠在 DOM（`<details>`/CSS collapse 皆可，保留摺疊 UX），移除 `isOpen &&` 條件 render。
+- Gate：關閉狀態下 `document.querySelectorAll('.faq-card__answer')` 數量 = 題數（headless 驗證）。
+
+**T4. Post-build prerender — 每路由輸出完整 HTML**（核心工程項）
+- 新增共用 `scripts/prerender.mjs`：以 HTTP serve 組好的 `_site/`（絕不用 `file://`，保持 `/app/` base path 正確）→ puppeteer 逐 sitemap 路由 render → snapshot 寫回各路由 `index.html`。銜接點：現有 copy-spa-pages 之後、deploy 之前。
+- **CI/工具鏈配套（明確納入範圍）**：
+  - 根目錄 `package.json` 加 `puppeteer` devDependency + lockfile；deploy.yml 加 root `npm ci`。
+  - `_site/` 組裝從 workflow inline shell 抽成共用腳本（`scripts/assemble-site.mjs` 或 make target），本機與 CI 共用；prerender 接在 assemble 後。
+  - Makefile 加對應 target 供本機驗證。
+- **語言固定**：每 app 指定唯一 canonical 語言（決策表見 §Open questions）。Prerender 以乾淨 profile（無 localStorage/cookie）+ 明確 Chrome locale + `Accept-Language` 執行；斷言 rendered DOM 語言與該 app `<html lang>` 一致（babbby 的 lang 屬性依決策修正）。
+- 訪客體驗：使用者曾手選其他語言時，首屏為 canonical 語言、hydration 後切換 — 可接受；不做 per-locale URL（見 Open questions 未來項）。
+- React `createRoot` 對 prerendered DOM 整棵重繪（一次閃替）可接受；後續可改 `hydrateRoot`（獨立任務，非阻塞）。
 - Pilot：pikgeon 先行 → 驗證後套用其餘四個 app。
-- 驗收：`curl https://alu-studio.com/pikgeon/ | grep -c "<h1\|<h2"` > 0；每路由 HTML 含完整可見文字；`npm test`（worker regression）綠燈。
+- Gate（逐 sitemap URL 斷言，寫成可重跑腳本）：
+  - HTTP 200 且 body 含該路由**完整可見文字**（FAQ 頁逐題比對答案文字，非只數 heading）。
+  - DOM lang 一致性斷言通過。
+  - 無 browser console error / page error。
+  - `npm test`（worker regression）綠燈。
 
-**T3. robots.txt 明示 AI bot 政策**（15 分鐘）
-- 加入 AI 搜尋類 bot 的顯式 `Allow: /`（OAI-SearchBot、ChatGPT-User、PerplexityBot、Claude-SearchBot、Google-Extended 依授權意願決定）。訓練類（GPTBot、ClaudeBot、CCBot）由 Ohlulu 決策後寫入。
-- 驗收：`curl https://alu-studio.com/robots.txt` 內容符合決策。
+### P1 — Metadata 與 structured data
 
-### P1 — Structured data 與 meta 補全
+**T5. 每路由獨立 metadata manifest**
+- 建立 route metadata 清單（每 app 一份，含 title、description、og:title、og:description）；擴充 `rewrite-seo-tags.mjs` 於 copy/prerender 時逐路由套用（canonical/og:url 機制已存在，補齊其餘欄位）。
+- 例：`/pikgeon/privacy/` → title "Privacy Policy — Pikgeon"、description 描述隱私重點，而非 app 行銷句。
+- Gate：逐 sitemap URL 斷言 title 唯一、description 非 root 複本。
 
-**T4. JSON-LD 注入 initial HTML**（每 app 的 `index.html`，build-time 靜態）
-- home：`Organization`（Alu Studio）+ `WebSite`。
-- 各 app root：`MobileApplication` — name、operatingSystem（iOS）、applicationCategory、offers（price 0 或實際價格）、App Store URL；`aggregateRating` 僅在 App Store 有真實評分數時加入，並定期同步。
-- 驗收：[Rich Results Test](https://search.google.com/test/rich-results) 全數通過、無錯誤。
+**T6. JSON-LD（以 app manifest 為單一事實來源）**
+- 建立 `scripts/app-manifest.mjs`（或 JSON）：每 app 的正式名稱、平台（pikgeon/sotto 有 iOS+Android；babbby iOS；dingpos 未上架不寫商店 URL）、**經 iTunes/Play lookup 驗證的商店 URL**、類別、價格。修正 babbby 死連結（`id6744145981` → `id6760455078`，含 babbby 頁面本身的按鈕連結）。
+- 注入規則：`MobileApplication` 只出現在各 app landing route；privacy/terms/faq 的複本**剝除** app schema（在 copy/prerender 階段處理）。home 注入 `Organization` + `WebSite`。
+- `aggregateRating` 僅在商店有真實評分時加入並定期同步；否則省略。
+- Gate 拆分：全部頁面通過 [Schema Markup Validator](https://validator.schema.org/)（無錯誤、內容與頁面一致）；**僅**含真實 rating 的 app 要求 [Rich Results Test](https://search.google.com/test/rich-results) eligible。禁止捏造評分。
 
-**T5. og:image / twitter:card / og:type / og:site_name**（每 app）
-- 每 app 產一張 1200x630 og:image（app icon + 標語）；補 `twitter:card=summary_large_image`、`og:type=website`、`og:site_name=Alu Studio`。
-- 驗收：opengraph.xyz 或 Slack/Discord 貼連結預覽正確。
+**T7. og:image / twitter:card / og:type / og:site_name**（每 app）
+- 每 app 產 1200x630 og:image（app icon + 標語）；補 `twitter:card=summary_large_image`、`og:type=website`、`og:site_name=Alu Studio`。
+- Gate：opengraph.xyz 或 Slack/Discord 貼連結預覽正確。
 
-**T6. sitemap lastmod 自動化**（CI）
-- `scripts/` 新增 sitemap 產生腳本：以各路由來源檔的最後 git commit 日期為 `lastmod`，CI assemble `_site/` 時生成，取代手維護的 sitemap.xml。
-- 驗收：sitemap 每 URL 有 `lastmod` 且與 git 歷史一致；只有真變更的路由日期會動。
+**T8. sitemap lastmod 自動化**（CI，路由級精準 — critic round 2 後改版）
+- 方法：**輸出比對，stateless** — prerender 完成後，逐 sitemap 路由把新產出的 `_site/<route>/index.html` 與線上版（上一次 deploy 的事實狀態）比對：
+  - 內容有差 → 該路由 `lastmod` = 今天。
+  - 內容相同 → 沿用線上 sitemap.xml 中該路由的既有 `lastmod`；線上也沒有 → **省略**該路由的 lastmod（無訊號優於錯訊號）。
+  - 比對前正規化：去除 Vite content-hash 檔名段（`/assets/*-<hash>.<ext>`），避免純程式碼 refactor（無可見內容變化）灌水 lastmod；空白差異忽略。
+  - 線上抓取失敗（網路/新路由）→ 新路由記今天，其餘 fail-safe 沿用既有值。
+- 不用 git 日期（免 `fetch-depth: 0`、免 per-URL dependency graph）：比對的是「實際 served 內容是否改變」，比任何 source-file 代理訊號都準。
+- Gate：只改 A app 某頁 → 僅該路由 lastmod 更新，sibling 路由與 B app 全不動；重跑 build（無內容變更）→ 全部 lastmod 不變；docs/ commit → 不觸發任何變更。
 
 ### P2 — AEO 內容重構
 
-**T7. FAQ 頁補齊 + 答案導向重寫**
-- babbby / sotto / dingpos 新增 `/faq/` 路由（比照 pikgeon）；每頁 5-8 題。
-- 格式：問句式 H2（使用者真實查詢語言，如 "Does Pikgeon work offline?"）+ 標題下 2-3 句直接回答 + 細節展開。語意化 HTML（真 heading 階層，不是 div 樣式）。
-- 各 app 首頁文案改為可獨立引用的具體句子（例："Pikgeon tracks postcards with on-device OCR — no account, no cloud upload"），特性用事實與數字，不用空泛形容詞。
-- 驗收：prerendered HTML 中每個 FAQ 問答完整可見；人工抽測 ChatGPT/Perplexity 問 app 相關問題觀察引用。
+**T9. FAQ 補齊 + 答案導向重寫**
+- babbby / sotto / dingpos 新增 FAQ；**每個新路由必須同步四層**（缺一層即 404 或漏索引，worker 無 SPA fallback）：
+  1. React router route（App.jsx）
+  2. copy-spa-pages.js 路由清單
+  3. sitemap 產生清單
+  4. 站內導覽連結
+- CI gate：sitemap 每 URL 在 `_site/` 有對應 `index.html` 且線上回 200（納入 T4 斷言腳本）。
+- 內容格式：問句式 H2（使用者真實查詢語言）+ 2-3 句直接回答 + 細節；語意化 HTML；答案常駐 DOM（同 T3 結構）。
+- 各 app 首頁文案改為可獨立引用的具體句子（例："Pikgeon tracks postcards with on-device OCR — no account required"）。
+- Gate：prerendered HTML 含每題完整問答文字（逐題斷言）。
 
-**T8. home 站 entity 強化**
-- 明確陳述：studio 名稱、做什麼、四個 app 各一句事實描述 + 連結（與 llms.txt 內容一致）。
-- 驗收：home prerendered HTML 含上述內容。
+**T10. home entity 強化**
+- 明確陳述 studio 名稱、定位、四 app 各一句事實描述 + 連結（與 llms.txt、JSON-LD 一致）。
+- Gate：home prerendered HTML 含上述內容。
 
-### P3 — 分發與監測
+### P3 — 持續監測
 
-**T9. Bing Webmaster Tools**：驗證網域、提交 sitemap（可從 GSC 匯入）。驗收：Bing 索引頁數 >= sitemap URL 數的 8 成。
-**T10. 監測節奏**（每月）：GSC + Bing WMT 曝光/點擊；Cloudflare AI Crawl Control 的 crawler 請求數；手測 ChatGPT/Perplexity/Google AI 對 "Pikgeon"、"Babbby" 等品牌詞的回答與引用。
-**T11.（可選）IndexNow**：deploy workflow 加 ping。小站效益低，僅在 Bing 收錄遲緩時再做。
+**T11. 30/60/90 天 KPI 監測**（對照 T0 基線）
+- GSC + Bing WMT 曝光/點擊/索引數；Cloudflare AI Crawl Control 各 crawler 請求趨勢；固定查詢集在 ChatGPT/Perplexity/Google AI 的引用變化。
+- 每月記錄一次；90 天後總結 lift 並決定下一輪（如 blog/content marketing、hreflang 多語 URL）。
 
-## 5. 風險
+**T12.（可選）IndexNow**：deploy workflow 加 ping。僅在 Bing 收錄遲緩時做。
+
+## 5. Open questions（Ohlulu 決策）
+
+| # | 問題 | 建議 |
+|---|------|------|
+| 1 | 每 app 的 canonical 索引語言：現況 meta/llms.txt 全英文，babbby `lang="zh-Hant"`、pikgeon fallback zh。en 通吃 or babbby（育兒，台灣市場？）用 zh-Hant？ | 依各 app 主要市場定；名字有主市場者用該語言，全球市場用 en。多語 hreflang URL 留待 90 天 KPI 後評估 |
+| 2 | 訓練類 bot（GPTBot、ClaudeBot、CCBot、Google-Extended、Bytespider）allow 或 disallow？ | 個人偏好題：要曝光極大化就全 allow；介意內容餵訓練就 disallow 訓練類、保留搜尋類 |
+
+## 6. 風險
 
 | 風險 | 緩解 |
 |------|------|
-| Prerender 改變 build 產物 | pikgeon pilot 先行；`npm test` worker regression；部署後 curl 抽驗全路由 |
-| aggregateRating 造假風險（無評分卻標） | 僅在 App Store 有真實評分時加入；否則省略該欄位 |
-| lastmod 灌水反效果 | 以 git commit 日期為源，不人工填 |
-| Cloudflare edge 擋真 bot 而測不到 | 以 AI Crawl Control 分析面板驗證，不依賴 UA 偽裝測試 |
-| 訓練類 bot 授權屬內容授權決策 | T3 前由 Ohlulu 明確決定 allow/block 清單 |
+| Prerender 改變 build 產物 | pikgeon pilot；`npm test`；T4 斷言腳本逐 URL 驗證；本機 make target 可重現 CI 流程 |
+| Prerender 固化錯誤語言 | 乾淨 profile + 明確 locale + DOM lang 斷言（T4） |
+| JSON-LD 被複製到法律頁造成錯誤 entity 訊號 | T6 注入規則：landing route only，copy 階段剝除 |
+| aggregateRating 造假風險 | 僅真實評分才標；validator gate 檢查內容一致 |
+| lastmod 灌水反效果 | 輸出比對（T8）：只有 served 內容真改才更新；無法判定則省略；不人工填 |
+| Cloudflare edge 擋真 bot 而測不到 | 以 AI Crawl Control 面板驗證（T1 截圖 + T11 趨勢），不依賴 UA 偽裝測試 |
+| 商店連結/平台資訊錯誤 | T6 app manifest 經 iTunes/Play lookup API 驗證後才寫入 |
 
-## 6. 執行順序與工作量
+## 7. 執行順序與工作量
 
 | 階段 | 任務 | 預估 |
 |------|------|------|
+| P0 | T0 基線 + Bing WMT | 1 hr（人工為主） |
 | P0 | T1 Cloudflare 確認 | 10 min（人工） |
-| P0 | T2 prerender pilot + 全站 | 0.5-1 天 |
-| P0 | T3 robots.txt | 15 min |
-| P1 | T4-T6 schema / og / sitemap | 0.5 天 |
-| P2 | T7-T8 內容重構 | 1-2 天（含文案） |
-| P3 | T9-T11 分發監測 | 1-2 hr |
+| P0 | T2 robots.txt 政策 | 15 min |
+| P0 | T3 FAQ DOM 常駐 | 1 hr |
+| P0 | T4 prerender pilot + 全站 + CI 配套 | 1-1.5 天 |
+| P1 | T5 metadata manifest | 0.5 天 |
+| P1 | T6-T7 JSON-LD + og | 0.5 天 |
+| P1 | T8 sitemap lastmod | 2-3 hr |
+| P2 | T9-T10 內容重構 | 1-2 天（含文案） |
+| P3 | T11-T12 監測 | 每月 0.5 hr |
 
 ## Checklist
 
-- [ ] T1 Cloudflare AI Crawl Control 確認並截圖記錄
-- [ ] T2a prerender 腳本 + pikgeon pilot
-- [ ] T2b 全站 rollout（home/babbby/sotto/dingpos）
-- [ ] T3 robots.txt AI 政策（含訓練類 bot 決策）
-- [ ] T4 JSON-LD x5 apps
-- [ ] T5 og:image x5 + meta 補全
-- [ ] T6 sitemap lastmod 自動化
-- [ ] T7 FAQ x3 新增 + 全站答案導向文案
-- [ ] T8 home entity 強化
-- [ ] T9 Bing Webmaster Tools
-- [ ] T10 監測節奏建立（首次基線記錄）
-- [ ] T11 (optional) IndexNow
+- [ ] T0 Bing WMT 驗證 + sitemap 提交 + 基線快照（含 AI 查詢集記錄）
+- [ ] T1 Cloudflare AI Crawl Control 確認 + 截圖記錄
+- [ ] T2 robots.txt 政策（含訓練類 bot 決策）
+- [ ] T3 pikgeon FAQ 答案常駐 DOM
+- [ ] T4a prerender + assemble 腳本 + CI 配套（root deps、fetch flow、make target）
+- [ ] T4b pikgeon pilot 通過全部 gate
+- [ ] T4c 全站 rollout（home/babbby/sotto/dingpos）
+- [ ] T5 route metadata manifest x5 apps
+- [ ] T6 app manifest（驗證商店 URL）+ JSON-LD 注入規則 + babbby 死連結修正
+- [ ] T7 og:image x5 + meta 補全
+- [ ] T8 sitemap lastmod 自動化（輸出比對）
+- [ ] T9 FAQ x3 新增（四層同步）+ 答案導向文案
+- [ ] T10 home entity 強化
+- [ ] T11 首次 30 天 KPI 記錄
+- [ ] T12 (optional) IndexNow
+
+## Review Dispositions
+
+Critic（openai-codex/gpt-5.6-sol）兩輪審查，2026-07-26。Round 1：13 findings（6 P1 / 5 P2 / 2 P3）→ 全數接受並修訂本文件。Round 2：12 CONCEDE、1 HOLD。
+
+| # | Finding | 處置 |
+|---|---------|------|
+| 1 | P1 prerender 語言策略未定義（i18next client 側偵測） | Accept → T4 canonical 語言 + locale 固定 + DOM lang 斷言；決策見 §5 |
+| 2 | P1 FAQ 答案只在展開時 render | Accept → 新增 T3（prerender 前置條件） |
+| 3 | P1 每路由獨立 title/description 缺失 | Accept → 新增 T5 route metadata manifest |
+| 4 | P1 lastmod shallow checkout + 依賴集 | Accept；round 2 HOLD 指 app 級日期灌水 sibling 路由 → 採納，改為輸出比對（路由級精準、stateless、無法判定則省略），優於雙方原方案 |
+| 5 | P1 Rich Results 驗收矛盾 | Accept → T6 gate 拆分 validator / eligibility |
+| 6 | P2 Puppeteer/CI wiring 未規格化 | Accept → T4 納入 root deps、assemble 腳本、make target |
+| 7 | P2 FAQ 路由同步層不足 | Accept → T9 四層同步 + CI 200 gate |
+| 8 | P2 structured data 無 source of truth | Accept → T6 app manifest（含 babbby 死連結修正） |
+| 9 | P1 不可控 KPI 當驗收 | Accept → §4 release gate vs KPI 框架 |
+| 10 | P2 92% Bing 依賴單一來源 | Accept → §2b 改三路徑叙述 + OpenAI 官方來源 |
+| 11 | P2 基線排在改動後 | Accept → T0 基線前置 |
+| 12 | P3 robots.txt Allow 無行為差異 | Accept → T2 重定位為政策文件化 |
+| 13 | P3 JSON-LD initial-HTML 過度絕對 | Accept → §2f 改為本站策略非通則 |
+
+HOLD #4 最終處置：caller 接受 critic 立場，T8 改版後失效模式（sibling 路由 lastmod 膨脹）已消除 — 無遗留爭議。
 
 ## Sources
 
@@ -158,6 +240,7 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 - [Vercel + MERJ — The rise of the AI crawler](https://vercel.com/blog/the-rise-of-the-ai-crawler)（AI crawlers 不執行 JS 的原始研究）
 - [Cloudflare — Manage AI crawlers](https://developers.cloudflare.com/ai-crawl-control/features/manage-ai-crawlers/)、[Managed robots.txt](https://developers.cloudflare.com/bots/additional-configurations/managed-robots-txt/)
 - [Google — SoftwareApplication structured data](https://developers.google.com/search/docs/data-types/software-app)
+- [OpenAI — Overview of OpenAI crawlers](https://platform.openai.com/docs/bots)（OAI-SearchBot 直接供 ChatGPT search）
 - [Bing — Keeping Content Discoverable with Sitemaps in AI Powered Search](https://blogs.bing.com/webmaster/July-2025/Keeping-Content-Discoverable-with-Sitemaps-in-AI-Powered-Search)
 - [SE Ranking — llms.txt 30 萬網域研究](https://seranking.com/blog/llms-txt/)、[OtterlyAI — llms.txt 實驗](https://otterly.ai/blog/the-llms-txt-experiment/)
 - [Search Engine Journal — Google Drops FAQ Rich Results](https://www.searchenginejournal.com/google-drops-faq-rich-results-from-search/574429/)
