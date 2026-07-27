@@ -207,14 +207,14 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 - [x] T6 app manifest（商店 URL 已驗証）+ JSON-LD landing-only 注入 + babbby 死連結修正 — `1bf51d1`
 - [x] T7 og:image x5（1200x630，各 app 品牌色/字體）+ social meta 全數补齊 — `41b4b75`
 - [x] T8 sitemap lastmod 自動化（輸出比對，9 則純函式測試）— `39ce5f6`
-- [ ] T9 FAQ x3 新增（四層同步）+ 答案導向文案 — **未做，見 §8 交接**
-- [ ] T10 home entity 強化 — **未做，見 §8 交接**
+- [x] T9 FAQ x3 新增（四層同步）+ 答案導向文案 — `aee3688`（babbby）、`0cd17c5`（dingpos）、`08f45ec`（sotto 全 12 語）、`c84734b`（pikgeon landing 文案）
+- [x] T10 home entity 強化 — `859c25a`（含 DingPOS 卡片、10 語）
 - [ ] T11 首次 30 天 KPI 記錄
 - [ ] T12 (optional) IndexNow
 
 ## 8. 交接（2026-07-27）
 
-分支 `aeo-seo`，9 個實作 commit（+2 個文件 commit）。**尚未 merge 到 main，因此尚未部署**。
+分支 `aeo-seo`，17 個實作 commit（+文件 commit）。**尚未 merge 到 main，因此尚未部署**。
 
 ### 已上車（本機全綠）
 
@@ -222,22 +222,29 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 
 | 驗証 | 結果 |
 |------|------|
-| `node scripts/prerender.mjs` | 14/14 路由 |
-| `node scripts/verify-seo.mjs` | 14/14 路由 |
+| `node scripts/prerender.mjs` | 17/17 路由 |
+| `node scripts/verify-seo.mjs` | 17/17 路由 |
 | `npm test` | 26/26 |
 | `make site` | 端到端綠燈 |
 
-成果：`/pikgeon/` 從 **1,010 bytes 空殼變成 14,710 bytes 實內容**；FAQ 3 題答案全數進 HTML；每路由有獨立 title/description/og；landing 路由有 MobileApplication JSON-LD（法律頁零洩漏）；home 有 Organization + WebSite；5 張 og:image；sitemap 有準確 lastmod。
+成果：`/pikgeon/` 從 **1,010 bytes 空殼變成 14,710 bytes 實內容**；四個 app 各有 FAQ 頁（答案全數常駐 HTML）；每路由有獨立 title/description/og；landing 路由有 MobileApplication JSON-LD（法律頁零洩漏）；home 有 Organization + WebSite；5 張 og:image；sitemap 有準確 lastmod。站台從 14 條路由成長為 **17 條**。
+
+`/home/` 從 632 字元的標語頁改寫為 **1,538 字元的工作室實體頁**，並補上先前完全缺席的 DingPOS 卡片。
 
 ### 順手抓到的真 bug
 
 1. **pikgeon 子路由 favicon 全數 404** — `LOGO.PNG` 是相對路徑，被複製到 `privacy/`、`terms/`、`faq/` 後解析錯誤。prerender gate 抳出來的。
 2. **babbby 自己頁面的 App Store 按鈕是死連結** — `id6744145981` 回 404，正確為 `id6760455078`（經 iTunes lookup 驗証）。
 3. **pikgeon FAQ 答案本來永遠不進 HTML** — `{isOpen && ...}` 條件 render，收合時只有問題沒有答案。
+4. **pikgeon landing 頁從未提及 Pikmin Bloom** — 這個 app 的唯一用途就是整理 Pikmin Bloom 明信片，但 title、description、2,217 字元的 body 全都沒有這個詞，只在四層深的 FAQ 出現過。它最該擁有的查詢完全無法命中。`c84734b` 修正，並加 `REQUIRED_LANDING_TERMS` gate 防止再犯。
+5. **`verify-seo` 在未預渲染的空殼上會全綠通過** — 其餘檢查全部只讀 `<head>`，而空殼的 `<head>` 是完整的。若建置步驟順序被調換（例如 prerender 後又跑 assemble，會用 `dist/` 覆寫 `_site/`），網站會對爬蟲送出空殼而所有 gate 依然綠燈。`03cc3f6` 加入 rendered body 字數斷言修正。
+6. **prerender 語言鎖定失效** — Chrome `--lang` 不會改變 `navigator.language`，導致 babbby 的 zh-Hant 頁面實際渲染英文。改用 `evaluateOnNewDocument` 覆寫，並加 CJK 佔比 gate（實測 Latin 0-1% vs 中文 69-84%）。
 
 ### 需你審核（草稿）
 
 - **文案**：全部 route title / description（包含 5 個 root title 改寫）。內容都依據各 app 真實 locale 字串而寫，但語氣與措詞請你定調。
+- **FAQ 內容 x4 app（共 30 題）**：皆從已上線功能與隱私/條款推導，但你手上的真實使用者提問才是 AEO 引用價值最高的來源——建議對照一輪。
+- **工作室定位文案**：`/home/` 的 `profile.bio` / `profile.about`。這是回答引擎回答「Alu Studio 是什麼」時最可能引用的段落，措詞值得你親自定。
 - **og:image x5**：`<app>/public/og-image.png`。重新產生：`npm run og-images`（改 `scripts/generate-og-images.mjs` 的 `CARDS` 調顏色/文字）。
 
 ### 剩下的人工步驟
@@ -249,19 +256,21 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 3. **審核上述草稿** → merge `aeo-seo` → 自動部署。
 4. **merge 後驗証**（我可代勞）— 線上 curl 斷言、Rich Results / Schema Validator、社群連結預覽。這些 gate 在分支上跑不了（`deploy.yml` 只在 push to main 觸發）。
 
-### T9 / T10 未做的原因
+### T9 / T10 完成說明
 
-不是技術阻塞，是**工作型態不同**：
+原本判斷「需要 owner 提供真實 support 問題才能寫 FAQ」是**高估了阻塞程度**：FAQ 內容可從各 app 已上線的功能、隱私政策與條款推導，全部 30 題都有出處。你手上的真實使用者提問仍會讓內容更好，因此文案維持 DRAFT 待審。
 
-- sotto 有 **12 個語言**、home 有 **10 個**。T9（每 app 5-8 題 FAQ）對 sotto 就是 60-96 條翻譯，T10 也要 10 語。這是 `l10n-translator` 並行 fan-out（一語一 child）的工作，不是單一 session 的。
-- FAQ 內容需要**真實 support 問題**。我只能從產品描述推測，你手上才有使用者實際在問什麼——而這正是 AEO 引用價值最高的內容。
+多語翻譯採 `l10n-translator` 並行 fan-out（一語一 child），children 只寫 `/tmp`，repo 寫入全由父層負責並在合併前驗證結構與事實。共處理 sotto 12 語、home 10 語、pikgeon 16 語。
 
-執行方式：`/ralph resume seo-aeo-tail`（新 session，task file 已記錄 15/24 進度與全部決策）。建議先給我各 app 的常見問題（中文就好），再由 l10n-translator 撑多語。
+翻譯過程抓到兩類靠人工審查看不見的錯誤，兩者都已加自動化防護：
+
+1. **是非極性反轉**（sotto FAQ）— 英文問「要付費嗎」答「不」，ar/ru 譯者把問句改寫成「是免費的嗎」，答案就自相矛盾。es 譯者識破並主動迴避。
+2. **不實定價外溢**（home）— 英文把「免費下載」限定在 Pikgeon/Babbby/Sotto，若譯者擴大到 DingPOS 就是不實宣稱，且對看不懂該語言的審查者完全隱形。合併腳本現在會硬性擋下任何語言的「免費」詞出現在 DingPOS 區塊。
 
 ### 已知待追事項（不阻塞）
 
-- `home/src/App.jsx` 只列 sotto/pikgeon/babbby，**沒有 DingPOS**；home 的 og:description 也只提三個 app。T10 順便修。
-- dingpos hero 下載按鈕是 `href="#"`（未上架，但是線上死連結）。
+- ~~`home/src/App.jsx` 沒有 DingPOS~~ — 已於 `859c25a` 修正。
+- dingpos hero 下載按鈕是 `href="#"`（未上架，但是線上死連結）。**home 的 DingPOS 卡片刻意不放商店按鈕、也不提試用與定價**，避免在有可用商店連結的卡片旁暗示它可取得；是否加「尚未發行」標籤請你決定。
 - `aggregateRating` 全部省略：商店目前 Pikgeon/Babbby 0 評分、Sotto 1 評分，沒有誠實的聚合值可發。`verify-seo` 會在出现評分欄位時 fail，防止日後造假。等評分數有意義後再加（需同步機制）。
 - `1bf51d1` 的 commit message 寫「tests 21/21」，實際是 17/17（当时）。已 push，修正需 force-push——未自行處理。
 
