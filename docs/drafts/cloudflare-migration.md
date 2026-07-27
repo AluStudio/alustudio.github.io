@@ -72,7 +72,8 @@ GitHub 官方僅保證「DNS 正確指向 GitHub」時的 custom-domain redirect
 - [x] 切換前：以 `gh api`（或 Settings → Pages）設定 custom domain = `alu-studio.com` — 以 `gh api -X PUT repos/.../pages -f cname='alu-studio.com'` 完成
 - [x] 切換後立即驗證（gate）：`curl -IL https://alustudio.github.io/pikgeon/privacy?x=1` 等代表路徑，須為 **path/query-preserving 301** 到新網域 — ✅ **GATE 通過**：`301` 且 `?x=1` 完整保留（詳見「上線後實測結果」）
 - [x] **順序約束**：Gate 通過前不得移除 GH Pages 部署能力（Phase 1 的 workflow 改造保留可 `git revert` 的單一 commit，作為 Pages fallback 回復路徑）；Pages custom-domain 設定與最後一次 Pages 部署為**永久保護不變量**，任何時候都不得移除 — 已遵守：gate 通過前 `deploy.yml` 改造維持為單一可 revert commit `9646c21`，Pages 最後一次部署未被移除（現仍在服務 `app-ads.txt`，見下）
-- [x] ~~Gate 通過 → 進行 GSC Change of Address~~ — **評估後決定不做**（2026-07-25，見下方 Decision Record）。舊 property 從未建立，而舊網域已全面 301，重建驗證的成本遠大於效益
+- [x] ~~Gate 通過 → 進行 GSC Change of Address~~ — **評估後決定不做**（2026-07-25，見下方 Decision Record）。舊網域已全面 301，重建驗證的成本遠大於效益
+  - **更正（2026-07-27）**：原文寫「舊 property 從未建立」不實。`https://alustudio.github.io/sotto/` 這個網址前置資源實際存在，驗證檔 `sotto/public/google9c954b37d1869b6e.html` 於 2026-04-29（commit `6e7d0af`）加入，早於遷移三個月。遷移後該網址全面 301，GSC 判定驗證失效。結論不變（不做 Change of Address），但理由是「舊 property 已無內容可監測且 Domain property 已涵蓋全站」，而非「不存在」。該 property 已於 2026-07-27 在 GSC 刪除
 - [x] **301 例行監控**：新增 monthly cron workflow，打 2-3 個代表舊網址斷言 path-preserving 301（301 屬未文件化行為，gate 通過一次不等於永久有效；失敗時發 alert 而非無聲 SEO 洩漏）
 - [x] **Repo guardrails**：repo description + AGENTS.md + README 明文「本 repo 同時是 alu-studio.com 的程式碼與永久 301 錪點，禁止改名 / 刪除 / archive」— repo 本無 README.md，改用 AGENTS.md（本 repo 實際的文件入口）承載；description 已透過 `gh repo edit` 設定
 - [x] **Gate 失敗 → 停止並回報**：meta-refresh 不是 301，不符鎖定需求。屆時以 `ask_me` 提選項（如：舊網域改部署 canonical-only stub、接受較弱的 canonical 訊號、或重新評估託管架構），不得擅自宣稱 fallback 等效。重設計對象是 redirect 機制，不是 repo 佈局 — **未觸發**：gate 一次通過，無需啟動此升級路徑
