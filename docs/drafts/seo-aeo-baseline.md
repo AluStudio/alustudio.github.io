@@ -53,14 +53,32 @@ Bing 特別重要：ChatGPT 的三條無 JS 取得路徑中，有一條就是 Bi
 3. 讓 Alu Studio 帳號**自己驗證一次**（重點，參見下方）。
 4. 確認第 3 步成功後，才移除個人帳號。
 
-### 第 3 步：建議直接改用 Domain property
+### 第 3 步：改用 Domain property（已完成，2026-07-27）
 
-既然要搬，順便把三個憑證收成一個。**Domain property** 一次涵蓋 http/https、apex 與所有子網域、所有路徑（含 `/sotto/`），用 DNS TXT 驗證。
+既然要搬，順便把憑證收成一個。**Domain property** 一次涵蓋 http/https、apex 與所有子網域、所有路徑（含 `/sotto/`）。
 
-1. Alu Studio 帳號 → 新增資源 → 選「網域」（非「網址前置字元」）→ 輸入 `alu-studio.com`
-2. Google 給一組**新的** TXT 值
-3. Cloudflare DNS 新增一筆 TXT，**不要動舊那筆**。同一名稱下多筆 `google-site-verification` TXT 可以並存，Google 只找自己那一值
-4. 驗證通過後，提交 sitemap
+官方重點：**DNS 是驗證網域資源的唯一方法**，HTML 檔與 HTML 標記「不得用於網域資源」。另外「如果你針對網址前置字元資源使用這個方法，系統也會自動驗證網域資源」。
+
+**實際結果**：Alu Studio 帳號建網域資源時直接跳「已自動驗證擁有權 / 驗證方法：未知」，**沒有**發新 TXT，DNS 也沒新增筆數。來源就是既有的 `1ihDEQ...`。
+
+由此可推定憑證歸屬：
+
+| 憑證 | 屬於 | 驗證的資源 |
+|------|------|--------------|
+| DNS TXT `1ihDEQ...` | Alu Studio 帳號 | 網域資源（全站）|
+| 根目錄 `google9c954b37d1869b6e.html` | 個人帳號 | 網址前置 `https://alu-studio.com/` |
+| `sotto/public/` 同名檔 | 個人帳號 | 網址前置 `https://alu-studio.com/sotto/` |
+
+### 第 3b 步：把「未知」換成你掌握的方法（先做這個）
+
+「驗證方法：未知」代表 Google 沒有指向一把你可辨識的權杖，對話框也直接建議你新增方法。在確定歸屬前不要刪任何東西。
+
+1. Alu Studio 帳號 → 設定 → **擁有權驗證**
+2. 看這頁列出的現行驗證方法——這是判斷 `1ihDEQ...` 到底屬誰的**決定性證據**
+3. 新增一個 DNS 驗證方法，Google 會發一組新 TXT 值
+4. Cloudflare DNS 新增那筆 TXT，**舊那筆先留著**。同名多筆 `google-site-verification` TXT 可並存，Google 只比對自己那一值
+5. 驗證通過後，該頁應顯示一個明確的 DNS 方法，而非「未知」
+6. 提交 sitemap
 
 ### 第 4 步：移除個人帳號（這裡有坑）
 
@@ -70,9 +88,9 @@ Bing 特別重要：ChatGPT 的三條無 JS 取得路徑中，有一條就是 Bi
 
 | 個人帳號的 property 類型 | 要刪的憑證 |
 |--------------------------|--------------|
-| Domain property | Cloudflare DNS 上的舊 TXT `1ihDEQ...` |
 | 網址前置 `https://alu-studio.com/` | repo 根目錄的 `google9c954b37d1869b6e.html` |
 | 網址前置 `https://alu-studio.com/sotto/` | `sotto/public/google9c954b37d1869b6e.html` |
+| （若第 3b 步發現 TXT 屬個人帳號）| 舊 TXT `1ihDEQ...`，**但要先確定 Alu Studio 帳號已有自己的 TXT** |
 
 repo 裡那兩個 HTML 檔由我移除，告訴我即可。**確認 Alu Studio 帳號的 Domain property 驗證通過之後再刪**。
 
