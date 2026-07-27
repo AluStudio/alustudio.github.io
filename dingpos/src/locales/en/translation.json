@@ -3,7 +3,8 @@
     "home": "Home",
     "pricing": "Pricing",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "faq": "FAQ"
   },
   "hero": {
     "eyebrow": "Point of Sale for iPad",
@@ -219,6 +220,44 @@
     "contact": {
       "title": "Contact us",
       "desc": "If you have any questions about these Terms of Use, please contact us at:"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "What shop owners ask before switching to DingPOS.",
+    "items": {
+      "offline": {
+        "q": "Does DingPOS work without an internet connection?",
+        "a": "Yes. DingPOS is server-less and needs no account, so checkout keeps working with no internet at all. Your products, orders and customers stay on your own iPad rather than on someone else's server."
+      },
+      "pricing": {
+        "q": "How much does DingPOS cost?",
+        "a": "A 30-day full-feature free trial with no credit card required, then NT$299 per month. There are no transaction fees and no hidden charges — the subscription runs through Apple App Store In-App Purchase, with RevenueCat managing subscription status."
+      },
+      "data_after_trial": {
+        "q": "What happens to my data when the trial or subscription ends?",
+        "a": "Your data is always kept. Nothing is deleted when a trial expires, and you can resubscribe at any time and carry on where you left off."
+      },
+      "storage": {
+        "q": "Where is my business data stored?",
+        "a": "Locally on your device. Unless you actively turn on cloud backup, none of it leaves the iPad. DingPOS does not collect, transmit or share your business content."
+      },
+      "backup": {
+        "q": "How does backup work?",
+        "a": "Backup is optional and goes to your own cloud account — pick one of iCloud, Google Drive or Dropbox. Backups are manual and run whenever you trigger them, the latest 5 snapshots are kept, product images sync incrementally, and a conflict always asks you which copy to keep instead of silently overwriting."
+      },
+      "setup_time": {
+        "q": "How long does setup take?",
+        "a": "About 10 minutes end to end. Pick your country and the currency, tax mode and tax rate are filled in for you; set your store name and logo; then start selling."
+      },
+      "device": {
+        "q": "What device do I need?",
+        "a": "An iPad. DingPOS is built specifically for iPad rather than as a scaled-up phone app."
+      },
+      "capabilities": {
+        "q": "Can it handle busy counters and product variants?",
+        "a": "Yes. Up to 10 carts can run at the same time, products can have variants such as size × colour each with its own price and cost, and barcodes can be typed in or scanned with the camera. Negative stock is allowed so checkout is never blocked."
+      }
     }
   }
 }

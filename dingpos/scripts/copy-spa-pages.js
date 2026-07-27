@@ -30,6 +30,11 @@ const ROUTE_META = {
     description:
       "The terms that apply when you download, install, or use DingPOS, including its subscription terms.",
   },
+  faq: {
+    title: "FAQ — DingPOS",
+    description:
+      "Common DingPOS questions: checkout works fully offline, a 30-day free trial then NT$299 per month, business data stored on your own iPad, and optional backup to your own iCloud, Google Drive or Dropbox.",
+  },
 };
 
 const routes = Object.keys(ROUTE_META);

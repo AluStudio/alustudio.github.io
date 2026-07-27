@@ -92,6 +92,11 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
+              <Link className="nav-link text-center" to="/faq" onClick={collapseNav}>
+                {t("nav.faq")}
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link text-center" to="/privacy" onClick={collapseNav}>
                 {t("nav.privacy")}
               </Link>
