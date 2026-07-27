@@ -70,8 +70,10 @@ const apps = [
     color: "#4f6d8e",
     website: "/dingpos/",
     // No store links: DingPOS is not on the App Store yet, and a download
-    // button that goes nowhere is worse than no button at all.
+    // button that goes nowhere is worse than no button at all. The badge says
+    // so, otherwise the empty card just looks like an oversight.
     stores: [],
+    badgeKey: "common.coming_soon",
   },
 ];
 
@@ -140,7 +142,12 @@ function AppCard({ app }) {
           loading="lazy"
         />
         <div className="app-card__info">
-          <h2 className="app-card__name">{app.name}</h2>
+          <h2 className="app-card__name">
+            {app.name}
+            {app.badgeKey && (
+              <span className="app-card__badge">{t(app.badgeKey)}</span>
+            )}
+          </h2>
           <p className="app-card__tagline">{t(`${app.id}.tagline`)}</p>
         </div>
       </div>

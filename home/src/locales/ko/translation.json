@@ -19,7 +19,8 @@
     "rights": "All rights reserved."
   },
   "common": {
-    "website": "공식 웹사이트"
+    "website": "공식 웹사이트",
+    "coming_soon": "출시 예정"
   },
   "dingpos": {
     "tagline": "iPad용 POS 시스템",

@@ -19,7 +19,8 @@
     "rights": "All rights reserved."
   },
   "common": {
-    "website": "公式サイト"
+    "website": "公式サイト",
+    "coming_soon": "近日公開"
   },
   "dingpos": {
     "tagline": "iPad向けのPOSレジ",

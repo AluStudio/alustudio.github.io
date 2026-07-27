@@ -54,16 +54,15 @@ function HomePage() {
           <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
           <p className="hero-tagline">{t("hero.tagline")}</p>
           <p className="hero-desc">{t("hero.description")}</p>
-          {/* TODO: replace '#' with real App Store URL after launch */}
-          <a
-            href="#"
-            className="hero-cta"
-            onClick={(e) => e.preventDefault()}
-          >
+          {/* Pre-launch. At App Store launch, restore the real CTA:
+              <a href="<store URL>" className="hero-cta">
+                <i className="bi bi-apple"></i>{t("hero.download")}
+              </a>
+              and re-add the trial note (see git history for hero.note). */}
+          <span className="hero-cta hero-cta--pending" aria-disabled="true">
             <i className="bi bi-apple"></i>
-            {t("hero.download")}
-          </a>
-          <p className="hero-note">{t("hero.note")}</p>
+            {t("hero.coming_soon")}
+          </span>
         </div>
       </section>
 
