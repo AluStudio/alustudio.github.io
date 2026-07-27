@@ -10,6 +10,9 @@ read_when:
 **Status**: In-flight draft（critic 審查後 rev 2）
 **Scope**: alu-studio.com 全站（home + pikgeon + babbby + sotto + dingpos）
 
+**搭配文件**：[seo-aeo-copy-review.md](./seo-aeo-copy-review.md)（待審文案彙整）、
+[seo-aeo-baseline.md](./seo-aeo-baseline.md)（T0 基線記錄表，**merge 前**必填）。
+
 ## 1. 背景與目標
 
 四個 app support 網站 + 一個 studio profile 站，皆為 Vite + React CSR SPA。目標：
@@ -251,9 +254,9 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 
 順序重要：**T0 基線必須在 merge 前做**，否則永遠失去對照組。
 
-1. **T0 基線**（merge 前）— Bing WMT 驗証網域 + 提交 sitemap；記錄 GSC / Bing / Cloudflare AI Crawl Control 目前數字；固定查詢集（"Pikgeon"、"Pikgeon app"、"postcard tracking app" 等）跑一轪 ChatGPT / Perplexity / Google AI 並記日期。
+1. **T0 基線**（merge 前）— 照 [seo-aeo-baseline.md](./seo-aeo-baseline.md) 填：帳號設定、索引與流量數字、AI 爬蟲抓取量，以及 10 題固定查詢集在 ChatGPT / Perplexity / Google AI 三平台的結果。查詢需**逐字照用**，換句話問就失去對照意義。
 2. **T1 Cloudflare** — AI Crawl Control 確認 AI search 類為 Allow（訓練類依 §5 決議也是 allow），確認 Bot Fight Mode 未誤傷，managed robots.txt 維持關閉。截圖存檔。
-3. **審核上述草稿** → merge `aeo-seo` → 自動部署。
+3. **審核草稿** — 全部待審文案已彙整於 [seo-aeo-copy-review.md](./seo-aeo-copy-review.md)。→ merge `aeo-seo` → 自動部署。
 4. **merge 後驗証**（我可代勞）— 線上 curl 斷言、Rich Results / Schema Validator、社群連結預覽。這些 gate 在分支上跑不了（`deploy.yml` 只在 push to main 觸發）。
 
 ### T9 / T10 完成說明
