@@ -1,23 +1,28 @@
 {
   "profile": {
-    "bio": "Indie-App-Studio — Werkzeuge für den Alltag"
+    "bio": "Indie-App-Studio — kleine, fokussierte Apps für iPhone, iPad und Android.",
+    "about": "Alu Studio entwickelt Apps, die jeweils eine einzige Alltagsaufgabe richtig gut erledigen. Bisher sind es vier: Pikgeon für Postkarten-Sammler, Babbby für Eltern kleiner Kinder, Sotto zum Erinnern an die Menschen, die dir wichtig sind, und DingPOS für kleine Geschäfte. Pikgeon, Babbby und Sotto stehen kostenlos zum Download bereit."
   },
   "pikgeon": {
     "tagline": "Behalte deine Postkarten-Erinnerungen im Überblick",
-    "desc": "Intelligente OCR-Erkennung zur Verfolgung deiner Versandreise. Vollständige lokale Verarbeitung zum Schutz deiner Privatsphäre."
+    "desc": "Pikgeon verwandelt die Postkarten, die du in Pikmin Bloom erhältst, in ein durchsuchbares Versandprotokoll. Teile einen Screenshot, und die Offline-OCR liest Datum, Ort und Absender aus und ordnet sie automatisch deinen Freunden zu — alles auf deinem Gerät, ohne dass etwas hochgeladen wird."
   },
   "babbby": {
     "tagline": "Tägliche Aktivitätsideen für 0–6 Jahre",
-    "desc": "Meilensteine festhalten, Routinen aufbauen und jeden Tag sinnvoll gestalten — mit über 340 Aktivitäten."
+    "desc": "Babbby schlägt Aktivitäten für Kinder von 0 bis 6 Jahren vor, ausgewählt aus einer Bibliothek mit über 340 Ideen in 8 Kategorien. Filtere nach den Materialien, die du bereits zu Hause hast, und halte nebenbei Meilensteine fest."
   },
   "sotto": {
     "tagline": "Erinnere dich an die Details, die zählen",
-    "desc": "Was sie lieben, was sie nicht ausstehen können, die kleinen Dinge, die sie zum Lächeln bringen — sorgsam bewahrt, denn wer sich kümmert, vergisst nicht."
+    "desc": "Sotto führt für jeden Menschen, der dir wichtig ist, eine private Seite — was sie lieben, was sie nicht ausstehen können, und über 27 Messfelder wie Kleidungs- und Ringgrößen. Alles bleibt auf deinem Gerät, und du kannst die App mit Face ID oder Touch ID sperren."
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten."
   },
   "common": {
     "website": "Website"
+  },
+  "dingpos": {
+    "tagline": "Kassensystem für iPad",
+    "desc": "DingPOS ist ein Kassensystem für iPad, das vollständig auf dem Gerät läuft — kein Konto, kein Server, und es funktioniert auch ohne Internetverbindung. Deine Produkte, Bestellungen und Kunden bleiben auf deinem eigenen iPad."
   }
 }

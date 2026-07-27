@@ -1,18 +1,23 @@
 {
   "profile": {
-    "bio": "Indie app studio — tools for everyday life"
+    "bio": "Independent app studio — small, focused apps for iPhone, iPad, and Android.",
+    "about": "Alu Studio builds apps that each do a single everyday job well. There are four so far: Pikgeon for postcard collectors, Babbby for parents of young children, Sotto for remembering the people you care about, and DingPOS for small shops. Pikgeon, Babbby, and Sotto are free to download."
   },
   "pikgeon": {
     "tagline": "Keep Your Postcard Memories Organized",
-    "desc": "Smart OCR recognition to track your Pikmin Bloom mailing journey. Fully local processing to protect your privacy."
+    "desc": "Pikgeon turns the postcards you receive in Pikmin Bloom into a searchable delivery log. Share a screenshot and its offline OCR reads the date, location, and sender, then matches them to your friends — all on your device, with nothing uploaded."
   },
   "babbby": {
     "tagline": "Daily Activity Ideas for Ages 0–6",
-    "desc": "Track milestones, build routines, and make every day count with 340+ curated activities."
+    "desc": "Babbby suggests activities for children aged 0 to 6, drawn from a library of over 340 ideas across 8 categories. Filter by the materials you already have at home, and track milestones as you go."
   },
   "sotto": {
     "tagline": "Remember the Details That Matter",
-    "desc": "What they love, what they can't stand, the little things that make them smile — kept close, because caring is remembering."
+    "desc": "Sotto keeps a private page for each person you care about — what they love, what they can't stand, and over 27 measurement fields like clothing and ring sizes. Everything stays on your device, and you can lock the app with Face ID or Touch ID."
+  },
+  "dingpos": {
+    "tagline": "Point of Sale for iPad",
+    "desc": "DingPOS is a point-of-sale app for iPad that runs entirely on the device — no account, no server, and it keeps working with no internet. Your products, orders, and customers stay on your own iPad."
   },
   "footer": {
     "rights": "All rights reserved."

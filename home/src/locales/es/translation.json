@@ -1,23 +1,28 @@
 {
   "profile": {
-    "bio": "Estudio indie de apps — herramientas para la vida diaria"
+    "bio": "Estudio indie de apps — apps pequeñas y enfocadas para iPhone, iPad y Android.",
+    "about": "Alu Studio crea apps que hacen bien una sola tarea cotidiana. Hasta ahora hay cuatro: Pikgeon para coleccionistas de postales, Babbby para padres de niños pequeños, Sotto para recordar a las personas que te importan, y DingPOS para pequeños comercios. Pikgeon, Babbby y Sotto son gratis para descargar."
   },
   "pikgeon": {
     "tagline": "Mantén organizados tus recuerdos de postales",
-    "desc": "Reconocimiento OCR inteligente para rastrear tu viaje de envíos. Procesamiento completamente local para proteger tu privacidad."
+    "desc": "Pikgeon convierte las postales que recibes en Pikmin Bloom en un registro de envíos buscable. Comparte una captura de pantalla y su OCR offline lee la fecha, la ubicación y el remitente, y los empareja con tus amigos — todo en tu dispositivo, sin subir nada."
   },
   "babbby": {
     "tagline": "Ideas de actividades diarias para 0–6 años",
-    "desc": "Registra hitos, crea rutinas y haz que cada día cuente con más de 340 actividades seleccionadas."
+    "desc": "Babbby sugiere actividades para niños de 0 a 6 años, extraídas de una biblioteca de más de 340 ideas repartidas en 8 categorías. Filtra por los materiales que ya tienes en casa y registra los hitos a medida que avanzas."
   },
   "sotto": {
     "tagline": "Recuerda los detalles que importan",
-    "desc": "Lo que aman, lo que no soportan, los pequeños detalles que les hacen sonreír — guardados con cariño, porque querer es recordar."
+    "desc": "Sotto guarda una página privada para cada persona que te importa — lo que aman, lo que no soportan y más de 27 campos de medidas, como talla de ropa y de anillo. Todo se queda en tu dispositivo, y puedes bloquear la app con Face ID o Touch ID."
   },
   "footer": {
     "rights": "Todos los derechos reservados."
   },
   "common": {
     "website": "Sitio web"
+  },
+  "dingpos": {
+    "tagline": "Punto de venta para iPad",
+    "desc": "DingPOS es una app de punto de venta para iPad que funciona completamente en el dispositivo — sin cuenta, sin servidor, y sigue funcionando sin internet. Tus productos, pedidos y clientes se quedan en tu propio iPad."
   }
 }

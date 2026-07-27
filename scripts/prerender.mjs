@@ -33,6 +33,17 @@ const siteDir = join(repoRoot, "_site");
 const MIN_TEXT_LENGTH = 200;
 
 /**
+ * Per-route floors for routes where "not empty" is too low a bar. `/home/` is
+ * the studio's entity page: it is the one URL that has to state who Alu Studio
+ * is and what each app does, so an answer engine can cite it without stitching
+ * the rest of the site together. It rendered 632 chars before that copy existed,
+ * which passed the global floor while saying almost nothing.
+ */
+const ROUTE_MIN_TEXT_LENGTH = {
+  "/home/": 1200,
+};
+
+/**
  * Share of CJK characters expected in the rendered text, by script of the app's
  * canonical locale. A truthful `<html lang>` is not enough on its own: an app
  * whose client-side detector picks the wrong language will happily render
@@ -252,8 +263,9 @@ async function prerenderRoute(browser, port, route) {
         `rendered text is ${percent}% CJK but the canonical locale is "${app.locale}" — the app resolved a different language`
       );
     }
-    if (metrics.textLength < MIN_TEXT_LENGTH) {
-      errors.push(`rendered text too short (${metrics.textLength} < ${MIN_TEXT_LENGTH})`);
+    const minTextLength = ROUTE_MIN_TEXT_LENGTH[pathname] ?? MIN_TEXT_LENGTH;
+    if (metrics.textLength < minTextLength) {
+      errors.push(`rendered text too short (${metrics.textLength} < ${minTextLength})`);
     }
     if (metrics.headings === 0) {
       errors.push("no headings in rendered DOM");

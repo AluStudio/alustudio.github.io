@@ -63,6 +63,16 @@ const apps = [
       },
     ],
   },
+  {
+    id: "dingpos",
+    name: "DingPOS",
+    icon: `${base}dingpos-icon.png`,
+    color: "#4f6d8e",
+    website: "/dingpos/",
+    // No store links: DingPOS is not on the App Store yet, and a download
+    // button that goes nowhere is worse than no button at all.
+    stores: [],
+  },
 ];
 
 function LanguagePicker() {
@@ -181,6 +191,7 @@ function App() {
           />
           <h1 className="profile__name">Alu Studio</h1>
           <p className="profile__bio">{t("profile.bio")}</p>
+          <p className="profile__about">{t("profile.about")}</p>
           <a href="mailto:alustudio14@gmail.com" className="profile__contact">
             <i className="bi bi-envelope"></i>
             <span>alustudio14@gmail.com</span>

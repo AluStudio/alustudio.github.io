@@ -64,5 +64,8 @@ export const APP_MANIFEST = {
 export const ORGANIZATION = {
   name: "Alu Studio",
   url: "https://alu-studio.com/home/",
-  description: "Indie app studio building small, focused iOS and Android apps for everyday life.",
+  // Kept in sync with the studio positioning on /home/ and in llms.txt: iPad is
+  // named explicitly because DingPOS is iPad-only.
+  description:
+    "Independent app studio building small, focused apps for iPhone, iPad, and Android.",
 };

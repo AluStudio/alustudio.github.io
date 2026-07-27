@@ -185,6 +185,17 @@ body {
     margin-bottom: 12px;
   }
 
+  // Studio positioning: the one block on this page that states who Alu Studio
+  // is and what each app does, so an answer engine can cite it without
+  // stitching the app cards together.
+  &__about {
+    max-width: 46ch;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: $text-muted;
+    margin-bottom: 14px;
+  }
+
   &__contact {
     display: inline-flex;
     align-items: center;
