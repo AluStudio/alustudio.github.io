@@ -2,7 +2,8 @@
   "nav": {
     "features": "Funzionalità",
     "privacy": "Privacy",
-    "terms": "Termini d'uso"
+    "terms": "Termini d'uso",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "Ricorda i dettagli che contano",
@@ -158,6 +159,44 @@
     "contact": {
       "title": "Contattaci",
       "desc": "Per domande su questi Termini d'Uso, contattaci a:"
+    }
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Ciò che le persone si chiedono prima di affidare le proprie note a Sotto.",
+    "items": {
+      "privacy": {
+        "q": "I miei dati vengono caricati online?",
+        "a": "No. Tutto quello che scrivi resta sul tuo dispositivo. Sotto non carica i tuoi dati su alcun server e non raccoglie, trasmette né condivide i tuoi contenuti personali."
+      },
+      "app_lock": {
+        "q": "Posso bloccare Sotto in modo che nessun altro possa leggerlo?",
+        "a": "Sì. Il blocco app è facoltativo e utilizza Face ID o Touch ID. La verifica biometrica è gestita interamente dal framework LocalAuthentication di Apple e resta nel secure enclave del tuo dispositivo — Alu Studio non può mai accedervi o conservarla."
+      },
+      "backup": {
+        "q": "Cosa succede alle mie note se perdo il telefono?",
+        "a": "Sotto non ha una sincronizzazione cloud propria, quindi le tue note restano sul dispositivo. Se hai attivato il backup iCloud, il backup del tuo dispositivo potrebbe includere i dati di Sotto; quel backup è regolato dalla politica sulla privacy di Apple ed è gestito nelle impostazioni iCloud del tuo dispositivo."
+      },
+      "what_to_record": {
+        "q": "Quali informazioni posso salvare su una persona?",
+        "a": "Ogni persona ha la sua pagina, con foto e biografia, note libere per le cose che ha detto o che ama, e oltre 27 campi di misurazione — altezza, peso, taglia delle scarpe, misura dell'anello e altro ancora — con conversione delle unità in tempo reale, così non devi mai chiedere prima di comprare un regalo."
+      },
+      "prompts": {
+        "q": "E se non so cosa chiedere a qualcuno?",
+        "a": "Scegli una domanda dal catalogo curato. Sotto apre una nuova nota già precompilata con quella domanda, così devi solo scrivere la sua risposta."
+      },
+      "platforms": {
+        "q": "Su quali dispositivi funziona Sotto?",
+        "a": "iPhone tramite l'App Store e Android tramite Google Play."
+      },
+      "price": {
+        "q": "Sotto costa qualcosa?",
+        "a": "No. Sotto è gratuito da scaricare."
+      },
+      "themes": {
+        "q": "Posso cambiare l'aspetto di Sotto?",
+        "a": "Sì. Sono inclusi sette temi colore, così puoi scegliere quello più adatto a te."
+      }
     }
   }
 }

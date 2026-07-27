@@ -30,6 +30,11 @@ const ROUTE_META = {
     description:
       "The terms that apply when you download, install, or use Sotto, the personal-notes app from Alu Studio.",
   },
+  faq: {
+    title: "FAQ — Sotto",
+    description:
+      "Common Sotto questions: notes never leave your device, optional Face ID / Touch ID app lock, 27+ measurement fields with unit conversion, and a curated catalogue of questions to open a note with.",
+  },
 };
 
 const routes = Object.keys(ROUTE_META);

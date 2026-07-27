@@ -2,7 +2,8 @@
   "nav": {
     "features": "Features",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "Remember the details that matter",
@@ -158,6 +159,44 @@
     "contact": {
       "title": "Contact Us",
       "desc": "If you have any questions about these Terms of Use, please contact us at:"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "What people ask before trusting Sotto with their notes.",
+    "items": {
+      "privacy": {
+        "q": "Is my data uploaded anywhere?",
+        "a": "No. Everything you write stays on your device. Sotto does not upload your data to any server, and does not collect, transmit or share your personal content."
+      },
+      "app_lock": {
+        "q": "Can I lock Sotto so nobody else can read it?",
+        "a": "Yes. App Lock is optional and uses Face ID or Touch ID. The biometric check is handled entirely by Apple's LocalAuthentication framework and stays in the secure enclave on your device — Alu Studio can never access or store it."
+      },
+      "backup": {
+        "q": "What happens to my notes if I lose my phone?",
+        "a": "Sotto has no cloud sync of its own, so your notes live on the device. If you have iCloud Backup switched on, your device backup may include Sotto's data; that backup is governed by Apple's privacy policy and managed in your device's iCloud settings."
+      },
+      "what_to_record": {
+        "q": "What can I record about someone?",
+        "a": "Each person gets their own page with photos and a bio, free-form notes for the things they said or love, and over 27 measurement fields — height, weight, shoe size, ring size and more — with real-time unit conversion so you never have to ask before buying a gift."
+      },
+      "prompts": {
+        "q": "What if I don't know what to ask someone?",
+        "a": "Pick a question from the curated catalog. Sotto opens a fresh note already prefilled with that question, so you only have to fill in their answer."
+      },
+      "platforms": {
+        "q": "Which devices does Sotto run on?",
+        "a": "iPhone via the App Store and Android via Google Play."
+      },
+      "price": {
+        "q": "Does Sotto cost anything?",
+        "a": "No. Sotto is free to download."
+      },
+      "themes": {
+        "q": "Can I change how Sotto looks?",
+        "a": "Yes. Seven colour themes are included, so you can pick the one that suits you."
+      }
     }
   }
 }

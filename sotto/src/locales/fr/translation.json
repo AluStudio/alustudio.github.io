@@ -2,7 +2,8 @@
   "nav": {
     "features": "Fonctionnalités",
     "privacy": "Confidentialité",
-    "terms": "Conditions d'utilisation"
+    "terms": "Conditions d'utilisation",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "Retiens les détails qui comptent",
@@ -158,6 +159,44 @@
     "contact": {
       "title": "Contact",
       "desc": "Pour toute question sur ces Conditions d'Utilisation, contactez-nous à :"
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Ce que les gens se demandent avant de confier leurs notes à Sotto.",
+    "items": {
+      "privacy": {
+        "q": "Est-ce que mes données sont envoyées quelque part ?",
+        "a": "Non. Tout ce que tu écris reste sur ton appareil. Sotto n'envoie jamais tes données vers un serveur, et ne collecte, ne transmet ni ne partage ton contenu personnel."
+      },
+      "app_lock": {
+        "q": "Puis-je verrouiller Sotto pour que personne d'autre ne puisse le lire ?",
+        "a": "Oui. Le verrouillage de l'app est optionnel et utilise Face ID ou Touch ID. La vérification biométrique est entièrement gérée par le framework LocalAuthentication d'Apple et reste dans l'enclave sécurisée de ton appareil — Alu Studio ne peut jamais y accéder ni la stocker."
+      },
+      "backup": {
+        "q": "Que deviennent mes notes si je perds mon téléphone ?",
+        "a": "Sotto ne propose pas de synchronisation cloud propre, donc tes notes restent sur ton appareil. Si tu as activé la sauvegarde iCloud, celle de ton appareil peut inclure les données de Sotto ; cette sauvegarde est régie par la politique de confidentialité d'Apple et gérée dans les réglages iCloud de ton appareil."
+      },
+      "what_to_record": {
+        "q": "Que puis-je noter sur quelqu'un ?",
+        "a": "Chaque personne a sa propre page avec des photos et une bio, des notes libres pour ce qu'elle a dit ou ce qu'elle aime, et plus de 27 champs de mensurations — taille, poids, pointure, tour de doigt, et plus encore — avec conversion d'unités en temps réel, pour ne plus jamais avoir à demander avant d'acheter un cadeau."
+      },
+      "prompts": {
+        "q": "Et si je ne sais pas quoi demander à quelqu'un ?",
+        "a": "Choisis une question dans le catalogue de questions. Sotto ouvre une nouvelle note déjà préremplie avec cette question, il ne te reste plus qu'à écrire sa réponse."
+      },
+      "platforms": {
+        "q": "Sur quels appareils Sotto est-il disponible ?",
+        "a": "Sur iPhone via l'App Store et sur Android via Google Play."
+      },
+      "price": {
+        "q": "Est-ce que Sotto est payant ?",
+        "a": "Non. Sotto est gratuit à télécharger."
+      },
+      "themes": {
+        "q": "Puis-je changer l'apparence de Sotto ?",
+        "a": "Oui. 7 thèmes de couleurs sont inclus, pour que tu puisses choisir celui qui te correspond."
+      }
     }
   }
 }
