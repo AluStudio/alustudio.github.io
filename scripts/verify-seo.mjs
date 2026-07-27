@@ -18,9 +18,29 @@ import { APPS, SITE_ORIGIN } from "./site-config.mjs";
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const siteDir = join(repoRoot, "_site");
 
+/**
+ * Floor for a route's rendered text, matching prerender.mjs's own definition of
+ * "not empty". Every other check in this file reads the <head>, which an
+ * un-prerendered shell carries in full — so without this one, a build that ran
+ * its steps out of order (assemble after prerender, say, which rewrites _site/
+ * from dist/) ships empty shells to crawlers with every gate still green.
+ */
+const MIN_RENDERED_TEXT = 200;
+
 function extract(html, re) {
   const match = re.exec(html);
   return match ? match[1].trim() : null;
+}
+
+/** Visible text in <body>, ignoring scripts and styles. */
+function bodyTextLength(html) {
+  const body = /<body[^>]*>([\s\S]*)<\/body>/i.exec(html)?.[1] ?? "";
+  return body
+    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&(?:[a-z]+|#\d+);/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim().length;
 }
 
 /** Parse every JSON-LD block on the page. Returns { blocks, parseErrors }. */
@@ -67,6 +87,7 @@ async function readRoutes() {
       ogType: extract(html, /<meta property="og:type" content="([^"]*)"/),
       ogSiteName: extract(html, /<meta property="og:site_name" content="([^"]*)"/),
       twitterCard: extract(html, /<meta name="twitter:card" content="([^"]*)"/),
+      renderedTextLength: bodyTextLength(html),
     });
   }
   return routes;
@@ -135,6 +156,11 @@ function checkRoutes(routes) {
     if (route.canonical && route.canonical !== `${SITE_ORIGIN}${route.pathname}`) {
       problems.push(
         `${route.pathname}: canonical is "${route.canonical}", expected "${SITE_ORIGIN}${route.pathname}"`
+      );
+    }
+    if (route.renderedTextLength < MIN_RENDERED_TEXT) {
+      problems.push(
+        `${route.pathname}: only ${route.renderedTextLength} chars of rendered text — page was not prerendered`
       );
     }
   }
