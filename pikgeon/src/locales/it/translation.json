@@ -9,8 +9,8 @@
     "faq": "FAQ"
   },
   "banner": {
-    "title": "Tieni organizzati i tuoi ricordi di cartoline.",
-    "subtitle": "Riconoscimento OCR intelligente per tracciare il tuo percorso di invio. Elaborazione completamente locale per proteggere la tua privacy.",
+    "title": "Tieni organizzate le tue cartoline di Pikmin Bloom.",
+    "subtitle": "Pikgeon trasforma le cartoline che ricevi in Pikmin Bloom in un registro di spedizioni ricercabile. Il suo OCR legge la data, il luogo e il mittente interamente sul tuo dispositivo, quindi non viene caricato nulla.",
     "app_store": {
       "sub": "Scarica su",
       "main": "App Store"

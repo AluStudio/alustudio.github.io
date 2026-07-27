@@ -9,8 +9,8 @@
     "faq": "자주 묻는 질문"
   },
   "banner": {
-    "title": "엽서의 추억을 스마트하게 정리하세요.",
-    "subtitle": "스마트 OCR 인식으로 우편 여정을 기록하세요. 개인정보 보호를 위한 완전 로컬 처리.",
+    "title": "Pikmin Bloom 엽서를 스마트하게 정리하세요.",
+    "subtitle": "Pikgeon은 Pikmin Bloom에서 받은 엽서를 검색 가능한 배송 로그로 만듭니다. OCR이 날짜, 장소, 보낸 사람을 전적으로 기기 내에서 인식하므로 그 어떤 정보도 서버로 업로드되지 않습니다.",
     "app_store": {
       "sub": "App Store에서",
       "main": "다운로드 하기"

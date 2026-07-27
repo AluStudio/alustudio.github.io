@@ -27,20 +27,35 @@ const siteDir = join(repoRoot, "_site");
  */
 const MIN_RENDERED_TEXT = 200;
 
+/**
+ * Terms an app's landing page must actually contain, checked against the
+ * rendered text rather than the <head>.
+ *
+ * Pikgeon exists to catalogue Pikmin Bloom postcards, yet its landing page once
+ * named the game nowhere at all — not in the title, not in the description, not
+ * in 2,217 characters of body text. It read as a generic "postcard organiser",
+ * so the one query it should own could not match it. These are the terms whose
+ * loss would be invisible in review but fatal to the page's purpose.
+ */
+const REQUIRED_LANDING_TERMS = {
+  pikgeon: ["Pikmin Bloom"],
+  dingpos: ["iPad"],
+};
+
 function extract(html, re) {
   const match = re.exec(html);
   return match ? match[1].trim() : null;
 }
 
 /** Visible text in <body>, ignoring scripts and styles. */
-function bodyTextLength(html) {
+function bodyText(html) {
   const body = /<body[^>]*>([\s\S]*)<\/body>/i.exec(html)?.[1] ?? "";
   return body
     .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, " ")
     .replace(/<[^>]+>/g, " ")
     .replace(/&(?:[a-z]+|#\d+);/gi, " ")
     .replace(/\s+/g, " ")
-    .trim().length;
+    .trim();
 }
 
 /** Parse every JSON-LD block on the page. Returns { blocks, parseErrors }. */
@@ -87,7 +102,7 @@ async function readRoutes() {
       ogType: extract(html, /<meta property="og:type" content="([^"]*)"/),
       ogSiteName: extract(html, /<meta property="og:site_name" content="([^"]*)"/),
       twitterCard: extract(html, /<meta name="twitter:card" content="([^"]*)"/),
-      renderedTextLength: bodyTextLength(html),
+      renderedText: bodyText(html),
     });
   }
   return routes;
@@ -158,10 +173,17 @@ function checkRoutes(routes) {
         `${route.pathname}: canonical is "${route.canonical}", expected "${SITE_ORIGIN}${route.pathname}"`
       );
     }
-    if (route.renderedTextLength < MIN_RENDERED_TEXT) {
+    if (route.renderedText.length < MIN_RENDERED_TEXT) {
       problems.push(
-        `${route.pathname}: only ${route.renderedTextLength} chars of rendered text — page was not prerendered`
+        `${route.pathname}: only ${route.renderedText.length} chars of rendered text — page was not prerendered`
       );
+    }
+    if (route.isAppRoot) {
+      for (const term of REQUIRED_LANDING_TERMS[route.appName] ?? []) {
+        if (!route.renderedText.includes(term)) {
+          problems.push(`${route.pathname}: landing page never mentions "${term}"`);
+        }
+      }
     }
   }
 

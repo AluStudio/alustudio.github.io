@@ -9,8 +9,8 @@
     "faq": "UKK"
   },
   "banner": {
-    "title": "Pidä postikortin muistosi järjestyksessä.",
-    "subtitle": "Älykäs OCR-tunnistus lähettämismatkasi seuraamiseen. Täysin paikallinen käsittely yksityisyytesi suojaamiseksi.",
+    "title": "Pidä Pikmin Bloom -postikorttisi järjestyksessä.",
+    "subtitle": "Pikgeon muuttaa Pikmin Bloomista saamasi postikortit haettavaksi toimituslokiksi. Sen OCR-tunnistus lukee päivämäärän, sijainnin ja lähettäjän kokonaan laitteellasi, joten mitään ei ladata palvelimelle.",
     "app_store": {
       "sub": "Lataa",
       "main": "App Storesta"

@@ -9,8 +9,8 @@
     "faq": "FAQ"
   },
   "banner": {
-    "title": "Behalte deine Postkarten-Erinnerungen im Überblick.",
-    "subtitle": "Intelligente OCR-Erkennung zur Verfolgung deiner Versandreise. Vollständige lokale Verarbeitung zum Schutz deiner Privatsphäre.",
+    "title": "Behalte deine Pikmin Bloom Postkarten im Überblick.",
+    "subtitle": "Pikgeon verwandelt die Postkarten, die du in Pikmin Bloom erhältst, in ein durchsuchbares Versandprotokoll. Die OCR liest Datum, Ort und Absender ausschließlich auf deinem Gerät aus, sodass nichts hochgeladen wird.",
     "app_store": {
       "sub": "Laden im",
       "main": "App Store"

@@ -9,8 +9,8 @@
     "faq": "Vanliga frågor"
   },
   "banner": {
-    "title": "Håll dina vykorts-minnen organiserade.",
-    "subtitle": "Smart OCR-igenkänning för att spåra din sändningsresa. Helt lokal bearbetning för att skydda din integritet.",
+    "title": "Håll dina Pikmin Bloom-vykort organiserade.",
+    "subtitle": "Pikgeon omvandlar vykorten du får i Pikmin Bloom till en sökbar leveranslogg. OCR-tekniken läser datum, plats och avsändare helt lokalt på din enhet, så inget laddas upp.",
     "app_store": {
       "sub": "Ladda ner på",
       "main": "App Store"
