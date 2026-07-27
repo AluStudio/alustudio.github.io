@@ -23,11 +23,62 @@ read_when:
 |------|------|------|
 | Bing Webmaster Tools | 驗證 `alu-studio.com` 網域 | 填 |
 | Bing WMT | 提交 `https://alu-studio.com/sitemap.xml` | 填 |
-| Google Search Console | 確認網域已驗證 | 填 |
+| Google Search Console | 完成 A2 帳號移轉，確認網域已驗證 | 填 |
 | GSC | 提交同一份 sitemap | 填 |
 | Cloudflare AI Crawl Control | 截圖目前設定（截圖路徑） | 填 |
 
+兩邊都請用**同一個長期帳號**（見 A2），別再分岔。
+
 Bing 特別重要：ChatGPT 的三條無 JS 取得路徑中，有一條就是 Bing 索引。
+
+---
+
+## A2. GSC 帳號移轉（個人帳號 → Alu Studio 帳號）
+
+背景：GSC 驗證**不是排他性的**，多個帳號可以同時驗證同一個資源，官方明言「每項資源的已驗證擁有者沒有上限」。也完全不影響 SEO。因此此事零風險，唯一要遵守的是順序。
+
+### 現有驗證憑證（已查證）
+
+| 憑證 | 位置 | 驗證範圍 |
+|------|------|----------|
+| HTML 檔 `google9c954b37d1869b6e.html` | repo 根目錄 | `https://alu-studio.com/` |
+| 同一個 HTML 檔 | `sotto/public/` | `https://alu-studio.com/sotto/` |
+| DNS TXT `google-site-verification=1ihDEQ...` | Cloudflare DNS | 整個網域（Domain property）|
+
+### 順序（先加後減，絕對不要先砂）
+
+1. 個人帳號 → 設定 → 使用者和權限 → 新增使用者 → 填 Alu Studio 帳號，權限選**擁有者**。
+   這步不需動 DNS 或檔案，立即生效（對方成為「委派擁有者」）。
+2. 用 Alu Studio 帳號登入，確認看得到資料。
+3. 讓 Alu Studio 帳號**自己驗證一次**（重點，參見下方）。
+4. 確認第 3 步成功後，才移除個人帳號。
+
+### 第 3 步：建議直接改用 Domain property
+
+既然要搬，順便把三個憑證收成一個。**Domain property** 一次涵蓋 http/https、apex 與所有子網域、所有路徑（含 `/sotto/`），用 DNS TXT 驗證。
+
+1. Alu Studio 帳號 → 新增資源 → 選「網域」（非「網址前置字元」）→ 輸入 `alu-studio.com`
+2. Google 給一組**新的** TXT 值
+3. Cloudflare DNS 新增一筆 TXT，**不要動舊那筆**。同一名稱下多筆 `google-site-verification` TXT 可以並存，Google 只找自己那一值
+4. 驗證通過後，提交 sitemap
+
+### 第 4 步：移除個人帳號（這裡有坑）
+
+官方：「如要新增或移除**已驗證擁有者**，你必須新增或移除該擁有者在網站上的權杖。」
+
+只從「使用者和權限」把人刪掉**無效**——只要憑證還在，介面會跳警告說該使用者可能重新取得存取權，而且真的會。要真正移除，必須刪掉**對應的那把憑證**：
+
+| 個人帳號的 property 類型 | 要刪的憑證 |
+|--------------------------|--------------|
+| Domain property | Cloudflare DNS 上的舊 TXT `1ihDEQ...` |
+| 網址前置 `https://alu-studio.com/` | repo 根目錄的 `google9c954b37d1869b6e.html` |
+| 網址前置 `https://alu-studio.com/sotto/` | `sotto/public/google9c954b37d1869b6e.html` |
+
+repo 裡那兩個 HTML 檔由我移除，告訴我即可。**確認 Alu Studio 帳號的 Domain property 驗證通過之後再刪**。
+
+### 後路
+
+DNS 在你手上，任何一步出錯都能重新驗證，不存在永久失去存取的情況。
 
 ---
 
