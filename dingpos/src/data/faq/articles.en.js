@@ -4,12 +4,14 @@
 // Block schema documented in articles.zh-Hant.js.
 
 export const categories = [
-  { key: "getting-started", icon: "bi-rocket-takeoff", label: "Getting Started" },
-  { key: "checkout", icon: "bi-basket3", label: "Checkout" },
-  { key: "products", icon: "bi-box-seam", label: "Products & Inventory" },
-  { key: "promotion", icon: "bi-tags", label: "Promotions & Loyalty" },
-  { key: "backup", icon: "bi-cloud-check", label: "Backup & Data" },
-  { key: "subscription", icon: "bi-credit-card", label: "Subscription & Billing" },
+  { key: "getting-started", icon: "bi-rocket-takeoff", label: "Getting Started", group: "faq" },
+  { key: "checkout", icon: "bi-basket3", label: "Checkout", group: "faq" },
+  { key: "products", icon: "bi-box-seam", label: "Products & Inventory", group: "faq" },
+  { key: "promotion", icon: "bi-tags", label: "Promotions & Loyalty", group: "faq" },
+  { key: "backup", icon: "bi-cloud-check", label: "Backup & Data", group: "faq" },
+  { key: "subscription", icon: "bi-credit-card", label: "Subscription & Billing", group: "faq" },
+  { key: "promotion-guide", icon: "bi-mortarboard", label: "Promotion Setup Guides", group: "guide" },
+  { key: "roadmap", icon: "bi-signpost-split", label: "Coming Soon", group: "roadmap" },
 ];
 
 export const articles = [
@@ -137,7 +139,7 @@ export const articles = [
       { type: "p", text: "Cash, Credit Card, and Line Pay are built in, and you can add any custom payment labels in Settings (e.g. Apple Pay, local wallets)." },
       { type: "p", text: "Payment methods are bookkeeping labels — DingPOS does not process actual payments. Take card or mobile payments with your existing terminal or app, then pick the matching label in DingPOS to record it. Cash payments calculate change automatically." },
     ],
-    related: ["multiple-carts", "void-order"],
+    related: ["roadmap-payment-integration", "multiple-carts", "void-order"],
   },
   {
     slug: "void-order",
@@ -149,7 +151,7 @@ export const articles = [
       { type: "p", text: "Voiding automatically reverses everything connected: tracked stock is restored, loyalty points earned on the order are taken back, and redeemed points are refunded. Voided orders stay in the list clearly marked, and are excluded from report revenue." },
       { type: "note", text: "Only full voids are supported — there are no partial refunds. To correct an order, void it and ring up a new, correct one." },
     ],
-    related: ["inventory-tracking", "loyalty-points"],
+    related: ["inventory-tracking", "roadmap-returns-exchanges", "loyalty-points"],
   },
 
   // ── Products & Inventory ──────────────────────────────────
@@ -172,9 +174,9 @@ export const articles = [
     keywords: ["barcode", "scan", "scanner", "duplicate", "camera"],
     content: [
       { type: "p", text: "Product barcodes can be typed in manually or scanned with the camera. Barcodes must be unique — if a barcode conflicts with another product when saving, DingPOS shows you which product it belongs to." },
-      { type: "p", text: "At checkout, the search field matches both product names and barcode prefixes, so a barcode scanner or manual entry pulls up the product instantly." },
+      { type: "p", text: "At checkout, the search field matches both product names and barcode prefixes \u2014 type a barcode to pull up the product instantly. For hardware barcode scanner plans, see \u201cWill physical barcode scanners be supported?\u201d" },
     ],
-    related: ["product-variants"],
+    related: ["product-variants", "roadmap-barcode-scanner"],
   },
   {
     slug: "inventory-tracking",
@@ -185,7 +187,7 @@ export const articles = [
       { type: "p", text: "Inventory tracking is a per-product toggle — turn it on in the product edit page and enter the current quantity. Each variant of a product tracks its own stock." },
       { type: "p", text: "Once enabled, sales deduct stock automatically, voids restore it, and you can adjust manually anytime. Every movement — sale, void, manual adjustment — is recorded in a complete ledger. Low stock is highlighted with a color warning." },
     ],
-    related: ["negative-inventory", "void-order"],
+    related: ["negative-inventory", "roadmap-purchase-orders"],
   },
   {
     slug: "negative-inventory",
@@ -219,7 +221,7 @@ export const articles = [
       },
       { type: "p", text: "Each promotion can be scheduled (Happy Hour windows, specific weekdays, across midnight), scoped to specific products, and controlled with priority, stacking rules, and usage limits. Qualifying promotions apply automatically at checkout — no discount codes needed." },
     ],
-    related: ["promotion-not-applied", "loyalty-points", "apply-discounts"],
+    related: ["guide-threshold", "guide-composite", "promotion-not-applied"],
   },
   {
     slug: "promotion-not-applied",
@@ -240,7 +242,7 @@ export const articles = [
       },
       { type: "p", text: "If everything checks out and it still won't apply, email us a screenshot of the promotion's settings and we'll help you dig in." },
     ],
-    related: ["create-promotion", "member-tiers"],
+    related: ["guide-schedule", "guide-priority-stacking", "create-promotion"],
   },
   {
     slug: "loyalty-points",
@@ -357,5 +359,249 @@ export const articles = [
       },
     ],
     related: ["free-trial", "after-trial"],
+  },
+  // ── New FAQ: checkout & report behavior ───────────────────
+  {
+    slug: "price-change-cart",
+    category: "checkout",
+    question: "If I change a product's price, does the cart update?",
+    keywords: ["price change", "reprice", "cart", "recalculate"],
+    content: [
+      { type: "p", text: "The cart shows the price at the moment the item was added. When you tap checkout confirm, DingPOS re-queries the latest price of every item — if anything changed, it alerts you with the updated prices before proceeding." },
+      { type: "p", text: "Promotions are also re-evaluated from scratch at confirmation. If the total, tax, or any discount amount changes as a result, a change summary is shown and you must confirm again — so the amount you see is exactly the amount recorded." },
+    ],
+    related: ["apply-discounts", "guide-priority-stacking"],
+  },
+  {
+    slug: "manual-discount-promotion",
+    category: "checkout",
+    question: "Can manual discounts and promotions be used together?",
+    keywords: ["manual discount", "promotion", "combine", "override"],
+    content: [
+      { type: "p", text: "Yes. The rule is \u201cmanual wins, layers stay independent\u201d:" },
+      {
+        type: "list",
+        items: [
+          "Manual item discount: that line no longer receives item-level promotions — your manual discount is treated as the final on-the-spot decision. The line's amount still counts toward spend thresholds, though.",
+          "Manual cart discount: applied after all promotions have been calculated, so the two coexist. If you enter more than the remaining total, it's automatically capped with a notice.",
+        ],
+      },
+      { type: "p", text: "Removing a manual discount restores the line's promotion eligibility on the next evaluation." },
+    ],
+    related: ["apply-discounts", "guide-priority-stacking"],
+  },
+  {
+    slug: "profit-not-tracked",
+    category: "products",
+    question: "How is profit reported if I didn't enter costs?",
+    keywords: ["cost", "profit", "margin", "reports", "not tracked"],
+    content: [
+      { type: "p", text: "Cost is an optional field. Products without a cost are marked \u201cprofit not tracked\u201d in reports and excluded from profit calculations — revenue is still counted in full, only profit is skipped." },
+      { type: "p", text: "To get complete profit reports, add costs on the product edit page; future orders will be included. Profit is calculated on after-discount revenue." },
+    ],
+    related: ["inventory-tracking", "roadmap-monthly-settlement"],
+  },
+
+  // ── Promotion Setup Guides ────────────────────────────────
+  {
+    slug: "guide-threshold",
+    category: "promotion-guide",
+    question: "Setting up a spend-threshold discount",
+    keywords: ["threshold", "spend", "guide", "setup", "tutorial"],
+    content: [
+      { type: "p", text: "Go to Settings → Promotions → New, pick the spend-threshold type, then:" },
+      {
+        type: "steps",
+        items: [
+          "Set the threshold amount and the discount (fixed amount or percentage).",
+          "Choose the scope: specific products, specific categories, or leave empty for store-wide.",
+          "Set the schedule: start date is required; leave the end date empty for an ongoing promotion.",
+          "Save — it activates on schedule and applies automatically at checkout, no codes needed.",
+        ],
+      },
+      { type: "note", text: "The threshold is checked against the subtotal of in-scope items, not the whole cart. A \u201cspend $1000 on Drinks\u201d promotion only counts drinks toward the threshold, and products marked \u201cexclude from promotions\u201d never count." },
+      { type: "p", text: "One behavior we're often asked about: if a higher-priority promotion applies first, the threshold is checked against the already-discounted amount — a cart that looks over the threshold can miss it by a little. To have the threshold judged first, give it a smaller priority number." },
+    ],
+    related: ["guide-priority-stacking", "create-promotion", "promotion-not-applied"],
+  },
+  {
+    slug: "guide-bogo",
+    category: "promotion-guide",
+    question: "Setting up buy-one-get-one and Nth-item deals",
+    keywords: ["bogo", "buy one get one", "nth item", "guide", "tutorial"],
+    content: [
+      { type: "p", text: "Create a promotion of the buy-N-get-N type: set how many to buy, how many to get, and the discount percent (100% = free). Scope it to specific products or a whole category — different products in the same category group together." },
+      {
+        type: "list",
+        items: [
+          "The discounted unit is the cheapest one in the group, valued at its current effective price — if an earlier promotion already discounted it, the BOGO amount is based on the discounted price, not the list price.",
+          "If you want the \u201c3rd item free\u201d badge to show the full list price, give this BOGO the smallest priority number so it calculates first. When a cart-wide discount runs first, the free item's displayed deduction is smaller than list price — a calculation-order property we've verified extensively, not a bug. Both orders land on nearly the same total; what changes is where the discount visibly sits.",
+        ],
+      },
+      { type: "p", text: "Tip: put your headline offer first in priority so the receipt's discount breakdown matches your marketing message." },
+    ],
+    related: ["guide-priority-stacking", "guide-threshold", "create-promotion"],
+  },
+  {
+    slug: "guide-points-multiplier",
+    category: "promotion-guide",
+    question: "Setting up bonus-points multipliers",
+    keywords: ["points multiplier", "double points", "guide", "tutorial"],
+    content: [
+      { type: "p", text: "Create a promotion of the points-multiplier type and set the multiplier (an integer of 2 or more). Optionally add a spend threshold (e.g. spend $500 → double points) and a schedule (e.g. Saturdays only)." },
+      {
+        type: "list",
+        items: [
+          "When several multipliers qualify at once, only the highest one applies — they never multiply or stack.",
+          "The spend threshold is checked after points redemption: if redeeming points drops the total below the threshold, the multiplier won't fire this time.",
+          "A member must be selected at checkout for points to accrue — orders without a member earn no points, so the multiplier has nothing to multiply.",
+        ],
+      },
+    ],
+    related: ["loyalty-points", "guide-schedule", "member-tiers"],
+  },
+  {
+    slug: "guide-tier-birthday",
+    category: "promotion-guide",
+    question: "Setting up member-tier and birthday offers",
+    keywords: ["tier", "birthday", "vip", "guide", "tutorial"],
+    content: [
+      { type: "p", text: "First create tiers under Settings → Member Tiers (e.g. Gold), then target the promotion at that tier. For birthday offers, set the condition to \u201cbirthday month\u201d." },
+      {
+        type: "list",
+        items: [
+          "The member must be selected at checkout for the offer to trigger — eligibility is judged against the currently selected member.",
+          "Birthday eligibility reads the member's birthday month, so fill in the birthday field; members without one are never treated as birthday customers.",
+          "Auto tier upgrades are judged when checkout completes; if the order is voided, an upgrade it triggered is rolled back automatically.",
+        ],
+      },
+    ],
+    related: ["member-tiers", "loyalty-points", "guide-schedule"],
+  },
+  {
+    slug: "guide-composite",
+    category: "promotion-guide",
+    question: "Setting up gifts, paid add-ons, and bundle prices",
+    keywords: ["gift", "add-on", "bundle", "buy a get b", "guide"],
+    content: [
+      { type: "p", text: "Three composite offer types are available: gift with purchase (buy A get B), paid add-on (add $X to get Y), and bundle price (any N for $X)." },
+      { type: "p", text: "Important: these offers never modify the cart automatically. When conditions are met, a suggestion banner appears on the cashier screen, and the cart changes only when the cashier taps Accept — deliberate, because gifts involve physical stock: someone needs to confirm it's on hand and the customer wants it." },
+      {
+        type: "list",
+        items: [
+          "After Decline, the same suggestion won't reappear for this cart; a new or cleared cart prompts again.",
+          "If a new suggestion appears before checkout confirmation, it must be Accepted or Declined before the order can be submitted.",
+          "Bundle price: when more qualifying items are in the cart than the bundle needs, the highest-priced ones are pre-selected — the cashier can re-pick before confirming.",
+          "Gift and add-on lines can't be discounted further by other money promotions, and don't count toward other promotions' thresholds.",
+        ],
+      },
+    ],
+    related: ["create-promotion", "guide-threshold", "guide-priority-stacking"],
+  },
+  {
+    slug: "guide-schedule",
+    category: "promotion-guide",
+    question: "Setting up schedules and Happy Hour",
+    keywords: ["schedule", "happy hour", "weekday", "midnight", "guide"],
+    content: [
+      { type: "p", text: "Each promotion's schedule has three layers: a date range (start required, end optional), a daily time window (Happy Hour), and selected weekdays. All three must match for the promotion to fire." },
+      {
+        type: "list",
+        items: [
+          "For cross-midnight windows (e.g. 22:00–02:00), the weekday is judged by the day the window starts: with only Friday selected, Saturday 01:30 still counts as Friday's session and fires — but Saturday 23:30 does not.",
+          "The end date is a hard cutoff — even if a Happy Hour window is still running, the promotion stops the moment the end date passes.",
+          "Time is read from the iPad's device clock, so make sure the device time zone and time are correct.",
+        ],
+      },
+    ],
+    related: ["guide-priority-stacking", "promotion-not-applied", "create-promotion"],
+  },
+  {
+    slug: "guide-priority-stacking",
+    category: "promotion-guide",
+    question: "Priority, stacking, and stop-after explained",
+    keywords: ["priority", "stacking", "stop after", "conflict", "guide"],
+    content: [
+      { type: "p", text: "When several promotions qualify at once, three settings control the order and interaction:" },
+      {
+        type: "list",
+        items: [
+          "Priority: smaller numbers calculate first. Drag to reorder in the promotions list.",
+          "Stackable (on by default): when off, an item-level promotion locks only the lines it discounted — other items can still receive later item-level promotions; a non-stackable cart-level promotion blocks all later cart-level promotions.",
+          "Stop after applying: once this promotion applies, no further money discounts are calculated — but points multipliers and gift suggestions are unaffected.",
+        ],
+      },
+      { type: "note", text: "Later promotions calculate on the already-discounted amount: 10% off plus 5% off is not 15% off — the second discount applies to the total after the first. DingPOS also never searches for the customer-optimal combination; the order is entirely determined by your priorities." },
+      { type: "p", text: "Fun fact: if a discount rounds to zero, the application doesn't count — and doesn't consume a usage limit." },
+    ],
+    related: ["guide-bogo", "guide-threshold", "guide-schedule"],
+  },
+
+  // ── Coming Soon ───────────────────────────────────────────
+  {
+    slug: "roadmap-payment-integration",
+    category: "roadmap",
+    question: "Will payment processing be integrated?",
+    keywords: ["payment", "card processing", "integration", "gateway"],
+    content: [
+      { type: "p", text: "DingPOS currently doesn't touch the money flow — payment methods are bookkeeping labels, and actual payments go through your existing terminal or payment app." },
+      { type: "p", text: "Whether we integrate payment processing depends on real user demand. If you need it, write to us with the service you'd want connected (which processor, which terminal) and your use case — clear demand puts it on the development schedule." },
+    ],
+    related: ["payment-methods", "roadmap-e-invoice"],
+  },
+  {
+    slug: "roadmap-e-invoice",
+    category: "roadmap",
+    question: "Will e-invoices or receipt printing be supported?",
+    keywords: ["e-invoice", "invoice", "receipt", "printer"],
+    content: [
+      { type: "p", text: "Not yet. E-invoicing and receipt printing require purchasing invoice machines / receipt printers to test and develop against — a significant cost. As a small team, we'll schedule it once the user base grows and revenue is steady." },
+      { type: "p", text: "If this matters to you, write to us with the machine model you use and your requirements — it directly shapes our priorities." },
+    ],
+    related: ["roadmap-barcode-scanner", "roadmap-payment-integration"],
+  },
+  {
+    slug: "roadmap-barcode-scanner",
+    category: "roadmap",
+    question: "Will physical barcode scanners be supported?",
+    keywords: ["barcode scanner", "scanner gun", "bluetooth", "usb", "hardware"],
+    content: [
+      { type: "p", text: "Camera barcode scanning for product setup is already supported. Physical scanners (USB / Bluetooth) aren't officially supported yet — like other hardware features, they need devices purchased for testing and development, and will be scheduled as the user base grows." },
+      { type: "note", text: "The checkout search field matches barcodes, so a scanner in keyboard mode could in theory type into it and pull up products — but we haven't verified this on real hardware, so it's not officially supported. If you've tested a scanner that works, tell us the model!" },
+    ],
+    related: ["barcode-scanning", "roadmap-e-invoice"],
+  },
+  {
+    slug: "roadmap-purchase-orders",
+    category: "roadmap",
+    question: "Will purchase orders be added?",
+    keywords: ["purchase order", "restock", "receiving", "procurement"],
+    content: [
+      { type: "p", text: "Yes — purchase orders are on the development roadmap." },
+      { type: "p", text: "Until then, record incoming stock with a manual inventory adjustment — the movement ledger keeps the record, so history stays traceable once purchase orders ship." },
+    ],
+    related: ["inventory-tracking", "roadmap-monthly-settlement"],
+  },
+  {
+    slug: "roadmap-returns-exchanges",
+    category: "roadmap",
+    question: "Will pre-orders, returns, and exchanges be supported?",
+    keywords: ["pre-order", "return", "exchange", "refund"],
+    content: [
+      { type: "p", text: "Yes — pre-orders, returns, and exchanges are all on the roadmap." },
+      { type: "p", text: "Workarounds until then: handle a return by voiding the whole order (stock and points are restored automatically); handle an exchange by voiding the original order and ringing up a corrected one." },
+    ],
+    related: ["void-order", "roadmap-purchase-orders"],
+  },
+  {
+    slug: "roadmap-monthly-settlement",
+    category: "roadmap",
+    question: "Will monthly settlement reports be added?",
+    keywords: ["monthly settlement", "reconciliation", "closing", "monthly report"],
+    content: [
+      { type: "p", text: "Yes — monthly settlement for purchasing and sales is on the roadmap." },
+      { type: "p", text: "For now, use the dashboard's monthly range to review the month's revenue, profit, and payment breakdown as a reconciliation baseline." },
+    ],
+    related: ["roadmap-purchase-orders", "profit-not-tracked"],
   },
 ];

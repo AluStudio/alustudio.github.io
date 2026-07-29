@@ -230,6 +230,52 @@ mark {
 
 // ── Category browse ─────────────────────────────────────────
 
+.support-group + .support-group {
+  margin-top: 3rem;
+}
+
+.support-group-title {
+  font-family: $headings-font-family;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  padding-left: 0.75rem;
+  border-left: 3px solid $accent-500;
+  margin-bottom: 0.35rem;
+}
+
+.support-group-desc {
+  color: $ink-soft;
+  font-size: 0.9rem;
+  margin: 0 0 1.1rem;
+  padding-left: 0.95rem;
+}
+
+.support-group .support-cat-grid {
+  margin-top: 1.1rem;
+}
+
+// Single-category groups (guides / roadmap) get one full-width card
+// with the question list flowing into two columns on wide screens.
+.support-cat-grid.support-cat-grid-single {
+  grid-template-columns: 1fr;
+
+  .support-cat-list {
+    column-count: 2;
+    column-gap: 2.5rem;
+
+    li {
+      break-inside: avoid;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .support-cat-grid-single .support-cat-list {
+    column-count: 1;
+  }
+}
+
 .support-cat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -249,7 +295,7 @@ mark {
   gap: 0.75rem;
   margin-bottom: 0.9rem;
 
-  h2 {
+  h3 {
     font-size: 1.1rem;
     font-weight: 800;
     margin: 0;

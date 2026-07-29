@@ -12,12 +12,14 @@
 //   { type: "youtube", id, caption? }
 
 export const categories = [
-  { key: "getting-started", icon: "bi-rocket-takeoff", label: "快速上手" },
-  { key: "checkout", icon: "bi-basket3", label: "收銀結帳" },
-  { key: "products", icon: "bi-box-seam", label: "商品與庫存" },
-  { key: "promotion", icon: "bi-tags", label: "促銷與會員" },
-  { key: "backup", icon: "bi-cloud-check", label: "備份與資料" },
-  { key: "subscription", icon: "bi-credit-card", label: "訂閱與費用" },
+  { key: "getting-started", icon: "bi-rocket-takeoff", label: "快速上手", group: "faq" },
+  { key: "checkout", icon: "bi-basket3", label: "收銀結帳", group: "faq" },
+  { key: "products", icon: "bi-box-seam", label: "商品與庫存", group: "faq" },
+  { key: "promotion", icon: "bi-tags", label: "促銷與會員", group: "faq" },
+  { key: "backup", icon: "bi-cloud-check", label: "備份與資料", group: "faq" },
+  { key: "subscription", icon: "bi-credit-card", label: "訂閱與費用", group: "faq" },
+  { key: "promotion-guide", icon: "bi-mortarboard", label: "促銷設定教學", group: "guide" },
+  { key: "roadmap", icon: "bi-signpost-split", label: "未來功能", group: "roadmap" },
 ];
 
 export const articles = [
@@ -145,7 +147,7 @@ export const articles = [
       { type: "p", text: "內建現金、信用卡、Line Pay，也可以在「設定」中自訂任意付款方式標籤（例如街口支付、Apple Pay）。" },
       { type: "p", text: "付款方式是記帳用的標籤——DingPOS 不經手實際金流。刷卡或行動支付請用你原有的刷卡機或收款 App 完成，在 DingPOS 選對應標籤記錄即可。現金付款會自動計算找零。" },
     ],
-    related: ["multiple-carts", "void-order"],
+    related: ["roadmap-payment-integration", "multiple-carts", "void-order"],
   },
   {
     slug: "void-order",
@@ -157,7 +159,7 @@ export const articles = [
       { type: "p", text: "作廢會自動回補所有連動資料：有追蹤庫存的商品數量會加回、會員該筆獲得的點數會收回、已折抵的點數會退還。作廢的訂單仍保留在清單中並明確標示，不列入報表營收。" },
       { type: "note", text: "目前僅支援整單作廢，沒有部分退款。如需修正，可作廢後重新結帳一筆正確的訂單。" },
     ],
-    related: ["inventory-tracking", "loyalty-points"],
+    related: ["inventory-tracking", "roadmap-returns-exchanges", "loyalty-points"],
   },
 
   // ── 商品與庫存 ────────────────────────────────────────────
@@ -180,9 +182,9 @@ export const articles = [
     keywords: ["條碼", "掃描", "掃碼", "barcode", "重複", "掃描槍"],
     content: [
       { type: "p", text: "商品條碼可以手動輸入，也可以用相機直接掃描帶入。條碼不可重複——儲存時若與其他商品衝突，會提示你衝突的商品名稱。" },
-      { type: "p", text: "收銀時，搜尋欄會同時比對商品名稱與條碼開頭，用掃描槍或手動輸入條碼都能快速叫出商品。" },
+      { type: "p", text: "收銀時，搜尋欄會同時比對商品名稱與條碼開頭，輸入條碼即可快速叫出商品。實體掃描槍的支援規劃請見「會支援實體掃描槍嗎？」。" },
     ],
-    related: ["product-variants"],
+    related: ["product-variants", "roadmap-barcode-scanner"],
   },
   {
     slug: "inventory-tracking",
@@ -193,7 +195,7 @@ export const articles = [
       { type: "p", text: "庫存追蹤是每項商品獨立的開關——在商品編輯頁開啟並輸入目前數量即可。多規格商品的每個規格各自計算庫存。" },
       { type: "p", text: "開啟後，銷售自動扣庫存、訂單作廢自動回補，也可以隨時手動調整。所有異動（銷售、作廢、手動調整）都記錄在異動帳本中，一筆不漏。庫存過低時會以顏色警示。" },
     ],
-    related: ["negative-inventory", "void-order"],
+    related: ["negative-inventory", "roadmap-purchase-orders"],
   },
   {
     slug: "negative-inventory",
@@ -227,7 +229,7 @@ export const articles = [
       },
       { type: "p", text: "每檔促銷可設定檔期（支援 Happy Hour 時段、指定星期、跨午夜）、適用商品範圍、優先順序與疊加規則、使用次數上限。符合條件時結帳自動套用，客人不需要輸入折扣碼。" },
     ],
-    related: ["promotion-not-applied", "loyalty-points", "apply-discounts"],
+    related: ["guide-threshold", "guide-composite", "promotion-not-applied"],
   },
   {
     slug: "promotion-not-applied",
@@ -248,7 +250,7 @@ export const articles = [
       },
       { type: "p", text: "若確認條件都符合仍未套用，寫信給我們並附上促銷設定的截圖，我們會協助排查。" },
     ],
-    related: ["create-promotion", "member-tiers"],
+    related: ["guide-schedule", "guide-priority-stacking", "create-promotion"],
   },
   {
     slug: "loyalty-points",
@@ -365,5 +367,249 @@ export const articles = [
       },
     ],
     related: ["free-trial", "after-trial"],
+  },
+  // ── 新增 FAQ：結帳與報表行為 ──────────────────────────────
+  {
+    slug: "price-change-cart",
+    category: "checkout",
+    question: "商品改價後，購物車裡的價格會跟著變嗎？",
+    keywords: ["改價", "價格變動", "調價", "購物車", "重新計算"],
+    content: [
+      { type: "p", text: "購物車顯示的是商品加入當下的價格。按下結帳確認時，系統會重新查一次所有商品的最新價格——若有變動，會先跳出提示讓你確認新價格後才繼續。" },
+      { type: "p", text: "促銷也會在確認當下從頭重新計算一次；若總額、稅額或任何折扣金額因此改變，畫面會顯示變動摘要並要求再確認，確保你看到的金額就是實際入帳的金額。" },
+    ],
+    related: ["apply-discounts", "guide-priority-stacking"],
+  },
+  {
+    slug: "manual-discount-promotion",
+    category: "checkout",
+    question: "手動折扣和促銷可以同時用嗎？",
+    keywords: ["手動折扣", "促銷", "並存", "同時", "覆蓋", "優先"],
+    content: [
+      { type: "p", text: "可以，規則是「手動優先、各管各的」：" },
+      {
+        type: "list",
+        items: [
+          "單品手動折扣：該行商品不再套用單品類促銷——手動折扣視為你現場的最終決定；但這行的金額仍計入滿額門檻的計算。",
+          "整單手動折扣：在所有促銷算完之後才扣，兩者可以並存。若輸入的折扣超過剩餘金額，系統會自動以剩餘金額為上限並提示你。",
+        ],
+      },
+      { type: "p", text: "移除手動折扣後，該行商品下次計算時會重新恢復促銷資格。" },
+    ],
+    related: ["apply-discounts", "guide-priority-stacking"],
+  },
+  {
+    slug: "profit-not-tracked",
+    category: "products",
+    question: "沒填商品成本，報表毛利怎麼算？",
+    keywords: ["成本", "毛利", "報表", "未追蹤", "利潤"],
+    content: [
+      { type: "p", text: "成本是選填欄位。沒填成本的商品會在報表中標示為「未追蹤毛利」，並從毛利計算中排除——營收照常計入，只有毛利不計。" },
+      { type: "p", text: "想看完整的毛利報表，回到商品編輯頁補上成本即可，之後的訂單就會納入計算。毛利以折扣後的實收金額計算。" },
+    ],
+    related: ["inventory-tracking", "roadmap-monthly-settlement"],
+  },
+
+  // ── 促銷設定教學 ──────────────────────────────────────────
+  {
+    slug: "guide-threshold",
+    category: "promotion-guide",
+    question: "滿額折扣設定教學",
+    keywords: ["滿額", "門檻", "滿千折百", "教學", "設定"],
+    content: [
+      { type: "p", text: "到「設定 → 促銷活動 → 新增」，選擇滿額折扣類型，依序完成：" },
+      {
+        type: "steps",
+        items: [
+          "設定門檻金額，以及折扣內容（定額或百分比）。",
+          "選擇適用範圍：指定商品、指定分類，或不選（代表全店適用）。",
+          "設定檔期：開始日期必填，結束日期留空代表長期有效。",
+          "儲存後依檔期自動生效，結帳時符合條件即自動套用，客人不需輸入任何代碼。",
+        ],
+      },
+      { type: "note", text: "門檻比對的是「符合適用範圍的商品小計」，不是整車總額。指定「飲料」分類的滿千折百，只有飲料金額計入門檻；被設為「排除促銷」的商品也一律不計入。" },
+      { type: "p", text: "另一個開發時常被問到的行為：若有優先順序更前面的促銷先扣過，門檻是以「扣過之後」的金額判定——購物車表面過千，實際可能差一點沒達標。想讓滿額判定先跑，把它的優先順序數字調小即可。" },
+    ],
+    related: ["guide-priority-stacking", "create-promotion", "promotion-not-applied"],
+  },
+  {
+    slug: "guide-bogo",
+    category: "promotion-guide",
+    question: "買一送一與第 N 件優惠設定教學",
+    keywords: ["買一送一", "bogo", "第二件", "湊組", "教學"],
+    content: [
+      { type: "p", text: "新增促銷時選擇買 N 送 N 類型，設定「買幾件」「送幾件」與折扣比例（100% 即免費）。適用範圍可指定商品或整個分類——同分類內不同商品也能互相湊組。" },
+      {
+        type: "list",
+        items: [
+          "折抵的是同組中「目前最便宜」的那件，而且以當下有效單價計算——若前面已有其他促銷先打折，折抵金額是打折後的價格，不是原價。",
+          "想讓「第 3 件免費」的折抵標示是完整原價，把這檔促銷的優先順序調到最小（最先計算）。整單折扣先跑的話，贈送那件顯示的折抵金額會小於原價——這是我們反覆驗證過的計算順序特性，不是錯誤；兩種順序的最終總額幾乎相同，差別在客人看到的「折在哪裡」。",
+        ],
+      },
+      { type: "p", text: "建議：把主打的優惠排在最前面，讓收據上的折扣分佈符合你行銷的說法。" },
+    ],
+    related: ["guide-priority-stacking", "guide-threshold", "create-promotion"],
+  },
+  {
+    slug: "guide-points-multiplier",
+    category: "promotion-guide",
+    question: "點數加倍活動設定教學",
+    keywords: ["點數加倍", "雙倍", "點數", "教學", "設定"],
+    content: [
+      { type: "p", text: "新增促銷選「點數加倍」，設定倍數（2 以上的整數），可搭配消費門檻（例如滿 500 點數雙倍）與檔期（例如每週六）。" },
+      {
+        type: "list",
+        items: [
+          "多檔點數加倍同時符合時，只取最高的那個倍數——不會相乘、也不會疊加。",
+          "門檻金額是以「點數折抵之後」的金額判定：客人用點數折抵後若低於門檻，這次就不會加倍。",
+          "結帳時必須選擇會員才會累點；沒選會員的訂單不產生點數，加倍自然也不會生效。",
+        ],
+      },
+    ],
+    related: ["loyalty-points", "guide-schedule", "member-tiers"],
+  },
+  {
+    slug: "guide-tier-birthday",
+    category: "promotion-guide",
+    question: "會員等級與壽星優惠設定教學",
+    keywords: ["會員等級", "壽星", "生日", "vip", "教學"],
+    content: [
+      { type: "p", text: "先在「設定 → 會員等級」建立等級（例如金卡），再於促銷的適用對象選擇該等級；壽星優惠則是把條件設為「生日月份」。" },
+      {
+        type: "list",
+        items: [
+          "結帳時要先選定該會員，優惠才會觸發——判定依據是當下選擇的會員資料。",
+          "壽星判定看會員資料裡的生日月份，記得幫會員補上生日欄位，沒填生日的會員不會被視為壽星。",
+          "等級自動升級規則在結帳完成時判定；若訂單作廢，因該筆消費觸發的升級也會自動回退。",
+        ],
+      },
+    ],
+    related: ["member-tiers", "loyalty-points", "guide-schedule"],
+  },
+  {
+    slug: "guide-composite",
+    category: "promotion-guide",
+    question: "贈品、加購與組合價設定教學",
+    keywords: ["贈品", "加購", "加價購", "組合價", "買a送b", "教學"],
+    content: [
+      { type: "p", text: "新增促銷時可選三種組合型優惠：滿額／滿件送贈品（買 A 送 B）、加價購（加 X 元換購 Y）、組合價（任選 N 件 $X）。" },
+      { type: "p", text: "重要：這類優惠不會自動改動購物車。條件符合時，收銀畫面會出現建議橫幅，店員按「接受」才會把贈品或組合加入——這是刻意設計，因為贈品牽涉實體庫存，需要店員確認現場有貨、客人要拿。" },
+      {
+        type: "list",
+        items: [
+          "按「拒絕」後，同一車不會再跳同一檔建議；換一車或清空後會重新提示。",
+          "結帳確認前若條件變動冒出新的建議，需要先「接受」或「拒絕」完才能送出訂單。",
+          "組合價：符合的商品多於組合件數時，預設選最貴的幾件入組，店員可在確認前改選。",
+          "贈品與加購商品加入購物車後，不會再被其他金錢折扣打折，也不計入其他促銷的門檻。",
+        ],
+      },
+    ],
+    related: ["create-promotion", "guide-threshold", "guide-priority-stacking"],
+  },
+  {
+    slug: "guide-schedule",
+    category: "promotion-guide",
+    question: "檔期與 Happy Hour 設定教學",
+    keywords: ["檔期", "happy hour", "時段", "星期", "跨午夜", "教學"],
+    content: [
+      { type: "p", text: "每檔促銷的檔期有三層條件：日期範圍（開始必填、結束可留空）、每日時段（Happy Hour）、指定星期。三者都符合才會觸發。" },
+      {
+        type: "list",
+        items: [
+          "跨午夜時段（例如 22:00–02:00）的星期以「開始那天」為準：只勾週五時，週六凌晨 01:30 仍屬於週五場、會觸發；但週六晚上 23:30 不會。",
+          "結束日期是硬切點——即使 Happy Hour 時段還沒跑完，過了結束日期就立即停止。",
+          "時間以 iPad 的裝置時間為準，請確認裝置的時區與時間正確。",
+        ],
+      },
+    ],
+    related: ["guide-priority-stacking", "promotion-not-applied", "create-promotion"],
+  },
+  {
+    slug: "guide-priority-stacking",
+    category: "promotion-guide",
+    question: "優先順序、疊加與停止規則教學",
+    keywords: ["優先順序", "疊加", "停止", "衝突", "順序", "教學"],
+    content: [
+      { type: "p", text: "當多檔促銷同時符合，套用順序與互動由三個設定控制：" },
+      {
+        type: "list",
+        items: [
+          "優先順序：數字小的先計算。在促銷清單拖曳排序即可調整。",
+          "可疊加（預設開啟）：關閉時，單品類促銷只鎖住「被它折過的那幾行」，其他商品仍可套用後續單品促銷；整單類促銷關閉疊加，則會擋掉後面所有整單類促銷。",
+          "套用後停止：這檔套用後，後面的金錢折扣全部不再計算——但點數加倍與贈品建議不受影響。",
+        ],
+      },
+      { type: "note", text: "後算的促銷以「已被前面扣過」的金額為基礎：9 折加 95 折不等於 85.5 折——第二檔算的是打過 9 折後的金額。系統也不會自動嘗試對客人最有利的組合，順序完全由你的優先順序決定。" },
+      { type: "p", text: "冷知識：折扣金額經四捨五入後若為 0，該次套用不成立，也不會消耗使用次數上限。" },
+    ],
+    related: ["guide-bogo", "guide-threshold", "guide-schedule"],
+  },
+
+  // ── 未來功能 ──────────────────────────────────────────────
+  {
+    slug: "roadmap-payment-integration",
+    category: "roadmap",
+    question: "會串接金流（線上收款）嗎？",
+    keywords: ["金流", "刷卡", "支付", "串接", "收款"],
+    content: [
+      { type: "p", text: "目前 DingPOS 不經手金流——付款方式是記帳用的標籤，實際收款透過你原有的刷卡機或支付 App 完成。" },
+      { type: "p", text: "是否串接金流，我們會依實際使用者需求決定。如果你需要，寫信告訴我們你想串接的服務（哪家支付、哪種刷卡機）與使用情境——需求夠明確，我們就會排入開發。" },
+    ],
+    related: ["payment-methods", "roadmap-e-invoice"],
+  },
+  {
+    slug: "roadmap-e-invoice",
+    category: "roadmap",
+    question: "會支援電子發票或收據列印嗎？",
+    keywords: ["電子發票", "發票", "收據", "列印", "出單機"],
+    content: [
+      { type: "p", text: "目前還不支援。電子發票與收據列印需要採購發票機／出單機等硬體回來測試與開發，成本較高——我們是小團隊，會在用戶成長、有穩定收入後把它排入開發。" },
+      { type: "p", text: "如果這個功能對你很重要，歡迎寫信告訴我們你使用的機型與需求，這會直接影響我們的開發優先順序。" },
+    ],
+    related: ["roadmap-barcode-scanner", "roadmap-payment-integration"],
+  },
+  {
+    slug: "roadmap-barcode-scanner",
+    category: "roadmap",
+    question: "會支援實體掃描槍嗎？",
+    keywords: ["掃描槍", "掃碼槍", "藍牙", "usb", "硬體"],
+    content: [
+      { type: "p", text: "建立商品時用相機掃描條碼已經支援；實體掃描槍（USB／藍牙）尚未正式支援——需要採購硬體回來測試與開發，成本較高，會在用戶成長後排入開發。" },
+      { type: "note", text: "收銀搜尋欄支援條碼比對，理論上以鍵盤模式輸入的掃描槍可以打進搜尋欄叫出商品，但我們尚未實機驗證，不列為正式支援。若你已有掃描槍實測可用，歡迎寫信告訴我們型號。" },
+    ],
+    related: ["barcode-scanning", "roadmap-e-invoice"],
+  },
+  {
+    slug: "roadmap-purchase-orders",
+    category: "roadmap",
+    question: "會有進貨單功能嗎？",
+    keywords: ["進貨單", "進貨", "採購", "補貨"],
+    content: [
+      { type: "p", text: "會，進貨單已在開發規劃中。" },
+      { type: "p", text: "在那之前，進貨可以用庫存的「手動調整」記錄——調整數量後異動帳本會留下紀錄，之後進貨單功能上線時，歷史仍可追溯。" },
+    ],
+    related: ["inventory-tracking", "roadmap-monthly-settlement"],
+  },
+  {
+    slug: "roadmap-returns-exchanges",
+    category: "roadmap",
+    question: "會支援預訂、退貨與換貨嗎？",
+    keywords: ["預訂", "退貨", "換貨", "退款", "部分退款"],
+    content: [
+      { type: "p", text: "會，預訂、退貨、換貨都在開發規劃中。" },
+      { type: "p", text: "在那之前的替代做法：退貨可用「整單作廢」處理，庫存與點數會自動回補；換貨則是作廢原單後，重新結帳一筆正確的訂單。" },
+    ],
+    related: ["void-order", "roadmap-purchase-orders"],
+  },
+  {
+    slug: "roadmap-monthly-settlement",
+    category: "roadmap",
+    question: "會有進貨／銷售月結功能嗎？",
+    keywords: ["月結", "結算", "對帳", "月報"],
+    content: [
+      { type: "p", text: "會，月結報表在開發規劃中。" },
+      { type: "p", text: "目前可以先用報表的「月」區間檢視當月營收、毛利與付款方式分佈，作為對帳的基礎。" },
+    ],
+    related: ["roadmap-purchase-orders", "profit-not-tracked"],
   },
 ];

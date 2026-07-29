@@ -239,6 +239,11 @@
     "back": "Support",
     "contact_title": "Can't find an answer?",
     "contact_desc": "Tell us what you're running into and we'll get back to you as soon as we can.",
-    "contact_cta": "Contact ALU Studio"
+    "contact_cta": "Contact ALU Studio",
+    "group_faq": "FAQ",
+    "group_guide": "Guides",
+    "group_guide_desc": "Step-by-step setup walkthroughs, including the gotchas we collected while building DingPOS.",
+    "group_roadmap": "Coming Soon",
+    "group_roadmap_desc": "Not available yet — some are already planned. Your requests shape our priorities, so write to us."
   }
 }

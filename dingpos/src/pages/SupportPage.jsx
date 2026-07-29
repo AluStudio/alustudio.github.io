@@ -210,33 +210,50 @@ function SupportPage() {
               )}
             </section>
           ) : (
-            /* Browse by category */
+            /* Browse by group → category */
             <section className="support-browse">
-              <div className="support-cat-grid">
-                {categories.map((cat) => {
-                  const catArticles = articles.filter((a) => a.category === cat.key);
-                  return (
-                    <div className="support-cat-card" key={cat.key}>
-                      <div className="support-cat-head">
-                        <span className="support-cat-icon">
-                          <i className={`bi ${cat.icon}`} aria-hidden="true"></i>
-                        </span>
-                        <h2>{cat.label}</h2>
-                      </div>
-                      <ul className="support-cat-list">
-                        {catArticles.map((a) => (
-                          <li key={a.slug}>
-                            <Link to={`/support/${a.slug}`}>
-                              {a.question}
-                              <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+              {["faq", "guide", "roadmap"].map((groupKey) => {
+                const groupCats = categories.filter((c) => c.group === groupKey);
+                if (groupCats.length === 0) return null;
+                const desc = t(`support.group_${groupKey}_desc`, { defaultValue: "" });
+                const groupTitle = t(`support.group_${groupKey}`);
+                return (
+                  <div className="support-group" key={groupKey}>
+                    <h2 className="support-group-title">{groupTitle}</h2>
+                    {desc && <p className="support-group-desc">{desc}</p>}
+                    <div
+                      className={`support-cat-grid${groupCats.length === 1 ? " support-cat-grid-single" : ""}`}
+                    >
+                      {groupCats.map((cat) => {
+                        const catArticles = articles.filter((a) => a.category === cat.key);
+                        return (
+                          <div className="support-cat-card" key={cat.key}>
+                            {/* Skip the card head when it would just repeat the group title */}
+                            {cat.label !== groupTitle && (
+                              <div className="support-cat-head">
+                                <span className="support-cat-icon">
+                                  <i className={`bi ${cat.icon}`} aria-hidden="true"></i>
+                                </span>
+                                <h3>{cat.label}</h3>
+                              </div>
+                            )}
+                            <ul className="support-cat-list">
+                              {catArticles.map((a) => (
+                                <li key={a.slug}>
+                                  <Link to={`/support/${a.slug}`}>
+                                    {a.question}
+                                    <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        );
+                      })}
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })}
             </section>
           )}
 

@@ -239,6 +239,11 @@
     "back": "支援中心",
     "contact_title": "找不到答案嗎？",
     "contact_desc": "寫信告訴我們你遇到的問題，我們會盡快回覆你。",
-    "contact_cta": "聯繫 ALU Studio"
+    "contact_cta": "聯繫 ALU Studio",
+    "group_faq": "常見問題",
+    "group_guide": "教學指南",
+    "group_guide_desc": "一步一步帶你完成設定，包含我們在開發過程中整理出的注意事項。",
+    "group_roadmap": "未來功能",
+    "group_roadmap_desc": "這些功能還沒有，但有些已在規劃中——你的需求會影響開發順序，歡迎寫信告訴我們。"
   }
 }
