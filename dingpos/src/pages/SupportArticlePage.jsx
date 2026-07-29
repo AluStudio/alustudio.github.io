@@ -7,8 +7,8 @@ import "./support.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FaqBlocks from "../components/FaqBlocks";
+import ContactCard from "../components/ContactCard";
 import { getFaq } from "../data/faq";
-import { ContactCard } from "./SupportPage";
 
 function SupportArticlePage() {
   const { slug } = useParams();

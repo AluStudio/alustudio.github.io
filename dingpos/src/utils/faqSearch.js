@@ -108,7 +108,10 @@ export function searchFaq(index, tokens) {
  */
 export function highlightParts(text, tokens) {
   if (!tokens.length) return [{ text, hit: false }];
-  const re = new RegExp(`(${tokens.map(escapeRegExp).join("|")})`, "gi");
+  // Longest first: alternation matches the leftmost branch that fits, so an
+  // unsorted list lets "備" shadow "備份" and highlight only half the word.
+  const ordered = [...tokens].sort((a, b) => b.length - a.length);
+  const re = new RegExp(`(${ordered.map(escapeRegExp).join("|")})`, "gi");
   return text
     .split(re)
     .filter((part) => part !== "")

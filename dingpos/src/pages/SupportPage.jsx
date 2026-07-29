@@ -6,32 +6,13 @@ import "../assets/scss/footer.scss";
 import "./support.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ContactCard from "../components/ContactCard";
 import { getFaq } from "../data/faq";
 import { tokenize, buildIndex, searchFaq, highlightParts } from "../utils/faqSearch";
-
-const CONTACT_MAILTO = "mailto:alustudio14@gmail.com?subject=[DingPOS] Support";
 
 function Highlight({ text, tokens }) {
   return highlightParts(text, tokens).map((part, i) =>
     part.hit ? <mark key={i}>{part.text}</mark> : <span key={i}>{part.text}</span>,
-  );
-}
-
-function ContactCard() {
-  const { t } = useTranslation();
-  return (
-    <div className="support-contact">
-      <div className="support-contact-icon">
-        <i className="bi bi-envelope-paper" aria-hidden="true"></i>
-      </div>
-      <h2>{t("support.contact_title")}</h2>
-      <p>{t("support.contact_desc")}</p>
-      <a className="support-contact-cta" href={CONTACT_MAILTO}>
-        <i className="bi bi-send" aria-hidden="true"></i>
-        {t("support.contact_cta")}
-      </a>
-      <p className="support-contact-mail">alustudio14@gmail.com</p>
-    </div>
   );
 }
 
@@ -173,10 +154,13 @@ function SupportPage() {
         <div className="container support-body">
           {searching ? (
             /* Search results */
-            <section className="support-results" aria-live="polite">
+            <section className="support-results">
               {results.length > 0 ? (
                 <>
-                  <p className="support-results-count">
+                  {/* Only the count is a live region: announcing the whole
+                      result list on every keystroke is unusable with a screen
+                      reader once there are dozens of articles. */}
+                  <p className="support-results-count" aria-live="polite">
                     {t("support.results_count", { num: results.length })}
                   </p>
                   <ul className="support-result-list">
@@ -202,7 +186,7 @@ function SupportPage() {
                   </ul>
                 </>
               ) : (
-                <div className="support-no-results">
+                <div className="support-no-results" aria-live="polite">
                   <i className="bi bi-search-heart" aria-hidden="true"></i>
                   <h3>{t("support.no_results_title")}</h3>
                   <p>{t("support.no_results_desc")}</p>
@@ -228,8 +212,9 @@ function SupportPage() {
                         const catArticles = articles.filter((a) => a.category === cat.key);
                         return (
                           <div className="support-cat-card" key={cat.key}>
-                            {/* Skip the card head when it would just repeat the group title */}
-                            {cat.label !== groupTitle && (
+                            {/* `standalone` categories carry the group title
+                                themselves, so a card head would just repeat it */}
+                            {!cat.standalone && (
                               <div className="support-cat-head">
                                 <span className="support-cat-icon">
                                   <i className={`bi ${cat.icon}`} aria-hidden="true"></i>
@@ -266,4 +251,3 @@ function SupportPage() {
 }
 
 export default SupportPage;
-export { ContactCard, Highlight };

@@ -19,7 +19,9 @@ export const categories = [
   { key: "backup", icon: "bi-cloud-check", label: "備份與資料", group: "faq" },
   { key: "subscription", icon: "bi-credit-card", label: "訂閱與費用", group: "faq" },
   { key: "promotion-guide", icon: "bi-mortarboard", label: "促銷設定教學", group: "guide" },
-  { key: "roadmap", icon: "bi-signpost-split", label: "未來功能", group: "roadmap" },
+  // standalone: the group has this one category and shares its title, so the
+  // support page renders the list without a repeated card head.
+  { key: "roadmap", icon: "bi-signpost-split", label: "未來功能", group: "roadmap", standalone: true },
 ];
 
 export const articles = [

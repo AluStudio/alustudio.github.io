@@ -137,7 +137,9 @@
   padding-bottom: 4rem;
 }
 
-mark {
+// Scoped: all app CSS ships in one bundle, so a bare `mark` selector would
+// restyle every page.
+.support-results mark {
   background: rgba($accent-300, 0.45);
   color: inherit;
   padding: 0 0.1em;

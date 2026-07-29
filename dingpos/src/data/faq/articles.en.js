@@ -11,7 +11,7 @@ export const categories = [
   { key: "backup", icon: "bi-cloud-check", label: "Backup & Data", group: "faq" },
   { key: "subscription", icon: "bi-credit-card", label: "Subscription & Billing", group: "faq" },
   { key: "promotion-guide", icon: "bi-mortarboard", label: "Promotion Setup Guides", group: "guide" },
-  { key: "roadmap", icon: "bi-signpost-split", label: "Coming Soon", group: "roadmap" },
+  { key: "roadmap", icon: "bi-signpost-split", label: "Coming Soon", group: "roadmap", standalone: true },
 ];
 
 export const articles = [
