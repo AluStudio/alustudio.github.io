@@ -174,7 +174,7 @@ export const articles = [
     keywords: ["barcode", "scan", "scanner", "duplicate", "camera"],
     content: [
       { type: "p", text: "Product barcodes can be typed in manually or scanned with the camera. Barcodes must be unique — if a barcode conflicts with another product when saving, DingPOS shows you which product it belongs to." },
-      { type: "p", text: "At checkout, the search field matches both product names and barcode prefixes \u2014 type a barcode to pull up the product instantly. For hardware barcode scanner plans, see \u201cWill physical barcode scanners be supported?\u201d" },
+      { type: "p", text: "At checkout, the search field matches both product names and barcode prefixes — type a barcode to pull up the product instantly. For hardware barcode scanner plans, see “Will physical barcode scanners be supported?”" },
     ],
     related: ["product-variants", "roadmap-barcode-scanner"],
   },
@@ -378,7 +378,7 @@ export const articles = [
     question: "Can manual discounts and promotions be used together?",
     keywords: ["manual discount", "promotion", "combine", "override"],
     content: [
-      { type: "p", text: "Yes. The rule is \u201cmanual wins, layers stay independent\u201d:" },
+      { type: "p", text: "Yes. The rule is “manual wins, layers stay independent”:" },
       {
         type: "list",
         items: [
@@ -396,7 +396,7 @@ export const articles = [
     question: "How is profit reported if I didn't enter costs?",
     keywords: ["cost", "profit", "margin", "reports", "not tracked"],
     content: [
-      { type: "p", text: "Cost is an optional field. Products without a cost are marked \u201cprofit not tracked\u201d in reports and excluded from profit calculations — revenue is still counted in full, only profit is skipped." },
+      { type: "p", text: "Cost is an optional field. Products without a cost are marked “profit not tracked” in reports and excluded from profit calculations — revenue is still counted in full, only profit is skipped." },
       { type: "p", text: "To get complete profit reports, add costs on the product edit page; future orders will be included. Profit is calculated on after-discount revenue." },
     ],
     related: ["inventory-tracking", "roadmap-monthly-settlement"],
@@ -419,7 +419,7 @@ export const articles = [
           "Save — it activates on schedule and applies automatically at checkout, no codes needed.",
         ],
       },
-      { type: "note", text: "The threshold is checked against the subtotal of in-scope items, not the whole cart. A \u201cspend $1000 on Drinks\u201d promotion only counts drinks toward the threshold, and products marked \u201cexclude from promotions\u201d never count." },
+      { type: "note", text: "The threshold is checked against the subtotal of in-scope items, not the whole cart. A “spend $1000 on Drinks” promotion only counts drinks toward the threshold, and products marked “exclude from promotions” never count." },
       { type: "p", text: "One behavior we're often asked about: if a higher-priority promotion applies first, the threshold is checked against the already-discounted amount — a cart that looks over the threshold can miss it by a little. To have the threshold judged first, give it a smaller priority number." },
     ],
     related: ["guide-priority-stacking", "create-promotion", "promotion-not-applied"],
@@ -435,7 +435,7 @@ export const articles = [
         type: "list",
         items: [
           "The discounted unit is the cheapest one in the group, valued at its current effective price — if an earlier promotion already discounted it, the BOGO amount is based on the discounted price, not the list price.",
-          "If you want the \u201c3rd item free\u201d badge to show the full list price, give this BOGO the smallest priority number so it calculates first. When a cart-wide discount runs first, the free item's displayed deduction is smaller than list price — a calculation-order property we've verified extensively, not a bug. Both orders land on nearly the same total; what changes is where the discount visibly sits.",
+          "If you want the “3rd item free” badge to show the full list price, give this BOGO the smallest priority number so it calculates first. When a cart-wide discount runs first, the free item's displayed deduction is smaller than list price — a calculation-order property we've verified extensively, not a bug. Both orders land on nearly the same total; what changes is where the discount visibly sits.",
         ],
       },
       { type: "p", text: "Tip: put your headline offer first in priority so the receipt's discount breakdown matches your marketing message." },
@@ -466,7 +466,7 @@ export const articles = [
     question: "Setting up member-tier and birthday offers",
     keywords: ["tier", "birthday", "vip", "guide", "tutorial"],
     content: [
-      { type: "p", text: "First create tiers under Settings → Member Tiers (e.g. Gold), then target the promotion at that tier. For birthday offers, set the condition to \u201cbirthday month\u201d." },
+      { type: "p", text: "First create tiers under Settings → Member Tiers (e.g. Gold), then target the promotion at that tier. For birthday offers, set the condition to “birthday month”." },
       {
         type: "list",
         items: [
@@ -545,7 +545,7 @@ export const articles = [
     keywords: ["payment", "card processing", "integration", "gateway"],
     content: [
       { type: "p", text: "DingPOS currently doesn't touch the money flow — payment methods are bookkeeping labels, and actual payments go through your existing terminal or payment app." },
-      { type: "p", text: "Whether we integrate payment processing depends on real user demand. If you need it, write to us with the service you'd want connected (which processor, which terminal) and your use case — clear demand puts it on the development schedule." },
+      { type: "p", text: "Whether we integrate payment processing depends on real user demand. If you need it, write to us with the service you'd want connected (which processor, which terminal) and your use case — we prioritize development by the number of requests." },
     ],
     related: ["payment-methods", "roadmap-e-invoice"],
   },
@@ -555,8 +555,8 @@ export const articles = [
     question: "Will e-invoices or receipt printing be supported?",
     keywords: ["e-invoice", "invoice", "receipt", "printer"],
     content: [
-      { type: "p", text: "Not yet. E-invoicing and receipt printing require purchasing invoice machines / receipt printers to test and develop against — a significant cost. As a small team, we'll schedule it once the user base grows and revenue is steady." },
-      { type: "p", text: "If this matters to you, write to us with the machine model you use and your requirements — it directly shapes our priorities." },
+      { type: "p", text: "Not yet. E-invoicing and receipt printing require purchasing invoice machines / receipt printers to test and develop against — a significant cost. As a small team, we'll plan it once the user base grows and revenue is steady." },
+      { type: "p", text: "If you need this, write to us with the machine model you use — we prioritize development by the number of requests." },
     ],
     related: ["roadmap-barcode-scanner", "roadmap-payment-integration"],
   },
@@ -566,8 +566,9 @@ export const articles = [
     question: "Will physical barcode scanners be supported?",
     keywords: ["barcode scanner", "scanner gun", "bluetooth", "usb", "hardware"],
     content: [
-      { type: "p", text: "Camera barcode scanning for product setup is already supported. Physical scanners (USB / Bluetooth) aren't officially supported yet — like other hardware features, they need devices purchased for testing and development, and will be scheduled as the user base grows." },
+      { type: "p", text: "Camera barcode scanning for product setup is already supported. Physical scanners (USB / Bluetooth) aren't officially supported yet — like other hardware features, they need devices purchased for testing and development, and will be planned as the user base grows." },
       { type: "note", text: "The checkout search field matches barcodes, so a scanner in keyboard mode could in theory type into it and pull up products — but we haven't verified this on real hardware, so it's not officially supported. If you've tested a scanner that works, tell us the model!" },
+      { type: "p", text: "If you need this, write to us — we prioritize development by the number of requests." },
     ],
     related: ["barcode-scanning", "roadmap-e-invoice"],
   },
@@ -577,8 +578,9 @@ export const articles = [
     question: "Will purchase orders be added?",
     keywords: ["purchase order", "restock", "receiving", "procurement"],
     content: [
-      { type: "p", text: "Yes — purchase orders are on the development roadmap." },
+      { type: "p", text: "Yes — purchase orders are planned." },
       { type: "p", text: "Until then, record incoming stock with a manual inventory adjustment — the movement ledger keeps the record, so history stays traceable once purchase orders ship." },
+      { type: "p", text: "If you need this, write to us — we prioritize development by the number of requests." },
     ],
     related: ["inventory-tracking", "roadmap-monthly-settlement"],
   },
@@ -588,8 +590,9 @@ export const articles = [
     question: "Will pre-orders, returns, and exchanges be supported?",
     keywords: ["pre-order", "return", "exchange", "refund"],
     content: [
-      { type: "p", text: "Yes — pre-orders, returns, and exchanges are all on the roadmap." },
+      { type: "p", text: "Yes — pre-orders, returns, and exchanges are all planned." },
       { type: "p", text: "Workarounds until then: handle a return by voiding the whole order (stock and points are restored automatically); handle an exchange by voiding the original order and ringing up a corrected one." },
+      { type: "p", text: "If you need this, write to us — we prioritize development by the number of requests." },
     ],
     related: ["void-order", "roadmap-purchase-orders"],
   },
@@ -599,8 +602,9 @@ export const articles = [
     question: "Will monthly settlement reports be added?",
     keywords: ["monthly settlement", "reconciliation", "closing", "monthly report"],
     content: [
-      { type: "p", text: "Yes — monthly settlement for purchasing and sales is on the roadmap." },
+      { type: "p", text: "Yes — monthly settlement for purchasing and sales is planned." },
       { type: "p", text: "For now, use the dashboard's monthly range to review the month's revenue, profit, and payment breakdown as a reconciliation baseline." },
+      { type: "p", text: "If you need this, write to us — we prioritize development by the number of requests." },
     ],
     related: ["roadmap-purchase-orders", "profit-not-tracked"],
   },

@@ -553,7 +553,7 @@ export const articles = [
     keywords: ["金流", "刷卡", "支付", "串接", "收款"],
     content: [
       { type: "p", text: "目前 DingPOS 不經手金流——付款方式是記帳用的標籤，實際收款透過你原有的刷卡機或支付 App 完成。" },
-      { type: "p", text: "是否串接金流，我們會依實際使用者需求決定。如果你需要，寫信告訴我們你想串接的服務（哪家支付、哪種刷卡機）與使用情境——需求夠明確，我們就會排入開發。" },
+      { type: "p", text: "是否串接金流，會依實際使用者需求決定。如果你有需求，歡迎來信告訴我們你想串接的服務（哪家支付、哪種刷卡機）與使用情境，我們會依照需求人數決定開發順序。" },
     ],
     related: ["payment-methods", "roadmap-e-invoice"],
   },
@@ -563,8 +563,8 @@ export const articles = [
     question: "會支援電子發票或收據列印嗎？",
     keywords: ["電子發票", "發票", "收據", "列印", "出單機"],
     content: [
-      { type: "p", text: "目前還不支援。電子發票與收據列印需要採購發票機／出單機等硬體回來測試與開發，成本較高——我們是小團隊，會在用戶成長、有穩定收入後把它排入開發。" },
-      { type: "p", text: "如果這個功能對你很重要，歡迎寫信告訴我們你使用的機型與需求，這會直接影響我們的開發優先順序。" },
+      { type: "p", text: "目前還不支援。電子發票與收據列印需要採購發票機／出單機等硬體回來測試與開發，成本較高——我們是小團隊，會在用戶成長、有穩定收入後排入規劃。" },
+      { type: "p", text: "如果你有需求，歡迎來信告訴我們你需要支援的機型，我們會依照需求人數決定開發順序。" },
     ],
     related: ["roadmap-barcode-scanner", "roadmap-payment-integration"],
   },
@@ -574,8 +574,9 @@ export const articles = [
     question: "會支援實體掃描槍嗎？",
     keywords: ["掃描槍", "掃碼槍", "藍牙", "usb", "硬體"],
     content: [
-      { type: "p", text: "建立商品時用相機掃描條碼已經支援；實體掃描槍（USB／藍牙）尚未正式支援——需要採購硬體回來測試與開發，成本較高，會在用戶成長後排入開發。" },
+      { type: "p", text: "建立商品時用相機掃描條碼已經支援；實體掃描槍（USB／藍牙）尚未正式支援——需要採購硬體回來測試與開發，成本較高，會在用戶成長後排入規劃。" },
       { type: "note", text: "收銀搜尋欄支援條碼比對，理論上以鍵盤模式輸入的掃描槍可以打進搜尋欄叫出商品，但我們尚未實機驗證，不列為正式支援。若你已有掃描槍實測可用，歡迎寫信告訴我們型號。" },
+      { type: "p", text: "如果你有需求，歡迎來信，我們會依照需求人數決定開發順序。" },
     ],
     related: ["barcode-scanning", "roadmap-e-invoice"],
   },
@@ -585,8 +586,9 @@ export const articles = [
     question: "會有進貨單功能嗎？",
     keywords: ["進貨單", "進貨", "採購", "補貨"],
     content: [
-      { type: "p", text: "會，進貨單已在開發規劃中。" },
+      { type: "p", text: "會，進貨單已在規劃中。" },
       { type: "p", text: "在那之前，進貨可以用庫存的「手動調整」記錄——調整數量後異動帳本會留下紀錄，之後進貨單功能上線時，歷史仍可追溯。" },
+      { type: "p", text: "如果你有需求，歡迎來信，我們會依照需求人數決定開發順序。" },
     ],
     related: ["inventory-tracking", "roadmap-monthly-settlement"],
   },
@@ -596,8 +598,9 @@ export const articles = [
     question: "會支援預訂、退貨與換貨嗎？",
     keywords: ["預訂", "退貨", "換貨", "退款", "部分退款"],
     content: [
-      { type: "p", text: "會，預訂、退貨、換貨都在開發規劃中。" },
+      { type: "p", text: "會，預訂、退貨、換貨都已在規劃中。" },
       { type: "p", text: "在那之前的替代做法：退貨可用「整單作廢」處理，庫存與點數會自動回補；換貨則是作廢原單後，重新結帳一筆正確的訂單。" },
+      { type: "p", text: "如果你有需求，歡迎來信，我們會依照需求人數決定開發順序。" },
     ],
     related: ["void-order", "roadmap-purchase-orders"],
   },
@@ -607,8 +610,9 @@ export const articles = [
     question: "會有進貨／銷售月結功能嗎？",
     keywords: ["月結", "結算", "對帳", "月報"],
     content: [
-      { type: "p", text: "會，月結報表在開發規劃中。" },
+      { type: "p", text: "會，月結報表已在規劃中。" },
       { type: "p", text: "目前可以先用報表的「月」區間檢視當月營收、毛利與付款方式分佈，作為對帳的基礎。" },
+      { type: "p", text: "如果你有需求，歡迎來信，我們會依照需求人數決定開發順序。" },
     ],
     related: ["roadmap-purchase-orders", "profit-not-tracked"],
   },
