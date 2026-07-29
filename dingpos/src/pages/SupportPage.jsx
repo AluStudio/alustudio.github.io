@@ -1,0 +1,252 @@
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
+import "../assets/scss/all.scss";
+import "../assets/scss/footer.scss";
+import "./support.scss";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { getFaq } from "../data/faq";
+import { tokenize, buildIndex, searchFaq, highlightParts } from "../utils/faqSearch";
+
+const CONTACT_MAILTO = "mailto:alustudio14@gmail.com?subject=[DingPOS] Support";
+
+function Highlight({ text, tokens }) {
+  return highlightParts(text, tokens).map((part, i) =>
+    part.hit ? <mark key={i}>{part.text}</mark> : <span key={i}>{part.text}</span>,
+  );
+}
+
+function ContactCard() {
+  const { t } = useTranslation();
+  return (
+    <div className="support-contact">
+      <div className="support-contact-icon">
+        <i className="bi bi-envelope-paper" aria-hidden="true"></i>
+      </div>
+      <h2>{t("support.contact_title")}</h2>
+      <p>{t("support.contact_desc")}</p>
+      <a className="support-contact-cta" href={CONTACT_MAILTO}>
+        <i className="bi bi-send" aria-hidden="true"></i>
+        {t("support.contact_cta")}
+      </a>
+      <p className="support-contact-mail">alustudio14@gmail.com</p>
+    </div>
+  );
+}
+
+function SupportPage() {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const lang = i18n.resolvedLanguage || i18n.language;
+  const { categories, articles } = getFaq(lang);
+
+  const [rawQuery, setRawQuery] = useState("");
+  const [query, setQuery] = useState("");
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    document.title = `${t("support.doc_title")} — DingPOS`;
+    return () => {
+      document.title = "DingPOS";
+    };
+  }, [t, lang]);
+
+  // Debounce keystrokes so ranking runs on settled input.
+  // Keyboard selection resets whenever the effective query changes.
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setQuery(rawQuery);
+      setActiveIndex(-1);
+    }, 120);
+    return () => clearTimeout(timer);
+  }, [rawQuery]);
+
+  // "/" focuses search from anywhere on the page (Notion/Linear convention).
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+      const tag = document.activeElement?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      e.preventDefault();
+      inputRef.current?.focus();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  const categoryLabelByKey = useMemo(
+    () => Object.fromEntries(categories.map((c) => [c.key, c.label])),
+    [categories],
+  );
+  const index = useMemo(
+    () => buildIndex(articles, categoryLabelByKey),
+    [articles, categoryLabelByKey],
+  );
+
+  const tokens = useMemo(() => tokenize(query), [query]);
+  const results = useMemo(() => searchFaq(index, tokens), [index, tokens]);
+  const searching = tokens.length > 0;
+
+  const clearSearch = () => {
+    setRawQuery("");
+    setQuery("");
+    setActiveIndex(-1);
+    inputRef.current?.focus();
+  };
+
+  const handleInputKeyDown = (e) => {
+    if (e.key === "Escape") {
+      if (rawQuery) {
+        clearSearch();
+      } else {
+        inputRef.current?.blur();
+      }
+      return;
+    }
+    if (!searching || results.length === 0) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActiveIndex((i) => (i + 1) % results.length);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActiveIndex((i) => (i <= 0 ? results.length - 1 : i - 1));
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      const target = results[activeIndex === -1 ? 0 : activeIndex];
+      if (target) navigate(`/support/${target.article.slug}`);
+    }
+  };
+
+  return (
+    <>
+      <Navbar />
+      <main className="main-content">
+        {/* Search hero */}
+        <section className="support-hero">
+          <div className="support-hero-inner">
+            <h1>{t("support.title")}</h1>
+            <p className="support-subtitle">{t("support.subtitle")}</p>
+            <div className="support-search" role="search">
+              <i className="bi bi-search" aria-hidden="true"></i>
+              <input
+                ref={inputRef}
+                type="search"
+                enterKeyHint="search"
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck="false"
+                placeholder={t("support.search_placeholder")}
+                aria-label={t("support.search_placeholder")}
+                value={rawQuery}
+                onChange={(e) => setRawQuery(e.target.value)}
+                onKeyDown={handleInputKeyDown}
+              />
+              {rawQuery && (
+                <button
+                  type="button"
+                  className="support-search-clear"
+                  aria-label={t("support.clear")}
+                  onClick={clearSearch}
+                >
+                  <i className="bi bi-x-lg" aria-hidden="true"></i>
+                </button>
+              )}
+            </div>
+            <p className="support-search-hint">
+              {t("support.search_hint_keywords")}
+              <span className="support-search-hint-shortcut">
+                {" · "}
+                {t("support.search_hint_shortcut_pre")}
+                <kbd>/</kbd>
+                {t("support.search_hint_shortcut_post")}
+              </span>
+            </p>
+          </div>
+        </section>
+
+        <div className="container support-body">
+          {searching ? (
+            /* Search results */
+            <section className="support-results" aria-live="polite">
+              {results.length > 0 ? (
+                <>
+                  <p className="support-results-count">
+                    {t("support.results_count", { num: results.length })}
+                  </p>
+                  <ul className="support-result-list">
+                    {results.map(({ article, snippet }, i) => (
+                      <li key={article.slug}>
+                        <Link
+                          to={`/support/${article.slug}`}
+                          className={`support-result-card${i === activeIndex ? " is-active" : ""}`}
+                          onMouseEnter={() => setActiveIndex(i)}
+                        >
+                          <span className="support-result-category">
+                            {categoryLabelByKey[article.category]}
+                          </span>
+                          <h3>
+                            <Highlight text={article.question} tokens={tokens} />
+                          </h3>
+                          <p className="support-result-snippet">
+                            <Highlight text={snippet} tokens={tokens} />
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <div className="support-no-results">
+                  <i className="bi bi-search-heart" aria-hidden="true"></i>
+                  <h3>{t("support.no_results_title")}</h3>
+                  <p>{t("support.no_results_desc")}</p>
+                </div>
+              )}
+            </section>
+          ) : (
+            /* Browse by category */
+            <section className="support-browse">
+              <div className="support-cat-grid">
+                {categories.map((cat) => {
+                  const catArticles = articles.filter((a) => a.category === cat.key);
+                  return (
+                    <div className="support-cat-card" key={cat.key}>
+                      <div className="support-cat-head">
+                        <span className="support-cat-icon">
+                          <i className={`bi ${cat.icon}`} aria-hidden="true"></i>
+                        </span>
+                        <h2>{cat.label}</h2>
+                      </div>
+                      <ul className="support-cat-list">
+                        {catArticles.map((a) => (
+                          <li key={a.slug}>
+                            <Link to={`/support/${a.slug}`}>
+                              {a.question}
+                              <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          <ContactCard />
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+export default SupportPage;
+export { ContactCard, Highlight };
