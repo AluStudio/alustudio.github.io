@@ -122,33 +122,80 @@ DNS 在你手上，任何一步出錯都能重新驗證，不存在永久失去�
 
 | 指標 | 來源 | 數值 |
 |------|------|------|
-| GSC 已索引頁數 | GSC → 建立索引 | 填 |
-| GSC 近 28 天曝光 | GSC → 成效 | 填 |
-| GSC 近 28 天點擊 | GSC → 成效 | 填 |
+| GSC 已索引頁數 | GSC → 建立索引 | 0 |
+| GSC 近 28 天曝光 | GSC → 成效 | 1 |
+| GSC 近 28 天點擊 | GSC → 成效 | 0 |
 | Bing 已索引頁數 | Bing WMT | 填 |
 | Bing 近 28 天曝光 | Bing WMT | 填 |
-| Cloudflare 總請求數（近 30 天） | CF → Analytics | 填 |
+
+Cloudflare 流量見下方 C 段，已由腳本擷取。
 
 ---
 
-## C. AI 爬蟲抓取量（本案最直接的成效指標）
+## C. Cloudflare 流量與爬蟲抓取量（已擷取，2026-07-29）
 
-Cloudflare → AI Crawl Control 或 Analytics 的 bot 分類。記下近 30 天各 UA 的請求數。
+由 `node scripts/cf-baseline.mjs` 產生。**30 天後請重跑同一支腳本**取得可比數字——手動讀儀表板兩次，很容易讀到兩種定義不同的「請求數」。
 
-| Crawler | 目前是否 Allow | 近 30 天請求數 |
-|---------|----------------|----------------|
-| GPTBot | 填 | 填 |
-| OAI-SearchBot | 填 | 填 |
-| ChatGPT-User | 填 | 填 |
-| ClaudeBot | 填 | 填 |
-| PerplexityBot | 填 | 填 |
-| CCBot | 填 | 填 |
-| Google-Extended | 填 | 填 |
-| Bytespider | 填 | 填 |
-| Googlebot | 填 | 填 |
-| Bingbot | 填 | 填 |
+### 兩個 Free 方案的限制（實測撞到）
 
-依 §5 決議，全部應為 Allow（含訓練類）。若有 Block，記下來——那就是 30 天後數字沒動的原因。
+1. **拿不到 30 天**。zone 資料從 2026-07-21 才開始（網域剛上 Cloudflare），所以基線就是這 9 天，不是 30 天。原本表格要求「近 30 天」是做不到的。
+2. **UA 分佈查詢上限 1 天**。只有 `httpRequestsAdaptiveGroups` 有 `userAgent` 維度，而它在 Free 方案拒絕任何超過 1 天的區間（錯誤訊息：`cannot request a time range wider than 1d`）。所以各爬蟲請求數只能是 24 小時快照，永遠不會是 30 天累計。比較時請比 24h 對 24h。
+
+### 擷取結果
+
+### Cloudflare 流量（`alu-studio.com`，Free Website）
+
+擷取時間：2026-07-29T01:24:45Z　產生方式：`node scripts/cf-baseline.mjs`
+
+資料涵蓋 **2026-07-21 ~ 2026-07-29**（9 天，非完整 30 天——zone 建立時間所限）
+
+- 總請求數：**12,204**
+- 不重複訪客合計：**1,093**
+
+| 日期 | 請求數 | 不重複訪客 |
+|------|--------|------------|
+| 2026-07-21 | 3 | 1 |
+| 2026-07-22 | 821 | 120 |
+| 2026-07-23 | 1,035 | 60 |
+| 2026-07-24 | 416 | 31 |
+| 2026-07-25 | 2,523 | 227 |
+| 2026-07-26 | 2,251 | 242 |
+| 2026-07-27 | 3,631 | 196 |
+| 2026-07-28 | 1,362 | 193 |
+| 2026-07-29 | 162 | 23 |
+
+### 爬蟲請求數（近 24 小時，Free 方案的 userAgent 查詢上限）
+
+| Crawler | 近 24h 請求數 |
+|---------|---------------|
+| GPTBot | 3 |
+| OAI-SearchBot | 3 |
+| ChatGPT-User | 0（未出現） |
+| ClaudeBot | 48 |
+| Claude-User / Claude-SearchBot | 0（未出現） |
+| PerplexityBot | 0（未出現） |
+| CCBot | 0（未出現） |
+| Google-Extended | 0（未出現） |
+| Bytespider | 0（未出現） |
+| Applebot | 8 |
+| Amazonbot | 0（未出現） |
+| meta-externalagent | 1 |
+| Googlebot | 44 |
+| Googlebot-Image | 4 |
+| bingbot | 3 |
+| YandexBot | 5 |
+| Google-adstxt | 8 |
+| facebookexternalhit | 19 |
+
+近 24h 全部請求 1,703，其中已辨識爬蟲 146（8.6%），其餘為一般流量與未分類自動請求。
+
+### 這份數據直接回答了 T1
+
+原本 T1 要人工到 Cloudflare 儀表板確認 AI 爬蟲沒有被擋（研究指出 Cloudflare 對新 zone 預設封鎖 AI bots）。**實測顯示沒有被擋**：GPTBot、OAI-SearchBot、ClaudeBot、bingbot 都有成功請求記錄。仍建議你到儀表板眼睛確認一次並截圖，但經驗證據已經站在「通行無阻」這邊。
+
+### 這份數據也說明了本案的價值
+
+ClaudeBot 近 24h 抓了 48 次、Googlebot 44 次、GPTBot 與 OAI-SearchBot 各 3 次——**而它們現在拿到的全是空殼**（`/pikgeon/` 線上仍是 1,010 bytes 的空 HTML）。這就是最好的「前」對照組：爬蟲已經在來，只是無功而返。
 
 ---
 
