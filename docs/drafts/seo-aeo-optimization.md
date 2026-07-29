@@ -59,7 +59,7 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 | 3 | 無 JSON-LD（Organization / MobileApplication / WebSite） | 搜尋引擎與 AI 缺乏 entity 資訊 |
 | 4 | 無 og:image / twitter:card / og:type / og:site_name | 社群與 AI 答案卡片無視覺呈現 |
 | 5 | sitemap 無 `lastmod` | 重爬優先序差，AI 搜尋 freshness 訊號缺失 |
-| 6 | 內容非答案導向；babbby / sotto / dingpos 無 FAQ 頁 | 缺乏可被 AI 引用的問答格式內容 |
+| 6 | 內容非答案導向；babbby / sotto 無 FAQ 頁（dingpos 已於 `/support/` 補齊，41 篇） | 缺乏可被 AI 引用的問答格式內容 |
 | 7 | Bing Webmaster Tools 未確認提交 | ChatGPT 引用鏈路的上游缺口 |
 
 ## 4. 實作計劃
@@ -100,7 +100,8 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 ### P2 — AEO 內容重構
 
 **T7. FAQ 頁補齊 + 答案導向重寫**
-- babbby / sotto / dingpos 新增 `/faq/` 路由（比照 pikgeon）；每頁 5-8 題。
+- babbby / sotto 新增 `/faq/` 路由（比照 pikgeon）；每頁 5-8 題。
+- dingpos 已完成，但規模超出原規劃：改採 `/support/` 支援中心（索引頁 + 41 篇獨立文章路由，分 FAQ／教學指南／未來功能三群），內容來自 `src/data/faq/articles.{zh-Hant,en}.js` 雙語 pack，路由與 meta 由 `scripts/copy-spa-pages.js` 於 build 時衍生並驗證（雙語 slug 一致性 + sitemap 覆蓋率）。babbby / sotto 若題數成長到十題以上，沿用這個模式而非單頁 `/faq/`。
 - 格式：問句式 H2（使用者真實查詢語言，如 "Does Pikgeon work offline?"）+ 標題下 2-3 句直接回答 + 細節展開。語意化 HTML（真 heading 階層，不是 div 樣式）。
 - 各 app 首頁文案改為可獨立引用的具體句子（例："Pikgeon tracks postcards with on-device OCR — no account, no cloud upload"），特性用事實與數字，不用空泛形容詞。
 - 驗收：prerendered HTML 中每個 FAQ 問答完整可見；人工抽測 ChatGPT/Perplexity 問 app 相關問題觀察引用。
@@ -145,7 +146,7 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 - [ ] T4 JSON-LD x5 apps
 - [ ] T5 og:image x5 + meta 補全
 - [ ] T6 sitemap lastmod 自動化
-- [ ] T7 FAQ x3 新增 + 全站答案導向文案
+- [ ] T7 FAQ 新增 + 全站答案導向文案（dingpos `/support/` 已完成；babbby / sotto 未做）
 - [ ] T8 home entity 強化
 - [ ] T9 Bing Webmaster Tools
 - [ ] T10 監測節奏建立（首次基線記錄）
