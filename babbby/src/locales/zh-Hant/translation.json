@@ -2,7 +2,8 @@
   "nav": {
     "home": "首頁",
     "privacy": "隱私權政策",
-    "terms": "使用條款"
+    "terms": "使用條款",
+    "faq": "常見問題"
   },
   "landing": {
     "title": "Babbby",
@@ -188,6 +189,51 @@
     "contact": {
       "title": "聯絡我們",
       "desc": "若您對本使用條款有任何疑問，請透過以下電子郵件與我們聯繫："
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "subtitle": "關於 Babbby 的每日活動、年齡配對與隱私保護，家長最常問的問題都整理在這裡。",
+    "contact_prompt": "沒有找到你要的答案？歡迎聯絡我們：",
+    "items": {
+      "what_is_babbby": {
+        "title": "Babbby 是什麼樣的 App？",
+        "answer": "Babbby（App Store 上架名稱「Babbby — Daily Baby Activities」）是一款免費的 iOS App，專為 0–6 歲孩子的家長設計，每天打開就有現成的活動計畫，不用再煩惱「今天要跟寶寶玩什麼」。內建 340+ 種活動、共八大類別，會依孩子年齡自動配對，也能依手邊現有材料篩選活動，並記錄每天完成的進度。"
+      },
+      "what_ages": {
+        "title": "Babbby 適合幾歲的孩子？",
+        "answer": "Babbby 為 0 到 6 歲的孩子設計。內建的 340+ 種活動會依孩子年齡自動配對，涵蓋大肢體、精細動作、語言、感官等多個發展類別。"
+      },
+      "is_babbby_free": {
+        "title": "Babbby 需要付費嗎？",
+        "answer": "不需要，Babbby 在 App Store 可免費下載，核心功能也不需要訂閱。App 內唯一的購買項目是一次性、非必要的「請開發者喝杯咖啡」贊助，透過 Apple StoreKit 處理，不影響任何活動或功能的使用。"
+      },
+      "does_it_need_an_account": {
+        "title": "使用 Babbby 需要註冊帳號嗎？",
+        "answer": "不需要。Babbby 不用註冊、不用登入，下載後就能直接使用。孩子的檔案、活動紀錄與進度資料都只儲存在你裝置上的本地資料庫，不會傳輸到任何伺服器。"
+      },
+      "how_are_activities_recommended": {
+        "title": "Babbby 是怎麼推薦活動的？",
+        "answer": "Babbby 會依孩子的年齡，從 340+ 種內建活動中自動配對合適的內容；你也可以依手邊現有的材料——例如蠟筆、紙箱、積木——進一步篩選，只看現在就能玩的活動。推薦內容由演算法產生、僅供靈感參考，是否適合自己的孩子由家長判斷。"
+      },
+      "can_it_track_milestones": {
+        "title": "Babbby 可以記錄孩子的成長進度嗎？",
+        "answer": "可以，Babbby 會記錄完成的活動、依類別呈現統計，並顯示每日趨勢，讓你回頭看到孩子的每一步。這些紀錄只儲存在你的裝置上，反映的是活動完成歷程，不能取代小兒科醫師的正式發展評估。"
+      },
+      "is_my_data_private": {
+        "title": "Babbby 會收集哪些資料？孩子的資料安全嗎？",
+        "answer": "Babbby 中所有使用者建立的內容——孩子檔案、活動紀錄、完成記錄與統計——都只儲存在你裝置上的本地資料庫，不會傳輸給 Alu Studio 的伺服器或任何第三方。App 沒有廣告、不收集廣告識別碼（IDFA），僅使用 Firebase Analytics 與 Crashlytics 收集匿名的使用與當機數據。",
+        "bullets": [
+          "孩子的檔案資料（姓名、生日）不會離開裝置，解除安裝後會被永久刪除",
+          "沒有廣告、不做廣告識別碼（IDFA）追蹤",
+          "歐盟/歐洲經濟區用戶享有 GDPR 權利；加州用戶享有 CCPA 權利，Alu Studio 不出售個人資訊",
+          "可在「設定」→「隱私權與安全性」→「分析與改進」限制分析數據分享"
+        ]
+      },
+      "what_platforms": {
+        "title": "Babbby 支援哪些平台？",
+        "answer": "Babbby 目前僅提供 iOS 版本，可在 App Store 免費下載，上架分類為「生活風格」與「教育」。"
+      }
     }
   }
 }

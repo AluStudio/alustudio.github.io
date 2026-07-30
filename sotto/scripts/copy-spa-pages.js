@@ -3,27 +3,54 @@
  * serves HTTP 200 (not 404) for SPA routes like /sotto/privacy, and
  * rewrite each copy's canonical/og:url to its own route URL (not the
  * app root) so search engines don't see duplicate-content canonicals.
+ * Each route also gets its own title/description — otherwise every
+ * route introduces itself as the app root (duplicate content signal).
+ *
+ * Bots (Google Play, App Store review) don't execute JavaScript, so a
+ * client-side redirect trick won't work for them — a real index.html at
+ * each route path is required.
  */
 
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { setSelfCanonical } from "../../scripts/rewrite-seo-tags.mjs";
+import { setSelfCanonical, setPageMeta } from "../../scripts/rewrite-seo-tags.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
 const src = join(dist, "index.html");
 
 const BASE_URL = "https://alu-studio.com/sotto";
-const routes = ["privacy", "terms"];
 
-for (const route of routes) {
+const routes = [
+  {
+    route: "privacy",
+    title: "Privacy Policy — Sotto",
+    description:
+      "How Sotto handles your data: what is collected, how it is stored, and your choices.",
+  },
+  {
+    route: "terms",
+    title: "Terms of Use — Sotto",
+    description:
+      "Terms of use for Sotto, the personal-details keeper by Alu Studio.",
+  },
+  {
+    route: "faq",
+    title: "Sotto FAQ — For the People You Love",
+    description:
+      "Answers to common questions about Sotto: what it does, pricing, accounts, reminders, and privacy.",
+  },
+];
+
+for (const { route, title, description } of routes) {
   const dest = join(dist, route, "index.html");
   mkdirSync(dirname(dest), { recursive: true });
   copyFileSync(src, dest);
 
   const routeUrl = `${BASE_URL}/${route}/`;
-  const html = setSelfCanonical(readFileSync(dest, "utf8"), routeUrl);
+  let html = setSelfCanonical(readFileSync(dest, "utf8"), routeUrl);
+  html = setPageMeta(html, { title, description });
   writeFileSync(dest, html);
 
   console.log(`  ✓ ${route}/index.html (canonical: ${routeUrl})`);

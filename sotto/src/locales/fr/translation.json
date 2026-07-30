@@ -2,7 +2,8 @@
   "nav": {
     "features": "Fonctionnalités",
     "privacy": "Confidentialité",
-    "terms": "Conditions d'utilisation"
+    "terms": "Conditions d'utilisation",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "Retiens les détails qui comptent",

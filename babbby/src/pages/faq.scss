@@ -1,0 +1,114 @@
+.faq-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.faq-subtitle {
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+
+  &--open {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.faq-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-card__title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.faq-card__chevron {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  opacity: 0.4;
+  transition: transform 0.3s ease;
+
+  .faq-card--open & {
+    transform: rotate(180deg);
+  }
+}
+
+/* Body: always in the DOM (crawlers must see answers); hidden attr toggles visibility */
+.faq-card__body {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.faq-card__answer {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
+  white-space: pre-line;
+}
+
+.faq-card__bullets {
+  padding-left: 1.25rem;
+  margin: 0;
+
+  li {
+    font-size: 0.93rem;
+    line-height: 1.65;
+    margin-bottom: 0.35rem;
+    opacity: 0.85;
+  }
+}
+
+.faq-contact {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.85;
+
+  p {
+    margin-bottom: 0.35rem;
+  }
+}
+
+.faq-contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  text-decoration: none;
+}

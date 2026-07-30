@@ -2,7 +2,8 @@
   "nav": {
     "features": "功能",
     "privacy": "隱私權政策",
-    "terms": "使用條款"
+    "terms": "使用條款",
+    "faq": "常見問題"
   },
   "hero": {
     "tagline": "記住每一個重要的細節",
@@ -158,6 +159,71 @@
     "contact": {
       "title": "聯絡我們",
       "desc": "如果您對本使用條款有任何疑問，請透過以下方式與我們聯繫："
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "subtitle": "對 Sotto 有疑問嗎？這裡整理了大家最常問的問題與答案。",
+    "contact_prompt": "沒有找到你想知道的答案？歡迎聯絡我們：",
+    "items": {
+      "what_is_sotto": {
+        "title": "Sotto 是什麼樣的 App？",
+        "answer": "Sotto 幫你記住在乎的人身上那些容易被遺忘、卻很重要的小細節——身高、喜好、常點的那杯咖啡、紀念日，或他曾說過的一句話。每個人都有一個專屬頁面，集合照片與簡介、個人筆記、身體量測資料，以及引導式的聊天問題。",
+        "bullets": [
+          "為每個在乎的人建立專屬頁面",
+          "用筆記記下他喜歡的小事或說過的話",
+          "27+ 種量測欄位（身高、體重、鞋碼、戒圍等），支援即時單位換算",
+          "精選題庫，幫你開啟新的對話",
+          "7 種配色主題，讓 App 更有你的風格"
+        ]
+      },
+      "who_is_sotto_for": {
+        "title": "Sotto 適合誰使用？",
+        "answer": "Sotto 適合任何想要一個私密、不被評判的地方，記住在乎的人的細節——伴侶、家人、好朋友，或任何你容易忘記他喜好與故事的人。設計理念是簡單、溫柔，而不是一個沉重的通訊錄或 CRM 系統。"
+      },
+      "is_sotto_free": {
+        "title": "Sotto 免費嗎？",
+        "answer": "Sotto 可免費下載，免費版包含所有功能，但可建立的人數、筆記數與量測欄位數有上限。一次性的買斷制購買即可永久解除所有限制——沒有訂閱制。"
+      },
+      "do_i_need_an_account": {
+        "title": "使用 Sotto 需要註冊帳號嗎？",
+        "answer": "不需要——Sotto 不用註冊、不用登入，所有核心功能離線就能使用，你輸入的資料都儲存在裝置本機。若選擇使用選配的雲端備份，是連結你自己的 Google Drive 或 Dropbox 帳號，備份檔存放在你掌控的空間。"
+      },
+      "what_can_i_record": {
+        "title": "Sotto 可以記錄哪些資訊？",
+        "answer": "每個人的專屬頁面裡，你可以記下照片與簡介、個人筆記、身體量測資料，以及聊天問題的回答。量測資料涵蓋 27+ 種欄位——身高、體重、鞋碼、戒圍等——並支援即時單位換算，買禮物再也不用偷偷問尺寸。",
+        "bullets": [
+          "姓名、照片與簡介",
+          "個人筆記（他喜歡的咖啡、紀念日、說過的一句話）",
+          "27+ 種身體量測欄位，支援即時單位換算",
+          "精選聊天問題的回答記錄"
+        ]
+      },
+      "does_sotto_suggest_questions": {
+        "title": "Sotto 會建議我可以問對方什麼問題嗎？",
+        "answer": "會——Sotto 內建精選題庫，收錄各種聊天開場問題。不知道要問什麼的時候挑一題，App 會自動開啟一則預填該問題的新筆記，等你寫下對方的回答。",
+        "bullets": [
+          "題庫參考 Arthur Aron 的 36 Questions（1997）",
+          "Gottman 的 Love Maps",
+          "紐約時報 13 Questions",
+          "Gary Chapman《The 5 Love Languages》（1992）",
+          "以及 Threads 使用者 hey.roseline 的整理分享"
+        ]
+      },
+      "is_my_data_private": {
+        "title": "Sotto 裡的資料私密嗎？會被上傳到哪裡嗎？",
+        "answer": "Sotto 把你所有的資料儲存在裝置本機，不會上傳到 Alu Studio 的伺服器。App 不收集個人身份識別資訊、不追蹤位置、不使用廣告 SDK，也不會把你的內容分享給任何第三方。資料唯一會離開裝置的情況，是你主動執行選配的備份，備份到你自己的 Google Drive 或 Dropbox。",
+        "bullets": [
+          "選配 Face ID / Touch ID App 鎖定，完全由 Apple 的 LocalAuthentication 框架處理",
+          "Firebase Analytics 與 Crashlytics 只收集匿名的使用與當機數據，不含你輸入的個人內容",
+          "選配的雲端備份存到你自己的 Google Drive 或 Dropbox——空間由你掌控，不經過 Alu Studio 的伺服器",
+          "解除安裝 App 會永久清除裝置上的所有資料"
+        ]
+      },
+      "what_platforms_is_sotto_on": {
+        "title": "Sotto 支援哪些平台？",
+        "answer": "Sotto 同時支援 iPhone 與 Android：可在 Apple App Store（生活風格、工具程式分類）與 Google Play 免費下載。資料只存在你使用的那台裝置上。"
+      }
     }
   }
 }

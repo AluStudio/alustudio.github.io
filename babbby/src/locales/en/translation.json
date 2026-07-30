@@ -2,7 +2,8 @@
   "nav": {
     "home": "Home",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "faq": "FAQ"
   },
   "landing": {
     "title": "Babbby",
@@ -188,6 +189,51 @@
     "contact": {
       "title": "Contact Us",
       "desc": "If you have any questions about these Terms, please contact us at"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the questions parents ask most about Babbby's daily activities, age matching, and privacy.",
+    "contact_prompt": "Didn't find your answer? Reach out to us:",
+    "items": {
+      "what_is_babbby": {
+        "title": "What is Babbby?",
+        "answer": "Babbby — Daily Baby Activities is a free iOS app that gives parents of children ages 0–6 a ready-made daily activity plan, so there's no need to figure out what to do with your child each day. It includes a library of 340+ activities across 8 categories, matched automatically to your child's age, with the option to filter by materials you already have at home and track completed activities over time."
+      },
+      "what_ages": {
+        "title": "What ages is Babbby designed for?",
+        "answer": "Babbby is designed for children ages 0 to 6. Its 340+ built-in activities are automatically matched to your child's age, spanning categories such as gross motor, fine motor, language, and sensory development."
+      },
+      "is_babbby_free": {
+        "title": "Is Babbby free?",
+        "answer": "Yes, Babbby is free to download on the App Store, and using its core features does not require a subscription. The only purchase available is an optional, one-time \"Buy the Developer a Coffee\" tip processed through Apple's StoreKit, which is not required to access any activity or feature."
+      },
+      "does_it_need_an_account": {
+        "title": "Does Babbby require an account or sign-up?",
+        "answer": "No. Babbby requires no account and no sign-up — you can start using it immediately after download. Children's profiles, activity logs, and progress data are stored exclusively on your device in a local database and are never transmitted to a server."
+      },
+      "how_are_activities_recommended": {
+        "title": "How does Babbby recommend activities?",
+        "answer": "Babbby automatically matches activities from its 340+ activity library to your child's age, and you can filter further by the materials you already have on hand — such as crayons, cardboard, or blocks — to see only activities you can start right away. Recommendations are generated algorithmically for inspiration only; parents and guardians decide what suits their child."
+      },
+      "can_it_track_milestones": {
+        "title": "Can Babbby track my child's milestones and progress?",
+        "answer": "Yes, Babbby tracks completed activities, shows a breakdown by category, and displays daily trends so you can look back at every step. This tracking data stays on your device, and it reflects activity-completion history rather than a formal developmental assessment from a pediatrician."
+      },
+      "is_my_data_private": {
+        "title": "What data does Babbby collect, and is my child's data private?",
+        "answer": "All user-created content in Babbby — including children's profiles, activity logs, completion records, and statistics — is stored exclusively on your device using a local database and is never transmitted to Alu Studio's servers or any third party. The app shows no ads and does not collect advertising identifiers (IDFA); it uses Firebase Analytics and Crashlytics only for anonymous usage and crash data.",
+        "bullets": [
+          "Children's profile data (name, birth date) never leaves the device and is permanently deleted if you uninstall the app",
+          "No ads and no advertising-identifier (IDFA) tracking",
+          "EU/EEA users have GDPR rights; California users have CCPA rights, and Alu Studio does not sell personal information",
+          "You can limit analytics via iOS Settings → Privacy & Security → Analytics & Improvements"
+        ]
+      },
+      "what_platforms": {
+        "title": "What platforms is Babbby available on?",
+        "answer": "Babbby is currently available on iOS only, as a free download from the App Store under the Lifestyle and Education categories."
+      }
     }
   }
 }
