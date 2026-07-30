@@ -4,7 +4,7 @@
 
 ## Apps
 
-- [Home](https://alu-studio.com/home/): Indie app studio — tools for everyday life. Pikgeon, Babbby, Sotto.
+- [Home](https://alu-studio.com/home/): Indie app studio — tools for everyday life. Pikgeon, Babbby, Sotto, and DingPOS.
 - [Pikgeon](https://alu-studio.com/pikgeon/): Keep your postcard memories organized. Smart OCR tracks your mailing journey, fully processed on-device for privacy.
 - [Babbby](https://alu-studio.com/babbby/): Daily activity ideas for your little one, ages 0–6. Track milestones, build routines, and make every day count.
 - [Sotto](https://alu-studio.com/sotto/): Remember the details that matter. Keep track of the little things about the people you care about.

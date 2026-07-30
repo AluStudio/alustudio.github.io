@@ -63,6 +63,15 @@ const apps = [
       },
     ],
   },
+  {
+    id: "dingpos",
+    name: "DingPOS",
+    icon: `${base}dingpos-icon.png`,
+    color: "#56688a",
+    website: "/dingpos/",
+    // Not yet live on the App Store — website is the only destination for now.
+    stores: [],
+  },
 ];
 
 function LanguagePicker() {

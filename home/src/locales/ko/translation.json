@@ -14,6 +14,10 @@
     "tagline": "소중한 디테일을 기억하세요",
     "desc": "좋아하는 것, 싫어하는 것, 웃음 짓게 하는 작은 것들 — 가만히 기억해 둡니다. 아낀다는 건, 잊지 않는 것."
   },
+  "dingpos": {
+    "tagline": "iPad용 POS",
+    "desc": "10분 만에 매장 오픈. 서버리스, 오프라인 우선 POS — 데이터는 온전히 당신의 것."
+  },
   "footer": {
     "rights": "All rights reserved."
   },
