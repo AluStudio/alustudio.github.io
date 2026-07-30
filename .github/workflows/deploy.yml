@@ -20,6 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history: generate-sitemap.mjs derives per-route <lastmod>
+          # from git commit dates; a shallow clone collapses every date to
+          # the checkout commit and turns the freshness signal into noise.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -73,7 +78,8 @@ jobs:
           cp -r app-ads.txt _site/ 2>/dev/null || true
           cp -r google9c954b37d1869b6e.html _site/ 2>/dev/null || true
           cp -r robots.txt _site/ 2>/dev/null || true
-          cp -r sitemap.xml _site/ 2>/dev/null || true
+          # sitemap: generated (not copied) so every URL gets a git-derived lastmod
+          node scripts/generate-sitemap.mjs --out _site/sitemap.xml
           cp -r llms.txt _site/ 2>/dev/null || true
           # root index: canonical-only fallback. The Worker (src/worker.js)
           # issues the real "/" -> "/home/" redirect before this file's body
