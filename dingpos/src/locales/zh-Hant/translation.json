@@ -3,7 +3,8 @@
     "home": "首頁",
     "pricing": "價格",
     "privacy": "隱私權政策",
-    "terms": "使用條款"
+    "terms": "使用條款",
+    "support": "常見問題"
   },
   "hero": {
     "eyebrow": "iPad POS 收銀系統",
@@ -111,7 +112,8 @@
     "contact": "聯絡我們",
     "privacy_policy": "隱私權政策",
     "terms_of_use": "使用條款",
-    "copyright": "ALU Studio. All rights reserved."
+    "copyright": "ALU Studio. All rights reserved.",
+    "support": "常見問題"
   },
   "privacy": {
     "title": "隱私權政策",
@@ -220,5 +222,28 @@
       "title": "聯絡我們",
       "desc": "如果你對本使用條款有任何疑問，請透過以下方式與我們聯繫："
     }
+  },
+  "support": {
+    "doc_title": "支援中心",
+    "title": "有什麼可以幫你？",
+    "subtitle": "搜尋常見問題，或依主題瀏覽",
+    "search_placeholder": "搜尋問題，例如「條碼」或「備份 還原」",
+    "search_hint_keywords": "可用空格分隔多個關鍵字",
+    "search_hint_shortcut_pre": "按 ",
+    "search_hint_shortcut_post": " 快速搜尋",
+    "clear": "清除搜尋",
+    "results_count": "找到 {{num}} 個相關問題",
+    "no_results_title": "找不到相關問題",
+    "no_results_desc": "換個關鍵字試試，或直接寫信給我們，我們會盡快回覆。",
+    "related_title": "類似問題",
+    "back": "支援中心",
+    "contact_title": "找不到答案嗎？",
+    "contact_desc": "寫信告訴我們你遇到的問題，我們會盡快回覆你。",
+    "contact_cta": "聯繫 ALU Studio",
+    "group_faq": "常見問題",
+    "group_guide": "教學指南",
+    "group_guide_desc": "一步一步帶你完成設定，包含我們在開發過程中整理出的注意事項。",
+    "group_roadmap": "未來功能",
+    "group_roadmap_desc": "這些功能還沒有，但有些已在規劃中——你的需求會影響開發順序，歡迎寫信告訴我們。"
   }
 }

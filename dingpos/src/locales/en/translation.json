@@ -3,7 +3,8 @@
     "home": "Home",
     "pricing": "Pricing",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "support": "FAQ"
   },
   "hero": {
     "eyebrow": "Point of Sale for iPad",
@@ -111,7 +112,8 @@
     "contact": "Contact Us",
     "privacy_policy": "Privacy Policy",
     "terms_of_use": "Terms of Use",
-    "copyright": "ALU Studio. All rights reserved."
+    "copyright": "ALU Studio. All rights reserved.",
+    "support": "FAQ"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -220,5 +222,28 @@
       "title": "Contact us",
       "desc": "If you have any questions about these Terms of Use, please contact us at:"
     }
+  },
+  "support": {
+    "doc_title": "Support",
+    "title": "How can we help?",
+    "subtitle": "Search common questions, or browse by topic",
+    "search_placeholder": "Search, e.g. “barcode” or “backup restore”",
+    "search_hint_keywords": "Separate keywords with spaces",
+    "search_hint_shortcut_pre": "press ",
+    "search_hint_shortcut_post": " to search",
+    "clear": "Clear search",
+    "results_count": "{{num}} matching questions",
+    "no_results_title": "No matching questions",
+    "no_results_desc": "Try different keywords, or just email us — we'll get back to you soon.",
+    "related_title": "Related questions",
+    "back": "Support",
+    "contact_title": "Can't find an answer?",
+    "contact_desc": "Tell us what you're running into and we'll get back to you as soon as we can.",
+    "contact_cta": "Contact ALU Studio",
+    "group_faq": "FAQ",
+    "group_guide": "Guides",
+    "group_guide_desc": "Step-by-step setup walkthroughs, including the gotchas we collected while building DingPOS.",
+    "group_roadmap": "Coming Soon",
+    "group_roadmap_desc": "Not available yet — some are already planned. Your requests shape our priorities, so write to us."
   }
 }
