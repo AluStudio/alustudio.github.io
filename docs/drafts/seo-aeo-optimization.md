@@ -7,7 +7,7 @@ read_when:
 
 # SEO + AEO Optimization Plan
 
-**Status**: In-flight draft
+**Status**: P0–P2 shipped 2026-07-30（工程項 + 內容項全數完成）；待 T1/T9 dashboard 確認、T10 監測基線
 **Scope**: alu-studio.com 全站（home + pikgeon + babbby + sotto + dingpos）
 
 ## 1. 背景與目標
@@ -140,17 +140,25 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 ## Checklist
 
 - [ ] T1 Cloudflare AI Crawl Control 確認並截圖記錄
-- [ ] T2a prerender 腳本 + pikgeon pilot
-- [ ] T2b 全站 rollout（home/babbby/sotto/dingpos）
-- [ ] T3 robots.txt AI 政策（含訓練類 bot 決策）
-- [ ] T4 JSON-LD x5 apps
-- [ ] T5 og:image x5 + meta 補全
-- [ ] T6 sitemap lastmod 自動化
-- [ ] T7 FAQ 新增 + 全站答案導向文案（dingpos `/support/` 已完成；babbby / sotto 未做）
-- [ ] T8 home entity 強化
+- [x] T2a prerender 腳本 + pikgeon pilot（scripts/prerender.mjs，e58c116）
+- [x] T2b 全站 rollout — 58 routes，CI 接在 assemble 之後，render 空殼會 fail build
+- [x] T3 robots.txt AI 政策（2c26fe0；Ohlulu 決策：搜尋類 + 訓練類全部 allow）
+- [x] T4 JSON-LD x5 apps（651f4de；aggregateRating 刻意略過 — sotto 僅 1 評分太薄14，dingpos 未上架無 installUrl/offers）
+- [x] T5 og:image x5 + 完整 social meta（00f4c5a；nano-banana 生圖，逐張人工檢查文字 artifacts，三張重生）
+- [x] T6 sitemap lastmod 自動化（82f6bc3；deploy 時生成，git 日期來源，repo 檔維持手維護當 URL 清單）
+- [x] T7 FAQ 新增 + 答案導向（d2153dc；abbby/sotto 各 8 題 en+zh-Hant；pikgeon per-route title 補齊 2f1044d）
+- [x] T8 home entity 強化（548d92e；補上缺席的 DingPOS 卡片 x10 語系，meta/llms.txt 同步四個 app）
 - [ ] T9 Bing Webmaster Tools
 - [ ] T10 監測節奏建立（首次基線記錄）
 - [ ] T11 (optional) IndexNow
+
+### 執行中的額外發現（2026-07-30）
+
+- **pikgeon FAQ accordion 反模式**：`{isOpen && ...}` 條件渲染讓收合答案完全不在 DOM，prerender 也救不回來。改為永遠渲染 + `hidden` 屬性（378cd85）。babbby/sotto 的新 FaqPage 從一開始就用這個 pattern。
+- **babbby 官網 App Store 死連結**：首頁指向已下架的 id6744145981，修為 id6760455078（814028e）。
+- **sotto 事實確認**（Ohlulu）：有 lifetime 買斷 IAP（解除 person/note/field 數量上限）；Google Drive/Dropbox 備份功能確實存在（非模板殘留）；Android 版已上架（Play 實測 200）。FAQ 與 JSON-LD 均依此更新。
+- **babbby 事實確認**（Ohlulu）：無帳號機制，FAQ 寫成事實。
+- **sotto/babbby fallbackLng 是 zh-Hant**：FAQ 只出 en + zh-Hant，其餘語系 per-key 退回 zh-Hant；prerender 產出英文版（headless en-US）。
 
 ## Sources
 

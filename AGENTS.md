@@ -60,7 +60,7 @@ kill $(lsof -t -i :4173)
 
 ## Deploy
 
-Push to `main` → GitHub Actions builds all apps, assembles `_site/`, and runs `wrangler deploy` (Cloudflare Worker with static assets) under `alu-studio.com`.
+Push to `main` → GitHub Actions builds all apps, assembles `_site/`, generates `_site/sitemap.xml` with git-derived `lastmod` (`scripts/generate-sitemap.mjs`), prerenders every sitemap route with headless Chrome (`scripts/prerender.mjs` — AI crawlers don't execute JS; an empty render fails the build), and runs `wrangler deploy` (Cloudflare Worker with static assets) under `alu-studio.com`.
 No manual deploy. No preview script needed — `make pk` / `make bb` / etc. covers dev workflow.
 
 Root-level Worker logic (`src/worker.js`) owns all redirect/header behavior — no `_redirects`/`_headers` files. Run its regression tests with `npm test` (repo root).
@@ -69,7 +69,8 @@ Root-level Worker logic (`src/worker.js`) owns all redirect/header behavior — 
 
 - Each uses `base: '/<app-name>/'` in `vite.config.js` — paths are sub-directory scoped.
 - Each has its own `package.json` / `package-lock.json` — no shared root deps.
-- Each app's `scripts/copy-spa-pages.js` rewrites per-route `canonical`/`og:url` on copy (via the shared `scripts/rewrite-seo-tags.mjs` helper) — every route ships a real, self-canonical HTML file, no client-side SPA fallback.
+- Each app's `scripts/copy-spa-pages.js` rewrites per-route `canonical`/`og:url` and sets per-route `title`/`description` on copy (via the shared `scripts/rewrite-seo-tags.mjs` helper) — every route ships a real, self-canonical HTML file, no client-side SPA fallback.
+- FAQ/accordion content must stay in the DOM when collapsed (`hidden` attr, not conditional render) — crawlers only see initial HTML; prerender can't capture unmounted nodes. SEO/AEO ground rules: `docs/drafts/seo-aeo-optimization.md`.
 - Runtime: Node 22, npm.
 
 ## Conventions
