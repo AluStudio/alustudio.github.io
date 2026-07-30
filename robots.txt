@@ -1,7 +1,49 @@
+# Default: everyone welcome.
 User-agent: *
 Allow: /
 
 User-agent: Google-adstxt
+Allow: /
+
+# --- AI search / assistant crawlers (citation & answer engines) ---
+# Explicitly allowed so AI visibility survives any future default change.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# --- AI training crawlers ---
+# Deliberate policy (2026-07): support/marketing content is meant to spread;
+# training access is allowed so the brand carries into future models.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: https://alu-studio.com/sitemap.xml
