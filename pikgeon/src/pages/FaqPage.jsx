@@ -194,79 +194,78 @@ function FaqItem({ item, isOpen, onToggle, t }) {
         <i className={`bi bi-chevron-down faq-card__chevron`}></i>
       </button>
 
-      {isOpen && (
-        <div
-          id={`faq-body-${item.id}`}
-          className="faq-card__body"
-          role="region"
-          aria-labelledby={`faq-header-${item.id}`}
-        >
-          <p className="faq-card__answer">
-            {t(`faq.items.${item.id}.answer`)}
-          </p>
+      <div
+        id={`faq-body-${item.id}`}
+        className="faq-card__body"
+        role="region"
+        aria-labelledby={`faq-header-${item.id}`}
+        hidden={!isOpen}
+      >
+        <p className="faq-card__answer">
+          {t(`faq.items.${item.id}.answer`)}
+        </p>
 
-          {/* Render bullet points if present */}
-          {t(`faq.items.${item.id}.bullets`, { returnObjects: true, defaultValue: null }) &&
-            Array.isArray(t(`faq.items.${item.id}.bullets`, { returnObjects: true })) && (
-              <ul className="faq-card__bullets">
-                {t(`faq.items.${item.id}.bullets`, { returnObjects: true }).map(
-                  (bullet, i) => (
-                    <li key={i}>{bullet}</li>
-                  )
+        {/* Render bullet points if present */}
+        {t(`faq.items.${item.id}.bullets`, { returnObjects: true, defaultValue: null }) &&
+          Array.isArray(t(`faq.items.${item.id}.bullets`, { returnObjects: true })) && (
+            <ul className="faq-card__bullets">
+              {t(`faq.items.${item.id}.bullets`, { returnObjects: true }).map(
+                (bullet, i) => (
+                  <li key={i}>{bullet}</li>
+                )
+              )}
+            </ul>
+          )}
+
+        {/* Download buttons */}
+        {item.downloads && item.downloads.length > 0 && (
+          <div className="faq-card__downloads">
+            {item.downloads.map((dl, i) => (
+              <a
+                key={i}
+                href={dl.href}
+                download
+                className="faq-card__download-btn"
+              >
+                <i className={`bi ${dl.icon}`}></i>
+                {t(dl.labelKey)}
+              </a>
+            ))}
+          </div>
+        )}
+
+        {/* Tutorial: video + step tabs */}
+        <TutorialTabs item={item} t={t} />
+
+        {/* Render gallery images */}
+        {item.images && item.images.length > 0 && (
+          <div className="faq-card__images">
+            {item.images.map((img, i) => (
+              <figure key={i} className="faq-card__figure">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="faq-card__img"
+                  loading="lazy"
+                />
+                {img.captionKey && (
+                  <figcaption className="faq-card__caption">
+                    {t(img.captionKey)}
+                  </figcaption>
                 )}
-              </ul>
-            )}
+              </figure>
+            ))}
+          </div>
+        )}
 
-          {/* Download buttons */}
-          {item.downloads && item.downloads.length > 0 && (
-            <div className="faq-card__downloads">
-              {item.downloads.map((dl, i) => (
-                <a
-                  key={i}
-                  href={dl.href}
-                  download
-                  className="faq-card__download-btn"
-                >
-                  <i className={`bi ${dl.icon}`}></i>
-                  {t(dl.labelKey)}
-                </a>
-              ))}
-            </div>
-          )}
-
-          {/* Tutorial: video + step tabs */}
-          <TutorialTabs item={item} t={t} />
-
-          {/* Render gallery images */}
-          {item.images && item.images.length > 0 && (
-            <div className="faq-card__images">
-              {item.images.map((img, i) => (
-                <figure key={i} className="faq-card__figure">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="faq-card__img"
-                    loading="lazy"
-                  />
-                  {img.captionKey && (
-                    <figcaption className="faq-card__caption">
-                      {t(img.captionKey)}
-                    </figcaption>
-                  )}
-                </figure>
-              ))}
-            </div>
-          )}
-
-          {/* Render extra note if present */}
-          {t(`faq.items.${item.id}.note`, { defaultValue: "" }) && (
-            <p className="faq-card__note">
-              <i className="bi bi-info-circle"></i>
-              {t(`faq.items.${item.id}.note`)}
-            </p>
-          )}
-        </div>
-      )}
+        {/* Render extra note if present */}
+        {t(`faq.items.${item.id}.note`, { defaultValue: "" }) && (
+          <p className="faq-card__note">
+            <i className="bi bi-info-circle"></i>
+            {t(`faq.items.${item.id}.note`)}
+          </p>
+        )}
+      </div>
     </div>
   );
 }

@@ -130,7 +130,7 @@
   }
 }
 
-/* Body (conditionally rendered when open) */
+/* Body: always in the DOM (AI crawlers must see answers); hidden attr toggles visibility */
 .faq-card__body {
   padding: 0 1.25rem 1.25rem;
 }
