@@ -7,7 +7,7 @@ read_when:
 
 # SEO + AEO Optimization Plan
 
-**Status**: P0–P2 shipped 2026-07-30（工程項 + 內容項全數完成）；待 T1/T9 dashboard 確認、T10 監測基線
+**Status**: 全部完成（P0–P3）2026-07-30；剩每月監測回訪（首次 2026-08）
 **Scope**: alu-studio.com 全站（home + pikgeon + babbby + sotto + dingpos）
 
 ## 1. 背景與目標
@@ -139,18 +139,29 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 
 ## Checklist
 
-- [ ] T1 Cloudflare AI Crawl Control 確認並截圖記錄
+- [x] T1 Cloudflare AI Crawl Control 確認（2026-07-30；全部 crawler 均為 allow、無 edge 封鎖；managed robots.txt 未開（線上檔未被加料）；截圖 assets/cloudflare-ai-crawl-control-2026-07-30.png）
 - [x] T2a prerender 腳本 + pikgeon pilot（scripts/prerender.mjs，e58c116）
 - [x] T2b 全站 rollout — 58 routes，CI 接在 assemble 之後，render 空殼會 fail build
 - [x] T3 robots.txt AI 政策（2c26fe0；Ohlulu 決策：搜尋類 + 訓練類全部 allow）
-- [x] T4 JSON-LD x5 apps（651f4de；aggregateRating 刻意略過 — sotto 僅 1 評分太薄14，dingpos 未上架無 installUrl/offers）
+- [x] T4 JSON-LD x5 apps（651f4de；aggregateRating 刻意略過 — sotto 僅 1 評分太薄，dingpos 未上架無 installUrl/offers）
 - [x] T5 og:image x5 + 完整 social meta（00f4c5a；nano-banana 生圖，逐張人工檢查文字 artifacts，三張重生）
 - [x] T6 sitemap lastmod 自動化（82f6bc3；deploy 時生成，git 日期來源，repo 檔維持手維護當 URL 清單）
-- [x] T7 FAQ 新增 + 答案導向（d2153dc；abbby/sotto 各 8 題 en+zh-Hant；pikgeon per-route title 補齊 2f1044d）
+- [x] T7 FAQ 新增 + 答案導向（d2153dc；babbby/sotto 各 8 題 en+zh-Hant；pikgeon per-route title 補齊 2f1044d）
 - [x] T8 home entity 強化（548d92e；補上缺席的 DingPOS 卡片 x10 語系，meta/llms.txt 同步四個 app）
-- [ ] T9 Bing Webmaster Tools
-- [ ] T10 監測節奏建立（首次基線記錄）
-- [ ] T11 (optional) IndexNow
+- [x] T9 Bing Webmaster Tools（站點已驗證；sitemap 7/29 首提、7/30 新版 58 URL 上線後重新提交，0 錯誤）
+- [x] T10 首次基線已記錄（見下方基線表）；每月回訪節奏從 2026-08 開始
+- [ ] T11 (optional) IndexNow — Bing WMT 側欄就有入口，僅在收錄遲緩時再開
+
+### 監測基線（2026-07-30，P0–P2 上線日）
+
+| 指標 | 基線值 |
+|------|--------|
+| Cloudflare AI Crawl Control（過去期間累計） | 總請求 33、允許 31；Applebot 14、Googlebot 12、GPTBot 2、ClaudeBot 2、Meta-ExternalAgent 1；BingBot/PerplexityBot/CCBot/Bytespider/DuckAssistBot 0 |
+| 線上 HTML | 五站全數 prerendered（pikgeon root 1,010 → 15,714 bytes）；JSON-LD、og:image、58 URL sitemap（全部 lastmod）、robots.txt AI 政策均 live |
+| Bing WMT | 站點處理中（最多 48h）；sitemap 已提交，舊資料顯示 14 URL，待 re-crawl 後應為 58 |
+| 手測 ChatGPT/Perplexity 品牌詞 | 未測 — 內容剛可見，AI 索引需時間；2026-08 首次回訪時測並記錄 |
+
+每月回訪清單：GSC + Bing WMT 曝光/點擊；AI Crawl Control 各 bot 請求數變化；手測「Pikgeon」「Babbby」「Sotto」「DingPOS」品牌詞在 ChatGPT/Perplexity/Google AI 的回答與引用；sitemap lastmod 抽驗。
 
 ### 執行中的額外發現（2026-07-30）
 
