@@ -30,7 +30,7 @@ function HomePage() {
               <p className="hero-subtitle">{t("landing.subtitle")}</p>
               <div className="hero-actions">
                 <a
-                  href="https://apps.apple.com/app/babbby/id6744145981"
+                  href="https://apps.apple.com/app/babbby-daily-baby-activities/id6760455078"
                   className="appstore-badge"
                   target="_blank"
                   rel="noopener noreferrer"
