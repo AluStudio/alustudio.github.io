@@ -27,29 +27,45 @@ import process from "node:process";
  * shows, so bumping the app root is honest. Legal/FAQ pages map to their
  * page component + locales so unrelated app work doesn't bump them.
  */
+/**
+ * Sources that shape a sub-route's final HTML beyond its page component:
+ * the head template (JSON-LD, og/social meta) and the per-route
+ * title/description rewrites applied by copy-spa-pages at build time.
+ */
+const appShell = (app) => [`${app}/index.html`, `${app}/scripts/copy-spa-pages.js`];
+
+/** Rule for a page-component-backed sub-route. */
+const page = (app, component) => [
+  `${app}/src/pages/${component}`,
+  `${app}/src/locales`,
+  ...appShell(app),
+];
+
 export const LASTMOD_SOURCES = [
   ["/home/", ["home/src", "home/index.html"]],
 
-  ["/pikgeon/privacy/", ["pikgeon/src/pages/PrivacyPage.jsx", "pikgeon/src/locales"]],
-  ["/pikgeon/terms/", ["pikgeon/src/pages/TermsPage.jsx", "pikgeon/src/locales"]],
-  ["/pikgeon/faq/", ["pikgeon/src/pages/FaqPage.jsx", "pikgeon/src/locales"]],
+  ["/pikgeon/privacy/", page("pikgeon", "PrivacyPage.jsx")],
+  ["/pikgeon/terms/", page("pikgeon", "TermsPage.jsx")],
+  ["/pikgeon/faq/", page("pikgeon", "FaqPage.jsx")],
   ["/pikgeon/", ["pikgeon/src", "pikgeon/index.html"]],
 
-  ["/babbby/privacy/", ["babbby/src/pages/PrivacyPage.jsx", "babbby/src/locales"]],
-  ["/babbby/terms/", ["babbby/src/pages/TermsPage.jsx", "babbby/src/locales"]],
-  ["/babbby/faq/", ["babbby/src/pages/FaqPage.jsx", "babbby/src/locales"]],
+  ["/babbby/privacy/", page("babbby", "PrivacyPage.jsx")],
+  ["/babbby/terms/", page("babbby", "TermsPage.jsx")],
+  ["/babbby/faq/", page("babbby", "FaqPage.jsx")],
   ["/babbby/", ["babbby/src", "babbby/index.html"]],
 
-  ["/sotto/privacy/", ["sotto/src/pages/PrivacyPage.jsx", "sotto/src/locales"]],
-  ["/sotto/terms/", ["sotto/src/pages/TermsPage.jsx", "sotto/src/locales"]],
-  ["/sotto/faq/", ["sotto/src/pages/FaqPage.jsx", "sotto/src/locales"]],
+  ["/sotto/privacy/", page("sotto", "PrivacyPage.jsx")],
+  ["/sotto/terms/", page("sotto", "TermsPage.jsx")],
+  ["/sotto/faq/", page("sotto", "FaqPage.jsx")],
   ["/sotto/", ["sotto/src", "sotto/index.html"]],
 
   // Every support article's copy lives in the shared bilingual packs, so
-  // the pack's last commit is the honest per-article date.
-  ["/dingpos/support/", ["dingpos/src/data/faq"]],
-  ["/dingpos/privacy/", ["dingpos/src/pages/PrivacyPage.jsx", "dingpos/src/locales"]],
-  ["/dingpos/terms/", ["dingpos/src/pages/TermsPage.jsx", "dingpos/src/locales"]],
+  // the pack's last commit is the honest per-article date. Accepted
+  // tradeoff: editing one article bumps all support URLs — the pack IS the
+  // common source; revisit only if the article set outgrows the two packs.
+  ["/dingpos/support/", ["dingpos/src/data/faq", ...appShell("dingpos")]],
+  ["/dingpos/privacy/", page("dingpos", "PrivacyPage.jsx")],
+  ["/dingpos/terms/", page("dingpos", "TermsPage.jsx")],
   ["/dingpos/", ["dingpos/src", "dingpos/index.html"]],
 ];
 
@@ -106,12 +122,20 @@ function main() {
     }
     const key = sources.join("|");
     if (!cache.has(key)) cache.set(key, gitLastCommitDate(sources));
-    return cache.get(key);
+    const date = cache.get(key);
+    if (!date) {
+      // A renamed/deleted/mistyped source path yields no git history —
+      // fail loudly instead of silently shipping the URL without lastmod.
+      console.error(`  ! no git history for ${route} sources: ${sources.join(", ")}`);
+      missing += 1;
+      return null;
+    }
+    return date;
   });
 
   writeFileSync(outPath, result);
   const total = (result.match(/<lastmod>/g) ?? []).length;
-  console.log(`sitemap written to ${outPath} — ${total} lastmod entries, ${missing} route(s) without a rule`);
+  console.log(`sitemap written to ${outPath} — ${total} lastmod entries, ${missing} problem route(s)`);
   if (missing > 0) process.exit(1);
 }
 

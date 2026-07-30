@@ -172,27 +172,32 @@ function StepImages({ steps, t }) {
 function FaqItem({ item, isOpen, onToggle, t }) {
   return (
     <div className={`faq-card ${isOpen ? "faq-card--open" : ""}`}>
-      <button
-        className="faq-card__header"
-        onClick={onToggle}
-        aria-expanded={isOpen}
-        aria-controls={`faq-body-${item.id}`}
-      >
-        <div className="faq-card__icon">
-          <i className={`bi ${item.icon}`}></i>
-        </div>
-        <div className="faq-card__header-text">
-          <h2 className="faq-card__title">
-            {t(`faq.items.${item.id}.title`)}
-          </h2>
-          {item.badge && (
-            <span className={`faq-card__badge faq-card__badge--${item.badge.variant || "info"}`}>
-              {t(item.badge.labelKey)}
+      {/* WAI-APG accordion: heading wraps button (button only allows
+          phrasing content). The id also makes the body's aria-labelledby
+          actually resolve. */}
+      <h2 className="faq-card__heading" id={`faq-header-${item.id}`}>
+        <button
+          className="faq-card__header"
+          onClick={onToggle}
+          aria-expanded={isOpen}
+          aria-controls={`faq-body-${item.id}`}
+        >
+          <span className="faq-card__icon">
+            <i className={`bi ${item.icon}`}></i>
+          </span>
+          <span className="faq-card__header-text">
+            <span className="faq-card__title">
+              {t(`faq.items.${item.id}.title`)}
             </span>
-          )}
-        </div>
-        <i className={`bi bi-chevron-down faq-card__chevron`}></i>
-      </button>
+            {item.badge && (
+              <span className={`faq-card__badge faq-card__badge--${item.badge.variant || "info"}`}>
+                {t(item.badge.labelKey)}
+              </span>
+            )}
+          </span>
+          <i className={`bi bi-chevron-down faq-card__chevron`}></i>
+        </button>
+      </h2>
 
       <div
         id={`faq-body-${item.id}`}

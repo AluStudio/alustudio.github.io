@@ -130,6 +130,10 @@ async function main() {
   const siteDir = resolve(getArg("--site-dir", "_site"));
   const only = getArg("--only", null);
   const concurrency = Number(getArg("--concurrency", "4"));
+  if (!Number.isInteger(concurrency) || concurrency < 1) {
+    console.error(`✗ --concurrency must be a positive integer, got: ${getArg("--concurrency", "4")}`);
+    process.exit(1);
+  }
 
   const sitemapPath = join(siteDir, "sitemap.xml");
   if (!existsSync(sitemapPath)) {
@@ -201,6 +205,11 @@ async function main() {
   console.log(`\nprerendered ${done}/${routes.length} routes`);
   if (failures.length > 0) {
     console.error(`✗ ${failures.length} route(s) failed — failing the build`);
+    process.exit(1);
+  }
+  // Belt-and-braces: nothing may exit 0 unless every route was written.
+  if (done !== routes.length) {
+    console.error(`✗ only ${done}/${routes.length} routes were rendered — failing the build`);
     process.exit(1);
   }
 }

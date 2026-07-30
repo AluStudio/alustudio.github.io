@@ -10,6 +10,8 @@ test("sourcesForRoute: longest prefix wins (faq page over app root)", () => {
   assert.deepEqual(sourcesForRoute("/pikgeon/faq/"), [
     "pikgeon/src/pages/FaqPage.jsx",
     "pikgeon/src/locales",
+    "pikgeon/index.html",
+    "pikgeon/scripts/copy-spa-pages.js",
   ]);
 });
 
@@ -23,6 +25,8 @@ test("sourcesForRoute: app root falls back to whole src tree", () => {
 test("sourcesForRoute: every dingpos support article maps to the faq packs", () => {
   assert.deepEqual(sourcesForRoute("/dingpos/support/tax-calculation/"), [
     "dingpos/src/data/faq",
+    "dingpos/index.html",
+    "dingpos/scripts/copy-spa-pages.js",
   ]);
 });
 
@@ -69,5 +73,33 @@ test("injectLastmod replaces a stale lastmod instead of duplicating", () => {
 test("LASTMOD_SOURCES rules are prefix-sorted sanely (no dead rules)", () => {
   for (const [prefix] of LASTMOD_SOURCES) {
     assert.ok(prefix.startsWith("/") && prefix.endsWith("/"), prefix);
+  }
+});
+
+test("every LASTMOD_SOURCES path exists on disk (rename/typo guard)", async () => {
+  const { existsSync } = await import("node:fs");
+  for (const [prefix, paths] of LASTMOD_SOURCES) {
+    for (const p of paths) {
+      assert.ok(
+        existsSync(new URL(`../${p}`, import.meta.url)),
+        `rule ${prefix} references missing path: ${p}`
+      );
+    }
+  }
+});
+
+test("sub-route rules include the app shell sources that shape final HTML", () => {
+  for (const [prefix, paths] of LASTMOD_SOURCES) {
+    const segs = prefix.split("/").filter(Boolean);
+    if (segs.length < 2 || segs[0] === "home") continue; // app roots and home
+    const app = segs[0];
+    assert.ok(
+      paths.includes(`${app}/index.html`),
+      `${prefix} must track ${app}/index.html (JSON-LD / meta live there)`
+    );
+    assert.ok(
+      paths.includes(`${app}/scripts/copy-spa-pages.js`),
+      `${prefix} must track ${app}/scripts/copy-spa-pages.js (route meta rewrites)`
+    );
   }
 });

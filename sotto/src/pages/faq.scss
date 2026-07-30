@@ -38,6 +38,11 @@
   }
 }
 
+.faq-card__heading {
+  margin: 0;
+  font-size: inherit;
+}
+
 .faq-card__header {
   display: flex;
   align-items: center;

@@ -9,15 +9,19 @@ import { useEffect, useState } from "react";
 function FaqItem({ id, item, isOpen, onToggle }) {
   return (
     <div className={`faq-card ${isOpen ? "faq-card--open" : ""}`}>
-      <button
-        className="faq-card__header"
-        onClick={onToggle}
-        aria-expanded={isOpen}
-        aria-controls={`faq-body-${id}`}
-      >
-        <h2 className="faq-card__title">{item.title}</h2>
-        <i className="bi bi-chevron-down faq-card__chevron"></i>
-      </button>
+      {/* WAI-APG accordion: heading wraps button (button only allows
+          phrasing content, so no heading may live inside it). */}
+      <h2 className="faq-card__heading">
+        <button
+          className="faq-card__header"
+          onClick={onToggle}
+          aria-expanded={isOpen}
+          aria-controls={`faq-body-${id}`}
+        >
+          <span className="faq-card__title">{item.title}</span>
+          <i className="bi bi-chevron-down faq-card__chevron"></i>
+        </button>
+      </h2>
 
       {/* Body stays in the DOM when collapsed — AI crawlers and search
           engines only see the initial HTML, so unmounting would hide the
