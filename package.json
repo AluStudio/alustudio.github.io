@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/AluStudio/alustudio.github.io#readme",
   "devDependencies": {
+    "puppeteer": "^25.4.0",
     "wrangler": "^4.114.0"
   }
 }

@@ -26,6 +26,7 @@ jobs:
           node-version: 22
           cache: npm
           cache-dependency-path: |
+            package-lock.json
             home/package-lock.json
             pikgeon/package-lock.json
             babbby/package-lock.json
@@ -94,6 +95,22 @@ jobs:
           cp -r sotto/dist/* _site/sotto/
           # dingpos build output
           cp -r dingpos/dist/* _site/dingpos/
+
+      # Prerender AFTER assemble so every sitemap route ships fully rendered
+      # HTML — AI crawlers (GPTBot, ClaudeBot, PerplexityBot...) never execute
+      # JS, so the CSR shell is invisible to them (docs/drafts/
+      # seo-aeo-optimization.md §2a). An empty render fails the build instead
+      # of silently deploying an empty shell.
+      - name: Cache Puppeteer Chrome
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Prerender routes
+        run: |
+          npm ci
+          node scripts/prerender.mjs --site-dir _site
 
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v3
