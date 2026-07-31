@@ -77,3 +77,11 @@ Root-level Worker logic (`src/worker.js`) owns all redirect/header behavior — 
 
 - Commits: Conventional Commits (`feat|fix|refactor|build|ci|chore|docs|style|perf|test`).
 - Docs live in `docs/specs/<app>/` per SDD pattern.
+
+## Linear
+
+Tickets for this repo: label `fe` on team `OH`. Narrow to one sub-site by adding its product label (`--label pikgeon` / `babbby` / `sotto`; repeated `--label` is ANDed).
+
+```bash
+LINEAR_API_KEY="$(cat ~/.config/linear/api_key)" linear issue query --team OH --label fe
+```
