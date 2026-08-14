@@ -70,6 +70,12 @@ body {
   width: 100%;
   max-width: 480px;
   padding: 48px 20px 40px;
+
+  // Desktop: widen so the 2×2 app grid gets room; each column stays ≈ the
+  // mobile card width, so cards keep their proportions.
+  @media (min-width: 768px) {
+    max-width: 880px;
+  }
 }
 
 // ─── Language Picker ────────────────────────────────────────────
@@ -205,10 +211,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // ─── App Card ───────────────────────────────────────────────────
 .app-card {
+  // Flex column so __actions can pin to the bottom — keeps store buttons on
+  // one line across side-by-side cards whose descriptions differ in length.
+  display: flex;
+  flex-direction: column;
   background: $bg-card;
   border: 1px solid $border-card;
   border-radius: $radius-lg;
@@ -277,6 +292,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
+    margin-top: auto;
   }
 
   &__website {
