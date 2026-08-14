@@ -7,6 +7,21 @@ const base = import.meta.env.BASE_URL;
 
 const apps = [
   {
+    id: "dingpos",
+    name: "DingPOS",
+    icon: `${base}dingpos-icon.png`,
+    color: "#56688a",
+    website: "/dingpos/",
+    stores: [
+      {
+        platform: "ios",
+        label: "App Store",
+        url: "https://apps.apple.com/app/id6788988943",
+        icon: "bi-apple",
+      },
+    ],
+  },
+  {
     id: "sotto",
     name: "Sotto",
     icon: `${base}sotto-icon.png`,
@@ -62,15 +77,6 @@ const apps = [
         icon: "bi-apple",
       },
     ],
-  },
-  {
-    id: "dingpos",
-    name: "DingPOS",
-    icon: `${base}dingpos-icon.png`,
-    color: "#56688a",
-    website: "/dingpos/",
-    // Not yet live on the App Store — website is the only destination for now.
-    stores: [],
   },
 ];
 

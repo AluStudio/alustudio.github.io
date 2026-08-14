@@ -54,11 +54,11 @@ function HomePage() {
           <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
           <p className="hero-tagline">{t("hero.tagline")}</p>
           <p className="hero-desc">{t("hero.description")}</p>
-          {/* TODO: replace '#' with real App Store URL after launch */}
           <a
-            href="#"
+            href="https://apps.apple.com/app/id6788988943"
             className="hero-cta"
-            onClick={(e) => e.preventDefault()}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i className="bi bi-apple"></i>
             {t("hero.download")}
