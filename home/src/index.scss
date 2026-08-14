@@ -298,6 +298,14 @@ body {
   &__website {
     margin-left: auto;
 
+    // Desktop: cards sit side by side, but store-button rows wrap differently
+    // (1 vs 2 store badges). Forcing the website link onto its own bottom row
+    // gives every card the same two-row action structure, so buttons align.
+    @media (min-width: 768px) {
+      flex-basis: 100%;
+      justify-content: flex-end;
+    }
+
     .bi {
       font-size: 0.75rem;
       transition: transform 0.2s;
