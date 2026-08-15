@@ -224,6 +224,7 @@ body {
   // one line across side-by-side cards whose descriptions differ in length.
   display: flex;
   flex-direction: column;
+  position: relative; // anchor for the desktop top-right website link
   background: $bg-card;
   border: 1px solid $border-card;
   border-radius: $radius-lg;
@@ -298,12 +299,14 @@ body {
   &__website {
     margin-left: auto;
 
-    // Desktop: cards sit side by side, but store-button rows wrap differently
-    // (1 vs 2 store badges). Forcing the website link onto its own bottom row
-    // gives every card the same two-row action structure, so buttons align.
+    // Desktop: pin to the card's top-right corner — a fixed anchor that reads
+    // identically on every card, instead of trailing store buttons that wrap
+    // differently (1 vs 2 badges).
     @media (min-width: 768px) {
-      flex-basis: 100%;
-      justify-content: flex-end;
+      position: absolute;
+      top: 26px;
+      right: 24px;
+      margin-left: 0;
     }
 
     .bi {
