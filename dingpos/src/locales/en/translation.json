@@ -95,7 +95,6 @@
         "Choose one of iCloud, Google Drive, or Dropbox",
         "Manual backup, on demand",
         "Keeps the latest 5 snapshots",
-        "Conflicts prompt you to choose — never a silent overwrite",
         "Incremental image sync",
         "No account; data on-device, backups in your own cloud",
         "Fully functional offline"

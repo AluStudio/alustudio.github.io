@@ -275,7 +275,7 @@ export const articles = [
     keywords: ["backup", "icloud", "google drive", "dropbox", "cloud", "snapshot"],
     content: [
       { type: "p", text: "Go to Settings → Cloud Backup, pick one of iCloud, Google Drive, or Dropbox, and authorize it. After that you can trigger a backup manually anytime." },
-      { type: "p", text: "Backups go into your own cloud account, keeping the 5 most recent snapshots. Product photos sync incrementally — only new or changed images are uploaded. If the cloud and local versions ever diverge, DingPOS asks you which to keep — it never overwrites silently." },
+      { type: "p", text: "Backups go into your own cloud account, keeping the 5 most recent snapshots. Product photos sync incrementally — only new or changed images are uploaded." },
     ],
     related: ["transfer-new-ipad", "data-after-delete"],
   },

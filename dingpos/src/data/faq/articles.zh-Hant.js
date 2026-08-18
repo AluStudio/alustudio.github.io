@@ -285,7 +285,7 @@ export const articles = [
     keywords: ["備份", "icloud", "google drive", "dropbox", "雲端", "快照"],
     content: [
       { type: "p", text: "到「設定 → 雲端備份」，從 iCloud、Google Drive、Dropbox 中選一個並完成授權，之後隨時可以手動觸發備份。" },
-      { type: "p", text: "備份存進你自己的雲端帳號，保留最近 5 份快照。商品照片採增量同步，只上傳新增或變更的部分。若雲端與本機版本不一致，會提示你選擇保留哪一份，絕不靜默覆蓋。" },
+      { type: "p", text: "備份存進你自己的雲端帳號，保留最近 5 份快照。商品照片採增量同步，只上傳新增或變更的部分。" },
     ],
     related: ["transfer-new-ipad", "data-after-delete"],
   },
