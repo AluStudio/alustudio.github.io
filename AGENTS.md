@@ -73,6 +73,18 @@ Root-level Worker logic (`src/worker.js`) owns all redirect/header behavior — 
 - FAQ/accordion content must stay in the DOM when collapsed (`hidden` attr, not conditional render) — crawlers only see initial HTML; prerender can't capture unmounted nodes. SEO/AEO ground rules: `docs/drafts/seo-aeo-optimization.md`.
 - Runtime: Node 22, npm.
 
+## Product Repos
+
+Site content (features, FAQ) makes claims about app behavior — the app's source repo is the source of truth. Verify there before adding or removing a claim.
+
+| Site | Product repo(s) |
+|------|-----------------|
+| `pikgeon/` | `~/Developer/alustudio/pikgeon-ios`, `~/Developer/alustudio/pikgeon-android` |
+| `babbby/` | `~/Developer/alustudio/babbby-ios` |
+| `sotto/` | `~/Developer/alustudio/sotto` (monorepo: `sotto-ios` + `sotto-android`) |
+| `dingpos/` | `~/Developer/alustudio/DingPOS` |
+| `home/` | — studio profile, no product repo |
+
 ## Conventions
 
 - Commits: Conventional Commits (`feat|fix|refactor|build|ci|chore|docs|style|perf|test`).
