@@ -90,6 +90,16 @@ Site content (features, FAQ) makes claims about app behavior — the app's sourc
 - Commits: Conventional Commits (`feat|fix|refactor|build|ci|chore|docs|style|perf|test`).
 - Docs live in `docs/specs/<app>/` per SDD pattern.
 
+## Project Skills
+
+`.pi/skills/` holds 9 vendored UI/animation skills from [emilkowalski/skills](https://github.com/emilkowalski/skills), tracked in git and pinned by `skills-lock.json`. Update with `npx skills@latest update -p`. `animate-expo` (React Native) and `ask-sonner` (not a dependency) are deliberately excluded.
+
+`review-animations`, `pick-ui-library`, and `prototype` carry `disable-model-invocation: true` — they stay out of the system prompt and only run via `/skill:<name>`.
+
+**Repo rules override skill advice.** These skills assume a conventional React app; two constraints here do not match that assumption:
+- Collapsed FAQ/accordion content stays in the DOM (see Sub-app Notes) — no mount/unmount exit animations on that content, or prerender loses it.
+- No animation library is installed (Bootstrap 5 + Sass only). Advice naming Motion/Framer Motion means adding a dependency to all five apps — confirm before doing that.
+
 ## Linear
 
 Tickets for this repo: label `fe` on team `OH`. Narrow to one sub-site by adding its product label (`--label pikgeon` / `babbby` / `sotto`; repeated `--label` is ANDed).
