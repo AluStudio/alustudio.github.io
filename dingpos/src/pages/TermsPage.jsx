@@ -4,14 +4,9 @@ import "./legal.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
 
 function TermsPage() {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <>

@@ -1,0 +1,593 @@
+@import "./variables";
+
+// ── Tokens ────────────────────────────────────────────────
+// Built-in CSS easings are too soft to read as intentional at these
+// durations; these are the stronger variants.
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --section-pad: 6rem;
+}
+
+// ── Shared type ───────────────────────────────────────────
+.eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $accent-500;
+  margin-bottom: 0.85rem;
+}
+
+.lead {
+  font-size: 1.06rem;
+  line-height: 1.75;
+  color: $ink-mid;
+  margin-bottom: 1.6rem;
+}
+
+.section-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.section-sub {
+  text-align: center;
+  color: $ink-soft;
+  font-size: 1rem;
+  margin: 0 auto 3.5rem;
+  max-width: 40rem;
+}
+
+.spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: $ink-mid;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "\f633"; // bootstrap-icons check-lg
+      font-family: "bootstrap-icons";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: $accent-400;
+    }
+  }
+}
+
+// ── Store button ──────────────────────────────────────────
+.btn-store {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: $accent-600;
+  color: $neutral-0 !important;
+  padding: 0.85rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba($accent-700, 0.28);
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.16s var(--ease-out);
+
+  .bi {
+    font-size: 1.15rem;
+  }
+
+  // Touch devices fire :hover on tap, which leaves the lifted state stuck.
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $accent-700;
+      box-shadow: 0 12px 30px rgba($accent-800, 0.34);
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+// ── Device frame ──────────────────────────────────────────
+// Drawn in CSS so the committed assets stay pure screen captures.
+.device {
+  margin: 0;
+  padding: 0.7rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(155deg, $neutral-600 0%, $neutral-800 45%, $neutral-900 100%);
+  box-shadow:
+    0 1px 2px rgba($neutral-900, 0.4),
+    0 32px 64px -28px rgba($accent-900, 0.5),
+    inset 0 1px 0 rgba(#fff, 0.18);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    // Reserves space so the frame does not collapse before the image decodes.
+    // object-fit below enforces this ratio, which means a capture from a
+    // different iPad would be cropped silently — so scripts/build-screenshots.sh
+    // asserts every asset against this value and refuses to write a mismatch.
+    // Changing it here means changing CSS_RATIO_W/H there too.
+    aspect-ratio: 2388 / 1568;
+    object-fit: cover;
+    border-radius: 0.85rem;
+    background: $neutral-50;
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 0.4rem;
+    border-radius: 1rem;
+
+    img {
+      border-radius: 0.6rem;
+    }
+  }
+}
+
+// ── Hero ──────────────────────────────────────────────────
+.hero {
+  position: relative;
+  // No overflow clipping here on purpose — the device frame is meant to hang
+  // past the hero's bottom edge into the checkout band below it.
+  padding: calc(var(--navbar-height, 72px) + 4rem) 1.5rem 0;
+  background: linear-gradient(180deg, $neutral-0 0%, $neutral-50 62%, $accent-100 100%);
+
+  // One soft wash instead of the old stacked radials + dot grid: the hero now
+  // carries a screenshot, and the screenshot has to be the busiest thing here.
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 70%;
+    background: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba($accent-300, 0.3) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+}
+
+.hero-copy {
+  position: relative;
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-logo {
+  display: block;
+  width: 220px;
+  max-width: 60vw;
+  height: auto;
+  margin: 0 auto 1.75rem;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $accent-600;
+  background: rgba($accent-200, 0.45);
+  border: 1px solid rgba($accent-400, 0.35);
+  padding: 0.32rem 0.85rem;
+  border-radius: 50px;
+  margin-bottom: 1.4rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+  margin-bottom: 1.25rem;
+}
+
+.hero-desc {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: $ink-mid;
+  margin-bottom: 2rem;
+}
+
+.hero-note {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: $ink-soft;
+  font-weight: 500;
+}
+
+.hero-proof {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  padding: 0;
+  margin: 1.75rem 0 0;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.87rem;
+    font-weight: 600;
+    color: $ink-mid;
+  }
+
+  .bi {
+    color: $accent-500;
+    font-size: 1rem;
+  }
+}
+
+.hero-shot {
+  position: relative;
+  // Above the next section's background, which it overlaps.
+  z-index: 2;
+  max-width: 1120px;
+  margin: 3.5rem auto 0;
+  // The frame runs off the bottom of the hero and into the section below, so
+  // the checkout copy reads as a caption for the screen above it.
+  transform: translateY(3rem);
+}
+
+// ── Checkout band (caption for the hero shot) ─────────────
+.checkout {
+  padding: calc(var(--section-pad) + 3rem) 0 var(--section-pad);
+  background: $neutral-0;
+}
+
+.checkout-head {
+  max-width: 44rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+
+  .eyebrow {
+    margin-bottom: 0.7rem;
+  }
+
+  h2 {
+    font-size: 1.95rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.9rem;
+  }
+
+  .lead {
+    margin-bottom: 0;
+  }
+}
+
+.spec-list--split {
+  max-width: 46rem;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    columns: 2;
+    column-gap: 2.5rem;
+
+    li {
+      break-inside: avoid;
+    }
+  }
+}
+
+// ── Story sections ────────────────────────────────────────
+.story {
+  padding: var(--section-pad) 0;
+
+  // Alternating band, driven by the story's index in JSX rather than
+  // :nth-of-type — that selector counts every <section> on the page, so
+  // inserting an unrelated one would silently invert the whole rhythm.
+  &.story--alt {
+    background: $neutral-0;
+  }
+}
+
+.story-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @media (max-width: 991.98px) {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.story-copy {
+  h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.28;
+    margin-bottom: 0.9rem;
+  }
+}
+
+.story--flip {
+  @media (min-width: 992px) {
+    // The column widths have to flip with the content. Swapping `order` alone
+    // would hand the narrow column to the screenshot on every other row.
+    .story-inner {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    }
+
+    .story-copy {
+      order: 2;
+    }
+
+    .story-shot {
+      order: 1;
+    }
+  }
+}
+
+// ── Features grid ─────────────────────────────────────────
+.features {
+  padding: var(--section-pad) 0;
+  background: $neutral-0;
+  border-top: 1px solid $neutral-100;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+
+  @media (max-width: 767.98px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-card {
+  padding: 1.8rem;
+  border-radius: 16px;
+  border: 1px solid $neutral-100;
+  background: $neutral-0;
+  transition:
+    transform 0.24s var(--ease-out),
+    box-shadow 0.24s ease,
+    border-color 0.24s ease;
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba($accent-800, 0.09);
+      border-color: rgba($accent-400, 0.45);
+    }
+  }
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1.1rem;
+  border-radius: 11px;
+  background: linear-gradient(140deg, $accent-500, $accent-700);
+  box-shadow: 0 6px 14px rgba($accent-700, 0.26);
+
+  .bi {
+    font-size: 1.2rem;
+    color: $neutral-0;
+  }
+}
+
+// ── Privacy band ──────────────────────────────────────────
+.privacy-band {
+  padding: var(--section-pad) 0;
+  background: linear-gradient(150deg, $accent-700 0%, $accent-800 58%, $neutral-900 100%);
+  color: $neutral-0;
+
+  .eyebrow {
+    color: rgba($accent-200, 0.9);
+  }
+
+  h2 {
+    font-size: 1.95rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.28;
+    color: $neutral-0;
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    color: rgba($neutral-0, 0.78);
+    margin-bottom: 0;
+  }
+
+  .spec-list li {
+    color: rgba($neutral-0, 0.8);
+
+    &::before {
+      color: rgba($accent-200, 0.95);
+    }
+  }
+}
+
+.privacy-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3.5rem;
+  align-items: start;
+  max-width: 1040px;
+  margin: 0 auto;
+
+  @media (max-width: 991.98px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .spec-list--split {
+    max-width: none;
+    margin: 0;
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      columns: 2;
+    }
+
+    @media (min-width: 992px) {
+      columns: 1;
+    }
+  }
+}
+
+// ── Pricing ───────────────────────────────────────────────
+.pricing {
+  padding: var(--section-pad) 0;
+  background: $neutral-50;
+}
+
+.pricing-card {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  background: $neutral-0;
+  border: 1px solid $neutral-100;
+  box-shadow: 0 20px 50px -30px rgba($accent-900, 0.35);
+  text-align: center;
+
+  h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .pricing-price {
+    font-size: 1.12rem;
+    line-height: 1.7;
+    color: $ink;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  .pricing-sub {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: $ink-soft;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 2.25rem 1.5rem;
+  }
+}
+
+// ── Motion ────────────────────────────────────────────────
+// Load-in only, and pure CSS. A JS-gated scroll reveal would be baked into the
+// prerendered HTML as an opacity:0 initial state (scripts/prerender.mjs writes
+// the rendered DOM back to disk), leaving the page blank without JS.
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@keyframes shot-in {
+  from {
+    opacity: 0;
+    transform: translateY(3rem) translateY(20px) scale(0.98);
+  }
+}
+
+.hero-copy > * {
+  animation: rise-in 0.6s var(--ease-out) backwards;
+}
+
+@for $i from 1 through 7 {
+  .hero-copy > *:nth-child(#{$i}) {
+    animation-delay: #{($i - 1) * 55}ms;
+  }
+}
+
+.hero-shot {
+  animation: shot-in 0.75s var(--ease-out) 260ms backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy > *,
+  .hero-shot {
+    animation: none;
+  }
+
+  .btn-store,
+  .feature-card {
+    transition: none;
+  }
+
+  .btn-store:active {
+    transform: none;
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────
+@media (max-width: 767.98px) {
+  :root {
+    --section-pad: 4rem;
+  }
+
+  .hero {
+    padding-top: calc(var(--navbar-height, 72px) + 2.5rem);
+  }
+
+  .hero-shot {
+    margin-top: 2.5rem;
+    transform: translateY(2rem);
+  }
+
+  .checkout {
+    padding-top: calc(var(--section-pad) + 2rem);
+  }
+
+  .section-title,
+  .checkout-head h2,
+  .story-copy h2,
+  .privacy-band h2,
+  .pricing-card h2 {
+    font-size: 1.6rem;
+  }
+}

@@ -8,24 +8,24 @@
   },
   "hero": {
     "eyebrow": "Point of Sale for iPad",
-    "tagline": "Open your store in 10 minutes. Your data, your control.",
+    "title": "Open your store in 10 minutes. Your data, your control.",
     "description": "DingPOS is a server-less point of sale for iPad. No account, no cloud lock-in, and it keeps working with no internet. Your products, orders, and customers all stay on your own device.",
     "download": "Download on the App Store",
-    "note": "30-day full-feature free trial. No credit card required."
+    "note": "30-day full-feature free trial. No credit card required.",
+    "shot_alt": "The DingPOS checkout screen: a product grid with category filters on the left, and the cart with automatically applied promotions and the total on the right"
   },
-  "features": {
-    "title": "Everything you need to open a store",
-    "subtitle": "From checkout to inventory, promotions to backup — all on a single iPad",
-    "onboarding": {
-      "title": "Fast onboarding",
-      "items": [
-        "Pick your country; currency, tax mode, and tax rate are filled in",
-        "Set your store name and logo",
-        "About 10 minutes end to end, then start selling"
-      ]
-    },
+  "proof": {
+    "items": [
+      "No account needed",
+      "Checkout works offline",
+      "Data stays on your iPad"
+    ]
+  },
+  "stories": {
     "cashier": {
-      "title": "Checkout",
+      "eyebrow": "Checkout",
+      "title": "Every step of a sale on one screen",
+      "lead": "Up to 10 carts at once, products found by name or barcode as you type, and discounts and tax worked out before you take payment.",
       "items": [
         "Up to 10 carts running at the same time",
         "Product search by name and barcode, as you type",
@@ -33,6 +33,57 @@
         "Inclusive / exclusive tax calculated automatically",
         "Cash change and custom payment-method labels",
         "Every sale ends with a \"Ding!\" and haptic feedback"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Promotion engine",
+      "title": "Set the rules once, checkout applies them",
+      "lead": "Spend thresholds, buy-one-get-one, happy hours, member-only deals — once a rule exists, checkout works it out. Nobody has to remember it, and there are no coupon codes to type.",
+      "items": [
+        "Cart subtotal thresholds trigger automatically",
+        "Cart or item discounts (fixed amount or percentage)",
+        "Buy-one-get-one and Nth-item offers",
+        "Points multipliers",
+        "Happy Hour windows — cross-midnight, selectable weekdays",
+        "Priority, stackable, and stop-after controls",
+        "Usage limits (total or per customer)",
+        "Applied automatically at checkout — no coupon codes"
+      ],
+      "shot_alt": "The promotions list in Settings, split into bundles and discounts, each rule showing its active state and priority"
+    },
+    "reports": {
+      "eyebrow": "Reports",
+      "title": "What you made today, while the shop is still open",
+      "lead": "Order count, revenue, gross profit, discounts and payment mix on one page, across today, 7 days, 30 days or all time.",
+      "items": [
+        "Today: order count, revenue, gross profit, discount, payment mix",
+        "Top 5 products by quantity",
+        "Day / week / month ranges",
+        "Revenue and gross-profit trend charts"
+      ],
+      "shot_alt": "The dashboard showing today's revenue, total discount, profit and average basket, above a payment-method donut chart and a top-sellers list"
+    },
+    "orders": {
+      "eyebrow": "Orders",
+      "title": "Every sale is there, and every sale can be undone",
+      "lead": "Each order keeps the full record: items and variants, which promotion applied, tax, payment method and change given.",
+      "items": [
+        "Chronological order list, filter by date and payment method",
+        "Line detail keeps items, variants, discounts, tax and change",
+        "Void with confirmation — stock and points restored automatically"
+      ],
+      "shot_alt": "A chronological order list on the left, with the selected order's detail on the right: items, the discount applied, tax, total, payment method and change"
+    }
+  },
+  "features": {
+    "title": "The rest of running a shop",
+    "subtitle": "First-time setup, products, stock and members — all on the same iPad",
+    "onboarding": {
+      "title": "Fast onboarding",
+      "items": [
+        "Pick your country; currency, tax mode, and tax rate are filled in",
+        "Set your store name and logo",
+        "About 10 minutes end to end, then start selling"
       ]
     },
     "products": {
@@ -54,19 +105,6 @@
         "Full movement ledger: sale, void, manual adjustment"
       ]
     },
-    "promotion": {
-      "title": "Promotion engine",
-      "items": [
-        "Cart subtotal thresholds trigger automatically",
-        "Cart or item discounts (fixed amount or percentage)",
-        "Buy-one-get-one and Nth-item offers",
-        "Points multipliers",
-        "Happy Hour windows — cross-midnight, selectable weekdays",
-        "Priority, stackable, and stop-after controls",
-        "Usage limits (total or per customer)",
-        "Applied automatically at checkout — no coupon codes"
-      ]
-    },
     "loyalty": {
       "title": "Members & points",
       "items": [
@@ -77,34 +115,26 @@
         "Member tiers that promotions can target",
         "Voiding an order reverses earned and redeemed points"
       ]
-    },
-    "reports": {
-      "title": "Reports & orders",
-      "items": [
-        "Today: order count, revenue, gross profit, discount, payment mix",
-        "Top 5 products by quantity",
-        "Day / week / month ranges",
-        "Revenue and gross-profit trend charts",
-        "Chronological order list, filter by date and payment method",
-        "Void with confirmation — stock and points restored automatically"
-      ]
-    },
-    "backup": {
-      "title": "Backup & privacy",
-      "items": [
-        "Choose one of iCloud, Google Drive, or Dropbox",
-        "Manual backup, on demand",
-        "Keeps the latest 5 snapshots",
-        "Incremental image sync",
-        "No account; data on-device, backups in your own cloud",
-        "Fully functional offline"
-      ]
     }
+  },
+  "privacy_band": {
+    "eyebrow": "Backup & privacy",
+    "title": "No account means nobody can take your data",
+    "lead": "DingPOS has nothing to sign up for and never talks to a server of ours. Your books live on the iPad, and if you want backups, they go to a cloud account you already own.",
+    "items": [
+      "Choose one of iCloud, Google Drive, or Dropbox",
+      "Manual backup, on demand",
+      "Keeps the latest 5 snapshots",
+      "Incremental image sync",
+      "No account; data on-device, backups in your own cloud",
+      "Fully functional offline"
+    ]
   },
   "pricing": {
     "title": "Simple, transparent pricing",
     "price": "30-day full-feature free trial, then NT$299 per month.",
-    "sub": "No transaction fees, no hidden charges. Your data is always kept after the trial — resubscribe anytime."
+    "sub": "No transaction fees, no hidden charges. Your data is always kept after the trial — resubscribe anytime.",
+    "cta": "Start the 30-day free trial"
   },
   "footer": {
     "tagline": "Open your store in 10 minutes. Your data, your control.",

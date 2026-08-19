@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import "../assets/scss/all.scss";
 import "../assets/scss/footer.scss";
 import "./support.scss";
 import Navbar from "../components/Navbar";
+import TransitionLink from "../components/TransitionLink";
 import Footer from "../components/Footer";
 import FaqBlocks from "../components/FaqBlocks";
 import ContactCard from "../components/ContactCard";
@@ -25,10 +26,6 @@ function SupportArticlePage() {
     : [];
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [slug]);
-
-  useEffect(() => {
     if (article) document.title = `${article.question} — DingPOS`;
     return () => {
       document.title = "DingPOS";
@@ -46,10 +43,10 @@ function SupportArticlePage() {
         <div className="container">
           <article className="faq-article">
             <nav className="faq-breadcrumb" aria-label="breadcrumb">
-              <Link to="/support">
+              <TransitionLink to="/support">
                 <i className="bi bi-arrow-left" aria-hidden="true"></i>
                 {t("support.back")}
-              </Link>
+              </TransitionLink>
               <span className="faq-breadcrumb-sep">/</span>
               <span className="faq-breadcrumb-cat">
                 <i className={`bi ${category.icon}`} aria-hidden="true"></i>
@@ -72,10 +69,10 @@ function SupportArticlePage() {
                 <ul>
                   {related.map((r) => (
                     <li key={r.slug}>
-                      <Link to={`/support/${r.slug}`}>
+                      <TransitionLink to={`/support/${r.slug}`}>
                         {r.question}
                         <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                      </Link>
+                      </TransitionLink>
                     </li>
                   ))}
                 </ul>

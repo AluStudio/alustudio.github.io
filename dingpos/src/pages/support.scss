@@ -628,3 +628,36 @@
     }
   }
 }
+
+// ── Route transition (support index ↔ article) ────────────
+// Progressive enhancement via the View Transitions API: browsers without it
+// navigate exactly as before, and nothing is written to the DOM, so the
+// prerendered HTML is untouched (unlike a JS-gated entrance state — see
+// AGENTS.md, Project Skills).
+//
+// The default UA crossfade is 250ms. These pages are goal-directed — someone
+// is looking for an answer — so it runs at 140ms, short enough to read as
+// "the content changed" rather than as waiting for it.
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 140ms;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  // The group animation keeps its own 250ms default, and the transition lasts
+  // as long as its longest animation — leaving 110ms after the crossfade has
+  // finished where the snapshot is still overlaying the live page.
+  ::view-transition-group(root) {
+    animation-duration: 140ms;
+  }
+}
+
+// Motion sickness: skip the crossfade rather than shorten it.
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-group(root) {
+    animation: none;
+  }
+}

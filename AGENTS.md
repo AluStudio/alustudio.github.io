@@ -71,6 +71,9 @@ Root-level Worker logic (`src/worker.js`) owns all redirect/header behavior — 
 - Each has its own `package.json` / `package-lock.json` — no shared root deps.
 - Each app's `scripts/copy-spa-pages.js` rewrites per-route `canonical`/`og:url` and sets per-route `title`/`description` on copy (via the shared `scripts/rewrite-seo-tags.mjs` helper) — every route ships a real, self-canonical HTML file, no client-side SPA fallback.
 - FAQ/accordion content must stay in the DOM when collapsed (`hidden` attr, not conditional render) — crawlers only see initial HTML; prerender can't capture unmounted nodes. SEO/AEO ground rules: `docs/drafts/seo-aeo-optimization.md`.
+- Product screenshots ship as pure screen captures; the device bezel is drawn in CSS. `dingpos/scripts/build-screenshots.sh <raw-dir>` crops the iOS status bar and the dev-tweak-ball corner, resizes, and writes `public/shot-*.webp`. Local authoring tool — outputs are committed, so CI never runs it. Re-capture recipe for DingPOS: `~/Developer/alustudio/DingPOS/scripts/screenshots/README.md` (use the `screenshots-zh` fixture, not the tweak menu's fake-data generator — that one randomizes prices into nonsense).
+- Every app mounts `<BrowserRouter>`, not `createBrowserRouter`. React Router's data-router features are therefore unavailable, and the ones that are props fail *silently* rather than erroring — `<Link viewTransition>` is accepted and never calls `startViewTransition`. `dingpos/src/components/TransitionLink.jsx` drives it by hand instead; verify any such prop actually fires before believing it works.
+- Route changes scroll to top from one place (`dingpos/src/components/ScrollToTop.jsx`), not per page: it has to run in `useLayoutEffect` with `behavior: "instant"`, because an effect scrolls after paint and `html { scroll-behavior: smooth }` turns the correction into a visible slide. POP is left to the browser so Back keeps the reader's place.
 - Runtime: Node 22, npm.
 
 ## Product Repos
@@ -96,9 +99,10 @@ Site content (features, FAQ) makes claims about app behavior — the app's sourc
 
 `review-animations`, `pick-ui-library`, and `prototype` carry `disable-model-invocation: true` — they stay out of the system prompt and only run via `/skill:<name>`.
 
-**Repo rules override skill advice.** These skills assume a conventional React app; two constraints here do not match that assumption:
+**Repo rules override skill advice.** These skills assume a conventional React app; three constraints here do not match that assumption:
 - Collapsed FAQ/accordion content stays in the DOM (see Sub-app Notes) — no mount/unmount exit animations on that content, or prerender loses it.
 - No animation library is installed (Bootstrap 5 + Sass only). Advice naming Motion/Framer Motion means adding a dependency to all five apps — confirm before doing that.
+- **No JS-gated scroll reveals.** `scripts/prerender.mjs` writes the rendered DOM back to each `index.html`, so an IntersectionObserver pattern that starts at `opacity: 0` ships that hidden state as the served HTML — the page then renders blank until React remounts, and stays blank forever without JS. Entrance motion must be a pure-CSS `animation` (it plays with no JS and leaves nothing hidden). `dingpos/src/assets/scss/home.scss` is the worked example.
 
 ## Linear
 

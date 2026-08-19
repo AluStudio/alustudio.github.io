@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../assets/scss/all.scss";
 import "../assets/scss/footer.scss";
 import "./support.scss";
 import Navbar from "../components/Navbar";
+import TransitionLink from "../components/TransitionLink";
 import Footer from "../components/Footer";
 import ContactCard from "../components/ContactCard";
 import { getFaq } from "../data/faq";
@@ -26,10 +27,6 @@ function SupportPage() {
   const [query, setQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(-1);
   const inputRef = useRef(null);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   useEffect(() => {
     document.title = `${t("support.doc_title")} — DingPOS`;
@@ -166,7 +163,7 @@ function SupportPage() {
                   <ul className="support-result-list">
                     {results.map(({ article, snippet }, i) => (
                       <li key={article.slug}>
-                        <Link
+                        <TransitionLink
                           to={`/support/${article.slug}`}
                           className={`support-result-card${i === activeIndex ? " is-active" : ""}`}
                           onMouseEnter={() => setActiveIndex(i)}
@@ -180,7 +177,7 @@ function SupportPage() {
                           <p className="support-result-snippet">
                             <Highlight text={snippet} tokens={tokens} />
                           </p>
-                        </Link>
+                        </TransitionLink>
                       </li>
                     ))}
                   </ul>
@@ -225,10 +222,10 @@ function SupportPage() {
                             <ul className="support-cat-list">
                               {catArticles.map((a) => (
                                 <li key={a.slug}>
-                                  <Link to={`/support/${a.slug}`}>
+                                  <TransitionLink to={`/support/${a.slug}`}>
                                     {a.question}
                                     <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                                  </Link>
+                                  </TransitionLink>
                                 </li>
                               ))}
                             </ul>
