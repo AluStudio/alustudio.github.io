@@ -28,3 +28,5 @@ dist-ssr
 
 # Pi agent
 .pi/ralph/
+.pi/git/
+.pi/npm/

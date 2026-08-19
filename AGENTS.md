@@ -95,7 +95,7 @@ Site content (features, FAQ) makes claims about app behavior — the app's sourc
 
 ## Project Skills
 
-`.pi/skills/` holds 9 vendored UI/animation skills from [emilkowalski/skills](https://github.com/emilkowalski/skills), tracked in git and pinned by `skills-lock.json`. Update with `npx skills@latest update -p`. `animate-expo` (React Native) and `ask-sonner` (not a dependency) are deliberately excluded.
+Nine UI/animation skills from [emilkowalski/skills](https://github.com/emilkowalski/skills) load via `.pi/settings.json`: the package is installed globally (`~/.pi/agent/git/github.com/emilkowalski/skills`) with every skill disabled by default, and this repo re-enables the web subset — the project entry wins on same-source dedupe, and pi auto-installs a project-scoped clone under `.pi/git/` (gitignored) on first trusted startup. Manage with the global `/ui-skills` prompt template; update with `pi update`. `animate-expo` (React Native) and `ask-sonner` (not a dependency) stay off.
 
 `review-animations`, `pick-ui-library`, and `prototype` carry `disable-model-invocation: true` — they stay out of the system prompt and only run via `/skill:<name>`.
 

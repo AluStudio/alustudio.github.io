@@ -1,0 +1,18 @@
+{
+  "packages": [
+    {
+      "source": "git:github.com/emilkowalski/skills",
+      "skills": [
+        "skills/animate",
+        "skills/animation-vocabulary",
+        "skills/apple-design",
+        "skills/emil-design-eng",
+        "skills/find-animation-opportunities",
+        "skills/improve-animations",
+        "skills/pick-ui-library",
+        "skills/prototype",
+        "skills/review-animations"
+      ]
+    }
+  ]
+}
