@@ -68,8 +68,11 @@ function HomePage() {
               src={`${base}logo.png`}
               alt="DingPOS"
               className="hero-logo"
-              width="220"
-              height="58"
+              // Intrinsic size, not the rendered size — the browser reserves space
+              // from this ratio, and CSS sets the width. Declaring the display
+              // width with a guessed height shifts the hero when the logo decodes.
+              width="600"
+              height="266"
             />
             <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
             <h1 className="hero-title">{t("hero.title")}</h1>
