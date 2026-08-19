@@ -36,10 +36,7 @@
 
 .section-sub {
   text-align: center;
-  // $ink-soft (neutral-400) is only 3.2-3.4:1 on these backgrounds, under the
-  // 4.5:1 WCAG AA floor for body text. neutral-500 clears it at 4.9-5.3:1 and
-  // still reads as secondary against the neutral-600 body copy.
-  color: $neutral-500;
+  color: $ink-soft;
   font-size: 1rem;
   margin: 0 auto 3.5rem;
   max-width: 40rem;
@@ -219,7 +216,7 @@
 .hero-note {
   margin: 1rem 0 0;
   font-size: 0.85rem;
-  color: $neutral-500; // AA contrast — see .section-sub
+  color: $ink-soft;
   font-weight: 500;
 }
 
@@ -510,7 +507,7 @@
   .pricing-sub {
     font-size: 0.92rem;
     line-height: 1.7;
-    color: $neutral-500; // AA contrast — see .section-sub
+    color: $ink-soft;
     margin-bottom: 2rem;
   }
 

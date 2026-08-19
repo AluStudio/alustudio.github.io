@@ -30,7 +30,11 @@ $body-bg-color:  $neutral-50;
 $surface:        $neutral-0;
 $ink:            $neutral-800;
 $ink-mid:        $neutral-600;
-$ink-soft:       $neutral-400;
+// neutral-500, not neutral-400: this token is only ever a text colour, and
+// neutral-400 measures 3.2-3.4:1 on our surfaces — under the 4.5:1 WCAG AA
+// floor for body text. neutral-500 clears it at 4.9-5.3:1 and still reads as
+// secondary next to $ink-mid body copy.
+$ink-soft:       $neutral-500;
 
 // Bootstrap overrides
 $primary:       $accent-500;
