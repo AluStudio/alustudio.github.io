@@ -73,10 +73,7 @@
     "subTitle": "Experimenta todas as funcionalidades no iOS e Android e mantém-te atualizado em qualquer lugar.",
     "download_action": "Descarregar",
     "download_iOS_action": "Descarregar iOS",
-    "download_android_action": "Descarregar Android",
-    "android_coming_soon": "Em breve",
-    "android_beta_invite": "Quer testar o app Android primeiro?",
-    "android_beta_link": "Participar da beta"
+    "download_android_action": "Descarregar Android"
   },
   "footer": {
     "goal": "Gestor de Postais Pikmin",

@@ -73,10 +73,7 @@
     "subTitle": "Sperimenta tutte le funzionalità su iOS e Android e rimani aggiornato ovunque tu sia.",
     "download_action": "Scarica",
     "download_iOS_action": "Scarica iOS",
-    "download_android_action": "Scarica Android",
-    "android_coming_soon": "Prossimamente",
-    "android_beta_invite": "Vuoi testare l'app Android in anteprima?",
-    "android_beta_link": "Partecipa alla beta"
+    "download_android_action": "Scarica Android"
   },
   "footer": {
     "goal": "Gestore Cartoline Pikmin",

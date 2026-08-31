@@ -73,10 +73,7 @@
     "subTitle": "สัมผัสชุดคุณสมบัติเต็มรูปแบบบน iOS และ Android ทุกที่ทุกเวลา",
     "download_action": "ดาวน์โหลด",
     "download_iOS_action": "ดาวน์โหลด iOS",
-    "download_android_action": "ดาวน์โหลด Android",
-    "android_coming_soon": "เร็วๆ นี้",
-    "android_beta_invite": "ช่วยเราทดสอบแอป Android ได้เลย!",
-    "android_beta_link": "เข้าร่วมทดสอบ"
+    "download_android_action": "ดาวน์โหลด Android"
   },
   "footer": {
     "goal": "ผู้จัดการโปสการ์ด Pikmin",

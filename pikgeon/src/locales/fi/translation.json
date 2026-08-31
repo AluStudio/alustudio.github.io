@@ -73,10 +73,7 @@
     "subTitle": "Koe täysi ominaisuusvalikoima iOS:lla ja Androidilla ja pysy ajan tasalla missä tahansa.",
     "download_action": "Lataa",
     "download_iOS_action": "Lataa iOS",
-    "download_android_action": "Lataa Android",
-    "android_coming_soon": "Tulossa pian",
-    "android_beta_invite": "Haluatko testata Android-sovellusta?",
-    "android_beta_link": "Liity betatestiin"
+    "download_android_action": "Lataa Android"
   },
   "footer": {
     "goal": "Pikmin-postikorttihallinta",

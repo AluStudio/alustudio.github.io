@@ -73,10 +73,7 @@
     "subTitle": "iOSとAndroidで全機能を体験。いつでもどこでも最新情報をチェック。",
     "download_action": "ダウンロード",
     "download_iOS_action": "iOS版をダウンロード",
-    "download_android_action": "Android版をダウンロード",
-    "android_coming_soon": "近日公開",
-    "android_beta_invite": "Androidのテストにご協力いただけますか？",
-    "android_beta_link": "ベータ参加"
+    "download_android_action": "Android版をダウンロード"
   },
   "footer": {
     "goal": "Pikmin ポストカードマネージャー",

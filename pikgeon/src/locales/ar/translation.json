@@ -73,10 +73,7 @@
     "subTitle": "استمتع بكامل الميزات على iOS وAndroid وابقَ محدثًا في أي وقت وأي مكان.",
     "download_action": "تحميل",
     "download_iOS_action": "تحميل iOS",
-    "download_android_action": "تحميل Android",
-    "android_coming_soon": "قريبًا",
-    "android_beta_invite": "ساعدنا في اختبار تطبيق أندرويد!",
-    "android_beta_link": "انضم للاختبار التجريبي"
+    "download_android_action": "تحميل Android"
   },
   "footer": {
     "goal": "مدير بطاقات Pikmin البريدية",

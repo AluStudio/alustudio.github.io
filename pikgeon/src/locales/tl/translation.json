@@ -73,10 +73,7 @@
     "subTitle": "Maranasan ang buong hanay ng tampok sa iOS at Android at manatiling updated kahit saan.",
     "download_action": "I-download",
     "download_iOS_action": "I-download ang iOS",
-    "download_android_action": "I-download ang Android",
-    "android_coming_soon": "Malapit na",
-    "android_beta_invite": "Tulungan kami na subukan ang Android app!",
-    "android_beta_link": "Sumali sa Beta"
+    "download_android_action": "I-download ang Android"
   },
   "footer": {
     "goal": "Pikmin Postcard Manager",

@@ -73,10 +73,7 @@
     "subTitle": "Upplev den fullständiga funktionsuppsättningen på iOS och Android och håll dig uppdaterad var som helst.",
     "download_action": "Ladda ner",
     "download_iOS_action": "Ladda ner iOS",
-    "download_android_action": "Ladda ner Android",
-    "android_coming_soon": "Kommer snart",
-    "android_beta_invite": "Hjälp oss testa Android-appen!",
-    "android_beta_link": "Gå med i beta"
+    "download_android_action": "Ladda ner Android"
   },
   "footer": {
     "goal": "Pikmin Vykort Manager",

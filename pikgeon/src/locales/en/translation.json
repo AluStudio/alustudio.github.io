@@ -73,10 +73,7 @@
     "subTitle": "Experience the full feature set on iOS and Android and stay up to date anytime, anywhere.",
     "download_action": "Download",
     "download_iOS_action": "Download iOS",
-    "download_android_action": "Download Android",
-    "android_coming_soon": "Coming Soon",
-    "android_beta_invite": "Want to be an early Android tester?",
-    "android_beta_link": "Join Beta Test"
+    "download_android_action": "Download Android"
   },
   "footer": {
     "goal": "Pikmin Postcard Manager",

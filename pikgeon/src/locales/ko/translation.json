@@ -73,10 +73,7 @@
     "subTitle": "iOS 및 Android에서 모든 기능을 경험하고 언제 어디서나 최신 상태를 유지하세요.",
     "download_action": "다운로드",
     "download_iOS_action": "iOS 다운로드",
-    "download_android_action": "Android 다운로드",
-    "android_coming_soon": "출시 예정",
-    "android_beta_invite": "Android 앱을 먼저 테스트해 보세요!",
-    "android_beta_link": "베타 참여"
+    "download_android_action": "Android 다운로드"
   },
   "footer": {
     "goal": "Pikmin 엽서 관리자",

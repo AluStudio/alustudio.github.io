@@ -73,10 +73,7 @@
     "subTitle": "在 iOS 與 Android 上體驗完整功能，隨時隨地掌握最新資訊。",
     "download_action": "下載",
     "download_iOS_action": "下載 iOS",
-    "download_android_action": "下載 Android",
-    "android_coming_soon": "即將推出",
-    "android_beta_invite": "想搶先體驗 Android 版本嗎？",
-    "android_beta_link": "加入測試"
+    "download_android_action": "下載 Android"
   },
   "footer": {
     "goal": "皮克敏明信片管理",

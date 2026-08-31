@@ -73,10 +73,7 @@
     "subTitle": "Ervaar de volledige functieset op iOS en Android en blijf altijd en overal up-to-date.",
     "download_action": "Downloaden",
     "download_iOS_action": "iOS downloaden",
-    "download_android_action": "Android downloaden",
-    "android_coming_soon": "Binnenkort",
-    "android_beta_invite": "Help ons de Android-app te testen!",
-    "android_beta_link": "Meedoen aan beta"
+    "download_android_action": "Android downloaden"
   },
   "footer": {
     "goal": "Pikmin Ansichtkaart Manager",
