@@ -29,9 +29,10 @@ function SupportPage() {
   const inputRef = useRef(null);
 
   useEffect(() => {
+    const previousTitle = document.title;
     document.title = `${t("support.doc_title")} — DingPOS`;
     return () => {
-      document.title = "DingPOS";
+      document.title = previousTitle;
     };
   }, [t, lang]);
 

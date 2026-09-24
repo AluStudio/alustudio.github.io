@@ -26,9 +26,10 @@ function SupportArticlePage() {
     : [];
 
   useEffect(() => {
+    const previousTitle = document.title;
     if (article) document.title = `${article.question} — DingPOS`;
     return () => {
-      document.title = "DingPOS";
+      document.title = previousTitle;
     };
   }, [article]);
 
