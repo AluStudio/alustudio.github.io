@@ -7,7 +7,7 @@ read_when:
 
 # SEO + AEO Optimization Plan
 
-**Status**: 全部完成（P0–P3）2026-07-30；剩每月監測回訪（首次 2026-08）
+**Status**: 全部完成（P0–P3）2026-07-30；剩每月監測回訪（首次 2026-08）；2026-09 回訪 audit 與待辦見文末
 **Scope**: alu-studio.com 全站（home + pikgeon + babbby + sotto + dingpos）
 
 ## 1. 背景與目標
@@ -170,6 +170,28 @@ Google 於 2026-05-07 全面移除 FAQ rich results（2023-08 起已限縮至政
 - **sotto 事實確認**（Ohlulu）：有 lifetime 買斷 IAP（解除 person/note/field 數量上限）；Google Drive/Dropbox 備份功能確實存在（非模板殘留）；Android 版已上架（Play 實測 200）。FAQ 與 JSON-LD 均依此更新。
 - **babbby 事實確認**（Ohlulu）：無帳號機制，FAQ 寫成事實。
 - **sotto/babbby fallbackLng 是 zh-Hant**：FAQ 只出 en + zh-Hant，其餘語系 per-key 退回 zh-Hant；prerender 產出英文版（headless en-US）。
+
+## 2026-09 回訪 audit
+
+全站 58 routes 爬取 + 本機 Lighthouse（mobile）。全數 200、self-canonical、JSON-LD、og:image 均在；Lighthouse SEO 五站皆 100。無 Critical。
+
+**已修（High）**
+
+- 四個 app 首頁 `<title>` 只有品牌名（5–7 字元），非品牌查詢（"postcard tracker app"、"iPad POS"）在最強的 on-page 訊號上完全沒有類別詞。改為「品牌 — 類別描述」，用詞取自既有 meta / JSON-LD / llms.txt 已驗證的說法，不新增產品 claim。dingpos support 頁 unmount 時改為還原進入前的 title，不再硬寫 `"DingPOS"`。
+- babbby 語系宣告錯亂：`<html lang="zh-Hant">` + 中文 description，prerender 出的正文卻是英文。根因是 `babbby/src/i18n.js` 沒有像 sotto/dingpos/home 同步 `document.documentElement.lang`，static 值原封進 prerender 產物。已補同步，root description 改為與正文一致的英文。
+
+**待決策（High，架構級）**
+
+- 只有英文可被索引：各站 i18n 為同一 URL 的 client-side 切換，prerender 固定 en-US，zh-Hant 等語系沒有 URL、沒有 hreflang，中文搜尋找不到任何頁面。DingPOS 的市場訊號偏台灣（夜市場景、電子發票 roadmap），影響最大。解法是每語系獨立路徑（如 `/dingpos/zh-hant/...`）+ hreflang + 每語系 prerender — URL 結構變更，需 Ohlulu 決定語系範圍後另立任務。
+
+**Backlog（Medium / Low）**
+
+- pikgeon、babbby 的 Footer 用 `<h1>` 放品牌名，每頁兩個 H1；babbby 首頁唯一 heading 就是兩個 "Babbby"，特色區塊沒有 H2。
+- dingpos `/privacy/`、`/terms/` 沿用首頁 description；`/support/` description 為 "Search common questions, or browse by topic"，無品牌與類別詞。
+- Lab 效能：mobile LCP 4.0–10.3s，LCP 元素 61–91% 耗在 render delay — Google Fonts CSS（Noto Sans TC）與 app CSS render-blocking，pikgeon/sotto 大張 PNG 未轉 webp、未設尺寸。本站流量大概率沒有 CrUX field data，CWV 排名訊號實際不生效，故列 Medium；改善方向為自託管字型子集或 `preload` + 非阻塞載入。
+- 無 `og:locale`；dingpos support 文章只有站級 `MobileApplication`，可補 `BreadcrumbList`。
+- pikgeon `i18n.js` 同樣未同步 `<html lang>`，目前靠 static `lang="en"` 恰好與 prerender 一致。
+- 環境備註：PSI 免 key 配額耗盡，效能以本機 Lighthouse 12 量測；Python 預設 UA 會被 Cloudflare 回 403，bingbot/OAI-SearchBot UA 為 200，不影響真 crawler。
 
 ## Sources
 
