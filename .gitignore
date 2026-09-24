@@ -30,3 +30,6 @@ dist-ssr
 .pi/ralph/
 .pi/git/
 .pi/npm/
+# claude-seo: machine-local install with a ~1 GB Python + Chromium runtime
+.pi/skills/seo*/
+.pi/agents/seo-*.md

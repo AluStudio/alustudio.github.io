@@ -104,6 +104,13 @@ Nine UI/animation skills from [emilkowalski/skills](https://github.com/emilkowal
 - No animation library is installed (Bootstrap 5 + Sass only). Advice naming Motion/Framer Motion means adding a dependency to all five apps — confirm before doing that.
 - **No JS-gated scroll reveals.** `scripts/prerender.mjs` writes the rendered DOM back to each `index.html`, so an IntersectionObserver pattern that starts at `opacity: 0` ships that hidden state as the served HTML — the page then renders blank until React remounts, and stays blank forever without JS. Entrance motion must be a pure-CSS `animation` (it plays with no JS and leaves nothing hidden). `dingpos/src/assets/scss/home.scss` is the worked example.
 
+### SEO skills (claude-seo)
+
+[AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.3.1 is installed machine-locally: 23 `seo*` skills in `.pi/skills/` and 18 `seo-*` agents in `.pi/agents/`, all gitignored (the Python + Chromium runtime is ~1 GB), so another machine has none of it until installed there. Run bundled scripts from the repo root as `.pi/skills/seo/scripts/claude-seo run <script.py>` — the skill paths are cwd-relative; `claude-seo doctor --json` checks the runtime.
+- The `seo-*` agents declare Claude Code tool names (`Glob`, `WebFetch`) and bare model names, so they may not run under pi-subagents; audits here run the bundled scripts plus Lighthouse directly instead.
+- `pagespeed_check.py` without an API key hits the shared, usually exhausted PSI quota; use `npx lighthouse` locally for lab data.
+- `docs/drafts/seo-aeo-optimization.md` owns this site's SEO decisions — skill advice that contradicts it (llms.txt investment, FAQ rich results) loses.
+
 ## Linear
 
 Tickets for this repo: label `fe` on team `OH`. Narrow to one sub-site by adding its product label (`--label pikgeon` / `babbby` / `sotto`; repeated `--label` is ANDed).
