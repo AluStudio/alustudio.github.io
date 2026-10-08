@@ -49,6 +49,20 @@ export function annualSaving(currency, price) {
   return Math.round((price.monthly * 12 - price.annual) * scale) / scale;
 }
 
+/**
+ * The annual discount as a whole percent, taken from the smallest discount
+ * across every plan and currency so the one badge never overstates any of them.
+ */
+export function annualSavingPercent() {
+  const percents = PLANS.flatMap(({ price }) =>
+    Object.keys(CURRENCIES).map((currency) => {
+      const { monthly, annual } = price[currency];
+      return ((monthly * 12 - annual) / (monthly * 12)) * 100;
+    }),
+  );
+  return Math.round(Math.min(...percents));
+}
+
 // Tiers nest (Pro ⊃ Standard ⊃ Lite), so each row names the lowest tier that
 // includes it. Copy lives in the locale packs under pricing.compare.rows.
 export const COMPARISON = [

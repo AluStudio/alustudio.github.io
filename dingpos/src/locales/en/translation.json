@@ -148,7 +148,7 @@
       "label": "Billing period",
       "monthly": "Monthly",
       "annual": "Annual",
-      "save": "2 months free"
+      "save": "Save {{percent}}%"
     },
     "recommended": "Recommended",
     "unit": {
@@ -369,7 +369,7 @@
         },
         {
           "q": "How does annual billing work?",
-          "a": "Annual costs ten months and covers twelve — two months free. You're billed once a year and it renews automatically."
+          "a": "Annual costs the same as ten months of monthly billing and covers a full year — about {{percent}}% less. You're billed once a year and it renews automatically."
         },
         {
           "q": "Are there any fees besides the subscription?",

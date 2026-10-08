@@ -16,10 +16,12 @@ import {
   includes,
   monthlyEquivalent,
   annualSaving,
+  annualSavingPercent,
 } from "../data/plans";
 
 const CADENCES = ["monthly", "annual"];
 const RECOMMENDED_TIER = PLANS.find((plan) => plan.recommended).key;
+const ANNUAL_SAVING_PERCENT = annualSavingPercent();
 
 const ASSURANCES = [
   { key: "trial", icon: "bi-calendar2-check" },
@@ -99,7 +101,7 @@ function PricingPage() {
           <div className="container">
             <h2 className="section-title">{t("pricing.faq.title")}</h2>
             <div className="faq-list">
-              {t("pricing.faq.items", { returnObjects: true }).map(({ q, a }) => (
+              {t("pricing.faq.items", { returnObjects: true, percent: ANNUAL_SAVING_PERCENT }).map(({ q, a }) => (
                 // <details> keeps the answer in the DOM while collapsed, so the
                 // prerendered HTML carries every answer for crawlers.
                 <details className="faq-item" key={q}>
@@ -149,7 +151,7 @@ function BillingToggle({ billing, onChange }) {
           />
           {t(`pricing.billing.${cadence}`)}
           {cadence === "annual" && (
-            <span className="billing-save">{t("pricing.billing.save")}</span>
+            <span className="billing-save">{t("pricing.billing.save", { percent: ANNUAL_SAVING_PERCENT })}</span>
           )}
         </label>
       ))}
