@@ -1,17 +1,19 @@
 {
   "skills": [
-    "/Users/ohlulu/.pi/agent/skills/ui-design-principles/SKILL.md"
+    "~/.pi/agent/skill-library/ui-design-principles"
   ],
   "packages": [
     {
-      "source": "git:github.com/emilkowalski/skills",
+      "source": "~/Developer/emilkowalski/skills",
       "skills": [
         "skills/animate",
         "skills/animation-vocabulary",
         "skills/apple-design",
+        "skills/break-ui",
         "skills/emil-design-eng",
         "skills/find-animation-opportunities",
         "skills/improve-animations",
+        "skills/mobile-native",
         "skills/pick-ui-library",
         "skills/prototype",
         "skills/review-animations"
