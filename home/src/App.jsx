@@ -137,6 +137,39 @@ function LanguagePicker() {
 
 const formatIndex = (n) => String(n).padStart(2, "0");
 
+// Three long hairline arcs sweeping in from the top-right corner; a linear
+// mask fades each one out so no line has a hard end.
+const arcs = [
+  "M1000 40C800 90 620 230 520 520",
+  "M1000 120C840 170 700 290 640 560",
+  "M880 0C790 120 760 260 790 440",
+];
+
+function Backdrop() {
+  return (
+    <div className="backdrop" aria-hidden="true">
+      <svg className="backdrop__arcs" viewBox="0 0 1000 600" fill="none">
+        <defs>
+          <linearGradient id="arc-fade" x1="1" y1="0" x2="0.5" y2="1">
+            <stop offset="0" stopColor="#fff" stopOpacity="0" />
+            <stop offset="0.25" stopColor="#fff" stopOpacity="1" />
+            <stop offset="0.6" stopColor="#fff" stopOpacity="0.45" />
+            <stop offset="1" stopColor="#fff" stopOpacity="0" />
+          </linearGradient>
+          <mask id="arc-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="600">
+            <rect width="1000" height="600" fill="url(#arc-fade)" />
+          </mask>
+        </defs>
+        <g mask="url(#arc-mask)">
+          {arcs.map((d) => (
+            <path key={d} d={d} />
+          ))}
+        </g>
+      </svg>
+    </div>
+  );
+}
+
 function AppEntry({ app, index }) {
   const { t } = useTranslation();
 
@@ -189,7 +222,7 @@ function App() {
 
   return (
     <div className="page">
-      <div className="backdrop" aria-hidden="true" />
+      <Backdrop />
 
       <div className="shell">
         <header className="masthead">

@@ -10,8 +10,8 @@ $ink-muted: #5a6656;
 $moss: #2f4a34;
 $olive: #5b6630;
 $sage: #b7c4a2;
-$line: rgba(47, 74, 52, 0.13);
-$line-strong: rgba(47, 74, 52, 0.32);
+$line: rgba(47, 74, 52, 0.2);
+$line-strong: rgba(47, 74, 52, 0.42);
 $radius-icon: 14px;
 $font-stack: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 $font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -71,8 +71,8 @@ a {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 65% 55% at 92% -6%, rgba($sage, 0.42), transparent 70%),
-    radial-gradient(ellipse 55% 45% at -8% 106%, rgba($olive, 0.1), transparent 70%);
+    radial-gradient(ellipse 65% 55% at 92% -6%, rgba($sage, 0.26), transparent 70%),
+    radial-gradient(ellipse 55% 45% at -8% 106%, rgba($olive, 0.04), transparent 70%);
 
   &::before {
     content: "";
@@ -82,13 +82,32 @@ a {
     width: 150vw;
     aspect-ratio: 1000 / 760;
     background: url("./assets/dapple.svg") center / cover no-repeat;
-    opacity: 0.22;
+    opacity: 0.09;
     mask-image: radial-gradient(ellipse 55% 60% at 70% 25%, #000 25%, transparent 72%);
 
     @media (min-width: $bp-wide) {
       right: -8vw;
       width: min(1150px, 80vw);
-      opacity: 0.3;
+      opacity: 0.12;
+    }
+  }
+
+  &__arcs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 110vw;
+    height: auto;
+    opacity: 0.45;
+
+    @media (min-width: $bp-wide) {
+      width: min(820px, 58vw);
+    }
+
+    path {
+      stroke: $moss;
+      stroke-width: 0.75;
+      vector-effect: non-scaling-stroke;
     }
   }
 
@@ -304,7 +323,7 @@ a {
     align-items: baseline;
     justify-content: space-between;
     padding-bottom: 14px;
-    border-bottom: 1px solid $line-strong;
+    border-bottom: 3px double $line-strong;
   }
 
   &__label {
