@@ -27,11 +27,22 @@
   <url><loc>https://alu-studio.com/dingpos/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/price-change-cart/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/void-order/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/returns-exchanges/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/pre-orders/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/on-account/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/product-variants/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/barcode-scanning/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/inventory-tracking/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/negative-inventory/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/purchase-orders/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/revenue-vs-cash/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/report-periods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/profit-not-tracked/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/create-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/promotion-not-applied/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/loyalty-points/</loc></url>
@@ -40,12 +51,10 @@
   <url><loc>https://alu-studio.com/dingpos/support/transfer-new-ipad/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/data-after-delete/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/multi-device/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/import-csv/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/free-trial/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/after-trial/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/manage-subscription/</loc></url>
-  <url><loc>https://alu-studio.com/dingpos/support/price-change-cart/</loc></url>
-  <url><loc>https://alu-studio.com/dingpos/support/manual-discount-promotion/</loc></url>
-  <url><loc>https://alu-studio.com/dingpos/support/profit-not-tracked/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/guide-threshold/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/guide-bogo/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/guide-points-multiplier/</loc></url>
@@ -56,7 +65,5 @@
   <url><loc>https://alu-studio.com/dingpos/support/roadmap-payment-integration/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/roadmap-e-invoice/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/roadmap-barcode-scanner/</loc></url>
-  <url><loc>https://alu-studio.com/dingpos/support/roadmap-purchase-orders/</loc></url>
-  <url><loc>https://alu-studio.com/dingpos/support/roadmap-returns-exchanges/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/roadmap-monthly-settlement/</loc></url>
 </urlset>
