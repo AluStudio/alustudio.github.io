@@ -99,6 +99,8 @@ Site content (features, FAQ) makes claims about app behavior — the app's sourc
 
 Nine UI/animation skills from [emilkowalski/skills](https://github.com/emilkowalski/skills) load via `.pi/settings.json`: the package is installed globally (`~/.pi/agent/git/github.com/emilkowalski/skills`) with every skill disabled by default, and this repo re-enables the web subset — the project entry wins on same-source dedupe, and pi auto-installs a project-scoped clone under `.pi/git/` (gitignored) on first trusted startup. Manage with the global `/ui-skills` prompt template; update with `pi update`. `animate-expo` (React Native) and `ask-sonner` (not a dependency) stay off.
 
+`ui-design-principles` (typography, color, spacing, interaction states, UX writing, AI-slop checklist) is enabled the same way: listed by absolute path in the `skills` array of `.pi/settings.json`. That path is the `/ui-skills` opt-in idiom, not a leak: the skill is globally disabled in machine-local `~/.pi/agent/settings.json`, and a project-scope positive path is the only override. Machine-local by design — on other machines the entry is inert (skill auto-discovers if present, dangling path otherwise). Do not "fix" it away.
+
 `review-animations`, `pick-ui-library`, and `prototype` carry `disable-model-invocation: true` — they stay out of the system prompt and only run via `/skill:<name>`.
 
 **Repo rules override skill advice.** These skills assume a conventional React app; three constraints here do not match that assumption:

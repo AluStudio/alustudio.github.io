@@ -1,4 +1,7 @@
 {
+  "skills": [
+    "/Users/ohlulu/.pi/agent/skills/ui-design-principles/SKILL.md"
+  ],
   "packages": [
     {
       "source": "git:github.com/emilkowalski/skills",
