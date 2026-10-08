@@ -9,6 +9,7 @@ export const categories = [
   { key: "orders", icon: "bi-receipt", label: "Orders & Returns", group: "faq" },
   { key: "products", icon: "bi-box-seam", label: "Products, Inventory & Purchasing", group: "faq" },
   { key: "reports", icon: "bi-bar-chart-line", label: "Reports", group: "faq" },
+  { key: "staff", icon: "bi-people", label: "Staff & Permissions", group: "faq" },
   { key: "promotion", icon: "bi-tags", label: "Promotions & Loyalty", group: "faq" },
   { key: "backup", icon: "bi-cloud-check", label: "Backup & Data", group: "faq" },
   { key: "subscription", icon: "bi-credit-card", label: "Subscription & Billing", group: "faq" },
@@ -82,6 +83,18 @@ export const articles = [
     ],
     related: ["tax-calculation", "how-to-set-up"],
   },
+  {
+    slug: "app-language",
+    category: "getting-started",
+    since: "3.0",
+    question: "How do I change the app's language?",
+    keywords: ["language", "english", "chinese", "switch", "locale"],
+    content: [
+      { type: "p", text: "DingPOS supports English and Traditional Chinese. Go to Settings → Device Preferences and tap App Language. It opens DingPOS's page in the iPad's Settings app, where you pick the language under Language." },
+      { type: "p", text: "iOS doesn't let apps open the language list directly, so the last tap happens in system Settings. The language applies to this iPad only." },
+    ],
+    related: ["checkout-sound", "supported-devices"],
+  },
 
   // ── Checkout ────────────────────────────────────────────────
   {
@@ -100,7 +113,7 @@ export const articles = [
     slug: "apply-discounts",
     category: "checkout",
     question: "How do I apply discounts?",
-    keywords: ["discount", "percentage", "fixed", "markdown", "price off"],
+    keywords: ["discount", "percentage", "fixed", "markdown", "price off", "discount cap"],
     content: [
       { type: "p", text: "Discounts work on two levels, each supporting a fixed amount or a percentage:" },
       {
@@ -111,8 +124,9 @@ export const articles = [
         ],
       },
       { type: "p", text: "Each item and each cart can hold one discount at a time — applying again overwrites the previous one, and tapping the discount badge removes it. Discounts are applied before tax, the standard order in retail." },
+      { type: "note", text: "With staff accounts (Pro), a staff member's manual discount above the discount cap needs a manager's approval at checkout. The cap defaults to unlimited for managers and 10% for staff, adjustable in Role Permissions." },
     ],
-    related: ["create-promotion", "tax-calculation"],
+    related: ["create-promotion", "tax-calculation", "staff-permissions"],
   },
   {
     slug: "tax-calculation",
@@ -143,6 +157,18 @@ export const articles = [
       { type: "p", text: "For a regular who takes the goods now and pays later, choose On Account: the sale is recorded as a receivable and settled when the money arrives. See “Can regulars buy on account and pay later?”" },
     ],
     related: ["on-account", "roadmap-payment-integration", "multiple-carts"],
+  },
+  {
+    slug: "checkout-sound",
+    category: "checkout",
+    since: "3.0",
+    question: "Can I turn off the “Ding” after checkout?",
+    keywords: ["sound", "ding", "mute", "silent", "checkout sound"],
+    content: [
+      { type: "p", text: "Yes. Go to Settings → Device Preferences and turn off Checkout Sound. From the next sale on, the success screen stays silent, with the haptic tap still there." },
+      { type: "p", text: "The switch applies to this iPad only, and restoring a cloud backup doesn't change it." },
+    ],
+    related: ["app-language", "multiple-carts"],
   },
   {
     slug: "price-change-cart",
@@ -342,7 +368,7 @@ export const articles = [
       {
         type: "steps",
         items: [
-          "Tap New Purchase, pick the supplier, and add the products, quantities, and unit costs (pre-filled with each product's current cost). A shipping fee can be added too.",
+          "Tap New Purchase, pick the supplier, and add the products, quantities, and unit costs (pre-filled with each product's current cost). A shipping fee can be added too. Since 3.0, a supplier you haven't created yet can be added right from the picker with Add Supplier.",
           "A draft never touches stock or payables — edit or delete it freely.",
           "When the goods arrive, tap Receive Stock: tracked stock goes up, and the purchase order gets its number and locks. By default receiving also updates each product's cost to this unit cost; turn off Sync Product Cost on the purchase order to keep costs unchanged.",
         ],
@@ -385,7 +411,29 @@ export const articles = [
       { type: "p", text: "The Product Ranking card lists the top 5. Tap the card or View All to list every product sold in the period, ranked by quantity after returns." },
       { type: "note", text: "Versions before 2.4 offered rolling ranges (Today / 7 Days / 30 Days / All Time). If you still see those, update DingPOS from the App Store." },
     ],
-    related: ["revenue-vs-cash", "profit-not-tracked"],
+    related: ["revenue-vs-cash", "advanced-reports", "profit-not-tracked"],
+  },
+  {
+    slug: "advanced-reports",
+    category: "reports",
+    since: "3.0",
+    question: "What's in the advanced reports?",
+    keywords: ["advanced reports", "comparison", "last year", "previous period", "heatmap", "hour", "slow movers", "repeat purchase", "stock value", "outstanding points", "pro"],
+    content: [
+      { type: "p", text: "Advanced reports sit right on the Stats page and follow the same period:" },
+      {
+        type: "list",
+        items: [
+          "Sales comparison: on the right of the period bar, compare with the previous period or the same period last year. The Cash Received tile shows the comparison amount, the difference, and the growth rate, and the revenue trend gains a comparison line.",
+          "Weekday × hour: switch the sales chart to this view to see which of the week's 7 × 24 hours sell most. With a sales comparison set, switch to Difference to see which hours went up or down.",
+          "Slow Movers: switch the product ranking to Slow Movers to list every product's net quantity sold in the period, fewest first, with current stock and the last sale date; products that never sold are marked Never sold.",
+          "Repeat-purchase rate: the Customers Served tile shows the share of members who bought in this period and have bought at least twice overall.",
+          "Right now: stock value (current stock × current cost) and outstanding loyalty points. Both are current balances and don't change with the period.",
+        ],
+      },
+      { type: "note", text: "Advanced reports are a Pro plan feature. Without Pro, each of these five spots shows a small lock that explains what it offers. Staff access follows the existing Dashboard permission." },
+    ],
+    related: ["report-periods", "revenue-vs-cash", "plans-compare"],
   },
   {
     slug: "profit-not-tracked",
@@ -397,6 +445,78 @@ export const articles = [
       { type: "p", text: "To get complete profit reports, add costs on the product edit page; future orders will be included. Profit is calculated on after-discount revenue." },
     ],
     related: ["report-periods", "purchase-orders"],
+  },
+
+  // ── Staff & Permissions ─────────────────────────────────────
+  {
+    slug: "staff-setup",
+    category: "staff",
+    since: "3.0",
+    question: "How do I add staff so each person switches in with their own PIN?",
+    keywords: ["staff", "employee", "manager", "account", "pin", "switch user", "shift", "handled by"],
+    content: [
+      { type: "p", text: "The first time you open Staff in the sidebar, DingPOS asks you to create the owner: a name and a 4-digit PIN. After that you can add managers and staff, each with their own PIN." },
+      { type: "p", text: "The current operator shows at the bottom of the sidebar and at the top right of the checkout screen. Tap it, pick your name, and enter your PIN to switch. From then on every order, payment, and stock or points movement records who handled it, visible in the order list and detail; voided orders also record who voided them." },
+      {
+        type: "list",
+        items: [
+          "Renaming a staff member doesn't change past orders — they keep the name used at the time.",
+          "The owner can deactivate staff and reset their PINs, but nobody can see anyone else's PIN.",
+          "The owner PIN can't be reset if forgotten — see “What if I forget the owner PIN?”",
+        ],
+      },
+      { type: "note", text: "Staff accounts are a Pro plan feature. Without Pro there's no operator to pick. If Pro lapses, staff records and who handled each order are kept, and new documents are recorded under the owner." },
+    ],
+    related: ["owner-pin-forgotten", "staff-permissions", "activity-log"],
+  },
+  {
+    slug: "owner-pin-forgotten",
+    category: "staff",
+    since: "3.0",
+    question: "What if I forget the owner PIN?",
+    keywords: ["pin", "forgot", "password", "reset", "owner", "recover", "locked out"],
+    content: [
+      { type: "p", text: "The owner PIN can't be reset, and our support team has no way to unlock it either. The PIN is stored with your store data, so deleting and reinstalling the app, then restoring from the cloud, brings back the same PIN." },
+      { type: "p", text: "Creating the owner and every owner PIN change show the warning “Remember this PIN. If you forget it, it can't be reset.” Keep it somewhere only you can reach." },
+      { type: "p", text: "Without the owner PIN, anything that needs it stays out of reach — adding or editing staff, changing role permissions, and viewing the activity log. Staff can keep checking out and doing daily work with their own PINs." },
+      { type: "note", text: "If a staff member forgets their PIN, that's fine: the owner can reset it in Staff." },
+    ],
+    related: ["staff-setup", "staff-permissions"],
+  },
+  {
+    slug: "staff-permissions",
+    category: "staff",
+    since: "3.0",
+    question: "How do staff permissions and manager approval work?",
+    keywords: ["permissions", "approval", "manager", "staff", "discount cap", "role", "restrict", "cost visibility"],
+    content: [
+      { type: "p", text: "Every permission has two states: Allowed or Needs approval — nothing is flatly forbidden. The owner sets what managers and staff can do in Staff → Role Permissions and saves the whole table at once." },
+      { type: "p", text: "When a staff member hits something that needs approval, a colleague with the permission picks their own name and enters their PIN to let it through once:" },
+      {
+        type: "list",
+        items: [
+          "Actions: manual stock adjustments, every save in product management (products, variants, categories, product order), and checkouts with a manual discount above the cap. The discount cap defaults to unlimited for managers and 10% for staff.",
+          "Views: cost & profit, the dashboard, settings, and backup & restore. One approval keeps them unlocked until the operator changes or the app goes to the background.",
+        ],
+      },
+      { type: "p", text: "Voids, returns, on-account sales, and purchasing deliberately have no permission — they only record who handled them. Every approval is written to the activity log." },
+      { type: "note", text: "Staff accounts and permissions are a Pro plan feature." },
+    ],
+    related: ["staff-setup", "activity-log", "apply-discounts"],
+  },
+  {
+    slug: "activity-log",
+    category: "staff",
+    since: "3.0",
+    question: "How do I find out who voided an order, changed a price, or adjusted stock?",
+    keywords: ["activity log", "audit", "who", "price change", "void", "stock adjustment", "deleted product", "log"],
+    content: [
+      { type: "p", text: "Tap Activity Log at the top right of the Staff page and enter the owner PIN. It lists the store's sensitive actions, newest first: voids, returns, manual stock adjustments, approvals, staff and permission changes, owner PIN setup and changes, and product price changes and deletions. Ordinary sales aren't listed." },
+      { type: "p", text: "Each entry names the target, who did what and when, and the result — for example “Product White Tee”, “Amy changed price · 14:05:32”, “M price $390 → $350”. Filter by staff member, action type, and today / this week / this month; tap an entry that points to an order, product, or customer to open it." },
+      { type: "p", text: "Order details, product details, and staff records also have their own entry, listing only the activity for that order, product, or person." },
+      { type: "note", text: "Every plan records activity; viewing it requires Pro, and anything recorded while you didn't have Pro shows up once you subscribe. Voids and adjustments from before 3.0 have no operator and are marked “No operator recorded”." },
+    ],
+    related: ["staff-permissions", "staff-setup", "restore-undo"],
   },
 
   // ── Promotions & Loyalty ────────────────────────────────────
@@ -476,7 +596,7 @@ export const articles = [
       { type: "p", text: "Backups go into your own cloud account. Each cloud keeps only the latest one — one data snapshot and one file of product photos — and every backup overwrites the previous one." },
       { type: "note", text: "Because a new backup replaces the old one, if you suspect your data has already gone wrong (say, a batch of products deleted by mistake), don't back up yet — email us and we'll work out the next step together." },
     ],
-    related: ["transfer-new-ipad", "data-after-delete"],
+    related: ["transfer-new-ipad", "icloud-not-connected", "data-after-delete"],
   },
   {
     slug: "transfer-new-ipad",
@@ -492,10 +612,52 @@ export const articles = [
           "New iPad: go to Settings → Cloud Backup, connect the same cloud account, and restore.",
         ],
       },
-      { type: "p", text: "Before restoring, DingPOS validates the backup's integrity and only replaces local data once the backup is confirmed usable. Product photos are restored too." },
-      { type: "note", text: "A restore replaces all data on this iPad with the backup — orders created on this iPad after that backup will be gone. Make sure you're connected to the right cloud account." },
+      { type: "p", text: "Tapping Restore first opens a preview: product, order, and customer counts and the latest order time for this iPad and for the backup side by side, plus the orders the restore would remove. Data is replaced only after you confirm, and product photos are restored too." },
+      { type: "note", text: "If the backup was made by a newer version of DingPOS, the restore is blocked until you update the app. Restored the wrong one? Use Undo Restore." },
     ],
-    related: ["backup-data", "data-after-delete"],
+    related: ["backup-data", "restore-undo", "data-after-delete"],
+  },
+  {
+    slug: "restore-undo",
+    category: "backup",
+    since: "3.0",
+    question: "Can I undo a restore?",
+    keywords: ["restore", "undo", "undo restore", "wrong backup", "snapshot", "preview", "restore records"],
+    content: [
+      { type: "p", text: "Yes. Every cloud restore keeps the data it replaced as a pre-restore copy. A card on the Cloud Backup screen shows when the last restore happened and where it came from; tap Undo Restore and confirm, and your data goes back to how it was. Undo Restore counts as a restore itself, so if you change your mind, tap it again to switch back." },
+      { type: "p", text: "Before any restore, a preview compares the product, order, and customer counts on this iPad and in the backup, and lists every order the restore would remove. Nothing on the iPad changes until you confirm." },
+      {
+        type: "list",
+        items: [
+          "Only the most recent pre-restore copy is kept; the next restore replaces it.",
+          "Undo Restore brings back data only; products added after the backup show a missing photo.",
+          "A backup made by a newer version of DingPOS can't be restored until you update the app.",
+        ],
+      },
+      { type: "p", text: "Every restore leaves a restore record: when, who, from where, and which orders it removed. Tap View Restore Records on the Cloud Backup screen to see them. Viewing restore records is a Pro plan feature; the preview and Undo Restore work on every plan." },
+    ],
+    related: ["transfer-new-ipad", "backup-data", "activity-log"],
+  },
+  {
+    slug: "icloud-not-connected",
+    category: "backup",
+    since: "3.0",
+    question: "iCloud backup says “Not connected” — what do I do?",
+    keywords: ["icloud", "not connected", "icloud drive", "backup failed", "can't connect"],
+    content: [
+      { type: "p", text: "DingPOS shows iCloud as connected only when it can actually use it. When it says Not connected, check three things in the iPad's Settings app:" },
+      {
+        type: "steps",
+        items: [
+          "You're signed in to your Apple Account.",
+          "iCloud Drive is turned on.",
+          "DingPOS is allowed to use iCloud Drive.",
+        ],
+      },
+      { type: "p", text: "Once all three are on, go back to Cloud Backup in DingPOS and iCloud shows as connected. Backups are stored in DingPOS's own folder in iCloud Drive." },
+      { type: "note", text: "In versions before 3.0, iCloud backup didn't work and failed every time with “Backup.SyncError error 0”. Update DingPOS from the App Store first." },
+    ],
+    related: ["backup-data", "transfer-new-ipad"],
   },
   {
     slug: "data-after-delete",
@@ -504,9 +666,22 @@ export const articles = [
     keywords: ["delete", "uninstall", "data loss", "remove app"],
     content: [
       { type: "p", text: "No. DingPOS stores everything locally on your device — deleting the app permanently deletes all products, orders, members, and settings, unless you've enabled cloud backup." },
-      { type: "note", text: "Before deleting the app, always run a manual backup and confirm it succeeded. After reinstalling, restore from the cloud." },
+      { type: "note", text: "Before deleting the app, always run a manual backup and confirm it succeeded. After reinstalling, restore from the cloud. If the app opens to “Couldn't Open Your Store Data”, do not delete it." },
     ],
-    related: ["backup-data", "transfer-new-ipad"],
+    related: ["backup-data", "launch-failure", "transfer-new-ipad"],
+  },
+  {
+    slug: "launch-failure",
+    category: "backup",
+    since: "3.0",
+    question: "The app opens to “Couldn't Open Your Store Data” — what now?",
+    keywords: ["couldn't open", "won't open", "crash", "crashes on launch", "database", "store data"],
+    content: [
+      { type: "p", text: "Don't delete the app. This screen means DingPOS couldn't read your store data, but the data is still on this iPad — deleting the app deletes it along with the app." },
+      { type: "p", text: "Tap Retry first; if it works, the app opens as usual. If it keeps happening, tap Contact Support and tell us, and we'll help you recover your data. This screen never moves or deletes any files." },
+      { type: "note", text: "The most common cause is the app being closed in the middle of a restore. Before 3.0, this made the app crash on every launch; since 3.0 it stops on this screen instead." },
+    ],
+    related: ["data-after-delete", "restore-undo"],
   },
   {
     slug: "multi-device",
@@ -573,6 +748,27 @@ export const articles = [
       { type: "p", text: "Subscribe at any time and checkout unlocks immediately, with all your data exactly as you left it." },
     ],
     related: ["free-trial", "manage-subscription"],
+  },
+  {
+    slug: "plans-compare",
+    category: "subscription",
+    since: "3.0",
+    question: "What's the difference between Lite, Standard, and Pro?",
+    keywords: ["plans", "lite", "standard", "pro", "difference", "compare", "upgrade", "downgrade", "pricing"],
+    content: [
+      { type: "p", text: "All three plans include full checkout, products, orders (with voids, returns, and exchanges), reports, and cloud backup. They differ in the tools for running the shop:" },
+      {
+        type: "list",
+        items: [
+          "Lite: for one person running a stall who needs checkout and products.",
+          "Standard: adds promotions, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, and pre-orders.",
+          "Pro: adds staff accounts and permissions, manager approval, the activity log, restore records, and advanced reports — for shops with staff.",
+        ],
+      },
+      { type: "p", text: "Already on Standard? Upgrade to Pro from the subscription page: billing stays on the same cycle, the upgrade takes effect immediately, and Apple prorates the difference. Moving from Pro back to Standard takes effect at renewal. Prices are shown in the app, and you can compare plans on our Pricing page." },
+      { type: "note", text: "Downgrading never deletes data. Features beyond your plan pause, the data stays, and subscribing again brings them back." },
+    ],
+    related: ["manage-subscription", "free-trial", "staff-setup"],
   },
   {
     slug: "manage-subscription",

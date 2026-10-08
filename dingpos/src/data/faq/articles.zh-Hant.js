@@ -20,6 +20,7 @@ export const categories = [
   { key: "orders", icon: "bi-receipt", label: "訂單與退換貨", group: "faq" },
   { key: "products", icon: "bi-box-seam", label: "商品、庫存與進貨", group: "faq" },
   { key: "reports", icon: "bi-bar-chart-line", label: "報表", group: "faq" },
+  { key: "staff", icon: "bi-people", label: "員工與權限", group: "faq" },
   { key: "promotion", icon: "bi-tags", label: "促銷與會員", group: "faq" },
   { key: "backup", icon: "bi-cloud-check", label: "備份與資料", group: "faq" },
   { key: "subscription", icon: "bi-credit-card", label: "訂閱與費用", group: "faq" },
@@ -95,6 +96,18 @@ export const articles = [
     ],
     related: ["tax-calculation", "how-to-set-up"],
   },
+  {
+    slug: "app-language",
+    category: "getting-started",
+    since: "3.0",
+    question: "怎麼切換 App 的語言？",
+    keywords: ["語言", "英文", "中文", "切換", "language"],
+    content: [
+      { type: "p", text: "DingPOS 支援繁體中文與英文。到「設定 → 本機偏好設定」點「App 語言」，會打開 iPad「設定」裡 DingPOS 的頁面，在「語言」選擇中文或英文即可。" },
+      { type: "p", text: "iOS 不允許 App 直接打開語言清單，所以要在系統設定裡再點一次。語言只套用在這台 iPad。" },
+    ],
+    related: ["checkout-sound", "supported-devices"],
+  },
 
   // ── 收銀結帳 ────────────────────────────────────────────────
   {
@@ -113,7 +126,7 @@ export const articles = [
     slug: "apply-discounts",
     category: "checkout",
     question: "如何套用折扣？",
-    keywords: ["折扣", "打折", "優惠", "折讓", "百分比", "折價"],
+    keywords: ["折扣", "打折", "優惠", "折讓", "百分比", "折價", "折扣上限"],
     content: [
       { type: "p", text: "折扣分兩層，都支援固定金額或百分比：" },
       {
@@ -124,8 +137,9 @@ export const articles = [
         ],
       },
       { type: "p", text: "每個品項與整單各只能有一個折扣，重複套用會覆蓋前一個；點折扣標籤即可移除。計算順序是先折扣、後計稅，這是零售的通用順序。" },
+      { type: "note", text: "使用員工功能（Pro）時，店員的手動折扣超過折扣上限，結帳時需要主管核准。上限預設店長不限、店員 10%，可在「角色權限」調整。" },
     ],
-    related: ["create-promotion", "tax-calculation"],
+    related: ["create-promotion", "tax-calculation", "staff-permissions"],
   },
   {
     slug: "tax-calculation",
@@ -156,6 +170,18 @@ export const articles = [
       { type: "p", text: "熟客想先把東西帶走、之後再付，可以選「掛帳」：這筆會記成未收帳款，等收到錢再結清。詳見「熟客可以先掛帳、之後再付嗎？」。" },
     ],
     related: ["on-account", "roadmap-payment-integration", "multiple-carts"],
+  },
+  {
+    slug: "checkout-sound",
+    category: "checkout",
+    since: "3.0",
+    question: "可以關掉結帳完成的「叮」一聲嗎？",
+    keywords: ["音效", "叮", "聲音", "靜音", "關掉", "結帳", "sound"],
+    content: [
+      { type: "p", text: "可以。到「設定 → 本機偏好設定」關掉「結帳完成音效」，下一筆結帳就不會再發出叮聲，但仍然會有震動回饋。" },
+      { type: "p", text: "這個開關只套用在這台 iPad，從雲端備份還原也不會改變它。" },
+    ],
+    related: ["app-language", "multiple-carts"],
   },
   {
     slug: "price-change-cart",
@@ -355,7 +381,7 @@ export const articles = [
       {
         type: "steps",
         items: [
-          "點「新增進貨單」，選供應商，加入這批貨的商品、數量與單價（預帶商品目前的成本），也可以填運費。",
+          "點「新增進貨單」，選供應商，加入這批貨的商品、數量與單價（預帶商品目前的成本），也可以填運費。還沒建過的供應商，可以在選擇清單左上角直接「新增供應商」（3.0 起）。",
           "草稿階段不會動到庫存或帳款，可以隨時修改或刪除。",
           "貨到了按「確認入庫」：有追蹤庫存的商品數量自動增加，進貨單取得單號並鎖定。入庫時預設會把商品成本更新為這次的單價，不想更新可以在進貨單上關掉「同步商品成本」。",
         ],
@@ -398,7 +424,29 @@ export const articles = [
       { type: "p", text: "熱銷排行卡只列前 5 名，點卡片或「查看全部」可以看該期間每一項有銷售的商品，依扣掉退貨後的數量排序。" },
       { type: "note", text: "2.4 以前的版本是「今日／7 天／30 天／全部時間」這類往回推的天數。如果你看到的還是舊選項，請到 App Store 更新 DingPOS。" },
     ],
-    related: ["revenue-vs-cash", "profit-not-tracked"],
+    related: ["revenue-vs-cash", "advanced-reports", "profit-not-tracked"],
+  },
+  {
+    slug: "advanced-reports",
+    category: "reports",
+    since: "3.0",
+    question: "進階報表有哪些？",
+    keywords: ["進階報表", "比較", "去年同期", "上一期", "熱力圖", "時段", "滯銷", "回購率", "庫存估值", "未兌換點數", "pro"],
+    content: [
+      { type: "p", text: "進階報表直接接在「報表」頁上，跟著同一個期間：" },
+      {
+        type: "list",
+        items: [
+          "銷售比較：期間列右側選「上一期」或「去年同期」，實收那一格列出比較期間的金額、差額與成長率，營收走勢圖多一條比較線。",
+          "星期 × 時段：銷售走勢切到這個檢視，看一週七天 × 24 小時哪些時段賣得多；設了銷售比較時，可以切到「差異」看哪些時段變多或變少。",
+          "滯銷品：商品排行切到「滯銷品」，列出每項商品在這段期間的淨售出數量，由少排到多，並標出目前庫存與最後售出日；從沒賣過的商品標示「從未售出」。",
+          "回購率：服務顧客那一格顯示這段期間有消費的會員中，累計消費兩次以上的比例。",
+          "目前狀況：庫存估值（目前庫存 × 目前成本）與未兌換點數。這兩個是當下的餘額，不隨期間切換。",
+        ],
+      },
+      { type: "note", text: "進階報表是 Pro 方案的功能。沒有 Pro 時，這五個位置各帶一個小鎖，點了會看到說明。員工查看沿用「報表」這項權限。" },
+    ],
+    related: ["report-periods", "revenue-vs-cash", "plans-compare"],
   },
   {
     slug: "profit-not-tracked",
@@ -410,6 +458,78 @@ export const articles = [
       { type: "p", text: "想看完整的毛利報表，回到商品編輯頁補上成本即可，之後的訂單就會納入計算。毛利以折扣後的實收金額計算。" },
     ],
     related: ["report-periods", "purchase-orders"],
+  },
+
+  // ── 員工與權限 ──────────────────────────────────────────────
+  {
+    slug: "staff-setup",
+    category: "staff",
+    since: "3.0",
+    question: "如何新增員工，讓每個人用自己的 PIN 換班？",
+    keywords: ["員工", "店員", "店長", "帳號", "pin", "換人", "交班", "經手人", "多人", "staff"],
+    content: [
+      { type: "p", text: "側欄的「員工」第一次打開時，會先請你建立店主：輸入姓名與 4 位數 PIN。之後就可以新增店長與店員，每個人各有自己的 PIN。" },
+      { type: "p", text: "側欄底部和結帳畫面右上角會顯示目前的操作者。點一下、選自己的名字、輸入 PIN 就換人。換人之後，每張訂單、每筆收款，以及庫存與點數的異動都會記下經手人，訂單列表與明細都看得到；作廢的單另外記下作廢者。" },
+      {
+        type: "list",
+        items: [
+          "員工改名不影響舊單，舊單顯示的是當時的姓名。",
+          "店主可以停用員工、幫員工重設 PIN，但任何人都看不到別人的 PIN。",
+          "店主 PIN 忘記無法重設，請務必記住，詳見「忘記店主 PIN 怎麼辦？」。",
+        ],
+      },
+      { type: "note", text: "員工是 Pro 方案的功能。沒有 Pro 時不會顯示操作者；之後失去 Pro，員工資料與每張單的經手人都會保留，新的單據記在店主名下。" },
+    ],
+    related: ["owner-pin-forgotten", "staff-permissions", "activity-log"],
+  },
+  {
+    slug: "owner-pin-forgotten",
+    category: "staff",
+    since: "3.0",
+    question: "忘記店主 PIN 怎麼辦？",
+    keywords: ["pin", "忘記", "密碼", "重設", "店主", "找回", "解鎖"],
+    content: [
+      { type: "p", text: "店主 PIN 無法重設，我們的客服也沒有辦法幫你解開。PIN 和店裡的資料存在一起，所以刪掉 App 重新安裝、再從雲端還原，也會帶回同一組 PIN。" },
+      { type: "p", text: "建立店主和每次更改店主 PIN 時，畫面都會提醒「請記住這組 PIN。忘記將無法重設。」建議把它記在只有你拿得到的地方。" },
+      { type: "p", text: "忘記店主 PIN 之後，需要店主 PIN 的操作就無法進行，例如新增或修改員工、修改角色權限、查看操作紀錄。員工仍然可以用自己的 PIN 繼續結帳與處理日常工作。" },
+      { type: "note", text: "員工忘記自己的 PIN 沒關係：店主可以在「員工」幫他重設。" },
+    ],
+    related: ["staff-setup", "staff-permissions"],
+  },
+  {
+    slug: "staff-permissions",
+    category: "staff",
+    since: "3.0",
+    question: "員工權限和主管核准怎麼運作？",
+    keywords: ["權限", "核准", "主管", "店長", "店員", "折扣上限", "角色", "限制", "看成本", "permission", "approval"],
+    content: [
+      { type: "p", text: "每項權限只有兩種狀態：允許，或需核准，沒有完全禁止。店主在「員工」的「角色權限」設定店長與店員各自的權限，整張改完一次儲存。" },
+      { type: "p", text: "店員碰到需核准的事情時，畫面會請一位有權限的同事選自己的名字、輸入 PIN，放行這一次：" },
+      {
+        type: "list",
+        items: [
+          "操作類：手動調整庫存、商品管理（商品、規格、分類、編輯排序）的每次儲存，以及手動折扣超過上限的結帳。折扣上限預設店長不限、店員 10%。",
+          "檢視類：看成本與毛利、報表、設定、備份與還原。核准一次後保持解鎖，直到換人或 App 進入背景。",
+        ],
+      },
+      { type: "p", text: "作廢、退貨、掛帳和進貨刻意不設權限，只記錄經手人。每一次核准都會寫進操作紀錄。" },
+      { type: "note", text: "員工與權限是 Pro 方案的功能。" },
+    ],
+    related: ["staff-setup", "activity-log", "apply-discounts"],
+  },
+  {
+    slug: "activity-log",
+    category: "staff",
+    since: "3.0",
+    question: "怎麼查是誰作廢、改價或調了庫存？",
+    keywords: ["操作紀錄", "紀錄", "稽核", "是誰", "改價", "作廢", "調庫存", "刪除商品", "log", "audit"],
+    content: [
+      { type: "p", text: "到「員工」頁右上角點「操作紀錄」，輸入店主 PIN 後，會由新到舊列出店裡的敏感操作：作廢、退貨、手動調庫存、主管核准、員工與權限變更、店主 PIN 的設定與變更，以及商品改價與刪除。一般結帳不會列入。" },
+      { type: "p", text: "每一筆都寫明對象、誰做了什麼、幾點幾分，以及結果，例如「商品 白 T」「小美 修改價格 · 14:05:32」「M 售價 $390 → $350」。可以依員工、動作類型與今日／本週／本月篩選；點一筆指向訂單、商品或顧客的紀錄，會直接打開它。" },
+      { type: "p", text: "訂單明細、商品詳情與員工資料也各有入口，只列出跟那張單、那個商品或那位員工有關的紀錄。" },
+      { type: "note", text: "所有方案都會記錄，查看才需要 Pro；沒有 Pro 期間的紀錄，訂閱後都看得到。3.0 以前的作廢與調整沒有記錄操作者，會標示為「未記錄操作者」。" },
+    ],
+    related: ["staff-permissions", "staff-setup", "restore-undo"],
   },
 
   // ── 促銷與會員 ──────────────────────────────────────────────
@@ -489,7 +609,7 @@ export const articles = [
       { type: "p", text: "備份存進你自己的雲端帳號。每個雲端只保留最新的一份：資料快照與商品照片各一個檔案，每次備份都會覆蓋上一份。" },
       { type: "note", text: "因為新的備份會蓋掉舊的，如果你懷疑資料已經出錯（例如誤刪了大量商品），先不要按備份，寫信給我們一起看怎麼處理。" },
     ],
-    related: ["transfer-new-ipad", "data-after-delete"],
+    related: ["transfer-new-ipad", "icloud-not-connected", "data-after-delete"],
   },
   {
     slug: "transfer-new-ipad",
@@ -505,10 +625,52 @@ export const articles = [
           "新 iPad：到「設定 → 雲端備份」連接同一個雲端帳號，選擇還原。",
         ],
       },
-      { type: "p", text: "還原前系統會先驗證備份檔的完整性，確認可用才會替換本機資料。商品照片會一併還原。" },
-      { type: "note", text: "還原會用備份完整取代這台 iPad 上的資料：這台 iPad 在備份之後才建立的訂單會消失。請確認連到的是正確的雲端帳號。" },
+      { type: "p", text: "按下還原後會先開一張預覽：並排這台 iPad 與備份的商品、訂單、顧客筆數與最後一筆訂單時間，並列出還原後會消失的訂單。確認之後才會替換資料，商品照片一併還原。" },
+      { type: "note", text: "如果備份是較新版本的 DingPOS 建立的，還原會被擋下並請你先更新 App。還原錯了，可以用「回到還原前」復原。" },
     ],
-    related: ["backup-data", "data-after-delete"],
+    related: ["backup-data", "restore-undo", "data-after-delete"],
+  },
+  {
+    slug: "restore-undo",
+    category: "backup",
+    since: "3.0",
+    question: "還原錯了可以復原嗎？",
+    keywords: ["還原", "復原", "回到還原前", "還原錯", "快照", "預覽", "還原紀錄", "undo", "restore"],
+    content: [
+      { type: "p", text: "可以。每次從雲端還原，被取代的本機資料都會留成一份「還原前副本」。「雲端備份」畫面會多一張卡片，寫著上次還原的時間與來源；按「回到還原前」並確認，資料就切回還原前的樣子。回到還原前本身也算一次還原，反悔了再按一次就能切回來。" },
+      { type: "p", text: "按下還原之前也會先開預覽：並排這台 iPad 與備份的商品、訂單、顧客筆數，並逐筆列出還原後會消失的訂單。確認之前，本機資料完全不會變動。" },
+      {
+        type: "list",
+        items: [
+          "還原前副本只保留最近一份，下一次還原會取代它。",
+          "回到還原前只回復資料；備份之後才新增的商品，圖片會顯示為缺圖。",
+          "如果備份是較新版本的 DingPOS 建立的，會請你先更新 App 才能還原。",
+        ],
+      },
+      { type: "p", text: "每一次還原都會留下還原紀錄：時間、操作者、來源，以及被移除的訂單。在「雲端備份」點「查看還原紀錄」就能查看。查看還原紀錄是 Pro 方案的功能；預覽與回到還原前，所有方案都能用。" },
+    ],
+    related: ["transfer-new-ipad", "backup-data", "activity-log"],
+  },
+  {
+    slug: "icloud-not-connected",
+    category: "backup",
+    since: "3.0",
+    question: "iCloud 備份顯示「未連線」怎麼辦？",
+    keywords: ["icloud", "未連線", "連不上", "icloud 雲碟", "icloud drive", "備份失敗"],
+    content: [
+      { type: "p", text: "DingPOS 只有在 iCloud 真的能用時，才會顯示為已連線。顯示「未連線」時，請到 iPad 的「設定」確認三件事：" },
+      {
+        type: "steps",
+        items: [
+          "已經登入 Apple 帳號。",
+          "iCloud 雲碟（iCloud Drive）已開啟。",
+          "iCloud 雲碟允許 DingPOS 使用。",
+        ],
+      },
+      { type: "p", text: "都開好之後回到 DingPOS 的「雲端備份」，iCloud 就會顯示為已連線。備份會存在 iCloud 雲碟裡 DingPOS 自己的資料夾。" },
+      { type: "note", text: "3.0 以前的版本 iCloud 備份無法使用，每次都會出現「Backup.SyncError 錯誤 0」。請先到 App Store 更新 DingPOS。" },
+    ],
+    related: ["backup-data", "transfer-new-ipad"],
   },
   {
     slug: "data-after-delete",
@@ -517,9 +679,22 @@ export const articles = [
     keywords: ["刪除", "移除", "解除安裝", "資料遺失", "消失"],
     content: [
       { type: "p", text: "不在。DingPOS 的資料全部儲存在裝置本地，刪除 App 會一併永久刪除所有商品、訂單、會員與設定——除非你已啟用雲端備份。" },
-      { type: "note", text: "刪除 App 前，請務必先手動執行一次備份並確認成功。重新安裝後即可從雲端還原。" },
+      { type: "note", text: "刪除 App 前，請務必先手動執行一次備份並確認成功。重新安裝後即可從雲端還原。如果 App 開啟時顯示「無法開啟店家資料」，請不要刪除 App。" },
     ],
-    related: ["backup-data", "transfer-new-ipad"],
+    related: ["backup-data", "launch-failure", "transfer-new-ipad"],
+  },
+  {
+    slug: "launch-failure",
+    category: "backup",
+    since: "3.0",
+    question: "App 開啟時顯示「無法開啟店家資料」怎麼辦？",
+    keywords: ["無法開啟", "打不開", "閃退", "當機", "資料庫", "開不了", "店家資料", "crash"],
+    content: [
+      { type: "p", text: "請不要刪除 App。這個畫面代表 App 讀不到店裡的資料，但資料仍然保存在這台 iPad 上；刪除 App 會連同資料一起刪掉。" },
+      { type: "p", text: "先按「重試」，成功就會照常進入 App。如果還是一樣，按「聯絡客服」告訴我們，我們會協助找回資料。這個畫面本身不會搬動或刪除任何檔案。" },
+      { type: "note", text: "最常見的原因是還原到一半時 App 被關掉。3.0 以前的版本遇到這種情況會一開就閃退；更新到 3.0 之後，會改停在這個說明畫面。" },
+    ],
+    related: ["data-after-delete", "restore-undo"],
   },
   {
     slug: "multi-device",
@@ -586,6 +761,27 @@ export const articles = [
       { type: "p", text: "任何時候訂閱，都能立即恢復結帳功能，所有資料原封不動。" },
     ],
     related: ["free-trial", "manage-subscription"],
+  },
+  {
+    slug: "plans-compare",
+    category: "subscription",
+    since: "3.0",
+    question: "Lite、Standard、Pro 方案差在哪？",
+    keywords: ["方案", "lite", "standard", "pro", "差別", "比較", "升級", "降級", "價格"],
+    content: [
+      { type: "p", text: "三個方案都有完整的結帳、商品、訂單（含作廢與退換貨）、報表與雲端備份，差別在經營工具：" },
+      {
+        type: "list",
+        items: [
+          "Lite：適合一個人顧攤，只需要結帳與商品管理。",
+          "Standard：再加上促銷、會員點數與等級、庫存追蹤、進貨、掛帳與預購。",
+          "Pro：再加上員工與權限、主管核准、操作紀錄、還原紀錄與進階報表，適合有員工的店。",
+        ],
+      },
+      { type: "p", text: "已經訂閱 Standard，可以在訂閱頁直接升級到 Pro：付款週期與目前相同，升級立即生效，差額由 Apple 按比例計算。從 Pro 改回 Standard，則在續訂日生效。價格以 App 內顯示為準，也可以到官網的「價格」頁比較。" },
+      { type: "note", text: "降級不會刪除任何資料。超出方案的功能會停用，資料保留，重新訂閱就恢復。" },
+    ],
+    related: ["manage-subscription", "free-trial", "staff-setup"],
   },
   {
     slug: "manage-subscription",

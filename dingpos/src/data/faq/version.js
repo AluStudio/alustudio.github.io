@@ -25,4 +25,4 @@
 //
 // Version strings are the App Store marketing version ("2.0", "3.0.1") — the
 // product repo's `v{marketing}` tag without the "v".
-export const VERIFIED_APP_VERSION = "2.4";
+export const VERIFIED_APP_VERSION = "3.0";
