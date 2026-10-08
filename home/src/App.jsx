@@ -190,7 +190,12 @@ function AppEntry({ app, index }) {
           loading="lazy"
         />
         <div className="entry__title">
-          <h2 className="entry__name">{app.name}</h2>
+          <h2 className="entry__name">
+            <a href={app.website} className="entry__link">
+              {app.name}
+            </a>
+            <i className="bi bi-arrow-up-right entry__arrow" aria-hidden="true"></i>
+          </h2>
           <p className="entry__tagline">{t(`${app.id}.tagline`)}</p>
         </div>
       </div>
@@ -209,10 +214,6 @@ function AppEntry({ app, index }) {
               <span>{store.label}</span>
             </a>
           ))}
-          <a href={app.website} className="site-link">
-            <span>{t("common.website")}</span>
-            <i className="bi bi-arrow-up-right"></i>
-          </a>
         </div>
       </div>
     </article>
