@@ -79,6 +79,20 @@ test("http root -> https /home/ (scheme upgrade takes precedence, no plaintext h
   assert.equal(res.headers.get("location"), "https://alu-studio.com/");
 });
 
+test("retired page URL -> replacement page 301, query preserved", async () => {
+  const req = new Request("https://alu-studio.com/dingpos/support/roadmap-purchase-orders/?ref=x");
+  const res = await worker.fetch(req, mockEnv(), {});
+  assert.equal(res.status, 301);
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/dingpos/support/purchase-orders/?ref=x");
+});
+
+test("retired page URL without trailing slash still redirects in one hop", async () => {
+  const req = new Request("https://alu-studio.com/dingpos/support/roadmap-returns-exchanges");
+  const res = await worker.fetch(req, mockEnv(), {});
+  assert.equal(res.status, 301);
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/dingpos/support/returns-exchanges/");
+});
+
 test("known route served with HTML no-cache header", async () => {
   const req = new Request("https://alu-studio.com/home/");
   const res = await worker.fetch(req, mockEnv(), {});

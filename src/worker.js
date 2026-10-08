@@ -6,7 +6,8 @@
  *
  *   1. Canonical origin -> https://alu-studio.com, 301, path + query
  *      preserved (upgrades http, and folds www into the apex host).
- *   2. / -> /home/, 301 (root landing redirect).
+ *   2. / -> /home/, 301 (root landing redirect), and retired page URLs ->
+ *      their replacement page, 301 (MOVED_PATHS).
  *   3. Everything else -> served from the ASSETS binding (the `_site/` build).
  *   4. Asset 404 -> real 404.html body, real 404 status (no client-side
  *      redirect script — replaces the old GitHub Pages 404.html SPA-fallback
@@ -26,6 +27,14 @@ const WWW_HOST = "www.alu-studio.com";
 // Vite emits content-hashed filenames for build assets (e.g. index-B3f9x1kQ.js).
 // Anything matching this is safe to cache forever.
 const HASHED_ASSET_RE = /-[A-Za-z0-9_-]{8,}\.(js|css|woff2?|png|jpe?g|svg|webp|avif|ico)$/i;
+
+// Retired page URLs that search engines already indexed, mapped to the page
+// that now answers the same question. Keys are canonical trailing-slash paths.
+const MOVED_PATHS = new Map([
+  // DingPOS 2.0 shipped these roadmap items; the FAQ now documents the feature.
+  ["/dingpos/support/roadmap-purchase-orders/", "/dingpos/support/purchase-orders/"],
+  ["/dingpos/support/roadmap-returns-exchanges/", "/dingpos/support/returns-exchanges/"],
+]);
 
 export default {
   async fetch(request, env, _ctx) {
@@ -48,6 +57,12 @@ export default {
     // 2. root -> /home/
     if (url.pathname === "/") {
       url.pathname = "/home/";
+      return Response.redirect(url.toString(), 301);
+    }
+
+    const movedTo = MOVED_PATHS.get(url.pathname.endsWith("/") ? url.pathname : `${url.pathname}/`);
+    if (movedTo) {
+      url.pathname = movedTo;
       return Response.redirect(url.toString(), 301);
     }
 
