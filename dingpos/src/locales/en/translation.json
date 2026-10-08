@@ -151,6 +151,7 @@
       "save": "Save {{percent}}%"
     },
     "recommended": "Recommended",
+    "select_plan": "Choose a plan",
     "unit": {
       "month": "/mo",
       "year": "/yr"
@@ -198,8 +199,7 @@
           "Activity log and restore history",
           "Advanced reports: period comparison, sales heatmap, slow movers, inventory value, repeat customers"
         ],
-        "cta": "Download DingPOS",
-        "note": "The trial runs at Standard level; Pro features need a Pro subscription."
+        "cta": "Start the 30-day free trial"
       }
     },
     "fineprint": "Billed through your App Store account. Monthly and annual plans auto-renew at the end of each period; cancel anytime in the App Store.",
@@ -212,7 +212,7 @@
     "assurances": {
       "trial": {
         "title": "30-day free trial",
-        "desc": "Every Standard feature. No credit card, no account."
+        "desc": "Every Pro feature included. No credit card, no account."
       },
       "fees": {
         "title": "No transaction fees",
@@ -353,7 +353,7 @@
       "items": [
         {
           "q": "What can I use during the free trial?",
-          "a": "For 30 days from first install you get every Standard feature — no credit card, no account. Pro features such as staff, permissions and advanced reports aren't part of the trial; subscribe to Pro anytime during the trial if you need them."
+          "a": "For 30 days from first install you get every feature, including Pro ones such as staff, permissions and advanced reports — no credit card, no account. Subscribing to any plan during the trial ends the trial right away and switches you to the plan you bought."
         },
         {
           "q": "What happens if I don't subscribe after the trial?",
@@ -472,7 +472,7 @@
     },
     "subscription": {
       "title": "Subscription & payment",
-      "desc": "DingPOS offers a 30-day free trial from first install, during which Standard plan features are available. After the trial, a subscription to one of the plans (Lite, Standard or Pro), purchased via App Store In-App Purchase, is required to continue using checkout; plan contents and prices are listed on the pricing page (alu-studio.com/dingpos/pricing), and the price charged is the one shown in the App Store. Without a subscription, browsing and product management remain available and your data is never deleted. The subscription renews automatically unless you cancel at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time in your device's App Store account settings. Purchased subscriptions support restore."
+      "desc": "DingPOS offers a 30-day free trial from first install, during which all Pro plan features are available; purchasing any plan during the trial ends the trial, and the purchased plan applies from the time of purchase. After the trial, a subscription to one of the plans (Lite, Standard or Pro), purchased via App Store In-App Purchase, is required to continue using checkout; plan contents and prices are listed on the pricing page (alu-studio.com/dingpos/pricing), and the price charged is the one shown in the App Store. Without a subscription, browsing and product management remain available and your data is never deleted. The subscription renews automatically unless you cancel at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time in your device's App Store account settings. Purchased subscriptions support restore."
     },
     "restrictions": {
       "title": "Restrictions",
