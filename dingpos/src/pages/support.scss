@@ -417,6 +417,13 @@
   color: $ink-soft;
 }
 
+.support-verified-version {
+  margin: 2rem 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: $ink-soft;
+}
+
 // ── Article page ────────────────────────────────────────────
 
 .faq-article {
@@ -457,6 +464,18 @@
       text-underline-offset: 2px;
     }
   }
+}
+
+.faq-since {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  background: $accent-100;
+  color: $accent-700;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 .faq-breadcrumb-sep {

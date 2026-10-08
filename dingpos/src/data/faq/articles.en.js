@@ -1,12 +1,14 @@
 // DingPOS FAQ — English content pack.
 // Slugs and `related` links MUST stay in sync with articles.zh-Hant.js
 // (enforced at build time by scripts/copy-spa-pages.js).
-// Block schema documented in articles.zh-Hant.js.
+// Block schema and the `since` field documented in articles.zh-Hant.js.
 
 export const categories = [
   { key: "getting-started", icon: "bi-rocket-takeoff", label: "Getting Started", group: "faq" },
   { key: "checkout", icon: "bi-basket3", label: "Checkout", group: "faq" },
-  { key: "products", icon: "bi-box-seam", label: "Products & Inventory", group: "faq" },
+  { key: "orders", icon: "bi-receipt", label: "Orders & Returns", group: "faq" },
+  { key: "products", icon: "bi-box-seam", label: "Products, Inventory & Purchasing", group: "faq" },
+  { key: "reports", icon: "bi-bar-chart-line", label: "Reports", group: "faq" },
   { key: "promotion", icon: "bi-tags", label: "Promotions & Loyalty", group: "faq" },
   { key: "backup", icon: "bi-cloud-check", label: "Backup & Data", group: "faq" },
   { key: "subscription", icon: "bi-credit-card", label: "Subscription & Billing", group: "faq" },
@@ -15,7 +17,7 @@ export const categories = [
 ];
 
 export const articles = [
-  // ── Getting Started ───────────────────────────────────────
+  // ── Getting Started ─────────────────────────────────────────
   {
     slug: "how-to-set-up",
     category: "getting-started",
@@ -81,7 +83,7 @@ export const articles = [
     related: ["tax-calculation", "how-to-set-up"],
   },
 
-  // ── Checkout ──────────────────────────────────────────────
+  // ── Checkout ────────────────────────────────────────────────
   {
     slug: "multiple-carts",
     category: "checkout",
@@ -134,36 +136,145 @@ export const articles = [
     slug: "payment-methods",
     category: "checkout",
     question: "Which payment methods are supported?",
-    keywords: ["payment", "cash", "credit card", "line pay", "change", "custom"],
+    keywords: ["payment", "cash", "credit card", "line pay", "change", "custom", "on account"],
     content: [
       { type: "p", text: "Cash, Credit Card, and Line Pay are built in, and you can add any custom payment labels in Settings (e.g. Apple Pay, local wallets)." },
       { type: "p", text: "Payment methods are bookkeeping labels — DingPOS does not process actual payments. Take card or mobile payments with your existing terminal or app, then pick the matching label in DingPOS to record it. Cash payments calculate change automatically." },
+      { type: "p", text: "For a regular who takes the goods now and pays later, choose On Account: the sale is recorded as a receivable and settled when the money arrives. See “Can regulars buy on account and pay later?”" },
     ],
-    related: ["roadmap-payment-integration", "multiple-carts", "void-order"],
+    related: ["on-account", "roadmap-payment-integration", "multiple-carts"],
   },
   {
-    slug: "void-order",
+    slug: "price-change-cart",
     category: "checkout",
+    question: "If I change a product's price, does the cart update?",
+    keywords: ["price change", "reprice", "cart", "recalculate"],
+    content: [
+      { type: "p", text: "The cart shows the price at the moment the item was added. When you tap checkout confirm, DingPOS re-queries the latest price of every item — if anything changed, it alerts you with the updated prices before proceeding." },
+      { type: "p", text: "Promotions are also re-evaluated from scratch at confirmation. If the total, tax, or any discount amount changes as a result, a change summary is shown and you must confirm again — so the amount you see is exactly the amount recorded." },
+    ],
+    related: ["apply-discounts", "guide-priority-stacking"],
+  },
+  {
+    slug: "manual-discount-promotion",
+    category: "checkout",
+    question: "Can manual discounts and promotions be used together?",
+    keywords: ["manual discount", "promotion", "combine", "override"],
+    content: [
+      { type: "p", text: "Yes. The rule is “manual wins, layers stay independent”:" },
+      {
+        type: "list",
+        items: [
+          "Manual item discount: that line no longer receives item-level promotions — your manual discount is treated as the final on-the-spot decision. The line's amount still counts toward spend thresholds, though.",
+          "Manual cart discount: applied after all promotions have been calculated, so the two coexist. If you enter more than the remaining total, it's automatically capped with a notice.",
+        ],
+      },
+      { type: "p", text: "Removing a manual discount restores the line's promotion eligibility on the next evaluation." },
+    ],
+    related: ["apply-discounts", "guide-priority-stacking"],
+  },
+
+  // ── Orders & Returns ────────────────────────────────────────
+  {
+    slug: "void-order",
+    category: "orders",
     question: "I made a mistake at checkout — how do I void an order?",
-    keywords: ["void", "refund", "cancel", "mistake", "wrong order"],
+    keywords: ["void", "cancel", "mistake", "wrong order"],
     content: [
       { type: "p", text: "Go to Orders, find the order, open its detail view, and choose Void. Confirm and it's done." },
       { type: "p", text: "Voiding automatically reverses everything connected: tracked stock is restored, loyalty points earned on the order are taken back, and redeemed points are refunded. Voided orders stay in the list clearly marked, and are excluded from report revenue." },
-      { type: "note", text: "Only full voids are supported — there are no partial refunds. To correct an order, void it and ring up a new, correct one." },
+      { type: "note", text: "A void means “this sale never happened” — use it for an order rung up wrong on the spot. When a customer brings goods back later, use Return instead: the original order is kept, you can return just some of the items, and revenue is reduced on the day of the return." },
     ],
-    related: ["inventory-tracking", "roadmap-returns-exchanges", "loyalty-points"],
+    related: ["returns-exchanges", "inventory-tracking", "loyalty-points"],
+  },
+  {
+    slug: "returns-exchanges",
+    category: "orders",
+    since: "2.0",
+    question: "How do I handle a return or exchange?",
+    keywords: ["return", "exchange", "refund", "partial return", "swap size"],
+    content: [
+      { type: "p", text: "Go to Orders, open the original order, and tap Return. Choose how many of each item come back. For an exchange, tap Add Replacement on the same screen; the net amount is settled in one go — positive means the customer pays, negative means you refund, and zero means nothing changes hands." },
+      {
+        type: "list",
+        items: [
+          "The original order is never modified. A return creates its own document dated today, numbered with an R prefix, and revenue is reduced on the day of the return.",
+          "The refund is what the customer actually paid for that item — item discounts, cart discounts, and points redemption are already apportioned out, so it is not refunded at list price. Tax uses the rate the original order was charged at.",
+          "Replacement items are charged at today's price, with no promotions or discounts.",
+          "Tracked stock is restored automatically. Points earned on the original order are taken back, redeemed points are refunded, and replacement items earn their own points.",
+          "An order can be returned in several rounds, but never beyond the quantity originally sold. Promotion usage limits are not given back by a return.",
+        ],
+      },
+      { type: "note", text: "There is no time limit on returns, but the original order is required. If a return was entered by mistake, void the return and the returnable quantity comes back." },
+    ],
+    related: ["void-order", "inventory-tracking", "loyalty-points"],
+  },
+  {
+    slug: "pre-orders",
+    category: "orders",
+    since: "2.0",
+    question: "How do I take a pre-order with a deposit?",
+    keywords: ["pre-order", "preorder", "deposit", "pickup", "balance", "reserve"],
+    content: [
+      { type: "p", text: "At checkout, switch the top of the screen from Sale to Pre-order, pick the pickup date, enter the deposit (anything from 0 to the full amount, with 30% / 50% / full shortcuts), and choose how the deposit is paid. Attach a customer so you can reach them when the goods arrive." },
+      {
+        type: "list",
+        items: [
+          "Stock is deducted when the pre-order is placed, reserving the goods for the customer. Out-of-stock items go negative and recover once a purchase order is received.",
+          "When the customer picks up, tap Hand Over in the order detail to collect the balance. The order then becomes an ordinary completed sale, and later returns go through the normal return flow.",
+          "If the customer never comes, tap Cancel Order in the order detail and choose to refund or keep the deposit. Stock is added back.",
+          "The deposit receipt and the final pickup receipt share the same number.",
+        ],
+      },
+      { type: "p", text: "In Stats, a pre-order's revenue is recognized in full on the pickup date, while the deposit counts toward Cash Received on the day it is paid — so the two numbers differ for a while. See “What's the difference between Revenue and Cash Received?”" },
+      { type: "note", text: "Pre-order items can't be edited; if the customer changes their mind, cancel and place a new pre-order. Creating pre-orders requires the Standard plan or higher. After a downgrade, existing pre-orders can still be picked up or cancelled." },
+    ],
+    related: ["revenue-vs-cash", "on-account", "negative-inventory"],
+  },
+  {
+    slug: "on-account",
+    category: "orders",
+    since: "2.0",
+    question: "Can regulars buy on account and pay later?",
+    keywords: ["on account", "credit", "tab", "receivable", "settle", "pay later"],
+    content: [
+      { type: "p", text: "Yes. Select the customer at checkout and choose On Account as the payment method. A debt needs someone to own it, so On Account isn't available without a customer." },
+      { type: "p", text: "To collect, switch the top of Orders to Receivables. Debts are grouped by customer; open one to settle a single order, a whole month, or everything — each time DingPOS asks how the money was paid. A single order can also be settled from its detail view, and a settlement entered by mistake can be taken back with Undo Settlement." },
+      {
+        type: "list",
+        items: [
+          "Revenue counts on the day the goods leave; Cash Received and loyalty points wait until the day it's settled.",
+          "Unsettled orders carry an amber badge in the list, and the customer detail shows how much they currently owe.",
+          "A customer with unsettled orders can't be deleted.",
+        ],
+      },
+      { type: "note", text: "Creating on-account sales requires the Standard plan or higher. After a downgrade you can't start new ones, but existing receivables can still be viewed and settled." },
+    ],
+    related: ["revenue-vs-cash", "payment-methods", "pre-orders"],
+  },
+  {
+    slug: "order-notes",
+    category: "orders",
+    since: "2.2",
+    question: "Can I add notes to orders, customers, or purchase orders?",
+    keywords: ["note", "notes", "memo", "comment", "remark"],
+    content: [
+      { type: "p", text: "Yes. Order, customer, and purchase order detail pages each have a notes card — tap it to edit, up to 500 characters. You can also write one in the form when creating a customer or a purchase order." },
+      { type: "p", text: "Notes don't depend on status: completed orders, voided orders, and returns can all be annotated or edited. An order's amounts and items are fixed at checkout; the note sits alongside the document and never changes its contents." },
+    ],
+    related: ["void-order", "purchase-orders"],
   },
 
-  // ── Products & Inventory ──────────────────────────────────
+  // ── Products, Inventory & Purchasing ────────────────────────
   {
     slug: "product-variants",
     category: "products",
     question: "How do I create products with variants?",
     keywords: ["variants", "size", "color", "options", "spec"],
     content: [
-      { type: "p", text: "Enable variants on the product edit page, then define your spec axes (e.g. \"Size\" and \"Color\"). DingPOS expands all combinations for you (S/Black, S/White, M/Black…)." },
-      { type: "p", text: "Each variant has its own price and cost, and tracks its own stock. At checkout, tapping the product shows a variant picker before adding it to the cart." },
-      { type: "note", text: "Spec and option names are limited to 20 characters." },
+      { type: "p", text: "In the product edit page, tap Add Option under Variant Options to add an option (e.g. “Color”), then use “+ Value” to add each of its choices (e.g. Red, Blue). With two or more options (e.g. Color × Size), DingPOS expands every combination for you (Red/S, Red/M, Blue/S…)." },
+      { type: "p", text: "Each combination has its own price and cost, and tracks its own stock. At checkout, tapping the product shows a variant picker before adding it to the cart." },
+      { type: "note", text: "Option and value names are limited to 20 characters." },
     ],
     related: ["barcode-scanning", "inventory-tracking"],
   },
@@ -179,15 +290,35 @@ export const articles = [
     related: ["product-variants", "roadmap-barcode-scanner"],
   },
   {
+    slug: "product-order",
+    category: "products",
+    since: "2.0",
+    question: "How do I change the order products appear in?",
+    keywords: ["sort", "order", "reorder", "arrange", "drag", "pin to top"],
+    content: [
+      { type: "p", text: "In Products, tap Edit Order and drag product cards where you want them. The cashier and product management share this one order, so arranging it once updates both." },
+      {
+        type: "list",
+        items: [
+          "With a large catalog, each card's menu offers Move to Front, Move to Back, and Move to Position, and every card shows its current position.",
+          "Filter by a category first to reorder within that category only — products in other categories stay where they are.",
+          "New products go to the front; editing a product's details never changes its position.",
+        ],
+      },
+      { type: "p", text: "To sort by name, price, or created / updated time for a while, use the Sort By menu. Your custom order is kept, and switching back to Custom Order brings it back." },
+    ],
+    related: ["product-variants", "barcode-scanning"],
+  },
+  {
     slug: "inventory-tracking",
     category: "products",
     question: "How do I track inventory?",
     keywords: ["inventory", "stock", "tracking", "count", "low stock"],
     content: [
       { type: "p", text: "Inventory tracking is a per-product toggle — turn it on in the product edit page and enter the current quantity. Each variant of a product tracks its own stock." },
-      { type: "p", text: "Once enabled, sales deduct stock automatically, voids restore it, and you can adjust manually anytime. Every movement — sale, void, manual adjustment — is recorded in a complete ledger. Low stock is highlighted with a color warning." },
+      { type: "p", text: "Once enabled, sales and pre-orders deduct stock automatically; voids, returns, and cancelled pre-orders put it back; receiving a purchase order adds to it; and you can adjust manually anytime. Every movement is recorded in a complete ledger. Low stock is highlighted with a color warning." },
     ],
-    related: ["negative-inventory", "roadmap-purchase-orders"],
+    related: ["negative-inventory", "purchase-orders"],
   },
   {
     slug: "negative-inventory",
@@ -196,12 +327,79 @@ export const articles = [
     keywords: ["negative", "stock", "out of stock", "block", "adjust"],
     content: [
       { type: "p", text: "This is by design: checkout is never blocked by insufficient stock. The first rule of a live register is that the customer never waits — a wrong number on paper can be fixed later, but an interrupted sale is lost for good." },
-      { type: "p", text: "Negative stock usually means a restock or stocktake wasn't recorded. Use a manual adjustment to correct the number — the adjustment is kept in the movement ledger." },
+      { type: "p", text: "Negative stock usually means a restock wasn't recorded, or a pre-ordered item hasn't arrived yet (pre-orders deduct stock when placed). Record restocks by receiving a purchase order and the number recovers on its own; fix stocktake differences with a manual adjustment, which is kept in the movement ledger." },
     ],
-    related: ["inventory-tracking"],
+    related: ["inventory-tracking", "purchase-orders", "pre-orders"],
+  },
+  {
+    slug: "purchase-orders",
+    category: "products",
+    since: "2.0",
+    question: "How do I record purchases and suppliers?",
+    keywords: ["purchase order", "purchasing", "supplier", "receive", "restock", "payables"],
+    content: [
+      { type: "p", text: "Purchasing in the sidebar manages suppliers and purchase orders. A supplier stores a name, contact person, phone, address, and a default payment term (pay now or monthly)." },
+      {
+        type: "steps",
+        items: [
+          "Tap New Purchase, pick the supplier, and add the products, quantities, and unit costs (pre-filled with each product's current cost). A shipping fee can be added too.",
+          "A draft never touches stock or payables — edit or delete it freely.",
+          "When the goods arrive, tap Receive Stock: tracked stock goes up, and the purchase order gets its number and locks. By default receiving also updates each product's cost to this unit cost; turn off Sync Product Cost on the purchase order to keep costs unchanged.",
+        ],
+      },
+      { type: "p", text: "The payment term decides what happens next: pay-now orders are marked paid, while monthly orders stay unpaid under Unpaid Bills, where you can settle them per supplier — one order, this month, or everything." },
+      { type: "note", text: "Purchasing requires the Standard plan or higher. A supplier with unpaid received orders can't be deleted." },
+    ],
+    related: ["inventory-tracking", "negative-inventory", "roadmap-monthly-settlement"],
   },
 
-  // ── Promotions & Loyalty ──────────────────────────────────
+  // ── Reports ─────────────────────────────────────────────────
+  {
+    slug: "revenue-vs-cash",
+    category: "reports",
+    since: "2.0",
+    question: "What's the difference between Revenue and Cash Received?",
+    keywords: ["revenue", "cash received", "income", "reconcile", "deposit", "on account"],
+    content: [
+      { type: "p", text: "Revenue counts the day the goods were handed over; Cash Received counts the day the money came in. For an order paid at the counter both happen the same day and the numbers match. They split apart when:" },
+      {
+        type: "list",
+        items: [
+          "On account: the goods leave today and count toward today's revenue; the money counts toward Cash Received on the day it's settled.",
+          "Pre-order: the deposit counts toward Cash Received when it's paid; revenue is recognized in full on the pickup date.",
+          "Forfeited deposit: when a customer cancels a pre-order and you keep the deposit, it was already counted in Cash Received when paid. Stats shows it separately as forfeited deposits, and it never counts as revenue.",
+        ],
+      },
+      { type: "p", text: "To reconcile, match Cash Received against the drawer and your card terminal; to see how much you actually sold in a period, read Revenue. Returns reduce revenue on the day of the return." },
+    ],
+    related: ["on-account", "pre-orders", "report-periods"],
+  },
+  {
+    slug: "report-periods",
+    category: "reports",
+    question: "Which time periods can reports show?",
+    keywords: ["reports", "period", "this week", "this month", "this year", "custom range", "date", "top products"],
+    content: [
+      { type: "p", text: "Pick Today, Yesterday, This Week, This Month, This Year, or All Time at the top of Stats, or use Custom to choose a start and end date. This Week follows the device's first day of the week; This Month and This Year start on the 1st and on January 1. Each option shows the dates it covers, and All Time starts from your store's first transaction." },
+      { type: "p", text: "For a single day, the trend chart becomes an hourly bar chart; longer periods use days, weeks, months, or years per bar depending on length." },
+      { type: "p", text: "The Product Ranking card lists the top 5. Tap the card or View All to list every product sold in the period, ranked by quantity after returns." },
+      { type: "note", text: "Versions before 2.4 offered rolling ranges (Today / 7 Days / 30 Days / All Time). If you still see those, update DingPOS from the App Store." },
+    ],
+    related: ["revenue-vs-cash", "profit-not-tracked"],
+  },
+  {
+    slug: "profit-not-tracked",
+    category: "reports",
+    question: "How is profit reported if I didn't enter costs?",
+    keywords: ["cost", "profit", "margin", "reports", "not tracked"],
+    content: [
+      { type: "p", text: "Cost is an optional field. Products without a cost are marked “profit not tracked” in reports and excluded from profit calculations — revenue is still counted in full, only profit is skipped." },
+      { type: "p", text: "To get complete profit reports, add costs on the product edit page; future orders will be included. Profit is calculated on after-discount revenue." },
+    ],
+    related: ["report-periods", "purchase-orders"],
+  },
+
+  // ── Promotions & Loyalty ────────────────────────────────────
   {
     slug: "create-promotion",
     category: "promotion",
@@ -267,7 +465,7 @@ export const articles = [
     related: ["loyalty-points", "create-promotion"],
   },
 
-  // ── Backup & Data ─────────────────────────────────────────
+  // ── Backup & Data ───────────────────────────────────────────
   {
     slug: "backup-data",
     category: "backup",
@@ -275,7 +473,8 @@ export const articles = [
     keywords: ["backup", "icloud", "google drive", "dropbox", "cloud", "snapshot"],
     content: [
       { type: "p", text: "Go to Settings → Cloud Backup, pick one of iCloud, Google Drive, or Dropbox, and authorize it. After that you can trigger a backup manually anytime." },
-      { type: "p", text: "Backups go into your own cloud account, keeping the 5 most recent snapshots. Product photos sync incrementally — only new or changed images are uploaded." },
+      { type: "p", text: "Backups go into your own cloud account. Each cloud keeps only the latest one — one data snapshot and one file of product photos — and every backup overwrites the previous one." },
+      { type: "note", text: "Because a new backup replaces the old one, if you suspect your data has already gone wrong (say, a batch of products deleted by mistake), don't back up yet — email us and we'll work out the next step together." },
     ],
     related: ["transfer-new-ipad", "data-after-delete"],
   },
@@ -290,10 +489,11 @@ export const articles = [
         items: [
           "Old iPad: go to Settings → Cloud Backup and run a manual backup. Confirm the backup time updated.",
           "New iPad: install DingPOS and complete the setup wizard.",
-          "New iPad: go to Settings → Cloud Backup, connect the same cloud account, and restore the latest snapshot.",
+          "New iPad: go to Settings → Cloud Backup, connect the same cloud account, and restore.",
         ],
       },
-      { type: "p", text: "Before restoring, DingPOS validates the backup's integrity and keeps a safety copy of your current data — it only swaps once the backup is confirmed usable. Product photos are restored too." },
+      { type: "p", text: "Before restoring, DingPOS validates the backup's integrity and only replaces local data once the backup is confirmed usable. Product photos are restored too." },
+      { type: "note", text: "A restore replaces all data on this iPad with the backup — orders created on this iPad after that backup will be gone. Make sure you're connected to the right cloud account." },
     ],
     related: ["backup-data", "data-after-delete"],
   },
@@ -319,8 +519,38 @@ export const articles = [
     ],
     related: ["transfer-new-ipad", "supported-devices"],
   },
+  {
+    slug: "import-csv",
+    category: "backup",
+    since: "2.3",
+    question: "Can I import products and sales from another POS or a spreadsheet?",
+    keywords: ["import", "csv", "excel", "spreadsheet", "migrate", "switch pos", "bulk", "sales history"],
+    content: [
+      { type: "p", text: "Yes. Go to Settings → Data Import, choose whether to import products or sales, and pick a CSV file (Excel and Google Sheets can both save as CSV)." },
+      {
+        type: "steps",
+        items: [
+          "The file opens as a table. Common column names in English and Chinese are matched automatically; tap any column header to change its mapping.",
+          "Tap any cell to fix its value right there — no need to edit the file and start over.",
+          "Tap Confirm to validate. Rows with problems are flagged in red with the reason; sales imports can skip orders with errors.",
+          "Resolve anything that needs a decision (duplicate product names, a row matching several customers), review the summary, then tap Start Import.",
+        ],
+      },
+      {
+        type: "list",
+        items: [
+          "Imported sales are placed by transaction date and recalculated with your store's currency and tax mode. They don't touch stock and don't grant welcome points.",
+          "Customers are matched to existing ones by phone or email; anyone unmatched is created.",
+          "Imported orders show an Imported On date and the source order number, and can't be voided or returned.",
+          "Rows with errors can be exported as a CSV annotated with the reasons — fix them and import again. Duplicate rows are skipped automatically.",
+        ],
+      },
+      { type: "note", text: "Data import is in beta. Each file can hold up to 50,000 rows or 20 MB. Run a cloud backup before importing; if something won't import or the result looks wrong, tell us through Report a Problem on the import screen." },
+    ],
+    related: ["backup-data", "transfer-new-ipad", "product-variants"],
+  },
 
-  // ── Subscription & Billing ────────────────────────────────
+  // ── Subscription & Billing ──────────────────────────────────
   {
     slug: "free-trial",
     category: "subscription",
@@ -361,49 +591,8 @@ export const articles = [
     ],
     related: ["free-trial", "after-trial"],
   },
-  // ── New FAQ: checkout & report behavior ───────────────────
-  {
-    slug: "price-change-cart",
-    category: "checkout",
-    question: "If I change a product's price, does the cart update?",
-    keywords: ["price change", "reprice", "cart", "recalculate"],
-    content: [
-      { type: "p", text: "The cart shows the price at the moment the item was added. When you tap checkout confirm, DingPOS re-queries the latest price of every item — if anything changed, it alerts you with the updated prices before proceeding." },
-      { type: "p", text: "Promotions are also re-evaluated from scratch at confirmation. If the total, tax, or any discount amount changes as a result, a change summary is shown and you must confirm again — so the amount you see is exactly the amount recorded." },
-    ],
-    related: ["apply-discounts", "guide-priority-stacking"],
-  },
-  {
-    slug: "manual-discount-promotion",
-    category: "checkout",
-    question: "Can manual discounts and promotions be used together?",
-    keywords: ["manual discount", "promotion", "combine", "override"],
-    content: [
-      { type: "p", text: "Yes. The rule is “manual wins, layers stay independent”:" },
-      {
-        type: "list",
-        items: [
-          "Manual item discount: that line no longer receives item-level promotions — your manual discount is treated as the final on-the-spot decision. The line's amount still counts toward spend thresholds, though.",
-          "Manual cart discount: applied after all promotions have been calculated, so the two coexist. If you enter more than the remaining total, it's automatically capped with a notice.",
-        ],
-      },
-      { type: "p", text: "Removing a manual discount restores the line's promotion eligibility on the next evaluation." },
-    ],
-    related: ["apply-discounts", "guide-priority-stacking"],
-  },
-  {
-    slug: "profit-not-tracked",
-    category: "products",
-    question: "How is profit reported if I didn't enter costs?",
-    keywords: ["cost", "profit", "margin", "reports", "not tracked"],
-    content: [
-      { type: "p", text: "Cost is an optional field. Products without a cost are marked “profit not tracked” in reports and excluded from profit calculations — revenue is still counted in full, only profit is skipped." },
-      { type: "p", text: "To get complete profit reports, add costs on the product edit page; future orders will be included. Profit is calculated on after-discount revenue." },
-    ],
-    related: ["inventory-tracking", "roadmap-monthly-settlement"],
-  },
 
-  // ── Promotion Setup Guides ────────────────────────────────
+  // ── Promotion Setup Guides ──────────────────────────────────
   {
     slug: "guide-threshold",
     category: "promotion-guide",
@@ -485,15 +674,24 @@ export const articles = [
     question: "Setting up gifts, paid add-ons, and bundle prices",
     keywords: ["gift", "add-on", "bundle", "buy a get b", "guide"],
     content: [
-      { type: "p", text: "Three composite offer types are available: gift with purchase (buy A get B), paid add-on (add $X to get Y), and bundle price (any N for $X)." },
-      { type: "p", text: "Important: these offers never modify the cart automatically. When conditions are met, a suggestion banner appears on the cashier screen, and the cart changes only when the cashier taps Accept — deliberate, because gifts involve physical stock: someone needs to confirm it's on hand and the customer wants it." },
+      { type: "p", text: "Three composite offer types are available: gift with purchase (buy A get B), paid add-on (add $X to get Y), and bundle price (any N for $X). Gifts and paid add-ons wait for the cashier to confirm; bundle prices apply automatically." },
+      { type: "p", text: "Gifts and paid add-ons never modify the cart on their own. When conditions are met, a suggestion banner appears on the cashier screen, and the cart changes only when the cashier taps Accept — deliberate, because gifts involve physical stock: someone needs to confirm it's on hand and the customer wants it." },
       {
         type: "list",
         items: [
           "After Decline, the same suggestion won't reappear for this cart; a new or cleared cart prompts again.",
           "If a new suggestion appears before checkout confirmation, it must be Accepted or Declined before the order can be submitted.",
-          "Bundle price: when more qualifying items are in the cart than the bundle needs, the highest-priced ones are pre-selected — the cashier can re-pick before confirming.",
           "Gift and add-on lines can't be discounted further by other money promotions, and don't count toward other promotions' thresholds.",
+        ],
+      },
+      { type: "p", text: "Bundle prices (applied automatically since 2.4): whenever the cart can form a bundle, DingPOS groups it and includes it in the total — no prompt, and bundles can't be split." },
+      {
+        type: "list",
+        items: [
+          "A bundle forms only when it makes the cart cheaper. Among equally priced items, undiscounted ones are grouped first, and items already on discount keep their discount.",
+          "Which items group together depends only on what's in the cart, never on the order they were scanned.",
+          "Each member item shows its share of the bundle discount, and each line's amount is after discounts.",
+          "At checkout the bundles are regrouped with the latest prices; if the result changes, you're asked to confirm the new total.",
         ],
       },
     ],
@@ -538,7 +736,7 @@ export const articles = [
     related: ["guide-bogo", "guide-threshold", "guide-schedule"],
   },
 
-  // ── Coming Soon ───────────────────────────────────────────
+  // ── Coming Soon ─────────────────────────────────────────────
   {
     slug: "roadmap-payment-integration",
     category: "roadmap",
@@ -574,39 +772,22 @@ export const articles = [
     related: ["barcode-scanning", "roadmap-e-invoice"],
   },
   {
-    slug: "roadmap-purchase-orders",
-    category: "roadmap",
-    question: "Will purchase orders be added?",
-    keywords: ["purchase order", "restock", "receiving", "procurement"],
-    content: [
-      { type: "p", text: "Yes — purchase orders are planned." },
-      { type: "p", text: "Until then, record incoming stock with a manual inventory adjustment — the movement ledger keeps the record, so history stays traceable once purchase orders ship." },
-      { type: "p", text: "If you need this, write to us — we prioritize development by the number of requests." },
-    ],
-    related: ["inventory-tracking", "roadmap-monthly-settlement"],
-  },
-  {
-    slug: "roadmap-returns-exchanges",
-    category: "roadmap",
-    question: "Will pre-orders, returns, and exchanges be supported?",
-    keywords: ["pre-order", "return", "exchange", "refund"],
-    content: [
-      { type: "p", text: "Yes — pre-orders, returns, and exchanges are all planned." },
-      { type: "p", text: "Workarounds until then: handle a return by voiding the whole order (stock and points are restored automatically); handle an exchange by voiding the original order and ringing up a corrected one." },
-      { type: "p", text: "If you need this, write to us — we prioritize development by the number of requests." },
-    ],
-    related: ["void-order", "roadmap-purchase-orders"],
-  },
-  {
     slug: "roadmap-monthly-settlement",
     category: "roadmap",
-    question: "Will monthly settlement reports be added?",
-    keywords: ["monthly settlement", "reconciliation", "closing", "monthly report"],
+    question: "Will there be a monthly settlement report?",
+    keywords: ["monthly settlement", "reconciliation", "closing", "monthly report", "payables", "receivables"],
     content: [
-      { type: "p", text: "Yes — monthly settlement for purchasing and sales is planned." },
-      { type: "p", text: "For now, use the dashboard's monthly range to review the month's revenue, profit, and payment breakdown as a reconciliation baseline." },
-      { type: "p", text: "If you need this, write to us — we prioritize development by the number of requests." },
+      { type: "p", text: "There's no dedicated monthly settlement report yet, but everything you need to reconcile is already in the app:" },
+      {
+        type: "list",
+        items: [
+          "Set Stats to This Month for the month's revenue, cash received, profit, and payment breakdown.",
+          "Supplier purchases on monthly terms collect under Unpaid Bills in Purchasing, where a whole month can be settled at once.",
+          "Customer on-account sales collect under Orders → Receivables, where a whole month can be settled at once.",
+        ],
+      },
+      { type: "p", text: "If you need a monthly settlement report you can export or print, write to us with the fields you need — we prioritize development by the number of requests." },
     ],
-    related: ["roadmap-purchase-orders", "profit-not-tracked"],
+    related: ["revenue-vs-cash", "purchase-orders", "on-account"],
   },
 ];

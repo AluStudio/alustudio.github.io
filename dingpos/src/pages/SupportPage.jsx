@@ -9,6 +9,7 @@ import TransitionLink from "../components/TransitionLink";
 import Footer from "../components/Footer";
 import ContactCard from "../components/ContactCard";
 import { getFaq } from "../data/faq";
+import { VERIFIED_APP_VERSION } from "../data/faq/version";
 import { tokenize, buildIndex, searchFaq, highlightParts } from "../utils/faqSearch";
 
 function Highlight({ text, tokens }) {
@@ -239,6 +240,10 @@ function SupportPage() {
               })}
             </section>
           )}
+
+          <p className="support-verified-version">
+            {t("support.verified_version", { version: VERIFIED_APP_VERSION })}
+          </p>
 
           <ContactCard />
         </div>

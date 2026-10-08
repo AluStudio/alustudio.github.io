@@ -55,6 +55,9 @@ function SupportArticlePage() {
               </span>
             </nav>
 
+            {article.since && (
+              <p className="faq-since">{t("support.since", { version: article.since })}</p>
+            )}
             <h1>{article.question}</h1>
 
             <div className="faq-content">

@@ -2,6 +2,9 @@
 // Slugs and `related` links MUST stay in sync with articles.en.js
 // (enforced at build time by scripts/copy-spa-pages.js).
 //
+// Optional `since: "2.0"` marks a feature added after 1.0; when to set it and
+// how VERIFIED_APP_VERSION moves with each release: see ./version.js.
+//
 // Content block types (rendered by FaqBlocks.jsx):
 //   { type: "p",     text }
 //   { type: "list",  items: [] }
@@ -14,7 +17,9 @@
 export const categories = [
   { key: "getting-started", icon: "bi-rocket-takeoff", label: "快速上手", group: "faq" },
   { key: "checkout", icon: "bi-basket3", label: "收銀結帳", group: "faq" },
-  { key: "products", icon: "bi-box-seam", label: "商品與庫存", group: "faq" },
+  { key: "orders", icon: "bi-receipt", label: "訂單與退換貨", group: "faq" },
+  { key: "products", icon: "bi-box-seam", label: "商品、庫存與進貨", group: "faq" },
+  { key: "reports", icon: "bi-bar-chart-line", label: "報表", group: "faq" },
   { key: "promotion", icon: "bi-tags", label: "促銷與會員", group: "faq" },
   { key: "backup", icon: "bi-cloud-check", label: "備份與資料", group: "faq" },
   { key: "subscription", icon: "bi-credit-card", label: "訂閱與費用", group: "faq" },
@@ -25,7 +30,7 @@ export const categories = [
 ];
 
 export const articles = [
-  // ── 快速上手 ──────────────────────────────────────────────
+  // ── 快速上手 ────────────────────────────────────────────────
   {
     slug: "how-to-set-up",
     category: "getting-started",
@@ -91,7 +96,7 @@ export const articles = [
     related: ["tax-calculation", "how-to-set-up"],
   },
 
-  // ── 收銀結帳 ──────────────────────────────────────────────
+  // ── 收銀結帳 ────────────────────────────────────────────────
   {
     slug: "multiple-carts",
     category: "checkout",
@@ -144,36 +149,145 @@ export const articles = [
     slug: "payment-methods",
     category: "checkout",
     question: "支援哪些付款方式？",
-    keywords: ["付款", "支付", "現金", "刷卡", "信用卡", "line pay", "找零"],
+    keywords: ["付款", "支付", "現金", "刷卡", "信用卡", "line pay", "找零", "掛帳"],
     content: [
       { type: "p", text: "內建現金、信用卡、Line Pay，也可以在「設定」中自訂任意付款方式標籤（例如街口支付、Apple Pay）。" },
       { type: "p", text: "付款方式是記帳用的標籤——DingPOS 不經手實際金流。刷卡或行動支付請用你原有的刷卡機或收款 App 完成，在 DingPOS 選對應標籤記錄即可。現金付款會自動計算找零。" },
+      { type: "p", text: "熟客想先把東西帶走、之後再付，可以選「掛帳」：這筆會記成未收帳款，等收到錢再結清。詳見「熟客可以先掛帳、之後再付嗎？」。" },
     ],
-    related: ["roadmap-payment-integration", "multiple-carts", "void-order"],
+    related: ["on-account", "roadmap-payment-integration", "multiple-carts"],
   },
   {
-    slug: "void-order",
+    slug: "price-change-cart",
     category: "checkout",
+    question: "商品改價後，購物車裡的價格會跟著變嗎？",
+    keywords: ["改價", "價格變動", "調價", "購物車", "重新計算"],
+    content: [
+      { type: "p", text: "購物車顯示的是商品加入當下的價格。按下結帳確認時，系統會重新查一次所有商品的最新價格——若有變動，會先跳出提示讓你確認新價格後才繼續。" },
+      { type: "p", text: "促銷也會在確認當下從頭重新計算一次；若總額、稅額或任何折扣金額因此改變，畫面會顯示變動摘要並要求再確認，確保你看到的金額就是實際入帳的金額。" },
+    ],
+    related: ["apply-discounts", "guide-priority-stacking"],
+  },
+  {
+    slug: "manual-discount-promotion",
+    category: "checkout",
+    question: "手動折扣和促銷可以同時用嗎？",
+    keywords: ["手動折扣", "促銷", "並存", "同時", "覆蓋", "優先"],
+    content: [
+      { type: "p", text: "可以，規則是「手動優先、各管各的」：" },
+      {
+        type: "list",
+        items: [
+          "單品手動折扣：該行商品不再套用單品類促銷——手動折扣視為你現場的最終決定；但這行的金額仍計入滿額門檻的計算。",
+          "整單手動折扣：在所有促銷算完之後才扣，兩者可以並存。若輸入的折扣超過剩餘金額，系統會自動以剩餘金額為上限並提示你。",
+        ],
+      },
+      { type: "p", text: "移除手動折扣後，該行商品下次計算時會重新恢復促銷資格。" },
+    ],
+    related: ["apply-discounts", "guide-priority-stacking"],
+  },
+
+  // ── 訂單與退換貨 ────────────────────────────────────────────
+  {
+    slug: "void-order",
+    category: "orders",
     question: "結帳打錯了，如何作廢訂單？",
-    keywords: ["作廢", "退款", "取消", "打錯", "退貨", "訂單", "void"],
+    keywords: ["作廢", "取消", "打錯", "訂單", "void"],
     content: [
       { type: "p", text: "到「訂單」找到該筆訂單，進入詳情後選擇「作廢」，確認即完成。" },
       { type: "p", text: "作廢會自動回補所有連動資料：有追蹤庫存的商品數量會加回、會員該筆獲得的點數會收回、已折抵的點數會退還。作廢的訂單仍保留在清單中並明確標示，不列入報表營收。" },
-      { type: "note", text: "目前僅支援整單作廢，沒有部分退款。如需修正，可作廢後重新結帳一筆正確的訂單。" },
+      { type: "note", text: "作廢代表「這筆交易沒有發生過」，適合當場打錯的單。客人事後拿商品回來，請改用「退貨」：原單會保留，可以只退其中幾件，營收在退貨當天扣回。" },
     ],
-    related: ["inventory-tracking", "roadmap-returns-exchanges", "loyalty-points"],
+    related: ["returns-exchanges", "inventory-tracking", "loyalty-points"],
+  },
+  {
+    slug: "returns-exchanges",
+    category: "orders",
+    since: "2.0",
+    question: "客人要退貨或換貨怎麼辦？",
+    keywords: ["退貨", "換貨", "退款", "部分退貨", "換尺寸", "退一件", "return", "exchange"],
+    content: [
+      { type: "p", text: "到「訂單」打開原本那張訂單，點「退貨」，逐項選要退幾件。要換貨的話，在同一個畫面「加入換入品項」，最後一次結算淨額：正數向客人收錢、負數退錢給客人，剛好抵銷就不用收付。" },
+      {
+        type: "list",
+        items: [
+          "原訂單不會被修改。退貨會產生一張當天日期、單號以 R 開頭的退貨單，營收在退貨當天扣回。",
+          "退款金額是該商品在原單上實際付的錢：當初的單品折扣、整單折扣與點數折抵都已按比例扣掉，不是用原價退。稅也照原單當時的稅率計算。",
+          "換入品項以今天的售價計算，不套用促銷與折扣。",
+          "有追蹤庫存的商品會自動加回庫存；原單發出的點數會收回、折抵掉的點數會退還，換入品項另外發點。",
+          "同一張單可以分次退，但累計不會超過原單賣出的數量。促銷的使用次數不會因為退貨而歸還。",
+        ],
+      },
+      { type: "note", text: "退貨沒有期限，但一定要有原單。退貨單按錯了可以作廢，可退數量會回復。" },
+    ],
+    related: ["void-order", "inventory-tracking", "loyalty-points"],
+  },
+  {
+    slug: "pre-orders",
+    category: "orders",
+    since: "2.0",
+    question: "如何接受預購、先收訂金？",
+    keywords: ["預購", "訂金", "預訂", "取貨", "尾款", "訂貨", "pre-order", "deposit"],
+    content: [
+      { type: "p", text: "結帳時，畫面最上方從「一般銷售」切到「預購」，選好取貨日、輸入訂金（0 到全額都可以，有 30%、50%、全額快選），再選訂金用什麼方式收。建議指定顧客，到貨時才聯絡得到人。" },
+      {
+        type: "list",
+        items: [
+          "下單當下就扣庫存，替客人把貨留著；缺貨的品項會變成負庫存，進貨入庫後自動回正。",
+          "客人來拿貨時，在訂單詳情點「取貨結清」收齊尾款，這張單就成為一般的已完成訂單；之後要退貨，走一般的退貨流程。",
+          "客人不來拿，點「取消訂單」，選擇退還或沒收訂金，庫存會加回去。",
+          "訂金收執和取貨時的收據是同一個單號。",
+        ],
+      },
+      { type: "p", text: "報表上，預購的營收在取貨那天才認列全額，訂金則在收到的那天計入「實收」，所以兩個數字會暫時不一樣，詳見「報表的「營收」和「實收」有什麼不同？」。" },
+      { type: "note", text: "預購單不能直接修改品項，客人改主意時請取消後重新下一張。建立預購是 Standard 以上方案的功能；降級後，既有預購仍可取貨結清或取消。" },
+    ],
+    related: ["revenue-vs-cash", "on-account", "negative-inventory"],
+  },
+  {
+    slug: "on-account",
+    category: "orders",
+    since: "2.0",
+    question: "熟客可以先掛帳、之後再付嗎？",
+    keywords: ["掛帳", "賒帳", "欠款", "未收帳款", "結清", "月結", "on account", "credit"],
+    content: [
+      { type: "p", text: "可以。結帳時先選好顧客，付款方式選「掛帳」——一筆欠款一定要有人認領，所以沒有指定顧客時不能掛帳。" },
+      { type: "p", text: "要收錢時，到「訂單」上方切到「未收帳款」：依顧客分組，點進去可以結清單張、整個月份或全部，每次都會問這筆錢用什麼方式收。單張訂單也能在訂單詳情直接結清；收錯了可以「還原結清」。" },
+      {
+        type: "list",
+        items: [
+          "營收算在貨交出去的那天，實收和點數則等到結清那天才發生。",
+          "未結清的訂單在列表上有琥珀色標籤，顧客詳情也看得到他目前欠多少。",
+          "還有未結清訂單的顧客不能刪除。",
+        ],
+      },
+      { type: "note", text: "建立掛帳是 Standard 以上方案的功能。降級後不能再新增掛帳，但既有的未收帳款仍可查看與結清。" },
+    ],
+    related: ["revenue-vs-cash", "payment-methods", "pre-orders"],
+  },
+  {
+    slug: "order-notes",
+    category: "orders",
+    since: "2.2",
+    question: "可以在訂單、顧客或進貨單上寫備注嗎？",
+    keywords: ["備注", "備註", "註記", "筆記", "留言", "note"],
+    content: [
+      { type: "p", text: "可以。訂單、顧客與進貨單的詳情頁都有一張備注卡，點一下就能編輯，最多 500 字；新增顧客或進貨單時也能在表單裡直接寫。" },
+      { type: "p", text: "備注不受單據狀態限制：已結帳、已作廢的訂單或退貨單都能補寫、修改。訂單的金額與明細在結帳當下就固定了，備注是寫在旁邊的註記，不會改動單據內容。" },
+    ],
+    related: ["void-order", "purchase-orders"],
   },
 
-  // ── 商品與庫存 ────────────────────────────────────────────
+  // ── 商品、庫存與進貨 ────────────────────────────────────────
   {
     slug: "product-variants",
     category: "products",
     question: "如何建立多規格商品？",
-    keywords: ["規格", "多規格", "尺寸", "顏色", "變體", "variant"],
+    keywords: ["規格", "多規格", "選項", "尺寸", "顏色", "變體", "variant"],
     content: [
-      { type: "p", text: "在商品編輯頁開啟多規格，先定義規格軸（例如「尺寸」與「顏色」），系統會展開所有組合（S／黑、S／白、M／黑⋯⋯）。" },
-      { type: "p", text: "每個規格可獨立設定售價與成本，庫存也各自計算。收銀時點選該商品，會先跳出規格選擇再加入購物車。" },
-      { type: "note", text: "規格軸與選項名稱上限 20 字。" },
+      { type: "p", text: "在商品編輯頁的「商品規格」新增規格（例如「顏色」），再用「+ 選項」加入它的每個選擇（例如紅色、藍色）。有兩個以上的規格時（例如顏色 × 尺寸），系統會展開所有組合（紅／S、紅／M、藍／S⋯⋯）。" },
+      { type: "p", text: "每個組合可獨立設定售價與成本，庫存也各自計算。收銀時點選該商品，會先跳出規格選擇再加入購物車。" },
+      { type: "note", text: "規格與選項名稱上限 20 字。" },
     ],
     related: ["barcode-scanning", "inventory-tracking"],
   },
@@ -189,15 +303,35 @@ export const articles = [
     related: ["product-variants", "roadmap-barcode-scanner"],
   },
   {
+    slug: "product-order",
+    category: "products",
+    since: "2.0",
+    question: "如何調整商品的排列順序？",
+    keywords: ["排序", "順序", "排列", "拖曳", "置頂", "商品順序", "sort"],
+    content: [
+      { type: "p", text: "在「商品」點「編輯排序」，直接拖曳商品卡片到想要的位置。收銀台和商品管理用的是同一份順序，排一次兩邊都會跟著變。" },
+      {
+        type: "list",
+        items: [
+          "商品很多時，每張卡片的選單可以「移至最前」「移至最後」或「移至指定位置」，卡片上也標著它目前排第幾。",
+          "先篩選分類再排，只會調整這個分類內的先後，其他分類的商品位置不變。",
+          "新增的商品會排在最前面；修改商品資料不會改變它的位置。",
+        ],
+      },
+      { type: "p", text: "想暫時改用名稱、價格、建立或更新時間排序，用「排序方式」選單切換即可。你自訂的順序會保留，切回「自訂順序」就回來。" },
+    ],
+    related: ["product-variants", "barcode-scanning"],
+  },
+  {
     slug: "inventory-tracking",
     category: "products",
     question: "如何追蹤庫存？",
     keywords: ["庫存", "追蹤", "進貨", "盤點", "數量", "低庫存"],
     content: [
       { type: "p", text: "庫存追蹤是每項商品獨立的開關——在商品編輯頁開啟並輸入目前數量即可。多規格商品的每個規格各自計算庫存。" },
-      { type: "p", text: "開啟後，銷售自動扣庫存、訂單作廢自動回補，也可以隨時手動調整。所有異動（銷售、作廢、手動調整）都記錄在異動帳本中，一筆不漏。庫存過低時會以顏色警示。" },
+      { type: "p", text: "開啟後，銷售與預購自動扣庫存，作廢、退貨與取消預購自動加回，進貨單入庫自動增加，也可以隨時手動調整。每一筆異動都記錄在異動帳本中，一筆不漏。庫存過低時會以顏色警示。" },
     ],
-    related: ["negative-inventory", "roadmap-purchase-orders"],
+    related: ["negative-inventory", "purchase-orders"],
   },
   {
     slug: "negative-inventory",
@@ -206,12 +340,79 @@ export const articles = [
     keywords: ["負庫存", "負數", "庫存不足", "擋單", "調整"],
     content: [
       { type: "p", text: "這是刻意的設計：庫存不足時，結帳不會被擋下。現場收銀的第一原則是不能讓客人等——帳面數字錯了可以事後修正，交易被中斷的損失卻補不回來。" },
-      { type: "p", text: "出現負庫存通常代表之前有進貨或盤點沒登記。用「手動調整」把數字修正即可，調整紀錄會留在異動帳本中。" },
+      { type: "p", text: "出現負庫存通常代表有進貨沒登記，或是預購的商品還沒到貨（預購下單就會先扣庫存）。進貨請用進貨單入庫，數字會自動補回；盤點發現的落差再用「手動調整」修正，調整紀錄會留在異動帳本中。" },
     ],
-    related: ["inventory-tracking"],
+    related: ["inventory-tracking", "purchase-orders", "pre-orders"],
+  },
+  {
+    slug: "purchase-orders",
+    category: "products",
+    since: "2.0",
+    question: "如何記錄進貨和供應商？",
+    keywords: ["進貨", "進貨單", "供應商", "入庫", "採購", "補貨", "未付帳款", "purchase order", "supplier"],
+    content: [
+      { type: "p", text: "側欄的「進貨」管理供應商與進貨單。供應商記錄名稱、聯絡人、電話、地址與預設付款方式（現結或月結）。" },
+      {
+        type: "steps",
+        items: [
+          "點「新增進貨單」，選供應商，加入這批貨的商品、數量與單價（預帶商品目前的成本），也可以填運費。",
+          "草稿階段不會動到庫存或帳款，可以隨時修改或刪除。",
+          "貨到了按「確認入庫」：有追蹤庫存的商品數量自動增加，進貨單取得單號並鎖定。入庫時預設會把商品成本更新為這次的單價，不想更新可以在進貨單上關掉「同步商品成本」。",
+        ],
+      },
+      { type: "p", text: "付款方式決定入庫後的狀態：現結直接標為已付款；月結則記為未付款，集中在「未付帳款」，可以依供應商結清單張、本月或全部。" },
+      { type: "note", text: "進貨是 Standard 以上方案的功能。名下還有未付款進貨單的供應商不能刪除。" },
+    ],
+    related: ["inventory-tracking", "negative-inventory", "roadmap-monthly-settlement"],
   },
 
-  // ── 促銷與會員 ────────────────────────────────────────────
+  // ── 報表 ────────────────────────────────────────────────────
+  {
+    slug: "revenue-vs-cash",
+    category: "reports",
+    since: "2.0",
+    question: "報表的「營收」和「實收」有什麼不同？",
+    keywords: ["營收", "實收", "收入", "對帳", "訂金", "掛帳", "不一樣", "revenue"],
+    content: [
+      { type: "p", text: "營收算的是貨在哪一天交給客人，實收算的是錢在哪一天進到店裡。當場結帳的訂單兩者在同一天發生，數字相同；以下情況會讓它們分開：" },
+      {
+        type: "list",
+        items: [
+          "掛帳：貨今天出門，計入今天的營收；錢等到結清那天才計入實收。",
+          "預購：訂金在收到的那天計入實收；營收要等到取貨那天才認列全額。",
+          "沒收訂金：客人取消預購、訂金不退時，那筆訂金在收到的那天已經算進實收，報表另外標出「沒收訂金」，不計入營收。",
+        ],
+      },
+      { type: "p", text: "對帳時，用「實收」對照抽屜裡的現金與刷卡紀錄；想知道這段期間實際賣出多少，看「營收」。退貨會在退貨當天從營收扣回。" },
+    ],
+    related: ["on-account", "pre-orders", "report-periods"],
+  },
+  {
+    slug: "report-periods",
+    category: "reports",
+    question: "報表可以看哪些期間？",
+    keywords: ["報表", "期間", "本週", "本月", "今年", "自選區間", "日期", "熱銷排行", "統計"],
+    content: [
+      { type: "p", text: "報表上方可以選今日、昨日、本週、本月、今年、全部時間，或用「自選區間」挑開始與結束日。本週依裝置設定的每週起始日計算，本月與今年從 1 號、1 月 1 日算起，選項旁會顯示實際涵蓋的日期。「全部時間」從店裡第一筆交易算起。" },
+      { type: "p", text: "選單一天時，趨勢圖是每小時的柱狀圖；多天的期間依長度以日、週、月或年為一格。" },
+      { type: "p", text: "熱銷排行卡只列前 5 名，點卡片或「查看全部」可以看該期間每一項有銷售的商品，依扣掉退貨後的數量排序。" },
+      { type: "note", text: "2.4 以前的版本是「今日／7 天／30 天／全部時間」這類往回推的天數。如果你看到的還是舊選項，請到 App Store 更新 DingPOS。" },
+    ],
+    related: ["revenue-vs-cash", "profit-not-tracked"],
+  },
+  {
+    slug: "profit-not-tracked",
+    category: "reports",
+    question: "沒填商品成本，報表毛利怎麼算？",
+    keywords: ["成本", "毛利", "報表", "未追蹤", "利潤"],
+    content: [
+      { type: "p", text: "成本是選填欄位。沒填成本的商品會在報表中標示為「未追蹤毛利」，並從毛利計算中排除——營收照常計入，只有毛利不計。" },
+      { type: "p", text: "想看完整的毛利報表，回到商品編輯頁補上成本即可，之後的訂單就會納入計算。毛利以折扣後的實收金額計算。" },
+    ],
+    related: ["report-periods", "purchase-orders"],
+  },
+
+  // ── 促銷與會員 ──────────────────────────────────────────────
   {
     slug: "create-promotion",
     category: "promotion",
@@ -277,7 +478,7 @@ export const articles = [
     related: ["loyalty-points", "create-promotion"],
   },
 
-  // ── 備份與資料 ────────────────────────────────────────────
+  // ── 備份與資料 ──────────────────────────────────────────────
   {
     slug: "backup-data",
     category: "backup",
@@ -285,7 +486,8 @@ export const articles = [
     keywords: ["備份", "icloud", "google drive", "dropbox", "雲端", "快照"],
     content: [
       { type: "p", text: "到「設定 → 雲端備份」，從 iCloud、Google Drive、Dropbox 中選一個並完成授權，之後隨時可以手動觸發備份。" },
-      { type: "p", text: "備份存進你自己的雲端帳號，保留最近 5 份快照。商品照片採增量同步，只上傳新增或變更的部分。" },
+      { type: "p", text: "備份存進你自己的雲端帳號。每個雲端只保留最新的一份：資料快照與商品照片各一個檔案，每次備份都會覆蓋上一份。" },
+      { type: "note", text: "因為新的備份會蓋掉舊的，如果你懷疑資料已經出錯（例如誤刪了大量商品），先不要按備份，寫信給我們一起看怎麼處理。" },
     ],
     related: ["transfer-new-ipad", "data-after-delete"],
   },
@@ -300,10 +502,11 @@ export const articles = [
         items: [
           "舊 iPad：到「設定 → 雲端備份」手動執行一次備份，確認備份時間已更新。",
           "新 iPad：安裝 DingPOS 並完成開店流程。",
-          "新 iPad：到「設定 → 雲端備份」連接同一個雲端帳號，選擇還原最新的快照。",
+          "新 iPad：到「設定 → 雲端備份」連接同一個雲端帳號，選擇還原。",
         ],
       },
-      { type: "p", text: "還原前系統會先驗證備份檔的完整性，並保留一份現有資料的安全副本，確認可用才會替換。商品照片會一併還原。" },
+      { type: "p", text: "還原前系統會先驗證備份檔的完整性，確認可用才會替換本機資料。商品照片會一併還原。" },
+      { type: "note", text: "還原會用備份完整取代這台 iPad 上的資料：這台 iPad 在備份之後才建立的訂單會消失。請確認連到的是正確的雲端帳號。" },
     ],
     related: ["backup-data", "data-after-delete"],
   },
@@ -329,8 +532,38 @@ export const articles = [
     ],
     related: ["transfer-new-ipad", "supported-devices"],
   },
+  {
+    slug: "import-csv",
+    category: "backup",
+    since: "2.3",
+    question: "可以從其他 POS 或 Excel 匯入商品與銷售紀錄嗎？",
+    keywords: ["匯入", "csv", "excel", "試算表", "轉移", "換系統", "批次", "歷史銷售", "import"],
+    content: [
+      { type: "p", text: "可以。到「設定 → 資料匯入」，選擇要匯入商品還是銷售，再挑一個 CSV 檔（Excel 或 Google 試算表都能另存成 CSV）。" },
+      {
+        type: "steps",
+        items: [
+          "檔案會以表格呈現。常見的中英文欄位名稱會自動對應，對不上的欄位點一下就能改。",
+          "表格裡的值可以直接點來修改，不用回去改檔案。",
+          "按「確認」開始檢查，有問題的列會標紅並說明原因；銷售匯入可以選擇跳過有錯的訂單。",
+          "處理完需要你決定的項目（例如同名商品、對到多位顧客），看過摘要再按「開始匯入」。",
+        ],
+      },
+      {
+        type: "list",
+        items: [
+          "匯入的銷售依交易日期排入，照店裡設定的幣別與稅制重新計算，不會動到庫存，也不發迎新點數。",
+          "顧客以電話或 email 對應既有顧客，對不到就建立新的。",
+          "匯入的訂單會標示「匯入於」與來源單號，不能作廢或退貨。",
+          "有錯的列可以匯出成標好原因的 CSV，修好再匯入一次；重複的資料會自動跳過。",
+        ],
+      },
+      { type: "note", text: "資料匯入目前是 Beta 功能，單檔上限 50,000 列或 20 MB。匯入前建議先做一次雲端備份；遇到匯不進去或結果不對，請從匯入畫面的「問題回報」告訴我們。" },
+    ],
+    related: ["backup-data", "transfer-new-ipad", "product-variants"],
+  },
 
-  // ── 訂閱與費用 ────────────────────────────────────────────
+  // ── 訂閱與費用 ──────────────────────────────────────────────
   {
     slug: "free-trial",
     category: "subscription",
@@ -371,49 +604,8 @@ export const articles = [
     ],
     related: ["free-trial", "after-trial"],
   },
-  // ── 新增 FAQ：結帳與報表行為 ──────────────────────────────
-  {
-    slug: "price-change-cart",
-    category: "checkout",
-    question: "商品改價後，購物車裡的價格會跟著變嗎？",
-    keywords: ["改價", "價格變動", "調價", "購物車", "重新計算"],
-    content: [
-      { type: "p", text: "購物車顯示的是商品加入當下的價格。按下結帳確認時，系統會重新查一次所有商品的最新價格——若有變動，會先跳出提示讓你確認新價格後才繼續。" },
-      { type: "p", text: "促銷也會在確認當下從頭重新計算一次；若總額、稅額或任何折扣金額因此改變，畫面會顯示變動摘要並要求再確認，確保你看到的金額就是實際入帳的金額。" },
-    ],
-    related: ["apply-discounts", "guide-priority-stacking"],
-  },
-  {
-    slug: "manual-discount-promotion",
-    category: "checkout",
-    question: "手動折扣和促銷可以同時用嗎？",
-    keywords: ["手動折扣", "促銷", "並存", "同時", "覆蓋", "優先"],
-    content: [
-      { type: "p", text: "可以，規則是「手動優先、各管各的」：" },
-      {
-        type: "list",
-        items: [
-          "單品手動折扣：該行商品不再套用單品類促銷——手動折扣視為你現場的最終決定；但這行的金額仍計入滿額門檻的計算。",
-          "整單手動折扣：在所有促銷算完之後才扣，兩者可以並存。若輸入的折扣超過剩餘金額，系統會自動以剩餘金額為上限並提示你。",
-        ],
-      },
-      { type: "p", text: "移除手動折扣後，該行商品下次計算時會重新恢復促銷資格。" },
-    ],
-    related: ["apply-discounts", "guide-priority-stacking"],
-  },
-  {
-    slug: "profit-not-tracked",
-    category: "products",
-    question: "沒填商品成本，報表毛利怎麼算？",
-    keywords: ["成本", "毛利", "報表", "未追蹤", "利潤"],
-    content: [
-      { type: "p", text: "成本是選填欄位。沒填成本的商品會在報表中標示為「未追蹤毛利」，並從毛利計算中排除——營收照常計入，只有毛利不計。" },
-      { type: "p", text: "想看完整的毛利報表，回到商品編輯頁補上成本即可，之後的訂單就會納入計算。毛利以折扣後的實收金額計算。" },
-    ],
-    related: ["inventory-tracking", "roadmap-monthly-settlement"],
-  },
 
-  // ── 促銷設定教學 ──────────────────────────────────────────
+  // ── 促銷設定教學 ────────────────────────────────────────────
   {
     slug: "guide-threshold",
     category: "promotion-guide",
@@ -495,15 +687,24 @@ export const articles = [
     question: "贈品、加購與組合價設定教學",
     keywords: ["贈品", "加購", "加價購", "組合價", "買a送b", "教學"],
     content: [
-      { type: "p", text: "新增促銷時可選三種組合型優惠：滿額／滿件送贈品（買 A 送 B）、加價購（加 X 元換購 Y）、組合價（任選 N 件 $X）。" },
-      { type: "p", text: "重要：這類優惠不會自動改動購物車。條件符合時，收銀畫面會出現建議橫幅，店員按「接受」才會把贈品或組合加入——這是刻意設計，因為贈品牽涉實體庫存，需要店員確認現場有貨、客人要拿。" },
+      { type: "p", text: "新增促銷時可選三種組合型優惠：滿額／滿件送贈品（買 A 送 B）、加價購（加 X 元換購 Y）、組合價（任選 N 件 $X）。贈品與加價購需要店員確認，組合價則自動套用。" },
+      { type: "p", text: "贈品與加價購不會自動改動購物車。條件符合時，收銀畫面會出現建議橫幅，店員按「接受」才會加入——這是刻意設計，因為贈品牽涉實體庫存，需要店員確認現場有貨、客人要拿。" },
       {
         type: "list",
         items: [
           "按「拒絕」後，同一車不會再跳同一檔建議；換一車或清空後會重新提示。",
           "結帳確認前若條件變動冒出新的建議，需要先「接受」或「拒絕」完才能送出訂單。",
-          "組合價：符合的商品多於組合件數時，預設選最貴的幾件入組，店員可在確認前改選。",
           "贈品與加購商品加入購物車後，不會再被其他金錢折扣打折，也不計入其他促銷的門檻。",
+        ],
+      },
+      { type: "p", text: "組合價（2.4 起自動套用）：購物車湊得成組合時，系統直接組起來並算進應付總額，不跳提示、也不能拆開。" },
+      {
+        type: "list",
+        items: [
+          "只有組起來比不組更便宜才會組；價格相同時，先組沒有其他折扣的商品，已打折的商品保留原本的折扣。",
+          "哪幾件被組在一起只看購物車內容，跟刷進來的順序無關。",
+          "每件成員商品底下會寫出它分到的折扣，商品列的金額是扣完優惠後的金額。",
+          "結帳時會用最新的價格再組一次，結果不同時會請你確認新的應付金額。",
         ],
       },
     ],
@@ -548,7 +749,7 @@ export const articles = [
     related: ["guide-bogo", "guide-threshold", "guide-schedule"],
   },
 
-  // ── 未來功能 ──────────────────────────────────────────────
+  // ── 未來功能 ────────────────────────────────────────────────
   {
     slug: "roadmap-payment-integration",
     category: "roadmap",
@@ -584,39 +785,22 @@ export const articles = [
     related: ["barcode-scanning", "roadmap-e-invoice"],
   },
   {
-    slug: "roadmap-purchase-orders",
-    category: "roadmap",
-    question: "會有進貨單功能嗎？",
-    keywords: ["進貨單", "進貨", "採購", "補貨"],
-    content: [
-      { type: "p", text: "會，進貨單已在規劃中。" },
-      { type: "p", text: "在那之前，進貨可以用庫存的「手動調整」記錄——調整數量後異動帳本會留下紀錄，之後進貨單功能上線時，歷史仍可追溯。" },
-      { type: "p", text: "如果你有需求，歡迎來信，我們會依照需求人數決定開發順序。" },
-    ],
-    related: ["inventory-tracking", "roadmap-monthly-settlement"],
-  },
-  {
-    slug: "roadmap-returns-exchanges",
-    category: "roadmap",
-    question: "會支援預訂、退貨與換貨嗎？",
-    keywords: ["預訂", "退貨", "換貨", "退款", "部分退款"],
-    content: [
-      { type: "p", text: "會，預訂、退貨、換貨都已在規劃中。" },
-      { type: "p", text: "在那之前的替代做法：退貨可用「整單作廢」處理，庫存與點數會自動回補；換貨則是作廢原單後，重新結帳一筆正確的訂單。" },
-      { type: "p", text: "如果你有需求，歡迎來信，我們會依照需求人數決定開發順序。" },
-    ],
-    related: ["void-order", "roadmap-purchase-orders"],
-  },
-  {
     slug: "roadmap-monthly-settlement",
     category: "roadmap",
-    question: "會有進貨／銷售月結功能嗎？",
-    keywords: ["月結", "結算", "對帳", "月報"],
+    question: "會有月結報表嗎？",
+    keywords: ["月結", "結算", "對帳", "月報", "未付帳款", "未收帳款"],
     content: [
-      { type: "p", text: "會，月結報表已在規劃中。" },
-      { type: "p", text: "目前可以先用報表的「月」區間檢視當月營收、毛利與付款方式分佈，作為對帳的基礎。" },
-      { type: "p", text: "如果你有需求，歡迎來信，我們會依照需求人數決定開發順序。" },
+      { type: "p", text: "目前沒有獨立的月結報表，但對帳需要的資料都已經在 App 裡：" },
+      {
+        type: "list",
+        items: [
+          "報表選「本月」，看當月的營收、實收、毛利與付款方式分布。",
+          "供應商月結的進貨，集中在進貨的「未付帳款」，可以整月結清。",
+          "顧客的掛帳，集中在「訂單 → 未收帳款」，可以整月結清。",
+        ],
+      },
+      { type: "p", text: "如果你需要一份可以匯出或列印的月結報表，歡迎來信告訴我們需要哪些欄位，我們會依照需求人數決定開發順序。" },
     ],
-    related: ["roadmap-purchase-orders", "profit-not-tracked"],
+    related: ["revenue-vs-cash", "purchase-orders", "on-account"],
   },
 ];

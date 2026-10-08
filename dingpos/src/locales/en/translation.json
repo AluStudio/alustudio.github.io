@@ -523,6 +523,8 @@
     "no_results_desc": "Try different keywords, or just email us — we'll get back to you soon.",
     "related_title": "Related questions",
     "back": "Support",
+    "since": "Available since DingPOS {{version}}",
+    "verified_version": "Content reflects DingPOS {{version}}",
     "contact_title": "Can't find an answer?",
     "contact_desc": "Tell us what you're running into and we'll get back to you as soon as we can.",
     "contact_cta": "Contact ALU Studio",

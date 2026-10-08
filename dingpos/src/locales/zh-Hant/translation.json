@@ -523,6 +523,8 @@
     "no_results_desc": "換個關鍵字試試，或直接寫信給我們，我們會盡快回覆。",
     "related_title": "類似問題",
     "back": "支援中心",
+    "since": "DingPOS {{version}} 起提供",
+    "verified_version": "內容對應 DingPOS {{version}}",
     "contact_title": "找不到答案嗎？",
     "contact_desc": "寫信告訴我們你遇到的問題，我們會盡快回覆你。",
     "contact_cta": "聯繫 ALU Studio",
