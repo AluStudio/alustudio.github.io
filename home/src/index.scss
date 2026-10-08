@@ -14,7 +14,6 @@ $line: rgba(47, 74, 52, 0.2);
 $line-strong: rgba(47, 74, 52, 0.42);
 $radius-icon: 14px;
 $font-stack: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-$font-display: "Playfair Display", Georgia, "Times New Roman", serif;
 $font-wordmark: "Yellowtail", "Brush Script MT", cursive;
 $ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 $bp-wide: 900px;
@@ -334,11 +333,9 @@ a {
   }
 
   &__count {
-    font-family: $font-display;
-    font-style: italic;
     font-weight: 500;
-    font-variant-numeric: lining-nums;
-    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.9rem;
     color: $olive;
   }
 }
@@ -358,11 +355,9 @@ a {
   }
 
   &__index {
-    font-family: $font-display;
-    font-style: italic;
     font-weight: 500;
-    font-variant-numeric: lining-nums;
-    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.9rem;
     line-height: 1;
     color: $olive;
 
@@ -402,11 +397,9 @@ a {
   }
 
   &__name {
-    font-family: $font-display;
-    font-size: 1.65rem;
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: -0.015em;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
     line-height: 1.15;
     color: $ink;
     margin-bottom: 4px;
