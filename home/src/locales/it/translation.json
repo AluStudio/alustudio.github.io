@@ -2,6 +2,9 @@
   "profile": {
     "bio": "Studio indie di app — strumenti per la vita di tutti i giorni"
   },
+  "apps": {
+    "heading": "App"
+  },
   "pikgeon": {
     "tagline": "Tieni organizzati i tuoi ricordi di cartoline",
     "desc": "Riconoscimento OCR intelligente per tracciare il tuo percorso di invio. Elaborazione completamente locale per proteggere la tua privacy."

@@ -2,6 +2,9 @@
   "profile": {
     "bio": "Estúdio indie de apps — ferramentas para o dia a dia"
   },
+  "apps": {
+    "heading": "Apps"
+  },
   "pikgeon": {
     "tagline": "Mantenha suas memórias de postal organizadas",
     "desc": "Reconhecimento OCR inteligente para acompanhar sua jornada de envios. Processamento totalmente local para proteger sua privacidade."

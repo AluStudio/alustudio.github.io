@@ -2,6 +2,9 @@
   "profile": {
     "bio": "Indie app studio — tools for everyday life"
   },
+  "apps": {
+    "heading": "Apps"
+  },
   "pikgeon": {
     "tagline": "Keep Your Postcard Memories Organized",
     "desc": "Smart OCR recognition to track your Pikmin Bloom mailing journey. Fully local processing to protect your privacy."

@@ -2,6 +2,9 @@
   "profile": {
     "bio": "Indie-App-Studio — Werkzeuge für den Alltag"
   },
+  "apps": {
+    "heading": "Apps"
+  },
   "pikgeon": {
     "tagline": "Behalte deine Postkarten-Erinnerungen im Überblick",
     "desc": "Intelligente OCR-Erkennung zur Verfolgung deiner Versandreise. Vollständige lokale Verarbeitung zum Schutz deiner Privatsphäre."

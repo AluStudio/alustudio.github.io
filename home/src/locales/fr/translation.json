@@ -2,6 +2,9 @@
   "profile": {
     "bio": "Studio indie d'apps — des outils pour le quotidien"
   },
+  "apps": {
+    "heading": "Applications"
+  },
   "pikgeon": {
     "tagline": "Gardez vos souvenirs de cartes postales organisés",
     "desc": "Reconnaissance OCR intelligente pour suivre votre parcours d'envoi. Traitement entièrement local pour protéger votre vie privée."
