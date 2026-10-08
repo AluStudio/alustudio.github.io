@@ -30,6 +30,18 @@ test("sourcesForRoute: every dingpos support article maps to the faq packs", () 
   ]);
 });
 
+test("sourcesForRoute: dingpos pricing tracks the plan data, not just the page", () => {
+  assert.deepEqual(sourcesForRoute("/dingpos/pricing/"), [
+    "dingpos/src/pages/PricingPage.jsx",
+    "dingpos/src/locales",
+    "dingpos/index.html",
+    "dingpos/scripts/copy-spa-pages.js",
+    "dingpos/src/pages/pricing.scss",
+    "dingpos/src/data/plans.js",
+    "dingpos/src/components/Price.jsx",
+  ]);
+});
+
 test("sourcesForRoute: unknown route returns null", () => {
   assert.equal(sourcesForRoute("/unknown/"), null);
 });

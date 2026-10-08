@@ -11,7 +11,7 @@
     "title": "Open your store in 10 minutes. Your data, your control.",
     "description": "DingPOS is a server-less point of sale for iPad. No account, no cloud lock-in, and it keeps working with no internet. Your products, orders, and customers all stay on your own device.",
     "download": "Download on the App Store",
-    "note": "30-day full-feature free trial. No credit card required.",
+    "note": "30-day free trial. No credit card required.",
     "shot_alt": "The DingPOS checkout screen: a product grid with category filters on the left, and the cart with automatically applied promotions and the total on the right"
   },
   "proof": {
@@ -130,11 +130,268 @@
       "Fully functional offline"
     ]
   },
-  "pricing": {
+  "home_pricing": {
     "title": "Simple, transparent pricing",
-    "price": "30-day full-feature free trial, then NT$299 per month.",
-    "sub": "No transaction fees, no hidden charges. Your data is always kept after the trial — resubscribe anytime.",
+    "price_before": "Three plans, from ",
+    "price_after": " per month",
+    "sub": "30-day free trial. No transaction fees, no hidden charges. Your data is always kept after the trial — resubscribe anytime.",
+    "compare": "Compare plans",
     "cta": "Start the 30-day free trial"
+  },
+  "pricing": {
+    "doc_title": "Plans & Pricing",
+    "meta_description": "Compare DingPOS plans for iPad: Lite, Standard and Pro. 30-day free trial, no credit card, no transaction fees, and your data is never deleted.",
+    "eyebrow": "Plans & pricing",
+    "title": "Pick the plan that fits your shop",
+    "subtitle": "Try it free for 30 days — no credit card, no sign-up. Change plans anytime; your data is never deleted.",
+    "billing": {
+      "label": "Billing period",
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "save": "2 months free"
+    },
+    "recommended": "Recommended",
+    "unit": {
+      "month": "/mo",
+      "year": "/yr"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "or ",
+    "or_annual_after": "/yr billed annually",
+    "saving_before": "Save ",
+    "saving_after": " a year vs monthly",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "For one person at a stall who needs checkout and products",
+        "heading": "Includes",
+        "features": [
+          "Full checkout with up to 10 carts",
+          "Products with variants, barcodes, photos, categories",
+          "Order history, voids, returns and exchanges",
+          "Business dashboard: revenue, profit, best sellers",
+          "Cloud backup & restore",
+          "Checkout works offline"
+        ],
+        "cta": "Start the 30-day free trial"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "For shops that need stock, members, purchasing or credit",
+        "heading": "Everything in Lite, plus",
+        "features": [
+          "Promotion engine: spend thresholds, BOGO, happy hours — applied at checkout",
+          "Customer points, redemption and member tiers",
+          "Inventory tracking and purchase orders",
+          "Sell on account: hand over now, collect later",
+          "Pre-orders: take a deposit, settle at pickup"
+        ],
+        "cta": "Start the 30-day free trial"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "For shops with staff who need roles and an audit trail",
+        "heading": "Everything in Standard, plus",
+        "features": [
+          "Staff accounts: a PIN each, every order records who rang it",
+          "Permissions & approvals: over-cap discounts, product and stock edits, viewing costs",
+          "Activity log and restore history",
+          "Advanced reports: period comparison, sales heatmap, slow movers, inventory value, repeat customers"
+        ],
+        "cta": "Download DingPOS",
+        "note": "The trial runs at Standard level; Pro features need a Pro subscription."
+      }
+    },
+    "fineprint": "Billed through your App Store account. Monthly and annual plans auto-renew at the end of each period; cancel anytime in the App Store.",
+    "currency": {
+      "twd": "Prices shown for the Taiwan App Store. Other regions pay the local price shown in the App Store.",
+      "to_usd": "Show US prices",
+      "usd": "Prices shown for the US App Store. Other regions pay the local price shown in the App Store.",
+      "to_twd": "Show Taiwan prices"
+    },
+    "assurances": {
+      "trial": {
+        "title": "30-day free trial",
+        "desc": "Every Standard feature. No credit card, no account."
+      },
+      "fees": {
+        "title": "No transaction fees",
+        "desc": "DingPOS never touches your takings — the subscription is the only charge."
+      },
+      "data": {
+        "title": "Your data stays yours",
+        "desc": "When a trial or subscription ends only checkout pauses. Products, orders and reports stay, and nothing is deleted."
+      },
+      "switch": {
+        "title": "Switch anytime",
+        "desc": "Upgrades apply immediately, prorated by Apple. Downgrades apply at renewal."
+      }
+    },
+    "compare": {
+      "title": "Compare every feature",
+      "subtitle": "Each plan includes everything in the plan before it.",
+      "feature_col": "Feature",
+      "included": "Included",
+      "not_included": "Not included",
+      "groups": {
+        "checkout": "Checkout",
+        "catalog": "Products & inventory",
+        "customers": "Customers & promotions",
+        "reports": "Reports",
+        "team": "Staff & control",
+        "data": "Data & backup"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Checkout & multiple carts",
+          "desc": "Up to 10 carts at once, live search by name or barcode"
+        },
+        "discounts_tax": {
+          "name": "Discounts & tax",
+          "desc": "Item and order discounts; inclusive or exclusive tax calculated for you"
+        },
+        "offline": {
+          "name": "Offline checkout",
+          "desc": "Keep selling with no internet connection"
+        },
+        "returns": {
+          "name": "Voids, returns & exchanges",
+          "desc": "Complete order history and detail"
+        },
+        "preorder": {
+          "name": "Pre-orders",
+          "desc": "Take a deposit now, settle the balance at pickup"
+        },
+        "on_account": {
+          "name": "Sell on account",
+          "desc": "Hand over now, collect later — every customer's balance in one place"
+        },
+        "products": {
+          "name": "Product management",
+          "desc": "Variants, barcodes, photos, categories"
+        },
+        "import": {
+          "name": "Data import",
+          "desc": "Import products and past sales from other systems via CSV"
+        },
+        "inventory": {
+          "name": "Inventory tracking",
+          "desc": "Stock deducts on sale; manual adjustments keep a movement record"
+        },
+        "purchasing": {
+          "name": "Purchasing & suppliers",
+          "desc": "Receiving a purchase order updates stock; see what you owe each supplier"
+        },
+        "promotions": {
+          "name": "Promotion engine",
+          "desc": "Spend thresholds, BOGO, Nth-item deals, happy hours — applied at checkout"
+        },
+        "loyalty": {
+          "name": "Customers & points",
+          "desc": "Earn and redeem points to bring customers back"
+        },
+        "member_tiers": {
+          "name": "Member tiers",
+          "desc": "Reward your best customers with tiered perks"
+        },
+        "dashboard": {
+          "name": "Business dashboard",
+          "desc": "Revenue, profit, discounts, payment mix and best sellers"
+        },
+        "comparison": {
+          "name": "Period comparison",
+          "desc": "Against the previous period or last year — see growth or decline"
+        },
+        "heatmap": {
+          "name": "Sales heatmap",
+          "desc": "Seven days × 24 hours — see which hours sell best"
+        },
+        "slow_movers": {
+          "name": "Slow movers",
+          "desc": "Find the products that aren't selling but still hold stock"
+        },
+        "valuation": {
+          "name": "Inventory value & movement audit",
+          "desc": "What your stock is worth now, and who changed it"
+        },
+        "repeat": {
+          "name": "Repeat customers & unredeemed points",
+          "desc": "How many members come back, and how many points are outstanding"
+        },
+        "staff": {
+          "name": "Staff accounts",
+          "desc": "A PIN each; every order records who rang it"
+        },
+        "permissions": {
+          "name": "Permissions & approvals",
+          "desc": "Manager and staff roles; you choose what needs approval"
+        },
+        "activity_log": {
+          "name": "Activity log",
+          "desc": "A timeline of voids, returns, price changes, stock adjustments and more"
+        },
+        "restore_records": {
+          "name": "Restore history",
+          "desc": "Who restored, from which backup, and which orders it removed"
+        },
+        "local_data": {
+          "name": "Data on your iPad",
+          "desc": "No account, no server — your business data never passes through us"
+        },
+        "backup": {
+          "name": "Cloud backup & restore",
+          "desc": "Back up to your own iCloud, Google Drive or Dropbox"
+        },
+        "undo_restore": {
+          "name": "Restore preview & undo",
+          "desc": "See which orders a restore removes, and take a wrong one back"
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "What can I use during the free trial?",
+          "a": "For 30 days from first install you get every Standard feature — no credit card, no account. Pro features such as staff, permissions and advanced reports aren't part of the trial; subscribe to Pro anytime during the trial if you need them."
+        },
+        {
+          "q": "What happens if I don't subscribe after the trial?",
+          "a": "Checkout pauses; everything else keeps working — you can still browse orders, view reports and manage products. Nothing is deleted, and subscribing restores checkout immediately."
+        },
+        {
+          "q": "Can I upgrade or downgrade anytime?",
+          "a": "Yes, from Settings → Subscription in the app. Upgrades apply immediately and Apple credits the unused time; downgrades take effect when the current period ends. Switching from monthly to annual also applies immediately."
+        },
+        {
+          "q": "What happens to my customers, promotions and stock if I downgrade?",
+          "a": "All of it is kept — nothing is deleted or changed. The higher plan's features simply stop running, and upgrading again brings everything back as it was."
+        },
+        {
+          "q": "How does annual billing work?",
+          "a": "Annual costs ten months and covers twelve — two months free. You're billed once a year and it renews automatically."
+        },
+        {
+          "q": "Are there any fees besides the subscription?",
+          "a": "No. DingPOS never handles your takings: no commission, no transaction fees, no hardware contract."
+        },
+        {
+          "q": "How do I cancel?",
+          "a": "Manage it on your iPad under Settings → Apple Account → Subscriptions; cancel at least 24 hours before the period ends and you won't be charged again. Your data stays on your device."
+        },
+        {
+          "q": "Why is the App Store price different from this page?",
+          "a": "The App Store bills the subscription at the price for your Apple Account's region. This page lists Taiwan and US prices; other regions pay the local price shown in the app and the App Store."
+        }
+      ],
+      "more": "More questions?",
+      "more_link": "Browse the full FAQ"
+    },
+    "final": {
+      "title": "Use it for 30 days, then pick a plan",
+      "sub": "Download and start — no credit card, no account.",
+      "cta": "Download on the App Store"
+    }
   },
   "footer": {
     "tagline": "Open your store in 10 minutes. Your data, your control.",
@@ -207,7 +464,7 @@
   },
   "terms": {
     "title": "Terms of Use",
-    "effective_date": "Effective date: July 1, 2026",
+    "effective_date": "Effective date: October 8, 2026",
     "intro": "Welcome to DingPOS. Please read the following Terms of Use carefully before using the app. By downloading, installing, or using DingPOS, you agree to be bound by these terms.",
     "license": {
       "title": "License",
@@ -215,7 +472,7 @@
     },
     "subscription": {
       "title": "Subscription & payment",
-      "desc": "DingPOS offers a 30-day full-feature free trial from first install. After the trial, a subscription of NT$299 per month (via App Store In-App Purchase) is required to continue using checkout; browsing and product management remain available and your data is never deleted. The subscription renews automatically unless you cancel at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time in your device's App Store account settings. Purchased subscriptions support restore."
+      "desc": "DingPOS offers a 30-day free trial from first install, during which Standard plan features are available. After the trial, a subscription to one of the plans (Lite, Standard or Pro), purchased via App Store In-App Purchase, is required to continue using checkout; plan contents and prices are listed on the pricing page (alu-studio.com/dingpos/pricing), and the price charged is the one shown in the App Store. Without a subscription, browsing and product management remain available and your data is never deleted. The subscription renews automatically unless you cancel at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time in your device's App Store account settings. Purchased subscriptions support restore."
     },
     "restrictions": {
       "title": "Restrictions",

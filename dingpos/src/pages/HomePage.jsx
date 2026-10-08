@@ -1,12 +1,16 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import "../assets/scss/all.scss";
 import "../assets/scss/home.scss";
 import "../assets/scss/footer.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import AppStoreButton from "../components/AppStoreButton";
+import { Price } from "../components/Price";
+import { PLANS } from "../data/plans";
 
-const APP_STORE_URL = "https://apps.apple.com/app/id6788988943";
+const STARTING_PRICE = PLANS[0].price;
 
 // The three screenshot-backed sections, in page order. `cashier` is absent on
 // purpose: its screenshot is the hero shot, so its copy runs as a full-width
@@ -45,18 +49,6 @@ function HomePage() {
     return Array.isArray(value) ? value : [];
   };
 
-  const appStoreButton = (className, label) => (
-    <a
-      href={APP_STORE_URL}
-      className={className}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i className="bi bi-apple" aria-hidden="true"></i>
-      {label}
-    </a>
-  );
-
   return (
     <>
       <Navbar />
@@ -77,7 +69,7 @@ function HomePage() {
             <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
             <h1 className="hero-title">{t("hero.title")}</h1>
             <p className="hero-desc">{t("hero.description")}</p>
-            {appStoreButton("btn-store btn-store--lg", t("hero.download"))}
+            <AppStoreButton className="btn-store btn-store--lg">{t("hero.download")}</AppStoreButton>
             <p className="hero-note">{t("hero.note")}</p>
             <ul className="hero-proof">
               {list("proof.items").map((item) => (
@@ -176,11 +168,21 @@ function HomePage() {
         <section className="pricing" id="pricing">
           <div className="container">
             <div className="pricing-card">
-              <h2>{t("pricing.title")}</h2>
-              <p className="pricing-price">{t("pricing.price")}</p>
-              <p className="pricing-sub">{t("pricing.sub")}</p>
-              {appStoreButton("btn-store btn-store--lg", t("pricing.cta"))}
-              <p className="hero-note">{t("hero.note")}</p>
+              <h2>{t("home_pricing.title")}</h2>
+              <p className="pricing-price">
+                {t("home_pricing.price_before")}
+                <Price value={(c) => STARTING_PRICE[c].monthly} />
+                {t("home_pricing.price_after")}
+              </p>
+              <p className="pricing-sub">{t("home_pricing.sub")}</p>
+              <div className="pricing-actions">
+                <AppStoreButton className="btn-store btn-store--lg">
+                  {t("home_pricing.cta")}
+                </AppStoreButton>
+                <Link to="/pricing" className="btn-plan">
+                  {t("home_pricing.compare")}
+                </Link>
+              </div>
             </div>
           </div>
         </section>

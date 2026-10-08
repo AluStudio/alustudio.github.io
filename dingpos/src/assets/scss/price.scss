@@ -1,0 +1,29 @@
+@import "./variables";
+
+// Without the inline script (JS off) no data-currency is set and TWD shows.
+html:not([data-currency="USD"]) [data-cur="USD"],
+html[data-currency="USD"] [data-cur="TWD"] {
+  display: none !important;
+}
+
+.currency-note {
+  font-size: 0.85rem;
+  color: $ink-soft;
+  margin: 0;
+
+  button {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: $link-color;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+
+    &:focus-visible {
+      outline: 2px solid $accent-400;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+}

@@ -17,6 +17,23 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://alu-studio.com/dingpos/og-image.jpg" />
     <title>DingPOS — Offline-First Point of Sale App for iPad</title>
+    <script>
+      // Prices ship in TWD and USD; pick the visitor's storefront before first
+      // paint so the prerendered HTML never flashes the other currency. A saved
+      // choice wins, then the time zone, then the browser language.
+      // The storage key is duplicated in src/components/Price.jsx.
+      (function () {
+        var currency = "USD";
+        try {
+          var saved = localStorage.getItem("dingpos.currency");
+          var zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+          if (saved === "TWD" || saved === "USD") currency = saved;
+          else if (zone) currency = zone === "Asia/Taipei" ? "TWD" : "USD";
+          else currency = /^zh/i.test(navigator.language) ? "TWD" : "USD";
+        } catch (e) {}
+        document.documentElement.dataset.currency = currency;
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,7 +45,16 @@
       "url": "https://alu-studio.com/dingpos/",
       "operatingSystem": "iPadOS",
       "applicationCategory": "BusinessApplication",
-      "description": "DingPOS is a server-less, offline-first point of sale for iPad: open your store in 10 minutes with a 30-day full-feature free trial.",
+      "description": "DingPOS is a server-less, offline-first point of sale for iPad: open your store in 10 minutes with a 30-day free trial.",
+      "installUrl": "https://apps.apple.com/app/id6788988943",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "TWD",
+        "lowPrice": "149",
+        "highPrice": "599",
+        "offerCount": "3",
+        "url": "https://alu-studio.com/dingpos/pricing/"
+      },
       "author": { "@type": "Organization", "name": "Alu Studio", "url": "https://alu-studio.com/" }
     }
     </script>

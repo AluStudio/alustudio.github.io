@@ -39,6 +39,13 @@ const ui = JSON.parse(
   readFileSync(join(__dirname, "..", "src", "locales", "en", "translation.json"), "utf8"),
 );
 
+const STATIC_ROUTES = [
+  { path: "pricing", title: ui.pricing.doc_title, description: ui.pricing.meta_description },
+  { path: "privacy", title: ui.nav.privacy },
+  { path: "terms", title: ui.nav.terms },
+  { path: "support", title: ui.support.doc_title, description: ui.support.subtitle },
+];
+
 // ── FAQ data consistency guard ──────────────────────────────
 function validateFaqPacks() {
   const zhSlugs = zhHant.articles.map((a) => a.slug);
@@ -84,8 +91,10 @@ function validateFaqPacks() {
   for (const slug of listed) {
     if (!zhSet.has(slug)) errors.push(`sitemap.xml lists /dingpos/support/${slug}/ with no article`);
   }
-  if (!sitemap.includes(`${BASE_URL}/support/</loc>`)) {
-    errors.push("sitemap.xml is missing /dingpos/support/");
+  for (const { path } of STATIC_ROUTES) {
+    if (!sitemap.includes(`${BASE_URL}/${path}/</loc>`)) {
+      errors.push(`sitemap.xml is missing /dingpos/${path}/`);
+    }
   }
 
   if (errors.length) {
@@ -106,9 +115,7 @@ function articleDescription(article) {
 }
 
 const routes = [
-  { path: "privacy", title: ui.nav.privacy },
-  { path: "terms", title: ui.nav.terms },
-  { path: "support", title: ui.support.doc_title, description: ui.support.subtitle },
+  ...STATIC_ROUTES,
   ...en.articles.map((article) => ({
     path: `support/${article.slug}`,
     title: article.question,

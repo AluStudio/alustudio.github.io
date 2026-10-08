@@ -9,8 +9,6 @@ function Navbar() {
   const { t } = useTranslation();
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "";
-  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-  const anchor = (hash) => (isHome ? `#${hash}` : `${base}/#${hash}`);
 
   const collapseNav = () => {
     const el = document.getElementById("navbarSupportedContent");
@@ -87,9 +85,9 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-center" href={anchor("pricing")} onClick={collapseNav}>
+              <Link className="nav-link text-center" to="/pricing" onClick={collapseNav}>
                 {t("nav.pricing")}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link text-center" to="/support" onClick={collapseNav}>

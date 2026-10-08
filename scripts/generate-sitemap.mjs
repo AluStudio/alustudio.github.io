@@ -64,6 +64,17 @@ export const LASTMOD_SOURCES = [
   // tradeoff: editing one article bumps all support URLs — the pack IS the
   // common source; revisit only if the article set outgrows the two packs.
   ["/dingpos/support/", ["dingpos/src/data/faq", ...appShell("dingpos")]],
+  // Prices and the feature matrix live in data/plans.js; Price.jsx carries
+  // the currency switch the page renders around them.
+  [
+    "/dingpos/pricing/",
+    [
+      ...page("dingpos", "PricingPage.jsx"),
+      "dingpos/src/pages/pricing.scss",
+      "dingpos/src/data/plans.js",
+      "dingpos/src/components/Price.jsx",
+    ],
+  ],
   ["/dingpos/privacy/", page("dingpos", "PrivacyPage.jsx")],
   ["/dingpos/terms/", page("dingpos", "TermsPage.jsx")],
   ["/dingpos/", ["dingpos/src", "dingpos/index.html"]],

@@ -22,6 +22,8 @@ function Footer() {
         </div>
 
         <div className="footer-links mb-3">
+          <Link to="/pricing">{t("nav.pricing")}</Link>
+          <span className="separator">·</span>
           <Link to="/support">{t("footer.support")}</Link>
           <span className="separator">·</span>
           <Link to="/privacy">{t("footer.privacy_policy")}</Link>

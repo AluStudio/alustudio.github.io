@@ -1,0 +1,602 @@
+@import "../assets/scss/variables";
+
+// Shared tokens (.eyebrow, .lead, .section-title, .spec-list, .btn-store,
+// --ease-out, --section-pad, @keyframes rise-in) come from home.scss.
+
+// ── Hero ──────────────────────────────────────────────────
+.pricing-hero {
+  padding: calc(var(--navbar-height, 72px) + 4rem) 0 2.5rem;
+  background: linear-gradient(180deg, $neutral-0 0%, $neutral-50 100%);
+  text-align: center;
+
+  h1 {
+    font-size: clamp(2rem, 4.4vw, 2.9rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  h1,
+  .lead {
+    text-wrap: balance;
+  }
+
+  .lead {
+    margin: 0 auto 2.25rem;
+    max-width: 38rem;
+  }
+}
+
+.pricing-hero-copy > * {
+  animation: rise-in 0.6s var(--ease-out) backwards;
+}
+
+@for $i from 1 through 3 {
+  .pricing-hero-copy > *:nth-child(#{$i}) {
+    animation-delay: #{($i - 1) * 55}ms;
+  }
+}
+
+// ── Billing toggle ────────────────────────────────────────
+// Two equal columns so the sliding pill is exactly half the control wide.
+.billing-toggle {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.3rem;
+  margin: 0;
+  border: 1px solid $neutral-100;
+  border-radius: 999px;
+  background: $neutral-0;
+  box-shadow: 0 6px 18px -10px rgba($accent-900, 0.25);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    bottom: 0.3rem;
+    left: 0.3rem;
+    width: calc(50% - 0.3rem);
+    border-radius: 999px;
+    background: $accent-600;
+    transition: transform 0.28s var(--ease-out);
+  }
+
+  &:has(label:last-of-type input:checked)::before {
+    transform: translateX(100%);
+  }
+
+  label {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.55rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: $ink-mid;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+
+    &.is-active {
+      color: $neutral-0;
+    }
+
+    &:has(input:focus-visible) {
+      outline: 2px solid $accent-400;
+      outline-offset: 2px;
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.billing-save {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  background: rgba($accent-200, 0.6);
+  color: $accent-700;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  .is-active & {
+    background: rgba($neutral-0, 0.2);
+    color: $neutral-0;
+  }
+}
+
+// ── Plan cards ────────────────────────────────────────────
+.plans {
+  padding: 1.5rem 0 4rem;
+  background: $neutral-50;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+
+  @media (max-width: 991.98px) {
+    grid-template-columns: 1fr;
+    max-width: 30rem;
+  }
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.75rem;
+  border-radius: 20px;
+  background: $neutral-0;
+  border: 1px solid $neutral-100;
+  box-shadow: 0 20px 50px -34px rgba($accent-900, 0.35);
+  animation: rise-in 0.6s var(--ease-out) backwards;
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{120 + ($i - 1) * 70}ms;
+    }
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .spec-list li {
+    font-size: 0.9rem;
+  }
+}
+
+.plan-card--recommended {
+  border: 2px solid $accent-500;
+  box-shadow: 0 28px 60px -30px rgba($accent-800, 0.45);
+}
+
+.plan-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.plan-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  background: $accent-600;
+  color: $neutral-0;
+}
+
+.plan-tagline {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: $ink-soft;
+  margin-bottom: 1.4rem;
+  // Two lines reserved so the prices line up across cards.
+  min-height: calc(2 * 1.55em);
+}
+
+.plan-price {
+  margin-bottom: 1.4rem;
+}
+
+.plan-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+  margin: 0 0 0.35rem;
+  font-size: 2.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: $ink;
+  font-variant-numeric: tabular-nums;
+}
+
+.plan-unit {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: $ink-soft;
+}
+
+.plan-sub {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: $ink-soft;
+  min-height: calc(2 * 1.6em);
+}
+
+.plan-save {
+  display: block;
+  font-weight: 700;
+  color: $accent-600;
+}
+
+.plan-cta {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+}
+
+// Pinned to the card's foot so the feature lists start level across cards.
+.plan-note {
+  margin: auto 0 0;
+  padding-top: 1.25rem;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: $ink-soft;
+}
+
+.plan-heading {
+  margin: 1.6rem 0 0.9rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid $neutral-100;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: $ink;
+}
+
+.plans-foot {
+  max-width: 44rem;
+  margin: 2rem auto 0;
+  text-align: center;
+
+  .fineprint {
+    margin: 0.5rem 0 0;
+    font-size: 0.8rem;
+    color: $ink-soft;
+  }
+}
+
+// ── Assurances ────────────────────────────────────────────
+.assurances {
+  padding: 3.5rem 0;
+  background: $neutral-0;
+  border-top: 1px solid $neutral-100;
+  border-bottom: 1px solid $neutral-100;
+}
+
+.assurance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 991.98px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  li {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+  }
+
+  .bi {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba($accent-200, 0.5);
+    color: $accent-600;
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin: 0.35rem 0 0.35rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: $ink-soft;
+  }
+}
+
+// ── Comparison table ──────────────────────────────────────
+.compare {
+  padding: var(--section-pad) 0;
+  background: $neutral-50;
+}
+
+.compare-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  th,
+  td {
+    padding: 0.9rem 0.75rem;
+    border-bottom: 1px solid $neutral-100;
+    vertical-align: middle;
+  }
+
+  td {
+    text-align: center;
+    width: 17%;
+  }
+
+  // Sticky plan header: readers scanning a long row lose track of which
+  // column is which, so the plan names stay pinned below the navbar.
+  thead th {
+    position: sticky;
+    top: var(--navbar-height, 72px);
+    z-index: 2;
+    background: rgba($neutral-50, 0.94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid $neutral-200;
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+  thead .compare-feature {
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $ink-soft;
+  }
+
+  .is-recommended {
+    background: rgba($accent-100, 0.45);
+  }
+
+  thead .is-recommended {
+    background: rgba(mix($accent-100, $neutral-50, 45%), 0.96);
+  }
+}
+
+.compare-plan {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  color: $ink;
+}
+
+.compare-price {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $ink-soft;
+  font-variant-numeric: tabular-nums;
+}
+
+.compare-group th {
+  padding-top: 2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $accent-600;
+  border-bottom-color: $neutral-200;
+}
+
+tbody:first-of-type .compare-group th {
+  padding-top: 1.25rem;
+}
+
+.compare-feature {
+  text-align: left;
+  font-weight: 400;
+}
+
+.compare-name {
+  display: block;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: $ink;
+}
+
+.compare-desc {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: $ink-soft;
+}
+
+.compare-yes {
+  font-size: 1.15rem;
+  color: $accent-600;
+}
+
+.compare-no {
+  color: $neutral-300;
+}
+
+@media (max-width: 575.98px) {
+  .compare-table {
+    th,
+    td {
+      padding: 0.75rem 0.35rem;
+    }
+
+    td {
+      width: 15%;
+    }
+  }
+
+  .compare-plan {
+    font-size: 0.85rem;
+  }
+
+  // Three narrow columns leave no room for the price; the cards above carry it.
+  .compare-price {
+    display: none;
+  }
+}
+
+// ── FAQ ───────────────────────────────────────────────────
+.pricing-faq {
+  padding: var(--section-pad) 0;
+  background: $neutral-0;
+  border-top: 1px solid $neutral-100;
+
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.faq-list {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid $neutral-100;
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.15rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $ink;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $accent-400;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .bi {
+      flex: none;
+      color: $ink-soft;
+      transition: transform 0.25s var(--ease-out);
+    }
+  }
+
+  &[open] summary .bi {
+    transform: rotate(180deg);
+  }
+
+  p {
+    margin: 0 0 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: $ink-mid;
+  }
+}
+
+.faq-more {
+  max-width: 46rem;
+  margin: 2rem auto 0;
+  text-align: center;
+  font-size: 0.93rem;
+  color: $ink-soft;
+
+  a {
+    font-weight: 600;
+  }
+}
+
+// ── Final CTA ─────────────────────────────────────────────
+.pricing-final {
+  padding: 4.5rem 0;
+  background: linear-gradient(150deg, $accent-700 0%, $accent-800 58%, $neutral-900 100%);
+  color: $neutral-0;
+  text-align: center;
+
+  h2 {
+    font-size: 1.95rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: $neutral-0;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: rgba($neutral-0, 0.78);
+    margin-bottom: 2rem;
+  }
+}
+
+.btn-store--light {
+  background: $neutral-0;
+  color: $accent-800 !important;
+  box-shadow: 0 10px 30px rgba($neutral-900, 0.35);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $accent-100;
+      box-shadow: 0 14px 34px rgba($neutral-900, 0.42);
+    }
+  }
+}
+
+// ── Motion & responsive ───────────────────────────────────
+@media (prefers-reduced-motion: reduce) {
+  .pricing-hero-copy > *,
+  .plan-card {
+    animation: none;
+  }
+
+  .billing-toggle::before,
+  .billing-toggle label,
+  .billing-save,
+  .faq-item summary .bi {
+    transition: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pricing-hero {
+    padding-top: calc(var(--navbar-height, 72px) + 2.5rem);
+  }
+
+  .pricing-final h2 {
+    font-size: 1.6rem;
+  }
+
+  .billing-toggle label {
+    padding: 0.55rem 0.9rem;
+  }
+}

@@ -337,7 +337,8 @@ export const articles = [
     question: "免費試用怎麼運作？",
     keywords: ["試用", "免費", "30 天", "信用卡", "trial"],
     content: [
-      { type: "p", text: "首次安裝起 30 天內可使用全部功能，不需要信用卡、不需要註冊帳號。" },
+      { type: "p", text: "首次安裝起 30 天內可使用 Standard 方案的全部功能，不需要信用卡、不需要註冊帳號。" },
+      { type: "p", text: "員工帳號、權限、操作紀錄與進階報表屬於 Pro 方案，不在試用範圍；需要的話，試用期間就可以直接訂閱 Pro。" },
       { type: "p", text: "試用期間建立的所有資料（商品、訂單、會員）都會完整保留——不論之後是否訂閱，資料都不會被刪除。" },
     ],
     related: ["after-trial", "manage-subscription"],
