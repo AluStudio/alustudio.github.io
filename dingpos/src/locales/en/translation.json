@@ -11,7 +11,7 @@
     "title": "Open your store in 10 minutes. Your data, your control.",
     "description": "DingPOS is a point of sale for iPad. No account, no cloud lock-in, and it keeps working with no internet. Your products, orders, and customers all stay on your own device.",
     "download": "Download on the App Store",
-    "note": "30-day free trial. No credit card required.",
+    "note": "30-day free trial.",
     "shot_alt": "The DingPOS checkout screen: a product grid with category filters on the left, and the cart with automatically applied promotions and the total on the right"
   },
   "proof": {
@@ -140,10 +140,10 @@
   },
   "pricing": {
     "doc_title": "Plans & Pricing",
-    "meta_description": "Compare DingPOS plans for iPad: Lite, Standard and Pro. 30-day free trial, no credit card, no transaction fees, and your data is never deleted.",
+    "meta_description": "Compare DingPOS plans for iPad: Lite, Standard and Pro. 30-day free trial, no transaction fees, and your data is never deleted.",
     "eyebrow": "Plans & pricing",
     "title": "Pick the plan that fits your shop",
-    "subtitle": "Try it free for 30 days — no credit card, no sign-up. Change plans anytime; your data is never deleted.",
+    "subtitle": "Try it free for 30 days — no sign-up. Change plans anytime; your data is never deleted.",
     "billing": {
       "label": "Billing period",
       "monthly": "Monthly",
@@ -212,7 +212,7 @@
     "assurances": {
       "trial": {
         "title": "30-day free trial",
-        "desc": "Every Pro feature included. No credit card, no account."
+        "desc": "Every Pro feature included. No account needed."
       },
       "fees": {
         "title": "No transaction fees",
@@ -353,7 +353,7 @@
       "items": [
         {
           "q": "What can I use during the free trial?",
-          "a": "For 30 days from first install you get every feature, including Pro ones such as staff, permissions and advanced reports — no credit card, no account. Subscribing to any plan during the trial ends the trial right away and switches you to the plan you bought."
+          "a": "For 30 days from first install you get every feature, including Pro ones such as staff, permissions and advanced reports — no account needed. Subscribing to any plan during the trial ends the trial right away and switches you to the plan you bought."
         },
         {
           "q": "What happens if I don't subscribe after the trial?",
@@ -389,7 +389,7 @@
     },
     "final": {
       "title": "Use it for 30 days, then pick a plan",
-      "sub": "Download and start — no credit card, no account.",
+      "sub": "Download and start — no account needed.",
       "cta": "Download on the App Store"
     }
   },
