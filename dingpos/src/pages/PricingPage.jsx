@@ -100,7 +100,7 @@ function PricingPage() {
           <div className="container">
             <h2 className="section-title">{t("pricing.compare.title")}</h2>
             <p className="section-sub">{t("pricing.compare.subtitle")}</p>
-            <CompareTable billing={billing} selectedTier={selectedTier} />
+            <CompareTable billing={billing} selectedTier={selectedTier} onSelect={setSelectedTier} />
           </div>
         </section>
 
@@ -238,7 +238,7 @@ function PlanCard({ plan, billing, selected, onSelect }) {
   );
 }
 
-function CompareTable({ billing, selectedTier }) {
+function CompareTable({ billing, selectedTier, onSelect }) {
   const { t } = useTranslation();
   return (
     <table className="compare-table">
@@ -250,11 +250,18 @@ function CompareTable({ billing, selectedTier }) {
           </th>
           {PLANS.map(({ key, price }) => (
             <th scope="col" key={key} className={key === selectedTier ? "is-selected" : ""}>
-              <span className="compare-plan">{t(`pricing.plans.${key}.name`)}</span>
-              <span className="compare-price">
-                <Price value={(c) => price[c][billing]} />
-                {t(`pricing.unit.${billing === "monthly" ? "month" : "year"}`)}
-              </span>
+              <button
+                type="button"
+                className="compare-select"
+                aria-pressed={key === selectedTier}
+                onClick={() => onSelect(key)}
+              >
+                <span className="compare-plan">{t(`pricing.plans.${key}.name`)}</span>
+                <span className="compare-price">
+                  <Price value={(c) => price[c][billing]} />
+                  {t(`pricing.unit.${billing === "monthly" ? "month" : "year"}`)}
+                </span>
+              </button>
             </th>
           ))}
         </tr>

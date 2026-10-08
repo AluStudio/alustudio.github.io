@@ -394,8 +394,44 @@
     background: rgba($accent-100, 0.45);
   }
 
+  // The plan header is a button filling the whole cell, so the cell drops its padding.
+  thead th:has(.compare-select) {
+    padding: 0;
+  }
+
   thead .is-selected {
     background: rgba(mix($accent-100, $neutral-50, 45%), 0.96);
+  }
+}
+
+.compare-select {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 0.75rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: rgba($accent-100, 0.35);
+    }
+  }
+
+  &[aria-pressed="true"] {
+    cursor: default;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent-400;
+    outline-offset: -2px;
   }
 }
 
@@ -468,6 +504,10 @@ tbody:first-of-type .compare-group th {
     td {
       width: 15%;
     }
+  }
+
+  .compare-select {
+    padding: 0.75rem 0.35rem;
   }
 
   .compare-plan {
@@ -594,6 +634,7 @@ tbody:first-of-type .compare-group th {
   }
 
   .plan-card,
+  .compare-select,
   .compare-table th,
   .compare-table td,
   .billing-toggle::before,
