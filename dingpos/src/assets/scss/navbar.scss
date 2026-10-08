@@ -1,4 +1,6 @@
+@import "bootstrap/scss/functions";
 @import "./variables";
+@import "bootstrap/scss/variables";
 
 .navbar-scroll {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -56,12 +58,17 @@
   }
 }
 
+// The native arrow is pinned to the control's edge and ignores padding, so a
+// drawn chevron replaces it.
 .lang-select {
-  background: transparent;
+  appearance: none;
+  background: transparent
+    escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$ink-mid}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m3 6 5 5 5-5'/></svg>"))
+    no-repeat right 0.6rem center / 0.7rem;
   border: 1px solid rgba($accent-400, 0.4);
   border-radius: 6px;
   font-size: 0.82rem;
-  padding: 0.3rem 1.6rem 0.3rem 0.6rem;
+  padding: 0.3rem 1.8rem 0.3rem 0.6rem;
   color: $ink-mid;
   cursor: pointer;
   outline: none;

@@ -327,8 +327,8 @@ export const articles = [
     question: "How does the free trial work?",
     keywords: ["trial", "free", "30 days", "credit card"],
     content: [
-      { type: "p", text: "You get 30 days of every Standard plan feature from first install — no credit card, no account required." },
-      { type: "p", text: "Staff accounts, permissions, the activity log and advanced reports belong to the Pro plan and aren't part of the trial; you can subscribe to Pro during the trial if you need them." },
+      { type: "p", text: "You get 30 days of every Pro plan feature from first install, including staff accounts, permissions, the activity log and advanced reports — no credit card, no account required." },
+      { type: "p", text: "Subscribing to any plan during the trial ends the trial right away, and the plan you bought applies from then on. After the trial, Pro features such as staff and advanced reports stay available only with a Pro subscription." },
       { type: "p", text: "Everything you create during the trial (products, orders, members) is kept in full. Your data is never deleted, whether or not you subscribe afterwards." },
     ],
     related: ["after-trial", "manage-subscription"],
