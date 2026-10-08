@@ -138,11 +138,13 @@ function LanguagePicker() {
 const formatIndex = (n) => String(n).padStart(2, "0");
 
 // Three long hairline arcs sweeping in from the top-right corner; a linear
-// mask fades each one out so no line has a hard end.
+// mask fades each one out so no line has a hard end. Every path must end past
+// the gradient's 0.88 stop (t = (0.5·(1 − x/1000) + y/600) / 1.25), or its tip
+// shows as a cut line.
 const arcs = [
   "M1000 40C800 90 620 230 520 520",
   "M1000 120C840 170 700 290 640 560",
-  "M880 0C790 120 760 260 790 440",
+  "M880 0C790 120 740 330 760 600",
 ];
 
 function Backdrop() {
@@ -154,7 +156,7 @@ function Backdrop() {
             <stop offset="0" stopColor="#fff" stopOpacity="0" />
             <stop offset="0.25" stopColor="#fff" stopOpacity="1" />
             <stop offset="0.6" stopColor="#fff" stopOpacity="0.45" />
-            <stop offset="1" stopColor="#fff" stopOpacity="0" />
+            <stop offset="0.88" stopColor="#fff" stopOpacity="0" />
           </linearGradient>
           <mask id="arc-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="600">
             <rect width="1000" height="600" fill="url(#arc-fade)" />
