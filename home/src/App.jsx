@@ -10,7 +10,6 @@ const apps = [
     id: "dingpos",
     name: "DingPOS",
     icon: `${base}dingpos-icon.png`,
-    color: "#56688a",
     website: "/dingpos/",
     stores: [
       {
@@ -25,7 +24,6 @@ const apps = [
     id: "sotto",
     name: "Sotto",
     icon: `${base}sotto-icon.png`,
-    color: "#7c8cf8",
     website: "/sotto/",
     stores: [
       {
@@ -46,7 +44,6 @@ const apps = [
     id: "pikgeon",
     name: "Pikgeon",
     icon: `${base}pikgeon-icon.png`,
-    color: "#4aba7a",
     website: "/pikgeon/",
     stores: [
       {
@@ -67,7 +64,6 @@ const apps = [
     id: "babbby",
     name: "Babbby",
     icon: `${base}babbby-icon.png`,
-    color: "#e8a44a",
     website: "/babbby/",
     stores: [
       {
@@ -79,6 +75,59 @@ const apps = [
     ],
   },
 ];
+
+const formatPoint = ([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`;
+
+// An irregular closed curve: a circle whose radius wobbles with a few low
+// harmonics. Neighbouring rings use nearby phases, so the set reads like
+// growth rings or contour lines rather than identical copies.
+function ringPath(cx, cy, radius, phase) {
+  const steps = 36;
+  const points = Array.from({ length: steps }, (_, k) => {
+    const t = (k / steps) * Math.PI * 2;
+    const r =
+      radius *
+      (1 +
+        0.06 * Math.sin(3 * t + phase) +
+        0.035 * Math.sin(5 * t - phase * 1.7) +
+        0.02 * Math.sin(2 * t + phase * 0.5));
+    return [cx + r * Math.cos(t), cy + r * Math.sin(t)];
+  });
+  const midpoint = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+  let d = `M${formatPoint(midpoint(points[steps - 1], points[0]))}`;
+  points.forEach((point, k) => {
+    const next = points[(k + 1) % steps];
+    d += `Q${formatPoint(point)} ${formatPoint(midpoint(point, next))}`;
+  });
+  return `${d}Z`;
+}
+
+const rings = Array.from({ length: 10 }, (_, i) =>
+  ringPath(300 - i * 4, 300 + i * 3, 36 + i * 27, i * 0.32)
+);
+
+const strands = Array.from({ length: 8 }, (_, i) => {
+  const y = 560 - i * 16;
+  return `M-20 ${y}C180 ${y - 30 - i * 4} 300 ${y - 200 - i * 10} 620 ${y - 300 - i * 26}`;
+});
+
+// Abstract botanical backdrop: wash, paper grain, growth rings, flowing strands.
+function Backdrop() {
+  return (
+    <div className="backdrop" aria-hidden="true">
+      <svg className="backdrop__rings" viewBox="0 0 600 600" fill="none">
+        {rings.map((d, i) => (
+          <path key={i} d={d} />
+        ))}
+      </svg>
+      <svg className="backdrop__strands" viewBox="0 0 600 600" fill="none">
+        {strands.map((d, i) => (
+          <path key={i} d={d} />
+        ))}
+      </svg>
+    </div>
+  );
+}
 
 function LanguagePicker() {
   const { i18n } = useTranslation();
@@ -134,7 +183,7 @@ function AppCard({ app }) {
   const { t } = useTranslation();
 
   return (
-    <article className="app-card" data-app-id={app.id} style={{ "--accent": app.color }}>
+    <article className="app-card" data-app-id={app.id}>
       <div className="app-card__header">
         <img
           src={app.icon}
@@ -179,7 +228,7 @@ function App() {
 
   return (
     <div className="page">
-      <div className="ambient-glow" aria-hidden="true" />
+      <Backdrop />
 
       <div className="container">
         {/* Language picker */}
@@ -200,6 +249,7 @@ function App() {
             <i className="bi bi-envelope"></i>
             <span>alustudio14@gmail.com</span>
           </a>
+          <span className="profile__rule" aria-hidden="true" />
         </header>
 
         {/* Apps */}
