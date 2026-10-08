@@ -14,9 +14,8 @@ $line: rgba(47, 74, 52, 0.2);
 $line-strong: rgba(47, 74, 52, 0.42);
 $radius-icon: 14px;
 $font-stack: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-$font-display: "Fraunces", Georgia, "Times New Roman", serif;
+$font-display: "Playfair Display", Georgia, "Times New Roman", serif;
 $font-wordmark: "Yellowtail", "Brush Script MT", cursive;
-$font-app-name: "Playfair Display", Georgia, "Times New Roman", serif;
 $ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 $bp-wide: 900px;
 // Shared by .intro and .entry so the bio lines up with every app description.
@@ -337,6 +336,8 @@ a {
   &__count {
     font-family: $font-display;
     font-style: italic;
+    font-weight: 500;
+    font-variant-numeric: lining-nums;
     font-size: 1rem;
     color: $olive;
   }
@@ -359,6 +360,8 @@ a {
   &__index {
     font-family: $font-display;
     font-style: italic;
+    font-weight: 500;
+    font-variant-numeric: lining-nums;
     font-size: 0.95rem;
     line-height: 1;
     color: $olive;
@@ -399,7 +402,7 @@ a {
   }
 
   &__name {
-    font-family: $font-app-name;
+    font-family: $font-display;
     font-size: 1.65rem;
     font-style: italic;
     font-weight: 500;
