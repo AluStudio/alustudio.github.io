@@ -9,7 +9,7 @@
   "hero": {
     "eyebrow": "iPad POS 收銀系統",
     "title": "10 分鐘開店，資料自己掌控",
-    "description": "DingPOS 是一套不依賴伺服器的 iPad 收銀系統。免帳號、免綁定雲端、沒有網路也能結帳。你的商品、訂單與客戶資料，全都留在自己的裝置裡。",
+    "description": "DingPOS 是一套 iPad 收銀系統。免帳號、免綁定雲端、沒有網路也能結帳。你的商品、訂單與客戶資料，全都留在自己的裝置裡。",
     "download": "App Store 下載",
     "note": "30 天免費試用，無需信用卡。",
     "shot_alt": "DingPOS 收銀台畫面：左側商品網格與分類篩選，右側購物車、自動套用的優惠與結帳金額"
@@ -120,7 +120,7 @@
   "privacy_band": {
     "eyebrow": "備份與隱私",
     "title": "沒有帳號，就沒有人能拿走你的資料",
-    "lead": "DingPOS 不需要註冊、不綁定我們的伺服器。營運資料存在 iPad 本機，要備份的話，備份進你自己的雲端帳號。",
+    "lead": "DingPOS 不需要註冊。營運資料存在 iPad 本機，要備份的話，備份進你自己的雲端帳號。",
     "items": [
       "iCloud、Google Drive、Dropbox 三選一",
       "手動備份，隨時可觸發",
@@ -336,7 +336,7 @@
         },
         "local_data": {
           "name": "資料存在你的 iPad",
-          "desc": "免帳號、免伺服器，營運資料不經過我們"
+          "desc": "免帳號，營運資料不經過我們"
         },
         "backup": {
           "name": "雲端備份與還原",
