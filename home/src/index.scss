@@ -15,6 +15,7 @@ $line-strong: rgba(47, 74, 52, 0.42);
 $radius-icon: 14px;
 $font-stack: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 $font-display: "Fraunces", Georgia, "Times New Roman", serif;
+$font-wordmark: "Yellowtail", "Brush Script MT", cursive;
 $ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 $bp-wide: 900px;
 // Shared by .intro and .entry so the bio lines up with every app description.
@@ -260,12 +261,10 @@ a {
   }
 
   &__title {
-    font-family: $font-display;
+    font-family: $font-wordmark;
     font-size: clamp(3.4rem, 10vw, 7.75rem);
-    font-weight: 300;
-    font-variation-settings: "opsz" 144;
+    font-weight: 400;
     line-height: 0.94;
-    letter-spacing: -0.035em;
     color: $moss;
 
     @media (min-width: $bp-wide) {
