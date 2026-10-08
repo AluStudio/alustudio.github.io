@@ -23,6 +23,7 @@ import { fileURLToPath } from "node:url";
 import { setSelfCanonical, setPageMeta } from "../../scripts/rewrite-seo-tags.mjs";
 import * as zhHant from "../src/data/faq/articles.zh-Hant.js";
 import * as en from "../src/data/faq/articles.en.js";
+import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -47,6 +48,42 @@ const STATIC_ROUTES = [
 ];
 
 // ── FAQ data consistency guard ──────────────────────────────
+const VERSION_PATTERN = /^\d+\.\d+(\.\d+)?$/;
+
+/** Numeric comparison of App Store marketing versions ("2.10" > "2.9"). */
+function compareVersions(a, b) {
+  const pa = a.split(".").map(Number);
+  const pb = b.split(".").map(Number);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const diff = (pa[i] ?? 0) - (pb[i] ?? 0);
+    if (diff !== 0) return diff;
+  }
+  return 0;
+}
+
+/** Rules in src/data/faq/version.js; this checks the mechanical half. */
+function validateFaqVersions(errors) {
+  if (!VERSION_PATTERN.test(VERIFIED_APP_VERSION)) {
+    errors.push(`VERIFIED_APP_VERSION "${VERIFIED_APP_VERSION}" is not a marketing version`);
+    return;
+  }
+  const enSince = new Map(en.articles.map((a) => [a.slug, a.since]));
+  for (const article of zhHant.articles) {
+    const { slug, since } = article;
+    if (enSince.has(slug) && enSince.get(slug) !== since) {
+      errors.push(`article "${slug}" has since "${since}" in zh-Hant but "${enSince.get(slug)}" in en`);
+    }
+    if (since === undefined) continue;
+    if (!VERSION_PATTERN.test(since)) {
+      errors.push(`article "${slug}" has since "${since}", not a marketing version`);
+    } else if (compareVersions(since, VERIFIED_APP_VERSION) > 0) {
+      errors.push(
+        `article "${slug}" is since ${since}, newer than VERIFIED_APP_VERSION ${VERIFIED_APP_VERSION} — unreleased features stay off main`,
+      );
+    }
+  }
+}
+
 function validateFaqPacks() {
   const zhSlugs = zhHant.articles.map((a) => a.slug);
   const enSlugs = en.articles.map((a) => a.slug);
@@ -96,6 +133,8 @@ function validateFaqPacks() {
       errors.push(`sitemap.xml is missing /dingpos/${path}/`);
     }
   }
+
+  validateFaqVersions(errors);
 
   if (errors.length) {
     console.error("FAQ data validation failed:");
