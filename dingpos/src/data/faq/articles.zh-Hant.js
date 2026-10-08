@@ -419,7 +419,7 @@ export const articles = [
     question: "如何建立促銷活動？",
     keywords: ["促銷", "活動", "滿額", "買一送一", "優惠", "折扣碼", "happy hour"],
     content: [
-      { type: "p", text: "到「設定 → 促銷活動」建立。支援的類型包括：" },
+      { type: "p", text: "到「設定 → 優惠活動」建立。支援的類型包括：" },
       {
         type: "list",
         items: [
@@ -612,7 +612,7 @@ export const articles = [
     question: "滿額折扣設定教學",
     keywords: ["滿額", "門檻", "滿千折百", "教學", "設定"],
     content: [
-      { type: "p", text: "到「設定 → 促銷活動 → 新增」，選擇滿額折扣類型，依序完成：" },
+      { type: "p", text: "到「設定 → 優惠活動 → 新增」，選擇滿額折扣類型，依序完成：" },
       {
         type: "steps",
         items: [
@@ -669,7 +669,7 @@ export const articles = [
     question: "會員等級與壽星優惠設定教學",
     keywords: ["會員等級", "壽星", "生日", "vip", "教學"],
     content: [
-      { type: "p", text: "先在「設定 → 會員等級」建立等級（例如金卡），再於促銷的適用對象選擇該等級；壽星優惠則是把條件設為「生日月份」。" },
+      { type: "p", text: "先在「設定 → 會員分級」建立等級（例如金卡），再於促銷的適用對象選擇該等級；壽星優惠則是把條件設為「生日月份」。" },
       {
         type: "list",
         items: [

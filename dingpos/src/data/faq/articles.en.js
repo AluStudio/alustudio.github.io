@@ -448,7 +448,7 @@ export const articles = [
     question: "How do loyalty points work?",
     keywords: ["points", "loyalty", "rewards", "redeem", "welcome points"],
     content: [
-      { type: "p", text: "Go to Settings → Loyalty and define two rules: earn Y points per X spent, and redeem N points for M off (with an optional per-order redemption cap). You can also grant welcome points to new members automatically." },
+      { type: "p", text: "Go to Settings → Loyalty Program and define two rules: earn Y points per X spent, and redeem N points for M off (with an optional per-order redemption cap). You can also grant welcome points to new members automatically." },
       { type: "p", text: "Select the member at checkout and points accrue automatically; to redeem, enter the points to use. Voiding an order takes back the points it earned and refunds any points that were redeemed." },
     ],
     related: ["member-tiers", "void-order"],
