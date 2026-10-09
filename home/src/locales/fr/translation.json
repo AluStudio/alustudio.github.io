@@ -19,12 +19,9 @@
   },
   "dingpos": {
     "tagline": "Caisse pour iPad",
-    "desc": "Ouvrez votre boutique en 10 minutes. Un point de vente sans serveur, offline-first — vos données restent à vous."
+    "desc": "Ouvrez votre boutique en 10 minutes. Un point de vente offline-first — vos données restent à vous."
   },
   "footer": {
     "rights": "Tous droits réservés."
-  },
-  "common": {
-    "website": "Site web"
   }
 }

@@ -14,7 +14,7 @@ $line: rgba(47, 74, 52, 0.2);
 $line-strong: rgba(47, 74, 52, 0.42);
 $radius-icon: 14px;
 $font-stack: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-$font-display: "Fraunces", Georgia, "Times New Roman", serif;
+$font-wordmark: "Yellowtail", "Brush Script MT", cursive;
 $ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 $bp-wide: 900px;
 // Shared by .intro and .entry so the bio lines up with every app description.
@@ -260,12 +260,10 @@ a {
   }
 
   &__title {
-    font-family: $font-display;
+    font-family: $font-wordmark;
     font-size: clamp(3.4rem, 10vw, 7.75rem);
-    font-weight: 300;
-    font-variation-settings: "opsz" 144;
+    font-weight: 400;
     line-height: 0.94;
-    letter-spacing: -0.035em;
     color: $moss;
 
     @media (min-width: $bp-wide) {
@@ -335,19 +333,48 @@ a {
   }
 
   &__count {
-    font-family: $font-display;
-    font-style: italic;
-    font-size: 1rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.9rem;
     color: $olive;
   }
 }
 
 // ─── Entry (one app) ────────────────────────────────────────────
+// The whole entry links to the app's site: .entry__link stretches over it
+// (no nested anchors), store links sit above that layer, and ::before is
+// the hover/focus surface behind the content.
 .entry {
+  position: relative;
+  isolation: isolate;
   display: grid;
   gap: 18px;
   padding: 32px 0 34px;
   border-bottom: 1px solid $line;
+
+  &::before,
+  &__link::after {
+    content: "";
+    position: absolute;
+    inset: 14px -12px;
+    border-radius: 18px;
+
+    @media (min-width: $bp-wide) {
+      inset: 18px -20px 18px calc(56px + #{$grid-gap-wide} - 20px);
+    }
+  }
+
+  &::before {
+    z-index: -1;
+    background: rgba($moss, 0.06);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &:has(&__link:focus-visible)::before {
+    opacity: 1;
+    outline: 2px solid $moss;
+  }
 
   @media (min-width: $bp-wide) {
     grid-template-columns: $grid-wide;
@@ -357,9 +384,9 @@ a {
   }
 
   &__index {
-    font-family: $font-display;
-    font-style: italic;
-    font-size: 0.95rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.9rem;
     line-height: 1;
     color: $olive;
 
@@ -399,14 +426,35 @@ a {
   }
 
   &__name {
-    font-family: $font-display;
-    font-size: 1.65rem;
-    font-weight: 400;
-    font-variation-settings: "opsz" 48;
-    letter-spacing: -0.015em;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
     line-height: 1.15;
     color: $ink;
     margin-bottom: 4px;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    // The entry surface takes over the focus ring only where :has() can draw it.
+    @supports selector(:has(a)) {
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  &__arrow {
+    font-size: 0.85rem;
+    color: $ink-muted;
+    transition:
+      color 0.2s ease,
+      transform 0.25s $ease-out;
   }
 
   &__tagline {
@@ -432,14 +480,25 @@ a {
   }
 
   @media (hover: hover) and (pointer: fine) {
+    &:hover::before {
+      opacity: 1;
+    }
+
     &:hover &__icon {
       transform: translateY(-3px);
+    }
+
+    &:hover &__arrow {
+      color: $moss;
+      transform: translate(2px, -2px);
     }
   }
 }
 
 // ─── Links ──────────────────────────────────────────────────────
 .store-link {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -471,34 +530,6 @@ a {
 
   &:active {
     transform: scale(0.97);
-  }
-}
-
-.site-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 44px;
-  padding: 0 8px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: $ink-muted;
-  text-decoration: none;
-  transition: color 0.2s ease;
-
-  .bi {
-    font-size: 0.72rem;
-    transition: transform 0.25s $ease-out;
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      color: $moss;
-
-      .bi {
-        transform: translate(2px, -2px);
-      }
-    }
   }
 }
 
@@ -568,9 +599,10 @@ a {
     animation: fade 0.3s ease both;
   }
 
+  .entry::before,
   .entry__icon,
+  .entry__arrow,
   .store-link,
-  .site-link .bi,
   .intro__contact .bi {
     transition: none;
   }

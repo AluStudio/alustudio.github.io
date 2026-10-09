@@ -80,13 +80,18 @@ function LanguagePicker() {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
+  const toggleRef = useRef(null);
 
   useEffect(() => {
     const handlePointer = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setOpen(false);
     };
     const handleKey = (e) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key !== "Escape") return;
+      if (ref.current?.contains(document.activeElement)) {
+        toggleRef.current?.focus();
+      }
+      setOpen(false);
     };
     document.addEventListener("pointerdown", handlePointer);
     document.addEventListener("keydown", handleKey);
@@ -103,6 +108,7 @@ function LanguagePicker() {
   return (
     <div className="lang-picker" ref={ref}>
       <button
+        ref={toggleRef}
         className="lang-picker__toggle"
         onClick={() => setOpen((v) => !v)}
         aria-label="Change language"
@@ -122,6 +128,7 @@ function LanguagePicker() {
                 }`}
                 onClick={() => {
                   i18n.changeLanguage(lang.code);
+                  toggleRef.current?.focus();
                   setOpen(false);
                 }}
               >
@@ -190,7 +197,12 @@ function AppEntry({ app, index }) {
           loading="lazy"
         />
         <div className="entry__title">
-          <h2 className="entry__name">{app.name}</h2>
+          <h2 className="entry__name">
+            <a href={app.website} className="entry__link">
+              {app.name}
+            </a>
+            <i className="bi bi-arrow-up-right entry__arrow" aria-hidden="true"></i>
+          </h2>
           <p className="entry__tagline">{t(`${app.id}.tagline`)}</p>
         </div>
       </div>
@@ -209,10 +221,6 @@ function AppEntry({ app, index }) {
               <span>{store.label}</span>
             </a>
           ))}
-          <a href={app.website} className="site-link">
-            <span>{t("common.website")}</span>
-            <i className="bi bi-arrow-up-right"></i>
-          </a>
         </div>
       </div>
     </article>

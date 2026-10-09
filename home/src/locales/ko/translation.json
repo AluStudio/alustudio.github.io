@@ -19,12 +19,9 @@
   },
   "dingpos": {
     "tagline": "iPad용 POS",
-    "desc": "10분 만에 매장 오픈. 서버리스, 오프라인 우선 POS — 데이터는 온전히 당신의 것."
+    "desc": "10분 만에 매장 오픈. 오프라인 우선 POS — 데이터는 온전히 당신의 것."
   },
   "footer": {
     "rights": "All rights reserved."
-  },
-  "common": {
-    "website": "공식 웹사이트"
   }
 }
