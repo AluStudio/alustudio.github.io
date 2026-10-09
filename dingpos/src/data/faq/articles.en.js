@@ -11,6 +11,7 @@ export const categories = [
   { key: "reports", icon: "bi-bar-chart-line", label: "Reports", group: "faq" },
   { key: "promotion", icon: "bi-tags", label: "Promotions & Loyalty", group: "faq" },
   { key: "backup", icon: "bi-cloud-check", label: "Backup & Data", group: "faq" },
+  { key: "staff", icon: "bi-people", label: "Staff & Permissions", group: "faq" },
   { key: "subscription", icon: "bi-credit-card", label: "Subscription & Billing", group: "faq" },
   { key: "promotion-guide", icon: "bi-mortarboard", label: "Promotion Setup Guides", group: "guide" },
   { key: "roadmap", icon: "bi-signpost-split", label: "Coming Soon", group: "roadmap", standalone: true },
@@ -342,7 +343,7 @@ export const articles = [
       {
         type: "steps",
         items: [
-          "Tap New Purchase, pick the supplier, and add the products, quantities, and unit costs (pre-filled with each product's current cost). A shipping fee can be added too.",
+          "Tap New Purchase, pick the supplier, and add the products, quantities, and unit costs (pre-filled with each product's current cost). A shipping fee can be added too. If the supplier isn't set up yet, tap Add Supplier at the top left of the supplier list — the new supplier comes straight back into the purchase order.",
           "A draft never touches stock or payables — edit or delete it freely.",
           "When the goods arrive, tap Receive Stock: tracked stock goes up, and the purchase order gets its number and locks. By default receiving also updates each product's cost to this unit cost; turn off Sync Product Cost on the purchase order to keep costs unchanged.",
         ],
@@ -383,9 +384,33 @@ export const articles = [
       { type: "p", text: "Pick Today, Yesterday, This Week, This Month, This Year, or All Time at the top of Stats, or use Custom to choose a start and end date. This Week follows the device's first day of the week; This Month and This Year start on the 1st and on January 1. Each option shows the dates it covers, and All Time starts from your store's first transaction." },
       { type: "p", text: "For a single day, the trend chart becomes an hourly bar chart; longer periods use days, weeks, months, or years per bar depending on length." },
       { type: "p", text: "The Product Ranking card lists the top 5. Tap the card or View All to list every product sold in the period, ranked by quantity after returns." },
-      { type: "note", text: "Versions before 2.4 offered rolling ranges (Today / 7 Days / 30 Days / All Time). If you still see those, update DingPOS from the App Store." },
+      { type: "p", text: "On the Pro plan, Sales comparison on the right of the period bar compares the period with the one before it or with the same period last year — see “What do the Pro advanced reports show?”" },
+      { type: "note", text: "These calendar periods arrived in 2.4; earlier versions offered rolling ranges (Today / 7 Days / 30 Days / All Time). If you still see those, update DingPOS from the App Store." },
     ],
-    related: ["revenue-vs-cash", "profit-not-tracked"],
+    related: ["advanced-reports", "revenue-vs-cash", "profit-not-tracked"],
+  },
+  {
+    slug: "advanced-reports",
+    category: "reports",
+    since: "3.0",
+    question: "What do the Pro advanced reports show?",
+    keywords: ["advanced reports", "pro", "sales comparison", "last year", "heatmap", "busy hours", "slow movers", "stock value", "repeat rate", "points"],
+    content: [
+      { type: "p", text: "Advanced reports aren't a separate screen — they sit right on Stats and follow the period you pick at the top:" },
+      {
+        type: "list",
+        items: [
+          "Sales comparison: on the right of the period bar, compare with the same period last year or with the period before (a single day against the same day last week, this week against last week, this month against last month, this year against last year, a custom range against the same number of days before it). The Cash Received tile shows the difference and growth rate, and the revenue chart adds a lighter line for the comparison period. While a period is still running, the comparison period is cut at the same moment.",
+          "Weekday × hour: switch the Sales over time header to Weekday × hour for a seven-day, 24-hour heatmap — the darker a cell, the more you sold. Switch between revenue and orders; with a comparison on, see which hours grew and which shrank.",
+          "Slow Movers: switch the ranking card's header to Slow Movers to list products from fewest sales to most, with current stock and the last date each one sold. Products that never sold are marked Never sold. Only products in stock are shown by default.",
+          "Repeat rate: the last line of the customers tile is the share of members who bought in the period and have bought two or more times in total.",
+          "Right now: stock value (current stock × current cost), every stock movement in the selected period, and the points customers hold but haven't redeemed, with the most they can take off. These are current balances; the period doesn't change them.",
+        ],
+      },
+      { type: "p", text: "Without Pro, each of these five spots carries a small lock that opens an upgrade explanation; everything else on Stats works as before. The reports read data your store already keeps, so when Pro ends only the reports are hidden — no data is lost." },
+      { type: "note", text: "Staff see advanced reports under the Dashboard permission; the stock value amounts also need the Cost & profit permission." },
+    ],
+    related: ["report-periods", "inventory-tracking", "staff-permissions"],
   },
   {
     slug: "profit-not-tracked",
@@ -472,11 +497,11 @@ export const articles = [
     question: "How do I back up my data?",
     keywords: ["backup", "icloud", "google drive", "dropbox", "cloud", "snapshot"],
     content: [
-      { type: "p", text: "Go to Settings → Cloud Backup, pick one of iCloud, Google Drive, or Dropbox, and authorize it. After that you can trigger a backup manually anytime." },
+      { type: "p", text: "Go to Settings → Cloud Backup, pick one of iCloud, Google Drive, or Dropbox, and authorize it. After that you can trigger a backup manually anytime. For iCloud, this iPad must be signed in to iCloud with iCloud Drive turned on and DingPOS allowed to use it." },
       { type: "p", text: "Backups go into your own cloud account. Each cloud keeps only the latest one — one data snapshot and one file of product photos — and every backup overwrites the previous one." },
       { type: "note", text: "Because a new backup replaces the old one, if you suspect your data has already gone wrong (say, a batch of products deleted by mistake), don't back up yet — email us and we'll work out the next step together." },
     ],
-    related: ["transfer-new-ipad", "data-after-delete"],
+    related: ["transfer-new-ipad", "undo-restore", "data-after-delete"],
   },
   {
     slug: "transfer-new-ipad",
@@ -492,10 +517,10 @@ export const articles = [
           "New iPad: go to Settings → Cloud Backup, connect the same cloud account, and restore.",
         ],
       },
-      { type: "p", text: "Before restoring, DingPOS validates the backup's integrity and only replaces local data once the backup is confirmed usable. Product photos are restored too." },
-      { type: "note", text: "A restore replaces all data on this iPad with the backup — orders created on this iPad after that backup will be gone. Make sure you're connected to the right cloud account." },
+      { type: "p", text: "Tapping Restore first opens a preview: this iPad's and the snapshot's product, order, and customer counts side by side, plus every order the restore would remove. Nothing on this iPad changes until you confirm. A snapshot made by a newer version of DingPOS asks you to update the app first. Product photos are restored too." },
+      { type: "note", text: "A restore replaces all data on this iPad with the backup — orders created on this iPad after that backup will be gone. Make sure you're connected to the right cloud account; if you restore the wrong one, use Undo Restore." },
     ],
-    related: ["backup-data", "data-after-delete"],
+    related: ["backup-data", "undo-restore", "data-after-delete"],
   },
   {
     slug: "data-after-delete",
@@ -549,6 +574,93 @@ export const articles = [
     ],
     related: ["backup-data", "transfer-new-ipad", "product-variants"],
   },
+  {
+    slug: "undo-restore",
+    category: "backup",
+    since: "3.0",
+    question: "I restored the wrong backup. Can I undo it?",
+    keywords: ["undo restore", "restore", "wrong snapshot", "restore records", "lost data", "revert"],
+    content: [
+      { type: "p", text: "Yes. Every cloud restore keeps the data it replaced as a pre-restore copy. In Settings → Cloud Backup, a card shows when the last restore happened and where it came from. Tap Undo Restore, review the preview, and confirm — the data switches back to how it was before the restore and the app reloads." },
+      {
+        type: "list",
+        items: [
+          "Undo Restore is itself a restore and keeps another copy of what it replaces, so tapping it again switches back.",
+          "Only the latest copy is kept; the next restore replaces it.",
+          "Only data comes back: products added after the snapshot show a missing image.",
+        ],
+      },
+      { type: "p", text: "To see who restored, when, and from which snapshot, tap View restore records on the same screen: each restore's time, operator, source, product / order / customer counts before and after, and every order it removed. Records live on this iPad and are never replaced by a restore." },
+      { type: "note", text: "The restore preview and Undo Restore work on every plan; viewing restore records is a Pro feature. Records are written without Pro too (just without an operator), so subscribing to Pro later shows them all." },
+    ],
+    related: ["transfer-new-ipad", "backup-data", "activity-log"],
+  },
+
+  // ── Staff & Permissions ───────────────────────────────────────────
+  {
+    slug: "staff-accounts",
+    category: "staff",
+    since: "3.0",
+    question: "How do I add staff and switch who's at the register?",
+    keywords: ["staff", "employee", "manager", "account", "pin", "operator", "switch", "shift", "cashier"],
+    content: [
+      { type: "p", text: "Tap Staff in the sidebar. The first time, set up the owner: a name and a 4-digit PIN. Adding staff and changing permissions both need this PIN, so remember it — it can't be reset." },
+      {
+        type: "steps",
+        items: [
+          "On the Staff page, tap Add staff, enter a name, pick a role (Manager or Staff), and set a 4-digit PIN.",
+          "The current operator shows at the bottom of the sidebar and the top right of checkout. At a shift change, tap it, pick your name, and enter your PIN.",
+          "From then on every order, payment, and stock or points movement records who handled it, visible in the order list and detail; voided orders also record who voided them.",
+        ],
+      },
+      { type: "p", text: "When someone leaves, use Deactivate this staff member: their history stays intact, and you can reactivate them later. Renaming doesn't touch old orders — they keep the name at the time." },
+      { type: "note", text: "Staff is a Pro feature (also available during the trial). If Pro ends, staff data and every order's handler are kept and new orders are recorded under the owner; subscribing to Pro again brings it all back." },
+    ],
+    related: ["staff-permissions", "activity-log", "free-trial"],
+  },
+  {
+    slug: "staff-permissions",
+    category: "staff",
+    since: "3.0",
+    question: "How do staff permissions and manager approvals work?",
+    keywords: ["permissions", "approval", "manager", "discount cap", "staff", "cost", "role"],
+    content: [
+      { type: "p", text: "A permission has two values: Allowed or Needs approval — nothing is flatly forbidden. When staff hit an action that needs approval, a colleague who is allowed to do it picks their name and enters their PIN to let it through." },
+      {
+        type: "list",
+        items: [
+          "Actions (manual stock adjustment, product management, checking out above the discount cap): one approval covers that one action.",
+          "Views (cost & profit, Stats, Settings, backup & restore): an approval unlocks until the operator changes or the app goes to the background.",
+          "The discount cap applies to manual discounts and is checked once at checkout; automatic promotions and points redemption don't count against it.",
+        ],
+      },
+      { type: "p", text: "Factory defaults: Managers are allowed everything except backup & restore, with no discount cap; Staff need approval for everything, with a 10% cap. The owner is always allowed and can't be edited. To change it, go to Staff → Role permissions, tap Edit, and save once — it applies to everyone immediately." },
+      { type: "note", text: "Voids, returns, on-account sales, and purchasing deliberately have no permission; they only record who handled them. To review them later, use the activity log." },
+    ],
+    related: ["staff-accounts", "activity-log", "apply-discounts"],
+  },
+  {
+    slug: "activity-log",
+    category: "staff",
+    since: "3.0",
+    question: "How do I see who voided an order, adjusted stock, or changed a price?",
+    keywords: ["activity log", "audit", "who changed", "void", "price change", "stock adjustment", "deleted product", "approvals", "log"],
+    content: [
+      { type: "p", text: "Use the activity log. On the Staff page, tap Activity log at the top right and enter the owner PIN to see the store's sensitive actions, newest first: voids, returns, manual stock adjustments, approvals, staff and permission changes, owner PIN changes, product price and cost changes, and product deletions. Ordinary checkouts aren't listed." },
+      {
+        type: "list",
+        items: [
+          "Each entry shows what it touched, who did what and when, and the result — for example “M price $390 → $350”.",
+          "Filter by staff member (deactivated ones included), action type, and Today / This Week / This Month.",
+          "Tap an entry that points to an order, product, or customer to open its detail.",
+          "Order detail, product detail, and each staff member's page have their own entry listing only the records about them.",
+          "Deleted products still show their name and price at the time in the log.",
+        ],
+      },
+      { type: "note", text: "Every plan records; only viewing is a Pro feature, so records from while Pro had lapsed show up once you subscribe again. The log travels with your cloud backups." },
+    ],
+    related: ["staff-accounts", "staff-permissions", "undo-restore"],
+  },
 
   // ── Subscription & Billing ──────────────────────────────────
   {
@@ -586,6 +698,7 @@ export const articles = [
         items: [
           "Cancel: manage it in your device's Settings → Apple Account → Subscriptions. Cancel at least 24 hours before the current period ends to avoid renewal.",
           "Restore: after switching devices or reinstalling, tap \"Restore Purchase\" on DingPOS's subscription page.",
+          "Change plans: pick the new plan on DingPOS's subscription page. Upgrades (Standard to Pro, monthly to annual) take effect immediately, with Apple prorating the difference; downgrades take effect at renewal.",
         ],
       },
     ],
