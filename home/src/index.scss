@@ -441,8 +441,11 @@ a {
     color: inherit;
     text-decoration: none;
 
-    &:focus-visible {
-      outline: none;
+    // The entry surface takes over the focus ring only where :has() can draw it.
+    @supports selector(:has(a)) {
+      &:focus-visible {
+        outline: none;
+      }
     }
   }
 

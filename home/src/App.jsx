@@ -80,13 +80,18 @@ function LanguagePicker() {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
+  const toggleRef = useRef(null);
 
   useEffect(() => {
     const handlePointer = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setOpen(false);
     };
     const handleKey = (e) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key !== "Escape") return;
+      if (ref.current?.contains(document.activeElement)) {
+        toggleRef.current?.focus();
+      }
+      setOpen(false);
     };
     document.addEventListener("pointerdown", handlePointer);
     document.addEventListener("keydown", handleKey);
@@ -103,6 +108,7 @@ function LanguagePicker() {
   return (
     <div className="lang-picker" ref={ref}>
       <button
+        ref={toggleRef}
         className="lang-picker__toggle"
         onClick={() => setOpen((v) => !v)}
         aria-label="Change language"
@@ -122,6 +128,7 @@ function LanguagePicker() {
                 }`}
                 onClick={() => {
                   i18n.changeLanguage(lang.code);
+                  toggleRef.current?.focus();
                   setOpen(false);
                 }}
               >
