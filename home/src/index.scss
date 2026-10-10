@@ -261,9 +261,10 @@ a {
 
   &__title {
     font-family: $font-wordmark;
-    font-size: clamp(3.4rem, 10vw, 7.75rem);
+    font-size: clamp(3.4rem, 10vw, 7rem);
     font-weight: 400;
     line-height: 0.94;
+    white-space: nowrap;
     color: $moss;
 
     @media (min-width: $bp-wide) {
