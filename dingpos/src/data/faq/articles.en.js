@@ -83,6 +83,18 @@ export const articles = [
     ],
     related: ["tax-calculation", "how-to-set-up"],
   },
+  {
+    slug: "app-language",
+    category: "getting-started",
+    since: "3.0",
+    question: "How do I change the app's language?",
+    keywords: ["language", "english", "chinese", "switch", "locale"],
+    content: [
+      { type: "p", text: "DingPOS supports English and Traditional Chinese. Go to Settings → Device Preferences and tap App Language. It opens DingPOS's page in the iPad's Settings app, where you pick the language under Language." },
+      { type: "p", text: "iOS doesn't let apps open the language list directly, so the last tap happens in system Settings. The language applies to this iPad only." },
+    ],
+    related: ["checkout-sound", "supported-devices"],
+  },
 
   // ── Checkout ────────────────────────────────────────────────
   {
@@ -144,6 +156,18 @@ export const articles = [
       { type: "p", text: "For a regular who takes the goods now and pays later, choose On Account: the sale is recorded as a receivable and settled when the money arrives. See “Can regulars buy on account and pay later?”" },
     ],
     related: ["on-account", "roadmap-payment-integration", "multiple-carts"],
+  },
+  {
+    slug: "checkout-sound",
+    category: "checkout",
+    since: "3.0",
+    question: "Can I turn off the “Ding” after checkout?",
+    keywords: ["sound", "ding", "mute", "silent", "checkout sound"],
+    content: [
+      { type: "p", text: "Yes. Go to Settings → Device Preferences and turn off Checkout sound. From the next sale on, the success screen stays silent, with the haptic tap still there." },
+      { type: "p", text: "The switch applies to this iPad only, and restoring a cloud backup doesn't change it." },
+    ],
+    related: ["app-language", "multiple-carts"],
   },
   {
     slug: "price-change-cart",
@@ -504,6 +528,27 @@ export const articles = [
     related: ["transfer-new-ipad", "undo-restore", "data-after-delete"],
   },
   {
+    slug: "icloud-not-connected",
+    category: "backup",
+    since: "3.0",
+    question: "iCloud backup says “Not connected” — what do I do?",
+    keywords: ["icloud", "not connected", "icloud drive", "backup failed", "can't connect"],
+    content: [
+      { type: "p", text: "DingPOS shows iCloud as connected only when it can actually use it. When it says Not connected, check three things in the iPad's Settings app:" },
+      {
+        type: "steps",
+        items: [
+          "You're signed in to your Apple Account.",
+          "iCloud Drive is turned on.",
+          "DingPOS is allowed to use iCloud Drive.",
+        ],
+      },
+      { type: "p", text: "Once all three are on, go back to Cloud Backup in DingPOS and iCloud shows as connected. Backups are stored in DingPOS's own folder in iCloud Drive." },
+      { type: "note", text: "In versions before 3.0, iCloud backup didn't work and failed every time with “Backup.SyncError error 0”. Update DingPOS from the App Store first." },
+    ],
+    related: ["backup-data", "transfer-new-ipad"],
+  },
+  {
     slug: "transfer-new-ipad",
     category: "backup",
     question: "How do I move my data to a new iPad?",
@@ -532,6 +577,19 @@ export const articles = [
       { type: "note", text: "Before deleting the app, always run a manual backup and confirm it succeeded. After reinstalling, restore from the cloud." },
     ],
     related: ["backup-data", "transfer-new-ipad"],
+  },
+  {
+    slug: "launch-failure",
+    category: "backup",
+    since: "3.0",
+    question: "The app opens to “Couldn't Open Your Store Data” — what now?",
+    keywords: ["couldn't open", "won't open", "crash", "crashes on launch", "database", "store data"],
+    content: [
+      { type: "p", text: "Don't delete the app. This screen means DingPOS couldn't read your store data, but the data is still on this iPad — deleting the app deletes it along with the app." },
+      { type: "p", text: "Tap Retry first; if it works, the app opens as usual. If it keeps happening, tap Contact Support and tell us, and we'll help you recover your data. This screen never moves or deletes any files." },
+      { type: "note", text: "The most common cause is the app being closed in the middle of a restore. Before 3.0, this made the app crash on every launch; since 3.0 it stops on this screen instead." },
+    ],
+    related: ["data-after-delete", "undo-restore"],
   },
   {
     slug: "multi-device",
@@ -619,6 +677,20 @@ export const articles = [
     related: ["staff-permissions", "activity-log", "free-trial"],
   },
   {
+    slug: "owner-pin-forgotten",
+    category: "staff",
+    since: "3.0",
+    question: "What if I forget the owner PIN?",
+    keywords: ["pin", "forgot", "password", "reset", "owner", "recover", "locked out"],
+    content: [
+      { type: "p", text: "The owner PIN can't be reset, and our support team has no way to unlock it either. The PIN is stored with your store data, so deleting and reinstalling the app, then restoring from the cloud, brings back the same PIN." },
+      { type: "p", text: "Creating the owner and every owner PIN change show the warning “Remember this PIN. If you forget it, it can't be reset.” Keep it somewhere only you can reach." },
+      { type: "p", text: "Without the owner PIN, anything that needs it stays out of reach — adding or editing staff, changing role permissions, and viewing the activity log. Staff can keep checking out and doing daily work with their own PINs." },
+      { type: "note", text: "If a staff member forgets their PIN, that's fine: the owner can reset it in Staff." },
+    ],
+    related: ["staff-accounts", "staff-permissions"],
+  },
+  {
     slug: "staff-permissions",
     category: "staff",
     since: "3.0",
@@ -685,6 +757,27 @@ export const articles = [
       { type: "p", text: "Subscribe at any time and checkout unlocks immediately, with all your data exactly as you left it." },
     ],
     related: ["free-trial", "manage-subscription"],
+  },
+  {
+    slug: "plans-compare",
+    category: "subscription",
+    since: "3.0",
+    question: "What's the difference between Lite, Standard, and Pro?",
+    keywords: ["plans", "lite", "standard", "pro", "difference", "compare", "upgrade", "downgrade", "pricing"],
+    content: [
+      { type: "p", text: "All three plans include full checkout, products, orders (with voids, returns, and exchanges), reports, and cloud backup. They differ in the tools for running the shop:" },
+      {
+        type: "list",
+        items: [
+          "Lite: for one person running a stall who needs checkout and products.",
+          "Standard: adds promotions, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, and pre-orders.",
+          "Pro: adds staff accounts and permissions, manager approval, the activity log, restore records, and advanced reports — for shops with staff.",
+        ],
+      },
+      { type: "p", text: "Already on Standard? Upgrade to Pro from the subscription page: billing stays on the same cycle, the upgrade takes effect immediately, and Apple prorates the difference. Moving from Pro back to Standard takes effect at renewal. Prices are shown in the app, and you can compare plans on our Pricing page." },
+      { type: "note", text: "Downgrading never deletes data. Features beyond your plan pause, the data stays, and subscribing again brings them back." },
+    ],
+    related: ["manage-subscription", "free-trial", "staff-accounts"],
   },
   {
     slug: "manage-subscription",

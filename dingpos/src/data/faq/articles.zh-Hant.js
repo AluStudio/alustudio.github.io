@@ -96,6 +96,18 @@ export const articles = [
     ],
     related: ["tax-calculation", "how-to-set-up"],
   },
+  {
+    slug: "app-language",
+    category: "getting-started",
+    since: "3.0",
+    question: "怎麼切換 App 的語言？",
+    keywords: ["語言", "英文", "中文", "切換", "language"],
+    content: [
+      { type: "p", text: "DingPOS 支援繁體中文與英文。到「設定 → 本機偏好設定」點「App 語言」，會打開 iPad「設定」裡 DingPOS 的頁面，在「語言」選擇中文或英文即可。" },
+      { type: "p", text: "iOS 不允許 App 直接打開語言清單，所以要在系統設定裡再點一次。語言只套用在這台 iPad。" },
+    ],
+    related: ["checkout-sound", "supported-devices"],
+  },
 
   // ── 收銀結帳 ────────────────────────────────────────────────
   {
@@ -157,6 +169,18 @@ export const articles = [
       { type: "p", text: "熟客想先把東西帶走、之後再付，可以選「掛帳」：這筆會記成未收帳款，等收到錢再結清。詳見「熟客可以先掛帳、之後再付嗎？」。" },
     ],
     related: ["on-account", "roadmap-payment-integration", "multiple-carts"],
+  },
+  {
+    slug: "checkout-sound",
+    category: "checkout",
+    since: "3.0",
+    question: "可以關掉結帳完成的「叮」一聲嗎？",
+    keywords: ["音效", "叮", "聲音", "靜音", "關掉", "結帳", "sound"],
+    content: [
+      { type: "p", text: "可以。到「設定 → 本機偏好設定」關掉「結帳完成音效」，下一筆結帳就不會再發出叮聲，但仍然會有震動回饋。" },
+      { type: "p", text: "這個開關只套用在這台 iPad，從雲端備份還原也不會改變它。" },
+    ],
+    related: ["app-language", "multiple-carts"],
   },
   {
     slug: "price-change-cart",
@@ -517,6 +541,27 @@ export const articles = [
     related: ["transfer-new-ipad", "undo-restore", "data-after-delete"],
   },
   {
+    slug: "icloud-not-connected",
+    category: "backup",
+    since: "3.0",
+    question: "iCloud 備份顯示「未連線」怎麼辦？",
+    keywords: ["icloud", "未連線", "連不上", "icloud 雲碟", "icloud drive", "備份失敗"],
+    content: [
+      { type: "p", text: "DingPOS 只有在 iCloud 真的能用時，才會顯示為已連線。顯示「未連線」時，請到 iPad 的「設定」確認三件事：" },
+      {
+        type: "steps",
+        items: [
+          "已經登入 Apple 帳號。",
+          "iCloud 雲碟（iCloud Drive）已開啟。",
+          "iCloud 雲碟允許 DingPOS 使用。",
+        ],
+      },
+      { type: "p", text: "都開好之後回到 DingPOS 的「雲端備份」，iCloud 就會顯示為已連線。備份會存在 iCloud 雲碟裡 DingPOS 自己的資料夾。" },
+      { type: "note", text: "3.0 以前的版本 iCloud 備份無法使用，每次都會出現「Backup.SyncError 錯誤 0」。請先到 App Store 更新 DingPOS。" },
+    ],
+    related: ["backup-data", "transfer-new-ipad"],
+  },
+  {
     slug: "transfer-new-ipad",
     category: "backup",
     question: "換新 iPad 怎麼轉移資料？",
@@ -545,6 +590,19 @@ export const articles = [
       { type: "note", text: "刪除 App 前，請務必先手動執行一次備份並確認成功。重新安裝後即可從雲端還原。" },
     ],
     related: ["backup-data", "transfer-new-ipad"],
+  },
+  {
+    slug: "launch-failure",
+    category: "backup",
+    since: "3.0",
+    question: "App 開啟時顯示「無法開啟店家資料」怎麼辦？",
+    keywords: ["無法開啟", "打不開", "閃退", "當機", "資料庫", "開不了", "店家資料", "crash"],
+    content: [
+      { type: "p", text: "請不要刪除 App。這個畫面代表 App 讀不到店裡的資料，但資料仍然保存在這台 iPad 上；刪除 App 會連同資料一起刪掉。" },
+      { type: "p", text: "先按「重試」，成功就會照常進入 App。如果還是一樣，按「聯絡客服」告訴我們，我們會協助找回資料。這個畫面本身不會搬動或刪除任何檔案。" },
+      { type: "note", text: "最常見的原因是還原到一半時 App 被關掉。3.0 以前的版本遇到這種情況會一開就閃退；更新到 3.0 之後，會改停在這個說明畫面。" },
+    ],
+    related: ["data-after-delete", "undo-restore"],
   },
   {
     slug: "multi-device",
@@ -632,6 +690,20 @@ export const articles = [
     related: ["staff-permissions", "activity-log", "free-trial"],
   },
   {
+    slug: "owner-pin-forgotten",
+    category: "staff",
+    since: "3.0",
+    question: "忘記店主 PIN 怎麼辦？",
+    keywords: ["pin", "忘記", "密碼", "重設", "店主", "找回", "解鎖"],
+    content: [
+      { type: "p", text: "店主 PIN 無法重設，我們的客服也沒有辦法幫你解開。PIN 和店裡的資料存在一起，所以刪掉 App 重新安裝、再從雲端還原，也會帶回同一組 PIN。" },
+      { type: "p", text: "建立店主和每次更改店主 PIN 時，畫面都會提醒「請記住這組 PIN。忘記將無法重設。」建議把它記在只有你拿得到的地方。" },
+      { type: "p", text: "忘記店主 PIN 之後，需要店主 PIN 的操作就無法進行，例如新增或修改員工、修改角色權限、查看操作紀錄。員工仍然可以用自己的 PIN 繼續結帳與處理日常工作。" },
+      { type: "note", text: "員工忘記自己的 PIN 沒關係：店主可以在「員工」幫他重設。" },
+    ],
+    related: ["staff-accounts", "staff-permissions"],
+  },
+  {
     slug: "staff-permissions",
     category: "staff",
     since: "3.0",
@@ -698,6 +770,27 @@ export const articles = [
       { type: "p", text: "任何時候訂閱，都能立即恢復結帳功能，所有資料原封不動。" },
     ],
     related: ["free-trial", "manage-subscription"],
+  },
+  {
+    slug: "plans-compare",
+    category: "subscription",
+    since: "3.0",
+    question: "Lite、Standard、Pro 方案差在哪？",
+    keywords: ["方案", "lite", "standard", "pro", "差別", "比較", "升級", "降級", "價格"],
+    content: [
+      { type: "p", text: "三個方案都有完整的結帳、商品、訂單（含作廢與退換貨）、報表與雲端備份，差別在經營工具：" },
+      {
+        type: "list",
+        items: [
+          "Lite：適合一個人顧攤，只需要結帳與商品管理。",
+          "Standard：再加上促銷、會員點數與等級、庫存追蹤、進貨、掛帳與預購。",
+          "Pro：再加上員工與權限、主管核准、操作紀錄、還原紀錄與進階報表，適合有員工的店。",
+        ],
+      },
+      { type: "p", text: "已經訂閱 Standard，可以在訂閱頁直接升級到 Pro：付款週期與目前相同，升級立即生效，差額由 Apple 按比例計算。從 Pro 改回 Standard，則在續訂日生效。價格以 App 內顯示為準，也可以到官網的「價格」頁比較。" },
+      { type: "note", text: "降級不會刪除任何資料。超出方案的功能會停用，資料保留，重新訂閱就恢復。" },
+    ],
+    related: ["manage-subscription", "free-trial", "staff-accounts"],
   },
   {
     slug: "manage-subscription",

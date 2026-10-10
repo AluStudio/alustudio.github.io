@@ -23,10 +23,12 @@
   <url><loc>https://alu-studio.com/dingpos/support/account-required/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/supported-devices/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/change-currency/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/app-language/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/multiple-carts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/checkout-sound/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/void-order/</loc></url>
@@ -49,16 +51,20 @@
   <url><loc>https://alu-studio.com/dingpos/support/loyalty-points/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/member-tiers/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/backup-data/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/icloud-not-connected/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/transfer-new-ipad/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/data-after-delete/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/launch-failure/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/multi-device/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/import-csv/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/undo-restore/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/staff-accounts/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/owner-pin-forgotten/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/staff-permissions/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/activity-log/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/free-trial/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/after-trial/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/plans-compare/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/manage-subscription/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/guide-threshold/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/guide-bogo/</loc></url>
