@@ -409,7 +409,7 @@ export const articles = [
       { type: "p", text: "For a single day, the trend chart becomes an hourly bar chart; longer periods use days, weeks, months, or years per bar depending on length." },
       { type: "p", text: "The Product Ranking card lists the top 5. Tap the card or View All to list every product sold in the period, ranked by quantity after returns." },
       { type: "p", text: "On the Pro plan, Sales comparison on the right of the period bar compares the period with the one before it or with the same period last year — see “What do the Pro advanced reports show?”" },
-      { type: "note", text: "These calendar periods arrived in 2.4; earlier versions offered rolling ranges (Today / 7 Days / 30 Days / All Time). If you still see those, update DingPOS from the App Store." },
+      { type: "note", text: "These calendar periods arrived in v2.4; earlier versions offered rolling ranges (Today / 7 Days / 30 Days / All Time). If you still see those, update DingPOS from the App Store." },
     ],
     related: ["advanced-reports", "revenue-vs-cash", "profit-not-tracked"],
   },
@@ -544,7 +544,7 @@ export const articles = [
         ],
       },
       { type: "p", text: "Once all three are on, go back to Cloud Backup in DingPOS and iCloud shows as connected. Backups are stored in DingPOS's own folder in iCloud Drive." },
-      { type: "note", text: "In versions before 3.0, iCloud backup didn't work and failed every time with “Backup.SyncError error 0”. Update DingPOS from the App Store first." },
+      { type: "note", text: "In versions before v3.0, iCloud backup didn't work and failed every time with “Backup.SyncError error 0”. Update DingPOS from the App Store first." },
     ],
     related: ["backup-data", "transfer-new-ipad"],
   },
@@ -587,7 +587,7 @@ export const articles = [
     content: [
       { type: "p", text: "Don't delete the app. This screen means DingPOS couldn't read your store data, but the data is still on this iPad — deleting the app deletes it along with the app." },
       { type: "p", text: "Tap Retry first; if it works, the app opens as usual. If it keeps happening, tap Contact Support and tell us, and we'll help you recover your data. This screen never moves or deletes any files." },
-      { type: "note", text: "The most common cause is the app being closed in the middle of a restore. Before 3.0, this made the app crash on every launch; since 3.0 it stops on this screen instead." },
+      { type: "note", text: "The most common cause is the app being closed in the middle of a restore. Before v3.0, this made the app crash on every launch; since v3.0 it stops on this screen instead." },
     ],
     related: ["data-after-delete", "undo-restore"],
   },
@@ -890,7 +890,7 @@ export const articles = [
           "Gift and add-on lines can't be discounted further by other money promotions, and don't count toward other promotions' thresholds.",
         ],
       },
-      { type: "p", text: "Bundle prices (applied automatically since 2.4): whenever the cart can form a bundle, DingPOS groups it and includes it in the total — no prompt, and bundles can't be split." },
+      { type: "p", text: "Bundle prices (applied automatically since v2.4): whenever the cart can form a bundle, DingPOS groups it and includes it in the total — no prompt, and bundles can't be split." },
       {
         type: "list",
         items: [

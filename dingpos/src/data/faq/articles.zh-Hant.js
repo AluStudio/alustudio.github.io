@@ -422,7 +422,7 @@ export const articles = [
       { type: "p", text: "選單一天時，趨勢圖是每小時的柱狀圖；多天的期間依長度以日、週、月或年為一格。" },
       { type: "p", text: "熱銷排行卡只列前 5 名，點卡片或「查看全部」可以看該期間每一項有銷售的商品，依扣掉退貨後的數量排序。" },
       { type: "p", text: "Pro 方案在期間列右側多了「銷售比較」，可以拿這段期間跟上一段或去年同期比，詳見「進階報表（Pro）可以看什麼？」。" },
-      { type: "note", text: "這些日曆期間是 2.4 起的設計；更早的版本是「今日／7 天／30 天／全部時間」這類往回推的天數。如果你看到的還是舊選項，請到 App Store 更新 DingPOS。" },
+      { type: "note", text: "這些日曆期間是 v2.4 起的設計；更早的版本是「今日／7 天／30 天／全部時間」這類往回推的天數。如果你看到的還是舊選項，請到 App Store 更新 DingPOS。" },
     ],
     related: ["advanced-reports", "revenue-vs-cash", "profit-not-tracked"],
   },
@@ -557,7 +557,7 @@ export const articles = [
         ],
       },
       { type: "p", text: "都開好之後回到 DingPOS 的「雲端備份」，iCloud 就會顯示為已連線。備份會存在 iCloud 雲碟裡 DingPOS 自己的資料夾。" },
-      { type: "note", text: "3.0 以前的版本 iCloud 備份無法使用，每次都會出現「Backup.SyncError 錯誤 0」。請先到 App Store 更新 DingPOS。" },
+      { type: "note", text: "v3.0 以前的版本 iCloud 備份無法使用，每次都會出現「Backup.SyncError 錯誤 0」。請先到 App Store 更新 DingPOS。" },
     ],
     related: ["backup-data", "transfer-new-ipad"],
   },
@@ -600,7 +600,7 @@ export const articles = [
     content: [
       { type: "p", text: "請不要刪除 App。這個畫面代表 App 讀不到店裡的資料，但資料仍然保存在這台 iPad 上；刪除 App 會連同資料一起刪掉。" },
       { type: "p", text: "先按「重試」，成功就會照常進入 App。如果還是一樣，按「聯絡客服」告訴我們，我們會協助找回資料。這個畫面本身不會搬動或刪除任何檔案。" },
-      { type: "note", text: "最常見的原因是還原到一半時 App 被關掉。3.0 以前的版本遇到這種情況會一開就閃退；更新到 3.0 之後，會改停在這個說明畫面。" },
+      { type: "note", text: "最常見的原因是還原到一半時 App 被關掉。v3.0 以前的版本遇到這種情況會一開就閃退；更新到 v3.0 之後，會改停在這個說明畫面。" },
     ],
     related: ["data-after-delete", "undo-restore"],
   },
@@ -903,7 +903,7 @@ export const articles = [
           "贈品與加購商品加入購物車後，不會再被其他金錢折扣打折，也不計入其他促銷的門檻。",
         ],
       },
-      { type: "p", text: "組合價（2.4 起自動套用）：購物車湊得成組合時，系統直接組起來並算進應付總額，不跳提示、也不能拆開。" },
+      { type: "p", text: "組合價（v2.4 起自動套用）：購物車湊得成組合時，系統直接組起來並算進應付總額，不跳提示、也不能拆開。" },
       {
         type: "list",
         items: [
