@@ -10,7 +10,7 @@ function Footer() {
     <footer className="p-3">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
-          <h1 style={{ fontWeight: 800 }}>Babbby</h1>
+          <p className="h1 footer-brand">Babbby</p>
           <a
             className="mailto fs-5"
             href="mailto:alustudio14@gmail.com?subject=[Babbby] Support"
