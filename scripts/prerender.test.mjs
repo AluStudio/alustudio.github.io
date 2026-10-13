@@ -5,6 +5,7 @@ import {
   parseSitemapRoutes,
   routeToFilePath,
   hasRenderedContent,
+  auditRoutes,
 } from "./prerender.mjs";
 
 test("parseSitemapRoutes extracts pathnames from <loc> entries", () => {
@@ -59,4 +60,20 @@ test("hasRenderedContent rejects text without headings", () => {
 test("hasRenderedContent ignores script/style text", () => {
   const scriptOnly = `<body><div id="root"><h1>t</h1></div><script>${"var x = 1;".repeat(20)}</script></body>`;
   assert.equal(hasRenderedContent(scriptOnly), false);
+});
+
+test("auditRoutes passes a route with exactly one h1", () => {
+  const pages = new Map([["/pikgeon/", `<body><h1 class="hero">Pikgeon</h1><p class="h1">Pikgeon</p></body>`]]);
+  assert.deepEqual(auditRoutes(pages), []);
+});
+
+test("auditRoutes flags a route with two h1s or none", () => {
+  const pages = new Map([
+    ["/pikgeon/", `<body><h1>Hero</h1><footer><h1>Pikgeon</h1></footer></body>`],
+    ["/sotto/", `<body><h2>Only h2</h2><header>x</header></body>`],
+  ]);
+  assert.deepEqual(auditRoutes(pages), [
+    "/pikgeon/: expected exactly one <h1>, found 2",
+    "/sotto/: expected exactly one <h1>, found 0",
+  ]);
 });

@@ -59,6 +59,19 @@ export function hasRenderedContent(html) {
   return headings && text.length > 40;
 }
 
+/**
+ * Cross-route SEO invariants over the rendered pages (Map route → html).
+ * Returns human-readable violations; empty means every route passed.
+ */
+export function auditRoutes(pages) {
+  const errors = [];
+  for (const [route, html] of pages) {
+    const h1Count = html.match(/<h1[\s>]/gi)?.length ?? 0;
+    if (h1Count !== 1) errors.push(`${route}: expected exactly one <h1>, found ${h1Count}`);
+  }
+  return errors;
+}
+
 // --- static server ---
 
 const MIME = {
@@ -164,6 +177,7 @@ async function main() {
   });
 
   const failures = [];
+  const rendered = new Map();
   let done = 0;
   const queue = [...routes];
 
@@ -185,6 +199,7 @@ async function main() {
           throw new Error("rendered HTML failed content sanity check");
         }
         writeFileSync(routeToFilePath(siteDir, route), html);
+        rendered.set(route, html);
         done += 1;
         console.log(`  ✓ ${route}`);
       } catch (err) {
@@ -212,6 +227,13 @@ async function main() {
     console.error(`✗ only ${done}/${routes.length} routes were rendered — failing the build`);
     process.exit(1);
   }
+  const auditErrors = auditRoutes(rendered);
+  if (auditErrors.length > 0) {
+    console.error(`✗ route audit failed (${auditErrors.length}) — failing the build`);
+    for (const e of auditErrors) console.error(`  - ${e}`);
+    process.exit(1);
+  }
+  console.log("route audit passed");
 }
 
 // Run only when invoked directly (not when imported by tests).

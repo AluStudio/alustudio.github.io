@@ -35,6 +35,7 @@ read_when:
 
 - CI 在 assemble `_site/` 之後執行 `scripts/prerender.mjs`：用 headless Chrome render sitemap 裡的每個 route，再把 rendered DOM 寫回該 route 的 `index.html`。Route 清單只來自 sitemap。
 - 任何 route render 出空殼，build 就失敗，不允許默默部署空頁。
+- render 完再跑 route audit（`auditRoutes`）：每個 route 剛好一個 `<h1>`。品牌名放在 footer 這類重複區塊時用 `<p class="h1">`，不用 heading。違規一樣讓 build 失敗。
 - 選 post-build prerender 而不是 vite-react-ssg：後者要改五個 app 的進入點與路由，前者 app 程式碼零改動。
 - 接受的代價：client 端 `createRoot` 會整棵重繪 prerendered DOM，造成一次閃替。改用 `hydrateRoot` 可以消除，但屬於獨立任務。
 
