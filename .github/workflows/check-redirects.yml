@@ -5,10 +5,10 @@ name: Check old-domain redirect (301)
 # behavior — it is UNDOCUMENTED per GitHub's official support commitment
 # (which only covers "DNS correctly points at GitHub"; once alu-studio.com's
 # DNS points at Cloudflare instead, github.io -> custom-domain redirect is
-# not a guaranteed-forever behavior). See docs/drafts/cloudflare-migration.md
-# Phase 3 for the full rationale.
+# not a guaranteed-forever behavior). See docs/specs/hosting.md
+# §舊網域 301 for the full rationale.
 #
-# IMPORTANT — this check only becomes meaningful AFTER Phase 3's live domain
+# IMPORTANT — this check only becomes meaningful AFTER the live domain
 # cutover (GitHub Pages custom domain set to alu-studio.com on this repo).
 # Before cutover, alustudio.github.io still serves its original content
 # directly with no redirect at all, so this check is EXPECTED to fail — that
@@ -161,7 +161,7 @@ jobs:
               echo "::error::Old-domain redirect check failed AFTER cutover (MIGRATION_CUTOVER_DONE=true) — this is a real regression, not the expected pre-cutover state."
               exit 1
             else
-              echo "::warning::Old-domain redirect check failed, but MIGRATION_CUTOVER_DONE is not 'true' yet — expected pre-cutover state (alustudio.github.io still serves its original content directly, no redirect configured). Not failing the workflow. Set the MIGRATION_CUTOVER_DONE repo variable to 'true' once Phase 3's cutover is live to arm this check for real."
+              echo "::warning::Old-domain redirect check failed, but MIGRATION_CUTOVER_DONE is not 'true' yet — expected pre-cutover state (alustudio.github.io still serves its original content directly, no redirect configured). Not failing the workflow. Set the MIGRATION_CUTOVER_DONE repo variable to 'true' once the domain cutover is live to arm this check for real."
               exit 0
             fi
           fi

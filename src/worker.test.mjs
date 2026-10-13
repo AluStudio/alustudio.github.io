@@ -6,8 +6,8 @@
 // sends), so www-vs-apex redirect behavior is unverifiable through it. Calling
 // the Worker's exported `fetch` directly with a mock ASSETS binding tests the
 // real logic without that limitation. The www->apex redirect (critic P1 finding)
-// must still be spot-checked against the live edge after deploy — see Phase 3's
-// hard gate in docs/drafts/cloudflare-migration.md.
+// must still be spot-checked against the live edge after deploy — see
+// docs/specs/hosting.md §Worker 規則.
 
 import { test } from "node:test";
 import assert from "node:assert/strict";

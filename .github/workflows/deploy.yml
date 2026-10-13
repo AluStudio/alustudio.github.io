@@ -104,8 +104,8 @@ jobs:
 
       # Prerender AFTER assemble so every sitemap route ships fully rendered
       # HTML — AI crawlers (GPTBot, ClaudeBot, PerplexityBot...) never execute
-      # JS, so the CSR shell is invisible to them (docs/drafts/
-      # seo-aeo-optimization.md §2a). An empty render fails the build instead
+      # JS, so the CSR shell is invisible to them (docs/specs/seo-aeo.md
+      # §Prerender). An empty render fails the build instead
       # of silently deploying an empty shell.
       - name: Cache Puppeteer Chrome
         uses: actions/cache@v6

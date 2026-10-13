@@ -8,7 +8,7 @@
  * verifiably accurate", and Bing states AI-powered search uses content
  * change signals near-real-time. Dates therefore come from the last commit
  * touching the files that produce each route — never hand-written, never
- * bulk-bumped (docs/drafts/seo-aeo-optimization.md §2f).
+ * bulk-bumped (docs/specs/seo-aeo.md §Sitemap).
  *
  * Requires full git history (fetch-depth: 0 in CI); with a shallow clone
  * every date collapses to the clone commit and the signal becomes noise.

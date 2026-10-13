@@ -9,7 +9,7 @@
  * in place; if it doesn't exist yet it is inserted before `</head>`. This
  * means the copy scripts work correctly whether or not the app's own
  * index.html already has canonical/og:url tags (see
- * docs/drafts/cloudflare-migration.md Phase 2, Group B/C).
+ * docs/specs/seo-aeo.md §HTML 與 URL).
  */
 
 function upsertTag(html, matchRe, tag) {
