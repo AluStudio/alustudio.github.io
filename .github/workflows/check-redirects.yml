@@ -7,19 +7,6 @@ name: Check old-domain redirect (301)
 # DNS points at Cloudflare instead, github.io -> custom-domain redirect is
 # not a guaranteed-forever behavior). See docs/specs/hosting.md
 # §舊網域 301 for the full rationale.
-#
-# IMPORTANT — this check only becomes meaningful AFTER the live domain
-# cutover (GitHub Pages custom domain set to alu-studio.com on this repo).
-# Before cutover, alustudio.github.io still serves its original content
-# directly with no redirect at all, so this check is EXPECTED to fail — that
-# is by design, not a regression, and the workflow intentionally does not go
-# red for it (see the MIGRATION_CUTOVER_DONE gate below; avoids alert
-# fatigue on a known, expected pre-cutover state).
-#
-# To arm this check for real once cutover has happened: add a repository
-# variable named MIGRATION_CUTOVER_DONE with value "true"
-# (Settings -> Secrets and variables -> Actions -> Variables tab). From then
-# on a redirect failure is a genuine regression and the workflow fails loud.
 
 on:
   schedule:
@@ -34,8 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Assert representative old-domain URLs 301 to the new domain
-        env:
-          CUTOVER_DONE: ${{ vars.MIGRATION_CUTOVER_DONE }}
         run: |
           set -u
 
@@ -157,13 +142,8 @@ jobs:
           done
 
           if [[ "$failed" -eq 1 ]]; then
-            if [[ "$CUTOVER_DONE" == "true" ]]; then
-              echo "::error::Old-domain redirect check failed AFTER cutover (MIGRATION_CUTOVER_DONE=true) — this is a real regression, not the expected pre-cutover state."
-              exit 1
-            else
-              echo "::warning::Old-domain redirect check failed, but MIGRATION_CUTOVER_DONE is not 'true' yet — expected pre-cutover state (alustudio.github.io still serves its original content directly, no redirect configured). Not failing the workflow. Set the MIGRATION_CUTOVER_DONE repo variable to 'true' once the domain cutover is live to arm this check for real."
-              exit 0
-            fi
+            echo "::error::Old-domain redirect check failed — the alustudio.github.io 301 has regressed."
+            exit 1
           fi
 
           echo "All checked URLs correctly 301 to alu-studio.com."

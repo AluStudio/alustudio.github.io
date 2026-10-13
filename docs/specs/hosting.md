@@ -37,7 +37,7 @@ read_when:
 - 這是 GitHub **未文件化**的行為：GitHub 只保證「DNS 指向 GitHub」時的 custom-domain redirect。它只在以下條件同時成立時存在：本 repo 以 `alustudio.github.io` 這個名稱存在、Pages custom domain 設為 `alu-studio.com`、最後一次 Pages 部署仍在。三者任何時候都不得移除。
 - Location 是 `http://`：GitHub 無法替 DNS 不在它手上的網域簽憑證。Worker 的 http → https 規則就是為了這一跳。
 - `/app-ads.txt` 同樣被 301，跨網域落到新網域。app-ads.txt 爬蟲依規格只跟隨同 root domain 內的 redirect（推論，依 IAB 規格），所以商店 listing 的 Marketing URL / Developer website 必須是 `alu-studio.com`，不能依賴舊網域。
-- 監控：`.github/workflows/check-redirects.yml` 每月 1 日打三個代表舊網址，斷言首跳為 301 且 host + path + query 保留、最終落點為 `https://alu-studio.com` 且 200。repo variable `MIGRATION_CUTOVER_DONE=true` 讓失敗直接讓 workflow 變紅。
+- 監控：`.github/workflows/check-redirects.yml` 每月 1 日打三個代表舊網址，斷言首跳為 301 且 host + path + query 保留、最終落點為 `https://alu-studio.com` 且 200。任何一項失敗，workflow 就會變紅。
 
 ### 為什麼是單一 repo
 
