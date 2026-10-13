@@ -403,6 +403,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
+    "meta_description": "How DingPOS, the offline-first iPad POS, handles your data: business records stay on your device, and optional backups go only to your own cloud account.",
     "effective_date": "Effective date: July 1, 2026",
     "intro": "ALU Studio (\"we\") developed DingPOS (\"the app\"). DingPOS is a point of sale built with privacy at its core — your business data belongs to you. This Privacy Policy explains how we handle your information when you use the app.",
     "local_storage": {
@@ -464,6 +465,7 @@
   },
   "terms": {
     "title": "Terms of Use",
+    "meta_description": "Terms of Use for DingPOS, the iPad POS app by ALU Studio: license, 30-day free trial, App Store subscriptions, your data and backups, and liability.",
     "effective_date": "Effective date: October 8, 2026",
     "intro": "Welcome to DingPOS. Please read the following Terms of Use carefully before using the app. By downloading, installing, or using DingPOS, you agree to be bound by these terms.",
     "license": {
@@ -511,6 +513,7 @@
   },
   "support": {
     "doc_title": "Support",
+    "meta_description": "DingPOS support: answers and step-by-step guides for the iPad POS — setup, checkout, orders, inventory, promotions, backup, staff and billing.",
     "title": "How can we help?",
     "subtitle": "Search common questions, or browse by topic",
     "search_placeholder": "Search, e.g. “barcode” or “backup restore”",
