@@ -108,3 +108,36 @@ test("auditRoutes flags JSON-LD that does not parse", () => {
   assert.equal(errors.length, 1);
   assert.match(errors[0], /^\/sotto\/: JSON-LD does not parse/);
 });
+
+const localePage = (lang, title, links) =>
+  `<html lang="${lang}"><head><title>${title}</title><meta name="description" content="${title}" />${links
+    .map(([h, p]) => `<link rel="alternate" hreflang="${h}" href="https://alu-studio.com${p}">`)
+    .join("")}</head><body><h1>t</h1></body></html>`;
+
+const TRIO = [
+  ["en", "/dingpos/pricing/"],
+  ["zh-Hant", "/dingpos/zh-hant/pricing/"],
+  ["x-default", "/dingpos/pricing/"],
+];
+
+test("auditRoutes accepts a reciprocal hreflang pair with matching html lang", () => {
+  const pages = new Map([
+    ["/dingpos/pricing/", localePage("en", "Pricing", TRIO)],
+    ["/dingpos/zh-hant/pricing/", localePage("zh-Hant", "價格", TRIO)],
+  ]);
+  assert.deepEqual(auditRoutes(pages), []);
+});
+
+test("auditRoutes flags wrong html lang, missing self and non-reciprocal sets", () => {
+  const pages = new Map([
+    ["/dingpos/pricing/", localePage("en", "Pricing", TRIO)],
+    ["/dingpos/zh-hant/pricing/", localePage("en", "價格", TRIO.slice(1))],
+    ["/dingpos/terms/", localePage("en", "Terms", [["zh-Hant", "/dingpos/zh-hant/terms/"]])],
+  ]);
+  assert.deepEqual(auditRoutes(pages), [
+    "/dingpos/pricing/: hreflang set is not reciprocated by /dingpos/zh-hant/pricing/",
+    '/dingpos/zh-hant/pricing/: <html lang="en"> but hreflang says zh-Hant',
+    "/dingpos/zh-hant/pricing/: hreflang set is not reciprocated by /dingpos/pricing/",
+    "/dingpos/terms/: hreflang set does not list the page itself",
+  ]);
+});

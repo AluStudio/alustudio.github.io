@@ -59,6 +59,38 @@ export function hasRenderedContent(html) {
   return headings && text.length > 40;
 }
 
+function hreflangSet(html) {
+  return [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(
+    ([, hreflang, href]) => ({ hreflang, path: new URL(href).pathname }),
+  );
+}
+
+const setKey = (set) => set.map((a) => `${a.hreflang} ${a.path}`).sort().join("\n");
+
+/**
+ * hreflang rules Google enforces silently: each version lists itself, every
+ * version it names lists the identical set back, and <html lang> matches the
+ * hreflang pointing at the page itself.
+ */
+function auditAlternates(route, html, pages) {
+  const set = hreflangSet(html);
+  if (set.length === 0) return [];
+  const errors = [];
+  const self = set.find((a) => a.path === route && a.hreflang !== "x-default");
+  if (!self) return [`${route}: hreflang set does not list the page itself`];
+  const lang = html.match(/<html\b[^>]*\blang="([^"]*)"/)?.[1];
+  if (lang !== self.hreflang) errors.push(`${route}: <html lang="${lang}"> but hreflang says ${self.hreflang}`);
+  for (const { path } of set) {
+    if (path === route) continue;
+    const other = pages.get(path);
+    if (!other) errors.push(`${route}: hreflang points at ${path}, which is not a rendered route`);
+    else if (setKey(hreflangSet(other)) !== setKey(set)) {
+      errors.push(`${route}: hreflang set is not reciprocated by ${path}`);
+    }
+  }
+  return errors;
+}
+
 /**
  * Cross-route SEO invariants over the rendered pages (Map route → html).
  * Returns human-readable violations; empty means every route passed.
@@ -79,6 +111,8 @@ export function auditRoutes(pages) {
         errors.push(`${route}: JSON-LD does not parse (${err.message})`);
       }
     }
+
+    errors.push(...auditAlternates(route, html, pages));
 
     if (route.startsWith(uniqueWithin.prefix)) {
       const meta = {
