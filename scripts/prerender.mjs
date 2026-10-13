@@ -4,7 +4,7 @@
  *
  * Why: all major AI crawlers (GPTBot, ClaudeBot, PerplexityBot, CCBot...)
  * fetch HTML but never execute JavaScript, so a CSR-only SPA is invisible to
- * them. See docs/drafts/seo-aeo-optimization.md (§2a) for the research.
+ * them. See docs/specs/seo-aeo.md (§前提事實) for the research.
  *
  * Design notes:
  * - Routes come from the sitemap inside the site dir — single source of
@@ -16,7 +16,7 @@
  * - Every rendered page must pass a content sanity check; an empty render
  *   fails the build rather than silently shipping an empty shell.
  * - React's createRoot() re-renders over the prerendered DOM on the client
- *   (one flash swap) — accepted tradeoff, see the plan doc.
+ *   (one flash swap) — accepted tradeoff, see docs/specs/seo-aeo.md §Prerender.
  *
  * Usage:
  *   node scripts/prerender.mjs [--site-dir _site] [--only /pikgeon/] [--concurrency 4]

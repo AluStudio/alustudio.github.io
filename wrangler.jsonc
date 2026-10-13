@@ -8,7 +8,7 @@
   // run_worker_first: true routes every request through the Worker below FIRST,
   // so it can handle host/path redirects and the true-404 response before
   // falling back to env.ASSETS.fetch() for the static files themselves.
-  // See docs/drafts/cloudflare-migration.md Phase 1 for the reviewed design
+  // See docs/specs/hosting.md §Worker 規則 for the reviewed design
   // (critic-flagged: do not rely on `_redirects`/`_headers` for domain-level
   // redirects — Cloudflare static assets does not support host-level redirects
   // there, so all redirect/header logic lives in the Worker instead).

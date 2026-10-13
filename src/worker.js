@@ -15,7 +15,7 @@
  *      index.html file).
  *   5. Cache / security headers applied to every response.
  *
- * See docs/drafts/cloudflare-migration.md Phase 1 for the reviewed design.
+ * See docs/specs/hosting.md §Worker 規則 for the reviewed design.
  * Locked by critic review: no `_redirects`/`_headers` files — Cloudflare
  * static assets does not support host-level (www -> apex) redirects there,
  * so all redirect and header logic lives here instead.

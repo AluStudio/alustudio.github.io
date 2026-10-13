@@ -6,9 +6,9 @@ Static site hosting Alu Studio's four support/profile sites, deployed as a Cloud
 
 **This repo must never be renamed, deleted, or archived.** It is simultaneously:
 1. The source repo for `alu-studio.com` (Cloudflare Worker + all sub-apps).
-2. GitHub's permanent `alustudio.github.io` 301 redirect anchor for `alu-studio.com` — this is undocumented-but-relied-upon GitHub Pages behavior (see `docs/drafts/cloudflare-migration.md` Phase 3), and it only exists as long as this exact repo exists at this exact name with GitHub Pages custom-domain still configured.
+2. GitHub's permanent `alustudio.github.io` 301 redirect anchor for `alu-studio.com` — this is undocumented-but-relied-upon GitHub Pages behavior (see `docs/specs/hosting.md` §舊網域 301), and it only exists as long as this exact repo exists at this exact name with GitHub Pages custom-domain still configured.
 
-Deleting/renaming/archiving this repo silently breaks the old-domain 301 and leaks accumulated SEO authority with no way to recover it. If a restructure ever seems warranted, read the Decision Record in `docs/drafts/cloudflare-migration.md` first — a single-repo-vs-split-repo tradeoff was already debated and decided against splitting (`argue` debate, unanimous).
+Deleting/renaming/archiving this repo silently breaks the old-domain 301 and leaks accumulated SEO authority with no way to recover it. If a restructure ever seems warranted, read `docs/specs/hosting.md` §為什麼是單一 repo first — a single-repo-vs-split-repo tradeoff was already debated and decided against splitting.
 
 ## Structure
 
@@ -70,7 +70,7 @@ Root-level Worker logic (`src/worker.js`) owns all redirect/header behavior — 
 - Each uses `base: '/<app-name>/'` in `vite.config.js` — paths are sub-directory scoped.
 - Each has its own `package.json` / `package-lock.json` — no shared root deps.
 - Each app's `scripts/copy-spa-pages.js` rewrites per-route `canonical`/`og:url` and sets per-route `title`/`description` on copy (via the shared `scripts/rewrite-seo-tags.mjs` helper) — every route ships a real, self-canonical HTML file, no client-side SPA fallback.
-- FAQ/accordion content must stay in the DOM when collapsed (`hidden` attr, not conditional render) — crawlers only see initial HTML; prerender can't capture unmounted nodes. SEO/AEO ground rules: `docs/drafts/seo-aeo-optimization.md`.
+- FAQ/accordion content must stay in the DOM when collapsed (`hidden` attr, not conditional render) — crawlers only see initial HTML; prerender can't capture unmounted nodes. SEO/AEO ground rules: `docs/specs/seo-aeo.md`.
 - DingPOS FAQ is versioned against the App Store: an article for a post-1.0 feature carries `since` (the version that first shipped it), and the support page shows `VERIFIED_APP_VERSION` (the release the whole FAQ was last checked against). Rules and the per-release routine live in `dingpos/src/data/faq/version.js`; the build rejects a `since` newer than `VERIFIED_APP_VERSION`, so articles for an unreleased version wait on a `faq-<version>` branch until the App Store serves it. Retiring an indexed article slug needs a 301 in `MOVED_PATHS` (`src/worker.js`).
 - DingPOS prices and the plan feature matrix live in `dingpos/src/data/plans.js`, mirrored from the product repo's `docs/specs/subscription/tiers.md` — change both together. Every price renders in TWD and USD; an inline script in `dingpos/index.html` sets `<html data-currency>` before first paint (saved choice → time zone → language) and CSS hides the other currency, so prerendered HTML never flashes the wrong price.
 - Product screenshots ship as pure screen captures; the device bezel is drawn in CSS. `dingpos/scripts/build-screenshots.sh <raw-dir>` crops the iOS status bar and the dev-tweak-ball corner, resizes, and writes `public/shot-*.webp`. Local authoring tool — outputs are committed, so CI never runs it. Re-capture recipe for DingPOS: `~/Developer/alustudio/DingPOS/scripts/screenshots/README.md` (use the `screenshots-zh` fixture, not the tweak menu's fake-data generator — that one randomizes prices into nonsense).
@@ -93,7 +93,7 @@ Site content (features, FAQ) makes claims about app behavior — the app's sourc
 ## Conventions
 
 - Commits: Conventional Commits (`feat|fix|refactor|build|ci|chore|docs|style|perf|test`).
-- Docs live in `docs/specs/<app>/` per SDD pattern.
+- Docs: current rules live in `docs/specs/`; in-flight work lives in `docs/drafts/` and is deleted once its rules land in a spec (doc-system skill). Backlog lives in Linear, not in docs.
 
 ## Project Skills
 
@@ -113,7 +113,7 @@ Eleven UI/animation skills from [emilkowalski/skills](https://github.com/emilkow
 [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.3.1 is installed machine-locally: 23 `seo*` skills in `.pi/skills/` and 18 `seo-*` agents in `.pi/agents/`, all gitignored (the Python + Chromium runtime is ~1 GB), so another machine has none of it until installed there. Run bundled scripts from the repo root as `.pi/skills/seo/scripts/claude-seo run <script.py>` — the skill paths are cwd-relative; `claude-seo doctor --json` checks the runtime.
 - The `seo-*` agents declare Claude Code tool names (`Glob`, `WebFetch`) and bare model names, so they may not run under pi-subagents; audits here run the bundled scripts plus Lighthouse directly instead.
 - `pagespeed_check.py` without an API key hits the shared, usually exhausted PSI quota; use `npx lighthouse` locally for lab data.
-- `docs/drafts/seo-aeo-optimization.md` owns this site's SEO decisions — skill advice that contradicts it (llms.txt investment, FAQ rich results) loses.
+- `docs/specs/seo-aeo.md` owns this site's SEO decisions — skill advice that contradicts it (llms.txt investment, FAQ rich results) loses.
 
 ## Linear
 
