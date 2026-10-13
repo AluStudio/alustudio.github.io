@@ -9,7 +9,7 @@ const apps = [
   {
     id: "dingpos",
     name: "DingPOS",
-    icon: `${base}dingpos-icon.png`,
+    icon: `${base}dingpos-icon.webp`,
     website: "/dingpos/",
     stores: [
       {
@@ -23,7 +23,7 @@ const apps = [
   {
     id: "sotto",
     name: "Sotto",
-    icon: `${base}sotto-icon.png`,
+    icon: `${base}sotto-icon.webp`,
     website: "/sotto/",
     stores: [
       {
@@ -43,7 +43,7 @@ const apps = [
   {
     id: "pikgeon",
     name: "Pikgeon",
-    icon: `${base}pikgeon-icon.png`,
+    icon: `${base}pikgeon-icon.webp`,
     website: "/pikgeon/",
     stores: [
       {
@@ -63,7 +63,7 @@ const apps = [
   {
     id: "babbby",
     name: "Babbby",
-    icon: `${base}babbby-icon.png`,
+    icon: `${base}babbby-icon.webp`,
     website: "/babbby/",
     stores: [
       {

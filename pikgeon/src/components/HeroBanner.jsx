@@ -49,7 +49,9 @@ const HeroBanner = () => {
           <div className="col-lg-6 text-center position-relative">
             <div className="hero-img-wrapper">
               <img
-                src="iOSview.png"
+                src="iOSview.webp"
+                width="347"
+                height="718"
                 alt="App Preview"
                 className="img-fluid floating-mockup ios-view-image"
               />

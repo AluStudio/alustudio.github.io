@@ -12,7 +12,9 @@ function Download() {
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0 text-center">
               <img
-                src="iOSview.png"
+                src="iOSview.webp"
+                width="347"
+                height="718"
                 className="img-fluid"
                 alt="App Screenshot"
               />
@@ -50,7 +52,9 @@ function Download() {
                       </small>
                     </div>
                     <img
-                      src="download_iOS.png"
+                      src="download_iOS.webp"
+                      width="512"
+                      height="512"
                       className="img-fluid"
                       alt="iOS App QR Code"
                     />
@@ -80,7 +84,9 @@ function Download() {
                       </small>
                     </div>
                     <img
-                      src="download_Android.png"
+                      src="download_Android.webp"
+                      width="512"
+                      height="512"
                       className="img-fluid"
                       alt="Android App QR Code"
                     />

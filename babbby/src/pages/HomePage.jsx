@@ -20,7 +20,7 @@ function HomePage() {
           <section className="hero-section">
             <div className="hero-left">
               <img
-                src={`${base}app-icon.png`}
+                src={`${base}app-icon.webp`}
                 alt="Babbby"
                 className="hero-icon"
                 width="96"
@@ -56,7 +56,9 @@ function HomePage() {
             <div className="hero-right">
               <div className="phone-frame">
                 <img
-                  src={`${base}screenshot-today.png`}
+                  src={`${base}screenshot-today.webp`}
+                  width="644"
+                  height="1400"
                   alt="Babbby Today view"
                   className="hero-screenshot"
                 />
