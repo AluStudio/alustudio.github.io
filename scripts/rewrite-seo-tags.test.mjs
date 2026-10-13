@@ -3,7 +3,7 @@
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { setSelfCanonical, setPageMeta, addJsonLd, breadcrumbList } from "./rewrite-seo-tags.mjs";
+import { setSelfCanonical, setPageMeta, addJsonLd, breadcrumbList, setHtmlLang, setLanguageAlternates } from "./rewrite-seo-tags.mjs";
 
 const ROUTE_URL = "https://alu-studio.com/pikgeon/privacy/";
 
@@ -117,4 +117,31 @@ test("breadcrumbList numbers items from 1 in trail order", () => {
       ],
     },
   );
+});
+
+test("setHtmlLang replaces or adds the lang attribute", () => {
+  assert.equal(setHtmlLang('<html lang="en" data-x="1"><head></head></html>', "zh-Hant"), '<html lang="zh-Hant" data-x="1"><head></head></html>');
+  assert.equal(setHtmlLang("<html><head></head></html>", "en"), '<html lang="en"><head></head></html>');
+});
+
+const VERSIONS = [
+  { hreflang: "en", href: "https://alu-studio.com/dingpos/pricing/" },
+  { hreflang: "zh-Hant", href: "https://alu-studio.com/dingpos/zh-hant/pricing/" },
+  { hreflang: "x-default", href: "https://alu-studio.com/dingpos/pricing/" },
+];
+
+test("setLanguageAlternates writes og:locale, alternates and the full hreflang set", () => {
+  const html = '<html><head><meta property="og:type" content="website" />\n</head></html>';
+  const out = setLanguageAlternates(html, { ogLocale: "zh_TW", ogLocaleAlternates: ["en_US"], versions: VERSIONS });
+  assert.match(out, /<meta property="og:locale" content="zh_TW" \/>/);
+  assert.match(out, /<meta property="og:locale:alternate" content="en_US" \/>/);
+  const hreflangs = [...out.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]);
+  assert.deepEqual(hreflangs, VERSIONS.map((v) => [v.hreflang, v.href]));
+  assert.ok(out.lastIndexOf("hreflang") < out.indexOf("</head>"));
+});
+
+test("setLanguageAlternates is idempotent", () => {
+  const opts = { ogLocale: "en_US", ogLocaleAlternates: ["zh_TW"], versions: VERSIONS };
+  const once = setLanguageAlternates("<html><head></head></html>", opts);
+  assert.equal(setLanguageAlternates(once, opts), once);
 });

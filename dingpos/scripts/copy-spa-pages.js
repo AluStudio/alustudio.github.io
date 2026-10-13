@@ -10,15 +10,20 @@
  * duplicate-content signal in a different field. Support articles also get a
  * BreadcrumbList (DingPOS → Support → article) written into the static head.
  *
+ * Every page exists once per language — English unprefixed, zh-Hant under
+ * /dingpos/zh-hant/ — with its own <html lang>, og:locale and the full
+ * hreflang set, so each language is separately indexable
+ * (docs/specs/seo-aeo.md §多語系 URL).
+ *
  * FAQ article routes are derived from the FAQ data modules, so adding
  * an article automatically ships its static route. The zh-Hant and en
- * packs must agree on slugs and related links, and sitemap.xml must cover
- * every article — validated here so a drift fails the build instead of
+ * packs must agree on slugs and related links, and sitemap.xml must list
+ * exactly the pages built here, in both languages — validated here so a drift fails the build instead of
  * 404ing (or going unindexed) in production.
  */
 
 import process from "node:process";
-import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -26,6 +31,8 @@ import {
   setPageMeta,
   addJsonLd,
   breadcrumbList,
+  setHtmlLang,
+  setLanguageAlternates,
 } from "../../scripts/rewrite-seo-tags.mjs";
 import * as zhHant from "../src/data/faq/articles.zh-Hant.js";
 import * as en from "../src/data/faq/articles.en.js";
@@ -40,18 +47,28 @@ const BASE_URL = "https://alu-studio.com/dingpos";
 const SITE_NAME = "DingPOS";
 const DESCRIPTION_MAX = 155;
 
-// Prerendered HTML is language-neutral and i18n falls back to English, so the
-// static meta tags are authored from the en pack.
-const ui = JSON.parse(
-  readFileSync(join(__dirname, "..", "src", "locales", "en", "translation.json"), "utf8"),
-);
+const readLocale = (code) =>
+  JSON.parse(readFileSync(join(__dirname, "..", "src", "locales", code, "translation.json"), "utf8"));
+
+// Every language gets its own URL tree; the first entry is the unprefixed
+// x-default. `pathPrefix` mirrors supportedLanguages in src/i18n.js.
+const LOCALES = [
+  { code: "en", pathPrefix: "", ogLocale: "en_US", faq: en, ui: readLocale("en") },
+  { code: "zh-Hant", pathPrefix: "zh-hant/", ogLocale: "zh_TW", faq: zhHant, ui: readLocale("zh-Hant") },
+];
+const DEFAULT_LOCALE = LOCALES[0];
 
 const STATIC_ROUTES = [
-  { path: "pricing", title: ui.pricing.doc_title, description: ui.pricing.meta_description },
-  { path: "privacy", title: ui.nav.privacy, description: ui.privacy.meta_description },
-  { path: "terms", title: ui.nav.terms, description: ui.terms.meta_description },
-  { path: "support", title: ui.support.doc_title, description: ui.support.meta_description },
+  { path: "pricing", meta: (ui) => [ui.pricing.doc_title, ui.pricing.meta_description] },
+  { path: "privacy", meta: (ui) => [ui.nav.privacy, ui.privacy.meta_description] },
+  { path: "terms", meta: (ui) => [ui.nav.terms, ui.terms.meta_description] },
+  { path: "support", meta: (ui) => [ui.support.doc_title, ui.support.meta_description] },
 ];
+
+/** Absolute URL of `path` ("" = app root) in `locale`, trailing slash included. */
+function routeUrl(locale, path) {
+  return `${BASE_URL}/${locale.pathPrefix}${path ? `${path}/` : ""}`;
+}
 
 // ── FAQ data consistency guard ──────────────────────────────
 const VERSION_PATTERN = /^\d+\.\d+(\.\d+)?$/;
@@ -119,27 +136,6 @@ function validateFaqPacks() {
     }
   }
 
-  // Routes are derived from the data, but sitemap.xml is hand-maintained —
-  // without this check a new article ships a live page that is never submitted
-  // for indexing, and nothing fails.
-  const sitemap = readFileSync(sitemapPath, "utf8");
-  const listed = new Set(
-    [...sitemap.matchAll(/https:\/\/alu-studio\.com\/dingpos\/support\/([^/<]+)\//g)].map(
-      (m) => m[1],
-    ),
-  );
-  for (const slug of zhSlugs) {
-    if (!listed.has(slug)) errors.push(`sitemap.xml is missing /dingpos/support/${slug}/`);
-  }
-  for (const slug of listed) {
-    if (!zhSet.has(slug)) errors.push(`sitemap.xml lists /dingpos/support/${slug}/ with no article`);
-  }
-  for (const { path } of STATIC_ROUTES) {
-    if (!sitemap.includes(`${BASE_URL}/${path}/</loc>`)) {
-      errors.push(`sitemap.xml is missing /dingpos/${path}/`);
-    }
-  }
-
   validateFaqVersions(errors);
 
   if (errors.length) {
@@ -159,30 +155,74 @@ function articleDescription(article) {
   return `${text.slice(0, DESCRIPTION_MAX - 1).trimEnd()}…`;
 }
 
-const routes = [
-  ...STATIC_ROUTES,
-  ...en.articles.map((article) => ({
-    path: `support/${article.slug}`,
-    title: article.question,
-    description: articleDescription(article),
-    jsonLd: breadcrumbList([
-      { name: SITE_NAME, url: `${BASE_URL}/` },
-      { name: ui.support.doc_title, url: `${BASE_URL}/support/` },
-      { name: article.question, url: `${BASE_URL}/support/${article.slug}/` },
-    ]),
-  })),
-];
+/** Every page of one locale, with its final title and description. */
+function localeRoutes(locale) {
+  const { ui, faq } = locale;
+  return [
+    { path: "", title: ui.hero.meta_title, description: ui.hero.meta_description },
+    ...STATIC_ROUTES.map(({ path, meta }) => {
+      const [title, description] = meta(ui);
+      return { path, title: `${title} — ${SITE_NAME}`, description };
+    }),
+    ...faq.articles.map((article) => ({
+      path: `support/${article.slug}`,
+      title: `${article.question} — ${SITE_NAME}`,
+      description: articleDescription(article),
+      jsonLd: breadcrumbList([
+        { name: SITE_NAME, url: routeUrl(locale, "") },
+        { name: ui.support.doc_title, url: routeUrl(locale, "support") },
+        { name: article.question, url: routeUrl(locale, `support/${article.slug}`) },
+      ]),
+    })),
+  ];
+}
 
-for (const { path, title, description, jsonLd } of routes) {
-  const dest = join(dist, path, "index.html");
-  mkdirSync(dirname(dest), { recursive: true });
-  copyFileSync(src, dest);
+const pages = LOCALES.flatMap((locale) =>
+  localeRoutes(locale).map((route) => ({ ...route, locale, url: routeUrl(locale, route.path) })),
+);
 
-  const routeUrl = `${BASE_URL}/${path}/`;
-  let html = setSelfCanonical(readFileSync(dest, "utf8"), routeUrl);
-  html = setPageMeta(html, { title: `${title} — ${SITE_NAME}`, description });
+// Routes are derived from the data, but sitemap.xml is hand-maintained —
+// without this check a new article (or locale) ships live pages that are
+// never submitted for indexing, and nothing fails.
+function validateSitemap() {
+  const sitemap = readFileSync(sitemapPath, "utf8");
+  const listed = new Set(
+    [...sitemap.matchAll(/<loc>\s*(https:\/\/alu-studio\.com\/dingpos\/[^<\s]*)\s*<\/loc>/g)].map((m) => m[1]),
+  );
+  const expected = new Set(pages.map((p) => p.url));
+  const errors = [
+    ...[...expected].filter((u) => !listed.has(u)).map((u) => `sitemap.xml is missing ${u}`),
+    ...[...listed].filter((u) => !expected.has(u)).map((u) => `sitemap.xml lists ${u} with no page`),
+  ];
+  if (errors.length) {
+    console.error("Sitemap validation failed:");
+    for (const e of errors) console.error(`  ✗ ${e}`);
+    process.exit(1);
+  }
+}
+
+validateSitemap();
+
+// Read once: dist/index.html is both the template and the en root's output.
+const template = readFileSync(src, "utf8");
+
+for (const { path, title, description, jsonLd, locale, url } of pages) {
+  const versions = [
+    ...LOCALES.map((l) => ({ hreflang: l.code, href: routeUrl(l, path) })),
+    { hreflang: "x-default", href: routeUrl(DEFAULT_LOCALE, path) },
+  ];
+  let html = setSelfCanonical(template, url);
+  html = setHtmlLang(html, locale.code);
+  html = setPageMeta(html, { title, description });
+  html = setLanguageAlternates(html, {
+    ogLocale: locale.ogLocale,
+    ogLocaleAlternates: LOCALES.filter((l) => l !== locale).map((l) => l.ogLocale),
+    versions,
+  });
   if (jsonLd) html = addJsonLd(html, jsonLd);
-  writeFileSync(dest, html);
 
-  console.log(`  ✓ ${path}/index.html (canonical: ${routeUrl})`);
+  const dest = join(dist, locale.pathPrefix, path, "index.html");
+  mkdirSync(dirname(dest), { recursive: true });
+  writeFileSync(dest, html);
+  console.log(`  ✓ ${locale.pathPrefix}${path ? `${path}/` : ""}index.html (canonical: ${url})`);
 }

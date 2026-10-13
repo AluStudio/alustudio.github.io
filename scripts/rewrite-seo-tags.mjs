@@ -107,3 +107,35 @@ export function breadcrumbList(trail) {
     })),
   };
 }
+
+/** Set the `lang` attribute on <html>, adding it when absent. */
+export function setHtmlLang(html, lang) {
+  return html.replace(/<html\b([^>]*)>/, (_, attrs) => {
+    const rest = attrs.replace(/\s+lang="[^"]*"/, "");
+    return `<html lang="${escapeAttr(lang)}"${rest}>`;
+  });
+}
+
+/**
+ * Declare a page's language versions: og:locale (+ og:locale:alternate) and
+ * one `<link rel="alternate" hreflang>` per version. Google ignores hreflang
+ * unless every version lists the full set, itself included, so callers pass
+ * the same `versions` list to each page of the set. Any existing
+ * alternates are replaced, keeping the rewrite idempotent.
+ *
+ * @param {string} html
+ * @param {{ ogLocale: string, ogLocaleAlternates: string[], versions: { hreflang: string, href: string }[] }} opts
+ */
+export function setLanguageAlternates(html, { ogLocale, ogLocaleAlternates, versions }) {
+  html = html
+    .replace(/[ \t]*<meta property="og:locale:alternate"[^>]*>\n?/g, "")
+    .replace(/[ \t]*<link rel="alternate" hreflang="[^"]*"[^>]*>\n?/g, "");
+  html = upsertTag(html, /<meta property="og:locale"[^>]*>/, `<meta property="og:locale" content="${ogLocale}" />`);
+  const tags = [
+    ...ogLocaleAlternates.map((l) => `<meta property="og:locale:alternate" content="${l}" />`),
+    ...versions.map(
+      ({ hreflang, href }) => `<link rel="alternate" hreflang="${hreflang}" href="${escapeAttr(href)}" />`,
+    ),
+  ];
+  return html.replace("</head>", () => `${tags.map((t) => `    ${t}\n`).join("")}  </head>`);
+}

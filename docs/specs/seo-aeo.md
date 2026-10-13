@@ -28,8 +28,18 @@ read_when:
 - 每個合法 route 都有實體、self-canonical 的 `index.html`：各 app 的 `scripts/copy-spa-pages.js` 複製 app root HTML 時，透過 `scripts/rewrite-seo-tags.mjs` 改寫該 route 自己的 canonical、og:url、title、description。子頁沿用 app 首頁的 canonical 會被當成重複內容。
 - App 首頁的 `<title>` 格式為「品牌 — 類別描述」，例如 `Pikgeon — Postcard Tracker App with On-Device OCR`。只放品牌名會讓非品牌查詢失去最強的 on-page 訊號。類別用詞取自既有 meta / JSON-LD / llms.txt 已驗證的說法。
 - 每個子頁要有自己的 description，不沿用首頁。
-- `<html lang>` 必須和 prerender 出來的正文語言一致：各 app 的 `i18n.js` 解析語系後同步 `document.documentElement.lang`。
+- `<html lang>` 必須和 prerender 出來的正文語言一致：各 app 的 `i18n.js` 解析語系後同步 `document.documentElement.lang`。DingPOS 另外由 copy script 在靜態 HTML 寫好 `lang`。
 - 元件層的 render 限制（收合內容留在 DOM、不用 JS-gated scroll reveal）見 AGENTS.md §Sub-app Notes 與 §Project Skills。
+
+## 多語系 URL
+
+只有獨立 URL 的語言才能被索引。同一個 URL 在 client 端切換語言，crawler 只看得到一種語言：Googlebot 從美國發出、不帶 `Accept-Language`（[Google](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites)）。
+
+- 目前只有 DingPOS 有多語系 URL：英文不加前綴（`/dingpos/...`，同時是 `x-default`），繁中在 `/dingpos/zh-hant/...`，兩邊的子路徑一一對應。其他 app 仍只有 prerender 語言可被索引。
+- URL 是唯一的語言訊號：不看 navigator、不讀 localStorage，也不依使用者語系自動導向。Google 明確建議避免這種導向，因為會讓使用者和 crawler 看不到其他語言版本。語言切換器直接導到同一頁另一個語言的 URL。
+- 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（`en`、`zh-Hant`、`x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。
+- hreflang 只寫在 HTML `<head>`，sitemap 不重複寫。Google 認為兩種方式等價，同時維護兩份只會增加出錯的機會。
+- 語系前綴的單一來源：`dingpos/src/i18n.js` 的 `supportedLanguages` 和 `dingpos/scripts/copy-spa-pages.js` 的 `LOCALES`，兩邊必須一致。
 
 ## Prerender
 
@@ -41,7 +51,7 @@ read_when:
 
 ## Sitemap
 
-- repo 根目錄的 `sitemap.xml` 手動維護，是 URL 成員的唯一來源。dingpos build 會驗證自己的 route 都在裡面。
+- repo 根目錄的 `sitemap.xml` 手動維護，是 URL 成員的唯一來源。dingpos build 會驗證 sitemap 裡的 `/dingpos/` URL 跟它產出的頁面（兩種語言）完全一致，多一個少一個都會讓 build 失敗。
 - 部署時由 `scripts/generate-sitemap.mjs` 輸出 `_site/sitemap.xml`，每個 URL 的 `lastmod` 取自產生該 route 的檔案的最後一次 git commit。這個 `lastmod` 不手填、不批次更新。CI checkout 必須用 `fetch-depth: 0`，shallow clone 會讓所有日期塌成同一天。
 - IndexNow 不接：小站靠一般 crawling 就夠。只有 Bing 收錄明顯遲緩時才啟用（Bing WMT 有入口）。
 

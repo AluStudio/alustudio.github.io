@@ -7,6 +7,8 @@
     "support": "FAQ"
   },
   "hero": {
+    "meta_title": "DingPOS — Offline-First Point of Sale App for iPad",
+    "meta_description": "DingPOS — Open your store in 10 minutes. An offline-first point of sale for iPad. Your data, your control.",
     "eyebrow": "Point of Sale for iPad",
     "title": "Open your store in 10 minutes. Your data, your control.",
     "description": "DingPOS is a point of sale for iPad. No account, no cloud lock-in, and it keeps working with no internet. Your products, orders, and customers all stay on your own device.",
