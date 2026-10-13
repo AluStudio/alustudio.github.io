@@ -65,9 +65,37 @@ export function hasRenderedContent(html) {
  */
 export function auditRoutes(pages) {
   const errors = [];
+  // DingPOS ships 60+ routes from one template; a missing per-route meta
+  // silently falls back to the app root's, so duplicates are checked there.
+  const uniqueWithin = { prefix: "/dingpos/", title: new Map(), description: new Map() };
   for (const [route, html] of pages) {
     const h1Count = html.match(/<h1[\s>]/gi)?.length ?? 0;
     if (h1Count !== 1) errors.push(`${route}: expected exactly one <h1>, found ${h1Count}`);
+
+    for (const [, json] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+      try {
+        JSON.parse(json);
+      } catch (err) {
+        errors.push(`${route}: JSON-LD does not parse (${err.message})`);
+      }
+    }
+
+    if (route.startsWith(uniqueWithin.prefix)) {
+      const meta = {
+        title: html.match(/<title>([\s\S]*?)<\/title>/)?.[1],
+        description: html.match(/<meta name="description" content="([^"]*)"/)?.[1],
+      };
+      for (const field of ["title", "description"]) {
+        const value = meta[field];
+        if (!value) {
+          errors.push(`${route}: missing ${field}`);
+          continue;
+        }
+        const seen = uniqueWithin[field];
+        if (seen.has(value)) errors.push(`${route}: ${field} duplicates ${seen.get(value)}`);
+        else seen.set(value, route);
+      }
+    }
   }
   return errors;
 }

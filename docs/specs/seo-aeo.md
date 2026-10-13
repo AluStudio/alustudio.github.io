@@ -35,7 +35,7 @@ read_when:
 
 - CI 在 assemble `_site/` 之後執行 `scripts/prerender.mjs`：用 headless Chrome render sitemap 裡的每個 route，再把 rendered DOM 寫回該 route 的 `index.html`。Route 清單只來自 sitemap。
 - 任何 route render 出空殼，build 就失敗，不允許默默部署空頁。
-- render 完再跑 route audit（`auditRoutes`）：每個 route 剛好一個 `<h1>`。品牌名放在 footer 這類重複區塊時用 `<p class="h1">`，不用 heading。違規一樣讓 build 失敗。
+- render 完再跑 route audit（`auditRoutes`）：每個 route 剛好一個 `<h1>`、所有 JSON-LD 都能 parse、`/dingpos/` 底下每個 route 的 title 與 description 都不重複。品牌名放在 footer 這類重複區塊時用 `<p class="h1">`，不用 heading。違規一樣讓 build 失敗。
 - 選 post-build prerender 而不是 vite-react-ssg：後者要改五個 app 的進入點與路由，前者 app 程式碼零改動。
 - 接受的代價：client 端 `createRoot` 會整棵重繪 prerendered DOM，造成一次閃替。改用 `hydrateRoot` 可以消除，但屬於獨立任務。
 
@@ -48,6 +48,7 @@ read_when:
 ## Structured data 與 social meta
 
 - JSON-LD 靜態寫在各 app 的 `index.html`：home 放 `Organization` + `WebSite`；各 app 放 `MobileApplication`，含 `Offer` / `AggregateOffer`。
+- DingPOS 的每篇 support 文章另有 `BreadcrumbList`（DingPOS → Support → 文章），由 `copy-spa-pages.js` 在 build 時寫進該 route 的 `<head>`（`addJsonLd` / `breadcrumbList`）。
 - `aggregateRating` 只在 App Store 有足夠的真實評分時加入，並定期同步。目前五站都沒有：評分太少的 app 標上去，比不標更像造假。
 - 每個 app 有 1200x630 的 `og:image`，以及 `og:type=website`、`og:site_name=Alu Studio`、`twitter:card=summary_large_image`。
 

@@ -81,3 +81,29 @@ export function setPageMeta(html, { title, description } = {}) {
   }
   return html;
 }
+
+/**
+ * Append a JSON-LD block to <head>. Structured data must ship in the initial
+ * HTML (crawlers do not trust client-injected schema). `<` is escaped so
+ * author text such as "</script>" cannot end the block early.
+ */
+export function addJsonLd(html, data) {
+  const json = JSON.stringify(data, null, 2).replace(/</g, "\\u003c");
+  return html.replace("</head>", () => `    <script type="application/ld+json">\n${json}\n    </script>\n  </head>`);
+}
+
+/**
+ * schema.org BreadcrumbList for an ordered trail of `{ name, url }`, root first.
+ */
+export function breadcrumbList(trail) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map(({ name, url }, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name,
+      item: url,
+    })),
+  };
+}

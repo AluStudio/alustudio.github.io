@@ -7,7 +7,8 @@
  * Each copy also gets its own <title>/description: a self-canonical route
  * that still carries the app root's title and snippet is only half-fixed —
  * 40+ sitemap URLs introducing themselves identically is the same
- * duplicate-content signal in a different field.
+ * duplicate-content signal in a different field. Support articles also get a
+ * BreadcrumbList (DingPOS → Support → article) written into the static head.
  *
  * FAQ article routes are derived from the FAQ data modules, so adding
  * an article automatically ships its static route. The zh-Hant and en
@@ -20,7 +21,12 @@ import process from "node:process";
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { setSelfCanonical, setPageMeta } from "../../scripts/rewrite-seo-tags.mjs";
+import {
+  setSelfCanonical,
+  setPageMeta,
+  addJsonLd,
+  breadcrumbList,
+} from "../../scripts/rewrite-seo-tags.mjs";
 import * as zhHant from "../src/data/faq/articles.zh-Hant.js";
 import * as en from "../src/data/faq/articles.en.js";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
@@ -42,9 +48,9 @@ const ui = JSON.parse(
 
 const STATIC_ROUTES = [
   { path: "pricing", title: ui.pricing.doc_title, description: ui.pricing.meta_description },
-  { path: "privacy", title: ui.nav.privacy },
-  { path: "terms", title: ui.nav.terms },
-  { path: "support", title: ui.support.doc_title, description: ui.support.subtitle },
+  { path: "privacy", title: ui.nav.privacy, description: ui.privacy.meta_description },
+  { path: "terms", title: ui.nav.terms, description: ui.terms.meta_description },
+  { path: "support", title: ui.support.doc_title, description: ui.support.meta_description },
 ];
 
 // ── FAQ data consistency guard ──────────────────────────────
@@ -159,10 +165,15 @@ const routes = [
     path: `support/${article.slug}`,
     title: article.question,
     description: articleDescription(article),
+    jsonLd: breadcrumbList([
+      { name: SITE_NAME, url: `${BASE_URL}/` },
+      { name: ui.support.doc_title, url: `${BASE_URL}/support/` },
+      { name: article.question, url: `${BASE_URL}/support/${article.slug}/` },
+    ]),
   })),
 ];
 
-for (const { path, title, description } of routes) {
+for (const { path, title, description, jsonLd } of routes) {
   const dest = join(dist, path, "index.html");
   mkdirSync(dirname(dest), { recursive: true });
   copyFileSync(src, dest);
@@ -170,6 +181,7 @@ for (const { path, title, description } of routes) {
   const routeUrl = `${BASE_URL}/${path}/`;
   let html = setSelfCanonical(readFileSync(dest, "utf8"), routeUrl);
   html = setPageMeta(html, { title: `${title} — ${SITE_NAME}`, description });
+  if (jsonLd) html = addJsonLd(html, jsonLd);
   writeFileSync(dest, html);
 
   console.log(`  ✓ ${path}/index.html (canonical: ${routeUrl})`);

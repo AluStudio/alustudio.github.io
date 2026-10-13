@@ -77,3 +77,34 @@ test("auditRoutes flags a route with two h1s or none", () => {
     "/sotto/: expected exactly one <h1>, found 0",
   ]);
 });
+
+const dingposPage = (title, description, extraHead = "") =>
+  `<html><head><title>${title}</title><meta name="description" content="${description}" />${extraHead}</head><body><h1>t</h1></body></html>`;
+
+test("auditRoutes flags duplicate dingpos titles and descriptions", () => {
+  const pages = new Map([
+    ["/dingpos/", dingposPage("DingPOS", "Root copy")],
+    ["/dingpos/privacy/", dingposPage("Privacy — DingPOS", "Root copy")],
+    ["/dingpos/terms/", dingposPage("DingPOS", "Terms copy")],
+  ]);
+  assert.deepEqual(auditRoutes(pages), [
+    "/dingpos/privacy/: description duplicates /dingpos/",
+    "/dingpos/terms/: title duplicates /dingpos/",
+  ]);
+});
+
+test("auditRoutes does not require unique meta outside dingpos", () => {
+  const pages = new Map([
+    ["/sotto/", dingposPage("Sotto", "Same")],
+    ["/sotto/faq/", dingposPage("Sotto", "Same")],
+  ]);
+  assert.deepEqual(auditRoutes(pages), []);
+});
+
+test("auditRoutes flags JSON-LD that does not parse", () => {
+  const broken = `<script type="application/ld+json">{"@type": </script>`;
+  const pages = new Map([["/sotto/", dingposPage("Sotto", "x", broken)]]);
+  const errors = auditRoutes(pages);
+  assert.equal(errors.length, 1);
+  assert.match(errors[0], /^\/sotto\/: JSON-LD does not parse/);
+});
