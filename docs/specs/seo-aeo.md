@@ -6,6 +6,7 @@ read_when:
   - Editing robots.txt, llms.txt, JSON-LD, or Cloudflare AI Crawl Control
   - Writing FAQ or landing copy meant to be cited by search or AI engines
   - Weighing SEO skill advice against this site's decisions
+  - Changing DingPOS en or zh-Hant copy, or anything about the generated zh-Hans
 ---
 
 # SEO + AEO
@@ -35,11 +36,27 @@ read_when:
 
 只有獨立 URL 的語言才能被索引。同一個 URL 在 client 端切換語言，crawler 只看得到一種語言：Googlebot 從美國發出、不帶 `Accept-Language`（[Google](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites)）。
 
-- 目前只有 DingPOS 有多語系 URL：英文不加前綴（`/dingpos/...`，同時是 `x-default`），繁中在 `/dingpos/zh-hant/...`，兩邊的子路徑一一對應。其他 app 仍只有 prerender 語言可被索引。
+- 目前只有 DingPOS 有多語系 URL：英文不加前綴（`/dingpos/...`，同時是 `x-default`），繁中在 `/dingpos/zh-hant/...`，簡中在 `/dingpos/zh-hans/...`，三種語言的子路徑一一對應。其他 app 仍只有 prerender 語言可被索引。
 - URL 是唯一的語言訊號：不看 navigator、不讀 localStorage，也不依使用者語系自動導向。Google 明確建議避免這種導向，因為會讓使用者和 crawler 看不到其他語言版本。語言切換器直接導到同一頁另一個語言的 URL。
-- 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（`en`、`zh-Hant`、`x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。
+- 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（`en`、`zh-Hant`、`zh-Hans`、`x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。`og:locale` 對應：`en_US`、`zh_TW`、`zh_CN`。
 - hreflang 只寫在 HTML `<head>`，sitemap 不重複寫。Google 認為兩種方式等價，同時維護兩份只會增加出錯的機會。
 - 語系前綴的單一來源：`dingpos/src/i18n.js` 的 `supportedLanguages` 和 `dingpos/scripts/copy-spa-pages.js` 的 `LOCALES`，兩邊必須一致。
+- 任兩頁的 title 與 description 都不可相同，跨語系也算：兩個 URL 用同一句話介紹自己，就是重複內容的訊號。`copy-spa-pages.js` 在 build 時檢查，違規即失敗。
+
+### 簡中由繁中產生
+
+- DingPOS 的簡中（`dingpos/src/locales/zh-Hans/translation.json`、`dingpos/src/data/faq/articles.zh-Hans.js`）由 `scripts/gen-zh-hans.mjs` 從繁中產生，不手改。原因：手動維護的簡中會落後繁中，sotto 網站的簡中就少了整段 FAQ。`npm test` 在檔案和重新產生的結果不同時失敗，手改也會被擋。
+- 轉換順序：opencc-js `twp → cn`、`APP_GLOSSARY`、`SITE_GLOSSARY`、「」→“”、`ROW_COLUMN_ENTRIES` 的 列/行 對調（台灣的「列」是 row，大陸的「列」是 column）、`OVERRIDES`。轉換改到 `{{…}}` placeholder，或改到 slug、`related`、路徑、`since` 這類非文字欄位時，整次失敗、不寫檔。
+- 用詞跟 DingPOS app 的簡中一致：`APP_GLOSSARY` 逐字鏡像 app repo `scripts/gen-zh-hans.py` 的 `GLOSSARY`，兩邊一起改，FAQ 寫的畫面名稱才會和店家在 app 看到的一樣。網站專用的修正放 `SITE_GLOSSARY` 或 `OVERRIDES`，鏡像區塊不單獨改。
+- `OVERRIDES` 每筆記著它是對哪一句繁中寫的；繁中改了，override 就失效並讓產生失敗，要重寫。繁中 title 裡沒有任何繁簡不同的字時，轉出來和繁中一模一樣，會撞上 title 不重複的規則，這時用 `OVERRIDES` 給一個大陸用語版本。
+
+改 en 或繁中文案的流程：
+
+1. 改 en 與 zh-Hant。
+2. `npm run zh-hans`：重新產生簡中，並把和 `origin/main` 相比有變動的條目寫到 `.logs/zh-hans-review.json`（`npm run zh-hans -- --base <ref>` 換比較基準）。UI 以 key 為單位，FAQ 以整篇文章為單位。
+3. 筆數不為 0 時，交給 project agent `zh-hans-reviewer` 審：`subagent { agent: "zh-hans-reviewer", task: "Review the packet at <absolute path>" }`。它會連來源一起審，因為來源錯了，每種語言都會跟著錯。
+4. 依每個 finding 標的 layer 修：`zh-hant` 或 `en` 改來源；`site-glossary` 加進 `SITE_GLOSSARY`（先看它列出的撞詞）；`override` 加進 `OVERRIDES`；`app` 先改 app repo，再同步鏡像。不採納的 finding 不用記錄。
+5. 再跑一次 `npm run zh-hans`，然後 `npm test`，把產生的檔案一起 commit。
 
 ## Prerender
 
@@ -48,13 +65,13 @@ read_when:
 - render 完再跑 route audit（`auditRoutes`）：每個 route 剛好一個 `<h1>`、所有 JSON-LD 都能 parse、`/dingpos/` 底下每個 route 的 title 與 description 都不重複；有 hreflang 的頁面必須列出自己、被每個 alternate 回指完全相同的一組，且 `<html lang>` 等於指向自己的那個 hreflang。品牌名放在 footer 這類重複區塊時用 `<p class="h1">`，不用 heading。違規一樣讓 build 失敗。
 - 選 post-build prerender 而不是 vite-react-ssg：後者要改五個 app 的進入點與路由，前者 app 程式碼零改動。
 - 序列化前，把 DOM 修成 React server renderer 會輸出的樣子，因為 hydration 是逐個節點對照 HTML：表單狀態（radio 的 checked、選中的 `<option>`）存在 DOM property，`outerHTML` 不會寫出來，所以改寫成屬性——hydrate `<select>` 時 React 不會重新套用 value；相鄰的 text node 在 HTML 被 parse 時會合併，所以中間插入空註解 `<!-- -->`。
-- dingpos 用 `hydrateRoot` 接手 prerendered DOM，畫好的節點原地保留。prerender 寫完檔案後，會用手機 viewport 重新載入每個 `/dingpos/` route（兩種語言）：出現 React error，或 React 換掉了 prerendered 節點，build 就失敗。要 hydrate 的 app 列在 `scripts/prerender.mjs` 的 `HYDRATED_PREFIXES`。
+- dingpos 用 `hydrateRoot` 接手 prerendered DOM，畫好的節點原地保留。prerender 寫完檔案後，會用手機 viewport 重新載入每個 `/dingpos/` route（每種語言）：出現 React error，或 React 換掉了 prerendered 節點，build 就失敗。要 hydrate 的 app 列在 `scripts/prerender.mjs` 的 `HYDRATED_PREFIXES`。
 - home、pikgeon、babbby、sotto 仍用 `createRoot`，會整棵重繪 prerendered DOM，造成一次閃替。原因是它們的語言由瀏覽器偵測（navigator / localStorage），prerender 出來的是英文；其他語言的訪客一定 mismatch，React 會退回整棵重繪，hydrate 沒有效益。要改成 hydrate，得先改成像 dingpos 一樣由 URL 決定語言。
 - 在 render 期間讀到 prerender 與訪客瀏覽器可能不同的值（時間、viewport、storage），會讓 hydrate 的 app mismatch。dingpos footer 的版權年份因此取 build 年份（`import.meta.env.BUILD_YEAR`），不讀訪客的時鐘。
 
 ## Sitemap
 
-- repo 根目錄的 `sitemap.xml` 手動維護，是 URL 成員的唯一來源。dingpos build 會驗證 sitemap 裡的 `/dingpos/` URL 跟它產出的頁面（兩種語言）完全一致，多一個少一個都會讓 build 失敗。
+- repo 根目錄的 `sitemap.xml` 手動維護，是 URL 成員的唯一來源。dingpos build 會驗證 sitemap 裡的 `/dingpos/` URL 跟它產出的頁面（每種語言）完全一致，多一個少一個都會讓 build 失敗。
 - 部署時由 `scripts/generate-sitemap.mjs` 輸出 `_site/sitemap.xml`，每個 URL 的 `lastmod` 取自產生該 route 的檔案的最後一次 git commit。這個 `lastmod` 不手填、不批次更新。CI checkout 必須用 `fetch-depth: 0`，shallow clone 會讓所有日期塌成同一天。
 - IndexNow 不接：小站靠一般 crawling 就夠。只有 Bing 收錄明顯遲緩時才啟用（Bing WMT 有入口）。
 
@@ -77,7 +94,7 @@ read_when:
 - FAQ 用問句式標題，用使用者真實會打的查詢語言，例如 `Does Pikgeon work offline?`。標題下先用 2–3 句直接回答，再展開細節，heading 階層要是語意化 HTML。
 - 首頁與特色文案寫成可以單獨被引用的具體句子，用事實和數字，不用空泛形容詞。
 - 產品 claim 以產品 repo 為準（見 AGENTS.md §Product Repos）。
-- FAQ 題數少時用單頁 `/faq/`（pikgeon、babbby、sotto）。題數成長到十題以上時，改用 dingpos `/support/` 的模式：索引頁加每篇一條 route，內容來自雙語 data pack。
+- FAQ 題數少時用單頁 `/faq/`（pikgeon、babbby、sotto）。題數成長到十題以上時，改用 dingpos `/support/` 的模式：索引頁加每篇一條 route，內容來自各語系的 data pack。
 
 ## 每月回訪
 

@@ -26,7 +26,7 @@
  *   npm run zh-hans [-- --base <ref>]   write zh-Hans + the review packet
  *   node scripts/gen-zh-hans.mjs --check  exit 1 when a zh-Hans file is stale
  *
- * Procedure for changing copy: docs/specs/seo-aeo.md §多語系 URL.
+ * Procedure for changing copy: docs/specs/seo-aeo.md §簡中由繁中產生.
  */
 
 import process from "node:process";
@@ -336,7 +336,7 @@ async function writePacket(out, base) {
   console.log(`${rows.length} entr${rows.length === 1 ? "y" : "ies"} changed since ${base} → ${out}`);
   console.log(
     rows.length
-      ? "next: review them with the zh-hans-reviewer agent (docs/specs/seo-aeo.md §多語系 URL)"
+      ? "next: review them with the zh-hans-reviewer agent (docs/specs/seo-aeo.md §簡中由繁中產生)"
       : "nothing to review",
   );
 }
