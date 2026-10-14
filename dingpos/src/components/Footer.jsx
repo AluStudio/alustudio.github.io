@@ -3,7 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  const thisYear = new Date().getFullYear();
+  // The build year, not the visitor's clock: the prerendered footer and the
+  // hydrating client must render the same text (see vite.config.js).
+  const thisYear = import.meta.env.BUILD_YEAR;
   const { t } = useTranslation();
 
   return (

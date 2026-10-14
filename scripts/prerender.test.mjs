@@ -6,6 +6,8 @@ import {
   routeToFilePath,
   hasRenderedContent,
   auditRoutes,
+  hydratedRoutes,
+  isPageError,
 } from "./prerender.mjs";
 
 test("parseSitemapRoutes extracts pathnames from <loc> entries", () => {
@@ -149,4 +151,16 @@ test("auditRoutes skips reciprocity for sitemap alternates left out of a partial
   assert.deepEqual(auditRoutes(pages, new Set(["/dingpos/pricing/"])), [
     "/dingpos/pricing/: hreflang points at /dingpos/zh-hant/pricing/, which is not a sitemap route",
   ]);
+});
+
+test("hydratedRoutes keeps only the apps that hydrate, in both languages", () => {
+  assert.deepEqual(
+    hydratedRoutes(["/home/", "/dingpos/", "/dingpos/zh-hant/pricing/", "/pikgeon/faq/", "/dingposx/"]),
+    ["/dingpos/", "/dingpos/zh-hant/pricing/"]
+  );
+});
+
+test("isPageError ignores requests aborted outside the local origin", () => {
+  assert.equal(isPageError("Failed to load resource: net::ERR_FAILED"), false);
+  assert.equal(isPageError("Minified React error #418; visit https://react.dev/errors/418"), true);
 });

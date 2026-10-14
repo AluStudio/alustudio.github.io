@@ -16,10 +16,27 @@ const STARTING_PRICE = PLANS[0].price;
 // purpose: its screenshot is the hero shot, so its copy runs as a full-width
 // band directly beneath it rather than as another side-by-side story.
 const STORIES = [
-  { key: "promotion", shot: "shot-promotions.webp", id: "promotions" },
-  { key: "reports", shot: "shot-dashboard.webp", id: "reports" },
-  { key: "orders", shot: "shot-orders.webp", id: "orders" },
+  { key: "promotion", shot: "promotions", id: "promotions" },
+  { key: "reports", shot: "dashboard", id: "reports" },
+  { key: "orders", shot: "orders", id: "orders" },
 ];
+
+// Pixel size of each full-size public/shot-<name>.webp; every shot also ships
+// a shot-<name>-1080w.webp for phones. Both come from scripts/build-screenshots.sh.
+const SHOT_SIZES = {
+  cashier: [2240, 1471],
+  promotions: [1720, 1129],
+  dashboard: [1720, 1129],
+  orders: [1720, 1129],
+};
+const PHONE_SHOT_WIDTH = 1080;
+
+// Rendered image width, mirroring home.scss: the .device frame's 0.7rem padding
+// inside the hero's 1.5rem gutters (capped by .hero-shot's 1120px), or inside
+// the 7fr column of .story-inner (one column below 992px).
+const HERO_SHOT_SIZES = "(min-width: 1168px) 1098px, calc(100vw - 4.4rem)";
+const STORY_SHOT_SIZES =
+  "(min-width: 1200px) 612px, (min-width: 992px) calc(58.33vw - 5.5rem), calc(100vw - 4.4rem)";
 
 const FEATURES = [
   { key: "onboarding", icon: "bi-rocket-takeoff" },
@@ -57,7 +74,7 @@ function HomePage() {
         <section className="hero">
           <div className="hero-copy">
             <img
-              src={`${base}logo.png`}
+              src={`${base}logo.webp`}
               alt="DingPOS"
               className="hero-logo"
               // Intrinsic size, not the rendered size — the browser reserves space
@@ -82,7 +99,7 @@ function HomePage() {
           </div>
 
           <div className="hero-shot">
-            <Device src={`${base}shot-cashier.webp`} alt={t("hero.shot_alt")} priority />
+            <Device shot="cashier" sizes={HERO_SHOT_SIZES} alt={t("hero.shot_alt")} priority />
           </div>
         </section>
 
@@ -120,7 +137,7 @@ function HomePage() {
                 </ul>
               </div>
               <div className="story-shot">
-                <Device src={`${base}${shot}`} alt={t(`stories.${key}.shot_alt`)} />
+                <Device shot={shot} sizes={STORY_SHOT_SIZES} alt={t(`stories.${key}.shot_alt`)} />
               </div>
             </div>
           </section>
@@ -200,11 +217,17 @@ function HomePage() {
  * screen pixels — `scripts/build-screenshots.sh` can regenerate them from a
  * fresh capture without anyone having to redraw a frame.
  */
-function Device({ src, alt, priority = false }) {
+function Device({ shot, sizes, alt, priority = false }) {
+  const base = import.meta.env.BASE_URL;
+  const [width, height] = SHOT_SIZES[shot];
   return (
     <figure className="device">
       <img
-        src={src}
+        src={`${base}shot-${shot}.webp`}
+        srcSet={`${base}shot-${shot}-${PHONE_SHOT_WIDTH}w.webp ${PHONE_SHOT_WIDTH}w, ${base}shot-${shot}.webp ${width}w`}
+        sizes={sizes}
+        width={width}
+        height={height}
         alt={alt}
         loading={priority ? "eager" : "lazy"}
         decoding="async"

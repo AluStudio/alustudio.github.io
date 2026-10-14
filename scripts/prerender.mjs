@@ -15,8 +15,17 @@
  *   deterministic and never waits on third parties.
  * - Every rendered page must pass a content sanity check; an empty render
  *   fails the build rather than silently shipping an empty shell.
- * - React's createRoot() re-renders over the prerendered DOM on the client
- *   (one flash swap) — accepted tradeoff, see docs/specs/seo-aeo.md §Prerender.
+ * - The serialized DOM is made to match what React's server renderer emits,
+ *   because hydration reads it back node for node: form state (checked radios,
+ *   the selected <option>) lives in DOM properties that outerHTML drops, so it
+ *   is written back as attributes — hydrating a <select> never re-applies its
+ *   value; and adjacent text nodes, which would merge when the HTML is parsed,
+ *   are separated by an empty comment (<!-- -->).
+ * - Apps in HYDRATED_PREFIXES hydrate this DOM in place (hydrateRoot); after the
+ *   audit, every one of their routes is reloaded from the written file and must
+ *   hydrate without a React error and without React replacing the prerendered
+ *   nodes. The other apps still re-render it with createRoot (one flash swap) —
+ *   see docs/specs/seo-aeo.md §Prerender.
  *
  * Usage:
  *   node scripts/prerender.mjs [--site-dir _site] [--only /pikgeon/] [--concurrency 4]
@@ -63,6 +72,23 @@ function hreflangSet(html) {
   return [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(
     ([, hreflang, href]) => ({ hreflang, path: new URL(href).pathname }),
   );
+}
+
+/**
+ * Path prefixes of apps whose client entry hydrates the prerendered DOM
+ * (hydrateRoot) instead of re-rendering it. Each needs a clean hydration on
+ * every route: on a mismatch React silently discards the prerendered nodes.
+ */
+export const HYDRATED_PREFIXES = ["/dingpos/"];
+
+/** Routes that must pass the hydration check. */
+export function hydratedRoutes(routes) {
+  return routes.filter((route) => HYDRATED_PREFIXES.some((prefix) => route.startsWith(prefix)));
+}
+
+/** Console errors that are not the page's own: requests outside the local origin are aborted on purpose. */
+export function isPageError(consoleText) {
+  return !consoleText.startsWith("Failed to load resource");
 }
 
 const setKey = (set) => set.map((a) => `${a.hreflang} ${a.path}`).sort().join("\n");
@@ -195,10 +221,70 @@ async function renderRoute(page, origin, route) {
   );
   // settle: let i18n/microtask-batched renders flush
   await new Promise((r) => setTimeout(r, 150));
-  const html = await page.evaluate(
-    () => "<!doctype html>\n" + document.documentElement.outerHTML
-  );
+  const html = await page.evaluate(() => {
+    for (const input of document.querySelectorAll("input[type=radio], input[type=checkbox]")) {
+      input.toggleAttribute("checked", input.checked);
+    }
+    for (const option of document.querySelectorAll("option")) {
+      option.toggleAttribute("selected", option.selected);
+    }
+    // Adjacent text nodes would merge when the HTML is parsed back; separate
+    // them with an empty comment, as React's server renderer does.
+    const walker = document.createTreeWalker(document.querySelector("#root"), NodeFilter.SHOW_TEXT);
+    const texts = [];
+    while (walker.nextNode()) texts.push(walker.currentNode);
+    for (const text of texts) {
+      if (text.nextSibling?.nodeType === Node.TEXT_NODE) text.after(document.createComment(" "));
+    }
+    return "<!doctype html>\n" + document.documentElement.outerHTML;
+  });
   return html;
+}
+
+/**
+ * Load a prerendered route and report what went wrong with its hydration.
+ * Expects `page` to have run trackPrerenderedRoot(); returns [] when clean.
+ */
+async function checkHydration(page, origin, route) {
+  const errors = [];
+  const onPageError = (err) => errors.push(`uncaught: ${err.message}`);
+  const onConsole = (msg) => {
+    if (msg.type() === "error" && isPageError(msg.text())) errors.push(`console: ${msg.text()}`);
+  };
+  page.on("pageerror", onPageError);
+  page.on("console", onConsole);
+  try {
+    await page.goto(`${origin}${route}`, { waitUntil: "load", timeout: 30_000 });
+    // React tags every node it owns with a __reactFiber$ key, hydrated or newly created.
+    await page.waitForFunction(
+      () => {
+        const first = document.querySelector("#root")?.firstElementChild;
+        return first && Object.keys(first).some((key) => key.startsWith("__reactFiber$"));
+      },
+      { timeout: 15_000 }
+    );
+    await new Promise((r) => setTimeout(r, 150));
+    const kept = await page.evaluate(
+      () => Boolean(window.__prerenderedRoot) &&
+        window.__prerenderedRoot === document.querySelector("#root").firstElementChild
+    );
+    if (!kept) errors.push("React replaced the prerendered DOM instead of hydrating it");
+  } finally {
+    page.off("pageerror", onPageError);
+    page.off("console", onConsole);
+  }
+  return errors;
+}
+
+/** Remember #root's first prerendered node, captured after parsing and before deferred scripts run. */
+async function trackPrerenderedRoot(page) {
+  await page.evaluateOnNewDocument(() => {
+    document.addEventListener("readystatechange", () => {
+      if (document.readyState === "interactive") {
+        window.__prerenderedRoot = document.querySelector("#root")?.firstElementChild ?? null;
+      }
+    });
+  });
 }
 
 async function main() {
@@ -249,15 +335,20 @@ async function main() {
   let done = 0;
   const queue = [...routes];
 
-  async function worker() {
+  async function openPage(viewport) {
     const page = await browser.newPage();
-    await page.setViewport({ width: 1280, height: 800 });
+    await page.setViewport(viewport);
     // Block anything that isn't served by our local origin.
     await page.setRequestInterception(true);
     page.on("request", (req) => {
       if (req.url().startsWith(origin)) req.continue();
       else req.abort();
     });
+    return page;
+  }
+
+  async function worker() {
+    const page = await openPage({ width: 1280, height: 800 });
     for (;;) {
       const route = queue.shift();
       if (!route) break;
@@ -282,6 +373,30 @@ async function main() {
     Array.from({ length: Math.min(concurrency, routes.length) }, worker)
   );
 
+  // Hydration runs on the visitor's device, so check it at a phone viewport
+  // rather than the desktop one the DOM was captured at.
+  const hydrationFailures = [];
+  const hydrationQueue = failures.length === 0 ? hydratedRoutes(routes) : [];
+  const hydrationTotal = hydrationQueue.length;
+  async function hydrationWorker() {
+    const page = await openPage({ width: 412, height: 823, isMobile: true, hasTouch: true });
+    await trackPrerenderedRoot(page);
+    for (;;) {
+      const route = hydrationQueue.shift();
+      if (!route) break;
+      try {
+        const errors = await checkHydration(page, origin, route);
+        if (errors.length > 0) hydrationFailures.push({ route, errors });
+      } catch (err) {
+        hydrationFailures.push({ route, errors: [err.message] });
+      }
+    }
+    await page.close();
+  }
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, hydrationTotal) }, hydrationWorker)
+  );
+
   await browser.close();
   server.close();
 
@@ -302,6 +417,14 @@ async function main() {
     process.exit(1);
   }
   console.log("route audit passed");
+  if (hydrationFailures.length > 0) {
+    console.error(`✗ hydration check failed on ${hydrationFailures.length}/${hydrationTotal} route(s) — failing the build`);
+    for (const { route, errors } of hydrationFailures) {
+      for (const e of errors) console.error(`  - ${route}: ${e}`);
+    }
+    process.exit(1);
+  }
+  if (hydrationTotal > 0) console.log(`hydration check passed (${hydrationTotal} routes)`);
 }
 
 // Run only when invoked directly (not when imported by tests).

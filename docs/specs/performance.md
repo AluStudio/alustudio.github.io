@@ -16,6 +16,7 @@ read_when:
 ## 圖片
 
 - 頁面上的圖片用 WebP，尺寸約為最大渲染尺寸的 3 倍（原圖比這個小就用原尺寸）。QR code 用 lossless WebP。PNG 只留給平台規定的用途：favicon、apple-touch-icon、og-image。
+- 同一張圖在手機與桌機的渲染寬度差很多時（例如 dingpos 截圖：手機約 350px、桌機約 1100px），用 `srcset` 加 `sizes` 另外提供手機版，寬度約為手機渲染寬度的 3 倍（dingpos 用 1080w），讓手機不必下載桌機尺寸。`sizes` 要跟 CSS 版面一起改，算錯時瀏覽器會選到過大或過小的檔案。
 - 每個 `<img>` 帶 `width` / `height` 屬性，讓瀏覽器在圖片到達前先保留空間。只有在 CSS 至少決定一個維度時，屬性推導出的 aspect-ratio 才有作用；寬高都是 `auto` 時（例如 `max-height` 加 `width: auto`），盒子高度仍是 0，圖片晚到就會推動版面。
 
 ## 量測
@@ -29,11 +30,11 @@ read_when:
 - Lighthouse mobile 模擬的是 Slow 4G（150ms RTT、1.6Mbps）加 4x CPU 降速，大約是 4G 連線最差的 25%。在這個條件下，FCP / LCP 顯示 2–4 秒是常態，不代表一般使用者要等這麼久。
 - Core Web Vitals 的「LCP ≤ 2.5s」是真實使用者第 75 百分位數的門檻，不是 lab 門檻。Lighthouse mobile 的 LCP 評分曲線是 2.5s = 90 分、4.0s = 50 分。
 - Opacity 從 0 開始的進場動畫，會把 LCP 延後到元素在可見狀態下重新 paint 的時候，在真實使用者身上也一樣。home 與 dingpos 的 hero 目前就是這樣，各多約 1s。
-- `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
+- `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP。dingpos 已改用 `hydrateRoot` 原地保留節點；home、pikgeon、babbby、sotto 仍是 `createRoot`，目前它們的 lab LCP 沒有被重繪拖到，但訪客語言跟 prerender 的英文不同時，換成另一種語言的新節點仍可能記下新的 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
 
 ## 目前基準
 
-正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。
+正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。pikgeon hero 保留空間、dingpos 改 `hydrateRoot` 與手機版截圖之後，這張表已經過時，部署後需重量。
 
 | app | perf | FCP | LCP | CLS | LCP 元素 | desktop perf |
 |---|---|---|---|---|---|---|
@@ -43,8 +44,8 @@ read_when:
 | sotto | 97 | 2.09s | 2.09s | 0.022 | `p.hero-desc` | 99 |
 | dingpos | 85 | 2.08s | 4.10s | 0.001 | `p.hero-desc` | 95 |
 
-- pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。
-- dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。
+- pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。已改成固定 `height: 500px` 修正。
+- dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。重繪的部分已改 `hydrateRoot` 消除，進場動畫保留。
 
 ## Related
 

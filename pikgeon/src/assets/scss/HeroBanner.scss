@@ -90,7 +90,10 @@
 
     // 3. 圖片處理
     .ios-view-image {
-        max-height: 500px;
+        // A fixed height lets the width/height attributes' ratio size the box
+        // before the image arrives; with max-height and width both auto, the box
+        // starts 0px tall and the hero jumps when the image lands.
+        height: 500px;
         width: auto;
         display: block;
         margin: 0 auto;
