@@ -84,8 +84,9 @@ read_when:
 - Cloudflare AI Crawl Control 各 bot 的請求數變化。
 - 在 ChatGPT、Perplexity、Google AI 手動查「Pikgeon」「Babbby」「Sotto」「DingPOS」，記錄回答與引用。
 - 抽查 sitemap `lastmod` 是否和 git 歷史一致。
-- 效能用本機 `npx lighthouse` 量 lab data。免 key 的 PSI 配額通常已經耗盡。
+- 效能照 [performance §量測](./performance.md#量測) 量正式站，並更新 §目前基準。
 
 ## Related
 
 - [hosting.md](./hosting.md) ← canonical origin、redirect、404 行為
+- [performance.md](./performance.md) ← 字型、圖片、Lighthouse 量測與基準
