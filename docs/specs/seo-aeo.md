@@ -46,6 +46,7 @@ read_when:
 ### 簡中由繁中產生
 
 - DingPOS 的簡中（`dingpos/src/locales/zh-Hans/translation.json`、`dingpos/src/data/faq/articles.zh-Hans.js`）由 `scripts/gen-zh-hans.mjs` 從繁中產生，不手改。原因：手動維護的簡中會落後繁中，sotto 網站的簡中就少了整段 FAQ。`npm test` 在檔案和重新產生的結果不同時失敗，手改也會被擋。
+- 轉換用 opencc-js，不用 OpenCC CLI：版本由 lockfile 鎖住，本機與 CI 轉出一樣的結果，`npm test` 的過期檢查才成立。
 - 轉換順序：opencc-js `twp → cn`、`APP_GLOSSARY`、`SITE_GLOSSARY`、「」→“”、`ROW_COLUMN_ENTRIES` 的 列/行 對調（台灣的「列」是 row，大陸的「列」是 column）、`OVERRIDES`。轉換改到 `{{…}}` placeholder，或改到 slug、`related`、路徑、`since` 這類非文字欄位時，整次失敗、不寫檔。
 - 用詞跟 DingPOS app 的簡中一致：`APP_GLOSSARY` 逐字鏡像 app repo `scripts/gen-zh-hans.py` 的 `GLOSSARY`，兩邊一起改，FAQ 寫的畫面名稱才會和店家在 app 看到的一樣。網站專用的修正放 `SITE_GLOSSARY` 或 `OVERRIDES`，鏡像區塊不單獨改。
 - `OVERRIDES` 每筆記著它是對哪一句繁中寫的；繁中改了，override 就失效並讓產生失敗，要重寫。繁中 title 裡沒有任何繁簡不同的字時，轉出來和繁中一模一樣，會撞上 title 不重複的規則，這時用 `OVERRIDES` 給一個大陸用語版本。
