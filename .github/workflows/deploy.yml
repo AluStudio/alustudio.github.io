@@ -38,6 +38,19 @@ jobs:
             sotto/package-lock.json
             dingpos/package-lock.json
 
+      # Restored before the root install: puppeteer's postinstall skips the
+      # Chrome download only when the cache is already in place.
+      - name: Cache Puppeteer Chrome
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      # Root deps: the shared-script tests need opencc-js, the prerender needs
+      # puppeteer.
+      - name: Install root deps
+        run: npm ci
+
       - name: Test Worker + shared scripts
         run: npm test
 
@@ -107,16 +120,8 @@ jobs:
       # JS, so the CSR shell is invisible to them (docs/specs/seo-aeo.md
       # §Prerender). An empty render fails the build instead
       # of silently deploying an empty shell.
-      - name: Cache Puppeteer Chrome
-        uses: actions/cache@v6
-        with:
-          path: ~/.cache/puppeteer
-          key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-
       - name: Prerender routes
-        run: |
-          npm ci
-          node scripts/prerender.mjs --site-dir _site
+        run: node scripts/prerender.mjs --site-dir _site
 
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v4

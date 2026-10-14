@@ -4,7 +4,8 @@
   "private": true,
   "description": "Alu Studio site — Cloudflare Worker + static assets, source repo for alu-studio.com",
   "scripts": {
-    "test": "node --test 'src/**/*.test.mjs' 'scripts/**/*.test.mjs'"
+    "test": "node --test 'src/**/*.test.mjs' 'scripts/**/*.test.mjs'",
+    "zh-hans": "node scripts/gen-zh-hans.mjs"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
   },
   "homepage": "https://github.com/AluStudio/alustudio.github.io#readme",
   "devDependencies": {
+    "opencc-js": "^1.4.2",
     "puppeteer": "^25.4.0",
     "wrangler": "^4.114.0"
   }

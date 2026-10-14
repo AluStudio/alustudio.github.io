@@ -116,13 +116,15 @@ test("sub-route rules include the app shell sources that shape final HTML", () =
   }
 });
 
-test("sourcesForRoute: zh-hant pages mirror their English page, not the app root", () => {
-  for (const sub of ["support/tax-calculation/", "pricing/", "privacy/", "terms/", ""]) {
-    assert.deepEqual(
-      sourcesForRoute(`/dingpos/zh-hant/${sub}`),
-      sourcesForRoute(`/dingpos/${sub}`),
-      `/dingpos/zh-hant/${sub}`,
-    );
+test("sourcesForRoute: zh-hant and zh-hans pages mirror their English page, not the app root", () => {
+  for (const root of ["zh-hant", "zh-hans"]) {
+    for (const sub of ["support/tax-calculation/", "pricing/", "privacy/", "terms/", ""]) {
+      assert.deepEqual(
+        sourcesForRoute(`/dingpos/${root}/${sub}`),
+        sourcesForRoute(`/dingpos/${sub}`),
+        `/dingpos/${root}/${sub}`,
+      );
+    }
   }
   assert.deepEqual(sourcesForRoute("/dingpos/zh-hant/support/free-trial/"), [
     "dingpos/src/data/faq",
