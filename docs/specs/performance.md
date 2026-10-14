@@ -34,7 +34,7 @@ read_when:
 
 ## 目前基準
 
-正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。
+正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。pikgeon hero 保留空間、dingpos 改 `hydrateRoot` 與手機版截圖之後，這張表已經過時，部署後需重量。
 
 | app | perf | FCP | LCP | CLS | LCP 元素 | desktop perf |
 |---|---|---|---|---|---|---|
