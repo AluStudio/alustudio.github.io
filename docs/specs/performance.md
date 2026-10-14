@@ -29,7 +29,7 @@ read_when:
 - Lighthouse mobile 模擬的是 Slow 4G（150ms RTT、1.6Mbps）加 4x CPU 降速，大約是 4G 連線最差的 25%。在這個條件下，FCP / LCP 顯示 2–4 秒是常態，不代表一般使用者要等這麼久。
 - Core Web Vitals 的「LCP ≤ 2.5s」是真實使用者第 75 百分位數的門檻，不是 lab 門檻。Lighthouse mobile 的 LCP 評分曲線是 2.5s = 90 分、4.0s = 50 分。
 - Opacity 從 0 開始的進場動畫，會把 LCP 延後到元素在可見狀態下重新 paint 的時候，在真實使用者身上也一樣。home 與 dingpos 的 hero 目前就是這樣，各多約 1s。
-- `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
+- `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP。dingpos 已改用 `hydrateRoot` 原地保留節點；home、pikgeon、babbby、sotto 仍是 `createRoot`，目前它們的 lab LCP 沒有被重繪拖到，但訪客語言跟 prerender 的英文不同時，換成另一種語言的新節點仍可能記下新的 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
 
 ## 目前基準
 
@@ -44,7 +44,7 @@ read_when:
 | dingpos | 85 | 2.08s | 4.10s | 0.001 | `p.hero-desc` | 95 |
 
 - pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。已改成固定 `height: 500px` 修正。
-- dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。
+- dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。重繪的部分已改 `hydrateRoot` 消除，進場動畫保留。
 
 ## Related
 
