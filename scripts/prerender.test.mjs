@@ -141,3 +141,12 @@ test("auditRoutes flags wrong html lang, missing self and non-reciprocal sets", 
     "/dingpos/terms/: hreflang set does not list the page itself",
   ]);
 });
+
+test("auditRoutes skips reciprocity for sitemap alternates left out of a partial render", () => {
+  const pages = new Map([["/dingpos/pricing/", localePage("en", "Pricing", TRIO)]]);
+  const sitemap = new Set(["/dingpos/pricing/", "/dingpos/zh-hant/pricing/"]);
+  assert.deepEqual(auditRoutes(pages, sitemap), []);
+  assert.deepEqual(auditRoutes(pages, new Set(["/dingpos/pricing/"])), [
+    "/dingpos/pricing/: hreflang points at /dingpos/zh-hant/pricing/, which is not a sitemap route",
+  ]);
+});

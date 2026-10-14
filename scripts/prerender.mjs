@@ -72,7 +72,7 @@ const setKey = (set) => set.map((a) => `${a.hreflang} ${a.path}`).sort().join("\
  * version it names lists the identical set back, and <html lang> matches the
  * hreflang pointing at the page itself.
  */
-function auditAlternates(route, html, pages) {
+function auditAlternates(route, html, pages, sitemapRoutes) {
   const set = hreflangSet(html);
   if (set.length === 0) return [];
   const errors = [];
@@ -82,9 +82,12 @@ function auditAlternates(route, html, pages) {
   if (lang !== self.hreflang) errors.push(`${route}: <html lang="${lang}"> but hreflang says ${self.hreflang}`);
   for (const { path } of set) {
     if (path === route) continue;
+    if (!sitemapRoutes.has(path)) {
+      errors.push(`${route}: hreflang points at ${path}, which is not a sitemap route`);
+      continue;
+    }
     const other = pages.get(path);
-    if (!other) errors.push(`${route}: hreflang points at ${path}, which is not a rendered route`);
-    else if (setKey(hreflangSet(other)) !== setKey(set)) {
+    if (other && setKey(hreflangSet(other)) !== setKey(set)) {
       errors.push(`${route}: hreflang set is not reciprocated by ${path}`);
     }
   }
@@ -93,9 +96,11 @@ function auditAlternates(route, html, pages) {
 
 /**
  * Cross-route SEO invariants over the rendered pages (Map route → html).
+ * `sitemapRoutes` is every route the site ships; with --only it is larger than
+ * `pages`, and an alternate outside the render is not checked for reciprocity.
  * Returns human-readable violations; empty means every route passed.
  */
-export function auditRoutes(pages) {
+export function auditRoutes(pages, sitemapRoutes = new Set(pages.keys())) {
   const errors = [];
   // DingPOS ships 60+ routes from one template; a missing per-route meta
   // silently falls back to the app root's, so duplicates are checked there.
@@ -112,7 +117,7 @@ export function auditRoutes(pages) {
       }
     }
 
-    errors.push(...auditAlternates(route, html, pages));
+    errors.push(...auditAlternates(route, html, pages, sitemapRoutes));
 
     if (route.startsWith(uniqueWithin.prefix)) {
       const meta = {
@@ -215,7 +220,8 @@ async function main() {
     console.error(`✗ sitemap not found: ${sitemapPath}`);
     process.exit(1);
   }
-  let routes = parseSitemapRoutes(readFileSync(sitemapPath, "utf8"));
+  const sitemapRoutes = parseSitemapRoutes(readFileSync(sitemapPath, "utf8"));
+  let routes = sitemapRoutes;
   if (only) routes = routes.filter((r) => r.startsWith(only));
   if (routes.length === 0) {
     console.error("✗ no routes to prerender");
@@ -289,7 +295,7 @@ async function main() {
     console.error(`✗ only ${done}/${routes.length} routes were rendered — failing the build`);
     process.exit(1);
   }
-  const auditErrors = auditRoutes(rendered);
+  const auditErrors = auditRoutes(rendered, new Set(sitemapRoutes));
   if (auditErrors.length > 0) {
     console.error(`✗ route audit failed (${auditErrors.length}) — failing the build`);
     for (const e of auditErrors) console.error(`  - ${e}`);
