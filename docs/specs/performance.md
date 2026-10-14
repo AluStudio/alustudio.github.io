@@ -43,7 +43,7 @@ read_when:
 | sotto | 97 | 2.09s | 2.09s | 0.022 | `p.hero-desc` | 99 |
 | dingpos | 85 | 2.08s | 4.10s | 0.001 | `p.hero-desc` | 95 |
 
-- pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。
+- pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。已改成固定 `height: 500px` 修正。
 - dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。
 
 ## Related
