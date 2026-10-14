@@ -62,9 +62,11 @@ function Navbar() {
       <div className="container">
         <Link className="navbar-brand" to="/" onClick={handleHome}>
           <img
-            src={`${import.meta.env.BASE_URL}logo.png`}
+            src={`${import.meta.env.BASE_URL}logo.webp`}
             alt="DingPOS"
             className="navbar-logo"
+            width="600"
+            height="266"
           />
         </Link>
 

@@ -21,6 +21,10 @@
 #     screenshot pipeline (scripts/screenshots/README.md) pass that flag and
 #     could use a smaller bottom crop — but keeping it uniform is what makes
 #     all four assets share one aspect ratio, which the layout relies on.
+#   - Writes each shot twice: shot-<name>.webp at the desktop width below, and
+#     shot-<name>-1080w.webp for phones, where the frame is ~350px wide. The
+#     srcset in src/pages/HomePage.jsx lists both, so a phone never downloads
+#     the desktop file.
 #   - Crops are expressed in points at a flat @2x scale, so this works for any
 #     Retina iPad — but a 13-inch capture has a different aspect ratio than the
 #     11-inch one, so the script refuses to write assets home.scss cannot show.
@@ -46,6 +50,9 @@ target_width() {
     *)       echo 1720 ;;
   esac
 }
+
+# ~3x the phone layout width. HomePage.jsx (PHONE_SHOT_WIDTH) names the file.
+PHONE_WIDTH=1080
 
 TOP_PT=24
 BOTTOM_PT=26
@@ -115,8 +122,18 @@ for name in cashier promotions dashboard orders; do
   out="$OUT/shot-$name.webp"
   mv "$tmp" "$out"
 
+  phone_tmp="$OUT/.shot-$name-${PHONE_WIDTH}w.tmp.webp"
+  magick "$in" \
+    -crop "x${keep}+0+${top}" +repage \
+    -resize "$PHONE_WIDTH" \
+    -quality 82 -define webp:method=6 \
+    "webp:$phone_tmp"
+  phone_out="$OUT/shot-$name-${PHONE_WIDTH}w.webp"
+  mv "$phone_tmp" "$phone_out"
+
   # Transfer size, not `du` — disk-block allocation is not what ships.
-  printf "  ✓ shot-%s.webp  %sx%s  ratio %s  %sK\n" \
+  printf "  ✓ shot-%s.webp  %sx%s  ratio %s  %sK  (phone %sK)\n" \
     "$name" "$ow" "$oh" "$ratio" \
-    "$(( $(wc -c < "$out") / 1024 ))"
+    "$(( $(wc -c < "$out") / 1024 ))" \
+    "$(( $(wc -c < "$phone_out") / 1024 ))"
 done
