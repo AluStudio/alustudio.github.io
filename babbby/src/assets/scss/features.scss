@@ -5,6 +5,14 @@
   padding: 1rem 0 3rem;
 }
 
+.features-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: $babbby-ink-800;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -7,6 +7,8 @@
     "support": "常見問題"
   },
   "hero": {
+    "meta_title": "DingPOS — 沒有網路也能結帳的 iPad 收銀系統",
+    "meta_description": "DingPOS — 10 分鐘開店，資料自己掌控。沒有網路也能結帳的 iPad 收銀系統，商品、訂單與客戶資料全都留在你的裝置裡。",
     "eyebrow": "iPad POS 收銀系統",
     "title": "10 分鐘開店，資料自己掌控",
     "description": "DingPOS 是一套 iPad 收銀系統。免帳號、免綁定雲端、沒有網路也能結帳。你的商品、訂單與客戶資料，全都留在自己的裝置裡。",
@@ -403,6 +405,7 @@
   },
   "privacy": {
     "title": "隱私權政策",
+    "meta_description": "DingPOS iPad 收銀系統如何處理你的資料：營運資料只存在你的裝置上，雲端備份為選用，且只會存進你自己的雲端帳號。",
     "effective_date": "生效日期：2026 年 7 月 1 日",
     "intro": "ALU Studio（以下簡稱「我們」）開發了 DingPOS（以下簡稱「本應用程式」）。DingPOS 是一套以隱私為核心的收銀系統——你的營運資料屬於你自己。本隱私權政策說明我們如何處理你在使用本應用程式時的資訊。",
     "local_storage": {
@@ -464,6 +467,7 @@
   },
   "terms": {
     "title": "使用條款",
+    "meta_description": "DingPOS iPad 收銀系統使用條款：授權範圍、30 天免費試用、App Store 訂閱、資料與備份責任，以及責任限制。",
     "effective_date": "生效日期：2026 年 10 月 8 日",
     "intro": "歡迎使用 DingPOS。請在使用本應用程式前仔細閱讀以下使用條款。下載、安裝或使用 DingPOS，即表示你同意遵守以下條款。",
     "license": {
@@ -511,6 +515,7 @@
   },
   "support": {
     "doc_title": "支援中心",
+    "meta_description": "DingPOS 支援中心：iPad 收銀系統的常見問題與教學，涵蓋開店設定、結帳、訂單、庫存、促銷、備份、員工與訂閱。",
     "title": "有什麼可以幫你？",
     "subtitle": "搜尋常見問題，或依主題瀏覽",
     "search_placeholder": "搜尋問題，例如「條碼」或「備份 還原」",

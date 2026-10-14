@@ -74,4 +74,18 @@ i18n
     }
   });
 
+// `zh` is this app's Traditional Chinese pack; <html lang> takes the BCP 47 tag.
+const HTML_LANG = { zh: "zh-Hant" };
+
+// Only `lang` is synced: Arabic is laid out per element via `.rtl-text`,
+// so a document-level dir="rtl" would flip those elements back.
+// resolvedLanguage first: the event argument is the raw detected tag ("en-US").
+function syncDocumentLang() {
+  const resolved = i18n.resolvedLanguage || i18n.language;
+  if (resolved) document.documentElement.lang = HTML_LANG[resolved] ?? resolved;
+}
+
+i18n.on("languageChanged", syncDocumentLang);
+syncDocumentLang();
+
 export default i18n;

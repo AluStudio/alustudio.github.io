@@ -67,6 +67,8 @@
     no-repeat right 0.6rem center / 0.7rem;
   border: 1px solid rgba($accent-400, 0.4);
   border-radius: 6px;
+  // Native language names (繁體中文…) in the web font would pull CJK font slices into every English page.
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.82rem;
   padding: 0.3rem 1.8rem 0.3rem 0.6rem;
   color: $ink-mid;

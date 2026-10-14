@@ -115,3 +115,18 @@ test("sub-route rules include the app shell sources that shape final HTML", () =
     );
   }
 });
+
+test("sourcesForRoute: zh-hant pages mirror their English page, not the app root", () => {
+  for (const sub of ["support/tax-calculation/", "pricing/", "privacy/", "terms/", ""]) {
+    assert.deepEqual(
+      sourcesForRoute(`/dingpos/zh-hant/${sub}`),
+      sourcesForRoute(`/dingpos/${sub}`),
+      `/dingpos/zh-hant/${sub}`,
+    );
+  }
+  assert.deepEqual(sourcesForRoute("/dingpos/zh-hant/support/free-trial/"), [
+    "dingpos/src/data/faq",
+    "dingpos/index.html",
+    "dingpos/scripts/copy-spa-pages.js",
+  ]);
+});

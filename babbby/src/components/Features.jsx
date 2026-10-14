@@ -24,7 +24,10 @@ function Features() {
   const { t } = useTranslation();
 
   return (
-    <section className="features-section">
+    <section className="features-section" aria-labelledby="features-heading">
+      <h2 id="features-heading" className="features-heading">
+        {t("features.heading")}
+      </h2>
       <div className="features-grid">
         {features.map((f) => (
           <div className="feature-card" key={f.key}>

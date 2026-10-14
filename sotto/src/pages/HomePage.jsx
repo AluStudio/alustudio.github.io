@@ -38,7 +38,9 @@ function HomePage() {
       <section className="hero">
         <div className="hero-inner">
           <img
-            src={`${import.meta.env.BASE_URL}app-icon.png`}
+            src={`${import.meta.env.BASE_URL}app-icon.webp`}
+            width="120"
+            height="120"
             alt="Sotto"
             className="hero-icon"
           />

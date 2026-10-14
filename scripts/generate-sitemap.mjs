@@ -41,6 +41,37 @@ const page = (app, component) => [
   ...appShell(app),
 ];
 
+/**
+ * DingPOS rules for one language root. Both languages render from the same
+ * sources (bilingual locales and FAQ packs), so they share dates; the
+ * zh-hant root must still be its own prefix, or longest-prefix match would
+ * drop every zh-hant page into the coarse app-root bucket.
+ */
+function dingposRules(root) {
+  return [
+    // Every support article's copy lives in the shared bilingual packs, so
+    // the pack's last commit is the honest per-article date. Accepted
+    // tradeoff: editing one article bumps all support URLs — the pack IS the
+    // common source; revisit only if the article set outgrows the two packs.
+    [`${root}support/`, ["dingpos/src/data/faq", ...appShell("dingpos")]],
+    // Prices and the feature matrix live in data/plans.js; Price.jsx carries
+    // the currency switch the page renders around them.
+    [
+      `${root}pricing/`,
+      [
+        ...page("dingpos", "PricingPage.jsx"),
+        "dingpos/src/pages/pricing.scss",
+        "dingpos/src/data/plans.js",
+        "dingpos/src/components/Price.jsx",
+      ],
+    ],
+    [`${root}privacy/`, page("dingpos", "PrivacyPage.jsx")],
+    [`${root}terms/`, page("dingpos", "TermsPage.jsx")],
+    // Root meta and hreflang are written by copy-spa-pages too, not only index.html.
+    [root, ["dingpos/src", ...appShell("dingpos")]],
+  ];
+}
+
 export const LASTMOD_SOURCES = [
   ["/home/", ["home/src", "home/index.html"]],
 
@@ -59,25 +90,8 @@ export const LASTMOD_SOURCES = [
   ["/sotto/faq/", page("sotto", "FaqPage.jsx")],
   ["/sotto/", ["sotto/src", "sotto/index.html"]],
 
-  // Every support article's copy lives in the shared bilingual packs, so
-  // the pack's last commit is the honest per-article date. Accepted
-  // tradeoff: editing one article bumps all support URLs — the pack IS the
-  // common source; revisit only if the article set outgrows the two packs.
-  ["/dingpos/support/", ["dingpos/src/data/faq", ...appShell("dingpos")]],
-  // Prices and the feature matrix live in data/plans.js; Price.jsx carries
-  // the currency switch the page renders around them.
-  [
-    "/dingpos/pricing/",
-    [
-      ...page("dingpos", "PricingPage.jsx"),
-      "dingpos/src/pages/pricing.scss",
-      "dingpos/src/data/plans.js",
-      "dingpos/src/components/Price.jsx",
-    ],
-  ],
-  ["/dingpos/privacy/", page("dingpos", "PrivacyPage.jsx")],
-  ["/dingpos/terms/", page("dingpos", "TermsPage.jsx")],
-  ["/dingpos/", ["dingpos/src", "dingpos/index.html"]],
+  ...dingposRules("/dingpos/"),
+  ...dingposRules("/dingpos/zh-hant/"),
 ];
 
 /** Pick the source paths for a route via longest-prefix match. */

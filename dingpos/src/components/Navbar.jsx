@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "react-router-dom";
 import { Collapse } from "bootstrap";
-import i18n, { supportedLanguages } from "../i18n.js";
+import i18n, { supportedLanguages, localizedUrl } from "../i18n.js";
 import "../assets/scss/navbar.scss";
 
 function Navbar() {
@@ -24,8 +24,11 @@ function Navbar() {
     }
   };
 
+  // Another language is another URL (and document), so switch by navigating.
   const handleChangeLang = (e) => {
-    i18n.changeLanguage(e.target.value);
+    window.location.assign(
+      localizedUrl(e.target.value, location.pathname, location.search, location.hash),
+    );
   };
   const currentLang = i18n.resolvedLanguage || i18n.language;
 

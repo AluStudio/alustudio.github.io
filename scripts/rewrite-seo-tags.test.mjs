@@ -3,7 +3,7 @@
 
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { setSelfCanonical, setPageMeta } from "./rewrite-seo-tags.mjs";
+import { setSelfCanonical, setPageMeta, addJsonLd, breadcrumbList, setHtmlLang, setLanguageAlternates } from "./rewrite-seo-tags.mjs";
 
 const ROUTE_URL = "https://alu-studio.com/pikgeon/privacy/";
 
@@ -91,4 +91,57 @@ test("setPageMeta treats $ in content literally", () => {
   const out = setPageMeta(FULL_HEAD, { title: "Total is $5", description: "Suffix $' and $1" });
   assert.ok(out.includes("<title>Total is $5</title>"));
   assert.ok(out.includes('<meta name="description" content="Suffix $\' and $1" />'));
+});
+
+test("addJsonLd appends a parseable JSON-LD block inside <head>", () => {
+  const html = "<html><head><title>x</title></head><body></body></html>";
+  const out = addJsonLd(html, { "@type": "Thing", name: "a </script> b $&" });
+  const block = out.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1];
+  assert.deepEqual(JSON.parse(block), { "@type": "Thing", name: "a </script> b $&" });
+  assert.ok(out.indexOf("ld+json") < out.indexOf("</head>"));
+  assert.equal(out.match(/<\/script>/g).length, 1, "author text must not close the block");
+});
+
+test("breadcrumbList numbers items from 1 in trail order", () => {
+  assert.deepEqual(
+    breadcrumbList([
+      { name: "DingPOS", url: "https://alu-studio.com/dingpos/" },
+      { name: "Support", url: "https://alu-studio.com/dingpos/support/" },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "DingPOS", item: "https://alu-studio.com/dingpos/" },
+        { "@type": "ListItem", position: 2, name: "Support", item: "https://alu-studio.com/dingpos/support/" },
+      ],
+    },
+  );
+});
+
+test("setHtmlLang replaces or adds the lang attribute", () => {
+  assert.equal(setHtmlLang('<html lang="en" data-x="1"><head></head></html>', "zh-Hant"), '<html lang="zh-Hant" data-x="1"><head></head></html>');
+  assert.equal(setHtmlLang("<html><head></head></html>", "en"), '<html lang="en"><head></head></html>');
+});
+
+const VERSIONS = [
+  { hreflang: "en", href: "https://alu-studio.com/dingpos/pricing/" },
+  { hreflang: "zh-Hant", href: "https://alu-studio.com/dingpos/zh-hant/pricing/" },
+  { hreflang: "x-default", href: "https://alu-studio.com/dingpos/pricing/" },
+];
+
+test("setLanguageAlternates writes og:locale, alternates and the full hreflang set", () => {
+  const html = '<html><head><meta property="og:type" content="website" />\n</head></html>';
+  const out = setLanguageAlternates(html, { ogLocale: "zh_TW", ogLocaleAlternates: ["en_US"], versions: VERSIONS });
+  assert.match(out, /<meta property="og:locale" content="zh_TW" \/>/);
+  assert.match(out, /<meta property="og:locale:alternate" content="en_US" \/>/);
+  const hreflangs = [...out.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]);
+  assert.deepEqual(hreflangs, VERSIONS.map((v) => [v.hreflang, v.href]));
+  assert.ok(out.lastIndexOf("hreflang") < out.indexOf("</head>"));
+});
+
+test("setLanguageAlternates is idempotent", () => {
+  const opts = { ogLocale: "en_US", ogLocaleAlternates: ["zh_TW"], versions: VERSIONS };
+  const once = setLanguageAlternates("<html><head></head></html>", opts);
+  assert.equal(setLanguageAlternates(once, opts), once);
 });

@@ -1,15 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import '@fontsource-variable/manrope'
+import '@fontsource-variable/noto-sans-tc'
 import './index.css'
 import App from './App.jsx'
-import "./i18n";
+import { routerBasename } from "./i18n";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/dingpos">
+    <BrowserRouter basename={routerBasename}>
       <App />
     </BrowserRouter>
   </StrictMode>,

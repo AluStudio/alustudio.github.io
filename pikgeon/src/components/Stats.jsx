@@ -20,7 +20,9 @@ function Stats() {
             <p className="text-center text-muted mb-5">{t("stats.subtitle")}</p>
             <div className="col-lg-6 mb-4 mb-lg-0 text-center">
               <img
-                src="stats.png"
+                src="stats.webp"
+                width="1280"
+                height="720"
                 alt="Statistics Illustration"
                 className="img-fluid stats-image shadow-sm"
                 style={{ borderRadius: "30px" }}

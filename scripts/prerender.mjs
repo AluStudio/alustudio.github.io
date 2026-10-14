@@ -59,6 +59,86 @@ export function hasRenderedContent(html) {
   return headings && text.length > 40;
 }
 
+function hreflangSet(html) {
+  return [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map(
+    ([, hreflang, href]) => ({ hreflang, path: new URL(href).pathname }),
+  );
+}
+
+const setKey = (set) => set.map((a) => `${a.hreflang} ${a.path}`).sort().join("\n");
+
+/**
+ * hreflang rules Google enforces silently: each version lists itself, every
+ * version it names lists the identical set back, and <html lang> matches the
+ * hreflang pointing at the page itself.
+ */
+function auditAlternates(route, html, pages, sitemapRoutes) {
+  const set = hreflangSet(html);
+  if (set.length === 0) return [];
+  const errors = [];
+  const self = set.find((a) => a.path === route && a.hreflang !== "x-default");
+  if (!self) return [`${route}: hreflang set does not list the page itself`];
+  const lang = html.match(/<html\b[^>]*\blang="([^"]*)"/)?.[1];
+  if (lang !== self.hreflang) errors.push(`${route}: <html lang="${lang}"> but hreflang says ${self.hreflang}`);
+  for (const { path } of set) {
+    if (path === route) continue;
+    if (!sitemapRoutes.has(path)) {
+      errors.push(`${route}: hreflang points at ${path}, which is not a sitemap route`);
+      continue;
+    }
+    const other = pages.get(path);
+    if (other && setKey(hreflangSet(other)) !== setKey(set)) {
+      errors.push(`${route}: hreflang set is not reciprocated by ${path}`);
+    }
+  }
+  return errors;
+}
+
+/**
+ * Cross-route SEO invariants over the rendered pages (Map route → html).
+ * `sitemapRoutes` is every route the site ships; with --only it is larger than
+ * `pages`, and an alternate outside the render is not checked for reciprocity.
+ * Returns human-readable violations; empty means every route passed.
+ */
+export function auditRoutes(pages, sitemapRoutes = new Set(pages.keys())) {
+  const errors = [];
+  // DingPOS ships 60+ routes from one template; a missing per-route meta
+  // silently falls back to the app root's, so duplicates are checked there.
+  const uniqueWithin = { prefix: "/dingpos/", title: new Map(), description: new Map() };
+  for (const [route, html] of pages) {
+    const h1Count = html.match(/<h1[\s>]/gi)?.length ?? 0;
+    if (h1Count !== 1) errors.push(`${route}: expected exactly one <h1>, found ${h1Count}`);
+
+    for (const [, json] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+      try {
+        JSON.parse(json);
+      } catch (err) {
+        errors.push(`${route}: JSON-LD does not parse (${err.message})`);
+      }
+    }
+
+    errors.push(...auditAlternates(route, html, pages, sitemapRoutes));
+
+    if (route.startsWith(uniqueWithin.prefix)) {
+      const meta = {
+        title: html.match(/<title>([\s\S]*?)<\/title>/)?.[1],
+        description: html.match(/<meta name="description" content="([^"]*)"/)?.[1],
+      };
+      for (const field of ["title", "description"]) {
+        const value = meta[field];
+        if (!value) {
+          errors.push(`${route}: missing ${field}`);
+          continue;
+        }
+        const seen = uniqueWithin[field];
+        if (seen.has(value)) errors.push(`${route}: ${field} duplicates ${seen.get(value)}`);
+        else seen.set(value, route);
+      }
+    }
+  }
+  return errors;
+}
+
 // --- static server ---
 
 const MIME = {
@@ -140,7 +220,8 @@ async function main() {
     console.error(`✗ sitemap not found: ${sitemapPath}`);
     process.exit(1);
   }
-  let routes = parseSitemapRoutes(readFileSync(sitemapPath, "utf8"));
+  const sitemapRoutes = parseSitemapRoutes(readFileSync(sitemapPath, "utf8"));
+  let routes = sitemapRoutes;
   if (only) routes = routes.filter((r) => r.startsWith(only));
   if (routes.length === 0) {
     console.error("✗ no routes to prerender");
@@ -164,6 +245,7 @@ async function main() {
   });
 
   const failures = [];
+  const rendered = new Map();
   let done = 0;
   const queue = [...routes];
 
@@ -185,6 +267,7 @@ async function main() {
           throw new Error("rendered HTML failed content sanity check");
         }
         writeFileSync(routeToFilePath(siteDir, route), html);
+        rendered.set(route, html);
         done += 1;
         console.log(`  ✓ ${route}`);
       } catch (err) {
@@ -212,6 +295,13 @@ async function main() {
     console.error(`✗ only ${done}/${routes.length} routes were rendered — failing the build`);
     process.exit(1);
   }
+  const auditErrors = auditRoutes(rendered, new Set(sitemapRoutes));
+  if (auditErrors.length > 0) {
+    console.error(`✗ route audit failed (${auditErrors.length}) — failing the build`);
+    for (const e of auditErrors) console.error(`  - ${e}`);
+    process.exit(1);
+  }
+  console.log("route audit passed");
 }
 
 // Run only when invoked directly (not when imported by tests).
