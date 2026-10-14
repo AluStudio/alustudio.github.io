@@ -115,7 +115,12 @@ export const SITE_GLOSSARY = [];
 export const ROW_COLUMN_ENTRIES = ["faq:import-csv:"];
 
 // Entry id → [zh-Hant source the override was written for, zh-Hans value].
-export const OVERRIDES = {};
+export const OVERRIDES = {
+  // Page titles with no character that converts would duplicate the zh-Hant
+  // page's title. "套用" stays: the app's zh-Hans button says 套用.
+  "faq:apply-discounts:question": ["如何套用折扣？", "怎么套用折扣？"],
+  "faq:plans-compare:question": ["Lite、Standard、Pro 方案差在哪？", "Lite、Standard、Pro 方案有什么区别？"],
+};
 
 const QUOTES = [
   ["「", "“"],

@@ -11,15 +11,16 @@
  * BreadcrumbList (DingPOS → Support → article) written into the static head.
  *
  * Every page exists once per language — English unprefixed, zh-Hant under
- * /dingpos/zh-hant/ — with its own <html lang>, og:locale and the full
- * hreflang set, so each language is separately indexable
- * (docs/specs/seo-aeo.md §多語系 URL).
+ * /dingpos/zh-hant/, zh-Hans under /dingpos/zh-hans/ — with its own
+ * <html lang>, og:locale and the full hreflang set, so each language is
+ * separately indexable (docs/specs/seo-aeo.md §多語系 URL).
  *
  * FAQ article routes are derived from the FAQ data modules, so adding
- * an article automatically ships its static route. The zh-Hant and en
- * packs must agree on slugs and related links, and sitemap.xml must list
- * exactly the pages built here, in both languages — validated here so a drift fails the build instead of
- * 404ing (or going unindexed) in production.
+ * an article automatically ships its static route. Every pack must agree
+ * with en on slugs and `since`, related links must resolve, no two pages
+ * may share a title or description, and sitemap.xml must list exactly the
+ * pages built here, in every language — validated here so a drift fails the
+ * build instead of 404ing (or going unindexed) in production.
  */
 
 import process from "node:process";
@@ -35,6 +36,7 @@ import {
   setLanguageAlternates,
 } from "../../scripts/rewrite-seo-tags.mjs";
 import * as zhHant from "../src/data/faq/articles.zh-Hant.js";
+import * as zhHans from "../src/data/faq/articles.zh-Hans.js";
 import * as en from "../src/data/faq/articles.en.js";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
 
@@ -55,6 +57,7 @@ const readLocale = (code) =>
 const LOCALES = [
   { code: "en", pathPrefix: "", ogLocale: "en_US", faq: en, ui: readLocale("en") },
   { code: "zh-Hant", pathPrefix: "zh-hant/", ogLocale: "zh_TW", faq: zhHant, ui: readLocale("zh-Hant") },
+  { code: "zh-Hans", pathPrefix: "zh-hans/", ogLocale: "zh_CN", faq: zhHans, ui: readLocale("zh-Hans") },
 ];
 const DEFAULT_LOCALE = LOCALES[0];
 
@@ -91,11 +94,14 @@ function validateFaqVersions(errors) {
     return;
   }
   const enSince = new Map(en.articles.map((a) => [a.slug, a.since]));
-  for (const article of zhHant.articles) {
-    const { slug, since } = article;
-    if (enSince.has(slug) && enSince.get(slug) !== since) {
-      errors.push(`article "${slug}" has since "${since}" in zh-Hant but "${enSince.get(slug)}" in en`);
+  for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
+    for (const { slug, since } of locale.faq.articles) {
+      if (enSince.has(slug) && enSince.get(slug) !== since) {
+        errors.push(`article "${slug}" has since "${since}" in ${locale.code} but "${enSince.get(slug)}" in en`);
+      }
     }
+  }
+  for (const { slug, since } of en.articles) {
     if (since === undefined) continue;
     if (!VERSION_PATTERN.test(since)) {
       errors.push(`article "${slug}" has since "${since}", not a marketing version`);
@@ -108,29 +114,26 @@ function validateFaqVersions(errors) {
 }
 
 function validateFaqPacks() {
-  const zhSlugs = zhHant.articles.map((a) => a.slug);
-  const enSlugs = en.articles.map((a) => a.slug);
-  const zhSet = new Set(zhSlugs);
-  const enSet = new Set(enSlugs);
+  const enSet = new Set(en.articles.map((a) => a.slug));
   const errors = [];
 
-  if (zhSlugs.length !== zhSet.size) errors.push("duplicate slugs in zh-Hant pack");
-  if (enSlugs.length !== enSet.size) errors.push("duplicate slugs in en pack");
-  for (const slug of zhSet) if (!enSet.has(slug)) errors.push(`slug "${slug}" missing from en pack`);
-  for (const slug of enSet) if (!zhSet.has(slug)) errors.push(`slug "${slug}" missing from zh-Hant pack`);
+  for (const { code, faq: pack } of LOCALES) {
+    const slugs = pack.articles.map((a) => a.slug);
+    const slugSet = new Set(slugs);
+    if (slugs.length !== slugSet.size) errors.push(`duplicate slugs in ${code} pack`);
+    if (pack !== en) {
+      for (const slug of slugSet) if (!enSet.has(slug)) errors.push(`slug "${slug}" missing from en pack`);
+      for (const slug of enSet) if (!slugSet.has(slug)) errors.push(`slug "${slug}" missing from ${code} pack`);
+    }
 
-  for (const [name, pack, slugSet] of [
-    ["zh-Hant", zhHant, zhSet],
-    ["en", en, enSet],
-  ]) {
     const catKeys = new Set(pack.categories.map((c) => c.key));
     for (const article of pack.articles) {
       if (!catKeys.has(article.category)) {
-        errors.push(`[${name}] article "${article.slug}" references unknown category "${article.category}"`);
+        errors.push(`[${code}] article "${article.slug}" references unknown category "${article.category}"`);
       }
       for (const related of article.related) {
         if (!slugSet.has(related)) {
-          errors.push(`[${name}] article "${article.slug}" has dangling related link "${related}"`);
+          errors.push(`[${code}] article "${article.slug}" has dangling related link "${related}"`);
         }
       }
     }
@@ -180,6 +183,29 @@ function localeRoutes(locale) {
 const pages = LOCALES.flatMap((locale) =>
   localeRoutes(locale).map((route) => ({ ...route, locale, url: routeUrl(locale, route.path) })),
 );
+
+// Two pages introducing themselves identically are a duplicate-content signal,
+// even across languages. zh-Hans is generated from zh-Hant, so a zh-Hant title
+// with no character that converts comes out identical — give that entry a
+// mainland wording in OVERRIDES (scripts/gen-zh-hans.mjs).
+function validateUniqueMeta() {
+  const errors = [];
+  for (const field of ["title", "description"]) {
+    const firstUrl = new Map();
+    for (const page of pages) {
+      const value = page[field];
+      if (firstUrl.has(value)) errors.push(`${page.url} has the same ${field} as ${firstUrl.get(value)}: "${value}"`);
+      else firstUrl.set(value, page.url);
+    }
+  }
+  if (errors.length) {
+    console.error("Page meta validation failed:");
+    for (const e of errors) console.error(`  ✗ ${e}`);
+    process.exit(1);
+  }
+}
+
+validateUniqueMeta();
 
 // Routes are derived from the data, but sitemap.xml is hand-maintained —
 // without this check a new article (or locale) ships live pages that are

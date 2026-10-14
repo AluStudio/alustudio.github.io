@@ -9,6 +9,12 @@ import { routerBasename } from "./i18n";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+// Only zh-Hans pages use the SC faces; a static import would put their
+// @font-face CSS in front of every page.
+if (document.documentElement.lang === 'zh-Hans') {
+  import('@fontsource-variable/noto-sans-sc')
+}
+
 const container = document.getElementById('root')
 const app = (
   <StrictMode>

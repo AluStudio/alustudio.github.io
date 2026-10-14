@@ -2,6 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 import zhHant from "./locales/zh-Hant/translation.json";
+import zhHans from "./locales/zh-Hans/translation.json";
 import en from "./locales/en/translation.json";
 
 const APP_BASE = "/dingpos";
@@ -11,11 +12,13 @@ const APP_BASE = "/dingpos";
 // docs/specs/seo-aeo.md §多語系 URL. `pathPrefix` mirrors copy-spa-pages.js.
 export const supportedLanguages = [
   { code: "zh-Hant", label: "繁體中文", pathPrefix: "/zh-hant" },
+  { code: "zh-Hans", label: "简体中文", pathPrefix: "/zh-hans" },
   { code: "en",      label: "English",  pathPrefix: "" },
 ];
 
 const resources = {
   "zh-Hant": { translation: zhHant },
+  "zh-Hans": { translation: zhHans },
   en:        { translation: en },
 };
 

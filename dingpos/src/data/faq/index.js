@@ -1,8 +1,10 @@
 import * as zhHant from "./articles.zh-Hant.js";
+import * as zhHans from "./articles.zh-Hans.js";
 import * as en from "./articles.en.js";
 
 const packs = {
   "zh-Hant": zhHant,
+  "zh-Hans": zhHans,
   en,
 };
 

@@ -1,4 +1,10 @@
 /* Reset — covered by Bootstrap, this file left intentionally minimal */
 :root {
   --navbar-height: 72px;
+  --dp-font-cjk: "Noto Sans TC Variable";
+}
+
+/* The same character is drawn differently in Simplified and Traditional fonts. */
+:root:lang(zh-Hans) {
+  --dp-font-cjk: "Noto Sans SC Variable";
 }

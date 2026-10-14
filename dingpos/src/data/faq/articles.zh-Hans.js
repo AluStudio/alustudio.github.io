@@ -282,7 +282,7 @@ export const articles = [
   {
     "slug": "apply-discounts",
     "category": "checkout",
-    "question": "如何套用折扣？",
+    "question": "怎么套用折扣？",
     "keywords": [
       "折扣",
       "打折",
@@ -1650,7 +1650,7 @@ export const articles = [
     "slug": "plans-compare",
     "category": "subscription",
     "since": "3.0",
-    "question": "Lite、Standard、Pro 方案差在哪？",
+    "question": "Lite、Standard、Pro 方案有什么区别？",
     "keywords": [
       "方案",
       "lite",
