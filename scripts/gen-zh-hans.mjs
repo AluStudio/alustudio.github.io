@@ -108,8 +108,64 @@ export const APP_GLOSSARY = [
   ["试算表", "电子表格"],
 ];
 
-// Website-only replacements, applied after APP_GLOSSARY.
-export const SITE_GLOSSARY = [];
+// Website-only replacements, applied after APP_GLOSSARY. A term the app's own
+// zh-Hans UI uses (仪表板, 回购率, 自订, 月缴, 集点, 画面…) stays as the app
+// says it, so the FAQ names screens the way shop owners see them; fix those in
+// the app first. Same ordering rule as APP_GLOSSARY.
+export const SITE_GLOSSARY = [
+  // Converter mistranslations
+  ["结列表张", "结清单张"], // APP_GLOSSARY 清单→列表 also hits 結清單張 (settle one bill)
+  ["数据报括", "数据包括"], // OpenCC splits 資料包括 as 資料包 + 括
+  ["小数字数", "小数位数"],
+  ["内核", "核心"], // 核心 is not an OS kernel
+  ["开店精灵", "开店向导"], // mainland 精灵 is a sprite
+  ["该车位", "该购物车"], // mainland 车位 is a parking space
+  ["订单时序列表", "按时间排序的订单列表"],
+  ["数量会回复", "数量会恢复"], // 回復 = restore; mainland 回复 = reply
+  ["不经手实际金流", "不经手实际收付款"],
+  ["不经手金流", "不经手收付款"],
+  ["付款金流", "支付环节"],
+  ["串接金流", "对接支付"],
+  // 列 as a row or bar: the mainland reads 列 as a column
+  ["购物车列", "购物车栏"],
+  ["期间列", "期间栏"],
+  // Points: 点数→积分 in APP_GLOSSARY misses the bare unit
+  ["另外发点", "另外发积分"],
+  ["（赚点）", "（赚积分）"],
+  ["（用点，", "（用积分，"],
+  ["Y 点", "Y 积分"],
+  ["N 点", "N 积分"],
+  ["累点", "累积积分"],
+  // Taiwan usage the converter keeps
+  ["叫出", "调出"],
+  ["跳出", "弹出"],
+  ["略过", "跳过"],
+  ["落差", "差异"],
+  ["预带", "预填"],
+  ["备份档", "备份文件"],
+  ["单档", "单个文件"],
+  ["系统需求", "系统要求"],
+  ["使用情境", "使用场景"],
+  ["编号分页", "编号标签"],
+  ["对不到", "匹配不到"],
+  ["对到", "匹配到"],
+  ["当机反馈", "崩溃报告"],
+  ["当机", "崩溃"],
+  ["icloud 云碟", "icloud 云盘"], // APP_GLOSSARY's iCloud 云碟 is case-sensitive
+  ["运行一次备份", "执行一次备份"],
+  ["触觉回馈", "触觉反馈"],
+  ["震动回馈", "震动反馈"],
+  ["选用", "可选"],
+  ["本地端", "本地"],
+  ["辨识", "识别"],
+  ["连动", "联动"],
+  ["认列", "确认"],
+  ["成长率", "增长率"],
+  ["Apple 账号", "Apple 账户"], // the name mainland iOS Settings shows
+  ["订阅项目", "订阅"],
+  ["行销", "营销"],
+  ["串接", "对接"],
+];
 
 // Entry ids (or id prefixes ending in ":") whose 列 means a grid row.
 export const ROW_COLUMN_ENTRIES = ["faq:import-csv:"];
@@ -120,6 +176,25 @@ export const OVERRIDES = {
   // page's title. "套用" stays: the app's zh-Hans button says 套用.
   "faq:apply-discounts:question": ["如何套用折扣？", "怎么套用折扣？"],
   "faq:plans-compare:question": ["Lite、Standard、Pro 方案差在哪？", "Lite、Standard、Pro 方案有什么区别？"],
+  "ui:stories.reports.shot_alt": [
+    "儀表板顯示今日營收、總折扣、利潤與平均客單，下方是付款方式圓餅圖與熱銷商品排行",
+    "仪表板显示今日营收、总折扣、利润与平均客单价，下方是付款方式饼图与热销商品排行",
+  ],
+  "faq:supported-devices:content.0.text": [
+    "DingPOS 目前支援 iPadOS 17 以上的 iPad，以橫向畫面為主要設計。",
+    "DingPOS 目前支持 iPadOS 17 以上的 iPad，以横屏使用为主要设计。",
+  ],
+  // 資料 here is a staff member's profile page, not their data.
+  "faq:activity-log:content.1.items.3": [
+    "訂單明細、商品詳情與員工資料也各有入口，只列跟它有關的紀錄。",
+    "订单明细、商品详情与员工资料也各有入口，只列跟它有关的记录。",
+  ],
+  "faq:activity-log:keywords.1": ["稽核", "审计"], // the search term for audit, not 审核 (review)
+  "faq:guide-composite:content.4.items.2": [
+    "每件成員商品底下會寫出它分到的折扣，商品列的金額是扣完優惠後的金額。",
+    "每件成员商品底下会写出它分到的折扣，商品行的金额是扣完优惠后的金额。",
+  ],
+  "faq:roadmap-payment-integration:keywords.0": ["金流", "支付接口"],
 };
 
 const QUOTES = [
