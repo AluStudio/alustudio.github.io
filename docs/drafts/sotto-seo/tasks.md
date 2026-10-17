@@ -36,7 +36,7 @@ Checkpoint: `npm test` green; dingpos zh-Hans output unchanged by the generator 
 
 ## Phase 6: Integration
 
-- [ ] T016 [AC-001] assemble _site, sitemap, prerender with audit + hydration. Verify: `node scripts/prerender.mjs` → route audit passed, hydration check passed
+- [x] T016 [AC-001] assemble _site, sitemap, prerender with audit + hydration. Verify: `node scripts/prerender.mjs` → route audit passed, hydration check passed
 - [ ] T017 [AC-002..AC-005, AC-015] spot-check prerendered HTML + switcher in browser. Verify: grep / agent-browser
 - [x] T018 docs: seo-aeo.md (§多語系 URL: sotto too, 12 langs, prefixes; §簡中由繁中產生: per-app APPS registry, packet path `.logs/zh-hans-review-<app>.json`; §Prerender: sotto hydrates, unique-meta prefixes; §Structured data: sotto BreadcrumbList + sameAs; §內容: sotto guides), performance.md (sotto hydrateRoot; per-language CJK font via `--sotto-font-cjk`; sotto loads only its language's strings/guides), AGENTS.md Sub-app Notes (sotto URL languages, zh-Hans generated, guides pack, copy-spa validations). Verify: read-through
 - [ ] T020 Gate: repo root `npm test`; `cd <app> && npm run lint && npm run build` for sotto (and dingpos, since shared scripts changed); local Lighthouse a11y/SEO on `vite preview` of the assembled site for /sotto/ and /sotto/ar/. Push branch `feat/oh-88-sotto-seo` (never merge main). Run review_plan (baseBranch main) → subagent workflow → review_report; fix findings.
@@ -62,3 +62,4 @@ Checkpoint: `npm test` green; dingpos zh-Hans output unchanged by the generator 
 - T019 result: reviewer found 28 issues; 27 applied as `SOTTO_SITE_GLOSSARY` rules + en tagline restored "Gentle". Declined: 戒围 → 戒指尺寸 (the Sotto app's zh-Hans says 戒围; site follows the app). 则→条 narrowed to note contexts so 规则/否则 stay.
 - Register: fr and ru home copy switched from tu/ты to vous/вы so the whole site (FAQ, guides, store listing) uses one form. de/es/it/pt-BR keep the informal form already used across their sites.
 - zh-Hans privacy/terms are now generated from zh-Hant (previously hand-written); wording changed, meaning follows zh-Hant. Not a DEC-009 content change.
+- T016: full prerender timed out on 1–2 random /sotto/ routes per run (4 of 6 runs). Root cause: waitForFunction defaulted to rAF polling, which never fires in the hidden concurrent tabs; sotto mounts after `load`. Fixed with mutation / interval polling; 3/3 full runs then 309/309 + audit + hydration (300). Recorded in seo-aeo.md §Prerender. Assemble helper: `.logs/assemble.sh`.

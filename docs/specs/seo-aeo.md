@@ -71,6 +71,7 @@ read_when:
 - 選 post-build prerender 而不是 vite-react-ssg：後者要改五個 app 的進入點與路由，前者 app 程式碼零改動。
 - 序列化前，把 DOM 修成 React server renderer 會輸出的樣子，因為 hydration 是逐個節點對照 HTML：表單狀態（radio 的 checked、選中的 `<option>`）存在 DOM property，`outerHTML` 不會寫出來，所以改寫成屬性——hydrate `<select>` 時 React 不會重新套用 value；相鄰的 text node 在 HTML 被 parse 時會合併，所以中間插入空註解 `<!-- -->`。
 - dingpos 與 sotto 用 `hydrateRoot` 接手 prerendered DOM，畫好的節點原地保留。prerender 寫完檔案後，會用手機 viewport 重新載入它們的每個 route（每種語言）：出現 React error，或 React 換掉了 prerendered 節點，build 就失敗。要 hydrate 的 app 列在 `scripts/prerender.mjs` 的 `HYDRATED_PREFIXES`。
+- prerender 等待 React 的 `waitForFunction` 不能用預設的 requestAnimationFrame 輪詢：多個分頁並行時，只有一個是前景，背景分頁的 rAF 永遠不觸發。等 mount 用 `polling: "mutation"`，等 hydrate 用固定間隔。曾經的症狀：sotto 要等語言 chunk 載完才 mount（晚於 `load`），完整 build 裡隨機一兩個 route timeout，單獨重跑又全部通過。
 - home、pikgeon、babbby 仍用 `createRoot`，會整棵重繪 prerendered DOM，造成一次閃替。原因是它們的語言由瀏覽器偵測（navigator / localStorage），prerender 出來的是英文；其他語言的訪客一定 mismatch，React 會退回整棵重繪，hydrate 沒有效益。要改成 hydrate，得先改成像 dingpos、sotto 一樣由 URL 決定語言。
 - 在 render 期間讀到 prerender 與訪客瀏覽器可能不同的值（時間、viewport、storage），會讓 hydrate 的 app mismatch。dingpos 與 sotto footer 的版權年份因此取 build 年份（`import.meta.env.BUILD_YEAR`），不讀訪客的時鐘。
 
