@@ -1,87 +1,74 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 
-import zhHant from "./locales/zh-Hant/translation.json";
-import zhHans from "./locales/zh-Hans/translation.json";
-import en from "./locales/en/translation.json";
-import ja from "./locales/ja/translation.json";
-import ko from "./locales/ko/translation.json";
-import de from "./locales/de/translation.json";
-import es from "./locales/es/translation.json";
-import fr from "./locales/fr/translation.json";
-import it from "./locales/it/translation.json";
-import pt from "./locales/pt-BR/translation.json";
-import ru from "./locales/ru/translation.json";
-import ar from "./locales/ar/translation.json";
+const APP_BASE = "/sotto";
 
+// Each language has its own URL so search engines can index it; the URL is
+// the only language signal (no navigator / storage detection) — see
+// docs/specs/seo-aeo.md §多語系 URL. `pathPrefix` mirrors copy-spa-pages.js.
 export const supportedLanguages = [
-  { code: "zh-Hant", label: "繁體中文" },
-  { code: "zh-Hans", label: "简体中文" },
-  { code: "en",      label: "English" },
-  { code: "ja",      label: "日本語" },
-  { code: "ko",      label: "한국어" },
-  { code: "de",      label: "Deutsch" },
-  { code: "es",      label: "Español" },
-  { code: "fr",      label: "Français" },
-  { code: "it",      label: "Italiano" },
-  { code: "pt-BR",   label: "Português (BR)" },
-  { code: "ru",      label: "Русский" },
-  { code: "ar",      label: "العربية" },
+  { code: "zh-Hant", label: "繁體中文", pathPrefix: "/zh-hant" },
+  { code: "zh-Hans", label: "简体中文", pathPrefix: "/zh-hans" },
+  { code: "en",      label: "English", pathPrefix: "" },
+  { code: "ja",      label: "日本語", pathPrefix: "/ja" },
+  { code: "ko",      label: "한국어", pathPrefix: "/ko" },
+  { code: "de",      label: "Deutsch", pathPrefix: "/de" },
+  { code: "es",      label: "Español", pathPrefix: "/es" },
+  { code: "fr",      label: "Français", pathPrefix: "/fr" },
+  { code: "it",      label: "Italiano", pathPrefix: "/it" },
+  { code: "pt-BR",   label: "Português (BR)", pathPrefix: "/pt-br" },
+  { code: "ru",      label: "Русский", pathPrefix: "/ru" },
+  { code: "ar",      label: "العربية", pathPrefix: "/ar", dir: "rtl" },
 ];
 
-const resources = {
-  "zh-Hant": { translation: zhHant },
-  "zh-Hans": { translation: zhHans },
-  en:        { translation: en },
-  ja:        { translation: ja },
-  ko:        { translation: ko },
-  de:        { translation: de },
-  es:        { translation: es },
-  fr:        { translation: fr },
-  it:        { translation: it },
-  "pt-BR":   { translation: pt },
-  ru:        { translation: ru },
-  ar:        { translation: ar },
-};
+// One language per page load (the URL decides it), so only that language's
+// strings are fetched instead of bundling all twelve into every page.
+const uiModules = import.meta.glob("./locales/*/translation.json", { import: "default" });
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    fallbackLng: "zh-Hant",
-    supportedLngs: supportedLanguages.map((l) => l.code),
-    load: "currentOnly",
+function languageFromPath(pathname) {
+  const match = supportedLanguages.find(
+    ({ pathPrefix }) =>
+      pathPrefix &&
+      (pathname === `${APP_BASE}${pathPrefix}` || pathname.startsWith(`${APP_BASE}${pathPrefix}/`)),
+  );
+  return match ?? supportedLanguages.find(({ pathPrefix }) => pathPrefix === "");
+}
+
+const current = languageFromPath(window.location.pathname);
+
+/** Router basename for the language in the URL, e.g. "/sotto/ja". */
+export const routerBasename = `${APP_BASE}${current.pathPrefix}`;
+
+/**
+ * Same page in another language. `routePath` is the router-relative path
+ * ("/faq"); the result keeps the trailing slash every route is served at,
+ * so switching never costs a redirect hop.
+ */
+export function localizedUrl(code, routePath, search = "", hash = "") {
+  const { pathPrefix } = supportedLanguages.find((l) => l.code === code);
+  const path = routePath.endsWith("/") ? routePath : `${routePath}/`;
+  return `${APP_BASE}${pathPrefix}${path}${search}${hash}`;
+}
+
+/** Language code of this page, e.g. "ja". */
+export const currentLanguage = current.code;
+
+/**
+ * Resolves once this page's strings are loaded. Every locale ships the full
+ * en key set (checked by copy-spa-pages.js), so there is no fallback language.
+ */
+export const i18nReady = uiModules[`./locales/${current.code}/translation.json`]().then((translation) =>
+  i18n.use(initReactI18next).init({
+    resources: { [current.code]: { translation } },
+    lng: current.code,
+    fallbackLng: false,
     interpolation: {
       escapeValue: false
     },
-    detection: {
-      order: ["localStorage", "cookie", "navigator", "htmlTag", "path", "subdomain"],
-      caches: ["localStorage"],
-      convertDetectedLanguage: (lng) => {
-        // zh-TW / zh-HK → zh-Hant; zh-CN / zh-SG → zh-Hans; pt-BR stays
-        if (/^zh-(TW|HK|MO|Hant)/i.test(lng)) return "zh-Hant";
-        if (/^zh/i.test(lng)) return "zh-Hans";
-        if (/^pt/i.test(lng)) return "pt-BR";
-        return lng.split("-")[0];
-      },
-    }
-  });
+  }),
+);
 
-// Sync <html lang> and dir on language change
-const RTL_LANGS = new Set(["ar"]);
-
-function syncDocumentLang(lng) {
-  const resolved = lng || i18n.resolvedLanguage || i18n.language;
-  if (resolved) {
-    document.documentElement.lang = resolved;
-    document.documentElement.dir = RTL_LANGS.has(resolved) ? "rtl" : "ltr";
-  }
-}
-
-i18n.on("languageChanged", syncDocumentLang);
-// Set initial value
-syncDocumentLang(i18n.resolvedLanguage || i18n.language);
+document.documentElement.lang = current.code;
+document.documentElement.dir = current.dir ?? "ltr";
 
 export default i18n;

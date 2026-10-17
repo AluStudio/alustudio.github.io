@@ -2,15 +2,13 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "react-router-dom";
 import { Collapse } from "bootstrap";
-import i18n, { supportedLanguages } from "../i18n.js";
+import { supportedLanguages, localizedUrl, currentLanguage } from "../i18n.js";
 import "../assets/scss/navbar.scss";
 
 function Navbar() {
   const { t } = useTranslation();
   const location = useLocation();
   const isHome = location.pathname === "/" || location.pathname === "";
-  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-  const anchor = (hash) => (isHome ? `#${hash}` : `${base}/#${hash}`);
 
   const collapseNav = () => {
     const el = document.getElementById("navbarSupportedContent");
@@ -19,10 +17,12 @@ function Navbar() {
     }
   };
 
+  // Another language is another URL (and document), so switch by navigating.
   const handleChangeLang = (e) => {
-    i18n.changeLanguage(e.target.value);
+    window.location.assign(
+      localizedUrl(e.target.value, location.pathname, location.search, location.hash),
+    );
   };
-  const currentLang = i18n.resolvedLanguage || i18n.language;
 
   useEffect(() => {
     const navbar = document.querySelector(".navbar-scroll");
@@ -55,7 +55,7 @@ function Navbar() {
         <Link className="navbar-brand" to="/">
           <img
             src={`${import.meta.env.BASE_URL}app-icon-sm.png`}
-            alt="Sotto"
+            alt=""
             width="40"
             height="40"
           />
@@ -67,8 +67,11 @@ function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label={t("nav.toggle")}
         >
-          <i className="bi bi-list"></i>
+          <i className="bi bi-list" aria-hidden="true"></i>
         </button>
 
         <div
@@ -77,9 +80,20 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link text-center" href={anchor("features")} onClick={collapseNav}>
-                {t("nav.features")}
-              </a>
+              {isHome ? (
+                <a className="nav-link text-center" href="#features" onClick={collapseNav}>
+                  {t("nav.features")}
+                </a>
+              ) : (
+                <Link className="nav-link text-center" to="/#features" onClick={collapseNav}>
+                  {t("nav.features")}
+                </Link>
+              )}
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-center" to="/guides" onClick={collapseNav}>
+                {t("nav.guides")}
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link text-center" to="/privacy" onClick={collapseNav}>
@@ -101,9 +115,10 @@ function Navbar() {
 
         <div className="d-flex align-items-center gap-2 ms-3 order-2 order-lg-3">
           <select
-            value={currentLang}
+            value={currentLanguage}
             onChange={handleChangeLang}
             className="lang-select"
+            aria-label={t("nav.language")}
           >
             {supportedLanguages.map((lang) => (
               <option key={lang.code} value={lang.code}>
