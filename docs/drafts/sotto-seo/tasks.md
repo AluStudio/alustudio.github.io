@@ -20,7 +20,7 @@ Checkpoint: `npm test` green; dingpos zh-Hans output unchanged by the generator 
 
 - [x] T009 [REQ-010, REQ-011, REQ-013] en + zh-Hant copy: meta keys, H1 tagline, claims, FAQ fixes + reminders item. Verify: grep AC-012 strings → none
 - [x] T010 [REQ-012] JSON-LD sameAs. Verify: JSON parse of built index.html → sameAs length 2
-- [ ] T011 (code done: aria-labels, <main>, contrast colors computed ≥4.5:1; NOT yet verified by Lighthouse) [REQ-014, NFR-001] a11y fixes, H1 structure, font variable per lang. Verify: local Lighthouse a11y audits pass
+- [x] T011 [REQ-014, NFR-001] a11y fixes, H1 structure, font variable per lang. Verify: local Lighthouse a11y audits pass
 
 ## Phase 4: US-004 guides (en, zh-Hant)
 
@@ -65,3 +65,4 @@ Checkpoint: `npm test` green; dingpos zh-Hans output unchanged by the generator 
 - T016: full prerender timed out on 1–2 random /sotto/ routes per run (4 of 6 runs). Root cause: waitForFunction defaulted to rAF polling, which never fires in the hidden concurrent tabs; sotto mounts after `load`. Fixed with mutation / interval polling; 3/3 full runs then 309/309 + audit + hydration (300). Recorded in seo-aeo.md §Prerender. Assemble helper: `.logs/assemble.sh`.
 - T017 evidence (`.logs/spot.mjs`, `.logs/switch.mjs` on `python3 -m http.server` of `_site`): en/ar/ja guide/zh-Hans faq/de guides each have lang+dir (ar rtl), self-canonical, 13 hreflang, og:locale + 11 alternates, one h1 (home h1 = brand + SWEET tagline), MobileApplication sameAs 2, BreadcrumbList on guides, <main>, localized select aria-label. Switcher ja→de→en and ar guide→ko keep the route; fr home guide links stay under /sotto/fr/; no console errors.
 - Follow-ups (pre-existing, all apps, not this ticket): in-app `<Link>` hrefs lack the trailing slash every route is served at (one redirect hop for crawlers; DingPOS same); Navbar writes a measured `--navbar-height` onto `<html>` in an effect, which prerender bakes into the HTML.
+- T011 evidence: local Lighthouse (prerendered `_site`, mobile default) a11y 100 / SEO 100 on /sotto/, /sotto/ar/, /sotto/ko/, /sotto/guides/, /sotto/ja/guides/find-ring-size-secretly/, /sotto/de/faq/, /sotto/zh-hans/faq/. FAQ contact link was 3.88:1 because `.faq-contact` had `opacity: 0.85` diluting $gold-dark; removed.
