@@ -30,9 +30,9 @@ Checkpoint: `npm test` green; dingpos zh-Hans output unchanged by the generator 
 ## Phase 5: US-002 all locales
 
 - [x] T014 [REQ-008, REQ-019] 9 locales via subagents (UI + FAQ + guides). Verify: build key-set + slug validation → pass
-- [ ] T015 [REQ-009] `npm run zh-hans`, review packet. Verify: `npm test` → zh-Hans current
+- [x] T015 [REQ-009] `npm run zh-hans`, review packet. Verify: `npm test` → zh-Hans current
 
-- [ ] T019 (agent generalized and committed; review dispatched async id `51435393`, report → `/tmp/oh88/zh-hans-review-sotto.md`; apply findings, rerun `npm run zh-hans`, then tick) [REQ-009] Generalize `.pi/agents/zh-hans-reviewer.md` to cover the Sotto packet (`.logs/zh-hans-review-sotto.json`, ids `ui:` and `guide:<slug>:<path>`, layers incl. Sotto `SOTTO_SITE_GLOSSARY` / `SOTTO_OVERRIDES` / `SOTTO_APP_GLOSSARY` in scripts/gen-zh-hans.mjs; Sotto is a people-notes app, readers are mainland users). Then dispatch it on the sotto packet and apply findings. Verify: `npm test` → zh-Hans current
+- [x] T019 [REQ-009] Generalize `.pi/agents/zh-hans-reviewer.md` to cover the Sotto packet (`.logs/zh-hans-review-sotto.json`, ids `ui:` and `guide:<slug>:<path>`, layers incl. Sotto `SOTTO_SITE_GLOSSARY` / `SOTTO_OVERRIDES` / `SOTTO_APP_GLOSSARY` in scripts/gen-zh-hans.mjs; Sotto is a people-notes app, readers are mainland users). Then dispatch it on the sotto packet and apply findings. Verify: `npm test` → zh-Hans current
 
 ## Phase 6: Integration
 
@@ -59,3 +59,6 @@ Checkpoint: `npm test` green; dingpos zh-Hans output unchanged by the generator 
 - Decisions already made (record in summary): zh-Hans generated (DEC-002); privacy/terms text NOT changed (DEC-009, follow-up: biometric section omits passcode/Android; terms mention only iCloud backup; Android has no Crashlytics); production Lighthouse only after merge (DEC-011).
 - requirements.md tweaks to apply: REQ-017 description = the guide's `summary`; FAQ now has 9 items (new `does_sotto_send_reminders`).
 - Scratch helpers live in `.logs/` (gitignored): `check-sotto-locale.mjs`, `cmp.mjs`.
+- T019 result: reviewer found 28 issues; 27 applied as `SOTTO_SITE_GLOSSARY` rules + en tagline restored "Gentle". Declined: 戒围 → 戒指尺寸 (the Sotto app's zh-Hans says 戒围; site follows the app). 则→条 narrowed to note contexts so 规则/否则 stay.
+- Register: fr and ru home copy switched from tu/ты to vous/вы so the whole site (FAQ, guides, store listing) uses one form. de/es/it/pt-BR keep the informal form already used across their sites.
+- zh-Hans privacy/terms are now generated from zh-Hant (previously hand-written); wording changed, meaning follows zh-Hant. Not a DEC-009 content change.

@@ -215,7 +215,43 @@ const SOTTO_APP_GLOSSARY = [
 ];
 
 // Website-only replacements for Sotto, applied after SOTTO_APP_GLOSSARY.
-const SOTTO_SITE_GLOSSARY = [];
+const SOTTO_SITE_GLOSSARY = [
+  // Taiwan wording opencc leaves (mainland form; reviewed 2026-10 by zh-hans-reviewer)
+  ["当机回报", "崩溃报告"], // before 当机
+  ["当机", "崩溃"],
+  ["透过", "通过"],
+  ["量测", "测量"],
+  ["辨识", "识别"],
+  ["本地端", "本地"],
+  ["身分", "身份"],
+  ["权杖", "令牌"],
+  ["纸本", "纸质"],
+  ["现况", "现状"],
+  ["选配", "可选"],
+  ["选择性的", "可选的"],
+  ["遗失", "丢失"],
+  ["复原", "恢复"],
+  ["备份档", "备份文件"],
+  ["反向工程", "逆向工程"],
+  ["公分", "厘米"],
+  ["公厘", "毫米"],
+  ["试算表", "电子表格"],
+  ["送礼记录画面", "送礼记录界面"],
+  ["导览", "导航"],
+  ["PIN、图形", "PIN、图案"], // Android pattern lock
+  ["主动运行", "主动执行"],
+  ["⋯⋯", "……"],
+  // Converter mistranslations
+  ["激活", "启用"], // 啟用
+  ["内核", "核心"], // 核心 → kernel
+  ["链接", "关联"], // 連結 an account, not a hyperlink
+  ["脱机", "离线"], // 離線
+  ["通信录", "通讯录"], // 通訊錄
+  // Measure word for notes: the app says 条笔记; a bare 则→条 would hit 规则 / 否则
+  ["则笔记", "条笔记"],
+  ["则新笔记", "条新笔记"],
+  ["则预填", "条预填"],
+];
 
 const SOTTO_OVERRIDES = {};
 
