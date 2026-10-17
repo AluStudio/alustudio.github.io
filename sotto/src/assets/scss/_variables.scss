@@ -6,10 +6,10 @@ $cream-light:  #faf8f3;
 $cream-dark:   #e8e0d0;
 $gold:         #b09a6a;
 $gold-light:   #c4b48a;
-$gold-dark:    #8a7a52;
+$gold-dark:    #75663f; // ≥ 4.5:1 on cream and as a button background (WCAG AA)
 $charcoal:     #2c2c2c;
 $charcoal-mid: #4a4a4a;
-$warm-gray:    #9a9287;
+$warm-gray:    #6f6553; // ≥ 4.5:1 on cream (WCAG AA)
 
 // Bootstrap overrides
 $primary:       $gold;
@@ -17,8 +17,10 @@ $body-bg:       $cream-light;
 $body-color:    $charcoal;
 $link-color:    $gold-dark;
 
-$font-family-sans-serif: "Noto Sans TC Variable", system-ui, -apple-system, sans-serif;
-$headings-font-family:   "Cormorant Garamond Variable", "Noto Sans TC Variable", Georgia, serif;
+// CJK family per page language, set in index.css: Noto Sans TC would draw
+// Japanese and Simplified Chinese with Traditional glyph shapes.
+$font-family-sans-serif: var(--sotto-font-cjk), system-ui, -apple-system, sans-serif;
+$headings-font-family:   "Cormorant Garamond Variable", var(--sotto-font-cjk), Georgia, serif;
 $headings-font-weight:   600;
 $headings-color:         $charcoal;
 

@@ -132,3 +132,12 @@ test("sourcesForRoute: zh-hant and zh-hans pages mirror their English page, not 
     "dingpos/scripts/copy-spa-pages.js",
   ]);
 });
+
+test("sourcesForRoute: every sotto language mirrors its English page, guides map to the packs", () => {
+  for (const root of ["zh-hant", "zh-hans", "ja", "ko", "de", "es", "fr", "it", "pt-br", "ru", "ar"]) {
+    for (const sub of ["guides/gift-log/", "guides/", "faq/", "privacy/", "terms/", ""]) {
+      assert.deepEqual(sourcesForRoute(`/sotto/${root}/${sub}`), sourcesForRoute(`/sotto/${sub}`), `/sotto/${root}/${sub}`);
+    }
+  }
+  assert.ok(sourcesForRoute("/sotto/ar/guides/find-ring-size-secretly/").includes("sotto/src/data/guides"));
+});
