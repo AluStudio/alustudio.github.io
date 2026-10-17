@@ -32,7 +32,7 @@ Checkpoint: `npm test` green; dingpos zh-Hans output unchanged by the generator 
 - [ ] T014 [REQ-008, REQ-019] 9 locales via subagents (UI + FAQ + guides). Verify: build key-set + slug validation → pass
 - [ ] T015 [REQ-009] `npm run zh-hans`, review packet. Verify: `npm test` → zh-Hans current
 
-- [ ] T019 [REQ-009] Generalize `.pi/agents/zh-hans-reviewer.md` to cover the Sotto packet (`.logs/zh-hans-review-sotto.json`, ids `ui:` and `guide:<slug>:<path>`, layers incl. Sotto `SOTTO_SITE_GLOSSARY` / `SOTTO_OVERRIDES` / `SOTTO_APP_GLOSSARY` in scripts/gen-zh-hans.mjs; Sotto is a people-notes app, readers are mainland users). Then dispatch it on the sotto packet and apply findings. Verify: `npm test` → zh-Hans current
+- [ ] T019 (agent generalized and committed; review dispatched async id `51435393`, report → `/tmp/oh88/zh-hans-review-sotto.md`; apply findings, rerun `npm run zh-hans`, then tick) [REQ-009] Generalize `.pi/agents/zh-hans-reviewer.md` to cover the Sotto packet (`.logs/zh-hans-review-sotto.json`, ids `ui:` and `guide:<slug>:<path>`, layers incl. Sotto `SOTTO_SITE_GLOSSARY` / `SOTTO_OVERRIDES` / `SOTTO_APP_GLOSSARY` in scripts/gen-zh-hans.mjs; Sotto is a people-notes app, readers are mainland users). Then dispatch it on the sotto packet and apply findings. Verify: `npm test` → zh-Hans current
 
 ## Phase 6: Integration
 
