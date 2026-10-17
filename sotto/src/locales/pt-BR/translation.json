@@ -3,10 +3,15 @@
     "features": "Recursos",
     "privacy": "Privacidade",
     "terms": "Termos de uso",
-    "faq": "Perguntas frequentes"
+    "faq": "Perguntas frequentes",
+    "guides": "Guias",
+    "toggle": "Abrir menu",
+    "language": "Idioma"
   },
   "hero": {
-    "tagline": "Lembre dos detalhes que importam",
+    "meta_title": "Sotto — CRM pessoal para lembrar de quem você ama",
+    "meta_description": "Sotto é um CRM pessoal e privado para iPhone e Android: lembre tamanhos, aniversários, alergias e ideias de presente das pessoas que você ama.",
+    "tagline": "CRM pessoal para quem você ama",
     "description": "Cada pessoa carrega pequenos detalhes que valem a pena lembrar. O Sotto guarda eles pra você — alturas, preferências, aquelas coisas que só você sabe. Todos os dados ficam no seu celular, te acompanhando em silêncio.",
     "download": "Baixar na App Store",
     "downloadAndroid": "Disponível no Google Play"
@@ -25,15 +30,15 @@
     },
     "measurements": {
       "title": "Sempre o tamanho certo",
-      "desc": "Altura, peso, número do sapato, anel… Nunca mais pergunte escondido na hora de comprar presentes. 27+ campos com conversão de unidades em tempo real."
+      "desc": "Altura, número do calçado, o tamanho do anel de cada dedo — 23 campos de tamanhos e medidas, para você nunca mais precisar perguntar escondido antes de comprar um presente. Tamanhos de anel são convertidos entre sete sistemas; de calçado, entre cinco."
     },
     "themes": {
       "title": "O visual que você ama",
-      "desc": "7 temas de cores cuidadosamente criados para que cada tela tenha a sua cara."
+      "desc": "8 temas de cores cuidadosamente criados, claros e escuros, para que cada tela tenha a sua cara."
     },
     "privacy": {
       "title": "Esses são seus segredos",
-      "desc": "Todos os dados só no seu celular. Sem uploads, sem rastreamento. Bloqueio com Face ID / Touch ID — só você pode ver."
+      "desc": "Tudo fica no seu celular — sem conta, sem anúncios. Bloqueie o app com o próprio bloqueio de tela do celular (Face ID, Touch ID, digital ou código) e faça backup só na sua própria nuvem, só quando você quiser."
     },
     "notes": {
       "title": "Anote o que importa",
@@ -116,7 +121,8 @@
     "contact": {
       "title": "Contato",
       "desc": "Se tiver dúvidas sobre esta Política de Privacidade, entre em contato:"
-    }
+    },
+    "meta_description": "Como o Sotto trata os seus dados: o que é coletado, como é armazenado e quais são as suas escolhas."
   },
   "terms": {
     "title": "Termos de Uso",
@@ -159,6 +165,90 @@
     "contact": {
       "title": "Contato",
       "desc": "Se tiver dúvidas sobre estes Termos de Uso, entre em contato:"
+    },
+    "meta_description": "Termos de uso do Sotto, o app de notas de pessoas da Alu Studio."
+  },
+  "faq": {
+    "meta_title": "Perguntas frequentes do Sotto, o app de notas de pessoas",
+    "meta_description": "Respostas às dúvidas mais comuns sobre o Sotto: o que ele faz, preço, conta, lembretes e privacidade.",
+    "title": "Perguntas frequentes",
+    "subtitle": "Dúvidas sobre o Sotto? Aqui estão as respostas para as perguntas mais comuns.",
+    "contact_prompt": "Não encontrou o que procurava? Fale com a gente:",
+    "items": {
+      "what_is_sotto": {
+        "title": "O que é o Sotto?",
+        "answer": "O Sotto é um app que ajuda você a lembrar os pequenos detalhes que importam sobre as pessoas que você ama — a altura, as preferências, o café de sempre, uma data especial ou algo que a pessoa disse um dia. Cada pessoa ganha a própria página privada, com foto e bio, notas pessoais, medidas do corpo e perguntas para puxar conversa.",
+        "bullets": [
+          "Uma página para cada pessoa de quem você gosta",
+          "Notas pessoais para as pequenas coisas que ela diz ou de que gosta",
+          "23 campos de tamanhos e medidas (altura, número do calçado, tamanho do anel e mais) com conversão de unidades",
+          "Um catálogo de 323 perguntas para começar novas conversas",
+          "8 temas de cores, claros e escuros"
+        ]
+      },
+      "who_is_sotto_for": {
+        "title": "Para quem é o Sotto?",
+        "answer": "O Sotto é para quem quer um lugar privado e sem julgamentos para lembrar detalhes sobre as pessoas importantes — parceiro ou parceira, família, amigos próximos ou qualquer pessoa cujas preferências e histórias são fáceis de esquecer. Pense nele como um CRM pessoal para quem você ama, e não para vendas ou networking: simples e acolhedor, não um banco de contatos completo."
+      },
+      "is_sotto_free": {
+        "title": "O Sotto é gratuito?",
+        "answer": "O Sotto é gratuito para baixar, e a versão gratuita inclui todos os recursos para até 5 pessoas, com até 10 campos e 5 notas por pessoa. Uma única compra remove esses limites para sempre — não há assinatura."
+      },
+      "do_i_need_an_account": {
+        "title": "Preciso criar uma conta para usar o Sotto?",
+        "answer": "Não — o Sotto não exige cadastro nem login, e todos os recursos principais funcionam sem conexão com a internet. Tudo o que você registra fica armazenado localmente no seu dispositivo. Se quiser usar o backup opcional, você conecta a sua própria conta do iCloud (só no iPhone), Google Drive ou Dropbox, e o arquivo de backup vai para um armazenamento que você controla."
+      },
+      "what_can_i_record": {
+        "title": "Que tipo de informação posso registrar no Sotto?",
+        "answer": "Na página de cada pessoa, o Sotto permite salvar foto e bio, notas pessoais e qualquer um dos 130 campos prontos — de aniversário e alergias a comida favorita e ideias de presente — além de campos que você mesmo cria. 23 deles são de tamanhos e medidas, como altura, número do calçado e o tamanho do anel de cada dedo, com conversão de unidades, para você nunca mais precisar perguntar escondido o tamanho de alguém antes de comprar um presente.",
+        "bullets": [
+          "Nomes, fotos e bios",
+          "Notas pessoais (o café favorito, uma data especial, uma frase que a pessoa disse)",
+          "23 campos de tamanhos e medidas com conversão de unidades",
+          "Datas como aniversários de nascimento e de relacionamento, com lembretes opcionais",
+          "Respostas às perguntas sugeridas para puxar conversa"
+        ]
+      },
+      "does_sotto_send_reminders": {
+        "title": "O Sotto pode me lembrar de aniversários e datas especiais?",
+        "answer": "Sim — ative um lembrete em qualquer campo de data, como um aniversário ou uma data comemorativa, e o Sotto avisa você 7 dias antes, às 9:00 da manhã, todos os anos. Os lembretes são definidos por pessoa e por data, então você só recebe aviso das datas que escolheu. Uma data sem o ano também funciona: o Sotto guarda o dia e o mês para o lembrete."
+      },
+      "does_sotto_suggest_questions": {
+        "title": "O Sotto sugere perguntas para fazer às pessoas de quem gosto?",
+        "answer": "Sim — o Sotto inclui um catálogo de 323 perguntas para puxar conversa. Escolha uma quando não souber o que perguntar, e ela abre uma nota nova já com a pergunta, pronta para a resposta.",
+        "bullets": [
+          "Inspirado nas 36 Perguntas de Arthur Aron (1997)",
+          "Love Maps de Gottman",
+          "As 13 Perguntas do The New York Times",
+          "As 5 Linguagens do Amor, de Gary Chapman (1992)",
+          "Uma curadoria compartilhada pela usuária do Threads hey.roseline"
+        ]
+      },
+      "is_my_data_private": {
+        "title": "Meus dados no Sotto são privados? Eles são enviados para algum lugar?",
+        "answer": "Sim, são privados — o Sotto armazena todos os seus dados localmente no seu dispositivo e nunca os envia para os servidores da Alu Studio. O app não coleta informações pessoais identificáveis, não rastreia sua localização, não usa SDKs de publicidade e não compartilha seu conteúdo com terceiros. Seus dados só saem do dispositivo quando você mesmo faz o backup opcional para a sua própria nuvem.",
+        "bullets": [
+          "Bloqueio do app opcional que usa o próprio bloqueio de tela do celular — Face ID, Touch ID ou código no iPhone; digital, rosto, PIN, padrão ou senha no Android",
+          "O Firebase Analytics coleta dados de uso anônimos e, no iPhone, o Firebase Crashlytics coleta relatórios de falhas — nunca o seu conteúdo pessoal",
+          "O backup opcional vai para o seu próprio iCloud (só no iPhone), Google Drive ou Dropbox — um armazenamento que você controla, não os servidores da Alu Studio",
+          "Desinstalar o app apaga permanentemente todos os dados do dispositivo"
+        ]
+      },
+      "what_platforms_is_sotto_on": {
+        "title": "Em quais plataformas o Sotto está disponível?",
+        "answer": "O Sotto está disponível para iPhone (iOS 17 ou posterior) e Android (Android 9 ou posterior), gratuito na App Store e no Google Play, em 12 idiomas. Seus dados ficam no aparelho em que você usa o app."
+      }
     }
+  },
+  "guides": {
+    "title": "Guias",
+    "subtitle": "Jeitos práticos de lembrar das pessoas que você ama — e acertar no presente.",
+    "meta_title": "Guias para lembrar detalhes e acertar o tamanho do presente — Sotto",
+    "meta_description": "Como lembrar detalhes sobre as pessoas, descobrir o tamanho de roupa e de anel sem perguntar e manter um registro de presentes — guias práticos do Sotto.",
+    "back": "Todos os guias",
+    "breadcrumb": "Trilha de navegação",
+    "related_title": "Guias relacionados",
+    "cta_title": "Guarde tudo no Sotto",
+    "cta_text": "O Sotto é um app privado de notas de pessoas para iPhone e Android: tamanhos, aniversários, ideias de presente e notas de todo mundo que importa para você, guardados no seu celular. Comece grátis."
   }
 }

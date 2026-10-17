@@ -8,7 +8,8 @@ import Footer from "../components/Footer";
 import { getGuides } from "../data/guides";
 
 /** Guide cards: a title link plus its summary. Shared by the index and the home page. */
-export function GuideList({ headingLevel: Heading = "h2" }) {
+export function GuideList({ headingLevel = "h2" }) {
+  const Heading = headingLevel;
   const guides = getGuides();
   return (
     <ul className="guide-list">

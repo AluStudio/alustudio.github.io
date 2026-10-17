@@ -3,10 +3,15 @@
     "features": "Funzionalità",
     "privacy": "Privacy",
     "terms": "Termini d'uso",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "guides": "Guide",
+    "toggle": "Apri il menu",
+    "language": "Lingua"
   },
   "hero": {
-    "tagline": "Ricorda i dettagli che contano",
+    "meta_title": "Sotto — CRM personale per ricordare chi ami",
+    "meta_description": "Sotto è un CRM personale privato per iPhone e Android: ricorda taglie, compleanni, allergie e idee regalo delle persone che ami.",
+    "tagline": "Il CRM personale per le persone che ami",
     "description": "Ogni persona porta con sé piccoli dettagli che meritano di essere ricordati. Sotto li custodisce per te — altezze, preferenze, quelle cose che solo tu conosci. Tutti i dati restano sul tuo telefono, in silenzio.",
     "download": "Scarica dall'App Store",
     "downloadAndroid": "Disponibile su Google Play"
@@ -25,15 +30,15 @@
     },
     "measurements": {
       "title": "Sempre la misura giusta",
-      "desc": "Altezza, peso, taglia scarpe, misura anello… Non chiedere più di nascosto per i regali. 27+ campi dati con conversione in tempo reale."
+      "desc": "Altezza, numero di scarpe, la misura dell'anello per ogni dito — 23 campi per taglie e misure, così non devi più chiedere di nascosto prima di comprare un regalo. Le misure dell'anello si convertono tra sette sistemi, i numeri di scarpe tra cinque."
     },
     "themes": {
       "title": "Il look che ami",
-      "desc": "7 temi colore curati con attenzione perché ogni schermata rispecchi il tuo gusto."
+      "desc": "8 temi colore curati con attenzione, chiari e scuri, perché ogni schermata ti somigli."
     },
     "privacy": {
       "title": "Questi sono i tuoi segreti",
-      "desc": "Tutti i dati solo sul tuo telefono. Nessun caricamento, nessun tracciamento. Blocco Face ID / Touch ID — solo tu puoi vedere."
+      "desc": "Tutto resta sul tuo telefono — nessun account, nessuna pubblicità. Blocca l'app con il blocco schermo del tuo telefono (Face ID, Touch ID, impronta o codice) e fai il backup solo sul tuo cloud, solo quando lo decidi tu."
     },
     "notes": {
       "title": "Scrivi quello che conta",
@@ -116,7 +121,8 @@
     "contact": {
       "title": "Contattaci",
       "desc": "Per domande su questa Informativa sulla Privacy, contattaci a:"
-    }
+    },
+    "meta_description": "Come Sotto gestisce i tuoi dati: cosa viene raccolto, come viene conservato e quali scelte hai."
   },
   "terms": {
     "title": "Termini d'Uso",
@@ -159,6 +165,90 @@
     "contact": {
       "title": "Contattaci",
       "desc": "Per domande su questi Termini d'Uso, contattaci a:"
+    },
+    "meta_description": "Termini d'uso di Sotto, il CRM personale per le persone che ami, creato da Alu Studio."
+  },
+  "faq": {
+    "meta_title": "Domande frequenti su Sotto, l'app di CRM personale",
+    "meta_description": "Risposte alle domande più comuni su Sotto: a cosa serve, quanto costa, account, promemoria e privacy.",
+    "title": "Domande frequenti",
+    "subtitle": "Hai domande su Sotto? Ecco le risposte a quelle che ci fanno più spesso.",
+    "contact_prompt": "Non hai trovato quello che cercavi? Scrivici:",
+    "items": {
+      "what_is_sotto": {
+        "title": "Che cos'è Sotto?",
+        "answer": "Sotto è un'app che ti aiuta a ricordare i dettagli piccoli ma importanti delle persone che ami — la loro altezza, i loro gusti, come prendono il caffè, un anniversario o qualcosa che hanno detto una volta. Ogni persona ha la sua pagina privata, che riunisce foto e biografia, note personali, misure del corpo e domande guidate per conversare.",
+        "bullets": [
+          "Una pagina per ogni persona a cui tieni",
+          "Note personali per le piccole cose che dice o che ama",
+          "23 campi per taglie e misure (altezza, numero di scarpe, misura dell'anello e altro) con conversione delle unità",
+          "Un catalogo di 323 domande per aprire nuove conversazioni",
+          "8 temi colore, chiari e scuri"
+        ]
+      },
+      "who_is_sotto_for": {
+        "title": "A chi è rivolto Sotto?",
+        "answer": "Sotto è per chiunque voglia un posto privato, senza giudizi, dove ricordare i dettagli delle persone a cui tiene — partner, familiari, amici stretti o chiunque abbia gusti e storie di cui è facile perdere traccia. Pensalo come un CRM personale per le persone che ami, non per le vendite o il networking: semplice e delicato, non un database di contatti completo."
+      },
+      "is_sotto_free": {
+        "title": "Sotto è gratis?",
+        "answer": "Sotto si scarica gratis e la versione gratuita include tutte le funzionalità per un massimo di 5 persone, con fino a 10 campi e 5 note per persona. Un unico acquisto una tantum elimina questi limiti per sempre — nessun abbonamento."
+      },
+      "do_i_need_an_account": {
+        "title": "Serve un account per usare Sotto?",
+        "answer": "No — Sotto non richiede registrazione né accesso, e tutte le funzionalità principali funzionano senza connessione internet. Tutto ciò che inserisci è conservato localmente sul tuo dispositivo. Se scegli di usare il backup facoltativo, colleghi il tuo account iCloud (solo iPhone), Google Drive o Dropbox, e il file di backup finisce in uno spazio che controlli tu."
+      },
+      "what_can_i_record": {
+        "title": "Che tipo di informazioni posso registrare in Sotto?",
+        "answer": "Nella pagina di ogni persona, Sotto ti permette di salvare foto e biografia, note personali e uno qualsiasi dei 130 campi integrati — dal compleanno e le allergie al cibo preferito e alle idee regalo — più i campi che crei tu. 23 di questi riguardano taglie e misure, come l'altezza, il numero di scarpe e la misura dell'anello per ogni dito, con conversione delle unità, così non devi mai chiedere di nascosto la taglia di qualcuno prima di comprargli un regalo.",
+        "bullets": [
+          "Nomi, foto e biografie",
+          "Note personali (il caffè preferito, un anniversario, una frase che ha detto)",
+          "23 campi per taglie e misure con conversione delle unità",
+          "Date come compleanni e anniversari, con promemoria facoltativi",
+          "Risposte alle domande suggerite per avviare una conversazione"
+        ]
+      },
+      "does_sotto_send_reminders": {
+        "title": "Sotto può ricordarmi compleanni e anniversari?",
+        "answer": "Sì — attiva un promemoria su qualsiasi campo data, come un compleanno o un anniversario, e Sotto ti avvisa 7 giorni prima, alle 9:00 del mattino, ogni anno. I promemoria si impostano per persona e per data, quindi ricevi avvisi solo per le date che hai scelto. Funziona anche una data di cui non conosci l'anno: Sotto conserva giorno e mese per il promemoria."
+      },
+      "does_sotto_suggest_questions": {
+        "title": "Sotto suggerisce domande da fare alle persone a cui tengo?",
+        "answer": "Sì — Sotto include un catalogo di 323 domande per avviare una conversazione. Scegline una quando non sai cosa chiedere: si apre una nuova nota già compilata con quella domanda, pronta per la sua risposta.",
+        "bullets": [
+          "Ispirato alle 36 Domande di Arthur Aron (1997)",
+          "Le Love Maps di Gottman",
+          "Le 13 Domande del New York Times",
+          "I 5 Linguaggi dell'Amore di Gary Chapman (1992)",
+          "Una raccolta condivisa dall'utente Threads hey.roseline"
+        ]
+      },
+      "is_my_data_private": {
+        "title": "I miei dati in Sotto sono privati? Vengono caricati da qualche parte?",
+        "answer": "Sì — Sotto conserva tutti i tuoi dati localmente sul dispositivo e non li carica mai sui server di Alu Studio. L'app non raccoglie informazioni che ti identificano personalmente, non traccia la tua posizione, non usa SDK pubblicitari e non condivide i tuoi contenuti con terze parti. I tuoi dati lasciano il dispositivo solo quando sei tu ad avviare esplicitamente il backup facoltativo sul tuo spazio cloud.",
+        "bullets": [
+          "Blocco app facoltativo che usa il blocco schermo del telefono — Face ID, Touch ID o codice su iPhone; impronta, volto, PIN, sequenza o password su Android",
+          "Firebase Analytics raccoglie dati di utilizzo anonimi e, su iPhone, Firebase Crashlytics raccoglie i rapporti sui crash — mai i tuoi contenuti personali",
+          "Il backup facoltativo va sul tuo iCloud (solo iPhone), Google Drive o Dropbox — uno spazio che controlli tu, non i server di Alu Studio",
+          "Disinstallando l'app, tutti i dati sul dispositivo vengono cancellati per sempre"
+        ]
+      },
+      "what_platforms_is_sotto_on": {
+        "title": "Su quali piattaforme è disponibile Sotto?",
+        "answer": "Sotto è disponibile per iPhone (iOS 17 o successivo) e Android (Android 9 o successivo), gratis su App Store e Google Play, in 12 lingue. I tuoi dati restano sul dispositivo su cui lo usi."
+      }
     }
+  },
+  "guides": {
+    "title": "Guide",
+    "subtitle": "Modi pratici per ricordare le persone che ami — e azzeccare i regali.",
+    "meta_title": "Guide per ricordare dettagli e taglie dei regali — Sotto",
+    "meta_description": "Come ricordare i dettagli delle persone, scoprire taglie e misura dell'anello senza chiedere e tenere un registro regali: guide pratiche dai creatori di Sotto.",
+    "back": "Tutte le guide",
+    "breadcrumb": "Percorso di navigazione",
+    "related_title": "Guide correlate",
+    "cta_title": "Tieni tutto in Sotto",
+    "cta_text": "Sotto è un CRM personale privato per iPhone e Android: taglie, compleanni, idee regalo e note per tutte le persone a cui tieni, conservati sul tuo telefono. Gratis per iniziare."
   }
 }
