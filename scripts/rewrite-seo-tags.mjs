@@ -108,11 +108,17 @@ export function breadcrumbList(trail) {
   };
 }
 
-/** Set the `lang` attribute on <html>, adding it when absent. */
-export function setHtmlLang(html, lang) {
+/**
+ * Set the `lang` attribute on <html>, adding it when absent. `dir` ("rtl" for
+ * Arabic) is written only when given, so pages that never pass it keep their
+ * markup unchanged.
+ */
+export function setHtmlLang(html, lang, dir) {
   return html.replace(/<html\b([^>]*)>/, (_, attrs) => {
-    const rest = attrs.replace(/\s+lang="[^"]*"/, "");
-    return `<html lang="${escapeAttr(lang)}"${rest}>`;
+    let rest = attrs.replace(/\s+lang="[^"]*"/, "");
+    if (dir) rest = rest.replace(/\s+dir="[^"]*"/, "");
+    const dirAttr = dir ? ` dir="${escapeAttr(dir)}"` : "";
+    return `<html lang="${escapeAttr(lang)}"${dirAttr}${rest}>`;
   });
 }
 

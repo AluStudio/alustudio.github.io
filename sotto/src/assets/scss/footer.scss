@@ -15,7 +15,7 @@ footer {
 
   .footer-desc {
     font-size: 0.88rem;
-    color: rgba($cream-light, 0.5);
+    color: rgba($cream-light, 0.65);
     max-width: 360px;
   }
 
@@ -32,14 +32,14 @@ footer {
     }
 
     .separator {
-      color: rgba($cream-light, 0.2);
+      color: rgba($cream-light, 0.55);
       margin: 0 0.75rem;
     }
   }
 
   .footer-copyright {
     font-size: 0.8rem;
-    color: rgba($cream-light, 0.35);
+    color: rgba($cream-light, 0.65);
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px solid rgba($cream-light, 0.08);

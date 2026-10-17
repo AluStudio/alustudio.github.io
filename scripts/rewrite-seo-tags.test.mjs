@@ -124,6 +124,11 @@ test("setHtmlLang replaces or adds the lang attribute", () => {
   assert.equal(setHtmlLang("<html><head></head></html>", "en"), '<html lang="en"><head></head></html>');
 });
 
+test("setHtmlLang writes dir only when given, replacing an existing one", () => {
+  assert.equal(setHtmlLang('<html lang="en" dir="ltr"><head></head></html>', "ar", "rtl"), '<html lang="ar" dir="rtl"><head></head></html>');
+  assert.equal(setHtmlLang('<html lang="en" dir="ltr"><head></head></html>', "ja"), '<html lang="ja" dir="ltr"><head></head></html>');
+});
+
 const VERSIONS = [
   { hreflang: "en", href: "https://alu-studio.com/dingpos/pricing/" },
   { hreflang: "zh-Hant", href: "https://alu-studio.com/dingpos/zh-hant/pricing/" },

@@ -12,14 +12,7 @@ function PrivacyPage() {
   useEffect(() => {
     // Honor deep links like /privacy#data-deletion (used by Play Console).
     const { hash } = window.location;
-    if (hash) {
-      const el = document.getElementById(hash.slice(1));
-      if (el) {
-        el.scrollIntoView();
-        return;
-      }
-    }
-    window.scrollTo(0, 0);
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
   }, []);
 
   return (

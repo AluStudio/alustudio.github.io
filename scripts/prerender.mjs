@@ -79,7 +79,14 @@ function hreflangSet(html) {
  * (hydrateRoot) instead of re-rendering it. Each needs a clean hydration on
  * every route: on a mismatch React silently discards the prerendered nodes.
  */
-export const HYDRATED_PREFIXES = ["/dingpos/"];
+export const HYDRATED_PREFIXES = ["/dingpos/", "/sotto/"];
+
+/**
+ * Apps that ship many routes from one template, once per language. A missing
+ * per-route meta silently falls back to the app root's, so their titles and
+ * descriptions must be unique within the app.
+ */
+export const UNIQUE_META_PREFIXES = ["/dingpos/", "/sotto/"];
 
 /** Routes that must pass the hydration check. */
 export function hydratedRoutes(routes) {
@@ -128,9 +135,9 @@ function auditAlternates(route, html, pages, sitemapRoutes) {
  */
 export function auditRoutes(pages, sitemapRoutes = new Set(pages.keys())) {
   const errors = [];
-  // DingPOS ships 60+ routes from one template; a missing per-route meta
-  // silently falls back to the app root's, so duplicates are checked there.
-  const uniqueWithin = { prefix: "/dingpos/", title: new Map(), description: new Map() };
+  const seenMeta = new Map(
+    UNIQUE_META_PREFIXES.map((prefix) => [prefix, { title: new Map(), description: new Map() }]),
+  );
   for (const [route, html] of pages) {
     const h1Count = html.match(/<h1[\s>]/gi)?.length ?? 0;
     if (h1Count !== 1) errors.push(`${route}: expected exactly one <h1>, found ${h1Count}`);
@@ -145,7 +152,8 @@ export function auditRoutes(pages, sitemapRoutes = new Set(pages.keys())) {
 
     errors.push(...auditAlternates(route, html, pages, sitemapRoutes));
 
-    if (route.startsWith(uniqueWithin.prefix)) {
+    const uniquePrefix = UNIQUE_META_PREFIXES.find((prefix) => route.startsWith(prefix));
+    if (uniquePrefix) {
       const meta = {
         title: html.match(/<title>([\s\S]*?)<\/title>/)?.[1],
         description: html.match(/<meta name="description" content="([^"]*)"/)?.[1],
@@ -156,7 +164,7 @@ export function auditRoutes(pages, sitemapRoutes = new Set(pages.keys())) {
           errors.push(`${route}: missing ${field}`);
           continue;
         }
-        const seen = uniqueWithin[field];
+        const seen = seenMeta.get(uniquePrefix)[field];
         if (seen.has(value)) errors.push(`${route}: ${field} duplicates ${seen.get(value)}`);
         else seen.set(value, route);
       }
@@ -215,9 +223,12 @@ function startServer(siteDir) {
 async function renderRoute(page, origin, route) {
   await page.goto(`${origin}${route}`, { waitUntil: "load", timeout: 30_000 });
   // React mounted = #root has children. 15s is generous for a local bundle.
+  // Pages run concurrently and all but one are hidden tabs, where the default
+  // requestAnimationFrame polling never fires: an app that mounts after `load`
+  // (sotto awaits its language chunk) would time out at random.
   await page.waitForFunction(
     () => document.querySelector("#root")?.children.length > 0,
-    { timeout: 15_000 }
+    { timeout: 15_000, polling: "mutation" }
   );
   // settle: let i18n/microtask-batched renders flush
   await new Promise((r) => setTimeout(r, 150));
@@ -261,7 +272,8 @@ async function checkHydration(page, origin, route) {
         const first = document.querySelector("#root")?.firstElementChild;
         return first && Object.keys(first).some((key) => key.startsWith("__reactFiber$"));
       },
-      { timeout: 15_000 }
+      // Interval, not rAF (hidden tab) or mutation (hydrating changes no DOM).
+      { timeout: 15_000, polling: 100 }
     );
     await new Promise((r) => setTimeout(r, 150));
     const kept = await page.evaluate(

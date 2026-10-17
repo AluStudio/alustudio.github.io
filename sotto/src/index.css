@@ -1,4 +1,19 @@
 /* Reset — covered by Bootstrap, this file left intentionally minimal */
 :root {
   --navbar-height: 72px;
+  /* Self-hosted for en and zh-Hant. Other CJK languages use the system's
+     own face, so their pages never download the TC slices. */
+  --sotto-font-cjk: "Noto Sans TC Variable";
+}
+
+html[lang="ja"] {
+  --sotto-font-cjk: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", "Yu Gothic", Meiryo;
+}
+
+html[lang="ko"] {
+  --sotto-font-cjk: "Apple SD Gothic Neo", "Noto Sans CJK KR", "Malgun Gothic";
+}
+
+html[lang="zh-Hans"] {
+  --sotto-font-cjk: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei";
 }

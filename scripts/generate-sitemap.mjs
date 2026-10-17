@@ -73,6 +73,35 @@ function dingposRules(root) {
   ];
 }
 
+/**
+ * Sotto rules for one language root; same reasoning as dingposRules. Guides
+ * share their language packs, so a pack edit bumps every guide URL — the pack
+ * is the common source, as with DingPOS support articles.
+ */
+function sottoRules(root) {
+  return [
+    [
+      `${root}guides/`,
+      [
+        "sotto/src/data/guides",
+        "sotto/src/pages/GuidesPage.jsx",
+        "sotto/src/pages/GuidePage.jsx",
+        "sotto/src/components/GuideBlocks.jsx",
+        "sotto/src/locales",
+        ...appShell("sotto"),
+      ],
+    ],
+    [`${root}privacy/`, page("sotto", "PrivacyPage.jsx")],
+    [`${root}terms/`, page("sotto", "TermsPage.jsx")],
+    [`${root}faq/`, page("sotto", "FaqPage.jsx")],
+    [root, ["sotto/src", ...appShell("sotto")]],
+  ];
+}
+
+const SOTTO_LANGUAGE_ROOTS = ["", "zh-hant", "zh-hans", "ja", "ko", "de", "es", "fr", "it", "pt-br", "ru", "ar"].map(
+  (prefix) => `/sotto/${prefix ? `${prefix}/` : ""}`,
+);
+
 export const LASTMOD_SOURCES = [
   ["/home/", ["home/src", "home/index.html"]],
 
@@ -86,10 +115,7 @@ export const LASTMOD_SOURCES = [
   ["/babbby/faq/", page("babbby", "FaqPage.jsx")],
   ["/babbby/", ["babbby/src", "babbby/index.html"]],
 
-  ["/sotto/privacy/", page("sotto", "PrivacyPage.jsx")],
-  ["/sotto/terms/", page("sotto", "TermsPage.jsx")],
-  ["/sotto/faq/", page("sotto", "FaqPage.jsx")],
-  ["/sotto/", ["sotto/src", "sotto/index.html"]],
+  ...SOTTO_LANGUAGE_ROOTS.flatMap(sottoRules),
 
   ...dingposRules("/dingpos/"),
   ...dingposRules("/dingpos/zh-hant/"),

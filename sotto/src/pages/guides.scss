@@ -1,0 +1,224 @@
+@import "../assets/scss/variables";
+
+.guides-page,
+.guide-article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.guides-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.guides-subtitle {
+  color: $charcoal-mid;
+  font-size: 1rem;
+}
+
+.guide-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.guide-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  text-align: start;
+}
+
+.guide-card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+
+  a {
+    color: $charcoal;
+    text-decoration: none;
+
+    &:hover {
+      color: $gold-dark;
+      text-decoration: underline;
+    }
+  }
+}
+
+.guide-card__summary {
+  color: $charcoal-mid;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.guide-breadcrumb {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+
+  a {
+    color: $gold-dark;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  [dir="rtl"] & .bi-arrow-left {
+    transform: scaleX(-1);
+  }
+}
+
+.guide-article h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.guide-content {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: $charcoal;
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 2.25rem 0 0.75rem;
+  }
+
+  ul,
+  ol {
+    padding-inline-start: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.35rem;
+  }
+}
+
+.guide-note {
+  display: flex;
+  gap: 0.75rem;
+  background: $cream;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+
+  .bi {
+    color: $gold-dark;
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.guide-table-wrap {
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: #fff;
+
+  caption {
+    caption-side: top;
+    color: $charcoal-mid;
+    font-size: 0.88rem;
+    padding-bottom: 0.5rem;
+  }
+
+  th,
+  td {
+    border: 1px solid $cream-dark;
+    padding: 0.45rem 0.6rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  th {
+    background: $cream;
+    font-weight: 600;
+  }
+}
+
+.guide-cta {
+  margin-top: 3rem;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  background: $cream;
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $charcoal-mid;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.guide-related {
+  margin-top: 2.5rem;
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li + li {
+    border-top: 1px solid $cream-dark;
+  }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    color: $charcoal;
+    text-decoration: none;
+
+    &:hover {
+      color: $gold-dark;
+    }
+  }
+
+  [dir="rtl"] & .bi-chevron-right {
+    transform: scaleX(-1);
+  }
+}
+
+// Home page section listing the guides.
+.home-guides {
+  padding: 1rem 0 5rem;
+
+  .guide-list {
+    max-width: 960px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}

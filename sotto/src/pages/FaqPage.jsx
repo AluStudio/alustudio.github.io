@@ -4,7 +4,7 @@ import "./faq.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function FaqItem({ id, item, isOpen, onToggle }) {
   return (
@@ -43,10 +43,6 @@ function FaqItem({ id, item, isOpen, onToggle }) {
 function FaqPage() {
   const { t } = useTranslation();
   const [openId, setOpenId] = useState(null);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   // Content is fully locale-driven: every entry under faq.items renders.
   const items = t("faq.items", { returnObjects: true });
