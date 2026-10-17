@@ -119,6 +119,9 @@ function validateLocales() {
 
 // ── Guide packs ─────────────────────────────────────────────
 
+// Block types GuideBlocks.jsx renders; anything else would render nothing.
+const GUIDE_BLOCK_TYPES = new Set(["p", "h2", "note", "list", "steps", "table"]);
+
 function validateGuides() {
   const enSlugs = DEFAULT_LOCALE.guides.map((g) => g.slug);
   const errors = [];
@@ -137,6 +140,9 @@ function validateGuides() {
       // Answer first: the opening paragraph answers the title before any section.
       if (guide.content[0]?.type !== "p") errors.push(`${at} must open with a paragraph, not "${guide.content[0]?.type}"`);
       if (!guide.content.some((b) => b.type === "h2")) errors.push(`${at} has no h2 section`);
+      guide.content.forEach((block, i) => {
+        if (!GUIDE_BLOCK_TYPES.has(block.type)) errors.push(`${at} block ${i} has unknown type "${block.type}"`);
+      });
       for (const related of guide.related) {
         if (related === guide.slug || !slugs.includes(related)) errors.push(`${at} has a bad related link "${related}"`);
       }

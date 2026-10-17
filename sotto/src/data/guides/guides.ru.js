@@ -1,5 +1,5 @@
 // Sotto guides — Russian content pack. Same slugs, order, blocks and related links as guides.en.js.
-import { RING_SIZE_ROWS } from "./guides.en.js";
+import { RING_SIZE_ROWS } from "./ring-sizes.js";
 
 export const articles = [
   {

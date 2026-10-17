@@ -1,6 +1,6 @@
 // Sotto guides — Brazilian Portuguese content pack. Schema and rules: guides.en.js.
 
-import { RING_SIZE_ROWS } from "./guides.en.js";
+import { RING_SIZE_ROWS } from "./ring-sizes.js";
 
 export const articles = [
   {

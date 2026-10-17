@@ -2,7 +2,7 @@
 // guides.en.js. zh-Hans is generated from this file — edit here, then run
 // `npm run zh-hans`.
 
-import { RING_SIZE_ROWS } from "./guides.en.js";
+import { RING_SIZE_ROWS } from "./ring-sizes.js";
 
 export const articles = [
   {

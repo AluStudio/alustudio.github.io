@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { APPS, convertText, convertSources, checkStale, diffEntries } from "./gen-zh-hans.mjs";
+import { APPS, convertText, convertSources, checkStale, diffEntries, sourcesAt } from "./gen-zh-hans.mjs";
 
 const dingpos = (config = {}) => ({ ...APPS.dingpos, ...config });
 
@@ -112,4 +112,14 @@ test("diffEntries: only new or changed entries reach the review packet", () => {
 
 test("committed zh-Hans files match a fresh generation (run `npm run zh-hans`)", async () => {
   assert.deepEqual(await checkStale(), []);
+});
+
+test("sourcesAt: loads packs that import a sibling module at a past ref", async () => {
+  // HEAD always contains the Sotto packs, whose ring-size table is a sibling import.
+  const sotto = await sourcesAt(APPS.sotto, "HEAD");
+  assert.equal(sotto.packHant.articles.length, sotto.packEn.articles.length);
+  const ring = sotto.packHant.articles.find((a) => a.slug === "find-ring-size-secretly");
+  assert.ok(ring.content.some((block) => block.type === "table" && block.rows.length > 0));
+  const dingpos = await sourcesAt(APPS.dingpos, "HEAD");
+  assert.ok(dingpos.packEn.articles.length > 0);
 });

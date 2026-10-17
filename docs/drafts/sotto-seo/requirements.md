@@ -74,7 +74,7 @@
 ### Acceptance
 
 - AC-014: Given the build, When pages are listed, Then 12 × 5 guide routes exist (index + 4) and are in the sitemap.
-- AC-015: Given the prerendered `/sotto/fr/guides/ring-size-secretly/`, When read without JS, Then it has one h1 in French, a BreadcrumbList whose items are French-labelled `fr` URLs, and the opening answer appears before the first h2.
+- AC-015: Given the prerendered `/sotto/fr/guides/find-ring-size-secretly/`, When read without JS, Then it has one h1 in French, a BreadcrumbList whose items are French-labelled `fr` URLs, and the opening answer appears before the first h2.
 - AC-016: Given the home page in any language, When rendered, Then it links to the guides index and each guide (internal links).
 
 ## NFR

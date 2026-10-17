@@ -450,16 +450,39 @@ function gitShow(ref, path) {
   }
 }
 
+function gitLsFiles(ref, folder) {
+  try {
+    return execFileSync("git", ["ls-tree", "--name-only", ref, `${folder}/`], { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] })
+      .split("\n")
+      .filter((file) => file.endsWith(".js"));
+  } catch {
+    return [];
+  }
+}
+
 /** All six sources of `app` at a git ref (missing files → null). */
-async function sourcesAt(app, ref) {
+export async function sourcesAt(app, ref) {
   const dir = mkdtempSync(join(tmpdir(), "zh-hans-"));
+  writeFileSync(join(dir, "package.json"), '{ "type": "module" }\n');
+  // A pack may import a sibling module (Sotto's ring-sizes.js), so each pack's
+  // whole directory is written out at the same ref, at its repo-relative path.
+  const staged = new Set();
+  const stage = (folder) => {
+    if (staged.has(folder)) return;
+    staged.add(folder);
+    for (const file of gitLsFiles(ref, folder)) {
+      const text = gitShow(ref, file);
+      if (text === null) continue;
+      mkdirSync(dirname(join(dir, file)), { recursive: true });
+      writeFileSync(join(dir, file), text);
+    }
+  };
   const load = async (path) => {
     const text = gitShow(ref, path);
     if (text === null) return null;
     if (path.endsWith(".json")) return JSON.parse(text);
-    const file = join(dir, `${path.replaceAll("/", "_")}.mjs`);
-    writeFileSync(file, text);
-    return import(pathToFileURL(file).href);
+    stage(dirname(path));
+    return import(pathToFileURL(join(dir, path)).href);
   };
   return Object.fromEntries(await Promise.all(Object.entries(app.paths).map(async ([k, p]) => [k, await load(p)])));
 }

@@ -1,7 +1,7 @@
 // Sotto guides — Arabic (Modern Standard Arabic) content pack. Schema and rules:
 // guides.en.js.
 
-import { RING_SIZE_ROWS } from "./guides.en.js";
+import { RING_SIZE_ROWS } from "./ring-sizes.js";
 
 export const articles = [
   {

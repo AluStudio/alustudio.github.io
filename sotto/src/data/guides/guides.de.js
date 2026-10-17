@@ -1,5 +1,5 @@
 // Sotto guides — German content pack (same slugs, order and block structure as guides.en.js).
-import { RING_SIZE_ROWS } from "./guides.en.js";
+import { RING_SIZE_ROWS } from "./ring-sizes.js";
 
 export const articles = [
   {

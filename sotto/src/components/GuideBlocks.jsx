@@ -55,7 +55,7 @@ function GuideBlocks({ blocks }) {
           </div>
         );
       default:
-        return null;
+        throw new Error(`Unknown guide block type "${block.type}"`);
     }
   });
 }

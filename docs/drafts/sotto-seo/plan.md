@@ -40,7 +40,7 @@
 - Satisfies: REQ-011
 
 ### DEC-006 各語系的 SWEET 詞
-- Choice（title／H1 必含；description 帶次要詞）：en `people notes`（次 `remember details about people`、`gift log`）；zh-Hant `人脈管理`；zh-Hans 由產生得 `人脉管理`；ja `人脈メモ`（次 `大切な人`）；ko `인맥 관리`（次 `선물 기록`）；de `persönliches CRM`；fr `CRM personnel`（次 `carnet cadeaux`）；es `CRM personal`（次 `registro de regalos`）；it `CRM personale`（次 `registro regali`）；pt-BR `CRM pessoal`；ru `личный CRM`；ar `سجل الهدايا`。
+- Choice（title／H1 與首頁 description 都含主要詞，REQ-010；次要詞放 description 或文章）：en `people notes`（次 `remember details about people`、`gift log`）；zh-Hant `人脈管理`；zh-Hans 由產生得 `人脉管理`；ja `人脈メモ`（次 `大切な人`）；ko `인맥 관리`（次 `선물 기록`）；de `persönliches CRM`；fr `CRM personnel`（次 `carnet cadeaux`）；es `CRM personal`（次 `registro de regalos`）；it `CRM personale`（次 `registro regali`）；pt-BR `CRM pessoal`；ru `личный CRM`；ar `سجل الهدايا`。
 - Rationale: 逐字取自 aso-keywords.md 的 SWEET 判定，網站與商店用同一組詞。
 - Satisfies: REQ-010, REQ-016
 
