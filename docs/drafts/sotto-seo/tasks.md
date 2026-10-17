@@ -69,3 +69,27 @@ Checkpoint: `npm test` green; dingpos zh-Hans output unchanged by the generator 
 - T020 progress: gate green — root `npm test` 73/73; lint ok for home, pikgeon, babbby, sotto, dingpos; all five apps build; full prerender 309/309 + audit + hydration (300) ×3. Review pipeline dispatched (workflow `1b62a014`); on completion read `review_report`, fix findings, then tick T020.
 - T020 review (`1b62a014`, 6 lenses): NEEDS-FIX → all fixed. P1 `npm run zh-hans` would crash after merge: `sourcesAt` flattened past-ref packs into one temp file, so a pack's sibling import could not resolve — now stages each pack's directory at its repo path (+ `type: module`), regression test against HEAD (old code reproduced ERR_MODULE_NOT_FOUND). P2 every non-en pack pulled in the en articles for `RING_SIZE_ROWS` → moved to `ring-sizes.js`. P2 unknown guide block types rendered nothing → build rejects them, renderer throws. P2 zh-Hant/ru home description lacked the SWEET term → added (REQ-010 wins; DEC-006 wording aligned). P3 AC-015 URL fixed. After fixes: test 74/74, zh-Hans current, sotto lint/build, prerender 309/309 + audit + hydration.
 - T021: comment posted (OH-88 #comment-31f0228d).
+
+## Verification report (Gate 2)
+
+| AC | Result | Evidence |
+|----|--------|----------|
+| AC-001 | PASS | `node scripts/prerender.mjs --site-dir _site` → 309/309, route audit passed, hydration check passed (300) |
+| AC-002 | PASS | `.logs/verify-ac.mjs`: /sotto/ja/faq/ lang=ja, self canonical, 13 hreflang, Japanese text |
+| AC-003 | PASS | /sotto/ar/ `<html lang="ar" dir="rtl">` |
+| AC-004 | PASS | `.logs/verify-browser.mjs`: navigator.language=ja + i18nextLng=ja → /sotto/ lang=en, English h1 |
+| AC-005 | PASS | /sotto/de/faq/ pick ja → /sotto/ja/faq/ |
+| AC-006 | PASS | sitemap minus /sotto/ko/terms/ → "Sitemap validation failed … missing …/ko/terms/"; de faq title = home title → "Page meta validation failed … same title" |
+| AC-007 | PASS | 12 locales × 9 FAQ answers in the DOM, no English text outside en |
+| AC-008 | PASS | ja without is_sotto_free.answer → "Locale validation failed: ja is missing …" |
+| AC-009 | PASS | hand-edited zh-Hans → `npm test` "committed zh-Hans files match a fresh generation" fails |
+| AC-010 | PASS | en/zh-Hant/ja/ko/de home title + h1 contain brand + SWEET term |
+| AC-011 | PASS | 108/108 Sotto pages: MobileApplication sameAs has App Store + Google Play |
+| AC-012 | PASS | none of the four stale en strings remain |
+| AC-013 | UNVERIFIED | production-only (H001); local a11y/SEO 100 on 8 pages |
+| AC-014 | PASS | 60 guide routes built and in sitemap |
+| AC-015 | PASS | /sotto/fr/guides/find-ring-size-secretly/: one h1, BreadcrumbList on /sotto/fr/ URLs with fr labels, opening p before first h2 |
+| AC-016 | PASS | 12 homes link the guides index + 4 guides |
+| NFR-001 | PASS | ja/ko/zh-Hans homes request 0 noto-sans-tc files (zh-Hant control: 14) |
+
+Consolidation: rules already live in docs/specs/seo-aeo.md (§多語系 URL, §簡中由繁中產生, §Prerender, §Structured data, §內容), docs/specs/performance.md (CJK font per language, hydrateRoot, sotto pre-OH-88 baseline), AGENTS.md (Sotto Sub-app Notes). No SDD id outside this folder (`git grep`). After Gate 2: delete docs/drafts/sotto-seo/.
