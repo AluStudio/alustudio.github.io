@@ -12,6 +12,7 @@ read_when:
 
 - Webfont 一律透過 `@fontsource` / `@fontsource-variable` 自託管，在各 app 的 `main.jsx` import。variable package 的 family 名稱是 `"<Font> Variable"`。原因：`fonts.googleapis.com` 的 CSS 是 render-blocking 的第三方請求，光 Noto Sans TC 那份就佔掉約 2.7s 的模擬 FCP。
 - CJK package 依 unicode-range 切成上百個 slice，瀏覽器只下載頁面用到的字所在的 slice。英文頁上只要出現幾個中文字，就會多抓幾百 KB。所以語言 `<select>`（選項是「繁體中文」這類原生名稱）用 system font stack；英文頁上的中文字不要落在 Noto Sans TC 這個 family。
+- sotto 的 CJK family 由 `--sotto-font-cjk`（`sotto/src/index.css`）依頁面語言決定：en、zh-Hant 與其他拉丁、西里爾、阿拉伯文頁面用自託管的 Noto Sans TC；ja、ko、zh-Hans 頁改用系統字型（Hiragino / Apple SD Gothic Neo / PingFang 等）。原因：Noto Sans TC 會用繁中字形畫日文與簡中，系統字型又不必下載任何 slice。
 - dingpos 的 CJK family 由 `--dp-font-cjk`（`dingpos/src/index.css`）依頁面語言決定：英文與繁中頁用 Noto Sans TC，簡中頁用 Noto Sans SC。原因：同一個漢字在繁中與簡中字型的字形不同。SC 的 `@font-face` CSS 只在 `lang="zh-Hans"` 的頁面由 `main.jsx` 用 dynamic import 載入；prerender 會把它注入的 `<link>` 寫進 HTML，瀏覽器解析時就會抓，不必等 JS。全域 import 會讓每一頁多一份約 110 KB（未壓縮）的 render-blocking CSS。
 
 ## 圖片
@@ -31,7 +32,7 @@ read_when:
 - Lighthouse mobile 模擬的是 Slow 4G（150ms RTT、1.6Mbps）加 4x CPU 降速，大約是 4G 連線最差的 25%。在這個條件下，FCP / LCP 顯示 2–4 秒是常態，不代表一般使用者要等這麼久。
 - Core Web Vitals 的「LCP ≤ 2.5s」是真實使用者第 75 百分位數的門檻，不是 lab 門檻。Lighthouse mobile 的 LCP 評分曲線是 2.5s = 90 分、4.0s = 50 分。
 - Opacity 從 0 開始的進場動畫，會把 LCP 延後到元素在可見狀態下重新 paint 的時候，在真實使用者身上也一樣。home 與 dingpos 的 hero 目前就是這樣，各多約 1s。
-- `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP。dingpos 已改用 `hydrateRoot` 原地保留節點；home、pikgeon、babbby、sotto 仍是 `createRoot`，目前它們的 lab LCP 沒有被重繪拖到，但訪客語言跟 prerender 的英文不同時，換成另一種語言的新節點仍可能記下新的 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
+- `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP。dingpos 與 sotto 已改用 `hydrateRoot` 原地保留節點；home、pikgeon、babbby 仍是 `createRoot`，目前它們的 lab LCP 沒有被重繪拖到，但訪客語言跟 prerender 的英文不同時，換成另一種語言的新節點仍可能記下新的 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
 
 ## 目前基準
 
@@ -43,6 +44,8 @@ read_when:
 | pikgeon | 71 | 1.90s | 3.44s | 0.411 | `img.ios-view-image` | 98 |
 | babbby | 98 | 1.88s | 2.08s | 0 | `img.hero-screenshot` | 98 |
 | sotto | 97 | 2.09s | 2.09s | 0.022 | `p.hero-desc` | 99 |
+
+- sotto 2026-10-17（OH-88 前）另量到 perf 89、LCP 2.9s、Accessibility 69；OH-88 改 `hydrateRoot`、只載入當頁語言、修 a11y 後，部署後需重量。
 | dingpos | 85 | 2.08s | 4.10s | 0.001 | `p.hero-desc` | 95 |
 
 - pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。已改成固定 `height: 500px` 修正。
