@@ -1,29 +1,30 @@
 #!/usr/bin/env node
 /**
- * Generate DingPOS's zh-Hans website copy from its zh-Hant source.
+ * Generate each app's zh-Hans website copy from its zh-Hant source.
  *
  * zh-Hans is derived, never hand-edited, so it cannot drift from zh-Hant or
- * fall behind it. Every string value of the zh-Hant UI strings and FAQ pack
- * runs through, in order:
+ * fall behind it. Every app in APPS has a UI strings file and one content pack
+ * (DingPOS: FAQ articles; Sotto: guides). Every string value of both runs
+ * through, in order:
  *
  *   1. opencc-js `twp → cn` — Traditional (Taiwan, phrase level) → Simplified.
- *   2. APP_GLOSSARY — the DingPOS app's own zh-Hans glossary, mirrored verbatim
- *      so the website names every screen and feature the way the app does.
- *   3. SITE_GLOSSARY — website-only fixes, for prose the app's short UI
- *      strings never contain.
+ *   2. appGlossary — the app's own zh-Hans wording, so the website names every
+ *      screen and feature the way the app does.
+ *   3. siteGlossary — website-only fixes, for prose the app's short UI strings
+ *      never contain.
  *   4. 「」『』 → “” ‘’, the mainland quotation marks.
- *   5. Row/column swap for ROW_COLUMN_ENTRIES — Taiwan reads 列 as row, the
+ *   5. Row/column swap for rowColumnEntries — Taiwan reads 列 as row, the
  *      mainland reads 行 as row and 列 as column.
  *
- * OVERRIDES replace a whole value for one entry and pin the zh-Hant source
+ * overrides replace a whole value for one entry and pin the zh-Hant source
  * they were written against, so a changed source cannot keep a stale override.
  *
  * Gates (nothing is written when one fails): a UI value keeps its `{{…}}`
- * placeholders; an FAQ value that changed must sit in a TEXT_FIELDS field, so
- * slugs, links, asset paths and `since` pass through untouched.
+ * placeholders; a pack value that changed must sit in one of the app's
+ * textFields, so slugs, links, asset paths and `since` pass through untouched.
  *
  * Usage:
- *   npm run zh-hans [-- --base <ref>]   write zh-Hans + the review packet
+ *   npm run zh-hans [-- --base <ref>]   write zh-Hans + one review packet per app
  *   node scripts/gen-zh-hans.mjs --check  exit 1 when a zh-Hans file is stale
  *
  * Procedure for changing copy: docs/specs/seo-aeo.md §簡中由繁中產生.
@@ -39,25 +40,18 @@ import * as OpenCC from "opencc-js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-const PATHS = {
-  uiEn: "dingpos/src/locales/en/translation.json",
-  uiHant: "dingpos/src/locales/zh-Hant/translation.json",
-  uiHans: "dingpos/src/locales/zh-Hans/translation.json",
-  faqEn: "dingpos/src/data/faq/articles.en.js",
-  faqHant: "dingpos/src/data/faq/articles.zh-Hant.js",
-  faqHans: "dingpos/src/data/faq/articles.zh-Hans.js",
-};
-
-const DEFAULT_PACKET = ".logs/zh-hans-review.json";
+const packetPath = (app) => `.logs/zh-hans-review-${app}.json`;
 
 const GENERATED_NOTE =
   "Generated from zh-Hant by scripts/gen-zh-hans.mjs. Do not edit: change the zh-Hant source or the script, then run `npm run zh-hans`.";
 
+// ── DingPOS ──────────────────────────────────────────────────
+
 // Mirrored verbatim from the DingPOS app repo, `scripts/gen-zh-hans.py`
 // GLOSSARY — change both together, and never edit an entry here alone: a
-// website-only fix goes in SITE_GLOSSARY or OVERRIDES. Applied in order; a
+// website-only fix goes in DINGPOS_SITE_GLOSSARY or DINGPOS_OVERRIDES. Applied in order; a
 // longer phrase comes before any shorter phrase it contains.
-export const APP_GLOSSARY = [
+const DINGPOS_APP_GLOSSARY = [
   // OpenCC mistranslations
   ["高端", "高级"],
   ["激活", "启用"],
@@ -108,11 +102,11 @@ export const APP_GLOSSARY = [
   ["试算表", "电子表格"],
 ];
 
-// Website-only replacements, applied after APP_GLOSSARY. A term the app's own
+// Website-only replacements, applied after the app glossary. A term the app's own
 // zh-Hans UI uses (仪表板, 回购率, 自订, 月缴, 集点, 画面…) stays as the app
 // says it, so the FAQ names screens the way shop owners see them; fix those in
 // the app first. Same ordering rule as APP_GLOSSARY.
-export const SITE_GLOSSARY = [
+const DINGPOS_SITE_GLOSSARY = [
   // Converter mistranslations
   ["结列表张", "结清单张"], // APP_GLOSSARY 清单→列表 also hits 結清單張 (settle one bill)
   ["数据报括", "数据包括"], // OpenCC splits 資料包括 as 資料包 + 括
@@ -168,10 +162,10 @@ export const SITE_GLOSSARY = [
 ];
 
 // Entry ids (or id prefixes ending in ":") whose 列 means a grid row.
-export const ROW_COLUMN_ENTRIES = ["faq:import-csv:"];
+const DINGPOS_ROW_COLUMN_ENTRIES = ["faq:import-csv:"];
 
 // Entry id → [zh-Hant source the override was written for, zh-Hans value].
-export const OVERRIDES = {
+const DINGPOS_OVERRIDES = {
   // Page titles with no character that converts would duplicate the zh-Hant
   // page's title. "套用" stays: the app's zh-Hans button says 套用.
   "faq:apply-discounts:question": ["如何套用折扣？", "怎么套用折扣？"],
@@ -197,15 +191,77 @@ export const OVERRIDES = {
   "faq:roadmap-payment-integration:keywords.0": ["金流", "支付接口"],
 };
 
+// ── Sotto ────────────────────────────────────────────────────
+
+// The Sotto app has no zh-Hans generator to mirror; these are the terms its
+// hand-written zh-Hans UI (sotto-ios zh-Hans.lproj) uses where the converter
+// says something else. Change them together with the app's wording.
+const SOTTO_APP_GLOSSARY = [
+  ["自订", "自定义"],
+  ["相片", "照片"],
+  ["预设", "默认"],
+  ["重设", "重置"],
+  ["拖曳", "拖动"],
+  ["帐号", "账号"],
+  ["拷贝", "复制"],
+  ["略过", "跳过"],
+  ["纪录", "记录"],
+  ["回复购买", "恢复购买"],
+  ["隐私权政策", "隐私政策"],
+  ["全域", "全局"],
+  ["钉选", "置顶"],
+  ["内衣尺寸", "内衣尺码"],
+  ["帽子尺寸", "帽子尺码"],
+];
+
+// Website-only replacements for Sotto, applied after SOTTO_APP_GLOSSARY.
+const SOTTO_SITE_GLOSSARY = [];
+
+const SOTTO_OVERRIDES = {};
+
+export const APPS = {
+  dingpos: {
+    paths: {
+      uiEn: "dingpos/src/locales/en/translation.json",
+      uiHant: "dingpos/src/locales/zh-Hant/translation.json",
+      uiHans: "dingpos/src/locales/zh-Hans/translation.json",
+      packEn: "dingpos/src/data/faq/articles.en.js",
+      packHant: "dingpos/src/data/faq/articles.zh-Hant.js",
+      packHans: "dingpos/src/data/faq/articles.zh-Hans.js",
+    },
+    packPrefix: "faq",
+    appGlossary: DINGPOS_APP_GLOSSARY,
+    siteGlossary: DINGPOS_SITE_GLOSSARY,
+    rowColumnEntries: DINGPOS_ROW_COLUMN_ENTRIES,
+    overrides: DINGPOS_OVERRIDES,
+    textFields: new Set(["label", "question", "keywords", "text", "items", "alt", "caption"]),
+  },
+  sotto: {
+    paths: {
+      uiEn: "sotto/src/locales/en/translation.json",
+      uiHant: "sotto/src/locales/zh-Hant/translation.json",
+      uiHans: "sotto/src/locales/zh-Hans/translation.json",
+      packEn: "sotto/src/data/guides/guides.en.js",
+      packHant: "sotto/src/data/guides/guides.zh-Hant.js",
+      packHans: "sotto/src/data/guides/guides.zh-Hans.js",
+    },
+    packPrefix: "guide",
+    appGlossary: SOTTO_APP_GLOSSARY,
+    siteGlossary: SOTTO_SITE_GLOSSARY,
+    rowColumnEntries: [],
+    overrides: SOTTO_OVERRIDES,
+    textFields: new Set(["title", "summary", "text", "items", "head", "rows", "caption"]),
+  },
+};
+
+// ── Conversion ───────────────────────────────────────────────
+
 const QUOTES = [
   ["「", "“"],
   ["」", "”"],
   ["『", "‘"],
   ["』", "’"],
 ];
-
-// FAQ fields that hold display text; any other field must convert to itself.
-export const TEXT_FIELDS = new Set(["label", "question", "keywords", "text", "items", "alt", "caption"]);
 
 const PLACEHOLDER = /\{\{\s*[^}]+?\s*\}\}/g;
 
@@ -215,13 +271,13 @@ const swapRowColumn = (text) => text.replaceAll("列", "\0").replaceAll("栏", "
 
 const matchesEntry = (id, pattern) => (pattern.endsWith(":") ? id.startsWith(pattern) : id === pattern);
 
-/** zh-Hant → zh-Hans for one entry, without the override and gate layers. */
-export function convertText(text, id = "", rowColumnEntries = ROW_COLUMN_ENTRIES) {
+/** zh-Hant → zh-Hans for one entry of `app`, without the override and gate layers. */
+export function convertText(text, app, id = "") {
   let out = toSimplified(text);
-  for (const [from, to] of APP_GLOSSARY) out = out.replaceAll(from, to);
-  for (const [from, to] of SITE_GLOSSARY) out = out.replaceAll(from, to);
+  for (const [from, to] of app.appGlossary) out = out.replaceAll(from, to);
+  for (const [from, to] of app.siteGlossary) out = out.replaceAll(from, to);
   for (const [from, to] of QUOTES) out = out.replaceAll(from, to);
-  if (rowColumnEntries.some((pattern) => matchesEntry(id, pattern))) out = swapRowColumn(out);
+  if (app.rowColumnEntries.some((pattern) => matchesEntry(id, pattern))) out = swapRowColumn(out);
   return out;
 }
 
@@ -239,34 +295,37 @@ const fieldOf = (path) => [...path].reverse().find((segment) => typeof segment =
 
 const uiId = (path) => `ui:${path.join(".")}`;
 
-/** `faq:<slug>:<path>` for article strings, `faq:category:<key>:<field>` for categories. */
-function faqId(pack, path) {
+/** `<prefix>:<slug>:<path>` for article strings, `<prefix>:category:<key>:<field>` for categories. */
+function packId(prefix, pack, path) {
   const [list, index, ...rest] = path;
-  if (list === "articles") return `faq:${pack.articles[index].slug}:${rest.join(".")}`;
-  return `faq:category:${pack.categories[index].key}:${rest.join(".")}`;
+  if (list === "articles") return `${prefix}:${pack.articles[index].slug}:${rest.join(".")}`;
+  return `${prefix}:category:${pack.categories[index].key}:${rest.join(".")}`;
 }
+
+/** The lists a pack module exports; categories are optional (Sotto's guides have none). */
+const packData = (pack) => ({
+  ...(pack.categories ? { categories: pack.categories } : {}),
+  articles: pack.articles,
+});
 
 const placeholders = (text) => (text.match(PLACEHOLDER) ?? []).sort().join(" ");
 
 /**
- * Convert both zh-Hant sources. Returns the converted data plus every gate
- * violation; callers write nothing when `errors` is non-empty.
+ * Convert one app's zh-Hant sources. Returns the converted data plus every
+ * gate violation; callers write nothing when `errors` is non-empty.
  */
-export function convertSources(
-  { ui, faq },
-  { overrides = OVERRIDES, rowColumnEntries = ROW_COLUMN_ENTRIES } = {},
-) {
+export function convertSources({ ui, pack }, app) {
   const errors = [];
   const seen = new Set();
 
   const convert = (text, id) => {
     seen.add(id);
-    if (Object.hasOwn(overrides, id)) {
-      const [source, value] = overrides[id];
+    if (Object.hasOwn(app.overrides, id)) {
+      const [source, value] = app.overrides[id];
       if (source !== text) errors.push(`${id}: OVERRIDES was written for "${source}", but zh-Hant is now "${text}"`);
       return value;
     }
-    return convertText(text, id, rowColumnEntries);
+    return convertText(text, app, id);
   };
 
   const uiOut = mapStrings(ui, [], (text, path) => {
@@ -278,26 +337,26 @@ export function convertSources(
     return out;
   });
 
-  const faqData = { categories: faq.categories, articles: faq.articles };
-  const faqOut = mapStrings(faqData, [], (text, path) => {
-    const id = faqId(faqData, path);
+  const data = packData(pack);
+  const packOut = mapStrings(data, [], (text, path) => {
+    const id = packId(app.packPrefix, data, path);
     const out = convert(text, id);
-    if (out !== text && !TEXT_FIELDS.has(fieldOf(path))) {
+    if (out !== text && !app.textFields.has(fieldOf(path))) {
       errors.push(`${id}: field "${fieldOf(path)}" is not a text field, but conversion changed "${text}" to "${out}"`);
     }
     return out;
   });
 
-  for (const id of Object.keys(overrides)) {
+  for (const id of Object.keys(app.overrides)) {
     if (!seen.has(id)) errors.push(`OVERRIDES names "${id}", which no zh-Hant entry has`);
   }
-  for (const pattern of rowColumnEntries) {
+  for (const pattern of app.rowColumnEntries) {
     if (![...seen].some((id) => matchesEntry(id, pattern))) {
-      errors.push(`ROW_COLUMN_ENTRIES names "${pattern}", which no zh-Hant entry matches`);
+      errors.push(`rowColumnEntries names "${pattern}", which no zh-Hant entry matches`);
     }
   }
 
-  return { ui: uiOut, faq: faqOut, errors };
+  return { ui: uiOut, pack: packOut, errors };
 }
 
 const readJson = (path) => JSON.parse(readFileSync(join(ROOT, path), "utf8"));
@@ -306,29 +365,35 @@ async function importModule(path) {
   return import(pathToFileURL(join(ROOT, path)).href);
 }
 
-/** File contents for both zh-Hans outputs, keyed by repo-relative path. */
-export function renderOutputs({ ui, faq }) {
+/** File contents for both zh-Hans outputs of `app`, keyed by repo-relative path. */
+export function renderOutputs({ ui, pack }, app) {
   const uiText = `${JSON.stringify({ "//": GENERATED_NOTE, ...ui }, null, 2)}\n`;
-  const faqText = [
+  const packText = [
     `// ${GENERATED_NOTE}`,
     "",
-    `export const categories = ${JSON.stringify(faq.categories, null, 2)};`,
-    "",
-    `export const articles = ${JSON.stringify(faq.articles, null, 2)};`,
+    ...(pack.categories ? [`export const categories = ${JSON.stringify(pack.categories, null, 2)};`, ""] : []),
+    `export const articles = ${JSON.stringify(pack.articles, null, 2)};`,
     "",
   ].join("\n");
-  return { [PATHS.uiHans]: uiText, [PATHS.faqHans]: faqText };
+  return { [app.paths.uiHans]: uiText, [app.paths.packHans]: packText };
 }
 
-/** Generate from the working tree; exits on a gate failure. */
+/** Generate every app from the working tree; exits on a gate failure. */
 export async function generate() {
-  const converted = convertSources({ ui: readJson(PATHS.uiHant), faq: await importModule(PATHS.faqHant) });
-  if (converted.errors.length) {
+  const outputs = {};
+  const errors = [];
+  for (const [name, app] of Object.entries(APPS)) {
+    const { uiHant } = app.paths;
+    const converted = convertSources({ ui: readJson(uiHant), pack: await importModule(app.paths.packHant) }, app);
+    errors.push(...converted.errors.map((e) => `[${name}] ${e}`));
+    Object.assign(outputs, renderOutputs(converted, app));
+  }
+  if (errors.length) {
     console.error("zh-Hans generation failed, nothing written:");
-    for (const e of converted.errors) console.error(`  ✗ ${e}`);
+    for (const e of errors) console.error(`  ✗ ${e}`);
     process.exit(1);
   }
-  return renderOutputs(converted);
+  return outputs;
 }
 
 /** Repo-relative paths whose committed content differs from a fresh generation. */
@@ -349,8 +414,8 @@ function gitShow(ref, path) {
   }
 }
 
-/** All six sources at a git ref (missing files → null). */
-async function sourcesAt(ref) {
+/** All six sources of `app` at a git ref (missing files → null). */
+async function sourcesAt(app, ref) {
   const dir = mkdtempSync(join(tmpdir(), "zh-hans-"));
   const load = async (path) => {
     const text = gitShow(ref, path);
@@ -360,12 +425,12 @@ async function sourcesAt(ref) {
     writeFileSync(file, text);
     return import(pathToFileURL(file).href);
   };
-  return Object.fromEntries(await Promise.all(Object.entries(PATHS).map(async ([k, p]) => [k, await load(p)])));
+  return Object.fromEntries(await Promise.all(Object.entries(app.paths).map(async ([k, p]) => [k, await load(p)])));
 }
 
-async function sourcesNow() {
+async function sourcesNow(app) {
   const load = (path) => (path.endsWith(".json") ? readJson(path) : importModule(path));
-  return Object.fromEntries(await Promise.all(Object.entries(PATHS).map(async ([k, p]) => [k, await load(p)])));
+  return Object.fromEntries(await Promise.all(Object.entries(app.paths).map(async ([k, p]) => [k, await load(p)])));
 }
 
 function leaves(object, path = [], out = new Map()) {
@@ -377,19 +442,19 @@ function leaves(object, path = [], out = new Map()) {
   return out;
 }
 
-/** Review units: one per UI key, one per FAQ article, one per FAQ category. */
-export function reviewEntries(sources) {
+/** Review units: one per UI key, one per pack article, one per pack category. */
+export function reviewEntries(sources, packPrefix) {
   const entries = new Map();
   const ui = ["uiEn", "uiHant", "uiHans"].map((k) => leaves(sources[k]));
   for (const id of ui[1].keys()) entries.set(id, { en: ui[0].get(id), zh_hant: ui[1].get(id), zh_hans: ui[2].get(id) });
 
-  const faq = ["faqEn", "faqHant", "faqHans"].map((k) => sources[k]);
+  const packs = ["packEn", "packHant", "packHans"].map((k) => sources[k]);
   const by = (pack, list, key) => new Map((pack?.[list] ?? []).map((item) => [item[key], item]));
   for (const [list, key, prefix] of [
-    ["articles", "slug", "faq:"],
-    ["categories", "key", "faq:category:"],
+    ["articles", "slug", `${packPrefix}:`],
+    ["categories", "key", `${packPrefix}:category:`],
   ]) {
-    const maps = faq.map((pack) => by(pack, list, key));
+    const maps = packs.map((pack) => by(pack, list, key));
     for (const id of maps[1].keys()) {
       entries.set(`${prefix}${id}`, { en: maps[0].get(id), zh_hant: maps[1].get(id), zh_hans: maps[2].get(id) });
     }
@@ -404,16 +469,16 @@ export function diffEntries(now, then) {
     .map(([id, values]) => ({ id, ...values, before: then.has(id) ? then.get(id) : null }));
 }
 
-async function writePacket(out, base) {
-  const rows = diffEntries(reviewEntries(await sourcesNow()), reviewEntries(await sourcesAt(base)));
-  mkdirSync(dirname(join(ROOT, out)), { recursive: true });
-  writeFileSync(join(ROOT, out), `${JSON.stringify({ base, count: rows.length, entries: rows }, null, 2)}\n`);
-  console.log(`${rows.length} entr${rows.length === 1 ? "y" : "ies"} changed since ${base} → ${out}`);
-  console.log(
-    rows.length
-      ? "next: review them with the zh-hans-reviewer agent (docs/specs/seo-aeo.md §簡中由繁中產生)"
-      : "nothing to review",
+async function writePacket(name, app, base) {
+  const out = packetPath(name);
+  const rows = diffEntries(
+    reviewEntries(await sourcesNow(app), app.packPrefix),
+    reviewEntries(await sourcesAt(app, base), app.packPrefix),
   );
+  mkdirSync(dirname(join(ROOT, out)), { recursive: true });
+  writeFileSync(join(ROOT, out), `${JSON.stringify({ app: name, base, count: rows.length, entries: rows }, null, 2)}\n`);
+  console.log(`${name}: ${rows.length} entr${rows.length === 1 ? "y" : "ies"} changed since ${base} → ${out}`);
+  return rows.length;
 }
 
 // ── CLI ──────────────────────────────────────────────────────
@@ -439,7 +504,14 @@ async function main(args) {
     writeFileSync(join(ROOT, path), text);
     console.log(`wrote ${relative(ROOT, join(ROOT, path))}`);
   }
-  await writePacket(argValue(args, "--packet", DEFAULT_PACKET), argValue(args, "--base", "origin/main"));
+  const base = argValue(args, "--base", "origin/main");
+  let total = 0;
+  for (const [name, app] of Object.entries(APPS)) total += await writePacket(name, app, base);
+  console.log(
+    total
+      ? "next: review each non-empty packet with the zh-hans-reviewer agent (docs/specs/seo-aeo.md §簡中由繁中產生)"
+      : "nothing to review",
+  );
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

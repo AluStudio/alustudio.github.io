@@ -72,11 +72,11 @@ test("auditRoutes passes a route with exactly one h1", () => {
 test("auditRoutes flags a route with two h1s or none", () => {
   const pages = new Map([
     ["/pikgeon/", `<body><h1>Hero</h1><footer><h1>Pikgeon</h1></footer></body>`],
-    ["/sotto/", `<body><h2>Only h2</h2><header>x</header></body>`],
+    ["/babbby/", `<body><h2>Only h2</h2><header>x</header></body>`],
   ]);
   assert.deepEqual(auditRoutes(pages), [
     "/pikgeon/: expected exactly one <h1>, found 2",
-    "/sotto/: expected exactly one <h1>, found 0",
+    "/babbby/: expected exactly one <h1>, found 0",
   ]);
 });
 
@@ -95,10 +95,19 @@ test("auditRoutes flags duplicate dingpos titles and descriptions", () => {
   ]);
 });
 
-test("auditRoutes does not require unique meta outside dingpos", () => {
+test("auditRoutes flags duplicate sotto meta, checked apart from dingpos", () => {
   const pages = new Map([
-    ["/sotto/", dingposPage("Sotto", "Same")],
-    ["/sotto/faq/", dingposPage("Sotto", "Same")],
+    ["/dingpos/", dingposPage("Same", "Same")],
+    ["/sotto/", dingposPage("Same", "Same")],
+    ["/sotto/ja/", dingposPage("Same", "Other")],
+  ]);
+  assert.deepEqual(auditRoutes(pages), ["/sotto/ja/: title duplicates /sotto/"]);
+});
+
+test("auditRoutes does not require unique meta outside the multi-page apps", () => {
+  const pages = new Map([
+    ["/pikgeon/", dingposPage("Pikgeon", "Same")],
+    ["/pikgeon/faq/", dingposPage("Pikgeon", "Same")],
   ]);
   assert.deepEqual(auditRoutes(pages), []);
 });
@@ -153,10 +162,10 @@ test("auditRoutes skips reciprocity for sitemap alternates left out of a partial
   ]);
 });
 
-test("hydratedRoutes keeps only the apps that hydrate, in both languages", () => {
+test("hydratedRoutes keeps only the apps that hydrate, in every language", () => {
   assert.deepEqual(
-    hydratedRoutes(["/home/", "/dingpos/", "/dingpos/zh-hant/pricing/", "/pikgeon/faq/", "/dingposx/"]),
-    ["/dingpos/", "/dingpos/zh-hant/pricing/"]
+    hydratedRoutes(["/home/", "/dingpos/", "/dingpos/zh-hant/pricing/", "/pikgeon/faq/", "/dingposx/", "/sotto/ar/guides/"]),
+    ["/dingpos/", "/dingpos/zh-hant/pricing/", "/sotto/ar/guides/"]
   );
 });
 
