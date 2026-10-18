@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { cpSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync, utimesSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
@@ -256,6 +257,27 @@ test("apply: rejects placeholder changes, empty values, misshapen articles and u
   assert.match(text, /faq:gone: not a unit of the en sources/);
   assert.doesNotMatch(text, /or_annual/, "a _before/_after fragment may be empty");
   assert.throws(() => readFileSync(paths.pack("ja")), /ENOENT/, "a dry run writes nothing");
+});
+
+test("apply: a list entry may not add a placeholder en does not have", async () => {
+  const { paths, appRepo } = fixture();
+  newLanguage(paths, "ja");
+  await sync(paths, "ja", { appRepo });
+  const withPlaceholder = (u) =>
+    u.id === "faq:how-to-set-up"
+      ? { ...JA[u.id], keywords: ["設定", "{{country}}"], content: [JA[u.id].content[0], { items: ["{{country}}を選びます。", "名前を入力します。"] }] }
+      : JA[u.id];
+  writeOut(paths, "faq-getting-started", withPlaceholder);
+  const text = (await apply(paths, "ja", { dryRun: true })).rejected.join("\n");
+  assert.match(text, /faq:how-to-set-up: (content\.1\.items\.0|keywords\.1): placeholders \[\{\{country\}\}\] differ/);
+});
+
+test("sync: fails fast without the app's strings or glossary, and on a --since ref that is not a commit", async () => {
+  const { paths, appRepo } = fixture();
+  newLanguage(paths, "ja");
+  await assert.rejects(sync(paths, "ja", { appRepo: join(appRepo, "missing") }), /app repo lacks .*en\.lproj/);
+  execFileSync("git", ["init", "-q"], { cwd: paths.root });
+  await assert.rejects(sync(paths, "ja", { appRepo, mode: "review", since: "no-such-ref" }), /--since no-such-ref is not a commit/);
 });
 
 test("an en text change makes the unit stale: sync packs it with the old translation, an old output is refused", async () => {

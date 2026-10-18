@@ -209,6 +209,15 @@ function checkText(en, value, at, freeLength) {
   }
   if (!value.length) throw new Error(`${at}: empty list`);
   if (!freeLength && value.length !== en.length) throw new Error(`${at}: has ${value.length} entries, en has ${en.length}`);
+  value.forEach((item, i) => {
+    // A free-length list has no en counterpart per entry: it may only use placeholders en uses somewhere.
+    const expected = freeLength ? null : placeholders(en[i]);
+    const found = placeholders(item);
+    const allowed = new Set(en.flatMap((e) => placeholders(e).split(" ").filter(Boolean)));
+    if (expected !== null ? found !== expected : found.split(" ").some((p) => p && !allowed.has(p))) {
+      throw new Error(`${at}.${i}: placeholders [${found}] differ from en [${expected ?? [...allowed].join(" ")}]`);
+    }
+  });
   return value;
 }
 
@@ -427,6 +436,10 @@ export function pendingUnits(units, manifest, current, mode = "translate", onlyI
 
 /** Unit ids whose translation differs from the one committed at `ref` (new ones included). */
 export async function changedSince(paths, code, ref) {
+  // git() returns null on any failure; a mistyped ref must not read as "nothing was translated then".
+  if (git(paths, ["rev-parse", "--verify", "--quiet", `${ref}^{commit}`]) === null) {
+    throw new UsageError(`--since ${ref} is not a commit in this checkout`);
+  }
   const before = translatedUnits(await sourcesAt(paths, code, ref));
   const now = translatedUnits(await readLanguage(paths, code));
   return new Set([...now].filter(([id, value]) => stableJson(before.get(id)) !== stableJson(value)).map(([id]) => id));
@@ -449,9 +462,12 @@ export async function sync(paths, code, { mode = "translate", since = null, ids 
   const stale = new Map(wanted.filter((u) => current.has(u.id) && u.id in manifest && manifest[u.id] !== u.enHash).map((u) => [u.id, manifest[u.id]]));
   const previous = await previousEnTexts(paths, stale);
 
+  // The app's wording is part of every packet; a missing app checkout is a setup error, not a lighter packet.
+  const app = appPaths(appRepo);
+  const missing = [app.strings("en"), app.strings(code), app.glossary(code)].filter((file) => !existsSync(file));
+  if (missing.length) throw new UsageError(`the DingPOS app repo lacks ${missing.join(", ")} — pass --app-repo <path to the app checkout>`);
   const appStrings = readAppStrings(appRepo, code);
-  if (!appStrings) console.warn(`  ! no ${code} strings in the app repo at ${appRepo} — packets carry no appMatch / appTerms`);
-  const appGlossary = appPaths(appRepo).glossary(code);
+  const appGlossary = app.glossary(code);
 
   const outDir = paths.logs(code, "packets");
   mkdirSync(outDir, { recursive: true });
@@ -483,7 +499,7 @@ export async function sync(paths, code, { mode = "translate", since = null, ids 
       mode,
       output: rel(paths, paths.logs(code, "out", `${segment}.json`)),
       glossary: {
-        app: existsSync(appGlossary) ? appGlossary : null,
+        app: appGlossary,
         site: rel(paths, paths.siteGlossary(code)),
       },
       count: packetUnits.length,
