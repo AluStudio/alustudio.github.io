@@ -11,15 +11,18 @@ Rules for the whole session:
 - Never hand-edit `dingpos/src/locales/$1/translation.json`, `dingpos/src/data/faq/articles.$1.js` or `dingpos/l10n/manifest/$1.json`: they change only through `npm run l10n -- apply $1`.
 - This checkout is shared with the commander, one language at a time. Never create a worktree, never touch another language's files or branch, and never leave the checkout on `dingpos-l10n/$1`: every way out of this session (DONE or BLOCKED) ends with the checkout on main and `git status --porcelain` empty.
 - Record every stage in the progress file before starting it: `npm run -s l10n -- progress set $1 stage=<stage>` (plus the fields named below). Write the report as you go to the file `npm run -s l10n -- progress report $1` prints: per stage its start time, what ran, counts, anything surprising, and the subagent run ids.
-- If a step fails twice the same way, or anything below says BLOCKED, stop the BLOCKED way: commit whatever this branch has (`git add -A dingpos/l10n dingpos/src sitemap.xml` then `git commit -m "chore(l10n): park $1 — <one-line reason>"`, skipped when nothing is staged), `git switch main`, `npm run -s l10n -- progress set $1 status=blocked reason="<one line>"`, and end with the BLOCKED line.
+- If a step fails twice the same way, or anything below says BLOCKED, stop the BLOCKED way. Once the checkout is on `dingpos-l10n/$1`: commit whatever this branch has (`git add -A dingpos/l10n dingpos/src sitemap.xml` then `git commit -m "chore(l10n): park $1 — <one-line reason>"`, skipped when nothing is staged) and `git switch main`. Before that (preflight), stage, commit and switch nothing — the changes in the checkout are not yours. Either way, `npm run -s l10n -- progress set $1 status=blocked reason="<one line>"` and end with the BLOCKED line.
 - Your final message ends with exactly one line, nothing after it: `DONE $1 <absolute report path>` or `BLOCKED $1 <one-line reason>`.
 
 ## 1. Preflight — stage=preflight
 
-1. `npm run -s l10n -- progress get $1`. If a stage past `preflight` is recorded, you are resuming: `git switch dingpos-l10n/$1`, skip the steps whose results are already committed on that branch, and continue from the recorded stage. A failure the report records from an earlier session is history, not a result: run the recorded stage again and report only what it does now. If the progress entry has an `ownerRuling`, it is the owner's decision: apply it as written through a translator fix task and `npm run l10n -- apply $1`, commit `fix(l10n): apply the $1 owner ruling`, and do not review the units it names again.
-2. Fresh start: `git branch --show-current` is `main` and `git status --porcelain` is empty (anything else → BLOCKED "checkout not clean on main"); then `git pull --ff-only` and `git switch -c dingpos-l10n/$1`. `npm run -s l10n -- progress set $1 status=running branch=dingpos-l10n/$1 startedAt=<ISO time>`.
-3. `subagent { action: "list" }` lists `l10n-translator (project)` and `l10n-reviewer (project)`. If either is missing or shows as a user agent, the session lacks project trust: BLOCKED.
-4. The app has the language: `~/Developer/alustudio/DingPOS/l10n/glossary/$1.md` and `~/Developer/alustudio/DingPOS/DesignSystem/Sources/Resources/Strings/$1.lproj/Localizable.strings` exist. Root and `dingpos/` have `node_modules` (`npm ci` where missing).
+Checks first, branch last, so a preflight failure leaves nothing behind.
+
+1. `subagent { action: "list" }` lists `l10n-translator (project)` and `l10n-reviewer (project)`. If either is missing or shows as a user agent, the session lacks project trust: BLOCKED.
+2. The app has the language: `~/Developer/alustudio/DingPOS/l10n/glossary/$1.md` and `~/Developer/alustudio/DingPOS/DesignSystem/Sources/Resources/Strings/$1.lproj/Localizable.strings` exist. Root and `dingpos/` have `node_modules` (`npm ci` where missing).
+3. `git status --porcelain` is empty and `git branch --show-current` is `main` or `dingpos-l10n/$1`; anything else → BLOCKED "checkout not clean".
+4. `npm run -s l10n -- progress get $1`. If a stage past `preflight` is recorded, you are resuming: `git switch dingpos-l10n/$1`, skip the steps whose results are already committed on that branch, and continue from the recorded stage. A failure the report records from an earlier session is history, not a result: run the recorded stage again and report only what it does now. If the progress entry has an `ownerRuling`, it is the owner's decision: apply it as written through a translator fix task and `npm run l10n -- apply $1`, commit `fix(l10n): apply the $1 owner ruling`, and do not review the units it names again.
+5. Otherwise start: from main, `git pull --ff-only`, then `git switch -c dingpos-l10n/$1` — or `git switch dingpos-l10n/$1` when that branch already exists (an earlier run stopped at preflight). `npm run -s l10n -- progress set $1 status=running branch=dingpos-l10n/$1 startedAt=<ISO time>`.
 
 ## 2. Start the language — stage=new
 
@@ -51,13 +54,16 @@ The first review is the full pass over every unit; a re-review checks only what 
    d. All `VERDICT: CLEAN` → step 6.
 5. After fix round 2, a re-review still `VERDICT: FIX` → BLOCKED, with the open findings listed in the report: for each, the current value, every wording it has had across the rounds, and the reviewer's latest suggestion, so the owner can rule without reading the review files.
 
-## 6. Ship and catch up with main — stage=ship
+## 6. Catch up with main and ship — stage=ship
 
-1. In `dingpos/l10n/languages.json`, set `"shipped": true` on the `$1` entry (that one value, nothing else).
-2. `git fetch origin && git rebase origin/main`. A conflict in `dingpos/l10n/languages.json` or `sitemap.xml` keeps every language's entry (take main's file, re-apply step 1, then re-run step 3); any other conflict → `git rebase --abort`, BLOCKED.
-3. `node dingpos/scripts/copy-spa-pages.js --write-sitemap`; `grep -c '/dingpos/<pathPrefix>/' sitemap.xml` is 64 (`pathPrefix` from the registry, e.g. `es` for es-419).
-4. `npm run l10n -- check` must print no problem for `$1`. If main changed en since you translated, it lists stale or missing units: run step 4.1–4.4 on those packets, review them (one reviewer call per packet, at most one fix round), apply, then check again.
-5. Commit: `feat(dingpos): ship the $1 site`.
+Every earlier step is committed, so the tree is clean here; keep that order — a rebase refuses to run over uncommitted changes, and `--write-sitemap` validates every shipped language before it writes.
+
+1. `git status --porcelain` is empty, then `git fetch origin && git rebase origin/main`. A conflict in `dingpos/l10n/languages.json` or `sitemap.xml` happens only when resuming a `held` branch that already shipped: take main's file (`git show origin/main:<file> > <file> && git add <file>`), `git rebase --continue`, and steps 3–6 below rebuild both. Any other conflict → `git rebase --abort`, BLOCKED.
+2. `npm run l10n -- sync $1`. If main changed en since you translated, it packs the stale or missing units: translate them (step 4.2–4.3 on those packets), review them (one reviewer call per packet, at most one fix round), apply until `rejected 0`, and commit `feat(l10n): sync $1 with main`. Zero units → nothing to do.
+3. In `dingpos/l10n/languages.json`, set `"shipped": true` on the `$1` entry (that one value, nothing else).
+4. `node dingpos/scripts/copy-spa-pages.js --write-sitemap`; `grep -c '/dingpos/<pathPrefix>/' sitemap.xml` is 64 (`pathPrefix` from the registry, e.g. `es` for es-419).
+5. `npm run l10n -- check` prints no problem.
+6. Commit: `feat(dingpos): ship the $1 site`.
 
 ## 7. Gate — stage=gate
 
