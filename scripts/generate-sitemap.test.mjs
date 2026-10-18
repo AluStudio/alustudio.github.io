@@ -4,6 +4,7 @@ import {
   sourcesForRoute,
   injectLastmod,
   LASTMOD_SOURCES,
+  dingposRules,
 } from "./generate-sitemap.mjs";
 
 test("sourcesForRoute: longest prefix wins (faq page over app root)", () => {
@@ -22,9 +23,11 @@ test("sourcesForRoute: app root falls back to whole src tree", () => {
   ]);
 });
 
-test("sourcesForRoute: every dingpos support article maps to the faq packs", () => {
+test("sourcesForRoute: every dingpos support article maps to its language's faq pack", () => {
   assert.deepEqual(sourcesForRoute("/dingpos/support/tax-calculation/"), [
-    "dingpos/src/data/faq",
+    "dingpos/src/data/faq/articles.en.js",
+    "dingpos/src/data/faq/index.js",
+    "dingpos/src/data/faq/version.js",
     "dingpos/index.html",
     "dingpos/scripts/copy-spa-pages.js",
   ]);
@@ -33,7 +36,7 @@ test("sourcesForRoute: every dingpos support article maps to the faq packs", () 
 test("sourcesForRoute: dingpos pricing tracks the plan data, not just the page", () => {
   assert.deepEqual(sourcesForRoute("/dingpos/pricing/"), [
     "dingpos/src/pages/PricingPage.jsx",
-    "dingpos/src/locales",
+    "dingpos/src/locales/en",
     "dingpos/index.html",
     "dingpos/scripts/copy-spa-pages.js",
     "dingpos/src/pages/pricing.scss",
@@ -116,21 +119,41 @@ test("sub-route rules include the app shell sources that shape final HTML", () =
   }
 });
 
-test("sourcesForRoute: zh-hant and zh-hans pages mirror their English page, not the app root", () => {
-  for (const root of ["zh-hant", "zh-hans"]) {
-    for (const sub of ["support/tax-calculation/", "pricing/", "privacy/", "terms/", ""]) {
+test("sourcesForRoute: each dingpos language's pages track its own strings and pack, not another language's", () => {
+  const swapLanguage = (paths, from, to) =>
+    paths.map((p) => p.replace(`locales/${from}`, `locales/${to}`).replace(`articles.${from}.js`, `articles.${to}.js`));
+  for (const [root, code] of [["zh-hant", "zh-Hant"], ["zh-hans", "zh-Hans"]]) {
+    for (const sub of ["support/tax-calculation/", "pricing/", "privacy/", "terms/"]) {
       assert.deepEqual(
         sourcesForRoute(`/dingpos/${root}/${sub}`),
-        sourcesForRoute(`/dingpos/${sub}`),
+        swapLanguage(sourcesForRoute(`/dingpos/${sub}`), "en", code),
         `/dingpos/${root}/${sub}`,
       );
     }
+    assert.deepEqual(sourcesForRoute(`/dingpos/${root}/`), sourcesForRoute("/dingpos/"));
   }
   assert.deepEqual(sourcesForRoute("/dingpos/zh-hant/support/free-trial/"), [
-    "dingpos/src/data/faq",
+    "dingpos/src/data/faq/articles.zh-Hant.js",
+    "dingpos/src/data/faq/index.js",
+    "dingpos/src/data/faq/version.js",
     "dingpos/index.html",
     "dingpos/scripts/copy-spa-pages.js",
   ]);
+});
+
+test("dingposRules: a translated language gets its own prefix, strings and pack", () => {
+  // es-419's URL prefix is its hreflang ("es"); its files keep the app's code.
+  const rules = dingposRules({ code: "es-419", pathPrefix: "es" });
+  assert.deepEqual(sourcesForRoute("/dingpos/es/support/free-trial/", rules), [
+    "dingpos/src/data/faq/articles.es-419.js",
+    "dingpos/src/data/faq/index.js",
+    "dingpos/src/data/faq/version.js",
+    "dingpos/index.html",
+    "dingpos/scripts/copy-spa-pages.js",
+  ]);
+  assert.ok(sourcesForRoute("/dingpos/es/terms/", rules).includes("dingpos/src/locales/es-419"));
+  assert.deepEqual(sourcesForRoute("/dingpos/es/", rules), ["dingpos/src", "dingpos/index.html", "dingpos/scripts/copy-spa-pages.js"]);
+  assert.equal(sourcesForRoute("/dingpos/pricing/", rules), null);
 });
 
 test("sourcesForRoute: every sotto language mirrors its English page, guides map to the packs", () => {

@@ -5,7 +5,8 @@ import '@fontsource-variable/manrope'
 import '@fontsource-variable/noto-sans-tc'
 import './index.css'
 import App from './App.jsx'
-import { routerBasename } from "./i18n";
+import { routerBasename, currentLanguage, i18nReady } from "./i18n";
+import { loadFaq } from "./data/faq";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -28,8 +29,10 @@ const app = (
 // place: re-rendering would replace the painted nodes and record a new LCP after
 // the bundle runs. The dev server and the prerender pass itself get Vite's empty
 // shell, which has nothing to hydrate.
-if (container.firstElementChild) {
-  hydrateRoot(container, app)
-} else {
-  createRoot(container).render(app)
-}
+Promise.all([i18nReady, loadFaq(currentLanguage)]).then(() => {
+  if (container.firstElementChild) {
+    hydrateRoot(container, app)
+  } else {
+    createRoot(container).render(app)
+  }
+})

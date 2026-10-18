@@ -13,7 +13,8 @@ read_when:
 - Webfont 一律透過 `@fontsource` / `@fontsource-variable` 自託管，在各 app 的 `main.jsx` import。variable package 的 family 名稱是 `"<Font> Variable"`。原因：`fonts.googleapis.com` 的 CSS 是 render-blocking 的第三方請求，光 Noto Sans TC 那份就佔掉約 2.7s 的模擬 FCP。
 - CJK package 依 unicode-range 切成上百個 slice，瀏覽器只下載頁面用到的字所在的 slice。英文頁上只要出現幾個中文字，就會多抓幾百 KB。所以語言 `<select>`（選項是「繁體中文」這類原生名稱）用 system font stack；英文頁上的中文字不要落在 Noto Sans TC 這個 family。
 - sotto 的 CJK family 由 `--sotto-font-cjk`（`sotto/src/index.css`）依頁面語言決定：en、zh-Hant 與其他拉丁、西里爾、阿拉伯文頁面用自託管的 Noto Sans TC；ja、ko、zh-Hans 頁改用系統字型（Hiragino / Apple SD Gothic Neo / PingFang 等）。原因：Noto Sans TC 會用繁中字形畫日文與簡中，系統字型又不必下載任何 slice。
-- dingpos 的 CJK family 由 `--dp-font-cjk`（`dingpos/src/index.css`）依頁面語言決定：英文與繁中頁用 Noto Sans TC，簡中頁用 Noto Sans SC。原因：同一個漢字在繁中與簡中字型的字形不同。SC 的 `@font-face` CSS 只在 `lang="zh-Hans"` 的頁面由 `main.jsx` 用 dynamic import 載入；prerender 會把它注入的 `<link>` 寫進 HTML，瀏覽器解析時就會抓，不必等 JS。全域 import 會讓每一頁多一份約 110 KB（未壓縮）的 render-blocking CSS。
+- dingpos 的 CJK family 由 `--dp-font-cjk`（`dingpos/src/index.css`）依頁面語言決定：英文、繁中與非 CJK 語言的頁面用 Noto Sans TC，簡中頁用 Noto Sans SC，日文與韓文頁用系統字型（同 sotto 的 stack）。原因：同一個漢字在繁中與簡中字型的字形不同，Noto Sans TC 也會用繁中字形畫日文。SC 的 `@font-face` CSS 只在 `lang="zh-Hans"` 的頁面由 `main.jsx` 用 dynamic import 載入；prerender 會把它注入的 `<link>` 寫進 HTML，瀏覽器解析時就會抓，不必等 JS。全域 import 會讓每一頁多一份約 110 KB（未壓縮）的 render-blocking CSS。
+- dingpos 的翻譯語言不加 webfont：拉丁、西里爾、希臘與越南文由 Manrope 涵蓋；泰、高棉、寮、喬治亞、孟加拉與印地文交給系統字型（iOS、Android、Windows、macOS 都內建），不下載任何字型。只有在實機截圖出現豆腐字時，才改成自託管那一種文字的 Noto。
 
 ## 圖片
 

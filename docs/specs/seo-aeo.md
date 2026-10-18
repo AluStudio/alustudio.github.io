@@ -7,6 +7,7 @@ read_when:
   - Writing FAQ or landing copy meant to be cited by search or AI engines
   - Weighing SEO skill advice against this site's decisions
   - Changing DingPOS or Sotto en / zh-Hant copy, or anything about the generated zh-Hans
+  - Adding, shipping, or re-translating a DingPOS translated language (ja, th, …)
 ---
 
 # SEO + AEO
@@ -36,14 +37,14 @@ read_when:
 
 只有獨立 URL 的語言才能被索引。同一個 URL 在 client 端切換語言，crawler 只看得到一種語言：Googlebot 從美國發出、不帶 `Accept-Language`（[Google](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites)）。
 
-- DingPOS 與 Sotto 有多語系 URL，英文都不加前綴（同時是 `x-default`），各語言的子路徑一一對應。DingPOS 有三種：`/dingpos/`、`/dingpos/zh-hant/`、`/dingpos/zh-hans/`。Sotto 有十二種，前綴是 hreflang 代碼的小寫：`zh-hant`、`zh-hans`、`ja`、`ko`、`de`、`es`、`fr`、`it`、`pt-br`、`ru`、`ar`。home、pikgeon、babbby 仍只有 prerender 語言可被索引。
-- hreflang 只標語言、不標地區（`ja`，不是 `ja-JP`）：網站不分地區內容，加上地區會把其他地區的同語使用者排除在外。
+- DingPOS 與 Sotto 有多語系 URL，英文都不加前綴（同時是 `x-default`），各語言的子路徑一一對應，前綴是 hreflang 代碼的小寫。DingPOS 的語言清單是 `dingpos/l10n/languages.json`：鏡像 app 的 `l10n/languages.json`（同樣的 code、kind 與順序），共 32 種，只有 `shipped: true` 的語言有 URL、hreflang 與 sitemap 條目（目前 en、zh-Hant、zh-Hans、ja）。Sotto 有十二種：`zh-hant`、`zh-hans`、`ja`、`ko`、`de`、`es`、`fr`、`it`、`pt-br`、`ru`、`ar`。home、pikgeon、babbby 仍只有 prerender 語言可被索引。
+- hreflang 只標語言、不標地區（`ja`，不是 `ja-JP`）：網站不分地區內容，加上地區會把其他地區的同語使用者排除在外。地區碼只在 Google 接受時才保留（ISO 3166-1 alpha-2，例如 `pt-BR`）：Google 不接受 `es-419`，所以 DingPOS 的 es-419 以 `es` 上線，hreflang、`<html lang>` 都是 `es`，前綴是 `es/`；檔名與 app 對照仍用 `es-419`。
 - URL 是唯一的語言訊號：不看 navigator、不讀 localStorage，也不依使用者語系自動導向。Google 明確建議避免這種導向，因為會讓使用者和 crawler 看不到其他語言版本。語言切換器直接導到同一頁另一個語言的 URL。
-- 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（該 app 的每種語言加 `x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。`og:locale` 對應：`en_US`、`zh_TW`、`zh_CN`、`ja_JP`、`ko_KR`、`de_DE`、`es_ES`、`fr_FR`、`it_IT`、`pt_BR`、`ru_RU`、`ar_AR`。
+- 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（該 app 的每種語言加 `x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。`og:locale` 對應：`en_US`、`zh_TW`、`zh_CN`、`ja_JP`、`ko_KR`、`de_DE`、`es_ES`、`fr_FR`、`it_IT`、`pt_BR`、`ru_RU`、`ar_AR`；DingPOS 每種語言的值寫在 registry 的 `ogLocale`。
 - hreflang 只寫在 HTML `<head>`，sitemap 不重複寫。Google 認為兩種方式等價，同時維護兩份只會增加出錯的機會。
-- 語系前綴的單一來源：各 app `src/i18n.js` 的 `supportedLanguages` 和 `scripts/copy-spa-pages.js` 的 `LOCALES`（Sotto 是 `LOCALE_DEFS`），兩邊必須一致。
-- 每種語言的內容都要完整，不退回英文：Sotto 的 `copy-spa-pages.js` 在任一語言的 UI 字串少了或多了 en 的 key、或 guide pack 的 slug 與 en 不同時讓 build 失敗。Sotto 沒有 fallback 語言，缺 key 會直接顯示 key 名稱。
-- Sotto 每次只載入當頁語言的字串與 guides（`import.meta.glob` 動態載入，載完才 hydrate），不把十二種語言打包進每一頁。
+- 語系前綴的單一來源：DingPOS 的 `src/i18n.js` 與 `scripts/copy-spa-pages.js` 都讀 `dingpos/l10n/languages.json`。Sotto 是 `src/i18n.js` 的 `supportedLanguages` 和 `scripts/copy-spa-pages.js` 的 `LOCALE_DEFS`，兩邊必須一致。
+- 每種語言的內容都要完整，不退回英文：DingPOS 與 Sotto 的 `copy-spa-pages.js` 在任一語言的 UI 字串少了或多了 en 的 key，或 FAQ／guide pack 的 slug 與 en 不同時讓 build 失敗。兩者都沒有 fallback 語言，缺 key 會直接顯示 key 名稱。Sotto 另外拒絕任何空字串。DingPOS 另外擋 en 是陣列、其他語言卻不是陣列的 key（頁面會把它當成空清單，整段默默消失）；空字串只允許在 key 名稱以 `_before`／`_after` 結尾的句子片段，它們夾住行內的價格，語序可能讓其中一邊是空的。
+- DingPOS 與 Sotto 每次只載入當頁語言的字串與 FAQ／guides（`import.meta.glob` 動態載入，載完才 hydrate），加一種語言不會讓任何一頁下載更多 JS。
 - 任兩頁的 title 與 description 都不可相同，跨語系也算：兩個 URL 用同一句話介紹自己，就是重複內容的訊號。`copy-spa-pages.js` 在 build 時檢查，違規即失敗。
 
 ### 簡中由繁中產生
@@ -63,6 +64,18 @@ read_when:
 4. 依每個 finding 標的 layer 修：`zh-hant` 或 `en` 改來源；`site-glossary` 加進該 app 的 site glossary（先看它列出的撞詞）；`override` 加進該 app 的 overrides；`app` 先改 app 的用詞，再同步 app glossary。不採納的 finding 不用記錄。
 5. 再跑一次 `npm run zh-hans`，然後 `npm test`，把產生的檔案一起 commit。
 
+### 翻譯語言
+
+DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由 agent 從 en 翻譯，不從中文翻：zh-Hant 是 owner 寫的、zh-Hans 由它產生，兩者都不是翻譯來源。en 與 zh-Hant 說法不同時，翻譯跟著 en，差異記成給 owner 的 en finding。工具是 `scripts/l10n.mjs`（`npm run l10n -- …`），agent 是 project agent `l10n-translator` 與 `l10n-reviewer`。
+
+- 翻譯單位：一個 UI 字串（`ui:<key>`）、一整篇 FAQ（`faq:<slug>`）、一個 FAQ 分類（`cat:<key>`）。只有文字欄位會翻譯；slug、related、since、icon 這類結構欄位永遠從 en 複製。
+- 翻譯語言的 `dingpos/src/locales/<code>/translation.json` 與 `dingpos/src/data/faq/articles.<code>.js` 由 `npm run l10n -- apply <code>` 產生，不手改：手改的 slug 或 related 會在多種語言裡各自漂移。`apply` 拒絕 `{{…}}` placeholder 和 en 不同、空值（`_before`／`_after` 除外）、形狀和 en 不同（步驟數、區塊數）的值，以及從舊版 en 翻出來的值。
+- 每種語言一份 `dingpos/l10n/manifest/<code>.json`，記錄每個單位翻譯時的 en hash（只算文字欄位）。en 文字改了，該單位就過期，要重翻。
+- 用詞跟 app 一致：`sync` 從本機的 app repo（`~/Developer/alustudio/DingPOS`，`--app-repo` 可改）讀該語言的 glossary 與字串，把和網站 en 逐字相同的 app 字串的譯文（`appMatch`），以及 FAQ 裡逐字出現的 app 按鈕、畫面、分頁名稱（`appTerms`）放進 packet。translator 預設採用 app 的譯文，語境不同才改並說明理由。網站才有的詞記在 `dingpos/l10n/glossary/<code>.md`。app repo 只有 `sync` 會讀，CI 與 `npm test` 不依賴它。
+- 審查：第一輪 `l10n-reviewer` 完整審過每個 segment；之後每輪只重審上一輪修改的單位（`sync --mode review --since <ref>`，加上 `--ids` 帶入 translator 保留不改的 finding），最多兩輪修正。還沒收斂就不上線，交給 owner 裁決。
+- 上線：語言審查通過後，把 registry 的 `shipped` 改成 true，執行 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 改寫 `sitemap.xml` 的 DingPOS 區塊，再跑 build 與 prerender。每種語言各自上線，不等其他語言。
+- Privacy 與 Terms 照常翻譯，不加「以英文版為準」：Sotto 的翻譯語言也沒有這類聲明。
+
 ## Prerender
 
 - CI 在 assemble `_site/` 之後執行 `scripts/prerender.mjs`：用 headless Chrome render sitemap 裡的每個 route，再把 rendered DOM 寫回該 route 的 `index.html`。Route 清單只來自 sitemap。
@@ -77,7 +90,8 @@ read_when:
 
 ## Sitemap
 
-- repo 根目錄的 `sitemap.xml` 手動維護，是 URL 成員的唯一來源。dingpos 與 sotto 的 build 會驗證 sitemap 裡自己的 URL 跟產出的頁面（每種語言）完全一致，多一個少一個都會讓 build 失敗。
+- repo 根目錄的 `sitemap.xml` 是 URL 成員的唯一來源。dingpos 與 sotto 的 build 會驗證 sitemap 裡自己的 URL 跟產出的頁面（每種語言）完全一致，多一個少一個都會讓 build 失敗。Sotto 的區塊手動維護；DingPOS 的區塊由 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 從頁面清單改寫（32 種語言、每種 64 頁，手寫一定會漏）。
+- DingPOS 每種語言的子頁 `lastmod` 只看該語言自己的字串與 FAQ pack（`scripts/generate-sitemap.mjs` `dingposRules`），所以翻譯或上線一種語言，不會改到其他語言頁面的日期。
 - 部署時由 `scripts/generate-sitemap.mjs` 輸出 `_site/sitemap.xml`，每個 URL 的 `lastmod` 取自產生該 route 的檔案的最後一次 git commit。這個 `lastmod` 不手填、不批次更新。CI checkout 必須用 `fetch-depth: 0`，shallow clone 會讓所有日期塌成同一天。
 - IndexNow 不接：小站靠一般 crawling 就夠。只有 Bing 收錄明顯遲緩時才啟用（Bing WMT 有入口）。
 

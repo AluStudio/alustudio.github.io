@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "react-router-dom";
 import { Collapse } from "bootstrap";
-import i18n, { supportedLanguages, localizedUrl } from "../i18n.js";
+import { supportedLanguages, localizedUrl, currentLanguage } from "../i18n.js";
 import "../assets/scss/navbar.scss";
 
 function Navbar() {
@@ -30,7 +30,6 @@ function Navbar() {
       localizedUrl(e.target.value, location.pathname, location.search, location.hash),
     );
   };
-  const currentLang = i18n.resolvedLanguage || i18n.language;
 
   useEffect(() => {
     const navbar = document.querySelector(".navbar-scroll");
@@ -114,7 +113,7 @@ function Navbar() {
 
         <div className="d-flex align-items-center gap-2 ms-3 order-2 order-lg-3">
           <select
-            value={currentLang}
+            value={currentLanguage}
             onChange={handleChangeLang}
             className="lang-select"
           >

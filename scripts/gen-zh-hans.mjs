@@ -37,6 +37,7 @@ import { tmpdir } from "node:os";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import * as OpenCC from "opencc-js";
+import { PACK_TEXT_FIELDS, fieldOf, mapStrings, packData, packId, placeholders, uiId, uiLeaves } from "./pack-fields.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -270,7 +271,7 @@ export const APPS = {
     siteGlossary: DINGPOS_SITE_GLOSSARY,
     rowColumnEntries: DINGPOS_ROW_COLUMN_ENTRIES,
     overrides: DINGPOS_OVERRIDES,
-    textFields: new Set(["label", "question", "keywords", "text", "items", "alt", "caption"]),
+    textFields: PACK_TEXT_FIELDS.dingpos,
   },
   sotto: {
     paths: {
@@ -286,7 +287,7 @@ export const APPS = {
     siteGlossary: SOTTO_SITE_GLOSSARY,
     rowColumnEntries: [],
     overrides: SOTTO_OVERRIDES,
-    textFields: new Set(["title", "summary", "text", "items", "head", "rows", "caption"]),
+    textFields: PACK_TEXT_FIELDS.sotto,
   },
 };
 
@@ -298,8 +299,6 @@ const QUOTES = [
   ["『", "‘"],
   ["』", "’"],
 ];
-
-const PLACEHOLDER = /\{\{\s*[^}]+?\s*\}\}/g;
 
 const toSimplified = OpenCC.Converter({ from: "twp", to: "cn" });
 
@@ -316,35 +315,6 @@ export function convertText(text, app, id = "") {
   if (app.rowColumnEntries.some((pattern) => matchesEntry(id, pattern))) out = swapRowColumn(out);
   return out;
 }
-
-/** Map every string in `value`, passing its key path. Structure is preserved. */
-function mapStrings(value, path, fn) {
-  if (typeof value === "string") return fn(value, path);
-  if (Array.isArray(value)) return value.map((item, i) => mapStrings(item, [...path, i], fn));
-  if (value && typeof value === "object") {
-    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, mapStrings(v, [...path, k], fn)]));
-  }
-  return value;
-}
-
-const fieldOf = (path) => [...path].reverse().find((segment) => typeof segment === "string");
-
-const uiId = (path) => `ui:${path.join(".")}`;
-
-/** `<prefix>:<slug>:<path>` for article strings, `<prefix>:category:<key>:<field>` for categories. */
-function packId(prefix, pack, path) {
-  const [list, index, ...rest] = path;
-  if (list === "articles") return `${prefix}:${pack.articles[index].slug}:${rest.join(".")}`;
-  return `${prefix}:category:${pack.categories[index].key}:${rest.join(".")}`;
-}
-
-/** The lists a pack module exports; categories are optional (Sotto's guides have none). */
-const packData = (pack) => ({
-  ...(pack.categories ? { categories: pack.categories } : {}),
-  articles: pack.articles,
-});
-
-const placeholders = (text) => (text.match(PLACEHOLDER) ?? []).sort().join(" ");
 
 /**
  * Convert one app's zh-Hant sources. Returns the converted data plus every
@@ -492,19 +462,10 @@ async function sourcesNow(app) {
   return Object.fromEntries(await Promise.all(Object.entries(app.paths).map(async ([k, p]) => [k, await load(p)])));
 }
 
-function leaves(object, path = [], out = new Map()) {
-  for (const [key, value] of Object.entries(object ?? {})) {
-    if (key === "//") continue;
-    if (value && typeof value === "object") leaves(value, [...path, key], out);
-    else out.set(uiId([...path, key]), value);
-  }
-  return out;
-}
-
 /** Review units: one per UI key, one per pack article, one per pack category. */
 export function reviewEntries(sources, packPrefix) {
   const entries = new Map();
-  const ui = ["uiEn", "uiHant", "uiHans"].map((k) => leaves(sources[k]));
+  const ui = ["uiEn", "uiHant", "uiHans"].map((k) => uiLeaves(sources[k]));
   for (const id of ui[1].keys()) entries.set(id, { en: ui[0].get(id), zh_hant: ui[1].get(id), zh_hans: ui[2].get(id) });
 
   const packs = ["packEn", "packHant", "packHans"].map((k) => sources[k]);

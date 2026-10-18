@@ -13,9 +13,8 @@ import { getFaq } from "../data/faq";
 
 function SupportArticlePage() {
   const { slug } = useParams();
-  const { t, i18n } = useTranslation();
-  const lang = i18n.resolvedLanguage || i18n.language;
-  const { categories, articles } = getFaq(lang);
+  const { t } = useTranslation();
+  const { categories, articles } = getFaq();
 
   const article = articles.find((a) => a.slug === slug);
   const category = article && categories.find((c) => c.key === article.category);
