@@ -26,7 +26,7 @@ Independent Test: `cd dingpos && npm run build` then `node scripts/prerender.mjs
 - [x] T015 [REQ-001, REQ-012] Mark ja `shipped: true`, run `copy-spa-pages.js --write-sitemap`. Verify: `cd dingpos && npm run build` → 256 pages; `grep -c '/dingpos/ja/' sitemap.xml` → 64
 - [x] T016 [REQ-003, REQ-006] Assemble `_site` like `deploy.yml` and prerender DingPOS; time it and count files. Verify: `node scripts/prerender.mjs --site-dir _site --only /dingpos/` → pass; record duration and `find _site -type f | wc -l` (< 20,000) in the report
 - [x] T017 [REQ-006] Check AC-010 on a preview server: `/dingpos/ja/` loads no other language's strings or pack. Verify: agent-browser network log on `vite preview` → only `ja` locale chunks requested
-- [ ] T018 Docs: `docs/specs/seo-aeo.md` §多語系 URL (DingPOS languages point to the registry, es hreflang rule, translated languages section), `docs/specs/performance.md` §字型 (DingPOS ja/ko and system-font scripts), `AGENTS.md` DingPOS language note. Verify: `grep -n 'languages.json' docs/specs/seo-aeo.md AGENTS.md` → both hit
+- [x] T018 Docs: `docs/specs/seo-aeo.md` §多語系 URL (DingPOS languages point to the registry, es hreflang rule, translated languages section), `docs/specs/performance.md` §字型 (DingPOS ja/ko and system-font scripts), `AGENTS.md` DingPOS language note. Verify: `grep -n 'languages.json' docs/specs/seo-aeo.md AGENTS.md` → both hit
 
 Checkpoint: `npm test` and the DingPOS build green; merge `l10n` into main with `mpd_run` → ja is live.
 
