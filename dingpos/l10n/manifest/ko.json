@@ -1,0 +1,4 @@
+{
+  "//": "Per translation unit, the hash of the en text the ko translation was made from. Written by `npm run l10n -- apply ko`; do not edit.",
+  "units": {}
+}
