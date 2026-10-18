@@ -18,6 +18,7 @@
 
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import process from "node:process";
 
 /**
@@ -41,37 +42,56 @@ const page = (app, component) => [
   ...appShell(app),
 ];
 
+/** A DingPOS sub-route rule: like page(), but only the language's own strings. */
+const dingposPage = (component, code) => [
+  `dingpos/src/pages/${component}`,
+  `dingpos/src/locales/${code}`,
+  ...appShell("dingpos"),
+];
+
 /**
- * DingPOS rules for one language root. Every language renders from the same
- * sources (the locales and FAQ packs, zh-Hans generated into the same
- * folders), so they share dates; each language root must still be its own
- * prefix, or longest-prefix match would drop its pages into the coarse
- * app-root bucket.
+ * DingPOS rules for one shipped language. Sub-routes track that language's
+ * own strings and FAQ pack, so translating one language never re-dates the
+ * pages of another; each language root must still be its own prefix, or
+ * longest-prefix match would drop its pages into the coarse app-root bucket.
  */
-function dingposRules(root) {
+export function dingposRules({ code, pathPrefix }) {
+  const root = `/dingpos/${pathPrefix ? `${pathPrefix}/` : ""}`;
   return [
-    // Every support article's copy lives in the shared language packs, so
-    // the pack's last commit is the honest per-article date. Accepted
-    // tradeoff: editing one article bumps all support URLs — the pack IS the
-    // common source; revisit only if the article set outgrows the packs.
-    [`${root}support/`, ["dingpos/src/data/faq", ...appShell("dingpos")]],
+    // Every support article's copy lives in the language's pack, so the
+    // pack's last commit is the honest per-article date. Accepted tradeoff:
+    // editing one article bumps all support URLs of that language — the pack
+    // IS the common source; revisit only if the article set outgrows it.
+    [
+      `${root}support/`,
+      [
+        `dingpos/src/data/faq/articles.${code}.js`,
+        "dingpos/src/data/faq/index.js",
+        "dingpos/src/data/faq/version.js",
+        ...appShell("dingpos"),
+      ],
+    ],
     // Prices and the feature matrix live in data/plans.js; Price.jsx carries
     // the currency switch the page renders around them.
     [
       `${root}pricing/`,
       [
-        ...page("dingpos", "PricingPage.jsx"),
+        ...dingposPage("PricingPage.jsx", code),
         "dingpos/src/pages/pricing.scss",
         "dingpos/src/data/plans.js",
         "dingpos/src/components/Price.jsx",
       ],
     ],
-    [`${root}privacy/`, page("dingpos", "PrivacyPage.jsx")],
-    [`${root}terms/`, page("dingpos", "TermsPage.jsx")],
+    [`${root}privacy/`, dingposPage("PrivacyPage.jsx", code)],
+    [`${root}terms/`, dingposPage("TermsPage.jsx", code)],
     // Root meta and hreflang are written by copy-spa-pages too, not only index.html.
     [root, ["dingpos/src", ...appShell("dingpos")]],
   ];
 }
+
+const DINGPOS_LANGUAGES = JSON.parse(
+  readFileSync(fileURLToPath(new URL("../dingpos/l10n/languages.json", import.meta.url)), "utf8"),
+).languages.filter((l) => l.shipped);
 
 /**
  * Sotto rules for one language root; same reasoning as dingposRules. Guides
@@ -117,9 +137,7 @@ export const LASTMOD_SOURCES = [
 
   ...SOTTO_LANGUAGE_ROOTS.flatMap(sottoRules),
 
-  ...dingposRules("/dingpos/"),
-  ...dingposRules("/dingpos/zh-hant/"),
-  ...dingposRules("/dingpos/zh-hans/"),
+  ...DINGPOS_LANGUAGES.flatMap(dingposRules),
 ];
 
 /** Pick the source paths for a route via longest-prefix match. */

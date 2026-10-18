@@ -61,7 +61,7 @@
 
 ### DEC-008: sitemap 仍是 URL 成員的來源，但由 build 改寫
 
-**Choice**: `dingpos/scripts/copy-spa-pages.js --write-sitemap` 用它算出的頁面清單，改寫根目錄 `sitemap.xml` 的 DingPOS 區塊；一般 build 仍然檢查兩者完全一致。`scripts/generate-sitemap.mjs` 的 `dingposRules` 改成對 registry 的每個 prefix 產生，lastmod 的來源檔加上該語言的 pack。
+**Choice**: `dingpos/scripts/copy-spa-pages.js --write-sitemap` 用它算出的頁面清單，改寫根目錄 `sitemap.xml` 的 DingPOS 區塊；一般 build 仍然檢查兩者完全一致。`scripts/generate-sitemap.mjs` 的 `dingposRules` 改成對 registry 的每個 shipped prefix 產生，子頁（support、pricing、privacy、terms）的 lastmod 來源從共用的 `dingpos/src/locales`、`dingpos/src/data/faq` 資料夾收窄成該語言自己的 `locales/<code>` 與 `articles.<code>.js`（加上共用的 `faq/index.js`、`faq/version.js`）：否則每上線一種語言，其他語言的 support URL 都會被改日期。各語言首頁仍沿用粗的 `dingpos/src`（既有的取捨）。
 **Alternatives**: 手改 2,048 行 sitemap — 每種語言 64 行，worker 一定會漏；讓 generate-sitemap 直接從資料推導 DingPOS URL — 改掉 seo-aeo「sitemap.xml 是唯一來源」的規則，prerender 的 route 清單也會跟著變。
 **Rationale**: 保留現有的契約和檢查，只把手寫換成產生。
 **Satisfies**: REQ-001, REQ-003
