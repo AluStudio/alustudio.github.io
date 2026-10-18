@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the vi translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync vi`, then `npm run l10n -- apply vi`.",
+  "nav": {
+    "home": "Trang chủ",
+    "pricing": "Bảng giá",
+    "privacy": "Chính sách quyền riêng tư",
+    "terms": "Điều khoản sử dụng",
+    "support": "Câu hỏi thường gặp"
+  },
+  "hero": {
+    "meta_title": "DingPOS — Ứng dụng bán hàng ngoại tuyến cho iPad",
+    "meta_description": "DingPOS — Mở cửa hàng trong 10 phút. Ứng dụng bán hàng (POS) cho iPad dùng được khi không có mạng. Dữ liệu của bạn, quyền kiểm soát của bạn.",
+    "eyebrow": "Ứng dụng bán hàng cho iPad",
+    "title": "Mở cửa hàng trong 10 phút. Dữ liệu của bạn, quyền kiểm soát của bạn.",
+    "description": "DingPOS là ứng dụng bán hàng (POS) cho iPad. Không cần tài khoản, không bị ràng buộc vào đám mây, và vẫn chạy bình thường khi không có internet. Sản phẩm, đơn hàng và khách hàng của bạn đều nằm trên thiết bị của chính bạn.",
+    "download": "Tải về trên App Store",
+    "note": "Dùng thử miễn phí 30 ngày.",
+    "shot_alt": "Màn hình thanh toán của DingPOS: lưới sản phẩm với bộ lọc danh mục ở bên trái, giỏ hàng với các khuyến mãi được áp dụng tự động và tổng tiền ở bên phải"
+  },
+  "proof": {
+    "items": [
+      "Không cần tài khoản",
+      "Thanh toán được cả khi ngoại tuyến",
+      "Dữ liệu nằm trên iPad của bạn"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Thanh toán",
+      "title": "Mọi bước của một lần bán trên cùng một màn hình",
+      "lead": "Tối đa 10 giỏ hàng cùng lúc, tìm sản phẩm theo tên hoặc mã vạch ngay khi bạn gõ, giảm giá và thuế được tính xong trước khi thu tiền.",
+      "items": [
+        "Tối đa 10 giỏ hàng chạy cùng lúc",
+        "Tìm sản phẩm theo tên và mã vạch, ngay khi bạn gõ",
+        "Giảm giá theo sản phẩm và theo giỏ hàng, số tiền cố định hoặc phần trăm",
+        "Tự động tính thuế đã gồm / chưa gồm trong giá",
+        "Tiền thối lại và nhãn phương thức thanh toán tùy chỉnh",
+        "Mỗi lần bán xong đều có tiếng “Ding!” và phản hồi rung"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Công cụ khuyến mãi",
+      "title": "Cài quy tắc một lần, khi thanh toán sẽ tự áp dụng",
+      "lead": "Mức chi tiêu tối thiểu, mua một tặng một, giờ vàng, ưu đãi riêng cho thành viên — quy tắc đã có thì lúc thanh toán sẽ tự tính. Không ai phải nhớ, cũng không phải gõ mã giảm giá.",
+      "items": [
+        "Ngưỡng tạm tính của giỏ hàng tự động kích hoạt",
+        "Giảm giá theo giỏ hàng hoặc sản phẩm (số tiền cố định hoặc phần trăm)",
+        "Mua một tặng một và ưu đãi cho sản phẩm thứ N",
+        "Nhân điểm thưởng",
+        "Khung Happy Hour — qua nửa đêm, chọn được các ngày trong tuần",
+        "Tùy chỉnh mức ưu tiên, cộng dồn và dừng áp dụng các quy tắc sau",
+        "Giới hạn lượt dùng (tổng cộng hoặc theo từng khách hàng)",
+        "Tự động áp dụng khi thanh toán — không cần mã giảm giá"
+      ],
+      "shot_alt": "Danh sách khuyến mãi trong Cài đặt, chia thành ưu đãi theo nhóm và giảm giá, mỗi quy tắc hiển thị trạng thái hoạt động và mức ưu tiên"
+    },
+    "reports": {
+      "eyebrow": "Báo cáo",
+      "title": "Hôm nay bạn kiếm được bao nhiêu, ngay khi cửa hàng còn mở",
+      "lead": "Số đơn hàng, doanh thu, lợi nhuận gộp, giảm giá và cơ cấu thanh toán trên một trang, theo hôm nay, 7 ngày, 30 ngày hoặc toàn thời gian.",
+      "items": [
+        "Hôm nay: số đơn hàng, doanh thu, lợi nhuận gộp, giảm giá, cơ cấu thanh toán",
+        "5 sản phẩm bán chạy nhất theo số lượng",
+        "Xem theo ngày / tuần / tháng",
+        "Biểu đồ xu hướng doanh thu và lợi nhuận gộp"
+      ],
+      "shot_alt": "Trang báo cáo hiển thị doanh thu hôm nay, tổng giảm giá, lợi nhuận và giá trị giỏ hàng trung bình, phía trên là biểu đồ tròn phương thức thanh toán và danh sách bán chạy"
+    },
+    "orders": {
+      "eyebrow": "Đơn hàng",
+      "title": "Mọi lần bán đều được lưu lại, và đều có thể vô hiệu hóa",
+      "lead": "Mỗi đơn hàng lưu đầy đủ hồ sơ: sản phẩm và biến thể, khuyến mãi đã áp dụng, thuế, phương thức thanh toán và tiền thối lại.",
+      "items": [
+        "Danh sách đơn hàng theo thứ tự thời gian, lọc theo ngày và phương thức thanh toán",
+        "Chi tiết từng dòng lưu sản phẩm, biến thể, giảm giá, thuế và tiền thối lại",
+        "Vô hiệu hóa có xác nhận — tồn kho và điểm được hoàn lại tự động"
+      ],
+      "shot_alt": "Danh sách đơn hàng theo thứ tự thời gian ở bên trái, chi tiết đơn hàng đang chọn ở bên phải: sản phẩm, giảm giá đã áp dụng, thuế, tổng tiền, phương thức thanh toán và tiền thối lại"
+    }
+  },
+  "features": {
+    "title": "Mọi việc còn lại khi điều hành cửa hàng",
+    "subtitle": "Thiết lập lần đầu, sản phẩm, tồn kho và thành viên — tất cả trên cùng một chiếc iPad",
+    "onboarding": {
+      "title": "Bắt đầu nhanh",
+      "items": [
+        "Chọn quốc gia; đơn vị tiền tệ, cách tính thuế và thuế suất được điền sẵn",
+        "Đặt tên và logo cửa hàng",
+        "Khoảng 10 phút từ đầu đến cuối, rồi bắt đầu bán hàng"
+      ]
+    },
+    "products": {
+      "title": "Sản phẩm & biến thể",
+      "items": [
+        "Quản lý và lọc theo danh mục",
+        "Biến thể (ví dụ: cỡ × màu), mỗi biến thể có giá bán và giá vốn riêng",
+        "Mã vạch nhập tay hoặc quét bằng camera, chặn trùng lặp",
+        "Ảnh sản phẩm, ảnh thu nhỏ được tạo khi lưu"
+      ]
+    },
+    "inventory": {
+      "title": "Kho hàng",
+      "items": [
+        "Bật/tắt theo dõi tồn kho cho từng sản phẩm",
+        "Tồn kho riêng cho từng biến thể",
+        "Cho phép tồn kho âm — thanh toán không bao giờ bị chặn",
+        "Cảnh báo tồn kho thấp bằng màu sắc",
+        "Sổ ghi đầy đủ biến động: bán hàng, vô hiệu hóa, điều chỉnh thủ công"
+      ]
+    },
+    "loyalty": {
+      "title": "Thành viên & điểm",
+      "items": [
+        "Đăng ký thành viên: tên, số điện thoại và email (không bắt buộc)",
+        "Cứ chi X thì tích Y điểm",
+        "Đổi N điểm để giảm M, có thể đặt mức tối đa",
+        "Thành viên mới tự động nhận quà chào mừng",
+        "Hạng thành viên để khuyến mãi nhắm đúng đối tượng",
+        "Vô hiệu hóa đơn hàng sẽ hoàn lại điểm đã tích và điểm đã đổi"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Sao lưu & quyền riêng tư",
+    "title": "Không có tài khoản thì không ai lấy được dữ liệu của bạn",
+    "lead": "DingPOS không có gì để đăng ký. Sổ sách của bạn nằm trên iPad, và nếu muốn sao lưu, dữ liệu sẽ được gửi đến tài khoản đám mây bạn đã có sẵn.",
+    "items": [
+      "Chọn một trong iCloud, Google Drive hoặc Dropbox",
+      "Sao lưu thủ công, bất cứ khi nào bạn cần",
+      "Giữ 5 bản chụp dữ liệu mới nhất",
+      "Đồng bộ ảnh theo kiểu tăng dần",
+      "Không tài khoản; dữ liệu nằm trên thiết bị, bản sao lưu nằm trong đám mây của riêng bạn",
+      "Đầy đủ chức năng khi ngoại tuyến"
+    ]
+  },
+  "home_pricing": {
+    "title": "Bảng giá đơn giản, minh bạch",
+    "price_before": "Ba gói, từ ",
+    "price_after": " mỗi tháng",
+    "sub": "Dùng thử miễn phí 30 ngày. Không phí giao dịch, không phí ẩn. Dữ liệu của bạn luôn được giữ lại sau thời gian dùng thử — đăng ký lại bất cứ lúc nào.",
+    "compare": "So sánh các gói",
+    "cta": "Bắt đầu dùng thử miễn phí 30 ngày"
+  },
+  "pricing": {
+    "doc_title": "Gói và bảng giá",
+    "meta_description": "So sánh các gói DingPOS cho iPad: Lite, Standard và Pro. Dùng thử miễn phí 30 ngày, không phí giao dịch, dữ liệu của bạn không bao giờ bị xóa.",
+    "eyebrow": "Gói và bảng giá",
+    "title": "Chọn gói phù hợp với cửa hàng của bạn",
+    "subtitle": "Dùng thử miễn phí 30 ngày — không cần đăng ký tài khoản. Đổi gói bất cứ lúc nào; dữ liệu của bạn không bao giờ bị xóa.",
+    "billing": {
+      "label": "Kỳ thanh toán",
+      "monthly": "Hàng tháng",
+      "annual": "Hàng năm",
+      "save": "Tiết kiệm {{percent}}%"
+    },
+    "recommended": "Đề xuất",
+    "select_plan": "Chọn gói",
+    "unit": {
+      "month": "/tháng",
+      "year": "/năm"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "hoặc ",
+    "or_annual_after": "/năm, thanh toán hằng năm",
+    "saving_before": "Tiết kiệm ",
+    "saving_after": " mỗi năm so với trả theo tháng",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Dành cho một người bán ở sạp, cần thanh toán và quản lý sản phẩm",
+        "heading": "Bao gồm",
+        "features": [
+          "Thanh toán đầy đủ với tối đa 10 giỏ hàng",
+          "Sản phẩm có biến thể, mã vạch, ảnh, danh mục",
+          "Lịch sử đơn hàng, vô hiệu hóa, trả hàng và đổi hàng",
+          "Bảng điều khiển kinh doanh: doanh thu, lợi nhuận, hàng bán chạy",
+          "Sao lưu và khôi phục qua đám mây",
+          "Thanh toán hoạt động ngoại tuyến"
+        ],
+        "cta": "Bắt đầu dùng thử miễn phí 30 ngày"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Dành cho cửa hàng cần tồn kho, thành viên, nhập hàng hoặc bán chịu",
+        "heading": "Mọi tính năng của Lite, cộng thêm",
+        "features": [
+          "Công cụ khuyến mãi: ngưỡng chi tiêu, mua 1 tặng 1, khung giờ vàng — áp dụng ngay khi thanh toán",
+          "Điểm khách hàng, quy đổi điểm và hạng thành viên",
+          "Theo dõi tồn kho và đơn nhập hàng",
+          "Bán chịu: giao hàng trước, thu tiền sau",
+          "Đơn đặt trước: nhận tiền cọc, tất toán khi nhận hàng"
+        ],
+        "cta": "Bắt đầu dùng thử miễn phí 30 ngày"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Dành cho cửa hàng có nhân viên, cần phân vai trò và nhật ký hoạt động",
+        "heading": "Mọi tính năng của Standard, cộng thêm",
+        "features": [
+          "Tài khoản nhân viên: mỗi người một mã PIN, mỗi đơn hàng ghi lại ai đã bán",
+          "Quyền và phê duyệt: giảm giá vượt mức tối đa, sửa sản phẩm và tồn kho, xem giá vốn",
+          "Nhật ký hoạt động và bản ghi khôi phục",
+          "Báo cáo nâng cao: so sánh kỳ, bản đồ nhiệt doanh số, hàng bán chậm, giá trị tồn kho, khách mua lại"
+        ],
+        "cta": "Bắt đầu dùng thử miễn phí 30 ngày"
+      }
+    },
+    "fineprint": "Thanh toán qua tài khoản App Store của bạn. Gói tháng và gói năm tự động gia hạn khi hết mỗi kỳ; hủy bất cứ lúc nào trong App Store.",
+    "currency": {
+      "twd": "Giá hiển thị theo App Store Đài Loan. Các khu vực khác trả theo giá địa phương hiển thị trong App Store.",
+      "to_usd": "Xem giá theo Hoa Kỳ",
+      "usd": "Giá hiển thị theo App Store Hoa Kỳ. Các khu vực khác trả theo giá địa phương hiển thị trong App Store.",
+      "to_twd": "Xem giá theo Đài Loan"
+    },
+    "assurances": {
+      "trial": {
+        "title": "Dùng thử miễn phí 30 ngày",
+        "desc": "Có đủ mọi tính năng của gói Pro. Không cần tài khoản."
+      },
+      "fees": {
+        "title": "Không phí giao dịch",
+        "desc": "DingPOS không bao giờ động đến tiền bán hàng của bạn — phí đăng ký là khoản phí duy nhất."
+      },
+      "data": {
+        "title": "Dữ liệu luôn thuộc về bạn",
+        "desc": "Khi hết dùng thử hoặc hết đăng ký, chỉ chức năng thanh toán bị tạm dừng. Sản phẩm, đơn hàng và báo cáo vẫn còn, không có gì bị xóa."
+      },
+      "switch": {
+        "title": "Đổi gói bất cứ lúc nào",
+        "desc": "Nâng cấp có hiệu lực ngay, Apple tính phí theo thời gian còn lại. Hạ cấp có hiệu lực khi gia hạn."
+      }
+    },
+    "compare": {
+      "title": "So sánh từng tính năng",
+      "subtitle": "Mỗi gói đều bao gồm mọi tính năng của gói trước đó.",
+      "feature_col": "Tính năng",
+      "included": "Có",
+      "not_included": "Không có",
+      "groups": {
+        "checkout": "Thanh toán",
+        "catalog": "Sản phẩm và tồn kho",
+        "customers": "Khách hàng và khuyến mãi",
+        "reports": "Báo cáo",
+        "team": "Nhân viên và kiểm soát",
+        "data": "Dữ liệu và sao lưu"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Thanh toán và nhiều giỏ hàng",
+          "desc": "Tối đa 10 giỏ hàng cùng lúc, tìm kiếm tức thì theo tên hoặc mã vạch"
+        },
+        "discounts_tax": {
+          "name": "Giảm giá và thuế",
+          "desc": "Giảm giá theo sản phẩm và theo đơn hàng; tự tính thuế đã gồm hoặc chưa gồm trong giá"
+        },
+        "offline": {
+          "name": "Thanh toán ngoại tuyến",
+          "desc": "Vẫn bán hàng khi không có kết nối internet"
+        },
+        "returns": {
+          "name": "Vô hiệu hóa, trả hàng và đổi hàng",
+          "desc": "Lịch sử và chi tiết đơn hàng đầy đủ"
+        },
+        "preorder": {
+          "name": "Đơn đặt trước",
+          "desc": "Nhận tiền cọc ngay, tất toán phần còn lại khi nhận hàng"
+        },
+        "on_account": {
+          "name": "Bán chịu",
+          "desc": "Giao hàng trước, thu tiền sau — công nợ của mọi khách hàng ở một nơi"
+        },
+        "products": {
+          "name": "Quản lý sản phẩm",
+          "desc": "Biến thể, mã vạch, ảnh, danh mục"
+        },
+        "import": {
+          "name": "Nhập dữ liệu",
+          "desc": "Nhập sản phẩm và đơn hàng cũ từ hệ thống khác qua CSV"
+        },
+        "inventory": {
+          "name": "Theo dõi tồn kho",
+          "desc": "Tự trừ kho khi bán; điều chỉnh thủ công đều được ghi lại lịch sử xuất nhập"
+        },
+        "purchasing": {
+          "name": "Nhập hàng và nhà cung cấp",
+          "desc": "Nhận đơn nhập hàng sẽ cập nhật tồn kho; xem bạn còn nợ từng nhà cung cấp bao nhiêu"
+        },
+        "promotions": {
+          "name": "Công cụ khuyến mãi",
+          "desc": "Ngưỡng chi tiêu, mua 1 tặng 1, ưu đãi món thứ N, khung giờ vàng — áp dụng ngay khi thanh toán"
+        },
+        "loyalty": {
+          "name": "Khách hàng và điểm",
+          "desc": "Tích và quy đổi điểm để khách quay lại"
+        },
+        "member_tiers": {
+          "name": "Hạng thành viên",
+          "desc": "Tri ân khách hàng tốt nhất bằng ưu đãi theo hạng"
+        },
+        "dashboard": {
+          "name": "Bảng điều khiển kinh doanh",
+          "desc": "Doanh thu, lợi nhuận, giảm giá, cơ cấu thanh toán và hàng bán chạy"
+        },
+        "comparison": {
+          "name": "So sánh kỳ",
+          "desc": "So với kỳ trước hoặc năm ngoái — xem mức tăng hay giảm"
+        },
+        "heatmap": {
+          "name": "Bản đồ nhiệt doanh số",
+          "desc": "Bảy ngày × 24 giờ — xem khung giờ nào bán chạy nhất"
+        },
+        "slow_movers": {
+          "name": "Hàng bán chậm",
+          "desc": "Tìm những sản phẩm không bán được nhưng vẫn còn tồn kho"
+        },
+        "valuation": {
+          "name": "Giá trị tồn kho và kiểm tra biến động kho",
+          "desc": "Tồn kho hiện đáng giá bao nhiêu, và ai đã thay đổi"
+        },
+        "repeat": {
+          "name": "Khách mua lại và điểm chưa quy đổi",
+          "desc": "Bao nhiêu thành viên quay lại mua, và còn bao nhiêu điểm chưa quy đổi"
+        },
+        "staff": {
+          "name": "Tài khoản nhân viên",
+          "desc": "Mỗi người một mã PIN; mỗi đơn hàng ghi lại ai đã bán"
+        },
+        "permissions": {
+          "name": "Quyền và phê duyệt",
+          "desc": "Vai trò quản lý và nhân viên; bạn chọn thao tác nào cần phê duyệt"
+        },
+        "activity_log": {
+          "name": "Nhật ký hoạt động",
+          "desc": "Dòng thời gian về vô hiệu hóa, trả hàng, đổi giá, điều chỉnh tồn kho và nhiều hơn nữa"
+        },
+        "restore_records": {
+          "name": "Bản ghi khôi phục",
+          "desc": "Ai đã khôi phục, từ bản sao lưu nào, và đã loại bỏ những đơn hàng nào"
+        },
+        "local_data": {
+          "name": "Dữ liệu nằm trên iPad của bạn",
+          "desc": "Không cần tài khoản — dữ liệu kinh doanh của bạn không đi qua chúng tôi"
+        },
+        "backup": {
+          "name": "Sao lưu và khôi phục qua đám mây",
+          "desc": "Sao lưu vào iCloud, Google Drive hoặc Dropbox của chính bạn"
+        },
+        "undo_restore": {
+          "name": "Xem trước khôi phục và hoàn tác khôi phục",
+          "desc": "Xem trước những đơn hàng sẽ bị loại bỏ khi khôi phục, và lấy lại nếu khôi phục nhầm"
+        }
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "items": [
+        {
+          "q": "Tôi dùng được gì trong thời gian dùng thử miễn phí?",
+          "a": "Trong 30 ngày kể từ lần cài đặt đầu tiên, bạn dùng được mọi tính năng, kể cả các tính năng của gói Pro như nhân viên, quyền và báo cáo nâng cao — không cần tài khoản. Nếu đăng ký bất kỳ gói nào trong lúc dùng thử, thời gian dùng thử sẽ kết thúc ngay và bạn chuyển sang gói đã mua."
+        },
+        {
+          "q": "Điều gì xảy ra nếu tôi không đăng ký sau khi dùng thử?",
+          "a": "Chức năng thanh toán sẽ tạm dừng; mọi thứ khác vẫn hoạt động — bạn vẫn xem được đơn hàng, báo cáo và quản lý sản phẩm. Không có gì bị xóa, và khi đăng ký, chức năng thanh toán hoạt động lại ngay."
+        },
+        {
+          "q": "Tôi có thể nâng cấp hoặc hạ cấp gói bất cứ lúc nào không?",
+          "a": "Có, trong Cài đặt → Đăng ký của ứng dụng. Nâng cấp có hiệu lực ngay và Apple hoàn lại phần thời gian chưa dùng; hạ cấp có hiệu lực khi kỳ hiện tại kết thúc. Chuyển từ gói tháng sang gói năm cũng có hiệu lực ngay."
+        },
+        {
+          "q": "Nếu hạ cấp, khách hàng, khuyến mãi và tồn kho của tôi sẽ ra sao?",
+          "a": "Tất cả đều được giữ nguyên — không có gì bị xóa hay thay đổi. Các tính năng của gói cao hơn chỉ ngừng hoạt động, và khi nâng cấp lại, mọi thứ trở về như cũ."
+        },
+        {
+          "q": "Thanh toán theo năm hoạt động thế nào?",
+          "a": "Gói năm có giá bằng mười tháng của gói tháng nhưng dùng trọn một năm — rẻ hơn khoảng {{percent}}%. Bạn chỉ thanh toán một lần mỗi năm và gói tự động gia hạn."
+        },
+        {
+          "q": "Ngoài phí đăng ký còn khoản phí nào khác không?",
+          "a": "Không. DingPOS không bao giờ động đến tiền bán hàng của bạn: không hoa hồng, không phí giao dịch, không hợp đồng thiết bị."
+        },
+        {
+          "q": "Làm sao để hủy đăng ký?",
+          "a": "Quản lý trên iPad của bạn tại Cài đặt → Tài khoản Apple → Đăng ký; hủy trước khi kỳ kết thúc ít nhất 24 giờ thì bạn sẽ không bị tính phí nữa. Dữ liệu của bạn vẫn nằm trên thiết bị."
+        },
+        {
+          "q": "Vì sao giá trên App Store khác với trang này?",
+          "a": "App Store tính phí đăng ký theo giá của khu vực gắn với Tài khoản Apple của bạn. Trang này liệt kê giá Đài Loan và Hoa Kỳ; các khu vực khác trả theo giá địa phương hiển thị trong ứng dụng và App Store."
+        }
+      ],
+      "more": "Còn thắc mắc khác?",
+      "more_link": "Xem toàn bộ câu hỏi thường gặp"
+    },
+    "final": {
+      "title": "Dùng thử 30 ngày, rồi chọn gói",
+      "sub": "Tải về và bắt đầu — không cần tài khoản.",
+      "cta": "Tải về trên App Store"
+    }
+  },
+  "footer": {
+    "tagline": "Mở cửa hàng trong 10 phút. Dữ liệu của bạn, quyền kiểm soát của bạn.",
+    "contact": "Liên hệ",
+    "privacy_policy": "Chính sách quyền riêng tư",
+    "terms_of_use": "Điều khoản sử dụng",
+    "copyright": "ALU Studio. Bảo lưu mọi quyền.",
+    "support": "Câu hỏi thường gặp"
+  },
+  "privacy": {
+    "title": "Chính sách quyền riêng tư",
+    "meta_description": "Cách DingPOS, ứng dụng bán hàng (POS) trên iPad hoạt động ngoại tuyến, xử lý dữ liệu của bạn: dữ liệu kinh doanh nằm trên thiết bị của bạn, và bản sao lưu tùy chọn chỉ được gửi đến tài khoản đám mây của chính bạn.",
+    "effective_date": "Có hiệu lực từ: 1 tháng 7, 2026",
+    "intro": "ALU Studio (\"chúng tôi\") đã phát triển DingPOS (\"ứng dụng\"). DingPOS là ứng dụng bán hàng được xây dựng với quyền riêng tư làm cốt lõi — dữ liệu kinh doanh thuộc về bạn. Chính sách quyền riêng tư này giải thích cách chúng tôi xử lý thông tin của bạn khi bạn sử dụng ứng dụng.",
+    "local_storage": {
+      "title": "Dữ liệu của bạn được lưu trữ như thế nào",
+      "desc": "DingPOS lưu toàn bộ dữ liệu kinh doanh của bạn ngay trên thiết bị. Trừ khi bạn chủ động bật sao lưu lên đám mây, dữ liệu này không bao giờ rời khỏi thiết bị của bạn. Dữ liệu bạn tạo trong ứng dụng gồm:",
+      "items": [
+        "Cài đặt cửa hàng (tên cửa hàng, tiền tệ, thuế suất, logo)",
+        "Dữ liệu sản phẩm (tên, giá, giá vốn, mã vạch, ảnh, danh mục, biến thể, tồn kho)",
+        "Đơn hàng và bản ghi giao dịch (gồm giảm giá, thuế, phương thức thanh toán)",
+        "Dữ liệu khách hàng và thành viên (tên, số điện thoại và email tùy chọn, điểm)",
+        "Quy tắc khuyến mãi và cài đặt hạng thành viên"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Sao lưu lên đám mây (tùy chọn)",
+      "desc": "Bạn có thể tùy chọn bật sao lưu lên đám mây và chọn một trong iCloud, Google Drive hoặc Dropbox làm nơi lưu trữ. Bản sao lưu được ghi vào tài khoản đám mây của chính bạn và hoàn toàn nằm trong tầm kiểm soát của bạn. Chúng tôi không bao giờ xử lý, lưu trữ hay truy cập nội dung của các bản sao lưu này. Việc có bật sao lưu hay không, và dùng nhà cung cấp nào, hoàn toàn do bạn quyết định và có thể tắt bất cứ lúc nào."
+    },
+    "no_collection": {
+      "title": "Những gì chúng tôi không thu thập",
+      "desc": "DingPOS không thu thập, truyền đi hay chia sẻ bất kỳ nội dung kinh doanh nào của bạn. Cụ thể, chúng tôi không:",
+      "items": [
+        "Thu thập dữ liệu sản phẩm, đơn hàng, khách hàng hay thành viên của bạn",
+        "Can thiệp vào bất kỳ luồng thanh toán hay thông tin thẻ tín dụng nào (ứng dụng không xử lý thanh toán thẻ thực tế)",
+        "Theo dõi vị trí của bạn",
+        "Chia sẻ dữ liệu kinh doanh của bạn với bất kỳ bên thứ ba nào"
+      ]
+    },
+    "camera": {
+      "title": "Camera và ảnh",
+      "desc": "DingPOS chỉ yêu cầu quyền truy cập camera khi bạn chủ động dùng \"quét mã vạch\" hoặc \"chụp ảnh sản phẩm\". Việc nhận dạng mã vạch và xử lý ảnh diễn ra ngay trên thiết bị của bạn và không bao giờ được tải lên máy chủ của chúng tôi. Ảnh sản phẩm chỉ được ghi vào tài khoản đám mây của chính bạn như một phần của bản sao lưu, nếu bạn bật sao lưu lên đám mây."
+    },
+    "subscription": {
+      "title": "Đăng ký và giao dịch mua",
+      "desc": "DingPOS cung cấp gói đăng ký thông qua Mua hàng trong ứng dụng (IAP) của Apple App Store, và dùng RevenueCat để quản lý trạng thái đăng ký. Việc thanh toán do Apple xử lý; chúng tôi không bao giờ nhận thông tin thẻ tín dụng hay chi tiết thanh toán của bạn. RevenueCat chỉ nhận một mã định danh ẩn danh gắn với trạng thái đăng ký, dùng để xác minh đăng ký của bạn còn hiệu lực hay không."
+    },
+    "analytics": {
+      "title": "Phân tích và báo cáo sự cố",
+      "desc": "DingPOS dùng Firebase Analytics và Firebase Crashlytics do Google cung cấp, giúp chúng tôi hiểu cách ứng dụng được sử dụng, đồng thời phát hiện và khắc phục sự cố treo ứng dụng. Các dịch vụ này thu thập:",
+      "items": [
+        "Dữ liệu sử dụng ẩn danh (ví dụ: tính năng nào được dùng, thời lượng phiên)",
+        "Báo cáo sự cố (ví dụ: stack trace, kiểu máy, phiên bản hệ điều hành)",
+        "Thông tin thiết bị (ví dụ: loại thiết bị, hệ điều hành, phiên bản ứng dụng)",
+        "Một mã định danh phiên bản được tạo ngẫu nhiên (không liên kết với danh tính của bạn)"
+      ],
+      "note": "Dữ liệu này là ẩn danh và không bao gồm bất kỳ nội dung kinh doanh nào của bạn (như sản phẩm, đơn hàng, khách hàng hay thành viên). Để biết thêm về cách Google xử lý dữ liệu này, hãy xem Chính sách quyền riêng tư của Google: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Quyền riêng tư của trẻ em",
+      "desc": "DingPOS là công cụ bán hàng dùng cho mục đích thương mại. Ứng dụng không được thiết kế cho trẻ em và không thu thập thông tin cá nhân của trẻ em."
+    },
+    "changes": {
+      "title": "Thay đổi đối với chính sách này",
+      "desc": "Nếu chúng tôi thực hiện những thay đổi quan trọng đối với Chính sách quyền riêng tư này, chúng tôi sẽ thông báo cho bạn qua bản cập nhật ứng dụng. Chúng tôi khuyến nghị bạn xem lại chính sách này định kỳ."
+    },
+    "contact": {
+      "title": "Liên hệ với chúng tôi",
+      "desc": "Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào về Chính sách quyền riêng tư này, vui lòng liên hệ với chúng tôi tại:"
+    }
+  },
+  "terms": {
+    "title": "Điều khoản sử dụng",
+    "meta_description": "Điều khoản sử dụng DingPOS, ứng dụng bán hàng trên iPad của ALU Studio: giấy phép, dùng thử miễn phí 30 ngày, gói đăng ký qua App Store, dữ liệu và bản sao lưu của bạn, trách nhiệm pháp lý.",
+    "effective_date": "Có hiệu lực từ: ngày 8 tháng 10 năm 2026",
+    "intro": "Chào mừng bạn đến với DingPOS. Vui lòng đọc kỹ các Điều khoản sử dụng dưới đây trước khi dùng ứng dụng. Khi tải về, cài đặt hoặc sử dụng DingPOS, bạn đồng ý chịu sự ràng buộc của các điều khoản này.",
+    "license": {
+      "title": "Giấy phép",
+      "desc": "ALU Studio cấp cho bạn giấy phép có giới hạn, không độc quyền và không thể chuyển nhượng để sử dụng DingPOS trên các thiết bị của bạn nhằm vận hành hoạt động kinh doanh. Giấy phép này dành cho hoạt động bán lẻ của bạn."
+    },
+    "subscription": {
+      "title": "Đăng ký & thanh toán",
+      "desc": "DingPOS cho dùng thử miễn phí 30 ngày kể từ lần cài đặt đầu tiên, trong thời gian đó bạn dùng được mọi tính năng của gói Pro; nếu mua bất kỳ gói nào trong thời gian dùng thử thì thời gian dùng thử kết thúc và gói đã mua có hiệu lực kể từ lúc mua. Sau thời gian dùng thử, bạn cần đăng ký một trong các gói (Lite, Standard hoặc Pro) bằng giao dịch mua trong ứng dụng qua App Store để tiếp tục dùng chức năng thanh toán; nội dung và giá của từng gói được nêu ở trang bảng giá (alu-studio.com/dingpos/pricing), và mức giá được tính là mức giá hiển thị trên App Store. Nếu không đăng ký, bạn vẫn xem và quản lý sản phẩm được, và dữ liệu của bạn không bao giờ bị xóa. Gói đăng ký tự động gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kết thúc kỳ hiện tại. Bạn có thể quản lý hoặc hủy đăng ký bất cứ lúc nào trong phần cài đặt tài khoản App Store trên thiết bị. Các gói đã mua có thể được khôi phục."
+    },
+    "restrictions": {
+      "title": "Hạn chế",
+      "desc": "Khi sử dụng ứng dụng, bạn đồng ý không:",
+      "items": [
+        "Dịch ngược, tháo rời hoặc biên dịch ngược ứng dụng",
+        "Sửa đổi, dịch hoặc tạo sản phẩm phái sinh",
+        "Gỡ bỏ bất kỳ thông báo hay nhãn bản quyền nào trong ứng dụng",
+        "Sử dụng ứng dụng cho bất kỳ mục đích trái pháp luật nào"
+      ]
+    },
+    "user_data": {
+      "title": "Dữ liệu & bản sao lưu của bạn",
+      "desc": "Toàn bộ nội dung kinh doanh bạn tạo trong DingPOS (sản phẩm, đơn hàng, khách hàng, thành viên và cài đặt) được lưu trên thiết bị của bạn và do bạn hoàn toàn chịu trách nhiệm. Nếu bạn xóa ứng dụng hoặc xóa dữ liệu của ứng dụng, mọi thông tin đã lưu sẽ mất vĩnh viễn, trừ khi bạn đã bật sao lưu đám mây. Bản sao lưu đám mây nằm trong tài khoản đám mây do bạn chọn (iCloud / Google Drive / Dropbox), và việc bản sao lưu có sẵn hay được giữ bao lâu do điều khoản dịch vụ của nhà cung cấp đó quy định. Chúng tôi không thể khôi phục bất kỳ dữ liệu nào cho bạn. Bạn cũng có trách nhiệm tuân thủ các quy định pháp luật về thuế, hóa đơn và bảo vệ người tiêu dùng áp dụng tại nơi bạn kinh doanh."
+    },
+    "updates": {
+      "title": "Cập nhật ứng dụng",
+      "desc": "Thỉnh thoảng chúng tôi có thể phát hành bản cập nhật để cải thiện tính năng, sửa lỗi hoặc tăng cường bảo mật. Chúng tôi khuyên bạn luôn cập nhật ứng dụng để có trải nghiệm tốt nhất."
+    },
+    "disclaimer": {
+      "title": "Tuyên bố miễn trừ trách nhiệm",
+      "desc": "DingPOS được cung cấp \"nguyên trạng\", không kèm bất kỳ bảo đảm nào, dù rõ ràng hay ngầm định. Chúng tôi không bảo đảm ứng dụng sẽ hoạt động không gián đoạn hoặc hoàn toàn không có lỗi. DingPOS là công cụ hỗ trợ hoạt động kinh doanh của bạn; độ chính xác cuối cùng của các phép tính thuế, số lượng tồn kho và mọi số tiền, cũng như việc tuân thủ quy định tại địa phương, vẫn thuộc trách nhiệm kiểm tra của bạn. Trong phạm vi tối đa pháp luật cho phép, chúng tôi không chịu trách nhiệm về bất kỳ thiệt hại trực tiếp, gián tiếp, ngẫu nhiên hay hệ quả nào phát sinh từ việc bạn sử dụng ứng dụng."
+    },
+    "liability": {
+      "title": "Giới hạn trách nhiệm",
+      "desc": "Trong mọi trường hợp, trách nhiệm của ALU Studio đối với bất kỳ thiệt hại nào phát sinh từ việc sử dụng hoặc không thể sử dụng ứng dụng sẽ không vượt quá số tiền bạn đã trả cho ứng dụng trong 12 tháng trước sự việc. Điều này bao gồm nhưng không giới hạn ở mất dữ liệu, mất doanh thu, hư hỏng thiết bị hoặc bất kỳ tổn thất nào khác."
+    },
+    "changes": {
+      "title": "Thay đổi các điều khoản này",
+      "desc": "Chúng tôi có quyền sửa đổi các Điều khoản sử dụng này bất cứ lúc nào. Điều khoản đã sửa đổi có hiệu lực ngay khi được đăng trên trang này. Việc bạn tiếp tục sử dụng ứng dụng được xem là chấp nhận các điều khoản đã sửa đổi."
+    },
+    "contact": {
+      "title": "Liên hệ với chúng tôi",
+      "desc": "Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản sử dụng này, vui lòng liên hệ với chúng tôi tại:"
+    }
+  },
+  "support": {
+    "doc_title": "Hỗ trợ",
+    "meta_description": "Hỗ trợ DingPOS: giải đáp và hướng dẫn từng bước cho ứng dụng bán hàng trên iPad — thiết lập, thanh toán, đơn hàng, tồn kho, khuyến mãi, sao lưu, nhân viên và thanh toán gói.",
+    "title": "Chúng tôi có thể giúp gì cho bạn?",
+    "subtitle": "Tìm các câu hỏi thường gặp, hoặc duyệt theo chủ đề",
+    "search_placeholder": "Tìm kiếm, ví dụ “mã vạch” hoặc “khôi phục bản sao lưu”",
+    "search_hint_keywords": "Phân tách các từ khóa bằng dấu cách",
+    "search_hint_shortcut_pre": "nhấn ",
+    "search_hint_shortcut_post": " để tìm kiếm",
+    "clear": "Xóa tìm kiếm",
+    "results_count": "{{num}} câu hỏi phù hợp",
+    "no_results_title": "Không có câu hỏi phù hợp",
+    "no_results_desc": "Hãy thử từ khóa khác, hoặc gửi email cho chúng tôi — chúng tôi sẽ phản hồi sớm.",
+    "related_title": "Câu hỏi liên quan",
+    "back": "Hỗ trợ",
+    "since": "Có từ DingPOS v{{version}}",
+    "verified_version": "Nội dung theo DingPOS v{{version}}",
+    "contact_title": "Không tìm thấy câu trả lời?",
+    "contact_desc": "Hãy cho chúng tôi biết bạn đang gặp vấn đề gì, chúng tôi sẽ phản hồi sớm nhất có thể.",
+    "contact_cta": "Liên hệ ALU Studio",
+    "group_faq": "Câu hỏi thường gặp",
+    "group_guide": "Hướng dẫn",
+    "group_guide_desc": "Hướng dẫn thiết lập từng bước, kèm những lưu ý chúng tôi đã đúc kết khi xây dựng DingPOS.",
+    "group_roadmap": "Sắp ra mắt",
+    "group_roadmap_desc": "Chưa có sẵn — một số đã nằm trong kế hoạch. Yêu cầu của bạn quyết định thứ tự ưu tiên của chúng tôi, nên hãy viết thư cho chúng tôi."
+  }
+}
