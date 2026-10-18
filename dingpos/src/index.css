@@ -8,3 +8,13 @@
 :root:lang(zh-Hans) {
   --dp-font-cjk: "Noto Sans SC Variable";
 }
+
+/* Noto Sans TC would draw Japanese kanji in Traditional Chinese forms; the
+   system faces draw them right and download nothing. */
+:root:lang(ja) {
+  --dp-font-cjk: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", "Yu Gothic", Meiryo;
+}
+
+:root:lang(ko) {
+  --dp-font-cjk: "Apple SD Gothic Neo", "Noto Sans CJK KR", "Malgun Gothic";
+}
