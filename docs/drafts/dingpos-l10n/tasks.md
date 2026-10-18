@@ -4,8 +4,8 @@ Branch for Phases 1–3: `l10n` (single checkout, no worktree). Phase 4 runs thr
 
 ## Phase 1: Foundation
 
-- [ ] T001 [REQ-001, REQ-003] Create `dingpos/l10n/languages.json` with all 32 languages (`code`, `kind`, `label`, `pathPrefix`, `hreflang`, `ogLocale`) per plan DEC-001/DEC-002; `kind`, order and `code` copied from the app's `l10n/languages.json`, `label` from the app's settings language list. Add `shipped: true` only for en, zh-Hant, zh-Hans. Verify: `node -e` load + assert 32 entries, unique prefixes, es-419 → hreflang `es` → exit 0
-- [ ] T002 [REQ-010] Extract the pack traversal (text-field walk, unit ids) from `scripts/gen-zh-hans.mjs` into `scripts/pack-fields.mjs`; gen-zh-hans imports it. Verify: `npm test` → GREEN and `npm run zh-hans` → no diff in generated files
+- [x] T001 [REQ-001, REQ-003] Create `dingpos/l10n/languages.json` with all 32 languages (`code`, `kind`, `label`, `pathPrefix`, `hreflang`, `ogLocale`) per plan DEC-001/DEC-002; `kind`, order and `code` copied from the app's `l10n/languages.json`, `label` from the app's settings language list. Add `shipped: true` only for en, zh-Hant, zh-Hans. Verify: `node -e` load + assert 32 entries, unique prefixes, es-419 → hreflang `es` → exit 0
+- [x] T002 [REQ-010] Extract the pack traversal (text-field walk, unit ids) from `scripts/gen-zh-hans.mjs` into `scripts/pack-fields.mjs`; gen-zh-hans imports it. Verify: `npm test` → GREEN and `npm run zh-hans` → no diff in generated files
 
 ## Phase 2: US-001 Japanese site end to end (P1)
 
