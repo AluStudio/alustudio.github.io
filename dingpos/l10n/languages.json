@@ -4,7 +4,7 @@
     { "code": "en", "kind": "source", "label": "English", "hreflang": "en", "pathPrefix": "", "ogLocale": "en_US", "shipped": true },
     { "code": "zh-Hant", "kind": "owner", "label": "繁體中文", "hreflang": "zh-Hant", "pathPrefix": "zh-hant", "ogLocale": "zh_TW", "shipped": true },
     { "code": "zh-Hans", "kind": "generated", "label": "简体中文", "hreflang": "zh-Hans", "pathPrefix": "zh-hans", "ogLocale": "zh_CN", "shipped": true },
-    { "code": "ja", "kind": "translated", "label": "日本語", "hreflang": "ja", "pathPrefix": "ja", "ogLocale": "ja_JP", "shipped": false },
+    { "code": "ja", "kind": "translated", "label": "日本語", "hreflang": "ja", "pathPrefix": "ja", "ogLocale": "ja_JP", "shipped": true },
     { "code": "th", "kind": "translated", "label": "ไทย", "hreflang": "th", "pathPrefix": "th", "ogLocale": "th_TH", "shipped": false },
     { "code": "ko", "kind": "translated", "label": "한국어", "hreflang": "ko", "pathPrefix": "ko", "ogLocale": "ko_KR", "shipped": false },
     { "code": "vi", "kind": "translated", "label": "Tiếng Việt", "hreflang": "vi", "pathPrefix": "vi", "ogLocale": "vi_VN", "shipped": false },
