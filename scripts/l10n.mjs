@@ -23,7 +23,7 @@
  *
  * Usage:
  *   npm run l10n -- new <code>
- *   npm run l10n -- sync <code> [--mode review] [--since <ref>] [--app-repo <path>]
+ *   npm run l10n -- sync <code> [--mode review] [--since <ref>] [--ids <id,…>] [--app-repo <path>]
  *   npm run l10n -- apply <code> [--dry-run] [<out file> …]
  *   npm run l10n -- progress show|path|next|report <code>|get <code>|set <code> key=value …
  *
@@ -432,13 +432,19 @@ export async function changedSince(paths, code, ref) {
   return new Set([...now].filter(([id, value]) => stableJson(before.get(id)) !== stableJson(value)).map(([id]) => id));
 }
 
-export async function sync(paths, code, { mode = "translate", since = null, appRepo = DEFAULT_APP_REPO } = {}) {
+/**
+ * `since` narrows the packets to units whose translation changed since that
+ * ref; `ids` adds units to that set (a re-review of findings a fix round kept
+ * unchanged), or narrows to just those units without `since`.
+ */
+export async function sync(paths, code, { mode = "translate", since = null, ids = null, appRepo = DEFAULT_APP_REPO } = {}) {
   translatedLanguage(paths, code);
   const en = await readEn(paths);
   const units = enUnits(en);
   const manifest = readManifest(paths, code);
   const current = translatedUnits(await readLanguage(paths, code));
-  const onlyIds = since ? await changedSince(paths, code, since) : null;
+  let onlyIds = since ? await changedSince(paths, code, since) : null;
+  if (ids?.length) onlyIds = new Set([...(onlyIds ?? []), ...ids]);
   const wanted = pendingUnits(units, manifest, current, mode, onlyIds);
   const stale = new Map(wanted.filter((u) => current.has(u.id) && u.id in manifest && manifest[u.id] !== u.enHash).map((u) => [u.id, manifest[u.id]]));
   const previous = await previousEnTexts(paths, stale);
@@ -488,7 +494,7 @@ export async function sync(paths, code, { mode = "translate", since = null, appR
     writeFileSync(file, `${JSON.stringify(packet, null, 2)}\n`);
     index.push({ segment, count: packetUnits.length, appMatch: packetUnits.filter((u) => u.appMatch).length, packet: rel(paths, file) });
   }
-  writeFileSync(join(outDir, "index.json"), `${JSON.stringify({ lang: code, mode, since, total: wanted.length, segments: index }, null, 2)}\n`);
+  writeFileSync(join(outDir, "index.json"), `${JSON.stringify({ lang: code, mode, since, ids, total: wanted.length, segments: index }, null, 2)}\n`);
   return { total: wanted.length, segments: index };
 }
 
@@ -714,7 +720,8 @@ async function main(argv) {
   }
   if (command === "sync" && args[0]) {
     const appRepo = flag(args, "--app-repo") ?? DEFAULT_APP_REPO;
-    const options = { mode: flag(args, "--mode") ?? "translate", since: flag(args, "--since"), appRepo: resolve(appRepo) };
+    const ids = flag(args, "--ids")?.split(",").filter(Boolean) ?? null;
+    const options = { mode: flag(args, "--mode") ?? "translate", since: flag(args, "--since"), ids, appRepo: resolve(appRepo) };
     if (!["translate", "review"].includes(options.mode)) throw new UsageError(`--mode must be translate or review`);
     const { total, segments } = await sync(paths, args[0], options);
     for (const s of segments) console.log(`  ${s.segment}: ${s.count} unit(s)${s.appMatch ? `, ${s.appMatch} appMatch` : ""}`);
