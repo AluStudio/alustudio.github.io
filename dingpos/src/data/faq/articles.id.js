@@ -392,7 +392,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bisa. Buka Pengaturan → Preferensi Perangkat lalu matikan Suara pembayaran. Mulai penjualan berikutnya, layar berhasil tidak lagi berbunyi, sedangkan getaran haptic tetap ada."
+        "text": "Bisa. Buka Pengaturan → Preferensi Perangkat lalu matikan Suara pembayaran. Mulai penjualan berikutnya, layar konfirmasi tidak lagi mengeluarkan bunyi, tetapi getaran haptik tetap aktif."
       },
       {
         "type": "p",
@@ -1637,7 +1637,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan pembatalan penjualan, retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
+        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan Batalkan penjualan (Void), retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
       },
       {
         "type": "list",
