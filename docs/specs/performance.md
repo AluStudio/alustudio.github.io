@@ -25,6 +25,7 @@ read_when:
 
 - 量正式站，不量本機 `wrangler dev`。本機沒有 Cloudflare edge 的 brotli 壓縮，同一個 app 的分數會差 10–20 分。
 - 用 `npx lighthouse https://alu-studio.com/<app>/ --form-factor=mobile`，每個 app 跑 3 次取中位數，同時看每一次的 CLS：layout shift 只在部分 run 出現時，中位數會把它藏起來。
+- 每次量測都同時量一個這次沒改動的 app 當對照組，交錯執行。量測機器的背景負載（模擬器、瀏覽器）會讓 Lighthouse 量到「資源都到了，卻晚一秒以上才 first paint」，連帶墊高模擬出的 FCP / LCP，所有 app 一起變慢。對照組也變慢時，數字反映的是環境，不寫進基準表。判斷某次改動有沒有 regression，用 A/B：同一個本機靜態 server、同一時段，交錯量改動前後的 build；本機沒有壓縮，只看前後差，不看絕對值。
 - 免 key 的 PSI 配額通常已經耗盡，所以用本機 Lighthouse 量 lab data。真實使用者的數字看 Cloudflare dashboard → Web Analytics → Core Web Vitals：每頁都已自動注入 beacon。
 
 ## 解讀
@@ -46,7 +47,7 @@ read_when:
 | sotto | 97 | 2.09s | 2.09s | 0.022 | `p.hero-desc` | 99 |
 | dingpos | 85 | 2.08s | 4.10s | 0.001 | `p.hero-desc` | 95 |
 
-- sotto 2026-10-17（OH-88 前）另量到 perf 89、LCP 2.9s、Accessibility 69；OH-88 改 `hydrateRoot`、只載入當頁語言、修 a11y 後，部署後需重量。
+- sotto 2026-10-17（OH-88 前）另量到 perf 89、LCP 2.9s、Accessibility 69。OH-88 上線後正式站 Accessibility 100、SEO 100（6 次皆同）；perf 只量到受背景負載污染的數字（對照組 dingpos、babbby 同時一起變慢），表中 sotto 一列待乾淨環境重量。本機 A/B（OH-88 前 vs 後）：LCP 7.73s → 7.4s、JS 569KB → 483KB，沒有 regression。
 
 - pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。已改成固定 `height: 500px` 修正。
 - dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。重繪的部分已改 `hydrateRoot` 消除，進場動畫保留。
