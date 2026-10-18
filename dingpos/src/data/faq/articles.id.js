@@ -226,6 +226,7 @@ export const articles = [
     "keywords": [
       "bahasa",
       "inggris",
+      "tionghoa",
       "mandarin",
       "ganti bahasa",
       "wilayah"
@@ -233,7 +234,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS mendukung bahasa Inggris dan Mandarin Tradisional. Buka Pengaturan → Preferensi Perangkat lalu ketuk Bahasa App. Halaman DingPOS di aplikasi Pengaturan iPad akan terbuka, lalu pilih bahasa di bagian Bahasa."
+        "text": "DingPOS mendukung bahasa Inggris dan Tionghoa Tradisional. Buka Pengaturan → Preferensi Perangkat lalu ketuk Bahasa App. Halaman DingPOS di aplikasi Pengaturan iPad akan terbuka, lalu pilih bahasa di bagian Bahasa."
       },
       {
         "type": "p",
@@ -380,13 +381,13 @@ export const articles = [
     "slug": "checkout-sound",
     "category": "checkout",
     "since": "3.0",
-    "question": "Bisakah suara “Ding” setelah pembayaran dimatikan?",
+    "question": "Bisakah bunyi “Ding” setelah transaksi selesai dimatikan?",
     "keywords": [
       "suara",
       "ding",
-      "bisukan",
-      "senyap",
-      "suara pembayaran"
+      "matikan suara",
+      "suara setelah transaksi",
+      "bunyi kasir"
     ],
     "content": [
       {
@@ -482,7 +483,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Void berarti “penjualan ini tidak pernah terjadi” — gunakan untuk pesanan yang salah dicatat saat itu juga. Kalau pelanggan mengembalikan barang di kemudian hari, gunakan Retur: pesanan asli tetap tersimpan, Anda bisa mengembalikan sebagian barang saja, dan pendapatan dikurangi pada hari retur."
+        "text": "Batalkan penjualan (Void) berarti “penjualan ini tidak pernah terjadi” — gunakan untuk pesanan yang salah dicatat saat itu juga. Kalau pelanggan mengembalikan barang di kemudian hari, gunakan Retur: pesanan asli tetap tersimpan, Anda bisa mengembalikan sebagian barang saja, dan pendapatan dikurangi pada hari retur."
       }
     ],
     "related": [
@@ -520,7 +521,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Retur tidak dibatasi waktu, tetapi pesanan aslinya wajib ada. Jika retur salah dimasukkan, batalkan (void) retur tersebut dan jumlah yang bisa diretur kembali seperti semula."
+        "text": "Retur tidak dibatasi waktu, tetapi pesanan aslinya wajib ada. Jika retur salah dimasukkan, pilih Batalkan penjualan untuk membatalkan retur tersebut dan jumlah yang bisa diretur kembali seperti semula."
       }
     ],
     "related": [
@@ -576,24 +577,23 @@ export const articles = [
     "slug": "on-account",
     "category": "orders",
     "since": "2.0",
-    "question": "Bisakah pelanggan langganan berutang dan bayar belakangan?",
+    "question": "Bisakah pelanggan tetap membeli secara tempo dan membayar belakangan?",
     "keywords": [
       "penjualan tempo",
       "bon",
-      "kasbon",
       "piutang",
       "pelunasan",
-      "bayar nanti",
-      "utang pelanggan"
+      "bayar belakangan",
+      "pelanggan tetap"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Bisa. Pilih pelanggan saat bayar lalu pilih Penjualan tempo sebagai metode pembayaran. Utang harus ada yang menanggung, jadi Penjualan tempo tidak tersedia tanpa pelanggan."
+        "text": "Bisa. Pilih pelanggan saat bayar lalu pilih Penjualan tempo sebagai metode pembayaran. Setiap penjualan tempo harus terkait dengan pelanggan, jadi opsi Penjualan tempo tidak tersedia tanpa memilih pelanggan."
       },
       {
         "type": "p",
-        "text": "Untuk menagih, ganti bagian atas Pesanan ke Piutang. Utang dikelompokkan per pelanggan; buka salah satunya untuk melunasi satu pesanan, satu bulan penuh, atau semuanya — setiap kali DingPOS menanyakan bagaimana uangnya dibayar. Satu pesanan juga bisa dilunasi dari halaman rinciannya, dan pelunasan yang salah dimasukkan bisa ditarik kembali dengan Batalkan pelunasan."
+        "text": "Untuk menagih, ganti bagian atas Pesanan ke Piutang. Piutang dikelompokkan per pelanggan; buka salah satunya untuk melunasi satu pesanan, satu bulan penuh, atau semuanya — setiap kali DingPOS menanyakan bagaimana uangnya dibayar. Satu pesanan juga bisa dilunasi dari halaman rinciannya, dan pelunasan yang salah dimasukkan bisa ditarik kembali dengan Batalkan pelunasan."
       },
       {
         "type": "list",
@@ -691,7 +691,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Saat pembayaran di kasir, kolom pencarian mencocokkan nama produk sekaligus awalan barcode — ketik barcode untuk langsung memunculkan produknya. Untuk rencana dukungan pemindai barcode fisik, lihat “Will physical barcode scanners be supported?”"
+        "text": "Saat pembayaran di kasir, kolom pencarian mencocokkan nama produk sekaligus awalan barcode — ketik barcode untuk langsung memunculkan produknya. Untuk rencana dukungan pemindai barcode fisik, lihat “Apakah DingPOS mendukung pemindai barcode fisik (scanner)?”"
       }
     ],
     "related": [
@@ -777,7 +777,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ini disengaja: pembayaran di kasir tidak pernah diblokir karena stok tidak cukup. Aturan pertama kasir yang sedang melayani adalah pelanggan tidak boleh menunggu — angka yang salah di catatan bisa diperbaiki nanti, tetapi penjualan yang terhenti hilang selamanya."
+        "text": "Ini memang disengaja: proses pembayaran tidak pernah diblokir karena stok tidak cukup. Prinsip utama saat kasir beroperasi adalah pelanggan tidak boleh menunggu — angka yang salah di catatan bisa diperbaiki nanti, tetapi penjualan yang terhenti hilang selamanya."
       },
       {
         "type": "p",
@@ -944,7 +944,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tanpa Pro, setiap dari kelima titik ini menampilkan gembok kecil yang membuka penjelasan upgrade; semua bagian Statistik lainnya berfungsi seperti biasa. Laporan ini membaca data yang sudah tersimpan di toko Anda, jadi saat Pro berakhir hanya laporannya yang disembunyikan — tidak ada data yang hilang."
+        "text": "Tanpa Pro, masing-masing dari lima bagian ini menampilkan ikon gembok kecil yang membuka penjelasan tentang upgrade; semua bagian Statistik lainnya berfungsi seperti biasa. Laporan ini membaca data yang sudah tersimpan di toko Anda, jadi saat Pro berakhir hanya laporannya yang disembunyikan — tidak ada data yang hilang."
       },
       {
         "type": "note",
@@ -971,7 +971,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Harga pokok adalah kolom opsional. Produk tanpa harga pokok ditandai “laba tidak dilacak” di laporan dan tidak diikutkan dalam perhitungan laba — pendapatan tetap dihitung penuh, hanya laba yang dilewati."
+        "text": "Harga pokok adalah kolom opsional. Produk tanpa harga pokok ditandai “laba tidak dilacak” di laporan dan tidak diikutkan dalam perhitungan laba — pendapatan tetap dihitung penuh, hanya laba yang tidak dihitung."
       },
       {
         "type": "p",
@@ -1007,7 +1007,7 @@ export const articles = [
           "Beli satu gratis satu dan promo barang ke-N.",
           "Pengali poin bonus.",
           "Promo khusus tingkat anggota atau bulan ulang tahun.",
-          "Beli A gratis B, tambahan berbayar, dan paket harga tetap."
+          "Beli A dapat B, tambahan berbayar, dan Paket harga tetap."
         ]
       },
       {
@@ -1076,7 +1076,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pilih anggota saat pembayaran, lalu poin bertambah otomatis; untuk menukar, masukkan jumlah poin yang dipakai. Jika pesanan dibatalkan (Void), poin yang diperolehnya ditarik kembali dan poin yang sudah ditukar dikembalikan."
+        "text": "Pilih anggota saat pembayaran, lalu poin bertambah otomatis; untuk menukar, masukkan jumlah poin yang dipakai. Jika penjualan yang keliru dibatalkan lewat Batalkan penjualan (Void), poin yang diperoleh dari pesanan tersebut ditarik kembali dan poin yang sudah ditukar dikembalikan."
       }
     ],
     "related": [
@@ -1102,7 +1102,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tingkat bisa naik otomatis berdasarkan aturan yang Anda tentukan (misalnya total belanja kumulatif), atau diatur secara manual. Jika pesanan yang dibatalkan (Void) sempat memicu kenaikan tingkat, tingkat tersebut dikembalikan otomatis."
+        "text": "Tingkat bisa naik otomatis berdasarkan aturan yang Anda tentukan (misalnya total belanja kumulatif), atau diatur secara manual. Jika penjualan yang keliru dibatalkan lewat Batalkan penjualan (Void) dan pesanan itu sempat memicu kenaikan tingkat, tingkat tersebut dikembalikan otomatis."
       }
     ],
     "related": [
@@ -1131,7 +1131,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Cadangan disimpan di akun cloud Anda sendiri. Setiap cloud hanya menyimpan yang terbaru — satu snapshot data dan satu file foto produk — dan setiap cadangan menimpa cadangan sebelumnya."
+        "text": "Cadangan disimpan di akun cloud Anda sendiri. Setiap penyedia cloud hanya menyimpan yang terbaru — satu snapshot cadangan data dan satu file foto produk — dan setiap cadangan menimpa cadangan sebelumnya."
       },
       {
         "type": "note",
@@ -1206,7 +1206,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mengetuk Pulihkan akan membuka pratinjau terlebih dahulu: jumlah produk, pesanan, dan pelanggan di iPad ini dan di snapshot ditampilkan berdampingan, beserta setiap pesanan yang akan dihapus oleh pemulihan. Tidak ada yang berubah di iPad ini sampai Anda mengonfirmasi. Snapshot yang dibuat oleh DingPOS versi lebih baru akan meminta Anda memperbarui aplikasi lebih dulu. Foto produk juga ikut dipulihkan."
+        "text": "Mengetuk Pulihkan akan membuka pratinjau terlebih dahulu: jumlah produk, pesanan, dan pelanggan di iPad ini dan di snapshot cadangan ditampilkan berdampingan, beserta setiap pesanan yang akan dihapus oleh pemulihan. Tidak ada yang berubah di iPad ini sampai Anda mengonfirmasi. Snapshot cadangan yang dibuat oleh versi DingPOS yang lebih baru akan meminta Anda memperbarui aplikasi lebih dulu. Foto produk juga ikut dipulihkan."
       },
       {
         "type": "note",
@@ -1338,7 +1338,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Penjualan yang diimpor ditempatkan berdasarkan tanggal transaksi dan dihitung ulang dengan mata uang dan mode pajak toko Anda. Penjualan ini tidak memengaruhi stok dan tidak memberi poin selamat datang.",
+          "Penjualan yang diimpor ditempatkan berdasarkan tanggal transaksi dan dihitung ulang dengan mata uang dan mode pajak toko Anda. Penjualan ini tidak memengaruhi stok dan tidak memberi bonus selamat datang.",
           "Pelanggan dicocokkan dengan pelanggan yang sudah ada lewat nomor telepon atau email; yang tidak cocok akan dibuat baru.",
           "Pesanan yang diimpor menampilkan tanggal Diimpor pada dan nomor pesanan asal, serta tidak bisa dibatalkan (void) atau diretur.",
           "Baris yang berisi kesalahan bisa diekspor sebagai CSV yang dilengkapi alasannya — perbaiki lalu impor lagi. Baris ganda dilewati otomatis."
@@ -1378,12 +1378,12 @@ export const articles = [
         "items": [
           "Urungkan Pemulihan itu sendiri adalah pemulihan dan menyimpan salinan lain dari data yang digantikannya, jadi mengetuknya lagi akan membalik kembali.",
           "Hanya salinan terbaru yang disimpan; pemulihan berikutnya menggantikannya.",
-          "Hanya data yang kembali: produk yang ditambahkan setelah snapshot akan menampilkan gambar yang hilang."
+          "Hanya data yang kembali: produk yang ditambahkan setelah snapshot cadangan akan menampilkan gambar yang hilang."
         ]
       },
       {
         "type": "p",
-        "text": "Untuk melihat siapa yang memulihkan, kapan, dan dari snapshot mana, ketuk Lihat catatan pemulihan di layar yang sama: waktu, operator, sumber, jumlah produk / pesanan / pelanggan Sebelum dan Sesudah, serta setiap pesanan yang dihapus oleh tiap pemulihan. Catatan disimpan di iPad ini dan tidak pernah digantikan oleh pemulihan."
+        "text": "Untuk melihat siapa yang memulihkan, kapan, dan dari snapshot cadangan mana, ketuk Lihat catatan pemulihan di layar yang sama: waktu, operator, sumber, jumlah produk / pesanan / pelanggan Sebelum dan Sesudah, serta setiap pesanan yang dihapus oleh tiap pemulihan. Catatan disimpan di iPad ini dan tidak pernah digantikan oleh pemulihan."
       },
       {
         "type": "note",
@@ -1403,7 +1403,7 @@ export const articles = [
     "question": "Bagaimana cara menambah staf dan berganti operator kasir?",
     "keywords": [
       "staf",
-      "karyawan",
+      "pegawai",
       "manajer",
       "akun",
       "pin",
@@ -1411,7 +1411,7 @@ export const articles = [
       "ganti operator",
       "pergantian shift",
       "kasir",
-      "tambah karyawan"
+      "tambah staf"
     ],
     "content": [
       {
@@ -1501,7 +1501,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Tindakan (penyesuaian stok manual, pengelolaan produk, pembayaran di atas batas diskon): satu persetujuan berlaku untuk satu tindakan itu saja.",
+          "Tindakan (penyesuaian stok manual, pengelolaan produk, menyelesaikan pembayaran dengan diskon di atas batas): satu persetujuan berlaku untuk satu tindakan itu saja.",
           "Tampilan (biaya & laba, Statistik, Pengaturan, cadangan & pemulihan): persetujuan membuka akses sampai operator berganti atau aplikasi masuk ke latar belakang.",
           "Batas diskon berlaku untuk diskon manual dan diperiksa satu kali saat bayar; promo otomatis dan penukaran poin tidak dihitung."
         ]
@@ -1541,7 +1541,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gunakan log aktivitas. Di halaman Staf, ketuk Log aktivitas di kanan atas dan masukkan PIN pemilik untuk melihat tindakan sensitif di toko, dari yang terbaru: pembatalan penjualan (void), retur, penyesuaian stok manual, persetujuan, perubahan staf dan izin, perubahan PIN pemilik, perubahan harga jual dan harga pokok produk, serta penghapusan produk. Pembayaran biasa tidak dicantumkan."
+        "text": "Gunakan log aktivitas. Di halaman Staf, ketuk Log aktivitas di kanan atas dan masukkan PIN pemilik untuk melihat tindakan sensitif di toko, dari yang terbaru: pembatalan penjualan (void), retur, penyesuaian stok manual, persetujuan, perubahan staf dan izin, perubahan PIN pemilik, perubahan harga jual dan harga pokok produk, serta penghapusan produk. Transaksi kasir biasa tidak dicantumkan."
       },
       {
         "type": "list",
@@ -1549,7 +1549,7 @@ export const articles = [
           "Setiap entri menunjukkan apa yang disentuh, siapa melakukan apa dan kapan, serta hasilnya — misalnya “M harga $390 → $350”.",
           "Saring berdasarkan staf (termasuk yang dinonaktifkan), jenis tindakan, dan Hari ini / Minggu Ini / Bulan Ini.",
           "Ketuk entri yang merujuk ke pesanan, produk, atau pelanggan untuk membuka rinciannya.",
-          "Rincian pesanan, rincian produk, dan halaman setiap staf punya pintu masuk sendiri yang hanya menampilkan catatan tentangnya.",
+          "Rincian pesanan, rincian produk, dan halaman setiap staf masing-masing memiliki daftar entri sendiri yang hanya menampilkan catatan tentangnya.",
           "Produk yang sudah dihapus tetap menampilkan nama dan harganya saat itu di log."
         ]
       },
@@ -1606,11 +1606,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tidak — data Anda tetap ada di perangkat selamanya. Saat uji coba berakhir, pembayaran di kasir terkunci, tetapi Anda tetap bisa melihat pesanan, membuka laporan, dan mengelola produk."
+        "text": "Tidak — data Anda tetap ada di perangkat selamanya. Saat uji coba berakhir, fitur kasir terkunci, tetapi Anda tetap bisa melihat pesanan, membuka laporan, dan mengelola produk."
       },
       {
         "type": "p",
-        "text": "Berlangganan kapan saja dan pembayaran di kasir langsung terbuka kembali, dengan semua data persis seperti terakhir Anda tinggalkan."
+        "text": "Berlangganan kapan saja dan fitur kasir langsung terbuka kembali, dengan semua data persis seperti terakhir Anda tinggalkan."
       }
     ],
     "related": [
@@ -1637,7 +1637,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga paket mencakup pembayaran di kasir lengkap, produk, pesanan (dengan pembatalan penjualan, retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
+        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan pembatalan penjualan, retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
       },
       {
         "type": "list",
@@ -1821,7 +1821,7 @@ export const articles = [
         "items": [
           "Anggota harus dipilih saat pembayaran agar promo berlaku — kelayakan dinilai berdasarkan anggota yang sedang dipilih.",
           "Kelayakan ulang tahun membaca bulan ulang tahun anggota, jadi isi kolom ulang tahunnya; anggota tanpa tanggal ulang tahun tidak pernah dianggap pelanggan yang berulang tahun.",
-          "Kenaikan tingkat otomatis dinilai saat pembayaran selesai; jika pesanan dibatalkan (Void), kenaikan yang dipicunya dikembalikan secara otomatis."
+          "Kenaikan tingkat otomatis dinilai saat pembayaran selesai; jika penjualan dibatalkan melalui tindakan Batalkan penjualan (Void), kenaikan yang dipicunya dikembalikan secara otomatis."
         ]
       }
     ],
@@ -2036,8 +2036,9 @@ export const articles = [
   {
     "slug": "roadmap-monthly-settlement",
     "category": "roadmap",
-    "question": "Apakah akan ada laporan tutup buku bulanan?",
+    "question": "Apakah akan ada laporan pelunasan bulanan?",
     "keywords": [
+      "laporan pelunasan bulanan",
       "tutup buku bulanan",
       "laporan bulanan",
       "rekonsiliasi",
@@ -2048,19 +2049,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Belum ada laporan tutup buku bulanan khusus, tetapi semua yang Anda perlukan untuk rekonsiliasi sudah ada di aplikasi:"
+        "text": "Belum ada laporan pelunasan bulanan khusus, tetapi semua yang Anda perlukan untuk rekonsiliasi sudah ada di aplikasi:"
       },
       {
         "type": "list",
         "items": [
-          "Atur Statistik ke Bulan Ini untuk melihat pendapatan bulan itu, uang yang diterima, laba, dan rincian pembayaran.",
+          "Atur Statistik ke Bulan Ini untuk melihat pendapatan bulan itu, Kas Diterima, laba, dan rincian pembayaran.",
           "Pembelian dari pemasok dengan tempo bulanan terkumpul di Belum Lunas dalam Pembelian, dan satu bulan penuh bisa dilunasi sekaligus.",
           "Penjualan tempo ke pelanggan terkumpul di Pesanan → Piutang, dan satu bulan penuh bisa dilunasi sekaligus."
         ]
       },
       {
         "type": "p",
-        "text": "Jika Anda membutuhkan laporan tutup buku bulanan yang bisa diekspor atau dicetak, tulis kepada kami beserta kolom yang Anda perlukan. Kami menentukan prioritas pengembangan berdasarkan jumlah permintaan."
+        "text": "Jika Anda membutuhkan laporan pelunasan bulanan yang bisa diekspor atau dicetak, tulis kepada kami beserta kolom yang Anda perlukan. Kami menentukan prioritas pengembangan berdasarkan jumlah permintaan."
       }
     ],
     "related": [

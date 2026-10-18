@@ -9,7 +9,7 @@
   },
   "hero": {
     "meta_title": "DingPOS — Aplikasi Kasir (POS) untuk iPad yang Berfungsi Offline",
-    "meta_description": "DingPOS — Buka tokomu dalam 10 menit. Aplikasi kasir (POS) untuk iPad yang berfungsi offline. Datamu, kendalimu.",
+    "meta_description": "DingPOS — Buka toko Anda dalam 10 menit. Aplikasi kasir (POS) untuk iPad yang berfungsi offline. Data Anda, kendali Anda.",
     "eyebrow": "Aplikasi kasir untuk iPad",
     "title": "Buka toko Anda dalam 10 menit. Data Anda, kendali Anda.",
     "description": "DingPOS adalah aplikasi kasir untuk iPad. Tanpa akun, tanpa ketergantungan pada cloud, dan tetap berjalan tanpa internet. Produk, pesanan, dan pelanggan Anda tersimpan di perangkat Anda sendiri.",
@@ -237,7 +237,7 @@
       "included": "Termasuk",
       "not_included": "Tidak termasuk",
       "groups": {
-        "checkout": "Kasir",
+        "checkout": "Bayar",
         "catalog": "Produk & persediaan",
         "customers": "Pelanggan & promo",
         "reports": "Laporan",
@@ -422,14 +422,14 @@
     },
     "cloud_backup": {
       "title": "Cadangan cloud (opsional)",
-      "desc": "Anda dapat mengaktifkan cadangan cloud secara opsional dan memilih salah satu dari iCloud, Google Drive, atau Dropbox sebagai lokasi penyimpanan. Cadangan ditulis ke akun cloud milik Anda sendiri dan sepenuhnya tetap berada dalam kendali Anda. Kami tidak pernah menangani, menyimpan, atau mengakses isi cadangan tersebut. Mengaktifkan cadangan atau tidak, serta penyedia mana yang dipakai, sepenuhnya pilihan Anda dan dapat dimatikan kapan saja."
+      "desc": "Anda dapat mengaktifkan cadangan cloud dan memilih salah satu dari iCloud, Google Drive, atau Dropbox sebagai lokasi penyimpanan. Cadangan disimpan di akun cloud milik Anda sendiri dan sepenuhnya berada dalam kendali Anda. Kami tidak pernah menangani, menyimpan, atau mengakses isi cadangan tersebut. Anda sepenuhnya bebas memilih apakah akan mengaktifkan cadangan dan penyedia yang digunakan. Cadangan dapat dinonaktifkan kapan saja."
     },
     "no_collection": {
       "title": "Data yang tidak kami kumpulkan",
       "desc": "DingPOS tidak mengumpulkan, mengirimkan, atau membagikan konten usaha Anda. Secara khusus, kami tidak:",
       "items": [
         "Mengumpulkan data produk, pesanan, pelanggan, atau keanggotaan Anda",
-        "Menyentuh alur pembayaran atau informasi kartu kredit apa pun (aplikasi ini tidak memproses pembayaran kartu yang sebenarnya)",
+        "Terlibat dalam proses pembayaran apa pun atau mengakses informasi kartu kredit (aplikasi ini tidak memproses pembayaran kartu yang sebenarnya)",
         "Melacak lokasi Anda",
         "Membagikan data usaha Anda kepada pihak ketiga mana pun"
       ]
