@@ -272,6 +272,29 @@ test("apply: a list entry may not add a placeholder en does not have", async () 
   assert.match(text, /faq:how-to-set-up: (content\.1\.items\.0|keywords\.1): placeholders \[\{\{country\}\}\] differ/);
 });
 
+test("sync --mode review --since: only units whose translation changed since the ref, plus --ids", async () => {
+  const { paths, appRepo } = fixture();
+  await translateAll(paths, appRepo);
+  const git = (...args) => execFileSync("git", args, { cwd: paths.root, encoding: "utf8" }).trim();
+  git("init", "-q");
+  git("add", "-A");
+  git("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "ja");
+  const base = git("rev-parse", "HEAD");
+
+  await sync(paths, "ja", { appRepo, mode: "review" });
+  const fix = writeOut(paths, "ui-site", (u) => (u.id === "ui:nav.home" ? "トップ" : JA[u.id]), "ui-site.fix");
+  utimesSync(fix, new Date(), new Date(Date.now() + 1000));
+  assert.deepEqual((await apply(paths, "ja")).rejected, []);
+
+  const changed = await sync(paths, "ja", { appRepo, mode: "review", since: base });
+  assert.deepEqual(changed.segments.map((s) => [s.segment, s.count]), [["ui-site", 1]]);
+  const [unit] = readPacket(paths, "ui-site").units;
+  assert.deepEqual([unit.id, unit.current], ["ui:nav.home", "トップ"]);
+
+  const withKept = await sync(paths, "ja", { appRepo, mode: "review", since: base, ids: ["faq:backup-data"] });
+  assert.deepEqual(withKept.segments.map((s) => [s.segment, s.count]), [["ui-site", 1], ["faq-backup", 1]]);
+});
+
 test("sync: fails fast without the app's strings or glossary, and on a --since ref that is not a commit", async () => {
   const { paths, appRepo } = fixture();
   newLanguage(paths, "ja");
