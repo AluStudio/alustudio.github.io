@@ -40,7 +40,7 @@
 
 ### DEC-005: 翻譯語言的 pack 由工具產生
 
-**Choice**: `npm run l10n -- apply <code>` 寫出 `dingpos/src/locales/<code>/translation.json` 與 `dingpos/src/data/faq/articles.<code>.js`。非文字欄位（slug、category、related、since、icon、group、type）一律從 en 複製，只有文字欄位來自翻譯；檔頭寫明不可手改。套用時拒絕 `{{…}}` placeholder 和 en 不同的值、空值，以及從舊版 en 翻出來的值。
+**Choice**: `npm run l10n -- apply <code>` 寫出 `dingpos/src/locales/<code>/translation.json` 與 `dingpos/src/data/faq/articles.<code>.js`。非文字欄位（slug、category、related、since、icon、group、type）一律從 en 複製，只有文字欄位來自翻譯；檔頭寫明不可手改。套用時拒絕 `{{…}}` placeholder 和 en 不同的值、空值，以及從舊版 en 翻出來的值。例外：key 名稱以 `_before` / `_after` 結尾的 UI 字串是夾住行內元素（例如 `<Price>`）的句子片段，語序可能讓其中一邊是空的（zh-Hant 的 `pricing.or_annual_after` 就是空字串），所以這類 key 可以是空值；`copy-spa-pages.js` 的 UI key 檢查用同一條規則。
 **Alternatives**: translator 直接編輯 pack — slug、related、since 會在 29 份檔案裡各自漂移，build 只能事後擋。
 **Rationale**: 和 zh-Hans 由 generator 產生是同一個理由；欄位分類沿用 `scripts/gen-zh-hans.mjs` 的 pack traversal（抽成共用模組）。
 **Satisfies**: REQ-002, REQ-010, REQ-011
