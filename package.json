@@ -5,7 +5,8 @@
   "description": "Alu Studio site — Cloudflare Worker + static assets, source repo for alu-studio.com",
   "scripts": {
     "test": "node --test 'src/**/*.test.mjs' 'scripts/**/*.test.mjs'",
-    "zh-hans": "node scripts/gen-zh-hans.mjs"
+    "zh-hans": "node scripts/gen-zh-hans.mjs",
+    "l10n": "node scripts/l10n.mjs"
   },
   "repository": {
     "type": "git",
