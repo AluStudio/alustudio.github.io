@@ -1319,7 +1319,7 @@ export const articles = [
     "slug": "import-csv",
     "category": "backup",
     "since": "2.3",
-    "question": "다른 POS나 엑셀 파일의 상품과 매출을 가져올 수 있나요?",
+    "question": "다른 POS나 스프레드시트에서 상품과 매출을 가져올 수 있나요?",
     "keywords": [
       "가져오기",
       "csv",
