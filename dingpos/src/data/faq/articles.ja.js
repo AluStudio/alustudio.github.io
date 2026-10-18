@@ -555,7 +555,7 @@ export const articles = [
       "内金",
       "受け取り",
       "残額",
-      "取り置き"
+      "キャンセル"
     ],
     "content": [
       {
