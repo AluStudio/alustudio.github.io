@@ -1697,7 +1697,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ve a Ajustes → Promociones, toca el botón + (Agregar), elige el tipo de promoción por monto mínimo y sigue estos pasos:"
+        "text": "Ve a Ajustes → Promociones, toca Agregar, elige el tipo de promoción por monto mínimo y sigue estos pasos:"
       },
       {
         "type": "steps",
