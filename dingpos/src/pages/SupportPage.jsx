@@ -19,10 +19,9 @@ function Highlight({ text, tokens }) {
 }
 
 function SupportPage() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
-  const lang = i18n.resolvedLanguage || i18n.language;
-  const { categories, articles } = getFaq(lang);
+  const { categories, articles } = getFaq();
 
   const [rawQuery, setRawQuery] = useState("");
   const [query, setQuery] = useState("");
@@ -35,7 +34,7 @@ function SupportPage() {
     return () => {
       document.title = previousTitle;
     };
-  }, [t, lang]);
+  }, [t]);
 
   // Debounce keystrokes so ranking runs on settled input.
   // Keyboard selection resets whenever the effective query changes.

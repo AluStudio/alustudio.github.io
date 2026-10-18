@@ -1,26 +1,24 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-
-import zhHant from "./locales/zh-Hant/translation.json";
-import zhHans from "./locales/zh-Hans/translation.json";
-import en from "./locales/en/translation.json";
+import registry from "../l10n/languages.json";
 
 const APP_BASE = "/dingpos";
 
 // Each language has its own URL so search engines can index it; the URL is
 // the only language signal (no navigator / storage detection) — see
-// docs/specs/seo-aeo.md §多語系 URL. `pathPrefix` mirrors copy-spa-pages.js.
-export const supportedLanguages = [
-  { code: "zh-Hant", label: "繁體中文", pathPrefix: "/zh-hant" },
-  { code: "zh-Hans", label: "简体中文", pathPrefix: "/zh-hans" },
-  { code: "en",      label: "English",  pathPrefix: "" },
-];
+// docs/specs/seo-aeo.md §多語系 URL. Only shipped languages get URLs.
+export const supportedLanguages = registry.languages
+  .filter((l) => l.shipped)
+  .map(({ code, label, hreflang, pathPrefix }) => ({
+    code,
+    label,
+    hreflang,
+    pathPrefix: pathPrefix ? `/${pathPrefix}` : "",
+  }));
 
-const resources = {
-  "zh-Hant": { translation: zhHant },
-  "zh-Hans": { translation: zhHans },
-  en:        { translation: en },
-};
+// One language per page load (the URL decides it), so only that language's
+// strings are fetched instead of bundling every language into every page.
+const uiModules = import.meta.glob("./locales/*/translation.json", { import: "default" });
 
 function languageFromPath(pathname) {
   const match = supportedLanguages.find(
@@ -47,28 +45,27 @@ export function localizedUrl(code, routePath, search = "", hash = "") {
   return `${APP_BASE}${pathPrefix}${path}${search}${hash}`;
 }
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
+/** Language code of this page, e.g. "zh-Hant" — the locale folder and FAQ pack name. */
+export const currentLanguage = current.code;
+
+/**
+ * Resolves once this page's strings are loaded. Every shipped language has
+ * the full en key set (checked by copy-spa-pages.js), so there is no fallback
+ * language.
+ */
+export const i18nReady = uiModules[`./locales/${current.code}/translation.json`]().then((translation) =>
+  i18n.use(initReactI18next).init({
+    resources: { [current.code]: { translation } },
     lng: current.code,
-    fallbackLng: "en",
-    supportedLngs: supportedLanguages.map((l) => l.code),
-    load: "currentOnly",
+    fallbackLng: false,
     interpolation: {
       escapeValue: false
     },
-  });
+  }),
+);
 
-function syncDocumentLang(lng) {
-  const resolved = lng || i18n.resolvedLanguage || i18n.language;
-  if (resolved) {
-    document.documentElement.lang = resolved;
-    document.documentElement.dir = "ltr";
-  }
-}
-
-i18n.on("languageChanged", syncDocumentLang);
-syncDocumentLang(i18n.resolvedLanguage || i18n.language);
+// hreflang, not the code: es-419's pages are <html lang="es">.
+document.documentElement.lang = current.hreflang;
+document.documentElement.dir = "ltr";
 
 export default i18n;
