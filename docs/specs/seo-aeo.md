@@ -37,7 +37,7 @@ read_when:
 
 只有獨立 URL 的語言才能被索引。同一個 URL 在 client 端切換語言，crawler 只看得到一種語言：Googlebot 從美國發出、不帶 `Accept-Language`（[Google](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites)）。
 
-- DingPOS 與 Sotto 有多語系 URL，英文都不加前綴（同時是 `x-default`），各語言的子路徑一一對應，前綴是 hreflang 代碼的小寫。DingPOS 的語言清單是 `dingpos/l10n/languages.json`：鏡像 app 的 `l10n/languages.json`（同樣的 code、kind 與順序），共 32 種，只有 `shipped: true` 的語言有 URL、hreflang 與 sitemap 條目（目前 en、zh-Hant、zh-Hans、ja）。Sotto 有十二種：`zh-hant`、`zh-hans`、`ja`、`ko`、`de`、`es`、`fr`、`it`、`pt-br`、`ru`、`ar`。home、pikgeon、babbby 仍只有 prerender 語言可被索引。
+- DingPOS 與 Sotto 有多語系 URL，英文都不加前綴（同時是 `x-default`），各語言的子路徑一一對應，前綴是 hreflang 代碼的小寫。DingPOS 的語言清單是 `dingpos/l10n/languages.json`：鏡像 app 的 `l10n/languages.json`（同樣的 code、kind 與順序），共 32 種，只有 `shipped: true` 的語言有 URL、hreflang 與 sitemap 條目；哪些語言已上線，以 registry 為準。Sotto 有十二種：`zh-hant`、`zh-hans`、`ja`、`ko`、`de`、`es`、`fr`、`it`、`pt-br`、`ru`、`ar`。home、pikgeon、babbby 仍只有 prerender 語言可被索引。
 - hreflang 只標語言、不標地區（`ja`，不是 `ja-JP`）：網站不分地區內容，加上地區會把其他地區的同語使用者排除在外。地區碼只在 Google 接受時才保留（ISO 3166-1 alpha-2，例如 `pt-BR`）：Google 不接受 `es-419`，所以 DingPOS 的 es-419 以 `es` 上線，hreflang、`<html lang>` 都是 `es`，前綴是 `es/`；檔名與 app 對照仍用 `es-419`。
 - URL 是唯一的語言訊號：不看 navigator、不讀 localStorage，也不依使用者語系自動導向。Google 明確建議避免這種導向，因為會讓使用者和 crawler 看不到其他語言版本。語言切換器直接導到同一頁另一個語言的 URL。
 - 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（該 app 的每種語言加 `x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。`og:locale` 對應：`en_US`、`zh_TW`、`zh_CN`、`ja_JP`、`ko_KR`、`de_DE`、`es_ES`、`fr_FR`、`it_IT`、`pt_BR`、`ru_RU`、`ar_AR`；DingPOS 每種語言的值寫在 registry 的 `ogLocale`。

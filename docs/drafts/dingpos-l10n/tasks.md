@@ -44,7 +44,7 @@ Checkpoint: `npm test` green; merged to main.
 
 Independent Test: after one worker run, `git log origin/main` shows the merge of `dingpos-l10n/<code>` and the deployed `/dingpos/<prefix>/` serves that language.
 
-- [ ] T022 [REQ-012, REQ-013] Create `.pi/prompts/l10n-commander.md` and `.pi/prompts/l10n-worker.md` from the app's prompts per plan DEC-009 (single checkout, branch only, serial, clean-tree check before each language, BLOCKED commits WIP then returns to main). Verify: `/l10n-worker` and `/l10n-commander` appear in pi's prompt list
+- [x] T022 [REQ-012, REQ-013] Create `.pi/prompts/l10n-commander.md` and `.pi/prompts/l10n-worker.md` from the app's prompts per plan DEC-009 (single checkout, branch only, serial, clean-tree check before each language, BLOCKED commits WIP then returns to main). Verify: `/l10n-worker` and `/l10n-commander` appear in pi's prompt list
 - [ ] T023 [REQ-012] Run the commander inside Herdr for th, ko, vi, id, es-419, fr, de, pt-BR, it, nl, ms, tr, sv, da, nb, fi, et, el, hu, bg, sq, ka, mn, uz, km, lo, hi, bn. Verify: `npm run l10n -- progress show` → every language `done` or `blocked` with a reason
 
 Checkpoint: every `done` language deployed; blocked languages listed with their open findings.
