@@ -35,8 +35,8 @@ Checkpoint: `npm test` and the DingPOS build green; merge `l10n` into main with 
 Independent Test: change one en FAQ article on a scratch branch → `npm test` fails naming `ja` and that slug; `npm run l10n -- sync ja` → a packet with only that article.
 
 - [x] T019 [REQ-010] `scripts/l10n.mjs` `check`: missing / extra / stale units for every shipped translated language; repo-state test in `scripts/l10n.test.mjs`. Verify: `npm test` → GREEN on main; fixture test with a changed en article → fails naming the slug
-- [ ] T020 [REQ-011] `sync --mode review --since <ref>` packs only units changed since `<ref>`. Verify: `npm test` → GREEN
-- [ ] T021 [REQ-010, REQ-011] Docs: the en-change procedure (edit en → sync → translate → apply → test) in `docs/specs/seo-aeo.md` beside §簡中由繁中產生. Verify: `grep -n 'npm run l10n' docs/specs/seo-aeo.md` → hit
+- [x] T020 [REQ-011] `sync --mode review --since <ref>` packs only units changed since `<ref>`. Verify: `npm test` → GREEN
+- [x] T021 [REQ-010, REQ-011] Docs: the en-change procedure (edit en → sync → translate → apply → test) in `docs/specs/seo-aeo.md` beside §簡中由繁中產生. Verify: `grep -n 'npm run l10n' docs/specs/seo-aeo.md` → hit
 
 Checkpoint: `npm test` green; merged to main.
 
