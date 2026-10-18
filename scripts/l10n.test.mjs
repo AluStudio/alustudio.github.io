@@ -5,7 +5,7 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync, utimesSync
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { apply, enHash, enUnits, newLanguage, progress, readManifest, readRegistry, sitePaths, sync, textOf } from "./l10n.mjs";
+import { apply, check, enHash, enUnits, newLanguage, progress, readManifest, readRegistry, sitePaths, sync, textOf } from "./l10n.mjs";
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -314,6 +314,47 @@ test("apply: a structure-only en change (related, since) reaches the pack withou
   assert.deepEqual(pack.articles[0].related, []);
   assert.equal(pack.articles[0].question, "ストアの設定方法は？");
   assert.equal((await sync(paths, "ja", { appRepo })).total, 0);
+});
+
+/** Ship exactly `codes` among the fixture's translated languages, as a worker does once a language passes review. */
+function shipTranslated(paths, codes) {
+  const registry = JSON.parse(readFileSync(paths.registry, "utf8"));
+  for (const l of registry.languages) if (l.kind === "translated") l.shipped = codes.includes(l.code);
+  writeFileSync(paths.registry, JSON.stringify(registry));
+}
+
+test("every shipped translated language in this repo is current with en (run `npm run l10n -- sync <code>`)", async () => {
+  assert.deepEqual(await check(sitePaths(REPO)), []);
+});
+
+test("check: an en article change fails the shipped language, naming the article", async () => {
+  const { paths, appRepo } = fixture();
+  await translateAll(paths, appRepo);
+  shipTranslated(paths, ["ja"]);
+  assert.deepEqual(await check(paths), []);
+  write(paths.pack("en"), EN_PACK.replace("Tap Back Up Now.", "Tap Back Up Now in Settings."));
+  assert.deepEqual(await check(paths), ["ja: 1 stale unit(s) — faq:backup-data — en changed since translation; npm run l10n -- sync ja"]);
+});
+
+test("check: a new en article or UI key is missing; an unshipped language is not checked", async () => {
+  const { paths, appRepo } = fixture();
+  await translateAll(paths, appRepo);
+  write(paths.ui("en"), JSON.stringify({ ...EN_UI, nav: { ...EN_UI.nav, support: "Support" } }));
+  shipTranslated(paths, []);
+  assert.deepEqual(await check(paths), [], "ja is not shipped yet");
+  shipTranslated(paths, ["ja"]);
+  assert.deepEqual(await check(paths), ["ja: 1 missing unit(s) — ui:nav.support — npm run l10n -- sync ja"]);
+});
+
+test("check: a hand edit or an unapplied en structure change fails until apply regenerates the pack", async () => {
+  const { paths, appRepo } = fixture();
+  await translateAll(paths, appRepo);
+  shipTranslated(paths, ["ja"]);
+  write(paths.pack("ja"), readFileSync(paths.pack("ja"), "utf8").replace('"since": "2.0"', '"since": "2.1"'));
+  assert.match((await check(paths)).join("\n"), /articles\.ja\.js is not what apply generates/);
+  write(paths.pack("en"), EN_PACK.replace('related: ["backup-data"]', "related: []"));
+  await apply(paths, "ja", { files: [] });
+  assert.deepEqual(await check(paths), []);
 });
 
 test("progress: starts from the registry's translated languages, shipped ones done; set nests dotted keys", () => {

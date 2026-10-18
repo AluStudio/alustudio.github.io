@@ -25,6 +25,7 @@
  *   npm run l10n -- new <code>
  *   npm run l10n -- sync <code> [--mode review] [--since <ref>] [--ids <id,…>] [--app-repo <path>]
  *   npm run l10n -- apply <code> [--dry-run] [<out file> …]
+ *   npm run l10n -- check                 exit 1 on any missing, extra or stale unit of a shipped language
  *   npm run l10n -- progress show|path|next|report <code>|get <code>|set <code> key=value …
  *
  * Procedure: docs/specs/seo-aeo.md §翻譯語言.
@@ -655,6 +656,39 @@ export async function apply(paths, code, { files = null, dryRun = false } = {}) 
   return { written: dryRun ? 0 : incoming.size, valid: incoming.size, rejected, enIssues };
 }
 
+// ── check ────────────────────────────────────────────────────
+
+/**
+ * Problems of every shipped translated language: units missing or extra
+ * against en, units translated from an en text that has changed since
+ * (stale), and generated files that differ from a fresh rebuild (hand-edited,
+ * or an en structure change not yet applied). `npm test` runs this on the repo.
+ */
+export async function check(paths) {
+  const en = await readEn(paths);
+  const units = enUnits(en);
+  const unitIds = new Set(units.map((u) => u.id));
+  const problems = [];
+  for (const { code } of readRegistry(paths).filter((l) => l.kind === "translated" && l.shipped)) {
+    const language = await readLanguage(paths, code);
+    const current = translatedUnits(language);
+    const manifest = readManifest(paths, code);
+    const list = (label, ids, hint) => {
+      if (ids.length) problems.push(`${code}: ${ids.length} ${label} — ${ids.join(", ")} — ${hint}`);
+    };
+    list("missing unit(s)", units.filter((u) => !current.has(u.id) || !(u.id in manifest)).map((u) => u.id), `npm run l10n -- sync ${code}`);
+    list("stale unit(s)", units.filter((u) => u.id in manifest && manifest[u.id] !== u.enHash).map((u) => u.id), `en changed since translation; npm run l10n -- sync ${code}`);
+    const extra = [...new Set([...Object.keys(manifest), ...current.keys()])].filter((id) => !unitIds.has(id));
+    list("extra unit(s)", extra, `not in en; npm run l10n -- apply ${code}`);
+    for (const [file, text] of Object.entries(renderOutputs(paths, code, en, current, language.pack))) {
+      if (!existsSync(file) || readFileSync(file, "utf8") !== text) {
+        problems.push(`${code}: ${rel(paths, file)} is not what apply generates (edited by hand, or en structure changed) — npm run l10n -- apply ${code}`);
+      }
+    }
+  }
+  return problems;
+}
+
 // ── progress ─────────────────────────────────────────────────
 
 export const stateDir = () => process.env.ALUSTUDIO_SITE_L10N_STATE ?? join(homedir(), ".local/state/alustudio-site-l10n");
@@ -736,6 +770,12 @@ async function main(argv) {
   if (command === "progress") {
     console.log(progress(paths, args));
     return 0;
+  }
+  if (command === "check") {
+    const problems = await check(paths);
+    for (const problem of problems) console.error(`  ✗ ${problem}`);
+    console.log(problems.length ? `l10n check failed: ${problems.length} problem(s)` : "l10n check: every shipped translated language is current with en");
+    return problems.length ? 1 : 0;
   }
   if (command === "new" && args[0]) {
     const written = newLanguage(paths, args[0]);
