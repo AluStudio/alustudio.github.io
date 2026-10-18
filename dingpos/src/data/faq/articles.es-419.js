@@ -207,7 +207,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "La moneda y el modo de impuesto (incluido / no incluido) se bloquean al terminar la configuración. Todos tus pedidos anteriores se calcularon con ellos, así que cambiarlos a medias dañaría tus reportes."
+        "text": "La moneda y el modo de impuesto (incluido / no incluido) se bloquean al terminar la configuración. Todos tus pedidos anteriores se calcularon con ellos, así que cambiarlos después dañaría tus reportes."
       },
       {
         "type": "note",
@@ -269,7 +269,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Los carritos solo viven en la memoria: los que no se han cobrado se borran al cerrar la app por completo."
+        "text": "Los carritos se guardan solo en la memoria: los que no se hayan cobrado se borran al cerrar la app por completo."
       }
     ],
     "related": [
@@ -347,7 +347,7 @@ export const articles = [
   {
     "slug": "payment-methods",
     "category": "checkout",
-    "question": "¿Qué métodos de pago acepta DingPOS?",
+    "question": "¿Qué métodos de pago puedo registrar en DingPOS?",
     "keywords": [
       "pago",
       "efectivo",
@@ -597,7 +597,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Los ingresos por ventas cuentan el día en que sale la mercancía; el dinero recibido y los puntos de lealtad esperan hasta el día en que se liquida.",
+          "Los ingresos por ventas cuentan el día en que sale la mercancía; el dinero recibido y los puntos esperan hasta el día en que se liquida.",
           "Los pedidos sin liquidar llevan una insignia ámbar en la lista, y el detalle del cliente muestra cuánto debe en ese momento.",
           "Un cliente con pedidos sin liquidar no se puede eliminar."
         ]
@@ -623,7 +623,7 @@ export const articles = [
       "notas",
       "apuntes",
       "comentario",
-      "observación"
+      "nota para pedido"
     ],
     "content": [
       {
@@ -774,7 +774,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Es a propósito: el cobro nunca se bloquea por falta de stock. La primera regla de una caja en vivo es que el cliente no espere: un número equivocado en el sistema se corrige después, pero una venta interrumpida se pierde para siempre."
+        "text": "Es a propósito: el cobro nunca se bloquea por falta de stock. La primera regla de una caja en funcionamiento es que el cliente no espere: un número equivocado en papel se puede corregir después, pero una venta interrumpida se pierde para siempre."
       },
       {
         "type": "p",
@@ -836,7 +836,7 @@ export const articles = [
     "keywords": [
       "ingresos por ventas",
       "dinero recibido",
-      "ingresos",
+      "dinero que entra",
       "conciliar",
       "anticipo",
       "venta a cuenta"
@@ -932,7 +932,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Comparación de ventas: a la derecha de la barra de periodo, compara con el mismo periodo del año pasado o con el periodo anterior (un solo día contra el mismo día de la semana pasada, esta semana contra la semana pasada, este mes contra el mes pasado, este año contra el año pasado, un rango personalizado contra la misma cantidad de días anteriores). El indicador de Dinero recibido muestra la diferencia y la tasa de crecimiento, y el gráfico de ingresos agrega una línea más clara para el periodo de comparación. Mientras un periodo sigue en curso, el periodo de comparación se corta en el mismo momento.",
+          "Comparación de ventas: a la derecha de la barra de periodo, compara con el mismo periodo del año pasado o con el periodo anterior (un solo día contra el mismo día de la semana pasada, esta semana contra la semana pasada, este mes contra el mes pasado, este año contra el año pasado, un rango personalizado contra la misma cantidad de días anteriores). El indicador de Dinero recibido muestra la diferencia y la tasa de crecimiento, y el gráfico de ingresos por ventas agrega una línea más clara para el periodo de comparación. Mientras un periodo sigue en curso, el periodo de comparación se corta en el mismo momento.",
           "Día × hora: cambia el encabezado Ventas en el tiempo a Día × hora para ver un mapa de calor de siete días y 24 horas: cuanto más oscura la celda, más vendiste. Alterna entre ingresos y pedidos; con una comparación activa, verás qué horas crecieron y cuáles bajaron.",
           "Productos de baja rotación: cambia el encabezado de la tarjeta de ranking a Productos de baja rotación para listar los productos de menos a más ventas, con el stock actual y la última fecha en que se vendió cada uno. Los productos que nunca se vendieron aparecen como Nunca vendido. De forma predeterminada solo se muestran los productos con stock.",
           "Tasa de recompra: la última línea del indicador de clientes es la proporción de miembros que compraron en el periodo y que han comprado dos o más veces en total.",
@@ -1518,7 +1518,7 @@ export const articles = [
     "question": "¿Cómo veo quién anuló un pedido, ajustó el stock o cambió un precio?",
     "keywords": [
       "registro de actividad",
-      "auditoría",
+      "registro de cambios",
       "quién cambió",
       "anulación",
       "cambio de precio",
@@ -1538,7 +1538,7 @@ export const articles = [
           "Cada registro muestra qué se tocó, quién hizo qué y cuándo, y el resultado, por ejemplo «M precio $390 → $350».",
           "Filtra por miembro del personal (incluidos los desactivados), tipo de acción y Hoy / Esta semana / Este mes.",
           "Toca un registro que apunte a un pedido, producto o cliente para abrir su detalle.",
-          "El detalle del pedido, el detalle del producto y la página de cada miembro del personal tienen su propio acceso, que muestra solo los registros que les corresponden.",
+          "El detalle del pedido, el detalle del producto y la página de cada miembro del personal tienen su propia lista de registros, que muestra solo los que les corresponden.",
           "Los productos eliminados siguen mostrando en el registro su nombre y precio de ese momento."
         ]
       },
@@ -1575,7 +1575,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Todo lo que crees durante la prueba (productos, pedidos, miembros) se conserva completo. Tus datos nunca se eliminan, te suscribas o no después."
+        "text": "Todo lo que crees durante la prueba (productos, pedidos, miembros) se conserva por completo. Tus datos nunca se eliminan, te suscribas o no después."
       }
     ],
     "related": [
@@ -1597,11 +1597,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "No: tus datos se quedan en tu dispositivo para siempre. Cuando termina la prueba, el cobro se bloquea, pero aún puedes consultar pedidos, ver reportes y administrar productos."
+        "text": "No: tus datos se quedan en tu dispositivo para siempre. Cuando termina la prueba, se bloquea la opción de cobrar, pero aún puedes consultar pedidos, ver reportes y administrar productos."
       },
       {
         "type": "p",
-        "text": "Suscríbete cuando quieras y el cobro se desbloquea al instante, con todos tus datos tal como los dejaste."
+        "text": "Suscríbete cuando quieras y la opción de cobrar se desbloquea al instante, con todos tus datos tal como los dejaste."
       }
     ],
     "related": [
@@ -1697,7 +1697,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ve a Ajustes → Promociones → Agregar, elige el tipo de promoción por monto mínimo y sigue estos pasos:"
+        "text": "Ve a Ajustes → Promociones, toca el botón + (Agregar), elige el tipo de promoción por monto mínimo y sigue estos pasos:"
       },
       {
         "type": "steps",
@@ -1726,7 +1726,7 @@ export const articles = [
   {
     "slug": "guide-bogo",
     "category": "promotion-guide",
-    "question": "Cómo configurar ofertas 2x1 y de “el tercero gratis”",
+    "question": "Cómo configurar ofertas 2x1 y de descuento en el artículo N, como “el tercero gratis”",
     "keywords": [
       "2x1",
       "compra uno y llévate otro",
@@ -1775,7 +1775,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Cuando califican varios multiplicadores a la vez, solo se aplica el más alto: nunca se multiplican entre sí ni se acumulan.",
+          "Cuando se cumplen las condiciones de varios multiplicadores a la vez, solo se aplica el más alto: nunca se multiplican entre sí ni se acumulan.",
           "El monto mínimo se revisa después de canjear puntos: si al canjear puntos el total baja del mínimo, el multiplicador no se activa esa vez.",
           "Para acumular puntos hay que seleccionar un miembro al cobrar: los pedidos sin miembro no ganan puntos, así que el multiplicador no tiene nada que multiplicar."
         ]
@@ -1842,7 +1842,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Después de tocar Rechazar, la misma sugerencia no vuelve a aparecer en este carrito; con un carrito nuevo o vaciado se vuelve a ofrecer.",
-          "Si aparece una sugerencia nueva antes de confirmar el cobro, hay que Aceptarla o Rechazarla antes de poder enviar el pedido.",
+          "Si aparece una sugerencia nueva antes de confirmar el cobro, hay que Aceptarla o Rechazarla antes de poder confirmar el pedido.",
           "Los artículos de regalo y de complemento no pueden recibir más descuentos de otras promociones de descuento, y no cuentan para los mínimos de otras promociones."
         ]
       },
@@ -1911,7 +1911,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Cuando califican varias promociones a la vez, tres opciones controlan el orden y cómo interactúan:"
+        "text": "Cuando varias promociones cumplen las condiciones a la vez, tres opciones controlan el orden y cómo interactúan:"
       },
       {
         "type": "list",

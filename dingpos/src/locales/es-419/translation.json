@@ -8,9 +8,9 @@
     "support": "Preguntas frecuentes"
   },
   "hero": {
-    "meta_title": "DingPOS — App de punto de venta para iPad que funciona sin conexión",
+    "meta_title": "DingPOS — App de punto de venta (POS) para iPad que funciona sin conexión",
     "meta_description": "DingPOS — Abre tu tienda en 10 minutos. Un punto de venta para iPad que funciona sin conexión. Tus datos, bajo tu control.",
-    "eyebrow": "Punto de venta para iPad",
+    "eyebrow": "Punto de venta (POS) para iPad",
     "title": "Abre tu tienda en 10 minutos. Tus datos, bajo tu control.",
     "description": "DingPOS es un punto de venta para iPad. Sin cuenta, sin depender de la nube y sigue funcionando sin internet. Tus productos, pedidos y clientes se quedan en tu propio dispositivo.",
     "download": "Descargar en el App Store",
@@ -123,7 +123,7 @@
   "privacy_band": {
     "eyebrow": "Respaldo y privacidad",
     "title": "Sin cuenta, nadie puede llevarse tus datos",
-    "lead": "DingPOS no te pide registrarte. Tus cuentas viven en el iPad y, si quieres respaldos, van a una cuenta en la nube que ya es tuya.",
+    "lead": "DingPOS no te pide registrarte. Tus registros se guardan en el iPad y, si quieres respaldos, van a una cuenta en la nube que ya es tuya.",
     "items": [
       "Elige entre iCloud, Google Drive o Dropbox",
       "Respaldo manual, cuando lo necesites",
@@ -173,7 +173,7 @@
           "Cobro completo con hasta 10 carritos",
           "Productos con variantes, códigos de barras, fotos y categorías",
           "Historial de pedidos, anulaciones, devoluciones y cambios",
-          "Panel del negocio: ingresos, utilidad y más vendidos",
+          "Panel del negocio: ingresos por ventas, utilidad y más vendidos",
           "Respaldo y restauración en la nube",
           "El cobro funciona sin internet"
         ],
@@ -299,7 +299,7 @@
         },
         "dashboard": {
           "name": "Panel del negocio",
-          "desc": "Ingresos, utilidad, descuentos, mezcla de formas de pago y más vendidos"
+          "desc": "Ingresos por ventas, utilidad, descuentos, mezcla de formas de pago y más vendidos"
         },
         "comparison": {
           "name": "Comparación de periodos",
@@ -429,7 +429,7 @@
       "desc": "DingPOS no recopila, transmite ni comparte nada del contenido de tu negocio. En concreto, no hacemos lo siguiente:",
       "items": [
         "Recopilar tus datos de productos, pedidos, clientes o membresías",
-        "Tocar ningún flujo de pago ni información de tarjetas de crédito (la app no procesa pagos reales con tarjeta)",
+        "Intervenir en ningún flujo de pago ni manejar información de tarjetas de crédito (la app no procesa pagos reales con tarjeta)",
         "Rastrear tu ubicación",
         "Compartir los datos de tu negocio con terceros"
       ]
@@ -477,7 +477,7 @@
     },
     "subscription": {
       "title": "Suscripción y pago",
-      "desc": "DingPOS ofrece una prueba gratuita de 30 días desde la primera instalación, durante la cual están disponibles todas las funciones del plan Pro; si compras cualquier plan durante la prueba, esta termina y el plan comprado se aplica desde el momento de la compra. Después de la prueba, para seguir usando el cobro se requiere una suscripción a uno de los planes (Lite, Standard o Pro), comprada mediante una compra dentro de la app del App Store; el contenido y los precios de los planes aparecen en la página de precios (alu-studio.com/dingpos/pricing), y el precio que se cobra es el que se muestra en el App Store. Sin suscripción, la consulta y la administración de productos siguen disponibles y tus datos nunca se eliminan. La suscripción se renueva automáticamente, a menos que la canceles al menos 24 horas antes de que termine el periodo vigente. Puedes administrar o cancelar tu suscripción en cualquier momento en los ajustes de la cuenta del App Store de tu dispositivo. Las suscripciones compradas se pueden restaurar."
+      "desc": "DingPOS ofrece una prueba gratuita de 30 días desde la primera instalación, durante la cual están disponibles todas las funciones del plan Pro; si compras cualquier plan durante la prueba, esta termina y el plan comprado se aplica desde el momento de la compra. Después de la prueba, para seguir usando el cobro se requiere una suscripción a uno de los planes (Lite, Standard o Pro), comprada mediante una compra dentro de la app del App Store; el contenido y los precios de los planes aparecen en la página de precios (alu-studio.com/dingpos/pricing), y el precio que se cobra es el que se muestra en el App Store. Sin suscripción, puedes seguir explorando la app y administrando productos, y tus datos nunca se eliminan. La suscripción se renueva automáticamente, a menos que la canceles al menos 24 horas antes de que termine el periodo vigente. Puedes administrar o cancelar tu suscripción en cualquier momento en los ajustes de la cuenta del App Store de tu dispositivo. Las suscripciones compradas se pueden restaurar."
     },
     "restrictions": {
       "title": "Restricciones",
@@ -499,7 +499,7 @@
     },
     "disclaimer": {
       "title": "Exención de garantías",
-      "desc": "DingPOS se ofrece «tal cual», sin garantías de ningún tipo, expresas o implícitas. No garantizamos que la app funcione sin interrupciones ni que esté totalmente libre de errores. DingPOS es una herramienta de apoyo para tu operación; la exactitud final del cálculo de impuestos, las cantidades de stock y todos los montos, así como el cumplimiento de la normativa local, son tu responsabilidad de verificar. En la máxima medida que permita la ley, no somos responsables de ningún daño directo, indirecto, incidental o consecuente derivado del uso de la app."
+      "desc": "DingPOS se ofrece «tal cual», sin garantías de ningún tipo, expresas o implícitas. No garantizamos que la app funcione sin interrupciones ni que esté totalmente libre de errores. DingPOS es una herramienta de apoyo para tu operación; te corresponde verificar la exactitud final de los cálculos de impuestos, las cantidades de stock y todos los montos, así como el cumplimiento de la normativa local. En la máxima medida que permita la ley, no somos responsables de ningún daño directo, indirecto, incidental o consecuente derivado del uso de la app."
     },
     "liability": {
       "title": "Limitación de responsabilidad",
