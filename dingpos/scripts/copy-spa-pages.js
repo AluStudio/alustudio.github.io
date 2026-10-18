@@ -113,10 +113,19 @@ function leaves(value, path = [], out = new Map()) {
 // (a <Price>); a language's word order can leave one side empty.
 const mayBeEmpty = (key) => /_(before|after)$/.test(key);
 
+// Pages render lists with t(key, { returnObjects: true }) and drop anything
+// that is not an array, so an en list stored as an object would vanish silently.
+function shapeErrors(en, value, code, path = []) {
+  if (!en || typeof en !== "object") return [];
+  if (Array.isArray(en) && !Array.isArray(value)) return [`${code} "${path.join(".")}" must be a list, like en`];
+  return Object.entries(en).flatMap(([key, child]) => shapeErrors(child, value?.[key], code, [...path, key]));
+}
+
 function validateLocales() {
   const enKeys = leaves(DEFAULT_LOCALE.ui);
   const errors = [];
   for (const { code, ui } of LOCALES) {
+    errors.push(...shapeErrors(DEFAULT_LOCALE.ui, ui, code));
     const keys = leaves(ui);
     for (const key of enKeys.keys()) if (!keys.has(key)) errors.push(`${code} is missing "${key}"`);
     for (const [key, value] of keys) {

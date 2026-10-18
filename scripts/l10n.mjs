@@ -500,19 +500,29 @@ export async function sync(paths, code, { mode = "translate", since = null, ids 
 
 // ── apply ────────────────────────────────────────────────────
 
-/** Rebuild `en` (a UI strings object) with the language's values; keys without one are left out. */
+/**
+ * Rebuild `en` (a UI strings object) with the language's values, keeping en's
+ * arrays as arrays (pages `.map()` over `items` lists). Keys without a value
+ * are left out; a missing array entry becomes null, which the build rejects.
+ */
 function rebuildUi(en, values, path = []) {
-  const out = {};
-  for (const [key, child] of Object.entries(en)) {
-    if (key === "//") continue;
+  const valueAt = (key, child) => {
     const at = [...path, key];
     if (child && typeof child === "object") {
       const nested = rebuildUi(child, values, at);
-      if (Object.keys(nested).length) out[key] = nested;
-    } else {
-      const id = `ui:${at.join(".")}`;
-      if (values.has(id)) out[key] = values.get(id);
+      return Object.keys(nested).length ? nested : undefined;
     }
+    return values.get(`ui:${at.join(".")}`);
+  };
+  if (Array.isArray(en)) {
+    const items = en.map((child, i) => valueAt(i, child));
+    return items.every((item) => item === undefined) ? [] : items.map((item) => item ?? null);
+  }
+  const out = {};
+  for (const [key, child] of Object.entries(en)) {
+    if (key === "//") continue;
+    const value = valueAt(key, child);
+    if (value !== undefined) out[key] = value;
   }
   return out;
 }

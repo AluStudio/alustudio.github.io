@@ -11,7 +11,7 @@ const REPO = join(dirname(fileURLToPath(import.meta.url)), "..");
 const EN_UI = {
   nav: { home: "Home", privacy: "Privacy Policy" },
   pricing: { doc_title: "Pricing", trial: "{{days}}-day free trial", or_annual_before: "or ", or_annual_after: "/yr billed annually" },
-  terms: { title: "Terms of Use" },
+  terms: { title: "Terms of Use", items: ["No resale.", "No reverse engineering."] },
 };
 
 const EN_PACK = `export const categories = [
@@ -101,6 +101,8 @@ const JA = {
   "ui:pricing.or_annual_before": "または年額",
   "ui:pricing.or_annual_after": "",
   "ui:terms.title": "利用規約",
+  "ui:terms.items.0": "再販売の禁止。",
+  "ui:terms.items.1": "リバースエンジニアリングの禁止。",
   "cat:getting-started": { label: "はじめに" },
   "cat:backup": { label: "バックアップ" },
   "faq:how-to-set-up": {
@@ -142,6 +144,8 @@ test("enUnits: one unit per UI string, category and article, segmented by top-le
       ["ui:pricing.or_annual_before", "ui-pricing"],
       ["ui:pricing.or_annual_after", "ui-pricing"],
       ["ui:terms.title", "ui-terms"],
+      ["ui:terms.items.0", "ui-terms"],
+      ["ui:terms.items.1", "ui-terms"],
       ["cat:getting-started", "faq-getting-started"],
       ["cat:backup", "faq-backup"],
       ["faq:how-to-set-up", "faq-getting-started"],
@@ -176,7 +180,7 @@ test("sync: packets carry the app's translation of identical en strings and the 
   const { paths, appRepo } = fixture();
   newLanguage(paths, "ja");
   const { total, segments } = await sync(paths, "ja", { appRepo });
-  assert.equal(total, 11);
+  assert.equal(total, 13);
   assert.deepEqual(segments.map((s) => s.segment).sort(), ["faq-backup", "faq-getting-started", "ui-pricing", "ui-site", "ui-terms"]);
 
   const site = readPacket(paths, "ui-site");
@@ -199,12 +203,13 @@ test("apply: writes the strings, the pack with every structure field from en, an
   const { paths, appRepo } = fixture();
   const result = await translateAll(paths, appRepo);
   assert.deepEqual(result.rejected, []);
-  assert.equal(result.written, 11);
+  assert.equal(result.written, 13);
 
   const ui = JSON.parse(readFileSync(paths.ui("ja"), "utf8"));
   assert.match(ui["//"], /Do not edit/);
   assert.equal(ui.pricing.trial, "{{days}}日間の無料体験");
   assert.equal(ui.pricing.or_annual_after, "");
+  assert.deepEqual(ui.terms.items, ["再販売の禁止。", "リバースエンジニアリングの禁止。"], "en arrays stay arrays (pages map over them)");
 
   const packText = readFileSync(paths.pack("ja"), "utf8");
   assert.match(packText, /^\/\/ Generated from en and the ja translations by scripts\/l10n\.mjs\. Do not edit/);
@@ -217,7 +222,7 @@ test("apply: writes the strings, the pack with every structure field from en, an
   assert.deepEqual(setUp.keywords, ["設定", "はじめ方", "初期設定"], "keywords may differ in count from en");
 
   const manifest = readManifest(paths, "ja");
-  assert.equal(Object.keys(manifest).length, 11);
+  assert.equal(Object.keys(manifest).length, 13);
   assert.equal(manifest["faq:backup-data"], enHash(textOf((await import(pathToFileURL(paths.pack("en")).href)).articles[1])));
 
   const again = await sync(paths, "ja", { appRepo });
