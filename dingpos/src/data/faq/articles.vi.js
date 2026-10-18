@@ -751,7 +751,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sau khi bật, đơn bán và đơn đặt trước sẽ tự trừ kho; vô hiệu hóa, trả hàng và hủy đơn đặt trước sẽ cộng lại; nhận đơn nhập hàng sẽ cộng thêm; và bạn có thể điều chỉnh thủ công bất cứ lúc nào. Mọi biến động đều được ghi trong một sổ đầy đủ. Hàng sắp hết được tô màu cảnh báo."
+        "text": "Sau khi bật, đơn bán và đơn đặt trước sẽ tự trừ kho; vô hiệu hóa, trả hàng và hủy đơn đặt trước sẽ cộng lại; nhận đơn nhập hàng sẽ cộng thêm; và bạn có thể điều chỉnh thủ công bất cứ lúc nào. Mọi biến động đều được ghi đầy đủ vào sổ biến động. Hàng sắp hết được tô màu cảnh báo."
       }
     ],
     "related": [
@@ -835,7 +835,7 @@ export const articles = [
     "keywords": [
       "doanh thu",
       "tiền đã thu",
-      "thu nhập",
+      "tiền thu vào",
       "đối chiếu",
       "tiền cọc",
       "bán chịu",
@@ -961,7 +961,7 @@ export const articles = [
     "keywords": [
       "giá vốn",
       "lợi nhuận",
-      "biên lợi nhuận",
+      "lợi nhuận gộp",
       "báo cáo",
       "chưa theo dõi lợi nhuận"
     ],
@@ -1077,7 +1077,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Chọn thành viên khi thanh toán là điểm sẽ được tích tự động; để đổi điểm, hãy nhập số điểm muốn dùng. Khi vô hiệu hóa một đơn hàng, số điểm đã tích từ đơn đó sẽ bị thu hồi và số điểm đã quy đổi sẽ được hoàn lại."
+        "text": "Chọn thành viên khi thanh toán để điểm được tự động tích lũy; khi muốn đổi điểm, hãy nhập số điểm cần dùng. Khi vô hiệu hóa một đơn hàng, số điểm đã tích từ đơn đó sẽ bị thu hồi và số điểm đã quy đổi sẽ được hoàn lại."
       }
     ],
     "related": [
@@ -1099,7 +1099,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Hạng thành viên (ví dụ Thường, Bạc, Vàng) có hai công dụng: dùng làm đối tượng cho khuyến mãi (ví dụ giảm 10% chỉ dành cho hạng Vàng), và giúp bạn nhận ra hạng của khách chỉ trong một cái nhìn khi thanh toán."
+        "text": "Hạng thành viên (ví dụ Thường, Bạc, Vàng) có hai công dụng: dùng làm đối tượng cho khuyến mãi (ví dụ giảm 10% chỉ dành cho hạng Vàng) và giúp bạn nhận biết hạng của khách ngay khi thanh toán."
       },
       {
         "type": "p",
@@ -1235,7 +1235,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Không. DingPOS lưu mọi thứ ngay trên thiết bị của bạn — xóa ứng dụng sẽ xóa vĩnh viễn toàn bộ sản phẩm, đơn hàng, thành viên và cài đặt, trừ khi bạn đã bật sao lưu đám mây."
+        "text": "Không. DingPOS lưu mọi thứ ngay trên thiết bị của bạn — xóa ứng dụng sẽ xóa vĩnh viễn toàn bộ sản phẩm, đơn hàng, khách hàng và cài đặt, trừ khi bạn đã bật sao lưu đám mây."
       },
       {
         "type": "note",
@@ -1341,7 +1341,7 @@ export const articles = [
         "items": [
           "Đơn hàng đã nhập được xếp theo ngày giao dịch và tính lại theo tiền tệ và chế độ thuế của cửa hàng. Chúng không ảnh hưởng tồn kho và không tặng điểm chào mừng.",
           "Khách hàng được khớp với khách đã có theo số điện thoại hoặc email; ai chưa khớp sẽ được tạo mới.",
-          "Đơn hàng đã nhập hiển thị ngày nhập (Đã nhập ngày) và số phiếu nguồn, và không thể vô hiệu hóa hay trả hàng.",
+          "Đơn hàng đã nhập hiển thị nhãn “Đã nhập ngày” cùng số phiếu nguồn, và không thể vô hiệu hóa hay trả hàng.",
           "Các dòng bị lỗi có thể xuất thành tệp CSV kèm lý do — sửa rồi nhập lại. Các dòng trùng được tự động bỏ qua."
         ]
       },
@@ -1401,7 +1401,7 @@ export const articles = [
     "slug": "staff-accounts",
     "category": "staff",
     "since": "3.0",
-    "question": "Làm sao thêm nhân viên và đổi người đang thu ngân?",
+    "question": "Làm sao thêm nhân viên và đổi người thao tác tại quầy thu ngân?",
     "keywords": [
       "nhân viên",
       "quản lý",
@@ -1415,7 +1415,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Chạm vào Nhân viên ở thanh bên. Lần đầu, hãy thiết lập chủ cửa hàng: một tên và mã PIN 4 chữ số. Thêm nhân viên và đổi quyền đều cần mã PIN này, nên hãy nhớ kỹ — mã không thể đặt lại."
+        "text": "Chạm vào Nhân viên ở thanh bên. Lần đầu, hãy thiết lập tài khoản chủ cửa hàng bằng cách nhập tên và mã PIN 4 chữ số. Thêm nhân viên và đổi quyền đều cần mã PIN này, nên hãy nhớ kỹ — mã không thể đặt lại."
       },
       {
         "type": "steps",
@@ -1511,7 +1511,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Vô hiệu hóa đơn, trả hàng, bán chịu và nhập hàng được cố ý để không có quyền; hệ thống chỉ ghi lại ai đã xử lý. Để xem lại sau này, hãy dùng Nhật ký hoạt động."
+        "text": "Vô hiệu hóa đơn, trả hàng, bán chịu và nhập hàng được cố ý không gán quyền; hệ thống chỉ ghi lại ai đã xử lý. Để xem lại sau này, hãy dùng Nhật ký hoạt động."
       }
     ],
     "related": [
@@ -1609,7 +1609,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Bạn đăng ký bất cứ lúc nào là chức năng thanh toán mở khóa ngay, và toàn bộ dữ liệu vẫn y như lúc bạn dừng lại."
+        "text": "Chỉ cần đăng ký bất cứ lúc nào, chức năng thanh toán sẽ được mở khóa ngay và toàn bộ dữ liệu vẫn nguyên vẹn như trước."
       }
     ],
     "related": [
@@ -1837,13 +1837,13 @@ export const articles = [
       "mua kèm giá ưu đãi",
       "ưu đãi theo nhóm",
       "mua A tặng B",
-      "combo đồng giá",
+      "N món bất kỳ giá X",
       "hướng dẫn"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Có ba loại ưu đãi kết hợp: tặng quà khi mua (mua A tặng B), mua kèm giá ưu đãi (thêm X₫ để nhận Y) và ưu đãi nhóm đồng giá (N món bất kỳ giá X₫). Quà tặng và mua kèm chờ thu ngân xác nhận; ưu đãi theo nhóm được áp dụng tự động."
+        "text": "Có ba loại ưu đãi kết hợp: tặng quà khi mua (mua A tặng B), mua kèm giá ưu đãi (thêm X₫ để nhận Y) và ưu đãi theo nhóm (N món bất kỳ giá X₫). Quà tặng và mua kèm chờ thu ngân xác nhận; ưu đãi theo nhóm được áp dụng tự động."
       },
       {
         "type": "p",
@@ -1988,7 +1988,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Chưa có. Hóa đơn điện tử và in hóa đơn đòi hỏi phải mua máy hóa đơn / máy in hóa đơn để thử nghiệm và phát triển — một khoản chi phí đáng kể. Là một đội ngũ nhỏ, chúng tôi sẽ lên kế hoạch khi lượng người dùng tăng và doanh thu ổn định."
+        "text": "Chưa có. Hỗ trợ hóa đơn điện tử và in hóa đơn đòi hỏi phải mua thiết bị lập hóa đơn / máy in hóa đơn để thử nghiệm và phát triển — một khoản chi phí đáng kể. Là một đội ngũ nhỏ, chúng tôi sẽ lên kế hoạch khi lượng người dùng tăng và doanh thu ổn định."
       },
       {
         "type": "p",

@@ -123,7 +123,7 @@
   "privacy_band": {
     "eyebrow": "Sao lưu & quyền riêng tư",
     "title": "Không có tài khoản thì không ai lấy được dữ liệu của bạn",
-    "lead": "DingPOS không có gì để đăng ký. Sổ sách của bạn nằm trên iPad, và nếu muốn sao lưu, dữ liệu sẽ được gửi đến tài khoản đám mây bạn đã có sẵn.",
+    "lead": "DingPOS không yêu cầu tạo tài khoản. Sổ sách của bạn nằm trên iPad; nếu muốn sao lưu, bản sao sẽ được lưu vào tài khoản đám mây bạn đã có.",
     "items": [
       "Chọn một trong iCloud, Google Drive hoặc Dropbox",
       "Sao lưu thủ công, bất cứ khi nào bạn cần",
@@ -167,7 +167,7 @@
     "plans": {
       "lite": {
         "name": "Lite",
-        "tagline": "Dành cho một người bán ở sạp, cần thanh toán và quản lý sản phẩm",
+        "tagline": "Dành cho một người bán ở quầy hàng, cần thanh toán và quản lý sản phẩm",
         "heading": "Bao gồm",
         "features": [
           "Thanh toán đầy đủ với tối đa 10 giỏ hàng",
@@ -364,7 +364,7 @@
         },
         {
           "q": "Tôi có thể nâng cấp hoặc hạ cấp gói bất cứ lúc nào không?",
-          "a": "Có, trong Cài đặt → Đăng ký của ứng dụng. Nâng cấp có hiệu lực ngay và Apple hoàn lại phần thời gian chưa dùng; hạ cấp có hiệu lực khi kỳ hiện tại kết thúc. Chuyển từ gói tháng sang gói năm cũng có hiệu lực ngay."
+          "a": "Có, trong Cài đặt → Đăng ký của ứng dụng. Nâng cấp có hiệu lực ngay và Apple tính phần thời gian chưa sử dụng vào chi phí gói mới; hạ cấp có hiệu lực khi kỳ hiện tại kết thúc. Chuyển từ gói tháng sang gói năm cũng có hiệu lực ngay."
         },
         {
           "q": "Nếu hạ cấp, khách hàng, khuyến mãi và tồn kho của tôi sẽ ra sao?",
