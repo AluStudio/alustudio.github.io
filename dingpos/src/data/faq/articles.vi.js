@@ -1992,7 +1992,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Nếu bạn cần tính năng này, hãy viết cho chúng tôi kèm model máy bạn đang dùng — chúng tôi ưu tiên phát triển theo số lượng yêu cầu."
+        "text": "Nếu bạn cần tính năng này, hãy liên hệ với chúng tôi và cho biết model máy bạn đang dùng — chúng tôi ưu tiên phát triển dựa trên số lượng yêu cầu."
       }
     ],
     "related": [
