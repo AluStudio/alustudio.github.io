@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the sq translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync sq`, then `npm run l10n -- apply sq`.",
+  "nav": {
+    "home": "Kreu",
+    "pricing": "Çmimet",
+    "privacy": "Politika e privatësisë",
+    "terms": "Kushtet e përdorimit",
+    "support": "Pyetje të shpeshta"
+  },
+  "hero": {
+    "meta_title": "DingPOS — Aplikacion arke që punon pa internet për iPad",
+    "meta_description": "DingPOS — Hap dyqanin për 10 minuta. Aplikacion arke për iPad që punon pa internet. Të dhënat e tua, nën kontrollin tënd.",
+    "eyebrow": "Aplikacion arke për iPad",
+    "title": "Hap dyqanin për 10 minuta. Të dhënat e tua, nën kontrollin tënd.",
+    "description": "DingPOS është një aplikacion arke për iPad. Pa llogari, pa varësi nga cloud-i, dhe vazhdon të punojë pa internet. Produktet, porositë dhe klientët e tu qëndrojnë të gjitha në pajisjen tënde.",
+    "download": "Shkarko në App Store",
+    "note": "Provë falas 30-ditore.",
+    "shot_alt": "Ekrani i pagesës në DingPOS: majtas një rrjet produktesh me filtra kategorish, djathtas shporta me promovimet e aplikuara automatikisht dhe totali"
+  },
+  "proof": {
+    "items": [
+      "Nuk të duhet llogari",
+      "Pagesa punon pa internet",
+      "Të dhënat qëndrojnë në iPad-in tënd"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Pagesa",
+      "title": "Çdo hap i një shitjeje në një ekran",
+      "lead": "Deri në 10 shporta njëkohësisht, produkte që gjenden sipas emrit ose barkodit sa shkruan, dhe zbritje e taksë të llogaritura para se të marrësh pagesën.",
+      "items": [
+        "Deri në 10 shporta që punojnë në të njëjtën kohë",
+        "Kërkim produktesh sipas emrit dhe barkodit, sa shkruan",
+        "Zbritje për artikull dhe për shportë, me shumë fikse ose me përqindje",
+        "Taksa e përfshirë / e papërfshirë llogaritet automatikisht",
+        "Kusuri në para dhe emërtime të personalizuara për mënyrat e pagesës",
+        "Çdo shitje mbyllet me një «Ding!» dhe dridhje prekëse"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Motori i promovimeve",
+      "title": "Vendos rregullat një herë, pagesa i aplikon vetë",
+      "lead": "Pragje shpenzimi, bli një e merr një, orë të lira, oferta vetëm për anëtarët — pasi rregulli ekziston, pagesa e llogarit vetë. Askush nuk duhet ta mbajë mend, dhe nuk ka kode kuponi për t'u shkruar.",
+      "items": [
+        "Pragjet e nëntotalit të shportës aktivizohen automatikisht",
+        "Zbritje për shportën ose për artikullin (shumë fikse ose përqindje)",
+        "Oferta bli një e merr një dhe oferta për artikullin e N-të",
+        "Shumëzues pikësh",
+        "Dritare Happy Hour — përtej mesnatës, me ditë të zgjedhura të javës",
+        "Kontrolle për përparësinë, bashkimin me të tjera dhe ndalimin pas aplikimit",
+        "Kufij përdorimi (në total ose për klient)",
+        "Aplikohen automatikisht në pagesë — pa kode kuponi"
+      ],
+      "shot_alt": "Lista e promovimeve te Cilësimet, e ndarë në pako dhe zbritje, me secilin rregull që tregon gjendjen aktive dhe përparësinë"
+    },
+    "reports": {
+      "eyebrow": "Raportet",
+      "title": "Sa fitove sot, ndërkohë që dyqani është ende hapur",
+      "lead": "Numri i porosive, të ardhurat nga shitjet, fitimi bruto, zbritjet dhe përbërja e pagesave në një faqe, për sot, 7 ditët, 30 ditët ose gjithë kohën.",
+      "items": [
+        "Sot: numri i porosive, të ardhurat nga shitjet, fitimi bruto, zbritjet, përbërja e pagesave",
+        "5 produktet kryesore sipas sasisë",
+        "Periudha ditore / javore / mujore",
+        "Grafikë të prirjes së të ardhurave dhe fitimit bruto"
+      ],
+      "shot_alt": "Paneli me të ardhurat e sotme, zbritjet totale, fitimin dhe shportën mesatare, mbi një grafik unazor të mënyrave të pagesës dhe një listë të më të shiturve"
+    },
+    "orders": {
+      "eyebrow": "Porosi",
+      "title": "Çdo shitje është aty, dhe çdo shitje mund të shfuqizohet",
+      "lead": "Çdo porosi mban të plotë regjistrimin: artikujt dhe variantet, cili promovim u aplikua, taksën, mënyrën e pagesës dhe kusurin e dhënë.",
+      "items": [
+        "Listë porosish kronologjike, me filtër sipas datës dhe mënyrës së pagesës",
+        "Detajet e rreshtit ruajnë artikujt, variantet, zbritjet, taksën dhe kusurin",
+        "Shfuqizim me konfirmim — stoku dhe pikët rikthehen automatikisht"
+      ],
+      "shot_alt": "Majtas një listë kronologjike porosish, djathtas detajet e porosisë së zgjedhur: artikujt, zbritja e aplikuar, taksa, totali, mënyra e pagesës dhe kusuri"
+    }
+  },
+  "features": {
+    "title": "Gjithçka tjetër për drejtimin e një dyqani",
+    "subtitle": "Konfigurimi i parë, produktet, stoku dhe anëtarët — të gjitha në të njëjtin iPad",
+    "onboarding": {
+      "title": "Fillim i shpejtë",
+      "items": [
+        "Zgjidh vendin; monedha, mënyra e taksës dhe norma e taksës plotësohen vetë",
+        "Vendos emrin dhe logon e dyqanit",
+        "Rreth 10 minuta nga fillimi në fund, pastaj fillo të shesësh"
+      ]
+    },
+    "products": {
+      "title": "Produkte dhe variante",
+      "items": [
+        "Menaxhim dhe filtrim sipas kategorive",
+        "Variante (p.sh. madhësi × ngjyrë), secila me çmimin dhe koston e vet",
+        "Barkode me shkrim manual ose me skanim me kamerë, dublikatat bllokohen",
+        "Foto produktesh me miniatura që krijohen gjatë ruajtjes"
+      ]
+    },
+    "inventory": {
+      "title": "Inventari",
+      "items": [
+        "Çelës për ndjekjen e stokut për çdo produkt",
+        "Stok i pavarur për secilin variant",
+        "Stoku negativ lejohet — pagesa nuk bllokohet kurrë",
+        "Sinjalizime me ngjyra për stokun e ulët",
+        "Regjistër i plotë lëvizjesh: shitje, shfuqizim, rregullim manual"
+      ]
+    },
+    "loyalty": {
+      "title": "Anëtarët dhe pikët",
+      "items": [
+        "Regjistrimi i anëtarëve: emri, telefoni dhe emaili opsionalë",
+        "Fito Y pikë për çdo X të shpenzuar",
+        "Shpërbleji N pikë për M zbritje, me kufi opsional",
+        "Anëtarët e rinj marrin automatikisht bonus mirëseardhjeje",
+        "Nivele anëtarësh që promovimet mund t'i synojnë",
+        "Shfuqizimi i një porosie anulon pikët e fituara dhe të shpërblyera"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Kopje rezervë dhe privatësia",
+    "title": "Pa llogari, askush nuk mund t'i marrë të dhënat",
+    "lead": "DingPOS nuk ka asgjë për t'u regjistruar. Librat e tu qëndrojnë në iPad, dhe nëse do kopje rezervë, ato shkojnë te një llogari cloud që e ke tashmë.",
+    "items": [
+      "Zgjidh një nga iCloud, Google Drive ose Dropbox",
+      "Kopje rezervë manuale, sa herë të duash",
+      "Mban 5 kopjet e fundit të ruajtura",
+      "Sinkronizim rritës i imazheve",
+      "Pa llogari; të dhënat në pajisje, kopjet rezervë në cloud-in tënd",
+      "Plotësisht funksional pa internet"
+    ]
+  },
+  "home_pricing": {
+    "title": "Çmime të thjeshta dhe të qarta",
+    "price_before": "Tre plane, nga ",
+    "price_after": " në muaj",
+    "sub": "Provë falas 30-ditore. Pa komisione transaksionesh, pa tarifa të fshehura. Të dhënat e tua ruhen gjithmonë pas provës — abonohu sërish kur të duash.",
+    "compare": "Krahaso planet",
+    "cta": "Nis provën falas 30-ditore"
+  },
+  "pricing": {
+    "doc_title": "Planet dhe çmimet",
+    "meta_description": "Krahaso planet e DingPOS për iPad: Lite, Standard dhe Pro. Provë falas 30-ditore, pa komisione për transaksionet dhe të dhënat e tua nuk fshihen kurrë.",
+    "eyebrow": "Planet dhe çmimet",
+    "title": "Zgjidh planin që i përshtatet dyqanit tënd",
+    "subtitle": "Provoje falas për 30 ditë, pa regjistrim. Ndrysho planin kur të duash; të dhënat e tua nuk fshihen kurrë.",
+    "billing": {
+      "label": "Periudha e faturimit",
+      "monthly": "Mujor",
+      "annual": "Vjetor",
+      "save": "Kurse {{percent}}%"
+    },
+    "recommended": "E rekomanduar",
+    "select_plan": "Zgjidh një plan",
+    "unit": {
+      "month": "/muaj",
+      "year": "/vit"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "ose ",
+    "or_annual_after": "/vit, e faturuar çdo vit",
+    "saving_before": "Kurse ",
+    "saving_after": " në vit krahasuar me planin mujor",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Për një person në një banak që ka nevojë për pagesë dhe produkte",
+        "heading": "Përfshin",
+        "features": [
+          "Pagesë e plotë me deri në 10 shporta",
+          "Produkte me variante, barkode, foto dhe kategori",
+          "Historiku i porosive, shfuqizime, kthime dhe këmbime",
+          "Paneli i biznesit: të ardhura, fitim, produktet më të shitura",
+          "Kopje rezervë dhe rivendosje në cloud",
+          "Pagesa funksionon pa internet"
+        ],
+        "cta": "Nis provën falas 30-ditore"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Për dyqane që kanë nevojë për stok, anëtarë, blerje ose shitje me afat",
+        "heading": "Gjithçka në Lite, plus",
+        "features": [
+          "Motor promovimesh: pragje shpenzimi, BOGO, orë e llirë (happy hour), të aplikuara në pagesë",
+          "Pikat e klientëve, përdorimi i tyre dhe nivelet e anëtarësisë",
+          "Ndjekja e stokut dhe porositë e blerjes",
+          "Shitje me afat pagese: jepe mallin sot, arkëto më vonë",
+          "Porosi paraprake: merr kaparin, shlyej në marrjen e mallit"
+        ],
+        "cta": "Nis provën falas 30-ditore"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Për dyqane me punonjës që kanë nevojë për role dhe gjurmë auditimi",
+        "heading": "Gjithçka në Standard, plus",
+        "features": [
+          "Llogari punonjësish: nga një PIN secili, çdo porosi regjistron kush e ka kryer",
+          "Leje dhe miratime: zbritje mbi kufi, ndryshime të produkteve dhe stokut, shikimi i kostove",
+          "Regjistri i aktivitetit dhe historiku i rivendosjeve",
+          "Raporte të avancuara: krahasim periudhash, hartë nxehtësie e shitjeve, produkte me shitje të ngadalta, vlera e inventarit, klientë që kthehen"
+        ],
+        "cta": "Nis provën falas 30-ditore"
+      }
+    },
+    "fineprint": "Faturimi bëhet përmes Apple Account-it tënd. Planet mujore dhe vjetore rinovohen automatikisht në fund të çdo periudhe; anuloje në çdo kohë në App Store.",
+    "currency": {
+      "twd": "Çmimet tregohen për App Store të Tajvanit. Rajonet e tjera paguajnë çmimin lokal që shfaqet në App Store.",
+      "to_usd": "Shfaq çmimet e SHBA-së",
+      "usd": "Çmimet tregohen për App Store të SHBA-së. Rajonet e tjera paguajnë çmimin lokal që shfaqet në App Store.",
+      "to_twd": "Shfaq çmimet e Tajvanit"
+    },
+    "assurances": {
+      "trial": {
+        "title": "Provë falas 30-ditore",
+        "desc": "Të gjitha veçoritë Pro përfshihen. Nuk nevojitet llogari."
+      },
+      "fees": {
+        "title": "Pa komisione transaksionesh",
+        "desc": "DingPOS nuk i prek kurrë paratë e arkës tënde; abonimi është e vetmja pagesë."
+      },
+      "data": {
+        "title": "Të dhënat mbeten të tuat",
+        "desc": "Kur mbaron prova ose abonimi, ndalon vetëm pagesa. Produktet, porositë dhe raportet mbeten dhe asgjë nuk fshihet."
+      },
+      "switch": {
+        "title": "Ndrysho kur të duash",
+        "desc": "Përmirësimet aplikohen menjëherë, me llogaritje proporcionale nga Apple. Uljet e planit aplikohen në rinovim."
+      }
+    },
+    "compare": {
+      "title": "Krahaso çdo veçori",
+      "subtitle": "Çdo plan përfshin gjithçka që ka plani para tij.",
+      "feature_col": "Veçoria",
+      "included": "E përfshirë",
+      "not_included": "Nuk përfshihet",
+      "groups": {
+        "checkout": "Pagesa",
+        "catalog": "Produkte dhe inventar",
+        "customers": "Klientë dhe promovime",
+        "reports": "Raportet",
+        "team": "Stafi dhe kontrolli",
+        "data": "Të dhëna dhe kopje rezervë"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Pagesa dhe shporta të shumta",
+          "desc": "Deri në 10 shporta njëkohësisht, kërkim i drejtpërdrejtë me emër ose barkod"
+        },
+        "discounts_tax": {
+          "name": "Zbritje dhe tatim",
+          "desc": "Zbritje për artikull dhe për porosi; tatimi i përfshirë ose i shtuar llogaritet për ty"
+        },
+        "offline": {
+          "name": "Pagesa pa internet",
+          "desc": "Vazhdo të shesësh pa lidhje interneti"
+        },
+        "returns": {
+          "name": "Shfuqizime, kthime dhe këmbime",
+          "desc": "Historik i plotë dhe detaje të porosive"
+        },
+        "preorder": {
+          "name": "Porosi paraprake",
+          "desc": "Merr kaparin tani, shlyej mbetjen kur merret malli"
+        },
+        "on_account": {
+          "name": "Shitje me afat pagese",
+          "desc": "Jepe mallin sot, arkëto më vonë; bilanci i çdo klienti në një vend"
+        },
+        "products": {
+          "name": "Menaxhimi i produkteve",
+          "desc": "Variante, barkode, foto, kategori"
+        },
+        "import": {
+          "name": "Importimi i të dhënave",
+          "desc": "Importo produkte dhe shitje të kaluara nga sisteme të tjera përmes CSV"
+        },
+        "inventory": {
+          "name": "Ndjekja e stokut",
+          "desc": "Stoku zbritet me shitjen; rregullimet manuale lënë gjurmë lëvizjeje"
+        },
+        "purchasing": {
+          "name": "Blerjet dhe furnitorët",
+          "desc": "Pranimi i një porosie blerjeje përditëson stokun; shiko çfarë i detyrohesh secilit furnitor"
+        },
+        "promotions": {
+          "name": "Motori i promovimeve",
+          "desc": "Pragje shpenzimi, BOGO, ofertat për artikullin e N-të, orë e lirë (happy hour), të aplikuara në pagesë"
+        },
+        "loyalty": {
+          "name": "Klientë dhe pikë",
+          "desc": "Fito dhe përdor pikë për t'i kthyer klientët"
+        },
+        "member_tiers": {
+          "name": "Nivelet e anëtarësisë",
+          "desc": "Shpërbleji klientët e tu më të mirë me përfitime sipas niveleve"
+        },
+        "dashboard": {
+          "name": "Paneli i biznesit",
+          "desc": "Të ardhura, fitim, zbritje, përzierja e pagesave dhe produktet më të shitura"
+        },
+        "comparison": {
+          "name": "Krahasimi i periudhave",
+          "desc": "Përkundrejt periudhës së mëparshme ose vitit të kaluar; shiko rritjen ose rënien"
+        },
+        "heatmap": {
+          "name": "Harta e nxehtësisë së shitjeve",
+          "desc": "Shtatë ditë × 24 orë; shiko cilat orë shesin më mirë"
+        },
+        "slow_movers": {
+          "name": "Produkte me shitje të ngadalta",
+          "desc": "Gjej produktet që nuk shiten, por ende zënë stok"
+        },
+        "valuation": {
+          "name": "Vlera e inventarit dhe auditimi i lëvizjeve",
+          "desc": "Sa vlen stoku yt tani dhe kush e ka ndryshuar"
+        },
+        "repeat": {
+          "name": "Klientë që kthehen dhe pikë të papërdorura",
+          "desc": "Sa anëtarë kthehen dhe sa pikë janë ende të papërdorura"
+        },
+        "staff": {
+          "name": "Llogari punonjësish",
+          "desc": "Nga një PIN secili; çdo porosi regjistron kush e ka kryer"
+        },
+        "permissions": {
+          "name": "Leje dhe miratime",
+          "desc": "Role menaxheri dhe punonjësi; ti zgjedh çfarë kërkon miratim"
+        },
+        "activity_log": {
+          "name": "Regjistri i aktivitetit",
+          "desc": "Një kronologji e shfuqizimeve, kthimeve, ndryshimeve të çmimit, rregullimeve të stokut dhe më shumë"
+        },
+        "restore_records": {
+          "name": "Historiku i rivendosjeve",
+          "desc": "Kush ka rivendosur, nga cila kopje rezervë dhe cilat porosi u hoqën"
+        },
+        "local_data": {
+          "name": "Të dhëna në iPad-in tënd",
+          "desc": "Nuk nevojitet llogari; të dhënat e biznesit tënd nuk kalojnë kurrë nga ne"
+        },
+        "backup": {
+          "name": "Kopje rezervë dhe rivendosje në cloud",
+          "desc": "Kopje rezervë në iCloud, Google Drive ose Dropbox-in tënd"
+        },
+        "undo_restore": {
+          "name": "Parashikim i rivendosjes dhe zhbërje",
+          "desc": "Shiko cilat porosi i heq një rivendosje dhe merre prapa nëse ishte gabim"
+        }
+      }
+    },
+    "faq": {
+      "title": "Pyetje të shpeshta",
+      "items": [
+        {
+          "q": "Çfarë mund të përdor gjatë provës falas?",
+          "a": "Për 30 ditë nga instalimi i parë ke çdo veçori, përfshirë ato Pro si stafi, lejet dhe raportet e avancuara, pa llogari. Nëse abonohesh në çfarëdo plani gjatë provës, prova mbaron menjëherë dhe kalon te plani që bleve."
+        },
+        {
+          "q": "Çfarë ndodh nëse nuk abonohem pas provës?",
+          "a": "Pagesa ndalon; gjithçka tjetër vazhdon të punojë: mund të shfletosh porositë, të shohësh raportet dhe të menaxhosh produktet. Asgjë nuk fshihet dhe abonimi e rikthen pagesën menjëherë."
+        },
+        {
+          "q": "A mund ta ndryshoj planin kur të dua?",
+          "a": "Po, nga Cilësimet → Abonim në aplikacion. Përmirësimet aplikohen menjëherë dhe Apple ta kreditojë kohën e papërdorur; uljet e planit hyjnë në fuqi kur mbaron periudha aktuale. Kalimi nga mujori te vjetori aplikohet gjithashtu menjëherë."
+        },
+        {
+          "q": "Çfarë ndodh me klientët, promovimet dhe stokun nëse e ul planin?",
+          "a": "Të gjitha ruhen; asgjë nuk fshihet apo ndryshohet. Veçoritë e planit më të lartë thjesht ndalojnë së punuari dhe kur e përmirëson përsëri, gjithçka kthehet siç ishte."
+        },
+        {
+          "q": "Si funksionon faturimi vjetor?",
+          "a": "Plani vjetor kushton sa dhjetë muaj me faturim mujor dhe mbulon një vit të plotë, rreth {{percent}}% më lirë. Faturohesh një herë në vit dhe rinovohet automatikisht."
+        },
+        {
+          "q": "A ka tarifa të tjera përveç abonimit?",
+          "a": "Jo. DingPOS nuk i prek kurrë paratë e arkës tënde: pa komision, pa tarifa transaksionesh, pa kontratë për pajisje."
+        },
+        {
+          "q": "Si e anuloj abonimin?",
+          "a": "Menaxhoje në iPad te Cilësimet → Apple Account → Abonimet; anuloje të paktën 24 orë para mbarimit të periudhës dhe nuk do të ngarkohesh më. Të dhënat e tua mbeten në pajisjen tënde."
+        },
+        {
+          "q": "Pse çmimi në App Store ndryshon nga kjo faqe?",
+          "a": "App Store e faturon abonimin me çmimin e rajonit të Apple Account-it tënd. Kjo faqe liston çmimet e Tajvanit dhe të SHBA-së; rajonet e tjera paguajnë çmimin lokal që shfaqet në aplikacion dhe në App Store."
+        }
+      ],
+      "more": "Ke pyetje të tjera?",
+      "more_link": "Shfleto të gjitha pyetjet e shpeshta"
+    },
+    "final": {
+      "title": "Përdoreje për 30 ditë, pastaj zgjidh një plan",
+      "sub": "Shkarko dhe fillo; nuk nevojitet llogari.",
+      "cta": "Shkarko në App Store"
+    }
+  },
+  "footer": {
+    "tagline": "Hap dyqanin për 10 minuta. Të dhënat e tua, nën kontrollin tënd.",
+    "contact": "Na kontakto",
+    "privacy_policy": "Politika e privatësisë",
+    "terms_of_use": "Kushtet e përdorimit",
+    "copyright": "ALU Studio. Të gjitha të drejtat e rezervuara.",
+    "support": "Pyetje të shpeshta"
+  },
+  "privacy": {
+    "title": "Politika e privatësisë",
+    "meta_description": "Si i trajton DingPOS, aplikacioni POS për iPad që punon pa internet, të dhënat e tua: regjistrat e biznesit mbeten në pajisjen tënde, ndërsa kopjet rezervë opsionale shkojnë vetëm në llogarinë tënde cloud.",
+    "effective_date": "Data e hyrjes në fuqi: 1 korrik 2026",
+    "intro": "ALU Studio („ne“) ka zhvilluar DingPOS („aplikacioni“). DingPOS është një arkë shitjeje e ndërtuar me privatësinë në qendër — të dhënat e biznesit tënd janë të tuat. Kjo Politikë e privatësisë shpjegon si i trajtojmë informacionet e tua kur përdor aplikacionin.",
+    "local_storage": {
+      "title": "Si ruhen të dhënat e tua",
+      "desc": "DingPOS i ruan të gjitha të dhënat e biznesit tënd lokalisht në pajisjen tënde. Përveç nëse e aktivizon vetë kopjen rezervë në cloud, këto të dhëna nuk e lënë kurrë pajisjen tënde. Të dhënat që krijon në aplikacion përfshijnë:",
+      "items": [
+        "Cilësimet e dyqanit (emri i dyqanit, monedha, norma e taksës, logoja)",
+        "Të dhënat e produkteve (emri, çmimi, kostoja, barkodi, fotoja, kategoria, variantet, stoku)",
+        "Regjistrat e porosive dhe të lëvizjeve të pagesave (përfshirë zbritjet, taksën, mënyrën e pagesës)",
+        "Të dhënat e klientëve dhe të anëtarësimit (emri, telefoni dhe email-i opsionalë, pikët)",
+        "Rregullat e promovimeve dhe cilësimet e niveleve të anëtarësimit"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Kopje rezervë në cloud (opsionale)",
+      "desc": "Mund ta aktivizosh opsionalisht kopjen rezervë në cloud dhe të zgjedhësh një nga iCloud, Google Drive ose Dropbox si vendndodhje ruajtjeje. Kopjet rezervë shkruhen në llogarinë tënde cloud dhe mbeten plotësisht nën kontrollin tënd. Ne nuk e trajtojmë, nuk e ruajmë dhe nuk e hapim kurrë përmbajtjen e këtyre kopjeve. Nëse do ta aktivizosh kopjen rezervë dhe cilin ofrues do të përdorësh, është tërësisht zgjedhja jote dhe mund ta çaktivizosh në çdo kohë."
+    },
+    "no_collection": {
+      "title": "Çfarë nuk mbledhim",
+      "desc": "DingPOS nuk mbledh, nuk transmeton dhe nuk ndan asnjë nga përmbajtjet e biznesit tënd. Konkretisht, ne nuk:",
+      "items": [
+        "Mbledhim të dhënat e produkteve, porosive, klientëve ose anëtarësimit të tënd",
+        "Prekim asnjë proces pagese ose informacion të kartës së kreditit (aplikacioni nuk përpunon pagesa reale me kartë)",
+        "Gjurmojmë vendndodhjen tënde",
+        "Ndajmë të dhënat e biznesit tënd me asnjë palë të tretë"
+      ]
+    },
+    "camera": {
+      "title": "Kamera dhe fotot",
+      "desc": "DingPOS kërkon qasje në kamerë vetëm kur përdor vetë „skano barkodin“ ose „bëj foto produkti“. Njohja e barkodit dhe fotot përpunohen lokalisht në pajisjen tënde dhe nuk ngarkohen kurrë në serverët tanë. Fotot e produkteve shkruhen në llogarinë tënde cloud vetëm si pjesë e një kopjeje rezervë, nëse e aktivizon kopjen rezervë në cloud."
+    },
+    "subscription": {
+      "title": "Abonimi dhe blerjet",
+      "desc": "DingPOS ofron një abonim përmes blerjes brenda aplikacionit (IAP) të Apple App Store, duke përdorur RevenueCat për të menaxhuar statusin e abonimit. Pagesa trajtohet nga Apple; ne nuk marrim kurrë kartën tënde të kreditit ose detaje pagese. RevenueCat merr vetëm një identifikues anonim të lidhur me statusin e abonimit, që përdoret për të verifikuar nëse abonimi yt është aktiv."
+    },
+    "analytics": {
+      "title": "Analitika dhe raportimi i prishjeve",
+      "desc": "DingPOS përdor Firebase Analytics dhe Firebase Crashlytics, të ofruara nga Google, për të na ndihmuar të kuptojmë si përdoret aplikacioni dhe të identifikojmë e të rregullojmë prishjet. Këto shërbime mbledhin:",
+      "items": [
+        "Të dhëna anonime përdorimi (p.sh. cilat veçori përdoren, kohëzgjatja e sesionit)",
+        "Raporte prishjesh (p.sh. gjurmët e stivës, modeli i pajisjes, versioni i sistemit)",
+        "Informacion për pajisjen (p.sh. lloji i pajisjes, sistemi, versioni i aplikacionit)",
+        "Një identifikues instance i gjeneruar rastësisht (i palidhur me identitetin tënd)"
+      ],
+      "note": "Këto të dhëna janë anonime dhe nuk përfshijnë asnjë nga përmbajtjet e biznesit tënd (si produkte, porosi, klientë ose anëtarë). Për të mësuar më shumë se si i trajton Google këto të dhëna, shih Politikën e privatësisë së Google: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Privatësia e fëmijëve",
+      "desc": "DingPOS është një mjet komercial arke shitjeje. Nuk është projektuar për fëmijë dhe nuk mbledh të dhëna personale të fëmijëve."
+    },
+    "changes": {
+      "title": "Ndryshimet në këtë politikë",
+      "desc": "Nëse bëjmë ndryshime thelbësore në këtë Politikë të privatësisë, do të të njoftojmë përmes një përditësimi të aplikacionit. Të rekomandojmë ta rishikosh herë pas here këtë politikë."
+    },
+    "contact": {
+      "title": "Na kontakto",
+      "desc": "Nëse ke pyetje ose sugjerime për këtë Politikë të privatësisë, na kontakto në:"
+    }
+  },
+  "terms": {
+    "title": "Kushtet e përdorimit",
+    "meta_description": "Kushtet e përdorimit të DingPOS, aplikacionit POS për iPad nga ALU Studio: licenca, prova falas 30-ditore, abonimet në App Store, të dhënat dhe kopjet rezervë të tua dhe përgjegjësia.",
+    "effective_date": "Në fuqi nga: 8 tetor 2026",
+    "intro": "Mirë se vjen në DingPOS. Lexo me kujdes Kushtet e përdorimit më poshtë përpara se të përdorësh aplikacionin. Kur shkarkon, instalon ose përdor DingPOS, pranon të jesh i detyruar nga këto kushte.",
+    "license": {
+      "title": "Licenca",
+      "desc": "ALU Studio të jep një licencë të kufizuar, jo ekskluzive dhe të patransferueshme për të përdorur DingPOS në pajisjet e tua për të drejtuar biznesin tënd. Kjo licencë është për veprimtarinë tënde të tregtisë me pakicë."
+    },
+    "subscription": {
+      "title": "Abonimi dhe pagesa",
+      "desc": "DingPOS ofron një provë falas 30-ditore nga instalimi i parë, gjatë së cilës janë të disponueshme të gjitha veçoritë e planit Pro; blerja e çdo plani gjatë provës e përfundon provën dhe plani i blerë zbatohet nga momenti i blerjes. Pas provës, për të vazhduar përdorimin e pagesës kërkohet një abonim në një nga planet (Lite, Standard ose Pro), i blerë përmes blerjes brenda aplikacionit (In-App Purchase) në App Store; përmbajtja dhe çmimet e planeve jepen në faqen e çmimeve (alu-studio.com/dingpos/pricing), ndërsa çmimi që tarifohet është ai që shfaqet në App Store. Pa abonim, shfletimi dhe menaxhimi i produkteve mbeten të disponueshme dhe të dhënat e tua nuk fshihen asnjëherë. Abonimi rinovohet automatikisht, përveç nëse e anulon të paktën 24 orë përpara përfundimit të periudhës aktuale. Mund ta menaxhosh ose anulosh abonimin në çdo kohë te cilësimet e llogarisë App Store në pajisjen tënde. Abonimet e blera mund të rikthehen."
+    },
+    "restrictions": {
+      "title": "Kufizimet",
+      "desc": "Kur përdor aplikacionin, pranon të mos:",
+      "items": [
+        "Bësh inxhinierim të kundërt, çmontim ose dekompilim të aplikacionit",
+        "Modifikosh, përkthesh ose krijosh vepra të derivuara",
+        "Heqësh asnjë njoftim ose etiketë të të drejtës së autorit brenda aplikacionit",
+        "Përdorësh aplikacionin për ndonjë qëllim të paligjshëm"
+      ]
+    },
+    "user_data": {
+      "title": "Të dhënat dhe kopjet rezervë të tua",
+      "desc": "E gjithë përmbajtja e biznesit që krijon në DingPOS (produktet, porositë, klientët, anëtarët dhe cilësimet) ruhet në pajisjen tënde dhe është përgjegjësia jote e vetme. Nëse fshin aplikacionin ose pastron të dhënat e tij, e gjithë informacioni i ruajtur humbet përgjithmonë, përveç nëse ke aktivizuar kopjen rezervë në cloud. Kopjet rezervë në cloud ndodhen në llogarinë cloud që zgjedh ti (iCloud / Google Drive / Dropbox), ndërsa disponueshmëria dhe ruajtja e tyre rregullohen nga kushtet e shërbimit të atij ofruesi. Ne nuk mund të rikuperojmë asnjë të dhënë për ty. Je gjithashtu përgjegjës të respektosh ligjet e taksave, të faturimit dhe të mbrojtjes së konsumatorit që zbatohen aty ku ushtron veprimtarinë."
+    },
+    "updates": {
+      "title": "Përditësimet e aplikacionit",
+      "desc": "Herë pas here mund të publikojmë përditësime të aplikacionit për të përmirësuar veçoritë, për të rregulluar probleme ose për të forcuar sigurinë. Të rekomandojmë ta mbash aplikacionin të përditësuar për përvojën më të mirë."
+    },
+    "disclaimer": {
+      "title": "Heqja e përgjegjësisë",
+      "desc": "DingPOS ofrohet «siç është», pa asnjë garanci të çfarëdo lloji, të shprehur ose të nënkuptuar. Nuk garantojmë që aplikacioni do të funksionojë pa ndërprerje ose pa asnjë gabim. DingPOS është një mjet që ndihmon punën tënde; saktësia përfundimtare e llogaritjeve të taksave, e sasive të stokut dhe e të gjitha shumave, si dhe përputhshmëria me rregulloret vendore, mbeten përgjegjësi jotja për t'i verifikuar. Në masën maksimale që lejon ligji, nuk mbajmë përgjegjësi për asnjë dëm të drejtpërdrejtë, të tërthortë, rastësor ose pasojë që rrjedh nga përdorimi i aplikacionit prej teje."
+    },
+    "liability": {
+      "title": "Kufizimi i përgjegjësisë",
+      "desc": "Në asnjë rast përgjegjësia e ALU Studio për dëme që rrjedhin nga përdorimi ose pamundësia e përdorimit të aplikacionit nuk do ta kalojë shumën që ke paguar për aplikacionin në 12 muajt përpara ngjarjes. Kjo përfshin, pa u kufizuar, humbjen e të dhënave, humbjen e të ardhurave, dëmtimin e pajisjes ose çdo humbje tjetër."
+    },
+    "changes": {
+      "title": "Ndryshimet e këtyre kushteve",
+      "desc": "Rezervojmë të drejtën të modifikojmë këto Kushte të përdorimit në çdo kohë. Kushtet e modifikuara hyjnë në fuqi menjëherë pas publikimit në këtë faqe. Vazhdimi i përdorimit të aplikacionit prej teje përbën pranim të kushteve të modifikuara."
+    },
+    "contact": {
+      "title": "Na kontakto",
+      "desc": "Nëse ke pyetje rreth këtyre Kushteve të përdorimit, na kontakto në:"
+    }
+  },
+  "support": {
+    "doc_title": "Mbështetje",
+    "meta_description": "Mbështetja e DingPOS: përgjigje dhe udhëzues hap pas hapi për aplikacionin e arkës në iPad — konfigurimi, pagesa, porositë, inventari, promovimet, kopja rezervë, stafi dhe faturimi.",
+    "title": "Si mund të të ndihmojmë?",
+    "subtitle": "Kërko te pyetjet e shpeshta, ose shfleto sipas temës",
+    "search_placeholder": "Kërko, p.sh. “barkod” ose “rivendosje e kopjes rezervë”",
+    "search_hint_keywords": "Ndaji fjalët kyçe me hapësirë",
+    "search_hint_shortcut_pre": "shtyp ",
+    "search_hint_shortcut_post": " për të kërkuar",
+    "clear": "Pastro kërkimin",
+    "results_count": "{{num}} pyetje që përputhen",
+    "no_results_title": "Asnjë pyetje që përputhet",
+    "no_results_desc": "Provo fjalë të tjera kyçe, ose na shkruaj me email — do të të përgjigjemi së shpejti.",
+    "related_title": "Pyetje të lidhura",
+    "back": "Mbështetje",
+    "since": "Në dispozicion nga DingPOS v{{version}}",
+    "verified_version": "Përmbajtja pasqyron DingPOS v{{version}}",
+    "contact_title": "Nuk e gjen përgjigjen?",
+    "contact_desc": "Na trego çfarë problemi has dhe do të të përgjigjemi sa më shpejt që të mundemi.",
+    "contact_cta": "Kontakto ALU Studio",
+    "group_faq": "Pyetje të shpeshta",
+    "group_guide": "Udhëzues",
+    "group_guide_desc": "Udhëzues konfigurimi hap pas hapi, me gjithë grackat që mblodhëm gjatë ndërtimit të DingPOS.",
+    "group_roadmap": "Së shpejti",
+    "group_roadmap_desc": "Ende nuk është i disponueshëm — disa janë të planifikuara tashmë. Kërkesat e tua formësojnë përparësitë tona, prandaj na shkruaj."
+  }
+}
