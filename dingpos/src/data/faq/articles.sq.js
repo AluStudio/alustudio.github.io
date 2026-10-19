@@ -1635,12 +1635,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Të tria planet përfshijnë funksionin e plotë Pagesa, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
+        "text": "Të tria planet përfshijnë funksionin e plotë të pagesës, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
       },
       {
         "type": "list",
         "items": [
-          "Lite: për një person që drejton një banak dhe i duhen pagesa e produktet.",
+          "Lite: për një person që drejton një banak pazari dhe i duhen pagesa e produktet.",
           "Standard: shton promovime, pikë besnikërie dhe nivele anëtarësh, ndjekjen e stokut, blerjet te furnitorët, shitjet me afat pagese dhe porositë paraprake.",
           "Pro: shton llogari punonjësish dhe leje, miratimin nga menaxheri, regjistrin e aktivitetit, regjistrimet e rivendosjes dhe raportet e avancuara — për dyqane me punonjës."
         ]
