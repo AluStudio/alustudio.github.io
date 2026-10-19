@@ -33,7 +33,7 @@
         "Bis zu 10 Warenkörbe gleichzeitig",
         "Artikelsuche nach Name und Barcode, schon während der Eingabe",
         "Rabatte auf Artikel und Warenkorb, als Festbetrag oder in Prozent",
-        "Steuer inklusive / exklusive wird automatisch berechnet",
+        "Steuern werden bei inklusiver oder exklusiver Angabe automatisch berechnet",
         "Wechselgeld bei Barzahlung und eigene Bezeichnungen für Zahlungsarten",
         "Jeder Verkauf endet mit einem „Ding!“ und haptischem Feedback"
       ]
@@ -57,7 +57,7 @@
     "reports": {
       "eyebrow": "Berichte",
       "title": "Was Sie heute verdient haben – noch während der Laden geöffnet ist",
-      "lead": "Bestellungen, Umsatz, Rohertrag, Rabatte und Zahlungsarten auf einer Seite, für heute, 7 Tage, 30 Tage oder die gesamte Zeit.",
+      "lead": "Anzahl der Bestellungen, Umsatz, Rohertrag, Rabatte und Zahlungsarten auf einer Seite, für heute, die letzten 7 Tage, die letzten 30 Tage oder den gesamten Zeitraum.",
       "items": [
         "Heute: Anzahl der Bestellungen, Umsatz, Rohertrag, Rabatte, Verteilung der Zahlungsarten",
         "Top 5 der Artikel nach Menge",
@@ -69,7 +69,7 @@
     "orders": {
       "eyebrow": "Verkäufe",
       "title": "Jeder Verkauf ist nachvollziehbar, und jeder lässt sich annullieren",
-      "lead": "Jede Bestellung behält den vollständigen Beleg: Artikel und Varianten, angewendete Aktion, Steuer, Zahlungsart und Wechselgeld.",
+      "lead": "Jede Bestellung enthält den vollständigen Datensatz: Artikel und Varianten, angewendete Aktion, Steuer, Zahlungsart und Wechselgeld.",
       "items": [
         "Chronologische Bestellliste, filterbar nach Datum und Zahlungsart",
         "Die Zeilendetails enthalten Artikel, Varianten, Rabatte, Steuer und Wechselgeld",
@@ -109,9 +109,9 @@
       ]
     },
     "loyalty": {
-      "title": "Mitglieder & Punkte",
+      "title": "Kunden & Punkte",
       "items": [
-        "Mitglieder anlegen: Name, Telefon und E-Mail optional",
+        "Kunden anlegen: Name, Telefon und E-Mail optional",
         "Y Punkte pro X Ausgaben sammeln",
         "N Punkte gegen M Rabatt einlösen, optional mit Obergrenze",
         "Neue Mitglieder erhalten automatisch einen Willkommensbonus",
@@ -122,7 +122,7 @@
   },
   "privacy_band": {
     "eyebrow": "Backup & Datenschutz",
-    "title": "Ohne Konto kann niemand an Ihre Daten",
+    "title": "Ohne Konto kann Ihnen niemand Ihre Daten wegnehmen",
     "lead": "Bei DingPOS gibt es nichts, wofür Sie sich registrieren müssten. Ihre Buchhaltung liegt auf dem iPad, und Backups landen, wenn Sie welche möchten, in einem Cloud-Konto, das Ihnen bereits gehört.",
     "items": [
       "Wahlweise iCloud, Google Drive oder Dropbox",
@@ -222,7 +222,7 @@
         "desc": "DingPOS kommt nie an Ihr Geld – das Abonnement ist die einzige Gebühr."
       },
       "data": {
-        "title": "Ihre Daten bleiben Ihre",
+        "title": "Ihre Daten gehören weiterhin Ihnen",
         "desc": "Wenn die Testphase oder das Abonnement endet, pausiert nur das Bezahlen. Artikel, Bestellungen und Berichte bleiben erhalten, nichts wird gelöscht."
       },
       "switch": {
@@ -267,7 +267,7 @@
         },
         "on_account": {
           "name": "Verkauf auf Rechnung",
-          "desc": "Heute mitgeben, später kassieren – der Stand jedes Kunden an einem Ort"
+          "desc": "Heute mitgeben, später kassieren – der offene Betrag jedes Kunden an einem Ort"
         },
         "products": {
           "name": "Artikelverwaltung",
@@ -372,7 +372,7 @@
         },
         {
           "q": "Wie funktioniert die jährliche Abrechnung?",
-          "a": "Jährlich kostet so viel wie zehn Monate bei monatlicher Zahlung und deckt ein ganzes Jahr ab – etwa {{percent}} % weniger. Sie zahlen einmal im Jahr, und das Abonnement verlängert sich automatisch."
+          "a": "Die jährliche Zahlung kostet so viel wie zehn Monate bei monatlicher Zahlung und deckt ein ganzes Jahr ab – etwa {{percent}} % weniger. Sie zahlen einmal im Jahr, und das Abonnement verlängert sich automatisch."
         },
         {
           "q": "Gibt es neben dem Abonnement weitere Gebühren?",
@@ -426,10 +426,10 @@
     },
     "no_collection": {
       "title": "Was wir nicht erfassen",
-      "desc": "DingPOS erfasst, überträgt oder teilt keine Ihrer Geschäftsinhalte. Im Einzelnen gilt: Wir",
+      "desc": "DingPOS erfasst, überträgt oder teilt keine Ihrer Geschäftsdaten. Im Einzelnen gilt: Wir",
       "items": [
         "erfassen keine Ihrer Artikel-, Bestell-, Kunden- oder Mitgliedsdaten",
-        "berühren weder Zahlungsabläufe noch Kreditkartendaten (die App wickelt keine echten Kartenzahlungen ab)",
+        "sind weder an Zahlungsvorgängen beteiligt noch verarbeiten wir Kreditkartendaten (die App wickelt keine echten Kartenzahlungen ab)",
         "verfolgen Ihren Standort nicht",
         "geben Ihre Geschäftsdaten an keine Dritten weiter"
       ]
@@ -510,7 +510,7 @@
       "desc": "Wir behalten uns vor, diese Nutzungsbedingungen jederzeit zu ändern. Geänderte Bedingungen gelten sofort mit der Veröffentlichung auf dieser Seite. Wenn Sie die App weiterhin nutzen, gelten die geänderten Bedingungen als von Ihnen angenommen."
     },
     "contact": {
-      "title": "Kontakt",
+      "title": "Kontakt aufnehmen",
       "desc": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, erreichen Sie uns unter:"
     }
   },

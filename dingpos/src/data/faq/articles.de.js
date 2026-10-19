@@ -58,7 +58,7 @@ export const categories = [
   {
     "key": "promotion-guide",
     "icon": "bi-mortarboard",
-    "label": "Anleitungen zur Einrichtung von Aktionen",
+    "label": "Einrichtungsanleitungen für Aktionen",
     "group": "guide"
   },
   {
@@ -268,7 +268,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jeder Warenkorb wird unabhängig berechnet. Während Kunde A noch stöbert, wechseln Sie zu einem anderen Warenkorb und kassieren zuerst Kunde B ab. Sobald das Bezahlen abgeschlossen ist, wird der Warenkorb-Platz automatisch entfernt."
+        "text": "Jeder Warenkorb wird unabhängig berechnet. Während Kunde A noch stöbert, wechseln Sie zu einem anderen Warenkorb und kassieren zuerst Kunde B ab. Sobald der Bezahlvorgang abgeschlossen ist, wird der Warenkorbplatz automatisch freigegeben."
       },
       {
         "type": "note",
@@ -367,7 +367,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zahlungsarten sind reine Buchführungs-Bezeichnungen – DingPOS wickelt keine echten Zahlungen ab. Nehmen Sie Karten- oder mobile Zahlungen mit Ihrem bestehenden Terminal oder Ihrer App entgegen und wählen Sie dann in DingPOS die passende Bezeichnung, um sie zu erfassen. Bei Barzahlungen wird das Wechselgeld automatisch berechnet."
+        "text": "Zahlungsarten sind reine Bezeichnungen für die Buchführung – DingPOS wickelt keine echten Zahlungen ab. Nehmen Sie Karten- oder mobile Zahlungen mit Ihrem bestehenden Terminal oder Ihrer App entgegen und wählen Sie dann in DingPOS die passende Bezeichnung, um sie zu erfassen. Bei Barzahlungen wird das Wechselgeld automatisch berechnet."
       },
       {
         "type": "p",
@@ -420,7 +420,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Der Warenkorb zeigt den Preis zum Zeitpunkt, als der Artikel hinzugefügt wurde. Wenn Sie das Bezahlen bestätigen, fragt DingPOS den aktuellen Preis jedes Artikels erneut ab – hat sich etwas geändert, werden Sie vor dem Fortfahren mit den neuen Preisen darauf hingewiesen."
+        "text": "Der Warenkorb zeigt den Preis zu dem Zeitpunkt, an dem der Artikel hinzugefügt wurde. Wenn Sie das Bezahlen bestätigen, fragt DingPOS den aktuellen Preis jedes Artikels erneut ab – hat sich etwas geändert, werden Sie vor dem Fortfahren mit den neuen Preisen darauf hingewiesen."
       },
       {
         "type": "p",
@@ -661,7 +661,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jede Kombination hat einen eigenen Preis und Einkaufspreis und führt einen eigenen Bestand. An der Kasse erscheint beim Antippen des Artikels eine Variantenauswahl, bevor er in den Warenkorb gelegt wird."
+        "text": "Jede Kombination hat einen eigenen Preis und Einkaufspreis und einen eigenen Bestand. An der Kasse erscheint beim Antippen des Artikels eine Variantenauswahl, bevor er in den Warenkorb gelegt wird."
       },
       {
         "type": "note",
@@ -751,7 +751,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Die Bestandsführung lässt sich für jeden Artikel einzeln einschalten – aktivieren Sie sie auf der Bearbeitungsseite des Artikels und geben Sie die aktuelle Menge ein. Jede Variante eines Artikels führt ihren eigenen Bestand."
+        "text": "Die Bestandsführung lässt sich für jeden Artikel einzeln einschalten – aktivieren Sie sie auf der Bearbeitungsseite des Artikels und geben Sie die aktuelle Menge ein. Für jede Variante eines Artikels wird der Bestand separat geführt."
       },
       {
         "type": "p",
@@ -813,7 +813,7 @@ export const articles = [
         "items": [
           "Tippen Sie auf „Neuer Einkauf“, wählen Sie den Lieferanten und fügen Sie Artikel, Mengen und Einkaufspreise hinzu (vorausgefüllt mit dem aktuellen Einkaufspreis des Artikels). Versandkosten lassen sich ebenfalls ergänzen. Ist der Lieferant noch nicht angelegt, tippen Sie oben links in der Lieferantenliste auf „Lieferant hinzufügen“ – der neue Lieferant wird direkt in die Einkaufsbestellung übernommen.",
           "Ein Entwurf berührt weder Bestand noch offene Zahlungen – bearbeiten oder löschen Sie ihn nach Belieben.",
-          "Wenn die Ware eintrifft, tippen Sie auf „Wareneingang buchen“: Der geführte Bestand steigt, und die Einkaufsbestellung erhält ihre Nummer und wird gesperrt. Standardmäßig aktualisiert der Wareneingang auch den Einkaufspreis jedes Artikels auf diesen Stückpreis; schalten Sie „Einkaufspreis des Artikels übernehmen“ in der Einkaufsbestellung aus, damit die Einkaufspreise unverändert bleiben."
+          "Wenn die Ware eintrifft, tippen Sie auf „Wareneingang buchen“: Der Bestand bestandsgeführter Artikel steigt, und die Einkaufsbestellung erhält ihre Nummer und wird gesperrt. Standardmäßig aktualisiert der Wareneingang auch den Einkaufspreis jedes Artikels auf diesen Stückpreis; schalten Sie „Einkaufspreis des Artikels übernehmen“ in der Einkaufsbestellung aus, damit die Einkaufspreise unverändert bleiben."
         ]
       },
       {
@@ -839,7 +839,7 @@ export const articles = [
     "keywords": [
       "Umsatz",
       "Zahlungseingang",
-      "Einnahmen",
+      "Geldeingang",
       "Kasse abstimmen",
       "Anzahlung",
       "Verkauf auf Rechnung"
@@ -1075,7 +1075,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Öffnen Sie Einstellungen → Treueprogramm und legen Sie zwei Regeln fest: Sie erhalten Y Punkte pro X Umsatz, und N Punkte lassen sich gegen M Rabatt einlösen (optional mit einer Einlösegrenze pro Bestellung). Neuen Mitgliedern können Sie außerdem automatisch einen Willkommensbonus gutschreiben."
+        "text": "Öffnen Sie Einstellungen → Treueprogramm und legen Sie zwei Regeln fest: Kunden erhalten Y Punkte pro X Umsatz, und N Punkte lassen sich gegen M Rabatt einlösen (optional mit einer Einlösegrenze pro Bestellung). Neuen Mitgliedern können Sie außerdem automatisch einen Willkommensbonus gutschreiben."
       },
       {
         "type": "p",
@@ -1106,7 +1106,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Stufen können nach selbst festgelegten Regeln automatisch aufsteigen (z. B. nach dem Gesamtumsatz) oder manuell zugewiesen werden. Hatte eine annullierte Bestellung einen Aufstieg ausgelöst, wird die Stufe automatisch zurückgesetzt."
+        "text": "Mitglieder können nach selbst festgelegten Regeln (z. B. nach dem Gesamtumsatz) automatisch in eine höhere Stufe aufsteigen oder manuell einer Stufe zugewiesen werden. Hatte eine annullierte Bestellung einen Aufstieg ausgelöst, wird die Stufe automatisch zurückgesetzt."
       }
     ],
     "related": [
@@ -1130,7 +1130,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Öffnen Sie Einstellungen → Cloud-Backup, wählen Sie iCloud, Google Drive oder Dropbox und erteilen Sie die Berechtigung. Danach können Sie jederzeit manuell ein Backup starten. Für iCloud muss auf diesem iPad iCloud angemeldet, iCloud Drive aktiviert und DingPOS die Nutzung erlaubt sein."
+        "text": "Öffnen Sie Einstellungen → Cloud-Backup, wählen Sie iCloud, Google Drive oder Dropbox und erteilen Sie die Berechtigung. Danach können Sie jederzeit manuell ein Backup starten. Für iCloud müssen Sie auf diesem iPad bei iCloud angemeldet sein, iCloud Drive aktiviert haben und DingPOS die Nutzung erlauben."
       },
       {
         "type": "p",
@@ -1293,7 +1293,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Die Daten jedes iPad sind derzeit unabhängig voneinander – ein gemeinsamer Datenbestand in Echtzeit über zwei Geräte wird noch nicht unterstützt."
+        "text": "Die Daten jedes iPads sind derzeit unabhängig voneinander – ein gemeinsamer Datenbestand in Echtzeit über zwei Geräte wird noch nicht unterstützt."
       },
       {
         "type": "p",
@@ -1414,13 +1414,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tippen Sie in der Seitenleiste auf Personal. Beim ersten Mal richten Sie die Inhaber:in ein: einen Namen und eine 4-stellige PIN. Mitarbeiter:innen hinzufügen und Berechtigungen ändern erfordern jeweils diese PIN – merken Sie sie sich gut, sie lässt sich nicht zurücksetzen."
+        "text": "Tippen Sie in der Seitenleiste auf Personal. Beim ersten Öffnen richten Sie das Inhaberprofil ein: mit einem Namen und einer vierstelligen PIN. Zum Hinzufügen von Mitarbeiter:innen und Ändern von Berechtigungen benötigen Sie diese PIN – merken Sie sie sich gut, sie lässt sich nicht zurücksetzen."
       },
       {
         "type": "steps",
         "items": [
           "Tippen Sie auf der Seite Personal auf Mitarbeiter:in hinzufügen, geben Sie einen Namen ein, wählen Sie eine Rolle (Manager:in oder Mitarbeiter:in) und legen Sie eine 4-stellige PIN fest.",
-          "Die aktuelle Bediener:in sehen Sie unten in der Seitenleiste und oben rechts an der Kasse. Tippen Sie beim Schichtwechsel darauf, wählen Sie Ihren Namen und geben Sie Ihre PIN ein.",
+          "Unten in der Seitenleiste und oben rechts an der Kasse wird angezeigt, wer gerade als Bediener:in ausgewählt ist. Tippen Sie beim Schichtwechsel darauf, wählen Sie Ihren Namen und geben Sie Ihre PIN ein.",
           "Ab dann wird bei jeder Bestellung, Zahlung sowie jeder Bestands- oder Punktebewegung festgehalten, wer sie bearbeitet hat – sichtbar in der Bestellliste und in den Details; bei annullierten Bestellungen wird zusätzlich erfasst, wer sie annulliert hat."
         ]
       },
@@ -1430,7 +1430,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Personal ist eine Pro-Funktion (auch während der Testphase verfügbar). Endet Pro, bleiben die Personaldaten und die jeweilige Bearbeiter:in jeder Bestellung erhalten, und neue Bestellungen werden unter der Inhaber:in erfasst; mit einem erneuten Pro-Abo ist alles wieder da."
+        "text": "Personal ist eine Pro-Funktion (auch während der Testphase verfügbar). Endet Pro, bleiben die Personaldaten und die jeweils für eine Bestellung erfasste Bediener:in erhalten. Neue Bestellungen werden der Inhaber:in zugeordnet; mit einem erneuten Pro-Abo ist alles wieder da."
       }
     ],
     "related": [
@@ -1460,7 +1460,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Beim Anlegen der Inhaber:in und bei jeder Änderung der Inhaber-PIN erscheint der Hinweis „Merken Sie sich diese PIN. Wenn Sie sie vergessen, kann sie nicht zurückgesetzt werden.“ Bewahren Sie sie an einem Ort auf, zu dem nur Sie Zugang haben."
+        "text": "Beim Einrichten des Inhaberprofils und bei jeder Änderung der Inhaber-PIN erscheint der Hinweis „Merken Sie sich diese PIN. Wenn Sie sie vergessen, kann sie nicht zurückgesetzt werden.“ Bewahren Sie sie an einem Ort auf, zu dem nur Sie Zugang haben."
       },
       {
         "type": "p",
@@ -1505,7 +1505,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Werkseinstellung: Manager:innen dürfen alles außer Backup & Wiederherstellung, ohne Rabattgrenze; Mitarbeiter:innen brauchen für alles eine Freigabe, bei einer Rabattgrenze von 10 %. Die Inhaber:in darf immer alles und kann nicht bearbeitet werden. Zum Ändern gehen Sie zu Personal → Rollenberechtigungen, tippen auf Bearbeiten und sichern einmal – die Änderung gilt sofort für alle."
+        "text": "Werkseinstellung: Manager:innen dürfen alles außer Backup & Wiederherstellung, ohne Rabattgrenze; Mitarbeiter:innen brauchen für alles eine Freigabe, bei einer Rabattgrenze von 10 %. Die Inhaber:in darf immer alles und kann nicht bearbeitet werden. Zum Ändern gehen Sie zu Personal → Rollenberechtigungen, tippen auf Bearbeiten und anschließend einmal auf Sichern – die Änderung gilt sofort für alle."
       },
       {
         "type": "note",
@@ -1545,7 +1545,7 @@ export const articles = [
           "Jeder Eintrag zeigt, was betroffen war, wer wann was getan hat und das Ergebnis – zum Beispiel „M Preis 390 € → 350 €“.",
           "Filtern Sie nach Mitarbeiter:in (auch deaktivierte), Vorgangsart und Heute / Diese Woche / Dieser Monat.",
           "Tippen Sie auf einen Eintrag, der auf eine Bestellung, einen Artikel oder eine Kundschaft verweist, um die Details zu öffnen.",
-          "Bestelldetails, Artikeldetails und die Seite jeder Mitarbeiter:in haben einen eigenen Zugang, der nur die Einträge zu genau diesem Objekt zeigt.",
+          "Bestelldetails, Artikeldetails und die Seite jeder Mitarbeiter:in haben jeweils eine eigene Liste, die nur die Einträge zu genau diesem Objekt zeigt.",
           "Gelöschte Artikel zeigen im Protokoll weiterhin ihren damaligen Namen und Preis."
         ]
       },
@@ -1569,7 +1569,7 @@ export const articles = [
       "kostenlos testen",
       "30 Tage",
       "gratis",
-      "Probezeit"
+      "kostenlose Testphase"
     ],
     "content": [
       {
@@ -1596,7 +1596,7 @@ export const articles = [
     "question": "Gehen meine Daten verloren, wenn die Testphase endet?",
     "keywords": [
       "Testphase abgelaufen",
-      "Testphase Ende",
+      "Ende der Testphase",
       "Kasse gesperrt",
       "Daten",
       "Daten verloren"
@@ -1734,7 +1734,7 @@ export const articles = [
   {
     "slug": "guide-bogo",
     "category": "promotion-guide",
-    "question": "„2 für 1“-Aktionen und Mengenangebote einrichten („Kaufe 2, erhalte 1 gratis“)",
+    "question": "„Kaufe 1, erhalte 1 gratis“- und Angebote für jeden n-ten Artikel einrichten",
     "keywords": [
       "2 für 1",
       "Kaufe 2 erhalte 1",
@@ -1809,7 +1809,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Legen Sie zuerst unter Einstellungen → Mitgliedsstufen Stufen an (z. B. Gold) und richten Sie die Aktion dann auf diese Stufe aus. Für Geburtstagsangebote wählen Sie als Kundenkreis „Geburtstagsmonat“."
+        "text": "Legen Sie zuerst unter Einstellungen → Mitgliedsstufen Stufen an (z. B. Gold) und richten Sie die Aktion dann auf diese Stufe aus. Für Geburtstagsangebote wählen Sie unter „Wer darf diese Aktion nutzen“ die Option „Geburtstagsmonat“."
       },
       {
         "type": "list",
@@ -1894,7 +1894,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Bei Zeitfenstern über Mitternacht (z. B. 22:00–02:00) zählt der Wochentag, an dem das Fenster beginnt: Ist nur Freitag ausgewählt, gilt Samstag um 01:30 noch zur Freitagsschicht und die Aktion greift – Samstag um 23:30 dagegen nicht.",
+          "Bei Zeitfenstern über Mitternacht (z. B. 22:00–02:00) zählt der Wochentag, an dem das Fenster beginnt: Ist nur Freitag ausgewählt, gilt Samstag um 01:30 noch als Teil des Freitags-Zeitfensters und die Aktion greift – Samstag um 23:30 dagegen nicht.",
           "Das Enddatum ist eine harte Grenze: Selbst wenn ein Happy-Hour-Fenster noch läuft, endet die Aktion in dem Moment, in dem das Enddatum verstreicht.",
           "Die Uhrzeit stammt von der Systemuhr des iPad – achten Sie daher auf die richtige Zeitzone und Uhrzeit des Geräts."
         ]
@@ -1937,7 +1937,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Gut zu wissen: Ergibt ein Rabatt gerundet null, zählt die Anwendung nicht – und verbraucht auch kein Nutzungslimit."
+        "text": "Gut zu wissen: Wird ein Rabatt auf null gerundet, zählt er nicht als angewendet und verbraucht auch kein Nutzungslimit."
       }
     ],
     "related": [
@@ -1964,7 +1964,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ob wir die Zahlungsabwicklung integrieren, hängt vom tatsächlichen Bedarf ab. Wenn Sie sie brauchen, schreiben Sie uns, welchen Dienst Sie anbinden möchten (welchen Zahlungsanbieter, welches Terminal) und wofür Sie ihn einsetzen – wir entwickeln nach der Zahl der Anfragen."
+        "text": "Ob wir die Zahlungsabwicklung integrieren, hängt vom tatsächlichen Bedarf ab. Wenn Sie sie brauchen, schreiben Sie uns, welchen Dienst Sie anbinden möchten (welchen Zahlungsanbieter, welches Terminal) und wofür Sie ihn einsetzen – wir priorisieren die Entwicklung nach der Zahl der Anfragen."
       }
     ],
     "related": [
@@ -1991,7 +1991,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wenn Sie das brauchen, schreiben Sie uns das Gerätemodell, das Sie verwenden – wir entwickeln nach der Zahl der Anfragen."
+        "text": "Wenn Sie das brauchen, schreiben Sie uns das Gerätemodell, das Sie verwenden – wir priorisieren die Entwicklung nach der Zahl der Anfragen."
       }
     ],
     "related": [
@@ -2022,7 +2022,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wenn Sie das brauchen, schreiben Sie uns – wir entwickeln nach der Zahl der Anfragen."
+        "text": "Wenn Sie das brauchen, schreiben Sie uns – wir priorisieren die Entwicklung nach der Zahl der Anfragen."
       }
     ],
     "related": [
@@ -2057,7 +2057,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wenn Sie einen Monatsabschluss-Bericht zum Exportieren oder Drucken brauchen, schreiben Sie uns, welche Felder Sie benötigen – wir entwickeln nach der Zahl der Anfragen."
+        "text": "Wenn Sie einen Monatsabschluss-Bericht zum Exportieren oder Drucken brauchen, schreiben Sie uns, welche Felder Sie benötigen – wir priorisieren die Entwicklung nach der Zahl der Anfragen."
       }
     ],
     "related": [
