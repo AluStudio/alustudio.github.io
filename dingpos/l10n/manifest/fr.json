@@ -1,0 +1,4 @@
+{
+  "//": "Per translation unit, the hash of the en text the fr translation was made from. Written by `npm run l10n -- apply fr`; do not edit.",
+  "units": {}
+}
