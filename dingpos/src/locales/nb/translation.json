@@ -28,7 +28,7 @@
     "cashier": {
       "eyebrow": "Kasse",
       "title": "Alle trinn i et salg på én skjerm",
-      "lead": "Opptil 10 handlekurver samtidig, produkter finnes på navn eller strekkode mens du skriver, og rabatter og mva. er regnet ut før du tar betalt.",
+      "lead": "Opptil 10 handlekurver samtidig, produktene finnes ved søk på navn eller strekkode mens du skriver, og rabatter og mva. regnes ut før du tar betalt.",
       "items": [
         "Opptil 10 handlekurver samtidig",
         "Produktsøk på navn og strekkode mens du skriver",
@@ -123,7 +123,7 @@
   "privacy_band": {
     "eyebrow": "Sikkerhetskopi og personvern",
     "title": "Ingen konto betyr at ingen kan ta dataene dine",
-    "lead": "Du trenger ikke registrere deg for å bruke DingPOS. Regnskapet ligger på iPaden, og hvis du vil ta sikkerhetskopi, går den til en skykonto du allerede eier.",
+    "lead": "Du trenger ikke registrere deg for å bruke DingPOS. Dataene dine ligger på iPaden, og hvis du vil ta sikkerhetskopi, går den til en skykonto du allerede eier.",
     "items": [
       "Velg mellom iCloud, Google Drive og Dropbox",
       "Manuell sikkerhetskopi når du vil",
@@ -173,7 +173,7 @@
           "Full kassefunksjon med opptil 10 handlekurver",
           "Produkter med varianter, strekkoder, bilder og kategorier",
           "Ordrehistorikk, annulleringer, returer og bytter",
-          "Oversikt over virksomheten: inntekter, fortjeneste, bestselgere",
+          "Oversikt over virksomheten: salgsinntekt, fortjeneste, bestselgere",
           "Sikkerhetskopi i skyen og gjenoppretting",
           "Kassen fungerer uten nett"
         ],
@@ -200,7 +200,7 @@
           "Ansattkontoer: egen PIN-kode, hver ordre viser hvem som ekspederte den",
           "Tillatelser og godkjenninger: rabatter over grensen, endring av produkter og lager, visning av kostpriser",
           "Aktivitetslogg og gjenopprettingslogg",
-          "Avanserte rapporter: periodesammenligning, salgsvarmekart, saktegående varer, lagerverdi, gjenkjøpende kunder"
+          "Avanserte rapporter: periodesammenligning, salgsvarmekart, saktegående varer, lagerverdi, kunder som handler igjen"
         ],
         "cta": "Start 30 dagers gratis prøveperiode"
       }
@@ -299,7 +299,7 @@
         },
         "dashboard": {
           "name": "Oversikt over virksomheten",
-          "desc": "Inntekter, fortjeneste, rabatter, betalingsfordeling og bestselgere"
+          "desc": "Salgsinntekt, fortjeneste, rabatter, betalingsfordeling og bestselgere"
         },
         "comparison": {
           "name": "Periodesammenligning",
@@ -318,7 +318,7 @@
           "desc": "Hva lageret er verdt nå, og hvem som har endret det"
         },
         "repeat": {
-          "name": "Gjenkjøpende kunder og uinnløste poeng",
+          "name": "Kunder som handler igjen og uinnløste poeng",
           "desc": "Hvor mange medlemmer som kommer tilbake, og hvor mange poeng som er utestående"
         },
         "staff": {
@@ -408,14 +408,14 @@
     "title": "Personvernerklæring",
     "meta_description": "Slik behandler DingPOS, kasseappen for iPad som fungerer uten nett, dataene dine: forretningsdataene blir på enheten din, og valgfrie sikkerhetskopier lagres bare i din egen skykonto.",
     "effective_date": "Gjelder fra: 1. juli 2026",
-    "intro": "ALU Studio («vi») har utviklet DingPOS («appen»). DingPOS er et kassesystem bygget med personvern i kjernen – forretningsdataene dine tilhører deg. Denne personvernerklæringen forklarer hvordan vi behandler informasjonen din når du bruker appen.",
+    "intro": "ALU Studio («vi») har utviklet DingPOS («appen»). DingPOS er et kassesystem utviklet med personvern som grunnprinsipp – forretningsdataene dine tilhører deg. Denne personvernerklæringen forklarer hvordan vi behandler informasjonen din når du bruker appen.",
     "local_storage": {
       "title": "Hvordan dataene dine lagres",
       "desc": "DingPOS lagrer alle forretningsdataene dine lokalt på enheten din. Med mindre du selv slår på skysikkerhetskopi, forlater disse dataene aldri enheten. Dataene du oppretter i appen omfatter:",
       "items": [
         "Butikkinnstillinger (butikknavn, valuta, avgiftssats, logo)",
         "Produktdata (navn, pris, kostpris, strekkode, bilde, kategori, varianter, lager)",
-        "Ordre- og betalingsoversikter (inkludert rabatter, avgift og betalingsmåte)",
+        "Ordre- og betalingsdata (inkludert rabatter, avgifter og betalingsmåte)",
         "Kunde- og medlemsdata (navn, valgfritt telefonnummer og e-post, poeng)",
         "Kampanjeregler og innstillinger for medlemsnivåer"
       ]
@@ -447,7 +447,7 @@
       "desc": "DingPOS bruker Firebase Analytics og Firebase Crashlytics fra Google for å hjelpe oss å forstå hvordan appen brukes, og for å finne og rette krasj. Disse tjenestene samler inn:",
       "items": [
         "Anonyme bruksdata (f.eks. hvilke funksjoner som brukes, øktlengde)",
-        "Krasjrapporter (f.eks. stakksporing, enhetsmodell, OS-versjon)",
+        "Krasjrapporter (f.eks. stakkspor, enhetsmodell, OS-versjon)",
         "Enhetsinformasjon (f.eks. enhetstype, OS, appversjon)",
         "En tilfeldig generert instansidentifikator (ikke knyttet til identiteten din)"
       ],

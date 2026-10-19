@@ -87,7 +87,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Første gang du åpner DingPOS, guider en oppsettveiviser deg gjennom åpningen av butikken på omtrent 10 minutter:"
+        "text": "Første gang du åpner DingPOS, leder en veiviser deg gjennom oppsettet av butikken på omtrent 10 minutter:"
       },
       {
         "type": "steps",
@@ -124,7 +124,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. DingPOS fungerer uten nett – kasse, produktadministrasjon, lager og rapporter kjører lokalt på iPaden din uten at du trenger nettverk. Nattmarkeder, pop-up-butikker og andre steder uten Wi-Fi fungerer helt fint."
+        "text": "Ja. DingPOS fungerer uten nett – kasse, produktadministrasjon, lager og rapporter kjører lokalt på iPaden din uten at du trenger nettverk. Nattmarkeder (markeder som holder åpent om natten), pop-up-butikker og andre steder uten Wi-Fi fungerer helt fint."
       },
       {
         "type": "p",
@@ -178,7 +178,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS støtter for øyeblikket iPad med iPadOS 17 eller nyere, og er hovedsakelig laget for liggende retning."
+        "text": "DingPOS støtter for øyeblikket iPad med iPadOS 17 eller nyere, og er hovedsakelig laget for bruk i liggende format."
       },
       {
         "type": "p",
@@ -483,7 +483,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Annulleringen reverserer automatisk alt som henger sammen med ordren: sporet lager legges tilbake, poeng kunden tjente på ordren trekkes tilbake, og poeng som ble brukt, gis tilbake. Annullerte ordrer blir stående i listen med tydelig merking, og de teller ikke med i salgsinntekten i rapportene."
+        "text": "Annulleringen reverserer automatisk alt som henger sammen med ordren: lagerbeholdningen gjenopprettes, poeng kunden tjente på ordren trekkes tilbake, og poeng som ble brukt, gis tilbake. Annullerte ordrer blir stående i listen med tydelig merking, og de teller ikke med i salgsinntekten i rapportene."
       },
       {
         "type": "note",
@@ -507,7 +507,6 @@ export const articles = [
       "refusjon",
       "delvis retur",
       "bytte størrelse",
-      "angrerett",
       "tilbakebetaling"
     ],
     "content": [
@@ -521,7 +520,7 @@ export const articles = [
           "Den opprinnelige ordren endres aldri. En retur får sitt eget dokument datert i dag, nummerert med prefikset R, og salgsinntekten reduseres på dagen returen skjer.",
           "Tilbakebetalingen er det kunden faktisk betalte for varen – vare- og handlekurvrabatter og poengbruk er allerede fordelt, så det betales ikke tilbake til listepris. Mva. følger satsen den opprinnelige ordren ble belastet med.",
           "Erstatningsvarer belastes til dagens pris, uten kampanjer eller rabatter.",
-          "Sporet lager legges automatisk tilbake. Poeng som ble tjent på den opprinnelige ordren, trekkes tilbake, poeng som ble brukt, gis tilbake, og erstatningsvarene gir egne poeng.",
+          "Lagerbeholdningen gjenopprettes automatisk. Poeng som ble tjent på den opprinnelige ordren, trekkes tilbake, poeng som ble brukt, gis tilbake, og erstatningsvarene gir egne poeng.",
           "En ordre kan returneres i flere runder, men aldri utover antallet som opprinnelig ble solgt. Bruksgrenser for kampanjer gis ikke tilbake ved en retur."
         ]
       },
@@ -639,7 +638,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Notater er uavhengige av status: fullførte ordrer, annullerte ordrer og returer kan alle få notater eller få dem redigert. Beløp og varer i en ordre ligger fast fra kassen; notatet står ved siden av dokumentet og endrer aldri innholdet."
+        "text": "Notater er uavhengige av status: fullførte ordrer, annullerte ordrer og returer kan alle få notater, og notatene kan redigeres. Beløp og varer i en ordre ligger fast fra kassen; notatet står ved siden av dokumentet og endrer aldri innholdet."
       }
     ],
     "related": [
@@ -845,7 +844,7 @@ export const articles = [
     "keywords": [
       "salgsinntekt",
       "mottatt betaling",
-      "inntekt",
+      "kasseavstemming",
       "avstemming",
       "depositum",
       "salg på konto"
@@ -941,8 +940,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Salgssammenligning: til høyre i periodelinjen kan du sammenligne med samme periode i fjor eller med forrige periode (én dag mot samme dag forrige uke, denne uken mot forrige uke, denne måneden mot forrige måned, dette året mot i fjor, en egendefinert periode mot like mange dager rett før). Feltet for mottatt betaling viser differansen og veksten, og salgsdiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, kuttes sammenligningsperioden på samme tidspunkt.",
-          "Ukedag × time: bytt overskriften Salg over tid til Ukedag × time for en varmekart med sju dager og 24 timer – jo mørkere rute, desto mer solgte du. Du kan bytte mellom salgsinntekt og ordrer, og med sammenligning på ser du hvilke timer som vokste og hvilke som krympet.",
+          "Salgssammenligning: til høyre i periodelinjen kan du sammenligne med samme periode i fjor eller med forrige periode (én dag mot samme dag forrige uke, denne uken mot forrige uke, denne måneden mot forrige måned, dette året mot i fjor, en egendefinert periode mot like mange dager rett før). Feltet for mottatt betaling viser differansen og vekstraten, og salgsdiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, kuttes sammenligningsperioden på samme tidspunkt.",
+          "Ukedag × time: bytt overskriften Salg over tid til Ukedag × time for et varmekart med sju dager og 24 timer – jo mørkere rute, desto mer solgte du. Du kan bytte mellom salgsinntekt og ordrer, og med sammenligning på ser du hvilke timer som vokste og hvilke som krympet.",
           "Saktegående varer: bytt overskriften på rangeringskortet til Saktegående varer for å se produktene fra færrest til flest salg, med nåværende lagerbeholdning og siste salgsdato for hvert produkt. Produkter som aldri er solgt, er merket Aldri solgt. Som standard vises bare produkter som er på lager.",
           "Gjenkjøpsandel: den siste linjen i kundefeltet er andelen medlemmer som handlet i perioden og har handlet to eller flere ganger totalt.",
           "Akkurat nå: lagerverdi (nåværende beholdning × nåværende kostpris), alle lagerbevegelser i den valgte perioden, og poengene kundene har, men ikke har brukt, med det høyeste beløpet de kan få trukket fra. Dette er nåværende saldoer, og perioden endrer dem ikke."
@@ -977,7 +976,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kostpris er et valgfritt felt. Produkter uten kostpris merkes «fortjeneste ikke sporet» i rapporter og utelates fra fortjenesteberegningen – salgsinntekten telles fortsatt fullt ut, bare fortjenesten hoppes over."
+        "text": "Kostpris er et valgfritt felt. Produkter uten kostpris merkes «fortjeneste ikke sporet» i rapporter og utelates fra fortjenesteberegningen – salgsinntekten telles fortsatt fullt ut, mens fortjenesten ikke beregnes."
       },
       {
         "type": "p",
@@ -1085,7 +1084,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Velg medlemmet i kassen, så opptjenes poengene automatisk. Skriv inn hvor mange poeng som skal brukes for å løse dem inn. Hvis du annullerer en ordre, trekkes poengene den ga tilbake, og innløste poeng refunderes."
+        "text": "Velg medlemmet i kassen, så opptjenes poengene automatisk. Skriv inn hvor mange poeng du vil løse inn. Hvis du annullerer en ordre, trekkes poengene som ble opptjent på ordren tilbake, og eventuelle innløste poeng tilbakeføres."
       }
     ],
     "related": [
@@ -1503,8 +1502,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Handlinger (manuell lagerjustering, produktadministrasjon, betaling over rabattgrensen): én godkjenning gjelder den ene handlingen.",
-          "Visninger (kostpris og fortjeneste, Rapporter, Innstillinger, sikkerhetskopi og gjenoppretting): en godkjenning gir tilgang til den aktive ansatte byttes eller appen går i bakgrunnen.",
+          "Handlinger (manuell lagerjustering, produktadministrasjon, gjennomføring av et kjøp med rabatt over rabattgrensen): én godkjenning gjelder den ene handlingen.",
+          "Visninger (kostpris og fortjeneste, Rapporter, Innstillinger, sikkerhetskopi og gjenoppretting): en godkjenning gir tilgang inntil den aktive ansatte byttes eller appen går i bakgrunnen.",
           "Rabattgrensen gjelder manuelle rabatter og kontrolleres én gang i kassen. Automatiske kampanjer og innløsning av poeng teller ikke med."
         ]
       },
@@ -1542,7 +1541,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bruk aktivitetsloggen. På siden Ansatte trykker du på Aktivitetslogg øverst til høyre og taster inn eierens PIN-kode. Da ser du butikkens sensitive handlinger, nyeste først: annulleringer, returer, manuelle lagerjusteringer, godkjenninger, endringer av ansatte og tillatelser, endringer av eierens PIN-kode, endringer av produktpriser og kostpriser og slettede produkter. Vanlige betalinger vises ikke."
+        "text": "Bruk aktivitetsloggen. På siden Ansatte trykker du på Aktivitetslogg øverst til høyre og taster inn eierens PIN-kode. Da ser du butikkens sensitive handlinger, nyeste først: annulleringer, returer, manuelle lagerjusteringer, godkjenninger, endringer av ansatte og tillatelser, endringer av eierens PIN-kode, endringer av produktpriser og kostpriser og slettede produkter. Vanlige salg i kassen vises ikke."
       },
       {
         "type": "list",
@@ -1556,7 +1555,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Alle abonnementsplaner registrerer; bare visningen er en Pro-funksjon, så oppføringer fra perioden da Pro var utløpt dukker opp når du tegner Pro på nytt. Loggen følger med i sikkerhetskopiene dine i skyen."
+        "text": "Aktivitetsloggen registreres på alle abonnementsplaner; bare visningen er en Pro-funksjon, så oppføringer fra perioden da Pro var utløpt dukker opp når du tegner Pro på nytt. Loggen følger med i sikkerhetskopiene dine i skyen."
       }
     ],
     "related": [
@@ -1760,7 +1759,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tips: sett hovedtilbudet først i prioritet, så rabattoversikten på kvitteringen stemmer med budskapet i markedsføringen din."
+        "text": "Tips: gi hovedtilbudet det laveste prioritetsnummeret, så rabattoversikten på kvitteringen stemmer med budskapet i markedsføringen din."
       }
     ],
     "related": [
@@ -1847,7 +1846,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Det finnes tre sammensatte tilbudstyper: gave ved kjøp (kjøp A, få B), tilleggsvare til spesialpris (legg til X kr og få Y) og pakketilbud til fast pris (hvilke som helst N for X kr). Gaver og tilleggsvarer venter på at kassereren bekrefter, mens pakketilbud brukes automatisk."
+        "text": "Det finnes tre sammensatte tilbudstyper: gave ved kjøp (kjøp A, få B), tilleggsvare til spesialpris (legg til X kr og få Y) og pakketilbud til fast pris (valgfritt N varer for X kr). Gaver og tilleggsvarer venter på at kassereren bekrefter, mens pakketilbud brukes automatisk."
       },
       {
         "type": "p",
@@ -2045,7 +2044,7 @@ export const articles = [
       "avstemming",
       "månedsavslutning",
       "månedsrapport",
-      "å betale",
+      "leverandørgjeld",
       "kundefordringer"
     ],
     "content": [
