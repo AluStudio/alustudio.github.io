@@ -30,7 +30,7 @@
     { "code": "mn", "kind": "translated", "label": "Монгол", "hreflang": "mn", "pathPrefix": "mn", "ogLocale": "mn_MN", "shipped": true },
     { "code": "uz", "kind": "translated", "label": "O‘zbek", "hreflang": "uz", "pathPrefix": "uz", "ogLocale": "uz_UZ", "shipped": true },
     { "code": "km", "kind": "translated", "label": "ខ្មែរ", "hreflang": "km", "pathPrefix": "km", "ogLocale": "km_KH", "shipped": true },
-    { "code": "lo", "kind": "translated", "label": "ລາວ", "hreflang": "lo", "pathPrefix": "lo", "ogLocale": "lo_LA", "shipped": false },
+    { "code": "lo", "kind": "translated", "label": "ລາວ", "hreflang": "lo", "pathPrefix": "lo", "ogLocale": "lo_LA", "shipped": true },
     { "code": "hi", "kind": "translated", "label": "हिन्दी", "hreflang": "hi", "pathPrefix": "hi", "ogLocale": "hi_IN", "shipped": false },
     { "code": "bn", "kind": "translated", "label": "বাংলা", "hreflang": "bn", "pathPrefix": "bn", "ogLocale": "bn_IN", "shipped": false }
   ]
