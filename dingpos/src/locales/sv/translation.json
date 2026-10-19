@@ -515,7 +515,7 @@
     }
   },
   "support": {
-    "doc_title": "Support",
+    "doc_title": "Hjälp och support",
     "meta_description": "DingPOS support: svar och steg-för-steg-guider för kassasystemet till iPad – installation, kassa, ordrar, lager, kampanjer, säkerhetskopiering, personal och fakturering.",
     "title": "Hur kan vi hjälpa dig?",
     "subtitle": "Sök bland vanliga frågor eller bläddra efter ämne",
@@ -528,7 +528,7 @@
     "no_results_title": "Inga matchande frågor",
     "no_results_desc": "Prova andra sökord, eller mejla oss – vi återkommer snart.",
     "related_title": "Relaterade frågor",
-    "back": "Support",
+    "back": "Hjälp och support",
     "since": "Finns sedan DingPOS v{{version}}",
     "verified_version": "Innehållet gäller DingPOS v{{version}}",
     "contact_title": "Hittar du inget svar?",

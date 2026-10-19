@@ -8,7 +8,7 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) | Support | Sidnamn; inte ”kundtjänst” |
+| Support (the help pages) | Hjälp och support | Sidnamn (titel och tillbakalänk); inte ”kundtjänst”. Bara ”Support” är identiskt med en och avvisas som sidtitel |
 | FAQ / frequently asked questions | Vanliga frågor | Förkorta inte till FAQ i rubriker; ”FAQ” kan användas i sökord |
 | Pricing (the page) | Priser |  |
 | Plan (Lite / Standard / Pro; the names stay in English) | plan | From app glossary; Lite / Standard / Pro oöversatta |
