@@ -46,7 +46,7 @@ The first review is the full pass over every unit; a re-review checks only what 
 
 1. Full review: `npm run l10n -- sync $1 --mode review`, then one parallel call with `l10n-reviewer` per segment: "Review .logs/l10n/$1/packets/<segment>.json for $1." Save each reply verbatim to `.logs/l10n/$1/review/round-0/<segment>.md` (write tool).
 2. A reply missing the `Reviewed units:` line, or naming fewer units than the packet, is not a review: re-run that segment once, then BLOCKED.
-3. Every `en` and `app` finding goes into the report under "en source findings" / "app wording findings" — never fixed here.
+3. Every `en` and `app` finding goes into the report under "en source findings" / "app wording findings"; every re-review `note` row goes under "review notes" — never fixed here, and none of them blocks.
 4. If every segment says `VERDICT: CLEAN`, go to step 6. Otherwise fix round n = 1, 2:
    a. `FIXBASE=$(git rev-parse HEAD)`.
    b. `glossary` findings first (one translator task: edit the site glossary rows, then re-translate the units they name), then `translation` findings per segment: "Fix findings for $1 (task shape 3). Packet: <packet>. Previous output: .logs/l10n/$1/out/<segment>.json (rewrite it in place). Findings: the `translation` rows of .logs/l10n/$1/review/round-<n-1>/<segment>.md. Where a finding concerns an on-screen app label, confirm it in the app's en and $1 Localizable.strings before following or keeping it." Then `npm run l10n -- apply $1` until `rejected 0`, commit `fix(l10n): apply $1 review round <n>`, `progress set $1 reviewRounds=<n>`.

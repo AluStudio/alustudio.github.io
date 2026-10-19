@@ -39,7 +39,7 @@ Do not flag wording that is already natural in the language just because you wou
 
 ## Re-review
 
-The task gives a packet written with `--since <ref>` — only the units the last fix round changed — and the previous review reply. Judge only those units: was each previous finding on them resolved, and is the new value right by every check above? Do not raise findings on units outside the packet, and do not reopen a unit you accepted before unless the fix changed it. This is what lets a review converge: the first review is the full pass; later rounds verify fixes.
+The task gives a packet written with `--since <ref>` — only the units the last fix round changed — and the previous review reply. Judge only the fields a previous finding named or the fix changed (an article is one unit, but its other fields — `keywords`, other `content` entries — are out of scope unless the fix touched them): was each previous finding resolved, and did the change introduce an error against Meaning, App wording or Glossary above? Do not raise findings on units outside the packet, and do not reopen a unit you accepted before unless the fix changed it. Register and fluency, and search-term preferences, are not re-review checks: when the fix followed your earlier suggestion, a different phrasing of your own is not a finding. A pure register, fluency or search-term nit that you still want to record goes in a `note` row (below) and does not block. This is what lets a review converge: the first review is the full pass; later rounds verify fixes.
 
 ## Routing each finding
 
@@ -48,6 +48,7 @@ Exactly one layer per finding:
 - `glossary` — a site-glossary term or avoid list is wrong for this language, so every use is wrong; give the corrected row and list the units in this segment that use it.
 - `en` — the English source is wrong or ambiguous; give the corrected en. Reported to the owner, never fixed in this language's branch.
 - `app` — the app's own translation (`appMatch`, `appTerms`, its glossary) is wrong for this language. Reported to the owner, who fixes it in the app first; the site keeps the app's wording meanwhile.
+- `note` — re-review only: a register, fluency or search-term nit on a changed field, with the phrasing you would prefer. Reported to the owner, never fixed in this language's branch and never blocking. Not available in the first (full) review.
 
 ## Output
 
@@ -61,4 +62,4 @@ Reviewed units: <comma-separated list of every unit id reviewed>
 VERDICT: <CLEAN | FIX>
 ```
 
-For a finding inside an article, put the field path in the id column (`faq:how-to-set-up:content.1.items.0`). `VERDICT: CLEAN` only when there are no `translation` or `glossary` findings (`en` and `app` findings do not block). An empty findings table with the full reviewed list is a valid result. Never omit the reviewed line: it is how the caller knows nothing was skipped. Your final message is the result: never call `contact_supervisor`.
+For a finding inside an article, put the field path in the id column (`faq:how-to-set-up:content.1.items.0`). `VERDICT: CLEAN` only when there are no `translation` or `glossary` findings (`en`, `app` and `note` findings do not block). An empty findings table with the full reviewed list is a valid result. Never omit the reviewed line: it is how the caller knows nothing was skipped. Your final message is the result: never call `contact_supervisor`.
