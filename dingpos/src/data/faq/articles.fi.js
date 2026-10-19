@@ -87,7 +87,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kun avaat DingPOSin ensimmäisen kerran, ohjattu käyttöönotto opastaa kauppasi perustamisen noin 10 minuutissa:"
+        "text": "Kun avaat DingPOSin ensimmäisen kerran, ohjattu käyttöönotto opastaa sinua kauppasi käyttöönotossa noin 10 minuutissa:"
       },
       {
         "type": "steps",
@@ -401,7 +401,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kyllä. Avaa Asetukset → Laitteen asetukset ja poista Maksuääni käytöstä. Seuraavasta myynnistä alkaen onnistumisnäkymä pysyy hiljaisena, mutta haptinen napautus säilyy."
+        "text": "Kyllä. Avaa Asetukset → Laitteen asetukset ja poista Maksuääni käytöstä. Seuraavasta myynnistä alkaen onnistumisnäkymä pysyy hiljaisena, mutta haptinen palaute säilyy."
       },
       {
         "type": "p",
@@ -525,7 +525,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Alkuperäistä tilausta ei koskaan muuteta. Palautuksesta syntyy oma asiakirja, jonka päivämäärä on tämä päivä ja jonka numerossa on R-etuliite. Liikevaihto pienenee palautuspäivänä.",
-          "Hyvitys on se summa, jonka asiakas todella maksoi kyseisestä tuotteesta: tuotealennukset, ostoskorin alennukset ja pisteiden käyttö on jo jaettu pois, joten hyvitystä ei makseta listahinnalla. Veroon käytetään sitä verokantaa, jolla alkuperäinen tilaus veloitettiin.",
+          "Hyvitys on se summa, jonka asiakas todella maksoi kyseisestä tuotteesta: tuotealennukset, ostoskorin alennukset ja pisteillä maksettu osuus on jo huomioitu, joten hyvitystä ei makseta listahinnalla. Veroon käytetään sitä verokantaa, jolla alkuperäinen tilaus veloitettiin.",
           "Korvaavat tuotteet veloitetaan päivän hinnalla ilman kampanjoita tai alennuksia.",
           "Seurattu varasto palautuu automaattisesti. Alkuperäisestä tilauksesta kertyneet pisteet vähennetään, käytetyt pisteet palautetaan, ja korvaavat tuotteet kerryttävät omat pisteensä.",
           "Tilauksen voi palauttaa useassa erässä, mutta ei koskaan enempää kuin alun perin myytiin. Palautus ei palauta kampanjoiden käyttörajoja."
@@ -563,7 +563,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Varastosta vähennetään heti, kun ennakkotilaus tehdään, jolloin tavara on varattu asiakkaalle. Loppuunmyydyt tuotteet menevät negatiiviseksi ja palautuvat, kun ostotilaus vastaanotetaan.",
+          "Varastosta vähennetään heti, kun ennakkotilaus tehdään, jolloin tavara on varattu asiakkaalle. Varastosaldot voivat mennä negatiivisiksi, jos tuotteet ovat loppu, ja palautuvat, kun ostotilaus vastaanotetaan.",
           "Kun asiakas noutaa tilauksen, napauta tilauksen tiedoissa Luovuta ja ota loppusumma vastaan. Tilauksesta tulee tavallinen valmis myynti, ja myöhemmät palautukset hoidetaan normaalisti palautuksen kautta.",
           "Jos asiakas ei koskaan tule, napauta tilauksen tiedoissa Peruuta tilaus ja valitse, palautatko etumaksun vai pidätkö sen. Tavara lisätään takaisin varastoon.",
           "Etumaksukuitilla ja lopullisella noutokuitilla on sama numero."
@@ -828,7 +828,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Ostot vaativat Standard-paketin tai korkeamman. Toimittajaa, jolla on maksamattomia vastaanotettuja tilauksia, ei voi poistaa."
+        "text": "Ostot vaativat Standard-paketin tai sitä korkeamman paketin. Toimittajaa, jolla on maksamattomia vastaanotettuja tilauksia, ei voi poistaa."
       }
     ],
     "related": [
@@ -860,7 +860,7 @@ export const articles = [
         "items": [
           "Laskulle myynti: tuotteet lähtevät tänään ja kuuluvat tämän päivän liikevaihtoon. Raha kirjautuu saapuneeseen maksuun sinä päivänä, kun maksu kuitataan.",
           "Ennakkotilaus: etumaksu kirjautuu saapuneeseen maksuun maksupäivänä. Liikevaihto kirjataan kokonaisuudessaan noutopäivänä.",
-          "Menetetty etumaksu: kun asiakas peruu ennakkotilauksen ja etumaksu jää kauppiaalle, se on jo laskettu saapuneeseen maksuun maksupäivänä. Tilastot-välilehti näyttää sen erikseen menetettyinä etumaksuina, eikä se koskaan kuulu liikevaihtoon."
+          "Etumaksun menetys: kun asiakas peruu ennakkotilauksen ja etumaksu jää kauppiaalle, se on jo laskettu saapuneeseen maksuun maksupäivänä. Tilastot-välilehti näyttää sen erikseen menetettyinä etumaksuina, eikä se koskaan kuulu liikevaihtoon."
         ]
       },
       {
@@ -877,14 +877,14 @@ export const articles = [
   {
     "slug": "report-periods",
     "category": "reports",
-    "question": "Miltä ajanjaksoilta raportit voi näyttää?",
+    "question": "Mitä raportin jaksoja raporteissa voi tarkastella?",
     "keywords": [
       "raportit",
-      "ajanjakso",
+      "raportin jakso",
       "tämä viikko",
       "tämä kuukausi",
       "tämä vuosi",
-      "mukautettu aikaväli",
+      "mukautettu jakso",
       "päivämäärä",
       "myydyimmät tuotteet"
     ],
@@ -903,7 +903,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pro-paketissa Myynnin vertailu jaksopalkin oikeassa reunassa vertaa jaksoa edelliseen jaksoon tai viime vuoden vastaavaan jaksoon. Katso lisää kohdasta ”Mitä Pron laajennetut raportit näyttävät?”"
+        "text": "Pro-paketissa Myynnin vertailu jaksopalkin oikeassa reunassa vertaa valittua jaksoa sitä edeltävään jaksoon tai viime vuoden vastaavaan jaksoon. Katso lisää kohdasta ”Mitä Pron laajennetut raportit näyttävät?”"
       },
       {
         "type": "note",
@@ -966,22 +966,22 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Miten kate näkyy raporteissa, jos en ole syöttänyt hankintahintoja?",
+    "question": "Miten myyntikate näkyy raporteissa, jos en ole syöttänyt hankintahintoja?",
     "keywords": [
       "hankintahinta",
+      "myyntikate",
       "kate",
-      "katemarginaali",
       "raportit",
       "ei seurannassa"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Hankintahinta on valinnainen kenttä. Raporteissa tuotteet ilman hankintahintaa merkitään tekstillä ”myyntikatetta ei seurata”, ja ne jätetään pois katelaskennasta. Liikevaihto lasketaan silti kokonaan, vain kate jätetään pois."
+        "text": "Hankintahinta on valinnainen kenttä. Raporteissa tuotteet ilman hankintahintaa merkitään tekstillä ”myyntikatetta ei seurata”, ja ne jätetään pois myyntikatteen laskennasta. Liikevaihto lasketaan silti kokonaan, vain myyntikate jätetään pois."
       },
       {
         "type": "p",
-        "text": "Saat täydelliset katelaskelmat lisäämällä hankintahinnat tuotteen muokkaussivulla. Ne otetaan huomioon tulevissa myynneissä. Kate lasketaan alennuksen jälkeisestä liikevaihdosta."
+        "text": "Saat täydelliset myyntikatelaskelmat lisäämällä hankintahinnat tuotteen muokkaussivulla. Ne otetaan huomioon tulevissa myynneissä. Myyntikate lasketaan alennuksen jälkeisestä liikevaihdosta."
       }
     ],
     "related": [
@@ -1014,12 +1014,12 @@ export const articles = [
           "Osta yksi, saat toisen -tarjoukset ja n:nnen tuotteen tarjoukset.",
           "Bonuspisteiden kertoimet.",
           "Vain tietyn jäsentason tai syntymäkuukauden tarjoukset.",
-          "Osta A, saat B, maksulliset lisätuotteet ja kiinteähintaiset paketit."
+          "Osta A, saat B, maksulliset lisätuotteet ja pakettihinnat."
         ]
       },
       {
         "type": "p",
-        "text": "Jokaisen kampanjan voi ajoittaa (Happy Hour -ajat, tietyt viikonpäivät, keskiyön yli), rajata tiettyihin tuotteisiin ja hallita prioriteetilla, yhdistämissäännöillä ja käyttörajoilla. Ehdot täyttävät kampanjat toteutuvat kassalla automaattisesti – alennuskoodeja ei tarvita."
+        "text": "Jokaisen kampanjan voi ajastaa (Happy Hour -ajat, tietyt viikonpäivät, keskiyön yli), rajata tiettyihin tuotteisiin ja määrittää sille prioriteetin, yhdistämissäännöt ja käyttörajat. Ehdot täyttävät kampanjat tulevat kassalla voimaan automaattisesti – alennuskoodeja ei tarvita."
       }
     ],
     "related": [
@@ -1080,11 +1080,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Avaa Asetukset → Kanta-asiakasohjelma ja määritä kaksi sääntöä: kuinka monta pistettä Y asiakas ansaitsee X:n ostoksesta ja kuinka monta pistettä (N) vastaa M:n alennusta (valinnaisena tilauskohtainen lunastusraja). Voit myös antaa uusille jäsenille tervetuliaispisteet automaattisesti."
+        "text": "Avaa Asetukset → Kanta-asiakasohjelma ja määritä kaksi sääntöä: kuinka monta pistettä asiakas saa jokaista X:n arvoista ostosta kohden ja montako pistettä (N) tarvitaan M:n suuruiseen alennukseen (voit myös määrittää tilauskohtaisen lunastusrajan). Voit myös antaa uusille jäsenille tervetuliaispisteet automaattisesti."
       },
       {
         "type": "p",
-        "text": "Valitse jäsen kassalla, niin pisteet kertyvät automaattisesti. Lunastaaksesi pisteitä syötä käytettävien pisteiden määrä. Tilauksen mitätöinti perii takaisin sillä ansaitut pisteet ja palauttaa lunastetut pisteet."
+        "text": "Valitse jäsen kassalla, niin pisteet kertyvät automaattisesti. Lunastaaksesi pisteitä syötä käytettävien pisteiden määrä. Tilauksen mitätöinti vähentää tilauksesta kertyneet pisteet ja palauttaa lunastetut pisteet."
       }
     ],
     "related": [
@@ -1122,7 +1122,7 @@ export const articles = [
   {
     "slug": "backup-data",
     "category": "backup",
-    "question": "Miten otan kassatietojen varmuuskopion?",
+    "question": "Miten otan tiedoistani varmuuskopion?",
     "keywords": [
       "varmuuskopio",
       "varmuuskopiointi",
@@ -1139,7 +1139,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Varmuuskopiot tallentuvat omalle pilvitilillesi. Jokainen pilvipalvelu säilyttää vain viimeisimmän kopion – yhden tietokopion ja yhden tuotekuvien tiedoston – ja jokainen varmuuskopiointi korvaa edellisen."
+        "text": "Varmuuskopiot tallentuvat omalle pilvitilillesi. Jokainen pilvipalvelu säilyttää vain viimeisimmän kopion – yhden pilvivarmuuskopion ja yhden tuotekuvien tiedoston – ja jokainen varmuuskopiointi korvaa edellisen."
       },
       {
         "type": "note",
@@ -1363,7 +1363,7 @@ export const articles = [
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
-    "question": "Palautin väärän varmuuskopion. Voinko kumota sen?",
+    "question": "Palautin väärän pilvivarmuuskopion. Voinko kumota sen?",
     "keywords": [
       "kumoa palautus",
       "palautus",
@@ -1492,7 +1492,7 @@ export const articles = [
       "esihenkilö",
       "alennusraja",
       "työntekijä",
-      "omakustanne",
+      "omakustannus",
       "rooli"
     ],
     "content": [
@@ -1542,7 +1542,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Käytä toimintolokia. Napauta Henkilöstö-sivun oikeasta yläkulmasta Toimintoloki ja anna omistajan PIN-koodi. Näet kaupan arkaluonteiset toiminnot uusin ensin: mitätöinnit, palautukset, varastosaldon manuaaliset korjaukset, hyväksynnät, henkilöstö- ja oikeusmuutokset, omistajan PIN-koodin vaihdot, tuotteiden hinta- ja omakustannusmuutokset sekä tuotteiden poistot. Tavallisia maksuja ei listata."
+        "text": "Käytä toimintolokia. Napauta Henkilöstö-sivun oikeasta yläkulmasta Toimintoloki ja anna omistajan PIN-koodi. Näet kaupan arkaluonteiset toiminnot uusin ensin: mitätöinnit, palautukset, varastosaldon manuaaliset korjaukset, hyväksynnät, henkilöstö- ja oikeusmuutokset, omistajan PIN-koodin vaihdot, tuotteiden hinta- ja omakustannusmuutokset sekä tuotteiden poistot. Tavallisia kassalla tehtyjä myyntejä ei listata."
       },
       {
         "type": "list",
@@ -1556,7 +1556,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Kaikki paketit tallentavat lokia; vain katselu on Pro-ominaisuus, joten Pron katkon aikaiset merkinnät tulevat näkyviin, kun tilaat Pron uudelleen. Loki kulkee mukana pilvivarmuuskopioissa."
+        "text": "Lokiin tallentuu tietoja kaikilla paketeilla; vain sen katselu on Pro-ominaisuus, joten Pro-tilauksen katkon aikana tallentuneet merkinnät tulevat näkyviin, kun tilaat Pron uudelleen. Loki kulkee mukana pilvivarmuuskopioissa."
       }
     ],
     "related": [
@@ -1683,7 +1683,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Peruutus: hallitse tilausta laitteesi kohdassa Asetukset → Apple Account → Tilaukset. Peruuta vähintään 24 tuntia ennen kuluvan jakson päättymistä, ettei tilaus uusiudu.",
+          "Peruutus: hallitse tilausta laitteesi kohdassa Asetukset → Apple-tili → Tilaukset. Peruuta vähintään 24 tuntia ennen kuluvan jakson päättymistä, ettei tilaus uusiudu.",
           "Palautus: kun vaihdat laitetta tai asennat sovelluksen uudelleen, napauta DingPOSin Tilaus-sivulla \"Palauta osto\".",
           "Paketin vaihto: valitse uusi paketti DingPOSin Tilaus-sivulla. Päivitykset (Standardista Proon, kuukausitilauksesta vuositilaukseen) tulevat voimaan heti, ja Apple veloittaa erotuksen suhteutettuna; siirtyminen halvempaan pakettiin tulee voimaan uusiutumisen yhteydessä."
         ]
@@ -1697,7 +1697,7 @@ export const articles = [
   {
     "slug": "guide-threshold",
     "category": "promotion-guide",
-    "question": "Miten luon ostosummaan perustuvan alennuksen (ostat yli X €, saat alennuksen)?",
+    "question": "Miten asetan ostosummarajaan perustuvan alennuksen?",
     "keywords": [
       "ostosumman raja",
       "alennus summan perusteella",
@@ -1858,7 +1858,7 @@ export const articles = [
         "items": [
           "Kun olet valinnut Hylkää, sama ehdotus ei tule uudelleen tälle ostoskorille; uusi tai tyhjennetty ostoskori tuo ehdotuksen uudelleen esiin.",
           "Jos uusi ehdotus ilmestyy ennen kassavahvistusta, se on hyväksyttävä tai hylättävä ennen kuin tilauksen voi lähettää.",
-          "Lahja- ja lisätuoterivejä ei voi alentaa muilla alennuskampanjoilla, eivätkä ne lasketa mukaan muiden kampanjoiden rajoihin."
+          "Lahja- ja lisätuoterivejä ei voi alentaa muilla rahallisilla kampanjoilla, eivätkä niiden hinnat kerrytä muiden kampanjoiden ostosummarajoja."
         ]
       },
       {
@@ -1992,7 +1992,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ei vielä. Sähköinen laskutus ja kuittien tulostus edellyttävät laskulaitteiden ja kuittitulostimien hankkimista testausta ja kehitystä varten, mikä on merkittävä kustannus. Pienenä tiimina suunnittelemme sitä, kun käyttäjäkunta on kasvanut ja tulot ovat vakaat."
+        "text": "Ei vielä. Sähköinen laskutus ja kuittien tulostus edellyttävät laskutuslaitteiden ja kuittitulostimien hankkimista testausta ja kehitystä varten, mikä on merkittävä kustannus. Pienenä tiiminä suunnittelemme tätä, kun käyttäjäkunta on kasvanut ja tulot ovat vakaat."
       },
       {
         "type": "p",
@@ -2038,10 +2038,10 @@ export const articles = [
   {
     "slug": "roadmap-monthly-settlement",
     "category": "roadmap",
-    "question": "Onko DingPOSissa kuukausitilitysraporttia?",
+    "question": "Onko DingPOSiin tulossa kuukausittainen maksujen täsmäytysraportti?",
     "keywords": [
-      "kuukausitilitys",
-      "täsmäytys",
+      "kuukausittainen täsmäytysraportti",
+      "maksujen täsmäytys",
       "kuukauden päätös",
       "kuukausiraportti",
       "ostovelat",
@@ -2050,19 +2050,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Erillistä kuukausitilitysraporttia ei vielä ole, mutta kaikki täsmäytykseen tarvittava löytyy jo sovelluksesta:"
+        "text": "Erillistä kuukausittaista täsmäytysraporttia ei vielä ole, mutta kaikki täsmäytykseen tarvittava löytyy jo sovelluksesta:"
       },
       {
         "type": "list",
         "items": [
-          "Valitse Tilastot-välilehdellä Tämä kuukausi, niin näet kuukauden myynnin, vastaanotetut käteismaksut, katteen ja maksutapojen jakauman.",
+          "Valitse Tilastot-välilehdellä Tämä kuukausi, niin näet kuukauden liikevaihdon, saapuneet maksut, myyntikatteen ja maksutapojen jakauman.",
           "Kuukausilaskulla tehdyt toimittajaostot kertyvät Ostot-kohdan Maksamattomat laskut -näkymään, jossa koko kuukauden voi kuitata kerralla.",
           "Asiakkaille laskulle myydyt tuotteet kertyvät kohtaan Tilaukset → Myyntisaamiset, jossa koko kuukauden voi kuitata kerralla."
         ]
       },
       {
         "type": "p",
-        "text": "Jos tarvitset kuukausitilitysraportin, jonka voi viedä tai tulostaa, kirjoita meille tarvitsemasi kentät. Priorisoimme kehitystä pyyntöjen määrän mukaan."
+        "text": "Jos tarvitset kuukausittaisen täsmäytysraportin, jonka voi viedä tai tulostaa, kirjoita meille tarvitsemasi kentät. Priorisoimme kehitystä pyyntöjen määrän mukaan."
       }
     ],
     "related": [

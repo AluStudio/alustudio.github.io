@@ -33,7 +33,7 @@
         "Jopa 10 ostoskoria yhtä aikaa",
         "Tuotehaku nimellä ja viivakoodilla kirjoittaessa",
         "Tuote- ja ostoskorialennukset, kiinteä summa tai prosentti",
-        "Verollinen / verottomaton hinta lasketaan automaattisesti",
+        "Verollinen / veroton hinta lasketaan automaattisesti",
         "Käteisen takaisinanto ja omat maksutapojen nimet",
         "Jokainen myynti päättyy ”Ding!”-ääneen ja värinään"
       ]
@@ -111,8 +111,8 @@
     "loyalty": {
       "title": "Jäsenet ja pisteet",
       "items": [
-        "Jäseneksi liittyminen: nimi, puhelin ja sähköposti valinnaisia",
-        "Y pistettä jokaisesta X:n ostoksesta",
+        "Jäseneksi liittyminen: nimi; puhelin ja sähköposti ovat valinnaisia",
+        "Y pistettä jokaista X:n suuruista ostosta kohden",
         "N pisteellä M alennusta, valinnaisella enimmäisrajalla",
         "Uudet jäsenet saavat tervetuliaisbonuksen automaattisesti",
         "Jäsentasot, joihin kampanjat voi kohdistaa",
@@ -123,7 +123,7 @@
   "privacy_band": {
     "eyebrow": "Varmuuskopiointi ja tietosuoja",
     "title": "Kun tiliä ei ole, kukaan ei voi viedä tietojasi",
-    "lead": "DingPOSiin ei tarvitse rekisteröityä. Kirjanpitosi pysyy iPadilla, ja jos haluat varmuuskopioita, ne tallentuvat pilvitilille, joka sinulla jo on.",
+    "lead": "DingPOSiin ei tarvitse rekisteröityä. Yrityksesi tiedot pysyvät iPadilla, ja jos haluat varmuuskopioita, ne tallentuvat pilvitilille, joka sinulla jo on.",
     "items": [
       "Valitse iCloud, Google Drive tai Dropbox",
       "Manuaalinen varmuuskopio tarvittaessa",
@@ -137,7 +137,7 @@
     "title": "Yksinkertainen ja läpinäkyvä hinnoittelu",
     "price_before": "Kolme pakettia, alkaen ",
     "price_after": " kuukaudessa",
-    "sub": "30 päivän ilmainen kokeilu. Ei tapahtumamaksuja eikä piilokuluja. Tietosi säilyvät aina kokeilun jälkeen – tilaa uudelleen milloin tahansa.",
+    "sub": "30 päivän ilmainen kokeilu. Ei maksutapahtumakohtaisia maksuja eikä piilokuluja. Tietosi säilyvät aina kokeilun jälkeen – tilaa uudelleen milloin tahansa.",
     "compare": "Vertaile paketteja",
     "cta": "Aloita 30 päivän ilmainen kokeilu"
   },
@@ -184,7 +184,7 @@
         "tagline": "Myymälöille, jotka tarvitsevat varastoa, kanta-asiakkaita, ostoja tai laskulle myyntiä",
         "heading": "Kaikki Lite-paketin ominaisuudet sekä",
         "features": [
-          "Kampanjamoottori: ostosrajat, osta yksi, saat toisen -tarjoukset ja onnelliset tunnit – käytetään kassalla",
+          "Kampanjamoottori: ostosumman rajat, osta yksi, saat toisen kaupan päälle -tarjoukset ja happy hour -kampanjat – käytetään kassalla",
           "Asiakaspisteet, pisteiden lunastus ja kanta-asiakastasot",
           "Varastoseuranta ja ostotilaukset",
           "Laskulle myynti: luovuta tuotteet nyt, laskuta myöhemmin",
@@ -227,7 +227,7 @@
       },
       "switch": {
         "title": "Vaihda milloin tahansa",
-        "desc": "Päivitykset tulevat voimaan heti, ja Apple laskee hinnan suhteessa jäljellä olevaan aikaan. Alennukset tulevat voimaan uusiutumisen yhteydessä."
+        "desc": "Päivitykset tulevat voimaan heti, ja Apple laskee hinnan suhteessa jäljellä olevaan aikaan. Siirtyminen edullisempaan pakettiin tulee voimaan uusiutumisen yhteydessä."
       }
     },
     "compare": {
@@ -251,7 +251,7 @@
         },
         "discounts_tax": {
           "name": "Alennukset ja verot",
-          "desc": "Tuote- ja tilausalennukset; verollinen tai verraton hinta lasketaan puolestasi"
+          "desc": "Tuote- ja tilausalennukset; verollinen tai veroton hinta lasketaan puolestasi"
         },
         "offline": {
           "name": "Kassa ilman verkkoa",
@@ -287,7 +287,7 @@
         },
         "promotions": {
           "name": "Kampanjamoottori",
-          "desc": "Ostosrajat, osta yksi, saat toisen, N:s tuote -tarjoukset ja onnelliset tunnit – käytetään kassalla"
+          "desc": "Ostosumman rajat, osta yksi, saat toisen kaupan päälle -tarjoukset, N:nnen tuotteen tarjoukset ja happy hour -kampanjat – käytetään kassalla"
         },
         "loyalty": {
           "name": "Asiakkaat ja pisteet",
@@ -422,7 +422,7 @@
     },
     "cloud_backup": {
       "title": "Pilvivarmuuskopiointi (valinnainen)",
-      "desc": "Voit halutessasi ottaa pilvivarmuuskopioinnin käyttöön ja valita tallennuspaikaksi iCloudin, Google Driven tai Dropboxin. Varmuuskopiot tallennetaan omalle pilvitilillesi, ja ne pysyvät täysin sinun hallinnassasi. Emme koskaan käsittele, tallenna tai avaa näiden varmuuskopioiden sisältöä. Se, otatko varmuuskopioinnin käyttöön ja mitä palvelua käytät, on täysin sinun päätettävissäsi, ja voit poistaa sen käytöstä milloin tahansa."
+      "desc": "Voit halutessasi ottaa pilvivarmuuskopioinnin käyttöön ja valita tallennuspaikaksi iCloudin, Google Driven tai Dropboxin. Varmuuskopiot tallennetaan omalle pilvitilillesi, ja ne pysyvät täysin sinun hallinnassasi. Emme koskaan käsittele näiden varmuuskopioiden sisältöä, tallenna sitä tai pääse siihen käsiksi. Se, otatko varmuuskopioinnin käyttöön ja mitä palvelua käytät, on täysin sinun päätettävissäsi, ja voit poistaa sen käytöstä milloin tahansa."
     },
     "no_collection": {
       "title": "Mitä emme kerää",
@@ -477,13 +477,13 @@
     },
     "subscription": {
       "title": "Tilaus ja maksu",
-      "desc": "DingPOS tarjoaa 30 päivän ilmaisen kokeilun ensimmäisestä asennuksesta alkaen, ja sen aikana kaikki Pro-paketin ominaisuudet ovat käytössäsi. Jos ostat jonkin paketin kokeilun aikana, kokeilu päättyy ja ostettu paketti on voimassa ostohetkestä alkaen. Kokeilun jälkeen kassan käyttäminen edellyttää tilausta johonkin paketeista (Lite, Standard tai Pro), joka ostetaan App Storen sovelluksensisäisenä ostona. Pakettien sisällöt ja hinnat on lueteltu hinnoittelusivulla (alu-studio.com/dingpos/pricing), ja veloitettava hinta on App Storessa näytetty hinta. Ilman tilausta tuotteiden selaus ja hallinta pysyvät käytössä, eikä tietojasi koskaan poisteta. Tilaus uusiutuu automaattisesti, ellet peru sitä vähintään 24 tuntia ennen kuluvan jakson päättymistä. Voit hallita tai perua tilauksesi milloin tahansa laitteesi App Store -tilin asetuksissa. Ostetut tilaukset voi palauttaa."
+      "desc": "DingPOS tarjoaa 30 päivän ilmaisen kokeilun ensimmäisestä asennuksesta alkaen, ja sen aikana kaikki Pro-paketin ominaisuudet ovat käytössäsi. Jos ostat jonkin paketin kokeilun aikana, kokeilu päättyy ja ostettu paketti on voimassa ostohetkestä alkaen. Kokeilun jälkeen kassan käyttäminen edellyttää tilausta johonkin paketeista (Lite, Standard tai Pro), joka ostetaan App Storen sovelluksensisäisenä ostona. Pakettien sisällöt ja hinnat on lueteltu hinnoittelusivulla (alu-studio.com/dingpos/pricing), ja veloitettava hinta on App Storessa näytetty hinta. Ilman tilausta tuotteiden selaus ja hallinta pysyvät käytössä, eikä tietojasi koskaan poisteta. Tilaus uusiutuu automaattisesti, ellet peru sitä vähintään 24 tuntia ennen kuluvan jakson päättymistä. Voit hallita tai perua tilauksesi milloin tahansa laitteesi App Store -tilin asetuksissa. Ostetut tilaukset voi palauttaa käyttöön."
     },
     "restrictions": {
       "title": "Rajoitukset",
       "desc": "Sovellusta käyttäessäsi sitoudut siihen, että et:",
       "items": [
-        "pura sovellusta takaisinmallintamalla, osiin tai lähdekoodiksi",
+        "takaisinmallinna sovellusta, pura sitä osiin tai dekompiloi sitä",
         "muokkaa tai käännä sovellusta etkä luo siitä johdannaisteoksia",
         "poista sovelluksen tekijänoikeusmerkintöjä tai tunnisteita",
         "käytä sovellusta mihinkään laittomaan tarkoitukseen"
@@ -499,7 +499,7 @@
     },
     "disclaimer": {
       "title": "Vastuuvapauslauseke",
-      "desc": "DingPOS toimitetaan ”sellaisenaan” ilman minkäänlaista nimenomaista tai hiljaista takuuta. Emme takaa, että sovellus toimii keskeytyksettä tai täysin virheettömästi. DingPOS on liiketoimintasi apuväline: verolaskelmien, varastomäärien ja kaikkien summien lopullinen oikeellisuus sekä paikallisten säännösten noudattaminen ovat edelleen sinun tarkistettavanasi. Lain sallimassa enimmäisrajoissa emme vastaa mistään suorista, välillisistä, satunnaisista tai seuraamuksellisista vahingoista, jotka johtuvat sovelluksen käytöstäsi."
+      "desc": "DingPOS toimitetaan ”sellaisenaan” ilman minkäänlaisia nimenomaisia tai oletettuja takuita. Emme takaa, että sovellus toimii keskeytyksettä tai täysin virheettömästi. DingPOS on liiketoimintasi apuväline: verolaskelmien, varastomäärien ja kaikkien summien lopullinen oikeellisuus sekä paikallisten säännösten noudattaminen ovat edelleen sinun tarkistettavanasi. Lain sallimassa enimmäisrajoissa emme vastaa mistään suorista, välillisistä, satunnaisista tai seuraamuksellisista vahingoista, jotka johtuvat sovelluksen käytöstäsi."
     },
     "liability": {
       "title": "Vastuunrajoitus",
