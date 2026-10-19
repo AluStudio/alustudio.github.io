@@ -807,7 +807,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Külgribal olev Ostmine haldab tarnijaid ja ostutellimusi. Tarnija juures on nimi, kontaktisik, telefon, aadress ja vaikimisi maksetingimus (tasu kohe või kord kuus)."
+        "text": "Külgribal olev jaotis Ostud haldab tarnijaid ja ostutellimusi. Tarnija juures on nimi, kontaktisik, telefon, aadress ja vaikimisi maksetingimus (tasu kohe või kord kuus)."
       },
       {
         "type": "steps",
@@ -823,7 +823,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Ostmine nõuab Standard või kõrgemat paketti. Tarnijat, kellel on tasumata vastuvõetud tellimusi, ei saa kustutada."
+        "text": "Jaotis Ostud nõuab Standard või kõrgemat paketti. Tarnijat, kellel on tasumata vastuvõetud tellimusi, ei saa kustutada."
       }
     ],
     "related": [
@@ -2048,7 +2048,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Valige Aruanded all periood See kuu, et näha kuu müügitulu, laekunud raha, kasumit ja maksete jaotust.",
-          "Tarnijate kuutingimustega ostud koonduvad jaotises Ostmine alla Tasumata arved, kus saab terve kuu korraga tasuda.",
+          "Tarnijate kuutingimustega ostud koonduvad jaotises Ostud alla Tasumata arved, kus saab terve kuu korraga tasuda.",
           "Klientidele arvele müüdud kaubad koonduvad jaotises Müügid → Nõuded, kus saab terve kuu eest korraga tasuda."
         ]
       },
