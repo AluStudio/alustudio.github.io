@@ -1548,7 +1548,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A napló minden csomagban rögzíti a műveleteket; csak a megtekintése Pro-funkció. Ezért a Pro-előfizetés szünetelése alatt keletkezett bejegyzések az újbóli előfizetés után is megjelennek. A napló a felhőmentések része."
+        "text": "Minden csomag rögzíti a műveleteket; a napló megtekintése viszont csak Pro-funkció, ezért a Pro-előfizetés nem aktív időszakában keletkezett bejegyzések az újbóli előfizetés után is megjelennek. A napló a felhőmentések része."
       }
     ],
     "related": [
