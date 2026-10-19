@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Support | Nav label; use "hjælp" only in running prose |
+| FAQ / frequently asked questions | Ofte stillede spørgsmål | "FAQ" is fine as a short nav label |
+| Pricing (the page) | Priser | |
+| Plan (Lite / Standard / Pro; the names stay in English) | Abonnementsniveau | From app glossary; plan names stay English. In running text "abonnement" may stand alone for the subscription |
+| Free trial | Gratis prøveperiode | |
+| Billed monthly / billed annually | Faktureret månedligt / Faktureret årligt | Use "betales månedligt/årligt" if the sentence is about paying; Apple bills via App Store |
+| Terms of Use | Brugsvilkår | Avoid "Servicevilkår" |
+| Coming Soon (planned features) | Kommer snart | |
+| Setup guide (promotion setup guides) | Opsætningsguide | Promotion = Kampagne (from app glossary) |
+| Shop owner | Butiksejer | Formal register: address reader with "du" (modern Danish product sites); keep consistent |
+| Stall / pop-up / night market | Markedsstand / pop-up-butik / natmarked | Generic "markedsstand" for stall; "natmarked" is a loan concept, add short gloss if needed |
+| Offline-first | Fungerer offline | Not "offline-first" literally; phrase as "virker uden internet" in prose |
+| Point of sale (POS) app | Kassesystem-app | Short: "kasseapp"; the system term "kassesystem" is what shops search for. Never "salgssted" |
