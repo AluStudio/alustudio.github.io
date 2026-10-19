@@ -211,7 +211,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Jika anda baru membuka kedai dan belum mempunyai data penting, anda boleh memadam dan memasang semula app untuk menjalankan persediaan sekali lagi. Pastikan tiada apa-apa yang anda perlu simpan sebelum memadam."
+        "text": "Jika anda baru membuka kedai dan belum mempunyai data penting, anda boleh memadam dan memasang semula aplikasi untuk menjalankan persediaan sekali lagi. Pastikan tiada apa-apa yang anda perlu simpan sebelum memadam."
       }
     ],
     "related": [
@@ -223,11 +223,11 @@ export const articles = [
     "slug": "app-language",
     "category": "getting-started",
     "since": "3.0",
-    "question": "Bagaimana cara menukar bahasa app DingPOS?",
+    "question": "Bagaimana cara menukar bahasa aplikasi DingPOS?",
     "keywords": [
       "bahasa",
       "tukar bahasa",
-      "bahasa app",
+      "bahasa aplikasi",
       "english",
       "cina",
       "tetapan bahasa"
@@ -235,11 +235,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS menyokong bahasa Inggeris dan Cina Tradisional. Pergi ke Tetapan → Pilihan Peranti dan ketik Bahasa Apl. Ini membuka halaman DingPOS dalam app Tetapan iPad, tempat anda memilih bahasa di bawah Bahasa."
+        "text": "DingPOS menyokong bahasa Inggeris dan Cina Tradisional. Pergi ke Tetapan → Pilihan Peranti dan ketik Bahasa Apl. Ini membuka halaman DingPOS dalam aplikasi Tetapan iPad, tempat anda memilih bahasa di bawah Bahasa."
       },
       {
         "type": "p",
-        "text": "iOS tidak membenarkan app membuka senarai bahasa secara terus, jadi ketikan terakhir dilakukan dalam Tetapan sistem. Bahasa ini hanya digunakan pada iPad ini."
+        "text": "iOS tidak membenarkan aplikasi membuka senarai bahasa secara terus, jadi ketikan terakhir dilakukan dalam Tetapan sistem. Bahasa ini hanya digunakan pada iPad ini."
       }
     ],
     "related": [
@@ -337,7 +337,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Susunan pengiraan penuh: diskaun item → diskaun troli → cukai. Jumlah dibundarkan ke atas pada separuh (half-up) mengikut tempat perpuluhan mata wang (cth. 0 untuk TWD, 2 untuk USD)."
+        "text": "Susunan pengiraan penuh: diskaun item → diskaun troli → cukai. Jumlah dibundarkan separuh ke atas mengikut bilangan tempat perpuluhan mata wang (cth. 0 untuk TWD, 2 untuk USD)."
       }
     ],
     "related": [
@@ -365,7 +365,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kaedah pembayaran ialah label untuk merekod sahaja — DingPOS tidak memproses pembayaran sebenar. Terima bayaran kad atau mudah alih dengan terminal atau app sedia ada anda, kemudian pilih label yang sepadan dalam DingPOS untuk merekodnya. Bayaran tunai mengira baki wang secara automatik."
+        "text": "Kaedah pembayaran ialah label untuk merekod sahaja — DingPOS tidak memproses pembayaran sebenar. Terima bayaran kad atau mudah alih dengan terminal atau app sedia ada anda, kemudian pilih label yang sepadan dalam DingPOS untuk merekodnya. Baki wang bagi bayaran tunai dikira secara automatik."
       },
       {
         "type": "p",
@@ -418,7 +418,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Troli menunjukkan harga pada ketika item ditambah. Apabila anda mengetik sahkan Bayar, DingPOS menyemak semula harga terkini setiap item — jika ada yang berubah, anda akan diberi amaran dengan harga yang dikemas kini sebelum meneruskan."
+        "text": "Troli menunjukkan harga pada ketika item ditambah. Apabila anda mengetik Bayar untuk mengesahkan, DingPOS menyemak semula harga terkini setiap item — jika ada yang berubah, anda akan diberi amaran dengan harga yang dikemas kini sebelum meneruskan."
       },
       {
         "type": "p",
@@ -448,7 +448,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Diskaun item manual: baris itu tidak lagi menerima promosi peringkat item — diskaun manual anda dianggap sebagai keputusan muktamad di tempat kejadian. Namun, jumlah baris itu tetap dikira untuk syarat perbelanjaan minimum.",
+          "Diskaun item manual: baris itu tidak lagi menerima promosi peringkat item — diskaun manual anda dianggap sebagai keputusan muktamad pada masa itu. Namun, jumlah baris itu tetap dikira untuk ambang perbelanjaan.",
           "Diskaun troli manual: dikenakan selepas semua promosi dikira, jadi kedua-duanya wujud bersama. Jika anda memasukkan jumlah melebihi baki jumlah, ia dihadkan secara automatik dengan satu notis."
         ]
       },
@@ -655,7 +655,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pada halaman edit produk, ketik Tambah Pilihan di bawah Pilihan Varian untuk menambah satu pilihan (cth. “Warna”), kemudian gunakan “+ Nilai” untuk menambah setiap pilihannya (cth. Merah, Biru). Jika ada dua pilihan atau lebih (cth. Warna × Saiz), DingPOS menjana setiap gabungan untuk anda (Merah/S, Merah/M, Biru/S…)."
+        "text": "Pada halaman edit produk, ketik Tambah Pilihan di bawah Pilihan Varian untuk menambah satu pilihan produk (cth. “Warna”), kemudian gunakan “+ Nilai” untuk menambah setiap nilai pilihan (cth. Merah, Biru). Jika ada dua pilihan produk atau lebih (cth. Warna × Saiz), DingPOS menjana setiap gabungan untuk anda (Merah/S, Merah/M, Biru/S…)."
       },
       {
         "type": "p",
@@ -807,7 +807,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Ketik Pembelian Baharu, pilih pembekal, dan tambah produk, kuantiti dan kos seunit (diisi awal dengan kos semasa setiap produk). Yuran penghantaran juga boleh ditambah. Jika pembekal belum disediakan, ketik Tambah Pembekal di bahagian kiri atas senarai pembekal — pembekal baharu terus kembali ke dalam pesanan belian.",
+          "Ketik Pembelian Baharu, pilih pembekal, dan tambah produk, kuantiti dan kos seunit (diisi awal dengan kos semasa setiap produk). Yuran penghantaran juga boleh ditambah. Jika pembekal belum disediakan, ketik Tambah Pembekal di bahagian kiri atas senarai pembekal — selepas pembekal baharu ditambah, anda akan kembali ke pesanan belian.",
           "Draf tidak pernah menjejaskan stok atau akaun belum bayar — edit atau padamnya dengan bebas.",
           "Apabila barang tiba, ketik Terima stok: stok yang dijejak bertambah, dan pesanan belian mendapat nombornya lalu dikunci. Secara lalai, penerimaan juga mengemas kini kos setiap produk kepada kos seunit ini; matikan Segerakkan kos produk pada pesanan belian untuk mengekalkan kos tanpa perubahan."
         ]
@@ -835,9 +835,9 @@ export const articles = [
     "keywords": [
       "hasil jualan",
       "tunai diterima",
-      "pendapatan",
-      "semakan baki",
-      "tutup akaun",
+      "pendapatan jualan",
+      "padanan akaun",
+      "penyelesaian",
       "deposit",
       "jualan akaun"
     ],
@@ -886,7 +886,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Untuk satu hari, carta aliran bertukar menjadi carta bar mengikut jam; tempoh yang lebih panjang menggunakan hari, minggu, bulan atau tahun bagi setiap bar bergantung pada panjangnya."
+        "text": "Untuk satu hari, carta trend bertukar menjadi carta bar mengikut jam; tempoh yang lebih panjang menggunakan hari, minggu, bulan atau tahun bagi setiap bar bergantung pada panjangnya."
       },
       {
         "type": "p",
@@ -968,7 +968,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kos ialah medan pilihan. Produk tanpa kos ditandakan “untung tidak dijejak” dalam laporan dan dikecualikan daripada pengiraan untung — hasil jualan tetap dikira sepenuhnya, hanya untung yang dilangkau."
+        "text": "Kos ialah medan pilihan. Produk tanpa kos ditandakan “untung tidak dijejak” dalam laporan dan dikecualikan daripada pengiraan untung — hasil jualan tetap dikira sepenuhnya, hanya untung yang tidak dikira."
       },
       {
         "type": "p",
@@ -1005,7 +1005,7 @@ export const articles = [
           "Tawaran beli satu percuma satu dan tawaran item ke-N.",
           "Pengganda mata bonus.",
           "Tawaran khusus peringkat keahlian atau bulan lahir.",
-          "Beli A dapat B, tambahan berbayar dan pakej harga tetap."
+          "Beli A dapat B, tambahan berbayar dan pakej gabungan berharga tetap."
         ]
       },
       {
@@ -1071,7 +1071,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pergi ke Tetapan → Program Kesetiaan dan tetapkan dua peraturan: dapat Y mata bagi setiap X perbelanjaan, dan tebus N mata untuk potongan M (dengan had tebusan setiap pesanan yang pilihan). Anda juga boleh memberi mata sambutan kepada ahli baharu secara automatik."
+        "text": "Pergi ke Tetapan → Program Kesetiaan dan tetapkan dua peraturan: dapat Y mata bagi setiap X yang dibelanjakan, dan tebus N mata untuk potongan M (dengan had tebusan setiap pesanan yang pilihan). Anda juga boleh memberi mata bonus sambutan kepada ahli baharu secara automatik."
       },
       {
         "type": "p",
@@ -1097,7 +1097,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Peringkat keahlian (cth. Biasa, Perak, Emas) mempunyai dua fungsi: ia boleh disasarkan oleh promosi (cth. diskaun 10% untuk Emas sahaja), dan membolehkan anda mengenali status pelanggan sepintas lalu semasa bayar."
+        "text": "Peringkat keahlian (cth. Biasa, Perak, Emas) mempunyai dua fungsi: promosi boleh disasarkan kepada peringkat tertentu (cth. diskaun 10% untuk ahli Emas sahaja), dan peringkat itu membolehkan anda mengenali status pelanggan sepintas lalu semasa bayar."
       },
       {
         "type": "p",
@@ -1539,13 +1539,13 @@ export const articles = [
           "Setiap entri menunjukkan apa yang terlibat, siapa melakukan apa dan bila, serta hasilnya — contohnya “M price $390 → $350”.",
           "Tapis mengikut kakitangan (termasuk yang dinyahaktifkan), jenis tindakan, dan Hari ini / Minggu Ini / Bulan Ini.",
           "Ketik entri yang merujuk pesanan, produk atau pelanggan untuk membuka butirannya.",
-          "Butiran pesanan, butiran produk dan halaman setiap kakitangan mempunyai pintu masuk tersendiri yang hanya menyenaraikan rekod tentang mereka.",
+          "Butiran pesanan, butiran produk dan halaman setiap kakitangan mempunyai senarai entri tersendiri yang hanya memaparkan rekod berkaitan.",
           "Produk dipadam masih memaparkan nama dan harganya pada masa itu dalam log."
         ]
       },
       {
         "type": "note",
-        "text": "Setiap pelan merekodkan; hanya melihat log ialah ciri Pro, jadi rekod semasa Pro tamat akan muncul apabila anda melanggan semula. Log ini turut disimpan dalam sandaran awan anda."
+        "text": "Semua pelan merekodkan aktiviti; hanya melihat log ialah ciri Pro, jadi rekod yang dibuat semasa Pro tamat akan muncul apabila anda melanggan semula. Log ini turut disimpan dalam sandaran awan anda."
       }
     ],
     "related": [
@@ -1568,7 +1568,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Anda mendapat 30 hari semua ciri pelan Pro sejak pemasangan pertama, termasuk akaun kakitangan, kebenaran, log aktiviti dan laporan lanjutan — tanpa perlu akaun."
+        "text": "Anda mendapat akses kepada semua ciri pelan Pro selama 30 hari bermula dari pemasangan pertama, termasuk akaun kakitangan, kebenaran, log aktiviti dan laporan lanjutan — tanpa perlu akaun."
       },
       {
         "type": "p",
@@ -1598,11 +1598,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tidak — data anda kekal pada peranti anda selama-lamanya. Apabila percubaan tamat, bahagian bayar dikunci, tetapi anda masih boleh melihat pesanan, melihat laporan dan mengurus produk."
+        "text": "Tidak — data anda kekal pada peranti anda selama-lamanya. Apabila percubaan tamat, fungsi pembayaran dikunci, tetapi anda masih boleh melihat pesanan, laporan dan mengurus produk."
       },
       {
         "type": "p",
-        "text": "Langgan pada bila-bila masa dan bahagian bayar dibuka serta-merta, dengan semua data anda tepat seperti yang anda tinggalkan."
+        "text": "Langgan pada bila-bila masa dan fungsi pembayaran dibuka serta-merta, dengan semua data anda tepat seperti yang anda tinggalkan."
       }
     ],
     "related": [
@@ -1629,19 +1629,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga-tiga pelan merangkumi bayar penuh, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
+        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
       },
       {
         "type": "list",
         "items": [
-          "Lite: untuk seorang yang menjalankan gerai dan memerlukan bayar serta produk.",
+          "Lite: untuk seorang yang menjalankan gerai dan memerlukan fungsi pembayaran serta produk.",
           "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun dan prapesanan.",
           "Pro: menambah akaun kakitangan dan kebenaran, kelulusan pengurus, log aktiviti, rekod pemulihan dan laporan lanjutan — untuk kedai yang mempunyai kakitangan."
         ]
       },
       {
         "type": "p",
-        "text": "Sudah menggunakan Standard? Naik taraf ke Pro daripada halaman Langganan: pengebilan kekal pada kitaran yang sama, naik taraf berkuat kuasa serta-merta, dan Apple mengira kadar berkadar bagi perbezaannya. Beralih daripada Pro kembali ke Standard berkuat kuasa semasa pembaharuan. Harga dipaparkan dalam app, dan anda boleh membandingkan pelan di halaman Harga kami."
+        "text": "Sudah menggunakan Standard? Naik taraf ke Pro daripada halaman Langganan: pengebilan kekal pada kitaran yang sama, naik taraf berkuat kuasa serta-merta, dan Apple mengira pelarasan prorata bagi perbezaan harganya. Beralih daripada Pro kembali ke Standard berkuat kuasa semasa pembaharuan. Harga dipaparkan dalam app, dan anda boleh membandingkan pelan di halaman Harga kami."
       },
       {
         "type": "note",
@@ -1832,7 +1832,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tiga jenis tawaran gabungan tersedia: hadiah dengan pembelian (beli A dapat B), tambahan berbayar (tambah $X untuk dapat Y) dan harga pakej (mana-mana N dengan harga $X). Hadiah dan tambahan berbayar menunggu pengesahan juruwang; harga pakej dikenakan secara automatik."
+        "text": "Tiga jenis tawaran gabungan tersedia: hadiah dengan pembelian (beli A dapat B), tambahan berbayar (tambah $X untuk dapat Y) dan harga pakej gabungan (mana-mana N dengan harga $X). Hadiah dan tambahan berbayar menunggu pengesahan juruwang; harga pakej gabungan dikenakan secara automatik."
       },
       {
         "type": "p",
@@ -1848,15 +1848,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Harga pakej (dikenakan secara automatik sejak v2.4): apabila troli boleh membentuk pakej, DingPOS mengumpulkannya dan memasukkannya dalam jumlah — tanpa gesaan, dan pakej tidak boleh dipecahkan."
+        "text": "Harga pakej gabungan (dikenakan secara automatik sejak v2.4): apabila troli boleh membentuk pakej gabungan, DingPOS mengumpulkannya dan memasukkannya dalam jumlah — tanpa gesaan, dan pakej gabungan tidak boleh dipecahkan."
       },
       {
         "type": "list",
         "items": [
-          "Pakej hanya terbentuk apabila ia menjadikan troli lebih murah. Antara item berharga sama, yang tidak didiskaun dikumpulkan dahulu, dan item yang sudah didiskaun mengekalkan diskaunnya.",
-          "Item mana yang dikumpulkan bersama bergantung hanya pada kandungan troli, tidak pernah pada susunan ia diimbas.",
-          "Setiap item ahli pakej memaparkan bahagiannya daripada diskaun pakej, dan jumlah setiap baris ialah selepas diskaun.",
-          "Semasa bayar, pakej dikumpulkan semula dengan harga terkini; jika hasilnya berubah, anda diminta mengesahkan jumlah baharu."
+          "Pakej gabungan hanya terbentuk apabila ia menjadikan troli lebih murah. Antara item berharga sama, yang tidak didiskaun dikumpulkan dahulu, dan item yang sudah didiskaun mengekalkan diskaunnya.",
+          "Item yang dikumpulkan bersama dalam pakej gabungan bergantung hanya pada kandungan troli, bukan pada susunan item itu diimbas.",
+          "Setiap item dalam pakej gabungan memaparkan bahagiannya daripada diskaun pakej gabungan, dan jumlah setiap baris ialah selepas diskaun.",
+          "Semasa bayar, pakej gabungan dikumpulkan semula dengan harga terkini; jika hasilnya berubah, anda diminta mengesahkan jumlah baharu."
         ]
       }
     ],
@@ -2038,7 +2038,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Tetapkan Statistik kepada Bulan Ini untuk melihat hasil jualan, wang diterima, untung dan pecahan kaedah pembayaran bagi bulan itu.",
+          "Tetapkan Statistik kepada Bulan Ini untuk melihat hasil jualan, tunai diterima, untung dan pecahan kaedah pembayaran bagi bulan itu.",
           "Pembelian daripada pembekal dengan terma bulanan terkumpul di bawah Belum Dibayar dalam Pembelian, dan satu bulan penuh boleh diselesaikan sekali gus.",
           "Jualan akaun pelanggan terkumpul di bawah Pesanan → Akaun belum terima, dan satu bulan penuh boleh diselesaikan sekali gus."
         ]

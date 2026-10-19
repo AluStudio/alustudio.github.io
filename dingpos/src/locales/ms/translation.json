@@ -116,14 +116,14 @@
         "Tebus N mata untuk potongan M, dengan had pilihan",
         "Ahli baharu mendapat bonus sambutan secara automatik",
         "Peringkat keahlian yang boleh disasarkan oleh promosi",
-        "Membatalkan pesanan akan membalikkan mata yang diperoleh dan ditebus"
+        "Membatalkan pesanan akan membatalkan mata yang diperoleh dan memulangkan mata yang ditebus"
       ]
     }
   },
   "privacy_band": {
     "eyebrow": "Sandaran & privasi",
     "title": "Tanpa akaun, tiada sesiapa dapat mengambil data anda",
-    "lead": "DingPOS tiada apa-apa untuk didaftarkan. Buku akaun anda berada pada iPad, dan jika anda mahu sandaran, ia dihantar ke akaun awan yang anda sudah miliki.",
+    "lead": "Anda tidak perlu mendaftar akaun untuk menggunakan DingPOS. Rekod kedai anda disimpan pada iPad, dan jika anda mahu sandaran, sandaran itu disimpan dalam akaun awan yang anda sudah miliki.",
     "items": [
       "Pilih satu daripada iCloud, Google Drive atau Dropbox",
       "Sandaran manual, bila-bila masa diperlukan",
@@ -161,7 +161,7 @@
     },
     "approx": "≈ ",
     "or_annual_before": "atau ",
-    "or_annual_after": "/thn dibil tahunan",
+    "or_annual_after": "/thn, dibil tahunan",
     "saving_before": "Jimat ",
     "saving_after": " setahun berbanding bulanan",
     "plans": {
@@ -170,7 +170,7 @@
         "tagline": "Untuk seorang peniaga gerai yang perlukan pembayaran dan produk",
         "heading": "Termasuk",
         "features": [
-          "Bayar sepenuhnya dengan sehingga 10 troli",
+          "Fungsi Bayar yang lengkap dengan sehingga 10 troli",
           "Produk dengan varian, kod bar, foto dan kategori",
           "Sejarah pesanan, batalkan jualan, pemulangan dan tukar barang",
           "Papan pemuka perniagaan: hasil jualan, untung, jualan terlaris",
@@ -223,7 +223,7 @@
       },
       "data": {
         "title": "Data anda kekal milik anda",
-        "desc": "Apabila percubaan atau langganan tamat, hanya pembayaran yang dijeda. Produk, pesanan dan laporan kekal, dan tiada apa yang dipadam."
+        "desc": "Apabila percubaan atau langganan tamat, hanya fungsi Bayar yang dijeda. Produk, pesanan dan laporan kekal, dan tiada apa yang dipadam."
       },
       "switch": {
         "title": "Tukar pada bila-bila masa",
@@ -360,7 +360,7 @@
         },
         {
           "q": "Apa jadi jika saya tidak melanggan selepas percubaan?",
-          "a": "Pembayaran dijeda; semua yang lain terus berfungsi — anda masih boleh melihat pesanan, melihat laporan dan mengurus produk. Tiada apa yang dipadam, dan melanggan memulihkan pembayaran serta-merta."
+          "a": "Fungsi Bayar dijeda; semua yang lain terus berfungsi — anda masih boleh melihat pesanan, melihat laporan dan mengurus produk. Tiada apa yang dipadam, dan melanggan memulihkan fungsi Bayar serta-merta."
         },
         {
           "q": "Bolehkah saya naik taraf atau turun taraf pada bila-bila masa?",
@@ -406,16 +406,16 @@
   },
   "privacy": {
     "title": "Dasar Privasi",
-    "meta_description": "Cara DingPOS, aplikasi POS iPad yang berfungsi tanpa internet, mengendalikan data anda: rekod perniagaan kekal pada peranti anda, dan sandaran pilihan hanya dihantar ke akaun awan anda sendiri.",
+    "meta_description": "Cara DingPOS, aplikasi sistem point of sale (POS) untuk iPad yang berfungsi tanpa internet, mengendalikan data anda: rekod perniagaan kekal pada peranti anda, dan sandaran pilihan hanya dihantar ke akaun awan anda sendiri.",
     "effective_date": "Tarikh berkuat kuasa: 1 Julai 2026",
-    "intro": "ALU Studio (\"kami\") membangunkan DingPOS (\"aplikasi\"). DingPOS ialah sistem point of sale yang dibina dengan privasi sebagai teras — data perniagaan anda milik anda. Dasar Privasi ini menerangkan cara kami mengendalikan maklumat anda apabila anda menggunakan aplikasi.",
+    "intro": "ALU Studio (\"kami\") membangunkan DingPOS (\"aplikasi\"). DingPOS ialah aplikasi sistem point of sale (POS) yang dibina dengan privasi sebagai teras — data perniagaan anda milik anda. Dasar Privasi ini menerangkan cara kami mengendalikan maklumat anda apabila anda menggunakan aplikasi.",
     "local_storage": {
       "title": "Cara data anda disimpan",
       "desc": "DingPOS menyimpan semua data perniagaan anda secara setempat pada peranti anda. Selagi anda tidak mengaktifkan sandaran awan, data ini tidak pernah meninggalkan peranti anda. Data yang anda cipta dalam aplikasi termasuk:",
       "items": [
         "Tetapan kedai (nama kedai, mata wang, kadar cukai, logo)",
         "Data produk (nama, harga, kos, kod bar, foto, kategori, varian, stok)",
-        "Rekod pesanan dan transaksi (termasuk diskaun, cukai, kaedah pembayaran)",
+        "Rekod pesanan dan peristiwa pembayaran (termasuk diskaun, cukai, kaedah pembayaran)",
         "Data pelanggan dan keahlian (nama, nombor telefon dan e-mel pilihan, mata)",
         "Peraturan promosi dan tetapan peringkat keahlian"
       ]
@@ -429,7 +429,7 @@
       "desc": "DingPOS tidak mengumpul, menghantar atau berkongsi sebarang kandungan perniagaan anda. Secara khusus, kami tidak:",
       "items": [
         "Mengumpul data produk, pesanan, pelanggan atau keahlian anda",
-        "Menyentuh sebarang aliran pembayaran atau maklumat kad kredit (aplikasi tidak memproses pembayaran kad sebenar)",
+        "Terlibat dalam sebarang proses pembayaran atau mengendalikan maklumat kad kredit (aplikasi tidak memproses pembayaran kad sebenar)",
         "Menjejak lokasi anda",
         "Berkongsi data perniagaan anda dengan mana-mana pihak ketiga"
       ]
@@ -455,7 +455,7 @@
     },
     "children": {
       "title": "Privasi kanak-kanak",
-      "desc": "DingPOS ialah alat point of sale untuk perniagaan. Ia tidak direka untuk kanak-kanak dan tidak mengumpul maklumat peribadi kanak-kanak."
+      "desc": "DingPOS ialah aplikasi sistem point of sale (POS) untuk perniagaan. Ia tidak direka untuk kanak-kanak dan tidak mengumpul maklumat peribadi kanak-kanak."
     },
     "changes": {
       "title": "Perubahan pada dasar ini",
@@ -477,7 +477,7 @@
     },
     "subscription": {
       "title": "Langganan & pembayaran",
-      "desc": "DingPOS menawarkan percubaan percuma 30 hari dari pemasangan pertama, dan semua ciri pelan Pro tersedia sepanjang tempoh itu; membeli mana-mana pelan semasa percubaan akan menamatkan percubaan, dan pelan yang dibeli berkuat kuasa dari saat pembelian. Selepas percubaan, langganan kepada salah satu pelan (Lite, Standard atau Pro), yang dibeli melalui Pembelian Dalam Aplikasi App Store, diperlukan untuk terus menggunakan bayar; kandungan dan harga pelan disenaraikan di halaman harga (alu-studio.com/dingpos/pricing), dan harga yang dicaj ialah harga yang dipaparkan di App Store. Tanpa langganan, penyemakan imbas dan pengurusan produk masih tersedia dan data anda tidak pernah dipadam. Langganan diperbaharui secara automatik melainkan anda membatalkannya sekurang-kurangnya 24 jam sebelum tamat tempoh semasa. Anda boleh mengurus atau membatalkan langganan pada bila-bila masa dalam tetapan akaun App Store pada peranti anda. Langganan yang telah dibeli boleh dipulihkan."
+      "desc": "DingPOS menawarkan percubaan percuma 30 hari dari pemasangan pertama, dan semua ciri pelan Pro tersedia sepanjang tempoh itu; membeli mana-mana pelan semasa percubaan akan menamatkan percubaan, dan pelan yang dibeli berkuat kuasa dari saat pembelian. Selepas percubaan, langganan kepada salah satu pelan (Lite, Standard atau Pro), yang dibeli melalui Pembelian Dalam Aplikasi App Store, diperlukan untuk terus menggunakan fungsi Bayar; kandungan dan harga pelan disenaraikan di halaman harga (alu-studio.com/dingpos/pricing), dan harga yang dicaj ialah harga yang dipaparkan di App Store. Tanpa langganan, penyemakan imbas dan pengurusan produk masih tersedia dan data anda tidak pernah dipadam. Langganan diperbaharui secara automatik melainkan anda membatalkannya sekurang-kurangnya 24 jam sebelum tamat tempoh semasa. Anda boleh mengurus atau membatalkan langganan pada bila-bila masa dalam tetapan akaun App Store pada peranti anda. Langganan yang telah dibeli boleh dipulihkan."
     },
     "restrictions": {
       "title": "Larangan",
