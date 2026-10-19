@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Suporte | Menu e título da página de ajuda. |
+| FAQ / frequently asked questions | Perguntas frequentes | Use "FAQ" só quando o espaço for curto; no corpo do texto, "perguntas frequentes". |
+| Pricing (the page) | Preços | Evite "Tarifas". |
+| Plan (Lite / Standard / Pro; the names stay in English) | plano | From app glossary. Nomes Lite, Standard e Pro não se traduzem. |
+| Free trial | Teste grátis | Evite "período de avaliação gratuito" em botões. |
+| Billed monthly / billed annually | Cobrança mensal / Cobrança anual | Em frases: "cobrado mensalmente", "cobrado anualmente". Evite "faturado". |
+| Terms of Use | Termos de Uso | Maiúsculas como título; "Política de Privacidade" para Privacy Policy. |
+| Coming Soon (planned features) | Em breve | Evite "Brevemente". |
+| Setup guide (promotion setup guides) | Guia de configuração | |
+| Shop owner | lojista | Também "dono da loja" em tom mais coloquial; prefira "lojista". |
+| Stall / pop-up / night market | barraca / loja temporária / feira noturna | "Feira" para market stalls em geral; evite "banca" e "quiosque". |
+| Offline-first | funciona offline | Não use "offline-first" em prosa; "sem depender de internet" como explicação. |
+| Point of sale (POS) app | app de PDV | Primeira menção: "PDV (ponto de venda)"; também "frente de caixa" na busca. Evite "POS" sozinho. |
