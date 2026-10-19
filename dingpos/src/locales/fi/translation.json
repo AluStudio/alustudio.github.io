@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the fi translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync fi`, then `npm run l10n -- apply fi`.",
+  "nav": {
+    "home": "Etusivu",
+    "pricing": "Hinnoittelu",
+    "privacy": "Tietosuojakäytäntö",
+    "terms": "Käyttöehdot",
+    "support": "UKK"
+  },
+  "hero": {
+    "meta_title": "DingPOS – verkkoyhteydestä riippumaton kassajärjestelmä iPadille",
+    "meta_description": "DingPOS – avaa kauppasi 10 minuutissa. Kassajärjestelmä iPadille, joka toimii ilman verkkoyhteyttä. Tietosi pysyvät sinun hallinnassasi.",
+    "eyebrow": "Kassajärjestelmä iPadille",
+    "title": "Avaa kauppasi 10 minuutissa. Tietosi, sinun hallinnassasi.",
+    "description": "DingPOS on kassajärjestelmä iPadille. Ei tiliä, ei pilvilukkoa, ja se toimii myös ilman internetyhteyttä. Tuotteesi, tilauksesi ja asiakkaasi pysyvät omalla laitteellasi.",
+    "download": "Lataa App Storesta",
+    "note": "30 päivän ilmainen kokeilu.",
+    "shot_alt": "DingPOSin kassanäkymä: vasemmalla tuoteruudukko luokkasuodattimineen, oikealla ostoskori automaattisesti käytettyine kampanjoineen ja loppusumma"
+  },
+  "proof": {
+    "items": [
+      "Ei tiliä",
+      "Kassa toimii ilman verkkoa",
+      "Tiedot pysyvät iPadillasi"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Kassa",
+      "title": "Myynnin jokainen vaihe yhdellä näytöllä",
+      "lead": "Jopa 10 ostoskoria yhtä aikaa, tuotteet löytyvät nimellä tai viivakoodilla kirjoittaessasi, ja alennukset ja vero lasketaan ennen maksua.",
+      "items": [
+        "Jopa 10 ostoskoria yhtä aikaa",
+        "Tuotehaku nimellä ja viivakoodilla kirjoittaessa",
+        "Tuote- ja ostoskorialennukset, kiinteä summa tai prosentti",
+        "Verollinen / veroton hinta lasketaan automaattisesti",
+        "Käteisen takaisinanto ja omat maksutapojen nimet",
+        "Jokainen myynti päättyy ”Ding!”-ääneen ja värinään"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Kampanjamoottori",
+      "title": "Aseta säännöt kerran, kassa soveltaa ne",
+      "lead": "Ostosummarajat, osta yksi – saat toisen, Happy Hour, vain jäsenille – kun sääntö on luotu, kassa hoitaa loput. Kenenkään ei tarvitse muistaa sitä, eikä alennuskoodeja tarvitse kirjoittaa.",
+      "items": [
+        "Ostoskorin välisumman rajat käynnistyvät automaattisesti",
+        "Ostoskorin tai tuotteen alennukset (kiinteä summa tai prosentti)",
+        "Osta yksi – saat toisen ja N:s tuote -tarjoukset",
+        "Pistekertoimet",
+        "Happy Hour -ajat – yli keskiyön, valittavat viikonpäivät",
+        "Etusijan, yhdistettävyyden ja pysäytyksen asetukset",
+        "Käyttörajat (yhteensä tai asiakasta kohden)",
+        "Käytetään automaattisesti kassalla – ei alennuskoodeja"
+      ],
+      "shot_alt": "Asetusten kampanjaluettelo jaettuna pakettihintoihin ja alennuksiin; jokaisen säännön tila ja etusija näkyvät"
+    },
+    "reports": {
+      "eyebrow": "Raportit",
+      "title": "Mitä ansaitsit tänään, kun kauppa on vielä auki",
+      "lead": "Tilausmäärä, liikevaihto, myyntikate, alennukset ja maksutapajakauma yhdellä sivulla: tänään, 7 päivää, 30 päivää tai koko ajalta.",
+      "items": [
+        "Tänään: tilausmäärä, liikevaihto, myyntikate, alennus, maksutapajakauma",
+        "5 myydyintä tuotetta määrän mukaan",
+        "Päivä- / viikko- / kuukausinäkymä",
+        "Liikevaihdon ja myyntikatteen kehityskaaviot"
+      ],
+      "shot_alt": "Kojelauta, jossa tämän päivän liikevaihto, alennukset yhteensä, kate ja keskiostos sekä maksutapojen donitsikaavio ja myydyimpien tuotteiden luettelo"
+    },
+    "orders": {
+      "eyebrow": "Tilaukset",
+      "title": "Jokainen myynti on tallessa, ja jokaisen voi mitätöidä",
+      "lead": "Jokainen tilaus säilyttää koko tiedon: tuotteet ja variantit, käytetty kampanja, vero, maksutapa ja annettu vaihtoraha.",
+      "items": [
+        "Aikajärjestyksessä oleva tilausluettelo, suodatus päivän ja maksutavan mukaan",
+        "Rivitiedot säilyttävät tuotteet, variantit, alennukset, veron ja vaihtorahan",
+        "Mitätöinti vahvistuksella – varasto ja pisteet palautuvat automaattisesti"
+      ],
+      "shot_alt": "Vasemmalla aikajärjestyksessä oleva tilausluettelo, oikealla valitun tilauksen tiedot: tuotteet, käytetty alennus, vero, loppusumma, maksutapa ja vaihtoraha"
+    }
+  },
+  "features": {
+    "title": "Kaikki muu kaupan pyörittämiseen",
+    "subtitle": "Ensiasetukset, tuotteet, varasto ja jäsenet – kaikki samalla iPadilla",
+    "onboarding": {
+      "title": "Nopea käyttöönotto",
+      "items": [
+        "Valitse maasi; valuutta, verotila ja verokanta täyttyvät itsestään",
+        "Aseta kaupan nimi ja logo",
+        "Noin 10 minuuttia alusta loppuun, sitten voit aloittaa myynnin"
+      ]
+    },
+    "products": {
+      "title": "Tuotteet ja variantit",
+      "items": [
+        "Luokkien hallinta ja suodatus",
+        "Variantit (esim. koko × väri), joilla kullakin oma hinta ja omakustanne",
+        "Viivakoodit käsin syöttäen tai kameralla skannaten, kaksoiskappaleet estetään",
+        "Tuotekuvat, joiden pikkukuvat luodaan tallennettaessa"
+      ]
+    },
+    "inventory": {
+      "title": "Varasto",
+      "items": [
+        "Varastoseuranta päälle tai pois tuotekohtaisesti",
+        "Oma varastosaldo jokaiselle variantille",
+        "Negatiivinen varasto sallittu – kassa ei koskaan jumiudu",
+        "Värivaroitukset alhaisesta varastosaldosta",
+        "Täydellinen liikehistoria: myynti, mitätöinti, käsinsäätö"
+      ]
+    },
+    "loyalty": {
+      "title": "Jäsenet ja pisteet",
+      "items": [
+        "Jäseneksi liittyminen: nimi; puhelin ja sähköposti ovat valinnaisia",
+        "Y pistettä jokaista X:n suuruista ostosta kohden",
+        "N pisteellä M alennusta, valinnaisella enimmäisrajalla",
+        "Uudet jäsenet saavat tervetuliaisbonuksen automaattisesti",
+        "Jäsentasot, joihin kampanjat voi kohdistaa",
+        "Tilauksen mitätöinti peruu ansaitut ja käytetyt pisteet"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Varmuuskopiointi ja tietosuoja",
+    "title": "Kun tiliä ei ole, kukaan ei voi viedä tietojasi",
+    "lead": "DingPOSiin ei tarvitse rekisteröityä. Yrityksesi tiedot pysyvät iPadilla, ja jos haluat varmuuskopioita, ne tallentuvat pilvitilille, joka sinulla jo on.",
+    "items": [
+      "Valitse iCloud, Google Drive tai Dropbox",
+      "Manuaalinen varmuuskopio tarvittaessa",
+      "Säilyttää viimeiset 5 tilannekuvaa",
+      "Kuvien inkrementaalinen synkronointi",
+      "Ei tiliä; tiedot laitteella, varmuuskopiot omassa pilvessäsi",
+      "Toimii täysin ilman verkkoyhteyttä"
+    ]
+  },
+  "home_pricing": {
+    "title": "Yksinkertainen ja läpinäkyvä hinnoittelu",
+    "price_before": "Kolme pakettia, alkaen ",
+    "price_after": " kuukaudessa",
+    "sub": "30 päivän ilmainen kokeilu. Ei maksutapahtumakohtaisia maksuja eikä piilokuluja. Tietosi säilyvät aina kokeilun jälkeen – tilaa uudelleen milloin tahansa.",
+    "compare": "Vertaile paketteja",
+    "cta": "Aloita 30 päivän ilmainen kokeilu"
+  },
+  "pricing": {
+    "doc_title": "Paketit ja hinnoittelu",
+    "meta_description": "Vertaile DingPOS-paketteja iPadille: Lite, Standard ja Pro. 30 päivän ilmainen kokeilu, ei maksuprovisioita, eikä tietojasi koskaan poisteta.",
+    "eyebrow": "Paketit ja hinnoittelu",
+    "title": "Valitse myymälällesi sopiva paketti",
+    "subtitle": "Kokeile ilmaiseksi 30 päivää – ei rekisteröitymistä. Vaihda pakettia milloin tahansa; tietojasi ei koskaan poisteta.",
+    "billing": {
+      "label": "Laskutusjakso",
+      "monthly": "Kuukausittain",
+      "annual": "Vuosittain",
+      "save": "Säästä {{percent}} %"
+    },
+    "recommended": "Suositeltu",
+    "select_plan": "Valitse paketti",
+    "unit": {
+      "month": "/kk",
+      "year": "/v"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "tai ",
+    "or_annual_after": "/v laskutettuna vuosittain",
+    "saving_before": "Säästä ",
+    "saving_after": " vuodessa kuukausilaskutukseen verrattuna",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Yhdelle myyjälle, joka tarvitsee kassan ja tuotteet",
+        "heading": "Sisältää",
+        "features": [
+          "Täysi kassa, jopa 10 ostoskoria",
+          "Tuotteet variantteineen, viivakoodeineen, kuvineen ja luokkineen",
+          "Tilaushistoria, mitätöinnit, palautukset ja vaihdot",
+          "Liiketoiminnan kojelauta: liikevaihto, myyntikate, myydyimmät tuotteet",
+          "Pilvivarmuuskopiointi ja palautus",
+          "Kassa toimii ilman verkkoyhteyttä"
+        ],
+        "cta": "Aloita 30 päivän ilmainen kokeilu"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Myymälöille, jotka tarvitsevat varastoa, kanta-asiakkaita, ostoja tai laskulle myyntiä",
+        "heading": "Kaikki Lite-paketin ominaisuudet sekä",
+        "features": [
+          "Kampanjamoottori: ostosumman rajat, osta yksi, saat toisen kaupan päälle -tarjoukset ja happy hour -kampanjat – käytetään kassalla",
+          "Asiakaspisteet, pisteiden lunastus ja kanta-asiakastasot",
+          "Varastoseuranta ja ostotilaukset",
+          "Laskulle myynti: luovuta tuotteet nyt, laskuta myöhemmin",
+          "Ennakkotilaukset: ota etumaksu, kuittaa loppusumma noudettaessa"
+        ],
+        "cta": "Aloita 30 päivän ilmainen kokeilu"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Myymälöille, joissa on henkilökuntaa ja tarvitaan rooleja sekä jäljitettävyyttä",
+        "heading": "Kaikki Standard-paketin ominaisuudet sekä",
+        "features": [
+          "Työntekijätilit: jokaisella oma PIN, ja jokaiseen tilaukseen tallentuu, kuka sen myi",
+          "Oikeudet ja hyväksynnät: alennusrajan ylitykset, tuotteiden ja varaston muokkaus, omakustannusten katselu",
+          "Toimintoloki ja palautushistoria",
+          "Laajennetut raportit: jaksojen vertailu, myynnin lämpökartta, hitaasti liikkuvat tuotteet, varaston arvo, uusintaostajat"
+        ],
+        "cta": "Aloita 30 päivän ilmainen kokeilu"
+      }
+    },
+    "fineprint": "Veloitus tapahtuu Apple-tilisi kautta. Kuukausi- ja vuosipaketit uusiutuvat automaattisesti jakson lopussa; voit peruuttaa milloin tahansa App Storessa.",
+    "currency": {
+      "twd": "Hinnat näytetään Taiwanin App Storen mukaan. Muilla alueilla maksat App Storessa näkyvän paikallisen hinnan.",
+      "to_usd": "Näytä Yhdysvaltain hinnat",
+      "usd": "Hinnat näytetään Yhdysvaltain App Storen mukaan. Muilla alueilla maksat App Storessa näkyvän paikallisen hinnan.",
+      "to_twd": "Näytä Taiwanin hinnat"
+    },
+    "assurances": {
+      "trial": {
+        "title": "30 päivän ilmainen kokeilu",
+        "desc": "Kaikki Pro-ominaisuudet mukana. Tiliä ei tarvita."
+      },
+      "fees": {
+        "title": "Ei maksuprovisioita",
+        "desc": "DingPOS ei koske myyntituloihisi – tilausmaksu on ainoa veloitus."
+      },
+      "data": {
+        "title": "Tietosi pysyvät sinulla",
+        "desc": "Kun kokeilu tai tilaus päättyy, vain kassa pysähtyy. Tuotteet, tilaukset ja raportit säilyvät, eikä mitään poisteta."
+      },
+      "switch": {
+        "title": "Vaihda milloin tahansa",
+        "desc": "Päivitykset tulevat voimaan heti, ja Apple laskee hinnan suhteessa jäljellä olevaan aikaan. Siirtyminen edullisempaan pakettiin tulee voimaan uusiutumisen yhteydessä."
+      }
+    },
+    "compare": {
+      "title": "Vertaa kaikkia ominaisuuksia",
+      "subtitle": "Jokainen paketti sisältää kaiken edellisen paketin sisällön.",
+      "feature_col": "Ominaisuus",
+      "included": "Sisältyy",
+      "not_included": "Ei sisälly",
+      "groups": {
+        "checkout": "Kassa",
+        "catalog": "Tuotteet ja varasto",
+        "customers": "Asiakkaat ja kampanjat",
+        "reports": "Raportit",
+        "team": "Henkilökunta ja valvonta",
+        "data": "Tiedot ja varmuuskopiointi"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Kassa ja useat ostoskorit",
+          "desc": "Jopa 10 ostoskoria samanaikaisesti, reaaliaikainen haku nimellä tai viivakoodilla"
+        },
+        "discounts_tax": {
+          "name": "Alennukset ja verot",
+          "desc": "Tuote- ja tilausalennukset; verollinen tai veroton hinta lasketaan puolestasi"
+        },
+        "offline": {
+          "name": "Kassa ilman verkkoa",
+          "desc": "Jatka myyntiä ilman internetyhteyttä"
+        },
+        "returns": {
+          "name": "Mitätöinnit, palautukset ja vaihdot",
+          "desc": "Täydellinen tilaushistoria ja tilausten tiedot"
+        },
+        "preorder": {
+          "name": "Ennakkotilaukset",
+          "desc": "Ota etumaksu nyt ja kuittaa loppusumma noudettaessa"
+        },
+        "on_account": {
+          "name": "Laskulle myynti",
+          "desc": "Luovuta tuotteet nyt, laskuta myöhemmin – kaikkien asiakkaiden saldot yhdessä paikassa"
+        },
+        "products": {
+          "name": "Tuotteiden hallinta",
+          "desc": "Variantit, viivakoodit, kuvat, luokat"
+        },
+        "import": {
+          "name": "Tietojen tuonti",
+          "desc": "Tuo tuotteet ja aiemmat myynnit muista järjestelmistä CSV-tiedostolla"
+        },
+        "inventory": {
+          "name": "Varastoseuranta",
+          "desc": "Varasto vähenee myynnistä; manuaaliset muutokset tallentuvat varastoliikkeisiin"
+        },
+        "purchasing": {
+          "name": "Ostot ja toimittajat",
+          "desc": "Ostotilauksen vastaanotto päivittää varaston; näet, paljonko olet velkaa kullekin toimittajalle"
+        },
+        "promotions": {
+          "name": "Kampanjamoottori",
+          "desc": "Ostosumman rajat, osta yksi, saat toisen kaupan päälle -tarjoukset, N:nnen tuotteen tarjoukset ja happy hour -kampanjat – käytetään kassalla"
+        },
+        "loyalty": {
+          "name": "Asiakkaat ja pisteet",
+          "desc": "Kerää ja lunasta pisteitä, niin asiakkaat palaavat"
+        },
+        "member_tiers": {
+          "name": "Kanta-asiakastasot",
+          "desc": "Palkitse parhaat asiakkaasi tasokohtaisilla eduilla"
+        },
+        "dashboard": {
+          "name": "Liiketoiminnan kojelauta",
+          "desc": "Liikevaihto, myyntikate, alennukset, maksutavat ja myydyimmät tuotteet"
+        },
+        "comparison": {
+          "name": "Jaksojen vertailu",
+          "desc": "Edelliseen jaksoon tai viime vuoteen verrattuna – näet kasvun tai laskun"
+        },
+        "heatmap": {
+          "name": "Myynnin lämpökartta",
+          "desc": "Seitsemän päivää × 24 tuntia – näet, mitkä tunnit myyvät parhaiten"
+        },
+        "slow_movers": {
+          "name": "Hitaasti liikkuvat tuotteet",
+          "desc": "Löydä tuotteet, jotka eivät myy mutta sitovat varastoa"
+        },
+        "valuation": {
+          "name": "Varaston arvo ja varastoliikkeiden seuranta",
+          "desc": "Paljonko varastosi on nyt arvoltaan ja kuka sitä on muuttanut"
+        },
+        "repeat": {
+          "name": "Uusintaostajat ja lunastamattomat pisteet",
+          "desc": "Kuinka moni kanta-asiakas palaa ja kuinka paljon pisteitä on lunastamatta"
+        },
+        "staff": {
+          "name": "Työntekijätilit",
+          "desc": "Jokaisella oma PIN; jokaiseen tilaukseen tallentuu, kuka sen myi"
+        },
+        "permissions": {
+          "name": "Oikeudet ja hyväksynnät",
+          "desc": "Esihenkilön ja työntekijän roolit; päätät, mikä vaatii hyväksynnän"
+        },
+        "activity_log": {
+          "name": "Toimintoloki",
+          "desc": "Aikajana mitätöinneistä, palautuksista, hintamuutoksista, varastomuutoksista ja muusta"
+        },
+        "restore_records": {
+          "name": "Palautushistoria",
+          "desc": "Kuka palautti, mistä varmuuskopiosta ja mitkä tilaukset poistuivat"
+        },
+        "local_data": {
+          "name": "Tiedot iPadillasi",
+          "desc": "Tiliä ei tarvita – liiketoimintasi tiedot eivät kulje meidän kauttamme"
+        },
+        "backup": {
+          "name": "Pilvivarmuuskopiointi ja palautus",
+          "desc": "Varmuuskopioi omaan iCloudiin, Google Driveen tai Dropboxiin"
+        },
+        "undo_restore": {
+          "name": "Palautuksen esikatselu ja kumoaminen",
+          "desc": "Näet, mitkä tilaukset palautus poistaa, ja voit perua virheellisen palautuksen"
+        }
+      }
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Mitä voin käyttää ilmaisen kokeilun aikana?",
+          "a": "Ensimmäisestä asennuksesta 30 päivän ajan käytössäsi on kaikki ominaisuudet, myös Pro-ominaisuudet kuten henkilökunta, oikeudet ja laajennetut raportit – tiliä ei tarvita. Jos tilaat minkä tahansa paketin kokeilun aikana, kokeilu päättyy heti ja siirryt ostamaasi pakettiin."
+        },
+        {
+          "q": "Mitä tapahtuu, jos en tilaa kokeilun jälkeen?",
+          "a": "Kassa pysähtyy, mutta kaikki muu toimii edelleen – voit selata tilauksia, katsoa raportteja ja hallita tuotteita. Mitään ei poisteta, ja tilaus palauttaa kassan heti käyttöön."
+        },
+        {
+          "q": "Voinko vaihtaa isompaan tai pienempään pakettiin milloin tahansa?",
+          "a": "Kyllä, sovelluksessa kohdasta Asetukset → Tilaus. Päivitys tulee voimaan heti, ja Apple hyvittää käyttämättömän ajan; siirtyminen pienempään pakettiin tulee voimaan nykyisen jakson päättyessä. Myös vaihto kuukausilaskutuksesta vuosilaskutukseen tulee voimaan heti."
+        },
+        {
+          "q": "Mitä asiakkailleni, kampanjoilleni ja varastolleni tapahtuu, jos siirryn pienempään pakettiin?",
+          "a": "Kaikki säilyy – mitään ei poisteta eikä muuteta. Isomman paketin ominaisuudet vain lakkaavat toimimasta, ja kun päivität uudelleen, kaikki palaa ennalleen."
+        },
+        {
+          "q": "Miten vuosilaskutus toimii?",
+          "a": "Vuosipaketti maksaa saman kuin kymmenen kuukautta kuukausilaskutuksella ja kattaa kokonaisen vuoden – noin {{percent}} % edullisemmin. Sinulta veloitetaan kerran vuodessa, ja tilaus uusiutuu automaattisesti."
+        },
+        {
+          "q": "Onko tilausmaksun lisäksi muita kuluja?",
+          "a": "Ei. DingPOS ei käsittele myyntituloja: ei provisioita, ei maksutapahtumamaksuja, ei laitesopimusta."
+        },
+        {
+          "q": "Miten peruutan tilauksen?",
+          "a": "Hallitse tilausta iPadilla kohdassa Asetukset → Apple-tili → Tilaukset; peruuta vähintään 24 tuntia ennen jakson päättymistä, niin sinulta ei veloiteta enää. Tietosi pysyvät laitteellasi."
+        },
+        {
+          "q": "Miksi App Storen hinta poikkeaa tämän sivun hinnasta?",
+          "a": "App Store veloittaa tilauksen Apple-tilisi alueen hinnan mukaan. Tällä sivulla on Taiwanin ja Yhdysvaltojen hinnat; muilla alueilla maksat sovelluksessa ja App Storessa näkyvän paikallisen hinnan."
+        }
+      ],
+      "more": "Onko lisää kysyttävää?",
+      "more_link": "Selaa koko UKK:ta"
+    },
+    "final": {
+      "title": "Käytä sitä 30 päivää ja valitse sitten paketti",
+      "sub": "Lataa ja aloita – tiliä ei tarvita.",
+      "cta": "Lataa App Storesta"
+    }
+  },
+  "footer": {
+    "tagline": "Avaa kauppasi 10 minuutissa. Tietosi, sinun hallinnassasi.",
+    "contact": "Ota yhteyttä",
+    "privacy_policy": "Tietosuojakäytäntö",
+    "terms_of_use": "Käyttöehdot",
+    "copyright": "ALU Studio. Kaikki oikeudet pidätetään.",
+    "support": "UKK"
+  },
+  "privacy": {
+    "title": "Tietosuojakäytäntö",
+    "meta_description": "Näin DingPOS, verkkoyhteydestä riippumaton iPad-kassajärjestelmä, käsittelee tietojasi: liiketoimintatietosi pysyvät laitteellasi, ja valinnaiset varmuuskopiot tallentuvat vain omalle pilvitilillesi.",
+    "effective_date": "Voimassa alkaen: 1. heinäkuuta 2026",
+    "intro": "ALU Studio (”me”) on kehittänyt DingPOS-sovelluksen (”sovellus”). DingPOS on kassajärjestelmä, jonka lähtökohta on tietosuoja – liiketoimintatietosi kuuluvat sinulle. Tässä tietosuojakäytännössä kerromme, miten käsittelemme tietojasi, kun käytät sovellusta.",
+    "local_storage": {
+      "title": "Miten tietosi tallennetaan",
+      "desc": "DingPOS tallentaa kaikki liiketoimintatietosi paikallisesti laitteellesi. Ellet ota pilvivarmuuskopiointia itse käyttöön, nämä tiedot eivät koskaan poistu laitteeltasi. Sovelluksessa luomiasi tietoja ovat:",
+      "items": [
+        "Myymälän asetukset (myymälän nimi, valuutta, veroprosentti, logo)",
+        "Tuotetiedot (nimi, hinta, omakustannushinta, viivakoodi, kuva, luokka, variantit, varasto)",
+        "Tilaus- ja maksutapahtumatiedot (mukaan lukien alennukset, vero ja maksutapa)",
+        "Asiakas- ja kanta-asiakastiedot (nimi, valinnainen puhelinnumero ja sähköpostiosoite, pisteet)",
+        "Kampanjasäännöt ja kanta-asiakastasojen asetukset"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Pilvivarmuuskopiointi (valinnainen)",
+      "desc": "Voit halutessasi ottaa pilvivarmuuskopioinnin käyttöön ja valita tallennuspaikaksi iCloudin, Google Driven tai Dropboxin. Varmuuskopiot tallennetaan omalle pilvitilillesi, ja ne pysyvät täysin sinun hallinnassasi. Emme koskaan käsittele näiden varmuuskopioiden sisältöä, tallenna sitä tai pääse siihen käsiksi. Se, otatko varmuuskopioinnin käyttöön ja mitä palvelua käytät, on täysin sinun päätettävissäsi, ja voit poistaa sen käytöstä milloin tahansa."
+    },
+    "no_collection": {
+      "title": "Mitä emme kerää",
+      "desc": "DingPOS ei kerää, lähetä eikä jaa liiketoimintasisältöäsi. Tarkemmin sanottuna emme:",
+      "items": [
+        "Kerää tuote-, tilaus-, asiakas- tai kanta-asiakastietojasi",
+        "Käsittele maksuliikennettä tai luottokorttitietoja (sovellus ei käsittele varsinaisia korttimaksuja)",
+        "Seuraa sijaintiasi",
+        "Jaa liiketoimintatietojasi kolmansille osapuolille"
+      ]
+    },
+    "camera": {
+      "title": "Kamera ja kuvat",
+      "desc": "DingPOS pyytää kameran käyttöoikeutta vain, kun käytät toimintoa ”skannaa viivakoodi” tai ”ota tuotekuva”. Viivakoodien tunnistus ja kuvat käsitellään paikallisesti laitteellasi, eikä niitä koskaan lähetetä palvelimillemme. Tuotekuvat tallentuvat omalle pilvitilillesi vain osana varmuuskopiota, jos otat pilvivarmuuskopioinnin käyttöön."
+    },
+    "subscription": {
+      "title": "Tilaus ja ostot",
+      "desc": "DingPOS tarjoaa tilauksen Apple App Storen sovelluksen sisäisenä ostona (IAP), ja tilauksen tilaa hallinnoidaan RevenueCatin avulla. Maksun käsittelee Apple; emme koskaan saa luottokorttisi tai maksutapasi tietoja. RevenueCat saa vain tilauksen tilaan liitetyn anonyymin tunnisteen, jolla varmistetaan, onko tilauksesi voimassa."
+    },
+    "analytics": {
+      "title": "Analytiikka ja kaatumisraportit",
+      "desc": "DingPOS käyttää Googlen tarjoamia Firebase Analyticsia ja Firebase Crashlyticsia, jotta ymmärrämme, miten sovellusta käytetään, ja voimme tunnistaa ja korjata kaatumiset. Nämä palvelut keräävät:",
+      "items": [
+        "Anonyymia käyttötietoa (esim. mitä toimintoja käytetään, istunnon kesto)",
+        "Kaatumisraportteja (esim. pinojäljet, laitemalli, käyttöjärjestelmän versio)",
+        "Laitetietoja (esim. laitetyyppi, käyttöjärjestelmä, sovelluksen versio)",
+        "Satunnaisesti luotua asennustunnistetta (ei liity henkilöllisyyteesi)"
+      ],
+      "note": "Nämä tiedot ovat anonyymeja, eivätkä ne sisällä liiketoimintasisältöäsi (kuten tuotteita, tilauksia, asiakkaita tai kanta-asiakkaita). Lisätietoa siitä, miten Google käsittelee näitä tietoja, löytyy Googlen tietosuojakäytännöstä: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Lasten yksityisyys",
+      "desc": "DingPOS on kaupalliseen käyttöön tarkoitettu kassajärjestelmä. Sitä ei ole suunniteltu lapsille, eikä se kerää lasten henkilötietoja."
+    },
+    "changes": {
+      "title": "Tämän käytännön muutokset",
+      "desc": "Jos teemme tähän tietosuojakäytäntöön olennaisia muutoksia, ilmoitamme niistä sovelluspäivityksen yhteydessä. Suosittelemme tutustumaan käytäntöön aika ajoin."
+    },
+    "contact": {
+      "title": "Ota yhteyttä",
+      "desc": "Jos sinulla on kysyttävää tai ehdotuksia tästä tietosuojakäytännöstä, ota meihin yhteyttä:"
+    }
+  },
+  "terms": {
+    "title": "Käyttöehdot",
+    "meta_description": "DingPOS-käyttöehdot: ALU Studion iPad-kassasovelluksen lisenssi, 30 päivän ilmainen kokeilu, App Store -tilaukset, tietosi ja varmuuskopiot sekä vastuunrajoitus.",
+    "effective_date": "Voimassa alkaen: 8. lokakuuta 2026",
+    "intro": "Tervetuloa DingPOSin käyttäjäksi. Lue nämä käyttöehdot huolellisesti ennen sovelluksen käyttöä. Lataamalla, asentamalla tai käyttämällä DingPOSia sitoudut noudattamaan näitä ehtoja.",
+    "license": {
+      "title": "Lisenssi",
+      "desc": "ALU Studio myöntää sinulle rajoitetun, ei-yksinomaisen ja siirtokelvottoman lisenssin käyttää DingPOSia laitteillasi liiketoimintasi pyörittämiseen. Lisenssi koskee vähittäiskauppasi toimintaa."
+    },
+    "subscription": {
+      "title": "Tilaus ja maksu",
+      "desc": "DingPOS tarjoaa 30 päivän ilmaisen kokeilun ensimmäisestä asennuksesta alkaen, ja sen aikana kaikki Pro-paketin ominaisuudet ovat käytössäsi. Jos ostat jonkin paketin kokeilun aikana, kokeilu päättyy ja ostettu paketti on voimassa ostohetkestä alkaen. Kokeilun jälkeen kassan käyttäminen edellyttää tilausta johonkin paketeista (Lite, Standard tai Pro), joka ostetaan App Storen sovelluksensisäisenä ostona. Pakettien sisällöt ja hinnat on lueteltu hinnoittelusivulla (alu-studio.com/dingpos/pricing), ja veloitettava hinta on App Storessa näytetty hinta. Ilman tilausta tuotteiden selaus ja hallinta pysyvät käytössä, eikä tietojasi koskaan poisteta. Tilaus uusiutuu automaattisesti, ellet peru sitä vähintään 24 tuntia ennen kuluvan jakson päättymistä. Voit hallita tai perua tilauksesi milloin tahansa laitteesi App Store -tilin asetuksissa. Ostetut tilaukset voi palauttaa käyttöön."
+    },
+    "restrictions": {
+      "title": "Rajoitukset",
+      "desc": "Sovellusta käyttäessäsi sitoudut siihen, että et:",
+      "items": [
+        "takaisinmallinna sovellusta, pura sitä osiin tai dekompiloi sitä",
+        "muokkaa tai käännä sovellusta etkä luo siitä johdannaisteoksia",
+        "poista sovelluksen tekijänoikeusmerkintöjä tai tunnisteita",
+        "käytä sovellusta mihinkään laittomaan tarkoitukseen"
+      ]
+    },
+    "user_data": {
+      "title": "Tietosi ja varmuuskopiot",
+      "desc": "Kaikki DingPOSiin luomasi liiketoimintasisältö (tuotteet, tilaukset, asiakkaat, jäsenet ja asetukset) tallennetaan laitteellesi, ja vastaat siitä yksin. Jos poistat sovelluksen tai tyhjennät sen tiedot, kaikki tallennetut tiedot menetetään pysyvästi, ellet ole ottanut pilvivarmuuskopiointia käyttöön. Pilvivarmuuskopiot sijaitsevat valitsemassasi pilvitilissä (iCloud / Google Drive / Dropbox), ja niiden saatavuuteen ja säilytykseen sovelletaan kyseisen palveluntarjoajan käyttöehtoja. Emme voi palauttaa tietojasi. Vastaat myös siitä, että noudatat toimintapaikkasi verotusta, laskutusta ja kuluttajansuojaa koskevia lakeja."
+    },
+    "updates": {
+      "title": "Sovelluspäivitykset",
+      "desc": "Voimme julkaista sovelluspäivityksiä aika ajoin ominaisuuksien parantamiseksi, virheiden korjaamiseksi tai tietoturvan vahvistamiseksi. Suosittelemme pitämään sovelluksen ajan tasalla, jotta käyttökokemus on paras mahdollinen."
+    },
+    "disclaimer": {
+      "title": "Vastuuvapauslauseke",
+      "desc": "DingPOS toimitetaan ”sellaisenaan” ilman minkäänlaisia nimenomaisia tai oletettuja takuita. Emme takaa, että sovellus toimii keskeytyksettä tai täysin virheettömästi. DingPOS on liiketoimintasi apuväline: verolaskelmien, varastomäärien ja kaikkien summien lopullinen oikeellisuus sekä paikallisten säännösten noudattaminen ovat edelleen sinun tarkistettavanasi. Lain sallimassa enimmäisrajoissa emme vastaa mistään suorista, välillisistä, satunnaisista tai seuraamuksellisista vahingoista, jotka johtuvat sovelluksen käytöstäsi."
+    },
+    "liability": {
+      "title": "Vastuunrajoitus",
+      "desc": "ALU Studion vastuu sovelluksen käytöstä tai käyttökyvyttömyydestä aiheutuneista vahingoista ei missään tapauksessa ylitä summaa, jonka olet maksanut sovelluksesta tapahtumaa edeltäneiden 12 kuukauden aikana. Tämä koskee muun muassa tietojen menetystä, menetettyä liikevaihtoa, laitevahinkoja ja kaikkia muita tappioita."
+    },
+    "changes": {
+      "title": "Muutokset ehtoihin",
+      "desc": "Pidätämme oikeuden muuttaa näitä käyttöehtoja milloin tahansa. Muutetut ehdot tulevat voimaan heti, kun ne on julkaistu tällä sivulla. Jos jatkat sovelluksen käyttöä, hyväksyt muutetut ehdot."
+    },
+    "contact": {
+      "title": "Ota yhteyttä",
+      "desc": "Jos sinulla on kysyttävää näistä käyttöehdoista, ota meihin yhteyttä:"
+    }
+  },
+  "support": {
+    "doc_title": "Tuki",
+    "meta_description": "DingPOS-tuki: vastaukset ja vaiheittaiset ohjeet iPad-kassajärjestelmään – käyttöönotto, kassa, tilaukset, varasto, kampanjat, varmuuskopiointi, henkilökunta ja laskutus.",
+    "title": "Miten voimme auttaa?",
+    "subtitle": "Hae yleisiä kysymyksiä tai selaa aiheittain",
+    "search_placeholder": "Hae, esim. ”viivakoodi” tai ”varmuuskopion palautus”",
+    "search_hint_keywords": "Erota hakusanat välilyönnillä",
+    "search_hint_shortcut_pre": "paina ",
+    "search_hint_shortcut_post": " hakeaksesi",
+    "clear": "Tyhjennä haku",
+    "results_count": "{{num}} hakua vastaavaa kysymystä",
+    "no_results_title": "Ei hakua vastaavia kysymyksiä",
+    "no_results_desc": "Kokeile eri hakusanoja tai lähetä meille sähköpostia – vastaamme pian.",
+    "related_title": "Aiheeseen liittyviä kysymyksiä",
+    "back": "Tuki",
+    "since": "Saatavilla DingPOSin versiosta {{version}} alkaen",
+    "verified_version": "Sisältö vastaa DingPOS-versiota {{version}}",
+    "contact_title": "Etkö löytänyt vastausta?",
+    "contact_desc": "Kerro, mihin olet törmännyt, niin vastaamme niin pian kuin voimme.",
+    "contact_cta": "Ota yhteyttä ALU Studioon",
+    "group_faq": "Usein kysytyt kysymykset",
+    "group_guide": "Oppaat",
+    "group_guide_desc": "Vaiheittaiset käyttöönotto-ohjeet, mukana DingPOSia tehdessämme kertyneet sudenkuopat.",
+    "group_roadmap": "Tulossa pian",
+    "group_roadmap_desc": "Ei vielä saatavilla – osa on jo suunnitteilla. Toiveesi ohjaavat prioriteettejamme, joten kirjoita meille."
+  }
+}
