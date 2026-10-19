@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Sokongan | Bukan "bantuan teknikal". |
+| FAQ / frequently asked questions | Soalan Lazim | Singkatan "FAQ" boleh dipakai dalam tajuk pendek; teks penuh guna "Soalan Lazim". |
+| Pricing (the page) | Harga | Bukan "Penetapan harga". |
+| Plan (Lite / Standard / Pro; the names stay in English) | pelan | From app glossary. Lite / Standard / Pro kekal. |
+| Free trial | percubaan percuma | Bukan "ujian percuma". |
+| Billed monthly / billed annually | dibil bulanan / dibil tahunan | Bukan "dicaj". |
+| Terms of Use | Terma Penggunaan | Bukan "Syarat Penggunaan". |
+| Coming Soon (planned features) | Akan Datang | Bukan "Tidak lama lagi". |
+| Setup guide (promotion setup guides) | panduan persediaan | Bukan "tutorial". |
+| Shop owner | pemilik kedai | "pemilik" sahaja ialah peranan dalam app. |
+| Stall / pop-up / night market | gerai / gerai sementara / pasar malam | "gerai" ialah kata umum untuk pengusaha kecil. |
+| Offline-first | berfungsi tanpa internet | Bukan "luar talian dahulu"; boleh guna "luar talian" untuk ayat pendek. |
+| Point of sale (POS) app | aplikasi POS | Pertama kali: "aplikasi sistem point of sale (POS)". |
