@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Tuki | Ohjekeskus-sivu: "Tuki" valikossa ja otsikoissa; ei "Asiakaspalvelu" |
+| FAQ / frequently asked questions | Usein kysytyt kysymykset | Lyhyt muoto UKK vain tilan puutteessa |
+| Pricing (the page) | Hinnoittelu | Ei "Hinnasto" |
+| Plan (Lite / Standard / Pro; the names stay in English) | paketti | From app glossary (Plan = paketti); ei suunnitelma. Nimet Lite / Standard / Pro pysyvät englanniksi |
+| Free trial | ilmainen kokeilu | "30 päivän ilmainen kokeilu"; ei "koeaika" vaihdellen |
+| Billed monthly / billed annually | laskutetaan kuukausittain / laskutetaan vuosittain | Kuukausi- ja vuosimaksu; maksu tapahtuu App Store -tilin kautta |
+| Terms of Use | Käyttöehdot |  |
+| Coming Soon (planned features) | Tulossa pian | Suunnitellut ominaisuudet; ei "Julkaistaan" |
+| Setup guide (promotion setup guides) | Käyttöönotto-opas | Kampanjan määritysohje; "kampanja" from app glossary |
+| Shop owner | kauppias | Myös "yrittäjä" tarvittaessa; app-termi Owner = omistaja vain sovelluksen roolille |
+| Stall / pop-up / night market | myyntikoju / pop-up-myymälä / yötori | Yleisemmin "tori- ja markkinamyyjä" |
+| Offline-first | toimii ilman verkkoyhteyttä | Ei "offline-first"; adjektiivina "verkkoyhteydestä riippumaton" |
+| Point of sale (POS) app | kassajärjestelmä | "kassasovellus" kun viitataan appiin; POS-lyhenne sallittu otsikossa |
