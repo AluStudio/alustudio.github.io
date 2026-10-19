@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Support | Gangbaar in het Nederlands; niet 'ondersteuning' |
+| FAQ / frequently asked questions | Veelgestelde vragen | Korte vorm 'FAQ' alleen waar de ruimte beperkt is |
+| Pricing (the page) | Prijzen | Niet 'Tarieven' |
+| Plan (Lite / Standard / Pro; the names stay in English) | abonnement | Op de site 'abonnement' (de app zegt 'abonnementsvorm' voor het UI-woord 'Plan'); namen Lite / Standard / Pro blijven Engels, bijv. 'Standard-abonnement' |
+| Free trial | Gratis proefperiode | Niet 'gratis proef' of 'demo' |
+| Billed monthly / billed annually | Maandelijks gefactureerd / Jaarlijks gefactureerd | Knoppen/labels: 'Maandelijks' / 'Jaarlijks' |
+| Terms of Use | Gebruiksvoorwaarden | Niet 'Algemene voorwaarden' |
+| Coming Soon (planned features) | Binnenkort beschikbaar | Kort label: 'Binnenkort' |
+| Setup guide (promotion setup guides) | Instelgids | Niet 'handleiding'; 'actie' voor Promotion volgens app-glossary |
+| Shop owner | winkelier | Aanspreekvorm 'je/jouw' of 'u': kies 'je' consequent (informeel, zoals Nederlandse SaaS-sites); niet 'eigenaar' voor de lezer (dat is de rol in de app) |
+| Stall / pop-up / night market | kraam / pop-upwinkel / nachtmarkt | Marktkraam = 'kraam'; 'nachtmarkt' als leenwoord, evt. toelichting 'avondmarkt' |
+| Offline-first | Werkt offline | Beschrijvend ('werkt ook zonder internet'); 'offline-first' niet gebruiken |
+| Point of sale (POS) app | Kassa-app | Gangbaar zoekwoord; 'POS-app' mag naast 'kassa-app' in zoekwoorden, 'kassasysteem' voor de categorie |
