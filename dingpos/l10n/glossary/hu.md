@@ -8,16 +8,18 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Támogatás | Nav/page title. Use "ügyfélszolgálat" only for contacting a person. |
+| FAQ / frequently asked questions | GYIK | Spelled out: gyakran ismételt kérdések. |
+| Pricing (the page) | Árak | Avoid "árazás" (means the act of setting prices). |
+| Plan (Lite / Standard / Pro; the names stay in English) | csomag | From app glossary (Plan). Names stay Lite / Standard / Pro. |
+| Free trial | Ingyenes próba | Verb form: ingyenesen kipróbálhatja. |
+| Billed monthly / billed annually | havi számlázás / éves számlázás | Avoid "havonta fizetendő" mixed with other forms. |
+| Terms of Use | Felhasználási feltételek | Not "ÁSZF" (that is general contract terms). |
+| Coming Soon (planned features) | Hamarosan | Badge on planned features. |
+| Setup guide (promotion setup guides) | Beállítási útmutató | |
+| Shop owner | üzlettulajdonos | Addressed readers: boltos, kisbolt-tulajdonos is acceptable in running text. |
+| Stall / pop-up / night market | piaci stand / pop-up bolt / éjszakai piac | Stall = piaci stand (not "bódé"). |
+| Offline-first | internetkapcsolat nélkül is működő | Adjective phrase; or "offline működés". Avoid "offline-first" in running text. |
+| Point of sale (POS) app | kassza-alkalmazás (POS) | Mainstream: "kasszarendszer"/"pénztárgép app"; use "kassza-alkalmazás", mention POS on first use. Not "pénztárgép" alone (legal fiscal device). |
+| Privacy policy | Adatvédelmi irányelvek | |
+| iPad register / checkout screen | kassza | Casual term for the till; the app's "Checkout" = fizetés stays for the screen. |
