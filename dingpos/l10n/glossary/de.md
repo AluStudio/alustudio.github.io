@@ -8,16 +8,23 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Hilfe | Nav/Seitentitel; „Support“ nur für Kontakt-Kontext vermeiden |
+| FAQ / frequently asked questions | Häufige Fragen | Kurzform „FAQ“ ist im Fließtext ok |
+| Pricing (the page) | Preise |  |
+| Plan (Lite / Standard / Pro; the names stay in English) | Tarif | from app glossary; Namen Lite / Standard / Pro bleiben |
+| Free trial | Kostenlos testen | Nomen: kostenlose Testphase; nicht „Probeabo“ |
+| Billed monthly / billed annually | Monatliche Zahlung / Jährliche Zahlung | Verb: monatlich / jährlich abgerechnet |
+| Terms of Use | Nutzungsbedingungen | Datenschutzerklärung für Privacy Policy |
+| Coming Soon (planned features) | Demnächst verfügbar | Kurz als Label: „Demnächst“ |
+| Setup guide (promotion setup guides) | Einrichtungsanleitung | Nicht „Setup“ |
+| Shop owner | Ladeninhaber:in | Gender-Doppelpunkt wie in der App (Inhaber:in) |
+| Stall / pop-up / night market | Marktstand / Pop-up-Shop / Nachtmarkt | Nachtmarkt bei Bedarf erklären; „Marktstand“ als Oberbegriff |
+| Offline-first | Offline nutzbar | Beschreibend: „funktioniert auch ohne Internet“; kein „Offline-first“ |
+| Point of sale (POS) app | Kassen-App | „Kassensystem“ für Systemkontext; POS nur gelegentlich |
+| Privacy Policy | Datenschutzerklärung |  |
+| Download (the app) | Herunterladen | Button: „Im App Store laden“ |
+| Contact us | Kontakt aufnehmen | Nav: Kontakt |
+| Barcode | Barcode |  |
+| Loyalty / membership | Kundenkarte / Punkteprogramm | Punkte, Stufe aus App-Glossar |
+| Feature | Funktion | Plural Funktionen |
+| Annual | Jährlich |  |
