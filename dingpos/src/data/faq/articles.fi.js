@@ -519,7 +519,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Avaa Tilaukset, avaa alkuperäinen tilaus ja napauta Palautus. Valitse, kuinka monta kappaletta kutakin tuotetta palautetaan. Vaihdossa napauta samalla näytöllä Lisää korvaava tuote. Erotus tilitetään kerralla: positiivinen tarkoittaa, että asiakas maksaa, negatiivinen että palautat rahaa, ja nolla että mitään ei liiku."
+        "text": "Avaa Tilaukset, avaa alkuperäinen tilaus ja napauta Palautus. Valitse, kuinka monta kappaletta kutakin tuotetta palautetaan. Vaihdossa napauta samalla näytöllä Lisää korvaava tuote. Erotus tilitetään kerralla: positiivinen tarkoittaa, että asiakas maksaa, negatiivinen että palautat rahaa, ja nolla tarkoittaa, ettei raha vaihda omistajaa."
       },
       {
         "type": "list",
@@ -1387,7 +1387,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jos haluat nähdä, kuka palautti, milloin ja mistä varmuuskopiosta, napauta samassa näkymässä Näytä palautusmerkinnät: kunkin palautuksen aika, tekijä, lähde, tuotteiden / tilausten / asiakkaiden määrät ennen ja jälkeen sekä kaikki sen poistamat tilaukset. Merkinnät säilyvät tällä iPadilla, eikä palautus koskaan korvaa niitä."
+        "text": "Jos haluat nähdä, kuka palautti tiedot, milloin ja mistä pilvivarmuuskopiosta, napauta samassa näkymässä Näytä palautusmerkinnät. Näet kunkin palautuksen ajankohdan, vuorossa olleen työntekijän ja lähteen, tuotteiden, tilausten ja asiakkaiden määrät ennen palautusta ja sen jälkeen sekä kaikki palautuksessa poistetut tilaukset. Merkinnät säilyvät tällä iPadilla, eikä palautus koskaan korvaa niitä."
       },
       {
         "type": "note",
