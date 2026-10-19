@@ -1516,7 +1516,7 @@ export const articles = [
     "slug": "activity-log",
     "category": "staff",
     "since": "3.0",
-    "question": "Bagaimana hendak tahu siapa yang membatalkan pesanan, melaras stok atau menukar harga?",
+    "question": "Bagaimana hendak tahu siapa yang membatalkan jualan, melaras stok atau menukar harga?",
     "keywords": [
       "log aktiviti",
       "audit",
@@ -1531,7 +1531,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Guna log aktiviti. Di halaman Staf, ketik Log aktiviti di penjuru kanan atas dan masukkan PIN pemilik untuk melihat tindakan sensitif kedai, terbaharu dahulu: pembatalan jualan, pemulangan, pelarasan stok manual, kelulusan, perubahan kakitangan dan kebenaran, perubahan PIN pemilik, perubahan harga dan kos produk, serta pemadaman produk. Bayaran biasa tidak disenaraikan."
+        "text": "Guna log aktiviti. Di halaman Staf, ketik Log aktiviti di penjuru kanan atas dan masukkan PIN pemilik untuk melihat tindakan sensitif kedai, terbaharu dahulu: pembatalan jualan, pemulangan, pelarasan stok manual, kelulusan, perubahan kakitangan dan kebenaran, perubahan PIN pemilik, perubahan harga dan kos produk, serta pemadaman produk. Jualan biasa di kaunter tidak disenaraikan."
       },
       {
         "type": "list",
@@ -1842,7 +1842,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Selepas Tolak, cadangan yang sama tidak akan muncul semula untuk troli ini; troli baharu atau yang dikosongkan akan menawarkannya semula.",
-          "Jika cadangan baharu muncul sebelum pengesahan bayaran, ia mesti Diterima atau Ditolak sebelum pesanan boleh dihantar.",
+          "Jika cadangan baharu muncul sebelum checkout disahkan, cadangan itu mesti diterima atau ditolak sebelum pesanan boleh dihantar.",
           "Baris hadiah dan tambahan tidak boleh didiskaun lagi oleh promosi wang yang lain, dan tidak dikira ke arah ambang promosi lain."
         ]
       },
