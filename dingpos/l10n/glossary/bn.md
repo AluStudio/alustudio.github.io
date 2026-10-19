@@ -8,16 +8,19 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | সহায়তা |  |
+| FAQ / frequently asked questions | সচরাচর জিজ্ঞাসা (FAQ) | শিরোনামে “সচরাচর জিজ্ঞাসা”; সংক্ষেপে FAQ |
+| Pricing (the page) | মূল্য | “প্রাইসিং” নয় |
+| Plan (Lite / Standard / Pro; the names stay in English) | প্ল্যান | from app glossary; Lite / Standard / Pro ইংরেজিতে |
+| Free trial | বিনামূল্যে ট্রায়াল |  |
+| Billed monthly / billed annually | মাসিক বিলিং / বার্ষিক বিলিং | “প্রতি মাসে” / “প্রতি বছরে” বাক্যে স্বাভাবিকভাবে লেখা যাবে |
+| Terms of Use | ব্যবহারের শর্তাবলি |  |
+| Coming Soon (planned features) | শীঘ্রই আসছে |  |
+| Setup guide (promotion setup guides) | সেটআপ গাইড |  |
+| Shop owner | দোকানের মালিক | app-এর “মালিক” (Owner) ভূমিকার সঙ্গে মিলিয়ে; “ব্যবসায়ী” এড়ান |
+| Stall / pop-up / night market | স্টল / পপ-আপ দোকান / রাতের বাজার | মেলা বা হাটের স্টল বোঝাতে “স্টল” ব্যবহার করুন |
+| Offline-first | অফলাইনে চলে | “অফলাইন-ফার্স্ট” আক্ষরিক নয়; ইন্টারনেট ছাড়াই পুরো কাজ করে এই অর্থে লিখুন |
+| Point of sale (POS) app | POS অ্যাপ | প্রথম উল্লেখে “পয়েন্ট অফ সেল (POS) অ্যাপ” |
+| Privacy Policy | গোপনীয়তা নীতি |  |
+| Download (the app) | ডাউনলোড |  |
+| Inventory / stock management | স্টক ব্যবস্থাপনা | “মজুত” নয়, app-এর “স্টক” অনুযায়ী |
