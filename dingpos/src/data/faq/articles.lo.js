@@ -40,7 +40,7 @@ export const categories = [
   {
     "key": "backup",
     "icon": "bi-cloud-check",
-    "label": "ການສຳຮອງ ແລະ ຂໍ້ມູນ",
+    "label": "ສຳຮອງຂໍ້ມູນ ແລະ ຂໍ້ມູນ",
     "group": "faq"
   },
   {
