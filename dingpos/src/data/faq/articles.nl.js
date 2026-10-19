@@ -332,7 +332,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Inclusief: de prijzen bevatten al btw — het totaal blijft gelijk en de bon specificeert de btw die erin zit (gebruikelijk in Nederland, Taiwan, Japan enz.).",
+          "Inclusief: de prijzen bevatten al btw — het totaal blijft gelijk en de bon specificeert de btw die erin zit (gebruikelijk in Taiwan, Japan enz.).",
           "Exclusief: de btw wordt bij het afrekenen bovenop het bedrag na korting gezet (gebruikelijk in de VS, Canada enz.)."
         ]
       },
@@ -750,7 +750,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Voorraad bijhouden stel je per product in: zet het aan op de productpagina en vul het huidige aantal in. Elke variant van een product houdt een eigen voorraad bij."
+        "text": "Voorraad bijhouden stel je per product in: zet het aan op het scherm Wijzig product en vul het huidige aantal in. Elke variant van een product houdt een eigen voorraad bij."
       },
       {
         "type": "p",

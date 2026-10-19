@@ -45,7 +45,7 @@
       "items": [
         "Drempels op het subtotaal van de winkelmand worden automatisch geactiveerd",
         "Korting op de winkelmand of op artikelen (vast bedrag of percentage)",
-        "Acties zoals 1+1 gratis en korting op elk zoveelste artikel",
+        "Acties zoals 1+1 gratis en korting op het zoveelste artikel",
         "Vermenigvuldigers voor punten",
         "Happy hour-tijdvensters — over middernacht heen, te kiezen weekdagen",
         "Instellingen voor prioriteit, combineerbaarheid en stoppen na toepassing",
@@ -143,7 +143,7 @@
   },
   "pricing": {
     "doc_title": "Abonnementen en prijzen",
-    "meta_description": "Vergelijk de DingPOS-abonnementen voor iPad: Lite, Standard en Pro. gratis proefperiode van 30 dagen, geen transactiekosten en je gegevens worden nooit verwijderd.",
+    "meta_description": "Vergelijk de DingPOS-abonnementen voor iPad: Lite, Standard en Pro. Gratis proefperiode van 30 dagen, geen transactiekosten en je gegevens worden nooit verwijderd.",
     "eyebrow": "Abonnementen en prijzen",
     "title": "Kies het abonnement dat bij je winkel past",
     "subtitle": "Probeer 30 dagen gratis — zonder aanmelding. Wissel wanneer je wilt; je gegevens worden nooit verwijderd.",
@@ -372,7 +372,7 @@
         },
         {
           "q": "Hoe werkt jaarlijks betalen?",
-          "a": "Jaarlijks kost evenveel als tien maanden maandelijks gefactureerd en geldt voor een heel jaar — ongeveer {{percent}}% minder. Je betaalt één keer per jaar en het abonnement wordt automatisch verlengd."
+          "a": "Een jaarabonnement kost evenveel als tien maanden maandelijks betalen en geldt voor een heel jaar — ongeveer {{percent}}% minder. Je betaalt één keer per jaar en het abonnement wordt automatisch verlengd."
         },
         {
           "q": "Zijn er naast het abonnement nog andere kosten?",
