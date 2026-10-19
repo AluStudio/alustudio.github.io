@@ -859,7 +859,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zum Abgleichen vergleichen Sie den Zahlungseingang mit der Kassenschublade und Ihrem Kartenterminal; wie viel Sie in einem Zeitraum tatsächlich verkauft haben, sehen Sie am Umsatz. Rückgaben mindern den Umsatz an dem Tag, an dem sie stattfinden."
+        "text": "Für den Abgleich vergleichen Sie den Zahlungseingang mit dem Bargeldbestand in der Kassenschublade und den Angaben Ihres Kartenterminals; wie viel Sie in einem Zeitraum tatsächlich verkauft haben, sehen Sie am Umsatz. Rückgaben mindern den Umsatz an dem Tag, an dem sie stattfinden."
       }
     ],
     "related": [
@@ -1734,7 +1734,7 @@ export const articles = [
   {
     "slug": "guide-bogo",
     "category": "promotion-guide",
-    "question": "„Kaufe 1, erhalte 1 gratis“- und Angebote für jeden n-ten Artikel einrichten",
+    "question": "„Kaufe 1, erhalte 1 gratis“ und Angebote für jeden n-ten Artikel einrichten",
     "keywords": [
       "2 für 1",
       "Kaufe 2 erhalte 1",
