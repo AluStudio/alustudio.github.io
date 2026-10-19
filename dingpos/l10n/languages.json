@@ -26,7 +26,7 @@
     { "code": "hu", "kind": "translated", "label": "Magyar", "hreflang": "hu", "pathPrefix": "hu", "ogLocale": "hu_HU", "shipped": true },
     { "code": "bg", "kind": "translated", "label": "Български", "hreflang": "bg", "pathPrefix": "bg", "ogLocale": "bg_BG", "shipped": true },
     { "code": "sq", "kind": "translated", "label": "Shqip", "hreflang": "sq", "pathPrefix": "sq", "ogLocale": "sq_AL", "shipped": false },
-    { "code": "ka", "kind": "translated", "label": "ქართული", "hreflang": "ka", "pathPrefix": "ka", "ogLocale": "ka_GE", "shipped": false },
+    { "code": "ka", "kind": "translated", "label": "ქართული", "hreflang": "ka", "pathPrefix": "ka", "ogLocale": "ka_GE", "shipped": true },
     { "code": "mn", "kind": "translated", "label": "Монгол", "hreflang": "mn", "pathPrefix": "mn", "ogLocale": "mn_MN", "shipped": false },
     { "code": "uz", "kind": "translated", "label": "O‘zbek", "hreflang": "uz", "pathPrefix": "uz", "ogLocale": "uz_UZ", "shipped": false },
     { "code": "km", "kind": "translated", "label": "ខ្មែរ", "hreflang": "km", "pathPrefix": "km", "ogLocale": "km_KH", "shipped": false },
