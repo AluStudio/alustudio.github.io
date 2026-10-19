@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Hjelp | Menyvalg og sidetittel; «kundestøtte» bare om å kontakte oss |
+| FAQ / frequently asked questions | Vanlige spørsmål | Ikke «FAQ» alene i brødtekst; «FAQ» kan brukes som søkeord |
+| Pricing (the page) | Priser | |
+| Plan (Lite / Standard / Pro; the names stay in English) | abonnementsplan | From app glossary (Plan). Navnene Lite / Standard / Pro står uoversatt |
+| Free trial | Gratis prøveperiode | |
+| Billed monthly / billed annually | Betales månedlig / Betales årlig | «faktureres» unngås; Apple-abonnement trekkes, ikke fakturaes |
+| Terms of Use | Vilkår for bruk | Personvernerklæring for Privacy Policy |
+| Coming Soon (planned features) | Kommer snart | |
+| Setup guide (promotion setup guides) | Oppsettguide | Skrives i ett ord |
+| Shop owner | butikkeier | Entall; flertall «butikkeiere». App bruker «eier» for rollen Owner |
+| Stall / pop-up / night market | markedsstand / pop-up-butikk / nattmarked | «Markedsstand» som fellesord; «nattmarked» er et taiwansk begrep, forklar kort ved første bruk |
+| Offline-first | fungerer uten nett | Beskrivende; unngå «offline-first» som anglisisme. «Uten nett» foretrekkes framfor «offline» |
+| Point of sale (POS) app | kassesystem-app | Kort form «kassesystem»; «POS» kan brukes som søkeord. Appen er «kasseapp for iPad» der det passer |
