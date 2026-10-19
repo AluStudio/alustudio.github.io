@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the pt-BR translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync pt-BR`, then `npm run l10n -- apply pt-BR`.",
+  "nav": {
+    "home": "Início",
+    "pricing": "Preços",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "support": "FAQ"
+  },
+  "hero": {
+    "meta_title": "DingPOS — App de PDV para iPad que funciona offline",
+    "meta_description": "DingPOS — Abra sua loja em 10 minutos. Um PDV para iPad que funciona offline. Seus dados, seu controle.",
+    "eyebrow": "PDV para iPad",
+    "title": "Abra sua loja em 10 minutos. Seus dados, seu controle.",
+    "description": "O DingPOS é um PDV (ponto de venda) para iPad. Sem cadastro, sem prender você à nuvem e sem parar quando a internet cai. Seus produtos, vendas e clientes ficam no seu próprio aparelho.",
+    "download": "Baixar na App Store",
+    "note": "30 dias de teste grátis.",
+    "shot_alt": "A tela de venda do DingPOS: à esquerda, a grade de produtos com filtros de categoria; à direita, o carrinho com as promoções aplicadas automaticamente e o total"
+  },
+  "proof": {
+    "items": [
+      "Sem precisar de cadastro",
+      "Vende mesmo sem internet",
+      "Os dados ficam no seu iPad"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Finalizar venda",
+      "title": "Cada etapa da venda em uma só tela",
+      "lead": "Até 10 carrinhos ao mesmo tempo, produtos encontrados por nome ou código de barras enquanto você digita, e descontos e impostos calculados antes de receber o pagamento.",
+      "items": [
+        "Até 10 carrinhos abertos ao mesmo tempo",
+        "Busca de produtos por nome e código de barras, enquanto você digita",
+        "Descontos no item e no carrinho, em valor fixo ou porcentagem",
+        "Imposto incluso ou não incluso no preço, calculado automaticamente",
+        "Troco em dinheiro e nomes personalizados para as formas de pagamento",
+        "Toda venda termina com um “Ding!” e uma vibração"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Motor de promoções",
+      "title": "Crie a regra uma vez, o caixa aplica sempre",
+      "lead": "Valor mínimo de compra, leve 2 pague 1, happy hour, ofertas só para membros — com a regra criada, o caixa faz a conta. Ninguém precisa lembrar, e não há cupom para digitar.",
+      "items": [
+        "Metas de subtotal do carrinho ativadas automaticamente",
+        "Descontos no carrinho ou no item (valor fixo ou porcentagem)",
+        "Leve um e ganhe outro, e ofertas no enésimo item",
+        "Multiplicadores de pontos",
+        "Janelas de happy hour — viram a meia-noite, com dias da semana à escolha",
+        "Controles de prioridade, acúmulo e parada de regras seguintes",
+        "Limites de uso (no total ou por cliente)",
+        "Aplicadas automaticamente na venda — sem cupons"
+      ],
+      "shot_alt": "A lista de promoções nos Ajustes, dividida em kits e descontos, com o estado de ativação e a prioridade de cada regra"
+    },
+    "reports": {
+      "eyebrow": "Relatórios",
+      "title": "Quanto você faturou hoje, com a loja ainda aberta",
+      "lead": "Número de vendas, receita, lucro bruto, descontos e formas de pagamento em uma só página, para hoje, 7 dias, 30 dias ou todo o período.",
+      "items": [
+        "Hoje: número de vendas, receita, lucro bruto, desconto e formas de pagamento",
+        "Os 5 produtos mais vendidos em quantidade",
+        "Períodos por dia, semana e mês",
+        "Gráficos de tendência da receita e do lucro bruto"
+      ],
+      "shot_alt": "O painel mostrando receita do dia, desconto total, lucro e ticket médio, acima de um gráfico de rosca das formas de pagamento e de uma lista dos mais vendidos"
+    },
+    "orders": {
+      "eyebrow": "Vendas",
+      "title": "Toda venda fica registrada, e toda venda pode ser anulada",
+      "lead": "Cada venda guarda o registro completo: itens e variantes, a promoção aplicada, imposto, forma de pagamento e troco.",
+      "items": [
+        "Lista de vendas em ordem cronológica, com filtro por data e forma de pagamento",
+        "O detalhe de cada linha guarda itens, variantes, descontos, imposto e troco",
+        "Anulação com confirmação — estoque e pontos voltam automaticamente"
+      ],
+      "shot_alt": "À esquerda, uma lista de vendas em ordem cronológica; à direita, o detalhe da venda selecionada: itens, desconto aplicado, imposto, total, forma de pagamento e troco"
+    }
+  },
+  "features": {
+    "title": "O resto do dia a dia da loja",
+    "subtitle": "Primeiros ajustes, produtos, estoque e membros — tudo no mesmo iPad",
+    "onboarding": {
+      "title": "Configuração rápida",
+      "items": [
+        "Escolha seu país e a moeda, o modo de imposto e a alíquota já vêm preenchidos",
+        "Defina o nome e o logotipo da loja",
+        "Cerca de 10 minutos do início ao fim, e você já pode vender"
+      ]
+    },
+    "products": {
+      "title": "Produtos e variantes",
+      "items": [
+        "Gerenciamento e filtro por categoria",
+        "Variantes (por exemplo, tamanho × cor), cada uma com seu preço e custo",
+        "Códigos de barras digitados ou lidos pela câmera, com bloqueio de duplicados",
+        "Fotos dos produtos, com miniaturas geradas ao salvar"
+      ]
+    },
+    "inventory": {
+      "title": "Estoque",
+      "items": [
+        "Controle de estoque ativado produto a produto",
+        "Estoque independente para cada variante",
+        "Estoque negativo permitido — a venda nunca é bloqueada",
+        "Alertas de estoque baixo por cor",
+        "Histórico completo de movimentações: venda, anulação, ajuste manual"
+      ]
+    },
+    "loyalty": {
+      "title": "Membros e pontos",
+      "items": [
+        "Cadastro de membro: nome, telefone e e-mail opcionais",
+        "Ganhe Y pontos a cada X gastos",
+        "Troque N pontos por M de desconto, com limite opcional",
+        "Novos membros recebem um bônus de boas-vindas automaticamente",
+        "Níveis de membros que as promoções podem escolher como alvo",
+        "Anular uma venda desfaz os pontos ganhos e resgatados"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Backup e privacidade",
+    "title": "Sem conta, ninguém pode tirar seus dados de você",
+    "lead": "O DingPOS não pede cadastro. Sua contabilidade fica no iPad e, se quiser backup, ele vai para uma conta na nuvem que você já tem.",
+    "items": [
+      "Escolha entre iCloud, Google Drive ou Dropbox",
+      "Backup manual, quando você quiser",
+      "Mantém as 5 cópias mais recentes",
+      "Sincronização incremental de imagens",
+      "Sem conta; dados no aparelho, backups na sua própria nuvem",
+      "Totalmente funcional offline"
+    ]
+  },
+  "home_pricing": {
+    "title": "Preços simples e transparentes",
+    "price_before": "Três planos, a partir de ",
+    "price_after": " por mês",
+    "sub": "30 dias de teste grátis. Sem taxa por venda, sem cobranças escondidas. Depois do teste, seus dados continuam com você — assine de novo quando quiser.",
+    "compare": "Comparar planos",
+    "cta": "Começar o teste grátis de 30 dias"
+  },
+  "pricing": {
+    "doc_title": "Planos e preços",
+    "meta_description": "Compare os planos do DingPOS para iPad: Lite, Standard e Pro. Teste grátis por 30 dias, sem taxa por transação e seus dados nunca são apagados.",
+    "eyebrow": "Planos e preços",
+    "title": "Escolha o plano ideal para a sua loja",
+    "subtitle": "Teste grátis por 30 dias, sem cadastro. Troque de plano quando quiser; seus dados nunca são apagados.",
+    "billing": {
+      "label": "Período de cobrança",
+      "monthly": "Mensal",
+      "annual": "Anual",
+      "save": "Economize {{percent}}%"
+    },
+    "recommended": "Recomendado",
+    "select_plan": "Escolha um plano",
+    "unit": {
+      "month": "/mês",
+      "year": "/ano"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "ou ",
+    "or_annual_after": "/ano, cobrado anualmente",
+    "saving_before": "Economize ",
+    "saving_after": " por ano em relação ao plano mensal",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Para quem trabalha sozinho em uma banca e precisa de venda e produtos",
+        "heading": "Inclui",
+        "features": [
+          "Venda completa com até 10 carrinhos",
+          "Produtos com variantes, códigos de barras, fotos e categorias",
+          "Histórico de vendas, anulações, devoluções e trocas",
+          "Painel do negócio: receita, lucro e mais vendidos",
+          "Backup na nuvem e restauração",
+          "Venda funciona offline"
+        ],
+        "cta": "Começar o teste grátis de 30 dias"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Para lojas que precisam de estoque, clientes, compras ou venda a prazo",
+        "heading": "Tudo do Lite, mais",
+        "features": [
+          "Motor de promoções: valor mínimo de compra, leve 2 pague 1, happy hour — aplicadas na venda",
+          "Pontos de clientes, resgate e níveis de clientes",
+          "Controle de estoque e pedidos de compra",
+          "Venda a prazo: entregue agora, receba depois",
+          "Encomendas: receba um sinal e quite na retirada"
+        ],
+        "cta": "Começar o teste grátis de 30 dias"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Para lojas com funcionários que precisam de funções e registro de atividades",
+        "heading": "Tudo do Standard, mais",
+        "features": [
+          "Contas de funcionários: um PIN para cada um, e cada venda registra quem a fez",
+          "Permissões e aprovações: descontos acima do limite, edição de produtos e estoque, visualização de custos",
+          "Registro de atividades e registros de restauração",
+          "Relatórios avançados: comparação de períodos, mapa de calor de vendas, produtos parados, valor do estoque, clientes recorrentes"
+        ],
+        "cta": "Começar o teste grátis de 30 dias"
+      }
+    },
+    "fineprint": "Cobrança feita pela sua conta da App Store. Os planos mensais e anuais são renovados automaticamente no fim de cada período; cancele quando quiser na App Store.",
+    "currency": {
+      "twd": "Preços exibidos para a App Store de Taiwan. Em outras regiões, vale o preço local mostrado na App Store.",
+      "to_usd": "Ver preços dos EUA",
+      "usd": "Preços exibidos para a App Store dos EUA. Em outras regiões, vale o preço local mostrado na App Store.",
+      "to_twd": "Ver preços de Taiwan"
+    },
+    "assurances": {
+      "trial": {
+        "title": "Teste grátis de 30 dias",
+        "desc": "Todos os recursos do Pro incluídos. Sem precisar de conta."
+      },
+      "fees": {
+        "title": "Sem taxa por transação",
+        "desc": "O DingPOS nunca mexe no dinheiro das suas vendas — a assinatura é a única cobrança."
+      },
+      "data": {
+        "title": "Seus dados continuam seus",
+        "desc": "Quando o teste ou a assinatura termina, só a venda é pausada. Produtos, vendas e relatórios continuam lá, e nada é apagado."
+      },
+      "switch": {
+        "title": "Troque quando quiser",
+        "desc": "Upgrades valem na hora, com valor proporcional calculado pela Apple. Downgrades valem na renovação."
+      }
+    },
+    "compare": {
+      "title": "Compare todos os recursos",
+      "subtitle": "Cada plano inclui tudo o que há no plano anterior.",
+      "feature_col": "Recurso",
+      "included": "Incluído",
+      "not_included": "Não incluído",
+      "groups": {
+        "checkout": "Finalizar venda",
+        "catalog": "Produtos e estoque",
+        "customers": "Clientes e promoções",
+        "reports": "Relatórios",
+        "team": "Equipe e controle",
+        "data": "Dados e backup"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Venda e vários carrinhos",
+          "desc": "Até 10 carrinhos ao mesmo tempo, busca instantânea por nome ou código de barras"
+        },
+        "discounts_tax": {
+          "name": "Descontos e impostos",
+          "desc": "Descontos por item e na venda; imposto incluso ou adicional calculado para você"
+        },
+        "offline": {
+          "name": "Venda offline",
+          "desc": "Continue vendendo sem conexão com a internet"
+        },
+        "returns": {
+          "name": "Anulações, devoluções e trocas",
+          "desc": "Histórico e detalhes completos de cada venda"
+        },
+        "preorder": {
+          "name": "Encomendas",
+          "desc": "Receba um sinal agora e quite o restante na retirada"
+        },
+        "on_account": {
+          "name": "Venda a prazo",
+          "desc": "Entregue agora, receba depois — o saldo de cada cliente em um só lugar"
+        },
+        "products": {
+          "name": "Gestão de produtos",
+          "desc": "Variantes, códigos de barras, fotos e categorias"
+        },
+        "import": {
+          "name": "Importação de dados",
+          "desc": "Importe produtos e vendas anteriores de outros sistemas via CSV"
+        },
+        "inventory": {
+          "name": "Controle de estoque",
+          "desc": "O estoque baixa a cada venda; ajustes manuais ficam registrados no histórico de movimentações"
+        },
+        "purchasing": {
+          "name": "Compras e fornecedores",
+          "desc": "Receber um pedido de compra atualiza o estoque; veja quanto você deve a cada fornecedor"
+        },
+        "promotions": {
+          "name": "Motor de promoções",
+          "desc": "Valor mínimo de compra, leve 2 pague 1, ofertas no enésimo item, happy hour — aplicadas na venda"
+        },
+        "loyalty": {
+          "name": "Clientes e pontos",
+          "desc": "Acumule e resgate pontos para fazer os clientes voltarem"
+        },
+        "member_tiers": {
+          "name": "Níveis de clientes",
+          "desc": "Premie seus melhores clientes com vantagens por nível"
+        },
+        "dashboard": {
+          "name": "Painel do negócio",
+          "desc": "Receita, lucro, descontos, formas de pagamento e mais vendidos"
+        },
+        "comparison": {
+          "name": "Comparação de períodos",
+          "desc": "Com o período anterior ou o ano passado — veja se cresceu ou caiu"
+        },
+        "heatmap": {
+          "name": "Mapa de calor de vendas",
+          "desc": "Sete dias × 24 horas — veja em quais horários você mais vende"
+        },
+        "slow_movers": {
+          "name": "Produtos parados",
+          "desc": "Encontre os produtos que não vendem mas continuam ocupando estoque"
+        },
+        "valuation": {
+          "name": "Valor do estoque e auditoria de movimentações",
+          "desc": "Quanto vale seu estoque agora e quem o alterou"
+        },
+        "repeat": {
+          "name": "Clientes recorrentes e pontos a resgatar",
+          "desc": "Quantos clientes cadastrados voltam a comprar e quantos pontos estão em aberto"
+        },
+        "staff": {
+          "name": "Contas de funcionários",
+          "desc": "Um PIN para cada um; cada venda registra quem a fez"
+        },
+        "permissions": {
+          "name": "Permissões e aprovações",
+          "desc": "Funções de gerente e funcionário; você escolhe o que precisa de aprovação"
+        },
+        "activity_log": {
+          "name": "Registro de atividades",
+          "desc": "Uma linha do tempo de anulações, devoluções, mudanças de preço, ajustes de estoque e mais"
+        },
+        "restore_records": {
+          "name": "Registros de restauração",
+          "desc": "Quem restaurou, de qual backup e quais vendas foram removidas"
+        },
+        "local_data": {
+          "name": "Dados no seu iPad",
+          "desc": "Sem precisar de conta — os dados do seu negócio nunca passam por nós"
+        },
+        "backup": {
+          "name": "Backup na nuvem e restauração",
+          "desc": "Faça backup no seu próprio iCloud, Google Drive ou Dropbox"
+        },
+        "undo_restore": {
+          "name": "Prévia da restauração e desfazer",
+          "desc": "Veja quais vendas uma restauração remove e desfaça uma restauração feita por engano"
+        }
+      }
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "q": "O que posso usar durante o teste grátis?",
+          "a": "Por 30 dias a partir da primeira instalação, você tem todos os recursos, inclusive os do Pro, como equipe, permissões e relatórios avançados — sem precisar de conta. Assinar qualquer plano durante o teste encerra o teste na hora e muda você para o plano contratado."
+        },
+        {
+          "q": "O que acontece se eu não assinar depois do teste?",
+          "a": "A venda é pausada; o resto continua funcionando — você ainda pode consultar vendas, ver relatórios e gerenciar produtos. Nada é apagado, e ao assinar a venda volta na hora."
+        },
+        {
+          "q": "Posso mudar de plano quando quiser?",
+          "a": "Sim, em Ajustes → Assinatura no app. Upgrades valem na hora e a Apple credita o tempo não usado; downgrades valem quando o período atual termina. A mudança de mensal para anual também vale na hora."
+        },
+        {
+          "q": "O que acontece com meus clientes, promoções e estoque se eu mudar para um plano menor?",
+          "a": "Tudo é mantido — nada é apagado nem alterado. Os recursos do plano superior apenas deixam de funcionar, e ao fazer upgrade de novo tudo volta como estava."
+        },
+        {
+          "q": "Como funciona a cobrança anual?",
+          "a": "O plano anual custa o mesmo que dez meses do plano mensal e cobre um ano inteiro — cerca de {{percent}}% a menos. Você é cobrado uma vez por ano e a renovação é automática."
+        },
+        {
+          "q": "Existe alguma taxa além da assinatura?",
+          "a": "Não. O DingPOS nunca mexe no dinheiro das suas vendas: sem comissão, sem taxa por transação, sem contrato de equipamento."
+        },
+        {
+          "q": "Como cancelo a assinatura?",
+          "a": "Gerencie no seu iPad em Ajustes → Conta Apple → Assinaturas; cancele pelo menos 24 horas antes do fim do período e você não será cobrado de novo. Seus dados continuam no seu aparelho."
+        },
+        {
+          "q": "Por que o preço na App Store é diferente do desta página?",
+          "a": "A App Store cobra a assinatura pelo preço da região da sua Conta Apple. Esta página mostra os preços de Taiwan e dos EUA; em outras regiões vale o preço local mostrado no app e na App Store."
+        }
+      ],
+      "more": "Mais dúvidas?",
+      "more_link": "Veja todas as perguntas frequentes"
+    },
+    "final": {
+      "title": "Use por 30 dias e depois escolha um plano",
+      "sub": "Baixe e comece — sem precisar de conta.",
+      "cta": "Baixar na App Store"
+    }
+  },
+  "footer": {
+    "tagline": "Abra sua loja em 10 minutos. Seus dados, seu controle.",
+    "contact": "Fale conosco",
+    "privacy_policy": "Política de Privacidade",
+    "terms_of_use": "Termos de Uso",
+    "copyright": "ALU Studio. Todos os direitos reservados.",
+    "support": "FAQ"
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "meta_description": "Como o DingPOS, o app de PDV para iPad que funciona offline, trata seus dados: os registros do seu negócio ficam no seu dispositivo, e os backups opcionais vão apenas para a sua própria conta na nuvem.",
+    "effective_date": "Em vigor desde: 1º de julho de 2026",
+    "intro": "A ALU Studio (\"nós\") desenvolveu o DingPOS (\"o app\"). O DingPOS é um ponto de venda criado com a privacidade em primeiro lugar — os dados do seu negócio pertencem a você. Esta Política de Privacidade explica como tratamos suas informações quando você usa o app.",
+    "local_storage": {
+      "title": "Como seus dados são armazenados",
+      "desc": "O DingPOS armazena todos os dados do seu negócio localmente no seu dispositivo. A menos que você ative o backup na nuvem, esses dados nunca saem do dispositivo. Os dados que você cria no app incluem:",
+      "items": [
+        "Configurações da loja (nome da loja, moeda, alíquota de imposto, logotipo)",
+        "Dados de produtos (nome, preço, custo, código de barras, foto, categoria, variantes, estoque)",
+        "Registros de vendas e transações (incluindo descontos, imposto e forma de pagamento)",
+        "Dados de clientes e membros (nome, telefone e e-mail opcionais, pontos)",
+        "Regras de promoção e configurações de níveis de membros"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Backup na nuvem (opcional)",
+      "desc": "Você pode ativar o backup na nuvem, se quiser, e escolher iCloud, Google Drive ou Dropbox como local de armazenamento. Os backups são gravados na sua própria conta na nuvem e permanecem totalmente sob o seu controle. Nós nunca manipulamos, armazenamos nem acessamos o conteúdo desses backups. Ativar o backup e escolher o provedor é uma decisão inteiramente sua, e você pode desativá-lo a qualquer momento."
+    },
+    "no_collection": {
+      "title": "O que não coletamos",
+      "desc": "O DingPOS não coleta, transmite nem compartilha nenhum conteúdo do seu negócio. Em especial, nós não:",
+      "items": [
+        "Coletamos seus dados de produtos, vendas, clientes ou membros",
+        "Temos acesso a nenhum fluxo de pagamento nem a dados de cartão de crédito (o app não processa pagamentos reais com cartão)",
+        "Rastreamos sua localização",
+        "Compartilhamos os dados do seu negócio com terceiros"
+      ]
+    },
+    "camera": {
+      "title": "Câmera e fotos",
+      "desc": "O DingPOS só solicita acesso à câmera quando você usa ativamente \"escanear código de barras\" ou \"tirar foto do produto\". O reconhecimento de códigos de barras e as fotos são processados localmente no seu dispositivo e nunca são enviados aos nossos servidores. As fotos dos produtos só são gravadas na sua própria conta na nuvem, como parte de um backup, se você ativar o backup na nuvem."
+    },
+    "subscription": {
+      "title": "Assinatura e compras",
+      "desc": "O DingPOS oferece assinatura por meio de compra dentro do app (IAP) da App Store da Apple e usa o RevenueCat para gerenciar o status da assinatura. O pagamento é processado pela Apple; nós nunca recebemos os dados do seu cartão de crédito nem de pagamento. O RevenueCat recebe apenas um identificador anônimo vinculado ao status da assinatura, usado para verificar se a sua assinatura está ativa."
+    },
+    "analytics": {
+      "title": "Análise de uso e relatórios de falhas",
+      "desc": "O DingPOS usa o Firebase Analytics e o Firebase Crashlytics, fornecidos pelo Google, para nos ajudar a entender como o app é usado e a identificar e corrigir falhas. Esses serviços coletam:",
+      "items": [
+        "Dados de uso anônimos (por exemplo, quais recursos são usados e a duração das sessões)",
+        "Relatórios de falhas (por exemplo, rastreamentos de pilha, modelo do dispositivo, versão do sistema)",
+        "Informações do dispositivo (por exemplo, tipo de dispositivo, sistema e versão do app)",
+        "Um identificador de instância gerado aleatoriamente (não vinculado à sua identidade)"
+      ],
+      "note": "Esses dados são anônimos e não incluem nenhum conteúdo do seu negócio (como produtos, vendas, clientes ou membros). Para saber mais sobre como o Google trata esses dados, consulte a Política de Privacidade do Google: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Privacidade de crianças",
+      "desc": "O DingPOS é uma ferramenta comercial de ponto de venda. Ele não foi feito para crianças e não coleta informações pessoais de crianças."
+    },
+    "changes": {
+      "title": "Alterações nesta política",
+      "desc": "Se fizermos alterações relevantes nesta Política de Privacidade, avisaremos você por meio de uma atualização do app. Recomendamos revisar esta política periodicamente."
+    },
+    "contact": {
+      "title": "Fale conosco",
+      "desc": "Se você tiver dúvidas ou sugestões sobre esta Política de Privacidade, entre em contato conosco em:"
+    }
+  },
+  "terms": {
+    "title": "Termos de Uso",
+    "meta_description": "Termos de Uso do DingPOS, o app de PDV para iPad da ALU Studio: licença, teste grátis de 30 dias, assinaturas pela App Store, seus dados e backups e responsabilidade.",
+    "effective_date": "Em vigor desde: 8 de outubro de 2026",
+    "intro": "Boas-vindas ao DingPOS. Leia com atenção os Termos de Uso a seguir antes de usar o app. Ao baixar, instalar ou usar o DingPOS, você concorda em ficar vinculado a estes termos.",
+    "license": {
+      "title": "Licença",
+      "desc": "A ALU Studio concede a você uma licença limitada, não exclusiva e intransferível para usar o DingPOS nos seus aparelhos na operação do seu negócio. Esta licença destina-se às suas atividades de varejo."
+    },
+    "subscription": {
+      "title": "Assinatura e pagamento",
+      "desc": "O DingPOS oferece um teste grátis de 30 dias a partir da primeira instalação, período em que todos os recursos do plano Pro ficam disponíveis; ao comprar qualquer plano durante o teste, o teste termina e o plano adquirido passa a valer a partir do momento da compra. Depois do teste, é necessária a assinatura de um dos planos (Lite, Standard ou Pro), contratada por compra dentro do app pela App Store, para continuar usando o recurso de finalizar venda; o conteúdo e os preços dos planos estão na página de preços (alu-studio.com/dingpos/pricing), e o valor cobrado é o exibido na App Store. Sem assinatura, a consulta e o gerenciamento de produtos continuam disponíveis e seus dados nunca são excluídos. A assinatura é renovada automaticamente, a menos que você a cancele pelo menos 24 horas antes do fim do período vigente. Você pode gerenciar ou cancelar sua assinatura a qualquer momento nos ajustes da conta da App Store no seu aparelho. As assinaturas adquiridas podem ser restauradas."
+    },
+    "restrictions": {
+      "title": "Restrições",
+      "desc": "Ao usar o app, você concorda em não:",
+      "items": [
+        "Fazer engenharia reversa, desmontar ou descompilar o app",
+        "Modificar, traduzir ou criar obras derivadas",
+        "Remover avisos de direitos autorais ou identificações do app",
+        "Usar o app para qualquer finalidade ilícita"
+      ]
+    },
+    "user_data": {
+      "title": "Seus dados e backups",
+      "desc": "Todo o conteúdo do seu negócio criado no DingPOS (produtos, vendas, clientes, membros e ajustes) fica armazenado no seu aparelho e é de sua exclusiva responsabilidade. Se você excluir o app ou apagar os dados dele, todas as informações armazenadas serão perdidas de forma permanente, a menos que você tenha ativado o backup na nuvem. Os backups na nuvem ficam na conta de nuvem que você escolher (iCloud / Google Drive / Dropbox), e a disponibilidade e a retenção deles seguem os termos de serviço desse provedor. Não podemos recuperar nenhum dado para você. Você também é responsável por cumprir as leis fiscais, de emissão de notas e de defesa do consumidor aplicáveis ao local onde atua."
+    },
+    "updates": {
+      "title": "Atualizações do app",
+      "desc": "Podemos lançar atualizações do app de tempos em tempos para melhorar recursos, corrigir problemas ou reforçar a segurança. Recomendamos manter o app atualizado para ter a melhor experiência."
+    },
+    "disclaimer": {
+      "title": "Isenção de garantias",
+      "desc": "O DingPOS é fornecido \"no estado em que se encontra\", sem garantias de qualquer tipo, expressas ou implícitas. Não garantimos que o app funcionará sem interrupções ou estará totalmente livre de erros. O DingPOS é uma ferramenta de apoio à sua operação; a exatidão final dos cálculos de impostos, das quantidades em estoque e de todos os valores, bem como a conformidade com as normas locais, continua sendo de sua responsabilidade conferir. Na máxima extensão permitida por lei, não nos responsabilizamos por quaisquer danos diretos, indiretos, incidentais ou consequentes decorrentes do uso do app."
+    },
+    "liability": {
+      "title": "Limitação de responsabilidade",
+      "desc": "Em nenhuma hipótese a responsabilidade da ALU Studio por danos decorrentes do uso do app, ou da impossibilidade de usá-lo, excederá o valor que você pagou pelo app nos 12 meses anteriores ao evento. Isso inclui, entre outros, perda de dados, perda de receita, danos ao aparelho ou qualquer outra perda."
+    },
+    "changes": {
+      "title": "Alterações destes termos",
+      "desc": "Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. Os termos modificados entram em vigor imediatamente após a publicação nesta página. Se você continuar usando o app, isso significa que aceitou os termos modificados."
+    },
+    "contact": {
+      "title": "Fale conosco",
+      "desc": "Se tiver qualquer dúvida sobre estes Termos de Uso, entre em contato conosco em:"
+    }
+  },
+  "support": {
+    "doc_title": "Suporte",
+    "meta_description": "Suporte do DingPOS: respostas e guias passo a passo do PDV para iPad — configuração, venda, vendas registradas, estoque, promoções, backup, equipe e cobrança.",
+    "title": "Como podemos ajudar?",
+    "subtitle": "Busque perguntas comuns ou navegue por assunto",
+    "search_placeholder": "Busque, por exemplo “código de barras” ou “restaurar backup”",
+    "search_hint_keywords": "Separe as palavras-chave com espaços",
+    "search_hint_shortcut_pre": "pressione ",
+    "search_hint_shortcut_post": " para buscar",
+    "clear": "Limpar busca",
+    "results_count": "{{num}} perguntas encontradas",
+    "no_results_title": "Nenhuma pergunta encontrada",
+    "no_results_desc": "Tente outras palavras-chave ou escreva para nós por e-mail — respondemos logo.",
+    "related_title": "Perguntas relacionadas",
+    "back": "Suporte",
+    "since": "Disponível desde o DingPOS v{{version}}",
+    "verified_version": "Conteúdo conforme o DingPOS v{{version}}",
+    "contact_title": "Não encontrou a resposta?",
+    "contact_desc": "Conte o que está acontecendo e responderemos o mais rápido possível.",
+    "contact_cta": "Falar com a ALU Studio",
+    "group_faq": "Perguntas frequentes",
+    "group_guide": "Guias",
+    "group_guide_desc": "Passo a passo de configuração, incluindo as armadilhas que encontramos enquanto construíamos o DingPOS.",
+    "group_roadmap": "Em breve",
+    "group_roadmap_desc": "Ainda não disponíveis — alguns já estão planejados. Seus pedidos definem nossas prioridades, então escreva para nós."
+  }
+}
