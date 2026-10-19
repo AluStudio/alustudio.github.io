@@ -40,7 +40,7 @@
     },
     "promotion": {
       "eyebrow": "Motor de promoções",
-      "title": "Crie a regra uma vez, o caixa aplica sempre",
+      "title": "Crie a regra uma vez; ela é aplicada automaticamente na finalização da venda",
       "lead": "Valor mínimo de compra, leve 2 pague 1, happy hour, ofertas só para membros — com a regra criada, o caixa faz a conta. Ninguém precisa lembrar, e não há cupom para digitar.",
       "items": [
         "Metas de subtotal do carrinho ativadas automaticamente",
@@ -56,7 +56,7 @@
     },
     "reports": {
       "eyebrow": "Relatórios",
-      "title": "Quanto você faturou hoje, com a loja ainda aberta",
+      "title": "Sua receita de hoje, com a loja ainda aberta",
       "lead": "Número de vendas, receita, lucro bruto, descontos e formas de pagamento em uma só página, para hoje, 7 dias, 30 dias ou todo o período.",
       "items": [
         "Hoje: número de vendas, receita, lucro bruto, desconto e formas de pagamento",
@@ -123,7 +123,7 @@
   "privacy_band": {
     "eyebrow": "Backup e privacidade",
     "title": "Sem conta, ninguém pode tirar seus dados de você",
-    "lead": "O DingPOS não pede cadastro. Sua contabilidade fica no iPad e, se quiser backup, ele vai para uma conta na nuvem que você já tem.",
+    "lead": "O DingPOS não exige cadastro. Seus registros ficam no iPad e, se quiser fazer backups, eles vão para uma conta na nuvem que você já tem.",
     "items": [
       "Escolha entre iCloud, Google Drive ou Dropbox",
       "Backup manual, quando você quiser",
@@ -167,7 +167,7 @@
     "plans": {
       "lite": {
         "name": "Lite",
-        "tagline": "Para quem trabalha sozinho em uma banca e precisa de venda e produtos",
+        "tagline": "Para quem trabalha sozinho em uma barraca e precisa de venda e produtos",
         "heading": "Inclui",
         "features": [
           "Venda completa com até 10 carrinhos",
@@ -415,7 +415,7 @@
       "items": [
         "Configurações da loja (nome da loja, moeda, alíquota de imposto, logotipo)",
         "Dados de produtos (nome, preço, custo, código de barras, foto, categoria, variantes, estoque)",
-        "Registros de vendas e transações (incluindo descontos, imposto e forma de pagamento)",
+        "Registros de vendas e movimentações de pagamento (incluindo descontos, imposto e forma de pagamento)",
         "Dados de clientes e membros (nome, telefone e e-mail opcionais, pontos)",
         "Regras de promoção e configurações de níveis de membros"
       ]
@@ -426,12 +426,12 @@
     },
     "no_collection": {
       "title": "O que não coletamos",
-      "desc": "O DingPOS não coleta, transmite nem compartilha nenhum conteúdo do seu negócio. Em especial, nós não:",
+      "desc": "O DingPOS não coleta, transmite nem compartilha nenhum conteúdo do seu negócio. Especificamente, não fazemos o seguinte:",
       "items": [
-        "Coletamos seus dados de produtos, vendas, clientes ou membros",
-        "Temos acesso a nenhum fluxo de pagamento nem a dados de cartão de crédito (o app não processa pagamentos reais com cartão)",
-        "Rastreamos sua localização",
-        "Compartilhamos os dados do seu negócio com terceiros"
+        "Não coletamos dados de produtos, vendas, clientes ou membros.",
+        "Não acessamos nenhum fluxo de pagamento nem dados de cartão de crédito (o app não processa pagamentos reais com cartão).",
+        "Não rastreamos sua localização.",
+        "Não compartilhamos os dados do seu negócio com terceiros."
       ]
     },
     "camera": {
@@ -470,10 +470,10 @@
     "title": "Termos de Uso",
     "meta_description": "Termos de Uso do DingPOS, o app de PDV para iPad da ALU Studio: licença, teste grátis de 30 dias, assinaturas pela App Store, seus dados e backups e responsabilidade.",
     "effective_date": "Em vigor desde: 8 de outubro de 2026",
-    "intro": "Boas-vindas ao DingPOS. Leia com atenção os Termos de Uso a seguir antes de usar o app. Ao baixar, instalar ou usar o DingPOS, você concorda em ficar vinculado a estes termos.",
+    "intro": "Boas-vindas ao DingPOS. Leia com atenção os Termos de Uso a seguir antes de usar o app. Ao baixar, instalar ou usar o DingPOS, você concorda em se sujeitar a estes termos.",
     "license": {
       "title": "Licença",
-      "desc": "A ALU Studio concede a você uma licença limitada, não exclusiva e intransferível para usar o DingPOS nos seus aparelhos na operação do seu negócio. Esta licença destina-se às suas atividades de varejo."
+      "desc": "A ALU Studio concede a você uma licença limitada, não exclusiva e intransferível para usar o DingPOS em seus dispositivos para administrar seu negócio. Esta licença se destina às suas atividades de varejo."
     },
     "subscription": {
       "title": "Assinatura e pagamento",

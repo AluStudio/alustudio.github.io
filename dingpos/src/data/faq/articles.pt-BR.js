@@ -573,7 +573,7 @@ export const articles = [
     "slug": "on-account",
     "category": "orders",
     "since": "2.0",
-    "question": "Posso vender a prazo para clientes de confiança e receber depois?",
+    "question": "Posso vender a prazo para clientes habituais e receber depois?",
     "keywords": [
       "venda a prazo",
       "a prazo",
@@ -686,7 +686,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Na hora da venda, o campo de busca encontra tanto nomes de produtos quanto o início de códigos de barras — digite um código para abrir o produto na hora. Para saber dos planos de leitor de código de barras físico, veja “Os leitores de código de barras físicos serão compatíveis?”"
+        "text": "Na hora da venda, o campo de busca encontra tanto nomes de produtos quanto o início de códigos de barras — digite um código para abrir o produto na hora. Para saber dos planos de suporte a leitores físicos de código de barras, veja “Os leitores de código de barras físicos serão compatíveis?”"
       }
     ],
     "related": [
@@ -832,7 +832,7 @@ export const articles = [
     "keywords": [
       "receita",
       "valor recebido",
-      "faturamento",
+      "receita da loja",
       "conferir caixa",
       "sinal",
       "venda a prazo"
@@ -847,7 +847,7 @@ export const articles = [
         "items": [
           "Venda a prazo: a mercadoria sai hoje e entra na receita de hoje; o dinheiro entra no Valor recebido no dia em que for quitado.",
           "Encomenda: o sinal entra no Valor recebido quando é pago; a receita é reconhecida por inteiro na data da retirada.",
-          "Sinal retido: quando o cliente cancela uma encomenda e você fica com o sinal, ele já tinha sido contado no Valor recebido quando foi pago. O Resumo o mostra à parte, como sinais retidos, e ele nunca entra na receita."
+          "Perda do sinal: quando o cliente cancela uma encomenda e você fica com o sinal, esse valor já havia sido contado no Valor recebido quando foi pago. O Resumo o mostra à parte como perda do sinal, e ele nunca entra na receita."
         ]
       },
       {
@@ -932,7 +932,7 @@ export const articles = [
           "Dia da semana × hora: troque o cabeçalho Vendas ao longo do tempo para Dia da semana × hora e veja um mapa de calor de sete dias por 24 horas — quanto mais escura a célula, mais você vendeu. Alterne entre receita e vendas; com uma comparação ativa, veja em quais horários houve alta e em quais houve queda.",
           "Produtos parados: troque o cabeçalho do card de ranking para Produtos parados para listar os produtos do que menos vendeu ao que mais vendeu, com o estoque atual e a data da última venda de cada um. Produtos que nunca foram vendidos aparecem como Nunca vendido. Por padrão, só aparecem produtos com estoque.",
           "Taxa de recompra: a última linha do card de clientes é a parcela dos membros que compraram no período e já compraram duas ou mais vezes no total.",
-          "Agora: valor do estoque (estoque atual × custo atual), todas as movimentações de estoque no período selecionado e os pontos que os clientes têm e ainda não resgataram, com o desconto máximo que eles permitem. São saldos atuais; o período não os altera."
+          "Agora: valor do estoque (estoque atual × custo atual), todas as movimentações de estoque no período selecionado e os pontos que os clientes têm e ainda não resgataram, com o desconto máximo que eles permitem. Esses valores são da posição atual; o período não os altera."
         ]
       },
       {
@@ -1035,7 +1035,7 @@ export const articles = [
         "type": "steps",
         "items": [
           "Programação: hoje está dentro das datas ativas? Alguma janela de Happy Hour restringe o dia da semana ou o horário?",
-          "Alcance: os itens do carrinho estão dentro dos produtos ou categorias da promoção? O valor mínimo de compra foi atingido?",
+          "Escopo: a promoção se aplica aos produtos ou categorias dos itens no carrinho? O valor mínimo de compra foi atingido?",
           "Público: a promoção é limitada a um nível de membro ou ao mês de aniversário? Esse membro foi selecionado na finalização da venda?",
           "Limites de uso: o limite total de usos, ou o limite deste cliente, já foi atingido?",
           "Acúmulo: uma promoção de prioridade maior com \"parar as promoções seguintes\" está bloqueando esta?"
@@ -1093,7 +1093,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Os níveis de membro (por exemplo, Regular, Prata, Ouro) servem a dois propósitos: podem ser o público de promoções (por exemplo, 10% de desconto só para o nível Ouro) e permitem reconhecer o status do cliente num relance durante a finalização da venda."
+        "text": "Os níveis de membro (por exemplo, Regular, Prata, Ouro) têm duas funções: podem ser usados para direcionar promoções (por exemplo, 10% de desconto só para o nível Ouro) e permitem reconhecer rapidamente o status do cliente durante a finalização da venda."
       },
       {
         "type": "p",
@@ -1125,11 +1125,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Os backups ficam na sua própria conta na nuvem. Cada serviço guarda apenas o mais recente — uma cópia dos dados e um arquivo com as fotos dos produtos — e cada novo backup sobrescreve o anterior."
+        "text": "Os backups ficam na sua própria conta na nuvem. Cada serviço mantém apenas a cópia na nuvem mais recente — uma cópia na nuvem dos dados e um arquivo com as fotos dos produtos — e cada novo backup sobrescreve o anterior."
       },
       {
         "type": "note",
-        "text": "Como um novo backup substitui o antigo, se você suspeita que seus dados já estão errados (por exemplo, vários produtos excluídos por engano), não faça backup agora: escreva para nós e vamos definir juntos o próximo passo."
+        "text": "Como um novo backup substitui o antigo, se você suspeita que algo já deu errado com seus dados (por exemplo, vários produtos foram excluídos por engano), não faça backup ainda — envie um e-mail para nós e vamos definir juntos o próximo passo."
       }
     ],
     "related": [
@@ -1195,12 +1195,12 @@ export const articles = [
         "items": [
           "iPad antigo: vá em Ajustes → Backup na nuvem e faça um backup manual. Confirme que o horário do backup foi atualizado.",
           "iPad novo: instale o DingPOS e conclua o assistente de configuração.",
-          "iPad novo: vá em Ajustes → Backup na nuvem, conecte a mesma conta na nuvem e restaure."
+          "iPad novo: vá em Ajustes → Backup na nuvem, conecte a mesma conta na nuvem e restaure a cópia na nuvem."
         ]
       },
       {
         "type": "p",
-        "text": "Ao tocar em Restaurar, primeiro abre uma prévia: as quantidades de produtos, vendas e clientes deste iPad e da cópia lado a lado, além de todas as vendas que a restauração removeria. Nada neste iPad muda até você confirmar. Se a cópia foi criada por uma versão mais nova do DingPOS, o app pede que você o atualize antes. As fotos dos produtos também são restauradas."
+        "text": "Ao tocar em Restaurar, primeiro abre uma prévia: as quantidades de produtos, vendas e clientes deste iPad e da cópia na nuvem lado a lado, além de todas as vendas que a restauração removeria. Nada neste iPad muda até você confirmar. Se a cópia na nuvem foi criada por uma versão mais nova do DingPOS, o app pede que você o atualize antes. As fotos dos produtos também são restauradas."
       },
       {
         "type": "note",
@@ -1331,7 +1331,7 @@ export const articles = [
         "items": [
           "As vendas importadas são posicionadas pela data da transação e recalculadas com a moeda e o modo de imposto da sua loja. Elas não afetam o estoque e não dão pontos de boas-vindas.",
           "Os clientes são associados aos existentes por telefone ou e-mail; quem não for encontrado é criado.",
-          "As vendas importadas mostram a data Importado em e o número da venda de origem, e não podem ser anuladas nem devolvidas.",
+          "As vendas importadas mostram a data em que foram importadas e o número da venda de origem, e não podem ser anuladas nem devolvidas.",
           "As linhas com erro podem ser exportadas em um CSV com os motivos anotados — corrija e importe de novo. Linhas duplicadas são ignoradas automaticamente."
         ]
       },
@@ -1396,7 +1396,7 @@ export const articles = [
       "equipe",
       "funcionário",
       "gerente",
-      "conta de funcionário",
+      "cadastro de funcionário",
       "pin",
       "operador",
       "trocar operador",
@@ -1412,17 +1412,17 @@ export const articles = [
         "type": "steps",
         "items": [
           "Na página Equipe, toque em Adicionar funcionário, digite um nome, escolha uma função (Gerente ou Funcionário) e defina um PIN de 4 dígitos.",
-          "O operador atual aparece na parte de baixo da barra lateral e no canto superior direito da tela de finalizar venda. Na troca de turno, toque nele, escolha seu nome e digite seu PIN.",
-          "A partir daí, todo pedido, pagamento e movimentação de estoque ou pontos registra quem cuidou dele, visível na lista e no detalhe do pedido; pedidos anulados também registram quem os anulou."
+          "O operador atual aparece na parte de baixo da barra lateral e no canto superior direito da tela de Pagamento. Na troca de turno, toque nele, escolha seu nome e digite seu PIN.",
+          "A partir daí, toda venda, pagamento e movimentação de estoque ou pontos registra quem cuidou dela, informação visível na lista e nos detalhes da venda; vendas anuladas também registram quem as anulou."
         ]
       },
       {
         "type": "p",
-        "text": "Quando alguém sair, use Desativar este funcionário: o histórico dele fica intacto e você pode reativá-lo depois. Mudar o nome não altera os pedidos antigos — eles mantêm o nome da época."
+        "text": "Quando alguém sair, use Desativar este funcionário: o histórico dele fica intacto e você pode reativá-lo depois. Mudar o nome não altera as vendas antigas — elas mantêm o nome da época."
       },
       {
         "type": "note",
-        "text": "Equipe é um recurso do plano Pro (também disponível durante o teste). Se o Pro terminar, os dados da equipe e o responsável por cada pedido são mantidos e os novos pedidos passam a ser registrados no nome do proprietário; ao assinar o Pro de novo, tudo volta."
+        "text": "Equipe é um recurso do plano Pro (também disponível durante o teste grátis). Se o Pro terminar, os dados da equipe e o responsável por cada venda são mantidos e as novas vendas passam a ser registrados no nome do proprietário; ao assinar o Pro de novo, tudo volta."
       }
     ],
     "related": [
@@ -1536,8 +1536,8 @@ export const articles = [
         "items": [
           "Cada registro mostra o que foi afetado, quem fez o quê e quando, e o resultado — por exemplo “M preço R$ 390 → R$ 350”.",
           "Filtre por funcionário (inclusive os desativados), tipo de ação e Hoje / Esta semana / Este mês.",
-          "Toque em um registro ligado a um pedido, produto ou cliente para abrir o detalhe.",
-          "O detalhe do pedido, o detalhe do produto e a página de cada funcionário têm uma entrada própria, que lista só os registros sobre eles.",
+          "Toque em um registro ligado a uma venda, produto ou cliente para abrir os detalhes da venda.",
+          "Os detalhes da venda, os detalhes do produto e a página de cada funcionário têm uma entrada própria, que lista só os registros sobre eles.",
           "Produtos excluídos continuam mostrando no registro o nome e o preço da época."
         ]
       },
@@ -1574,7 +1574,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tudo o que você criar durante o teste (produtos, vendas, membros) fica guardado por completo. Seus dados nunca são apagados, assine você depois ou não."
+        "text": "Tudo o que você criar durante o teste (produtos, vendas, membros) fica guardado por completo. Seus dados nunca são apagados, independentemente de você assinar depois."
       }
     ],
     "related": [
@@ -1632,7 +1632,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Lite: para quem toca a barraca sozinho e precisa de caixa e produtos.",
+          "Lite: para quem trabalha sozinho em uma barraca e precisa finalizar vendas e cadastrar produtos.",
           "Standard: acrescenta promoções, pontos de fidelidade e níveis de membros, controle de estoque, compras, vendas a prazo e encomendas.",
           "Pro: acrescenta contas de funcionários e permissões, aprovação do gerente, registro de atividades, registros de restauração e relatórios avançados — para lojas com equipe."
         ]
@@ -1811,7 +1811,7 @@ export const articles = [
         "items": [
           "O cliente precisa estar selecionado na finalização da venda para a oferta valer — a elegibilidade é avaliada com base no cliente selecionado no momento.",
           "A oferta de aniversário usa o mês de aniversário do cliente, então preencha o campo de aniversário; clientes sem essa data nunca são tratados como aniversariantes.",
-          "As promoções automáticas de nível são avaliadas quando a venda é concluída; se a venda for anulada, a promoção de nível que ela gerou é desfeita automaticamente."
+          "Os upgrades automáticos de nível são avaliados quando a venda é concluída; se a venda for anulada, o upgrade que ela acionou é revertido automaticamente."
         ]
       }
     ],
@@ -2045,7 +2045,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Em Resumo, escolha Este mês para ver o faturamento do mês, o dinheiro recebido, o lucro e a divisão por forma de pagamento.",
+          "Em Resumo, escolha Este mês para ver a receita do mês, o dinheiro recebido, o lucro e a divisão por forma de pagamento.",
           "As compras de fornecedores a prazo mensal ficam reunidas em Contas a pagar, dentro de Compras, onde dá para quitar um mês inteiro de uma vez.",
           "As vendas a prazo para clientes ficam reunidas em Vendas → Contas a receber, onde dá para quitar um mês inteiro de uma vez."
         ]
