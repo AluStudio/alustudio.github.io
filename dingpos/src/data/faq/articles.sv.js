@@ -809,7 +809,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Under Inköp i sidofältet hanterar du leverantörer och inköpsorder. För en leverantör sparas namn, kontaktperson, telefon, adress och ett standardmässigt betalningsvillkor (betala direkt eller månadskredit)."
+        "text": "Under Inköp i sidofältet hanterar du leverantörer och inköpsorder. För en leverantör sparas namn, kontaktperson, telefon, adress och ett standardbetalningsvillkor (betala direkt eller månadskredit)."
       },
       {
         "type": "steps",
@@ -1857,8 +1857,8 @@ export const articles = [
         "type": "list",
         "items": [
           "Efter Avböj visas samma förslag inte igen för den här varukorgen; en ny eller tömd varukorg ger förslaget igen.",
-          "Om ett nytt förslag dyker upp före betalningen måste det accepteras eller avböjas innan ordern kan skickas in.",
-          "Rader med gratisvaror och tillval kan inte rabatteras ytterligare av andra penningkampanjer och räknas inte mot andra kampanjers gränser."
+          "Om ett nytt förslag dyker upp innan betalningen bekräftas måste det accepteras eller avböjas innan ordern kan skickas in.",
+          "Rader med gratisvaror och tillval kan inte rabatteras ytterligare av andra rabattkampanjer och räknas inte mot andra kampanjers gränser."
         ]
       },
       {
@@ -2063,7 +2063,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Behöver du en månadsrapport för reglering som du kan exportera eller skriva ut, skriv till oss och berätta vilka fält du behöver – vi prioriterar utvecklingen efter antalet förfrågningar."
+        "text": "Behöver du en månadsrapport för avstämning som du kan exportera eller skriva ut, skriv till oss och berätta vilka fält du behöver – vi prioriterar utvecklingen efter antalet förfrågningar."
       }
     ],
     "related": [

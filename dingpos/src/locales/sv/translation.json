@@ -447,7 +447,7 @@
       "desc": "DingPOS använder Firebase Analytics och Firebase Crashlytics från Google för att vi ska förstå hur appen används samt hitta och åtgärda krascher. Tjänsterna samlar in:",
       "items": [
         "Anonym användningsdata (t.ex. vilka funktioner som används, sessionslängd)",
-        "Kraschrapporter (t.ex. stackspår, enhetsmodell och OS-version)",
+        "Kraschrapporter (t.ex. stack traces, enhetsmodell och OS-version)",
         "Enhetsinformation (t.ex. enhetstyp, OS, appversion)",
         "En slumpmässigt genererad instansidentifierare (inte kopplad till din identitet)"
       ],
