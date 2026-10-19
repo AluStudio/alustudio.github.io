@@ -8,16 +8,22 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Υποστήριξη |  |
+| FAQ / frequently asked questions | Συχνές ερωτήσεις | Όχι «FAQ»· στον τίτλο μενού «Συχνές ερωτήσεις» |
+| Pricing (the page) | Τιμές | Όχι «Τιμολόγηση» (ουσ. διαδικασία)· τίτλος σελίδας «Τιμές και πλάνα» αν χρειάζεται |
+| Plan (Lite / Standard / Pro; the names stay in English) | Πλάνο | From app glossary· τα Lite / Standard / Pro μένουν ως έχουν |
+| Free trial | Δωρεάν δοκιμή |  |
+| Billed monthly / billed annually | Μηνιαία χρέωση / Ετήσια χρέωση | Σε πρόταση: «χρεώνεται μηνιαίως / ετησίως» |
+| Terms of Use | Όροι χρήσης | Πεζά η δεύτερη λέξη |
+| Coming Soon (planned features) | Σύντομα κοντά σας | Σε σήμα/ετικέτα: «Σύντομα»· δεν υπονοεί ημερομηνία |
+| Setup guide (promotion setup guides) | Οδηγός ρύθμισης | Για προσφορές: «Οδηγός ρύθμισης προσφοράς» |
+| Shop owner | Ιδιοκτήτης καταστήματος | Σε προσφώνηση γενικά «ιδιοκτήτες μικρών καταστημάτων»· ο ρόλος στην εφαρμογή είναι «Ιδιοκτήτης» |
+| Stall / pop-up / night market | Πάγκος / pop-up / λαϊκή αγορά | Πάγκος για stall· «λαϊκή αγορά» για night market/market, όχι «νυχτερινή αγορά»· pop-up μένει λατινικά |
+| Offline-first | Λειτουργία χωρίς σύνδεση | Λειτουργεί χωρίς ίντερνετ· όχι «offline-first» ως έχει |
+| Point of sale (POS) app | Εφαρμογή ταμείου (POS) | Μετά την πρώτη χρήση αρκεί «POS»· όχι «σημείο πώλησης» μόνο του |
+| Privacy Policy | Πολιτική απορρήτου | Πεζά η δεύτερη λέξη |
+| Download (the app) | Λήψη | Κουμπί: «Λήψη από το App Store» |
+| Contact us | Επικοινωνία | Κουμπί/σύνδεσμος· πρόταση: «Επικοινωνήστε μαζί μας» |
+| Barcode | Γραμμωτός κωδικός (barcode) | Πρώτη εμφάνιση με barcode σε παρένθεση, μετά «barcode» |
+| Inventory (stock management) | Διαχείριση αποθέματος | Για το απόθεμα: «απόθεμα» όπως στην εφαρμογή |
+| Loyalty program | Πρόγραμμα επιβράβευσης | Πόντοι επιβράβευσης όπως στην εφαρμογή |
