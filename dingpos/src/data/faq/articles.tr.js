@@ -268,7 +268,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Her sepet birbirinden bağımsız hesaplanır. A müşterisi hâlâ ürünlere bakarken başka bir sepete geçip önce B müşterisinin ödemesini alabilirsiniz. Ödeme tamamlanınca o sepet yuvası otomatik olarak kaldırılır."
+        "text": "Her sepet birbirinden bağımsız hesaplanır. A müşterisi hâlâ ürünlere bakarken başka bir sepete geçip önce B müşterisinin ödemesini alabilirsiniz. Ödeme tamamlanınca o sepet alanı otomatik olarak kaldırılır."
       },
       {
         "type": "note",
@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Her ürün ve her sepet aynı anda tek bir indirim taşıyabilir — yeniden uygulamak öncekinin üzerine yazar, indirim rozetine dokunmak ise indirimi kaldırır. İndirimler perakendede standart olan sırayla, vergiden önce uygulanır."
+        "text": "Her ürüne ve sepete aynı anda yalnızca bir indirim uygulanabilir — yeniden uygulamak öncekinin üzerine yazar, indirim rozetine dokunmak ise indirimi kaldırır. İndirimler perakendede standart olan sırayla, vergiden önce uygulanır."
       }
     ],
     "related": [
@@ -396,7 +396,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Evet. Ayarlar → Cihaz Tercihleri bölümüne gidip Ödeme sesi'ni kapatın. Bir sonraki satıştan itibaren başarı ekranı sessiz kalır, dokunsal titreşim yine de devam eder."
+        "text": "Evet. Ayarlar → Cihaz Tercihleri bölümüne gidip Ödeme sesi'ni kapatın. Bir sonraki satıştan itibaren başarı ekranı sessiz kalır, dokunsal geri bildirim yine de sürer."
       },
       {
         "type": "p",
@@ -452,7 +452,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Elle ürün indirimi: o satır artık ürün düzeyinde kampanya almaz — elle yaptığınız indirim, satış anındaki son karar sayılır. Yine de satırın tutarı harcama eşiklerine dahil edilir.",
+          "Elle ürün indirimi: o satır artık ürün düzeyindeki kampanyalardan yararlanmaz — elle yaptığınız indirim, satış anındaki son karar sayılır. Yine de satırın tutarı harcama eşiklerine dahil edilir.",
           "Elle sepet indirimi: tüm kampanyalar hesaplandıktan sonra uygulanır, yani ikisi bir arada geçerli olur. Kalan toplamdan fazla bir tutar girerseniz tutar bir uyarıyla otomatik olarak sınırlanır."
         ]
       },
@@ -513,7 +513,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Siparişler sekmesine gidin, asıl siparişi açın ve İade’ye dokunun. Her üründen kaç adedin geri geldiğini seçin. Değişim için aynı ekranda Yerine Verilen Ürün Ekle’ye dokunun; fark tek seferde hesaplaşılır: pozitifse müşteri öder, negatifse siz iade edersiniz, sıfırsa para el değiştirmez."
+        "text": "Siparişler sekmesine gidin, asıl siparişi açın ve İade’ye dokunun. Her üründen kaç adedin geri geldiğini seçin. Değişim için aynı ekranda Yerine Verilen Ürün Ekle’ye dokunun; net tutar tek seferde hesaplanır: pozitifse müşteri öder, negatifse siz iade edersiniz, sıfırsa para el değiştirmez."
       },
       {
         "type": "list",
@@ -522,7 +522,7 @@ export const articles = [
           "İade tutarı, müşterinin o ürün için gerçekten ödediği tutardır: ürün indirimleri, sepet indirimleri ve puan kullanımı zaten paylara ayrılmıştır, yani iade etiket fiyatı üzerinden yapılmaz. Vergi, asıl siparişte uygulanan oranla hesaplanır.",
           "Yerine verilen ürünler bugünkü fiyattan satılır; kampanya veya indirim uygulanmaz.",
           "Takip edilen stok otomatik olarak geri eklenir. Asıl siparişten kazanılan puanlar geri alınır, kullanılan puanlar iade edilir; yerine verilen ürünler kendi puanlarını kazandırır.",
-          "Bir sipariş birkaç turda iade edilebilir ama ilk satılan adedi asla aşamaz. Kampanya kullanım limitleri iadeyle geri verilmez."
+          "Bir sipariş birkaç seferde iade edilebilir, ancak iade edilen toplam adet başlangıçta satılan adedi aşamaz. Kampanya kullanım limitleri iadeyle geri verilmez."
         ]
       },
       {
@@ -996,7 +996,7 @@ export const articles = [
       "fırsat",
       "1 alana 1 bedava",
       "alışveriş tutarı",
-      "mutlu saat",
+      "Happy Hour",
       "kupon",
       "indirim kampanyası"
     ],
@@ -1012,12 +1012,12 @@ export const articles = [
           "Bir alana bir bedava ve N. ürün fırsatları.",
           "Puan çarpanları.",
           "Yalnızca belirli üye seviyelerine veya doğum ayına özel teklifler.",
-          "A alana B hediye, ücretli ek ürünler ve sabit fiyatlı grup fiyatı fırsatları."
+          "A al, B hediye; ücretli ek ürünler ve sabit fiyatlı grup fiyatları."
         ]
       },
       {
         "type": "p",
-        "text": "Her kampanya zamanlanabilir (mutlu saat aralıkları, belirli haftanın günleri, gece yarısını aşan saatler), belirli ürünlerle sınırlandırılabilir; öncelik, birleştirme kuralları ve kullanım sınırlarıyla yönetilebilir. Koşulları sağlayan kampanyalar ödeme sırasında otomatik uygulanır, indirim kodu gerekmez."
+        "text": "Her kampanya zamanlanabilir (Happy Hour aralıkları, haftanın belirli günleri ve gece yarısını aşan saatler), belirli ürünlerle sınırlandırılabilir; öncelik, birleştirme kuralları ve kullanım sınırlarıyla yönetilebilir. Koşulları sağlayan kampanyalar ödeme sırasında otomatik uygulanır; indirim kodu gerekmez."
       }
     ],
     "related": [
@@ -1045,7 +1045,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Zamanlama: bugün kampanyanın geçerli olduğu tarihlerde mi? Mutlu saat aralığı gün veya saati kısıtlıyor mu?",
+          "Zamanlama: bugün kampanyanın geçerli olduğu tarihlerde mi? Happy Hour aralığı günü veya saati kısıtlıyor mu?",
           "Kapsam: sepetteki ürünler kampanyanın ürün veya kategori kapsamında mı? Harcama eşiğine ulaşıldı mı?",
           "Hedef kitle: kampanya belirli bir üye seviyesi veya doğum ayıyla sınırlı mı? O üye ödeme sırasında seçildi mi?",
           "Kullanım sınırları: toplam kullanım sınırına ya da bu müşterinin sınırına ulaşıldı mı?",
@@ -1211,7 +1211,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Geri Yükle'ye dokunduğunuzda önce bir önizleme açılır: bu iPad'in ve kopyanın ürün, sipariş ve müşteri sayıları yan yana, ayrıca geri yüklemenin kaldıracağı tüm siparişler gösterilir. Siz onaylayana kadar bu iPad'de hiçbir şey değişmez. DingPOS'un daha yeni bir sürümüyle alınmış kopya, önce uygulamayı güncellemenizi ister. Ürün fotoğrafları da geri yüklenir."
+        "text": "Geri Yükle'ye dokunduğunuzda önce bir önizleme açılır: bu iPad'in ve bulut kopyasının ürün, sipariş ve müşteri sayıları yan yana gösterilir; ayrıca geri yüklemenin kaldıracağı tüm siparişler listelenir. Siz onaylayana kadar bu iPad'de hiçbir şey değişmez. DingPOS'un daha yeni bir sürümüyle oluşturulmuş bulut kopyası, önce uygulamayı güncellemenizi ister. Ürün fotoğrafları da geri yüklenir."
       },
       {
         "type": "note",
@@ -1380,12 +1380,12 @@ export const articles = [
         "items": [
           "Geri Yüklemeyi Geri Al da bir geri yüklemedir ve yerine geçtiği verinin bir kopyasını daha saklar; yeniden dokunursanız eski duruma dönersiniz.",
           "Yalnızca en son kopya saklanır; sonraki geri yükleme onun yerine geçer.",
-          "Yalnızca veriler geri gelir: kopyadan sonra eklenen ürünlerin görseli eksik görünür."
+          "Yalnızca veriler geri gelir: bulut kopyasından sonra eklenen ürünlerin görseli eksik görünür."
         ]
       },
       {
         "type": "p",
-        "text": "Kimin, ne zaman ve hangi kopyadan geri yüklediğini görmek için aynı ekrandaki Geri yükleme kayıtlarını görüntüle'ye dokunun: her geri yüklemenin zamanı, işlemi yapan kişi, kaynağı, öncesi ve sonrası ürün / sipariş / müşteri sayıları ve kaldırdığı tüm siparişler listelenir. Kayıtlar bu iPad'de durur ve geri yükleme onların yerine geçmez."
+        "text": "Kimin, ne zaman ve hangi bulut kopyasından geri yüklediğini görmek için aynı ekrandaki Geri yükleme kayıtlarını görüntüle'ye dokunun: her geri yüklemenin zamanı, işlemi yapan kişi, kaynağı, öncesi ve sonrası ürün / sipariş / müşteri sayıları ve kaldırdığı tüm siparişler listelenir. Kayıtlar bu iPad'de durur ve geri yükleme onların yerine geçmez."
       },
       {
         "type": "note",
@@ -1407,7 +1407,6 @@ export const articles = [
       "personel",
       "çalışan",
       "yönetici",
-      "hesap",
       "pin",
       "kasiyer",
       "vardiya",
@@ -1424,12 +1423,12 @@ export const articles = [
         "items": [
           "Personel sayfasında Personel ekle'ye dokunun, bir ad girin, rol seçin (Yönetici veya Personel) ve 4 haneli bir PIN belirleyin.",
           "İşlemi yapan kişi kenar çubuğunun altında ve ödeme ekranının sağ üstünde görünür. Vardiya değişiminde buna dokunun, adınızı seçin ve PIN'inizi girin.",
-          "Bundan sonra her sipariş, ödeme ile her stok veya puan hareketi, işlemi kimin yaptığını kaydeder; bu bilgi sipariş listesinde ve ayrıntısında görünür. Geçersiz kılınan siparişlerde geçersiz kılan kişi de kaydedilir."
+          "Bundan sonra her siparişte, ödemede ve stok veya puan hareketinde işlemi kimin yaptığı kaydedilir; bu bilgi sipariş listesinde ve ayrıntısında görünür. Geçersiz kılınan siparişlerde işlemi geçersiz kılan kişi de kaydedilir."
         ]
       },
       {
         "type": "p",
-        "text": "Bir personel işten ayrıldığında Bu personeli devre dışı bırak'ı kullanın: geçmişi olduğu gibi kalır ve dilerseniz daha sonra yeniden etkinleştirebilirsiniz. Adı değiştirmek eski siparişleri etkilemez; onlarda o günkü ad kalır."
+        "text": "Bir personel işten ayrıldığında “Bu personeli devre dışı bırak” seçeneğini kullanın: geçmişi olduğu gibi kalır ve dilerseniz daha sonra yeniden etkinleştirebilirsiniz. Adı değiştirmek eski siparişleri etkilemez; onlarda o günkü ad kalır."
       },
       {
         "type": "note",
@@ -1556,7 +1555,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Kayıt tüm planlarda tutulur; yalnızca görüntüleme Pro özelliğidir, bu yüzden Pro'nun kesintiye uğradığı döneme ait kayıtlar yeniden abone olunca görünür. Günlük, bulut yedeklerinizle birlikte taşınır."
+        "text": "Kayıtlar tüm planlarda tutulur; yalnızca görüntüleme Pro özelliğidir, bu yüzden Pro aboneliğinizin sona erdiği döneme ait kayıtlar yeniden abone olunca görünür. Günlük, bulut yedeklerinizle birlikte taşınır."
       }
     ],
     "related": [
@@ -1651,7 +1650,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zaten Standard kullanıyor musunuz? Abonelik sayfasından Pro'ya yükseltebilirsiniz: faturalandırma aynı dönemde kalır, yükseltme hemen geçerli olur ve aradaki farkı Apple gün oranında hesaplar. Pro'dan Standard'a geçiş yenileme tarihinde uygulanır. Fiyatlar uygulamada gösterilir; planları Fiyatlandırma sayfamızda da karşılaştırabilirsiniz."
+        "text": "Zaten Standard kullanıyor musunuz? Abonelik sayfasından Pro'ya yükseltebilirsiniz: faturalandırma dönemi değişmez, yükseltme hemen geçerli olur ve Apple aradaki farkı kalan süreye göre orantılı olarak hesaplar. Pro'dan Standard'a geçiş yenileme tarihinde uygulanır. Fiyatlar uygulamada gösterilir; planları Fiyatlandırma sayfamızda da karşılaştırabilirsiniz."
       },
       {
         "type": "note",
@@ -1685,7 +1684,7 @@ export const articles = [
         "items": [
           "İptal: cihazınızda Ayarlar → Apple Hesabı → Abonelikler bölümünden yönetin. Yenilemeyi önlemek için mevcut dönemin bitmesinden en az 24 saat önce iptal edin.",
           "Geri yükleme: cihaz değiştirdikten veya uygulamayı yeniden yükledikten sonra DingPOS'un Abonelik sayfasında \"Satın Alımları Geri Yükle\"ye dokunun.",
-          "Plan değiştirme: DingPOS'un Abonelik sayfasında yeni planı seçin. Yükseltmeler (Standard'dan Pro'ya, aylıktan yıllığa) hemen geçerli olur ve aradaki farkı Apple gün oranında hesaplar; planı düşürme yenileme tarihinde uygulanır."
+          "Plan değiştirme: DingPOS'un Abonelik sayfasında yeni planı seçin. Yükseltmeler (Standard'dan Pro'ya, aylıktan yıllığa) hemen geçerli olur ve Apple aradaki farkı kalan süreye göre orantılı olarak hesaplar; planı düşürme yenileme tarihinde uygulanır."
         ]
       }
     ],
@@ -1721,7 +1720,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Eşik, tüm sepete değil, kapsamdaki ürünlerin ara toplamına göre kontrol edilir. “İçeceklerde ₺1000 harcayana” kampanyasında eşiğe yalnızca içecekler sayılır; “kampanyalardan hariç tut” olarak işaretlenen ürünler ise hiçbir zaman sayılmaz."
+        "text": "Eşik, tüm sepete değil, kapsamdaki ürünlerin ara toplamına göre kontrol edilir. “İçeceklerde ₺1000 harca” kampanyasında eşik hesabına yalnızca içecek harcamaları dahil edilir; “kampanyalardan hariç tut” olarak işaretlenen ürünler ise hiçbir zaman sayılmaz."
       },
       {
         "type": "p",
@@ -2038,9 +2037,9 @@ export const articles = [
   {
     "slug": "roadmap-monthly-settlement",
     "category": "roadmap",
-    "question": "Aylık hesap kapatma raporu olacak mı?",
+    "question": "Aylık borç kapatma raporu olacak mı?",
     "keywords": [
-      "aylık hesap kapatma",
+      "aylık borç kapatma",
       "mutabakat",
       "ay sonu",
       "aylık rapor",
@@ -2050,19 +2049,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Henüz özel bir aylık hesap kapatma raporu yok, ancak mutabakat için gereken her şey uygulamada zaten mevcut:"
+        "text": "Henüz özel bir aylık borç kapatma raporu yok, ancak mutabakat için gereken her şey uygulamada zaten mevcut:"
       },
       {
         "type": "list",
         "items": [
-          "İstatistik sekmesinde Bu Ay'ı seçerek ayın cirosunu, tahsil edilen nakdi, kârı ve ödeme dağılımını görün.",
+          "İstatistik sekmesinde Bu Ay'ı seçerek ayın satış gelirini, alınan tutarı, kârı ve ödeme dağılımını görün.",
           "Aylık vadeli tedarikçi alımları Satın alma bölümündeki Açık Fatura altında toplanır; bir ayın tamamı tek seferde kapatılabilir.",
           "Müşterilere yapılan veresiye satışlar Siparişler → Alacaklar altında toplanır; bir ayın tamamı tek seferde kapatılabilir."
         ]
       },
       {
         "type": "p",
-        "text": "Dışa aktarabileceğiniz veya yazdırabileceğiniz bir aylık hesap kapatma raporuna ihtiyacınız varsa gereken alanları bize yazın; geliştirme sırasını gelen talep sayısına göre belirliyoruz."
+        "text": "Dışa aktarabileceğiniz veya yazdırabileceğiniz bir aylık borç kapatma raporuna ihtiyacınız varsa gereken alanları bize yazın; geliştirme sırasını gelen talep sayısına göre belirliyoruz."
       }
     ],
     "related": [

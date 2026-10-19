@@ -57,14 +57,14 @@
     "reports": {
       "eyebrow": "Raporlar",
       "title": "Dükkân hâlâ açıkken bugün ne kazandığınız",
-      "lead": "Sipariş sayısı, gelir, brüt kâr, indirimler ve ödeme dağılımı tek sayfada; bugün, 7 gün, 30 gün veya tüm zamanlar için.",
+      "lead": "Sipariş sayısı, satış geliri, brüt kâr, indirimler ve ödeme dağılımı tek sayfada; bugün, 7 gün, 30 gün veya tüm zamanlar için.",
       "items": [
-        "Bugün: sipariş sayısı, gelir, brüt kâr, indirim, ödeme dağılımı",
+        "Bugün: sipariş sayısı, satış geliri, brüt kâr, indirim, ödeme dağılımı",
         "Adede göre en çok satan 5 ürün",
         "Gün / hafta / ay aralıkları",
         "Gelir ve brüt kâr eğilim grafikleri"
       ],
-      "shot_alt": "Bugünün gelirini, toplam indirimi, kârı ve ortalama sepeti gösteren pano; altında ödeme yöntemi halka grafiği ve en çok satanlar listesi"
+      "shot_alt": "Bugünün satış gelirini, toplam indirimi, kârı ve ortalama sepeti gösteren pano; altında ödeme yöntemi halka grafiği ve en çok satanlar listesi"
     },
     "orders": {
       "eyebrow": "Siparişler",
@@ -73,7 +73,7 @@
       "items": [
         "Kronolojik sipariş listesi, tarihe ve ödeme yöntemine göre filtre",
         "Satır ayrıntısı ürünleri, varyantları, indirimleri, vergiyi ve para üstünü saklar",
-        "Onayla geçersiz kılma — stok ve puanlar otomatik geri yüklenir"
+        "Onay gerektiren geçersiz kılma — stok ve puanlar otomatik geri yüklenir"
       ],
       "shot_alt": "Solda kronolojik sipariş listesi, sağda seçili siparişin ayrıntısı: ürünler, uygulanan indirim, vergi, toplam, ödeme yöntemi ve para üstü"
     }
@@ -429,7 +429,7 @@
       "desc": "DingPOS işletme içeriğinizin hiçbirini toplamaz, iletmez veya paylaşmaz. Özellikle şunları yapmayız:",
       "items": [
         "Ürün, sipariş, müşteri veya üyelik verilerinizi toplamayız",
-        "Hiçbir ödeme akışına veya kredi kartı bilgisine dokunmayız (uygulama gerçek kart ödemelerini işlemez)",
+        "Herhangi bir ödeme sürecine dahil olmayız ve kredi kartı bilgilerine erişmeyiz (uygulama gerçek kart ödemelerini işlemez)",
         "Konumunuzu izlemeyiz",
         "İşletme verilerinizi üçüncü taraflarla paylaşmayız"
       ]
@@ -477,7 +477,7 @@
     },
     "subscription": {
       "title": "Abonelik ve ödeme",
-      "desc": "DingPOS, ilk kurulumdan itibaren 30 günlük ücretsiz deneme sunar; bu sürede tüm Pro plan özellikleri kullanılabilir. Deneme sırasında herhangi bir plan satın almak denemeyi sona erdirir ve satın alınan plan satın alma anından itibaren geçerli olur. Deneme sonrasında ödeme almaya devam edebilmek için App Store Uygulama İçi Satın Alma ile alınan planlardan (Lite, Standard veya Pro) birine abone olmanız gerekir; plan içerikleri ve fiyatlar fiyatlandırma sayfasında (alu-studio.com/dingpos/pricing) yer alır, tahsil edilen fiyat ise App Store'da gösterilen fiyattır. Abonelik olmadan da ürünlere göz atma ve ürün yönetimi kullanılabilir durumda kalır ve verileriniz asla silinmez. Abonelik, mevcut dönemin bitiminden en az 24 saat önce iptal etmediğiniz sürece otomatik olarak yenilenir. Aboneliğinizi istediğiniz zaman cihazınızın App Store hesap ayarlarından yönetebilir veya iptal edebilirsiniz. Satın alınan abonelikler geri yüklenebilir."
+      "desc": "DingPOS, ilk kurulumdan itibaren 30 günlük ücretsiz deneme sunar; bu sürede tüm Pro plan özellikleri kullanılabilir. Deneme sırasında herhangi bir plan satın almak denemeyi sona erdirir ve satın alınan plan satın alma anından itibaren geçerli olur. Deneme sonrasında Ödeme ekranını kullanmaya devam edebilmek için App Store Uygulama İçi Satın Alma ile alınan planlardan (Lite, Standard veya Pro) birine abone olmanız gerekir; plan içerikleri ve fiyatlar fiyatlandırma sayfasında (alu-studio.com/dingpos/pricing) yer alır, tahsil edilen fiyat ise App Store'da gösterilen fiyattır. Abonelik olmadan da ürünlere göz atma ve ürün yönetimi kullanılabilir durumda kalır ve verileriniz asla silinmez. Abonelik, mevcut dönemin bitiminden en az 24 saat önce iptal etmediğiniz sürece otomatik olarak yenilenir. Aboneliğinizi istediğiniz zaman cihazınızın App Store hesap ayarlarından yönetebilir veya iptal edebilirsiniz. Satın alınan abonelikler geri yüklenebilir."
     },
     "restrictions": {
       "title": "Kısıtlamalar",
