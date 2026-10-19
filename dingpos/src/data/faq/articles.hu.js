@@ -815,7 +815,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A fizetési feltétel dönti el, mi történik ezután: az átvételkor fizetendő rendelések fizetettnek lesznek jelölve, a havi hitelesek pedig kifizetetlenek maradnak a Nyitott számlák alatt, ahol beszállítónként kiegyenlítheti őket – egy rendelést, az adott hónapot vagy mindent."
+        "text": "A fizetési feltétel dönti el, mi történik ezután: a „Fizetés átvételkor” feltételű rendelések fizetettnek lesznek jelölve, a „Havi hitel” feltételűek pedig kifizetetlenek maradnak a Nyitott számlák alatt, ahol beszállítónként kiegyenlítheti őket – egy rendelést, az adott hónapot vagy mindent."
       },
       {
         "type": "note",
@@ -1543,7 +1543,7 @@ export const articles = [
           "Szűrhet munkatárs (az inaktiváltakat is beleértve), művelettípus, valamint Ma / Ez a hét / Ez a hónap szerint.",
           "Koppintson egy rendelésre, termékre vagy vevőre mutató bejegyzésre a részletei megnyitásához.",
           "A rendelés- és termékrészletek oldalán, valamint minden munkatárs saját oldalán külön lista jeleníti meg a csak rájuk vonatkozó bejegyzéseket.",
-          "A Törölt termékek a naplóban is megőrzik az akkori nevüket és árukat."
+          "A törölt termékek neve és akkori ára a naplóban is látható."
         ]
       },
       {
@@ -1670,7 +1670,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Az előfizetéseket az App Store-on keresztüli alkalmazáson belüli vásárlással kezelheti – a csomagok és az árak az alkalmazásban láthatók. A fizetést az Apple kezeli; a fizetési adatait mi soha nem látjuk."
+        "text": "Az előfizetés az App Store-on keresztüli alkalmazáson belüli vásárlással történik. A csomagok és az árak az alkalmazásban láthatók. A fizetést az Apple kezeli; a fizetési adatait mi soha nem látjuk."
       },
       {
         "type": "list",
@@ -1934,7 +1934,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Érdekesség: ha egy engedmény nullára kerekedik, az alkalmazása nem számít érvényesülésnek, és nem fogyasztja a felhasználási keretet."
+        "text": "Érdekesség: ha az engedmény összege nullára kerekedik, az akció nem érvényesül, és nem fogyasztja a felhasználási keretet."
       }
     ],
     "related": [
