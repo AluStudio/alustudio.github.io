@@ -339,7 +339,7 @@
         },
         "local_data": {
           "name": "Données sur votre iPad",
-          "desc": "Aucun compte nécessaire : les données de votre commerce ne passent jamais par nos serveurs"
+          "desc": "Aucun compte nécessaire : les données de votre commerce ne passent jamais par DingPOS"
         },
         "backup": {
           "name": "Sauvegarde et restauration dans le cloud",
@@ -406,7 +406,7 @@
   },
   "privacy": {
     "title": "Politique de confidentialité",
-    "meta_description": "Comment DingPOS, la caisse iPad conçue pour fonctionner hors ligne, traite vos données : les données de votre commerce restent sur votre appareil, et les sauvegardes facultatives vont uniquement vers votre propre compte cloud.",
+    "meta_description": "Comment DingPOS, l’application de caisse sur iPad conçue pour fonctionner sans connexion, traite vos données : les données de votre commerce restent sur votre appareil et les sauvegardes facultatives vont uniquement vers votre propre compte cloud.",
     "effective_date": "Date d’entrée en vigueur : 1er juillet 2026",
     "intro": "ALU Studio (« nous ») a développé DingPOS (« l’application »). DingPOS est une caisse conçue avec la confidentialité au cœur : les données de votre commerce vous appartiennent. Cette politique de confidentialité explique comment nous traitons vos informations lorsque vous utilisez l’application.",
     "local_storage": {
@@ -414,7 +414,7 @@
       "desc": "DingPOS stocke toutes les données de votre commerce localement, sur votre appareil. Tant que vous n’activez pas la sauvegarde cloud, ces données ne quittent jamais votre appareil. Les données que vous créez dans l’application comprennent :",
       "items": [
         "Les réglages de la boutique (nom, devise, taux de taxe, logo)",
-        "Les données produits (nom, prix, coût, code-barres, photo, catégorie, variantes, stock)",
+        "Les données sur les produits (nom, prix, coût, code-barres, photo, catégorie, variantes, stock)",
         "Les commandes et les mouvements de paiement (y compris remises, taxes, mode de paiement)",
         "Les données clients et fidélité (nom, téléphone et e-mail facultatifs, points)",
         "Les règles de promotion et les réglages des niveaux de fidélité"
@@ -422,7 +422,7 @@
     },
     "cloud_backup": {
       "title": "Sauvegarde cloud (facultative)",
-      "desc": "Vous pouvez activer la sauvegarde cloud et choisir iCloud, Google Drive ou Dropbox comme lieu de stockage. Les sauvegardes sont écrites dans votre propre compte cloud et restent entièrement sous votre contrôle. Nous ne traitons, ne stockons ni ne consultons jamais le contenu de ces sauvegardes. Activer ou non la sauvegarde, et choisir le fournisseur, relève entièrement de vous, et vous pouvez la désactiver à tout moment."
+      "desc": "Vous pouvez activer la sauvegarde cloud et choisir iCloud, Google Drive ou Dropbox comme lieu de stockage. Les sauvegardes sont enregistrées dans votre propre compte cloud et restent entièrement sous votre contrôle. Nous ne traitons, ne stockons ni ne consultons jamais le contenu de ces sauvegardes. Activer ou non la sauvegarde, et choisir le fournisseur, relève entièrement de vous, et vous pouvez la désactiver à tout moment."
     },
     "no_collection": {
       "title": "Ce que nous ne collectons pas",
@@ -484,7 +484,7 @@
       "desc": "En utilisant l'application, vous vous engagez à ne pas :",
       "items": [
         "Effectuer de l'ingénierie inverse, désassembler ou décompiler l'application",
-        "Modifier ou traduire l'application, ni créer des œuvres dérivées",
+        "Modifier ou traduire l'application, ou créer des œuvres dérivées",
         "Supprimer les mentions ou étiquettes de droit d'auteur présentes dans l'application",
         "Utiliser l'application à des fins illégales"
       ]

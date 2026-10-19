@@ -175,7 +175,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS est actuellement compatible avec les iPad sous iPadOS 17 ou version ultérieure, conçus principalement pour une utilisation en mode paysage."
+        "text": "DingPOS est actuellement compatible avec les iPad sous iPadOS 17 ou version ultérieure. L’app est conçue principalement pour une utilisation en mode paysage."
       },
       {
         "type": "p",
@@ -204,7 +204,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "La devise et le mode de taxe (TTC / HT) sont verrouillés une fois la configuration terminée. Toutes vos commandes passées ont été calculées avec eux : les changer en cours de route fausserait vos rapports."
+        "text": "La devise et le mode de taxe (TTC / HT) sont verrouillés une fois la configuration terminée. Toutes vos commandes passées ont été calculées avec ces paramètres : les modifier en cours de route fausserait vos rapports."
       },
       {
         "type": "note",
@@ -299,7 +299,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Chaque article et chaque panier ne peut porter qu’une remise à la fois : en appliquer une nouvelle remplace la précédente, et toucher le badge de la remise la supprime. Les remises sont appliquées avant la taxe, selon l’ordre habituel du commerce de détail."
+        "text": "Chaque article et chaque panier ne peuvent porter qu’une remise à la fois : en appliquer une nouvelle remplace la précédente, et toucher le badge de la remise la supprime. Les remises sont appliquées avant la taxe, selon l’ordre habituel du commerce de détail."
       }
     ],
     "related": [
@@ -333,7 +333,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ordre complet du calcul : remises sur article → remise sur le panier → taxe. Les montants sont arrondis à l’unité supérieure à partir de la moitié, selon les décimales de la devise (p. ex. 0 pour le TWD, 2 pour l’USD)."
+        "text": "Ordre complet du calcul : remises sur article → remise sur le panier → taxe. Les montants sont arrondis à la valeur la plus proche, les demi-unités étant arrondies vers le haut, au nombre de décimales de la devise (p. ex. 0 pour le TWD, 2 pour l’USD)."
       }
     ],
     "related": [
@@ -477,7 +477,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "L’invalidation annule automatiquement tout ce qui s’y rattache : le stock suivi est rétabli, les points de fidélité gagnés sur la commande sont repris et les points utilisés sont recrédités. Les commandes invalidées restent dans la liste, clairement signalées, et sont exclues du chiffre d’affaires des rapports."
+        "text": "L’invalidation inverse automatiquement tout ce qui s’y rattache : le stock suivi est rétabli, les points de fidélité gagnés sur la commande sont repris et les points utilisés sont recrédités. Les commandes invalidées restent dans la liste, clairement signalées, et sont exclues du chiffre d’affaires des rapports."
       },
       {
         "type": "note",
@@ -514,7 +514,7 @@ export const articles = [
           "Le remboursement correspond à ce que le client a réellement payé pour l’article : remises sur article, remises sur le panier et utilisation de points sont déjà réparties, il n’est donc pas remboursé au prix catalogue. La taxe suit le taux appliqué à la commande d’origine.",
           "Les articles de remplacement sont facturés au prix du jour, sans promotion ni remise.",
           "Le stock suivi est rétabli automatiquement. Les points gagnés sur la commande d’origine sont repris, les points utilisés sont recrédités, et les articles de remplacement rapportent leurs propres points.",
-          "Une commande peut être retournée en plusieurs fois, mais jamais au-delà de la quantité vendue à l’origine. Un retour ne restitue pas les limites d’utilisation des promotions."
+          "Une commande peut être retournée en plusieurs fois, mais jamais au-delà de la quantité vendue à l’origine. Les utilisations des promotions ne sont pas rétablies après un retour."
         ]
       },
       {
@@ -549,7 +549,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Le stock est déduit dès l’enregistrement de la précommande, ce qui réserve les articles pour le client. Les articles en rupture passent en négatif et se rétablissent à la réception d’un bon de commande.",
+          "Le stock est déduit dès l’enregistrement de la précommande, ce qui réserve les articles pour le client. Le stock des articles en rupture devient négatif et est rétabli à la réception d’un bon de commande.",
           "Quand le client vient retirer sa commande, touchez Remettre dans le détail de la commande pour encaisser le solde. La commande devient alors une vente terminée ordinaire, et les retours ultérieurs suivent le parcours de retour habituel.",
           "Si le client ne vient jamais, touchez Annuler la commande dans le détail de la commande, puis choisissez de rembourser ou de conserver l’acompte. Le stock est remis.",
           "Le reçu d’acompte et le reçu final de retrait portent le même numéro."
@@ -627,7 +627,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Oui. Les pages de détail d’une commande, d’un client et d’un bon de commande ont chacune une carte de notes : touchez-la pour modifier, jusqu’à 500 caractères. Vous pouvez aussi en écrire une dans le formulaire lors de la création d’un client ou d’un bon de commande."
+        "text": "Oui. Les pages de détail d’une commande, d’un client et d’un bon de commande ont chacune une carte de notes : touchez-la pour la modifier (500 caractères maximum). Vous pouvez aussi en écrire une dans le formulaire lors de la création d’un client ou d’un bon de commande."
       },
       {
         "type": "p",
@@ -1003,10 +1003,10 @@ export const articles = [
         "type": "list",
         "items": [
           "Seuil de dépense : pour X dépensés, Y de remise ou Y % de remise.",
-          "Offres « 1 acheté, 1 offert » et offres sur le énième article.",
+          "Offres « 1 acheté, 1 offert » et offres sur l’énième article.",
           "Multiplicateurs de points bonus.",
           "Offres réservées à un niveau de membre ou au mois d’anniversaire.",
-          "Achetez A, obtenez B ; extras payants et lots à prix fixe."
+          "Achetez A, obtenez B ; options supplémentaires payantes et lots à prix fixe."
         ]
       },
       {
@@ -1041,7 +1041,7 @@ export const articles = [
         "items": [
           "Planification : la date du jour est-elle comprise dans la période active ? Une plage de happy hour limite-t-elle le jour de la semaine ou l’heure ?",
           "Périmètre : les articles du panier relèvent-ils des produits ou des catégories visés par la promotion ? Le seuil de dépense est-il atteint ?",
-          "Public : la promotion est-elle limitée à un niveau de membre ou au mois d’anniversaire ? Ce membre a-t-il bien été sélectionné à l’encaissement ?",
+          "Clientèle : la promotion est-elle limitée à un niveau de membre ou au mois d’anniversaire ? Ce membre a-t-il bien été sélectionné à l’encaissement ?",
           "Limites d’utilisation : la limite totale, ou celle de ce client, est-elle atteinte ?",
           "Cumul : une promotion de priorité supérieure avec « Arrêter les promotions suivantes après celle-ci » la bloque-t-elle ?"
         ]
@@ -1136,7 +1136,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Comme une nouvelle sauvegarde remplace l’ancienne, si vous pensez que vos données sont déjà faussées (par exemple, un lot de produits supprimé par erreur), ne sauvegardez pas tout de suite : écrivez-nous et nous déterminerons ensemble la suite."
+        "text": "Comme une nouvelle sauvegarde remplace l’ancienne, si vous pensez que vos données sont déjà corrompues (par exemple, un lot de produits supprimé par erreur), ne sauvegardez pas tout de suite : écrivez-nous et nous déterminerons ensemble la suite."
       }
     ],
     "related": [
@@ -1338,7 +1338,7 @@ export const articles = [
         "items": [
           "Les ventes importées sont classées selon leur date de transaction et recalculées avec la devise et le mode de taxe de votre boutique. Elles n’affectent pas le stock et n’accordent pas de points de bienvenue.",
           "Les clients sont associés aux clients existants par téléphone ou e-mail ; ceux qui ne correspondent à personne sont créés.",
-          "Les commandes importées affichent une date Importée le et le numéro de commande d’origine, et ne peuvent être ni invalidées ni retournées.",
+          "Les commandes importées portent le badge « Importée le » suivi de la date d’importation, affichent le numéro de commande d’origine et ne peuvent être ni invalidées ni retournées.",
           "Les lignes en erreur peuvent être exportées dans un CSV annoté des motifs : corrigez-les et importez à nouveau. Les lignes en double sont ignorées automatiquement."
         ]
       },
@@ -1499,7 +1499,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Actions (ajustement manuel du stock, gestion des produits, encaissement au-delà du plafond de remise) : une approbation couvre cette seule action.",
-          "Consultations (coût et marge, Stats, Réglages, sauvegarde et restauration) : une approbation déverrouille l’accès jusqu’au changement d’opérateur ou jusqu’à ce que l’app passe en arrière-plan.",
+          "Consultations (Coûts et marges, Stats, Réglages, sauvegarde et restauration) : une approbation déverrouille l’accès jusqu’au changement d’opérateur ou jusqu’à ce que l’app passe en arrière-plan.",
           "Le plafond de remise s’applique aux remises manuelles et est vérifié une seule fois à l’encaissement ; les promotions automatiques et l’utilisation de points n’y comptent pas."
         ]
       },
@@ -1551,7 +1551,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Toutes les formules enregistrent ; seule la consultation est une fonction Pro, donc les enregistrements faits pendant que Pro était interrompu apparaissent dès que vous vous réabonnez. Le journal est inclus dans vos sauvegardes dans le cloud."
+        "text": "Toutes les formules enregistrent ces actions ; seule la consultation est une fonction Pro, donc les enregistrements faits pendant que Pro était interrompu apparaissent dès que vous vous réabonnez. Le journal est inclus dans vos sauvegardes dans le cloud."
       }
     ],
     "related": [
@@ -1945,13 +1945,13 @@ export const articles = [
   {
     "slug": "roadmap-payment-integration",
     "category": "roadmap",
-    "question": "L'encaissement par carte bancaire sera-t-il intégré à DingPOS ?",
+    "question": "Le traitement des paiements sera-t-il intégré à DingPOS ?",
     "keywords": [
       "paiement",
-      "encaissement par carte",
+      "traitement des paiements",
       "terminal de paiement",
       "intégration",
-      "carte bancaire"
+      "prestataire de paiement"
     ],
     "content": [
       {
@@ -1982,7 +1982,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pas encore. La facturation électronique et l'impression de tickets demandent d'acheter des machines à factures et des imprimantes de tickets pour les tester et développer, ce qui représente un coût important. Notre équipe étant petite, nous le prévoirons lorsque le nombre d'utilisateurs aura grandi et que nos revenus seront stables."
+        "text": "Pas encore. La facturation électronique et l'impression de tickets nécessitent l'achat de machines de facturation et d'imprimantes de tickets pour effectuer les tests et développer ces fonctionnalités, ce qui représente un coût important. Notre équipe étant petite, nous les planifierons lorsque le nombre d'utilisateurs aura augmenté et que nos revenus seront stables."
       },
       {
         "type": "p",
