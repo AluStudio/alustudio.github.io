@@ -259,7 +259,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kassa ekrani bir vaqtning o‘zida 10 tagacha savatni qo‘llab-quvvatlaydi. Yangi savat qo‘shish uchun savat panelidagi “+” tugmasini bosing, almashtirish uchun raqamli varaqani bosing."
+        "text": "Kassa ekrani bir vaqtning o‘zida 10 tagacha savatni qo‘llab-quvvatlaydi. Yangi savat qo‘shish uchun savat panelidagi “+” tugmasini bosing, almashtirish uchun raqamlangan yorliqni bosing."
       },
       {
         "type": "p",
@@ -832,7 +832,7 @@ export const articles = [
     "keywords": [
       "daromad",
       "qabul qilingan pul",
-      "pul tushumi",
+      "kelib tushgan pul",
       "kassani solishtirish",
       "avans",
       "nasiya savdo"
@@ -1001,7 +1001,7 @@ export const articles = [
           "Bitta olsangiz, bittasi sovg‘a va N-tovar uchun aksiyalar.",
           "Bonus ballarni ko‘paytirish.",
           "Faqat ma’lum a’zolik darajasi yoki tug‘ilgan oy uchun takliflar.",
-          "A olsangiz B sovg‘a, pullik qo‘shimchalar va qat’iy narxli to‘plamlar."
+          "A ni olsangiz, B ni oling; pullik qo‘shimchalar va qat’iy narxli to‘plamlar."
         ]
       },
       {
@@ -1035,10 +1035,10 @@ export const articles = [
         "type": "steps",
         "items": [
           "Jadval: bugun faol sanalar ichidami? Happy Hour vaqti hafta kunini yoki soatni cheklayaptimi?",
-          "Doira: savatdagi mahsulotlar aksiyaning mahsulot yoki toifa doirasiga kiradimi? Summa chegarasiga yetildimi?",
+          "Qamrov: savatdagi mahsulotlar aksiya qamrab oladigan mahsulot yoki toifalarga kiradimi? Summa chegarasiga yetildimi?",
           "Auditoriya: aksiya a’zolik darajasi yoki tug‘ilgan oy bilan cheklanganmi? To‘lov paytida shu a’zo tanlanganmi?",
           "Foydalanish limitlari: umumiy limit yoki shu mijozning limiti tugaganmi?",
-          "Qo‘shilish: «Bu aksiya ishlagach, keyingilarini to‘xtatish» yoqilgan ustuvorligi yuqori aksiya uni to‘sib qo‘yayaptimi?"
+          "Birgalikda qo‘llanish: ustuvorligi yuqori aksiyada «Bu aksiya ishlagach, keyingilarini to‘xtatish» yoqilgani bu aksiyani to‘sib qo‘yayaptimi?"
         ]
       },
       {
@@ -1125,7 +1125,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zaxira nusxalar o‘zingizning bulut hisobingizga saqlanadi. Har bir bulutda faqat eng oxirgisi qoladi — bitta ma’lumotlar nusxasi va mahsulot rasmlari uchun bitta fayl — va har yangi zaxira nusxa oldingisini almashtiradi."
+        "text": "Zaxira nusxalar o‘zingizning bulut hisobingizga saqlanadi. Har bir bulutda faqat eng oxirgisi qoladi — ma’lumotlarning bitta bulutdagi nusxasi va mahsulot rasmlari uchun bitta fayl — va har yangi zaxira nusxa oldingisini almashtiradi."
       },
       {
         "type": "note",
@@ -1199,7 +1199,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tiklash tugmasini bossangiz, avval ko‘rib chiqish oynasi ochiladi: bu iPad’dagi va nusxadagi mahsulotlar, buyurtmalar va mijozlar soni yonma-yon, shuningdek tiklash natijasida olib tashlanadigan barcha buyurtmalar ko‘rsatiladi. Tasdiqlamaguningizcha bu iPad’dagi hech narsa o‘zgarmaydi. DingPOS’ning yangiroq versiyasida olingan nusxa avval ilovani yangilashni so‘raydi. Mahsulot rasmlari ham tiklanadi."
+        "text": "Tiklash tugmasini bossangiz, avval ko‘rib chiqish oynasi ochiladi: bu iPad’dagi va bulutdagi nusxada saqlangan mahsulotlar, buyurtmalar va mijozlar soni yonma-yon, shuningdek tiklash natijasida olib tashlanadigan barcha buyurtmalar ko‘rsatiladi. Tasdiqlamaguningizcha bu iPad’dagi hech narsa o‘zgarmaydi. DingPOS’ning yangiroq versiyasida olingan nusxa avval ilovani yangilashni so‘raydi. Mahsulot rasmlari ham tiklanadi."
       },
       {
         "type": "note",
@@ -1367,7 +1367,7 @@ export const articles = [
         "items": [
           "Tiklashni bekor qilish o‘zi ham tiklash hisoblanadi va almashtirayotgan ma’lumotlarning yana bir nusxasini saqlaydi, shuning uchun uni yana bossangiz, avvalgi holatga qaytadi.",
           "Faqat eng oxirgi nusxa saqlanadi; keyingi tiklash uni almashtiradi.",
-          "Faqat ma’lumotlar qaytadi: zaxira nusxadan keyin qo‘shilgan mahsulotlarda rasm yo‘q deb ko‘rinadi."
+          "Faqat ma’lumotlar qaytadi: bulutdagi nusxa olinganidan keyin qo‘shilgan mahsulotlarda rasm yo‘q deb ko‘rinadi."
         ]
       },
       {
@@ -1453,7 +1453,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Egasining PIN-kodisiz u talab qiladigan amallar yopiq qoladi — xodimlarni qo‘shish yoki tahrirlash, lavozim ruxsatlarini o‘zgartirish va faoliyat jurnalini ko‘rish. Xodimlar o‘z PIN-kodlari bilan to‘lovlarni qabul qilishda va kundalik ishda davom etaveradi."
+        "text": "Egasining PIN-kodisiz u talab qiladigan amallar yopiq qoladi — xodimlarni qo‘shish yoki tahrirlash, lavozim ruxsatlarini o‘zgartirish va faoliyat jurnalini ko‘rish. Xodimlar o‘z PIN-kodlari bilan savdolarni rasmiylashtirishda va kundalik ishda davom etaveradi."
       },
       {
         "type": "note",
@@ -1526,7 +1526,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Faoliyat jurnalidan foydalaning. Xodimlar sahifasida yuqori o‘ngdagi Faoliyat jurnali tugmasini bosing va egasining PIN-kodini kiriting — do‘konning muhim amallari yangisidan boshlab ko‘rsatiladi: yaroqsiz deb belgilashlar, qaytarishlar, zaxirani qo‘lda tuzatishlar, tasdiqlashlar, xodim va ruxsat o‘zgarishlari, egasi PIN-kodining o‘zgarishi, mahsulot narxi va tannarxi o‘zgarishlari hamda mahsulotlarni o‘chirish. Oddiy to‘lovlar ro‘yxatga kiritilmaydi."
+        "text": "Faoliyat jurnalidan foydalaning. Xodimlar sahifasida yuqori o‘ngdagi Faoliyat jurnali tugmasini bosing va egasining PIN-kodini kiriting — do‘konning muhim amallari yangisidan boshlab ko‘rsatiladi: yaroqsiz deb belgilashlar, qaytarishlar, zaxirani qo‘lda tuzatishlar, tasdiqlashlar, xodim va ruxsat o‘zgarishlari, egasi PIN-kodining o‘zgarishi, mahsulot narxi va tannarxi o‘zgarishlari hamda mahsulotlarni o‘chirish. Oddiy savdolar ro‘yxatga kiritilmaydi."
       },
       {
         "type": "list",
@@ -1563,7 +1563,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS birinchi o‘rnatilgandan boshlab 30 kun davomida Pro tarifining barcha imkoniyatlarini beradi: xodimlar, ruxsatlar, faoliyat jurnali va kengaytirilgan hisobotlar. Ro‘yxatdan o‘tish shart emas."
+        "text": "DingPOS birinchi o‘rnatilgandan boshlab 30 kun davomida Pro tarifining barcha imkoniyatlarini beradi: xodimlar uchun kirish profillari, ruxsatlar, faoliyat jurnali va kengaytirilgan hisobotlar. Ro‘yxatdan o‘tish shart emas."
       },
       {
         "type": "p",
@@ -1631,7 +1631,7 @@ export const articles = [
         "items": [
           "Lite: peshtaxtada yolg‘iz ishlaydigan, faqat to‘lov qabul qilish va mahsulotlar kerak bo‘lgan sotuvchi uchun.",
           "Standard: aksiyalar, ballar va a’zolik darajalari, zaxirani hisobga olish, xaridlar, nasiya savdo va oldindan buyurtmalarni qo‘shadi.",
-          "Pro: xodimlar va ruxsatlar, tasdiqlash, faoliyat jurnali, tiklash yozuvlari va kengaytirilgan hisobotlarni qo‘shadi — xodimlari bor do‘konlar uchun."
+          "Pro: xodimlar uchun kirish profillari va ruxsatlar, menejer tomonidan PIN bilan tasdiqlash, faoliyat jurnali, tiklash yozuvlari va kengaytirilgan hisobotlarni qo‘shadi — xodimlari bor do‘konlar uchun."
         ]
       },
       {
@@ -2034,7 +2034,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Statistika’da Shu oy davrini tanlang — oyning tushumi, olingan naqd pul, foyda va to‘lov turlari bo‘yicha taqsimot ko‘rinadi.",
+          "Statistika’da “Shu oy”ni tanlang — oyning daromadi (sotuvdan tushum), qabul qilingan pul, foyda va to‘lov turlari bo‘yicha taqsimot ko‘rinadi.",
           "Yetkazib beruvchilardan oylik shartlarda qilingan xaridlar Xaridlar bo‘limidagi To‘lanmagan hisoblar’da to‘planadi, u yerda butun oyni bir yo‘la yopish mumkin.",
           "Mijozlarga nasiyaga qilingan savdolar Buyurtma → Qarzdorliklar’da to‘planadi, u yerda ham butun oyni bir yo‘la yopish mumkin."
         ]

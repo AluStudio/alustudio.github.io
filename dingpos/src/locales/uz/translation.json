@@ -41,7 +41,7 @@
     "promotion": {
       "eyebrow": "Aksiya mexanizmi",
       "title": "Qoidani bir marta belgilang, to‘lovda o‘zi qo‘llanadi",
-      "lead": "Summa chegarasi, bittasi o‘rniga ikkitasi, “happy hour”, faqat a’zolar uchun takliflar — qoida bir marta yaratilsa, to‘lov ekrani o‘zi hisoblaydi. Hech kim eslab yurmaydi, kupon kodini kiritish ham shart emas.",
+      "lead": "Summa chegarasi, birini olsangiz ikkinchisi bepul, “happy hour”, faqat a’zolar uchun takliflar — qoida bir marta yaratilsa, to‘lov ekrani o‘zi hisoblaydi. Hech kim eslab yurmaydi, kupon kodini kiritish ham shart emas.",
       "items": [
         "Savat summasi chegaraga yetganda avtomatik ishga tushadi",
         "Savat yoki mahsulot chegirmalari (qat’iy summa yoki foiz)",
@@ -137,13 +137,13 @@
     "title": "Oddiy va ochiq narxlar",
     "price_before": "Uchta tarif, oyiga ",
     "price_after": " dan",
-    "sub": "30 kunlik bepul sinov. Tranzaksiya uchun to‘lov ham, yashirin xarajat ham yo‘q. Sinovdan keyin ham ma’lumotlaringiz saqlanadi — istalgan vaqt qayta obuna bo‘lishingiz mumkin.",
+    "sub": "30 kunlik bepul sinov. Savdolardan komissiya olinmaydi, yashirin xarajat ham yo‘q. Sinovdan keyin ham ma’lumotlaringiz saqlanadi — istalgan vaqt qayta obuna bo‘lishingiz mumkin.",
     "compare": "Tariflarni solishtirish",
     "cta": "30 kunlik bepul sinovni boshlash"
   },
   "pricing": {
     "doc_title": "Tariflar va narxlar",
-    "meta_description": "iPad uchun DingPOS tariflarini solishtiring: Lite, Standard va Pro. 30 kunlik bepul sinov, tranzaksiya komissiyalarisiz, ma’lumotlaringiz hech qachon o‘chirilmaydi.",
+    "meta_description": "iPad uchun DingPOS tariflarini solishtiring: Lite, Standard va Pro. 30 kunlik bepul sinov, har bir to‘lov uchun komissiya yo‘q, ma’lumotlaringiz hech qachon o‘chirilmaydi.",
     "eyebrow": "Tariflar va narxlar",
     "title": "Do‘koningizga mos tarifni tanlang",
     "subtitle": "30 kun bepul sinab ko‘ring — ro‘yxatdan o‘tish shart emas. Tarifni istalgan vaqtda almashtiring; ma’lumotlaringiz hech qachon o‘chirilmaydi.",
@@ -218,7 +218,7 @@
         "desc": "Pro’ning barcha imkoniyatlari kiritilgan. Hisob ochish shart emas."
       },
       "fees": {
-        "title": "Tranzaksiya komissiyalarisiz",
+        "title": "Har bir to‘lov uchun komissiya yo‘q",
         "desc": "DingPOS tushumingizga umuman tegmaydi — yagona to‘lov bu obuna."
       },
       "data": {
@@ -376,7 +376,7 @@
         },
         {
           "q": "Obunadan tashqari qo‘shimcha to‘lovlar bormi?",
-          "a": "Yo‘q. DingPOS tushumingizga aralashmaydi: komissiya ham, tranzaksiya to‘lovlari ham, uskuna shartnomasi ham yo‘q."
+          "a": "Yo‘q. DingPOS tushumingizga aralashmaydi: komissiya ham, har bir to‘lov uchun alohida haq ham, uskuna shartnomasi ham yo‘q."
         },
         {
           "q": "Obunani qanday bekor qilaman?",
@@ -415,7 +415,7 @@
       "items": [
         "Do‘kon sozlamalari (do‘kon nomi, valyuta, soliq stavkasi, logotip)",
         "Mahsulot ma’lumotlari (nomi, narxi, tannarxi, shtrix-kod, rasm, toifa, variantlar, zaxira)",
-        "Buyurtma va to‘lov yozuvlari (chegirmalar, soliq, to‘lov usuli bilan birga)",
+        "Buyurtma va to‘lov harakatlari haqidagi ma’lumotlar (chegirmalar, soliq va to‘lov usulini ham o‘z ichiga oladi)",
         "Mijoz va a’zolik ma’lumotlari (ism, ixtiyoriy telefon va e-pochta, ballar)",
         "Aksiya qoidalari va a’zolik darajalari sozlamalari"
       ]
@@ -491,7 +491,7 @@
     },
     "user_data": {
       "title": "Ma’lumotlaringiz va zaxira nusxalar",
-      "desc": "DingPOS’da yaratgan barcha biznes ma’lumotlaringiz (mahsulotlar, buyurtmalar, mijozlar, a’zolar va sozlamalar) qurilmangizda saqlanadi va faqat o‘zingiz uchun javobgarsiz. Ilovani o‘chirib tashlasangiz yoki uning ma’lumotlarini tozalasangiz, bulutli zaxira nusxani yoqmagan bo‘lsangiz, barcha saqlangan ma’lumotlar butunlay yo‘qoladi. Bulutli zaxira nusxalar siz tanlagan bulut hisobida (iCloud / Google Drive / Dropbox) saqlanadi, ularning mavjudligi va saqlanish muddati esa o‘sha provayderning foydalanish shartlariga bo‘ysunadi. Biz sizning ma’lumotlaringizni hech qanday tarzda tiklab bera olmaymiz. Shuningdek, faoliyat yuritayotgan joyingizda amal qiladigan soliq, hisob-faktura va iste’molchilar huquqlarini himoya qilish qonunlariga rioya qilish uchun ham o‘zingiz javobgarsiz."
+      "desc": "DingPOS’da yaratgan barcha biznes ma’lumotlaringiz (mahsulotlar, buyurtmalar, mijozlar, a’zolar va sozlamalar) qurilmangizda saqlanadi va ular uchun yagona javobgar sizsiz. Ilovani o‘chirib tashlasangiz yoki uning ma’lumotlarini tozalasangiz, bulutli zaxira nusxani yoqmagan bo‘lsangiz, barcha saqlangan ma’lumotlar butunlay yo‘qoladi. Bulutli zaxira nusxalar siz tanlagan bulut hisobida (iCloud / Google Drive / Dropbox) saqlanadi, ularning mavjudligi va saqlanish muddati esa o‘sha provayderning foydalanish shartlariga bo‘ysunadi. Biz sizning ma’lumotlaringizni hech qanday tarzda tiklab bera olmaymiz. Shuningdek, faoliyat yuritayotgan joyingizda amal qiladigan soliq, hisob-faktura va iste’molchilar huquqlarini himoya qilish qonunlariga rioya qilish uchun ham o‘zingiz javobgarsiz."
     },
     "updates": {
       "title": "Ilova yangilanishlari",
