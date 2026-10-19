@@ -1842,7 +1842,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Selepas Tolak, cadangan yang sama tidak akan muncul semula untuk troli ini; troli baharu atau yang dikosongkan akan menawarkannya semula.",
-          "Jika cadangan baharu muncul sebelum checkout disahkan, cadangan itu mesti diterima atau ditolak sebelum pesanan boleh dihantar.",
+          "Jika cadangan baharu muncul sebelum proses bayar disahkan, cadangan itu mesti diterima atau ditolak sebelum pesanan boleh dihantar.",
           "Baris hadiah dan tambahan tidak boleh didiskaun lagi oleh promosi wang yang lain, dan tidak dikira ke arah ambang promosi lain."
         ]
       },
