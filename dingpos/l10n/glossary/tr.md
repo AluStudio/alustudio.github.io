@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Destek | Yardım sayfaları; "Destek Merkezi" gibi uzun biçim kullanma |
+| FAQ / frequently asked questions | Sık Sorulan Sorular | Başlık/menü; kısaltma SSS yalnızca dar yerlerde |
+| Pricing (the page) | Fiyatlandırma |  |
+| Plan (Lite / Standard / Pro; the names stay in English) | Plan | from app glossary; Lite / Standard / Pro çevrilmez |
+| Free trial | Ücretsiz deneme |  |
+| Billed monthly / billed annually | Aylık faturalandırılır / Yıllık faturalandırılır | Fiyat etiketi olarak: Aylık / Yıllık; "ödeme" değil "faturalandırma" |
+| Terms of Use | Kullanım Koşulları | Gizlilik sayfası: Gizlilik Politikası |
+| Coming Soon (planned features) | Yakında | Rozet; kısa tutulur |
+| Setup guide (promotion setup guides) | Kurulum rehberi | Kampanya (Promotion) kurulum rehberleri |
+| Shop owner | İşletme sahibi | Hitap: siz (resmî çoğul); "esnaf" yalnızca genel anlatımda |
+| Stall / pop-up / night market | Tezgâh / pop-up satış / gece pazarı | Pazar tezgâhı için "tezgâh"; "stant" kullanma |
+| Offline-first | İnternetsiz çalışır | Slogan: "İnternet olmadan da çalışır"; "offline-first" aynen yazma |
+| Point of sale (POS) app | POS uygulaması | Arama dilinde en yaygın biçim; "Satış noktası" yalnızca açıklamada |
