@@ -483,7 +483,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Annulleringen reverserer automatisk alt som henger sammen med ordren: lagerbeholdningen gjenopprettes, poeng kunden tjente på ordren trekkes tilbake, og poeng som ble brukt, gis tilbake. Annullerte ordrer blir stående i listen med tydelig merking, og de teller ikke med i salgsinntekten i rapportene."
+        "text": "Annulleringen reverserer automatisk alt som henger sammen med ordren: lagerbeholdningen for varer med lagerstyring gjenopprettes, poeng kunden tjente på ordren trekkes tilbake, og poeng som ble brukt, gis tilbake. Annullerte ordrer blir stående i listen med tydelig merking, og de teller ikke med i salgsinntekten i rapportene."
       },
       {
         "type": "note",
@@ -520,7 +520,7 @@ export const articles = [
           "Den opprinnelige ordren endres aldri. En retur får sitt eget dokument datert i dag, nummerert med prefikset R, og salgsinntekten reduseres på dagen returen skjer.",
           "Tilbakebetalingen er det kunden faktisk betalte for varen – vare- og handlekurvrabatter og poengbruk er allerede fordelt, så det betales ikke tilbake til listepris. Mva. følger satsen den opprinnelige ordren ble belastet med.",
           "Erstatningsvarer belastes til dagens pris, uten kampanjer eller rabatter.",
-          "Lagerbeholdningen gjenopprettes automatisk. Poeng som ble tjent på den opprinnelige ordren, trekkes tilbake, poeng som ble brukt, gis tilbake, og erstatningsvarene gir egne poeng.",
+          "Lagerbeholdningen for varer med lagerstyring gjenopprettes automatisk. Poeng som ble tjent på den opprinnelige ordren, trekkes tilbake, poeng som ble brukt, gis tilbake, og erstatningsvarene gir egne poeng.",
           "En ordre kan returneres i flere runder, men aldri utover antallet som opprinnelig ble solgt. Bruksgrenser for kampanjer gis ikke tilbake ved en retur."
         ]
       },

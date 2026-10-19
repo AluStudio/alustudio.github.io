@@ -28,7 +28,7 @@
     "cashier": {
       "eyebrow": "Kasse",
       "title": "Alle trinn i et salg på én skjerm",
-      "lead": "Opptil 10 handlekurver samtidig, produktene finnes ved søk på navn eller strekkode mens du skriver, og rabatter og mva. regnes ut før du tar betalt.",
+      "lead": "Opptil 10 handlekurver samtidig, produktene finner du ved å søke på navn eller strekkode mens du skriver, og rabatter og mva. regnes ut før du tar betalt.",
       "items": [
         "Opptil 10 handlekurver samtidig",
         "Produktsøk på navn og strekkode mens du skriver",
