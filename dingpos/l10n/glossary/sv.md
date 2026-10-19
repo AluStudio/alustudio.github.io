@@ -8,16 +8,23 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Support | Sidnamn; inte ”kundtjänst” |
+| FAQ / frequently asked questions | Vanliga frågor | Förkorta inte till FAQ i rubriker; ”FAQ” kan användas i sökord |
+| Pricing (the page) | Priser |  |
+| Plan (Lite / Standard / Pro; the names stay in English) | plan | From app glossary; Lite / Standard / Pro oöversatta |
+| Free trial | gratis provperiod | Inte ”testversion” |
+| Billed monthly / billed annually | faktureras månadsvis / faktureras årsvis | Debiteras via Apple; ”månadsvis”/”årsvis” i prisväxlare: Månadsvis / Årsvis |
+| Terms of Use | Användarvillkor |  |
+| Coming Soon (planned features) | Kommer snart |  |
+| Setup guide (promotion setup guides) | Konfigurationsguide | Inte ”installationsguide”; gäller kampanjer |
+| Shop owner | butiksägare | Ägare i appens UI = ägare (from app glossary) |
+| Stall / pop-up / night market | marknadsstånd / pop-up-butik / nattmarknad | Marknadsstånd som samlingsord; nattmarknad som lokalt exempel |
+| Offline-first | fungerar offline | Skriv om till ”fungerar utan internet” vid behov; undvik ”offline-first” |
+| Point of sale (POS) app | kassasystem-app (kassaapp) | Sökterm: kassasystem; skriv ”kassasystem för iPad”; POS får användas som förklaring |
+| Privacy Policy | Integritetspolicy | |
+| Contact us | Kontakta oss | |
+| Features | Funktioner | |
+| Download (the app) | Ladda ner | App Store-knapp: Ladda ner från App Store |
+| Inventory | lager | from app glossary (Stock) |
+| Loyalty program | poängprogram | Från appens Points/Tier |
+| Tax | moms | Svensk marknad; inte ”skatt” |
