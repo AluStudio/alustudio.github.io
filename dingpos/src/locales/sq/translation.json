@@ -8,11 +8,11 @@
     "support": "Pyetje të shpeshta"
   },
   "hero": {
-    "meta_title": "DingPOS — Aplikacion arke që punon pa internet për iPad",
+    "meta_title": "DingPOS — Aplikacion arke (POS) që punon pa internet për iPad",
     "meta_description": "DingPOS — Hap dyqanin për 10 minuta. Aplikacion arke për iPad që punon pa internet. Të dhënat e tua, nën kontrollin tënd.",
-    "eyebrow": "Aplikacion arke për iPad",
+    "eyebrow": "Aplikacion arke (POS) për iPad",
     "title": "Hap dyqanin për 10 minuta. Të dhënat e tua, nën kontrollin tënd.",
-    "description": "DingPOS është një aplikacion arke për iPad. Pa llogari, pa varësi nga cloud-i, dhe vazhdon të punojë pa internet. Produktet, porositë dhe klientët e tu qëndrojnë të gjitha në pajisjen tënde.",
+    "description": "DingPOS është një aplikacion arke (POS) për iPad. Pa llogari, pa varësi nga cloud-i, dhe vazhdon të punojë pa internet. Produktet, porositë dhe klientët e tu qëndrojnë të gjitha në pajisjen tënde.",
     "download": "Shkarko në App Store",
     "note": "Provë falas 30-ditore.",
     "shot_alt": "Ekrani i pagesës në DingPOS: majtas një rrjet produktesh me filtra kategorish, djathtas shporta me promovimet e aplikuara automatikisht dhe totali"
@@ -113,7 +113,7 @@
       "items": [
         "Regjistrimi i anëtarëve: emri, telefoni dhe emaili opsionalë",
         "Fito Y pikë për çdo X të shpenzuar",
-        "Shpërbleji N pikë për M zbritje, me kufi opsional",
+        "Përdor N pikë për M zbritje, me kufi opsional",
         "Anëtarët e rinj marrin automatikisht bonus mirëseardhjeje",
         "Nivele anëtarësh që promovimet mund t'i synojnë",
         "Shfuqizimi i një porosie anulon pikët e fituara dhe të shpërblyera"
@@ -184,7 +184,7 @@
         "tagline": "Për dyqane që kanë nevojë për stok, anëtarë, blerje ose shitje me afat",
         "heading": "Gjithçka në Lite, plus",
         "features": [
-          "Motor promovimesh: pragje shpenzimi, BOGO, orë e llirë (happy hour), të aplikuara në pagesë",
+          "Motor promovimesh: pragje shpenzimi, BOGO, orari i ofertës (Happy Hour), të aplikuara në pagesë",
           "Pikat e klientëve, përdorimi i tyre dhe nivelet e anëtarësisë",
           "Ndjekja e stokut dhe porositë e blerjes",
           "Shitje me afat pagese: jepe mallin sot, arkëto më vonë",
@@ -287,7 +287,7 @@
         },
         "promotions": {
           "name": "Motori i promovimeve",
-          "desc": "Pragje shpenzimi, BOGO, ofertat për artikullin e N-të, orë e lirë (happy hour), të aplikuara në pagesë"
+          "desc": "Pragje shpenzimi, BOGO, oferta për artikullin e N-të, orari i ofertës (Happy Hour), të aplikuara në pagesë"
         },
         "loyalty": {
           "name": "Klientë dhe pikë",
@@ -428,7 +428,7 @@
       "title": "Çfarë nuk mbledhim",
       "desc": "DingPOS nuk mbledh, nuk transmeton dhe nuk ndan asnjë nga përmbajtjet e biznesit tënd. Konkretisht, ne nuk:",
       "items": [
-        "Mbledhim të dhënat e produkteve, porosive, klientëve ose anëtarësimit të tënd",
+        "Mbledhim të dhënat e produkteve, porosive, klientëve ose anëtarësimit tënd",
         "Prekim asnjë proces pagese ose informacion të kartës së kreditit (aplikacioni nuk përpunon pagesa reale me kartë)",
         "Gjurmojmë vendndodhjen tënde",
         "Ndajmë të dhënat e biznesit tënd me asnjë palë të tretë"
@@ -436,7 +436,7 @@
     },
     "camera": {
       "title": "Kamera dhe fotot",
-      "desc": "DingPOS kërkon qasje në kamerë vetëm kur përdor vetë „skano barkodin“ ose „bëj foto produkti“. Njohja e barkodit dhe fotot përpunohen lokalisht në pajisjen tënde dhe nuk ngarkohen kurrë në serverët tanë. Fotot e produkteve shkruhen në llogarinë tënde cloud vetëm si pjesë e një kopjeje rezervë, nëse e aktivizon kopjen rezervë në cloud."
+      "desc": "DingPOS kërkon qasje në kamerë vetëm kur përdor vetë „skano barkodin“ ose „bëj foto produkti“. Njohja e barkodit dhe fotot përpunohen lokalisht në pajisjen tënde dhe nuk ngarkohen kurrë në serverët tanë. Fotot e produkteve ruhen në llogarinë tënde cloud vetëm si pjesë e një kopjeje rezervë, nëse e aktivizon kopjen rezervë në cloud."
     },
     "subscription": {
       "title": "Abonimi dhe blerjet",
@@ -470,7 +470,7 @@
     "title": "Kushtet e përdorimit",
     "meta_description": "Kushtet e përdorimit të DingPOS, aplikacionit POS për iPad nga ALU Studio: licenca, prova falas 30-ditore, abonimet në App Store, të dhënat dhe kopjet rezervë të tua dhe përgjegjësia.",
     "effective_date": "Në fuqi nga: 8 tetor 2026",
-    "intro": "Mirë se vjen në DingPOS. Lexo me kujdes Kushtet e përdorimit më poshtë përpara se të përdorësh aplikacionin. Kur shkarkon, instalon ose përdor DingPOS, pranon të jesh i detyruar nga këto kushte.",
+    "intro": "Mirë se vjen në DingPOS. Lexo me kujdes Kushtet e përdorimit më poshtë përpara se të përdorësh aplikacionin. Kur shkarkon, instalon ose përdor DingPOS, pranon t'u përmbahesh këtyre kushteve.",
     "license": {
       "title": "Licenca",
       "desc": "ALU Studio të jep një licencë të kufizuar, jo ekskluzive dhe të patransferueshme për të përdorur DingPOS në pajisjet e tua për të drejtuar biznesin tënd. Kjo licencë është për veprimtarinë tënde të tregtisë me pakicë."
@@ -490,8 +490,8 @@
       ]
     },
     "user_data": {
-      "title": "Të dhënat dhe kopjet rezervë të tua",
-      "desc": "E gjithë përmbajtja e biznesit që krijon në DingPOS (produktet, porositë, klientët, anëtarët dhe cilësimet) ruhet në pajisjen tënde dhe është përgjegjësia jote e vetme. Nëse fshin aplikacionin ose pastron të dhënat e tij, e gjithë informacioni i ruajtur humbet përgjithmonë, përveç nëse ke aktivizuar kopjen rezervë në cloud. Kopjet rezervë në cloud ndodhen në llogarinë cloud që zgjedh ti (iCloud / Google Drive / Dropbox), ndërsa disponueshmëria dhe ruajtja e tyre rregullohen nga kushtet e shërbimit të atij ofruesi. Ne nuk mund të rikuperojmë asnjë të dhënë për ty. Je gjithashtu përgjegjës të respektosh ligjet e taksave, të faturimit dhe të mbrojtjes së konsumatorit që zbatohen aty ku ushtron veprimtarinë."
+      "title": "Të dhënat e tua dhe kopjet rezervë",
+      "desc": "E gjithë përmbajtja e biznesit që krijon në DingPOS (produktet, porositë, klientët, anëtarët dhe cilësimet) ruhet në pajisjen tënde dhe është përgjegjësia jote e vetme. Nëse fshin aplikacionin ose pastron të dhënat e tij, i gjithë informacioni i ruajtur humbet përgjithmonë, përveç nëse ke aktivizuar kopjen rezervë në cloud. Kopjet rezervë në cloud ndodhen në llogarinë cloud që zgjedh ti (iCloud / Google Drive / Dropbox), ndërsa disponueshmëria dhe ruajtja e tyre rregullohen nga kushtet e shërbimit të atij ofruesi. Ne nuk mund të rikuperojmë asnjë të dhënë për ty. Ke gjithashtu përgjegjësi të respektosh ligjet e taksave, të faturimit dhe të mbrojtjes së konsumatorit që zbatohen aty ku ushtron veprimtarinë."
     },
     "updates": {
       "title": "Përditësimet e aplikacionit",
@@ -499,7 +499,7 @@
     },
     "disclaimer": {
       "title": "Heqja e përgjegjësisë",
-      "desc": "DingPOS ofrohet «siç është», pa asnjë garanci të çfarëdo lloji, të shprehur ose të nënkuptuar. Nuk garantojmë që aplikacioni do të funksionojë pa ndërprerje ose pa asnjë gabim. DingPOS është një mjet që ndihmon punën tënde; saktësia përfundimtare e llogaritjeve të taksave, e sasive të stokut dhe e të gjitha shumave, si dhe përputhshmëria me rregulloret vendore, mbeten përgjegjësi jotja për t'i verifikuar. Në masën maksimale që lejon ligji, nuk mbajmë përgjegjësi për asnjë dëm të drejtpërdrejtë, të tërthortë, rastësor ose pasojë që rrjedh nga përdorimi i aplikacionit prej teje."
+      "desc": "DingPOS ofrohet «siç është», pa asnjë garanci të çfarëdo lloji, të shprehur ose të nënkuptuar. Nuk garantojmë që aplikacioni do të funksionojë pa ndërprerje ose pa asnjë gabim. DingPOS është një mjet që ndihmon punën tënde; saktësia përfundimtare e llogaritjeve të taksave, e sasive të stokut dhe e të gjitha shumave, si dhe përputhshmëria me rregulloret vendore, mbeten përgjegjësi jote për t'i verifikuar. Në masën maksimale që lejon ligji, nuk mbajmë përgjegjësi për asnjë dëm të drejtpërdrejtë, të tërthortë, rastësor ose pasues që rrjedh nga përdorimi i aplikacionit prej teje."
     },
     "liability": {
       "title": "Kufizimi i përgjegjësisë",
@@ -516,7 +516,7 @@
   },
   "support": {
     "doc_title": "Mbështetje",
-    "meta_description": "Mbështetja e DingPOS: përgjigje dhe udhëzues hap pas hapi për aplikacionin e arkës në iPad — konfigurimi, pagesa, porositë, inventari, promovimet, kopja rezervë, stafi dhe faturimi.",
+    "meta_description": "Mbështetja e DingPOS: përgjigje dhe udhëzues hap pas hapi për aplikacionin e arkës (POS) në iPad — konfigurimi, pagesa, porositë, inventari, promovimet, kopja rezervë, stafi dhe faturimi.",
     "title": "Si mund të të ndihmojmë?",
     "subtitle": "Kërko te pyetjet e shpeshta, ose shfleto sipas temës",
     "search_placeholder": "Kërko, p.sh. “barkod” ose “rivendosje e kopjes rezervë”",

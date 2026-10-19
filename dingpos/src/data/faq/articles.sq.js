@@ -180,7 +180,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Aktualisht DingPOS mbështet iPad me iPadOS 17 ose më të ri, i projektuar kryesisht për orientim horizontal."
+        "text": "Aktualisht DingPOS mbështet iPad me iPadOS 17 ose më të ri dhe është projektuar kryesisht për orientim horizontal."
       },
       {
         "type": "p",
@@ -307,7 +307,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Çdo artikull dhe çdo shportë mund të ketë vetëm një zbritje në të njëjtën kohë — nëse e vendos përsëri, zëvendëson të mëparshmen, dhe preku shenjën e zbritjes për ta hequr. Zbritjet zbatohen para tatimit, që është rendi standard në tregti."
+        "text": "Çdo artikull dhe çdo shportë mund të ketë vetëm një zbritje në të njëjtën kohë — nëse e vendos përsëri, zëvendëson të mëparshmen, dhe prek shenjën e zbritjes për ta hequr. Zbritjet zbatohen para tatimit, që është rendi standard në tregti."
       }
     ],
     "related": [
@@ -341,7 +341,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Rendi i plotë i llogaritjes: zbritjet për artikull → zbritja për shportën → tatimi. Shumat rrumbullakosen lart nga gjysma (half-up) sipas shifrave dhjetore të monedhës (p.sh. 0 për TWD, 2 për USD)."
+        "text": "Rendi i plotë i llogaritjes: zbritjet për artikull → zbritja për shportën → tatimi. Shumat rrumbullakosen sipas rregullit që gjysmat rrumbullakosen lart, në bazë të shifrave dhjetore të monedhës (p.sh. 0 për TWD, 2 për USD)."
       }
     ],
     "related": [
@@ -365,11 +365,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Para në dorë, Kartë krediti dhe Line Pay janë të gatshme, dhe mund të shtosh çdo emërtim pagese të personalizuar te Cilësimet (p.sh. Apple Pay, portofolë vendorë)."
+        "text": "Para në dorë, Kartë krediti dhe Line Pay janë të gatshme, dhe mund të shtosh çdo etiketë pagese të personalizuar te Cilësimet (p.sh. Apple Pay, portofolë vendorë)."
       },
       {
         "type": "p",
-        "text": "Mënyrat e pagesës janë emërtime për ndjekjen e llogarive — DingPOS nuk përpunon pagesa të vërteta. Merr pagesat me kartë ose me celular me terminalin ose aplikacionin që ke tashmë, pastaj zgjidh emërtimin përkatës në DingPOS për ta regjistruar. Pagesat me para në dorë e llogaritin kusurin automatikisht."
+        "text": "Mënyrat e pagesës janë etiketa kontabël — DingPOS nuk përpunon pagesa të vërteta. Merr pagesat me kartë ose me celular me terminalin ose aplikacionin që ke tashmë, pastaj zgjidh etiketën përkatëse në DingPOS për ta regjistruar. Pagesat me para në dorë e llogaritin kusurin automatikisht."
       },
       {
         "type": "p",
@@ -512,14 +512,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Shko te Porosi, hap porosinë origjinale dhe trokit Kthim malli. Zgjidh sa copë kthehen nga çdo artikull. Për një këmbim, trokit Shto artikull zëvendësues në të njëjtën ekran; shuma neto shlyhet me një herë — pozitive do të thotë që klienti paguan, negative do të thotë që ti rimburson, dhe zero do të thotë që nuk ndërrojnë duar para."
+        "text": "Shko te Porosi, hap porosinë origjinale dhe trokit Kthim malli. Zgjidh sa copë kthehen nga çdo artikull. Për një këmbim, trokit Shto artikull zëvendësues në të njëjtin ekran; shuma neto shlyhet menjëherë — nëse është pozitive, klienti paguan; nëse është negative, ti rimburson; nëse është zero, nuk kalojnë para nga njëra palë te tjetra."
       },
       {
         "type": "list",
         "items": [
-          "Porosia origjinale nuk ndryshohet kurrë. Një kthim krijon dokumentin e vet me datën e sotme, me numër që fillon me prefiksin R, dhe të ardhurat zvogëlohen në ditën e kthimit.",
+          "Porosia origjinale nuk ndryshohet kurrë. Një kthim krijon dokumentin e vet, me datën e sotme dhe me numër që fillon me R; të ardhurat zvogëlohen në ditën e kthimit.",
           "Rimbursimi është ajo që klienti ka paguar realisht për atë artikull — zbritjet e artikullit, zbritjet e shportës dhe përdorimi i pikëve janë ndarë tashmë, ndaj nuk rimbursohet me çmimin e listës. Tatimi përdor normën me të cilën u ngarkua porosia origjinale.",
-          "Artikujt zëvendësues ngarkohen me çmimin e sotëm, pa promovime ose zbritje.",
+          "Artikujt zëvendësues shiten me çmimin e sotëm, pa promovime ose zbritje.",
           "Stoku i gjurmuar rikthehet automatikisht. Pikët e fituara nga porosia origjinale merren mbrapsht, pikët e përdorura rimbursohen, dhe artikujt zëvendësues fitojnë pikët e tyre.",
           "Një porosi mund të kthehet në disa raunde, por kurrë mbi sasinë e shitur fillimisht. Kufijtë e përdorimit të promovimeve nuk rikthehen nga një kthim."
         ]
@@ -550,7 +550,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Te pagesa, kalo majën e ekranit nga Shitje te Porosi paraprake, zgjidh datën e marrjes, shkruaj kaparin (çdo shumë nga 0 deri te totali, me shkurtore 30% / 50% / e plotë) dhe zgjidh si paguhet kapari. Lidh një klient që ta kontaktosh kur mbërrin malli."
+        "text": "Te pagesa, kaloje skedën në krye të ekranit nga Shitje te Porosi paraprake, zgjidh datën e marrjes, shkruaj kaparin (çdo shumë nga 0 deri në total, me shkurtoret 30% / 50% / e plotë) dhe zgjidh mënyrën e pagesës së kaparit. Lidh një klient që ta kontaktosh kur të mbërrijë malli."
       },
       {
         "type": "list",
@@ -596,13 +596,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Për të arkëtuar, kalo majën e Porosi te Të arkëtueshme. Borxhet grupohen sipas klientit; hap njërin për të shlyer një porosi të vetme, një muaj të tërë ose gjithçka — çdo herë DingPOS pyet si u pagua shuma. Një porosi e vetme mund të shlyhet edhe nga detajet e saj, dhe një shlyerje e futur gabimisht mund të merret mbrapsht me Anulo shlyerjen."
+        "text": "Për të arkëtuar, kaloje skedën në krye të ekranit nga Porosi te Të arkëtueshme. Borxhet grupohen sipas klientit; hap njërin për të shlyer një porosi të vetme, një muaj të tërë ose gjithçka — çdo herë DingPOS të pyet si u paguan paratë. Një porosi e vetme mund të shlyhet edhe nga detajet e saj, dhe një shlyerje e futur gabimisht mund të anulohet me Anulo shlyerjen."
       },
       {
         "type": "list",
         "items": [
-          "Të ardhurat numërohen në ditën kur del malli; Paratë e arkëtuara dhe pikët e besnikërisë presin deri në ditën e shlyerjes.",
-          "Porositë e pashlyera kanë një shenjë qelibari në listë, dhe detajet e klientit tregojnë sa detyron aktualisht.",
+          "Të ardhurat numërohen në ditën kur del malli; Para të arkëtuara dhe pikët e besnikërisë llogariten në ditën e shlyerjes.",
+          "Porositë e pashlyera kanë një shenjë me ngjyrë qelibari në listë, dhe detajet e klientit tregojnë sa i ka mbetur për të paguar.",
           "Një klient me porosi të pashlyera nuk mund të fshihet."
         ]
       },
@@ -632,7 +632,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Po. Faqet e detajeve të porosisë, të klientit dhe të porosisë së blerjes kanë secila një kartë shënimesh — trokite për ta ndryshuar, deri në 500 shkronja. Mund ta shkruash edhe në formular kur krijon një klient ose një porosi blerjeje."
+        "text": "Po. Faqet e detajeve të porosisë, të klientit dhe të porosisë së blerjes kanë secila një kartë shënimesh — trokite për ta ndryshuar; shënimi mund të ketë deri në 500 karaktere. Mund ta shkruash edhe në formular kur krijon një klient ose një porosi blerjeje."
       },
       {
         "type": "p",
@@ -717,7 +717,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Te Produkte, trokit Ndrysho renditjen dhe tërhiq kartat e produkteve ku i do. Arkëtari dhe menaxhimi i produkteve ndajnë të njëjtën renditje, kështu që e rregullon një herë dhe përditësohen të dyja."
+        "text": "Te Produkte, trokit Ndrysho renditjen dhe tërhiq kartat e produkteve ku i do. Arka dhe menaxhimi i produkteve përdorin të njëjtën renditje, kështu që mjafton ta rregullosh një herë për t’i përditësuar të dyja."
       },
       {
         "type": "list",
@@ -806,7 +806,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Blerjet në menynë anësore menaxhojnë furnitorët dhe porositë e blerjes. Një furnitor ruan emrin, personin e kontaktit, telefonin, adresën dhe kushtin e parazgjedhur të pagesës (pagesë në marrje ose kredi mujore)."
+        "text": "Blerjet në menynë anësore menaxhojnë furnitorët dhe porositë e blerjes. Një furnitor ruan emrin, personin e kontaktit, telefonin, adresën dhe kushtin e parazgjedhur të pagesës (paguaj tani ose paguaj çdo muaj)."
       },
       {
         "type": "steps",
@@ -818,7 +818,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kushti i pagesës vendos çfarë ndodh më pas: porositë me pagesë në marrje shënohen si të paguara, ndërsa ato mujore mbeten të papaguara te Të papaguara, ku mund t’i shlyesh për çdo furnitor — një porosi, këtë muaj, ose të gjitha."
+        "text": "Kushti i pagesës vendos çfarë ndodh më pas: porositë me “paguaj tani” shënohen si të paguara, ndërsa ato mujore mbeten të papaguara te Të papaguara, ku mund t’i shlyesh për çdo furnitor — një porosi, këtë muaj, ose të gjitha."
       },
       {
         "type": "note",
@@ -885,7 +885,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Zgjidh Sot, Dje, Këtë javë, Këtë muaj, Këtë vit ose Gjithë kohës në krye të Statistika, ose përdor Personalizuar për të zgjedhur datën e fillimit dhe të mbarimit. Këtë javë ndjek ditën e parë të javës të pajisjes; Këtë muaj dhe Këtë vit fillojnë më 1 të muajit dhe më 1 janar. Çdo opsion shfaq datat që mbulon, ndërsa Gjithë kohës nis nga transaksioni i parë i dyqanit tënd."
+        "text": "Zgjidh Sot, Dje, Këtë javë, Këtë muaj, Këtë vit ose Gjithë kohës në krye të ekranit Statistika, ose përdor Personalizuar për të zgjedhur datën e fillimit dhe të mbarimit. Këtë javë ndjek ditën e parë të javës të pajisjes; Këtë muaj dhe Këtë vit fillojnë më 1 të muajit dhe më 1 janar. Çdo opsion shfaq datat që mbulon, ndërsa Gjithë kohës nis nga transaksioni i parë i dyqanit tënd."
       },
       {
         "type": "p",
@@ -923,14 +923,14 @@ export const articles = [
       "hartë nxehtësie",
       "orët e ngarkuara",
       "produkte me shitje të ngadalta",
-      "vlera e stokut",
+      "vlerësimi i inventarit",
       "shkalla e blerjeve të përsëritura",
       "pikë"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Raportet e avancuara nuk janë ekran më vete — ndodhen drejt në Statistika dhe ndjekin periudhën që zgjedh në krye:"
+        "text": "Raportet e avancuara nuk janë ekran më vete — shfaqen drejtpërdrejt në ekranin Statistika dhe ndjekin periudhën që zgjedh në krye:"
       },
       {
         "type": "list",
@@ -939,16 +939,16 @@ export const articles = [
           "Dita × ora: kalo titullin Shitjet në kohë te Dita × ora për një hartë nxehtësie me shtatë ditë dhe 24 orë — sa më e errët një qelizë, aq më shumë ke shitur. Kalo mes të ardhurave nga shitjet dhe porosive; me krahasimin e ndezur, shih cilat orë u rritën dhe cilat u ulën.",
           "Produkte me shitje të ngadalta: kalo titullin e kartës së renditjes te Produkte me shitje të ngadalta për të listuar produktet nga ato me më pak shitje te ato me më shumë, me stokun aktual dhe datën e fundit kur u shit secili. Produktet që nuk janë shitur kurrë shënohen “Nuk është shitur kurrë”. Si parazgjedhje shfaqen vetëm produktet me stok.",
           "Shkalla e blerjeve të përsëritura: rreshti i fundit i pllakës së klientëve është pjesa e anëtarëve që bënë blerje në periudhë dhe kanë blerë dy ose më shumë herë gjithsej.",
-          "Tani: vlera e stokut (stoku aktual × kostoja aktuale), çdo lëvizje stoku në periudhën e zgjedhur, dhe pikat që klientët i kanë por nuk i kanë përdorur ende, me shumën maksimale që mund të zbritin. Këto janë gjendje aktuale; periudha nuk i ndryshon."
+          "Tani: vlerësimi i inventarit (stoku aktual × kostoja aktuale), çdo lëvizje stoku në periudhën e zgjedhur, dhe pikat që klientët i kanë por nuk i kanë përdorur ende, me shumën maksimale që mund të zbritin. Këto janë gjendje aktuale; periudha nuk i ndryshon."
         ]
       },
       {
         "type": "p",
-        "text": "Pa Pro, secili nga këto pesë vende ka një çelës të vogël që hap një shpjegim për përmirësimin e planit; gjithçka tjetër në Statistika punon si më parë. Raportet lexojnë të dhëna që dyqani yt i mban tashmë, ndaj kur Pro mbaron fshihen vetëm raportet — nuk humb asnjë e dhënë."
+        "text": "Pa Pro, secila nga këto pesë pika ka një dryn të vogël që hap një shpjegim për përmirësimin e planit; gjithçka tjetër në Statistika punon si më parë. Raportet lexojnë të dhëna që dyqani yt i mban tashmë, ndaj kur Pro mbaron fshihen vetëm raportet — nuk humb asnjë e dhënë."
       },
       {
         "type": "note",
-        "text": "Stafi i sheh raportet e avancuara me lejen Paneli; shumat e vlerës së stokut kërkojnë edhe lejen Kostoja dhe fitimi."
+        "text": "Stafi i sheh raportet e avancuara me lejen Paneli; shumat e vlerësimit të inventarit kërkojnë edhe lejen Kostoja dhe fitimi."
       }
     ],
     "related": [
@@ -1043,7 +1043,7 @@ export const articles = [
         "type": "steps",
         "items": [
           "Orari: a është sot brenda datave aktive? A e kufizon ditën ose orën një dritare Happy Hour?",
-          "Fusha: a bëjnë pjesë artikujt e shportës te produktet ose kategoritë e promovimit? A është arritur pragu i shpenzimit?",
+          "Zbatimi: a përfshihen artikujt e shportës në produktet ose kategoritë për të cilat vlen promovimi? A është arritur pragu i shpenzimit?",
           "Audienca: a është promovimi i kufizuar te një nivel anëtarësie ose muaji i ditëlindjes? A u zgjodh ai anëtar në pagesë?",
           "Kufijtë e përdorimit: a është arritur kufiri total i përdorimit ose kufiri për këtë klient?",
           "Kombinimi: a po e bllokon një promovim me prioritet më të lartë që ka “Ndalo promovimet pasuese kur ky zbatohet”?"
@@ -1102,7 +1102,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nivelet e anëtarësisë (p.sh. Të rregullt, Argjend, Ar) shërbejnë për dy gjëra: mund të shënjestrohen nga promovimet (p.sh. 10% zbritje vetëm për nivelin Ar) dhe të lejojnë ta dallosh menjëherë statusin e klientit gjatë pagesës."
+        "text": "Nivelet e anëtarësisë (p.sh. I rregullt, Argjend, Ar) shërbejnë për dy gjëra: promovimet mund të synojnë anëtarë të niveleve të caktuara (p.sh. 10% zbritje vetëm për nivelin Ar), dhe ti mund ta dallosh menjëherë statusin e klientit gjatë pagesës."
       },
       {
         "type": "p",
@@ -1234,7 +1234,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Jo. DingPOS i ruan të gjitha lokalisht në pajisjen tënde — fshirja e aplikacionit fshin përgjithmonë të gjitha produktet, porositë, anëtarët dhe cilësimet, përveç nëse ke aktivizuar kopjen rezervë në cloud."
+        "text": "Jo. DingPOS i ruan të gjitha lokalisht në pajisjen tënde — fshirja e aplikacionit fshin përgjithmonë të gjitha produktet, porositë, klientët dhe cilësimet, përveç nëse ke aktivizuar kopjen rezervë në cloud."
       },
       {
         "type": "note",
@@ -1414,23 +1414,23 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Prekni Stafi në shiritin anësor. Herën e parë konfiguroni pronarin: një emër dhe një PIN me 4 shifra. Shtimi i punonjësve dhe ndryshimi i lejeve kërkojnë këtë PIN, ndaj mbajeni mend — nuk rivendoset dot."
+        "text": "Prek Stafi në shiritin anësor. Herën e parë, konfiguro pronarin: një emër dhe një PIN me 4 shifra. Shtimi i punonjësve dhe ndryshimi i lejeve kërkojnë këtë PIN, ndaj mbaje mend — nuk rivendoset dot."
       },
       {
         "type": "steps",
         "items": [
-          "Në faqen Stafi, prekni Shto punonjës, shkruani një emër, zgjidhni një rol (Menaxher ose Staf) dhe vendosni një PIN me 4 shifra.",
-          "Operatori aktual shfaqet poshtë në shiritin anësor dhe lart djathtas në pagesë. Kur ndërrohet turni, prekeni, zgjidhni emrin tuaj dhe shkruani PIN-in.",
+          "Në faqen Stafi, prek Shto punonjës, shkruaj një emër, zgjidh një rol (Menaxher ose Punonjës) dhe vendos një PIN me 4 shifra.",
+          "Operatori aktual shfaqet poshtë në shiritin anësor dhe lart djathtas në Pagesa. Kur ndërrohet turni, preke, zgjidh emrin tënd dhe shkruaj PIN-in.",
           "Që nga ai çast, çdo porosi, pagesë dhe lëvizje stoku ose pikësh regjistron se kush e ka kryer, e dukshme te lista dhe detajet e porosisë; porositë e shfuqizuara regjistrojnë edhe kush i ka shfuqizuar."
         ]
       },
       {
         "type": "p",
-        "text": "Kur dikush largohet, përdorni Çaktivizo këtë punonjës: historiku i tij mbetet i paprekur dhe mund ta riaktivizoni më vonë. Ndryshimi i emrit nuk prek porositë e vjetra — ato mbajnë emrin e asaj kohe."
+        "text": "Kur dikush largohet, përdor Çaktivizo këtë punonjës: historiku i tij mbetet i paprekur dhe mund ta riaktivizosh më vonë. Ndryshimi i emrit nuk prek porositë e vjetra — ato mbajnë emrin që kishte punonjësi në atë kohë."
       },
       {
         "type": "note",
-        "text": "Stafi është veçori e Pro (e disponueshme edhe gjatë provës). Nëse Pro mbaron, të dhënat e stafit dhe punonjësi i çdo porosie ruhen, ndërsa porositë e reja regjistrohen te pronari; kur abonoheni sërish në Pro, gjithçka kthehet."
+        "text": "Stafi është veçori e Pro (e disponueshme edhe gjatë provës). Nëse Pro mbaron, të dhënat e stafit dhe operatori i regjistruar për çdo porosi ruhen, ndërsa porositë e reja regjistrohen nën pronarin; kur abonohesh sërish në Pro, gjithçka rikthehet."
       }
     ],
     "related": [
@@ -1456,15 +1456,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "PIN-i i pronarit nuk rivendoset dot dhe as ekipi ynë i mbështetjes nuk mund ta zhbllokojë. PIN-i ruhet bashkë me të dhënat e dyqanit, ndaj nëse fshini aplikacionin, e instaloni sërish dhe rivendosni nga cloud-i, kthehet i njëjti PIN."
+        "text": "PIN-i i pronarit nuk rivendoset dot dhe as ekipi ynë i mbështetjes nuk mund ta zhbllokojë. PIN-i ruhet bashkë me të dhënat e dyqanit, ndaj nëse e fshin aplikacionin, e instalon sërish dhe e rivendos nga cloud-i, kthehet i njëjti PIN."
       },
       {
         "type": "p",
-        "text": "Krijimi i pronarit dhe çdo ndryshim i PIN-it të pronarit shfaqin paralajmërimin “Mbaje mend këtë PIN. Nëse e harron, nuk rivendoset dot.” Ruajeni diku ku e arrini vetëm ju."
+        "text": "Gjatë krijimit të pronarit dhe çdo ndryshimi të PIN-it të pronarit shfaqet paralajmërimi “Mbaje mend këtë PIN. Nëse e harron, nuk rivendoset dot.” Ruaje diku ku vetëm ti mund ta gjesh."
       },
       {
         "type": "p",
-        "text": "Pa PIN-in e pronarit, çdo gjë që e kërkon mbetet e paarritshme — shtimi ose ndryshimi i punonjësve, ndryshimi i lejeve të roleve dhe shikimi i regjistrit të aktivitetit. Punonjësit mund të vazhdojnë të bëjnë pagesa dhe punën e përditshme me PIN-et e tyre."
+        "text": "Pa PIN-in e pronarit, çdo gjë që e kërkon mbetet e paarritshme — shtimi ose ndryshimi i punonjësve, ndryshimi i lejeve të roleve dhe shikimi i regjistrit të aktivitetit. Punonjësit mund të vazhdojnë të kryejnë pagesa dhe punët e përditshme me PIN-et e tyre."
       },
       {
         "type": "note",
@@ -1498,18 +1498,18 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Veprimet (rregullim manual i stokut, menaxhimi i produkteve, pagesa mbi kufirin e zbritjes): një miratim mbulon vetëm atë veprim.",
+          "Veprimet (rregullimi manual i stokut, menaxhimi i produkteve, kryerja e pagesës me zbritje mbi kufirin e lejuar): një miratim mbulon vetëm atë veprim.",
           "Pamjet (kosto dhe fitim, Statistika, Cilësimet, kopje rezervë dhe rivendosje): miratimi zhbllokon derisa të ndërrojë operatori ose aplikacioni të kalojë në sfond.",
           "Kufiri i zbritjes vlen për zbritjet manuale dhe kontrollohet një herë gjatë pagesës; promovimet automatike dhe shpërblimi i pikëve nuk llogariten në të."
         ]
       },
       {
         "type": "p",
-        "text": "Parazgjedhjet e fabrikës: Menaxherët kanë të lejuar gjithçka përveç kopjes rezervë dhe rivendosjes, pa kufi zbritjeje; Stafi kërkon miratim për gjithçka, me kufi 10%. Pronari është gjithmonë i lejuar dhe nuk ndryshohet. Për ta ndryshuar, shkoni te Stafi → Lejet e roleve, prekni Ndrysho dhe ruani një herë — vlen menjëherë për të gjithë."
+        "text": "Parazgjedhjet: Menaxherët lejohen të bëjnë gjithçka përveç kopjes rezervë dhe rivendosjes, pa kufi zbritjeje; Punonjësit kanë nevojë për miratim për gjithçka, me kufi 10%. Pronari lejohet gjithmonë dhe lejet e tij nuk mund të ndryshohen. Për t'i ndryshuar, shko te Stafi → Lejet e roleve, prek Ndrysho dhe ruaj një herë — ndryshimet zbatohen menjëherë për të gjithë."
       },
       {
         "type": "note",
-        "text": "Shfuqizimet, kthimet, shitjet me afat pagese dhe blerjet nuk kanë leje me qëllim; ato regjistrojnë vetëm kush i ka kryer. Për t'i shqyrtuar më vonë, përdorni regjistrin e aktivitetit."
+        "text": "Shfuqizimet, kthimet, shitjet me afat pagese dhe blerjet nuk kanë leje me qëllim; ato regjistrojnë vetëm kush i ka kryer. Për t'i shqyrtuar më vonë, përdor regjistrin e aktivitetit."
       }
     ],
     "related": [
@@ -1537,21 +1537,21 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Përdorni regjistrin e aktivitetit. Në faqen Stafi, prekni Regjistri i aktivitetit lart djathtas dhe shkruani PIN-in e pronarit për të parë veprimet e ndjeshme të dyqanit, nga më e reja: shfuqizime, kthime, rregullime manuale të stokut, miratime, ndryshime të stafit dhe lejeve, ndryshime të PIN-it të pronarit, ndryshime çmimi dhe kostoje të produkteve dhe fshirje produktesh. Pagesat e zakonshme nuk renditen."
+        "text": "Përdor regjistrin e aktivitetit. Në faqen Stafi, prek Regjistri i aktivitetit lart djathtas dhe shkruaj PIN-in e pronarit për të parë veprimet e ndjeshme të dyqanit, nga më e reja: shfuqizime, kthime, rregullime manuale të stokut, miratime, ndryshime të stafit dhe lejeve, ndryshime të PIN-it të pronarit, ndryshime çmimi dhe kostoje të produkteve dhe fshirje produktesh. Pagesat e zakonshme nuk renditen."
       },
       {
         "type": "list",
         "items": [
           "Çdo regjistrim tregon çfarë ka prekur, kush ka bërë çfarë dhe kur, si dhe rezultatin — për shembull “M price $390 → $350”.",
-          "Filtroni sipas punonjësit (përfshirë të çaktivizuarit), llojit të veprimit dhe Sot / Këtë javë / Këtë muaj.",
-          "Prekni një regjistrim që drejton te një porosi, produkt ose klient për të hapur detajet e tij.",
+          "Filtro sipas punonjësit (përfshirë ata të çaktivizuar), llojit të veprimit dhe Sot / Këtë javë / Këtë muaj.",
+          "Prek një regjistrim që të çon te një porosi, produkt ose klient për të hapur detajet përkatëse.",
           "Detajet e porosisë, detajet e produktit dhe faqja e secilit punonjës kanë hyrjen e vet që liston vetëm regjistrimet që i përkasin.",
           "Produkte të fshira shfaqen në regjistër me emrin dhe çmimin e asaj kohe."
         ]
       },
       {
         "type": "note",
-        "text": "Çdo plan regjistron; vetëm shikimi është veçori e Pro, ndaj regjistrimet e kohës kur Pro kishte skaduar shfaqen sapo të abonoheni sërish. Regjistri udhëton me kopjet rezervë në cloud."
+        "text": "Çdo plan regjistron; vetëm shikimi është veçori e Pro, ndaj regjistrimet nga periudha kur Pro nuk ishte aktive shfaqen sapo të abonohesh sërish. Regjistri përfshihet në kopjet rezervë në cloud."
       }
     ],
     "related": [
@@ -1604,11 +1604,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Jo — të dhënat e tua mbeten përgjithmonë në pajisjen tënde. Kur mbaron prova, pagesa (arka) bllokohet, por mund të shfletosh porositë, të shohësh raportet dhe të menaxhosh produktet."
+        "text": "Jo — të dhënat e tua mbeten përgjithmonë në pajisjen tënde. Kur mbaron prova, arka bllokohet, por mund të shfletosh porositë, të shohësh raportet dhe të menaxhosh produktet."
       },
       {
         "type": "p",
-        "text": "Abonohu në çdo kohë dhe pagesa zhbllokohet menjëherë, me të gjitha të dhënat saktësisht siç i le."
+        "text": "Abonohu në çdo kohë dhe arka zhbllokohet menjëherë, me të gjitha të dhënat saktësisht siç i le."
       }
     ],
     "related": [
@@ -1647,7 +1647,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Je tashmë në Standard? Kalo në Pro nga faqja e abonimit: faturimi mbetet në të njëjtin cikël, përmirësimi hyn në fuqi menjëherë dhe Apple llogarit proporcionalisht diferencën. Kalimi nga Pro përsëri në Standard hyn në fuqi në rinovim. Çmimet shfaqen në aplikacion dhe planet mund t'i krahasosh në faqen tonë Çmimet."
+        "text": "Je tashmë në Standard? Kalo në Pro nga faqja e abonimit: faturimi mbetet në të njëjtin cikël, përmirësimi hyn në fuqi menjëherë dhe Apple llogarit proporcionalisht diferencën. Kalimi nga Pro përsëri në Standard hyn në fuqi në rinovim. Çmimet shfaqen në aplikacion dhe planet mund t'i krahasosh në faqen tonë të Çmimeve."
       },
       {
         "type": "note",
@@ -1950,7 +1950,7 @@ export const articles = [
   {
     "slug": "roadmap-payment-integration",
     "category": "roadmap",
-    "question": "A do të integrohet përpunimi i pagesave me kartë në DingPOS?",
+    "question": "A do të integrohet përpunimi i pagesave në DingPOS?",
     "keywords": [
       "pagesa",
       "pagesa me kartë",
@@ -1961,11 +1961,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS aktualisht nuk përfshihet në lëvizjen e parave — mënyrat e pagesës janë etiketa kontabiliteti, ndërsa pagesat bëhen përmes terminalit ose aplikacionit tuaj ekzistues të pagesave."
+        "text": "DingPOS aktualisht nuk përfshihet në lëvizjen e parave — mënyrat e pagesës janë etiketa kontabiliteti, ndërsa pagesat bëhen përmes terminalit ose aplikacionit tënd ekzistues të pagesave."
       },
       {
         "type": "p",
-        "text": "Nëse do ta integrojmë përpunimin e pagesave varet nga kërkesa reale e përdoruesve. Nëse e keni të nevojshme, na shkruani se cilin shërbim do të donit të lidhej (cili përpunues, cili terminal) dhe për çfarë e përdorni — zhvillimin e përcaktojmë sipas numrit të kërkesave."
+        "text": "Nëse do ta integrojmë përpunimin e pagesave varet nga kërkesa reale e përdoruesve. Nëse të duhet, na shkruaj se cilin shërbim do të doje të lidhnim (cilin ofrues pagesash, cilin terminal) dhe për çfarë do ta përdorje — zhvillimin e prioritizojmë sipas numrit të kërkesave."
       }
     ],
     "related": [
@@ -1987,11 +1987,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ende jo. Fatura elektronike dhe printimi i faturave kërkojnë blerjen e pajisjeve fiskale dhe të printerëve të faturave për t'i testuar dhe zhvilluar — një kosto e konsiderueshme. Si ekip i vogël, do ta planifikojmë kur të rritet numri i përdoruesve dhe të ardhurat të jenë të qëndrueshme."
+        "text": "Ende jo. Faturimi elektronik dhe printimi i faturave kërkojnë blerjen e makinerive të faturimit dhe printerëve të faturave për t’i testuar dhe për të zhvilluar funksionet — një kosto e konsiderueshme. Si ekip i vogël, do t’i planifikojmë kur të rritet numri i përdoruesve dhe të ardhurat nga shitjet të jenë të qëndrueshme."
       },
       {
         "type": "p",
-        "text": "Nëse e keni të nevojshme, na shkruani modelin e pajisjes që përdorni — zhvillimin e përcaktojmë sipas numrit të kërkesave."
+        "text": "Nëse të duhet, na shkruaj modelin e pajisjes që përdor — zhvillimin e prioritizojmë sipas numrit të kërkesave."
       }
     ],
     "related": [
@@ -2013,15 +2013,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Skanimi i barkodit me kamerë për shtimin e produkteve mbështetet tashmë. Skanerët fizikë (USB / Bluetooth) ende nuk mbështeten zyrtarisht — si veçoritë e tjera me pajisje, kërkojnë blerjen e pajisjeve për testim e zhvillim dhe do të planifikohen sa të rritet numri i përdoruesve."
+        "text": "Skanimi i barkodit me kamerë për shtimin e produkteve mbështetet tashmë. Skanerët fizikë (USB / Bluetooth) ende nuk mbështeten zyrtarisht — si veçoritë e tjera që kërkojnë pajisje, duhen blerë pajisje për testim e zhvillim dhe planifikimi do të bëhet kur të rritet numri i përdoruesve."
       },
       {
         "type": "note",
-        "text": "Fusha e kërkimit në arkë i përputh barkodet, kështu që teorikisht një skaner në modalitetin e tastierës mund të shkruajë në të dhe të nxjerrë produktet — por nuk e kemi verifikuar në pajisje reale, prandaj nuk mbështetet zyrtarisht. Nëse keni provuar një skaner që funksionon, na tregoni modelin!"
+        "text": "Fusha e kërkimit te Arka përputh barkodet, kështu që teorikisht një skaner në modalitetin e tastierës mund të shkruajë në të dhe të shfaqë produktet — por nuk e kemi verifikuar në pajisje reale, prandaj nuk mbështetet zyrtarisht. Nëse ke provuar një skaner që funksionon, na trego modelin!"
       },
       {
         "type": "p",
-        "text": "Nëse e keni të nevojshme, na shkruani — zhvillimin e përcaktojmë sipas numrit të kërkesave."
+        "text": "Nëse të duhet, na shkruaj — zhvillimin e prioritizojmë sipas numrit të kërkesave."
       }
     ],
     "related": [
@@ -2044,19 +2044,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ende nuk ka një raport të veçantë të shlyerjes mujore, por gjithçka që ju duhet për rakordim është tashmë në aplikacion:"
+        "text": "Ende nuk ka një raport të veçantë të shlyerjes mujore, por gjithçka që të duhet për rakordim është tashmë në aplikacion:"
       },
       {
         "type": "list",
         "items": [
-          "Vendosni Statistika te Këtë muaj për të parë të ardhurat e muajit, paratë e arkëtuara, fitimin dhe ndarjen sipas mënyrës së pagesës.",
-          "Blerjet nga furnitorët me afat mujor mblidhen te Të papaguara në Blerje, ku mund të shlyhet një muaj i tërë menjëherë.",
-          "Shitjet me afat pagese për klientët mblidhen te Porosi → Të arkëtueshme, ku mund të shlyhet një muaj i tërë menjëherë."
+          "Zgjidh Statistika te Këtë muaj për të parë të ardhurat nga shitjet e muajit, paratë e arkëtuara, fitimin dhe ndarjen sipas mënyrës së pagesës.",
+          "Blerjet nga furnitorët me afat mujor mblidhen te Të papaguara në Blerje, ku mund të shlyesh menjëherë blerjet e një muaji të tërë.",
+          "Shitjet me afat pagese për klientët mblidhen te Porosi → Të arkëtueshme, ku mund të shlyesh menjëherë shitjet e një muaji të tërë."
         ]
       },
       {
         "type": "p",
-        "text": "Nëse ju duhet një raport i shlyerjes mujore që mund ta eksportoni ose printoni, na shkruani cilat fusha ju nevojiten — zhvillimin e përcaktojmë sipas numrit të kërkesave."
+        "text": "Nëse të duhet një raport i shlyerjes mujore që mund ta eksportosh ose printosh, na shkruaj cilat fusha të duhen — zhvillimin e prioritizojmë sipas numrit të kërkesave."
       }
     ],
     "related": [
