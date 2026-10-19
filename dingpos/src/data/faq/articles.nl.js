@@ -87,7 +87,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Als je DingPOS voor het eerst opent, loopt een installatiehulp je in zo'n 10 minuten door het openen van je winkel:"
+        "text": "Als je DingPOS voor het eerst opent, begeleidt een installatiewizard je in ongeveer 10 minuten bij het instellen van je winkel:"
       },
       {
         "type": "steps",
@@ -208,7 +208,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valuta en btw-modus (inclusief / exclusief) zijn vergrendeld zodra de installatie klaar is. Al je eerdere bestellingen zijn ermee berekend, dus tussentijds wijzigen zou je rapporten verstoren."
+        "text": "Valuta en btw-modus (inclusief / exclusief) zijn vergrendeld zodra de installatie klaar is. Al je eerdere bestellingen zijn ermee berekend, dus tussentijds wijzigen zou je rapporten onbetrouwbaar maken."
       },
       {
         "type": "note",
@@ -338,7 +338,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Volledige rekenvolgorde: artikelkortingen → winkelmandkorting → btw. Bedragen worden naar boven afgerond (vanaf 0,5) op het aantal decimalen van de valuta (bijv. 0 voor TWD, 2 voor USD)."
+        "text": "Volledige rekenvolgorde: artikelkortingen → winkelmandkorting → btw. Bedragen worden afgerond volgens de half-up-methode: vanaf 0,5 naar boven, op het aantal decimalen van de valuta (bijv. 0 voor TWD, 2 voor USD)."
       }
     ],
     "related": [
@@ -486,7 +486,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Ongeldig maken betekent: ‘deze verkoop heeft nooit plaatsgevonden’ — gebruik het voor een bestelling die ter plekke verkeerd is ingetoetst. Brengt een klant later spullen terug, gebruik dan Retour: de oorspronkelijke bestelling blijft bewaard, je kunt maar een deel van de artikelen retourneren en de omzet wordt verlaagd op de dag van het retour."
+        "text": "Ongeldig maken betekent: ‘deze verkoop heeft nooit plaatsgevonden’ — gebruik het voor een bestelling die ter plekke verkeerd is ingetoetst. Brengt een klant later spullen terug, gebruik dan Retour: de oorspronkelijke bestelling blijft bewaard, je kunt maar een deel van de artikelen retourneren en de omzet wordt verlaagd op de dag waarop de retour wordt verwerkt."
       }
     ],
     "related": [
@@ -511,12 +511,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ga naar Orders, open de oorspronkelijke bestelling en tik op Retour. Kies hoeveel stuks van elk artikel terugkomen. Voor een omruiling tik je op hetzelfde scherm op Voeg vervangend artikel toe; het nettobedrag wordt in één keer verrekend — positief betekent dat de klant betaalt, negatief dat je terugbetaalt, en nul dat er niets van hand wisselt."
+        "text": "Ga naar Orders, open de oorspronkelijke bestelling en tik op Retour. Kies hoeveel stuks van elk artikel terugkomen. Voor een omruiling tik je op hetzelfde scherm op Voeg vervangend artikel toe; het nettobedrag wordt in één keer verrekend — positief betekent dat de klant betaalt, negatief dat je terugbetaalt, en nul betekent dat er geen geld wordt uitgewisseld."
       },
       {
         "type": "list",
         "items": [
-          "De oorspronkelijke bestelling wordt nooit gewijzigd. Een retour maakt een eigen document met de datum van vandaag en een nummer met de voorletter R, en de omzet wordt verlaagd op de dag van het retour.",
+          "De oorspronkelijke bestelling wordt nooit gewijzigd. Een retour maakt een eigen document met de datum van vandaag en een nummer dat met R begint, en de omzet wordt verlaagd op de dag waarop de retour wordt verwerkt.",
           "De terugbetaling is wat de klant echt voor dat artikel heeft betaald — kortingen op artikelen, kortingen op de winkelmand en ingewisselde punten zijn al evenredig verwerkt, dus er wordt niet tegen de catalogusprijs terugbetaald. De btw volgt het tarief waarmee de oorspronkelijke bestelling is afgerekend.",
           "Vervangende artikelen worden berekend tegen de prijs van vandaag, zonder acties of kortingen.",
           "Bijgehouden voorraad komt automatisch terug. Punten die met de oorspronkelijke bestelling zijn verdiend worden ingetrokken, ingewisselde punten worden teruggegeven en vervangende artikelen leveren hun eigen punten op.",
@@ -754,7 +754,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zodra het aan staat, verlagen verkopen en voorbestellingen de voorraad automatisch. Ongeldig gemaakte verkopen, retouren en geannuleerde voorbestellingen zetten de artikelen terug, een ontvangen inkooporder verhoogt de voorraad en je kunt altijd handmatig aanpassen. Elke mutatie wordt vastgelegd in een volledig overzicht. Lage voorraad wordt met een kleur gemarkeerd."
+        "text": "Zodra het aan staat, verlagen verkopen en voorbestellingen de voorraad automatisch. Bij ongeldig gemaakte verkopen, retouren en geannuleerde voorbestellingen wordt de voorraad weer aangevuld; een ontvangen inkooporder verhoogt de voorraad. Je kunt de voorraad ook altijd handmatig aanpassen. Elke mutatie wordt vastgelegd in een volledig overzicht. Lage voorraad wordt met een kleur gemarkeerd."
       }
     ],
     "related": [
@@ -886,7 +886,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kies bovenaan Cijfers uit Vandaag, Gisteren, Deze week, Deze maand, Dit jaar of Altijd, of gebruik Aangepast om een begin- en einddatum te kiezen. Deze week volgt de eerste dag van de week van het apparaat; Deze maand en Dit jaar beginnen op de 1e en op 1 januari. Elke optie toont de data die ze beslaat, en Altijd begint bij de eerste verkoop van je winkel."
+        "text": "Kies bovenaan Cijfers uit Vandaag, Gisteren, Deze week, Deze maand, Dit jaar of Altijd, of gebruik Aangepast om een begin- en einddatum te kiezen. Deze week volgt de eerste dag van de week van het apparaat; Deze maand en Dit jaar beginnen op de 1e en op 1 januari. Elke optie toont de datums waarop ze betrekking heeft, en Altijd begint bij de eerste verkoop van je winkel."
       },
       {
         "type": "p",
@@ -938,7 +938,7 @@ export const articles = [
         "items": [
           "Verkoopvergelijking: rechts van de periodebalk vergelijk je met dezelfde periode vorig jaar of met de voorgaande periode (één dag met dezelfde dag vorige week, deze week met vorige week, deze maand met vorige maand, dit jaar met vorig jaar, een aangepaste periode met evenveel dagen daarvoor). De tegel Ontvangen bedrag toont het verschil en het groeipercentage, en de omzetgrafiek krijgt een lichtere lijn voor de vergelijkingsperiode. Zolang een periode nog loopt, wordt de vergelijkingsperiode op hetzelfde moment afgekapt.",
           "Weekdag × uur: zet de kop Verkoop in de tijd op Weekdag × uur voor een heatmap van zeven dagen bij 24 uur — hoe donkerder een vak, hoe meer je verkocht. Wissel tussen omzet en bestellingen; met een vergelijking aan zie je welke uren groeiden en welke krompen.",
-          "Langzaam verkopende producten: zet de kop van de rangschikkingskaart op Langzaam verkopende producten om producten van de minste naar de meeste verkopen te tonen, met de huidige voorraad en de datum waarop elk product het laatst is verkocht. Producten die nooit zijn verkocht, staan als Nooit verkocht. Standaard zie je alleen producten die op voorraad zijn.",
+          "Langzaam verkopende producten: zet de kop van de rangschikkingskaart op Langzaam verkopende producten om producten van de minste naar de meeste verkopen te tonen, met de huidige voorraad en de datum waarop elk product het laatst is verkocht. Producten die nooit zijn verkocht, staan als ‘Nooit verkocht’. Standaard zie je alleen producten die op voorraad zijn.",
           "Herhaalaankooppercentage: de laatste regel van de klantentegel is het aandeel leden dat in de periode kocht en in totaal al twee of meer keer heeft gekocht.",
           "Op dit moment: voorraadwaarde (huidige voorraad × huidige kostprijs), elke voorraadmutatie in de gekozen periode, en de punten die klanten hebben maar nog niet hebben ingewisseld, met het maximale bedrag dat ze ermee van de prijs kunnen halen. Dit zijn actuele standen; de periode verandert ze niet."
         ]
@@ -967,12 +967,12 @@ export const articles = [
       "winst",
       "marge",
       "rapporten",
-      "winst niet gevolgd"
+      "winst niet bijgehouden"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kostprijs is een optioneel veld. Producten zonder kostprijs worden in rapporten gemarkeerd als “winst niet gevolgd” en blijven buiten de winstberekening — de omzet telt nog steeds volledig mee, alleen de winst wordt overgeslagen."
+        "text": "Kostprijs is een optioneel veld. Producten zonder kostprijs worden in rapporten gemarkeerd als “winst niet bijgehouden” en blijven buiten de winstberekening — de omzet telt nog steeds volledig mee, alleen de winst wordt overgeslagen."
       },
       {
         "type": "p",
@@ -1008,8 +1008,8 @@ export const articles = [
           "Bestedingsdrempel: besteed X en krijg Y korting of Y% korting.",
           "Koop-één-krijg-één-acties en acties op het n-de artikel.",
           "Vermenigvuldigers voor bonuspunten.",
-          "Aanbiedingen alleen voor een bepaald klantniveau of in de verjaardagsmaand.",
-          "Koop A en krijg B, extra's tegen actieprijs en bundels met vaste prijs."
+          "Aanbiedingen alleen voor een bepaald klantniveau of tijdens de verjaardagsmaand van de klant.",
+          "Koop A en krijg B, extra's die je kunt bijkopen en bundels met een vaste prijs."
         ]
       },
       {
@@ -1340,7 +1340,7 @@ export const articles = [
         "items": [
           "Geïmporteerde verkopen worden geplaatst op hun transactiedatum en opnieuw berekend met de valuta en belastingmodus van je winkel. Ze raken de voorraad niet en geven geen welkomstpunten.",
           "Klanten worden op telefoonnummer of e-mailadres gekoppeld aan bestaande klanten; wie niet wordt gevonden, wordt aangemaakt.",
-          "Geïmporteerde bestellingen tonen de datum Geïmporteerd op en het oorspronkelijke bestelnummer, en kunnen niet ongeldig worden gemaakt of retour gaan.",
+          "Geïmporteerde bestellingen tonen de datum ‘Geïmporteerd op’ en het oorspronkelijke bestelnummer. Je kunt ze niet ongeldig maken of als retour verwerken.",
           "Rijen met fouten kun je exporteren als CSV met de redenen erbij. Los ze op en importeer opnieuw. Dubbele rijen worden automatisch overgeslagen."
         ]
       },
@@ -1501,12 +1501,12 @@ export const articles = [
         "items": [
           "Handelingen (handmatige voorraadcorrectie, productbeheer, afrekenen boven de kortingslimiet): één goedkeuring geldt voor die ene handeling.",
           "Overzichten (kostprijs en winst, Cijfers, Instellingen, back-up en herstel): een goedkeuring ontgrendelt tot de actieve medewerker wisselt of de app naar de achtergrond gaat.",
-          "De kortingslimiet geldt voor handmatige kortingen en wordt één keer gecontroleerd bij het afrekenen. Automatische acties en het inwisselen van punten tellen niet mee."
+          "De kortingslimiet geldt voor handmatige kortingen en wordt één keer gecontroleerd bij het afrekenen. Automatische kortingsacties en het inwisselen van punten tellen niet mee."
         ]
       },
       {
         "type": "p",
-        "text": "Standaardinstellingen: Managers mogen alles behalve back-up en herstel, zonder kortingslimiet. Medewerkers hebben overal goedkeuring voor nodig, met een limiet van 10%. De eigenaar mag altijd alles en kan niet worden aangepast. Om dit te wijzigen ga je naar Personeel → Toestemmingen per rol, tik je op Wijzig en bewaar je één keer. Het geldt direct voor iedereen."
+        "text": "Standaardinstellingen: Managers mogen alles behalve back-up en herstel, zonder kortingslimiet. Medewerkers hebben overal goedkeuring voor nodig, met een limiet van 10%. De eigenaar mag altijd alles; de toestemmingen van de eigenaar kunnen niet worden gewijzigd. Om dit te wijzigen ga je naar Personeel → Toestemmingen per rol, tik je op Wijzig en bewaar je één keer. Het geldt direct voor iedereen."
       },
       {
         "type": "note",
@@ -1546,7 +1546,7 @@ export const articles = [
           "Elke regel toont waar het om gaat, wie wat wanneer heeft gedaan en wat het resultaat was, bijvoorbeeld “M prijs $390 → $350”.",
           "Filter op medewerker (ook gedeactiveerde), soort handeling en Vandaag / Deze week / Deze maand.",
           "Tik op een regel die naar een bestelling, product of klant verwijst om de details te openen.",
-          "De details van een bestelling, een product en de pagina van elke medewerker hebben een eigen ingang die alleen de registraties over dat onderdeel toont.",
+          "De details van een bestelling, een product en de pagina van elke medewerker hebben elk een eigen lijst met alleen de registraties over dat onderdeel.",
           "Verwijderde producten tonen in het logboek nog steeds hun naam en prijs van toen."
         ]
       },
@@ -1634,7 +1634,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle drie de abonnementen bevatten volledig afrekenen, producten, bestellingen (met ongeldig maken, retouren en omruilingen), rapporten en back-up in de cloud. Ze verschillen in de hulpmiddelen om je winkel te runnen:"
+        "text": "Alle drie de abonnementen bevatten alle functies voor afrekenen, producten, bestellingen (met ongeldig maken, retouren en omruilingen), rapporten en back-up in de cloud. Ze verschillen in de hulpmiddelen om je winkel te runnen:"
       },
       {
         "type": "list",
@@ -1852,7 +1852,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Na Weiger verschijnt hetzelfde voorstel niet opnieuw voor deze winkelmand; bij een nieuwe of geleegde winkelmand wordt het weer voorgesteld.",
+          "Nadat je op ‘Weiger’ hebt getikt, verschijnt hetzelfde voorstel niet opnieuw voor deze winkelmand; bij een nieuwe of geleegde winkelmand verschijnt het opnieuw.",
           "Als er vóór de bevestiging bij het afrekenen een nieuw voorstel verschijnt, moet dat eerst worden geaccepteerd of geweigerd voordat de bestelling kan worden afgerond.",
           "Cadeau- en extraregels kunnen niet verder worden verlaagd door andere kortingsacties en tellen niet mee voor de drempels van andere acties."
         ]
@@ -1963,7 +1963,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS komt op dit moment niet aan de geldstroom: betaalmethoden zijn labels voor je boekhouding, en de echte betaling loopt via je bestaande betaalterminal of betaal-app."
+        "text": "DingPOS verwerkt momenteel geen betalingen: betaalmethoden zijn alleen labels voor je boekhouding, en echte betalingen lopen via je bestaande betaalterminal of betaalapp."
       },
       {
         "type": "p",
@@ -2034,7 +2034,7 @@ export const articles = [
   {
     "slug": "roadmap-monthly-settlement",
     "category": "roadmap",
-    "question": "Komt er een maandafsluiting of maandrapport?",
+    "question": "Komt er een rapport voor maandelijkse vereffening?",
     "keywords": [
       "maandafsluiting",
       "maandrapport",
@@ -2046,7 +2046,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Er is nog geen apart rapport voor de maandafsluiting, maar alles wat je nodig hebt om af te stemmen zit al in de app:"
+        "text": "Er is nog geen apart rapport voor de maandelijkse vereffening, maar alles wat je nodig hebt om af te stemmen, zit al in de app:"
       },
       {
         "type": "list",

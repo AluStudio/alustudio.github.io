@@ -41,11 +41,11 @@
     "promotion": {
       "eyebrow": "Actiemodule",
       "title": "Stel de regels één keer in, bij het afrekenen worden ze toegepast",
-      "lead": "Bestedingsdrempels, één-gratis-bij-één, happy hours, ledenacties — zodra een regel bestaat, rekent de kassa het zelf uit. Niemand hoeft het te onthouden en je hoeft geen couponcodes in te typen.",
+      "lead": "Bestedingsdrempels, 1+1 gratis, happy hours en ledenacties — zodra een regel is ingesteld, rekent de kassa de actie automatisch uit. Niemand hoeft iets te onthouden en je hoeft geen couponcodes in te voeren.",
       "items": [
         "Drempels op het subtotaal van de winkelmand worden automatisch geactiveerd",
         "Korting op de winkelmand of op artikelen (vast bedrag of percentage)",
-        "Acties als één-gratis-bij-één en korting op het n-de artikel",
+        "Acties zoals 1+1 gratis en korting op elk zoveelste artikel",
         "Vermenigvuldigers voor punten",
         "Happy hour-tijdvensters — over middernacht heen, te kiezen weekdagen",
         "Instellingen voor prioriteit, combineerbaarheid en stoppen na toepassing",
@@ -130,7 +130,7 @@
       "Bewaart de laatste 5 momentopnamen",
       "Incrementele synchronisatie van afbeeldingen",
       "Geen account; gegevens op het apparaat, back-ups in je eigen cloud",
-      "Volledig werkend offline"
+      "Werkt volledig offline"
     ]
   },
   "home_pricing": {
@@ -143,7 +143,7 @@
   },
   "pricing": {
     "doc_title": "Abonnementen en prijzen",
-    "meta_description": "Vergelijk de DingPOS-abonnementen voor iPad: Lite, Standard en Pro. 30 dagen gratis proberen, geen transactiekosten en je gegevens worden nooit verwijderd.",
+    "meta_description": "Vergelijk de DingPOS-abonnementen voor iPad: Lite, Standard en Pro. gratis proefperiode van 30 dagen, geen transactiekosten en je gegevens worden nooit verwijderd.",
     "eyebrow": "Abonnementen en prijzen",
     "title": "Kies het abonnement dat bij je winkel past",
     "subtitle": "Probeer 30 dagen gratis — zonder aanmelding. Wissel wanneer je wilt; je gegevens worden nooit verwijderd.",
@@ -372,7 +372,7 @@
         },
         {
           "q": "Hoe werkt jaarlijks betalen?",
-          "a": "Jaarlijks kost evenveel als tien maanden maandelijks en dekt een vol jaar — ongeveer {{percent}}% minder. Je betaalt één keer per jaar en het wordt automatisch verlengd."
+          "a": "Jaarlijks kost evenveel als tien maanden maandelijks gefactureerd en geldt voor een heel jaar — ongeveer {{percent}}% minder. Je betaalt één keer per jaar en het abonnement wordt automatisch verlengd."
         },
         {
           "q": "Zijn er naast het abonnement nog andere kosten?",
@@ -415,7 +415,7 @@
       "items": [
         "Winkelinstellingen (winkelnaam, valuta, btw-tarief, logo)",
         "Productgegevens (naam, prijs, kostprijs, barcode, foto, categorie, varianten, voorraad)",
-        "Bestellingen en betalingsgegevens (inclusief kortingen, btw en betaalmethode)",
+        "Bestel- en verkoopgegevens (inclusief kortingen, btw en betaalmethode)",
         "Klant- en lidmaatschapsgegevens (naam, optioneel telefoonnummer en e-mailadres, punten)",
         "Acties en instellingen voor lidniveaus"
       ]
@@ -429,7 +429,7 @@
       "desc": "DingPOS verzamelt, verzendt of deelt geen enkele bedrijfsinhoud van jou. Concreet doen we het volgende niet:",
       "items": [
         "Je product-, bestel-, klant- of lidmaatschapsgegevens verzamelen",
-        "Betaalstromen of creditcardgegevens aanraken (de app verwerkt geen echte kaartbetalingen)",
+        "Betalingen afhandelen of creditcardgegevens verwerken (de app verwerkt geen echte kaartbetalingen)",
         "Je locatie volgen",
         "Je bedrijfsgegevens delen met derden"
       ]
