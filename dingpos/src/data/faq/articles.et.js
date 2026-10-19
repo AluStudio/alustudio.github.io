@@ -1510,7 +1510,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Müük arvele, anuleerimised, tagastused ja ostutellimused on teadlikult õiguste seadistusest välja jäetud; nende puhul salvestatakse ainult see, kes neid käsitles. Hiljem saad neid vaadata tegevuslogist."
+        "text": "Müük arvele, anuleerimised, tagastused ja ostud on teadlikult õiguste seadistusest välja jäetud; nende puhul salvestatakse ainult see, kes neid käsitles. Hiljem saad neid vaadata tegevuslogist."
       }
     ],
     "related": [
