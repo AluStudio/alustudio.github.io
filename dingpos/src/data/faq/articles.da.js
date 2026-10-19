@@ -813,7 +813,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Betalingsbetingelsen afgør, hvad der sker derefter: ordrer med betal nu markeres som betalt, mens månedlige ordrer forbliver ubetalte under Til betaling, hvor du kan afregne dem pr. leverandør – én ordre, denne måned eller det hele."
+        "text": "Betalingsbetingelsen afgør, hvad der sker derefter: ordrer med betalingsbetingelsen “betal nu” markeres som betalt, mens ordrer med månedlig betaling forbliver ubetalte under Til betaling, hvor du kan afregne dem pr. leverandør – én ordre, denne måned eller det hele."
       },
       {
         "type": "note",
@@ -1068,7 +1068,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gå til Indstillinger → Loyalitetsprogram og angiv to regler: optjen Y point for hver X, du bruger, og indløs N point til M i rabat (eventuelt med et loft for indløsning pr. ordre). Du kan også give nye medlemmer velkomstpoint automatisk."
+        "text": "Gå til Indstillinger → Loyalitetsprogram og angiv to regler: optjen Y point for hver X, du bruger, og indløs N point til M i rabat (eventuelt med et loft for indløsning pr. ordre). Du kan også automatisk give nye medlemmer en velkomstbonus."
       },
       {
         "type": "p",
