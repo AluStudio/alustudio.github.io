@@ -13,7 +13,7 @@
     { "code": "fr", "kind": "translated", "label": "Français", "hreflang": "fr", "pathPrefix": "fr", "ogLocale": "fr_FR", "shipped": true },
     { "code": "de", "kind": "translated", "label": "Deutsch", "hreflang": "de", "pathPrefix": "de", "ogLocale": "de_DE", "shipped": true },
     { "code": "pt-BR", "kind": "translated", "label": "Português (Brasil)", "hreflang": "pt-BR", "pathPrefix": "pt-br", "ogLocale": "pt_BR", "shipped": true },
-    { "code": "it", "kind": "translated", "label": "Italiano", "hreflang": "it", "pathPrefix": "it", "ogLocale": "it_IT", "shipped": false },
+    { "code": "it", "kind": "translated", "label": "Italiano", "hreflang": "it", "pathPrefix": "it", "ogLocale": "it_IT", "shipped": true },
     { "code": "nl", "kind": "translated", "label": "Nederlands", "hreflang": "nl", "pathPrefix": "nl", "ogLocale": "nl_NL", "shipped": false },
     { "code": "ms", "kind": "translated", "label": "Bahasa Melayu", "hreflang": "ms", "pathPrefix": "ms", "ogLocale": "ms_MY", "shipped": false },
     { "code": "tr", "kind": "translated", "label": "Türkçe", "hreflang": "tr", "pathPrefix": "tr", "ogLocale": "tr_TR", "shipped": false },
