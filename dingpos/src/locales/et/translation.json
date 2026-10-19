@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the et translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync et`, then `npm run l10n -- apply et`.",
+  "nav": {
+    "home": "Avaleht",
+    "pricing": "Hinnad",
+    "privacy": "Privaatsuspoliitika",
+    "terms": "Kasutustingimused",
+    "support": "KKK"
+  },
+  "hero": {
+    "meta_title": "DingPOS – iPadi kassarakendus, mis töötab ilma internetita",
+    "meta_description": "DingPOS – ava oma pood 10 minutiga. iPadi kassarakendus, mis töötab ilma internetita. Sinu andmed, sinu kontroll.",
+    "eyebrow": "Kassarakendus iPadile",
+    "title": "Ava oma pood 10 minutiga. Sinu andmed, sinu kontroll.",
+    "description": "DingPOS on iPadi kassarakendus. Kontot pole vaja, pilvest sõltuvust pole ning see töötab ka ilma internetita. Sinu tooted, müügid ja kliendid jäävad kõik sinu enda seadmesse.",
+    "download": "Laadi alla App Store'ist",
+    "note": "30-päevane tasuta prooviperiood.",
+    "shot_alt": "DingPOS-i kassaekraan: vasakul kategooriafiltritega tootevõrk, paremal ostukorv automaatselt rakendunud kampaaniate ja kogusummaga"
+  },
+  "proof": {
+    "items": [
+      "Kontot pole vaja",
+      "Kassa töötab ilma internetita",
+      "Andmed jäävad sinu iPadi"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Kassa",
+      "title": "Müügi kõik sammud ühel ekraanil",
+      "lead": "Kuni 10 ostukorvi korraga, tooted leiab nime või vöötkoodi järgi kirjutamise ajal ning allahindlused ja maks arvutatakse enne makse vastuvõtmist.",
+      "items": [
+        "Kuni 10 ostukorvi korraga",
+        "Toodete otsing nime ja vöötkoodi järgi kirjutamise ajal",
+        "Toote- ja ostukorvi allahindlused, kindel summa või protsent",
+        "Maksuga ja maksuta hindade automaatne arvutus",
+        "Sularaha tagasiraha ja enda nimetatud maksemeetodid",
+        "Iga müük lõpeb „Ding!“ helina ja haptilise tagasisidega"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Kampaaniamootor",
+      "title": "Sea reeglid üks kord, kassa rakendab need ise",
+      "lead": "Summapiirid, osta üks ja saa teine, õnnelik tund, ainult liikmetele mõeldud pakkumised – kui reegel on olemas, arvutab kassa selle ise. Keegi ei pea seda meeles pidama ja sooduskoode pole vaja sisestada.",
+      "items": [
+        "Ostukorvi vahesumma piirid rakenduvad automaatselt",
+        "Ostukorvi või toote allahindlused (kindel summa või protsent)",
+        "„Osta üks, saa teine“ ja n-nda toote pakkumised",
+        "Punktide kordajad",
+        "Õnneliku tunni ajad – üle südaöö, valitavad nädalapäevad",
+        "Prioriteedi, kombineeritavuse ja peatamise seaded",
+        "Kasutuspiirangud (kokku või kliendi kohta)",
+        "Rakenduvad kassas automaatselt – sooduskoode pole"
+      ],
+      "shot_alt": "Seadete kampaaniate loend, jaotatud komplektihindadeks ja allahindlusteks; iga reegli juures on näha selle olek ja prioriteet"
+    },
+    "reports": {
+      "eyebrow": "Aruanded",
+      "title": "Mis täna sisse tuli, kui pood on veel avatud",
+      "lead": "Müükide arv, müügitulu, brutokasum, allahindlused ja maksemeetodite jaotus ühel lehel – tänase, 7 päeva, 30 päeva või kogu aja kohta.",
+      "items": [
+        "Täna: müükide arv, müügitulu, brutokasum, allahindlus, maksemeetodite jaotus",
+        "Top 5 toodet koguse järgi",
+        "Päeva, nädala ja kuu vahemikud",
+        "Müügitulu ja brutokasumi trendigraafikud"
+      ],
+      "shot_alt": "Ülevaatepaneel tänase müügitulu, kogu allahindluse, kasumi ja keskmise ostukorviga; all maksemeetodite sektordiagramm ja enimmüüdud toodete loend"
+    },
+    "orders": {
+      "eyebrow": "Müügid",
+      "title": "Iga müük on alles ja iga müüki saab anuleerida",
+      "lead": "Iga müük säilitab täieliku kirje: tooted ja variandid, rakendunud kampaania, maks, maksemeetod ja antud tagasiraha.",
+      "items": [
+        "Müükide loend ajajärjestuses, filtreeritav kuupäeva ja maksemeetodi järgi",
+        "Rea üksikasjad säilitavad tooted, variandid, allahindlused, maksu ja tagasiraha",
+        "Anuleerimine kinnitusega – laoseis ja punktid taastuvad automaatselt"
+      ],
+      "shot_alt": "Vasakul müükide loend ajajärjestuses, paremal valitud müügi üksikasjad: tooted, rakendunud allahindlus, maks, kogusumma, maksemeetod ja tagasiraha"
+    }
+  },
+  "features": {
+    "title": "Kõik muu poepidamisest",
+    "subtitle": "Esmane seadistus, tooted, laoseis ja liikmed – kõik samas iPadis",
+    "onboarding": {
+      "title": "Kiire alustamine",
+      "items": [
+        "Vali oma riik – valuuta, maksurežiim ja maksumäär täituvad ise",
+        "Sea poe nimi ja logo",
+        "Algusest lõpuni umbes 10 minutit, siis võid müüma hakata"
+      ]
+    },
+    "products": {
+      "title": "Tooted ja variandid",
+      "items": [
+        "Kategooriate haldus ja filtreerimine",
+        "Variandid (nt suurus × värv), igaühel oma hind ja omahind",
+        "Vöötkoodid käsitsi sisestades või kaameraga skannides, duplikaadid blokeeritakse",
+        "Tootefotod, mille pisipildid luuakse salvestamisel"
+      ]
+    },
+    "inventory": {
+      "title": "Ladu",
+      "items": [
+        "Laoseisu jälgimise lüliti iga toote kohta",
+        "Iga variandi laoseis eraldi",
+        "Negatiivne laoseis lubatud – kassat ei blokeerita kunagi",
+        "Värvihoiatused madala laoseisu korral",
+        "Täielik liikumiste register: müük, anuleerimine, käsitsi korrigeerimine"
+      ]
+    },
+    "loyalty": {
+      "title": "Liikmed ja punktid",
+      "items": [
+        "Liikmeks registreerimine: nimi, valikuline telefon ja e-post",
+        "Teeni iga kulutatud X kohta Y punkti",
+        "Lunasta N punkti M allahindluse vastu, soovi korral ülempiiriga",
+        "Uued liikmed saavad automaatselt tervitusbonuse",
+        "Liikmetasemed, mida kampaaniad saavad sihtida",
+        "Müügi anuleerimine tühistab teenitud ja lunastatud punktid"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Varundus ja privaatsus",
+    "title": "Kui kontot pole, ei saa keegi sinu andmeid võtta",
+    "lead": "DingPOS-iga pole millegi jaoks vaja registreeruda. Sinu raamatupidamine on iPadis ning kui soovid varukoopiaid, lähevad need pilvekontole, mis sul juba on.",
+    "items": [
+      "Vali üks: iCloud, Google Drive või Dropbox",
+      "Käsitsi varundus, millal soovid",
+      "Säilitab viimased 5 pilvekoopiat",
+      "Piltide järkjärguline sünkroonimine",
+      "Kontot pole; andmed seadmes, varukoopiad sinu enda pilves",
+      "Täielikult toimiv ka ilma internetita"
+    ]
+  },
+  "home_pricing": {
+    "title": "Lihtne ja läbipaistev hind",
+    "price_before": "Kolm paketti alates ",
+    "price_after": " kuus",
+    "sub": "30-päevane tasuta prooviperiood. Tehingutasusid ja varjatud kulusid pole. Sinu andmed jäävad pärast prooviperioodi alati alles – telli uuesti millal tahes.",
+    "compare": "Võrdle pakette",
+    "cta": "Alusta 30-päevast tasuta prooviperioodi"
+  },
+  "pricing": {
+    "doc_title": "Paketid ja hinnad",
+    "meta_description": "Võrdle DingPOSi iPadi pakette: Lite, Standard ja Pro. 30 päeva tasuta prooviperiood, tehingutasusid pole ning sinu andmeid ei kustutata kunagi.",
+    "eyebrow": "Paketid ja hinnad",
+    "title": "Vali pakett, mis sobib sinu poele",
+    "subtitle": "Proovi 30 päeva tasuta – registreerimata. Vaheta pakette millal tahes; sinu andmeid ei kustutata kunagi.",
+    "billing": {
+      "label": "Arveldusperiood",
+      "monthly": "Kuine",
+      "annual": "Aastane",
+      "save": "Säästa {{percent}}%"
+    },
+    "recommended": "Soovitatud",
+    "select_plan": "Vali pakett",
+    "unit": {
+      "month": "/kuu",
+      "year": "/aastas"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "või ",
+    "or_annual_after": "/aastas, tasutakse aasta kaupa",
+    "saving_before": "Säästad ",
+    "saving_after": " aastas võrreldes kuumaksega",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Ühele inimesele turulaua taga, kes vajab kassat ja tooteid",
+        "heading": "Sisaldab",
+        "features": [
+          "Täielik kassa kuni 10 ostukorviga",
+          "Tooted koos variantide, vöötkoodide, fotode ja kategooriatega",
+          "Müügiajalugu, anuleerimised, tagastused ja vahetused",
+          "Ettevõtte ülevaatepaneel: müügitulu, kasum, enimmüüdud tooted",
+          "Pilvevarundus ja taastamine",
+          "Kassa töötab ilma internetita"
+        ],
+        "cta": "Alusta 30-päevast tasuta prooviperioodi"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Poodidele, kes vajavad laoseisu, liikmeid, ostmist või müüki arvele",
+        "heading": "Kõik paketist Lite ning lisaks",
+        "features": [
+          "Kampaaniamootor: summapiirid, 1+1 tasuta, õnnelikud tunnid – rakendub kassas automaatselt",
+          "Kliendipunktid, nende kasutamine ja liikmetasemed",
+          "Laoseisu jälgimine ja ostutellimused",
+          "Müük arvele: anna kaup kohe, nõua raha hiljem",
+          "Ettetellimused: võta käsiraha, tasu kättesaamisel"
+        ],
+        "cta": "Alusta 30-päevast tasuta prooviperioodi"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Poodidele, kus on töötajaid ning vaja rolle ja tegevuslogi",
+        "heading": "Kõik paketist Standard ning lisaks",
+        "features": [
+          "Töötajate kontod: igaühel oma PIN, iga müük salvestab, kes selle sisestas",
+          "Õigused ja heakskiidud: ülempiiri ületavad allahindlused, toodete ja laoseisu muutmine, omahinna vaatamine",
+          "Tegevuslogi ja taastamise ajalugu",
+          "Täiustatud aruanded: perioodide võrdlus, müügi soojuskaart, aeglase käibega tooted, laojäägi väärtus, korduvostjad"
+        ],
+        "cta": "Alusta 30-päevast tasuta prooviperioodi"
+      }
+    },
+    "fineprint": "Arveldatakse sinu App Store'i konto kaudu. Kuu- ja aastapaketid uuenevad iga perioodi lõpus automaatselt; tühista igal ajal App Store'is.",
+    "currency": {
+      "twd": "Hinnad on näidatud Taiwani App Store'i järgi. Teistes piirkondades tasutakse App Store'is kuvatud kohaliku hinna järgi.",
+      "to_usd": "Näita USA hindu",
+      "usd": "Hinnad on näidatud USA App Store'i järgi. Teistes piirkondades tasutakse App Store'is kuvatud kohaliku hinna järgi.",
+      "to_twd": "Näita Taiwani hindu"
+    },
+    "assurances": {
+      "trial": {
+        "title": "30 päeva tasuta prooviperioodi",
+        "desc": "Kõik Pro funktsioonid kaasas. Kontot pole vaja."
+      },
+      "fees": {
+        "title": "Tehingutasusid pole",
+        "desc": "DingPOS ei puutu sinu laekumistega kokku – ainus tasu on tellimus."
+      },
+      "data": {
+        "title": "Sinu andmed jäävad sinule",
+        "desc": "Kui prooviperiood või tellimus lõpeb, peatub ainult kassa. Tooted, müügid ja aruanded jäävad alles ning midagi ei kustutata."
+      },
+      "switch": {
+        "title": "Vaheta millal tahes",
+        "desc": "Uuendamine rakendub kohe, Apple arvutab tasu proportsionaalselt. Madalamale paketile minek rakendub uuenemisel."
+      }
+    },
+    "compare": {
+      "title": "Võrdle kõiki funktsioone",
+      "subtitle": "Iga pakett sisaldab kõike eelmise paketi omast.",
+      "feature_col": "Funktsioon",
+      "included": "Sisaldub",
+      "not_included": "Ei sisaldu",
+      "groups": {
+        "checkout": "Kassa",
+        "catalog": "Tooted ja laoseis",
+        "customers": "Kliendid ja kampaaniad",
+        "reports": "Aruanded",
+        "team": "Töötajad ja kontroll",
+        "data": "Andmed ja varundus"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Kassa ja mitu ostukorvi",
+          "desc": "Kuni 10 ostukorvi korraga, kiirotsing nime või vöötkoodi järgi"
+        },
+        "discounts_tax": {
+          "name": "Allahindlused ja maks",
+          "desc": "Toote- ja müügiallahindlused; käibemaks arvutatakse sinu eest, olgu hind maksuga või maksuta"
+        },
+        "offline": {
+          "name": "Kassa ilma internetita",
+          "desc": "Müü edasi ka siis, kui internetiühendust pole"
+        },
+        "returns": {
+          "name": "Anuleerimised, tagastused ja vahetused",
+          "desc": "Täielik müügiajalugu ja üksikasjad"
+        },
+        "preorder": {
+          "name": "Ettetellimused",
+          "desc": "Võta nüüd käsiraha, tasu ülejäänud summa kättesaamisel"
+        },
+        "on_account": {
+          "name": "Müük arvele",
+          "desc": "Anna kaup kohe, nõua raha hiljem – iga kliendi jääk ühes kohas"
+        },
+        "products": {
+          "name": "Toodete haldus",
+          "desc": "Variandid, vöötkoodid, fotod, kategooriad"
+        },
+        "import": {
+          "name": "Andmete import",
+          "desc": "Impordi tooted ja varasemad müügid teistest süsteemidest CSV-failiga"
+        },
+        "inventory": {
+          "name": "Laoseisu jälgimine",
+          "desc": "Laoseis väheneb müügiga; käsitsi muudatustest jääb liikumiste kirje"
+        },
+        "purchasing": {
+          "name": "Ostud ja tarnijad",
+          "desc": "Ostutellimuse vastuvõtmine uuendab laoseisu; näed, kui palju oled igale tarnijale võlgu"
+        },
+        "promotions": {
+          "name": "Kampaaniamootor",
+          "desc": "Summapiirid, 1+1 tasuta, N-nda toote pakkumised, õnnelikud tunnid – rakendub kassas"
+        },
+        "loyalty": {
+          "name": "Kliendid ja punktid",
+          "desc": "Kogu ja kasuta punkte, et kliendid tagasi tuleksid"
+        },
+        "member_tiers": {
+          "name": "Liikmetasemed",
+          "desc": "Premeeri oma parimaid kliente tasemepõhiste hüvedega"
+        },
+        "dashboard": {
+          "name": "Ettevõtte ülevaatepaneel",
+          "desc": "Müügitulu, kasum, allahindlused, maksevahendite jaotus ja enimmüüdud tooted"
+        },
+        "comparison": {
+          "name": "Perioodide võrdlus",
+          "desc": "Eelmise perioodi või eelmise aastaga – näed kasvu või langust"
+        },
+        "heatmap": {
+          "name": "Müügi soojuskaart",
+          "desc": "Seitse päeva × 24 tundi – näed, millistel tundidel müüakse enim"
+        },
+        "slow_movers": {
+          "name": "Aeglase käibega tooted",
+          "desc": "Leia tooted, mis ei müü, kuid on laos"
+        },
+        "valuation": {
+          "name": "Laojäägi väärtus ja liikumiste kontroll",
+          "desc": "Mis on sinu laojääk praegu väärt ja kes seda muutis"
+        },
+        "repeat": {
+          "name": "Korduvostjad ja kasutamata punktid",
+          "desc": "Mitu liiget tuleb tagasi ja kui palju punkte on kasutamata"
+        },
+        "staff": {
+          "name": "Töötajate kontod",
+          "desc": "Igaühel oma PIN; iga müük salvestab, kes selle sisestas"
+        },
+        "permissions": {
+          "name": "Õigused ja heakskiidud",
+          "desc": "Juhi ja töötaja rollid; sina otsustad, mis vajab heakskiitu"
+        },
+        "activity_log": {
+          "name": "Tegevuslogi",
+          "desc": "Ajajoon anuleerimistest, tagastustest, hinnamuudatustest, laoseisu korrigeerimistest ja muust"
+        },
+        "restore_records": {
+          "name": "Taastamise ajalugu",
+          "desc": "Kes taastas, millisest varukoopiast ja milliseid müüke see eemaldas"
+        },
+        "local_data": {
+          "name": "Andmed sinu iPadis",
+          "desc": "Kontot pole vaja – sinu ärandmed ei liigu kunagi meie kaudu"
+        },
+        "backup": {
+          "name": "Pilvevarundus ja taastamine",
+          "desc": "Varunda oma iCloudi, Google Drive'i või Dropboxi"
+        },
+        "undo_restore": {
+          "name": "Taastamise eelvaade ja tagasivõtmine",
+          "desc": "Vaata, milliseid müüke taastamine eemaldab, ja võta vale taastamine tagasi"
+        }
+      }
+    },
+    "faq": {
+      "title": "Korduma kippuvad küsimused",
+      "items": [
+        {
+          "q": "Mida saan prooviperioodil kasutada?",
+          "a": "30 päeva alates esimesest installimisest on sul kõik funktsioonid, sh Pro omad, nagu töötajad, õigused ja täiustatud aruanded – kontot pole vaja. Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ja lülitab sind üle ostetud paketile."
+        },
+        {
+          "q": "Mis juhtub, kui ma pärast prooviperioodi ei telli?",
+          "a": "Kassa peatub; kõik muu töötab edasi – saad endiselt müüke vaadata, aruandeid avada ja tooteid hallata. Midagi ei kustutata ning tellimine taastab kassa kohe."
+        },
+        {
+          "q": "Kas saan paketti millal tahes uuendada või madalamaks vahetada?",
+          "a": "Jah, rakenduses menüüst Seaded → Tellimus. Uuendamine rakendub kohe ja Apple arvestab kasutamata aja maha; madalamale paketile minek jõustub jooksva perioodi lõppedes. Kuupaketilt aastapaketile üleminek rakendub samuti kohe."
+        },
+        {
+          "q": "Mis juhtub minu klientide, kampaaniate ja laoseisuga, kui valin madalama paketi?",
+          "a": "Kõik jääb alles – midagi ei kustutata ega muudeta. Kõrgema paketi funktsioonid lihtsalt lõpetavad töö ning uuesti uuendamisel on kõik nagu enne."
+        },
+        {
+          "q": "Kuidas aastamaks töötab?",
+          "a": "Aastapakett maksab sama palju kui kümme kuud kuumaksega ja katab terve aasta – umbes {{percent}}% odavam. Tasud korra aastas ja pakett uueneb automaatselt."
+        },
+        {
+          "q": "Kas lisaks tellimusele on veel mingeid tasusid?",
+          "a": "Ei. DingPOS ei puutu sinu laekumistega kokku: vahendustasu pole, tehingutasusid pole, riistvaralepingut pole."
+        },
+        {
+          "q": "Kuidas tellimust tühistada?",
+          "a": "Halda seda oma iPadis menüüs Seaded → Apple'i konto → Tellimused; tühista vähemalt 24 tundi enne perioodi lõppu, siis sinult enam tasu ei võeta. Sinu andmed jäävad sinu seadmesse."
+        },
+        {
+          "q": "Miks App Store'i hind erineb sellel lehel olevast?",
+          "a": "App Store arveldab tellimuse sinu Apple'i konto piirkonna hinnaga. Sellel lehel on Taiwani ja USA hinnad; teistes piirkondades tasutakse rakenduses ja App Store'is kuvatud kohaliku hinna järgi."
+        }
+      ],
+      "more": "Veel küsimusi?",
+      "more_link": "Vaata kõiki korduma kippuvaid küsimusi"
+    },
+    "final": {
+      "title": "Kasuta 30 päeva, siis vali pakett",
+      "sub": "Laadi alla ja alusta – kontot pole vaja.",
+      "cta": "Laadi alla App Store'ist"
+    }
+  },
+  "footer": {
+    "tagline": "Ava oma pood 10 minutiga. Sinu andmed, sinu kontroll.",
+    "contact": "Võta meiega ühendust",
+    "privacy_policy": "Privaatsuspoliitika",
+    "terms_of_use": "Kasutustingimused",
+    "copyright": "ALU Studio. Kõik õigused kaitstud.",
+    "support": "KKK"
+  },
+  "privacy": {
+    "title": "Privaatsuspoliitika",
+    "meta_description": "Kuidas DingPOS, ilma internetita töötav iPadi kassarakendus, sinu andmeid käsitleb: ärikirjed jäävad sinu seadmesse ja valikuline varundus liigub ainult sinu enda pilvekontole.",
+    "effective_date": "Jõustumiskuupäev: 1. juuli 2026",
+    "intro": "ALU Studio („meie“) töötas välja rakenduse DingPOS („rakendus“). DingPOS on kassasüsteem, mille keskmes on privaatsus – sinu äriandmed kuuluvad sinule. See privaatsuspoliitika selgitab, kuidas me sinu teavet rakenduse kasutamisel käsitleme.",
+    "local_storage": {
+      "title": "Kuidas sinu andmeid salvestatakse",
+      "desc": "DingPOS salvestab kõik sinu äriandmed kohalikult sinu seadmesse. Kui sa pilvevarundust ise sisse ei lülita, need andmed seadmest ei lahku. Rakenduses loodud andmed hõlmavad järgmist:",
+      "items": [
+        "Poe seaded (poe nimi, valuuta, maksumäär, logo)",
+        "Tootandmed (nimi, hind, omahind, vöötkood, foto, kategooria, variandid, laoseis)",
+        "Müügi- ja tehingukirjed (sh allahindlused, maks, makseviis)",
+        "Kliendi- ja liikmeandmed (nimi, soovi korral telefon ja e-post, punktid)",
+        "Kampaaniareeglid ja liikmetaseme seaded"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Pilvevarundus (valikuline)",
+      "desc": "Soovi korral võid pilvevarunduse sisse lülitada ja valida salvestuskohaks iCloudi, Google Drive'i või Dropboxi. Varukoopiad kirjutatakse sinu enda pilvekontole ja jäävad täielikult sinu kontrolli alla. Me ei töötle, ei salvesta ega vaata nende varukoopiate sisu. Varunduse sisselülitamine ja teenuseosutaja valik on täiesti sinu otsustada ning varunduse saab igal ajal välja lülitada."
+    },
+    "no_collection": {
+      "title": "Mida me ei kogu",
+      "desc": "DingPOS ei kogu, ei edasta ega jaga sinu äriandmeid. Täpsemalt me:",
+      "items": [
+        "ei kogu sinu toote-, müügi-, kliendi- ega liikmeandmeid;",
+        "ei puutu kokku makseprotsesside ega krediitkaardiandmetega (rakendus ei töötle tegelikke kaardimakseid);",
+        "ei jälgi sinu asukohta;",
+        "ei jaga sinu äriandmeid ühegi kolmanda osapoolega."
+      ]
+    },
+    "camera": {
+      "title": "Kaamera ja fotod",
+      "desc": "DingPOS küsib kaamera juurdepääsu ainult siis, kui sa ise kasutad funktsiooni „skaneeri vöötkood“ või „tee tootefoto“. Vöötkoodi tuvastamine ja fotod töödeldakse kohalikult sinu seadmes ning neid ei laadita kunagi meie serveritesse. Tootefotod kirjutatakse sinu enda pilvekontole ainult osana varukoopiast, kui sa pilvevarunduse sisse lülitad."
+    },
+    "subscription": {
+      "title": "Tellimus ja ostud",
+      "desc": "DingPOS pakub tellimust Apple App Store'i rakendusesisese ostu (IAP) kaudu ning tellimuse olekut haldab RevenueCat. Makse töötleb Apple; me ei saa kunagi sinu krediitkaardi- ega maksedatat. RevenueCat saab ainult anonüümse tunnuse, mis on seotud tellimuse olekuga ja mida kasutatakse tellimuse kehtivuse kontrollimiseks."
+    },
+    "analytics": {
+      "title": "Analüütika ja kokkujooksmiste aruandlus",
+      "desc": "DingPOS kasutab Google'i pakutavaid teenuseid Firebase Analytics ja Firebase Crashlytics, et mõista, kuidas rakendust kasutatakse, ning leida ja parandada kokkujooksmisi. Need teenused koguvad:",
+      "items": [
+        "Anonüümseid kasutusandmeid (nt milliseid funktsioone kasutatakse, seansi kestus)",
+        "Kokkujooksmisaruandeid (nt pinujälg, seadme mudel, operatsioonisüsteemi versioon)",
+        "Seadmeteavet (nt seadme tüüp, operatsioonisüsteem, rakenduse versioon)",
+        "Juhuslikult loodud instantsi tunnust (mis ei ole seotud sinu isikuga)"
+      ],
+      "note": "Need andmed on anonüümsed ega sisalda sinu äriandmeid (nt tooteid, müüke, kliente ega liikmeid). Lisateavet selle kohta, kuidas Google neid andmeid käsitleb, leiad Google'i privaatsuspoliitikast: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Laste privaatsus",
+      "desc": "DingPOS on ärilisel eesmärgil kasutatav kassatööriist. See ei ole mõeldud lastele ega kogu laste isikuandmeid."
+    },
+    "changes": {
+      "title": "Selle poliitika muudatused",
+      "desc": "Kui teeme sellesse privaatsuspoliitikasse olulisi muudatusi, teavitame sind rakenduse uuenduse kaudu. Soovitame poliitikat aeg-ajalt üle vaadata."
+    },
+    "contact": {
+      "title": "Võta meiega ühendust",
+      "desc": "Kui sul on selle privaatsuspoliitika kohta küsimusi või ettepanekuid, võta meiega ühendust:"
+    }
+  },
+  "terms": {
+    "title": "Kasutustingimused",
+    "meta_description": "DingPOSi kasutustingimused. DingPOS on ALU Studio iPadi kassarakendus. Tingimused hõlmavad litsentsi, 30-päevast tasuta prooviperioodi, App Store'i tellimusi, teie andmeid ja varundust ning vastutust.",
+    "effective_date": "Jõustumise kuupäev: 8. oktoober 2026",
+    "intro": "Tere tulemast DingPOSi kasutama. Lugege enne rakenduse kasutamist alljärgnevad kasutustingimused hoolikalt läbi. DingPOSi alla laadides, installides või kasutades nõustute nende tingimustega.",
+    "license": {
+      "title": "Litsents",
+      "desc": "ALU Studio annab teile piiratud, mitteainuõigusliku ja üleandmatu litsentsi kasutada DingPOSi oma seadmetes oma ettevõtte juhtimiseks. See litsents on mõeldud teie jaemüügitegevuseks."
+    },
+    "subscription": {
+      "title": "Tellimus ja maksed",
+      "desc": "DingPOSil on 30-päevane tasuta prooviperiood alates esmasest installimisest, mille jooksul on saadaval kõik paketi Pro funktsioonid; mis tahes paketi ostmine prooviperioodi ajal lõpetab prooviperioodi ning ostetud pakett kehtib ostmise hetkest. Pärast prooviperioodi on kassa kasutamise jätkamiseks vaja tellimust ühele pakettidest (Lite, Standard või Pro), mis ostetakse App Store'i rakendusesisese ostuna; paketi sisu ja hinnad on toodud hinnalehel (alu-studio.com/dingpos/pricing) ning tasutav hind on see, mida App Store näitab. Ilma tellimuseta jäävad sirvimine ja toodete haldamine kasutatavaks ning teie andmeid ei kustutata kunagi. Tellimus uueneb automaatselt, kui te seda ei tühista vähemalt 24 tundi enne kehtiva perioodi lõppu. Tellimust saate igal ajal hallata või tühistada oma seadme App Store'i konto seadetes. Ostetud tellimusi saab taastada."
+    },
+    "restrictions": {
+      "title": "Piirangud",
+      "desc": "Rakendust kasutades nõustute mitte:",
+      "items": [
+        "rakendust pöördprojekteerima, lahti võtma ega dekompileerima",
+        "muutma, tõlkima ega looma tuletatud teoseid",
+        "eemaldama rakenduses olevaid autoriõiguse märkusi ega silte",
+        "kasutama rakendust ebaseaduslikul eesmärgil"
+      ]
+    },
+    "user_data": {
+      "title": "Teie andmed ja varundus",
+      "desc": "Kogu äriline sisu, mille te DingPOSis loote (tooted, müügid, kliendid, liikmed ja seaded), on salvestatud teie seadmes ning selle eest vastutate üksnes teie. Kui kustutate rakenduse või tühjendate selle andmed, lähevad kõik salvestatud andmed jäädavalt kaotsi, välja arvatud juhul, kui olete lubanud pilvevarunduse. Pilvevarundused asuvad teie valitud pilvekontol (iCloud / Google Drive / Dropbox) ning nende kättesaadavuse ja säilitamise üle otsustavad selle teenusepakkuja kasutustingimused. Me ei saa teie andmeid teie eest taastada. Samuti vastutate selle eest, et järgite oma tegevuskohas kehtivaid maksu-, arveldus- ja tarbijakaitseseadusi."
+    },
+    "updates": {
+      "title": "Rakenduse uuendused",
+      "desc": "Võime aeg-ajalt välja anda rakenduse uuendusi, et täiustada funktsioone, parandada vigu või tõsta turvalisust. Parima kogemuse saamiseks soovitame hoida rakendus ajakohasena."
+    },
+    "disclaimer": {
+      "title": "Vastutusest loobumine",
+      "desc": "DingPOS on esitatud „sellisena, nagu see on“, ilma igasuguste otseste või kaudsete garantiideta. Me ei garanteeri, et rakendus töötab katkestusteta või täiesti veatult. DingPOS on teie tegevust toetav tööriist; maksuarvutuste, laoseisu ja kõigi summade lõpliku õigsuse ning kohalike nõuete täitmise kontrollimine jääb teie vastutusele. Seadusega lubatud ulatuses ei vastuta me ühegi otsese, kaudse, juhusliku ega järelduva kahju eest, mis tuleneb rakenduse kasutamisest."
+    },
+    "liability": {
+      "title": "Vastutuse piiramine",
+      "desc": "ALU Studio vastutus rakenduse kasutamisest või kasutamise võimatusest tuleneva kahju eest ei ületa mitte mingil juhul summat, mille olete rakenduse eest maksnud sündmusele eelneva 12 kuu jooksul. See hõlmab muu hulgas andmete kadu, saamata jäänud tulu, seadme kahjustumist või mis tahes muud kahju."
+    },
+    "changes": {
+      "title": "Muudatused nendes tingimustes",
+      "desc": "Jätame endale õiguse neid kasutustingimusi igal ajal muuta. Muudetud tingimused jõustuvad kohe pärast nende avaldamist sellel lehel. Rakenduse jätkuv kasutamine tähendab muudetud tingimustega nõustumist."
+    },
+    "contact": {
+      "title": "Võtke meiega ühendust",
+      "desc": "Kui teil on kasutustingimuste kohta küsimusi, võtke meiega ühendust:"
+    }
+  },
+  "support": {
+    "doc_title": "Tugi",
+    "meta_description": "DingPOSi tugi: vastused ja samm-sammulised juhised iPadi kassarakenduse kohta – seadistus, kassa, müügid, laoseis, kampaaniad, varundus, töötajad ja arveldus.",
+    "title": "Kuidas saame aidata?",
+    "subtitle": "Otsi levinud küsimusi või sirvi teemade kaupa",
+    "search_placeholder": "Otsi, nt „vöötkood“ või „varukoopia taastamine“",
+    "search_hint_keywords": "Eralda märksõnad tühikuga",
+    "search_hint_shortcut_pre": "vajuta ",
+    "search_hint_shortcut_post": " otsimiseks",
+    "clear": "Tühjenda otsing",
+    "results_count": "{{num}} sobivat küsimust",
+    "no_results_title": "Sobivaid küsimusi ei leitud",
+    "no_results_desc": "Proovi teisi märksõnu või kirjuta meile – vastame peagi.",
+    "related_title": "Seotud küsimused",
+    "back": "Tugi",
+    "since": "Saadaval alates DingPOSi versioonist {{version}}",
+    "verified_version": "Sisu vastab DingPOSi versioonile {{version}}",
+    "contact_title": "Ei leia vastust?",
+    "contact_desc": "Kirjuta, mille otsa oled sattunud, ja vastame nii pea kui võimalik.",
+    "contact_cta": "Kirjuta ALU Studiole",
+    "group_faq": "Korduma kippuvad küsimused",
+    "group_guide": "Juhendid",
+    "group_guide_desc": "Samm-sammulised seadistusjuhendid, sh DingPOSi arendamise käigus kogutud vead ja lõksud.",
+    "group_roadmap": "Tulekul",
+    "group_roadmap_desc": "Pole veel saadaval – mõned on juba kavas. Sinu soovid kujundavad meie prioriteete, nii et kirjuta meile."
+  }
+}
