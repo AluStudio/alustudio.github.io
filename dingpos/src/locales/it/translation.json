@@ -173,7 +173,7 @@
           "Cassa completa con fino a 10 carrelli",
           "Prodotti con varianti, codici a barre, foto e categorie",
           "Storico ordini, storni, resi e cambi",
-          "Dashboard dell'attività: ricavi, utile, articoli più venduti",
+          "Dashboard dell'attività: ricavi, utile lordo, articoli più venduti",
           "Backup e ripristino nel cloud",
           "La cassa funziona anche offline"
         ],
@@ -184,9 +184,9 @@
         "tagline": "Per i negozi che hanno bisogno di giacenze, clienti con punti, acquisti o vendite a credito",
         "heading": "Tutto quello che c'è in Lite, più",
         "features": [
-          "Motore promozioni: soglie di spesa, 2x1, happy hour, applicati direttamente in cassa",
+          "Motore promozioni: soglie di spesa, 2x1 e happy hour, applicati automaticamente in cassa",
           "Punti cliente, riscatto e livelli fedeltà",
-          "Gestione delle giacenze e ordini d'acquisto",
+          "Gestione del magazzino e ordini d'acquisto",
           "Vendita a credito: consegni subito, incassi dopo",
           "Preordini: incassa un acconto e salda al ritiro"
         ],
@@ -278,7 +278,7 @@
           "desc": "Importa prodotti e vendite passate da altri sistemi tramite CSV"
         },
         "inventory": {
-          "name": "Gestione delle giacenze",
+          "name": "Gestione del magazzino",
           "desc": "La giacenza scala a ogni vendita; le rettifiche manuali lasciano traccia del movimento"
         },
         "purchasing": {
@@ -287,7 +287,7 @@
         },
         "promotions": {
           "name": "Motore promozioni",
-          "desc": "Soglie di spesa, 2x1, offerte sull'ennesimo articolo, happy hour, applicati direttamente in cassa"
+          "desc": "Soglie di spesa, 2x1, offerte sull'ennesimo articolo e happy hour, applicati automaticamente in cassa"
         },
         "loyalty": {
           "name": "Clienti e punti",
@@ -415,7 +415,7 @@
       "items": [
         "Impostazioni del negozio (nome, valuta, aliquota fiscale, logo)",
         "Dati dei prodotti (nome, prezzo, costo, codice a barre, foto, categoria, varianti, giacenza)",
-        "Ordini e registro delle operazioni (inclusi sconti, imposte, metodo di pagamento)",
+        "Ordini e movimenti di pagamento (inclusi sconti, imposte e metodo di pagamento)",
         "Dati di clienti e programma fedeltà (nome, telefono ed e-mail facoltativi, punti)",
         "Regole delle promozioni e impostazioni dei livelli fedeltà"
       ]
@@ -483,7 +483,7 @@
       "title": "Limitazioni",
       "desc": "Usando l'app, ti impegni a non:",
       "items": [
-        "Decodificare, disassemblare o decompilare l'app (reverse engineering)",
+        "Eseguire operazioni di ingegneria inversa, disassemblare o decompilare l'app",
         "Modificare, tradurre o creare opere derivate",
         "Rimuovere avvisi di copyright o etichette presenti nell'app",
         "Usare l'app per scopi illeciti"

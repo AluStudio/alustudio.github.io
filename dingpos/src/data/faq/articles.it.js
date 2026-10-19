@@ -99,7 +99,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Quando hai finito, senti un \"Ding!\": il negozio è pronto e puoi iniziare subito a registrare le vendite."
+        "text": "Quando hai finito, sentirai un \"Ding!\": il negozio è pronto e puoi iniziare subito a registrare le vendite."
       }
     ],
     "related": [
@@ -123,7 +123,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sì. DingPOS funziona anche offline: cassa, gestione dei prodotti, magazzino e report girano in locale sul tuo iPad, senza bisogno di rete. Mercatini serali, banchi pop-up e altri luoghi senza Wi-Fi non sono un problema."
+        "text": "Sì. DingPOS funziona anche offline: cassa, gestione dei prodotti, magazzino e report girano in locale sul tuo iPad, senza bisogno di rete. Mercatini serali, pop-up store e altri luoghi senza Wi-Fi non sono un problema."
       },
       {
         "type": "p",
@@ -300,7 +300,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ogni articolo e ogni carrello può avere un solo sconto alla volta: applicarne un altro sostituisce il precedente, e toccando il badge dello sconto lo rimuovi. Gli sconti si applicano prima dell'imposta, come da prassi nel commercio al dettaglio."
+        "text": "Ogni articolo e ogni carrello possono avere un solo sconto alla volta: applicarne un altro sostituisce il precedente, e toccando il badge dello sconto lo rimuovi. Gli sconti si applicano prima dell'imposta, come da prassi nel commercio al dettaglio."
       }
     ],
     "related": [
@@ -329,12 +329,12 @@ export const articles = [
         "type": "list",
         "items": [
           "Imposta inclusa: i prezzi contengono già l'imposta, quindi il totale non cambia e lo scontrino evidenzia l'imposta compresa (diffusa a Taiwan, in Giappone e altrove).",
-          "Imposta esclusa: l'imposta viene aggiunta alla cassa all'importo già scontato (diffusa negli Stati Uniti, in Canada e altrove)."
+          "Imposta esclusa: l'imposta viene aggiunta all'importo dopo gli sconti al momento del pagamento (diffusa negli Stati Uniti, in Canada e altrove)."
         ]
       },
       {
         "type": "p",
-        "text": "Ordine completo del calcolo: sconti sugli articoli → sconto sul carrello → imposta. Gli importi sono arrotondati per eccesso da metà in su ai decimali della valuta (ad es. 0 per TWD, 2 per USD)."
+        "text": "Ordine completo del calcolo: sconti sugli articoli → sconto sul carrello → imposta. Gli importi sono arrotondati al valore più vicino, con i casi a metà arrotondati per eccesso, al numero di decimali previsto per la valuta (ad es. 0 per TWD, 2 per USD)."
       }
     ],
     "related": [
@@ -553,7 +553,7 @@ export const articles = [
           "La giacenza viene scaricata quando si registra il preordine, così la merce resta riservata al cliente. Gli articoli esauriti vanno in negativo e si riallineano quando ricevi un ordine d'acquisto.",
           "Quando il cliente ritira, tocca Completa ritiro nel dettaglio dell'ordine per incassare il saldo. L'ordine diventa una normale vendita completata e gli eventuali resi seguono la procedura di reso abituale.",
           "Se il cliente non si presenta, tocca Annulla ordine nel dettaglio dell'ordine e scegli se rimborsare o trattenere l'acconto. La giacenza viene ripristinata.",
-          "La ricevuta dell'acconto e quella del ritiro finale hanno lo stesso numero."
+          "Lo scontrino dell'acconto e quello del ritiro finale hanno lo stesso numero."
         ]
       },
       {
@@ -739,15 +739,15 @@ export const articles = [
     "keywords": [
       "magazzino",
       "giacenza",
-      "scorte",
+      "giacenze",
       "gestione del magazzino",
       "inventario",
-      "scorta minima"
+      "giacenza bassa"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Il controllo del magazzino si attiva prodotto per prodotto: abilitalo nella pagina di modifica del prodotto e inserisci la quantità attuale. Ogni variante di un prodotto tiene traccia della propria giacenza."
+        "text": "La gestione del magazzino si attiva prodotto per prodotto: abilitala nella pagina di modifica del prodotto e inserisci la quantità attuale. Ogni variante di un prodotto tiene traccia della propria giacenza."
       },
       {
         "type": "p",
@@ -766,7 +766,7 @@ export const articles = [
     "keywords": [
       "giacenza negativa",
       "magazzino negativo",
-      "scorta",
+      "giacenza",
       "esaurito",
       "blocco vendita",
       "rettifica"
@@ -1002,7 +1002,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Soglia di spesa: spendi X e ottieni Y di sconto oppure il Y% di sconto.",
-          "Offerte \"prendi uno, paghi uno\" e sull'ennesimo articolo.",
+          "Offerte 2x1 e promozioni sull'ennesimo articolo.",
           "Moltiplicatori di punti bonus.",
           "Offerte riservate a un livello cliente o al mese del compleanno.",
           "Compra A e ricevi B, extra a pagamento e offerte multiple a prezzo fisso."
@@ -1133,7 +1133,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "I backup vengono salvati nel tuo account cloud. Ogni cloud conserva solo l'ultimo: una copia dei dati e un file con le foto dei prodotti. Ogni nuovo backup sovrascrive il precedente."
+        "text": "I backup vengono salvati nel tuo account cloud. Ogni cloud conserva solo l'ultimo: una copia nel cloud dei dati e un file con le foto dei prodotti. Ogni nuovo backup sovrascrive il precedente."
       },
       {
         "type": "note",
@@ -1208,7 +1208,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Toccando Ripristina si apre prima un'anteprima: i numeri di prodotti, ordini e clienti di questo iPad e della copia affiancati, più tutti gli ordini che il ripristino rimuoverebbe. Su questo iPad non cambia nulla finché non confermi. Se la copia è stata creata da una versione più recente di DingPOS, ti verrà chiesto di aggiornare prima l'app. Vengono ripristinate anche le foto dei prodotti."
+        "text": "Toccando Ripristina si apre prima un'anteprima: i numeri di prodotti, ordini e clienti di questo iPad e della copia nel cloud affiancati, più tutti gli ordini che il ripristino rimuoverebbe. Su questo iPad non cambia nulla finché non confermi. Se la copia nel cloud è stata creata da una versione più recente di DingPOS, ti verrà chiesto di aggiornare prima l'app. Vengono ripristinate anche le foto dei prodotti."
       },
       {
         "type": "note",
@@ -1370,7 +1370,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sì. Ogni ripristino dal cloud conserva i dati sostituiti come copia pre-ripristino. In Impostazioni → Backup su cloud, una scheda mostra quando è avvenuto l'ultimo ripristino e da dove proveniva. Tocca Annulla ripristino, controlla l'anteprima e conferma: i dati tornano com'erano prima del ripristino e l'app si ricarica."
+        "text": "Sì. Ogni ripristino dal cloud conserva i dati sostituiti come copia pre-ripristino. In Impostazioni → Backup su cloud, una scheda mostra quando è avvenuto l'ultimo ripristino e da quale copia nel cloud proveniva. Tocca Annulla ripristino, controlla l'anteprima e conferma: i dati tornano com'erano prima del ripristino e l'app si ricarica."
       },
       {
         "type": "list",
@@ -1382,7 +1382,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Per vedere chi ha ripristinato, quando e da quale copia, tocca Mostra registro ripristino nella stessa schermata: per ogni ripristino trovi ora, operatore, origine, numero di prodotti / ordini / clienti prima e dopo, e tutti gli ordini rimossi. I registri restano su questo iPad e non vengono mai sostituiti da un ripristino."
+        "text": "Per vedere chi ha ripristinato, quando e da quale copia nel cloud, tocca Mostra registro ripristino nella stessa schermata: per ogni ripristino trovi ora, operatore, origine, numero di prodotti / ordini / clienti prima e dopo, e tutti gli ordini rimossi. I registri restano su questo iPad e non vengono mai sostituiti da un ripristino."
       },
       {
         "type": "note",
@@ -1485,7 +1485,7 @@ export const articles = [
       "permessi",
       "approvazione",
       "responsabile",
-      "sconto massimo",
+      "sconto massimo del ruolo",
       "collaboratori",
       "costo",
       "ruolo"
@@ -1498,14 +1498,14 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Azioni (rettifica manuale della giacenza, gestione prodotti, pagamento oltre lo sconto massimo): un'approvazione vale per quella sola azione.",
+          "Azioni (rettifica manuale della giacenza, gestione prodotti, pagamento oltre lo sconto massimo del ruolo): un'approvazione vale per quella sola azione.",
           "Schermate (costi e utile, Report, Impostazioni, backup e ripristino): un'approvazione sblocca finché l'operatore non cambia o l'app va in background.",
-          "Lo sconto massimo si applica agli sconti manuali e viene controllato una sola volta al pagamento; le promozioni automatiche e il riscatto dei punti non vengono conteggiati."
+          "Lo sconto massimo del ruolo si applica agli sconti manuali e viene controllato una sola volta al pagamento; le promozioni automatiche e il riscatto dei punti non vengono conteggiati."
         ]
       },
       {
         "type": "p",
-        "text": "Impostazioni di fabbrica: i Responsabili possono fare tutto tranne backup e ripristino, senza sconto massimo; i Collaboratori richiedono approvazione per tutto, con un massimo del 10%. Il titolare è sempre autorizzato e non è modificabile. Per cambiarle, vai in Collab. → Permessi dei ruoli, tocca Modifica e salva una volta: la modifica vale subito per tutti."
+        "text": "Impostazioni di fabbrica: i Responsabili possono fare tutto tranne backup e ripristino, senza sconto massimo del ruolo; i Collaboratori richiedono approvazione per tutto, con uno sconto massimo del ruolo del 10%. Il titolare è sempre autorizzato e non è modificabile. Per cambiarle, vai in Collab. → Permessi dei ruoli, tocca Modifica e salva una volta: la modifica vale subito per tutti."
       },
       {
         "type": "note",
@@ -1551,7 +1551,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Ogni piano registra; solo la consultazione è una funzione Pro, quindi le registrazioni fatte mentre il Pro era scaduto compaiono quando ti riabboni. Il registro viaggia con i tuoi backup nel cloud."
+        "text": "La registrazione è attiva con tutti i piani; solo la consultazione è una funzione Pro, quindi le registrazioni fatte mentre il Pro era scaduto compaiono quando ti riabboni. Il registro è incluso nei backup sul cloud."
       }
     ],
     "related": [
@@ -2004,7 +2004,7 @@ export const articles = [
     "keywords": [
       "lettore codici a barre",
       "scanner",
-      "pistola barcode",
+      "lettore a pistola per codici a barre",
       "bluetooth",
       "usb",
       "hardware"
