@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Помощ | Помощен център за страниците; „Поддръжка“ само за контакт с екипа |
+| FAQ / frequently asked questions | Често задавани въпроси | Кратко в навигацията: ЧЗВ |
+| Pricing (the page) | Цени |  |
+| Plan (Lite / Standard / Pro; the names stay in English) | План | from app glossary; имената Lite / Standard / Pro не се превеждат; не „Пакет“ (Bundle) |
+| Free trial | Безплатен пробен период |  |
+| Billed monthly / billed annually | Месечно плащане / Годишно плащане | „Таксува се“ само в изречения; не използвайте „Плащане“ като термин на приложението за PaymentEvent извън цените |
+| Terms of Use | Условия за ползване |  |
+| Coming Soon (planned features) | Очаквайте скоро |  |
+| Setup guide (promotion setup guides) | Ръководство за настройка |  |
+| Shop owner | Собственик на магазин | Собственик from app glossary (Owner) |
+| Stall / pop-up / night market | Щанд / временен щанд / нощен пазар | „Пазарен щанд“ за market stall; нощен пазар е тайванско понятие – обяснявайте при нужда |
+| Offline-first | Работи без интернет | Не „офлайн-първо“; може „работи офлайн“ |
+| Point of sale (POS) app | Приложение за касов терминал (POS) | Търсен термин: „POS система“; DingPOS не се превежда |
