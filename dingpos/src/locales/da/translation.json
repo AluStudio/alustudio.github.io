@@ -101,7 +101,7 @@
     "inventory": {
       "title": "Lager",
       "items": [
-        "Til/fra-kontakt for lagersporing pr. produkt",
+        "Til-/fra-knap for lagersporing pr. produkt",
         "Selvstændigt lager for hver variant",
         "Negativt lager tilladt – salget blokeres aldrig",
         "Farveadvarsler ved lavt lager",
@@ -170,10 +170,10 @@
         "tagline": "Til én person i en bod, som har brug for betaling og produkter",
         "heading": "Indeholder",
         "features": [
-          "Fuld betaling med op til 10 kurve",
+          "Komplet betalingsflow med op til 10 kurve",
           "Produkter med varianter, stregkoder, fotos og kategorier",
-          "Ordrehistorik, makuleringer, returvarer og ombytninger",
-          "Forretningsoversigt: omsætning, fortjeneste, bedst sælgende varer",
+          "Ordrehistorik, makuleringer, returer og ombytninger",
+          "Forretningsoversigt: omsætning, dækningsbidrag, bedst sælgende varer",
           "Cloud-backup og gendannelse",
           "Betaling virker offline"
         ],
@@ -194,7 +194,7 @@
       },
       "pro": {
         "name": "Pro",
-        "tagline": "Til butikker med medarbejdere, der har brug for roller og et revisionsspor",
+        "tagline": "Til butikker med medarbejdere, der har brug for roller og en aktivitetslog",
         "heading": "Alt i Standard, plus",
         "features": [
           "Medarbejderkonti: hver sin PIN, og hver ordre viser, hvem der har ekspederet den",
@@ -415,7 +415,7 @@
       "items": [
         "Butiksindstillinger (butikkens navn, valuta, momssats, logo)",
         "Produktdata (navn, pris, kostpris, stregkode, foto, kategori, varianter, lager)",
-        "Ordrer og transaktioner (inklusive rabatter, moms og betalingsmetode)",
+        "Ordrer og betalingshændelser (herunder rabatter, moms og betalingsmetode)",
         "Kunde- og medlemsdata (navn, valgfrit telefonnummer og e-mail, point)",
         "Kampagneregler og indstillinger for medlemsniveauer"
       ]
@@ -429,7 +429,7 @@
       "desc": "DingPOS indsamler, sender eller deler ikke noget af dit forretningsindhold. Helt konkret gør vi ikke følgende:",
       "items": [
         "Vi indsamler ikke dine produkt-, ordre-, kunde- eller medlemsdata",
-        "Vi berører ikke betalingsflow eller kreditkortoplysninger (appen behandler ikke egentlige kortbetalinger)",
+        "Vi håndterer ikke betalingsforløb eller kreditkortoplysninger (appen behandler ikke egentlige kortbetalinger)",
         "Vi sporer ikke din placering",
         "Vi deler ikke dine forretningsdata med tredjeparter"
       ]
@@ -477,11 +477,11 @@
     },
     "subscription": {
       "title": "Abonnement og betaling",
-      "desc": "DingPOS tilbyder en gratis prøveperiode på 30 dage fra første installation, hvor alle funktioner i Pro er tilgængelige. Hvis du køber et abonnementsniveau i prøveperioden, afsluttes prøveperioden, og det købte abonnementsniveau gælder fra købstidspunktet. Efter prøveperioden kræves et abonnement på et af abonnementsniveauerne (Lite, Standard eller Pro), købt som køb i appen via App Store, for at du kan fortsætte med at bruge betaling. Indhold og priser for abonnementsniveauerne fremgår af siden med priser (alu-studio.com/dingpos/pricing), og den pris, der trækkes, er den, der vises i App Store. Uden abonnement kan du stadig se og administrere produkter, og dine data slettes aldrig. Abonnementet fornyes automatisk, medmindre du opsiger det mindst 24 timer før udgangen af den aktuelle periode. Du kan til enhver tid administrere eller opsige dit abonnement i indstillingerne for din App Store-konto på din enhed. Købte abonnementer kan gendannes."
+      "desc": "DingPOS tilbyder en gratis prøveperiode på 30 dage fra første installation, hvor alle funktioner i Pro er tilgængelige. Hvis du køber et abonnementsniveau i prøveperioden, afsluttes prøveperioden, og det købte abonnementsniveau gælder fra købstidspunktet. Efter prøveperioden kræves et abonnement på et af abonnementsniveauerne (Lite, Standard eller Pro), købt som køb i appen via App Store, for at du kan fortsætte med at gennemføre betalinger. Indhold og priser for abonnementsniveauerne fremgår af siden med priser (alu-studio.com/dingpos/pricing), og den pris, der trækkes, er den, der vises i App Store. Uden abonnement kan du stadig se og administrere produkter, og dine data slettes aldrig. Abonnementet fornyes automatisk, medmindre du opsiger det mindst 24 timer før udgangen af den aktuelle periode. Du kan til enhver tid administrere eller opsige dit abonnement i indstillingerne for din App Store-konto på din enhed. Købte abonnementer kan gendannes."
     },
     "restrictions": {
       "title": "Begrænsninger",
-      "desc": "Når du bruger appen, accepterer du ikke at:",
+      "desc": "Når du bruger appen, forpligter du dig til ikke at:",
       "items": [
         "Foretage reverse engineering af appen eller adskille eller dekompilere den",
         "Ændre eller oversætte appen eller skabe afledte værker",

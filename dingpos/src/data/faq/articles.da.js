@@ -86,7 +86,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Første gang du åbner DingPOS, guider en opsætningsguide dig gennem oprettelsen af din butik på cirka 10 minutter:"
+        "text": "Første gang du åbner DingPOS, hjælper en opsætningsguide dig med at oprette din butik på cirka 10 minutter:"
       },
       {
         "type": "steps",
@@ -391,7 +391,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Gå til Indstillinger → Enhedsvalg, og slå Betalingslyd fra. Fra næste salg er bekræftelsesskærmen lydløs, men den lille vibration er der stadig."
+        "text": "Ja. Gå til Indstillinger → Enhedsvalg, og slå Betalingslyd fra. Fra næste salg er bekræftelsesskærmen lydløs, men det haptiske tryk er der stadig."
       },
       {
         "type": "p",
@@ -446,7 +446,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Manuel varerabat: den linje får ikke længere kampagner på varenivå — din manuelle rabat er den endelige beslutning på stedet. Linjens beløb tæller dog stadig med i beløbsgrænser.",
+          "Manuel varerabat: Linjen får ikke længere kampagner på vareniveau — din manuelle rabat gælder i stedet. Linjens beløb tæller dog stadig med i kampagnernes forbrugstærskler.",
           "Manuel kurvrabat: lægges på, efter alle kampagner er beregnet, så de to eksisterer side om side. Indtaster du mere end det resterende beløb, begrænses den automatisk med en besked."
         ]
       },
@@ -801,14 +801,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Indkøb i indholdsoversigten administrerer leverandører og indkøbsordrer. En leverandør gemmer et navn, en kontaktperson, telefonnummer, adresse og en standardbetalingsbetingelse (betal nu eller månedligt)."
+        "text": "Indkøb i sidemenuen bruges til at administrere leverandører og indkøbsordrer. For hver leverandør kan du gemme navn, kontaktperson, telefonnummer, adresse og en standardbetalingsbetingelse (betal nu eller månedligt)."
       },
       {
         "type": "steps",
         "items": [
           "Tryk på Nyt indkøb, vælg leverandøren, og tilføj produkter, antal og enhedskostpriser (udfyldt på forhånd med hvert produkts nuværende kostpris). Du kan også tilføje en fragtomkostning. Hvis leverandøren endnu ikke er oprettet, trykker du på Tilføj leverandør øverst til venstre på leverandørlisten – den nye leverandør kommer direkte tilbage til indkøbsordren.",
           "En kladde rører aldrig lager eller skyldige beløb – du kan frit redigere eller slette den.",
-          "Når varerne kommer, trykker du på Modtag lager: det lagerstyrede lager stiger, og indkøbsordren får sit nummer og låses. Som standard opdaterer modtagelsen også hvert produkts kostpris til denne enhedskostpris; slå Synkronisér produktets kostpris fra på indkøbsordren for at lade kostpriserne være uændrede."
+          "Når varerne kommer, trykker du på Modtag lager: lagerbeholdningen for lagerstyrede produkter stiger, og indkøbsordren får sit nummer og låses. Som standard opdaterer modtagelsen også hvert produkts kostpris til denne enhedskostpris; slå Synkronisér produktets kostpris fra på indkøbsordren for at lade kostpriserne være uændrede."
         ]
       },
       {
@@ -834,7 +834,7 @@ export const articles = [
     "keywords": [
       "omsætning",
       "modtagne betalinger",
-      "indtægt",
+      "betalinger",
       "afstemning",
       "depositum",
       "salg på konto"
@@ -960,7 +960,7 @@ export const articles = [
       "kostpris",
       "fortjeneste",
       "dækningsbidrag",
-      "avance",
+      "bruttofortjeneste",
       "rapporter",
       "ikke opgjort"
     ],
@@ -1068,7 +1068,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gå til Indstillinger → Loyalitet og angiv to regler: optjen Y point for hver X brugt, og indløs N point til M i rabat (eventuelt med et loft for indløsning pr. ordre). Du kan også give nye medlemmer velkomstpoint automatisk."
+        "text": "Gå til Indstillinger → Loyalitetsprogram og angiv to regler: optjen Y point for hver X, du bruger, og indløs N point til M i rabat (eventuelt med et loft for indløsning pr. ordre). Du kan også give nye medlemmer velkomstpoint automatisk."
       },
       {
         "type": "p",
@@ -1131,7 +1131,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Fordi en ny backup erstatter den gamle, bør du ikke tage backup, hvis du har mistanke om, at dine data allerede er gået galt (for eksempel hvis en række produkter er slettet ved en fejl). Skriv i stedet til os på e-mail, så finder vi sammen ud af næste skridt."
+        "text": "Fordi en ny backup erstatter den gamle, bør du ikke tage backup, hvis du har mistanke om, at der allerede er noget galt med dine data (for eksempel hvis en række produkter er blevet slettet ved en fejl). Skriv i stedet til os på e-mail, så finder vi sammen ud af næste skridt."
       }
     ],
     "related": [
@@ -1202,7 +1202,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Når du trykker på Gendan, åbnes først en forhåndsvisning: antal produkter, ordrer og kunder på denne iPad og i øjebliksbilledet side om side, plus hver ordre, som gendannelsen ville fjerne. Intet på denne iPad ændres, før du bekræfter. Et øjebliksbillede lavet af en nyere version af DingPOS beder dig først opdatere appen. Produktbilleder gendannes også."
+        "text": "Når du trykker på Gendan, åbnes først en forhåndsvisning: antal produkter, ordrer og kunder på denne iPad og i øjebliksbilledet side om side, plus hver ordre, som gendannelsen ville fjerne. Intet på denne iPad ændres, før du bekræfter. Hvis øjebliksbilledet er oprettet med en nyere version af DingPOS, bliver du bedt om først at opdatere appen. Produktbilleder gendannes også."
       },
       {
         "type": "note",
@@ -1363,7 +1363,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Hver cloud-gendannelse gemmer de data, den erstattede, som en kopi før gendannelsen. Under Indstillinger → Cloud-backup viser et kort, hvornår den seneste gendannelse fandt sted, og hvorfra den kom. Tryk på Fortryd gendannelse, gennemgå forhåndsvisningen, og bekræft – så skifter dataene tilbage til, som de var før gendannelsen, og appen genindlæses."
+        "text": "Ja. Hver cloud-gendannelse gemmer de data, den erstattede, som en kopi før gendannelsen. Under Indstillinger → Cloud-backup viser et kort, hvornår den seneste gendannelse fandt sted, og hvorfra den kom. Tryk på Fortryd gendannelse, gennemgå forhåndsvisningen, og bekræft – så gendannes dataene, som de var før gendannelsen, og appen genindlæses."
       },
       {
         "type": "list",
@@ -1375,11 +1375,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Hvis du vil se, hvem der gendannede, hvornår og fra hvilket øjebliksbillede, så tryk på Vis gendannelsesposter på samme skærm: hver gendannelses tidspunkt, aktive medarbejder, kilde, antal produkter / ordrer / kunder før og efter samt hver ordre, den fjernede. Posterne ligger på denne iPad og erstattes aldrig af en gendannelse."
+        "text": "Hvis du vil se, hvem der gendannede, hvornår og fra hvilket øjebliksbillede, så tryk på Vis gendannelsesposter på samme skærm: tidspunktet for hver gendannelse, aktiv medarbejder, kilde, antal produkter / ordrer / kunder før og efter samt hver ordre, den fjernede. Posterne ligger på denne iPad og erstattes aldrig af en gendannelse."
       },
       {
         "type": "note",
-        "text": "Forhåndsvisningen af gendannelsen og Fortryd gendannelse virker på alle abonnementsniveauer; at se gendannelsesposter er en Pro-funktion. Posterne bliver også skrevet uden Pro (blot uden aktiv medarbejder), så hvis du senere tegner Pro, kan du se dem alle."
+        "text": "Forhåndsvisningen af gendannelsen og Fortryd gendannelse virker på alle abonnementsniveauer; at se gendannelsesposter er en Pro-funktion. Posterne bliver også skrevet uden Pro (blot uden aktiv medarbejder), så hvis du senere abonnerer på Pro, kan du se dem alle."
       }
     ],
     "related": [
@@ -1495,14 +1495,14 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Handlinger (manuel lagerregulering, produktstyring, betaling over rabatloftet): én godkendelse dækker den ene handling.",
+          "Handlinger (manuel lagerregulering, produktstyring, ekspedition med rabat over rabatloftet): én godkendelse dækker den ene handling.",
           "Visninger (kostpris og fortjeneste, Statistik, Indstillinger, backup og gendannelse): en godkendelse låser op, indtil den aktive medarbejder skifter, eller appen går i baggrunden.",
           "Rabatloftet gælder manuelle rabatter og kontrolleres én gang ved betaling. Automatiske kampagner og indløsning af point tæller ikke med."
         ]
       },
       {
         "type": "p",
-        "text": "Standardindstillinger: Ledere har lov til alt undtagen backup og gendannelse, uden rabatloft. Medarbejdere kræver godkendelse til alt, med et loft på 10 %. Ejeren har altid lov til alt og kan ikke redigeres. Hvis du vil ændre det, går du til Personale → Rolletilladelser, trykker på Rediger og gemmer én gang – ændringen gælder straks for alle."
+        "text": "Standardindstillinger: Ledere har lov til alt undtagen backup og gendannelse, uden rabatloft. Medarbejdere kræver godkendelse til alt, med et loft på 10 %. Ejeren har altid lov til alt, og ejerens tilladelser kan ikke ændres. Hvis du vil ændre det, går du til Personale → Rolletilladelser, trykker på Rediger og gemmer én gang – ændringen gælder straks for alle."
       },
       {
         "type": "note",
@@ -1578,7 +1578,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Alt, hvad du opretter i prøveperioden (produkter, ordrer, medlemmer), bliver gemt fuldt ud. Dine data bliver aldrig slettet, uanset om du tegner et abonnement bagefter eller ej."
+        "text": "Alt, hvad du opretter i prøveperioden (produkter, ordrer, medlemmer), bevares fuldt ud. Dine data bliver aldrig slettet, uanset om du tegner et abonnement bagefter eller ej."
       }
     ],
     "related": [
@@ -1849,7 +1849,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Efter Afslå vises det samme forslag ikke igen for denne kurv; en ny eller tømt kurv giver forslaget igen.",
+          "Når du har trykket på Afslå, vises det samme forslag ikke igen for denne kurv; en ny eller tømt kurv udløser forslaget igen.",
           "Hvis et nyt forslag dukker op før bekræftelsen ved betaling, skal det accepteres eller afslås, før ordren kan gennemføres.",
           "Gave- og tilkøbslinjer kan ikke få yderligere rabat fra andre rabatkampagner og tæller ikke med i andre kampagners minimumsgrænser."
         ]
@@ -1958,7 +1958,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS er ikke en del af pengestrømmen i dag – betalingsmetoder er kun bogføringsmærker, og selve betalingen sker via din eksisterende terminal eller betalingsapp."
+        "text": "DingPOS er ikke en del af pengestrømmen i dag – betalingsmetoder er kun bogføringsbetegnelser, og selve betalingen sker via din eksisterende terminal eller betalingsapp."
       },
       {
         "type": "p",
