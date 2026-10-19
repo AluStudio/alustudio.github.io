@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | tugi | Menu/page title "Tugi"; avoid "klienditeenindus" |
+| FAQ / frequently asked questions | korduma kippuvad küsimused | Short form for menus and headings: KKK; avoid "UKK" |
+| Pricing (the page) | hinnad | Heading "Hinnad"; avoid "hinnakiri" |
+| Plan (Lite / Standard / Pro; the names stay in English) | pakett | from app glossary; names Lite / Standard / Pro stay |
+| Free trial | tasuta prooviperiood | Button form: "Proovi tasuta"; avoid "demo" |
+| Billed monthly / billed annually | tasutakse kuus / tasutakse aastas | Short labels: "kuumaks" / "aastamaks"; avoid "arveldatakse" |
+| Terms of Use | kasutustingimused | Lower case in running text, capitalized as a title |
+| Coming Soon (planned features) | tulekul | Badge "Tulekul"; avoid "peagi" |
+| Setup guide (promotion setup guides) | seadistusjuhend | Avoid "õpetus" for guide titles |
+| Shop owner | poepidaja | Avoid "ettevõtja"; the app's "omanik" is only for the Owner role |
+| Stall / pop-up / night market | turulett / pop-up-pood / ööturg | Stall = turulett; avoid "kioskipood" |
+| Offline-first | töötab ilma internetita | Phrase, not a compound; avoid "võrguväline" |
+| Point of sale (POS) app | kassasüsteemi rakendus | Short form: "kassarakendus"; "POS" may follow once in brackets; avoid "müügipunkt" |
