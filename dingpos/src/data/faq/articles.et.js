@@ -549,7 +549,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vaheta kassas ekraani ülaosas valik Müük valikuks Ettetellimus, vali kättesaamise kuupäev, sisesta käsiraha (0-st kogusummani, kiirvalikud 30% / 50% / täis) ja vali, kuidas käsiraha tasutakse. Lisa klient, et saaksid temaga kaupade saabumisel ühendust võtta."
+        "text": "Vaheta kassas ekraani ülaosas valik Müük valikuks Ettetellimus, vali kättesaamise kuupäev, sisesta käsiraha (0-st kogusummani, kiirvalikud 30% / 50% / Täis) ja vali, kuidas käsiraha tasutakse. Lisa klient, et saaksid temaga kaupade saabumisel ühendust võtta."
       },
       {
         "type": "list",
@@ -562,7 +562,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jaotises Aruanded arvestatakse ettetellimuse müügitulu täielikult kättesaamise päeval, käsiraha aga loetakse laekunud rahasse selle tasumise päeval – seega on need kaks arvu mõnda aega erinevad. Vaata „Mis vahe on müügitulul ja laekunud rahal?“"
+        "text": "Jaotises Aruanded arvestatakse ettetellimuse müügitulu täielikult kättesaamise päeval, käsiraha aga arvestatakse selle tasumise päeval laekunud raha hulka – seega on need kaks arvu mõnda aega erinevad. Vaata „Mis vahe on müügitulul ja laekunud rahal?“"
       },
       {
         "type": "note",
@@ -1510,7 +1510,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Anuleerimiste, tagastuste, arvele müükide ja ostutellimuste jaoks pole teadlikult õiguste seadistust; nende puhul salvestatakse ainult see, kes neid käsitles. Hiljem saad neid vaadata tegevuslogist."
+        "text": "Müük arvele, anuleerimised, tagastused ja ostutellimused on teadlikult õiguste seadistusest välja jäetud; nende puhul salvestatakse ainult see, kes neid käsitles. Hiljem saad neid vaadata tegevuslogist."
       }
     ],
     "related": [
@@ -1642,7 +1642,7 @@ export const articles = [
         "items": [
           "Lite: ühele inimesele, kes peab turulettu ning vajab kassat ja tooteid.",
           "Standard: lisab kampaaniad, püsikliendipunktid ja tasemed, laoseisu jälgimise, ostutellimused, müügi arvele ja ettetellimused.",
-          "Pro: lisab töötajad ja õigused, heakskiidu, tegevuslogi, taastamise kirjed ja täiustatud aruanded – töötajatega poodidele."
+          "Pro: lisab töötajakontod ja õigused, heakskiidu, tegevuslogi, taastamise kirjed ja täiustatud aruanded – töötajatega poodidele."
         ]
       },
       {
