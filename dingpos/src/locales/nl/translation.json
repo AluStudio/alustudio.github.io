@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the nl translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync nl`, then `npm run l10n -- apply nl`.",
+  "nav": {
+    "home": "Home",
+    "pricing": "Prijzen",
+    "privacy": "Privacybeleid",
+    "terms": "Gebruiksvoorwaarden",
+    "support": "Veelgestelde vragen"
+  },
+  "hero": {
+    "meta_title": "DingPOS — kassa-app voor iPad die ook offline werkt",
+    "meta_description": "DingPOS — start je winkel in 10 minuten. Een kassa-app voor iPad die ook zonder internet werkt. Jouw gegevens, jouw controle.",
+    "eyebrow": "Kassa-app voor iPad",
+    "title": "Start je winkel in 10 minuten. Jouw gegevens, jouw controle.",
+    "description": "DingPOS is een kassa-app voor iPad. Geen account, geen afhankelijkheid van de cloud, en alles werkt ook zonder internet. Je producten, bestellingen en klanten blijven op je eigen apparaat.",
+    "download": "Download in de App Store",
+    "note": "30 dagen gratis proefperiode.",
+    "shot_alt": "Het afrekenscherm van DingPOS: links een productraster met categoriefilters, rechts de winkelmand met automatisch toegepaste acties en het totaal"
+  },
+  "proof": {
+    "items": [
+      "Geen account nodig",
+      "Afrekenen werkt offline",
+      "Gegevens blijven op je iPad"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Afrekenen",
+      "title": "Elke stap van een verkoop op één scherm",
+      "lead": "Tot 10 winkelmanden tegelijk, producten zoeken op naam of barcode terwijl je typt, en korting en btw berekend voordat je de betaling aanneemt.",
+      "items": [
+        "Tot 10 winkelmanden tegelijk open",
+        "Producten zoeken op naam en barcode, terwijl je typt",
+        "Korting op artikelen en op de hele winkelmand, vast bedrag of percentage",
+        "Btw inclusief of exclusief automatisch berekend",
+        "Wisselgeld bij contante betaling en eigen namen voor betaalmethoden",
+        "Elke verkoop eindigt met een \"Ding!\" en voelbare trilling"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Actiemodule",
+      "title": "Stel de regels één keer in, bij het afrekenen worden ze toegepast",
+      "lead": "Bestedingsdrempels, 1+1 gratis, happy hours en ledenacties — zodra een regel is ingesteld, rekent de kassa de actie automatisch uit. Niemand hoeft iets te onthouden en je hoeft geen couponcodes in te voeren.",
+      "items": [
+        "Drempels op het subtotaal van de winkelmand worden automatisch geactiveerd",
+        "Korting op de winkelmand of op artikelen (vast bedrag of percentage)",
+        "Acties zoals 1+1 gratis en korting op het zoveelste artikel",
+        "Vermenigvuldigers voor punten",
+        "Happy hour-tijdvensters — over middernacht heen, te kiezen weekdagen",
+        "Instellingen voor prioriteit, combineerbaarheid en stoppen na toepassing",
+        "Gebruikslimieten (in totaal of per klant)",
+        "Automatisch toegepast bij het afrekenen — geen couponcodes"
+      ],
+      "shot_alt": "De lijst met acties in Instellingen, verdeeld in bundels en kortingen, waarbij elke regel zijn status en prioriteit toont"
+    },
+    "reports": {
+      "eyebrow": "Rapporten",
+      "title": "Wat je vandaag hebt verdiend, terwijl de winkel nog open is",
+      "lead": "Aantal bestellingen, omzet, brutowinst, kortingen en verdeling van betaalmethoden op één pagina, voor vandaag, 7 dagen, 30 dagen of alle tijd.",
+      "items": [
+        "Vandaag: aantal bestellingen, omzet, brutowinst, korting, verdeling van betaalmethoden",
+        "Top 5 producten op aantal",
+        "Periodes per dag / week / maand",
+        "Grafieken met het verloop van omzet en brutowinst"
+      ],
+      "shot_alt": "Het dashboard met de omzet van vandaag, totale korting, winst en gemiddelde bonwaarde, boven een cirkeldiagram van betaalmethoden en een lijst met bestsellers"
+    },
+    "orders": {
+      "eyebrow": "Orders",
+      "title": "Elke verkoop staat erin, en elke verkoop kan ongedaan worden gemaakt",
+      "lead": "Elke bestelling bewaart het volledige verloop: artikelen en varianten, welke actie gold, btw, betaalmethode en teruggegeven wisselgeld.",
+      "items": [
+        "Chronologische lijst met bestellingen, filteren op datum en betaalmethode",
+        "Regeldetails bewaren artikelen, varianten, kortingen, btw en wisselgeld",
+        "Ongeldig maken met bevestiging — voorraad en punten automatisch hersteld"
+      ],
+      "shot_alt": "Links een chronologische lijst met bestellingen, rechts de details van de geselecteerde bestelling: artikelen, toegepaste korting, btw, totaal, betaalmethode en wisselgeld"
+    }
+  },
+  "features": {
+    "title": "De rest van het runnen van een winkel",
+    "subtitle": "Eerste installatie, producten, voorraad en leden — alles op dezelfde iPad",
+    "onboarding": {
+      "title": "Snel aan de slag",
+      "items": [
+        "Kies je land; valuta, btw-modus en btw-tarief worden ingevuld",
+        "Stel de naam en het logo van je winkel in",
+        "Ongeveer 10 minuten van begin tot eind, daarna kun je verkopen"
+      ]
+    },
+    "products": {
+      "title": "Producten en varianten",
+      "items": [
+        "Categoriebeheer en filteren",
+        "Varianten (bijv. maat × kleur), elk met een eigen prijs en kostprijs",
+        "Barcodes handmatig invoeren of met de camera scannen, dubbele worden geblokkeerd",
+        "Productfoto's met miniaturen die bij het bewaren worden gemaakt"
+      ]
+    },
+    "inventory": {
+      "title": "Voorraad",
+      "items": [
+        "Voorraad bijhouden per product aan of uit te zetten",
+        "Aparte voorraad per variant",
+        "Negatieve voorraad toegestaan — afrekenen wordt nooit geblokkeerd",
+        "Waarschuwing in kleur bij lage voorraad",
+        "Volledig mutatieoverzicht: verkoop, ongeldig maken, handmatige correctie"
+      ]
+    },
+    "loyalty": {
+      "title": "Leden en punten",
+      "items": [
+        "Leden aanmelden: naam, telefoonnummer en e-mail optioneel",
+        "Spaar Y punten per X besteed",
+        "Wissel N punten in voor M korting, met een optioneel maximum",
+        "Nieuwe leden krijgen automatisch een welkomstbonus",
+        "Ledenniveaus waarop acties zich kunnen richten",
+        "Een bestelling ongeldig maken draait gespaarde en ingewisselde punten terug"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Back-up en privacy",
+    "title": "Zonder account kan niemand bij je gegevens",
+    "lead": "Bij DingPOS hoef je je nergens voor aan te melden. Je boekhouding staat op de iPad en wil je back-ups, dan gaan die naar een cloudaccount dat je al hebt.",
+    "items": [
+      "Kies iCloud, Google Drive of Dropbox",
+      "Handmatige back-up, wanneer je wilt",
+      "Bewaart de laatste 5 momentopnamen",
+      "Incrementele synchronisatie van afbeeldingen",
+      "Geen account; gegevens op het apparaat, back-ups in je eigen cloud",
+      "Werkt volledig offline"
+    ]
+  },
+  "home_pricing": {
+    "title": "Eenvoudige, heldere prijzen",
+    "price_before": "Drie abonnementen, vanaf ",
+    "price_after": " per maand",
+    "sub": "30 dagen gratis proefperiode. Geen transactiekosten, geen verborgen kosten. Je gegevens blijven na de proefperiode altijd bewaard — je kunt je op elk moment opnieuw abonneren.",
+    "compare": "Vergelijk abonnementen",
+    "cta": "Start de gratis proefperiode van 30 dagen"
+  },
+  "pricing": {
+    "doc_title": "Abonnementen en prijzen",
+    "meta_description": "Vergelijk de DingPOS-abonnementen voor iPad: Lite, Standard en Pro. Gratis proefperiode van 30 dagen, geen transactiekosten en je gegevens worden nooit verwijderd.",
+    "eyebrow": "Abonnementen en prijzen",
+    "title": "Kies het abonnement dat bij je winkel past",
+    "subtitle": "Probeer 30 dagen gratis — zonder aanmelding. Wissel wanneer je wilt; je gegevens worden nooit verwijderd.",
+    "billing": {
+      "label": "Factureringsperiode",
+      "monthly": "Maandelijks",
+      "annual": "Jaarlijks",
+      "save": "Bespaar {{percent}}%"
+    },
+    "recommended": "Aanbevolen",
+    "select_plan": "Kies een abonnement",
+    "unit": {
+      "month": "/mnd",
+      "year": "/jr"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "of ",
+    "or_annual_after": "/jr, jaarlijks gefactureerd",
+    "saving_before": "Bespaar ",
+    "saving_after": " per jaar ten opzichte van maandelijks",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Voor één persoon met een kraam die alleen afrekenen en producten nodig heeft",
+        "heading": "Inbegrepen",
+        "features": [
+          "Volledig afrekenen met maximaal 10 winkelmanden",
+          "Producten met varianten, barcodes, foto's en categorieën",
+          "Bestelgeschiedenis, ongeldig maken, retouren en omruilingen",
+          "Bedrijfsoverzicht: omzet, winst, bestsellers",
+          "Back-up in de cloud en herstellen",
+          "Afrekenen werkt offline"
+        ],
+        "cta": "Start de gratis proefperiode van 30 dagen"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Voor winkels die voorraad, klantniveaus, inkoop of verkoop op rekening nodig hebben",
+        "heading": "Alles in Lite, plus",
+        "features": [
+          "Actiesysteem: bestedingsdrempels, 1+1 gratis, happy hours — toegepast bij het afrekenen",
+          "Klantpunten, inwisselen en klantniveaus",
+          "Voorraadbeheer en inkooporders",
+          "Verkoop op rekening: nu meegeven, later betaald krijgen",
+          "Voorbestellingen: neem een aanbetaling, vereffen bij het afhalen"
+        ],
+        "cta": "Start de gratis proefperiode van 30 dagen"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Voor winkels met medewerkers die rollen en een activiteitenlogboek nodig hebben",
+        "heading": "Alles in Standard, plus",
+        "features": [
+          "Medewerkers: elk een eigen pincode, elke bestelling legt vast wie hem heeft aangeslagen",
+          "Toestemmingen en goedkeuringen: kortingen boven de kortingslimiet, wijzigingen aan producten en voorraad, kostprijzen bekijken",
+          "Activiteitenlogboek en herstelregistraties",
+          "Geavanceerde rapporten: periodevergelijking, verkoopheatmap, langzaam verkopende producten, voorraadwaarde, terugkerende klanten"
+        ],
+        "cta": "Start de gratis proefperiode van 30 dagen"
+      }
+    },
+    "fineprint": "Gefactureerd via je Apple Account. Maand- en jaarabonnementen worden aan het einde van elke periode automatisch verlengd; zeg op elk moment op in de App Store.",
+    "currency": {
+      "twd": "Prijzen getoond voor de App Store in Taiwan. In andere regio's betaal je de lokale prijs die in de App Store staat.",
+      "to_usd": "Toon Amerikaanse prijzen",
+      "usd": "Prijzen getoond voor de App Store in de VS. In andere regio's betaal je de lokale prijs die in de App Store staat.",
+      "to_twd": "Toon Taiwanese prijzen"
+    },
+    "assurances": {
+      "trial": {
+        "title": "Gratis proefperiode van 30 dagen",
+        "desc": "Alle Pro-functies inbegrepen. Geen account nodig."
+      },
+      "fees": {
+        "title": "Geen transactiekosten",
+        "desc": "DingPOS komt nooit aan het geld van je klanten — het abonnement is het enige wat je betaalt."
+      },
+      "data": {
+        "title": "Je gegevens blijven van jou",
+        "desc": "Als een proefperiode of abonnement afloopt, pauzeert alleen het afrekenen. Producten, bestellingen en rapporten blijven staan en er wordt niets verwijderd."
+      },
+      "switch": {
+        "title": "Wissel wanneer je wilt",
+        "desc": "Upgrades gaan direct in, naar rato verrekend door Apple. Downgrades gaan in bij de verlenging."
+      }
+    },
+    "compare": {
+      "title": "Vergelijk alle functies",
+      "subtitle": "Elk abonnement bevat alles uit het vorige abonnement.",
+      "feature_col": "Functie",
+      "included": "Inbegrepen",
+      "not_included": "Niet inbegrepen",
+      "groups": {
+        "checkout": "Afrekenen",
+        "catalog": "Producten en voorraad",
+        "customers": "Klanten en acties",
+        "reports": "Rapporten",
+        "team": "Medewerkers en controle",
+        "data": "Gegevens en back-up"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Afrekenen en meerdere winkelmanden",
+          "desc": "Tot 10 winkelmanden tegelijk, direct zoeken op naam of barcode"
+        },
+        "discounts_tax": {
+          "name": "Kortingen en btw",
+          "desc": "Kortingen op artikelen en bestellingen; btw inclusief of exclusief automatisch berekend"
+        },
+        "offline": {
+          "name": "Offline afrekenen",
+          "desc": "Blijf verkopen zonder internetverbinding"
+        },
+        "returns": {
+          "name": "Ongeldig maken, retouren en omruilingen",
+          "desc": "Volledige bestelgeschiedenis met details"
+        },
+        "preorder": {
+          "name": "Voorbestellingen",
+          "desc": "Neem nu een aanbetaling, vereffen het restant bij het afhalen"
+        },
+        "on_account": {
+          "name": "Verkoop op rekening",
+          "desc": "Nu meegeven, later betaald krijgen — het openstaande bedrag van elke klant op één plek"
+        },
+        "products": {
+          "name": "Productbeheer",
+          "desc": "Varianten, barcodes, foto's, categorieën"
+        },
+        "import": {
+          "name": "Gegevens importeren",
+          "desc": "Importeer producten en eerdere verkopen uit andere systemen via CSV"
+        },
+        "inventory": {
+          "name": "Voorraadbeheer",
+          "desc": "Voorraad neemt af bij verkoop; handmatige correcties worden vastgelegd"
+        },
+        "purchasing": {
+          "name": "Inkoop en leveranciers",
+          "desc": "Een inkooporder ontvangen werkt de voorraad bij; zie wat je elke leverancier verschuldigd bent"
+        },
+        "promotions": {
+          "name": "Actiesysteem",
+          "desc": "Bestedingsdrempels, 1+1 gratis, N-de-artikel-acties, happy hours — toegepast bij het afrekenen"
+        },
+        "loyalty": {
+          "name": "Klanten en punten",
+          "desc": "Spaar en wissel punten in om klanten terug te laten komen"
+        },
+        "member_tiers": {
+          "name": "Klantniveaus",
+          "desc": "Beloon je beste klanten met voordelen per niveau"
+        },
+        "dashboard": {
+          "name": "Bedrijfsoverzicht",
+          "desc": "Omzet, winst, kortingen, betaalmethoden en bestsellers"
+        },
+        "comparison": {
+          "name": "Periodevergelijking",
+          "desc": "Ten opzichte van de vorige periode of vorig jaar — zie groei of daling"
+        },
+        "heatmap": {
+          "name": "Verkoopheatmap",
+          "desc": "Zeven dagen × 24 uur — zie welke uren het best verkopen"
+        },
+        "slow_movers": {
+          "name": "Langzaam verkopende producten",
+          "desc": "Vind de producten die niet verkopen maar wel voorraad hebben"
+        },
+        "valuation": {
+          "name": "Voorraadwaarde en mutatiecontrole",
+          "desc": "Wat je voorraad nu waard is en wie die heeft gewijzigd"
+        },
+        "repeat": {
+          "name": "Terugkerende klanten en openstaande punten",
+          "desc": "Hoeveel leden terugkomen en hoeveel punten er nog openstaan"
+        },
+        "staff": {
+          "name": "Medewerkers",
+          "desc": "Elk een eigen pincode; elke bestelling legt vast wie hem heeft aangeslagen"
+        },
+        "permissions": {
+          "name": "Toestemmingen en goedkeuringen",
+          "desc": "Rollen voor manager en medewerker; jij bepaalt wat goedkeuring nodig heeft"
+        },
+        "activity_log": {
+          "name": "Activiteitenlogboek",
+          "desc": "Een tijdlijn van ongeldig gemaakte verkopen, retouren, prijswijzigingen, voorraadcorrecties en meer"
+        },
+        "restore_records": {
+          "name": "Herstelregistraties",
+          "desc": "Wie heeft hersteld, vanuit welke momentopname en welke bestellingen daarbij zijn verwijderd"
+        },
+        "local_data": {
+          "name": "Gegevens op je iPad",
+          "desc": "Geen account nodig — je bedrijfsgegevens lopen nooit via ons"
+        },
+        "backup": {
+          "name": "Back-up in de cloud en herstellen",
+          "desc": "Back-up naar je eigen iCloud, Google Drive of Dropbox"
+        },
+        "undo_restore": {
+          "name": "Voorbeeld van herstel en ongedaan maken",
+          "desc": "Zie welke bestellingen een herstel verwijdert en maak een verkeerd herstel ongedaan"
+        }
+      }
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Wat kan ik gebruiken tijdens de gratis proefperiode?",
+          "a": "Gedurende 30 dagen na de eerste installatie heb je alle functies, ook Pro-functies zoals medewerkers, toestemmingen en geavanceerde rapporten — geen account nodig. Neem je tijdens de proefperiode een abonnement, dan eindigt de proefperiode meteen en schakel je over naar het abonnement dat je hebt gekocht."
+        },
+        {
+          "q": "Wat gebeurt er als ik na de proefperiode geen abonnement neem?",
+          "a": "Het afrekenen pauzeert; al het andere blijft werken — je kunt nog steeds bestellingen bekijken, rapporten inzien en producten beheren. Er wordt niets verwijderd en met een abonnement werkt afrekenen direct weer."
+        },
+        {
+          "q": "Kan ik op elk moment upgraden of downgraden?",
+          "a": "Ja, via Instellingen → Abonnement in de app. Upgrades gaan direct in en Apple schrijft de ongebruikte tijd tegoed; downgrades gaan in als de huidige periode afloopt. Overstappen van maandelijks naar jaarlijks gaat ook direct in."
+        },
+        {
+          "q": "Wat gebeurt er met mijn klanten, acties en voorraad als ik downgrade?",
+          "a": "Alles blijft bewaard — er wordt niets verwijderd of gewijzigd. De functies van het hogere abonnement werken gewoon niet meer en na een nieuwe upgrade is alles weer zoals het was."
+        },
+        {
+          "q": "Hoe werkt jaarlijks betalen?",
+          "a": "Een jaarabonnement kost evenveel als tien maanden maandelijks betalen en geldt voor een heel jaar — ongeveer {{percent}}% minder. Je betaalt één keer per jaar en het abonnement wordt automatisch verlengd."
+        },
+        {
+          "q": "Zijn er naast het abonnement nog andere kosten?",
+          "a": "Nee. DingPOS komt nooit aan het geld van je klanten: geen commissie, geen transactiekosten, geen hardwarecontract."
+        },
+        {
+          "q": "Hoe zeg ik mijn abonnement op?",
+          "a": "Beheer het op je iPad onder Instellingen → Apple Account → Abonnementen; zeg minstens 24 uur voor het einde van de periode op en er wordt je niets meer in rekening gebracht. Je gegevens blijven op je apparaat."
+        },
+        {
+          "q": "Waarom wijkt de prijs in de App Store af van deze pagina?",
+          "a": "De App Store brengt het abonnement in rekening tegen de prijs voor de regio van je Apple Account. Op deze pagina staan prijzen voor Taiwan en de VS; in andere regio's betaal je de lokale prijs die in de app en de App Store staat."
+        }
+      ],
+      "more": "Meer vragen?",
+      "more_link": "Bekijk alle veelgestelde vragen"
+    },
+    "final": {
+      "title": "Gebruik het 30 dagen en kies dan een abonnement",
+      "sub": "Download en begin — geen account nodig.",
+      "cta": "Download in de App Store"
+    }
+  },
+  "footer": {
+    "tagline": "Start je winkel in 10 minuten. Jouw gegevens, jouw controle.",
+    "contact": "Neem contact op",
+    "privacy_policy": "Privacybeleid",
+    "terms_of_use": "Gebruiksvoorwaarden",
+    "copyright": "ALU Studio. Alle rechten voorbehouden.",
+    "support": "Veelgestelde vragen"
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "meta_description": "Zo gaat DingPOS, de kassa-app voor iPad die ook offline werkt, met je gegevens om: je bedrijfsgegevens blijven op je apparaat en optionele back-ups gaan alleen naar je eigen cloudaccount.",
+    "effective_date": "Ingangsdatum: 1 juli 2026",
+    "intro": "ALU Studio (‘wij’) heeft DingPOS (‘de app’) ontwikkeld. DingPOS is een kassa-app waarin privacy centraal staat: je bedrijfsgegevens zijn en blijven van jou. In dit privacybeleid leggen we uit hoe we omgaan met je gegevens wanneer je de app gebruikt.",
+    "local_storage": {
+      "title": "Hoe je gegevens worden opgeslagen",
+      "desc": "DingPOS bewaart al je bedrijfsgegevens lokaal op je apparaat. Tenzij je zelf de cloud-back-up inschakelt, verlaten deze gegevens je apparaat nooit. Dit zijn de gegevens die je in de app aanmaakt:",
+      "items": [
+        "Winkelinstellingen (winkelnaam, valuta, btw-tarief, logo)",
+        "Productgegevens (naam, prijs, kostprijs, barcode, foto, categorie, varianten, voorraad)",
+        "Bestel- en verkoopgegevens (inclusief kortingen, btw en betaalmethode)",
+        "Klant- en lidmaatschapsgegevens (naam, optioneel telefoonnummer en e-mailadres, punten)",
+        "Acties en instellingen voor lidniveaus"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Cloud-back-up (optioneel)",
+      "desc": "Je kunt optioneel de cloud-back-up inschakelen en kiezen uit iCloud, Google Drive of Dropbox als opslaglocatie. Back-ups worden naar je eigen cloudaccount geschreven en blijven volledig onder jouw beheer. Wij verwerken, bewaren of openen de inhoud van deze back-ups nooit. Of je een back-up inschakelt en welke aanbieder je gebruikt, bepaal je helemaal zelf, en je kunt het op elk moment uitschakelen."
+    },
+    "no_collection": {
+      "title": "Wat we niet verzamelen",
+      "desc": "DingPOS verzamelt, verzendt of deelt geen enkele bedrijfsinhoud van jou. Concreet doen we het volgende niet:",
+      "items": [
+        "Je product-, bestel-, klant- of lidmaatschapsgegevens verzamelen",
+        "Betalingen afhandelen of creditcardgegevens verwerken (de app verwerkt geen echte kaartbetalingen)",
+        "Je locatie volgen",
+        "Je bedrijfsgegevens delen met derden"
+      ]
+    },
+    "camera": {
+      "title": "Camera en foto’s",
+      "desc": "DingPOS vraagt alleen om toegang tot de camera wanneer je zelf ‘barcode scannen’ of ‘productfoto maken’ gebruikt. Barcodeherkenning en foto’s worden lokaal op je apparaat verwerkt en nooit naar onze servers geüpload. Productfoto’s worden alleen als onderdeel van een back-up naar je eigen cloudaccount geschreven, als je de cloud-back-up inschakelt."
+    },
+    "subscription": {
+      "title": "Abonnement en aankopen",
+      "desc": "DingPOS biedt een abonnement aan via een in-app aankoop in de Apple App Store en gebruikt RevenueCat om de abonnementsstatus te beheren. De betaling verloopt via Apple; wij ontvangen nooit je creditcard- of betaalgegevens. RevenueCat ontvangt alleen een anonieme identificatiecode die aan de abonnementsstatus is gekoppeld en wordt gebruikt om te controleren of je abonnement actief is."
+    },
+    "analytics": {
+      "title": "Analyse en crashrapportage",
+      "desc": "DingPOS gebruikt Firebase Analytics en Firebase Crashlytics van Google om te begrijpen hoe de app wordt gebruikt en om crashes op te sporen en te verhelpen. Deze diensten verzamelen:",
+      "items": [
+        "Anonieme gebruiksgegevens (bijvoorbeeld welke functies worden gebruikt en hoe lang een sessie duurt)",
+        "Crashrapporten (bijvoorbeeld stack traces, apparaatmodel en iOS-versie)",
+        "Apparaatgegevens (bijvoorbeeld apparaattype, besturingssysteem en appversie)",
+        "Een willekeurig gegenereerde instantie-ID (niet aan jouw identiteit gekoppeld)"
+      ],
+      "note": "Deze gegevens zijn anoniem en bevatten niets van je bedrijfsinhoud (zoals producten, bestellingen, klanten of leden). Meer informatie over hoe Google met deze gegevens omgaat vind je in het privacybeleid van Google: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Privacy van kinderen",
+      "desc": "DingPOS is een zakelijke kassa-app. De app is niet bedoeld voor kinderen en verzamelt geen persoonsgegevens van kinderen."
+    },
+    "changes": {
+      "title": "Wijzigingen in dit beleid",
+      "desc": "Als we belangrijke wijzigingen in dit privacybeleid doorvoeren, laten we dat je weten via een app-update. We raden je aan dit beleid regelmatig door te nemen."
+    },
+    "contact": {
+      "title": "Contact",
+      "desc": "Heb je vragen of suggesties over dit privacybeleid? Neem dan contact met ons op via:"
+    }
+  },
+  "terms": {
+    "title": "Gebruiksvoorwaarden",
+    "meta_description": "Gebruiksvoorwaarden van DingPOS, de kassa-app voor iPad van ALU Studio: licentie, 30 dagen gratis proefperiode, abonnementen via de App Store, je gegevens en back-ups, en aansprakelijkheid.",
+    "effective_date": "Ingangsdatum: 8 oktober 2026",
+    "intro": "Welkom bij DingPOS. Lees deze gebruiksvoorwaarden zorgvuldig door voordat je de app gebruikt. Door DingPOS te downloaden, te installeren of te gebruiken, ga je akkoord met deze voorwaarden.",
+    "license": {
+      "title": "Licentie",
+      "desc": "ALU Studio verleent je een beperkte, niet-exclusieve, niet-overdraagbare licentie om DingPOS op je apparaten te gebruiken voor het runnen van je bedrijf. Deze licentie is bedoeld voor je winkelactiviteiten."
+    },
+    "subscription": {
+      "title": "Abonnement en betaling",
+      "desc": "DingPOS biedt een gratis proefperiode van 30 dagen vanaf de eerste installatie, waarin alle functies van het Pro-abonnement beschikbaar zijn; als je tijdens de proefperiode een abonnement afsluit, eindigt de proefperiode en gaat het gekozen abonnement in vanaf het moment van aankoop. Na de proefperiode is een abonnement op een van de abonnementen (Lite, Standard of Pro), afgesloten via een In-App aankoop in de App Store, nodig om de kassa te blijven gebruiken; wat elk abonnement inhoudt en wat het kost, staat op de prijzenpagina (alu-studio.com/dingpos/pricing), en het bedrag dat je betaalt is het bedrag dat in de App Store wordt getoond. Zonder abonnement kun je nog steeds door je gegevens bladeren en producten beheren, en je gegevens worden nooit verwijderd. Het abonnement wordt automatisch verlengd, tenzij je het minstens 24 uur voor het einde van de lopende periode opzegt. Je kunt je abonnement op elk moment beheren of opzeggen in de instellingen van je App Store-account op je apparaat. Gekochte abonnementen kunnen worden hersteld."
+    },
+    "restrictions": {
+      "title": "Beperkingen",
+      "desc": "Bij het gebruik van de app ga je ermee akkoord om niet:",
+      "items": [
+        "De app te reverse-engineeren, te ontleden of te decompileren",
+        "De app te wijzigen, te vertalen of afgeleide werken te maken",
+        "Auteursrechtvermeldingen of labels in de app te verwijderen",
+        "De app voor onwettige doeleinden te gebruiken"
+      ]
+    },
+    "user_data": {
+      "title": "Je gegevens en back-ups",
+      "desc": "Alle zakelijke gegevens die je in DingPOS aanmaakt (producten, bestellingen, klanten, leden en instellingen) worden op je apparaat opgeslagen en zijn volledig je eigen verantwoordelijkheid. Als je de app verwijdert of de gegevens ervan wist, gaan alle opgeslagen gegevens definitief verloren, tenzij je back-up in de cloud hebt ingeschakeld. Back-ups in de cloud staan in het cloudaccount dat je kiest (iCloud / Google Drive / Dropbox); de beschikbaarheid en bewaartermijn ervan vallen onder de servicevoorwaarden van die aanbieder. Wij kunnen geen gegevens voor je herstellen. Je bent er ook zelf verantwoordelijk voor dat je voldoet aan de belasting-, facturatie- en consumentenwetgeving die geldt op de plek waar je onderneemt."
+    },
+    "updates": {
+      "title": "App-updates",
+      "desc": "We kunnen van tijd tot tijd app-updates uitbrengen om functies te verbeteren, problemen op te lossen of de beveiliging te versterken. We raden aan de app up-to-date te houden voor de beste ervaring."
+    },
+    "disclaimer": {
+      "title": "Vrijwaring",
+      "desc": "DingPOS wordt geleverd “zoals het is”, zonder garanties van welke aard dan ook, uitdrukkelijk of stilzwijgend. We garanderen niet dat de app ononderbroken werkt of volledig foutloos is. DingPOS is een hulpmiddel voor je bedrijfsvoering; het blijft jouw verantwoordelijkheid om de juistheid van belastingberekeningen, voorraadaantallen en alle bedragen te controleren, evenals de naleving van lokale regelgeving. Voor zover wettelijk toegestaan zijn wij niet aansprakelijk voor directe, indirecte, incidentele of gevolgschade die voortvloeit uit je gebruik van de app."
+    },
+    "liability": {
+      "title": "Beperking van aansprakelijkheid",
+      "desc": "In geen geval is de aansprakelijkheid van ALU Studio voor schade die voortvloeit uit het gebruik van de app, of uit het niet kunnen gebruiken ervan, hoger dan het bedrag dat je in de 12 maanden vóór de gebeurtenis voor de app hebt betaald. Dit omvat onder meer gegevensverlies, gederfde omzet, schade aan apparaten of enig ander verlies."
+    },
+    "changes": {
+      "title": "Wijzigingen in deze voorwaarden",
+      "desc": "We behouden ons het recht voor om deze gebruiksvoorwaarden op elk moment te wijzigen. Gewijzigde voorwaarden gaan direct in zodra ze op deze pagina zijn geplaatst. Als je de app blijft gebruiken, ga je akkoord met de gewijzigde voorwaarden."
+    },
+    "contact": {
+      "title": "Contact",
+      "desc": "Heb je vragen over deze gebruiksvoorwaarden? Neem dan contact met ons op via:"
+    }
+  },
+  "support": {
+    "doc_title": "Support en veelgestelde vragen",
+    "meta_description": "DingPOS-support: antwoorden en stapsgewijze handleidingen voor de kassa-app op iPad — instellen, afrekenen, bestellingen, voorraad, acties, back-up, medewerkers en facturering.",
+    "title": "Waarmee kunnen we je helpen?",
+    "subtitle": "Zoek veelgestelde vragen of blader per onderwerp",
+    "search_placeholder": "Zoek bijv. “barcode” of “back-up herstellen”",
+    "search_hint_keywords": "Scheid zoekwoorden met spaties",
+    "search_hint_shortcut_pre": "druk op ",
+    "search_hint_shortcut_post": " om te zoeken",
+    "clear": "Zoekopdracht wissen",
+    "results_count": "{{num}} passende vragen",
+    "no_results_title": "Geen passende vragen",
+    "no_results_desc": "Probeer andere zoekwoorden, of mail ons gewoon — we reageren snel.",
+    "related_title": "Gerelateerde vragen",
+    "back": "Support",
+    "since": "Beschikbaar sinds DingPOS v{{version}}",
+    "verified_version": "Inhoud gebaseerd op DingPOS v{{version}}",
+    "contact_title": "Geen antwoord gevonden?",
+    "contact_desc": "Vertel ons waar je tegenaan loopt, dan reageren we zo snel mogelijk.",
+    "contact_cta": "Neem contact op met ALU Studio",
+    "group_faq": "Veelgestelde vragen",
+    "group_guide": "Gidsen",
+    "group_guide_desc": "Stapsgewijze instelgidsen, inclusief de valkuilen die we tijdens het bouwen van DingPOS hebben verzameld.",
+    "group_roadmap": "Binnenkort beschikbaar",
+    "group_roadmap_desc": "Nog niet beschikbaar — sommige staan al gepland. Jouw verzoeken bepalen onze prioriteiten, dus schrijf ons."
+  }
+}
