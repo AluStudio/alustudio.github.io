@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | მხარდაჭერა |  |
+| FAQ / frequently asked questions | ხშირად დასმული კითხვები | ხშირად გამოიყენება შემოკლება „FAQ“ არ გამოიყენოთ |
+| Pricing (the page) | ფასები |  |
+| Plan (Lite / Standard / Pro; the names stay in English) | გეგმა | from app glossary; Lite / Standard / Pro რჩება ინგლისურად |
+| Free trial | უფასო საცდელი პერიოდი |  |
+| Billed monthly / billed annually | ყოველთვიური გადახდა / წლიური გადახდა | ფასი იხდება თვეში ერთხელ / წელიწადში ერთხელ |
+| Terms of Use | გამოყენების პირობები |  |
+| Coming Soon (planned features) | მალე | გეგმაში არსებული ფუნქციები |
+| Setup guide (promotion setup guides) | მოწყობის გზამკვლევი | აქციის გამართვის ინსტრუქცია; „აქცია“ from app glossary |
+| Shop owner | მაღაზიის მფლობელი | მფლობელი from app glossary |
+| Stall / pop-up / night market | დახლი / დროებითი გამოფენა-გაყიდვა / ღამის ბაზარი |  |
+| Offline-first | ინტერნეტის გარეშე მუშაობა | სიტყვასიტყვით „offline-first“ არ დატოვოთ; აღწერითი ფორმა |
+| Point of sale (POS) app | გაყიდვის წერტილის აპი (POS) | ძიებაში „POS“ ხშირია |
