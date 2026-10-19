@@ -73,7 +73,7 @@
       "items": [
         "Kronolojik sipariş listesi, tarihe ve ödeme yöntemine göre filtre",
         "Satır ayrıntısı ürünleri, varyantları, indirimleri, vergiyi ve para üstünü saklar",
-        "Onay gerektiren geçersiz kılma — stok ve puanlar otomatik geri yüklenir"
+        "Onay adımıyla geçersiz kılma — stok ve puanlar otomatik geri yüklenir"
       ],
       "shot_alt": "Solda kronolojik sipariş listesi, sağda seçili siparişin ayrıntısı: ürünler, uygulanan indirim, vergi, toplam, ödeme yöntemi ve para üstü"
     }

@@ -513,7 +513,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Siparişler sekmesine gidin, asıl siparişi açın ve İade’ye dokunun. Her üründen kaç adedin geri geldiğini seçin. Değişim için aynı ekranda Yerine Verilen Ürün Ekle’ye dokunun; net tutar tek seferde hesaplanır: pozitifse müşteri öder, negatifse siz iade edersiniz, sıfırsa para el değiştirmez."
+        "text": "Siparişler sekmesine gidin, asıl siparişi açın ve İade’ye dokunun. Her üründen kaç adedin geri geldiğini seçin. Değişim için aynı ekranda Yerine Verilen Ürün Ekle’ye dokunun; hesaplaşma tek seferde tamamlanır: pozitifse müşteri öder, negatifse siz iade edersiniz, sıfırsa para el değiştirmez."
       },
       {
         "type": "list",
@@ -1555,7 +1555,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Kayıtlar tüm planlarda tutulur; yalnızca görüntüleme Pro özelliğidir, bu yüzden Pro aboneliğinizin sona erdiği döneme ait kayıtlar yeniden abone olunca görünür. Günlük, bulut yedeklerinizle birlikte taşınır."
+        "text": "Kayıtlar tüm planlarda tutulur; yalnızca görüntüleme Pro özelliğidir, bu yüzden Pro aboneliğinizin etkin olmadığı dönemde tutulan kayıtlar yeniden abone olunca görünür. Günlük, bulut yedeklerinizle birlikte taşınır."
       }
     ],
     "related": [
@@ -1638,7 +1638,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Üç plan da eksiksiz ödeme alma, ürünler, siparişler (geçersiz kılma, ürün iadesi ve değişim dahil), raporlar ve bulut yedekleme içerir. Farkları, dükkânı yönetmeye yarayan araçlardadır:"
+        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
       },
       {
         "type": "list",
