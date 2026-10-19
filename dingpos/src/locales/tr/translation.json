@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the tr translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync tr`, then `npm run l10n -- apply tr`.",
+  "nav": {
+    "home": "Ana sayfa",
+    "pricing": "Fiyatlandırma",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "support": "Sık Sorulan Sorular"
+  },
+  "hero": {
+    "meta_title": "DingPOS — iPad için İnternetsiz Çalışan POS Uygulaması",
+    "meta_description": "DingPOS — Mağazanızı 10 dakikada açın. iPad için internet olmadan da çalışan POS uygulaması. Verileriniz sizin kontrolünüzde.",
+    "eyebrow": "iPad için POS uygulaması",
+    "title": "Mağazanızı 10 dakikada açın. Verileriniz sizin kontrolünüzde.",
+    "description": "DingPOS, iPad için bir POS uygulamasıdır. Hesap açmak yok, buluta bağımlılık yok; internet olmadan da çalışmaya devam eder. Ürünleriniz, siparişleriniz ve müşterileriniz kendi cihazınızda kalır.",
+    "download": "App Store'dan indirin",
+    "note": "30 gün ücretsiz deneme.",
+    "shot_alt": "DingPOS ödeme ekranı: solda kategori filtreli ürün ızgarası, sağda otomatik uygulanan kampanyaları ve toplamı gösteren sepet"
+  },
+  "proof": {
+    "items": [
+      "Hesap gerekmez",
+      "Ödeme alma internetsiz de çalışır",
+      "Veriler iPad'inizde kalır"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Ödemeye geç",
+      "title": "Satışın her adımı tek ekranda",
+      "lead": "Aynı anda 10 sepete kadar, yazdıkça ada veya barkoda göre bulunan ürünler, ödemeyi almadan önce hesaplanmış indirim ve vergi.",
+      "items": [
+        "Aynı anda çalışan 10 sepete kadar",
+        "Yazdıkça ada ve barkoda göre ürün arama",
+        "Ürün ve sepet indirimleri, sabit tutar veya yüzde",
+        "KDV dahil / hariç otomatik hesaplanır",
+        "Para üstü ve özel ödeme yöntemi etiketleri",
+        "Her satış bir \"Ding!\" sesi ve titreşimle biter"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Kampanya motoru",
+      "title": "Kuralı bir kez belirleyin, kasa uygulasın",
+      "lead": "Tutar barajları, bir alana bir bedava, happy hour, yalnızca üyelere özel fırsatlar — kural bir kez tanımlandı mı, kasa gerisini hesaplar. Kimsenin hatırlaması gerekmez, kupon kodu da yazılmaz.",
+      "items": [
+        "Sepet ara toplamı barajları otomatik devreye girer",
+        "Sepet veya ürün indirimleri (sabit tutar ya da yüzde)",
+        "Bir alana bir bedava ve N. ürün fırsatları",
+        "Puan çarpanları",
+        "Happy hour aralıkları — gece yarısını aşan, haftanın günleri seçilebilir",
+        "Öncelik, birlikte uygulanabilirlik ve sonrasında durdurma ayarları",
+        "Kullanım sınırları (toplam veya müşteri başına)",
+        "Ödemede otomatik uygulanır — kupon kodu yok"
+      ],
+      "shot_alt": "Ayarlar'daki kampanya listesi; grup fiyatları ve indirimler olarak ayrılmış, her kural etkin durumu ve önceliğiyle gösteriliyor"
+    },
+    "reports": {
+      "eyebrow": "Raporlar",
+      "title": "Dükkân hâlâ açıkken bugün ne kazandığınız",
+      "lead": "Sipariş sayısı, satış geliri, brüt kâr, indirimler ve ödeme dağılımı tek sayfada; bugün, 7 gün, 30 gün veya tüm zamanlar için.",
+      "items": [
+        "Bugün: sipariş sayısı, satış geliri, brüt kâr, indirim, ödeme dağılımı",
+        "Adede göre en çok satan 5 ürün",
+        "Gün / hafta / ay aralıkları",
+        "Gelir ve brüt kâr eğilim grafikleri"
+      ],
+      "shot_alt": "Bugünün satış gelirini, toplam indirimi, kârı ve ortalama sepeti gösteren pano; altında ödeme yöntemi halka grafiği ve en çok satanlar listesi"
+    },
+    "orders": {
+      "eyebrow": "Siparişler",
+      "title": "Her satış kayıtlı, her satış geri alınabilir",
+      "lead": "Her sipariş tüm kaydı tutar: ürünler ve varyantlar, hangi kampanyanın uygulandığı, vergi, ödeme yöntemi ve verilen para üstü.",
+      "items": [
+        "Kronolojik sipariş listesi, tarihe ve ödeme yöntemine göre filtre",
+        "Satır ayrıntısı ürünleri, varyantları, indirimleri, vergiyi ve para üstünü saklar",
+        "Onay adımıyla geçersiz kılma — stok ve puanlar otomatik geri yüklenir"
+      ],
+      "shot_alt": "Solda kronolojik sipariş listesi, sağda seçili siparişin ayrıntısı: ürünler, uygulanan indirim, vergi, toplam, ödeme yöntemi ve para üstü"
+    }
+  },
+  "features": {
+    "title": "Dükkân işletmenin geri kalanı",
+    "subtitle": "İlk kurulum, ürünler, stok ve üyeler — hepsi aynı iPad'de",
+    "onboarding": {
+      "title": "Hızlı başlangıç",
+      "items": [
+        "Ülkenizi seçin; para birimi, vergi modu ve vergi oranı otomatik dolsun",
+        "Mağaza adınızı ve logonuzu belirleyin",
+        "Baştan sona yaklaşık 10 dakika, sonra satışa başlayın"
+      ]
+    },
+    "products": {
+      "title": "Ürünler ve varyantlar",
+      "items": [
+        "Kategori yönetimi ve filtreleme",
+        "Varyantlar (ör. beden × renk), her birinin kendi fiyatı ve maliyeti",
+        "Elle giriş veya kamerayla tarama ile barkod, yinelenenler engellenir",
+        "Kaydederken küçük resimleri oluşturulan ürün fotoğrafları"
+      ]
+    },
+    "inventory": {
+      "title": "Stok",
+      "items": [
+        "Ürün bazında stok takibi anahtarı",
+        "Varyant başına bağımsız stok",
+        "Eksi stoğa izin verilir — ödeme asla engellenmez",
+        "Düşük stok için renkli uyarılar",
+        "Eksiksiz stok hareket defteri: satış, geçersiz kılma, elle düzeltme"
+      ]
+    },
+    "loyalty": {
+      "title": "Üyeler ve puanlar",
+      "items": [
+        "Üye kaydı: ad, isteğe bağlı telefon ve e-posta",
+        "Harcanan her X tutar için Y puan kazanın",
+        "N puanı M indirime çevirin, isteğe bağlı üst sınırla",
+        "Yeni üyelere otomatik hoş geldin puanı",
+        "Kampanyaların hedefleyebildiği üye seviyeleri",
+        "Siparişi geçersiz kılmak kazanılan ve harcanan puanları geri alır"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Yedekleme ve gizlilik",
+    "title": "Hesap yoksa, verinizi kimse alamaz",
+    "lead": "DingPOS'ta üye olunacak bir şey yok. Defterleriniz iPad'de durur; yedek isterseniz zaten sahip olduğunuz bir bulut hesabına gider.",
+    "items": [
+      "iCloud, Google Drive veya Dropbox'tan birini seçin",
+      "İstediğiniz zaman elle yedekleme",
+      "Son 5 bulut kopyası saklanır",
+      "Görseller için artımlı eşitleme",
+      "Hesap yok; veriler cihazda, yedekler kendi bulutunuzda",
+      "İnternetsiz tam işlevsellik"
+    ]
+  },
+  "home_pricing": {
+    "title": "Basit, şeffaf fiyatlandırma",
+    "price_before": "Aylık ",
+    "price_after": " fiyatından başlayan üç plan",
+    "sub": "30 gün ücretsiz deneme. İşlem komisyonu yok, gizli ücret yok. Deneme bittikten sonra da verileriniz saklanır — istediğiniz zaman yeniden abone olabilirsiniz.",
+    "compare": "Planları karşılaştırın",
+    "cta": "30 günlük ücretsiz denemeyi başlatın"
+  },
+  "pricing": {
+    "doc_title": "Planlar ve Fiyatlandırma",
+    "meta_description": "iPad için DingPOS planlarını karşılaştırın: Lite, Standard ve Pro. 30 gün ücretsiz deneme, işlem komisyonu yok, verileriniz asla silinmez.",
+    "eyebrow": "Planlar ve fiyatlandırma",
+    "title": "Dükkânınıza uygun planı seçin",
+    "subtitle": "30 gün ücretsiz deneyin, kayıt gerekmez. Planı istediğiniz zaman değiştirin; verileriniz asla silinmez.",
+    "billing": {
+      "label": "Faturalandırma dönemi",
+      "monthly": "Aylık",
+      "annual": "Yıllık",
+      "save": "%{{percent}} tasarruf"
+    },
+    "recommended": "Önerilen",
+    "select_plan": "Plan seçin",
+    "unit": {
+      "month": "/ay",
+      "year": "/yıl"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "veya ",
+    "or_annual_after": "/yıl, yıllık faturalandırılır",
+    "saving_before": "Aylık plana göre yılda ",
+    "saving_after": " tasarruf",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Ödeme alma ve ürün yönetimi yeterli olan tek kişilik tezgâh için",
+        "heading": "Neler dahil",
+        "features": [
+          "10 sepete kadar eksiksiz ödeme alma",
+          "Varyantlı ürünler, barkodlar, fotoğraflar, kategoriler",
+          "Sipariş geçmişi, geçersiz kılma, ürün iadesi ve değişim",
+          "İşletme panosu: satış geliri, kâr, en çok satanlar",
+          "Bulut yedekleme ve geri yükleme",
+          "Ödeme alma internetsiz de çalışır"
+        ],
+        "cta": "30 günlük ücretsiz denemeyi başlatın"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Stok, üyelik, satın alma veya veresiye gereken dükkânlar için",
+        "heading": "Lite’taki her şey, ayrıca",
+        "features": [
+          "Kampanya motoru: tutar eşikleri, 1 alana 1 bedava, happy hour — ödeme sırasında otomatik uygulanır",
+          "Müşteri puanları, puan kullanımı ve üyelik seviyeleri",
+          "Stok takibi ve satın alma siparişleri",
+          "Veresiye satış: ürünü şimdi verin, parasını sonra alın",
+          "Ön siparişler: kapora alın, teslim alırken kalanı kapatın"
+        ],
+        "cta": "30 günlük ücretsiz denemeyi başlatın"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Personeli olan ve rol ile işlem izi isteyen dükkânlar için",
+        "heading": "Standard’daki her şey, ayrıca",
+        "features": [
+          "Personel hesapları: herkesin kendi PIN’i var, her siparişte işlemi kimin yaptığı kaydedilir",
+          "Yetkiler ve onaylar: üst sınırı aşan indirimler, ürün ve stok düzenlemeleri, maliyetleri görme",
+          "Etkinlik günlüğü ve geri yükleme kaydı",
+          "Gelişmiş raporlar: dönem karşılaştırması, satış ısı haritası, yavaş satan ürünler, stok değeri, tekrar alışveriş yapan müşteriler"
+        ],
+        "cta": "30 günlük ücretsiz denemeyi başlatın"
+      }
+    },
+    "fineprint": "Ödeme App Store hesabınız üzerinden alınır. Aylık ve yıllık planlar her dönemin sonunda otomatik yenilenir; App Store’dan istediğiniz zaman iptal edebilirsiniz.",
+    "currency": {
+      "twd": "Fiyatlar Tayvan App Store’u için gösterilmiştir. Diğer bölgelerde App Store’da görünen yerel fiyat geçerlidir.",
+      "to_usd": "ABD fiyatlarını göster",
+      "usd": "Fiyatlar ABD App Store’u için gösterilmiştir. Diğer bölgelerde App Store’da görünen yerel fiyat geçerlidir.",
+      "to_twd": "Tayvan fiyatlarını göster"
+    },
+    "assurances": {
+      "trial": {
+        "title": "30 gün ücretsiz deneme",
+        "desc": "Tüm Pro özellikleri dahil. Hesap gerekmez."
+      },
+      "fees": {
+        "title": "İşlem komisyonu yok",
+        "desc": "DingPOS kasanıza asla dokunmaz — tek ücret abonelik ücretidir."
+      },
+      "data": {
+        "title": "Verileriniz size ait",
+        "desc": "Deneme veya abonelik bittiğinde yalnızca ödeme alma durur. Ürünler, siparişler ve raporlar yerinde kalır, hiçbir şey silinmez."
+      },
+      "switch": {
+        "title": "İstediğiniz zaman geçiş yapın",
+        "desc": "Üst plana geçiş hemen uygulanır, ücret Apple tarafından orantılı hesaplanır. Alt plana geçiş yenilemede uygulanır."
+      }
+    },
+    "compare": {
+      "title": "Tüm özellikleri karşılaştırın",
+      "subtitle": "Her plan, kendinden önceki planın tüm özelliklerini içerir.",
+      "feature_col": "Özellik",
+      "included": "Dahil",
+      "not_included": "Dahil değil",
+      "groups": {
+        "checkout": "Ödeme",
+        "catalog": "Ürünler ve stok",
+        "customers": "Müşteriler ve kampanyalar",
+        "reports": "Raporlar",
+        "team": "Personel ve denetim",
+        "data": "Veri ve yedekleme"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Ödeme alma ve çoklu sepet",
+          "desc": "Aynı anda 10 sepete kadar, ada veya barkoda göre anında arama"
+        },
+        "discounts_tax": {
+          "name": "İndirim ve vergi",
+          "desc": "Ürün ve sipariş indirimleri; vergi dahil veya hariç fiyat sizin yerinize hesaplanır"
+        },
+        "offline": {
+          "name": "İnternetsiz ödeme alma",
+          "desc": "İnternet bağlantısı olmadan satışa devam edin"
+        },
+        "returns": {
+          "name": "Geçersiz kılma, ürün iadesi ve değişim",
+          "desc": "Eksiksiz sipariş geçmişi ve ayrıntıları"
+        },
+        "preorder": {
+          "name": "Ön siparişler",
+          "desc": "Şimdi kapora alın, kalan tutarı teslim alırken kapatın"
+        },
+        "on_account": {
+          "name": "Veresiye satış",
+          "desc": "Ürünü şimdi verin, parasını sonra alın — her müşterinin borcu tek yerde"
+        },
+        "products": {
+          "name": "Ürün yönetimi",
+          "desc": "Varyantlar, barkodlar, fotoğraflar, kategoriler"
+        },
+        "import": {
+          "name": "Veri içe aktarma",
+          "desc": "Ürünleri ve geçmiş satışları CSV ile başka sistemlerden içe aktarın"
+        },
+        "inventory": {
+          "name": "Stok takibi",
+          "desc": "Stok satışta düşer; elle yapılan düzeltmeler hareket kaydı bırakır"
+        },
+        "purchasing": {
+          "name": "Satın alma ve tedarikçiler",
+          "desc": "Satın alma siparişini teslim almak stoğu günceller; her tedarikçiye ne kadar borcunuz olduğunu görün"
+        },
+        "promotions": {
+          "name": "Kampanya motoru",
+          "desc": "Tutar eşikleri, 1 alana 1 bedava, N’inci ürün fırsatları, happy hour — ödeme sırasında uygulanır"
+        },
+        "loyalty": {
+          "name": "Müşteriler ve puanlar",
+          "desc": "Puan kazandırın ve kullandırın, müşterileri geri getirin"
+        },
+        "member_tiers": {
+          "name": "Üyelik seviyeleri",
+          "desc": "En iyi müşterilerinizi kademeli avantajlarla ödüllendirin"
+        },
+        "dashboard": {
+          "name": "İşletme panosu",
+          "desc": "Satış geliri, kâr, indirimler, ödeme dağılımı ve en çok satanlar"
+        },
+        "comparison": {
+          "name": "Dönem karşılaştırması",
+          "desc": "Önceki dönemle veya geçen yılla kıyaslayın — büyümeyi ya da düşüşü görün"
+        },
+        "heatmap": {
+          "name": "Satış ısı haritası",
+          "desc": "Yedi gün × 24 saat — hangi saatlerin en iyi sattığını görün"
+        },
+        "slow_movers": {
+          "name": "Yavaş satan ürünler",
+          "desc": "Satılmayan ama hâlâ stokta duran ürünleri bulun"
+        },
+        "valuation": {
+          "name": "Stok değeri ve hareket denetimi",
+          "desc": "Stoğunuzun şu anki değeri ve onu kimin değiştirdiği"
+        },
+        "repeat": {
+          "name": "Tekrar alışveriş yapan müşteriler ve kullanılmamış puanlar",
+          "desc": "Kaç üyenin geri geldiği ve kaç puanın kullanılmadan durduğu"
+        },
+        "staff": {
+          "name": "Personel hesapları",
+          "desc": "Herkesin kendi PIN’i var; her siparişte işlemi kimin yaptığı kaydedilir"
+        },
+        "permissions": {
+          "name": "Yetkiler ve onaylar",
+          "desc": "Yönetici ve personel rolleri; neyin onay gerektirdiğine siz karar verirsiniz"
+        },
+        "activity_log": {
+          "name": "Etkinlik günlüğü",
+          "desc": "Geçersiz kılmaların, ürün iadelerinin, fiyat değişikliklerinin, stok düzeltmelerinin ve daha fazlasının zaman çizelgesi"
+        },
+        "restore_records": {
+          "name": "Geri yükleme kaydı",
+          "desc": "Kimin, hangi yedekten geri yüklediği ve hangi siparişleri kaldırdığı"
+        },
+        "local_data": {
+          "name": "Verileriniz iPad’inizde",
+          "desc": "Hesap gerekmez — işletme verileriniz bizden geçmez"
+        },
+        "backup": {
+          "name": "Bulut yedekleme ve geri yükleme",
+          "desc": "Kendi iCloud, Google Drive veya Dropbox hesabınıza yedekleyin"
+        },
+        "undo_restore": {
+          "name": "Geri yükleme önizlemesi ve geri alma",
+          "desc": "Geri yüklemenin hangi siparişleri kaldıracağını görün, yanlış yüklemeyi geri alın"
+        }
+      }
+    },
+    "faq": {
+      "title": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "Ücretsiz denemede neleri kullanabilirim?",
+          "a": "İlk kurulumdan itibaren 30 gün boyunca personel, yetkiler ve gelişmiş raporlar gibi Pro özellikleri dahil tüm özellikleri kullanırsınız — hesap gerekmez. Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plana geçersiniz."
+        },
+        {
+          "q": "Denemeden sonra abone olmazsam ne olur?",
+          "a": "Ödeme alma durur; diğer her şey çalışmaya devam eder — siparişlere göz atabilir, raporları görebilir ve ürünleri yönetebilirsiniz. Hiçbir şey silinmez; abone olduğunuzda ödeme alma hemen geri gelir."
+        },
+        {
+          "q": "Planımı istediğim zaman yükseltip düşürebilir miyim?",
+          "a": "Evet, uygulamada Ayarlar → Abonelik’ten. Üst plana geçiş hemen uygulanır ve Apple kullanılmayan süreyi hesabınıza yansıtır; alt plana geçiş mevcut dönem bitince geçerli olur. Aylıktan yıllığa geçiş de hemen uygulanır."
+        },
+        {
+          "q": "Alt plana geçersem müşterilerime, kampanyalarıma ve stoğuma ne olur?",
+          "a": "Hepsi korunur — hiçbir şey silinmez ya da değişmez. Üst planın özellikleri yalnızca çalışmayı bırakır; tekrar yükselttiğinizde her şey eskisi gibi geri gelir."
+        },
+        {
+          "q": "Yıllık faturalandırma nasıl işliyor?",
+          "a": "Yıllık plan, aylık planın on ayına denk gelir ve tam bir yılı kapsar — yaklaşık %{{percent}} daha ucuzdur. Yılda bir kez faturalandırılır ve otomatik yenilenir."
+        },
+        {
+          "q": "Abonelik dışında başka bir ücret var mı?",
+          "a": "Hayır. DingPOS kasanıza hiç dokunmaz: komisyon yok, işlem ücreti yok, donanım sözleşmesi yok."
+        },
+        {
+          "q": "Aboneliği nasıl iptal ederim?",
+          "a": "iPad’inizde Ayarlar → Apple Hesabı → Abonelikler’den yönetin; dönem bitmeden en az 24 saat önce iptal ederseniz bir daha ücret alınmaz. Verileriniz cihazınızda kalır."
+        },
+        {
+          "q": "App Store fiyatı neden bu sayfadakinden farklı?",
+          "a": "App Store, aboneliği Apple Hesabınızın bölgesindeki fiyattan faturalandırır. Bu sayfada Tayvan ve ABD fiyatları listelenir; diğer bölgelerde uygulamada ve App Store’da görünen yerel fiyat geçerlidir."
+        }
+      ],
+      "more": "Başka sorunuz mu var?",
+      "more_link": "Tüm sık sorulan sorulara göz atın"
+    },
+    "final": {
+      "title": "30 gün kullanın, sonra planınızı seçin",
+      "sub": "İndirin ve başlayın — hesap gerekmez.",
+      "cta": "App Store’dan indir"
+    }
+  },
+  "footer": {
+    "tagline": "Mağazanızı 10 dakikada açın. Verileriniz sizin kontrolünüzde.",
+    "contact": "Bize Ulaşın",
+    "privacy_policy": "Gizlilik Politikası",
+    "terms_of_use": "Kullanım Koşulları",
+    "copyright": "ALU Studio. Tüm hakları saklıdır.",
+    "support": "Sık Sorulan Sorular"
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "meta_description": "İnternetsiz çalışan iPad POS uygulaması DingPOS verilerinizi nasıl işler: işletme kayıtlarınız cihazınızda kalır, isteğe bağlı yedekler yalnızca kendi bulut hesabınıza gider.",
+    "effective_date": "Yürürlük tarihi: 1 Temmuz 2026",
+    "intro": "ALU Studio (\"biz\"), DingPOS'u (\"uygulama\") geliştirdi. DingPOS, gizliliği temele alan bir satış noktası uygulamasıdır; işletme verileriniz size aittir. Bu Gizlilik Politikası, uygulamayı kullandığınızda bilgilerinizi nasıl işlediğimizi açıklar.",
+    "local_storage": {
+      "title": "Verileriniz nasıl saklanır",
+      "desc": "DingPOS tüm işletme verilerinizi cihazınızda yerel olarak saklar. Bulut yedeklemeyi kendiniz açmadığınız sürece bu veriler cihazınızdan çıkmaz. Uygulamada oluşturduğunuz veriler şunlardır:",
+      "items": [
+        "Mağaza ayarları (mağaza adı, para birimi, vergi oranı, logo)",
+        "Ürün verileri (ad, fiyat, maliyet, barkod, fotoğraf, kategori, varyantlar, stok)",
+        "Sipariş ve ödeme kayıtları (indirimler, vergi ve ödeme yöntemi dahil)",
+        "Müşteri ve üyelik verileri (ad, isteğe bağlı telefon ve e-posta, puan)",
+        "Kampanya kuralları ve üyelik seviyesi ayarları"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Bulut yedekleme (isteğe bağlı)",
+      "desc": "İsterseniz bulut yedeklemeyi açabilir ve depolama konumu olarak iCloud, Google Drive veya Dropbox'tan birini seçebilirsiniz. Yedekler kendi bulut hesabınıza yazılır ve tamamen sizin denetiminizde kalır. Bu yedeklerin içeriğine hiçbir zaman erişmeyiz, onları işlemeyiz ve saklamayız. Yedeklemeyi açıp açmamak ve hangi sağlayıcıyı kullanmak tamamen size bağlıdır; yedeklemeyi istediğiniz zaman kapatabilirsiniz."
+    },
+    "no_collection": {
+      "title": "Toplamadığımız veriler",
+      "desc": "DingPOS işletme içeriğinizin hiçbirini toplamaz, iletmez veya paylaşmaz. Özellikle şunları yapmayız:",
+      "items": [
+        "Ürün, sipariş, müşteri veya üyelik verilerinizi toplamayız",
+        "Herhangi bir ödeme sürecine dahil olmayız ve kredi kartı bilgilerine erişmeyiz (uygulama gerçek kart ödemelerini işlemez)",
+        "Konumunuzu izlemeyiz",
+        "İşletme verilerinizi üçüncü taraflarla paylaşmayız"
+      ]
+    },
+    "camera": {
+      "title": "Kamera ve fotoğraflar",
+      "desc": "DingPOS kamera erişimini yalnızca siz \"barkod tara\" veya \"ürün fotoğrafı çek\" özelliğini kullandığınızda ister. Barkod tanıma ve fotoğraflar cihazınızda yerel olarak işlenir ve sunucularımıza hiçbir zaman yüklenmez. Ürün fotoğrafları, yalnızca bulut yedeklemeyi açarsanız yedeğin bir parçası olarak kendi bulut hesabınıza yazılır."
+    },
+    "subscription": {
+      "title": "Abonelik ve satın alımlar",
+      "desc": "DingPOS, Apple App Store Uygulama İçi Satın Alma (IAP) üzerinden abonelik sunar ve abonelik durumunu yönetmek için RevenueCat kullanır. Ödemeyi Apple alır; kredi kartı veya ödeme bilgilerinizi hiçbir zaman almayız. RevenueCat yalnızca abonelik durumuna bağlı anonim bir tanımlayıcı alır ve bunu aboneliğinizin etkin olup olmadığını doğrulamak için kullanır."
+    },
+    "analytics": {
+      "title": "Analiz ve çökme raporları",
+      "desc": "DingPOS, uygulamanın nasıl kullanıldığını anlamamıza ve çökmeleri tespit edip düzeltmemize yardımcı olması için Google tarafından sağlanan Firebase Analytics ve Firebase Crashlytics'i kullanır. Bu hizmetler şunları toplar:",
+      "items": [
+        "Anonim kullanım verileri (örn. hangi özelliklerin kullanıldığı, oturum süresi)",
+        "Çökme raporları (örn. yığın izleri, cihaz modeli, işletim sistemi sürümü)",
+        "Cihaz bilgileri (örn. cihaz türü, işletim sistemi, uygulama sürümü)",
+        "Rastgele oluşturulmuş bir örnek tanımlayıcısı (kimliğinizle ilişkilendirilmez)"
+      ],
+      "note": "Bu veriler anonimdir ve işletme içeriğinizin hiçbirini (ürünler, siparişler, müşteriler veya üyeler gibi) içermez. Google'ın bu verileri nasıl işlediği hakkında daha fazla bilgi için Google Gizlilik Politikası'na bakın: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Çocukların gizliliği",
+      "desc": "DingPOS ticari bir satış noktası aracıdır. Çocuklar için tasarlanmamıştır ve çocuklara ait kişisel bilgileri toplamaz."
+    },
+    "changes": {
+      "title": "Bu politikadaki değişiklikler",
+      "desc": "Bu Gizlilik Politikası'nda önemli değişiklikler yaparsak sizi bir uygulama güncellemesiyle bilgilendiririz. Bu politikayı zaman zaman gözden geçirmenizi öneririz."
+    },
+    "contact": {
+      "title": "Bize ulaşın",
+      "desc": "Bu Gizlilik Politikası hakkında sorularınız veya önerileriniz varsa bize şu adresten ulaşabilirsiniz:"
+    }
+  },
+  "terms": {
+    "title": "Kullanım Koşulları",
+    "meta_description": "ALU Studio'nun iPad POS uygulaması DingPOS için Kullanım Koşulları: lisans, 30 günlük ücretsiz deneme, App Store abonelikleri, verileriniz ve yedekleriniz ile sorumluluk.",
+    "effective_date": "Yürürlük tarihi: 8 Ekim 2026",
+    "intro": "DingPOS'a hoş geldiniz. Uygulamayı kullanmadan önce lütfen aşağıdaki Kullanım Koşulları'nı dikkatle okuyun. DingPOS'u indirerek, yükleyerek veya kullanarak bu koşullara bağlı kalmayı kabul etmiş olursunuz.",
+    "license": {
+      "title": "Lisans",
+      "desc": "ALU Studio, size işinizi yürütmek amacıyla DingPOS'u cihazlarınızda kullanmanız için sınırlı, münhasır olmayan ve devredilemez bir lisans verir. Bu lisans perakende faaliyetleriniz içindir."
+    },
+    "subscription": {
+      "title": "Abonelik ve ödeme",
+      "desc": "DingPOS, ilk kurulumdan itibaren 30 günlük ücretsiz deneme sunar; bu sürede tüm Pro plan özellikleri kullanılabilir. Deneme sırasında herhangi bir plan satın almak denemeyi sona erdirir ve satın alınan plan satın alma anından itibaren geçerli olur. Deneme sonrasında Ödeme ekranını kullanmaya devam edebilmek için App Store Uygulama İçi Satın Alma ile alınan planlardan (Lite, Standard veya Pro) birine abone olmanız gerekir; plan içerikleri ve fiyatlar fiyatlandırma sayfasında (alu-studio.com/dingpos/pricing) yer alır, tahsil edilen fiyat ise App Store'da gösterilen fiyattır. Abonelik olmadan da ürünlere göz atma ve ürün yönetimi kullanılabilir durumda kalır ve verileriniz asla silinmez. Abonelik, mevcut dönemin bitiminden en az 24 saat önce iptal etmediğiniz sürece otomatik olarak yenilenir. Aboneliğinizi istediğiniz zaman cihazınızın App Store hesap ayarlarından yönetebilir veya iptal edebilirsiniz. Satın alınan abonelikler geri yüklenebilir."
+    },
+    "restrictions": {
+      "title": "Kısıtlamalar",
+      "desc": "Uygulamayı kullanırken şunları yapmamayı kabul edersiniz:",
+      "items": [
+        "Uygulamanın tersine mühendisliğini yapmak, parçalarına ayırmak veya kaynak koduna dönüştürmek",
+        "Uygulamayı değiştirmek, çevirmek veya türev eserler oluşturmak",
+        "Uygulamadaki telif hakkı bildirimlerini veya etiketleri kaldırmak",
+        "Uygulamayı hukuka aykırı herhangi bir amaçla kullanmak"
+      ]
+    },
+    "user_data": {
+      "title": "Verileriniz ve yedekleriniz",
+      "desc": "DingPOS'ta oluşturduğunuz tüm işletme içeriği (ürünler, siparişler, müşteriler, üyeler ve ayarlar) cihazınızda saklanır ve yalnızca sizin sorumluluğunuzdadır. Uygulamayı silerseniz veya verilerini temizlerseniz, bulut yedeklemesini etkinleştirmediyseniz saklanan tüm bilgiler kalıcı olarak kaybolur. Bulut yedekleri seçtiğiniz bulut hesabında (iCloud / Google Drive / Dropbox) bulunur; erişilebilirlikleri ve saklama süreleri o sağlayıcının hizmet koşullarına tabidir. Sizin için hiçbir veriyi kurtaramayız. Ayrıca faaliyet gösterdiğiniz yerde geçerli olan vergi, fatura ve tüketicinin korunması mevzuatına uymaktan da siz sorumlusunuz."
+    },
+    "updates": {
+      "title": "Uygulama güncellemeleri",
+      "desc": "Özellikleri iyileştirmek, sorunları gidermek veya güvenliği artırmak için zaman zaman uygulama güncellemeleri yayınlayabiliriz. En iyi deneyim için uygulamayı güncel tutmanızı öneririz."
+    },
+    "disclaimer": {
+      "title": "Sorumluluk reddi",
+      "desc": "DingPOS, açık veya zımni hiçbir garanti verilmeksizin \"olduğu gibi\" sunulur. Uygulamanın kesintisiz çalışacağını veya tamamen hatasız olacağını garanti etmeyiz. DingPOS, işinizi kolaylaştıran bir araçtır; vergi hesaplamalarının, stok miktarlarının ve tüm tutarların nihai doğruluğunu ve yerel mevzuata uyumu kontrol etmek sizin sorumluluğunuzdadır. Yasaların izin verdiği azami ölçüde, uygulamayı kullanmanızdan doğan doğrudan, dolaylı, arızi veya sonuç olarak ortaya çıkan zararlardan sorumlu değiliz."
+    },
+    "liability": {
+      "title": "Sorumluluğun sınırlandırılması",
+      "desc": "ALU Studio'nun, uygulamanın kullanımından veya kullanılamamasından doğan zararlara ilişkin sorumluluğu, hiçbir durumda olaydan önceki 12 ayda uygulama için ödediğiniz tutarı aşamaz. Bu; veri kaybı, gelir kaybı, cihaz hasarı veya diğer her türlü kaybı kapsar, ancak bunlarla sınırlı değildir."
+    },
+    "changes": {
+      "title": "Bu koşullardaki değişiklikler",
+      "desc": "Bu Kullanım Koşulları'nı istediğimiz zaman değiştirme hakkımızı saklı tutarız. Değiştirilen koşullar bu sayfada yayımlandığı anda yürürlüğe girer. Uygulamayı kullanmaya devam etmeniz, değiştirilen koşulları kabul ettiğiniz anlamına gelir."
+    },
+    "contact": {
+      "title": "Bize ulaşın",
+      "desc": "Bu Kullanım Koşulları hakkında sorularınız varsa lütfen bizimle şu adresten iletişime geçin:"
+    }
+  },
+  "support": {
+    "doc_title": "Destek",
+    "meta_description": "DingPOS destek: iPad POS için yanıtlar ve adım adım rehberler — kurulum, ödeme, siparişler, stok, kampanyalar, yedekleme, personel ve faturalandırma.",
+    "title": "Size nasıl yardımcı olabiliriz?",
+    "subtitle": "Sık sorulan soruları arayın veya konulara göz atın",
+    "search_placeholder": "Arayın, ör. “barkod” veya “yedek geri yükleme”",
+    "search_hint_keywords": "Anahtar kelimeleri boşlukla ayırın",
+    "search_hint_shortcut_pre": "aramak için ",
+    "search_hint_shortcut_post": " tuşuna basın",
+    "clear": "Aramayı temizle",
+    "results_count": "{{num}} eşleşen soru",
+    "no_results_title": "Eşleşen soru yok",
+    "no_results_desc": "Farklı anahtar kelimeler deneyin ya da bize e-posta gönderin — en kısa sürede dönüş yapacağız.",
+    "related_title": "İlgili sorular",
+    "back": "Destek",
+    "since": "DingPOS v{{version}} sürümünden beri mevcut",
+    "verified_version": "İçerik DingPOS v{{version}} sürümüne göredir",
+    "contact_title": "Yanıtı bulamadınız mı?",
+    "contact_desc": "Karşılaştığınız sorunu bize anlatın, en kısa sürede size dönelim.",
+    "contact_cta": "ALU Studio ile iletişime geçin",
+    "group_faq": "Sık Sorulan Sorular",
+    "group_guide": "Rehberler",
+    "group_guide_desc": "Adım adım kurulum rehberleri; DingPOS'u geliştirirken biriktirdiğimiz püf noktalarıyla birlikte.",
+    "group_roadmap": "Yakında",
+    "group_roadmap_desc": "Henüz mevcut değil — bazıları şimdiden planlandı. Talepleriniz önceliklerimizi belirliyor, bize yazın."
+  }
+}
