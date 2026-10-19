@@ -282,8 +282,8 @@ export const articles = [
       "remise",
       "pourcentage",
       "montant fixe",
-      "réduction",
-      "rabais"
+      "remise sur article",
+      "remise sur panier"
     ],
     "content": [
       {
