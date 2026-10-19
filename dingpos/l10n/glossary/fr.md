@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Assistance | Pas « Support » seul (ambigu en français). Registre : vouvoiement partout. |
+| FAQ / frequently asked questions | FAQ | Développé : « Questions fréquentes ». |
+| Pricing (the page) | Tarifs | Pas « Prix » ni « Tarification » pour le titre de la page. |
+| Plan (Lite / Standard / Pro; the names stay in English) | formule | From app glossary. Lite / Standard / Pro restent tels quels. |
+| Free trial | essai gratuit | Pas « période d'essai gratuite » dans les titres. |
+| Billed monthly / billed annually | facturé mensuellement / facturé annuellement | Libellés courts : « Mensuel » / « Annuel ». |
+| Terms of Use | Conditions d'utilisation | Pas « CGU » dans les titres ; majuscule initiale seulement. |
+| Coming Soon (planned features) | Bientôt disponible | Étiquette courte : « Bientôt ». |
+| Setup guide (promotion setup guides) | guide de configuration | Pas « tutoriel ». |
+| Shop owner | commerçant (commerçante) | Pas « propriétaire » (rôle de l'app) ni « gérant ». Utiliser « votre boutique », « votre commerce ». |
+| Stall / pop-up / night market | stand / boutique éphémère (pop-up store) / marché nocturne | « étal » pour les marchés alimentaires ; « marché » seul pour les marchés de plein air. |
+| Offline-first | fonctionne hors ligne | Pas « offline-first » ; formule : « conçu pour fonctionner sans connexion ». |
+| Point of sale (POS) app | application de caisse | Pas « logiciel de point de vente » ; « caisse enregistreuse sur iPad » en variante descriptive. « POS » reste en usage secondaire. |
