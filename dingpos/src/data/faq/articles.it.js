@@ -334,7 +334,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ordine completo del calcolo: sconti sugli articoli → sconto sul carrello → imposta. Gli importi sono arrotondati al valore più vicino, con i casi a metà arrotondati per eccesso, al numero di decimali previsto per la valuta (ad es. 0 per TWD, 2 per USD)."
+        "text": "Ordine completo del calcolo: sconti sugli articoli → sconto sul carrello → imposta. Gli importi vengono arrotondati al numero di decimali previsto per la valuta (ad es. 0 per TWD, 2 per USD); le frazioni esattamente a metà vengono arrotondate per eccesso."
       }
     ],
     "related": [
@@ -778,7 +778,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Una giacenza negativa di solito significa che un rifornimento non è stato registrato, oppure che un articolo preordinato non è ancora arrivato (i preordini scalano la giacenza quando vengono inseriti). Registra i rifornimenti ricevendo un ordine d'acquisto e il numero si ripristina da solo; correggi le differenze d'inventario con una rettifica manuale, che resta nel registro dei movimenti."
+        "text": "Una giacenza negativa di solito significa che un rifornimento non è stato registrato, oppure che un articolo preordinato non è ancora arrivato (i preordini scalano la giacenza quando vengono inseriti). Registra i rifornimenti ricevendo un ordine d'acquisto e il numero si ripristina da solo; correggi le differenze di giacenza con una rettifica manuale, che resta nel registro dei movimenti."
       }
     ],
     "related": [
