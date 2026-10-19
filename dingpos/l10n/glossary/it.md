@@ -8,16 +8,22 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Assistenza | Non "Supporto". |
+| FAQ / frequently asked questions | Domande frequenti | Sigla "FAQ" ammessa nei titoli brevi e nei link. |
+| Pricing (the page) | Prezzi | Titolo di pagina/menu; non "Listino". |
+| Plan (Lite / Standard / Pro; the names stay in English) | Piano | From app glossary. I nomi Lite / Standard / Pro restano in inglese. |
+| Free trial | Prova gratuita | Non "periodo di prova libero". |
+| Billed monthly / billed annually | Fatturazione mensile / Fatturazione annuale | Come frase: "addebitato ogni mese" / "addebitato ogni anno"; non "fatturato" in senso fiscale se il contesto è l'abbonamento App Store. |
+| Terms of Use | Termini di utilizzo | Non "Condizioni d'uso" in un punto e "Termini" in un altro. |
+| Coming Soon (planned features) | In arrivo | Non "Prossimamente". |
+| Setup guide (promotion setup guides) | Guida alla configurazione | Non "tutorial". |
+| Shop owner | Titolare del negozio | "Titolare" from app glossary (Owner). Non "proprietario". |
+| Stall / pop-up / night market | Banco / pop-up store / mercatino serale | "Banco" per le bancarelle; "mercato serale" per night market; non "stand". |
+| Offline-first | Funziona anche offline | Descrittivo; non "offline-first" né "prima offline". Titoli brevi: "Funziona offline". |
+| Point of sale (POS) app | App per punto cassa (POS) | Primo uso in pagina "app per punto cassa (POS)", poi "app POS"; non "registratore di cassa". |
+| Privacy Policy | Informativa sulla privacy | Non "Politica sulla privacy". |
+| Download (the app) | Scarica / Scarica dall'App Store | Verbo imperativo nei pulsanti. |
+| Contact us | Contattaci | Pulsanti e link. |
+| Barcode | Codice a barre | Non "barcode". |
+| Inventory (stock management, site) | Magazzino | Il termine app "Giacenza" resta per i valori di stock; "gestione del magazzino" per la funzione. |
+| Member / loyalty program | Cliente fedeltà / Programma fedeltà | "Programma fedeltà" per loyalty; "Punti" from app glossary. |
