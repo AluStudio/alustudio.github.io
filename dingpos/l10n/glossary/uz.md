@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | Yordam | Not "Qo‘llab-quvvatlash" (reads as "backing/endorsement"). |
+| FAQ / frequently asked questions | Ko‘p so‘raladigan savollar | Short form in nav: "Savollar". |
+| Pricing (the page) | Narxlar | |
+| Plan (Lite / Standard / Pro; the names stay in English) | Tarif | From app glossary (Plan). |
+| Free trial | Bepul sinov | "Bepul sinov muddati" when a period is meant. |
+| Billed monthly / billed annually | Oylik to‘lov / Yillik to‘lov | Sentence form: "har oy to‘lanadi" / "yiliga bir marta to‘lanadi". |
+| Terms of Use | Foydalanish shartlari | |
+| Coming Soon (planned features) | Tez orada | Badge label; "Tez kunda" is an acceptable synonym but use "Tez orada" everywhere. |
+| Setup guide (promotion setup guides) | Sozlash qo‘llanmasi | |
+| Shop owner | Do‘kon egasi | "egasi" matches the app's Owner. |
+| Stall / pop-up / night market | peshtaxta / vaqtinchalik savdo nuqtasi / kechki bozor | "Peshtaxta" for stall; "bozor" is the familiar word for market stalls. |
+| Offline-first | Internetsiz ishlaydi | Phrase as "internetsiz ham ishlaydi"; do not use "offlayn-birinchi". |
+| Point of sale (POS) app | Kassa ilovasi (POS) | Write "POS" in Latin; "Savdo nuqtasi" avoided as too literal. |
