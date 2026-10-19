@@ -1331,7 +1331,7 @@ export const articles = [
         "items": [
           "As vendas importadas são posicionadas pela data da transação e recalculadas com a moeda e o modo de imposto da sua loja. Elas não afetam o estoque e não dão pontos de boas-vindas.",
           "Os clientes são associados aos existentes por telefone ou e-mail; quem não for encontrado é criado.",
-          "As vendas importadas mostram a data em que foram importadas e o número da venda de origem, e não podem ser anuladas nem devolvidas.",
+          "As vendas importadas mostram a data em que foram importadas e o nº de origem, e não podem ser anuladas nem devolvidas.",
           "As linhas com erro podem ser exportadas em um CSV com os motivos anotados — corrija e importe de novo. Linhas duplicadas são ignoradas automaticamente."
         ]
       },
@@ -1422,7 +1422,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Equipe é um recurso do plano Pro (também disponível durante o teste grátis). Se o Pro terminar, os dados da equipe e o responsável por cada venda são mantidos e as novas vendas passam a ser registrados no nome do proprietário; ao assinar o Pro de novo, tudo volta."
+        "text": "Equipe é um recurso do plano Pro (também disponível durante o teste grátis). Se o Pro terminar, os dados da equipe e o responsável por cada venda são mantidos e as novas vendas passam a ser registradas no nome do proprietário; ao assinar o Pro de novo, tudo volta."
       }
     ],
     "related": [
@@ -1536,7 +1536,7 @@ export const articles = [
         "items": [
           "Cada registro mostra o que foi afetado, quem fez o quê e quando, e o resultado — por exemplo “M preço R$ 390 → R$ 350”.",
           "Filtre por funcionário (inclusive os desativados), tipo de ação e Hoje / Esta semana / Este mês.",
-          "Toque em um registro ligado a uma venda, produto ou cliente para abrir os detalhes da venda.",
+          "Toque em um registro ligado a uma venda, produto ou cliente para abrir os detalhes correspondentes.",
           "Os detalhes da venda, os detalhes do produto e a página de cada funcionário têm uma entrada própria, que lista só os registros sobre eles.",
           "Produtos excluídos continuam mostrando no registro o nome e o preço da época."
         ]
@@ -2045,14 +2045,14 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Em Resumo, escolha Este mês para ver a receita do mês, o dinheiro recebido, o lucro e a divisão por forma de pagamento.",
+          "Em Resumo, escolha Este mês para ver a receita do mês, o valor recebido, o lucro e a divisão por forma de pagamento.",
           "As compras de fornecedores a prazo mensal ficam reunidas em Contas a pagar, dentro de Compras, onde dá para quitar um mês inteiro de uma vez.",
           "As vendas a prazo para clientes ficam reunidas em Vendas → Contas a receber, onde dá para quitar um mês inteiro de uma vez."
         ]
       },
       {
         "type": "p",
-        "text": "Se você precisa de um relatório de fechamento mensal que possa exportar ou imprimir, escreva para nós dizendo quais campos quer ver. Priorizamos o desenvolvimento pelo número de pedidos."
+        "text": "Se você precisa de um relatório de fechamento mensal que possa exportar ou imprimir, escreva para nós dizendo quais campos quer ver. Priorizamos o desenvolvimento pelo número de solicitações."
       }
     ],
     "related": [
