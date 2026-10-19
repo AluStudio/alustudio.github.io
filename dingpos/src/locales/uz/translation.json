@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the uz translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync uz`, then `npm run l10n -- apply uz`.",
+  "nav": {
+    "home": "Bosh sahifa",
+    "pricing": "Narxlar",
+    "privacy": "Maxfiylik siyosati",
+    "terms": "Foydalanish shartlari",
+    "support": "Savollar"
+  },
+  "hero": {
+    "meta_title": "DingPOS — iPad uchun internetsiz ishlaydigan kassa ilovasi",
+    "meta_description": "DingPOS — do‘koningizni 10 daqiqada oching. iPad uchun internetsiz ham ishlaydigan kassa ilovasi. Ma’lumotlaringiz o‘zingizda, nazorat sizda.",
+    "eyebrow": "iPad uchun kassa ilovasi",
+    "title": "Do‘koningizni 10 daqiqada oching. Ma’lumotlaringiz o‘zingizda, nazorat sizda.",
+    "description": "DingPOS — iPad uchun kassa ilovasi. Akkaunt kerak emas, bulutga bog‘lanib qolmaysiz va internet bo‘lmasa ham ishlayveradi. Mahsulotlar, buyurtmalar va mijozlar ma’lumoti faqat o‘z qurilmangizda saqlanadi.",
+    "download": "App Store’dan yuklab olish",
+    "note": "30 kunlik bepul sinov.",
+    "shot_alt": "DingPOS to‘lov ekrani: chapda toifa filtrlari bilan mahsulotlar to‘ri, o‘ngda avtomatik qo‘llangan aksiyalar va jami summa ko‘rsatilgan savat"
+  },
+  "proof": {
+    "items": [
+      "Akkaunt kerak emas",
+      "To‘lov internetsiz ham ishlaydi",
+      "Ma’lumotlar iPad’ingizda qoladi"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "To‘lov",
+      "title": "Savdoning har bir bosqichi bitta ekranda",
+      "lead": "Bir vaqtning o‘zida 10 tagacha savat, yozgan sari nomi yoki shtrix-kodi bo‘yicha topiladigan mahsulotlar, to‘lovni olishdan oldin hisoblangan chegirma va soliq.",
+      "items": [
+        "Bir vaqtda ishlaydigan 10 tagacha savat",
+        "Mahsulotni nomi va shtrix-kodi bo‘yicha yozgan sari qidirish",
+        "Mahsulot va savat chegirmalari, qat’iy summa yoki foiz",
+        "Soliq qo‘shilgan / qo‘shilmagan holda avtomatik hisoblanadi",
+        "Naqd pul qaytimi va o‘zingiz nomlagan to‘lov usullari",
+        "Har bir savdo “Ding!” ovozi va titrash bilan yakunlanadi"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Aksiya mexanizmi",
+      "title": "Qoidani bir marta belgilang, to‘lovda o‘zi qo‘llanadi",
+      "lead": "Summa chegarasi, birini olsangiz ikkinchisi bepul, “happy hour”, faqat a’zolar uchun takliflar — qoida bir marta yaratilsa, to‘lov ekrani o‘zi hisoblaydi. Hech kim eslab yurmaydi, kupon kodini kiritish ham shart emas.",
+      "items": [
+        "Savat summasi chegaraga yetganda avtomatik ishga tushadi",
+        "Savat yoki mahsulot chegirmalari (qat’iy summa yoki foiz)",
+        "“Bitta olsangiz, ikkinchisi sovg‘a” va N-mahsulot takliflari",
+        "Ballarni ko‘paytirish koeffitsiyentlari",
+        "Happy Hour vaqt oralig‘i — yarim tundan o‘tadigan, hafta kunlarini tanlash mumkin",
+        "Ustuvorlik, qo‘shib qo‘llash va to‘xtatish sozlamalari",
+        "Foydalanish chegarasi (jami yoki har bir mijozga)",
+        "To‘lovda avtomatik qo‘llanadi — kupon kodlarisiz"
+      ],
+      "shot_alt": "Sozlamalardagi aksiyalar ro‘yxati to‘plamlar va chegirmalarga bo‘lingan, har bir qoidada uning holati va ustuvorligi ko‘rsatilgan"
+    },
+    "reports": {
+      "eyebrow": "Hisobotlar",
+      "title": "Do‘kon hali ochiq paytda bugun qancha topganingiz",
+      "lead": "Buyurtmalar soni, daromad, yalpi foyda, chegirmalar va to‘lov usullari bitta sahifada — bugun, 7 kun, 30 kun yoki butun davr bo‘yicha.",
+      "items": [
+        "Bugun: buyurtmalar soni, daromad, yalpi foyda, chegirma, to‘lov usullari ulushi",
+        "Soni bo‘yicha eng ko‘p sotilgan 5 ta mahsulot",
+        "Kun / hafta / oy davrlari",
+        "Daromad va yalpi foyda dinamikasi grafiklari"
+      ],
+      "shot_alt": "Boshqaruv paneli: bugungi daromad, jami chegirma, foyda va o‘rtacha chek; pastda to‘lov usullari doiraviy diagrammasi va eng ko‘p sotilganlar ro‘yxati"
+    },
+    "orders": {
+      "eyebrow": "Buyurtma",
+      "title": "Har bir savdo saqlanadi va har birini bekor qilish mumkin",
+      "lead": "Har bir buyurtmada to‘liq yozuv saqlanadi: mahsulotlar va variantlar, qaysi aksiya qo‘llangani, soliq, to‘lov usuli va berilgan qaytim.",
+      "items": [
+        "Vaqt bo‘yicha buyurtmalar ro‘yxati, sana va to‘lov usuli bo‘yicha filtr",
+        "Qator tafsilotida mahsulotlar, variantlar, chegirmalar, soliq va qaytim saqlanadi",
+        "Tasdiqlash bilan yaroqsiz deb belgilash — zaxira va ballar avtomatik tiklanadi"
+      ],
+      "shot_alt": "Chapda vaqt bo‘yicha buyurtmalar ro‘yxati, o‘ngda tanlangan buyurtma tafsiloti: mahsulotlar, qo‘llangan chegirma, soliq, jami summa, to‘lov usuli va qaytim"
+    }
+  },
+  "features": {
+    "title": "Do‘kon yuritishning qolgan hammasi",
+    "subtitle": "Birinchi sozlash, mahsulotlar, zaxira va a’zolar — hammasi bitta iPad’da",
+    "onboarding": {
+      "title": "Tez boshlash",
+      "items": [
+        "Mamlakatni tanlang — valyuta, soliq rejimi va soliq stavkasi o‘zi to‘ldiriladi",
+        "Do‘kon nomi va logotipini kiriting",
+        "Boshidan oxirigacha taxminan 10 daqiqa, so‘ng savdoni boshlaysiz"
+      ]
+    },
+    "products": {
+      "title": "Mahsulotlar va variantlar",
+      "items": [
+        "Toifalarni boshqarish va filtrlash",
+        "Variantlar (masalan, o‘lcham × rang), har birining o‘z narxi va tannarxi bor",
+        "Shtrix-kodni qo‘lda kiritish yoki kamera bilan skanerlash, takrorlanishi bloklanadi",
+        "Mahsulot suratlari, saqlashda kichik nusxalari yaratiladi"
+      ]
+    },
+    "inventory": {
+      "title": "Ombor",
+      "items": [
+        "Har bir mahsulot uchun zaxirani yuritishni yoqish/o‘chirish",
+        "Har bir variantning alohida zaxirasi",
+        "Manfiy zaxiraga ruxsat — to‘lov hech qachon to‘xtatilmaydi",
+        "Zaxira kamayganda rang bilan ogohlantirish",
+        "To‘liq harakat daftari: sotuv, yaroqsiz deb belgilash, qo‘lda tuzatish"
+      ]
+    },
+    "loyalty": {
+      "title": "A’zolar va ballar",
+      "items": [
+        "A’zoni ro‘yxatga olish: ism, ixtiyoriy telefon va email",
+        "Har X sarflanganga Y ball beriladi",
+        "N ballni M chegirmaga almashtirish, ixtiyoriy yuqori chegara bilan",
+        "Yangi a’zolarga xush kelibsiz bonusi avtomatik beriladi",
+        "Aksiyalar mo‘ljallay oladigan a’zo darajalari",
+        "Buyurtma yaroqsiz deb belgilansa, berilgan va ishlatilgan ballar qaytariladi"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Zaxira nusxa va maxfiylik",
+    "title": "Akkaunt bo‘lmasa, ma’lumotingizni hech kim ola olmaydi",
+    "lead": "DingPOS’da ro‘yxatdan o‘tadigan hech narsa yo‘q. Hisob-kitoblaringiz iPad’da turadi, zaxira nusxa kerak bo‘lsa, o‘zingizda bor bulut akkauntiga saqlanadi.",
+    "items": [
+      "iCloud, Google Drive yoki Dropbox’dan birini tanlang",
+      "Zaxira nusxani xohlagan paytda qo‘lda yaratish",
+      "Oxirgi 5 ta nusxa saqlanadi",
+      "Suratlarni bosqichma-bosqich sinxronlash",
+      "Akkaunt yo‘q; ma’lumot qurilmada, zaxira nusxa o‘z bulutingizda",
+      "Internetsiz ham to‘liq ishlaydi"
+    ]
+  },
+  "home_pricing": {
+    "title": "Oddiy va ochiq narxlar",
+    "price_before": "Uchta tarif, oyiga ",
+    "price_after": " dan",
+    "sub": "30 kunlik bepul sinov. Savdolardan komissiya olinmaydi, yashirin xarajat ham yo‘q. Sinovdan keyin ham ma’lumotlaringiz saqlanadi — istalgan vaqt qayta obuna bo‘lishingiz mumkin.",
+    "compare": "Tariflarni solishtirish",
+    "cta": "30 kunlik bepul sinovni boshlash"
+  },
+  "pricing": {
+    "doc_title": "Tariflar va narxlar",
+    "meta_description": "iPad uchun DingPOS tariflarini solishtiring: Lite, Standard va Pro. 30 kunlik bepul sinov, har bir to‘lov uchun komissiya yo‘q, ma’lumotlaringiz hech qachon o‘chirilmaydi.",
+    "eyebrow": "Tariflar va narxlar",
+    "title": "Do‘koningizga mos tarifni tanlang",
+    "subtitle": "30 kun bepul sinab ko‘ring — ro‘yxatdan o‘tish shart emas. Tarifni istalgan vaqtda almashtiring; ma’lumotlaringiz hech qachon o‘chirilmaydi.",
+    "billing": {
+      "label": "To‘lov davri",
+      "monthly": "Oylik",
+      "annual": "Yillik",
+      "save": "{{percent}}% tejang"
+    },
+    "recommended": "Tavsiya etiladi",
+    "select_plan": "Tarifni tanlang",
+    "unit": {
+      "month": "/oy",
+      "year": "/yil"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "yoki ",
+    "or_annual_after": "/yil, yiliga bir marta to‘lanadi",
+    "saving_before": "Oylik to‘lovga nisbatan yiliga ",
+    "saving_after": " tejaysiz",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Bozorda yakka o‘zi savdo qiladigan, to‘lov va mahsulotlar kifoya qiladiganlar uchun",
+        "heading": "Tarkibida",
+        "features": [
+          "10 tagacha savatli to‘liq to‘lov jarayoni",
+          "Variantlar, shtrix-kodlar, rasmlar va toifalar bilan mahsulotlar",
+          "Buyurtmalar tarixi, yaroqsiz deb belgilash, qaytarish va almashtirish",
+          "Biznes boshqaruv paneli: daromad, foyda, eng ko‘p sotilganlar",
+          "Bulutga zaxira nusxa va tiklash",
+          "To‘lov internetsiz ham ishlaydi"
+        ],
+        "cta": "30 kunlik bepul sinovni boshlash"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Zaxira, a’zolar, xaridlar yoki nasiya kerak bo‘lgan do‘konlar uchun",
+        "heading": "Lite tarifidagi barcha imkoniyatlarga qo‘shimcha ravishda",
+        "features": [
+          "Aksiyalar mexanizmi: summa chegarasi, BOGO, “baxtli soatlar” — to‘lov paytida qo‘llanadi",
+          "Mijoz ballari, ularni ishlatish va a’zolik darajalari",
+          "Zaxirani hisobga olish va xarid buyurtmalari",
+          "Nasiyaga sotish: mahsulotni hozir bering, pulni keyin oling",
+          "Oldindan buyurtmalar: avans oling, olib ketishda qolganini to‘lating"
+        ],
+        "cta": "30 kunlik bepul sinovni boshlash"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Xodimlari bor, lavozimlar va nazorat jurnali kerak bo‘lgan do‘konlar uchun",
+        "heading": "Standard tarifidagi barcha imkoniyatlarga qo‘shimcha ravishda",
+        "features": [
+          "Xodimlar hisoblari: har biriga alohida PIN, har bir buyurtmada uni kim rasmiylashtirgani qayd etiladi",
+          "Ruxsatlar va tasdiqlashlar: chegaradan oshgan chegirmalar, mahsulot va zaxirani tahrirlash, tannarxni ko‘rish",
+          "Faoliyat jurnali va tiklash tarixi",
+          "Kengaytirilgan hisobotlar: davrlarni solishtirish, savdo issiqlik xaritasi, sekin sotiladigan mahsulotlar, ombor qiymati, takroriy mijozlar"
+        ],
+        "cta": "30 kunlik bepul sinovni boshlash"
+      }
+    },
+    "fineprint": "To‘lov App Store hisobingiz orqali amalga oshiriladi. Oylik va yillik tariflar har davr oxirida avtomatik yangilanadi; App Store’da istalgan vaqtda bekor qiling.",
+    "currency": {
+      "twd": "Narxlar Tayvan App Store uchun ko‘rsatilgan. Boshqa hududlarda App Store’da ko‘rsatilgan mahalliy narx to‘lanadi.",
+      "to_usd": "AQSh narxlarini ko‘rsatish",
+      "usd": "Narxlar AQSh App Store uchun ko‘rsatilgan. Boshqa hududlarda App Store’da ko‘rsatilgan mahalliy narx to‘lanadi.",
+      "to_twd": "Tayvan narxlarini ko‘rsatish"
+    },
+    "assurances": {
+      "trial": {
+        "title": "30 kunlik bepul sinov",
+        "desc": "Pro’ning barcha imkoniyatlari kiritilgan. Hisob ochish shart emas."
+      },
+      "fees": {
+        "title": "Har bir to‘lov uchun komissiya yo‘q",
+        "desc": "DingPOS tushumingizga umuman tegmaydi — yagona to‘lov bu obuna."
+      },
+      "data": {
+        "title": "Ma’lumotlaringiz sizniki bo‘lib qoladi",
+        "desc": "Sinov yoki obuna tugaganda faqat to‘lov to‘xtaydi. Mahsulotlar, buyurtmalar va hisobotlar saqlanadi, hech narsa o‘chirilmaydi."
+      },
+      "switch": {
+        "title": "Istalgan vaqtda almashtiring",
+        "desc": "Yuqori tarifga o‘tish darhol kuchga kiradi, Apple hisobini mutanosib hisoblaydi. Pastroq tarifga o‘tish yangilanish paytida kuchga kiradi."
+      }
+    },
+    "compare": {
+      "title": "Barcha imkoniyatlarni solishtiring",
+      "subtitle": "Har bir tarif oldingi tarifdagi hamma narsani o‘z ichiga oladi.",
+      "feature_col": "Imkoniyat",
+      "included": "Kiritilgan",
+      "not_included": "Kiritilmagan",
+      "groups": {
+        "checkout": "To‘lov",
+        "catalog": "Mahsulotlar va zaxira",
+        "customers": "Mijozlar va aksiyalar",
+        "reports": "Hisobotlar",
+        "team": "Xodimlar va nazorat",
+        "data": "Ma’lumotlar va zaxira nusxa"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "To‘lov va bir nechta savat",
+          "desc": "Bir vaqtda 10 tagacha savat, nom yoki shtrix-kod bo‘yicha jonli qidiruv"
+        },
+        "discounts_tax": {
+          "name": "Chegirmalar va soliq",
+          "desc": "Mahsulot va buyurtma chegirmalari; soliq qo‘shilgan yoki qo‘shilmagan narxda siz uchun hisoblanadi"
+        },
+        "offline": {
+          "name": "Internetsiz to‘lov",
+          "desc": "Internet aloqasi bo‘lmasa ham savdoni davom ettiring"
+        },
+        "returns": {
+          "name": "Yaroqsiz deb belgilash, qaytarish va almashtirish",
+          "desc": "Buyurtmalarning to‘liq tarixi va tafsilotlari"
+        },
+        "preorder": {
+          "name": "Oldindan buyurtmalar",
+          "desc": "Hozir avans oling, qolganini olib ketishda to‘lating"
+        },
+        "on_account": {
+          "name": "Nasiyaga sotish",
+          "desc": "Hozir bering, keyin oling — har bir mijozning qarzi bir joyda"
+        },
+        "products": {
+          "name": "Mahsulotlarni boshqarish",
+          "desc": "Variantlar, shtrix-kodlar, rasmlar, toifalar"
+        },
+        "import": {
+          "name": "Ma’lumotlarni import qilish",
+          "desc": "Boshqa tizimlardan mahsulotlar va o‘tgan savdolarni CSV orqali import qiling"
+        },
+        "inventory": {
+          "name": "Zaxirani hisobga olish",
+          "desc": "Sotilganda zaxira kamayadi; qo‘lda o‘zgartirishlar harakat yozuvini qoldiradi"
+        },
+        "purchasing": {
+          "name": "Xaridlar va yetkazib beruvchilar",
+          "desc": "Xarid buyurtmasini qabul qilish zaxirani yangilaydi; har bir yetkazib beruvchiga qancha qarzingiz borligini ko‘ring"
+        },
+        "promotions": {
+          "name": "Aksiyalar mexanizmi",
+          "desc": "Summa chegarasi, BOGO, N-chi mahsulot aksiyalari, “baxtli soatlar” — to‘lov paytida qo‘llanadi"
+        },
+        "loyalty": {
+          "name": "Mijozlar va ballar",
+          "desc": "Ball to‘plash va ishlatish orqali mijozlarni qaytaring"
+        },
+        "member_tiers": {
+          "name": "A’zolik darajalari",
+          "desc": "Eng yaxshi mijozlaringizni darajali imtiyozlar bilan rag‘batlantiring"
+        },
+        "dashboard": {
+          "name": "Biznes boshqaruv paneli",
+          "desc": "Daromad, foyda, chegirmalar, to‘lov turlari ulushi va eng ko‘p sotilganlar"
+        },
+        "comparison": {
+          "name": "Davrlarni solishtirish",
+          "desc": "Oldingi davr yoki o‘tgan yil bilan — o‘sish yoki pasayishni ko‘ring"
+        },
+        "heatmap": {
+          "name": "Savdo issiqlik xaritasi",
+          "desc": "Yetti kun × 24 soat — qaysi soatlarda savdo yaxshi ekanini ko‘ring"
+        },
+        "slow_movers": {
+          "name": "Sekin sotiladigan mahsulotlar",
+          "desc": "Sotilmayotgan, lekin zaxirada turgan mahsulotlarni toping"
+        },
+        "valuation": {
+          "name": "Ombor qiymati va zaxira harakati nazorati",
+          "desc": "Zaxirangiz hozir qancha turadi va uni kim o‘zgartirgan"
+        },
+        "repeat": {
+          "name": "Takroriy mijozlar va ishlatilmagan ballar",
+          "desc": "Qancha a’zo qaytib keladi va qancha ball ishlatilmay turibdi"
+        },
+        "staff": {
+          "name": "Xodimlar hisoblari",
+          "desc": "Har biriga alohida PIN; har bir buyurtmada uni kim rasmiylashtirgani qayd etiladi"
+        },
+        "permissions": {
+          "name": "Ruxsatlar va tasdiqlashlar",
+          "desc": "Menejer va xodim lavozimlari; nimaga tasdiq kerakligini o‘zingiz tanlaysiz"
+        },
+        "activity_log": {
+          "name": "Faoliyat jurnali",
+          "desc": "Yaroqsiz deb belgilashlar, qaytarishlar, narx o‘zgarishlari, zaxira tuzatishlari va boshqalar xronologiyasi"
+        },
+        "restore_records": {
+          "name": "Tiklash tarixi",
+          "desc": "Kim tikladi, qaysi zaxira nusxadan va qaysi buyurtmalar o‘chib ketdi"
+        },
+        "local_data": {
+          "name": "Ma’lumotlar iPad’ingizda",
+          "desc": "Hisob ochish shart emas — biznes ma’lumotlaringiz biz orqali o‘tmaydi"
+        },
+        "backup": {
+          "name": "Bulutga zaxira nusxa va tiklash",
+          "desc": "O‘zingizning iCloud, Google Drive yoki Dropbox’ingizga zaxira nusxa oling"
+        },
+        "undo_restore": {
+          "name": "Tiklashni oldindan ko‘rish va bekor qilish",
+          "desc": "Tiklash qaysi buyurtmalarni olib tashlashini ko‘ring va noto‘g‘ri tiklashni qaytaring"
+        }
+      }
+    },
+    "faq": {
+      "title": "Ko‘p so‘raladigan savollar",
+      "items": [
+        {
+          "q": "Bepul sinov paytida nimalardan foydalanish mumkin?",
+          "a": "Birinchi o‘rnatilgandan boshlab 30 kun davomida barcha imkoniyatlar, jumladan xodimlar, ruxsatlar va kengaytirilgan hisobotlar kabi Pro imkoniyatlari ham mavjud — hisob ochish shart emas. Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va siz sotib olgan tarifga o‘tasiz."
+        },
+        {
+          "q": "Sinovdan keyin obuna bo‘lmasam nima bo‘ladi?",
+          "a": "To‘lov to‘xtaydi; qolgan hammasi ishlayveradi — buyurtmalarni ko‘rish, hisobotlarni ochish va mahsulotlarni boshqarish mumkin. Hech narsa o‘chirilmaydi, obuna bo‘lsangiz to‘lov darhol tiklanadi."
+        },
+        {
+          "q": "Tarifni istalgan vaqtda yuqoriga yoki pastga o‘zgartirish mumkinmi?",
+          "a": "Ha, ilovada Sozlamalar → Obuna orqali. Yuqori tarifga o‘tish darhol kuchga kiradi va Apple foydalanilmagan vaqtni hisobga oladi; pastroq tarifga o‘tish joriy davr tugagach kuchga kiradi. Oylikdan yillikka o‘tish ham darhol kuchga kiradi."
+        },
+        {
+          "q": "Pastroq tarifga o‘tsam, mijozlarim, aksiyalarim va zaxiram nima bo‘ladi?",
+          "a": "Hammasi saqlanadi — hech narsa o‘chirilmaydi yoki o‘zgarmaydi. Yuqori tarifning imkoniyatlari shunchaki ishlamay qoladi, qayta yuqoriga o‘tsangiz hammasi avvalgidek qaytadi."
+        },
+        {
+          "q": "Yillik to‘lov qanday ishlaydi?",
+          "a": "Yillik tarif oylik to‘lovning o‘n oyiga teng turadi va to‘liq bir yilni qamrab oladi — taxminan {{percent}}% arzon. Yiliga bir marta to‘laysiz va u avtomatik yangilanadi."
+        },
+        {
+          "q": "Obunadan tashqari qo‘shimcha to‘lovlar bormi?",
+          "a": "Yo‘q. DingPOS tushumingizga aralashmaydi: komissiya ham, har bir to‘lov uchun alohida haq ham, uskuna shartnomasi ham yo‘q."
+        },
+        {
+          "q": "Obunani qanday bekor qilaman?",
+          "a": "iPad’ingizda Sozlamalar → Apple hisobi → Obunalar bo‘limida boshqaring; davr tugashidan kamida 24 soat oldin bekor qilsangiz, qayta pul yechilmaydi. Ma’lumotlaringiz qurilmangizda qoladi."
+        },
+        {
+          "q": "App Store’dagi narx nega bu sahifadagidan farq qiladi?",
+          "a": "App Store obunani Apple hisobingiz hududidagi narxda hisoblaydi. Bu sahifada Tayvan va AQSh narxlari berilgan; boshqa hududlarda ilovada va App Store’da ko‘rsatilgan mahalliy narx to‘lanadi."
+        }
+      ],
+      "more": "Yana savollaringiz bormi?",
+      "more_link": "Barcha savollarni ko‘rish"
+    },
+    "final": {
+      "title": "30 kun foydalaning, so‘ng tarifni tanlang",
+      "sub": "Yuklab oling va boshlang — hisob ochish shart emas.",
+      "cta": "App Store’dan yuklab olish"
+    }
+  },
+  "footer": {
+    "tagline": "Do‘koningizni 10 daqiqada oching. Ma’lumotlaringiz o‘zingizda, nazorat sizda.",
+    "contact": "Biz bilan bog‘lanish",
+    "privacy_policy": "Maxfiylik siyosati",
+    "terms_of_use": "Foydalanish shartlari",
+    "copyright": "ALU Studio. Barcha huquqlar himoyalangan.",
+    "support": "Savollar"
+  },
+  "privacy": {
+    "title": "Maxfiylik siyosati",
+    "meta_description": "Oflayn ishlaydigan iPad kassa dasturi DingPOS ma’lumotlaringiz bilan qanday ishlaydi: biznes yozuvlari qurilmangizda qoladi, ixtiyoriy zaxira nusxalar esa faqat o‘zingizning bulut hisobingizga yuboriladi.",
+    "effective_date": "Kuchga kirgan sana: 2026-yil 1-iyul",
+    "intro": "ALU Studio («biz») DingPOS («ilova») dasturini ishlab chiqdi. DingPOS maxfiylik asosiga qurilgan kassa dasturi — biznes ma’lumotlaringiz sizga tegishli. Ushbu Maxfiylik siyosati ilovadan foydalanganingizda ma’lumotlaringiz bilan qanday ishlashimizni tushuntiradi.",
+    "local_storage": {
+      "title": "Ma’lumotlaringiz qanday saqlanadi",
+      "desc": "DingPOS barcha biznes ma’lumotlaringizni qurilmangizning o‘zida saqlaydi. Bulutdagi zaxira nusxani o‘zingiz yoqmasangiz, bu ma’lumotlar qurilmangizdan tashqariga chiqmaydi. Ilovada yaratadigan ma’lumotlar quyidagilarni o‘z ichiga oladi:",
+      "items": [
+        "Do‘kon sozlamalari (do‘kon nomi, valyuta, soliq stavkasi, logotip)",
+        "Mahsulot ma’lumotlari (nomi, narxi, tannarxi, shtrix-kod, rasm, toifa, variantlar, zaxira)",
+        "Buyurtma va to‘lov harakatlari haqidagi ma’lumotlar (chegirmalar, soliq va to‘lov usulini ham o‘z ichiga oladi)",
+        "Mijoz va a’zolik ma’lumotlari (ism, ixtiyoriy telefon va e-pochta, ballar)",
+        "Aksiya qoidalari va a’zolik darajalari sozlamalari"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Bulutdagi zaxira nusxa (ixtiyoriy)",
+      "desc": "Xohlasangiz, bulutdagi zaxira nusxani yoqib, saqlash joyi sifatida iCloud, Google Drive yoki Dropbox’dan birini tanlashingiz mumkin. Zaxira nusxalar o‘zingizning bulut hisobingizga yoziladi va to‘liq nazoratingizda qoladi. Biz bu nusxalar mazmunini hech qachon qayta ishlamaymiz, saqlamaymiz va ko‘rmaymiz. Zaxira nusxani yoqish-yoqmaslik va qaysi xizmatdan foydalanish butunlay o‘zingizga bog‘liq, uni istalgan vaqtda o‘chirib qo‘yishingiz mumkin."
+    },
+    "no_collection": {
+      "title": "Biz nimalarni to‘plamaymiz",
+      "desc": "DingPOS biznes ma’lumotlaringizning hech birini to‘plamaydi, uzatmaydi va boshqalar bilan ulashmaydi. Xususan, biz:",
+      "items": [
+        "Mahsulot, buyurtma, mijoz yoki a’zolik ma’lumotlaringizni to‘plamaymiz",
+        "To‘lov jarayonlariga va kredit karta ma’lumotlariga tegmaymiz (ilova haqiqiy karta to‘lovlarini qayta ishlamaydi)",
+        "Joylashuvingizni kuzatmaymiz",
+        "Biznes ma’lumotlaringizni uchinchi tomonlar bilan ulashmaymiz"
+      ]
+    },
+    "camera": {
+      "title": "Kamera va rasmlar",
+      "desc": "DingPOS kameraga faqat siz «shtrix-kodni skanerlash» yoki «mahsulot rasmini olish» funksiyasidan foydalanganingizda ruxsat so‘raydi. Shtrix-kodni aniqlash va rasmlar qurilmangizning o‘zida qayta ishlanadi va hech qachon serverlarimizga yuklanmaydi. Mahsulot rasmlari faqat bulutdagi zaxira nusxani yoqqan bo‘lsangiz, zaxira nusxa tarkibida o‘zingizning bulut hisobingizga yoziladi."
+    },
+    "subscription": {
+      "title": "Obuna va xaridlar",
+      "desc": "DingPOS obunani Apple App Store ilova ichidagi xarid (IAP) orqali taklif qiladi va obuna holatini boshqarish uchun RevenueCat xizmatidan foydalanadi. To‘lovni Apple amalga oshiradi; kredit karta yoki to‘lov ma’lumotlaringiz bizga hech qachon yetib kelmaydi. RevenueCat faqat obuna holatiga bog‘langan anonim identifikatorni oladi va undan obunangiz faolligini tekshirish uchun foydalaniladi."
+    },
+    "analytics": {
+      "title": "Tahlil va nosozliklar haqida hisobot",
+      "desc": "DingPOS ilovadan qanday foydalanilishini tushunish hamda nosozliklarni aniqlab tuzatish uchun Google taqdim etadigan Firebase Analytics va Firebase Crashlytics xizmatlaridan foydalanadi. Bu xizmatlar quyidagilarni to‘playdi:",
+      "items": [
+        "Anonim foydalanish ma’lumotlari (masalan, qaysi funksiyalardan foydalanilgani, seans davomiyligi)",
+        "Nosozlik hisobotlari (masalan, stack trace, qurilma modeli, tizim versiyasi)",
+        "Qurilma haqida ma’lumot (masalan, qurilma turi, tizim, ilova versiyasi)",
+        "Tasodifiy yaratilgan nusxa identifikatori (shaxsingizga bog‘lanmagan)"
+      ],
+      "note": "Bu ma’lumotlar anonim bo‘lib, biznes mazmuningizni (masalan, mahsulotlar, buyurtmalar, mijozlar yoki a’zolarni) o‘z ichiga olmaydi. Google bu ma’lumotlar bilan qanday ishlashi haqida ko‘proq bilish uchun Google Maxfiylik siyosatiga qarang: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Bolalar maxfiyligi",
+      "desc": "DingPOS — tijorat kassa vositasi. U bolalar uchun mo‘ljallanmagan va bolalarning shaxsiy ma’lumotlarini to‘plamaydi."
+    },
+    "changes": {
+      "title": "Siyosatdagi o‘zgarishlar",
+      "desc": "Ushbu Maxfiylik siyosatiga muhim o‘zgarishlar kiritsak, sizni ilova yangilanishi orqali xabardor qilamiz. Siyosatni vaqti-vaqti bilan ko‘rib chiqishingizni tavsiya qilamiz."
+    },
+    "contact": {
+      "title": "Biz bilan bog‘laning",
+      "desc": "Ushbu Maxfiylik siyosati bo‘yicha savol yoki takliflaringiz bo‘lsa, biz bilan bog‘laning:"
+    }
+  },
+  "terms": {
+    "title": "Foydalanish shartlari",
+    "meta_description": "ALU Studio’ning iPad uchun kassa ilovasi DingPOS foydalanish shartlari: litsenziya, 30 kunlik bepul sinov, App Store obunalari, ma’lumotlaringiz va zaxira nusxalar hamda javobgarlik.",
+    "effective_date": "Kuchga kirish sanasi: 2026-yil 8-oktabr",
+    "intro": "DingPOS’ga xush kelibsiz. Ilovadan foydalanishdan oldin quyidagi foydalanish shartlarini diqqat bilan o‘qib chiqing. DingPOS’ni yuklab olish, o‘rnatish yoki undan foydalanish orqali siz ushbu shartlarga rozilik bildirasiz.",
+    "license": {
+      "title": "Litsenziya",
+      "desc": "ALU Studio sizga DingPOS’dan biznesingizni yuritish uchun o‘z qurilmalaringizda foydalanish bo‘yicha cheklangan, eksklyuziv bo‘lmagan va boshqaga berib bo‘lmaydigan litsenziya beradi. Bu litsenziya sizning chakana savdo faoliyatingiz uchun mo‘ljallangan."
+    },
+    "subscription": {
+      "title": "Obuna va to‘lov",
+      "desc": "DingPOS birinchi o‘rnatilgan paytdan boshlab 30 kunlik bepul sinov muddatini taqdim etadi; bu davrda Pro tarifining barcha imkoniyatlari ochiq bo‘ladi. Sinov muddatida istalgan tarifni sotib olsangiz, sinov muddati tugaydi va sotib olingan tarif xarid qilingan paytdan boshlab amal qiladi. Sinov muddatidan keyin to‘lov bo‘limidan foydalanishni davom ettirish uchun App Store ilova ichidagi xarid orqali tariflardan biriga (Lite, Standard yoki Pro) obuna bo‘lish talab etiladi; tariflarning tarkibi va narxlari narxlar sahifasida (alu-studio.com/dingpos/pricing) keltirilgan, yechiladigan narx esa App Store’da ko‘rsatilgan narxdir. Obunasiz ham ko‘rib chiqish va mahsulotlarni boshqarish imkoniyati saqlanadi, ma’lumotlaringiz esa hech qachon o‘chirilmaydi. Joriy davr tugashiga kamida 24 soat qolguncha bekor qilmasangiz, obuna avtomatik ravishda yangilanadi. Obunani istalgan vaqtda qurilmangizdagi App Store hisobi sozlamalarida boshqarishingiz yoki bekor qilishingiz mumkin. Sotib olingan obunalarni tiklash mumkin."
+    },
+    "restrictions": {
+      "title": "Cheklovlar",
+      "desc": "Ilovadan foydalanishda siz quyidagilarni qilmaslikka rozilik bildirasiz:",
+      "items": [
+        "Ilovani teskari muhandislik qilish, qismlarga ajratish yoki dekompilyatsiya qilish",
+        "Ilovani o‘zgartirish, tarjima qilish yoki unga asoslangan hosila asarlar yaratish",
+        "Ilova ichidagi mualliflik huquqi haqidagi xabarlar yoki belgilarni olib tashlash",
+        "Ilovadan qonunga zid maqsadda foydalanish"
+      ]
+    },
+    "user_data": {
+      "title": "Ma’lumotlaringiz va zaxira nusxalar",
+      "desc": "DingPOS’da yaratgan barcha biznes ma’lumotlaringiz (mahsulotlar, buyurtmalar, mijozlar, a’zolar va sozlamalar) qurilmangizda saqlanadi va ular uchun yagona javobgar sizsiz. Ilovani o‘chirib tashlasangiz yoki uning ma’lumotlarini tozalasangiz, bulutli zaxira nusxani yoqmagan bo‘lsangiz, barcha saqlangan ma’lumotlar butunlay yo‘qoladi. Bulutli zaxira nusxalar siz tanlagan bulut hisobida (iCloud / Google Drive / Dropbox) saqlanadi, ularning mavjudligi va saqlanish muddati esa o‘sha provayderning foydalanish shartlariga bo‘ysunadi. Biz sizning ma’lumotlaringizni hech qanday tarzda tiklab bera olmaymiz. Shuningdek, faoliyat yuritayotgan joyingizda amal qiladigan soliq, hisob-faktura va iste’molchilar huquqlarini himoya qilish qonunlariga rioya qilish uchun ham o‘zingiz javobgarsiz."
+    },
+    "updates": {
+      "title": "Ilova yangilanishlari",
+      "desc": "Imkoniyatlarni yaxshilash, nosozliklarni tuzatish yoki xavfsizlikni kuchaytirish uchun vaqti-vaqti bilan ilova yangilanishlarini chiqarishimiz mumkin. Eng yaxshi natija uchun ilovani yangilab turishni tavsiya qilamiz."
+    },
+    "disclaimer": {
+      "title": "Mas’uliyatni rad etish",
+      "desc": "DingPOS “o‘z holicha” taqdim etiladi, hech qanday ochiq yoki nazarda tutilgan kafolatlarsiz. Ilova uzluksiz ishlashiga yoki butunlay xatosiz bo‘lishiga kafolat bermaymiz. DingPOS faoliyatingizga yordam beradigan vositadir; soliq hisob-kitoblari, zaxira miqdorlari va barcha summalarning yakuniy to‘g‘riligini, shuningdek mahalliy qoidalarga rioya etilishini tekshirish sizning zimmangizda qoladi. Qonun ruxsat beradigan eng yuqori darajada, ilovadan foydalanishingiz natijasida yuzaga keladigan har qanday to‘g‘ridan-to‘g‘ri, bilvosita, tasodifiy yoki oqibatli zarar uchun javobgar emasmiz."
+    },
+    "liability": {
+      "title": "Javobgarlikni cheklash",
+      "desc": "Hech bir holatda ALU Studio’ning ilovadan foydalanish yoki foydalana olmaslik natijasida yuzaga kelgan har qanday zarar bo‘yicha javobgarligi, voqeadan oldingi 12 oy ichida ilova uchun to‘lagan summangizdan oshmaydi. Bunga ma’lumotlarning yo‘qolishi, yo‘qotilgan daromad, qurilmaning shikastlanishi yoki boshqa har qanday yo‘qotish kiradi, lekin bular bilan cheklanmaydi."
+    },
+    "changes": {
+      "title": "Shartlardagi o‘zgarishlar",
+      "desc": "Biz ushbu foydalanish shartlarini istalgan vaqtda o‘zgartirish huquqini o‘zimizda saqlab qolamiz. O‘zgartirilgan shartlar shu sahifada e’lon qilingan zahoti kuchga kiradi. Ilovadan foydalanishni davom ettirishingiz o‘zgartirilgan shartlarni qabul qilganingizni bildiradi."
+    },
+    "contact": {
+      "title": "Biz bilan bog‘laning",
+      "desc": "Ushbu foydalanish shartlari bo‘yicha savollaringiz bo‘lsa, biz bilan quyidagi manzil orqali bog‘laning:"
+    }
+  },
+  "support": {
+    "doc_title": "Yordam",
+    "meta_description": "DingPOS yordam markazi: iPad kassa ilovasi bo‘yicha javoblar va bosqichma-bosqich qo‘llanmalar — sozlash, to‘lov, buyurtmalar, ombor, aksiyalar, zaxira nusxa, xodimlar va to‘lovlar.",
+    "title": "Qanday yordam bera olamiz?",
+    "subtitle": "Ko‘p beriladigan savollarni qidiring yoki mavzu bo‘yicha ko‘ring",
+    "search_placeholder": "Qidiring, masalan: “shtrix-kod” yoki “zaxira nusxani tiklash”",
+    "search_hint_keywords": "Kalit so‘zlarni bo‘sh joy bilan ajrating",
+    "search_hint_shortcut_pre": "Qidirish uchun ",
+    "search_hint_shortcut_post": " tugmasini bosing",
+    "clear": "Qidiruvni tozalash",
+    "results_count": "{{num}} ta mos savol",
+    "no_results_title": "Mos savol topilmadi",
+    "no_results_desc": "Boshqa kalit so‘zlarni sinab ko‘ring yoki bizga email yozing — tez orada javob beramiz.",
+    "related_title": "Aloqador savollar",
+    "back": "Yordam",
+    "since": "DingPOS v{{version}} dan boshlab mavjud",
+    "verified_version": "Mazmun DingPOS v{{version}} ga mos",
+    "contact_title": "Javob topolmadingizmi?",
+    "contact_desc": "Qanday muammoga duch kelganingizni yozing, imkon qadar tez javob beramiz.",
+    "contact_cta": "ALU Studio bilan bog‘lanish",
+    "group_faq": "Ko‘p so‘raladigan savollar",
+    "group_guide": "Qo‘llanmalar",
+    "group_guide_desc": "Bosqichma-bosqich sozlash qo‘llanmalari, DingPOS’ni yaratish davomida to‘plagan nozik jihatlarimiz bilan.",
+    "group_roadmap": "Tez orada",
+    "group_roadmap_desc": "Hozircha mavjud emas — ba’zilari allaqachon rejalashtirilgan. Takliflaringiz ustuvorliklarimizni belgilaydi, bizga yozing."
+  }
+}
