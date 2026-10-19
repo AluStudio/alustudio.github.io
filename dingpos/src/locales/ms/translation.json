@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the ms translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync ms`, then `npm run l10n -- apply ms`.",
+  "nav": {
+    "home": "Utama",
+    "pricing": "Harga",
+    "privacy": "Dasar Privasi",
+    "terms": "Terma Penggunaan",
+    "support": "Soalan Lazim"
+  },
+  "hero": {
+    "meta_title": "DingPOS — Aplikasi POS untuk iPad yang Berfungsi Tanpa Internet",
+    "meta_description": "DingPOS — Buka kedai anda dalam 10 minit. Aplikasi POS untuk iPad yang berfungsi tanpa internet. Data anda, kawalan anda.",
+    "eyebrow": "Aplikasi POS untuk iPad",
+    "title": "Buka kedai anda dalam 10 minit. Data anda, kawalan anda.",
+    "description": "DingPOS ialah aplikasi sistem point of sale (POS) untuk iPad. Tiada akaun, tiada kurungan awan, dan terus berfungsi tanpa internet. Produk, pesanan dan pelanggan anda semuanya kekal pada peranti anda sendiri.",
+    "download": "Muat turun di App Store",
+    "note": "Percubaan percuma 30 hari.",
+    "shot_alt": "Skrin bayar DingPOS: grid produk dengan penapis kategori di sebelah kiri, dan troli dengan promosi yang dikenakan secara automatik serta jumlah di sebelah kanan"
+  },
+  "proof": {
+    "items": [
+      "Tiada akaun diperlukan",
+      "Pembayaran berfungsi tanpa internet",
+      "Data kekal pada iPad anda"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Bayar",
+      "title": "Setiap langkah jualan dalam satu skrin",
+      "lead": "Sehingga 10 troli serentak, produk dicari mengikut nama atau kod bar semasa anda menaip, dan diskaun serta cukai dikira sebelum anda menerima bayaran.",
+      "items": [
+        "Sehingga 10 troli berjalan serentak",
+        "Carian produk mengikut nama dan kod bar, semasa anda menaip",
+        "Diskaun item dan troli, jumlah tetap atau peratusan",
+        "Cukai termasuk / tidak termasuk dikira secara automatik",
+        "Baki tunai dan label kaedah pembayaran tersuai",
+        "Setiap jualan berakhir dengan bunyi \"Ding!\" dan maklum balas haptik"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Enjin promosi",
+      "title": "Tetapkan peraturan sekali, bahagian bayar yang laksanakannya",
+      "lead": "Ambang perbelanjaan, beli-satu-percuma-satu, happy hour, tawaran khas ahli — sebaik sahaja peraturan wujud, bahagian bayar mengiranya. Tiada siapa perlu mengingatinya, dan tiada kod kupon untuk ditaip.",
+      "items": [
+        "Ambang subjumlah troli dicetuskan secara automatik",
+        "Diskaun troli atau item (jumlah tetap atau peratusan)",
+        "Tawaran beli-satu-percuma-satu dan item ke-N",
+        "Pengganda mata",
+        "Tempoh Happy Hour — merentas tengah malam, hari dalam minggu boleh dipilih",
+        "Kawalan keutamaan, boleh digabung dan henti selepas",
+        "Had penggunaan (keseluruhan atau bagi setiap pelanggan)",
+        "Dikenakan secara automatik semasa bayar — tiada kod kupon"
+      ],
+      "shot_alt": "Senarai promosi dalam Tetapan, dibahagi kepada pakej dan diskaun, setiap peraturan menunjukkan status aktif dan keutamaannya"
+    },
+    "reports": {
+      "eyebrow": "Laporan",
+      "title": "Apa yang anda peroleh hari ini, semasa kedai masih dibuka",
+      "lead": "Bilangan pesanan, hasil jualan, untung kasar, diskaun dan campuran pembayaran dalam satu halaman, bagi hari ini, 7 hari, 30 hari atau sepanjang masa.",
+      "items": [
+        "Hari ini: bilangan pesanan, hasil jualan, untung kasar, diskaun, campuran pembayaran",
+        "5 produk teratas mengikut kuantiti",
+        "Julat hari / minggu / bulan",
+        "Carta aliran hasil jualan dan untung kasar"
+      ],
+      "shot_alt": "Papan pemuka yang menunjukkan hasil jualan hari ini, jumlah diskaun, untung dan purata bakul, di atas carta donat kaedah pembayaran dan senarai terlaris"
+    },
+    "orders": {
+      "eyebrow": "Pesanan",
+      "title": "Setiap jualan ada rekodnya, dan setiap jualan boleh dibatalkan",
+      "lead": "Setiap pesanan menyimpan rekod penuh: item dan varian, promosi yang dikenakan, cukai, kaedah pembayaran dan baki yang diberikan.",
+      "items": [
+        "Senarai pesanan mengikut kronologi, tapis mengikut tarikh dan kaedah pembayaran",
+        "Butiran baris menyimpan item, varian, diskaun, cukai dan baki",
+        "Batalkan jualan dengan pengesahan — stok dan mata dipulihkan secara automatik"
+      ],
+      "shot_alt": "Senarai pesanan mengikut kronologi di sebelah kiri, dengan butiran pesanan yang dipilih di sebelah kanan: item, diskaun yang dikenakan, cukai, jumlah, kaedah pembayaran dan baki"
+    }
+  },
+  "features": {
+    "title": "Segala yang lain dalam mengurus kedai",
+    "subtitle": "Persediaan kali pertama, produk, stok dan ahli — semuanya pada iPad yang sama",
+    "onboarding": {
+      "title": "Persediaan pantas",
+      "items": [
+        "Pilih negara anda; mata wang, mod cukai dan kadar cukai diisi untuk anda",
+        "Tetapkan nama dan logo kedai anda",
+        "Kira-kira 10 minit dari awal hingga akhir, kemudian mula berjualan"
+      ]
+    },
+    "products": {
+      "title": "Produk & varian",
+      "items": [
+        "Pengurusan dan penapisan kategori",
+        "Varian (cth. saiz × warna), masing-masing dengan harga dan kos sendiri",
+        "Kod bar dimasukkan secara manual atau diimbas dengan kamera, pendua disekat",
+        "Foto produk dengan gambar kecil dijana semasa menyimpan"
+      ]
+    },
+    "inventory": {
+      "title": "Inventori",
+      "items": [
+        "Suis penjejakan stok bagi setiap produk",
+        "Stok berasingan bagi setiap varian",
+        "Stok negatif dibenarkan — pembayaran tidak pernah disekat",
+        "Amaran warna untuk stok rendah",
+        "Lejar pergerakan penuh: jualan, pembatalan, pelarasan manual"
+      ]
+    },
+    "loyalty": {
+      "title": "Ahli & mata",
+      "items": [
+        "Pendaftaran ahli: nama, telefon dan e-mel (pilihan)",
+        "Dapat Y mata bagi setiap X dibelanjakan",
+        "Tebus N mata untuk potongan M, dengan had pilihan",
+        "Ahli baharu mendapat bonus sambutan secara automatik",
+        "Peringkat keahlian yang boleh disasarkan oleh promosi",
+        "Membatalkan pesanan akan membatalkan mata yang diperoleh dan memulangkan mata yang ditebus"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Sandaran & privasi",
+    "title": "Tanpa akaun, tiada sesiapa dapat mengambil data anda",
+    "lead": "Anda tidak perlu mendaftar akaun untuk menggunakan DingPOS. Rekod kedai anda disimpan pada iPad, dan jika anda mahu sandaran, sandaran itu disimpan dalam akaun awan yang anda sudah miliki.",
+    "items": [
+      "Pilih satu daripada iCloud, Google Drive atau Dropbox",
+      "Sandaran manual, bila-bila masa diperlukan",
+      "Menyimpan 5 syot kilat terkini",
+      "Penyegerakan imej secara tokokan",
+      "Tiada akaun; data pada peranti, sandaran dalam awan anda sendiri",
+      "Berfungsi sepenuhnya tanpa internet"
+    ]
+  },
+  "home_pricing": {
+    "title": "Harga yang mudah dan telus",
+    "price_before": "Tiga pelan, bermula dari ",
+    "price_after": " sebulan",
+    "sub": "Percubaan percuma 30 hari. Tiada yuran transaksi, tiada caj tersembunyi. Data anda sentiasa disimpan selepas percubaan — langgan semula bila-bila masa.",
+    "compare": "Bandingkan pelan",
+    "cta": "Mulakan percubaan percuma 30 hari"
+  },
+  "pricing": {
+    "doc_title": "Pelan & Harga",
+    "meta_description": "Bandingkan pelan DingPOS untuk iPad: Lite, Standard dan Pro. Percubaan percuma 30 hari, tiada yuran transaksi, dan data anda tidak akan dipadam.",
+    "eyebrow": "Pelan & harga",
+    "title": "Pilih pelan yang sesuai untuk kedai anda",
+    "subtitle": "Cuba percuma selama 30 hari — tanpa pendaftaran. Tukar pelan pada bila-bila masa; data anda tidak akan dipadam.",
+    "billing": {
+      "label": "Tempoh pengebilan",
+      "monthly": "Bulanan",
+      "annual": "Tahunan",
+      "save": "Jimat {{percent}}%"
+    },
+    "recommended": "Disyorkan",
+    "select_plan": "Pilih pelan",
+    "unit": {
+      "month": "/bln",
+      "year": "/thn"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "atau ",
+    "or_annual_after": "/thn, dibil tahunan",
+    "saving_before": "Jimat ",
+    "saving_after": " setahun berbanding bulanan",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Untuk seorang peniaga gerai yang perlukan pembayaran dan produk",
+        "heading": "Termasuk",
+        "features": [
+          "Fungsi Bayar lengkap untuk sehingga 10 troli",
+          "Produk dengan varian, kod bar, foto dan kategori",
+          "Sejarah pesanan, batalkan jualan, pemulangan dan tukar barang",
+          "Papan pemuka perniagaan: hasil jualan, untung, jualan terlaris",
+          "Sandaran & pemulihan awan",
+          "Pembayaran berfungsi tanpa internet"
+        ],
+        "cta": "Mulakan percubaan percuma 30 hari"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Untuk kedai yang perlukan stok, ahli, pembelian atau jualan akaun",
+        "heading": "Semua dalam Lite, serta",
+        "features": [
+          "Enjin promosi: ambang perbelanjaan, BOGO, happy hour — dikenakan semasa bayar",
+          "Mata pelanggan, penebusan dan peringkat keahlian",
+          "Penjejakan stok dan pesanan belian",
+          "Jualan akaun: serah barang sekarang, kutip kemudian",
+          "Prapesanan: ambil deposit, selesaikan semasa pengambilan"
+        ],
+        "cta": "Mulakan percubaan percuma 30 hari"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Untuk kedai yang ada kakitangan dan memerlukan peranan serta jejak aktiviti",
+        "heading": "Semua dalam Standard, serta",
+        "features": [
+          "Akaun kakitangan: seorang satu PIN, setiap pesanan merekod siapa yang menjualnya",
+          "Kebenaran & kelulusan: diskaun melebihi had, suntingan produk dan stok, melihat kos",
+          "Log aktiviti dan sejarah pemulihan",
+          "Laporan lanjutan: perbandingan tempoh, peta haba jualan, produk jualan perlahan, nilai inventori, pelanggan berulang"
+        ],
+        "cta": "Mulakan percubaan percuma 30 hari"
+      }
+    },
+    "fineprint": "Dibil melalui Apple Account anda. Pelan bulanan dan tahunan diperbaharui secara automatik pada penghujung setiap tempoh; batalkan pada bila-bila masa di App Store.",
+    "currency": {
+      "twd": "Harga dipaparkan untuk App Store Taiwan. Rantau lain membayar harga tempatan yang dipaparkan di App Store.",
+      "to_usd": "Papar harga AS",
+      "usd": "Harga dipaparkan untuk App Store AS. Rantau lain membayar harga tempatan yang dipaparkan di App Store.",
+      "to_twd": "Papar harga Taiwan"
+    },
+    "assurances": {
+      "trial": {
+        "title": "Percubaan percuma 30 hari",
+        "desc": "Semua ciri Pro disertakan. Tidak perlu akaun."
+      },
+      "fees": {
+        "title": "Tiada yuran transaksi",
+        "desc": "DingPOS tidak pernah menyentuh wang jualan anda — langganan ialah satu-satunya caj."
+      },
+      "data": {
+        "title": "Data anda kekal milik anda",
+        "desc": "Apabila percubaan atau langganan tamat, hanya fungsi Bayar yang dijeda. Produk, pesanan dan laporan kekal, dan tiada apa yang dipadam."
+      },
+      "switch": {
+        "title": "Tukar pada bila-bila masa",
+        "desc": "Naik taraf berkuat kuasa serta-merta, dikira secara pro rata oleh Apple. Turun taraf berkuat kuasa semasa pembaharuan."
+      }
+    },
+    "compare": {
+      "title": "Bandingkan setiap ciri",
+      "subtitle": "Setiap pelan merangkumi semua yang ada dalam pelan sebelumnya.",
+      "feature_col": "Ciri",
+      "included": "Termasuk",
+      "not_included": "Tidak termasuk",
+      "groups": {
+        "checkout": "Bayar",
+        "catalog": "Produk & inventori",
+        "customers": "Pelanggan & promosi",
+        "reports": "Laporan",
+        "team": "Kakitangan & kawalan",
+        "data": "Data & sandaran"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Bayar & berbilang troli",
+          "desc": "Sehingga 10 troli serentak, carian langsung mengikut nama atau kod bar"
+        },
+        "discounts_tax": {
+          "name": "Diskaun & cukai",
+          "desc": "Diskaun item dan pesanan; cukai termasuk atau tidak termasuk dikira untuk anda"
+        },
+        "offline": {
+          "name": "Bayar tanpa internet",
+          "desc": "Teruskan berjualan tanpa sambungan internet"
+        },
+        "returns": {
+          "name": "Batalkan jualan, pemulangan & tukar barang",
+          "desc": "Sejarah dan butiran pesanan yang lengkap"
+        },
+        "preorder": {
+          "name": "Prapesanan",
+          "desc": "Ambil deposit sekarang, selesaikan baki semasa pengambilan"
+        },
+        "on_account": {
+          "name": "Jualan akaun",
+          "desc": "Serah barang sekarang, kutip kemudian — baki setiap pelanggan di satu tempat"
+        },
+        "products": {
+          "name": "Pengurusan produk",
+          "desc": "Varian, kod bar, foto, kategori"
+        },
+        "import": {
+          "name": "Import data",
+          "desc": "Import produk dan jualan lepas daripada sistem lain melalui CSV"
+        },
+        "inventory": {
+          "name": "Penjejakan stok",
+          "desc": "Stok ditolak apabila terjual; pelarasan manual menyimpan rekod pergerakan"
+        },
+        "purchasing": {
+          "name": "Pembelian & pembekal",
+          "desc": "Menerima pesanan belian mengemas kini stok; lihat jumlah yang anda hutang kepada setiap pembekal"
+        },
+        "promotions": {
+          "name": "Enjin promosi",
+          "desc": "Ambang perbelanjaan, BOGO, tawaran item ke-N, happy hour — dikenakan semasa bayar"
+        },
+        "loyalty": {
+          "name": "Pelanggan & mata",
+          "desc": "Kumpul dan tebus mata untuk menarik pelanggan kembali"
+        },
+        "member_tiers": {
+          "name": "Peringkat keahlian",
+          "desc": "Ganjari pelanggan terbaik anda dengan faedah berperingkat"
+        },
+        "dashboard": {
+          "name": "Papan pemuka perniagaan",
+          "desc": "Hasil jualan, untung, diskaun, campuran pembayaran dan jualan terlaris"
+        },
+        "comparison": {
+          "name": "Perbandingan tempoh",
+          "desc": "Berbanding tempoh sebelumnya atau tahun lepas — lihat pertumbuhan atau penurunan"
+        },
+        "heatmap": {
+          "name": "Peta haba jualan",
+          "desc": "Tujuh hari × 24 jam — lihat waktu mana paling laris"
+        },
+        "slow_movers": {
+          "name": "Produk jualan perlahan",
+          "desc": "Cari produk yang tidak terjual tetapi masih ada stok"
+        },
+        "valuation": {
+          "name": "Nilai inventori & audit pergerakan",
+          "desc": "Berapa nilai stok anda sekarang, dan siapa yang mengubahnya"
+        },
+        "repeat": {
+          "name": "Pelanggan berulang & mata belum ditebus",
+          "desc": "Berapa ramai ahli yang kembali, dan berapa banyak mata yang tertunggak"
+        },
+        "staff": {
+          "name": "Akaun kakitangan",
+          "desc": "Seorang satu PIN; setiap pesanan merekod siapa yang menjualnya"
+        },
+        "permissions": {
+          "name": "Kebenaran & kelulusan",
+          "desc": "Peranan pengurus dan kakitangan; anda pilih apa yang perlukan kelulusan"
+        },
+        "activity_log": {
+          "name": "Log aktiviti",
+          "desc": "Garis masa pembatalan jualan, pemulangan, perubahan harga, pelarasan stok dan banyak lagi"
+        },
+        "restore_records": {
+          "name": "Sejarah pemulihan",
+          "desc": "Siapa yang memulihkan, daripada sandaran mana, dan pesanan mana yang dibuang"
+        },
+        "local_data": {
+          "name": "Data pada iPad anda",
+          "desc": "Tidak perlu akaun — data perniagaan anda tidak pernah melalui kami"
+        },
+        "backup": {
+          "name": "Sandaran & pemulihan awan",
+          "desc": "Sandarkan ke iCloud, Google Drive atau Dropbox anda sendiri"
+        },
+        "undo_restore": {
+          "name": "Pratonton pemulihan & buat asal",
+          "desc": "Lihat pesanan mana yang dibuang oleh pemulihan, dan ambil semula yang tersilap"
+        }
+      }
+    },
+    "faq": {
+      "title": "Soalan lazim",
+      "items": [
+        {
+          "q": "Apa yang boleh saya guna semasa percubaan percuma?",
+          "a": "Selama 30 hari dari pemasangan pertama, anda mendapat semua ciri, termasuk ciri Pro seperti kakitangan, kebenaran dan laporan lanjutan — tanpa akaun. Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta dan menukar anda ke pelan yang dibeli."
+        },
+        {
+          "q": "Apa jadi jika saya tidak melanggan selepas percubaan?",
+          "a": "Fungsi Bayar dijeda; semua yang lain terus berfungsi — anda masih boleh melihat pesanan, melihat laporan dan mengurus produk. Tiada apa yang dipadam, dan melanggan memulihkan fungsi Bayar serta-merta."
+        },
+        {
+          "q": "Bolehkah saya naik taraf atau turun taraf pada bila-bila masa?",
+          "a": "Boleh, dari Tetapan → Langganan dalam app. Naik taraf berkuat kuasa serta-merta dan Apple mengkreditkan masa yang tidak digunakan; turun taraf berkuat kuasa apabila tempoh semasa tamat. Menukar daripada bulanan kepada tahunan juga berkuat kuasa serta-merta."
+        },
+        {
+          "q": "Apa jadi pada pelanggan, promosi dan stok saya jika saya turun taraf?",
+          "a": "Semuanya disimpan — tiada apa yang dipadam atau diubah. Ciri pelan yang lebih tinggi hanya berhenti berjalan, dan naik taraf semula mengembalikan segalanya seperti asal."
+        },
+        {
+          "q": "Bagaimana pengebilan tahunan berfungsi?",
+          "a": "Pelan tahunan berharga sama seperti sepuluh bulan pengebilan bulanan dan meliputi setahun penuh — kira-kira {{percent}}% lebih murah. Anda dibil sekali setahun dan ia diperbaharui secara automatik."
+        },
+        {
+          "q": "Adakah ada yuran lain selain langganan?",
+          "a": "Tiada. DingPOS tidak pernah mengendalikan wang jualan anda: tiada komisen, tiada yuran transaksi, tiada kontrak perkakasan."
+        },
+        {
+          "q": "Bagaimana untuk membatalkan langganan?",
+          "a": "Urus di iPad anda melalui Tetapan → Apple Account → Langganan; batalkan sekurang-kurangnya 24 jam sebelum tempoh tamat dan anda tidak akan dicaj lagi. Data anda kekal pada peranti anda."
+        },
+        {
+          "q": "Mengapa harga di App Store berbeza daripada halaman ini?",
+          "a": "App Store mengebil langganan pada harga untuk rantau Apple Account anda. Halaman ini menyenaraikan harga Taiwan dan AS; rantau lain membayar harga tempatan yang dipaparkan dalam app dan App Store."
+        }
+      ],
+      "more": "Ada soalan lain?",
+      "more_link": "Lihat Soalan Lazim lengkap"
+    },
+    "final": {
+      "title": "Guna selama 30 hari, kemudian pilih pelan",
+      "sub": "Muat turun dan mulakan — tidak perlu akaun.",
+      "cta": "Muat turun di App Store"
+    }
+  },
+  "footer": {
+    "tagline": "Buka kedai anda dalam 10 minit. Data anda, kawalan anda.",
+    "contact": "Hubungi Kami",
+    "privacy_policy": "Dasar Privasi",
+    "terms_of_use": "Terma Penggunaan",
+    "copyright": "ALU Studio. Hak cipta terpelihara.",
+    "support": "Soalan Lazim"
+  },
+  "privacy": {
+    "title": "Dasar Privasi",
+    "meta_description": "Cara DingPOS, aplikasi sistem point of sale (POS) untuk iPad yang berfungsi tanpa internet, mengendalikan data anda: rekod perniagaan kekal pada peranti anda, dan sandaran pilihan hanya dihantar ke akaun awan anda sendiri.",
+    "effective_date": "Tarikh berkuat kuasa: 1 Julai 2026",
+    "intro": "ALU Studio (\"kami\") membangunkan DingPOS (\"aplikasi\"). DingPOS ialah aplikasi sistem point of sale (POS) yang dibina dengan privasi sebagai teras — data perniagaan anda milik anda. Dasar Privasi ini menerangkan cara kami mengendalikan maklumat anda apabila anda menggunakan aplikasi.",
+    "local_storage": {
+      "title": "Cara data anda disimpan",
+      "desc": "DingPOS menyimpan semua data perniagaan anda secara setempat pada peranti anda. Selagi anda tidak mengaktifkan sandaran awan, data ini tidak pernah meninggalkan peranti anda. Data yang anda cipta dalam aplikasi termasuk:",
+      "items": [
+        "Tetapan kedai (nama kedai, mata wang, kadar cukai, logo)",
+        "Data produk (nama, harga, kos, kod bar, foto, kategori, varian, stok)",
+        "Rekod pesanan dan peristiwa pembayaran (termasuk diskaun, cukai, kaedah pembayaran)",
+        "Data pelanggan dan keahlian (nama, nombor telefon dan e-mel pilihan, mata)",
+        "Peraturan promosi dan tetapan peringkat keahlian"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Sandaran awan (pilihan)",
+      "desc": "Anda boleh memilih untuk mengaktifkan sandaran awan dan memilih salah satu daripada iCloud, Google Drive atau Dropbox sebagai lokasi penyimpanan. Sandaran ditulis ke akaun awan anda sendiri dan kekal sepenuhnya di bawah kawalan anda. Kami tidak pernah mengendalikan, menyimpan atau mengakses kandungan sandaran ini. Sama ada untuk mengaktifkan sandaran, dan penyedia mana yang digunakan, sepenuhnya pilihan anda dan boleh dimatikan pada bila-bila masa."
+    },
+    "no_collection": {
+      "title": "Apa yang tidak kami kumpul",
+      "desc": "DingPOS tidak mengumpul, menghantar atau berkongsi sebarang kandungan perniagaan anda. Secara khusus, kami tidak:",
+      "items": [
+        "Mengumpul data produk, pesanan, pelanggan atau keahlian anda",
+        "Terlibat dalam sebarang proses pembayaran atau mengendalikan maklumat kad kredit (aplikasi tidak memproses pembayaran kad sebenar)",
+        "Menjejak lokasi anda",
+        "Berkongsi data perniagaan anda dengan mana-mana pihak ketiga"
+      ]
+    },
+    "camera": {
+      "title": "Kamera & foto",
+      "desc": "DingPOS meminta akses kamera hanya apabila anda sendiri menggunakan \"imbas kod bar\" atau \"ambil foto produk\". Pengecaman kod bar dan foto diproses secara setempat pada peranti anda dan tidak pernah dimuat naik ke pelayan kami. Foto produk hanya ditulis ke akaun awan anda sendiri sebagai sebahagian daripada sandaran, jika anda mengaktifkan sandaran awan."
+    },
+    "subscription": {
+      "title": "Langganan & pembelian",
+      "desc": "DingPOS menawarkan langganan melalui Pembelian Dalam Apl (IAP) Apple App Store, dengan RevenueCat digunakan untuk mengurus status langganan. Pembayaran dikendalikan oleh Apple; kami tidak pernah menerima kad kredit atau butiran pembayaran anda. RevenueCat hanya menerima pengecam tanpa nama yang dikaitkan dengan status langganan, digunakan untuk mengesahkan sama ada langganan anda aktif."
+    },
+    "analytics": {
+      "title": "Analitik & laporan ranap",
+      "desc": "DingPOS menggunakan Firebase Analytics dan Firebase Crashlytics, yang disediakan oleh Google, untuk membantu kami memahami cara aplikasi digunakan serta mengenal pasti dan membetulkan ranap. Perkhidmatan ini mengumpul:",
+      "items": [
+        "Data penggunaan tanpa nama (cth. ciri yang digunakan, tempoh sesi)",
+        "Laporan ranap (cth. jejak tindanan, model peranti, versi OS)",
+        "Maklumat peranti (cth. jenis peranti, OS, versi aplikasi)",
+        "Pengecam instans yang dijana secara rawak (tidak dikaitkan dengan identiti anda)"
+      ],
+      "note": "Data ini tanpa nama dan tidak termasuk sebarang kandungan perniagaan anda (seperti produk, pesanan, pelanggan atau ahli). Untuk mengetahui lebih lanjut tentang cara Google mengendalikan data ini, lihat Dasar Privasi Google: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Privasi kanak-kanak",
+      "desc": "DingPOS ialah aplikasi sistem point of sale (POS) untuk perniagaan. Ia tidak direka untuk kanak-kanak dan tidak mengumpul maklumat peribadi kanak-kanak."
+    },
+    "changes": {
+      "title": "Perubahan pada dasar ini",
+      "desc": "Jika kami membuat perubahan ketara pada Dasar Privasi ini, kami akan memberitahu anda melalui kemas kini aplikasi. Kami mengesyorkan anda menyemak dasar ini dari semasa ke semasa."
+    },
+    "contact": {
+      "title": "Hubungi kami",
+      "desc": "Jika anda mempunyai sebarang soalan atau cadangan tentang Dasar Privasi ini, sila hubungi kami di:"
+    }
+  },
+  "terms": {
+    "title": "Terma Penggunaan",
+    "meta_description": "Terma Penggunaan DingPOS, aplikasi POS iPad oleh ALU Studio: lesen, percubaan percuma 30 hari, langganan App Store, data dan sandaran anda, serta liabiliti.",
+    "effective_date": "Tarikh berkuat kuasa: 8 Oktober 2026",
+    "intro": "Selamat datang ke DingPOS. Sila baca Terma Penggunaan berikut dengan teliti sebelum menggunakan aplikasi ini. Dengan memuat turun, memasang atau menggunakan DingPOS, anda bersetuju untuk terikat dengan terma ini.",
+    "license": {
+      "title": "Lesen",
+      "desc": "ALU Studio memberi anda lesen terhad, tidak eksklusif dan tidak boleh dipindah milik untuk menggunakan DingPOS pada peranti anda bagi menjalankan perniagaan anda. Lesen ini adalah untuk operasi runcit anda."
+    },
+    "subscription": {
+      "title": "Langganan & pembayaran",
+      "desc": "DingPOS menawarkan percubaan percuma 30 hari dari pemasangan pertama, dan semua ciri pelan Pro tersedia sepanjang tempoh itu; membeli mana-mana pelan semasa percubaan akan menamatkan percubaan, dan pelan yang dibeli berkuat kuasa dari saat pembelian. Selepas percubaan, langganan kepada salah satu pelan (Lite, Standard atau Pro), yang dibeli melalui Pembelian Dalam Aplikasi App Store, diperlukan untuk terus menggunakan fungsi Bayar; kandungan dan harga pelan disenaraikan di halaman harga (alu-studio.com/dingpos/pricing), dan harga yang dicaj ialah harga yang dipaparkan di App Store. Tanpa langganan, penyemakan imbas dan pengurusan produk masih tersedia dan data anda tidak pernah dipadam. Langganan diperbaharui secara automatik melainkan anda membatalkannya sekurang-kurangnya 24 jam sebelum tamat tempoh semasa. Anda boleh mengurus atau membatalkan langganan pada bila-bila masa dalam tetapan akaun App Store pada peranti anda. Langganan yang telah dibeli boleh dipulihkan."
+    },
+    "restrictions": {
+      "title": "Larangan",
+      "desc": "Semasa menggunakan aplikasi ini, anda bersetuju untuk tidak:",
+      "items": [
+        "Melakukan kejuruteraan balik, menyahpasang atau menyahkompil aplikasi",
+        "Mengubah suai, menterjemah atau mencipta karya terbitan",
+        "Mengalih keluar sebarang notis atau label hak cipta dalam aplikasi",
+        "Menggunakan aplikasi untuk sebarang tujuan yang menyalahi undang-undang"
+      ]
+    },
+    "user_data": {
+      "title": "Data & sandaran anda",
+      "desc": "Semua kandungan perniagaan yang anda cipta dalam DingPOS (produk, pesanan, pelanggan, ahli dan tetapan) disimpan pada peranti anda dan menjadi tanggungjawab anda sepenuhnya. Jika anda memadam aplikasi atau mengosongkan datanya, semua maklumat yang disimpan akan hilang secara kekal melainkan anda telah mendayakan sandaran awan. Sandaran awan disimpan dalam akaun awan pilihan anda (iCloud / Google Drive / Dropbox), dan ketersediaan serta tempoh penyimpanannya tertakluk kepada terma perkhidmatan penyedia tersebut. Kami tidak dapat memulihkan sebarang data untuk anda. Anda juga bertanggungjawab mematuhi undang-undang cukai, pengeluaran invois dan perlindungan pengguna yang terpakai di tempat anda beroperasi."
+    },
+    "updates": {
+      "title": "Kemas kini aplikasi",
+      "desc": "Kami mungkin mengeluarkan kemas kini aplikasi dari semasa ke semasa untuk menambah baik ciri, membetulkan masalah atau mempertingkat keselamatan. Kami mengesyorkan anda sentiasa mengemas kini aplikasi untuk pengalaman terbaik."
+    },
+    "disclaimer": {
+      "title": "Penafian",
+      "desc": "DingPOS disediakan \"seadanya\", tanpa sebarang jaminan, sama ada nyata atau tersirat. Kami tidak menjamin bahawa aplikasi ini akan beroperasi tanpa gangguan atau bebas sepenuhnya daripada ralat. DingPOS ialah alat untuk membantu operasi anda; ketepatan akhir pengiraan cukai, kuantiti stok dan semua jumlah wang, serta pematuhan kepada peraturan tempatan, kekal menjadi tanggungjawab anda untuk disahkan. Setakat yang dibenarkan oleh undang-undang, kami tidak bertanggungjawab atas sebarang kerosakan langsung, tidak langsung, sampingan atau berbangkit yang timbul daripada penggunaan aplikasi oleh anda."
+    },
+    "liability": {
+      "title": "Had liabiliti",
+      "desc": "Dalam apa jua keadaan, liabiliti ALU Studio atas sebarang kerosakan yang timbul daripada penggunaan, atau ketidakupayaan menggunakan, aplikasi ini tidak akan melebihi jumlah yang anda bayar untuk aplikasi dalam tempoh 12 bulan sebelum kejadian itu. Ini termasuk, tetapi tidak terhad kepada, kehilangan data, kehilangan hasil, kerosakan peranti atau sebarang kerugian lain."
+    },
+    "changes": {
+      "title": "Perubahan pada terma ini",
+      "desc": "Kami berhak mengubah suai Terma Penggunaan ini pada bila-bila masa. Terma yang diubah suai berkuat kuasa serta-merta apabila disiarkan di halaman ini. Penggunaan aplikasi yang berterusan oleh anda bermakna anda menerima terma yang diubah suai."
+    },
+    "contact": {
+      "title": "Hubungi kami",
+      "desc": "Jika anda mempunyai sebarang soalan tentang Terma Penggunaan ini, sila hubungi kami di:"
+    }
+  },
+  "support": {
+    "doc_title": "Sokongan",
+    "meta_description": "Sokongan DingPOS: jawapan dan panduan langkah demi langkah untuk POS iPad — persediaan, bayar, pesanan, inventori, promosi, sandaran, kakitangan dan pengebilan.",
+    "title": "Apa yang boleh kami bantu?",
+    "subtitle": "Cari soalan lazim, atau layari mengikut topik",
+    "search_placeholder": "Cari, cth. “kod bar” atau “pulihkan sandaran”",
+    "search_hint_keywords": "Pisahkan kata kunci dengan ruang",
+    "search_hint_shortcut_pre": "tekan ",
+    "search_hint_shortcut_post": " untuk mencari",
+    "clear": "Kosongkan carian",
+    "results_count": "{{num}} soalan sepadan",
+    "no_results_title": "Tiada soalan yang sepadan",
+    "no_results_desc": "Cuba kata kunci lain, atau e-mel kami sahaja — kami akan membalas secepat mungkin.",
+    "related_title": "Soalan berkaitan",
+    "back": "Sokongan",
+    "since": "Tersedia sejak DingPOS v{{version}}",
+    "verified_version": "Kandungan mengikut DingPOS v{{version}}",
+    "contact_title": "Tidak jumpa jawapan?",
+    "contact_desc": "Beritahu kami masalah yang anda hadapi dan kami akan membalas secepat mungkin.",
+    "contact_cta": "Hubungi ALU Studio",
+    "group_faq": "Soalan Lazim",
+    "group_guide": "Panduan",
+    "group_guide_desc": "Panduan persediaan langkah demi langkah, termasuk perangkap yang kami kumpulkan semasa membina DingPOS.",
+    "group_roadmap": "Akan Datang",
+    "group_roadmap_desc": "Belum tersedia — sebahagiannya sudah dirancang. Permintaan anda membentuk keutamaan kami, jadi tulis kepada kami."
+  }
+}
