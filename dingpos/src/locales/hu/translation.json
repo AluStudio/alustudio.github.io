@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the hu translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync hu`, then `npm run l10n -- apply hu`.",
+  "nav": {
+    "home": "Főoldal",
+    "pricing": "Árak",
+    "privacy": "Adatvédelmi irányelvek",
+    "terms": "Felhasználási feltételek",
+    "support": "GYIK"
+  },
+  "hero": {
+    "meta_title": "DingPOS — internetkapcsolat nélkül is működő kassza-alkalmazás iPadre",
+    "meta_description": "DingPOS — Indítsa el üzletét 10 perc alatt. Internetkapcsolat nélkül is működő kassza-alkalmazás (POS) iPadre. Az adatai az Önéi, Ön rendelkezik felettük.",
+    "eyebrow": "Kassza-alkalmazás iPadre",
+    "title": "Indítsa el üzletét 10 perc alatt. Az adatai az Önéi, Ön rendelkezik felettük.",
+    "description": "A DingPOS egy kassza-alkalmazás (POS) iPadre. Nem kell hozzá fiók, nem köti felhőszolgáltatáshoz, és internet nélkül is működik. A termékek, rendelések és vevők mind a saját eszközén maradnak.",
+    "download": "Letöltés az App Store-ból",
+    "note": "30 napos ingyenes próba.",
+    "shot_alt": "A DingPOS fizetési képernyője: balra termékrács kategóriaszűrőkkel, jobbra a kosár az automatikusan alkalmazott akciókkal és a végösszeggel"
+  },
+  "proof": {
+    "items": [
+      "Fiók nélkül használható",
+      "A fizetés internet nélkül is működik",
+      "Az adatok az iPaden maradnak"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Fizetés",
+      "title": "Az eladás minden lépése egyetlen képernyőn",
+      "lead": "Akár 10 kosár egyszerre, gépelés közben megtalált termékek név vagy vonalkód alapján, az engedményeket és az adót pedig a fizetés előtt kiszámolja.",
+      "items": [
+        "Akár 10 kosár egyidejűleg",
+        "Termékkeresés név és vonalkód szerint, gépelés közben",
+        "Tétel- és kosárengedmény, fix összeggel vagy százalékban",
+        "Bruttó / nettó adó automatikus számítása",
+        "Visszajáró készpénz és egyéni fizetési mód megnevezések",
+        "Minden eladást „Ding!” hang és rezgés zár le"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Akciómotor",
+      "title": "Egyszer beállítja a szabályokat, a fizetés alkalmazza őket",
+      "lead": "Összeghatárok, „egyet fizet, kettőt kap” ajánlatok, happy hour, csak tagoknak szóló akciók — ha egy szabály létezik, a fizetés kiszámolja. Senkinek nem kell megjegyeznie, és kuponkódot sem kell beírni.",
+      "items": [
+        "A kosár részösszegére megadott határok automatikusan érvényesülnek",
+        "Kosár- vagy tételengedmény (fix összeg vagy százalék)",
+        "„Egyet fizet, kettőt kap” és N-edik tételes ajánlatok",
+        "Pontszorzók",
+        "Happy hour időablakok — éjfélen átnyúlóan, választható hétköznapokkal",
+        "Prioritás, halmozhatóság és „utána megáll” beállítások",
+        "Felhasználási korlátok (összesen vagy vevőnként)",
+        "Fizetéskor automatikusan érvényesül — kuponkódok nélkül"
+      ],
+      "shot_alt": "A Beállítások között az akciók listája csomagakciókra és engedményekre bontva, minden szabálynál az aktív állapottal és a prioritással"
+    },
+    "reports": {
+      "eyebrow": "Jelentések",
+      "title": "Mennyit kerestek ma — még nyitva tartás közben",
+      "lead": "Rendelésszám, árbevétel, bruttó nyereség, engedmények és fizetési módok megoszlása egy oldalon — a mai napra, 7 napra, 30 napra vagy a teljes időszakra.",
+      "items": [
+        "Ma: rendelésszám, árbevétel, bruttó nyereség, engedmény, fizetési módok megoszlása",
+        "Az 5 legtöbbet eladott termék mennyiség szerint",
+        "Napi / heti / havi időszakok",
+        "Árbevétel- és bruttó nyereség-trendgrafikonok"
+      ],
+      "shot_alt": "Az irányítópult a mai árbevétellel, az összes engedménnyel, a nyereséggel és az átlagos kosárértékkel, alatta fizetésimód-fánkdiagram és a legkelendőbb termékek listája"
+    },
+    "orders": {
+      "eyebrow": "Rendelések",
+      "title": "Minden eladás megvan, és bármelyik visszavonható",
+      "lead": "Minden rendelés teljes nyilvántartást őriz: a tételeket és változatokat, az alkalmazott akciót, az adót, a fizetési módot és a visszajárót.",
+      "items": [
+        "Időrendi rendeléslista, szűrés dátum és fizetési mód szerint",
+        "A tételes nézet megőrzi a tételeket, változatokat, engedményeket, az adót és a visszajárót",
+        "Sztornó megerősítéssel — a készlet és a pontok automatikusan visszaállnak"
+      ],
+      "shot_alt": "Balra időrendi rendeléslista, jobbra a kijelölt rendelés részletei: tételek, az alkalmazott engedmény, adó, végösszeg, fizetési mód és visszajáró"
+    }
+  },
+  "features": {
+    "title": "Minden más, ami egy bolt vezetéséhez kell",
+    "subtitle": "Első beállítás, termékek, készlet és tagok — mind ugyanazon az iPaden",
+    "onboarding": {
+      "title": "Gyors indulás",
+      "items": [
+        "Válassza ki az országot, és a pénznem, az adózási mód és az adókulcs kitöltődik",
+        "Adja meg a bolt nevét és logóját",
+        "Az elejétől a végéig nagyjából 10 perc, aztán indulhat az eladás"
+      ]
+    },
+    "products": {
+      "title": "Termékek és változatok",
+      "items": [
+        "Kategóriák kezelése és szűrése",
+        "Változatok (pl. méret × szín), mindegyik saját árral és költséggel",
+        "Vonalkód kézi megadással vagy kamerás beolvasással, a duplikátumok kiszűrve",
+        "Termékfotók, a miniatűrök mentéskor készülnek el"
+      ]
+    },
+    "inventory": {
+      "title": "Készlet",
+      "items": [
+        "Termékenként kapcsolható készletkövetés",
+        "Változatonként önálló készlet",
+        "Negatív készlet is engedélyezett — a fizetést soha nem akadályozza",
+        "Alacsony készlet jelzése színnel",
+        "Teljes készletmozgás-napló: eladás, sztornó, kézi módosítás"
+      ]
+    },
+    "loyalty": {
+      "title": "Tagok és pontok",
+      "items": [
+        "Tagfelvétel: név, opcionálisan telefonszám és e-mail-cím",
+        "X elköltött összeg után Y pont jár",
+        "N pont beváltható M engedményre, opcionális felső határral",
+        "Az új tagok automatikusan üdvözlő bónuszt kapnak",
+        "Tagi szintek, amelyekre az akciók célozhatók",
+        "A rendelés sztornózása visszavonja a megszerzett és a beváltott pontokat is"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Biztonsági mentés és adatvédelem",
+    "title": "Fiók nélkül senki nem veheti el az adatait",
+    "lead": "A DingPOS-ra nem kell regisztrálni. A könyvelése az iPaden van, a biztonsági mentések pedig – ha kéri – egy olyan felhőfiókba kerülnek, amely már az Öné.",
+    "items": [
+      "Válasszon: iCloud, Google Drive vagy Dropbox",
+      "Kézi biztonsági mentés, amikor csak szeretné",
+      "A legutóbbi 5 pillanatképet őrzi meg",
+      "Növekményes képszinkronizálás",
+      "Fiók nélkül; az adatok az eszközön, a mentések a saját felhőjében",
+      "Internet nélkül is teljes értékűen működik"
+    ]
+  },
+  "home_pricing": {
+    "title": "Egyszerű, átlátható árak",
+    "price_before": "Három csomag. Kezdőár: ",
+    "price_after": " / hó",
+    "sub": "30 napos ingyenes próba. Nincs tranzakciós díj, nincsenek rejtett költségek. A próba után is megmaradnak az adatai — bármikor újra előfizethet.",
+    "compare": "Csomagok összehasonlítása",
+    "cta": "30 napos ingyenes próba indítása"
+  },
+  "pricing": {
+    "doc_title": "Csomagok és árak",
+    "meta_description": "Hasonlítsa össze a DingPOS csomagjait iPadre: Lite, Standard és Pro. 30 napos ingyenes próba, tranzakciós díj nélkül, és az adatai soha nem törlődnek.",
+    "eyebrow": "Csomagok és árak",
+    "title": "Válassza a boltjához illő csomagot",
+    "subtitle": "Próbálja ki 30 napig ingyen – regisztráció nélkül. Bármikor válthat csomagot, az adatai soha nem törlődnek.",
+    "billing": {
+      "label": "Számlázási időszak",
+      "monthly": "Havi",
+      "annual": "Éves",
+      "save": "{{percent}}% megtakarítás"
+    },
+    "recommended": "Ajánlott",
+    "select_plan": "Válasszon csomagot",
+    "unit": {
+      "month": "/hó",
+      "year": "/év"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "vagy ",
+    "or_annual_after": "/év, éves számlázással",
+    "saving_before": "Spóroljon ",
+    "saving_after": " évente a havi számlázáshoz képest",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Egyedül dolgozó árusnak, aki fizetésre és termékekre fókuszál",
+        "heading": "Tartalmazza",
+        "features": [
+          "Teljes értékű fizetés akár 10 kosárral",
+          "Termékek változatokkal, vonalkódokkal, fotókkal és kategóriákkal",
+          "Rendelési előzmények, sztornók, visszavételek és cserék",
+          "Üzleti irányítópult: árbevétel, nyereség, sikertermékek",
+          "Felhős biztonsági mentés és visszaállítás",
+          "A fizetés internetkapcsolat nélkül is működik"
+        ],
+        "cta": "30 napos ingyenes próba indítása"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Készletet, törzsvevőket, beszerzést vagy utólagos fizetést igénylő boltoknak",
+        "heading": "Minden a Lite csomagból, továbbá",
+        "features": [
+          "Akciómotor: vásárlási értékhatárok, 1+1 akciók, happy hour – automatikusan érvényesül fizetéskor",
+          "Vevőpontok, pontbeváltás és tagsági szintek",
+          "Készletkövetés és beszerzési rendelések",
+          "Számlás eladás: most átadja az árut, később kapja meg a pénzt",
+          "Előrendelések: előleget kér, átvételkor kiegyenlítik"
+        ],
+        "cta": "30 napos ingyenes próba indítása"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Munkatársakat foglalkoztató boltoknak, akiknek szerepkörök és nyomon követhető napló kell",
+        "heading": "Minden a Standard csomagból, továbbá",
+        "features": [
+          "Munkatársak saját PIN-kóddal: minden rendelés rögzíti, ki ütötte be",
+          "Jogosultságok és jóváhagyások: a felső határt meghaladó engedmények, termék- és készletszerkesztés, költségek megtekintése",
+          "Tevékenységnapló és visszaállítási bejegyzések",
+          "Részletes jelentések: időszak-összehasonlítás, értékesítési hőtérkép, lassan forgó termékek, készletérték, visszatérő vásárlók"
+        ],
+        "cta": "30 napos ingyenes próba indítása"
+      }
+    },
+    "fineprint": "A számlázás az App Store-fiókján keresztül történik. A havi és éves csomagok minden időszak végén automatikusan megújulnak; az App Store-ban bármikor lemondhatók.",
+    "currency": {
+      "twd": "Az árak a tajvani App Store árai. Más régiókban az App Store-ban látható helyi árat kell fizetni.",
+      "to_usd": "Amerikai árak megjelenítése",
+      "usd": "Az árak az amerikai App Store árai. Más régiókban az App Store-ban látható helyi árat kell fizetni.",
+      "to_twd": "Tajvani árak megjelenítése"
+    },
+    "assurances": {
+      "trial": {
+        "title": "30 napos ingyenes próba",
+        "desc": "Minden Pro funkcióval. Fiók nélkül."
+      },
+      "fees": {
+        "title": "Tranzakciós díj nélkül",
+        "desc": "A DingPOS soha nem nyúl a pénzéhez – az előfizetés az egyetlen költség."
+      },
+      "data": {
+        "title": "Az adatai az Öné maradnak",
+        "desc": "Ha a próba vagy az előfizetés véget ér, csak a fizetés áll le. A termékek, rendelések és jelentések megmaradnak, semmi nem törlődik."
+      },
+      "switch": {
+        "title": "Bármikor válthat",
+        "desc": "A magasabb csomagra váltás azonnal érvénybe lép, az Apple időarányosan számol el. Az alacsonyabbra váltás a megújításkor lép életbe."
+      }
+    },
+    "compare": {
+      "title": "Hasonlítson össze minden funkciót",
+      "subtitle": "Minden csomag tartalmazza az előtte lévő csomag összes funkcióját.",
+      "feature_col": "Funkció",
+      "included": "Tartalmazza",
+      "not_included": "Nem tartalmazza",
+      "groups": {
+        "checkout": "Fizetés",
+        "catalog": "Termékek és készlet",
+        "customers": "Vevők és akciók",
+        "reports": "Jelentések",
+        "team": "Munkatársak és ellenőrzés",
+        "data": "Adatok és biztonsági mentés"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Fizetés és több kosár",
+          "desc": "Akár 10 kosár egyszerre, élő keresés név vagy vonalkód alapján"
+        },
+        "discounts_tax": {
+          "name": "Engedmények és adó",
+          "desc": "Tétel- és rendelésengedmények; az adót bruttó vagy nettó árból is automatikusan kiszámolja"
+        },
+        "offline": {
+          "name": "Fizetés internet nélkül",
+          "desc": "Internetkapcsolat nélkül is folytathatja az eladást"
+        },
+        "returns": {
+          "name": "Sztornók, visszavételek és cserék",
+          "desc": "Teljes rendelési előzmények és részletek"
+        },
+        "preorder": {
+          "name": "Előrendelések",
+          "desc": "Most előleget kér, a fennmaradó összeget átvételkor kapja meg"
+        },
+        "on_account": {
+          "name": "Számlás eladás",
+          "desc": "Most átadja az árut, később kapja meg a pénzt – minden vevő tartozása egy helyen"
+        },
+        "products": {
+          "name": "Termékkezelés",
+          "desc": "Változatok, vonalkódok, fotók, kategóriák"
+        },
+        "import": {
+          "name": "Adatimportálás",
+          "desc": "Termékek és korábbi eladások importálása más rendszerekből CSV-n keresztül"
+        },
+        "inventory": {
+          "name": "Készletkövetés",
+          "desc": "Eladáskor csökken a készlet; a kézi módosításokról mozgásnapló készül"
+        },
+        "purchasing": {
+          "name": "Beszerzés és beszállítók",
+          "desc": "A beszerzési rendelés átvétele frissíti a készletet; látja, mennyivel tartozik az egyes beszállítóknak"
+        },
+        "promotions": {
+          "name": "Akciómotor",
+          "desc": "Vásárlási értékhatárok, 1+1 akciók, N-edik termék akciók, happy hour – automatikusan érvényesül fizetéskor"
+        },
+        "loyalty": {
+          "name": "Vevők és pontok",
+          "desc": "Pontgyűjtés és beváltás, hogy a vevők visszatérjenek"
+        },
+        "member_tiers": {
+          "name": "Tagsági szintek",
+          "desc": "Jutalmazza legjobb vevőit szintekhez kötött előnyökkel"
+        },
+        "dashboard": {
+          "name": "Üzleti irányítópult",
+          "desc": "Árbevétel, nyereség, engedmények, fizetési módok megoszlása és sikertermékek"
+        },
+        "comparison": {
+          "name": "Időszak-összehasonlítás",
+          "desc": "Az előző időszakhoz vagy a tavalyihoz képest – látja a növekedést vagy a visszaesést"
+        },
+        "heatmap": {
+          "name": "Értékesítési hőtérkép",
+          "desc": "Hét nap × 24 óra – látja, mely órákban fogy a legjobban az áru"
+        },
+        "slow_movers": {
+          "name": "Lassan forgó termékek",
+          "desc": "Találja meg a termékeket, amelyek nem fogynak, mégis készleten vannak"
+        },
+        "valuation": {
+          "name": "Készletérték és mozgásellenőrzés",
+          "desc": "Mennyit ér most a készlete, és ki módosította"
+        },
+        "repeat": {
+          "name": "Visszatérő vásárlók és be nem váltott pontok",
+          "desc": "Hány tag tér vissza, és mennyi pont vár még beváltásra"
+        },
+        "staff": {
+          "name": "Munkatársi fiókok",
+          "desc": "Mindenkinek saját PIN-kód; minden rendelés rögzíti, ki ütötte be"
+        },
+        "permissions": {
+          "name": "Jogosultságok és jóváhagyások",
+          "desc": "Vezetői és munkatársi szerepkörök; Ön dönti el, mihez kell jóváhagyás"
+        },
+        "activity_log": {
+          "name": "Tevékenységnapló",
+          "desc": "Idővonal a sztornókról, visszavételekről, árváltozásokról, készletmódosításokról és más műveletekről"
+        },
+        "restore_records": {
+          "name": "Visszaállítási bejegyzések",
+          "desc": "Ki állított vissza, melyik mentésből, és mely rendeléseket távolította el"
+        },
+        "local_data": {
+          "name": "Adatok az iPaden",
+          "desc": "Fiók nélkül – az üzleti adatai soha nem haladnak át rajtunk"
+        },
+        "backup": {
+          "name": "Felhős biztonsági mentés és visszaállítás",
+          "desc": "Mentés a saját iCloud-, Google Drive- vagy Dropbox-tárhelyére"
+        },
+        "undo_restore": {
+          "name": "Visszaállítás előnézete és visszavonása",
+          "desc": "Megnézheti, mely rendeléseket távolítja el a visszaállítás, és visszavonhatja a téves visszaállítást"
+        }
+      }
+    },
+    "faq": {
+      "title": "Gyakran ismételt kérdések",
+      "items": [
+        {
+          "q": "Mit használhatok az ingyenes próba alatt?",
+          "a": "Az első telepítéstől számított 30 napig minden funkciót megkap, a Pro funkciókat is, például a munkatársakat, jogosultságokat és részletes jelentéseket – fiók nélkül. Ha a próba alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és átvált a megvásárolt csomagra."
+        },
+        {
+          "q": "Mi történik, ha a próba után nem fizetek elő?",
+          "a": "A fizetés szünetel; minden más tovább működik – továbbra is böngészheti a rendeléseket, megtekintheti a jelentéseket és kezelheti a termékeket. Semmi nem törlődik, és az előfizetés azonnal visszaállítja a fizetést."
+        },
+        {
+          "q": "Válthatok bármikor magasabb vagy alacsonyabb csomagra?",
+          "a": "Igen, az alkalmazásban a Beállítások → Előfizetés menüpontban. A magasabb csomagra váltás azonnal életbe lép, a fel nem használt időt az Apple jóváírja; az alacsonyabb csomagra váltás az aktuális időszak végén lép életbe. A havi csomagról az évesre váltás szintén azonnal érvényes."
+        },
+        {
+          "q": "Mi lesz a vevőimmel, akcióimmal és készletemmel, ha alacsonyabb csomagra váltok?",
+          "a": "Mindez megmarad – semmi nem törlődik vagy változik. A magasabb csomag funkciói egyszerűen leállnak, és ha újra magasabb csomagra vált, minden úgy tér vissza, ahogy volt."
+        },
+        {
+          "q": "Hogyan működik az éves számlázás?",
+          "a": "Az éves csomag ugyanannyiba kerül, mint tíz havi díj, de egy teljes évet fed le – körülbelül {{percent}}%-kal olcsóbb. Évente egyszer számláznak, és automatikusan megújul."
+        },
+        {
+          "q": "Van az előfizetésen kívül más díj is?",
+          "a": "Nincs. A DingPOS soha nem kezeli a pénzét: nincs jutalék, nincs tranzakciós díj, nincs hardverszerződés."
+        },
+        {
+          "q": "Hogyan mondhatom le?",
+          "a": "Az iPaden a Beállítások → Apple-fiók → Előfizetések menüpontban kezelheti; ha legalább 24 órával az időszak vége előtt lemondja, többé nem terheljük meg. Az adatai az eszközén maradnak."
+        },
+        {
+          "q": "Miért más az App Store ára, mint ezen az oldalon?",
+          "a": "Az App Store az Apple-fiókja régiójának megfelelő áron számlázza az előfizetést. Ez az oldal a tajvani és az amerikai árakat mutatja; más régiókban az alkalmazásban és az App Store-ban látható helyi árat kell fizetni."
+        }
+      ],
+      "more": "Van még kérdése?",
+      "more_link": "Tekintse meg a teljes GYIK-et"
+    },
+    "final": {
+      "title": "Használja 30 napig, aztán válasszon csomagot",
+      "sub": "Töltse le és kezdje el – fiók nélkül.",
+      "cta": "Letöltés az App Store-ból"
+    }
+  },
+  "footer": {
+    "tagline": "Indítsa el üzletét 10 perc alatt. Az adatai az Önéi, Ön rendelkezik felettük.",
+    "contact": "Kapcsolat",
+    "privacy_policy": "Adatvédelmi irányelvek",
+    "terms_of_use": "Felhasználási feltételek",
+    "copyright": "ALU Studio. Minden jog fenntartva.",
+    "support": "GYIK"
+  },
+  "privacy": {
+    "title": "Adatvédelmi irányelvek",
+    "meta_description": "Hogyan kezeli adatait a DingPOS, az internetkapcsolat nélkül is működő iPad-es kassza-alkalmazás: az üzleti adatok az eszközén maradnak, az opcionális biztonsági mentések pedig kizárólag a saját felhőfiókjába kerülnek.",
+    "effective_date": "Hatálybalépés dátuma: 2026. július 1.",
+    "intro": "Az ALU Studio („mi”) fejlesztette a DingPOS-t („az alkalmazás”). A DingPOS egy olyan kassza-alkalmazás, amelynek középpontjában az adatvédelem áll – az üzleti adatai az Öné. Az Adatvédelmi irányelvek bemutatják, hogyan kezeljük az adatait, amikor az alkalmazást használja.",
+    "local_storage": {
+      "title": "Hogyan tároljuk az adatait",
+      "desc": "A DingPOS az összes üzleti adatot helyben, az Ön eszközén tárolja. Ha Ön nem kapcsolja be aktívan a felhőalapú biztonsági mentést, ezek az adatok soha nem hagyják el az eszközt. Az alkalmazásban létrehozott adatok közé tartoznak:",
+      "items": [
+        "Üzletbeállítások (üzlet neve, pénznem, adókulcs, logó)",
+        "Termékadatok (név, ár, költség, vonalkód, fotó, kategória, változatok, készlet)",
+        "Rendelések és tranzakciók adatai (beleértve az engedményeket, az adót és a fizetési módot)",
+        "Vevő- és törzsvásárlói adatok (név, opcionális telefonszám és e-mail-cím, pontok)",
+        "Akciók szabályai és a törzsvásárlói szintek beállításai"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Felhőalapú biztonsági mentés (opcionális)",
+      "desc": "Opcionálisan bekapcsolhatja a felhőalapú biztonsági mentést, és tárolási helyként az iCloud, a Google Drive vagy a Dropbox közül választhat egyet. A mentések az Ön saját felhőfiókjába kerülnek, és teljes mértékben az Ön irányítása alatt maradnak. Ezeknek a mentéseknek a tartalmát mi soha nem kezeljük, nem tároljuk, és nem érjük el. Az Ön döntése, hogy bekapcsolja-e a mentést, és melyik szolgáltatót használja; a mentés bármikor kikapcsolható."
+    },
+    "no_collection": {
+      "title": "Mit nem gyűjtünk",
+      "desc": "A DingPOS nem gyűjti, nem továbbítja és nem osztja meg az Ön üzleti tartalmait. Konkrétan:",
+      "items": [
+        "nem gyűjtjük a termék-, rendelés-, vevő- vagy törzsvásárlói adatait",
+        "nem érintünk semmilyen fizetési folyamatot vagy bankkártyaadatot (az alkalmazás nem dolgoz fel tényleges kártyás fizetéseket)",
+        "nem követjük nyomon a tartózkodási helyét",
+        "az üzleti adatait nem osztjuk meg harmadik féllel"
+      ]
+    },
+    "camera": {
+      "title": "Kamera és fotók",
+      "desc": "A DingPOS csak akkor kér hozzáférést a kamerához, ha Ön aktívan használja a „vonalkód beolvasása” vagy a „termékfotó készítése” funkciót. A vonalkód felismerése és a fotók feldolgozása helyben, az Ön eszközén történik, és semmit sem töltünk fel a szervereinkre. A termékfotók csak akkor kerülnek az Ön saját felhőfiókjába, a biztonsági mentés részeként, ha Ön bekapcsolja a felhőalapú mentést."
+    },
+    "subscription": {
+      "title": "Előfizetés és vásárlások",
+      "desc": "A DingPOS előfizetést kínál az Apple App Store alkalmazáson belüli vásárlásán (IAP) keresztül, az előfizetés állapotának kezeléséhez pedig a RevenueCat szolgáltatást használja. A fizetést az Apple kezeli; a bankkártya- és fizetési adatait mi soha nem kapjuk meg. A RevenueCat csak egy, az előfizetés állapotához kötött anonim azonosítót kap, amellyel ellenőrzi, hogy az előfizetése aktív-e."
+    },
+    "analytics": {
+      "title": "Elemzés és összeomlásjelentés",
+      "desc": "A DingPOS a Google által biztosított Firebase Analytics és Firebase Crashlytics szolgáltatást használja, hogy megértsük, hogyan használják az alkalmazást, valamint hogy azonosítsuk és kijavítsuk az összeomlásokat. Ezek a szolgáltatások a következőket gyűjtik:",
+      "items": [
+        "Anonim használati adatok (pl. mely funkciókat használják, a munkamenet hossza)",
+        "Összeomlásjelentések (pl. hívásverem, eszköz típusa, operációs rendszer verziója)",
+        "Eszközinformációk (pl. eszköztípus, operációs rendszer, az alkalmazás verziója)",
+        "Egy véletlenszerűen generált példányazonosító (nem kapcsolódik az Ön személyazonosságához)"
+      ],
+      "note": "Ezek az adatok anonimak, és nem tartalmaznak semmilyen üzleti tartalmat (például termékeket, rendeléseket, vevőket vagy törzsvásárlókat). Ha többet szeretne megtudni arról, hogyan kezeli a Google ezeket az adatokat, olvassa el a Google adatvédelmi irányelveit: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Gyermekek adatainak védelme",
+      "desc": "A DingPOS üzleti célú kassza-alkalmazás. Nem gyermekeknek készült, és gyermekek személyes adatait nem gyűjti."
+    },
+    "changes": {
+      "title": "Az irányelvek módosítása",
+      "desc": "Ha az Adatvédelmi irányelveket érdemben módosítjuk, az alkalmazás egy frissítésén keresztül értesítjük Önt. Javasoljuk, hogy időnként tekintse át az irányelveket."
+    },
+    "contact": {
+      "title": "Kapcsolat",
+      "desc": "Ha kérdése vagy javaslata van ezekkel az Adatvédelmi irányelvekkel kapcsolatban, kérjük, vegye fel velünk a kapcsolatot:"
+    }
+  },
+  "terms": {
+    "title": "Felhasználási feltételek",
+    "meta_description": "A DingPOS, az ALU Studio iPad-es kassza-alkalmazásának felhasználási feltételei: licenc, 30 napos ingyenes próba, App Store-előfizetések, az Ön adatai és mentései, valamint a felelősség.",
+    "effective_date": "Hatálybalépés napja: 2026. október 8.",
+    "intro": "Üdvözöljük a DingPOS-ben! Kérjük, az alkalmazás használata előtt figyelmesen olvassa el az alábbi felhasználási feltételeket. A DingPOS letöltésével, telepítésével vagy használatával elfogadja ezeket a feltételeket.",
+    "license": {
+      "title": "Licenc",
+      "desc": "Az ALU Studio korlátozott, nem kizárólagos, át nem ruházható licencet ad Önnek a DingPOS saját eszközein történő használatára vállalkozása működtetéséhez. A licenc az Ön kiskereskedelmi tevékenységére szól."
+    },
+    "subscription": {
+      "title": "Előfizetés és fizetés",
+      "desc": "A DingPOS az első telepítéstől számított 30 napos ingyenes próbát kínál, amely alatt a Pro csomag minden funkciója elérhető; ha a próbaidőszak alatt bármelyik csomagot megvásárolja, a próba véget ér, és a megvásárolt csomag a vásárlás időpontjától érvényes. A próba után a fizetés használatának folytatásához előfizetés szükséges valamelyik csomagra (Lite, Standard vagy Pro), amelyet App Store-os alkalmazáson belüli vásárlással lehet megvenni; a csomagok tartalmát és árait az árak oldal (alu-studio.com/dingpos/pricing) sorolja fel, a felszámított ár pedig az App Store-ban látható ár. Előfizetés nélkül a böngészés és a termékkezelés továbbra is elérhető, az adatait pedig soha nem töröljük. Az előfizetés automatikusan megújul, hacsak legalább 24 órával az aktuális időszak vége előtt le nem mondja. Előfizetését bármikor kezelheti vagy lemondhatja az eszköze App Store-fiókbeállításaiban. A megvásárolt előfizetések visszaállíthatók."
+    },
+    "restrictions": {
+      "title": "Korlátozások",
+      "desc": "Az alkalmazás használata során Ön vállalja, hogy nem:",
+      "items": [
+        "visszafejti, szétszereli vagy dekompilálja az alkalmazást",
+        "módosítja, lefordítja vagy származékos művet készít belőle",
+        "távolít el szerzői jogi közleményeket vagy jelöléseket az alkalmazásból",
+        "használja az alkalmazást jogellenes célra"
+      ]
+    },
+    "user_data": {
+      "title": "Az Ön adatai és mentései",
+      "desc": "A DingPOS-ben létrehozott összes üzleti tartalom (termékek, rendelések, vevők, tagok és beállítások) az Ön eszközén tárolódik, és kizárólag az Ön felelőssége. Ha törli az alkalmazást vagy az adatait, az összes tárolt információ véglegesen elvész, kivéve ha bekapcsolta a felhő alapú mentést. A felhőbeli mentések az Ön által választott felhőfiókban találhatók (iCloud / Google Drive / Dropbox), elérhetőségükre és megőrzésükre az adott szolgáltató felhasználási feltételei vonatkoznak. Mi semmilyen adatot nem tudunk helyreállítani Önnek. Ön felel azért is, hogy betartsa a működési helyére vonatkozó adó-, számlázási és fogyasztóvédelmi jogszabályokat."
+    },
+    "updates": {
+      "title": "Alkalmazásfrissítések",
+      "desc": "Időről időre frissítéseket adhatunk ki a funkciók fejlesztése, a hibák javítása vagy a biztonság erősítése érdekében. A legjobb élmény érdekében azt javasoljuk, hogy tartsa naprakészen az alkalmazást."
+    },
+    "disclaimer": {
+      "title": "Felelősség kizárása",
+      "desc": "A DingPOS „adott állapotában” kerül rendelkezésre bocsátásra, minden kifejezett vagy hallgatólagos jótállás nélkül. Nem garantáljuk, hogy az alkalmazás megszakítás nélkül vagy teljesen hibamentesen működik. A DingPOS az Ön munkáját segítő eszköz; az adószámítások, a készletmennyiségek és az összes összeg végső pontosságának, valamint a helyi előírásoknak való megfelelésnek az ellenőrzése továbbra is az Ön felelőssége. A jogszabályok által megengedett legnagyobb mértékben nem vállalunk felelősséget az alkalmazás használatából eredő semmilyen közvetlen, közvetett, járulékos vagy következményi kárért."
+    },
+    "liability": {
+      "title": "A felelősség korlátozása",
+      "desc": "Az ALU Studio felelőssége az alkalmazás használatából vagy használhatatlanságából eredő bármely kárért semmilyen esetben sem haladhatja meg azt az összeget, amelyet Ön az esemény előtti 12 hónapban az alkalmazásért fizetett. Ez magában foglalja – de nem kizárólagosan – az adatvesztést, az elmaradt bevételt, az eszközkárt és bármely más veszteséget."
+    },
+    "changes": {
+      "title": "A feltételek módosítása",
+      "desc": "Fenntartjuk a jogot, hogy ezeket a felhasználási feltételeket bármikor módosítsuk. A módosított feltételek ezen az oldalon való közzétételükkel azonnal hatályba lépnek. Ha az alkalmazást ezután is használja, azzal elfogadja a módosított feltételeket."
+    },
+    "contact": {
+      "title": "Kapcsolat",
+      "desc": "Ha kérdése van a jelen felhasználási feltételekkel kapcsolatban, kérjük, keressen minket itt:"
+    }
+  },
+  "support": {
+    "doc_title": "Támogatás",
+    "meta_description": "DingPOS támogatás: válaszok és lépésről lépésre útmutatók az iPad kassza-alkalmazáshoz — beállítás, fizetés, rendelések, készlet, akciók, biztonsági mentés, munkatársak és számlázás.",
+    "title": "Miben segíthetünk?",
+    "subtitle": "Keressen a gyakori kérdések között, vagy böngésszen témák szerint",
+    "search_placeholder": "Keresés, pl. „vonalkód” vagy „mentés visszaállítása”",
+    "search_hint_keywords": "A kulcsszavakat szóközzel válassza el",
+    "search_hint_shortcut_pre": "nyomja meg a ",
+    "search_hint_shortcut_post": " billentyűt a kereséshez",
+    "clear": "Keresés törlése",
+    "results_count": "{{num}} találat",
+    "no_results_title": "Nincs találat",
+    "no_results_desc": "Próbáljon más kulcsszavakat, vagy írjon nekünk e-mailt — hamarosan válaszolunk.",
+    "related_title": "Kapcsolódó kérdések",
+    "back": "Támogatás",
+    "since": "Elérhető a DingPOS {{version}}. verziója óta",
+    "verified_version": "A tartalom a DingPOS {{version}}. verziójára vonatkozik",
+    "contact_title": "Nem találja a választ?",
+    "contact_desc": "Írja meg, milyen problémába ütközött, és amint tudunk, válaszolunk.",
+    "contact_cta": "Írjon az ALU Studiónak",
+    "group_faq": "GYIK",
+    "group_guide": "Útmutatók",
+    "group_guide_desc": "Lépésről lépésre bemutatott beállítások, azokkal a buktatókkal együtt, amelyeket a DingPOS fejlesztése közben gyűjtöttünk össze.",
+    "group_roadmap": "Hamarosan",
+    "group_roadmap_desc": "Még nem érhető el — néhány már tervben van. Az Ön kérései alakítják a prioritásainkat, ezért írjon nekünk."
+  }
+}
