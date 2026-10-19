@@ -86,7 +86,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kui avad DingPOSi esimest korda, juhatab seadistusviisard sind poe avamisel läbi umbes 10 minutiga:"
+        "text": "Kui avad DingPOSi esimest korda, juhendab seadistusviisard sind poe seadistamisel; see võtab umbes 10 minutit:"
       },
       {
         "type": "steps",
@@ -339,7 +339,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Arvutuse täielik järjekord: toote allahindlused → ostukorvi allahindlus → maks. Summad ümardatakse tavareegli järgi valuuta kümnendkohtadeni (nt 0 TWD puhul, 2 USD puhul)."
+        "text": "Arvutuse täielik järjekord: toote allahindlused → ostukorvi allahindlus → maks. Summad ümardatakse valuuta kümnendkohtadeni, poole korral ülespoole (nt 0 TWD puhul, 2 USD puhul)."
       }
     ],
     "related": [
@@ -519,7 +519,7 @@ export const articles = [
           "Tagasi makstakse see, mida klient selle toote eest tegelikult maksis – tootesoodustused, ostukorvi soodustused ja punktide kasutamine on juba osade vahel jaotatud, seega ei tagastata hinnakirjahinda. Maks arvestatakse sama määraga, millega algne müük maksustati.",
           "Asendustooted müüakse tänase hinnaga, ilma kampaaniate ja soodustusteta.",
           "Jälgitav laoseis taastatakse automaatselt. Algse müügiga teenitud punktid võetakse tagasi, kasutatud punktid tagastatakse ning asendustooted teenivad oma punktid.",
-          "Müüki võib tagastada mitmes osas, kuid mitte rohkem, kui algselt müüdi. Kampaania kasutuspiiranguid tagastus tagasi ei anna."
+          "Tagastuse korral kampaania kasutuslimiit ei taastu."
         ]
       },
       {
@@ -549,7 +549,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vaheta kassas ekraani ülaosas Müük peale Ettetellimus, vali kättesaamise kuupäev, sisesta käsiraha (0-st kogusummani, kiirvalikud 30% / 50% / täis) ja vali, kuidas käsiraha tasutakse. Lisa klient, et saaksid temaga kaupade saabumisel ühendust võtta."
+        "text": "Vaheta kassas ekraani ülaosas valik Müük valikuks Ettetellimus, vali kättesaamise kuupäev, sisesta käsiraha (0-st kogusummani, kiirvalikud 30% / 50% / täis) ja vali, kuidas käsiraha tasutakse. Lisa klient, et saaksid temaga kaupade saabumisel ühendust võtta."
       },
       {
         "type": "list",
@@ -557,7 +557,7 @@ export const articles = [
           "Laoseis arvatakse maha ettetellimuse tegemisel, nii on kaup kliendile reserveeritud. Laost otsas olevad tooted lähevad miinusesse ja taastuvad ostutellimuse kättesaamisel.",
           "Kui klient tuleb järele, puuduta müügi detailvaates Anna üle, et jääk kätte saada. Seejärel muutub müük tavaliseks lõpetatud müügiks ja hilisemad tagastused käivad tavapärase tagastuse kaudu.",
           "Kui klient ei tule, puuduta müügi detailvaates Loobu ettetellimusest ning vali, kas tagastada käsiraha või see alles jätta. Laoseis lisatakse tagasi.",
-          "Käsiraha kviitungil ja lõplikul kättesaamise kviitungil on sama number."
+          "Käsiraha tšekil ja lõplikul kättesaamise tšekil on sama number."
         ]
       },
       {
@@ -658,7 +658,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Toote muutmise lehel puuduta jaotises Variandi valikud nuppu Lisa valik, et lisada valik (nt „Värv“), ning seejärel nuppu „+ Väärtus“, et lisada selle valikud (nt punane, sinine). Kui valikuid on kaks või rohkem (nt värv × suurus), loob DingPOS kõik kombinatsioonid sinu eest (punane/S, punane/M, sinine/S…)."
+        "text": "Toote muutmise lehel puuduta jaotises Variandi valikud nuppu Lisa valik, et lisada valik (nt „Värv“), ning seejärel nuppu „+ Väärtus“, et lisada iga valiku väärtus (nt punane, sinine). Kui valikuid on kaks või rohkem (nt värv × suurus), loob DingPOS kõik kombinatsioonid sinu eest (punane/S, punane/M, sinine/S…)."
       },
       {
         "type": "p",
@@ -855,7 +855,7 @@ export const articles = [
         "items": [
           "Müük arvele: kaup läheb täna ja kuulub tänasesse müügitulusse; raha kuulub laekunud raha hulka tasumise päeval.",
           "Ettetellimus: käsiraha läheb laekunud raha hulka makse päeval; müügitulu arvestatakse tervikuna kättesaamise päeval.",
-          "Kinnipeetud käsiraha: kui klient ettetellimusest loobub ja jätad käsiraha endale, oli see makse hetkel juba laekunud raha hulgas. Aruanded näitab seda eraldi kinnipeetud käsirahana ja see ei lähe kunagi müügitulu hulka."
+          "Kinnipeetud käsiraha: kui klient ettetellimusest loobub ja jätad käsiraha endale, oli see makse hetkel juba laekunud raha hulgas. Aruanded näitavad seda eraldi kinnipeetud käsirahana ja see ei lähe kunagi müügitulu hulka."
         ]
       },
       {
@@ -936,7 +936,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Müügivõrdlus: perioodiribast paremal saad võrrelda eelmise aasta sama perioodi või eelmise perioodiga (üks päev eelmise nädala sama päevaga, see nädal eelmise nädalaga, see kuu eelmise kuuga, see aasta eelmise aastaga, oma vahemik sama pikkuse varasema vahemikuga). Paneel Laekunud raha näitab vahet ja kasvumäära ning müügitulu graafikule lisandub heledam joon võrdlusperioodi kohta. Kui periood veel kestab, lõigatakse võrdlusperiood samas hetkes.",
+          "Müügivõrdlus: perioodiribast paremal saad võrrelda eelmise aasta sama perioodi või eelmise perioodiga (üks päev eelmise nädala sama päevaga, see nädal eelmise nädalaga, see kuu eelmise kuuga, see aasta eelmise aastaga, oma vahemik sama pikkuse varasema vahemikuga). Paneel Laekunud raha näitab vahet ja kasvumäära ning müügitulu graafikule lisandub heledam joon võrdlusperioodi kohta. Kui periood veel kestab, lõpeb võrdlusperiood sama ajahetkega.",
           "Nädalapäev × tund: lülita pealkiri Müük ajas valikule Nädalapäev × tund, et näha seitsmepäevast 24-tunnist soojuskaarti — mida tumedam lahter, seda rohkem müüsid. Lülitu müügitulu ja müükide vahel; kui võrdlus on sees, näed, millised tunnid kasvasid ja millised kahanesid.",
           "Aeglase käibega tooted: lülita edetabelikaardi pealkiri valikule Aeglase käibega tooted, et näha tooteid vähimast müügist suurimani koos praeguse laoseisu ja viimase müügikuupäevaga. Tooted, mida pole kunagi müüdud, on märgitud „Pole müüdud“. Vaikimisi näidatakse ainult laos olevaid tooteid.",
           "Korduvostude määr: kliendipaneeli viimane rida näitab liikmete osakaalu, kes ostsid perioodis ja on kokku ostnud kaks või enam korda.",
@@ -945,7 +945,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ilma Pro paketita on igal neist viiest kohast väike lukk, mis avab uuendamise selgituse; kõik muu Aruanded vahekaardil töötab nagu varem. Aruanded loevad andmeid, mida su pood juba hoiab, nii et Pro lõppedes peidetakse ainult aruanded — andmeid ei kao."
+        "text": "Ilma Pro paketita on igal neist viiest kohast väike lukk, mis avab uuendamise selgituse; kõik muu Aruanded vahekaardil töötab nagu varem. Aruanded loevad andmeid, mida su pood juba hoiab, nii et Pro lõppedes peidetakse ainult täiustatud aruanded — andmeid ei kao."
       },
       {
         "type": "note",
@@ -1074,7 +1074,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ava Seaded → Püsikliendiprogramm ja määra kaks reeglit: mitu punkti saab iga kulutatud X kohta ning mitu punkti annab M allahindlust (soovi korral koos ühe müügi kohta kehtiva kasutuslimiidiga). Uutele liikmetele saad automaatselt anda ka tervitusbonuse."
+        "text": "Ava Seaded → Püsikliendiprogramm ja määra kaks reeglit: mitu punkti saab iga kulutatud X kohta ning mitu punkti tuleb kasutada, et saada M allahindlust (soovi korral koos ühe müügi kohta kehtiva kasutuslimiidiga). Uutele liikmetele saad automaatselt anda ka tervitusbonuse."
       },
       {
         "type": "p",
@@ -1210,7 +1210,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Taasta vajutamisel avaneb kõigepealt eelvaade: selle iPadi ja pilvekoopia toodete, müükide ja klientide arvud kõrvuti ning kõik müügid, mille taastamine eemaldaks. Selle iPadi andmed ei muutu enne, kui Kinnita. DingPOS-i uuema versiooniga tehtud pilvekoopia puhul palutakse enne rakendus värskendada. Ka toodete fotod taastatakse."
+        "text": "Taasta vajutamisel avaneb kõigepealt eelvaade: selle iPadi ja pilvekoopia toodete, müükide ja klientide arvud kõrvuti ning kõik müügid, mille taastamine eemaldaks. Selle iPadi andmed ei muutu enne, kui vajutad nuppu Kinnita. DingPOS-i uuema versiooniga tehtud pilvekoopia puhul palutakse enne rakendus värskendada. Ka toodete fotod taastatakse."
       },
       {
         "type": "note",
@@ -1339,8 +1339,8 @@ export const articles = [
         "type": "list",
         "items": [
           "Imporditud müügid paigutatakse tehingu kuupäeva järgi ja arvutatakse uuesti sinu poe valuuta ja maksurežiimiga. Need ei mõjuta laoseisu ega anna tervituspunkte.",
-          "Kliendid seotakse olemasolevatega telefoni või e-posti järgi; sobimatud luuakse uuena.",
-          "Imporditud müükidel on kuvatud kuupäev „Imporditud“ ja lähtesüsteemi müügi number ning neid ei saa anuleerida ega tagastada.",
+          "Kliendid seotakse olemasolevatega telefoni või e-posti järgi; vastet mitte leidnud kliendid lisatakse uutena.",
+          "Imporditud müükidel kuvatakse impordimise kuupäev ja lähtesüsteemi müüginumber ning neid ei saa anuleerida ega tagastada.",
           "Vigadega read saab eksportida põhjustega märgitud CSV-failina – paranda need ja impordi uuesti. Korduvad read jäetakse automaatselt vahele."
         ]
       },
@@ -1452,7 +1452,7 @@ export const articles = [
       "lähtestamine",
       "omanik",
       "taastamine",
-      "pääsu kadumine"
+      "konto lukus"
     ],
     "content": [
       {
@@ -1510,7 +1510,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Anuleerimistel, tagastustel, tasumata müükidel ja ostutellimustel ei ole teadlikult õigust; neis salvestatakse ainult töötleja. Hiljem saad neid vaadata tegevuslogist."
+        "text": "Anuleerimiste, tagastuste, arvele müükide ja ostutellimuste jaoks pole teadlikult õiguste seadistust; nende puhul salvestatakse ainult see, kes neid käsitles. Hiljem saad neid vaadata tegevuslogist."
       }
     ],
     "related": [
@@ -1647,11 +1647,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Oled juba Standard paketis? Uuenda Pro paketile tellimuse lehel: arveldustsükkel jääb samaks, uuendus jõustub kohe ja vahe arvutab proportsionaalselt Apple. Üleminek Pro paketilt tagasi Standardile jõustub pikendamise hetkel. Hinnad on rakenduses nähtaval ning pakette saad võrrelda meie lehel Hinnad."
+        "text": "Oled juba Standard paketis? Uuenda Pro paketile tellimuse lehel: arveldustsükkel jääb samaks, paketiuuendus jõustub kohe ja Apple arvutab hinnavahe proportsionaalselt. Üleminek Pro paketilt tagasi Standardile jõustub pikendamise hetkel. Hinnad on rakenduses nähtaval ning pakette saad võrrelda meie lehel Hinnad."
       },
       {
         "type": "note",
-        "text": "Madalamale paketile üleminek ei kustuta kunagi andmeid. Paketist väljaspool olevad funktsioonid peatuvad, andmed jäävad alles ning uuesti tellimisel tulevad funktsioonid tagasi."
+        "text": "Madalamale paketile üleminek ei kustuta kunagi andmeid. Sinu paketis mittesisalduvate funktsioonide kasutamine peatub, andmed jäävad alles ning paketi uuesti tellimisel saad neid funktsioone jälle kasutada."
       }
     ],
     "related": [
@@ -1674,14 +1674,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tellimusi haldab App Store'i rakendusesisene ost – paketid ja hinnad on näha rakenduses. Makse töötleb Apple; meie sinu makseandmeid kunagi ei näe."
+        "text": "Tellimusi hallatakse App Store'i rakendusesiseste ostude kaudu – paketid ja hinnad on näha rakenduses. Makseid töötleb Apple; meie ei näe kunagi sinu makseandmeid."
       },
       {
         "type": "list",
         "items": [
           "Tühistamine: halda seda seadme rakenduses Seaded → Apple'i konto → Tellimused. Tühista vähemalt 24 tundi enne praeguse perioodi lõppu, et tellimus ei pikeneks.",
           "Taastamine: pärast seadme vahetamist või uuesti installimist puuduta DingPOS-i tellimuse lehel „Taasta ost“.",
-          "Paketi vahetamine: vali uus pakett DingPOS-i tellimuse lehel. Uuendused (Standard paketilt Pro paketile, kuumaksult aastamaksele) jõustuvad kohe ja vahe arvutab proportsionaalselt Apple; madalamale paketile üleminek jõustub pikendamise hetkel."
+          "Paketi vahetamine: vali uus pakett DingPOS-i tellimuse lehel. Paketiuuendused (Standard paketilt Pro paketile, kuumaksult aastamaksele) jõustuvad kohe ja Apple arvutab hinnavahe proportsionaalselt; madalamale paketile üleminek jõustub pikendamise hetkel."
         ]
       }
     ],
@@ -1777,7 +1777,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Looge kampaania liigiga „Punktide kordaja“ ja määrake kordaja (täisarv, vähemalt 2). Soovi korral lisage ostusumma lävi (nt 50 € eest → topeltpunktid) ja ajakava (nt ainult laupäeviti)."
+        "text": "Looge kampaania liigiga „Punktide kordaja“ ja määrake kordaja (täisarv, vähemalt 2). Soovi korral lisage ostusumma lävi (nt 500 € eest → topeltpunktid) ja ajakava (nt ainult laupäeviti)."
       },
       {
         "type": "list",
@@ -1946,7 +1946,7 @@ export const articles = [
   {
     "slug": "roadmap-payment-integration",
     "category": "roadmap",
-    "question": "Kas maksete vastuvõtmine liidetakse DingPOS-iga?",
+    "question": "Kas maksete töötlemine integreeritakse DingPOS-iga?",
     "keywords": [
       "maksed",
       "kaardimaksed",
@@ -1984,7 +1984,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Veel mitte. E-arvete ja tšeki printimise testimiseks ning arendamiseks tuleb osta arvemasinaid ja tšekiprintereid, mis on märkimisväärne kulu. Väikese meeskonnana plaanime selle ette siis, kui kasutajaid on rohkem ja tulu on stabiilne."
+        "text": "Veel mitte. E-arvete ja tšekkide printimise testimiseks ning arendamiseks tuleb osta arve- ja tšekiprintereid, mis on märkimisväärne kulu. Väikese meeskonnana võtame selle plaani siis, kui kasutajaid on rohkem ja tulu stabiilne."
       },
       {
         "type": "p",
@@ -2011,7 +2011,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vöötkoodi skannimine kaameraga toote lisamisel on juba toetatud. Füüsilisi lugejaid (USB / Bluetooth) ametlikult veel ei toetata: nagu teiste riistvarafunktsioonide testimiseks ja arendamiseks tuleb ka neid seadmeid osta ning me plaanime need ette kasutajaskonna kasvades."
+        "text": "Vöötkoodi skannimine kaameraga toote lisamisel on juba toetatud. Füüsilisi lugejaid (USB / Bluetooth) ametlikult veel ei toetata. Nagu teiste riistvarafunktsioonide puhul, tuleb ka nende testimiseks ja arendamiseks seadmeid osta. Plaanime seda kasutajaskonna kasvades."
       },
       {
         "type": "note",
@@ -2049,7 +2049,7 @@ export const articles = [
         "items": [
           "Valige Aruanded all periood See kuu, et näha kuu müügitulu, laekunud raha, kasumit ja maksete jaotust.",
           "Tarnijate kuutingimustega ostud koonduvad jaotises Ostmine alla Tasumata arved, kus saab terve kuu korraga tasuda.",
-          "Klientide arvele müügid koonduvad jaotises Müügid → Nõuded, kus saab terve kuu korraga tasuda."
+          "Klientidele arvele müüdud kaubad koonduvad jaotises Müügid → Nõuded, kus saab terve kuu eest korraga tasuda."
         ]
       },
       {

@@ -184,7 +184,7 @@
         "tagline": "Poodidele, kes vajavad laoseisu, liikmeid, ostmist või müüki arvele",
         "heading": "Kõik paketist Lite ning lisaks",
         "features": [
-          "Kampaaniamootor: summapiirid, 1+1 tasuta, õnnelikud tunnid – rakendub kassas automaatselt",
+          "Kampaaniamootor: summapiirid, 1+1 tasuta, Happy Hour – rakendub kassas automaatselt",
           "Kliendipunktid, nende kasutamine ja liikmetasemed",
           "Laoseisu jälgimine ja ostutellimused",
           "Müük arvele: anna kaup kohe, nõua raha hiljem",
@@ -339,7 +339,7 @@
         },
         "local_data": {
           "name": "Andmed sinu iPadis",
-          "desc": "Kontot pole vaja – sinu ärandmed ei liigu kunagi meie kaudu"
+          "desc": "Kontot pole vaja – sinu äriandmed ei liigu kunagi meie kaudu"
         },
         "backup": {
           "name": "Pilvevarundus ja taastamine",
@@ -440,14 +440,14 @@
     },
     "subscription": {
       "title": "Tellimus ja ostud",
-      "desc": "DingPOS pakub tellimust Apple App Store'i rakendusesisese ostu (IAP) kaudu ning tellimuse olekut haldab RevenueCat. Makse töötleb Apple; me ei saa kunagi sinu krediitkaardi- ega maksedatat. RevenueCat saab ainult anonüümse tunnuse, mis on seotud tellimuse olekuga ja mida kasutatakse tellimuse kehtivuse kontrollimiseks."
+      "desc": "DingPOS pakub tellimust Apple App Store'i rakendusesisese ostu (IAP) kaudu ning tellimuse olekut haldab RevenueCat. Makse töötleb Apple; me ei saa kunagi sinu krediitkaardi- ega makseandmeid. RevenueCat saab ainult anonüümse tunnuse, mis on seotud tellimuse olekuga ja mida kasutatakse tellimuse kehtivuse kontrollimiseks."
     },
     "analytics": {
       "title": "Analüütika ja kokkujooksmiste aruandlus",
       "desc": "DingPOS kasutab Google'i pakutavaid teenuseid Firebase Analytics ja Firebase Crashlytics, et mõista, kuidas rakendust kasutatakse, ning leida ja parandada kokkujooksmisi. Need teenused koguvad:",
       "items": [
         "Anonüümseid kasutusandmeid (nt milliseid funktsioone kasutatakse, seansi kestus)",
-        "Kokkujooksmisaruandeid (nt pinujälg, seadme mudel, operatsioonisüsteemi versioon)",
+        "Kokkujooksmisaruandeid (nt virnajälg, seadme mudel, operatsioonisüsteemi versioon)",
         "Seadmeteavet (nt seadme tüüp, operatsioonisüsteem, rakenduse versioon)",
         "Juhuslikult loodud instantsi tunnust (mis ei ole seotud sinu isikuga)"
       ],
@@ -499,7 +499,7 @@
     },
     "disclaimer": {
       "title": "Vastutusest loobumine",
-      "desc": "DingPOS on esitatud „sellisena, nagu see on“, ilma igasuguste otseste või kaudsete garantiideta. Me ei garanteeri, et rakendus töötab katkestusteta või täiesti veatult. DingPOS on teie tegevust toetav tööriist; maksuarvutuste, laoseisu ja kõigi summade lõpliku õigsuse ning kohalike nõuete täitmise kontrollimine jääb teie vastutusele. Seadusega lubatud ulatuses ei vastuta me ühegi otsese, kaudse, juhusliku ega järelduva kahju eest, mis tuleneb rakenduse kasutamisest."
+      "desc": "DingPOS on esitatud „sellisena, nagu see on“, ilma igasuguste otseste või kaudsete garantiideta. Me ei garanteeri, et rakendus töötab katkestusteta või täiesti veatult. DingPOS on teie tegevust toetav tööriist; maksuarvutuste, laoseisu ja kõigi summade lõpliku õigsuse ning kohalike nõuete täitmise kontrollimine jääb teie vastutusele. Seadusega lubatud ulatuses ei vastuta me ühegi otsese, kaudse, juhusliku ega kaasneva kahju eest, mis tuleneb rakenduse kasutamisest."
     },
     "liability": {
       "title": "Vastutuse piiramine",
