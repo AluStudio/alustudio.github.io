@@ -122,11 +122,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Igen. A DingPOS internetkapcsolat nélkül is működik – a fizetés, a termékkezelés, a készlet és a jelentések mind helyben, az iPaden futnak, hálózat nélkül. Az éjszakai piacokon, pop-up standoknál és más Wi-Fi nélküli helyszíneken is tökéletesen használható."
+        "text": "Igen. A DingPOS internetkapcsolat nélkül is működik – a fizetés, a termékkezelés, a készlet és a jelentések mind helyben, az iPaden futnak, hálózat nélkül. Az éjszakai piacokon, pop-up boltokban és más Wi-Fi nélküli helyszíneken is tökéletesen használható."
       },
       {
         "type": "p",
-        "text": "Csak két dologhoz kell kapcsolat: a felhőmentéshez (feltöltés a saját iCloud-, Google Drive- vagy Dropbox-fiókjába) és az előfizetés állapotának ellenőrzéséhez."
+        "text": "Csak két dologhoz kell kapcsolat: a felhőalapú biztonsági mentéshez (feltöltés a saját iCloud-, Google Drive- vagy Dropbox-fiókjába) és az előfizetés állapotának ellenőrzéséhez."
       }
     ],
     "related": [
@@ -142,7 +142,7 @@ export const articles = [
       "fiók",
       "regisztráció",
       "bejelentkezés",
-      "feliratkozás",
+      "fiók létrehozása",
       "adatvédelem"
     ],
     "content": [
@@ -152,7 +152,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ha bekapcsolja a felhőmentést, a saját felhőfiókjába (iCloud, Google Drive vagy Dropbox) jelentkezik be. A mentések az Ön fiókjában vannak – mi nem férünk hozzájuk."
+        "text": "Ha bekapcsolja a felhőalapú biztonsági mentést, a saját felhőfiókjába (iCloud, Google Drive vagy Dropbox) jelentkezik be. A biztonsági mentések az Ön fiókjában vannak – mi nem férünk hozzájuk."
       }
     ],
     "related": [
@@ -258,7 +258,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "A kassza képernyő egyszerre legfeljebb 10 kosarat támogat. A „+” gombbal a kosársávon új kosarat adhat hozzá, a számozott fülre koppintva pedig váltani tud közöttük."
+        "text": "A kassza képernyője egyszerre legfeljebb 10 kosarat kezel. A „+” gombbal új kosarat adhat hozzá a kosársávon, a számozott fülre koppintva pedig válthat közöttük."
       },
       {
         "type": "p",
@@ -445,7 +445,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Kézi tételengedmény: erre a sorra már nem érvényesül tételszintű akció – a kézi engedményt a rendszer a helyszínen hozott végső döntésnek tekinti. A sor összege viszont továbbra is beleszámít a költési küszöbökbe.",
-          "Kézi kosárengedmény: az összes akció kiszámítása után érvényesül, így a kettő együtt él. Ha a hátralévő végösszegnél többet ad meg, a rendszer értesítéssel automatikusan korlátozza."
+          "Kézi kosárengedmény: az összes akció kiszámítása után érvényesül, így mindkettő érvényesülhet. Ha a hátralévő végösszegnél többet ad meg, a rendszer értesítéssel automatikusan korlátozza az összeget."
         ]
       },
       {
@@ -751,7 +751,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Bekapcsolás után az eladások és az előrendelések automatikusan levonják a készletet; a sztornók, visszavételek és lemondott előrendelések visszaadják; a beszerzési rendelés átvétele növeli; kézzel pedig bármikor módosíthatja. Minden mozgás bekerül egy teljes naplóba. Az alacsony készletet színes figyelmeztetés emeli ki."
+        "text": "Bekapcsolás után az eladások és az előrendelések automatikusan csökkentik a készletet; a sztornók, visszavételek és lemondott előrendelések visszaállítják; a beszerzési rendelés átvétele pedig növeli. A készletet kézzel is bármikor módosíthatja. Minden készletmozgás bekerül a teljes mozgásnaplóba. Az alacsony készletet színes figyelmeztetés jelzi."
       }
     ],
     "related": [
@@ -774,7 +774,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ez szándékos: a fizetést soha nem akadályozza a készlethiány. Az éles kassza első szabálya, hogy a vevőnek soha nem kell várnia – egy hibás szám a papíron később kijavítható, a megszakadt eladás viszont végleg elveszik."
+        "text": "Ez szándékos: a fizetést soha nem akadályozza a készlethiány. Egy működő kassza első szabálya, hogy a vevőnek soha nem kell várnia – egy hibás szám a papíron később kijavítható, a megszakadt eladás viszont végleg elveszik."
       },
       {
         "type": "p",
@@ -850,7 +850,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Számlás eladás: az áru ma elhagyja a boltot, és a mai árbevételbe számít; a pénz abban a napban számít bele a beérkezett pénzbe, amikor kiegyenlítik.",
+          "Számlás eladás: az áru ma elhagyja a boltot, és a mai árbevételbe számít; a pénz azon a napon számít bele a beérkezett pénzbe, amikor kiegyenlítik.",
           "Előrendelés: az előleg a befizetés napján számít bele a beérkezett pénzbe; az árbevétel az átvétel napján jelenik meg teljes összegben.",
           "Elvesztett előleg: ha a vevő lemond egy előrendelést, és Ön megtartja az előleget, az a befizetéskor már bekerült a beérkezett pénzbe. A Riportok ezt külön, elvesztett előlegként mutatja, és soha nem számít árbevételnek."
         ]
@@ -869,7 +869,7 @@ export const articles = [
   {
     "slug": "report-periods",
     "category": "reports",
-    "question": "Milyen időszakokra mutathatnak riportot a jelentések?",
+    "question": "Milyen időszakokat jeleníthetnek meg a jelentések?",
     "keywords": [
       "riportok",
       "időszak",
@@ -891,7 +891,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A Termékrangsor kártya az első 5 terméket listázza. Koppintson a kártyára vagy a Mind megtekintése lehetőségre, hogy lássa az időszakban eladott összes terméket, a visszavételek utáni mennyiség szerint rangsorolva."
+        "text": "A Termékrangsor kártya az 5 legjobban teljesítő terméket listázza. Koppintson a kártyára vagy a Mind megtekintése lehetőségre, hogy lássa az időszakban eladott összes terméket, a visszavételek utáni mennyiség szerint rangsorolva."
       },
       {
         "type": "p",
@@ -928,12 +928,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "A részletes jelentések nem külön képernyők – közvetlenül a Riportokban ülnek, és követik a tetején kiválasztott időszakot:"
+        "text": "A részletes jelentések nem külön képernyők – közvetlenül a Riportok képernyőn jelennek meg, és a felül kiválasztott időszakot követik:"
       },
       {
         "type": "list",
         "items": [
-          "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). A Beérkezett pénz csempe a különbséget és a növekedési ütemet mutatja, az árbevétel-diagramon pedig halványabb vonal jelenik meg az összehasonlított időszakhoz. Amíg egy időszak még tart, az összehasonlított időszakot ugyanabban a pillanatban vágjuk el.",
+          "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). A Beérkezett pénz csempe a különbséget és a növekedési ütemet mutatja, az árbevétel-diagramon pedig halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszak is ugyanaddig tart.",
           "Hétnap × óra: az Eladások időben fejlécet átkapcsolva Hétnap × óra nézetre hétnapos, 24 órás hőtérkép jelenik meg – minél sötétebb egy cella, annál többet adott el. Váltogathat az árbevétel és a rendelések között; bekapcsolt összehasonlításnál látszik, mely órák nőttek, és melyek csökkentek.",
           "Lassan forgó termékek: a rangsorkártya fejlécét átkapcsolva Lassan forgó termékek nézetre a termékek a legkevesebbet eladottól a legtöbbig sorakoznak, a jelenlegi készlettel és az utolsó eladás dátumával. Azok a termékek, amelyekből még nem adtak el, a Még nem adták el jelölést kapják. Alapértelmezés szerint csak a készleten lévő termékek látszanak.",
           "Visszatérő vásárlók aránya: a Vevők csempe utolsó sora azoknak a törzsvásárlóknak az aránya, akik az időszakban vásároltak, és összesen legalább kétszer vásároltak.",
@@ -969,7 +969,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "A költség nem kötelező mező. A költség nélküli termékek a riportokban „a nyereség nem követett” jelölést kapnak, és kimaradnak a nyereségszámításból – az árbevételük teljes egészében beleszámít, csak a nyereség marad ki."
+        "text": "A költség nem kötelező mező. A költség nélküli termékek a riportokban „a nyereség nincs követve” jelölést kapnak, és kimaradnak a nyereségszámításból – az árbevételük teljes egészében beleszámít, csak a nyereség marad ki."
       },
       {
         "type": "p",
@@ -1002,8 +1002,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Összegküszöb: ha a vásárlás eléri az X összeget, Y összeg vagy Y% engedmény jár.",
-          "Egyet fizet, egyet kap, valamint N-edik termék akciók.",
+          "Összegküszöb: X összeg elköltése után Y összegű vagy Y%-os engedmény jár.",
+          "Egyet fizet, kettőt kap, valamint minden N-edik termékre vonatkozó akciók.",
           "Bónuszpont-szorzók.",
           "Csak adott tagsági szintnek szóló vagy születési hónapos ajánlatok.",
           "Vegyen A-t, kapjon B-t akciók, fizetős kiegészítők és fix árú csomagakciók."
@@ -1071,7 +1071,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nyissa meg a Beállítások → Hűségprogram részt, és adjon meg két szabályt: hány pontot kap a vevő X összegű vásárlás után, és hány pontot válthat be N pont M összegű engedményre (opcionális rendelésenkénti beváltási határral). Az új tagoknak automatikusan üdvözlő pontokat is adhat."
+        "text": "Nyissa meg a Beállítások → Hűségprogram részt, és adjon meg két szabályt: hány pontot kap a vevő X összegű vásárlás után, illetve hány pontot kell beváltani M összegű engedményhez (rendelésenkénti beváltási korlát is megadható). Az új tagoknak automatikusan üdvözlő pontokat is adhat."
       },
       {
         "type": "p",
@@ -1126,7 +1126,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nyissa meg a Beállítások → Felhőmentés menüpontot, válasszon az iCloud, a Google Drive és a Dropbox közül, és engedélyezze a hozzáférést. Ezután bármikor kézzel is indíthat mentést. iCloud esetén az iPadnek be kell lennie jelentkezve iCloudba, az iCloud Drive-nak bekapcsolva kell lennie, és a DingPOS-nak használhatnia kell engedni."
+        "text": "Nyissa meg a Beállítások → Felhőmentés menüpontot, válasszon az iCloud, a Google Drive és a Dropbox közül, és engedélyezze a hozzáférést. Ezután bármikor kézzel is indíthat mentést. iCloud esetén az iPadnek be kell lennie jelentkezve az iCloudba, az iCloud Drive-nak bekapcsolva kell lennie, és engedélyeznie kell a DingPOS számára az iCloud Drive használatát."
       },
       {
         "type": "p",
@@ -1170,7 +1170,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ha mindhárom be van kapcsolva, térjen vissza a DingPOS Felhőmentés oldalára, és az iCloud csatlakoztatva jelenik meg. A mentések az iCloud Drive-ban, a DingPOS saját mappájában tárolódnak."
+        "text": "Ha mindhárom feltétel teljesül, térjen vissza a DingPOS Felhőmentés oldalára: az iCloud csatlakoztatottként jelenik meg. A mentések az iCloud Drive-ban, a DingPOS saját mappájában tárolódnak."
       },
       {
         "type": "note",
@@ -1262,7 +1262,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Először koppintson az Újra gombra; ha sikerül, az alkalmazás a szokott módon megnyílik. Ha továbbra is ismétlődik, koppintson a Kapcsolatfelvétel az ügyfélszolgálattal gombra, és írja meg nekünk, mi segítünk az adatok helyreállításában. Ez a képernyő soha nem helyez át és nem töröl fájlokat."
+        "text": "Először koppintson az Újra gombra; ha sikerül, az alkalmazás a szokott módon megnyílik. Ha a probléma továbbra is fennáll, koppintson a Kapcsolatfelvétel az ügyfélszolgálattal gombra, és írjon nekünk. Segítünk helyreállítani az adatait. Ez a képernyő soha nem helyez át és nem töröl fájlokat."
       },
       {
         "type": "note",
@@ -1292,7 +1292,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Az adatokat a felhőmentéssel (mentés → visszaállítás) átmásolhatja egyik iPadről a másikra, ami jól működik eszközcserénél vagy egy második iPad feltöltésére. Az egyes eszközökön külön leütött rendelések azonban nem egyesülnek automatikusan. A több eszközös szinkronizálás szerepel a terveink között."
+        "text": "Az adatokat a felhőmentéssel (mentés → visszaállítás) átmásolhatja egyik iPadről a másikra, ez jól működik eszközcserénél vagy egy második iPad kezdeti beállításakor. Az egyes eszközökön külön rögzített rendelések azonban nem egyesülnek automatikusan. A több eszközös szinkronizálás szerepel a terveink között."
       }
     ],
     "related": [
@@ -1318,7 +1318,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Igen. Nyissa meg a Beállítások → Adatimportálás menüpontot, válassza ki, hogy termékeket vagy eladásokat importál, és adjon meg egy CSV-fájlt (az Excel és a Google Táblázatok is tud CSV-ként menteni)."
+        "text": "Igen. Nyissa meg a Beállítások → Adatimportálás menüpontot, válassza ki, hogy termékeket vagy eladásokat importál, és válasszon ki egy CSV-fájlt (az Excel és a Google Táblázatok is tud CSV-formátumba menteni)."
       },
       {
         "type": "steps",
@@ -1370,7 +1370,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "A Visszaállítás visszavonása maga is visszaállítás, és újabb másolatot őriz a lecserélt adatokról, így még egyszer megérintve visszakapcsol.",
+          "A Visszaállítás visszavonása maga is visszaállítás, és újabb másolatot őriz a lecserélt adatokról, így újbóli megérintésével ismét visszaállíthat az előző állapotra.",
           "Csak a legutóbbi másolat marad meg; a következő visszaállítás lecseréli.",
           "Csak az adatok jönnek vissza: a pillanatkép után hozzáadott termékeknél hiányzó kép látszik."
         ]
@@ -1397,7 +1397,7 @@ export const articles = [
     "question": "Hogyan adhatok hozzá munkatársakat, és hogyan válthatok kezelőt a kasszánál?",
     "keywords": [
       "munkatárs",
-      "alkalmazott",
+      "munkatársak",
       "menedzser",
       "fiók",
       "PIN",
@@ -1417,7 +1417,7 @@ export const articles = [
         "items": [
           "A Személyzet oldalon koppintson a Munkatárs hozzáadása gombra, adjon meg egy nevet, válasszon szerepkört (Menedzser vagy Munkatárs), és állítson be egy 4 számjegyű PIN-t.",
           "Az aktuális kezelő az oldalsáv alján és a fizetés képernyő jobb felső sarkában látható. Műszakváltáskor koppintson rá, válassza ki a nevét, és adja meg a PIN-jét.",
-          "Ettől kezdve minden rendelés, fizetés, valamint készlet- vagy pontmozgás rögzíti, ki kezelte; ez a rendelések listájában és részleteiben látható, a sztornózott rendeléseknél pedig az is, ki sztornózta."
+          "Ettől kezdve minden rendeléshez, fizetéshez, valamint készlet- vagy pontmozgáshoz rögzül, ki kezelte azokat; ez a rendelések listájában és részleteiben látható. A sztornózott rendeléseknél az is látszik, ki sztornózta őket."
         ]
       },
       {
@@ -1461,7 +1461,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A tulajdonos PIN-kódja nélkül minden, ami ezt igényli, elérhetetlen marad: a munkatársak hozzáadása vagy szerkesztése, a szerepkörök jogosultságainak módosítása és a Tevékenységnapló megtekintése. A munkatársak a saját PIN-jükkel továbbra is fizettethetnek, és elvégezhetik a napi munkát."
+        "text": "A tulajdonos PIN-kódja nélkül minden, ami ezt igényli, elérhetetlen marad: munkatársak hozzáadása vagy szerkesztése, a szerepkör-jogosultságok módosítása és a Tevékenységnapló megtekintése. A munkatársak a saját PIN-kódjukkal továbbra is lebonyolíthatják az eladásokat, és elvégezhetik a napi munkát."
       },
       {
         "type": "note",
@@ -1490,7 +1490,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Egy jogosultságnak két értéke lehet: Engedélyezett vagy Jóváhagyás szükséges – semmi sincs teljesen megtiltva. Ha a munkatárs jóváhagyást igénylő műveletbe ütközik, egy arra jogosult kolléga kiválasztja a nevét, és a PIN-jének megadásával átengedi a műveletet."
+        "text": "Egy jogosultságnak két értéke lehet: Engedélyezett vagy Jóváhagyás szükséges – semmi sincs teljesen megtiltva. Ha a munkatárs jóváhagyást igénylő műveletet próbál végrehajtani, egy arra jogosult kolléga kiválasztja a saját nevét, és a PIN-kódja megadásával jóváhagyja a műveletet."
       },
       {
         "type": "list",
@@ -1534,7 +1534,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Használja a Tevékenységnaplót. A Személyzet oldalon koppintson a jobb felső sarokban lévő Tevékenységnapló gombra, és adja meg a tulajdonos PIN-kódját: az üzlet érzékeny műveleteit látja, a legújabbakkal kezdve – sztornók, visszavételek, kézi készletmódosítások, jóváhagyások, munkatársak és jogosultságok módosításai, a tulajdonos PIN-jének cseréi, a termékek ár- és költségváltozásai, valamint a termékek törlései. A szokásos fizetések nem szerepelnek benne."
+        "text": "Használja a Tevékenységnaplót. A Személyzet oldalon koppintson a jobb felső sarokban lévő Tevékenységnapló gombra, és adja meg a tulajdonos PIN-kódját. Itt az üzlet érzékeny műveletei láthatók, a legújabbakkal kezdve: sztornók, visszavételek, kézi készletmódosítások, jóváhagyások, a munkatársak és jogosultságok módosításai, a tulajdonos PIN-kódjának módosításai, a termékárak és -költségek változásai, valamint a terméktörlések. A szokásos eladások nem szerepelnek benne."
       },
       {
         "type": "list",
@@ -1542,13 +1542,13 @@ export const articles = [
           "Minden bejegyzés megmutatja, mit érintett, ki mit tett és mikor, valamint az eredményt – például „M ár 390 Ft → 350 Ft”.",
           "Szűrhet munkatárs (az inaktiváltakat is beleértve), művelettípus, valamint Ma / Ez a hét / Ez a hónap szerint.",
           "Koppintson egy rendelésre, termékre vagy vevőre mutató bejegyzésre a részletei megnyitásához.",
-          "A rendelés és a termék részletei, valamint minden munkatárs oldala saját belépési pontot kínál, amely csak a rájuk vonatkozó bejegyzéseket listázza.",
+          "A rendelés- és termékrészletek oldalán, valamint minden munkatárs saját oldalán külön lista jeleníti meg a csak rájuk vonatkozó bejegyzéseket.",
           "A Törölt termékek a naplóban is megőrzik az akkori nevüket és árukat."
         ]
       },
       {
         "type": "note",
-        "text": "Minden csomag rögzít; csak a megtekintés Pro szolgáltatás, így a Pro lejárta alatt készült bejegyzések az újbóli előfizetés után megjelennek. A napló a felhőmentésekkel együtt utazik."
+        "text": "A napló minden csomagban rögzíti a műveleteket; csak a megtekintése Pro-funkció. Ezért a Pro-előfizetés szünetelése alatt keletkezett bejegyzések az újbóli előfizetés után is megjelennek. A napló a felhőmentések része."
       }
     ],
     "related": [
@@ -1600,11 +1600,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nem – az adatai örökre az eszközén maradnak. A próbaidőszak végén a fizetés zárolódik, de a rendeléseket továbbra is böngészheti, a jelentéseket megtekintheti, a termékeket pedig kezelheti."
+        "text": "Nem – az adatai örökre az eszközén maradnak. A próbaidőszak végén a fizetés funkció zárolódik, de a rendeléseket továbbra is böngészheti, a jelentéseket megtekintheti, a termékeket pedig kezelheti."
       },
       {
         "type": "p",
-        "text": "Bármikor előfizethet, a fizetés ilyenkor azonnal feloldódik, az adatai pedig pontosan olyanok, mint ahogy hagyta őket."
+        "text": "Bármikor előfizethet, és a fizetés funkció azonnal feloldódik; az adatai pedig pontosan úgy maradnak, ahogy hagyta őket."
       }
     ],
     "related": [
@@ -1670,7 +1670,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Az előfizetést az App Store alkalmazáson belüli vásárlásán keresztül kezelheti – a csomagok és az árak az alkalmazásban láthatók. A fizetést az Apple dolgozza fel; a fizetési adatait mi soha nem látjuk."
+        "text": "Az előfizetéseket az App Store-on keresztüli alkalmazáson belüli vásárlással kezelheti – a csomagok és az árak az alkalmazásban láthatók. A fizetést az Apple kezeli; a fizetési adatait mi soha nem látjuk."
       },
       {
         "type": "list",
@@ -1825,19 +1825,19 @@ export const articles = [
   {
     "slug": "guide-composite",
     "category": "promotion-guide",
-    "question": "Hogyan állítsak be ajándékot, fizetős kiegészítőt és csomagárat?",
+    "question": "Hogyan állítsak be ajándékot, fizetős kiegészítőt és csomagakciót?",
     "keywords": [
       "ajándék vásárláshoz",
       "kiegészítő",
       "csomagakció",
-      "csomagár",
+      "csomagakció beállítása",
       "vegyen A-t kapjon B-t",
       "útmutató"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Három összetett akciótípus érhető el: ajándék vásárláshoz (vegyen A-t, kapjon B-t), fizetős kiegészítő (X összegért hozzáadható Y) és csomagár (bármely N termék X összegért). Az ajándékok és a fizetős kiegészítők megerősítésre várnak a pénztárostól; a csomagárak automatikusan érvényesülnek."
+        "text": "Három összetett akciótípus érhető el: ajándék vásárláshoz (vegyen A-t, kapjon B-t), fizetős kiegészítő (X összegért hozzáadható Y) és csomagakció (bármely N termék X összegért). Az ajándékok és a fizetős kiegészítők megerősítésre várnak a pénztárostól; a csomagakciók automatikusan érvényesülnek."
       },
       {
         "type": "p",
@@ -1853,15 +1853,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Csomagárak (a 2.4-es verzió óta automatikusan): amint a kosárból csomag állítható össze, a DingPOS csoportosítja, és beleszámítja a végösszegbe – kérdés nélkül, a csomagok pedig nem bonthatók szét."
+        "text": "A csomagakciók (a 2.4-es verzió óta automatikusan): amint a kosárból csomagakció állítható össze, a DingPOS csoportosítja a tételeket, és beleszámítja az akciót a végösszegbe – kérdés nélkül; az akcióba tartozó tételek pedig nem választhatók szét."
       },
       {
         "type": "list",
         "items": [
-          "Csomag csak akkor jön létre, ha ezzel olcsóbb lesz a kosár. Azonos árú tételek közül először az engedmény nélküliek kerülnek a csomagba, és a már engedményezett tételek megtartják az engedményüket.",
-          "Hogy mely tételek kerülnek egy csomagba, csak a kosár tartalmától függ, soha nem a beolvasás sorrendjétől.",
-          "Minden csomagtétel megmutatja a csomagengedményből rá eső részt, és minden sor összege az engedmények utáni érték.",
-          "A fizetésnél a csomagok a legfrissebb árakkal újra csoportosulnak; ha az eredmény megváltozik, a rendszer megerősítést kér az új végösszegre."
+          "Csomagakció csak akkor jön létre, ha ezzel olcsóbb lesz a kosár. Azonos árú tételek közül először az engedmény nélküliek kerülnek a csomagakcióba, a már engedményezett tételek pedig megtartják az engedményüket.",
+          "Hogy mely tételek kerülnek egy csomagakcióba, csak a kosár tartalmától függ, soha nem a beolvasás sorrendjétől.",
+          "A csomagakció minden tétele megmutatja a rá eső csomagengedményt, és minden sor összege az engedmények utáni érték.",
+          "A fizetésnél a csomagakció tételeit a rendszer a legfrissebb árakkal csoportosítja újra; ha az eredmény megváltozik, megerősítést kér az új végösszegre."
         ]
       }
     ],
@@ -1934,7 +1934,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Érdekesség: ha egy engedmény nullára kerekedik, az alkalmazás nem számít – és nem használ fel a felhasználási korlátból."
+        "text": "Érdekesség: ha egy engedmény nullára kerekedik, az alkalmazása nem számít érvényesülésnek, és nem fogyasztja a felhasználási keretet."
       }
     ],
     "related": [
@@ -2046,7 +2046,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Állítsa a Riportok lapon az időszakot Ez a hónap értékre: így látja a hónap bevételét, a beérkezett készpénzt, a nyereséget és a fizetési módok szerinti bontást.",
+          "Állítsa a Riportok lapon az időszakot Ez a hónap értékre: így látja a hónap árbevételét, a beérkezett pénzt, a nyereséget és a fizetési módok szerinti bontást.",
           "A havi fizetési határidős beszállítói beszerzések a Beszerzés alatt a Nyitott számlák között gyűlnek, ahol egy teljes hónap egyszerre kiegyenlíthető.",
           "A vevők számlás (utólag fizetett) eladásai a Rendelések → Kintlévőségek alatt gyűlnek, ahol egy teljes hónap egyszerre kiegyenlíthető."
         ]

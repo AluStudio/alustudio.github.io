@@ -9,9 +9,9 @@
   },
   "hero": {
     "meta_title": "DingPOS — internetkapcsolat nélkül is működő kassza-alkalmazás iPadre",
-    "meta_description": "DingPOS — Nyissa meg boltját 10 perc alatt. Internetkapcsolat nélkül is működő kassza-alkalmazás (POS) iPadre. Az adatok az Öné, Ön az úr.",
+    "meta_description": "DingPOS — Indítsa el üzletét 10 perc alatt. Internetkapcsolat nélkül is működő kassza-alkalmazás (POS) iPadre. Az adatai az Önéi, Ön rendelkezik felettük.",
     "eyebrow": "Kassza-alkalmazás iPadre",
-    "title": "Nyissa meg boltját 10 perc alatt. Az adatai az Öné, Ön dönt.",
+    "title": "Indítsa el üzletét 10 perc alatt. Az adatai az Önéi, Ön rendelkezik felettük.",
     "description": "A DingPOS egy kassza-alkalmazás (POS) iPadre. Nem kell hozzá fiók, nem köti felhőszolgáltatáshoz, és internet nélkül is működik. A termékek, rendelések és vevők mind a saját eszközén maradnak.",
     "download": "Letöltés az App Store-ból",
     "note": "30 napos ingyenes próba.",
@@ -122,7 +122,7 @@
   },
   "privacy_band": {
     "eyebrow": "Biztonsági mentés és adatvédelem",
-    "title": "Fiók nélkül senki nem férhet hozzá az adataihoz",
+    "title": "Fiók nélkül senki nem veheti el az adatait",
     "lead": "A DingPOS-ra nem kell regisztrálni. A könyvelése az iPaden van, a biztonsági mentések pedig – ha kéri – egy olyan felhőfiókba kerülnek, amely már az Öné.",
     "items": [
       "Válasszon: iCloud, Google Drive vagy Dropbox",
@@ -322,7 +322,7 @@
           "desc": "Hány tag tér vissza, és mennyi pont vár még beváltásra"
         },
         "staff": {
-          "name": "Munkatársak kezelése",
+          "name": "Munkatársi fiókok",
           "desc": "Mindenkinek saját PIN-kód; minden rendelés rögzíti, ki ütötte be"
         },
         "permissions": {
@@ -397,7 +397,7 @@
     }
   },
   "footer": {
-    "tagline": "Nyissa meg boltját 10 perc alatt. Az adatai az Öné, Ön dönt.",
+    "tagline": "Indítsa el üzletét 10 perc alatt. Az adatai az Önéi, Ön rendelkezik felettük.",
     "contact": "Kapcsolat",
     "privacy_policy": "Adatvédelmi irányelvek",
     "terms_of_use": "Felhasználási feltételek",
@@ -408,7 +408,7 @@
     "title": "Adatvédelmi irányelvek",
     "meta_description": "Hogyan kezeli adatait a DingPOS, az internetkapcsolat nélkül is működő iPad-es kassza-alkalmazás: az üzleti adatok az eszközén maradnak, az opcionális biztonsági mentések pedig kizárólag a saját felhőfiókjába kerülnek.",
     "effective_date": "Hatálybalépés dátuma: 2026. július 1.",
-    "intro": "Az ALU Studio („mi”) fejlesztette a DingPOS-t („az alkalmazás”). A DingPOS egy olyan kassza-alkalmazás, amelynek középpontjában az adatvédelem áll – az üzleti adatai az Öné. Ez az Adatvédelmi irányelvek bemutatja, hogyan kezeljük az adatait, amikor az alkalmazást használja.",
+    "intro": "Az ALU Studio („mi”) fejlesztette a DingPOS-t („az alkalmazás”). A DingPOS egy olyan kassza-alkalmazás, amelynek középpontjában az adatvédelem áll – az üzleti adatai az Öné. Az Adatvédelmi irányelvek bemutatják, hogyan kezeljük az adatait, amikor az alkalmazást használja.",
     "local_storage": {
       "title": "Hogyan tároljuk az adatait",
       "desc": "A DingPOS az összes üzleti adatot helyben, az Ön eszközén tárolja. Ha Ön nem kapcsolja be aktívan a felhőalapú biztonsági mentést, ezek az adatok soha nem hagyják el az eszközt. Az alkalmazásban létrehozott adatok közé tartoznak:",
@@ -455,7 +455,7 @@
     },
     "children": {
       "title": "Gyermekek adatainak védelme",
-      "desc": "A DingPOS üzleti kassza-eszköz. Nem gyermekeknek készült, és gyermekek személyes adatait nem gyűjti."
+      "desc": "A DingPOS üzleti célú kassza-alkalmazás. Nem gyermekeknek készült, és gyermekek személyes adatait nem gyűjti."
     },
     "changes": {
       "title": "Az irányelvek módosítása",
@@ -483,8 +483,8 @@
       "title": "Korlátozások",
       "desc": "Az alkalmazás használata során Ön vállalja, hogy nem:",
       "items": [
-        "fejti vissza, szedi szét vagy fordítja vissza az alkalmazást",
-        "módosítja, fordítja le, és nem készít belőle származékos művet",
+        "visszafejti, szétszereli vagy dekompilálja az alkalmazást",
+        "módosítja, lefordítja vagy származékos művet készít belőle",
         "távolít el szerzői jogi közleményeket vagy jelöléseket az alkalmazásból",
         "használja az alkalmazást jogellenes célra"
       ]
