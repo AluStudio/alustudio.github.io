@@ -1,0 +1,543 @@
+{
+  "//": "Generated from en and the da translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync da`, then `npm run l10n -- apply da`.",
+  "nav": {
+    "home": "Forside",
+    "pricing": "Priser",
+    "privacy": "Privatlivspolitik",
+    "terms": "Brugsvilkår",
+    "support": "FAQ"
+  },
+  "hero": {
+    "meta_title": "DingPOS – kasseapp til iPad, der virker uden internet",
+    "meta_description": "DingPOS – åbn din butik på 10 minutter. Et kassesystem til iPad, der virker uden internet. Dine data, din kontrol.",
+    "eyebrow": "Kassesystem til iPad",
+    "title": "Åbn din butik på 10 minutter. Dine data, din kontrol.",
+    "description": "DingPOS er et kassesystem til iPad. Ingen konto, ingen binding til skyen, og det virker også uden internet. Dine produkter, ordrer og kunder bliver på din egen enhed.",
+    "download": "Hent i App Store",
+    "note": "30 dages gratis prøveperiode.",
+    "shot_alt": "DingPOS' betalingsskærm: et produktgitter med kategorifiltre til venstre og kurven med automatisk anvendte kampagner og totalen til højre"
+  },
+  "proof": {
+    "items": [
+      "Ingen konto nødvendig",
+      "Salg virker offline",
+      "Data bliver på din iPad"
+    ]
+  },
+  "stories": {
+    "cashier": {
+      "eyebrow": "Betal",
+      "title": "Hele salget samlet på én skærm",
+      "lead": "Op til 10 kurve på samme tid, produkter fundet på navn eller stregkode, mens du skriver, og rabatter og moms regnet ud, før kunden betaler.",
+      "items": [
+        "Op til 10 kurve kørende på samme tid",
+        "Produktsøgning på navn og stregkode, mens du skriver",
+        "Rabatter på varer og kurv, som fast beløb eller procent",
+        "Moms inklusive / eksklusive beregnes automatisk",
+        "Byttepenge og egne betalingsmåder som etiketter",
+        "Hvert salg afsluttes med et „Ding!“ og haptisk feedback"
+      ]
+    },
+    "promotion": {
+      "eyebrow": "Kampagnemotor",
+      "title": "Sæt reglerne op én gang, så anvender kassen dem",
+      "lead": "Beløbsgrænser, køb-en-få-en, happy hour, tilbud kun for medlemmer – når reglen er oprettet, regner kassen den ud. Ingen skal huske den, og der er ingen rabatkoder at taste.",
+      "items": [
+        "Grænser for kurvens subtotal udløses automatisk",
+        "Rabatter på kurv eller vare (fast beløb eller procent)",
+        "Køb-en-få-en og tilbud på den n'te vare",
+        "Pointmultiplikatorer",
+        "Happy Hour-vinduer – over midnat, valgfrie ugedage",
+        "Styring af prioritet, kombinerbarhed og stop efter anvendelse",
+        "Brugsgrænser (samlet eller pr. kunde)",
+        "Anvendes automatisk i kassen – ingen rabatkoder"
+      ],
+      "shot_alt": "Kampagnelisten i Indstillinger, opdelt i pakketilbud og rabatter, hvor hver regel viser sin aktive status og prioritet"
+    },
+    "reports": {
+      "eyebrow": "Rapporter",
+      "title": "Hvad du har tjent i dag, mens butikken stadig er åben",
+      "lead": "Antal ordrer, omsætning, dækningsbidrag, rabatter og betalingsfordeling på én side – for i dag, 7 dage, 30 dage eller hele perioden.",
+      "items": [
+        "I dag: antal ordrer, omsætning, dækningsbidrag, rabat, betalingsfordeling",
+        "Top 5-produkter efter antal",
+        "Dag / uge / måned",
+        "Grafer over udvikling i omsætning og dækningsbidrag"
+      ],
+      "shot_alt": "Oversigten med dagens omsætning, samlet rabat, fortjeneste og gennemsnitlig kurv over et cirkeldiagram med betalingsmåder og en liste over bedst sælgende varer"
+    },
+    "orders": {
+      "eyebrow": "Ordrer",
+      "title": "Hvert salg er gemt, og hvert salg kan fortrydes",
+      "lead": "Hver ordre gemmer hele forløbet: varer og varianter, hvilken kampagne der blev anvendt, moms, betalingsmåde og udleverede byttepenge.",
+      "items": [
+        "Kronologisk ordreliste med filter på dato og betalingsmåde",
+        "Linjedetaljer gemmer varer, varianter, rabatter, moms og byttepenge",
+        "Makulering med bekræftelse – lager og point gendannes automatisk"
+      ],
+      "shot_alt": "En kronologisk ordreliste til venstre og den valgte ordres detaljer til højre: varer, anvendt rabat, moms, total, betalingsmåde og byttepenge"
+    }
+  },
+  "features": {
+    "title": "Alt det andet, der hører til at drive butik",
+    "subtitle": "Første opsætning, produkter, lager og medlemmer – alt på den samme iPad",
+    "onboarding": {
+      "title": "Hurtig opstart",
+      "items": [
+        "Vælg dit land, så udfyldes valuta, momstype og momssats",
+        "Angiv butikkens navn og logo",
+        "Cirka 10 minutter fra start til slut, så kan du sælge"
+      ]
+    },
+    "products": {
+      "title": "Produkter og varianter",
+      "items": [
+        "Kategoristyring og filtrering",
+        "Varianter (fx størrelse × farve), hver med egen pris og kostpris",
+        "Stregkoder indtastet manuelt eller scannet med kameraet, dubletter afvises",
+        "Produktbilleder med miniaturer, der oprettes ved gem"
+      ]
+    },
+    "inventory": {
+      "title": "Lager",
+      "items": [
+        "Til-/fra-knap for lagersporing pr. produkt",
+        "Selvstændigt lager for hver variant",
+        "Negativt lager tilladt – salget blokeres aldrig",
+        "Farveadvarsler ved lavt lager",
+        "Fuld bevægelseslog: salg, makulering, manuel justering"
+      ]
+    },
+    "loyalty": {
+      "title": "Medlemmer og point",
+      "items": [
+        "Medlemsoprettelse: navn, evt. telefon og e-mail",
+        "Optjen Y point pr. X brugt",
+        "Indløs N point til M i rabat, evt. med et loft",
+        "Nye medlemmer får automatisk en velkomstbonus",
+        "Medlemsniveauer, som kampagner kan målrettes mod",
+        "Makulering af en ordre tilbagefører optjente og indløste point"
+      ]
+    }
+  },
+  "privacy_band": {
+    "eyebrow": "Backup og privatliv",
+    "title": "Uden konto kan ingen tage dine data",
+    "lead": "Du skal ikke oprette dig nogen steder i DingPOS. Dit regnskab ligger på iPad'en, og vil du have backup, går den til en skykonto, du allerede har.",
+    "items": [
+      "Vælg mellem iCloud, Google Drive eller Dropbox",
+      "Manuel backup, når du vil",
+      "Gemmer de seneste 5 øjebliksbilleder",
+      "Trinvis synkronisering af billeder",
+      "Ingen konto; data på enheden, backup i din egen sky",
+      "Fuld funktionalitet offline"
+    ]
+  },
+  "home_pricing": {
+    "title": "Enkle og gennemsigtige priser",
+    "price_before": "Tre abonnementsniveauer fra ",
+    "price_after": " om måneden",
+    "sub": "30 dages gratis prøveperiode. Ingen transaktionsgebyrer, ingen skjulte omkostninger. Dine data bevares altid efter prøveperioden – tegn abonnement igen, når du vil.",
+    "compare": "Sammenlign abonnementsniveauer",
+    "cta": "Start 30 dages gratis prøveperiode"
+  },
+  "pricing": {
+    "doc_title": "Abonnementer og priser",
+    "meta_description": "Sammenlign DingPOS-abonnementer til iPad: Lite, Standard og Pro. 30 dages gratis prøveperiode, ingen transaktionsgebyrer, og dine data bliver aldrig slettet.",
+    "eyebrow": "Abonnementer og priser",
+    "title": "Vælg det abonnement, der passer til din butik",
+    "subtitle": "Prøv gratis i 30 dage – uden oprettelse. Skift abonnement når som helst; dine data bliver aldrig slettet.",
+    "billing": {
+      "label": "Faktureringsperiode",
+      "monthly": "Månedlig",
+      "annual": "Årlig",
+      "save": "Spar {{percent}} %"
+    },
+    "recommended": "Anbefalet",
+    "select_plan": "Vælg abonnement",
+    "unit": {
+      "month": "/md.",
+      "year": "/år"
+    },
+    "approx": "≈ ",
+    "or_annual_before": "eller ",
+    "or_annual_after": "/år, faktureret årligt",
+    "saving_before": "Spar ",
+    "saving_after": " om året sammenlignet med månedlig betaling",
+    "plans": {
+      "lite": {
+        "name": "Lite",
+        "tagline": "Til én person i en bod, som har brug for betaling og produkter",
+        "heading": "Indeholder",
+        "features": [
+          "Komplet betalingsflow med op til 10 kurve",
+          "Produkter med varianter, stregkoder, fotos og kategorier",
+          "Ordrehistorik, makuleringer, returer og ombytninger",
+          "Forretningsoversigt: omsætning, dækningsbidrag, bedst sælgende varer",
+          "Cloud-backup og gendannelse",
+          "Betaling virker offline"
+        ],
+        "cta": "Start den gratis prøveperiode på 30 dage"
+      },
+      "standard": {
+        "name": "Standard",
+        "tagline": "Til butikker, der har brug for lager, medlemmer, indkøb eller salg på konto",
+        "heading": "Alt i Lite, plus",
+        "features": [
+          "Kampagnemotor: beløbsgrænser, køb-en-få-en, happy hours – anvendt ved betaling",
+          "Kundepoint, indløsning og medlemsniveauer",
+          "Lagerstyring og indkøbsordrer",
+          "Salg på konto: udlevér nu, få betaling senere",
+          "Forudbestillinger: tag imod depositum, afregn ved afhentning"
+        ],
+        "cta": "Start den gratis prøveperiode på 30 dage"
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Til butikker med medarbejdere, der har brug for roller og en aktivitetslog",
+        "heading": "Alt i Standard, plus",
+        "features": [
+          "Medarbejderkonti: hver sin PIN, og hver ordre viser, hvem der har ekspederet den",
+          "Tilladelser og godkendelser: rabatter over rabatloftet, ændring af produkter og lager, visning af kostpriser",
+          "Aktivitetslog og gendannelseshistorik",
+          "Avancerede rapporter: periodesammenligning, salgsheatmap, langsomt sælgende varer, lagerværdi, genkøbende kunder"
+        ],
+        "cta": "Start den gratis prøveperiode på 30 dage"
+      }
+    },
+    "fineprint": "Faktureres via din Apple-konto i App Store. Månedlige og årlige abonnementer fornyes automatisk ved udgangen af hver periode. Opsig når som helst i App Store.",
+    "currency": {
+      "twd": "Priserne gælder for App Store i Taiwan. I andre regioner betaler du den lokale pris, der vises i App Store.",
+      "to_usd": "Vis amerikanske priser",
+      "usd": "Priserne gælder for App Store i USA. I andre regioner betaler du den lokale pris, der vises i App Store.",
+      "to_twd": "Vis taiwanske priser"
+    },
+    "assurances": {
+      "trial": {
+        "title": "30 dages gratis prøveperiode",
+        "desc": "Alle Pro-funktioner er med. Ingen konto nødvendig."
+      },
+      "fees": {
+        "title": "Ingen transaktionsgebyrer",
+        "desc": "DingPOS rører aldrig dine penge fra salg – abonnementet er den eneste udgift."
+      },
+      "data": {
+        "title": "Dine data er dine",
+        "desc": "Når en prøveperiode eller et abonnement udløber, sættes kun betaling på pause. Produkter, ordrer og rapporter bliver, og intet slettes."
+      },
+      "switch": {
+        "title": "Skift når som helst",
+        "desc": "Opgraderinger gælder med det samme, med forholdsmæssig beregning fra Apple. Nedgraderinger gælder fra fornyelsen."
+      }
+    },
+    "compare": {
+      "title": "Sammenlign alle funktioner",
+      "subtitle": "Hvert abonnement indeholder alt fra det foregående.",
+      "feature_col": "Funktion",
+      "included": "Inkluderet",
+      "not_included": "Ikke inkluderet",
+      "groups": {
+        "checkout": "Betaling",
+        "catalog": "Produkter og lager",
+        "customers": "Kunder og kampagner",
+        "reports": "Rapporter",
+        "team": "Medarbejdere og kontrol",
+        "data": "Data og backup"
+      },
+      "rows": {
+        "checkout_flow": {
+          "name": "Betaling og flere kurve",
+          "desc": "Op til 10 kurve ad gangen, live søgning på navn eller stregkode"
+        },
+        "discounts_tax": {
+          "name": "Rabatter og moms",
+          "desc": "Rabatter på varer og ordrer; moms inklusive eller eksklusive beregnes for dig"
+        },
+        "offline": {
+          "name": "Betaling offline",
+          "desc": "Bliv ved med at sælge uden internetforbindelse"
+        },
+        "returns": {
+          "name": "Makuleringer, returvarer og ombytninger",
+          "desc": "Komplet ordrehistorik og detaljer"
+        },
+        "preorder": {
+          "name": "Forudbestillinger",
+          "desc": "Tag imod depositum nu, og afregn restbeløbet ved afhentning"
+        },
+        "on_account": {
+          "name": "Salg på konto",
+          "desc": "Udlevér nu, få betaling senere – alle kunders udestående samlet ét sted"
+        },
+        "products": {
+          "name": "Produktadministration",
+          "desc": "Varianter, stregkoder, fotos, kategorier"
+        },
+        "import": {
+          "name": "Dataimport",
+          "desc": "Importér produkter og tidligere salg fra andre systemer via CSV"
+        },
+        "inventory": {
+          "name": "Lagerstyring",
+          "desc": "Lageret trækkes fra ved salg; manuelle justeringer gemmes i en bevægelseslog"
+        },
+        "purchasing": {
+          "name": "Indkøb og leverandører",
+          "desc": "Modtagelse af en indkøbsordre opdaterer lageret; se, hvad du skylder hver leverandør"
+        },
+        "promotions": {
+          "name": "Kampagnemotor",
+          "desc": "Beløbsgrænser, køb-en-få-en, tilbud på hver n-te vare, happy hours – anvendt ved betaling"
+        },
+        "loyalty": {
+          "name": "Kunder og point",
+          "desc": "Optjen og indløs point, så kunderne vender tilbage"
+        },
+        "member_tiers": {
+          "name": "Medlemsniveauer",
+          "desc": "Beløn dine bedste kunder med fordele på flere niveauer"
+        },
+        "dashboard": {
+          "name": "Forretningsoversigt",
+          "desc": "Omsætning, fortjeneste, rabatter, betalingsfordeling og bedst sælgende varer"
+        },
+        "comparison": {
+          "name": "Periodesammenligning",
+          "desc": "Mod forrige periode eller sidste år – se vækst eller tilbagegang"
+        },
+        "heatmap": {
+          "name": "Salgsheatmap",
+          "desc": "Syv dage × 24 timer – se, hvilke timer der sælger bedst"
+        },
+        "slow_movers": {
+          "name": "Langsomt sælgende varer",
+          "desc": "Find de produkter, der ikke sælger, men stadig ligger på lager"
+        },
+        "valuation": {
+          "name": "Lagerværdi og lagerbevægelser",
+          "desc": "Hvad dit lager er værd nu, og hvem der har ændret det"
+        },
+        "repeat": {
+          "name": "Genkøbende kunder og uindløste point",
+          "desc": "Hvor mange medlemmer der vender tilbage, og hvor mange point der er udestående"
+        },
+        "staff": {
+          "name": "Medarbejderkonti",
+          "desc": "Hver sin PIN; hver ordre viser, hvem der har ekspederet den"
+        },
+        "permissions": {
+          "name": "Tilladelser og godkendelser",
+          "desc": "Roller som leder og medarbejder; du bestemmer, hvad der kræver godkendelse"
+        },
+        "activity_log": {
+          "name": "Aktivitetslog",
+          "desc": "En tidslinje over makuleringer, returvarer, prisændringer, lagerjusteringer og mere"
+        },
+        "restore_records": {
+          "name": "Gendannelseshistorik",
+          "desc": "Hvem der gendannede, fra hvilken backup, og hvilke ordrer det fjernede"
+        },
+        "local_data": {
+          "name": "Data på din iPad",
+          "desc": "Ingen konto nødvendig – dine forretningsdata går aldrig gennem os"
+        },
+        "backup": {
+          "name": "Cloud-backup og gendannelse",
+          "desc": "Tag backup til din egen iCloud, Google Drive eller Dropbox"
+        },
+        "undo_restore": {
+          "name": "Forhåndsvisning af gendannelse og fortryd",
+          "desc": "Se, hvilke ordrer en gendannelse fjerner, og fortryd en forkert gendannelse"
+        }
+      }
+    },
+    "faq": {
+      "title": "Ofte stillede spørgsmål",
+      "items": [
+        {
+          "q": "Hvad kan jeg bruge i den gratis prøveperiode?",
+          "a": "I 30 dage fra første installation får du alle funktioner, også Pro-funktioner som medarbejdere, tilladelser og avancerede rapporter – uden konto. Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og du skifter til det abonnement, du har købt."
+        },
+        {
+          "q": "Hvad sker der, hvis jeg ikke tegner abonnement efter prøveperioden?",
+          "a": "Betaling sættes på pause; alt andet virker stadig – du kan fortsat se ordrer, se rapporter og administrere produkter. Intet slettes, og når du tegner et abonnement, virker betaling igen med det samme."
+        },
+        {
+          "q": "Kan jeg opgradere eller nedgradere når som helst?",
+          "a": "Ja, under Indstillinger → Abonnement i appen. Opgraderinger gælder med det samme, og Apple krediterer den ubrugte tid; nedgraderinger træder i kraft, når den nuværende periode udløber. Skift fra månedlig til årlig gælder også med det samme."
+        },
+        {
+          "q": "Hvad sker der med mine kunder, kampagner og lager, hvis jeg nedgraderer?",
+          "a": "Det hele bliver gemt – intet slettes eller ændres. Det højere abonnements funktioner holder simpelthen op med at virke, og hvis du opgraderer igen, er alt som før."
+        },
+        {
+          "q": "Hvordan fungerer årlig fakturering?",
+          "a": "Et årligt abonnement koster det samme som ti måneders månedlig betaling og dækker et helt år – omkring {{percent}} % mindre. Du faktureres én gang om året, og abonnementet fornyes automatisk."
+        },
+        {
+          "q": "Er der andre gebyrer end abonnementet?",
+          "a": "Nej. DingPOS håndterer aldrig dine penge fra salg: ingen provision, ingen transaktionsgebyrer, ingen hardwarekontrakt."
+        },
+        {
+          "q": "Hvordan opsiger jeg?",
+          "a": "Administrér det på din iPad under Indstillinger → Apple-konto → Abonnementer; opsig senest 24 timer før periodens udløb, så bliver du ikke trukket igen. Dine data bliver på din enhed."
+        },
+        {
+          "q": "Hvorfor er prisen i App Store en anden end på denne side?",
+          "a": "App Store fakturerer abonnementet til prisen for din Apple-kontos region. Denne side viser priser for Taiwan og USA; i andre regioner betaler du den lokale pris, der vises i appen og i App Store."
+        }
+      ],
+      "more": "Flere spørgsmål?",
+      "more_link": "Se alle ofte stillede spørgsmål"
+    },
+    "final": {
+      "title": "Brug det i 30 dage, og vælg så et abonnement",
+      "sub": "Download og kom i gang – ingen konto nødvendig.",
+      "cta": "Hent i App Store"
+    }
+  },
+  "footer": {
+    "tagline": "Åbn din butik på 10 minutter. Dine data, din kontrol.",
+    "contact": "Kontakt os",
+    "privacy_policy": "Privatlivspolitik",
+    "terms_of_use": "Brugsvilkår",
+    "copyright": "ALU Studio. Alle rettigheder forbeholdes.",
+    "support": "FAQ"
+  },
+  "privacy": {
+    "title": "Privatlivspolitik",
+    "meta_description": "Sådan behandler DingPOS, kassesystem-appen til iPad, der virker uden internet, dine data: dine forretningsdata bliver på din enhed, og valgfri backups gemmes kun i din egen cloudkonto.",
+    "effective_date": "Ikrafttrædelsesdato: 1. juli 2026",
+    "intro": "ALU Studio (\"vi\") har udviklet DingPOS (\"appen\"). DingPOS er et kassesystem bygget med privatlivet i centrum – dine forretningsdata tilhører dig. Denne privatlivspolitik forklarer, hvordan vi behandler dine oplysninger, når du bruger appen.",
+    "local_storage": {
+      "title": "Sådan gemmes dine data",
+      "desc": "DingPOS gemmer alle dine forretningsdata lokalt på din enhed. Medmindre du selv aktiverer cloud-backup, forlader disse data aldrig din enhed. De data, du opretter i appen, omfatter:",
+      "items": [
+        "Butiksindstillinger (butikkens navn, valuta, momssats, logo)",
+        "Produktdata (navn, pris, kostpris, stregkode, foto, kategori, varianter, lager)",
+        "Ordrer og betalingshændelser (herunder rabatter, moms og betalingsmetode)",
+        "Kunde- og medlemsdata (navn, valgfrit telefonnummer og e-mail, point)",
+        "Kampagneregler og indstillinger for medlemsniveauer"
+      ]
+    },
+    "cloud_backup": {
+      "title": "Cloud-backup (valgfrit)",
+      "desc": "Du kan vælge at aktivere cloud-backup og bruge iCloud, Google Drive eller Dropbox som lagringssted. Backups skrives til din egen cloudkonto og er fuldt ud under din kontrol. Vi håndterer, gemmer eller får aldrig adgang til indholdet af disse backups. Om du vil bruge backup, og hvilken udbyder du vil bruge, er helt dit eget valg, og du kan slå det fra når som helst."
+    },
+    "no_collection": {
+      "title": "Hvad vi ikke indsamler",
+      "desc": "DingPOS indsamler, sender eller deler ikke noget af dit forretningsindhold. Helt konkret gør vi ikke følgende:",
+      "items": [
+        "Vi indsamler ikke dine produkt-, ordre-, kunde- eller medlemsdata",
+        "Vi håndterer ikke betalingsforløb eller kreditkortoplysninger (appen behandler ikke egentlige kortbetalinger)",
+        "Vi sporer ikke din placering",
+        "Vi deler ikke dine forretningsdata med tredjeparter"
+      ]
+    },
+    "camera": {
+      "title": "Kamera og fotos",
+      "desc": "DingPOS beder kun om adgang til kameraet, når du selv bruger \"scan stregkode\" eller \"tag et produktfoto\". Genkendelse af stregkoder og fotos behandles lokalt på din enhed og uploades aldrig til vores servere. Produktfotos skrives kun til din egen cloudkonto som en del af en backup, hvis du aktiverer cloud-backup."
+    },
+    "subscription": {
+      "title": "Abonnement og køb",
+      "desc": "DingPOS tilbyder et abonnement via køb i appen (IAP) i Apple App Store og bruger RevenueCat til at administrere abonnementsstatus. Betalingen håndteres af Apple; vi modtager aldrig dit kreditkort eller dine betalingsoplysninger. RevenueCat modtager kun et anonymt id knyttet til abonnementsstatus, som bruges til at kontrollere, om dit abonnement er aktivt."
+    },
+    "analytics": {
+      "title": "Analyse og nedbrudsrapporter",
+      "desc": "DingPOS bruger Firebase Analytics og Firebase Crashlytics fra Google til at hjælpe os med at forstå, hvordan appen bruges, og til at finde og rette nedbrud. Disse tjenester indsamler:",
+      "items": [
+        "Anonyme brugsdata (f.eks. hvilke funktioner der bruges, sessionens længde)",
+        "Nedbrudsrapporter (f.eks. stack traces, enhedsmodel, styresystemversion)",
+        "Enhedsoplysninger (f.eks. enhedstype, styresystem, appversion)",
+        "Et tilfældigt genereret instans-id (ikke knyttet til din identitet)"
+      ],
+      "note": "Disse data er anonyme og indeholder intet af dit forretningsindhold (såsom produkter, ordrer, kunder eller medlemmer). Du kan læse mere om, hvordan Google behandler disse data, i Googles privatlivspolitik: https://policies.google.com/privacy."
+    },
+    "children": {
+      "title": "Børns privatliv",
+      "desc": "DingPOS er et kommercielt kassesystem. Det er ikke designet til børn og indsamler ikke personlige oplysninger om børn."
+    },
+    "changes": {
+      "title": "Ændringer af denne politik",
+      "desc": "Hvis vi foretager væsentlige ændringer i denne privatlivspolitik, giver vi dig besked via en appopdatering. Vi anbefaler, at du gennemgår politikken med jævne mellemrum."
+    },
+    "contact": {
+      "title": "Kontakt os",
+      "desc": "Hvis du har spørgsmål eller forslag til denne privatlivspolitik, er du velkommen til at kontakte os på:"
+    }
+  },
+  "terms": {
+    "title": "Brugsvilkår",
+    "meta_description": "Brugsvilkår for DingPOS, kassesystem-appen til iPad fra ALU Studio: licens, 30 dages gratis prøveperiode, abonnementer via App Store, dine data og backup samt ansvar.",
+    "effective_date": "Ikrafttrædelsesdato: 8. oktober 2026",
+    "intro": "Velkommen til DingPOS. Læs disse brugsvilkår omhyggeligt, før du bruger appen. Når du downloader, installerer eller bruger DingPOS, accepterer du at være bundet af disse vilkår.",
+    "license": {
+      "title": "Licens",
+      "desc": "ALU Studio giver dig en begrænset, ikke-eksklusiv og ikke-overdragelig licens til at bruge DingPOS på dine enheder til at drive din virksomhed. Licensen gælder din detailvirksomhed."
+    },
+    "subscription": {
+      "title": "Abonnement og betaling",
+      "desc": "DingPOS tilbyder en gratis prøveperiode på 30 dage fra første installation, hvor alle funktioner i Pro er tilgængelige. Hvis du køber et abonnementsniveau i prøveperioden, afsluttes prøveperioden, og det købte abonnementsniveau gælder fra købstidspunktet. Efter prøveperioden kræves et abonnement på et af abonnementsniveauerne (Lite, Standard eller Pro), købt som køb i appen via App Store, for at du kan fortsætte med at gennemføre betalinger. Indhold og priser for abonnementsniveauerne fremgår af siden med priser (alu-studio.com/dingpos/pricing), og den pris, der trækkes, er den, der vises i App Store. Uden abonnement kan du stadig se og administrere produkter, og dine data slettes aldrig. Abonnementet fornyes automatisk, medmindre du opsiger det mindst 24 timer før udgangen af den aktuelle periode. Du kan til enhver tid administrere eller opsige dit abonnement i indstillingerne for din App Store-konto på din enhed. Købte abonnementer kan gendannes."
+    },
+    "restrictions": {
+      "title": "Begrænsninger",
+      "desc": "Når du bruger appen, forpligter du dig til ikke at:",
+      "items": [
+        "Foretage reverse engineering af appen eller adskille eller dekompilere den",
+        "Ændre eller oversætte appen eller skabe afledte værker",
+        "Fjerne ophavsretsmeddelelser eller mærkater i appen",
+        "Bruge appen til ulovlige formål"
+      ]
+    },
+    "user_data": {
+      "title": "Dine data og backup",
+      "desc": "Alt det forretningsindhold, du opretter i DingPOS (produkter, ordrer, kunder, medlemmer og indstillinger), gemmes på din enhed, og du er alene ansvarlig for det. Hvis du sletter appen eller rydder dens data, går alle gemte oplysninger tabt for altid, medmindre du har aktiveret cloud-backup. Cloud-backup ligger i den cloud-konto, du vælger (iCloud / Google Drive / Dropbox), og dens tilgængelighed og opbevaring styres af udbyderens egne servicevilkår. Vi kan ikke gendanne data for dig. Du er også selv ansvarlig for at overholde de skatte-, fakturerings- og forbrugerbeskyttelseslove, der gælder, hvor du driver virksomhed."
+    },
+    "updates": {
+      "title": "Appopdateringer",
+      "desc": "Vi udgiver fra tid til anden appopdateringer for at forbedre funktioner, rette fejl eller styrke sikkerheden. Vi anbefaler, at du holder appen opdateret for at få den bedste oplevelse."
+    },
+    "disclaimer": {
+      "title": "Ansvarsfraskrivelse",
+      "desc": "DingPOS leveres \"som den er\", uden garantier af nogen art, hverken udtrykkelige eller stiltiende. Vi garanterer ikke, at appen fungerer uden afbrydelser eller er helt fejlfri. DingPOS er et værktøj, der understøtter din drift. Det er fortsat dit ansvar at kontrollere, at skatteberegninger, lagerantal og alle beløb er korrekte, og at lokale regler overholdes. I det videst mulige omfang, loven tillader, er vi ikke ansvarlige for direkte, indirekte, hændelige eller følgeskader, der opstår som følge af din brug af appen."
+    },
+    "liability": {
+      "title": "Ansvarsbegrænsning",
+      "desc": "ALU Studios ansvar for skader, der opstår ved brug af appen eller ved manglende mulighed for at bruge den, overstiger under ingen omstændigheder det beløb, du har betalt for appen i de 12 måneder før hændelsen. Det gælder blandt andet tab af data, tabt omsætning, skade på enheder og ethvert andet tab."
+    },
+    "changes": {
+      "title": "Ændringer af disse vilkår",
+      "desc": "Vi forbeholder os retten til at ændre disse brugsvilkår når som helst. Ændrede vilkår træder i kraft med det samme, når de er offentliggjort på denne side. Hvis du fortsætter med at bruge appen, accepterer du de ændrede vilkår."
+    },
+    "contact": {
+      "title": "Kontakt os",
+      "desc": "Hvis du har spørgsmål til disse brugsvilkår, er du velkommen til at kontakte os på:"
+    }
+  },
+  "support": {
+    "doc_title": "Hjælp og support",
+    "meta_description": "DingPOS support: svar og trin-for-trin-guider til kasseappen til iPad – opsætning, salg, ordrer, lager, kampagner, backup, medarbejdere og fakturering.",
+    "title": "Hvordan kan vi hjælpe?",
+    "subtitle": "Søg i almindelige spørgsmål, eller find svar efter emne",
+    "search_placeholder": "Søg, fx “stregkode” eller “gendan backup”",
+    "search_hint_keywords": "Adskil søgeord med mellemrum",
+    "search_hint_shortcut_pre": "tryk ",
+    "search_hint_shortcut_post": " for at søge",
+    "clear": "Ryd søgning",
+    "results_count": "{{num}} matchende spørgsmål",
+    "no_results_title": "Ingen matchende spørgsmål",
+    "no_results_desc": "Prøv andre søgeord, eller skriv til os på e-mail – vi vender hurtigt tilbage.",
+    "related_title": "Relaterede spørgsmål",
+    "back": "Support",
+    "since": "Tilgængelig siden DingPOS v{{version}}",
+    "verified_version": "Indholdet svarer til DingPOS v{{version}}",
+    "contact_title": "Kan du ikke finde svaret?",
+    "contact_desc": "Fortæl os, hvad du er løbet ind i, så vender vi tilbage, så hurtigt vi kan.",
+    "contact_cta": "Kontakt ALU Studio",
+    "group_faq": "FAQ",
+    "group_guide": "Guider",
+    "group_guide_desc": "Trin-for-trin-opsætningsguider, inklusive de faldgruber, vi samlede op under udviklingen af DingPOS.",
+    "group_roadmap": "Kommer snart",
+    "group_roadmap_desc": "Ikke tilgængeligt endnu – nogle er allerede planlagt. Dine ønsker er med til at bestemme vores prioriteter, så skriv til os."
+  }
+}
