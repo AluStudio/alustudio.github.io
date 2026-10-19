@@ -1044,7 +1044,7 @@ export const articles = [
         "items": [
           "Orari: a është sot brenda datave aktive? A e kufizon ditën ose orën një dritare Happy Hour?",
           "Zbatimi: a përfshihen artikujt e shportës në produktet ose kategoritë për të cilat vlen promovimi? A është arritur pragu i shpenzimit?",
-          "Audienca: a është promovimi i kufizuar te një nivel anëtarësie ose muaji i ditëlindjes? A u zgjodh ai anëtar në pagesë?",
+          "Audienca: a është promovimi i kufizuar te një nivel anëtarësie ose muaji i ditëlindjes? A u zgjodh ai anëtar gjatë pagesës?",
           "Kufijtë e përdorimit: a është arritur kufiri total i përdorimit ose kufiri për këtë klient?",
           "Kombinimi: a po e bllokon një promovim me prioritet më të lartë që ka “Ndalo promovimet pasuese kur ky zbatohet”?"
         ]
@@ -1419,7 +1419,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Në faqen Stafi, prek Shto punonjës, shkruaj një emër, zgjidh një rol (Menaxher ose Punonjës) dhe vendos një PIN me 4 shifra.",
+          "Në faqen Stafi, prek Shto punonjës, shkruaj një emër, zgjidh një rol (Menaxheri ose Punonjës) dhe vendos një PIN me 4 shifra.",
           "Operatori aktual shfaqet poshtë në shiritin anësor dhe lart djathtas në Pagesa. Kur ndërrohet turni, preke, zgjidh emrin tënd dhe shkruaj PIN-in.",
           "Që nga ai çast, çdo porosi, pagesë dhe lëvizje stoku ose pikësh regjistron se kush e ka kryer, e dukshme te lista dhe detajet e porosisë; porositë e shfuqizuara regjistrojnë edhe kush i ka shfuqizuar."
         ]
@@ -1604,11 +1604,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Jo — të dhënat e tua mbeten përgjithmonë në pajisjen tënde. Kur mbaron prova, arka bllokohet, por mund të shfletosh porositë, të shohësh raportet dhe të menaxhosh produktet."
+        "text": "Jo — të dhënat e tua mbeten përgjithmonë në pajisjen tënde. Kur mbaron prova, funksioni Pagesa bllokohet, por mund të shfletosh porositë, të shohësh raportet dhe të menaxhosh produktet."
       },
       {
         "type": "p",
-        "text": "Abonohu në çdo kohë dhe arka zhbllokohet menjëherë, me të gjitha të dhënat saktësisht siç i le."
+        "text": "Abonohu në çdo kohë dhe funksioni Pagesa zhbllokohet menjëherë, me të gjitha të dhënat saktësisht siç i le."
       }
     ],
     "related": [
@@ -1635,7 +1635,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Të tria planet përfshijnë pagesën e plotë, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
+        "text": "Të tria planet përfshijnë funksionin e plotë Pagesa, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
       },
       {
         "type": "list",
