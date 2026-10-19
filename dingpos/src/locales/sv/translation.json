@@ -32,7 +32,7 @@
       "items": [
         "Upp till 10 varukorgar igång samtidigt",
         "Produktsökning på namn och streckkod medan du skriver",
-        "Rabatt på artikel eller varukorg, fast belopp eller procent",
+        "Rabatt på produkt eller varukorg, fast belopp eller procent",
         "Moms inklusive eller exklusive beräknas automatiskt",
         "Växel vid kontantbetalning och egna namn på betalningssätt",
         "Varje försäljning avslutas med ett ”Ding!” och haptisk respons"
@@ -44,7 +44,7 @@
       "lead": "Köpgränser, köp en få en, happy hour, medlemserbjudanden – när en regel finns räknar kassan ut den. Ingen behöver komma ihåg den, och det finns inga rabattkoder att skriva in.",
       "items": [
         "Delsumma i varukorgen som utlöser rabatt automatiskt",
-        "Rabatt på varukorg eller artikel (fast belopp eller procent)",
+        "Rabatt på varukorg eller produkt (fast belopp eller procent)",
         "Erbjudanden som köp en få en och N:e varan",
         "Poängmultiplikatorer",
         "Happy hour-tider – över midnatt, valbara veckodagar",
@@ -69,13 +69,13 @@
     "orders": {
       "eyebrow": "Ordrar",
       "title": "Varje försäljning finns kvar, och varje försäljning kan göras ogjord",
-      "lead": "Varje order sparar hela uppgiften: artiklar och varianter, vilken kampanj som tillämpades, moms, betalningssätt och växel.",
+      "lead": "Varje order sparar hela försäljningsunderlaget: produkter och varianter, vilken kampanj som tillämpades, moms, betalningssätt och växel.",
       "items": [
         "Kronologisk orderlista, filtrera på datum och betalningssätt",
-        "Raddetaljer sparar artiklar, varianter, rabatter, moms och växel",
+        "Raddetaljer sparar produkter, varianter, rabatter, moms och växel",
         "Makulera med bekräftelse – lager och poäng återställs automatiskt"
       ],
-      "shot_alt": "En kronologisk orderlista till vänster, med den valda orderns detaljer till höger: artiklar, tillämpad rabatt, moms, totalsumma, betalningssätt och växel"
+      "shot_alt": "En kronologisk orderlista till vänster, med den valda orderns detaljer till höger: produkter, tillämpad rabatt, moms, totalsumma, betalningssätt och växel"
     }
   },
   "features": {
@@ -167,7 +167,7 @@
     "plans": {
       "lite": {
         "name": "Lite",
-        "tagline": "För en person vid ett stånd som behöver kassa och produkter",
+        "tagline": "För en person vid ett marknadsstånd som behöver kassa och produkter",
         "heading": "Ingår",
         "features": [
           "Komplett kassa med upp till 10 varukorgar",
@@ -198,7 +198,7 @@
         "heading": "Allt i Standard, plus",
         "features": [
           "Medarbetarkonton: en PIN-kod var, varje order visar vem som registrerade den",
-          "Behörigheter och godkännanden: rabatter över taket, ändringar av produkter och lager, visning av inköpspriser",
+          "Behörigheter och godkännanden: rabatter över rabatttaket, ändringar av produkter och lager, visning av inköpspriser",
           "Aktivitetslogg och återställningslogg",
           "Avancerade rapporter: periodjämförelse, försäljningsvärmekarta, långsamgående produkter, lagervärde, återkommande kunder"
         ],
@@ -339,7 +339,7 @@
         },
         "local_data": {
           "name": "Data på din iPad",
-          "desc": "Inget konto behövs – dina affärsdata passerar aldrig oss"
+          "desc": "Inget konto behövs – dina affärsdata går aldrig via oss"
         },
         "backup": {
           "name": "Säkerhetskopiering i molnet och återställning",
@@ -406,12 +406,12 @@
   },
   "privacy": {
     "title": "Integritetspolicy",
-    "meta_description": "Så hanterar DingPOS, kassasystemet för iPad som fungerar utan internet, dina uppgifter: affärsdatan stannar på din enhet och säkerhetskopior valfritt bara till ditt eget molnkonto.",
+    "meta_description": "Så hanterar DingPOS, ett kassasystem för iPad som fungerar utan internet, dina uppgifter: affärsdata stannar på enheten och valfria säkerhetskopior lagras bara i ditt eget molnkonto.",
     "effective_date": "Gäller från: 1 juli 2026",
     "intro": "ALU Studio (”vi”) har utvecklat DingPOS (”appen”). DingPOS är ett kassasystem byggt med integritet i fokus – din affärsdata tillhör dig. Den här integritetspolicyn förklarar hur vi hanterar dina uppgifter när du använder appen.",
     "local_storage": {
       "title": "Så lagras dina uppgifter",
-      "desc": "DingPOS lagrar all din affärsdata lokalt på din enhet. Om du inte aktivt slår på molnbackup lämnar datan aldrig din enhet. Datan du skapar i appen omfattar:",
+      "desc": "DingPOS lagrar all affärsdata lokalt på din enhet. Om du inte aktiverar säkerhetskopiering i molnet lämnar uppgifterna aldrig enheten. Uppgifterna du skapar i appen omfattar:",
       "items": [
         "Butiksinställningar (butikens namn, valuta, momssats, logotyp)",
         "Produktdata (namn, pris, inköpspris, streckkod, foto, kategori, varianter, lager)",
@@ -421,8 +421,8 @@
       ]
     },
     "cloud_backup": {
-      "title": "Molnbackup (valfritt)",
-      "desc": "Du kan välja att aktivera molnbackup och använda iCloud, Google Drive eller Dropbox som lagringsplats. Säkerhetskopiorna sparas på ditt eget molnkonto och står helt under din kontroll. Vi hanterar, lagrar eller kommer aldrig åt innehållet i dem. Om du vill ha backup och vilken tjänst du vill använda är helt upp till dig, och du kan stänga av den när som helst."
+      "title": "Säkerhetskopia i molnet (valfritt)",
+      "desc": "Du kan välja att aktivera säkerhetskopiering i molnet och använda iCloud, Google Drive eller Dropbox som lagringsplats. Säkerhetskopiorna sparas i ditt eget molnkonto och står helt under din kontroll. Vi hanterar, lagrar eller kommer aldrig åt innehållet i dem. Det är helt upp till dig om du vill säkerhetskopiera och vilken tjänst du vill använda. Du kan stänga av säkerhetskopieringen när som helst."
     },
     "no_collection": {
       "title": "Vad vi inte samlar in",
@@ -447,11 +447,11 @@
       "desc": "DingPOS använder Firebase Analytics och Firebase Crashlytics från Google för att vi ska förstå hur appen används samt hitta och åtgärda krascher. Tjänsterna samlar in:",
       "items": [
         "Anonym användningsdata (t.ex. vilka funktioner som används, sessionslängd)",
-        "Kraschrapporter (t.ex. stackspårning, enhetsmodell, OS-version)",
+        "Kraschrapporter (t.ex. stackspår, enhetsmodell och OS-version)",
         "Enhetsinformation (t.ex. enhetstyp, OS, appversion)",
         "En slumpmässigt genererad instansidentifierare (inte kopplad till din identitet)"
       ],
-      "note": "Datan är anonym och innehåller inget av ditt affärsinnehåll (som produkter, ordrar, kunder eller medlemmar). Mer om hur Google hanterar datan finns i Googles integritetspolicy: https://policies.google.com/privacy."
+      "note": "Uppgifterna är anonyma och innehåller inget av ditt affärsinnehåll (som produkter, ordrar, kunder eller medlemmar). Mer information om hur Google hanterar uppgifterna finns i Googles integritetspolicy: https://policies.google.com/privacy."
     },
     "children": {
       "title": "Barns integritet",
@@ -491,7 +491,7 @@
     },
     "user_data": {
       "title": "Dina data och säkerhetskopior",
-      "desc": "Allt affärsinnehåll du skapar i DingPOS (produkter, ordrar, kunder, medlemmar och inställningar) lagras på din enhet och är helt och hållet ditt ansvar. Om du raderar appen eller rensar dess data går all lagrad information förlorad för alltid, om du inte har aktiverat säkerhetskopiering i molnet. Säkerhetskopior i molnet finns i det molnkonto du väljer (iCloud / Google Drive / Dropbox), och deras tillgänglighet och lagringstid styrs av den leverantörens användarvillkor. Vi kan inte återskapa några data åt dig. Du ansvarar också för att följa de skatteregler, faktureringsregler och konsumentskyddslagar som gäller där du driver verksamhet."
+      "desc": "Allt affärsinnehåll du skapar i DingPOS (produkter, ordrar, kunder, medlemmar och inställningar) lagras på din enhet och är helt och hållet ditt ansvar. Om du raderar appen eller rensar dess data går all lagrad information förlorad för alltid, om du inte har aktiverat säkerhetskopiering i molnet. Säkerhetskopior i molnet finns i det molnkonto du väljer (iCloud / Google Drive / Dropbox), och deras tillgänglighet och lagringstid styrs av den leverantörens användarvillkor. Vi kan inte återskapa några data åt dig. Du ansvarar också för att följa de momsregler, faktureringsregler och konsumentskyddslagar som gäller där du driver verksamhet."
     },
     "updates": {
       "title": "Appuppdateringar",

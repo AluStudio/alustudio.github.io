@@ -52,7 +52,7 @@ export const categories = [
   {
     "key": "subscription",
     "icon": "bi-credit-card",
-    "label": "Prenumeration och fakturering",
+    "label": "Prenumeration och betalning",
     "group": "faq"
   },
   {
@@ -87,7 +87,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Första gången du öppnar DingPOS guidar en installationsguide dig genom att öppna din butik på cirka 10 minuter:"
+        "text": "Första gången du öppnar DingPOS leder en guide dig genom stegen för att öppna butiken på cirka 10 minuter:"
       },
       {
         "type": "steps",
@@ -128,7 +128,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Bara två saker kräver uppkoppling: molnbackup (uppladdning till ditt eget iCloud / Google Drive / Dropbox) och kontroll av prenumerationsstatus."
+        "text": "Bara två saker kräver uppkoppling: säkerhetskopiering i molnet (uppladdning till ditt eget iCloud / Google Drive / Dropbox) och kontroll av prenumerationsstatus."
       }
     ],
     "related": [
@@ -154,7 +154,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "När du aktiverar molnbackup loggar du in på ditt eget molnkonto (iCloud, Google Drive eller Dropbox). Säkerhetskopiorna ligger i ditt konto – vi har ingen åtkomst till dem."
+        "text": "När du aktiverar säkerhetskopiering i molnet loggar du in på ditt eget molnkonto (iCloud, Google Drive eller Dropbox). Säkerhetskopiorna ligger i ditt konto – vi har ingen åtkomst till dem."
       }
     ],
     "related": [
@@ -236,7 +236,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS finns på flera språk. Gå till Inställningar → Enhetsval och tryck på Appspråk. Då öppnas DingPOS sida i iPadens Inställningar, där du väljer språk under Språk."
+        "text": "DingPOS finns på flera språk. Gå till Inställningar → Enhetsval och tryck på Appspråk. Då öppnas DingPOS-sidan i iPadens Inställningar, där du väljer språk under Språk."
       },
       {
         "type": "p",
@@ -333,7 +333,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Moms ingår: priserna innehåller redan moms – totalsumman ändras inte och kvittot specificerar den inräknade momsen (vanligt i Sverige, övriga Europa, Taiwan, Japan med flera).",
+          "Moms ingår: priserna innehåller redan moms – totalsumman ändras inte och kvittot specificerar den inräknade momsen (vanligt i Taiwan, Japan med flera).",
           "Moms tillkommer: momsen läggs på det belopp som återstår efter rabatt vid betalning (vanligt i USA, Kanada med flera)."
         ]
       },
@@ -396,7 +396,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Gå till Inställningar → Enhetsval och stäng av Ljud vid betalning. Från nästa försäljning är framgångsskärmen tyst, men den lätta vibrationen finns kvar."
+        "text": "Ja. Gå till Inställningar → Enhetsval och stäng av Ljud vid betalning. Från nästa försäljning är skärmen som visar att köpet gått igenom tyst, men den lätta vibrationen finns kvar."
       },
       {
         "type": "p",
@@ -541,7 +541,7 @@ export const articles = [
     "slug": "pre-orders",
     "category": "orders",
     "since": "2.0",
-    "question": "Hur tar jag en förbeställning med handpenning?",
+    "question": "Hur tar jag emot en förbeställning med handpenning?",
     "keywords": [
       "förbeställning",
       "förbeställa",
@@ -640,7 +640,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Anteckningar är oberoende av status: slutförda ordrar, makulerade ordrar och returer kan alla förses med eller få sin anteckning redigerad. En orders belopp och varor är låsta vid betalning. Anteckningen ligger vid sidan av dokumentet och ändrar aldrig dess innehåll."
+        "text": "Anteckningar är oberoende av status: slutförda ordrar, makulerade ordrar och returer kan alla förses med eller få sin anteckning redigerad. En orders belopp och varor är låsta när köpet genomförs. Anteckningen ligger vid sidan av dokumentet och ändrar aldrig dess innehåll."
       }
     ],
     "related": [
@@ -780,7 +780,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Det är avsiktligt: betalningen spärras aldrig av för lågt lagersaldo. Första regeln i en kassa som är igång är att kunden aldrig ska behöva vänta – ett felaktigt tal på papperet går att rätta senare, men ett avbrutet köp är förlorat för gott."
+        "text": "Det är avsiktligt: kassan blockeras aldrig av för lågt lagersaldo. Första regeln när kassan är igång är att kunden aldrig ska behöva vänta – ett felaktigt tal på papperet går att rätta senare, men ett avbrutet köp är förlorat för gott."
       },
       {
         "type": "p",
@@ -821,7 +821,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Betalningsvillkoret avgör vad som händer sedan: ordrar som betalas direkt markeras som betalda, medan ordrar på månadskredit ligger kvar som obetalda under Att betala, där du kan reglera dem per leverantör – en order, den här månaden eller allt."
+        "text": "Betalningsvillkoret avgör vad som händer sedan: ordrar som betalas direkt markeras som betalda, medan ordrar med månadsbetalning ligger kvar som obetalda under Att betala, där du kan reglera dem per leverantör – en order, den här månaden eller allt."
       },
       {
         "type": "note",
@@ -927,7 +927,7 @@ export const articles = [
       "rusningstider",
       "långsamgående produkter",
       "lagervärde",
-      "andel återkommande kunder",
+      "återköpsfrekvens",
       "poäng"
     ],
     "content": [
@@ -941,7 +941,7 @@ export const articles = [
           "Försäljningsjämförelse: till höger i periodfältet jämför du med samma period förra året eller med perioden före (en enskild dag mot samma dag förra veckan, denna vecka mot förra veckan, denna månad mot förra månaden, detta år mot förra året, ett anpassat intervall mot lika många dagar närmast före). Rutan Mottagna betalningar visar skillnaden och tillväxttakten, och intäktsdiagrammet får en ljusare linje för jämförelseperioden. Medan en period pågår klipps jämförelseperioden vid samma tidpunkt.",
           "Veckodag × timme: växla rubriken Försäljning över tid till Veckodag × timme för en värmekarta över sju dagar och 24 timmar – ju mörkare ruta, desto mer sålde du. Växla mellan intäkt och ordrar. Med jämförelse påslagen ser du vilka timmar som ökat och vilka som minskat.",
           "Långsamgående produkter: växla rubriken på rankingkortet till Långsamgående produkter för att lista produkterna från minst till mest sålda, med aktuellt lagersaldo och datumet då varje produkt senast såldes. Produkter som aldrig sålts markeras Aldrig såld. Som standard visas bara produkter som finns i lager.",
-          "Andel återkommande kunder: sista raden i kundrutan visar andelen medlemmar som handlat under perioden och som totalt handlat två gånger eller fler.",
+          "Återköpsfrekvens: sista raden i kundrutan visar andelen medlemmar som handlat under perioden och som totalt handlat två gånger eller fler.",
           "Just nu: lagervärde (aktuellt lagersaldo × aktuellt inköpspris), alla lagerrörelser under vald period samt de poäng kunderna har men inte löst in, med det mesta de kan dra av. Det är aktuella saldon, och perioden påverkar dem inte."
         ]
       },
@@ -1078,7 +1078,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gå till Inställningar → Poängprogram och ställ in två regler: tjäna Y poäng per X i köp, och lös in N poäng mot M i rabatt (med ett valfritt inlösentak per order). Du kan också ge nya medlemmar en välkomstbonus automatiskt."
+        "text": "Gå till Inställningar → Poängprogram och ställ in två regler: tjäna Y poäng för varje X du handlar för och lös in N poäng mot M i rabatt (med ett valfritt inlösentak per order). Du kan också ge nya medlemmar en välkomstbonus automatiskt."
       },
       {
         "type": "p",
@@ -1341,7 +1341,7 @@ export const articles = [
         "items": [
           "Importerad försäljning placeras efter transaktionsdatum och räknas om med butikens valuta och momsläge. Den påverkar inte lagret och ger inga välkomstpoäng.",
           "Kunder matchas mot befintliga via telefonnummer eller e-post. Kunder utan träff skapas.",
-          "Importerade ordrar visar ett Importerad-datum och källans ordernummer och kan inte makuleras eller returneras.",
+          "Importerade ordrar visar ett importdatum och källans ordernummer och kan inte makuleras eller returneras.",
           "Rader med fel kan exporteras som en CSV-fil med orsakerna angivna – rätta dem och importera igen. Dubblettrader hoppas över automatiskt."
         ]
       },
@@ -1501,18 +1501,18 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Åtgärder (manuell lagerjustering, produkthantering, betalning över rabatttaket): ett godkännande gäller just den åtgärden.",
+          "Åtgärder (manuell lagerjustering, produkthantering, genomföra ett köp med rabatt som överskrider rabatttaket): ett godkännande gäller just den åtgärden.",
           "Vyer (inköpspris och vinst, Statistik, Inställningar, säkerhetskopiering och återställning): ett godkännande låser upp tills den aktiva medarbetaren byts eller appen går till bakgrunden.",
           "Rabatttaket gäller manuella rabatter och kontrolleras en gång vid betalning. Automatiska kampanjer och inlösen av poäng räknas inte mot det."
         ]
       },
       {
         "type": "p",
-        "text": "Standardinställningar: Chefer får göra allt utom säkerhetskopiering och återställning, utan rabatttak. Medarbetare kräver godkännande för allt, med ett tak på 10 %. Ägaren är alltid tillåten och kan inte redigeras. Om du vill ändra något går du till Personal → Rollbehörigheter, trycker på Redigera och sparar en gång – det gäller direkt för alla."
+        "text": "Standardinställningar: Chefer får göra allt utom säkerhetskopiering och återställning, utan rabatttak. Medarbetare kräver godkännande för allt, med ett tak på 10 %. Ägaren har alltid behörighet och kan inte redigeras. Om du vill ändra något går du till Personal → Rollbehörigheter, trycker på Redigera och sparar en gång – det gäller direkt för alla."
       },
       {
         "type": "note",
-        "text": "Makuleringar, returer, försäljning på kredit och inköp har medvetet ingen behörighet; de registrerar bara vem som hanterat dem. Om du vill granska dem i efterhand använder du aktivitetsloggen."
+        "text": "Makuleringar, returer, försäljning på räkning och inköp har medvetet ingen behörighet; de registrerar bara vem som hanterat dem. Om du vill granska dem i efterhand använder du aktivitetsloggen."
       }
     ],
     "related": [
@@ -1644,12 +1644,12 @@ export const articles = [
         "items": [
           "Lite: för dig som driver ett marknadsstånd ensam och behöver kassa och produkter.",
           "Standard: lägger till kampanjer, poäng och kundnivåer, lagerstyrning, inköp, försäljning på räkning och förbeställningar.",
-          "Pro: lägger till medarbetarkonton och behörigheter, godkännande, aktivitetsloggen, återställningslogg och avancerade rapporter – för butiker med personal."
+          "Pro: lägger till medarbetarkonton och behörigheter, godkännande från en chef, aktivitetsloggen, återställningslogg och avancerade rapporter – för butiker med personal."
         ]
       },
       {
         "type": "p",
-        "text": "Har du redan Standard? Uppgradera till Pro på prenumerationssidan: faktureringen följer samma period, uppgraderingen gäller direkt och Apple fördelar skillnaden i kostnad proportionellt. Byte från Pro tillbaka till Standard gäller vid förnyelsen. Priserna visas i appen, och du kan jämföra planerna på vår sida Priser."
+        "text": "Har du redan Standard? Uppgradera till Pro på sidan Prenumeration: betalningsperioden förblir densamma, uppgraderingen gäller direkt och Apple räknar om mellanskillnaden proportionellt. Byte från Pro tillbaka till Standard gäller vid förnyelsen. Priserna visas i appen, och du kan jämföra planerna på vår sida Priser."
       },
       {
         "type": "note",
@@ -1683,8 +1683,8 @@ export const articles = [
         "type": "list",
         "items": [
           "Säga upp: hantera det i enhetens Inställningar → Apple-konto → Prenumerationer. Säg upp minst 24 timmar innan den pågående perioden tar slut för att undvika förnyelse.",
-          "Återställa: efter byte av enhet eller ominstallation, tryck på ”Återställ köp” på DingPOS prenumerationssida.",
-          "Byta plan: välj den nya planen på DingPOS prenumerationssida. Uppgraderingar (Standard till Pro, månadsvis till årsvis) gäller direkt, och Apple fördelar skillnaden proportionellt; nedgraderingar gäller vid förnyelsen."
+          "Återställa: efter byte av enhet eller ominstallation, tryck på ”Återställ köp” på sidan Prenumeration i DingPOS.",
+          "Byta plan: välj den nya planen på sidan Prenumeration i DingPOS. Uppgraderingar (Standard till Pro, månadsvis till årsvis) gäller direkt, och Apple räknar om mellanskillnaden proportionellt; nedgraderingar gäller vid förnyelsen."
         ]
       }
     ],
@@ -1863,15 +1863,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Paketpriser (tillämpas automatiskt sedan v2.4): så snart varukorgen kan bilda ett paket grupperar DingPOS det och tar med det i totalen – utan fråga, och paket kan inte delas."
+        "text": "Paketpriser (tillämpas automatiskt sedan v2.4): så snart varukorgen kan bilda en paketprisgrupp grupperar DingPOS varorna och tar med den i totalen – utan fråga, och gruppen kan inte delas."
       },
       {
         "type": "list",
         "items": [
-          "Ett paket bildas bara när det gör varukorgen billigare. Bland varor med samma pris grupperas orabatterade först, och varor som redan har rabatt behåller sin rabatt.",
-          "Vilka varor som grupperas beror bara på vad som finns i varukorgen, aldrig på i vilken ordning de skannades.",
-          "Varje ingående vara visar sin andel av paketrabatten, och varje rads belopp är efter rabatter.",
-          "Vid betalning grupperas paketen om med de senaste priserna; om resultatet ändras ombeds du bekräfta den nya totalen."
+          "En paketprisgrupp bildas bara när den gör varukorgen billigare. Bland varor med samma pris grupperas orabatterade först, och varor som redan har rabatt behåller sin rabatt.",
+          "Vilka varor som grupperas i en paketprisgrupp beror bara på vad som finns i varukorgen, aldrig på i vilken ordning de skannades.",
+          "Varje ingående vara visar sin andel av paketprisrabatten, och varje rads belopp är efter rabatter.",
+          "Vid betalning grupperas varorna på nytt till paketpris med de senaste priserna; om resultatet ändras ombeds du bekräfta den nya totalen."
         ]
       }
     ],
@@ -1981,7 +1981,7 @@ export const articles = [
   {
     "slug": "roadmap-e-invoice",
     "category": "roadmap",
-    "question": "Kan DingPOS skriva ut kvitton eller hantera e-kvitton och kassaregister?",
+    "question": "Kommer DingPOS att stödja e-fakturor och kvittoutskrift?",
     "keywords": [
       "e-faktura",
       "faktura",
@@ -2056,7 +2056,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Ställ in Statistik på Denna månad för månadens intäkter, mottagna kontanter, vinst och fördelning per betalsätt.",
+          "Ställ in Statistik på Denna månad för månadens intäkter, mottagna betalningar, vinst och fördelning per betalsätt.",
           "Leverantörsinköp med månadsvillkor samlas under Att betala i Inköp, där en hel månad kan regleras på en gång.",
           "Kundernas försäljning på räkning samlas under Ordrar → Kundfordringar, där en hel månad kan regleras på en gång."
         ]
