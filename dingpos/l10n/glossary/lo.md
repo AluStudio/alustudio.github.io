@@ -8,16 +8,16 @@ Fill "Term in language" with the one word or phrase every page will use, as a sh
 
 | en | Term in language | Note |
 |----|------------------|------|
-| Support (the help pages) |  |  |
-| FAQ / frequently asked questions |  |  |
-| Pricing (the page) |  |  |
-| Plan (Lite / Standard / Pro; the names stay in English) |  |  |
-| Free trial |  |  |
-| Billed monthly / billed annually |  |  |
-| Terms of Use |  |  |
-| Coming Soon (planned features) |  |  |
-| Setup guide (promotion setup guides) |  |  |
-| Shop owner |  |  |
-| Stall / pop-up / night market |  |  |
-| Offline-first |  |  |
-| Point of sale (POS) app |  |  |
+| Support (the help pages) | ຊ່ວຍເຫຼືອ | ໃຊ້ "ສູນຊ່ວຍເຫຼືອ" ເປັນຊື່ໜ້າ; ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອ ເມື່ອເວົ້າເຖິງການຕິດຕໍ່ |
+| FAQ / frequently asked questions | ຄຳຖາມທີ່ພົບເລື້ອຍ | |
+| Pricing (the page) | ລາຄາ | ຊື່ໜ້າ/ເມນູ: "ລາຄາ"; ບໍ່ໃຊ້ "ຄ່າບໍລິການ" |
+| Plan (Lite / Standard / Pro; the names stay in English) | ແຜນ | from app glossary (Plan → ແຜນ); ຊື່ Lite / Standard / Pro ບໍ່ແປ |
+| Free trial | ທົດລອງໃຊ້ຟຣີ | |
+| Billed monthly / billed annually | ຈ່າຍລາຍເດືອນ / ຈ່າຍລາຍປີ | ຖ້າເປັນປະໂຫຍກເຕັມ: "ເກັບເງິນທຸກເດືອນ / ທຸກປີ" |
+| Terms of Use | ເງື່ອນໄຂການນຳໃຊ້ | |
+| Coming Soon (planned features) | ໄວໆນີ້ | ປ້າຍສັ້ນ; ປະໂຫຍກເຕັມໃຊ້ "ກຳລັງຈະມາໃນໄວໆນີ້" |
+| Setup guide (promotion setup guides) | ຄູ່ມືການຕັ້ງຄ່າ | |
+| Shop owner | ເຈົ້າຂອງຮ້ານ | from app glossary (Owner → ເຈົ້າຂອງຮ້ານ) |
+| Stall / pop-up / night market | ຮ້ານແຜງລອຍ / ຮ້ານຊົ່ວຄາວ / ຕະຫຼາດກາງຄືນ | ຮ້ານແຜງລອຍ = ຮ້ານຕັ້ງແຄ້ມຕາມຕະຫຼາດ; ຕະຫຼາດກາງຄືນ ຕາມທີ່ຄົນລາວໃຊ້ |
+| Offline-first | ໃຊ້ໄດ້ໂດຍບໍ່ຕ້ອງມີອິນເຕີເນັດ | ເວົ້າເປັນປະໂຫຍກ; ບໍ່ແປຕົງຄຳ "offline-first" |
+| Point of sale (POS) app | ແອັບ POS ສຳລັບຂາຍໜ້າຮ້ານ | ຄຳ "POS" ຄົງໄວ້ເປັນຕົວລາຕິນ |
