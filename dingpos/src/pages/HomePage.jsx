@@ -196,7 +196,7 @@ function HomePage() {
                 <AppStoreButton className="btn-store btn-store--lg">
                   {t("home_pricing.cta")}
                 </AppStoreButton>
-                <Link to="/pricing" className="btn-plan">
+                <Link to="/pricing/" className="btn-plan">
                   {t("home_pricing.compare")}
                 </Link>
               </div>

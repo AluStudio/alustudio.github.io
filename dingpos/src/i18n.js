@@ -31,12 +31,16 @@ function languageFromPath(pathname) {
 
 const current = languageFromPath(window.location.pathname);
 
-/** Router basename for the language in the URL, e.g. "/dingpos/zh-hant". */
-export const routerBasename = `${APP_BASE}${current.pathPrefix}`;
+/**
+ * Router basename for the language in the URL, e.g. "/dingpos/zh-hant/". The
+ * trailing slash makes `<Link to="/">` render the root's served URL; without it
+ * the link points at "/dingpos/zh-hant", which the edge answers with a 307.
+ */
+export const routerBasename = `${APP_BASE}${current.pathPrefix}/`;
 
 /**
  * Same page in another language. `routePath` is the router-relative path
- * ("/pricing"); the result keeps the trailing slash every route is served at,
+ * ("/pricing/"); the result keeps the trailing slash every route is served at,
  * so switching never costs a redirect hop.
  */
 export function localizedUrl(code, routePath, search = "", hash = "") {

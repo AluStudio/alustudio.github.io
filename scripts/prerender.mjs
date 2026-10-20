@@ -88,6 +88,14 @@ export const HYDRATED_PREFIXES = ["/dingpos/", "/sotto/"];
  */
 export const UNIQUE_META_PREFIXES = ["/dingpos/", "/sotto/"];
 
+/**
+ * Apps whose internal links must point straight at a sitemap route. A link to
+ * "/dingpos/pricing" (no trailing slash) is answered with a 307, so every page
+ * would cost crawlers a redirect hop per link; a link outside the sitemap is a
+ * 404 or an unindexed page.
+ */
+export const DIRECT_LINK_PREFIXES = ["/dingpos/"];
+
 /** Routes that must pass the hydration check. */
 export function hydratedRoutes(routes) {
   return routes.filter((route) => HYDRATED_PREFIXES.some((prefix) => route.startsWith(prefix)));
@@ -127,10 +135,20 @@ function auditAlternates(route, html, pages, sitemapRoutes) {
   return errors;
 }
 
+function auditInternalLinks(route, html, sitemapRoutes) {
+  if (!DIRECT_LINK_PREFIXES.some((prefix) => route.startsWith(prefix))) return [];
+  const targets = new Set();
+  for (const [, href] of html.matchAll(/<a\b[^>]*\shref="(\/(?!\/)[^"#?]*)/g)) targets.add(href);
+  return [...targets]
+    .filter((href) => !sitemapRoutes.has(href))
+    .map((href) => `${route}: links to ${href}, which is not a sitemap route`);
+}
+
 /**
  * Cross-route SEO invariants over the rendered pages (Map route → html).
  * `sitemapRoutes` is every route the site ships; with --only it is larger than
- * `pages`, and an alternate outside the render is not checked for reciprocity.
+ * `pages`, and an alternate outside the render is not checked for reciprocity;
+ * internal links are checked against all of it.
  * Returns human-readable violations; empty means every route passed.
  */
 export function auditRoutes(pages, sitemapRoutes = new Set(pages.keys())) {
@@ -151,6 +169,7 @@ export function auditRoutes(pages, sitemapRoutes = new Set(pages.keys())) {
     }
 
     errors.push(...auditAlternates(route, html, pages, sitemapRoutes));
+    errors.push(...auditInternalLinks(route, html, sitemapRoutes));
 
     const uniquePrefix = UNIQUE_META_PREFIXES.find((prefix) => route.startsWith(prefix));
     if (uniquePrefix) {

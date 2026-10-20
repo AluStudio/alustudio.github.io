@@ -7,7 +7,10 @@ import './index.css'
 import App from './App.jsx'
 import { routerBasename, currentLanguage, i18nReady } from "./i18n";
 import { loadFaq } from "./data/faq";
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// The same ESM module Navbar imports Collapse from: loading the UMD bundle as
+// well registered every data-bs-toggle handler twice, so a dropdown opened and
+// closed again on one click.
+import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Only zh-Hans pages use the SC faces; a static import would put their

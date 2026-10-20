@@ -24,11 +24,14 @@ function Navbar() {
     }
   };
 
-  // Another language is another URL (and document), so switch by navigating.
-  const handleChangeLang = (e) => {
-    window.location.assign(
-      localizedUrl(e.target.value, location.pathname, location.search, location.hash),
-    );
+  // Each language link is a real <a href> so crawlers can follow it; the href
+  // is the bare page URL, which the prerender and every visitor render alike.
+  // A plain click also carries the query and hash over to the other language.
+  const handleChangeLang = (event, code) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (!location.search && !location.hash) return;
+    event.preventDefault();
+    window.location.assign(localizedUrl(code, location.pathname, location.search, location.hash));
   };
 
   useEffect(() => {
@@ -89,22 +92,22 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/pricing" onClick={collapseNav}>
+              <Link className="nav-link text-center" to="/pricing/" onClick={collapseNav}>
                 {t("nav.pricing")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/support" onClick={collapseNav}>
+              <Link className="nav-link text-center" to="/support/" onClick={collapseNav}>
                 {t("nav.support")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/privacy" onClick={collapseNav}>
+              <Link className="nav-link text-center" to="/privacy/" onClick={collapseNav}>
                 {t("nav.privacy")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/terms" onClick={collapseNav}>
+              <Link className="nav-link text-center" to="/terms/" onClick={collapseNav}>
                 {t("nav.terms")}
               </Link>
             </li>
@@ -112,17 +115,33 @@ function Navbar() {
         </div>
 
         <div className="d-flex align-items-center gap-2 ms-3 order-2 order-lg-3">
-          <select
-            value={currentLanguage}
-            onChange={handleChangeLang}
-            className="lang-select"
-          >
-            {supportedLanguages.map((lang) => (
-              <option key={lang.code} value={lang.code}>
-                {lang.label}
-              </option>
-            ))}
-          </select>
+          <div className="dropdown">
+            <button
+              type="button"
+              className="lang-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i className="bi bi-translate" aria-hidden="true"></i>
+              {supportedLanguages.find((lang) => lang.code === currentLanguage).label}
+            </button>
+            <ul className="dropdown-menu dropdown-menu-end lang-menu">
+              {supportedLanguages.map((lang) => (
+                <li key={lang.code}>
+                  <a
+                    className={`dropdown-item${lang.code === currentLanguage ? " active" : ""}`}
+                    href={localizedUrl(lang.code, location.pathname)}
+                    hrefLang={lang.hreflang}
+                    lang={lang.hreflang}
+                    aria-current={lang.code === currentLanguage ? "page" : undefined}
+                    onClick={(event) => handleChangeLang(event, lang.code)}
+                  >
+                    {lang.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
