@@ -24,13 +24,13 @@ function Footer() {
         </div>
 
         <div className="footer-links mb-3">
-          <Link to="/pricing">{t("nav.pricing")}</Link>
+          <Link to="/pricing/">{t("nav.pricing")}</Link>
           <span className="separator">·</span>
-          <Link to="/support">{t("footer.support")}</Link>
+          <Link to="/support/">{t("footer.support")}</Link>
           <span className="separator">·</span>
-          <Link to="/privacy">{t("footer.privacy_policy")}</Link>
+          <Link to="/privacy/">{t("footer.privacy_policy")}</Link>
           <span className="separator">·</span>
-          <Link to="/terms">{t("footer.terms_of_use")}</Link>
+          <Link to="/terms/">{t("footer.terms_of_use")}</Link>
         </div>
 
         <p className="footer-copyright">

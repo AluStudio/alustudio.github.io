@@ -33,7 +33,7 @@ function SupportArticlePage() {
   }, [article]);
 
   if (!article) {
-    return <Navigate to="/support" replace />;
+    return <Navigate to="/support/" replace />;
   }
 
   return (
@@ -43,7 +43,7 @@ function SupportArticlePage() {
         <div className="container">
           <article className="faq-article">
             <nav className="faq-breadcrumb" aria-label="breadcrumb">
-              <TransitionLink to="/support">
+              <TransitionLink to="/support/">
                 <i className="bi bi-arrow-left" aria-hidden="true"></i>
                 {t("support.back")}
               </TransitionLink>
@@ -72,7 +72,7 @@ function SupportArticlePage() {
                 <ul>
                   {related.map((r) => (
                     <li key={r.slug}>
-                      <TransitionLink to={`/support/${r.slug}`}>
+                      <TransitionLink to={`/support/${r.slug}/`}>
                         {r.question}
                         <i className="bi bi-chevron-right" aria-hidden="true"></i>
                       </TransitionLink>

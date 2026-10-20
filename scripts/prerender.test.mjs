@@ -173,3 +173,29 @@ test("isPageError ignores requests aborted outside the local origin", () => {
   assert.equal(isPageError("Failed to load resource: net::ERR_FAILED"), false);
   assert.equal(isPageError("Minified React error #418; visit https://react.dev/errors/418"), true);
 });
+
+const linkPage = (links, title = "t") =>
+  `<html><head><title>${title}</title><meta name="description" content="${title}" /></head><body><h1>t</h1>${links}</body></html>`;
+
+test("auditRoutes flags dingpos links that miss their sitemap route", () => {
+  const pages = new Map([
+    [
+      "/dingpos/ja/",
+      linkPage(
+        `<a href="/dingpos/ja/pricing">a</a><a class="x" href="/dingpos/ja/pricing">b</a>` +
+          `<a href="/dingpos/ja/support/" lang="ja">c</a><a href="/dingpos/ja/?q=1#top">d</a>` +
+          `<a href="mailto:a@b.c">e</a><a href="//cdn.example/x">f</a><a href="/dingpos/ja/gone/">g</a>`,
+      ),
+    ],
+  ]);
+  const sitemap = new Set(["/dingpos/ja/", "/dingpos/ja/pricing/", "/dingpos/ja/support/"]);
+  assert.deepEqual(auditRoutes(pages, sitemap), [
+    "/dingpos/ja/: links to /dingpos/ja/pricing, which is not a sitemap route",
+    "/dingpos/ja/: links to /dingpos/ja/gone/, which is not a sitemap route",
+  ]);
+});
+
+test("auditRoutes leaves links of apps outside DIRECT_LINK_PREFIXES alone", () => {
+  const pages = new Map([["/sotto/", linkPage(`<a href="/sotto/faq">faq</a>`)]]);
+  assert.deepEqual(auditRoutes(pages), []);
+});

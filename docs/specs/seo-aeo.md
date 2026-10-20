@@ -30,6 +30,7 @@ read_when:
 - 每個合法 route 都有實體、self-canonical 的 `index.html`：各 app 的 `scripts/copy-spa-pages.js` 複製 app root HTML 時，透過 `scripts/rewrite-seo-tags.mjs` 改寫該 route 自己的 canonical、og:url、title、description。子頁沿用 app 首頁的 canonical 會被當成重複內容。
 - App 首頁的 `<title>` 格式為「品牌 — 類別描述」，例如 `Pikgeon — Postcard Tracker App with On-Device OCR`。只放品牌名會讓非品牌查詢失去最強的 on-page 訊號。類別用詞取自既有 meta / JSON-LD / llms.txt 已驗證的說法。
 - 每個子頁要有自己的 description，不沿用首頁。
+- 站內連結直接指向 route 的 trailing-slash URL（`/dingpos/pricing/`），不寫 `/dingpos/pricing`：少了斜線，edge 會回 307 再導過去，crawler 在每一頁的每一條連結都多走一次 redirect，而且 307 是暫時性的，傳遞的訊號比直接連到 canonical 弱。DingPOS 的 router basename 帶結尾斜線（`/dingpos/ja/`），`<Link to="/">` 才會是首頁的 URL；其餘 `to` 一律寫成 `/pricing/`、`/support/<slug>/`。prerender 的 route audit 會擋下 `DIRECT_LINK_PREFIXES`（目前只有 `/dingpos/`）底下指向非 sitemap route 的站內連結。
 - `<html lang>` 必須和 prerender 出來的正文語言一致：各 app 的 `i18n.js` 解析語系後同步 `document.documentElement.lang`。DingPOS 與 Sotto 另外由 copy script 在靜態 HTML 寫好 `lang`（Sotto 的阿拉伯文另加 `dir="rtl"`）。
 - 元件層的 render 限制（收合內容留在 DOM、不用 JS-gated scroll reveal）見 AGENTS.md §Sub-app Notes 與 §Project Skills。
 
@@ -39,7 +40,7 @@ read_when:
 
 - DingPOS 與 Sotto 有多語系 URL，英文都不加前綴（同時是 `x-default`），各語言的子路徑一一對應，前綴是 hreflang 代碼的小寫。DingPOS 的語言清單是 `dingpos/l10n/languages.json`：鏡像 app 的 `l10n/languages.json`（同樣的 code、kind 與順序），共 32 種，只有 `shipped: true` 的語言有 URL、hreflang 與 sitemap 條目；哪些語言已上線，以 registry 為準。Sotto 有十二種：`zh-hant`、`zh-hans`、`ja`、`ko`、`de`、`es`、`fr`、`it`、`pt-br`、`ru`、`ar`。home、pikgeon、babbby 仍只有 prerender 語言可被索引。
 - hreflang 只標語言、不標地區（`ja`，不是 `ja-JP`）：網站不分地區內容，加上地區會把其他地區的同語使用者排除在外。地區碼只在 Google 接受時才保留（ISO 3166-1 alpha-2，例如 `pt-BR`）：Google 不接受 `es-419`，所以 DingPOS 的 es-419 以 `es` 上線，hreflang、`<html lang>` 都是 `es`，前綴是 `es/`；檔名與 app 對照仍用 `es-419`。
-- URL 是唯一的語言訊號：不看 navigator、不讀 localStorage，也不依使用者語系自動導向。Google 明確建議避免這種導向，因為會讓使用者和 crawler 看不到其他語言版本。語言切換器直接導到同一頁另一個語言的 URL。
+- URL 是唯一的語言訊號：不看 navigator、不讀 localStorage，也不依使用者語系自動導向。Google 明確建議避免這種導向，因為會讓使用者和 crawler 看不到其他語言版本。語言切換器直接導到同一頁另一個語言的 URL，而且是 `<a href>` 連結（各帶 `hreflang` 與 `lang`），不是 `<select>`：crawler 只會沿著連結找頁面，`<select>` 的選項對它不存在，非英文頁就只剩 sitemap 一個入口。Google 也建議各語言版本互相連結。href 只用 pathname，prerender 與訪客才會 render 出同樣的值；一般點擊時才把 query 與 hash 帶過去。
 - 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（該 app 的每種語言加 `x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。`og:locale` 對應：`en_US`、`zh_TW`、`zh_CN`、`ja_JP`、`ko_KR`、`de_DE`、`es_ES`、`fr_FR`、`it_IT`、`pt_BR`、`ru_RU`、`ar_AR`；DingPOS 每種語言的值寫在 registry 的 `ogLocale`。
 - hreflang 只寫在 HTML `<head>`，sitemap 不重複寫。Google 認為兩種方式等價，同時維護兩份只會增加出錯的機會。
 - 語系前綴的單一來源：DingPOS 的 `src/i18n.js` 與 `scripts/copy-spa-pages.js` 都讀 `dingpos/l10n/languages.json`。Sotto 是 `src/i18n.js` 的 `supportedLanguages` 和 `scripts/copy-spa-pages.js` 的 `LOCALE_DEFS`，兩邊必須一致。
@@ -90,7 +91,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 
 - CI 在 assemble `_site/` 之後執行 `scripts/prerender.mjs`：用 headless Chrome render sitemap 裡的每個 route，再把 rendered DOM 寫回該 route 的 `index.html`。Route 清單只來自 sitemap。
 - 任何 route render 出空殼，build 就失敗，不允許默默部署空頁。
-- render 完再跑 route audit（`auditRoutes`）：每個 route 剛好一個 `<h1>`、所有 JSON-LD 都能 parse、`UNIQUE_META_PREFIXES`（`/dingpos/`、`/sotto/`）各自底下每個 route 的 title 與 description 都不重複；有 hreflang 的頁面必須列出自己、被每個 alternate 回指完全相同的一組，且 `<html lang>` 等於指向自己的那個 hreflang。品牌名放在 footer 這類重複區塊時用 `<p class="h1">`，不用 heading。違規一樣讓 build 失敗。
+- render 完再跑 route audit（`auditRoutes`）：每個 route 剛好一個 `<h1>`、所有 JSON-LD 都能 parse、`UNIQUE_META_PREFIXES`（`/dingpos/`、`/sotto/`）各自底下每個 route 的 title 與 description 都不重複；有 hreflang 的頁面必須列出自己、被每個 alternate 回指完全相同的一組，且 `<html lang>` 等於指向自己的那個 hreflang；`DIRECT_LINK_PREFIXES` 底下每一個站內 `<a href>` 都必須剛好是 sitemap route（見 §HTML 與 URL）。品牌名放在 footer 這類重複區塊時用 `<p class="h1">`，不用 heading。違規一樣讓 build 失敗。
 - 選 post-build prerender 而不是 vite-react-ssg：後者要改五個 app 的進入點與路由，前者 app 程式碼零改動。
 - 序列化前，把 DOM 修成 React server renderer 會輸出的樣子，因為 hydration 是逐個節點對照 HTML：表單狀態（radio 的 checked、選中的 `<option>`）存在 DOM property，`outerHTML` 不會寫出來，所以改寫成屬性——hydrate `<select>` 時 React 不會重新套用 value；相鄰的 text node 在 HTML 被 parse 時會合併，所以中間插入空註解 `<!-- -->`。
 - dingpos 與 sotto 用 `hydrateRoot` 接手 prerendered DOM，畫好的節點原地保留。prerender 寫完檔案後，會用手機 viewport 重新載入它們的每個 route（每種語言）：出現 React error，或 React 換掉了 prerendered 節點，build 就失敗。要 hydrate 的 app 列在 `scripts/prerender.mjs` 的 `HYDRATED_PREFIXES`。
@@ -101,7 +102,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 ## Sitemap
 
 - repo 根目錄的 `sitemap.xml` 是 URL 成員的唯一來源。dingpos 與 sotto 的 build 會驗證 sitemap 裡自己的 URL 跟產出的頁面（每種語言）完全一致，多一個少一個都會讓 build 失敗。Sotto 的區塊手動維護；DingPOS 的區塊由 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 從頁面清單改寫（32 種語言、每種 64 頁，手寫一定會漏）。
-- DingPOS 每種語言的子頁 `lastmod` 只看該語言自己的字串與 FAQ pack（`scripts/generate-sitemap.mjs` `dingposRules`），所以翻譯或上線一種語言，不會改到其他語言頁面的日期。
+- DingPOS 每種語言的子頁 `lastmod` 只看該語言自己的字串與 FAQ pack；語言首頁看整個 `dingpos/src`，但用 git pathspec `:(exclude)` 排除其他語言的 `locales/<code>` 與 `articles.<code>.js`（`scripts/generate-sitemap.mjs` `dingposRules`）。所以共用元件改了，每種語言的首頁都會更新日期，但翻譯或上線一種語言，不會改到其他語言任何一頁的日期。首頁曾經直接看整個 `dingpos/src`，結果連續上線約 30 種語言時，每個語言首頁的日期被推了約 30 次，內容卻沒變。
 - 部署時由 `scripts/generate-sitemap.mjs` 輸出 `_site/sitemap.xml`，每個 URL 的 `lastmod` 取自產生該 route 的檔案的最後一次 git commit。這個 `lastmod` 不手填、不批次更新。CI checkout 必須用 `fetch-depth: 0`，shallow clone 會讓所有日期塌成同一天。
 - IndexNow 不接：小站靠一般 crawling 就夠。只有 Bing 收錄明顯遲緩時才啟用（Bing WMT 有入口）。
 

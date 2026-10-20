@@ -58,16 +58,17 @@
   }
 }
 
-// The native arrow is pinned to the control's edge and ignores padding, so a
-// drawn chevron replaces it.
-.lang-select {
-  appearance: none;
+// Native language names (繁體中文…) in the web font would pull CJK font slices
+// into every English page, so the switcher uses the system font.
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   background: transparent
     escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$ink-mid}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m3 6 5 5 5-5'/></svg>"))
     no-repeat right 0.6rem center / 0.7rem;
   border: 1px solid rgba($accent-400, 0.4);
   border-radius: 6px;
-  // Native language names (繁體中文…) in the web font would pull CJK font slices into every English page.
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.82rem;
   padding: 0.3rem 1.8rem 0.3rem 0.6rem;
@@ -75,7 +76,23 @@
   cursor: pointer;
   outline: none;
 
-  &:focus {
+  &:focus-visible,
+  &[aria-expanded="true"] {
     border-color: $accent-500;
   }
+}
+
+.lang-menu {
+  --bs-dropdown-min-width: 11rem;
+  --bs-dropdown-font-size: 0.85rem;
+  --bs-dropdown-border-color: #{rgba($accent-400, 0.25)};
+  --bs-dropdown-link-color: #{$ink-mid};
+  --bs-dropdown-link-hover-color: #{$accent-600};
+  --bs-dropdown-link-hover-bg: #{$neutral-50};
+  --bs-dropdown-link-active-color: #{$neutral-0};
+  --bs-dropdown-link-active-bg: #{$accent-500};
+  font-family: system-ui, -apple-system, sans-serif;
+  // 32 languages: scroll inside the menu instead of past the viewport.
+  max-height: min(70vh, 26rem);
+  overflow-y: auto;
 }

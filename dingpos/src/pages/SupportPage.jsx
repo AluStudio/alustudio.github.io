@@ -98,7 +98,7 @@ function SupportPage() {
     } else if (e.key === "Enter") {
       e.preventDefault();
       const target = results[activeIndex === -1 ? 0 : activeIndex];
-      if (target) navigate(`/support/${target.article.slug}`);
+      if (target) navigate(`/support/${target.article.slug}/`);
     }
   };
 
@@ -165,7 +165,7 @@ function SupportPage() {
                     {results.map(({ article, snippet }, i) => (
                       <li key={article.slug}>
                         <TransitionLink
-                          to={`/support/${article.slug}`}
+                          to={`/support/${article.slug}/`}
                           className={`support-result-card${i === activeIndex ? " is-active" : ""}`}
                           onMouseEnter={() => setActiveIndex(i)}
                         >
@@ -223,7 +223,7 @@ function SupportPage() {
                             <ul className="support-cat-list">
                               {catArticles.map((a) => (
                                 <li key={a.slug}>
-                                  <TransitionLink to={`/support/${a.slug}`}>
+                                  <TransitionLink to={`/support/${a.slug}/`}>
                                     {a.question}
                                     <i className="bi bi-chevron-right" aria-hidden="true"></i>
                                   </TransitionLink>

@@ -121,7 +121,7 @@ function PricingPage() {
               ))}
             </div>
             <p className="faq-more">
-              {t("pricing.faq.more")} <Link to="/support">{t("pricing.faq.more_link")}</Link>
+              {t("pricing.faq.more")} <Link to="/support/">{t("pricing.faq.more_link")}</Link>
             </p>
           </div>
         </section>
