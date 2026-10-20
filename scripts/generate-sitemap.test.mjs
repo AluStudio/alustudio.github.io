@@ -94,7 +94,8 @@ test("LASTMOD_SOURCES rules are prefix-sorted sanely (no dead rules)", () => {
 test("every LASTMOD_SOURCES path exists on disk (rename/typo guard)", async () => {
   const { existsSync } = await import("node:fs");
   for (const [prefix, paths] of LASTMOD_SOURCES) {
-    for (const p of paths) {
+    // Excluded paths are checked too: a typo there would silently exclude nothing.
+    for (const p of paths.map((path) => path.replace(/^:\(exclude\)/, ""))) {
       assert.ok(
         existsSync(new URL(`../${p}`, import.meta.url)),
         `rule ${prefix} references missing path: ${p}`
@@ -130,7 +131,6 @@ test("sourcesForRoute: each dingpos language's pages track its own strings and p
         `/dingpos/${root}/${sub}`,
       );
     }
-    assert.deepEqual(sourcesForRoute(`/dingpos/${root}/`), sourcesForRoute("/dingpos/"));
   }
   assert.deepEqual(sourcesForRoute("/dingpos/zh-hant/support/free-trial/"), [
     "dingpos/src/data/faq/articles.zh-Hant.js",
@@ -152,7 +152,10 @@ test("dingposRules: a translated language gets its own prefix, strings and pack"
     "dingpos/scripts/copy-spa-pages.js",
   ]);
   assert.ok(sourcesForRoute("/dingpos/es/terms/", rules).includes("dingpos/src/locales/es-419"));
-  assert.deepEqual(sourcesForRoute("/dingpos/es/", rules), ["dingpos/src", "dingpos/index.html", "dingpos/scripts/copy-spa-pages.js"]);
+  const root = sourcesForRoute("/dingpos/es/", rules);
+  assert.deepEqual(root.slice(0, 1), ["dingpos/src"]);
+  assert.ok(root.includes(":(exclude)dingpos/src/locales/en"));
+  assert.ok(!root.includes(":(exclude)dingpos/src/locales/es-419"));
   assert.equal(sourcesForRoute("/dingpos/pricing/", rules), null);
 });
 
@@ -163,4 +166,22 @@ test("sourcesForRoute: every sotto language mirrors its English page, guides map
     }
   }
   assert.ok(sourcesForRoute("/sotto/ar/guides/find-ring-size-secretly/").includes("sotto/src/data/guides"));
+});
+
+test("sourcesForRoute: a dingpos language root tracks the shared app, not another language's strings or pack", async () => {
+  // Shipping bn once re-dated every language's root, because the root rule was the whole src tree.
+  const { readFileSync } = await import("node:fs");
+  const registry = JSON.parse(readFileSync(new URL("../dingpos/l10n/languages.json", import.meta.url), "utf8"));
+  for (const { code, pathPrefix, shipped } of registry.languages) {
+    if (!shipped) continue;
+    const sources = sourcesForRoute(`/dingpos/${pathPrefix ? `${pathPrefix}/` : ""}`);
+    assert.ok(sources.includes("dingpos/src"), code);
+    assert.ok(sources.includes("dingpos/index.html"), code);
+    for (const other of registry.languages) {
+      const excluded = [`:(exclude)dingpos/src/locales/${other.code}`, `:(exclude)dingpos/src/data/faq/articles.${other.code}.js`];
+      for (const path of excluded) {
+        assert.equal(sources.includes(path), other.code !== code, `${code} root, ${path}`);
+      }
+    }
+  }
 });

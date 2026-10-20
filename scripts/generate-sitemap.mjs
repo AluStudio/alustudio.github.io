@@ -49,10 +49,32 @@ const dingposPage = (component, code) => [
   ...appShell("dingpos"),
 ];
 
+const DINGPOS_REGISTRY = JSON.parse(
+  readFileSync(fileURLToPath(new URL("../dingpos/l10n/languages.json", import.meta.url)), "utf8"),
+).languages;
+const DINGPOS_LANGUAGES = DINGPOS_REGISTRY.filter((l) => l.shipped);
+
+/** git pathspec magic that removes a path from the paths before it. */
+const EXCLUDE = ":(exclude)";
+
+/**
+ * The whole DingPOS app minus every other language's strings and FAQ pack:
+ * a shared component edit still re-dates the language root, but translating
+ * or shipping one language no longer re-dates the other languages' roots.
+ */
+const dingposAppFor = (code) => [
+  "dingpos/src",
+  ...DINGPOS_REGISTRY.filter((l) => l.code !== code).flatMap((l) => [
+    `${EXCLUDE}dingpos/src/locales/${l.code}`,
+    `${EXCLUDE}dingpos/src/data/faq/articles.${l.code}.js`,
+  ]),
+];
+
 /**
  * DingPOS rules for one shipped language. Sub-routes track that language's
- * own strings and FAQ pack, so translating one language never re-dates the
- * pages of another; each language root must still be its own prefix, or
+ * own strings and FAQ pack, and the root tracks the app minus the other
+ * languages' files, so translating one language never re-dates the pages of
+ * another; each language root must still be its own prefix, or
  * longest-prefix match would drop its pages into the coarse app-root bucket.
  */
 export function dingposRules({ code, pathPrefix }) {
@@ -85,13 +107,9 @@ export function dingposRules({ code, pathPrefix }) {
     [`${root}privacy/`, dingposPage("PrivacyPage.jsx", code)],
     [`${root}terms/`, dingposPage("TermsPage.jsx", code)],
     // Root meta and hreflang are written by copy-spa-pages too, not only index.html.
-    [root, ["dingpos/src", ...appShell("dingpos")]],
+    [root, [...dingposAppFor(code), ...appShell("dingpos")]],
   ];
 }
-
-const DINGPOS_LANGUAGES = JSON.parse(
-  readFileSync(fileURLToPath(new URL("../dingpos/l10n/languages.json", import.meta.url)), "utf8"),
-).languages.filter((l) => l.shipped);
 
 /**
  * Sotto rules for one language root; same reasoning as dingposRules. Guides
