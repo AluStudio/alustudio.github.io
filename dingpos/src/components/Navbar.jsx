@@ -77,8 +77,11 @@ function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label={t("nav.menu")}
         >
-          <i className="bi bi-list"></i>
+          <i className="bi bi-list" aria-hidden="true"></i>
         </button>
 
         <div
