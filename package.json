@@ -20,6 +20,6 @@
   "devDependencies": {
     "opencc-js": "^1.4.2",
     "puppeteer": "^25.4.0",
-    "wrangler": "^4.114.0"
+    "wrangler": "^4.151.3"
   }
 }
