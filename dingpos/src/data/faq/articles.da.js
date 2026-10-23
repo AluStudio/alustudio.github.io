@@ -81,24 +81,29 @@ export const articles = [
       "onboarding",
       "første gang",
       "opsætningsguide",
-      "opret butik"
+      "opret butik",
+      "land",
+      "valuta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Første gang du åbner DingPOS, hjælper en opsætningsguide dig med at oprette din butik på cirka 10 minutter:"
+        "text": "Første gang du åbner DingPOS, hjælper en opsætningsguide dig med at oprette din butik i to trin på få minutter:"
       },
       {
         "type": "steps",
         "items": [
-          "Vælg dit land – valuta, momstilstand og en standardmomssats udfyldes automatisk (momssats og momstilstand kan stadig justeres på dette trin).",
-          "Skriv din butiks navn, og upload eventuelt et logo.",
-          "Følg vejledningen og opret 3–5 produkter (kan springes over – du kan altid tilføje dem senere)."
+          "Vælg dit land eller din region. Øverst på listen står denne iPads region og de mest almindelige markeder, og nedenunder finder du alle 175 lande og regioner, hvor DingPOS er i App Store. Du kan søge på navn på appens sprog eller på engelsk. Dit valg udfylder valuta, momssats og momstilstand.",
+          "Under Din butik skriver du butikkens navn, tilføjer eventuelt et logo og tjekker valuta, momssats og momstilstand (inkl. moms / ekskl. moms). Valutaen er som standard dit lands valuta. Tryk på den for at vælge blandt 130 valutaer."
         ]
       },
       {
         "type": "p",
-        "text": "Når du er færdig, lyder der et \"Ding!\" – din butik er klar, og du kan gå i gang med at sælge med det samme."
+        "text": "Tryk på Fortsæt, så ser du „Ding! Din butik er klar“. DingPOS opretter også to betalingsmetoder, Kontant og Kreditkort. Tilføj derefter dine produkter under Produkter, og begynd at sælge."
+      },
+      {
+        "type": "note",
+        "text": "Valuta og momstilstand kan ikke ændres efter opsætningen, mens momssatsen stadig kan ændres senere under Indstillinger. I USA, Canada, Brasilien og Mikronesien afhænger satsen af stat, provins eller by, så feltet til momssats er tomt fra start, og du skal skrive den sats, du opkræver (0 er tilladt), for at komme videre. Listen med 175 lande og valgfri valuta kom i v3.2. Tidligere versioner havde 15 lande."
       }
     ],
     "related": [
@@ -204,7 +209,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valuta og momstilstand (inkl. moms / ekskl. moms) er låst, når opsætningen er afsluttet. Alle dine tidligere ordrer er beregnet med dem, så en ændring undervejs ville ødelægge dine rapporter."
+        "text": "Valuta og momstilstand (inkl. moms / ekskl. moms) er låst, når opsætningen er afsluttet. Alle dine tidligere ordrer er beregnet med dem, så en ændring undervejs ville ødelægge dine rapporter. Tjek dem under trinnet Din butik i opsætningen: Valutaen er som standard dit lands valuta, og du kan trykke på den for at vælge en anden."
       },
       {
         "type": "note",
@@ -225,17 +230,24 @@ export const articles = [
       "sprog",
       "engelsk",
       "kinesisk",
+      "japansk",
+      "spansk",
+      "flere sprog",
       "skift sprog",
       "appsprog"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS understøtter engelsk og traditionelt kinesisk. Gå til Indstillinger → Enhedsvalg, og tryk på Appsprog. Det åbner DingPOS' side i appen Indstillinger på iPad'en, hvor du vælger sproget under Sprog."
+        "text": "DingPOS understøtter 32 sprog, blandt andet engelsk, traditionelt og forenklet kinesisk, japansk, koreansk, thai, vietnamesisk, indonesisk, malajisk, spansk (Latinamerika), portugisisk (Brasilien), fransk og tysk. Gå til Indstillinger → Enhedsvalg, og tryk på Appsprog. Det åbner DingPOS' side i appen Indstillinger på iPad'en, hvor du vælger sproget under Sprog."
       },
       {
         "type": "p",
         "text": "iOS lader ikke apps åbne sproglisten direkte, så det sidste tryk foregår i systemets Indstillinger. Sproget gælder kun for denne iPad."
+      },
+      {
+        "type": "note",
+        "text": "Andre sprog end engelsk og traditionelt kinesisk kom i v3.2. Hvis Sprog kun viser engelsk og kinesisk, skal du opdatere DingPOS fra App Store."
       }
     ],
     "related": [
@@ -354,26 +366,74 @@ export const articles = [
       "line pay",
       "byttepenge",
       "egen betalingsmåde",
-      "på konto"
+      "på konto",
+      "gebyrer"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kontant, Kreditkort og Line Pay er indbygget, og du kan tilføje egne betalingsetiketter under Indstillinger (f.eks. Apple Pay eller lokale mobilbetalinger)."
+        "text": "En ny butik starter med to betalingsmåder, Kontant og Kreditkort, navngivet på appens sprog under opsætningen. Under Indstillinger → Betalingsmåder kan du tilføje alle andre metoder (f.eks. Apple Pay, LINE Pay eller en lokal mobilbetaling) og slette eller omarrangere dem."
       },
       {
         "type": "p",
-        "text": "Betalingsmåder er bogføringsetiketter — DingPOS behandler ikke selve betalingerne. Tag imod kort- eller mobilbetaling med din eksisterende terminal eller app, og vælg derefter den tilsvarende etiket i DingPOS for at registrere den. Ved kontant betaling beregnes byttepengene automatisk."
+        "text": "Betalingsmåder er bogføringsetiketter – DingPOS behandler ikke selve betalingerne. Tag imod kort- eller mobilbetaling med din eksisterende terminal eller app, og vælg derefter den tilsvarende etiket i DingPOS for at registrere den. Ved kontant betaling beregnes byttepengene automatisk."
       },
       {
         "type": "p",
-        "text": "Hvis en stamkunde tager varerne med nu og betaler senere, så vælg På konto: salget registreres som et tilgodehavende og afregnes, når pengene kommer. Se \"Kan stamkunder købe på konto og betale senere?\""
+        "text": "Hvis din udbyder af kort- eller mobilbetaling tager et gebyr, kan du give betalingsmåden en gebyrsats, så Statistik estimerer gebyrerne og det forventede nettobeløb for hver metode – se „Kan DingPOS holde styr på gebyrer på kort- og mobilbetalinger?“"
+      },
+      {
+        "type": "p",
+        "text": "Hvis en stamkunde tager varerne med nu og betaler senere, så vælg På konto: salget registreres som et tilgodehavende og afregnes, når pengene kommer. Se „Kan stamkunder købe på konto og betale senere?“"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Kan DingPOS holde styr på gebyrer på kort- og mobilbetalinger?",
+    "keywords": [
+      "transaktionsgebyr",
+      "gebyr på kortbetaling",
+      "gebyr",
+      "gebyrsats",
+      "nettomodtaget",
+      "betalingsgebyr",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Under Indstillinger → Betalingsmåder trykker du på en betalingsmåde (eller tilføjer en ny) og udfylder Transaktionsgebyr: en procentdel, et fast beløb pr. transaktion eller begge dele. Fra da af registrerer hver betaling, der modtages med den metode, et gebyr, der estimeres med den sats, som gælder på det tidspunkt."
+      },
+      {
+        "type": "p",
+        "text": "Under Statistik får kortet Betalingsmåder en linje „Gebyr · Netto“ under hver metode med gebyr, og nederst på kortet vises de forventede gebyrer og den forventede nettomodtaget for hele perioden."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Skriv den sats, som din udbyder faktisk trækker, inklusive moms – ved 3 % plus 5 % moms skriver du 3,15 %. Lad begge felter stå tomme, hvis der ikke er noget gebyr.",
+          "En ændring af satsen gælder kun for senere betalinger. Gebyrer, der allerede er registreret, forbliver, som de var.",
+          "„Procentgebyr returneres ved refusion“ er slået til som standard, til udbydere der giver deres gebyr tilbage ved refusion. Det faste gebyr returneres aldrig. Makuleringer, returvarer, annullerede forudbestillinger og tilbageførte afregninger tilbagefører gebyrer efter denne regel, og kunden får det samme beløb tilbage i begge tilfælde.",
+          "Betalinger, der blev modtaget, før metoden havde en sats, har intet gebyr: Statistik markerer dem „uden gebyrsats“ og viser nettoen som „—“."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Gebyrer er estimater ud fra den sats, du skriver. Din udbyders afregning viser det faktiske beløb. For at redigere gebyrsatser og se gebyrer under Statistik skal du have abonnementsniveauet Standard eller højere. På Lite er felterne låst, men betalinger registrerer stadig deres gebyrer, så de dukker op, når du opgraderer."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -400,7 +460,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Kan kassen skjule produkter, der ikke er på lager?",
+    "keywords": [
+      "skjul",
+      "ikke på lager",
+      "udsolgt",
+      "nul lager",
+      "kasse",
+      "produkt mangler",
+      "kan ikke finde produkt"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Gå til Indstillinger → Enhedsvalg, og slå Skjul produkter uden lager til (slået fra som standard). Kassens produktvisning, kategorifilter og søgning (navn og stregkode) springer så alle produkter over, hvor lageret er 0 eller derunder. Kontakten virker med det samme, og du behøver ikke åbne appen igen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Produkter, der ikke følger lager, vises altid. Et produkt med varianter skjules kun, når alle varianter er uden lager.",
+          "Det påvirker kun kassen på denne iPad. Produktlisten viser stadig alle produkter.",
+          "Når alle produkter er skjult, viser kassen „Alle produkter er udsolgt“ og fortæller, hvor du kan slå kontakten fra."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Mens kontakten er slået til, kan denne iPad ikke finde produkter uden lager, så den kan hverken sælge ind i negativt lager eller tage imod en forudbestilling på dem – slå den fra, når du har brug for det. Hvis produkter ser ud til at være forsvundet fra kassen, er det som regel på grund af denne kontakt."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -551,7 +650,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Lageret trækkes fra, når forudbestillingen oprettes, så varerne er reserveret til kunden. Varer, der ikke er på lager, går i minus og retter sig, når en indkøbsordre er modtaget.",
+          "Lageret trækkes fra, når forudbestillingen oprettes, så det antal, der kan sælges, afspejler det med det samme. Det er et signal, ikke en reservation: Et senere salg kan stadig tage den sidste enhed. Varer, der ikke er på lager, går i minus og retter sig, når en indkøbsordre er modtaget.",
           "Når kunden henter varerne, trykker du på Udlever i ordredetaljerne for at modtage restbeløbet. Ordren bliver derefter et almindeligt gennemført salg, og senere returer følger den normale returproces.",
           "Hvis kunden aldrig kommer, trykker du på Annuller ordre i ordredetaljerne og vælger at refundere eller beholde depositum. Lageret lægges tilbage.",
           "Kvitteringen for depositum og den endelige afhentningskvittering har samme nummer."
@@ -563,7 +662,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Varer i en forudbestilling kan ikke redigeres. Ombestemmer kunden sig, skal du annullere og oprette en ny forudbestilling. Det kræver Standard-niveauet eller højere at oprette forudbestillinger. Efter en nedgradering kan eksisterende forudbestillinger stadig afhentes eller annulleres."
+        "text": "Varer i en forudbestilling kan ikke redigeres. Ombestemmer kunden sig, skal du annullere og oprette en ny forudbestilling. Det kræver abonnementsniveauet Standard eller højere at oprette forudbestillinger. Efter en nedgradering kan eksisterende forudbestillinger stadig afhentes eller annulleres."
       }
     ],
     "related": [
@@ -649,25 +748,71 @@ export const articles = [
       "størrelse",
       "farve",
       "valgmuligheder",
-      "variant"
+      "variant",
+      "specifikation"
     ],
     "content": [
       {
         "type": "p",
-        "text": "På produktets redigeringsside under Variantvalgmuligheder trykker du på Tilføj valgmulighed for at tilføje en valgmulighed (fx “Farve”) og derefter på “+ Værdi” for at tilføje hver af dens værdier (fx Rød, Blå). Med to eller flere valgmuligheder (fx Farve × Størrelse) opretter DingPOS automatisk alle kombinationer (Rød/S, Rød/M, Blå/S …)."
+        "text": "På produktets redigeringsside under Variantvalgmuligheder trykker du på Tilføj valgmulighed for at tilføje en valgmulighed (fx „Farve“) og derefter på „+ Værdi“ for at tilføje hver af dens værdier (fx Rød, Blå). Med to eller flere valgmuligheder (fx Farve × Størrelse) opretter DingPOS automatisk alle kombinationer (Rød/S, Rød/M, Blå/S …)."
       },
       {
         "type": "p",
-        "text": "Hver kombination har sin egen pris og kostpris og holder styr på sit eget lager. Ved betaling vises en variantvælger, når du trykker på produktet, før det lægges i kurven."
+        "text": "Når et produkt har varianter, forsvinder feltet Pris, og hver kombination får sin egen pris under Variantpris og lager, med sit eget lager (siden v3.2; tidligere versioner beder stadig om en produktpris). Kassen, produktlisten og produktdetaljerne viser et interval fra laveste til højeste pris, fx „NT$350–NT$390“, eller én pris, når alle kombinationer koster det samme. Sortering efter pris bruger den laveste kombinationspris. Ved betaling vises en variantvælger, når du trykker på produktet, før det lægges i kurven."
+      },
+      {
+        "type": "p",
+        "text": "Du behøver ikke angive en kostpris for hver kombination: Et tomt felt Kostpris betyder Følger produktet, så den bruger produktets kostpris og ændrer sig, når den gør. Et tal gør den til Egen kostpris – også 0. Brug produktets kostpris på alle nulstiller alle egne kostpriser på én gang."
       },
       {
         "type": "note",
-        "text": "Navne på valgmuligheder og værdier må højst være 20 tegn lange."
+        "text": "Navne på valgmuligheder og værdier må højst være 20 tegn lange og kan ikke være tomme: Et tomt navn på en valgmulighed eller værdi får en rød kant, når du gemmer, så udfyld det, eller slet den tomme værdi. Et produkt med varianter kan ikke bruge åben pris."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Kan jeg skrive et produkts pris ind ved betaling, fx fragt eller en forhandlet vare?",
+    "keywords": [
+      "åben pris",
+      "egen pris",
+      "indtast pris",
+      "fragt",
+      "servicegebyr",
+      "forhandlet pris",
+      "markedspris"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja – gør det til et produkt med åben pris. Slå Åben pris til på produktets redigeringsside, og lad prisen stå tom. Kassen og produktlisten viser „Åben pris“ der, hvor prisen ellers ville stå. Ved betaling spørger produktet først om prisen, når du trykker på det. Skriv den, og tryk på Læg i kurv for at tilføje det til den pris."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 er en gyldig pris (fx gratis fragt), mens et tomt felt ikke kan tilføjes. Skriv prisen på samme måde, som din butiks momstilstand prissætter alt andet.",
+          "En kurv har én linje pr. produkt med åben pris: Trykker du på det igen, åbnes den linje, så du kan ændre prisen.",
+          "Når Åben pris slås til, slås Udeluk fra kampagner også til, så et gebyr ikke bliver rabatteret og ikke tæller med i beløbsgrænser. Slå den fra igen, hvis en forhandlet vare skal deltage i kampagner.",
+          "Når linjen er solgt, pålægges der moms, den giver point og tæller med i Statistik som enhver anden, og en retur refunderer den pris, der blev skrevet.",
+          "Et produkt med varianter kan ikke bruge åben pris. Produkter med åben pris tilbydes aldrig som gaver eller betalte tilvalg og vises aldrig på listen over erstatningsvarer i en ombytning."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Alle abonnementsniveauer har det, og det kræver aldrig en leders godkendelse at skrive prisen."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -767,22 +912,27 @@ export const articles = [
       "lager",
       "udsolgt",
       "blokere",
-      "justere"
+      "justere",
+      "minus på lager"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Det er med vilje: betalingen bliver aldrig blokeret af for lidt lager. Den første regel ved en kasse i drift er, at kunden aldrig skal vente – et forkert tal på papiret kan rettes bagefter, men et afbrudt salg er tabt for altid."
+        "text": "Det er med vilje: Betalingen bliver aldrig blokeret af for lidt lager. Den første regel ved en kasse i drift er, at kunden aldrig skal vente – et forkert tal på papiret kan rettes bagefter, men et afbrudt salg er tabt for altid."
       },
       {
         "type": "p",
-        "text": "Negativt lager betyder som regel, at en genopfyldning ikke blev registreret, eller at en forudbestilt vare endnu ikke er kommet (forudbestillinger trækker fra lageret, når de oprettes). Registrér genopfyldning ved at modtage en indkøbsordre, så retter tallet sig selv; ret forskelle fra lageroptælling med en manuel justering, som gemmes i bevægelsesoversigten."
+        "text": "Negativt lager betyder som regel, at en genopfyldning ikke blev registreret, eller at en forudbestilt vare endnu ikke er kommet (forudbestillinger trækker fra lageret, når de oprettes). Registrér genopfyldning ved at modtage en indkøbsordre, så retter tallet sig selv. Ret forskelle fra lageroptælling med en manuel justering, som gemmes i bevægelsesoversigten."
+      },
+      {
+        "type": "note",
+        "text": "Hvis kassen ikke kan finde et produkt med 0 på lager, så tjek, om Skjul produkter uden lager er slået til under Indstillinger → Enhedsvalg: Mens den er det, kan denne iPad ikke lægge produkter uden lager i en kurv."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -834,7 +984,7 @@ export const articles = [
     "keywords": [
       "omsætning",
       "modtagne betalinger",
-      "betalinger",
+      "indtægt",
       "afstemning",
       "depositum",
       "salg på konto"
@@ -849,7 +999,8 @@ export const articles = [
         "items": [
           "Salg på konto: varerne forlader butikken i dag og tæller med i dagens omsætning; pengene tæller med i Modtagne betalinger den dag, de afregnes.",
           "Forudbestilling: depositummet tæller med i Modtagne betalinger, når det betales; omsætningen indregnes fuldt ud på afhentningsdagen.",
-          "Fortabt depositum: når en kunde annullerer en forudbestilling, og du beholder depositummet, var det allerede talt med i Modtagne betalinger, da det blev betalt. Statistik viser det særskilt som fortabte depositummer, og det tæller aldrig som omsætning."
+          "Fortabt depositum: når en kunde annullerer en forudbestilling, og du beholder depositummet, var det allerede talt med i Modtagne betalinger, da det blev betalt. Statistik viser det særskilt som fortabte depositummer, og det tæller aldrig som omsætning.",
+          "Makulering af en tidligere ordre: de refunderede penge tæller med i Modtagne betalinger på makuleringsdagen, så den dags Modtagne betalinger kan være negative, mens Makuleret tæller ordren på dens salgsdato. ⓘ på felterne Modtagne betalinger og Makuleret forklarer det samme."
         ]
       },
       {
@@ -960,22 +1111,34 @@ export const articles = [
       "kostpris",
       "fortjeneste",
       "dækningsbidrag",
+      "dækningsgrad",
       "bruttofortjeneste",
       "rapporter",
-      "ikke opgjort"
+      "ikke opgjort",
+      "mangler kostpris",
+      "dækningsbidrag opgjort"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kostpris er et valgfrit felt. Produkter uden kostpris er markeret “dækningsbidrag ikke opgjort” i rapporter og holdes uden for beregningen af dækningsbidrag – omsætningen tæller stadig fuldt ud, kun dækningsbidraget springes over."
+        "text": "Kostpris er et valgfrit felt. Produkter uden kostpris holdes uden for dækningsbidraget, mens deres omsætning stadig tæller fuldt ud. Kortet Dækningsbidrag opgjort under Statistik viser, hvor mange produkter solgt i perioden der ikke har en kostpris. En kostpris på 0 tæller som en kostpris, så de produkter står ikke på listen."
       },
       {
         "type": "p",
-        "text": "For at få komplette rapporter over dækningsbidrag skal du tilføje kostpriser på produktets redigeringsside; fremtidige ordrer bliver medregnet. Dækningsbidraget beregnes ud fra omsætningen efter rabat."
+        "text": "Tryk på kortet eller på Se produkter for at åbne Produkter uden kostpris, sorteret efter den omsætning, der er holdt uden for dækningsbidraget. Tryk på en række for at åbne produktet, tilføj kostprisen fra Rediger, og rækken er markeret Kostpris tilføjet, når du kommer tilbage. Et produkt med varianter regnes for at have en kostpris, når enten en variant eller selve produktet har en."
+      },
+      {
+        "type": "p",
+        "text": "Dækningsbidrag er omsætningen efter alle rabatter (vare- og kurvrabatter, kampagner, indløsning af point) og før moms, minus kostpris – derfor hedder feltet Kostpris ekskl. moms (valgfri): Skriv, hvad du betalte før moms. Dækningsgraden er dækningsbidraget ÷ omsætningen før moms for produkter med en kostpris, så produkter uden kostpris ikke trækker den ned. En retur tager på returdagen det dækningsbidrag tilbage, som varerne havde givet."
+      },
+      {
+        "type": "note",
+        "text": "En kostpris, du tilføjer, påvirker kun senere salg; salg, der allerede er foretaget, genberegnes ikke. Denne beregning kom i v3.1: Tidligere versioner trak kun manuelle varerabatter fra og regnede moms i prisen med som fortjeneste, så efter en opdatering viser perioder med rabatter eller moms i prisen et lavere dækningsbidrag. Det er en rettelse, ikke tabte data."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1036,10 +1199,10 @@ export const articles = [
         "type": "steps",
         "items": [
           "Tidsplan: er dagen i dag inden for de aktive datoer? Begrænser et Happy Hour-tidsrum ugedagen eller tidspunktet?",
-          "Omfang: er varerne i kurven omfattet af kampagnens produkter eller kategorier? Er forbrugsgrænsen nået?",
+          "Omfang: er varerne i kurven omfattet af kampagnens produkter eller kategorier? Er produktet sat til Udeluk fra kampagner (produkter med åben pris er det som standard)? Er forbrugsgrænsen nået?",
           "Målgruppe: er kampagnen begrænset til et medlemsniveau eller en fødselsmåned? Blev medlemmet valgt ved betaling?",
-          "Brugsgrænser: er den samlede grænse eller kundens egen grænse nået?",
-          "Kombination: blokerer en kampagne med højere prioritet, som har \"Stop efterfølgende kampagner, når denne udløses\", for den?"
+          "Brugsgrænser: er den samlede grænse eller kundens egen grænse nået? Grænsen pr. kunde for en kampagne i fødselsmåneden tæller pr. kalenderår.",
+          "Kombination: blokerer en kampagne med højere prioritet, som har „Stop efterfølgende kampagner, når denne udløses“, for den?"
         ]
       },
       {
@@ -1321,7 +1484,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Filen åbnes som en tabel. Almindelige kolonnenavne på engelsk og kinesisk genkendes automatisk; tryk på en kolonneoverskrift for at ændre dens tilknytning.",
+          "Filen åbnes som en tabel. Almindelige kolonnenavne på engelsk og kinesisk (traditionelt eller forenklet) genkendes automatisk; tryk på en kolonneoverskrift for at ændre dens tilknytning.",
           "Tryk på en celle for at rette værdien direkte – du behøver ikke redigere filen og starte forfra.",
           "Tryk på Bekræft for at validere. Rækker med problemer markeres med rødt og en begrundelse; ved import af salg kan du springe ordrer med fejl over.",
           "Afklar alt, der kræver en beslutning (dublerede produktnavne, en række der passer til flere kunder), gennemgå oversigten, og tryk derefter på Start importen."
@@ -1330,9 +1493,9 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Importerede salg placeres efter transaktionsdato og genberegnes med din butiks valuta og momsindstilling. De påvirker ikke lageret og giver ikke velkomstpoint.",
+          "Importerede salg placeres efter ordredato og genberegnes med din butiks valuta og momstilstand. De påvirker ikke lageret og giver ikke velkomstpoint.",
           "Kunder matches med eksisterende kunder via telefonnummer eller e-mail; alle uden match oprettes.",
-          "Importerede ordrer viser en importdato og det oprindelige ordrenummer og kan ikke makuleres eller returneres.",
+          "Importerede ordrer viser en importdato (Importeret) og det oprindelige ordrenummer og kan ikke makuleres eller returneres.",
           "Rækker med fejl kan eksporteres som en CSV med begrundelserne – ret dem, og importér igen. Dublerede rækker springes automatisk over."
         ]
       },
@@ -1578,6 +1741,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "I de sidste 7 dage og på den sidste dag minder appen dig én gang hver om, hvor mange dage der er tilbage, at betalingen sættes på pause, når prøveperioden slutter, og at dine data bevares."
+      },
+      {
+        "type": "p",
         "text": "Alt, hvad du opretter i prøveperioden (produkter, ordrer, medlemmer), bevares fuldt ud. Dine data bliver aldrig slettet, uanset om du tegner et abonnement bagefter eller ej."
       }
     ],
@@ -1636,7 +1803,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: til dig, der driver en markedsstand alene og har brug for betaling og produkter.",
-          "Standard: tilføjer kampagner, loyalitetspoint og medlemsniveauer, lagerstyring, indkøb, salg på konto og forudbestillinger.",
+          "Standard: tilføjer kampagner, loyalitetspoint og medlemsniveauer, lagerstyring, indkøb, salg på konto, forudbestillinger og estimater af transaktionsgebyrer.",
           "Pro: tilføjer medarbejderkonti og tilladelser, lederens godkendelse, aktivitetslog, gendannelsesposter og avancerede rapporter – til butikker med medarbejdere."
         ]
       },
@@ -1809,15 +1976,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Opret først niveauer under Indstillinger → Medlemsniveauer (f.eks. Guld), og målret derefter kampagnen mod det niveau. Til fødselsdagstilbud vælger du betingelsen “Fødselsmåned”."
+        "text": "Opret først niveauer under Indstillinger → Medlemsniveauer (f.eks. Guld), og målret derefter kampagnen mod det niveau. Til fødselsdagstilbud sætter du målgruppen til Fødselsmåned og udfylder Grænse pr. kunde."
       },
       {
         "type": "list",
         "items": [
-          "Medlemmet skal være valgt ved betaling, for at tilbuddet udløses — berettigelsen vurderes ud fra det medlem, der er valgt lige nu.",
+          "Medlemmet skal være valgt ved betaling, for at tilbuddet udløses – berettigelsen vurderes ud fra det medlem, der er valgt lige nu.",
           "Fødselsdagstilbud bruger medlemmets fødselsmåned, så udfyld fødselsdagsfeltet; medlemmer uden en fødselsdag regnes aldrig som fødselsdagskunder.",
+          "En kampagne i fødselsmåneden kræver en grænse pr. kunde, som tælles pr. kalenderår: En grænse på 1 betyder, at hver kunde kan bruge den én gang om året, og den nulstilles året efter. Uden en grænse kan den ikke gemmes.",
           "Automatiske niveauopgraderinger vurderes, når betalingen gennemføres; hvis ordren makuleres, rulles en opgradering, som den udløste, automatisk tilbage."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Før v3.2 viste en kampagne i fødselsmåneden en fejl og kunne ikke gemmes, selv om der var udfyldt en grænse pr. kunde. Hvis det sker for dig, skal du opdatere DingPOS fra App Store."
       }
     ],
     "related": [

@@ -82,24 +82,29 @@ export const articles = [
       "panduan awal",
       "wizard",
       "buka toko",
+      "negara",
+      "mata uang",
       "aplikasi kasir"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Saat pertama kali membuka DingPOS, panduan pengaturan akan menuntun Anda membuka toko dalam sekitar 10 menit:"
+        "text": "Saat pertama kali membuka DingPOS, panduan pengaturan akan menuntun Anda membuka toko dalam dua langkah dan beberapa menit:"
       },
       {
         "type": "steps",
         "items": [
-          "Pilih negara Anda — mata uang, mode pajak, dan tarif pajak default terisi otomatis (tarif pajak dan mode pajak masih bisa diubah pada tahap ini).",
-          "Masukkan nama toko, dan unggah logo toko jika mau.",
-          "Ikuti panduan untuk membuat 3–5 produk (boleh dilewati — Anda bisa menambahkannya kapan saja nanti)."
+          "Pilih negara atau wilayah Anda. Bagian atas daftar menampilkan wilayah iPad ini dan pasar yang paling umum; di bawahnya ada semua 175 negara dan wilayah tempat DingPOS tersedia di App Store, yang bisa dicari berdasarkan nama dalam bahasa aplikasi atau bahasa Inggris. Pilihan Anda mengisi mata uang, tarif pajak, dan mode pajak secara otomatis.",
+          "Di Toko Anda, masukkan nama toko, tambahkan logo jika mau, lalu periksa mata uang, tarif pajak, dan mode pajak (termasuk pajak / belum termasuk pajak). Mata uang default mengikuti negara Anda; ketuk untuk memilih dari 130 mata uang."
         ]
       },
       {
         "type": "p",
-        "text": "Setelah selesai, Anda akan mendengar bunyi \"Ding!\" — toko Anda siap dan Anda bisa langsung mulai mencatat penjualan."
+        "text": "Ketuk Lanjutkan dan Anda akan melihat “Ding! Toko Anda siap.” DingPOS juga menyiapkan dua metode pembayaran, Tunai dan Kartu Kredit. Lalu tambahkan produk Anda di Produk dan mulai mencatat penjualan."
+      },
+      {
+        "type": "note",
+        "text": "Mata uang dan mode pajak tidak bisa diubah setelah pengaturan awal; tarif pajak masih bisa diubah nanti di Pengaturan. Di Amerika Serikat, Kanada, Brasil, dan Mikronesia, tarif pajak bergantung pada negara bagian, provinsi, atau kota, sehingga kolom tarif pajak awalnya kosong dan Anda memasukkan tarif yang Anda kenakan (0 diperbolehkan) untuk melanjutkan. Daftar 175 negara dan pilihan mata uang hadir di v3.2; versi sebelumnya hanya menawarkan 15 negara."
       }
     ],
     "related": [
@@ -206,7 +211,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mata uang dan mode pajak (termasuk pajak / belum termasuk pajak) terkunci setelah pengaturan awal selesai. Semua pesanan lama Anda dihitung dengan keduanya, jadi mengubahnya di tengah jalan akan merusak laporan Anda."
+        "text": "Mata uang dan mode pajak (termasuk pajak / belum termasuk pajak) terkunci setelah pengaturan awal selesai. Semua pesanan lama Anda dihitung dengan keduanya, jadi mengubahnya di tengah jalan akan merusak laporan Anda. Periksa keduanya di langkah Toko Anda saat pengaturan awal: mata uang default mengikuti negara Anda, dan Anda bisa mengetuknya untuk memilih yang lain."
       },
       {
         "type": "note",
@@ -227,18 +232,24 @@ export const articles = [
       "bahasa",
       "inggris",
       "tionghoa",
-      "mandarin",
+      "jepang",
+      "spanyol",
+      "multibahasa",
       "ganti bahasa",
       "wilayah"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS mendukung bahasa Inggris dan Tionghoa Tradisional. Buka Pengaturan → Preferensi Perangkat lalu ketuk Bahasa App. Halaman DingPOS di aplikasi Pengaturan iPad akan terbuka, lalu pilih bahasa di bagian Bahasa."
+        "text": "DingPOS mendukung 32 bahasa, termasuk Inggris, Tionghoa Tradisional dan Sederhana, Jepang, Korea, Thai, Vietnam, Indonesia, Melayu, Spanyol (Amerika Latin), Portugis (Brasil), Prancis, dan Jerman. Buka Pengaturan → Preferensi Perangkat lalu ketuk Bahasa App. Halaman DingPOS di aplikasi Pengaturan iPad akan terbuka, lalu pilih bahasa di bagian Bahasa."
       },
       {
         "type": "p",
         "text": "iOS tidak mengizinkan aplikasi membuka daftar bahasa secara langsung, jadi ketukan terakhir dilakukan di Pengaturan sistem. Bahasa ini hanya berlaku untuk iPad ini."
+      },
+      {
+        "type": "note",
+        "text": "Bahasa selain Inggris dan Tionghoa Tradisional hadir di v3.2. Jika Bahasa hanya menampilkan Inggris dan Tionghoa, perbarui DingPOS dari App Store."
       }
     ],
     "related": [
@@ -355,12 +366,13 @@ export const articles = [
       "line pay",
       "kembalian",
       "metode pembayaran kustom",
-      "penjualan tempo"
+      "penjualan tempo",
+      "biaya"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Tunai, Kartu Kredit, dan Line Pay sudah tersedia, dan Anda bisa menambahkan label pembayaran kustom di Pengaturan (misalnya Apple Pay, dompet digital lokal)."
+        "text": "Toko baru dimulai dengan dua metode pembayaran, Tunai dan Kartu Kredit, yang dinamai dalam bahasa aplikasi saat pengaturan awal. Di Pengaturan → Metode Pembayaran Anda bisa menambahkan metode lain (misalnya Apple Pay, LINE Pay, dompet digital lokal), serta menghapus atau mengurutkannya ulang."
       },
       {
         "type": "p",
@@ -368,13 +380,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Jika penyedia pembayaran kartu atau ponsel Anda memotong biaya, beri metode itu tarif biaya, dan Statistik akan memperkirakan biaya serta kas bersih yang diterima tiap metode — lihat “Bisakah DingPOS mencatat biaya pembayaran kartu dan ponsel?”"
+      },
+      {
+        "type": "p",
         "text": "Untuk pelanggan tetap yang membawa barang sekarang dan membayar nanti, pilih Penjualan tempo: penjualan dicatat sebagai piutang dan dilunasi saat uangnya diterima. Lihat “Bisakah pelanggan tetap membeli dengan tempo dan membayar nanti?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Bisakah DingPOS mencatat biaya pembayaran kartu dan ponsel?",
+    "keywords": [
+      "biaya pemrosesan",
+      "biaya kartu",
+      "biaya transaksi",
+      "tarif biaya",
+      "kas bersih diterima",
+      "biaya merchant",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Bisa. Di Pengaturan → Metode Pembayaran, ketuk sebuah metode pembayaran (atau tambahkan yang baru) lalu isi Biaya pemrosesan: persentase, jumlah tetap per transaksi, atau keduanya. Sejak itu, setiap pembayaran yang diterima lewat metode tersebut mencatat biaya yang diperkirakan dengan tarif yang berlaku saat itu."
+      },
+      {
+        "type": "p",
+        "text": "Di Statistik, kartu Metode Pembayaran menambahkan baris “Biaya · Bersih” di bawah tiap metode yang punya biaya, dan bagian bawah kartu menampilkan perkiraan biaya serta perkiraan kas bersih diterima untuk seluruh periode."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Masukkan tarif yang benar-benar dipotong penyedia Anda, termasuk pajak — untuk 3% plus pajak 5%, masukkan 3,15%. Kosongkan kedua kolom jika tanpa biaya.",
+          "Perubahan tarif hanya berlaku untuk pembayaran berikutnya; biaya yang sudah tercatat tetap seperti semula.",
+          "“Persentase biaya dikembalikan saat retur dan pembatalan pra-pesan” aktif secara default, untuk penyedia yang mengembalikan biayanya saat Anda mengembalikan uang; biaya tetap tidak pernah dikembalikan. Pembatalan (void), retur, pra-pesan yang dibatalkan, dan pelunasan yang dibatalkan membalik biaya dengan aturan ini, dan pelanggan menerima kembali jumlah yang sama dalam kedua kasus.",
+          "Pembayaran yang diterima sebelum metode itu punya tarif tidak membawa biaya: Statistik menandainya “(N tanpa tarif)” dan menampilkan kas bersih sebagai “—”."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Biaya adalah perkiraan dari tarif yang Anda masukkan; laporan penyedia Anda adalah jumlah sebenarnya. Mengubah tarif biaya dan melihat biaya di Statistik memerlukan paket Standard atau lebih tinggi. Di Lite kolomnya terkunci, tetapi pembayaran tetap mencatat biayanya, sehingga biaya itu muncul setelah Anda upgrade."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -401,7 +460,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Bisakah layar kasir menyembunyikan produk yang stoknya habis?",
+    "keywords": [
+      "sembunyikan",
+      "stok habis",
+      "produk habis",
+      "stok nol",
+      "kasir",
+      "produk hilang",
+      "produk tidak ditemukan"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Bisa. Buka Pengaturan → Preferensi Perangkat dan aktifkan Sembunyikan produk stok habis (nonaktif secara default). Kisi produk, filter kategori, dan pencarian (nama dan barcode) di kasir lalu melewatkan setiap produk yang stoknya 0 atau kurang. Pengaturan ini berlaku langsung, tanpa perlu membuka ulang aplikasi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Produk yang tidak melacak stok selalu tampil. Produk dengan varian disembunyikan hanya jika semua variannya habis.",
+          "Pengaturan ini hanya memengaruhi kasir di iPad ini; daftar Produk tetap menampilkan semua produk.",
+          "Jika semua produk tersembunyi, kasir menampilkan “Semua produk stok habis” dan memberi tahu di mana Anda bisa menonaktifkan pengaturannya."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Selama pengaturan ini aktif, iPad ini tidak bisa menemukan produk yang stoknya habis, sehingga tidak bisa menjual hingga stok minus atau menerima pra-pesan untuk produk itu — nonaktifkan bila perlu. Jika produk tampak hilang dari kasir, biasanya pengaturan inilah penyebabnya."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -552,7 +650,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Stok dikurangi saat pra-pesan dibuat, sehingga barang tersimpan untuk pelanggan. Barang yang stoknya habis menjadi minus dan pulih begitu pesanan pembelian diterima.",
+          "Stok dikurangi saat pra-pesan dibuat, sehingga jumlah yang bisa dijual langsung mencerminkannya. Ini sekadar penanda, bukan penahanan: penjualan berikutnya tetap bisa mengambil unit terakhir. Barang yang stoknya habis menjadi minus dan pulih begitu pesanan pembelian diterima.",
           "Saat pelanggan mengambil barang, ketuk Serahkan di rincian pesanan untuk menerima sisa tagihan. Pesanan lalu menjadi penjualan biasa yang selesai, dan retur berikutnya mengikuti alur retur normal.",
           "Jika pelanggan tidak pernah datang, ketuk Batalkan pesanan di rincian pesanan lalu pilih mengembalikan atau menahan uang muka. Stok ditambahkan kembali.",
           "Struk uang muka dan struk pengambilan akhir memakai nomor yang sama."
@@ -660,16 +758,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Setiap kombinasi punya harga dan harga pokok sendiri, serta melacak stoknya sendiri. Saat pembayaran di kasir, mengetuk produk akan menampilkan pemilih varian sebelum produk dimasukkan ke keranjang."
+        "text": "Setelah produk punya varian, kolom Harga-nya disembunyikan dan setiap kombinasi mendapat harga sendiri di bawah Harga & Stok Varian, lengkap dengan stoknya sendiri (sejak v3.2; versi sebelumnya masih meminta harga produk). Kasir, daftar produk, dan rincian produk menampilkan rentang dari harga terendah sampai tertinggi, seperti “NT$350–NT$390”, atau satu harga jika semua kombinasi harganya sama; pengurutan berdasarkan harga memakai harga kombinasi terendah. Saat bayar, mengetuk produk akan menampilkan pemilih varian sebelum produk dimasukkan ke keranjang."
+      },
+      {
+        "type": "p",
+        "text": "Anda tidak perlu mengisi harga pokok untuk setiap kombinasi: kolom Harga pokok yang kosong berarti mengikuti harga pokok produk, jadi memakai harga pokok produk dan ikut berubah saat harga pokok produk berubah. Jika diisi angka, kombinasi itu memakai Harga pokok sendiri — termasuk angka 0. Pakai harga pokok produk untuk semua menghapus semua harga pokok sendiri sekaligus."
       },
       {
         "type": "note",
-        "text": "Nama opsi dan nama pilihan dibatasi maksimal 20 karakter."
+        "text": "Nama opsi dan nama pilihan dibatasi maksimal 20 karakter dan tidak boleh kosong: nama opsi atau pilihan yang kosong diberi garis merah saat Anda menyimpan, jadi isi atau hapus pilihan yang kosong itu. Produk dengan varian tidak bisa memakai harga bebas."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Bisakah saya mengisi harga produk saat bayar, misalnya ongkos kirim atau barang hasil tawar-menawar?",
+    "keywords": [
+      "harga bebas",
+      "harga kustom",
+      "isi harga",
+      "ongkos kirim",
+      "biaya layanan",
+      "harga tawar",
+      "harga pasar"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Bisa — jadikan sebagai produk Harga Bebas. Aktifkan Harga Bebas di halaman edit produk dan biarkan harganya kosong; kasir dan daftar produk menampilkan “Harga Bebas” di tempat harga seharusnya berada. Saat bayar, mengetuk produk akan meminta harga lebih dulu; masukkan harganya lalu ketuk Tambah ke Keranjang untuk menambahkannya dengan harga itu."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 adalah harga yang valid (misalnya gratis ongkir); kolom yang kosong tidak bisa ditambahkan. Masukkan harga sesuai mode pajak toko Anda, seperti harga lainnya.",
+          "Keranjang hanya memuat satu baris per produk harga bebas: mengetuknya lagi membuka baris itu sehingga Anda bisa mengubah harganya.",
+          "Mengaktifkan Harga Bebas juga mengaktifkan Kecualikan dari promo, sehingga biaya tidak didiskon dan tidak dihitung untuk minimal belanja. Nonaktifkan lagi jika barang hasil tawar-menawar boleh ikut promo.",
+          "Setelah terjual, barisnya dikenai pajak, menghasilkan poin, dan dihitung di Statistik seperti barang lain, dan retur mengembalikan harga yang dimasukkan.",
+          "Produk dengan varian tidak bisa memakai harga bebas. Produk harga bebas tidak pernah ditawarkan sebagai hadiah atau tambahan berbayar, dan tidak pernah muncul di daftar barang pengganti pada tukar barang."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Semua paket memilikinya, dan memasukkan harga tidak pernah memerlukan persetujuan manajer."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -782,12 +925,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Stok minus biasanya berarti penambahan stok belum dicatat, atau barang pra-pesan belum tiba (pra-pesan mengurangi stok saat dibuat). Catat penambahan stok dengan menerima pesanan pembelian dan angkanya pulih sendiri; perbaiki selisih stok opname dengan penyesuaian manual, yang tersimpan di riwayat pergerakan stok."
+      },
+      {
+        "type": "note",
+        "text": "Jika kasir tidak menemukan produk yang stoknya 0, periksa apakah Sembunyikan produk stok habis aktif di Pengaturan → Preferensi Perangkat: selama aktif, iPad ini tidak bisa menambahkan produk stok habis ke keranjang."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -854,7 +1001,8 @@ export const articles = [
         "items": [
           "Penjualan tempo: barang keluar hari ini dan masuk ke pendapatan hari ini; uangnya masuk ke Kas Diterima pada hari pelunasan.",
           "Pra-pesan: uang muka masuk ke Kas Diterima saat dibayar; pendapatan diakui penuh pada tanggal pengambilan.",
-          "Uang muka hangus: jika pelanggan membatalkan pra-pesan dan Anda menyimpan uang mukanya, uang itu sudah masuk ke Kas Diterima saat dibayar. Statistik menampilkannya terpisah sebagai uang muka hangus, dan tidak pernah dihitung sebagai pendapatan."
+          "Uang muka hangus: jika pelanggan membatalkan pra-pesan dan Anda menyimpan uang mukanya, uang itu sudah masuk ke Kas Diterima saat dibayar. Statistik menampilkannya terpisah sebagai uang muka hangus, dan tidak pernah dihitung sebagai pendapatan.",
+          "Membatalkan (void) pesanan sebelumnya: uang yang dikembalikan masuk ke Kas Diterima pada hari pembatalan, sehingga Kas Diterima hari itu bisa negatif, sedangkan Di-void menghitung pesanan itu pada tanggal penjualannya. Ikon ⓘ pada ubin Kas Diterima dan Di-void menjelaskan hal yang sama."
         ]
       },
       {
@@ -964,22 +1112,34 @@ export const articles = [
     "keywords": [
       "harga pokok",
       "laba",
+      "laba kotor",
       "margin",
       "laporan",
-      "tidak dilacak"
+      "tidak dilacak",
+      "harga pokok kosong",
+      "laba kotor terlacak"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Harga pokok adalah kolom opsional. Produk tanpa harga pokok ditandai “laba tidak dilacak” di laporan dan tidak diikutkan dalam perhitungan laba — pendapatan tetap dihitung penuh, hanya laba yang tidak dihitung."
+        "text": "Harga pokok adalah kolom opsional. Produk tanpa harga pokok tidak diikutkan dalam perhitungan laba, sedangkan pendapatannya tetap dihitung penuh. Kartu Laba Kotor Terlacak di Statistik menunjukkan berapa produk yang terjual pada periode itu tanpa harga pokok; harga pokok 0 dihitung sebagai harga pokok, jadi produk tersebut tidak dicantumkan."
       },
       {
         "type": "p",
-        "text": "Untuk mendapatkan laporan laba yang lengkap, isi harga pokok di halaman edit produk; pesanan berikutnya akan ikut dihitung. Laba dihitung dari pendapatan setelah diskon."
+        "text": "Ketuk kartu itu atau Lihat produk untuk membuka Produk Tanpa Harga Pokok, diurutkan berdasarkan pendapatan yang tidak masuk ke laba. Ketuk sebuah baris untuk membuka produknya, tambahkan harga pokoknya dari Edit, dan baris itu ditandai Harga pokok ditambahkan saat Anda kembali. Produk dengan varian dianggap sudah punya harga pokok begitu salah satu variannya atau produknya sendiri punya harga pokok."
+      },
+      {
+        "type": "p",
+        "text": "Laba adalah pendapatan setelah semua diskon (diskon barang dan keranjang, promo, penukaran poin) dan sebelum pajak, dikurangi harga pokok — itulah sebabnya kolomnya bernama Harga pokok sebelum pajak (opsional): masukkan harga yang Anda bayar sebelum pajak. Margin adalah laba ÷ pendapatan sebelum pajak dari produk yang punya harga pokok, sehingga produk tanpa harga pokok tidak menurunkannya. Retur menarik kembali, pada hari retur, laba yang pernah dihasilkan barang-barang itu."
+      },
+      {
+        "type": "note",
+        "text": "Harga pokok yang Anda tambahkan hanya memengaruhi penjualan berikutnya; penjualan yang sudah terjadi tidak dihitung ulang. Perhitungan ini hadir di v3.1: versi sebelumnya hanya mengurangi diskon barang manual dan menghitung pajak yang sudah termasuk sebagai laba, jadi setelah pembaruan, periode dengan diskon atau pajak termasuk menampilkan laba yang lebih rendah. Itu koreksi, bukan data yang hilang."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1041,9 +1201,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Jadwal: apakah hari ini masih dalam tanggal aktif? Apakah jam Happy Hour membatasi hari atau waktunya?",
-          "Cakupan: apakah barang di keranjang termasuk dalam cakupan produk atau kategori promo? Apakah minimal belanja sudah tercapai?",
+          "Cakupan: apakah barang di keranjang termasuk dalam cakupan produk atau kategori promo? Apakah produk diatur Kecualikan dari promo (produk harga bebas otomatis dikecualikan)? Apakah minimal belanja sudah tercapai?",
           "Sasaran: apakah promo dibatasi untuk tingkat anggota atau bulan ulang tahun tertentu? Apakah anggota tersebut sudah dipilih saat pembayaran?",
-          "Batas pemakaian: apakah batas total pemakaian, atau batas untuk pelanggan ini, sudah tercapai?",
+          "Batas pemakaian: apakah batas total pemakaian, atau batas untuk pelanggan ini, sudah tercapai? Batas per pelanggan pada promo bulan ulang tahun dihitung per tahun kalender.",
           "Penggabungan: apakah promo berprioritas lebih tinggi dengan opsi \"Hentikan promo berikutnya saat promo ini berlaku\" menghalanginya?"
         ]
       },
@@ -1329,7 +1489,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "File terbuka sebagai tabel. Nama kolom umum dalam bahasa Inggris dan Mandarin dicocokkan otomatis; ketuk judul kolom mana pun untuk mengubah pemetaannya.",
+          "File terbuka sebagai tabel. Nama kolom umum dalam bahasa Inggris dan Tionghoa (Tradisional atau Sederhana) dicocokkan otomatis; ketuk judul kolom mana pun untuk mengubah pemetaannya.",
           "Ketuk sel mana pun untuk memperbaiki nilainya langsung di tempat — tidak perlu mengedit file lalu mengulang dari awal.",
           "Ketuk Konfirmasi untuk memvalidasi. Baris yang bermasalah ditandai merah beserta alasannya; impor penjualan bisa melewati pesanan yang berisi kesalahan.",
           "Selesaikan hal yang perlu keputusan (nama produk ganda, satu baris yang cocok dengan beberapa pelanggan), periksa ringkasan, lalu ketuk Mulai impor."
@@ -1338,7 +1498,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Penjualan yang diimpor ditempatkan berdasarkan tanggal transaksi dan dihitung ulang dengan mata uang dan mode pajak toko Anda. Penjualan ini tidak memengaruhi stok dan tidak memberi bonus selamat datang.",
+          "Penjualan yang diimpor ditempatkan berdasarkan tanggal pesanan dan dihitung ulang dengan mata uang dan mode pajak toko Anda. Penjualan ini tidak memengaruhi stok dan tidak memberi bonus selamat datang.",
           "Pelanggan dicocokkan dengan pelanggan yang sudah ada lewat nomor telepon atau email; yang tidak cocok akan dibuat baru.",
           "Pesanan yang diimpor menampilkan tanggal Diimpor pada dan nomor pesanan asal, serta tidak bisa dibatalkan (void) atau diretur.",
           "Baris yang berisi kesalahan bisa diekspor sebagai CSV yang dilengkapi alasannya — perbaiki lalu impor lagi. Baris ganda dilewati otomatis."
@@ -1585,6 +1745,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Dalam 7 hari terakhir dan pada hari terakhir, aplikasi mengingatkan Anda masing-masing satu kali tentang sisa harinya, bahwa proses bayar dijeda saat uji coba berakhir, dan bahwa data Anda tetap tersimpan."
+      },
+      {
+        "type": "p",
         "text": "Semua yang Anda buat selama uji coba (produk, pesanan, member) tersimpan utuh. Data Anda tidak pernah dihapus, baik Anda berlangganan setelahnya maupun tidak."
       }
     ],
@@ -1637,13 +1801,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan pembatalan penjualan (void), retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
+        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan tindakan Batalkan penjualan (Void), retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
       },
       {
         "type": "list",
         "items": [
           "Lite: untuk satu orang yang menjaga lapak dan butuh kasir serta pengelolaan produk.",
-          "Standard: menambah promo, poin loyalitas dan tingkat member, pelacakan stok, pembelian ke pemasok, penjualan tempo, dan pra-pesan.",
+          "Standard: menambah promo, poin loyalitas dan tingkat member, pelacakan stok, pembelian ke pemasok, penjualan tempo, pra-pesan, dan perkiraan biaya pembayaran.",
           "Pro: menambah akun staf dan izin, persetujuan manajer, log aktivitas, catatan pemulihan, dan laporan lanjutan — untuk toko yang punya staf."
         ]
       },
@@ -1814,15 +1978,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Buat dulu tingkat di Pengaturan → Tingkat Anggota (mis. Gold), lalu arahkan promo ke tingkat itu. Untuk promo ulang tahun, atur syaratnya ke “Bulan ulang tahun”."
+        "text": "Buat dulu tingkat di Pengaturan → Tingkat Anggota (mis. Gold), lalu arahkan promo ke tingkat itu. Untuk promo ulang tahun, atur sasarannya ke Bulan ulang tahun dan isi Batas per pelanggan."
       },
       {
         "type": "list",
         "items": [
           "Anggota harus dipilih saat pembayaran agar promo berlaku — kelayakan dinilai berdasarkan anggota yang sedang dipilih.",
           "Kelayakan ulang tahun membaca bulan ulang tahun anggota, jadi isi kolom ulang tahunnya; anggota tanpa tanggal ulang tahun tidak pernah dianggap pelanggan yang berulang tahun.",
+          "Promo bulan ulang tahun memerlukan batas per pelanggan yang dihitung per tahun kalender: batas 1 berarti setiap pelanggan hanya bisa memakainya setahun sekali, dan batas itu diatur ulang tahun berikutnya. Promo tidak bisa disimpan tanpa batas ini.",
           "Kenaikan tingkat otomatis dinilai saat pembayaran selesai; jika penjualan dibatalkan melalui tindakan Batalkan penjualan (Void), kenaikan yang dipicunya dikembalikan secara otomatis."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Sebelum v3.2, promo bulan ulang tahun menampilkan kesalahan dan tidak bisa disimpan meski batas per pelanggan sudah diisi. Jika ini terjadi pada Anda, perbarui DingPOS dari App Store."
       }
     ],
     "related": [

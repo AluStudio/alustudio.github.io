@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Toodete haldus",
-          "desc": "Variandid, vöötkoodid, fotod, kategooriad"
+          "desc": "Variandid, vöötkoodid, fotod, kategooriad, kohapealse hinnaga tooted"
         },
         "import": {
           "name": "Andmete import",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Ettevõtte ülevaatepaneel",
           "desc": "Müügitulu, kasum, allahindlused, maksevahendite jaotus ja enimmüüdud tooted"
+        },
+        "payment_fees": {
+          "name": "Teenustasude hinnang",
+          "desc": "Määra iga makseviisi teenustasu määr; vaata tasusid ja hinnangulist netolaekumist makseviisi kaupa"
         },
         "comparison": {
           "name": "Perioodide võrdlus",

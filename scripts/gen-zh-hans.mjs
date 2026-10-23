@@ -121,6 +121,7 @@ const DINGPOS_SITE_GLOSSARY = [
   ["不经手金流", "不经手收付款"],
   ["付款金流", "支付环节"],
   ["串接金流", "对接支付"],
+  ["金流商", "支付服务商"],
   // 列 as a row or bar: the mainland reads 列 as a column
   ["购物车列", "购物车栏"],
   ["期间列", "期间栏"],
@@ -160,10 +161,12 @@ const DINGPOS_SITE_GLOSSARY = [
   ["订阅项目", "订阅"],
   ["行销", "营销"],
   ["串接", "对接"],
+  ["顾摊", "看摊"],
+  ["⋯⋯", "……"],
 ];
 
 // Entry ids (or id prefixes ending in ":") whose 列 means a grid row.
-const DINGPOS_ROW_COLUMN_ENTRIES = ["faq:import-csv:"];
+const DINGPOS_ROW_COLUMN_ENTRIES = ["faq:import-csv:", "faq:open-price-products:content.1.items.1"];
 
 // Entry id → [zh-Hant source the override was written for, zh-Hans value].
 const DINGPOS_OVERRIDES = {
@@ -190,6 +193,12 @@ const DINGPOS_OVERRIDES = {
     "每件成员商品底下会写出它分到的折扣，商品行的金额是扣完优惠后的金额。",
   ],
   "faq:roadmap-payment-integration:keywords.0": ["金流", "支付接口"],
+  "faq:payment-fees:keywords.6": ["金流", "支付服务商"],
+  // 列 is a list row here, but 排列 in the same paragraph rules out the row/column swap.
+  "faq:profit-not-tracked:content.1.text": [
+    "點卡片或「查看商品」，會打開「缺成本的商品」清單，依未計入利潤的金額由高到低排列。點一列直接打開該商品，從「編輯」補上成本，回到清單那一列會標示「已補成本」。有規格的商品，只要規格或商品本身任一有成本就算已補。",
+    "点卡片或“查看商品”，会打开“缺成本的商品”列表，依未计入利润的金额由高到低排列。点一行直接打开该商品，从“编辑”补上成本，回到列表那一行会标示“已补成本”。有规格的商品，只要规格或商品本身任一有成本就算已补。",
+  ],
 };
 
 // ── Sotto ────────────────────────────────────────────────────

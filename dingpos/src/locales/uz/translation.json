@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Mahsulotlarni boshqarish",
-          "desc": "Variantlar, shtrix-kodlar, rasmlar, toifalar"
+          "desc": "Variantlar, shtrix-kodlar, rasmlar, toifalar, erkin narxli mahsulotlar"
         },
         "import": {
           "name": "Ma’lumotlarni import qilish",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Biznes boshqaruv paneli",
           "desc": "Daromad, foyda, chegirmalar, to‘lov turlari ulushi va eng ko‘p sotilganlar"
+        },
+        "payment_fees": {
+          "name": "Taxminiy to‘lov komissiyalari",
+          "desc": "Har bir to‘lov usuli uchun komissiya stavkasini belgilang; usullar bo‘yicha komissiya va taxminiy sof tushumni ko‘ring"
         },
         "comparison": {
           "name": "Davrlarni solishtirish",

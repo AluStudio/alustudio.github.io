@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Produktadministration",
-          "desc": "Varianter, stregkoder, fotos, kategorier"
+          "desc": "Varianter, stregkoder, fotos, kategorier, produkter med åben pris"
         },
         "import": {
           "name": "Dataimport",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Forretningsoversigt",
           "desc": "Omsætning, fortjeneste, rabatter, betalingsfordeling og bedst sælgende varer"
+        },
+        "payment_fees": {
+          "name": "Estimat af transaktionsgebyrer",
+          "desc": "Angiv gebyrsatsen for hver betalingsmetode, og se gebyrer og forventet nettomodtaget pr. metode"
         },
         "comparison": {
           "name": "Periodesammenligning",

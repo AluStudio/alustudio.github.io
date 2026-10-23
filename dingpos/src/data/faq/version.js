@@ -27,4 +27,4 @@
 // product repo's `v{marketing}` tag without the "v". Readers see versions
 // with the "v" ("DingPOS v3.0"): the translation strings add it to these
 // values, and article text writes it inline.
-export const VERIFIED_APP_VERSION = "3.0";
+export const VERIFIED_APP_VERSION = "3.2";

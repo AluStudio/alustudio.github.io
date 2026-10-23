@@ -81,24 +81,29 @@ export const articles = [
       "birinchi marta",
       "sozlash ustasi",
       "do‘kon ochish",
-      "kassa ilovasini sozlash"
+      "kassa ilovasini sozlash",
+      "mamlakat",
+      "valyuta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS’ni birinchi marta ochganingizda sozlash ustasi do‘koningizni taxminan 10 daqiqada ochishda yordam beradi:"
+        "text": "DingPOS’ni birinchi marta ochganingizda sozlash ustasi do‘koningizni ikki bosqichda, bir necha daqiqada ochib beradi:"
       },
       {
         "type": "steps",
         "items": [
-          "Mamlakatingizni tanlang — valyuta, soliq rejimi va standart soliq stavkasi avtomatik to‘ldiriladi (soliq stavkasi va soliq rejimini bu bosqichda o‘zgartirish ham mumkin).",
-          "Do‘kon nomini kiriting va xohlasangiz, do‘kon logotipini yuklang.",
-          "Ko‘rsatmaga amal qilib, 3–5 ta mahsulot yarating (o‘tkazib yuborish mumkin — keyin istalgan vaqtda qo‘shishingiz mumkin)."
+          "Mamlakat yoki mintaqangizni tanlang. Ro‘yxat tepasida shu iPad’ning mintaqasi va eng keng tarqalgan bozorlar turadi; pastda DingPOS App Store’da mavjud bo‘lgan barcha 175 ta mamlakat va mintaqa bor — ularni ilova tilidagi yoki inglizcha nomi bo‘yicha qidirish mumkin. Tanlovingiz valyuta, soliq stavkasi va soliq rejimini avtomatik to‘ldiradi.",
+          "Do‘koningiz bosqichida do‘kon nomini kiriting, xohlasangiz logotip qo‘shing va valyuta, soliq stavkasi hamda soliq rejimini (soliq bilan / soliqsiz) tekshiring. Valyuta sukut bo‘yicha mamlakatingizniki bo‘ladi; 130 ta valyutadan tanlash uchun uni bosing."
         ]
       },
       {
         "type": "p",
-        "text": "Tugatganingizda «Ding!» ovozini eshitasiz — do‘koningiz tayyor va darhol sotuvni boshlashingiz mumkin."
+        "text": "Davom etish tugmasini bosing — «Ding! Do‘koningiz tayyor» yozuvini ko‘rasiz. DingPOS ikkita to‘lov usulini ham o‘zi yaratadi: Naqd pul va Kredit karta. Keyin Mahsulot bo‘limida mahsulotlaringizni qo‘shing va sotuvni boshlang."
+      },
+      {
+        "type": "note",
+        "text": "Valyuta va soliq rejimini sozlashdan keyin o‘zgartirib bo‘lmaydi; soliq stavkasini keyinroq Sozlamalarda o‘zgartirish mumkin. AQSh, Kanada, Braziliya va Mikroneziyada stavka shtat, viloyat yoki shaharga bog‘liq, shuning uchun soliq stavkasi maydoni bo‘sh turadi va davom etish uchun siz qo‘llaydigan stavkani kiritasiz (0 ham mumkin). 175 ta mamlakat ro‘yxati va valyuta tanlash v3.2 versiyasida paydo bo‘lgan; avvalgi versiyalarda 15 ta mamlakat bor edi."
       }
     ],
     "related": [
@@ -205,7 +210,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valyuta va soliq rejimi (soliq bilan / soliqsiz) sozlash tugagach qulflanadi. Barcha oldingi buyurtmalaringiz shular bo‘yicha hisoblangan, shuning uchun ularni o‘rtada o‘zgartirsangiz hisobotlaringiz buzilib qoladi."
+        "text": "Valyuta va soliq rejimi (soliq bilan / soliqsiz) sozlash tugagach qulflanadi. Barcha oldingi buyurtmalaringiz shular bo‘yicha hisoblangan, shuning uchun ularni o‘rtada o‘zgartirsangiz hisobotlaringiz buzilib qoladi. Ularni sozlashning Do‘koningiz bosqichida tekshirib oling: valyuta sukut bo‘yicha mamlakatingizniki bo‘ladi, uni bosib boshqasini tanlash mumkin."
       },
       {
         "type": "note",
@@ -227,16 +232,23 @@ export const articles = [
       "ilova tili",
       "inglizcha",
       "xitoycha",
+      "yaponcha",
+      "ispancha",
+      "ko‘p tillilik",
       "tilni almashtirish"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS ingliz va an’anaviy xitoy tillarini qo‘llab-quvvatlaydi. Sozlamalar → Qurilma sozlamalari bo‘limiga o‘ting va Ilova tili tugmasini bosing. U iPad’ning Sozlamalar ilovasida DingPOS sahifasini ochadi, u yerda Til bo‘limidan tilni tanlaysiz."
+        "text": "DingPOS 32 tilni qo‘llab-quvvatlaydi, jumladan ingliz, an’anaviy va soddalashtirilgan xitoy, yapon, koreys, tay, vyetnam, indonez, malay, ispan (Lotin Amerikasi), portugal (Braziliya), fransuz va nemis tillarini. Sozlamalar → Qurilma sozlamalari bo‘limiga o‘ting va Ilova tili tugmasini bosing. U iPad’ning Sozlamalar ilovasida DingPOS sahifasini ochadi, u yerda Til bo‘limidan tilni tanlaysiz."
       },
       {
         "type": "p",
         "text": "iOS ilovalarga til ro‘yxatini to‘g‘ridan-to‘g‘ri ochishga ruxsat bermaydi, shuning uchun oxirgi bosish tizim Sozlamalarida bajariladi. Til faqat shu iPad’ga qo‘llanadi."
+      },
+      {
+        "type": "note",
+        "text": "Ingliz va an’anaviy xitoy tilidan boshqa tillar v3.2 versiyasida paydo bo‘lgan. Til ro‘yxatida faqat ingliz va xitoy tili bo‘lsa, DingPOS’ni App Store’dan yangilang."
       }
     ],
     "related": [
@@ -353,12 +365,13 @@ export const articles = [
       "line pay",
       "qaytim",
       "nasiya",
-      "qo‘shimcha to‘lov usuli"
+      "qo‘shimcha to‘lov usuli",
+      "komissiya"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Naqd pul, Kredit karta va Line Pay oldindan mavjud, Sozlamalarda esa istalgan boshqa to‘lov nomini qo‘shishingiz mumkin (masalan, Apple Pay, mahalliy hamyonlar)."
+        "text": "Yangi do‘kon ikkita to‘lov usuli bilan boshlanadi — Naqd pul va Kredit karta; ularning nomlari sozlash paytida ilova tilida yoziladi. Sozlamalar → To‘lov usullari bo‘limida istalgan boshqa usulni (masalan, Apple Pay, LINE Pay, mahalliy hamyon) qo‘shish, o‘chirish yoki tartibini o‘zgartirish mumkin."
       },
       {
         "type": "p",
@@ -366,13 +379,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Karta yoki mobil to‘lov provayderingiz komissiya olsa, usulga komissiya stavkasini kiriting — Statistika har bir usul bo‘yicha taxminiy komissiya va taxminiy sof tushumni ko‘rsatadi. “DingPOS karta va mobil to‘lov komissiyalarini hisobga ola oladimi?” maqolasiga qarang."
+      },
+      {
+        "type": "p",
         "text": "Tovarni hozir olib, pulni keyin to‘laydigan doimiy mijoz uchun Nasiya’ni tanlang: savdo qarz sifatida yoziladi va pul kelganda yopiladi. “Doimiy mijozlar nasiyaga olib, keyin to‘lay oladimi?” maqolasiga qarang."
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "DingPOS karta va mobil to‘lov komissiyalarini hisobga ola oladimi?",
+    "keywords": [
+      "komissiya haqi",
+      "karta komissiyasi",
+      "to‘lov komissiyasi",
+      "komissiya stavkasi",
+      "taxminiy sof tushum",
+      "savdogar komissiyasi",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ha. Sozlamalar → To‘lov usullari bo‘limida to‘lov usulini bosing (yoki yangisini qo‘shing) va Komissiya haqini to‘ldiring: foiz, har bir to‘lovga qat’iy summa yoki ikkalasi. Shundan keyin shu usul orqali qabul qilingan har bir to‘lovga o‘sha paytdagi stavka bo‘yicha taxminiy komissiya yoziladi."
+      },
+      {
+        "type": "p",
+        "text": "Statistika’da To‘lov usullari kartasi komissiyali har bir usul ostiga “Komissiya · Sof” qatorini qo‘shadi, kartaning pastida esa butun davr uchun taxminiy komissiya va taxminiy sof tushum ko‘rsatiladi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Provayderingiz amalda ushlab qoladigan stavkani soliq bilan birga kiriting — 3% va 5% soliq bo‘lsa, 3,15% kiriting. Komissiya bo‘lmasa, ikkala maydonni ham bo‘sh qoldiring.",
+          "Stavka o‘zgarishi faqat keyingi to‘lovlarga qo‘llanadi; yozib bo‘lingan komissiyalar o‘zgarmaydi.",
+          "“Qaytarishda foizli komissiya qaytariladi” sukut bo‘yicha yoqilgan — qaytarishda komissiyasini qaytaradigan provayderlar uchun; qat’iy summa hech qachon qaytarilmaydi. Yaroqsiz deb belgilash, qaytarishlar, bekor qilingan oldindan buyurtmalar va bekor qilingan qarz yopilishlari komissiyani shu qoida bo‘yicha qaytaradi, mijozga esa har ikki holatda bir xil summa qaytariladi.",
+          "Usulga stavka kiritilmasdan oldin qabul qilingan to‘lovlarda komissiya yo‘q: Statistika ularni “N tasida stavka yo‘q” deb belgilaydi va sof tushum o‘rniga “—” ko‘rsatadi."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Komissiya — siz kiritgan stavkadan hisoblangan taxmin; haqiqiy summa provayderingiz hisobotida ko‘rinadi. Komissiya stavkalarini tahrirlash va Statistika’da komissiyani ko‘rish uchun Standard yoki undan yuqori tarif kerak. Lite’da maydonlar qulflangan, lekin to‘lovlar baribir komissiyani yozib boradi, shuning uchun tarifni oshirgach ular ko‘rinadi."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -399,7 +459,45 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Kassir ekranida tugagan mahsulotlarni yashirish mumkinmi?",
+    "keywords": [
+      "yashirish",
+      "tugagan mahsulot",
+      "zaxira nol",
+      "kassir",
+      "mahsulot yo‘qolgan",
+      "mahsulot topilmayapti"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ha. Sozlamalar → Qurilma sozlamalari bo‘limiga o‘ting va Tugagan mahsulotlarni yashirish’ni yoqing (sukut bo‘yicha o‘chiq). Shunda kassirning mahsulotlar ro‘yxati, toifa filtri va qidiruvi (nom va shtrix-kod bo‘yicha) zaxirasi 0 yoki undan kam bo‘lgan har bir mahsulotni o‘tkazib yuboradi. Almashtirgich darhol ishlaydi, ilovani qayta ochish shart emas."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Zaxirasi hisobga olinmaydigan mahsulotlar doim ko‘rinadi. Variantli mahsulot faqat barcha variantlari tugagandagina yashiriladi.",
+          "Bu faqat shu iPad’dagi kassirga ta’sir qiladi; Mahsulot bo‘limidagi ro‘yxatda barcha mahsulotlar ko‘rinaveradi.",
+          "Hamma mahsulot yashirilsa, kassir “Barcha mahsulotlar tugagan” yozuvini ko‘rsatadi va almashtirgichni qayerda o‘chirishni aytadi."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Almashtirgich yoqiq turganda bu iPad tugagan mahsulotlarni topa olmaydi, shuning uchun manfiy zaxiraga sota olmaydi va ular uchun oldindan buyurtma ham qabul qila olmaydi — kerak bo‘lsa, uni o‘chiring. Kassirdan mahsulotlar yo‘qolib qolgandek tuyulsa, odatda sabab shu almashtirgich."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -548,7 +646,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Zaxira oldindan buyurtma berilganda ayriladi — tovar mijoz uchun ajratib qo‘yiladi. Zaxirada yo‘q tovarlar manfiyga tushadi va xarid buyurtmasi qabul qilingach tiklanadi.",
+          "Oldindan buyurtma berilganda zaxira kamayadi, shuning uchun sotish mumkin bo‘lgan miqdor darhol o‘zgaradi. Bu signal, ushlab qolish emas: keyingi sotuv oxirgi donani olib qo‘yishi mumkin. Zaxirada yo‘q tovarlar manfiyga tushadi va xarid buyurtmasi qabul qilingach tiklanadi.",
           "Mijoz olib ketishga kelganda, buyurtma tafsilotlarida «Topshirish»ni bosib qolgan summani oling. Shundan keyin buyurtma oddiy yakunlangan sotuvga aylanadi, keyingi qaytarishlar odatdagi tartibda o‘tadi.",
           "Mijoz kelmasa, buyurtma tafsilotlarida «Buyurtmani bekor qilish»ni bosing va avansni qaytarish yoki ushlab qolishni tanlang. Zaxira qayta qo‘shiladi.",
           "Avans cheki va yakuniy topshirish cheki bir xil raqamga ega."
@@ -655,16 +753,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Har bir kombinatsiyaning o‘z narxi va tannarxi bor, zaxirasi ham alohida hisoblanadi. To‘lov paytida mahsulotga tegsangiz, savatga qo‘shishdan oldin variant tanlash oynasi chiqadi."
+        "text": "Mahsulotda variantlar paydo bo‘lgach, uning Narx maydoni yig‘ilib qoladi va har bir kombinatsiya «Variant narxi va zaxirasi» bo‘limida o‘z narxi va o‘z zaxirasiga ega bo‘ladi (v3.2 dan boshlab; avvalgi versiyalar hali ham mahsulot narxini so‘raydi). Kassir, mahsulotlar ro‘yxati va mahsulot tafsilotlarida eng past narxdan eng yuqorisigacha oraliq ko‘rsatiladi, masalan «NT$350–NT$390», yoki barcha kombinatsiyalar bir xil tursa, bitta narx; narx bo‘yicha saralash eng past kombinatsiya narxidan foydalanadi. To‘lov paytida mahsulotga tegsangiz, savatga qo‘shishdan oldin variant tanlash oynasi chiqadi."
+      },
+      {
+        "type": "p",
+        "text": "Har bir kombinatsiya uchun tannarx kiritish shart emas: bo‘sh Tannarx maydoni «Mahsulotga ergashadi» degani — u mahsulot tannarxidan foydalanadi va mahsulot tannarxi o‘zgarganda o‘zgaradi. Raqam kiritilsa, bu «O‘z tannarxi» bo‘ladi — 0 ham shunday. «Hammasiga mahsulot tannarxini qo‘llash» barcha o‘z tannarxlarini birdaniga tozalaydi."
       },
       {
         "type": "note",
-        "text": "Xususiyat va qiymat nomlari 20 belgidan oshmasligi kerak."
+        "text": "Xususiyat va qiymat nomlari 20 belgidan oshmasligi va bo‘sh bo‘lmasligi kerak: bo‘sh xususiyat nomi yoki qiymati saqlashda qizil ramka bilan ajratiladi — uni to‘ldiring yoki bo‘sh qiymatni o‘chiring. Variantli mahsulotda erkin narxdan foydalanib bo‘lmaydi."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "To‘lov paytida mahsulot narxini o‘zim kiritsam bo‘ladimi, masalan yetkazib berish haqi yoki kelishilgan tovar uchun?",
+    "keywords": [
+      "erkin narx",
+      "narxni qo‘lda kiritish",
+      "narx kiritish",
+      "yetkazib berish haqi",
+      "xizmat haqi",
+      "kelishilgan narx",
+      "bozor narxi"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ha — uni Erkin narxli mahsulot qiling. Mahsulotni tahrirlash sahifasida Erkin narx’ni yoqing va narxni bo‘sh qoldiring; kassir va mahsulotlar ro‘yxatida narx o‘rnida «Erkin narx» ko‘rinadi. To‘lov paytida mahsulotga tegsangiz, avval narx so‘raladi; uni kiriting va «Savatga qo‘shish»ni bosing — mahsulot shu narxda qo‘shiladi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 narx ham mumkin (masalan, bepul yetkazib berish); bo‘sh maydonni qo‘shib bo‘lmaydi. Narxni do‘koningizning soliq rejimi qolgan hamma narsani narxlaganidek kiriting.",
+          "Savatda har bir erkin narxli mahsulotga bitta qator to‘g‘ri keladi: unga yana tegsangiz, o‘sha qator ochiladi va narxni o‘zgartirishingiz mumkin.",
+          "Erkin narx yoqilganda «Aksiyalardan chiqarish» ham yoqiladi, shuning uchun haqqa chegirma berilmaydi va u summa chegaralariga hisoblanmaydi. Kelishilgan tovar aksiyalarda qatnashishi kerak bo‘lsa, uni qayta o‘chiring.",
+          "Sotilgach, qator boshqalari kabi soliqqa tortiladi, ball beradi va Statistika’da hisobga olinadi; qaytarishda kiritilgan narx qaytariladi.",
+          "Variantli mahsulotda erkin narxdan foydalanib bo‘lmaydi. Erkin narxli mahsulotlar hech qachon sovg‘a yoki pullik qo‘shimcha sifatida taklif qilinmaydi va almashtirishdagi almashtirilgan tovarlar ro‘yxatida ko‘rinmaydi."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Bu imkoniyat barcha tariflarda bor, narxni kiritish uchun menejer tasdig‘i hech qachon kerak emas."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -775,12 +918,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Manfiy zaxira odatda to‘ldirilgan tovar yozilmaganini yoki oldindan buyurtma qilingan tovar hali kelmaganini bildiradi (oldindan buyurtmalar zaxirani buyurtma qilingan paytda kamaytiradi). Tovar to‘ldirilishini xarid buyurtmasini qabul qilish orqali yozing — raqam o‘zi tiklanadi; inventarizatsiyadagi farqlarni qo‘lda tuzatish bilan to‘g‘rilang, u ombor harakatlari jurnalida saqlanadi."
+      },
+      {
+        "type": "note",
+        "text": "Kassir zaxirasi 0 bo‘lgan mahsulotni topa olmasa, Sozlamalar → Qurilma sozlamalari bo‘limida Tugagan mahsulotlarni yashirish yoqilganmi, tekshiring: u yoqiq turganda bu iPad tugagan mahsulotlarni savatga qo‘sha olmaydi."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -847,7 +994,8 @@ export const articles = [
         "items": [
           "Nasiya savdo: tovar bugun chiqib ketadi va bugungi daromadga qo‘shiladi; pul esa qarz yopilgan kuni qabul qilingan pulga qo‘shiladi.",
           "Oldindan buyurtma: avans to‘langan kuni qabul qilingan pulga qo‘shiladi; daromad esa olib ketish kuni to‘liq hisobga olinadi.",
-          "Ushlab qolingan avans: mijoz oldindan buyurtmani bekor qilsa va avansni o‘zingizda qoldirsangiz, u to‘langan kuniyoq qabul qilingan pulda hisobga olingan bo‘ladi. Statistika uni alohida, ushlab qolingan avanslar sifatida ko‘rsatadi va u hech qachon daromadga kirmaydi."
+          "Ushlab qolingan avans: mijoz oldindan buyurtmani bekor qilsa va avansni o‘zingizda qoldirsangiz, u to‘langan kuniyoq qabul qilingan pulda hisobga olingan bo‘ladi. Statistika uni alohida, ushlab qolingan avanslar sifatida ko‘rsatadi va u hech qachon daromadga kirmaydi.",
+          "Avvalgi buyurtmani yaroqsiz deb belgilash: qaytarilgan pul yaroqsiz deb belgilangan kunning qabul qilingan pulidan ayriladi, shuning uchun o‘sha kunning qabul qilingan puli manfiy bo‘lishi mumkin, Yaroqsiz esa buyurtmani uning sotuv sanasi bo‘yicha hisoblaydi. Qabul qilingan pul va Yaroqsiz kartalaridagi ⓘ ham shuni tushuntiradi."
         ]
       },
       {
@@ -958,21 +1106,33 @@ export const articles = [
       "tannarx",
       "foyda",
       "marja",
+      "yalpi marja",
       "hisobotlar",
-      "foyda hisoblanmagan"
+      "foyda hisoblanmagan",
+      "tannarxsiz mahsulot",
+      "foyda hisoblangan"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Tannarx — ixtiyoriy maydon. Tannarxi yo‘q mahsulotlar hisobotlarda “foyda hisoblanmagan” deb belgilanadi va foyda hisobiga kiritilmaydi — daromad esa to‘liq hisobga olinadi, faqat foyda hisoblanmaydi."
+        "text": "Tannarx — ixtiyoriy maydon. Tannarxi yo‘q mahsulotlar foydaga kiritilmaydi, ularning daromadi esa to‘liq hisobga olinadi. Statistika’dagi Foyda hisoblangan kartasi davrda sotilgan nechta mahsulotning tannarxi yo‘qligini ko‘rsatadi; 0 tannarx hisoblanadi, shuning uchun bunday mahsulotlar ro‘yxatga kirmaydi."
       },
       {
         "type": "p",
-        "text": "To‘liq foyda hisobotlarini olish uchun mahsulotni tahrirlash sahifasida tannarxni kiriting; keyingi buyurtmalar hisobga kiradi. Foyda chegirmadan keyingi daromaddan hisoblanadi."
+        "text": "Kartani yoki Mahsulotlarni ko‘rish tugmasini bosib Tannarxsiz mahsulotlar sahifasini oching: unda mahsulotlar foydadan tashqarida qolgan daromad bo‘yicha tartiblangan. Qatorni bosib mahsulotni oching, Tahrirlash orqali tannarxini qo‘shing — qaytib kelganingizda qator «Tannarx qo‘shildi» deb belgilanadi. Variantli mahsulot, variantlaridan biri yoki mahsulotning o‘zida tannarx bo‘lsa, tannarxli hisoblanadi."
+      },
+      {
+        "type": "p",
+        "text": "Foyda — barcha chegirmalardan (mahsulot va buyurtma chegirmalari, aksiyalar, ballarni ishlatish) keyingi va soliqdan oldingi daromaddan tannarxni ayirganda chiqadi — shuning uchun maydon «Tannarx, soliqsiz (ixtiyoriy)» deb nomlanadi: soliqdan oldin to‘lagan narxingizni kiriting. Marja — foydaning tannarxli mahsulotlarning soliqdan oldingi daromadiga nisbati, shuning uchun tannarxsiz mahsulotlar uni pasaytirmaydi. Qaytarish o‘sha tovarlar keltirgan foydani qaytarish kunida ayiradi."
+      },
+      {
+        "type": "note",
+        "text": "Kiritgan tannarxingiz faqat keyingi sotuvlarga ta’sir qiladi; allaqachon amalga oshgan sotuvlar qayta hisoblanmaydi. Bu hisoblash v3.1 da paydo bo‘lgan: avvalgi versiyalar faqat qo‘lda berilgan mahsulot chegirmalarini ayirgan va soliq bilan narxdagi soliqni foyda deb hisoblagan, shuning uchun yangilangandan keyin chegirmali yoki soliq bilan narxli davrlarda foyda kamroq ko‘rinadi. Bu tuzatish, yo‘qolgan ma’lumot emas."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1035,9 +1195,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Jadval: bugun faol sanalar ichidami? Happy Hour vaqti hafta kunini yoki soatni cheklayaptimi?",
-          "Qamrov: savatdagi mahsulotlar aksiya qamrab oladigan mahsulot yoki toifalarga kiradimi? Summa chegarasiga yetildimi?",
+          "Qamrov: savatdagi mahsulotlar aksiya qamrab oladigan mahsulot yoki toifalarga kiradimi? Mahsulotda «Aksiyalardan chiqarish» yoqilmaganmi (erkin narxli mahsulotlarda u sukut bo‘yicha yoqilgan)? Summa chegarasiga yetildimi?",
           "Auditoriya: aksiya a’zolik darajasi yoki tug‘ilgan oy bilan cheklanganmi? To‘lov paytida shu a’zo tanlanganmi?",
-          "Foydalanish limitlari: umumiy limit yoki shu mijozning limiti tugaganmi?",
+          "Foydalanish limitlari: umumiy limit yoki shu mijozning limiti tugaganmi? Tug‘ilgan oy aksiyasida har bir mijoz uchun limit kalendar yil bo‘yicha hisoblanadi.",
           "Birgalikda qo‘llanish: ustuvorligi yuqori aksiyada «Bu aksiya ishlagach, keyingilarini to‘xtatish» yoqilgani bu aksiyani to‘sib qo‘yayaptimi?"
         ]
       },
@@ -1318,7 +1478,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Fayl jadval ko‘rinishida ochiladi. Inglizcha va xitoycha keng tarqalgan ustun nomlari o‘zi moslashtiriladi; moslashtirishni o‘zgartirish uchun istalgan ustun sarlavhasini bosing.",
+          "Fayl jadval ko‘rinishida ochiladi. Inglizcha va xitoycha (an’anaviy yoki soddalashtirilgan) keng tarqalgan ustun nomlari o‘zi moslashtiriladi; moslashtirishni o‘zgartirish uchun istalgan ustun sarlavhasini bosing.",
           "Qiymatni joyida tuzatish uchun istalgan katakni bosing — faylni tahrirlab, boshidan boshlash shart emas.",
           "Tekshirish uchun Tasdiqlash tugmasini bosing. Muammoli qatorlar sababi bilan qizil rangda belgilanadi; savdolarni import qilishda xatoli buyurtmalarni o‘tkazib yuborish mumkin.",
           "Qaror talab qiladigan holatlarni hal qiling (takrorlangan mahsulot nomlari, bir nechta mijozga mos kelgan qator), xulosani ko‘rib chiqing va Importni boshlash tugmasini bosing."
@@ -1327,7 +1487,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Import qilingan savdolar tranzaksiya sanasi bo‘yicha joylashtiriladi va do‘koningizning valyutasi hamda soliq rejimi bilan qayta hisoblanadi. Ular zaxiraga tegmaydi va xush kelibsiz ballarini bermaydi.",
+          "Import qilingan savdolar buyurtma sanasi bo‘yicha joylashtiriladi va do‘koningizning valyutasi hamda soliq rejimi bilan qayta hisoblanadi. Ular zaxiraga tegmaydi va xush kelibsiz ballarini bermaydi.",
           "Mijozlar mavjud mijozlarga telefon yoki email bo‘yicha moslashtiriladi; mos kelmaganlari yangi yaratiladi.",
           "Import qilingan buyurtmalarda Import sanasi va manbadagi buyurtma raqami ko‘rsatiladi; ularni yaroqsiz deb belgilab yoki qaytarib bo‘lmaydi.",
           "Xatoli qatorlarni sabablari yozilgan CSV sifatida eksport qilish mumkin — ularni tuzatib, qayta import qiling. Takrorlangan qatorlar o‘zi o‘tkazib yuboriladi."
@@ -1571,6 +1731,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Oxirgi 7 kun ichida va oxirgi kuni ilova sizga bir martadan eslatadi: necha kun qolgani, sinov tugagach to‘lov qabul qilish to‘xtab turishi va ma’lumotlaringiz saqlanishi haqida."
+      },
+      {
+        "type": "p",
         "text": "Sinov davrida yaratgan hamma narsangiz (mahsulotlar, buyurtmalar, a’zolar) to‘liq saqlanadi. Keyin obuna bo‘lasizmi yoki yo‘qmi, ma’lumotlaringiz hech qachon o‘chirilmaydi."
       }
     ],
@@ -1630,7 +1794,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: peshtaxtada yolg‘iz ishlaydigan, faqat to‘lov qabul qilish va mahsulotlar kerak bo‘lgan sotuvchi uchun.",
-          "Standard: aksiyalar, ballar va a’zolik darajalari, zaxirani hisobga olish, xaridlar, nasiya savdo va oldindan buyurtmalarni qo‘shadi.",
+          "Standard: aksiyalar, ballar va a’zolik darajalari, zaxirani hisobga olish, xaridlar, nasiya savdo, oldindan buyurtmalar va taxminiy to‘lov komissiyalarini qo‘shadi.",
           "Pro: xodimlar uchun kirish profillari va ruxsatlar, menejer tomonidan PIN bilan tasdiqlash, faoliyat jurnali, tiklash yozuvlari va kengaytirilgan hisobotlarni qo‘shadi — xodimlari bor do‘konlar uchun."
         ]
       },
@@ -1797,15 +1961,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Avval Sozlamalar → A’zolik darajalari bo‘limida darajalarni yarating (masalan, Gold), so‘ng aksiyani shu darajaga yo‘naltiring. Tug‘ilgan kun takliflari uchun shartni “Tug‘ilgan oy” qilib belgilang."
+        "text": "Avval Sozlamalar → A’zolik darajalari bo‘limida darajalarni yarating (masalan, Gold), so‘ng aksiyani shu darajaga yo‘naltiring. Tug‘ilgan kun takliflari uchun auditoriyani Tug‘ilgan oy qilib belgilang va Har bir mijoz uchun limit maydonini to‘ldiring."
       },
       {
         "type": "list",
         "items": [
           "Taklif ishga tushishi uchun to‘lov paytida a’zo tanlangan bo‘lishi kerak — mosligi hozir tanlangan a’zo bo‘yicha aniqlanadi.",
           "Tug‘ilgan kun mosligi a’zoning tug‘ilgan oyidan olinadi, shuning uchun tug‘ilgan kun maydonini to‘ldiring; u kiritilmagan a’zolar hech qachon tug‘ilgan kun mijozi hisoblanmaydi.",
+          "Tug‘ilgan oy aksiyasi uchun har bir mijozga limit kerak, u kalendar yil bo‘yicha hisoblanadi: 1 limit har bir mijoz aksiyadan yilda bir marta foydalana oladi degani, keyingi yilda u yangilanadi. Limitsiz saqlab bo‘lmaydi.",
           "Avtomatik daraja oshirish to‘lov yakunlanganda aniqlanadi; buyurtma yaroqsiz deb belgilansa, u keltirib chiqargan oshirish avtomatik ravishda bekor bo‘ladi."
         ]
+      },
+      {
+        "type": "note",
+        "text": "v3.2 gacha tug‘ilgan oy aksiyasi xato ko‘rsatardi va har bir mijoz uchun limit to‘ldirilgan bo‘lsa ham saqlab bo‘lmasdi. Sizda shunday bo‘lsa, DingPOS’ni App Store’dan yangilang."
       }
     ],
     "related": [

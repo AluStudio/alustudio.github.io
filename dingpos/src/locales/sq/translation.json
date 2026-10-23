@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Menaxhimi i produkteve",
-          "desc": "Variante, barkode, foto, kategori"
+          "desc": "Variante, barkode, foto, kategori, artikuj me çmim në shitje"
         },
         "import": {
           "name": "Importimi i të dhënave",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Paneli i biznesit",
           "desc": "Të ardhura, fitim, zbritje, përzierja e pagesave dhe produktet më të shitura"
+        },
+        "payment_fees": {
+          "name": "Vlerësimi i komisioneve të pagesës",
+          "desc": "Cakto normën e komisionit për çdo mënyrë pagese; shiko komisionet dhe të arkëtuara neto të vlerësuara sipas mënyrës"
         },
         "comparison": {
           "name": "Krahasimi i periudhave",

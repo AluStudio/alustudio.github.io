@@ -132,7 +132,9 @@
   <url><loc>https://alu-studio.com/dingpos/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/void-order/</loc></url>
@@ -141,6 +143,7 @@
   <url><loc>https://alu-studio.com/dingpos/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/support/inventory-tracking/</loc></url>
@@ -196,7 +199,9 @@
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/zh-hant/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/zh-hant/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/void-order/</loc></url>
@@ -205,6 +210,7 @@
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/zh-hant/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hant/support/inventory-tracking/</loc></url>
@@ -260,7 +266,9 @@
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/zh-hans/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/zh-hans/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/void-order/</loc></url>
@@ -269,6 +277,7 @@
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/zh-hans/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/zh-hans/support/inventory-tracking/</loc></url>
@@ -324,7 +333,9 @@
   <url><loc>https://alu-studio.com/dingpos/ja/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ja/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ja/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/void-order/</loc></url>
@@ -333,6 +344,7 @@
   <url><loc>https://alu-studio.com/dingpos/ja/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ja/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ja/support/inventory-tracking/</loc></url>
@@ -388,7 +400,9 @@
   <url><loc>https://alu-studio.com/dingpos/th/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/th/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/th/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/void-order/</loc></url>
@@ -397,6 +411,7 @@
   <url><loc>https://alu-studio.com/dingpos/th/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/th/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/th/support/inventory-tracking/</loc></url>
@@ -452,7 +467,9 @@
   <url><loc>https://alu-studio.com/dingpos/ko/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ko/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ko/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/void-order/</loc></url>
@@ -461,6 +478,7 @@
   <url><loc>https://alu-studio.com/dingpos/ko/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ko/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ko/support/inventory-tracking/</loc></url>
@@ -516,7 +534,9 @@
   <url><loc>https://alu-studio.com/dingpos/vi/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/vi/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/vi/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/void-order/</loc></url>
@@ -525,6 +545,7 @@
   <url><loc>https://alu-studio.com/dingpos/vi/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/vi/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/vi/support/inventory-tracking/</loc></url>
@@ -580,7 +601,9 @@
   <url><loc>https://alu-studio.com/dingpos/id/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/id/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/id/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/void-order/</loc></url>
@@ -589,6 +612,7 @@
   <url><loc>https://alu-studio.com/dingpos/id/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/id/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/id/support/inventory-tracking/</loc></url>
@@ -644,7 +668,9 @@
   <url><loc>https://alu-studio.com/dingpos/es/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/es/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/es/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/void-order/</loc></url>
@@ -653,6 +679,7 @@
   <url><loc>https://alu-studio.com/dingpos/es/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/es/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/es/support/inventory-tracking/</loc></url>
@@ -708,7 +735,9 @@
   <url><loc>https://alu-studio.com/dingpos/fr/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/fr/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/fr/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/void-order/</loc></url>
@@ -717,6 +746,7 @@
   <url><loc>https://alu-studio.com/dingpos/fr/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/fr/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fr/support/inventory-tracking/</loc></url>
@@ -772,7 +802,9 @@
   <url><loc>https://alu-studio.com/dingpos/de/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/de/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/de/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/void-order/</loc></url>
@@ -781,6 +813,7 @@
   <url><loc>https://alu-studio.com/dingpos/de/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/de/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/de/support/inventory-tracking/</loc></url>
@@ -836,7 +869,9 @@
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/pt-br/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/pt-br/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/void-order/</loc></url>
@@ -845,6 +880,7 @@
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/pt-br/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/pt-br/support/inventory-tracking/</loc></url>
@@ -900,7 +936,9 @@
   <url><loc>https://alu-studio.com/dingpos/it/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/it/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/it/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/void-order/</loc></url>
@@ -909,6 +947,7 @@
   <url><loc>https://alu-studio.com/dingpos/it/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/it/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/it/support/inventory-tracking/</loc></url>
@@ -964,7 +1003,9 @@
   <url><loc>https://alu-studio.com/dingpos/nl/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/nl/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/nl/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/void-order/</loc></url>
@@ -973,6 +1014,7 @@
   <url><loc>https://alu-studio.com/dingpos/nl/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/nl/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nl/support/inventory-tracking/</loc></url>
@@ -1028,7 +1070,9 @@
   <url><loc>https://alu-studio.com/dingpos/ms/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ms/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ms/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/void-order/</loc></url>
@@ -1037,6 +1081,7 @@
   <url><loc>https://alu-studio.com/dingpos/ms/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ms/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ms/support/inventory-tracking/</loc></url>
@@ -1092,7 +1137,9 @@
   <url><loc>https://alu-studio.com/dingpos/tr/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/tr/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/tr/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/void-order/</loc></url>
@@ -1101,6 +1148,7 @@
   <url><loc>https://alu-studio.com/dingpos/tr/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/tr/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/tr/support/inventory-tracking/</loc></url>
@@ -1156,7 +1204,9 @@
   <url><loc>https://alu-studio.com/dingpos/sv/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/sv/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/sv/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/void-order/</loc></url>
@@ -1165,6 +1215,7 @@
   <url><loc>https://alu-studio.com/dingpos/sv/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/sv/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sv/support/inventory-tracking/</loc></url>
@@ -1220,7 +1271,9 @@
   <url><loc>https://alu-studio.com/dingpos/da/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/da/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/da/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/void-order/</loc></url>
@@ -1229,6 +1282,7 @@
   <url><loc>https://alu-studio.com/dingpos/da/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/da/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/da/support/inventory-tracking/</loc></url>
@@ -1284,7 +1338,9 @@
   <url><loc>https://alu-studio.com/dingpos/nb/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/nb/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/nb/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/void-order/</loc></url>
@@ -1293,6 +1349,7 @@
   <url><loc>https://alu-studio.com/dingpos/nb/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/nb/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/nb/support/inventory-tracking/</loc></url>
@@ -1348,7 +1405,9 @@
   <url><loc>https://alu-studio.com/dingpos/fi/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/fi/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/fi/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/void-order/</loc></url>
@@ -1357,6 +1416,7 @@
   <url><loc>https://alu-studio.com/dingpos/fi/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/fi/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/fi/support/inventory-tracking/</loc></url>
@@ -1412,7 +1472,9 @@
   <url><loc>https://alu-studio.com/dingpos/et/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/et/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/et/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/void-order/</loc></url>
@@ -1421,6 +1483,7 @@
   <url><loc>https://alu-studio.com/dingpos/et/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/et/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/et/support/inventory-tracking/</loc></url>
@@ -1476,7 +1539,9 @@
   <url><loc>https://alu-studio.com/dingpos/el/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/el/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/el/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/void-order/</loc></url>
@@ -1485,6 +1550,7 @@
   <url><loc>https://alu-studio.com/dingpos/el/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/el/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/el/support/inventory-tracking/</loc></url>
@@ -1540,7 +1606,9 @@
   <url><loc>https://alu-studio.com/dingpos/hu/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/hu/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/hu/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/void-order/</loc></url>
@@ -1549,6 +1617,7 @@
   <url><loc>https://alu-studio.com/dingpos/hu/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/hu/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hu/support/inventory-tracking/</loc></url>
@@ -1604,7 +1673,9 @@
   <url><loc>https://alu-studio.com/dingpos/bg/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/bg/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/bg/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/void-order/</loc></url>
@@ -1613,6 +1684,7 @@
   <url><loc>https://alu-studio.com/dingpos/bg/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/bg/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bg/support/inventory-tracking/</loc></url>
@@ -1668,7 +1740,9 @@
   <url><loc>https://alu-studio.com/dingpos/sq/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/sq/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/sq/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/void-order/</loc></url>
@@ -1677,6 +1751,7 @@
   <url><loc>https://alu-studio.com/dingpos/sq/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/sq/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/sq/support/inventory-tracking/</loc></url>
@@ -1732,7 +1807,9 @@
   <url><loc>https://alu-studio.com/dingpos/ka/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ka/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ka/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/void-order/</loc></url>
@@ -1741,6 +1818,7 @@
   <url><loc>https://alu-studio.com/dingpos/ka/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/ka/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/ka/support/inventory-tracking/</loc></url>
@@ -1796,7 +1874,9 @@
   <url><loc>https://alu-studio.com/dingpos/mn/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/mn/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/mn/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/void-order/</loc></url>
@@ -1805,6 +1885,7 @@
   <url><loc>https://alu-studio.com/dingpos/mn/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/mn/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/mn/support/inventory-tracking/</loc></url>
@@ -1860,7 +1941,9 @@
   <url><loc>https://alu-studio.com/dingpos/uz/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/uz/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/uz/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/void-order/</loc></url>
@@ -1869,6 +1952,7 @@
   <url><loc>https://alu-studio.com/dingpos/uz/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/uz/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/uz/support/inventory-tracking/</loc></url>
@@ -1924,7 +2008,9 @@
   <url><loc>https://alu-studio.com/dingpos/km/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/km/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/km/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/void-order/</loc></url>
@@ -1933,6 +2019,7 @@
   <url><loc>https://alu-studio.com/dingpos/km/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/km/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/km/support/inventory-tracking/</loc></url>
@@ -1988,7 +2075,9 @@
   <url><loc>https://alu-studio.com/dingpos/lo/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/lo/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/lo/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/void-order/</loc></url>
@@ -1997,6 +2086,7 @@
   <url><loc>https://alu-studio.com/dingpos/lo/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/lo/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/lo/support/inventory-tracking/</loc></url>
@@ -2052,7 +2142,9 @@
   <url><loc>https://alu-studio.com/dingpos/hi/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/hi/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/hi/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/void-order/</loc></url>
@@ -2061,6 +2153,7 @@
   <url><loc>https://alu-studio.com/dingpos/hi/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/hi/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/hi/support/inventory-tracking/</loc></url>
@@ -2116,7 +2209,9 @@
   <url><loc>https://alu-studio.com/dingpos/bn/support/apply-discounts/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/tax-calculation/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/payment-methods/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/bn/support/payment-fees/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/checkout-sound/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/bn/support/hide-out-of-stock/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/price-change-cart/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/manual-discount-promotion/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/void-order/</loc></url>
@@ -2125,6 +2220,7 @@
   <url><loc>https://alu-studio.com/dingpos/bn/support/on-account/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/order-notes/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/product-variants/</loc></url>
+  <url><loc>https://alu-studio.com/dingpos/bn/support/open-price-products/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/barcode-scanning/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/product-order/</loc></url>
   <url><loc>https://alu-studio.com/dingpos/bn/support/inventory-tracking/</loc></url>

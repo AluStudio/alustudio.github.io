@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Pengurusan produk",
-          "desc": "Varian, kod bar, foto, kategori"
+          "desc": "Varian, kod bar, foto, kategori, produk harga terbuka"
         },
         "import": {
           "name": "Import data",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Papan pemuka perniagaan",
           "desc": "Hasil jualan, untung, diskaun, campuran pembayaran dan jualan terlaris"
+        },
+        "payment_fees": {
+          "name": "Anggaran caj pemprosesan",
+          "desc": "Tetapkan kadar caj bagi setiap kaedah pembayaran; lihat caj dan anggaran diterima bersih mengikut kaedah"
         },
         "comparison": {
           "name": "Perbandingan tempoh",

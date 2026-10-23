@@ -82,24 +82,29 @@ export const articles = [
       "erste Schritte",
       "Einrichtungsassistent",
       "Laden eröffnen",
+      "Land",
+      "Währung",
       "Kassen-App einrichten"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Beim ersten Öffnen von DingPOS führt Sie ein Einrichtungsassistent in etwa 10 Minuten durch die Eröffnung Ihres Ladens:"
+        "text": "Beim ersten Öffnen von DingPOS eröffnet ein Einrichtungsassistent Ihren Laden in zwei Schritten und wenigen Minuten:"
       },
       {
         "type": "steps",
         "items": [
-          "Wählen Sie Ihr Land – Währung, Steuermodus und ein Standardsteuersatz werden automatisch eingetragen (Steuersatz und Steuermodus lassen sich an dieser Stelle noch anpassen).",
-          "Geben Sie den Namen Ihres Ladens ein und laden Sie optional ein Logo hoch.",
-          "Legen Sie anhand der Anleitung 3–5 Artikel an (überspringbar – Sie können sie jederzeit später hinzufügen)."
+          "Wählen Sie Ihr Land oder Ihre Region. Oben in der Liste stehen die Region dieses iPad und die häufigsten Märkte; darunter finden Sie alle 175 Länder und Regionen, in denen DingPOS im App Store erhältlich ist – durchsuchbar nach Namen in der Sprache der App oder auf Englisch. Ihre Auswahl trägt Währung, Steuersatz und Steuermodus ein.",
+          "Geben Sie unter „Ihr Geschäft“ den Namen des Geschäfts ein, fügen Sie optional ein Logo hinzu und prüfen Sie Währung, Steuersatz und Steuermodus (inklusive / exklusive). Die Währung ist zunächst die Ihres Landes; tippen Sie darauf, um aus 130 Währungen zu wählen."
         ]
       },
       {
         "type": "p",
-        "text": "Zum Abschluss hören Sie ein „Ding!“ – Ihr Laden ist startklar und Sie können sofort kassieren."
+        "text": "Tippen Sie auf „Fortfahren“, und es erscheint „Ding! Ihr Geschäft ist startklar.“ DingPOS richtet außerdem zwei Zahlungsarten ein, Bargeld und Kreditkarte. Legen Sie dann unter „Artikel“ Ihre Artikel an und starten Sie den Verkauf."
+      },
+      {
+        "type": "note",
+        "text": "Währung und Steuermodus lassen sich nach der Einrichtung nicht mehr ändern; den Steuersatz können Sie später weiterhin in den Einstellungen ändern. In den USA, Kanada, Brasilien und Mikronesien hängt der Satz vom Bundesstaat, der Provinz oder der Stadt ab; das Feld für den Steuersatz bleibt deshalb zunächst leer, und Sie tragen den Satz ein, den Sie berechnen (0 ist erlaubt), um fortzufahren. Die Liste mit 175 Ländern und die Wahl der Währung gibt es seit v3.2; frühere Versionen boten 15 Länder an."
       }
     ],
     "related": [
@@ -209,7 +214,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Währung und Steuermodus (inklusive / exklusive) sind nach Abschluss der Einrichtung gesperrt. Alle bisherigen Bestellungen wurden damit berechnet; eine Änderung mittendrin würde Ihre Berichte verfälschen."
+        "text": "Währung und Steuermodus (inklusive / exklusive) sind nach Abschluss der Einrichtung gesperrt. Alle bisherigen Bestellungen wurden damit berechnet; eine Änderung mittendrin würde Ihre Berichte verfälschen. Prüfen Sie beides im Einrichtungsschritt „Ihr Geschäft“: Die Währung ist zunächst die Ihres Landes, und Sie können darauf tippen, um eine andere zu wählen."
       },
       {
         "type": "note",
@@ -231,17 +236,24 @@ export const articles = [
       "App-Sprache",
       "Englisch",
       "Chinesisch",
+      "Japanisch",
+      "Spanisch",
+      "mehrsprachig",
       "wechseln",
       "Spracheinstellung"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS unterstützt Englisch und traditionelles Chinesisch. Gehen Sie zu Einstellungen → Geräteeinstellungen und tippen Sie auf App-Sprache. Dadurch öffnet sich die Seite von DingPOS in der Einstellungen-App des iPad, wo Sie unter „Sprache“ die gewünschte Sprache wählen."
+        "text": "DingPOS unterstützt 32 Sprachen, darunter Englisch, traditionelles und vereinfachtes Chinesisch, Japanisch, Koreanisch, Thailändisch, Vietnamesisch, Indonesisch, Malaiisch, Spanisch (Lateinamerika), Portugiesisch (Brasilien), Französisch und Deutsch. Gehen Sie zu Einstellungen → Geräteeinstellungen und tippen Sie auf App-Sprache. Dadurch öffnet sich die Seite von DingPOS in der Einstellungen-App des iPad, wo Sie unter „Sprache“ die gewünschte Sprache wählen."
       },
       {
         "type": "p",
         "text": "iOS erlaubt Apps nicht, die Sprachliste direkt zu öffnen, deshalb erfolgt der letzte Tipp in den Systemeinstellungen. Die Sprache gilt nur für dieses iPad."
+      },
+      {
+        "type": "note",
+        "text": "Andere Sprachen als Englisch und traditionelles Chinesisch gibt es seit v3.2. Wenn unter „Sprache“ nur Englisch und Chinesisch stehen, aktualisieren Sie DingPOS im App Store."
       }
     ],
     "related": [
@@ -358,12 +370,13 @@ export const articles = [
       "Line Pay",
       "Wechselgeld",
       "eigene Zahlungsart",
-      "auf Rechnung"
+      "auf Rechnung",
+      "Gebühren"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Bargeld, Kreditkarte und Line Pay sind bereits eingerichtet, und in den Einstellungen können Sie beliebige eigene Zahlungsarten hinzufügen (z. B. Apple Pay oder lokale Wallets)."
+        "text": "Ein neuer Laden startet mit zwei Zahlungsarten, Bargeld und Kreditkarte, die bei der Einrichtung in der Sprache der App benannt werden. Unter Einstellungen → Zahlungsarten können Sie beliebige weitere Zahlungsarten hinzufügen (z. B. Apple Pay, Line Pay oder eine lokale Wallet) sowie löschen oder umsortieren."
       },
       {
         "type": "p",
@@ -371,13 +384,61 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Wenn Ihr Anbieter für Karten- oder mobile Zahlungen eine Gebühr erhebt, hinterlegen Sie für die Zahlungsart einen Gebührensatz, und die Statistik schätzt die Gebühren und den Nettoeingang je Zahlungsart – siehe „Kann DingPOS Gebühren für Karten- und mobile Zahlungen erfassen?“"
+      },
+      {
+        "type": "p",
         "text": "Für Stammkunden, die die Ware jetzt mitnehmen und später bezahlen, wählen Sie „Auf Rechnung“: Der Verkauf wird als offener Posten erfasst und beglichen, sobald das Geld eintrifft. Siehe „Können Stammkunden auf Rechnung kaufen und später bezahlen?“"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Kann DingPOS Gebühren für Karten- und mobile Zahlungen erfassen?",
+    "keywords": [
+      "Bearbeitungsgebühr",
+      "Kartengebühr",
+      "Zahlungsgebühr",
+      "Transaktionsgebühr",
+      "Gebührensatz",
+      "Nettoeingang",
+      "Händlergebühr",
+      "Line Pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Tippen Sie unter Einstellungen → Zahlungsarten auf eine Zahlungsart (oder fügen Sie eine neue hinzu) und füllen Sie die Bearbeitungsgebühr aus: einen Prozentsatz, einen festen Betrag pro Zahlung oder beides. Ab dann wird für jede über diese Zahlungsart kassierte Zahlung eine Gebühr erfasst, geschätzt mit dem Satz, der in diesem Moment gilt."
+      },
+      {
+        "type": "p",
+        "text": "In der Statistik ergänzt die Karte „Zahlungsarten“ unter jeder Zahlungsart mit Gebühr eine Zeile „Gebühr · Netto“, und am Ende der Karte stehen die voraussichtlichen Gebühren und der voraussichtliche Nettoeingang für den gesamten Zeitraum."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tragen Sie den Satz ein, den Ihr Anbieter tatsächlich abzieht, einschließlich Steuer – bei 3 % plus 5 % Steuer also 3,15 %. Lassen Sie beide Felder leer, wenn es keine Gebühr gibt.",
+          "Eine Änderung des Satzes gilt nur für spätere Zahlungen; bereits erfasste Gebühren bleiben unverändert.",
+          "„Prozentanteil der Gebühr bei Rückgaben erstattet“ ist standardmäßig aktiviert, für Anbieter, die ihre Gebühr bei einer Erstattung zurückgeben; der feste Betrag wird nie erstattet. Annullierungen, Rückgaben, stornierte Vorbestellungen und rückgängig gemachte Begleichungen kehren Gebühren nach dieser Regel um, und der Kunde erhält in beiden Fällen denselben Betrag zurück.",
+          "Zahlungen, die kassiert wurden, bevor die Zahlungsart einen Gebührensatz hatte, tragen keine Gebühr: Die Statistik markiert sie mit „N ohne Gebührensatz“ und zeigt das Netto als „—“."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Gebühren sind Schätzungen auf Basis des eingetragenen Satzes; maßgeblich ist die Abrechnung Ihres Anbieters. Gebührensätze zu bearbeiten und Gebühren in der Statistik zu sehen erfordert den Tarif Standard oder höher. Bei Lite sind die Felder gesperrt, Zahlungen erfassen ihre Gebühren aber trotzdem, sodass sie nach einem Upgrade erscheinen."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -404,7 +465,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Kann ich nicht vorrätige Artikel auf dem Kassenbildschirm ausblenden?",
+    "keywords": [
+      "ausblenden",
+      "nicht vorrätig",
+      "ausverkauft",
+      "Bestand null",
+      "Kasse",
+      "Artikel fehlt",
+      "Artikel nicht gefunden"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Öffnen Sie Einstellungen → Geräteeinstellungen und aktivieren Sie „Nicht vorrätige Artikel ausblenden“ (standardmäßig aus). Artikelraster, Kategoriefilter und Suche (Name und Barcode) der Kasse überspringen dann jeden Artikel, dessen Bestand 0 oder darunter liegt. Der Schalter wirkt sofort, die App muss nicht neu geöffnet werden."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Artikel ohne Bestandsführung werden immer angezeigt. Ein Artikel mit Varianten wird nur ausgeblendet, wenn alle Varianten nicht vorrätig sind.",
+          "Das betrifft nur die Kasse dieses iPad; die Artikelliste zeigt weiterhin jeden Artikel.",
+          "Sind alle Artikel ausgeblendet, zeigt die Kasse „Alle Artikel sind nicht vorrätig“ und sagt Ihnen, wo Sie den Schalter wieder ausschalten."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Solange der Schalter aktiv ist, findet dieses iPad nicht vorrätige Artikel nicht – es kann also weder in den negativen Bestand verkaufen noch eine Vorbestellung dafür annehmen. Schalten Sie ihn aus, wenn Sie das brauchen. Wenn Artikel an der Kasse scheinbar verschwunden sind, liegt es meistens an diesem Schalter."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -553,7 +653,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Der Bestand wird bereits beim Anlegen der Vorbestellung abgebucht und die Ware so für den Kunden reserviert. Nicht vorrätige Artikel gehen in den negativen Bereich und gleichen sich aus, sobald eine Einkaufsbestellung eingegangen ist.",
+          "Der Bestand wird bereits beim Anlegen der Vorbestellung abgebucht, sodass die verkaufbare Menge sofort sinkt. Das ist ein Signal, keine Reservierung: Ein späterer Verkauf kann noch die letzte Einheit nehmen. Nicht vorrätige Artikel gehen in den negativen Bereich und gleichen sich aus, sobald eine Einkaufsbestellung eingegangen ist.",
           "Holt der Kunde die Ware ab, tippen Sie in den Bestelldetails auf Übergeben und kassieren den Restbetrag. Die Bestellung wird dann zu einem ganz normalen abgeschlossenen Verkauf; spätere Rückgaben laufen wie gewohnt über den Rückgabe-Ablauf.",
           "Kommt der Kunde nicht, tippen Sie in den Bestelldetails auf Bestellung stornieren und wählen, ob die Anzahlung erstattet oder einbehalten wird. Der Bestand wird wieder gutgeschrieben.",
           "Der Beleg über die Anzahlung und der Abholbeleg tragen dieselbe Nummer."
@@ -661,16 +761,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jede Kombination hat einen eigenen Preis und Einkaufspreis und einen eigenen Bestand. An der Kasse erscheint beim Antippen des Artikels eine Variantenauswahl, bevor er in den Warenkorb gelegt wird."
+        "text": "Sobald ein Artikel Varianten hat, klappt sein Feld „Preis“ ein, und jede Kombination bekommt unter „Variantenpreis & -bestand“ einen eigenen Preis und einen eigenen Bestand (seit v3.2; frühere Versionen verlangen weiterhin einen Artikelpreis). Kasse, Artikelliste und Artikeldetails zeigen eine Preisspanne vom niedrigsten bis zum höchsten Preis, etwa „NT$350–NT$390“, oder einen einzigen Preis, wenn alle Kombinationen gleich viel kosten; die Sortierung nach Preis nutzt den niedrigsten Kombinationspreis. An der Kasse erscheint beim Antippen des Artikels eine Variantenauswahl, bevor er in den Warenkorb gelegt wird."
+      },
+      {
+        "type": "p",
+        "text": "Sie müssen nicht für jede Kombination einen Einkaufspreis eintragen: Ein leeres Feld „Einkaufspreis“ bedeutet „Wie Artikel“, es übernimmt also den Einkaufspreis des Artikels und ändert sich mit ihm. Eine Zahl macht daraus „Eigener Einkaufspreis“ – auch 0. Mit „Für alle Artikel-Einkaufspreis verwenden“ löschen Sie alle eigenen Einkaufspreise auf einmal."
       },
       {
         "type": "note",
-        "text": "Namen von Optionen und Optionswerten sind auf 20 Zeichen begrenzt."
+        "text": "Namen von Optionen und Optionswerten sind auf 20 Zeichen begrenzt und dürfen nicht leer sein: Ein leerer Options- oder Wertname wird beim Sichern rot umrandet – füllen Sie ihn aus oder löschen Sie den leeren Wert. Ein Artikel mit Varianten kann keinen freien Preis verwenden."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Kann ich den Preis eines Artikels erst an der Kasse eingeben, etwa für Versandkosten oder verhandelte Ware?",
+    "keywords": [
+      "freier Preis",
+      "Preis eingeben",
+      "Preis an der Kasse",
+      "Versandkosten",
+      "Servicegebühr",
+      "verhandelter Preis",
+      "Tagespreis"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja – legen Sie einen Artikel mit freiem Preis an. Aktivieren Sie auf der Bearbeitungsseite des Artikels „Freier Preis“ und lassen Sie den Preis leer; Kasse und Artikelliste zeigen dann „Freier Preis“ anstelle des Preises. Beim Antippen des Artikels an der Kasse wird zuerst nach dem Preis gefragt; geben Sie ihn ein und tippen Sie auf „In den Warenkorb“, um den Artikel zu diesem Preis hinzuzufügen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 ist ein gültiger Preis (etwa für kostenlosen Versand); ein leeres Feld lässt sich nicht hinzufügen. Geben Sie den Preis so ein, wie der Steuermodus Ihres Geschäfts auch alle anderen Preise behandelt.",
+          "Ein Warenkorb enthält pro Artikel mit freiem Preis nur eine Zeile: Tippen Sie ihn erneut an, öffnet sich diese Zeile, und Sie können den Preis ändern.",
+          "Mit „Freier Preis“ wird auch „Von Aktionen ausschließen“ aktiviert, damit auf eine Gebühr kein Rabatt gewährt wird und sie nicht zu Mindestumsätzen zählt. Schalten Sie es wieder aus, wenn verhandelte Ware an Aktionen teilnehmen soll.",
+          "Nach dem Verkauf wird die Zeile versteuert, sammelt Punkte und zählt in der Statistik wie jede andere, und eine Rückgabe erstattet den eingegebenen Preis.",
+          "Ein Artikel mit Varianten kann keinen freien Preis verwenden. Artikel mit freiem Preis werden nie als Geschenk oder kostenpflichtige Zusatzartikel angeboten und erscheinen nie in der Ersatzartikel-Liste eines Umtauschs."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Alle Tarife bieten das, und für die Eingabe des Preises ist nie die Freigabe einer Führungskraft nötig."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -772,7 +917,8 @@ export const articles = [
       "Minusbestand",
       "nicht auf Lager",
       "Verkauf sperren",
-      "Bestand korrigieren"
+      "Bestand korrigieren",
+      "Artikel nicht gefunden"
     ],
     "content": [
       {
@@ -782,12 +928,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Ein negativer Bestand bedeutet meist, dass ein Wareneingang nicht erfasst wurde oder ein vorbestellter Artikel noch nicht eingetroffen ist (Vorbestellungen buchen den Bestand schon bei der Aufnahme ab). Erfassen Sie Nachschub über den Wareneingang einer Einkaufsbestellung, dann gleicht sich die Zahl von selbst aus; Differenzen aus der Inventur korrigieren Sie mit einer manuellen Anpassung, die im Bewegungsprotokoll erhalten bleibt."
+      },
+      {
+        "type": "note",
+        "text": "Wenn die Kasse einen Artikel mit Bestand 0 nicht findet, prüfen Sie unter Einstellungen → Geräteeinstellungen, ob „Nicht vorrätige Artikel ausblenden“ aktiv ist: Solange es das ist, kann dieses iPad nicht vorrätige Artikel nicht in einen Warenkorb legen."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -854,7 +1004,8 @@ export const articles = [
         "items": [
           "Verkauf auf Rechnung: Die Ware verlässt den Laden heute und zählt zum Umsatz von heute; das Geld zählt an dem Tag zum Zahlungseingang, an dem die Begleichung erfolgt.",
           "Vorbestellung: Die Anzahlung zählt zum Zahlungseingang, sobald sie bezahlt wird; der Umsatz wird am Abholtag in voller Höhe erfasst.",
-          "Verfall der Anzahlung: Storniert ein Kunde eine Vorbestellung und Sie behalten die Anzahlung, wurde sie beim Bezahlen bereits als Zahlungseingang gezählt. In der Statistik erscheint sie separat als verfallene Anzahlungen und zählt nie als Umsatz."
+          "Verfall der Anzahlung: Storniert ein Kunde eine Vorbestellung und Sie behalten die Anzahlung, wurde sie beim Bezahlen bereits als Zahlungseingang gezählt. In der Statistik erscheint sie separat als verfallene Anzahlungen und zählt nie als Umsatz.",
+          "Annullierung einer früheren Bestellung: Das erstattete Geld zählt am Tag der Annullierung zum Zahlungseingang, sodass der Zahlungseingang dieses Tages negativ sein kann, während „Annulliert“ die Bestellung an ihrem Verkaufstag zählt. Das ⓘ an den Kacheln „Zahlungseingang“ und „Annulliert“ erklärt dasselbe."
         ]
       },
       {
@@ -966,21 +1117,33 @@ export const articles = [
       "Rohertrag",
       "Gewinn",
       "Marge",
+      "Handelsspanne",
       "Berichte",
-      "nicht erfasst"
+      "nicht erfasst",
+      "fehlender Einkaufspreis",
+      "Rohertrag erfasst"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Der Einkaufspreis ist ein optionales Feld. Artikel ohne Einkaufspreis sind in den Berichten mit „Rohertrag nicht erfasst“ markiert und werden aus der Rohertragsberechnung ausgeschlossen – der Umsatz wird weiterhin vollständig gezählt, nur der Rohertrag bleibt außen vor."
+        "text": "Der Einkaufspreis ist ein optionales Feld. Artikel ohne Einkaufspreis bleiben im Rohertrag unberücksichtigt, ihr Umsatz zählt aber weiterhin vollständig. Die Karte „Rohertrag erfasst“ in der Statistik zeigt, wie viele im Zeitraum verkaufte Artikel keinen Einkaufspreis haben; ein Einkaufspreis von 0 gilt als Einkaufspreis, solche Artikel werden also nicht aufgeführt."
       },
       {
         "type": "p",
-        "text": "Für vollständige Rohertragsberichte tragen Sie die Einkaufspreise auf der Bearbeitungsseite des Artikels ein; künftige Verkäufe werden berücksichtigt. Der Rohertrag wird auf Basis des Umsatzes nach Rabatt berechnet."
+        "text": "Tippen Sie auf die Karte oder auf „Artikel ansehen“, um „Artikel ohne Einkaufspreis“ zu öffnen, sortiert nach dem Umsatz, der im Rohertrag fehlt. Tippen Sie auf eine Zeile, um den Artikel zu öffnen, tragen Sie über „Bearbeiten“ den Einkaufspreis nach, und die Zeile ist bei Ihrer Rückkehr mit „Einkaufspreis ergänzt“ markiert. Ein Artikel mit Varianten gilt als mit Einkaufspreis versehen, sobald entweder eine Variante oder der Artikel selbst einen hat."
+      },
+      {
+        "type": "p",
+        "text": "Der Rohertrag ist der Umsatz nach allen Rabatten (Artikel- und Warenkorbrabatte, Aktionen, Punkteeinlösung) und vor Steuern, abzüglich des Einkaufspreises – deshalb heißt das Feld „Einkaufspreis ohne Steuer (optional)“: Tragen Sie ein, was Sie vor Steuern bezahlt haben. Die Marge ist der Rohertrag geteilt durch den Umsatz vor Steuern der Artikel mit Einkaufspreis, sodass Artikel ohne Einkaufspreis sie nicht drücken. Eine Rückgabe nimmt an ihrem Tag den Rohertrag zurück, den diese Artikel eingebracht hatten."
+      },
+      {
+        "type": "note",
+        "text": "Ein nachgetragener Einkaufspreis wirkt sich nur auf spätere Verkäufe aus; bereits getätigte Verkäufe werden nicht neu berechnet. Diese Berechnung gibt es seit v3.1: Frühere Versionen zogen nur manuelle Artikelrabatte ab und zählten enthaltene Steuer als Rohertrag. Nach dem Update zeigen Zeiträume mit Rabatten oder enthaltener Steuer daher einen niedrigeren Rohertrag. Das ist eine Korrektur, kein Datenverlust."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1043,9 +1206,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Zeitplan: Liegt der heutige Tag im aktiven Zeitraum? Schränkt ein Happy-Hour-Zeitfenster den Wochentag oder die Uhrzeit ein?",
-          "Geltungsbereich: Gehören die Artikel im Warenkorb zum Artikel- oder Kategoriebereich der Aktion? Ist der Mindestumsatz erreicht?",
+          "Geltungsbereich: Gehören die Artikel im Warenkorb zum Artikel- oder Kategoriebereich der Aktion? Ist beim Artikel „Von Aktionen ausschließen“ aktiviert (bei Artikeln mit freiem Preis ist das standardmäßig der Fall)? Ist der Mindestumsatz erreicht?",
           "Zielgruppe: Ist die Aktion auf eine Mitgliedsstufe oder den Geburtstagsmonat beschränkt? Wurde dieses Mitglied beim Bezahlen ausgewählt?",
-          "Nutzungslimits: Ist das Gesamtlimit oder das Limit dieses Kunden erreicht?",
+          "Nutzungslimits: Ist das Gesamtlimit oder das Limit dieses Kunden erreicht? Das Limit pro Kunde einer Geburtstagsmonat-Aktion zählt je Kalenderjahr.",
           "Kombination: Blockiert eine Aktion mit höherer Priorität und der Option „Weitere Aktionen stoppen, wenn diese greift“ die Aktion?"
         ]
       },
@@ -1328,7 +1491,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Die Datei öffnet sich als Tabelle. Gängige Spaltennamen auf Englisch und Chinesisch werden automatisch zugeordnet; tippen Sie auf eine Spaltenüberschrift, um die Zuordnung zu ändern.",
+          "Die Datei öffnet sich als Tabelle. Gängige Spaltennamen auf Englisch und Chinesisch (traditionell oder vereinfacht) werden automatisch zugeordnet; tippen Sie auf eine Spaltenüberschrift, um die Zuordnung zu ändern.",
           "Tippen Sie auf eine Zelle, um ihren Wert direkt zu korrigieren – Sie müssen die Datei nicht bearbeiten und neu beginnen.",
           "Tippen Sie auf Bestätigen, um die Daten zu prüfen. Zeilen mit Problemen werden rot markiert und mit Grund angezeigt; beim Import von Verkäufen lassen sich Verkäufe mit Fehlern überspringen.",
           "Klären Sie alles, was eine Entscheidung erfordert (doppelte Artikelnamen, eine Zeile, die zu mehreren Kunden passt), prüfen Sie die Zusammenfassung und tippen Sie dann auf Import starten."
@@ -1337,7 +1500,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Importierte Verkäufe werden nach Transaktionsdatum eingeordnet und mit der Währung und dem Steuermodus Ihres Geschäfts neu berechnet. Sie wirken sich nicht auf den Bestand aus und vergeben keine Willkommenspunkte.",
+          "Importierte Verkäufe werden nach Bestelldatum eingeordnet und mit der Währung und dem Steuermodus Ihres Geschäfts neu berechnet. Sie wirken sich nicht auf den Bestand aus und vergeben keine Willkommenspunkte.",
           "Kunden werden anhand von Telefonnummer oder E-Mail bestehenden Kunden zugeordnet; wer nicht zugeordnet werden kann, wird neu angelegt.",
           "Importierte Verkäufe zeigen das Datum „Importiert am“ und die ursprüngliche Belegnummer und können nicht annulliert oder zurückgegeben werden.",
           "Zeilen mit Fehlern lassen sich als CSV exportieren, ergänzt um die Gründe – korrigieren Sie sie und importieren Sie erneut. Doppelte Zeilen werden automatisch übersprungen."
@@ -1582,6 +1745,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "In den letzten 7 Tagen und am letzten Tag erinnert Sie die App jeweils einmal daran, wie viele Tage noch bleiben, dass die Kasse pausiert, wenn die Testphase endet, und dass Ihre Daten erhalten bleiben."
+      },
+      {
+        "type": "p",
         "text": "Alles, was Sie während der Testphase anlegen (Artikel, Bestellungen, Kunden), bleibt vollständig erhalten. Ihre Daten werden nie gelöscht – egal, ob Sie danach abonnieren oder nicht."
       }
     ],
@@ -1641,7 +1808,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: für Einzelpersonen am Marktstand, die Kasse und Artikel brauchen.",
-          "Standard: zusätzlich Aktionen, Punkte und Kundenstufen, Bestandsverwaltung, Einkauf, Verkauf auf Rechnung und Vorbestellungen.",
+          "Standard: zusätzlich Aktionen, Punkte und Kundenstufen, Bestandsverwaltung, Einkauf, Verkauf auf Rechnung, Vorbestellungen und Schätzung der Bearbeitungsgebühren.",
           "Pro: zusätzlich Mitarbeiter:innen-Konten und Berechtigungen, Freigaben, Aktivitätsprotokoll, Wiederherstellungsprotokoll und erweiterte Berichte – für Geschäfte mit Personal."
         ]
       },
@@ -1809,15 +1976,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Legen Sie zuerst unter Einstellungen → Mitgliedsstufen Stufen an (z. B. Gold) und richten Sie die Aktion dann auf diese Stufe aus. Für Geburtstagsangebote wählen Sie unter „Wer darf diese Aktion nutzen“ die Option „Geburtstagsmonat“."
+        "text": "Legen Sie zuerst unter Einstellungen → Mitgliedsstufen Stufen an (z. B. Gold) und richten Sie die Aktion dann auf diese Stufe aus. Für Geburtstagsangebote wählen Sie unter „Wer darf teilnehmen“ die Option „Geburtstagsmonat“ und füllen „Limit pro Kunde“ aus."
       },
       {
         "type": "list",
         "items": [
           "Das Mitglied muss beim Bezahlen ausgewählt sein, damit das Angebot greift – die Berechtigung wird anhand des aktuell ausgewählten Mitglieds geprüft.",
           "Die Geburtstagsprüfung liest den Geburtsmonat des Mitglieds. Tragen Sie also das Geburtstagsfeld ein; Mitglieder ohne Eintrag gelten nie als Geburtstagskunden.",
+          "Eine Geburtstagsmonat-Aktion braucht ein Limit pro Kunde, das je Kalenderjahr gezählt wird: Bei einem Limit von 1 kann jeder Kunde sie einmal pro Jahr nutzen, im nächsten Jahr beginnt es von vorn. Ohne Limit lässt sie sich nicht sichern.",
           "Automatische Stufenaufstiege werden beim Abschluss des Bezahlvorgangs geprüft; wird die Bestellung annulliert, wird ein dadurch ausgelöster Aufstieg automatisch zurückgenommen."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Vor v3.2 zeigte eine Geburtstagsmonat-Aktion einen Fehler an und ließ sich auch mit ausgefülltem Limit pro Kunde nicht sichern. Falls Ihnen das passiert, aktualisieren Sie DingPOS im App Store."
       }
     ],
     "related": [

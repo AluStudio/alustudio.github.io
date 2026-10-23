@@ -74,31 +74,36 @@ export const articles = [
   {
     "slug": "how-to-set-up",
     "category": "getting-started",
-    "question": "Làm thế nào để thiết lập cửa hàng trong DingPOS?",
+    "question": "Cách thiết lập cửa hàng trong DingPOS như thế nào?",
     "keywords": [
       "thiết lập",
       "bắt đầu",
       "hướng dẫn ban đầu",
       "lần đầu",
       "trình hướng dẫn",
-      "mở cửa hàng"
+      "mở cửa hàng",
+      "quốc gia",
+      "tiền tệ"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Lần đầu mở DingPOS, trình hướng dẫn thiết lập sẽ giúp bạn mở cửa hàng trong khoảng 10 phút:"
+        "text": "Lần đầu mở DingPOS, trình hướng dẫn thiết lập sẽ giúp bạn mở cửa hàng chỉ với hai bước, trong vài phút:"
       },
       {
         "type": "steps",
         "items": [
-          "Chọn quốc gia của bạn — tiền tệ, chế độ thuế và thuế suất mặc định được điền tự động (ở bước này bạn vẫn có thể chỉnh thuế suất và chế độ thuế).",
-          "Nhập tên cửa hàng và có thể tải lên logo cửa hàng.",
-          "Làm theo hướng dẫn để tạo 3–5 sản phẩm (có thể bỏ qua — bạn có thể thêm bất cứ lúc nào sau này)."
+          "Chọn quốc gia hoặc khu vực của bạn. Đầu danh sách là khu vực của iPad này và các thị trường phổ biến nhất; bên dưới là toàn bộ 175 quốc gia và khu vực có DingPOS trên App Store, có thể tìm theo tên bằng ngôn ngữ của ứng dụng hoặc tiếng Anh. Lựa chọn của bạn sẽ tự điền tiền tệ, thuế suất và chế độ thuế.",
+          "Ở bước Cửa hàng của bạn, nhập tên cửa hàng, có thể thêm logo, rồi kiểm tra tiền tệ, thuế suất và chế độ thuế (giá đã gồm thuế / giá chưa gồm thuế). Tiền tệ mặc định theo quốc gia của bạn; chạm vào đó để chọn trong 130 loại tiền tệ."
         ]
       },
       {
         "type": "p",
-        "text": "Khi hoàn tất, bạn sẽ nghe một tiếng \"Ding!\" — cửa hàng đã sẵn sàng và bạn có thể bắt đầu bán hàng ngay."
+        "text": "Chạm Tiếp tục và bạn sẽ thấy “Ding! Cửa hàng của bạn đã sẵn sàng.” DingPOS cũng tạo sẵn hai phương thức thanh toán là Tiền mặt và Thẻ tín dụng. Sau đó hãy thêm sản phẩm trong Sản phẩm và bắt đầu bán hàng."
+      },
+      {
+        "type": "note",
+        "text": "Tiền tệ và chế độ thuế không thể đổi sau khi thiết lập; thuế suất vẫn có thể đổi sau trong Cài đặt. Tại Hoa Kỳ, Canada, Brazil và Micronesia, thuế suất tùy theo bang, tỉnh hoặc thành phố, nên ô thuế suất ban đầu để trống và bạn nhập mức thuế mình áp dụng (được phép nhập 0) để tiếp tục. Danh sách 175 quốc gia và lựa chọn tiền tệ có từ phiên bản v3.2; các phiên bản trước chỉ có 15 quốc gia."
       }
     ],
     "related": [
@@ -205,7 +210,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tiền tệ và chế độ thuế (giá đã gồm thuế / giá chưa gồm thuế) bị khóa sau khi thiết lập xong. Toàn bộ đơn hàng trước đó đã được tính theo chúng, nên đổi giữa chừng sẽ làm sai lệch báo cáo của bạn."
+        "text": "Tiền tệ và chế độ thuế (giá đã gồm thuế / giá chưa gồm thuế) bị khóa sau khi thiết lập xong. Toàn bộ đơn hàng trước đó đã được tính theo chúng, nên đổi giữa chừng sẽ làm sai lệch báo cáo của bạn. Hãy kiểm tra chúng ở bước Cửa hàng của bạn trong phần thiết lập: tiền tệ mặc định theo quốc gia của bạn và bạn có thể chạm vào đó để chọn loại khác."
       },
       {
         "type": "note",
@@ -227,17 +232,24 @@ export const articles = [
       "tiếng Anh",
       "tiếng Việt",
       "tiếng Trung",
+      "tiếng Nhật",
+      "tiếng Tây Ban Nha",
+      "đa ngôn ngữ",
       "chuyển đổi",
       "đổi ngôn ngữ"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS hỗ trợ tiếng Anh và tiếng Trung phồn thể. Vào Cài đặt → Tùy chỉnh thiết bị và chạm vào Ngôn ngữ ứng dụng. Thao tác này mở trang của DingPOS trong ứng dụng Cài đặt của iPad, nơi bạn chọn ngôn ngữ ở mục Ngôn ngữ."
+        "text": "DingPOS hỗ trợ 32 ngôn ngữ, gồm tiếng Anh, tiếng Trung phồn thể và giản thể, tiếng Nhật, tiếng Hàn, tiếng Thái, tiếng Việt, tiếng Indonesia, tiếng Mã Lai, tiếng Tây Ban Nha (Mỹ Latinh), tiếng Bồ Đào Nha (Brazil), tiếng Pháp và tiếng Đức. Vào Cài đặt → Tùy chỉnh thiết bị và chạm vào Ngôn ngữ ứng dụng. Thao tác này mở trang của DingPOS trong ứng dụng Cài đặt của iPad, nơi bạn chọn ngôn ngữ ở mục Ngôn ngữ."
       },
       {
         "type": "p",
         "text": "iOS không cho phép ứng dụng mở thẳng danh sách ngôn ngữ, nên lần chạm cuối cùng diễn ra trong Cài đặt hệ thống. Ngôn ngữ chỉ áp dụng cho iPad này."
+      },
+      {
+        "type": "note",
+        "text": "Các ngôn ngữ ngoài tiếng Anh và tiếng Trung phồn thể có từ phiên bản v3.2. Nếu mục Ngôn ngữ chỉ liệt kê tiếng Anh và tiếng Trung, hãy cập nhật DingPOS từ App Store."
       }
     ],
     "related": [
@@ -354,12 +366,13 @@ export const articles = [
       "line pay",
       "tiền thối",
       "tùy chỉnh",
-      "bán chịu"
+      "bán chịu",
+      "phí"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Tiền mặt, Thẻ tín dụng và Line Pay có sẵn, và bạn có thể thêm bất kỳ nhãn thanh toán tùy chỉnh nào trong Cài đặt (ví dụ Apple Pay, ví điện tử trong nước)."
+        "text": "Cửa hàng mới bắt đầu với hai phương thức thanh toán là Tiền mặt và Thẻ tín dụng, được đặt tên theo ngôn ngữ của ứng dụng khi thiết lập. Trong Cài đặt → Phương thức thanh toán, bạn có thể thêm bất kỳ phương thức nào khác (ví dụ Apple Pay, LINE Pay, ví điện tử trong nước), cũng như xóa hoặc sắp xếp lại."
       },
       {
         "type": "p",
@@ -367,13 +380,60 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Với khách quen lấy hàng trước và trả tiền sau, hãy chọn Bán chịu: giao dịch được ghi nhận là khoản phải thu và được tất toán khi tiền về. Xem “Khách quen có thể mua chịu và trả sau không?”"
+        "text": "Nếu nhà cung cấp thẻ hoặc thanh toán di động thu phí, hãy đặt tỷ lệ phí cho phương thức đó và Thống kê sẽ ước tính phí cùng thực nhận của từng phương thức — xem “DingPOS có theo dõi được phí thẻ và phí thanh toán di động không?”"
+      },
+      {
+        "type": "p",
+        "text": "Với khách quen lấy hàng trước và trả tiền sau, hãy chọn Bán chịu: đơn được ghi nhận là khoản phải thu và được tất toán khi tiền về. Xem “Khách quen có thể mua chịu và trả sau không?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "DingPOS có theo dõi được phí thẻ và phí thanh toán di động không?",
+    "keywords": [
+      "phí xử lý thanh toán",
+      "phí thẻ",
+      "phí giao dịch",
+      "tỷ lệ phí",
+      "thực nhận",
+      "phí cho người bán",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Có. Trong Cài đặt → Phương thức thanh toán, chạm vào một phương thức (hoặc thêm phương thức mới) rồi điền Phí xử lý thanh toán: một tỷ lệ phần trăm, một số tiền cố định cho mỗi giao dịch, hoặc cả hai. Từ đó, mỗi khoản thanh toán thu qua phương thức này đều ghi lại một khoản phí ước tính theo tỷ lệ có hiệu lực tại thời điểm đó."
+      },
+      {
+        "type": "p",
+        "text": "Trong Thống kê, thẻ Phương thức thanh toán thêm một dòng “Phí · Thực nhận” dưới mỗi phương thức có phí, và phần cuối thẻ hiển thị phí ước tính và thực nhận ước tính của cả kỳ."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nhập tỷ lệ mà nhà cung cấp thực sự khấu trừ, đã gồm thuế — với 3% cộng 5% thuế, hãy nhập 3,15%. Để trống cả hai ô nếu không có phí.",
+          "Thay đổi tỷ lệ chỉ áp dụng cho các khoản thanh toán sau đó; phí đã ghi vẫn giữ nguyên.",
+          "“Hoàn lại phí phần trăm khi hoàn tiền” được bật theo mặc định, dành cho nhà cung cấp hoàn lại phí khi bạn hoàn tiền; phí cố định không bao giờ được hoàn lại. Vô hiệu hóa, trả hàng, hủy đơn đặt trước và hủy tất toán đều đảo phí theo quy tắc này, và khách nhận lại cùng một số tiền trong mọi trường hợp.",
+          "Các khoản thanh toán thu trước khi phương thức có tỷ lệ phí sẽ không có phí: Thống kê đánh dấu “(N chưa có tỷ lệ phí)” và hiển thị thực nhận là “—”."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Phí chỉ là ước tính từ tỷ lệ bạn nhập; sao kê của nhà cung cấp mới là số tiền thực tế. Chỉnh tỷ lệ phí và xem phí trong Thống kê cần gói Standard trở lên. Ở gói Lite các ô này bị khóa, nhưng các khoản thanh toán vẫn ghi lại phí, nên phí sẽ hiện ra khi bạn nâng cấp."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -400,7 +460,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Màn hình thu ngân có ẩn được sản phẩm hết hàng không?",
+    "keywords": [
+      "ẩn",
+      "hết hàng",
+      "bán hết",
+      "tồn kho bằng 0",
+      "thu ngân",
+      "mất sản phẩm",
+      "không tìm thấy sản phẩm"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Có. Vào Cài đặt → Tùy chỉnh thiết bị và bật Ẩn sản phẩm hết hàng (mặc định tắt). Khi đó lưới sản phẩm, bộ lọc danh mục và tìm kiếm (theo tên và mã vạch) của thu ngân sẽ bỏ qua mọi sản phẩm có tồn kho từ 0 trở xuống. Công tắc có hiệu lực ngay, không cần mở lại ứng dụng."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sản phẩm không theo dõi tồn kho luôn hiển thị. Sản phẩm có biến thể chỉ bị ẩn khi mọi biến thể đều hết hàng.",
+          "Chỉ ảnh hưởng đến màn hình thu ngân của iPad này; danh sách Sản phẩm vẫn hiển thị mọi sản phẩm.",
+          "Khi mọi sản phẩm đều bị ẩn, màn hình thu ngân hiển thị “Tất cả sản phẩm đã hết hàng” và chỉ nơi để tắt công tắc."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Khi công tắc bật, iPad này không tìm thấy sản phẩm hết hàng, nên không thể bán vào tồn kho âm hay nhận đơn đặt trước cho chúng — hãy tắt công tắc khi cần. Nếu sản phẩm dường như biến mất khỏi màn hình thu ngân, thường là do công tắc này."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -551,7 +650,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Tồn kho được trừ ngay khi tạo đơn đặt trước, tức là giữ hàng cho khách. Mặt hàng hết hàng sẽ xuống âm và trở lại bình thường khi nhận đơn nhập hàng.",
+          "Tồn kho được trừ ngay khi tạo đơn đặt trước, nên số lượng có thể bán phản ánh ngay lập tức. Đây chỉ là tín hiệu, không phải giữ hàng: một đơn bán sau đó vẫn có thể lấy đơn vị cuối cùng. Mặt hàng hết hàng sẽ xuống âm và trở lại bình thường khi nhận đơn nhập hàng.",
           "Khi khách đến nhận, chạm Bàn giao trong chi tiết đơn để thu phần còn lại. Đơn lúc này trở thành đơn bán hoàn tất thông thường, và các lần trả hàng sau đó theo quy trình trả hàng bình thường.",
           "Nếu khách không đến, chạm Hủy đơn trong chi tiết đơn rồi chọn hoàn tiền cọc hoặc giữ tiền cọc. Tồn kho được cộng lại.",
           "Hóa đơn tiền cọc và hóa đơn nhận hàng cuối cùng dùng chung một số."
@@ -659,16 +758,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mỗi tổ hợp có giá bán và giá vốn riêng, đồng thời theo dõi tồn kho riêng. Khi thanh toán, chạm vào sản phẩm sẽ hiện bảng chọn biến thể trước khi thêm vào giỏ hàng."
+        "text": "Khi sản phẩm đã có biến thể, trường Giá của sản phẩm sẽ thu gọn và mỗi tổ hợp có giá riêng trong mục Giá & tồn kho theo biến thể, cùng tồn kho riêng (từ v3.2; các phiên bản trước vẫn yêu cầu nhập giá sản phẩm). Màn hình thu ngân, danh sách sản phẩm và chi tiết sản phẩm hiển thị khoảng giá từ thấp nhất đến cao nhất, như “NT$350–NT$390”, hoặc một giá duy nhất khi mọi tổ hợp cùng giá; sắp xếp theo giá dùng giá thấp nhất của các tổ hợp. Khi thanh toán, chạm vào sản phẩm sẽ hiện bảng chọn biến thể trước khi thêm vào giỏ hàng."
+      },
+      {
+        "type": "p",
+        "text": "Bạn không cần nhập giá vốn cho từng tổ hợp: để trống ô Giá vốn nghĩa là Theo sản phẩm, tức dùng giá vốn của sản phẩm và thay đổi theo khi giá đó đổi. Nhập một con số sẽ thành Giá vốn riêng — kể cả 0. Dùng giá vốn sản phẩm cho tất cả sẽ xóa mọi giá vốn riêng cùng lúc."
       },
       {
         "type": "note",
-        "text": "Tên tùy chọn và tên lựa chọn tối đa 20 ký tự."
+        "text": "Tên tùy chọn và tên lựa chọn tối đa 20 ký tự và không được để trống: tên tùy chọn hoặc lựa chọn bị bỏ trống sẽ được viền đỏ khi bạn lưu, hãy điền vào hoặc xóa lựa chọn trống đó. Sản phẩm có biến thể không dùng được giá tự đặt."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Có thể nhập giá sản phẩm ngay lúc thanh toán, như phí vận chuyển hay hàng thỏa thuận giá không?",
+    "keywords": [
+      "giá tự đặt",
+      "giá tùy chỉnh",
+      "nhập giá",
+      "phí vận chuyển",
+      "phí dịch vụ",
+      "giá thỏa thuận",
+      "giá thị trường"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Có — hãy đặt nó là sản phẩm Giá tự đặt. Bật Giá tự đặt trong trang sửa sản phẩm và để trống giá; màn hình thu ngân và danh sách sản phẩm sẽ hiển thị “Giá tự đặt” ở chỗ lẽ ra là giá. Khi thanh toán, chạm vào sản phẩm sẽ hỏi giá trước; nhập giá rồi chạm Thêm vào giỏ hàng để thêm với giá đó."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 là giá hợp lệ (ví dụ miễn phí vận chuyển); ô để trống thì không thể thêm. Hãy nhập giá theo cách chế độ thuế của cửa hàng định giá mọi thứ khác.",
+          "Giỏ hàng chỉ có một dòng cho mỗi sản phẩm giá tự đặt: chạm lại vào sản phẩm sẽ mở dòng đó để bạn đổi giá.",
+          "Bật Giá tự đặt cũng bật Loại khỏi khuyến mãi, nên khoản phí không bị giảm giá và không được tính vào ngưỡng chi tiêu. Hãy tắt lại nếu món hàng thỏa thuận giá cần tham gia khuyến mãi.",
+          "Sau khi bán, dòng này được tính thuế, tích điểm và tính vào Thống kê như mọi dòng khác, và khi trả hàng sẽ hoàn lại đúng giá đã nhập.",
+          "Sản phẩm có biến thể không dùng được giá tự đặt. Sản phẩm giá tự đặt không bao giờ được tặng kèm hay làm món mua thêm có phí, và không xuất hiện trong danh sách hàng đổi sang của một lần đổi hàng."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Gói nào cũng có tính năng này, và việc nhập giá không bao giờ cần quản lý phê duyệt."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -778,12 +922,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Tồn kho âm thường do chưa ghi nhận lần nhập hàng, hoặc món đặt trước chưa về (đơn đặt trước trừ kho ngay khi tạo). Hãy ghi nhập hàng bằng cách nhận đơn nhập hàng, con số sẽ tự trở lại đúng; còn chênh lệch khi kiểm kho thì sửa bằng điều chỉnh thủ công, và điều chỉnh này được lưu trong sổ biến động."
+      },
+      {
+        "type": "note",
+        "text": "Nếu thu ngân không tìm thấy sản phẩm có tồn kho 0, hãy kiểm tra xem Ẩn sản phẩm hết hàng có đang bật trong Cài đặt → Tùy chỉnh thiết bị không: khi bật, iPad này không thể thêm sản phẩm hết hàng vào giỏ hàng."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -851,7 +999,8 @@ export const articles = [
         "items": [
           "Bán chịu: hàng giao hôm nay và được tính vào doanh thu hôm nay; tiền được tính vào Tiền đã thu vào ngày tất toán.",
           "Đơn đặt trước: tiền cọc được tính vào Tiền đã thu ngay khi khách trả; doanh thu được ghi nhận toàn bộ vào ngày khách lấy hàng.",
-          "Mất cọc: khi khách hủy đơn đặt trước và bạn giữ lại tiền cọc, khoản này đã nằm trong Tiền đã thu từ lúc khách trả. Thống kê hiển thị riêng khoản này là mất cọc, và nó không bao giờ được tính vào doanh thu."
+          "Mất cọc: khi khách hủy đơn đặt trước và bạn giữ lại tiền cọc, khoản này đã nằm trong Tiền đã thu từ lúc khách trả. Thống kê hiển thị riêng khoản này là mất cọc, và nó không bao giờ được tính vào doanh thu.",
+          "Vô hiệu hóa đơn trước đó: số tiền hoàn lại được tính vào Tiền đã thu vào ngày vô hiệu hóa, nên Tiền đã thu của ngày đó có thể âm, còn Đã vô hiệu hóa tính đơn theo ngày bán. Biểu tượng ⓘ trên các ô Tiền đã thu và Đã vô hiệu hóa cũng giải thích điều này."
         ]
       },
       {
@@ -961,22 +1110,34 @@ export const articles = [
     "keywords": [
       "giá vốn",
       "lợi nhuận",
+      "biên lợi nhuận",
       "lợi nhuận gộp",
       "báo cáo",
-      "chưa theo dõi lợi nhuận"
+      "chưa theo dõi lợi nhuận",
+      "thiếu giá vốn",
+      "tính được lợi nhuận"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Giá vốn là trường không bắt buộc. Sản phẩm không có giá vốn được đánh dấu “chưa theo dõi lợi nhuận” trong báo cáo và không được đưa vào phép tính lợi nhuận — doanh thu vẫn được tính đầy đủ, chỉ bỏ qua lợi nhuận."
+        "text": "Giá vốn là trường không bắt buộc. Sản phẩm không có giá vốn bị bỏ ra khỏi lợi nhuận, còn doanh thu của chúng vẫn được tính đầy đủ. Thẻ Tính được lợi nhuận trong Thống kê cho biết có bao nhiêu sản phẩm đã bán trong kỳ chưa có giá vốn; giá vốn bằng 0 vẫn được coi là có giá vốn nên các sản phẩm đó không nằm trong danh sách."
       },
       {
         "type": "p",
-        "text": "Để có báo cáo lợi nhuận đầy đủ, hãy nhập giá vốn ở trang chỉnh sửa sản phẩm; các đơn hàng sau đó sẽ được tính vào. Lợi nhuận được tính trên doanh thu sau chiết khấu."
+        "text": "Chạm vào thẻ hoặc Xem sản phẩm để mở Sản phẩm chưa có giá vốn, xếp theo doanh thu bị bỏ ra khỏi lợi nhuận. Chạm một dòng để mở sản phẩm, thêm giá vốn từ Sửa, và khi quay lại dòng đó sẽ được đánh dấu Đã thêm giá vốn. Sản phẩm có biến thể được coi là đã có giá vốn khi một biến thể hoặc chính sản phẩm có giá vốn."
+      },
+      {
+        "type": "p",
+        "text": "Lợi nhuận là doanh thu sau mọi khoản giảm giá (giảm giá theo sản phẩm và giỏ hàng, khuyến mãi, đổi điểm) và trước thuế, trừ giá vốn — vì vậy trường này ghi Giá vốn chưa thuế (không bắt buộc): hãy nhập số tiền bạn đã trả trước thuế. Biên lợi nhuận là lợi nhuận ÷ doanh thu trước thuế của các sản phẩm có giá vốn, nên sản phẩm chưa có giá vốn không kéo con số này xuống. Khi trả hàng, lợi nhuận mà các mặt hàng đó đã mang lại sẽ bị trừ lại vào ngày trả hàng."
+      },
+      {
+        "type": "note",
+        "text": "Giá vốn bạn thêm chỉ ảnh hưởng các đơn bán sau đó; các đơn đã bán không được tính lại. Cách tính này có từ v3.1: các phiên bản trước chỉ trừ giảm giá thủ công theo sản phẩm và tính cả thuế đã gồm trong giá vào lợi nhuận, nên sau khi cập nhật, các kỳ có giảm giá hoặc giá đã gồm thuế sẽ hiện lợi nhuận thấp hơn. Đó là điều chỉnh cho đúng, không phải mất dữ liệu."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1041,9 +1202,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Lịch áp dụng: hôm nay có nằm trong thời gian khuyến mãi không? Khung giờ vàng có giới hạn ngày trong tuần hoặc giờ không?",
-          "Phạm vi: các sản phẩm trong giỏ hàng có thuộc phạm vi sản phẩm hoặc danh mục của khuyến mãi không? Đã đạt mức chi tiêu yêu cầu chưa?",
+          "Phạm vi: các sản phẩm trong giỏ hàng có thuộc phạm vi sản phẩm hoặc danh mục của khuyến mãi không? Sản phẩm có đang bật Loại khỏi khuyến mãi không (sản phẩm giá tự đặt mặc định là có)? Đã đạt mức chi tiêu yêu cầu chưa?",
           "Đối tượng: khuyến mãi có giới hạn cho một hạng thành viên hoặc tháng sinh nhật không? Đã chọn thành viên đó khi thanh toán chưa?",
-          "Giới hạn lượt dùng: đã chạm giới hạn tổng lượt dùng, hoặc giới hạn của khách hàng này chưa?",
+          "Giới hạn lượt dùng: đã chạm giới hạn tổng lượt dùng, hoặc giới hạn của khách hàng này chưa? Giới hạn mỗi khách của khuyến mãi tháng sinh nhật được tính theo năm dương lịch.",
           "Cộng dồn: có khuyến mãi độ ưu tiên cao hơn đang bật \"Dừng các khuyến mãi sau khi áp dụng khuyến mãi này\" và chặn khuyến mãi này không?"
         ]
       },
@@ -1330,7 +1491,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Tệp được mở dưới dạng bảng. Các tên cột thông dụng bằng tiếng Anh và tiếng Trung được ghép tự động; chạm vào tiêu đề cột bất kỳ để đổi cách ghép.",
+          "Tệp được mở dưới dạng bảng. Các tên cột thông dụng bằng tiếng Anh và tiếng Trung (phồn thể hoặc giản thể) được ghép tự động; chạm vào tiêu đề cột bất kỳ để đổi cách ghép.",
           "Chạm vào ô bất kỳ để sửa giá trị ngay tại chỗ — không cần sửa tệp rồi làm lại từ đầu.",
           "Chạm Xác nhận để kiểm tra. Các dòng có vấn đề được đánh dấu đỏ kèm lý do; khi nhập đơn hàng, bạn có thể bỏ qua các đơn bị lỗi.",
           "Xử lý những mục cần bạn quyết định (tên sản phẩm trùng, một dòng khớp nhiều khách hàng), xem lại phần tóm tắt, rồi chạm Bắt đầu nhập."
@@ -1339,7 +1500,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Đơn hàng đã nhập được xếp theo ngày giao dịch và tính lại theo tiền tệ và chế độ thuế của cửa hàng. Chúng không ảnh hưởng tồn kho và không tặng điểm chào mừng.",
+          "Đơn hàng đã nhập được xếp theo ngày đặt hàng và tính lại theo tiền tệ và chế độ thuế của cửa hàng. Chúng không ảnh hưởng tồn kho và không tặng điểm chào mừng.",
           "Khách hàng được khớp với khách đã có theo số điện thoại hoặc email; ai chưa khớp sẽ được tạo mới.",
           "Đơn hàng đã nhập hiển thị nhãn “Đã nhập ngày” cùng số phiếu nguồn, và không thể vô hiệu hóa hay trả hàng.",
           "Các dòng bị lỗi có thể xuất thành tệp CSV kèm lý do — sửa rồi nhập lại. Các dòng trùng được tự động bỏ qua."
@@ -1583,6 +1744,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Trong 7 ngày cuối và vào ngày cuối cùng, ứng dụng nhắc bạn mỗi điều một lần: còn bao nhiêu ngày, thanh toán sẽ tạm dừng khi hết dùng thử, và dữ liệu của bạn vẫn được giữ."
+      },
+      {
+        "type": "p",
         "text": "Mọi thứ bạn tạo trong thời gian dùng thử (sản phẩm, đơn hàng, thành viên) đều được giữ nguyên vẹn. Dữ liệu của bạn không bao giờ bị xóa, dù sau đó bạn có đăng ký hay không."
       }
     ],
@@ -1643,7 +1808,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: dành cho một người bán ở quầy hàng, chỉ cần thanh toán và sản phẩm.",
-          "Standard: thêm khuyến mãi, điểm tích lũy và hạng thành viên, theo dõi tồn kho, nhập hàng, bán chịu và đơn đặt trước.",
+          "Standard: thêm khuyến mãi, điểm tích lũy và hạng thành viên, theo dõi tồn kho, nhập hàng, bán chịu, đơn đặt trước và ước tính phí thanh toán.",
           "Pro: thêm tài khoản nhân viên và phân quyền, phê duyệt của quản lý, nhật ký hoạt động, bản ghi khôi phục và báo cáo nâng cao — dành cho cửa hàng có nhân viên."
         ]
       },
@@ -1811,15 +1976,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Trước tiên hãy tạo các hạng trong Cài đặt → Hạng thành viên (ví dụ: Vàng), rồi nhắm khuyến mãi vào hạng đó. Với ưu đãi sinh nhật, đặt điều kiện là “Tháng sinh nhật”."
+        "text": "Trước tiên hãy tạo các hạng trong Cài đặt → Hạng thành viên (ví dụ: Vàng), rồi nhắm khuyến mãi vào hạng đó. Với ưu đãi sinh nhật, đặt đối tượng là Tháng sinh nhật và điền Giới hạn mỗi khách hàng."
       },
       {
         "type": "list",
         "items": [
           "Phải chọn thành viên khi thanh toán thì ưu đãi mới được kích hoạt — điều kiện được xét theo thành viên đang được chọn.",
           "Ưu đãi sinh nhật dựa vào tháng sinh nhật của thành viên, nên hãy điền ngày sinh; thành viên chưa có ngày sinh sẽ không bao giờ được coi là khách sinh nhật.",
+          "Khuyến mãi tháng sinh nhật cần có giới hạn mỗi khách hàng, tính theo năm dương lịch: giới hạn 1 nghĩa là mỗi khách dùng được một lần mỗi năm và sẽ đặt lại vào năm sau. Không có giới hạn này thì không thể lưu.",
           "Việc nâng hạng tự động được xét khi hoàn tất thanh toán; nếu đơn bị vô hiệu hóa, lần nâng hạng do đơn đó gây ra sẽ tự động được hoàn lại."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Trước v3.2, khuyến mãi tháng sinh nhật hiện lỗi và không thể lưu dù đã điền giới hạn mỗi khách hàng. Nếu bạn gặp tình huống này, hãy cập nhật DingPOS từ App Store."
       }
     ],
     "related": [

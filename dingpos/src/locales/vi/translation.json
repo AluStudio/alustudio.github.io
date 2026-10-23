@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Quản lý sản phẩm",
-          "desc": "Biến thể, mã vạch, ảnh, danh mục"
+          "desc": "Biến thể, mã vạch, ảnh, danh mục, sản phẩm giá tự đặt"
         },
         "import": {
           "name": "Nhập dữ liệu",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Bảng điều khiển kinh doanh",
           "desc": "Doanh thu, lợi nhuận, giảm giá, cơ cấu thanh toán và hàng bán chạy"
+        },
+        "payment_fees": {
+          "name": "Ước tính phí thanh toán",
+          "desc": "Đặt tỷ lệ phí cho từng phương thức thanh toán; xem phí và thực nhận ước tính theo phương thức"
         },
         "comparison": {
           "name": "So sánh kỳ",

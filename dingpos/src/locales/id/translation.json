@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Pengelolaan produk",
-          "desc": "Varian, barcode, foto, kategori"
+          "desc": "Varian, barcode, foto, kategori, produk harga bebas"
         },
         "import": {
           "name": "Impor data",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Dasbor bisnis",
           "desc": "Pendapatan, laba, diskon, ragam pembayaran, dan produk terlaris"
+        },
+        "payment_fees": {
+          "name": "Perkiraan biaya pembayaran",
+          "desc": "Atur tarif biaya tiap metode pembayaran; lihat perkiraan biaya dan perkiraan kas bersih diterima per metode"
         },
         "comparison": {
           "name": "Perbandingan periode",

@@ -98,6 +98,7 @@ export const COMPARISON = [
     key: "reports",
     rows: [
       { key: "dashboard", from: "lite" },
+      { key: "payment_fees", from: "standard" },
       { key: "comparison", from: "pro" },
       { key: "heatmap", from: "pro" },
       { key: "slow_movers", from: "pro" },

@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Gestione prodotti",
-          "desc": "Varianti, codici a barre, foto, categorie"
+          "desc": "Varianti, codici a barre, foto, categorie, prodotti a prezzo libero"
         },
         "import": {
           "name": "Importazione dei dati",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Dashboard dell'attività",
           "desc": "Ricavi, utile, sconti, metodi di pagamento e articoli più venduti"
+        },
+        "payment_fees": {
+          "name": "Stima delle commissioni di pagamento",
+          "desc": "Imposta la tariffa della commissione di ogni metodo di pagamento; vedi commissioni e incassato netto per metodo"
         },
         "comparison": {
           "name": "Confronto tra periodi",

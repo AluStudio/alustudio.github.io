@@ -81,24 +81,29 @@ export const articles = [
       "indulás",
       "üzletnyitás",
       "beállítási varázsló",
-      "kezdés"
+      "kezdés",
+      "ország",
+      "pénznem"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A DingPOS első megnyitásakor egy beállítási varázsló végigvezeti Önt az üzlet megnyitásán, nagyjából 10 perc alatt:"
+        "text": "A DingPOS első megnyitásakor egy beállítási varázsló két lépésben, néhány perc alatt megnyitja az üzletét:"
       },
       {
         "type": "steps",
         "items": [
-          "Válassza ki az országát – a pénznem, az adózási mód és az alapértelmezett adókulcs automatikusan kitöltődik (az adókulcs és az adózási mód ebben a lépésben még módosítható).",
-          "Adja meg az üzlet nevét, és ha szeretné, töltsön fel egy üzletlogót.",
-          "Az útmutatót követve hozzon létre 3–5 terméket (kihagyható – később bármikor hozzáadhat termékeket)."
+          "Válassza ki az országát vagy régióját. A lista élén az iPad régiója és a leggyakoribb piacok állnak; alatta mind a 175 ország és régió megtalálható, ahol a DingPOS elérhető az App Store-ban, az app nyelvén vagy angolul név szerint kereshetően. A választás kitölti a pénznemet, az adókulcsot és az adózási módot.",
+          "Az „Az Ön üzlete” képernyőn adja meg az üzlet nevét, ha szeretné, adjon hozzá logót, és ellenőrizze a pénznemet, az adókulcsot és az adózási módot (adóval együtt / adó nélkül). A pénznem alapból az országé; koppintson rá, hogy 130 pénznem közül válasszon."
         ]
       },
       {
         "type": "p",
-        "text": "Amikor végzett, meghallja a „Ding!” hangot – az üzlet készen áll, és azonnal megkezdheti az eladást."
+        "text": "Koppintson a Folytatás gombra, és megjelenik a „Ding! Az üzlete készen áll.” üzenet. A DingPOS két fizetési módot is létrehoz: Készpénz és Bankkártya. Ezután vegye fel a termékeit a Termékek alatt, és kezdhet is eladni."
+      },
+      {
+        "type": "note",
+        "text": "A pénznem és az adózási mód a beállítás után nem módosítható; az adókulcs később is megváltoztatható a Beállítások között. Az Egyesült Államokban, Kanadában, Brazíliában és Mikronéziában a kulcs az államtól, tartománytól vagy várostól függ, ezért az adókulcs mezője üresen indul, és a továbblépéshez meg kell adnia az Ön által felszámított kulcsot (a 0 is megengedett). A 175 országos lista és a pénznemválasztás a 3.2-es verzióban jelent meg; a korábbi verziók 15 országot kínáltak."
       }
     ],
     "related": [
@@ -204,7 +209,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A pénznem és az adózási mód (adóval együtt / adó nélkül) a beállítás befejezése után zárolt. Az összes korábbi rendelés ezekkel lett kiszámítva, ezért menet közbeni módosításuk tönkretenné a jelentéseket."
+        "text": "A pénznem és az adózási mód (adóval együtt / adó nélkül) a beállítás befejezése után zárolt. Az összes korábbi rendelés ezekkel lett kiszámítva, ezért menet közbeni módosításuk tönkretenné a jelentéseket. Ellenőrizze őket a beállítás „Az Ön üzlete” lépésében: a pénznem alapból az országé, és rákoppintva másikat választhat."
       },
       {
         "type": "note",
@@ -225,17 +230,24 @@ export const articles = [
       "nyelv",
       "angol",
       "kínai",
+      "japán",
+      "spanyol",
+      "többnyelvű",
       "nyelvváltás",
       "nyelvbeállítás"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A DingPOS angol és hagyományos kínai nyelven érhető el. Nyissa meg a Beállítások → Eszközbeállítások részt, és koppintson az Az app nyelve elemre. Megnyílik a DingPOS oldala az iPad Beállítások alkalmazásában, ahol a Nyelv alatt kiválaszthatja a nyelvet."
+        "text": "A DingPOS 32 nyelven érhető el, köztük angolul, hagyományos és egyszerűsített kínaiul, japánul, koreaiul, thaiul, vietnamiul, indonézül, malájul, spanyolul (Latin-Amerika), portugálul (Brazília), franciául és németül. Nyissa meg a Beállítások → Eszközbeállítások részt, és koppintson az Az app nyelve elemre. Megnyílik a DingPOS oldala az iPad Beállítások alkalmazásában, ahol a Nyelv alatt kiválaszthatja a nyelvet."
       },
       {
         "type": "p",
         "text": "Az iOS nem engedi, hogy az appok közvetlenül megnyissák a nyelvek listáját, ezért az utolsó koppintás a rendszer Beállítások alkalmazásában történik. A nyelv csak ezen az iPaden érvényes."
+      },
+      {
+        "type": "note",
+        "text": "Az angolon és a hagyományos kínain kívüli nyelvek a 3.2-es verzióban jelentek meg. Ha a Nyelv listában csak az angol és a kínai szerepel, frissítse a DingPOS-t az App Store-ból."
       }
     ],
     "related": [
@@ -352,12 +364,13 @@ export const articles = [
       "line pay",
       "visszajáró",
       "egyéni fizetési mód",
-      "számlás eladás"
+      "számlás eladás",
+      "kezelési költség"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A Készpénz, a Bankkártya és a Line Pay alapból elérhető, a Beállításokban pedig tetszőleges egyéni fizetési címkét hozzáadhat (pl. Apple Pay, helyi digitális pénztárcák)."
+        "text": "Az új üzlet két fizetési móddal indul, Készpénz és Bankkártya névvel, amelyeket a beállításkor az app nyelvén nevez el a rendszer. A Beállítások → Fizetési módok alatt bármilyen más módot hozzáadhat (pl. Apple Pay, LINE Pay, helyi digitális pénztárca), törölhet vagy átrendezhet."
       },
       {
         "type": "p",
@@ -365,13 +378,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Ha a kártyás vagy mobilfizetési szolgáltatója kezelési költséget számít fel, adjon a módhoz díjkulcsot, és a Riportok módonként megbecsüli a kezelési költséget és a nettó beérkezést – lásd: „Követi a DingPOS a kártyás és mobilfizetések kezelési költségét?”"
+      },
+      {
+        "type": "p",
         "text": "Ha egy törzsvevő most viszi el az árut, és később fizet, válassza a Számlás eladás lehetőséget: az eladás kintlévőségként kerül rögzítésre, és a pénz beérkezésekor kiegyenlítheti. Lásd: „Vásárolhatnak a törzsvevők számlára, és fizethetnek később?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Követi a DingPOS a kártyás és mobilfizetések kezelési költségét?",
+    "keywords": [
+      "kezelési költség",
+      "kártyadíj",
+      "tranzakciós díj",
+      "díjkulcs",
+      "nettó beérkezés",
+      "szolgáltatói díj",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Igen. A Beállítások → Fizetési módok alatt koppintson egy fizetési módra (vagy adjon hozzá újat), és töltse ki a Kezelési költség mezőt: százalékot, tranzakciónkénti fix összeget, vagy mindkettőt. Ettől kezdve az adott módon beszedett minden fizetésnél a rendszer az éppen érvényes díjkulccsal becsült kezelési költséget rögzít."
+      },
+      {
+        "type": "p",
+        "text": "A Riportok Fizetési módok kártyáján minden díjjal rendelkező mód alatt megjelenik egy „Költség · Nettó” sor, a kártya alján pedig az egész időszak becsült kezelési költsége és becsült nettó beérkezése látható."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Azt a díjkulcsot adja meg, amelyet a szolgáltatója ténylegesen levon, adóval együtt – 3% plusz 5% adó esetén 3,15%-ot. Díj nélkül hagyja üresen mindkét mezőt.",
+          "A díjkulcs módosítása csak a későbbi fizetésekre vonatkozik; a már rögzített költségek változatlanok maradnak.",
+          "A „Százalékos díj visszatérítése visszatérítéskor” alapból be van kapcsolva, azoknak a szolgáltatóknak, amelyek visszatérítéskor visszaadják a díjat; a fix összeg soha nem tér vissza. A sztornók, visszavételek, lemondott előrendelések és visszavont kiegyenlítések e szabály szerint fordítják vissza a költséget, és a vevő mindkét esetben ugyanannyit kap vissza.",
+          "Az olyan fizetések, amelyeket még a díjkulcs megadása előtt szedtek be, nem viselnek költséget: a Riportok ezeket „N díjkulcs nélkül” jelöléssel mutatja, a nettó értéket pedig „—” jelzi."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "A költségek a megadott díjkulcsból számolt becslések; a tényleges összeget a szolgáltató kimutatása mutatja. A díjkulcsok szerkesztéséhez és a költségek Riportokban való megtekintéséhez Standard vagy magasabb csomag szükséges. Lite csomagon a mezők zároltak, de a fizetések a költségeiket ilyenkor is rögzítik, így váltás után megjelennek."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -398,7 +458,45 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Elrejthetők az elfogyott termékek a pénztárképernyőn?",
+    "keywords": [
+      "elrejtés",
+      "elfogyott",
+      "nulla készlet",
+      "pénztáros",
+      "hiányzó termék",
+      "nem találom a terméket"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Igen. Nyissa meg a Beállítások → Eszközbeállítások részt, és kapcsolja be az Elfogyott termékek elrejtése lehetőséget (alapból ki van kapcsolva). A pénztáros termékrácsa, kategóriaszűrője és keresése (név és vonalkód alapján) ekkor kihagyja azokat a termékeket, amelyek készlete 0 vagy kevesebb. A kapcsoló azonnal érvénybe lép, az appot nem kell újranyitni."
+      },
+      {
+        "type": "list",
+        "items": [
+          "A készletet nem követő termékek mindig megjelennek. A változatokkal rendelkező termék csak akkor rejtődik el, ha minden változata elfogyott.",
+          "Csak ennek az iPadnek a pénztárát érinti; a Termékek lista továbbra is minden terméket mutat.",
+          "Ha minden termék el van rejtve, a pénztár a „Minden termék elfogyott” üzenetet mutatja, és megmondja, hol kapcsolhatja ki a kapcsolót."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Amíg a kapcsoló be van kapcsolva, ez az iPad nem találja meg az elfogyott termékeket, így nem tud negatív készletbe eladni, és előrendelést sem tud felvenni rájuk – ha szükséges, kapcsolja ki. Ha úgy tűnik, hogy termékek tűntek el a pénztárból, általában ez a kapcsoló az oka."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -550,7 +648,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "A készlet az előrendelés rögzítésekor csökken, így az áru le van foglalva a vevőnek. A hiányzó készletű tételek negatívba mennek, és a beszerzési rendelés beérkezésekor rendeződnek.",
+          "A készlet az előrendelés rögzítésekor csökken, így az eladható mennyiség azonnal ezt tükrözi. Ez jelzés, nem lefoglalás: egy későbbi eladás még elviheti az utolsó darabot. A hiányzó készletű tételek negatívba mennek, és a beszerzési rendelés beérkezésekor rendeződnek.",
           "Amikor a vevő átveszi az árut, koppintson a rendelés részleteiben az Átadás gombra a fennmaradó összeg beszedéséhez. A rendelés ekkor rendes, lezárt eladássá válik, a későbbi visszavételek pedig a megszokott visszavételi folyamaton mennek keresztül.",
           "Ha a vevő nem jön el, koppintson a rendelés részleteiben a Rendelés lemondása gombra, és válassza az előleg visszatérítését vagy megtartását. A készlet visszakerül.",
           "Az előlegről szóló nyugta és a végső átvételi nyugta ugyanazt a számot viseli."
@@ -659,16 +757,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Minden kombinációnak saját ára és költsége van, és saját készletet követ. Fizetéskor a termékre koppintva változatválasztó jelenik meg, mielőtt a termék a kosárba kerül."
+        "text": "Ha egy terméknek vannak változatai, az Ár mezője összecsukódik, és minden kombináció saját árat kap a Változatok ára és készlete alatt, saját készlettel (a 3.2-es verzió óta; a korábbi verziók még kérnek termékárat). A pénztár, a terméklista és a termék részletei a legalacsonyabb és a legmagasabb ár közötti sávot mutatják, például „NT$350–NT$390”, vagy egyetlen árat, ha minden kombináció ugyanannyiba kerül; az ár szerinti rendezés a legalacsonyabb kombinációs árat veszi alapul. Fizetéskor a termékre koppintva változatválasztó jelenik meg, mielőtt a termék a kosárba kerül."
+      },
+      {
+        "type": "p",
+        "text": "Nem kell minden kombinációhoz költséget megadnia: az üres Költség mező jelentése A termék költségét követi, vagyis a termék költségét használja, és annak változásakor vele együtt változik. Ha számot ír be, az Saját költség lesz – a 0 is annak számít. A Termékköltség mindenhol egyszerre törli az összes saját költséget."
       },
       {
         "type": "note",
-        "text": "A jellemzők és az értékek neve legfeljebb 20 karakter lehet."
+        "text": "A jellemzők és az értékek neve legfeljebb 20 karakter lehet, és nem lehet üres: az üres jellemző- vagy értéknév mentéskor pirosan bekeretezve jelenik meg, ilyenkor töltse ki, vagy törölje az üres értéket. A változatokkal rendelkező termék nem lehet szabadáras."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Megadhatom egy termék árát fizetéskor, például szállítási díjnál vagy alkudott áruknál?",
+    "keywords": [
+      "szabad ár",
+      "egyedi ár",
+      "ár megadása",
+      "szállítási díj",
+      "szolgáltatási díj",
+      "alkudott ár",
+      "piaci ár"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Igen – tegye a terméket szabadáras termékké. Kapcsolja be a Szabad ár lehetőséget a termék szerkesztőoldalán, és hagyja üresen az árat; a pénztár és a terméklista az ár helyén a „Szabad ár” feliratot mutatja. Fizetéskor a termékre koppintva először az árat kéri a rendszer; írja be, és koppintson a Kosárba gombra, hogy az adott áron kerüljön a kosárba."
+      },
+      {
+        "type": "list",
+        "items": [
+          "A 0 érvényes ár (például ingyenes szállításnál); üres mezővel nem lehet hozzáadni. Az árat úgy adja meg, ahogy az üzlet adózási módja szerint minden más árat is.",
+          "A kosárban minden szabadáras termék egy sort kap: ha újra rákoppint, megnyílik az a sor, és módosíthatja az árat.",
+          "A Szabad ár bekapcsolása a Kizárás az akciókból opciót is bekapcsolja, így a díjra nem vonatkozik engedmény, és nem számít bele az összegküszöbökbe. Kapcsolja vissza, ha egy alkudott tételnek részt kell vennie az akciókban.",
+          "Eladás után a sor ugyanúgy adózik, pontot szerez és számít a Riportokban, mint bármelyik másik, a visszavétel pedig a megadott árat téríti vissza.",
+          "A változatokkal rendelkező termék nem lehet szabadáras. A szabadáras termékek soha nem kerülnek fel ajándékként vagy fizetős kiegészítőként, és a csere cseretermék-listájában sem jelennek meg."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Minden csomagban elérhető, és az ár megadásához soha nem kell vezetői jóváhagyás."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -779,12 +922,16 @@ export const articles = [
       {
         "type": "p",
         "text": "A negatív készlet általában azt jelenti, hogy egy utánpótlást nem rögzítettek, vagy egy előrendelt termék még nem érkezett meg (az előrendelés leadáskor levonja a készletet). Az utánpótlást a beszerzési rendelés átvételével rögzítse, és a szám magától helyreáll; a leltári eltéréseket kézi módosítással javítsa, amely bekerül a mozgásnaplóba."
+      },
+      {
+        "type": "note",
+        "text": "Ha a pénztáros nem talál egy 0 készletű terméket, ellenőrizze, be van-e kapcsolva az Elfogyott termékek elrejtése a Beállítások → Eszközbeállítások részben: amíg be van kapcsolva, ez az iPad nem tud elfogyott terméket a kosárba tenni."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -852,7 +999,8 @@ export const articles = [
         "items": [
           "Számlás eladás: az áru ma elhagyja a boltot, és a mai árbevételbe számít; a pénz azon a napon számít bele a beérkezett pénzbe, amikor kiegyenlítik.",
           "Előrendelés: az előleg a befizetés napján számít bele a beérkezett pénzbe; az árbevétel az átvétel napján jelenik meg teljes összegben.",
-          "Elvesztett előleg: ha a vevő lemond egy előrendelést, és Ön megtartja az előleget, az a befizetéskor már bekerült a beérkezett pénzbe. A Riportok ezt külön, elvesztett előlegként mutatja, és soha nem számít árbevételnek."
+          "Elvesztett előleg: ha a vevő lemond egy előrendelést, és Ön megtartja az előleget, az a befizetéskor már bekerült a beérkezett pénzbe. A Riportok ezt külön, elvesztett előlegként mutatja, és soha nem számít árbevételnek.",
+          "Korábbi rendelés sztornózása: a visszatérített pénz a sztornó napján számít bele a beérkezett pénzbe, így az adott nap beérkezett pénze negatív is lehet, míg a Sztornózva a rendelést az eladás napján számolja. A beérkezett pénz és a Sztornózva csempén az ⓘ ugyanezt magyarázza."
         ]
       },
       {
@@ -963,21 +1111,33 @@ export const articles = [
       "költség",
       "nyereség",
       "árrés",
+      "bruttó árrés",
       "riportok",
-      "nem követett nyereség"
+      "nem követett nyereség",
+      "hiányzó költség",
+      "követett nyereség"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A költség nem kötelező mező. A költség nélküli termékek a riportokban „a nyereség nincs követve” jelölést kapnak, és kimaradnak a nyereségszámításból – az árbevételük teljes egészében beleszámít, csak a nyereség marad ki."
+        "text": "A költség nem kötelező mező. A költség nélküli termékek kimaradnak a nyereségből, miközben az árbevételük teljes egészében beleszámít. A Riportok Követett nyereség kártyája megmutatja, hány, az időszakban eladott terméknek nincs költsége; a 0 költségnek számít, ezért az ilyen termékek nem szerepelnek a listán."
       },
       {
         "type": "p",
-        "text": "A teljes nyereségriporthoz adja meg a költségeket a termék szerkesztőoldalán; a későbbi rendelések már beleszámítanak. A nyereséget a kedvezmények utáni árbevételből számoljuk."
+        "text": "Koppintson a kártyára vagy a Termékek megtekintése gombra a Költség nélküli termékek megnyitásához, amelyek a nyereségből kimaradó árbevétel szerint vannak rangsorolva. Koppintson egy sorra a termék megnyitásához, adja hozzá a költségét a Szerkesztés alatt, és visszatérve a sor a Költség hozzáadva jelölést kapja. A változatokkal rendelkező termék akkor számít költséggel rendelkezőnek, ha vagy valamelyik változatának, vagy magának a terméknek van költsége."
+      },
+      {
+        "type": "p",
+        "text": "A nyereség a minden engedmény (tétel- és kosárengedmények, akciók, pontbeváltás) utáni, adó nélküli árbevétel mínusz a költség – ezért olvasható a mező úgy, hogy Beszerzési ár adó nélkül (nem kötelező): azt adja meg, amennyit adó nélkül fizetett. Az árrés a nyereség osztva a költséggel rendelkező termékek adó nélküli árbevételével, így a költség nélküliek nem húzzák le. A visszavétel a visszavétel napján visszaveszi azt a nyereséget, amelyet ezek a tételek hoztak."
+      },
+      {
+        "type": "note",
+        "text": "A megadott költség csak a későbbi eladásokat érinti; a már megtörtént eladásokat nem számolja újra a rendszer. Ez a számítás a 3.1-es verzióban jelent meg: a korábbi verziók csak a kézi tételengedményeket vonták le, és az adóval együtt megadott árban lévő adót nyereségnek számolták, ezért a frissítés után az engedményes vagy adóval együtt árazott időszakok alacsonyabb nyereséget mutatnak. Ez javítás, nem adatvesztés."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1039,9 +1199,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Időzítés: a mai nap beleesik az akció időszakába? Egy Happy Hour idősáv korlátozza a hétköznapot vagy az időpontot?",
-          "Hatókör: a kosárban lévő termékek beleesnek az akció termék- vagy kategóriahatókörébe? Elérte a vásárlás az összegküszöböt?",
+          "Hatókör: a kosárban lévő termékek beleesnek az akció termék- vagy kategóriahatókörébe? A termék Kizárás az akciókból beállítású (a szabadáras termékek alapból azok)? Elérte a vásárlás az összegküszöböt?",
           "Célközönség: az akció egy tagsági szintre vagy születési hónapra korlátozott? Kiválasztotta a tagot a fizetésnél?",
-          "Felhasználási korlátok: elérte az akció az összes felhasználás korlátját, vagy ennek a vevőnek a korlátját?",
+          "Felhasználási korlátok: elérte az akció az összes felhasználás korlátját, vagy ennek a vevőnek a korlátját? A születési hónaphoz kötött akció vevőnkénti korlátját naptári évenként számolja a rendszer.",
           "Halmozás: egy magasabb prioritású, „a további akciók leállítása” beállítású akció blokkolja?"
         ]
       },
@@ -1323,7 +1483,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "A fájl táblázatként nyílik meg. Az angol és kínai nyelvű gyakori oszlopneveket a program automatikusan párosítja; bármelyik oszlopfejlécre koppintva módosíthatja a hozzárendelést.",
+          "A fájl táblázatként nyílik meg. Az angol és kínai (hagyományos vagy egyszerűsített) nyelvű gyakori oszlopneveket a program automatikusan párosítja; bármelyik oszlopfejlécre koppintva módosíthatja a hozzárendelést.",
           "Bármelyik cellára koppintva rögtön javíthatja az értékét – nem kell szerkeszteni a fájlt és elölről kezdeni.",
           "Az ellenőrzéshez koppintson a Megerősítés gombra. A hibás sorokat piros jelölés és az ok mutatja; az eladások importálásakor a hibás rendelések kihagyhatók.",
           "Oldja meg, ami döntést igényel (azonos nevű termékek, több vevőnek megfelelő sor), nézze át az összegzést, majd koppintson az Importálás indítása gombra."
@@ -1332,7 +1492,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Az importált eladások az eladás dátuma szerint kerülnek be, és az üzlet pénzneme és adómódja szerint újra kiszámítódnak. Nem érintik a készletet, és nem adnak üdvözlő pontokat.",
+          "Az importált eladások a rendelés dátuma szerint kerülnek be, és az üzlet pénzneme és adómódja szerint újra kiszámítódnak. Nem érintik a készletet, és nem adnak üdvözlő pontokat.",
           "A vevőket telefonszám vagy e-mail-cím alapján párosítja a meglévőkkel; akit nem talál, azt létrehozza.",
           "Az importált rendelésen az Importálva dátuma és az eredeti rendelésszám látszik, és nem lehet sztornózni vagy visszavenni.",
           "A hibás sorokat az okokkal kiegészített CSV-ként exportálhatja – javítsa ki őket, és importálja újra. Az ismétlődő sorokat a program automatikusan kihagyja."
@@ -1578,6 +1738,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Az utolsó 7 napban és az utolsó napon az app egyszer-egyszer emlékezteti Önt arra, hány nap van hátra, hogy a próbaidőszak végén a fizetés szünetel, és hogy az adatai megmaradnak."
+      },
+      {
+        "type": "p",
         "text": "A próbaidőszak alatt létrehozott minden adat (termékek, rendelések, tagok) teljes egészében megmarad. Az adatai soha nem törlődnek, akár fizet elő utána, akár nem."
       }
     ],
@@ -1637,7 +1801,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: egyedül dolgozó piaci standhoz, ahol fizetésre és termékekre van szükség.",
-          "Standard: kiegészül akciókkal, hűségpontokkal és tagi szintekkel, készletkövetéssel, beszerzéssel, számlás (utólag fizetett) eladással és előrendeléssel.",
+          "Standard: kiegészül akciókkal, hűségpontokkal és tagi szintekkel, készletkövetéssel, beszerzéssel, számlás (utólag fizetett) eladással, előrendeléssel és a kezelési költség becslésével.",
           "Pro: kiegészül munkatársi fiókokkal és jogosultságokkal, jóváhagyással, tevékenységnaplóval, visszaállítási bejegyzésekkel és részletes jelentésekkel – munkatársakat foglalkoztató üzleteknek."
         ]
       },
@@ -1800,20 +1964,26 @@ export const articles = [
       "születésnapi akció",
       "VIP",
       "törzsvásárlói akció",
-      "útmutató"
+      "útmutató",
+      "vevőnkénti korlát"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Először hozza létre a szinteket a Beállítások → Tagsági szintek részen (pl. Arany), majd célozza az akciót erre a szintre. Születésnapi akciónál állítsa a feltételt „Születési hónap” értékre."
+        "text": "Először hozza létre a szinteket a Beállítások → Tagsági szintek részen (pl. Arany), majd célozza az akciót erre a szintre. Születésnapi akciónál állítsa a célközönséget Születési hónap értékre, és töltse ki a Vevőnkénti korlát mezőt."
       },
       {
         "type": "list",
         "items": [
           "Az akció csak akkor lép életbe, ha a fizetésnél ki van választva a tag – a jogosultságot a rendszer az aktuálisan kiválasztott tag alapján ítéli meg.",
           "A születésnapi jogosultság a tag születési hónapját olvassa, ezért töltse ki a születésnap mezőt; akinél ez hiányzik, azt a rendszer sosem kezeli születésnapos vevőként.",
+          "A születési hónaphoz kötött akcióhoz vevőnkénti korlát kell, amelyet naptári évenként számol a rendszer: az 1-es korlát azt jelenti, hogy minden vevő évente egyszer használhatja, és a következő évben újraindul. Korlát nélkül nem menthető.",
           "Az automatikus szintlépést a rendszer a fizetés lezárásakor értékeli; ha a rendelést sztornózzák, az általa kiváltott szintlépés automatikusan visszavonódik."
         ]
+      },
+      {
+        "type": "note",
+        "text": "A 3.2-es verzió előtt a születési hónaphoz kötött akció hibát jelzett, és még kitöltött vevőnkénti korlát mellett sem lehetett menteni. Ha ez Önnel is előfordul, frissítse a DingPOS-t az App Store-ból."
       }
     ],
     "related": [

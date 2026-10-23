@@ -82,24 +82,29 @@ export const articles = [
       "ensimmäinen käynnistys",
       "ohjattu käyttöönotto",
       "kaupan perustaminen",
-      "kassajärjestelmän käyttöönotto"
+      "kassajärjestelmän käyttöönotto",
+      "maa",
+      "valuutta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kun avaat DingPOSin ensimmäisen kerran, ohjattu käyttöönotto opastaa sinua kauppasi käyttöönotossa noin 10 minuutissa:"
+        "text": "Kun avaat DingPOSin ensimmäisen kerran, ohjattu käyttöönotto perustaa kauppasi kahdessa vaiheessa ja muutamassa minuutissa:"
       },
       {
         "type": "steps",
         "items": [
-          "Valitse maasi – valuutta, verotila ja oletusverokanta täytetään automaattisesti (verokantaa ja verotilaa voi vielä tässä vaiheessa muuttaa).",
-          "Anna kaupan nimi ja halutessasi lataa kaupan logo.",
-          "Luo ohjeen mukaan 3–5 tuotetta (voit ohittaa tämän ja lisätä tuotteet myöhemmin milloin tahansa)."
+          "Valitse maasi tai alueesi. Luettelon alussa näkyvät tämän iPadin alue ja yleisimmät markkinat; sen alla ovat kaikki 175 maata ja aluetta, joissa DingPOS on App Storessa, ja luetteloa voi hakea nimellä sovelluksen kielellä tai englanniksi. Valintasi täyttää valuutan, verokannan ja verotilan.",
+          "Anna Myymäläsi-vaiheessa kaupan nimi, lisää halutessasi logo ja tarkista valuutta, verokanta ja verotila (verollinen / veroton hinta). Valuutta on oletuksena maasi valuutta; napauttamalla sitä voit valita 130 valuutan joukosta."
         ]
       },
       {
         "type": "p",
-        "text": "Kun olet valmis, kuulet \"Ding!\" – kauppasi on valmis ja voit aloittaa myynnin heti."
+        "text": "Napauta Jatka, niin näet viestin ”Ding! Myymäläsi on valmis.” DingPOS luo myös kaksi maksutapaa, Käteinen ja Luottokortti. Lisää sitten tuotteesi Tuotteet-välilehdellä ja aloita myynti."
+      },
+      {
+        "type": "note",
+        "text": "Valuuttaa ja verotilaa ei voi muuttaa käyttöönoton jälkeen; verokannan voi edelleen vaihtaa myöhemmin Asetuksissa. Yhdysvalloissa, Kanadassa, Brasiliassa ja Mikronesiassa verokanta riippuu osavaltiosta, provinssista tai kaupungista, joten verokantakenttä on aluksi tyhjä ja jatkaaksesi syötät veloittamasi verokannan (0 käy). 175 maan luettelo ja valuutan valinta tulivat versiossa 3.2; aiemmissa versioissa oli 15 maata."
       }
     ],
     "related": [
@@ -212,7 +217,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valuutta ja verotila (verollinen / veroton hinta) lukitaan, kun käyttöönotto on valmis. Kaikki aiemmat tilauksesi on laskettu niillä, joten niiden vaihtaminen kesken kaiken sotkisi raporttisi."
+        "text": "Valuutta ja verotila (verollinen / veroton hinta) lukitaan, kun käyttöönotto on valmis. Kaikki aiemmat tilauksesi on laskettu niillä, joten niiden vaihtaminen kesken kaiken sotkisi raporttisi. Tarkista ne käyttöönoton Myymäläsi-vaiheessa: valuutta on oletuksena maasi valuutta, ja voit napauttaa sitä valitaksesi toisen."
       },
       {
         "type": "note",
@@ -234,17 +239,23 @@ export const articles = [
       "sovelluksen kieli",
       "englanti",
       "kiinan kieli",
+      "japani",
+      "espanja",
       "vaihda kieli",
       "kielivalinta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS tukee englantia ja perinteistä kiinaa. Siirry kohtaan Asetukset → Laitteen asetukset ja napauta Sovelluksen kieli. Se avaa DingPOSin sivun iPadin Asetukset-sovelluksessa, jossa valitset kielen kohdasta Kieli."
+        "text": "DingPOS tukee 32 kieltä, muun muassa englantia, perinteistä ja yksinkertaistettua kiinaa, japania, koreaa, thaita, vietnamia, indonesiaa, malaijia, espanjaa (Latinalainen Amerikka), portugalia (Brasilia), ranskaa ja saksaa. Siirry kohtaan Asetukset → Laitteen asetukset ja napauta Sovelluksen kieli. Se avaa DingPOSin sivun iPadin Asetukset-sovelluksessa, jossa valitset kielen kohdasta Kieli."
       },
       {
         "type": "p",
         "text": "iOS ei salli sovellusten avata kielilistaa suoraan, joten viimeinen napautus tehdään järjestelmän Asetuksissa. Kieli koskee vain tätä iPadia."
+      },
+      {
+        "type": "note",
+        "text": "Muut kielet kuin englanti ja perinteinen kiina tulivat versiossa 3.2. Jos Kieli-luettelossa on vain englanti ja kiina, päivitä DingPOS App Storesta."
       }
     ],
     "related": [
@@ -363,12 +374,13 @@ export const articles = [
       "line pay",
       "vaihtoraha",
       "oma maksutapa",
-      "laskulle"
+      "laskulle",
+      "maksukulut"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Käteinen, luottokortti ja Line Pay ovat valmiina, ja Asetuksista voit lisätä omia maksutapoja (esim. Apple Pay tai paikalliset mobiilimaksut)."
+        "text": "Uusi myymälä aloittaa kahdella maksutavalla, Käteinen ja Luottokortti, jotka nimetään käyttöönotossa sovelluksen kielellä. Kohdassa Asetukset → Maksutavat voit lisätä minkä tahansa muun maksutavan (esim. Apple Pay, LINE Pay, paikallinen e-lompakko) sekä poistaa ja järjestellä niitä."
       },
       {
         "type": "p",
@@ -376,13 +388,60 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jos vakioasiakas ottaa tavarat nyt ja maksaa myöhemmin, valitse Laskulle: myynti kirjataan myyntisaamiseksi ja kuitataan, kun raha saapuu. Katso \"Voiko vakioasiakas ostaa laskulle ja maksaa myöhemmin?\""
+        "text": "Jos kortti- tai mobiilimaksupalvelusi perii maksukulun, anna maksutavalle maksukulun määrä, niin Tilastot arvioi kunkin maksutavan maksukulut ja arvioidun nettotulon – katso ”Voiko DingPOS seurata kortti- ja mobiilimaksujen maksukuluja?”"
+      },
+      {
+        "type": "p",
+        "text": "Jos vakioasiakas ottaa tavarat nyt ja maksaa myöhemmin, valitse Laskulle: myynti kirjataan myyntisaamiseksi ja kuitataan, kun raha saapuu. Katso ”Voiko vakioasiakas ostaa laskulle ja maksaa myöhemmin?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Voiko DingPOS seurata kortti- ja mobiilimaksujen maksukuluja?",
+    "keywords": [
+      "maksukulu",
+      "korttimaksun kulut",
+      "maksukulun määrä",
+      "nettotulo",
+      "kauppiaan kulut",
+      "maksupalvelun palkkio",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Kyllä. Napauta kohdassa Asetukset → Maksutavat maksutapaa (tai lisää uusi) ja täytä Maksukulu: prosenttiosuus, kiinteä summa tapahtumaa kohden tai molemmat. Siitä lähtien jokaiseen kyseisellä maksutavalla vastaanotettuun maksuun kirjataan maksukulu, joka arvioidaan sillä hetkellä voimassa olevalla määrällä."
+      },
+      {
+        "type": "p",
+        "text": "Tilastot-välilehden Maksutavat-kortti lisää jokaisen maksukulullisen maksutavan alle rivin ”Maksukulu · Netto”, ja kortin alareunassa näkyvät koko jakson arvioidut maksukulut ja arvioitu nettotulo."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Syötä määrä, jonka maksupalvelusi todella vähentää, vero mukaan lukien – jos kulu on 3 % ja vero 5 %, syötä 3,15 %. Jätä molemmat kentät tyhjiksi, jos kuluja ei ole.",
+          "Määrän muutos koskee vain myöhempiä maksuja; jo kirjatut maksukulut pysyvät ennallaan.",
+          "”Prosenttiosuus palautuu palautuksissa ja ennakkotilausten peruutuksissa” on oletuksena päällä niille palveluille, jotka palauttavat kulunsa hyvityksen yhteydessä; kiinteää osuutta ei koskaan palauteta. Mitätöinnit, palautukset, peruutetut ennakkotilaukset ja peruutetut maksun kuittaukset kumoavat maksukulut tämän säännön mukaan, ja asiakas saa takaisin saman summan kummassakin tapauksessa.",
+          "Maksuihin, jotka on vastaanotettu ennen kuin maksutavalla oli määrä, ei kirjata maksukulua: Tilastot merkitsee ne tekstillä ”N ilman maksukulun määrää” ja näyttää nettotulon muodossa ”—”."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Maksukulut ovat arvioita antamastasi määrästä; todellinen summa on maksupalvelusi tiliotteella. Maksukulujen määrän muokkaaminen ja maksukulujen näkeminen Tilastoissa vaatii Standard-paketin tai sitä ylemmän. Lite-paketissa kentät on lukittu, mutta maksuihin kirjataan silti maksukulut, joten ne tulevat näkyviin, kun päivität."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -410,7 +469,45 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Voiko kassanäkymästä piilottaa loppuunmyydyt tuotteet?",
+    "keywords": [
+      "piilota",
+      "loppuunmyydyt tuotteet",
+      "loppu varastosta",
+      "kassanhoitaja",
+      "tuote ei näy",
+      "tuotetta ei löydy"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Kyllä. Avaa Asetukset → Laitteen asetukset ja kytke päälle Piilota loppuunmyydyt tuotteet (oletuksena pois päältä). Kassan tuoteruudukko, luokkasuodatin ja haku (nimi ja viivakoodi) ohittavat silloin kaikki tuotteet, joiden varastosaldo on 0 tai alle. Kytkin tulee voimaan heti, eikä sovellusta tarvitse avata uudelleen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tuotteet, joiden varastoa ei seurata, näkyvät aina. Variantillinen tuote piilotetaan vain, kun kaikki sen variantit on myyty loppuun.",
+          "Se vaikuttaa vain tämän iPadin kassaan; Tuotteet-luettelo näyttää edelleen kaikki tuotteet.",
+          "Kun kaikki tuotteet on piilotettu, kassa näyttää viestin ”Kaikki tuotteet ovat loppuunmyytyjä” ja kertoo, mistä kytkimen saa pois päältä."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Kun kytkin on päällä, tämä iPad ei löydä loppuunmyytyjä tuotteita, joten se ei voi myydä negatiiviseen varastosaldoon eikä ottaa niistä ennakkotilausta – kytke se pois, kun tarvitset niitä. Jos tuotteet näyttävät kadonneen kassalta, syy on yleensä tämä kytkin."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -563,7 +660,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Varastosta vähennetään heti, kun ennakkotilaus tehdään, jolloin tavara on varattu asiakkaalle. Varastosaldot voivat mennä negatiivisiksi, jos tuotteet ovat loppu, ja palautuvat, kun ostotilaus vastaanotetaan.",
+          "Varastosta vähennetään heti, kun ennakkotilaus tehdään, joten myytävissä oleva määrä päivittyy heti. Se on merkki, ei varaus: myöhempi myynti voi silti viedä viimeisen kappaleen. Loppuun myydyt tuotteet menevät negatiivisiksi ja palautuvat, kun ostotilaus vastaanotetaan.",
           "Kun asiakas noutaa tilauksen, napauta tilauksen tiedoissa Luovuta ja ota loppusumma vastaan. Tilauksesta tulee tavallinen valmis myynti, ja myöhemmät palautukset hoidetaan normaalisti palautuksen kautta.",
           "Jos asiakas ei koskaan tule, napauta tilauksen tiedoissa Peruuta tilaus ja valitse, palautatko etumaksun vai pidätkö sen. Tavara lisätään takaisin varastoon.",
           "Etumaksukuitilla ja lopullisella noutokuitilla on sama numero."
@@ -670,16 +767,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jokaisella yhdistelmällä on oma hintansa ja hankintahintansa, ja sen varastosaldoa seurataan erikseen. Kassalla tuotteen napauttaminen avaa variantin valinnan ennen kuin tuote lisätään ostoskoriin."
+        "text": "Kun tuotteella on variantteja, sen Hinta-kenttä piiloutuu ja jokaiselle yhdistelmälle annetaan oma hinta kohdassa Varianttien hinnat ja varasto sekä oma varastosaldo (versiosta 3.2 alkaen; aiemmat versiot kysyvät edelleen tuotteen hintaa). Kassa, tuoteluettelo ja tuotteen tiedot näyttävät hintahaarukan halvimmasta kalleimpaan, esim. ”NT$350–NT$390”, tai yhden hinnan, jos kaikki yhdistelmät maksavat saman; hintajärjestys käyttää halvimman yhdistelmän hintaa. Kassalla tuotteen napauttaminen avaa variantin valinnan ennen kuin tuote lisätään ostoskoriin."
+      },
+      {
+        "type": "p",
+        "text": "Omakustannusta ei tarvitse syöttää jokaiselle yhdistelmälle: tyhjä Omakustannus-kenttä tarkoittaa Tuotteen mukaan, eli käytössä on tuotteen omakustannus, ja se muuttuu tuotteen mukana. Luku tekee siitä erillisen omakustannuksen – myös 0. Painike Käytä tuotteen omakustannusta kaikille tyhjentää kaikki erilliset omakustannukset kerralla."
       },
       {
         "type": "note",
-        "text": "Vaihtoehdon ja arvon nimi saa olla enintään 20 merkkiä pitkä."
+        "text": "Vaihtoehdon ja arvon nimi saa olla enintään 20 merkkiä pitkä, eikä se voi olla tyhjä: tyhjä vaihtoehdon nimi tai arvo korostuu punaisella tallennettaessa, joten täytä se tai poista tyhjä arvo. Tuotteella, jolla on variantteja, ei voi käyttää avohintaa."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Voinko syöttää tuotteen hinnan kassalla, esimerkiksi toimitusmaksun tai sovitun hinnan?",
+    "keywords": [
+      "avohinta",
+      "oma hinta",
+      "syötä hinta",
+      "toimitusmaksu",
+      "palvelumaksu",
+      "sovittu hinta",
+      "torihinta"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Kyllä – tee siitä avohintainen tuote. Kytke tuotteen muokkaussivulla Avohinta päälle ja jätä hinta tyhjäksi; kassa ja tuoteluettelo näyttävät hinnan paikalla tekstin ”Avohinta”. Kassalla tuotteen napauttaminen kysyy ensin hinnan; syötä se ja napauta Lisää koriin, niin tuote lisätään kyseisellä hinnalla."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 on kelvollinen hinta (esim. ilmainen toimitus); tyhjää kenttää ei voi lisätä. Syötä hinta samalla tavalla kuin kaupassasi muutkin hinnat verotilan mukaan.",
+          "Ostoskorissa on yksi rivi avohintaista tuotetta kohden: sen napauttaminen uudelleen avaa rivin, jotta voit muuttaa hintaa.",
+          "Avohinnan kytkeminen päälle kytkee päälle myös asetuksen Sulje pois kampanjoista, jolloin maksua ei alenneta eikä se lasketa ostosrajaan. Kytke se takaisin pois, jos sovitun hinnan tuotteen pitäisi osallistua kampanjoihin.",
+          "Kun rivi on myyty, siihen lasketaan vero, se kerryttää pisteitä ja näkyy Tilastoissa kuten muutkin rivit, ja palautuksessa palautetaan syötetty hinta.",
+          "Tuotteella, jolla on variantteja, ei voi käyttää avohintaa. Avohintaisia tuotteita ei koskaan tarjota lahjoina tai maksullisina lisätuotteina, eivätkä ne näy vaihdon korvaavien tuotteiden luettelossa."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Se on käytössä jokaisessa paketissa, eikä hinnan syöttäminen koskaan vaadi esihenkilön hyväksyntää."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -788,12 +930,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Miinuksella oleva saldo tarkoittaa yleensä, ettei täydennystä ole kirjattu tai että ennakkotilattu tuote ei ole vielä saapunut (ennakkotilaukset vähentävät varastoa heti tehtäessä). Kirjaa täydennykset vastaanottamalla ostotilaus, niin saldo palautuu itsestään. Korjaa inventaarioerot käsin tehtävällä saldon säädöllä, joka tallentuu varastoliikkeiden lokiin."
+      },
+      {
+        "type": "note",
+        "text": "Jos kassanhoitaja ei löydä tuotetta, jonka varastosaldo on 0, tarkista, onko kohdassa Asetukset → Laitteen asetukset päällä Piilota loppuunmyydyt tuotteet: kun se on päällä, tämä iPad ei voi lisätä loppuunmyytyjä tuotteita ostoskoriin."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -860,7 +1006,8 @@ export const articles = [
         "items": [
           "Laskulle myynti: tuotteet lähtevät tänään ja kuuluvat tämän päivän liikevaihtoon. Raha kirjautuu saapuneeseen maksuun sinä päivänä, kun maksu kuitataan.",
           "Ennakkotilaus: etumaksu kirjautuu saapuneeseen maksuun maksupäivänä. Liikevaihto kirjataan kokonaisuudessaan noutopäivänä.",
-          "Etumaksun menetys: kun asiakas peruu ennakkotilauksen ja etumaksu jää kauppiaalle, se on jo laskettu saapuneeseen maksuun maksupäivänä. Tilastot-välilehti näyttää sen erikseen menetettyinä etumaksuina, eikä se koskaan kuulu liikevaihtoon."
+          "Etumaksun menetys: kun asiakas peruu ennakkotilauksen ja etumaksu jää kauppiaalle, se on jo laskettu saapuneeseen maksuun maksupäivänä. Tilastot-välilehti näyttää sen erikseen menetettyinä etumaksuina, eikä se koskaan kuulu liikevaihtoon.",
+          "Aiemman tilauksen mitätöinti: palautettu raha kirjautuu saapuneeseen maksuun mitätöintipäivänä, joten sen päivän saapunut maksu voi olla negatiivinen, kun taas Mitätöidyt laskee tilauksen sen myyntipäivälle. Saapunut maksu- ja Mitätöidyt-ruutujen ⓘ-merkki selittää saman."
         ]
       },
       {
@@ -966,26 +1113,37 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Miten myyntikate näkyy raporteissa, jos en ole syöttänyt hankintahintoja?",
+    "question": "Miten myyntikate raportoidaan, jos en ole syöttänyt omakustannuksia?",
     "keywords": [
-      "hankintahinta",
+      "omakustannus",
       "myyntikate",
       "kate",
       "raportit",
-      "ei seurannassa"
+      "ei seurannassa",
+      "puuttuva omakustannus",
+      "myyntikate seurannassa"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Hankintahinta on valinnainen kenttä. Raporteissa tuotteet ilman hankintahintaa merkitään tekstillä ”myyntikatetta ei seurata”, ja ne jätetään pois myyntikatteen laskennasta. Liikevaihto lasketaan silti kokonaan, vain myyntikate jätetään pois."
+        "text": "Omakustannus on valinnainen kenttä. Tuotteet ilman omakustannusta jätetään pois myyntikatteesta, mutta niiden liikevaihto lasketaan silti kokonaan. Tilastot-välilehden Myyntikate seurannassa -kortti näyttää, kuinka monella jaksolla myydyllä tuotteella ei ole omakustannusta; omakustannus 0 lasketaan omakustannukseksi, joten niitä tuotteita ei luetella."
       },
       {
         "type": "p",
-        "text": "Saat täydelliset myyntikatelaskelmat lisäämällä hankintahinnat tuotteen muokkaussivulla. Ne otetaan huomioon tulevissa myynneissä. Myyntikate lasketaan alennuksen jälkeisestä liikevaihdosta."
+        "text": "Napauta korttia tai Näytä tuotteet avataksesi näkymän Tuotteet ilman omakustannetta, jossa tuotteet on järjestetty sen mukaan, kuinka paljon liikevaihtoa on jäänyt myyntikatteen ulkopuolelle. Napauta riviä avataksesi tuotteen, lisää omakustannus Muokkaa-painikkeella, niin rivi on palatessasi merkitty tekstillä Omakustanne lisätty. Tuotteen, jolla on variantteja, katsotaan saaneen omakustannuksen, kun joko jollakin variantilla tai itse tuotteella on omakustannus."
+      },
+      {
+        "type": "p",
+        "text": "Myyntikate on liikevaihto kaikkien alennusten jälkeen (tuote- ja ostoskorialennukset, kampanjat, pisteiden lunastus) ja ennen veroa, miinus omakustannus – siksi kentän nimi on Omakustannus ilman veroa (valinnainen): syötä hinta, jonka maksoit ennen veroa. Kateprosentti on myyntikate ÷ niiden tuotteiden veroton liikevaihto, joilla on omakustannus, joten tuotteet ilman omakustannusta eivät laske sitä. Palautus peruu palautuspäivänä sen myyntikatteen, jonka kyseiset tuotteet olivat tuoneet."
+      },
+      {
+        "type": "note",
+        "text": "Lisäämäsi omakustannus vaikuttaa vain myöhempiin myynteihin; jo tehtyjä myyntejä ei lasketa uudelleen. Tämä laskentatapa tuli versiossa 3.1: aiemmat versiot vähensivät vain käsin annetut tuotealennukset ja laskivat verolliseen hintaan sisältyvän veron myyntikatteeksi, joten päivityksen jälkeen jaksot, joissa on alennuksia tai verollisia hintoja, näyttävät pienempää myyntikatetta. Kyse on korjauksesta, ei kadonneista tiedoista."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1048,9 +1206,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Ajoitus: onko tämä päivä kampanjan voimassaoloaikana? Rajaako Happy Hour -aika viikonpäivää tai kellonaikaa?",
-          "Rajaus: kuuluvatko ostoskorin tuotteet kampanjan tuote- tai luokkarajaukseen? Onko ostosraja täyttynyt?",
+          "Rajaus: kuuluvatko ostoskorin tuotteet kampanjan tuote- tai luokkarajaukseen? Onko tuotteelle asetettu Sulje pois kampanjoista (avohintaisille tuotteille se on oletuksena)? Onko ostosraja täyttynyt?",
           "Kohderyhmä: onko kampanja rajattu jäsentasoon tai syntymäkuukauteen? Valittiinko kyseinen jäsen kassalla?",
-          "Käyttörajat: onko kokonaiskäyttöraja tai tämän asiakkaan oma raja täyttynyt?",
+          "Käyttörajat: onko kokonaiskäyttöraja tai tämän asiakkaan oma raja täyttynyt? Syntymäkuukausikampanjan asiakaskohtainen raja lasketaan kalenterivuosittain.",
           "Yhdistäminen: estääkö korkeamman prioriteetin kampanja, jossa on asetus ”Pysäytä myöhemmät kampanjat, kun tämä toteutuu”?"
         ]
       },
@@ -1333,7 +1491,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Tiedosto avautuu taulukkona. Yleiset sarakenimet englanniksi ja kiinaksi tunnistetaan automaattisesti; voit muuttaa sarakkeen kohdistusta napauttamalla sen otsikkoa.",
+          "Tiedosto avautuu taulukkona. Yleiset sarakenimet englanniksi ja kiinaksi (perinteinen tai yksinkertaistettu) tunnistetaan automaattisesti; voit muuttaa sarakkeen kohdistusta napauttamalla sen otsikkoa.",
           "Napauta mitä tahansa solua korjataksesi sen arvon suoraan – tiedostoa ei tarvitse muokata ja aloittaa alusta.",
           "Napauta Vahvista tarkistaaksesi tiedot. Ongelmalliset rivit merkitään punaisella ja syy näytetään; myyntien tuonnissa voi ohittaa tilaukset, joissa on virheitä.",
           "Ratkaise kaikki päätöstä vaativat tapaukset (samannimiset tuotteet, rivi joka vastaa useita asiakkaita), tarkista yhteenveto ja napauta Aloita tuonti."
@@ -1342,7 +1500,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Tuodut myynnit sijoitetaan tapahtumapäivän mukaan ja lasketaan uudelleen kauppasi valuutalla ja verotilalla. Ne eivät vaikuta varastoon eivätkä anna tervetuliaispisteitä.",
+          "Tuodut myynnit sijoitetaan tilauspäivän mukaan ja lasketaan uudelleen kauppasi valuutalla ja verotilalla. Ne eivät vaikuta varastoon eivätkä anna tervetuliaispisteitä.",
           "Asiakkaat yhdistetään olemassa oleviin puhelinnumeron tai sähköpostin perusteella; tunnistamattomat luodaan uusiksi.",
           "Tuoduissa tilauksissa näkyy Tuotu-päivä ja lähdejärjestelmän tilausnumero, eikä niitä voi mitätöidä tai palauttaa.",
           "Virheelliset rivit voi viedä CSV-tiedostona, johon on merkitty syyt – korjaa ne ja tuo uudelleen. Kaksoisrivit ohitetaan automaattisesti."
@@ -1586,6 +1744,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Kokeilun viimeisten 7 päivän aikana ja viimeisenä päivänä sovellus muistuttaa kerran kummallakin kerralla, kuinka monta päivää on jäljellä, että kassa pysähtyy kokeilun päättyessä ja että tietosi säilyvät."
+      },
+      {
+        "type": "p",
         "text": "Kaikki kokeilun aikana luomasi tiedot (tuotteet, tilaukset, jäsenet) säilyvät kokonaisuudessaan. Tietojasi ei koskaan poisteta, tilasit paketin myöhemmin tai et."
       }
     ],
@@ -1645,7 +1807,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: yhden hengen myyntikojulle, joka tarvitsee kassan ja tuotteet.",
-          "Standard: lisää kampanjat, kanta-asiakaspisteet ja -tasot, varastoseurannan, ostotilaukset, laskulle myynnin ja ennakkotilaukset.",
+          "Standard: lisää kampanjat, kanta-asiakaspisteet ja -tasot, varastoseurannan, ostotilaukset, laskulle myynnin, ennakkotilaukset ja maksukulujen arviot.",
           "Pro: lisää työntekijätilit ja oikeudet, esihenkilön hyväksynnän, toimintolokin, palautusmerkinnät ja laajennetut raportit – kaupoille, joissa on henkilökuntaa."
         ]
       },
@@ -1816,15 +1978,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Luo ensin tasot kohdassa Asetukset › Jäsentasot (esim. Kulta) ja kohdista kampanja sitten kyseiselle tasolle. Syntymäpäivätarjouksissa valitse ehdoksi ”Syntymäkuukausi”."
+        "text": "Luo ensin tasot kohdassa Asetukset → Jäsentasot (esim. Kulta) ja kohdista kampanja sitten kyseiselle tasolle. Syntymäpäivätarjouksissa valitse kohderyhmäksi Syntymäkuukausi ja täytä Käyttöraja asiakasta kohden."
       },
       {
         "type": "list",
         "items": [
           "Jäsen on valittava kassalla, jotta tarjous laukeaa – oikeus arvioidaan sillä hetkellä valitun jäsenen perusteella.",
           "Syntymäpäiväoikeus perustuu jäsenen syntymäkuukauteen, joten täytä syntymäpäiväkenttä; jäseniä, joilta se puuttuu, ei koskaan pidetä syntymäpäiväasiakkaina.",
+          "Syntymäkuukausikampanja tarvitsee asiakaskohtaisen käyttörajan, joka lasketaan kalenterivuosittain: raja 1 tarkoittaa, että kukin asiakas voi käyttää tarjouksen kerran vuodessa, ja se nollautuu seuraavana vuonna. Ilman rajaa kampanjaa ei voi tallentaa.",
           "Automaattiset tasonnostot arvioidaan, kun kassatapahtuma valmistuu; jos tilaus mitätöidään, sen laukaisema tasonnosto perutaan automaattisesti."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Ennen versiota 3.2 syntymäkuukausikampanja näytti virheen eikä sitä voinut tallentaa, vaikka asiakaskohtainen käyttöraja oli täytetty. Jos näin käy sinulle, päivitä DingPOS App Storesta."
       }
     ],
     "related": [

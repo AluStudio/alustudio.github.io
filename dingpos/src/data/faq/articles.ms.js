@@ -82,24 +82,29 @@ export const articles = [
       "panduan persediaan",
       "buka kedai",
       "kedai pertama",
-      "pembantu persediaan"
+      "pembantu persediaan",
+      "negara",
+      "mata wang"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kali pertama anda membuka DingPOS, pembantu persediaan akan memandu anda membuka kedai dalam kira-kira 10 minit:"
+        "text": "Kali pertama anda membuka DingPOS, pembantu persediaan akan membuka kedai anda dalam dua langkah dan beberapa minit sahaja:"
       },
       {
         "type": "steps",
         "items": [
-          "Pilih negara anda — mata wang, mod cukai dan kadar cukai lalai diisi secara automatik (kadar cukai dan mod cukai masih boleh diubah pada peringkat ini).",
-          "Masukkan nama kedai anda, dan muat naik logo kedai jika mahu.",
-          "Ikut panduan untuk mencipta 3–5 produk (boleh dilangkau — anda boleh menambahnya bila-bila masa kemudian)."
+          "Pilih negara atau wilayah anda. Bahagian atas senarai menunjukkan wilayah iPad ini dan pasaran yang paling lazim; di bawahnya terdapat semua 175 negara dan wilayah tempat DingPOS ada di App Store, boleh dicari mengikut nama dalam bahasa aplikasi atau dalam bahasa Inggeris. Pilihan anda mengisi mata wang, kadar cukai dan mod cukai secara automatik.",
+          "Pada Kedai anda, masukkan nama kedai, tambah logo jika mahu, dan semak mata wang, kadar cukai serta mod cukai (termasuk cukai / tidak termasuk cukai). Mata wang lalai mengikut negara anda; ketik untuk memilih daripada 130 mata wang."
         ]
       },
       {
         "type": "p",
-        "text": "Apabila selesai, anda akan mendengar bunyi \"Ding!\" — kedai anda sudah sedia dan anda boleh terus mula menjual."
+        "text": "Ketik Teruskan dan anda akan melihat “Ding! Kedai anda sudah sedia.” DingPOS juga menyediakan dua kaedah pembayaran, Tunai dan Kad Kredit. Kemudian tambah produk anda di bawah Produk dan mula menjual."
+      },
+      {
+        "type": "note",
+        "text": "Mata wang dan mod cukai tidak boleh diubah selepas persediaan; kadar cukai masih boleh diubah kemudian dalam Tetapan. Di Amerika Syarikat, Kanada, Brazil dan Micronesia, kadar cukai bergantung pada negeri, wilayah atau bandar, jadi ruang kadar cukai bermula kosong dan anda perlu memasukkan kadar yang anda caj (0 dibenarkan) untuk meneruskan. Senarai 175 negara dan pilihan mata wang diperkenalkan dalam v3.2; versi terdahulu hanya menawarkan 15 negara."
       }
     ],
     "related": [
@@ -207,7 +212,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mata wang dan mod cukai (termasuk cukai / tidak termasuk cukai) dikunci sebaik sahaja persediaan selesai. Semua pesanan lama anda dikira dengannya, jadi menukarnya di pertengahan jalan akan merosakkan laporan anda."
+        "text": "Mata wang dan mod cukai (termasuk cukai / tidak termasuk cukai) dikunci sebaik sahaja persediaan selesai. Semua pesanan lama anda dikira dengannya, jadi menukarnya di pertengahan jalan akan merosakkan laporan anda. Semaklah pada langkah Kedai anda semasa persediaan: mata wang lalai mengikut negara anda, dan anda boleh mengetiknya untuk memilih yang lain."
       },
       {
         "type": "note",
@@ -230,16 +235,23 @@ export const articles = [
       "bahasa aplikasi",
       "english",
       "cina",
+      "jepun",
+      "sepanyol",
+      "pelbagai bahasa",
       "tetapan bahasa"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS menyokong bahasa Inggeris dan Cina Tradisional. Pergi ke Tetapan → Pilihan Peranti dan ketik Bahasa Apl. Ini membuka halaman DingPOS dalam aplikasi Tetapan iPad, tempat anda memilih bahasa di bawah Bahasa."
+        "text": "DingPOS menyokong 32 bahasa, termasuk Inggeris, Cina Tradisional dan Ringkas, Jepun, Korea, Thai, Vietnam, Indonesia, Melayu, Sepanyol (Amerika Latin), Portugis (Brazil), Perancis dan Jerman. Pergi ke Tetapan → Pilihan Peranti dan ketik Bahasa Apl. Ini membuka halaman DingPOS dalam aplikasi Tetapan iPad, tempat anda memilih bahasa di bawah Bahasa."
       },
       {
         "type": "p",
         "text": "iOS tidak membenarkan aplikasi membuka senarai bahasa secara terus, jadi ketikan terakhir dilakukan dalam Tetapan sistem. Bahasa ini hanya digunakan pada iPad ini."
+      },
+      {
+        "type": "note",
+        "text": "Bahasa selain Inggeris dan Cina Tradisional diperkenalkan dalam v3.2. Jika Bahasa hanya menyenaraikan Inggeris dan Cina, kemas kini DingPOS daripada App Store."
       }
     ],
     "related": [
@@ -356,12 +368,13 @@ export const articles = [
       "line pay",
       "baki wang",
       "tersuai",
-      "jualan akaun"
+      "jualan akaun",
+      "caj"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Tunai, Kad Kredit dan Line Pay disediakan secara terbina dalam, dan anda boleh menambah sebarang label pembayaran tersuai dalam Tetapan (cth. Apple Pay, dompet digital tempatan)."
+        "text": "Kedai baharu bermula dengan dua kaedah pembayaran, Tunai dan Kad Kredit, dinamakan dalam bahasa aplikasi semasa persediaan. Dalam Tetapan → Kaedah Pembayaran, anda boleh menambah kaedah lain (cth. Apple Pay, LINE Pay, dompet digital tempatan), serta memadam atau menyusun semula kaedah."
       },
       {
         "type": "p",
@@ -369,13 +382,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Jika penyedia bayaran kad atau mudah alih anda mengenakan caj, berikan kaedah itu kadar caj dan Statistik akan menganggar caj serta anggaran diterima bersih bagi setiap kaedah — lihat “Bolehkah DingPOS menjejak caj bayaran kad dan mudah alih?”"
+      },
+      {
+        "type": "p",
         "text": "Untuk pelanggan tetap yang mengambil barang sekarang dan membayar kemudian, pilih Jualan akaun: jualan direkodkan sebagai akaun belum terima dan diselesaikan apabila wang diterima. Lihat “Bolehkah pelanggan tetap membeli secara akaun dan membayar kemudian?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Bolehkah DingPOS menjejak caj bayaran kad dan mudah alih?",
+    "keywords": [
+      "caj pemprosesan",
+      "caj kad",
+      "yuran transaksi",
+      "kadar caj",
+      "diterima bersih",
+      "caj pedagang",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Boleh. Dalam Tetapan → Kaedah Pembayaran, ketik satu kaedah pembayaran (atau tambah yang baharu) dan isikan Caj pemprosesan: peratusan, jumlah tetap bagi setiap transaksi, atau kedua-duanya. Selepas itu, setiap bayaran yang diterima melalui kaedah tersebut merekodkan caj anggaran mengikut kadar yang berkuat kuasa pada ketika itu."
+      },
+      {
+        "type": "p",
+        "text": "Pada Statistik, kad Kaedah Pembayaran menambah baris “Caj · Bersih” di bawah setiap kaedah yang mempunyai caj, dan bahagian bawah kad menunjukkan anggaran caj serta anggaran diterima bersih untuk keseluruhan tempoh."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Masukkan kadar yang sebenarnya ditolak oleh penyedia anda, termasuk cukai — untuk 3% campur 5% cukai, masukkan 3.15%. Biarkan kedua-dua medan kosong jika tiada caj.",
+          "Perubahan kadar hanya digunakan untuk bayaran selepas itu; caj yang sudah direkodkan kekal seperti asal.",
+          "“Peratusan caj dikembalikan semasa bayaran balik” dihidupkan secara lalai, untuk penyedia yang mengembalikan cajnya apabila anda membuat bayaran balik; caj tetap tidak pernah dikembalikan. Jualan yang dibatalkan, pemulangan, prapesanan yang dibatalkan dan penyelesaian yang dibatalkan membalikkan caj mengikut peraturan ini, dan pelanggan menerima jumlah yang sama sama ada caj dikembalikan atau tidak.",
+          "Bayaran yang diterima sebelum kaedah itu mempunyai kadar tidak membawa caj: Statistik menandakannya “N tiada kadar” dan menunjukkan jumlah bersih sebagai “—”."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Caj ialah anggaran berdasarkan kadar yang anda masukkan; penyata penyedia anda ialah jumlah sebenar. Mengedit kadar caj dan melihat caj pada Statistik memerlukan pelan Standard atau lebih tinggi. Pada Lite, medan itu dikunci, tetapi bayaran tetap merekodkan cajnya, jadi ia akan muncul selepas anda menaik taraf."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -402,7 +462,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Bolehkah skrin juruwang menyembunyikan produk yang kehabisan stok?",
+    "keywords": [
+      "sembunyi",
+      "kehabisan stok",
+      "habis stok",
+      "stok sifar",
+      "juruwang",
+      "produk hilang",
+      "tidak jumpa produk"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Boleh. Pergi ke Tetapan → Pilihan Peranti dan hidupkan Sembunyikan produk kehabisan stok (dimatikan secara lalai). Grid produk juruwang, penapis kategori dan carian (nama serta kod bar) kemudian akan melangkau setiap produk yang stoknya 0 atau kurang. Suis ini berkuat kuasa serta-merta, tanpa perlu membuka semula aplikasi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Produk yang tidak menjejak stok sentiasa dipaparkan. Produk yang mempunyai varian hanya disembunyikan apabila setiap variannya kehabisan stok.",
+          "Ia hanya menjejaskan juruwang pada iPad ini; senarai Produk masih menunjukkan setiap produk.",
+          "Apabila semua produk disembunyikan, juruwang memaparkan “Semua produk kehabisan stok” dan memberitahu di mana untuk mematikan suis itu."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Semasa suis dihidupkan, iPad ini tidak dapat menemui produk kehabisan stok, jadi ia tidak boleh menjual ke dalam stok negatif atau menerima prapesanan untuknya — matikannya apabila anda perlu. Jika produk seolah-olah hilang daripada skrin juruwang, suis ini biasanya puncanya."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -552,7 +651,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Stok ditolak apabila prapesanan dibuat, untuk menyimpan barang bagi pelanggan. Barang yang kehabisan stok menjadi negatif dan pulih sebaik pesanan belian diterima.",
+          "Stok ditolak apabila prapesanan dibuat, jadi kiraan yang boleh dijual terus mencerminkannya. Ia hanya isyarat, bukan tahanan: jualan kemudian masih boleh mengambil unit terakhir. Barang yang kehabisan stok menjadi negatif dan pulih sebaik pesanan belian diterima.",
           "Apabila pelanggan datang mengambil barang, ketik Serahkan dalam butiran pesanan untuk mengutip baki. Pesanan itu kemudian menjadi jualan biasa yang selesai, dan pemulangan kemudian mengikut aliran pemulangan biasa.",
           "Jika pelanggan tidak datang, ketik Batalkan pesanan dalam butiran pesanan dan pilih untuk memulangkan atau menyimpan deposit. Stok ditambah semula.",
           "Resit deposit dan resit pengambilan akhir berkongsi nombor yang sama."
@@ -659,16 +758,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Setiap gabungan mempunyai harga dan kos sendiri, dan menjejak stoknya sendiri. Semasa bayar, mengetik produk akan memaparkan pemilih varian sebelum produk ditambah ke troli."
+        "text": "Setelah produk mempunyai varian, medan Harga akan dilipat dan setiap gabungan mendapat harga sendiri di bawah Harga & Stok Varian, bersama stoknya sendiri (sejak v3.2; versi terdahulu masih meminta harga produk). Juruwang, senarai produk dan butiran produk menunjukkan julat daripada harga terendah hingga tertinggi, seperti “NT$350–NT$390”, atau satu harga apabila setiap gabungan berharga sama; isihan mengikut harga menggunakan harga gabungan yang terendah. Semasa bayar, mengetik produk akan memaparkan pemilih varian sebelum produk ditambah ke troli."
+      },
+      {
+        "type": "p",
+        "text": "Anda tidak perlu memasukkan kos untuk setiap gabungan: medan Kos yang kosong bermaksud Ikut produk, jadi ia menggunakan kos produk dan berubah apabila kos produk berubah. Sebarang nombor menjadikannya Kos sendiri — termasuk 0. Guna kos produk untuk semua mengosongkan setiap kos sendiri sekali gus."
       },
       {
         "type": "note",
-        "text": "Nama pilihan dan nama nilai dihadkan kepada 20 aksara."
+        "text": "Nama pilihan dan nama nilai dihadkan kepada 20 aksara dan tidak boleh kosong: nama pilihan atau nilai yang kosong ditandakan dengan garis merah semasa anda menyimpan, jadi isikannya atau padam nilai yang kosong itu. Produk yang mempunyai varian tidak boleh menggunakan harga terbuka."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Bolehkah saya memasukkan harga produk semasa bayar, seperti caj penghantaran atau barang yang ditawar?",
+    "keywords": [
+      "harga terbuka",
+      "harga tersuai",
+      "masukkan harga",
+      "caj penghantaran",
+      "caj perkhidmatan",
+      "harga tawar-menawar",
+      "harga pasaran"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Boleh — jadikannya produk Harga Terbuka. Hidupkan Harga Terbuka pada halaman edit produk dan biarkan harga kosong; juruwang dan senarai produk memaparkan “Harga Terbuka” di tempat harga biasanya berada. Semasa bayar, mengetik produk akan meminta harga dahulu; masukkannya dan ketik Tambah ke Troli untuk menambahnya pada harga itu."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 ialah harga yang sah (penghantaran percuma, misalnya); medan kosong tidak boleh ditambah. Masukkan harga mengikut cara mod cukai kedai anda meletakkan harga bagi segala yang lain.",
+          "Troli hanya mempunyai satu baris bagi setiap produk harga terbuka: mengetiknya sekali lagi membuka baris itu supaya anda boleh menukar harga.",
+          "Menghidupkan Harga Terbuka turut menghidupkan Kecualikan daripada promosi, jadi caj tidak didiskaunkan dan tidak dikira dalam ambang perbelanjaan. Matikannya semula jika barang yang ditawar patut mengambil bahagian dalam promosi.",
+          "Setelah dijual, baris itu dikenakan cukai, mendapat mata dan dikira dalam Statistik seperti baris lain, dan pemulangan memulangkan harga yang dimasukkan.",
+          "Produk yang mempunyai varian tidak boleh menggunakan harga terbuka. Produk harga terbuka tidak pernah ditawarkan sebagai hadiah atau tambahan berbayar, dan tidak pernah muncul dalam senarai barang gantian bagi tukar barang."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Setiap pelan mempunyainya, dan memasukkan harga tidak pernah memerlukan kelulusan pengurus."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -773,17 +917,21 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ini memang direka begitu: pembayaran tidak pernah disekat kerana stok tidak mencukupi. Peraturan pertama daftar tunai yang sedang beroperasi ialah pelanggan tidak perlu menunggu — nombor yang salah di atas kertas boleh dibetulkan kemudian, tetapi jualan yang terganggu hilang selama-lamanya."
+        "text": "Ini memang direka begitu: proses bayar tidak pernah disekat kerana stok tidak mencukupi. Peraturan pertama kaunter yang sedang beroperasi ialah pelanggan tidak perlu menunggu — nombor yang salah di atas kertas boleh dibetulkan kemudian, tetapi jualan yang terganggu hilang selama-lamanya."
       },
       {
         "type": "p",
         "text": "Stok negatif biasanya bermakna tambah stok tidak direkodkan, atau barang prapesanan belum tiba (prapesanan menolak stok apabila dibuat). Rekodkan tambah stok dengan menerima pesanan belian dan angkanya pulih dengan sendiri; betulkan perbezaan semakan stok dengan pelarasan manual, yang disimpan dalam lejar pergerakan."
+      },
+      {
+        "type": "note",
+        "text": "Jika juruwang tidak dapat mencari produk yang stoknya 0, semak sama ada Sembunyikan produk kehabisan stok dihidupkan dalam Tetapan → Pilihan Peranti: selagi ia dihidupkan, iPad ini tidak boleh menambah produk kehabisan stok ke troli."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -835,7 +983,7 @@ export const articles = [
     "keywords": [
       "hasil jualan",
       "tunai diterima",
-      "pendapatan jualan",
+      "hasil jualan",
       "padanan akaun",
       "penyelesaian",
       "deposit",
@@ -851,7 +999,8 @@ export const articles = [
         "items": [
           "Jualan akaun: barang keluar hari ini dan dikira dalam Hasil Jualan hari ini; wang dikira dalam Tunai Diterima pada hari ia diselesaikan.",
           "Prapesanan: deposit dikira dalam Tunai Diterima apabila dibayar; hasil jualan diiktiraf sepenuhnya pada tarikh pengambilan.",
-          "Deposit hangus: apabila pelanggan membatalkan prapesanan dan anda menyimpan deposit, deposit itu sudah dikira dalam Tunai Diterima semasa dibayar. Statistik memaparkannya secara berasingan sebagai deposit hangus, dan ia tidak pernah dikira sebagai hasil jualan."
+          "Deposit hangus: apabila pelanggan membatalkan prapesanan dan anda menyimpan deposit, deposit itu sudah dikira dalam Tunai Diterima semasa dibayar. Statistik memaparkannya secara berasingan sebagai deposit hangus, dan ia tidak pernah dikira sebagai hasil jualan.",
+          "Membatalkan pesanan terdahulu: wang yang dikembalikan dikira dalam Tunai Diterima pada hari pembatalan, jadi Tunai Diterima hari itu boleh negatif, manakala Dibatalkan mengira pesanan itu pada tarikh jualannya. Ikon ⓘ pada jubin Tunai Diterima dan Dibatalkan menerangkan perkara yang sama."
         ]
       },
       {
@@ -962,21 +1111,33 @@ export const articles = [
       "kos",
       "untung",
       "margin",
+      "untung kasar",
       "laporan",
-      "untung tidak dijejak"
+      "untung tidak dijejak",
+      "kos tiada",
+      "untung dapat dijejak"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kos ialah medan pilihan. Produk tanpa kos ditandakan “untung tidak dijejak” dalam laporan dan dikecualikan daripada pengiraan untung — hasil jualan tetap dikira sepenuhnya, hanya untung yang tidak dikira."
+        "text": "Kos ialah medan pilihan. Produk tanpa kos dikecualikan daripada untung, manakala hasil jualannya tetap dikira sepenuhnya. Kad Untung dapat dijejak pada Statistik menunjukkan bilangan produk yang dijual dalam tempoh itu tanpa kos; kos 0 dikira sebagai kos, jadi produk tersebut tidak disenaraikan."
       },
       {
         "type": "p",
-        "text": "Untuk mendapatkan laporan untung yang lengkap, tambah kos pada halaman edit produk; pesanan akan datang akan disertakan. Untung dikira berdasarkan hasil jualan selepas diskaun."
+        "text": "Ketik kad itu atau Lihat produk untuk membuka Produk Tanpa Kos, disusun mengikut hasil jualan yang tidak dimasukkan dalam untung. Ketik satu baris untuk membuka produk, tambah kosnya daripada Edit, dan baris itu ditandakan Kos ditambah apabila anda kembali. Produk yang mempunyai varian dikira sudah berkos sebaik sahaja sama ada satu varian atau produk itu sendiri mempunyai kos."
+      },
+      {
+        "type": "p",
+        "text": "Untung ialah hasil jualan selepas setiap diskaun (diskaun item dan troli, promosi, penebusan mata) dan sebelum cukai, ditolak kos — sebab itu medan tersebut berbunyi Kos tanpa cukai (pilihan): masukkan jumlah yang anda bayar sebelum cukai. Margin ialah untung ÷ hasil jualan sebelum cukai bagi produk yang berkos, jadi produk tanpa kos tidak menurunkannya. Pemulangan menarik balik, pada hari pemulangan, untung yang pernah dibawa oleh item tersebut."
+      },
+      {
+        "type": "note",
+        "text": "Kos yang anda tambah hanya menjejaskan jualan kemudian; jualan yang sudah dibuat tidak dikira semula. Pengiraan ini diperkenalkan dalam v3.1: versi terdahulu hanya menolak diskaun item manual dan mengira cukai termasuk sebagai untung, jadi selepas mengemas kini, tempoh yang mempunyai diskaun atau cukai termasuk menunjukkan untung yang lebih rendah. Itu pembetulan, bukan data yang hilang."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1039,9 +1200,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Jadual: adakah hari ini dalam tarikh aktif? Adakah tempoh Happy Hour menghadkan hari atau waktu?",
-          "Skop: adakah item dalam troli termasuk dalam skop produk atau kategori promosi? Adakah ambang perbelanjaan telah dicapai?",
+          "Skop: adakah item dalam troli termasuk dalam skop produk atau kategori promosi? Adakah produk ditetapkan kepada Kecualikan daripada promosi (produk harga terbuka begitu secara lalai)? Adakah ambang perbelanjaan telah dicapai?",
           "Sasaran: adakah promosi dihadkan kepada peringkat keahlian atau bulan lahir? Adakah ahli itu dipilih semasa bayar?",
-          "Had penggunaan: adakah had penggunaan keseluruhan, atau had bagi pelanggan ini, telah dicapai?",
+          "Had penggunaan: adakah had penggunaan keseluruhan, atau had bagi pelanggan ini, telah dicapai? Had bagi setiap pelanggan untuk promosi bulan lahir dikira mengikut tahun kalendar.",
           "Penggabungan: adakah promosi berkeutamaan lebih tinggi dengan \"berhenti selepas dikenakan\" menghalangnya?"
         ]
       },
@@ -1322,7 +1483,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Fail dibuka sebagai jadual. Nama lajur lazim dalam bahasa Inggeris dan Cina dipadankan secara automatik; ketik mana-mana pengepala lajur untuk menukar pemetaannya.",
+          "Fail dibuka sebagai jadual. Nama lajur lazim dalam bahasa Inggeris dan Cina (Tradisional atau Ringkas) dipadankan secara automatik; ketik mana-mana pengepala lajur untuk menukar pemetaannya.",
           "Ketik mana-mana sel untuk membetulkan nilainya terus di situ — tidak perlu mengedit fail dan bermula semula.",
           "Ketik Sahkan untuk menyemak. Baris yang bermasalah ditandakan merah beserta sebabnya; import jualan boleh melangkau pesanan yang mempunyai ralat.",
           "Selesaikan apa-apa yang memerlukan keputusan (nama produk bertindih, baris yang sepadan dengan beberapa pelanggan), semak ringkasan, kemudian ketik Mulakan import."
@@ -1331,7 +1492,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Jualan yang diimport diletakkan mengikut tarikh transaksi dan dikira semula mengikut mata wang dan mod cukai kedai anda. Ia tidak menjejaskan stok dan tidak memberi mata bonus sambutan.",
+          "Jualan yang diimport diletakkan mengikut tarikh pesanan dan dikira semula mengikut mata wang dan mod cukai kedai anda. Ia tidak menjejaskan stok dan tidak memberi mata bonus sambutan.",
           "Pelanggan dipadankan dengan pelanggan sedia ada melalui telefon atau e-mel; yang tidak dipadankan akan dicipta.",
           "Pesanan yang diimport memaparkan tarikh Diimport pada dan nombor pesanan sumber, dan tidak boleh dibatalkan atau dipulangkan.",
           "Baris yang mempunyai ralat boleh dieksport sebagai CSV dengan anotasi sebab — betulkan dan import semula. Baris bertindih dilangkau secara automatik."
@@ -1576,6 +1737,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Dalam tempoh 7 hari terakhir dan pada hari terakhir, app mengingatkan anda sekali setiap kali tentang bilangan hari yang tinggal, bahawa proses bayar dijeda apabila percubaan tamat, dan bahawa data anda disimpan."
+      },
+      {
+        "type": "p",
         "text": "Semua yang anda cipta semasa percubaan (produk, pesanan, ahli) disimpan sepenuhnya. Data anda tidak pernah dipadam, sama ada anda melanggan atau tidak selepas itu."
       }
     ],
@@ -1635,7 +1800,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: untuk seorang yang menjalankan gerai dan memerlukan fungsi pembayaran serta produk.",
-          "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun dan prapesanan.",
+          "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun, prapesanan dan anggaran caj pembayaran.",
           "Pro: menambah akaun kakitangan dan kebenaran, kelulusan pengurus, log aktiviti, rekod pemulihan dan laporan lanjutan — untuk kedai yang mempunyai kakitangan."
         ]
       },
@@ -1801,15 +1966,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Mula-mula cipta peringkat di bawah Tetapan → Peringkat Keahlian (cth. Emas), kemudian sasarkan promosi kepada peringkat itu. Untuk tawaran hari lahir, tetapkan syarat kepada “Bulan lahir”."
+        "text": "Mula-mula cipta peringkat di bawah Tetapan → Peringkat Keahlian (cth. Emas), kemudian sasarkan promosi kepada peringkat itu. Untuk tawaran hari lahir, tetapkan sasaran kepada Bulan lahir dan isikan Had setiap pelanggan."
       },
       {
         "type": "list",
         "items": [
           "Ahli mesti dipilih semasa bayar supaya tawaran tercetus — kelayakan dinilai berdasarkan ahli yang sedang dipilih.",
           "Kelayakan hari lahir membaca bulan lahir ahli, jadi isikan medan tarikh lahir; ahli tanpa tarikh lahir tidak pernah dianggap pelanggan hari lahir.",
+          "Promosi bulan lahir memerlukan had setiap pelanggan, yang dikira mengikut tahun kalendar: had 1 bermaksud setiap pelanggan boleh menggunakannya sekali setahun, dan ia ditetapkan semula pada tahun berikutnya. Ia tidak boleh disimpan tanpa had itu.",
           "Naik taraf peringkat automatik dinilai apabila bayaran selesai; jika pesanan dibatalkan, naik taraf yang dicetuskannya dibatalkan secara automatik."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Sebelum v3.2, promosi bulan lahir memaparkan ralat dan tidak dapat disimpan walaupun had setiap pelanggan telah diisi. Jika ini berlaku kepada anda, kemas kini DingPOS daripada App Store."
       }
     ],
     "related": [

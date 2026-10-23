@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Termékkezelés",
-          "desc": "Változatok, vonalkódok, fotók, kategóriák"
+          "desc": "Változatok, vonalkódok, fotók, kategóriák, szabadáras termékek"
         },
         "import": {
           "name": "Adatimportálás",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Üzleti irányítópult",
           "desc": "Árbevétel, nyereség, engedmények, fizetési módok megoszlása és sikertermékek"
+        },
+        "payment_fees": {
+          "name": "Kezelési költség becslése",
+          "desc": "Állítsa be az egyes fizetési módok díjkulcsát; módonként látható a kezelési költség és a becsült nettó beérkezés"
         },
         "comparison": {
           "name": "Időszak-összehasonlítás",

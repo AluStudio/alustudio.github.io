@@ -82,24 +82,29 @@ export const articles = [
       "konfigurera",
       "guide",
       "öppna butik",
-      "starta butik"
+      "starta butik",
+      "land",
+      "valuta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Första gången du öppnar DingPOS leder en guide dig genom stegen för att öppna butiken på cirka 10 minuter:"
+        "text": "Första gången du öppnar DingPOS öppnar en guide din butik i två steg och på några minuter:"
       },
       {
         "type": "steps",
         "items": [
-          "Välj ditt land – valuta, momsläge och en standardmomssats fylls i automatiskt (momssats och momsläge kan fortfarande ändras i det här steget).",
-          "Ange butikens namn och ladda eventuellt upp en butikslogotyp.",
-          "Följ guiden för att skapa 3–5 produkter (kan hoppas över – du kan lägga till dem när som helst senare)."
+          "Välj ditt land eller din region. Överst i listan visas den här iPadens region och de vanligaste marknaderna, och under dem finns alla 175 länder och regioner där DingPOS finns i App Store. Du kan söka på namnet i appens språk eller på engelska. Ditt val fyller i valuta, momssats och momsläge.",
+          "På Din butik anger du butikens namn, lägger eventuellt till en logotyp och kontrollerar valuta, momssats och momsläge (inklusive / exklusive moms). Valutan är som standard landets egen. Tryck på den för att välja bland 130 valutor."
         ]
       },
       {
         "type": "p",
-        "text": "När du är klar hör du ett ”Ding!” – butiken är redo och du kan börja sälja direkt."
+        "text": "Tryck på Fortsätt så ser du ”Ding! Din butik är redo.” DingPOS skapar också två betalningssätt, Kontant och Kreditkort. Lägg sedan till dina produkter under Produkter och börja sälja."
+      },
+      {
+        "type": "note",
+        "text": "Valuta och momsläge kan inte ändras efter installationen, men momssatsen kan du fortfarande ändra senare i Inställningar. I USA, Kanada, Brasilien och Mikronesien beror satsen på delstat, provins eller stad, så momsfältet är tomt från början och du anger den sats du tar ut (0 är tillåtet) för att fortsätta. Listan med 175 länder och valet av valuta kom i v3.2. Tidigare versioner erbjöd 15 länder."
       }
     ],
     "related": [
@@ -208,7 +213,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valuta och momsläge (inklusive / exklusive moms) är låsta när installationen är klar. Alla dina tidigare ordrar har beräknats med dem, så om de ändras mitt i skulle dina rapporter bli felaktiga."
+        "text": "Valuta och momsläge (inklusive / exklusive moms) är låsta när installationen är klar. Alla dina tidigare ordrar har beräknats med dem, så om de ändras mitt i skulle dina rapporter bli felaktiga. Kontrollera dem i steget Din butik under installationen: valutan är som standard landets egen, och du kan trycka på den för att välja en annan."
       },
       {
         "type": "note",
@@ -231,16 +236,24 @@ export const articles = [
       "ändra språk",
       "appspråk",
       "svenska",
-      "engelska"
+      "engelska",
+      "flera språk",
+      "kinesiska",
+      "japanska",
+      "spanska"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS finns på flera språk. Gå till Inställningar → Enhetsval och tryck på Appspråk. Då öppnas DingPOS-sidan i iPadens Inställningar, där du väljer språk under Språk."
+        "text": "DingPOS finns på 32 språk, bland annat engelska, traditionell och förenklad kinesiska, japanska, koreanska, thailändska, vietnamesiska, indonesiska, malajiska, spanska (Latinamerika), portugisiska (Brasilien), franska och tyska. Gå till Inställningar → Enhetsval och tryck på Appspråk. Då öppnas DingPOS-sidan i iPadens Inställningar, där du väljer språk under Språk."
       },
       {
         "type": "p",
         "text": "iOS låter inte appar öppna språklistan direkt, så sista trycket görs i systemets Inställningar. Språket gäller bara den här iPaden."
+      },
+      {
+        "type": "note",
+        "text": "Andra språk än engelska och traditionell kinesiska kom i v3.2. Om Språk bara visar engelska och kinesiska uppdaterar du DingPOS från App Store."
       }
     ],
     "related": [
@@ -359,12 +372,13 @@ export const articles = [
       "line pay",
       "växel",
       "egna betalsätt",
-      "på räkning"
+      "på räkning",
+      "avgifter"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kontant, Kreditkort och Line Pay finns inbyggda, och under Inställningar kan du lägga till egna betalsätt (t.ex. Apple Pay eller lokala plånböcker)."
+        "text": "En ny butik startar med två betalningssätt, Kontant och Kreditkort, som får namn på appens språk vid installationen. Under Inställningar → Betalningssätt kan du lägga till andra betalningssätt (t.ex. Apple Pay, LINE Pay eller en lokal plånbok) samt radera och sortera om dem."
       },
       {
         "type": "p",
@@ -372,13 +386,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Om din kort- eller mobilbetalningsleverantör tar en avgift anger du en avgiftssats för betalningssättet, så beräknar Statistik avgifterna och beräknat netto per betalningssätt – se ”Kan DingPOS hålla reda på avgifter för kort- och mobilbetalningar?”"
+      },
+      {
+        "type": "p",
         "text": "Om en stamkund tar med sig varorna nu och betalar senare väljer du På räkning: försäljningen registreras som en kundfordran och regleras när pengarna kommer in. Se ”Kan stamkunder handla på räkning och betala senare?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Kan DingPOS hålla reda på avgifter för kort- och mobilbetalningar?",
+    "keywords": [
+      "betalningsavgift",
+      "kortavgift",
+      "transaktionsavgift",
+      "avgiftssats",
+      "beräknat netto",
+      "avgift för kortbetalning",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Under Inställningar → Betalningssätt trycker du på ett betalningssätt (eller lägger till ett nytt) och fyller i Betalningsavgift: en procentsats, ett fast belopp per betalning eller båda. Från och med då registrerar varje betalning via det betalningssättet en avgift som beräknas med den sats som gällde just då."
+      },
+      {
+        "type": "p",
+        "text": "I Statistik får kortet Betalningssätt en rad ”Avgift · Netto” under varje betalningssätt med avgift, och längst ned på kortet visas beräknade avgifter och beräknat netto för hela perioden."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ange den sats som leverantören faktiskt drar, inklusive moms – för 3 % plus 5 % moms anger du 3,15 %. Lämna båda fälten tomma om det inte finns någon avgift.",
+          "En ändrad sats gäller bara senare betalningar. Avgifter som redan registrerats ligger kvar som de var.",
+          "”Procentavgiften återbetalas vid återbetalningar” är på som standard, för leverantörer som betalar tillbaka sin avgift när du återbetalar. Den fasta avgiften återbetalas aldrig. Makuleringar, returer, avbokade förbeställningar och ångrade regleringar återför avgifter enligt den regeln, och kunden får tillbaka samma belopp oavsett.",
+          "Betalningar som togs emot innan betalningssättet fick en sats har ingen avgift: Statistik markerar dem ”N utan avgiftssats” och visar nettot som ”—”."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Avgifterna är beräkningar utifrån den sats du anger. Leverantörens utdrag visar det faktiska beloppet. För att ändra avgiftssatser och se avgifter i Statistik krävs planen Standard eller högre. På Lite är fälten låsta, men betalningar registrerar ändå sina avgifter, så de syns när du uppgraderar."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -405,7 +466,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Kan kassan dölja produkter som är slut i lager?",
+    "keywords": [
+      "dölja",
+      "slut i lager",
+      "slutsåld",
+      "noll i lager",
+      "kassa",
+      "produkt saknas",
+      "hittar inte produkt"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Gå till Inställningar → Enhetsval och slå på Dölj produkter som är slut i lager (av som standard). Kassans produktrutnät, kategorifilter och sökning (namn och streckkod) hoppar då över alla produkter vars lager är 0 eller lägre. Inställningen gäller direkt, du behöver inte öppna appen på nytt."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Produkter som inte följer lagret visas alltid. En produkt med varianter döljs bara när alla varianter är slut.",
+          "Det påverkar bara kassan på den här iPaden. Produktlistan under Produkter visar fortfarande alla produkter.",
+          "När alla produkter är dolda visar kassan ”Alla produkter är slut i lager” och berättar var du stänger av inställningen."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Så länge inställningen är på kan den här iPaden inte hitta produkter som är slut, så den kan inte sälja på minus eller ta en förbeställning på dem – stäng av den när du behöver. Om produkter verkar ha försvunnit från kassan är det oftast den här inställningen som orsakar det."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -558,7 +658,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Lagret dras av när förbeställningen läggs, så varorna är reserverade åt kunden. Varor som är slut går på minus och återhämtar sig när en inköpsorder tas emot.",
+          "Lagret dras av när förbeställningen läggs, så det säljbara antalet speglar den direkt. Det är en signal, inte en reservation: en senare försäljning kan fortfarande ta sista enheten. Varor som är slut går på minus och återhämtar sig när en inköpsorder tas emot.",
           "När kunden hämtar ut varorna trycker du på Lämna ut i orderdetaljerna för att ta emot restbeloppet. Ordern blir då en vanlig slutförd försäljning, och senare returer går via det vanliga returflödet.",
           "Om kunden aldrig kommer trycker du på Avboka order i orderdetaljerna och väljer att återbetala eller behålla handpenningen. Lagret läggs tillbaka.",
           "Kvittot för handpenningen och kvittot vid avhämtning har samma nummer."
@@ -666,16 +766,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Varje kombination har eget pris och eget inköpspris, och håller reda på sitt eget lager. I kassan visas en variantväljare när du trycker på produkten, innan den läggs i varukorgen."
+        "text": "När en produkt har varianter döljs fältet Pris, och varje kombination får eget pris under Pris och lager per variant, med eget lager (sedan v3.2; tidigare versioner frågar fortfarande efter ett produktpris). Kassan, produktlistan och produktdetaljerna visar ett intervall från lägsta till högsta pris, till exempel ”NT$350–NT$390”, eller ett enda pris när alla kombinationer kostar lika mycket. Sortering efter pris utgår från den billigaste kombinationen. I kassan visas en variantväljare när du trycker på produkten, innan den läggs i varukorgen."
+      },
+      {
+        "type": "p",
+        "text": "Du behöver inte ange inköpspris för varje kombination: ett tomt fält Inköpspris betyder Följer produkten, alltså används produktens inköpspris och det ändras när produktens ändras. Ett tal ger Eget inköpspris – också 0. Använd produktens inköpspris för alla tar bort alla egna inköpspris på en gång."
       },
       {
         "type": "note",
-        "text": "Namn på alternativ och värden får vara högst 20 tecken långa."
+        "text": "Namn på alternativ och värden får vara högst 20 tecken långa och kan inte vara tomma: ett tomt alternativnamn eller värde omges av en röd ram när du sparar, så fyll i det eller radera det tomma värdet. En produkt med varianter kan inte ha fritt pris."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Kan jag ange en produkts pris i kassan, till exempel för en fraktavgift eller en förhandlad vara?",
+    "keywords": [
+      "fritt pris",
+      "eget pris",
+      "ange pris",
+      "fraktavgift",
+      "serviceavgift",
+      "förhandlat pris",
+      "dagspris"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja – gör den till en produkt med fritt pris. Slå på Fritt pris på produktens redigeringssida och lämna priset tomt. Kassan och produktlistan visar då ”Fritt pris” där priset annars skulle stå. I kassan frågar produkten först efter priset när du trycker på den. Ange det och tryck på Lägg i varukorgen för att lägga till den till det priset."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 är ett giltigt pris (till exempel fri frakt). Ett tomt fält kan inte läggas till. Ange priset på samma sätt som butikens momsläge prissätter allt annat.",
+          "En varukorg har en rad per produkt med fritt pris: tryck på produkten igen så öppnas raden och du kan ändra priset.",
+          "När du slår på Fritt pris slås också Undanta från kampanjer på, så en avgift får ingen rabatt och räknas inte mot köptrösklar. Slå av den igen om en förhandlad vara ska delta i kampanjer.",
+          "När raden är såld beskattas den, ger poäng och räknas i Statistik som alla andra, och en retur återbetalar det pris som angavs.",
+          "En produkt med varianter kan inte ha fritt pris. Produkter med fritt pris erbjuds aldrig som gåvor eller betalda tillägg och visas aldrig i ersättningslistan vid ett byte."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Det finns i alla planer, och att ange priset kräver aldrig godkännande från en chef."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -785,12 +930,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Negativt saldo betyder oftast att en påfyllning inte registrerats, eller att en förbeställd vara ännu inte kommit in (förbeställningar drar av lager när de läggs). Registrera påfyllningar genom att ta emot en inköpsorder, så rättar saldot sig självt. Differenser vid inventering rättar du med en manuell justering, som sparas i lagerloggen."
+      },
+      {
+        "type": "note",
+        "text": "Om kassan inte hittar en produkt med lagret 0, kontrollera om Dölj produkter som är slut i lager är på under Inställningar → Enhetsval: så länge den är på kan den här iPaden inte lägga produkter som är slut i en varukorg."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -856,8 +1005,9 @@ export const articles = [
         "type": "list",
         "items": [
           "Försäljning på räkning: varorna lämnar butiken idag och räknas in i dagens intäkt, medan pengarna räknas som mottagna betalningar den dag ordern regleras.",
-          "Förbeställning: handpenningen räknas som mottagna betalningar när den betalas, och intäkten bokförs i sin helhet på upphämtningsdagen.",
-          "Förverkad handpenning: när en kund avbokar en förbeställning och du behåller handpenningen, räknades den redan som mottagna betalningar när den betalades. Statistik visar den separat som förverkade handpenningar, och den räknas aldrig som intäkt."
+          "Förbeställning: handpenningen räknas som mottagna betalningar när den betalas, och intäkten bokförs i sin helhet på avhämtningsdagen.",
+          "Förverkad handpenning: när en kund avbokar en förbeställning och du behåller handpenningen, räknades den redan som mottagna betalningar när den betalades. Statistik visar den separat som förverkade handpenningar, och den räknas aldrig som intäkt.",
+          "Makulering av en tidigare order: de återbetalade pengarna räknas som mottagna betalningar den dag ordern makuleras, så den dagens mottagna betalningar kan bli negativa, medan Makulerade räknar ordern på dess försäljningsdag. ⓘ på brickorna för mottagna betalningar och Makulerade förklarar samma sak."
         ]
       },
       {
@@ -968,21 +1118,33 @@ export const articles = [
       "inköpspris",
       "vinst",
       "marginal",
+      "bruttomarginal",
       "rapporter",
-      "vinst spåras inte"
+      "vinst spåras inte",
+      "saknar inköpspris",
+      "vinst spåras"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Inköpspris är ett valfritt fält. Produkter utan inköpspris markeras ”vinst spåras inte” i rapporterna och lämnas utanför vinstberäkningen – intäkten räknas fortfarande fullt ut, det är bara vinsten som hoppas över."
+        "text": "Inköpspris är ett valfritt fält. Produkter utan inköpspris lämnas utanför vinsten, medan deras intäkt fortfarande räknas fullt ut. Kortet Vinst spåras i Statistik visar hur många produkter som sålts under perioden utan inköpspris. Ett inköpspris på 0 räknas som ett inköpspris, så de produkterna listas inte."
       },
       {
         "type": "p",
-        "text": "För kompletta vinstrapporter lägger du till inköpspris på produktens redigeringssida. Kommande ordrar tas då med. Vinsten beräknas på intäkten efter rabatt."
+        "text": "Tryck på kortet eller på Visa produkter för att öppna Produkter utan inköpspris, rangordnade efter den intäkt som lämnats utanför vinsten. Tryck på en rad för att öppna produkten, lägg till inköpspriset från Redigera, så markeras raden Inköpspris tillagt när du kommer tillbaka. En produkt med varianter räknas som kostnadsberäknad så snart antingen en variant eller produkten själv har ett inköpspris."
+      },
+      {
+        "type": "p",
+        "text": "Vinsten är intäkten efter alla rabatter (rabatter på rader och varukorg, kampanjer, poänginlösen) och före moms, minus inköpspris – därför heter fältet Inköpspris exkl. moms (valfritt): ange vad du betalade före moms. Marginalen är vinsten ÷ den momsfria intäkten för produkter med inköpspris, så produkter utan inköpspris drar inte ned den. En retur tar tillbaka, den dag returen görs, den vinst som varorna hade gett."
+      },
+      {
+        "type": "note",
+        "text": "Ett inköpspris du lägger till påverkar bara senare försäljning. Redan gjord försäljning räknas inte om. Den här beräkningen kom i v3.1: tidigare versioner drog bara av manuella radrabatter och räknade moms som ingick i priset som vinst, så efter uppdateringen visar perioder med rabatter eller moms i priset lägre vinst. Det är en korrigering, inte förlorade data."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1046,9 +1208,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Schema: ligger dagens datum inom kampanjens aktiva period? Begränsar happy hour-tiden veckodag eller klockslag?",
-          "Omfattning: ingår varorna i varukorgen i kampanjens produkter eller kategori? Har köptröskeln nåtts?",
+          "Omfattning: ingår varorna i varukorgen i kampanjens produkter eller kategori? Är produkten inställd på Undanta från kampanjer (produkter med fritt pris är det som standard)? Har köptröskeln nåtts?",
           "Målgrupp: gäller kampanjen bara en medlemsnivå eller födelsemånad? Valdes den medlemmen vid betalning?",
-          "Användningsgränser: har den totala gränsen, eller den här kundens gräns, nåtts?",
+          "Användningsgränser: har den totala gränsen, eller den här kundens gräns, nåtts? Gränsen per kund för en kampanj på födelsemånad räknas per kalenderår.",
           "Kombinering: blockeras den av en kampanj med högre prioritet som har ”Stoppa efterföljande kampanjer när denna tillämpas”?"
         ]
       },
@@ -1330,7 +1492,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Filen öppnas som en tabell. Vanliga kolumnnamn på engelska och kinesiska matchas automatiskt. Tryck på en kolumnrubrik för att ändra dess koppling.",
+          "Filen öppnas som en tabell. Vanliga kolumnnamn på engelska och kinesiska (traditionell eller förenklad) matchas automatiskt. Tryck på en kolumnrubrik för att ändra dess koppling.",
           "Tryck på en cell för att rätta värdet direkt – du behöver inte redigera filen och börja om.",
           "Tryck på Bekräfta för att kontrollera filen. Rader med problem markeras med rött och orsak. Vid import av försäljning kan ordrar med fel hoppas över.",
           "Lös allt som kräver ett val (produkter med samma namn, en rad som matchar flera kunder), gå igenom sammanfattningen och tryck sedan på Starta importen."
@@ -1339,7 +1501,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Importerad försäljning placeras efter transaktionsdatum och räknas om med butikens valuta och momsläge. Den påverkar inte lagret och ger inga välkomstpoäng.",
+          "Importerad försäljning placeras efter orderdatum och räknas om med butikens valuta och momsläge. Den påverkar inte lagret och ger inga välkomstpoäng.",
           "Kunder matchas mot befintliga via telefonnummer eller e-post. Kunder utan träff skapas.",
           "Importerade ordrar visar ett importdatum och källans ordernummer och kan inte makuleras eller returneras.",
           "Rader med fel kan exporteras som en CSV-fil med orsakerna angivna – rätta dem och importera igen. Dubblettrader hoppas över automatiskt."
@@ -1584,6 +1746,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Under de sista 7 dagarna och på sista dagen påminner appen dig en gång vardera om hur många dagar som är kvar, att kassan pausas när provperioden tar slut och att dina data sparas."
+      },
+      {
+        "type": "p",
         "text": "Allt du skapar under provperioden (produkter, ordrar, medlemmar) sparas helt och hållet. Dina data raderas aldrig, oavsett om du prenumererar efteråt eller inte."
       }
     ],
@@ -1643,7 +1809,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: för dig som driver ett marknadsstånd ensam och behöver kassa och produkter.",
-          "Standard: lägger till kampanjer, poäng och kundnivåer, lagerstyrning, inköp, försäljning på räkning och förbeställningar.",
+          "Standard: lägger till kampanjer, poäng och kundnivåer, lagerstyrning, inköp, försäljning på räkning, förbeställningar och beräknade betalningsavgifter.",
           "Pro: lägger till medarbetarkonton och behörigheter, godkännande från en chef, aktivitetsloggen, återställningslogg och avancerade rapporter – för butiker med personal."
         ]
       },
@@ -1815,15 +1981,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Skapa först nivåer under Inställningar → Medlemsnivåer (t.ex. Guld) och rikta sedan kampanjen mot den nivån. För födelsedagserbjudanden anger du villkoret ”Födelsemånad”."
+        "text": "Skapa först nivåer under Inställningar → Medlemsnivåer (t.ex. Guld) och rikta sedan kampanjen mot den nivån. För födelsedagserbjudanden anger du målgruppen Födelsemånad och fyller i Gräns per kund."
       },
       {
         "type": "list",
         "items": [
           "Medlemmen måste vara vald i kassan för att erbjudandet ska utlösas – behörigheten bedöms utifrån den medlem som är vald just nu.",
           "Födelsedagsbehörigheten läser medlemmens födelsemånad, så fyll i födelsedagsfältet; medlemmar utan födelsedag behandlas aldrig som födelsedagskunder.",
+          "En kampanj på födelsemånad kräver en gräns per kund, som räknas per kalenderår: gränsen 1 betyder att varje kund kan använda den en gång per år, och den nollställs nästa år. Utan gräns går den inte att spara.",
           "Automatiska nivåuppgraderingar bedöms när betalningen slutförs; om ordern makuleras återställs en uppgradering som den utlöste automatiskt."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Före v3.2 visade en kampanj på födelsemånad ett fel och kunde inte sparas, inte ens med en gräns per kund ifylld. Om det händer dig uppdaterar du DingPOS från App Store."
       }
     ],
     "related": [

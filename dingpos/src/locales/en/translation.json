@@ -271,7 +271,7 @@
         },
         "products": {
           "name": "Product management",
-          "desc": "Variants, barcodes, photos, categories"
+          "desc": "Variants, barcodes, photos, categories, open-price items"
         },
         "import": {
           "name": "Data import",
@@ -300,6 +300,10 @@
         "dashboard": {
           "name": "Business dashboard",
           "desc": "Revenue, profit, discounts, payment mix and best sellers"
+        },
+        "payment_fees": {
+          "name": "Payment fee estimates",
+          "desc": "Set each payment method's fee rate; see fees and net received by method"
         },
         "comparison": {
           "name": "Period comparison",

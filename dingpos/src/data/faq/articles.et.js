@@ -81,24 +81,29 @@ export const articles = [
       "esmakordne seadistus",
       "seadistusviisard",
       "poe avamine",
-      "esimesed sammud"
+      "esimesed sammud",
+      "riik",
+      "valuuta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kui avad DingPOSi esimest korda, juhendab seadistusviisard sind poe seadistamisel; see võtab umbes 10 minutit:"
+        "text": "Kui avad DingPOSi esimest korda, avab seadistusviisard sinu poe kahes sammus ja mõne minutiga:"
       },
       {
         "type": "steps",
         "items": [
-          "Vali oma riik – valuuta, maksurežiim ja vaikimisi maksumäär täidetakse automaatselt (maksumäära ja maksurežiimi saab selles etapis siiski muuta).",
-          "Sisesta poe nimi ja soovi korral laadi üles poe logo.",
-          "Järgi juhendit ja lisa 3–5 toodet (vahele jäetav – tooteid saad lisada ka hiljem)."
+          "Vali oma riik või piirkond. Loendi ülaosas on selle iPadi piirkond ja levinumad turud; allpool on kõik 175 riiki ja piirkonda, kus DingPOS on App Store'is saadaval, ning neid saab otsida nime järgi rakenduse keeles või inglise keeles. Sinu valik täidab ära valuuta, maksumäära ja maksurežiimi.",
+          "Sammus Teie pood sisesta poe nimi, soovi korral lisa logo ning kontrolli valuutat, maksumäära ja maksurežiimi (maksuga / maksuta hinnad). Valuuta on vaikimisi sinu riigi oma; puuduta seda, et valida 130 valuuta hulgast."
         ]
       },
       {
         "type": "p",
-        "text": "Kui oled valmis, kuuled helinat „Ding!“ – pood on valmis ja müüa saab kohe alustada."
+        "text": "Puuduta Jätka ja näed teadet „Ding!“ – pood on valmis. DingPOS seadistab ka kaks makseviisi: Sularaha ja Krediitkaart. Seejärel lisa oma tooted jaotises Tooted ja alusta müümist."
+      },
+      {
+        "type": "note",
+        "text": "Valuutat ja maksurežiimi ei saa pärast seadistamist muuta; maksumäära saab hiljem siiski muuta jaotises Seaded. Ameerika Ühendriikides, Kanadas, Brasiilias ja Mikroneesias sõltub määr osariigist, provintsist või linnast, mistõttu maksumäära väli on alguses tühi ja jätkamiseks sisesta määr, mida sa rakendad (0 on lubatud). 175 riigi loend ja valuuta valik lisandusid versioonis v3.2; varasemad versioonid pakkusid 15 riiki."
       }
     ],
     "related": [
@@ -209,7 +214,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valuuta ja maksurežiim (maksuga / maksuta hinnad) lukustatakse seadistamise lõppedes. Kõik varasemad müügid on arvutatud nende alusel, mistõttu nende muutmine keset tegevust rikuks sinu aruanded."
+        "text": "Valuuta ja maksurežiim (maksuga / maksuta hinnad) lukustatakse seadistamise lõppedes. Kõik varasemad müügid on arvutatud nende alusel, mistõttu nende muutmine keset tegevust rikuks sinu aruanded. Kontrolli neid seadistuse sammus Teie pood: valuuta on vaikimisi sinu riigi oma ja sellele puudutades saad valida mõne muu."
       },
       {
         "type": "note",
@@ -231,17 +236,24 @@ export const articles = [
       "rakenduse keel",
       "inglise keel",
       "hiina keel",
+      "jaapani keel",
+      "hispaania keel",
+      "mitu keelt",
       "keele vahetamine",
       "keelevalik"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS toetab inglise ja traditsioonilist hiina keelt. Ava Seaded → Seadme eelistused ja puuduta valikut Rakenduse keel. See avab DingPOSi lehe iPadi rakenduses Seaded, kus valid keele jaotises Keel."
+        "text": "DingPOS toetab 32 keelt, sealhulgas inglise, traditsioonilist ja lihtsustatud hiina, jaapani, korea, tai, vietnami, indoneesia, malai, hispaania (Ladina-Ameerika), portugali (Brasiilia), prantsuse ja saksa keelt. Ava Seaded → Seadme eelistused ja puuduta valikut Rakenduse keel. See avab DingPOSi lehe iPadi rakenduses Seaded, kus valid keele jaotises Keel."
       },
       {
         "type": "p",
         "text": "iOS ei luba rakendustel keelte loendit otse avada, mistõttu tehakse viimane puudutus süsteemi seadetes. Keel kehtib ainult sellel iPadil."
+      },
+      {
+        "type": "note",
+        "text": "Muud keeled peale inglise ja traditsioonilise hiina keele lisandusid versioonis v3.2. Kui Keel loetleb ainult inglise ja hiina keelt, uuenda DingPOSi App Store'is."
       }
     ],
     "related": [
@@ -358,12 +370,13 @@ export const articles = [
       "Line Pay",
       "tagasiraha",
       "oma makseviis",
-      "müük arvele"
+      "müük arvele",
+      "teenustasu"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Sularaha, krediitkaart ja Line Pay on olemas algusest peale ning Seadetes saad lisada ka oma makseviisi nimesid (nt Apple Pay, kohalikud rahakotid)."
+        "text": "Uus pood alustab kahe makseviisiga, Sularaha ja Krediitkaart, mis saavad seadistamisel rakenduse keele nimed. Jaotises Seaded → Makseviisid saad lisada mis tahes muid makseviise (nt Apple Pay, LINE Pay, kohalik rahakott) ning neid kustutada või ümber järjestada."
       },
       {
         "type": "p",
@@ -371,13 +384,60 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kui püsiklient võtab kauba kohe kaasa ja maksab hiljem, vali „Müük arvele“: müük kirjutatakse üles laekumata nõudena ja märgitakse tasutuks, kui raha laekub. Vaata „Kas püsikliendid saavad osta arvele ja maksta hiljem?“"
+        "text": "Kui sinu kaardi- või mobiilimakse pakkuja võtab teenustasu, lisa makseviisile teenustasu määr ning Aruanded hindab iga makseviisi tasud ja netolaekumise – vaata „Kas DingPOS oskab kaardi- ja mobiilimakse teenustasusid jälgida?“"
+      },
+      {
+        "type": "p",
+        "text": "Püsikliendi puhul, kes võtab kauba kohe kaasa ja maksab hiljem, vali „Müük arvele“: müük kirjutatakse üles laekumata nõudena ja märgitakse tasutuks, kui raha laekub. Vaata „Kas püsikliendid saavad osta arvele ja maksta hiljem?“"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Kas DingPOS oskab kaardi- ja mobiilimakse teenustasusid jälgida?",
+    "keywords": [
+      "teenustasu",
+      "kaarditasu",
+      "maksetasu",
+      "teenustasu määr",
+      "netolaekumine",
+      "kaupmehe tasu",
+      "Line Pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Jah. Puuduta jaotises Seaded → Makseviisid mõnda makseviisi (või lisa uus) ja täida Teenustasu: protsent, fikseeritud summa tehingu kohta või mõlemad. Sellest hetkest salvestab iga selle makseviisiga laekunud makse tasu, mis on hinnatud sel hetkel kehtinud määra järgi."
+      },
+      {
+        "type": "p",
+        "text": "Jaotises Aruanded lisab kaart Makseviisid iga tasuga makseviisi alla rea „Teenustasu · Neto“ ning kaardi allservas on kogu perioodi hinnangulised tasud ja hinnanguline netolaekumine."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sisesta määr, mille sinu pakkuja tegelikult maha arvab, koos maksuga – 3% pluss 5% maks tähendab 3,15%. Kui tasu pole, jäta mõlemad väljad tühjaks.",
+          "Määra muutmine mõjutab ainult hilisemaid makseid; juba salvestatud tasud jäävad samaks.",
+          "„Protsentuaalne tasu tagastatakse tagasimaksel“ on vaikimisi sees, pakkujatele, kes annavad tasu tagasimaksel tagasi; fikseeritud tasu ei tagastata kunagi. Anuleerimised, tagastused, tühistatud ettetellimused ja tühistatud tasumised pööravad tasud tagasi selle reegli järgi ning klient saab nii või naa sama summa tagasi.",
+          "Maksed, mis laekusid enne, kui makseviisil oli määr, ei kanna tasu: Aruanded märgivad need „N ilma määrata“ ja näitavad netot kui „—“."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Tasud on hinnangud sisestatud määra põhjal; tegelik summa on sinu pakkuja väljavõttes. Teenustasu määrade muutmine ja tasude nägemine jaotises Aruanded nõuavad paketti Standard või kõrgemat. Paketis Lite on väljad lukus, kuid maksed salvestavad tasud siiski, nii et need ilmuvad pärast paketi uuendamist."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -404,7 +464,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Kas kassaekraan saab laost otsas tooteid peita?",
+    "keywords": [
+      "peitmine",
+      "laost otsas",
+      "otsas",
+      "nullvaru",
+      "kassa",
+      "toode puudub",
+      "ei leia toodet"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Jah. Ava Seaded → Seadme eelistused ja lülita sisse Peida laost otsas tooted (vaikimisi väljas). Kassa tootevõrk, kategooriafilter ja otsing (nime ja vöötkoodi järgi) jätavad siis vahele iga toote, mille laoseis on 0 või alla selle. Lüliti rakendub kohe, rakendust pole vaja uuesti avada."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tooted, mille laoseisu ei jälgita, on alati nähtaval. Variantidega toode peidetakse ainult siis, kui iga variant on otsas.",
+          "See mõjutab ainult selle iPadi kassat; jaotis Tooted näitab endiselt kõiki tooteid.",
+          "Kui kõik tooted on peidetud, kuvab kassa teate „Kõik tooted on otsas“ ja ütleb, kust lüliti välja lülitada."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Kui lüliti on sees, ei leia see iPad laost otsas tooteid, mistõttu ei saa ta müüa miinusesse ega võtta nende kohta ettetellimust – lülita see vajaduse korral välja. Kui tooted tunduvad kassast kadunud olevat, on põhjuseks tavaliselt just see lüliti."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -554,7 +653,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Laoseis arvatakse maha ettetellimuse tegemisel, nii on kaup kliendile reserveeritud. Laost otsas olevad tooted lähevad miinusesse ja taastuvad ostutellimuse kättesaamisel.",
+          "Laoseis arvatakse maha ettetellimuse tegemisel, nii et müüdava koguse arv muutub kohe. See on märguanne, mitte reserveering: hilisem müük võib viimase ühiku siiski ära võtta. Laost otsas olevad tooted lähevad miinusesse ja taastuvad ostutellimuse kättesaamisel.",
           "Kui klient tuleb järele, puuduta müügi detailvaates Anna üle, et jääk kätte saada. Seejärel muutub müük tavaliseks lõpetatud müügiks ja hilisemad tagastused käivad tavapärase tagastuse kaudu.",
           "Kui klient ei tule, puuduta müügi detailvaates Loobu ettetellimusest ning vali, kas tagastada käsiraha või see alles jätta. Laoseis lisatakse tagasi.",
           "Käsiraha tšekil ja lõplikul kättesaamise tšekil on sama number."
@@ -662,16 +761,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Igal kombinatsioonil on oma hind ja omahind ning oma laoseis. Kassas kuvatakse toodet puudutades enne ostukorvi lisamist variandi valik."
+        "text": "Kui tootel on variandid, kaob selle väli Hind ära ning iga kombinatsioon saab jaotises Variantide hind ja laoseis oma hinna ja oma laoseisu (alates versioonist v3.2; varasemad versioonid küsivad endiselt toote hinda). Kassa, tootenimekiri ja tootedetailid näitavad hinnavahemikku madalaimast kõrgeimani, nt „NT$350–NT$390“, või ühte hinda, kui kõik kombinatsioonid maksavad sama; hinna järgi sortimine kasutab madalaimat kombinatsiooni hinda. Kassas kuvatakse toodet puudutades enne ostukorvi lisamist variandi valik."
+      },
+      {
+        "type": "p",
+        "text": "Omahinda pole vaja iga kombinatsiooni jaoks sisestada: tühi väli Omahind tähendab Järgib toodet, ehk kasutatakse toote omahinda ja see muutub koos sellega. Number muudab selle väärtuseks Oma omahind – ka 0. Kasuta kõigile toote omahinda tühjendab kõik oma omahinnad korraga."
       },
       {
         "type": "note",
-        "text": "Valiku ja väärtuse nimi võib olla kuni 20 märki pikk."
+        "text": "Valiku ja väärtuse nimi võib olla kuni 20 märki pikk ega tohi olla tühi: tühi valiku nimi või väärtus tõstetakse salvestamisel punase äärisega esile, seega täida see või kustuta tühi väärtus. Variantidega toode ei saa kasutada kohapealset hinda."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Kas saan toote hinna kassas ise sisestada, näiteks postikulu või kokkuleppehinna jaoks?",
+    "keywords": [
+      "kohapealne hind",
+      "oma hind",
+      "hinna sisestamine",
+      "postikulu",
+      "teenustasu",
+      "kokkuleppehind",
+      "turuhind"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Jah – tee sellest toode, millel on Kohapealne hind. Lülita toote muutmise lehel sisse Kohapealne hind ja jäta hind tühjaks; kassa ja tootenimekiri näitavad hinna asemel teksti „Kohapealne hind“. Kassas küsib toodet puudutades kõigepealt hinda; sisesta see ja puuduta Lisa ostukorvi, et lisada toode selle hinnaga."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 on kehtiv hind (näiteks tasuta postikulu); tühja väljaga ei saa lisada. Sisesta hind samamoodi, nagu sinu poe maksurežiim hindab kõike muud.",
+          "Ostukorvis on kohapealse hinnaga toote kohta üks rida: sellele uuesti puudutades avaneb see rida, et hinda muuta.",
+          "Kohapealse hinna sisselülitamine lülitab sisse ka Jäta kampaaniatest välja, nii et tasule ei anta allahindlust ja see ei lähe arvesse ostusumma lävedes. Lülita see uuesti välja, kui kokkuleppehinnaga toode peaks kampaaniates osalema.",
+          "Müüdud rida maksustatakse, annab punkte ja läheb jaotises Aruanded arvesse nagu iga teinegi, ning tagastus tagastab sisestatud hinna.",
+          "Variantidega toode ei saa kasutada kohapealset hinda. Kohapealse hinnaga tooteid ei pakuta kunagi kingitusena ega tasulise lisatootena ning need ei ilmu kunagi vahetuse asendustoodete loendisse."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "See on olemas igas paketis ja hinna sisestamiseks pole kunagi vaja juhi heakskiitu."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -783,12 +927,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Negatiivne laoseis tähendab tavaliselt, et täiendus jäi kirja panemata või ettetellitud toode pole veel saabunud (ettetellimus vähendab laoseisu tellimise hetkel). Kanna täiendused sisse ostutellimuse vastuvõtmisega ja number taastub ise; inventuuri erinevused paranda käsitsi korrigeerimisega, mis jääb liikumiste logisse."
+      },
+      {
+        "type": "note",
+        "text": "Kui kassa ei leia toodet, mille laoseis on 0, vaata, kas jaotises Seaded → Seadme eelistused on sisse lülitatud Peida laost otsas tooted: kui see on sees, ei saa see iPad laost otsas tooteid ostukorvi lisada."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -855,7 +1003,8 @@ export const articles = [
         "items": [
           "Müük arvele: kaup läheb täna ja kuulub tänasesse müügitulusse; raha kuulub laekunud raha hulka tasumise päeval.",
           "Ettetellimus: käsiraha läheb laekunud raha hulka makse päeval; müügitulu arvestatakse tervikuna kättesaamise päeval.",
-          "Kinnipeetud käsiraha: kui klient ettetellimusest loobub ja jätad käsiraha endale, oli see makse hetkel juba laekunud raha hulgas. Aruanded näitavad seda eraldi kinnipeetud käsirahana ja see ei lähe kunagi müügitulu hulka."
+          "Kinnipeetud käsiraha: kui klient ettetellimusest loobub ja jätad käsiraha endale, oli see makse hetkel juba laekunud raha hulgas. Aruanded näitavad seda eraldi kinnipeetud käsirahana ja see ei lähe kunagi müügitulu hulka.",
+          "Varasema müügi anuleerimine: tagastatud raha läheb laekunud raha hulka anuleerimise päeval, nii et selle päeva laekunud raha võib olla negatiivne, samas kui Anuleeritud arvestab müügi selle müügikuupäeval. Sama selgitab ⓘ kaartidel Laekunud raha ja Anuleeritud."
         ]
       },
       {
@@ -966,21 +1115,33 @@ export const articles = [
       "omahind",
       "kasum",
       "marginaal",
+      "brutomarginaal",
       "aruanded",
-      "kasumit ei jälgita"
+      "kasumit ei jälgita",
+      "omahind puudub",
+      "kasum arvestatud"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Omahind on valikuline väli. Aruannetes märgitakse tooted ilma omahinnata „kasumit ei jälgita“ ja jäetakse kasumiarvutusest välja — müügitulu arvestatakse endiselt täielikult, vahele jäetakse ainult kasum."
+        "text": "Omahind on valikuline väli. Tooted ilma omahinnata jäetakse kasumiarvutusest välja, samas kui nende müügitulu arvestatakse endiselt täielikult. Kaart Kasum arvestatud jaotises Aruanded näitab, mitmel perioodil müüdud tootel omahind puudub; omahind 0 loetakse omahinnaks, seega neid tooteid loendis ei ole."
       },
       {
         "type": "p",
-        "text": "Täieliku kasumiaruande saamiseks lisa omahinnad toote muutmise lehel; need arvestatakse tulevastes müükides. Kasumit arvutatakse allahindluse järgsest müügitulust."
+        "text": "Puuduta kaarti või Vaata tooteid, et avada Omahinnata tooted, mis on järjestatud kasumist välja jäänud müügitulu järgi. Puuduta rida, et toode avada, lisa selle omahind valikust Muuda ja tagasi tulles on rida märgitud Omahind lisatud. Variantidega toode loetakse omahinnaga tooteks, kui omahind on kas variandil või tootel endal."
+      },
+      {
+        "type": "p",
+        "text": "Kasum on müügitulu pärast kõiki allahindlusi (kauba- ja ostukorvi allahindlused, kampaaniad, punktide kasutamine) ja enne maksu, millest on lahutatud omahind – seetõttu on väli nimega Omahind ilma maksuta (valikuline): sisesta see, mis sa maksid enne maksu. Marginaal on kasum ÷ omahinnaga toodete maksueelne müügitulu, nii et omahinnata tooted seda ei langeta. Tagastus võtab tagastuse päeval tagasi kasumi, mille need tooted olid toonud."
+      },
+      {
+        "type": "note",
+        "text": "Lisatud omahind mõjutab ainult hilisemaid müüke; juba tehtud müüke ei arvutata ümber. See arvutus lisandus versioonis v3.1: varasemad versioonid lahutasid ainult käsitsi antud kaubaallahindlused ja lugesid maksu sisaldava hinna maksu kasumiks, mistõttu näitavad allahindluste või maksuga hindadega perioodid pärast uuendamist väiksemat kasumit. See on parandus, mitte kadunud andmed."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1043,9 +1204,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Ajakava: kas tänane päev jääb kehtivusperioodi sisse? Kas Happy Hour'i ajavahemik piirab nädalapäeva või kellaaega?",
-          "Ulatus: kas ostukorvi tooted kuuluvad kampaania toote- või kategooriapiiridesse? Kas ostusumma lävi on täidetud?",
+          "Ulatus: kas ostukorvi tooted kuuluvad kampaania toote- või kategooriapiiridesse? Kas toote juures on sisse lülitatud Jäta kampaaniatest välja (kohapealse hinnaga tooted on vaikimisi)? Kas ostusumma lävi on täidetud?",
           "Sihtrühm: kas kampaania on piiratud liikmetaseme või sünnikuuga? Kas liige valiti kassas?",
-          "Kasutuspiirangud: kas üldine kasutuslimiit või selle kliendi limiit on täis saanud?",
+          "Kasutuspiirangud: kas üldine kasutuslimiit või selle kliendi limiit on täis saanud? Sünnikuu kampaania kliendipõhine piirang loetakse kalendriaasta kaupa.",
           "Kombineerimine: kas kõrgema prioriteediga kampaania, millel on seadistus „lõpeta pärast rakendamist“, blokeerib selle?"
         ]
       },
@@ -1329,7 +1490,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Fail avaneb tabelina. Levinud veerunimed inglise ja hiina keeles seotakse automaatselt; seotuse muutmiseks puuduta veeru päist.",
+          "Fail avaneb tabelina. Levinud veerunimed inglise ja hiina (traditsioonilises või lihtsustatud) keeles seotakse automaatselt; seotuse muutmiseks puuduta veeru päist.",
           "Väärtuse parandamiseks puuduta lahtrit ja muuda seda otse – faili pole vaja redigeerida ja otsast alustada.",
           "Kontrollimiseks puuduta Kinnita. Probleemidega read märgitakse punasega koos põhjusega; müükide impordil saab vigadega müügid vahele jätta.",
           "Lahenda kõik, mis vajab otsust (korduvad toodete nimed, rida, mis sobib mitme kliendiga), vaata kokkuvõte üle ja puuduta Alusta importi."
@@ -1338,7 +1499,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Imporditud müügid paigutatakse tehingu kuupäeva järgi ja arvutatakse uuesti sinu poe valuuta ja maksurežiimiga. Need ei mõjuta laoseisu ega anna tervituspunkte.",
+          "Imporditud müügid paigutatakse müügikuupäeva järgi ja arvutatakse uuesti sinu poe valuuta ja maksurežiimiga. Need ei mõjuta laoseisu ega anna tervituspunkte.",
           "Kliendid seotakse olemasolevatega telefoni või e-posti järgi; vastet mitte leidnud kliendid lisatakse uutena.",
           "Imporditud müükidel kuvatakse impordimise kuupäev ja lähtesüsteemi müüginumber ning neid ei saa anuleerida ega tagastada.",
           "Vigadega read saab eksportida põhjustega märgitud CSV-failina – paranda need ja impordi uuesti. Korduvad read jäetakse automaatselt vahele."
@@ -1582,6 +1743,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Viimase 7 päeva jooksul ja viimasel päeval tuletab rakendus sulle kummalgi korral üks kord meelde, mitu päeva on jäänud, et kassa peatub prooviperioodi lõppedes ja et sinu andmed säilivad."
+      },
+      {
+        "type": "p",
         "text": "Kõik, mille prooviperioodil lood (tooted, müügid, liikmed), säilib täielikult. Sinu andmeid ei kustutata kunagi, olenemata sellest, kas tellid hiljem paketi või mitte."
       }
     ],
@@ -1641,7 +1806,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: ühele inimesele, kes peab turulettu ning vajab kassat ja tooteid.",
-          "Standard: lisab kampaaniad, püsikliendipunktid ja tasemed, laoseisu jälgimise, ostutellimused, müügi arvele ja ettetellimused.",
+          "Standard: lisab kampaaniad, püsikliendipunktid ja tasemed, laoseisu jälgimise, ostutellimused, müügi arvele, ettetellimused ja makse teenustasude hinnangud.",
           "Pro: lisab töötajakontod ja õigused, heakskiidu, tegevuslogi, taastamise kirjed ja täiustatud aruanded – töötajatega poodidele."
         ]
       },
@@ -1808,15 +1973,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Looge esmalt tasemed jaotises Seaded › Liikmetasemed (nt Kuld) ja suunake kampaania seejärel sellele tasemele. Sünnipäevapakkumise puhul valige tingimuseks „Sünnikuu“."
+        "text": "Loo esmalt tasemed jaotises Seaded → Liikmetasemed (nt Kuld) ja suuna kampaania seejärel sellele tasemele. Sünnipäevapakkumise puhul vali sihtrühmaks Sünnikuu ja täida Piirang kliendi kohta."
       },
       {
         "type": "list",
         "items": [
           "Pakkumise käivitumiseks peab kassas olema valitud liige – sobivust hinnatakse hetkel valitud liikme järgi.",
-          "Sünnipäeva sobivus põhineb liikme sünnikuul, seega täitke sünnipäeva väli; liikmeid, kellel seda pole, ei käsitleta kunagi sünnipäevalistena.",
+          "Sünnipäeva sobivus põhineb liikme sünnikuul, seega täida sünnipäeva väli; liikmeid, kellel seda pole, ei käsitleta kunagi sünnipäevalistena.",
+          "Sünnikuu kampaania vajab kliendipõhist piirangut, mida loetakse kalendriaasta kaupa: piirang 1 tähendab, et iga klient saab seda kasutada kord aastas, ja järgmisel aastal algab uuesti. Ilma selleta ei saa salvestada.",
           "Automaatset taseme tõusu hinnatakse kassa lõpetamisel; kui müük anuleeritakse, võetakse selle põhjustatud tõus automaatselt tagasi."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Enne versiooni v3.2 kuvas sünnikuu kampaania vea ega salvestunud ka siis, kui kliendipõhine piirang oli täidetud. Kui see juhtub sinuga, uuenda DingPOSi App Store'is."
       }
     ],
     "related": [
