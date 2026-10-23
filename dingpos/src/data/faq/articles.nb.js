@@ -427,7 +427,7 @@ export const articles = [
         "items": [
           "Skriv inn satsen tilbyderen faktisk trekker, inkludert avgift – for 3 % pluss 5 % avgift skriver du 3,15 %. La begge feltene stå tomme hvis det ikke er noe gebyr.",
           "En endring av satsen gjelder bare senere betalinger. Gebyrer som allerede er registrert, blir stående som de var.",
-          "«Prosentandelen av gebyret refunderes ved refusjoner» er på som standard, for tilbydere som gir gebyret tilbake når du refunderer. Det styrer returer og refunderte depositum på forhåndsbestillinger: når den er på, refunderes prosentandelen, mens det faste gebyret aldri refunderes. En annullering eller et tilbakeført oppgjør ignorerer bryteren og reverserer hele gebyret som ble registrert, også det faste. Uansett får kunden tilbake samme beløp.",
+          "«Prosentandelen av gebyret refunderes ved refusjoner» er på som standard, for tilbydere som gir gebyret tilbake når du refunderer. Det styrer returer og refunderte depositum på forhåndsbestillinger: når den er på, refunderes prosentandelen, mens det faste gebyret aldri refunderes. En annullering eller en tilbakeføring av oppgjør ignorerer bryteren og reverserer hele gebyret som ble registrert, også det faste. Uansett får kunden tilbake samme beløp.",
           "Betalinger som ble tatt imot før betalingsmåten hadde en sats, har ikke noe gebyr: Rapporter merker dem «N mangler sats» og viser nettobeløpet som «—»."
         ]
       },

@@ -420,7 +420,7 @@ export const articles = [
         "items": [
           "Provayderingiz amalda ushlab qoladigan stavkani soliq bilan birga kiriting — 3% va 5% soliq bo‘lsa, 3,15% kiriting. Komissiya bo‘lmasa, ikkala maydonni ham bo‘sh qoldiring.",
           "Stavka o‘zgarishi faqat keyingi to‘lovlarga qo‘llanadi; yozib bo‘lingan komissiyalar o‘zgarmaydi.",
-          "“Qaytarishda foizli komissiya qaytariladi” sukut bo‘yicha yoqilgan — qaytarishda komissiyasini qaytaradigan provayderlar uchun. U qaytarishlarni va qaytarilgan oldindan buyurtma avanslarini boshqaradi: yoqilgan bo‘lsa, foiz qaytariladi; qat’iy summa esa hech qachon qaytarilmaydi. Yaroqsiz deb belgilash va bekor qilingan qarz yopilishi bu sozlamani hisobga olmaydi va yozilgan komissiyani to‘liq, qat’iy summa bilan birga qaytarib oladi. Har ikki holatda mijozga bir xil summa qaytariladi.",
+          "“Qaytarishda foizli komissiya qaytariladi” sukut bo‘yicha yoqilgan — qaytarishda komissiyasini qaytaradigan provayderlar uchun. U qaytarishlarni va qaytarilgan oldindan buyurtma avanslarini boshqaradi: yoqilgan bo‘lsa, foiz qaytariladi; qat’iy summa esa hech qachon qaytarilmaydi. Yaroqsiz deb belgilash yoki qarz yopilishini bekor qilish bu sozlamani hisobga olmaydi va yozilgan komissiyani to‘liq, qat’iy summa bilan birga qaytarib oladi. Har ikki holatda mijozga bir xil summa qaytariladi.",
           "Usulga stavka kiritilmasdan oldin qabul qilingan to‘lovlarda komissiya yo‘q: Statistika ularni “N tasida stavka yo‘q” deb belgilaydi va sof tushum o‘rniga “—” ko‘rsatadi."
         ]
       },
@@ -1119,7 +1119,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kartani yoki Mahsulotlarni ko‘rish tugmasini bosib Tannarxsiz mahsulotlar sahifasini oching: unda mahsulotlar foydadan tashqarida qolgan daromad bo‘yicha tartiblangan. Qatorni bosib mahsulotni oching, Tahrirlash orqali tannarxini qo‘shing — qaytib kelganingizda qator «Tannarx qo‘shildi» deb belgilanadi. Variantli mahsulot «Tannarx qo‘shildi» deb faqat tannarxsiz sotilgan har bir varianti tannarxli bo‘lgandagina belgilanadi — o‘zining tannarxi yoki ergashadigan mahsulot tannarxi bilan."
+        "text": "Kartani yoki Mahsulotlarni ko‘rish tugmasini bosib Tannarxsiz mahsulotlar sahifasini oching: unda mahsulotlar foydadan tashqarida qolgan daromad bo‘yicha tartiblangan. Qatorni bosib mahsulotni oching, Tahrirlash orqali tannarxini qo‘shing — qaytib kelganingizda qator «Tannarx qo‘shildi» deb belgilanadi. Variantli mahsulot faqat tannarxsiz sotilgan har bir variantga tannarx belgilanganida «Tannarx qo‘shildi» deb belgilanadi — variantning o‘z tannarxi bo‘lishi yoki mahsulot tannarxidan foydalanishi kerak."
       },
       {
         "type": "p",

@@ -421,7 +421,7 @@ export const articles = [
         "items": [
           "Masukkan tarif yang benar-benar dipotong penyedia Anda, termasuk pajak — untuk 3% plus pajak 5%, masukkan 3,15%. Kosongkan kedua kolom jika tanpa biaya.",
           "Perubahan tarif hanya berlaku untuk pembayaran berikutnya; biaya yang sudah tercatat tetap seperti semula.",
-          "“Persentase biaya dikembalikan saat pengembalian dana” aktif secara default, untuk penyedia yang mengembalikan biayanya saat Anda mengembalikan dana. Pengaturan ini mengatur retur dan uang muka pra-pesan yang dikembalikan: jika aktif, persentasenya dikembalikan; biaya tetap tidak pernah dikembalikan. Pembatalan (void) atau pelunasan yang dibatalkan mengabaikan pengaturan ini dan menarik kembali seluruh biaya yang tercatat, termasuk biaya tetap. Dalam kedua kasus, pelanggan menerima kembali jumlah yang sama.",
+          "“Persentase biaya dikembalikan saat pengembalian dana” aktif secara default, untuk penyedia yang mengembalikan biayanya saat Anda mengembalikan dana. Pengaturan ini mengatur retur dan uang muka pra-pesan yang dikembalikan: jika aktif, persentasenya dikembalikan; biaya tetap tidak pernah dikembalikan. Pembatalan penjualan (Void) atau pembatalan pelunasan mengabaikan pengaturan ini dan menarik kembali seluruh biaya yang tercatat, termasuk biaya tetap. Dalam kedua kasus, pelanggan menerima kembali jumlah yang sama.",
           "Pembayaran yang diterima sebelum metode itu punya tarif tidak membawa biaya: Statistik menandainya “(N tanpa tarif)” dan menampilkan kas bersih sebagai “—”."
         ]
       },
@@ -1126,7 +1126,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ketuk kartu itu atau Lihat produk untuk membuka Produk Tanpa Harga Pokok, diurutkan berdasarkan pendapatan yang tidak masuk ke laba. Ketuk sebuah baris untuk membuka produknya, tambahkan harga pokoknya dari Edit, dan baris itu ditandai Harga pokok ditambahkan saat Anda kembali. Produk dengan varian baru ditandai Harga pokok ditambahkan setelah setiap varian yang terjual tanpa harga pokok punya harga pokok — miliknya sendiri, atau harga pokok produk yang diikuti."
+        "text": "Ketuk kartu itu atau Lihat produk untuk membuka Produk Tanpa Harga Pokok, diurutkan berdasarkan pendapatan yang tidak masuk ke laba. Ketuk sebuah baris untuk membuka produknya, tambahkan harga pokoknya dari Edit, dan baris itu ditandai Harga pokok ditambahkan saat Anda kembali. Produk dengan varian ditandai Harga pokok ditambahkan setelah setiap varian yang terjual tanpa harga pokok punya harga pokok—baik harga pokoknya sendiri maupun harga pokok produk yang diikutinya."
       },
       {
         "type": "p",

@@ -421,7 +421,7 @@ export const articles = [
         "items": [
           "Skriv den sats, som din udbyder faktisk trækker, inklusive moms – ved 3 % plus 5 % moms skriver du 3,15 %. Lad begge felter stå tomme, hvis der ikke er noget gebyr.",
           "En ændring af satsen gælder kun for senere betalinger. Gebyrer, der allerede er registreret, forbliver, som de var.",
-          "„Procentgebyr returneres ved refusion“ er slået til som standard, til udbydere der giver deres gebyr tilbage ved refusion. Den styrer returvarer og refunderede depositum på forudbestillinger: når den er slået til, returneres procentdelen, men det faste gebyr aldrig. En makulering eller en tilbageførsel af en afregning ignorerer kontakten og tilbagefører hele det gebyr, der blev registreret, også det faste. Under alle omstændigheder får kunden det samme beløb tilbage.",
+          "„Procentgebyr returneres ved refusion“ er slået til som standard, til udbydere der giver deres gebyr tilbage ved refusion. Den styrer returvarer og refunderede depositum på forudbestillinger: når den er slået til, returneres procentdelen, men det faste gebyr aldrig. En makulering eller en tilbageførsel af en afregning ignorerer indstillingen og tilbagefører hele det gebyr, der blev registreret, også det faste. Under alle omstændigheder får kunden det samme beløb tilbage.",
           "Betalinger, der blev modtaget, før metoden havde en sats, har intet gebyr: Statistik markerer dem „uden gebyrsats“ og viser nettoen som „—“."
         ]
       },

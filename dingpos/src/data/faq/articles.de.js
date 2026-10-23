@@ -426,7 +426,7 @@ export const articles = [
         "items": [
           "Tragen Sie den Satz ein, den Ihr Anbieter tatsächlich abzieht, einschließlich Steuer – bei 3 % plus 5 % Steuer also 3,15 %. Lassen Sie beide Felder leer, wenn es keine Gebühr gibt.",
           "Eine Änderung des Satzes gilt nur für spätere Zahlungen; bereits erfasste Gebühren bleiben unverändert.",
-          "„Prozentanteil der Gebühr bei Rückgaben erstattet“ ist standardmäßig aktiviert, für Anbieter, die ihre Gebühr bei einer Erstattung zurückgeben. Die Einstellung gilt für Rückgaben und erstattete Anzahlungen von Vorbestellungen: Ist sie aktiviert, wird der Prozentanteil erstattet; der feste Betrag nie. Eine Annullierung oder eine rückgängig gemachte Begleichung ignoriert den Schalter und nimmt die gesamte erfasste Gebühr zurück, den festen Betrag eingeschlossen. In beiden Fällen erhält der Kunde denselben Betrag zurück.",
+          "„Prozentanteil der Gebühr bei Rückgaben erstattet“ ist standardmäßig aktiviert, für Anbieter, die ihre Gebühr bei einer Erstattung zurückgeben. Die Einstellung gilt für Rückgaben und erstattete Anzahlungen von Vorbestellungen: Ist sie aktiviert, wird der Prozentanteil erstattet; der feste Betrag nie. Beim Annullieren oder Rückgängigmachen einer Begleichung wird der Schalter ignoriert; die gesamte erfasste Gebühr wird zurückgenommen, einschließlich des festen Betrags. In beiden Fällen erhält der Kunde denselben Betrag zurück.",
           "Zahlungen, die kassiert wurden, bevor die Zahlungsart einen Gebührensatz hatte, tragen keine Gebühr: Die Statistik markiert sie mit „N ohne Gebührensatz“ und zeigt das Netto als „—“."
         ]
       },

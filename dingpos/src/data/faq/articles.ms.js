@@ -423,7 +423,7 @@ export const articles = [
         "items": [
           "Masukkan kadar yang sebenarnya ditolak oleh penyedia anda, termasuk cukai — untuk 3% campur 5% cukai, masukkan 3.15%. Biarkan kedua-dua medan kosong jika tiada caj.",
           "Perubahan kadar hanya digunakan untuk bayaran selepas itu; caj yang sudah direkodkan kekal seperti asal.",
-          "“Peratusan caj dikembalikan semasa bayaran balik” dihidupkan secara lalai, untuk penyedia yang mengembalikan cajnya apabila anda membuat bayaran balik. Ia menentukan pemulangan dan deposit prapesanan yang dibayar balik: apabila dihidupkan, peratusan dikembalikan; caj tetap tidak pernah dikembalikan. Jualan yang dibatalkan atau penyelesaian yang dibatalkan mengabaikan suis itu dan menarik balik seluruh caj yang direkodkan, termasuk caj tetap. Dalam kedua-dua keadaan, pelanggan menerima jumlah yang sama.",
+          "“Peratusan caj dikembalikan semasa bayaran balik” dihidupkan secara lalai, untuk penyedia yang mengembalikan cajnya apabila anda membuat bayaran balik. Ia menentukan pemulangan dan deposit prapesanan yang dibayar balik: apabila dihidupkan, peratusan dikembalikan; caj tetap tidak pernah dikembalikan. Tindakan batalkan jualan atau pembatalan penyelesaian mengabaikan suis itu dan menarik balik seluruh caj yang direkodkan, termasuk caj tetap. Dalam kedua-dua keadaan, pelanggan menerima jumlah yang sama.",
           "Bayaran yang diterima sebelum kaedah itu mempunyai kadar tidak membawa caj: Statistik menandakannya “N tiada kadar” dan menunjukkan jumlah bersih sebagai “—”."
         ]
       },
@@ -1124,7 +1124,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ketik kad itu atau Lihat produk untuk membuka Produk Tanpa Kos, disusun mengikut hasil jualan yang tidak dimasukkan dalam untung. Ketik satu baris untuk membuka produk, tambah kosnya daripada Edit, dan baris itu ditandakan Kos ditambah apabila anda kembali. Produk yang mempunyai varian ditandakan Kos ditambah hanya apabila setiap varian yang dijual tanpa kos sudah mempunyai kos — sama ada kosnya sendiri atau kos produk yang diikuti."
+        "text": "Ketik kad itu atau Lihat produk untuk membuka Produk Tanpa Kos, disusun mengikut hasil jualan yang tidak dimasukkan dalam untung. Ketik satu baris untuk membuka produk, tambah kosnya daripada Edit, dan baris itu ditandakan Kos ditambah apabila anda kembali. Produk yang mempunyai varian ditandakan Kos ditambah hanya apabila setiap varian yang dijual tanpa kos sudah mempunyai kos — sama ada kos variannya sendiri atau kos produk yang diwarisinya."
       },
       {
         "type": "p",

@@ -420,7 +420,7 @@ export const articles = [
         "items": [
           "Inserisci la tariffa che il fornitore trattiene davvero, tasse incluse: per il 3% più il 5% di tasse, inserisci 3,15%. Lascia vuoti entrambi i campi se non c'è commissione.",
           "Una modifica della tariffa vale solo per i pagamenti successivi; le commissioni già registrate restano come sono.",
-          "«Percentuale della commissione restituita sui rimborsi» è attiva di default, per i fornitori che restituiscono la commissione quando fai un rimborso. Riguarda i resi e gli acconti dei preordini rimborsati: se è attiva, la percentuale viene restituita; la parte fissa mai. Uno storno o un saldo annullato ignorano l'interruttore e stornano l'intera commissione registrata, parte fissa inclusa. In ogni caso il cliente riceve lo stesso importo.",
+          "«Percentuale della commissione restituita sui rimborsi» è attiva di default, per i fornitori che restituiscono la commissione quando fai un rimborso. Riguarda i resi e gli acconti dei preordini rimborsati: se è attiva, la percentuale viene restituita; la parte fissa mai. Uno Storno o un Annullamento del saldo ignorano l'interruttore e stornano l'intera commissione registrata, parte fissa inclusa. In ogni caso il cliente riceve lo stesso importo.",
           "I pagamenti incassati prima che il metodo avesse una tariffa non hanno commissione: Report li segnala con «N senza tariffa» e mostra il netto come «—»."
         ]
       },

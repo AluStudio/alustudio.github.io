@@ -419,7 +419,7 @@ export const articles = [
         "items": [
           "Saisissez le taux que votre prestataire prélève réellement, taxe comprise : pour 3 % plus 5 % de taxe, saisissez 3,15 %. Laissez les deux champs vides pour aucun frais.",
           "Un changement de taux ne s’applique qu’aux paiements suivants ; les frais déjà enregistrés restent tels quels.",
-          "« Pourcentage de frais restitué lors des remboursements » est activé par défaut, pour les prestataires qui rendent leurs frais en cas de remboursement. Il régit les retours et les acomptes de précommande remboursés : activé, le pourcentage est restitué ; la part fixe ne l’est jamais. Une invalidation ou un règlement annulé ignore ce réglage et reprend la totalité des frais enregistrés, part fixe comprise. Dans tous les cas, le client récupère le même montant.",
+          "« Pourcentage de frais restitué lors des remboursements » est activé par défaut, pour les prestataires qui rendent leurs frais en cas de remboursement. Il régit les retours et les acomptes de précommande remboursés : activé, le pourcentage est restitué ; la part fixe ne l’est jamais. Une invalidation ou une annulation du règlement ignore ce réglage et reprend la totalité des frais enregistrés, part fixe comprise. Dans tous les cas, le client récupère le même montant.",
           "Les paiements encaissés avant que le moyen ait un taux n’ont aucun frais : Stats les signale par « N sans taux » et affiche le net sous la forme « — »."
         ]
       },

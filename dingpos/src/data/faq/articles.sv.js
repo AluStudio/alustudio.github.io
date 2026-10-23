@@ -427,7 +427,7 @@ export const articles = [
         "items": [
           "Ange den sats som leverantören faktiskt drar, inklusive moms – för 3 % plus 5 % moms anger du 3,15 %. Lämna båda fälten tomma om det inte finns någon avgift.",
           "En ändrad sats gäller bara senare betalningar. Avgifter som redan registrerats ligger kvar som de var.",
-          "”Procentavgiften återbetalas vid återbetalningar” är på som standard, för leverantörer som betalar tillbaka sin avgift när du återbetalar. Den styr returer och återbetalda handpenningar på förbeställningar: när den är på återbetalas procentsatsen, den fasta avgiften aldrig. En makulering eller en ångrad reglering ignorerar reglaget och tar tillbaka hela den avgift som registrerades, även den fasta. Kunden får tillbaka samma belopp oavsett.",
+          "”Procentavgiften återbetalas vid återbetalningar” är på som standard, för leverantörer som betalar tillbaka sin avgift när du återbetalar. Den styr returer och återbetalda handpenningar på förbeställningar: när den är på återbetalas procentavgiften, men aldrig den fasta avgiften. En makulering eller en ångrad reglering ignorerar reglaget och tar tillbaka hela den avgift som registrerades, även den fasta. Kunden får tillbaka samma belopp oavsett.",
           "Betalningar som togs emot innan betalningssättet fick en sats har ingen avgift: Statistik markerar dem ”N utan avgiftssats” och visar nettot som ”—”."
         ]
       },
