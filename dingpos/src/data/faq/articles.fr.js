@@ -81,24 +81,29 @@ export const articles = [
       "premier lancement",
       "assistant de configuration",
       "ouvrir ma boutique",
-      "prise en main"
+      "prise en main",
+      "pays",
+      "devise"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Dès la première ouverture de DingPOS, un assistant de configuration vous guide pour ouvrir votre boutique en une dizaine de minutes :"
+        "text": "Dès la première ouverture de DingPOS, un assistant de configuration ouvre votre boutique en deux étapes et quelques minutes :"
       },
       {
         "type": "steps",
         "items": [
-          "Choisissez votre pays : la devise, le mode de taxe et un taux de taxe par défaut sont renseignés automatiquement (le taux et le mode de taxe restent modifiables à cette étape).",
-          "Saisissez le nom de votre boutique et, si vous le souhaitez, ajoutez son logo.",
-          "Suivez le guide pour créer 3 à 5 produits (étape facultative : vous pourrez en ajouter plus tard)."
+          "Choisissez votre pays ou votre région. Le haut de la liste affiche la région de cet iPad et les marchés les plus courants ; en dessous figurent les 175 pays et régions où DingPOS est disponible sur l’App Store, avec une recherche par nom dans la langue de l’app ou en anglais. Votre choix renseigne la devise, le taux de taxe et le mode de taxe.",
+          "Sur Votre magasin, saisissez le nom du magasin, ajoutez si vous le souhaitez un logo, puis vérifiez la devise, le taux de taxe et le mode de taxe (TTC / HT). La devise par défaut est celle de votre pays ; touchez-la pour choisir parmi 130 devises."
         ]
       },
       {
         "type": "p",
-        "text": "Une fois terminé, vous entendez un « Ding! » : votre boutique est prête et vous pouvez encaisser vos premières ventes tout de suite."
+        "text": "Touchez Continuer et « Ding! Votre magasin est prêt. » s’affiche. DingPOS crée aussi deux moyens de paiement, Espèces et Carte bancaire. Ajoutez ensuite vos produits dans Produits et commencez à encaisser."
+      },
+      {
+        "type": "note",
+        "text": "La devise et le mode de taxe ne peuvent plus être modifiés après la configuration ; le taux de taxe, lui, reste modifiable plus tard dans Réglages. Aux États-Unis, au Canada, au Brésil et en Micronésie, le taux dépend de l’État, de la province ou de la ville : le champ du taux de taxe est donc vide au départ, et vous saisissez le taux que vous appliquez (0 est accepté) pour continuer. La liste de 175 pays et le choix de la devise sont arrivés avec la v3.2 ; les versions antérieures proposaient 15 pays."
       }
     ],
     "related": [
@@ -204,7 +209,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "La devise et le mode de taxe (TTC / HT) sont verrouillés une fois la configuration terminée. Toutes vos commandes passées ont été calculées avec ces paramètres : les modifier en cours de route fausserait vos rapports."
+        "text": "La devise et le mode de taxe (TTC / HT) sont verrouillés une fois la configuration terminée. Toutes vos commandes passées ont été calculées avec ces paramètres : les modifier en cours de route fausserait vos rapports. Vérifiez-les à l’étape Votre magasin de la configuration : la devise est par défaut celle de votre pays, et vous pouvez la toucher pour en choisir une autre."
       },
       {
         "type": "note",
@@ -225,17 +230,24 @@ export const articles = [
       "langue",
       "anglais",
       "chinois",
+      "japonais",
+      "espagnol",
+      "multilingue",
       "changer de langue",
       "région"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS est disponible en anglais et en chinois traditionnel. Allez dans Réglages → Préférences de l’appareil, puis touchez Langue de l’app. La page de DingPOS s’ouvre dans l’app Réglages de l’iPad, où vous choisissez la langue sous Langue."
+        "text": "DingPOS est disponible en 32 langues, dont l’anglais, le chinois traditionnel et simplifié, le japonais, le coréen, le thaï, le vietnamien, l’indonésien, le malais, l’espagnol (Amérique latine), le portugais (Brésil), le français et l’allemand. Allez dans Réglages → Préférences de l’appareil, puis touchez Langue de l’app. La page de DingPOS s’ouvre dans l’app Réglages de l’iPad, où vous choisissez la langue sous Langue."
       },
       {
         "type": "p",
         "text": "iOS ne permet pas aux apps d’ouvrir directement la liste des langues : la dernière étape se fait donc dans les réglages du système. La langue s’applique uniquement à cet iPad."
+      },
+      {
+        "type": "note",
+        "text": "Les langues autres que l’anglais et le chinois traditionnel sont arrivées avec la v3.2. Si Langue ne propose que l’anglais et le chinois, mettez à jour DingPOS depuis l’App Store."
       }
     ],
     "related": [
@@ -352,12 +364,13 @@ export const articles = [
       "Line Pay",
       "monnaie",
       "libellé personnalisé",
-      "en compte"
+      "en compte",
+      "frais"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Espèces, Carte bancaire et Line Pay sont intégrés, et vous pouvez ajouter tous les libellés de paiement personnalisés que vous voulez dans Réglages (p. ex. Apple Pay, portefeuilles locaux)."
+        "text": "Un nouveau magasin démarre avec deux moyens de paiement, Espèces et Carte bancaire, nommés dans la langue de l’app lors de la configuration. Dans Réglages → Moyens de paiement, vous pouvez ajouter tout autre moyen (p. ex. Apple Pay, LINE Pay, un portefeuille local), les supprimer ou les réordonner."
       },
       {
         "type": "p",
@@ -365,13 +378,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Si votre prestataire de paiement par carte ou mobile prélève des frais, donnez un taux de frais au moyen de paiement : Stats estime les frais de chaque moyen et le net estimé encaissé. Voir « Peut-on suivre les frais de paiement par carte et mobile dans DingPOS ? »"
+      },
+      {
+        "type": "p",
         "text": "Pour un habitué qui repart avec ses articles et paie plus tard, choisissez En compte : la vente est enregistrée comme une créance et réglée à l’arrivée de l’argent. Voir « Mes clients habituels peuvent-ils acheter en compte et payer plus tard ? »"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Peut-on suivre les frais de paiement par carte et mobile dans DingPOS ?",
+    "keywords": [
+      "frais de traitement",
+      "frais de carte",
+      "frais de transaction",
+      "taux de frais",
+      "net estimé encaissé",
+      "frais commerçant",
+      "Line Pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Oui. Dans Réglages → Moyens de paiement, touchez un moyen de paiement (ou ajoutez-en un) et renseignez Frais de traitement : un pourcentage, un montant fixe par transaction, ou les deux. Dès lors, chaque paiement encaissé par ce moyen enregistre des frais estimés au taux en vigueur à ce moment-là."
+      },
+      {
+        "type": "p",
+        "text": "Dans Stats, la carte Moyens de paiement ajoute une ligne « Frais · Net » sous chaque moyen qui a des frais, et le bas de la carte indique les frais estimés et le net estimé encaissé pour toute la période."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Saisissez le taux que votre prestataire prélève réellement, taxe comprise : pour 3 % plus 5 % de taxe, saisissez 3,15 %. Laissez les deux champs vides pour aucun frais.",
+          "Un changement de taux ne s’applique qu’aux paiements suivants ; les frais déjà enregistrés restent tels quels.",
+          "« Pourcentage de frais restitué lors des remboursements » est activé par défaut, pour les prestataires qui rendent leurs frais en cas de remboursement ; la part fixe n’est jamais restituée. Les invalidations, retours, précommandes annulées et règlements annulés inversent les frais selon cette règle, et le client récupère le même montant dans tous les cas.",
+          "Les paiements encaissés avant que le moyen ait un taux n’ont aucun frais : Stats les signale par « N sans taux » et affiche le net sous la forme « — »."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Les frais sont des estimations d’après le taux saisi ; le relevé de votre prestataire fait foi. Modifier les taux de frais et voir les frais dans Stats nécessitent la formule Standard ou supérieure. Avec Lite, les champs sont verrouillés, mais les paiements enregistrent tout de même leurs frais, qui apparaissent dès que vous passez à une formule supérieure."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -398,7 +458,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "L’écran de caisse peut-il masquer les produits en rupture de stock ?",
+    "keywords": [
+      "masquer",
+      "rupture de stock",
+      "épuisé",
+      "stock à zéro",
+      "caisse",
+      "produit introuvable",
+      "produit disparu"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Oui. Ouvrez Réglages → Préférences de l’appareil et activez Masquer les produits en rupture de stock (désactivé par défaut). La grille de produits de la caisse, le filtre de catégories et la recherche (nom et code-barres) ignorent alors tout produit dont le stock est à 0 ou en dessous. Le réglage s’applique tout de suite, sans rouvrir l’app."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Les produits dont le stock n’est pas suivi s’affichent toujours. Un produit avec variantes n’est masqué que si toutes ses variantes sont en rupture.",
+          "Cela ne concerne que la caisse de cet iPad ; la liste Produits affiche toujours tous les produits.",
+          "Quand tous les produits sont masqués, la caisse affiche « Tous les produits sont en rupture de stock » et vous indique où désactiver le réglage."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Tant que le réglage est activé, cet iPad ne trouve pas les produits en rupture de stock : il ne peut donc ni vendre en stock négatif ni prendre de précommande pour eux — désactivez-le quand il le faut. Si des produits semblent avoir disparu de la caisse, ce réglage en est généralement la cause."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -549,7 +648,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Le stock est déduit dès l’enregistrement de la précommande, ce qui réserve les articles pour le client. Le stock des articles en rupture devient négatif et est rétabli à la réception d’un bon de commande.",
+          "Le stock est déduit dès l’enregistrement de la précommande, et la quantité vendable en tient donc compte tout de suite. C’est un signal, pas une réservation : une vente ultérieure peut encore prendre la dernière unité. Le stock des articles en rupture devient négatif et est rétabli à la réception d’un bon de commande.",
           "Quand le client vient retirer sa commande, touchez Remettre dans le détail de la commande pour encaisser le solde. La commande devient alors une vente terminée ordinaire, et les retours ultérieurs suivent le parcours de retour habituel.",
           "Si le client ne vient jamais, touchez Annuler la commande dans le détail de la commande, puis choisissez de rembourser ou de conserver l’acompte. Le stock est remis.",
           "Le reçu d’acompte et le reçu final de retrait portent le même numéro."
@@ -658,16 +757,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Chaque combinaison a son propre prix et son propre coût, et suit son propre stock. À l’encaissement, toucher le produit affiche un sélecteur de variante avant l’ajout au panier."
+        "text": "Dès qu’un produit a des variantes, son champ Prix se replie et chaque combinaison reçoit son propre prix sous Prix et stock des variantes, avec son propre stock (depuis la v3.2 ; les versions antérieures demandent encore un prix de produit). La caisse, la liste des produits et la fiche produit affichent une fourchette du prix le plus bas au plus élevé, comme « NT$350–NT$390 », ou un prix unique lorsque toutes les combinaisons coûtent pareil ; le tri par prix s’appuie sur le prix de combinaison le plus bas. À l’encaissement, toucher le produit affiche un sélecteur de variante avant l’ajout au panier."
+      },
+      {
+        "type": "p",
+        "text": "Inutile de saisir un coût pour chaque combinaison : un champ Coût vide signifie « suit le coût du produit » : il reprend le coût du produit et change avec lui. Un nombre, 0 compris, donne un « coût propre ». Utiliser le coût du produit pour toutes efface d’un coup tous les coûts propres."
       },
       {
         "type": "note",
-        "text": "Les noms d’options et de valeurs sont limités à 20 caractères."
+        "text": "Les noms d’options et de valeurs sont limités à 20 caractères et ne peuvent pas être vides : un nom d’option ou de valeur vide est entouré de rouge à l’enregistrement ; remplissez-le ou supprimez la valeur vide. Un produit avec variantes ne peut pas avoir de prix libre."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Puis-je saisir le prix d’un produit à l’encaissement, comme des frais de port ou un article négocié ?",
+    "keywords": [
+      "prix libre",
+      "prix personnalisé",
+      "saisir le prix",
+      "frais de port",
+      "frais de service",
+      "prix négocié",
+      "prix du marché"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Oui : faites-en un produit à prix libre. Activez Prix libre dans la fiche du produit et laissez le prix vide ; la caisse et la liste des produits affichent « Prix libre » à la place du prix. À l’encaissement, toucher le produit demande d’abord le prix ; saisissez-le et touchez Ajouter au panier pour l’ajouter à ce prix."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 est un prix valide (livraison offerte, par exemple) ; un champ vide ne peut pas être ajouté. Saisissez le prix comme le mode de taxe de votre magasin le fait pour tout le reste.",
+          "Un panier contient une seule ligne par produit à prix libre : le toucher à nouveau ouvre cette ligne pour que vous puissiez changer le prix.",
+          "Activer Prix libre active aussi Exclure des promotions : des frais ne sont donc pas remisés et ne comptent pas dans les seuils de dépense. Désactivez-le si un article négocié doit participer aux promotions.",
+          "Une fois vendue, la ligne est taxée, rapporte des points et compte dans Stats comme les autres, et un retour rembourse le prix saisi.",
+          "Un produit avec variantes ne peut pas avoir de prix libre. Les produits à prix libre ne sont jamais proposés comme cadeaux ou compléments payants, et n’apparaissent jamais dans la liste des articles de remplacement d’un échange."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Toutes les formules l’incluent, et la saisie du prix n’exige jamais l’approbation d’un responsable."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -778,12 +922,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Un stock négatif signifie généralement qu’un réapprovisionnement n’a pas été enregistré, ou qu’un article précommandé n’est pas encore arrivé (les précommandes déduisent le stock dès leur création). Enregistrez les réapprovisionnements en réceptionnant un bon de commande et le chiffre se rétablit tout seul ; corrigez les écarts d’inventaire par un ajustement manuel, conservé dans l’historique des mouvements."
+      },
+      {
+        "type": "note",
+        "text": "Si la caisse ne trouve pas un produit dont le stock est à 0, vérifiez si Masquer les produits en rupture de stock est activé dans Réglages → Préférences de l’appareil : tant qu’il l’est, cet iPad ne peut pas ajouter au panier les produits en rupture de stock."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -851,7 +999,8 @@ export const articles = [
         "items": [
           "Vente en compte : la marchandise part aujourd’hui et compte dans le chiffre d’affaires du jour ; l’argent compte dans les encaissements le jour du règlement.",
           "Précommande : l’acompte compte dans les encaissements au moment où il est versé ; le chiffre d’affaires est comptabilisé en totalité à la date de retrait.",
-          "Acompte conservé : lorsqu’un client annule une précommande et que vous gardez l’acompte, celui-ci était déjà compté dans les encaissements au moment du versement. Stats l’affiche à part, sous « Acomptes conservés », et il ne compte jamais dans le chiffre d’affaires."
+          "Acompte conservé : lorsqu’un client annule une précommande et que vous gardez l’acompte, celui-ci était déjà compté dans les encaissements au moment du versement. Stats l’affiche à part, sous « Acomptes conservés », et il ne compte jamais dans le chiffre d’affaires.",
+          "Invalidation d’une commande antérieure : l’argent remboursé compte dans les encaissements le jour de l’invalidation, si bien que les encaissements de ce jour peuvent être négatifs, tandis que Invalidées compte la commande à sa date de vente. Le ⓘ des tuiles Encaissements et Invalidées donne la même explication."
         ]
       },
       {
@@ -963,21 +1112,33 @@ export const articles = [
       "marge",
       "marge brute",
       "bénéfice",
+      "taux de marge",
       "rapports",
-      "marge non suivie"
+      "marge non suivie",
+      "coût manquant",
+      "marge suivie"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Le coût est un champ facultatif. Les produits sans coût sont marqués « marge non suivie » dans les rapports et exclus du calcul de la marge — le chiffre d’affaires est toujours compté en totalité, seule la marge est ignorée."
+        "text": "Le coût est un champ facultatif. Les produits sans coût sont exclus de la marge brute, alors que leur chiffre d’affaires est toujours compté en totalité. La carte Marge suivie de Stats indique combien de produits vendus sur la période n’ont pas de coût ; un coût de 0 compte comme un coût, ces produits ne sont donc pas listés."
       },
       {
         "type": "p",
-        "text": "Pour obtenir des rapports de marge complets, ajoutez les coûts sur la page de modification du produit ; les prochaines commandes seront prises en compte. La marge est calculée sur le chiffre d’affaires après remises."
+        "text": "Touchez la carte ou Afficher les produits pour ouvrir Produits sans coût, classés selon le chiffre d’affaires exclu de la marge. Touchez une ligne pour ouvrir le produit, ajoutez son coût depuis Modifier, et la ligne est marquée Coût ajouté à votre retour. Un produit avec variantes est considéré comme ayant un coût dès qu’une variante ou le produit lui-même en a un."
+      },
+      {
+        "type": "p",
+        "text": "La marge brute est le chiffre d’affaires après toutes les remises (remises sur article et sur panier, promotions, utilisation de points) et avant taxe, moins le coût — c’est pourquoi le champ s’intitule Coût HT (facultatif) : saisissez ce que vous avez payé hors taxe. Le taux de marge est la marge brute ÷ le chiffre d’affaires hors taxe des produits ayant un coût, de sorte que les produits sans coût ne le tirent pas vers le bas. Un retour reprend, le jour du retour, la marge que ces articles avaient apportée."
+      },
+      {
+        "type": "note",
+        "text": "Un coût que vous ajoutez n’affecte que les ventes futures ; les ventes déjà faites ne sont pas recalculées. Ce calcul est arrivé avec la v3.1 : les versions antérieures ne déduisaient que les remises manuelles sur article et comptaient la taxe incluse comme marge, si bien qu’après la mise à jour, les périodes avec remises ou taxe incluse affichent une marge plus faible. C’est une correction, pas une perte de données."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1040,9 +1201,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Planification : la date du jour est-elle comprise dans la période active ? Une plage de happy hour limite-t-elle le jour de la semaine ou l’heure ?",
-          "Périmètre : les articles du panier relèvent-ils des produits ou des catégories visés par la promotion ? Le seuil de dépense est-il atteint ?",
+          "Périmètre : les articles du panier relèvent-ils des produits ou des catégories visés par la promotion ? Le produit est-il réglé sur Exclure des promotions (c’est le cas par défaut des produits à prix libre) ? Le seuil de dépense est-il atteint ?",
           "Clientèle : la promotion est-elle limitée à un niveau de membre ou au mois d’anniversaire ? Ce membre a-t-il bien été sélectionné à l’encaissement ?",
-          "Limites d’utilisation : la limite totale, ou celle de ce client, est-elle atteinte ?",
+          "Limites d’utilisation : la limite totale, ou celle de ce client, est-elle atteinte ? La limite par client d’une promotion du mois d’anniversaire se compte par année civile.",
           "Cumul : une promotion de priorité supérieure avec « Arrêter les promotions suivantes après celle-ci » la bloque-t-elle ?"
         ]
       },
@@ -1327,7 +1488,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Le fichier s’ouvre sous forme de tableau. Les noms de colonnes courants en anglais et en chinois sont reconnus automatiquement ; appuyez sur l’en-tête d’une colonne pour modifier sa correspondance.",
+          "Le fichier s’ouvre sous forme de tableau. Les noms de colonnes courants en anglais et en chinois (traditionnel ou simplifié) sont reconnus automatiquement ; appuyez sur l’en-tête d’une colonne pour modifier sa correspondance.",
           "Appuyez sur une cellule pour corriger sa valeur sur place, sans devoir modifier le fichier et tout recommencer.",
           "Appuyez sur Confirmer pour lancer la vérification. Les lignes problématiques sont signalées en rouge avec le motif ; pour les ventes, vous pouvez ignorer les commandes en erreur.",
           "Réglez ce qui demande une décision (noms de produits en double, ligne correspondant à plusieurs clients), vérifiez le récapitulatif, puis appuyez sur Lancer l’importation."
@@ -1336,7 +1497,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Les ventes importées sont classées selon leur date de transaction et recalculées avec la devise et le mode de taxe de votre boutique. Elles n’affectent pas le stock et n’accordent pas de points de bienvenue.",
+          "Les ventes importées sont classées selon leur date de commande et recalculées avec la devise et le mode de taxe de votre boutique. Elles n’affectent pas le stock et n’accordent pas de points de bienvenue.",
           "Les clients sont associés aux clients existants par téléphone ou e-mail ; ceux qui ne correspondent à personne sont créés.",
           "Les commandes importées portent le badge « Importée le » suivi de la date d’importation, affichent le numéro de commande d’origine et ne peuvent être ni invalidées ni retournées.",
           "Les lignes en erreur peuvent être exportées dans un CSV annoté des motifs : corrigez-les et importez à nouveau. Les lignes en double sont ignorées automatiquement."
@@ -1581,6 +1742,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Pendant les 7 derniers jours, puis le dernier jour, l'app vous rappelle une fois à chaque fois combien de jours il reste, que l'encaissement est suspendu à la fin de l'essai et que vos données sont conservées."
+      },
+      {
+        "type": "p",
         "text": "Tout ce que vous créez pendant l'essai (produits, commandes, membres) est conservé intégralement. Vos données ne sont jamais supprimées, que vous vous abonniez ensuite ou non."
       }
     ],
@@ -1639,7 +1804,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite : pour une personne qui tient seule un stand et a besoin de l'encaissement et des produits.",
-          "Standard : ajoute les promotions, les points de fidélité et les niveaux, le suivi du stock, les achats, les ventes en compte et les précommandes.",
+          "Standard : ajoute les promotions, les points de fidélité et les niveaux, le suivi du stock, les achats, les ventes en compte, les précommandes et l'estimation des frais de traitement.",
           "Pro : ajoute les comptes du personnel et les permissions, l'approbation, le journal d'activité, le journal des restaurations et les rapports avancés, pour les boutiques avec du personnel."
         ]
       },
@@ -1807,15 +1972,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Créez d’abord les niveaux dans Réglages → Niveaux de membre (par ex. Or), puis ciblez la promotion sur ce niveau. Pour une offre anniversaire, réglez la condition sur « Mois d’anniversaire »."
+        "text": "Créez d’abord les niveaux dans Réglages → Niveaux de membre (par ex. Or), puis ciblez la promotion sur ce niveau. Pour une offre anniversaire, réglez la clientèle sur « Mois d’anniversaire » et renseignez « Limite par client »."
       },
       {
         "type": "list",
         "items": [
           "Le membre doit être sélectionné à l’encaissement pour que l’offre se déclenche — l’éligibilité est évaluée d’après le membre actuellement sélectionné.",
           "L’éligibilité anniversaire s’appuie sur le mois d’anniversaire du membre : renseignez donc le champ Anniversaire ; un membre sans date d’anniversaire n’est jamais considéré comme un client en période d’anniversaire.",
+          "Une promotion du mois d’anniversaire exige une limite par client, comptée par année civile : avec une limite de 1, chaque client peut en profiter une fois par an, et le compteur repart l’année suivante. Elle ne peut pas être enregistrée sans limite.",
           "Les changements de niveau automatiques sont évalués à la fin de l’encaissement ; si la commande est invalidée, un changement de niveau qu’elle avait déclenché est annulé automatiquement."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Avant la v3.2, une promotion du mois d’anniversaire affichait une erreur et ne pouvait pas être enregistrée, même avec une limite par client renseignée. Si cela vous arrive, mettez à jour DingPOS depuis l’App Store."
       }
     ],
     "related": [

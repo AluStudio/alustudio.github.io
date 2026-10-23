@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Gestión de productos",
-          "desc": "Variantes, códigos de barras, fotos y categorías"
+          "desc": "Variantes, códigos de barras, fotos, categorías y productos de precio abierto"
         },
         "import": {
           "name": "Importación de datos",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Panel del negocio",
           "desc": "Ingresos por ventas, utilidad, descuentos, mezcla de formas de pago y más vendidos"
+        },
+        "payment_fees": {
+          "name": "Estimación de comisiones de pago",
+          "desc": "Define la tasa de comisión de cada método de pago y consulta las comisiones y el neto recibido por método"
         },
         "comparison": {
           "name": "Comparación de periodos",

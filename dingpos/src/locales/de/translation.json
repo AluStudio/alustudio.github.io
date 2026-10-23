@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Artikelverwaltung",
-          "desc": "Varianten, Barcodes, Fotos, Kategorien"
+          "desc": "Varianten, Barcodes, Fotos, Kategorien, Artikel mit freiem Preis"
         },
         "import": {
           "name": "Datenimport",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Geschäfts-Dashboard",
           "desc": "Umsatz, Gewinn, Rabatte, Zahlungsarten und Bestseller"
+        },
+        "payment_fees": {
+          "name": "Geschätzte Bearbeitungsgebühren",
+          "desc": "Gebührensatz je Zahlungsart festlegen; Gebühren und voraussichtlichen Nettoeingang je Zahlungsart sehen"
         },
         "comparison": {
           "name": "Zeitraumvergleich",

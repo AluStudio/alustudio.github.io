@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Gestão de produtos",
-          "desc": "Variantes, códigos de barras, fotos e categorias"
+          "desc": "Variantes, códigos de barras, fotos, categorias e produtos de preço aberto"
         },
         "import": {
           "name": "Importação de dados",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Painel do negócio",
           "desc": "Receita, lucro, descontos, formas de pagamento e mais vendidos"
+        },
+        "payment_fees": {
+          "name": "Estimativa de taxas de pagamento",
+          "desc": "Defina a alíquota da taxa de cada forma de pagamento e veja as taxas e o líquido estimado a receber por forma"
         },
         "comparison": {
           "name": "Comparação de períodos",

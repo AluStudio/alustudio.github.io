@@ -82,24 +82,29 @@ export const articles = [
       "hapja e dyqanit",
       "udhëzues konfigurimi",
       "hapi i parë",
-      "dyqan i ri"
+      "dyqan i ri",
+      "shteti",
+      "monedha"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Herën e parë që hap DingPOS, një udhëzues konfigurimi të çon hap pas hapi drejt hapjes së dyqanit, për rreth 10 minuta:"
+        "text": "Herën e parë që hap DingPOS, një udhëzues konfigurimi e hap dyqanin tënd në dy hapa dhe disa minuta:"
       },
       {
         "type": "steps",
         "items": [
-          "Zgjidh shtetin — monedha, mënyra e tatimit dhe norma e paracaktuar e tatimit plotësohen automatikisht (norma dhe mënyra e tatimit mund të ndryshohen ende në këtë hap).",
-          "Shkruaj emrin e dyqanit dhe, nëse do, ngarko logon e dyqanit.",
-          "Ndiq udhëzuesin për të krijuar 3–5 produkte (mund ta kapërcesh — mund t'i shtosh edhe më vonë, kur të duash)."
+          "Zgjidh shtetin ose rajonin. Në krye të listës shfaqet rajoni i këtij iPad-i dhe tregjet më të zakonshme; poshtë tyre janë të gjitha 175 shtetet dhe rajonet ku DingPOS është në App Store, të kërkueshme me emër në gjuhën e aplikacionit ose në anglisht. Zgjedhja plotëson monedhën, normën e tatimit dhe mënyrën e tatimit.",
+          "Te Dyqani yt, shkruaj emrin e dyqanit, shto opsionalisht një logo dhe kontrollo monedhën, normën e tatimit dhe mënyrën e tatimit (me tatim të përfshirë / pa tatim të përfshirë). Monedha është si parazgjedhje ajo e shtetit tënd; trokite për të zgjedhur nga 130 monedha."
         ]
       },
       {
         "type": "p",
-        "text": "Kur të mbarosh, do të dëgjosh një \"Ding!\" — dyqani është gati dhe mund të nisësh menjëherë shitjet."
+        "text": "Trokit Vazhdo dhe do të shohësh “Ding! Dyqani yt është gati.” DingPOS konfiguron edhe dy mënyra pagese, Para në dorë dhe Kartë krediti. Pastaj shto produktet te Produkte dhe nis shitjet."
+      },
+      {
+        "type": "note",
+        "text": "Monedha dhe mënyra e tatimit nuk mund të ndryshohen pas konfigurimit; norma e tatimit mund të ndryshohet ende më vonë te Cilësimet. Në SHBA, Kanada, Brazil dhe Mikronezi norma varet nga shteti federal, provinca ose qyteti, ndaj fusha e normës së tatimit nis bosh dhe ti shkruan normën që aplikon (lejohet 0) për të vazhduar. Lista me 175 shtete dhe zgjedhja e monedhës erdhën në v3.2; versionet më të vjetra ofronin 15 shtete."
       }
     ],
     "related": [
@@ -210,7 +215,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Monedha dhe mënyra e tatimit (me tatim të përfshirë / pa tatim të përfshirë) bllokohen sapo mbaron konfigurimi. Të gjitha porositë e mëparshme janë llogaritur me to, ndaj ndryshimi në mes të rrugës do t'i prishte raportet."
+        "text": "Monedha dhe mënyra e tatimit (me tatim të përfshirë / pa tatim të përfshirë) bllokohen sapo mbaron konfigurimi. Të gjitha porositë e mëparshme janë llogaritur me to, ndaj ndryshimi në mes të rrugës do t’i prishte raportet. Kontrolloji te hapi Dyqani yt i konfigurimit: monedha është si parazgjedhje ajo e shtetit tënd dhe mund ta trokasësh për të zgjedhur një tjetër."
       },
       {
         "type": "note",
@@ -232,17 +237,24 @@ export const articles = [
       "gjuha e aplikacionit",
       "anglisht",
       "kinezisht",
+      "japonisht",
+      "spanjisht",
+      "shumëgjuhësh",
       "ndrysho gjuhën",
       "ndërrim gjuhe"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS mbështet anglisht dhe kinezisht tradicionale. Shko te Cilësimet → Preferencat e pajisjes dhe trokit Gjuha e aplikacionit. Hapet faqja e DingPOS në aplikacionin Cilësimet të iPad-it, ku e zgjedh gjuhën te Gjuha."
+        "text": "DingPOS mbështet 32 gjuhë, përfshirë anglishten, kinezishten tradicionale dhe të thjeshtuar, japonishten, koreanishten, tajlandishten, vietnamishten, indonezianishten, malajzishten, spanjishten (Amerika Latine), portugalishten (Brazil), frëngjishten dhe gjermanishten. Shko te Cilësimet → Preferencat e pajisjes dhe trokit Gjuha e aplikacionit. Hapet faqja e DingPOS në aplikacionin Cilësimet të iPad-it, ku e zgjedh gjuhën te Gjuha."
       },
       {
         "type": "p",
         "text": "iOS nuk i lejon aplikacionet ta hapin drejtpërdrejt listën e gjuhëve, ndaj trokitja e fundit bëhet te Cilësimet e sistemit. Gjuha vlen vetëm për këtë iPad."
+      },
+      {
+        "type": "note",
+        "text": "Gjuhët përveç anglishtes dhe kinezishtes tradicionale erdhën në v3.2. Nëse te Gjuha shfaqen vetëm anglishtja dhe kinezishtja, përditëso DingPOS nga App Store."
       }
     ],
     "related": [
@@ -360,12 +372,13 @@ export const articles = [
       "line pay",
       "kusur",
       "mënyrë e personalizuar",
-      "me afat pagese"
+      "me afat pagese",
+      "komision"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Para në dorë, Kartë krediti dhe Line Pay janë të gatshme, dhe mund të shtosh çdo etiketë pagese të personalizuar te Cilësimet (p.sh. Apple Pay, portofolë vendorë)."
+        "text": "Një dyqan i ri nis me dy mënyra pagese, Para në dorë dhe Kartë krediti, me emra në gjuhën e aplikacionit gjatë konfigurimit. Te Cilësimet → Mënyrat e pagesës mund të shtosh çdo mënyrë tjetër (p.sh. Apple Pay, LINE Pay, një portofol vendor), si dhe t’i fshish ose t’i renditësh."
       },
       {
         "type": "p",
@@ -373,13 +386,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Nëse ofruesi i pagesave me kartë ose celular merr komision, vendos një normë komisioni për mënyrën dhe Statistika vlerëson komisionin e çdo mënyre dhe paratë neto të arkëtuara — shih “A mund t’i ndjekë DingPOS komisionet e pagesave me kartë dhe celular?”"
+      },
+      {
+        "type": "p",
         "text": "Për një klient të rregullt që merr mallin sot dhe paguan më vonë, zgjidh Me afat pagese: shitja regjistrohet si e arkëtueshme dhe shlyhet kur vijnë paratë. Shih “A mund të blejnë klientët e rregullt me afat pagese dhe të paguajnë më vonë?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "A mund t’i ndjekë DingPOS komisionet e pagesave me kartë dhe celular?",
+    "keywords": [
+      "komision procesimi",
+      "komision karte",
+      "komision transaksioni",
+      "normë komisioni",
+      "para neto të arkëtuara",
+      "komision tregtari",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Po. Te Cilësimet → Mënyrat e pagesës, trokit një mënyrë pagese (ose shto një të re) dhe plotëso Komision procesimi: një përqindje, një shumë fikse për transaksion, ose të dyja. Që nga ai moment, çdo pagesë e arkëtuar me atë mënyrë regjistron një komision të vlerësuar me normën që vlen në atë çast."
+      },
+      {
+        "type": "p",
+        "text": "Te Statistika, karta Mënyrat e pagesës shton një rresht “Komision · Neto” nën çdo mënyrë që ka komision, ndërsa në fund të kartës shfaqen komisionet e vlerësuara dhe paratë neto të arkëtuara të vlerësuara për gjithë periudhën."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Shkruaj normën që ofruesi zbret realisht, me taksën të përfshirë — për 3% plus 5% taksë, shkruaj 3,15%. Lëri të dyja fushat bosh nëse nuk ka komision.",
+          "Ndryshimi i normës vlen vetëm për pagesat e mëvonshme; komisionet e regjistruara tashmë mbeten siç ishin.",
+          "“Përqindja e komisionit kthehet te rimbursimet” është e aktivizuar si parazgjedhje, për ofruesit që e kthejnë komisionin kur bën rimbursim; komisioni fiks nuk kthehet kurrë. Shfuqizimet, kthimet, porositë paraprake të anuluara dhe shlyerjet e zhbëra e anulojnë komisionin sipas këtij rregulli, dhe klienti merr të njëjtën shumë në të dyja rastet.",
+          "Pagesat e arkëtuara para se mënyra të kishte normë nuk kanë komision: Statistika i shënon “N pa normë” dhe e shfaq neton si “—”."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Komisionet janë vlerësime nga norma që shkruan; shuma reale është ajo e pasqyrës së ofruesit. Ndryshimi i normave dhe shikimi i komisioneve te Statistika kërkojnë planin Standard ose më lart. Te Lite fushat janë të bllokuara, por pagesat prapë regjistrojnë komisionet, ndaj ato shfaqen sapo të përmirësosh planin."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -406,7 +466,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "A mund t’i fsheh produktet pa stok në ekranin e arkës?",
+    "keywords": [
+      "fsheh",
+      "pa stok",
+      "e shitur",
+      "stok zero",
+      "arkë",
+      "produkti mungon",
+      "nuk e gjej produktin"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Po. Shko te Cilësimet → Preferencat e pajisjes dhe aktivizo Fshih produktet pa stok (e çaktivizuar si parazgjedhje). Pastaj rrjeta e produkteve të arkës, filtri i kategorive dhe kërkimi (me emër dhe barkod) i kapërcejnë të gjitha produktet me stok 0 ose më pak. Ndërruesi vlen menjëherë, pa nevojën ta rihapësh aplikacionin."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Produktet që nuk ndjekin stokun shfaqen gjithmonë. Një produkt me variante fshihet vetëm kur të gjitha variantet janë pa stok.",
+          "Prek vetëm arkën e këtij iPad-i; lista Produkte i shfaq prapë të gjitha produktet.",
+          "Kur fshihen të gjitha produktet, arka shfaq “Të gjitha produktet janë pa stok” dhe të tregon ku ta çaktivizosh ndërruesin."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Sa kohë ndërruesi është aktiv, ky iPad nuk i gjen produktet pa stok, ndaj nuk mund të shesë me stok negativ as të pranojë porosi paraprake për to — çaktivizoje kur të duhet. Nëse produktet duken sikur kanë zhdukur nga arka, zakonisht shkaku është ky ndërrues."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -555,7 +654,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Stoku zbritet kur vendoset porosia paraprake, duke e rezervuar mallin për klientin. Artikujt pa stok shkojnë në negativ dhe rikuperohen kur pranohet një porosi blerjeje.",
+          "Stoku zbritet kur vendoset porosia paraprake, ndaj sasia e shitshme e pasqyron menjëherë. Është një sinjal, jo një rezervim: një shitje e mëvonshme mund ta marrë prapë njësinë e fundit. Artikujt pa stok shkojnë në negativ dhe rikuperohen kur pranohet një porosi blerjeje.",
           "Kur klienti vjen për ta marrë, trokit Dorëzo te detajet e porosisë për të arkëtuar mbetjen. Pastaj porosia bëhet një shitje e zakonshme e përfunduar, dhe kthimet e mëvonshme ndjekin rrjedhën normale të kthimit.",
           "Nëse klienti nuk vjen kurrë, trokit Anulo porosinë te detajet e porosisë dhe zgjidh të rimbursosh ose të mbash kaparin. Stoku shtohet mbrapsht.",
           "Fatura e kaparit dhe fatura e marrjes përfundimtare kanë të njëjtin numër."
@@ -663,16 +762,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Çdo kombinim ka çmimin dhe koston e vet dhe ndjek stokun e vet. Te pagesa, kur troket produktin shfaqet një zgjedhës variantesh përpara se ta shtosh në shportë."
+        "text": "Sapo një produkt ka variante, fusha Çmimi e tij zhduket dhe çdo kombinim merr çmimin e vet te Çmimi dhe stoku i varianteve, me stokun e vet (që nga v3.2; versionet më të vjetra kërkojnë ende çmim produkti). Arka, lista e produkteve dhe detajet e produktit shfaqin një interval nga çmimi më i ulët te më i larti, si “NT$350–NT$390”, ose një çmim të vetëm kur të gjitha kombinimet kushtojnë njësoj; renditja sipas çmimit përdor çmimin më të ulët të kombinimeve. Te pagesa, kur troket produktin shfaqet një zgjedhës variantesh përpara se ta shtosh në shportë."
+      },
+      {
+        "type": "p",
+        "text": "Nuk je i detyruar të shkruash koston për çdo kombinim: fusha Kostoja bosh do të thotë Ndjek produktin, pra përdor koston e produktit dhe ndryshon bashkë me të. Një numër e bën Kosto të veçantë — edhe 0. Përdor kostoen e produktit për të gjitha i pastron menjëherë të gjitha kostot e veçanta."
       },
       {
         "type": "note",
-        "text": "Emrat e opsioneve dhe të vlerave mund të kenë deri në 20 karaktere."
+        "text": "Emrat e opsioneve dhe të vlerave mund të kenë deri në 20 karaktere dhe nuk mund të jenë bosh: një emër ose vlerë bosh opsioni rrethohet me të kuqe kur ruan, ndaj plotësoje ose fshije vlerën bosh. Një produkt me variante nuk mund të ketë çmim në shitje."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "A mund ta shkruaj çmimin e një produkti në arkë, si tarifën e transportit ose një artikull të negociuar?",
+    "keywords": [
+      "çmim në shitje",
+      "çmim i personalizuar",
+      "shkruaj çmimin",
+      "tarifa e transportit",
+      "tarifa e shërbimit",
+      "çmim i negociuar",
+      "çmim tregu"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Po — bëje produkt me Çmim në shitje. Aktivizo Çmim në shitje te faqja e ndryshimit të produktit dhe lëre çmimin bosh; arka dhe lista e produkteve shfaqin “Çmim në shitje” në vend të çmimit. Te pagesa, kur troket produktin ai kërkon fillimisht çmimin; shkruaje dhe trokit Shto në shportë për ta shtuar me atë çmim."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 është çmim i vlefshëm (p.sh. transport falas); një fushë bosh nuk mund të shtohet. Shkruaje çmimin ashtu siç i çmon gjithçka tjetër mënyra e tatimit të dyqanit tënd.",
+          "Shporta mban një rresht për çdo produkt me çmim në shitje: kur e troket sërish, hapet ai rresht që të ndryshosh çmimin.",
+          "Aktivizimi i Çmim në shitje aktivizon edhe Përjashto nga promovimet, ndaj një tarifë nuk zbritet dhe nuk numërohet te pragjet e shpenzimit. Çaktivizoje sërish nëse një artikull i negociuar duhet të marrë pjesë në promovime.",
+          "Pasi shitet, rreshti tatohet, fiton pikë dhe numërohet te Statistika si çdo tjetër, ndërsa një kthim rimburson çmimin që u shkrua.",
+          "Një produkt me variante nuk mund të ketë çmim në shitje. Produktet me çmim në shitje nuk ofrohen kurrë si dhurata ose shtesa me pagesë, dhe nuk shfaqen kurrë te lista e zëvendësimeve të një këmbimi."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Çdo plan e ka, dhe shkrimi i çmimit nuk kërkon kurrë miratimin e menaxherit."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -782,12 +926,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Stoku negativ zakonisht do të thotë që një furnizim nuk është regjistruar, ose që një artikull i porositur paraprakisht nuk ka mbërritur ende (porositë paraprake e zbresin stokun kur krijohen). Regjistro furnizimet duke marrë në stok një porosi blerjeje dhe numri rikuperohet vetë; diferencat e inventarit fizik korrigjoji me një rregullim manual, që ruhet në regjistrin e lëvizjeve."
+      },
+      {
+        "type": "note",
+        "text": "Nëse arka nuk e gjen një produkt me stok 0, kontrollo nëse Fshih produktet pa stok është aktiv te Cilësimet → Preferencat e pajisjes: sa kohë është aktiv, ky iPad nuk mund t’i shtojë produktet pa stok në shportë."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -854,7 +1002,8 @@ export const articles = [
         "items": [
           "Shitje me afat pagese: malli del sot dhe hyn te të ardhurat e sotme nga shitjet; paratë hyjnë te paratë e arkëtuara ditën kur shlyhet.",
           "Porosi paraprake: kapari hyn te paratë e arkëtuara kur paguhet; të ardhurat nga shitjet njihen të plota në datën e marrjes së mallit.",
-          "Kapar i mbajtur: kur një klient anulon një porosi paraprake dhe ti e mban kaparin, ai ishte numëruar tashmë te paratë e arkëtuara kur u pagua. Statistika e shfaq veçmas si kapare të mbajtura dhe nuk numërohet kurrë si e ardhur nga shitjet."
+          "Kapar i mbajtur: kur një klient anulon një porosi paraprake dhe ti e mban kaparin, ai ishte numëruar tashmë te paratë e arkëtuara kur u pagua. Statistika e shfaq veçmas si kapare të mbajtura dhe nuk numërohet kurrë si e ardhur nga shitjet.",
+          "Shfuqizimi i një porosie të mëparshme: paratë e rimbursuara numërohen te Para të arkëtuara ditën e shfuqizimit, ndaj Para të arkëtuara të asaj dite mund të jenë negative, ndërsa Shfuqizuar e numëron porosinë në datën e shitjes. ⓘ te pllakat Para të arkëtuara dhe Shfuqizuar shpjegon të njëjtën gjë."
         ]
       },
       {
@@ -965,21 +1114,33 @@ export const articles = [
       "kostoja",
       "fitimi",
       "marzhi",
+      "marzhi bruto",
       "raporte",
-      "fitim i papërcaktuar"
+      "nuk ndiqet",
+      "kosto që mungon",
+      "fitimi i gjurmuar"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kostoja është fushë opsionale. Produktet pa kosto shënohen në raporte “fitimi nuk ndiqet” dhe nuk përfshihen në llogaritjen e fitimit — të ardhurat nga shitjet numërohen plotësisht, vetëm fitimi anashkalohet."
+        "text": "Kostoja është fushë opsionale. Produktet pa kosto lihen jashtë fitimit, ndërsa të ardhurat e tyre nga shitjet numërohen plotësisht. Karta Fitimi bruto i gjurmuar te Statistika tregon sa produkte të shitura në periudhë nuk kanë kosto; një kosto 0 llogaritet si kosto, ndaj ato produkte nuk listohen."
       },
       {
         "type": "p",
-        "text": "Për të marrë raporte të plota fitimi, shto kostot në faqen e ndryshimit të produktit; porositë e ardhshme do të përfshihen. Fitimi llogaritet mbi të ardhurat nga shitjet pas zbritjeve."
+        "text": "Trokit kartën ose Shiko produktet për të hapur Produkte pa kosto, të renditura sipas të ardhurave nga shitjet që mbeten jashtë fitimit. Trokit një rresht për të hapur produktin, shto koston nga Ndrysho dhe rreshti shënohet Kostoja u shtua kur kthehesh. Një produkt me variante llogaritet me kosto sapo ka kosto një variant ose vetë produkti."
+      },
+      {
+        "type": "p",
+        "text": "Fitimi është të ardhurat nga shitjet pas çdo zbritjeje (zbritje artikulli dhe shporte, promovime, përdorim pikash) dhe para tatimit, minus koston — prandaj fusha quhet Kostoja pa tatim (opsionale): shkruaj çfarë ke paguar para tatimit. Marzhi është fitimi ÷ të ardhurat para tatimit të produkteve me kosto, ndaj produktet pa kosto nuk e ulin. Një kthim merr prapa, ditën e kthimit, fitimin që ato artikuj kishin sjellë."
+      },
+      {
+        "type": "note",
+        "text": "Një kosto që shton prek vetëm shitjet e mëpasshme; shitjet e kryera nuk rillogariten. Ky llogaritje erdhi në v3.1: versionet më të vjetra zbrisnin vetëm zbritjet manuale të artikujve dhe e numëronin tatimin e përfshirë si fitim, ndaj pas përditësimit periudhat me zbritje ose tatim të përfshirë shfaqin fitim më të ulët. Kjo është korrigjim, jo humbje të dhënash."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1043,9 +1204,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Orari: a është sot brenda datave aktive? A e kufizon ditën ose orën një dritare Happy Hour?",
-          "Zbatimi: a përfshihen artikujt e shportës në produktet ose kategoritë për të cilat vlen promovimi? A është arritur pragu i shpenzimit?",
+          "Zbatimi: a përfshihen artikujt e shportës te produktet ose kategoritë për të cilat vlen promovimi? A është produkti i vendosur te Përjashto nga promovimet (produktet me çmim në shitje janë të tillë si parazgjedhje)? A është arritur pragu i shpenzimit?",
           "Audienca: a është promovimi i kufizuar te një nivel anëtarësie ose muaji i ditëlindjes? A u zgjodh ai anëtar gjatë pagesës?",
-          "Kufijtë e përdorimit: a është arritur kufiri total i përdorimit ose kufiri për këtë klient?",
+          "Kufijtë e përdorimit: a është arritur kufiri total i përdorimit ose kufiri për këtë klient? Kufiri për klient i një promovimi për muajin e ditëlindjes numërohet për vit kalendarik.",
           "Kombinimi: a po e bllokon një promovim me prioritet më të lartë që ka “Ndalo promovimet pasuese kur ky zbatohet”?"
         ]
       },
@@ -1327,7 +1488,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Skedari hapet si tabelë. Emrat e zakonshëm të kolonave në anglisht dhe kinezisht përputhen automatikisht; prek kokën e çdo kolone për të ndryshuar përputhjen.",
+          "Skedari hapet si tabelë. Emrat e zakonshëm të kolonave në anglisht dhe kinezisht (tradicionale ose të thjeshtuar) përputhen automatikisht; prek kokën e çdo kolone për të ndryshuar përputhjen.",
           "Prek çdo qelizë për ta korrigjuar vlerën aty për aty — nuk ka nevojë ta ndryshosh skedarin dhe ta nisësh nga e para.",
           "Prek Konfirmo për ta verifikuar. Rreshtat me probleme shënohen me të kuqe me arsyen; importimet e shitjeve mund t’i anashkalojnë porositë me gabime.",
           "Zgjidh çdo gjë që kërkon vendim (emra produktesh të dyfishtë, një rresht që përputhet me disa klientë), shqyrto përmbledhjen, pastaj prek Nis importimin."
@@ -1336,7 +1497,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Shitjet e importuara vendosen sipas datës së transaksionit dhe rillogariten me monedhën dhe mënyrën e taksës së dyqanit tënd. Nuk ndikojnë stokun dhe nuk japin pikë mirëseardhjeje.",
+          "Shitjet e importuara vendosen sipas datës së porosisë dhe rillogariten me monedhën dhe mënyrën e taksës së dyqanit tënd. Nuk ndikojnë stokun dhe nuk japin pikë mirëseardhjeje.",
           "Klientët përputhen me ata ekzistues sipas telefonit ose emailit; kush nuk përputhet krijohet i ri.",
           "Porositë e importuara shfaqin datën e importimit dhe numrin e porosisë burimore, dhe nuk mund të shfuqizohen ose të kthehen.",
           "Rreshtat me gabime mund të eksportohen si CSV me arsyet e shënuara — korrigjoji dhe importo përsëri. Rreshtat e dyfishtë anashkalohen automatikisht."
@@ -1582,6 +1743,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Brenda 7 ditëve të fundit dhe ditën e fundit, aplikacioni të kujton një herë secilën sa ditë kanë mbetur, që pagesa pauzon kur mbaron prova dhe që të dhënat e tua ruhen."
+      },
+      {
+        "type": "p",
         "text": "Gjithçka që krijon gjatë provës (produkte, porosi, anëtarë) ruhet e plotë. Të dhënat e tua nuk fshihen kurrë, pavarësisht nëse abonohesh më pas apo jo."
       }
     ],
@@ -1641,7 +1806,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: për një person që drejton një banak pazari dhe i duhen pagesa e produktet.",
-          "Standard: shton promovime, pikë besnikërie dhe nivele anëtarësh, ndjekjen e stokut, blerjet te furnitorët, shitjet me afat pagese dhe porositë paraprake.",
+          "Standard: shton promovime, pikë besnikërie dhe nivele anëtarësh, ndjekjen e stokut, blerjet te furnitorët, shitjet me afat pagese, porositë paraprake dhe vlerësimin e komisioneve të pagesës.",
           "Pro: shton llogari punonjësish dhe leje, miratimin nga menaxheri, regjistrin e aktivitetit, regjistrimet e rivendosjes dhe raportet e avancuara — për dyqane me punonjës."
         ]
       },
@@ -1812,15 +1977,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Së pari krijo nivelet te Cilësimet → Nivelet e anëtarësisë (p.sh. Gold), pastaj drejtoje promovimin te ai nivel. Për ofertat e ditëlindjes, vendos kushtin “Muaji i ditëlindjes”."
+        "text": "Së pari krijo nivelet te Cilësimet → Nivelet e anëtarësisë (p.sh. Gold), pastaj drejtoje promovimin te ai nivel. Për ofertat e ditëlindjes, cakto audiencën te Muaji i ditëlindjes dhe plotëso Kufiri për klient."
       },
       {
         "type": "list",
         "items": [
           "Anëtari duhet të zgjidhet në pagesë që oferta të aktivizohet — përshtatshmëria vlerësohet sipas anëtarit të zgjedhur aktualisht.",
           "Përshtatshmëria për ditëlindje lexon muajin e ditëlindjes së anëtarit, prandaj plotëso fushën e ditëlindjes; anëtarët pa të nuk trajtohen kurrë si klientë ditëlindjeje.",
+          "Një promovim për muajin e ditëlindjes ka nevojë për kufi për klient, që numërohet për vit kalendarik: kufiri 1 do të thotë që çdo klient mund ta përdorë një herë në vit dhe rivendoset vitin tjetër. Pa të nuk mund të ruhet.",
           "Ngritjet automatike të nivelit vlerësohen kur përfundon pagesa; nëse porosia shfuqizohet, ngritja që ajo ka shkaktuar zhbëhet automatikisht."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Para v3.2, një promovim për muajin e ditëlindjes shfaqte gabim dhe nuk ruhej edhe kur kufiri për klient ishte plotësuar. Nëse të ndodh kjo, përditëso DingPOS nga App Store."
       }
     ],
     "related": [

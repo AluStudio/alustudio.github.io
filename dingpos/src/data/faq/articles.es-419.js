@@ -81,24 +81,29 @@ export const articles = [
       "primeros pasos",
       "asistente de configuración",
       "abrir tienda",
-      "configurar tienda"
+      "configurar tienda",
+      "país",
+      "moneda"
     ],
     "content": [
       {
         "type": "p",
-        "text": "La primera vez que abres DingPOS, un asistente de configuración te guía para abrir tu tienda en unos 10 minutos:"
+        "text": "La primera vez que abres DingPOS, un asistente de configuración abre tu tienda en dos pasos y unos pocos minutos:"
       },
       {
         "type": "steps",
         "items": [
-          "Elige tu país: la moneda, el modo de impuesto y una tasa de impuesto predeterminada se completan automáticamente (en este paso aún puedes ajustar la tasa y el modo de impuesto).",
-          "Escribe el nombre de tu tienda y, si quieres, sube el logotipo.",
-          "Sigue la guía para crear de 3 a 5 productos (puedes omitirlo y agregarlos más adelante cuando quieras)."
+          "Elige tu país o región. En la parte superior de la lista aparecen la región de este iPad y los mercados más comunes; debajo están los 175 países y regiones donde DingPOS está en el App Store, con búsqueda por nombre en el idioma de la app o en inglés. Tu elección completa la moneda, la tasa de impuesto y el modo de impuesto.",
+          "En Tu tienda, escribe el nombre de la tienda, agrega un logotipo si quieres y revisa la moneda, la tasa de impuesto y el modo de impuesto (incluido / no incluido). La moneda predeterminada es la de tu país; tócala para elegir entre 130 monedas."
         ]
       },
       {
         "type": "p",
-        "text": "Al terminar escucharás un «Ding!»: tu tienda está lista y puedes empezar a cobrar ventas de inmediato."
+        "text": "Toca Continuar y verás «Ding! Tu tienda está lista». DingPOS también crea dos métodos de pago, Efectivo y Tarjeta de crédito. Después agrega tus productos en Productos y empieza a cobrar ventas."
+      },
+      {
+        "type": "note",
+        "text": "La moneda y el modo de impuesto no se pueden cambiar después de la configuración; la tasa de impuesto sí se puede cambiar más adelante en Ajustes. En Estados Unidos, Canadá, Brasil y Micronesia la tasa depende del estado, la provincia o la ciudad, así que el campo de la tasa de impuesto empieza vacío y, para continuar, escribes la tasa que cobras (se permite 0). La lista de 175 países y la elección de moneda llegaron en la v3.2; las versiones anteriores ofrecían 15 países."
       }
     ],
     "related": [
@@ -197,8 +202,7 @@ export const articles = [
       "modo de impuesto",
       "cambiar",
       "bloqueado",
-      "tasa de impuesto",
-      "impuesto incluido"
+      "tasa de impuesto"
     ],
     "content": [
       {
@@ -207,7 +211,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "La moneda y el modo de impuesto (incluido / no incluido) se bloquean al terminar la configuración. Todos tus pedidos anteriores se calcularon con ellos, así que cambiarlos después dañaría tus reportes."
+        "text": "La moneda y el modo de impuesto (incluido / no incluido) se bloquean al terminar la configuración. Todos tus pedidos anteriores se calcularon con ellos, así que cambiarlos después dañaría tus reportes. Revísalos en el paso Tu tienda de la configuración: la moneda predeterminada es la de tu país y puedes tocarla para elegir otra."
       },
       {
         "type": "note",
@@ -228,17 +232,24 @@ export const articles = [
       "idioma",
       "inglés",
       "chino",
+      "japonés",
+      "español",
+      "varios idiomas",
       "cambiar idioma",
       "lenguaje"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS está disponible en inglés y chino tradicional. Ve a Ajustes → Preferencias del dispositivo y toca Idioma de la app. Se abre la página de DingPOS en la app Ajustes del iPad, donde eliges el idioma en Idioma."
+        "text": "DingPOS está disponible en 32 idiomas, entre ellos inglés, chino tradicional y simplificado, japonés, coreano, tailandés, vietnamita, indonesio, malayo, español (Latinoamérica), portugués (Brasil), francés y alemán. Ve a Ajustes → Preferencias del dispositivo y toca Idioma de la app. Se abre la página de DingPOS en la app Ajustes del iPad, donde eliges el idioma en Idioma."
       },
       {
         "type": "p",
         "text": "iOS no permite que las apps abran directamente la lista de idiomas, así que el último toque se hace en los Ajustes del sistema. El idioma se aplica solo a este iPad."
+      },
+      {
+        "type": "note",
+        "text": "Los idiomas distintos del inglés y el chino tradicional llegaron en la v3.2. Si Idioma solo muestra inglés y chino, actualiza DingPOS desde el App Store."
       }
     ],
     "related": [
@@ -355,12 +366,13 @@ export const articles = [
       "line pay",
       "cambio",
       "personalizado",
-      "a cuenta"
+      "a cuenta",
+      "comisiones"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Efectivo, Tarjeta de crédito y Line Pay vienen incluidos, y en Ajustes puedes agregar las etiquetas de pago personalizadas que quieras (por ejemplo, Apple Pay o billeteras locales)."
+        "text": "Una tienda nueva empieza con dos métodos de pago, Efectivo y Tarjeta de crédito, con el nombre en el idioma de la app al configurarla. En Ajustes → Métodos de pago puedes agregar cualquier otro método (por ejemplo, Apple Pay, LINE Pay o una billetera local), y también eliminarlos o reordenarlos."
       },
       {
         "type": "p",
@@ -368,13 +380,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Si tu proveedor de pagos con tarjeta o móvil cobra una comisión, asigna una tasa de comisión al método y Reportes estima las comisiones y el neto recibido de cada método. Consulta «¿DingPOS puede registrar las comisiones de pagos con tarjeta y pagos móviles?»"
+      },
+      {
+        "type": "p",
         "text": "Si un cliente frecuente se lleva la mercancía ahora y paga después, elige A cuenta: la venta se registra como cuenta por cobrar y se liquida cuando llega el dinero. Consulta «¿Puedo vender a cuenta a clientes frecuentes y cobrar después?»"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "¿DingPOS puede registrar las comisiones de pagos con tarjeta y pagos móviles?",
+    "keywords": [
+      "comisión por procesamiento",
+      "comisión de tarjeta",
+      "comisión por transacción",
+      "tasa de comisión",
+      "neto recibido",
+      "comisión del procesador de pagos",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sí. En Ajustes → Métodos de pago, toca un método de pago (o agrega uno nuevo) y completa Comisión por procesamiento: un porcentaje, un monto fijo por transacción o ambos. A partir de ahí, cada pago cobrado con ese método registra una comisión estimada con la tasa vigente en ese momento."
+      },
+      {
+        "type": "p",
+        "text": "En Reportes, la tarjeta Métodos de pago agrega la línea «Comisión · Neto» debajo de cada método que tiene comisión, y al pie de la tarjeta se muestran las comisiones estimadas y el neto estimado recibido de todo el periodo."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Escribe la tasa que tu proveedor descuenta realmente, con impuestos incluidos: para 3 % más 5 % de impuesto, escribe 3.15 %. Deja ambos campos vacíos si no hay comisión.",
+          "Un cambio de tasa solo se aplica a los pagos posteriores; las comisiones ya registradas se quedan como estaban.",
+          "«Porcentaje devuelto en reembolsos» viene activado de forma predeterminada, para los proveedores que devuelven su comisión cuando reembolsas; la parte fija nunca se devuelve. Las anulaciones, las devoluciones, las preventas canceladas y las liquidaciones revertidas revierten las comisiones con esta regla, y el cliente recibe de vuelta el mismo monto en ambos casos.",
+          "Los pagos cobrados antes de que el método tuviera una tasa no llevan comisión: Reportes los marca como «N sin tasa» y muestra el neto como «—»."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Las comisiones son estimaciones basadas en la tasa que escribes; el estado de cuenta de tu proveedor muestra el monto real. Editar las tasas de comisión y ver las comisiones en Reportes requiere el plan Standard o superior. En Lite los campos están bloqueados, pero los pagos igualmente registran sus comisiones, así que aparecen cuando mejoras de plan."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -401,7 +460,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "¿Puedo ocultar los productos agotados en la pantalla de caja?",
+    "keywords": [
+      "ocultar",
+      "agotado",
+      "sin stock",
+      "stock cero",
+      "caja",
+      "falta un producto",
+      "no encuentro un producto"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sí. Ve a Ajustes → Preferencias del dispositivo y activa Ocultar productos agotados (viene desactivado). Entonces la cuadrícula de productos de la caja, el filtro de categorías y la búsqueda (por nombre y código de barras) omiten todo producto cuyo stock sea 0 o menos. El cambio se aplica al instante, sin necesidad de reabrir la app."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Los productos que no controlan stock siempre se muestran. Un producto con variantes se oculta solo cuando todas sus variantes están agotadas.",
+          "Solo afecta a la caja de este iPad; la lista de Productos sigue mostrando todos los productos.",
+          "Cuando todos los productos están ocultos, la caja muestra «Todos los productos están agotados» e indica dónde desactivar el interruptor."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Mientras el interruptor está activado, este iPad no encuentra los productos agotados, así que no puede vender con stock negativo ni tomar una preventa de ellos; desactívalo cuando lo necesites. Si te parece que los productos desaparecieron de la caja, casi siempre es por este interruptor."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -551,7 +649,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "El stock se descuenta al registrar la preventa, con lo que la mercancía queda reservada para el cliente. Los artículos agotados quedan en negativo y se recuperan cuando se recibe una orden de compra.",
+          "El stock se descuenta al registrar la preventa, así que la cantidad vendible lo refleja de inmediato. Es una señal, no una reserva: una venta posterior aún puede llevarse la última unidad. Los artículos agotados quedan en negativo y se recuperan cuando se recibe una orden de compra.",
           "Cuando el cliente venga por su pedido, toca Entregar en el detalle del pedido para cobrar el saldo. El pedido pasa a ser una venta completada normal, y las devoluciones posteriores siguen el flujo habitual.",
           "Si el cliente nunca llega, toca Cancelar pedido en el detalle del pedido y elige devolver o retener el anticipo. El stock se repone.",
           "El recibo del anticipo y el recibo final del retiro llevan el mismo número."
@@ -649,8 +747,7 @@ export const articles = [
       "talla",
       "color",
       "opciones",
-      "especificaciones",
-      "combinaciones"
+      "especificaciones"
     ],
     "content": [
       {
@@ -659,16 +756,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Cada combinación tiene su propio precio y costo, y lleva su propio stock. Al cobrar, al tocar el producto aparece un selector de variante antes de agregarlo al carrito."
+        "text": "Cuando un producto tiene variantes, su campo Precio se oculta y cada combinación tiene su propio precio en Precio y stock por variante, con su propio stock (desde la v3.2; las versiones anteriores aún piden un precio de producto). La caja, la lista de productos y el detalle del producto muestran un rango del precio más bajo al más alto, como «NT$350–NT$390», o un solo precio cuando todas las combinaciones cuestan lo mismo; al ordenar por precio se usa el precio más bajo de las combinaciones. Al cobrar, al tocar el producto aparece un selector de variante antes de agregarlo al carrito."
+      },
+      {
+        "type": "p",
+        "text": "No tienes que escribir un costo para cada combinación: un campo Costo vacío significa Usa el del producto, es decir, toma el costo del producto y cambia cuando este cambia. Un número lo convierte en Costo propio, incluido el 0. Usar el costo del producto en todas borra todos los costos propios de una vez."
       },
       {
         "type": "note",
-        "text": "Los nombres de opciones y valores están limitados a 20 caracteres."
+        "text": "Los nombres de opciones y valores están limitados a 20 caracteres y no pueden quedar en blanco: un nombre de opción o un valor vacío se marca con contorno rojo al guardar, así que complétalo o elimina el valor vacío. Un producto con variantes no puede usar precio abierto."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "¿Puedo escribir el precio de un producto al cobrar, como un costo de envío o un artículo negociado?",
+    "keywords": [
+      "precio abierto",
+      "precio personalizado",
+      "escribir precio",
+      "costo de envío",
+      "cargo por servicio",
+      "precio negociado",
+      "precio de mercado"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sí: conviértelo en un producto de precio abierto. Activa Precio abierto en la pantalla de edición del producto y deja el precio vacío; la caja y la lista de productos muestran «Precio abierto» donde iría el precio. Al cobrar, al tocar el producto primero se pide el precio; escríbelo y toca Agregar al carrito para agregarlo con ese precio."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 es un precio válido (envío gratis, por ejemplo); un campo vacío no se puede agregar. Escribe el precio como tu tienda lo hace con todo lo demás, según su modo de impuesto.",
+          "Un carrito tiene una sola línea por producto de precio abierto: al tocarlo de nuevo se abre esa línea para que cambies el precio.",
+          "Al activar Precio abierto también se activa Excluir de promociones, para que un cargo no reciba descuento ni cuente para los montos mínimos de compra. Desactívalo de nuevo si un artículo negociado debe participar en promociones.",
+          "Una vez vendida, la línea lleva impuesto, genera puntos y cuenta en Reportes como cualquier otra, y una devolución reembolsa el precio que se escribió.",
+          "Un producto con variantes no puede usar precio abierto. Los productos de precio abierto nunca se ofrecen como regalos ni como complementos de pago, y nunca aparecen en la lista de reemplazo de un cambio."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Está en todos los planes, y escribir el precio nunca necesita la aprobación de un gerente."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -779,12 +921,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Un stock negativo suele significar que no se registró una reposición, o que un producto de preventa aún no llega (las preventas descuentan el stock al registrarse). Registra las reposiciones recibiendo una orden de compra y la cifra se recupera sola; corrige las diferencias de un conteo físico con un ajuste manual, que queda guardado en el historial de movimientos."
+      },
+      {
+        "type": "note",
+        "text": "Si en la caja no encuentras un producto con stock 0, revisa si Ocultar productos agotados está activado en Ajustes → Preferencias del dispositivo: mientras lo esté, este iPad no puede agregar productos agotados a un carrito."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -851,7 +997,8 @@ export const articles = [
         "items": [
           "Venta a cuenta: la mercancía sale hoy y cuenta en los ingresos por ventas de hoy; el dinero cuenta en el dinero recibido el día en que se liquida.",
           "Preventa: el anticipo cuenta en el dinero recibido cuando se paga; los ingresos por ventas se reconocen completos en la fecha de retiro.",
-          "Anticipo retenido: cuando un cliente cancela una preventa y te quedas con el anticipo, este ya se contó en el dinero recibido al pagarse. Reportes lo muestra por separado como anticipos retenidos y nunca cuenta como ingreso por ventas."
+          "Anticipo retenido: cuando un cliente cancela una preventa y te quedas con el anticipo, este ya se contó en el dinero recibido al pagarse. Reportes lo muestra por separado como anticipos retenidos y nunca cuenta como ingreso por ventas.",
+          "Anulación de un pedido anterior: el dinero reembolsado cuenta en el dinero recibido el día de la anulación, por lo que el dinero recibido de ese día puede ser negativo, mientras que Anulados cuenta el pedido en su fecha de venta. El ⓘ de los mosaicos Dinero recibido y Anulados lo explica igual."
         ]
       },
       {
@@ -962,21 +1109,33 @@ export const articles = [
       "costo",
       "utilidad",
       "margen",
+      "utilidad bruta",
       "reportes",
-      "utilidad sin registrar"
+      "utilidad sin registrar",
+      "costo faltante",
+      "utilidad registrada"
     ],
     "content": [
       {
         "type": "p",
-        "text": "El costo es un campo opcional. Los productos sin costo aparecen como «utilidad sin registrar» en los reportes y se excluyen del cálculo de utilidad: los ingresos por ventas se cuentan completos, solo se omite la utilidad."
+        "text": "El costo es un campo opcional. Los productos sin costo se dejan fuera de la utilidad, pero sus ingresos por ventas se cuentan completos. La tarjeta Utilidad registrada de Reportes muestra cuántos productos vendidos en el periodo no tienen costo; un costo de 0 cuenta como costo, así que esos productos no aparecen en la lista."
       },
       {
         "type": "p",
-        "text": "Para obtener reportes de utilidad completos, agrega los costos en la página de edición del producto; los pedidos futuros quedarán incluidos. La utilidad se calcula sobre los ingresos por ventas después de descuentos."
+        "text": "Toca la tarjeta o Ver productos para abrir Productos sin costo, ordenados por los ingresos por ventas que quedan fuera de la utilidad. Toca una fila para abrir el producto, agrega su costo desde Editar y, al volver, la fila aparece marcada como Costo agregado. Un producto con variantes cuenta como con costo cuando una variante o el propio producto tiene costo."
+      },
+      {
+        "type": "p",
+        "text": "La utilidad son los ingresos por ventas después de todos los descuentos (descuentos de artículo y de carrito, promociones, canje de puntos) y antes de impuestos, menos el costo; por eso el campo dice Costo sin impuestos (opcional): escribe lo que pagaste antes de impuestos. El margen es la utilidad ÷ los ingresos por ventas sin impuestos de los productos con costo, así que los productos sin costo no lo reducen. Una devolución quita, el día de la devolución, la utilidad que esos artículos habían aportado."
+      },
+      {
+        "type": "note",
+        "text": "Un costo que agregas afecta solo a las ventas posteriores; las ventas ya hechas no se recalculan. Este cálculo llegó en la v3.1: las versiones anteriores solo descontaban los descuentos manuales por artículo y contaban el impuesto incluido como utilidad, así que después de actualizar, los periodos con descuentos o con impuesto incluido muestran una utilidad menor. Es una corrección, no una pérdida de datos."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1037,9 +1196,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Horario: ¿hoy está dentro de las fechas activas? ¿Una ventana de Happy Hour limita el día de la semana o la hora?",
-          "Alcance: ¿los artículos del carrito están dentro del alcance de productos o categorías de la promoción? ¿Se alcanzó el monto mínimo de compra?",
+          "Alcance: ¿los artículos del carrito están dentro del alcance de productos o categorías de la promoción? ¿El producto tiene activado Excluir de promociones (los productos de precio abierto lo tienen de forma predeterminada)? ¿Se alcanzó el monto mínimo de compra?",
           "Público: ¿la promoción está limitada a un nivel de membresía o al mes de cumpleaños? ¿Se seleccionó a ese miembro al cobrar?",
-          "Límites de uso: ¿se alcanzó el tope total de usos o el tope de este cliente?",
+          "Límites de uso: ¿se alcanzó el tope total de usos o el tope de este cliente? El límite por cliente de una promoción del mes de cumpleaños se cuenta por año calendario.",
           "Acumulación: ¿una promoción de mayor prioridad con la opción «Detener las promociones siguientes cuando se aplique esta» la está bloqueando?"
         ]
       },
@@ -1320,7 +1479,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "El archivo se abre como tabla. Los nombres de columna comunes en inglés y chino se asocian automáticamente; toca el encabezado de cualquier columna para cambiar su asignación.",
+          "El archivo se abre como tabla. Los nombres de columna comunes en inglés y chino (tradicional o simplificado) se asocian automáticamente; toca el encabezado de cualquier columna para cambiar su asignación.",
           "Toca cualquier celda para corregir su valor ahí mismo; no necesitas editar el archivo y empezar de nuevo.",
           "Toca Confirmar para validar. Las filas con problemas se marcan en rojo con el motivo; en la importación de ventas se pueden omitir los pedidos con errores.",
           "Resuelve lo que requiera una decisión (nombres de producto duplicados, una fila que coincide con varios clientes), revisa el resumen y toca Iniciar importación."
@@ -1329,7 +1488,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Las ventas importadas se ubican según la fecha de la transacción y se recalculan con la moneda y el modo de impuestos de tu tienda. No afectan el inventario y no otorgan puntos de bienvenida.",
+          "Las ventas importadas se ubican según la fecha del pedido y se recalculan con la moneda y el modo de impuestos de tu tienda. No afectan el stock y no otorgan puntos de bienvenida.",
           "Los clientes se asocian con los existentes por teléfono o correo; los que no coincidan se crean.",
           "Los pedidos importados muestran la fecha de Importado el y el número de pedido de origen, y no se pueden anular ni devolver.",
           "Las filas con errores se pueden exportar como un CSV con los motivos anotados: corrígelas y vuelve a importar. Las filas duplicadas se omiten automáticamente."
@@ -1575,6 +1734,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Durante los últimos 7 días y el último día, la app te recuerda una vez en cada uno cuántos días quedan, que el cobro se pausa cuando termina la prueba y que tus datos se conservan."
+      },
+      {
+        "type": "p",
         "text": "Todo lo que crees durante la prueba (productos, pedidos, miembros) se conserva por completo. Tus datos nunca se eliminan, te suscribas o no después."
       }
     ],
@@ -1634,7 +1797,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: para una persona que atiende un puesto y necesita cobro y productos.",
-          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta y preventas.",
+          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y estimación de comisiones de pago.",
           "Pro: suma cuentas y permisos del personal, aprobación de gerente, registro de actividad, registros de restauración y reportes avanzados, para tiendas con personal."
         ]
       },
@@ -1801,15 +1964,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Primero crea los niveles en Ajustes → Niveles de membresía (por ejemplo, Oro) y luego dirige la promoción a ese nivel. Para ofertas de cumpleaños, elige la condición “Mes de cumpleaños”."
+        "text": "Primero crea los niveles en Ajustes → Niveles de membresía (por ejemplo, Oro) y luego dirige la promoción a ese nivel. Para ofertas de cumpleaños, define el público como Mes de cumpleaños y completa Límite por cliente."
       },
       {
         "type": "list",
         "items": [
           "Hay que seleccionar al miembro al cobrar para que la oferta se active: la elegibilidad se evalúa con el miembro seleccionado en ese momento.",
           "La elegibilidad por cumpleaños usa el mes de cumpleaños del miembro, así que completa ese campo; los miembros que no lo tienen nunca se consideran clientes de cumpleaños.",
+          "Una promoción del mes de cumpleaños necesita un límite por cliente, que se cuenta por año calendario: un límite de 1 significa que cada cliente puede usarla una vez al año, y se reinicia al año siguiente. Sin él no se puede guardar.",
           "Las subidas automáticas de nivel se evalúan al completar el cobro; si el pedido se anula, la subida que provocó se revierte automáticamente."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Antes de la v3.2, una promoción del mes de cumpleaños mostraba un error y no se podía guardar ni siquiera con el límite por cliente completo. Si te pasa, actualiza DingPOS desde el App Store."
       }
     ],
     "related": [

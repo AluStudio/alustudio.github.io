@@ -82,24 +82,29 @@ export const articles = [
       "ilk adımlar",
       "kurulum sihirbazı",
       "mağaza açma",
-      "POS kurulumu"
+      "POS kurulumu",
+      "ülke",
+      "para birimi"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS'u ilk açtığınızda bir kurulum sihirbazı, mağazanızı yaklaşık 10 dakikada açmanız için sizi adım adım yönlendirir:"
+        "text": "DingPOS'u ilk açtığınızda bir kurulum sihirbazı mağazanızı iki adımda, birkaç dakika içinde açar:"
       },
       {
         "type": "steps",
         "items": [
-          "Ülkenizi seçin — para birimi, vergi modu ve varsayılan vergi oranı otomatik olarak doldurulur (vergi oranı ve vergi modu bu aşamada hâlâ değiştirilebilir).",
-          "Mağaza adınızı girin; isterseniz mağaza logonuzu da yükleyin.",
-          "Rehberi izleyerek 3–5 ürün oluşturun (atlanabilir — ürünleri daha sonra istediğiniz zaman ekleyebilirsiniz)."
+          "Ülkenizi veya bölgenizi seçin. Listenin en üstünde bu iPad'in bölgesi ve en yaygın pazarlar yer alır; altında DingPOS'un App Store'da bulunduğu 175 ülke ve bölgenin tümü vardır ve uygulamanın dilinde ya da İngilizce adla aranabilir. Seçiminiz para birimini, vergi oranını ve vergi modunu otomatik doldurur.",
+          "Mağazanız adımında mağaza adını girin, isterseniz logo ekleyin; para birimini, vergi oranını ve vergi modunu (KDV dahil / KDV hariç) kontrol edin. Para birimi varsayılan olarak ülkenizinkidir; 130 para birimi arasından seçmek için ona dokunun."
         ]
       },
       {
         "type": "p",
-        "text": "İşiniz bittiğinde bir \"Ding!\" sesi duyacaksınız — mağazanız hazır ve hemen satış yapmaya başlayabilirsiniz."
+        "text": "Devam'a dokunun; “Ding! Mağazanız hazır.” ifadesini göreceksiniz. DingPOS ayrıca Nakit ve Kredi Kartı olmak üzere iki ödeme yöntemi ekler. Sonra Ürünler bölümünden ürünlerinizi ekleyin ve satış yapmaya başlayın."
+      },
+      {
+        "type": "note",
+        "text": "Para birimi ve vergi modu kurulumdan sonra değiştirilemez; vergi oranı ise sonradan Ayarlar'dan değiştirilebilir. ABD, Kanada, Brezilya ve Mikronezya'da oran eyalete, vilayete veya şehre göre değiştiği için vergi oranı alanı boş başlar; devam etmek için uyguladığınız oranı girersiniz (0 da olur). 175 ülkelik liste ve para birimi seçimi v3.2 ile geldi; önceki sürümlerde 15 ülke vardı."
       }
     ],
     "related": [
@@ -210,7 +215,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Para birimi ve vergi modu (KDV dahil / KDV hariç) kurulum tamamlandıktan sonra kilitlenir. Geçmiş siparişlerinizin tümü bunlarla hesaplandığı için sonradan değiştirmek raporlarınızı bozar."
+        "text": "Para birimi ve vergi modu (KDV dahil / KDV hariç) kurulum tamamlandıktan sonra kilitlenir. Geçmiş siparişlerinizin tümü bunlarla hesaplandığı için sonradan değiştirmek raporlarınızı bozar. Kurulumdaki Mağazanız adımında bunları kontrol edin: para birimi varsayılan olarak ülkenizinkidir ve dokunarak başka bir tane seçebilirsiniz."
       },
       {
         "type": "note",
@@ -232,16 +237,24 @@ export const articles = [
       "uygulama dili",
       "İngilizce",
       "Türkçe",
+      "Çince",
+      "Japonca",
+      "İspanyolca",
+      "çok dilli",
       "dil değiştirme"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS İngilizce ve Geleneksel Çince'yi destekler. Ayarlar → Cihaz Tercihleri bölümüne gidip Uygulama Dili'ne dokunun. iPad'in Ayarlar uygulamasında DingPOS sayfası açılır; dili Dil altından seçersiniz."
+        "text": "DingPOS, İngilizce, Geleneksel ve Basitleştirilmiş Çince, Japonca, Korece, Tayca, Vietnamca, Endonezce, Malayca, İspanyolca (Latin Amerika), Portekizce (Brezilya), Fransızca ve Almanca dahil 32 dili destekler. Ayarlar → Cihaz Tercihleri bölümüne gidip Uygulama Dili'ne dokunun. iPad'in Ayarlar uygulamasında DingPOS sayfası açılır; dili Dil altından seçersiniz."
       },
       {
         "type": "p",
         "text": "iOS, uygulamaların dil listesini doğrudan açmasına izin vermez; bu yüzden son dokunuş sistem Ayarlar'ında yapılır. Seçtiğiniz dil yalnızca bu iPad için geçerlidir."
+      },
+      {
+        "type": "note",
+        "text": "İngilizce ve Geleneksel Çince dışındaki diller v3.2 ile geldi. Dil altında yalnızca İngilizce ve Çince görünüyorsa DingPOS'u App Store'dan güncelleyin."
       }
     ],
     "related": [
@@ -359,12 +372,13 @@ export const articles = [
       "line pay",
       "para üstü",
       "özel ödeme yöntemi",
-      "veresiye"
+      "veresiye",
+      "işlem ücreti"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Nakit, Kredi Kartı ve Line Pay hazır gelir; Ayarlar'dan istediğiniz özel ödeme etiketlerini (örneğin Apple Pay, yerel dijital cüzdanlar) ekleyebilirsiniz."
+        "text": "Yeni bir mağaza, kurulumda uygulamanın dilinde adlandırılan Nakit ve Kredi Kartı olmak üzere iki ödeme yöntemiyle başlar. Ayarlar → Ödeme Yöntemleri bölümünden istediğiniz başka bir yöntemi (örneğin Apple Pay, LINE Pay, yerel bir dijital cüzdan) ekleyebilir, yöntemleri silebilir veya yeniden sıralayabilirsiniz."
       },
       {
         "type": "p",
@@ -372,13 +386,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Kart veya mobil ödeme sağlayıcınız ücret kesiyorsa yönteme bir ücret oranı verin; İstatistik her yöntemin ücretini ve net alınan tutarını tahmin eder. Bkz. “DingPOS kart ve mobil ödeme ücretlerini takip edebilir mi?”"
+      },
+      {
+        "type": "p",
         "text": "Ürünü şimdi alıp parasını sonra ödeyecek düzenli bir müşteri için Veresiye'yi seçin: satış alacak olarak kaydedilir ve para geldiğinde kapatılır. Bkz. “Düzenli müşteriler veresiye alışveriş yapıp sonra ödeyebilir mi?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "DingPOS kart ve mobil ödeme ücretlerini takip edebilir mi?",
+    "keywords": [
+      "işlem ücreti",
+      "kart ücreti",
+      "komisyon",
+      "ücret oranı",
+      "net alınan tutar",
+      "POS komisyonu",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Evet. Ayarlar → Ödeme Yöntemleri bölümünde bir ödeme yöntemine dokunun (veya yeni bir tane ekleyin) ve İşlem ücreti alanını doldurun: bir yüzde, işlem başına sabit bir tutar ya da ikisi birden. Bundan sonra o yöntemle tahsil edilen her ödeme, o andaki orana göre tahmin edilen bir ücretle kaydedilir."
+      },
+      {
+        "type": "p",
+        "text": "İstatistik'te Ödeme Yöntemleri kartı, ücreti olan her yöntemin altına “Ücret · Net” satırı ekler; kartın alt kısmında tüm dönem için tahmini ücretler ve tahmini net alınan tutar görünür."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sağlayıcınızın gerçekte kestiği oranı vergisi dahil girin — %3 artı %5 vergi için %3,15 yazın. Ücret yoksa iki alanı da boş bırakın.",
+          "Oran değişikliği yalnızca sonraki ödemelere uygulanır; daha önce kaydedilen ücretler olduğu gibi kalır.",
+          "“Yüzde ücret iadelerde geri verilir” varsayılan olarak açıktır; iade yapınca ücretini geri veren sağlayıcılar içindir, sabit ücret hiçbir zaman geri verilmez. Geçersiz kılma, ürün iadesi, iptal edilen ön siparişler ve geri alınan borç kapatmalar ücretleri bu kurala göre tersine çevirir; müşteri her iki durumda da aynı tutarı geri alır.",
+          "Yöntemin oranı olmadan önce tahsil edilen ödemelerin ücreti yoktur: İstatistik bunları “N işlemde oran eksik” diye işaretler ve neti “—” olarak gösterir."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Ücretler, girdiğiniz orandan hesaplanan tahminlerdir; gerçek tutar sağlayıcınızın ekstresindedir. Ücret oranlarını düzenlemek ve ücretleri İstatistik'te görmek için Standard veya üstü plan gerekir. Lite'ta alanlar kilitlidir, ancak ödemeler yine de ücretlerini kaydeder; yükselttiğinizde bunlar görünür."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -405,7 +466,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Kasa ekranı stokta olmayan ürünleri gizleyebilir mi?",
+    "keywords": [
+      "gizle",
+      "stokta yok",
+      "tükenen ürün",
+      "sıfır stok",
+      "kasa",
+      "ürün görünmüyor",
+      "ürün bulunamıyor"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Evet. Ayarlar → Cihaz Tercihleri bölümüne gidip Stokta olmayan ürünleri gizle seçeneğini açın (varsayılan olarak kapalıdır). Kasadaki ürün ızgarası, kategori filtresi ve arama (ad ve barkod) stoğu 0 veya altında olan her ürünü atlar. Anahtar hemen etki eder; uygulamayı yeniden açmanız gerekmez."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Stok takibi yapılmayan ürünler her zaman görünür. Varyantlı bir ürün yalnızca tüm varyantları stokta yoksa gizlenir.",
+          "Yalnızca bu iPad'in kasasını etkiler; Ürünler listesi yine tüm ürünleri gösterir.",
+          "Tüm ürünler gizlendiğinde kasa “Tüm ürünler stokta yok” mesajını gösterir ve anahtarı nereden kapatacağınızı söyler."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Anahtar açıkken bu iPad stokta olmayan ürünleri bulamaz; bu yüzden eksi stoğa satış yapamaz veya bunlar için ön sipariş alamaz — gerektiğinde kapatın. Ürünler kasadan kaybolmuş gibi görünüyorsa nedeni genellikle bu anahtardır."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -557,7 +657,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Stok, ön sipariş verildiği anda düşer ve mal müşteri için ayrılmış olur. Stokta olmayan ürünler eksiye düşer; satın alma siparişi teslim alınınca düzelir.",
+          "Stok, ön sipariş verildiği anda düşer; böylece satılabilir miktar hemen buna göre görünür. Bu bir uyarı işaretidir, ayırma değil: sonraki bir satış son adedi yine alabilir. Stokta olmayan ürünler eksiye düşer; satın alma siparişi teslim alınınca düzelir.",
           "Müşteri teslim almaya geldiğinde sipariş ayrıntısında Teslim et’e dokunarak kalan tutarı tahsil edin. Sipariş bundan sonra sıradan bir tamamlanmış satış olur; sonraki iadeler normal iade akışıyla yapılır.",
           "Müşteri hiç gelmezse sipariş ayrıntısında Siparişi iptal et’e dokunun ve kaporayı iade etmeyi ya da alıkoymayı seçin. Stok geri eklenir.",
           "Kapora fişi ile son teslim fişi aynı numarayı taşır."
@@ -665,16 +765,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Her birleşimin kendi fiyatı ve maliyeti vardır, stoğunu da ayrı takip eder. Kasada ürüne dokunduğunuzda, sepete eklenmeden önce bir varyant seçim ekranı açılır."
+        "text": "Ürünün varyantları olduğunda Fiyat alanı kapanır; her birleşimin fiyatı Varyant Fiyatı ve Stoku altında ayrı girilir ve kendi stoğu da vardır (v3.2'den beri; önceki sürümler hâlâ ürün fiyatı ister). Kasada, ürün listesinde ve ürün ayrıntısında en düşük fiyattan en yükseğe bir aralık görünür, örneğin “NT$350–NT$390”; tüm birleşimler aynı fiyattaysa tek fiyat gösterilir. Fiyata göre sıralama en düşük birleşim fiyatını kullanır. Kasada ürüne dokunduğunuzda, sepete eklenmeden önce bir varyant seçim ekranı açılır."
+      },
+      {
+        "type": "p",
+        "text": "Her birleşim için maliyet girmeniz gerekmez: boş bir Maliyet alanı Üründen alınır demektir; ürünün maliyetini kullanır ve o değişince birlikte değişir. Bir sayı girerseniz Kendi maliyeti olur — 0 dahil. Tümünde ürün maliyetini kullan, tüm kendi maliyetlerini tek seferde temizler."
       },
       {
         "type": "note",
-        "text": "Seçenek ve seçenek değeri adları en fazla 20 karakter olabilir."
+        "text": "Seçenek ve seçenek değeri adları en fazla 20 karakter olabilir ve boş bırakılamaz: boş bir seçenek adı ya da değeri kaydederken kırmızı çerçeveyle işaretlenir; doldurun ya da boş değeri silin. Varyantlı bir ürün serbest fiyat kullanamaz."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Ürün fiyatını ödeme sırasında girebilir miyim? (kargo ücreti, pazarlıklı ürün gibi)",
+    "keywords": [
+      "serbest fiyat",
+      "fiyat girme",
+      "özel fiyat",
+      "kargo ücreti",
+      "hizmet bedeli",
+      "pazarlık fiyatı",
+      "pazar fiyatı"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Evet — ürünü Serbest fiyat olarak ayarlayın. Ürün düzenleme sayfasında Serbest fiyat seçeneğini açın ve fiyatı boş bırakın; kasada ve ürün listesinde fiyatın yerinde “Serbest fiyat” yazar. Ödeme sırasında ürüne dokunduğunuzda önce fiyat sorulur; fiyatı girip Sepete Ekle’ye dokunarak ürünü o fiyatla ekleyin."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 geçerli bir fiyattır (örneğin ücretsiz kargo); boş alan eklenemez. Fiyatı, mağazanızın vergi modunun diğer her şeyi fiyatlandırdığı şekilde girin.",
+          "Sepette serbest fiyatlı her ürün için tek satır bulunur: ürüne yeniden dokunmak o satırı açar ve fiyatı değiştirebilirsiniz.",
+          "Serbest fiyatı açmak Kampanyalardan hariç tut seçeneğini de açar; böylece bir ücrete indirim uygulanmaz ve harcama eşiklerine sayılmaz. Pazarlıklı bir ürün kampanyalara katılsın istiyorsanız yeniden kapatın.",
+          "Satıldıktan sonra satır, diğerleri gibi vergilendirilir, puan kazandırır ve İstatistik'te sayılır; ürün iadesinde girilen fiyat iade edilir.",
+          "Varyantlı bir ürün serbest fiyat kullanamaz. Serbest fiyatlı ürünler hediye ya da ücretli eklenti olarak asla sunulmaz ve bir değişimin yerine konacak ürün listesinde hiç görünmez."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Her planda vardır ve fiyatı girmek için hiçbir zaman yönetici onayı gerekmez."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -776,7 +921,8 @@ export const articles = [
       "stok eksiye düştü",
       "stok bitti",
       "satışı engelleme",
-      "stok düzeltme"
+      "stok düzeltme",
+      "stokta olmayan ürün"
     ],
     "content": [
       {
@@ -786,12 +932,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Eksi stok genellikle bir mal alımının kaydedilmediği ya da ön siparişi verilmiş bir ürünün henüz gelmediği anlamına gelir (ön siparişler verildiği anda stoktan düşer). Mal alımlarını satın alma siparişi için stok girişi yaparak kaydedin, sayı kendiliğinden düzelir; sayım farklarını ise stok hareketi defterinde saklanan bir elle düzeltmeyle giderin."
+      },
+      {
+        "type": "note",
+        "text": "Kasa, stoğu 0 olan bir ürünü bulamıyorsa Ayarlar → Cihaz Tercihleri bölümünde Stokta olmayan ürünleri gizle seçeneğinin açık olup olmadığına bakın: açıkken bu iPad stokta olmayan ürünleri sepete ekleyemez."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -858,7 +1008,8 @@ export const articles = [
         "items": [
           "Veresiye satış: ürün bugün çıkar ve bugünün satış gelirine yazılır; para, borç kapatıldığı gün alınan tutara yazılır.",
           "Ön sipariş: kapora ödendiği gün alınan tutara yazılır; satış geliri ise teslim alma tarihinde tamamı birden kaydedilir.",
-          "Alıkonan kapora: müşteri ön siparişi iptal eder ve kaporayı siz alıkoyarsanız, kapora ödendiği gün zaten alınan tutara yazılmıştır. İstatistik ekranında ayrıca alıkonan kapora olarak gösterilir ve hiçbir zaman satış geliri sayılmaz."
+          "Alıkonulan kapora: müşteri ön siparişi iptal eder ve kaporayı siz alıkoyarsanız, kapora ödendiği gün zaten alınan tutara yazılmıştır. İstatistik ekranında ayrıca alıkonulan kapora olarak gösterilir ve hiçbir zaman satış geliri sayılmaz.",
+          "Daha önceki bir siparişi geçersiz kılma: iade edilen para, geçersiz kılma gününün alınan tutarına yazılır; bu yüzden o günün alınan tutarı eksi olabilir, Geçersiz kılındı ise siparişi satış tarihinde sayar. Alınan tutar ve Geçersiz kılındı kutucuklarındaki ⓘ da aynısını açıklar."
         ]
       },
       {
@@ -969,21 +1120,33 @@ export const articles = [
       "maliyet",
       "kâr",
       "kâr marjı",
+      "brüt marj",
       "raporlar",
-      "kâr takip edilmiyor"
+      "kâr takip edilmiyor",
+      "eksik maliyet",
+      "kâr hesaplanabiliyor"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Maliyet isteğe bağlı bir alandır. Maliyeti olmayan ürünler raporlarda “kâr takip edilmiyor” olarak işaretlenir ve kâr hesabına dahil edilmez — satış geliri yine tam olarak sayılır, yalnızca kâr atlanır."
+        "text": "Maliyet isteğe bağlı bir alandır. Maliyeti olmayan ürünler kâr hesabının dışında kalır; satış gelirleri ise yine tam olarak sayılır. İstatistik'teki Kâr hesaplanabiliyor kartı, dönemde satılan ürünlerden kaçının maliyetinin olmadığını gösterir; maliyeti 0 olan ürün maliyetli sayılır, bu yüzden listelenmez."
       },
       {
         "type": "p",
-        "text": "Eksiksiz kâr raporları için ürün düzenleme sayfasından maliyetleri ekleyin; sonraki siparişler hesaba katılır. Kâr, indirim sonrası satış geliri üzerinden hesaplanır."
+        "text": "Karta veya Ürünleri gör düğmesine dokunarak Maliyeti Olmayan Ürünler listesini açın; liste, kâr hesabının dışında kalan satış gelirine göre sıralanır. Bir satıra dokunup ürünü açın, Düzenle’den maliyetini ekleyin; geri döndüğünüzde satır Maliyet eklendi olarak işaretlenir. Varyantlı bir ürün, varyantlardan biri ya da ürünün kendisi maliyet içeriyorsa maliyetli sayılır."
+      },
+      {
+        "type": "p",
+        "text": "Kâr, tüm indirimlerden (kalem ve sepet indirimleri, kampanyalar, puan kullanımı) sonraki ve vergiden önceki satış gelirinden maliyetin çıkarılmasıyla bulunur — alanın adı bu yüzden Vergi hariç maliyet (isteğe bağlı): vergiden önce ödediğiniz tutarı girin. Marj, kârın maliyeti olan ürünlerin vergi öncesi satış gelirine bölünmesidir; yani maliyeti olmayan ürünler onu aşağı çekmez. Ürün iadesi, iade günü, o ürünlerin getirdiği kârı geri alır."
+      },
+      {
+        "type": "note",
+        "text": "Eklediğiniz maliyet yalnızca sonraki satışları etkiler; yapılmış satışlar yeniden hesaplanmaz. Bu hesaplama v3.1 ile geldi: önceki sürümler yalnızca elle girilen kalem indirimlerini düşüyor ve KDV dahil tutarı kâr sayıyordu; bu yüzden güncellemeden sonra indirimli veya KDV dahil dönemlerde kâr daha düşük görünür. Bu bir düzeltmedir, veri kaybı değildir."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1046,9 +1209,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Zamanlama: bugün kampanyanın geçerli olduğu tarihlerde mi? Happy Hour aralığı günü veya saati kısıtlıyor mu?",
-          "Kapsam: sepetteki ürünler kampanyanın ürün veya kategori kapsamında mı? Harcama eşiğine ulaşıldı mı?",
+          "Kapsam: sepetteki ürünler kampanyanın ürün veya kategori kapsamında mı? Ürün Kampanyalardan hariç tut olarak ayarlı mı (serbest fiyatlı ürünler varsayılan olarak öyledir)? Harcama eşiğine ulaşıldı mı?",
           "Hedef kitle: kampanya belirli bir üye seviyesi veya doğum ayıyla sınırlı mı? O üye ödeme sırasında seçildi mi?",
-          "Kullanım sınırları: toplam kullanım sınırına ya da bu müşterinin sınırına ulaşıldı mı?",
+          "Kullanım sınırları: toplam kullanım sınırına ya da bu müşterinin sınırına ulaşıldı mı? Doğum ayı kampanyasında müşteri başına sınır takvim yılına göre sayılır.",
           "Birleştirme: “Bu kampanya uygulanınca sonrakileri durdur” seçeneği açık, önceliği daha yüksek bir kampanya bunu engelliyor mu?"
         ]
       },
@@ -1331,7 +1494,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Dosya tablo olarak açılır. İngilizce ve Çince yaygın sütun adları otomatik eşleşir; eşlemeyi değiştirmek için herhangi bir sütun başlığına dokunun.",
+          "Dosya tablo olarak açılır. İngilizce ve Çince (Geleneksel veya Basitleştirilmiş) yaygın sütun adları otomatik eşleşir; eşlemeyi değiştirmek için herhangi bir sütun başlığına dokunun.",
           "Değeri orada düzeltmek için herhangi bir hücreye dokunun — dosyayı düzenleyip baştan başlamanız gerekmez.",
           "Doğrulamak için Onayla'ya dokunun. Sorunlu satırlar nedenleriyle birlikte kırmızıyla işaretlenir; satış aktarımında hatalı siparişler atlanabilir.",
           "Karar gerektiren her şeyi çözün (yinelenen ürün adları, birden çok müşteriyle eşleşen satır), özeti inceleyin, ardından İçe aktarmayı başlat'a dokunun."
@@ -1340,7 +1503,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Aktarılan satışlar işlem tarihine göre yerleştirilir ve mağazanızın para birimi ve vergi moduyla yeniden hesaplanır. Stoğa dokunmaz ve hoş geldin puanı vermez.",
+          "Aktarılan satışlar sipariş tarihine göre yerleştirilir ve mağazanızın para birimi ve vergi moduyla yeniden hesaplanır. Stoğa dokunmaz ve hoş geldin puanı vermez.",
           "Müşteriler telefon veya e-postayla mevcut müşterilerle eşleştirilir; eşleşmeyenler yeni oluşturulur.",
           "İçe aktarılan siparişlerde İçe aktarma tarihi ve kaynak sipariş numarası görünür; bu siparişler geçersiz kılınamaz veya iade edilemez.",
           "Hatalı satırlar, nedenleriyle birlikte CSV olarak dışa aktarılabilir — düzeltip yeniden aktarın. Yinelenen satırlar otomatik olarak atlanır."
@@ -1585,6 +1748,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Son 7 gün içinde ve son günde uygulama, kaç gün kaldığını, deneme bitince ödeme almanın duraklayacağını ve verilerinizin saklanacağını size birer kez hatırlatır."
+      },
+      {
+        "type": "p",
         "text": "Deneme sırasında oluşturduğunuz her şey (ürünler, siparişler, üyeler) eksiksiz saklanır. Sonradan abone olsanız da olmasanız da verileriniz asla silinmez."
       }
     ],
@@ -1644,7 +1811,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: ödeme alma ve ürün yönetimi yeterli olan, tezgâhı tek başına işleten kişiler için.",
-          "Standard: kampanyalar, sadakat puanı ve üyelik seviyeleri, stok takibi, satın alma, veresiye satış ve ön siparişler ekler.",
+          "Standard: kampanyalar, sadakat puanı ve üyelik seviyeleri, stok takibi, satın alma, veresiye satış, ön siparişler ve işlem ücreti tahminleri ekler.",
           "Pro: personel hesapları ve yetkiler, yönetici onayı, etkinlik günlüğü, geri yükleme kayıtları ve gelişmiş raporlar ekler; personeli olan dükkânlar için."
         ]
       },
@@ -1814,15 +1981,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Önce Ayarlar → Üyelik Seviyeleri bölümünde seviyeleri oluşturun (örn. Altın), ardından kampanyayı o seviyeye yönlendirin. Doğum günü kampanyaları için koşulu “Doğum ayı” olarak ayarlayın."
+        "text": "Önce Ayarlar → Üyelik Seviyeleri bölümünde seviyeleri oluşturun (örn. Altın), ardından kampanyayı o seviyeye yönlendirin. Doğum günü kampanyaları için hedef kitleyi Doğum ayı olarak ayarlayın ve Müşteri başına sınır alanını doldurun."
       },
       {
         "type": "list",
         "items": [
           "Kampanyanın devreye girmesi için ödemede üye seçilmiş olmalıdır — uygunluk, o anda seçili olan üyeye göre belirlenir.",
           "Doğum günü uygunluğu üyenin doğum ayına bakar; bu yüzden doğum tarihi alanını doldurun — doğum tarihi olmayan üyeler hiçbir zaman doğum günü müşterisi sayılmaz.",
+          "Doğum ayı kampanyası için müşteri başına sınır gerekir ve takvim yılına göre sayılır: 1 sınırı, her müşterinin yılda bir kez yararlanabileceği anlamına gelir ve sınır ertesi yıl sıfırlanır. Sınır olmadan kaydedilemez.",
           "Otomatik seviye yükseltmeleri ödeme tamamlandığında değerlendirilir; sipariş geçersiz kılınırsa onun tetiklediği yükseltme otomatik olarak geri alınır."
         ]
+      },
+      {
+        "type": "note",
+        "text": "v3.2'den önce, doğum ayı kampanyası müşteri başına sınır doldurulmuş olsa bile hata gösteriyor ve kaydedilemiyordu. Bu size olursa DingPOS'u App Store'dan güncelleyin."
       }
     ],
     "related": [

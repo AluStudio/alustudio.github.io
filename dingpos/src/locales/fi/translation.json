@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Tuotteiden hallinta",
-          "desc": "Variantit, viivakoodit, kuvat, luokat"
+          "desc": "Variantit, viivakoodit, kuvat, luokat, avohintaiset tuotteet"
         },
         "import": {
           "name": "Tietojen tuonti",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Liiketoiminnan kojelauta",
           "desc": "Liikevaihto, myyntikate, alennukset, maksutavat ja myydyimmät tuotteet"
+        },
+        "payment_fees": {
+          "name": "Maksukulujen arviot",
+          "desc": "Määritä kunkin maksutavan maksukulun määrä; näet arvioidut maksukulut ja nettotulon maksutavoittain"
         },
         "comparison": {
           "name": "Jaksojen vertailu",

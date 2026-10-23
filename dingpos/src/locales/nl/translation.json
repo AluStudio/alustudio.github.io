@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Productbeheer",
-          "desc": "Varianten, barcodes, foto's, categorieën"
+          "desc": "Varianten, barcodes, foto's, categorieën, producten met open prijs"
         },
         "import": {
           "name": "Gegevens importeren",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Bedrijfsoverzicht",
           "desc": "Omzet, winst, kortingen, betaalmethoden en bestsellers"
+        },
+        "payment_fees": {
+          "name": "Schatting van transactiekosten",
+          "desc": "Stel per betaalmethode het kostenpercentage in; bekijk de kosten en het geschatte netto ontvangen bedrag per methode"
         },
         "comparison": {
           "name": "Periodevergelijking",

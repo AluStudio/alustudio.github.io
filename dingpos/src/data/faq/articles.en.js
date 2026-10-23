@@ -23,18 +23,18 @@ export const articles = [
     slug: "how-to-set-up",
     category: "getting-started",
     question: "How do I set up my store in DingPOS?",
-    keywords: ["setup", "start", "onboarding", "first", "wizard", "open store"],
+    keywords: ["setup", "start", "onboarding", "first", "wizard", "open store", "country", "currency"],
     content: [
-      { type: "p", text: "The first time you open DingPOS, a setup wizard walks you through opening your store in about 10 minutes:" },
+      { type: "p", text: "The first time you open DingPOS, a setup wizard opens your store in two steps and a few minutes:" },
       {
         type: "steps",
         items: [
-          "Pick your country — currency, tax mode, and a default tax rate are filled in automatically (tax rate and tax mode can still be adjusted at this point).",
-          "Enter your store name, and optionally upload a store logo.",
-          "Follow the guide to create 3–5 products (skippable — you can add them anytime later).",
+          "Pick your country or region. The top of the list shows this iPad's region and the most common markets; below it are all 175 countries and regions where DingPOS is on the App Store, searchable by name in the app's language or in English. Your pick fills in the currency, tax rate, and tax mode.",
+          "On Your store, enter the store name, optionally add a logo, and check the currency, tax rate, and tax mode (inclusive / exclusive). The currency defaults to your country's; tap it to choose from 130 currencies.",
         ],
       },
-      { type: "p", text: "When you're done you'll hear a \"Ding!\" — your store is ready and you can start ringing up sales right away." },
+      { type: "p", text: "Tap Continue and you'll see “Ding! Your store is ready.” DingPOS also sets up two payment methods, Cash and Credit Card. Then add your products under Products and start ringing up sales." },
+      { type: "note", text: "Currency and tax mode can't be changed after setup; the tax rate can still be changed later in Settings. In the United States, Canada, Brazil, and Micronesia the rate depends on the state, province, or city, so the tax rate field starts empty and you enter the rate you charge (0 is allowed) to continue. The 175-country list and the currency choice arrived in v3.2; earlier versions offered 15 countries." },
     ],
     related: ["change-currency", "free-trial", "product-variants"],
   },
@@ -78,7 +78,7 @@ export const articles = [
     keywords: ["currency", "tax mode", "change", "locked", "tax rate"],
     content: [
       { type: "p", text: "The tax rate can be changed anytime in Settings — the new rate only applies to future orders." },
-      { type: "p", text: "Currency and tax mode (inclusive / exclusive) are locked once setup is complete. All your historical orders were calculated with them, so changing them mid-stream would corrupt your reports." },
+      { type: "p", text: "Currency and tax mode (inclusive / exclusive) are locked once setup is complete. All your historical orders were calculated with them, so changing them mid-stream would corrupt your reports. Check them on the Your store step of setup: the currency defaults to your country's, and you can tap it to pick another." },
       { type: "note", text: "If you just opened your store and have no important data yet, you can delete and reinstall the app to run setup again. Make sure there's nothing you need to keep before deleting." },
     ],
     related: ["tax-calculation", "how-to-set-up"],
@@ -88,10 +88,11 @@ export const articles = [
     category: "getting-started",
     since: "3.0",
     question: "How do I change the app's language?",
-    keywords: ["language", "english", "chinese", "switch", "locale"],
+    keywords: ["language", "english", "chinese", "japanese", "spanish", "multilingual", "switch", "locale"],
     content: [
-      { type: "p", text: "DingPOS supports English and Traditional Chinese. Go to Settings → Device Preferences and tap App Language. It opens DingPOS's page in the iPad's Settings app, where you pick the language under Language." },
+      { type: "p", text: "DingPOS supports 32 languages, including English, Traditional and Simplified Chinese, Japanese, Korean, Thai, Vietnamese, Indonesian, Malay, Spanish (Latin America), Portuguese (Brazil), French, and German. Go to Settings → Device Preferences and tap App Language. It opens DingPOS's page in the iPad's Settings app, where you pick the language under Language." },
       { type: "p", text: "iOS doesn't let apps open the language list directly, so the last tap happens in system Settings. The language applies to this iPad only." },
+      { type: "note", text: "Languages other than English and Traditional Chinese arrived in v3.2. If Language lists only English and Chinese, update DingPOS from the App Store." },
     ],
     related: ["checkout-sound", "supported-devices"],
   },
@@ -149,13 +150,36 @@ export const articles = [
     slug: "payment-methods",
     category: "checkout",
     question: "Which payment methods are supported?",
-    keywords: ["payment", "cash", "credit card", "line pay", "change", "custom", "on account"],
+    keywords: ["payment", "cash", "credit card", "line pay", "change", "custom", "on account", "fees"],
     content: [
-      { type: "p", text: "Cash, Credit Card, and Line Pay are built in, and you can add any custom payment labels in Settings (e.g. Apple Pay, local wallets)." },
+      { type: "p", text: "A new store starts with two payment methods, Cash and Credit Card, named in the app's language at setup. In Settings → Payment Methods you can add any other method (e.g. Apple Pay, LINE Pay, a local wallet), and delete or reorder them." },
       { type: "p", text: "Payment methods are bookkeeping labels — DingPOS does not process actual payments. Take card or mobile payments with your existing terminal or app, then pick the matching label in DingPOS to record it. Cash payments calculate change automatically." },
+      { type: "p", text: "If your card or mobile payment provider takes a fee, give the method a fee rate and Stats estimates each method's fees and net received — see “Can DingPOS track card and mobile payment fees?”" },
       { type: "p", text: "For a regular who takes the goods now and pays later, choose On Account: the sale is recorded as a receivable and settled when the money arrives. See “Can regulars buy on account and pay later?”" },
     ],
-    related: ["on-account", "roadmap-payment-integration", "multiple-carts"],
+    related: ["payment-fees", "on-account", "roadmap-payment-integration"],
+  },
+  {
+    slug: "payment-fees",
+    category: "checkout",
+    since: "3.2",
+    question: "Can DingPOS track card and mobile payment fees?",
+    keywords: ["processing fee", "card fee", "transaction fee", "fee rate", "net received", "merchant fee", "line pay"],
+    content: [
+      { type: "p", text: "Yes. In Settings → Payment Methods, tap a payment method (or add a new one) and fill in Processing fee: a percentage, a fixed amount per transaction, or both. From then on, every payment collected through that method records a fee estimated at the rate in effect at that moment." },
+      { type: "p", text: "On Stats, the Payment Methods card adds a line “Fee · Net” under each method that has a fee, and the foot of the card shows the estimated fees and estimated net received for the whole period." },
+      {
+        type: "list",
+        items: [
+          "Enter the rate your provider actually deducts, tax included — for 3% plus 5% tax, enter 3.15%. Leave both fields empty for no fee.",
+          "A rate change only applies to later payments; fees already recorded stay as they were.",
+          "“Percentage fee returned on refunds” is on by default, for providers that give their fee back when you refund; the fixed fee is never returned. Voids, returns, cancelled pre-orders, and undone settlements reverse fees by this rule, and the customer gets back the same amount either way.",
+          "Payments collected before the method had a rate carry no fee: Stats marks them “N missing a rate” and shows the net as “—”.",
+        ],
+      },
+      { type: "note", text: "Fees are estimates from the rate you enter; your provider's statement is the actual amount. Editing fee rates and seeing fees on Stats need the Standard plan or higher. On Lite the fields are locked, but payments still record their fees, so they show up once you upgrade." },
+    ],
+    related: ["payment-methods", "revenue-vs-cash", "plans-compare"],
   },
   {
     slug: "checkout-sound",
@@ -167,7 +191,27 @@ export const articles = [
       { type: "p", text: "Yes. Go to Settings → Device Preferences and turn off Checkout sound. From the next sale on, the success screen stays silent, with the haptic tap still there." },
       { type: "p", text: "The switch applies to this iPad only, and restoring a cloud backup doesn't change it." },
     ],
-    related: ["app-language", "multiple-carts"],
+    related: ["app-language", "hide-out-of-stock", "multiple-carts"],
+  },
+  {
+    slug: "hide-out-of-stock",
+    category: "checkout",
+    since: "3.1",
+    question: "Can the cashier screen hide out-of-stock products?",
+    keywords: ["hide", "out of stock", "sold out", "zero stock", "cashier", "product missing", "can't find product"],
+    content: [
+      { type: "p", text: "Yes. Go to Settings → Device Preferences and turn on Hide out-of-stock products (off by default). The cashier's product grid, category filter, and search (name and barcode) then skip every product whose stock is 0 or below. The switch applies right away, with no need to reopen the app." },
+      {
+        type: "list",
+        items: [
+          "Products that don't track stock always show. A product with variants is hidden only when every variant is out of stock.",
+          "It affects this iPad's cashier only; the Products list still shows every product.",
+          "When every product is hidden, the cashier shows “Every product is out of stock” and tells you where to turn the switch off.",
+        ],
+      },
+      { type: "note", text: "While the switch is on, this iPad can't find out-of-stock products, so it can't sell into negative stock or take a pre-order for them — turn it off when you need to. If products seem to have vanished from the cashier, this switch is usually why." },
+    ],
+    related: ["negative-inventory", "inventory-tracking", "checkout-sound"],
   },
   {
     slug: "price-change-cart",
@@ -245,7 +289,7 @@ export const articles = [
       {
         type: "list",
         items: [
-          "Stock is deducted when the pre-order is placed, reserving the goods for the customer. Out-of-stock items go negative and recover once a purchase order is received.",
+          "Stock is deducted when the pre-order is placed, so the sellable count reflects it right away. It's a signal, not a hold: a later sale can still take the last unit. Out-of-stock items go negative and recover once a purchase order is received.",
           "When the customer picks up, tap Hand Over in the order detail to collect the balance. The order then becomes an ordinary completed sale, and later returns go through the normal return flow.",
           "If the customer never comes, tap Cancel Order in the order detail and choose to refund or keep the deposit. Stock is added back.",
           "The deposit receipt and the final pickup receipt share the same number.",
@@ -298,10 +342,33 @@ export const articles = [
     keywords: ["variants", "size", "color", "options", "spec"],
     content: [
       { type: "p", text: "In the product edit page, tap Add Option under Variant Options to add an option (e.g. “Color”), then use “+ Value” to add each of its choices (e.g. Red, Blue). With two or more options (e.g. Color × Size), DingPOS expands every combination for you (Red/S, Red/M, Blue/S…)." },
-      { type: "p", text: "Each combination has its own price and cost, and tracks its own stock. At checkout, tapping the product shows a variant picker before adding it to the cart." },
-      { type: "note", text: "Option and value names are limited to 20 characters." },
+      { type: "p", text: "Once a product has variants, its Price field folds away and each combination gets its own price under Variant Pricing & Stock, with its own stock (since v3.2; earlier versions still ask for a product price). The cashier, product list, and product detail show a range from the lowest to the highest price, like “NT$350–NT$390”, or a single price when every combination costs the same; sorting by price uses the lowest combination price. At checkout, tapping the product shows a variant picker before adding it to the cart." },
+      { type: "p", text: "You don't have to enter a cost for every combination: an empty Cost field means Follows product, so it uses the product's cost and changes when that does. A number makes it Own cost — 0 included. Use product cost for all clears every own cost at once." },
+      { type: "note", text: "Option and value names are limited to 20 characters and can't be blank: an empty option name or value is outlined in red when you save, so fill it in or delete the empty value. A product with variants can't use an open price." },
     ],
-    related: ["barcode-scanning", "inventory-tracking"],
+    related: ["open-price-products", "barcode-scanning", "inventory-tracking"],
+  },
+  {
+    slug: "open-price-products",
+    category: "products",
+    since: "3.2",
+    question: "Can I enter a product's price at checkout, like a shipping fee or a negotiated item?",
+    keywords: ["open price", "custom price", "enter price", "shipping fee", "service fee", "negotiated price", "market price"],
+    content: [
+      { type: "p", text: "Yes — make it an Open Price product. Turn on Open Price on the product edit page and leave the price empty; the cashier and product list show “Open Price” where the price would be. At checkout, tapping the product asks for the price first; enter it and tap Add to Cart to add it at that price." },
+      {
+        type: "list",
+        items: [
+          "0 is a valid price (free shipping, say); an empty field can't be added. Enter the price the way your store's tax mode prices everything else.",
+          "A cart holds one line per open-price product: tapping it again opens that line so you can change the price.",
+          "Turning on Open Price also turns on Exclude from promotions, so a fee isn't discounted and doesn't count toward spend thresholds. Turn it off again if a negotiated item should take part in promotions.",
+          "Once sold, the line is taxed, earns points, and counts in Stats like any other, and a return refunds the price that was entered.",
+          "A product with variants can't use an open price. Open-price products are never offered as gifts or paid add-ons, and never appear in the replacement list of an exchange.",
+        ],
+      },
+      { type: "note", text: "Every plan has it, and entering the price never needs a manager's approval." },
+    ],
+    related: ["product-variants", "promotion-not-applied", "returns-exchanges"],
   },
   {
     slug: "barcode-scanning",
@@ -353,8 +420,9 @@ export const articles = [
     content: [
       { type: "p", text: "This is by design: checkout is never blocked by insufficient stock. The first rule of a live register is that the customer never waits — a wrong number on paper can be fixed later, but an interrupted sale is lost for good." },
       { type: "p", text: "Negative stock usually means a restock wasn't recorded, or a pre-ordered item hasn't arrived yet (pre-orders deduct stock when placed). Record restocks by receiving a purchase order and the number recovers on its own; fix stocktake differences with a manual adjustment, which is kept in the movement ledger." },
+      { type: "note", text: "If the cashier can't find a product with 0 stock, check whether Hide out-of-stock products is on in Settings → Device Preferences: while it is, this iPad can't add out-of-stock products to a cart." },
     ],
-    related: ["inventory-tracking", "purchase-orders", "pre-orders"],
+    related: ["inventory-tracking", "purchase-orders", "hide-out-of-stock"],
   },
   {
     slug: "purchase-orders",
@@ -393,6 +461,7 @@ export const articles = [
           "On account: the goods leave today and count toward today's revenue; the money counts toward Cash Received on the day it's settled.",
           "Pre-order: the deposit counts toward Cash Received when it's paid; revenue is recognized in full on the pickup date.",
           "Forfeited deposit: when a customer cancels a pre-order and you keep the deposit, it was already counted in Cash Received when paid. Stats shows it separately as forfeited deposits, and it never counts as revenue.",
+          "Voiding an earlier order: the refunded money counts toward Cash Received on the day of the void, so that day's Cash Received can be negative, while Voided counts the order on its sale date. The ⓘ on the Cash Received and Voided tiles explains the same.",
         ],
       },
       { type: "p", text: "To reconcile, match Cash Received against the drawer and your card terminal; to see how much you actually sold in a period, read Revenue. Returns reduce revenue on the day of the return." },
@@ -440,12 +509,14 @@ export const articles = [
     slug: "profit-not-tracked",
     category: "reports",
     question: "How is profit reported if I didn't enter costs?",
-    keywords: ["cost", "profit", "margin", "reports", "not tracked"],
+    keywords: ["cost", "profit", "margin", "gross margin", "reports", "not tracked", "missing cost", "profit tracked"],
     content: [
-      { type: "p", text: "Cost is an optional field. Products without a cost are marked “profit not tracked” in reports and excluded from profit calculations — revenue is still counted in full, only profit is skipped." },
-      { type: "p", text: "To get complete profit reports, add costs on the product edit page; future orders will be included. Profit is calculated on after-discount revenue." },
+      { type: "p", text: "Cost is an optional field. Products without a cost are left out of profit, while their revenue still counts in full. The Profit Tracked card on Stats shows how many products sold in the period have no cost; a cost of 0 counts as a cost, so those products aren't listed." },
+      { type: "p", text: "Tap the card or View products to open Products Without Cost, ranked by the revenue left out of profit. Tap a row to open the product, add its cost from Edit, and the row is marked Cost added when you come back. A product with variants counts as costed once either a variant or the product itself has a cost." },
+      { type: "p", text: "Profit is revenue after every discount (item and cart discounts, promotions, points redemption) and before tax, minus cost — which is why the field reads Cost excl. tax (optional): enter what you paid before tax. Margin is profit ÷ the pre-tax revenue of products with a cost, so products without one don't drag it down. A return takes back, on the day of the return, the profit those items had brought in." },
+      { type: "note", text: "A cost you add affects later sales only; sales already made are not recalculated. This calculation arrived in v3.1: earlier versions only took off manual item discounts and counted inclusive tax as profit, so after updating, periods with discounts or inclusive tax show lower profit. That's a correction, not lost data." },
     ],
-    related: ["report-periods", "purchase-orders"],
+    related: ["report-periods", "product-variants", "purchase-orders"],
   },
 
   // ── Promotions & Loyalty ────────────────────────────────────
@@ -481,9 +552,9 @@ export const articles = [
         type: "steps",
         items: [
           "Schedule: is today within the active dates? Does a Happy Hour window restrict the weekday or time?",
-          "Scope: are the cart items within the promotion's product or category scope? Has the spend threshold been reached?",
+          "Scope: are the cart items within the promotion's product or category scope? Is the product set to Exclude from promotions (open-price products are by default)? Has the spend threshold been reached?",
           "Audience: is the promotion limited to a member tier or birthday month? Was that member selected at checkout?",
-          "Usage limits: has the total usage cap, or this customer's cap, been reached?",
+          "Usage limits: has the total usage cap, or this customer's cap, been reached? A birthday-month promotion's per-customer limit counts per calendar year.",
           "Stacking: is a higher-priority promotion with \"stop after applying\" blocking it?",
         ],
       },
@@ -613,7 +684,7 @@ export const articles = [
       {
         type: "steps",
         items: [
-          "The file opens as a table. Common column names in English and Chinese are matched automatically; tap any column header to change its mapping.",
+          "The file opens as a table. Common column names in English and Chinese (Traditional or Simplified) are matched automatically; tap any column header to change its mapping.",
           "Tap any cell to fix its value right there — no need to edit the file and start over.",
           "Tap Confirm to validate. Rows with problems are flagged in red with the reason; sales imports can skip orders with errors.",
           "Resolve anything that needs a decision (duplicate product names, a row matching several customers), review the summary, then tap Start Import.",
@@ -622,7 +693,7 @@ export const articles = [
       {
         type: "list",
         items: [
-          "Imported sales are placed by transaction date and recalculated with your store's currency and tax mode. They don't touch stock and don't grant welcome points.",
+          "Imported sales are placed by order date and recalculated with your store's currency and tax mode. They don't touch stock and don't grant welcome points.",
           "Customers are matched to existing ones by phone or email; anyone unmatched is created.",
           "Imported orders show an Imported On date and the source order number, and can't be voided or returned.",
           "Rows with errors can be exported as a CSV annotated with the reasons — fix them and import again. Duplicate rows are skipped automatically.",
@@ -743,6 +814,7 @@ export const articles = [
     content: [
       { type: "p", text: "You get 30 days of every Pro plan feature from first install, including staff accounts, permissions, the activity log and advanced reports — no account required." },
       { type: "p", text: "Subscribing to any plan during the trial ends the trial right away, and the plan you bought applies from then on. After the trial, Pro features such as staff and advanced reports stay available only with a Pro subscription." },
+      { type: "p", text: "Within the last 7 days and on the final day, the app reminds you once each how many days are left, that checkout pauses when the trial ends, and that your data is kept." },
       { type: "p", text: "Everything you create during the trial (products, orders, members) is kept in full. Your data is never deleted, whether or not you subscribe afterwards." },
     ],
     related: ["after-trial", "manage-subscription"],
@@ -770,7 +842,7 @@ export const articles = [
         type: "list",
         items: [
           "Lite: for one person running a stall who needs checkout and products.",
-          "Standard: adds promotions, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, and pre-orders.",
+          "Standard: adds promotions, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, pre-orders, and payment fee estimates.",
           "Pro: adds staff accounts and permissions, manager approval, the activity log, restore records, and advanced reports — for shops with staff.",
         ],
       },
@@ -862,15 +934,17 @@ export const articles = [
     question: "Setting up member-tier and birthday offers",
     keywords: ["tier", "birthday", "vip", "guide", "tutorial"],
     content: [
-      { type: "p", text: "First create tiers under Settings → Member Tiers (e.g. Gold), then target the promotion at that tier. For birthday offers, set the condition to “birthday month”." },
+      { type: "p", text: "First create tiers under Settings → Member Tiers (e.g. Gold), then target the promotion at that tier. For birthday offers, set the audience to Birthday month and fill in Per-customer limit." },
       {
         type: "list",
         items: [
           "The member must be selected at checkout for the offer to trigger — eligibility is judged against the currently selected member.",
           "Birthday eligibility reads the member's birthday month, so fill in the birthday field; members without one are never treated as birthday customers.",
+          "A birthday-month promotion needs a per-customer limit, counted per calendar year: a limit of 1 means each customer can use it once a year, and it resets the next year. It can't be saved without one.",
           "Auto tier upgrades are judged when checkout completes; if the order is voided, an upgrade it triggered is rolled back automatically.",
         ],
       },
+      { type: "note", text: "Before v3.2, a birthday-month promotion showed an error and couldn't be saved even with a per-customer limit filled in. If that happens to you, update DingPOS from the App Store." },
     ],
     related: ["member-tiers", "loyalty-points", "guide-schedule"],
   },

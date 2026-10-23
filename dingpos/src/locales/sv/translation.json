@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Produkthantering",
-          "desc": "Varianter, streckkoder, foton, kategorier"
+          "desc": "Varianter, streckkoder, foton, kategorier, produkter med fritt pris"
         },
         "import": {
           "name": "Dataimport",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Översikt över verksamheten",
           "desc": "Intäkt, vinst, rabatter, betalsätt och bästsäljare"
+        },
+        "payment_fees": {
+          "name": "Beräknade betalningsavgifter",
+          "desc": "Ange avgiftssats för varje betalningssätt och se avgifter och beräknat netto per betalningssätt"
         },
         "comparison": {
           "name": "Periodjämförelse",

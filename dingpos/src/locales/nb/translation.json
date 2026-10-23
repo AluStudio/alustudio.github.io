@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Produktadministrasjon",
-          "desc": "Varianter, strekkoder, bilder, kategorier"
+          "desc": "Varianter, strekkoder, bilder, kategorier, produkter med åpen pris"
         },
         "import": {
           "name": "Dataimport",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Oversikt over virksomheten",
           "desc": "Salgsinntekt, fortjeneste, rabatter, betalingsfordeling og bestselgere"
+        },
+        "payment_fees": {
+          "name": "Overslag over transaksjonsgebyrer",
+          "desc": "Angi gebyrsats for hver betalingsmåte, og se gebyrer og forventet nettobeløp mottatt per betalingsmåte"
         },
         "comparison": {
           "name": "Periodesammenligning",

@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Gestion des produits",
-          "desc": "Variantes, codes-barres, photos, catégories"
+          "desc": "Variantes, codes-barres, photos, catégories, produits à prix libre"
         },
         "import": {
           "name": "Importation de données",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "Tableau de bord de l’activité",
           "desc": "Chiffre d’affaires, marge, remises, répartition des paiements et meilleures ventes"
+        },
+        "payment_fees": {
+          "name": "Estimation des frais de traitement",
+          "desc": "Définissez le taux de frais de chaque moyen de paiement ; consultez les frais et le net estimé encaissé par moyen"
         },
         "comparison": {
           "name": "Comparaison de périodes",

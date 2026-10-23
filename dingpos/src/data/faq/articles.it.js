@@ -82,24 +82,29 @@ export const articles = [
       "prima configurazione",
       "procedura guidata",
       "aprire il negozio",
-      "app per punto cassa"
+      "app per punto cassa",
+      "paese",
+      "valuta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Alla prima apertura di DingPOS, una procedura guidata ti accompagna nell'apertura del negozio in circa 10 minuti:"
+        "text": "Alla prima apertura di DingPOS, una procedura guidata ti accompagna nell'apertura del negozio in due passaggi e pochi minuti:"
       },
       {
         "type": "steps",
         "items": [
-          "Scegli il tuo paese: valuta, modalità imposte e aliquota predefinita vengono compilate in automatico (aliquota e modalità imposte si possono ancora modificare in questo passaggio).",
-          "Inserisci il nome del negozio e, se vuoi, carica il logo.",
-          "Segui la guida per creare da 3 a 5 prodotti (puoi saltare il passaggio e aggiungerli in qualsiasi momento)."
+          "Scegli il tuo paese o la tua regione. In cima all'elenco trovi la regione di questo iPad e i mercati più comuni; sotto ci sono tutti i 175 paesi e regioni in cui DingPOS è sull'App Store, ricercabili per nome nella lingua dell'app o in inglese. La tua scelta compila in automatico valuta, aliquota e modalità imposte.",
+          "In Il tuo negozio, inserisci il nome del negozio, se vuoi carica un logo e controlla valuta, aliquota e modalità imposte (inclusa / esclusa). La valuta è quella del tuo paese; toccala per sceglierne una tra 130 valute."
         ]
       },
       {
         "type": "p",
-        "text": "Quando hai finito, sentirai un \"Ding!\": il negozio è pronto e puoi iniziare subito a registrare le vendite."
+        "text": "Tocca Continua e vedrai «Ding! Il tuo negozio è pronto.» DingPOS crea anche due metodi di pagamento, Contanti e Carta di credito. Poi aggiungi i tuoi prodotti in Prodotti e inizia a registrare le vendite."
+      },
+      {
+        "type": "note",
+        "text": "Valuta e modalità imposte non si possono cambiare dopo la configurazione; l'aliquota si può ancora modificare in seguito in Impostazioni. Negli Stati Uniti, in Canada, in Brasile e in Micronesia l'aliquota dipende dallo stato, dalla provincia o dalla città: il campo dell'aliquota parte vuoto e, per continuare, inserisci l'aliquota che applichi (0 è ammesso). L'elenco di 175 paesi e la scelta della valuta sono arrivati con la v3.2; le versioni precedenti offrivano 15 paesi."
       }
     ],
     "related": [
@@ -205,7 +210,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valuta e modalità imposte (imposta inclusa / esclusa) non sono più modificabili al termine della configurazione. Tutti gli ordini passati sono stati calcolati con quei valori, quindi cambiarli a metà strada falserebbe i report."
+        "text": "Valuta e modalità imposte (imposta inclusa / esclusa) non sono più modificabili al termine della configurazione. Tutti gli ordini passati sono stati calcolati con quei valori, quindi cambiarli a metà strada falserebbe i report. Controllali nel passaggio Il tuo negozio della configurazione: la valuta è quella del tuo paese e puoi toccarla per sceglierne un'altra."
       },
       {
         "type": "note",
@@ -226,17 +231,24 @@ export const articles = [
       "lingua",
       "inglese",
       "cinese",
+      "giapponese",
+      "spagnolo",
+      "multilingue",
       "cambiare lingua",
       "impostazioni lingua"
     ],
     "content": [
       {
         "type": "p",
-        "text": "DingPOS è disponibile in inglese e cinese tradizionale. Vai in Impostazioni → Preferenze del dispositivo e tocca Lingua dell'app: si apre la pagina di DingPOS nell'app Impostazioni dell'iPad, dove scegli la lingua sotto Lingua."
+        "text": "DingPOS è disponibile in 32 lingue, tra cui inglese, cinese tradizionale e semplificato, giapponese, coreano, thailandese, vietnamita, indonesiano, malese, spagnolo (America Latina), portoghese (Brasile), francese e tedesco. Vai in Impostazioni → Preferenze del dispositivo e tocca Lingua dell'app: si apre la pagina di DingPOS nell'app Impostazioni dell'iPad, dove scegli la lingua sotto Lingua."
       },
       {
         "type": "p",
         "text": "iOS non permette alle app di aprire direttamente l'elenco delle lingue, quindi l'ultimo passaggio si fa nelle Impostazioni di sistema. La lingua vale solo per questo iPad."
+      },
+      {
+        "type": "note",
+        "text": "Le lingue diverse da inglese e cinese tradizionale sono arrivate con la v3.2. Se sotto Lingua compaiono solo inglese e cinese, aggiorna DingPOS dall'App Store."
       }
     ],
     "related": [
@@ -353,12 +365,13 @@ export const articles = [
       "Line Pay",
       "resto",
       "personalizzato",
-      "a credito"
+      "a credito",
+      "commissioni"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Contanti, Carta di credito e Line Pay sono già inclusi, e in Impostazioni puoi aggiungere qualsiasi etichetta di pagamento personalizzata (ad es. Apple Pay, portafogli digitali locali)."
+        "text": "Un nuovo negozio parte con due metodi di pagamento, Contanti e Carta di credito, con il nome nella lingua dell'app scelta durante la configurazione. In Impostazioni → Metodi di pagamento puoi aggiungere qualsiasi altro metodo (ad es. Apple Pay, LINE Pay, un portafoglio digitale locale), eliminarlo o riordinarli."
       },
       {
         "type": "p",
@@ -366,13 +379,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Se il fornitore del tuo pagamento con carta o da mobile trattiene una commissione, assegna una tariffa al metodo e Report stima le commissioni e l'incassato netto di ogni metodo: vedi «DingPOS può tenere traccia delle commissioni su carte e pagamenti da mobile?»"
+      },
+      {
+        "type": "p",
         "text": "Per un cliente abituale che ritira la merce ora e paga più tardi, scegli A credito: la vendita viene registrata come credito da incassare e saldata quando arrivano i soldi. Vedi «I clienti abituali possono comprare a credito e pagare dopo?»"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "DingPOS può tenere traccia delle commissioni su carte e pagamenti da mobile?",
+    "keywords": [
+      "commissione",
+      "commissioni carta",
+      "commissioni di pagamento",
+      "tariffa della commissione",
+      "incassato netto",
+      "costi POS",
+      "Line Pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sì. In Impostazioni → Metodi di pagamento tocca un metodo di pagamento (o aggiungine uno nuovo) e compila Commissione: una percentuale, un importo fisso per operazione, oppure entrambi. Da quel momento ogni pagamento incassato con quel metodo registra una commissione stimata con la tariffa in vigore in quel momento."
+      },
+      {
+        "type": "p",
+        "text": "In Report, la scheda Metodi di pagamento aggiunge una riga «Commissione · Netto» sotto ogni metodo con una commissione, e in fondo alla scheda compaiono commissioni stimate e incassato netto stimato dell'intero periodo."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Inserisci la tariffa che il fornitore trattiene davvero, tasse incluse: per il 3% più il 5% di tasse, inserisci 3,15%. Lascia vuoti entrambi i campi se non c'è commissione.",
+          "Una modifica della tariffa vale solo per i pagamenti successivi; le commissioni già registrate restano come sono.",
+          "«Percentuale della commissione restituita sui rimborsi» è attiva di default, per i fornitori che restituiscono la commissione quando fai un rimborso; la parte fissa non viene mai restituita. Storni, resi, preordini annullati e saldi annullati stornano le commissioni con questa regola, e il cliente riceve comunque lo stesso importo.",
+          "I pagamenti incassati prima che il metodo avesse una tariffa non hanno commissione: Report li segnala con «N senza tariffa» e mostra il netto come «—»."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Le commissioni sono stime basate sulla tariffa che inserisci; l'importo effettivo è quello dell'estratto conto del tuo fornitore. Per modificare le tariffe e vedere le commissioni in Report serve il piano Standard o superiore. Con Lite i campi sono bloccati, ma i pagamenti registrano comunque le loro commissioni, che compaiono quando passi a un piano superiore."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -399,7 +459,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "La schermata di cassa può nascondere i prodotti esauriti?",
+    "keywords": [
+      "nascondere",
+      "esaurito",
+      "prodotti esauriti",
+      "giacenza zero",
+      "cassiere",
+      "prodotto sparito",
+      "non trovo il prodotto"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sì. Vai in Impostazioni → Preferenze del dispositivo e attiva Nascondi i prodotti esauriti (disattivato di default). La griglia prodotti della cassa, il filtro per categoria e la ricerca (per nome e codice a barre) saltano allora ogni prodotto con giacenza pari o inferiore a 0. L'opzione ha effetto subito, senza riaprire l'app."
+      },
+      {
+        "type": "list",
+        "items": [
+          "I prodotti che non tengono traccia della giacenza compaiono sempre. Un prodotto con varianti viene nascosto solo quando tutte le varianti sono esaurite.",
+          "Riguarda solo la cassa di questo iPad; l'elenco Prodotti mostra comunque tutti i prodotti.",
+          "Quando tutti i prodotti sono nascosti, la cassa mostra «Tutti i prodotti sono esauriti» e ti indica dove disattivare l'opzione."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Finché l'opzione è attiva, questo iPad non trova i prodotti esauriti, quindi non può venderli in giacenza negativa né registrare un preordine per essi: disattivala quando serve. Se i prodotti sembrano spariti dalla cassa, di solito il motivo è questo."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -550,7 +649,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "La giacenza viene scaricata quando si registra il preordine, così la merce resta riservata al cliente. Gli articoli esauriti vanno in negativo e si riallineano quando ricevi un ordine d'acquisto.",
+          "La giacenza viene scaricata quando si registra il preordine, così il numero vendibile lo riflette subito. È un segnale, non un blocco: una vendita successiva può comunque prendere l'ultimo pezzo. Gli articoli esauriti vanno in negativo e si riallineano quando ricevi un ordine d'acquisto.",
           "Quando il cliente ritira, tocca Completa ritiro nel dettaglio dell'ordine per incassare il saldo. L'ordine diventa una normale vendita completata e gli eventuali resi seguono la procedura di reso abituale.",
           "Se il cliente non si presenta, tocca Annulla ordine nel dettaglio dell'ordine e scegli se rimborsare o trattenere l'acconto. La giacenza viene ripristinata.",
           "Lo scontrino dell'acconto e quello del ritiro finale hanno lo stesso numero."
@@ -658,16 +757,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ogni combinazione ha un prezzo e un costo propri e tiene traccia della propria giacenza. Alla cassa, toccando il prodotto compare la scelta della variante prima di aggiungerlo al carrello."
+        "text": "Quando un prodotto ha varianti, il campo Prezzo si chiude e ogni combinazione ha il proprio prezzo in Prezzo e giacenza delle varianti, con la propria giacenza (dalla v3.2; le versioni precedenti chiedono ancora un prezzo del prodotto). La cassa, l'elenco prodotti e il dettaglio prodotto mostrano un intervallo dal prezzo più basso al più alto, come “NT$350–NT$390”, oppure un prezzo unico quando tutte le combinazioni costano uguale; l'ordinamento per prezzo usa il prezzo più basso tra le combinazioni. Alla cassa, toccando il prodotto compare la scelta della variante prima di aggiungerlo al carrello."
+      },
+      {
+        "type": "p",
+        "text": "Non devi inserire un costo per ogni combinazione: un campo Costo vuoto significa Segue il prodotto, cioè usa il costo del prodotto e cambia quando cambia quello. Un numero lo rende Costo proprio, anche se è 0. Usa il costo del prodotto per tutte cancella in un colpo solo tutti i costi propri."
       },
       {
         "type": "note",
-        "text": "I nomi delle opzioni e dei valori possono avere al massimo 20 caratteri."
+        "text": "I nomi delle opzioni e dei valori possono avere al massimo 20 caratteri e non possono essere vuoti: un nome di opzione o un valore vuoto viene evidenziato in rosso al salvataggio, quindi compilalo o elimina il valore vuoto. Un prodotto con varianti non può usare il prezzo libero."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Posso inserire il prezzo di un prodotto direttamente alla cassa, ad esempio una spedizione o un articolo trattato?",
+    "keywords": [
+      "prezzo libero",
+      "prezzo personalizzato",
+      "inserire il prezzo",
+      "spese di spedizione",
+      "costo del servizio",
+      "prezzo trattato",
+      "prezzo di mercato"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sì: basta creare un prodotto a prezzo libero. Attiva Prezzo libero nella pagina di modifica del prodotto e lascia vuoto il prezzo; la cassa e l'elenco prodotti mostrano “Prezzo libero” al posto del prezzo. Alla cassa, toccando il prodotto viene chiesto prima il prezzo: inseriscilo e tocca Aggiungi al carrello per aggiungerlo a quel prezzo."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 è un prezzo valido (ad es. spedizione gratuita); un campo vuoto non si può aggiungere. Inserisci il prezzo come il resto del tuo negozio, in base alla modalità imposte.",
+          "Un carrello contiene una sola riga per ogni prodotto a prezzo libero: toccandolo di nuovo si apre quella riga per cambiare il prezzo.",
+          "Attivando Prezzo libero si attiva anche Escludi dalle promozioni, così una spesa accessoria non viene scontata e non conta per le soglie di spesa. Disattivalo di nuovo se un articolo trattato deve partecipare alle promozioni.",
+          "Una volta venduta, la riga è tassata, accumula punti e conta in Report come le altre, e un reso rimborsa il prezzo inserito.",
+          "Un prodotto con varianti non può usare il prezzo libero. I prodotti a prezzo libero non vengono mai offerti come omaggi o aggiunte a pagamento e non compaiono mai nell'elenco degli articoli sostitutivi di un cambio."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "È disponibile in tutti i piani e l'inserimento del prezzo non richiede mai l'approvazione di un responsabile."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -778,13 +922,17 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Una giacenza negativa di solito significa che un rifornimento non è stato registrato, oppure che un articolo preordinato non è ancora arrivato (i preordini scalano la giacenza quando vengono inseriti). Registra i rifornimenti ricevendo un ordine d'acquisto e il numero si ripristina da solo; correggi le differenze di giacenza con una rettifica manuale, che resta nel registro dei movimenti."
+        "text": "Una giacenza negativa di solito significa che un rifornimento non è stato registrato, oppure che un articolo preordinato non è ancora arrivato (i preordini scalano la giacenza quando vengono inseriti). Registra i rifornimenti ricevendo un ordine d'acquisto e il numero si ripristina da solo; correggi le differenze di inventario con una rettifica manuale, che resta nel registro dei movimenti."
+      },
+      {
+        "type": "note",
+        "text": "Se alla cassa non trovi un prodotto con giacenza 0, controlla se Nascondi i prodotti esauriti è attivo in Impostazioni → Preferenze del dispositivo: finché lo è, questo iPad non può aggiungere al carrello i prodotti esauriti."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -851,7 +999,8 @@ export const articles = [
         "items": [
           "Vendita a credito: la merce esce oggi e rientra nei Ricavi di oggi; il denaro rientra nell'Incassato nel giorno in cui viene saldato.",
           "Preordine: l'acconto rientra nell'Incassato quando viene pagato; i Ricavi vengono riconosciuti per intero alla data del ritiro.",
-          "Acconto trattenuto: quando un cliente annulla un preordine e tu trattieni l'acconto, questo era già stato contato nell'Incassato al momento del pagamento. Report lo mostra a parte come acconti trattenuti e non rientra mai nei Ricavi."
+          "Acconto trattenuto: quando un cliente annulla un preordine e tu trattieni l'acconto, questo era già stato contato nell'Incassato al momento del pagamento. Report lo mostra a parte come acconti trattenuti e non rientra mai nei Ricavi.",
+          "Storno di un ordine precedente: il denaro rimborsato rientra nell'Incassato nel giorno dello storno, quindi l'Incassato di quel giorno può essere negativo, mentre Stornati conta l'ordine alla data della vendita. Lo spiega anche l'ⓘ sulle schede Incassato e Stornati."
         ]
       },
       {
@@ -962,21 +1111,33 @@ export const articles = [
       "costo",
       "utile",
       "margine",
+      "margine lordo",
       "report",
-      "utile non tracciato"
+      "utile non tracciato",
+      "costo mancante",
+      "utile lordo tracciato"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Il costo è un campo facoltativo. I prodotti senza costo sono indicati nei report come «utile non tracciato» e sono esclusi dal calcolo dell'utile: i ricavi vengono comunque contati per intero, è solo l'utile a essere saltato."
+        "text": "Il costo è un campo facoltativo. I prodotti senza costo sono esclusi dall'utile, mentre i loro ricavi contano comunque per intero. La scheda Utile lordo tracciato in Report mostra quanti prodotti venduti nel periodo non hanno un costo; un costo pari a 0 conta come costo, quindi quei prodotti non vengono elencati."
       },
       {
         "type": "p",
-        "text": "Per avere report di utile completi, aggiungi i costi nella pagina di modifica del prodotto; gli ordini futuri saranno inclusi. L'utile è calcolato sui ricavi al netto degli sconti."
+        "text": "Tocca la scheda o Mostra prodotti per aprire Prodotti senza costo, ordinati per i ricavi esclusi dall'utile. Tocca una riga per aprire il prodotto, aggiungi il costo da Modifica e al ritorno la riga risulta contrassegnata come Costo aggiunto. Un prodotto con varianti conta come con costo quando ce l'ha una variante oppure il prodotto stesso."
+      },
+      {
+        "type": "p",
+        "text": "L'utile è il ricavo dopo tutti gli sconti (sconti sugli articoli e sul carrello, promozioni, riscatto punti) e prima delle tasse, meno il costo: per questo il campo si chiama Costo al netto delle tasse (facoltativo), quindi inserisci quanto hai pagato prima delle tasse. Il margine è l'utile diviso per il ricavo al netto delle tasse dei prodotti con un costo, così quelli senza costo non lo abbassano. Un reso riprende, nel giorno del reso, l'utile che quegli articoli avevano portato."
+      },
+      {
+        "type": "note",
+        "text": "Un costo che aggiungi riguarda solo le vendite successive; le vendite già fatte non vengono ricalcolate. Questo calcolo è arrivato con la v3.1: le versioni precedenti toglievano solo gli sconti manuali sugli articoli e contavano come utile l'imposta inclusa, quindi dopo l'aggiornamento i periodi con sconti o imposta inclusa mostrano un utile più basso. È una correzione, non una perdita di dati."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1040,9 +1201,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Pianificazione: oggi rientra nelle date di validità? Una fascia di Happy Hour limita il giorno o l'orario?",
-          "Ambito: gli articoli nel carrello rientrano nei prodotti o nella categoria della promozione? La soglia di spesa è stata raggiunta?",
+          "Ambito: gli articoli nel carrello rientrano nei prodotti o nella categoria della promozione? Il prodotto è impostato su Escludi dalle promozioni (i prodotti a prezzo libero lo sono di default)? La soglia di spesa è stata raggiunta?",
           "Destinatari: la promozione è limitata a un livello cliente o al mese del compleanno? Il cliente è stato selezionato alla cassa?",
-          "Limiti di utilizzo: è stato raggiunto il limite totale di utilizzi, o quello di questo cliente?",
+          "Limiti di utilizzo: è stato raggiunto il limite totale di utilizzi, o quello di questo cliente? Il limite per cliente di una promozione del mese del compleanno si conta per anno solare.",
           "Cumulo: una promozione con priorità più alta e con \"ferma dopo l'applicazione\" la sta bloccando?"
         ]
       },
@@ -1328,7 +1489,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Il file si apre come tabella. I nomi di colonna più comuni in inglese e in cinese vengono riconosciuti automaticamente; tocca l'intestazione di una colonna per cambiarne l'abbinamento.",
+          "Il file si apre come tabella. I nomi di colonna più comuni in inglese e in cinese (tradizionale o semplificato) vengono riconosciuti automaticamente; tocca l'intestazione di una colonna per cambiarne l'abbinamento.",
           "Tocca una cella per correggerne subito il valore, senza dover modificare il file e ricominciare.",
           "Tocca Conferma per la verifica. Le righe con problemi sono segnalate in rosso con il motivo; l'importazione delle vendite può saltare gli ordini con errori.",
           "Risolvi ciò che richiede una scelta (nomi di prodotto duplicati, una riga che corrisponde a più clienti), controlla il riepilogo, poi tocca Avvia importazione."
@@ -1337,7 +1498,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Le vendite importate vengono collocate in base alla data della transazione e ricalcolate con la valuta e la modalità fiscale del tuo negozio. Non incidono sulla giacenza e non assegnano punti di benvenuto.",
+          "Le vendite importate vengono collocate in base alla data dell'ordine e ricalcolate con la valuta e la modalità imposte del tuo negozio. Non incidono sulla giacenza e non assegnano punti di benvenuto.",
           "I clienti vengono abbinati a quelli esistenti tramite telefono o e-mail; chi non trova corrispondenza viene creato.",
           "Gli ordini importati mostrano la data di importazione (Importato il) e il numero dell'ordine di origine, e non possono essere stornati né resi.",
           "Le righe con errori si possono esportare in un CSV con i motivi annotati: correggile e importa di nuovo. Le righe duplicate vengono saltate automaticamente."
@@ -1581,6 +1742,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Negli ultimi 7 giorni e nell'ultimo giorno, l'app ti ricorda una volta per ciascuno quanti giorni restano, che la cassa si ferma alla fine della prova e che i tuoi dati vengono conservati."
+      },
+      {
+        "type": "p",
         "text": "Tutto ciò che crei durante la prova (prodotti, ordini, clienti fedeltà) viene conservato per intero. I tuoi dati non vengono mai eliminati, che tu ti abboni o no in seguito."
       }
     ],
@@ -1639,7 +1804,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: per chi gestisce un banco da solo e ha bisogno di cassa e prodotti.",
-          "Standard: aggiunge promozioni, punti fedeltà e livelli clienti, gestione del magazzino, acquisti, vendite a credito e preordini.",
+          "Standard: aggiunge promozioni, punti fedeltà e livelli clienti, gestione del magazzino, acquisti, vendite a credito, preordini e stima delle commissioni di pagamento.",
           "Pro: aggiunge collaboratori e permessi, approvazione del responsabile, registro attività, registro ripristino e report avanzati, pensato per i negozi con personale."
         ]
       },
@@ -1808,15 +1973,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Crea prima i livelli in Impostazioni → Livelli dei membri (ad es. Oro), poi indirizza la promozione a quel livello. Per le offerte di compleanno, imposta la condizione su “Mese del compleanno”."
+        "text": "Crea prima i livelli in Impostazioni → Livelli dei membri (ad es. Oro), poi indirizza la promozione a quel livello. Per le offerte di compleanno, imposta i destinatari su “Mese del compleanno” e compila Limite per cliente."
       },
       {
         "type": "list",
         "items": [
           "Il cliente deve essere selezionato alla cassa perché l’offerta scatti: l’idoneità viene valutata sul cliente selezionato in quel momento.",
           "L’idoneità per il compleanno si basa sul mese di compleanno del cliente, quindi compila il campo del compleanno: i clienti che non lo hanno non vengono mai trattati come clienti in compleanno.",
+          "Una promozione del mese del compleanno richiede un limite per cliente, contato per anno solare: un limite di 1 significa che ogni cliente può usarla una volta all’anno, e si azzera l’anno successivo. Senza limite non si può salvare.",
           "I passaggi automatici di livello vengono valutati al completamento del pagamento; se l’ordine viene stornato, il passaggio di livello che ha provocato viene annullato automaticamente."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Prima della v3.2, una promozione del mese del compleanno mostrava un errore e non si poteva salvare nemmeno con un limite per cliente compilato. Se ti succede, aggiorna DingPOS dall’App Store."
       }
     ],
     "related": [

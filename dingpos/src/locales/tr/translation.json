@@ -272,7 +272,7 @@
         },
         "products": {
           "name": "Ürün yönetimi",
-          "desc": "Varyantlar, barkodlar, fotoğraflar, kategoriler"
+          "desc": "Varyantlar, barkodlar, fotoğraflar, kategoriler, serbest fiyatlı ürünler"
         },
         "import": {
           "name": "Veri içe aktarma",
@@ -301,6 +301,10 @@
         "dashboard": {
           "name": "İşletme panosu",
           "desc": "Satış geliri, kâr, indirimler, ödeme dağılımı ve en çok satanlar"
+        },
+        "payment_fees": {
+          "name": "İşlem ücreti tahminleri",
+          "desc": "Her ödeme yönteminin ücret oranını belirleyin; ücretleri ve yönteme göre net alınan tutarı görün"
         },
         "comparison": {
           "name": "Dönem karşılaştırması",

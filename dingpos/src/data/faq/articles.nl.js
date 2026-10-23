@@ -80,26 +80,31 @@ export const articles = [
       "starten",
       "onboarding",
       "eerste keer",
-      "installatiehulp",
+      "installatiewizard",
       "winkel openen",
+      "land kiezen",
+      "valuta",
       "kassa-app instellen"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Als je DingPOS voor het eerst opent, begeleidt een installatiewizard je in ongeveer 10 minuten bij het instellen van je winkel:"
+        "text": "Als je DingPOS voor het eerst opent, zet een installatiewizard je winkel op in twee stappen en een paar minuten:"
       },
       {
         "type": "steps",
         "items": [
-          "Kies je land — valuta, btw-modus en een standaard btw-tarief worden automatisch ingevuld (btw-tarief en btw-modus kun je in dit stadium nog aanpassen).",
-          "Vul je winkelnaam in en upload eventueel een winkellogo.",
-          "Volg de gids om 3–5 producten aan te maken (overslaan kan — je kunt ze altijd later toevoegen)."
+          "Kies je land of regio. Bovenaan de lijst staan de regio van deze iPad en de meest gekozen markten; daaronder staan alle 175 landen en regio's waar DingPOS in de App Store staat, doorzoekbaar op naam in de taal van de app of in het Engels. Je keuze vult de valuta, het btw-tarief en de btw-modus in.",
+          "Vul bij Je winkel de winkelnaam in, voeg eventueel een logo toe en controleer de valuta, het btw-tarief en de btw-modus (inclusief / exclusief). De valuta staat standaard op die van je land; tik erop om uit 130 valuta's te kiezen."
         ]
       },
       {
         "type": "p",
-        "text": "Als je klaar bent, hoor je een \"Ding!\" — je winkel is klaar en je kunt meteen beginnen met verkopen."
+        "text": "Tik op Ga door en je ziet “Ding! Je winkel is klaar.” DingPOS stelt ook twee betaalmethoden voor je in: Contant en Creditcard. Voeg daarna je producten toe onder Producten en begin met verkopen."
+      },
+      {
+        "type": "note",
+        "text": "Valuta en btw-modus kun je na de installatie niet meer wijzigen; het btw-tarief kun je later nog wel aanpassen in Instellingen. In de Verenigde Staten, Canada, Brazilië en Micronesië hangt het tarief af van de staat, provincie of stad. Daarom is het veld voor het btw-tarief daar eerst leeg en vul je het tarief in dat je rekent (0 mag) om door te gaan. De lijst met 175 landen en de keuze van valuta kwamen met v3.2; eerdere versies boden 15 landen."
       }
     ],
     "related": [
@@ -208,7 +213,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valuta en btw-modus (inclusief / exclusief) zijn vergrendeld zodra de installatie klaar is. Al je eerdere bestellingen zijn ermee berekend, dus tussentijds wijzigen zou je rapporten onbetrouwbaar maken."
+        "text": "Valuta en btw-modus (inclusief / exclusief) zijn vergrendeld zodra de installatie klaar is. Al je eerdere bestellingen zijn ermee berekend, dus tussentijds wijzigen zou je rapporten onbetrouwbaar maken. Controleer ze daarom in de stap Je winkel van de installatie: de valuta staat standaard op die van je land en je kunt erop tikken om een andere te kiezen."
       },
       {
         "type": "note",
@@ -229,6 +234,9 @@ export const articles = [
       "taal",
       "engels",
       "chinees",
+      "japans",
+      "spaans",
+      "meertalig",
       "taal wijzigen",
       "taalinstelling",
       "omschakelen"
@@ -236,11 +244,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS ondersteunt Engels en traditioneel Chinees. Ga naar Instellingen → Apparaatvoorkeuren en tik op Taal van de app. Hiermee open je de pagina van DingPOS in de app Instellingen van de iPad, waar je onder Taal de taal kiest."
+        "text": "DingPOS ondersteunt 32 talen, waaronder Engels, traditioneel en vereenvoudigd Chinees, Japans, Koreaans, Thais, Vietnamees, Indonesisch, Maleis, Spaans (Latijns-Amerika), Portugees (Brazilië), Frans en Duits. Ga naar Instellingen → Apparaatvoorkeuren en tik op Taal van de app. Hiermee open je de pagina van DingPOS in de app Instellingen van de iPad, waar je onder Taal de taal kiest."
       },
       {
         "type": "p",
         "text": "iOS laat apps de talenlijst niet rechtstreeks openen, dus de laatste tik doe je in de systeeminstellingen. De taal geldt alleen voor deze iPad."
+      },
+      {
+        "type": "note",
+        "text": "Andere talen dan Engels en traditioneel Chinees kwamen met v3.2. Staan onder Taal alleen Engels en Chinees, werk DingPOS dan bij via de App Store."
       }
     ],
     "related": [
@@ -358,12 +370,13 @@ export const articles = [
       "line pay",
       "wisselgeld",
       "eigen betaalmethode",
-      "op rekening"
+      "op rekening",
+      "transactiekosten"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Contant, Creditcard en Line Pay zijn standaard aanwezig en je kunt in Instellingen eigen betaallabels toevoegen (bijv. Apple Pay, lokale wallets)."
+        "text": "Een nieuwe winkel start met twee betaalmethoden, Contant en Creditcard, bij de installatie al in de taal van de app. Onder Instellingen → Betaalmethoden voeg je elke andere methode toe (bijv. Apple Pay, LINE Pay, een lokale wallet) en kun je methoden verwijderen of anders sorteren."
       },
       {
         "type": "p",
@@ -371,13 +384,60 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Rekent je aanbieder van pin- of mobiele betalingen kosten? Geef de methode dan een kostenpercentage, en Cijfers schat de kosten en het netto ontvangen bedrag per methode — zie “Kan DingPOS transactiekosten van pin- en mobiele betalingen bijhouden?”"
+      },
+      {
+        "type": "p",
         "text": "Neemt een vaste klant de spullen nu mee en betaalt die later? Kies dan Op rekening: de verkoop wordt vastgelegd als openstaande vordering en vereffend zodra het geld binnenkomt. Zie “Kunnen vaste klanten op rekening kopen en later betalen?”"
       }
     ],
     "related": [
+      "payment-fees",
       "on-account",
-      "roadmap-payment-integration",
-      "multiple-carts"
+      "roadmap-payment-integration"
+    ]
+  },
+  {
+    "slug": "payment-fees",
+    "category": "checkout",
+    "since": "3.2",
+    "question": "Kan DingPOS transactiekosten van pin- en mobiele betalingen bijhouden?",
+    "keywords": [
+      "transactiekosten",
+      "pinkosten",
+      "kosten per betaling",
+      "kostenpercentage",
+      "netto ontvangen",
+      "kosten betaalprovider",
+      "line pay"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Tik onder Instellingen → Betaalmethoden op een betaalmethode (of voeg een nieuwe toe) en vul Transactiekosten in: een percentage, een vast bedrag per transactie, of allebei. Vanaf dat moment wordt bij elke betaling via die methode een kostenraming vastgelegd, op basis van het percentage dat op dat moment gold."
+      },
+      {
+        "type": "p",
+        "text": "Bij Cijfers toont de kaart Betaalmethoden onder elke methode met kosten een regel “Kosten · Netto”, en onderaan de kaart staan de geschatte kosten en het geschatte netto ontvangen bedrag over de hele periode."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Vul het percentage in dat je aanbieder echt inhoudt, inclusief btw — bij 3% plus 5% btw vul je 3,15% in. Laat beide velden leeg als er geen kosten zijn.",
+          "Een gewijzigd percentage geldt alleen voor latere betalingen; kosten die al zijn vastgelegd blijven zoals ze waren.",
+          "“Percentage wordt teruggegeven bij terugbetalingen” staat standaard aan, voor aanbieders die hun kosten teruggeven als je terugbetaalt; de vaste kosten worden nooit teruggegeven. Ongeldig gemaakte verkopen, retouren, geannuleerde voorbestellingen en ongedaan gemaakte vereffeningen draaien de kosten volgens deze regel terug, en de klant krijgt in beide gevallen hetzelfde bedrag terug.",
+          "Betalingen die zijn ontvangen voordat de methode een percentage had, hebben geen kosten: Cijfers markeert ze met “N zonder kostenpercentage” en toont het netto bedrag als “—”."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Kosten zijn schattingen op basis van het percentage dat je invult; het afschrift van je aanbieder toont het werkelijke bedrag. Kostenpercentages wijzigen en kosten zien bij Cijfers vereist het Standard-abonnement of hoger. Bij Lite zijn de velden vergrendeld, maar betalingen leggen hun kosten wel vast, dus ze verschijnen zodra je upgradet."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "plans-compare"
     ]
   },
   {
@@ -404,7 +464,46 @@ export const articles = [
     ],
     "related": [
       "app-language",
+      "hide-out-of-stock",
       "multiple-carts"
+    ]
+  },
+  {
+    "slug": "hide-out-of-stock",
+    "category": "checkout",
+    "since": "3.1",
+    "question": "Kan ik producten die niet op voorraad zijn op het kassascherm verbergen?",
+    "keywords": [
+      "verbergen",
+      "niet op voorraad",
+      "uitverkocht",
+      "voorraad nul",
+      "kassa",
+      "product ontbreekt",
+      "product niet te vinden"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Ga naar Instellingen → Apparaatvoorkeuren en zet Verberg producten die niet op voorraad zijn aan (standaard uit). Het productraster, het categoriefilter en het zoeken (op naam en barcode) in de kassa slaan dan elk product over waarvan de voorraad 0 of lager is. De schakelaar werkt direct, zonder de app opnieuw te openen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Producten waarvan je de voorraad niet bijhoudt, worden altijd getoond. Een product met varianten wordt alleen verborgen als alle varianten niet op voorraad zijn.",
+          "Het geldt alleen voor de kassa van deze iPad; de lijst Producten toont nog steeds elk product.",
+          "Als alle producten verborgen zijn, toont de kassa “Geen enkel product is op voorraad” en wijst aan waar je de schakelaar uitzet."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Zolang de schakelaar aan staat, kan deze iPad producten die niet op voorraad zijn niet vinden. Je kunt dus niet in de min verkopen of er een voorbestelling voor aannemen — zet hem uit wanneer dat nodig is. Lijken producten uit de kassa verdwenen te zijn, dan ligt het meestal aan deze schakelaar."
+      }
+    ],
+    "related": [
+      "negative-inventory",
+      "inventory-tracking",
+      "checkout-sound"
     ]
   },
   {
@@ -555,7 +654,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "De voorraad wordt afgeboekt zodra de voorbestelling is geplaatst, zodat de spullen voor de klant gereserveerd zijn. Artikelen die niet op voorraad zijn, gaan in de min en herstellen zodra een inkooporder is ontvangen.",
+          "De voorraad wordt afgeboekt zodra de voorbestelling is geplaatst, zodat het verkoopbare aantal meteen klopt. Het is een signaal, geen reservering: een latere verkoop kan nog steeds het laatste exemplaar meenemen. Artikelen die niet op voorraad zijn, gaan in de min en herstellen zodra een inkooporder is ontvangen.",
           "Komt de klant de spullen halen, tik dan in de details van de bestelling op Overhandig om het restbedrag te innen. De bestelling wordt dan een gewone afgeronde verkoop; latere retouren lopen via de normale retourprocedure.",
           "Komt de klant niet opdagen, tik dan in de details van de bestelling op Annuleer bestelling en kies of je de aanbetaling terugbetaalt of houdt. De voorraad wordt weer bijgeboekt.",
           "De bon van de aanbetaling en de bon bij het afhalen hebben hetzelfde nummer."
@@ -653,7 +752,8 @@ export const articles = [
       "maat",
       "kleur",
       "opties",
-      "productopties"
+      "productopties",
+      "specificaties"
     ],
     "content": [
       {
@@ -662,16 +762,61 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Elke combinatie heeft een eigen prijs en kostprijs en houdt een eigen voorraad bij. Aan de kassa toont een tik op het product eerst een variantkeuze, voordat het in de winkelmand komt."
+        "text": "Zodra een product varianten heeft, verdwijnt het veld Prijs en krijgt elke combinatie onder Variantprijs en -voorraad een eigen prijs en een eigen voorraad (sinds v3.2; eerdere versies vragen nog om een productprijs). De kassa, de productlijst en de productdetails tonen een bereik van de laagste tot de hoogste prijs, zoals “NT$350–NT$390”, of één prijs als alle combinaties evenveel kosten; sorteren op prijs gebruikt de laagste prijs van een combinatie. Aan de kassa toont een tik op het product eerst een variantkeuze, voordat het in de winkelmand komt."
+      },
+      {
+        "type": "p",
+        "text": "Je hoeft niet voor elke combinatie een kostprijs in te vullen: een leeg veld Kostprijs betekent Volgt product, dus de kostprijs van het product wordt gebruikt en verandert mee. Een getal maakt er Eigen kostprijs van — ook 0. Met Kostprijs product voor alle gebruiken wis je alle eigen kostprijzen in één keer."
       },
       {
         "type": "note",
-        "text": "Namen van opties en waarden mogen maximaal 20 tekens bevatten."
+        "text": "Namen van opties en waarden mogen maximaal 20 tekens bevatten en niet leeg zijn: een lege optienaam of waarde krijgt bij het bewaren een rode rand, dus vul die in of verwijder de lege waarde. Een product met varianten kan geen open prijs hebben."
       }
     ],
     "related": [
+      "open-price-products",
       "barcode-scanning",
       "inventory-tracking"
+    ]
+  },
+  {
+    "slug": "open-price-products",
+    "category": "products",
+    "since": "3.2",
+    "question": "Kan ik de prijs van een product aan de kassa zelf invullen, zoals verzendkosten of een onderhandeld artikel?",
+    "keywords": [
+      "open prijs",
+      "eigen prijs",
+      "prijs invoeren",
+      "verzendkosten",
+      "servicekosten",
+      "onderhandelde prijs",
+      "marktprijs"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja — maak er een product met open prijs van. Zet Open prijs aan op de bewerkpagina van het product en laat de prijs leeg; de kassa en de productlijst tonen “Open prijs” op de plek van de prijs. Aan de kassa vraagt een tik op het product eerst om de prijs; voer die in en tik op Voeg toe aan winkelmand om het product tegen die prijs toe te voegen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "0 is een geldige prijs (bijvoorbeeld gratis verzending); een leeg veld kan niet worden toegevoegd. Voer de prijs in zoals de btw-modus van je winkel alle andere prijzen weergeeft.",
+          "Een winkelmand bevat één regel per product met open prijs: tik er nogmaals op om die regel te openen en de prijs te wijzigen.",
+          "Als je Open prijs aanzet, gaat ook Sluit uit van acties aan, zodat op kosten geen korting wordt gegeven en ze niet meetellen voor bestedingsdrempels. Zet het weer uit als een onderhandeld artikel wel aan acties mee moet doen.",
+          "Na verkoop wordt de regel belast, levert punten op en telt mee in Cijfers zoals elke andere, en bij een retour wordt de ingevoerde prijs terugbetaald.",
+          "Een product met varianten kan geen open prijs hebben. Producten met open prijs worden nooit aangeboden als cadeau of als betaalde extra en verschijnen nooit in de lijst met vervangende artikelen bij een omruiling."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Elk abonnement heeft dit, en het invoeren van de prijs vraagt nooit om goedkeuring van een manager."
+      }
+    ],
+    "related": [
+      "product-variants",
+      "promotion-not-applied",
+      "returns-exchanges"
     ]
   },
   {
@@ -781,12 +926,16 @@ export const articles = [
       {
         "type": "p",
         "text": "Een negatieve voorraad betekent meestal dat een aanvulling niet is vastgelegd, of dat een voorbesteld artikel nog niet binnen is (voorbestellingen verlagen de voorraad op het moment van bestellen). Leg aanvullingen vast door een inkooporder te ontvangen en het aantal herstelt zich vanzelf. Corrigeer verschillen na een telling met een handmatige aanpassing, die in het overzicht van voorraadmutaties bewaard blijft."
+      },
+      {
+        "type": "note",
+        "text": "Kan de kassamedewerker een product met voorraad 0 niet vinden, controleer dan of Verberg producten die niet op voorraad zijn aan staat onder Instellingen → Apparaatvoorkeuren: zolang dat zo is, kan deze iPad producten die niet op voorraad zijn niet aan een winkelmand toevoegen."
       }
     ],
     "related": [
       "inventory-tracking",
       "purchase-orders",
-      "pre-orders"
+      "hide-out-of-stock"
     ]
   },
   {
@@ -854,7 +1003,8 @@ export const articles = [
         "items": [
           "Verkoop op rekening: de goederen gaan vandaag mee en tellen mee in de omzet van vandaag; het geld telt mee in Ontvangen bedrag op de dag dat het wordt vereffend.",
           "Voorbestelling: de aanbetaling telt mee in Ontvangen bedrag op het moment dat die wordt betaald; de omzet wordt volledig geboekt op de afhaaldatum.",
-          "Gehouden aanbetaling: als een klant een voorbestelling annuleert en jij de aanbetaling houdt, was die al meegeteld in Ontvangen bedrag toen die werd betaald. Cijfers toont dit apart als gehouden aanbetalingen en het telt nooit mee als omzet."
+          "Ingehouden aanbetaling: als een klant een voorbestelling annuleert en jij de aanbetaling houdt, was die al meegeteld in Ontvangen bedrag toen die werd betaald. Cijfers toont dit apart als ingehouden aanbetalingen en het telt nooit mee als omzet.",
+          "Een eerdere bestelling ongeldig maken: het terugbetaalde geld telt mee in Ontvangen bedrag op de dag van het ongeldig maken, dus Ontvangen bedrag van die dag kan negatief zijn, terwijl Ongeldig gemaakt de bestelling telt op de verkoopdatum. De ⓘ op de tegels Ontvangen bedrag en Ongeldig gemaakt legt hetzelfde uit."
         ]
       },
       {
@@ -966,21 +1116,33 @@ export const articles = [
       "kostprijs",
       "winst",
       "marge",
+      "brutomarge",
       "rapporten",
-      "winst niet bijgehouden"
+      "winst niet bijgehouden",
+      "kostprijs ontbreekt",
+      "winst bijgehouden"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kostprijs is een optioneel veld. Producten zonder kostprijs worden in rapporten gemarkeerd als “winst niet bijgehouden” en blijven buiten de winstberekening — de omzet telt nog steeds volledig mee, alleen de winst wordt overgeslagen."
+        "text": "Kostprijs is een optioneel veld. Producten zonder kostprijs blijven buiten de winst, terwijl hun omzet nog steeds volledig meetelt. De kaart Winst bijgehouden bij Cijfers toont hoeveel producten die in de periode zijn verkocht geen kostprijs hebben; een kostprijs van 0 telt als kostprijs, dus die producten staan niet in de lijst."
       },
       {
         "type": "p",
-        "text": "Voor volledige winstrapporten vul je de kostprijs in op de bewerkpagina van het product; toekomstige bestellingen worden dan meegenomen. Winst wordt berekend over de omzet na korting."
+        "text": "Tik op de kaart of op Toon producten om Producten zonder kostprijs te openen, gerangschikt op de omzet die buiten de winst blijft. Tik op een rij om het product te openen, voeg de kostprijs toe via Wijzig, en de rij is gemarkeerd met Kostprijs toegevoegd als je terugkomt. Een product met varianten telt als voorzien van een kostprijs zodra een variant of het product zelf een kostprijs heeft."
+      },
+      {
+        "type": "p",
+        "text": "Winst is de omzet na alle kortingen (korting op artikelen en winkelmand, acties, inwisseling van punten) en vóór btw, minus de kostprijs — daarom heet het veld Kostprijs excl. btw (optioneel): vul in wat je vóór btw hebt betaald. De marge is de winst ÷ de omzet vóór btw van producten met een kostprijs, zodat producten zonder kostprijs de marge niet omlaag halen. Een retour neemt op de dag van de retour de winst terug die die artikelen hadden opgeleverd."
+      },
+      {
+        "type": "note",
+        "text": "Een kostprijs die je toevoegt, geldt alleen voor latere verkopen; verkopen die al zijn gedaan worden niet opnieuw berekend. Deze berekening kwam met v3.1: eerdere versies trokken alleen handmatige kortingen op artikelen af en telden btw in de prijs als winst mee, dus na de update tonen periodes met kortingen of btw in de prijs een lagere winst. Dat is een correctering, geen verloren gegevens."
       }
     ],
     "related": [
       "report-periods",
+      "product-variants",
       "purchase-orders"
     ]
   },
@@ -1043,9 +1205,9 @@ export const articles = [
         "type": "steps",
         "items": [
           "Planning: valt vandaag binnen de actieve data? Beperkt een Happy Hour-tijdvak de weekdag of het tijdstip?",
-          "Bereik: vallen de artikelen in de winkelmand onder de producten of categorieën van de actie? Is de bestedingsdrempel bereikt?",
+          "Bereik: vallen de artikelen in de winkelmand onder de producten of categorieën van de actie? Staat het product op Sluit uit van acties (producten met open prijs standaard wel)? Is de bestedingsdrempel bereikt?",
           "Doelgroep: is de actie beperkt tot een klantniveau of de verjaardagsmaand? Is die klant bij het afrekenen gekozen?",
-          "Gebruikslimiet: is het maximum in totaal of het maximum voor deze klant bereikt?",
+          "Gebruikslimiet: is het maximum in totaal of het maximum voor deze klant bereikt? De limiet per klant van een verjaardagsmaand-actie telt per kalenderjaar.",
           "Combineren: blokkeert een actie met hogere prioriteit en de optie \"Volgende acties stoppen als deze wordt toegepast\" jouw actie?"
         ]
       },
@@ -1329,7 +1491,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Het bestand opent als tabel. Veelgebruikte kolomnamen in het Engels en Chinees worden automatisch herkend; tik op een kolomkop om de koppeling te wijzigen.",
+          "Het bestand opent als tabel. Veelgebruikte kolomnamen in het Engels en Chinees (traditioneel of vereenvoudigd) worden automatisch herkend; tik op een kolomkop om de koppeling te wijzigen.",
           "Tik op een cel om de waarde direct aan te passen. Je hoeft het bestand niet te bewerken en opnieuw te beginnen.",
           "Tik op Bevestig om te controleren. Rijen met problemen krijgen een rode markering met de reden; bij het importeren van verkopen kun je bestellingen met fouten overslaan.",
           "Los op wat een keuze vraagt (dubbele productnamen, een rij die bij meerdere klanten past), bekijk de samenvatting en tik op Importeren starten."
@@ -1338,7 +1500,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Geïmporteerde verkopen worden geplaatst op hun transactiedatum en opnieuw berekend met de valuta en belastingmodus van je winkel. Ze raken de voorraad niet en geven geen welkomstpunten.",
+          "Geïmporteerde verkopen worden geplaatst op hun besteldatum en opnieuw berekend met de valuta en btw-modus van je winkel. Ze raken de voorraad niet en geven geen welkomstpunten.",
           "Klanten worden op telefoonnummer of e-mailadres gekoppeld aan bestaande klanten; wie niet wordt gevonden, wordt aangemaakt.",
           "Geïmporteerde bestellingen tonen de datum ‘Geïmporteerd op’ en het oorspronkelijke bestelnummer. Je kunt ze niet ongeldig maken of als retour verwerken.",
           "Rijen met fouten kun je exporteren als CSV met de redenen erbij. Los ze op en importeer opnieuw. Dubbele rijen worden automatisch overgeslagen."
@@ -1582,6 +1744,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "In de laatste 7 dagen en op de laatste dag herinnert de app je telkens één keer eraan hoeveel dagen er nog over zijn, dat afrekenen pauzeert als de proefperiode eindigt en dat je gegevens bewaard blijven."
+      },
+      {
+        "type": "p",
         "text": "Alles wat je tijdens de proefperiode aanmaakt (producten, bestellingen, klanten) blijft volledig bewaard. Je gegevens worden nooit verwijderd, of je daarna nu een abonnement neemt of niet."
       }
     ],
@@ -1640,7 +1806,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: voor wie alleen een kraam runt en afrekenen en producten nodig heeft.",
-          "Standard: voegt acties, spaarpunten en klantniveaus, voorraadbeheer, inkoop, verkoop op rekening en voorbestellingen toe.",
+          "Standard: voegt acties, spaarpunten en klantniveaus, voorraadbeheer, inkoop, verkoop op rekening, voorbestellingen en schattingen van transactiekosten toe.",
           "Pro: voegt medewerkersaccounts en toestemmingen, goedkeuring, het activiteitenlogboek, herstelregistraties en geavanceerde rapporten toe — voor winkels met medewerkers."
         ]
       },
@@ -1811,15 +1977,20 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Maak eerst niveaus aan onder Instellingen → Ledenniveaus (bijv. Goud) en richt de actie daarna op dat niveau. Voor verjaardagsacties stel je de voorwaarde in op ‘Verjaardagsmaand’."
+        "text": "Maak eerst niveaus aan onder Instellingen → Ledenniveaus (bijv. Goud) en richt de actie daarna op dat niveau. Stel voor verjaardagsacties de doelgroep in op Verjaardagsmaand en vul Limiet per klant in."
       },
       {
         "type": "list",
         "items": [
           "De klant moet bij het afrekenen zijn gekozen om de actie te activeren — de geschiktheid wordt beoordeeld aan de hand van de op dat moment gekozen klant.",
           "Voor een verjaardagsactie wordt de verjaardagsmaand van de klant gebruikt, dus vul het verjaardagsveld in; klanten zonder verjaardag worden nooit als jarig behandeld.",
+          "Een verjaardagsactie vraagt om een limiet per klant, geteld per kalenderjaar: bij een limiet van 1 kan elke klant de actie één keer per jaar gebruiken en begint dat het jaar erop opnieuw. Zonder limiet kan de actie niet worden bewaard.",
           "Automatische niveauverhogingen worden beoordeeld zodra het afrekenen is voltooid; als de bestelling ongeldig wordt gemaakt, wordt een verhoging die ze veroorzaakte automatisch teruggedraaid."
         ]
+      },
+      {
+        "type": "note",
+        "text": "Vóór v3.2 gaf een actie voor de verjaardagsmaand een foutmelding en kon die niet worden bewaard, ook niet met een ingevulde limiet per klant. Overkomt je dat, werk DingPOS dan bij via de App Store."
       }
     ],
     "related": [
