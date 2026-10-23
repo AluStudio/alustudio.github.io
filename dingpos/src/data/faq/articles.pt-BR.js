@@ -419,7 +419,7 @@ export const articles = [
         "items": [
           "Informe a alíquota que a operadora realmente desconta, com impostos incluídos — para 3% mais 5% de imposto, informe 3,15%. Deixe os dois campos vazios para nenhuma taxa.",
           "Mudar a alíquota vale apenas para os pagamentos seguintes; as taxas já registradas continuam como estavam.",
-          "“Percentual da taxa devolvido em reembolsos” vem ativado por padrão, para operadoras que devolvem a taxa quando você faz um reembolso; a taxa fixa nunca é devolvida. Anulações, devoluções, encomendas canceladas e quitações desfeitas estornam as taxas por essa regra, e o cliente recebe de volta o mesmo valor nos dois casos.",
+          "“Percentual da taxa devolvido em reembolsos” vem ativado por padrão, para operadoras que devolvem a taxa quando você faz uma devolução; a taxa fixa nunca é devolvida. Anulações, devoluções, encomendas canceladas e estornos da quitação estornam as taxas por essa regra, e o cliente recebe de volta o mesmo valor nos dois casos.",
           "Pagamentos recebidos antes de a forma ter uma alíquota ficam sem taxa: o Resumo os marca como “N sem alíquota” e mostra o líquido como “—”."
         ]
       },
