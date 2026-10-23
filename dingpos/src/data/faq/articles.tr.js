@@ -1133,7 +1133,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Karta veya Ürünleri gör düğmesine dokunarak Maliyeti Olmayan Ürünler listesini açın; liste, kâr hesabının dışında kalan satış gelirine göre sıralanır. Bir satıra dokunup ürünü açın, Düzenle’den maliyetini ekleyin; geri döndüğünüzde satır Maliyet eklendi olarak işaretlenir. Varyantı olan bir ürün, maliyetsiz satılmış her varyantın ya kendine ait bir maliyeti ya da ürünün maliyetini kullanma seçeneği olduğunda, geri döndüğünüzde Maliyet eklendi olarak işaretlenir."
+        "text": "Karta veya Ürünleri gör düğmesine dokunarak Maliyeti Olmayan Ürünler listesini açın; liste, kâr hesabının dışında kalan satış gelirine göre sıralanır. Bir satıra dokunup ürünü açın, Düzenle’den maliyetini ekleyin; geri döndüğünüzde satır Maliyet eklendi olarak işaretlenir. Varyantı olan bir ürün, maliyetsiz satılan her varyant için bir maliyet belirlendiğinde (varyantın kendi maliyeti veya ürünün maliyeti kullanılarak), geri döndüğünüzde Maliyet eklendi olarak işaretlenir."
       },
       {
         "type": "p",
