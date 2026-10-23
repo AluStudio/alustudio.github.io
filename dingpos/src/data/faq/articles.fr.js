@@ -419,7 +419,7 @@ export const articles = [
         "items": [
           "Saisissez le taux que votre prestataire prélève réellement, taxe comprise : pour 3 % plus 5 % de taxe, saisissez 3,15 %. Laissez les deux champs vides pour aucun frais.",
           "Un changement de taux ne s’applique qu’aux paiements suivants ; les frais déjà enregistrés restent tels quels.",
-          "« Pourcentage de frais restitué lors des remboursements » est activé par défaut, pour les prestataires qui rendent leurs frais en cas de remboursement ; la part fixe n’est jamais restituée. Les invalidations, retours, précommandes annulées et règlements annulés inversent les frais selon cette règle, et le client récupère le même montant dans tous les cas.",
+          "« Pourcentage de frais restitué lors des remboursements » est activé par défaut, pour les prestataires qui rendent leurs frais en cas de remboursement. Il régit les retours et les acomptes de précommande remboursés : activé, le pourcentage est restitué ; la part fixe ne l’est jamais. Une invalidation ou un règlement annulé ignore ce réglage et reprend la totalité des frais enregistrés, part fixe comprise. Dans tous les cas, le client récupère le même montant.",
           "Les paiements encaissés avant que le moyen ait un taux n’ont aucun frais : Stats les signale par « N sans taux » et affiche le net sous la forme « — »."
         ]
       },
@@ -1125,7 +1125,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Touchez la carte ou Afficher les produits pour ouvrir Produits sans coût, classés selon le chiffre d’affaires exclu de la marge. Touchez une ligne pour ouvrir le produit, ajoutez son coût depuis Modifier, et la ligne est marquée Coût ajouté à votre retour. Un produit avec variantes est considéré comme ayant un coût dès qu’une variante ou le produit lui-même en a un."
+        "text": "Touchez la carte ou Afficher les produits pour ouvrir Produits sans coût, classés selon le chiffre d’affaires exclu de la marge. Touchez une ligne pour ouvrir le produit, ajoutez son coût depuis Modifier, et la ligne est marquée Coût ajouté à votre retour. Un produit avec variantes n’est marqué Coût ajouté que lorsque chaque variante vendue sans coût en a un — le sien, ou celui du produit à suivre."
       },
       {
         "type": "p",

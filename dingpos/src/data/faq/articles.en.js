@@ -173,7 +173,7 @@ export const articles = [
         items: [
           "Enter the rate your provider actually deducts, tax included — for 3% plus 5% tax, enter 3.15%. Leave both fields empty for no fee.",
           "A rate change only applies to later payments; fees already recorded stay as they were.",
-          "“Percentage fee returned on refunds” is on by default, for providers that give their fee back when you refund; the fixed fee is never returned. Voids, returns, cancelled pre-orders, and undone settlements reverse fees by this rule, and the customer gets back the same amount either way.",
+          "“Percentage fee returned on refunds” is on by default, for providers that give their fee back when you refund. It governs returns and refunded pre-order deposits: with it on, the percentage comes back; the fixed fee never does. A void or an undone settlement ignores the switch and takes back the whole fee it recorded, fixed fee included. Either way, the customer gets back the same amount.",
           "Payments collected before the method had a rate carry no fee: Stats marks them “N missing a rate” and shows the net as “—”.",
         ],
       },
@@ -512,7 +512,7 @@ export const articles = [
     keywords: ["cost", "profit", "margin", "gross margin", "reports", "not tracked", "missing cost", "profit tracked"],
     content: [
       { type: "p", text: "Cost is an optional field. Products without a cost are left out of profit, while their revenue still counts in full. The Profit Tracked card on Stats shows how many products sold in the period have no cost; a cost of 0 counts as a cost, so those products aren't listed." },
-      { type: "p", text: "Tap the card or View products to open Products Without Cost, ranked by the revenue left out of profit. Tap a row to open the product, add its cost from Edit, and the row is marked Cost added when you come back. A product with variants counts as costed once either a variant or the product itself has a cost." },
+      { type: "p", text: "Tap the card or View products to open Products Without Cost, ranked by the revenue left out of profit. Tap a row to open the product, add its cost from Edit, and the row is marked Cost added when you come back. A product with variants is marked Cost added only once every variant sold without a cost has one — its own, or the product's cost to follow." },
       { type: "p", text: "Profit is revenue after every discount (item and cart discounts, promotions, points redemption) and before tax, minus cost — which is why the field reads Cost excl. tax (optional): enter what you paid before tax. Margin is profit ÷ the pre-tax revenue of products with a cost, so products without one don't drag it down. A return takes back, on the day of the return, the profit those items had brought in." },
       { type: "note", text: "A cost you add affects later sales only; sales already made are not recalculated. This calculation arrived in v3.1: earlier versions only took off manual item discounts and counted inclusive tax as profit, so after updating, periods with discounts or inclusive tax show lower profit. That's a correction, not lost data." },
     ],

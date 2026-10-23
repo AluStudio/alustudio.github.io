@@ -426,7 +426,7 @@ export const articles = [
         "items": [
           "Tragen Sie den Satz ein, den Ihr Anbieter tatsächlich abzieht, einschließlich Steuer – bei 3 % plus 5 % Steuer also 3,15 %. Lassen Sie beide Felder leer, wenn es keine Gebühr gibt.",
           "Eine Änderung des Satzes gilt nur für spätere Zahlungen; bereits erfasste Gebühren bleiben unverändert.",
-          "„Prozentanteil der Gebühr bei Rückgaben erstattet“ ist standardmäßig aktiviert, für Anbieter, die ihre Gebühr bei einer Erstattung zurückgeben; der feste Betrag wird nie erstattet. Annullierungen, Rückgaben, stornierte Vorbestellungen und rückgängig gemachte Begleichungen kehren Gebühren nach dieser Regel um, und der Kunde erhält in beiden Fällen denselben Betrag zurück.",
+          "„Prozentanteil der Gebühr bei Rückgaben erstattet“ ist standardmäßig aktiviert, für Anbieter, die ihre Gebühr bei einer Erstattung zurückgeben. Die Einstellung gilt für Rückgaben und erstattete Anzahlungen von Vorbestellungen: Ist sie aktiviert, wird der Prozentanteil erstattet; der feste Betrag nie. Eine Annullierung oder eine rückgängig gemachte Begleichung ignoriert den Schalter und nimmt die gesamte erfasste Gebühr zurück, den festen Betrag eingeschlossen. In beiden Fällen erhält der Kunde denselben Betrag zurück.",
           "Zahlungen, die kassiert wurden, bevor die Zahlungsart einen Gebührensatz hatte, tragen keine Gebühr: Die Statistik markiert sie mit „N ohne Gebührensatz“ und zeigt das Netto als „—“."
         ]
       },
@@ -1130,7 +1130,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tippen Sie auf die Karte oder auf „Artikel ansehen“, um „Artikel ohne Einkaufspreis“ zu öffnen, sortiert nach dem Umsatz, der im Rohertrag fehlt. Tippen Sie auf eine Zeile, um den Artikel zu öffnen, tragen Sie über „Bearbeiten“ den Einkaufspreis nach, und die Zeile ist bei Ihrer Rückkehr mit „Einkaufspreis ergänzt“ markiert. Ein Artikel mit Varianten gilt als mit Einkaufspreis versehen, sobald entweder eine Variante oder der Artikel selbst einen hat."
+        "text": "Tippen Sie auf die Karte oder auf „Artikel ansehen“, um „Artikel ohne Einkaufspreis“ zu öffnen, sortiert nach dem Umsatz, der im Rohertrag fehlt. Tippen Sie auf eine Zeile, um den Artikel zu öffnen, tragen Sie über „Bearbeiten“ den Einkaufspreis nach, und die Zeile ist bei Ihrer Rückkehr mit „Einkaufspreis ergänzt“ markiert. Ein Artikel mit Varianten gilt erst dann als „Einkaufspreis ergänzt“, wenn jede ohne Einkaufspreis verkaufte Variante einen hat – ihren eigenen oder den des Artikels, der dann für sie gilt."
       },
       {
         "type": "p",

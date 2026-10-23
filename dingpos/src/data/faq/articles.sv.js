@@ -427,7 +427,7 @@ export const articles = [
         "items": [
           "Ange den sats som leverantören faktiskt drar, inklusive moms – för 3 % plus 5 % moms anger du 3,15 %. Lämna båda fälten tomma om det inte finns någon avgift.",
           "En ändrad sats gäller bara senare betalningar. Avgifter som redan registrerats ligger kvar som de var.",
-          "”Procentavgiften återbetalas vid återbetalningar” är på som standard, för leverantörer som betalar tillbaka sin avgift när du återbetalar. Den fasta avgiften återbetalas aldrig. Makuleringar, returer, avbokade förbeställningar och ångrade regleringar återför avgifter enligt den regeln, och kunden får tillbaka samma belopp oavsett.",
+          "”Procentavgiften återbetalas vid återbetalningar” är på som standard, för leverantörer som betalar tillbaka sin avgift när du återbetalar. Den styr returer och återbetalda handpenningar på förbeställningar: när den är på återbetalas procentsatsen, den fasta avgiften aldrig. En makulering eller en ångrad reglering ignorerar reglaget och tar tillbaka hela den avgift som registrerades, även den fasta. Kunden får tillbaka samma belopp oavsett.",
           "Betalningar som togs emot innan betalningssättet fick en sats har ingen avgift: Statistik markerar dem ”N utan avgiftssats” och visar nettot som ”—”."
         ]
       },
@@ -1131,7 +1131,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tryck på kortet eller på Visa produkter för att öppna Produkter utan inköpspris, rangordnade efter den intäkt som lämnats utanför vinsten. Tryck på en rad för att öppna produkten, lägg till inköpspriset från Redigera, så markeras raden Inköpspris tillagt när du kommer tillbaka. En produkt med varianter räknas som kostnadsberäknad så snart antingen en variant eller produkten själv har ett inköpspris."
+        "text": "Tryck på kortet eller på Visa produkter för att öppna Produkter utan inköpspris, rangordnade efter den intäkt som lämnats utanför vinsten. Tryck på en rad för att öppna produkten, lägg till inköpspriset från Redigera, så markeras raden Inköpspris tillagt när du kommer tillbaka. En produkt med varianter markeras Inköpspris tillagt först när varje variant som sålts utan inköpspris har ett – eget eller produktens inköpspris som den följer."
       },
       {
         "type": "p",

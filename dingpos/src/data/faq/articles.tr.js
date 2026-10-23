@@ -427,7 +427,7 @@ export const articles = [
         "items": [
           "Sağlayıcınızın gerçekte kestiği oranı vergisi dahil girin — %3 artı %5 vergi için %3,15 yazın. Ücret yoksa iki alanı da boş bırakın.",
           "Oran değişikliği yalnızca sonraki ödemelere uygulanır; daha önce kaydedilen ücretler olduğu gibi kalır.",
-          "“Yüzde ücret iadelerde geri verilir” varsayılan olarak açıktır; iade yapınca ücretini geri veren sağlayıcılar içindir, sabit ücret hiçbir zaman geri verilmez. Geçersiz kılma, ürün iadesi, iptal edilen ön siparişler ve geri alınan borç kapatmalar ücretleri bu kurala göre tersine çevirir; müşteri her iki durumda da aynı tutarı geri alır.",
+          "“Yüzde ücret iadelerde geri verilir” varsayılan olarak açıktır; iade yapınca ücretini geri veren sağlayıcılar içindir. Ürün iadelerini ve iade edilen ön sipariş kaporalarını yönetir: açıkken yüzde geri gelir, sabit ücret hiçbir zaman geri gelmez. Geçersiz kılma ve geri alınan borç kapatma bu anahtarı yok sayar ve kaydettiği ücretin tamamını, sabit ücret dahil, geri alır. Hangi durumda olursa olsun müşteri aynı tutarı geri alır.",
           "Yöntemin oranı olmadan önce tahsil edilen ödemelerin ücreti yoktur: İstatistik bunları “N işlemde oran eksik” diye işaretler ve neti “—” olarak gösterir."
         ]
       },
@@ -1133,7 +1133,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Karta veya Ürünleri gör düğmesine dokunarak Maliyeti Olmayan Ürünler listesini açın; liste, kâr hesabının dışında kalan satış gelirine göre sıralanır. Bir satıra dokunup ürünü açın, Düzenle’den maliyetini ekleyin; geri döndüğünüzde satır Maliyet eklendi olarak işaretlenir. Varyantlı bir ürün, varyantlardan biri ya da ürünün kendisi maliyet içeriyorsa maliyetli sayılır."
+        "text": "Karta veya Ürünleri gör düğmesine dokunarak Maliyeti Olmayan Ürünler listesini açın; liste, kâr hesabının dışında kalan satış gelirine göre sıralanır. Bir satıra dokunup ürünü açın, Düzenle’den maliyetini ekleyin; geri döndüğünüzde satır Maliyet eklendi olarak işaretlenir. Varyantlı bir ürün, maliyetsiz satılan her varyantın maliyeti olduğunda (kendi maliyeti ya da uyması için ürünün maliyeti) Maliyet eklendi olarak işaretlenir."
       },
       {
         "type": "p",

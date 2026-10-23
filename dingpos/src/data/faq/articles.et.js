@@ -425,7 +425,7 @@ export const articles = [
         "items": [
           "Sisesta määr, mille sinu pakkuja tegelikult maha arvab, koos maksuga – 3% pluss 5% maks tähendab 3,15%. Kui tasu pole, jäta mõlemad väljad tühjaks.",
           "Määra muutmine mõjutab ainult hilisemaid makseid; juba salvestatud tasud jäävad samaks.",
-          "„Protsentuaalne tasu tagastatakse tagasimaksel“ on vaikimisi sees, pakkujatele, kes annavad tasu tagasimaksel tagasi; fikseeritud tasu ei tagastata kunagi. Anuleerimised, tagastused, tühistatud ettetellimused ja tühistatud tasumised pööravad tasud tagasi selle reegli järgi ning klient saab nii või naa sama summa tagasi.",
+          "„Protsentuaalne tasu tagastatakse tagasimaksel“ on vaikimisi sees, pakkujatele, kes annavad tasu tagasimaksel tagasi. See reguleerib tagastusi ja tagasimakstud ettetellimuste käsiraha: sisselülitatuna tagastatakse protsent; fikseeritud tasu ei tagastata kunagi. Anuleerimine või tasumise tühistamine lülitit ei arvesta ja võtab tagasi kogu salvestatud tasu, fikseeritud tasu kaasa arvatud. Klient saab mõlemal juhul sama summa tagasi.",
           "Maksed, mis laekusid enne, kui makseviisil oli määr, ei kanna tasu: Aruanded märgivad need „N ilma määrata“ ja näitavad netot kui „—“."
         ]
       },
@@ -1128,7 +1128,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Puuduta kaarti või Vaata tooteid, et avada Omahinnata tooted, mis on järjestatud kasumist välja jäänud müügitulu järgi. Puuduta rida, et toode avada, lisa selle omahind valikust Muuda ja tagasi tulles on rida märgitud Omahind lisatud. Variantidega toode loetakse omahinnaga tooteks, kui omahind on kas variandil või tootel endal."
+        "text": "Puuduta kaarti või Vaata tooteid, et avada Omahinnata tooted, mis on järjestatud kasumist välja jäänud müügitulu järgi. Puuduta rida, et toode avada, lisa selle omahind valikust Muuda ja tagasi tulles on rida märgitud Omahind lisatud. Variantidega toode märgitakse Omahind lisatud alles siis, kui igal omahinnata müüdud variandil on omahind – oma või toote oma, mida variant järgib."
       },
       {
         "type": "p",

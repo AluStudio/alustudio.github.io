@@ -420,7 +420,7 @@ export const articles = [
         "items": [
           "Inserisci la tariffa che il fornitore trattiene davvero, tasse incluse: per il 3% più il 5% di tasse, inserisci 3,15%. Lascia vuoti entrambi i campi se non c'è commissione.",
           "Una modifica della tariffa vale solo per i pagamenti successivi; le commissioni già registrate restano come sono.",
-          "«Percentuale della commissione restituita sui rimborsi» è attiva di default, per i fornitori che restituiscono la commissione quando fai un rimborso; la parte fissa non viene mai restituita. Storni, resi, preordini annullati e saldi annullati stornano le commissioni con questa regola, e il cliente riceve comunque lo stesso importo.",
+          "«Percentuale della commissione restituita sui rimborsi» è attiva di default, per i fornitori che restituiscono la commissione quando fai un rimborso. Riguarda i resi e gli acconti dei preordini rimborsati: se è attiva, la percentuale viene restituita; la parte fissa mai. Uno storno o un saldo annullato ignorano l'interruttore e stornano l'intera commissione registrata, parte fissa inclusa. In ogni caso il cliente riceve lo stesso importo.",
           "I pagamenti incassati prima che il metodo avesse una tariffa non hanno commissione: Report li segnala con «N senza tariffa» e mostra il netto come «—»."
         ]
       },
@@ -1124,7 +1124,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tocca la scheda o Mostra prodotti per aprire Prodotti senza costo, ordinati per i ricavi esclusi dall'utile. Tocca una riga per aprire il prodotto, aggiungi il costo da Modifica e al ritorno la riga risulta contrassegnata come Costo aggiunto. Un prodotto con varianti conta come con costo quando ce l'ha una variante oppure il prodotto stesso."
+        "text": "Tocca la scheda o Mostra prodotti per aprire Prodotti senza costo, ordinati per i ricavi esclusi dall'utile. Tocca una riga per aprire il prodotto, aggiungi il costo da Modifica e al ritorno la riga risulta contrassegnata come Costo aggiunto. Un prodotto con varianti è contrassegnato come Costo aggiunto solo quando ogni variante venduta senza costo ne ha uno: il proprio oppure quello del prodotto, da seguire."
       },
       {
         "type": "p",

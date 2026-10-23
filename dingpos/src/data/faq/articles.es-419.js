@@ -421,7 +421,7 @@ export const articles = [
         "items": [
           "Escribe la tasa que tu proveedor descuenta realmente, con impuestos incluidos: para 3 % más 5 % de impuesto, escribe 3.15 %. Deja ambos campos vacíos si no hay comisión.",
           "Un cambio de tasa solo se aplica a los pagos posteriores; las comisiones ya registradas se quedan como estaban.",
-          "«Porcentaje devuelto en reembolsos» viene activado de forma predeterminada, para los proveedores que devuelven su comisión cuando reembolsas; la parte fija nunca se devuelve. Las anulaciones, las devoluciones, las preventas canceladas y las liquidaciones revertidas revierten las comisiones con esta regla, y el cliente recibe de vuelta el mismo monto en ambos casos.",
+          "«Porcentaje devuelto en reembolsos» viene activado de forma predeterminada, para los proveedores que devuelven su comisión cuando reembolsas. Rige las devoluciones y los anticipos de preventa reembolsados: con la opción activada, el porcentaje se devuelve; la parte fija nunca. Una anulación o una liquidación revertida ignora el interruptor y revierte toda la comisión que registró, parte fija incluida. En ambos casos, el cliente recibe de vuelta el mismo monto.",
           "Los pagos cobrados antes de que el método tuviera una tasa no llevan comisión: Reportes los marca como «N sin tasa» y muestra el neto como «—»."
         ]
       },
@@ -1122,7 +1122,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Toca la tarjeta o Ver productos para abrir Productos sin costo, ordenados por los ingresos por ventas que quedan fuera de la utilidad. Toca una fila para abrir el producto, agrega su costo desde Editar y, al volver, la fila aparece marcada como Costo agregado. Un producto con variantes cuenta como con costo cuando una variante o el propio producto tiene costo."
+        "text": "Toca la tarjeta o Ver productos para abrir Productos sin costo, ordenados por los ingresos por ventas que quedan fuera de la utilidad. Toca una fila para abrir el producto, agrega su costo desde Editar y, al volver, la fila aparece marcada como Costo agregado. Un producto con variantes se marca como Costo agregado solo cuando cada variante vendida sin costo ya tiene uno: el suyo o el del producto, que se aplica a las variantes que no tengan costo propio."
       },
       {
         "type": "p",

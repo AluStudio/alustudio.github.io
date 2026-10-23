@@ -425,7 +425,7 @@ export const articles = [
         "items": [
           "Vul het percentage in dat je aanbieder echt inhoudt, inclusief btw — bij 3% plus 5% btw vul je 3,15% in. Laat beide velden leeg als er geen kosten zijn.",
           "Een gewijzigd percentage geldt alleen voor latere betalingen; kosten die al zijn vastgelegd blijven zoals ze waren.",
-          "“Percentage wordt teruggegeven bij terugbetalingen” staat standaard aan, voor aanbieders die hun kosten teruggeven als je terugbetaalt; de vaste kosten worden nooit teruggegeven. Ongeldig gemaakte verkopen, retouren, geannuleerde voorbestellingen en ongedaan gemaakte vereffeningen draaien de kosten volgens deze regel terug, en de klant krijgt in beide gevallen hetzelfde bedrag terug.",
+          "“Percentage wordt teruggegeven bij terugbetalingen” staat standaard aan, voor aanbieders die hun kosten teruggeven als je terugbetaalt. De instelling geldt voor retouren en terugbetaalde aanbetalingen op voorbestellingen: staat hij aan, dan komt het percentage terug; de vaste kosten nooit. Een ongeldig gemaakte verkoop of ongedaan gemaakte vereffening negeert de instelling en draait de volledige vastgelegde kosten terug, vaste kosten inbegrepen. In beide gevallen krijgt de klant hetzelfde bedrag terug.",
           "Betalingen die zijn ontvangen voordat de methode een percentage had, hebben geen kosten: Cijfers markeert ze met “N zonder kostenpercentage” en toont het netto bedrag als “—”."
         ]
       },
@@ -1129,7 +1129,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tik op de kaart of op Toon producten om Producten zonder kostprijs te openen, gerangschikt op de omzet die buiten de winst blijft. Tik op een rij om het product te openen, voeg de kostprijs toe via Wijzig, en de rij is gemarkeerd met Kostprijs toegevoegd als je terugkomt. Een product met varianten telt als voorzien van een kostprijs zodra een variant of het product zelf een kostprijs heeft."
+        "text": "Tik op de kaart of op Toon producten om Producten zonder kostprijs te openen, gerangschikt op de omzet die buiten de winst blijft. Tik op een rij om het product te openen, voeg de kostprijs toe via Wijzig, en de rij is gemarkeerd met Kostprijs toegevoegd als je terugkomt. Een product met varianten krijgt Kostprijs toegevoegd pas zodra elke verkochte variant zonder kostprijs er een heeft — een eigen kostprijs, of die van het product."
       },
       {
         "type": "p",

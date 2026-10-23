@@ -419,7 +419,7 @@ export const articles = [
         "items": [
           "Azt a díjkulcsot adja meg, amelyet a szolgáltatója ténylegesen levon, adóval együtt – 3% plusz 5% adó esetén 3,15%-ot. Díj nélkül hagyja üresen mindkét mezőt.",
           "A díjkulcs módosítása csak a későbbi fizetésekre vonatkozik; a már rögzített költségek változatlanok maradnak.",
-          "A „Százalékos díj visszatérítése visszatérítéskor” alapból be van kapcsolva, azoknak a szolgáltatóknak, amelyek visszatérítéskor visszaadják a díjat; a fix összeg soha nem tér vissza. A sztornók, visszavételek, lemondott előrendelések és visszavont kiegyenlítések e szabály szerint fordítják vissza a költséget, és a vevő mindkét esetben ugyanannyit kap vissza.",
+          "A „Százalékos díj visszatérítése visszatérítéskor” alapból be van kapcsolva, azoknak a szolgáltatóknak, amelyek visszatérítéskor visszaadják a díjat. Ez a visszavételekre és a visszatérített előrendelési előlegekre vonatkozik: bekapcsolva a százalék visszatér, a fix összeg soha. A sztornó és a kiegyenlítés visszavonása nem veszi figyelembe a kapcsolót, és a rögzített teljes költséget visszaveszi, a fix összeget is. Mindkét esetben a vevő ugyanannyit kap vissza.",
           "Az olyan fizetések, amelyeket még a díjkulcs megadása előtt szedtek be, nem viselnek költséget: a Riportok ezeket „N díjkulcs nélkül” jelöléssel mutatja, a nettó értéket pedig „—” jelzi."
         ]
       },
@@ -1124,7 +1124,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Koppintson a kártyára vagy a Termékek megtekintése gombra a Költség nélküli termékek megnyitásához, amelyek a nyereségből kimaradó árbevétel szerint vannak rangsorolva. Koppintson egy sorra a termék megnyitásához, adja hozzá a költségét a Szerkesztés alatt, és visszatérve a sor a Költség hozzáadva jelölést kapja. A változatokkal rendelkező termék akkor számít költséggel rendelkezőnek, ha vagy valamelyik változatának, vagy magának a terméknek van költsége."
+        "text": "Koppintson a kártyára vagy a Termékek megtekintése gombra a Költség nélküli termékek megnyitásához, amelyek a nyereségből kimaradó árbevétel szerint vannak rangsorolva. Koppintson egy sorra a termék megnyitásához, adja hozzá a költségét a Szerkesztés alatt, és visszatérve a sor a Költség hozzáadva jelölést kapja. A változatokkal rendelkező termék csak akkor kap Költség hozzáadva jelölést, ha minden költség nélkül eladott változatának van költsége – a sajátja, vagy a termék költsége, amelyet követ."
       },
       {
         "type": "p",

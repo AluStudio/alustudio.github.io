@@ -421,7 +421,7 @@ export const articles = [
         "items": [
           "Skriv den sats, som din udbyder faktisk trækker, inklusive moms – ved 3 % plus 5 % moms skriver du 3,15 %. Lad begge felter stå tomme, hvis der ikke er noget gebyr.",
           "En ændring af satsen gælder kun for senere betalinger. Gebyrer, der allerede er registreret, forbliver, som de var.",
-          "„Procentgebyr returneres ved refusion“ er slået til som standard, til udbydere der giver deres gebyr tilbage ved refusion. Det faste gebyr returneres aldrig. Makuleringer, returvarer, annullerede forudbestillinger og tilbageførte afregninger tilbagefører gebyrer efter denne regel, og kunden får det samme beløb tilbage i begge tilfælde.",
+          "„Procentgebyr returneres ved refusion“ er slået til som standard, til udbydere der giver deres gebyr tilbage ved refusion. Den styrer returvarer og refunderede depositum på forudbestillinger: når den er slået til, returneres procentdelen, men det faste gebyr aldrig. En makulering eller en tilbageførsel af en afregning ignorerer kontakten og tilbagefører hele det gebyr, der blev registreret, også det faste. Under alle omstændigheder får kunden det samme beløb tilbage.",
           "Betalinger, der blev modtaget, før metoden havde en sats, har intet gebyr: Statistik markerer dem „uden gebyrsats“ og viser nettoen som „—“."
         ]
       },
@@ -1125,7 +1125,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tryk på kortet eller på Se produkter for at åbne Produkter uden kostpris, sorteret efter den omsætning, der er holdt uden for dækningsbidraget. Tryk på en række for at åbne produktet, tilføj kostprisen fra Rediger, og rækken er markeret Kostpris tilføjet, når du kommer tilbage. Et produkt med varianter regnes for at have en kostpris, når enten en variant eller selve produktet har en."
+        "text": "Tryk på kortet eller på Se produkter for at åbne Produkter uden kostpris, sorteret efter den omsætning, der er holdt uden for dækningsbidraget. Tryk på en række for at åbne produktet, tilføj kostprisen fra Rediger, og rækken er markeret Kostpris tilføjet, når du kommer tilbage. Et produkt med varianter markeres først som Kostpris tilføjet, når hver variant, der er solgt uden kostpris, har en – enten sin egen eller produktets kostpris, som den følger."
       },
       {
         "type": "p",

@@ -427,7 +427,7 @@ export const articles = [
         "items": [
           "Shkruaj normën që ofruesi zbret realisht, me taksën të përfshirë — për 3% plus 5% taksë, shkruaj 3,15%. Lëri të dyja fushat bosh nëse nuk ka komision.",
           "Ndryshimi i normës vlen vetëm për pagesat e mëvonshme; komisionet e regjistruara tashmë mbeten siç ishin.",
-          "“Përqindja e komisionit kthehet te rimbursimet” është e aktivizuar si parazgjedhje, për ofruesit që e kthejnë komisionin kur bën rimbursim; komisioni fiks nuk kthehet kurrë. Shfuqizimet, kthimet, porositë paraprake të anuluara dhe shlyerjet e zhbëra e anulojnë komisionin sipas këtij rregulli, dhe klienti merr të njëjtën shumë në të dyja rastet.",
+          "“Përqindja e komisionit kthehet te rimbursimet” është e aktivizuar si parazgjedhje, për ofruesit që e kthejnë komisionin kur bën rimbursim. Ajo rregullon kthimet dhe kaparet e rimbursuara të porosive paraprake: kur është e aktivizuar, përqindja kthehet; komisioni fiks nuk kthehet kurrë. Një shfuqizim ose një shlyerje e zhbërë e injoron këtë çelës dhe merr prapa komisionin e plotë që kishte regjistruar, përfshirë komisionin fiks. Në të dyja rastet, klienti merr të njëjtën shumë.",
           "Pagesat e arkëtuara para se mënyra të kishte normë nuk kanë komision: Statistika i shënon “N pa normë” dhe e shfaq neton si “—”."
         ]
       },
@@ -1127,7 +1127,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Trokit kartën ose Shiko produktet për të hapur Produkte pa kosto, të renditura sipas të ardhurave nga shitjet që mbeten jashtë fitimit. Trokit një rresht për të hapur produktin, shto koston nga Ndrysho dhe rreshti shënohet Kostoja u shtua kur kthehesh. Një produkt me variante llogaritet me kosto sapo ka kosto një variant ose vetë produkti."
+        "text": "Trokit kartën ose Shiko produktet për të hapur Produkte pa kosto, të renditura sipas të ardhurave nga shitjet që mbeten jashtë fitimit. Trokit një rresht për të hapur produktin, shto koston nga Ndrysho dhe rreshti shënohet Kostoja u shtua kur kthehesh. Një produkt me variante shënohet Kostoja u shtua vetëm kur çdo variant i shitur pa kosto ka një kosto — të vetën ose koston e produktit, që ndiqet."
       },
       {
         "type": "p",

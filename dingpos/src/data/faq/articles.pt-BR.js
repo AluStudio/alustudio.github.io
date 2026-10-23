@@ -419,7 +419,7 @@ export const articles = [
         "items": [
           "Informe a alíquota que a operadora realmente desconta, com impostos incluídos — para 3% mais 5% de imposto, informe 3,15%. Deixe os dois campos vazios para nenhuma taxa.",
           "Mudar a alíquota vale apenas para os pagamentos seguintes; as taxas já registradas continuam como estavam.",
-          "“Percentual da taxa devolvido em reembolsos” vem ativado por padrão, para operadoras que devolvem a taxa quando você faz uma devolução; a taxa fixa nunca é devolvida. Anulações, devoluções, encomendas canceladas e estornos da quitação estornam as taxas por essa regra, e o cliente recebe de volta o mesmo valor nos dois casos.",
+          "“Percentual da taxa devolvido em reembolsos” vem ativado por padrão, para operadoras que devolvem a taxa quando você faz um reembolso. Ele vale para devoluções e para sinais de encomendas reembolsados: com ele ativado, a porcentagem é devolvida; a taxa fixa nunca. Uma anulação ou um estorno da quitação ignora a chave e estorna a taxa inteira que registrou, taxa fixa incluída. Nos dois casos, o cliente recebe de volta o mesmo valor.",
           "Pagamentos recebidos antes de a forma ter uma alíquota ficam sem taxa: o Resumo os marca como “N sem alíquota” e mostra o líquido como “—”."
         ]
       },
@@ -1120,7 +1120,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Toque no cartão ou em Ver produtos para abrir Produtos sem custo, ordenados pela receita que ficou fora do lucro. Toque em uma linha para abrir o produto, informe o custo em Editar e, ao voltar, a linha aparece marcada como Custo adicionado. Um produto com variantes conta como tendo custo quando uma variante ou o próprio produto tem custo."
+        "text": "Toque no cartão ou em Ver produtos para abrir Produtos sem custo, ordenados pela receita que ficou fora do lucro. Toque em uma linha para abrir o produto, informe o custo em Editar e, ao voltar, a linha aparece marcada como Custo adicionado. Um produto com variantes só aparece como Custo adicionado quando todas as variantes vendidas sem custo passam a ter um — o próprio custo da variante ou o do produto, que ela segue."
       },
       {
         "type": "p",

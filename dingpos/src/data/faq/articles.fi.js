@@ -429,7 +429,7 @@ export const articles = [
         "items": [
           "Syötä määrä, jonka maksupalvelusi todella vähentää, vero mukaan lukien – jos kulu on 3 % ja vero 5 %, syötä 3,15 %. Jätä molemmat kentät tyhjiksi, jos kuluja ei ole.",
           "Määrän muutos koskee vain myöhempiä maksuja; jo kirjatut maksukulut pysyvät ennallaan.",
-          "”Prosenttiosuus palautuu palautuksissa ja ennakkotilausten peruutuksissa” on oletuksena päällä niille palveluille, jotka palauttavat kulunsa hyvityksen yhteydessä; kiinteää osuutta ei koskaan palauteta. Mitätöinnit, palautukset, peruutetut ennakkotilaukset ja peruutetut maksun kuittaukset kumoavat maksukulut tämän säännön mukaan, ja asiakas saa takaisin saman summan kummassakin tapauksessa.",
+          "”Prosenttiosuus palautuu palautuksissa” on oletuksena päällä niille palveluille, jotka palauttavat kulunsa hyvityksen yhteydessä. Se koskee palautuksia ja palautettuja ennakkotilausten etumaksuja: kun valinta on päällä, prosenttiosuus palautuu; kiinteä osuus ei koskaan. Mitätöinti tai peruutettu maksun kuittaus ohittaa valinnan ja perii takaisin koko kirjatun maksukulun, kiinteä osuus mukaan lukien. Asiakas saa kummassakin tapauksessa takaisin saman summan.",
           "Maksuihin, jotka on vastaanotettu ennen kuin maksutavalla oli määrä, ei kirjata maksukulua: Tilastot merkitsee ne tekstillä ”N ilman maksukulun määrää” ja näyttää nettotulon muodossa ”—”."
         ]
       },
@@ -1130,7 +1130,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Napauta korttia tai Näytä tuotteet avataksesi näkymän Tuotteet ilman omakustannetta, jossa tuotteet on järjestetty sen mukaan, kuinka paljon liikevaihtoa on jäänyt myyntikatteen ulkopuolelle. Napauta riviä avataksesi tuotteen, lisää omakustannus Muokkaa-painikkeella, niin rivi on palatessasi merkitty tekstillä Omakustanne lisätty. Tuotteen, jolla on variantteja, katsotaan saaneen omakustannuksen, kun joko jollakin variantilla tai itse tuotteella on omakustannus."
+        "text": "Napauta korttia tai Näytä tuotteet avataksesi näkymän Tuotteet ilman omakustannetta, jossa tuotteet on järjestetty sen mukaan, kuinka paljon liikevaihtoa on jäänyt myyntikatteen ulkopuolelle. Napauta riviä avataksesi tuotteen, lisää omakustannus Muokkaa-painikkeella, niin rivi on palatessasi merkitty tekstillä Omakustanne lisätty. Tuote, jolla on variantteja, merkitään tekstillä Omakustanne lisätty vasta, kun jokaisella ilman omakustannusta myydyllä variantilla on omakustannus – oma tai tuotteen omakustannus, jota variantti seuraa."
       },
       {
         "type": "p",

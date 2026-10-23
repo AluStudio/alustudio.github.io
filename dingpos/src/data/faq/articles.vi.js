@@ -421,7 +421,7 @@ export const articles = [
         "items": [
           "Nhập tỷ lệ mà nhà cung cấp thực sự khấu trừ, đã gồm thuế — với 3% cộng 5% thuế, hãy nhập 3,15%. Để trống cả hai ô nếu không có phí.",
           "Thay đổi tỷ lệ chỉ áp dụng cho các khoản thanh toán sau đó; phí đã ghi vẫn giữ nguyên.",
-          "“Hoàn lại phí phần trăm khi hoàn tiền” được bật theo mặc định, dành cho nhà cung cấp hoàn lại phí khi bạn hoàn tiền; phí cố định không bao giờ được hoàn lại. Vô hiệu hóa, trả hàng, hủy đơn đặt trước và hủy tất toán đều đảo phí theo quy tắc này, và khách nhận lại cùng một số tiền trong mọi trường hợp.",
+          "“Hoàn lại phí phần trăm khi hoàn tiền” được bật theo mặc định, dành cho nhà cung cấp hoàn lại phí khi bạn hoàn tiền. Mục này áp dụng cho trả hàng và tiền đặt cọc đơn đặt trước được hoàn: khi bật, phần phí phần trăm được hoàn lại; phí cố định thì không bao giờ. Vô hiệu hóa hoặc hủy tất toán bỏ qua công tắc này và thu hồi toàn bộ khoản phí đã ghi, kể cả phí cố định. Dù theo cách nào, khách vẫn nhận lại cùng một số tiền.",
           "Các khoản thanh toán thu trước khi phương thức có tỷ lệ phí sẽ không có phí: Thống kê đánh dấu “(N chưa có tỷ lệ phí)” và hiển thị thực nhận là “—”."
         ]
       },
@@ -1124,7 +1124,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Chạm vào thẻ hoặc Xem sản phẩm để mở Sản phẩm chưa có giá vốn, xếp theo doanh thu bị bỏ ra khỏi lợi nhuận. Chạm một dòng để mở sản phẩm, thêm giá vốn từ Sửa, và khi quay lại dòng đó sẽ được đánh dấu Đã thêm giá vốn. Sản phẩm có biến thể được coi là đã có giá vốn khi một biến thể hoặc chính sản phẩm có giá vốn."
+        "text": "Chạm vào thẻ hoặc Xem sản phẩm để mở Sản phẩm chưa có giá vốn, xếp theo doanh thu bị bỏ ra khỏi lợi nhuận. Chạm một dòng để mở sản phẩm, thêm giá vốn từ Sửa, và khi quay lại dòng đó sẽ được đánh dấu Đã thêm giá vốn. Sản phẩm có biến thể chỉ được đánh dấu Đã thêm giá vốn khi mọi biến thể đã bán mà chưa có giá vốn đều có giá vốn — của riêng biến thể, hoặc giá vốn của sản phẩm để áp dụng theo."
       },
       {
         "type": "p",
