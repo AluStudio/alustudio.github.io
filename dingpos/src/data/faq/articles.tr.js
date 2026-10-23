@@ -407,10 +407,10 @@ export const articles = [
     "keywords": [
       "işlem ücreti",
       "kart ücreti",
-      "komisyon",
+      "kesinti",
       "ücret oranı",
       "net alınan tutar",
-      "POS komisyonu",
+      "POS kesintisi",
       "line pay"
     ],
     "content": [

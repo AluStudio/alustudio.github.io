@@ -646,7 +646,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Zaxira oldindan buyurtma berilganda ayriladi, shuning uchun sotish mumkin bo‘lgan miqdor darhol o‘zgaradi. Bu signal, ushlab qolish emas: keyingi sotuv oxirgi donani olib qo‘yishi mumkin. Zaxirada yo‘q tovarlar manfiyga tushadi va xarid buyurtmasi qabul qilingach tiklanadi.",
+          "Oldindan buyurtma berilganda zaxira kamayadi, shuning uchun sotish mumkin bo‘lgan miqdor darhol o‘zgaradi. Bu signal, ushlab qolish emas: keyingi sotuv oxirgi donani olib qo‘yishi mumkin. Zaxirada yo‘q tovarlar manfiyga tushadi va xarid buyurtmasi qabul qilingach tiklanadi.",
           "Mijoz olib ketishga kelganda, buyurtma tafsilotlarida «Topshirish»ni bosib qolgan summani oling. Shundan keyin buyurtma oddiy yakunlangan sotuvga aylanadi, keyingi qaytarishlar odatdagi tartibda o‘tadi.",
           "Mijoz kelmasa, buyurtma tafsilotlarida «Buyurtmani bekor qilish»ni bosing va avansni qaytarish yoki ushlab qolishni tanlang. Zaxira qayta qo‘shiladi.",
           "Avans cheki va yakuniy topshirish cheki bir xil raqamga ega."
@@ -792,7 +792,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "0 — to‘g‘ri narx (masalan, bepul yetkazib berish); bo‘sh maydonni qo‘shib bo‘lmaydi. Narxni do‘koningizning soliq rejimi qolgan hamma narsani narxlaganidek kiriting.",
+          "0 narx ham mumkin (masalan, bepul yetkazib berish); bo‘sh maydonni qo‘shib bo‘lmaydi. Narxni do‘koningizning soliq rejimi qolgan hamma narsani narxlaganidek kiriting.",
           "Savatda har bir erkin narxli mahsulotga bitta qator to‘g‘ri keladi: unga yana tegsangiz, o‘sha qator ochiladi va narxni o‘zgartirishingiz mumkin.",
           "Erkin narx yoqilganda «Aksiyalardan chiqarish» ham yoqiladi, shuning uchun haqqa chegirma berilmaydi va u summa chegaralariga hisoblanmaydi. Kelishilgan tovar aksiyalarda qatnashishi kerak bo‘lsa, uni qayta o‘chiring.",
           "Sotilgach, qator boshqalari kabi soliqqa tortiladi, ball beradi va Statistika’da hisobga olinadi; qaytarishda kiritilgan narx qaytariladi.",

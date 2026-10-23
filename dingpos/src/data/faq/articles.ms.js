@@ -423,7 +423,7 @@ export const articles = [
         "items": [
           "Masukkan kadar yang sebenarnya ditolak oleh penyedia anda, termasuk cukai — untuk 3% campur 5% cukai, masukkan 3.15%. Biarkan kedua-dua medan kosong jika tiada caj.",
           "Perubahan kadar hanya digunakan untuk bayaran selepas itu; caj yang sudah direkodkan kekal seperti asal.",
-          "“Peratusan caj dikembalikan semasa bayaran balik” dihidupkan secara lalai, untuk penyedia yang mengembalikan cajnya apabila anda membuat bayaran balik; caj tetap tidak pernah dikembalikan. Pembatalan jualan, pemulangan, prapesanan yang dibatalkan dan penyelesaian yang dibatalkan membalikkan caj mengikut peraturan ini, dan pelanggan menerima jumlah yang sama sama ada begitu atau tidak.",
+          "“Peratusan caj dikembalikan semasa bayaran balik” dihidupkan secara lalai, untuk penyedia yang mengembalikan cajnya apabila anda membuat bayaran balik; caj tetap tidak pernah dikembalikan. Jualan yang dibatalkan, pemulangan, prapesanan yang dibatalkan dan penyelesaian yang dibatalkan membalikkan caj mengikut peraturan ini, dan pelanggan menerima jumlah yang sama sama ada caj dikembalikan atau tidak.",
           "Bayaran yang diterima sebelum kaedah itu mempunyai kadar tidak membawa caj: Statistik menandakannya “N tiada kadar” dan menunjukkan jumlah bersih sebagai “—”."
         ]
       },
@@ -917,7 +917,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ini memang direka begitu: pembayaran tidak pernah disekat kerana stok tidak mencukupi. Peraturan pertama daftar tunai yang sedang beroperasi ialah pelanggan tidak perlu menunggu — nombor yang salah di atas kertas boleh dibetulkan kemudian, tetapi jualan yang terganggu hilang selama-lamanya."
+        "text": "Ini memang direka begitu: proses bayar tidak pernah disekat kerana stok tidak mencukupi. Peraturan pertama kaunter yang sedang beroperasi ialah pelanggan tidak perlu menunggu — nombor yang salah di atas kertas boleh dibetulkan kemudian, tetapi jualan yang terganggu hilang selama-lamanya."
       },
       {
         "type": "p",
@@ -983,7 +983,7 @@ export const articles = [
     "keywords": [
       "hasil jualan",
       "tunai diterima",
-      "pendapatan jualan",
+      "hasil jualan",
       "padanan akaun",
       "penyelesaian",
       "deposit",
@@ -1737,7 +1737,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Dalam tempoh 7 hari terakhir dan pada hari terakhir, app mengingatkan anda sekali setiap kali tentang bilangan hari yang tinggal, bahawa pembayaran dijeda apabila percubaan tamat, dan bahawa data anda disimpan."
+        "text": "Dalam tempoh 7 hari terakhir dan pada hari terakhir, app mengingatkan anda sekali setiap kali tentang bilangan hari yang tinggal, bahawa proses bayar dijeda apabila percubaan tamat, dan bahawa data anda disimpan."
       },
       {
         "type": "p",

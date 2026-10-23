@@ -478,8 +478,8 @@ export const articles = [
     "keywords": [
       "fsheh",
       "pa stok",
-      "e shitur",
-      "stok zero",
+      "malli mbaroi",
+      "stok bosh",
       "arkë",
       "produkti mungon",
       "nuk e gjej produktin"
@@ -791,7 +791,7 @@ export const articles = [
       "tarifa e transportit",
       "tarifa e shërbimit",
       "çmim i negociuar",
-      "çmim tregu"
+      "çmim sipas marrëveshjes"
     ],
     "content": [
       {

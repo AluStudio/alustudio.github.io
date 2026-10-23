@@ -304,7 +304,7 @@
         },
         "payment_fees": {
           "name": "Perkiraan biaya pembayaran",
-          "desc": "Atur tarif biaya tiap metode pembayaran; lihat biaya dan kas bersih yang diterima per metode"
+          "desc": "Atur tarif biaya tiap metode pembayaran; lihat perkiraan biaya dan perkiraan kas bersih diterima per metode"
         },
         "comparison": {
           "name": "Perbandingan periode",

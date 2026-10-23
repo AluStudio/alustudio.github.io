@@ -984,7 +984,7 @@ export const articles = [
     "keywords": [
       "ricavi",
       "incassato",
-      "entrate",
+      "incassi",
       "quadratura cassa",
       "acconto",
       "vendita a credito"

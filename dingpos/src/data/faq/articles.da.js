@@ -380,7 +380,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Hvis din udbyder af kort- eller mobilbetaling tager et gebyr, kan du give betalingsmåden en gebyrsats, så Statistik estimerer gebyrer og forventet nettomodtaget for hver metode – se „Kan DingPOS holde styr på gebyrer på kort- og mobilbetalinger?“"
+        "text": "Hvis din udbyder af kort- eller mobilbetaling tager et gebyr, kan du give betalingsmåden en gebyrsats, så Statistik estimerer gebyrerne og det forventede nettobeløb for hver metode – se „Kan DingPOS holde styr på gebyrer på kort- og mobilbetalinger?“"
       },
       {
         "type": "p",
@@ -400,7 +400,7 @@ export const articles = [
     "question": "Kan DingPOS holde styr på gebyrer på kort- og mobilbetalinger?",
     "keywords": [
       "transaktionsgebyr",
-      "kortgebyr",
+      "gebyr på kortbetaling",
       "gebyr",
       "gebyrsats",
       "nettomodtaget",

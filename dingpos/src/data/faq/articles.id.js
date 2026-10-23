@@ -1801,7 +1801,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan pembatalan penjualan (void), retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
+        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan tindakan Batalkan penjualan (Void), retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
       },
       {
         "type": "list",
