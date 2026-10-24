@@ -39,6 +39,7 @@ import {
   setHtmlLang,
   setLanguageAlternates,
 } from "../../scripts/rewrite-seo-tags.mjs";
+import { contentUnits, fitDescription } from "../../scripts/meta-description.mjs";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -50,7 +51,6 @@ const writeSitemap = process.argv.includes("--write-sitemap");
 
 const BASE_URL = "https://alu-studio.com/dingpos";
 const SITE_NAME = "DingPOS";
-const DESCRIPTION_MAX = 155;
 
 const readLocale = (code) =>
   JSON.parse(readFileSync(join(__dirname, "..", "src", "locales", code, "translation.json"), "utf8"));
@@ -212,27 +212,19 @@ function validateFaqPacks() {
 
 validateFaqPacks();
 
-/** First paragraph of an article, trimmed to a snippet-sized description. */
-function articleDescription(article) {
-  const firstParagraph = article.content.find((b) => b.type === "p");
-  const text = (firstParagraph?.text || article.question).trim();
-  if (text.length <= DESCRIPTION_MAX) return text;
-  return `${text.slice(0, DESCRIPTION_MAX - 1).trimEnd()}…`;
-}
-
 /** Every page of one locale, with its final title and description. */
 function localeRoutes(locale) {
   const { ui, faq } = locale;
   return [
-    { path: "", title: ui.hero.meta_title, description: ui.hero.meta_description },
+    { path: "", title: ui.hero.meta_title, description: fitDescription([ui.hero.meta_description]) },
     ...STATIC_ROUTES.map(({ path, meta }) => {
       const [title, description] = meta(ui);
-      return { path, title: `${title} — ${SITE_NAME}`, description };
+      return { path, title: `${title} — ${SITE_NAME}`, description: fitDescription([description]) };
     }),
     ...faq.articles.map((article) => ({
       path: `support/${article.slug}`,
       title: `${article.question} — ${SITE_NAME}`,
-      description: articleDescription(article),
+      description: fitDescription(contentUnits(article.content)),
       jsonLd: breadcrumbList([
         { name: SITE_NAME, url: routeUrl(locale, "") },
         { name: ui.support.doc_title, url: routeUrl(locale, "support") },

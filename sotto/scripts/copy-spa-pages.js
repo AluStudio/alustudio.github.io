@@ -30,6 +30,7 @@ import {
   setHtmlLang,
   setLanguageAlternates,
 } from "../../scripts/rewrite-seo-tags.mjs";
+import { DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -38,7 +39,6 @@ const sitemapPath = join(__dirname, "..", "..", "sitemap.xml");
 
 const BASE_URL = "https://alu-studio.com/sotto";
 const SITE_NAME = "Sotto";
-const SUMMARY_MAX = 160;
 
 const readLocale = (code) =>
   JSON.parse(readFileSync(join(__dirname, "..", "src", "locales", code, "translation.json"), "utf8"));
@@ -134,9 +134,6 @@ function validateGuides() {
       const at = `[${code}] guide "${guide.slug}"`;
       if (!guide.title?.trim()) errors.push(`${at} has no title`);
       if (!guide.summary?.trim()) errors.push(`${at} has no summary`);
-      else if (guide.summary.length > SUMMARY_MAX) {
-        errors.push(`${at} summary is ${guide.summary.length} characters; the meta description limit is ${SUMMARY_MAX}`);
-      }
       // Answer first: the opening paragraph answers the title before any section.
       if (guide.content[0]?.type !== "p") errors.push(`${at} must open with a paragraph, not "${guide.content[0]?.type}"`);
       if (!guide.content.some((b) => b.type === "h2")) errors.push(`${at} has no h2 section`);
@@ -184,8 +181,16 @@ const pages = LOCALES.flatMap((locale) =>
 // even across languages. zh-Hans is generated from zh-Hant, so a zh-Hant title
 // with no character that converts comes out identical — give that entry a
 // mainland wording in the Sotto overrides of scripts/gen-zh-hans.mjs.
-function validateUniqueMeta() {
+// Every description is hand-written, so one over the limit is a copy error to
+// fix at the source, not a string to cut here.
+function validatePageMeta() {
   const errors = [];
+  for (const page of pages) {
+    const length = [...page.description].length;
+    if (length > DESCRIPTION_MAX) {
+      errors.push(`${page.url} description is ${length} characters; the limit is ${DESCRIPTION_MAX}: "${page.description}"`);
+    }
+  }
   for (const field of ["title", "description"]) {
     const firstUrl = new Map();
     for (const page of pages) {
@@ -197,7 +202,7 @@ function validateUniqueMeta() {
   fail("Page meta validation failed", errors);
 }
 
-validateUniqueMeta();
+validatePageMeta();
 
 // Routes are derived from the data, but sitemap.xml is hand-maintained —
 // without this check a new guide (or locale) ships live pages that are never

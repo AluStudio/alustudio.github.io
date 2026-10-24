@@ -30,6 +30,8 @@ read_when:
 - 每個合法 route 都有實體、self-canonical 的 `index.html`：各 app 的 `scripts/copy-spa-pages.js` 複製 app root HTML 時，透過 `scripts/rewrite-seo-tags.mjs` 改寫該 route 自己的 canonical、og:url、title、description。子頁沿用 app 首頁的 canonical 會被當成重複內容。
 - App 首頁的 `<title>` 格式為「品牌 — 類別描述」，例如 `Pikgeon — Postcard Tracker App with On-Device OCR`。只放品牌名會讓非品牌查詢失去最強的 on-page 訊號。類別用詞取自既有 meta / JSON-LD / llms.txt 已驗證的說法。
 - 每個子頁要有自己的 description，不沿用首頁。
+- description 上限 160 字元（code point），這是 Bing 的上限，Sotto guide 的 `summary` 也用同一個數字（`scripts/meta-description.mjs` 的 `DESCRIPTION_MAX`）。DingPOS 的 FAQ 文章沒有手寫摘要，description 由 `fitDescription()` 從答案開頭推導：段落與每個清單項目各算一個單位，依閱讀順序整個塞進上限，塞不下就停；以冒號結尾的引言一定接上下一個單位的開頭，所以不會只剩「折扣分兩層：」這種沒有答案的半句。單位本身超過上限時，依序在句尾、子句、字詞邊界切（切在後半段，避免只剩「Yes.」），非句尾才補 `…`。DingPOS 的靜態頁（首頁、pricing、privacy、terms、support）也經過同一個函式，翻譯語言的 `meta_description` 超長時在這裡收斂，不手改產生的翻譯檔。Sotto 的 description 全是手寫，超過上限時 build 失敗，回頭改文案。
+- description 不設下限。Google 不看長度，只會換掉寫得差的 description；中日韓文用 Bing 的字數標準只能靠灌水達成。Bing WMT 的「title 太短」「description 太短」只在被點名的頁面確實缺資訊時才改，不為了消警告批次加長。
 - 站內連結直接指向 route 的 trailing-slash URL（`/dingpos/pricing/`），不寫 `/dingpos/pricing`：少了斜線，edge 會回 307 再導過去，crawler 在每一頁的每一條連結都多走一次 redirect，而且 307 是暫時性的，傳遞的訊號比直接連到 canonical 弱。DingPOS 的 router basename 帶結尾斜線（`/dingpos/ja/`），`<Link to="/">` 才會是首頁的 URL；其餘 `to` 一律寫成 `/pricing/`、`/support/<slug>/`。prerender 的 route audit 會擋下 `DIRECT_LINK_PREFIXES`（目前只有 `/dingpos/`）底下指向非 sitemap route 的站內連結。
 - `<html lang>` 必須和 prerender 出來的正文語言一致：各 app 的 `i18n.js` 解析語系後同步 `document.documentElement.lang`。DingPOS 與 Sotto 另外由 copy script 在靜態 HTML 寫好 `lang`（Sotto 的阿拉伯文另加 `dir="rtl"`）。
 - 元件層的 render 限制（收合內容留在 DOM、不用 JS-gated scroll reveal）見 AGENTS.md §Sub-app Notes 與 §Project Skills。
@@ -104,7 +106,8 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 - repo 根目錄的 `sitemap.xml` 是 URL 成員的唯一來源。dingpos 與 sotto 的 build 會驗證 sitemap 裡自己的 URL 跟產出的頁面（每種語言）完全一致，多一個少一個都會讓 build 失敗。Sotto 的區塊手動維護；DingPOS 的區塊由 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 從頁面清單改寫（32 種語言、每種 64 頁，手寫一定會漏）。
 - DingPOS 每種語言的子頁 `lastmod` 只看該語言自己的字串與 FAQ pack；語言首頁看整個 `dingpos/src`，但用 git pathspec `:(exclude)` 排除其他語言的 `locales/<code>` 與 `articles.<code>.js`（`scripts/generate-sitemap.mjs` `dingposRules`）。所以共用元件改了，每種語言的首頁都會更新日期，但翻譯或上線一種語言，不會改到其他語言任何一頁的日期。首頁曾經直接看整個 `dingpos/src`，結果連續上線約 30 種語言時，每個語言首頁的日期被推了約 30 次，內容卻沒變。
 - 部署時由 `scripts/generate-sitemap.mjs` 輸出 `_site/sitemap.xml`，每個 URL 的 `lastmod` 取自產生該 route 的檔案的最後一次 git commit。這個 `lastmod` 不手填、不批次更新。CI checkout 必須用 `fetch-depth: 0`，shallow clone 會讓所有日期塌成同一天。
-- IndexNow 不接：小站靠一般 crawling 就夠。只有 Bing 收錄明顯遲緩時才啟用（Bing WMT 有入口）。
+- IndexNow 暫不接：Google 不支援，而它只解決「Bing 還沒發現或排程到」，解決不了「Bing 抓了但不收」。「Bing 收錄明顯遲緩」的判定：sitemap 提交滿四週後，Bing WMT Site Explorer 的已索引數仍低於 sitemap URL 數的八成，**且** URL Inspection 抽查約 10 個未索引的 URL，多數是「已發現但未編目」。兩者都成立才啟用；多數是「已編目但未索引」時，該查的是內容厚度，不是 IndexNow。2026-10 的基準：sitemap 10-21 提交、10-22 抓完，已索引 30／約 2.2K，多數 DingPOS 語言是 10-17 至 10-20 才上線，判定日為 2026-11-18。
+- 啟用時用 CI 在 `wrangler deploy` 成功後提交這次有變動的 URL；key 是公開驗證檔（根目錄 `<key>.txt`），不是 secret；提交失敗不讓部署變紅。不用 Cloudflare Crawler Hints：它對 Worker static assets 會不會觸發沒有文件保證，也沒有觀測點。不靠 WMT 手動提交：新站配額對 2K 以上的 URL 沒有意義。
 
 ## Structured data 與 social meta
 
@@ -134,7 +137,8 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 
 每月一次：
 
-- GSC 與 Bing Webmaster Tools 的曝光、點擊、索引頁數。Bing 索引頁數應至少是 sitemap URL 數的八成。
+- GSC 與 Bing Webmaster Tools 的曝光、點擊、索引頁數。Bing 索引頁數應至少是 sitemap URL 數的八成；不到時照 §Sitemap 的 IndexNow 判定抽查。
+- Bing WMT 的 Recommendations 要點進去看「發生此錯誤的網頁」：首頁卡片寫「many pages」，實際可能只有一兩頁，而且常是改版前的舊掃描。改完的頁面在 URL 檢查按「要求編製索引」。
 - Cloudflare AI Crawl Control 各 bot 的請求數變化。
 - 在 ChatGPT、Perplexity、Google AI 手動查「Pikgeon」「Babbby」「Sotto」「DingPOS」，記錄回答與引用。
 - 抽查 sitemap `lastmod` 是否和 git 歷史一致。
