@@ -7,6 +7,7 @@ import './index.css'
 import App from './App.jsx'
 import { routerBasename, currentLanguage, i18nReady } from "./i18n";
 import { loadFaq } from "./data/faq";
+import { loadGuides } from "./data/guides";
 // The same ESM module Navbar imports Collapse from: loading the UMD bundle as
 // well registered every data-bs-toggle handler twice, so a dropdown opened and
 // closed again on one click.
@@ -32,7 +33,7 @@ const app = (
 // place: re-rendering would replace the painted nodes and record a new LCP after
 // the bundle runs. The dev server and the prerender pass itself get Vite's empty
 // shell, which has nothing to hydrate.
-Promise.all([i18nReady, loadFaq(currentLanguage)]).then(() => {
+Promise.all([i18nReady, loadFaq(currentLanguage), loadGuides(currentLanguage)]).then(() => {
   if (container.firstElementChild) {
     hydrateRoot(container, app)
   } else {

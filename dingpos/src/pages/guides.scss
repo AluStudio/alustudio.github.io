@@ -1,0 +1,319 @@
+@import "../assets/scss/variables";
+
+// Guides index and article. The article shares the support article's measure
+// and type scale (support.scss .faq-article), plus tables and sources.
+
+.guides-page,
+.guide-article {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  line-height: 1.8;
+}
+
+.guides-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-family: $headings-font-family;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.guides-subtitle {
+  color: $ink-mid;
+  margin: 0;
+}
+
+.guide-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.guide-card {
+  background: $surface;
+  border: 1px solid $neutral-100;
+  border-radius: $border-radius-lg;
+  padding: 1.25rem 1.5rem;
+}
+
+.guide-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+
+  a {
+    color: $ink;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent-600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+.guide-card-summary {
+  color: $ink-mid;
+  font-size: 0.93rem;
+  margin: 0;
+}
+
+.guide-market {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  background: $accent-100;
+  color: $accent-700;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.guide-breadcrumb {
+  font-size: 0.88rem;
+  margin-bottom: 1.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: $accent-600;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: $accent-700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+.guide-article > h1 {
+  font-family: $headings-font-family;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid $accent-500;
+}
+
+.guide-content {
+  h2 {
+    font-family: $headings-font-family;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 2.25rem 0 0.75rem;
+  }
+
+  p,
+  li {
+    color: $ink-mid;
+  }
+
+  p {
+    margin-bottom: 0.9rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.5rem;
+    margin-bottom: 0.9rem;
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .guide-steps li::marker {
+    font-weight: 700;
+    color: $accent-600;
+  }
+
+  a {
+    color: $accent-600;
+    text-underline-offset: 2px;
+  }
+}
+
+.guide-note {
+  display: flex;
+  gap: 0.75rem;
+  background: rgba($accent-100, 0.55);
+  border: 1px solid rgba($accent-300, 0.4);
+  border-radius: $border-radius;
+  padding: 0.85rem 1rem;
+  margin: 1.1rem 0;
+
+  .bi {
+    color: $accent-500;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.93rem;
+  }
+}
+
+.guide-table-wrap {
+  overflow-x: auto;
+  margin: 1.1rem 0 1.25rem;
+}
+
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: $surface;
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  caption {
+    caption-side: bottom;
+    color: $ink-soft;
+    font-size: 0.82rem;
+    padding-top: 0.5rem;
+  }
+
+  th,
+  td {
+    border: 1px solid $neutral-100;
+    padding: 0.45rem 0.6rem;
+    text-align: start;
+    vertical-align: top;
+    color: $ink-mid;
+  }
+
+  // Break column heads at spaces only, so "現金" never splits in two.
+  thead th {
+    background: $neutral-50;
+    color: $ink;
+    font-weight: 700;
+    word-break: keep-all;
+  }
+
+  tbody th {
+    color: $ink;
+    font-weight: 600;
+    min-width: 5.5em;
+  }
+}
+
+.guide-checked {
+  margin-top: 2rem;
+  color: $ink-soft;
+  font-size: 0.85rem;
+}
+
+.guide-sources {
+  margin-top: 1rem;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+
+  li {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  a {
+    color: $ink-mid;
+    text-underline-offset: 2px;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      color: $accent-600;
+    }
+  }
+}
+
+.guide-cta {
+  margin-top: 2.5rem;
+  padding: 2rem 1.5rem;
+  border-radius: $border-radius-lg;
+  background: $surface;
+  border: 1px solid $neutral-100;
+  text-align: center;
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $ink-mid;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.guide-related {
+  margin-top: 2.5rem;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li + li {
+    border-top: 1px solid $neutral-100;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.55rem 0.1rem;
+    color: $ink-mid;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent-600;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .guides-page,
+  .guide-article {
+    padding: 1.5rem 0.5rem 3rem;
+  }
+
+  .guides-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .guide-article > h1 {
+    font-size: 1.4rem;
+  }
+}

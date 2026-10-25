@@ -17,7 +17,7 @@
  */
 
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import process from "node:process";
 
@@ -57,6 +57,9 @@ const DINGPOS_LANGUAGES = DINGPOS_REGISTRY.filter((l) => l.shipped);
 /** git pathspec magic that removes a path from the paths before it. */
 const EXCLUDE = ":(exclude)";
 
+const guidesPack = (code) => `dingpos/src/data/guides/guides.${code}.js`;
+const hasGuides = (code) => existsSync(fileURLToPath(new URL(`../${guidesPack(code)}`, import.meta.url)));
+
 /**
  * The whole DingPOS app minus every other language's strings and FAQ pack:
  * a shared component edit still re-dates the language root, but translating
@@ -67,8 +70,32 @@ const dingposAppFor = (code) => [
   ...DINGPOS_REGISTRY.filter((l) => l.code !== code).flatMap((l) => [
     `${EXCLUDE}dingpos/src/locales/${l.code}`,
     `${EXCLUDE}dingpos/src/data/faq/articles.${l.code}.js`,
+    ...(hasGuides(l.code) ? [`${EXCLUDE}${guidesPack(l.code)}`] : []),
   ]),
 ];
+
+/**
+ * Guides exist only in a language with a guides pack (they are written per
+ * market, not translated). Same pack-is-the-source tradeoff as support.
+ */
+function dingposGuideRules(root, code) {
+  if (!hasGuides(code)) return [];
+  const pack = guidesPack(code);
+  return [
+    [
+      `${root}guides/`,
+      [
+        pack,
+        "dingpos/src/data/guides/index.js",
+        "dingpos/src/pages/GuidesPage.jsx",
+        "dingpos/src/pages/GuidePage.jsx",
+        "dingpos/src/pages/guides.scss",
+        "dingpos/src/components/GuideBlocks.jsx",
+        ...appShell("dingpos"),
+      ],
+    ],
+  ];
+}
 
 /**
  * DingPOS rules for one shipped language. Sub-routes track that language's
@@ -104,6 +131,7 @@ export function dingposRules({ code, pathPrefix }) {
         "dingpos/src/components/Price.jsx",
       ],
     ],
+    ...dingposGuideRules(root, code),
     [`${root}privacy/`, dingposPage("PrivacyPage.jsx", code)],
     [`${root}terms/`, dingposPage("TermsPage.jsx", code)],
     // Root meta and hreflang are written by copy-spa-pages too, not only index.html.

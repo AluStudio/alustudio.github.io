@@ -23,12 +23,17 @@
  * pages built here, in every language — validated here so a drift fails the
  * build instead of 404ing (or going unindexed) in production.
  *
+ * Guides (/guides/ and /guides/<slug>/) are the exception to "every page in
+ * every language": they are written per market, not translated, so only a
+ * language with a guides pack gets them, and they carry no hreflang — no
+ * other language has the same page (docs/specs/seo-aeo.md §獲客文章).
+ *
  * `--write-sitemap` rewrites the DingPOS block of sitemap.xml from the page
  * list instead of checking it, then exits without writing pages.
  */
 
 import process from "node:process";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import {
@@ -39,7 +44,7 @@ import {
   setHtmlLang,
   setLanguageAlternates,
 } from "../../scripts/rewrite-seo-tags.mjs";
-import { contentUnits, fitDescription } from "../../scripts/meta-description.mjs";
+import { contentUnits, fitDescription, DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -55,6 +60,12 @@ const SITE_NAME = "DingPOS";
 const readLocale = (code) =>
   JSON.parse(readFileSync(join(__dirname, "..", "src", "locales", code, "translation.json"), "utf8"));
 
+const guidesPath = (code) => join(__dirname, "..", "src", "data", "guides", `guides.${code}.js`);
+
+/** A language's guides pack ({ ui, articles }), or null when it has no guides. */
+const readGuides = async (code) =>
+  existsSync(guidesPath(code)) ? import(pathToFileURL(guidesPath(code)).href) : null;
+
 const readFaq = (code) => import(pathToFileURL(join(__dirname, "..", "src", "data", "faq", `articles.${code}.js`)).href);
 
 // Every shipped language gets its own URL tree; en, the registry's first
@@ -68,6 +79,7 @@ const LOCALES = await Promise.all(
       pathPrefix: pathPrefix ? `${pathPrefix}/` : "",
       ogLocale,
       faq: await readFaq(code),
+      guides: await readGuides(code),
       ui: readLocale(code),
     })),
 );
@@ -212,9 +224,62 @@ function validateFaqPacks() {
 
 validateFaqPacks();
 
+// ── Guides ──────────────────────────────────────────────────
+const GUIDE_UI_KEYS = [
+  "nav", "title", "subtitle", "meta_description", "back", "related_title",
+  "sources_title", "checked", "cta_title", "cta_text", "cta_button",
+];
+const GUIDE_BLOCK_TYPES = new Set(["p", "h2", "note", "list", "steps", "table"]);
+const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+const INLINE_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+
+/** Every text of a block that may carry inline links. */
+const blockTexts = (block) => [
+  ...(block.text ? [block.text] : []),
+  ...(block.items ?? []),
+  ...(block.rows ?? []).flat(),
+];
+
+function validateGuides() {
+  const errors = [];
+  for (const { code, guides } of LOCALES) {
+    if (!guides) continue;
+    const { ui, articles } = guides;
+    for (const key of GUIDE_UI_KEYS) if (!ui?.[key]?.trim()) errors.push(`[${code}] guides ui has no "${key}"`);
+    if (!ui?.checked?.includes("{{date}}")) errors.push(`[${code}] guides ui "checked" has no {{date}}`);
+    if (!articles.length) errors.push(`[${code}] guides pack has no articles (delete the pack instead)`);
+    const slugs = articles.map((a) => a.slug);
+    if (new Set(slugs).size !== slugs.length) errors.push(`duplicate slugs in ${code} guides pack`);
+    for (const guide of articles) {
+      const at = `[${code}] guide "${guide.slug}"`;
+      if (!ui?.markets?.[guide.market]) errors.push(`${at} has market "${guide.market}", which ui.markets does not name`);
+      if (!DATE_PATTERN.test(guide.checked ?? "")) errors.push(`${at} has checked "${guide.checked}", not YYYY-MM-DD`);
+      if (!guide.title?.trim()) errors.push(`${at} has no title`);
+      if (!guide.summary?.trim()) errors.push(`${at} has no summary`);
+      else if ([...guide.summary].length > DESCRIPTION_MAX) errors.push(`${at} summary is over ${DESCRIPTION_MAX} characters`);
+      if (/[[\]]/.test(guide.summary ?? "")) errors.push(`${at} summary carries link markup; it is the meta description`);
+      // Answer first: the opening paragraph answers the title before any section.
+      if (guide.content[0]?.type !== "p") errors.push(`${at} must open with a paragraph, not "${guide.content[0]?.type}"`);
+      if (!guide.content.some((b) => b.type === "h2")) errors.push(`${at} has no h2 section`);
+      guide.content.forEach((block, i) => {
+        if (!GUIDE_BLOCK_TYPES.has(block.type)) errors.push(`${at} block ${i} has unknown type "${block.type}"`);
+      });
+      for (const { label, url } of guide.sources) {
+        if (!label?.trim() || !url?.startsWith("https://")) errors.push(`${at} has a bad source ${JSON.stringify({ label, url })}`);
+      }
+      for (const related of guide.related) {
+        if (related === guide.slug || !slugs.includes(related)) errors.push(`${at} has a bad related link "${related}"`);
+      }
+    }
+  }
+  fail("Guide validation failed", errors);
+}
+
+validateGuides();
+
 /** Every page of one locale, with its final title and description. */
 function localeRoutes(locale) {
-  const { ui, faq } = locale;
+  const { ui, faq, guides } = locale;
   return [
     { path: "", title: ui.hero.meta_title, description: fitDescription([ui.hero.meta_description]) },
     ...STATIC_ROUTES.map(({ path, meta }) => {
@@ -231,12 +296,52 @@ function localeRoutes(locale) {
         { name: article.question, url: routeUrl(locale, `support/${article.slug}`) },
       ]),
     })),
+    ...(guides ? guideRoutes(locale) : []),
+  ];
+}
+
+/** The guides index and articles of a language with a guides pack; no language versions. */
+function guideRoutes(locale) {
+  const { ui, articles } = locale.guides;
+  return [
+    { path: "guides", title: `${ui.title} — ${SITE_NAME}`, description: fitDescription([ui.meta_description]), standalone: true },
+    ...articles.map((guide) => ({
+      path: `guides/${guide.slug}`,
+      title: `${guide.title} — ${SITE_NAME}`,
+      description: guide.summary,
+      standalone: true,
+      jsonLd: breadcrumbList([
+        { name: SITE_NAME, url: routeUrl(locale, "") },
+        { name: ui.title, url: routeUrl(locale, "guides") },
+        { name: guide.title, url: routeUrl(locale, `guides/${guide.slug}`) },
+      ]),
+    })),
   ];
 }
 
 const pages = LOCALES.flatMap((locale) =>
   localeRoutes(locale).map((route) => ({ ...route, locale, url: routeUrl(locale, route.path) })),
 );
+
+// A guide links within its own language only; a target outside the built
+// pages would 404 (and fail the prerender's link audit much later).
+function validateGuideLinks() {
+  const errors = [];
+  for (const locale of LOCALES.filter((l) => l.guides)) {
+    const routes = new Set(pages.filter((p) => p.locale === locale).map((p) => (p.path ? `/${p.path}/` : "/")));
+    for (const guide of locale.guides.articles) {
+      for (const text of guide.content.flatMap(blockTexts)) {
+        for (const [, , href] of text.matchAll(INLINE_LINK)) {
+          if (href.startsWith("https://")) continue;
+          if (!routes.has(href)) errors.push(`[${locale.code}] guide "${guide.slug}" links to ${href}, which is not a ${locale.code} page`);
+        }
+      }
+    }
+  }
+  fail("Guide link validation failed", errors);
+}
+
+validateGuideLinks();
 
 // Two pages introducing themselves identically are a duplicate-content signal,
 // even across languages. zh-Hans is generated from zh-Hant, so a zh-Hant title
@@ -299,17 +404,19 @@ validateSitemap();
 // Read once: dist/index.html is both the template and the en root's output.
 const template = readFileSync(src, "utf8");
 
-for (const { path, title, description, jsonLd, locale, url } of pages) {
-  const versions = [
-    ...LOCALES.map((l) => ({ hreflang: l.hreflang, href: routeUrl(l, path) })),
-    { hreflang: "x-default", href: routeUrl(DEFAULT_LOCALE, path) },
-  ];
+for (const { path, title, description, jsonLd, standalone, locale, url } of pages) {
+  const versions = standalone
+    ? []
+    : [
+        ...LOCALES.map((l) => ({ hreflang: l.hreflang, href: routeUrl(l, path) })),
+        { hreflang: "x-default", href: routeUrl(DEFAULT_LOCALE, path) },
+      ];
   let html = setSelfCanonical(template, url);
   html = setHtmlLang(html, locale.hreflang);
   html = setPageMeta(html, { title, description });
   html = setLanguageAlternates(html, {
     ogLocale: locale.ogLocale,
-    ogLocaleAlternates: LOCALES.filter((l) => l !== locale).map((l) => l.ogLocale),
+    ogLocaleAlternates: standalone ? [] : LOCALES.filter((l) => l !== locale).map((l) => l.ogLocale),
     versions,
   });
   if (jsonLd) html = addJsonLd(html, jsonLd);

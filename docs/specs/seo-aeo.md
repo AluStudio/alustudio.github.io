@@ -5,6 +5,7 @@ read_when:
   - Changing the prerender, sitemap, or copy-spa-pages build steps
   - Editing robots.txt, llms.txt, JSON-LD, or Cloudflare AI Crawl Control
   - Writing FAQ or landing copy meant to be cited by search or AI engines
+  - Writing or adding an acquisition article (Sotto or DingPOS guides), or a guide for a new market
   - Weighing SEO skill advice against this site's decisions
   - Changing DingPOS or Sotto en / zh-Hant copy, or anything about the generated zh-Hans
   - Adding, shipping, or re-translating a DingPOS translated language (ja, th, …)
@@ -46,7 +47,7 @@ read_when:
 - 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（該 app 的每種語言加 `x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。`og:locale` 對應：`en_US`、`zh_TW`、`zh_CN`、`ja_JP`、`ko_KR`、`de_DE`、`es_ES`、`fr_FR`、`it_IT`、`pt_BR`、`ru_RU`、`ar_AR`；DingPOS 每種語言的值寫在 registry 的 `ogLocale`。
 - hreflang 只寫在 HTML `<head>`，sitemap 不重複寫。Google 認為兩種方式等價，同時維護兩份只會增加出錯的機會。
 - 語系前綴的單一來源：DingPOS 的 `src/i18n.js` 與 `scripts/copy-spa-pages.js` 都讀 `dingpos/l10n/languages.json`。Sotto 是 `src/i18n.js` 的 `supportedLanguages` 和 `scripts/copy-spa-pages.js` 的 `LOCALE_DEFS`，兩邊必須一致。
-- 每種語言的內容都要完整，不退回英文：DingPOS 與 Sotto 的 `copy-spa-pages.js` 在任一語言的 UI 字串少了或多了 en 的 key，或 FAQ／guide pack 的 slug 與 en 不同時讓 build 失敗。兩者都沒有 fallback 語言，缺 key 會直接顯示 key 名稱。Sotto 另外拒絕任何空字串。DingPOS 另外擋 en 是陣列、其他語言卻不是陣列的 key（頁面會把它當成空清單，整段默默消失）；空字串只允許在 key 名稱以 `_before`／`_after` 結尾的句子片段，它們夾住行內的價格，語序可能讓其中一邊是空的。
+- 每種語言的內容都要完整，不退回英文（唯一例外是 DingPOS 的獲客文章，見 [§獲客文章](#獲客文章)）：DingPOS 與 Sotto 的 `copy-spa-pages.js` 在任一語言的 UI 字串少了或多了 en 的 key，或 FAQ／guide pack 的 slug 與 en 不同時讓 build 失敗。兩者都沒有 fallback 語言，缺 key 會直接顯示 key 名稱。Sotto 另外拒絕任何空字串。DingPOS 另外擋 en 是陣列、其他語言卻不是陣列的 key（頁面會把它當成空清單，整段默默消失）；空字串只允許在 key 名稱以 `_before`／`_after` 結尾的句子片段，它們夾住行內的價格，語序可能讓其中一邊是空的。
 - DingPOS 與 Sotto 每次只載入當頁語言的字串與 FAQ／guides（`import.meta.glob` 動態載入，載完才 hydrate），加一種語言不會讓任何一頁下載更多 JS。
 - 任兩頁的 title 與 description 都不可相同，跨語系也算：兩個 URL 用同一句話介紹自己，就是重複內容的訊號。`copy-spa-pages.js` 在 build 時檢查，違規即失敗。
 
@@ -112,7 +113,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 ## Structured data 與 social meta
 
 - JSON-LD 靜態寫在各 app 的 `index.html`：home 放 `Organization` + `WebSite`；各 app 放 `MobileApplication`，含 `Offer` / `AggregateOffer`。
-- DingPOS 的每篇 support 文章另有 `BreadcrumbList`（DingPOS → Support → 文章），Sotto 的每篇 guide 也有（Sotto → Guides → 文章，名稱與 URL 都是該語言的），由 `copy-spa-pages.js` 在 build 時寫進該 route 的 `<head>`（`addJsonLd` / `breadcrumbList`）。
+- DingPOS 的每篇 support 文章與 guide 另有 `BreadcrumbList`（DingPOS → Support 或 Guides → 文章），Sotto 的每篇 guide 也有（Sotto → Guides → 文章，名稱與 URL 都是該語言的），由 `copy-spa-pages.js` 在 build 時寫進該 route 的 `<head>`（`addJsonLd` / `breadcrumbList`）。
 - `MobileApplication` 的 `sameAs` 列出 app 的商店頁（Sotto：App Store 與 Google Play；DingPOS：App Store），讓搜尋引擎把同名的不同產品分開。官方社群帳號或 launch 平台頁（DingPOS：Product Hunt）也列進去，但只放未登入就看得到的公開頁：審核中的頁面（例如 AlternativeTo 的待審 app）等通過後再加。
 - `aggregateRating` 只在 App Store 有足夠的真實評分時加入，並定期同步。目前五站都沒有：評分太少的 app 標上去，比不標更像造假。
 - 每個 app 有 1200x630 的 `og:image`，以及 `og:type=website`、`og:site_name=Alu Studio`、`twitter:card=summary_large_image`。
@@ -130,8 +131,19 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 - 首頁與特色文案寫成可以單獨被引用的具體句子，用事實和數字，不用空泛形容詞。
 - 產品 claim 以產品 repo 為準（見 AGENTS.md §Product Repos）。
 - FAQ 題數少時用單頁 `/faq/`（pikgeon、babbby、sotto）。題數成長到十題以上時，改用 dingpos `/support/` 的模式：索引頁加每篇一條 route，內容來自各語系的 data pack。
-- 獲客文章（Sotto `/sotto/guides/<slug>/`）瞄準產品 ASO 已驗證的關鍵字背後的真實問題（`~/Developer/alustudio/sotto/docs/marketing/aso-keywords.md`），網站與商店用同一組詞。每篇開頭 2–3 句直接回答標題，之後用 H2 分段，最後一段導回 app；標題用該語言實際的搜尋說法，不逐字翻譯。內容來自各語系的 guide pack（`sotto/src/data/guides/guides.<code>.js`，schema 寫在 `guides.en.js` 開頭），`summary` 同時是索引卡片文字與該頁的 description（160 字元內）。build 檢查每篇以段落開頭、至少一個 H2、related 都存在。
 - 首頁 h1 不只寫品牌名：同名產品很多時，單獨的「Sotto」無法消歧。Sotto 首頁的 h1 是品牌加上含該語言 SWEET 詞的 tagline，視覺上仍是大字品牌加副標。
+
+### 獲客文章
+
+寫給還不認識產品的人，回答他們選工具之前就會搜的問題，不是操作說明（操作說明是 support／FAQ）。
+
+- 每篇開頭 2–3 句直接回答標題，之後用 H2 分段，最後一段導回 app；標題用該語言實際的搜尋說法，不逐字翻譯。`summary` 同時是索引卡片文字與該頁的 description（160 字元內）。build 檢查每篇以段落開頭、至少一個 H2、related 都存在。
+- Sotto（`/sotto/guides/<slug>/`）的題目是各國通用的人際問題，所以每種語言有同一組文章（同 slug、同順序），由 en 翻譯；題目瞄準產品 ASO 已驗證的關鍵字背後的真實問題（`~/Developer/alustudio/sotto/docs/marketing/aso-keywords.md`），網站與商店用同一組詞。內容來自 `sotto/src/data/guides/guides.<code>.js`，schema 寫在 `guides.en.js` 開頭。
+- DingPOS（`/dingpos/<prefix>/guides/<slug>/`）的題目是經營成本與法規，費率、稅、支付品牌和規定每個國家都不同，所以文章以市場為單位寫，不翻譯：每篇標一個 `market`（例如 `TW`），只發在那個市場讀的語言底下。語言不等於市場：zh-Hant 同時是台灣與香港，en 是澳洲、美國、英國，一個市場的文章不能翻成另一個市場的版本。
+  - 只有存在 `dingpos/src/data/guides/guides.<code>.js` 的語言有 guides 區（索引頁、文章、導覽列與 footer 的連結）；這是「每種語言的內容都要完整」的唯一例外。區塊的 UI 字串放在 pack 的 `ui`，不放 `translation.json`，因為後者每個 key 都要 32 種語言齊全。schema 寫在 `guides.zh-Hant.js` 開頭。
+  - guide 頁不輸出 hreflang 與 `og:locale:alternate`：沒有其他語言有同一頁，不同市場的同主題文章也不是彼此的翻譯。語言切換器在 guide 頁連到該語言的 guides 索引，沒有 guides 的語言連到首頁。
+  - zh-Hans 不由 zh-Hant 的 guides 產生（`gen-zh-hans.mjs` 不讀 guides），也不走 `npm run l10n`；大陸市場要寫，就寫一份 zh-Hans 的 pack。
+  - 文中的費率、法規每篇都附 `sources`（連到原始來源）與 `checked`（查核日），頁面顯示「最後查核」；找不到官方來源的數字寫成「依合約」或區間，不寫成定價。文字裡的 `[label](/route/)` 是站內連結，build 檢查目標是該語言存在的頁面。
 
 ## 每月回訪
 

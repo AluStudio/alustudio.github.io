@@ -3,11 +3,23 @@ import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "react-router-dom";
 import { Collapse } from "bootstrap";
 import { supportedLanguages, localizedUrl, currentLanguage } from "../i18n.js";
+import { getGuides, guideLanguages } from "../data/guides";
 import "../assets/scss/navbar.scss";
+
+/**
+ * Where the language switcher sends `code` from `pathname`. Guides are written
+ * per market, not translated, so a guide page has no counterpart in another
+ * language: that language's guides index, or its home when it has none.
+ */
+function switchPath(code, pathname) {
+  if (code === currentLanguage || !pathname.startsWith("/guides")) return pathname;
+  return guideLanguages.has(code) ? "/guides/" : "/";
+}
 
 function Navbar() {
   const { t } = useTranslation();
   const location = useLocation();
+  const guidesUi = getGuides().ui;
   const isHome = location.pathname === "/" || location.pathname === "";
 
   const collapseNav = () => {
@@ -30,6 +42,8 @@ function Navbar() {
   const handleChangeLang = (event, code) => {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     if (!location.search && !location.hash) return;
+    // A different page in that language: its query and hash mean nothing there.
+    if (switchPath(code, location.pathname) !== location.pathname) return;
     event.preventDefault();
     window.location.assign(localizedUrl(code, location.pathname, location.search, location.hash));
   };
@@ -104,6 +118,13 @@ function Navbar() {
                 {t("nav.support")}
               </Link>
             </li>
+            {guidesUi && (
+              <li className="nav-item">
+                <Link className="nav-link text-center" to="/guides/" onClick={collapseNav}>
+                  {guidesUi.nav}
+                </Link>
+              </li>
+            )}
             <li className="nav-item">
               <Link className="nav-link text-center" to="/privacy/" onClick={collapseNav}>
                 {t("nav.privacy")}
@@ -133,7 +154,7 @@ function Navbar() {
                 <li key={lang.code}>
                   <a
                     className={`dropdown-item${lang.code === currentLanguage ? " active" : ""}`}
-                    href={localizedUrl(lang.code, location.pathname)}
+                    href={localizedUrl(lang.code, switchPath(lang.code, location.pathname))}
                     hrefLang={lang.hreflang}
                     lang={lang.hreflang}
                     aria-current={lang.code === currentLanguage ? "page" : undefined}

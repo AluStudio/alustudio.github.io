@@ -141,6 +141,14 @@ test("sourcesForRoute: each dingpos language's pages track its own strings and p
   ]);
 });
 
+test("sourcesForRoute: dingpos guides track their own language's pack, and a language root ignores other packs", () => {
+  const guide = sourcesForRoute("/dingpos/zh-hant/guides/card-and-mobile-payment-fees/");
+  assert.deepEqual(guide.slice(0, 2), ["dingpos/src/data/guides/guides.zh-Hant.js", "dingpos/src/data/guides/index.js"]);
+  assert.deepEqual(sourcesForRoute("/dingpos/zh-hant/guides/"), guide);
+  assert.ok(sourcesForRoute("/dingpos/").includes(":(exclude)dingpos/src/data/guides/guides.zh-Hant.js"));
+  assert.ok(!sourcesForRoute("/dingpos/zh-hant/").includes(":(exclude)dingpos/src/data/guides/guides.zh-Hant.js"));
+});
+
 test("dingposRules: a translated language gets its own prefix, strings and pack", () => {
   // es-419's URL prefix is its hreflang ("es"); its files keep the app's code.
   const rules = dingposRules({ code: "es-419", pathPrefix: "es" });
