@@ -107,6 +107,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 - repo 根目錄的 `sitemap.xml` 是 URL 成員的唯一來源。dingpos 與 sotto 的 build 會驗證 sitemap 裡自己的 URL 跟產出的頁面（每種語言）完全一致，多一個少一個都會讓 build 失敗。Sotto 的區塊手動維護；DingPOS 的區塊由 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 從頁面清單改寫（32 種語言、每種 64 頁，手寫一定會漏）。
 - DingPOS 每種語言的子頁 `lastmod` 只看該語言自己的字串與 FAQ pack；語言首頁看整個 `dingpos/src`，但用 git pathspec `:(exclude)` 排除其他語言的 `locales/<code>` 與 `articles.<code>.js`（`scripts/generate-sitemap.mjs` `dingposRules`）。所以共用元件改了，每種語言的首頁都會更新日期，但翻譯或上線一種語言，不會改到其他語言任何一頁的日期。首頁曾經直接看整個 `dingpos/src`，結果連續上線約 30 種語言時，每個語言首頁的日期被推了約 30 次，內容卻沒變。
 - 部署時由 `scripts/generate-sitemap.mjs` 輸出 `_site/sitemap.xml`，每個 URL 的 `lastmod` 取自產生該 route 的檔案的最後一次 git commit。這個 `lastmod` 不手填、不批次更新。CI checkout 必須用 `fetch-depth: 0`，shallow clone 會讓所有日期塌成同一天。
+- Google：sitemap 在 GSC 提交一次就夠，之後 Google 依自己的頻率回頭讀，新頁面靠準確的 `lastmod` 被發現。網址沒變時重新提交沒有加速效果，Google 也在 2023 年停用了 sitemap ping，所以上線新頁不重新提交。例外：Google 還不常來抓的期間，每上線一篇獲客文章，就在 GSC 的 URL 檢查對它「要求建立索引」（有每日配額，一個月幾篇用不到上限）。停止的條件：Sitemap 報表的「上次讀取」固定每隔幾天更新，而且新文章幾天內就被收錄。原因：2026-07-25 提交的舊版 sitemap 之後再也沒被讀過，Google 實際知道的 DingPOS URL 不到 10 個（OH-87）。
 - IndexNow 暫不接：Google 不支援，而它只解決「Bing 還沒發現或排程到」，解決不了「Bing 抓了但不收」。「Bing 收錄明顯遲緩」的判定：在 Bing WMT 的 URL 檢查抽查約 10 個 sitemap URL（各 app、新舊語言都有），已編製索引的不到八成，**且**未索引的多數是「已發現，但未編目」且發現已超過四週。兩者都成立才啟用；多數是「已編目但未索引」時，該查的是內容厚度，不是 IndexNow。不用 Site Explorer 的「已建立索引」數字判定：2026-10-24 它顯示 30／約 2.2K，同一天 URL 檢查抽查 11 個卻有 8 個已索引（包括 10-17 至 10-20 才上線的 bn、km），3 個「已發現，但未編目」（`/pikgeon/faq/` 9-26 發現、`/sotto/ko/guides/` 10-18、一篇 fi FAQ 10-19）。下次判定 2026-11-18；届時 `/pikgeon/faq/` 若仍未編目，先在 URL 檢查按「要求編製索引」。
 - 啟用時用 CI 在 `wrangler deploy` 成功後提交這次有變動的 URL；key 是公開驗證檔（根目錄 `<key>.txt`），不是 secret；提交失敗不讓部署變紅。不用 Cloudflare Crawler Hints：它對 Worker static assets 會不會觸發沒有文件保證，也沒有觀測點。不靠 WMT 手動提交：新站配額對 2K 以上的 URL 沒有意義。
 
@@ -149,6 +150,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 
 每月一次：
 
+- GSC Sitemap 報表的「上次讀取」日期與已發現網址數，判斷新文章是否還要手動要求建立索引（見 §Sitemap）。
 - GSC 與 Bing Webmaster Tools 的曝光、點擊、索引頁數。Bing 的收錄率用 URL 檢查抽查估（Site Explorer 的數字嚴重落後），應至少八成；不到時照 §Sitemap 的 IndexNow 判定。
 - Bing WMT 的 Recommendations 要點進去看「發生此錯誤的網頁」：首頁卡片寫「many pages」，實際可能只有一兩頁，而且常是改版前的舊掃描。改完的頁面在 URL 檢查按「要求編製索引」。
 - Cloudflare AI Crawl Control 各 bot 的請求數變化。
