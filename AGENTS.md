@@ -120,7 +120,8 @@ Eleven UI/animation skills from [emilkowalski/skills](https://github.com/emilkow
 
 [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.3.1 is installed machine-locally: 23 `seo*` skills in `.pi/skills/` and 18 `seo-*` agents in `.pi/agents/`, all gitignored (the Python + Chromium runtime is ~1 GB), so another machine has none of it until installed there. Run bundled scripts from the repo root as `.pi/skills/seo/scripts/claude-seo run <script.py>` — the skill paths are cwd-relative; `claude-seo doctor --json` checks the runtime.
 - The `seo-*` agents declare Claude Code tool names (`Glob`, `WebFetch`) and bare model names, so they may not run under pi-subagents; audits here run the bundled scripts plus Lighthouse directly instead.
-- `pagespeed_check.py` without an API key hits the shared, usually exhausted PSI quota; use `npx lighthouse` locally for lab data.
+- Google credentials are machine-local too, in `~/.config/claude-seo/` (GCP project `alu-studio-seo`, owned by the studio Google account that owns the GSC property): service account `claude-seo@alu-studio-seo.iam.gserviceaccount.com` with Full permission on GSC `sc-domain:alu-studio.com`, plus an API key restricted to PageSpeed Insights + CrUX. `google_auth.py --check --json` reports the tier. A machine without these files runs PSI on the shared, usually exhausted quota — use `npx lighthouse` there.
+- GA4 is intentionally unconfigured: the site ships no GA4 tag, and adding one (consent, privacy policy, a third-party script on five apps) was declined on 2026-10-25. Organic search numbers come from GSC; real-user metrics from Cloudflare Web Analytics.
 - `docs/specs/seo-aeo.md` owns this site's SEO decisions — skill advice that contradicts it (llms.txt investment, FAQ rich results) loses.
 
 ## Linear
