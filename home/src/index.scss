@@ -579,8 +579,28 @@ img {
       letter-spacing: -0.04em;
     }
 
-    span {
-      display: block;
+    // Two lines on narrow screens with the separator dropped, so no line
+    // ends on punctuation; one line once it fits, separator restored.
+    @media (min-width: $bp-lg) {
+      max-width: none;
+      white-space: nowrap;
+    }
+  }
+
+  &__line {
+    display: block;
+
+    @media (min-width: $bp-lg) {
+      display: inline;
+    }
+  }
+
+  &__sep {
+    display: none;
+    white-space: pre;
+
+    @media (min-width: $bp-lg) {
+      display: inline;
     }
   }
 

@@ -188,8 +188,9 @@ function Hero() {
     <section id="top" className="hero">
       <p className="hero__eyebrow">{t("hero.eyebrow")}</p>
       <h1 className="hero__title">
-        <span>{t("hero.title_1")}</span>
-        <span>{t("hero.title_2")}</span>
+        <span className="hero__line">{t("hero.title_1")}</span>
+        <span className="hero__sep">{t("hero.title_sep")}</span>
+        <span className="hero__line">{t("hero.title_2")}</span>
       </h1>
       <p className="hero__sub">{t("hero.sub")}</p>
       <a href="#apps" className="button button--primary hero__cta">

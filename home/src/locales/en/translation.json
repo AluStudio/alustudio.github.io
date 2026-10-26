@@ -10,7 +10,8 @@
   },
   "hero": {
     "eyebrow": "Independent app studio",
-    "title_1": "Tools for life,",
+    "title_1": "Tools for life",
+    "title_sep": ", ",
     "title_2": "minus the hassle",
     "sub": "Alu Studio makes four apps for iPhone, iPad and Android: a point of sale for small shops, a notebook for the people you love, a postcard tracker for Pikmin Bloom, and daily play ideas for young kids.",
     "cta": "Browse the apps",

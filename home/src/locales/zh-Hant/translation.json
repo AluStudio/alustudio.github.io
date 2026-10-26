@@ -10,7 +10,8 @@
   },
   "hero": {
     "eyebrow": "獨立 App 工作室",
-    "title_1": "為生活打造工具，",
+    "title_1": "為生活打造工具",
+    "title_sep": "，",
     "title_2": "解決麻煩",
     "sub": "Alu Studio 做了四款 iPhone、iPad 與 Android App：小店用的收銀系統、記住重要的人的筆記本、Pikmin Bloom 明信片紀錄，以及給 0 到 6 歲孩子的每日遊戲點子。",
     "cta": "看看這些 App",
