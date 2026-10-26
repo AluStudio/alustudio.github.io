@@ -577,8 +577,8 @@ $st-line: rgba(28, 26, 23, 0.08);
   &__name {
     @extend %ellipsis;
     font-family: $serif;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 600;
   }
 
@@ -649,7 +649,7 @@ $st-line: rgba(28, 26, 23, 0.08);
 
   // The editable first field leaves room on the right for the saved tick.
   &__field:first-child &__value {
-    padding-right: s(400);
+    padding-right: s(300);
   }
 
   &__saved {
