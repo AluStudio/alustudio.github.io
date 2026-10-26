@@ -34,6 +34,9 @@ const MOVED_PATHS = new Map([
   // DingPOS 2.0 shipped these roadmap items; the FAQ now documents the feature.
   ["/dingpos/support/roadmap-purchase-orders/", "/dingpos/support/purchase-orders/"],
   ["/dingpos/support/roadmap-returns-exchanges/", "/dingpos/support/returns-exchanges/"],
+  // German guides withdrawn (owner, 2026-10-26): the de site has no guides section.
+  ["/dingpos/de/guides/", "/dingpos/de/"],
+  ["/dingpos/de/guides/payment-processing-fees-germany/", "/dingpos/de/"],
 ]);
 
 export default {

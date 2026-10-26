@@ -93,6 +93,13 @@ test("retired page URL without trailing slash still redirects in one hop", async
   assert.equal(res.headers.get("location"), "https://alu-studio.com/dingpos/support/returns-exchanges/");
 });
 
+test("withdrawn German guide -> German home 301", async () => {
+  const req = new Request("https://alu-studio.com/dingpos/de/guides/payment-processing-fees-germany/");
+  const res = await worker.fetch(req, mockEnv(), {});
+  assert.equal(res.status, 301);
+  assert.equal(res.headers.get("location"), "https://alu-studio.com/dingpos/de/");
+});
+
 test("known route served with HTML no-cache header", async () => {
   const req = new Request("https://alu-studio.com/home/");
   const res = await worker.fetch(req, mockEnv(), {});
