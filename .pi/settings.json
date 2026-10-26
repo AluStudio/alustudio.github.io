@@ -1,6 +1,8 @@
 {
   "skills": [
-    "~/.pi/agent/skill-library/ui-design-principles"
+    "~/.pi/agent/skill-library/ui-design-principles",
+    "~/.pi/agent/skills/maestro",
+    "-~/.pi/agent/skills/maestro"
   ],
   "packages": [
     {
@@ -13,11 +15,20 @@
         "skills/emil-design-eng",
         "skills/find-animation-opportunities",
         "skills/improve-animations",
-        "skills/mobile-native",
         "skills/pick-ui-library",
         "skills/prototype",
         "skills/review-animations"
       ]
+    },
+    {
+      "source": "https://github.com/AvdLee/Swift-Concurrency-Agent-Skill",
+      "autoload": false,
+      "skills": ["-skills/swift-concurrency"]
+    },
+    {
+      "source": "~/Developer/ohlulu/pi-self-improvement",
+      "autoload": false,
+      "skills": ["-skills/learn-loop"]
     }
   ]
 }
