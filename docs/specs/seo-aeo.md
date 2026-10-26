@@ -144,6 +144,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
   - 只有存在 `dingpos/src/data/guides/guides.<code>.js` 的語言有 guides 區（索引頁、文章、導覽列與 footer 的連結）；這是「每種語言的內容都要完整」的唯一例外。區塊的 UI 字串放在 pack 的 `ui`，不放 `translation.json`，因為後者每個 key 都要 32 種語言齊全。schema 寫在 `guides.zh-Hant.js` 開頭。
   - guide 頁不輸出 hreflang 與 `og:locale:alternate`：沒有其他語言有同一頁，不同市場的同主題文章也不是彼此的翻譯。語言切換器在 guide 頁連到該語言的 guides 索引，沒有 guides 的語言連到首頁。
   - zh-Hans 不由 zh-Hant 的 guides 產生（`gen-zh-hans.mjs` 不讀 guides），也不走 `npm run l10n`；大陸市場要寫，就寫一份 zh-Hans 的 pack。
+  - 法律要求一般小店使用認證稅控收銀機（或登記過的 POS、稅控設備）的市場，目前不寫 guide（owner 2026-10-25）；在這之前已上線的（法、義、韓、巴、墨、越、中、泰）結尾寫明 DingPOS 不是當地認證的收銀機，受規範時不要拿它記錄銷售。德國的 guide 已下架、URL 301 到 `/dingpos/de/`，DingPOS 也從德國 App Store 移除（owner 2026-10-26），因為 § 146a Abs. 1 Satz 5 AO 禁止在德國宣傳或流通不符 TSE 的記錄軟體。
   - 文中的費率、法規每篇都附 `sources`（連到原始來源）與 `checked`（查核日），頁面顯示「最後查核」；找不到官方來源的數字寫成「依合約」或區間，不寫成定價。文字裡的 `[label](/route/)` 是站內連結，build 檢查目標是該語言存在的頁面。
 
 ## 每月回訪
