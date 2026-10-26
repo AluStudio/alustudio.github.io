@@ -30,9 +30,9 @@ import { useStory } from "./story";
 // Each scene redraws one app's real screen and acts out its core action. The
 // resting frame is the finished design; see useStory for the loop.
 
-function useScene(id) {
+function useScene(id, lng) {
   const { t } = useTranslation();
-  return t(`scene.${id}`, { returnObjects: true });
+  return t(`scene.${id}`, { lng, returnObjects: true });
 }
 
 function Phone({ className, children }) {
@@ -73,8 +73,8 @@ const posSteps = [
   { count: 2, tap: 1, ms: 280 },
 ];
 
-function DingposScene() {
-  const s = useScene("dingpos");
+function DingposScene({ lng }) {
+  const s = useScene("dingpos", lng);
   const ref = useRef(null);
   const step = useStory(ref, posSteps, 400);
 
@@ -188,8 +188,8 @@ function sottoSteps(length) {
   ];
 }
 
-function SottoScene() {
-  const s = useScene("sotto");
+function SottoScene({ lng }) {
+  const s = useScene("sotto", lng);
   const ref = useRef(null);
   const glyphs = useMemo(() => Array.from(s.fields[0].value), [s.fields]);
   const steps = useMemo(() => sottoSteps(glyphs.length), [glyphs.length]);
@@ -254,9 +254,9 @@ function rowState(i, step) {
   return "waiting";
 }
 
-function PikgeonScene() {
+function PikgeonScene({ lng }) {
   const { t } = useTranslation();
-  const s = useScene("pikgeon");
+  const s = useScene("pikgeon", lng);
   const ref = useRef(null);
   const step = useStory(ref, pikgeonSteps, 1000);
   const total = s.rows.length;
@@ -272,7 +272,7 @@ function PikgeonScene() {
         </div>
         <p className="pk__title">{s.title}</p>
         <div className="pk__progress">
-          <span>{t("scene.pikgeon.progress", { done: step.done, total })}</span>
+          <span>{t("scene.pikgeon.progress", { lng, done: step.done, total })}</span>
           <span className="pk__bar">
             <span className="pk__bar-fill" style={{ transform: `scaleX(${step.done / total})` }} />
           </span>
@@ -315,8 +315,8 @@ const weekBars = [2, 3, 1, 4, 2, 3, 0];
 const TODAY = 5;
 const BAR_MAX = 5;
 
-function BabbbyScene() {
-  const s = useScene("babbby");
+function BabbbyScene({ lng }) {
+  const s = useScene("babbby", lng);
   const ref = useRef(null);
   const step = useStory(ref, babbbySteps, 2200);
   const bars = weekBars.map((value, i) => (i === TODAY && step.done ? value + 1 : value));
@@ -400,7 +400,7 @@ const scenes = {
   babbby: BabbbyScene,
 };
 
-export default function Scene({ app }) {
+export default function Scene({ app, lng }) {
   const Component = scenes[app];
-  return <Component />;
+  return <Component lng={lng} />;
 }

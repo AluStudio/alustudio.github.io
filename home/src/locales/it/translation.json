@@ -1,27 +1,168 @@
 {
-  "profile": {
-    "bio": "Studio indie di app — strumenti per la vita di tutti i giorni"
+  "nav": {
+    "label": "Sezioni",
+    "apps": "App",
+    "contact": "Contatti",
+    "language": "Cambia lingua",
+    "menu_open": "Apri il menu",
+    "menu_close": "Chiudi il menu",
+    "skip": "Vai al contenuto"
+  },
+  "hero": {
+    "eyebrow": "Studio indipendente di app",
+    "title_1": "Strumenti per la vita",
+    "title_sep": ", ",
+    "title_2": "senza fatica",
+    "sub": "Alu Studio crea quattro app per iPhone, iPad e Android: una cassa per piccoli negozi, un taccuino per le persone a cui vuoi bene, un archivio di cartoline per Pikmin Bloom e idee di gioco quotidiane per bambini piccoli.",
+    "cta": "Scopri le app",
+    "proof": "Su App Store e Google Play"
   },
   "apps": {
-    "heading": "App"
+    "heading": "Quattro app, ognuna per un compito",
+    "sub": "Ogni app ha il suo sito con FAQ e assistenza."
   },
   "pikgeon": {
-    "tagline": "Tieni organizzati i tuoi ricordi di cartoline",
-    "desc": "Riconoscimento OCR intelligente per tracciare il tuo percorso di invio. Elaborazione completamente locale per proteggere la tua privacy."
+    "tagline": "Tieni in ordine i ricordi delle tue cartoline",
+    "desc": "Scansiona le cartoline di Pikmin Bloom e segui ogni spedizione. Il riconoscimento avviene sul telefono, così le tue cartoline restano private."
   },
   "babbby": {
-    "tagline": "Idee di attività quotidiane per 0–6 anni",
-    "desc": "Registra le tappe, crea routine e rendi ogni giorno speciale con oltre 340 attività selezionate."
+    "tagline": "Idee di attività quotidiane da 0 a 6 anni",
+    "desc": "Segna le tappe, crea routine e scegli tra oltre 340 attività adatte all’età di tuo figlio."
   },
   "sotto": {
     "tagline": "Ricorda i dettagli che contano",
-    "desc": "Ciò che amano, ciò che non sopportano, i piccoli dettagli che li fanno sorridere — custoditi con cura, perché voler bene è ricordare."
+    "desc": "Cosa amano, cosa non sopportano, le piccole cose che li fanno sorridere. Custodite con cura, perché voler bene è ricordare."
   },
   "dingpos": {
-    "tagline": "Punto cassa per iPad",
-    "desc": "Apri il tuo negozio in 10 minuti. Un POS offline-first: i tuoi dati, sotto il tuo controllo."
+    "tagline": "Cassa per iPad",
+    "desc": "Apri il tuo negozio in 10 minuti. Una cassa che continua a funzionare offline, con i dati di vendita salvati sul tuo iPad."
+  },
+  "contact": {
+    "heading": "Domande su un’app?",
+    "sub": "Ogni app ha la sua pagina di assistenza e le FAQ. Per tutto il resto, scrivi allo studio.",
+    "cta": "Scrivi allo studio"
   },
   "footer": {
+    "apps": "App",
+    "privacy": "Privacy",
+    "privacy_of": "Informativa sulla privacy di {{name}}",
     "rights": "Tutti i diritti riservati."
+  },
+  "scene": {
+    "dingpos": {
+      "search": "Cerca prodotti o scansiona un codice a barre",
+      "categories": [
+        "Tutte",
+        "Caffè",
+        "Forno",
+        "Dolci"
+      ],
+      "products": [
+        {
+          "name": "Caffè latte",
+          "price": "3,40 €"
+        },
+        {
+          "name": "Matcha latte",
+          "price": "4,20 €"
+        },
+        {
+          "name": "Cornetto",
+          "price": "2,10 €"
+        },
+        {
+          "name": "Biscotto al sale",
+          "price": "1,90 €"
+        },
+        {
+          "name": "Crostata al limone",
+          "price": "3,80 €"
+        },
+        {
+          "name": "Cheesecake",
+          "price": "4,50 €"
+        }
+      ],
+      "cart": "Carrello 1",
+      "customer": "Seleziona cliente",
+      "empty": "Tocca un prodotto per iniziare",
+      "lines": [
+        {
+          "name": "Caffè latte",
+          "qty": 2,
+          "note": "Latte d’avena",
+          "price": "6,80 €"
+        },
+        {
+          "name": "Cornetto",
+          "qty": 1,
+          "price": "2,10 €"
+        },
+        {
+          "name": "Matcha latte",
+          "qty": 1,
+          "note": "Meno dolce",
+          "price": "4,20 €"
+        }
+      ],
+      "subtotal": "Subtotale",
+      "totals": [
+        "0,00 €",
+        "6,80 €",
+        "8,90 €",
+        "13,10 €"
+      ],
+      "paid": "Ding!"
+    },
+    "sotto": {
+      "edit": "Modifica",
+      "initials": "GC",
+      "name": "Giulia Conti",
+      "meta": "Amica dal 2019",
+      "fields": [
+        {
+          "label": "Idee regalo",
+          "value": "Macchina analogica"
+        },
+        {
+          "label": "Bevanda pref.",
+          "value": "Latte d’avena"
+        },
+        {
+          "label": "Allergia",
+          "value": "Arachidi"
+        },
+        {
+          "label": "Compleanno",
+          "value": "1993/08/30"
+        }
+      ]
+    },
+    "pikgeon": {
+      "cancel": "Annulla",
+      "save": "Salva tutto",
+      "title": "Risultati del riconoscimento",
+      "progress": "Progresso: {{done}} / {{total}} foto",
+      "recognizing": "Riconoscimento…",
+      "waiting": "In attesa",
+      "rows": [
+        {
+          "name": "あやな",
+          "meta": "Fountain on Richards · 21 feb"
+        },
+        {
+          "name": "Eric",
+          "meta": "Gastown Steam Clock · 20 feb"
+        },
+        {
+          "name": "Yuki",
+          "meta": "Stanley Park · 18 feb"
+        },
+        {
+          "name": "Mateo",
+          "meta": "Granville Island · 17 feb"
+        }
+      ]
+    }
   }
 }

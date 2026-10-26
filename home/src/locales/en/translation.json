@@ -19,7 +19,7 @@
   },
   "apps": {
     "heading": "Four apps, each built for one job",
-    "sub": "Every app has its own site with guides, FAQ and support."
+    "sub": "Every app has its own site with FAQ and support."
   },
   "pikgeon": {
     "tagline": "Keep your postcard memories organized",
@@ -50,7 +50,7 @@
   },
   "scene": {
     "dingpos": {
-      "search": "Search products or scan a barcode",
+      "search": "Search products or scan barcode",
       "categories": [
         "All",
         "Coffee",
@@ -84,8 +84,8 @@
         }
       ],
       "cart": "Cart 1",
-      "customer": "Choose customer",
-      "empty": "Tap a product to add it",
+      "customer": "Select Customer",
+      "empty": "Tap a product to start",
       "lines": [
         {
           "name": "Latte",
@@ -112,7 +112,7 @@
         "$13.30",
         "$18.70"
       ],
-      "paid": "Paid"
+      "paid": "Ding!"
     },
     "sotto": {
       "edit": "Edit",

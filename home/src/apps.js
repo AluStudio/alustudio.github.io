@@ -40,6 +40,8 @@ export const apps = [
     icon: `${base}pikgeon-icon.webp`,
     website: "/pikgeon/",
     privacy: "/pikgeon/privacy/",
+    // The app ships these interface languages; its scene shows English elsewhere.
+    languages: ["en", "zh-Hant", "ja", "ko", "es", "pt", "fr", "de", "it"],
     stores: [
       {
         platform: "ios",
@@ -59,6 +61,7 @@ export const apps = [
     icon: `${base}babbby-icon.webp`,
     website: "/babbby/",
     privacy: "/babbby/privacy/",
+    languages: ["en", "zh-Hant"],
     stores: [
       {
         platform: "ios",
@@ -68,5 +71,12 @@ export const apps = [
     ],
   },
 ];
+
+// A scene draws the app's real interface, so it uses the page language only
+// when the app itself ships in it. Apps without `languages` ship in all of them.
+export function sceneLanguage(app, pageLanguage) {
+  if (!app.languages || app.languages.includes(pageLanguage)) return pageLanguage;
+  return "en";
+}
 
 export const CONTACT_EMAIL = "alustudio14@gmail.com";

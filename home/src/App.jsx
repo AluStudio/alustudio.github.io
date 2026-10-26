@@ -10,7 +10,7 @@ import {
   GooglePlayLogo,
 } from "@phosphor-icons/react";
 import { supportedLanguages } from "./i18n";
-import { apps, CONTACT_EMAIL } from "./apps";
+import { apps, CONTACT_EMAIL, sceneLanguage } from "./apps";
 import Scene from "./scenes";
 
 const base = import.meta.env.BASE_URL;
@@ -210,11 +210,12 @@ function Hero() {
 }
 
 function AppCard({ app }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lng = sceneLanguage(app, i18n.resolvedLanguage);
   return (
     <article className={`app-card app-card--${app.id} reveal-card`}>
-      <div className="app-card__visual scene" aria-hidden="true" data-nosnippet>
-        <Scene app={app.id} />
+      <div className="app-card__visual scene" lang={lng} aria-hidden="true" data-nosnippet>
+        <Scene app={app.id} lng={lng} />
       </div>
       <div className="app-card__body">
         <div className="app-card__head">

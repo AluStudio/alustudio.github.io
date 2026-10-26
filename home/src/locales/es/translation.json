@@ -1,27 +1,168 @@
 {
-  "profile": {
-    "bio": "Estudio indie de apps — herramientas para la vida diaria"
+  "nav": {
+    "label": "Secciones",
+    "apps": "Apps",
+    "contact": "Contacto",
+    "language": "Cambiar idioma",
+    "menu_open": "Abrir menú",
+    "menu_close": "Cerrar menú",
+    "skip": "Saltar al contenido"
+  },
+  "hero": {
+    "eyebrow": "Estudio independiente de apps",
+    "title_1": "Herramientas útiles",
+    "title_sep": ", ",
+    "title_2": "sin líos",
+    "sub": "Alu Studio crea cuatro apps para iPhone, iPad y Android: un punto de venta para pequeños negocios, un cuaderno para las personas que quieres, un registro de postales para Pikmin Bloom e ideas de juego diarias para niños pequeños.",
+    "cta": "Ver las apps",
+    "proof": "En App Store y Google Play"
   },
   "apps": {
-    "heading": "Apps"
+    "heading": "Cuatro apps, cada una con un propósito",
+    "sub": "Cada app tiene su propio sitio con preguntas frecuentes y soporte."
   },
   "pikgeon": {
-    "tagline": "Mantén organizados tus recuerdos de postales",
-    "desc": "Reconocimiento OCR inteligente para rastrear tu viaje de envíos. Procesamiento completamente local para proteger tu privacidad."
+    "tagline": "Organiza tus recuerdos en postales",
+    "desc": "Escanea tus postales de Pikmin Bloom y sigue cada envío. El reconocimiento se hace en tu teléfono, así que tus postales siguen siendo privadas."
   },
   "babbby": {
-    "tagline": "Ideas de actividades diarias para 0–6 años",
-    "desc": "Registra hitos, crea rutinas y haz que cada día cuente con más de 340 actividades seleccionadas."
+    "tagline": "Ideas de actividades diarias de 0 a 6 años",
+    "desc": "Registra hitos, crea rutinas y elige entre más de 340 actividades según la edad de tu hijo."
   },
   "sotto": {
     "tagline": "Recuerda los detalles que importan",
-    "desc": "Lo que aman, lo que no soportan, los pequeños detalles que les hacen sonreír — guardados con cariño, porque querer es recordar."
+    "desc": "Lo que les encanta, lo que no soportan, las pequeñas cosas que les sacan una sonrisa. Guardado cerca, porque cuidar es recordar."
   },
   "dingpos": {
     "tagline": "Punto de venta para iPad",
-    "desc": "Abre tu tienda en 10 minutos. TPV offline-first: tus datos, bajo tu control."
+    "desc": "Abre tu tienda en 10 minutos. Un punto de venta que sigue funcionando sin conexión, con los datos de ventas guardados en tu iPad."
+  },
+  "contact": {
+    "heading": "¿Dudas sobre alguna app?",
+    "sub": "Cada app tiene su propia página de soporte y preguntas frecuentes. Para todo lo demás, escribe al estudio.",
+    "cta": "Escribir al estudio"
   },
   "footer": {
+    "apps": "Apps",
+    "privacy": "Privacidad",
+    "privacy_of": "Política de privacidad de {{name}}",
     "rights": "Todos los derechos reservados."
+  },
+  "scene": {
+    "dingpos": {
+      "search": "Buscar productos o escanear código de barras",
+      "categories": [
+        "Todas",
+        "Café",
+        "Panadería",
+        "Postres"
+      ],
+      "products": [
+        {
+          "name": "Latte",
+          "price": "3,40 €"
+        },
+        {
+          "name": "Matcha latte",
+          "price": "4,20 €"
+        },
+        {
+          "name": "Cruasán",
+          "price": "2,10 €"
+        },
+        {
+          "name": "Galleta de sal",
+          "price": "1,90 €"
+        },
+        {
+          "name": "Tarta de limón",
+          "price": "3,80 €"
+        },
+        {
+          "name": "Tarta de queso",
+          "price": "4,50 €"
+        }
+      ],
+      "cart": "Carrito 1",
+      "customer": "Seleccionar cliente",
+      "empty": "Toca un producto para comenzar",
+      "lines": [
+        {
+          "name": "Latte",
+          "qty": 2,
+          "note": "Leche de avena",
+          "price": "6,80 €"
+        },
+        {
+          "name": "Cruasán",
+          "qty": 1,
+          "price": "2,10 €"
+        },
+        {
+          "name": "Matcha latte",
+          "qty": 1,
+          "note": "Menos dulce",
+          "price": "4,20 €"
+        }
+      ],
+      "subtotal": "Subtotal",
+      "totals": [
+        "0,00 €",
+        "6,80 €",
+        "8,90 €",
+        "13,10 €"
+      ],
+      "paid": "Ding!"
+    },
+    "sotto": {
+      "edit": "Editar",
+      "initials": "LR",
+      "name": "Lucía Romero",
+      "meta": "Amiga desde 2019",
+      "fields": [
+        {
+          "label": "Ideas de regalo",
+          "value": "Cámara de carrete"
+        },
+        {
+          "label": "Bebida favorita",
+          "value": "Latte de avena"
+        },
+        {
+          "label": "Alergia",
+          "value": "Frutos secos"
+        },
+        {
+          "label": "Cumpleaños",
+          "value": "1993/08/30"
+        }
+      ]
+    },
+    "pikgeon": {
+      "cancel": "Cancelar",
+      "save": "Guardar todo",
+      "title": "Resultados de reconocimiento",
+      "progress": "Progreso: {{done}} / {{total}} fotos",
+      "recognizing": "Reconociendo…",
+      "waiting": "Esperando",
+      "rows": [
+        {
+          "name": "あやな",
+          "meta": "Fountain on Richards · 21 feb"
+        },
+        {
+          "name": "Eric",
+          "meta": "Gastown Steam Clock · 20 feb"
+        },
+        {
+          "name": "Yuki",
+          "meta": "Stanley Park · 18 feb"
+        },
+        {
+          "name": "Mateo",
+          "meta": "Granville Island · 17 feb"
+        }
+      ]
+    }
   }
 }

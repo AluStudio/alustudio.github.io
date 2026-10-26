@@ -1,27 +1,168 @@
 {
-  "profile": {
-    "bio": "Estúdio indie de apps — ferramentas para o dia a dia"
+  "nav": {
+    "label": "Seções",
+    "apps": "Apps",
+    "contact": "Contato",
+    "language": "Mudar idioma",
+    "menu_open": "Abrir menu",
+    "menu_close": "Fechar menu",
+    "skip": "Pular para o conteúdo"
+  },
+  "hero": {
+    "eyebrow": "Estúdio independente de apps",
+    "title_1": "Ferramentas úteis",
+    "title_sep": ", ",
+    "title_2": "sem estresse",
+    "sub": "A Alu Studio cria quatro apps para iPhone, iPad e Android: um ponto de venda para pequenos negócios, um caderno para as pessoas que você ama, um registro de cartões postais do Pikmin Bloom e ideias diárias de brincadeiras para crianças pequenas.",
+    "cta": "Ver os apps",
+    "proof": "Na App Store e no Google Play"
   },
   "apps": {
-    "heading": "Apps"
+    "heading": "Quatro apps, cada um com uma função",
+    "sub": "Cada app tem seu próprio site com perguntas frequentes e suporte."
   },
   "pikgeon": {
-    "tagline": "Mantenha suas memórias de postal organizadas",
-    "desc": "Reconhecimento OCR inteligente para acompanhar sua jornada de envios. Processamento totalmente local para proteger sua privacidade."
+    "tagline": "Mantenha suas memórias de postais organizadas",
+    "desc": "Escaneie seus cartões postais do Pikmin Bloom e acompanhe cada envio. O reconhecimento acontece no seu celular, então seus postais continuam privados."
   },
   "babbby": {
-    "tagline": "Ideias de atividades diárias para 0–6 anos",
-    "desc": "Registre marcos, crie rotinas e faça cada dia valer a pena com mais de 340 atividades selecionadas."
+    "tagline": "Ideias de atividades diárias de 0 a 6 anos",
+    "desc": "Registre marcos, crie rotinas e escolha entre mais de 340 atividades de acordo com a idade do seu filho."
   },
   "sotto": {
     "tagline": "Lembre-se dos detalhes que importam",
-    "desc": "O que amam, o que detestam, os pequenos detalhes que os fazem sorrir — guardados com carinho, porque cuidar é lembrar."
+    "desc": "O que amam, o que detestam, os pequenos detalhes que os fazem sorrir. Guardados com carinho, porque cuidar é lembrar."
   },
   "dingpos": {
     "tagline": "Ponto de venda para iPad",
-    "desc": "Abra sua loja em 10 minutos. Um PDV offline-first — seus dados, seu controle."
+    "desc": "Abra sua loja em 10 minutos. Um PDV que continua funcionando offline, com os dados de vendas guardados no seu iPad."
+  },
+  "contact": {
+    "heading": "Dúvidas sobre algum app?",
+    "sub": "Cada app tem sua própria página de suporte e perguntas frequentes. Para outros assuntos, escreva para o estúdio.",
+    "cta": "Escrever para o estúdio"
   },
   "footer": {
+    "apps": "Apps",
+    "privacy": "Privacidade",
+    "privacy_of": "Política de privacidade do {{name}}",
     "rights": "Todos os direitos reservados."
+  },
+  "scene": {
+    "dingpos": {
+      "search": "Buscar produtos ou ler código de barras",
+      "categories": [
+        "Todas",
+        "Café",
+        "Padaria",
+        "Sobremesas"
+      ],
+      "products": [
+        {
+          "name": "Latte",
+          "price": "R$ 12,90"
+        },
+        {
+          "name": "Matcha latte",
+          "price": "R$ 16,90"
+        },
+        {
+          "name": "Croissant",
+          "price": "R$ 9,50"
+        },
+        {
+          "name": "Cookie de sal",
+          "price": "R$ 6,50"
+        },
+        {
+          "name": "Torta de limão",
+          "price": "R$ 14,90"
+        },
+        {
+          "name": "Cheesecake",
+          "price": "R$ 17,50"
+        }
+      ],
+      "cart": "Carrinho 1",
+      "customer": "Selecionar cliente",
+      "empty": "Toque em um produto para começar",
+      "lines": [
+        {
+          "name": "Latte",
+          "qty": 2,
+          "note": "Leite de aveia",
+          "price": "R$ 25,80"
+        },
+        {
+          "name": "Croissant",
+          "qty": 1,
+          "price": "R$ 9,50"
+        },
+        {
+          "name": "Matcha latte",
+          "qty": 1,
+          "note": "Menos doce",
+          "price": "R$ 16,90"
+        }
+      ],
+      "subtotal": "Subtotal",
+      "totals": [
+        "R$ 0,00",
+        "R$ 25,80",
+        "R$ 35,30",
+        "R$ 52,20"
+      ],
+      "paid": "Ding!"
+    },
+    "sotto": {
+      "edit": "Editar",
+      "initials": "AR",
+      "name": "Ana Ribeiro",
+      "meta": "Amiga desde 2019",
+      "fields": [
+        {
+          "label": "Ideias presente",
+          "value": "Câmera analógica"
+        },
+        {
+          "label": "Bebida favorita",
+          "value": "Latte de aveia"
+        },
+        {
+          "label": "Alergia",
+          "value": "Amendoim"
+        },
+        {
+          "label": "Nascimento",
+          "value": "1993/08/30"
+        }
+      ]
+    },
+    "pikgeon": {
+      "cancel": "Cancelar",
+      "save": "Salvar tudo",
+      "title": "Resultados do reconhecimento",
+      "progress": "Progresso: {{done}} / {{total}} fotos",
+      "recognizing": "Reconhecendo…",
+      "waiting": "Aguardando",
+      "rows": [
+        {
+          "name": "あやな",
+          "meta": "Fountain on Richards · 21 de fev."
+        },
+        {
+          "name": "Eric",
+          "meta": "Gastown Steam Clock · 20 de fev."
+        },
+        {
+          "name": "Yuki",
+          "meta": "Stanley Park · 18 de fev."
+        },
+        {
+          "name": "Mateo",
+          "meta": "Granville Island · 17 de fev."
+        }
+      ]
+    }
   }
 }
