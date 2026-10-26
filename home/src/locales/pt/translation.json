@@ -26,7 +26,7 @@
     "desc": "Escaneie seus cartões postais do Pikmin Bloom e acompanhe cada envio. O reconhecimento acontece no seu celular, então seus postais continuam privados."
   },
   "babbby": {
-    "tagline": "Ideias de atividades diárias de 0 a 6 anos",
+    "tagline": "Ideias diárias de atividades para crianças de 0 a 6 anos",
     "desc": "Registre marcos, crie rotinas e escolha entre mais de 340 atividades de acordo com a idade do seu filho."
   },
   "sotto": {
@@ -40,7 +40,7 @@
   "contact": {
     "heading": "Dúvidas sobre algum app?",
     "sub": "Cada app tem sua própria página de suporte e perguntas frequentes. Para outros assuntos, escreva para o estúdio.",
-    "cta": "Escrever para o estúdio"
+    "cta": "Enviar email ao estúdio"
   },
   "footer": {
     "apps": "Apps",
@@ -71,7 +71,7 @@
           "price": "R$ 9,50"
         },
         {
-          "name": "Cookie de sal",
+          "name": "Cookie de sal marinho",
           "price": "R$ 6,50"
         },
         {

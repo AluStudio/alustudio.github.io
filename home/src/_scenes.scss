@@ -632,7 +632,6 @@ $st-line: rgba(28, 26, 23, 0.08);
     display: flex;
     align-items: center;
     min-height: 20px;
-    padding-right: s(400);
     overflow: hidden;
     white-space: nowrap;
     font-family: $mono;
@@ -646,6 +645,11 @@ $st-line: rgba(28, 26, 23, 0.08);
     border-radius: 9999px;
     background: $st-accent;
     animation: blink 1s steps(1) infinite;
+  }
+
+  // The editable first field leaves room on the right for the saved tick.
+  &__field:first-child &__value {
+    padding-right: s(400);
   }
 
   &__saved {

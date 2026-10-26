@@ -23,11 +23,11 @@
   },
   "pikgeon": {
     "tagline": "Behalte deine Postkartenerinnerungen im Überblick",
-    "desc": "Scanne deine Postkarten aus Pikmin Bloom und verfolge jede Sendung. Die Erkennung läuft auf deinem Handy, deine Postkarten bleiben privat."
+    "desc": "Scanne deine Postkarten aus Pikmin Bloom und verfolge jede Sendung. Die Erkennung läuft auf deinem Handy, damit deine Postkarten privat bleiben."
   },
   "babbby": {
-    "tagline": "Tägliche Aktivitätsideen für 0 bis 6 Jahre",
-    "desc": "Halte Meilensteine fest, baue Routinen auf und wähle aus über 340 Aktivitäten passend zum Alter deines Kindes."
+    "tagline": "Tägliche Ideen für Kinder von 0 bis 6",
+    "desc": "Halte Meilensteine fest, baue Routinen auf und wähle aus über 340 Aktivitäten, die zum Alter deines Kindes passen."
   },
   "sotto": {
     "tagline": "Erinnere dich an die Details, die zählen",
@@ -35,7 +35,7 @@
   },
   "dingpos": {
     "tagline": "Kassensystem für das iPad",
-    "desc": "Eröffne deinen Laden in 10 Minuten. Eine Kasse, die auch offline weiterläuft, und deine Verkaufsdaten bleiben auf deinem iPad."
+    "desc": "Eröffne deinen Laden in 10 Minuten. Eine Kasse, die auch offline weiterläuft. Deine Verkaufsdaten bleiben auf deinem iPad."
   },
   "contact": {
     "heading": "Fragen zu einer App?",
@@ -71,7 +71,7 @@
           "price": "2,10 €"
         },
         {
-          "name": "Butterkeks",
+          "name": "Meersalzkeks",
           "price": "1,90 €"
         },
         {

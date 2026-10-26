@@ -18,7 +18,7 @@
     "proof": "Su App Store e Google Play"
   },
   "apps": {
-    "heading": "Quattro app, ognuna per un compito",
+    "heading": "Quattro app, ognuna per un solo compito",
     "sub": "Ogni app ha il suo sito con FAQ e assistenza."
   },
   "pikgeon": {
@@ -26,8 +26,8 @@
     "desc": "Scansiona le cartoline di Pikmin Bloom e segui ogni spedizione. Il riconoscimento avviene sul telefono, così le tue cartoline restano private."
   },
   "babbby": {
-    "tagline": "Idee di attività quotidiane da 0 a 6 anni",
-    "desc": "Segna le tappe, crea routine e scegli tra oltre 340 attività adatte all’età di tuo figlio."
+    "tagline": "Idee di gioco ogni giorno, da 0 a 6 anni",
+    "desc": "Segna le tappe, crea routine e scegli tra oltre 340 attività adatte all’età del tuo bambino."
   },
   "sotto": {
     "tagline": "Ricorda i dettagli che contano",
@@ -54,7 +54,7 @@
       "categories": [
         "Tutte",
         "Caffè",
-        "Forno",
+        "Panetteria",
         "Dolci"
       ],
       "products": [
@@ -122,7 +122,7 @@
       "fields": [
         {
           "label": "Idee regalo",
-          "value": "Macchina analogica"
+          "value": "Fotocamera vintage"
         },
         {
           "label": "Bevanda pref.",
