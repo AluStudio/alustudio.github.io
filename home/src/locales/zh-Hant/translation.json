@@ -1,27 +1,118 @@
 {
-  "profile": {
-    "bio": "獨立開發工作室 — 為日常生活打造的工具"
+  "nav": {
+    "label": "頁面區塊",
+    "apps": "作品",
+    "approach": "做法",
+    "contact": "聯絡",
+    "language": "切換語言",
+    "menu_open": "開啟選單",
+    "menu_close": "關閉選單",
+    "skip": "跳到主要內容"
+  },
+  "hero": {
+    "eyebrow": "獨立 App 工作室",
+    "title_1": "小而專注的 App，",
+    "title_2": "為日常生活而做",
+    "sub": "Alu Studio 做了四款 iPhone、iPad 與 Android App：小店用的收銀系統、記住重要的人的筆記本、Pikmin Bloom 明信片紀錄，以及給 0 到 6 歲孩子的每日遊戲點子。",
+    "cta": "看看這些 App",
+    "proof": "App Store 與 Google Play 皆可下載"
   },
   "apps": {
-    "heading": "作品"
+    "heading": "四款 App，各自做好一件事",
+    "sub": "每個 App 都有自己的網站，提供教學、常見問題與支援。"
   },
   "pikgeon": {
     "tagline": "讓明信片的回憶，更有條理地延續",
-    "desc": "智慧 OCR 辨識，輕鬆紀錄每一份寄送情誼。完全本地處理，守護您的隱私安全。"
+    "desc": "掃描 Pikmin Bloom 明信片，記錄每一趟寄送旅程。辨識全程在手機上完成，明信片不會離開你的裝置。"
   },
   "babbby": {
-    "tagline": "為 0–6 歲寶貝量身推薦每日活動",
-    "desc": "紀錄成長里程碑、建立日常作息，讓每一天都有意義。340+ 精選活動。"
+    "tagline": "為 0 到 6 歲寶貝推薦每日活動",
+    "desc": "記錄成長里程碑、建立日常作息，從 340+ 個依年齡挑選的活動開始。"
   },
   "sotto": {
     "tagline": "記住每一個重要的細節",
-    "desc": "她最愛的那家店、他過敏的食物、讓他笑出聲的小事——悄悄記下，因為在乎，所以記得。"
+    "desc": "她最愛的那家店、他過敏的食物、讓他笑出聲的小事，悄悄記下。因為在乎，所以記得。"
   },
   "dingpos": {
     "tagline": "iPad 收銀系統",
-    "desc": "10 分鐘開店。離線優先的 POS，資料完全由你掌控。"
+    "desc": "10 分鐘開店。斷網也能照常結帳，營業資料都存在你的 iPad 上。"
+  },
+  "tagline": "為生活裡的小時刻做軟體：櫃台前的一筆交易、朋友的生日、遠方寄來的一張明信片，還有陪孩子玩耍的午後。",
+  "approach": {
+    "heading": "我們怎麼做 App",
+    "items": [
+      {
+        "title": "一個 App，一件事",
+        "body": "每個 App 都圍繞一項任務設計，你最需要的畫面，就是打開後看到的第一個。"
+      },
+      {
+        "title": "資料留在你的裝置上",
+        "body": "DingPOS、Sotto 與 Pikgeon 把你輸入的內容存在自己的手機或 iPad，不會傳到我們的伺服器。"
+      },
+      {
+        "title": "問題由開發者本人回覆",
+        "body": "寫信給工作室，回信的就是做這個 App 的人。"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "對 App 有疑問嗎？",
+    "sub": "每個 App 都有自己的支援頁與常見問題。其他事情，歡迎直接寫信給工作室。",
+    "cta": "寫信給工作室"
   },
   "footer": {
+    "apps": "作品",
+    "privacy": "隱私權政策",
+    "privacy_of": "{{name}} 隱私權政策",
     "rights": "版權所有。"
+  },
+  "scene": {
+    "dingpos": {
+      "order": "訂單 0127",
+      "offline": "離線中",
+      "tiles": [
+        { "name": "拿鐵", "price": "NT$115" },
+        { "name": "抹茶拿鐵", "price": "NT$150" },
+        { "name": "可頌", "price": "NT$85" },
+        { "name": "貝果", "price": "NT$70" }
+      ],
+      "rows": [
+        { "name": "拿鐵", "qty": "×2", "price": "NT$230" },
+        { "name": "可頌", "qty": "×1", "price": "NT$85" },
+        { "name": "抹茶拿鐵", "qty": "×1", "price": "NT$150" }
+      ],
+      "total_label": "合計",
+      "total": "NT$465",
+      "charge": "結帳",
+      "paid": "已付款"
+    },
+    "sotto": {
+      "initials": "予晴",
+      "name": "林予晴",
+      "meta": "大學同學",
+      "new_note": "想在春天去京都看櫻花",
+      "notes": [
+        { "kind": "love", "text": "燕麥拿鐵，無糖" },
+        { "kind": "allergy", "text": "對花生過敏" },
+        { "kind": "birthday", "text": "生日 3 月 14 日" }
+      ]
+    },
+    "pikgeon": {
+      "badge": "裝置上辨識",
+      "fields": [
+        { "label": "寄件人", "value": "Yuki" },
+        { "label": "地點", "value": "京都嵐山" },
+        { "label": "收到", "value": "4 月 12 日" }
+      ]
+    },
+    "babbby": {
+      "title": "今天",
+      "age": "18 個月",
+      "activities": [
+        { "name": "疊疊杯", "category": "精細動作" },
+        { "name": "認識動物", "category": "語言" },
+        { "name": "玩水倒水", "category": "感官" }
+      ]
+    }
   }
 }
