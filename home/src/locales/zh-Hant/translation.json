@@ -2,7 +2,6 @@
   "nav": {
     "label": "頁面區塊",
     "apps": "作品",
-    "approach": "做法",
     "contact": "聯絡",
     "language": "切換語言",
     "menu_open": "開啟選單",
@@ -11,8 +10,8 @@
   },
   "hero": {
     "eyebrow": "獨立 App 工作室",
-    "title_1": "小而專注的 App，",
-    "title_2": "為日常生活而做",
+    "title_1": "從收銀台到朋友的生日，",
+    "title_2": "日常用得到的 App",
     "sub": "Alu Studio 做了四款 iPhone、iPad 與 Android App：小店用的收銀系統、記住重要的人的筆記本、Pikmin Bloom 明信片紀錄，以及給 0 到 6 歲孩子的每日遊戲點子。",
     "cta": "看看這些 App",
     "proof": "App Store 與 Google Play 皆可下載"
@@ -37,24 +36,6 @@
     "tagline": "iPad 收銀系統",
     "desc": "10 分鐘開店。斷網也能照常結帳，營業資料都存在你的 iPad 上。"
   },
-  "tagline": "為生活裡的小時刻做軟體：櫃台前的一筆交易、朋友的生日、遠方寄來的一張明信片，還有陪孩子玩耍的午後。",
-  "approach": {
-    "heading": "我們怎麼做 App",
-    "items": [
-      {
-        "title": "一個 App，一件事",
-        "body": "每個 App 都圍繞一項任務設計，你最需要的畫面，就是打開後看到的第一個。"
-      },
-      {
-        "title": "資料留在你的裝置上",
-        "body": "DingPOS、Sotto 與 Pikgeon 把你輸入的內容存在自己的手機或 iPad，不會傳到我們的伺服器。"
-      },
-      {
-        "title": "問題由開發者本人回覆",
-        "body": "寫信給工作室，回信的就是做這個 App 的人。"
-      }
-    ]
-  },
   "contact": {
     "heading": "對 App 有疑問嗎？",
     "sub": "每個 App 都有自己的支援頁與常見問題。其他事情，歡迎直接寫信給工作室。",
@@ -68,51 +49,156 @@
   },
   "scene": {
     "dingpos": {
-      "order": "訂單 0127",
-      "offline": "離線中",
-      "tiles": [
-        { "name": "拿鐵", "price": "NT$115" },
-        { "name": "抹茶拿鐵", "price": "NT$150" },
-        { "name": "可頌", "price": "NT$85" },
-        { "name": "貝果", "price": "NT$70" }
+      "search": "搜尋商品或掃描條碼",
+      "categories": [
+        "全部",
+        "咖啡",
+        "烘焙",
+        "甜點"
       ],
-      "rows": [
-        { "name": "拿鐵", "qty": "×2", "price": "NT$230" },
-        { "name": "可頌", "qty": "×1", "price": "NT$85" },
-        { "name": "抹茶拿鐵", "qty": "×1", "price": "NT$150" }
+      "products": [
+        {
+          "name": "拿鐵",
+          "price": "NT$115"
+        },
+        {
+          "name": "抹茶拿鐵",
+          "price": "NT$150"
+        },
+        {
+          "name": "可頌",
+          "price": "NT$85"
+        },
+        {
+          "name": "海鹽餅乾",
+          "price": "NT$60"
+        },
+        {
+          "name": "檸檬塔",
+          "price": "NT$125"
+        },
+        {
+          "name": "重乳酪蛋糕",
+          "price": "NT$140"
+        }
       ],
-      "total_label": "合計",
-      "total": "NT$465",
-      "charge": "結帳",
+      "cart": "購物車 1",
+      "customer": "選擇顧客",
+      "empty": "點商品加入購物車",
+      "lines": [
+        {
+          "name": "拿鐵",
+          "qty": 2,
+          "note": "燕麥奶",
+          "price": "NT$230"
+        },
+        {
+          "name": "可頌",
+          "qty": 1,
+          "price": "NT$85"
+        },
+        {
+          "name": "抹茶拿鐵",
+          "qty": 1,
+          "note": "少糖",
+          "price": "NT$150"
+        }
+      ],
+      "subtotal": "小計",
+      "totals": [
+        "NT$0",
+        "NT$230",
+        "NT$315",
+        "NT$465"
+      ],
       "paid": "已付款"
     },
     "sotto": {
+      "edit": "編輯",
       "initials": "予晴",
       "name": "林予晴",
       "meta": "大學同學",
-      "new_note": "想在春天去京都看櫻花",
-      "notes": [
-        { "kind": "love", "text": "燕麥拿鐵，無糖" },
-        { "kind": "allergy", "text": "對花生過敏" },
-        { "kind": "birthday", "text": "生日 3 月 14 日" }
+      "fields": [
+        {
+          "label": "送禮靈感",
+          "value": "底片相機"
+        },
+        {
+          "label": "喜歡的飲料",
+          "value": "燕麥拿鐵無糖"
+        },
+        {
+          "label": "過敏",
+          "value": "花生"
+        },
+        {
+          "label": "生日",
+          "value": "1993/08/30"
+        }
       ]
     },
     "pikgeon": {
-      "badge": "裝置上辨識",
-      "fields": [
-        { "label": "寄件人", "value": "Yuki" },
-        { "label": "地點", "value": "京都嵐山" },
-        { "label": "收到", "value": "4 月 12 日" }
+      "cancel": "取消",
+      "save": "全部儲存",
+      "title": "辨識結果",
+      "progress": "進度：{{done}} / {{total}} 張",
+      "recognizing": "辨識中...",
+      "waiting": "等待中",
+      "rows": [
+        {
+          "name": "あやな",
+          "meta": "Fountain on Richards · 2 月 21 日"
+        },
+        {
+          "name": "Eric",
+          "meta": "Gastown Steam Clock · 2 月 20 日"
+        },
+        {
+          "name": "Yuki",
+          "meta": "Stanley Park · 2 月 18 日"
+        },
+        {
+          "name": "Mateo",
+          "meta": "Granville Island · 2 月 17 日"
+        }
       ]
     },
     "babbby": {
       "title": "今天",
-      "age": "18 個月",
+      "child": "肉球",
+      "child_initial": "肉",
+      "days": [
+        "日",
+        "一",
+        "二",
+        "三",
+        "四",
+        "五",
+        "六"
+      ],
+      "age": "12–18 個月",
       "activities": [
-        { "name": "疊疊杯", "category": "精細動作" },
-        { "name": "認識動物", "category": "語言" },
-        { "name": "玩水倒水", "category": "感官" }
-      ]
+        {
+          "name": "上下階梯",
+          "category": "大肢體運動",
+          "category_id": "gross_motor",
+          "emoji": "🏃"
+        },
+        {
+          "name": "顏色分類",
+          "category": "思考探索",
+          "category_id": "cognitive",
+          "emoji": "🧩"
+        },
+        {
+          "name": "蠟筆塗鴉",
+          "category": "小肌肉操作",
+          "category_id": "fine_motor",
+          "emoji": "✋"
+        }
+      ],
+      "week": "本週",
+      "done_label": "個活動完成"
     }
   }
 }

@@ -1,0 +1,1254 @@
+// Scene styles: each app's real screen redrawn small. Colours come from the
+// apps themselves (DingPOS slate, Sotto porcelain theme, Pikgeon cream,
+// Babbby peach). Steps from useStory flip data attributes; transitions here
+// do the moving.
+
+@use "sass:map";
+
+$space: (
+  25: 2px,
+  50: 4px,
+  75: 8px,
+  100: 12px,
+  200: 16px,
+  300: 24px,
+  400: 32px,
+  800: 80px,
+);
+
+@function s($key) {
+  @return map.get($space, $key);
+}
+
+@mixin xs {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+$e: cubic-bezier(0.16, 1, 0.3, 1);
+$e2: cubic-bezier(0.33, 1, 0.68, 1);
+$io: cubic-bezier(0.65, 0, 0.35, 1);
+$spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+$serif: "New York", ui-serif, Georgia, "Songti TC", serif;
+$mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+%ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+%device-shadow {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 32px 64px -24px rgba(23, 30, 40, 0.35),
+    0 12px 24px -12px rgba(23, 30, 40, 0.2);
+}
+
+// A touch landing on a control.
+@mixin ripple($color) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    margin: -16px 0 0 -16px;
+    border-radius: 9999px;
+    background: $color;
+    pointer-events: none;
+    animation: ripple 0.6s $e2 both;
+  }
+}
+
+// ─── Devices ────────────────────────────────────────────────────
+// Outer radius minus the bezel gives the screen radius (B3).
+.phone {
+  @extend %device-shadow;
+  flex-shrink: 0;
+  width: 248px;
+  height: 480px;
+  margin-top: s(400);
+  padding: 6px;
+  border-radius: 32px;
+  background: #1c1c1e;
+
+  &__screen {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 26px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      z-index: 2;
+      width: 72px;
+      height: 22px;
+      margin-left: -36px;
+      border-radius: 9999px;
+      background: #000;
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: s(75) s(300) 0;
+    @include xs;
+    font-weight: 600;
+  }
+
+  &__glyphs {
+    display: flex;
+    align-items: center;
+    gap: s(25);
+  }
+}
+
+.ipad {
+  @extend %device-shadow;
+  flex-shrink: 0;
+  width: min(calc(100% - #{s(400)}), 560px);
+  height: 372px;
+  margin-top: s(300);
+  padding: 8px;
+  border-radius: 24px;
+  background: #1c1c1e;
+
+  &__screen {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+}
+
+// ─── DingPOS ────────────────────────────────────────────────────
+$dp: #4d6a8f;
+$dp-ink: #1f2733;
+$dp-muted: #7a8494;
+$dp-line: rgba(31, 39, 51, 0.08);
+
+.pos {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 184px;
+  background: #f3f5f8;
+  color: $dp-ink;
+  @include xs;
+
+  @container (max-width: 479px) {
+    grid-template-columns: minmax(0, 1fr);
+
+    .pos__rail,
+    .pos__catalog {
+      display: none;
+    }
+  }
+
+  &__rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: s(75);
+    padding: s(100) 0;
+    background: #eef1f5;
+  }
+
+  &__logo {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    margin-bottom: s(75);
+    border-radius: 9999px;
+    background: #fff;
+    box-shadow: 0 1px 2px $dp-line;
+    color: $dp;
+    font-weight: 700;
+  }
+
+  &__rail-item {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    color: #8b94a3;
+
+    &[data-active] {
+      background: rgba($dp, 0.12);
+      color: $dp;
+    }
+  }
+
+  &__catalog {
+    display: flex;
+    flex-direction: column;
+    gap: s(75);
+    min-width: 0;
+    padding: s(100);
+  }
+
+  &__search {
+    @extend %ellipsis;
+    display: flex;
+    align-items: center;
+    gap: s(75);
+    height: 28px;
+    padding: 0 s(100);
+    border-radius: 9999px;
+    background: #fff;
+    color: $dp-muted;
+  }
+
+  &__pills {
+    display: flex;
+    gap: s(50);
+    overflow: hidden;
+  }
+
+  &__pill {
+    padding: s(25) s(100);
+    border-radius: 9999px;
+    background: #e5e9ef;
+    color: #4a5361;
+    font-weight: 500;
+    white-space: nowrap;
+
+    &[data-active] {
+      background: $dp;
+      color: #fff;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: s(75);
+  }
+
+  &__product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: s(25);
+    padding: s(50) s(50) s(75);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 1px 2px $dp-line;
+    transition: transform 0.3s $e;
+
+    &[data-tapped] {
+      transform: scale(0.95);
+      @include ripple(rgba($dp, 0.3));
+    }
+  }
+
+  &__product-name,
+  &__product-price {
+    @extend %ellipsis;
+    padding: 0 s(25);
+  }
+
+  &__product-name {
+    margin-top: s(25);
+    font-weight: 600;
+  }
+
+  &__product-price {
+    color: $dp-muted;
+    font-variant-numeric: tabular-nums;
+  }
+
+  // Outer tile radius 8 minus the 4px gap.
+  &__thumb {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 52px;
+    border-radius: 4px;
+
+    &--sm {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+    }
+
+    &--0 {
+      background: #eadfd1;
+      color: #8a5a3b;
+    }
+
+    &--1 {
+      background: #dde9d0;
+      color: #4f7a3a;
+    }
+
+    &--2 {
+      background: #f3e3c4;
+      color: #b07a2a;
+    }
+
+    &--3 {
+      background: #ece0d2;
+      color: #8b6b4a;
+    }
+
+    &--4 {
+      background: #f5edc0;
+      color: #a68712;
+    }
+
+    &--5 {
+      background: #f5e3e1;
+      color: #b05c5c;
+    }
+  }
+
+  &__cart {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: #fff;
+    box-shadow: -1px 0 0 $dp-line;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: s(100) s(100) 0;
+    color: $dp;
+    box-shadow: inset 0 -1px 0 $dp-line;
+  }
+
+  &__tab {
+    padding-bottom: s(75);
+    font-weight: 600;
+    box-shadow: inset 0 -2px 0 $dp;
+  }
+
+  &__customer {
+    display: flex;
+    align-items: center;
+    gap: s(50);
+    margin: 0 s(100);
+    padding: s(75) 0;
+    color: $dp-muted;
+    box-shadow: inset 0 -1px 0 $dp-line;
+  }
+
+  // Fixed to three lines so the checkout sits above the panel's bottom edge.
+  &__lines {
+    position: relative;
+    height: 128px;
+    padding: s(50) s(100);
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+    gap: s(75);
+    padding: s(50) 0;
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(4px);
+    transition:
+      opacity 0.5s $e2,
+      transform 0.7s $e,
+      filter 0.5s $e2;
+
+    &[data-shown] {
+      opacity: 1;
+      transform: none;
+      filter: blur(0);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 s(50);
+    border-radius: 9999px;
+    background: $dp;
+    box-shadow: 0 0 0 2px #fff;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  &__line-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__line-name {
+    @extend %ellipsis;
+    font-weight: 600;
+  }
+
+  &__line-note {
+    @extend %ellipsis;
+    color: $dp-muted;
+  }
+
+  &__line-price {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__empty {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: $dp-muted;
+    opacity: 0;
+    transition: opacity 0.4s $e2;
+
+    &[data-shown] {
+      opacity: 1;
+      transition-delay: 0.3s;
+    }
+  }
+
+  &__checkout {
+    display: flex;
+    flex-direction: column;
+    gap: s(75);
+    padding: s(100);
+  }
+
+  &__subtotal {
+    display: flex;
+    justify-content: space-between;
+    color: $dp-muted;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__charge {
+    display: grid;
+    place-items: center;
+    height: 36px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: $dp;
+    color: #fff;
+    @include sm;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    transition:
+      transform 0.3s $e,
+      background-color 0.4s $e2;
+
+    &[data-press] {
+      transform: scale(0.96);
+    }
+
+    &[data-paid] {
+      background: #3f8a5c;
+    }
+  }
+
+  &__charge-total,
+  &__charge-paid {
+    grid-area: 1 / 1;
+    transition:
+      opacity 0.3s $e2,
+      transform 0.5s $e;
+  }
+
+  &__charge-paid {
+    display: flex;
+    align-items: center;
+    gap: s(50);
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  &__charge[data-paid] &__charge-total {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  &__charge[data-paid] &__charge-paid {
+    opacity: 1;
+    transform: none;
+  }
+
+  &__tick {
+    display: inline-block;
+    animation: tick 0.5s $e both;
+  }
+}
+
+// ─── Sotto ──────────────────────────────────────────────────────
+$st-bg: #f4efe8;
+$st-surface: #fbf8f3;
+$st-surface-2: #ede6db;
+$st-ink: #1c1a17;
+$st-ink-2: #6b6253;
+$st-ink-3: #a99e8b;
+$st-accent: #8b6b3a;
+$st-line: rgba(28, 26, 23, 0.08);
+
+.phone--sotto .phone__screen {
+  background: $st-bg;
+  color: $st-ink;
+}
+
+.sotto {
+  padding: 0 s(200);
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: s(50);
+  }
+
+  &__circle,
+  &__pill {
+    background: $st-surface;
+    box-shadow: 0 1px 2px $st-line;
+  }
+
+  &__circle {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+  }
+
+  &__pill {
+    padding: s(50) s(100);
+    border-radius: 9999px;
+    @include xs;
+    font-weight: 600;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: s(100);
+    margin-top: s(200);
+  }
+
+  &__avatar {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    background: $st-surface-2;
+    color: $st-accent;
+    font-family: $serif;
+    @include sm;
+    font-weight: 600;
+  }
+
+  &__name {
+    font-family: $serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+
+  &__meta {
+    @include xs;
+    color: $st-ink-2;
+  }
+
+  &__fields {
+    margin-top: s(200);
+    padding: 0 s(100);
+    border-radius: 16px;
+    background: $st-surface;
+    box-shadow: 0 1px 2px $st-line;
+  }
+
+  &__field {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    gap: s(25);
+    padding: s(100) 0;
+
+    & + & {
+      box-shadow: inset 0 1px 0 $st-line;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 4px -8px;
+      z-index: -1;
+      border-radius: 8px;
+      background: rgba($st-accent, 0.08);
+      opacity: 0;
+      transition: opacity 0.4s $e2;
+    }
+
+    &[data-editing]::before {
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    @include xs;
+    color: $st-ink-3;
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+    font-family: $mono;
+    @include sm;
+  }
+
+  &__caret {
+    width: 2px;
+    height: 16px;
+    margin-left: 1px;
+    border-radius: 9999px;
+    background: $st-accent;
+    animation: blink 1s steps(1) infinite;
+  }
+
+  &__saved {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    border-radius: 9999px;
+    background: $st-accent;
+    color: $st-surface;
+    opacity: 0;
+    transform: scale(0.5);
+    transition:
+      opacity 0.3s $e2,
+      transform 0.5s $spring;
+
+    &[data-shown] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+// ─── Pikgeon ────────────────────────────────────────────────────
+$pk-bg: #f3f0e7;
+$pk-ink: #2b2a26;
+$pk-muted: #8a867b;
+$pk-faint: #b5b1a6;
+$pk-green: #74b87a;
+$pk-line: rgba(43, 42, 38, 0.08);
+
+.phone--pikgeon .phone__screen {
+  background: $pk-bg;
+  color: $pk-ink;
+}
+
+.pk {
+  padding: 0 s(200);
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: s(50);
+  }
+
+  &__pill {
+    padding: s(50) s(100);
+    border-radius: 9999px;
+    background: #fff;
+    box-shadow: 0 1px 2px $pk-line;
+    @include xs;
+    font-weight: 600;
+    transition: color 0.4s $e2;
+
+    &:last-child {
+      color: $pk-faint;
+    }
+
+    &[data-enabled] {
+      color: $pk-ink;
+    }
+  }
+
+  &__title {
+    margin-top: s(100);
+    @include sm;
+    font-weight: 600;
+  }
+
+  &__progress {
+    display: flex;
+    flex-direction: column;
+    gap: s(50);
+    margin-top: s(75);
+    @include xs;
+    color: $pk-muted;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__bar {
+    height: 4px;
+    overflow: hidden;
+    border-radius: 9999px;
+    background: $pk-line;
+  }
+
+  &__bar-fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: #8cc084;
+    transform-origin: left;
+    transition: transform 0.7s $io;
+  }
+
+  &__rows {
+    margin-top: s(75);
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: s(100);
+    padding: s(75) 0;
+    transition: opacity 0.4s $e2;
+
+    & + & {
+      box-shadow: inset 0 1px 0 $pk-line;
+    }
+
+    &[data-state="waiting"] {
+      opacity: 0.45;
+    }
+
+    &[data-state="recognizing"] {
+      opacity: 0.8;
+    }
+  }
+
+  // A tiny postcard: white border, sky, sun and a hill.
+  &__thumb {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(43, 42, 38, 0.15);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 9999px;
+    }
+
+    &::before {
+      top: 4px;
+      right: 4px;
+      width: 8px;
+      height: 8px;
+    }
+
+    &::after {
+      left: -8px;
+      bottom: -14px;
+      width: 48px;
+      height: 24px;
+    }
+
+    &--0 {
+      background: #bfd9e8;
+
+      &::before {
+        background: #f6d57a;
+      }
+
+      &::after {
+        background: #8dbb76;
+      }
+    }
+
+    &--1 {
+      background: #f2c9a0;
+
+      &::before {
+        background: #fff1d6;
+      }
+
+      &::after {
+        background: #c97b5a;
+      }
+    }
+
+    &--2 {
+      background: #cfe3d4;
+
+      &::before {
+        background: #fbe7a1;
+      }
+
+      &::after {
+        background: #6fa287;
+      }
+    }
+
+    &--3 {
+      background: #e6d3ea;
+
+      &::before {
+        background: #fff;
+      }
+
+      &::after {
+        background: #9c7fb0;
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    animation: fade-in 0.4s $e2 both;
+  }
+
+  &__name {
+    @extend %ellipsis;
+    @include sm;
+    font-weight: 600;
+  }
+
+  [data-state="recognizing"] &__name {
+    animation: breathe 1.4s $io infinite;
+  }
+
+  &__meta {
+    @extend %ellipsis;
+    @include xs;
+    color: $pk-muted;
+  }
+
+  &__status {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    color: $pk-faint;
+
+    svg {
+      animation: pop 0.5s $spring both;
+    }
+  }
+
+  [data-state="done"] &__status {
+    color: $pk-green;
+  }
+
+  [data-state="recognizing"] &__status svg {
+    animation: hourglass 1.4s $io infinite;
+  }
+}
+
+// ─── Babbby ─────────────────────────────────────────────────────
+$bb-ink: #2f2622;
+$bb-muted: #9b8f88;
+$bb-orange: #f07a45;
+$bb-green: #6cc08b;
+$bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
+
+.bb {
+  display: flex;
+  align-items: flex-start;
+  gap: s(400);
+
+  @container (max-width: 479px) {
+    .bb__stats {
+      display: none;
+    }
+  }
+}
+
+.phone--babbby .phone__screen {
+  background: #fcefe7;
+  color: $bb-ink;
+}
+
+.bb__nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  margin-top: s(50);
+}
+
+.bb__title {
+  @include sm;
+  font-weight: 600;
+}
+
+.bb__circle {
+  position: absolute;
+  right: s(200);
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: $bb-shadow;
+}
+
+.bb__child {
+  display: inline-flex;
+  align-items: center;
+  gap: s(75);
+  margin: s(75) s(200) 0;
+  padding: s(25) s(100) s(25) s(25);
+  border: 2px solid $bb-orange;
+  border-radius: 9999px;
+  background: #fff7f2;
+  @include sm;
+  font-weight: 600;
+}
+
+.bb__avatar {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: $bb-orange;
+  color: #fff;
+  @include xs;
+}
+
+.bb__week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  margin: s(100) s(75) 0;
+  @include xs;
+  color: $bb-muted;
+  text-align: center;
+}
+
+.bb__day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: s(25);
+}
+
+.bb__date {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  color: $bb-ink;
+  @include sm;
+  font-weight: 600;
+
+  [data-today] > & {
+    background: $bb-orange;
+    color: #fff;
+  }
+
+  [data-future] > & {
+    color: #d4cbc5;
+  }
+}
+
+.bb__list {
+  display: flex;
+  flex-direction: column;
+  gap: s(75);
+  margin: s(100) s(100) 0;
+}
+
+.bb__card {
+  display: flex;
+  align-items: flex-start;
+  gap: s(100);
+  padding: s(100);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: $bb-shadow;
+  transition: opacity 0.6s $e2;
+
+  &[data-done] {
+    opacity: 0.6;
+  }
+}
+
+.bb__check {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: s(25);
+  border: 2px solid #d8cfc9;
+  border-radius: 9999px;
+  transition: transform 0.3s $e;
+
+  &[data-tapped] {
+    transform: scale(0.86);
+    @include ripple(rgba($bb-green, 0.35));
+  }
+}
+
+.bb__check-fill {
+  position: absolute;
+  inset: -2px;
+  display: grid;
+  place-items: center;
+  border-radius: inherit;
+  background: $bb-green;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.3s $e2,
+    transform 0.5s $spring;
+
+  [data-done] & {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.bb__burst span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 9999px;
+  background: $bb-orange;
+  animation: burst 0.7s $e both;
+
+  &:nth-child(even) {
+    background: $bb-green;
+  }
+}
+
+.bb__card-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.bb__card-title {
+  @extend %ellipsis;
+  @include sm;
+  font-weight: 600;
+}
+
+.bb__chips {
+  display: flex;
+  gap: s(50);
+  margin-top: s(50);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, #000 80%, transparent);
+}
+
+.bb__chip {
+  padding: s(25) s(75);
+  border-radius: 9999px;
+  @include xs;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &--gross_motor {
+    background: rgba(#ff6b35, 0.12);
+    color: #d4541f;
+  }
+
+  &--cognitive {
+    background: rgba(#96ceb4, 0.28);
+    color: #3e8e6a;
+  }
+
+  &--fine_motor {
+    background: rgba(#4ecdc4, 0.18);
+    color: #23998f;
+  }
+
+  &--age {
+    background: #f8e8de;
+    color: #a8654a;
+  }
+}
+
+.bb__stats {
+  flex-shrink: 0;
+  width: 200px;
+  margin-top: s(800);
+  padding: s(200);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    0 1px 2px rgba(80, 40, 20, 0.06),
+    0 24px 48px -24px rgba(80, 40, 20, 0.3);
+  color: $bb-ink;
+}
+
+.bb__stats-title {
+  @include xs;
+  font-weight: 600;
+  color: $bb-muted;
+}
+
+.bb__stats-count {
+  display: flex;
+  align-items: baseline;
+  gap: s(50);
+  margin-top: s(25);
+  @include xs;
+  color: $bb-muted;
+
+  .bb__tick {
+    display: inline-block;
+    color: $bb-ink;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    animation: tick 0.5s $e both;
+  }
+}
+
+.bb__bars {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: s(75);
+  margin-top: s(200);
+}
+
+.bb__bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: s(50);
+  height: 96px;
+  @include xs;
+  color: $bb-muted;
+}
+
+.bb__bar {
+  width: 100%;
+  height: 72px;
+  border-radius: 4px;
+  background: #f8d9c6;
+  transform-origin: bottom;
+  transition: transform 0.7s $e;
+
+  &[data-today] {
+    background: $bb-orange;
+  }
+}
+
+// ─── Keyframes ──────────────────────────────────────────────────
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+@keyframes tick {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(2px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes hourglass {
+  0%,
+  40% {
+    transform: rotate(0);
+  }
+  60%,
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes burst {
+  from {
+    opacity: 1;
+    transform: rotate(var(--a)) translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(var(--a)) translateY(-20px) scale(0.4);
+  }
+}

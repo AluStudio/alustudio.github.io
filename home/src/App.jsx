@@ -5,19 +5,16 @@ import {
   ArrowDown,
   ArrowUpRight,
   CaretDown,
-  ChatCircleText,
-  DeviceMobile,
   EnvelopeSimple,
   Globe,
   GooglePlayLogo,
-  Target,
 } from "@phosphor-icons/react";
 import { supportedLanguages } from "./i18n";
 import { apps, CONTACT_EMAIL } from "./apps";
 import Scene from "./scenes";
 
 const base = import.meta.env.BASE_URL;
-const sections = ["apps", "approach", "contact"];
+const sections = ["apps", "contact"];
 const storeIcons = { ios: AppleLogo, android: GooglePlayLogo };
 
 // Highlights the nav link of the section that crosses the middle of the viewport.
@@ -41,20 +38,6 @@ function useActiveSection() {
     return () => observer.disconnect();
   }, []);
   return active;
-}
-
-// Pauses scene story loops while their card is off screen. Running is the
-// default, so the prerendered HTML never ships a paused or hidden state.
-function usePauseOffscreen() {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        entry.target.toggleAttribute("data-paused", !entry.isIntersecting);
-      }
-    });
-    document.querySelectorAll(".scene").forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 }
 
 function LanguagePicker() {
@@ -262,64 +245,6 @@ function AppCard({ app }) {
   );
 }
 
-// Splits copy into words for the tagline reveal; punctuation and spaces stay
-// attached to the word before them. Intl.Segmenter also splits CJK text,
-// which has no spaces between words.
-function splitWords(text, lang) {
-  if (typeof Intl.Segmenter !== "function") return text.split(/(?<=\s)/);
-  const words = [];
-  for (const { segment, isWordLike } of new Intl.Segmenter(lang, { granularity: "word" }).segment(text)) {
-    if (isWordLike || words.length === 0) words.push(segment);
-    else words[words.length - 1] += segment;
-  }
-  return words;
-}
-
-function Tagline() {
-  const { t, i18n } = useTranslation();
-  const words = splitWords(t("tagline"), i18n.resolvedLanguage);
-  const last = Math.max(words.length - 1, 1);
-  return (
-    <section className="tagline">
-      <p className="tagline__text">
-        {words.map((word, i) => (
-          <span key={i} className="tagline__word" style={{ "--p": i / last }}>
-            {word}
-          </span>
-        ))}
-      </p>
-    </section>
-  );
-}
-
-const approachIcons = [Target, DeviceMobile, ChatCircleText];
-
-function Approach() {
-  const { t } = useTranslation();
-  const items = t("approach.items", { returnObjects: true });
-  return (
-    <section id="approach" className="section approach">
-      <div className="section__head reveal">
-        <h2 className="section__title">{t("approach.heading")}</h2>
-      </div>
-      <ul className="approach__list">
-        {items.map((item, i) => {
-          const Icon = approachIcons[i];
-          return (
-            <li key={item.title} className="approach__item reveal">
-              <span className="approach__icon">
-                <Icon size={20} weight="bold" />
-              </span>
-              <h3 className="approach__title">{item.title}</h3>
-              <p className="approach__body">{item.body}</p>
-            </li>
-          );
-        })}
-      </ul>
-    </section>
-  );
-}
-
 function Contact() {
   const { t } = useTranslation();
   return (
@@ -380,7 +305,6 @@ function Footer() {
 
 function App() {
   const { t } = useTranslation();
-  usePauseOffscreen();
 
   return (
     <>
@@ -401,8 +325,6 @@ function App() {
             ))}
           </div>
         </section>
-        <Tagline />
-        <Approach />
         <Contact />
       </main>
       <div className="shell">

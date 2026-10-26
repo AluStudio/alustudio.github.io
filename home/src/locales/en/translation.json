@@ -2,7 +2,6 @@
   "nav": {
     "label": "Sections",
     "apps": "Apps",
-    "approach": "Approach",
     "contact": "Contact",
     "language": "Change language",
     "menu_open": "Open menu",
@@ -11,8 +10,8 @@
   },
   "hero": {
     "eyebrow": "Independent app studio",
-    "title_1": "Small, focused apps",
-    "title_2": "for everyday life",
+    "title_1": "From the checkout counter",
+    "title_2": "to a friend's birthday",
     "sub": "Alu Studio makes four apps for iPhone, iPad and Android: a point of sale for small shops, a notebook for the people you love, a postcard tracker for Pikmin Bloom, and daily play ideas for young kids.",
     "cta": "Browse the apps",
     "proof": "On the App Store and Google Play"
@@ -37,24 +36,6 @@
     "tagline": "Point of sale for iPad",
     "desc": "Open your store in 10 minutes. A point of sale that keeps working offline, with your sales data kept on your iPad."
   },
-  "tagline": "Software for the small moments: a sale at the counter, a friend's birthday, a postcard from far away, an afternoon of play.",
-  "approach": {
-    "heading": "How we build",
-    "items": [
-      {
-        "title": "One app, one job",
-        "body": "Each app is built around a single task, so the screen you need is the one you see first."
-      },
-      {
-        "title": "Your records stay on your device",
-        "body": "DingPOS, Sotto and Pikgeon store what you enter on your own phone or iPad. None of it is sent to our servers."
-      },
-      {
-        "title": "Questions reach the maker",
-        "body": "Write to the studio and the person who built the app replies."
-      }
-    ]
-  },
   "contact": {
     "heading": "Questions about an app?",
     "sub": "Every app has its own support page and FAQ. For anything else, write to the studio.",
@@ -68,51 +49,156 @@
   },
   "scene": {
     "dingpos": {
-      "order": "Order 0127",
-      "offline": "Offline",
-      "tiles": [
-        { "name": "Latte", "price": "$4.75" },
-        { "name": "Matcha latte", "price": "$5.40" },
-        { "name": "Croissant", "price": "$3.80" },
-        { "name": "Bagel", "price": "$3.20" }
+      "search": "Search products or scan a barcode",
+      "categories": [
+        "All",
+        "Coffee",
+        "Bakery",
+        "Desserts"
       ],
-      "rows": [
-        { "name": "Latte", "qty": "×2", "price": "$9.50" },
-        { "name": "Croissant", "qty": "×1", "price": "$3.80" },
-        { "name": "Matcha latte", "qty": "×1", "price": "$5.40" }
+      "products": [
+        {
+          "name": "Latte",
+          "price": "$4.75"
+        },
+        {
+          "name": "Matcha latte",
+          "price": "$5.40"
+        },
+        {
+          "name": "Croissant",
+          "price": "$3.80"
+        },
+        {
+          "name": "Sea salt cookie",
+          "price": "$2.60"
+        },
+        {
+          "name": "Lemon tart",
+          "price": "$4.60"
+        },
+        {
+          "name": "Cheesecake",
+          "price": "$5.10"
+        }
       ],
-      "total_label": "Total",
-      "total": "$18.70",
-      "charge": "Charge",
+      "cart": "Cart 1",
+      "customer": "Choose customer",
+      "empty": "Tap a product to add it",
+      "lines": [
+        {
+          "name": "Latte",
+          "qty": 2,
+          "note": "Oat milk",
+          "price": "$9.50"
+        },
+        {
+          "name": "Croissant",
+          "qty": 1,
+          "price": "$3.80"
+        },
+        {
+          "name": "Matcha latte",
+          "qty": 1,
+          "note": "Less sweet",
+          "price": "$5.40"
+        }
+      ],
+      "subtotal": "Subtotal",
+      "totals": [
+        "$0.00",
+        "$9.50",
+        "$13.30",
+        "$18.70"
+      ],
       "paid": "Paid"
     },
     "sotto": {
+      "edit": "Edit",
       "initials": "MC",
       "name": "Mia Chen",
       "meta": "Friend since 2019",
-      "new_note": "Wants to see Kyoto in spring",
-      "notes": [
-        { "kind": "love", "text": "Oat latte, no sugar" },
-        { "kind": "allergy", "text": "Allergic to peanuts" },
-        { "kind": "birthday", "text": "Birthday on 14 March" }
+      "fields": [
+        {
+          "label": "Gift Ideas",
+          "value": "Film camera"
+        },
+        {
+          "label": "Fav Drink",
+          "value": "Oat latte, no sugar"
+        },
+        {
+          "label": "Allergy",
+          "value": "Peanuts"
+        },
+        {
+          "label": "Birthday",
+          "value": "1993/08/30"
+        }
       ]
     },
     "pikgeon": {
-      "badge": "On device",
-      "fields": [
-        { "label": "From", "value": "Yuki" },
-        { "label": "Place", "value": "Arashiyama, Kyoto" },
-        { "label": "Received", "value": "12 Apr" }
+      "cancel": "Cancel",
+      "save": "Save All",
+      "title": "Recognition Results",
+      "progress": "Progress: {{done}} / {{total}} photos",
+      "recognizing": "Recognizing…",
+      "waiting": "Waiting",
+      "rows": [
+        {
+          "name": "あやな",
+          "meta": "Fountain on Richards · Feb 21"
+        },
+        {
+          "name": "Eric",
+          "meta": "Gastown Steam Clock · Feb 20"
+        },
+        {
+          "name": "Yuki",
+          "meta": "Stanley Park · Feb 18"
+        },
+        {
+          "name": "Mateo",
+          "meta": "Granville Island · Feb 17"
+        }
       ]
     },
     "babbby": {
       "title": "Today",
-      "age": "18 months",
+      "child": "Mochi",
+      "child_initial": "M",
+      "days": [
+        "S",
+        "M",
+        "T",
+        "W",
+        "T",
+        "F",
+        "S"
+      ],
+      "age": "12–18 months",
       "activities": [
-        { "name": "Stacking cups", "category": "Fine motor" },
-        { "name": "Name the animals", "category": "Language" },
-        { "name": "Splash and pour", "category": "Sensory" }
-      ]
+        {
+          "name": "Up and Down Stairs",
+          "category": "Gross Motor",
+          "category_id": "gross_motor",
+          "emoji": "🏃"
+        },
+        {
+          "name": "Color Sorting",
+          "category": "Cognitive",
+          "category_id": "cognitive",
+          "emoji": "🧩"
+        },
+        {
+          "name": "Crayon Scribble Time",
+          "category": "Fine Motor",
+          "category_id": "fine_motor",
+          "emoji": "✋"
+        }
+      ],
+      "week": "This week",
+      "done_label": "activities done"
     }
   }
 }
