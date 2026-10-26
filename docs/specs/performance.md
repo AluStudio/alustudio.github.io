@@ -14,6 +14,8 @@ read_when:
 - CJK package 依 unicode-range 切成上百個 slice，瀏覽器只下載頁面用到的字所在的 slice。英文頁上只要出現幾個中文字，就會多抓幾百 KB。所以語言 `<select>`（選項是「繁體中文」這類原生名稱）用 system font stack；英文頁上的中文字不要落在 Noto Sans TC 這個 family。
 - sotto 的 CJK family 由 `--sotto-font-cjk`（`sotto/src/index.css`）依頁面語言決定：en、zh-Hant 與其他拉丁、西里爾、阿拉伯文頁面用自託管的 Noto Sans TC；ja、ko、zh-Hans 頁改用系統字型（Hiragino / Apple SD Gothic Neo / PingFang 等）。原因：Noto Sans TC 會用繁中字形畫日文與簡中，系統字型又不必下載任何 slice。
 - dingpos 的 CJK family 由 `--dp-font-cjk`（`dingpos/src/index.css`）依頁面語言決定：英文、繁中與非 CJK 語言的頁面用 Noto Sans TC，簡中頁用 Noto Sans SC，日文與韓文頁用系統字型（同 sotto 的 stack）。原因：同一個漢字在繁中與簡中字型的字形不同，Noto Sans TC 也會用繁中字形畫日文。SC 的 `@font-face` CSS 只在 `lang="zh-Hans"` 的頁面由 `main.jsx` 用 dynamic import 載入；prerender 會把它注入的 `<link>` 寫進 HTML，瀏覽器解析時就會抓，不必等 JS。全域 import 會讓每一頁多一份約 110 KB（未壓縮）的 render-blocking CSS。
+- home 只自託管 Geist（`@fontsource-variable/geist`，涵蓋拉丁、西里爾與越南文）；中日韓文字一律交給系統字型（PingFang、Hiragino、Apple SD Gothic Neo 等），不載 CJK webfont。app 示意畫面裡的 serif 與等寬字也用系統字型（`ui-serif`、`ui-monospace`），不另外下載。
+- 圖示用 inline SVG（home 用 `@phosphor-icons/react`），不用 icon font。bootstrap-icons 的 woff2 一支約 131 KB，不管頁面用了幾個圖示都要整支下載；home 改用 SVG 後，字型傳輸量從 180 KB 降到 29 KB。pikgeon、babbby、sotto、dingpos 仍載 bootstrap-icons。
 - dingpos 的翻譯語言不加 webfont：拉丁、西里爾、希臘與越南文由 Manrope 涵蓋；泰、高棉、寮、喬治亞、孟加拉與印地文交給系統字型（iOS、Android、Windows、macOS 都內建），不下載任何字型。只有在實機截圖出現豆腐字時，才改成自託管那一種文字的 Noto。
 
 ## 圖片
@@ -38,7 +40,7 @@ read_when:
 
 ## 目前基準
 
-正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。pikgeon hero 保留空間、dingpos 改 `hydrateRoot` 與手機版截圖之後，這張表已經過時，部署後需重量。
+正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。pikgeon hero 保留空間、dingpos 改 `hydrateRoot` 與手機版截圖、home 改版之後，這張表已經過時，部署後需重量。
 
 | app | perf | FCP | LCP | CLS | LCP 元素 | desktop perf |
 |---|---|---|---|---|---|---|
@@ -52,6 +54,7 @@ read_when:
 
 - pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。已改成固定 `height: 500px` 修正。
 - dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。重繪的部分已改 `hydrateRoot` 消除，進場動畫保留。
+- home 改版（Geist、SVG 圖示、app 示意畫面）上線前的本機 A/B：同一個 `python3 -m http.server`、Lighthouse 13.5 mobile，改版前後與對照組 babbby 各 3 次交錯量測，對照組 3 次數值相同。中位數 perf 77 → 84、FCP 3.90s → 3.30s、LCP 4.14s → 3.47s，CLS 前後皆為 0；傳輸量 557 KB → 489 KB（字型 180 → 29 KB、CSS 93 → 30 KB，JS 259 → 372 KB、HTML 8 → 40 KB）。本機 LCP 元素從 `h1.intro__title` 變成 `h2.section__title`。本機沒有壓縮，只看前後差；表中 home 一列待部署後重量。
 
 ## Related
 

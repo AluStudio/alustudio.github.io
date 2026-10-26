@@ -14,7 +14,7 @@ Deleting/renaming/archiving this repo silently breaks the old-domain 301 and lea
 
 ```
 /
-├── home/               # Alu Studio profile — Vite + React (link-in-bio)
+├── home/               # Alu Studio studio page — Vite + React (app showcase)
 ├── pikgeon/            # Pikgeon support site — Vite + React + Bootstrap
 ├── babbby/             # Babbby support site  — same stack
 ├── sotto/              # Sotto support site   — same stack
@@ -80,6 +80,7 @@ Root-level Worker logic (`src/worker.js`) owns all redirect/header behavior — 
 - Sotto language is URL-driven the same way, in 12 languages: English at `/sotto/...`, the others under `/sotto/<prefix>/...` (`zh-hant`, `zh-hans`, `ja`, `ko`, `de`, `es`, `fr`, `it`, `pt-br`, `ru`, `ar`; Arabic is `dir="rtl"`). Prefixes live in `sotto/src/i18n.js` and `sotto/scripts/copy-spa-pages.js` — change both together, and add every new route or locale to the root `sitemap.xml`. The build fails when any locale is missing or adds an en key (there is no fallback language), when a guide pack drifts from en's slugs, or when two pages share a title or description. Sotto loads only the page's own language at runtime and hydrates (`hydrateRoot`), with the same render-purity rules as DingPOS.
 - DingPOS guides (`/dingpos/<prefix>/guides/<slug>/`) are acquisition articles written per market, not translated: fees, laws and payment brands differ by country, and a language is not a market (zh-Hant is Taiwan and Hong Kong). Only a language with `dingpos/src/data/guides/guides.<code>.js` has a guides section, its strings live in the pack's `ui` (not `translation.json`), its pages carry no hreflang, and zh-Hans is never generated from it. Every rate or rule cites a source and a `checked` date. Rules: `docs/specs/seo-aeo.md` §獲客文章.
 - Sotto guides (`/sotto/guides/<slug>/`) come from one pack per language, `sotto/src/data/guides/guides.<code>.js`; the schema lives at the top of `guides.en.js`, and the ring-size table every pack shares (mirroring the iOS app's `UnitConversionService`) is `ring-sizes.js`. Sotto's zh-Hans (UI strings and guides) is generated from zh-Hant by `npm run zh-hans`, like DingPOS's — never edit it by hand. Rules: `docs/specs/seo-aeo.md` §獲客文章 and §簡中由繁中產生.
+- Home's app cards redraw each app's real screen (`home/src/scenes.jsx`, `home/src/_scenes.scss`) and act out its core task through `useStory` (`home/src/story.js`). Step 0 is the finished frame, so prerendered HTML and reduced motion show it. Scene interface strings (cart, field labels, recognition status) are copied verbatim from the product repos' localizations — fix wording there first, then copy it over. A scene renders in the page language only when the app ships that language (`languages` in `home/src/apps.js`), English otherwise. The hero headline is `title_1` + `title_sep` + `title_2`: one line from 1024px, two lines without the separator below it, so measure every language's width after changing it.
 - Webfonts, in-page images, and Lighthouse measurement follow `docs/specs/performance.md` — never link `fonts.googleapis.com`, and measure the live site, not `wrangler dev`.
 - DingPOS and Sotto hydrate their prerendered DOM (`hydrateRoot`); the other three apps still re-render it with `createRoot`. A DingPOS or Sotto component must render the same output in the prerender's headless Chrome and on the visitor's device, so never read the clock, viewport, or storage during render (the footer year is the build year for this reason). `scripts/prerender.mjs` reloads every `/dingpos/` and `/sotto/` route after writing it and fails the build on a React hydration error or a replaced DOM. Rules: `docs/specs/seo-aeo.md` §Prerender.
 - Every app mounts `<BrowserRouter>`, not `createBrowserRouter`. React Router's data-router features are therefore unavailable, and the ones that are props fail *silently* rather than erroring — `<Link viewTransition>` is accepted and never calls `startViewTransition`. `dingpos/src/components/TransitionLink.jsx` drives it by hand instead; verify any such prop actually fires before believing it works.
@@ -96,7 +97,7 @@ Site content (features, FAQ) makes claims about app behavior — the app's sourc
 | `babbby/` | `~/Developer/alustudio/babbby-ios` |
 | `sotto/` | `~/Developer/alustudio/sotto` (monorepo: `sotto-ios` + `sotto-android`) |
 | `dingpos/` | `~/Developer/alustudio/DingPOS` |
-| `home/` | — studio profile, no product repo |
+| `home/` | — studio page; its app scenes mirror the four product repos above |
 
 ## Conventions
 
@@ -116,7 +117,7 @@ Three globally installed skills are off in this repo only, since it has no iOS o
 **Repo rules override skill advice.** These skills assume a conventional React app; three constraints here do not match that assumption:
 - Collapsed FAQ/accordion content stays in the DOM (see Sub-app Notes) — no mount/unmount exit animations on that content, or prerender loses it.
 - No animation library is installed (Bootstrap 5 + Sass only). Advice naming Motion/Framer Motion means adding a dependency to all five apps — confirm before doing that.
-- **No JS-gated scroll reveals.** `scripts/prerender.mjs` writes the rendered DOM back to each `index.html`, so an IntersectionObserver pattern that starts at `opacity: 0` ships that hidden state as the served HTML — the page then renders blank until React remounts, and stays blank forever without JS. Entrance motion must be a pure-CSS `animation` (it plays with no JS and leaves nothing hidden). `dingpos/src/assets/scss/home.scss` is the worked example.
+- **No JS-gated scroll reveals.** `scripts/prerender.mjs` writes the rendered DOM back to each `index.html`, so an IntersectionObserver pattern that starts at `opacity: 0` ships that hidden state as the served HTML — the page then renders blank until React remounts, and stays blank forever without JS. Entrance motion must be a pure-CSS `animation` (it plays with no JS and leaves nothing hidden). `dingpos/src/assets/scss/home.scss` is the worked example. Scroll-linked reveals use CSS scroll-driven animations (`animation-timeline: view()` inside `@supports`), as in `home/src/index.scss`; browsers without them simply show the content.
 
 ### SEO skills (claude-seo)
 
