@@ -22,6 +22,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -135,6 +139,7 @@ export const articles = [
       { type: "h2", text: "怎么知道每种收款方式实际被扣多少？" },
       { type: "p", text: "最准的数字在结算账单上：微信支付商户平台、支付宝对账中心和收单机构的对账单都列出每笔手续费。当月手续费除以交易金额，就是你实际的费率。" },
       { type: "p", text: "如果你已经用 iPad 收银，也可以让 [DingPOS](/) 帮你算。到“设置 → 付款方式”点开一个付款方式，在“手续费”填百分比、每笔固定金额，或两者都填。请填实际被扣的费率；微信支付的费率已含税，照合同填就行。" },
+      { type: "image", src: "guides/fees-cn-settings.webp", width: 872, height: 733, alt: "DingPOS“设置 → 付款方式”：一个付款方式的“手续费”字段，已填入百分比", caption: "在付款方式的“手续费”填上实际被扣的费率。" },
       { type: "p", text: "之后用这种方式收的每一笔款都会估算手续费，报表的付款方式卡会这样显示：" },
       {
         type: "list",
@@ -144,6 +149,7 @@ export const articles = [
           "设置费率之前收的款没有手续费记录，报表会标出“缺 N 笔费率”，净收显示“—”。",
         ],
       },
+      { type: "image", src: "guides/fees-cn-report.webp", phone: "guides/fees-cn-report-1080w.webp", width: 1126, height: 906, alt: "DingPOS 报表的付款方式卡：填了手续费的付款方式下面多一行“手续费｜净收”，卡片底部是所选期间的预估手续费与预估净收", caption: "报表按你填的费率，估算每种付款方式的手续费和净收。" },
       { type: "p", text: "这些数字是按你填的费率估算的。DingPOS 不经手收款，也不读取支付机构的账单，实际金额以结算账单为准。设置方法见[可以记录刷卡或移动支付的手续费吗？](/support/payment-fees/)；这是 Standard 及以上方案的功能，各方案对比见[方案与价格](/pricing/)，可以先免费试用 30 天。" },
       { type: "note", text: "DingPOS 不是税控设备，也不开发票，客人要发票请照常用电子发票服务平台开具。开数电票不需要预先领用税控设备，我们也没查到要求一般小店用税控收银机的全国性规定；但主管税务机关要求你用的话，销售要记在税控系统里，不能用 DingPOS 代替。" },
     ],

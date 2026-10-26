@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -141,6 +145,7 @@ export const articles = [
       { type: "p", text: "Si vous êtes assujetti à la TVA, que vous vendez à des particuliers et enregistrez leurs règlements dans un logiciel, ce logiciel doit être sécurisé : certifié ou couvert par une attestation individuelle de l’éditeur. Cela vaut pour chaque logiciel où ces règlements sont enregistrés, même à côté d’une caisse certifiée. [DingPOS](/) n’est pas certifié et son éditeur, Alu Studio, ne délivre pas d’attestation : n’y enregistrez donc pas vos ventes, et appliquez ces calculs aux chiffres de votre caisse et aux relevés de votre prestataire." },
       { type: "p", text: "Ne sont notamment pas concernés les commerces en franchise en base de TVA (en 2026 : ventes de marchandises jusqu’à 85 000 € l’année précédente et 93 500 € l’année en cours ; services : 37 500 € et 41 250 €) et ceux qui ne vendent qu’à des professionnels. En cas de doute, demandez à votre expert-comptable. Le jour où vous devenez redevable de la TVA, l’obligation s’applique." },
       { type: "p", text: "Si vous n’êtes pas concerné, DingPOS peut estimer ces frais sur iPad. Dans Réglages → Moyens de paiement, renseignez les Frais de traitement de chaque moyen : un pourcentage, un montant fixe par transaction, ou les deux. Saisissez le taux réellement prélevé, TVA comprise si votre prestataire en facture." },
+      { type: "image", src: "guides/fees-fr-settings.webp", width: 872, height: 795, alt: "DingPOS, Réglages → Moyens de paiement : les champs Frais de traitement d’un moyen de paiement, avec un pourcentage renseigné", caption: "Les Frais de traitement se renseignent pour chaque moyen de paiement, en pourcentage, en montant fixe ou les deux." },
       {
         type: "list",
         items: [
@@ -149,6 +154,7 @@ export const articles = [
           "Les paiements encaissés avant la saisie d’un taux sont signalés par « N sans taux », et le net s’affiche « — ».",
         ],
       },
+      { type: "image", src: "guides/fees-fr-report.webp", phone: "guides/fees-fr-report-1080w.webp", width: 1126, height: 870, alt: "DingPOS, Stats : la carte Moyens de paiement, avec une ligne « Frais · Net » sous chaque moyen qui a des frais et, en bas, les frais estimés et le net estimé encaissé de la période", caption: "Dans Stats, chaque moyen de paiement affiche ses frais estimés et son net estimé encaissé, avec le total de la période en bas de la carte." },
       { type: "p", text: "Ce sont des estimations d’après vos taux : DingPOS ne traite aucun paiement et ne lit pas les relevés de votre prestataire, qui font foi. Le net estimé n’est pas votre marge. Voir [la marche à suivre](/support/payment-fees/). Cette fonction nécessite la formule Standard ou supérieure ([Tarifs](/pricing/)), avec 30 jours d’essai gratuit." },
     ],
     sources: [

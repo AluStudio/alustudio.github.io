@@ -21,6 +21,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -142,6 +146,7 @@ export const articles = [
       { type: "h2", text: "Làm sao biết mỗi cách nhận tiền thực sự mất bao nhiêu?" },
       { type: "p", text: "Con số chính xác nhất nằm trên sao kê hằng tháng: tổng phí trong tháng, gồm cả VAT, chia cho doanh số của kênh đó là mức phí thực tế. Tính riêng từng loại thẻ để thấy kênh nào đắt nhất." },
       { type: "p", text: "Cửa hàng không thuộc diện bắt buộc và bán hàng trên iPad có thể để [DingPOS](/) ước tính giúp. Vào Cài đặt → Phương thức thanh toán, chạm vào một phương thức rồi điền Phí xử lý thanh toán: tỷ lệ phần trăm, số tiền cố định mỗi giao dịch, hoặc cả hai. Nhập tỷ lệ thực sự bị khấu trừ, đã gồm VAT: phí 1% chưa VAT thì nhập 1,1%." },
+      { type: "image", src: "guides/fees-vn-settings.webp", width: 872, height: 764, alt: "DingPOS, Cài đặt → Phương thức thanh toán: các ô Phí xử lý thanh toán của một phương thức thanh toán, đã điền tỷ lệ phần trăm", caption: "Điền Phí xử lý thanh toán cho từng phương thức theo mức thực sự bị khấu trừ, đã gồm VAT." },
       { type: "p", text: "Từ đó, thẻ Phương thức thanh toán trong Thống kê hiển thị:" },
       {
         type: "list",
@@ -151,6 +156,7 @@ export const articles = [
           "Khoản thu trước khi đặt tỷ lệ phí không được tính phí: Thống kê ghi “(N chưa có tỷ lệ phí)” và thực nhận hiển thị “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-vn-report.webp", phone: "guides/fees-vn-report-1080w.webp", width: 1126, height: 1134, alt: "DingPOS, Thống kê: thẻ Phương thức thanh toán, dưới mỗi phương thức có tỷ lệ phí là dòng “Phí · Thực nhận”, cuối thẻ là phí ước tính và thực nhận ước tính của cả kỳ", caption: "Thống kê ước tính phí và thực nhận của từng phương thức theo tỷ lệ bạn nhập, kèm tổng của cả kỳ ở cuối thẻ." },
       { type: "p", text: "Đây là số ước tính theo tỷ lệ bạn nhập: DingPOS không xử lý thanh toán và không đọc sao kê, nên số thực tế vẫn theo sao kê. Xem [cách thiết lập](/support/payment-fees/). Tính năng có từ gói Standard trở lên ([Gói và bảng giá](/pricing/)), dùng thử miễn phí 30 ngày." },
     ],
     sources: [

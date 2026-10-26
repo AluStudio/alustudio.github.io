@@ -21,6 +21,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -137,6 +141,7 @@ export const articles = [
       { type: "h2", text: "अपनी असली दर कैसे पता करें?" },
       { type: "p", text: "सबसे सही आँकड़ा सेटलमेंट स्टेटमेंट में है: महीने भर का MDR और उस पर GST जोड़कर उस महीने की कार्ड बिक्री से भाग दें, यही आपकी असली दर है। हर तरीके का हिसाब अलग रखें, तो दिखेगा कि कौन-सा सबसे महँगा है।" },
       { type: "p", text: "अगर आप iPad पर बिलिंग करते हैं, तो [DingPOS](/) यह हिसाब लगा सकता है। सेटिंग्ज़ → भुगतान के तरीके में किसी तरीके पर टैप करें और प्रोसेसिंग शुल्क भरें: प्रतिशत, हर लेन-देन पर तय रकम, या दोनों। वही दर भरें जो असल में कटती है, GST समेत, जैसे 1.99% की जगह 2.348%; ऐप में दशमलव के बाद दो ही अंक भरे जाते हैं, इसलिए 2.35% भरें (ITC वाला GST बाद में रिटर्न में मिल जाता है)। जो कंपनी Paytm की तरह रिफ़ंड पर MDR नहीं लौटाती, उसके तरीके में “रिफ़ंड पर प्रतिशत शुल्क वापस मिलता है” बंद कर दें।" },
+      { type: "image", src: "guides/fees-in-settings.webp", width: 872, height: 764, alt: "DingPOS सेटिंग्ज़ → भुगतान के तरीके: एक भुगतान तरीके के प्रोसेसिंग शुल्क फ़ील्ड, जिनमें प्रतिशत भरा है", caption: "भुगतान तरीके के प्रोसेसिंग शुल्क में वही दर भरें जो असल में कटती है, GST समेत।" },
       { type: "p", text: "इसके बाद आँकड़े में भुगतान के तरीके कार्ड यह दिखाता है:" },
       {
         type: "list",
@@ -146,6 +151,7 @@ export const articles = [
           "दर भरने से पहले ली गई रकम पर कोई शुल्क दर्ज नहीं होता: आँकड़े उन्हें “N की दर नहीं है” से चिह्नित करते हैं और शुद्ध प्राप्ति “—” दिखाते हैं।",
         ],
       },
+      { type: "image", src: "guides/fees-in-report.webp", phone: "guides/fees-in-report-1080w.webp", width: 1126, height: 934, alt: "DingPOS आँकड़े का भुगतान के तरीके कार्ड: शुल्क दर वाले हर तरीके के नीचे “शुल्क · शुद्ध” की पंक्ति, और कार्ड के नीचे पूरी अवधि का अनुमानित शुल्क और अनुमानित शुद्ध प्राप्ति", caption: "आँकड़े आपकी भरी दर से हर भुगतान तरीके का अनुमानित शुल्क और शुद्ध प्राप्ति दिखाते हैं।" },
       { type: "p", text: "ये आँकड़े आपकी भरी दर से लगाए अनुमान हैं। DingPOS ख़ुद पेमेंट नहीं लेता और कंपनी का स्टेटमेंट नहीं पढ़ता, इसलिए असली रकम सेटलमेंट स्टेटमेंट में ही है। सेटअप का तरीका [क्या DingPOS कार्ड और मोबाइल भुगतान का शुल्क ट्रैक कर सकता है?](/support/payment-fees/) में है। यह सुविधा Standard प्लान या उससे ऊपर में है ([प्लान और क़ीमत](/pricing/)), और 30 दिन का मुफ़्त ट्रायल मिलता है।" },
     ],
     sources: [

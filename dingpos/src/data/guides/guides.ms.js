@@ -21,6 +21,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -140,6 +144,7 @@ export const articles = [
       { type: "h2", text: "Bagaimana mengetahui kadar sebenar yang anda bayar?" },
       { type: "p", text: "Angka paling tepat ada pada penyata penyelesaian: penyata akaun di portal e-Access CIMB, atau laporan penyelesaian harian Touch 'n Go eWallet. Bahagikan caj sebulan dengan jualan bagi kaedah itu: itulah kadar sebenar anda." },
       { type: "p", text: "Jika anda sudah menggunakan iPad di kaunter, [DingPOS](/) boleh menganggar caj ini untuk anda. Dalam Tetapan → Kaedah Pembayaran, ketik satu kaedah dan isikan Caj pemprosesan: peratusan, jumlah tetap bagi setiap transaksi, atau kedua-duanya. Masukkan kadar yang sebenarnya ditolak, termasuk cukai jika ada, contohnya 1.10% bagi kad kredit. Jika penyedia tidak memulangkan MDR semasa bayaran balik, seperti RHB bagi DuitNow QR, matikan suis \"Peratusan caj dikembalikan semasa bayaran balik\"." },
+      { type: "image", src: "guides/fees-my-settings.webp", width: 872, height: 764, alt: "DingPOS Tetapan → Kaedah Pembayaran: medan Caj pemprosesan bagi satu kaedah pembayaran, dengan peratusan diisi", caption: "Isikan Caj pemprosesan dengan kadar yang sebenarnya ditolak oleh penyedia anda." },
       { type: "p", text: "Setiap bayaran melalui kaedah itu kemudian merekodkan anggaran caj, dan kad Kaedah Pembayaran pada Statistik memaparkan:" },
       {
         type: "list",
@@ -149,6 +154,7 @@ export const articles = [
           "Bayaran yang diterima sebelum kadar ditetapkan tidak membawa caj: Statistik menandakannya “N tiada kadar” dan menunjukkan jumlah bersih sebagai “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-my-report.webp", phone: "guides/fees-my-report-1080w.webp", width: 1126, height: 970, alt: "Kad Kaedah Pembayaran pada Statistik DingPOS: baris “Caj · Bersih” di bawah setiap kaedah yang mempunyai kadar caj, dan anggaran caj serta anggaran diterima bersih bagi tempoh itu di bahagian bawah kad", caption: "Statistik menganggar caj dan jumlah diterima bersih bagi setiap kaedah, berdasarkan kadar anda." },
       { type: "p", text: "Angka ini ialah anggaran berdasarkan kadar anda sendiri: DingPOS tidak memproses pembayaran dan tidak membaca penyata penyedia, jadi jumlah sebenar ialah jumlah dalam penyata. Cara menetapkannya: [Bolehkah DingPOS menjejak caj bayaran kad dan mudah alih?](/support/payment-fees/). Ciri ini memerlukan pelan Standard atau lebih tinggi; bandingkan di [Pelan & Harga](/pricing/) dan cuba percuma 30 hari." },
       { type: "note", text: "DingPOS tidak menghantar e-Invois ke MyInvois LHDN. Mulai 1 September 2026, perniagaan dengan jualan tahunan kurang daripada RM3 juta dikecualikan daripada e-Invois; jika jualan anda RM3 juta atau lebih, keluarkan e-Invois melalui sistem lain." },
     ],

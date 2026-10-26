@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -136,6 +140,7 @@ export const articles = [
       { type: "h2", text: "Hoe zie je wat je echt aan transactiekosten betaalt?" },
       { type: "p", text: "Het echte getal staat in de overzichten van je aanbieder. Volgens Europese regels moet die je per kaartbetaling het bedrag en de kosten laten zien; je contract kan dat bundelen in een overzicht van minstens eens per maand. Deel de kosten van een maand door de omzet met die betaalmethode, en je hebt je echte tarief." },
       { type: "p", text: "Werk je met een iPad, dan kan [DingPOS](/) de kosten per methode voor je schatten. Tik onder Instellingen → Betaalmethoden op een betaalmethode en vul bij Transactiekosten een percentage in, een vast bedrag per transactie, of allebei. Vul in wat je aanbieder echt inhoudt, inclusief btw als die erop zit. Het vaste bedrag gaat in hele centen: bij € 0,065 vul je € 0,07 in, net iets meer dan je echt betaalt." },
+      { type: "image", src: "guides/fees-nl-settings.webp", width: 872, height: 764, alt: "DingPOS Instellingen → Betaalmethoden: de velden onder Transactiekosten van een betaalmethode, met een vast bedrag per transactie ingevuld", caption: "Vul per betaalmethode in wat je aanbieder echt inhoudt; het geldt voor de betalingen die daarna komen." },
       {
         type: "list",
         items: [
@@ -144,6 +149,7 @@ export const articles = [
           "Zijn er betalingen van voordat je de kosten invulde, dan staat bij de kosten ‘N zonder kostenpercentage’ en toont het netto bedrag ‘—’.",
         ],
       },
+      { type: "image", src: "guides/fees-nl-report.webp", phone: "guides/fees-nl-report-1080w.webp", width: 1126, height: 806, alt: "DingPOS Cijfers: de kaart Betaalmethoden met een regel ‘Kosten · Netto’ onder elke methode met transactiekosten, en onderaan de geschatte kosten en het geschatte netto ontvangen bedrag van de periode", caption: "Kosten en netto zijn schattingen op basis van je eigen tarieven; het afschrift van je aanbieder toont het werkelijke bedrag." },
       { type: "p", text: "Het zijn schattingen op basis van je eigen tarieven. DingPOS verwerkt zelf geen betalingen en leest de overzichten van je aanbieder niet; het afschrift van je aanbieder toont het werkelijke bedrag. Hoe het werkt, lees je in [Kan DingPOS transactiekosten van pin- en mobiele betalingen bijhouden?](/support/payment-fees/). De functie zit in het Standard-abonnement en hoger (zie [Prijzen](/pricing/)), en je kunt DingPOS 30 dagen gratis proberen." },
       { type: "note", text: "Nederland verplicht geen gecertificeerde kassa, maar je kassagegevens horen bij je administratie. DingPOS heeft het Keurmerk Betrouwbare Afrekensystemen van kassaleveranciers niet; vraag je boekhouder hoe je je kassagegevens volledig bewaart." },
     ],

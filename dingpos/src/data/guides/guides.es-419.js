@@ -21,6 +21,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -139,6 +143,7 @@ export const articles = [
       { type: "h2", text: "¿Cómo sabes cuánto te cobran de verdad?" },
       { type: "p", text: "El dato exacto está en tu estado de cuenta: divide la comisión del mes, con su IVA, entre lo cobrado y tendrás tu tasa real. Hazlo por forma de cobro y verás cuál te sale más cara." },
       { type: "p", text: "Si cobras con un iPad, [DingPOS](/) puede estimar esa cuenta con tus tasas. En Ajustes → Métodos de pago, toca cada método y completa Comisión por procesamiento: un porcentaje, un monto fijo por transacción o ambos. Escribe la tasa con IVA: 4.06% para Point, o 3.47% más $1.16 para Clip Bronce." },
+      { type: "image", src: "guides/fees-mx-settings.webp", width: 872, height: 764, alt: "DingPOS, Ajustes → Métodos de pago: la sección Comisión por procesamiento de un método de pago, con el porcentaje y el monto fijo por transacción.", caption: "Cada método de pago lleva la comisión que te descuenta tu proveedor, con IVA incluido." },
       { type: "p", text: "En Reportes, la tarjeta Métodos de pago muestra entonces:" },
       {
         type: "list",
@@ -148,6 +153,7 @@ export const articles = [
           "Si cobraste con un método antes de ponerle tasa, su línea marca «N sin tasa» y el neto aparece como «—».",
         ],
       },
+      { type: "image", src: "guides/fees-mx-report.webp", phone: "guides/fees-mx-report-1080w.webp", width: 1126, height: 870, alt: "DingPOS, Reportes: la tarjeta Métodos de pago, con la línea Comisión · Neto debajo de cada método y, al pie, las comisiones estimadas y el neto estimado recibido del periodo.", caption: "En Reportes ves cuánto se llevó la comisión de cada método y cuánto te quedó neto en el periodo." },
       { type: "p", text: "Son estimaciones con la tasa que escribiste: DingPOS no procesa pagos ni lee los estados de cuenta de Clip, Mercado Pago o tu banco, y el monto real es el que ahí aparece. Tampoco emite CFDI ni se conecta con el SAT, así que no sustituye tu sistema de facturación." },
       { type: "p", text: "Los pasos están en [¿DingPOS puede registrar las comisiones de pagos con tarjeta y pagos móviles?](/support/payment-fees/). Es una función del plan Standard o superior; compara los planes en [Planes y precios](/pricing/) y pruébalo gratis 30 días." },
     ],

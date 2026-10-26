@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -133,6 +137,7 @@ export const articles = [
       { type: "h2", text: "自分のお店の実際の手数料率を知るには？" },
       { type: "p", text: "いちばん正確なのは振込明細です。その月の手数料を決済金額で割れば実際の料率が出て、税込みかどうかもわかります。決済手段ごとに記録すれば、どれが高いかがわかります。" },
       { type: "p", text: "iPadでレジをしているなら、[DingPOS](/)で概算を出すこともできます。「設定」→「支払い方法」で支払い方法を選び、「決済手数料」にパーセント、1回あたりの固定額、またはその両方を入力します。料率は実際に差し引かれる税込みの数字を入れます。PayPayの標準料率（2.178%）なら、入力できるのは小数点以下2桁までなので2.18%と入れます。" },
+      { type: "image", src: "guides/fees-jp-settings.webp", width: 872, height: 764, alt: "DingPOSの「設定」→「支払い方法」：支払い方法の「決済手数料」欄に、料率（%）が入力されている画面", caption: "支払い方法ごとに、実際に差し引かれる税込みの手数料率を入力します。" },
       { type: "p", text: "すると「統計」の「支払い方法」カードが次のようになります。" },
       {
         type: "list",
@@ -142,6 +147,7 @@ export const articles = [
           "手数料率を設定する前に受け取った支払いは「手数料率未設定 N件」と表示され、入金見込額は「—」になります。",
         ],
       },
+      { type: "image", src: "guides/fees-jp-report.webp", phone: "guides/fees-jp-report-1080w.webp", width: 1126, height: 906, alt: "DingPOSの「統計」の「支払い方法」カード：各支払い方法の下に「手数料 · 入金見込額」の行があり、カードの下部に期間全体の概算手数料と入金見込額が表示されている", caption: "手数料率を設定した支払い方法ごとに、概算の手数料と入金見込額がわかります。" },
       { type: "p", text: "どれも入力した手数料率にもとづく概算です。DingPOSは決済を処理せず、決済事業者の明細も読み込まないため、実際の金額は振込明細で確認してください。" },
       { type: "p", text: "設定方法は[カード・モバイル決済の手数料を管理できますか？](/support/payment-fees/)をご覧ください。Standard以上のプランの機能で、プランの違いは[料金](/pricing/)で比較できます。30日間の無料トライアルで試せます。" },
     ],

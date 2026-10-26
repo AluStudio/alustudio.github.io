@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -138,6 +142,7 @@ export const articles = [
       { type: "h2", text: "怎麼知道每種收款方式實際被扣多少？" },
       { type: "p", text: "最準的數字在每月的撥款明細上：把當月的手續費除以交易金額，就是你實際的費率，含稅與否也看得出來。每種收款方式各記一欄，月底就能看出哪一種最貴。" },
       { type: "p", text: "如果你已經用 iPad 收銀，也可以讓 [DingPOS](/) 幫你算。到「設定 → 付款方式」點一個付款方式，在「手續費」填百分比、每筆固定金額，或兩者都填。請填實際被扣、含稅的費率，例如 LINE Pay 填 3.15%。" },
+      { type: "image", src: "guides/fees-tw-settings.webp", width: 872, height: 733, alt: "DingPOS「設定 → 付款方式」：一個付款方式的「手續費」欄位，已填入百分比", caption: "在付款方式的「手續費」填上實際被扣、含稅的費率。" },
       { type: "p", text: "之後每筆用這個方式收的款都會估算手續費，報表的付款方式卡會這樣顯示：" },
       {
         type: "list",
@@ -147,6 +152,7 @@ export const articles = [
           "設定費率之前收的款沒有手續費紀錄，報表會標出「缺 N 筆費率」，淨收顯示「—」。",
         ],
       },
+      { type: "image", src: "guides/fees-tw-report.webp", phone: "guides/fees-tw-report-1080w.webp", width: 1126, height: 906, alt: "DingPOS 報表的付款方式卡：有費率的付款方式底下多一行「手續費｜淨收」，卡片底部是整段期間的預估手續費與預估淨收", caption: "報表依你填的費率，估算每種付款方式的手續費與淨收。" },
       { type: "p", text: "這些數字是依你填的費率估算的。DingPOS 不經手金流，也不讀取金流商的帳單，實際金額仍以撥款明細為準。設定方式見[可以記錄刷卡或行動支付的手續費嗎？](/support/payment-fees/)；這是 Standard 以上方案的功能，各方案比較見[方案與價格](/pricing/)，可以先免費試用 30 天。" },
     ],
     sources: [
@@ -250,6 +256,7 @@ export const articles = [
       { type: "h2", text: "怎樣知道每種收款方式實際被扣幾多？" },
       { type: "p", text: "最準確的數字在每月的結算報表或月結單上：把當月的手續費除以交易金額，就是你實際的費率。" },
       { type: "p", text: "如果你已經用 iPad 收銀，也可以讓 [DingPOS](/) 代你計算。到「設定 → 付款方式」點一個付款方式，在「手續費」填上實際被扣的費率：百分比、每筆固定金額，或兩者都填。" },
+      { type: "image", src: "guides/fees-hk-settings.webp", width: 872, height: 733, alt: "DingPOS「設定 → 付款方式」：一個付款方式的「手續費」欄位，已填入百分比", caption: "在付款方式的「手續費」填上實際被扣的費率。" },
       { type: "p", text: "之後每筆收款都會估算手續費，報表的付款方式卡會這樣顯示：" },
       {
         type: "list",
@@ -259,6 +266,7 @@ export const articles = [
           "設定費率之前收的款沒有手續費紀錄，報表會標出「缺 N 筆費率」，淨收顯示「—」。",
         ],
       },
+      { type: "image", src: "guides/fees-hk-report.webp", phone: "guides/fees-hk-report-1080w.webp", width: 1126, height: 1034, alt: "DingPOS 報表的付款方式卡：有費率的付款方式底下多一行「手續費｜淨收」，卡片底部是整段期間的預估手續費與預估淨收", caption: "報表按你填的費率，估算每種付款方式的手續費和淨收。" },
       { type: "p", text: "這些數字是按你填的費率估算的。DingPOS 不處理收款，也不讀取營運商的結算報表，實際金額以結算紀錄為準。設定方法見[可以記錄刷卡或行動支付的手續費嗎？](/support/payment-fees/)；這是 Standard 或以上方案的功能，各方案比較見[方案與價格](/pricing/)，可以先免費試用 30 天。" },
     ],
     sources: [

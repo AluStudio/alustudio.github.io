@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -137,6 +141,7 @@ export const articles = [
       { type: "h2", text: "Como saber quanto a sua loja paga de verdade?" },
       { type: "p", text: "O número certo está no extrato da maquininha, que mostra a taxa descontada em cada venda. Some as taxas do mês e divida pelo valor vendido em cada forma de pagamento (Pix, débito, crédito à vista, cada número de parcelas). Esse é o seu custo real." },
       { type: "p", text: "Se você vende pelo iPad, o [DingPOS](/) estima essa conta com as suas taxas. Em Ajustes → Formas de pagamento, toque em uma forma e preencha Taxa de processamento: uma porcentagem, um valor fixo por transação ou os dois, com a taxa que a maquininha realmente desconta. Como a taxa muda com o número de parcelas, crie uma forma para cada modalidade, como Crédito à vista e Crédito 3x. “Percentual da taxa devolvido em reembolsos” vem ativado: desative se a maquininha não devolve a taxa no estorno, como em geral no Mercado Pago." },
+      { type: "image", src: "guides/fees-br-settings.webp", width: 872, height: 764, alt: "DingPOS, Ajustes → Formas de pagamento: a seção Taxa de processamento de uma forma de pagamento, com o percentual preenchido.", caption: "Cada forma de pagamento recebe a taxa que a maquininha realmente desconta." },
       { type: "p", text: "Daí em diante, cada pagamento registra uma taxa estimada, e o cartão Formas de pagamento do Resumo mostra:" },
       {
         type: "list",
@@ -146,6 +151,7 @@ export const articles = [
           "Pagamentos recebidos antes de a forma ter uma alíquota aparecem como “N sem alíquota”, e o líquido fica “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-br-report.webp", phone: "guides/fees-br-report-1080w.webp", width: 1126, height: 1006, alt: "DingPOS, Resumo: o cartão Formas de pagamento, com a linha Taxa · Líquido sob cada forma e, no rodapé, as taxas estimadas e o líquido estimado a receber do período.", caption: "No Resumo, você vê quanto a taxa levou de cada forma de pagamento e quanto sobrou de líquido no período." },
       { type: "p", text: "São estimativas feitas com a taxa que você informou. O DingPOS não processa pagamentos nem lê o extrato da maquininha: o valor real é o do extrato. Ele também não emite NFC-e: continue emitindo as notas no seu emissor e use o DingPOS ao lado dele." },
       { type: "p", text: "O passo a passo está em [O DingPOS controla as taxas de cartão e de pagamento por celular?](/support/payment-fees/). O recurso faz parte do plano Standard ou superior; compare os planos em [Planos e preços](/pricing/) e experimente antes com o teste grátis de 30 dias." },
     ],

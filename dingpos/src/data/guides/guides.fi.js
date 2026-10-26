@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -146,6 +150,7 @@ export const articles = [
       { type: "h2", text: "Näin selvität todellisen maksukuluprosenttisi ja seuraat kuluja" },
       { type: "p", text: "Tarkin luku on tilitysraportissasi: jaa kuukauden maksukulut samalla maksutavalla samassa kuussa maksetulla myynnillä, niin saat todellisen prosenttisi. EU-asetuksen mukaan kulut on eriteltävä korttiluokittain ja -merkeittäin, ellet ole kirjallisesti pyytänyt yhtä hintaa. Tarjousten vertailuun laske vuoden maksukulut ja kuukausimaksut yhteen ja jaa summa vuoden korttimyynnillä." },
       { type: "p", text: "Jos kirjaat myynnit iPadilla, [DingPOS](/) voi arvioida kulut puolestasi. Kohdassa Asetukset → Maksutavat napautat maksutapaa ja täytät kohdan Maksukulu: prosenttiosuus, kiinteä summa tapahtumaa kohden tai molemmat. Syötä määrä, jonka maksupalvelusi todella vähentää, mahdollinen arvonlisävero mukaan lukien." },
+      { type: "image", src: "guides/fees-fi-settings.webp", width: 872, height: 764, alt: "DingPOS Asetukset → Maksutavat: maksutavan Maksukulu-kentät, joihin on täytetty prosenttiosuus", caption: "Syötä maksutavalle maksukulu, jonka maksupalvelusi todella vähentää." },
       { type: "p", text: "Sen jälkeen Tilastot-välilehden Maksutavat-kortissa näkyy:" },
       {
         type: "list",
@@ -155,6 +160,7 @@ export const articles = [
           "jos maksuja on vastaanotettu ennen kuin maksutavalla oli määrä, merkintä ”N ilman maksukulun määrää”, ja nettotulo näkyy muodossa ”—”",
         ],
       },
+      { type: "image", src: "guides/fees-fi-report.webp", phone: "guides/fees-fi-report-1080w.webp", width: 1126, height: 870, alt: "DingPOS Tilastot: Maksutavat-kortti, jossa jokaisen maksukulullisen maksutavan alla on rivi ”Maksukulu · Netto” ja kortin alareunassa jakson arvioidut maksukulut ja arvioitu nettotulo", caption: "Tilastot arvioi syöttämiesi määrien perusteella kunkin maksutavan maksukulut ja nettotulon." },
       { type: "p", text: "Luvut ovat arvioita syöttämiesi määrien perusteella: DingPOS ei käsittele maksuja eikä lue tilitysraporttejasi, joten todellinen summa on maksupalvelusi tiliotteella. Arvioitu nettotulo on vastaanotettu summa miinus arvioitu maksukulu, ei katteesi. Lisätietoa artikkelissa [Voiko DingPOS seurata kortti- ja mobiilimaksujen maksukuluja?](/support/payment-fees/). Toiminto vaatii Standard-paketin tai sitä ylemmän (katso [Hinnoittelu](/pricing/)), ja DingPOSia voi kokeilla 30 päivää ilmaiseksi." },
       { type: "note", text: "Kuitti: sertifioitua kassajärjestelmää ei Suomessa vaadita, ja Verohallinnon mukaan kassakone ei ole pakollinen. Jos tilikauden liikevaihtosi on yli 10 000 €, kuitti on kuitenkin tarjottava myös korttimaksusta, ja siinä on oltava muun muassa y-tunnus, myydyt tavarat ja arvonlisävero verokannoittain; pelkkä maksupäätteen kuitti ei riitä. Laki ei koske esimerkiksi automaattimyyntiä, ulkotorikauppaa eikä verkkokauppaa. DingPOS ei tällä hetkellä tulosta eikä lähetä kuittia (katso [kuittitulostuksen tilanne](/support/roadmap-e-invoice/)), joten jos velvollisuus koskee sinua, tarvitset kuitteihin toisen ratkaisun." },
     ],

@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -148,6 +152,7 @@ export const articles = [
       { type: "p", text: "Caféer, værtshuse, diskoteker, pizzeriaer, grillbarer, isbarer, kiosker, købmænd (ikke supermarkeder), restauranter og mobile madboder med under 10 mio. kr. i årlig omsætning skal registrere salget i et digitalt salgsregistreringssystem, der opfylder momsbekendtgørelsens krav, blandt andet at kort- og mobilbetalinger registreres automatisk. Det er virksomhedens branchekode, der afgør, om du er omfattet. Skattestyrelsen kan også pålægge en virksomhed i en anden branche at bruge sådan et system, hvis dens salgsregistrering er utilstrækkelig. [DingPOS](/) opfylder ikke kravene. Hører din virksomhed til de brancher, så registrér ikke dit salg i DingPOS, heller ikke ved siden af din kasse. Brug i stedet formlerne i denne artikel på tallene fra din kasse og afregningerne fra din indløser og MobilePay." },
       { type: "p", text: "Andre butikker, der overvejende sælger til private, for eksempel med tøj, gaver, blomster eller bøger, kan frit vælge mellem en forenklet faktura og et kasseapparat med kassebon, og her gælder der ikke de samme tekniske krav. Er du i tvivl, så spørg din revisor eller Skattestyrelsen." },
       { type: "p", text: "Er din butik ikke omfattet af kravet, kan DingPOS regne gebyrerne ud for dig på iPad. Under Indstillinger → Betalingsmåder trykker du på en betalingsmåde og udfylder Transaktionsgebyr: en procentdel, et fast beløb pr. transaktion eller begge dele. Skriv den sats, udbyderen faktisk trækker, inklusive moms, hvis der lægges moms på gebyret." },
+      { type: "image", src: "guides/fees-dk-settings.webp", width: 872, height: 764, alt: "DingPOS Indstillinger → Betalingsmåder: en betalingsmådes felter under Transaktionsgebyr, med en procentdel udfyldt", caption: "Satsen skrives én gang for hver betalingsmåde og bruges på de betalinger, der kommer bagefter." },
       {
         type: "list",
         items: [
@@ -156,6 +161,7 @@ export const articles = [
           "Betalinger, du tog imod, før betalingsmåden fik en sats, tælles op som „N uden gebyrsats“, og nettoen vises som „—“.",
         ],
       },
+      { type: "image", src: "guides/fees-dk-report.webp", phone: "guides/fees-dk-report-1080w.webp", width: 1126, height: 970, alt: "DingPOS Statistik: kortet Betalingsmåder med en linje „Gebyr · Netto“ under hver betalingsmåde med gebyrsats og periodens forventede gebyrer og forventede nettomodtaget nederst", caption: "Gebyr og netto er estimater ud fra dine egne satser; afregningen fra din udbyder viser det faktiske beløb." },
       { type: "p", text: "Beløbene er estimater ud fra dine egne satser. DingPOS behandler ikke selve betalingerne og læser ikke afregningerne fra din udbyder, så det er afregningen, der viser det faktiske beløb. Nettobeløbet er det, der kommer ind, ikke din avance. Se [vejledningen om gebyrer](/support/payment-fees/). Funktionen kræver abonnementsniveauet Standard eller højere (se [Priser](/pricing/)), og du kan prøve DingPOS gratis i 30 dage." },
     ],
     sources: [

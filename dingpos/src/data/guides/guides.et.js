@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -144,6 +148,7 @@ export const articles = [
       { type: "p", text: "Tavalisel jaemüügil ei ole Eestis fiskaalkassa nõuet: sertifitseeritud kassaaparaati ega registreeritud kassatarkvara ei nõuta. Kohe maksvale kliendile tuleb siiski anda ostu tõendav dokument. Paberil tšekki ei pea enam vaikimisi andma, vaid siis, kui klient seda soovib või maksab sularahas ega kasuta kliendikaarti, mille kaudu ostudokument on hiljem kättesaadav." },
       { type: "p", text: "Alkoholi müük on erand: kauplus või toitlustusettevõte, mis müüb alkoholi, peab alkoholiseaduse § 44 järgi fikseerima kõik alkoholi jaemüügitehingud kassaaparaadiga, ja juriidilist isikut võib rikkumise eest trahvida kuni 3000 euroga. Seadus ega TTJA juhend ei ütle, kas iPadi kassarakendus on kassaaparaat. Me ei väida, et [DingPOS](/) seda nõuet täidab. Kui müüd alkoholi, ära kasuta DingPOSi § 44 kassaaparaadina ega asenda sellega kassat, millega praegu alkoholimüüki fikseerid, enne kui TTJA on kirjalikult kinnitanud, et see sobib; küsi neilt ka seda, kas DingPOSi tohib kasutada kassa kõrval. Riigikogu menetluses olev eelnõu 853 SE asendaks kassaaparaadi nõude kohustusega fikseerida iga tehing elektrooniliselt, kuid 25. oktoobri 2026 seisuga kehtib § 44 muutmata kujul." },
       { type: "p", text: "Kui sa alkoholi ei müü, arvestab DingPOS teenustasud ja netolaekumise iPadis sinu eest. DingPOS ei prindi ega saada ostutšekki, seega annad ostu tõendava dokumendi muul viisil. Puuduta jaotises Seaded → Makseviisid makseviisi ja täida Teenustasu: protsent, fikseeritud summa tehingu kohta või mõlemad. Sisesta määr, mille pakkuja tegelikult maha arvab, koos käibemaksuga, kui see lisandub." },
+      { type: "image", src: "guides/fees-ee-settings.webp", width: 872, height: 764, alt: "DingPOS Seaded → Makseviisid: makseviisi Teenustasu väljad, protsent on täidetud", caption: "Sisesta makseviisile määr, mille pakkuja tegelikult maha arvab." },
       {
         type: "list",
         items: [
@@ -152,6 +157,7 @@ export const articles = [
           "Maksed, mis laekusid enne, kui makseviisil oli määr, märgitakse „N ilma määrata“ ja nende neto on „—“.",
         ],
       },
+      { type: "image", src: "guides/fees-ee-report.webp", phone: "guides/fees-ee-report-1080w.webp", width: 1126, height: 770, alt: "DingPOS Aruanded, kaart Makseviisid: tasuga makseviiside all rida „Teenustasu · Neto“, kaardi allservas perioodi hinnangulised tasud ja hinnanguline netolaekumine", caption: "Teenustasu ja neto on hinnangud sinu määrade põhjal; tegelik summa on pakkuja väljavõttel." },
       { type: "p", text: "Need on hinnangud sinu määrade põhjal: DingPOS ei töötle makseid ega loe pakkuja väljavõtteid, tegelik summa on väljavõttel. Neto on laekunud raha, mitte brutokasum. Täpsemalt loe [Kas DingPOS oskab kaardi- ja mobiilimakse teenustasusid jälgida?](/support/payment-fees/). Funktsioon nõuab paketti Standard või kõrgemat (vaata [Hinnad](/pricing/)) ja DingPOSi saad 30 päeva tasuta proovida." },
     ],
     sources: [

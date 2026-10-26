@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -135,6 +139,7 @@ export const articles = [
       { type: "h2", text: "우리 가게의 실제 수수료율은 어떻게 확인할까?" },
       { type: "p", text: "가장 정확한 것은 입금 내역입니다. cardsales.or.kr은 카드사 10곳의 승인부터 대금 지급까지 한곳에서 보여 줍니다. 한 달 카드 수수료를 그달 카드 매출로 나누면 실제 수수료율이고, 간편결제·제로페이는 각 회사 정산 내역으로 같은 계산을 합니다." },
       { type: "p", text: "iPad로 계산대를 운영한다면 [DingPOS](/)에 계산을 맡길 수도 있습니다. 설정 → 결제 수단에서 결제 수단을 탭하고, 결제 수수료에 실제로 공제되는 요율을 비율, 거래당 고정 금액, 또는 둘 다로 입력하세요. 카드 수수료는 적용받는 수수료율 그대로, 부가세가 붙는 간편결제 수수료는 세금 포함 요율로 넣습니다." },
+      { type: "image", src: "guides/fees-kr-settings.webp", width: 872, height: 764, alt: "DingPOS 설정 → 결제 수단: 한 결제 수단의 결제 수수료 입력란에 비율이 입력된 화면", caption: "결제 수수료에는 실제로 공제되는 요율을 입력합니다." },
       { type: "p", text: "이후 그 결제 수단으로 받는 결제마다 예상 수수료가 기록되고, 통계 화면의 결제 수단 카드에 이렇게 표시됩니다." },
       {
         type: "list",
@@ -144,6 +149,7 @@ export const articles = [
           "수수료율을 입력하기 전에 받은 결제는 “수수료율 없음 N건”으로 표시되고, 실수령액은 “—”로 나타납니다.",
         ],
       },
+      { type: "image", src: "guides/fees-kr-report.webp", phone: "guides/fees-kr-report-1080w.webp", width: 1126, height: 934, alt: "DingPOS 통계의 결제 수단 카드: 수수료율이 있는 결제 수단마다 “수수료 · 실수령액” 줄이 있고, 카드 하단에 해당 기간의 예상 수수료와 예상 실수령액이 표시된 화면", caption: "입력한 수수료율로 결제 수단별 예상 수수료와 예상 실수령액을 계산합니다." },
       { type: "p", text: "이 금액은 입력한 수수료율로 계산한 예상치입니다. DingPOS는 결제를 처리하지 않고 결제 대행사의 명세서도 읽지 않으므로, 실제 금액은 입금 내역으로 확인하세요. 카드 결제는 등록된 단말기로 받아야 하니 결제와 현금영수증 발급은 지금 쓰는 단말기로 계속하고, DingPOS에는 주문과 결제 수단을 기록하세요." },
       { type: "p", text: "설정 방법은 [카드·모바일 결제 수수료도 DingPOS에서 관리할 수 있나요?](/support/payment-fees/)에 있습니다. Standard 플랜 이상에서 쓸 수 있고, 플랜 비교는 [요금제](/pricing/)에서 볼 수 있습니다. 30일 무료 체험으로 먼저 써 보세요." },
     ],

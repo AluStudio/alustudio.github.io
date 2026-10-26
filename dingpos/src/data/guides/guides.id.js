@@ -21,6 +21,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -139,6 +143,7 @@ export const articles = [
       { type: "h2", text: "Bagaimana mengetahui tarif yang sebenarnya Anda bayar?" },
       { type: "p", text: "Angka paling tepat ada di laporan settlement atau mutasi rekening (di GoPay Merchant: buka Keuangan, lalu pilih transaksinya). Bagi total potongan sebulan dengan penjualan metode itu: itulah tarif sebenarnya, termasuk PPN kalau ada." },
       { type: "p", text: "Kalau kasir Anda memakai iPad, [DingPOS](/) bisa menghitungnya. Di Pengaturan → Metode Pembayaran, ketuk sebuah metode dan isi Biaya pemrosesan: persentase, jumlah tetap per transaksi, atau keduanya. Masukkan tarif yang benar-benar dipotong, termasuk PPN kalau ditambahkan bank (2,22% untuk MDR 2%). Untuk QRIS yang gratis sampai batas tertentu, isi tarif rata-rata dari laporan bulan lalu, karena tarif di DingPOS berlaku untuk semua nominal." },
+      { type: "image", src: "guides/fees-id-settings.webp", width: 872, height: 764, alt: "DingPOS Pengaturan → Metode Pembayaran: kolom Biaya pemrosesan sebuah metode pembayaran, dengan persentase sudah diisi", caption: "Isi Biaya pemrosesan dengan tarif yang benar-benar dipotong, termasuk PPN kalau ditambahkan." },
       { type: "p", text: "Sejak itu, kartu Metode Pembayaran di Statistik menampilkan:" },
       {
         type: "list",
@@ -148,6 +153,7 @@ export const articles = [
           "Pembayaran yang diterima sebelum metode itu punya tarif tidak membawa biaya: Statistik menandainya \"(N tanpa tarif)\" dan kas bersihnya tampil sebagai \"—\".",
         ],
       },
+      { type: "image", src: "guides/fees-id-report.webp", phone: "guides/fees-id-report-1080w.webp", width: 1126, height: 1070, alt: "Kartu Metode Pembayaran di Statistik DingPOS: baris “Biaya · Bersih” di bawah metode yang punya tarif, dan perkiraan biaya serta perkiraan kas bersih diterima untuk seluruh periode di bagian bawah kartu", caption: "Statistik memperkirakan biaya dan kas bersih diterima tiap metode dari tarif yang Anda isi." },
       { type: "p", text: "Angka ini perkiraan dari tarif yang Anda masukkan: DingPOS tidak memproses pembayaran dan tidak membaca laporan bank atau penyedia pembayaran, jadi jumlah sebenarnya tetap yang di laporan penyedia Anda. Cara mengaturnya: [Bisakah DingPOS mencatat biaya pembayaran kartu dan ponsel?](/support/payment-fees/). Fitur ini memerlukan paket Standard atau lebih tinggi; bandingkan di [Paket & Harga](/pricing/), dan coba gratis 30 hari." },
       { type: "p", text: "Kami tidak menemukan kewajiban nasional memakai mesin kasir fiskal bersertifikat, tetapi sebagian Pemda, misalnya Kabupaten Kudus, mewajibkan wajib pajak PBJT seperti restoran dan kafe menginput setiap transaksi ke alat perekam (tapping box) dari Pemda. DingPOS bukan alat itu dan tidak terhubung ke Bapenda; di daerah seperti itu, setiap transaksi tetap dicatat di alat Pemda." },
     ],

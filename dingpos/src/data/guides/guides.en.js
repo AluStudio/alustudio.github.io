@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -134,6 +138,7 @@ export const articles = [
       { type: "h2", text: "How do you find the rate you're really paying?" },
       { type: "p", text: "Divide the month's fees on your merchant statement, terminal rental included, by your card takings. That's your effective rate. In March 2026 the RBA found small merchants paid 1.4% on average on single-rate plans and 0.9% on cost-plus plans." },
       { type: "p", text: "If you run your counter on an iPad, [DingPOS](/) can estimate the fees for you. In Settings → Payment Methods, tap a payment method and fill in Processing fee: a percentage, a fixed amount per transaction, or both. Enter the GST-inclusive rate (×1.1 if GST is added on top), such as 6.6% and $0.33 for Afterpay. Square keeps its fee on refunds, so turn off “Percentage fee returned on refunds”." },
+      { type: "image", src: "guides/fees-au-settings.webp", width: 872, height: 764, alt: "DingPOS Settings → Payment Methods: a payment method’s Processing fee fields, with its fee rate filled in", caption: "Enter the rate your provider actually deducts: a percentage, a fixed amount per transaction, or both." },
       { type: "p", text: "From then on, the Payment Methods card on Stats does the sums:" },
       {
         type: "list",
@@ -143,6 +148,7 @@ export const articles = [
           "Payments taken before a method had a rate are counted as “N missing a rate”, and the net shows “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-au-report.webp", phone: "guides/fees-au-report-1080w.webp", width: 1126, height: 870, alt: "DingPOS Stats, Payment Methods card: a “Fee · Net” line under each payment method that has a fee rate, and the period’s estimated fees and estimated net received at the foot of the card", caption: "Stats estimates each payment method’s fee and net received from the rates you enter." },
       { type: "p", text: "These are estimates from your own rates: DingPOS doesn't process payments or read your provider's statements, so your statement shows the actual amount. [How to set it up](/support/payment-fees/). Fee tracking is on the Standard plan and up ([Pricing](/pricing/)), with a free 30-day trial." },
     ],
     sources: [
@@ -258,6 +264,7 @@ export const articles = [
       { type: "p", text: "Then check you're getting the small-business rates: since October 19, 2024, Visa and Mastercard have cut interchange, the card-issuing bank's share of your fee, on in-store consumer credit payments at qualifying small businesses to an annual weighted average of 0.95% (Mastercard's threshold is $175,000 a year in Mastercard sales; Visa's, $750,000 in Visa sales since October 24, 2026). On interchange-plus, the cut reaches you; a flat rate stays the same." },
       { type: "p", text: "For a retail shop, we found no Canadian rule that requires a certified cash register. Quebec food service is the exception: QST-registered restaurants, bars, caterers and other restaurant establishments must record every sale in a certified sales recording system (SRS) linked to Revenu Québec's WEB-SRM. DingPOS is not a certified SRS; if that rule covers you, ring up every sale on your certified system and apply this guide's formulas to its reports." },
       { type: "p", text: "Otherwise, if you run your counter on an iPad, [DingPOS](/) can estimate the fees for you. In Settings → Payment Methods, tap a payment method and fill in Processing fee: a percentage, a fixed amount per transaction, or both, such as $0.12 for Interac on Moneris Flat Rate, or 0.75% and $0.07 at Square. Card fees generally carry no GST/HST, so enter the rate as quoted. Square and Helcim keep their fee on refunds, so turn off “Percentage fee returned on refunds”." },
+      { type: "image", src: "guides/fees-ca-settings.webp", width: 872, height: 764, alt: "DingPOS Settings → Payment Methods: a payment method’s Processing fee fields, with its fee rate filled in", caption: "Enter the rate your provider actually deducts: a percentage, a fixed amount per transaction, or both." },
       { type: "p", text: "From then on, the Payment Methods card on Stats does the math:" },
       {
         type: "list",
@@ -267,6 +274,7 @@ export const articles = [
           "Payments taken before a method had a rate are counted as “N missing a rate”, and the net shows “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-ca-report.webp", phone: "guides/fees-ca-report-1080w.webp", width: 1126, height: 870, alt: "DingPOS Stats, Payment Methods card: a “Fee · Net” line under each payment method that has a fee rate, and the period’s estimated fees and estimated net received at the foot of the card", caption: "Stats estimates each payment method’s fee and net received from the rates you enter." },
       { type: "p", text: "These are estimates from your own rates: DingPOS doesn't process payments or read your provider's statements, so your statement shows the actual amount. [How to set it up](/support/payment-fees/). Fee tracking is on the Standard plan and up ([Pricing](/pricing/)), with a free 30-day trial." },
     ],
     sources: [
@@ -395,6 +403,7 @@ export const articles = [
       { type: "p", text: "The Commerce Commission's method: divide the month's merchant service fees by your Visa and Mastercard sales. That's your effective rate; add terminal rental for the full cost of taking cards." },
       { type: "p", text: "Then check that the interchange cut reached you: on 1 December 2025, the cap on interchange (the largest part of your fee) for New Zealand personal credit cards used in person fell from 0.80% to 0.30%, and the Commission asks businesses to check with their bank that it was passed on. Ask about interchange-plus pricing too: at BNZ's 0.5% + interchange for New Zealand cards, a personal credit card used in person costs at most 0.80%." },
       { type: "p", text: "If you run your counter on an iPad, [DingPOS](/) can estimate the fees for you. In Settings → Payment Methods, tap a payment method and fill in Processing fee: a percentage, a fixed amount per transaction, or both. Keep inserted EFTPOS (no fee) and tapped or credit cards (0.95% on BNZ's portable terminal) as separate methods, so free payments stay free. Merchant fees generally carry no GST, so enter the rate as quoted. If your provider keeps its fee on refunds, as Stripe does, turn off “Percentage fee returned on refunds”." },
+      { type: "image", src: "guides/fees-nz-settings.webp", width: 872, height: 764, alt: "DingPOS Settings → Payment Methods: a payment method’s Processing fee fields, with its fee rate filled in", caption: "Enter the rate your provider actually deducts: a percentage, a fixed amount per transaction, or both." },
       { type: "p", text: "From then on, the Payment Methods card on Stats does the sums:" },
       {
         type: "list",
@@ -404,6 +413,7 @@ export const articles = [
           "Payments taken before a method had a rate are counted as “N missing a rate”, and the net shows “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-nz-report.webp", phone: "guides/fees-nz-report-1080w.webp", width: 1126, height: 1034, alt: "DingPOS Stats, Payment Methods card: a “Fee · Net” line under each payment method that has a fee rate, and the period’s estimated fees and estimated net received at the foot of the card", caption: "Stats estimates each payment method’s fee and net received from the rates you enter." },
       { type: "p", text: "These are estimates from your own rates: DingPOS doesn't process payments or read your provider's statements, so your statement shows the actual amount. [How to set it up](/support/payment-fees/). Fee tracking is on the Standard plan and up ([Pricing](/pricing/)), with a free 30-day trial." },
     ],
     sources: [
@@ -527,6 +537,7 @@ export const articles = [
       { type: "p", text: "Divide the month's fees on your statement, terminal rental included, by your takings for each payment method. That's your effective rate. Bank card rates are negotiated: get a written quote that says whether it covers American Express and overseas cards." },
       { type: "p", text: "GST-registered? InvoiceNow applies to new voluntary registrants since 1 April 2026 and to every other GST-registered business between 2028 and 2031: invoice data goes to IRAS through an InvoiceNow-Ready Solution, and POS sales can go as totals. DingPOS is not one and sends nothing to IRAS, so use it alongside one, such as your accounting software." },
       { type: "p", text: "If you run your counter on an iPad, [DingPOS](/) can estimate the fees for you. In Settings → Payment Methods, tap a payment method and fill in Processing fee: a percentage, a fixed amount per transaction, or both, such as 2.5% and S$0.50 for cards on HitPay. Keep PayNow, NETS and cards as separate methods. Include any GST you can't claim back: for 0.8% plus GST, enter 0.87%. HitPay keeps its fee on refunds, so turn off “Percentage fee returned on refunds”." },
+      { type: "image", src: "guides/fees-sg-settings.webp", width: 872, height: 764, alt: "DingPOS Settings → Payment Methods: a payment method’s Processing fee fields, with its fee rate filled in", caption: "Enter the rate your provider actually deducts: a percentage, a fixed amount per transaction, or both." },
       { type: "p", text: "From then on, the Payment Methods card on Stats does the sums:" },
       {
         type: "list",
@@ -536,6 +547,7 @@ export const articles = [
           "Payments taken before a method had a rate are counted as “N missing a rate”, and the net shows “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-sg-report.webp", phone: "guides/fees-sg-report-1080w.webp", width: 1126, height: 1070, alt: "DingPOS Stats, Payment Methods card: a “Fee · Net” line under each payment method that has a fee rate, and the period’s estimated fees and estimated net received at the foot of the card", caption: "Stats estimates each payment method’s fee and net received from the rates you enter." },
       { type: "p", text: "These are estimates from your own rates: DingPOS doesn't process payments or read your provider's statements, so your statement shows the actual amount. [How to set it up](/support/payment-fees/). Fee tracking is on the Standard plan and up ([Pricing](/pricing/)), with a free 30-day trial." },
     ],
     sources: [
@@ -653,6 +665,7 @@ export const articles = [
       { type: "p", text: "If a lot of customers pay by debit, ask about interchange-plus, where you pay each card's actual interchange plus a markup. Regulation II caps debit interchange from banks and credit unions with $10 billion or more in assets at 21¢ + 0.05%, plus 1¢ for fraud prevention (challenged in court, but still in force): at most about 23¢ on a $25 sale, against Square's 80¢, before network fees and the markup." },
       { type: "p", text: "In the 50 states, we found no federal or state rule that requires a certified cash register. Puerto Rico's Hacienda requires a fiscal terminal at every point of sale for merchants with more than $125,000 in annual sales, and for any business charging the reduced sales tax rate on prepared food, whatever its sales. DingPOS is not a fiscal terminal and doesn't report to Hacienda; if that rule covers you, ring up your sales on your fiscal terminal and use its reports for this guide's math." },
       { type: "p", text: "If that rule doesn't cover you and you run your counter on an iPad, [DingPOS](/) can estimate the fees for you. In Settings → Payment Methods, tap a payment method and fill in Processing fee: a percentage, a fixed amount per transaction, or both, such as 2.6% and $0.15 on Square's free plan. Enter the rate as quoted: DingPOS applies it to what the customer pays, tax included, as your processor does. Square and Stripe keep their fee on refunds, so turn off “Percentage fee returned on refunds”." },
+      { type: "image", src: "guides/fees-us-settings.webp", width: 872, height: 764, alt: "DingPOS Settings → Payment Methods: a payment method’s Processing fee fields, with its fee rate filled in", caption: "Enter the rate your provider actually deducts: a percentage, a fixed amount per transaction, or both." },
       { type: "p", text: "From then on, the Payment Methods card on Stats does the math:" },
       {
         type: "list",
@@ -662,6 +675,7 @@ export const articles = [
           "Payments taken before a method had a rate are counted as “N missing a rate”, and the net shows “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-us-report.webp", phone: "guides/fees-us-report-1080w.webp", width: 1126, height: 970, alt: "DingPOS Stats, Payment Methods card: a “Fee · Net” line under each payment method that has a fee rate, and the period’s estimated fees and estimated net received at the foot of the card", caption: "Stats estimates each payment method’s fee and net received from the rates you enter." },
       { type: "p", text: "These are estimates from your own rates: DingPOS doesn't process payments or read your processor's statements, so your statement shows the actual amount. [How to set it up](/support/payment-fees/). Fee tracking is on the Standard plan and up ([Pricing](/pricing/)), with a free 30-day trial." },
     ],
     sources: [
@@ -789,6 +803,7 @@ export const articles = [
       { type: "h2", text: "How do you find the rate you're really paying?" },
       { type: "p", text: "Divide the month's total fees on your statement or bill by your card takings, counting terminal rental, any minimum monthly charge, extra charges for keyed-in payments and any PCI non-compliance fee (for a missed card-security check): £25 a month of rental on £5,000 of card takings adds 0.5% on its own. If a contract costs more than the published rates, get quotes." },
       { type: "p", text: "If you run your counter on an iPad, [DingPOS](/) can estimate the fees for you. In Settings → Payment Methods, tap a payment method and fill in Processing fee: a percentage, a fixed amount per transaction, or both, such as 6% and £0.30 for Clearpay through Square. Enter the rate as quoted: DingPOS applies it to what the customer pays, VAT included, as your provider does. Square and Dojo keep their fee on refunds, so turn off “Percentage fee returned on refunds”." },
+      { type: "image", src: "guides/fees-gb-settings.webp", width: 872, height: 764, alt: "DingPOS Settings → Payment Methods: a payment method’s Processing fee fields, with its fee rate filled in", caption: "Enter the rate your provider actually deducts: a percentage, a fixed amount per transaction, or both." },
       { type: "p", text: "From then on, the Payment Methods card on Stats does the sums:" },
       {
         type: "list",
@@ -798,6 +813,7 @@ export const articles = [
           "Payments taken before a method had a rate are counted as “N missing a rate”, and the net shows “—”.",
         ],
       },
+      { type: "image", src: "guides/fees-gb-report.webp", phone: "guides/fees-gb-report-1080w.webp", width: 1126, height: 870, alt: "DingPOS Stats, Payment Methods card: a “Fee · Net” line under each payment method that has a fee rate, and the period’s estimated fees and estimated net received at the foot of the card", caption: "Stats estimates each payment method’s fee and net received from the rates you enter." },
       { type: "p", text: "These are estimates from your own rates: DingPOS doesn't process payments or read your provider's statements, so your statement shows the actual amount. [How to set it up](/support/payment-fees/). Fee tracking is on the Standard plan and up ([Pricing](/pricing/)), with a free 30-day trial." },
     ],
     sources: [

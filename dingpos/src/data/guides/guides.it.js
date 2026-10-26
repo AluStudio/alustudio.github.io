@@ -20,6 +20,10 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//              src / phone are .webp paths under public/ ("guides/<name>.webp");
+//              width / height are src's pixel size; phone is its 1080w copy,
+//              required when width > 1080; caption is plain text, no links.
 //              Text may carry [label](/route/) links to a page of this
 //              language (router-relative, trailing slash) or [label](https://…).
 //   sources  — [{ label, url }] behind the article's figures and rules
@@ -148,6 +152,7 @@ export const articles = [
       { type: "h2", text: "Registratore telematico e DingPOS" },
       { type: "p", text: "Chi vende al dettaglio deve certificare ogni vendita con il documento commerciale, emesso da un registratore telematico (RT), dalla procedura web dell'Agenzia delle Entrate o da un software approvato, e trasmettere i corrispettivi. [DingPOS](/) non fa nessuna delle due cose e non sostituisce questi strumenti: se il tuo negozio ha l'obbligo, non registrare le vendite in DingPOS e applica le formule ai dati del tuo RT e agli estratti dell'operatore. Il forfettario non esonera: gli esoneri dipendono dal tipo di attività, e nel dubbio chiedi al commercialista." },
       { type: "p", text: "Se la tua attività è esonerata da questi obblighi, DingPOS stima le commissioni sull'iPad. In Impostazioni → Metodi di pagamento compili la Commissione di ogni metodo: una percentuale, un importo fisso per operazione, oppure entrambi. Inserisci quello che l'operatore trattiene davvero." },
+      { type: "image", src: "guides/fees-it-settings.webp", width: 872, height: 764, alt: "DingPOS Impostazioni → Metodi di pagamento: i campi Commissione di un metodo di pagamento, con una percentuale compilata", caption: "La tariffa si inserisce una volta per ogni metodo di pagamento e vale per i pagamenti successivi." },
       { type: "p", text: "In Report, la scheda Metodi di pagamento mostra poi:" },
       {
         type: "list",
@@ -157,6 +162,7 @@ export const articles = [
           "per i pagamenti incassati prima di impostare la tariffa, l'avviso «N senza tariffa» e il netto «—».",
         ],
       },
+      { type: "image", src: "guides/fees-it-report.webp", phone: "guides/fees-it-report-1080w.webp", width: 1126, height: 1034, alt: "DingPOS Report: la scheda Metodi di pagamento con la riga «Commissione · Netto» sotto ogni metodo con una tariffa e, in fondo, commissioni stimate e incassato netto stimato del periodo", caption: "Commissioni e netto sono stime basate sulle tue tariffe; l'importo reale è quello dell'estratto conto." },
       { type: "p", text: "Sono stime basate sulle tue tariffe: DingPOS non elabora pagamenti e non legge gli estratti dell'operatore, quindi l'importo reale è quello dell'estratto conto. L'incassato netto non è il margine: il costo d'acquisto non viene sottratto. I passaggi sono in [DingPOS può tenere traccia delle commissioni su carte e pagamenti da mobile?](/support/payment-fees/). Serve il piano Standard o superiore (vedi i [Prezzi](/pricing/)), con 30 giorni di prova gratuita." },
     ],
     sources: [
