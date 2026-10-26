@@ -213,6 +213,33 @@
   }
 }
 
+// Screenshot crops of iPad UI. Capped well below the text column so a tall
+// settings crop stays short of page height; IMAGE_SIZES in GuideBlocks.jsx
+// mirrors this width. The frame is a box-shadow, not a border, so the image
+// renders at exactly the width `sizes` names.
+.guide-figure {
+  max-width: 480px;
+  margin: 1.5rem auto;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius-lg;
+    box-shadow:
+      0 0 0 1px $neutral-100,
+      0 6px 20px rgba($neutral-900, 0.08);
+  }
+
+  figcaption {
+    margin-top: 0.75rem;
+    color: $ink-soft;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
 .guide-checked {
   margin-top: 2rem;
   color: $ink-soft;

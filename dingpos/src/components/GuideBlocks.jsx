@@ -3,6 +3,14 @@ import TransitionLink from "./TransitionLink";
 
 const LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
 
+// Width of an image block's `phone` file; the build checks it.
+const PHONE_IMAGE_WIDTH = 1080;
+
+// Rendered image width, mirroring .guide-figure in guides.scss: capped at
+// 480px, else the article column — .container's 0.75rem gutters plus the
+// article's 0.5rem padding below 576px (at 576px+ the column is ≥ 484px).
+const IMAGE_SIZES = "(min-width: 520px) 480px, calc(100vw - 2.5rem)";
+
 /** Text with [label](/route/) and [label](https://…) links; the build checks every target. */
 function InlineText({ text }) {
   const parts = [];
@@ -101,10 +109,33 @@ function GuideBlocks({ blocks }) {
             </table>
           </div>
         );
+      case "image":
+        return <GuideImage key={i} block={block} />;
       default:
         throw new Error(`Unknown guide block type "${block.type}"`);
     }
   });
+}
+
+/** A product screenshot crop: pure screen pixels, framed by CSS. */
+function GuideImage({ block }) {
+  const base = import.meta.env.BASE_URL;
+  const { src, phone, width, height, alt, caption } = block;
+  return (
+    <figure className="guide-figure">
+      <img
+        src={`${base}${src}`}
+        srcSet={phone ? `${base}${phone} ${PHONE_IMAGE_WIDTH}w, ${base}${src} ${width}w` : undefined}
+        sizes={phone ? IMAGE_SIZES : undefined}
+        width={width}
+        height={height}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+      />
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+  );
 }
 
 export default GuideBlocks;
