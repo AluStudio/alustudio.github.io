@@ -1,27 +1,168 @@
 {
-  "profile": {
-    "bio": "Indie-App-Studio — Werkzeuge für den Alltag"
+  "nav": {
+    "label": "Bereiche",
+    "apps": "Apps",
+    "contact": "Kontakt",
+    "language": "Sprache ändern",
+    "menu_open": "Menü öffnen",
+    "menu_close": "Menü schließen",
+    "skip": "Zum Inhalt springen"
+  },
+  "hero": {
+    "eyebrow": "Unabhängiges Studio für Apps",
+    "title_1": "Tools fürs Leben",
+    "title_sep": ", ",
+    "title_2": "ohne Ärger",
+    "sub": "Alu Studio entwickelt vier Apps für iPhone, iPad und Android: eine Kasse für kleine Läden, ein Notizbuch für die Menschen, die dir wichtig sind, ein Postkartenarchiv für Pikmin Bloom und tägliche Spielideen für kleine Kinder.",
+    "cta": "Apps ansehen",
+    "proof": "Im App Store und bei Google Play"
   },
   "apps": {
-    "heading": "Apps"
+    "heading": "Vier Apps, jede für eine Aufgabe",
+    "sub": "Jede App hat eine eigene Website mit FAQ und Support."
   },
   "pikgeon": {
-    "tagline": "Behalte deine Postkarten-Erinnerungen im Überblick",
-    "desc": "Intelligente OCR-Erkennung zur Verfolgung deiner Versandreise. Vollständige lokale Verarbeitung zum Schutz deiner Privatsphäre."
+    "tagline": "Behalte deine Postkartenerinnerungen im Überblick",
+    "desc": "Scanne deine Postkarten aus Pikmin Bloom und verfolge jede Sendung. Die Erkennung läuft auf deinem Handy, damit deine Postkarten privat bleiben."
   },
   "babbby": {
-    "tagline": "Tägliche Aktivitätsideen für 0–6 Jahre",
-    "desc": "Meilensteine festhalten, Routinen aufbauen und jeden Tag sinnvoll gestalten — mit über 340 Aktivitäten."
+    "tagline": "Tägliche Ideen für Kinder von 0 bis 6",
+    "desc": "Halte Meilensteine fest, baue Routinen auf und wähle aus über 340 Aktivitäten, die zum Alter deines Kindes passen."
   },
   "sotto": {
     "tagline": "Erinnere dich an die Details, die zählen",
-    "desc": "Was sie lieben, was sie nicht ausstehen können, die kleinen Dinge, die sie zum Lächeln bringen — sorgsam bewahrt, denn wer sich kümmert, vergisst nicht."
+    "desc": "Was sie lieben, was sie nicht ausstehen können, die kleinen Dinge, die sie zum Lächeln bringen. Sorgsam bewahrt, denn wer sich kümmert, vergisst nicht."
   },
   "dingpos": {
     "tagline": "Kassensystem für das iPad",
-    "desc": "Eröffnen Sie Ihr Geschäft in 10 Minuten. Ein Offline-first-Kassensystem — Ihre Daten gehören Ihnen."
+    "desc": "Eröffne deinen Laden in 10 Minuten. Eine Kasse, die auch offline weiterläuft. Deine Verkaufsdaten bleiben auf deinem iPad."
+  },
+  "contact": {
+    "heading": "Fragen zu einer App?",
+    "sub": "Jede App hat eine eigene Supportseite mit FAQ. Für alles andere schreib dem Studio.",
+    "cta": "Dem Studio schreiben"
   },
   "footer": {
+    "apps": "Apps",
+    "privacy": "Datenschutz",
+    "privacy_of": "Datenschutzerklärung von {{name}}",
     "rights": "Alle Rechte vorbehalten."
+  },
+  "scene": {
+    "dingpos": {
+      "search": "Artikel suchen oder Barcode scannen",
+      "categories": [
+        "Alle",
+        "Kaffee",
+        "Backwaren",
+        "Desserts"
+      ],
+      "products": [
+        {
+          "name": "Latte",
+          "price": "3,40 €"
+        },
+        {
+          "name": "Matcha Latte",
+          "price": "4,20 €"
+        },
+        {
+          "name": "Croissant",
+          "price": "2,10 €"
+        },
+        {
+          "name": "Meersalzkeks",
+          "price": "1,90 €"
+        },
+        {
+          "name": "Zitronentarte",
+          "price": "3,80 €"
+        },
+        {
+          "name": "Käsekuchen",
+          "price": "4,50 €"
+        }
+      ],
+      "cart": "Warenkorb 1",
+      "customer": "Kunde auswählen",
+      "empty": "Artikel antippen, um zu beginnen",
+      "lines": [
+        {
+          "name": "Latte",
+          "qty": 2,
+          "note": "Hafermilch",
+          "price": "6,80 €"
+        },
+        {
+          "name": "Croissant",
+          "qty": 1,
+          "price": "2,10 €"
+        },
+        {
+          "name": "Matcha Latte",
+          "qty": 1,
+          "note": "Weniger süß",
+          "price": "4,20 €"
+        }
+      ],
+      "subtotal": "Zwischensumme",
+      "totals": [
+        "0,00 €",
+        "6,80 €",
+        "8,90 €",
+        "13,10 €"
+      ],
+      "paid": "Ding!"
+    },
+    "sotto": {
+      "edit": "Bearbeiten",
+      "initials": "LW",
+      "name": "Lena Weber",
+      "meta": "Freundin seit 2019",
+      "fields": [
+        {
+          "label": "Geschenkideen",
+          "value": "Analogkamera"
+        },
+        {
+          "label": "Lieblingsgetränk",
+          "value": "Haferlatte"
+        },
+        {
+          "label": "Allergie",
+          "value": "Erdnüsse"
+        },
+        {
+          "label": "Geburtstag",
+          "value": "1993/08/30"
+        }
+      ]
+    },
+    "pikgeon": {
+      "cancel": "Abbrechen",
+      "save": "Alle speichern",
+      "title": "Erkennungsergebnisse",
+      "progress": "Fortschritt: {{done}} / {{total}} Fotos",
+      "recognizing": "Wird erkannt…",
+      "waiting": "Wartend",
+      "rows": [
+        {
+          "name": "あやな",
+          "meta": "Fountain on Richards · 21. Feb."
+        },
+        {
+          "name": "Eric",
+          "meta": "Gastown Steam Clock · 20. Feb."
+        },
+        {
+          "name": "Yuki",
+          "meta": "Stanley Park · 18. Feb."
+        },
+        {
+          "name": "Mateo",
+          "meta": "Granville Island · 17. Feb."
+        }
+      ]
+    }
   }
 }

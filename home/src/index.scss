@@ -1,27 +1,77 @@
-// ─── Design Tokens ──────────────────────────────────────────────
-// Light, green-tinted paper with forest-ink text. Neutrals all lean toward
-// the moss hue so nothing reads as pure grey, black, or white. Rules are
-// structure (masthead, catalog rows, footer), never ornament.
-$paper: #f2f1e8;
-$paper-raised: #faf9f2;
-$ink: #1d2a21;
-$ink-soft: #435243;
-$ink-muted: #5a6656;
-$moss: #2f4a34;
-$olive: #5b6630;
-$sage: #b7c4a2;
-$line: rgba(47, 74, 52, 0.2);
-$line-strong: rgba(47, 74, 52, 0.42);
-$radius-icon: 14px;
-$font-stack: "Plus Jakarta Sans Variable", system-ui, -apple-system, sans-serif;
-$font-wordmark: "Kalam", cursive;
-$ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-$bp-wide: 900px;
-// Shared by .intro and .entry so the bio lines up with every app description.
-$grid-wide: 56px minmax(0, 5fr) minmax(0, 6fr);
-$grid-gap-wide: 32px;
+@use "sass:map";
+@use "scenes";
 
-// ─── Reset & Base ───────────────────────────────────────────────
+// ─── Tokens ─────────────────────────────────────────────────────
+// Spacing, type and radius come only from these tables
+// (landing-page-design B1–B3); nothing in between.
+$space: (
+  0: 0,
+  25: 2px,
+  50: 4px,
+  75: 8px,
+  100: 12px,
+  200: 16px,
+  300: 24px,
+  400: 32px,
+  500: 40px,
+  600: 48px,
+  700: 64px,
+  800: 80px,
+  900: 96px,
+);
+
+@function s($key) {
+  @return map.get($space, $key);
+}
+
+$type: (
+  "xs": (12px, 16px),
+  "sm": (14px, 20px),
+  "base": (16px, 24px),
+  "lg": (18px, 28px),
+  "xl": (20px, 28px),
+  "2xl": (24px, 32px),
+  "3xl": (30px, 36px),
+  "4xl": (36px, 40px),
+  "5xl": (48px, 1),
+  "6xl": (60px, 1),
+);
+
+@mixin text($key) {
+  $pair: map.get($type, $key);
+  font-size: nth($pair, 1);
+  line-height: nth($pair, 2);
+}
+
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-2xl: 16px;
+$radius-3xl: 24px;
+$radius-full: 9999px;
+
+$bg: #f6f6f1;
+$surface: #ffffff;
+$ink: #121512;
+$ink-soft: #4b514b;
+$ink-muted: #656b64;
+$moss: #2f4a34;
+$moss-deep: #223527;
+$line: rgba(18, 21, 18, 0.08);
+$line-strong: rgba(18, 21, 18, 0.16);
+
+// Product UI motion (landing-page-design B7).
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+// Scene stories (design-to-motion B6).
+$e: cubic-bezier(0.16, 1, 0.3, 1);
+$e2: cubic-bezier(0.33, 1, 0.68, 1);
+$io: cubic-bezier(0.65, 0, 0.35, 1);
+
+$font: "Geist Variable", -apple-system, BlinkMacSystemFont, "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", "Noto Sans TC", system-ui, sans-serif;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+// ─── Base ───────────────────────────────────────────────────────
 *,
 *::before,
 *::after {
@@ -31,580 +81,954 @@ $grid-gap-wide: 32px;
 }
 
 html {
-  font-size: 16px;
   color-scheme: light;
+  scroll-behavior: smooth;
+  scroll-padding-top: s(900);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 body {
-  font-family: $font-stack;
-  background: $paper;
+  font-family: $font;
+  @include text("base");
+  background: $bg;
   color: $ink;
   min-height: 100dvh;
-  line-height: 1.5;
 }
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  font-weight: 600;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+// Chinese breaks between any two characters; headings break only at
+// punctuation and spaces so a phrase never splits across lines.
+:lang(zh) :is(h1, h2, h3) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 
 a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
 :focus-visible {
   outline: 2px solid $moss;
-  outline-offset: 3px;
-  border-radius: 4px;
+  outline-offset: 2px;
+  border-radius: $radius-md;
 }
 
-// ─── Backdrop ───────────────────────────────────────────────────
-// Sage wash + dappled leaf-light (an SVG noise field, see assets/dapple.svg)
-// + paper grain. All fixed behind the content, all faint.
-.page {
-  position: relative;
-  min-height: 100dvh;
-}
-
-.backdrop {
+.skip {
   position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 65% 55% at 92% -6%, rgba($sage, 0.26), transparent 70%),
-    radial-gradient(ellipse 55% 45% at -8% 106%, rgba($olive, 0.04), transparent 70%);
+  top: s(200);
+  left: s(200);
+  z-index: 100;
+  padding: s(75) s(100);
+  border-radius: $radius-lg;
+  background: $ink;
+  color: $surface;
+  @include text("sm");
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 0.3s $ease;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -6vh;
-    right: -30vw;
-    width: 150vw;
-    aspect-ratio: 1000 / 760;
-    background: url("./assets/dapple.svg") center / cover no-repeat;
-    opacity: 0.09;
-    mask-image: radial-gradient(ellipse 55% 60% at 70% 25%, #000 25%, transparent 72%);
-
-    @media (min-width: $bp-wide) {
-      right: -8vw;
-      width: min(1150px, 80vw);
-      opacity: 0.12;
-    }
-  }
-
-  &__arcs {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 110vw;
-    height: auto;
-    opacity: 0.45;
-
-    @media (min-width: $bp-wide) {
-      width: min(820px, 58vw);
-    }
-
-    path {
-      stroke: $moss;
-      stroke-width: 0.75;
-      vector-effect: non-scaling-stroke;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.05;
-    mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.18 0 0 0 0 0.29 0 0 0 0 0.2 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  &:focus-visible {
+    transform: none;
   }
 }
 
-// ─── Shell ──────────────────────────────────────────────────────
 .shell {
-  position: relative;
-  z-index: 1;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 5vw, 56px);
+  padding: 0 s(300);
+
+  @media (min-width: $bp-md) {
+    padding: 0 s(400);
+  }
 }
 
-// ─── Masthead ───────────────────────────────────────────────────
-.masthead {
+// ─── Buttons ────────────────────────────────────────────────────
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: s(75);
+  padding: s(75) s(100);
+  border-radius: $radius-full;
+  @include text("base");
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 0.3s $ease,
+    border-color 0.3s $ease,
+    color 0.3s $ease,
+    transform 0.5s $ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &--primary {
+    padding-inline: s(200);
+    background: $moss;
+    color: $surface;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $moss-deep;
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  &--light {
+    padding-inline: s(200);
+    background: $surface;
+    color: $moss-deep;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $bg;
+        transform: translateY(-1px);
+      }
+    }
+
+    &:focus-visible {
+      outline-color: $surface;
+    }
+  }
+
+  &--store {
+    position: relative;
+    z-index: 1;
+    @include text("sm");
+    border: 1px solid $line-strong;
+    color: $ink;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $ink;
+        border-color: $ink;
+        color: $surface;
+      }
+    }
+  }
+}
+
+// ─── Nav ────────────────────────────────────────────────────────
+// A compact bar floating off the top edge, sized to its content.
+.nav {
+  position: fixed;
+  top: s(200);
+  left: s(200);
+  right: s(200);
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
-  border-bottom: 1px solid $line;
+  gap: s(50);
+  margin: 0 auto;
+  padding: s(50);
+  border: 1px solid $line;
+  border-radius: $radius-full;
+  background: rgba($surface, 0.72);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  box-shadow: 0 8px 24px -16px rgba($ink, 0.25);
+  animation: drop 0.8s $ease both;
 
-  &__mark {
+  @media (min-width: $bp-md) {
+    width: fit-content;
+    justify-content: flex-start;
+  }
+
+  &__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: s(75);
+    padding-right: s(100);
+    border-radius: $radius-full;
+    @include text("sm");
+    font-weight: 600;
+    text-decoration: none;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: $radius-full;
+      object-fit: cover;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @media (min-width: $bp-md) {
+      display: flex;
+      gap: s(25);
+    }
+  }
+
+  &__link {
+    padding: s(75) s(100);
+    border-radius: $radius-full;
+    @include text("sm");
+    font-weight: 500;
+    color: $ink-soft;
+    text-decoration: none;
+    transition:
+      background-color 0.3s $ease,
+      color 0.3s $ease;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: rgba($ink, 0.05);
+        color: $ink;
+      }
+    }
+
+    &[aria-current] {
+      background: rgba($moss, 0.1);
+      color: $moss;
+    }
+  }
+
+  &__end {
+    display: flex;
+    align-items: center;
+    gap: s(25);
+  }
+
+  // Two lines that fold into an X; drawn by hand so the change can animate.
+  &__toggle {
+    position: relative;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 0 1px $line;
+    border: 0;
+    border-radius: $radius-full;
+    background: transparent;
+    cursor: pointer;
+
+    @media (min-width: $bp-md) {
+      display: none;
+    }
+
+    span {
+      position: absolute;
+      left: 12px;
+      width: 16px;
+      height: 2px;
+      border-radius: $radius-full;
+      background: $ink;
+      transition: transform 0.5s $ease;
+
+      &:first-child {
+        top: 15px;
+      }
+
+      &:last-child {
+        top: 23px;
+      }
+    }
+
+    &[aria-expanded="true"] span:first-child {
+      transform: translateY(4px) rotate(45deg);
+    }
+
+    &[aria-expanded="true"] span:last-child {
+      transform: translateY(-4px) rotate(-45deg);
+    }
   }
 }
 
-// ─── Language Picker ────────────────────────────────────────────
-.lang-picker {
+// ─── Mobile menu ────────────────────────────────────────────────
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  padding: 112px s(300) s(400);
+  background: rgba($bg, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s $ease,
+    visibility 0s linear 0.3s;
+
+  &[data-open] {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s $ease;
+  }
+
+  @media (min-width: $bp-md) {
+    display: none;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: s(200);
+  }
+
+  &__item {
+    opacity: 0;
+    transform: translateY(s(300));
+  }
+
+  &[data-open] &__item {
+    animation: menu-in 0.5s $ease both;
+    animation-delay: min(calc(var(--i) * 60ms), 400ms);
+  }
+
+  .nav__link {
+    padding: 0;
+    @include text("3xl");
+    font-weight: 600;
+    color: $ink;
+
+    &[aria-current] {
+      background: none;
+      color: $moss;
+    }
+  }
+
+  &__mail {
+    display: inline-block;
+    margin-top: s(200);
+    @include text("base");
+    color: $ink-soft;
+  }
+}
+
+@keyframes menu-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ─── Language picker ────────────────────────────────────────────
+.lang {
   position: relative;
 
   &__toggle {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    min-height: 40px;
-    padding: 0 14px;
-    border: 1px solid $line;
-    border-radius: 999px;
-    background: rgba($paper-raised, 0.6);
+    gap: s(75);
+    height: 40px;
+    padding: 0 s(100);
+    border: 0;
+    border-radius: $radius-full;
+    background: transparent;
     color: $ink-soft;
-    font-size: 0.8rem;
-    font-family: $font-stack;
+    @include text("sm");
+    font-family: $font;
+    font-weight: 500;
     cursor: pointer;
     transition:
-      border-color 0.2s ease,
-      color 0.2s ease;
+      background-color 0.3s $ease,
+      color 0.3s $ease;
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        border-color: $line-strong;
-        color: $moss;
+        background: rgba($ink, 0.05);
+        color: $ink;
       }
     }
+  }
 
-    .bi {
-      font-size: 0.85rem;
+  &__current {
+    display: none;
+
+    @media (min-width: $bp-md) {
+      display: inline;
     }
   }
 
-  &__chevron {
-    font-size: 0.65rem !important;
-    transition: transform 0.2s $ease-out;
+  &__caret {
+    transition: transform 0.5s $ease;
   }
 
-  &__toggle[aria-expanded="true"] &__chevron {
+  &__toggle[aria-expanded="true"] &__caret {
     transform: rotate(180deg);
   }
 
   &__menu {
     position: absolute;
-    top: calc(100% + 6px);
+    top: calc(100% + #{s(100)});
     right: 0;
-    z-index: 10;
-    min-width: 168px;
-    max-height: 340px;
+    z-index: 60;
+    min-width: 176px;
+    max-height: 360px;
     overflow-y: auto;
-    padding: 6px;
-    list-style: none;
-    background: $paper-raised;
+    padding: s(75);
     border: 1px solid $line;
-    border-radius: 14px;
-    box-shadow: 0 16px 40px -18px rgba($moss, 0.35);
+    border-radius: $radius-2xl;
+    background: $surface;
+    box-shadow: 0 16px 40px -16px rgba($ink, 0.25);
     transform-origin: top right;
-    animation: menuIn 0.18s $ease-out;
-
-    &::-webkit-scrollbar {
-      width: 4px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: $line-strong;
-      border-radius: 2px;
-    }
+    animation: pop-in 0.3s $ease both;
   }
 
   &__item {
     display: block;
     width: 100%;
-    padding: 9px 12px;
-    border: none;
-    border-radius: 8px;
+    padding: s(75) s(100);
+    border: 0;
+    border-radius: $radius-lg;
     background: transparent;
     color: $ink-soft;
-    font-size: 0.84rem;
-    font-family: $font-stack;
+    @include text("sm");
+    font-family: $font;
     text-align: left;
     cursor: pointer;
+    transition: background-color 0.3s $ease;
 
     &:hover {
-      background: rgba($sage, 0.28);
+      background: rgba($ink, 0.05);
       color: $ink;
     }
 
-    &.active {
+    &[aria-current] {
       color: $moss;
       font-weight: 600;
     }
   }
 }
 
-@keyframes menuIn {
+@keyframes pop-in {
   from {
     opacity: 0;
-    transform: scale(0.97) translateY(-4px);
+    transform: scale(0.96) translateY(-4px);
   }
 }
 
-// ─── Intro ──────────────────────────────────────────────────────
-.intro {
-  display: grid;
-  gap: 28px;
-  padding: clamp(56px, 11vw, 136px) 0 clamp(48px, 8vw, 104px);
+// ─── Hero ───────────────────────────────────────────────────────
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 144px 0 s(800);
+  text-align: center;
 
-  @media (min-width: $bp-wide) {
-    grid-template-columns: $grid-wide;
-    column-gap: $grid-gap-wide;
-    align-items: end;
+  @media (min-width: $bp-md) {
+    padding: 176px 0 s(900);
   }
 
-  &__title {
-    font-family: $font-wordmark;
-    font-size: clamp(3.4rem, 10vw, 7rem);
-    font-weight: 400;
-    line-height: 0.94;
-    white-space: nowrap;
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: s(75);
+    padding: s(50) s(100);
+    border: 1px solid $line;
+    border-radius: $radius-full;
+    background: $surface;
+    @include text("sm");
+    font-weight: 500;
     color: $moss;
 
-    @media (min-width: $bp-wide) {
-      grid-column: 1 / 3;
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: $radius-full;
+      background: #4caf6a;
     }
   }
 
-  &__aside {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  // Gradient on the heading text only (B5); the last line's descenders need
+  // the bottom padding or background-clip cuts them off.
+  &__title {
+    width: fit-content;
+    max-width: 680px;
+    margin-top: s(300);
+    padding-bottom: s(50);
+    @include text("4xl");
+    letter-spacing: -0.03em;
+    background: linear-gradient(90deg, #000000, #666666);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 
-    @media (min-width: $bp-wide) {
-      grid-column: 3;
-      padding-bottom: 10px;
+    @media (min-width: $bp-md) {
+      @include text("6xl");
+      letter-spacing: -0.04em;
+    }
+
+    // Two lines on narrow screens with the separator dropped, so no line
+    // ends on punctuation; one line once it fits, separator restored.
+    @media (min-width: $bp-lg) {
+      max-width: none;
+      white-space: nowrap;
     }
   }
 
-  &__bio {
-    max-width: 30ch;
-    font-size: 1.15rem;
-    line-height: 1.55;
+  &__line {
+    display: block;
+
+    @media (min-width: $bp-lg) {
+      display: inline;
+    }
+  }
+
+  &__sep {
+    display: none;
+    white-space: pre;
+
+    @media (min-width: $bp-lg) {
+      display: inline;
+    }
+  }
+
+  &__sub {
+    max-width: 680px;
+    margin-top: s(300);
+    @include text("lg");
     color: $ink-soft;
   }
 
-  &__contact {
-    display: inline-flex;
+  &__cta {
+    margin-top: s(400);
+  }
+
+  &__proof {
+    display: flex;
     align-items: center;
-    gap: 8px;
-    min-height: 44px;
-    font-size: 0.88rem;
-    font-weight: 500;
-    color: $moss;
-    text-decoration: none;
-    background: linear-gradient($line-strong, $line-strong) left 78% / 100% 1px no-repeat;
+    gap: s(100);
+    margin-top: s(400);
+    @include text("sm");
+    color: $ink-muted;
+  }
 
-    .bi {
-      font-size: 0.8rem;
-      transition: transform 0.25s $ease-out;
-    }
+  &__icons {
+    display: flex;
 
-    @media (hover: hover) and (pointer: fine) {
-      &:hover .bi {
-        transform: translateX(3px);
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: $radius-lg;
+      box-shadow: 0 0 0 2px $bg;
+      object-fit: cover;
+
+      & + img {
+        margin-left: -(s(75));
       }
     }
   }
-}
 
-// ─── Catalog ────────────────────────────────────────────────────
-.catalog {
-  &__head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding-bottom: 14px;
-    border-bottom: 3px double $line-strong;
+  > * {
+    animation: rise 0.9s $ease both;
   }
 
-  &__label {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: $olive;
-  }
-
-  &__count {
-    font-weight: 500;
-    font-variant-numeric: tabular-nums;
-    font-size: 0.9rem;
-    color: $olive;
-  }
-}
-
-// ─── Entry (one app) ────────────────────────────────────────────
-// The whole entry links to the app's site: .entry__link stretches over it
-// (no nested anchors), store links sit above that layer, and ::before is
-// the hover/focus surface behind the content.
-.entry {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  gap: 18px;
-  padding: 32px 0 34px;
-  border-bottom: 1px solid $line;
-
-  &::before,
-  &__link::after {
-    content: "";
-    position: absolute;
-    inset: 14px -12px;
-    border-radius: 18px;
-
-    @media (min-width: $bp-wide) {
-      inset: 18px -20px 18px calc(56px + #{$grid-gap-wide} - 20px);
+  @for $i from 1 through 6 {
+    > :nth-child(#{$i}) {
+      animation-delay: #{0.1s + ($i - 1) * 0.08s};
     }
   }
+}
 
-  &::before {
-    z-index: -1;
-    background: rgba($moss, 0.06);
+// Pikgeon's icon ships with a transparent background.
+img[data-app-id="pikgeon"] {
+  background: #f5efe2;
+}
+
+@keyframes rise {
+  from {
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transform: translateY(10px);
+    filter: blur(4px);
+  }
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+    filter: blur(4px);
+  }
+}
+
+// ─── Sections ───────────────────────────────────────────────────
+.section {
+  padding: s(800) 0;
+
+  @media (min-width: $bp-md) {
+    padding: s(900) 0;
   }
 
-  &:has(&__link:focus-visible)::before {
-    opacity: 1;
-    outline: 2px solid $moss;
-  }
-
-  @media (min-width: $bp-wide) {
-    grid-template-columns: $grid-wide;
-    column-gap: $grid-gap-wide;
-    align-items: start;
-    padding: 40px 0 42px;
-  }
-
-  &__index {
-    font-weight: 500;
-    font-variant-numeric: tabular-nums;
-    font-size: 0.9rem;
-    line-height: 1;
-    color: $olive;
-
-    @media (min-width: $bp-wide) {
-      padding-top: 10px;
-      font-size: 1.05rem;
-    }
-  }
-
-  &__identity {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    min-width: 0;
-  }
-
-  &__icon {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: $radius-icon;
-    object-fit: cover;
-    outline: 1px solid $line;
-    outline-offset: -1px;
-    box-shadow: 0 8px 18px -10px rgba($moss, 0.45);
-    transition: transform 0.35s $ease-out;
-  }
-
-  // Pikgeon icon ships with a transparent background — give the glyph a
-  // warm paper tile to sit on.
-  &[data-app-id="pikgeon"] &__icon {
-    background: #f5efe2;
+  &__head {
+    max-width: 680px;
+    margin-bottom: s(500);
   }
 
   &__title {
-    min-width: 0;
+    @include text("3xl");
+    letter-spacing: -0.02em;
+
+    @media (min-width: $bp-md) {
+      @include text("4xl");
+    }
+  }
+
+  &__sub {
+    margin-top: s(100);
+    @include text("lg");
+    color: $ink-soft;
+  }
+}
+
+#apps {
+  padding-top: 0;
+}
+
+// ─── Bento ──────────────────────────────────────────────────────
+.bento {
+  display: grid;
+  gap: s(200);
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+.app-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: s(75);
+  border: 1px solid $line;
+  border-radius: $radius-3xl;
+  background: $surface;
+  transition:
+    border-color 0.3s $ease,
+    box-shadow 0.5s $ease;
+
+  @media (min-width: $bp-lg) {
+    &--dingpos,
+    &--babbby {
+      grid-column: span 7;
+    }
+
+    &--sotto,
+    &--pikgeon {
+      grid-column: span 5;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: $line-strong;
+      box-shadow: 0 24px 48px -32px rgba($ink, 0.35);
+    }
+
+    &:hover .app-card__arrow {
+      transform: translate(2px, -2px);
+      color: $moss;
+    }
+  }
+
+  &:has(.app-card__link:focus-visible) {
+    outline: 2px solid $moss;
+    outline-offset: 2px;
+  }
+
+  // Outer radius 24 minus the 8px gap (B3). Devices start below the top
+  // edge and run off the bottom, so the panel clips them.
+  &__visual {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 320px;
+    overflow: hidden;
+    border-radius: $radius-2xl;
+    box-shadow: inset 0 0 0 1px rgba($ink, 0.04);
+    container-type: inline-size;
+  }
+
+  &--dingpos &__visual {
+    background: #e4e9f0;
+  }
+
+  &--sotto &__visual {
+    background: #ece5da;
+  }
+
+  &--pikgeon &__visual {
+    background: #e6e8da;
+  }
+
+  &--babbby &__visual {
+    background: #f9e2d4;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: s(300) s(200) s(200);
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: s(200);
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: $radius-xl;
+    box-shadow: 0 0 0 1px $line;
+    object-fit: cover;
   }
 
   &__name {
     display: flex;
-    align-items: baseline;
-    gap: 8px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
-    color: $ink;
-    margin-bottom: 4px;
+    align-items: center;
+    gap: s(50);
+    @include text("xl");
+    letter-spacing: -0.01em;
   }
 
   &__link {
-    color: inherit;
     text-decoration: none;
 
-    // The entry surface takes over the focus ring only where :has() can draw it.
-    @supports selector(:has(a)) {
-      &:focus-visible {
-        outline: none;
-      }
+    // Stretches over the whole card; store buttons sit above it.
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: $radius-3xl;
+    }
+
+    &:focus-visible {
+      outline: none;
     }
   }
 
   &__arrow {
-    font-size: 0.85rem;
     color: $ink-muted;
     transition:
-      color 0.2s ease,
-      transform 0.25s $ease-out;
+      transform 0.5s $ease,
+      color 0.3s $ease;
   }
 
   &__tagline {
-    font-size: 0.85rem;
-    font-weight: 500;
-    line-height: 1.4;
-    color: $olive;
+    @include text("sm");
+    color: $ink-muted;
   }
 
   &__desc {
     max-width: 52ch;
-    font-size: 0.95rem;
-    line-height: 1.65;
+    margin-top: s(200);
     color: $ink-soft;
   }
 
   &__actions {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-    margin-top: 20px;
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    &:hover::before {
-      opacity: 1;
-    }
-
-    &:hover &__icon {
-      transform: translateY(-3px);
-    }
-
-    &:hover &__arrow {
-      color: $moss;
-      transform: translate(2px, -2px);
-    }
+    gap: s(75);
+    margin-top: auto;
+    padding-top: s(300);
   }
 }
 
-// ─── Links ──────────────────────────────────────────────────────
-.store-link {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
+// ─── Contact ────────────────────────────────────────────────────
+.contact {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 7px;
-  min-height: 44px;
-  padding: 0 14px;
-  border: 1px solid $line-strong;
-  border-radius: 999px;
-  color: $moss;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.16s $ease-out;
+  padding: s(700) s(300);
+  border-radius: $radius-3xl;
+  background: $moss-deep;
+  color: $surface;
+  text-align: center;
 
-  .bi {
-    font-size: 0.95rem;
+  @media (min-width: $bp-md) {
+    padding: s(900) s(400);
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      background: $moss;
-      border-color: $moss;
-      color: $paper-raised;
+  &__title {
+    max-width: 680px;
+    @include text("3xl");
+    letter-spacing: -0.02em;
+
+    @media (min-width: $bp-md) {
+      @include text("5xl");
+      letter-spacing: -0.03em;
     }
   }
 
-  &:active {
-    transform: scale(0.97);
+  &__sub {
+    max-width: 520px;
+    margin: s(200) 0 s(400);
+    @include text("lg");
+    color: rgba($surface, 0.72);
+  }
+
+  &__mail {
+    margin-top: s(200);
+    @include text("sm");
+    color: rgba($surface, 0.6);
   }
 }
 
 // ─── Footer ─────────────────────────────────────────────────────
 .footer {
-  padding: 40px 0 48px;
+  display: grid;
+  gap: s(500);
+  padding: s(600) 0 s(700);
+  @include text("sm");
 
-  p {
-    font-size: 0.75rem;
+  @media (min-width: $bp-md) {
+    grid-template-columns: 1fr auto;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: flex-start;
+    gap: s(100);
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: $radius-full;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__copy {
+    margin-top: s(50);
     color: $ink-muted;
+  }
+
+  &__cols {
+    display: flex;
+    gap: s(700);
+  }
+
+  &__label {
+    margin-bottom: s(100);
+    font-weight: 600;
+  }
+
+  li + li {
+    margin-top: s(75);
+  }
+
+  a {
+    color: $ink-soft;
+    text-decoration: none;
+    transition: color 0.3s $ease;
+
+    &:hover {
+      color: $ink;
+    }
   }
 }
 
-// ─── Entrance ───────────────────────────────────────────────────
-// Pure CSS so prerendered HTML never ships a hidden state.
-@keyframes rise {
+// ─── Scroll-driven reveals ──────────────────────────────────────
+// Pure CSS on purpose: prerender writes the rendered DOM back to the HTML, so
+// a JS-toggled hidden state would ship as blank content. Browsers without
+// scroll timelines simply show everything.
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-up auto $ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+
+    .reveal-card {
+      animation: reveal-card auto $ease both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+
+  }
+}
+
+@keyframes reveal-up {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(32px);
+  }
+}
+
+@keyframes reveal-card {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+    filter: blur(6px);
+  }
+}
+
+
+// ─── Reduced motion ─────────────────────────────────────────────
+// Movement becomes a plain fade; scenes rest on their finished frame.
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero > *,
+  .nav,
+  .menu[data-open] .menu__item,
+  .lang__menu {
+    animation: fade 0.3s $ease both;
+  }
+
+  .menu__item {
+    opacity: 1;
+    transform: none;
+  }
+
+  .scene *,
+  .scene *::before,
+  .scene *::after {
+    animation: none !important;
+  }
+
+  .button,
+  .nav__toggle span,
+  .app-card__arrow,
+  .lang__caret {
+    transition-property: background-color, border-color, color, opacity;
   }
 }
 
 @keyframes fade {
   from {
     opacity: 0;
-  }
-}
-
-.masthead {
-  animation: fade 0.6s ease both;
-}
-
-.intro__title {
-  animation: rise 0.9s $ease-out 0.05s both;
-}
-
-.intro__aside {
-  animation: rise 0.9s $ease-out 0.15s both;
-}
-
-.catalog__head {
-  animation: fade 0.6s ease 0.25s both;
-}
-
-.entry {
-  animation: rise 0.8s $ease-out both;
-
-  @for $i from 1 through 6 {
-    &:nth-of-type(#{$i}) {
-      animation-delay: #{0.25s + $i * 0.07s};
-    }
-  }
-}
-
-.footer {
-  animation: fade 0.6s ease 0.6s both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .masthead,
-  .intro__title,
-  .intro__aside,
-  .catalog__head,
-  .entry,
-  .footer,
-  .lang-picker__menu {
-    animation: fade 0.3s ease both;
-  }
-
-  .entry::before,
-  .entry__icon,
-  .entry__arrow,
-  .store-link,
-  .intro__contact .bi {
-    transition: none;
   }
 }

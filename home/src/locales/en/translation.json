@@ -1,27 +1,205 @@
 {
-  "profile": {
-    "bio": "Indie app studio — tools for everyday life"
+  "nav": {
+    "label": "Sections",
+    "apps": "Apps",
+    "contact": "Contact",
+    "language": "Change language",
+    "menu_open": "Open menu",
+    "menu_close": "Close menu",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": "Independent app studio",
+    "title_1": "Tools for life",
+    "title_sep": ", ",
+    "title_2": "minus the hassle",
+    "sub": "Alu Studio makes four apps for iPhone, iPad and Android: a point of sale for small shops, a notebook for the people you love, a postcard tracker for Pikmin Bloom, and daily play ideas for young kids.",
+    "cta": "Browse the apps",
+    "proof": "On the App Store and Google Play"
   },
   "apps": {
-    "heading": "Apps"
+    "heading": "Four apps, each built for one job",
+    "sub": "Every app has its own site with FAQ and support."
   },
   "pikgeon": {
-    "tagline": "Keep Your Postcard Memories Organized",
-    "desc": "Smart OCR recognition to track your Pikmin Bloom mailing journey. Fully local processing to protect your privacy."
+    "tagline": "Keep your postcard memories organized",
+    "desc": "Scan your Pikmin Bloom postcards and track every mailing journey. Recognition runs on your phone, so your postcards stay private."
   },
   "babbby": {
-    "tagline": "Daily Activity Ideas for Ages 0–6",
-    "desc": "Track milestones, build routines, and make every day count with 340+ curated activities."
+    "tagline": "Daily activity ideas for ages 0 to 6",
+    "desc": "Track milestones, build routines, and pick from 340+ activities matched to your child's age."
   },
   "sotto": {
-    "tagline": "Remember the Details That Matter",
-    "desc": "What they love, what they can't stand, the little things that make them smile — kept close, because caring is remembering."
+    "tagline": "Remember the details that matter",
+    "desc": "What they love, what they can't stand, the little things that make them smile. Kept close, because caring is remembering."
   },
   "dingpos": {
-    "tagline": "Point of Sale for iPad",
-    "desc": "Open your store in 10 minutes. An offline-first point of sale — your data, your control."
+    "tagline": "Point of sale for iPad",
+    "desc": "Open your store in 10 minutes. A point of sale that keeps working offline, with your sales data kept on your iPad."
+  },
+  "contact": {
+    "heading": "Questions about an app?",
+    "sub": "Every app has its own support page and FAQ. For anything else, write to the studio.",
+    "cta": "Email the studio"
   },
   "footer": {
+    "apps": "Apps",
+    "privacy": "Privacy",
+    "privacy_of": "{{name}} privacy policy",
     "rights": "All rights reserved."
+  },
+  "scene": {
+    "dingpos": {
+      "search": "Search products or scan barcode",
+      "categories": [
+        "All",
+        "Coffee",
+        "Bakery",
+        "Desserts"
+      ],
+      "products": [
+        {
+          "name": "Latte",
+          "price": "$4.75"
+        },
+        {
+          "name": "Matcha latte",
+          "price": "$5.40"
+        },
+        {
+          "name": "Croissant",
+          "price": "$3.80"
+        },
+        {
+          "name": "Sea salt cookie",
+          "price": "$2.60"
+        },
+        {
+          "name": "Lemon tart",
+          "price": "$4.60"
+        },
+        {
+          "name": "Cheesecake",
+          "price": "$5.10"
+        }
+      ],
+      "cart": "Cart 1",
+      "customer": "Select Customer",
+      "empty": "Tap a product to start",
+      "lines": [
+        {
+          "name": "Latte",
+          "qty": 2,
+          "note": "Oat milk",
+          "price": "$9.50"
+        },
+        {
+          "name": "Croissant",
+          "qty": 1,
+          "price": "$3.80"
+        },
+        {
+          "name": "Matcha latte",
+          "qty": 1,
+          "note": "Less sweet",
+          "price": "$5.40"
+        }
+      ],
+      "subtotal": "Subtotal",
+      "totals": [
+        "$0.00",
+        "$9.50",
+        "$13.30",
+        "$18.70"
+      ],
+      "paid": "Ding!"
+    },
+    "sotto": {
+      "edit": "Edit",
+      "initials": "MC",
+      "name": "Mia Chen",
+      "meta": "Friend since 2019",
+      "fields": [
+        {
+          "label": "Gift Ideas",
+          "value": "Film camera"
+        },
+        {
+          "label": "Fav Drink",
+          "value": "Oat latte, no sugar"
+        },
+        {
+          "label": "Allergy",
+          "value": "Peanuts"
+        },
+        {
+          "label": "Birthday",
+          "value": "1993/08/30"
+        }
+      ]
+    },
+    "pikgeon": {
+      "cancel": "Cancel",
+      "save": "Save All",
+      "title": "Recognition Results",
+      "progress": "Progress: {{done}} / {{total}} photos",
+      "recognizing": "Recognizing…",
+      "waiting": "Waiting",
+      "rows": [
+        {
+          "name": "あやな",
+          "meta": "Fountain on Richards · Feb 21"
+        },
+        {
+          "name": "Eric",
+          "meta": "Gastown Steam Clock · Feb 20"
+        },
+        {
+          "name": "Yuki",
+          "meta": "Stanley Park · Feb 18"
+        },
+        {
+          "name": "Mateo",
+          "meta": "Granville Island · Feb 17"
+        }
+      ]
+    },
+    "babbby": {
+      "title": "Today",
+      "child": "Mochi",
+      "child_initial": "M",
+      "days": [
+        "S",
+        "M",
+        "T",
+        "W",
+        "T",
+        "F",
+        "S"
+      ],
+      "age": "12–18 months",
+      "activities": [
+        {
+          "name": "Up and Down Stairs",
+          "category": "Gross Motor",
+          "category_id": "gross_motor",
+          "emoji": "🏃"
+        },
+        {
+          "name": "Color Sorting",
+          "category": "Cognitive",
+          "category_id": "cognitive",
+          "emoji": "🧩"
+        },
+        {
+          "name": "Crayon Scribble Time",
+          "category": "Fine Motor",
+          "category_id": "fine_motor",
+          "emoji": "✋"
+        }
+      ],
+      "week": "This week",
+      "done_label": "activities done"
+    }
   }
 }

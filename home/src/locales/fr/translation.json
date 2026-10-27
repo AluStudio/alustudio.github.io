@@ -1,27 +1,168 @@
 {
-  "profile": {
-    "bio": "Studio indie d'apps — des outils pour le quotidien"
+  "nav": {
+    "label": "Sections",
+    "apps": "Apps",
+    "contact": "Contact",
+    "language": "Changer de langue",
+    "menu_open": "Ouvrir le menu",
+    "menu_close": "Fermer le menu",
+    "skip": "Aller au contenu"
+  },
+  "hero": {
+    "eyebrow": "Studio d’apps indépendant",
+    "title_1": "Des outils utiles",
+    "title_sep": ", ",
+    "title_2": "sans tracas",
+    "sub": "Alu Studio crée quatre apps pour iPhone, iPad et Android : une caisse pour les petits commerces, un carnet pour les personnes que vous aimez, un suivi de cartes postales pour Pikmin Bloom et des idées de jeux quotidiennes pour les jeunes enfants.",
+    "cta": "Voir les apps",
+    "proof": "Sur l’App Store et Google Play"
   },
   "apps": {
-    "heading": "Applications"
+    "heading": "Quatre apps, chacune pour une tâche",
+    "sub": "Chaque app a son propre site avec FAQ et assistance."
   },
   "pikgeon": {
-    "tagline": "Gardez vos souvenirs de cartes postales organisés",
-    "desc": "Reconnaissance OCR intelligente pour suivre votre parcours d'envoi. Traitement entièrement local pour protéger votre vie privée."
+    "tagline": "Gardez vos souvenirs de cartes postales bien rangés",
+    "desc": "Scannez vos cartes postales Pikmin Bloom et suivez chaque envoi. La reconnaissance se fait sur votre téléphone : vos cartes restent privées."
   },
   "babbby": {
-    "tagline": "Idées d'activités quotidiennes pour les 0–6 ans",
-    "desc": "Suivez les étapes clés, créez des routines et rendez chaque jour utile avec plus de 340 activités."
+    "tagline": "Idées d’activités quotidiennes de 0 à 6 ans",
+    "desc": "Suivez les étapes clés, créez des routines et choisissez parmi plus de 340 activités adaptées à l’âge de votre enfant."
   },
   "sotto": {
-    "tagline": "Retiens les détails qui comptent",
-    "desc": "Ce qu'ils aiment, ce qu'ils détestent, ces petits riens qui les font sourire — gardés précieusement, parce qu'aimer, c'est se souvenir."
+    "tagline": "Retenez les détails qui comptent",
+    "desc": "Ce qu’ils aiment, ce qu’ils ne supportent pas, les petites choses qui les font sourire. Gardés précieusement, parce que tenir à quelqu’un, c’est se souvenir."
   },
   "dingpos": {
-    "tagline": "Caisse pour iPad",
-    "desc": "Ouvrez votre boutique en 10 minutes. Un point de vente offline-first — vos données restent à vous."
+    "tagline": "Caisse enregistreuse pour iPad",
+    "desc": "Ouvrez votre boutique en 10 minutes. Une caisse qui continue de fonctionner hors ligne, avec vos données de vente conservées sur votre iPad."
+  },
+  "contact": {
+    "heading": "Une question sur une app ?",
+    "sub": "Chaque app a sa propre page d’assistance et sa FAQ. Pour tout le reste, écrivez au studio.",
+    "cta": "Écrire au studio"
   },
   "footer": {
+    "apps": "Apps",
+    "privacy": "Confidentialité",
+    "privacy_of": "Politique de confidentialité de {{name}}",
     "rights": "Tous droits réservés."
+  },
+  "scene": {
+    "dingpos": {
+      "search": "Rechercher un produit ou scanner un code-barres",
+      "categories": [
+        "Toutes",
+        "Café",
+        "Boulangerie",
+        "Desserts"
+      ],
+      "products": [
+        {
+          "name": "Latte",
+          "price": "3,40 €"
+        },
+        {
+          "name": "Matcha latte",
+          "price": "4,20 €"
+        },
+        {
+          "name": "Croissant",
+          "price": "2,10 €"
+        },
+        {
+          "name": "Cookie fleur de sel",
+          "price": "1,90 €"
+        },
+        {
+          "name": "Tarte au citron",
+          "price": "3,80 €"
+        },
+        {
+          "name": "Cheesecake",
+          "price": "4,50 €"
+        }
+      ],
+      "cart": "Panier 1",
+      "customer": "Sélectionner un client",
+      "empty": "Touchez un produit pour commencer",
+      "lines": [
+        {
+          "name": "Latte",
+          "qty": 2,
+          "note": "Lait d’avoine",
+          "price": "6,80 €"
+        },
+        {
+          "name": "Croissant",
+          "qty": 1,
+          "price": "2,10 €"
+        },
+        {
+          "name": "Matcha latte",
+          "qty": 1,
+          "note": "Moins sucré",
+          "price": "4,20 €"
+        }
+      ],
+      "subtotal": "Sous-total",
+      "totals": [
+        "0,00 €",
+        "6,80 €",
+        "8,90 €",
+        "13,10 €"
+      ],
+      "paid": "Ding!"
+    },
+    "sotto": {
+      "edit": "Modifier",
+      "initials": "CR",
+      "name": "Camille Roux",
+      "meta": "Amie depuis 2019",
+      "fields": [
+        {
+          "label": "Idées cadeaux",
+          "value": "Un argentique"
+        },
+        {
+          "label": "Boisson préférée",
+          "value": "Latte avoine"
+        },
+        {
+          "label": "Allergie",
+          "value": "Arachides"
+        },
+        {
+          "label": "Naissance",
+          "value": "1993/08/30"
+        }
+      ]
+    },
+    "pikgeon": {
+      "cancel": "Annuler",
+      "save": "Tout enregistrer",
+      "title": "Résultats de reconnaissance",
+      "progress": "Progression : {{done}} / {{total}} photos",
+      "recognizing": "Reconnaissance…",
+      "waiting": "En attente",
+      "rows": [
+        {
+          "name": "あやな",
+          "meta": "Fountain on Richards · 21 févr."
+        },
+        {
+          "name": "Eric",
+          "meta": "Gastown Steam Clock · 20 févr."
+        },
+        {
+          "name": "Yuki",
+          "meta": "Stanley Park · 18 févr."
+        },
+        {
+          "name": "Mateo",
+          "meta": "Granville Island · 17 févr."
+        }
+      ]
+    }
   }
 }
