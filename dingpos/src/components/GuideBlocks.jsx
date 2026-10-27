@@ -1,7 +1,6 @@
 // Renders a guide's content blocks (schema in src/data/guides/guides.zh-Hant.js).
 import TransitionLink from "./TransitionLink";
-
-const LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+import { INLINE_LINK } from "../data/guides/links.js";
 
 // Width of an image block's `phone` file; the build checks it.
 const PHONE_IMAGE_WIDTH = 1080;
@@ -15,7 +14,7 @@ const IMAGE_SIZES = "(min-width: 520px) 480px, calc(100vw - 2.5rem)";
 function InlineText({ text }) {
   const parts = [];
   let last = 0;
-  for (const match of text.matchAll(LINK)) {
+  for (const match of text.matchAll(INLINE_LINK)) {
     const [whole, label, href] = match;
     if (match.index > last) parts.push(text.slice(last, match.index));
     parts.push(

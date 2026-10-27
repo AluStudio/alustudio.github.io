@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import FaqBlocks from "../components/FaqBlocks";
 import ContactCard from "../components/ContactCard";
 import { getFaq } from "../data/faq";
+import { getGuides, getGuidesLinkingTo } from "../data/guides";
 
 function SupportArticlePage() {
   const { slug } = useParams();
@@ -23,6 +24,10 @@ function SupportArticlePage() {
         .map((relatedSlug) => articles.find((a) => a.slug === relatedSlug))
         .filter(Boolean)
     : [];
+  // Guides that cite this article: the article explains the feature, the
+  // guide the market's fees behind it, so the link runs both ways.
+  const guidesUi = getGuides().ui;
+  const citingGuides = article ? getGuidesLinkingTo(`/support/${article.slug}/`) : [];
 
   useEffect(() => {
     const previousTitle = document.title;
@@ -74,6 +79,25 @@ function SupportArticlePage() {
                     <li key={r.slug}>
                       <TransitionLink to={`/support/${r.slug}/`}>
                         {r.question}
+                        <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                      </TransitionLink>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            )}
+
+            {citingGuides.length > 0 && (
+              <aside className="faq-related">
+                <h2>
+                  <i className="bi bi-journal-text" aria-hidden="true"></i>
+                  {guidesUi.related_title}
+                </h2>
+                <ul>
+                  {citingGuides.map((guide) => (
+                    <li key={guide.slug}>
+                      <TransitionLink to={`/guides/${guide.slug}/`}>
+                        {guide.title}
                         <i className="bi bi-chevron-right" aria-hidden="true"></i>
                       </TransitionLink>
                     </li>

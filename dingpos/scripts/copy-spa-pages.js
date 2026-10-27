@@ -26,7 +26,8 @@
  * Guides (/guides/ and /guides/<slug>/) are the exception to "every page in
  * every language": they are written per market, not translated, so only a
  * language with a guides pack gets them, and they carry no hreflang — no
- * other language has the same page (docs/specs/seo-aeo.md §獲客文章).
+ * other language has the same page (docs/specs/seo-aeo.md §獲客文章). Each
+ * guide carries an Article next to its BreadcrumbList.
  *
  * `--write-sitemap` rewrites the DingPOS block of sitemap.xml from the page
  * list instead of checking it, then exits without writing pages.
@@ -46,6 +47,7 @@ import {
 } from "../../scripts/rewrite-seo-tags.mjs";
 import { contentUnits, fitDescription, DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
+import { INLINE_LINK, blockTexts } from "../src/data/guides/links.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -234,14 +236,6 @@ const publicDir = join(__dirname, "..", "public");
 // GuideBlocks.jsx declares an image's `phone` file at this width in its srcset.
 const PHONE_IMAGE_WIDTH = 1080;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
-const INLINE_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
-
-/** Every text of a block that may carry inline links. */
-const blockTexts = (block) => [
-  ...(block.text ? [block.text] : []),
-  ...(block.items ?? []),
-  ...(block.rows ?? []).flat(),
-];
 
 /** [width, height] of a WebP file from its VP8 / VP8L / VP8X header, or null. */
 function webpSize(path) {
@@ -381,13 +375,47 @@ function guideRoutes(locale) {
       title: `${guide.title} — ${SITE_NAME}`,
       description: guide.summary,
       standalone: true,
-      jsonLd: breadcrumbList([
-        { name: SITE_NAME, url: routeUrl(locale, "") },
-        { name: ui.title, url: routeUrl(locale, "guides") },
-        { name: guide.title, url: routeUrl(locale, `guides/${guide.slug}`) },
-      ]),
+      jsonLd: [
+        breadcrumbList([
+          { name: SITE_NAME, url: routeUrl(locale, "") },
+          { name: ui.title, url: routeUrl(locale, "guides") },
+          { name: guide.title, url: routeUrl(locale, `guides/${guide.slug}`) },
+        ]),
+        guideArticle(locale, guide),
+      ],
     })),
   ];
+}
+
+// home/index.html declares this Organization under the same @id.
+const ALU_STUDIO = {
+  "@type": "Organization",
+  "@id": "https://alu-studio.com/#organization",
+  name: "Alu Studio",
+  url: "https://alu-studio.com/",
+};
+
+/**
+ * schema.org Article for a guide. dateModified is `checked`, the date the page
+ * shows as last checked: Google wants the marked-up date to match the visible
+ * one. There is no datePublished, since no guide records one.
+ */
+function guideArticle(locale, guide) {
+  const url = routeUrl(locale, `guides/${guide.slug}`);
+  const images = guide.content.filter((b) => b.type === "image").map((b) => `${BASE_URL}/${b.src}`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.title,
+    description: guide.summary,
+    inLanguage: locale.hreflang,
+    url,
+    mainEntityOfPage: url,
+    dateModified: guide.checked,
+    ...(images.length ? { image: images } : {}),
+    author: ALU_STUDIO,
+    publisher: ALU_STUDIO,
+  };
 }
 
 const pages = LOCALES.flatMap((locale) =>
@@ -490,7 +518,7 @@ for (const { path, title, description, jsonLd, standalone, locale, url } of page
     ogLocaleAlternates: standalone ? [] : LOCALES.filter((l) => l !== locale).map((l) => l.ogLocale),
     versions,
   });
-  if (jsonLd) html = addJsonLd(html, jsonLd);
+  for (const data of [jsonLd ?? []].flat()) html = addJsonLd(html, data);
 
   const dest = join(dist, locale.pathPrefix, path, "index.html");
   mkdirSync(dirname(dest), { recursive: true });

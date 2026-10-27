@@ -115,6 +115,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 
 - JSON-LD 靜態寫在各 app 的 `index.html`：home 放 `Organization` + `WebSite`；各 app 放 `MobileApplication`，含 `Offer` / `AggregateOffer`。
 - DingPOS 的每篇 support 文章與 guide 另有 `BreadcrumbList`（DingPOS → Support 或 Guides → 文章），Sotto 的每篇 guide 也有（Sotto → Guides → 文章，名稱與 URL 都是該語言的），由 `copy-spa-pages.js` 在 build 時寫進該 route 的 `<head>`（`addJsonLd` / `breadcrumbList`）。
+- DingPOS 的每篇 guide 另有 `Article`（`guideArticle`）：`headline`、`description` 取 title 與 summary，`dateModified` 取 `checked`，因為 Google 要求標記的日期和頁面上顯示的「最後查核」一致；guide 沒有記錄首次發佈日，所以不寫 `datePublished`。`author` 與 `publisher` 是 Alu Studio，`@id` 和 home 的 `Organization` 相同；`image` 列出文中的產品截圖。
 - `MobileApplication` 的 `sameAs` 列出 app 的商店頁（Sotto：App Store 與 Google Play；DingPOS：App Store），讓搜尋引擎把同名的不同產品分開。官方社群帳號或 launch 平台頁（DingPOS：Product Hunt）也列進去，但只放未登入就看得到的公開頁：審核中的頁面（例如 AlternativeTo 的待審 app）等通過後再加。
 - `aggregateRating` 只在 App Store 有足夠的真實評分時加入，並定期同步。目前五站都沒有：評分太少的 app 標上去，比不標更像造假。
 - 每個 app 有 1200x630 的 `og:image`，以及 `og:type=website`、`og:site_name=Alu Studio`、`twitter:card=summary_large_image`。
@@ -145,6 +146,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
   - guide 頁不輸出 hreflang 與 `og:locale:alternate`：沒有其他語言有同一頁，不同市場的同主題文章也不是彼此的翻譯。語言切換器在 guide 頁連到該語言的 guides 索引，沒有 guides 的語言連到首頁。
   - zh-Hans 不由 zh-Hant 的 guides 產生（`gen-zh-hans.mjs` 不讀 guides），也不走 `npm run l10n`；大陸市場要寫，就寫一份 zh-Hans 的 pack。
   - 法律要求一般小店使用認證稅控收銀機（或登記過的 POS、稅控設備）的市場，目前不寫 guide（owner 2026-10-25）；在這之前已上線的（法、義、韓、巴、越、中、泰）結尾寫明 DingPOS 不是當地認證的收銀機，受規範時不要拿它記錄銷售。德國的 guide 已下架、URL 301 到 `/dingpos/de/`，DingPOS 也從德國 App Store 移除（owner 2026-10-26），因為 § 146a Abs. 1 Satz 5 AO 禁止在德國宣傳或流通不符 TSE 的記錄軟體。
+  - support 文章會連回引用它的 guide：support 文章頁列出同語言裡內文連到它的 guide（區塊標題沿用 pack 的 `ui.related_title`），依據是 guide 內文的 `[label](/support/<slug>/)` 連結，不另設欄位。guide 只是外部進站的入口，從 support 文章這種已收錄、主題相關的頁面連過去，才能把站內權重導進來；所以 guide 提到 app 功能時，要連到說明該功能的 support 文章。
   - 文中的費率、法規每篇都附 `sources`（連到原始來源）與 `checked`（查核日），頁面顯示「最後查核」；找不到官方來源的數字寫成「依合約」或區間，不寫成定價。文字裡的 `[label](/route/)` 是站內連結，build 檢查目標是該語言存在的頁面。
   - 文中的產品截圖（`image` block）必須是 DingPOS 的實機截圖，不用生成或手繪的 UI。檔案放在 `dingpos/public/guides/`，照 [performance §圖片](./performance.md#圖片) 做成 WebP：畫面上最寬渲染 480px（`GuideBlocks.jsx` 的 `sizes` 與 `guides.scss` 的 `.guide-figure` 要一起改），桌機檔寬約 1440px（原圖較小就用原尺寸），寬度超過 1080px 時另附同比例的 1080w `phone` 檔；block 寫明 `src` 的 `width` / `height`。
   - build 檢查 `image` block：檔案存在且是 WebP、`width` / `height` 是正整數且等於檔案實際尺寸、`phone` 檔是 1080px 寬且比例相同、`alt` 不為空、`caption` 不含連結。

@@ -1,6 +1,8 @@
 // Guide packs, one module per language that has guides (schema in
 // guides.zh-Hant.js). Only the page's own language is loaded (see main.jsx);
 // the build script reads every pack directly.
+import { guideLinksTo } from "./links.js";
+
 const packs = import.meta.glob("./guides.*.js");
 
 /** Codes of the languages with a guides section; known without loading any pack. */
@@ -20,4 +22,9 @@ export async function loadGuides(code) {
 /** Section strings and guides of the current page's language; `ui` is null when it has none. */
 export function getGuides() {
   return guides;
+}
+
+/** Guides of the current page's language whose text links to `route`, in pack order. */
+export function getGuidesLinkingTo(route) {
+  return guides.articles.filter((guide) => guideLinksTo(guide, route));
 }
