@@ -10,7 +10,7 @@ import {
   GooglePlayLogo,
 } from "@phosphor-icons/react";
 import { supportedLanguages } from "./i18n";
-import { apps, CONTACT_EMAIL, sceneLanguage } from "./apps";
+import { apps, appUrl, CONTACT_EMAIL, sceneLanguage } from "./apps";
 import Scene from "./scenes";
 
 const base = import.meta.env.BASE_URL;
@@ -222,7 +222,7 @@ function AppCard({ app }) {
           <img src={app.icon} alt="" className="app-card__icon" width="48" height="48" loading="lazy" data-app-id={app.id} />
           <div>
             <h3 className="app-card__name">
-              <a href={app.website} className="app-card__link">
+              <a href={appUrl(app, "", i18n.resolvedLanguage)} className="app-card__link">
                 {app.name}
               </a>
               <ArrowUpRight size={16} weight="bold" className="app-card__arrow" aria-hidden="true" />
@@ -265,7 +265,7 @@ function Contact() {
 }
 
 function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <footer className="footer">
       <div className="footer__brand">
@@ -283,7 +283,7 @@ function Footer() {
           <ul>
             {apps.map((app) => (
               <li key={app.id}>
-                <a href={app.website}>{app.name}</a>
+                <a href={appUrl(app, "", i18n.resolvedLanguage)}>{app.name}</a>
               </li>
             ))}
           </ul>
@@ -293,7 +293,7 @@ function Footer() {
           <ul>
             {apps.map((app) => (
               <li key={app.id}>
-                <a href={app.privacy} aria-label={t("footer.privacy_of", { name: app.name })}>
+                <a href={appUrl(app, "privacy/", i18n.resolvedLanguage)} aria-label={t("footer.privacy_of", { name: app.name })}>
                   {app.name}
                 </a>
               </li>
