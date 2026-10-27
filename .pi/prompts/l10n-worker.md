@@ -18,7 +18,7 @@ Rules for the whole session:
 
 Checks first, branch last, so a preflight failure leaves nothing behind.
 
-1. `subagent { action: "list" }` lists `l10n-translator (project)` and `l10n-reviewer (project)`. If either is missing or shows as a user agent, the session lacks project trust: BLOCKED.
+1. `subagent { action: "list" }` lists `l10n-translator` (the global agent; it reads this repo's contract `.pi/l10n/translator.md`) and `l10n-reviewer (project)`. If either is missing, or the reviewer shows as a user agent, the session lacks project trust: BLOCKED.
 2. The app has the language: `~/Developer/alustudio/DingPOS/l10n/glossary/$1.md` and `~/Developer/alustudio/DingPOS/DesignSystem/Sources/Resources/Strings/$1.lproj/Localizable.strings` exist. Root and `dingpos/` have `node_modules` (`npm ci` where missing).
 3. `git status --porcelain` is empty and `git branch --show-current` is `main` or `dingpos-l10n/$1`; anything else → BLOCKED "checkout not clean".
 4. `npm run -s l10n -- progress get $1`. If a stage past `preflight` is recorded, you are resuming: `git switch dingpos-l10n/$1`, skip the steps whose results are already committed on that branch, and continue from the recorded stage. A failure the report records from an earlier session is history, not a result: run the recorded stage again and report only what it does now. If the progress entry has an `ownerRuling`, it is the owner's decision: apply it as written through a translator fix task and `npm run l10n -- apply $1`, commit `fix(l10n): apply the $1 owner ruling`, and do not review the units it names again.

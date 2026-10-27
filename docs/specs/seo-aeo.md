@@ -70,7 +70,7 @@ read_when:
 
 ### 翻譯語言
 
-DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由 agent 從 en 翻譯，不從中文翻：zh-Hant 是 owner 寫的、zh-Hans 由它產生，兩者都不是翻譯來源。en 與 zh-Hant 說法不同時，翻譯跟著 en，差異記成給 owner 的 en finding。工具是 `scripts/l10n.mjs`（`npm run l10n -- …`），agent 是 project agent `l10n-translator` 與 `l10n-reviewer`。
+DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由 agent 從 en 翻譯，不從中文翻：zh-Hant 是 owner 寫的、zh-Hans 由它產生，兩者都不是翻譯來源。en 與 zh-Hant 說法不同時，翻譯跟著 en，差異記成給 owner 的 en finding。工具是 `scripts/l10n.mjs`（`npm run l10n -- …`），translator 是全域 agent `l10n-translator`，它讀本 repo 的合約 `.pi/l10n/translator.md`；reviewer 是 project agent `l10n-reviewer`。
 
 - 翻譯單位：一個 UI 字串（`ui:<key>`）、一整篇 FAQ（`faq:<slug>`）、一個 FAQ 分類（`cat:<key>`）。只有文字欄位會翻譯；slug、related、since、icon 這類結構欄位永遠從 en 複製。
 - 翻譯語言的 `dingpos/src/locales/<code>/translation.json` 與 `dingpos/src/data/faq/articles.<code>.js` 由 `npm run l10n -- apply <code>` 產生，不手改：手改的 slug 或 related 會在多種語言裡各自漂移。`apply` 拒絕 `{{…}}` placeholder 和 en 不同、空值（`_before`／`_after` 除外）、形狀和 en 不同（步驟數、區塊數）的值，以及從舊版 en 翻出來的值。
