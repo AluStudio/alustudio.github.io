@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, NavLink } from "react-router-dom";
 import { Collapse } from "bootstrap";
 import { supportedLanguages, localizedUrl, currentLanguage } from "../i18n.js";
 import "../assets/scss/navbar.scss";
@@ -56,8 +56,8 @@ function Navbar() {
           <img
             src={`${import.meta.env.BASE_URL}app-icon-sm.png`}
             alt=""
-            width="40"
-            height="40"
+            width="32"
+            height="32"
           />
           Sotto
         </Link>
@@ -71,7 +71,7 @@ function Navbar() {
           aria-expanded="false"
           aria-label={t("nav.toggle")}
         >
-          <i className="bi bi-list" aria-hidden="true"></i>
+          <span className="navbar-toggler-bars" aria-hidden="true"></span>
         </button>
 
         <div
@@ -91,24 +91,24 @@ function Navbar() {
               )}
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/guides" onClick={collapseNav}>
+              <NavLink className="nav-link text-center" to="/guides" onClick={collapseNav}>
                 {t("nav.guides")}
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/privacy" onClick={collapseNav}>
+              <NavLink className="nav-link text-center" to="/privacy" onClick={collapseNav}>
                 {t("nav.privacy")}
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/terms" onClick={collapseNav}>
+              <NavLink className="nav-link text-center" to="/terms" onClick={collapseNav}>
                 {t("nav.terms")}
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/faq" onClick={collapseNav}>
+              <NavLink className="nav-link text-center" to="/faq" onClick={collapseNav}>
                 {t("nav.faq")}
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

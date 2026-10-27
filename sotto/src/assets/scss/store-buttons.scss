@@ -1,0 +1,65 @@
+@import "./variables";
+
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  background: $charcoal;
+  color: $cream-light !important;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.5s $ease-out,
+    box-shadow 0.3s $ease-out,
+    background-color 0.3s $ease-out;
+
+  &:hover {
+    background: lighten($charcoal, 8%);
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    transform: scale(0.98);
+    transition-duration: 0.2s;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $gold-dark;
+    outline-offset: 3px;
+  }
+
+  .bi {
+    font-size: 18px;
+  }
+}
+
+.hero-cta--android {
+  background: $gold-dark;
+
+  &:hover {
+    background: lighten($gold-dark, 6%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta,
+  .hero-cta:hover,
+  .hero-cta:active {
+    transform: none;
+  }
+}

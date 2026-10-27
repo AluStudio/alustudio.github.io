@@ -14,7 +14,9 @@
     "tagline": "Gentle people notes for the details that matter",
     "description": "Everyone carries little details worth remembering. Sotto keeps them safe for you — heights, preferences, the things only you would know. All data stays on your phone, quietly helping you remember.",
     "download": "Download on the App Store",
-    "downloadAndroid": "Get it on Google Play"
+    "downloadAndroid": "Get it on Google Play",
+    "proof": "Rated {{average}} on the App Store in Taiwan · {{n}} ratings",
+    "assurance": "Free to start · No account · One-time purchase, no subscription"
   },
   "features": {
     "title": "Designed for the People You Care About",
@@ -44,6 +46,87 @@
       "title": "Write Down What Matters",
       "desc": "Their favorite coffee, her anniversary, something they once said — jot it down so you never forget."
     }
+  },
+  "tagline": {
+    "text": "For the people you love, every little thing matters. The birthday before it sneaks up. The size when you're picking a gift. The little truths, kept private."
+  },
+  "scene": {
+    "alt": "Sotto's person page: a gift idea being saved, with a favorite drink, an allergy, a birthday and a ring size",
+    "edit": "Edit",
+    "initials": "MC",
+    "name": "Mia Chen",
+    "meta": "Friend since 2019",
+    "bio": "Shoots on film. Always early for brunch.",
+    "fields": [
+      {
+        "label": "Gift Ideas",
+        "value": "Film camera"
+      },
+      {
+        "label": "Fav Drink",
+        "value": "Oat latte, no sugar"
+      },
+      {
+        "label": "Allergy",
+        "value": "Peanuts"
+      },
+      {
+        "label": "Birthday",
+        "value": "1993/08/30"
+      }
+    ],
+    "ring_label": "Left Ring",
+    "prompts_title": "Pick a question",
+    "prompts": [
+      "How would you spend your perfect day?",
+      "What's your most precious childhood memory?",
+      "If you could invite anyone to dinner — alive or not — who would it be, and why?"
+    ]
+  },
+  "reviews": {
+    "eyebrow": "App Store reviews",
+    "title": "In their own words",
+    "subtitle": "Real reviews from people who use Sotto, and what we built after reading them.",
+    "stars": "5 out of 5 stars",
+    "count": "{{n}} ratings",
+    "source": "Ratings and reviews from the App Store in Taiwan, October 2026. Reviews translated from Traditional Chinese.",
+    "developer": "Developer response",
+    "shipped": "Now in Sotto:",
+    "items": {
+      "uu14188": {
+        "title": "Highly recommend!",
+        "date": "Jul 19, 2026",
+        "body": "Sometimes it's just a cute little thing, but once it's written down, I'm happy every time I open the app and see it, and I get to relive the memory. Love it~"
+      },
+      "moyu": {
+        "title": "Please add photos to notes",
+        "date": "Jun 4, 2026",
+        "body": "I'd love to use this app to keep the little moments with friends and family. Being able to upload photos from each get-together would make it even better.",
+        "response": "Hi! The latest version lets you add photos, videos and files to notes. Give it a try. Thank you so much for the suggestion ^^",
+        "response_date": "Jul 7, 2026",
+        "shipped": "photos, videos and files in notes."
+      },
+      "diadialydia": {
+        "title": "Feature request~~",
+        "date": "May 28, 2026",
+        "body": "If we could add friends, connect, and send each other questions we'd like the other person to answer (like \"What memory of us do you remember most?\" or \"When do you feel loved by me?\"), this would be an incredibly powerful app!",
+        "response": "We didn't want a day to come when server costs forced this feature, or the whole app, to shut down (and we don't want to charge a subscription), so we built a question catalog instead: pick one and talk it through together. Sitting face to face over a coffee or a drink, you feel each other's thoughts better than answering in an app. Hope you like it",
+        "response_date": "Jun 19, 2026",
+        "shipped": "a catalog of 323 conversation questions."
+      },
+      "dreamer": {
+        "title": "Recommended by a friend",
+        "date": "May 11, 2026",
+        "body": "Great app. I often visit different clients, and it's perfect for keeping notes on them. Could you add images and sharing in the future?",
+        "response": "Got it. We'll think about how to add these features.",
+        "response_date": "May 27, 2026",
+        "shipped": "photos in notes, and sharing a person's page as an image."
+      }
+    }
+  },
+  "closing": {
+    "title": "Start with one person",
+    "text": "Sotto is free for up to 5 people, with up to 10 fields and 5 notes each. When you need more, one purchase removes the limits for good. No subscription."
   },
   "footer": {
     "tagline": "Remember the details that matter.",
