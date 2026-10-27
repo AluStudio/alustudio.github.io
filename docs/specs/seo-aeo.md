@@ -146,7 +146,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
   - guide 頁不輸出 hreflang 與 `og:locale:alternate`：沒有其他語言有同一頁，不同市場的同主題文章也不是彼此的翻譯。語言切換器在 guide 頁連到該語言的 guides 索引，沒有 guides 的語言連到首頁。
   - zh-Hans 不由 zh-Hant 的 guides 產生（`gen-zh-hans.mjs` 不讀 guides），也不走 `npm run l10n`；大陸市場要寫，就寫一份 zh-Hans 的 pack。
   - 法律要求一般小店使用認證稅控收銀機（或登記過的 POS、稅控設備）的市場，目前不寫 guide（owner 2026-10-25）；在這之前已上線的（法、義、韓、巴、越、中、泰）結尾寫明 DingPOS 不是當地認證的收銀機，受規範時不要拿它記錄銷售。德國的 guide 已下架、URL 301 到 `/dingpos/de/`，DingPOS 也從德國 App Store 移除（owner 2026-10-26），因為 § 146a Abs. 1 Satz 5 AO 禁止在德國宣傳或流通不符 TSE 的記錄軟體。
-  - support 文章會連回引用它的 guide：support 文章頁列出同語言裡內文連到它的 guide（區塊標題沿用 pack 的 `ui.related_title`），依據是 guide 內文的 `[label](/support/<slug>/)` 連結，不另設欄位。guide 只是外部進站的入口，從 support 文章這種已收錄、主題相關的頁面連過去，才能把站內權重導進來；所以 guide 提到 app 功能時，要連到說明該功能的 support 文章。
+  - support 文章會連回引用它的 guide：support 文章頁列出同語言裡內文連到它的 guide（區塊標題沿用 pack 的 `ui.related_title`），依據是 guide 內文的 `[label](/support/<slug>/)` 連結，不另設欄位。guide 只是外部進站的入口，從 support 文章這種已收錄、主題相關的頁面連過去，才能把站內權重導進來；所以每篇 guide 至少連到一篇說明相關功能的 support 文章，沒有的話 build 失敗。
   - 文中的費率、法規每篇都附 `sources`（連到原始來源）與 `checked`（查核日），頁面顯示「最後查核」；找不到官方來源的數字寫成「依合約」或區間，不寫成定價。文字裡的 `[label](/route/)` 是站內連結，build 檢查目標是該語言存在的頁面。
   - 文中的產品截圖（`image` block）必須是 DingPOS 的實機截圖，不用生成或手繪的 UI。檔案放在 `dingpos/public/guides/`，照 [performance §圖片](./performance.md#圖片) 做成 WebP：畫面上最寬渲染 480px（`GuideBlocks.jsx` 的 `sizes` 與 `guides.scss` 的 `.guide-figure` 要一起改），桌機檔寬約 1440px（原圖較小就用原尺寸），寬度超過 1080px 時另附同比例的 1080w `phone` 檔；block 寫明 `src` 的 `width` / `height`。
   - build 檢查 `image` block：檔案存在且是 WebP、`width` / `height` 是正整數且等於檔案實際尺寸、`phone` 檔是 1080px 寬且比例相同、`alt` 不為空、`caption` 不含連結。

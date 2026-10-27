@@ -325,6 +325,12 @@ function validateGuides() {
       // Answer first: the opening paragraph answers the title before any section.
       if (guide.content[0]?.type !== "p") errors.push(`${at} must open with a paragraph, not "${guide.content[0]?.type}"`);
       if (!guide.content.some((b) => b.type === "h2")) errors.push(`${at} has no h2 section`);
+      // The support article a guide links to lists the guide back; without a
+      // link the guide gets no in-site link from any indexed article.
+      const linksSupport = guide.content
+        .flatMap(blockTexts)
+        .some((text) => [...text.matchAll(INLINE_LINK)].some(([, , href]) => href.startsWith("/support/")));
+      if (!linksSupport) errors.push(`${at} links to no support article (docs/specs/seo-aeo.md §獲客文章)`);
       guide.content.forEach((block, i) => {
         if (!GUIDE_BLOCK_TYPES.has(block.type)) errors.push(`${at} block ${i} has unknown type "${block.type}"`);
         if (block.type === "image") errors.push(...imageBlockErrors(block, `${at} image block ${i}`));
