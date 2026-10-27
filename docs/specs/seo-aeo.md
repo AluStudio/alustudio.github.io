@@ -101,6 +101,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 - prerender 等待 React 的 `waitForFunction` 不能用預設的 requestAnimationFrame 輪詢：多個分頁並行時，只有一個是前景，背景分頁的 rAF 永遠不觸發。等 mount 用 `polling: "mutation"`，等 hydrate 用固定間隔。曾經的症狀：sotto 要等語言 chunk 載完才 mount（晚於 `load`），完整 build 裡隨機一兩個 route timeout，單獨重跑又全部通過。
 - home、pikgeon、babbby 仍用 `createRoot`，會整棵重繪 prerendered DOM，造成一次閃替。原因是它們的語言由瀏覽器偵測（navigator / localStorage），prerender 出來的是英文；其他語言的訪客一定 mismatch，React 會退回整棵重繪，hydrate 沒有效益。要改成 hydrate，得先改成像 dingpos、sotto 一樣由 URL 決定語言。
 - 在 render 期間讀到 prerender 與訪客瀏覽器可能不同的值（時間、viewport、storage），會讓 hydrate 的 app mismatch。dingpos 與 sotto footer 的版權年份因此取 build 年份（`import.meta.env.BUILD_YEAR`），不讀訪客的時鐘。
+- prerender 以 `prefers-reduced-motion: reduce` 擷取每一頁。用 `useStory` 演出的畫面（home 的 app 卡片、sotto 首頁的手機與功能卡）在這個條件下停在 step 0 的完成畫面，也就是第一次 render 的結果；否則 snapshot 會存到演到一半的狀態。曾經的症狀：sotto 首頁 hero 的打字 story 被存成「Cámara anal」，hydrate 時與完整文字對不上，en、es、pt-br、ar 四個首頁 hydration check 失敗（哪幾個語言中招取決於 snapshot 時機）。新的動畫元件要遵守同一條：reduced motion 下停在 render 的初始狀態。
 
 ## Sitemap
 

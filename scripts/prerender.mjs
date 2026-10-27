@@ -21,6 +21,9 @@
  *   is written back as attributes — hydrating a <select> never re-applies its
  *   value; and adjacent text nodes, which would merge when the HTML is parsed,
  *   are separated by an empty comment (<!-- -->).
+ * - Pages are captured with prefers-reduced-motion: reduce, the state in which
+ *   every animated scene shows its resting frame — the frame its first render
+ *   produces, so hydration matches and crawlers read finished text.
  * - Apps in HYDRATED_PREFIXES hydrate this DOM in place (hydrateRoot); after the
  *   audit, every one of their routes is reloaded from the written file and must
  *   hydrate without a React error and without React replacing the prerendered
@@ -380,6 +383,9 @@ async function main() {
 
   async function worker() {
     const page = await openPage({ width: 1280, height: 800 });
+    // Capture every page at rest: an animated scene would otherwise be written
+    // mid-story (half-typed text) and no longer match its first render.
+    await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "reduce" }]);
     for (;;) {
       const route = queue.shift();
       if (!route) break;
