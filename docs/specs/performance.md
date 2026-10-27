@@ -54,7 +54,7 @@ read_when:
 
 - pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。已改成固定 `height: 500px` 修正。
 - dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。重繪的部分已改 `hydrateRoot` 消除，進場動畫保留。
-- home 改版（Geist、SVG 圖示、app 示意畫面）上線前的本機 A/B：同一個 `python3 -m http.server`、Lighthouse 13.5 mobile，改版前後與對照組 babbby 各 3 次交錯量測，對照組 3 次數值相同。中位數 perf 77 → 84、FCP 3.90s → 3.30s、LCP 4.14s → 3.47s，CLS 前後皆為 0；傳輸量 557 KB → 489 KB（字型 180 → 29 KB、CSS 93 → 30 KB，JS 259 → 372 KB、HTML 8 → 40 KB）。本機 LCP 元素從 `h1.intro__title` 變成 `h2.section__title`。本機沒有壓縮，只看前後差；表中 home 一列待部署後重量。
+- home 改版（Geist、SVG 圖示、app 示意畫面）上線前的本機 A/B：同一個 `python3 -m http.server`、Lighthouse 13.5 mobile，改版前後與對照組 babbby 各 3 次交錯量測，對照組 3 次數值相同。中位數 perf 77 → 84、FCP 3.90s → 3.30s、LCP 4.14s → 3.47s，CLS 前後皆為 0；傳輸量 557 KB → 489 KB（字型 180 → 29 KB、CSS 93 → 30 KB，JS 259 → 372 KB、HTML 8 → 40 KB）。本機 LCP 元素從 `h1.intro__title` 變成 `h2.section__title`。本機沒有壓縮，只看前後差。2026-10-27 部署後正式站 3 次中位數：home mobile perf 91、FCP 2.46s、LCP 2.59s（`h2.section__title`），CLS 3 次皆 0，desktop 99；但同時段對照組 babbby 從表中的 98 掉到 83（LCP 3.60s），數字反映的是環境，依 §量測 不寫進表，home 一列待乾淨環境重量。
 
 ## Related
 
