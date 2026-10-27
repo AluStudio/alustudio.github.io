@@ -5,8 +5,7 @@ export const apps = [
     id: "dingpos",
     name: "DingPOS",
     icon: `${base}dingpos-icon.webp`,
-    website: "/dingpos/",
-    privacy: "/dingpos/privacy/",
+    languageInUrl: true,
     stores: [
       {
         platform: "ios",
@@ -19,8 +18,7 @@ export const apps = [
     id: "sotto",
     name: "Sotto",
     icon: `${base}sotto-icon.webp`,
-    website: "/sotto/",
-    privacy: "/sotto/privacy/",
+    languageInUrl: true,
     stores: [
       {
         platform: "ios",
@@ -38,8 +36,6 @@ export const apps = [
     id: "pikgeon",
     name: "Pikgeon",
     icon: `${base}pikgeon-icon.webp`,
-    website: "/pikgeon/",
-    privacy: "/pikgeon/privacy/",
     // The app ships these interface languages; its scene shows English elsewhere.
     languages: ["en", "zh-Hant", "ja", "ko", "es", "pt", "fr", "de", "it"],
     stores: [
@@ -59,8 +55,6 @@ export const apps = [
     id: "babbby",
     name: "Babbby",
     icon: `${base}babbby-icon.webp`,
-    website: "/babbby/",
-    privacy: "/babbby/privacy/",
     languages: ["en", "zh-Hant"],
     stores: [
       {
@@ -77,6 +71,27 @@ export const apps = [
 export function sceneLanguage(app, pageLanguage) {
   if (!app.languages || app.languages.includes(pageLanguage)) return pageLanguage;
   return "en";
+}
+
+// DingPOS and Sotto read their language from the URL only, so a link must carry
+// it; both ship every home language. Pikgeon and Babbby read the language home
+// already stored in localStorage (same origin, same i18next key).
+const URL_LANGUAGE_PREFIX = {
+  "zh-Hant": "zh-hant",
+  "zh-Hans": "zh-hans",
+  ja: "ja",
+  ko: "ko",
+  es: "es",
+  pt: "pt-br",
+  fr: "fr",
+  de: "de",
+  it: "it",
+};
+
+// `route` is relative to the app root: "" for its home page, "privacy/" for its policy.
+export function appUrl(app, route, pageLanguage) {
+  const prefix = app.languageInUrl && URL_LANGUAGE_PREFIX[pageLanguage];
+  return `/${app.id}/${prefix ? `${prefix}/` : ""}${route}`;
 }
 
 export const CONTACT_EMAIL = "alustudio14@gmail.com";
