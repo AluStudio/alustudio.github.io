@@ -54,7 +54,8 @@ function Phone({ className, children }) {
 }
 
 // ─── DingPOS ────────────────────────────────────────────────────
-// The order is charged, the cart clears, and the next order is rung up.
+// The order is charged, the cart clears, and the next order is rung up. A
+// visitor arrives to the cleared cart, so the story opens on ringing one up.
 
 const productIcons = [Coffee, Leaf, Bread, Cookie, OrangeSlice, Cake];
 const railIcons = [ShoppingCartSimple, Package, Receipt, UsersThree, ChartBar];
@@ -72,11 +73,12 @@ const posSteps = [
   { count: 2, ms: 800 },
   { count: 2, tap: 1, ms: 280 },
 ];
+const posEntry = posSteps.findIndex((step) => step.count === 0);
 
 function DingposScene({ lng }) {
   const s = useScene("dingpos", lng);
   const ref = useRef(null);
-  const step = useStory(ref, posSteps, 400);
+  const step = useStory(ref, posSteps, 300, posEntry);
 
   return (
     <div className="ipad" ref={ref}>
