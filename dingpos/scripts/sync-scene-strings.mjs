@@ -17,6 +17,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { homedir } from "node:os";
 import { fileURLToPath } from "node:url";
+import { parseStrings } from "../../scripts/l10n.mjs";
 import { SCENE_COUNTRIES, SCENE_STRING_KEYS, SCENE_TIMES, placeholders } from "../src/data/scenes/keys.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -26,18 +27,6 @@ const appRepo =
 const stringsDir = join(appRepo, "DesignSystem", "Sources", "Resources", "Strings");
 const outDir = join(__dirname, "..", "src", "data", "scenes");
 const { languages } = JSON.parse(readFileSync(join(__dirname, "..", "l10n", "languages.json"), "utf8"));
-
-const ESCAPES = { n: "\n", t: "\t", '"': '"', "\\": "\\" };
-
-/** Parses the `"key" = "value";` lines of an Apple .strings file. */
-function parseStrings(source) {
-  const entries = new Map();
-  const line = /^"((?:[^"\\]|\\.)*)"\s*=\s*"((?:[^"\\]|\\.)*)";/gm;
-  for (const [, key, value] of source.matchAll(line)) {
-    entries.set(key, value.replace(/\\(.)/g, (_, c) => ESCAPES[c] ?? c));
-  }
-  return entries;
-}
 
 if (!existsSync(stringsDir)) {
   console.error(`No app strings at ${stringsDir}; pass --app <path to the DingPOS repo>.`);
@@ -55,8 +44,9 @@ for (const { code } of languages) {
   const entries = parseStrings(readFileSync(file, "utf8"));
   const strings = {};
   for (const key of SCENE_STRING_KEYS) {
-    if (!entries.get(key)?.trim()) errors.push(`${code}: the app has no "${key}"`);
-    else strings[key] = entries.get(key);
+    const value = entries.get(key)?.value;
+    if (!value?.trim()) errors.push(`${code}: the app has no "${key}"`);
+    else strings[key] = value;
   }
   const names = new Intl.DisplayNames([code], { type: "region" });
   const countries = Object.fromEntries(SCENE_COUNTRIES.map(({ code: region }) => [region, names.of(region)]));
