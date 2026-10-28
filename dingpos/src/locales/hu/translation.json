@@ -126,10 +126,10 @@
     "title": "Fiók nélkül senki nem veheti el az adatait",
     "lead": "A DingPOS-ra nem kell regisztrálni. A könyvelése az iPaden van, a biztonsági mentések pedig – ha kéri – egy olyan felhőfiókba kerülnek, amely már az Öné.",
     "items": [
-      "Válasszon: iCloud, Google Drive vagy Dropbox",
+      "Biztonsági mentés: iCloud, Google Drive, Dropbox – vagy mindhárom",
       "Kézi biztonsági mentés, amikor csak szeretné",
-      "A legutóbbi 5 pillanatképet őrzi meg",
-      "Növekményes képszinkronizálás",
+      "Minden felhő a legutóbbi pillanatképet őrzi meg",
+      "A termékfotók is mentésre kerülnek az adatokkal együtt",
       "Fiók nélkül; az adatok az eszközön, a mentések a saját felhőjében",
       "Internet nélkül is teljes értékűen működik"
     ]

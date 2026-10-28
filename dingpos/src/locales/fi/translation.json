@@ -126,10 +126,10 @@
     "title": "Kun tiliä ei ole, kukaan ei voi viedä tietojasi",
     "lead": "DingPOSiin ei tarvitse rekisteröityä. Yrityksesi tiedot pysyvät iPadilla, ja jos haluat varmuuskopioita, ne tallentuvat pilvitilille, joka sinulla jo on.",
     "items": [
-      "Valitse iCloud, Google Drive tai Dropbox",
+      "Varmuuskopioi iCloudiin, Google Driveen, Dropboxiin tai kaikkiin kolmeen",
       "Manuaalinen varmuuskopio tarvittaessa",
-      "Säilyttää viimeiset 5 tilannekuvaa",
-      "Kuvien inkrementaalinen synkronointi",
+      "Jokainen pilvipalvelu säilyttää uusimman varmuuskopion",
+      "Tuotekuvat varmuuskopioidaan tietojesi mukana",
       "Ei tiliä; tiedot laitteella, varmuuskopiot omassa pilvessäsi",
       "Toimii täysin ilman verkkoyhteyttä"
     ]

@@ -125,10 +125,10 @@
     "title": "No account means nobody can take your data",
     "lead": "DingPOS has nothing to sign up for. Your books live on the iPad, and if you want backups, they go to a cloud account you already own.",
     "items": [
-      "Choose one of iCloud, Google Drive, or Dropbox",
+      "Back up to iCloud, Google Drive, Dropbox, or all three",
       "Manual backup, on demand",
-      "Keeps the latest 5 snapshots",
-      "Incremental image sync",
+      "Each cloud keeps your latest backup",
+      "Product photos are backed up with your data",
       "No account; data on-device, backups in your own cloud",
       "Fully functional offline"
     ]

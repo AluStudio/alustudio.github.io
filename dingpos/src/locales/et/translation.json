@@ -126,10 +126,10 @@
     "title": "Kui kontot pole, ei saa keegi sinu andmeid võtta",
     "lead": "DingPOS-iga pole millegi jaoks vaja registreeruda. Sinu raamatupidamine on iPadis ning kui soovid varukoopiaid, lähevad need pilvekontole, mis sul juba on.",
     "items": [
-      "Vali üks: iCloud, Google Drive või Dropbox",
+      "Varunda kuhu soovid: iCloud, Google Drive, Dropbox või kõik kolm",
       "Käsitsi varundus, millal soovid",
-      "Säilitab viimased 5 pilvekoopiat",
-      "Piltide järkjärguline sünkroonimine",
+      "Iga pilv hoiab sinu viimast pilvekoopiat",
+      "Tootepildid varundatakse koos sinu andmetega",
       "Kontot pole; andmed seadmes, varukoopiad sinu enda pilves",
       "Täielikult toimiv ka ilma internetita"
     ]

@@ -126,10 +126,10 @@
     "title": "Hesap yoksa, verinizi kimse alamaz",
     "lead": "DingPOS'ta üye olunacak bir şey yok. Defterleriniz iPad'de durur; yedek isterseniz zaten sahip olduğunuz bir bulut hesabına gider.",
     "items": [
-      "iCloud, Google Drive veya Dropbox'tan birini seçin",
+      "iCloud, Google Drive, Dropbox'a veya üçüne birden yedekleyin",
       "İstediğiniz zaman elle yedekleme",
-      "Son 5 bulut kopyası saklanır",
-      "Görseller için artımlı eşitleme",
+      "Her bulut hesabı en son yedeğinizi saklar",
+      "Ürün fotoğrafları verilerinizle birlikte yedeklenir",
       "Hesap yok; veriler cihazda, yedekler kendi bulutunuzda",
       "İnternetsiz tam işlevsellik"
     ]

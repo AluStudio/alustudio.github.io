@@ -126,10 +126,10 @@
     "title": "Sem conta, ninguém pode tirar seus dados de você",
     "lead": "O DingPOS não exige cadastro. Seus registros ficam no iPad e, se quiser fazer backups, eles vão para uma conta na nuvem que você já tem.",
     "items": [
-      "Escolha entre iCloud, Google Drive ou Dropbox",
+      "Backup no iCloud, no Google Drive, no Dropbox ou nos três",
       "Backup manual, quando você quiser",
-      "Mantém as 5 cópias mais recentes",
-      "Sincronização incremental de imagens",
+      "Cada nuvem guarda o seu backup mais recente",
+      "As fotos dos produtos entram no backup junto com os seus dados",
       "Sem conta; dados no aparelho, backups na sua própria nuvem",
       "Totalmente funcional offline"
     ]
