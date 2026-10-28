@@ -247,20 +247,22 @@ function Privacy() {
   return (
     <section className="privacy" id="privacy-band">
       <div className="shell">
-        <p className="eyebrow eyebrow--dark">{t("privacy_band.eyebrow")}</p>
-        <TaglineReveal text={t("privacy_band.title")} className="privacy__title" />
-        <div className="privacy__grid">
-          <div className="reveal">
-            <p className="privacy__lead">{t("privacy_band.lead")}</p>
-            <ul className="check-list check-list--dark">
-              {items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+        <div className="privacy__head">
+          <div>
+            <p className="eyebrow eyebrow--dark">{t("privacy_band.eyebrow")}</p>
+            <TaglineReveal text={t("privacy_band.title")} className="privacy__title" />
           </div>
+          <p className="privacy__lead reveal">{t("privacy_band.lead")}</p>
+        </div>
+        <div className="privacy__grid">
           <div className="privacy__visual reveal-card">
             <BackupScene delay={300} />
           </div>
+          <ul className="check-list check-list--dark privacy__list reveal">
+            {items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

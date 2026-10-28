@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "店舗の準備ができました",
     "onboarding.summary.region": "国または地域",
-    "onboarding.success.cta": "販売を開始"
+    "onboarding.success.cta": "販売を開始",
+    "settings.backup": "クラウドバックアップ",
+    "settings.backup.subtitle": "iCloud、Google Drive、Dropboxで店舗データをバックアップ・復元できます。保存先はそれぞれ独立しています。",
+    "settings.backup.providers_title": "保存先",
+    "settings.backup.overview_title": "データの概要",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "最終バックアップ — %@",
+    "backup.status.yesterday_at": "最終バックアップ — 昨日 %@",
+    "backup.status.not_connected": "未接続",
+    "backup.status.backing_up": "バックアップ中…",
+    "backup.action.backup": "バックアップする",
+    "backup.action.restore": "復元",
+    "backup.action.connect": "接続",
+    "backup.overview.device_column": "この iPad",
+    "settings.backup.row.products": "商品",
+    "settings.backup.row.orders": "注文",
+    "settings.backup.row.customers": "顧客"
   },
   "countries": {
     "TW": "台湾",
     "JP": "日本",
     "KR": "韓国"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

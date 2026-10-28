@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Teie pood on valmis",
     "onboarding.summary.region": "Riik või piirkond",
-    "onboarding.success.cta": "Alusta müümist"
+    "onboarding.success.cta": "Alusta müümist",
+    "settings.backup": "Pilvevarundus",
+    "settings.backup.subtitle": "Varunda ja taasta oma pood iCloudis, Google Drive’is ja Dropboxis. Iga sihtkoht on sõltumatu.",
+    "settings.backup.providers_title": "Sihtkohad",
+    "settings.backup.overview_title": "Andmete ülevaade",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Viimane varundus — %@",
+    "backup.status.yesterday_at": "Viimane varundus — eile %@",
+    "backup.status.not_connected": "Ühendamata",
+    "backup.status.backing_up": "Varundamine…",
+    "backup.action.backup": "Varunda",
+    "backup.action.restore": "Taasta",
+    "backup.action.connect": "Ühenda",
+    "backup.overview.device_column": "See seade",
+    "settings.backup.row.products": "Tooted",
+    "settings.backup.row.orders": "Müügid",
+    "settings.backup.row.customers": "Kliendid"
   },
   "countries": {
     "TW": "Taiwan",
     "JP": "Jaapan",
     "KR": "Lõuna-Korea"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

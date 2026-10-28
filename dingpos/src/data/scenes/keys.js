@@ -33,6 +33,25 @@ export const SCENE_STRING_KEYS = [
   "onboarding.success.subtitle",
   "onboarding.summary.region",
   "onboarding.success.cta",
+  // Cloud backup
+  "settings.backup",
+  "settings.backup.subtitle",
+  "settings.backup.providers_title",
+  "settings.backup.overview_title",
+  "backup.provider.icloud",
+  "backup.provider.google_drive",
+  "backup.provider.dropbox",
+  "backup.status.today_at",
+  "backup.status.yesterday_at",
+  "backup.status.not_connected",
+  "backup.status.backing_up",
+  "backup.action.backup",
+  "backup.action.restore",
+  "backup.action.connect",
+  "backup.overview.device_column",
+  "settings.backup.row.products",
+  "settings.backup.row.orders",
+  "settings.backup.row.customers",
 ];
 
 // Country tiles in the onboarding scene: the first three of the app's
@@ -43,6 +62,11 @@ export const SCENE_COUNTRIES = [
   { code: "JP", currency: "JPY", rate: 10 },
   { code: "KR", currency: "KRW", rate: 10 },
 ];
+
+// Clock times the backup scene shows ("HH:MM"), formatted per language at
+// sync time the way the app's Formatters.formatTime does (time style short),
+// so rendering never reads a clock or a locale.
+export const SCENE_TIMES = ["21:08", "21:09", "14:32", "14:33"];
 
 /** Every printf placeholder in `value`, sorted, e.g. ["%1$d", "%2$d"]. */
 export function placeholders(value) {

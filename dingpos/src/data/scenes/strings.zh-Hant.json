@@ -26,11 +26,35 @@
     "onboarding.success.title": "叮！🎉",
     "onboarding.success.subtitle": "你的店鋪準備就緒",
     "onboarding.summary.region": "國家／地區",
-    "onboarding.success.cta": "開始銷售"
+    "onboarding.success.cta": "開始銷售",
+    "settings.backup": "雲端備份",
+    "settings.backup.subtitle": "備份與還原你的店家資料至 iCloud、Google Drive 與 Dropbox。每個目的地都可獨立使用。",
+    "settings.backup.providers_title": "備份目的地",
+    "settings.backup.overview_title": "資料總覽",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "上次備份 - %@",
+    "backup.status.yesterday_at": "上次備份 - 昨天 %@",
+    "backup.status.not_connected": "未連線",
+    "backup.status.backing_up": "備份中...",
+    "backup.action.backup": "備份",
+    "backup.action.restore": "還原",
+    "backup.action.connect": "連線",
+    "backup.overview.device_column": "此裝置",
+    "settings.backup.row.products": "商品",
+    "settings.backup.row.orders": "訂單",
+    "settings.backup.row.customers": "顧客"
   },
   "countries": {
     "TW": "台灣",
     "JP": "日本",
     "KR": "南韓"
+  },
+  "times": {
+    "21:08": "晚上9:08",
+    "21:09": "晚上9:09",
+    "14:32": "下午2:32",
+    "14:33": "下午2:33"
   }
 }

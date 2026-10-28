@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Kedai anda sudah sedia",
     "onboarding.summary.region": "Negara atau rantau",
-    "onboarding.success.cta": "Mula Berjualan"
+    "onboarding.success.cta": "Mula Berjualan",
+    "settings.backup": "Sandaran Awan",
+    "settings.backup.subtitle": "Sandar dan pulihkan kedai anda pada iCloud, Google Drive dan Dropbox. Setiap destinasi bersifat bebas.",
+    "settings.backup.providers_title": "Destinasi",
+    "settings.backup.overview_title": "Ringkasan Data",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Sandaran terakhir — %@",
+    "backup.status.yesterday_at": "Sandaran terakhir — semalam %@",
+    "backup.status.not_connected": "Tidak disambungkan",
+    "backup.status.backing_up": "Menyandar…",
+    "backup.action.backup": "Sandar",
+    "backup.action.restore": "Pulihkan",
+    "backup.action.connect": "Sambung",
+    "backup.overview.device_column": "Peranti Ini",
+    "settings.backup.row.products": "Produk",
+    "settings.backup.row.orders": "Pesanan",
+    "settings.backup.row.customers": "Pelanggan"
   },
   "countries": {
     "TW": "Taiwan",
     "JP": "Jepun",
     "KR": "Korea Selatan"
+  },
+  "times": {
+    "21:08": "9:08 PTG",
+    "21:09": "9:09 PTG",
+    "14:32": "2:32 PTG",
+    "14:33": "2:33 PTG"
   }
 }

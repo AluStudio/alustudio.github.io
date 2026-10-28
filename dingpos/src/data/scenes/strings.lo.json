@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "ຮ້ານຂອງທ່ານພ້ອມແລ້ວ",
     "onboarding.summary.region": "ປະເທດ ຫຼື ພາກພື້ນ",
-    "onboarding.success.cta": "ເລີ່ມຂາຍ"
+    "onboarding.success.cta": "ເລີ່ມຂາຍ",
+    "settings.backup": "ສຳຮອງຂໍ້ມູນໃນຄລາວ",
+    "settings.backup.subtitle": "ສຳຮອງ ແລະ ກູ້ຄືນຂໍ້ມູນຮ້ານຂອງທ່ານໃນ iCloud, Google Drive ແລະ Dropbox. ແຕ່ລະປາຍທາງເປັນອິດສະຫຼະຈາກກັນ.",
+    "settings.backup.providers_title": "ປາຍທາງ",
+    "settings.backup.overview_title": "ພາບລວມຂໍ້ມູນ",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "ສຳຮອງຄັ້ງຫຼ້າສຸດ — %@",
+    "backup.status.yesterday_at": "ສຳຮອງຄັ້ງຫຼ້າສຸດ — ມື້ວານ %@",
+    "backup.status.not_connected": "ຍັງບໍ່ໄດ້ເຊື່ອມຕໍ່",
+    "backup.status.backing_up": "ກຳລັງສຳຮອງຂໍ້ມູນ…",
+    "backup.action.backup": "ສຳຮອງຂໍ້ມູນ",
+    "backup.action.restore": "ກູ້ຄືນ",
+    "backup.action.connect": "ເຊື່ອມຕໍ່",
+    "backup.overview.device_column": "ອຸປະກອນນີ້",
+    "settings.backup.row.products": "ສິນຄ້າ",
+    "settings.backup.row.orders": "ອໍເດີ",
+    "settings.backup.row.customers": "ລູກຄ້າ"
   },
   "countries": {
     "TW": "ໄຕ້ຫວັນ",
     "JP": "ຍີ່ປຸ່ນ",
     "KR": "ເກົາຫລີໃຕ້"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

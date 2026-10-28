@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Таны дэлгүүр бэлэн боллоо",
     "onboarding.summary.region": "Улс эсвэл бүс нутаг",
-    "onboarding.success.cta": "Борлуулж эхлэх"
+    "onboarding.success.cta": "Борлуулж эхлэх",
+    "settings.backup": "Үүлэн нөөц хуулбар",
+    "settings.backup.subtitle": "Дэлгүүрээ iCloud, Google Drive, Dropbox дээр нөөцлөж, сэргээнэ. Байршил бүр бие даасан.",
+    "settings.backup.providers_title": "Байршил",
+    "settings.backup.overview_title": "Өгөгдлийн тойм",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Сүүлийн нөөцлөлт — %@",
+    "backup.status.yesterday_at": "Сүүлийн нөөцлөлт — өчигдөр %@",
+    "backup.status.not_connected": "Холбогдоогүй",
+    "backup.status.backing_up": "Нөөцөлж байна…",
+    "backup.action.backup": "Нөөцлөх",
+    "backup.action.restore": "Сэргээх",
+    "backup.action.connect": "Холбох",
+    "backup.overview.device_column": "Энэ төхөөрөмж",
+    "settings.backup.row.products": "Бараа",
+    "settings.backup.row.orders": "Захиалга",
+    "settings.backup.row.customers": "Үйлчлүүлэгч"
   },
   "countries": {
     "TW": "Тайвань",
     "JP": "Япон",
     "KR": "Өмнөд Солонгос"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

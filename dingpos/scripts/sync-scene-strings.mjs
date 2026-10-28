@@ -1,5 +1,6 @@
 /**
  * Copies the app strings the home page's scenes draw from the DingPOS app repo
+ * (plus CLDR country names and clock times, as the app's Locale formats them)
  * into src/data/scenes/strings.<code>.json, one pack per language of
  * l10n/languages.json, so every scene label is the app's own wording
  * (AGENTS.md: scene strings come verbatim from the product repo).
@@ -16,7 +17,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { homedir } from "node:os";
 import { fileURLToPath } from "node:url";
-import { SCENE_COUNTRIES, SCENE_STRING_KEYS, placeholders } from "../src/data/scenes/keys.js";
+import { SCENE_COUNTRIES, SCENE_STRING_KEYS, SCENE_TIMES, placeholders } from "../src/data/scenes/keys.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const appFlag = process.argv.indexOf("--app");
@@ -59,7 +60,14 @@ for (const { code } of languages) {
   }
   const names = new Intl.DisplayNames([code], { type: "region" });
   const countries = Object.fromEntries(SCENE_COUNTRIES.map(({ code: region }) => [region, names.of(region)]));
-  packs.set(code, { strings, countries });
+  const clock = new Intl.DateTimeFormat([code], { timeStyle: "short", timeZone: "UTC" });
+  const times = Object.fromEntries(
+    SCENE_TIMES.map((time) => {
+      const [hours, minutes] = time.split(":").map(Number);
+      return [time, clock.format(Date.UTC(2026, 0, 1, hours, minutes))];
+    }),
+  );
+  packs.set(code, { strings, countries, times });
 }
 
 const en = packs.get("en")?.strings ?? {};

@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Your store is ready",
     "onboarding.summary.region": "Country or region",
-    "onboarding.success.cta": "Start Selling"
+    "onboarding.success.cta": "Start Selling",
+    "settings.backup": "Cloud Backup",
+    "settings.backup.subtitle": "Back up and restore your store on iCloud, Google Drive, and Dropbox. Every destination is independent.",
+    "settings.backup.providers_title": "Destinations",
+    "settings.backup.overview_title": "Data Overview",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Last backup — %@",
+    "backup.status.yesterday_at": "Last backup — yesterday %@",
+    "backup.status.not_connected": "Not connected",
+    "backup.status.backing_up": "Backing up…",
+    "backup.action.backup": "Back up",
+    "backup.action.restore": "Restore",
+    "backup.action.connect": "Connect",
+    "backup.overview.device_column": "This Device",
+    "settings.backup.row.products": "Products",
+    "settings.backup.row.orders": "Orders",
+    "settings.backup.row.customers": "Customers"
   },
   "countries": {
     "TW": "Taiwan",
     "JP": "Japan",
     "KR": "South Korea"
+  },
+  "times": {
+    "21:08": "9:08 PM",
+    "21:09": "9:09 PM",
+    "14:32": "2:32 PM",
+    "14:33": "2:33 PM"
   }
 }

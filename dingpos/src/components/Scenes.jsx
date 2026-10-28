@@ -5,9 +5,7 @@ import {
   CaretRight,
   CaretUpDown,
   Check,
-  Cloud,
   CloudCheck,
-  DeviceTablet,
   DropboxLogo,
   GoogleDriveLogo,
   ShoppingCartSimple,
@@ -18,7 +16,7 @@ import {
 } from "@phosphor-icons/react";
 import { useStory } from "../story";
 import { SCENE_COUNTRIES } from "../data/scenes/keys";
-import { sceneCountry, sceneString, sceneTemplate } from "../data/scenes";
+import { sceneCountry, sceneString, sceneTemplate, sceneTime } from "../data/scenes";
 import { STORE_GLYPHS, STORE_NAME } from "./wizardStory";
 
 // Each scene redraws one part of the iPad app and acts out what it does
@@ -116,11 +114,11 @@ function Template({ text, value }) {
  * A number whose digits roll to their new value, each in its own column. The
  * digits are drawn by CSS (.roll__digit::before), so the markup holds no
  * text and a value always renders at rest. `pad` keeps room for shorter
- * values: the missing digits roll to blank at the end, so nothing to their
- * left moves.
+ * values: the missing digits roll to blank at the end (or, with align "end",
+ * at the start), so the text beside the number never moves.
  */
-function Roll({ value, pad = 0 }) {
-  const text = String(value).padEnd(pad, " ");
+function Roll({ value, pad = 0, align = "start" }) {
+  const text = align === "end" ? String(value).padStart(pad, " ") : String(value).padEnd(pad, " ");
   return (
     <span className="roll">
       {Array.from(text, (char, i) => (
@@ -347,51 +345,128 @@ export function LoyaltyScene({ delay = 0 }) {
 }
 
 // ─── Backup ─────────────────────────────────────────────────────
-// A backup travels from the iPad to the owner's cloud; the newest snapshot
-// lands on top and the sixth-oldest drops off, so five are always kept.
-const SNAPSHOTS = 6;
-const backupSteps = [{ r: 0, ms: 2400 }];
-for (let r = 0; r < SNAPSHOTS; r++) {
-  if (r > 0) backupSteps.push({ r, ms: 1400 });
-  backupSteps.push({ r, pre: true, ms: 600 });
-}
-const snapshotWidths = [64, 52, 72, 58, 68, 48];
+// Settings → Cloud Backup. Both connected clouds hold yesterday's copy, so the
+// Data Overview flags their counts against this iPad. iCloud backs up, its
+// copy is replaced and its counts roll level with the device; Google Drive
+// follows. Dropbox stays unconnected: every destination is independent.
+const DEVICE_COUNTS = [88, 437, 64];
+const STALE_COUNTS = [86, 412, 63];
+const COUNT_ROWS = ["products", "orders", "customers"];
+const CLOUDS = [
+  { id: "icloud", Icon: CloudCheck, stale: "21:08", fresh: "14:32" },
+  { id: "google_drive", Icon: GoogleDriveLogo, stale: "21:09", fresh: "14:33" },
+  { id: "dropbox", Icon: DropboxLogo },
+];
+const uploading = (cloud, steps) => steps.map(([pct, ms]) => ({ busy: cloud, pct, ms }));
+const backupSteps = [
+  { fresh: 2, ms: 2600 },
+  { fresh: 0, reset: true, ms: 1300 },
+  { fresh: 0, press: 0, ms: 260 },
+  ...uploading(0, [[18, 450], [46, 450], [79, 450], [100, 400]]).map((s) => ({ ...s, fresh: 0 })),
+  { fresh: 1, ms: 1100 },
+  { fresh: 1, press: 1, ms: 260 },
+  ...uploading(1, [[31, 400], [72, 400], [100, 350]]).map((s) => ({ ...s, fresh: 1 })),
+];
 
 export function BackupScene({ delay = 0 }) {
   const ref = useRef(null);
   const step = useStory(ref, backupSteps, delay, 1);
 
   return (
-    <div className="scene scene--backup" ref={ref} aria-hidden="true" data-nosnippet>
-      <div className="flow">
-        <span className="flow__node">
-          <DeviceTablet size={24} weight="duotone" />
-        </span>
-        <span className="flow__wire">
-          {/* Remounts each beat so the pulse travels once per backup. */}
-          {step.pre && <span key={step.r} className="flow__pulse" />}
-        </span>
-        <span className="flow__clouds">
-          <span className="flow__cloud" data-on>
-            <Cloud size={20} weight="fill" />
+    <div className="tablet" ref={ref} aria-hidden="true" data-nosnippet>
+      <div className="tablet__screen backup" data-reset={step.reset || undefined}>
+        <h4 className="backup__title">{sceneString("settings.backup")}</h4>
+        <p className="backup__subtitle">{sceneString("settings.backup.subtitle")}</p>
+
+        <p className="backup__section">{sceneString("settings.backup.providers_title")}</p>
+        <div className="backup__card">
+          {CLOUDS.map((cloud, i) => {
+            const { id, stale, fresh } = cloud;
+            const Icon = cloud.Icon;
+            const connected = Boolean(stale);
+            const busy = step.busy === i;
+            return (
+              <div
+                key={id}
+                className="provider"
+                data-busy={busy || undefined}
+                data-fresh={i < step.fresh || undefined}
+              >
+                <span className={`provider__icon provider__icon--${id}`}>
+                  <Icon size={20} weight={id === "icloud" ? "regular" : "fill"} />
+                </span>
+                <span className="provider__text">
+                  <span className="provider__name">{sceneString(`backup.provider.${id}`)}</span>
+                  {connected ? (
+                    <span className="provider__status">
+                      <span>{sceneString("backup.status.yesterday_at", sceneTime(stale))}</span>
+                      <span>{sceneString("backup.status.today_at", sceneTime(fresh))}</span>
+                    </span>
+                  ) : (
+                    <span className="provider__status provider__status--off">
+                      {sceneString("backup.status.not_connected")}
+                    </span>
+                  )}
+                </span>
+                <span className="provider__side">
+                  {connected ? (
+                    <>
+                      <span className="provider__actions">
+                        <span className="app-button" data-press={step.press === i || undefined}>
+                          {sceneString("backup.action.backup")}
+                        </span>
+                        <span className="app-button app-button--secondary provider__restore">
+                          {sceneString("backup.action.restore")}
+                        </span>
+                      </span>
+                      <span className="upload">
+                        <span className="upload__head">
+                          <span>{sceneString("backup.status.backing_up")}</span>
+                          <span>
+                            <Roll value={busy ? step.pct : 0} pad={3} align="end" />%
+                          </span>
+                        </span>
+                        <span className="upload__track">
+                          <span className="upload__fill" style={{ "--p": busy ? step.pct / 100 : 0 }} />
+                        </span>
+                      </span>
+                    </>
+                  ) : (
+                    <span className="provider__actions">
+                      <span className="app-button app-button--secondary">{sceneString("backup.action.connect")}</span>
+                    </span>
+                  )}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+
+        <p className="backup__section">{sceneString("settings.backup.overview_title")}</p>
+        <div className="backup__card overview">
+          <span className="overview__row overview__row--head">
+            <span />
+            <span>{sceneString("backup.overview.device_column")}</span>
+            <span>{sceneString("backup.provider.icloud")}</span>
+            <span>{sceneString("backup.provider.google_drive")}</span>
           </span>
-          <span className="flow__cloud">
-            <GoogleDriveLogo size={20} weight="fill" />
-          </span>
-          <span className="flow__cloud">
-            <DropboxLogo size={20} weight="fill" />
-          </span>
-        </span>
+          {COUNT_ROWS.map((row, r) => (
+            <span key={row} className="overview__row">
+              <span className="overview__label">{sceneString(`settings.backup.row.${row}`)}</span>
+              <span className="overview__device">{DEVICE_COUNTS[r]}</span>
+              {[0, 1].map((cloud) => {
+                const fresh = cloud < step.fresh;
+                const value = fresh ? DEVICE_COUNTS[r] : STALE_COUNTS[r];
+                return (
+                  <span key={cloud} className="overview__cloud" data-drift={value !== DEVICE_COUNTS[r] || undefined}>
+                    <Roll value={value} />
+                  </span>
+                );
+              })}
+            </span>
+          ))}
+        </div>
       </div>
-      <Stack n={SNAPSHOTS} step={step} rowClass="snapshot">
-        {(entry) => (
-          <>
-            <CloudCheck size={16} weight="bold" className="snapshot__icon" />
-            <span className="snapshot__line" style={{ "--w": `${snapshotWidths[entry]}%` }} />
-            <span className="snapshot__size" />
-          </>
-        )}
-      </Stack>
     </div>
   );
 }
@@ -410,8 +485,8 @@ export function WizardScene({ step }) {
   const typing = step.screen === 1 && !step.logo;
 
   return (
-    <div className="wizard" aria-hidden="true" data-nosnippet>
-      <div className="wizard__screen">
+    <div className="tablet wizard" aria-hidden="true" data-nosnippet>
+      <div className="tablet__screen wizard__screen">
         <div className="wizard__progress">
           {[0, 1, 2].map((i) => (
             <span key={i} className="wizard__segment" data-on={i <= step.screen || undefined} />

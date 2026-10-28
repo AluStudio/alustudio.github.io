@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "ร้านของคุณพร้อมแล้ว",
     "onboarding.summary.region": "ประเทศหรือภูมิภาค",
-    "onboarding.success.cta": "เริ่มขาย"
+    "onboarding.success.cta": "เริ่มขาย",
+    "settings.backup": "สำรองข้อมูลบนคลาวด์",
+    "settings.backup.subtitle": "สำรองและกู้คืนข้อมูลร้านบน iCloud, Google Drive และ Dropbox แต่ละปลายทางแยกจากกัน",
+    "settings.backup.providers_title": "ปลายทาง",
+    "settings.backup.overview_title": "ภาพรวมข้อมูล",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "สำรองล่าสุด — %@",
+    "backup.status.yesterday_at": "สำรองล่าสุด — เมื่อวาน %@",
+    "backup.status.not_connected": "ยังไม่ได้เชื่อมต่อ",
+    "backup.status.backing_up": "กำลังสำรองข้อมูล…",
+    "backup.action.backup": "สำรองข้อมูล",
+    "backup.action.restore": "กู้คืน",
+    "backup.action.connect": "เชื่อมต่อ",
+    "backup.overview.device_column": "เครื่องนี้",
+    "settings.backup.row.products": "สินค้า",
+    "settings.backup.row.orders": "ออเดอร์",
+    "settings.backup.row.customers": "ลูกค้า"
   },
   "countries": {
     "TW": "ไต้หวัน",
     "JP": "ญี่ปุ่น",
     "KR": "เกาหลีใต้"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

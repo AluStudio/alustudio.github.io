@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Dyqani yt është gati",
     "onboarding.summary.region": "Vendi ose rajoni",
-    "onboarding.success.cta": "Fillo shitjen"
+    "onboarding.success.cta": "Fillo shitjen",
+    "settings.backup": "Kopje rezervë në cloud",
+    "settings.backup.subtitle": "Bëj kopje rezervë dhe rivendos dyqanin tënd në iCloud, Google Drive dhe Dropbox. Çdo destinacion është i pavarur.",
+    "settings.backup.providers_title": "Destinacionet",
+    "settings.backup.overview_title": "Përmbledhja e të dhënave",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Kopja e fundit — %@",
+    "backup.status.yesterday_at": "Kopja e fundit — dje %@",
+    "backup.status.not_connected": "I palidhur",
+    "backup.status.backing_up": "Po bëhet kopja rezervë…",
+    "backup.action.backup": "Bëj kopje",
+    "backup.action.restore": "Rivendos",
+    "backup.action.connect": "Lidh",
+    "backup.overview.device_column": "Kjo pajisje",
+    "settings.backup.row.products": "Produkte",
+    "settings.backup.row.orders": "Porosi",
+    "settings.backup.row.customers": "Klientë"
   },
   "countries": {
     "TW": "Tajvan",
     "JP": "Japoni",
     "KR": "Kore e Jugut"
+  },
+  "times": {
+    "21:08": "9:08 m.d.",
+    "21:09": "9:09 m.d.",
+    "14:32": "2:32 m.d.",
+    "14:33": "2:33 m.d."
   }
 }

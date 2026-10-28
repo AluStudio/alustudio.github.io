@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Магазинът ви е готов",
     "onboarding.summary.region": "Държава или регион",
-    "onboarding.success.cta": "Започни да продаваш"
+    "onboarding.success.cta": "Започни да продаваш",
+    "settings.backup": "Резервно копие в облака",
+    "settings.backup.subtitle": "Правете резервни копия и възстановявайте магазина си в iCloud, Google Drive и Dropbox. Всяка дестинация е независима.",
+    "settings.backup.providers_title": "Дестинации",
+    "settings.backup.overview_title": "Преглед на данните",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Последно копие — %@",
+    "backup.status.yesterday_at": "Последно копие — вчера %@",
+    "backup.status.not_connected": "Не е свързано",
+    "backup.status.backing_up": "Създава се копие…",
+    "backup.action.backup": "Създай копие",
+    "backup.action.restore": "Възстанови",
+    "backup.action.connect": "Свържи",
+    "backup.overview.device_column": "Това устройство",
+    "settings.backup.row.products": "Артикули",
+    "settings.backup.row.orders": "Поръчки",
+    "settings.backup.row.customers": "Клиенти"
   },
   "countries": {
     "TW": "Тайван",
     "JP": "Япония",
     "KR": "Южна Корея"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Το κατάστημά σας είναι έτοιμο",
     "onboarding.summary.region": "Χώρα ή περιοχή",
-    "onboarding.success.cta": "Έναρξη πωλήσεων"
+    "onboarding.success.cta": "Έναρξη πωλήσεων",
+    "settings.backup": "Αντίγραφο ασφαλείας στο cloud",
+    "settings.backup.subtitle": "Δημιουργήστε αντίγραφο ασφαλείας και επαναφέρετε το κατάστημά σας στο iCloud, στο Google Drive και στο Dropbox. Κάθε προορισμός είναι ανεξάρτητος.",
+    "settings.backup.providers_title": "Προορισμοί",
+    "settings.backup.overview_title": "Επισκόπηση δεδομένων",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Τελευταίο αντίγραφο — %@",
+    "backup.status.yesterday_at": "Τελευταίο αντίγραφο — χθες %@",
+    "backup.status.not_connected": "Μη συνδεδεμένο",
+    "backup.status.backing_up": "Δημιουργία αντιγράφου…",
+    "backup.action.backup": "Δημιουργία αντιγράφου",
+    "backup.action.restore": "Επαναφορά",
+    "backup.action.connect": "Σύνδεση",
+    "backup.overview.device_column": "Αυτή η συσκευή",
+    "settings.backup.row.products": "Προϊόντα",
+    "settings.backup.row.orders": "Παραγγελίες",
+    "settings.backup.row.customers": "Πελάτες"
   },
   "countries": {
     "TW": "Ταϊβάν",
     "JP": "Ιαπωνία",
     "KR": "Νότια Κορέα"
+  },
+  "times": {
+    "21:08": "9:08 μ.μ.",
+    "21:09": "9:09 μ.μ.",
+    "14:32": "2:32 μ.μ.",
+    "14:33": "2:33 μ.μ."
   }
 }

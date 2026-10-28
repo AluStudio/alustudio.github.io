@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Myymäläsi on valmis",
     "onboarding.summary.region": "Maa tai alue",
-    "onboarding.success.cta": "Aloita myynti"
+    "onboarding.success.cta": "Aloita myynti",
+    "settings.backup": "Pilvivarmuuskopiointi",
+    "settings.backup.subtitle": "Varmuuskopioi ja palauta myymäläsi iCloudiin, Google Driveen ja Dropboxiin. Jokainen kohde on erillinen.",
+    "settings.backup.providers_title": "Kohteet",
+    "settings.backup.overview_title": "Tietoyhteenveto",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Viimeisin varmuuskopio — %@",
+    "backup.status.yesterday_at": "Viimeisin varmuuskopio — eilen %@",
+    "backup.status.not_connected": "Ei yhdistetty",
+    "backup.status.backing_up": "Varmuuskopioidaan…",
+    "backup.action.backup": "Varmuuskopioi",
+    "backup.action.restore": "Palauta",
+    "backup.action.connect": "Yhdistä",
+    "backup.overview.device_column": "Tämä laite",
+    "settings.backup.row.products": "Tuotteet",
+    "settings.backup.row.orders": "Tilaukset",
+    "settings.backup.row.customers": "Asiakkaat"
   },
   "countries": {
     "TW": "Taiwan",
     "JP": "Japani",
     "KR": "Etelä-Korea"
+  },
+  "times": {
+    "21:08": "21.08",
+    "21:09": "21.09",
+    "14:32": "14.32",
+    "14:33": "14.33"
   }
 }

@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Toko Anda sudah siap",
     "onboarding.summary.region": "Negara atau wilayah",
-    "onboarding.success.cta": "Mulai Berjualan"
+    "onboarding.success.cta": "Mulai Berjualan",
+    "settings.backup": "Cadangan Cloud",
+    "settings.backup.subtitle": "Cadangkan dan pulihkan toko Anda di iCloud, Google Drive, dan Dropbox. Setiap tujuan berdiri sendiri.",
+    "settings.backup.providers_title": "Tujuan",
+    "settings.backup.overview_title": "Ringkasan Data",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Cadangan terakhir — %@",
+    "backup.status.yesterday_at": "Cadangan terakhir — kemarin %@",
+    "backup.status.not_connected": "Tidak terhubung",
+    "backup.status.backing_up": "Mencadangkan…",
+    "backup.action.backup": "Cadangkan",
+    "backup.action.restore": "Pulihkan",
+    "backup.action.connect": "Hubungkan",
+    "backup.overview.device_column": "Perangkat Ini",
+    "settings.backup.row.products": "Produk",
+    "settings.backup.row.orders": "Pesanan",
+    "settings.backup.row.customers": "Pelanggan"
   },
   "countries": {
     "TW": "Taiwan",
     "JP": "Jepang",
     "KR": "Korea Selatan"
+  },
+  "times": {
+    "21:08": "21.08",
+    "21:09": "21.09",
+    "14:32": "14.32",
+    "14:33": "14.33"
   }
 }

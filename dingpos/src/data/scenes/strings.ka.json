@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "თქვენი მაღაზია მზადაა",
     "onboarding.summary.region": "ქვეყანა ან რეგიონი",
-    "onboarding.success.cta": "გაყიდვის დაწყება"
+    "onboarding.success.cta": "გაყიდვის დაწყება",
+    "settings.backup": "ღრუბლოვანი სარეზერვო ასლი",
+    "settings.backup.subtitle": "შექმენით სარეზერვო ასლი და აღადგინეთ მაღაზია iCloud-ში, Google Drive-სა და Dropbox-ში. თითოეული მიმართულება დამოუკიდებელია.",
+    "settings.backup.providers_title": "მიმართულებები",
+    "settings.backup.overview_title": "მონაცემთა მიმოხილვა",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "ბოლო სარეზერვო ასლი — %@",
+    "backup.status.yesterday_at": "ბოლო სარეზერვო ასლი — გუშინ, %@",
+    "backup.status.not_connected": "არ არის დაკავშირებული",
+    "backup.status.backing_up": "იქმნება სარეზერვო ასლი…",
+    "backup.action.backup": "სარეზერვო ასლის შექმნა",
+    "backup.action.restore": "აღდგენა",
+    "backup.action.connect": "დაკავშირება",
+    "backup.overview.device_column": "ეს მოწყობილობა",
+    "settings.backup.row.products": "პროდუქტები",
+    "settings.backup.row.orders": "შეკვეთები",
+    "settings.backup.row.customers": "კლიენტები"
   },
   "countries": {
     "TW": "ტაივანი",
     "JP": "იაპონია",
     "KR": "სამხრეთ კორეა"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

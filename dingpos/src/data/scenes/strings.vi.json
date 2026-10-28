@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Cửa hàng của bạn đã sẵn sàng",
     "onboarding.summary.region": "Quốc gia hoặc khu vực",
-    "onboarding.success.cta": "Bắt đầu bán hàng"
+    "onboarding.success.cta": "Bắt đầu bán hàng",
+    "settings.backup": "Sao lưu đám mây",
+    "settings.backup.subtitle": "Sao lưu và khôi phục cửa hàng của bạn trên iCloud, Google Drive và Dropbox. Mỗi nơi lưu hoạt động độc lập.",
+    "settings.backup.providers_title": "Nơi lưu",
+    "settings.backup.overview_title": "Tổng quan dữ liệu",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Lần sao lưu cuối — %@",
+    "backup.status.yesterday_at": "Lần sao lưu cuối — hôm qua %@",
+    "backup.status.not_connected": "Chưa kết nối",
+    "backup.status.backing_up": "Đang sao lưu…",
+    "backup.action.backup": "Sao lưu",
+    "backup.action.restore": "Khôi phục",
+    "backup.action.connect": "Kết nối",
+    "backup.overview.device_column": "Thiết bị này",
+    "settings.backup.row.products": "Sản phẩm",
+    "settings.backup.row.orders": "Đơn hàng",
+    "settings.backup.row.customers": "Khách hàng"
   },
   "countries": {
     "TW": "Đài Loan",
     "JP": "Nhật Bản",
     "KR": "Hàn Quốc"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Mağazanız hazır",
     "onboarding.summary.region": "Ülke veya bölge",
-    "onboarding.success.cta": "Satışa Başla"
+    "onboarding.success.cta": "Satışa Başla",
+    "settings.backup": "Bulut Yedekleme",
+    "settings.backup.subtitle": "Mağazanızı iCloud, Google Drive ve Dropbox'a yedekleyin ve geri yükleyin. Her hedef bağımsızdır.",
+    "settings.backup.providers_title": "Hedefler",
+    "settings.backup.overview_title": "Veri Özeti",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Son yedekleme — %@",
+    "backup.status.yesterday_at": "Son yedekleme — dün %@",
+    "backup.status.not_connected": "Bağlı değil",
+    "backup.status.backing_up": "Yedekleniyor…",
+    "backup.action.backup": "Yedekle",
+    "backup.action.restore": "Geri Yükle",
+    "backup.action.connect": "Bağlan",
+    "backup.overview.device_column": "Bu Cihaz",
+    "settings.backup.row.products": "Ürünler",
+    "settings.backup.row.orders": "Siparişler",
+    "settings.backup.row.customers": "Müşteriler"
   },
   "countries": {
     "TW": "Tayvan",
     "JP": "Japonya",
     "KR": "Güney Kore"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

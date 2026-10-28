@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Je winkel is klaar",
     "onboarding.summary.region": "Land of regio",
-    "onboarding.success.cta": "Begin met verkopen"
+    "onboarding.success.cta": "Begin met verkopen",
+    "settings.backup": "Cloudback-up",
+    "settings.backup.subtitle": "Maak een back-up van je winkel en herstel die via iCloud, Google Drive en Dropbox. Elke bestemming is onafhankelijk.",
+    "settings.backup.providers_title": "Bestemmingen",
+    "settings.backup.overview_title": "Gegevensoverzicht",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Laatste back-up — %@",
+    "backup.status.yesterday_at": "Laatste back-up — gisteren %@",
+    "backup.status.not_connected": "Niet verbonden",
+    "backup.status.backing_up": "Back-up maken…",
+    "backup.action.backup": "Maak back-up",
+    "backup.action.restore": "Herstel",
+    "backup.action.connect": "Verbind",
+    "backup.overview.device_column": "Deze iPad",
+    "settings.backup.row.products": "Producten",
+    "settings.backup.row.orders": "Bestellingen",
+    "settings.backup.row.customers": "Klanten"
   },
   "countries": {
     "TW": "Taiwan",
     "JP": "Japan",
     "KR": "Zuid-Korea"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

@@ -780,132 +780,10 @@ $app-bezel: #1f2530;
   color: $accent;
 }
 
-// ─── Backup (dark) ──────────────────────────────────────────────
-.scene--backup {
-  flex-direction: column;
-  align-items: stretch;
-  gap: s(300);
-  padding-inline: max(#{s(300)}, calc(50% - 180px));
-
-  .stack {
-    --row-h: 44px;
-  }
-}
-
-.flow {
-  display: flex;
-  align-items: center;
-  gap: s(100);
-
-  &__node {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: $radius-xl;
-    background: $night-3;
-    color: $surface;
-  }
-
-  &__wire {
-    position: relative;
-    flex: 1;
-    height: 2px;
-    border-radius: $radius-full;
-    background: $night-line;
-  }
-
-  // The span spans the wire, so translating it by its own width carries the
-  // dot from one end to the other with a transform only.
-  &__pulse {
-    position: absolute;
-    inset: 0;
-    animation: pulse-travel 0.6s $io both;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -4px;
-      left: -5px;
-      width: 10px;
-      height: 10px;
-      border-radius: $radius-full;
-      background: #8dabc6;
-      box-shadow: 0 0 0 4px rgba(141, 171, 198, 0.25);
-    }
-  }
-
-  &__clouds {
-    display: flex;
-    gap: s(75);
-  }
-
-  &__cloud {
-    display: grid;
-    place-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: $radius-lg;
-    background: $night-3;
-    color: rgba($surface, 0.4);
-
-    &[data-on] {
-      background: $accent-strong;
-      color: $surface;
-    }
-  }
-}
-
-@keyframes pulse-travel {
-  0% {
-    opacity: 0;
-    transform: translateX(0);
-  }
-
-  15%,
-  85% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-}
-
-.snapshot {
-  display: flex;
-  align-items: center;
-  gap: s(100);
-  padding: 0 s(200);
-  border-radius: $radius-lg;
-  background: $night-3;
-
-  &__icon {
-    flex: none;
-    color: #7fc4a0;
-  }
-
-  &__line {
-    width: var(--w);
-    height: 6px;
-    border-radius: $radius-full;
-    background: rgba($surface, 0.18);
-  }
-
-  &__size {
-    width: 32px;
-    height: 6px;
-    margin-left: auto;
-    border-radius: $radius-full;
-    background: rgba($surface, 0.1);
-  }
-}
-
-// ─── Onboarding wizard ──────────────────────────────────────────
-// The app's setup screen on an iPad: progress segments and the step label
-// over a white card whose three pages cross-fade in place.
-.wizard {
+// ─── iPad frame ─────────────────────────────────────────────────
+// The bezel the app screens sit in (onboarding wizard, cloud backup); the
+// screen's radius is the bezel's 24 − its 8px padding (B3).
+.tablet {
   padding: s(75);
   border-radius: $radius-3xl;
   background: $app-bezel;
@@ -914,13 +792,322 @@ $app-bezel: #1f2530;
     0 40px 80px -40px rgba($accent-deep, 0.55);
   user-select: none;
 
-  // Bezel radius 24 − 8 (B3).
+  &__screen {
+    border-radius: $radius-2xl;
+    background: $sunken;
+  }
+}
+
+// Small app buttons (DingButton primary / secondary).
+.app-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 s(100);
+  border-radius: $radius-lg;
+  background: $app-primary;
+  color: $surface;
+  @include text("xs");
+  font-weight: 600;
+  white-space: nowrap;
+
+  &--secondary {
+    background: $app-neutral-100;
+    color: $ink;
+  }
+
+  &[data-press] {
+    animation: press 0.26s $ease;
+  }
+}
+
+// ─── Cloud backup ───────────────────────────────────────────────
+.backup {
+  display: grid;
+  padding: s(300) s(200);
+  container-type: inline-size;
+  text-align: left;
+
+  @media (min-width: $bp-md) {
+    padding: s(400);
+  }
+
+  &__title {
+    @include text("xl");
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: $ink;
+  }
+
+  &__subtitle {
+    margin-top: s(25);
+    @include text("xs");
+    color: $ink-muted;
+    text-wrap: pretty;
+  }
+
+  &__section {
+    margin: s(300) 0 s(75) s(50);
+    @include text("xs");
+    font-weight: 600;
+    color: $ink-muted;
+  }
+
+  &__card {
+    display: grid;
+    border-radius: $radius-xl;
+    background: $surface;
+    box-shadow: 0 1px 2px rgba($ink, 0.06);
+  }
+}
+
+.provider {
+  display: flex;
+  align-items: center;
+  gap: s(100);
+  min-height: 64px;
+  padding: s(100) s(200);
+
+  & + & {
+    border-top: 1px solid $app-neutral-100;
+  }
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-sm;
+    background: rgba($app-primary, 0.12);
+    color: $app-primary;
+
+    &--google_drive {
+      background: rgba($app-success-500, 0.12);
+      color: $app-success-500;
+    }
+
+    &--dropbox {
+      background: rgba($app-warning-500, 0.12);
+      color: $app-warning-500;
+    }
+  }
+
+  &__text {
+    display: grid;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    @include text("sm");
+    font-weight: 600;
+    color: $ink;
+  }
+
+  // Yesterday's and today's line share a cell; the fresh one fades in when
+  // the backup lands, and both step aside while it runs.
+  &__status {
+    display: grid;
+    @include text("xs");
+    color: $ink-muted;
+    transition: opacity 0.3s $e2;
+
+    // Wraps to two lines at most, as in the app.
+    > * {
+      grid-area: 1 / 1;
+      display: -webkit-box;
+      min-width: 0;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      transition: opacity 0.5s $e2;
+    }
+
+    > :last-child {
+      opacity: 0;
+    }
+
+    &--off {
+      display: block;
+      color: $app-neutral-400;
+    }
+  }
+
+  &[data-fresh] &__status {
+    > :first-child {
+      opacity: 0;
+    }
+
+    > :last-child {
+      opacity: 1;
+    }
+  }
+
+  &[data-busy] &__status {
+    opacity: 0;
+  }
+
+  // The actions and the upload share a cell and swap while a backup runs.
+  &__side {
+    display: grid;
+    flex: none;
+    justify-items: end;
+
+    > * {
+      grid-area: 1 / 1;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: s(75);
+    transition: opacity 0.3s $e2;
+  }
+
+  &[data-busy] &__actions {
+    opacity: 0;
+  }
+
+  // A phone-wide panel has no room beside the text: the actions (or the
+  // upload) move under it, and Restore stays on iPad-wide panels only.
+  @container (max-width: 420px) {
+    flex-wrap: wrap;
+    row-gap: s(75);
+
+    &__side {
+      flex-basis: 100%;
+      justify-items: start;
+      padding-left: 48px;
+    }
+
+    &__restore {
+      display: none;
+    }
+  }
+}
+
+.upload {
+  display: grid;
+  gap: s(50);
+  align-self: center;
+  width: 144px;
+  opacity: 0;
+  transition: opacity 0.3s $e2;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: s(75);
+    @include text("xs");
+    font-weight: 600;
+    color: $accent-strong;
+    white-space: nowrap;
+  }
+
+  // Fills like a progress bar; once the backup is done it empties, out of sight.
+  &__track {
+    height: 6px;
+    overflow: hidden;
+    border-radius: $radius-full;
+    background: $app-neutral-100;
+  }
+
+  &__fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: $app-primary;
+    transform: scaleX(var(--p));
+    transform-origin: left;
+    transition: transform 0s 0.4s;
+  }
+
+  .provider[data-busy] & {
+    opacity: 1;
+  }
+
+  .provider[data-busy] &__fill {
+    transition: transform 0.45s linear;
+  }
+
+  @container (max-width: 420px) {
+    width: 100%;
+  }
+}
+
+// Each connected cloud's counts against this iPad; a count that differs is
+// flagged (warning-600) until a backup brings it level.
+.overview {
+  padding-block: s(50);
+  @include text("xs");
+
+  &__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: s(75);
+    padding: s(75) s(200);
+    text-align: center;
+
+    & + & {
+      border-top: 1px solid $app-neutral-100;
+    }
+
+    > :first-child {
+      text-align: left;
+    }
+
+    &--head {
+      font-weight: 600;
+      color: $ink;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  &__label {
+    color: $ink-muted;
+  }
+
+  &__device,
+  &__cloud {
+    @include text("sm");
+    font-weight: 600;
+  }
+
+  &__device {
+    color: $app-primary;
+  }
+
+  &__cloud {
+    color: $ink;
+    transition: color 0.5s $ease 0.35s;
+
+    &[data-drift] {
+      color: $app-warning-600;
+    }
+  }
+
+  // Back to yesterday's copy as the story starts over: the counts swap in
+  // place and only their flag fades in, so nothing appears to roll backwards.
+  .backup[data-reset] &__cloud {
+    transition-delay: 0s;
+  }
+
+  .backup[data-reset] & .roll__digit::before {
+    transition: none;
+  }
+}
+
+// ─── Onboarding wizard ──────────────────────────────────────────
+// The app's setup screen on an iPad: progress segments and the step label
+// over a white card whose three pages cross-fade in place.
+.wizard {
   &__screen {
     display: grid;
     justify-items: center;
     padding: s(300) s(100);
-    border-radius: $radius-2xl;
-    background: $sunken;
 
     @media (min-width: $bp-md) {
       padding: s(400) s(300);

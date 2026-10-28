@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Din butik är redo",
     "onboarding.summary.region": "Land eller region",
-    "onboarding.success.cta": "Börja sälja"
+    "onboarding.success.cta": "Börja sälja",
+    "settings.backup": "Säkerhetskopia i molnet",
+    "settings.backup.subtitle": "Säkerhetskopiera och återställ din butik via iCloud, Google Drive och Dropbox. Varje mål är oberoende.",
+    "settings.backup.providers_title": "Mål",
+    "settings.backup.overview_title": "Dataöversikt",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Senaste säkerhetskopia – %@",
+    "backup.status.yesterday_at": "Senaste säkerhetskopia – igår %@",
+    "backup.status.not_connected": "Inte ansluten",
+    "backup.status.backing_up": "Säkerhetskopierar…",
+    "backup.action.backup": "Säkerhetskopiera",
+    "backup.action.restore": "Återställ",
+    "backup.action.connect": "Anslut",
+    "backup.overview.device_column": "Den här enheten",
+    "settings.backup.row.products": "Produkter",
+    "settings.backup.row.orders": "Ordrar",
+    "settings.backup.row.customers": "Kunder"
   },
   "countries": {
     "TW": "Taiwan",
     "JP": "Japan",
     "KR": "Sydkorea"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "ហាងរបស់អ្នកបានរួចរាល់",
     "onboarding.summary.region": "ប្រទេស ឬតំបន់",
-    "onboarding.success.cta": "ចាប់ផ្តើមលក់"
+    "onboarding.success.cta": "ចាប់ផ្តើមលក់",
+    "settings.backup": "ការបម្រុងទុកលើ Cloud",
+    "settings.backup.subtitle": "បម្រុងទុក និងស្តារហាងរបស់អ្នកលើ iCloud, Google Drive និង Dropbox។ ទីតាំងនីមួយៗមានឯករាជ្យ។",
+    "settings.backup.providers_title": "ទីតាំង",
+    "settings.backup.overview_title": "ទិដ្ឋភាពទូទៅនៃទិន្នន័យ",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "បម្រុងទុកចុងក្រោយ — %@",
+    "backup.status.yesterday_at": "បម្រុងទុកចុងក្រោយ — ម្សិលមិញ %@",
+    "backup.status.not_connected": "មិនទាន់ភ្ជាប់",
+    "backup.status.backing_up": "កំពុងបម្រុងទុក…",
+    "backup.action.backup": "បម្រុងទុក",
+    "backup.action.restore": "ស្តារ",
+    "backup.action.connect": "ភ្ជាប់",
+    "backup.overview.device_column": "ឧបករណ៍នេះ",
+    "settings.backup.row.products": "ផលិតផល",
+    "settings.backup.row.orders": "ការបញ្ជាទិញ",
+    "settings.backup.row.customers": "អតិថិជន"
   },
   "countries": {
     "TW": "តៃវ៉ាន់",
     "JP": "ជប៉ុន",
     "KR": "កូរ៉េ​ខាង​ត្បូង"
+  },
+  "times": {
+    "21:08": "9:08 PM",
+    "21:09": "9:09 PM",
+    "14:32": "2:32 PM",
+    "14:33": "2:33 PM"
   }
 }

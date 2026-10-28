@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "आपका स्टोर तैयार है",
     "onboarding.summary.region": "देश या क्षेत्र",
-    "onboarding.success.cta": "बिक्री शुरू करें"
+    "onboarding.success.cta": "बिक्री शुरू करें",
+    "settings.backup": "क्लाउड बैकअप",
+    "settings.backup.subtitle": "अपनी दुकान का बैकअप और रीस्टोर iCloud, Google Drive और Dropbox पर करें। हर गंतव्य स्वतंत्र है।",
+    "settings.backup.providers_title": "गंतव्य",
+    "settings.backup.overview_title": "डेटा अवलोकन",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "आख़िरी बैकअप — %@",
+    "backup.status.yesterday_at": "आख़िरी बैकअप — कल %@",
+    "backup.status.not_connected": "कनेक्ट नहीं है",
+    "backup.status.backing_up": "बैकअप हो रहा है…",
+    "backup.action.backup": "बैकअप लें",
+    "backup.action.restore": "रीस्टोर करें",
+    "backup.action.connect": "कनेक्ट करें",
+    "backup.overview.device_column": "यह डिवाइस",
+    "settings.backup.row.products": "उत्पाद",
+    "settings.backup.row.orders": "ऑर्डर",
+    "settings.backup.row.customers": "ग्राहक"
   },
   "countries": {
     "TW": "ताइवान",
     "JP": "जापान",
     "KR": "दक्षिण कोरिया"
+  },
+  "times": {
+    "21:08": "9:08 pm",
+    "21:09": "9:09 pm",
+    "14:32": "2:32 pm",
+    "14:33": "2:33 pm"
   }
 }

@@ -48,7 +48,7 @@ import {
 import { contentUnits, fitDescription, DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
 import { INLINE_LINK, blockTexts } from "../src/data/guides/links.js";
-import { SCENE_COUNTRIES, SCENE_STRING_KEYS, placeholders } from "../src/data/scenes/keys.js";
+import { SCENE_COUNTRIES, SCENE_STRING_KEYS, SCENE_TIMES, placeholders } from "../src/data/scenes/keys.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -178,6 +178,9 @@ function validateSceneStrings() {
     }
     for (const { code: region } of SCENE_COUNTRIES) {
       if (!scenes.countries?.[region]?.trim()) errors.push(`${code} scene strings lack the country "${region}"`);
+    }
+    for (const time of SCENE_TIMES) {
+      if (!scenes.times?.[time]?.trim()) errors.push(`${code} scene strings lack the time "${time}"`);
     }
   }
   fail("Scene string validation failed", errors);

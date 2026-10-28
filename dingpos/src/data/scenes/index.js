@@ -3,7 +3,7 @@
 // loaded (see main.jsx).
 const packs = import.meta.glob("./strings.*.json", { import: "default" });
 
-let pack = { strings: {}, countries: {} };
+let pack = { strings: {}, countries: {}, times: {} };
 
 /** Load the scene strings of `code`; resolves before the app renders. */
 export async function loadSceneStrings(code) {
@@ -24,6 +24,11 @@ export function sceneString(key, ...args) {
   return sceneTemplate(key).replace(/%(?:(\d+)\$)?[@d]/g, (_, position) =>
     String(args[position ? Number(position) - 1 : next++]),
   );
+}
+
+/** A clock time ("HH:MM") in the page language, as the app's short time style shows it. */
+export function sceneTime(time) {
+  return pack.times[time] ?? time;
 }
 
 /** A country's name in the page language, as the app's onboarding shows it. */

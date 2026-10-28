@@ -281,6 +281,8 @@
 }
 
 // ─── Privacy (dark) ─────────────────────────────────────────────
+// Headline and lead side by side, then the app's Cloud Backup screen with
+// the claims it proves right beside it (landing-page-design A4).
 .privacy {
   padding: s(800) 0;
   background: $night;
@@ -290,11 +292,28 @@
     padding: s(900) 0;
   }
 
+  // The headline keeps its full 680px (narrower, Chinese and Japanese break
+  // mid-phrase or strand a character), so the lead joins it only once the
+  // shell is at its 1136px content width.
+  &__head {
+    display: grid;
+    gap: s(300);
+
+    @media (min-width: 1200px) {
+      grid-template-columns: minmax(0, 680px) minmax(0, 1fr);
+      gap: s(700);
+      align-items: end;
+    }
+  }
+
+  // Japanese breaks between phrases, not mid-word, where the browser can
+  // (auto-phrase); elsewhere it falls back to breaking between characters.
   &__title {
     max-width: 680px;
     margin-top: s(300);
     @include text("4xl");
     letter-spacing: -0.03em;
+    word-break: auto-phrase;
 
     @media (min-width: $bp-md) {
       @include text("5xl");
@@ -306,31 +325,49 @@
     }
   }
 
+  &__lead {
+    max-width: 560px;
+    @include text("lg");
+    color: rgba($surface, 0.72);
+    text-wrap: pretty;
+  }
+
   &__grid {
     display: grid;
     gap: s(600);
-    margin-top: s(700);
+    margin-top: s(600);
 
     @media (min-width: $bp-lg) {
-      grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
       gap: s(700);
       align-items: center;
+      margin-top: s(800);
     }
   }
 
-  &__lead {
-    margin-bottom: s(400);
-    @include text("lg");
-    color: rgba($surface, 0.72);
+  // The bezel needs a hairline to stand off the near-black band.
+  &__visual .tablet {
+    box-shadow:
+      0 0 0 1px rgba($surface, 0.08),
+      0 40px 80px -40px rgba(0, 0, 0, 0.8);
   }
 
-  &__visual {
-    position: relative;
-    height: 360px;
-    padding: s(75);
-    border: 1px solid $night-line;
-    border-radius: $radius-3xl;
-    background: $night-2;
+  // Hairline rules turn the claims into one column beside the screen.
+  &__list {
+    gap: 0;
+
+    li {
+      padding-block: s(200);
+      border-bottom: 1px solid $night-line;
+
+      &:first-child {
+        border-top: 1px solid $night-line;
+      }
+
+      &::before {
+        top: s(200) + 2px;
+      }
+    }
   }
 }
 

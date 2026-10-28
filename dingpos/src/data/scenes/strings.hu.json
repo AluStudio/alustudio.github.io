@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "Az üzlete készen áll",
     "onboarding.summary.region": "Ország vagy régió",
-    "onboarding.success.cta": "Eladás indítása"
+    "onboarding.success.cta": "Eladás indítása",
+    "settings.backup": "Felhőmentés",
+    "settings.backup.subtitle": "Az üzlet mentése és visszaállítása iCloudon, Google Drive-on és Dropboxon. Minden célhely független.",
+    "settings.backup.providers_title": "Célhelyek",
+    "settings.backup.overview_title": "Adatáttekintés",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "Utolsó mentés – %@",
+    "backup.status.yesterday_at": "Utolsó mentés – tegnap %@",
+    "backup.status.not_connected": "Nincs csatlakoztatva",
+    "backup.status.backing_up": "Mentés folyamatban…",
+    "backup.action.backup": "Mentés",
+    "backup.action.restore": "Visszaállítás",
+    "backup.action.connect": "Csatlakoztatás",
+    "backup.overview.device_column": "Ez az eszköz",
+    "settings.backup.row.products": "Termékek",
+    "settings.backup.row.orders": "Rendelések",
+    "settings.backup.row.customers": "Vevők"
   },
   "countries": {
     "TW": "Tajvan",
     "JP": "Japán",
     "KR": "Dél-Korea"
+  },
+  "times": {
+    "21:08": "21:08",
+    "21:09": "21:09",
+    "14:32": "14:32",
+    "14:33": "14:33"
   }
 }

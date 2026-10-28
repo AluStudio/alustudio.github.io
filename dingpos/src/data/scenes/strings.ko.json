@@ -26,11 +26,35 @@
     "onboarding.success.title": "Ding! 🎉",
     "onboarding.success.subtitle": "매장 준비가 끝났습니다",
     "onboarding.summary.region": "국가 또는 지역",
-    "onboarding.success.cta": "판매 시작"
+    "onboarding.success.cta": "판매 시작",
+    "settings.backup": "클라우드 백업",
+    "settings.backup.subtitle": "iCloud, Google Drive, Dropbox에 매장 데이터를 백업하고 복원합니다. 각 저장 위치는 서로 독립적입니다.",
+    "settings.backup.providers_title": "저장 위치",
+    "settings.backup.overview_title": "데이터 개요",
+    "backup.provider.icloud": "iCloud",
+    "backup.provider.google_drive": "Google Drive",
+    "backup.provider.dropbox": "Dropbox",
+    "backup.status.today_at": "마지막 백업 — %@",
+    "backup.status.yesterday_at": "마지막 백업 — 어제 %@",
+    "backup.status.not_connected": "연결 안 됨",
+    "backup.status.backing_up": "백업 중…",
+    "backup.action.backup": "백업",
+    "backup.action.restore": "복원",
+    "backup.action.connect": "연결",
+    "backup.overview.device_column": "이 기기",
+    "settings.backup.row.products": "상품",
+    "settings.backup.row.orders": "주문",
+    "settings.backup.row.customers": "고객"
   },
   "countries": {
     "TW": "대만",
     "JP": "일본",
     "KR": "대한민국"
+  },
+  "times": {
+    "21:08": "오후 9:08",
+    "21:09": "오후 9:09",
+    "14:32": "오후 2:32",
+    "14:33": "오후 2:33"
   }
 }
