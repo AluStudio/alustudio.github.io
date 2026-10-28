@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Stok: %d",
+    "products.stock.out": "Stokta Yok",
+    "products.detail.stock_history": "Stok Geçmişi",
+    "products.detail.movement.sale": "Satış",
+    "products.detail.movement.purchase": "Satın alma",
+    "customer.select": "Müşteri Seç",
+    "customers.points_pill": "%d puan",
+    "cashier.subtotal": "Ara Toplam",
+    "cashier.subtotal.points": "Puan (%d puan)",
+    "customers.points_reason.earn": "Alışverişten kazanıldı",
+    "onboarding.step_indicator": "Adım %1$d / %2$d",
+    "onboarding.country.title": "DingPOS’a hoş geldiniz",
+    "onboarding.country.tagline": "Mağazanızı kuralım. Nerede satış yapıyorsunuz?",
+    "onboarding.store.title": "Mağazanız",
+    "onboarding.store.tagline": "İşletmenizle ilgili birkaç ayrıntı",
+    "onboarding.store.name_label": "Mağaza adı",
+    "onboarding.store.tax_section": "Vergi ayarları",
+    "onboarding.store.currency_label": "Para birimi",
+    "onboarding.store.tax_rate": "Vergi oranı",
+    "settings.tax_mode.inclusive": "Vergi dahil",
+    "settings.tax_mode.exclusive": "Vergi hariç",
+    "onboarding.back": "Geri",
+    "onboarding.continue": "Devam",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Mağazanız hazır",
+    "onboarding.summary.region": "Ülke veya bölge",
+    "onboarding.success.cta": "Satışa Başla"
+  },
+  "countries": {
+    "TW": "Tayvan",
+    "JP": "Japonya",
+    "KR": "Güney Kore"
+  }
+}

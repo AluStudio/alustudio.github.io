@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Нөөц: %d",
+    "products.stock.out": "Нөөцгүй",
+    "products.detail.stock_history": "Нөөцийн түүх",
+    "products.detail.movement.sale": "Борлуулалт",
+    "products.detail.movement.purchase": "Худалдан авалт",
+    "customer.select": "Үйлчлүүлэгч сонгох",
+    "customers.points_pill": "%d оноо",
+    "cashier.subtotal": "Дэд дүн",
+    "cashier.subtotal.points": "Оноо (%d оноо)",
+    "customers.points_reason.earn": "Худалдан авалтаас олсон",
+    "onboarding.step_indicator": "%2$d-ийн %1$d-р алхам",
+    "onboarding.country.title": "DingPOS-д тавтай морил",
+    "onboarding.country.tagline": "Дэлгүүрээ тохируулъя. Та хаана худалдаа хийдэг вэ?",
+    "onboarding.store.title": "Таны дэлгүүр",
+    "onboarding.store.tagline": "Бизнесийн тань тухай хэдэн мэдээлэл",
+    "onboarding.store.name_label": "Дэлгүүрийн нэр",
+    "onboarding.store.tax_section": "Татварын тохиргоо",
+    "onboarding.store.currency_label": "Валют",
+    "onboarding.store.tax_rate": "Татварын хувь",
+    "settings.tax_mode.inclusive": "Татвартай үнэ",
+    "settings.tax_mode.exclusive": "Татваргүй үнэ",
+    "onboarding.back": "Буцах",
+    "onboarding.continue": "Үргэлжлүүлэх",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Таны дэлгүүр бэлэн боллоо",
+    "onboarding.summary.region": "Улс эсвэл бүс нутаг",
+    "onboarding.success.cta": "Борлуулж эхлэх"
+  },
+  "countries": {
+    "TW": "Тайвань",
+    "JP": "Япон",
+    "KR": "Өмнөд Солонгос"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "স্টক: %d",
+    "products.stock.out": "স্টক নেই",
+    "products.detail.stock_history": "স্টকের ইতিহাস",
+    "products.detail.movement.sale": "বিক্রি",
+    "products.detail.movement.purchase": "ক্রয়",
+    "customer.select": "গ্রাহক বেছে নিন",
+    "customers.points_pill": "%d পয়েন্ট",
+    "cashier.subtotal": "উপমোট",
+    "cashier.subtotal.points": "পয়েন্ট (%d পয়েন্ট)",
+    "customers.points_reason.earn": "কেনাকাটা থেকে অর্জিত",
+    "onboarding.step_indicator": "ধাপ %1$d / %2$d",
+    "onboarding.country.title": "DingPOS-এ স্বাগতম",
+    "onboarding.country.tagline": "চলুন আপনার স্টোর সেট করি। আপনি কোথায় বিক্রি করছেন?",
+    "onboarding.store.title": "আপনার স্টোর",
+    "onboarding.store.tagline": "আপনার ব্যবসা সম্পর্কে কিছু তথ্য",
+    "onboarding.store.name_label": "স্টোরের নাম",
+    "onboarding.store.tax_section": "ট্যাক্স সেটিংস",
+    "onboarding.store.currency_label": "মুদ্রা",
+    "onboarding.store.tax_rate": "ট্যাক্সের হার",
+    "settings.tax_mode.inclusive": "কর অন্তর্ভুক্ত",
+    "settings.tax_mode.exclusive": "কর বাদে",
+    "onboarding.back": "পেছনে",
+    "onboarding.continue": "চালিয়ে যান",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "আপনার স্টোর প্রস্তুত",
+    "onboarding.summary.region": "দেশ বা অঞ্চল",
+    "onboarding.success.cta": "বিক্রি শুরু করুন"
+  },
+  "countries": {
+    "TW": "তাইওয়ান",
+    "JP": "জাপান",
+    "KR": "দক্ষিণ কোরিয়া"
+  }
+}

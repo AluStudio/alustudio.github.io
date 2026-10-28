@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "재고: %d",
+    "products.stock.out": "재고 없음",
+    "products.detail.stock_history": "재고 내역",
+    "products.detail.movement.sale": "판매",
+    "products.detail.movement.purchase": "매입",
+    "customer.select": "고객 선택",
+    "customers.points_pill": "%d포인트",
+    "cashier.subtotal": "소계",
+    "cashier.subtotal.points": "포인트(%d포인트)",
+    "customers.points_reason.earn": "구매 적립",
+    "onboarding.step_indicator": "%2$d단계 중 %1$d단계",
+    "onboarding.country.title": "DingPOS에 오신 것을 환영합니다",
+    "onboarding.country.tagline": "매장을 설정해 볼까요? 어디에서 판매하시나요?",
+    "onboarding.store.title": "내 매장",
+    "onboarding.store.tagline": "사업에 대한 간단한 정보",
+    "onboarding.store.name_label": "매장 이름",
+    "onboarding.store.tax_section": "세금 설정",
+    "onboarding.store.currency_label": "통화",
+    "onboarding.store.tax_rate": "세율",
+    "settings.tax_mode.inclusive": "세금 포함",
+    "settings.tax_mode.exclusive": "세금 별도",
+    "onboarding.back": "뒤로",
+    "onboarding.continue": "계속",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "매장 준비가 끝났습니다",
+    "onboarding.summary.region": "국가 또는 지역",
+    "onboarding.success.cta": "판매 시작"
+  },
+  "countries": {
+    "TW": "대만",
+    "JP": "일본",
+    "KR": "대한민국"
+  }
+}

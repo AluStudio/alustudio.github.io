@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Lager: %d",
+    "products.stock.out": "Ikke på lager",
+    "products.detail.stock_history": "Lagerhistorik",
+    "products.detail.movement.sale": "Salg",
+    "products.detail.movement.purchase": "Indkøb",
+    "customer.select": "Vælg kunde",
+    "customers.points_pill": "%d point",
+    "cashier.subtotal": "Subtotal",
+    "cashier.subtotal.points": "Point (%d point)",
+    "customers.points_reason.earn": "Optjent ved køb",
+    "onboarding.step_indicator": "Trin %1$d af %2$d",
+    "onboarding.country.title": "Velkommen til DingPOS",
+    "onboarding.country.tagline": "Lad os sætte din butik op. Hvor sælger du?",
+    "onboarding.store.title": "Din butik",
+    "onboarding.store.tagline": "Et par oplysninger om din virksomhed",
+    "onboarding.store.name_label": "Butikkens navn",
+    "onboarding.store.tax_section": "Momsindstillinger",
+    "onboarding.store.currency_label": "Valuta",
+    "onboarding.store.tax_rate": "Momssats",
+    "settings.tax_mode.inclusive": "Inkl. moms",
+    "settings.tax_mode.exclusive": "Ekskl. moms",
+    "onboarding.back": "Tilbage",
+    "onboarding.continue": "Fortsæt",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Din butik er klar",
+    "onboarding.summary.region": "Land eller region",
+    "onboarding.success.cta": "Begynd salg"
+  },
+  "countries": {
+    "TW": "Taiwan",
+    "JP": "Japan",
+    "KR": "Sydkorea"
+  }
+}

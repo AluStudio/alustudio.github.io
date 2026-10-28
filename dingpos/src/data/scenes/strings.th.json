@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "สต็อก: %d",
+    "products.stock.out": "สินค้าหมดสต็อก",
+    "products.detail.stock_history": "ประวัติสต็อก",
+    "products.detail.movement.sale": "ขาย",
+    "products.detail.movement.purchase": "ซื้อเข้า",
+    "customer.select": "เลือกลูกค้า",
+    "customers.points_pill": "%d แต้ม",
+    "cashier.subtotal": "ยอดย่อย",
+    "cashier.subtotal.points": "แต้ม (%d แต้ม)",
+    "customers.points_reason.earn": "ได้รับจากการซื้อ",
+    "onboarding.step_indicator": "ขั้นตอนที่ %1$d จาก %2$d",
+    "onboarding.country.title": "ยินดีต้อนรับสู่ DingPOS",
+    "onboarding.country.tagline": "มาตั้งค่าร้านของคุณกัน คุณขายสินค้าที่ไหน",
+    "onboarding.store.title": "ร้านของคุณ",
+    "onboarding.store.tagline": "รายละเอียดเล็กน้อยเกี่ยวกับธุรกิจของคุณ",
+    "onboarding.store.name_label": "ชื่อร้าน",
+    "onboarding.store.tax_section": "การตั้งค่าภาษี",
+    "onboarding.store.currency_label": "สกุลเงิน",
+    "onboarding.store.tax_rate": "อัตราภาษี",
+    "settings.tax_mode.inclusive": "รวมภาษีแล้ว",
+    "settings.tax_mode.exclusive": "ยังไม่รวมภาษี",
+    "onboarding.back": "กลับ",
+    "onboarding.continue": "ต่อไป",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "ร้านของคุณพร้อมแล้ว",
+    "onboarding.summary.region": "ประเทศหรือภูมิภาค",
+    "onboarding.success.cta": "เริ่มขาย"
+  },
+  "countries": {
+    "TW": "ไต้หวัน",
+    "JP": "ญี่ปุ่น",
+    "KR": "เกาหลีใต้"
+  }
+}

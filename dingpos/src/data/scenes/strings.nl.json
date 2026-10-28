@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Voorraad: %d",
+    "products.stock.out": "Niet op voorraad",
+    "products.detail.stock_history": "Voorraadgeschiedenis",
+    "products.detail.movement.sale": "Verkoop",
+    "products.detail.movement.purchase": "Inkoop",
+    "customer.select": "Kies klant",
+    "customers.points_pill": "%d punten",
+    "cashier.subtotal": "Subtotaal",
+    "cashier.subtotal.points": "Punten (%d pnt.)",
+    "customers.points_reason.earn": "Gespaard met aankoop",
+    "onboarding.step_indicator": "Stap %1$d van %2$d",
+    "onboarding.country.title": "Welkom bij DingPOS",
+    "onboarding.country.tagline": "We stellen je winkel in. Waar verkoop je?",
+    "onboarding.store.title": "Je winkel",
+    "onboarding.store.tagline": "Enkele gegevens over je bedrijf",
+    "onboarding.store.name_label": "Winkelnaam",
+    "onboarding.store.tax_section": "Btw-instellingen",
+    "onboarding.store.currency_label": "Valuta",
+    "onboarding.store.tax_rate": "Btw-tarief",
+    "settings.tax_mode.inclusive": "Incl. btw",
+    "settings.tax_mode.exclusive": "Excl. btw",
+    "onboarding.back": "Terug",
+    "onboarding.continue": "Ga door",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Je winkel is klaar",
+    "onboarding.summary.region": "Land of regio",
+    "onboarding.success.cta": "Begin met verkopen"
+  },
+  "countries": {
+    "TW": "Taiwan",
+    "JP": "Japan",
+    "KR": "Zuid-Korea"
+  }
+}

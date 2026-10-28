@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Készlet: %d",
+    "products.stock.out": "Elfogyott",
+    "products.detail.stock_history": "Készletmozgások",
+    "products.detail.movement.sale": "Eladás",
+    "products.detail.movement.purchase": "Beszerzés",
+    "customer.select": "Vevő kiválasztása",
+    "customers.points_pill": "%d pont",
+    "cashier.subtotal": "Részösszeg",
+    "cashier.subtotal.points": "Pontok (%d pont)",
+    "customers.points_reason.earn": "Vásárlásból szerzett",
+    "onboarding.step_indicator": "%1$d. lépés, összesen %2$d",
+    "onboarding.country.title": "Üdvözli a DingPOS",
+    "onboarding.country.tagline": "Állítsuk be az üzletét. Hol árul?",
+    "onboarding.store.title": "Az Ön üzlete",
+    "onboarding.store.tagline": "Néhány adat a vállalkozásáról",
+    "onboarding.store.name_label": "Üzlet neve",
+    "onboarding.store.tax_section": "Adóbeállítások",
+    "onboarding.store.currency_label": "Pénznem",
+    "onboarding.store.tax_rate": "Adókulcs",
+    "settings.tax_mode.inclusive": "Adóval együtt",
+    "settings.tax_mode.exclusive": "Adó nélkül",
+    "onboarding.back": "Vissza",
+    "onboarding.continue": "Folytatás",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Az üzlete készen áll",
+    "onboarding.summary.region": "Ország vagy régió",
+    "onboarding.success.cta": "Eladás indítása"
+  },
+  "countries": {
+    "TW": "Tajvan",
+    "JP": "Japán",
+    "KR": "Dél-Korea"
+  }
+}

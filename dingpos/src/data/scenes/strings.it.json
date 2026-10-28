@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Giacenza: %d",
+    "products.stock.out": "Esaurito",
+    "products.detail.stock_history": "Storico giacenza",
+    "products.detail.movement.sale": "Vendita",
+    "products.detail.movement.purchase": "Acquisto",
+    "customer.select": "Seleziona cliente",
+    "customers.points_pill": "%d pt",
+    "cashier.subtotal": "Subtotale",
+    "cashier.subtotal.points": "Punti (%d pt)",
+    "customers.points_reason.earn": "Accumulati con l'acquisto",
+    "onboarding.step_indicator": "Passo %1$d di %2$d",
+    "onboarding.country.title": "Benvenuto in DingPOS",
+    "onboarding.country.tagline": "Configuriamo il tuo negozio. Dove vendi?",
+    "onboarding.store.title": "Il tuo negozio",
+    "onboarding.store.tagline": "Qualche dettaglio sulla tua attività",
+    "onboarding.store.name_label": "Nome del negozio",
+    "onboarding.store.tax_section": "Impostazioni imposte",
+    "onboarding.store.currency_label": "Valuta",
+    "onboarding.store.tax_rate": "Aliquota",
+    "settings.tax_mode.inclusive": "Imposta inclusa",
+    "settings.tax_mode.exclusive": "Imposta esclusa",
+    "onboarding.back": "Indietro",
+    "onboarding.continue": "Continua",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Il tuo negozio è pronto",
+    "onboarding.summary.region": "Paese o regione",
+    "onboarding.success.cta": "Inizia a vendere"
+  },
+  "countries": {
+    "TW": "Taiwan",
+    "JP": "Giappone",
+    "KR": "Corea del Sud"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "ស្តុក៖ %d",
+    "products.stock.out": "អស់ស្តុក",
+    "products.detail.stock_history": "ប្រវត្តិស្តុក",
+    "products.detail.movement.sale": "ការលក់",
+    "products.detail.movement.purchase": "ការទិញចូល",
+    "customer.select": "ជ្រើសរើសអតិថិជន",
+    "customers.points_pill": "%d ពិន្ទុ",
+    "cashier.subtotal": "សរុបរង",
+    "cashier.subtotal.points": "ពិន្ទុ (%d ពិន្ទុ)",
+    "customers.points_reason.earn": "ទទួលបានពីការទិញ",
+    "onboarding.step_indicator": "ជំហានទី %1$d ក្នុងចំណោម %2$d",
+    "onboarding.country.title": "ស្វាគមន៍មកកាន់ DingPOS",
+    "onboarding.country.tagline": "តោះរៀបចំហាងរបស់អ្នក។ តើអ្នកលក់នៅទីណា?",
+    "onboarding.store.title": "ហាងរបស់អ្នក",
+    "onboarding.store.tagline": "ព័ត៌មានលម្អិតខ្លះអំពីអាជីវកម្មរបស់អ្នក",
+    "onboarding.store.name_label": "ឈ្មោះហាង",
+    "onboarding.store.tax_section": "ការកំណត់ពន្ធ",
+    "onboarding.store.currency_label": "រូបិយប័ណ្ណ",
+    "onboarding.store.tax_rate": "អត្រាពន្ធ",
+    "settings.tax_mode.inclusive": "បូករួមពន្ធ",
+    "settings.tax_mode.exclusive": "មិនបូករួមពន្ធ",
+    "onboarding.back": "ត្រឡប់ក្រោយ",
+    "onboarding.continue": "បន្ត",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "ហាងរបស់អ្នកបានរួចរាល់",
+    "onboarding.summary.region": "ប្រទេស ឬតំបន់",
+    "onboarding.success.cta": "ចាប់ផ្តើមលក់"
+  },
+  "countries": {
+    "TW": "តៃវ៉ាន់",
+    "JP": "ជប៉ុន",
+    "KR": "កូរ៉េ​ខាង​ត្បូង"
+  }
+}

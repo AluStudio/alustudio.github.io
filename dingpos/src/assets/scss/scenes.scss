@@ -1,5 +1,26 @@
 @use "tokens" as *;
 
+// The iPad app's own palette (DesignSystem Colors.xcassets), for states the
+// site's tokens have no colour for.
+$app-neutral-100: #e3e6ee;
+$app-neutral-200: #ccd1dc;
+$app-neutral-400: #808898;
+$app-primary: #4f6d8e;
+$app-primary-wash: #eef2f8;
+$app-warning-50: #faf4e7;
+$app-warning-500: #a68830;
+$app-warning-600: #866e24;
+$app-error-50: #fdf0ef;
+$app-error-500: #c05250;
+$app-error-600: #9e403e;
+$app-success-50: #edf6f2;
+$app-success-500: #3d8b6f;
+$app-success-600: #2e7058;
+$app-tier-50: #f2eee4;
+$app-tier-200: #c8a45b;
+$app-tier-700: #6b5a30;
+$app-bezel: #1f2530;
+
 // Redrawn app fragments for the home page's feature cards (Scenes.jsx). Each
 // scene fills its card's visual panel; colours follow the app's own tokens.
 .scene {
@@ -40,16 +61,6 @@
     &[data-instant] {
       transition: none;
     }
-  }
-}
-
-@keyframes pulse-ring {
-  0% {
-    box-shadow: 0 0 0 0 rgba($amber, 0.45);
-  }
-
-  100% {
-    box-shadow: 0 0 0 8px rgba($amber, 0);
   }
 }
 
@@ -229,297 +240,544 @@
   }
 }
 
+// ─── Shared app parts ───────────────────────────────────────────
+.app-card {
+  background: $surface;
+  box-shadow: 0 8px 24px -16px rgba($ink, 0.35);
+}
+
+.scene-photo {
+  display: block;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-lg;
+  background: $sunken;
+  object-fit: cover;
+}
+
+// Each digit is a strip of blank and 0–9 drawn by CSS, slid to its value;
+// columns start a beat apart, like an odometer.
+.roll {
+  display: inline-flex;
+}
+
+.roll__digit {
+  display: inline-block;
+  height: 1lh;
+  overflow: hidden;
+  vertical-align: top;
+
+  &::before {
+    content: "\a0\A 0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9";
+    display: block;
+    white-space: pre;
+    transform: translateY(calc(var(--d) * -1lh));
+    transition: transform 0.7s $e calc(var(--i) * 50ms);
+  }
+}
+
+// Drawn by setting stroke-dashoffset to 0 on the parent's cue.
+.check-mark {
+  display: block;
+
+  path {
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes press {
+  40% {
+    transform: scale(0.97);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.86);
+    filter: blur(4px);
+  }
+}
+
 // ─── Inventory ──────────────────────────────────────────────────
 .scene--stock {
   flex-direction: column;
   align-items: stretch;
   gap: s(200);
-  padding-inline: max(#{s(300)}, calc(50% - 140px));
+  padding: s(200) max(#{s(300)}, calc(50% - 150px));
 }
 
+// Card radius 16 − its 4px padding gives the rows 12, and 12 − 4 the photos 8 (B3).
 .stock {
   display: grid;
-  gap: s(75);
-  padding: s(100);
-  border-radius: $radius-xl;
-  background: $surface;
-  box-shadow: 0 8px 24px -16px rgba($ink, 0.35);
+  gap: s(50);
+  padding: s(50);
+  border-radius: $radius-2xl;
 
   &__row {
-    display: grid;
-    grid-template-columns: 28px minmax(0, 1fr) 24px;
+    position: relative;
+    display: flex;
     align-items: center;
     gap: s(100);
+    padding: s(50);
+    border-radius: $radius-xl;
+
+    // Low and sold-out washes, faded in once the digits have rolled.
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: $app-warning-50;
+      opacity: 0;
+      transition: opacity 0.6s $e2;
+    }
+
+    &::after {
+      background: $app-error-50;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &[data-press] {
+      animation: press 0.5s $e;
+    }
   }
 
-  &__icon {
+  &__row[data-state="low"]::before,
+  &__row[data-state="out"]::after {
+    opacity: 1;
+    transition-delay: 0.45s;
+  }
+
+  &__text {
     display: grid;
-    place-items: center;
-    width: 28px;
-    height: 28px;
-    border-radius: $radius-lg;
-    background: $accent-wash;
-    color: $accent;
+  }
 
-    &--1 {
-      background: $amber-soft;
-      color: $amber;
+  &__price {
+    @include text("sm");
+    font-weight: 600;
+    color: $ink;
+  }
+
+  // The count and "Out of Stock" share one cell. Selling out, the count rolls
+  // to 0 first and then hands over; restocking, the label leaves first.
+  &__badge {
+    display: grid;
+    @include text("xs");
+
+    > * {
+      grid-area: 1 / 1;
     }
-
-    &--2 {
-      background: $green-soft;
-      color: $green;
-    }
-  }
-
-  &__row[data-low] &__icon {
-    animation: pulse-ring 1.6s $e2 infinite;
-  }
-
-  &__track {
-    height: 8px;
-    overflow: hidden;
-    border-radius: $radius-full;
-    background: $sunken;
-  }
-
-  &__fill {
-    display: block;
-    height: 100%;
-    border-radius: $radius-full;
-    background: $accent-mid;
-    transform: scaleX(var(--fill));
-    transform-origin: left;
-    transition: background-color 0.5s $ease;
-  }
-
-  &__row[data-low] &__fill {
-    background: $amber;
   }
 
   &__count {
-    @include text("sm");
-    font-weight: 700;
-    text-align: right;
-    transition: color 0.5s $ease;
+    color: $ink-muted;
+    transition:
+      opacity 0.4s $e2 0.15s,
+      color 0.5s $ease 0.45s;
   }
 
-  &__row[data-low] &__count {
-    color: $amber;
+  &__out {
+    font-weight: 600;
+    color: $app-error-500;
+    opacity: 0;
+    transform: translateY(4px);
+    transition:
+      opacity 0.2s $e2,
+      transform 0.2s $e;
+  }
+
+  &__row[data-state="low"] &__count {
+    font-weight: 600;
+    color: $app-warning-600;
+  }
+
+  &__row[data-state="out"] &__count {
+    opacity: 0;
+    transition: opacity 0.25s $e2 0.6s;
+  }
+
+  &__row[data-state="out"] &__out {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.5s $e2 0.75s,
+      transform 0.8s $e 0.75s;
+  }
+
+  &__alert {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    padding-right: s(50);
+    color: $app-warning-500;
+    opacity: 0;
+    transform: scale(0.86);
+    filter: blur(4px);
+    transition:
+      opacity 0.4s $e2,
+      transform 0.4s $e,
+      filter 0.4s $e2,
+      color 0.5s $ease;
+  }
+
+  &__row[data-state] &__alert {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition-delay: 0.45s;
+  }
+
+  &__row[data-state="out"] &__alert {
+    color: $app-error-500;
   }
 }
 
-.scene--stock .stack {
-  --row-h: 40px;
+.history {
+  &__title {
+    margin-bottom: s(50);
+    padding-inline: s(100);
+    @include text("xs");
+    font-weight: 600;
+    color: $ink-muted;
+  }
+
+  .stack {
+    --row-h: 44px;
+  }
 }
 
-.ledger {
-  display: flex;
-  align-items: center;
-  gap: s(100);
-  padding: 0 s(100);
+.movement {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: center;
+  column-gap: s(100);
+  padding: s(25) s(100);
   border-radius: $radius-lg;
   background: $surface;
 
-  &__icon {
-    display: grid;
-    place-items: center;
-    width: 24px;
-    height: 24px;
-    border-radius: $radius-md;
-    background: $accent-wash;
-    color: $accent;
+  &__kind {
+    grid-row: 1 / 3;
+    align-self: center;
+    @include text("xs");
+    font-weight: 600;
+    color: $app-error-600;
 
-    &[data-kind="adjust"] {
-      background: $green-soft;
-      color: $green;
+    &[data-kind="purchase"] {
+      color: $app-success-500;
     }
-  }
-
-  &__line {
-    flex: 1;
-    height: 6px;
-    border-radius: $radius-full;
-    background: $sunken;
   }
 
   &__delta {
     @include text("sm");
-    font-weight: 700;
-    color: $ink-soft;
+    font-weight: 600;
+    text-align: right;
+    color: $app-error-600;
 
-    &[data-kind="adjust"] {
-      color: $green;
+    &[data-kind="purchase"] {
+      color: $app-success-600;
     }
+  }
+
+  &__change {
+    @include text("xs");
+    text-align: right;
+    color: $app-neutral-400;
   }
 }
 
 // ─── Members & points ───────────────────────────────────────────
 .scene--loyalty {
-  flex-direction: column;
-  align-items: stretch;
-  gap: s(200);
-  padding-inline: max(#{s(300)}, calc(50% - 130px));
+  padding: s(200) max(#{s(300)}, calc(50% - 150px));
+
+  > * {
+    flex: 1;
+  }
 }
 
-.member {
-  display: flex;
-  align-items: center;
-  gap: s(100);
-  padding: s(100);
-  border-radius: $radius-xl;
-  background: $surface;
-  box-shadow: 0 8px 24px -16px rgba($ink, 0.35);
+// Card radius 16 − its 8px padding gives the inner parts 8 (B3).
+.cart {
+  position: relative;
+  display: grid;
+  gap: s(75);
+  padding: s(75);
+  border-radius: $radius-2xl;
+
+  &__customer {
+    display: grid;
+    align-items: center;
+    height: 40px;
+    padding-inline: s(75);
+    border-radius: $radius-lg;
+    background: $sunken;
+
+    > * {
+      grid-area: 1 / 1;
+      display: flex;
+      align-items: center;
+      gap: s(75);
+      min-width: 0;
+    }
+  }
+
+  &__select {
+    @include text("sm");
+    font-weight: 600;
+    color: $app-neutral-400;
+    transition: opacity 0.4s $e2;
+  }
+
+  &__member {
+    opacity: 0;
+    transform: translateX(-10px);
+    filter: blur(4px);
+    transition:
+      opacity 0.3s $e2,
+      transform 0.3s $e,
+      filter 0.3s $e2;
+  }
+
+  &__customer[data-member] &__select {
+    opacity: 0;
+  }
+
+  &__customer[data-member] &__member {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition:
+      opacity 0.7s $e2,
+      transform 1s $e,
+      filter 0.7s $e2;
+  }
+
+  &__customer[data-member] .tier-pill {
+    animation: pop-in 0.6s $e 0.2s backwards;
+  }
 
   &__avatar {
-    flex: none;
-    color: $accent-mid;
-  }
-
-  &__lines {
-    display: grid;
-    gap: s(75);
-
-    span {
-      display: block;
-      width: 96px;
-      height: 8px;
-      border-radius: $radius-full;
-      background: $sunken;
-
-      & + span {
-        width: 56px;
-        height: 6px;
-      }
-    }
-  }
-
-  &__tier {
     display: grid;
     place-items: center;
+    flex: none;
     width: 28px;
     height: 28px;
-    margin-left: auto;
     border-radius: $radius-full;
-    background: $amber-soft;
-    color: $amber;
-  }
-}
-
-.points {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: s(75);
-
-  &__star {
-    color: #c98a2b;
-  }
-
-  &__value {
-    @include text("4xl");
+    background: $app-primary;
+    color: $surface;
+    @include text("xs");
     font-weight: 700;
-    letter-spacing: -0.02em;
   }
 
-  &__chip {
+  &__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: s(50);
+  }
+
+  &__thumb {
+    position: relative;
+
+    .scene-photo {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__qty {
     position: absolute;
-    top: -(s(100));
-    right: 0;
-    padding: s(25) s(75);
+    top: -(s(50));
+    left: -(s(50));
+    display: grid;
+    place-items: center;
+    min-width: 16px;
+    height: 16px;
     border-radius: $radius-full;
-    background: $green-soft;
-    color: $green;
+    background: $app-primary;
+    box-shadow: 0 0 0 2px $surface;
+    color: $surface;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__price {
     @include text("sm");
     font-weight: 700;
-    animation: chip-float 1.6s $e both;
+  }
 
-    &[data-redeem] {
-      background: #f6dedc;
-      color: $red;
+  &__sums {
+    display: grid;
+    padding: s(75) s(50) 0;
+    border-top: 1px solid $line;
+  }
+
+  &__sum {
+    display: flex;
+    justify-content: space-between;
+    gap: s(100);
+    @include text("xs");
+    color: $ink-muted;
+
+    > :first-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  // Wipes in left to right like a progress fill (design-to-motion B3); the
+  // line keeps its height while hidden, since layout never animates.
+  &__sum--points {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.4s $io;
+
+    > :last-child {
+      font-weight: 600;
+      color: $app-error-600;
+    }
+
+    &[data-shown] {
+      clip-path: inset(0 0 0 0);
+      transition-duration: 0.8s;
+    }
+  }
+
+  &__charge {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 40px;
+    overflow: hidden;
+    border-radius: $radius-lg;
+    background: $app-primary;
+    color: $surface;
+    @include text("base");
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: $app-success-500;
+      opacity: 0;
+      transition: opacity 0.5s $e2;
+    }
+
+    > * {
+      position: relative;
+    }
+
+    &[data-press] {
+      animation: press 0.24s $ease;
+    }
+
+    &[data-paid]::before {
+      opacity: 1;
+    }
+  }
+
+  &__check {
+    position: absolute;
+    left: s(100);
+    width: 20px;
+    height: 20px;
+  }
+
+  &__charge[data-paid] &__check path {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.6s $io 0.15s;
+  }
+
+  // Floats up under the member while the sale's points land on the pill.
+  &__earned {
+    position: absolute;
+    top: 52px;
+    right: s(75);
+    left: s(75);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    column-gap: s(75);
+    padding: s(50) s(100);
+    border-radius: $radius-lg;
+    background: $app-success-50;
+    box-shadow: 0 8px 24px -12px rgba($ink, 0.3);
+    color: $app-success-600;
+    @include text("xs");
+    text-align: center;
+    opacity: 0;
+
+    strong {
+      @include text("sm");
+    }
+
+    &[data-shown] {
+      animation: earned 1.9s both;
     }
   }
 }
 
-@keyframes chip-float {
+@keyframes earned {
   0% {
     opacity: 0;
-    transform: translateY(8px) scale(0.9);
+    transform: translateY(8px);
     filter: blur(4px);
+    animation-timing-function: $e;
   }
 
-  25%,
-  75% {
+  25% {
     opacity: 1;
     transform: none;
     filter: none;
   }
 
+  80% {
+    opacity: 1;
+    transform: none;
+    animation-timing-function: $e2;
+  }
+
   100% {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
 }
 
-.receipt {
-  display: flex;
-  align-items: center;
-  gap: s(100);
-  padding: s(75) s(100);
-  border-radius: $radius-lg;
-  background: $surface;
-
-  &[data-fresh] {
-    animation: land 0.8s $e;
-  }
-
-  &__icon {
-    display: grid;
-    place-items: center;
-    width: 24px;
-    height: 24px;
-    border-radius: $radius-md;
-    background: $accent-wash;
-    color: $accent;
-  }
-
-  &__line {
-    flex: 1;
-    height: 6px;
-    border-radius: $radius-full;
-    background: $sunken;
-  }
-
-  &__amount {
-    display: flex;
-    align-items: center;
-    gap: s(75);
-    @include text("sm");
-    font-weight: 700;
-  }
-
-  &__discount {
-    color: $red;
-    opacity: 0;
-    transform: translateX(6px);
-    transition:
-      opacity 0.5s $e2,
-      transform 0.6s $e;
-
-    &[data-shown] {
-      opacity: 1;
-      transform: none;
-    }
-  }
+.tier-pill,
+.points-pill {
+  flex: none;
+  padding: 0 s(75);
+  border-radius: $radius-full;
+  @include text("xs");
+  font-weight: 600;
+  white-space: nowrap;
 }
 
-@keyframes land {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-    filter: blur(4px);
-  }
+.tier-pill {
+  border: 1px solid $app-tier-200;
+  background: $app-tier-50;
+  color: $app-tier-700;
+}
+
+.points-pill {
+  min-width: 0;
+  overflow: hidden;
+  background: $app-primary-wash;
+  color: $accent;
 }
 
 // ─── Backup (dark) ──────────────────────────────────────────────
@@ -641,5 +899,499 @@
     margin-left: auto;
     border-radius: $radius-full;
     background: rgba($surface, 0.1);
+  }
+}
+
+// ─── Onboarding wizard ──────────────────────────────────────────
+// The app's setup screen on an iPad: progress segments and the step label
+// over a white card whose three pages cross-fade in place.
+.wizard {
+  padding: s(75);
+  border-radius: $radius-3xl;
+  background: $app-bezel;
+  box-shadow:
+    0 1px 2px rgba($ink, 0.3),
+    0 40px 80px -40px rgba($accent-deep, 0.55);
+  user-select: none;
+
+  // Bezel radius 24 − 8 (B3).
+  &__screen {
+    display: grid;
+    justify-items: center;
+    padding: s(300) s(100);
+    border-radius: $radius-2xl;
+    background: $sunken;
+
+    @media (min-width: $bp-md) {
+      padding: s(400) s(300);
+    }
+  }
+
+  &__progress {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: s(50);
+    width: min(100%, 360px);
+  }
+
+  &__segment {
+    height: 4px;
+    overflow: hidden;
+    border-radius: $radius-full;
+    background: $app-neutral-200;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 100%;
+      background: $app-primary;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s $io;
+    }
+
+    &[data-on]::after {
+      transform: none;
+      transition-duration: 0.8s;
+    }
+  }
+
+  &__indicator {
+    display: grid;
+    margin-top: s(75);
+    @include text("xs");
+    font-weight: 600;
+    color: $ink-muted;
+
+    > * {
+      grid-area: 1 / 1;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.4s $e2;
+
+      &[data-on] {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__card {
+    display: grid;
+    width: min(100%, 440px);
+    margin-top: s(200);
+    padding: s(300) s(200);
+    border-radius: $radius-xl;
+    background: $surface;
+    box-shadow: 0 8px 24px -16px rgba($ink, 0.35);
+
+    @media (min-width: $bp-md) {
+      padding: s(300);
+    }
+  }
+
+  // Pages share one cell, so the card is as tall as the tallest page.
+  &__page {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    min-width: 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(8px);
+    visibility: hidden;
+    transition:
+      opacity 0.3s $e2,
+      transform 0.3s $e,
+      visibility 0s 0.3s;
+
+    &[data-on] {
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+      transition:
+        opacity 0.6s $e2 0.15s,
+        transform 1s $e 0.15s,
+        visibility 0s;
+    }
+  }
+
+  &__title {
+    @include text("xl");
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: $ink;
+    text-wrap: balance;
+  }
+
+  &__tagline {
+    margin-top: s(25);
+    @include text("sm");
+    color: $ink-muted;
+    text-wrap: balance;
+  }
+
+  &__section {
+    margin-top: s(200);
+    padding-top: s(200);
+    border-top: 1px solid $line;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: s(50);
+    min-height: 40px;
+    margin-top: s(200);
+    padding: s(75) s(100);
+    border-radius: $radius-lg;
+    background: $app-primary;
+    color: $surface;
+    @include text("sm");
+    font-weight: 600;
+    transition: opacity 0.4s $e2;
+
+    &[data-disabled] {
+      opacity: 0.4;
+    }
+
+    &[data-press] {
+      animation: press 0.32s $ease;
+    }
+
+    &--secondary {
+      background: $app-neutral-100;
+      color: $ink;
+    }
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: s(75);
+
+    > * {
+      margin-top: s(200);
+    }
+  }
+}
+
+.countries {
+  display: grid;
+  gap: s(75);
+  margin-top: s(200);
+}
+
+.country {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: s(100);
+  padding: s(75) s(100);
+  border: 1px solid $app-neutral-100;
+  border-radius: $radius-lg;
+  text-align: left;
+
+  // The selection ring fades in over the hairline.
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 2px $app-primary;
+    opacity: 0;
+    transition: opacity 0.4s $e2;
+  }
+
+  &[data-picked]::after {
+    opacity: 1;
+  }
+
+  &__code {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 32px;
+    height: 24px;
+    border-radius: $radius-sm;
+    background: $app-neutral-100;
+    color: $ink-soft;
+    @include text("xs");
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  &__text {
+    display: grid;
+    min-width: 0;
+  }
+
+  &__name {
+    @include text("sm");
+    font-weight: 600;
+    color: $ink;
+  }
+
+  &__summary {
+    @include text("xs");
+    color: $ink-muted;
+  }
+
+  &__check {
+    position: absolute;
+    top: 0;
+    right: s(100);
+    bottom: 0;
+    margin-block: auto;
+    display: grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: $radius-full;
+    background: $app-primary;
+    color: $surface;
+    opacity: 0;
+    transform: scale(0.86);
+    filter: blur(4px);
+    transition:
+      opacity 0.3s $e2,
+      transform 0.3s $e,
+      filter 0.3s $e2;
+  }
+
+  &[data-picked] &__check {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition-duration: 0.6s, 0.8s, 0.6s;
+  }
+}
+
+.store {
+  display: flex;
+  align-items: flex-end;
+  gap: s(200);
+  margin-top: s(200);
+
+  &__logo {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: $radius-full;
+    background: $app-neutral-100;
+    color: $app-neutral-400;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: scale(0.86);
+      filter: blur(4px);
+      transition:
+        opacity 0.3s $e2,
+        transform 0.3s $e,
+        filter 0.3s $e2;
+    }
+
+    &[data-on] img {
+      opacity: 1;
+      transform: none;
+      filter: none;
+      transition-duration: 0.6s, 0.9s, 0.6s;
+    }
+  }
+
+  &__name {
+    flex: 1;
+  }
+
+  &__tax {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: s(100);
+    margin-top: s(75);
+  }
+}
+
+.field {
+  display: grid;
+  gap: s(50);
+  min-width: 0;
+  text-align: left;
+
+  &__label {
+    @include text("xs");
+    font-weight: 600;
+    color: $ink-muted;
+    text-align: left;
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px;
+    padding-inline: s(100);
+    border-radius: $radius-md;
+    background: $sunken;
+    color: $ink;
+    @include text("sm");
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 1.5px $app-primary;
+      opacity: 0;
+      transition: opacity 0.3s $e2;
+    }
+
+    &[data-focus]::after {
+      opacity: 1;
+    }
+
+    svg {
+      color: $app-neutral-400;
+    }
+  }
+
+  // A caret that blinks once a second while the field waits.
+  &__caret {
+    width: 1.5px;
+    height: 18px;
+    margin-left: 1px;
+    margin-right: auto;
+    background: $app-primary;
+    animation: caret 1s steps(1) infinite;
+  }
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: s(25);
+  margin-top: s(100);
+  padding: s(25);
+  border-radius: $radius-lg;
+  background: $app-neutral-100;
+  @include text("xs");
+  font-weight: 600;
+  color: $ink-muted;
+
+  // Control radius 8 − its 2px padding (B3).
+  > * {
+    padding: s(50);
+    border-radius: $radius-md;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  [data-on] {
+    background: $surface;
+    box-shadow: 0 1px 2px rgba($ink, 0.12);
+    color: $ink;
+  }
+}
+
+.done {
+  &__badge {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto s(200);
+    border-radius: $radius-full;
+    background: $app-success-50;
+    color: $app-success-500;
+  }
+
+  &__check {
+    width: 32px;
+    height: 32px;
+
+    path {
+      stroke-width: 3;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  &__title {
+    @include text("2xl");
+  }
+
+  &__cta {
+    gap: s(75);
+  }
+}
+
+// The badge pops, its check draws, then the button lands, each time the
+// wizard reaches this page. At rest the page simply shows.
+.wizard__page--done {
+  // Undrawn only once the page has faded out.
+  &:not([data-on]) .done__check path {
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0s 0.3s;
+  }
+
+  &[data-on] {
+    .done__badge {
+      animation: pop-in 0.7s $e 0.2s backwards;
+    }
+
+    .done__check path {
+      transition: stroke-dashoffset 0.7s $io 0.45s;
+    }
+
+    .done__cta {
+      animation: pop-in 0.7s $e 0.7s backwards;
+    }
+  }
+}
+
+.summary {
+  display: grid;
+  margin-top: s(200);
+  padding-inline: s(100);
+  border-radius: $radius-md;
+  background: $sunken;
+  @include text("xs");
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: s(100);
+    padding-block: s(75);
+    color: $ink-muted;
+
+    & + & {
+      border-top: 1px solid $app-neutral-100;
+    }
+
+    > :first-child {
+      color: $ink;
+      text-align: left;
+    }
+
+    > :last-child {
+      text-align: right;
+    }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Zaxira: %d",
+    "products.stock.out": "Tugagan",
+    "products.detail.stock_history": "Zaxira tarixi",
+    "products.detail.movement.sale": "Sotuv",
+    "products.detail.movement.purchase": "Xarid",
+    "customer.select": "Mijozni tanlash",
+    "customers.points_pill": "%d ball",
+    "cashier.subtotal": "Oraliq jami",
+    "cashier.subtotal.points": "Ballar (%d ball)",
+    "customers.points_reason.earn": "Xariddan to‘plangan",
+    "onboarding.step_indicator": "%2$d dan %1$d-qadam",
+    "onboarding.country.title": "DingPOS ga xush kelibsiz",
+    "onboarding.country.tagline": "Keling, do‘koningizni sozlaymiz. Qayerda sotasiz?",
+    "onboarding.store.title": "Do‘koningiz",
+    "onboarding.store.tagline": "Biznesingiz haqida bir necha ma’lumot",
+    "onboarding.store.name_label": "Do‘kon nomi",
+    "onboarding.store.tax_section": "Soliq sozlamalari",
+    "onboarding.store.currency_label": "Valyuta",
+    "onboarding.store.tax_rate": "Soliq stavkasi",
+    "settings.tax_mode.inclusive": "Soliq narxga kiritilgan",
+    "settings.tax_mode.exclusive": "Soliq narxga kiritilmagan",
+    "onboarding.back": "Orqaga",
+    "onboarding.continue": "Davom etish",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Do‘koningiz tayyor",
+    "onboarding.summary.region": "Mamlakat yoki mintaqa",
+    "onboarding.success.cta": "Sotuvni boshlash"
+  },
+  "countries": {
+    "TW": "Tayvan",
+    "JP": "Yaponiya",
+    "KR": "Janubiy Koreya"
+  }
+}

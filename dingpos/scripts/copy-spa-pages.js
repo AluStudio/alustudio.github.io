@@ -48,6 +48,7 @@ import {
 import { contentUnits, fitDescription, DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
 import { INLINE_LINK, blockTexts } from "../src/data/guides/links.js";
+import { SCENE_COUNTRIES, SCENE_STRING_KEYS, placeholders } from "../src/data/scenes/keys.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -68,6 +69,9 @@ const guidesPath = (code) => join(__dirname, "..", "src", "data", "guides", `gui
 const readGuides = async (code) =>
   existsSync(guidesPath(code)) ? import(pathToFileURL(guidesPath(code)).href) : null;
 
+const scenesPath = (code) => join(__dirname, "..", "src", "data", "scenes", `strings.${code}.json`);
+const readScenes = (code) => (existsSync(scenesPath(code)) ? JSON.parse(readFileSync(scenesPath(code), "utf8")) : null);
+
 const readFaq = (code) => import(pathToFileURL(join(__dirname, "..", "src", "data", "faq", `articles.${code}.js`)).href);
 
 // Every shipped language gets its own URL tree; en, the registry's first
@@ -83,6 +87,7 @@ const LOCALES = await Promise.all(
       faq: await readFaq(code),
       guides: await readGuides(code),
       ui: readLocale(code),
+      scenes: readScenes(code),
     })),
 );
 const DEFAULT_LOCALE = LOCALES[0];
@@ -152,6 +157,33 @@ function validateLocales() {
 }
 
 validateLocales();
+
+// ── Scene strings ───────────────────────────────────────────
+// The home page's scenes draw app strings synced by
+// scripts/sync-scene-strings.mjs; a missing one renders its raw key.
+function validateSceneStrings() {
+  const errors = [];
+  const enStrings = DEFAULT_LOCALE.scenes?.strings ?? {};
+  for (const { code, scenes } of LOCALES) {
+    if (!scenes) {
+      errors.push(`${code} has no src/data/scenes/strings.${code}.json (run scripts/sync-scene-strings.mjs)`);
+      continue;
+    }
+    for (const key of SCENE_STRING_KEYS) {
+      const value = scenes.strings?.[key];
+      if (!value?.trim()) errors.push(`${code} scene strings lack "${key}"`);
+      else if (placeholders(value).join() !== placeholders(enStrings[key] ?? "").join()) {
+        errors.push(`${code} scene string "${key}" has other placeholders than en's`);
+      }
+    }
+    for (const { code: region } of SCENE_COUNTRIES) {
+      if (!scenes.countries?.[region]?.trim()) errors.push(`${code} scene strings lack the country "${region}"`);
+    }
+  }
+  fail("Scene string validation failed", errors);
+}
+
+validateSceneStrings();
 
 // ── FAQ data consistency guard ──────────────────────────────
 const VERSION_PATTERN = /^\d+\.\d+(\.\d+)?$/;

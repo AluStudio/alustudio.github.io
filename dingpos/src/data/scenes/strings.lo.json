@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "ສະຕັອກ: %d",
+    "products.stock.out": "ສິນຄ້າໝົດສະຕັອກ",
+    "products.detail.stock_history": "ປະຫວັດສະຕັອກ",
+    "products.detail.movement.sale": "ຂາຍ",
+    "products.detail.movement.purchase": "ຊື້ເຂົ້າ",
+    "customer.select": "ເລືອກລູກຄ້າ",
+    "customers.points_pill": "%d ແຕ້ມ",
+    "cashier.subtotal": "ຍອດຍ່ອຍ",
+    "cashier.subtotal.points": "ແຕ້ມ (%d ແຕ້ມ)",
+    "customers.points_reason.earn": "ໄດ້ຮັບຈາກການຊື້",
+    "onboarding.step_indicator": "ຂັ້ນຕອນທີ %1$d ຈາກ %2$d",
+    "onboarding.country.title": "ຍິນດີຕ້ອນຮັບສູ່ DingPOS",
+    "onboarding.country.tagline": "ມາຕັ້ງຄ່າຮ້ານຂອງທ່ານກັນ. ທ່ານຂາຍຢູ່ບ່ອນໃດ?",
+    "onboarding.store.title": "ຮ້ານຂອງທ່ານ",
+    "onboarding.store.tagline": "ລາຍລະອຽດເລັກນ້ອຍກ່ຽວກັບທຸລະກິດຂອງທ່ານ",
+    "onboarding.store.name_label": "ຊື່ຮ້ານ",
+    "onboarding.store.tax_section": "ການຕັ້ງຄ່າພາສີ",
+    "onboarding.store.currency_label": "ສະກຸນເງິນ",
+    "onboarding.store.tax_rate": "ອັດຕາພາສີ",
+    "settings.tax_mode.inclusive": "ລວມພາສີແລ້ວ",
+    "settings.tax_mode.exclusive": "ບໍ່ລວມພາສີ",
+    "onboarding.back": "ກັບຄືນ",
+    "onboarding.continue": "ສືບຕໍ່",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "ຮ້ານຂອງທ່ານພ້ອມແລ້ວ",
+    "onboarding.summary.region": "ປະເທດ ຫຼື ພາກພື້ນ",
+    "onboarding.success.cta": "ເລີ່ມຂາຍ"
+  },
+  "countries": {
+    "TW": "ໄຕ້ຫວັນ",
+    "JP": "ຍີ່ປຸ່ນ",
+    "KR": "ເກົາຫລີໃຕ້"
+  }
+}

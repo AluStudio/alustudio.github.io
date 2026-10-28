@@ -4,15 +4,12 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   ArrowsLeftRight,
-  Bell,
   CalendarCheck,
   Check,
   DeviceTabletSpeaker,
-  Globe,
   Plus,
   Receipt,
   ShieldCheck,
-  Storefront,
 } from "@phosphor-icons/react";
 import "../assets/scss/home.scss";
 import "../assets/scss/scenes.scss";
@@ -22,7 +19,14 @@ import AppStoreButton from "../components/AppStoreButton";
 import TransitionLink from "../components/TransitionLink";
 import Device from "../components/Device";
 import TaglineReveal from "../components/TaglineReveal";
-import { ProductsScene, InventoryScene, LoyaltyScene, BackupScene } from "../components/Scenes";
+import {
+  ProductsScene,
+  InventoryScene,
+  LoyaltyScene,
+  BackupScene,
+  WizardScene,
+} from "../components/Scenes";
+import { wizardEntry, wizardFillMs, wizardSteps } from "../components/wizardStory";
 import { Price } from "../components/Price";
 import { PLANS } from "../data/plans";
 import { getFaq } from "../data/faq";
@@ -52,8 +56,6 @@ const FEATURES = [
   { key: "inventory", scene: <InventoryScene delay={900} /> },
   { key: "loyalty", scene: <LoyaltyScene delay={1600} /> },
 ];
-
-const STEP_ICONS = [Globe, Storefront, Bell];
 
 // Objections a first-time visitor raises before installing, answered by the
 // opening paragraph of the matching support article.
@@ -265,43 +267,42 @@ function Privacy() {
   );
 }
 
-// At rest every step is done; the story clears them and lights them again
-// in order, as a store goes from download to its first sale.
-const stepSteps = [
-  { active: 3, ms: 3200 },
-  { active: 0, ms: 600 },
-  { active: 1, ms: 1200 },
-  { active: 2, ms: 1200 },
-];
-
+// The wizard acts out the three steps beside their list; each item's track
+// fills for as long as its screen is on. At rest the store is ready and every
+// step is done.
 function Steps() {
   const { t } = useTranslation();
   const items = useList("features.onboarding.items");
   const ref = useRef(null);
-  const step = useStory(ref, stepSteps, 200, 1);
+  const step = useStory(ref, wizardSteps, 200, wizardEntry);
   return (
     <section className="section steps-section" id="onboarding">
       <div className="shell">
         <div className="section-head section-head--center reveal">
           <h2>{t("features.onboarding.title")}</h2>
         </div>
-        <ol className="steps" ref={ref}>
-          {items.map((item, i) => {
-            const Icon = STEP_ICONS[i] ?? Check;
-            return (
-              <li key={item} className="step reveal-card" data-done={i < step.active || undefined}>
-                <span className="step__head">
-                  <span className="step__num">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="step__wire" aria-hidden="true" />
-                </span>
-                <span className="step__icon" aria-hidden="true">
-                  <Icon size={24} weight="duotone" />
-                </span>
-                <p className="step__text">{item}</p>
-              </li>
-            );
-          })}
-        </ol>
+        <div className="onboarding" ref={ref}>
+          <div className="onboarding__visual reveal-card">
+            <WizardScene step={step} />
+          </div>
+          <ol className="steps reveal">
+            {items.map((item, i) => {
+              const state = i < step.fill ? "done" : i === step.fill ? "active" : undefined;
+              return (
+                <li key={item} className="step" data-state={state} style={{ "--fill-ms": `${wizardFillMs[i] ?? 0}ms` }}>
+                  <span className="step__num" aria-hidden="true">
+                    <span>{i + 1}</span>
+                    <Check size={14} weight="bold" />
+                  </span>
+                  <span className="step__body">
+                    <span className="step__text">{item}</span>
+                    <span className="step__track" aria-hidden="true" />
+                  </span>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
       </div>
     </section>
   );

@@ -49,6 +49,7 @@ read_when:
 - 語系前綴的單一來源：DingPOS 的 `src/i18n.js` 與 `scripts/copy-spa-pages.js` 都讀 `dingpos/l10n/languages.json`。Sotto 是 `src/i18n.js` 的 `supportedLanguages` 和 `scripts/copy-spa-pages.js` 的 `LOCALE_DEFS`，兩邊必須一致。
 - 每種語言的內容都要完整，不退回英文（唯一例外是 DingPOS 的獲客文章，見 [§獲客文章](#獲客文章)）：DingPOS 與 Sotto 的 `copy-spa-pages.js` 在任一語言的 UI 字串少了或多了 en 的 key，或 FAQ／guide pack 的 slug 與 en 不同時讓 build 失敗。兩者都沒有 fallback 語言，缺 key 會直接顯示 key 名稱。Sotto 另外拒絕任何空字串。DingPOS 另外擋 en 是陣列、其他語言卻不是陣列的 key（頁面會把它當成空清單，整段默默消失）；空字串只允許在 key 名稱以 `_before`／`_after` 結尾的句子片段，它們夾住行內的價格，語序可能讓其中一邊是空的。
 - DingPOS 與 Sotto 每次只載入當頁語言的字串與 FAQ／guides（`import.meta.glob` 動態載入，載完才 hydrate），加一種語言不會讓任何一頁下載更多 JS。
+- DingPOS 首頁的 scene（`dingpos/src/components/Scenes.jsx`）畫的是 app 畫面，介面字串逐字用 app 自己的譯文，不經網站的翻譯流程：`node dingpos/scripts/sync-scene-strings.mjs` 從本機 app repo 的 `Localizable.strings`，把 `dingpos/src/data/scenes/keys.js` 列出的 key 複製成每種語言一份 `dingpos/src/data/scenes/strings.<code>.json`，國名用 CLDR（和 app 的 `Locale` 同源），commit 進 repo；CI 不讀 app repo。簡中也直接用 app 的 zh-Hans，不由 `gen-zh-hans.mjs` 產生。`copy-spa-pages.js` 在已上線語言缺 pack、缺 key，或 placeholder 和 en 不同時讓 build 失敗。商品名稱是店家資料、不是 app 字串，scene 不顯示，商品只用照片表示。
 - 任兩頁的 title 與 description 都不可相同，跨語系也算：兩個 URL 用同一句話介紹自己，就是重複內容的訊號。`copy-spa-pages.js` 在 build 時檢查，違規即失敗。
 
 ### 簡中由繁中產生
@@ -77,7 +78,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 - 每種語言一份 `dingpos/l10n/manifest/<code>.json`，記錄每個單位翻譯時的 en hash（只算文字欄位）。en 文字改了，該單位就過期，要重翻。
 - 用詞跟 app 一致：`sync` 從本機的 app repo（`~/Developer/alustudio/DingPOS`，`--app-repo` 可改）讀該語言的 glossary 與字串，把和網站 en 逐字相同的 app 字串的譯文（`appMatch`），以及 FAQ 裡逐字出現的 app 按鈕、畫面、分頁名稱（`appTerms`）放進 packet。translator 預設採用 app 的譯文，語境不同才改並說明理由。網站才有的詞記在 `dingpos/l10n/glossary/<code>.md`。app repo 只有 `sync` 會讀，CI 與 `npm test` 不依賴它。
 - 審查：第一輪 `l10n-reviewer` 完整審過每個 segment；之後每輪只重審上一輪修改的單位（`sync --mode review --since <ref>`，加上 `--ids` 帶入 translator 保留不改的 finding），最多兩輪修正。重審只看上一輪指名或修改的欄位，查意思、app 用詞、glossary；語感與搜尋詞偏好只能記成不擋關的 `note`（寫進報告的 review notes），translator 對 reviewer 的建議整句照套或整句保留並說明理由，不取一半。這是因為兩輪重審曾讓 reviewer 重挑自己上一輪寫的字（et、hu、ms）。還有 `translation` 或 `glossary` finding 沒收斂就不上線，交給 owner 裁決。
-- 上線：語言審查通過後，把 registry 的 `shipped` 改成 true，執行 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 改寫 `sitemap.xml` 的 DingPOS 區塊，再跑 build 與 prerender。每種語言各自上線，不等其他語言。
+- 上線：語言審查通過後，把 registry 的 `shipped` 改成 true，執行 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 改寫 `sitemap.xml` 的 DingPOS 區塊；registry 新加的語言還要跑 `node dingpos/scripts/sync-scene-strings.mjs` 產生它的 scene 字串。再跑 build 與 prerender。每種語言各自上線，不等其他語言。
 - Privacy 與 Terms 照常翻譯，不加「以英文版為準」：Sotto 的翻譯語言也沒有這類聲明。
 - `npm test` 對每種已上線的翻譯語言執行 `npm run l10n -- check`：缺少或多出的單位、過期的單位，以及和 `apply` 重新產生的結果不同的檔案（手改過，或 en 的 related、since 改了還沒套用），都會讓它失敗，所以英文改了、翻譯還沒補上時無法部署。
 

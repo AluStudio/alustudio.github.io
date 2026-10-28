@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "स्टॉक: %d",
+    "products.stock.out": "स्टॉक खत्म",
+    "products.detail.stock_history": "स्टॉक इतिहास",
+    "products.detail.movement.sale": "बिक्री",
+    "products.detail.movement.purchase": "खरीद",
+    "customer.select": "ग्राहक चुनें",
+    "customers.points_pill": "%d पॉइंट",
+    "cashier.subtotal": "उप-कुल",
+    "cashier.subtotal.points": "पॉइंट (%d पॉइंट)",
+    "customers.points_reason.earn": "खरीदारी से मिले",
+    "onboarding.step_indicator": "चरण %1$d / %2$d",
+    "onboarding.country.title": "DingPOS में आपका स्वागत है",
+    "onboarding.country.tagline": "आइए आपका स्टोर सेट करें। आप कहाँ बेच रहे हैं?",
+    "onboarding.store.title": "आपका स्टोर",
+    "onboarding.store.tagline": "आपके कारोबार के बारे में कुछ जानकारी",
+    "onboarding.store.name_label": "स्टोर का नाम",
+    "onboarding.store.tax_section": "टैक्स सेटिंग्ज़",
+    "onboarding.store.currency_label": "मुद्रा",
+    "onboarding.store.tax_rate": "टैक्स दर",
+    "settings.tax_mode.inclusive": "कर सहित",
+    "settings.tax_mode.exclusive": "कर अलग से",
+    "onboarding.back": "वापस",
+    "onboarding.continue": "जारी रखें",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "आपका स्टोर तैयार है",
+    "onboarding.summary.region": "देश या क्षेत्र",
+    "onboarding.success.cta": "बिक्री शुरू करें"
+  },
+  "countries": {
+    "TW": "ताइवान",
+    "JP": "जापान",
+    "KR": "दक्षिण कोरिया"
+  }
+}

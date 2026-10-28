@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Stok: %d",
+    "products.stock.out": "Stok Habis",
+    "products.detail.stock_history": "Riwayat Stok",
+    "products.detail.movement.sale": "Penjualan",
+    "products.detail.movement.purchase": "Pembelian",
+    "customer.select": "Pilih Pelanggan",
+    "customers.points_pill": "%d poin",
+    "cashier.subtotal": "Subtotal",
+    "cashier.subtotal.points": "Poin (%d poin)",
+    "customers.points_reason.earn": "Didapat dari pembelian",
+    "onboarding.step_indicator": "Langkah %1$d dari %2$d",
+    "onboarding.country.title": "Selamat datang di DingPOS",
+    "onboarding.country.tagline": "Mari atur toko Anda. Di mana Anda berjualan?",
+    "onboarding.store.title": "Toko Anda",
+    "onboarding.store.tagline": "Beberapa detail tentang usaha Anda",
+    "onboarding.store.name_label": "Nama toko",
+    "onboarding.store.tax_section": "Pengaturan pajak",
+    "onboarding.store.currency_label": "Mata uang",
+    "onboarding.store.tax_rate": "Tarif pajak",
+    "settings.tax_mode.inclusive": "Termasuk pajak",
+    "settings.tax_mode.exclusive": "Belum termasuk pajak",
+    "onboarding.back": "Kembali",
+    "onboarding.continue": "Lanjutkan",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Toko Anda sudah siap",
+    "onboarding.summary.region": "Negara atau wilayah",
+    "onboarding.success.cta": "Mulai Berjualan"
+  },
+  "countries": {
+    "TW": "Taiwan",
+    "JP": "Jepang",
+    "KR": "Korea Selatan"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Varastossa: %d",
+    "products.stock.out": "Loppu varastosta",
+    "products.detail.stock_history": "Varastohistoria",
+    "products.detail.movement.sale": "Myynti",
+    "products.detail.movement.purchase": "Osto",
+    "customer.select": "Valitse asiakas",
+    "customers.points_pill": "%d p",
+    "cashier.subtotal": "Välisumma",
+    "cashier.subtotal.points": "Pisteet (%d p.)",
+    "customers.points_reason.earn": "Ansaittu ostosta",
+    "onboarding.step_indicator": "Vaihe %1$d/%2$d",
+    "onboarding.country.title": "Tervetuloa DingPOSiin",
+    "onboarding.country.tagline": "Otetaan myymäläsi käyttöön. Missä myyt?",
+    "onboarding.store.title": "Myymäläsi",
+    "onboarding.store.tagline": "Muutama tieto yrityksestäsi",
+    "onboarding.store.name_label": "Myymälän nimi",
+    "onboarding.store.tax_section": "Veroasetukset",
+    "onboarding.store.currency_label": "Valuutta",
+    "onboarding.store.tax_rate": "Verokanta",
+    "settings.tax_mode.inclusive": "Sisältää veron",
+    "settings.tax_mode.exclusive": "Ei sisällä veroa",
+    "onboarding.back": "Takaisin",
+    "onboarding.continue": "Jatka",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Myymäläsi on valmis",
+    "onboarding.summary.region": "Maa tai alue",
+    "onboarding.success.cta": "Aloita myynti"
+  },
+  "countries": {
+    "TW": "Taiwan",
+    "JP": "Japani",
+    "KR": "Etelä-Korea"
+  }
+}

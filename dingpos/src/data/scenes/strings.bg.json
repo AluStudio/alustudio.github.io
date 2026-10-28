@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Наличност: %d",
+    "products.stock.out": "Изчерпан",
+    "products.detail.stock_history": "История на наличността",
+    "products.detail.movement.sale": "Продажба",
+    "products.detail.movement.purchase": "Доставка",
+    "customer.select": "Избор на клиент",
+    "customers.points_pill": "%d т.",
+    "cashier.subtotal": "Междинна сума",
+    "cashier.subtotal.points": "Точки (%d т.)",
+    "customers.points_reason.earn": "Получени от покупка",
+    "onboarding.step_indicator": "Стъпка %1$d от %2$d",
+    "onboarding.country.title": "Добре дошли в DingPOS",
+    "onboarding.country.tagline": "Нека настроим магазина ви. Къде продавате?",
+    "onboarding.store.title": "Вашият магазин",
+    "onboarding.store.tagline": "Няколко подробности за бизнеса ви",
+    "onboarding.store.name_label": "Име на магазина",
+    "onboarding.store.tax_section": "Данъчни настройки",
+    "onboarding.store.currency_label": "Валута",
+    "onboarding.store.tax_rate": "Данъчна ставка",
+    "settings.tax_mode.inclusive": "Цени с включен данък",
+    "settings.tax_mode.exclusive": "Цени без данък",
+    "onboarding.back": "Назад",
+    "onboarding.continue": "Продължи",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Магазинът ви е готов",
+    "onboarding.summary.region": "Държава или регион",
+    "onboarding.success.cta": "Започни да продаваш"
+  },
+  "countries": {
+    "TW": "Тайван",
+    "JP": "Япония",
+    "KR": "Южна Корея"
+  }
+}

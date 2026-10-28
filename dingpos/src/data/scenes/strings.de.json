@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Bestand: %d",
+    "products.stock.out": "Nicht vorrätig",
+    "products.detail.stock_history": "Bestandsverlauf",
+    "products.detail.movement.sale": "Verkauf",
+    "products.detail.movement.purchase": "Einkauf",
+    "customer.select": "Kunde auswählen",
+    "customers.points_pill": "%d Pkt.",
+    "cashier.subtotal": "Zwischensumme",
+    "cashier.subtotal.points": "Punkte (%d Pkt.)",
+    "customers.points_reason.earn": "Durch Einkauf erhalten",
+    "onboarding.step_indicator": "Schritt %1$d von %2$d",
+    "onboarding.country.title": "Willkommen bei DingPOS",
+    "onboarding.country.tagline": "Richten wir Ihr Geschäft ein. Wo verkaufen Sie?",
+    "onboarding.store.title": "Ihr Geschäft",
+    "onboarding.store.tagline": "Ein paar Angaben zu Ihrem Unternehmen",
+    "onboarding.store.name_label": "Name des Geschäfts",
+    "onboarding.store.tax_section": "Steuereinstellungen",
+    "onboarding.store.currency_label": "Währung",
+    "onboarding.store.tax_rate": "Steuersatz",
+    "settings.tax_mode.inclusive": "Inklusive Steuer",
+    "settings.tax_mode.exclusive": "Exklusive Steuer",
+    "onboarding.back": "Zurück",
+    "onboarding.continue": "Fortfahren",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Ihr Geschäft ist startklar",
+    "onboarding.summary.region": "Land oder Region",
+    "onboarding.success.cta": "Verkauf starten"
+  },
+  "countries": {
+    "TW": "Taiwan",
+    "JP": "Japan",
+    "KR": "Südkorea"
+  }
+}

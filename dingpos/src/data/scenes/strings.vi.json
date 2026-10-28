@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Tồn kho: %d",
+    "products.stock.out": "Hết hàng",
+    "products.detail.stock_history": "Lịch sử tồn kho",
+    "products.detail.movement.sale": "Bán hàng",
+    "products.detail.movement.purchase": "Nhập hàng",
+    "customer.select": "Chọn khách hàng",
+    "customers.points_pill": "%d điểm",
+    "cashier.subtotal": "Tạm tính",
+    "cashier.subtotal.points": "Điểm (%d điểm)",
+    "customers.points_reason.earn": "Tích điểm từ lần mua",
+    "onboarding.step_indicator": "Bước %1$d/%2$d",
+    "onboarding.country.title": "Chào mừng đến với DingPOS",
+    "onboarding.country.tagline": "Hãy thiết lập cửa hàng của bạn. Bạn bán hàng ở đâu?",
+    "onboarding.store.title": "Cửa hàng của bạn",
+    "onboarding.store.tagline": "Vài thông tin về việc kinh doanh của bạn",
+    "onboarding.store.name_label": "Tên cửa hàng",
+    "onboarding.store.tax_section": "Cài đặt thuế",
+    "onboarding.store.currency_label": "Tiền tệ",
+    "onboarding.store.tax_rate": "Thuế suất",
+    "settings.tax_mode.inclusive": "Giá đã gồm thuế",
+    "settings.tax_mode.exclusive": "Giá chưa gồm thuế",
+    "onboarding.back": "Quay lại",
+    "onboarding.continue": "Tiếp tục",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Cửa hàng của bạn đã sẵn sàng",
+    "onboarding.summary.region": "Quốc gia hoặc khu vực",
+    "onboarding.success.cta": "Bắt đầu bán hàng"
+  },
+  "countries": {
+    "TW": "Đài Loan",
+    "JP": "Nhật Bản",
+    "KR": "Hàn Quốc"
+  }
+}

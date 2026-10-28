@@ -372,31 +372,44 @@
 }
 
 // ─── How it works ───────────────────────────────────────────────
-.steps {
+// The onboarding wizard beside its three steps; from 1024px the steps sit on
+// the left, below that the wizard comes first.
+.onboarding {
   display: grid;
-  gap: s(200);
+  gap: s(400);
+  align-items: center;
 
-  @media (min-width: $bp-md) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media (min-width: $bp-lg) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: s(700);
+
+    .steps {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    &__visual {
+      grid-row: 1;
+      grid-column: 2;
+    }
   }
 }
 
+.steps {
+  display: grid;
+  gap: s(100);
+}
+
 .step {
-  padding: s(300);
-  border: 1px solid $line;
-  border-radius: $radius-3xl;
-  background: $surface;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: s(200);
+  align-items: start;
 
-  &__head {
-    display: flex;
-    align-items: center;
-    gap: s(100);
-  }
-
+  // The number gives way to a check once the step is done.
   &__num {
     display: grid;
     place-items: center;
-    flex: none;
     width: 32px;
     height: 32px;
     border-radius: $radius-full;
@@ -404,16 +417,41 @@
     color: $ink-muted;
     @include text("sm");
     font-weight: 700;
-    font-variant-numeric: tabular-nums;
     transition:
       background-color 0.5s $ease,
       color 0.5s $ease;
+
+    > * {
+      grid-area: 1 / 1;
+      transition:
+        opacity 0.4s $e2,
+        transform 0.5s $e;
+    }
+
+    svg {
+      opacity: 0;
+      transform: scale(0.86);
+    }
   }
 
-  // Fills like a progress bar when the step is done (design-to-motion B3).
-  &__wire {
+  &__body {
+    display: grid;
+    gap: s(100);
+    padding-bottom: s(200);
+  }
+
+  &__text {
+    padding-top: s(25);
+    @include text("lg");
+    font-weight: 600;
+    color: $ink-muted;
+    transition: color 0.5s $ease;
+  }
+
+  // Fills like a progress bar for as long as the step's screen is on, then
+  // drains quickly when the story starts over (design-to-motion B3).
+  &__track {
     position: relative;
-    flex: 1;
     height: 2px;
     overflow: hidden;
     border-radius: $radius-full;
@@ -426,51 +464,49 @@
       background: $accent;
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform 0.9s $io;
+      transition: transform 0.4s $io;
     }
   }
 
-  &__icon {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    margin-top: s(400);
-    border-radius: $radius-xl;
-    background: $sunken;
-    color: $ink-muted;
-    transition:
-      background-color 0.5s $ease,
-      color 0.5s $ease;
+  &[data-state="active"] {
+    .step__num {
+      background: $accent-strong;
+      color: $surface;
+    }
+
+    .step__text {
+      color: $ink;
+    }
+
+    .step__track::after {
+      transform: none;
+      transition: transform var(--fill-ms) linear;
+    }
   }
 
-  &__text {
-    margin-top: s(200);
-    @include text("lg");
-    font-weight: 600;
-    color: $ink;
-  }
+  &[data-state="done"] {
+    .step__num {
+      background: $accent-wash;
+      color: $accent;
 
-  &[data-done] &__num {
-    background: $accent-strong;
-    color: $surface;
-  }
+      span {
+        opacity: 0;
+        transform: scale(0.86);
+      }
 
-  &[data-done] &__wire::after {
-    transform: scaleX(1);
-  }
+      svg {
+        opacity: 1;
+        transform: none;
+      }
+    }
 
-  &[data-done] &__icon {
-    background: $accent-wash;
-    color: $accent;
-    animation: icon-pop 0.6s $e;
-  }
-}
+    .step__text {
+      color: $ink-soft;
+    }
 
-@keyframes icon-pop {
-  from {
-    transform: scale(0.86);
-    filter: blur(2px);
+    .step__track::after {
+      transform: none;
+    }
   }
 }
 

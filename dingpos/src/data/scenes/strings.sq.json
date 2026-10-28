@@ -1,0 +1,36 @@
+{
+  "strings": {
+    "products.stock.badge": "Stoku: %d",
+    "products.stock.out": "Pa stok",
+    "products.detail.stock_history": "Historiku i stokut",
+    "products.detail.movement.sale": "Shitje",
+    "products.detail.movement.purchase": "Blerje",
+    "customer.select": "Zgjidh klientin",
+    "customers.points_pill": "%d pikë",
+    "cashier.subtotal": "Nëntotali",
+    "cashier.subtotal.points": "Pikë (%d pikë)",
+    "customers.points_reason.earn": "Fituar nga blerja",
+    "onboarding.step_indicator": "Hapi %1$d nga %2$d",
+    "onboarding.country.title": "Mirë se erdhe në DingPOS",
+    "onboarding.country.tagline": "Le ta konfigurojmë dyqanin. Ku po shet?",
+    "onboarding.store.title": "Dyqani yt",
+    "onboarding.store.tagline": "Disa detaje rreth biznesit tënd",
+    "onboarding.store.name_label": "Emri i dyqanit",
+    "onboarding.store.tax_section": "Cilësimet e taksës",
+    "onboarding.store.currency_label": "Monedha",
+    "onboarding.store.tax_rate": "Norma e taksës",
+    "settings.tax_mode.inclusive": "Me tatim të përfshirë",
+    "settings.tax_mode.exclusive": "Pa tatim të përfshirë",
+    "onboarding.back": "Mbrapa",
+    "onboarding.continue": "Vazhdo",
+    "onboarding.success.title": "Ding! 🎉",
+    "onboarding.success.subtitle": "Dyqani yt është gati",
+    "onboarding.summary.region": "Vendi ose rajoni",
+    "onboarding.success.cta": "Fillo shitjen"
+  },
+  "countries": {
+    "TW": "Tajvan",
+    "JP": "Japoni",
+    "KR": "Kore e Jugut"
+  }
+}
