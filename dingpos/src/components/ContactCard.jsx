@@ -1,23 +1,25 @@
 import { useTranslation } from "react-i18next";
+import { EnvelopeSimple, PaperPlaneTilt } from "@phosphor-icons/react";
 
-const CONTACT_MAILTO = "mailto:alustudio14@gmail.com?subject=[DingPOS] Support";
+const CONTACT_EMAIL = "alustudio14@gmail.com";
+const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}?subject=[DingPOS] Support`;
 
 /** Shared by the support index and every article page. */
 function ContactCard() {
   const { t } = useTranslation();
   return (
-    <div className="support-contact">
-      <div className="support-contact-icon">
-        <i className="bi bi-envelope-paper" aria-hidden="true"></i>
-      </div>
+    <aside className="contact-card">
+      <span className="contact-card__icon" aria-hidden="true">
+        <EnvelopeSimple size={24} weight="duotone" />
+      </span>
       <h2>{t("support.contact_title")}</h2>
-      <p>{t("support.contact_desc")}</p>
-      <a className="support-contact-cta" href={CONTACT_MAILTO}>
-        <i className="bi bi-send" aria-hidden="true"></i>
+      <p className="contact-card__desc">{t("support.contact_desc")}</p>
+      <a className="button button--primary" href={CONTACT_MAILTO}>
+        <PaperPlaneTilt size={18} weight="bold" aria-hidden="true" />
         {t("support.contact_cta")}
       </a>
-      <p className="support-contact-mail">alustudio14@gmail.com</p>
-    </div>
+      <p className="contact-card__mail">{CONTACT_EMAIL}</p>
+    </aside>
   );
 }
 

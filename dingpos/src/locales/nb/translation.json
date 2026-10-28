@@ -126,10 +126,10 @@
     "title": "Ingen konto betyr at ingen kan ta dataene dine",
     "lead": "Du trenger ikke registrere deg for å bruke DingPOS. Dataene dine ligger på iPaden, og hvis du vil ta sikkerhetskopi, går den til en skykonto du allerede eier.",
     "items": [
-      "Velg mellom iCloud, Google Drive og Dropbox",
+      "Ta sikkerhetskopi til iCloud, Google Drive, Dropbox eller alle tre",
       "Manuell sikkerhetskopi når du vil",
-      "Beholder de 5 siste øyeblikkskopiene",
-      "Inkrementell synkronisering av bilder",
+      "Hver skytjeneste beholder den nyeste sikkerhetskopien din",
+      "Produktbilder sikkerhetskopieres sammen med dataene dine",
       "Ingen konto, data på enheten, sikkerhetskopier i din egen sky",
       "Full funksjonalitet uten nett"
     ]

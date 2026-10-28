@@ -1,0 +1,642 @@
+@use "tokens" as *;
+
+// ─── Base ───────────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  scroll-padding-top: $nav-offset;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  &.menu-open {
+    overflow: hidden;
+  }
+}
+
+body {
+  min-height: 100dvh;
+  font-family: $font;
+  @include text("base");
+  background: $bg;
+  color: $ink;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+p,
+li,
+dd {
+  text-wrap: pretty;
+}
+
+// Chinese breaks between any two characters; headings break only at
+// punctuation and spaces so a phrase never splits across lines.
+:lang(zh) :is(h1, h2, h3) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+svg,
+video {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+  border-radius: $radius-md;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.shell {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 s(300);
+
+  @media (min-width: $bp-md) {
+    padding: 0 s(400);
+  }
+
+  &--narrow {
+    max-width: 800px;
+  }
+}
+
+.section {
+  padding: s(800) 0;
+
+  @media (min-width: $bp-md) {
+    padding: s(900) 0;
+  }
+}
+
+// Every page but home opens below the floating nav.
+.page {
+  padding-top: $nav-offset;
+}
+
+// ─── Buttons ────────────────────────────────────────────────────
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: s(75);
+  padding: s(75) s(200);
+  border: 1px solid transparent;
+  border-radius: $radius-full;
+  @include text("base");
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.3s $ease,
+    border-color 0.3s $ease,
+    color 0.3s $ease,
+    box-shadow 0.3s $ease,
+    transform 0.5s $ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  svg {
+    flex: none;
+  }
+
+  &--lg {
+    padding: s(100) s(300);
+  }
+
+  &--sm {
+    padding: s(75) s(100);
+    @include text("sm");
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &--primary {
+    background: $accent-strong;
+    color: $surface;
+    box-shadow: 0 8px 20px -12px rgba($accent-deep, 0.6);
+
+    @include hover {
+      background: $accent-deep;
+      transform: translateY(-1px);
+    }
+  }
+
+  &--secondary {
+    background: $surface;
+    border-color: $line-strong;
+    color: $ink;
+
+    @include hover {
+      border-color: rgba($ink, 0.32);
+      transform: translateY(-1px);
+    }
+  }
+
+  &--light {
+    background: $surface;
+    color: $ink;
+
+    @include hover {
+      background: $accent-wash;
+      transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+      outline-color: $surface;
+    }
+  }
+}
+
+// ─── Shared type ────────────────────────────────────────────────
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: s(75);
+  @include text("sm");
+  font-weight: 600;
+  color: $accent;
+}
+
+.section-head {
+  max-width: 680px;
+  margin-bottom: s(600);
+
+  &--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: s(100);
+    @include text("3xl");
+    letter-spacing: -0.02em;
+
+    @media (min-width: $bp-md) {
+      @include text("4xl");
+    }
+  }
+
+  p {
+    margin-top: s(200);
+    @include text("lg");
+    color: $ink-soft;
+  }
+}
+
+// Subpage heading block: the hero rules (B5) at subpage scale.
+.page-head {
+  max-width: 680px;
+  padding: s(700) 0 s(600);
+
+  &--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &--center h1 {
+    margin-inline: auto;
+  }
+
+  h1 {
+    width: fit-content;
+    margin-top: s(100);
+    @include text("4xl");
+    letter-spacing: -0.03em;
+    @include ink-gradient;
+
+    @media (min-width: $bp-md) {
+      @include text("5xl");
+    }
+  }
+
+  p {
+    margin-top: s(200);
+    @include text("lg");
+    color: $ink-soft;
+  }
+
+  > * {
+    animation: appear 0.8s $e both;
+  }
+
+  @for $i from 1 through 4 {
+    > :nth-child(#{$i}) {
+      animation-delay: #{($i - 1) * 60ms};
+    }
+  }
+}
+
+// A list whose items open with a check. The mark is a mask, not an icon
+// font: bootstrap-icons cost 131 KB for a handful of glyphs.
+.check-list {
+  display: grid;
+  gap: s(100);
+
+  li {
+    position: relative;
+    padding-left: s(400);
+    @include text("base");
+    color: $ink-soft;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      border-radius: $radius-full;
+      background: $accent-wash
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='none' stroke='%233e5774' stroke-linecap='round' stroke-linejoin='round' stroke-width='28' d='M56 132l44 44 100-100'/%3E%3C/svg%3E")
+        center / 12px no-repeat;
+    }
+  }
+
+  &--split {
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: s(400);
+    }
+  }
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: s(50);
+  padding: s(25) s(100);
+  border-radius: $radius-full;
+  background: $accent-wash;
+  color: $accent-strong;
+  @include text("sm");
+  font-weight: 600;
+}
+
+// ─── Device ─────────────────────────────────────────────────────
+// An iPad bezel drawn in CSS around a pure screen capture, so
+// scripts/build-screenshots.sh can regenerate the assets from a fresh
+// capture without anyone redrawing a frame.
+.device {
+  padding: s(50);
+  border-radius: $radius-2xl;
+  background: #1f2530;
+  box-shadow:
+    0 1px 2px rgba($ink, 0.3),
+    0 40px 80px -40px rgba($accent-deep, 0.55);
+
+  @media (min-width: $bp-md) {
+    padding: s(75);
+    border-radius: $radius-3xl;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    // object-fit enforces this ratio, so a capture from another iPad would be
+    // cropped silently; scripts/build-screenshots.sh asserts every asset
+    // against it (CSS_RATIO_W/H there) and refuses to write a mismatch.
+    aspect-ratio: 2388 / 1568;
+    object-fit: cover;
+    // Outer radius minus the bezel (B3).
+    border-radius: $radius-xl;
+    background: $sunken;
+
+    @media (min-width: $bp-md) {
+      border-radius: $radius-2xl;
+    }
+  }
+}
+
+// ─── FAQ accordion ──────────────────────────────────────────────
+// <details> keeps every answer in the DOM while collapsed, so prerendered
+// HTML carries them for crawlers.
+.faq {
+  display: grid;
+  gap: s(100);
+
+  &__item {
+    border: 1px solid $line;
+    border-radius: $radius-2xl;
+    background: $surface;
+    transition: border-color 0.3s $ease;
+
+    &[open] {
+      border-color: $line-strong;
+    }
+
+    // Height animates where the browser can size to content; elsewhere the
+    // answer simply appears.
+    &::details-content {
+      block-size: 0;
+      overflow: hidden;
+      transition:
+        block-size 0.5s $ease,
+        content-visibility 0.5s allow-discrete;
+    }
+
+    &[open]::details-content {
+      block-size: auto;
+    }
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: s(200);
+    padding: s(200) s(300);
+    @include text("lg");
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+    border-radius: $radius-2xl;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    svg {
+      flex: none;
+      color: $ink-muted;
+      transition: transform 0.5s $ease;
+    }
+  }
+
+  &__item[open] summary svg {
+    transform: rotate(45deg);
+  }
+
+  &__answer {
+    padding: 0 s(300) s(300);
+    color: $ink-soft;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: s(50);
+      margin-top: s(100);
+      color: $accent;
+      font-weight: 600;
+      text-decoration: none;
+
+      @include hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+  }
+
+  &-more {
+    margin-top: s(400);
+    text-align: center;
+    color: $ink-soft;
+
+    a {
+      color: $accent;
+      font-weight: 600;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+}
+
+// ─── Shared by support and guide articles ───────────────────────
+// A list of links, each a row ending in a caret that nudges on hover.
+.link-list {
+  li + li a {
+    border-top: 1px solid $line;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: s(100);
+    padding: s(100) 0;
+    @include text("sm");
+    color: $ink-soft;
+    text-decoration: none;
+    transition: color 0.3s $ease;
+
+    svg {
+      flex: none;
+      color: rgba($ink, 0.3);
+      transition:
+        color 0.3s $ease,
+        transform 0.5s $ease;
+    }
+
+    @include hover {
+      color: $accent;
+
+      svg {
+        color: $accent;
+        transform: translateX(2px);
+      }
+    }
+  }
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: s(600);
+  padding: s(600) s(300);
+  border: 1px solid $line;
+  border-radius: $radius-3xl;
+  background: $surface;
+  text-align: center;
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-xl;
+    background: $accent-wash;
+    color: $accent;
+  }
+
+  h2 {
+    margin-top: s(200);
+    @include text("2xl");
+  }
+
+  &__desc {
+    max-width: 480px;
+    margin: s(75) 0 s(300);
+    color: $ink-soft;
+  }
+
+  &__mail {
+    margin-top: s(100);
+    @include text("sm");
+    color: $ink-muted;
+  }
+}
+
+// ─── Motion ─────────────────────────────────────────────────────
+// Entrances are pure CSS: prerender writes the rendered DOM back to disk, so
+// a JS-toggled hidden state would ship as blank HTML (AGENTS.md).
+
+// Hero appear (design-to-motion): a 6px rise from a 2px blur.
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(2px);
+  }
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+    filter: blur(4px);
+  }
+}
+
+// Photos resolve from blur without fading, so the image still paints (and
+// counts for LCP) on its first frame.
+@keyframes photo-resolve {
+  from {
+    filter: blur(14px) saturate(0.6);
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+}
+
+@keyframes reveal-card {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+    filter: blur(6px);
+  }
+}
+
+// Scroll-linked reveals use scroll timelines; browsers without them simply
+// show the content.
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-up auto $ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+
+    .reveal-card {
+      animation: reveal-card auto $e both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+
+    .reveal-shot img {
+      animation: photo-resolve auto $e2 both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 40%;
+    }
+  }
+}
+
+// ─── Route transition ───────────────────────────────────────────
+// TransitionLink crossfades through the View Transitions API. Pages here are
+// goal-directed, so the crossfade is short enough to read as "the content
+// changed" rather than as waiting.
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-group(root) {
+    animation-duration: 200ms;
+    animation-timing-function: $ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-group(root) {
+    animation: none;
+  }
+}

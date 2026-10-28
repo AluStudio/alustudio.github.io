@@ -4,15 +4,12 @@ import { BrowserRouter } from 'react-router-dom'
 import '@fontsource-variable/manrope'
 import '@fontsource-variable/noto-sans-tc'
 import './index.css'
+import './assets/scss/base.scss'
 import App from './App.jsx'
 import { routerBasename, currentLanguage, i18nReady } from "./i18n";
 import { loadFaq } from "./data/faq";
 import { loadGuides } from "./data/guides";
-// The same ESM module Navbar imports Collapse from: loading the UMD bundle as
-// well registered every data-bs-toggle handler twice, so a dropdown opened and
-// closed again on one click.
-import "bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import { loadSceneStrings } from "./data/scenes";
 
 // Only zh-Hans pages use the SC faces; a static import would put their
 // @font-face CSS in front of every page.
@@ -33,7 +30,7 @@ const app = (
 // place: re-rendering would replace the painted nodes and record a new LCP after
 // the bundle runs. The dev server and the prerender pass itself get Vite's empty
 // shell, which has nothing to hydrate.
-Promise.all([i18nReady, loadFaq(currentLanguage), loadGuides(currentLanguage)]).then(() => {
+Promise.all([i18nReady, loadFaq(currentLanguage), loadGuides(currentLanguage), loadSceneStrings(currentLanguage)]).then(() => {
   if (container.firstElementChild) {
     hydrateRoot(container, app)
   } else {

@@ -126,10 +126,10 @@
     "title": "Akkaunt bo‘lmasa, ma’lumotingizni hech kim ola olmaydi",
     "lead": "DingPOS’da ro‘yxatdan o‘tadigan hech narsa yo‘q. Hisob-kitoblaringiz iPad’da turadi, zaxira nusxa kerak bo‘lsa, o‘zingizda bor bulut akkauntiga saqlanadi.",
     "items": [
-      "iCloud, Google Drive yoki Dropbox’dan birini tanlang",
+      "iCloud, Google Drive, Dropbox’ga yoki uchalasiga ham zaxira nusxa saqlang",
       "Zaxira nusxani xohlagan paytda qo‘lda yaratish",
-      "Oxirgi 5 ta nusxa saqlanadi",
-      "Suratlarni bosqichma-bosqich sinxronlash",
+      "Har bir bulut eng so‘nggi zaxira nusxangizni saqlaydi",
+      "Mahsulot suratlari ham ma’lumotlaringiz bilan birga zaxiralanadi",
       "Akkaunt yo‘q; ma’lumot qurilmada, zaxira nusxa o‘z bulutingizda",
       "Internetsiz ham to‘liq ishlaydi"
     ]

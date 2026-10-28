@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { Navigate, useParams } from "react-router-dom";
-import "../assets/scss/all.scss";
-import "../assets/scss/home.scss";
-import "../assets/scss/footer.scss";
-import "./guides.scss";
+import { ArrowLeft, CaretRight } from "@phosphor-icons/react";
+import "./article.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import TransitionLink from "../components/TransitionLink";
@@ -32,63 +30,61 @@ function GuidePage() {
   return (
     <>
       <Navbar />
-      <main className="main-content">
-        <div className="container">
-          <article className="guide-article">
-            <nav className="guide-breadcrumb" aria-label="breadcrumb">
-              <TransitionLink to="/guides/">
-                <i className="bi bi-arrow-left" aria-hidden="true"></i>
-                {ui.back}
-              </TransitionLink>
-            </nav>
+      <main id="main" className="page">
+        <article className="shell shell--narrow article">
+          <nav className="crumbs" aria-label="breadcrumb">
+            <TransitionLink to="/guides/">
+              <ArrowLeft size={16} weight="bold" aria-hidden="true" />
+              {ui.back}
+            </TransitionLink>
+          </nav>
 
-            <p className="guide-market">{ui.markets[guide.market]}</p>
-            <h1>{guide.title}</h1>
+          <p className="pill article__since">{ui.markets[guide.market]}</p>
+          <h1>{guide.title}</h1>
 
-            <div className="guide-content">
-              <GuideBlocks blocks={guide.content} />
-            </div>
+          <div className="prose">
+            <GuideBlocks blocks={guide.content} />
+          </div>
 
-            <p className="guide-checked">{ui.checked.replace("{{date}}", guide.checked)}</p>
+          <p className="article__checked">{ui.checked.replace("{{date}}", guide.checked)}</p>
 
-            {guide.sources.length > 0 && (
-              <aside className="guide-sources">
-                <h2>{ui.sources_title}</h2>
-                <ul>
-                  {guide.sources.map((source) => (
-                    <li key={source.url}>
-                      <a href={source.url} target="_blank" rel="noopener noreferrer">
-                        {source.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            )}
-
-            <aside className="guide-cta">
-              <h2>{ui.cta_title}</h2>
-              <p>{ui.cta_text}</p>
-              <AppStoreButton>{ui.cta_button}</AppStoreButton>
+          {guide.sources.length > 0 && (
+            <aside className="sources">
+              <h2>{ui.sources_title}</h2>
+              <ul>
+                {guide.sources.map((source) => (
+                  <li key={source.url}>
+                    <a href={source.url} target="_blank" rel="noopener noreferrer">
+                      {source.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </aside>
+          )}
 
-            {related.length > 0 && (
-              <aside className="guide-related">
-                <h2>{ui.related_title}</h2>
-                <ul>
-                  {related.map((r) => (
-                    <li key={r.slug}>
-                      <TransitionLink to={`/guides/${r.slug}/`}>
-                        {r.title}
-                        <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                      </TransitionLink>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            )}
-          </article>
-        </div>
+          <aside className="article-cta">
+            <h2>{ui.cta_title}</h2>
+            <p>{ui.cta_text}</p>
+            <AppStoreButton className="button button--light button--lg">{ui.cta_button}</AppStoreButton>
+          </aside>
+
+          {related.length > 0 && (
+            <aside className="related">
+              <h2>{ui.related_title}</h2>
+              <ul className="link-list">
+                {related.map((r) => (
+                  <li key={r.slug}>
+                    <TransitionLink to={`/guides/${r.slug}/`}>
+                      {r.title}
+                      <CaretRight size={14} weight="bold" aria-hidden="true" />
+                    </TransitionLink>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
+        </article>
       </main>
       <Footer />
     </>

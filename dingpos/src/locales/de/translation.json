@@ -126,10 +126,10 @@
     "title": "Ohne Konto kann Ihnen niemand Ihre Daten wegnehmen",
     "lead": "Bei DingPOS gibt es nichts, wofür Sie sich registrieren müssten. Ihre Buchhaltung liegt auf dem iPad, und Backups landen, wenn Sie welche möchten, in einem Cloud-Konto, das Ihnen bereits gehört.",
     "items": [
-      "Wahlweise iCloud, Google Drive oder Dropbox",
+      "Sicherung in iCloud, Google Drive, Dropbox oder in allen dreien",
       "Manuelles Backup, wann immer Sie wollen",
-      "Die letzten 5 Sicherungen bleiben erhalten",
-      "Inkrementelle Bildsynchronisierung",
+      "Jede Cloud behält Ihre neueste Sicherung",
+      "Artikelfotos werden zusammen mit Ihren Daten gesichert",
       "Kein Konto; Daten auf dem Gerät, Backups in Ihrer eigenen Cloud",
       "Vollständig offline nutzbar"
     ]

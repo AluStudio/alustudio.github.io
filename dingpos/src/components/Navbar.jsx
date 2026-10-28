@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, Link } from "react-router-dom";
-import { Collapse } from "bootstrap";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { CaretDown, Globe } from "@phosphor-icons/react";
 import { supportedLanguages, localizedUrl, currentLanguage } from "../i18n.js";
 import { getGuides, guideLanguages } from "../data/guides";
+import AppStoreButton from "./AppStoreButton";
+import Brand from "./Brand";
 import "../assets/scss/navbar.scss";
 
 /**
@@ -16,30 +18,38 @@ function switchPath(code, pathname) {
   return guideLanguages.has(code) ? "/guides/" : "/";
 }
 
-function Navbar() {
-  const { t } = useTranslation();
+/** Closes on Escape or a press outside `ref`, returning focus to `toggleRef`. */
+function useDismiss(open, setOpen, ref, toggleRef) {
+  useEffect(() => {
+    if (!open) return;
+    const handlePointer = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) setOpen(false);
+    };
+    const handleKey = (event) => {
+      if (event.key !== "Escape") return;
+      setOpen(false);
+      toggleRef.current?.focus();
+    };
+    document.addEventListener("pointerdown", handlePointer);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointer);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [open, setOpen, ref, toggleRef]);
+}
+
+function LanguagePicker() {
   const location = useLocation();
-  const guidesUi = getGuides().ui;
-  const isHome = location.pathname === "/" || location.pathname === "";
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+  const toggleRef = useRef(null);
+  useDismiss(open, setOpen, ref, toggleRef);
 
-  const collapseNav = () => {
-    const el = document.getElementById("navbarSupportedContent");
-    if (el && el.classList.contains("show")) {
-      Collapse.getInstance(el)?.hide();
-    }
-  };
+  const current = supportedLanguages.find((lang) => lang.code === currentLanguage);
 
-  const handleHome = () => {
-    collapseNav();
-    if (isHome) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
-  // Each language link is a real <a href> so crawlers can follow it; the href
-  // is the bare page URL, which the prerender and every visitor render alike.
-  // A plain click also carries the query and hash over to the other language.
-  const handleChangeLang = (event, code) => {
+  // A plain click carries the query and hash over to the other language.
+  const handleChange = (event, code) => {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     if (!location.search && !location.hash) return;
     // A different page in that language: its query and hash mean nothing there.
@@ -48,127 +58,140 @@ function Navbar() {
     window.location.assign(localizedUrl(code, location.pathname, location.search, location.hash));
   };
 
-  useEffect(() => {
-    const navbar = document.querySelector(".navbar-scroll");
-    if (!navbar) return;
-    const onScroll = () => {
-      navbar.classList.toggle("navbar-scrolled", window.scrollY > 50);
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  return (
+    <div className="lang" ref={ref}>
+      <button
+        ref={toggleRef}
+        type="button"
+        className="lang__toggle"
+        aria-expanded={open}
+        aria-controls="lang-menu"
+        onClick={() => setOpen((value) => !value)}
+      >
+        <Globe size={16} weight="bold" aria-hidden="true" />
+        <span className="lang__current">{current.label}</span>
+        <CaretDown size={12} weight="bold" className="lang__caret" aria-hidden="true" />
+      </button>
+      {/* Always rendered: each language is a real <a href> crawlers follow,
+          so the closed menu is hidden, never unmounted. The href is the bare
+          page URL, which the prerender and every visitor render alike. */}
+      <ul id="lang-menu" className="lang__menu" hidden={!open}>
+        {supportedLanguages.map((lang) => (
+          <li key={lang.code}>
+            <a
+              className="lang__item"
+              href={localizedUrl(lang.code, switchPath(lang.code, location.pathname))}
+              hrefLang={lang.hreflang}
+              lang={lang.hreflang}
+              aria-current={lang.code === currentLanguage ? "page" : undefined}
+              onClick={(event) => handleChange(event, lang.code)}
+            >
+              {lang.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Navbar() {
+  const { t } = useTranslation();
+  const location = useLocation();
+  const [open, setOpen] = useState(false);
+  const toggleRef = useRef(null);
+  const guidesUi = getGuides().ui;
+  const isHome = location.pathname === "/" || location.pathname === "";
 
   useEffect(() => {
-    const update = () => {
-      const navbar = document.querySelector(".navbar");
-      if (navbar) {
-        document.documentElement.style.setProperty(
-          "--navbar-height",
-          `${navbar.offsetHeight}px`,
-        );
-      }
+    if (!open) return;
+    const handleKey = (event) => {
+      if (event.key !== "Escape") return;
+      setOpen(false);
+      toggleRef.current?.focus();
     };
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
+    // From $bp-md (navbar.scss) the menu and its toggle are hidden, so a menu
+    // left open by rotating or widening the window would keep the page locked
+    // with no way to close it.
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const handleWiden = (event) => {
+      if (event.matches) setOpen(false);
+    };
+    document.addEventListener("keydown", handleKey);
+    desktop.addEventListener("change", handleWiden);
+    document.documentElement.classList.add("menu-open");
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      desktop.removeEventListener("change", handleWiden);
+      document.documentElement.classList.remove("menu-open");
+    };
+  }, [open]);
+
+  const close = () => setOpen(false);
+
+  const handleHome = () => {
+    close();
+    if (isHome) window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const links = [
+    { to: "/pricing/", label: t("nav.pricing") },
+    { to: "/support/", label: t("nav.support") },
+    ...(guidesUi ? [{ to: "/guides/", label: guidesUi.nav }] : []),
+  ];
+
+  const menuLinks = [
+    { to: "/", label: t("nav.home"), end: true },
+    ...links,
+    { to: "/privacy/", label: t("nav.privacy") },
+    { to: "/terms/", label: t("nav.terms") },
+  ];
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-scroll fixed-top">
-      <div className="container">
-        <Link className="navbar-brand" to="/" onClick={handleHome}>
-          <img
-            src={`${import.meta.env.BASE_URL}logo.webp`}
-            alt="DingPOS"
-            className="navbar-logo"
-            width="600"
-            height="266"
-          />
+    <>
+      <header className="nav">
+        <Link to="/" className="nav__brand" onClick={handleHome}>
+          <Brand />
         </Link>
-
-        <button
-          className="navbar-toggler order-3"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label={t("nav.menu")}
-        >
-          <i className="bi bi-list" aria-hidden="true"></i>
-        </button>
-
-        <div
-          className="collapse navbar-collapse ms-auto order-4 order-lg-2"
-          id="navbarSupportedContent"
-        >
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/" onClick={handleHome}>
-                {t("nav.home")}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/pricing/" onClick={collapseNav}>
-                {t("nav.pricing")}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/support/" onClick={collapseNav}>
-                {t("nav.support")}
-              </Link>
-            </li>
-            {guidesUi && (
-              <li className="nav-item">
-                <Link className="nav-link text-center" to="/guides/" onClick={collapseNav}>
-                  {guidesUi.nav}
-                </Link>
-              </li>
-            )}
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/privacy/" onClick={collapseNav}>
-                {t("nav.privacy")}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/terms/" onClick={collapseNav}>
-                {t("nav.terms")}
-              </Link>
-            </li>
-          </ul>
+        <nav className="nav__links" aria-label="DingPOS">
+          {links.map(({ to, label }) => (
+            <NavLink key={to} to={to} className="nav__link">
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="nav__end">
+          <LanguagePicker />
+          <button
+            ref={toggleRef}
+            type="button"
+            className="nav__toggle"
+            aria-expanded={open}
+            aria-controls="menu"
+            aria-label={t("nav.menu")}
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span />
+            <span />
+          </button>
         </div>
+      </header>
 
-        <div className="d-flex align-items-center gap-2 ms-3 order-2 order-lg-3">
-          <div className="dropdown">
-            <button
-              type="button"
-              className="lang-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i className="bi bi-translate" aria-hidden="true"></i>
-              {supportedLanguages.find((lang) => lang.code === currentLanguage).label}
-            </button>
-            <ul className="dropdown-menu dropdown-menu-end lang-menu">
-              {supportedLanguages.map((lang) => (
-                <li key={lang.code}>
-                  <a
-                    className={`dropdown-item${lang.code === currentLanguage ? " active" : ""}`}
-                    href={localizedUrl(lang.code, switchPath(lang.code, location.pathname))}
-                    hrefLang={lang.hreflang}
-                    lang={lang.hreflang}
-                    aria-current={lang.code === currentLanguage ? "page" : undefined}
-                    onClick={(event) => handleChangeLang(event, lang.code)}
-                  >
-                    {lang.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <div id="menu" className="menu" data-open={open || undefined} inert={!open}>
+        <nav className="menu__links" aria-label="DingPOS">
+          {menuLinks.map(({ to, label, end }, i) => (
+            <span key={to} className="menu__item" style={{ "--i": i }}>
+              <NavLink to={to} end={end} className="menu__link" onClick={to === "/" ? handleHome : close}>
+                {label}
+              </NavLink>
+            </span>
+          ))}
+          <span className="menu__item" style={{ "--i": menuLinks.length }}>
+            <AppStoreButton className="button button--primary button--lg">{t("hero.download")}</AppStoreButton>
+          </span>
+        </nav>
       </div>
-    </nav>
+    </>
   );
 }
 

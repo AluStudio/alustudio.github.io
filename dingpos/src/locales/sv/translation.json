@@ -126,10 +126,10 @@
     "title": "Inget konto betyder att ingen kan ta din data",
     "lead": "DingPOS har inget att registrera sig för. Din bokföring finns på iPad, och vill du ha säkerhetskopior går de till ett molnkonto du redan äger.",
     "items": [
-      "Välj en av iCloud, Google Drive eller Dropbox",
+      "Säkerhetskopiera till iCloud, Google Drive, Dropbox – eller alla tre",
       "Manuell säkerhetskopiering när du vill",
-      "Sparar de 5 senaste ögonblicksbilderna",
-      "Inkrementell bildsynkronisering",
+      "Varje molntjänst sparar din senaste säkerhetskopia",
+      "Produktbilder säkerhetskopieras tillsammans med dina data",
       "Inget konto; data på enheten, säkerhetskopior i ditt eget moln",
       "Fullt fungerande offline"
     ]

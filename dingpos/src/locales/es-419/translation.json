@@ -126,10 +126,10 @@
     "title": "Sin cuenta, nadie puede llevarse tus datos",
     "lead": "DingPOS no te pide registrarte. Tus registros se guardan en el iPad y, si quieres respaldos, van a una cuenta en la nube que ya es tuya.",
     "items": [
-      "Elige entre iCloud, Google Drive o Dropbox",
+      "Respalda en iCloud, Google Drive, Dropbox o en los tres",
       "Respaldo manual, cuando lo necesites",
-      "Conserva las últimas 5 copias",
-      "Sincronización incremental de imágenes",
+      "Cada nube conserva tu último respaldo",
+      "Las fotos de tus productos se respaldan junto con tus datos",
       "Sin cuenta; datos en el dispositivo y respaldos en tu propia nube",
       "Totalmente funcional sin conexión"
     ]

@@ -1,6 +1,4 @@
-import "../assets/scss/all.scss";
-import "../assets/scss/footer.scss";
-import "./legal.scss";
+import "./article.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
@@ -11,29 +9,29 @@ function TermsPage() {
   return (
     <>
       <Navbar />
-      <main className="main-content">
-        <div className="container">
-          <article className="legal-page">
-            <header className="legal-header">
+      <main id="main" className="page">
+        <div className="shell shell--narrow">
+          <article className="article legal">
+            <header className="legal__head">
               <h1>{t("terms.title")}</h1>
-              <p className="legal-effective">{t("terms.effective_date")}</p>
+              <p className="legal__date">{t("terms.effective_date")}</p>
             </header>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <p>{t("terms.intro")}</p>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.license.title")}</h2>
               <p>{t("terms.license.desc")}</p>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.subscription.title")}</h2>
               <p>{t("terms.subscription.desc")}</p>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.restrictions.title")}</h2>
               <p>{t("terms.restrictions.desc")}</p>
               <ul>
@@ -44,32 +42,32 @@ function TermsPage() {
               </ul>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.user_data.title")}</h2>
               <p>{t("terms.user_data.desc")}</p>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.updates.title")}</h2>
               <p>{t("terms.updates.desc")}</p>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.disclaimer.title")}</h2>
               <p>{t("terms.disclaimer.desc")}</p>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.liability.title")}</h2>
               <p>{t("terms.liability.desc")}</p>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.changes.title")}</h2>
               <p>{t("terms.changes.desc")}</p>
             </section>
 
-            <section className="legal-section">
+            <section className="prose legal__section">
               <h2>{t("terms.contact.title")}</h2>
               <p>
                 {t("terms.contact.desc")}{" "}

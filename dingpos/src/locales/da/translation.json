@@ -126,10 +126,10 @@
     "title": "Uden konto kan ingen tage dine data",
     "lead": "Du skal ikke oprette dig nogen steder i DingPOS. Dit regnskab ligger på iPad'en, og vil du have backup, går den til en skykonto, du allerede har.",
     "items": [
-      "Vælg mellem iCloud, Google Drive eller Dropbox",
+      "Tag backup til iCloud, Google Drive, Dropbox eller alle tre",
       "Manuel backup, når du vil",
-      "Gemmer de seneste 5 øjebliksbilleder",
-      "Trinvis synkronisering af billeder",
+      "Hver sky gemmer din seneste backup",
+      "Produktbilleder tages med i backuppen sammen med dine data",
       "Ingen konto; data på enheden, backup i din egen sky",
       "Fuld funktionalitet offline"
     ]

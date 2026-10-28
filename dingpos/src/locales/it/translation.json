@@ -126,10 +126,10 @@
     "title": "Senza account, nessuno può prendere i tuoi dati",
     "lead": "Con DingPOS non devi registrarti a niente. I tuoi conti restano sull'iPad e, se vuoi un backup, finisce in un account cloud che hai già.",
     "items": [
-      "Scegli tra iCloud, Google Drive o Dropbox",
+      "Backup su iCloud, Google Drive, Dropbox o su tutti e tre",
       "Backup manuale, quando vuoi",
-      "Conserva le ultime 5 copie",
-      "Sincronizzazione incrementale delle immagini",
+      "Ogni cloud conserva il tuo ultimo backup",
+      "Anche le foto dei prodotti vengono salvate nel backup",
       "Nessun account; dati sul dispositivo, backup nel tuo cloud",
       "Pienamente funzionante offline"
     ]

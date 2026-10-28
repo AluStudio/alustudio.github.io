@@ -1,638 +1,655 @@
-@import "./variables";
+@use "tokens" as *;
 
-// ── Tokens ────────────────────────────────────────────────
-// Built-in CSS easings are too soft to read as intentional at these
-// durations; these are the stronger variants.
-:root {
-  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --section-pad: 6rem;
-}
-
-// ── Shared type ───────────────────────────────────────────
-.eyebrow {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: $accent-500;
-  margin-bottom: 0.85rem;
-}
-
-.lead {
-  font-size: 1.06rem;
-  line-height: 1.75;
-  color: $ink-mid;
-  margin-bottom: 1.6rem;
-}
-
-.section-title {
-  font-size: 2.1rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  text-align: center;
-  margin-bottom: 0.6rem;
-}
-
-.section-sub {
-  text-align: center;
-  color: $ink-soft;
-  font-size: 1rem;
-  margin: 0 auto 3.5rem;
-  max-width: 40rem;
-}
-
-.spec-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    position: relative;
-    padding-left: 1.6rem;
-    margin-bottom: 0.6rem;
-    font-size: 0.93rem;
-    line-height: 1.6;
-    color: $ink-mid;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &::before {
-      content: "\f633"; // bootstrap-icons check-lg
-      font-family: "bootstrap-icons";
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: $accent-400;
-    }
-  }
-}
-
-// ── Store button ──────────────────────────────────────────
-.btn-store {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  background: $accent-600;
-  color: $neutral-0 !important;
-  padding: 0.85rem 2rem;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 8px 24px rgba($accent-700, 0.28);
-  transition:
-    background-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.16s var(--ease-out);
-
-  .bi {
-    font-size: 1.15rem;
-  }
-
-  // Touch devices fire :hover on tap, which leaves the lifted state stuck.
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      background: $accent-700;
-      box-shadow: 0 12px 30px rgba($accent-800, 0.34);
-    }
-  }
-
-  &:active {
-    transform: scale(0.97);
-  }
-}
-
-// Secondary plan CTA: same shape as .btn-store, outlined.
-.btn-plan {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  padding: 0.8rem 1.5rem;
-  border-radius: 12px;
-  border: 1.5px solid $accent-300;
-  background: $neutral-0;
-  color: $accent-700;
-  font-weight: 700;
-  text-decoration: none;
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.16s var(--ease-out);
-
-  .bi {
-    font-size: 1.1rem;
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      background: $neutral-50;
-      border-color: $accent-500;
-      color: $accent-800;
-    }
-  }
-
-  &:active {
-    transform: scale(0.97);
-  }
-}
-
-// ── Device frame ──────────────────────────────────────────
-// Drawn in CSS so the committed assets stay pure screen captures.
-.device {
-  margin: 0;
-  padding: 0.7rem;
-  border-radius: 1.5rem;
-  background: linear-gradient(155deg, $neutral-600 0%, $neutral-800 45%, $neutral-900 100%);
-  box-shadow:
-    0 1px 2px rgba($neutral-900, 0.4),
-    0 32px 64px -28px rgba($accent-900, 0.5),
-    inset 0 1px 0 rgba(#fff, 0.18);
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    // Reserves space so the frame does not collapse before the image decodes.
-    // object-fit below enforces this ratio, which means a capture from a
-    // different iPad would be cropped silently — so scripts/build-screenshots.sh
-    // asserts every asset against this value and refuses to write a mismatch.
-    // Changing it here means changing CSS_RATIO_W/H there too.
-    aspect-ratio: 2388 / 1568;
-    object-fit: cover;
-    border-radius: 0.85rem;
-    background: $neutral-50;
-  }
-
-  @media (max-width: 575.98px) {
-    padding: 0.4rem;
-    border-radius: 1rem;
-
-    img {
-      border-radius: 0.6rem;
-    }
-  }
-}
-
-// ── Hero ──────────────────────────────────────────────────
+// ─── Hero ───────────────────────────────────────────────────────
+// Opens plain, then settles in reading order: nav, badge, headline line by
+// line, subtext, action, proof (design-to-motion hero appear). The screenshot
+// is already in its bezel and resolves from blur after the headline.
 .hero {
-  position: relative;
-  // No overflow clipping here on purpose — the device frame is meant to hang
-  // past the hero's bottom edge into the checkout band below it.
-  padding: calc(var(--navbar-height, 72px) + 4rem) 1.5rem 0;
-  background: linear-gradient(180deg, $neutral-0 0%, $neutral-50 62%, $accent-100 100%);
+  padding: 128px 0 s(800);
 
-  // One soft wash instead of the old stacked radials + dot grid: the hero now
-  // carries a screenshot, and the screenshot has to be the busiest thing here.
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 auto;
-    height: 70%;
-    background: radial-gradient(
-      ellipse 80% 60% at 50% 0%,
-      rgba($accent-300, 0.3) 0%,
-      transparent 70%
-    );
-    pointer-events: none;
+  @media (min-width: $bp-md) {
+    padding: 160px 0 s(900);
   }
-}
 
-.hero-copy {
-  position: relative;
-  max-width: 46rem;
-  margin: 0 auto;
-  text-align: center;
-}
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-.hero-logo {
-  display: block;
-  width: 220px;
-  max-width: 60vw;
-  height: auto;
-  margin: 0 auto 1.75rem;
-}
-
-.hero-eyebrow {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: $accent-600;
-  background: rgba($accent-200, 0.45);
-  border: 1px solid rgba($accent-400, 0.35);
-  padding: 0.32rem 0.85rem;
-  border-radius: 50px;
-  margin-bottom: 1.4rem;
-}
-
-.hero-title {
-  font-size: clamp(2rem, 4.4vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  line-height: 1.18;
-  margin-bottom: 1.25rem;
-}
-
-.hero-desc {
-  font-size: 1.08rem;
-  line-height: 1.75;
-  color: $ink-mid;
-  margin-bottom: 2rem;
-}
-
-.hero-note {
-  margin: 1rem 0 0;
-  font-size: 0.85rem;
-  color: $ink-soft;
-  font-weight: 500;
-}
-
-.hero-proof {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem 1.5rem;
-  padding: 0;
-  margin: 1.75rem 0 0;
-
-  li {
+  &__eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.87rem;
+    gap: s(75);
+    padding: s(50) s(100);
+    border: 1px solid $line;
+    border-radius: $radius-full;
+    background: $surface;
+    @include text("sm");
     font-weight: 600;
-    color: $ink-mid;
+    color: $accent;
   }
 
-  .bi {
-    color: $accent-500;
-    font-size: 1rem;
-  }
-}
+  &__title {
+    max-width: 680px;
+    margin-top: s(300);
+    @include text("4xl");
+    letter-spacing: -0.03em;
 
-.hero-shot {
-  position: relative;
-  // Above the next section's background, which it overlaps.
-  z-index: 2;
-  max-width: 1120px;
-  margin: 3.5rem auto 0;
-  // The frame runs off the bottom of the hero and into the section below, so
-  // the checkout copy reads as a caption for the screen above it.
-  transform: translateY(3rem);
-}
+    @media (min-width: $bp-md) {
+      @include text("5xl");
+    }
 
-// ── Checkout band (caption for the hero shot) ─────────────
-.checkout {
-  padding: calc(var(--section-pad) + 3rem) 0 var(--section-pad);
-  background: $neutral-0;
-}
-
-.checkout-head {
-  max-width: 44rem;
-  margin: 0 auto 2.5rem;
-  text-align: center;
-
-  .eyebrow {
-    margin-bottom: 0.7rem;
+    @media (min-width: $bp-lg) {
+      @include text("6xl");
+      letter-spacing: -0.04em;
+    }
   }
 
-  h2 {
-    font-size: 1.95rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.9rem;
+  // Each sentence is its own line, broken where the thought breaks (B5). The
+  // gradient sits on each line rather than the heading: background-clip:text
+  // does not paint through children that animate their own transform.
+  &__line {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    @include ink-gradient;
   }
 
-  .lead {
-    margin-bottom: 0;
+  &__sub {
+    max-width: 680px;
+    margin-top: s(300);
+    @include text("lg");
+    color: $ink-soft;
   }
-}
 
-.spec-list--split {
-  max-width: 46rem;
-  margin: 0 auto;
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: s(100);
+    margin-top: s(500);
+  }
 
-  @media (min-width: 768px) {
-    columns: 2;
-    column-gap: 2.5rem;
+  &__note {
+    @include text("sm");
+    color: $ink-muted;
+  }
+
+  &__proof {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: s(100) s(300);
+    margin-top: s(400);
+    @include text("sm");
+    font-weight: 600;
+    color: $ink-soft;
 
     li {
-      break-inside: avoid;
+      display: inline-flex;
+      align-items: center;
+      gap: s(75);
+    }
+
+    svg {
+      color: $green;
+    }
+  }
+
+  &__visual {
+    max-width: 1120px;
+    margin: s(700) auto 0;
+
+    img {
+      animation: photo-resolve 1.2s $e2 0.5s both;
+    }
+  }
+
+  &__eyebrow,
+  &__line,
+  &__sub,
+  &__actions,
+  &__proof {
+    animation: appear 0.8s $e both;
+  }
+
+  &__eyebrow {
+    animation-delay: 60ms;
+  }
+
+  &__line:nth-child(1) {
+    animation-delay: 120ms;
+  }
+
+  &__line:nth-child(2) {
+    animation-delay: 180ms;
+  }
+
+  &__line:nth-child(n + 3) {
+    animation-delay: 240ms;
+  }
+
+  &__sub {
+    animation-delay: 300ms;
+  }
+
+  &__actions {
+    animation-delay: 360ms;
+  }
+
+  &__proof {
+    animation-delay: 420ms;
+  }
+}
+
+// ─── Checkout caption ───────────────────────────────────────────
+.checkout {
+  padding-top: s(600);
+
+  &__inner {
+    display: grid;
+    gap: s(500);
+
+    @media (min-width: $bp-lg) {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: s(700);
+      align-items: start;
+    }
+  }
+
+  .section-head {
+    margin-bottom: 0;
+  }
+
+  .check-list {
+    padding: s(300);
+    border: 1px solid $line;
+    border-radius: $radius-3xl;
+    background: $surface;
+
+    @media (min-width: $bp-md) {
+      padding: s(400);
     }
   }
 }
 
-// ── Story sections ────────────────────────────────────────
+// ─── Story rows ─────────────────────────────────────────────────
 .story {
-  padding: var(--section-pad) 0;
+  &__inner {
+    display: grid;
+    gap: s(600);
+    align-items: center;
 
-  // Alternating band, driven by the story's index in JSX rather than
-  // :nth-of-type — that selector counts every <section> on the page, so
-  // inserting an unrelated one would silently invert the whole rhythm.
-  &.story--alt {
-    background: $neutral-0;
+    @media (min-width: $bp-lg) {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: s(700);
+    }
   }
-}
 
-.story-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  align-items: center;
-  gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-
-  @media (max-width: 991.98px) {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
-
-.story-copy {
-  h2 {
-    font-size: 1.85rem;
-    font-weight: 800;
+  &__copy h2 {
+    margin-top: s(100);
+    @include text("3xl");
     letter-spacing: -0.02em;
-    line-height: 1.28;
-    margin-bottom: 0.9rem;
-  }
-}
 
-.story--flip {
-  @media (min-width: 992px) {
-    // The column widths have to flip with the content. Swapping `order` alone
-    // would hand the narrow column to the screenshot on every other row.
-    .story-inner {
+    @media (min-width: $bp-md) {
+      @include text("4xl");
+    }
+  }
+
+  &__lead {
+    margin: s(200) 0 s(400);
+    @include text("lg");
+    color: $ink-soft;
+  }
+
+  // Alternate sides from 1024px. The column widths flip with the content, or
+  // every other row would hand the narrow column to the screenshot.
+  &--flip &__inner {
+    @media (min-width: $bp-lg) {
       grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
     }
+  }
 
-    .story-copy {
+  &--flip &__copy {
+    @media (min-width: $bp-lg) {
       order: 2;
-    }
-
-    .story-shot {
-      order: 1;
     }
   }
 }
 
-// ── Features grid ─────────────────────────────────────────
-.features {
-  padding: var(--section-pad) 0;
-  background: $neutral-0;
-  border-top: 1px solid $neutral-100;
-}
-
-.feature-grid {
+// ─── Feature bento ──────────────────────────────────────────────
+.bento {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  max-width: 960px;
-  margin: 0 auto;
+  gap: s(200);
 
-  @media (max-width: 767.98px) {
-    grid-template-columns: 1fr;
+  @media (min-width: $bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 .feature-card {
-  padding: 1.8rem;
-  border-radius: 16px;
-  border: 1px solid $neutral-100;
-  background: $neutral-0;
-  transition:
-    transform 0.24s var(--ease-out),
-    box-shadow 0.24s ease,
-    border-color 0.24s ease;
+  display: flex;
+  flex-direction: column;
+  padding: s(75);
+  border: 1px solid $line;
+  border-radius: $radius-3xl;
+  background: $surface;
 
-  h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin: 0 0 1rem;
+  // Card radius minus its 8px padding (B3).
+  &__visual {
+    position: relative;
+    height: 264px;
+    overflow: hidden;
+    border-radius: $radius-2xl;
+    background: $sunken;
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 36px rgba($accent-800, 0.09);
-      border-color: rgba($accent-400, 0.45);
+  &__body {
+    padding: s(300) s(200) s(200);
+
+    h3 {
+      @include text("xl");
+      letter-spacing: -0.01em;
+    }
+
+    .check-list {
+      margin-top: s(200);
     }
   }
 }
 
-.feature-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-bottom: 1.1rem;
-  border-radius: 11px;
-  background: linear-gradient(140deg, $accent-500, $accent-700);
-  box-shadow: 0 6px 14px rgba($accent-700, 0.26);
+.check-list--compact {
+  gap: s(75);
 
-  .bi {
-    font-size: 1.2rem;
-    color: $neutral-0;
-  }
-}
-
-// ── Privacy band ──────────────────────────────────────────
-.privacy-band {
-  padding: var(--section-pad) 0;
-  background: linear-gradient(150deg, $accent-700 0%, $accent-800 58%, $neutral-900 100%);
-  color: $neutral-0;
-
-  .eyebrow {
-    color: rgba($accent-200, 0.9);
-  }
-
-  h2 {
-    font-size: 1.95rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.28;
-    color: $neutral-0;
-    margin-bottom: 1rem;
-  }
-
-  .lead {
-    color: rgba($neutral-0, 0.78);
-    margin-bottom: 0;
-  }
-
-  .spec-list li {
-    color: rgba($neutral-0, 0.8);
+  li {
+    padding-left: 28px;
+    @include text("sm");
 
     &::before {
-      color: rgba($accent-200, 0.95);
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      background-size: 10px;
     }
   }
 }
 
-.privacy-inner {
+// ─── Privacy (dark) ─────────────────────────────────────────────
+// Headline and lead side by side, then the app's Cloud Backup screen with
+// the claims it proves right beside it (landing-page-design A4).
+.privacy {
+  padding: s(800) 0;
+  background: $night;
+  color: $surface;
+
+  @media (min-width: $bp-md) {
+    padding: s(900) 0;
+  }
+
+  // The headline keeps its full 680px (narrower, Chinese and Japanese break
+  // mid-phrase or strand a character), so the lead joins it only once the
+  // shell is at its 1136px content width.
+  &__head {
+    display: grid;
+    gap: s(300);
+
+    @media (min-width: 1200px) {
+      grid-template-columns: minmax(0, 680px) minmax(0, 1fr);
+      gap: s(700);
+      align-items: end;
+    }
+  }
+
+  // Japanese breaks between phrases, not mid-word, where the browser can
+  // (auto-phrase); elsewhere it falls back to breaking between characters.
+  &__title {
+    max-width: 680px;
+    margin-top: s(300);
+    @include text("4xl");
+    letter-spacing: -0.03em;
+    word-break: auto-phrase;
+
+    @media (min-width: $bp-md) {
+      @include text("5xl");
+    }
+
+    @media (min-width: $bp-lg) {
+      @include text("6xl");
+      letter-spacing: -0.04em;
+    }
+  }
+
+  &__lead {
+    max-width: 560px;
+    @include text("lg");
+    color: rgba($surface, 0.72);
+    text-wrap: pretty;
+  }
+
+  &__grid {
+    display: grid;
+    gap: s(600);
+    margin-top: s(600);
+
+    @media (min-width: $bp-lg) {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: s(700);
+      align-items: center;
+      margin-top: s(800);
+    }
+  }
+
+  // The bezel needs a hairline to stand off the near-black band.
+  &__visual .tablet {
+    box-shadow:
+      0 0 0 1px rgba($surface, 0.08),
+      0 40px 80px -40px rgba(0, 0, 0, 0.8);
+  }
+
+  // Hairline rules turn the claims into one column beside the screen.
+  &__list {
+    gap: 0;
+
+    li {
+      padding-block: s(200);
+      border-bottom: 1px solid $night-line;
+
+      &:first-child {
+        border-top: 1px solid $night-line;
+      }
+
+      &::before {
+        top: s(200) + 2px;
+      }
+    }
+  }
+}
+
+.eyebrow--dark {
+  color: #8dabc6;
+}
+
+.check-list--dark li {
+  color: rgba($surface, 0.72);
+
+  &::before {
+    background-color: $night-3;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='none' stroke='%238dabc6' stroke-linecap='round' stroke-linejoin='round' stroke-width='28' d='M56 132l44 44 100-100'/%3E%3C/svg%3E");
+  }
+}
+
+// ─── Tagline reveal (B11) ───────────────────────────────────────
+// Words go from muted to full colour one at a time, in reading order, as the
+// heading crosses the viewport. Each word owns a slice of one shared timeline.
+.tagline {
+  view-timeline-name: --tagline;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .tagline__word {
+      animation: word-on auto $ease both;
+      animation-timeline: --tagline;
+      animation-range-start: cover calc(18% + var(--i) / var(--n) * 32%);
+      animation-range-end: cover calc(24% + var(--i) / var(--n) * 32%);
+    }
+  }
+}
+
+@keyframes word-on {
+  from {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+// ─── How it works ───────────────────────────────────────────────
+// The onboarding wizard beside its three steps; from 1024px the steps sit on
+// the left, below that the wizard comes first.
+.onboarding {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 3.5rem;
+  gap: s(400);
+  align-items: center;
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: s(700);
+
+    .steps {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    &__visual {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+}
+
+.steps {
+  display: grid;
+  gap: s(100);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: s(200);
   align-items: start;
-  max-width: 1040px;
-  margin: 0 auto;
 
-  @media (max-width: 991.98px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+  // The number gives way to a check once the step is done.
+  &__num {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: $radius-full;
+    background: $sunken;
+    color: $ink-muted;
+    @include text("sm");
+    font-weight: 700;
+    transition:
+      background-color 0.5s $ease,
+      color 0.5s $ease;
 
-  .spec-list--split {
-    max-width: none;
-    margin: 0;
-
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      columns: 2;
+    > * {
+      grid-area: 1 / 1;
+      transition:
+        opacity 0.4s $e2,
+        transform 0.5s $e;
     }
 
-    @media (min-width: 992px) {
-      columns: 1;
+    svg {
+      opacity: 0;
+      transform: scale(0.86);
     }
   }
-}
 
-// ── Pricing ───────────────────────────────────────────────
-.pricing {
-  padding: var(--section-pad) 0;
-  background: $neutral-50;
-}
-
-.pricing-card {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 3rem 2.5rem;
-  border-radius: 20px;
-  background: $neutral-0;
-  border: 1px solid $neutral-100;
-  box-shadow: 0 20px 50px -30px rgba($accent-900, 0.35);
-  text-align: center;
-
-  h2 {
-    font-size: 1.85rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
+  &__body {
+    display: grid;
+    gap: s(100);
+    padding-bottom: s(200);
   }
 
-  .pricing-price {
-    font-size: 1.12rem;
-    line-height: 1.7;
-    color: $ink;
+  &__text {
+    padding-top: s(25);
+    @include text("lg");
     font-weight: 600;
-    margin-bottom: 0.6rem;
+    color: $ink-muted;
+    transition: color 0.5s $ease;
   }
 
-  .pricing-sub {
-    text-wrap: balance;
-    font-size: 0.92rem;
-    line-height: 1.7;
-    color: $ink-soft;
-    margin-bottom: 2rem;
+  // Fills like a progress bar for as long as the step's screen is on, then
+  // drains quickly when the story starts over (design-to-motion B3).
+  &__track {
+    position: relative;
+    height: 2px;
+    overflow: hidden;
+    border-radius: $radius-full;
+    background: $line;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: $accent;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s $io;
+    }
   }
 
-  .pricing-actions {
+  &[data-state="active"] {
+    .step__num {
+      background: $accent-strong;
+      color: $surface;
+    }
+
+    .step__text {
+      color: $ink;
+    }
+
+    .step__track::after {
+      transform: none;
+      transition: transform var(--fill-ms) linear;
+    }
+  }
+
+  &[data-state="done"] {
+    .step__num {
+      background: $accent-wash;
+      color: $accent;
+
+      span {
+        opacity: 0;
+        transform: scale(0.86);
+      }
+
+      svg {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .step__text {
+      color: $ink-soft;
+    }
+
+    .step__track::after {
+      transform: none;
+    }
+  }
+}
+
+// ─── Pricing and final action ───────────────────────────────────
+.cta {
+  &__card {
+    padding: s(700) s(300);
+    border-radius: $radius-3xl;
+    background: $night;
+    color: $surface;
+    text-align: center;
+
+    @media (min-width: $bp-md) {
+      padding: s(800) s(600);
+    }
+
+    h2 {
+      @include text("3xl");
+      letter-spacing: -0.02em;
+
+      @media (min-width: $bp-md) {
+        @include text("5xl");
+        letter-spacing: -0.03em;
+      }
+    }
+  }
+
+  &__price {
+    margin-top: s(300);
+    @include text("xl");
+    color: rgba($surface, 0.72);
+
+    strong {
+      color: $surface;
+      font-weight: 700;
+    }
+  }
+
+  &__sub {
+    max-width: 560px;
+    margin: s(200) auto 0;
+    color: rgba($surface, 0.6);
+  }
+
+  &__actions {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.75rem;
-  }
-
-  @media (max-width: 575.98px) {
-    padding: 2.25rem 1.5rem;
+    gap: s(100);
+    margin-top: s(500);
   }
 }
 
-// ── Motion ────────────────────────────────────────────────
-// Load-in only, and pure CSS. A JS-gated scroll reveal would be baked into the
-// prerendered HTML as an opacity:0 initial state (scripts/prerender.mjs writes
-// the rendered DOM back to disk), leaving the page blank without JS.
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
+.button--ghost {
+  border-color: rgba($surface, 0.24);
+  color: $surface;
+
+  @include hover {
+    background: rgba($surface, 0.08);
+    border-color: rgba($surface, 0.4);
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline-color: $surface;
   }
 }
 
-@keyframes shot-in {
-  from {
-    opacity: 0;
-    transform: translateY(3rem) translateY(20px) scale(0.98);
-  }
-}
+.assurances {
+  display: grid;
+  gap: s(200);
+  margin-top: s(200);
 
-.hero-copy > * {
-  animation: rise-in 0.6s var(--ease-out) backwards;
-}
-
-@for $i from 1 through 7 {
-  .hero-copy > *:nth-child(#{$i}) {
-    animation-delay: #{($i - 1) * 55}ms;
-  }
-}
-
-.hero-shot {
-  animation: shot-in 0.75s var(--ease-out) 260ms backwards;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-copy > *,
-  .hero-shot {
-    animation: none;
+  @media (min-width: $bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .btn-store,
-  .btn-plan,
-  .feature-card {
-    transition: none;
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .btn-store:active,
-  .btn-plan:active {
-    transform: none;
-  }
-}
-
-// ── Responsive ────────────────────────────────────────────
-@media (max-width: 767.98px) {
-  :root {
-    --section-pad: 4rem;
+  li {
+    padding: s(300);
+    border: 1px solid $line;
+    border-radius: $radius-3xl;
+    background: $surface;
   }
 
-  .hero {
-    padding-top: calc(var(--navbar-height, 72px) + 2.5rem);
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-xl;
+    background: $accent-wash;
+    color: $accent;
   }
 
-  .hero-shot {
-    margin-top: 2.5rem;
-    transform: translateY(2rem);
+  h3 {
+    margin-top: s(200);
+    @include text("base");
   }
 
-  .checkout {
-    padding-top: calc(var(--section-pad) + 2rem);
-  }
-
-  .section-title,
-  .checkout-head h2,
-  .story-copy h2,
-  .privacy-band h2,
-  .pricing-card h2 {
-    font-size: 1.6rem;
+  p {
+    margin-top: s(75);
+    @include text("sm");
+    color: $ink-soft;
   }
 }

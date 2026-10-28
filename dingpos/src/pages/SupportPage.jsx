@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import "../assets/scss/all.scss";
-import "../assets/scss/footer.scss";
+import { CaretRight, MagnifyingGlass, X } from "@phosphor-icons/react";
 import "./support.scss";
 import Navbar from "../components/Navbar";
 import TransitionLink from "../components/TransitionLink";
 import Footer from "../components/Footer";
 import ContactCard from "../components/ContactCard";
+import CategoryIcon from "../components/CategoryIcon";
 import { getFaq } from "../data/faq";
 import { VERIFIED_APP_VERSION } from "../data/faq/version";
 import { tokenize, buildIndex, searchFaq, highlightParts } from "../utils/faqSearch";
@@ -105,77 +105,66 @@ function SupportPage() {
   return (
     <>
       <Navbar />
-      <main className="main-content">
-        {/* Search hero */}
-        <section className="support-hero">
-          <div className="support-hero-inner">
-            <h1>{t("support.title")}</h1>
-            <p className="support-subtitle">{t("support.subtitle")}</p>
-            <div className="support-search" role="search">
-              <i className="bi bi-search" aria-hidden="true"></i>
-              <input
-                ref={inputRef}
-                type="search"
-                enterKeyHint="search"
-                autoComplete="off"
-                autoCorrect="off"
-                spellCheck="false"
-                placeholder={t("support.search_placeholder")}
-                aria-label={t("support.search_placeholder")}
-                value={rawQuery}
-                onChange={(e) => setRawQuery(e.target.value)}
-                onKeyDown={handleInputKeyDown}
-              />
-              {rawQuery && (
-                <button
-                  type="button"
-                  className="support-search-clear"
-                  aria-label={t("support.clear")}
-                  onClick={clearSearch}
-                >
-                  <i className="bi bi-x-lg" aria-hidden="true"></i>
-                </button>
-              )}
-            </div>
-            <p className="support-search-hint">
-              {t("support.search_hint_keywords")}
-              <span className="support-search-hint-shortcut">
-                {" · "}
-                {t("support.search_hint_shortcut_pre")}
-                <kbd>/</kbd>
-                {t("support.search_hint_shortcut_post")}
-              </span>
-            </p>
+      <main id="main" className="page support-page">
+        <header className="shell page-head page-head--center">
+          <h1>{t("support.title")}</h1>
+          <p>{t("support.subtitle")}</p>
+          <div className="search" role="search">
+            <MagnifyingGlass size={20} weight="bold" className="search__icon" aria-hidden="true" />
+            <input
+              ref={inputRef}
+              type="search"
+              enterKeyHint="search"
+              autoComplete="off"
+              autoCorrect="off"
+              spellCheck="false"
+              placeholder={t("support.search_placeholder")}
+              aria-label={t("support.search_placeholder")}
+              value={rawQuery}
+              onChange={(e) => setRawQuery(e.target.value)}
+              onKeyDown={handleInputKeyDown}
+            />
+            {rawQuery && (
+              <button type="button" className="search__clear" aria-label={t("support.clear")} onClick={clearSearch}>
+                <X size={16} weight="bold" aria-hidden="true" />
+              </button>
+            )}
           </div>
-        </section>
+          <p className="search__hint">
+            {t("support.search_hint_keywords")}
+            <span className="search__shortcut">
+              {" · "}
+              {t("support.search_hint_shortcut_pre")}
+              <kbd>/</kbd>
+              {t("support.search_hint_shortcut_post")}
+            </span>
+          </p>
+        </header>
 
-        <div className="container support-body">
+        <div className="shell support-body">
           {searching ? (
-            /* Search results */
-            <section className="support-results">
+            <section className="results">
               {results.length > 0 ? (
                 <>
                   {/* Only the count is a live region: announcing the whole
                       result list on every keystroke is unusable with a screen
                       reader once there are dozens of articles. */}
-                  <p className="support-results-count" aria-live="polite">
+                  <p className="results__count" aria-live="polite">
                     {t("support.results_count", { num: results.length })}
                   </p>
-                  <ul className="support-result-list">
+                  <ul className="results__list">
                     {results.map(({ article, snippet }, i) => (
                       <li key={article.slug}>
                         <TransitionLink
                           to={`/support/${article.slug}/`}
-                          className={`support-result-card${i === activeIndex ? " is-active" : ""}`}
+                          className={`result${i === activeIndex ? " is-active" : ""}`}
                           onMouseEnter={() => setActiveIndex(i)}
                         >
-                          <span className="support-result-category">
-                            {categoryLabelByKey[article.category]}
-                          </span>
+                          <span className="pill">{categoryLabelByKey[article.category]}</span>
                           <h3>
                             <Highlight text={article.question} tokens={tokens} />
                           </h3>
-                          <p className="support-result-snippet">
+                          <p>
                             <Highlight text={snippet} tokens={tokens} />
                           </p>
                         </TransitionLink>
@@ -184,48 +173,49 @@ function SupportPage() {
                   </ul>
                 </>
               ) : (
-                <div className="support-no-results" aria-live="polite">
-                  <i className="bi bi-search-heart" aria-hidden="true"></i>
+                <div className="empty" aria-live="polite">
+                  <span className="empty__icon" aria-hidden="true">
+                    <MagnifyingGlass size={24} weight="duotone" />
+                  </span>
                   <h3>{t("support.no_results_title")}</h3>
                   <p>{t("support.no_results_desc")}</p>
                 </div>
               )}
             </section>
           ) : (
-            /* Browse by group → category */
-            <section className="support-browse">
+            <section className="browse">
               {["faq", "guide", "roadmap"].map((groupKey) => {
                 const groupCats = categories.filter((c) => c.group === groupKey);
                 if (groupCats.length === 0) return null;
                 const desc = t(`support.group_${groupKey}_desc`, { defaultValue: "" });
-                const groupTitle = t(`support.group_${groupKey}`);
+                const single = groupCats.length === 1;
                 return (
-                  <div className="support-group" key={groupKey}>
-                    <h2 className="support-group-title">{groupTitle}</h2>
-                    {desc && <p className="support-group-desc">{desc}</p>}
-                    <div
-                      className={`support-cat-grid${groupCats.length === 1 ? " support-cat-grid-single" : ""}`}
-                    >
+                  <div className="browse__group" key={groupKey}>
+                    <div className="browse__head">
+                      <h2>{t(`support.group_${groupKey}`)}</h2>
+                      {desc && <p>{desc}</p>}
+                    </div>
+                    <div className={`browse__grid${single ? " browse__grid--single" : ""}`}>
                       {groupCats.map((cat) => {
                         const catArticles = articles.filter((a) => a.category === cat.key);
                         return (
-                          <div className="support-cat-card" key={cat.key}>
+                          <div className="category" key={cat.key}>
                             {/* `standalone` categories carry the group title
                                 themselves, so a card head would just repeat it */}
                             {!cat.standalone && (
-                              <div className="support-cat-head">
-                                <span className="support-cat-icon">
-                                  <i className={`bi ${cat.icon}`} aria-hidden="true"></i>
+                              <div className="category__head">
+                                <span className="category__icon">
+                                  <CategoryIcon name={cat.icon} />
                                 </span>
                                 <h3>{cat.label}</h3>
                               </div>
                             )}
-                            <ul className="support-cat-list">
+                            <ul className="link-list">
                               {catArticles.map((a) => (
                                 <li key={a.slug}>
                                   <TransitionLink to={`/support/${a.slug}/`}>
                                     {a.question}
-                                    <i className="bi bi-chevron-right" aria-hidden="true"></i>
+                                    <CaretRight size={14} weight="bold" aria-hidden="true" />
                                   </TransitionLink>
                                 </li>
                               ))}
@@ -240,9 +230,7 @@ function SupportPage() {
             </section>
           )}
 
-          <p className="support-verified-version">
-            {t("support.verified_version", { version: VERIFIED_APP_VERSION })}
-          </p>
+          <p className="support-version">{t("support.verified_version", { version: VERIFIED_APP_VERSION })}</p>
 
           <ContactCard />
         </div>

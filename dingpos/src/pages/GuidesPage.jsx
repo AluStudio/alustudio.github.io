@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
-import "../assets/scss/all.scss";
-import "../assets/scss/footer.scss";
+import { ArrowRight } from "@phosphor-icons/react";
 import "./guides.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -26,25 +25,24 @@ function GuidesPage() {
   return (
     <>
       <Navbar />
-      <main className="main-content">
-        <div className="container">
-          <div className="guides-page">
-            <header className="guides-header">
-              <h1>{ui.title}</h1>
-              <p className="guides-subtitle">{ui.subtitle}</p>
-            </header>
-            <ul className="guide-list">
-              {articles.map((guide) => (
-                <li key={guide.slug} className="guide-card">
-                  <p className="guide-market">{ui.markets[guide.market]}</p>
-                  <h2 className="guide-card-title">
-                    <TransitionLink to={`/guides/${guide.slug}/`}>{guide.title}</TransitionLink>
-                  </h2>
-                  <p className="guide-card-summary">{guide.summary}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <main id="main" className="page">
+        <header className="shell page-head page-head--center">
+          <h1>{ui.title}</h1>
+          <p>{ui.subtitle}</p>
+        </header>
+        <div className="shell">
+          <ul className="guide-grid">
+            {articles.map((guide) => (
+              <li key={guide.slug} className="guide-card reveal-card">
+                <p className="pill">{ui.markets[guide.market]}</p>
+                <h2 className="guide-card__title">
+                  <TransitionLink to={`/guides/${guide.slug}/`}>{guide.title}</TransitionLink>
+                </h2>
+                <p className="guide-card__summary">{guide.summary}</p>
+                <ArrowRight size={20} weight="bold" className="guide-card__arrow" aria-hidden="true" />
+              </li>
+            ))}
+          </ul>
         </div>
       </main>
       <Footer />

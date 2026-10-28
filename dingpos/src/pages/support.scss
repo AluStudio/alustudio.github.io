@@ -1,687 +1,280 @@
-@import "../assets/scss/variables";
+@use "../assets/scss/tokens" as *;
 
-// ── Search hero ─────────────────────────────────────────────
-
-.support-hero {
-  position: relative;
-  padding: 4rem 1.5rem 3.25rem;
-  overflow: hidden;
-  background: $neutral-50;
-  text-align: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 18% 20%, rgba($accent-300, 0.24) 0%, transparent 42%),
-      radial-gradient(circle at 85% 88%, rgba($accent-500, 0.18) 0%, transparent 46%),
-      linear-gradient(160deg, $neutral-0 0%, $neutral-50 55%, $accent-100 100%);
-    z-index: 0;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(rgba($accent-700, 0.10) 1px, transparent 1px);
-    background-size: 22px 22px;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 70%);
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 70%);
-    z-index: 0;
-  }
-}
-
-.support-hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 640px;
-  margin: 0 auto;
-
-  h1 {
-    font-family: $headings-font-family;
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
-  }
-}
-
-.support-subtitle {
-  color: $ink-mid;
-  margin-bottom: 1.75rem;
-}
-
-.support-search {
-  position: relative;
+// ─── Search ─────────────────────────────────────────────────────
+.search {
   display: flex;
   align-items: center;
+  gap: s(75);
+  max-width: 560px;
+  margin: s(400) auto 0;
+  padding: s(50) s(50) s(50) s(200);
+  border: 1px solid $line-strong;
+  border-radius: $radius-full;
   background: $surface;
-  border: 1px solid $neutral-200;
-  border-radius: 50px;
-  box-shadow: 0 8px 28px rgba($accent-800, 0.10);
-  padding: 0.35rem 0.75rem 0.35rem 1.15rem;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 12px 32px -20px rgba($accent-deep, 0.4);
+  transition:
+    border-color 0.3s $ease,
+    box-shadow 0.3s $ease;
 
   &:focus-within {
-    border-color: $accent-400;
-    box-shadow: 0 8px 28px rgba($accent-800, 0.16), 0 0 0 4px rgba($accent-300, 0.25);
+    border-color: $accent;
+    box-shadow:
+      0 12px 32px -20px rgba($accent-deep, 0.4),
+      0 0 0 4px rgba($accent-mid, 0.2);
   }
 
-  > .bi-search {
-    color: $ink-soft;
-    font-size: 1.05rem;
-    flex-shrink: 0;
+  &__icon {
+    flex: none;
+    color: $ink-muted;
   }
 
   input {
     flex: 1;
     min-width: 0;
-    border: none;
+    height: 40px;
+    border: 0;
     outline: none;
     background: transparent;
-    font-size: 1.02rem;
-    padding: 0.6rem 0.75rem;
-    color: $ink;
+    @include text("base");
 
     &::placeholder {
-      color: $ink-soft;
+      color: $ink-muted;
     }
 
-    // Hide native WebKit clear button; we render our own.
     &::-webkit-search-cancel-button {
       -webkit-appearance: none;
     }
   }
-}
 
-.support-search-clear {
-  border: none;
-  background: $neutral-100;
-  color: $ink-mid;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background 0.15s ease;
+  &__clear {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: $radius-full;
+    background: $sunken;
+    color: $ink-soft;
+    transition: background-color 0.3s $ease;
 
-  &:hover {
-    background: $neutral-200;
+    @include hover {
+      background: $accent-wash;
+    }
+  }
+
+  &__hint {
+    @include text("sm");
+    color: $ink-muted;
+
+    kbd {
+      padding: 0 s(50);
+      border: 1px solid $line-strong;
+      border-radius: $radius-sm;
+      background: $surface;
+      font-family: inherit;
+      @include text("xs");
+      color: $ink-soft;
+    }
+  }
+
+  // "/" means nothing on a touch keyboard.
+  &__shortcut {
+    @media (max-width: #{$bp-sm - 0.02px}) {
+      display: none;
+    }
   }
 }
 
-.support-search-hint {
-  margin: 0.85rem 0 0;
-  font-size: 0.82rem;
-  color: $ink-soft;
-
-  kbd {
-    background: $surface;
-    border: 1px solid $neutral-200;
-    border-bottom-width: 2px;
-    border-radius: 0.3rem;
-    padding: 0.05rem 0.4rem;
-    font-size: 0.78rem;
-    color: $ink-mid;
-  }
+.page-head .search__hint {
+  margin-top: s(100);
+  @include text("sm");
 }
-
-// ── Shared body ─────────────────────────────────────────────
 
 .support-body {
-  max-width: 960px;
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: s(800);
 }
 
-// Scoped: all app CSS ships in one bundle, so a bare `mark` selector would
-// restyle every page.
-.support-results mark {
-  background: rgba($accent-300, 0.45);
+// ─── Results ────────────────────────────────────────────────────
+// Scoped: all app CSS ships in one bundle, so a bare `mark` would restyle
+// every page.
+.results mark {
+  padding: 0 s(25);
+  border-radius: $radius-sm;
+  background: $accent-soft;
   color: inherit;
-  padding: 0 0.1em;
-  border-radius: 0.2em;
 }
 
-// ── Search results ──────────────────────────────────────────
-
-.support-results-count {
-  font-size: 0.88rem;
-  color: $ink-soft;
-  margin-bottom: 1rem;
+.results__count {
+  margin-bottom: s(200);
+  @include text("sm");
+  color: $ink-muted;
 }
 
-.support-result-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+.results__list {
+  display: grid;
+  gap: s(100);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.support-result-card {
+.results__count {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.result {
   display: block;
+  padding: s(200) s(300);
+  border: 1px solid $line;
+  border-radius: $radius-2xl;
   background: $surface;
-  border: 1px solid $neutral-100;
-  border-radius: $border-radius-lg;
-  padding: 1rem 1.25rem;
-  text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  text-decoration: none;
+  transition:
+    border-color 0.3s $ease,
+    box-shadow 0.3s $ease,
+    transform 0.5s $ease;
 
   h3 {
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin: 0.25rem 0 0.35rem;
-    color: $ink;
+    margin-top: s(100);
+    @include text("lg");
+  }
+
+  p {
+    display: -webkit-box;
+    margin-top: s(50);
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    @include text("sm");
+    color: $ink-soft;
   }
 
   &.is-active,
   &:hover {
-    border-color: $accent-300;
-    box-shadow: 0 6px 20px rgba($accent-800, 0.10);
+    border-color: $line-strong;
+    box-shadow: 0 16px 32px -24px rgba($accent-deep, 0.45);
     transform: translateY(-1px);
   }
 }
 
-.support-result-category {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: $accent-600;
-  background: rgba($accent-200, 0.4);
-  border-radius: 50px;
-  padding: 0.15rem 0.65rem;
-}
-
-.support-result-snippet {
-  font-size: 0.88rem;
-  color: $ink-mid;
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.support-no-results {
-  text-align: center;
-  padding: 3rem 1rem 1rem;
-
-  .bi {
-    font-size: 2.2rem;
-    color: $accent-400;
-  }
-
-  h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin: 0.75rem 0 0.35rem;
-  }
-
-  p {
-    color: $ink-mid;
-    margin: 0;
-  }
-}
-
-// ── Category browse ─────────────────────────────────────────
-
-.support-group + .support-group {
-  margin-top: 3rem;
-}
-
-.support-group-title {
-  font-family: $headings-font-family;
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  padding-left: 0.75rem;
-  border-left: 3px solid $accent-500;
-  margin-bottom: 0.35rem;
-}
-
-.support-group-desc {
-  color: $ink-soft;
-  font-size: 0.9rem;
-  margin: 0 0 1.1rem;
-  padding-left: 0.95rem;
-}
-
-.support-group .support-cat-grid {
-  margin-top: 1.1rem;
-}
-
-// Single-category groups (guides / roadmap) get one full-width card
-// with the question list flowing into two columns on wide screens.
-.support-cat-grid.support-cat-grid-single {
-  grid-template-columns: 1fr;
-
-  .support-cat-list {
-    column-count: 2;
-    column-gap: 2.5rem;
-
-    li {
-      break-inside: avoid;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .support-cat-grid-single .support-cat-list {
-    column-count: 1;
-  }
-}
-
-.support-cat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.25rem;
-}
-
-.support-cat-card {
-  background: $surface;
-  border: 1px solid $neutral-100;
-  border-radius: $border-radius-lg;
-  padding: 1.4rem 1.5rem;
-}
-
-.support-cat-head {
+// A composed empty state, never a blank panel (B9).
+.empty {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.9rem;
-
-  h3 {
-    font-size: 1.1rem;
-    font-weight: 800;
-    margin: 0;
-  }
-}
-
-.support-cat-icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border-radius: 0.7rem;
-  background: linear-gradient(150deg, rgba($accent-200, 0.55), rgba($accent-400, 0.35));
-  color: $accent-700;
-  font-size: 1.1rem;
-}
-
-.support-cat-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  li + li {
-    border-top: 1px solid $neutral-50;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    padding: 0.55rem 0.25rem;
-    font-size: 0.93rem;
-    color: $ink-mid;
-    text-decoration: none;
-    border-radius: 0.4rem;
-    transition: color 0.15s ease;
-
-    .bi {
-      font-size: 0.7rem;
-      color: $neutral-300;
-      transition: transform 0.15s ease, color 0.15s ease;
-      flex-shrink: 0;
-    }
-
-    &:hover {
-      color: $accent-600;
-
-      .bi {
-        color: $accent-500;
-        transform: translateX(2px);
-      }
-    }
-  }
-}
-
-// ── Contact card ────────────────────────────────────────────
-
-.support-contact {
-  margin-top: 3rem;
-  text-align: center;
-  background: $surface;
-  border: 1px solid $neutral-100;
-  border-radius: $border-radius-lg;
-  padding: 2.25rem 1.5rem;
-
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 800;
-    margin-bottom: 0.4rem;
-  }
-
-  > p {
-    color: $ink-mid;
-    max-width: 460px;
-    margin: 0 auto 1.25rem;
-  }
-}
-
-.support-contact-icon {
-  width: 3rem;
-  height: 3rem;
-  margin: 0 auto 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(150deg, rgba($accent-200, 0.55), rgba($accent-400, 0.35));
-  color: $accent-700;
-  font-size: 1.3rem;
-}
-
-.support-contact-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: $accent-600;
-  color: #fff;
-  font-weight: 700;
-  padding: 0.65rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: background 0.15s ease, transform 0.15s ease;
-
-  &:hover {
-    background: $accent-700;
-    color: #fff;
-    transform: translateY(-1px);
-  }
-}
-
-.support-contact-mail {
-  margin: 0.8rem 0 0;
-  font-size: 0.85rem;
-  color: $ink-soft;
-}
-
-.support-verified-version {
-  margin: 2rem 0 0;
-  text-align: center;
-  font-size: 0.82rem;
-  color: $ink-soft;
-}
-
-// ── Article page ────────────────────────────────────────────
-
-.faq-article {
-  max-width: 780px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 2rem 1rem 4rem;
-  line-height: 1.8;
+  padding: s(600) s(300);
+  border: 1px solid $line;
+  border-radius: $radius-3xl;
+  background: $surface;
+  text-align: center;
 
-  > h1 {
-    font-family: $headings-font-family;
-    font-size: 1.75rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 2px solid $accent-500;
-  }
-}
-
-.faq-breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.88rem;
-  margin-bottom: 1.5rem;
-
-  a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: $accent-600;
-    text-decoration: none;
-    font-weight: 600;
-
-    &:hover {
-      color: $accent-700;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-  }
-}
-
-.faq-since {
-  display: inline-block;
-  margin: 0 0 0.6rem;
-  padding: 0.15rem 0.65rem;
-  border-radius: 999px;
-  background: $accent-100;
-  color: $accent-700;
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 1.6;
-}
-
-.faq-breadcrumb-sep {
-  color: $neutral-200;
-}
-
-.faq-breadcrumb-cat {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: $ink-soft;
-}
-
-.faq-content {
-  p {
-    color: $ink-mid;
-    margin-bottom: 0.9rem;
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-xl;
+    background: $accent-wash;
+    color: $accent;
   }
 
-  ul,
-  ol {
-    padding-left: 1.5rem;
-    margin-bottom: 0.9rem;
-
-    li {
-      color: $ink-mid;
-      margin-bottom: 0.4rem;
-    }
-  }
-
-  .faq-steps li::marker {
-    font-weight: 700;
-    color: $accent-600;
-  }
-}
-
-.faq-note {
-  display: flex;
-  gap: 0.75rem;
-  background: rgba($accent-100, 0.55);
-  border: 1px solid rgba($accent-300, 0.4);
-  border-radius: $border-radius;
-  padding: 0.85rem 1rem;
-  margin: 1.1rem 0;
-
-  .bi {
-    color: $accent-500;
-    flex-shrink: 0;
-    margin-top: 0.15rem;
+  h3 {
+    margin-top: s(200);
+    @include text("xl");
   }
 
   p {
-    margin: 0;
-    color: $ink-mid;
-    font-size: 0.93rem;
-  }
-}
-
-.faq-media {
-  margin: 1.25rem 0;
-
-  img,
-  video {
-    display: block;
-    width: 100%;
-    border-radius: $border-radius-lg;
-    border: 1px solid $neutral-100;
-  }
-
-  figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.82rem;
+    margin-top: s(75);
     color: $ink-soft;
-    text-align: center;
   }
 }
 
-.faq-media-embed iframe {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 1px solid $neutral-100;
-  border-radius: $border-radius-lg;
+// ─── Browse ─────────────────────────────────────────────────────
+.browse__group + .browse__group {
+  margin-top: s(800);
 }
 
-.faq-related {
-  margin-top: 2.5rem;
-  background: $neutral-0;
-  border: 1px solid $neutral-100;
-  border-radius: $border-radius-lg;
-  padding: 1.25rem 1.5rem;
+.browse__head {
+  max-width: 680px;
+  margin-bottom: s(300);
 
   h2 {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 1rem;
-    font-weight: 800;
-    margin-bottom: 0.6rem;
-
-    .bi {
-      color: $accent-500;
-    }
+    @include text("2xl");
+    letter-spacing: -0.01em;
   }
 
-  // Related questions, then the guides that cite the article: one group.
-  & + & {
-    margin-top: 1rem;
+  p {
+    margin-top: s(75);
+    color: $ink-soft;
+  }
+}
+
+.browse__grid {
+  display: grid;
+  gap: s(200);
+
+  @media (min-width: $bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 
-    li + li {
-      border-top: 1px solid $neutral-50;
-    }
+  // One full-width card whose list flows into two columns.
+  &--single {
+    grid-template-columns: 1fr !important;
 
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-      padding: 0.55rem 0.1rem;
-      font-size: 0.93rem;
-      color: $ink-mid;
-      text-decoration: none;
+    .link-list {
+      @media (min-width: $bp-md) {
+        columns: 2;
+        column-gap: s(400);
 
-      .bi {
-        font-size: 0.7rem;
-        color: $neutral-300;
-        transition: transform 0.15s ease, color 0.15s ease;
-        flex-shrink: 0;
-      }
-
-      &:hover {
-        color: $accent-600;
-
-        .bi {
-          color: $accent-500;
-          transform: translateX(2px);
+        li {
+          break-inside: avoid;
         }
       }
     }
   }
 }
 
-// ── Responsive ──────────────────────────────────────────────
+.category {
+  padding: s(300);
+  border: 1px solid $line;
+  border-radius: $radius-3xl;
+  background: $surface;
 
-@media (max-width: 576px) {
-  .support-hero {
-    padding: 2.75rem 1rem 2.25rem;
-  }
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: s(100);
+    margin-bottom: s(100);
 
-  .support-hero-inner h1 {
-    font-size: 1.5rem;
-  }
-
-  // "/" shortcut is meaningless on touch keyboards
-  .support-search-hint-shortcut {
-    display: none;
-  }
-
-  .support-body {
-    padding-top: 1.75rem;
-  }
-
-  .faq-article {
-    padding: 1.5rem 0.5rem 3rem;
-
-    > h1 {
-      font-size: 1.35rem;
+    h3 {
+      @include text("lg");
     }
   }
-}
 
-// ── Route transition (support index ↔ article) ────────────
-// Progressive enhancement via the View Transitions API: browsers without it
-// navigate exactly as before, and nothing is written to the DOM, so the
-// prerendered HTML is untouched (unlike a JS-gated entrance state — see
-// AGENTS.md, Project Skills).
-//
-// The default UA crossfade is 250ms. These pages are goal-directed — someone
-// is looking for an answer — so it runs at 140ms, short enough to read as
-// "the content changed" rather than as waiting for it.
-@media (prefers-reduced-motion: no-preference) {
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation-duration: 140ms;
-    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  }
-
-  // The group animation keeps its own 250ms default, and the transition lasts
-  // as long as its longest animation — leaving 110ms after the crossfade has
-  // finished where the snapshot is still overlaying the live page.
-  ::view-transition-group(root) {
-    animation-duration: 140ms;
+  &__icon {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-xl;
+    background: $accent-wash;
+    color: $accent;
   }
 }
 
-// Motion sickness: skip the crossfade rather than shorten it.
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(root),
-  ::view-transition-new(root),
-  ::view-transition-group(root) {
-    animation: none;
-  }
+.support-version {
+  margin-top: s(600);
+  @include text("sm");
+  color: $ink-muted;
+  text-align: center;
 }
+

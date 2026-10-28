@@ -126,10 +126,10 @@
     "title": "Zonder account kan niemand bij je gegevens",
     "lead": "Bij DingPOS hoef je je nergens voor aan te melden. Je boekhouding staat op de iPad en wil je back-ups, dan gaan die naar een cloudaccount dat je al hebt.",
     "items": [
-      "Kies iCloud, Google Drive of Dropbox",
+      "Maak een back-up in iCloud, Google Drive, Dropbox of alle drie",
       "Handmatige back-up, wanneer je wilt",
-      "Bewaart de laatste 5 momentopnamen",
-      "Incrementele synchronisatie van afbeeldingen",
+      "Elke cloud bewaart je laatste back-up",
+      "Productfoto's worden samen met je gegevens in de back-up bewaard",
       "Geen account; gegevens op het apparaat, back-ups in je eigen cloud",
       "Werkt volledig offline"
     ]

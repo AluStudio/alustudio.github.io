@@ -126,10 +126,10 @@
     "title": "Sans compte, personne ne peut s'emparer de vos données",
     "lead": "DingPOS ne demande aucune inscription. Votre comptabilité reste sur l'iPad, et si vous voulez des sauvegardes, elles partent vers un compte cloud que vous possédez déjà.",
     "items": [
-      "Au choix : iCloud, Google Drive ou Dropbox",
+      "Sauvegarde sur iCloud, Google Drive, Dropbox, ou les trois à la fois",
       "Sauvegarde manuelle, à la demande",
-      "Conserve les 5 derniers instantanés",
-      "Synchronisation incrémentale des images",
+      "Chaque cloud conserve votre dernière sauvegarde",
+      "Les photos de vos produits sont sauvegardées avec vos données",
       "Aucun compte ; données sur l'appareil, sauvegardes dans votre propre cloud",
       "Entièrement fonctionnelle hors ligne"
     ]

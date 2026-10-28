@@ -126,10 +126,10 @@
     "title": "Tanpa akun, tak ada yang bisa mengambil data Anda",
     "lead": "DingPOS tidak meminta Anda mendaftar. Pembukuan Anda tersimpan di iPad, dan jika ingin cadangan, cadangan itu disimpan di akun cloud yang sudah Anda miliki.",
     "items": [
-      "Pilih salah satu: iCloud, Google Drive, atau Dropbox",
+      "Cadangkan ke iCloud, Google Drive, Dropbox, atau ketiganya",
       "Cadangan manual, kapan saja",
-      "Menyimpan 5 snapshot terbaru",
-      "Sinkronisasi gambar bertahap",
+      "Setiap cloud menyimpan cadangan terbaru Anda",
+      "Foto produk ikut dicadangkan bersama data Anda",
       "Tanpa akun; data di perangkat, cadangan di cloud milik Anda sendiri",
       "Berfungsi penuh secara offline"
     ]

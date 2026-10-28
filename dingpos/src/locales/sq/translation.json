@@ -126,10 +126,10 @@
     "title": "Pa llogari, askush nuk mund t'i marrë të dhënat",
     "lead": "DingPOS nuk ka asgjë për t'u regjistruar. Librat e tu qëndrojnë në iPad, dhe nëse do kopje rezervë, ato shkojnë te një llogari cloud që e ke tashmë.",
     "items": [
-      "Zgjidh një nga iCloud, Google Drive ose Dropbox",
+      "Kopje rezervë në iCloud, Google Drive, Dropbox ose në të tre",
       "Kopje rezervë manuale, sa herë të duash",
-      "Mban 5 kopjet e fundit të ruajtura",
-      "Sinkronizim rritës i imazheve",
+      "Çdo cloud mban kopjen tënde më të fundit",
+      "Fotot e produkteve ruhen së bashku me të dhënat e tua",
       "Pa llogari; të dhënat në pajisje, kopjet rezervë në cloud-in tënd",
       "Plotësisht funksional pa internet"
     ]

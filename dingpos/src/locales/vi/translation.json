@@ -126,10 +126,10 @@
     "title": "Không có tài khoản thì không ai lấy được dữ liệu của bạn",
     "lead": "DingPOS không yêu cầu tạo tài khoản. Sổ sách của bạn nằm trên iPad; nếu muốn sao lưu, bản sao sẽ được lưu vào tài khoản đám mây bạn đã có.",
     "items": [
-      "Chọn một trong iCloud, Google Drive hoặc Dropbox",
+      "Sao lưu lên iCloud, Google Drive, Dropbox hoặc cả ba",
       "Sao lưu thủ công, bất cứ khi nào bạn cần",
-      "Giữ 5 bản chụp dữ liệu mới nhất",
-      "Đồng bộ ảnh theo kiểu tăng dần",
+      "Mỗi dịch vụ đám mây giữ bản sao lưu mới nhất của bạn",
+      "Ảnh sản phẩm được sao lưu cùng dữ liệu của bạn",
       "Không tài khoản; dữ liệu nằm trên thiết bị, bản sao lưu nằm trong đám mây của riêng bạn",
       "Đầy đủ chức năng khi ngoại tuyến"
     ]
