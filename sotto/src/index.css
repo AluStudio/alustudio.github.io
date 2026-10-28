@@ -3,7 +3,8 @@
 /* "Sotto Text" is Noto Sans TC's own Latin, Cyrillic and Vietnamese files
    (the same URLs the @fontsource import uses, so nothing extra downloads),
    minus the punctuation Noto Sans TC draws full-width: § ± ¶ · × ÷ ‘ ’ “ ” •
-   … ↑ ↓ ∕ ˉ †. Those fall through to system-ui on Latin-script pages.
+   … ↑ ↓ ∕ ˉ †, plus the low quotes ‚ „ so German „…“ pairs come from one
+   face. Those fall through to system-ui on Latin-script pages.
    Ranges mirror @fontsource-variable/noto-sans-tc's named subsets; update
    them together when that package changes. */
 @font-face {
@@ -39,7 +40,7 @@
   font-display: swap;
   font-weight: 100 900;
   src: url("@fontsource-variable/noto-sans-tc/files/noto-sans-tc-latin-wght-normal.woff2") format("woff2-variations");
-  unicode-range: U+0000-00A6, U+00A8-00B0, U+00B2-00B5, U+00B8-00D6, U+00D8-00F6, U+00F8-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-2017, U+201A-201B, U+201E-201F, U+2021, U+2023-2025, U+2027-206F, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD;
+  unicode-range: U+0000-00A6, U+00A8-00B0, U+00B2-00B5, U+00B8-00D6, U+00D8-00F6, U+00F8-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-2017, U+201B, U+201F, U+2021, U+2023-2025, U+2027-206F, U+20AC, U+2122, U+2212, U+FEFF, U+FFFD;
 }
 
 :root {
