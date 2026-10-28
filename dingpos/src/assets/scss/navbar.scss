@@ -179,6 +179,8 @@
   }
 
   &[data-open] &__item {
+    opacity: 1;
+    transform: none;
     animation: menu-in 0.5s $ease both;
     animation-delay: min(calc(var(--i) * 60ms), 400ms);
   }
@@ -197,9 +199,9 @@
 }
 
 @keyframes menu-in {
-  to {
-    opacity: 1;
-    transform: none;
+  from {
+    opacity: 0;
+    transform: translateY(s(300));
   }
 }
 
