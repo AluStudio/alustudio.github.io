@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import "../assets/scss/all.scss";
+import { ArrowsLeftRight, CalendarCheck, Check, Minus, Plus, Receipt, ShieldCheck } from "@phosphor-icons/react";
 import "../assets/scss/home.scss";
-import "../assets/scss/footer.scss";
 import "./pricing.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -24,10 +23,10 @@ const RECOMMENDED_TIER = PLANS.find((plan) => plan.recommended).key;
 const ANNUAL_SAVING_PERCENT = annualSavingPercent();
 
 const ASSURANCES = [
-  { key: "trial", icon: "bi-calendar2-check" },
-  { key: "fees", icon: "bi-receipt" },
-  { key: "data", icon: "bi-shield-lock" },
-  { key: "switch", icon: "bi-arrow-left-right" },
+  { key: "trial", icon: <CalendarCheck size={20} weight="duotone" /> },
+  { key: "fees", icon: <Receipt size={20} weight="duotone" /> },
+  { key: "data", icon: <ShieldCheck size={20} weight="duotone" /> },
+  { key: "switch", icon: <ArrowsLeftRight size={20} weight="duotone" /> },
 ];
 
 function PricingPage() {
@@ -48,75 +47,72 @@ function PricingPage() {
     <>
       <Navbar />
 
-      <main className="pricing-page">
-        <section className="pricing-hero">
-          <div className="container">
-            <div className="pricing-hero-copy">
-              <span className="eyebrow">{t("pricing.eyebrow")}</span>
-              <h1>{t("pricing.title")}</h1>
-              <p className="lead">{t("pricing.subtitle")}</p>
+      <main id="main" className="page pricing-page">
+        <header className="shell page-head page-head--center">
+          <p className="eyebrow">{t("pricing.eyebrow")}</p>
+          <h1>{t("pricing.title")}</h1>
+          <p>{t("pricing.subtitle")}</p>
+          <BillingToggle billing={billing} onChange={setBilling} />
+        </header>
+
+        <section className="shell plans" aria-label={t("pricing.doc_title")}>
+          <div className="plan-grid" role="radiogroup" aria-label={t("pricing.select_plan")}>
+            {PLANS.map((plan) => (
+              <PlanCard
+                key={plan.key}
+                plan={plan}
+                billing={billing}
+                selected={plan.key === selectedTier}
+                onSelect={() => setSelectedTier(plan.key)}
+              />
+            ))}
+          </div>
+          <div className="plans-foot">
+            <CurrencyNote />
+            <p className="plans-fineprint">{t("pricing.fineprint")}</p>
+          </div>
+          <ul className="assurances">
+            {ASSURANCES.map(({ key, icon }) => (
+              <li key={key}>
+                <span className="assurances__icon" aria-hidden="true">
+                  {icon}
+                </span>
+                <h2>{t(`pricing.assurances.${key}.title`)}</h2>
+                <p>{t(`pricing.assurances.${key}.desc`)}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="section compare" id="compare">
+          <div className="shell">
+            <div className="section-head section-head--center reveal">
+              <h2>{t("pricing.compare.title")}</h2>
+              <p>{t("pricing.compare.subtitle")}</p>
             </div>
-            <BillingToggle billing={billing} onChange={setBilling} />
-          </div>
-        </section>
-
-        <section className="plans" aria-label={t("pricing.doc_title")}>
-          <div className="container">
-            <div className="plan-grid" role="radiogroup" aria-label={t("pricing.select_plan")}>
-              {PLANS.map((plan) => (
-                <PlanCard
-                  key={plan.key}
-                  plan={plan}
-                  billing={billing}
-                  selected={plan.key === selectedTier}
-                  onSelect={() => setSelectedTier(plan.key)}
-                />
-              ))}
-            </div>
-            <div className="plans-foot">
-              <CurrencyNote />
-              <p className="fineprint">{t("pricing.fineprint")}</p>
+            <div className="compare__wrap">
+              <CompareTable billing={billing} selectedTier={selectedTier} onSelect={setSelectedTier} />
             </div>
           </div>
         </section>
 
-        <section className="assurances">
-          <div className="container">
-            <ul className="assurance-grid">
-              {ASSURANCES.map(({ key, icon }) => (
-                <li key={key}>
-                  <i className={`bi ${icon}`} aria-hidden="true"></i>
-                  <div>
-                    <h2>{t(`pricing.assurances.${key}.title`)}</h2>
-                    <p>{t(`pricing.assurances.${key}.desc`)}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="compare" id="compare">
-          <div className="container">
-            <h2 className="section-title">{t("pricing.compare.title")}</h2>
-            <p className="section-sub">{t("pricing.compare.subtitle")}</p>
-            <CompareTable billing={billing} selectedTier={selectedTier} onSelect={setSelectedTier} />
-          </div>
-        </section>
-
-        <section className="pricing-faq" id="faq">
-          <div className="container">
-            <h2 className="section-title">{t("pricing.faq.title")}</h2>
-            <div className="faq-list">
+        <section className="section pricing-faq" id="faq">
+          <div className="shell shell--narrow">
+            <div className="section-head section-head--center reveal">
+              <h2>{t("pricing.faq.title")}</h2>
+            </div>
+            <div className="faq">
               {t("pricing.faq.items", { returnObjects: true, percent: ANNUAL_SAVING_PERCENT }).map(({ q, a }) => (
                 // <details> keeps the answer in the DOM while collapsed, so the
                 // prerendered HTML carries every answer for crawlers.
-                <details className="faq-item" key={q}>
+                <details className="faq__item" key={q}>
                   <summary>
                     <span>{q}</span>
-                    <i className="bi bi-chevron-down" aria-hidden="true"></i>
+                    <Plus size={20} weight="bold" aria-hidden="true" />
                   </summary>
-                  <p>{a}</p>
+                  <div className="faq__answer">
+                    <p>{a}</p>
+                  </div>
                 </details>
               ))}
             </div>
@@ -126,13 +122,15 @@ function PricingPage() {
           </div>
         </section>
 
-        <section className="pricing-final">
-          <div className="container">
-            <h2>{t("pricing.final.title")}</h2>
-            <p>{t("pricing.final.sub")}</p>
-            <AppStoreButton className="btn-store btn-store--light">
-              {t("pricing.final.cta")}
-            </AppStoreButton>
+        <section className="section cta pricing-final">
+          <div className="shell">
+            <div className="cta__card reveal-card">
+              <h2>{t("pricing.final.title")}</h2>
+              <p className="cta__sub">{t("pricing.final.sub")}</p>
+              <div className="cta__actions">
+                <AppStoreButton className="button button--light button--lg">{t("pricing.final.cta")}</AppStoreButton>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -224,12 +222,12 @@ function PlanCard({ plan, billing, selected, onSelect }) {
         </p>
       </div>
 
-      <AppStoreButton className={`plan-cta ${selected ? "btn-store" : "btn-plan"}`}>
+      <AppStoreButton className={`button button--block ${selected ? "button--primary" : "button--secondary"} plan-card__cta`}>
         {t(`${copy}.cta`)}
       </AppStoreButton>
 
       <p className="plan-heading">{t(`${copy}.heading`)}</p>
-      <ul className="spec-list">
+      <ul className="check-list check-list--compact">
         {features.map((item) => (
           <li key={item}>{item}</li>
         ))}
@@ -283,12 +281,12 @@ function CompareTable({ billing, selectedTier, onSelect }) {
                 <td key={tier} className={tier === selectedTier ? "is-selected" : ""}>
                   {includes(tier, row.from) ? (
                     <>
-                      <i className="bi bi-check-lg compare-yes" aria-hidden="true"></i>
+                      <Check size={20} weight="bold" className="compare-yes" aria-hidden="true" />
                       <span className="visually-hidden">{t("pricing.compare.included")}</span>
                     </>
                   ) : (
                     <>
-                      <span className="compare-no" aria-hidden="true">—</span>
+                      <Minus size={16} weight="bold" className="compare-no" aria-hidden="true" />
                       <span className="visually-hidden">{t("pricing.compare.not_included")}</span>
                     </>
                   )}

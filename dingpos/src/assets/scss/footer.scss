@@ -1,60 +1,73 @@
-@import "./variables";
+@use "tokens" as *;
 
-footer {
-  background: $neutral-900;
-  color: rgba($neutral-0, 0.8);
-  padding: 3rem 0 2rem;
+.footer {
+  padding: s(700) 0 s(400);
+  border-top: 1px solid $line;
+  background: $surface;
 
-  h2 {
-    font-family: $headings-font-family;
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-    color: $neutral-0;
-    margin-bottom: 0.5rem;
+  &__inner {
+    display: grid;
+    gap: s(500);
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+    }
   }
 
-  .footer-desc {
-    font-size: 0.88rem;
-    color: rgba($neutral-0, 0.5);
-    max-width: 380px;
+  &__home {
+    display: inline-flex;
+    border-radius: $radius-lg;
+    text-decoration: none;
   }
 
-  .footer-links {
+  &__tagline {
+    max-width: 360px;
+    margin-top: s(200);
+    color: $ink-soft;
+  }
+
+  &__mail {
+    display: inline-flex;
+    align-items: center;
+    gap: s(75);
+    margin-top: s(300);
+    color: $accent;
+    @include text("sm");
+    font-weight: 600;
+    text-decoration: none;
+
+    @include hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+
+  &__cols {
+    display: flex;
+    gap: s(700);
+
+    li + li {
+      margin-top: s(100);
+    }
+
     a {
-      color: rgba($neutral-0, 0.65);
+      @include text("sm");
+      color: $ink-soft;
       text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
+      transition: color 0.3s $ease;
 
-      &:hover {
-        color: $accent-300;
+      @include hover {
+        color: $ink;
       }
     }
-
-    .separator {
-      color: rgba($neutral-0, 0.2);
-      margin: 0 0.75rem;
-    }
   }
 
-  .footer-copyright {
-    font-size: 0.8rem;
-    color: rgba($neutral-0, 0.5);
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba($neutral-0, 0.08);
-  }
-
-  .footer-contact {
-    a {
-      color: $accent-300;
-      text-decoration: none;
-      font-size: 0.88rem;
-
-      &:hover {
-        color: $accent-200;
-      }
-    }
+  &__copy {
+    margin-top: s(600);
+    padding-top: s(300);
+    border-top: 1px solid $line;
+    @include text("xs");
+    color: $ink-muted;
   }
 }

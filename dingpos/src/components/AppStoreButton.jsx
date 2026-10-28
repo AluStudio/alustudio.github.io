@@ -1,9 +1,11 @@
+import { AppleLogo } from "@phosphor-icons/react";
+
 export const APP_STORE_URL = "https://apps.apple.com/app/id6788988943";
 
-function AppStoreButton({ className = "btn-store", children }) {
+function AppStoreButton({ className = "button button--primary", children }) {
   return (
     <a href={APP_STORE_URL} className={className} target="_blank" rel="noopener noreferrer">
-      <i className="bi bi-apple" aria-hidden="true"></i>
+      <AppleLogo size={18} weight="fill" aria-hidden="true" />
       {children}
     </a>
   );

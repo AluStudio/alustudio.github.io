@@ -1,6 +1,5 @@
-/* Reset — covered by Bootstrap, this file left intentionally minimal */
+/* Font stacks by page language; the reset and tokens live in assets/scss/base.scss. */
 :root {
-  --navbar-height: 72px;
   --dp-font-cjk: "Noto Sans TC Variable";
 }
 

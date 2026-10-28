@@ -1,239 +1,385 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import "../assets/scss/all.scss";
+import {
+  ArrowRight,
+  ArrowsLeftRight,
+  Bell,
+  CalendarCheck,
+  Check,
+  DeviceTabletSpeaker,
+  Globe,
+  Plus,
+  Receipt,
+  ShieldCheck,
+  Storefront,
+} from "@phosphor-icons/react";
 import "../assets/scss/home.scss";
-import "../assets/scss/footer.scss";
+import "../assets/scss/scenes.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AppStoreButton from "../components/AppStoreButton";
+import TransitionLink from "../components/TransitionLink";
+import Device from "../components/Device";
+import TaglineReveal from "../components/TaglineReveal";
+import { ProductsScene, InventoryScene, LoyaltyScene, BackupScene } from "../components/Scenes";
 import { Price } from "../components/Price";
 import { PLANS } from "../data/plans";
+import { getFaq } from "../data/faq";
+import { useStory } from "../story";
 
 const STARTING_PRICE = PLANS[0].price;
 
-// The three screenshot-backed sections, in page order. `cashier` is absent on
-// purpose: its screenshot is the hero shot, so its copy runs as a full-width
-// band directly beneath it rather than as another side-by-side story.
+// The screenshot-backed sections after checkout, in page order. Checkout has
+// none of its own: its screenshot is the hero shot, and its copy runs as the
+// caption directly beneath it.
 const STORIES = [
   { key: "promotion", shot: "promotions", id: "promotions" },
   { key: "reports", shot: "dashboard", id: "reports" },
   { key: "orders", shot: "orders", id: "orders" },
 ];
 
-// Pixel size of each full-size public/shot-<name>.webp; every shot also ships
-// a shot-<name>-1080w.webp for phones. Both come from scripts/build-screenshots.sh.
-const SHOT_SIZES = {
-  cashier: [2240, 1471],
-  promotions: [1720, 1129],
-  dashboard: [1720, 1129],
-  orders: [1720, 1129],
-};
-const PHONE_SHOT_WIDTH = 1080;
-
-// Rendered image width, mirroring home.scss: the .device frame's 0.7rem padding
-// inside the hero's 1.5rem gutters (capped by .hero-shot's 1120px), or inside
-// the 7fr column of .story-inner (one column below 992px).
-const HERO_SHOT_SIZES = "(min-width: 1168px) 1098px, calc(100vw - 4.4rem)";
+// Rendered image width, mirroring home.scss: the hero frame is capped at 1120px
+// inside the shell's gutters (24px, 32px from 768px) less its bezel (4px, 8px
+// from 768px); a story shot fills the 7fr column from 1024px.
+const HERO_SHOT_SIZES = "(min-width: 1184px) 1104px, (min-width: 768px) calc(100vw - 80px), calc(100vw - 56px)";
 const STORY_SHOT_SIZES =
-  "(min-width: 1200px) 612px, (min-width: 992px) calc(58.33vw - 5.5rem), calc(100vw - 4.4rem)";
+  "(min-width: 1200px) 610px, (min-width: 1024px) calc(58vw - 90px), (min-width: 768px) calc(100vw - 80px), calc(100vw - 56px)";
 
+// Story start offsets, so the three cards never act in unison.
 const FEATURES = [
-  { key: "onboarding", icon: "bi-rocket-takeoff" },
-  { key: "products", icon: "bi-box-seam" },
-  { key: "inventory", icon: "bi-boxes" },
-  { key: "loyalty", icon: "bi-person-badge" },
+  { key: "products", scene: <ProductsScene delay={200} /> },
+  { key: "inventory", scene: <InventoryScene delay={900} /> },
+  { key: "loyalty", scene: <LoyaltyScene delay={1600} /> },
 ];
 
-function HomePage() {
-  const { t } = useTranslation();
-  const base = import.meta.env.BASE_URL;
+const STEP_ICONS = [Globe, Storefront, Bell];
 
+// Objections a first-time visitor raises before installing, answered by the
+// opening paragraph of the matching support article.
+const FAQ_SLUGS = [
+  "offline-usage",
+  "account-required",
+  "supported-devices",
+  "free-trial",
+  "after-trial",
+  "backup-data",
+  "multi-device",
+  "import-csv",
+];
+
+const ASSURANCES = [
+  { key: "trial", icon: <CalendarCheck size={20} weight="duotone" /> },
+  { key: "fees", icon: <Receipt size={20} weight="duotone" /> },
+  { key: "data", icon: <ShieldCheck size={20} weight="duotone" /> },
+  { key: "switch", icon: <ArrowsLeftRight size={20} weight="duotone" /> },
+];
+
+/** Splits a headline after each sentence, so lines break where the thought does. */
+function sentences(text) {
+  const parts = text.match(/[^.!?。！？]+[.!?。！？]*/g) ?? [text];
+  return parts.map((part) => part.trim()).filter(Boolean);
+}
+
+function useList(key) {
+  const { t } = useTranslation();
+  const value = t(key, { returnObjects: true });
+  return Array.isArray(value) ? value : [];
+}
+
+function HomePage() {
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const id = hash.slice(1);
-      if (id) {
-        requestAnimationFrame(() => {
-          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-        });
-      }
+    const id = window.location.hash.slice(1);
+    if (id) {
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      });
     }
   }, []);
-
-  const list = (key) => {
-    const value = t(key, { returnObjects: true });
-    return Array.isArray(value) ? value : [];
-  };
 
   return (
     <>
       <Navbar />
-
-      <main>
-        <section className="hero">
-          <div className="hero-copy">
-            <img
-              src={`${base}logo.webp`}
-              alt="DingPOS"
-              className="hero-logo"
-              // Intrinsic size, not the rendered size — the browser reserves space
-              // from this ratio, and CSS sets the width. Declaring the display
-              // width with a guessed height shifts the hero when the logo decodes.
-              width="600"
-              height="266"
-            />
-            <span className="hero-eyebrow">{t("hero.eyebrow")}</span>
-            <h1 className="hero-title">{t("hero.title")}</h1>
-            <p className="hero-desc">{t("hero.description")}</p>
-            <AppStoreButton className="btn-store btn-store--lg">{t("hero.download")}</AppStoreButton>
-            <p className="hero-note">{t("hero.note")}</p>
-            <ul className="hero-proof">
-              {list("proof.items").map((item) => (
-                <li key={item}>
-                  <i className="bi bi-check-lg" aria-hidden="true"></i>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="hero-shot">
-            <Device shot="cashier" sizes={HERO_SHOT_SIZES} alt={t("hero.shot_alt")} priority />
-          </div>
-        </section>
-
-        {/* Checkout — the hero shot above is this section's screenshot. */}
-        <section className="checkout" id="checkout">
-          <div className="container">
-            <div className="checkout-head">
-              <span className="eyebrow">{t("stories.cashier.eyebrow")}</span>
-              <h2>{t("stories.cashier.title")}</h2>
-              <p className="lead">{t("stories.cashier.lead")}</p>
-            </div>
-            <ul className="spec-list spec-list--split">
-              {list("stories.cashier.items").map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {STORIES.map(({ key, shot, id }, index) => (
-          <section
-            className={`story ${index % 2 === 1 ? "story--alt story--flip" : ""}`}
-            id={id}
-            key={key}
-          >
-            <div className="story-inner">
-              <div className="story-copy">
-                <span className="eyebrow">{t(`stories.${key}.eyebrow`)}</span>
-                <h2>{t(`stories.${key}.title`)}</h2>
-                <p className="lead">{t(`stories.${key}.lead`)}</p>
-                <ul className="spec-list">
-                  {list(`stories.${key}.items`).map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="story-shot">
-                <Device shot={shot} sizes={STORY_SHOT_SIZES} alt={t(`stories.${key}.shot_alt`)} />
-              </div>
-            </div>
-          </section>
+      <main id="main" className="home">
+        <Hero />
+        <Checkout />
+        {STORIES.map((story, index) => (
+          <Story key={story.key} storyKey={story.key} shot={story.shot} id={story.id} flip={index % 2 === 1} />
         ))}
-
-        <section className="features" id="features">
-          <div className="container">
-            <h2 className="section-title">{t("features.title")}</h2>
-            <p className="section-sub">{t("features.subtitle")}</p>
-            <div className="feature-grid">
-              {FEATURES.map(({ key, icon }) => (
-                <article className="feature-card" key={key}>
-                  <span className="feature-icon">
-                    <i className={`bi ${icon}`} aria-hidden="true"></i>
-                  </span>
-                  <h3>{t(`features.${key}.title`)}</h3>
-                  <ul className="spec-list">
-                    {list(`features.${key}.items`).map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="privacy-band" id="privacy-band">
-          <div className="container">
-            <div className="privacy-inner">
-              <div className="privacy-copy">
-                <span className="eyebrow">{t("privacy_band.eyebrow")}</span>
-                <h2>{t("privacy_band.title")}</h2>
-                <p className="lead">{t("privacy_band.lead")}</p>
-              </div>
-              <ul className="spec-list spec-list--split">
-                {list("privacy_band.items").map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="pricing" id="pricing">
-          <div className="container">
-            <div className="pricing-card">
-              <h2>{t("home_pricing.title")}</h2>
-              <p className="pricing-price">
-                {t("home_pricing.price_before")}
-                <Price value={(c) => STARTING_PRICE[c].monthly} />
-                {t("home_pricing.price_after")}
-              </p>
-              <p className="pricing-sub">{t("home_pricing.sub")}</p>
-              <div className="pricing-actions">
-                <AppStoreButton className="btn-store btn-store--lg">
-                  {t("home_pricing.cta")}
-                </AppStoreButton>
-                <Link to="/pricing/" className="btn-plan">
-                  {t("home_pricing.compare")}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Features />
+        <Privacy />
+        <Steps />
+        <HomeFaq />
+        <PricingCta />
       </main>
-
       <Footer />
     </>
   );
 }
 
-/**
- * An iPad frame drawn in CSS around a raw screen capture.
- *
- * The bezel is CSS rather than baked into the PNG so the assets stay pure
- * screen pixels — `scripts/build-screenshots.sh` can regenerate them from a
- * fresh capture without anyone having to redraw a frame.
- */
-function Device({ shot, sizes, alt, priority = false }) {
-  const base = import.meta.env.BASE_URL;
-  const [width, height] = SHOT_SIZES[shot];
+function Hero() {
+  const { t } = useTranslation();
+  const proof = useList("proof.items");
   return (
-    <figure className="device">
-      <img
-        src={`${base}shot-${shot}.webp`}
-        srcSet={`${base}shot-${shot}-${PHONE_SHOT_WIDTH}w.webp ${PHONE_SHOT_WIDTH}w, ${base}shot-${shot}.webp ${width}w`}
-        sizes={sizes}
-        width={width}
-        height={height}
-        alt={alt}
-        loading={priority ? "eager" : "lazy"}
-        decoding="async"
-        fetchPriority={priority ? "high" : "auto"}
-      />
-    </figure>
+    <section className="hero">
+      <div className="shell hero__copy">
+        <p className="hero__eyebrow">
+          <DeviceTabletSpeaker size={16} weight="bold" aria-hidden="true" />
+          {t("hero.eyebrow")}
+        </p>
+        <h1 className="hero__title">
+          {sentences(t("hero.title")).map((line, i) => (
+            <span key={i} className="hero__line">
+              {line}
+            </span>
+          ))}
+        </h1>
+        <p className="hero__sub">{t("hero.description")}</p>
+        <div className="hero__actions">
+          <AppStoreButton className="button button--primary button--lg">{t("hero.download")}</AppStoreButton>
+          <p className="hero__note">{t("hero.note")}</p>
+        </div>
+        <ul className="hero__proof">
+          {proof.map((item) => (
+            <li key={item}>
+              <Check size={16} weight="bold" aria-hidden="true" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="shell">
+        <div className="hero__visual">
+          <Device shot="cashier" sizes={HERO_SHOT_SIZES} alt={t("hero.shot_alt")} priority />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Checkout() {
+  const { t } = useTranslation();
+  const items = useList("stories.cashier.items");
+  return (
+    <section className="section checkout" id="checkout">
+      <div className="shell checkout__inner">
+        <div className="section-head reveal">
+          <p className="eyebrow">{t("stories.cashier.eyebrow")}</p>
+          <h2>{t("stories.cashier.title")}</h2>
+          <p>{t("stories.cashier.lead")}</p>
+        </div>
+        <ul className="check-list check-list--split reveal">
+          {items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function Story({ storyKey, shot, id, flip }) {
+  const { t } = useTranslation();
+  const items = useList(`stories.${storyKey}.items`);
+  return (
+    <section className={`section story${flip ? " story--flip" : ""}`} id={id}>
+      <div className="shell story__inner">
+        <div className="story__copy reveal">
+          <p className="eyebrow">{t(`stories.${storyKey}.eyebrow`)}</p>
+          <h2>{t(`stories.${storyKey}.title`)}</h2>
+          <p className="story__lead">{t(`stories.${storyKey}.lead`)}</p>
+          <ul className="check-list">
+            {items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="story__shot reveal-shot">
+          <Device shot={shot} sizes={STORY_SHOT_SIZES} alt={t(`stories.${storyKey}.shot_alt`)} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Features() {
+  const { t } = useTranslation();
+  return (
+    <section className="section features" id="features">
+      <div className="shell">
+        <div className="section-head section-head--center reveal">
+          <h2>{t("features.title")}</h2>
+          <p>{t("features.subtitle")}</p>
+        </div>
+        <div className="bento">
+          {FEATURES.map(({ key, scene }) => (
+            <FeatureCard key={key} id={key} scene={scene} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FeatureCard({ id, scene }) {
+  const { t } = useTranslation();
+  const items = useList(`features.${id}.items`);
+  return (
+    <article className="feature-card reveal-card">
+      <div className="feature-card__visual">{scene}</div>
+      <div className="feature-card__body">
+        <h3>{t(`features.${id}.title`)}</h3>
+        <ul className="check-list check-list--compact">
+          {items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  );
+}
+
+function Privacy() {
+  const { t } = useTranslation();
+  const items = useList("privacy_band.items");
+  return (
+    <section className="privacy" id="privacy-band">
+      <div className="shell">
+        <p className="eyebrow eyebrow--dark">{t("privacy_band.eyebrow")}</p>
+        <TaglineReveal text={t("privacy_band.title")} className="privacy__title" />
+        <div className="privacy__grid">
+          <div className="reveal">
+            <p className="privacy__lead">{t("privacy_band.lead")}</p>
+            <ul className="check-list check-list--dark">
+              {items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="privacy__visual reveal-card">
+            <BackupScene delay={300} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// At rest every step is done; the story clears them and lights them again
+// in order, as a store goes from download to its first sale.
+const stepSteps = [
+  { active: 3, ms: 3200 },
+  { active: 0, ms: 600 },
+  { active: 1, ms: 1200 },
+  { active: 2, ms: 1200 },
+];
+
+function Steps() {
+  const { t } = useTranslation();
+  const items = useList("features.onboarding.items");
+  const ref = useRef(null);
+  const step = useStory(ref, stepSteps, 200, 1);
+  return (
+    <section className="section steps-section" id="onboarding">
+      <div className="shell">
+        <div className="section-head section-head--center reveal">
+          <h2>{t("features.onboarding.title")}</h2>
+        </div>
+        <ol className="steps" ref={ref}>
+          {items.map((item, i) => {
+            const Icon = STEP_ICONS[i] ?? Check;
+            return (
+              <li key={item} className="step reveal-card" data-done={i < step.active || undefined}>
+                <span className="step__head">
+                  <span className="step__num">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="step__wire" aria-hidden="true" />
+                </span>
+                <span className="step__icon" aria-hidden="true">
+                  <Icon size={24} weight="duotone" />
+                </span>
+                <p className="step__text">{item}</p>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+function HomeFaq() {
+  const { t } = useTranslation();
+  const { articles } = getFaq();
+  const entries = FAQ_SLUGS.map((slug) => articles.find((a) => a.slug === slug)).filter(
+    (article) => article?.content[0]?.type === "p",
+  );
+  return (
+    <section className="section home-faq" id="faq">
+      <div className="shell shell--narrow">
+        <div className="section-head section-head--center reveal">
+          <h2>{t("pricing.faq.title")}</h2>
+        </div>
+        <div className="faq">
+          {entries.map((article) => (
+            <details className="faq__item" key={article.slug}>
+              <summary>
+                <span>{article.question}</span>
+                <Plus size={20} weight="bold" aria-hidden="true" />
+              </summary>
+              <div className="faq__answer">
+                <p>{article.content[0].text}</p>
+                <TransitionLink to={`/support/${article.slug}/`} aria-label={`${t("support.back")}: ${article.question}`}>
+                  {t("support.back")}
+                  <ArrowRight size={16} weight="bold" aria-hidden="true" />
+                </TransitionLink>
+              </div>
+            </details>
+          ))}
+        </div>
+        <p className="faq-more">
+          {t("pricing.faq.more")} <Link to="/support/">{t("pricing.faq.more_link")}</Link>
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function PricingCta() {
+  const { t } = useTranslation();
+  return (
+    <section className="section cta" id="pricing">
+      <div className="shell">
+        <div className="cta__card reveal-card">
+          <h2>{t("home_pricing.title")}</h2>
+          <p className="cta__price">
+            {t("home_pricing.price_before")}
+            <strong>
+              <Price value={(c) => STARTING_PRICE[c].monthly} />
+            </strong>
+            {t("home_pricing.price_after")}
+          </p>
+          <p className="cta__sub">{t("home_pricing.sub")}</p>
+          <div className="cta__actions">
+            <AppStoreButton className="button button--light button--lg">{t("home_pricing.cta")}</AppStoreButton>
+            <Link to="/pricing/" className="button button--ghost button--lg">
+              {t("home_pricing.compare")}
+              <ArrowRight size={16} weight="bold" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+        <ul className="assurances">
+          {ASSURANCES.map(({ key, icon }) => (
+            <li key={key} className="reveal">
+              <span className="assurances__icon" aria-hidden="true">
+                {icon}
+              </span>
+              <h3>{t(`pricing.assurances.${key}.title`)}</h3>
+              <p>{t(`pricing.assurances.${key}.desc`)}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }
 

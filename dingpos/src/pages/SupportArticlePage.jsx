@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Navigate, useParams } from "react-router-dom";
-import "../assets/scss/all.scss";
-import "../assets/scss/footer.scss";
-import "./support.scss";
+import { ArrowLeft, BookOpenText, CaretRight, LinkSimple } from "@phosphor-icons/react";
+import "./article.scss";
 import Navbar from "../components/Navbar";
 import TransitionLink from "../components/TransitionLink";
 import Footer from "../components/Footer";
 import FaqBlocks from "../components/FaqBlocks";
 import ContactCard from "../components/ContactCard";
+import CategoryIcon from "../components/CategoryIcon";
 import { getFaq } from "../data/faq";
 import { getGuides, getGuidesLinkingTo } from "../data/guides";
 
@@ -44,71 +44,67 @@ function SupportArticlePage() {
   return (
     <>
       <Navbar />
-      <main className="main-content">
-        <div className="container">
-          <article className="faq-article">
-            <nav className="faq-breadcrumb" aria-label="breadcrumb">
-              <TransitionLink to="/support/">
-                <i className="bi bi-arrow-left" aria-hidden="true"></i>
-                {t("support.back")}
-              </TransitionLink>
-              <span className="faq-breadcrumb-sep">/</span>
-              <span className="faq-breadcrumb-cat">
-                <i className={`bi ${category.icon}`} aria-hidden="true"></i>
-                {category.label}
-              </span>
-            </nav>
+      <main id="main" className="page">
+        <article className="shell shell--narrow article">
+          <nav className="crumbs" aria-label="breadcrumb">
+            <TransitionLink to="/support/">
+              <ArrowLeft size={16} weight="bold" aria-hidden="true" />
+              {t("support.back")}
+            </TransitionLink>
+            <span className="crumbs__sep" aria-hidden="true">/</span>
+            <span className="crumbs__here">
+              <CategoryIcon name={category.icon} size={16} />
+              {category.label}
+            </span>
+          </nav>
 
-            {article.since && (
-              <p className="faq-since">{t("support.since", { version: article.since })}</p>
-            )}
-            <h1>{article.question}</h1>
+          {article.since && <p className="pill article__since">{t("support.since", { version: article.since })}</p>}
+          <h1>{article.question}</h1>
 
-            <div className="faq-content">
-              <FaqBlocks blocks={article.content} />
-            </div>
+          <div className="prose">
+            <FaqBlocks blocks={article.content} />
+          </div>
 
-            {related.length > 0 && (
-              <aside className="faq-related">
-                <h2>
-                  <i className="bi bi-link-45deg" aria-hidden="true"></i>
-                  {t("support.related_title")}
-                </h2>
-                <ul>
-                  {related.map((r) => (
-                    <li key={r.slug}>
-                      <TransitionLink to={`/support/${r.slug}/`}>
-                        {r.question}
-                        <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                      </TransitionLink>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            )}
+          {related.length > 0 && (
+            <aside className="related">
+              <h2>
+                <LinkSimple size={18} weight="bold" aria-hidden="true" />
+                {t("support.related_title")}
+              </h2>
+              <ul className="link-list">
+                {related.map((r) => (
+                  <li key={r.slug}>
+                    <TransitionLink to={`/support/${r.slug}/`}>
+                      {r.question}
+                      <CaretRight size={14} weight="bold" aria-hidden="true" />
+                    </TransitionLink>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
 
-            {citingGuides.length > 0 && (
-              <aside className="faq-related">
-                <h2>
-                  <i className="bi bi-journal-text" aria-hidden="true"></i>
-                  {guidesUi.related_title}
-                </h2>
-                <ul>
-                  {citingGuides.map((guide) => (
-                    <li key={guide.slug}>
-                      <TransitionLink to={`/guides/${guide.slug}/`}>
-                        {guide.title}
-                        <i className="bi bi-chevron-right" aria-hidden="true"></i>
-                      </TransitionLink>
-                    </li>
-                  ))}
-                </ul>
-              </aside>
-            )}
+          {citingGuides.length > 0 && (
+            <aside className="related">
+              <h2>
+                <BookOpenText size={18} weight="bold" aria-hidden="true" />
+                {guidesUi.related_title}
+              </h2>
+              <ul className="link-list">
+                {citingGuides.map((guide) => (
+                  <li key={guide.slug}>
+                    <TransitionLink to={`/guides/${guide.slug}/`}>
+                      {guide.title}
+                      <CaretRight size={14} weight="bold" aria-hidden="true" />
+                    </TransitionLink>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
 
-            <ContactCard />
-          </article>
-        </div>
+          <ContactCard />
+        </article>
       </main>
       <Footer />
     </>

@@ -1,0 +1,645 @@
+@use "tokens" as *;
+
+// Redrawn app fragments for the home page's feature cards (Scenes.jsx). Each
+// scene fills its card's visual panel; colours follow the app's own tokens.
+.scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: s(300);
+  padding: s(300);
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+// A row stack: new rows land on top from a blur, old ones leave at the bottom.
+.stack {
+  position: relative;
+  height: calc(var(--rows) * var(--row-h));
+  overflow: hidden;
+
+  &__row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(var(--row-h) - #{s(50)});
+    transform: translateY(calc(var(--slot) * var(--row-h)));
+    filter: blur(calc(max(0, -1 * var(--slot)) * 4px));
+    transition:
+      transform 0.9s $e,
+      opacity 0.6s $e2,
+      filter 0.6s $e2;
+
+    &[data-out] {
+      opacity: 0;
+    }
+
+    &[data-instant] {
+      transition: none;
+    }
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba($amber, 0.45);
+  }
+
+  100% {
+    box-shadow: 0 0 0 8px rgba($amber, 0);
+  }
+}
+
+// ─── Products & variants ────────────────────────────────────────
+.product {
+  width: 132px;
+  padding: s(75);
+  border-radius: $radius-xl;
+  background: $surface;
+  box-shadow: 0 8px 24px -16px rgba($ink, 0.35);
+
+  // Tile radius minus its 8px padding (B3).
+  &__photo {
+    display: grid;
+    place-items: center;
+    height: 96px;
+    border-radius: $radius-sm;
+    background: #e3eaf2;
+    color: #4f6d8e;
+    transition:
+      background-color 0.5s $ease,
+      color 0.5s $ease;
+  }
+
+  &[data-color="green"] &__photo {
+    background: $green-soft;
+    color: $green;
+  }
+
+  &[data-color="amber"] &__photo {
+    background: $amber-soft;
+    color: $amber;
+  }
+
+  &[data-scan] {
+    animation: scan-ring 1.2s $e;
+  }
+
+  &__name {
+    display: block;
+    width: 72%;
+    height: 8px;
+    margin-top: s(100);
+    border-radius: $radius-full;
+    background: $sunken;
+  }
+
+  &__price {
+    display: block;
+    margin-top: s(75);
+    @include text("sm");
+    font-weight: 700;
+    color: $ink;
+  }
+}
+
+@keyframes scan-ring {
+  30% {
+    box-shadow:
+      0 0 0 3px rgba($accent-mid, 0.45),
+      0 8px 24px -16px rgba($ink, 0.35);
+  }
+}
+
+.variants {
+  display: grid;
+  gap: s(100);
+
+  &__row {
+    display: flex;
+    gap: s(75);
+  }
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: $radius-full;
+  box-shadow:
+    0 0 0 2px $sunken,
+    0 0 0 4px transparent;
+  transition: box-shadow 0.5s $ease;
+
+  &--slate {
+    background: #4f6d8e;
+  }
+
+  &--green {
+    background: $green;
+  }
+
+  &--amber {
+    background: #c98a2b;
+  }
+
+  &[data-on] {
+    box-shadow:
+      0 0 0 2px $sunken,
+      0 0 0 4px $ink;
+  }
+}
+
+.size {
+  display: grid;
+  place-items: center;
+  min-width: 32px;
+  height: 28px;
+  border: 1px solid $line-strong;
+  border-radius: $radius-md;
+  background: $surface;
+  @include text("xs");
+  font-weight: 700;
+  color: $ink-soft;
+  transition:
+    background-color 0.5s $ease,
+    border-color 0.5s $ease,
+    color 0.5s $ease;
+
+  &[data-on] {
+    border-color: $ink;
+    background: $ink;
+    color: $surface;
+  }
+}
+
+.barcode {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: s(75);
+  width: 112px;
+  margin-top: s(75);
+  padding: s(50) s(75);
+  overflow: hidden;
+  border-radius: $radius-lg;
+  background: $surface;
+  color: $ink;
+
+  &__line {
+    flex: 1;
+    height: 6px;
+    border-radius: $radius-full;
+    background: $sunken;
+  }
+
+  &__beam {
+    position: absolute;
+    top: s(50);
+    bottom: s(50);
+    left: 0;
+    width: 2px;
+    border-radius: $radius-full;
+    background: $red;
+    box-shadow: 0 0 8px 1px rgba($red, 0.6);
+    opacity: 0;
+  }
+
+  &[data-scan] &__beam {
+    animation: beam 1.1s $io both;
+  }
+}
+
+@keyframes beam {
+  0% {
+    opacity: 0;
+    transform: translateX(4px);
+  }
+
+  15%,
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(106px);
+  }
+}
+
+// ─── Inventory ──────────────────────────────────────────────────
+.scene--stock {
+  flex-direction: column;
+  align-items: stretch;
+  gap: s(200);
+  padding-inline: max(#{s(300)}, calc(50% - 140px));
+}
+
+.stock {
+  display: grid;
+  gap: s(75);
+  padding: s(100);
+  border-radius: $radius-xl;
+  background: $surface;
+  box-shadow: 0 8px 24px -16px rgba($ink, 0.35);
+
+  &__row {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) 24px;
+    align-items: center;
+    gap: s(100);
+  }
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-lg;
+    background: $accent-wash;
+    color: $accent;
+
+    &--1 {
+      background: $amber-soft;
+      color: $amber;
+    }
+
+    &--2 {
+      background: $green-soft;
+      color: $green;
+    }
+  }
+
+  &__row[data-low] &__icon {
+    animation: pulse-ring 1.6s $e2 infinite;
+  }
+
+  &__track {
+    height: 8px;
+    overflow: hidden;
+    border-radius: $radius-full;
+    background: $sunken;
+  }
+
+  &__fill {
+    display: block;
+    height: 100%;
+    border-radius: $radius-full;
+    background: $accent-mid;
+    transform: scaleX(var(--fill));
+    transform-origin: left;
+    transition: background-color 0.5s $ease;
+  }
+
+  &__row[data-low] &__fill {
+    background: $amber;
+  }
+
+  &__count {
+    @include text("sm");
+    font-weight: 700;
+    text-align: right;
+    transition: color 0.5s $ease;
+  }
+
+  &__row[data-low] &__count {
+    color: $amber;
+  }
+}
+
+.scene--stock .stack {
+  --row-h: 40px;
+}
+
+.ledger {
+  display: flex;
+  align-items: center;
+  gap: s(100);
+  padding: 0 s(100);
+  border-radius: $radius-lg;
+  background: $surface;
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: $radius-md;
+    background: $accent-wash;
+    color: $accent;
+
+    &[data-kind="adjust"] {
+      background: $green-soft;
+      color: $green;
+    }
+  }
+
+  &__line {
+    flex: 1;
+    height: 6px;
+    border-radius: $radius-full;
+    background: $sunken;
+  }
+
+  &__delta {
+    @include text("sm");
+    font-weight: 700;
+    color: $ink-soft;
+
+    &[data-kind="adjust"] {
+      color: $green;
+    }
+  }
+}
+
+// ─── Members & points ───────────────────────────────────────────
+.scene--loyalty {
+  flex-direction: column;
+  align-items: stretch;
+  gap: s(200);
+  padding-inline: max(#{s(300)}, calc(50% - 130px));
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: s(100);
+  padding: s(100);
+  border-radius: $radius-xl;
+  background: $surface;
+  box-shadow: 0 8px 24px -16px rgba($ink, 0.35);
+
+  &__avatar {
+    flex: none;
+    color: $accent-mid;
+  }
+
+  &__lines {
+    display: grid;
+    gap: s(75);
+
+    span {
+      display: block;
+      width: 96px;
+      height: 8px;
+      border-radius: $radius-full;
+      background: $sunken;
+
+      & + span {
+        width: 56px;
+        height: 6px;
+      }
+    }
+  }
+
+  &__tier {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    margin-left: auto;
+    border-radius: $radius-full;
+    background: $amber-soft;
+    color: $amber;
+  }
+}
+
+.points {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: s(75);
+
+  &__star {
+    color: #c98a2b;
+  }
+
+  &__value {
+    @include text("4xl");
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  &__chip {
+    position: absolute;
+    top: -(s(100));
+    right: 0;
+    padding: s(25) s(75);
+    border-radius: $radius-full;
+    background: $green-soft;
+    color: $green;
+    @include text("sm");
+    font-weight: 700;
+    animation: chip-float 1.6s $e both;
+
+    &[data-redeem] {
+      background: #f6dedc;
+      color: $red;
+    }
+  }
+}
+
+@keyframes chip-float {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+    filter: blur(4px);
+  }
+
+  25%,
+  75% {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.receipt {
+  display: flex;
+  align-items: center;
+  gap: s(100);
+  padding: s(75) s(100);
+  border-radius: $radius-lg;
+  background: $surface;
+
+  &[data-fresh] {
+    animation: land 0.8s $e;
+  }
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: $radius-md;
+    background: $accent-wash;
+    color: $accent;
+  }
+
+  &__line {
+    flex: 1;
+    height: 6px;
+    border-radius: $radius-full;
+    background: $sunken;
+  }
+
+  &__amount {
+    display: flex;
+    align-items: center;
+    gap: s(75);
+    @include text("sm");
+    font-weight: 700;
+  }
+
+  &__discount {
+    color: $red;
+    opacity: 0;
+    transform: translateX(6px);
+    transition:
+      opacity 0.5s $e2,
+      transform 0.6s $e;
+
+    &[data-shown] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@keyframes land {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(4px);
+  }
+}
+
+// ─── Backup (dark) ──────────────────────────────────────────────
+.scene--backup {
+  flex-direction: column;
+  align-items: stretch;
+  gap: s(300);
+  padding-inline: max(#{s(300)}, calc(50% - 180px));
+
+  .stack {
+    --row-h: 44px;
+  }
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  gap: s(100);
+
+  &__node {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-xl;
+    background: $night-3;
+    color: $surface;
+  }
+
+  &__wire {
+    position: relative;
+    flex: 1;
+    height: 2px;
+    border-radius: $radius-full;
+    background: $night-line;
+  }
+
+  // The span spans the wire, so translating it by its own width carries the
+  // dot from one end to the other with a transform only.
+  &__pulse {
+    position: absolute;
+    inset: 0;
+    animation: pulse-travel 0.6s $io both;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -5px;
+      width: 10px;
+      height: 10px;
+      border-radius: $radius-full;
+      background: #8dabc6;
+      box-shadow: 0 0 0 4px rgba(141, 171, 198, 0.25);
+    }
+  }
+
+  &__clouds {
+    display: flex;
+    gap: s(75);
+  }
+
+  &__cloud {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-lg;
+    background: $night-3;
+    color: rgba($surface, 0.4);
+
+    &[data-on] {
+      background: $accent-strong;
+      color: $surface;
+    }
+  }
+}
+
+@keyframes pulse-travel {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  15%,
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.snapshot {
+  display: flex;
+  align-items: center;
+  gap: s(100);
+  padding: 0 s(200);
+  border-radius: $radius-lg;
+  background: $night-3;
+
+  &__icon {
+    flex: none;
+    color: #7fc4a0;
+  }
+
+  &__line {
+    width: var(--w);
+    height: 6px;
+    border-radius: $radius-full;
+    background: rgba($surface, 0.18);
+  }
+
+  &__size {
+    width: 32px;
+    height: 6px;
+    margin-left: auto;
+    border-radius: $radius-full;
+    background: rgba($surface, 0.1);
+  }
+}

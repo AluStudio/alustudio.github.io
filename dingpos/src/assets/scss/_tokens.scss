@@ -1,0 +1,124 @@
+@use "sass:map";
+@use "sass:list";
+
+// ─── Tokens ─────────────────────────────────────────────────────
+// Spacing, type and radius resolve only through these tables
+// (landing-page-design B1–B3); nothing in between. Mirrors home/.
+$space: (
+  0: 0,
+  25: 2px,
+  50: 4px,
+  75: 8px,
+  100: 12px,
+  200: 16px,
+  300: 24px,
+  400: 32px,
+  500: 40px,
+  600: 48px,
+  700: 64px,
+  800: 80px,
+  900: 96px,
+);
+
+@function s($key) {
+  @return map.get($space, $key);
+}
+
+$type: (
+  "xs": (12px, 16px),
+  "sm": (14px, 20px),
+  "base": (16px, 24px),
+  "lg": (18px, 28px),
+  "xl": (20px, 28px),
+  "2xl": (24px, 32px),
+  "3xl": (30px, 36px),
+  "4xl": (36px, 40px),
+  "5xl": (48px, 1),
+  "6xl": (60px, 1),
+);
+
+@mixin text($key) {
+  $pair: map.get($type, $key);
+  font-size: list.nth($pair, 1);
+  line-height: list.nth($pair, 2);
+}
+
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-2xl: 16px;
+$radius-3xl: 24px;
+$radius-full: 9999px;
+
+// ─── Colour ─────────────────────────────────────────────────────
+// Blue-grey neutrals and the slate accent mirror the iPad app's tokens.
+$bg: #f8f9fc;
+$surface: #ffffff;
+$sunken: #f0f2f7;
+$ink: #14181f;
+$ink-soft: #474f5f;
+// 4.9–5.3:1 on $bg and $surface; the lightest grey allowed for text.
+$ink-muted: #616978;
+$line: rgba(20, 24, 31, 0.08);
+$line-strong: rgba(20, 24, 31, 0.16);
+
+$accent: #3e5774;
+$accent-strong: #2f435b;
+$accent-deep: #223145;
+$accent-mid: #6c8dad;
+$accent-soft: #d6e1ee;
+$accent-wash: #e9eff6;
+
+// App semantics: profit, low stock, discount.
+$green: #2f7d5b;
+$green-soft: #dcefe6;
+$amber: #a8620a;
+$amber-soft: #f8e9d2;
+$red: #b4423b;
+
+// Dark surfaces (landing-page-design B4).
+$night: #181818;
+$night-2: #1f1f1f;
+$night-3: #272727;
+$night-line: #313131;
+
+// ─── Motion ─────────────────────────────────────────────────────
+// Interface motion (landing-page-design B7).
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+// Scene intros and stories (design-to-motion B6).
+$e: cubic-bezier(0.16, 1, 0.3, 1);
+$e2: cubic-bezier(0.33, 1, 0.68, 1);
+$io: cubic-bezier(0.65, 0, 0.35, 1);
+
+// ─── Type ───────────────────────────────────────────────────────
+// --dp-font-cjk (index.css) picks the CJK face by page language.
+$font: "Manrope Variable", var(--dp-font-cjk), system-ui, -apple-system, sans-serif;
+// Native language names would pull CJK font slices into every page.
+$font-system: system-ui, -apple-system, sans-serif;
+
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+// The floating nav: 16px off the top, 56px tall, 16px clear below it.
+$nav-offset: 88px;
+
+// Hero heading gradient, on the text only (landing-page-design B5). The
+// padding keeps background-clip from cutting off the last line's descenders.
+@mixin ink-gradient {
+  padding-bottom: 0.08em;
+  background: linear-gradient(90deg, #000000, #666666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin hover {
+  // Touch devices fire :hover on tap and leave it stuck.
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

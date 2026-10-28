@@ -1,14 +1,14 @@
 // Renders a guide's content blocks (schema in src/data/guides/guides.zh-Hant.js).
+import { Info } from "@phosphor-icons/react";
 import TransitionLink from "./TransitionLink";
 import { INLINE_LINK } from "../data/guides/links.js";
 
 // Width of an image block's `phone` file; the build checks it.
 const PHONE_IMAGE_WIDTH = 1080;
 
-// Rendered image width, mirroring .guide-figure in guides.scss: capped at
-// 480px, else the article column — .container's 0.75rem gutters plus the
-// article's 0.5rem padding below 576px (at 576px+ the column is ≥ 484px).
-const IMAGE_SIZES = "(min-width: 520px) 480px, calc(100vw - 2.5rem)";
+// Rendered image width, mirroring .figure in pages/article.scss: capped at
+// 480px, else the article column inside the shell's 24px gutters.
+const IMAGE_SIZES = "(min-width: 528px) 480px, calc(100vw - 48px)";
 
 /** Text with [label](/route/) and [label](https://…) links; the build checks every target. */
 function InlineText({ text }) {
@@ -57,7 +57,7 @@ function GuideBlocks({ blocks }) {
         );
       case "steps":
         return (
-          <ol key={i} className="guide-steps">
+          <ol key={i} className="steps-list">
             {block.items.map((item, j) => (
               <li key={j}>
                 <InlineText text={item} />
@@ -67,8 +67,8 @@ function GuideBlocks({ blocks }) {
         );
       case "note":
         return (
-          <div key={i} className="guide-note">
-            <i className="bi bi-info-circle-fill" aria-hidden="true"></i>
+          <div key={i} className="note">
+            <Info size={20} weight="fill" aria-hidden="true" />
             <p>
               <InlineText text={block.text} />
             </p>
@@ -76,8 +76,8 @@ function GuideBlocks({ blocks }) {
         );
       case "table":
         return (
-          <div key={i} className="guide-table-wrap">
-            <table className="guide-table">
+          <div key={i} className="table-wrap">
+            <table className="table">
               {block.caption && <caption>{block.caption}</caption>}
               <thead>
                 <tr>
@@ -121,7 +121,7 @@ function GuideImage({ block }) {
   const base = import.meta.env.BASE_URL;
   const { src, phone, width, height, alt, caption } = block;
   return (
-    <figure className="guide-figure">
+    <figure className="figure">
       <img
         src={`${base}${src}`}
         srcSet={phone ? `${base}${phone} ${PHONE_IMAGE_WIDTH}w, ${base}${src} ${width}w` : undefined}

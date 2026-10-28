@@ -14,7 +14,7 @@
 # What it does, and why:
 #   - Crops the iOS status bar off the top (24pt). It carries the capture's
 #     battery level and date — dev-capture noise that dates the asset. The
-#     device metaphor is supplied by the CSS bezel in home.scss instead.
+#     device metaphor is supplied by the CSS bezel in base.scss instead.
 #   - Crops 26pt off the bottom. This is ONLY needed to remove the DingPOSTweak
 #     dev ball, which sits in the bottom-right corner of any capture taken
 #     without `-DisableDevTweakBall`. Captures made through the product repo's
@@ -27,7 +27,7 @@
 #     the desktop file.
 #   - Crops are expressed in points at a flat @2x scale, so this works for any
 #     Retina iPad — but a 13-inch capture has a different aspect ratio than the
-#     11-inch one, so the script refuses to write assets home.scss cannot show.
+#     11-inch one, so the script refuses to write assets base.scss cannot show.
 #
 set -euo pipefail
 
@@ -63,7 +63,7 @@ BOTTOM_PT=26
 # by 834) silently mis-scales every device that is not the 11".
 SCALE=2
 
-# .device img in src/assets/scss/home.scss pins this ratio to stop the frame
+# .device img in src/assets/scss/base.scss pins this ratio to stop the frame
 # collapsing before the image decodes, and object-fit: cover enforces it. That
 # crops silently, so the ratio is asserted here instead: a 13" capture is
 # 1.333 wide where the 11" is 1.432, and the two do not survive the same value.
@@ -112,7 +112,7 @@ for name in cashier promotions dashboard orders; do
   if awk "BEGIN { exit !(($ratio - $expected) > $RATIO_TOLERANCE || ($expected - $ratio) > $RATIO_TOLERANCE) }"; then
     rm -f "$tmp"
     echo "" >&2
-    echo "$name: aspect ratio $ratio does not match the $expected that home.scss declares." >&2
+    echo "$name: aspect ratio $ratio does not match the $expected that base.scss declares." >&2
     echo "These captures are a different iPad than the committed set. Update .device img:" >&2
     echo "    aspect-ratio: $ow / $oh;" >&2
     echo "and CSS_RATIO_W / CSS_RATIO_H in this script, then re-run." >&2
