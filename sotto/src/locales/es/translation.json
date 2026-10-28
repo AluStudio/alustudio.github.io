@@ -14,7 +14,9 @@
     "tagline": "Tu CRM personal para los detalles que importan",
     "description": "Cada persona lleva consigo pequeños detalles que vale la pena recordar. Sotto los guarda por ti — estaturas, gustos, esas cosas que solo tú sabes. Todos los datos se quedan en tu teléfono, acompañándote en silencio.",
     "download": "Descargar en el App Store",
-    "downloadAndroid": "Disponible en Google Play"
+    "downloadAndroid": "Disponible en Google Play",
+    "proof": "{{average}} en el App Store de Taiwán · {{n}} valoraciones",
+    "assurance": "Empieza gratis · Sin cuenta · Pago único, sin suscripción"
   },
   "features": {
     "title": "Diseñado para quienes te importan",
@@ -44,6 +46,87 @@
       "title": "Escribe lo que importa",
       "desc": "Su café favorito, su aniversario, algo que alguien dijo una vez — anótalo para no olvidar."
     }
+  },
+  "tagline": {
+    "text": "Para quien más quieres, cada detalle importa. El cumpleaños antes de que se te pase. La talla para el regalo. Las pequeñas verdades, guardadas en privado."
+  },
+  "scene": {
+    "alt": "Página de una persona en Sotto: se guarda una idea de regalo, junto a su bebida favorita, una alergia, su cumpleaños y su talla de anillo",
+    "edit": "Editar",
+    "initials": "LR",
+    "name": "Lucía Ruiz",
+    "meta": "Amiga desde 2019",
+    "bio": "Fotografía en analógico. Siempre llega pronto al brunch.",
+    "fields": [
+      {
+        "label": "Ideas de regalo",
+        "value": "Cámara analógica"
+      },
+      {
+        "label": "Bebida favorita",
+        "value": "Latte de avena"
+      },
+      {
+        "label": "Alergia",
+        "value": "Cacahuetes"
+      },
+      {
+        "label": "Cumpleaños",
+        "value": "1993/08/30"
+      }
+    ],
+    "ring_label": "Anular I",
+    "prompts_title": "Elige una pregunta",
+    "prompts": [
+      "¿Cómo sería tu día perfecto?",
+      "¿Cuál es tu recuerdo de infancia más preciado?",
+      "Si pudieras invitar a cenar a cualquier persona — viva o no — ¿a quién elegirías y por qué?"
+    ]
+  },
+  "reviews": {
+    "eyebrow": "Reseñas del App Store",
+    "title": "En sus propias palabras",
+    "subtitle": "Reseñas reales de quienes usan Sotto, y lo que construimos después de leerlas.",
+    "stars": "5 de 5 estrellas",
+    "count": "{{n}} valoraciones",
+    "source": "Valoraciones y reseñas del App Store de Taiwán, octubre de 2026. Reseñas traducidas del chino tradicional.",
+    "developer": "Respuesta del desarrollador",
+    "shipped": "Ya en Sotto:",
+    "items": {
+      "uu14188": {
+        "title": "¡Muy recomendable!",
+        "date": "19 jul 2026",
+        "body": "A veces es solo una cosita tierna, pero desde que la apunto, cada vez que abro la app y la veo me alegro y la vuelvo a recordar. Me encanta~"
+      },
+      "moyu": {
+        "title": "Me gustaría subir fotos a las notas",
+        "date": "4 jun 2026",
+        "body": "Me encantaría usar esta app para guardar los pequeños momentos con amigos y familia. Si pudiera subir las fotos de cada reunión, sería todavía mejor.",
+        "response": "¡Hola! La última versión ya permite añadir fotos, vídeos y archivos a las notas. Pruébala. Muchas gracias por la sugerencia ^^",
+        "response_date": "7 jul 2026",
+        "shipped": "fotos, vídeos y archivos en las notas."
+      },
+      "diadialydia": {
+        "title": "Pido esta función~~",
+        "date": "28 may 2026",
+        "body": "Si se pudiera añadir amigos, conectarse y enviarse preguntas para que el otro las responda (como «¿Qué recuerdo nuestro es el que más recuerdas?» o «¿Cuándo te sientes querido por mí?»), ¡sería una app potentísima!",
+        "response": "No queríamos que algún día los costes de servidor obligaran a cerrar esta función, o la app entera (y tampoco queremos cobrar una suscripción), así que creamos un catálogo de preguntas: eliges una y la habláis con calma. Sentados cara a cara, con un café o una copa, se sienten mejor los pensamientos del otro que respondiendo en una app. Esperamos que te guste",
+        "response_date": "19 jun 2026",
+        "shipped": "un catálogo de 323 preguntas para conversar."
+      },
+      "dreamer": {
+        "title": "Me la recomendó un amigo",
+        "date": "11 may 2026",
+        "body": "Una app genial. Visito a menudo a distintos clientes y me viene perfecta para tomar notas sobre ellos. ¿Podríais añadir imágenes y la opción de compartir en el futuro?",
+        "response": "Recibido. Pensaremos cómo añadir estas funciones.",
+        "response_date": "27 may 2026",
+        "shipped": "fotos en las notas y compartir la página de una persona como imagen."
+      }
+    }
+  },
+  "closing": {
+    "title": "Empieza por una persona",
+    "text": "Sotto es gratis para hasta 5 personas, con hasta 10 campos y 5 notas por persona. Cuando necesites más, un único pago quita los límites para siempre. Sin suscripción."
   },
   "footer": {
     "tagline": "Recuerda los detalles que importan.",
@@ -192,7 +275,7 @@
       },
       "is_sotto_free": {
         "title": "¿Sotto es gratis?",
-        "answer": "Sotto se descarga gratis, y la versión gratuita incluye todas las funciones para hasta 5 personas, con hasta 10 campos y 5 notas por persona. Una única compra elimina esos límites para siempre: no hay suscripción."
+        "answer": "Sotto se descarga gratis, y la versión gratuita cubre hasta 5 personas, con hasta 10 campos y 5 notas por persona, además de los 8 temas de color. Una única compra añade los campos personalizados y elimina esos límites para siempre: no hay suscripción."
       },
       "do_i_need_an_account": {
         "title": "¿Necesito crear una cuenta para usar Sotto?",

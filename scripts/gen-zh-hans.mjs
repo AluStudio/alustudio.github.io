@@ -251,6 +251,9 @@ const SOTTO_SITE_GLOSSARY = [
   ["PIN、图形", "PIN、图案"], // Android pattern lock
   ["主动运行", "主动执行"],
   ["⋯⋯", "……"],
+  ["底片", "胶片"], // film photography; 底片 reads as a negative
+  ["则评分", "个评分"], // App Store counts ratings with 个
+  ["回馈", "反馈"], // user feedback
   // Converter mistranslations
   ["激活", "启用"], // 啟用
   ["内核", "核心"], // 核心 → kernel

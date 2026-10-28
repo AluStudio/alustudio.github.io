@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { Link, Navigate, useParams } from "react-router-dom";
 import "../assets/scss/all.scss";
 import "../assets/scss/footer.scss";
-import "../assets/scss/hero.scss";
 import "./guides.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";

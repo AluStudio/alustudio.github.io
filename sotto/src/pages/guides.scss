@@ -32,11 +32,23 @@
 }
 
 .guide-card {
+  position: relative;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   background: #fff;
   padding: 1.25rem 1.5rem;
   text-align: start;
+  transition: border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover {
+    border-color: rgba($gold, 0.45);
+  }
+
+  // The title link covers the whole card (below), so the card shows its focus.
+  &:has(a:focus-visible) {
+    outline: 2px solid $gold-dark;
+    outline-offset: 3px;
+  }
 }
 
 .guide-card__title {
@@ -46,12 +58,23 @@
   a {
     color: $charcoal;
     text-decoration: none;
+    outline: none;
 
-    &:hover {
-      color: $gold-dark;
-      text-decoration: underline;
+    // Stretched link: the whole card is the click target, while the title
+    // stays the link's only text (screen readers don't read the summary as
+    // the link name).
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
     }
   }
+}
+
+.guide-card:hover .guide-card__title a {
+  color: $gold-dark;
+  text-decoration: underline;
 }
 
 .guide-card__summary {
@@ -209,16 +232,5 @@
 
   [dir="rtl"] & .bi-chevron-right {
     transform: scaleX(-1);
-  }
-}
-
-// Home page section listing the guides.
-.home-guides {
-  padding: 1rem 0 5rem;
-
-  .guide-list {
-    max-width: 960px;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }

@@ -14,7 +14,9 @@
     "tagline": "Il CRM personale per le persone che ami",
     "description": "Ogni persona porta con sé piccoli dettagli che meritano di essere ricordati. Sotto li custodisce per te — altezze, preferenze, quelle cose che solo tu conosci. Tutti i dati restano sul tuo telefono, in silenzio.",
     "download": "Scarica dall'App Store",
-    "downloadAndroid": "Disponibile su Google Play"
+    "downloadAndroid": "Disponibile su Google Play",
+    "proof": "Valutata {{average}} sull'App Store di Taiwan · {{n}} valutazioni",
+    "assurance": "Gratis per iniziare · Nessun account · Acquisto unico, nessun abbonamento"
   },
   "features": {
     "title": "Progettato per chi ti sta a cuore",
@@ -44,6 +46,87 @@
       "title": "Scrivi quello che conta",
       "desc": "Il suo caffè preferito, il suo anniversario, qualcosa che qualcuno ha detto — annotalo per non dimenticare mai."
     }
+  },
+  "tagline": {
+    "text": "Per le persone che ami, ogni piccolo dettaglio conta. Il compleanno prima che ti sfugga. La taglia quando scegli un regalo. Le piccole verità, custodite in privato."
+  },
+  "scene": {
+    "alt": "La pagina di una persona in Sotto: un'idea regalo viene salvata, con la bevanda preferita, un'allergia, il compleanno e la misura dell'anello",
+    "edit": "Modifica",
+    "initials": "GC",
+    "name": "Giulia Conti",
+    "meta": "Amica dal 2019",
+    "bio": "Scatta in analogico. Sempre in anticipo al brunch.",
+    "fields": [
+      {
+        "label": "Idee regalo",
+        "value": "Fotocamera vintage"
+      },
+      {
+        "label": "Bevanda pref.",
+        "value": "Latte d’avena"
+      },
+      {
+        "label": "Allergia",
+        "value": "Arachidi"
+      },
+      {
+        "label": "Compleanno",
+        "value": "1993/08/30"
+      }
+    ],
+    "ring_label": "Anul. sx",
+    "prompts_title": "Scegli una domanda",
+    "prompts": [
+      "Come passeresti la tua giornata perfetta?",
+      "Il ricordo d'infanzia più prezioso?",
+      "Se potessi invitare a cena chiunque — vivo o no — chi sceglieresti e perché?"
+    ]
+  },
+  "reviews": {
+    "eyebrow": "Recensioni dell'App Store",
+    "title": "Con le loro parole",
+    "subtitle": "Recensioni vere di chi usa Sotto, e quello che abbiamo costruito dopo averle lette.",
+    "stars": "5 stelle su 5",
+    "count": "{{n}} valutazioni",
+    "source": "Valutazioni e recensioni dall'App Store di Taiwan, ottobre 2026. Recensioni tradotte dal cinese tradizionale.",
+    "developer": "Risposta dello sviluppatore",
+    "shipped": "Ora in Sotto:",
+    "items": {
+      "uu14188": {
+        "title": "Consigliatissima!",
+        "date": "19 lug 2026",
+        "body": "A volte è solo una piccola cosa carina, ma da quando la annoto, ogni volta che apro l'app e la rivedo sono felice e la ricordo di nuovo. La adoro~"
+      },
+      "moyu": {
+        "title": "Vorrei aggiungere foto alle note",
+        "date": "4 giu 2026",
+        "body": "Mi piacerebbe usare questa app per conservare i piccoli momenti con amici e famiglia. Se potessi caricare le foto di ogni ritrovo sarebbe ancora meglio.",
+        "response": "Ciao! L'ultima versione ti permette di aggiungere foto, video e file alle note. Provala. Grazie mille per il suggerimento ^^",
+        "response_date": "7 lug 2026",
+        "shipped": "foto, video e file nelle note."
+      },
+      "diadialydia": {
+        "title": "Funzione richiesta~~",
+        "date": "28 mag 2026",
+        "body": "Se si potessero aggiungere amici, collegarsi e mandarsi domande a cui si vorrebbe che l'altro rispondesse (tipo «Qual è il ricordo di noi che ricordi di più?» o «Quando ti senti amato da me?»), sarebbe un'app potentissima!",
+        "response": "Non volevamo che un giorno i costi dei server costringessero a chiudere questa funzione, o l'intera app (e non vogliamo far pagare un abbonamento), così abbiamo creato un catalogo di domande: ne scegli una e ne parlate con calma. Seduti uno di fronte all'altro, con un caffè o un bicchiere, si sentono meglio i pensieri dell'altro che rispondendo in un'app. Speriamo ti piaccia",
+        "response_date": "19 giu 2026",
+        "shipped": "un catalogo di 323 domande per conversare."
+      },
+      "dreamer": {
+        "title": "Consigliata da un amico",
+        "date": "11 mag 2026",
+        "body": "App fantastica. Visito spesso clienti diversi ed è perfetta per prendere appunti su di loro. In futuro potreste aggiungere immagini e condivisione?",
+        "response": "Ricevuto. Penseremo a come aggiungere queste funzioni.",
+        "response_date": "27 mag 2026",
+        "shipped": "foto nelle note e condivisione della pagina di una persona come immagine."
+      }
+    }
+  },
+  "closing": {
+    "title": "Inizia da una persona",
+    "text": "Sotto è gratis per un massimo di 5 persone, con fino a 10 campi e 5 note ciascuna. Quando ti serve di più, un unico acquisto toglie i limiti per sempre. Nessun abbonamento."
   },
   "footer": {
     "tagline": "Ricorda i dettagli che contano.",
@@ -192,7 +275,7 @@
       },
       "is_sotto_free": {
         "title": "Sotto è gratis?",
-        "answer": "Sotto si scarica gratis e la versione gratuita include tutte le funzionalità per un massimo di 5 persone, con fino a 10 campi e 5 note per persona. Un unico acquisto una tantum elimina questi limiti per sempre — nessun abbonamento."
+        "answer": "Sotto si scarica gratis e la versione gratuita copre fino a 5 persone, con fino a 10 campi e 5 note per persona, oltre a tutti gli 8 temi colore. Un unico acquisto una tantum sblocca i campi personalizzati ed elimina questi limiti per sempre — nessun abbonamento."
       },
       "do_i_need_an_account": {
         "title": "Serve un account per usare Sotto?",

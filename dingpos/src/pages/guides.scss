@@ -38,10 +38,22 @@
 }
 
 .guide-card {
+  position: relative;
   background: $surface;
   border: 1px solid $neutral-100;
   border-radius: $border-radius-lg;
   padding: 1.25rem 1.5rem;
+  transition: border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover {
+    border-color: $accent-600;
+  }
+
+  // The title link covers the whole card (below), so the card shows its focus.
+  &:has(a:focus-visible) {
+    outline: 2px solid $accent-600;
+    outline-offset: 3px;
+  }
 }
 
 .guide-card-title {
@@ -53,13 +65,24 @@
   a {
     color: $ink;
     text-decoration: none;
+    outline: none;
 
-    &:hover {
-      color: $accent-600;
-      text-decoration: underline;
-      text-underline-offset: 2px;
+    // Stretched link: the whole card is the click target, while the title
+    // stays the link's only text (screen readers don't read the summary as
+    // the link name).
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
     }
   }
+}
+
+.guide-card:hover .guide-card-title a {
+  color: $accent-600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .guide-card-summary {

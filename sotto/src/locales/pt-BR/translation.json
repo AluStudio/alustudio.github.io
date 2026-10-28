@@ -14,7 +14,9 @@
     "tagline": "CRM pessoal para quem você ama",
     "description": "Cada pessoa carrega pequenos detalhes que valem a pena lembrar. O Sotto guarda eles pra você — alturas, preferências, aquelas coisas que só você sabe. Todos os dados ficam no seu celular, te acompanhando em silêncio.",
     "download": "Baixar na App Store",
-    "downloadAndroid": "Disponível no Google Play"
+    "downloadAndroid": "Disponível no Google Play",
+    "proof": "Nota {{average}} na App Store de Taiwan · {{n}} avaliações",
+    "assurance": "Grátis para começar · Sem conta · Compra única, sem assinatura"
   },
   "features": {
     "title": "Feito para quem você se importa",
@@ -44,6 +46,87 @@
       "title": "Anote o que importa",
       "desc": "O café favorito dele, o aniversário dela, algo que alguém disse uma vez — anote pra nunca esquecer."
     }
+  },
+  "tagline": {
+    "text": "Para quem você ama, cada pequeno detalhe importa. O aniversário antes que passe. O tamanho na hora de escolher um presente. As pequenas verdades, guardadas em privado."
+  },
+  "scene": {
+    "alt": "Página de uma pessoa no Sotto: uma ideia de presente sendo salva, com bebida favorita, alergia, aniversário e tamanho de anel",
+    "edit": "Editar",
+    "initials": "AR",
+    "name": "Ana Ribeiro",
+    "meta": "Amiga desde 2019",
+    "bio": "Fotografa com filme. Sempre chega cedo ao brunch.",
+    "fields": [
+      {
+        "label": "Ideias de presente",
+        "value": "Câmera analógica"
+      },
+      {
+        "label": "Bebida favorita",
+        "value": "Latte de aveia"
+      },
+      {
+        "label": "Alergia",
+        "value": "Amendoim"
+      },
+      {
+        "label": "Aniversário",
+        "value": "1993/08/30"
+      }
+    ],
+    "ring_label": "Anelar E",
+    "prompts_title": "Escolha uma pergunta",
+    "prompts": [
+      "Como seria o seu dia perfeito?",
+      "Sua lembrança de infância mais preciosa?",
+      "Se você pudesse jantar com qualquer pessoa — viva ou não — quem você escolheria? Por quê?"
+    ]
+  },
+  "reviews": {
+    "eyebrow": "Avaliações da App Store",
+    "title": "Nas palavras de quem usa",
+    "subtitle": "Avaliações reais de quem usa o Sotto, e o que construímos depois de lê-las.",
+    "stars": "5 de 5 estrelas",
+    "count": "{{n}} avaliações",
+    "source": "Notas e avaliações da App Store de Taiwan, outubro de 2026. Avaliações traduzidas do chinês tradicional.",
+    "developer": "Resposta do desenvolvedor",
+    "shipped": "Já no Sotto:",
+    "items": {
+      "uu14188": {
+        "title": "Super recomendo!",
+        "date": "19 de jul. de 2026",
+        "body": "Às vezes é só uma coisinha fofa, mas depois que anoto, toda vez que abro o app e vejo, fico feliz e relembro tudo de novo. Amo~"
+      },
+      "moyu": {
+        "title": "Quero adicionar fotos às notas",
+        "date": "4 de jun. de 2026",
+        "body": "Adoraria usar este app para guardar os pequenos momentos com amigos e família. Se desse para enviar as fotos de cada encontro, seria ainda melhor.",
+        "response": "Oi! A versão mais recente permite adicionar fotos, vídeos e arquivos às notas. Experimente. Muito obrigado pela sugestão ^^",
+        "response_date": "7 de jul. de 2026",
+        "shipped": "fotos, vídeos e arquivos nas notas."
+      },
+      "diadialydia": {
+        "title": "Pedido de recurso~~",
+        "date": "28 de mai. de 2026",
+        "body": "Se desse para adicionar amigos, se conectar e mandar um para o outro perguntas que você quer que a pessoa responda (tipo “Qual lembrança nossa você mais guarda?” ou “Quando você se sente amado por mim?”), seria um app poderosíssimo!",
+        "response": "Não queríamos que um dia os custos de servidor obrigassem a encerrar esse recurso, ou o app inteiro (e também não queremos cobrar assinatura), então criamos um catálogo de perguntas: você escolhe uma e vocês conversam com calma. Sentados frente a frente, com um café ou um drink, dá para sentir melhor o que o outro pensa do que respondendo num app. Esperamos que você goste",
+        "response_date": "19 de jun. de 2026",
+        "shipped": "um catálogo com 323 perguntas para conversar."
+      },
+      "dreamer": {
+        "title": "Indicado por um amigo",
+        "date": "11 de mai. de 2026",
+        "body": "App excelente. Visito clientes diferentes com frequência e ele é perfeito para anotar sobre eles. Vocês poderiam adicionar imagens e compartilhamento no futuro?",
+        "response": "Recebido. Vamos pensar em como adicionar esses recursos.",
+        "response_date": "27 de mai. de 2026",
+        "shipped": "fotos nas notas e compartilhar a página de uma pessoa como imagem."
+      }
+    }
+  },
+  "closing": {
+    "title": "Comece por uma pessoa",
+    "text": "O Sotto é grátis para até 5 pessoas, com até 10 campos e 5 notas por pessoa. Quando precisar de mais, uma única compra remove os limites para sempre. Sem assinatura."
   },
   "footer": {
     "tagline": "Lembre dos detalhes que importam.",
@@ -192,7 +275,7 @@
       },
       "is_sotto_free": {
         "title": "O Sotto é gratuito?",
-        "answer": "O Sotto é gratuito para baixar, e a versão gratuita inclui todos os recursos para até 5 pessoas, com até 10 campos e 5 notas por pessoa. Uma única compra remove esses limites para sempre — não há assinatura."
+        "answer": "O Sotto é gratuito para baixar, e a versão gratuita cobre até 5 pessoas, com até 10 campos e 5 notas por pessoa, além dos 8 temas de cores. Uma única compra libera os campos personalizados e remove esses limites para sempre — não há assinatura."
       },
       "do_i_need_an_account": {
         "title": "Preciso criar uma conta para usar o Sotto?",
