@@ -17,10 +17,9 @@ $body-bg:       $cream-light;
 $body-color:    $charcoal;
 $link-color:    $gold-dark;
 
-// CJK family per page language, set in index.css: Noto Sans TC would draw
-// Japanese and Simplified Chinese with Traditional glyph shapes.
-$font-family-sans-serif: var(--sotto-font-cjk), system-ui, -apple-system, sans-serif;
-$headings-font-family:   "Cormorant Garamond Variable", var(--sotto-font-cjk), Georgia, serif;
+// Text family per page language, set in index.css.
+$font-family-sans-serif: var(--sotto-font-text), system-ui, -apple-system, sans-serif;
+$headings-font-family:   "Cormorant Garamond Variable", var(--sotto-font-text), Georgia, serif;
 $headings-font-weight:   600;
 $headings-color:         $charcoal;
 
