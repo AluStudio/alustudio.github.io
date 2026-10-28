@@ -47,6 +47,7 @@ import {
 } from "../../scripts/rewrite-seo-tags.mjs";
 import { contentUnits, fitDescription, DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
+import { HOME_FAQ_SLUGS } from "../src/data/faq/home.js";
 import { INLINE_LINK, blockTexts } from "../src/data/guides/links.js";
 import { SCENE_COUNTRIES, SCENE_STRING_KEYS, SCENE_TIMES, placeholders } from "../src/data/scenes/keys.js";
 
@@ -250,6 +251,17 @@ function validateFaqPacks() {
         if (!slugSet.has(related)) {
           errors.push(`[${code}] article "${article.slug}" has dangling related link "${related}"`);
         }
+      }
+    }
+  }
+
+  // The home page's FAQ shows each listed article's opening paragraph.
+  for (const { code, faq: pack } of LOCALES) {
+    for (const slug of HOME_FAQ_SLUGS) {
+      const article = pack.articles.find((a) => a.slug === slug);
+      if (!article) errors.push(`[${code}] home FAQ slug "${slug}" has no article`);
+      else if (article.content[0]?.type !== "p") {
+        errors.push(`[${code}] home FAQ article "${slug}" must open with a "p" block, not "${article.content[0]?.type}"`);
       }
     }
   }

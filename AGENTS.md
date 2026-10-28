@@ -18,7 +18,7 @@ Deleting/renaming/archiving this repo silently breaks the old-domain 301 and lea
 ├── pikgeon/            # Pikgeon support site — Vite + React + Bootstrap
 ├── babbby/             # Babbby support site  — same stack
 ├── sotto/              # Sotto support site   — same stack
-├── dingpos/            # DingPOS support site  — same stack
+├── dingpos/            # DingPOS support site  — Vite + React + Sass, no Bootstrap
 ├── src/worker.js       # Cloudflare Worker: host/path redirects, asset serving, 404
 ├── wrangler.jsonc      # Worker + static-assets config (routes, bindings)
 ├── scripts/            # Shared build-time helpers (e.g. rewrite-seo-tags.mjs)
@@ -118,7 +118,7 @@ Three globally installed skills are off in this repo only, since it has no iOS o
 
 **Repo rules override skill advice.** These skills assume a conventional React app; three constraints here do not match that assumption:
 - Collapsed FAQ/accordion content stays in the DOM (see Sub-app Notes) — no mount/unmount exit animations on that content, or prerender loses it.
-- No animation library is installed (Bootstrap 5 + Sass only). Advice naming Motion/Framer Motion means adding a dependency to all five apps — confirm before doing that.
+- No animation library is installed: pikgeon, babbby and sotto use Bootstrap 5 + Sass; home and dingpos use Sass only. Advice naming Motion/Framer Motion means adding a dependency to all five apps — confirm before doing that.
 - **No JS-gated scroll reveals.** `scripts/prerender.mjs` writes the rendered DOM back to each `index.html`, so an IntersectionObserver pattern that starts at `opacity: 0` ships that hidden state as the served HTML — the page then renders blank until React remounts, and stays blank forever without JS. Entrance motion must be a pure-CSS `animation` (it plays with no JS and leaves nothing hidden). The DingPOS hero (`dingpos/src/assets/scss/home.scss`) is the worked example. Scroll-linked reveals use CSS scroll-driven animations (`animation-timeline: view()` inside `@supports`), as in `home/src/index.scss` and `dingpos/src/assets/scss/base.scss`; browsers without them simply show the content.
 
 ### SEO skills (claude-seo)

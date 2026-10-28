@@ -78,7 +78,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 - 每種語言一份 `dingpos/l10n/manifest/<code>.json`，記錄每個單位翻譯時的 en hash（只算文字欄位）。en 文字改了，該單位就過期，要重翻。
 - 用詞跟 app 一致：`sync` 從本機的 app repo（`~/Developer/alustudio/DingPOS`，`--app-repo` 可改）讀該語言的 glossary 與字串，把和網站 en 逐字相同的 app 字串的譯文（`appMatch`），以及 FAQ 裡逐字出現的 app 按鈕、畫面、分頁名稱（`appTerms`）放進 packet。translator 預設採用 app 的譯文，語境不同才改並說明理由。網站才有的詞記在 `dingpos/l10n/glossary/<code>.md`。app repo 只有 `sync` 會讀，CI 與 `npm test` 不依賴它。
 - 審查：第一輪 `l10n-reviewer` 完整審過每個 segment；之後每輪只重審上一輪修改的單位（`sync --mode review --since <ref>`，加上 `--ids` 帶入 translator 保留不改的 finding），最多兩輪修正。重審只看上一輪指名或修改的欄位，查意思、app 用詞、glossary；語感與搜尋詞偏好只能記成不擋關的 `note`（寫進報告的 review notes），translator 對 reviewer 的建議整句照套或整句保留並說明理由，不取一半。這是因為兩輪重審曾讓 reviewer 重挑自己上一輪寫的字（et、hu、ms）。還有 `translation` 或 `glossary` finding 沒收斂就不上線，交給 owner 裁決。
-- 上線：語言審查通過後，把 registry 的 `shipped` 改成 true，執行 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 改寫 `sitemap.xml` 的 DingPOS 區塊；registry 新加的語言還要跑 `node dingpos/scripts/sync-scene-strings.mjs` 產生它的 scene 字串。再跑 build 與 prerender。每種語言各自上線，不等其他語言。
+- 上線：語言一加進 registry 就跑 `node dingpos/scripts/sync-scene-strings.mjs`，產生它的 scene 字串（script 對 registry 的每種語言都寫 pack，不看 `shipped`）。語言審查通過後，把 registry 的 `shipped` 改成 true，執行 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 改寫 `sitemap.xml` 的 DingPOS 區塊：這支 script 先檢查每種已上線語言的 scene pack，缺了就失敗、不寫 sitemap，所以 sync 必須在它之前。再跑 build 與 prerender。每種語言各自上線，不等其他語言。
 - Privacy 與 Terms 照常翻譯，不加「以英文版為準」：Sotto 的翻譯語言也沒有這類聲明。
 - `npm test` 對每種已上線的翻譯語言執行 `npm run l10n -- check`：缺少或多出的單位、過期的單位，以及和 `apply` 重新產生的結果不同的檔案（手改過，或 en 的 related、since 改了還沒套用），都會讓它失敗，所以英文改了、翻譯還沒補上時無法部署。
 

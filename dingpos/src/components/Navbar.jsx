@@ -110,10 +110,19 @@ function Navbar() {
       setOpen(false);
       toggleRef.current?.focus();
     };
+    // From $bp-md (navbar.scss) the menu and its toggle are hidden, so a menu
+    // left open by rotating or widening the window would keep the page locked
+    // with no way to close it.
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const handleWiden = (event) => {
+      if (event.matches) setOpen(false);
+    };
     document.addEventListener("keydown", handleKey);
+    desktop.addEventListener("change", handleWiden);
     document.documentElement.classList.add("menu-open");
     return () => {
       document.removeEventListener("keydown", handleKey);
+      desktop.removeEventListener("change", handleWiden);
       document.documentElement.classList.remove("menu-open");
     };
   }, [open]);

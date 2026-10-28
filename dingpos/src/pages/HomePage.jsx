@@ -30,6 +30,7 @@ import { wizardEntry, wizardFillMs, wizardSteps } from "../components/wizardStor
 import { Price } from "../components/Price";
 import { PLANS } from "../data/plans";
 import { getFaq } from "../data/faq";
+import { HOME_FAQ_SLUGS } from "../data/faq/home";
 import { useStory } from "../story";
 
 const STARTING_PRICE = PLANS[0].price;
@@ -55,19 +56,6 @@ const FEATURES = [
   { key: "products", scene: <ProductsScene delay={200} /> },
   { key: "inventory", scene: <InventoryScene delay={900} /> },
   { key: "loyalty", scene: <LoyaltyScene delay={1600} /> },
-];
-
-// Objections a first-time visitor raises before installing, answered by the
-// opening paragraph of the matching support article.
-const FAQ_SLUGS = [
-  "offline-usage",
-  "account-required",
-  "supported-devices",
-  "free-trial",
-  "after-trial",
-  "backup-data",
-  "multi-device",
-  "import-csv",
 ];
 
 const ASSURANCES = [
@@ -313,9 +301,8 @@ function Steps() {
 function HomeFaq() {
   const { t } = useTranslation();
   const { articles } = getFaq();
-  const entries = FAQ_SLUGS.map((slug) => articles.find((a) => a.slug === slug)).filter(
-    (article) => article?.content[0]?.type === "p",
-  );
+  // The build guarantees each slug exists and opens with a paragraph.
+  const entries = HOME_FAQ_SLUGS.map((slug) => articles.find((a) => a.slug === slug));
   return (
     <section className="section home-faq" id="faq">
       <div className="shell shell--narrow">
