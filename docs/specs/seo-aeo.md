@@ -118,7 +118,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 - JSON-LD 靜態寫在各 app 的 `index.html`：home 放 `Organization` + `WebSite`；各 app 放 `MobileApplication`，含 `Offer` / `AggregateOffer`。
 - DingPOS 的每篇 support 文章與 guide 另有 `BreadcrumbList`（DingPOS → Support 或 Guides → 文章），Sotto 的每篇 guide 也有（Sotto → Guides → 文章，名稱與 URL 都是該語言的），由 `copy-spa-pages.js` 在 build 時寫進該 route 的 `<head>`（`addJsonLd` / `breadcrumbList`）。
 - DingPOS 的每篇 guide 另有 `Article`（`guideArticle`）：`headline`、`description` 取 title 與 summary，`dateModified` 取 `checked`，因為 Google 要求標記的日期和頁面上顯示的「最後查核」一致；guide 沒有記錄首次發佈日，所以不寫 `datePublished`。`author` 與 `publisher` 是 Alu Studio，`@id` 和 home 的 `Organization` 相同；`image` 列出文中的產品截圖。
-- `MobileApplication` 的 `sameAs` 列出 app 的商店頁（Sotto：App Store 與 Google Play；DingPOS：App Store），讓搜尋引擎把同名的不同產品分開。官方社群帳號或 launch 平台頁（DingPOS：Product Hunt）也列進去，但只放未登入就看得到的公開頁：審核中的頁面（例如 AlternativeTo 的待審 app）等通過後再加。
+- `MobileApplication` 的 `sameAs` 列出 app 的商店頁（Sotto：App Store 與 Google Play；DingPOS：App Store），讓搜尋引擎把同名的不同產品分開。官方社群帳號或 launch 平台頁（DingPOS：Product Hunt、Indie Hackers；Sotto：Indie Hackers）也列進去，但只放未登入就看得到的公開頁：審核中、排隊中的頁面（例如 AlternativeTo、Unwire、SaaSHub 的待審頁，Uneed、StartupBase 的排隊頁）等公開後再加。
 - `aggregateRating` 只在 App Store 有足夠的真實評分時加入，並定期同步。目前五站都沒有：評分太少的 app 標上去，比不標更像造假。
 - 每個 app 有 1200x630 的 `og:image`，以及 `og:type=website`、`og:site_name=Alu Studio`、`twitter:card=summary_large_image`。
 
