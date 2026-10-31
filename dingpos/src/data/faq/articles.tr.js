@@ -1026,7 +1026,7 @@ export const articles = [
   {
     "slug": "report-periods",
     "category": "reports",
-    "question": "Raporlarda hangi tarih aralıkları görüntülenebilir?",
+    "question": "Raporlar hangi dönemleri gösterebilir?",
     "keywords": [
       "raporlar",
       "dönem",
@@ -1040,7 +1040,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "İstatistik ekranının üstünden Bugün, Dün, Bu Hafta, Bu Ay, Bu Yıl veya Tüm dönem seçeneklerinden birini seçin ya da Özel ile başlangıç ve bitiş tarihini belirleyin. Bu Hafta, cihazdaki haftanın ilk gününe göre hesaplanır; Bu Ay ve Bu Yıl ise ayın 1'inde ve 1 Ocak'ta başlar. Her seçenek kapsadığı tarihleri gösterir; Tüm dönem, mağazanızın ilk işleminden başlar."
+        "text": "İstatistik ekranının üstünden Bugün, Dün, Bu Hafta, Bu Ay, Bu Yıl veya Tüm dönem seçeneklerinden birini seçin ya da Özel ile başlangıç ve bitiş tarihini belirleyin. Bu Hafta, cihazdaki haftanın ilk gününe göre hesaplanır; Bu Ay ve Bu Yıl ise ayın 1'inde ve 1 Ocak'ta başlar. Her seçenek kapsadığı tarihleri gösterir; Tüm dönem, mağazanızın ilk satışından başlar."
       },
       {
         "type": "p",
@@ -1052,7 +1052,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pro planda, dönem çubuğunun sağındaki Satış karşılaştırması, seçili dönemi bir önceki dönemle ya da geçen yılın aynı dönemiyle karşılaştırır — bkz. “Pro gelişmiş raporlar neleri gösterir?”"
+        "text": "Dönem çubuğunun sağındaki Satış karşılaştırması, seçili dönemi bir önceki dönemle ya da geçen yılın aynı dönemiyle karşılaştırır — bkz. “Gelişmiş raporlar neleri gösterir?”"
       },
       {
         "type": "note",
@@ -1069,10 +1069,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Pro gelişmiş raporlar neleri gösterir?",
+    "question": "Gelişmiş raporlar neleri gösterir?",
     "keywords": [
       "gelişmiş raporlar",
-      "pro",
       "satış karşılaştırması",
       "geçen yıl",
       "ısı haritası",
@@ -1094,12 +1093,16 @@ export const articles = [
           "Haftanın günü × saat: Zaman içinde satışlar başlığını Haftanın günü × saat olarak değiştirin; yedi gün ve 24 saatlik bir ısı haritası görürsünüz — bir hücre ne kadar koyuysa o saatte o kadar çok satış yapmışsınızdır. Satış geliri ile sipariş sayısı arasında geçiş yapabilirsiniz; karşılaştırma açıkken hangi saatlerin arttığını, hangilerinin azaldığını görürsünüz.",
           "Yavaş Satan Ürünler: sıralama kartının başlığını Yavaş Satan Ürünler olarak değiştirin; ürünler en az satandan en çok satana doğru, güncel stokları ve her birinin son satış tarihiyle listelenir. Hiç satılmayan ürünler Hiç satılmadı olarak işaretlenir. Varsayılan olarak yalnızca stokta olan ürünler gösterilir.",
           "Tekrar alışveriş oranı: müşteri kutusunun son satırı, dönemde alışveriş yapan ve toplamda iki veya daha fazla kez alışveriş yapmış üyelerin oranıdır.",
-          "Şu anda: stok değeri (güncel stok × güncel maliyet), seçili dönemdeki tüm stok hareketleri ve müşterilerin elinde duran, henüz kullanılmamış puanlar ile bunlarla yapılabilecek en yüksek indirim. Bunlar güncel bakiyelerdir; dönem seçimi bunları değiştirmez."
+          "Şu anda: stok değeri (güncel stok × güncel maliyet), seçili dönemdeki tüm stok hareketleri ve müşterilerin elinde duran, henüz kullanılmamış puanlar ile bunlarla yapılabilecek en yüksek indirim. Bunlar güncel durumu yansıtır; dönem seçimi bunları değiştirmez."
         ]
       },
       {
         "type": "p",
-        "text": "Pro olmadan bu beş noktanın her birinde, yükseltme açıklamasını açan küçük bir kilit görünür; İstatistik ekranındaki diğer her şey eskisi gibi çalışır. Raporlar mağazanızın zaten tuttuğu verileri okur; bu yüzden Pro sona erdiğinde yalnızca raporlar gizlenir — hiçbir veri kaybolmaz."
+        "text": "v3.4'ten beri bu beşi de her planda açıktır ve deneme bittikten sonra da açık kalır. Önceki sürümlerde yalnızca Pro'da gösteriliyor, diğer planlarda küçük bir kilit görünüyordu; kilitleri hâlâ görüyorsanız DingPOS'u App Store'dan güncelleyin."
+      },
+      {
+        "type": "p",
+        "text": "Lite stok ya da sadakat puanı takibi yapmaz; yine de Şu anda bölümü, mağazanızın zaten elinde bulunan stok değerini ve kullanılmamış puanları (örneğin denemeden kalanları) gösterir, yoksa sıfır görünür."
       },
       {
         "type": "note",
@@ -1740,15 +1743,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "İlk kurulumdan itibaren 30 gün boyunca personel hesapları, yetkiler, etkinlik günlüğü ve gelişmiş raporlar dahil Pro planın tüm özelliklerini kullanırsınız. Hesap açmanız gerekmez."
+        "text": "İlk kurulumdan itibaren 30 gün boyunca personel hesapları, yetkiler ve etkinlik günlüğü dahil Pro planın tüm özelliklerini kullanırsınız. Hesap açmanız gerekmez."
       },
       {
         "type": "p",
-        "text": "Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plan o andan itibaren geçerli olur. Deneme bittikten sonra personel ve gelişmiş raporlar gibi Pro özellikleri yalnızca Pro abonelikle kullanılabilir."
+        "text": "Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plan o andan itibaren geçerli olur. Deneme bittikten sonra personel ve etkinlik günlüğü gibi Pro özellikleri yalnızca Pro abonelikle kullanılabilir. Gelişmiş raporlar için abonelik gerekmez; v3.4'ten beri her plana dahildir."
       },
       {
         "type": "p",
-        "text": "Son 7 gün içinde ve son günde uygulama, kaç gün kaldığını, deneme bitince ödeme almanın duraklayacağını ve verilerinizin saklanacağını size birer kez hatırlatır."
+        "text": "Son 7 gün içinde ve son günde uygulama, kaç gün kaldığını, deneme bitince satış işlemlerinin duraklayacağını ve verilerinizin saklanacağını size birer kez hatırlatır."
       },
       {
         "type": "p",
@@ -1805,14 +1808,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
+        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları (gelişmiş raporlar v3.4'ten beri dahil) ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
       },
       {
         "type": "list",
         "items": [
           "Lite: ödeme alma ve ürün yönetimi yeterli olan, tezgâhı tek başına işleten kişiler için.",
           "Standard: kampanyalar, sadakat puanı ve üyelik seviyeleri, stok takibi, satın alma, veresiye satış, ön siparişler ve işlem ücreti tahminleri ekler.",
-          "Pro: personel hesapları ve yetkiler, yönetici onayı, etkinlik günlüğü, geri yükleme kayıtları ve gelişmiş raporlar ekler; personeli olan dükkânlar için."
+          "Pro: personel hesapları ve yetkiler, yönetici onayı, etkinlik günlüğü ve geri yükleme kayıtları ekler; personeli olan dükkânlar için."
         ]
       },
       {

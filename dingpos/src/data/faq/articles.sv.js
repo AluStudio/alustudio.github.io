@@ -1038,7 +1038,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Välj Idag, Igår, Denna vecka, Denna månad, Detta år eller Hela tiden högst upp i Statistik, eller använd Anpassad för att välja start- och slutdatum. Denna vecka utgår från enhetens första veckodag, och Denna månad och Detta år börjar den 1:a respektive den 1 januari. Varje alternativ visar vilka datum det omfattar, och Hela tiden börjar vid butikens första transaktion."
+        "text": "Välj Idag, Igår, Denna vecka, Denna månad, Detta år eller Hela tiden högst upp i Statistik, eller använd Anpassad för att välja start- och slutdatum. Denna vecka utgår från enhetens första veckodag, och Denna månad och Detta år börjar den 1:a respektive den 1 januari. Varje alternativ visar vilka datum det omfattar, och Hela tiden börjar vid butikens första försäljning."
       },
       {
         "type": "p",
@@ -1050,7 +1050,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Med planen Pro jämför Försäljningsjämförelse till höger i periodfältet perioden med den före eller med samma period förra året – se ”Vad visar de avancerade rapporterna i Pro?”"
+        "text": "Försäljningsjämförelse till höger i periodfältet jämför perioden med den före eller med samma period förra året – se ”Vad visar de avancerade rapporterna?”"
       },
       {
         "type": "note",
@@ -1067,10 +1067,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Vad visar de avancerade rapporterna i Pro?",
+    "question": "Vad visar de avancerade rapporterna?",
     "keywords": [
       "avancerade rapporter",
-      "pro",
       "försäljningsjämförelse",
       "förra året",
       "värmekarta",
@@ -1097,7 +1096,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Utan Pro har vart och ett av dessa fem ställen ett litet lås som öppnar en förklaring om uppgradering. Allt annat i Statistik fungerar som vanligt. Rapporterna läser data som din butik redan sparar, så när Pro upphör döljs bara rapporterna – ingen data försvinner."
+        "text": "Sedan v3.4 är alla fem öppna i alla planer och förblir öppna även när provperioden har tagit slut. Tidigare versioner visade dem bara i Pro, med ett litet lås i övriga planer. Ser du fortfarande låsen, uppdatera DingPOS från App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite har ingen lagerstyrning eller några poäng, men Just nu visar ändå det lagervärde och de outlösta poäng som din butik redan har (till exempel från provperioden), eller noll."
       },
       {
         "type": "note",
@@ -1738,11 +1741,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Du får 30 dagar med alla funktioner i Pro-planen från första installationen, bland annat medarbetarkonton, behörigheter, aktivitetsloggen och avancerade rapporter – inget konto behövs."
+        "text": "Du får 30 dagar med alla funktioner i Pro-planen från första installationen, bland annat medarbetarkonton, behörigheter och aktivitetsloggen – inget konto behövs."
       },
       {
         "type": "p",
-        "text": "Om du prenumererar på en plan under provperioden avslutas provperioden direkt, och den plan du köpt gäller från och med då. Efter provperioden finns Pro-funktioner som medarbetare och avancerade rapporter kvar bara med en Pro-prenumeration."
+        "text": "Om du prenumererar på en plan under provperioden avslutas provperioden direkt, och den plan du köpt gäller från och med då. Efter provperioden finns Pro-funktioner som medarbetare och aktivitetsloggen kvar bara med en Pro-prenumeration. Avancerade rapporter kräver ingen; sedan v3.4 ingår de i alla planer."
       },
       {
         "type": "p",
@@ -1803,14 +1806,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alla tre planerna ger dig full kassafunktion, produkter, ordrar (med makuleringar, returer och byten), rapporter och säkerhetskopiering i molnet. Skillnaden ligger i verktygen för att driva butiken:"
+        "text": "Alla tre planerna ger dig full kassafunktion, produkter, ordrar (med makuleringar, returer och byten), rapporter (avancerade rapporter ingår sedan v3.4) och säkerhetskopiering i molnet. Skillnaden ligger i verktygen för att driva butiken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: för dig som driver ett marknadsstånd ensam och behöver kassa och produkter.",
           "Standard: lägger till kampanjer, poäng och kundnivåer, lagerstyrning, inköp, försäljning på räkning, förbeställningar och beräknade betalningsavgifter.",
-          "Pro: lägger till medarbetarkonton och behörigheter, godkännande från en chef, aktivitetsloggen, återställningslogg och avancerade rapporter – för butiker med personal."
+          "Pro: lägger till medarbetarkonton och behörigheter, godkännande från en chef, aktivitetsloggen och återställningslogg – för butiker med personal."
         ]
       },
       {

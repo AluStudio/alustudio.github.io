@@ -200,8 +200,7 @@
         "features": [
           "Töötajate kontod: igaühel oma PIN, iga müük salvestab, kes selle sisestas",
           "Õigused ja heakskiidud: ülempiiri ületavad allahindlused, toodete ja laoseisu muutmine, omahinna vaatamine",
-          "Tegevuslogi ja taastamise ajalugu",
-          "Täiustatud aruanded: perioodide võrdlus, müügi soojuskaart, aeglase käibega tooted, laojäägi väärtus, korduvostjad"
+          "Tegevuslogi ja taastamise ajalugu"
         ],
         "cta": "Alusta 30-päevast tasuta prooviperioodi"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Mida saan prooviperioodil kasutada?",
-          "a": "30 päeva alates esimesest installimisest on sul kõik funktsioonid, sh Pro omad, nagu töötajad, õigused ja täiustatud aruanded – kontot pole vaja. Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ja lülitab sind üle ostetud paketile."
+          "a": "30 päeva alates esimesest installimisest on sul kõik funktsioonid, sh Pro omad, nagu töötajad, õigused ja tegevuslogi – kontot pole vaja. Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ja lülitab sind üle ostetud paketile."
         },
         {
           "q": "Mis juhtub, kui ma pärast prooviperioodi ei telli?",

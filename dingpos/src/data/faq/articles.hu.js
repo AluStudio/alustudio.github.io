@@ -1043,7 +1043,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A Pro csomagban az időszaksáv jobb oldalán lévő Eladások összehasonlítása az időszakot az előzővel vagy az előző év azonos időszakával veti össze – lásd: „Mit mutatnak a Pro részletes jelentések?”"
+        "text": "Az időszaksáv jobb oldalán lévő Eladások összehasonlítása az időszakot az előzővel vagy az előző év azonos időszakával veti össze – lásd: „Mit mutatnak a részletes jelentések?”"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Mit mutatnak a Pro részletes jelentések?",
+    "question": "Mit mutatnak a részletes jelentések?",
     "keywords": [
       "részletes jelentések",
-      "pro",
       "eladások összehasonlítása",
       "előző év",
       "hőtérkép",
@@ -1081,16 +1080,20 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). A Beérkezett pénz csempe a különbséget és a növekedési ütemet mutatja, az árbevétel-diagramon pedig halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszak is ugyanaddig tart.",
+          "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). A Beérkezett pénz csempéje a különbséget és a növekedési ütemet mutatja, az árbevétel-diagramon pedig halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszak is ugyanaddig tart.",
           "Hétnap × óra: az Eladások időben fejlécet átkapcsolva Hétnap × óra nézetre hétnapos, 24 órás hőtérkép jelenik meg – minél sötétebb egy cella, annál többet adott el. Váltogathat az árbevétel és a rendelések között; bekapcsolt összehasonlításnál látszik, mely órák nőttek, és melyek csökkentek.",
           "Lassan forgó termékek: a rangsorkártya fejlécét átkapcsolva Lassan forgó termékek nézetre a termékek a legkevesebbet eladottól a legtöbbig sorakoznak, a jelenlegi készlettel és az utolsó eladás dátumával. Azok a termékek, amelyekből még nem adtak el, a Még nem adták el jelölést kapják. Alapértelmezés szerint csak a készleten lévő termékek látszanak.",
-          "Visszatérő vásárlók aránya: a Vevők csempe utolsó sora azoknak a törzsvásárlóknak az aránya, akik az időszakban vásároltak, és összesen legalább kétszer vásároltak.",
+          "Visszatérő vásárlók aránya: a Vevők csempéjének utolsó sora azoknak a törzsvásárlóknak az aránya, akik az időszakban vásároltak, és összesen legalább kétszer vásároltak.",
           "Aktuális állapot: a készletérték (jelenlegi készlet × jelenlegi költség), az adott időszak összes készletmozgása, valamint a vevők birtokában lévő, még be nem váltott pontok a legnagyobb levonható összeggel. Ezek aktuális egyenlegek; az időszak nem változtat rajtuk."
         ]
       },
       {
         "type": "p",
-        "text": "Pro nélkül ezen az öt helyen egy kis lakat látható, amely a frissítést ismertető oldalt nyitja meg; a Riportok minden más része a megszokott módon működik. A jelentések az üzlet által már tárolt adatokat olvassák, így a Pro megszűnésekor csak a jelentések tűnnek el – adat nem vész el."
+        "text": "A 3.4-es verzió óta mind az öt elérhető minden csomagban, és a próbaidőszak lejárta után is megmaradnak. A korábbi verziók ezeket csak a Pro csomagban mutatták, a többi csomagnál egy kis lakattal; ha még lakatokat lát, frissítse a DingPOS-t az App Store-ból."
+      },
+      {
+        "type": "p",
+        "text": "A Lite csomag nem követi a készletet és a hűségpontokat, de az Aktuális állapot ilyenkor is megmutatja az üzlet által már tárolt készletértéket és be nem váltott pontokat (például a próbaidőszakból), vagy nullát."
       },
       {
         "type": "note",
@@ -1730,19 +1733,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Az első telepítéstől számítva 30 napig a Pro csomag minden funkcióját használhatja, köztük a munkatársi fiókokat, a jogosultságokat, a tevékenységnaplót és a részletes jelentéseket – fiók létrehozása nélkül."
+        "text": "Az első telepítéstől számítva 30 napig a Pro csomag minden funkcióját használhatja, köztük a munkatársi fiókokat, a jogosultságokat és a tevékenységnaplót – fiók létrehozása nélkül."
       },
       {
         "type": "p",
-        "text": "Ha a próbaidőszak alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és onnantól a megvásárolt csomag érvényes. A próbaidőszak után a Pro funkciók, például a személyzet kezelése és a részletes jelentések csak Pro előfizetéssel maradnak elérhetők."
+        "text": "Ha a próbaidőszak alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és onnantól a megvásárolt csomag érvényes. A próbaidőszak után a Pro funkciók, például a személyzet kezelése és a tevékenységnapló csak Pro előfizetéssel maradnak elérhetők. A részletes jelentésekhez erre nincs szükség: a 3.4-es verzió óta minden csomag tartalmazza őket."
       },
       {
         "type": "p",
-        "text": "Az utolsó 7 napban és az utolsó napon az app egyszer-egyszer emlékezteti Önt arra, hány nap van hátra, hogy a próbaidőszak végén a fizetés szünetel, és hogy az adatai megmaradnak."
+        "text": "Az utolsó 7 napban, majd az utolsó napon az app egyszer-egyszer emlékezteti Önt arra, hány nap van hátra, hogy a próbaidőszak végén szünetel a kasszázás, és hogy az adatai megmaradnak."
       },
       {
         "type": "p",
-        "text": "A próbaidőszak alatt létrehozott minden adat (termékek, rendelések, tagok) teljes egészében megmarad. Az adatai soha nem törlődnek, akár fizet elő utána, akár nem."
+        "text": "A próbaidőszak alatt létrehozott minden adat (termékek, rendelések, tagok) teljes egészében megmarad. Az adatai soha nem törlődnek, függetlenül attól, hogy utána előfizet-e."
       }
     ],
     "related": [
@@ -1795,14 +1798,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Mind a három csomag tartalmazza a teljes körű fizetést, a termékeket, a rendeléseket (sztornóval, visszavétellel és cserével), a jelentéseket és a felhő alapú biztonsági mentést. Az üzlet vezetéséhez nyújtott eszközökben térnek el:"
+        "text": "Mindhárom csomag tartalmazza a teljes körű fizetési funkciókat, a termékeket, a rendeléseket (sztornóval, visszavétellel és cserével), a jelentéseket (a részletes jelentésekkel a 3.4-es verzió óta) és a felhőalapú biztonsági mentést. Az üzlet vezetéséhez nyújtott eszközökben térnek el:"
       },
       {
         "type": "list",
         "items": [
           "Lite: egyedül dolgozó piaci standhoz, ahol fizetésre és termékekre van szükség.",
           "Standard: kiegészül akciókkal, hűségpontokkal és tagi szintekkel, készletkövetéssel, beszerzéssel, számlás (utólag fizetett) eladással, előrendeléssel és a kezelési költség becslésével.",
-          "Pro: kiegészül munkatársi fiókokkal és jogosultságokkal, jóváhagyással, tevékenységnaplóval, visszaállítási bejegyzésekkel és részletes jelentésekkel – munkatársakat foglalkoztató üzleteknek."
+          "Pro: kiegészül munkatársi fiókokkal és jogosultságokkal, jóváhagyással, tevékenységnaplóval és visszaállítási bejegyzésekkel – munkatársakat foglalkoztató üzleteknek."
         ]
       },
       {

@@ -199,8 +199,7 @@
         "features": [
           "Staff accounts: a PIN each, every order records who rang it",
           "Permissions & approvals: over-cap discounts, product and stock edits, viewing costs",
-          "Activity log and restore history",
-          "Advanced reports: period comparison, sales heatmap, slow movers, inventory value, repeat customers"
+          "Activity log and restore history"
         ],
         "cta": "Start the 30-day free trial"
       }
@@ -360,7 +359,7 @@
       "items": [
         {
           "q": "What can I use during the free trial?",
-          "a": "For 30 days from first install you get every feature, including Pro ones such as staff, permissions and advanced reports — no account needed. Subscribing to any plan during the trial ends the trial right away and switches you to the plan you bought."
+          "a": "For 30 days from first install you get every feature, including Pro ones such as staff, permissions and the activity log — no account needed. Subscribing to any plan during the trial ends the trial right away and switches you to the plan you bought."
         },
         {
           "q": "What happens if I don't subscribe after the trial?",

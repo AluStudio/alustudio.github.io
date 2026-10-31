@@ -1031,7 +1031,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Chọn Hôm nay, Hôm qua, Tuần này, Tháng này, Năm nay hoặc Toàn thời gian ở đầu màn hình Thống kê, hoặc dùng Tùy chỉnh để chọn ngày bắt đầu và ngày kết thúc. Tuần này tính theo ngày đầu tuần của thiết bị; Tháng này và Năm nay bắt đầu từ ngày 1 và từ ngày 1 tháng 1. Mỗi lựa chọn đều hiển thị các ngày mà nó bao gồm, và Toàn thời gian bắt đầu từ giao dịch đầu tiên của cửa hàng."
+        "text": "Chọn Hôm nay, Hôm qua, Tuần này, Tháng này, Năm nay hoặc Toàn thời gian ở đầu màn hình Thống kê, hoặc dùng Tùy chỉnh để chọn ngày bắt đầu và ngày kết thúc. Tuần này tính theo ngày đầu tuần của thiết bị; Tháng này và Năm nay bắt đầu từ ngày 1 và từ ngày 1 tháng 1. Mỗi lựa chọn đều hiển thị các ngày thuộc kỳ báo cáo đó, và Toàn thời gian bắt đầu từ giao dịch đầu tiên của cửa hàng."
       },
       {
         "type": "p",
@@ -1043,7 +1043,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Với gói Pro, So sánh doanh số ở bên phải thanh khoảng thời gian cho phép so sánh khoảng thời gian đang xem với khoảng liền trước hoặc với cùng kỳ năm ngoái — xem “Báo cáo nâng cao của gói Pro hiển thị những gì?”"
+        "text": "So sánh doanh số ở bên phải thanh khoảng thời gian cho phép so sánh khoảng thời gian đang xem với khoảng liền trước hoặc với cùng kỳ năm ngoái — xem “Báo cáo nâng cao hiển thị những gì?”"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Báo cáo nâng cao của gói Pro hiển thị những gì?",
+    "question": "Báo cáo nâng cao hiển thị những gì?",
     "keywords": [
       "báo cáo nâng cao",
-      "pro",
       "so sánh doanh số",
       "năm ngoái",
       "bản đồ nhiệt",
@@ -1081,16 +1080,20 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "So sánh doanh số: ở bên phải thanh khoảng thời gian, so với cùng kỳ năm ngoái hoặc với khoảng liền trước (một ngày so với cùng ngày tuần trước, tuần này so với tuần trước, tháng này so với tháng trước, năm nay so với năm trước, khoảng tùy chỉnh so với số ngày tương ứng ngay trước đó). Ô Tiền đã thu hiển thị mức chênh lệch và tốc độ tăng trưởng, còn biểu đồ doanh thu thêm một đường nhạt hơn cho khoảng so sánh. Khi khoảng thời gian chưa kết thúc, khoảng so sánh được cắt ở đúng thời điểm tương ứng.",
+          "So sánh doanh số: ở bên phải thanh Kỳ báo cáo, so sánh với cùng kỳ năm ngoái hoặc kỳ trước (một ngày so với cùng ngày tuần trước, tuần này so với tuần trước, tháng này so với tháng trước, năm nay so với năm trước, kỳ tùy chỉnh so với số ngày tương ứng ngay trước đó). Ô Tiền đã thu hiển thị mức chênh lệch và tốc độ tăng trưởng, còn biểu đồ doanh thu thêm một đường nhạt hơn cho kỳ so sánh. Khi Kỳ báo cáo chưa kết thúc, kỳ so sánh được cắt ở đúng thời điểm tương ứng.",
           "Thứ × giờ: chuyển tiêu đề Doanh số theo thời gian sang Thứ × giờ để xem bản đồ nhiệt bảy ngày, 24 giờ — ô càng đậm thì bạn bán được càng nhiều. Bạn có thể chuyển giữa doanh thu và số đơn; khi bật so sánh, bạn thấy được giờ nào tăng và giờ nào giảm.",
           "Hàng bán chậm: chuyển tiêu đề của thẻ xếp hạng sang Hàng bán chậm để liệt kê sản phẩm từ bán ít nhất đến nhiều nhất, kèm tồn kho hiện tại và ngày bán gần nhất của từng sản phẩm. Sản phẩm chưa từng bán được đánh dấu Chưa từng bán. Mặc định chỉ hiển thị sản phẩm còn hàng.",
-          "Tỷ lệ mua lại: dòng cuối của ô khách hàng là tỷ lệ thành viên đã mua trong khoảng thời gian đó và tổng cộng đã mua từ hai lần trở lên.",
+          "Tỷ lệ mua lại: dòng cuối của ô khách hàng là tỷ lệ thành viên đã mua trong Kỳ báo cáo đó và tổng cộng đã mua từ hai lần trở lên.",
           "Hiện tại: giá trị tồn kho (tồn kho hiện tại × giá vốn hiện tại), mọi biến động tồn kho trong khoảng thời gian đã chọn, và số điểm khách đang giữ nhưng chưa quy đổi, cùng mức giảm tối đa họ có thể dùng. Đây là số dư hiện tại; khoảng thời gian không làm chúng thay đổi."
         ]
       },
       {
         "type": "p",
-        "text": "Khi chưa dùng Pro, mỗi vị trí trong năm vị trí này có một biểu tượng khóa nhỏ để mở phần giải thích về việc nâng cấp; mọi thứ khác trong Thống kê vẫn hoạt động như trước. Các báo cáo đọc dữ liệu mà cửa hàng của bạn vốn đã lưu, nên khi Pro kết thúc chỉ có báo cáo bị ẩn — không mất dữ liệu nào."
+        "text": "Từ phiên bản v3.4, cả năm báo cáo này đều mở trên mọi gói và vẫn mở sau khi hết dùng thử. Các phiên bản cũ hơn chỉ hiển thị chúng ở gói Pro, còn các gói khác có một biểu tượng khóa nhỏ; nếu bạn vẫn thấy biểu tượng khóa, hãy cập nhật DingPOS từ App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite không theo dõi tồn kho và điểm tích lũy, nhưng mục Hiện tại vẫn hiển thị giá trị tồn kho và số điểm chưa quy đổi mà cửa hàng của bạn đã có sẵn (ví dụ từ thời gian dùng thử), hoặc bằng 0."
       },
       {
         "type": "note",
@@ -1736,11 +1739,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bạn được dùng thử 30 ngày toàn bộ tính năng của gói Pro ngay từ lần cài đặt đầu tiên, gồm tài khoản nhân viên, phân quyền, nhật ký hoạt động và báo cáo nâng cao — không cần tạo tài khoản."
+        "text": "Bạn được dùng thử 30 ngày toàn bộ tính năng của gói Pro ngay từ lần cài đặt đầu tiên, gồm tài khoản nhân viên, phân quyền và nhật ký hoạt động — không cần tạo tài khoản."
       },
       {
         "type": "p",
-        "text": "Nếu đăng ký bất kỳ gói nào trong thời gian dùng thử, thời gian dùng thử sẽ kết thúc ngay và gói bạn đã mua được áp dụng từ lúc đó. Sau khi hết dùng thử, các tính năng Pro như nhân viên và báo cáo nâng cao chỉ còn dùng được khi bạn đăng ký gói Pro."
+        "text": "Nếu đăng ký bất kỳ gói nào trong thời gian dùng thử, thời gian dùng thử sẽ kết thúc ngay và gói bạn đã mua được áp dụng từ lúc đó. Sau khi hết dùng thử, các tính năng Pro như nhân viên và nhật ký hoạt động chỉ còn dùng được khi bạn đăng ký gói Pro. Báo cáo nâng cao thì không cần gói Pro; từ phiên bản v3.4, mọi gói đều có sẵn."
       },
       {
         "type": "p",
@@ -1802,14 +1805,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Cả ba gói đều có đầy đủ thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
+        "text": "Cả ba gói đều bao gồm đầy đủ chức năng thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo (từ phiên bản v3.4 đã gồm cả báo cáo nâng cao) và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
       },
       {
         "type": "list",
         "items": [
           "Lite: dành cho một người bán ở quầy hàng, chỉ cần thanh toán và sản phẩm.",
           "Standard: thêm khuyến mãi, điểm tích lũy và hạng thành viên, theo dõi tồn kho, nhập hàng, bán chịu, đơn đặt trước và ước tính phí thanh toán.",
-          "Pro: thêm tài khoản nhân viên và phân quyền, phê duyệt của quản lý, nhật ký hoạt động, bản ghi khôi phục và báo cáo nâng cao — dành cho cửa hàng có nhân viên."
+          "Pro: thêm tài khoản nhân viên và phân quyền, phê duyệt của quản lý, nhật ký hoạt động và bản ghi khôi phục — dành cho cửa hàng có nhân viên."
         ]
       },
       {

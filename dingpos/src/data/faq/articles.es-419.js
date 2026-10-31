@@ -1041,7 +1041,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "En el plan Pro, Comparación de ventas, a la derecha de la barra de periodo, compara el periodo con el anterior o con el mismo periodo del año pasado; consulta «¿Qué muestran los reportes avanzados de Pro?»."
+        "text": "Comparación de ventas, a la derecha de la barra de periodo, compara el periodo con el anterior o con el mismo periodo del año pasado; consulta «¿Qué muestran los reportes avanzados?»."
       },
       {
         "type": "note",
@@ -1058,10 +1058,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "¿Qué muestran los reportes avanzados de Pro?",
+    "question": "¿Qué muestran los reportes avanzados?",
     "keywords": [
       "reportes avanzados",
-      "pro",
       "comparación de ventas",
       "año pasado",
       "mapa de calor",
@@ -1088,7 +1087,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sin Pro, cada uno de estos cinco puntos lleva un pequeño candado que abre una explicación de la mejora de plan; todo lo demás en Reportes funciona igual. Los reportes leen datos que tu tienda ya guarda, así que cuando termina Pro solo se ocultan los reportes: no se pierde ningún dato."
+        "text": "Desde la v3.4, los cinco están disponibles en todos los planes y siguen disponibles después de que termina la prueba. Las versiones anteriores los mostraban solo en Pro, con un pequeño candado en los demás planes; si aún ves los candados, actualiza DingPOS desde el App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite no controla el stock ni los puntos de lealtad, pero Ahora mismo sigue mostrando la valuación de inventario y los puntos sin canjear que tu tienda ya tiene (por ejemplo, de la prueba), o cero."
       },
       {
         "type": "note",
@@ -1726,15 +1729,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tienes 30 días con todas las funciones del plan Pro desde la primera instalación, incluidas las cuentas del personal, los permisos, el registro de actividad y los reportes avanzados, sin necesidad de crear una cuenta."
+        "text": "Tienes 30 días con todas las funciones del plan Pro desde la primera instalación, incluidas las cuentas del personal, los permisos y el registro de actividad, sin necesidad de crear una cuenta."
       },
       {
         "type": "p",
-        "text": "Si te suscribes a cualquier plan durante la prueba, esta termina de inmediato y el plan que compraste se aplica desde ese momento. Al terminar la prueba, las funciones Pro, como el personal y los reportes avanzados, solo siguen disponibles con una suscripción Pro."
+        "text": "Si te suscribes a cualquier plan durante la prueba, esta termina de inmediato y el plan que compraste se aplica desde ese momento. Al terminar la prueba, las funciones Pro, como el personal y el registro de actividad, solo siguen disponibles con una suscripción Pro. Los reportes avanzados no necesitan una; desde la v3.4 todos los planes los incluyen."
       },
       {
         "type": "p",
-        "text": "Durante los últimos 7 días y el último día, la app te recuerda una vez en cada uno cuántos días quedan, que el cobro se pausa cuando termina la prueba y que tus datos se conservan."
+        "text": "Durante los últimos 7 días y el último día, la app te recuerda una vez en cada uno cuántos días quedan, que la función de cobro se pausa cuando termina la prueba y que tus datos se conservan."
       },
       {
         "type": "p",
@@ -1791,14 +1794,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Los tres planes incluyen cobro completo, productos, pedidos (con anulaciones, devoluciones y cambios), reportes y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
+        "text": "Los tres planes incluyen cobro completo, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (con los reportes avanzados incluidos desde la v3.4) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
       },
       {
         "type": "list",
         "items": [
           "Lite: para una persona que atiende un puesto y necesita cobro y productos.",
-          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y estimación de comisiones de pago.",
-          "Pro: suma cuentas y permisos del personal, aprobación de gerente, registro de actividad, registros de restauración y reportes avanzados, para tiendas con personal."
+          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y estimaciones de comisiones por procesamiento.",
+          "Pro: suma cuentas y permisos del personal, aprobación de gerente, registro de actividad y registros de restauración, para tiendas con personal."
         ]
       },
       {

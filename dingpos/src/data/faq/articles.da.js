@@ -1039,11 +1039,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kortet Produktrangliste viser de 5 bedste. Tryk på kortet eller Se alle for at vise alle produkter solgt i perioden, rangeret efter antal efter returer."
+        "text": "Kortet Produktrangliste viser de 5 bedst sælgende produkter. Tryk på kortet eller Se alle for at vise alle produkter solgt i perioden, rangeret efter antal efter returer."
       },
       {
         "type": "p",
-        "text": "Med Pro-abonnementet kan Salgssammenligning til højre i periodelinjen sammenligne perioden med den foregående eller med samme periode sidste år – se “Hvad viser Pros avancerede rapporter?”"
+        "text": "Salgssammenligning til højre i periodelinjen sammenligner perioden med den foregående eller med samme periode sidste år – se “Hvad viser de avancerede rapporter?”"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Hvad viser Pros avancerede rapporter?",
+    "question": "Hvad viser de avancerede rapporter?",
     "keywords": [
       "avancerede rapporter",
-      "pro",
       "salgssammenligning",
       "sidste år",
       "heatmap",
@@ -1081,7 +1080,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Salgssammenligning: til højre i periodelinjen kan du sammenligne med samme periode sidste år eller med den foregående periode (en enkelt dag mod samme dag i sidste uge, denne uge mod sidste uge, denne måned mod sidste måned, i år mod sidste år, en brugerdefineret periode mod lige så mange dage umiddelbart før). Feltet Modtagne betalinger viser forskellen og væksten, og omsætningsgrafen får en lysere linje for sammenligningsperioden. Mens en periode stadig løber, afskæres sammenligningsperioden på samme tidspunkt.",
+          "Salgssammenligning: til højre i periodelinjen kan du sammenligne med samme periode sidste år eller med den foregående periode (en enkelt dag mod samme dag i sidste uge, denne uge mod sidste uge, denne måned mod sidste måned, i år mod sidste år, en brugerdefineret periode mod lige så mange dage umiddelbart før). Feltet Modtagne betalinger viser forskellen og vækstraten, og omsætningsgrafen får en lysere linje for sammenligningsperioden. Mens en periode stadig løber, afkortes sammenligningsperioden på samme tidspunkt.",
           "Ugedag × time: skift overskriften Salg over tid til Ugedag × time for et heatmap over syv dage og 24 timer – jo mørkere en celle, jo mere har du solgt. Skift mellem omsætning og ordrer; med en sammenligning slået til kan du se, hvilke timer der voksede, og hvilke der faldt.",
           "Langsomt sælgende varer: skift rangeringskortets overskrift til Langsomt sælgende varer for at vise produkter fra færrest til flest salg, med nuværende lager og datoen for hvert produkts seneste salg. Produkter, der aldrig er solgt, er markeret Aldrig solgt. Som standard vises kun produkter på lager.",
           "Genkøbsrate: sidste linje i kundefeltet er andelen af medlemmer, der har købt i perioden og i alt har købt to eller flere gange.",
@@ -1090,7 +1089,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Uden Pro har hvert af disse fem steder en lille lås, der åbner en forklaring på opgraderingen; alt andet i Statistik fungerer som før. Rapporterne bruger data, din butik allerede gemmer, så når Pro udløber, skjules kun rapporterne – der går ingen data tabt."
+        "text": "Siden v3.4 er alle fem åbne på alle abonnementsniveauer, og de forbliver åbne, efter at prøveperioden er slut. Tidligere versioner viste dem kun på Pro med en lille lås på de andre niveauer; hvis du stadig ser låsene, så opdatér DingPOS fra App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite holder ikke styr på lager eller loyalitetspoint, men Lige nu viser stadig den lagerværdi og de uindløste point, din butik allerede har (for eksempel fra prøveperioden), eller nul."
       },
       {
         "type": "note",
@@ -1733,15 +1736,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Du får 30 dages adgang til alle funktioner i Pro fra første installation, herunder medarbejderkonti, tilladelser, aktivitetsloggen og avancerede rapporter – uden at oprette en konto."
+        "text": "Du får 30 dages adgang til alle funktioner i Pro fra første installation, herunder medarbejderkonti, tilladelser og aktivitetsloggen – uden at oprette en konto."
       },
       {
         "type": "p",
-        "text": "Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og det abonnement, du har købt, gælder fra da af. Efter prøveperioden er Pro-funktioner som medarbejdere og avancerede rapporter kun tilgængelige med et Pro-abonnement."
+        "text": "Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og det abonnement, du har købt, gælder fra da af. Efter prøveperioden er Pro-funktioner som medarbejdere og aktivitetsloggen kun tilgængelige med et Pro-abonnement. Avancerede rapporter kræver ikke et Pro-abonnement; siden v3.4 er de med i alle abonnementsniveauer."
       },
       {
         "type": "p",
-        "text": "I de sidste 7 dage og på den sidste dag minder appen dig én gang hver om, hvor mange dage der er tilbage, at betalingen sættes på pause, når prøveperioden slutter, og at dine data bevares."
+        "text": "I løbet af de sidste 7 dage og på den sidste dag minder appen dig én gang om, hvor mange dage der er tilbage, én gang om at kassefunktionen sættes på pause, når prøveperioden slutter, og én gang om, at dine data bevares."
       },
       {
         "type": "p",
@@ -1797,14 +1800,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre abonnementsniveauer omfatter fuld betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
+        "text": "Alle tre abonnementsniveauer omfatter alle funktioner under Betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter (inklusive avancerede rapporter siden v3.4) og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: til dig, der driver en markedsstand alene og har brug for betaling og produkter.",
           "Standard: tilføjer kampagner, loyalitetspoint og medlemsniveauer, lagerstyring, indkøb, salg på konto, forudbestillinger og estimater af transaktionsgebyrer.",
-          "Pro: tilføjer medarbejderkonti og tilladelser, lederens godkendelse, aktivitetslog, gendannelsesposter og avancerede rapporter – til butikker med medarbejdere."
+          "Pro: tilføjer medarbejderkonti og tilladelser, lederens godkendelse, aktivitetslog og gendannelsesposter – til butikker med medarbejdere."
         ]
       },
       {

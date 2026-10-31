@@ -1043,7 +1043,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Con il piano Pro, Confronto vendite a destra della barra del periodo mette a confronto il periodo con quello precedente o con lo stesso periodo dell'anno scorso — vedi «Che cosa mostrano i report avanzati del piano Pro?»"
+        "text": "Confronto vendite, a destra della barra del periodo, mette a confronto il periodo con quello precedente o con lo stesso periodo dell'anno scorso — vedi «Che cosa mostrano i report avanzati?»"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Che cosa mostrano i report avanzati del piano Pro?",
+    "question": "Che cosa mostrano i report avanzati?",
     "keywords": [
       "report avanzati",
-      "pro",
       "confronto vendite",
       "anno scorso",
       "mappa di calore",
@@ -1084,13 +1083,17 @@ export const articles = [
           "Confronto vendite: a destra della barra del periodo, confronta con lo stesso periodo dell'anno scorso o con il periodo precedente (un singolo giorno con lo stesso giorno della settimana scorsa, questa settimana con la scorsa, questo mese con il mese scorso, quest'anno con l'anno scorso, un intervallo personalizzato con lo stesso numero di giorni che lo precedono). Il riquadro Incassato mostra la differenza e il tasso di crescita, e il grafico dei Ricavi aggiunge una linea più chiara per il periodo di confronto. Finché un periodo è ancora in corso, il periodo di confronto viene tagliato allo stesso momento.",
           "Giorno × ora: nell'intestazione Vendite nel tempo passa a Giorno × ora per una mappa di calore su sette giorni e 24 ore: più una cella è scura, più hai venduto. Passa tra ricavi e ordini; con un confronto attivo vedi quali ore sono cresciute e quali sono calate.",
           "Articoli a bassa rotazione: passa l'intestazione della scheda di classifica ad Articoli a bassa rotazione per elencare i prodotti dal meno al più venduto, con la giacenza attuale e l'ultima data in cui ciascuno è stato venduto. I prodotti mai venduti sono indicati come Mai venduto. Per impostazione predefinita sono mostrati solo i prodotti in giacenza.",
-          "Tasso di riacquisto: l'ultima riga del riquadro dei clienti è la quota di membri che hanno acquistato nel periodo e hanno acquistato in totale due o più volte.",
-          "Situazione attuale: il valore del magazzino (giacenza attuale × costo attuale), tutti i movimenti di magazzino del periodo selezionato e i punti che i clienti hanno ma non hanno ancora riscattato, con lo sconto massimo che possono dare. Sono saldi attuali: il periodo non li modifica."
+          "Tasso di riacquisto: l'ultima riga del riquadro dei clienti è la quota di clienti fedeltà che hanno acquistato nel periodo e hanno acquistato in totale due o più volte.",
+          "Situazione attuale: il valore del magazzino (giacenza attuale × costo attuale), tutti i movimenti di magazzino del periodo selezionato e i punti che i clienti hanno ma non hanno ancora riscattato, con lo sconto massimo che possono ottenere. Sono saldi attuali: il periodo non li modifica."
         ]
       },
       {
         "type": "p",
-        "text": "Senza Pro, ciascuno di questi cinque punti mostra un piccolo lucchetto che apre una spiegazione dell'upgrade; tutto il resto di Report funziona come prima. I report leggono dati che il tuo negozio conserva già, quindi quando Pro termina vengono nascosti solo i report: nessun dato va perso."
+        "text": "Dalla v3.4 tutti e cinque sono disponibili con ogni piano e restano disponibili anche dopo la fine della prova. Le versioni precedenti li mostravano solo con Pro, con un piccolo lucchetto sugli altri piani; se vedi ancora i lucchetti, aggiorna DingPOS dall'App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite non gestisce giacenza né punti fedeltà, ma Situazione attuale mostra comunque il valore del magazzino e i punti non riscattati che il tuo negozio ha già (per esempio dalla prova), oppure zero."
       },
       {
         "type": "note",
@@ -1734,11 +1737,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Dalla prima installazione hai 30 giorni con tutte le funzioni del piano Pro, compresi collaboratori, permessi, registro attività e report avanzati, senza bisogno di creare un account."
+        "text": "Dalla prima installazione hai 30 giorni con tutte le funzioni del piano Pro, compresi collaboratori, permessi e registro attività, senza bisogno di creare un account."
       },
       {
         "type": "p",
-        "text": "Se ti abboni a un piano durante la prova, la prova termina subito e da quel momento vale il piano acquistato. Dopo la prova, le funzioni Pro come collaboratori e report avanzati restano disponibili solo con un abbonamento Pro."
+        "text": "Se ti abboni a un piano durante la prova, la prova termina subito e da quel momento vale il piano acquistato. Dopo la prova, le funzioni Pro come collaboratori e registro attività restano disponibili solo con un abbonamento Pro. I report avanzati non richiedono un abbonamento Pro: dalla v3.4 ogni piano li include."
       },
       {
         "type": "p",
@@ -1798,14 +1801,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tutti e tre i piani includono cassa completa, prodotti, ordini (con storni, resi e cambi), report e backup nel cloud. Cambiano gli strumenti per gestire il negozio:"
+        "text": "Tutti e tre i piani includono cassa completa, prodotti, ordini (con storni, resi e cambi), report (report avanzati inclusi dalla v3.4) e backup nel cloud. Cambiano gli strumenti per gestire il negozio:"
       },
       {
         "type": "list",
         "items": [
           "Lite: per chi gestisce un banco da solo e ha bisogno di cassa e prodotti.",
           "Standard: aggiunge promozioni, punti fedeltà e livelli clienti, gestione del magazzino, acquisti, vendite a credito, preordini e stima delle commissioni di pagamento.",
-          "Pro: aggiunge collaboratori e permessi, approvazione del responsabile, registro attività, registro ripristino e report avanzati, pensato per i negozi con personale."
+          "Pro: aggiunge collaboratori e permessi, approvazione del responsabile, registro attività e registro ripristino, pensato per i negozi con personale."
         ]
       },
       {

@@ -200,8 +200,7 @@
         "features": [
           "Tài khoản nhân viên: mỗi người một mã PIN, mỗi đơn hàng ghi lại ai đã bán",
           "Quyền và phê duyệt: giảm giá vượt mức tối đa, sửa sản phẩm và tồn kho, xem giá vốn",
-          "Nhật ký hoạt động và bản ghi khôi phục",
-          "Báo cáo nâng cao: so sánh kỳ, bản đồ nhiệt doanh số, hàng bán chậm, giá trị tồn kho, khách mua lại"
+          "Nhật ký hoạt động và bản ghi khôi phục"
         ],
         "cta": "Bắt đầu dùng thử miễn phí 30 ngày"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Tôi dùng được gì trong thời gian dùng thử miễn phí?",
-          "a": "Trong 30 ngày kể từ lần cài đặt đầu tiên, bạn dùng được mọi tính năng, kể cả các tính năng của gói Pro như nhân viên, quyền và báo cáo nâng cao — không cần tài khoản. Nếu đăng ký bất kỳ gói nào trong lúc dùng thử, thời gian dùng thử sẽ kết thúc ngay và bạn chuyển sang gói đã mua."
+          "a": "Trong 30 ngày kể từ lần cài đặt đầu tiên, bạn dùng được mọi tính năng, kể cả các tính năng của gói Pro như nhân viên, quyền và nhật ký hoạt động — không cần tài khoản. Nếu đăng ký bất kỳ gói nào trong lúc dùng thử, thời gian dùng thử sẽ kết thúc ngay và bạn chuyển sang gói đã mua."
         },
         {
           "q": "Điều gì xảy ra nếu tôi không đăng ký sau khi dùng thử?",

@@ -1031,7 +1031,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pilih Hari ini, Semalam, Minggu Ini, Bulan Ini, Tahun Ini atau Sepanjang Masa di bahagian atas Statistik, atau guna Tersuai untuk memilih tarikh mula dan tarikh akhir. Minggu Ini mengikut hari pertama minggu pada peranti; Bulan Ini dan Tahun Ini bermula pada hari ke-1 dan pada 1 Januari. Setiap pilihan menunjukkan tarikh yang dilitupinya, dan Sepanjang Masa bermula dari transaksi pertama kedai anda."
+        "text": "Pilih Hari ini, Semalam, Minggu Ini, Bulan Ini, Tahun Ini atau Sepanjang Masa di bahagian atas Statistik, atau guna Tersuai untuk memilih tarikh mula dan tarikh akhir. Minggu Ini mengikut hari pertama minggu pada peranti; Bulan Ini dan Tahun Ini bermula pada hari ke-1 dan pada 1 Januari. Setiap pilihan menunjukkan tarikh yang diliputi, dan Sepanjang Masa bermula dari transaksi pertama kedai anda."
       },
       {
         "type": "p",
@@ -1039,11 +1039,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kad Produk menyenaraikan 5 teratas. Ketik kad itu atau Lihat Semua untuk menyenaraikan setiap produk yang dijual dalam tempoh tersebut, disusun mengikut kuantiti selepas pemulangan."
+        "text": "Kad Produk menyenaraikan 5 produk teratas. Ketik kad itu atau Lihat Semua untuk menyenaraikan setiap produk yang dijual dalam tempoh tersebut, disusun mengikut kuantiti selepas pemulangan."
       },
       {
         "type": "p",
-        "text": "Pada pelan Pro, Perbandingan jualan di sebelah kanan bar tempoh membandingkan tempoh itu dengan tempoh sebelumnya atau dengan tempoh yang sama tahun lepas — lihat “Apakah yang dipaparkan oleh laporan lanjutan Pro?”"
+        "text": "Perbandingan jualan di sebelah kanan bar tempoh membandingkan tempoh itu dengan tempoh sebelumnya atau dengan tempoh yang sama tahun lepas — lihat “Apakah yang dipaparkan oleh laporan lanjutan?”"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Apakah yang dipaparkan oleh laporan lanjutan Pro?",
+    "question": "Apakah yang dipaparkan oleh laporan lanjutan?",
     "keywords": [
       "laporan lanjutan",
-      "pro",
       "perbandingan jualan",
       "tahun lepas",
       "peta haba",
@@ -1085,12 +1084,16 @@ export const articles = [
           "Hari dalam minggu × jam: tukar pengepala Jualan dari semasa ke semasa kepada Hari dalam minggu × jam untuk peta haba tujuh hari, 24 jam — semakin gelap sesuatu sel, semakin banyak anda jual. Tukar antara hasil jualan dan pesanan; apabila perbandingan dihidupkan, lihat jam mana yang meningkat dan mana yang menurun.",
           "Produk Jualan Perlahan: tukar pengepala kad kedudukan kepada Produk Jualan Perlahan untuk menyenaraikan produk dari jualan paling sedikit hingga paling banyak, bersama stok semasa dan tarikh terakhir setiap satu dijual. Produk yang tidak pernah terjual ditandakan Tiada jualan. Secara lalai, hanya produk yang ada stok dipaparkan.",
           "Kadar belian berulang: baris terakhir pada jubin pelanggan ialah peratusan ahli yang membeli dalam tempoh itu dan telah membeli dua kali atau lebih secara keseluruhan.",
-          "Sekarang: nilai stok (stok semasa × kos semasa), setiap pergerakan stok dalam tempoh yang dipilih, dan mata yang dipegang pelanggan tetapi belum ditebus, bersama jumlah maksimum yang boleh ditolak. Ini ialah baki semasa; tempoh tidak mengubahnya."
+          "Sekarang: nilai inventori (stok semasa × kos semasa), setiap pergerakan stok dalam tempoh yang dipilih, dan mata yang dipegang pelanggan tetapi belum ditebus, bersama jumlah maksimum yang boleh ditolak. Ini ialah baki semasa; tempoh tidak mengubahnya."
         ]
       },
       {
         "type": "p",
-        "text": "Tanpa Pro, setiap daripada lima tempat ini mempunyai kunci kecil yang membuka penerangan naik taraf; semua yang lain pada Statistik berfungsi seperti biasa. Laporan ini membaca data yang sudah disimpan kedai anda, jadi apabila Pro tamat hanya laporan yang disembunyikan — tiada data hilang."
+        "text": "Sejak v3.4, kelima-limanya terbuka pada setiap pelan, dan kekal terbuka selepas percubaan tamat. Versi lebih awal memaparkannya pada Pro sahaja, dengan kunci kecil pada pelan lain; jika anda masih melihat kunci itu, kemas kini DingPOS daripada App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite tidak menjejak stok atau mata kesetiaan, tetapi Sekarang tetap menunjukkan nilai stok dan mata yang belum ditebus yang sudah ada pada kedai anda (contohnya daripada percubaan), atau sifar."
       },
       {
         "type": "note",
@@ -1729,11 +1732,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Anda mendapat akses kepada semua ciri pelan Pro selama 30 hari bermula dari pemasangan pertama, termasuk akaun kakitangan, kebenaran, log aktiviti dan laporan lanjutan — tanpa perlu akaun."
+        "text": "Anda mendapat akses kepada semua ciri pelan Pro selama 30 hari bermula dari pemasangan pertama, termasuk akaun kakitangan, kebenaran dan log aktiviti — tanpa perlu akaun."
       },
       {
         "type": "p",
-        "text": "Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta, dan pelan yang anda beli terpakai mulai saat itu. Selepas percubaan, ciri Pro seperti kakitangan dan laporan lanjutan hanya tersedia dengan langganan Pro."
+        "text": "Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta, dan pelan yang anda beli terpakai mulai saat itu. Selepas percubaan, ciri Pro seperti kakitangan dan log aktiviti hanya tersedia dengan langganan Pro. Laporan lanjutan tidak memerlukannya; sejak v3.4 setiap pelan menyertakannya."
       },
       {
         "type": "p",
@@ -1794,14 +1797,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
+        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan (termasuk laporan lanjutan sejak v3.4) dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
       },
       {
         "type": "list",
         "items": [
           "Lite: untuk seorang yang menjalankan gerai dan memerlukan fungsi pembayaran serta produk.",
-          "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun, prapesanan dan anggaran caj pembayaran.",
-          "Pro: menambah akaun kakitangan dan kebenaran, kelulusan pengurus, log aktiviti, rekod pemulihan dan laporan lanjutan — untuk kedai yang mempunyai kakitangan."
+          "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun, prapesanan dan anggaran caj pemprosesan.",
+          "Pro: menambah akaun kakitangan dan kebenaran, kelulusan pengurus, log aktiviti dan rekod pemulihan — untuk kedai yang mempunyai kakitangan."
         ]
       },
       {

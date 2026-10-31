@@ -200,8 +200,7 @@
         "features": [
           "Mitarbeiter:innen-Konten: je eine PIN, jede Bestellung hält fest, wer sie kassiert hat",
           "Berechtigungen & Freigaben: Rabatte über der Grenze, Artikel- und Bestandsänderungen, Einkaufspreise einsehen",
-          "Aktivitätsprotokoll und Wiederherstellungsprotokoll",
-          "Erweiterte Berichte: Zeitraumvergleich, Verkaufs-Heatmap, Ladenhüter, Lagerwert, Stammkunden"
+          "Aktivitätsprotokoll und Wiederherstellungsprotokoll"
         ],
         "cta": "30 Tage kostenlos testen"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Was kann ich während der kostenlosen Testphase nutzen?",
-          "a": "Ab der ersten Installation haben Sie 30 Tage lang alle Funktionen, auch Pro-Funktionen wie Personal, Berechtigungen und erweiterte Berichte – ohne Account. Wenn Sie während der Testphase einen Tarif abonnieren, endet die Testphase sofort und Sie wechseln zum gekauften Tarif."
+          "a": "Ab der ersten Installation haben Sie 30 Tage lang alle Funktionen, auch Pro-Funktionen wie Personal, Berechtigungen und das Aktivitätsprotokoll – ohne Account. Wenn Sie während der Testphase einen Tarif abonnieren, endet die Testphase sofort und Sie wechseln zum gekauften Tarif."
         },
         {
           "q": "Was passiert, wenn ich nach der Testphase nicht abonniere?",

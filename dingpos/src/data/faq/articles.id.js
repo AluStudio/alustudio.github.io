@@ -1045,7 +1045,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Di paket Pro, Perbandingan penjualan di sisi kanan bilah periode membandingkan periode itu dengan periode sebelumnya atau dengan periode yang sama tahun lalu — lihat “Apa saja yang ditampilkan laporan lanjutan Pro?”"
+        "text": "Perbandingan penjualan di sisi kanan bilah periode membandingkan periode itu dengan periode pembanding atau dengan periode yang sama tahun lalu — lihat “Apa saja yang ditampilkan laporan lanjutan?”"
       },
       {
         "type": "note",
@@ -1062,10 +1062,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Apa saja yang ditampilkan laporan lanjutan Pro?",
+    "question": "Apa saja yang ditampilkan laporan lanjutan?",
     "keywords": [
       "laporan lanjutan",
-      "pro",
       "perbandingan penjualan",
       "tahun lalu",
       "peta panas",
@@ -1083,7 +1082,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Perbandingan penjualan: di sisi kanan bilah periode, bandingkan dengan periode yang sama tahun lalu atau dengan periode sebelumnya (satu hari dengan hari yang sama minggu lalu, minggu ini dengan minggu lalu, bulan ini dengan bulan lalu, tahun ini dengan tahun lalu, rentang kustom dengan jumlah hari yang sama sebelumnya). Kartu Kas Diterima menampilkan selisih dan tingkat pertumbuhan, dan grafik pendapatan menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama.",
+          "Perbandingan penjualan: di sisi kanan bilah periode, bandingkan dengan periode yang sama tahun lalu atau dengan periode pembanding (satu hari dengan hari yang sama minggu lalu, minggu ini dengan minggu lalu, bulan ini dengan bulan lalu, tahun ini dengan tahun lalu, rentang kustom dengan jumlah hari yang sama sebelumnya). Kartu Kas Diterima menampilkan selisih dan tingkat pertumbuhan, dan grafik pendapatan menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama.",
           "Hari × jam: ubah header Penjualan seiring waktu ke Hari × jam untuk melihat peta panas tujuh hari × 24 jam — semakin gelap sebuah sel, semakin banyak yang Anda jual. Beralihlah antara pendapatan dan pesanan; dengan perbandingan aktif, lihat jam mana yang naik dan mana yang turun.",
           "Produk Kurang Laku: ubah header kartu peringkat ke Produk Kurang Laku untuk menampilkan produk dari penjualan paling sedikit hingga paling banyak, lengkap dengan stok saat ini dan tanggal terakhir masing-masing terjual. Produk yang belum pernah terjual ditandai Belum pernah terjual. Secara default hanya produk yang ada stoknya yang ditampilkan.",
           "Tingkat pembelian ulang: baris terakhir pada kartu pelanggan adalah persentase anggota yang membeli dalam periode itu dan sudah membeli dua kali atau lebih secara total.",
@@ -1092,7 +1091,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tanpa Pro, masing-masing dari lima bagian ini menampilkan ikon gembok kecil yang membuka penjelasan tentang upgrade; semua bagian Statistik lainnya berfungsi seperti biasa. Laporan ini membaca data yang sudah tersimpan di toko Anda, jadi saat Pro berakhir hanya laporannya yang disembunyikan — tidak ada data yang hilang."
+        "text": "Sejak v3.4, kelima bagian ini terbuka di semua paket, dan tetap terbuka setelah uji coba berakhir. Versi sebelumnya hanya menampilkannya di Pro, dengan ikon gembok kecil di paket lain; jika Anda masih melihat gembok, perbarui DingPOS dari App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite tidak melacak stok atau poin loyalitas, tetapi bagian Saat ini tetap menampilkan nilai persediaan dan poin yang belum ditukar yang sudah dimiliki toko Anda (misalnya dari masa uji coba), atau nol."
       },
       {
         "type": "note",
@@ -1737,11 +1740,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sejak pertama kali dipasang, Anda mendapat 30 hari semua fitur paket Pro, termasuk akun staf, izin, log aktivitas, dan laporan lanjutan — tanpa perlu membuat akun."
+        "text": "Sejak pertama kali dipasang, Anda mendapat 30 hari semua fitur paket Pro, termasuk akun staf, izin, dan log aktivitas — tanpa perlu membuat akun."
       },
       {
         "type": "p",
-        "text": "Jika Anda berlangganan paket apa pun selama masa uji coba, uji coba langsung berakhir dan paket yang Anda beli berlaku sejak saat itu. Setelah uji coba, fitur Pro seperti staf dan laporan lanjutan hanya tersedia dengan langganan Pro."
+        "text": "Jika Anda berlangganan paket apa pun selama masa uji coba, uji coba langsung berakhir dan paket yang Anda beli berlaku sejak saat itu. Setelah uji coba, fitur Pro seperti staf dan log aktivitas hanya tersedia dengan langganan Pro. Laporan lanjutan tidak memerlukannya; sejak v3.4 semua paket sudah menyertakannya."
       },
       {
         "type": "p",
@@ -1801,14 +1804,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan tindakan Batalkan penjualan (Void), retur, dan tukar barang), laporan, dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
+        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan tindakan Batalkan penjualan (Void), retur, dan tukar barang), laporan (termasuk laporan lanjutan sejak v3.4), dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
       },
       {
         "type": "list",
         "items": [
           "Lite: untuk satu orang yang menjaga lapak dan butuh kasir serta pengelolaan produk.",
           "Standard: menambah promo, poin loyalitas dan tingkat member, pelacakan stok, pembelian ke pemasok, penjualan tempo, pra-pesan, dan perkiraan biaya pembayaran.",
-          "Pro: menambah akun staf dan izin, persetujuan manajer, log aktivitas, catatan pemulihan, dan laporan lanjutan — untuk toko yang punya staf."
+          "Pro: menambah akun staf dan izin, persetujuan manajer, log aktivitas, dan catatan pemulihan — untuk toko yang punya staf."
         ]
       },
       {

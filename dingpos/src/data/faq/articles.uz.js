@@ -1034,11 +1034,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mahsulotlar reytingi kartasida eng yaxshi 5 ta mahsulot chiqadi. Kartani yoki Barchasini ko‘rish tugmasini bosing — davr ichida sotilgan barcha mahsulotlar qaytarishlardan keyingi miqdor bo‘yicha tartiblangan ro‘yxatda ochiladi."
+        "text": "Mahsulotlar reytingi kartasida eng ko‘p sotilgan 5 ta mahsulot chiqadi. Kartani yoki Barchasini ko‘rish tugmasini bosing — davr ichida sotilgan barcha mahsulotlar qaytarishlardan keyingi miqdor bo‘yicha tartiblangan ro‘yxatda ochiladi."
       },
       {
         "type": "p",
-        "text": "Pro tarifida davr panelining o‘ng tomonidagi Savdoni solishtirish davrni undan oldingi davr yoki o‘tgan yilning shu davri bilan taqqoslaydi — “Pro kengaytirilgan hisobotlari nimani ko‘rsatadi?” maqolasiga qarang."
+        "text": "Davr panelining o‘ng tomonidagi Savdoni solishtirish davrni undan oldingi davr yoki o‘tgan yilning shu davri bilan taqqoslaydi — “Kengaytirilgan hisobotlar nimani ko‘rsatadi?” maqolasiga qarang."
       },
       {
         "type": "note",
@@ -1055,10 +1055,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Pro kengaytirilgan hisobotlari nimani ko‘rsatadi?",
+    "question": "Kengaytirilgan hisobotlar nimani ko‘rsatadi?",
     "keywords": [
       "kengaytirilgan hisobotlar",
-      "pro",
       "savdoni solishtirish",
       "o‘tgan yil",
       "issiqlik xaritasi",
@@ -1085,7 +1084,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pro bo‘lmasa, bu beshta joyning har birida kichik qulf turadi va u yangilash haqidagi tushuntirishni ochadi; Statistikaning qolgan qismi avvalgidek ishlaydi. Hisobotlar do‘koningiz allaqachon saqlayotgan ma’lumotlarni o‘qiydi, shuning uchun Pro tugaganda faqat hisobotlar yashiriladi — hech qanday ma’lumot yo‘qolmaydi."
+        "text": "v3.4 dan boshlab bu beshalasi barcha tariflarda ochiq va sinov tugagandan keyin ham ochiq qoladi. Avvalgi versiyalarda ular faqat Pro tarifida ko‘rsatilgan, boshqa tariflarda esa kichik qulf turgan; agar hali ham qulflarni ko‘rsangiz, DingPOS’ni App Store orqali yangilang."
+      },
+      {
+        "type": "p",
+        "text": "Lite tarifi zaxira va sodiqlik ballarini yuritmaydi, ammo Hozir bo‘limi do‘koningizda allaqachon mavjud ombor qiymati va ishlatilmagan ballarni (masalan, sinov davridan qolganini) yoki nolni baribir ko‘rsatadi."
       },
       {
         "type": "note",
@@ -1723,11 +1726,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS birinchi o‘rnatilgandan boshlab 30 kun davomida Pro tarifining barcha imkoniyatlarini beradi: xodimlar uchun kirish profillari, ruxsatlar, faoliyat jurnali va kengaytirilgan hisobotlar. Ro‘yxatdan o‘tish shart emas."
+        "text": "DingPOS birinchi o‘rnatilgandan boshlab 30 kun davomida Pro tarifining barcha imkoniyatlarini beradi: xodimlar uchun kirish profillari, ruxsatlar va faoliyat jurnali. Ro‘yxatdan o‘tish shart emas."
       },
       {
         "type": "p",
-        "text": "Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va keyin siz sotib olgan tarif amal qiladi. Sinovdan keyin xodimlar va kengaytirilgan hisobotlar kabi Pro imkoniyatlari faqat Pro obunasi bilan ishlaydi."
+        "text": "Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va keyin siz sotib olgan tarif amal qiladi. Sinovdan keyin xodimlar va faoliyat jurnali kabi Pro imkoniyatlari faqat Pro obunasi bilan ishlaydi. Kengaytirilgan hisobotlar uchun obuna shart emas: v3.4 dan boshlab ular har bir tarifga kiradi."
       },
       {
         "type": "p",
@@ -1788,14 +1791,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Uchala tarifda ham to‘liq to‘lov qabul qilish, mahsulotlar, buyurtmalar (yaroqsiz deb belgilash, qaytarish va almashtirish bilan), hisobotlar va bulutdagi nusxa bor. Farq do‘konni boshqarish vositalarida:"
+        "text": "Uchala tarifda ham to‘liq to‘lov qabul qilish, mahsulotlar, buyurtmalar (yaroqsiz deb belgilash, qaytarish va almashtirish bilan), hisobotlar (v3.4 dan boshlab kengaytirilgan hisobotlar ham) va bulutdagi nusxa bor. Farq do‘konni boshqarish vositalarida:"
       },
       {
         "type": "list",
         "items": [
           "Lite: peshtaxtada yolg‘iz ishlaydigan, faqat to‘lov qabul qilish va mahsulotlar kerak bo‘lgan sotuvchi uchun.",
           "Standard: aksiyalar, ballar va a’zolik darajalari, zaxirani hisobga olish, xaridlar, nasiya savdo, oldindan buyurtmalar va taxminiy to‘lov komissiyalarini qo‘shadi.",
-          "Pro: xodimlar uchun kirish profillari va ruxsatlar, menejer tomonidan PIN bilan tasdiqlash, faoliyat jurnali, tiklash yozuvlari va kengaytirilgan hisobotlarni qo‘shadi — xodimlari bor do‘konlar uchun."
+          "Pro: xodimlar uchun kirish profillari va ruxsatlar, menejer tomonidan PIN bilan tasdiqlash, faoliyat jurnali va tiklash yozuvlarini qo‘shadi — xodimlari bor do‘konlar uchun."
         ]
       },
       {

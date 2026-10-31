@@ -200,8 +200,7 @@
         "features": [
           "Personel hesapları: herkesin kendi PIN’i var, her siparişte işlemi kimin yaptığı kaydedilir",
           "Yetkiler ve onaylar: üst sınırı aşan indirimler, ürün ve stok düzenlemeleri, maliyetleri görme",
-          "Etkinlik günlüğü ve geri yükleme kaydı",
-          "Gelişmiş raporlar: dönem karşılaştırması, satış ısı haritası, yavaş satan ürünler, stok değeri, tekrar alışveriş yapan müşteriler"
+          "Etkinlik günlüğü ve geri yükleme kaydı"
         ],
         "cta": "30 günlük ücretsiz denemeyi başlatın"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Ücretsiz denemede neleri kullanabilirim?",
-          "a": "İlk kurulumdan itibaren 30 gün boyunca personel, yetkiler ve gelişmiş raporlar gibi Pro özellikleri dahil tüm özellikleri kullanırsınız — hesap gerekmez. Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plana geçersiniz."
+          "a": "İlk kurulumdan itibaren 30 gün boyunca personel, yetkiler ve etkinlik günlüğü gibi Pro özellikleri dahil tüm özellikleri kullanırsınız — hesap gerekmez. Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plana geçersiniz."
         },
         {
           "q": "Denemeden sonra abone olmazsam ne olur?",

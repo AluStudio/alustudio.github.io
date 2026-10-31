@@ -98,12 +98,12 @@ export const COMPARISON = [
     key: "reports",
     rows: [
       { key: "dashboard", from: "lite" },
+      { key: "comparison", from: "lite" },
+      { key: "heatmap", from: "lite" },
+      { key: "slow_movers", from: "lite" },
+      { key: "valuation", from: "lite" },
+      { key: "repeat", from: "lite" },
       { key: "payment_fees", from: "standard" },
-      { key: "comparison", from: "pro" },
-      { key: "heatmap", from: "pro" },
-      { key: "slow_movers", from: "pro" },
-      { key: "valuation", from: "pro" },
-      { key: "repeat", from: "pro" },
     ],
   },
   {
