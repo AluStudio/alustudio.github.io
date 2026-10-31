@@ -52,35 +52,15 @@
   },
   "scene": {
     "alt": "Sottos Personenseite: Eine Geschenkidee wird gespeichert, dazu Lieblingsgetränk, Allergie, Geburtstag und Ringgröße",
-    "edit": "Bearbeiten",
     "initials": "LW",
     "name": "Lena Weber",
     "meta": "Freundin seit 2019",
     "bio": "Fotografiert analog. Immer zu früh beim Brunch.",
-    "fields": [
-      {
-        "label": "Geschenkideen",
-        "value": "Analogkamera"
-      },
-      {
-        "label": "Lieblingsgetränk",
-        "value": "Haferlatte"
-      },
-      {
-        "label": "Allergie",
-        "value": "Erdnüsse"
-      },
-      {
-        "label": "Geburtstag",
-        "value": "1993/08/30"
-      }
-    ],
-    "ring_label": "Ring L.",
-    "prompts_title": "Eine Frage aussuchen",
-    "prompts": [
-      "Wie sieht dein perfekter Tag aus?",
-      "Was ist deine kostbarste Kindheitserinnerung?",
-      "Wenn du jemanden zum Abendessen einladen könntest — lebend oder nicht — wen wählst du und warum?"
+    "field_values": [
+      "Analogkamera",
+      "Haferlatte",
+      "Erdnüsse",
+      "1993/08/30"
     ]
   },
   "reviews": {

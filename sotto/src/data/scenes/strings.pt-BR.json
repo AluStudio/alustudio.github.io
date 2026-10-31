@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "Editar",
+    "field.giftIdeas": "Ideias de presente",
+    "field.favoriteDrink": "Bebida favorita",
+    "field.allergy": "Alergia",
+    "field.birthday": "Aniversário",
+    "field.leftRing": "Anelar E",
+    "promptCatalog.title": "Escolha uma pergunta"
+  },
+  "prompts": {
+    "c1-q02": "Como seria o seu dia perfeito?",
+    "c1-q07": "Sua lembrança de infância mais preciosa?",
+    "c1-q01": "Se você pudesse jantar com qualquer pessoa — viva ou não — quem você escolheria? Por quê?"
+  }
+}

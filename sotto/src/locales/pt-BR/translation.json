@@ -52,35 +52,15 @@
   },
   "scene": {
     "alt": "Página de uma pessoa no Sotto: uma ideia de presente sendo salva, com bebida favorita, alergia, aniversário e tamanho de anel",
-    "edit": "Editar",
     "initials": "AR",
     "name": "Ana Ribeiro",
     "meta": "Amiga desde 2019",
     "bio": "Fotografa com filme. Sempre chega cedo ao brunch.",
-    "fields": [
-      {
-        "label": "Ideias de presente",
-        "value": "Câmera analógica"
-      },
-      {
-        "label": "Bebida favorita",
-        "value": "Latte de aveia"
-      },
-      {
-        "label": "Alergia",
-        "value": "Amendoim"
-      },
-      {
-        "label": "Aniversário",
-        "value": "1993/08/30"
-      }
-    ],
-    "ring_label": "Anelar E",
-    "prompts_title": "Escolha uma pergunta",
-    "prompts": [
-      "Como seria o seu dia perfeito?",
-      "Sua lembrança de infância mais preciosa?",
-      "Se você pudesse jantar com qualquer pessoa — viva ou não — quem você escolheria? Por quê?"
+    "field_values": [
+      "Câmera analógica",
+      "Latte de aveia",
+      "Amendoim",
+      "1993/08/30"
     ]
   },
   "reviews": {

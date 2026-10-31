@@ -52,35 +52,15 @@
   },
   "scene": {
     "alt": "Página de una persona en Sotto: se guarda una idea de regalo, junto a su bebida favorita, una alergia, su cumpleaños y su talla de anillo",
-    "edit": "Editar",
     "initials": "LR",
     "name": "Lucía Ruiz",
     "meta": "Amiga desde 2019",
     "bio": "Fotografía en analógico. Siempre llega pronto al brunch.",
-    "fields": [
-      {
-        "label": "Ideas de regalo",
-        "value": "Cámara analógica"
-      },
-      {
-        "label": "Bebida favorita",
-        "value": "Latte de avena"
-      },
-      {
-        "label": "Alergia",
-        "value": "Cacahuetes"
-      },
-      {
-        "label": "Cumpleaños",
-        "value": "1993/08/30"
-      }
-    ],
-    "ring_label": "Anular I",
-    "prompts_title": "Elige una pregunta",
-    "prompts": [
-      "¿Cómo sería tu día perfecto?",
-      "¿Cuál es tu recuerdo de infancia más preciado?",
-      "Si pudieras invitar a cenar a cualquier persona — viva o no — ¿a quién elegirías y por qué?"
+    "field_values": [
+      "Cámara analógica",
+      "Latte de avena",
+      "Cacahuetes",
+      "1993/08/30"
     ]
   },
   "reviews": {

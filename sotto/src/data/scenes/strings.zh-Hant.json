@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "編輯",
+    "field.giftIdeas": "送禮靈感",
+    "field.favoriteDrink": "喜歡的飲料",
+    "field.allergy": "過敏",
+    "field.birthday": "生日",
+    "field.leftRing": "左無名指",
+    "promptCatalog.title": "挑一題跟他聊聊"
+  },
+  "prompts": {
+    "c1-q02": "你的「完美一天」會怎麼度過？",
+    "c1-q07": "你最珍貴的童年回憶是什麼？",
+    "c1-q01": "如果可以邀請任何一個人共進晚餐（在世或不在世），你會選誰？為什麼？"
+  }
+}

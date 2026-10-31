@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "编辑",
+    "field.giftIdeas": "送礼灵感",
+    "field.favoriteDrink": "喜欢的饮料",
+    "field.allergy": "过敏",
+    "field.birthday": "生日",
+    "field.leftRing": "左无名指",
+    "promptCatalog.title": "挑一题跟他聊聊"
+  },
+  "prompts": {
+    "c1-q02": "你的「完美一天」会怎么度过？",
+    "c1-q07": "你最珍贵的童年回忆是什么？",
+    "c1-q01": "如果可以邀请任何一个人共进晚餐（在世或不在世），你会选谁？为什么？"
+  }
+}

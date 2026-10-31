@@ -13,6 +13,8 @@
  *
  * Validated here so drift fails the build instead of shipping English
  * fallbacks, 404s or unindexed pages: every locale has exactly en's UI keys;
+ * every language has a scene string pack with every listed app string and
+ * prompt, placeholders matching en's;
  * every guide pack has en's slugs, an answer-first opening, resolvable related
  * links and a snippet-sized summary; no two pages share a title or a
  * description; sitemap.xml lists exactly the pages built here.
@@ -22,7 +24,7 @@
  */
 
 import process from "node:process";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import {
@@ -34,6 +36,7 @@ import {
   setLanguageAlternates,
 } from "../../scripts/rewrite-seo-tags.mjs";
 import { DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
+import { SCENE_PROMPT_IDS, SCENE_STRING_KEYS, placeholders } from "../src/data/scenes/keys.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -47,6 +50,9 @@ const SITE_NAME = "Sotto";
 
 const readLocale = (code) =>
   JSON.parse(readFileSync(join(__dirname, "..", "src", "locales", code, "translation.json"), "utf8"));
+
+const scenesPath = (code) => join(__dirname, "..", "src", "data", "scenes", `strings.${code}.json`);
+const readScenes = (code) => (existsSync(scenesPath(code)) ? JSON.parse(readFileSync(scenesPath(code), "utf8")) : null);
 
 const readGuides = async (code) =>
   (await import(pathToFileURL(join(__dirname, "..", "src", "data", "guides", `guides.${code}.js`)).href)).articles;
@@ -86,6 +92,7 @@ const LOCALES = await Promise.all(
       ogLocale,
       dir,
       ui: readLocale(code),
+      scenes: readScenes(code),
       guides: await readGuides(code),
     })),
 );
@@ -173,6 +180,33 @@ function validateGuides() {
 
 validateLocales();
 validateGuides();
+
+// ── Scene strings ───────────────────────────────────────────
+// The home page's scenes draw app strings synced by
+// scripts/sync-scene-strings.mjs; a missing one renders its raw key.
+function validateSceneStrings() {
+  const errors = [];
+  const enStrings = DEFAULT_LOCALE.scenes?.strings ?? {};
+  for (const { code, scenes } of LOCALES) {
+    if (!scenes) {
+      errors.push(`${code} has no src/data/scenes/strings.${code}.json (run scripts/sync-scene-strings.mjs)`);
+      continue;
+    }
+    for (const key of SCENE_STRING_KEYS) {
+      const value = scenes.strings?.[key];
+      if (!value?.trim()) errors.push(`${code} scene strings lack "${key}"`);
+      else if (placeholders(value).join() !== placeholders(enStrings[key] ?? "").join()) {
+        errors.push(`${code} scene string "${key}" has other placeholders than en's`);
+      }
+    }
+    for (const id of SCENE_PROMPT_IDS) {
+      if (!scenes.prompts?.[id]?.trim()) errors.push(`${code} scene strings lack the prompt "${id}"`);
+    }
+  }
+  fail("Scene string validation failed", errors);
+}
+
+validateSceneStrings();
 
 /** Every page of one locale, with its final title and description. */
 function localeRoutes(locale) {

@@ -52,35 +52,15 @@
   },
   "scene": {
     "alt": "La page d'une personne dans Sotto : une idée cadeau en cours d'enregistrement, avec sa boisson préférée, une allergie, sa date de naissance et sa taille de bague",
-    "edit": "Modifier",
     "initials": "CR",
     "name": "Camille Roux",
     "meta": "Amie depuis 2019",
     "bio": "Photographie en argentique. Toujours en avance au brunch.",
-    "fields": [
-      {
-        "label": "Idées cadeaux",
-        "value": "Un argentique"
-      },
-      {
-        "label": "Boisson préférée",
-        "value": "Latte avoine"
-      },
-      {
-        "label": "Allergie",
-        "value": "Arachides"
-      },
-      {
-        "label": "Anniversaire",
-        "value": "1993/08/30"
-      }
-    ],
-    "ring_label": "Annul. G.",
-    "prompts_title": "Choisis une question",
-    "prompts": [
-      "Ta journée parfaite, comment se passerait-elle ?",
-      "Ton souvenir d'enfance le plus précieux ?",
-      "Si tu pouvais inviter quelqu'un à dîner — vivant ou non — qui choisirais-tu et pourquoi ?"
+    "field_values": [
+      "Un argentique",
+      "Latte avoine",
+      "Arachides",
+      "1993/08/30"
     ]
   },
   "reviews": {

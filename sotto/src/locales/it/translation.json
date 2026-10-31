@@ -52,35 +52,15 @@
   },
   "scene": {
     "alt": "La pagina di una persona in Sotto: un'idea regalo viene salvata, con la bevanda preferita, un'allergia, il compleanno e la misura dell'anello",
-    "edit": "Modifica",
     "initials": "GC",
     "name": "Giulia Conti",
     "meta": "Amica dal 2019",
     "bio": "Scatta in analogico. Sempre in anticipo al brunch.",
-    "fields": [
-      {
-        "label": "Idee regalo",
-        "value": "Fotocamera vintage"
-      },
-      {
-        "label": "Bevanda pref.",
-        "value": "Latte d’avena"
-      },
-      {
-        "label": "Allergia",
-        "value": "Arachidi"
-      },
-      {
-        "label": "Compleanno",
-        "value": "1993/08/30"
-      }
-    ],
-    "ring_label": "Anul. sx",
-    "prompts_title": "Scegli una domanda",
-    "prompts": [
-      "Come passeresti la tua giornata perfetta?",
-      "Il ricordo d'infanzia più prezioso?",
-      "Se potessi invitare a cena chiunque — vivo o no — chi sceglieresti e perché?"
+    "field_values": [
+      "Fotocamera vintage",
+      "Latte d’avena",
+      "Arachidi",
+      "1993/08/30"
     ]
   },
   "reviews": {

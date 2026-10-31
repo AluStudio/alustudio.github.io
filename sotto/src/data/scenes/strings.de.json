@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "Bearbeiten",
+    "field.giftIdeas": "Geschenkideen",
+    "field.favoriteDrink": "Lieblingsgetränk",
+    "field.allergy": "Allergie",
+    "field.birthday": "Geburtstag",
+    "field.leftRing": "Ring L.",
+    "promptCatalog.title": "Eine Frage aussuchen"
+  },
+  "prompts": {
+    "c1-q02": "Wie sieht dein perfekter Tag aus?",
+    "c1-q07": "Was ist deine kostbarste Kindheitserinnerung?",
+    "c1-q01": "Wenn du jemanden zum Abendessen einladen könntest — lebend oder nicht — wen wählst du und warum?"
+  }
+}
