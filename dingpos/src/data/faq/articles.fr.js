@@ -1084,7 +1084,7 @@ export const articles = [
           "Jour × heure : faites passer l’en-tête Ventes dans le temps sur Jour × heure pour obtenir une carte thermique de sept jours sur 24 heures — plus une case est foncée, plus vous avez vendu. Basculez entre chiffre d’affaires et commandes ; avec une comparaison activée, repérez les heures en hausse et celles en baisse.",
           "Produits à faible rotation : faites passer l’en-tête de la carte de classement sur Produits à faible rotation pour lister les produits du moins vendu au plus vendu, avec le stock actuel et la date de la dernière vente de chacun. Les produits jamais vendus sont marqués Jamais vendu. Par défaut, seuls les produits en stock sont affichés.",
           "Taux de réachat : la dernière ligne de la tuile clients indique la part des membres ayant acheté sur la période et ayant acheté au moins deux fois au total.",
-          "Situation actuelle : la valeur du stock (stock actuel × coût actuel), tous les mouvements de stock de la période sélectionnée, et les points que les clients détiennent sans les avoir utilisés, avec le montant maximal qu’ils permettent de déduire. Ce sont des soldes à l’instant T ; la période ne les modifie pas."
+          "Situation actuelle : la valorisation du stock (stock actuel × coût actuel), tous les mouvements de stock de la période sélectionnée, et les points que les clients détiennent sans les avoir utilisés, avec le montant maximal qu’ils permettent de déduire. Ce sont des soldes à l’instant T ; la période ne les modifie pas."
         ]
       },
       {
@@ -1093,11 +1093,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Lite ne suit ni le stock ni les points de fidélité, mais Situation actuelle affiche tout de même la valeur du stock et les points non utilisés que votre boutique détient déjà (par exemple depuis l’essai), ou zéro."
+        "text": "Lite ne suit ni le stock ni les points de fidélité, mais Situation actuelle affiche tout de même la valorisation du stock et les points non utilisés que votre boutique détient déjà (par exemple depuis l’essai), ou zéro."
       },
       {
         "type": "note",
-        "text": "Le personnel voit les rapports avancés avec la permission Tableau de bord ; les montants de la valeur du stock nécessitent aussi la permission Coûts et marges."
+        "text": "Le personnel voit les rapports avancés avec la permission Tableau de bord ; les montants de la valorisation du stock nécessitent aussi la permission Coûts et marges."
       }
     ],
     "related": [
@@ -1745,7 +1745,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pendant les 7 derniers jours, puis le dernier jour, l’app vous rappelle une fois à chaque fois combien de jours il reste, que l’encaissement est suspendu à la fin de l’essai et que vos données sont conservées."
+        "text": "Au cours des 7 derniers jours de l’essai, puis le dernier jour, l’app vous rappelle combien de jours il reste, que l’encaissement sera suspendu à la fin de l’essai et que vos données seront conservées."
       },
       {
         "type": "p",

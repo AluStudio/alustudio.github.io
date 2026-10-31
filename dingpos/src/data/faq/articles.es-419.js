@@ -1737,7 +1737,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Durante los últimos 7 días y el último día, la app te recuerda una vez en cada uno cuántos días quedan, que el cobro se pausa cuando termina la prueba y que tus datos se conservan."
+        "text": "Durante los últimos 7 días y el último día, la app te recuerda una vez en cada uno cuántos días quedan, que la función de cobro se pausa cuando termina la prueba y que tus datos se conservan."
       },
       {
         "type": "p",
@@ -1800,7 +1800,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: para una persona que atiende un puesto y necesita cobro y productos.",
-          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y estimación de comisiones de pago.",
+          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y estimaciones de comisiones por procesamiento.",
           "Pro: suma cuentas y permisos del personal, aprobación de gerente, registro de actividad y registros de restauración, para tiendas con personal."
         ]
       },

@@ -1746,7 +1746,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Brenda 7 ditëve të fundit dhe ditën e fundit, aplikacioni të kujton një herë secilën sa ditë kanë mbetur, që pagesa pauzon kur mbaron prova dhe që të dhënat e tua ruhen."
+        "text": "Gjatë 7 ditëve të fundit dhe ditën e fundit, aplikacioni të kujton një herë për secilën nga këto: sa ditë kanë mbetur, që procesi i pagesës ndalet kur mbaron prova dhe që të dhënat e tua ruhen."
       },
       {
         "type": "p",
@@ -1809,7 +1809,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: për një person që drejton një banak pazari dhe i duhen pagesa e produktet.",
-          "Standard: shton promovime, pikë besnikërie dhe nivele anëtarësh, ndjekjen e stokut, blerjet te furnitorët, shitjet me afat pagese, porositë paraprake dhe vlerësimin e komisioneve të pagesës.",
+          "Standard: shton promovime, pikë besnikërie dhe nivele anëtarësh, ndjekjen e stokut, blerjet te furnitorët, shitjet me afat pagese, porositë paraprake dhe vlerësimin e komisionit të procesimit.",
           "Pro: shton llogari punonjësish dhe leje, miratimin nga menaxheri, regjistrin e aktivitetit dhe regjistrimet e rivendosjes — për dyqane me punonjës."
         ]
       },

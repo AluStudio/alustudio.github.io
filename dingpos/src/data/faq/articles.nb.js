@@ -1053,7 +1053,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Med Salgssammenligning til høyre i periodelinjen kan du sammenligne perioden med den forrige eller med samme periode i fjor – se «Hva viser de avanserte rapportene?»"
+        "text": "Med Salgssammenligning til høyre i periodelinjen kan du sammenligne perioden med sammenligningsperioden eller med samme periode i fjor – se «Hva viser de avanserte rapportene?»"
       },
       {
         "type": "note",
@@ -1090,7 +1090,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Salgssammenligning: til høyre i periodelinjen kan du sammenligne med samme periode i fjor eller med forrige periode (én dag mot samme dag forrige uke, denne uken mot forrige uke, denne måneden mot forrige måned, dette året mot i fjor, en egendefinert periode mot like mange dager rett før). Feltet for mottatt betaling viser differansen og vekstraten, og salgsdiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, kuttes sammenligningsperioden på samme tidspunkt.",
+          "Salgssammenligning: til høyre i periodelinjen kan du sammenligne med samme periode i fjor eller med sammenligningsperioden (én dag mot samme dag forrige uke, denne uken mot forrige uke, denne måneden mot forrige måned, dette året mot i fjor, en egendefinert periode mot like mange dager rett før). Feltet for mottatt betaling viser differansen og vekstraten, og salgsdiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, kuttes sammenligningsperioden på samme tidspunkt.",
           "Ukedag × time: bytt overskriften Salg over tid til Ukedag × time for et varmekart med sju dager og 24 timer – jo mørkere rute, desto mer solgte du. Du kan bytte mellom salgsinntekt og ordrer, og med sammenligning på ser du hvilke timer som vokste og hvilke som krympet.",
           "Saktegående varer: bytt overskriften på rangeringskortet til Saktegående varer for å se produktene fra færrest til flest salg, med nåværende lagerbeholdning og siste salgsdato for hvert produkt. Produkter som aldri er solgt, er merket Aldri solgt. Som standard vises bare produkter som er på lager.",
           "Gjenkjøpsandel: den siste linjen i kundefeltet er andelen medlemmer som handlet i perioden og har handlet to eller flere ganger totalt.",
@@ -1747,7 +1747,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og planen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Avanserte rapporter krever ikke det. Fra og med v3.4 er de inkludert i alle planer."
+        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og abonnementsplanen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Avanserte rapporter krever ikke det. Fra og med v3.4 er de inkludert i alle abonnementsplaner."
       },
       {
         "type": "p",
@@ -1807,23 +1807,23 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre planene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (avanserte rapporter inkludert fra og med v3.4) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
+        "text": "Alle tre abonnementsplanene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (avanserte rapporter inkludert fra og med v3.4) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: for deg som driver en markedsstand alene og trenger kasse og produkter.",
-          "Standard: legger til kampanjer, poeng og medlemsnivåer, lagerstyring, innkjøp, salg på konto, forhåndsbestillinger og overslag over transaksjonsgebyrer.",
+          "Standard: legger til kampanjer, poeng og medlemsnivåer, lagerstyring, innkjøp, salg på konto, forhåndsbestillinger og estimerte betalingsgebyrer.",
           "Pro: legger til ansatte og tillatelser, godkjenning fra leder, aktivitetslogg og gjenopprettingslogg, for butikker med ansatte."
         ]
       },
       {
         "type": "p",
-        "text": "Har du allerede Standard? Oppgrader til Pro fra abonnementssiden: Faktureringsperioden er den samme, oppgraderingen gjelder med en gang, og Apple beregner differansen forholdsmessig. Bytter du fra Pro tilbake til Standard, gjelder det fra neste fornyelse. Prisene vises i appen, og du kan sammenligne planene på siden Priser."
+        "text": "Har du allerede Standard? Oppgrader til Pro fra abonnementssiden: Abonnementsperioden er den samme, oppgraderingen gjelder med en gang, og Apple beregner differansen forholdsmessig. Bytter du fra Pro tilbake til Standard, gjelder det fra neste fornyelse. Prisene vises i appen, og du kan sammenligne abonnementsplanene på siden Priser."
       },
       {
         "type": "note",
-        "text": "Nedgradering sletter aldri data. Funksjoner utenfor planen din settes på pause, dataene blir værende, og tegner du abonnement igjen, er funksjonene tilbake."
+        "text": "Nedgradering sletter aldri data. Funksjoner som ikke inngår i abonnementsplanen din settes på pause, dataene blir værende, og tegner du abonnement igjen, er funksjonene tilbake."
       }
     ],
     "related": [

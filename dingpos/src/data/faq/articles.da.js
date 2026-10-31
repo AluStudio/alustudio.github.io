@@ -1039,7 +1039,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kortet Produktrangliste viser de 5 bedste. Tryk på kortet eller Se alle for at vise alle produkter solgt i perioden, rangeret efter antal efter returer."
+        "text": "Kortet Produktrangliste viser de 5 bedst sælgende produkter. Tryk på kortet eller Se alle for at vise alle produkter solgt i perioden, rangeret efter antal efter returer."
       },
       {
         "type": "p",
@@ -1080,7 +1080,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Salgssammenligning: til højre i periodelinjen kan du sammenligne med samme periode sidste år eller med den foregående periode (en enkelt dag mod samme dag i sidste uge, denne uge mod sidste uge, denne måned mod sidste måned, i år mod sidste år, en brugerdefineret periode mod lige så mange dage umiddelbart før). Feltet Modtagne betalinger viser forskellen og væksten, og omsætningsgrafen får en lysere linje for sammenligningsperioden. Mens en periode stadig løber, afskæres sammenligningsperioden på samme tidspunkt.",
+          "Salgssammenligning: til højre i periodelinjen kan du sammenligne med samme periode sidste år eller med den foregående periode (en enkelt dag mod samme dag i sidste uge, denne uge mod sidste uge, denne måned mod sidste måned, i år mod sidste år, en brugerdefineret periode mod lige så mange dage umiddelbart før). Feltet Modtagne betalinger viser forskellen og vækstraten, og omsætningsgrafen får en lysere linje for sammenligningsperioden. Mens en periode stadig løber, afkortes sammenligningsperioden på samme tidspunkt.",
           "Ugedag × time: skift overskriften Salg over tid til Ugedag × time for et heatmap over syv dage og 24 timer – jo mørkere en celle, jo mere har du solgt. Skift mellem omsætning og ordrer; med en sammenligning slået til kan du se, hvilke timer der voksede, og hvilke der faldt.",
           "Langsomt sælgende varer: skift rangeringskortets overskrift til Langsomt sælgende varer for at vise produkter fra færrest til flest salg, med nuværende lager og datoen for hvert produkts seneste salg. Produkter, der aldrig er solgt, er markeret Aldrig solgt. Som standard vises kun produkter på lager.",
           "Genkøbsrate: sidste linje i kundefeltet er andelen af medlemmer, der har købt i perioden og i alt har købt to eller flere gange.",
@@ -1744,7 +1744,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "I de sidste 7 dage og på den sidste dag minder appen dig én gang hver om, hvor mange dage der er tilbage, at betalingen sættes på pause, når prøveperioden slutter, og at dine data bevares."
+        "text": "I løbet af de sidste 7 dage og på den sidste dag minder appen dig én gang om, hvor mange dage der er tilbage, én gang om at kassefunktionen sættes på pause, når prøveperioden slutter, og én gang om, at dine data bevares."
       },
       {
         "type": "p",
@@ -1800,7 +1800,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre abonnementsniveauer omfatter fuld betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter (inklusive avancerede rapporter siden v3.4) og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
+        "text": "Alle tre abonnementsniveauer omfatter alle funktioner i kassen, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter (inklusive avancerede rapporter siden v3.4) og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
       },
       {
         "type": "list",

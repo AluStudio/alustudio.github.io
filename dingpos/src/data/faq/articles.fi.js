@@ -1087,7 +1087,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Myynnin vertailu: jaksopalkin oikeassa reunassa voit verrata viime vuoden vastaavaan jaksoon tai edelliseen jaksoon (yksittäistä päivää viime viikon samaan päivään, tätä viikkoa viime viikkoon, tätä kuukautta viime kuukauteen, tätä vuotta viime vuoteen ja mukautettua aikaväliä yhtä pitkään jaksoon sitä ennen). Saapunut maksu -ruutu näyttää eron ja kasvuprosentin, ja liikevaihtokaavioon tulee vaaleampi viiva vertailujaksolle. Jos jakso on vielä käynnissä, vertailujakso katkaistaan samaan hetkeen.",
+          "Myynnin vertailu: jaksopalkin oikeassa reunassa voit verrata viime vuoden vastaavaan jaksoon tai edelliseen jaksoon (yksittäistä päivää viime viikon samaan päivään, tätä viikkoa viime viikkoon, tätä kuukautta viime kuukauteen, tätä vuotta viime vuoteen ja mukautettua jaksoa yhtä pitkään sitä edeltävään jaksoon). Saapunut maksu -ruutu näyttää eron ja kasvuprosentin, ja liikevaihtokaavioon tulee vaaleampi viiva vertailujaksolle. Jos jakso on vielä käynnissä, vertailujakso katkaistaan samaan hetkeen.",
           "Viikonpäivä × tunti: vaihda Myynti ajan mittaan -otsikon näkymäksi Viikonpäivä × tunti, niin saat seitsemän päivän ja 24 tunnin lämpökartan. Mitä tummempi ruutu, sitä enemmän myit. Voit vaihtaa liikevaihdon ja tilausten välillä, ja vertailun ollessa päällä näet, mitkä tunnit kasvoivat ja mitkä supistuivat.",
           "Hitaasti liikkuvat tuotteet: vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Hitaasti liikkuvat tuotteet, niin tuotteet listataan vähiten myydyistä eniten myytyihin. Listassa näkyvät nykyinen varasto ja kunkin tuotteen viimeinen myyntipäivä. Tuotteet, joita ei ole koskaan myyty, merkitään tekstillä Ei koskaan myyty. Oletuksena näytetään vain varastossa olevat tuotteet.",
           "Uusintaostoprosentti: asiakasruudun viimeinen rivi näyttää niiden jäsenten osuuden, jotka ostivat jaksolla ja ovat ostaneet yhteensä vähintään kaksi kertaa.",
@@ -1747,7 +1747,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kokeilun viimeisten 7 päivän aikana ja viimeisenä päivänä sovellus muistuttaa kerran kummallakin kerralla, kuinka monta päivää on jäljellä, että kassa pysähtyy kokeilun päättyessä ja että tietosi säilyvät."
+        "text": "Kokeilun viimeisten 7 päivän aikana ja viimeisenä päivänä sovellus muistuttaa kerran kummassakin vaiheessa, kuinka monta päivää on jäljellä, että kassa keskeytyy kokeilun päättyessä ja että tietosi säilyvät."
       },
       {
         "type": "p",

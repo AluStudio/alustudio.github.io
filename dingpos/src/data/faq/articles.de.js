@@ -1036,7 +1036,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Wählen Sie oben in der Statistik Heute, Gestern, Diese Woche, Dieser Monat, Dieses Jahr oder Gesamter Zeitraum, oder legen Sie über Benutzerdefiniert ein Start- und Enddatum fest. Diese Woche richtet sich nach dem ersten Wochentag des Geräts; Dieser Monat und Dieses Jahr beginnen am 1. bzw. am 1. Januar. Jede Option zeigt die Daten, die sie abdeckt, und Gesamter Zeitraum beginnt mit der ersten Transaktion Ihres Geschäfts."
+        "text": "Wählen Sie oben in der Statistik Heute, Gestern, Diese Woche, Dieser Monat, Dieses Jahr oder Gesamter Zeitraum, oder legen Sie über Benutzerdefiniert ein Start- und Enddatum fest. Diese Woche richtet sich nach dem ersten Wochentag des Geräts; Dieser Monat und Dieses Jahr beginnen am 1. bzw. am 1. Januar. Jede Option zeigt die Daten, die sie umfasst, und Gesamter Zeitraum beginnt mit der ersten Transaktion Ihres Geschäfts."
       },
       {
         "type": "p",
@@ -1098,7 +1098,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Lite verwaltet weder Bestand noch Treuepunkte, aber Aktuell zeigt weiterhin den Lagerwert und die nicht eingelösten Punkte, die Ihr Geschäft bereits hält (zum Beispiel aus der Testphase) – oder null."
+        "text": "Lite erfasst weder Bestände noch Treuepunkte, aber „Aktuell“ zeigt weiterhin den Lagerwert und die Punkte, die Ihre Kunden noch nicht eingelöst haben (zum Beispiel aus der Testphase) – oder null."
       },
       {
         "type": "note",

@@ -1035,11 +1035,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vali Aruanded vahekaardi ülaosas Täna, Eile, See nädal, See kuu, See aasta või Kogu aeg või kasuta valikut Oma vahemik, et määrata algus- ja lõppkuupäev. See nädal järgib seadme nädala esimest päeva; See kuu ja See aasta algavad vastavalt 1. kuupäeval ja 1. jaanuaril. Iga valik näitab kuupäevi, mida see hõlmab, ja Kogu aeg algab poe esimesest müügist."
+        "text": "Vali vahekaardi Aruanded ülaosas Täna, Eile, See nädal, See kuu, See aasta või Kogu aeg või kasuta valikut Oma vahemik, et määrata algus- ja lõppkuupäev. See nädal järgib seadme nädala esimest päeva; See kuu ja See aasta algavad vastavalt 1. kuupäeval ja 1. jaanuaril. Iga valik näitab kuupäevi, mida see hõlmab, ja Kogu aeg algab poe esimesest müügist."
       },
       {
         "type": "p",
-        "text": "Ühe päeva puhul muutub trendigraafik tunnipõhiseks tulpdiagrammiks; pikemate perioodide puhul on ühe tulba pikkus pikkusest olenevalt päev, nädal, kuu või aasta."
+        "text": "Ühe päeva puhul muutub trendigraafik tunnipõhiseks tulpdiagrammiks; pikemate perioodide puhul vastab iga tulp perioodi pikkusest olenevalt päevale, nädalale, kuule või aastale."
       },
       {
         "type": "p",
@@ -1742,7 +1742,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajad ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Täiustatud aruanded seda ei vaja: alates versioonist v3.4 sisaldab neid iga pakett."
+        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajakontod ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Täiustatud aruanded seda ei vaja: alates versioonist v3.4 sisaldab neid iga pakett."
       },
       {
         "type": "p",

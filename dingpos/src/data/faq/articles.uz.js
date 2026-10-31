@@ -1034,7 +1034,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mahsulotlar reytingi kartasida eng yaxshi 5 ta mahsulot chiqadi. Kartani yoki Barchasini ko‘rish tugmasini bosing — davr ichida sotilgan barcha mahsulotlar qaytarishlardan keyingi miqdor bo‘yicha tartiblangan ro‘yxatda ochiladi."
+        "text": "Mahsulotlar reytingi kartasida eng ko‘p sotilgan 5 ta mahsulot chiqadi. Kartani yoki Barchasini ko‘rish tugmasini bosing — davr ichida sotilgan barcha mahsulotlar qaytarishlardan keyingi miqdor bo‘yicha tartiblangan ro‘yxatda ochiladi."
       },
       {
         "type": "p",

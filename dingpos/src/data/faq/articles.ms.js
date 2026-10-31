@@ -1031,7 +1031,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pilih Hari ini, Semalam, Minggu Ini, Bulan Ini, Tahun Ini atau Sepanjang Masa di bahagian atas Statistik, atau guna Tersuai untuk memilih tarikh mula dan tarikh akhir. Minggu Ini mengikut hari pertama minggu pada peranti; Bulan Ini dan Tahun Ini bermula pada hari ke-1 dan pada 1 Januari. Setiap pilihan menunjukkan tarikh yang dilitupinya, dan Sepanjang Masa bermula dari transaksi pertama kedai anda."
+        "text": "Pilih Hari ini, Semalam, Minggu Ini, Bulan Ini, Tahun Ini atau Sepanjang Masa di bahagian atas Statistik, atau guna Tersuai untuk memilih tarikh mula dan tarikh akhir. Minggu Ini mengikut hari pertama minggu pada peranti; Bulan Ini dan Tahun Ini bermula pada hari ke-1 dan pada 1 Januari. Setiap pilihan menunjukkan tarikh yang diliputi, dan Sepanjang Masa bermula dari transaksi pertama kedai anda."
       },
       {
         "type": "p",
@@ -1039,7 +1039,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kad Produk menyenaraikan 5 teratas. Ketik kad itu atau Lihat Semua untuk menyenaraikan setiap produk yang dijual dalam tempoh tersebut, disusun mengikut kuantiti selepas pemulangan."
+        "text": "Kad Produk menyenaraikan 5 produk teratas. Ketik kad itu atau Lihat Semua untuk menyenaraikan setiap produk yang dijual dalam tempoh tersebut, disusun mengikut kuantiti selepas pemulangan."
       },
       {
         "type": "p",
@@ -1084,7 +1084,7 @@ export const articles = [
           "Hari dalam minggu × jam: tukar pengepala Jualan dari semasa ke semasa kepada Hari dalam minggu × jam untuk peta haba tujuh hari, 24 jam — semakin gelap sesuatu sel, semakin banyak anda jual. Tukar antara hasil jualan dan pesanan; apabila perbandingan dihidupkan, lihat jam mana yang meningkat dan mana yang menurun.",
           "Produk Jualan Perlahan: tukar pengepala kad kedudukan kepada Produk Jualan Perlahan untuk menyenaraikan produk dari jualan paling sedikit hingga paling banyak, bersama stok semasa dan tarikh terakhir setiap satu dijual. Produk yang tidak pernah terjual ditandakan Tiada jualan. Secara lalai, hanya produk yang ada stok dipaparkan.",
           "Kadar belian berulang: baris terakhir pada jubin pelanggan ialah peratusan ahli yang membeli dalam tempoh itu dan telah membeli dua kali atau lebih secara keseluruhan.",
-          "Sekarang: nilai stok (stok semasa × kos semasa), setiap pergerakan stok dalam tempoh yang dipilih, dan mata yang dipegang pelanggan tetapi belum ditebus, bersama jumlah maksimum yang boleh ditolak. Ini ialah baki semasa; tempoh tidak mengubahnya."
+          "Sekarang: nilai inventori (stok semasa × kos semasa), setiap pergerakan stok dalam tempoh yang dipilih, dan mata yang dipegang pelanggan tetapi belum ditebus, bersama jumlah maksimum yang boleh ditolak. Ini ialah baki semasa; tempoh tidak mengubahnya."
         ]
       },
       {
@@ -1803,7 +1803,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Lite: untuk seorang yang menjalankan gerai dan memerlukan fungsi pembayaran serta produk.",
-          "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun, prapesanan dan anggaran caj pembayaran.",
+          "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun, prapesanan dan anggaran caj pemprosesan.",
           "Pro: menambah akaun kakitangan dan kebenaran, kelulusan pengurus, log aktiviti dan rekod pemulihan — untuk kedai yang mempunyai kakitangan."
         ]
       },

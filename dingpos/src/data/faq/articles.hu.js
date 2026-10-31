@@ -1080,10 +1080,10 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). A Beérkezett pénz csempe a különbséget és a növekedési ütemet mutatja, az árbevétel-diagramon pedig halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszak is ugyanaddig tart.",
+          "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). A Beérkezett pénz csempéje a különbséget és a növekedési ütemet mutatja, az árbevétel-diagramon pedig halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszak is ugyanaddig tart.",
           "Hétnap × óra: az Eladások időben fejlécet átkapcsolva Hétnap × óra nézetre hétnapos, 24 órás hőtérkép jelenik meg – minél sötétebb egy cella, annál többet adott el. Váltogathat az árbevétel és a rendelések között; bekapcsolt összehasonlításnál látszik, mely órák nőttek, és melyek csökkentek.",
           "Lassan forgó termékek: a rangsorkártya fejlécét átkapcsolva Lassan forgó termékek nézetre a termékek a legkevesebbet eladottól a legtöbbig sorakoznak, a jelenlegi készlettel és az utolsó eladás dátumával. Azok a termékek, amelyekből még nem adtak el, a Még nem adták el jelölést kapják. Alapértelmezés szerint csak a készleten lévő termékek látszanak.",
-          "Visszatérő vásárlók aránya: a Vevők csempe utolsó sora azoknak a törzsvásárlóknak az aránya, akik az időszakban vásároltak, és összesen legalább kétszer vásároltak.",
+          "Visszatérő vásárlók aránya: a Vevők csempéjének utolsó sora azoknak a törzsvásárlóknak az aránya, akik az időszakban vásároltak, és összesen legalább kétszer vásároltak.",
           "Aktuális állapot: a készletérték (jelenlegi készlet × jelenlegi költség), az adott időszak összes készletmozgása, valamint a vevők birtokában lévő, még be nem váltott pontok a legnagyobb levonható összeggel. Ezek aktuális egyenlegek; az időszak nem változtat rajtuk."
         ]
       },
@@ -1741,11 +1741,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Az utolsó 7 napban és az utolsó napon az app egyszer-egyszer emlékezteti Önt arra, hány nap van hátra, hogy a próbaidőszak végén a fizetés szünetel, és hogy az adatai megmaradnak."
+        "text": "Az utolsó 7 napban, majd az utolsó napon az app egyszer-egyszer emlékezteti Önt arra, hány nap van hátra, hogy a próbaidőszak végén szünetel a kasszázás, és hogy az adatai megmaradnak."
       },
       {
         "type": "p",
-        "text": "A próbaidőszak alatt létrehozott minden adat (termékek, rendelések, tagok) teljes egészében megmarad. Az adatai soha nem törlődnek, akár fizet elő utána, akár nem."
+        "text": "A próbaidőszak alatt létrehozott minden adat (termékek, rendelések, tagok) teljes egészében megmarad. Az adatai soha nem törlődnek, függetlenül attól, hogy utána előfizet-e."
       }
     ],
     "related": [
@@ -1798,7 +1798,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Mind a három csomag tartalmazza a teljes körű fizetést, a termékeket, a rendeléseket (sztornóval, visszavétellel és cserével), a jelentéseket (a részletes jelentésekkel a 3.4-es verzió óta) és a felhő alapú biztonsági mentést. Az üzlet vezetéséhez nyújtott eszközökben térnek el:"
+        "text": "Mindhárom csomag tartalmazza a teljes körű fizetési funkciókat, a termékeket, a rendeléseket (sztornóval, visszavétellel és cserével), a jelentéseket (a részletes jelentésekkel a 3.4-es verzió óta) és a felhőalapú biztonsági mentést. Az üzlet vezetéséhez nyújtott eszközökben térnek el:"
       },
       {
         "type": "list",

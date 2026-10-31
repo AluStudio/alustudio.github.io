@@ -1045,7 +1045,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Perbandingan penjualan di sisi kanan bilah periode membandingkan periode itu dengan periode sebelumnya atau dengan periode yang sama tahun lalu — lihat “Apa saja yang ditampilkan laporan lanjutan?”"
+        "text": "Perbandingan penjualan di sisi kanan bilah periode membandingkan periode itu dengan periode pembanding atau dengan periode yang sama tahun lalu — lihat “Apa saja yang ditampilkan laporan lanjutan?”"
       },
       {
         "type": "note",
@@ -1082,7 +1082,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Perbandingan penjualan: di sisi kanan bilah periode, bandingkan dengan periode yang sama tahun lalu atau dengan periode sebelumnya (satu hari dengan hari yang sama minggu lalu, minggu ini dengan minggu lalu, bulan ini dengan bulan lalu, tahun ini dengan tahun lalu, rentang kustom dengan jumlah hari yang sama sebelumnya). Kartu Kas Diterima menampilkan selisih dan tingkat pertumbuhan, dan grafik pendapatan menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama.",
+          "Perbandingan penjualan: di sisi kanan bilah periode, bandingkan dengan periode yang sama tahun lalu atau dengan periode pembanding (satu hari dengan hari yang sama minggu lalu, minggu ini dengan minggu lalu, bulan ini dengan bulan lalu, tahun ini dengan tahun lalu, rentang kustom dengan jumlah hari yang sama sebelumnya). Kartu Kas Diterima menampilkan selisih dan tingkat pertumbuhan, dan grafik pendapatan menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama.",
           "Hari × jam: ubah header Penjualan seiring waktu ke Hari × jam untuk melihat peta panas tujuh hari × 24 jam — semakin gelap sebuah sel, semakin banyak yang Anda jual. Beralihlah antara pendapatan dan pesanan; dengan perbandingan aktif, lihat jam mana yang naik dan mana yang turun.",
           "Produk Kurang Laku: ubah header kartu peringkat ke Produk Kurang Laku untuk menampilkan produk dari penjualan paling sedikit hingga paling banyak, lengkap dengan stok saat ini dan tanggal terakhir masing-masing terjual. Produk yang belum pernah terjual ditandai Belum pernah terjual. Secara default hanya produk yang ada stoknya yang ditampilkan.",
           "Tingkat pembelian ulang: baris terakhir pada kartu pelanggan adalah persentase anggota yang membeli dalam periode itu dan sudah membeli dua kali atau lebih secara total.",

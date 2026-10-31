@@ -1031,7 +1031,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Chọn Hôm nay, Hôm qua, Tuần này, Tháng này, Năm nay hoặc Toàn thời gian ở đầu màn hình Thống kê, hoặc dùng Tùy chỉnh để chọn ngày bắt đầu và ngày kết thúc. Tuần này tính theo ngày đầu tuần của thiết bị; Tháng này và Năm nay bắt đầu từ ngày 1 và từ ngày 1 tháng 1. Mỗi lựa chọn đều hiển thị các ngày mà nó bao gồm, và Toàn thời gian bắt đầu từ giao dịch đầu tiên của cửa hàng."
+        "text": "Chọn Hôm nay, Hôm qua, Tuần này, Tháng này, Năm nay hoặc Toàn thời gian ở đầu màn hình Thống kê, hoặc dùng Tùy chỉnh để chọn ngày bắt đầu và ngày kết thúc. Tuần này tính theo ngày đầu tuần của thiết bị; Tháng này và Năm nay bắt đầu từ ngày 1 và từ ngày 1 tháng 1. Mỗi lựa chọn đều hiển thị các ngày thuộc kỳ báo cáo đó, và Toàn thời gian bắt đầu từ giao dịch đầu tiên của cửa hàng."
       },
       {
         "type": "p",
@@ -1080,10 +1080,10 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "So sánh doanh số: ở bên phải thanh khoảng thời gian, so với cùng kỳ năm ngoái hoặc với khoảng liền trước (một ngày so với cùng ngày tuần trước, tuần này so với tuần trước, tháng này so với tháng trước, năm nay so với năm trước, khoảng tùy chỉnh so với số ngày tương ứng ngay trước đó). Ô Tiền đã thu hiển thị mức chênh lệch và tốc độ tăng trưởng, còn biểu đồ doanh thu thêm một đường nhạt hơn cho khoảng so sánh. Khi khoảng thời gian chưa kết thúc, khoảng so sánh được cắt ở đúng thời điểm tương ứng.",
+          "So sánh doanh số: ở bên phải thanh Kỳ báo cáo, so sánh với cùng kỳ năm ngoái hoặc kỳ trước (một ngày so với cùng ngày tuần trước, tuần này so với tuần trước, tháng này so với tháng trước, năm nay so với năm trước, kỳ tùy chỉnh so với số ngày tương ứng ngay trước đó). Ô Tiền đã thu hiển thị mức chênh lệch và tốc độ tăng trưởng, còn biểu đồ doanh thu thêm một đường nhạt hơn cho kỳ so sánh. Khi Kỳ báo cáo chưa kết thúc, kỳ so sánh được cắt ở đúng thời điểm tương ứng.",
           "Thứ × giờ: chuyển tiêu đề Doanh số theo thời gian sang Thứ × giờ để xem bản đồ nhiệt bảy ngày, 24 giờ — ô càng đậm thì bạn bán được càng nhiều. Bạn có thể chuyển giữa doanh thu và số đơn; khi bật so sánh, bạn thấy được giờ nào tăng và giờ nào giảm.",
           "Hàng bán chậm: chuyển tiêu đề của thẻ xếp hạng sang Hàng bán chậm để liệt kê sản phẩm từ bán ít nhất đến nhiều nhất, kèm tồn kho hiện tại và ngày bán gần nhất của từng sản phẩm. Sản phẩm chưa từng bán được đánh dấu Chưa từng bán. Mặc định chỉ hiển thị sản phẩm còn hàng.",
-          "Tỷ lệ mua lại: dòng cuối của ô khách hàng là tỷ lệ thành viên đã mua trong khoảng thời gian đó và tổng cộng đã mua từ hai lần trở lên.",
+          "Tỷ lệ mua lại: dòng cuối của ô khách hàng là tỷ lệ thành viên đã mua trong Kỳ báo cáo đó và tổng cộng đã mua từ hai lần trở lên.",
           "Hiện tại: giá trị tồn kho (tồn kho hiện tại × giá vốn hiện tại), mọi biến động tồn kho trong khoảng thời gian đã chọn, và số điểm khách đang giữ nhưng chưa quy đổi, cùng mức giảm tối đa họ có thể dùng. Đây là số dư hiện tại; khoảng thời gian không làm chúng thay đổi."
         ]
       },
@@ -1805,7 +1805,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Cả ba gói đều có đầy đủ thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo (từ phiên bản v3.4 đã gồm cả báo cáo nâng cao) và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
+        "text": "Cả ba gói đều bao gồm đầy đủ chức năng thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo (từ phiên bản v3.4 đã gồm cả báo cáo nâng cao) và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
       },
       {
         "type": "list",

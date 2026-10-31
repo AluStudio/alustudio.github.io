@@ -1810,7 +1810,7 @@ export const articles = [
         "items": [
           "Lite: voor wie alleen een kraam runt en afrekenen en producten nodig heeft.",
           "Standard: voegt acties, spaarpunten en klantniveaus, voorraadbeheer, inkoop, verkoop op rekening, voorbestellingen en schattingen van transactiekosten toe.",
-          "Pro: voegt medewerkersaccounts en toestemmingen, goedkeuring, het activiteitenlogboek en herstelregistraties toe — voor winkels met medewerkers."
+          "Pro: voegt medewerkersaccounts en toestemmingen, goedkeuring door een manager, het activiteitenlogboek en herstelregistraties toe — voor winkels met medewerkers."
         ]
       },
       {

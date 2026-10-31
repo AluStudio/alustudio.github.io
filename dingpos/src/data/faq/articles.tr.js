@@ -1751,7 +1751,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Son 7 gün içinde ve son günde uygulama, kaç gün kaldığını, deneme bitince ödeme almanın duraklayacağını ve verilerinizin saklanacağını size birer kez hatırlatır."
+        "text": "Son 7 gün içinde ve son günde uygulama, kaç gün kaldığını, deneme bitince satış işlemlerinin duraklayacağını ve verilerinizin saklanacağını size birer kez hatırlatır."
       },
       {
         "type": "p",
