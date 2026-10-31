@@ -1089,7 +1089,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A 3.4-es verzió óta mind az öt elérhető minden csomagban – Lite, Standard és Pro –, a próbaidőszak alatt és után is. A korábbi verziók ezeket csak a Pro csomagban mutatták, a többi csomagnál egy kis lakattal; ha még lakatokat lát, frissítse a DingPOS-t az App Store-ból."
+        "text": "A 3.4-es verzió óta mind az öt elérhető minden csomagban, és a próbaidőszak lejárta után is megmaradnak. A korábbi verziók ezeket csak a Pro csomagban mutatták, a többi csomagnál egy kis lakattal; ha még lakatokat lát, frissítse a DingPOS-t az App Store-ból."
       },
       {
         "type": "p",
@@ -1737,7 +1737,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ha a próbaidőszak alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és onnantól a megvásárolt csomag érvényes. A próbaidőszak után a Pro funkciók, például a személyzet kezelése és a tevékenységnapló csak Pro előfizetéssel maradnak elérhetők. A 3.4-es verzió óta a részletes jelentések minden csomagban elérhetők."
+        "text": "Ha a próbaidőszak alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és onnantól a megvásárolt csomag érvényes. A próbaidőszak után a Pro funkciók, például a személyzet kezelése és a tevékenységnapló csak Pro előfizetéssel maradnak elérhetők. A részletes jelentésekhez erre nincs szükség: a 3.4-es verzió óta minden csomag tartalmazza őket."
       },
       {
         "type": "p",

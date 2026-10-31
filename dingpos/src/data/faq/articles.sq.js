@@ -1092,7 +1092,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Që nga v3.4, të pesë janë të hapura në çdo plan — Lite, Standard dhe Pro, gjatë provës dhe pas mbarimit të saj. Versionet e mëparshme i shfaqnin vetëm në Pro, me një dryn të vogël në planet e tjera; nëse ende i sheh drynat, përditëso DingPOS nga App Store."
+        "text": "Që nga v3.4, të pesë janë të hapura në çdo plan dhe mbeten të hapura edhe pasi mbaron prova. Versionet e mëparshme i shfaqnin vetëm në Pro, me një dryn të vogël në planet e tjera; nëse ende i sheh drynat, përditëso DingPOS nga App Store."
       },
       {
         "type": "p",
@@ -1742,7 +1742,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Nëse abonohesh në çdo plan gjatë provës, prova përfundon menjëherë dhe nga ai moment vlen plani që ke blerë. Pas provës, veçoritë Pro si punonjësit dhe regjistri i aktivitetit mbeten të disponueshme vetëm me abonim Pro. Që nga v3.4, raportet e avancuara mbeten të disponueshme në çdo plan."
+        "text": "Nëse abonohesh në çdo plan gjatë provës, prova përfundon menjëherë dhe nga ai moment vlen plani që ke blerë. Pas provës, veçoritë Pro si punonjësit dhe regjistri i aktivitetit mbeten të disponueshme vetëm me abonim Pro. Raportet e avancuara nuk kanë nevojë për të; që nga v3.4 çdo plan i përfshin."
       },
       {
         "type": "p",

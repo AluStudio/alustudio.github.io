@@ -1089,7 +1089,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Từ phiên bản v3.4, cả năm báo cáo này đều mở trên mọi gói — Lite, Standard và Pro, cả trong thời gian dùng thử lẫn sau khi hết dùng thử. Các phiên bản cũ hơn chỉ hiển thị chúng ở gói Pro, còn các gói khác có một biểu tượng khóa nhỏ; nếu bạn vẫn thấy biểu tượng khóa, hãy cập nhật DingPOS từ App Store."
+        "text": "Từ phiên bản v3.4, cả năm báo cáo này đều mở trên mọi gói và vẫn mở sau khi hết dùng thử. Các phiên bản cũ hơn chỉ hiển thị chúng ở gói Pro, còn các gói khác có một biểu tượng khóa nhỏ; nếu bạn vẫn thấy biểu tượng khóa, hãy cập nhật DingPOS từ App Store."
       },
       {
         "type": "p",
@@ -1743,7 +1743,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Nếu đăng ký bất kỳ gói nào trong thời gian dùng thử, thời gian dùng thử sẽ kết thúc ngay và gói bạn đã mua được áp dụng từ lúc đó. Sau khi hết dùng thử, các tính năng Pro như nhân viên và nhật ký hoạt động chỉ còn dùng được khi bạn đăng ký gói Pro. Từ phiên bản v3.4, báo cáo nâng cao vẫn dùng được trên mọi gói."
+        "text": "Nếu đăng ký bất kỳ gói nào trong thời gian dùng thử, thời gian dùng thử sẽ kết thúc ngay và gói bạn đã mua được áp dụng từ lúc đó. Sau khi hết dùng thử, các tính năng Pro như nhân viên và nhật ký hoạt động chỉ còn dùng được khi bạn đăng ký gói Pro. Báo cáo nâng cao thì không cần gói Pro; từ phiên bản v3.4, mọi gói đều có sẵn."
       },
       {
         "type": "p",

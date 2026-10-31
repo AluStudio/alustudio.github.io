@@ -1094,7 +1094,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sinds v3.4 zijn alle vijf beschikbaar in elk abonnement — Lite, Standard en Pro, tijdens de proefperiode en daarna. Eerdere versies toonden ze alleen bij Pro, met een klein slotje bij andere abonnementen; zie je de slotjes nog, werk dan DingPOS bij via de App Store."
+        "text": "Sinds v3.4 zijn alle vijf beschikbaar in elk abonnement en blijven ze beschikbaar nadat de proefperiode is afgelopen. Eerdere versies toonden ze alleen bij Pro, met een klein slotje bij andere abonnementen; zie je de slotjes nog, werk dan DingPOS bij via de App Store."
       },
       {
         "type": "p",
@@ -1743,7 +1743,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Als je tijdens de proefperiode een abonnement afsluit, eindigt de proefperiode meteen en geldt vanaf dat moment het abonnement dat je hebt gekocht. Na de proefperiode blijven Pro-functies zoals medewerkers en het activiteitenlogboek alleen beschikbaar met een Pro-abonnement. Sinds v3.4 blijven geavanceerde rapporten beschikbaar in elk abonnement."
+        "text": "Als je tijdens de proefperiode een abonnement afsluit, eindigt de proefperiode meteen en geldt vanaf dat moment het abonnement dat je hebt gekocht. Na de proefperiode blijven Pro-functies zoals medewerkers en het activiteitenlogboek alleen beschikbaar met een Pro-abonnement. Voor geavanceerde rapporten is dat niet nodig: sinds v3.4 zitten ze in elk abonnement."
       },
       {
         "type": "p",

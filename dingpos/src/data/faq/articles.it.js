@@ -1089,7 +1089,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Dalla v3.4 tutti e cinque sono disponibili con ogni piano — Lite, Standard e Pro — sia durante la prova sia dopo la sua fine. Le versioni precedenti li mostravano solo con Pro, con un piccolo lucchetto sugli altri piani; se vedi ancora i lucchetti, aggiorna DingPOS dall'App Store."
+        "text": "Dalla v3.4 tutti e cinque sono disponibili con ogni piano e restano disponibili anche dopo la fine della prova. Le versioni precedenti li mostravano solo con Pro, con un piccolo lucchetto sugli altri piani; se vedi ancora i lucchetti, aggiorna DingPOS dall'App Store."
       },
       {
         "type": "p",
@@ -1741,7 +1741,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se ti abboni a un piano durante la prova, la prova termina subito e da quel momento vale il piano acquistato. Dopo la prova, le funzioni Pro come collaboratori e registro attività restano disponibili solo con un abbonamento Pro. Dalla v3.4 i report avanzati restano disponibili con ogni piano."
+        "text": "Se ti abboni a un piano durante la prova, la prova termina subito e da quel momento vale il piano acquistato. Dopo la prova, le funzioni Pro come collaboratori e registro attività restano disponibili solo con un abbonamento Pro. I report avanzati non richiedono un abbonamento Pro: dalla v3.4 ogni piano li include."
       },
       {
         "type": "p",

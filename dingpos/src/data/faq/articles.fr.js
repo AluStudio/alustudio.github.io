@@ -1089,7 +1089,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Depuis la v3.4, ces cinq rapports sont ouverts à toutes les formules — Lite, Standard et Pro, pendant l’essai comme après sa fin. Les versions antérieures ne les affichaient qu’avec Pro, avec un petit cadenas sur les autres formules ; si vous voyez encore les cadenas, mettez à jour DingPOS depuis l’App Store."
+        "text": "Depuis la v3.4, ces cinq rapports sont ouverts à toutes les formules, et le restent après la fin de l’essai. Les versions antérieures ne les affichaient qu’avec Pro, avec un petit cadenas sur les autres formules ; si vous voyez encore les cadenas, mettez à jour DingPOS depuis l’App Store."
       },
       {
         "type": "p",
@@ -1741,7 +1741,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si vous souscrivez à une formule pendant l’essai, celui-ci prend fin immédiatement et la formule achetée s’applique dès lors. Après l’essai, les fonctions Pro comme le personnel et le journal d’activité ne restent disponibles qu’avec un abonnement Pro. Depuis la v3.4, les rapports avancés restent disponibles avec toutes les formules."
+        "text": "Si vous souscrivez à une formule pendant l’essai, celui-ci prend fin immédiatement et la formule achetée s’applique dès lors. Après l’essai, les fonctions Pro comme le personnel et le journal d’activité ne restent disponibles qu’avec un abonnement Pro. Les rapports avancés n’en nécessitent pas : depuis la v3.4, toutes les formules les incluent."
       },
       {
         "type": "p",

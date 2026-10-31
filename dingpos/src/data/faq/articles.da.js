@@ -1089,7 +1089,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Siden v3.4 er alle fem åbne på alle abonnementsniveauer – Lite, Standard og Pro, både i prøveperioden og efter, at den er slut. Tidligere versioner viste dem kun på Pro med en lille lås på de andre niveauer; hvis du stadig ser låsene, så opdatér DingPOS fra App Store."
+        "text": "Siden v3.4 er alle fem åbne på alle abonnementsniveauer, og de forbliver åbne, efter at prøveperioden er slut. Tidligere versioner viste dem kun på Pro med en lille lås på de andre niveauer; hvis du stadig ser låsene, så opdatér DingPOS fra App Store."
       },
       {
         "type": "p",
@@ -1740,7 +1740,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og det abonnement, du har købt, gælder fra da af. Efter prøveperioden er Pro-funktioner som medarbejdere og aktivitetsloggen kun tilgængelige med et Pro-abonnement. Siden v3.4 er avancerede rapporter tilgængelige på alle abonnementsniveauer."
+        "text": "Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og det abonnement, du har købt, gælder fra da af. Efter prøveperioden er Pro-funktioner som medarbejdere og aktivitetsloggen kun tilgængelige med et Pro-abonnement. Avancerede rapporter kræver ikke et Pro-abonnement; siden v3.4 er de med i alle abonnementsniveauer."
       },
       {
         "type": "p",

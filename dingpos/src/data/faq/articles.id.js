@@ -1091,7 +1091,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sejak v3.4, kelima bagian ini terbuka di semua paket — Lite, Standard, dan Pro, selama masa uji coba maupun setelahnya. Versi sebelumnya hanya menampilkannya di Pro, dengan ikon gembok kecil di paket lain; jika Anda masih melihat gembok, perbarui DingPOS dari App Store."
+        "text": "Sejak v3.4, kelima bagian ini terbuka di semua paket, dan tetap terbuka setelah uji coba berakhir. Versi sebelumnya hanya menampilkannya di Pro, dengan ikon gembok kecil di paket lain; jika Anda masih melihat gembok, perbarui DingPOS dari App Store."
       },
       {
         "type": "p",
@@ -1744,7 +1744,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jika Anda berlangganan paket apa pun selama masa uji coba, uji coba langsung berakhir dan paket yang Anda beli berlaku sejak saat itu. Setelah uji coba, fitur Pro seperti staf dan log aktivitas hanya tersedia dengan langganan Pro. Sejak v3.4, laporan lanjutan tetap tersedia di semua paket."
+        "text": "Jika Anda berlangganan paket apa pun selama masa uji coba, uji coba langsung berakhir dan paket yang Anda beli berlaku sejak saat itu. Setelah uji coba, fitur Pro seperti staf dan log aktivitas hanya tersedia dengan langganan Pro. Laporan lanjutan tidak memerlukannya; sejak v3.4 semua paket sudah menyertakannya."
       },
       {
         "type": "p",

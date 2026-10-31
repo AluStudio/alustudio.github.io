@@ -1099,7 +1099,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Fra og med v3.4 er alle fem åpne på alle planer – Lite, Standard og Pro, både i prøveperioden og etter at den er over. Tidligere versjoner viste dem bare på Pro, med en liten lås på de andre planene. Hvis du fortsatt ser låsene, oppdaterer du DingPOS fra App Store."
+        "text": "Fra og med v3.4 er alle fem åpne på alle planer, og de forblir åpne etter at prøveperioden er over. Tidligere versjoner viste dem bare på Pro, med en liten lås på de andre planene. Hvis du fortsatt ser låsene, oppdaterer du DingPOS fra App Store."
       },
       {
         "type": "p",
@@ -1747,7 +1747,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og planen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Fra og med v3.4 er avanserte rapporter tilgjengelige på alle planer."
+        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og planen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Avanserte rapporter krever ikke det. Fra og med v3.4 er de inkludert i alle planer."
       },
       {
         "type": "p",

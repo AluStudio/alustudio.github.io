@@ -1098,7 +1098,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "v3.4'ten beri bu beşi de her planda açıktır: Lite, Standard ve Pro, hem deneme sırasında hem de deneme bittikten sonra. Önceki sürümlerde yalnızca Pro'da gösteriliyor, diğer planlarda küçük bir kilit görünüyordu; kilitleri hâlâ görüyorsanız DingPOS'u App Store'dan güncelleyin."
+        "text": "v3.4'ten beri bu beşi de her planda açıktır ve deneme bittikten sonra da açık kalır. Önceki sürümlerde yalnızca Pro'da gösteriliyor, diğer planlarda küçük bir kilit görünüyordu; kilitleri hâlâ görüyorsanız DingPOS'u App Store'dan güncelleyin."
       },
       {
         "type": "p",
@@ -1747,7 +1747,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plan o andan itibaren geçerli olur. Deneme bittikten sonra personel ve etkinlik günlüğü gibi Pro özellikleri yalnızca Pro abonelikle kullanılabilir. v3.4'ten beri gelişmiş raporlar her planda kullanılabilir."
+        "text": "Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plan o andan itibaren geçerli olur. Deneme bittikten sonra personel ve etkinlik günlüğü gibi Pro özellikleri yalnızca Pro abonelikle kullanılabilir. Gelişmiş raporlar için abonelik gerekmez; v3.4'ten beri her plana dahildir."
       },
       {
         "type": "p",

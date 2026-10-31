@@ -1093,7 +1093,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Alates versioonist v3.4 on kõik viis avatud igas paketis — Lite, Standard ja Pro, nii prooviperioodil kui ka pärast selle lõppu. Varasemad versioonid näitasid neid ainult Pro paketis ja teistel pakettidel oli väike lukk; kui näed lukke endiselt, uuenda DingPOS App Store'ist."
+        "text": "Alates versioonist v3.4 on kõik viis avatud igas paketis ning jäävad avatuks ka pärast prooviperioodi lõppu. Varasemad versioonid näitasid neid ainult Pro paketis ja teistel pakettidel oli väike lukk; kui näed lukke endiselt, uuenda DingPOS App Store'ist."
       },
       {
         "type": "p",
@@ -1742,7 +1742,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajad ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Alates versioonist v3.4 on täiustatud aruanded kättesaadavad igas paketis."
+        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajad ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Täiustatud aruanded seda ei vaja: alates versioonist v3.4 sisaldab neid iga pakett."
       },
       {
         "type": "p",

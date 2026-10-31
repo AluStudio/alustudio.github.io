@@ -1096,7 +1096,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Versiosta 3.4 alkaen kaikki viisi ovat käytössä jokaisessa paketissa – Lite, Standard ja Pro – sekä kokeilun aikana että sen päätyttyä. Aiemmissa versioissa ne näkyivät vain Pro-paketissa, ja muissa paketeissa niissä oli pieni lukko. Jos näet vielä lukot, päivitä DingPOS App Storesta."
+        "text": "Versiosta 3.4 alkaen kaikki viisi ovat käytössä jokaisessa paketissa, ja ne pysyvät käytössä myös kokeilun päätyttyä. Aiemmissa versioissa ne näkyivät vain Pro-paketissa, ja muissa paketeissa niissä oli pieni lukko. Jos näet vielä lukot, päivitä DingPOS App Storesta."
       },
       {
         "type": "p",
@@ -1743,7 +1743,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jos tilaat jonkin paketin kokeilun aikana, kokeilu päättyy heti ja ostamasi paketti on voimassa siitä lähtien. Kokeilun jälkeen Pro-ominaisuudet, kuten henkilökunta ja toimintoloki, ovat käytettävissä vain Pro-tilauksella. Versiosta 3.4 alkaen laajennetut raportit ovat käytettävissä kaikissa paketeissa."
+        "text": "Jos tilaat jonkin paketin kokeilun aikana, kokeilu päättyy heti ja ostamasi paketti on voimassa siitä lähtien. Kokeilun jälkeen Pro-ominaisuudet, kuten henkilökunta ja toimintoloki, ovat käytettävissä vain Pro-tilauksella. Laajennetut raportit eivät vaadi Pro-tilausta: versiosta 3.4 alkaen ne sisältyvät kaikkiin paketteihin."
       },
       {
         "type": "p",

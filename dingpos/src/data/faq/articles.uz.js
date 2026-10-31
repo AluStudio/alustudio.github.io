@@ -1084,7 +1084,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "v3.4 dan boshlab bu beshalasi barcha tariflarda — Lite, Standard va Pro tariflarida, sinov davrida ham, u tugagandan keyin ham — ochiq. Avvalgi versiyalarda ular faqat Pro tarifida ko‘rsatilgan, boshqa tariflarda esa kichik qulf turgan; agar hali ham qulflarni ko‘rsangiz, DingPOS’ni App Store orqali yangilang."
+        "text": "v3.4 dan boshlab bu beshalasi barcha tariflarda ochiq va sinov tugagandan keyin ham ochiq qoladi. Avvalgi versiyalarda ular faqat Pro tarifida ko‘rsatilgan, boshqa tariflarda esa kichik qulf turgan; agar hali ham qulflarni ko‘rsangiz, DingPOS’ni App Store orqali yangilang."
       },
       {
         "type": "p",
@@ -1730,7 +1730,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va keyin siz sotib olgan tarif amal qiladi. Sinovdan keyin xodimlar va faoliyat jurnali kabi Pro imkoniyatlari faqat Pro obunasi bilan ishlaydi. v3.4 dan boshlab kengaytirilgan hisobotlar barcha tariflarda ochiq qoladi."
+        "text": "Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va keyin siz sotib olgan tarif amal qiladi. Sinovdan keyin xodimlar va faoliyat jurnali kabi Pro imkoniyatlari faqat Pro obunasi bilan ishlaydi. Kengaytirilgan hisobotlar uchun obuna shart emas: v3.4 dan boshlab ular har bir tarifga kiradi."
       },
       {
         "type": "p",

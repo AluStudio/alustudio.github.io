@@ -1089,7 +1089,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sejak v3.4, kelima-limanya terbuka pada setiap pelan — Lite, Standard dan Pro, semasa percubaan dan selepas tamat. Versi lebih awal memaparkannya pada Pro sahaja, dengan kunci kecil pada pelan lain; jika anda masih melihat kunci itu, kemas kini DingPOS daripada App Store."
+        "text": "Sejak v3.4, kelima-limanya terbuka pada setiap pelan, dan kekal terbuka selepas percubaan tamat. Versi lebih awal memaparkannya pada Pro sahaja, dengan kunci kecil pada pelan lain; jika anda masih melihat kunci itu, kemas kini DingPOS daripada App Store."
       },
       {
         "type": "p",
@@ -1736,7 +1736,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta, dan pelan yang anda beli terpakai mulai saat itu. Selepas percubaan, ciri Pro seperti kakitangan dan log aktiviti hanya tersedia dengan langganan Pro. Sejak v3.4, laporan lanjutan kekal tersedia pada setiap pelan."
+        "text": "Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta, dan pelan yang anda beli terpakai mulai saat itu. Selepas percubaan, ciri Pro seperti kakitangan dan log aktiviti hanya tersedia dengan langganan Pro. Laporan lanjutan tidak memerlukannya; sejak v3.4 setiap pelan menyertakannya."
       },
       {
         "type": "p",

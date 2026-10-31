@@ -1094,15 +1094,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ohne Pro trägt jede dieser fünf Stellen ein kleines Schloss, das eine Erklärung zum Upgrade öffnet; alles andere in der Statistik funktioniert wie bisher. Die Berichte lesen Daten, die Ihr Geschäft ohnehin speichert – endet Pro, werden nur die Berichte ausgeblendet, es gehen keine Daten verloren."
+        "text": "Seit Version 3.4 sind alle fünf Stellen in jedem Tarif geöffnet und bleiben es auch nach Ende der Testphase. Frühere Versionen zeigten sie nur in Pro, mit einem kleinen Schloss bei anderen Tarifen; wenn Sie die Schlösser noch sehen, aktualisieren Sie DingPOS im App Store."
       },
       {
         "type": "p",
-        "text": "Seit Version 3.4 sind alle fünf Stellen in jedem Tarif geöffnet – Lite, Standard und Pro, während der Testphase und nach ihrem Ende. Frühere Versionen zeigten sie nur in Pro, mit einem kleinen Schloss bei anderen Tarifen; wenn Sie die Schlösser noch sehen, aktualisieren Sie DingPOS im App Store."
+        "text": "Lite verwaltet weder Bestand noch Treuepunkte, aber Aktuell zeigt weiterhin den Lagerwert und die nicht eingelösten Punkte, die Ihr Geschäft bereits hält (zum Beispiel aus der Testphase) – oder null."
       },
       {
         "type": "note",
-        "text": "Lite verwaltet weder Bestand noch Treuepunkte, aber Aktuell zeigt weiterhin den Lagerwert und die nicht eingelösten Punkte, die Ihr Geschäft bereits hält (zum Beispiel aus der Testphase) – oder null."
+        "text": "Mitarbeiter:innen sehen erweiterte Berichte mit der Berechtigung Dashboard; die Beträge des Lagerwerts erfordern zusätzlich die Berechtigung Einkaufspreis & Rohertrag."
       }
     ],
     "related": [
@@ -1744,7 +1744,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wenn Sie während der Testphase einen Tarif abonnieren, endet die Testphase sofort, und ab dann gilt der gekaufte Tarif. Nach der Testphase bleiben Pro-Funktionen wie Personal und das Aktivitätsprotokoll nur mit einem Pro-Abonnement verfügbar. Seit Version 3.4 bleiben erweiterte Berichte in jedem Tarif verfügbar."
+        "text": "Wenn Sie während der Testphase einen Tarif abonnieren, endet die Testphase sofort, und ab dann gilt der gekaufte Tarif. Nach der Testphase bleiben Pro-Funktionen wie Personal und das Aktivitätsprotokoll nur mit einem Pro-Abonnement verfügbar. Erweiterte Berichte brauchen kein Pro-Abonnement; seit Version 3.4 enthält jeder Tarif sie."
       },
       {
         "type": "p",

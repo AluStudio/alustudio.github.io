@@ -1096,7 +1096,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sedan v3.4 är alla fem öppna i alla planer – Lite, Standard och Pro, både under provperioden och efter att den tagit slut. Tidigare versioner visade dem bara i Pro, med ett litet lås i övriga planer. Ser du fortfarande låsen, uppdatera DingPOS från App Store."
+        "text": "Sedan v3.4 är alla fem öppna i alla planer och förblir öppna även när provperioden har tagit slut. Tidigare versioner visade dem bara i Pro, med ett litet lås i övriga planer. Ser du fortfarande låsen, uppdatera DingPOS från App Store."
       },
       {
         "type": "p",
@@ -1745,7 +1745,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Om du prenumererar på en plan under provperioden avslutas provperioden direkt, och den plan du köpt gäller från och med då. Efter provperioden finns Pro-funktioner som medarbetare och aktivitetsloggen kvar bara med en Pro-prenumeration. Sedan v3.4 finns avancerade rapporter kvar i alla planer."
+        "text": "Om du prenumererar på en plan under provperioden avslutas provperioden direkt, och den plan du köpt gäller från och med då. Efter provperioden finns Pro-funktioner som medarbetare och aktivitetsloggen kvar bara med en Pro-prenumeration. Avancerade rapporter kräver ingen; sedan v3.4 ingår de i alla planer."
       },
       {
         "type": "p",

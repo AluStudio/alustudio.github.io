@@ -1085,7 +1085,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Desde a versão 3.4, os cinco estão disponíveis em todos os planos — Lite, Standard e Pro, durante o teste e depois dele. As versões anteriores os mostravam só no Pro, com um pequeno cadeado nos outros planos; se você ainda vê os cadeados, atualize o DingPOS pela App Store."
+        "text": "Desde a versão 3.4, os cinco estão disponíveis em todos os planos e continuam disponíveis depois que o teste termina. As versões anteriores os mostravam só no Pro, com um pequeno cadeado nos outros planos; se você ainda vê os cadeados, atualize o DingPOS pela App Store."
       },
       {
         "type": "p",
@@ -1734,7 +1734,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Assinar qualquer plano durante o teste encerra o teste na hora, e o plano contratado passa a valer a partir daí. Depois do teste, recursos Pro como funcionários e registro de atividades continuam disponíveis só com a assinatura Pro. Desde a versão 3.4, os relatórios avançados continuam disponíveis em todos os planos."
+        "text": "Assinar qualquer plano durante o teste encerra o teste na hora, e o plano contratado passa a valer a partir daí. Depois do teste, recursos Pro como funcionários e registro de atividades continuam disponíveis só com a assinatura Pro. Os relatórios avançados não exigem assinatura; desde a versão 3.4, todos os planos os incluem."
       },
       {
         "type": "p",

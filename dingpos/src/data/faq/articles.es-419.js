@@ -1087,7 +1087,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Desde la v3.4, los cinco están disponibles en todos los planes (Lite, Standard y Pro), tanto durante la prueba como después de que termina. Las versiones anteriores los mostraban solo en Pro, con un pequeño candado en los demás planes; si aún ves los candados, actualiza DingPOS desde el App Store."
+        "text": "Desde la v3.4, los cinco están disponibles en todos los planes y siguen disponibles después de que termina la prueba. Las versiones anteriores los mostraban solo en Pro, con un pequeño candado en los demás planes; si aún ves los candados, actualiza DingPOS desde el App Store."
       },
       {
         "type": "p",
@@ -1733,7 +1733,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si te suscribes a cualquier plan durante la prueba, esta termina de inmediato y el plan que compraste se aplica desde ese momento. Al terminar la prueba, las funciones Pro, como el personal y el registro de actividad, solo siguen disponibles con una suscripción Pro. Desde la v3.4, los reportes avanzados siguen disponibles en todos los planes."
+        "text": "Si te suscribes a cualquier plan durante la prueba, esta termina de inmediato y el plan que compraste se aplica desde ese momento. Al terminar la prueba, las funciones Pro, como el personal y el registro de actividad, solo siguen disponibles con una suscripción Pro. Los reportes avanzados no necesitan una; desde la v3.4 todos los planes los incluyen."
       },
       {
         "type": "p",
