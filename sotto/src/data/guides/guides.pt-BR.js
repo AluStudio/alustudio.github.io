@@ -1,215 +1,547 @@
-// Sotto guides — Brazilian Portuguese content pack. Schema and rules: guides.en.js.
-
-import { RING_SIZE_ROWS } from "./ring-sizes.js";
+// Generated from en and the pt-BR translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sotto sync pt-BR`, then `npm run l10n -- sotto apply pt-BR`.
 
 export const articles = [
   {
-    slug: "remember-details-about-people",
-    title: "Como lembrar detalhes sobre as pessoas que você ama",
-    summary: "Anote no mesmo dia, mantenha uma página por pessoa e dê uma olhada antes de encontrá-la. Um jeito simples de lembrar o que importa para quem você ama.",
-    content: [
-      { type: "p", text: "O jeito confiável de lembrar detalhes sobre as pessoas é parar de depender da memória: anote cada detalhe no mesmo dia em que ouvir, junte tudo sobre uma pessoa num só lugar e leia essa página antes de encontrá-la. Os pequenos fatos que você ouve uma vez somem em poucos dias; uma anotação, não." },
-      { type: "p", text: "Este guia mostra o que vale a pena anotar, um hábito de registro que leva cerca de um minuto e como usar suas notas sem que isso pareça lição de casa." },
-      { type: "h2", text: "Por que os pequenos detalhes escapam" },
-      { type: "p", text: "O café que um amigo sempre pede ou o nome do cachorro da irmã dele aparecem uma vez, de passagem, enquanto você está ocupado acompanhando o resto da conversa. Ninguém repete, então nada reforça a lembrança. As pesquisas sobre memória desde Hermann Ebbinghaus, na década de 1880, mostram o mesmo padrão: aquilo que você nunca revisita é esquecido mais rápido nos primeiros um ou dois dias." },
-      { type: "p", text: "A solução não é ter uma memória melhor. É ter um lugar para guardar o detalhe antes que ele se apague." },
-      { type: "h2", text: "O que vale a pena anotar" },
+    "slug": "remember-details-about-people",
+    "title": "Como lembrar detalhes sobre as pessoas que você ama",
+    "summary": "Anote no mesmo dia, mantenha uma página por pessoa e dê uma olhada antes de encontrá-la. Um jeito simples de lembrar o que importa para quem você ama.",
+    "content": [
       {
-        type: "list",
-        items: [
+        "type": "p",
+        "text": "O jeito confiável de lembrar detalhes sobre as pessoas é parar de depender da memória: anote cada detalhe no mesmo dia em que ouvir, junte tudo sobre uma pessoa num só lugar e leia essa página antes de encontrá-la. Os pequenos fatos que você ouve uma vez somem em poucos dias; uma anotação, não."
+      },
+      {
+        "type": "p",
+        "text": "Este guia mostra o que vale a pena anotar, um hábito de registro que leva cerca de um minuto e como usar suas notas sem que isso pareça lição de casa."
+      },
+      {
+        "type": "h2",
+        "text": "Por que os pequenos detalhes escapam"
+      },
+      {
+        "type": "p",
+        "text": "O café que um amigo sempre pede ou o nome do cachorro da irmã dele aparecem uma vez, de passagem, enquanto você está ocupado acompanhando o resto da conversa. Ninguém repete, então nada reforça a lembrança. As pesquisas sobre memória desde Hermann Ebbinghaus, na década de 1880, mostram o mesmo padrão: aquilo que você nunca revisita é esquecido mais rápido nos primeiros um ou dois dias."
+      },
+      {
+        "type": "p",
+        "text": "A solução não é ter uma memória melhor. É ter um lugar para guardar o detalhe antes que ele se apague."
+      },
+      {
+        "type": "h2",
+        "text": "O que vale a pena anotar"
+      },
+      {
+        "type": "list",
+        "items": [
           "Preferências: o café de sempre, a comida e as flores favoritas, o que a pessoa evita, alergias.",
           "Tamanhos: roupa, calçado, anel — os detalhes que você precisa para presentear e não dá para perguntar com facilidade.",
           "Datas: aniversários, datas comemorativas, o primeiro dia num emprego novo, a cirurgia de um dos pais.",
           "As pessoas na vida dela: parceiro ou parceira, filhos, bichos de estimação, aquele colega de trabalho que ela sempre menciona.",
           "Planos e preocupações: a viagem para a qual está juntando dinheiro, o que anda tirando o sono, do que se orgulha.",
-          "Coisas que ela disse que quer: um livro, um gadget, um lugar que adoraria conhecer.",
-        ],
+          "Coisas que ela disse que quer: um livro, um gadget, um lugar que adoraria conhecer."
+        ]
       },
-      { type: "p", text: "Você não precisa de tudo isso para todo mundo. Dois ou três detalhes certeiros por pessoa valem mais do que um perfil completo que você nunca abre." },
-      { type: "h2", text: "Um hábito de registro de um minuto" },
       {
-        type: "steps",
-        items: [
+        "type": "p",
+        "text": "Você não precisa de tudo isso para todo mundo. Dois ou três detalhes certeiros por pessoa valem mais do que um perfil completo que você nunca abre."
+      },
+      {
+        "type": "h2",
+        "text": "Um hábito de registro de um minuto"
+      },
+      {
+        "type": "steps",
+        "items": [
           "Anote no mesmo dia. Depois de uma ligação ou de um jantar, tire um minuto para registrar o que você descobriu enquanto ainda está fresco.",
           "Mantenha uma página por pessoa. Um detalhe guardado no nome da pessoa é fácil de achar; um detalhe perdido numa conversa do WhatsApp, não.",
           "Use as palavras dela. \"Quer aprender cerâmica\" é mais útil depois do que \"hobbies: artesanato\".",
-          "Coloque a data em tudo que vai mudar, como uma busca por emprego ou uma mudança de casa, para saber se a informação ainda vale.",
-        ],
+          "Coloque a data em tudo que vai mudar, como uma busca por emprego ou uma mudança de casa, para saber se a informação ainda vale."
+        ]
       },
-      { type: "h2", text: "Leia suas notas antes do encontro" },
-      { type: "p", text: "Notas só ajudam se você ler. Dê uma olhada na página da pessoa alguns minutos antes de vê-la ou de ligar para ela. Pergunte como foi a entrevista, ou lembre que ela não toma café depois do almoço. As pessoas percebem quando você lembra, e isso soa como carinho, não como um sistema." },
-      { type: "note", text: "Seja gentil. Anote o que ajuda você a estar presente para alguém, e não coisas que você teria vergonha de a pessoa ler." },
-      { type: "h2", text: "Caderno, app de notas ou app de notas de pessoas?" },
-      { type: "p", text: "Qualquer sistema que você realmente use funciona. Um caderno é privado, mas difícil de pesquisar. Um app de notas comum funciona até as anotações sobre vinte pessoas virarem uma lista enorme. A agenda de contatos tem um campo de notas, mas ele é apertado e compartilhado com todo app que pode ler seus contatos." },
-      { type: "p", text: "Um app de notas de pessoas organiza tudo por pessoa, com campos feitos para os detalhes acima — tamanhos, datas e preferências —, então você não precisa inventar uma estrutura. É uma espécie de CRM pessoal, só que para quem você ama." },
-      { type: "h2", text: "Como o Sotto ajuda" },
-      { type: "p", text: "O Sotto é um app de notas de pessoas feito exatamente para isso. Cada pessoa ganha uma página com foto, uma bio curta, notas e qualquer um dos 130 campos prontos, de aniversário e alergias a número do calçado e tamanho do anel. Ative um lembrete para um aniversário e o Sotto avisa você com uma semana de antecedência. Quando não souber o que perguntar, um catálogo de 323 perguntas pode abrir a próxima conversa." },
-      { type: "p", text: "Tudo fica no seu celular, protegido pelo próprio bloqueio de tela do aparelho, se você quiser. O Sotto é gratuito para até 5 pessoas, no iPhone e no Android." },
+      {
+        "type": "h2",
+        "text": "Leia suas notas antes do encontro"
+      },
+      {
+        "type": "p",
+        "text": "Notas só ajudam se você ler. Dê uma olhada na página da pessoa alguns minutos antes de vê-la ou de ligar para ela. Pergunte como foi a entrevista, ou lembre que ela não toma café depois do almoço. As pessoas percebem quando você lembra, e isso soa como carinho, não como um sistema."
+      },
+      {
+        "type": "note",
+        "text": "Seja gentil. Anote o que ajuda você a estar presente para alguém, e não coisas que você teria vergonha de a pessoa ler."
+      },
+      {
+        "type": "h2",
+        "text": "Caderno, app de notas ou app de notas de pessoas?"
+      },
+      {
+        "type": "p",
+        "text": "Qualquer sistema que você realmente use funciona. Um caderno é privado, mas difícil de pesquisar. Um app de notas comum funciona até as anotações sobre vinte pessoas virarem uma lista enorme. A agenda de contatos tem um campo de notas, mas ele é apertado e compartilhado com todo app que pode ler seus contatos."
+      },
+      {
+        "type": "p",
+        "text": "Um app de notas de pessoas organiza tudo por pessoa, com campos feitos para os detalhes acima — tamanhos, datas e preferências —, então você não precisa inventar uma estrutura. É uma espécie de CRM pessoal, só que para quem você ama."
+      },
+      {
+        "type": "h2",
+        "text": "Como o Sotto ajuda"
+      },
+      {
+        "type": "p",
+        "text": "O Sotto é um app de notas de pessoas feito exatamente para isso. Cada pessoa ganha uma página com foto, uma bio curta, notas e qualquer um dos 130 campos prontos, de aniversário e alergias a número do calçado e tamanho do anel. Ative um lembrete para um aniversário e o Sotto avisa você com uma semana de antecedência. Quando não souber o que perguntar, um catálogo de 323 perguntas pode abrir a próxima conversa."
+      },
+      {
+        "type": "p",
+        "text": "Tudo fica no seu celular, protegido pelo próprio bloqueio de tela do aparelho, se você quiser. O Sotto é gratuito para até 5 pessoas, no iPhone e no Android."
+      }
     ],
-    related: ["find-gift-sizes-without-asking", "gift-log", "how-many-people-do-you-meet-in-a-lifetime"],
+    "related": [
+      "find-gift-sizes-without-asking",
+      "gift-log",
+      "how-many-people-do-you-meet-in-a-lifetime"
+    ]
   },
   {
-    slug: "find-gift-sizes-without-asking",
-    title: "Como descobrir o tamanho de alguém para dar presente sem perguntar",
-    summary: "Veja o tamanho na etiqueta de roupas e calçados que a pessoa já usa, pergunte a alguém próximo ou crie um momento natural — e anote para descobrir só uma vez.",
-    content: [
-      { type: "p", text: "O jeito mais fácil de descobrir o tamanho de alguém sem perguntar é ler em algo que a pessoa já tem: a etiqueta de uma camisa que ela usa sempre, a parte de dentro do tênis ou um anel que ela usa no dedo certo. Se não der para mexer nas coisas dela, peça ajuda a quem consegue, ou puxe o assunto de tamanhos com naturalidade quando estiverem fazendo compras juntos. Depois, anote o tamanho para nunca mais precisar descobrir de novo." },
-      { type: "h2", text: "Roupas: leia a etiqueta de uma peça que serve bem" },
+    "slug": "find-gift-sizes-without-asking",
+    "title": "Como descobrir o tamanho de alguém para dar presente sem perguntar",
+    "summary": "Veja o tamanho na etiqueta de roupas e calçados que a pessoa já usa, pergunte a alguém próximo ou crie um momento natural — e anote para descobrir só uma vez.",
+    "content": [
       {
-        type: "list",
-        items: [
+        "type": "p",
+        "text": "O jeito mais fácil de descobrir o tamanho de alguém sem perguntar é ler em algo que a pessoa já tem: a etiqueta de uma camisa que ela usa sempre, a parte de dentro do tênis ou um anel que ela usa no dedo certo. Se não der para mexer nas coisas dela, peça ajuda a quem consegue, ou puxe o assunto de tamanhos com naturalidade quando estiverem fazendo compras juntos. Depois, anote o tamanho para nunca mais precisar descobrir de novo."
+      },
+      {
+        "type": "h2",
+        "text": "Roupas: leia a etiqueta de uma peça que serve bem"
+      },
+      {
+        "type": "list",
+        "items": [
           "Escolha uma peça que a pessoa usa sempre e que claramente serve — não aquele moletom largão que ela usa para dormir.",
           "Confira a etiqueta na gola, na costura lateral ou no cós, e anote a marca: os tamanhos variam de uma marca para outra.",
           "Nas calças, muitas etiquetas trazem cintura e comprimento, por exemplo 32/32.",
-          "Sem etiqueta? Estique a peça numa superfície plana, meça de um lado ao outro no peito ou na cintura e multiplique por dois.",
-        ],
+          "Sem etiqueta? Estique a peça numa superfície plana, meça de um lado ao outro no peito ou na cintura e multiplique por dois."
+        ]
       },
-      { type: "h2", text: "Calçados: olhe dentro da lingueta ou na palmilha" },
-      { type: "p", text: "A maioria dos calçados traz o tamanho impresso dentro da lingueta ou na palmilha, muitas vezes em vários sistemas ao mesmo tempo — US, UK, EU e centímetros. Anote todos, junto com a marca. O tênis e o sapato social da mesma pessoa podem variar meio número." },
-      { type: "h2", text: "Anéis: pegue emprestado, contorne ou chame um cúmplice" },
-      { type: "p", text: "Anel é o mais difícil, porque errar o tamanho significa ajustar a peça. As opções mais rápidas são pegar emprestado um anel que a pessoa usa no mesmo dedo e mandar medir, ou contornar a parte de dentro dele no papel. Nosso guia sobre como descobrir o tamanho do anel em segredo explica cada método e traz uma tabela de conversão." },
-      { type: "h2", text: "Pergunte a quem sabe" },
-      { type: "p", text: "O parceiro ou a parceira, um irmão, a mãe, o pai ou um amigo próximo muitas vezes sabe o tamanho, ou consegue conferir sem levantar suspeitas. Ofereça retribuir o favor quando chegar a vez deles." },
-      { type: "h2", text: "Crie um momento natural" },
       {
-        type: "list",
-        items: [
+        "type": "h2",
+        "text": "Calçados: olhe dentro da lingueta ou na palmilha"
+      },
+      {
+        "type": "p",
+        "text": "A maioria dos calçados traz o tamanho impresso dentro da lingueta ou na palmilha, muitas vezes em vários sistemas ao mesmo tempo — US, UK, EU e centímetros. Anote todos, junto com a marca. O tênis e o sapato social da mesma pessoa podem variar meio número."
+      },
+      {
+        "type": "h2",
+        "text": "Anéis: pegue emprestado, contorne ou chame um cúmplice"
+      },
+      {
+        "type": "p",
+        "text": "Anel é o mais difícil, porque errar o tamanho significa ajustar a peça. As opções mais rápidas são pegar emprestado um anel que a pessoa usa no mesmo dedo e mandar medir, ou contornar a parte de dentro dele no papel. Nosso guia sobre como descobrir o tamanho do anel em segredo explica cada método e traz uma tabela de conversão."
+      },
+      {
+        "type": "h2",
+        "text": "Pergunte a quem sabe"
+      },
+      {
+        "type": "p",
+        "text": "O parceiro ou a parceira, um irmão, a mãe, o pai ou um amigo próximo muitas vezes sabe o tamanho, ou consegue conferir sem levantar suspeitas. Ofereça retribuir o favor quando chegar a vez deles."
+      },
+      {
+        "type": "h2",
+        "text": "Crie um momento natural"
+      },
+      {
+        "type": "list",
+        "items": [
           "Faça compras junto e repare em qual tamanho a pessoa pega.",
           "Ofereça-se para encomendar algo para ela: \"Que tamanho eu peço?\" soa como um favor, não como uma surpresa.",
-          "Puxe o assunto da próxima estação: \"Vai precisar de bota nova neste inverno? Qual é o seu número?\"",
-        ],
+          "Puxe o assunto da próxima estação: \"Vai precisar de bota nova neste inverno? Qual é o seu número?\""
+        ]
       },
-      { type: "h2", text: "Quando não dá para confirmar o tamanho" },
-      { type: "p", text: "Escolha presentes em que o caimento importa menos — um cachecol, uma bolsa, uma joia que não seja anel — ou peça uma nota de troca para facilitar se precisar trocar." },
-      { type: "h2", text: "Anote uma vez só" },
-      { type: "p", text: "Tamanhos raramente mudam, então descobrir uma vez pode valer por anos — se você registrar. O Sotto tem 23 campos de tamanhos e medidas, incluindo medidas do corpo, número do calçado e o tamanho do anel de cada dedo, além de campos personalizados para qualquer outra coisa, como o tamanho da camisa. Ele converte números de calçado entre os tamanhos dos EUA, da Europa, do Reino Unido, do Japão e em centímetros, e tamanhos de anel entre sete sistemas, então um tamanho lido numa etiqueta europeia continua fazendo sentido numa loja americana." },
+      {
+        "type": "h2",
+        "text": "Quando não dá para confirmar o tamanho"
+      },
+      {
+        "type": "p",
+        "text": "Escolha presentes em que o caimento importa menos — um cachecol, uma bolsa, uma joia que não seja anel — ou peça uma nota de troca para facilitar se precisar trocar."
+      },
+      {
+        "type": "h2",
+        "text": "Anote uma vez só"
+      },
+      {
+        "type": "p",
+        "text": "Tamanhos raramente mudam, então descobrir uma vez pode valer por anos — se você registrar. O Sotto tem 23 campos de tamanhos e medidas, incluindo medidas do corpo, número do calçado e o tamanho do anel de cada dedo, além de campos personalizados para qualquer outra coisa, como o tamanho da camisa. Ele converte números de calçado entre os tamanhos dos EUA, da Europa, do Reino Unido, do Japão e em centímetros, e tamanhos de anel entre sete sistemas, então um tamanho lido numa etiqueta europeia continua fazendo sentido numa loja americana."
+      }
     ],
-    related: ["find-ring-size-secretly", "gift-log", "remember-details-about-people"],
+    "related": [
+      "find-ring-size-secretly",
+      "gift-log",
+      "remember-details-about-people"
+    ]
   },
   {
-    slug: "find-ring-size-secretly",
-    title: "Como descobrir o tamanho do anel de alguém sem a pessoa saber",
-    summary: "Pegue emprestado um anel do mesmo dedo, contorne no papel, meça enquanto ela dorme ou peça ajuda a um amigo. Como funciona cada método, com tabela de conversão.",
-    content: [
-      { type: "p", text: "O método secreto mais preciso é pegar emprestado um anel que a pessoa já usa no mesmo dedo da mesma mão e pedir para um joalheiro medir, ou medir você mesmo o diâmetro interno. Se não der para levar o anel, contorne a parte de dentro dele num papel ou pressione-o num sabonete, ou peça a um amigo próximo ou a alguém da família que descubra para você." },
-      { type: "h2", text: "Método 1: pegue emprestado um anel que ela já usa" },
+    "slug": "find-ring-size-secretly",
+    "title": "Como descobrir o tamanho do anel de alguém sem a pessoa saber",
+    "summary": "Pegue emprestado um anel do mesmo dedo, contorne no papel, meça enquanto ela dorme ou peça ajuda a um amigo. Como funciona cada método, com tabela de conversão.",
+    "content": [
       {
-        type: "steps",
-        items: [
+        "type": "p",
+        "text": "O método secreto mais preciso é pegar emprestado um anel que a pessoa já usa no mesmo dedo da mesma mão e pedir para um joalheiro medir, ou medir você mesmo o diâmetro interno. Se não der para levar o anel, contorne a parte de dentro dele num papel ou pressione-o num sabonete, ou peça a um amigo próximo ou a alguém da família que descubra para você."
+      },
+      {
+        "type": "h2",
+        "text": "Método 1: pegue emprestado um anel que ela já usa"
+      },
+      {
+        "type": "steps",
+        "items": [
           "Escolha um anel usado no dedo para o qual você vai comprar. Os dedos da mão dominante costumam ser um pouco maiores.",
           "Leve-o a um joalheiro, que mede o tamanho em instantes num tribulê (o cone de medir anéis).",
           "Ou meça o diâmetro interno em milímetros e procure na tabela abaixo.",
-          "Devolva o anel exatamente onde você o encontrou.",
-        ],
+          "Devolva o anel exatamente onde você o encontrou."
+        ]
       },
-      { type: "h2", text: "Método 2: contorne ou marque o anel" },
-      { type: "p", text: "Se você só tiver o anel por um minuto, coloque-o sobre um papel e contorne a borda interna com um lápis bem apontado, ou pressione-o até a metade num sabonete para guardar a marca. Meça o diâmetro interno depois. É menos preciso do que medir o próprio anel, então, se ficar entre dois tamanhos, escolha o maior." },
-      { type: "h2", text: "Método 3: meça o dedo enquanto ela dorme" },
-      { type: "p", text: "Enrole uma tira fina de papel na base do dedo, marque onde ela se sobrepõe e meça o comprimento: essa é a circunferência. É arriscado — a pessoa pode acordar — e barbante estica, então use papel e meça duas vezes." },
-      { type: "h2", text: "Método 4: chame um cúmplice" },
-      { type: "p", text: "Um amigo pode sugerir experimentar anéis num passeio de compras, e um irmão ou um dos pais pode simplesmente saber. É o único método que não exige mexer nas joias dela." },
-      { type: "h2", text: "Método 5: compare com os seus próprios dedos" },
-      { type: "p", text: "Coloque o anel dela nos seus dedos e repare onde ele para. Depois, meça esse ponto do seu dedo. É uma estimativa grosseira, mas estreita as opções." },
-      { type: "h2", text: "Tabela de conversão de tamanhos de anel" },
       {
-        type: "table",
-        caption: "A circunferência é a referência. Cada sistema mostra o tamanho mais próximo dessa circunferência, a mesma conversão que o Sotto usa.",
-        head: ["EUA / Canadá", "Circunferência (mm)", "Diâmetro interno (mm)", "Reino Unido / Austrália", "Europa", "Japão", "China"],
-        rows: RING_SIZE_ROWS,
+        "type": "h2",
+        "text": "Método 2: contorne ou marque o anel"
       },
-      { type: "note", text: "Os dedos incham no calor e no fim do dia, e a junta pode ser mais larga do que a base do dedo. Na dúvida, escolha um tamanho acima: um anel um pouco largo ainda dá para usar e é mais fácil de ajustar." },
-      { type: "h2", text: "Guarde o tamanho de cada dedo no Sotto" },
-      { type: "p", text: "Depois de descobrir, guarde. O Sotto registra um tamanho de anel para cada um dos dez dedos, da mão esquerda e da direita, do polegar ao mindinho, e converte entre os tamanhos dos EUA, da Europa, do Reino Unido, do Japão, da China, de Hong Kong e da Suíça. O tamanho fica guardado em sigilo no seu celular, pronto para quando a ocasião chegar." },
+      {
+        "type": "p",
+        "text": "Se você só tiver o anel por um minuto, coloque-o sobre um papel e contorne a borda interna com um lápis bem apontado, ou pressione-o até a metade num sabonete para guardar a marca. Meça o diâmetro interno depois. É menos preciso do que medir o próprio anel, então, se ficar entre dois tamanhos, escolha o maior."
+      },
+      {
+        "type": "h2",
+        "text": "Método 3: meça o dedo enquanto ela dorme"
+      },
+      {
+        "type": "p",
+        "text": "Enrole uma tira fina de papel na base do dedo, marque onde ela se sobrepõe e meça o comprimento: essa é a circunferência. É arriscado — a pessoa pode acordar — e barbante estica, então use papel e meça duas vezes."
+      },
+      {
+        "type": "h2",
+        "text": "Método 4: chame um cúmplice"
+      },
+      {
+        "type": "p",
+        "text": "Um amigo pode sugerir experimentar anéis num passeio de compras, e um irmão ou um dos pais pode simplesmente saber. É o único método que não exige mexer nas joias dela."
+      },
+      {
+        "type": "h2",
+        "text": "Método 5: compare com os seus próprios dedos"
+      },
+      {
+        "type": "p",
+        "text": "Coloque o anel dela nos seus dedos e repare onde ele para. Depois, meça esse ponto do seu dedo. É uma estimativa grosseira, mas estreita as opções."
+      },
+      {
+        "type": "h2",
+        "text": "Tabela de conversão de tamanhos de anel"
+      },
+      {
+        "type": "table",
+        "caption": "A circunferência é a referência. Cada sistema mostra o tamanho mais próximo dessa circunferência, a mesma conversão que o Sotto usa.",
+        "head": [
+          "EUA / Canadá",
+          "Circunferência (mm)",
+          "Diâmetro interno (mm)",
+          "Reino Unido / Austrália",
+          "Europa",
+          "Japão",
+          "China"
+        ],
+        "rows": [
+          [
+            "4",
+            "46.8",
+            "14.9",
+            "H½",
+            "47",
+            "7",
+            "8"
+          ],
+          [
+            "5",
+            "49.3",
+            "15.7",
+            "J½",
+            "49",
+            "9",
+            "10"
+          ],
+          [
+            "6",
+            "51.9",
+            "16.5",
+            "L½",
+            "52",
+            "11",
+            "12"
+          ],
+          [
+            "7",
+            "54.4",
+            "17.3",
+            "N½",
+            "54",
+            "14",
+            "14"
+          ],
+          [
+            "8",
+            "57.0",
+            "18.1",
+            "P½",
+            "57",
+            "16",
+            "17"
+          ],
+          [
+            "9",
+            "59.5",
+            "18.9",
+            "R½",
+            "59",
+            "18",
+            "19"
+          ],
+          [
+            "10",
+            "62.1",
+            "19.8",
+            "T½",
+            "62",
+            "20",
+            "22"
+          ],
+          [
+            "11",
+            "64.6",
+            "20.6",
+            "V½",
+            "64",
+            "23",
+            "23"
+          ]
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Os dedos incham no calor e no fim do dia, e a junta pode ser mais larga do que a base do dedo. Na dúvida, escolha um tamanho acima: um anel um pouco largo ainda dá para usar e é mais fácil de ajustar."
+      },
+      {
+        "type": "h2",
+        "text": "Guarde o tamanho de cada dedo no Sotto"
+      },
+      {
+        "type": "p",
+        "text": "Depois de descobrir, guarde. O Sotto registra um tamanho de anel para cada um dos dez dedos, da mão esquerda e da direita, do polegar ao mindinho, e converte entre os tamanhos dos EUA, da Europa, do Reino Unido, do Japão, da China, de Hong Kong e da Suíça. O tamanho fica guardado em sigilo no seu celular, pronto para quando a ocasião chegar."
+      }
     ],
-    related: ["find-gift-sizes-without-asking", "gift-log"],
+    "related": [
+      "find-gift-sizes-without-asking",
+      "gift-log"
+    ]
   },
   {
-    slug: "gift-log",
-    title: "Como fazer um registro de presentes e nunca repetir presente",
-    summary: "Anote o que você deu, quando e em qual ocasião, e junte ideias de presente conforme surgem. Um registro de presentes simples acaba com repetições e correria.",
-    content: [
-      { type: "p", text: "Um registro de presentes é uma anotação simples do que você deu a cada pessoa, quando e em qual ocasião, mais uma lista de ideias de presente que você vai colhendo ao longo do ano. Mantenha um por pessoa, acrescente uma entrada logo depois de cada ocasião e consulte antes de ir às compras. Só isso já evita presentes repetidos e transforma a correria de última hora numa lista curta." },
-      { type: "h2", text: "O que anotar sobre cada presente" },
+    "slug": "gift-log",
+    "title": "Como fazer um registro de presentes e nunca repetir presente",
+    "summary": "Anote o que você deu, quando e em qual ocasião, e junte ideias de presente conforme surgem. Um registro de presentes simples acaba com repetições e correria.",
+    "content": [
       {
-        type: "list",
-        items: [
+        "type": "p",
+        "text": "Um registro de presentes é uma anotação simples do que você deu a cada pessoa, quando e em qual ocasião, mais uma lista de ideias de presente que você vai colhendo ao longo do ano. Mantenha um por pessoa, acrescente uma entrada logo depois de cada ocasião e consulte antes de ir às compras. Só isso já evita presentes repetidos e transforma a correria de última hora numa lista curta."
+      },
+      {
+        "type": "h2",
+        "text": "O que anotar sobre cada presente"
+      },
+      {
+        "type": "list",
+        "items": [
           "O presente em si, com a marca ou a cor, se fizer diferença.",
           "A ocasião e a data: um aniversário, uma data comemorativa, um agradecimento.",
           "Como foi recebido: usado todo dia, trocado ou só um sorriso educado.",
-          "O preço, se você gosta de manter os presentes equilibrados entre as pessoas.",
-        ],
+          "O preço, se você gosta de manter os presentes equilibrados entre as pessoas."
+        ]
       },
-      { type: "h2", text: "Mantenha também uma lista de ideias de presente" },
-      { type: "p", text: "As melhores ideias aparecem meses antes da ocasião: um \"sempre quis experimentar…\" dito de passagem, algo dela que quebrou, um livro que despertou a curiosidade. Anote no nome da pessoa no mesmo dia. Quando o aniversário chegar, você escolhe entre ideias que vieram dela." },
-      { type: "h2", text: "Onde manter seu registro de presentes" },
       {
-        type: "list",
-        items: [
+        "type": "h2",
+        "text": "Mantenha também uma lista de ideias de presente"
+      },
+      {
+        "type": "p",
+        "text": "As melhores ideias aparecem meses antes da ocasião: um \"sempre quis experimentar…\" dito de passagem, algo dela que quebrou, um livro que despertou a curiosidade. Anote no nome da pessoa no mesmo dia. Quando o aniversário chegar, você escolhe entre ideias que vieram dela."
+      },
+      {
+        "type": "h2",
+        "text": "Onde manter seu registro de presentes"
+      },
+      {
+        "type": "list",
+        "items": [
           "Uma planilha funciona para uma ocasião grande, como um casamento, mas fica difícil de manejar com muitas pessoas e muitos anos.",
           "Um app de notas é rápido, mas as ideias e os presentes de pessoas diferentes acabam misturados.",
-          "Uma página por pessoa mantém presentes anteriores, ideias e tamanhos juntos — exatamente o que você precisa na hora de comprar.",
-        ],
+          "Uma página por pessoa mantém presentes anteriores, ideias e tamanhos juntos — exatamente o que você precisa na hora de comprar."
+        ]
       },
-      { type: "h2", text: "Hábitos que fazem o registro de presentes funcionar" },
       {
-        type: "steps",
-        items: [
+        "type": "h2",
+        "text": "Hábitos que fazem o registro de presentes funcionar"
+      },
+      {
+        "type": "steps",
+        "items": [
           "Registre o presente no dia em que der, enquanto ainda lembra da reação.",
           "Anote o tamanho ao lado de qualquer presente de roupa, para que o próximo sirva.",
           "Registre também os presentes que você recebe, para agradecer e retribuir o carinho.",
-          "Programe um lembrete uma semana antes dos aniversários, para o registro ajudar enquanto ainda dá tempo de comprar.",
-        ],
+          "Programe um lembrete uma semana antes dos aniversários, para o registro ajudar enquanto ainda dá tempo de comprar."
+        ]
       },
-      { type: "h2", text: "Usando o Sotto como registro de presentes" },
-      { type: "p", text: "O Sotto não tem uma tela separada para controlar presentes; a página de cada pessoa cumpre esse papel. Escreva uma nota para cada presente que você dá, com a ocasião e a data na primeira linha, e use os campos \"Ideias presente\" e \"Lista de desejos\" para as ideias conforme elas surgem. Os tamanhos ficam na mesma página, e um lembrete de aniversário ou data comemorativa chega 7 dias antes, às 9h da manhã. Tudo fica no seu celular." },
+      {
+        "type": "h2",
+        "text": "Usando o Sotto como registro de presentes"
+      },
+      {
+        "type": "p",
+        "text": "O Sotto não tem uma tela separada para controlar presentes; a página de cada pessoa cumpre esse papel. Escreva uma nota para cada presente que você dá, com a ocasião e a data na primeira linha, e use os campos \"Ideias presente\" e \"Lista de desejos\" para as ideias conforme elas surgem. Os tamanhos ficam na mesma página, e um lembrete de aniversário ou data comemorativa chega 7 dias antes, às 9h da manhã. Tudo fica no seu celular."
+      }
     ],
-    related: ["find-gift-sizes-without-asking", "remember-details-about-people"],
+    "related": [
+      "find-gift-sizes-without-asking",
+      "remember-details-about-people"
+    ]
   },
   {
-    slug: "how-many-people-do-you-meet-in-a-lifetime",
-    title: "Quantas pessoas a gente conhece na vida? Os números reais por trás do jogo \"1 in 8 Billion\"",
-    summary: "Os \"80 mil conhecidos na vida\" são só uma conta hipotética. Estudos apontam cerca de 611 pessoas que você chama pelo nome, e um amigo próximo leva 200+ horas.",
-    content: [
-      { type: "p", text: "Nenhum estudo jamais contou quantas pessoas alguém conhece ao longo da vida. O número 80 mil, tão compartilhado, é um experimento mental: conhecer três pessoas novas por dia durante 73 anos. Pesquisas que de fato entrevistaram pessoas estimam que o americano médio conhece cerca de 611 pessoas pelo nome (mediana de 472). Em 8 bilhões, isso dá mais ou menos uma pessoa a cada 13 milhões." },
-      { type: "p", text: "A pergunta voltou à moda com \"1 in 8 Billion\" (algo como \"1 em 8 bilhões\"), um simulador de vida para navegador que um desenvolvedor independente da Coreia do Sul criou com IA no início de outubro de 2026. Usando estatísticas das Nações Unidas, da Organização Mundial da Saúde e do Banco Mundial, o jogo faz de você, por sorteio, uma das 8 bilhões de pessoas e leva essa vida inteira até o fim. Ele explodiu no Threads e, em poucas semanas, foi da Coreia para o Japão e Taiwan. Muita gente terminou uma vida no jogo e ficou pensando em quem conheceu de verdade na sua própria vida." },
-      { type: "h2", text: "De onde vêm os \"80 mil\" e os \"8 milhões\"" },
-      { type: "p", text: "Nas redes sociais em chinês circula uma sequência de números: ao longo da vida, você cruzará com 8.263.563 pessoas, cumprimentará 39.778, conhecerá 3.619 e ficará próximo de 275. Ela costuma vir junto com um vídeo curto, e não se acha nenhum estudo por trás." },
-      { type: "p", text: "O número 80 mil tem uma origem mais clara. Max Roser, fundador do Our World in Data, imaginou alguém que conversa com três pessoas novas todos os dias durante 73 anos: essa pessoa chegaria a conhecer cerca de 80 mil. Ele usou o número para defender justamente o contrário: mesmo alguém tão sociável conhece apenas 0,001% do mundo." },
-      { type: "h2", text: "Os números que a pesquisa realmente mediu" },
+    "slug": "how-many-people-do-you-meet-in-a-lifetime",
+    "title": "Quantas pessoas a gente conhece na vida? Os números reais por trás do jogo \"1 in 8 Billion\"",
+    "summary": "Os \"80 mil conhecidos na vida\" são só uma conta hipotética. Pesquisas citam cerca de 611 pessoas pelo nome; virar amigo próximo exige mais de 200 horas juntos.",
+    "content": [
       {
-        type: "table",
-        head: ["Número", "O que mede", "Fonte"],
-        rows: [
-          ["8 bilhões", "População mundial, que as Nações Unidas projetaram que seria atingida em 15 de novembro de 2022", "Nações Unidas"],
-          ["611 pessoas", "Quantas pessoas o americano médio conhece pelo nome; a mediana é 472", "McCormick, Salganik e Zheng, 2010"],
-          ["Cerca de 150", "Quantos relacionamentos estáveis uma pessoa consegue manter", "Dunbar, 1992; um estudo de 2021 argumentou que a incerteza é grande demais para fixar um único número"],
-          ["50 / 90 / 200 horas", "Tempo total juntos para passar de conhecido a amigo casual, amigo e amigo próximo", "Hall, 2018"],
-        ],
+        "type": "p",
+        "text": "Nenhum estudo jamais contou quantas pessoas alguém conhece ao longo da vida. O número 80 mil, tão compartilhado, é um experimento mental: conhecer três pessoas novas por dia durante 73 anos. Pesquisas que de fato entrevistaram pessoas estimam que o americano médio conhece cerca de 611 pessoas pelo nome (mediana de 472). Em 8 bilhões, isso dá mais ou menos uma pessoa a cada 13 milhões."
       },
-      { type: "p", text: "O número 611 vem de uma pesquisa nos Estados Unidos, e nenhum outro país tem um estudo dessa escala, mas a ordem de grandeza vale: entre 8 bilhões de pessoas, você conhece algumas centenas pelo nome, e as pessoas com quem você passa 200 horas serão sempre poucas." },
-      { type: "h2", text: "As pessoas que importam muitas vezes surgem por acaso" },
-      { type: "p", text: "Em 1950, o psicólogo Leon Festinger e seus colegas estudaram o Westgate West, uma moradia do MIT para estudantes casados. Os moradores ocupavam os apartamentos conforme eles ficavam livres, então ninguém escolhia os vizinhos. No mesmo andar, os vizinhos de porta citavam um ao outro entre as pessoas que mais viam em cerca de 41% dos casos; com duas portas de distância, isso caía para cerca de 22%, e nas pontas opostas do corredor, para cerca de 10%. Quem virava amigo dependia menos da personalidade do que de quem esbarrava em quem todos os dias." },
-      { type: "p", text: "Com casais é parecido. O sociólogo Michael Rosenfeld, de Stanford, e colegas analisaram dados de casais heterossexuais nos Estados Unidos, publicados em 2019: em 2017, 39% tinham se conhecido on-line, 27% num bar ou restaurante e 20% por meio de amigos (um casal pode se encaixar em mais de uma categoria). Cerca de 9 em cada 10 casais que se conheceram on-line eram desconhecidos antes. O canal mudou; a maioria dos encontros ainda começa entre estranhos." },
-      { type: "p", text: "Mas conhecer é só o começo. Pela estimativa de Hall, virar amigo próximo exige mais de 200 horas juntos. As pessoas que você conheceu por acaso se tornaram importantes porque você continuou a vê-las depois." },
-      { type: "h2", text: "Por que a gente esquece como se conheceu" },
-      { type: "p", text: "No dia em que você conhece alguém, não sabe que essa pessoa vai importar, então é um dia comum: você não faz questão de lembrar onde estava, quem apresentou vocês ou sobre o que conversaram. Anos depois, quando ela é uma amiga próxima ou o seu par e você quer contar essa história, a maior parte dos detalhes já se foi." },
-      { type: "p", text: "Isso não é falta de memória. Ninguém sabia que aquele momento merecia ser lembrado enquanto ele acontecia." },
-      { type: "h2", text: "Anote como vocês se conheceram" },
       {
-        type: "steps",
-        items: [
-          "Escreva duas ou três linhas no dia em que se conhecerem: onde foi, quem apresentou e o que puxou a conversa.",
+        "type": "p",
+        "text": "A pergunta voltou à moda com \"1 in 8 Billion\" (algo como \"1 em 8 bilhões\"), um simulador de vida para navegador que um desenvolvedor independente da Coreia do Sul criou com IA no início de outubro de 2026. Usando estatísticas das Nações Unidas, da Organização Mundial da Saúde e do Banco Mundial, o jogo faz de você, por sorteio, uma das 8 bilhões de pessoas e leva essa vida inteira até o fim. Ele explodiu no Threads e, em poucas semanas, foi da Coreia para o Japão e Taiwan. Muita gente terminou uma vida no jogo e ficou pensando em quem conheceu de verdade na sua própria vida."
+      },
+      {
+        "type": "h2",
+        "text": "De onde vêm os \"80 mil\" e os \"8 milhões\""
+      },
+      {
+        "type": "p",
+        "text": "Nas redes sociais em chinês circula uma sequência de números: ao longo da vida, você cruzará com 8.263.563 pessoas, cumprimentará 39.778, conhecerá 3.619 e ficará próximo de 275. Ela costuma vir junto com um vídeo curto, e não se acha nenhum estudo por trás."
+      },
+      {
+        "type": "p",
+        "text": "O número 80 mil tem uma origem mais clara. Max Roser, fundador do Our World in Data, imaginou alguém que conversa com três pessoas novas todos os dias durante 73 anos: essa pessoa chegaria a conhecer cerca de 80 mil. Ele usou o número para defender justamente o contrário: mesmo alguém tão sociável conhece apenas 0,001% do mundo."
+      },
+      {
+        "type": "h2",
+        "text": "Os números que a pesquisa realmente mediu"
+      },
+      {
+        "type": "table",
+        "head": [
+          "Número",
+          "O que mede",
+          "Fonte"
+        ],
+        "rows": [
+          [
+            "8 bilhões",
+            "População mundial, que as Nações Unidas projetaram que seria atingida em 15 de novembro de 2022",
+            "Nações Unidas"
+          ],
+          [
+            "611 pessoas",
+            "Quantas pessoas o americano médio conhece pelo nome; a mediana é 472",
+            "McCormick, Salganik e Zheng, 2010"
+          ],
+          [
+            "Cerca de 150",
+            "Quantos relacionamentos estáveis uma pessoa consegue manter",
+            "Dunbar, 1992; um estudo de 2021 argumentou que a incerteza é grande demais para fixar um único número"
+          ],
+          [
+            "50 / 90 / 200 horas",
+            "Tempo total juntos para passar de conhecido a amigo casual, amigo e amigo próximo",
+            "Hall, 2018"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "O número 611 vem de uma pesquisa nos Estados Unidos, e nenhum outro país tem um estudo dessa escala, mas a ordem de grandeza vale: entre 8 bilhões de pessoas, você conhece algumas centenas pelo nome, e as pessoas com quem você passa 200 horas serão sempre poucas."
+      },
+      {
+        "type": "h2",
+        "text": "As pessoas que importam muitas vezes surgem por acaso"
+      },
+      {
+        "type": "p",
+        "text": "Em 1950, o psicólogo Leon Festinger e seus colegas estudaram o Westgate West, uma moradia do MIT para estudantes casados. Os moradores ocupavam os apartamentos conforme eles ficavam livres, então ninguém escolhia os vizinhos. No mesmo andar, os vizinhos de porta citavam um ao outro entre as pessoas que mais viam em cerca de 41% dos casos; com duas portas de distância, isso caía para cerca de 22%, e nas pontas opostas do corredor, para cerca de 10%. Quem virava amigo dependia menos da personalidade do que de quem esbarrava em quem todos os dias."
+      },
+      {
+        "type": "p",
+        "text": "Com casais é parecido. O sociólogo Michael Rosenfeld, de Stanford, e colegas analisaram dados de casais heterossexuais nos Estados Unidos, publicados em 2019: em 2017, 39% tinham se conhecido on-line, 27% num bar ou restaurante e 20% por meio de amigos (um casal pode se encaixar em mais de uma categoria). Cerca de 9 em cada 10 casais que se conheceram on-line eram desconhecidos antes. O canal mudou; a maioria dos encontros ainda começa entre estranhos."
+      },
+      {
+        "type": "p",
+        "text": "Mas conhecer é só o começo. Pela estimativa de Hall, virar amigo próximo exige mais de 200 horas juntos. As pessoas que você conheceu por acaso se tornaram importantes porque você continuou a vê-las depois."
+      },
+      {
+        "type": "h2",
+        "text": "Por que a gente esquece como se conheceu"
+      },
+      {
+        "type": "p",
+        "text": "No dia em que você conhece alguém, não sabe que essa pessoa vai importar, então é um dia comum: você não faz questão de lembrar onde estava, quem apresentou vocês ou sobre o que conversaram. Anos depois, quando ela é uma amiga próxima ou o seu par e você quer contar essa história, a maior parte dos detalhes já se foi."
+      },
+      {
+        "type": "p",
+        "text": "Isso não é falta de memória. Ninguém sabia que aquele momento merecia ser lembrado enquanto ele acontecia."
+      },
+      {
+        "type": "h2",
+        "text": "Anote como vocês se conheceram"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Escreva duas ou três linhas no dia em que conhecer essa pessoa: onde foi, quem apresentou vocês e o que puxou a conversa.",
           "Coloque a data. Daqui a alguns anos, ela pode ser o dia que vocês vão comemorar.",
           "Anote uma coisa que a pessoa contou primeiro: o trabalho, algo que estava na cabeça dela ou uma frase que ficou com você.",
-          "Você não precisa fazer isso com todo mundo. Só com as pessoas com quem gostaria de conversar de novo.",
-        ],
+          "Você não precisa fazer isso com todo mundo. Só com as pessoas com quem gostaria de conversar de novo."
+        ]
       },
-      { type: "p", text: "Essas poucas linhas são mais do que uma lembrança. No próximo encontro, perguntar \"Você estava se preparando para mudar de casa. Como foi?\" é uma das dezenas de horas que transformam um conhecido em amigo." },
-      { type: "note", text: "O que você escreve é a sua memória, não uma ficha sobre a pessoa. Escreva só o que você não se importaria que ela lesse." },
-      { type: "h2", text: "Como o Sotto ajuda" },
-      { type: "p", text: "O Sotto é um app de notas de pessoas, com uma página para cada uma. O campo \"Encontro\", que já vem pronto, serve para a história de como vocês se conheceram, e a data, seja de um casal ou de uma amizade, pode ir no campo \"Aniv. de casal\": ative o lembrete dele e o Sotto avisa 7 dias antes, às 9h da manhã. Para se aprofundar com alguém que você acabou de conhecer, as 33 perguntas da categoria \"Nos conhecer\" são adaptadas do estudo de 1997 do psicólogo Arthur Aron sobre como estranhos ficam próximos." },
-      { type: "p", text: "Tudo fica no seu celular, protegido pelo próprio bloqueio de tela do aparelho, se você quiser. O Sotto é gratuito para até 5 pessoas, no iPhone e no Android." },
+      {
+        "type": "p",
+        "text": "Essas poucas linhas são mais do que uma lembrança. No próximo encontro, perguntar \"Você estava se preparando para mudar de casa. Como foi?\" é uma das dezenas de horas que transformam um conhecido em amigo."
+      },
+      {
+        "type": "note",
+        "text": "O que você escreve é a sua memória, não uma ficha sobre a pessoa. Escreva só o que você não se importaria que ela lesse."
+      },
+      {
+        "type": "h2",
+        "text": "Como o Sotto ajuda"
+      },
+      {
+        "type": "p",
+        "text": "O Sotto é um app de notas sobre pessoas, com uma página para cada uma. O campo \"Encontro\", que já vem pronto, serve para a história de como vocês se conheceram, e a data pode ir no campo \"Aniversário de casal\": ative o lembrete dele e o Sotto avisa 7 dias antes, às 9h da manhã. Para se aprofundar com alguém que você acabou de conhecer, as 33 perguntas da categoria \"Nos conhecer\" são adaptadas do estudo de 1997 do psicólogo Arthur Aron sobre como estranhos ficam próximos."
+      },
+      {
+        "type": "p",
+        "text": "Tudo fica no seu celular, protegido pelo bloqueio de tela dele, se você quiser. O Sotto é gratuito para até 5 pessoas, no iPhone e no Android."
+      }
     ],
-    related: ["remember-details-about-people", "gift-log"],
-  },
+    "related": [
+      "remember-details-about-people",
+      "gift-log"
+    ]
+  }
 ];

@@ -1,4 +1,5 @@
 {
+  "//": "Generated from en and the pt-BR translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sotto sync pt-BR`, then `npm run l10n -- sotto apply pt-BR`.",
   "nav": {
     "features": "Recursos",
     "privacy": "Privacidade",
@@ -11,7 +12,7 @@
   "hero": {
     "meta_title": "Sotto — CRM pessoal para lembrar de quem você ama",
     "meta_description": "Sotto é um CRM pessoal e privado para iPhone e Android: lembre tamanhos, aniversários, alergias e ideias de presente das pessoas que você ama.",
-    "tagline": "CRM pessoal para quem você ama",
+    "tagline": "Notas carinhosas sobre as pessoas e os detalhes que importam",
     "description": "Cada pessoa carrega pequenos detalhes que valem a pena lembrar. O Sotto guarda eles pra você — alturas, preferências, aquelas coisas que só você sabe. Todos os dados ficam no seu celular, te acompanhando em silêncio.",
     "download": "Baixar na App Store",
     "downloadAndroid": "Disponível no Google Play",
