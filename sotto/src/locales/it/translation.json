@@ -1,4 +1,5 @@
 {
+  "//": "Generated from en and the it translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sotto sync it`, then `npm run l10n -- sotto apply it`.",
   "nav": {
     "features": "Funzionalità",
     "privacy": "Privacy",
@@ -11,7 +12,7 @@
   "hero": {
     "meta_title": "Sotto — CRM personale per ricordare chi ami",
     "meta_description": "Sotto è un CRM personale privato per iPhone e Android: ricorda taglie, compleanni, allergie e idee regalo delle persone che ami.",
-    "tagline": "Il CRM personale per le persone che ami",
+    "tagline": "Note sulle persone, con cura, per i dettagli che contano",
     "description": "Ogni persona porta con sé piccoli dettagli che meritano di essere ricordati. Sotto li custodisce per te — altezze, preferenze, quelle cose che solo tu conosci. Tutti i dati restano sul tuo telefono, in silenzio.",
     "download": "Scarica dall'App Store",
     "downloadAndroid": "Disponibile su Google Play",
@@ -89,7 +90,7 @@
       "diadialydia": {
         "title": "Funzione richiesta~~",
         "date": "28 mag 2026",
-        "body": "Se si potessero aggiungere amici, collegarsi e mandarsi domande a cui si vorrebbe che l'altro rispondesse (tipo «Qual è il ricordo di noi che ricordi di più?» o «Quando ti senti amato da me?»), sarebbe un'app potentissima!",
+        "body": "Se si potessero aggiungere amici, entrare in contatto e scambiarsi domande a cui vorremmo che l'altra persona rispondesse (tipo «Qual è il ricordo di noi che ti è rimasto più impresso?» o «Quando ti senti amato/a da me?»), sarebbe un'app potentissima!",
         "response": "Non volevamo che un giorno i costi dei server costringessero a chiudere questa funzione, o l'intera app (e non vogliamo far pagare un abbonamento), così abbiamo creato un catalogo di domande: ne scegli una e ne parlate con calma. Seduti uno di fronte all'altro, con un caffè o un bicchiere, si sentono meglio i pensieri dell'altro che rispondendo in un'app. Speriamo ti piaccia",
         "response_date": "19 giu 2026",
         "shipped": "un catalogo di 323 domande per conversare."
