@@ -1,4 +1,4 @@
-// Generated from en and the es-419 translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync es-419`, then `npm run l10n -- apply es-419`.
+// Generated from en and the es-419 translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync es-419`, then `npm run l10n -- dingpos apply es-419`.
 
 export const categories = [
   {

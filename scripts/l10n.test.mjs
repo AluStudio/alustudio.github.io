@@ -5,7 +5,9 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync, utimesSync
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { apply, check, enHash, enUnits, newLanguage, progress, readManifest, readRegistry, sitePaths, sync, textOf } from "./l10n.mjs";
+import { APPS, apply, check, enHash, enUnits, newLanguage, progress, readManifest, readRegistry, sitePaths, sync, textOf } from "./l10n.mjs";
+
+const DINGPOS = APPS.dingpos;
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -81,7 +83,7 @@ function fixture() {
   write(join(appRepo, "l10n/glossary/ja.md"), "# Glossary — Japanese (ja)\n");
   write(join(appRepo, "DesignSystem/Sources/Resources/Strings/en.lproj/Localizable.strings"), APP_EN);
   write(join(appRepo, "DesignSystem/Sources/Resources/Strings/ja.lproj/Localizable.strings"), APP_JA);
-  return { paths: sitePaths(root), appRepo };
+  return { paths: sitePaths("dingpos", root), appRepo };
 }
 
 const readPacket = (paths, segment) => JSON.parse(readFileSync(paths.logs("ja", "packets", `${segment}.json`), "utf8"));
@@ -122,7 +124,7 @@ async function translateAll(paths, appRepo) {
 }
 
 test("registry: every prefix is its hreflang in lowercase, and es-419 is served as es", () => {
-  const languages = readRegistry(sitePaths(REPO));
+  const languages = readRegistry(sitePaths("dingpos", REPO));
   assert.equal(languages.length, 32);
   assert.equal(new Set(languages.map((l) => l.pathPrefix)).size, languages.length);
   for (const l of languages) assert.equal(l.pathPrefix, l.code === "en" ? "" : l.hreflang.toLowerCase(), l.code);
@@ -134,7 +136,7 @@ test("registry: every prefix is its hreflang in lowercase, and es-419 is served 
 test("enUnits: one unit per UI string, category and article, segmented by top-level key and category", async () => {
   const { paths } = fixture();
   const pack = await import(pathToFileURL(paths.pack("en")).href);
-  const units = enUnits({ ui: EN_UI, pack });
+  const units = enUnits(DINGPOS, { ui: EN_UI, pack });
   assert.deepEqual(
     units.map((u) => [u.id, u.segment]),
     [
@@ -160,10 +162,10 @@ test("enHash: only text fields count — related, since and icon changes keep th
   const { paths } = fixture();
   const { articles } = await import(pathToFileURL(paths.pack("en")).href);
   const article = articles[0];
-  const hash = enHash(textOf(article));
-  assert.equal(enHash(textOf({ ...article, related: [], since: "3.0" })), hash);
-  assert.notEqual(enHash(textOf({ ...article, question: "How do I open my store?" })), hash);
-  assert.notEqual(enHash(textOf({ ...article, content: [...article.content, { type: "note", text: "New." }] })), hash);
+  const hash = enHash(textOf(DINGPOS, article));
+  assert.equal(enHash(textOf(DINGPOS, { ...article, related: [], since: "3.0" })), hash);
+  assert.notEqual(enHash(textOf(DINGPOS, { ...article, question: "How do I open my store?" })), hash);
+  assert.notEqual(enHash(textOf(DINGPOS, { ...article, content: [...article.content, { type: "note", text: "New." }] })), hash);
 });
 
 test("new: an empty manifest and the site glossary from the template; non-translated languages are refused", () => {
@@ -185,7 +187,8 @@ test("sync: packets carry the app's translation of identical en strings and the 
   assert.deepEqual(segments.map((s) => s.segment).sort(), ["faq-backup", "faq-getting-started", "ui-pricing", "ui-site", "ui-terms"]);
 
   const site = readPacket(paths, "ui-site");
-  assert.equal(site.output, ".logs/l10n/ja/out/ui-site.json");
+  assert.equal(site.output, ".logs/l10n/dingpos/ja/out/ui-site.json");
+  assert.deepEqual([site.app, site.contract], ["dingpos", ".pi/l10n/dingpos.md"]);
   assert.equal(site.glossary.app, join(appRepo, "l10n/glossary/ja.md"));
   assert.equal(site.glossary.site, "dingpos/l10n/glossary/ja.md");
   const privacy = site.units.find((u) => u.id === "ui:nav.privacy");
@@ -213,7 +216,7 @@ test("apply: writes the strings, the pack with every structure field from en, an
   assert.deepEqual(ui.terms.items, ["再販売の禁止。", "リバースエンジニアリングの禁止。"], "en arrays stay arrays (pages map over them)");
 
   const packText = readFileSync(paths.pack("ja"), "utf8");
-  assert.match(packText, /^\/\/ Generated from en and the ja translations by scripts\/l10n\.mjs\. Do not edit/);
+  assert.match(packText, /^\/\/ Generated from en and the ja translations by scripts\/l10n\.mjs\. Do not edit: translate through `npm run l10n -- dingpos sync ja`/);
   const pack = await import(`${pathToFileURL(paths.pack("ja")).href}?t=1`);
   assert.deepEqual(pack.categories[0], { key: "getting-started", icon: "bi-rocket", label: "はじめに", group: "faq" });
   const [setUp, backup] = pack.articles;
@@ -224,7 +227,7 @@ test("apply: writes the strings, the pack with every structure field from en, an
 
   const manifest = readManifest(paths, "ja");
   assert.equal(Object.keys(manifest).length, 13);
-  assert.equal(manifest["faq:backup-data"], enHash(textOf((await import(pathToFileURL(paths.pack("en")).href)).articles[1])));
+  assert.equal(manifest["faq:backup-data"], enHash(textOf(DINGPOS, (await import(pathToFileURL(paths.pack("en")).href)).articles[1])));
 
   const again = await sync(paths, "ja", { appRepo });
   assert.equal(again.total, 0, "nothing is left to translate");
@@ -346,8 +349,8 @@ function shipTranslated(paths, codes) {
   writeFileSync(paths.registry, JSON.stringify(registry));
 }
 
-test("every shipped translated language in this repo is current with en (run `npm run l10n -- sync <code>`)", async () => {
-  assert.deepEqual(await check(sitePaths(REPO)), []);
+test("every shipped translated language in this repo is current with en (run `npm run l10n -- <app> sync <code>`)", async () => {
+  assert.deepEqual(await check(sitePaths("dingpos", REPO)), []);
 });
 
 test("check: an en article change fails the shipped language, naming the article", async () => {
@@ -356,7 +359,7 @@ test("check: an en article change fails the shipped language, naming the article
   shipTranslated(paths, ["ja"]);
   assert.deepEqual(await check(paths), []);
   write(paths.pack("en"), EN_PACK.replace("Tap Back Up Now.", "Tap Back Up Now in Settings."));
-  assert.deepEqual(await check(paths), ["ja: 1 stale unit(s) — faq:backup-data — en changed since translation; npm run l10n -- sync ja"]);
+  assert.deepEqual(await check(paths), ["dingpos ja: 1 stale unit(s) — faq:backup-data — en changed since translation; npm run l10n -- dingpos sync ja"]);
 });
 
 test("check: a new en article or UI key is missing; an unshipped language is not checked", async () => {
@@ -366,7 +369,7 @@ test("check: a new en article or UI key is missing; an unshipped language is not
   shipTranslated(paths, []);
   assert.deepEqual(await check(paths), [], "ja is not shipped yet");
   shipTranslated(paths, ["ja"]);
-  assert.deepEqual(await check(paths), ["ja: 1 missing unit(s) — ui:nav.support — npm run l10n -- sync ja"]);
+  assert.deepEqual(await check(paths), ["dingpos ja: 1 missing unit(s) — ui:nav.support — npm run l10n -- dingpos sync ja"]);
 });
 
 test("check: a hand edit or an unapplied en structure change fails until apply regenerates the pack", async () => {
@@ -397,4 +400,21 @@ test("progress: starts from the registry's translated languages, shipped ones do
   } finally {
     delete process.env.ALUSTUDIO_SITE_L10N_STATE;
   }
+});
+
+test("CLI: every command names its app; only check may omit it, and an unknown app is a usage error", () => {
+  const run = (...args) => {
+    try {
+      execFileSync(process.execPath, [join(REPO, "scripts/l10n.mjs"), ...args], { encoding: "utf8", stdio: "pipe" });
+      return { status: 0 };
+    } catch (error) {
+      return { status: error.status, stderr: error.stderr };
+    }
+  };
+  const unknown = run("pikgeon", "sync", "ja");
+  assert.equal(unknown.status, 2);
+  assert.match(unknown.stderr, /unknown app "pikgeon"/);
+  assert.match(unknown.stderr, /npm run l10n -- <app> sync <code>/);
+  assert.equal(run("sync", "ja").status, 2, "the old form without an app is gone");
+  assert.equal(run().status, 2);
 });

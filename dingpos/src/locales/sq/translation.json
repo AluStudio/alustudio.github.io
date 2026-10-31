@@ -1,5 +1,5 @@
 {
-  "//": "Generated from en and the sq translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync sq`, then `npm run l10n -- apply sq`.",
+  "//": "Generated from en and the sq translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync sq`, then `npm run l10n -- dingpos apply sq`.",
   "nav": {
     "home": "Kreu",
     "pricing": "Çmimet",

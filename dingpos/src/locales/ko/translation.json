@@ -1,5 +1,5 @@
 {
-  "//": "Generated from en and the ko translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync ko`, then `npm run l10n -- apply ko`.",
+  "//": "Generated from en and the ko translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync ko`, then `npm run l10n -- dingpos apply ko`.",
   "nav": {
     "home": "홈",
     "pricing": "요금제",

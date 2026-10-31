@@ -1,4 +1,4 @@
-// Generated from en and the et translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync et`, then `npm run l10n -- apply et`.
+// Generated from en and the et translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync et`, then `npm run l10n -- dingpos apply et`.
 
 export const categories = [
   {

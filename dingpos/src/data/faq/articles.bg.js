@@ -1,4 +1,4 @@
-// Generated from en and the bg translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync bg`, then `npm run l10n -- apply bg`.
+// Generated from en and the bg translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync bg`, then `npm run l10n -- dingpos apply bg`.
 
 export const categories = [
   {

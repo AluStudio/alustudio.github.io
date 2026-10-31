@@ -1,6 +1,6 @@
 # Site glossary template
 
-`npm run l10n -- new <code>` copies this file to `dingpos/l10n/glossary/<code>.md`. The translator fills it before translating any packet, and the reviewer holds every value to it.
+`npm run l10n -- dingpos new <code>` copies this file to `dingpos/l10n/glossary/<code>.md`. The translator fills it before translating any packet, and the reviewer holds every value to it.
 
 This file is for words only the website uses. The app's own glossary (`l10n/glossary/<code>.md` in the DingPOS app repo, linked from every packet) already fixes the domain terms (Pre-order, Void, Settlement…) and the app's UI vocabulary, and every packet carries the app's exact translation of strings the site shares with the app (`appMatch`, `appTerms`). Never redefine a term those already settle; add a row here only for a word the app never shows.
 
