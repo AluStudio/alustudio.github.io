@@ -477,7 +477,7 @@ export const articles = [
       { type: "p", text: "Pick Today, Yesterday, This Week, This Month, This Year, or All Time at the top of Stats, or use Custom to choose a start and end date. This Week follows the device's first day of the week; This Month and This Year start on the 1st and on January 1. Each option shows the dates it covers, and All Time starts from your store's first transaction." },
       { type: "p", text: "For a single day, the trend chart becomes an hourly bar chart; longer periods use days, weeks, months, or years per bar depending on length." },
       { type: "p", text: "The Product Ranking card lists the top 5. Tap the card or View All to list every product sold in the period, ranked by quantity after returns." },
-      { type: "p", text: "On the Pro plan, Sales comparison on the right of the period bar compares the period with the one before it or with the same period last year — see “What do the Pro advanced reports show?”" },
+      { type: "p", text: "Sales comparison on the right of the period bar compares the period with the one before it or with the same period last year — see “What do the advanced reports show?”" },
       { type: "note", text: "These calendar periods arrived in v2.4; earlier versions offered rolling ranges (Today / 7 Days / 30 Days / All Time). If you still see those, update DingPOS from the App Store." },
     ],
     related: ["advanced-reports", "revenue-vs-cash", "profit-not-tracked"],
@@ -486,8 +486,8 @@ export const articles = [
     slug: "advanced-reports",
     category: "reports",
     since: "3.0",
-    question: "What do the Pro advanced reports show?",
-    keywords: ["advanced reports", "pro", "sales comparison", "last year", "heatmap", "busy hours", "slow movers", "stock value", "repeat rate", "points"],
+    question: "What do the advanced reports show?",
+    keywords: ["advanced reports", "sales comparison", "last year", "heatmap", "busy hours", "slow movers", "stock value", "repeat rate", "points"],
     content: [
       { type: "p", text: "Advanced reports aren't a separate screen — they sit right on Stats and follow the period you pick at the top:" },
       {
@@ -500,7 +500,8 @@ export const articles = [
           "Right now: stock value (current stock × current cost), every stock movement in the selected period, and the points customers hold but haven't redeemed, with the most they can take off. These are current balances; the period doesn't change them.",
         ],
       },
-      { type: "p", text: "Without Pro, each of these five spots carries a small lock that opens an upgrade explanation; everything else on Stats works as before. The reports read data your store already keeps, so when Pro ends only the reports are hidden — no data is lost." },
+      { type: "p", text: "Since v3.4, all five are open on every plan — Lite, Standard and Pro, during the trial and after it ends. Earlier versions showed them on Pro only, with a small lock on other plans; if you still see the locks, update DingPOS from the App Store." },
+      { type: "p", text: "Lite doesn't track stock or loyalty points, but Right now still shows the stock value and unredeemed points your store already holds (for example from the trial), or zero." },
       { type: "note", text: "Staff see advanced reports under the Dashboard permission; the stock value amounts also need the Cost & profit permission." },
     ],
     related: ["report-periods", "inventory-tracking", "staff-permissions"],
@@ -812,8 +813,8 @@ export const articles = [
     question: "How does the free trial work?",
     keywords: ["trial", "free", "30 days"],
     content: [
-      { type: "p", text: "You get 30 days of every Pro plan feature from first install, including staff accounts, permissions, the activity log and advanced reports — no account required." },
-      { type: "p", text: "Subscribing to any plan during the trial ends the trial right away, and the plan you bought applies from then on. After the trial, Pro features such as staff and advanced reports stay available only with a Pro subscription." },
+      { type: "p", text: "You get 30 days of every Pro plan feature from first install, including staff accounts, permissions and the activity log — no account required." },
+      { type: "p", text: "Subscribing to any plan during the trial ends the trial right away, and the plan you bought applies from then on. After the trial, Pro features such as staff and the activity log stay available only with a Pro subscription. Since v3.4, advanced reports stay available on every plan." },
       { type: "p", text: "Within the last 7 days and on the final day, the app reminds you once each how many days are left, that checkout pauses when the trial ends, and that your data is kept." },
       { type: "p", text: "Everything you create during the trial (products, orders, members) is kept in full. Your data is never deleted, whether or not you subscribe afterwards." },
     ],
@@ -837,13 +838,13 @@ export const articles = [
     question: "What's the difference between Lite, Standard, and Pro?",
     keywords: ["plans", "lite", "standard", "pro", "difference", "compare", "upgrade", "downgrade", "pricing"],
     content: [
-      { type: "p", text: "All three plans include full checkout, products, orders (with voids, returns, and exchanges), reports, and cloud backup. They differ in the tools for running the shop:" },
+      { type: "p", text: "All three plans include full checkout, products, orders (with voids, returns, and exchanges), reports (advanced reports included since v3.4), and cloud backup. They differ in the tools for running the shop:" },
       {
         type: "list",
         items: [
           "Lite: for one person running a stall who needs checkout and products.",
           "Standard: adds promotions, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, pre-orders, and payment fee estimates.",
-          "Pro: adds staff accounts and permissions, manager approval, the activity log, restore records, and advanced reports — for shops with staff.",
+          "Pro: adds staff accounts and permissions, manager approval, the activity log, and restore records — for shops with staff.",
         ],
       },
       { type: "p", text: "Already on Standard? Upgrade to Pro from the subscription page: billing stays on the same cycle, the upgrade takes effect immediately, and Apple prorates the difference. Moving from Pro back to Standard takes effect at renewal. Prices are shown in the app, and you can compare plans on our Pricing page." },
