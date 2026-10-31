@@ -5,8 +5,8 @@
  * crawlers) do not execute JavaScript, so a client-side redirect trick would
  * not work for them.
  *
- * Every page exists once per language — English unprefixed, the other eleven
- * under /sotto/<prefix>/ — with its own <html lang> (and dir="rtl" for
+ * Every page exists once per shipped language of l10n/languages.json —
+ * English unprefixed, every other language under /sotto/<pathPrefix>/ — with its own <html lang> (and dir="rtl" for
  * Arabic), og:locale and the full hreflang set, so each language is separately
  * indexable (docs/specs/seo-aeo.md §多語系 URL). Guide pages also get a
  * BreadcrumbList (Sotto → Guides → guide) in the static head.
@@ -36,6 +36,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
 const src = join(dist, "index.html");
 const sitemapPath = join(__dirname, "..", "..", "sitemap.xml");
+const registryPath = join(__dirname, "..", "l10n", "languages.json");
 
 const BASE_URL = "https://alu-studio.com/sotto";
 const SITE_NAME = "Sotto";
@@ -46,27 +47,45 @@ const readLocale = (code) =>
 const readGuides = async (code) =>
   (await import(pathToFileURL(join(__dirname, "..", "src", "data", "guides", `guides.${code}.js`)).href)).articles;
 
-// Every language gets its own URL tree; the first entry is the unprefixed
-// x-default. `pathPrefix` mirrors supportedLanguages in src/i18n.js.
-const LOCALE_DEFS = [
-  { code: "en", pathPrefix: "", ogLocale: "en_US" },
-  { code: "zh-Hant", pathPrefix: "zh-hant/", ogLocale: "zh_TW" },
-  { code: "zh-Hans", pathPrefix: "zh-hans/", ogLocale: "zh_CN" },
-  { code: "ja", pathPrefix: "ja/", ogLocale: "ja_JP" },
-  { code: "ko", pathPrefix: "ko/", ogLocale: "ko_KR" },
-  { code: "de", pathPrefix: "de/", ogLocale: "de_DE" },
-  { code: "es", pathPrefix: "es/", ogLocale: "es_ES" },
-  { code: "fr", pathPrefix: "fr/", ogLocale: "fr_FR" },
-  { code: "it", pathPrefix: "it/", ogLocale: "it_IT" },
-  { code: "pt-BR", pathPrefix: "pt-br/", ogLocale: "pt_BR" },
-  { code: "ru", pathPrefix: "ru/", ogLocale: "ru_RU" },
-  { code: "ar", pathPrefix: "ar/", ogLocale: "ar_AR", dir: "rtl" },
-];
+// Every shipped language gets its own URL tree; the registry's one unprefixed
+// language (en) is the x-default. src/i18n.js reads the same registry.
+const registry = JSON.parse(readFileSync(registryPath, "utf8")).languages;
+
+// A registry that disagrees with itself ships pages whose canonical, hreflang
+// and router basename point at each other's URLs.
+function validateRegistry() {
+  const errors = [];
+  const seen = { code: new Set(), pathPrefix: new Set() };
+  for (const { code, hreflang, pathPrefix } of registry) {
+    if (pathPrefix !== "" && pathPrefix !== hreflang.toLowerCase()) {
+      errors.push(`${code} has pathPrefix "${pathPrefix}", not its hreflang "${hreflang}" in lowercase`);
+    }
+    for (const [field, value] of [["code", code], ["pathPrefix", pathPrefix]]) {
+      if (seen[field].has(value)) errors.push(`languages.json has two entries with ${field} "${value}"`);
+      seen[field].add(value);
+    }
+  }
+  const unprefixed = registry.filter((l) => l.pathPrefix === "").length;
+  if (unprefixed !== 1) errors.push(`languages.json must have exactly one unprefixed language (the x-default), found ${unprefixed}`);
+  fail("Language registry validation failed", errors);
+}
+
+validateRegistry();
 
 const LOCALES = await Promise.all(
-  LOCALE_DEFS.map(async (def) => ({ ...def, ui: readLocale(def.code), guides: await readGuides(def.code) })),
+  registry
+    .filter((l) => l.shipped)
+    .map(async ({ code, hreflang, pathPrefix, ogLocale, dir }) => ({
+      code,
+      hreflang,
+      pathPrefix: pathPrefix ? `${pathPrefix}/` : "",
+      ogLocale,
+      dir,
+      ui: readLocale(code),
+      guides: await readGuides(code),
+    })),
 );
-const DEFAULT_LOCALE = LOCALES[0];
+const DEFAULT_LOCALE = LOCALES.find((l) => l.pathPrefix === "");
 
 const STATIC_ROUTES = [
   { path: "faq", meta: (ui) => [ui.faq.meta_title, ui.faq.meta_description] },
@@ -226,11 +245,11 @@ const template = readFileSync(src, "utf8");
 
 for (const { path, title, description, jsonLd, locale, url } of pages) {
   const versions = [
-    ...LOCALES.map((l) => ({ hreflang: l.code, href: routeUrl(l, path) })),
+    ...LOCALES.map((l) => ({ hreflang: l.hreflang, href: routeUrl(l, path) })),
     { hreflang: "x-default", href: routeUrl(DEFAULT_LOCALE, path) },
   ];
   let html = setSelfCanonical(template, url);
-  html = setHtmlLang(html, locale.code, locale.dir ?? "ltr");
+  html = setHtmlLang(html, locale.hreflang, locale.dir ?? "ltr");
   html = setPageMeta(html, { title, description });
   html = setLanguageAlternates(html, {
     ogLocale: locale.ogLocale,
