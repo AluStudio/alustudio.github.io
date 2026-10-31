@@ -200,8 +200,7 @@
         "features": [
           "Medarbetarkonton: en PIN-kod var, varje order visar vem som registrerade den",
           "Behörigheter och godkännanden: rabatter över rabatttaket, ändringar av produkter och lager, visning av inköpspriser",
-          "Aktivitetslogg och återställningslogg",
-          "Avancerade rapporter: periodjämförelse, försäljningsvärmekarta, långsamgående produkter, lagervärde, återkommande kunder"
+          "Aktivitetslogg och återställningslogg"
         ],
         "cta": "Starta den kostnadsfria provperioden på 30 dagar"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Vad kan jag använda under den gratis provperioden?",
-          "a": "Under 30 dagar från första installationen får du alla funktioner, även Pro-funktioner som personal, behörigheter och avancerade rapporter – inget konto behövs. Om du prenumererar på en plan under provperioden avslutas provperioden direkt och du går över till den plan du köpt."
+          "a": "Under 30 dagar från första installationen får du alla funktioner, även Pro-funktioner som personal, behörigheter och aktivitetsloggen – inget konto behövs. Om du prenumererar på en plan under provperioden avslutas provperioden direkt och du går över till den plan du köpt."
         },
         {
           "q": "Vad händer om jag inte prenumererar efter provperioden?",

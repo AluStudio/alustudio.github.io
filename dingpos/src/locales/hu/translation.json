@@ -200,8 +200,7 @@
         "features": [
           "Munkatársak saját PIN-kóddal: minden rendelés rögzíti, ki ütötte be",
           "Jogosultságok és jóváhagyások: a felső határt meghaladó engedmények, termék- és készletszerkesztés, költségek megtekintése",
-          "Tevékenységnapló és visszaállítási bejegyzések",
-          "Részletes jelentések: időszak-összehasonlítás, értékesítési hőtérkép, lassan forgó termékek, készletérték, visszatérő vásárlók"
+          "Tevékenységnapló és visszaállítási bejegyzések"
         ],
         "cta": "30 napos ingyenes próba indítása"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Mit használhatok az ingyenes próba alatt?",
-          "a": "Az első telepítéstől számított 30 napig minden funkciót megkap, a Pro funkciókat is, például a munkatársakat, jogosultságokat és részletes jelentéseket – fiók nélkül. Ha a próba alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és átvált a megvásárolt csomagra."
+          "a": "Az első telepítéstől számított 30 napig minden funkciót megkap, a Pro funkciókat is, például a munkatársakat, jogosultságokat és a tevékenységnaplót – fiók nélkül. Ha a próba alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és átvált a megvásárolt csomagra."
         },
         {
           "q": "Mi történik, ha a próba után nem fizetek elő?",

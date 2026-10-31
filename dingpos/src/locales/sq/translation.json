@@ -200,8 +200,7 @@
         "features": [
           "Llogari punonjësish: nga një PIN secili, çdo porosi regjistron kush e ka kryer",
           "Leje dhe miratime: zbritje mbi kufi, ndryshime të produkteve dhe stokut, shikimi i kostove",
-          "Regjistri i aktivitetit dhe historiku i rivendosjeve",
-          "Raporte të avancuara: krahasim periudhash, hartë nxehtësie e shitjeve, produkte me shitje të ngadalta, vlera e inventarit, klientë që kthehen"
+          "Regjistri i aktivitetit dhe historiku i rivendosjeve"
         ],
         "cta": "Nis provën falas 30-ditore"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Çfarë mund të përdor gjatë provës falas?",
-          "a": "Për 30 ditë nga instalimi i parë ke çdo veçori, përfshirë ato Pro si stafi, lejet dhe raportet e avancuara, pa llogari. Nëse abonohesh në çfarëdo plani gjatë provës, prova mbaron menjëherë dhe kalon te plani që bleve."
+          "a": "Për 30 ditë nga instalimi i parë ke çdo veçori, përfshirë ato Pro si stafi, lejet dhe regjistri i aktivitetit, pa llogari. Nëse abonohesh në çfarëdo plani gjatë provës, prova mbaron menjëherë dhe kalon te plani që bleve."
         },
         {
           "q": "Çfarë ndodh nëse nuk abonohem pas provës?",

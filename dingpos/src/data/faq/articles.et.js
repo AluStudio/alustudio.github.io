@@ -1047,7 +1047,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pro paketis võrdleb perioodiriba paremal küljel olev müügivõrdlus perioodi eelmise perioodi või eelmise aasta sama perioodiga — vaata „Mida näitavad Pro täiustatud aruanded?“"
+        "text": "Perioodiriba paremal küljel olev müügivõrdlus võrdleb perioodi eelneva perioodi või eelmise aasta sama perioodiga — vaata „Mida näitavad täiustatud aruanded?“"
       },
       {
         "type": "note",
@@ -1064,10 +1064,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Mida näitavad Pro täiustatud aruanded?",
+    "question": "Mida näitavad täiustatud aruanded?",
     "keywords": [
       "täiustatud aruanded",
-      "pro",
       "müügivõrdlus",
       "eelmine aasta",
       "soojuskaart",
@@ -1085,7 +1084,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Müügivõrdlus: perioodiribast paremal saad võrrelda eelmise aasta sama perioodi või eelmise perioodiga (üks päev eelmise nädala sama päevaga, see nädal eelmise nädalaga, see kuu eelmise kuuga, see aasta eelmise aastaga, oma vahemik sama pikkuse varasema vahemikuga). Paneel Laekunud raha näitab vahet ja kasvumäära ning müügitulu graafikule lisandub heledam joon võrdlusperioodi kohta. Kui periood veel kestab, lõpeb võrdlusperiood sama ajahetkega.",
+          "Müügivõrdlus: perioodiribast paremal saad võrrelda eelmise aasta sama perioodi või eelneva perioodiga (üks päev eelmise nädala sama päevaga, see nädal eelmise nädalaga, see kuu eelmise kuuga, see aasta eelmise aastaga, oma vahemik sama pikkuse varasema vahemikuga). Paneel Laekunud raha näitab vahet ja kasvumäära ning müügitulu graafikule lisandub heledam joon võrdlusperioodi kohta. Kui periood veel kestab, lõpeb võrdlusperiood sama ajahetkega.",
           "Nädalapäev × tund: lülita pealkiri Müük ajas valikule Nädalapäev × tund, et näha seitsmepäevast 24-tunnist soojuskaarti — mida tumedam lahter, seda rohkem müüsid. Lülitu müügitulu ja müükide vahel; kui võrdlus on sees, näed, millised tunnid kasvasid ja millised kahanesid.",
           "Aeglase käibega tooted: lülita edetabelikaardi pealkiri valikule Aeglase käibega tooted, et näha tooteid vähimast müügist suurimani koos praeguse laoseisu ja viimase müügikuupäevaga. Tooted, mida pole kunagi müüdud, on märgitud „Pole müüdud“. Vaikimisi näidatakse ainult laos olevaid tooteid.",
           "Korduvostude määr: kliendipaneeli viimane rida näitab liikmete osakaalu, kes ostsid perioodis ja on kokku ostnud kaks või enam korda.",
@@ -1094,7 +1093,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ilma Pro paketita on igal neist viiest kohast väike lukk, mis avab uuendamise selgituse; kõik muu Aruanded vahekaardil töötab nagu varem. Aruanded loevad andmeid, mida su pood juba hoiab, nii et Pro lõppedes peidetakse ainult täiustatud aruanded — andmeid ei kao."
+        "text": "Alates versioonist v3.4 on kõik viis avatud igas paketis — Lite, Standard ja Pro, nii prooviperioodil kui ka pärast selle lõppu. Varasemad versioonid näitasid neid ainult Pro paketis ja teistel pakettidel oli väike lukk; kui näed lukke endiselt, uuenda DingPOS App Store'ist."
+      },
+      {
+        "type": "p",
+        "text": "Lite ei jälgi laoseisu ega püsikliendipunkte, kuid Praegu näitab siiski laojäägi väärtust ja kasutamata punkte, mis su poel juba on (näiteks prooviperioodist), või nulli."
       },
       {
         "type": "note",
@@ -1735,11 +1738,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alates esmasest installimisest saad 30 päeva kasutada kõiki Pro paketi funktsioone, sealhulgas töötajaid, õigusi, tegevuslogi ja täiustatud aruandeid. Kontot pole vaja luua."
+        "text": "Alates esmasest installimisest saad 30 päeva kasutada kõiki Pro paketi funktsioone, sealhulgas töötajakontosid, õigusi ja tegevuslogi. Kontot pole vaja luua."
       },
       {
         "type": "p",
-        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajad ja täiustatud aruanded, kättesaadavaks vaid Pro tellimusega."
+        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajad ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Alates versioonist v3.4 on täiustatud aruanded kättesaadavad igas paketis."
       },
       {
         "type": "p",
@@ -1800,14 +1803,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kõik kolm paketti sisaldavad täisfunktsionaalset kassat, tooteid, müüke (koos anuleerimiste, tagastuste ja vahetustega), aruandeid ja pilvevarundust. Need erinevad poe juhtimise tööriistade poolest:"
+        "text": "Kõik kolm paketti sisaldavad täisfunktsionaalset kassat, tooteid, müüke (koos anuleerimiste, tagastuste ja vahetustega), aruandeid (täiustatud aruanded alates versioonist v3.4) ja pilvevarundust. Need erinevad poe juhtimise tööriistade poolest:"
       },
       {
         "type": "list",
         "items": [
           "Lite: ühele inimesele, kes peab turulettu ning vajab kassat ja tooteid.",
           "Standard: lisab kampaaniad, püsikliendipunktid ja tasemed, laoseisu jälgimise, ostutellimused, müügi arvele, ettetellimused ja makse teenustasude hinnangud.",
-          "Pro: lisab töötajakontod ja õigused, heakskiidu, tegevuslogi, taastamise kirjed ja täiustatud aruanded – töötajatega poodidele."
+          "Pro: lisab töötajakontod ja õigused, heakskiidu, tegevuslogi ja taastamise kirjed – töötajatega poodidele."
         ]
       },
       {

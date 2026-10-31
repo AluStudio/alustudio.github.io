@@ -1050,7 +1050,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pro-paketissa Myynnin vertailu jaksopalkin oikeassa reunassa vertaa valittua jaksoa sitä edeltävään jaksoon tai viime vuoden vastaavaan jaksoon. Katso lisää kohdasta ”Mitä Pron laajennetut raportit näyttävät?”"
+        "text": "Jaksopalkin oikeassa reunassa oleva Myynnin vertailu vertaa valittua jaksoa sitä edeltävään jaksoon tai viime vuoden vastaavaan jaksoon. Katso lisää kohdasta ”Mitä laajennetut raportit näyttävät?”"
       },
       {
         "type": "note",
@@ -1067,10 +1067,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Mitä Pron laajennetut raportit näyttävät?",
+    "question": "Mitä laajennetut raportit näyttävät?",
     "keywords": [
       "laajennetut raportit",
-      "pro",
       "myynnin vertailu",
       "viime vuosi",
       "lämpökartta",
@@ -1090,18 +1089,22 @@ export const articles = [
         "items": [
           "Myynnin vertailu: jaksopalkin oikeassa reunassa voit verrata viime vuoden vastaavaan jaksoon tai edelliseen jaksoon (yksittäistä päivää viime viikon samaan päivään, tätä viikkoa viime viikkoon, tätä kuukautta viime kuukauteen, tätä vuotta viime vuoteen ja mukautettua aikaväliä yhtä pitkään jaksoon sitä ennen). Saapunut maksu -ruutu näyttää eron ja kasvuprosentin, ja liikevaihtokaavioon tulee vaaleampi viiva vertailujaksolle. Jos jakso on vielä käynnissä, vertailujakso katkaistaan samaan hetkeen.",
           "Viikonpäivä × tunti: vaihda Myynti ajan mittaan -otsikon näkymäksi Viikonpäivä × tunti, niin saat seitsemän päivän ja 24 tunnin lämpökartan. Mitä tummempi ruutu, sitä enemmän myit. Voit vaihtaa liikevaihdon ja tilausten välillä, ja vertailun ollessa päällä näet, mitkä tunnit kasvoivat ja mitkä supistuivat.",
-          "Hitaasti liikkuvat tuotteet: vaihda tuotteiden paremmuusjärjestys -kortin otsikoksi Hitaasti liikkuvat tuotteet, niin tuotteet listataan vähiten myydyistä eniten myytyihin. Listassa näkyvät nykyinen varasto ja kunkin tuotteen viimeinen myyntipäivä. Tuotteet, joita ei ole koskaan myyty, merkitään tekstillä Ei koskaan myyty. Oletuksena näytetään vain varastossa olevat tuotteet.",
+          "Hitaasti liikkuvat tuotteet: vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Hitaasti liikkuvat tuotteet, niin tuotteet listataan vähiten myydyistä eniten myytyihin. Listassa näkyvät nykyinen varasto ja kunkin tuotteen viimeinen myyntipäivä. Tuotteet, joita ei ole koskaan myyty, merkitään tekstillä Ei koskaan myyty. Oletuksena näytetään vain varastossa olevat tuotteet.",
           "Uusintaostoprosentti: asiakasruudun viimeinen rivi näyttää niiden jäsenten osuuden, jotka ostivat jaksolla ja ovat ostaneet yhteensä vähintään kaksi kertaa.",
-          "Nykytilanne: varaston arvo (nykyinen varasto × nykyinen hankintahinta), kaikki valitun jakson varastoliikkeet sekä pisteet, jotka asiakkailla on mutta joita he eivät ole lunastaneet, ja suurin mahdollinen alennus niillä. Nämä ovat tämänhetkisiä saldoja, joihin jakso ei vaikuta."
+          "Nykytilanne: varaston arvo (nykyinen varasto × nykyinen omakustannus), kaikki valitun jakson varastoliikkeet sekä pisteet, jotka asiakkailla on mutta joita he eivät ole lunastaneet, ja suurin mahdollinen alennus niillä. Nämä ovat tämänhetkisiä saldoja, joihin jakso ei vaikuta."
         ]
       },
       {
         "type": "p",
-        "text": "Ilman Pro-pakettia jokaisessa näistä viidestä kohdasta on pieni lukko, josta avautuu päivityksen selitys. Kaikki muu Tilastot-välilehdellä toimii kuten ennenkin. Raportit lukevat tietoja, jotka myymäläsi jo tallentaa, joten Pron päättyessä vain raportit piilotetaan, eikä tietoja katoa."
+        "text": "Versiosta 3.4 alkaen kaikki viisi ovat käytössä jokaisessa paketissa – Lite, Standard ja Pro – sekä kokeilun aikana että sen päätyttyä. Aiemmissa versioissa ne näkyivät vain Pro-paketissa, ja muissa paketeissa niissä oli pieni lukko. Jos näet vielä lukot, päivitä DingPOS App Storesta."
+      },
+      {
+        "type": "p",
+        "text": "Lite ei seuraa varastoa eikä kanta-asiakaspisteitä, mutta Nykytilanne näyttää silti myymäläsi jo sisältämän varaston arvon ja lunastamattomat pisteet (esimerkiksi kokeilusta) tai nollan."
       },
       {
         "type": "note",
-        "text": "Henkilöstö näkee laajennetut raportit Kojelauta-oikeudella. Varaston arvon summat vaativat lisäksi Kustannukset ja kate -oikeuden."
+        "text": "Henkilökunta näkee laajennetut raportit Kojelauta-oikeudella. Varaston arvon summat vaativat lisäksi Kustannukset ja kate -oikeuden."
       }
     ],
     "related": [
@@ -1736,11 +1739,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Saat 30 päiväksi käyttöösi kaikki Pro-paketin ominaisuudet ensimmäisestä asennuksesta alkaen, myös työntekijätilit, oikeudet, toimintolokin ja laajennetut raportit. Tiliä ei tarvita."
+        "text": "Saat 30 päiväksi käyttöösi kaikki Pro-paketin ominaisuudet ensimmäisestä asennuksesta alkaen, myös työntekijätilit, oikeudet ja toimintoloki. Tiliä ei tarvita."
       },
       {
         "type": "p",
-        "text": "Jos tilaat jonkin paketin kokeilun aikana, kokeilu päättyy heti ja ostamasi paketti on voimassa siitä lähtien. Kokeilun jälkeen Pro-ominaisuudet, kuten henkilökunta ja laajennetut raportit, ovat käytettävissä vain Pro-tilauksella."
+        "text": "Jos tilaat jonkin paketin kokeilun aikana, kokeilu päättyy heti ja ostamasi paketti on voimassa siitä lähtien. Kokeilun jälkeen Pro-ominaisuudet, kuten henkilökunta ja toimintoloki, ovat käytettävissä vain Pro-tilauksella. Versiosta 3.4 alkaen laajennetut raportit ovat käytettävissä kaikissa paketeissa."
       },
       {
         "type": "p",
@@ -1801,14 +1804,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kaikki kolme pakettia sisältävät täyden kassatoiminnan, tuotteet, tilaukset (mitätöinnit, palautukset ja vaihdot mukaan lukien), raportit ja pilvivarmuuskopion. Erona ovat kaupan pyörittämiseen tarkoitetut työkalut:"
+        "text": "Kaikki kolme pakettia sisältävät täyden kassatoiminnan, tuotteet, tilaukset (mitätöinnit, palautukset ja vaihdot mukaan lukien), raportit (versiosta 3.4 alkaen myös laajennetut raportit) ja pilvivarmuuskopion. Erona ovat kaupan pyörittämiseen tarkoitetut työkalut:"
       },
       {
         "type": "list",
         "items": [
           "Lite: yhden hengen myyntikojulle, joka tarvitsee kassan ja tuotteet.",
           "Standard: lisää kampanjat, kanta-asiakaspisteet ja -tasot, varastoseurannan, ostotilaukset, laskulle myynnin, ennakkotilaukset ja maksukulujen arviot.",
-          "Pro: lisää työntekijätilit ja oikeudet, esihenkilön hyväksynnän, toimintolokin, palautusmerkinnät ja laajennetut raportit – kaupoille, joissa on henkilökuntaa."
+          "Pro: lisää työntekijätilit ja oikeudet, esihenkilön hyväksynnän, toimintolokin ja palautusmerkinnät – kaupoille, joissa on henkilökuntaa."
         ]
       },
       {

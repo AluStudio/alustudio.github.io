@@ -1048,7 +1048,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mit dem Tarif Pro vergleicht der Umsatzvergleich rechts in der Zeitraumleiste den Zeitraum mit dem davor oder mit demselben Zeitraum im Vorjahr – siehe „Was zeigen die erweiterten Berichte in Pro?“"
+        "text": "Der Umsatzvergleich rechts in der Zeitraumleiste vergleicht den Zeitraum mit dem davor oder mit demselben Zeitraum im Vorjahr – siehe „Was zeigen die erweiterten Berichte?“"
       },
       {
         "type": "note",
@@ -1065,10 +1065,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Was zeigen die erweiterten Berichte in Pro?",
+    "question": "Was zeigen die erweiterten Berichte?",
     "keywords": [
       "erweiterte Berichte",
-      "Pro",
       "Umsatzvergleich",
       "Vorjahr",
       "Heatmap",
@@ -1098,8 +1097,12 @@ export const articles = [
         "text": "Ohne Pro trägt jede dieser fünf Stellen ein kleines Schloss, das eine Erklärung zum Upgrade öffnet; alles andere in der Statistik funktioniert wie bisher. Die Berichte lesen Daten, die Ihr Geschäft ohnehin speichert – endet Pro, werden nur die Berichte ausgeblendet, es gehen keine Daten verloren."
       },
       {
+        "type": "p",
+        "text": "Seit Version 3.4 sind alle fünf Stellen in jedem Tarif geöffnet – Lite, Standard und Pro, während der Testphase und nach ihrem Ende. Frühere Versionen zeigten sie nur in Pro, mit einem kleinen Schloss bei anderen Tarifen; wenn Sie die Schlösser noch sehen, aktualisieren Sie DingPOS im App Store."
+      },
+      {
         "type": "note",
-        "text": "Personal sieht erweiterte Berichte mit der Berechtigung für das Dashboard; für die Beträge des Lagerwerts ist außerdem die Berechtigung „Einkaufspreis & Rohertrag“ nötig."
+        "text": "Lite verwaltet weder Bestand noch Treuepunkte, aber Aktuell zeigt weiterhin den Lagerwert und die nicht eingelösten Punkte, die Ihr Geschäft bereits hält (zum Beispiel aus der Testphase) – oder null."
       }
     ],
     "related": [
@@ -1737,11 +1740,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ab der Installation nutzen Sie 30 Tage lang alle Funktionen des Tarifs Pro, darunter Mitarbeiter:innen-Konten, Berechtigungen, das Aktivitätsprotokoll und erweiterte Berichte – ohne Konto."
+        "text": "Ab der Installation nutzen Sie 30 Tage lang alle Funktionen des Tarifs Pro, darunter Mitarbeiter:innen-Konten, Berechtigungen und das Aktivitätsprotokoll – ohne Konto."
       },
       {
         "type": "p",
-        "text": "Wenn Sie während der Testphase einen Tarif abonnieren, endet die Testphase sofort, und ab dann gilt der gekaufte Tarif. Nach der Testphase bleiben Pro-Funktionen wie Personal und erweiterte Berichte nur mit einem Pro-Abonnement verfügbar."
+        "text": "Wenn Sie während der Testphase einen Tarif abonnieren, endet die Testphase sofort, und ab dann gilt der gekaufte Tarif. Nach der Testphase bleiben Pro-Funktionen wie Personal und das Aktivitätsprotokoll nur mit einem Pro-Abonnement verfügbar. Seit Version 3.4 bleiben erweiterte Berichte in jedem Tarif verfügbar."
       },
       {
         "type": "p",
@@ -1802,14 +1805,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle drei Tarife enthalten die komplette Kasse, Artikel, Bestellungen (mit Annullierungen, Rückgaben und Umtausch), Berichte und Cloud-Backup. Sie unterscheiden sich in den Werkzeugen für den Ladenalltag:"
+        "text": "Alle drei Tarife enthalten die komplette Kasse, Artikel, Bestellungen (mit Annullierungen, Rückgaben und Umtausch), Berichte (erweiterte Berichte seit Version 3.4 inklusive) und Cloud-Backup. Sie unterscheiden sich in den Werkzeugen für den Ladenalltag:"
       },
       {
         "type": "list",
         "items": [
           "Lite: für Einzelpersonen am Marktstand, die Kasse und Artikel brauchen.",
           "Standard: zusätzlich Aktionen, Punkte und Kundenstufen, Bestandsverwaltung, Einkauf, Verkauf auf Rechnung, Vorbestellungen und Schätzung der Bearbeitungsgebühren.",
-          "Pro: zusätzlich Mitarbeiter:innen-Konten und Berechtigungen, Freigaben, Aktivitätsprotokoll, Wiederherstellungsprotokoll und erweiterte Berichte – für Geschäfte mit Personal."
+          "Pro: zusätzlich Mitarbeiter:innen-Konten und Berechtigungen, Freigaben, Aktivitätsprotokoll und Wiederherstellungsprotokoll – für Geschäfte mit Personal."
         ]
       },
       {

@@ -200,8 +200,7 @@
         "features": [
           "Akaun kakitangan: seorang satu PIN, setiap pesanan merekod siapa yang menjualnya",
           "Kebenaran & kelulusan: diskaun melebihi had, suntingan produk dan stok, melihat kos",
-          "Log aktiviti dan sejarah pemulihan",
-          "Laporan lanjutan: perbandingan tempoh, peta haba jualan, produk jualan perlahan, nilai inventori, pelanggan berulang"
+          "Log aktiviti dan sejarah pemulihan"
         ],
         "cta": "Mulakan percubaan percuma 30 hari"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Apa yang boleh saya guna semasa percubaan percuma?",
-          "a": "Selama 30 hari dari pemasangan pertama, anda mendapat semua ciri, termasuk ciri Pro seperti kakitangan, kebenaran dan laporan lanjutan — tanpa akaun. Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta dan menukar anda ke pelan yang dibeli."
+          "a": "Selama 30 hari dari pemasangan pertama, anda mendapat semua ciri, termasuk ciri Pro seperti kakitangan, kebenaran dan log aktiviti — tanpa akaun. Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta dan menukar anda ke pelan yang dibeli."
         },
         {
           "q": "Apa jadi jika saya tidak melanggan selepas percubaan?",

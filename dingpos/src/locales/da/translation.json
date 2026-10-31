@@ -200,8 +200,7 @@
         "features": [
           "Medarbejderkonti: hver sin PIN, og hver ordre viser, hvem der har ekspederet den",
           "Tilladelser og godkendelser: rabatter over rabatloftet, ændring af produkter og lager, visning af kostpriser",
-          "Aktivitetslog og gendannelseshistorik",
-          "Avancerede rapporter: periodesammenligning, salgsheatmap, langsomt sælgende varer, lagerværdi, genkøbende kunder"
+          "Aktivitetslog og gendannelseshistorik"
         ],
         "cta": "Start den gratis prøveperiode på 30 dage"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Hvad kan jeg bruge i den gratis prøveperiode?",
-          "a": "I 30 dage fra første installation får du alle funktioner, også Pro-funktioner som medarbejdere, tilladelser og avancerede rapporter – uden konto. Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og du skifter til det abonnement, du har købt."
+          "a": "I 30 dage fra første installation får du alle funktioner, også Pro-funktioner som medarbejdere, tilladelser og aktivitetslog – uden konto. Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og du skifter til det abonnement, du har købt."
         },
         {
           "q": "Hvad sker der, hvis jeg ikke tegner abonnement efter prøveperioden?",

@@ -200,8 +200,7 @@
         "features": [
           "Account dei collaboratori: un PIN a testa, ogni ordine registra chi l'ha battuto in cassa",
           "Permessi e approvazioni: sconti oltre il massimo, modifiche a prodotti e giacenze, visualizzazione dei costi",
-          "Registro attività e registro ripristino",
-          "Report avanzati: confronto tra periodi, mappa di calore delle vendite, articoli a bassa rotazione, valore del magazzino, clienti che tornano"
+          "Registro attività e registro ripristino"
         ],
         "cta": "Inizia la prova gratuita di 30 giorni"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Cosa posso usare durante la prova gratuita?",
-          "a": "Per 30 giorni dalla prima installazione hai tutte le funzioni, comprese quelle Pro come collaboratori, permessi e report avanzati, senza bisogno di un account. Se ti abboni a un piano durante la prova, la prova termina subito e passi al piano acquistato."
+          "a": "Per 30 giorni dalla prima installazione hai tutte le funzioni, comprese quelle Pro come collaboratori, permessi e registro attività, senza bisogno di un account. Se ti abboni a un piano durante la prova, la prova termina subito e passi al piano acquistato."
         },
         {
           "q": "Cosa succede se non mi abbono dopo la prova?",

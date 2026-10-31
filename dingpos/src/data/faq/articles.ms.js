@@ -1043,7 +1043,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pada pelan Pro, Perbandingan jualan di sebelah kanan bar tempoh membandingkan tempoh itu dengan tempoh sebelumnya atau dengan tempoh yang sama tahun lepas — lihat “Apakah yang dipaparkan oleh laporan lanjutan Pro?”"
+        "text": "Perbandingan jualan di sebelah kanan bar tempoh membandingkan tempoh itu dengan tempoh sebelumnya atau dengan tempoh yang sama tahun lepas — lihat “Apakah yang dipaparkan oleh laporan lanjutan?”"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Apakah yang dipaparkan oleh laporan lanjutan Pro?",
+    "question": "Apakah yang dipaparkan oleh laporan lanjutan?",
     "keywords": [
       "laporan lanjutan",
-      "pro",
       "perbandingan jualan",
       "tahun lepas",
       "peta haba",
@@ -1090,7 +1089,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tanpa Pro, setiap daripada lima tempat ini mempunyai kunci kecil yang membuka penerangan naik taraf; semua yang lain pada Statistik berfungsi seperti biasa. Laporan ini membaca data yang sudah disimpan kedai anda, jadi apabila Pro tamat hanya laporan yang disembunyikan — tiada data hilang."
+        "text": "Sejak v3.4, kelima-limanya terbuka pada setiap pelan — Lite, Standard dan Pro, semasa percubaan dan selepas tamat. Versi lebih awal memaparkannya pada Pro sahaja, dengan kunci kecil pada pelan lain; jika anda masih melihat kunci itu, kemas kini DingPOS daripada App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite tidak menjejak stok atau mata kesetiaan, tetapi Sekarang tetap menunjukkan nilai stok dan mata yang belum ditebus yang sudah ada pada kedai anda (contohnya daripada percubaan), atau sifar."
       },
       {
         "type": "note",
@@ -1729,11 +1732,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Anda mendapat akses kepada semua ciri pelan Pro selama 30 hari bermula dari pemasangan pertama, termasuk akaun kakitangan, kebenaran, log aktiviti dan laporan lanjutan — tanpa perlu akaun."
+        "text": "Anda mendapat akses kepada semua ciri pelan Pro selama 30 hari bermula dari pemasangan pertama, termasuk akaun kakitangan, kebenaran dan log aktiviti — tanpa perlu akaun."
       },
       {
         "type": "p",
-        "text": "Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta, dan pelan yang anda beli terpakai mulai saat itu. Selepas percubaan, ciri Pro seperti kakitangan dan laporan lanjutan hanya tersedia dengan langganan Pro."
+        "text": "Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta, dan pelan yang anda beli terpakai mulai saat itu. Selepas percubaan, ciri Pro seperti kakitangan dan log aktiviti hanya tersedia dengan langganan Pro. Sejak v3.4, laporan lanjutan kekal tersedia pada setiap pelan."
       },
       {
         "type": "p",
@@ -1794,14 +1797,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
+        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan (termasuk laporan lanjutan sejak v3.4) dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
       },
       {
         "type": "list",
         "items": [
           "Lite: untuk seorang yang menjalankan gerai dan memerlukan fungsi pembayaran serta produk.",
           "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun, prapesanan dan anggaran caj pembayaran.",
-          "Pro: menambah akaun kakitangan dan kebenaran, kelulusan pengurus, log aktiviti, rekod pemulihan dan laporan lanjutan — untuk kedai yang mempunyai kakitangan."
+          "Pro: menambah akaun kakitangan dan kebenaran, kelulusan pengurus, log aktiviti dan rekod pemulihan — untuk kedai yang mempunyai kakitangan."
         ]
       },
       {

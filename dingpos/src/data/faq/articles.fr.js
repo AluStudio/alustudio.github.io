@@ -1043,7 +1043,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Avec la formule Pro, Comparaison des ventes, à droite de la barre de période, compare la période avec la précédente ou avec la même période de l’an dernier — voir « Que montrent les rapports avancés Pro ? »"
+        "text": "Comparaison des ventes, à droite de la barre de période, compare la période avec la précédente ou avec la même période de l’an dernier — voir « Que montrent les rapports avancés ? »"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Que montrent les rapports avancés Pro ?",
+    "question": "Que montrent les rapports avancés ?",
     "keywords": [
       "rapports avancés",
-      "pro",
       "comparaison des ventes",
       "année dernière",
       "carte thermique",
@@ -1090,7 +1089,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sans Pro, chacun de ces cinq emplacements porte un petit cadenas qui ouvre une explication de la mise à niveau ; tout le reste de Stats fonctionne comme avant. Les rapports lisent des données que votre magasin conserve déjà : quand Pro prend fin, seuls les rapports sont masqués — aucune donnée n’est perdue."
+        "text": "Depuis la v3.4, ces cinq rapports sont ouverts à toutes les formules — Lite, Standard et Pro, pendant l’essai comme après sa fin. Les versions antérieures ne les affichaient qu’avec Pro, avec un petit cadenas sur les autres formules ; si vous voyez encore les cadenas, mettez à jour DingPOS depuis l’App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite ne suit ni le stock ni les points de fidélité, mais Situation actuelle affiche tout de même la valeur du stock et les points non utilisés que votre boutique détient déjà (par exemple depuis l’essai), ou zéro."
       },
       {
         "type": "note",
@@ -1724,29 +1727,29 @@ export const articles = [
   {
     "slug": "free-trial",
     "category": "subscription",
-    "question": "Comment fonctionne l'essai gratuit de DingPOS ?",
+    "question": "Comment fonctionne l’essai gratuit de DingPOS ?",
     "keywords": [
       "essai gratuit",
       "gratuit",
       "30 jours",
-      "période d'essai"
+      "période d’essai"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Dès la première installation, vous profitez pendant 30 jours de toutes les fonctions de la formule Pro, dont les comptes du personnel, les permissions, le journal d'activité et les rapports avancés, sans créer de compte."
+        "text": "Dès la première installation, vous profitez pendant 30 jours de toutes les fonctions de la formule Pro, dont les comptes du personnel, les permissions et le journal d’activité, sans créer de compte."
       },
       {
         "type": "p",
-        "text": "Si vous souscrivez à une formule pendant l'essai, celui-ci prend fin immédiatement et la formule achetée s'applique dès lors. Après l'essai, les fonctions Pro comme le personnel et les rapports avancés ne restent disponibles qu'avec un abonnement Pro."
+        "text": "Si vous souscrivez à une formule pendant l’essai, celui-ci prend fin immédiatement et la formule achetée s’applique dès lors. Après l’essai, les fonctions Pro comme le personnel et le journal d’activité ne restent disponibles qu’avec un abonnement Pro. Depuis la v3.4, les rapports avancés restent disponibles avec toutes les formules."
       },
       {
         "type": "p",
-        "text": "Pendant les 7 derniers jours, puis le dernier jour, l'app vous rappelle une fois à chaque fois combien de jours il reste, que l'encaissement est suspendu à la fin de l'essai et que vos données sont conservées."
+        "text": "Pendant les 7 derniers jours, puis le dernier jour, l’app vous rappelle une fois à chaque fois combien de jours il reste, que l’encaissement est suspendu à la fin de l’essai et que vos données sont conservées."
       },
       {
         "type": "p",
-        "text": "Tout ce que vous créez pendant l'essai (produits, commandes, membres) est conservé intégralement. Vos données ne sont jamais supprimées, que vous vous abonniez ensuite ou non."
+        "text": "Tout ce que vous créez pendant l’essai (produits, commandes, membres) est conservé intégralement. Vos données ne sont jamais supprimées, que vous vous abonniez ensuite ou non."
       }
     ],
     "related": [
@@ -1798,19 +1801,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Les trois formules comprennent l'encaissement complet, les produits, les commandes (avec invalidations, retours et échanges), les rapports et la sauvegarde dans le cloud. Elles se distinguent par les outils pour gérer votre boutique :"
+        "text": "Les trois formules comprennent l’encaissement complet, les produits, les commandes (avec invalidations, retours et échanges), les rapports (rapports avancés inclus depuis la v3.4) et la sauvegarde dans le cloud. Elles se distinguent par les outils pour gérer votre boutique :"
       },
       {
         "type": "list",
         "items": [
-          "Lite : pour une personne qui tient seule un stand et a besoin de l'encaissement et des produits.",
-          "Standard : ajoute les promotions, les points de fidélité et les niveaux, le suivi du stock, les achats, les ventes en compte, les précommandes et l'estimation des frais de traitement.",
-          "Pro : ajoute les comptes du personnel et les permissions, l'approbation, le journal d'activité, le journal des restaurations et les rapports avancés, pour les boutiques avec du personnel."
+          "Lite : pour une personne qui tient seule un stand et a besoin de l’encaissement et des produits.",
+          "Standard : ajoute les promotions, les points de fidélité et les niveaux, le suivi du stock, les achats, les ventes en compte, les précommandes et l’estimation des frais de traitement.",
+          "Pro : ajoute les comptes du personnel et les permissions, l’approbation, le journal d’activité et le journal des restaurations, pour les boutiques avec du personnel."
         ]
       },
       {
         "type": "p",
-        "text": "Vous avez déjà la formule Standard ? Passez à Pro depuis la page Abonnement : la facturation garde le même cycle, le changement prend effet immédiatement et Apple calcule le prorata de la différence. Le retour de Pro à Standard prend effet au renouvellement. Les prix s'affichent dans l'application, et vous pouvez comparer les formules sur notre page Tarifs."
+        "text": "Vous avez déjà la formule Standard ? Passez à Pro depuis la page Abonnement : la facturation garde le même cycle, le changement prend effet immédiatement et Apple calcule le prorata de la différence. Le retour de Pro à Standard prend effet au renouvellement. Les prix s’affichent dans l’application, et vous pouvez comparer les formules sur notre page Tarifs."
       },
       {
         "type": "note",

@@ -1048,7 +1048,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Met het Pro-abonnement vergelijkt Verkoopvergelijking rechts van de periodebalk de periode met de voorgaande periode of met dezelfde periode vorig jaar — zie “Wat laten de geavanceerde Pro-rapporten zien?”"
+        "text": "Met Verkoopvergelijking rechts van de periodebalk vergelijk je de periode met de voorgaande periode of met dezelfde periode vorig jaar — zie “Wat laten de geavanceerde rapporten zien?”"
       },
       {
         "type": "note",
@@ -1065,10 +1065,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Wat laten de geavanceerde Pro-rapporten zien?",
+    "question": "Wat laten de geavanceerde rapporten zien?",
     "keywords": [
       "geavanceerde rapporten",
-      "pro",
       "verkoopvergelijking",
       "vorig jaar",
       "heatmap",
@@ -1095,7 +1094,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zonder Pro heeft elk van deze vijf plekken een klein slotje dat een uitleg over upgraden opent; al het andere in Cijfers werkt zoals voorheen. De rapporten lezen gegevens die je winkel al bijhoudt, dus als Pro afloopt, worden alleen de rapporten verborgen — er gaan geen gegevens verloren."
+        "text": "Sinds v3.4 zijn alle vijf beschikbaar in elk abonnement — Lite, Standard en Pro, tijdens de proefperiode en daarna. Eerdere versies toonden ze alleen bij Pro, met een klein slotje bij andere abonnementen; zie je de slotjes nog, werk dan DingPOS bij via de App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite houdt geen voorraad of spaarpunten bij, maar Op dit moment toont nog steeds de voorraadwaarde en de niet-ingewisselde punten die je winkel al heeft (bijvoorbeeld uit de proefperiode), of nul."
       },
       {
         "type": "note",
@@ -1736,11 +1739,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vanaf de eerste installatie krijg je 30 dagen lang alle functies van het Pro-abonnement, inclusief medewerkersaccounts, toestemmingen, het activiteitenlogboek en geavanceerde rapporten — zonder account."
+        "text": "Vanaf de eerste installatie krijg je 30 dagen lang alle functies van het Pro-abonnement, inclusief medewerkersaccounts, toestemmingen en het activiteitenlogboek — zonder account."
       },
       {
         "type": "p",
-        "text": "Als je tijdens de proefperiode een abonnement afsluit, eindigt de proefperiode meteen en geldt vanaf dat moment het abonnement dat je hebt gekocht. Na de proefperiode blijven Pro-functies zoals medewerkers en geavanceerde rapporten alleen beschikbaar met een Pro-abonnement."
+        "text": "Als je tijdens de proefperiode een abonnement afsluit, eindigt de proefperiode meteen en geldt vanaf dat moment het abonnement dat je hebt gekocht. Na de proefperiode blijven Pro-functies zoals medewerkers en het activiteitenlogboek alleen beschikbaar met een Pro-abonnement. Sinds v3.4 blijven geavanceerde rapporten beschikbaar in elk abonnement."
       },
       {
         "type": "p",
@@ -1800,14 +1803,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle drie de abonnementen bevatten alle functies voor afrekenen, producten, bestellingen (met ongeldig maken, retouren en omruilingen), rapporten en back-up in de cloud. Ze verschillen in de hulpmiddelen om je winkel te runnen:"
+        "text": "Alle drie de abonnementen bevatten alle functies voor afrekenen, producten, bestellingen (met ongeldig maken, retouren en omruilingen), rapporten (geavanceerde rapporten inbegrepen sinds v3.4) en back-up in de cloud. Ze verschillen in de hulpmiddelen om je winkel te runnen:"
       },
       {
         "type": "list",
         "items": [
           "Lite: voor wie alleen een kraam runt en afrekenen en producten nodig heeft.",
           "Standard: voegt acties, spaarpunten en klantniveaus, voorraadbeheer, inkoop, verkoop op rekening, voorbestellingen en schattingen van transactiekosten toe.",
-          "Pro: voegt medewerkersaccounts en toestemmingen, goedkeuring, het activiteitenlogboek, herstelregistraties en geavanceerde rapporten toe — voor winkels met medewerkers."
+          "Pro: voegt medewerkersaccounts en toestemmingen, goedkeuring, het activiteitenlogboek en herstelregistraties toe — voor winkels met medewerkers."
         ]
       },
       {

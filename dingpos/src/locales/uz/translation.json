@@ -200,8 +200,7 @@
         "features": [
           "Xodimlar hisoblari: har biriga alohida PIN, har bir buyurtmada uni kim rasmiylashtirgani qayd etiladi",
           "Ruxsatlar va tasdiqlashlar: chegaradan oshgan chegirmalar, mahsulot va zaxirani tahrirlash, tannarxni ko‘rish",
-          "Faoliyat jurnali va tiklash tarixi",
-          "Kengaytirilgan hisobotlar: davrlarni solishtirish, savdo issiqlik xaritasi, sekin sotiladigan mahsulotlar, ombor qiymati, takroriy mijozlar"
+          "Faoliyat jurnali va tiklash tarixi"
         ],
         "cta": "30 kunlik bepul sinovni boshlash"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Bepul sinov paytida nimalardan foydalanish mumkin?",
-          "a": "Birinchi o‘rnatilgandan boshlab 30 kun davomida barcha imkoniyatlar, jumladan xodimlar, ruxsatlar va kengaytirilgan hisobotlar kabi Pro imkoniyatlari ham mavjud — hisob ochish shart emas. Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va siz sotib olgan tarifga o‘tasiz."
+          "a": "Birinchi o‘rnatilgandan boshlab 30 kun davomida barcha imkoniyatlar, jumladan xodimlar, ruxsatlar va faoliyat jurnali kabi Pro imkoniyatlari ham mavjud — hisob ochish shart emas. Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va siz sotib olgan tarifga o‘tasiz."
         },
         {
           "q": "Sinovdan keyin obuna bo‘lmasam nima bo‘ladi?",

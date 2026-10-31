@@ -200,8 +200,7 @@
         "features": [
           "Contas de funcionários: um PIN para cada um, e cada venda registra quem a fez",
           "Permissões e aprovações: descontos acima do limite, edição de produtos e estoque, visualização de custos",
-          "Registro de atividades e registros de restauração",
-          "Relatórios avançados: comparação de períodos, mapa de calor de vendas, produtos parados, valor do estoque, clientes recorrentes"
+          "Registro de atividades e registros de restauração"
         ],
         "cta": "Começar o teste grátis de 30 dias"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "O que posso usar durante o teste grátis?",
-          "a": "Por 30 dias a partir da primeira instalação, você tem todos os recursos, inclusive os do Pro, como equipe, permissões e relatórios avançados — sem precisar de conta. Assinar qualquer plano durante o teste encerra o teste na hora e muda você para o plano contratado."
+          "a": "Por 30 dias a partir da primeira instalação, você tem todos os recursos, inclusive os do Pro, como equipe, permissões e registro de atividades — sem precisar de conta. Assinar qualquer plano durante o teste encerra o teste na hora e muda você para o plano contratado."
         },
         {
           "q": "O que acontece se eu não assinar depois do teste?",

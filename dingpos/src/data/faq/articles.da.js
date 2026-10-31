@@ -1043,7 +1043,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Med Pro-abonnementet kan Salgssammenligning til højre i periodelinjen sammenligne perioden med den foregående eller med samme periode sidste år – se “Hvad viser Pros avancerede rapporter?”"
+        "text": "Salgssammenligning til højre i periodelinjen sammenligner perioden med den foregående eller med samme periode sidste år – se “Hvad viser de avancerede rapporter?”"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Hvad viser Pros avancerede rapporter?",
+    "question": "Hvad viser de avancerede rapporter?",
     "keywords": [
       "avancerede rapporter",
-      "pro",
       "salgssammenligning",
       "sidste år",
       "heatmap",
@@ -1090,7 +1089,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Uden Pro har hvert af disse fem steder en lille lås, der åbner en forklaring på opgraderingen; alt andet i Statistik fungerer som før. Rapporterne bruger data, din butik allerede gemmer, så når Pro udløber, skjules kun rapporterne – der går ingen data tabt."
+        "text": "Siden v3.4 er alle fem åbne på alle abonnementsniveauer – Lite, Standard og Pro, både i prøveperioden og efter, at den er slut. Tidligere versioner viste dem kun på Pro med en lille lås på de andre niveauer; hvis du stadig ser låsene, så opdatér DingPOS fra App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite holder ikke styr på lager eller loyalitetspoint, men Lige nu viser stadig den lagerværdi og de uindløste point, din butik allerede har (for eksempel fra prøveperioden), eller nul."
       },
       {
         "type": "note",
@@ -1733,11 +1736,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Du får 30 dages adgang til alle funktioner i Pro fra første installation, herunder medarbejderkonti, tilladelser, aktivitetsloggen og avancerede rapporter – uden at oprette en konto."
+        "text": "Du får 30 dages adgang til alle funktioner i Pro fra første installation, herunder medarbejderkonti, tilladelser og aktivitetsloggen – uden at oprette en konto."
       },
       {
         "type": "p",
-        "text": "Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og det abonnement, du har købt, gælder fra da af. Efter prøveperioden er Pro-funktioner som medarbejdere og avancerede rapporter kun tilgængelige med et Pro-abonnement."
+        "text": "Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og det abonnement, du har købt, gælder fra da af. Efter prøveperioden er Pro-funktioner som medarbejdere og aktivitetsloggen kun tilgængelige med et Pro-abonnement. Siden v3.4 er avancerede rapporter tilgængelige på alle abonnementsniveauer."
       },
       {
         "type": "p",
@@ -1797,14 +1800,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre abonnementsniveauer omfatter fuld betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
+        "text": "Alle tre abonnementsniveauer omfatter fuld betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter (inklusive avancerede rapporter siden v3.4) og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: til dig, der driver en markedsstand alene og har brug for betaling og produkter.",
           "Standard: tilføjer kampagner, loyalitetspoint og medlemsniveauer, lagerstyring, indkøb, salg på konto, forudbestillinger og estimater af transaktionsgebyrer.",
-          "Pro: tilføjer medarbejderkonti og tilladelser, lederens godkendelse, aktivitetslog, gendannelsesposter og avancerede rapporter – til butikker med medarbejdere."
+          "Pro: tilføjer medarbejderkonti og tilladelser, lederens godkendelse, aktivitetslog og gendannelsesposter – til butikker med medarbejdere."
         ]
       },
       {

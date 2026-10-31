@@ -200,8 +200,7 @@
         "features": [
           "Medewerkers: elk een eigen pincode, elke bestelling legt vast wie hem heeft aangeslagen",
           "Toestemmingen en goedkeuringen: kortingen boven de kortingslimiet, wijzigingen aan producten en voorraad, kostprijzen bekijken",
-          "Activiteitenlogboek en herstelregistraties",
-          "Geavanceerde rapporten: periodevergelijking, verkoopheatmap, langzaam verkopende producten, voorraadwaarde, terugkerende klanten"
+          "Activiteitenlogboek en herstelregistraties"
         ],
         "cta": "Start de gratis proefperiode van 30 dagen"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Wat kan ik gebruiken tijdens de gratis proefperiode?",
-          "a": "Gedurende 30 dagen na de eerste installatie heb je alle functies, ook Pro-functies zoals medewerkers, toestemmingen en geavanceerde rapporten — geen account nodig. Neem je tijdens de proefperiode een abonnement, dan eindigt de proefperiode meteen en schakel je over naar het abonnement dat je hebt gekocht."
+          "a": "Gedurende 30 dagen na de eerste installatie heb je alle functies, ook Pro-functies zoals medewerkers, toestemmingen en het activiteitenlogboek — geen account nodig. Neem je tijdens de proefperiode een abonnement, dan eindigt de proefperiode meteen en schakel je over naar het abonnement dat je hebt gekocht."
         },
         {
           "q": "Wat gebeurt er als ik na de proefperiode geen abonnement neem?",

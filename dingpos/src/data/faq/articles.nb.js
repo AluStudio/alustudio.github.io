@@ -1053,7 +1053,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Med Pro-planen kan du bruke Salgssammenligning til høyre i periodelinjen til å sammenligne perioden med den forrige eller med samme periode i fjor – se «Hva viser de avanserte Pro-rapportene?»"
+        "text": "Med Salgssammenligning til høyre i periodelinjen kan du sammenligne perioden med den forrige eller med samme periode i fjor – se «Hva viser de avanserte rapportene?»"
       },
       {
         "type": "note",
@@ -1070,10 +1070,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Hva viser de avanserte Pro-rapportene?",
+    "question": "Hva viser de avanserte rapportene?",
     "keywords": [
       "avanserte rapporter",
-      "pro",
       "salgssammenligning",
       "i fjor",
       "varmekart",
@@ -1100,7 +1099,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Uten Pro har hver av disse fem plassene en liten lås som åpner en forklaring om oppgradering. Alt annet i Rapporter fungerer som før. Rapportene bruker data butikken din allerede lagrer, så når Pro utløper, skjules bare rapportene – ingen data går tapt."
+        "text": "Fra og med v3.4 er alle fem åpne på alle planer – Lite, Standard og Pro, både i prøveperioden og etter at den er over. Tidligere versjoner viste dem bare på Pro, med en liten lås på de andre planene. Hvis du fortsatt ser låsene, oppdaterer du DingPOS fra App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite sporer ikke lager eller poeng, men Akkurat nå viser likevel lagerverdien og de ubrukte poengene butikken din allerede har (for eksempel fra prøveperioden), eller null."
       },
       {
         "type": "note",
@@ -1740,11 +1743,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Du får 30 dager med alle funksjonene i Pro fra du installerer appen første gang, blant annet ansatte, tillatelser, aktivitetsloggen og avanserte rapporter. Du trenger ingen konto."
+        "text": "Du får 30 dager med alle funksjonene i Pro fra du installerer appen første gang, blant annet ansatte, tillatelser og aktivitetsloggen. Du trenger ingen konto."
       },
       {
         "type": "p",
-        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og planen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og avanserte rapporter bare tilgjengelige med et Pro-abonnement."
+        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og planen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Fra og med v3.4 er avanserte rapporter tilgjengelige på alle planer."
       },
       {
         "type": "p",
@@ -1804,14 +1807,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre planene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
+        "text": "Alle tre planene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (avanserte rapporter inkludert fra og med v3.4) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: for deg som driver en markedsstand alene og trenger kasse og produkter.",
           "Standard: legger til kampanjer, poeng og medlemsnivåer, lagerstyring, innkjøp, salg på konto, forhåndsbestillinger og overslag over transaksjonsgebyrer.",
-          "Pro: legger til ansatte og tillatelser, godkjenning fra leder, aktivitetslogg, gjenopprettingslogg og avanserte rapporter, for butikker med ansatte."
+          "Pro: legger til ansatte og tillatelser, godkjenning fra leder, aktivitetslogg og gjenopprettingslogg, for butikker med ansatte."
         ]
       },
       {

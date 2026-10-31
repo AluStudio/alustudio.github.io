@@ -200,8 +200,7 @@
         "features": [
           "Comptes du personnel : un code PIN chacun, chaque commande indique qui l’a encaissée",
           "Permissions et approbations : remises au-delà du plafond, modification des produits et du stock, consultation des coûts",
-          "Journal d’activité et historique des restaurations",
-          "Rapports avancés : comparaison de périodes, carte thermique des ventes, produits à faible rotation, valorisation du stock, clients fidèles"
+          "Journal d’activité et historique des restaurations"
         ],
         "cta": "Commencer l’essai gratuit de 30 jours"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Que puis-je utiliser pendant l’essai gratuit ?",
-          "a": "Pendant 30 jours à compter de la première installation, vous avez accès à toutes les fonctions, y compris celles de Pro comme le personnel, les permissions et les rapports avancés, sans compte. Souscrire à une formule pendant l’essai y met fin immédiatement et vous fait passer à la formule achetée."
+          "a": "Pendant 30 jours à compter de la première installation, vous avez accès à toutes les fonctions, y compris celles de Pro comme le personnel, les permissions et le journal d’activité, sans compte. Souscrire à une formule pendant l’essai y met fin immédiatement et vous fait passer à la formule achetée."
         },
         {
           "q": "Que se passe-t-il si je ne m’abonne pas après l’essai ?",

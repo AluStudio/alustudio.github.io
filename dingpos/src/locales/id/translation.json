@@ -200,8 +200,7 @@
         "features": [
           "Akun staf: PIN masing-masing, setiap pesanan mencatat siapa yang memprosesnya",
           "Izin & persetujuan: diskon di atas batas, ubah produk dan stok, melihat harga pokok",
-          "Log aktivitas dan catatan pemulihan",
-          "Laporan lanjutan: perbandingan periode, heatmap penjualan, produk kurang laku, nilai persediaan, pelanggan berulang"
+          "Log aktivitas dan catatan pemulihan"
         ],
         "cta": "Mulai uji coba gratis 30 hari"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Apa saja yang bisa dipakai selama uji coba gratis?",
-          "a": "Selama 30 hari sejak pertama kali dipasang, Anda mendapat semua fitur, termasuk fitur Pro seperti staf, izin, dan laporan lanjutan — tanpa akun. Berlangganan paket apa pun selama uji coba langsung mengakhiri masa uji coba dan beralih ke paket yang Anda beli."
+          "a": "Selama 30 hari sejak pertama kali dipasang, Anda mendapat semua fitur, termasuk fitur Pro seperti staf, izin, dan log aktivitas — tanpa akun. Berlangganan paket apa pun selama uji coba langsung mengakhiri masa uji coba dan beralih ke paket yang Anda beli."
         },
         {
           "q": "Apa yang terjadi jika saya tidak berlangganan setelah uji coba?",

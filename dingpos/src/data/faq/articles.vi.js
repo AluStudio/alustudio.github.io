@@ -1043,7 +1043,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Với gói Pro, So sánh doanh số ở bên phải thanh khoảng thời gian cho phép so sánh khoảng thời gian đang xem với khoảng liền trước hoặc với cùng kỳ năm ngoái — xem “Báo cáo nâng cao của gói Pro hiển thị những gì?”"
+        "text": "So sánh doanh số ở bên phải thanh khoảng thời gian cho phép so sánh khoảng thời gian đang xem với khoảng liền trước hoặc với cùng kỳ năm ngoái — xem “Báo cáo nâng cao hiển thị những gì?”"
       },
       {
         "type": "note",
@@ -1060,10 +1060,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Báo cáo nâng cao của gói Pro hiển thị những gì?",
+    "question": "Báo cáo nâng cao hiển thị những gì?",
     "keywords": [
       "báo cáo nâng cao",
-      "pro",
       "so sánh doanh số",
       "năm ngoái",
       "bản đồ nhiệt",
@@ -1090,7 +1089,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Khi chưa dùng Pro, mỗi vị trí trong năm vị trí này có một biểu tượng khóa nhỏ để mở phần giải thích về việc nâng cấp; mọi thứ khác trong Thống kê vẫn hoạt động như trước. Các báo cáo đọc dữ liệu mà cửa hàng của bạn vốn đã lưu, nên khi Pro kết thúc chỉ có báo cáo bị ẩn — không mất dữ liệu nào."
+        "text": "Từ phiên bản v3.4, cả năm báo cáo này đều mở trên mọi gói — Lite, Standard và Pro, cả trong thời gian dùng thử lẫn sau khi hết dùng thử. Các phiên bản cũ hơn chỉ hiển thị chúng ở gói Pro, còn các gói khác có một biểu tượng khóa nhỏ; nếu bạn vẫn thấy biểu tượng khóa, hãy cập nhật DingPOS từ App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite không theo dõi tồn kho và điểm tích lũy, nhưng mục Hiện tại vẫn hiển thị giá trị tồn kho và số điểm chưa quy đổi mà cửa hàng của bạn đã có sẵn (ví dụ từ thời gian dùng thử), hoặc bằng 0."
       },
       {
         "type": "note",
@@ -1736,11 +1739,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bạn được dùng thử 30 ngày toàn bộ tính năng của gói Pro ngay từ lần cài đặt đầu tiên, gồm tài khoản nhân viên, phân quyền, nhật ký hoạt động và báo cáo nâng cao — không cần tạo tài khoản."
+        "text": "Bạn được dùng thử 30 ngày toàn bộ tính năng của gói Pro ngay từ lần cài đặt đầu tiên, gồm tài khoản nhân viên, phân quyền và nhật ký hoạt động — không cần tạo tài khoản."
       },
       {
         "type": "p",
-        "text": "Nếu đăng ký bất kỳ gói nào trong thời gian dùng thử, thời gian dùng thử sẽ kết thúc ngay và gói bạn đã mua được áp dụng từ lúc đó. Sau khi hết dùng thử, các tính năng Pro như nhân viên và báo cáo nâng cao chỉ còn dùng được khi bạn đăng ký gói Pro."
+        "text": "Nếu đăng ký bất kỳ gói nào trong thời gian dùng thử, thời gian dùng thử sẽ kết thúc ngay và gói bạn đã mua được áp dụng từ lúc đó. Sau khi hết dùng thử, các tính năng Pro như nhân viên và nhật ký hoạt động chỉ còn dùng được khi bạn đăng ký gói Pro. Từ phiên bản v3.4, báo cáo nâng cao vẫn dùng được trên mọi gói."
       },
       {
         "type": "p",
@@ -1802,14 +1805,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Cả ba gói đều có đầy đủ thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
+        "text": "Cả ba gói đều có đầy đủ thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo (từ phiên bản v3.4 đã gồm cả báo cáo nâng cao) và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
       },
       {
         "type": "list",
         "items": [
           "Lite: dành cho một người bán ở quầy hàng, chỉ cần thanh toán và sản phẩm.",
           "Standard: thêm khuyến mãi, điểm tích lũy và hạng thành viên, theo dõi tồn kho, nhập hàng, bán chịu, đơn đặt trước và ước tính phí thanh toán.",
-          "Pro: thêm tài khoản nhân viên và phân quyền, phê duyệt của quản lý, nhật ký hoạt động, bản ghi khôi phục và báo cáo nâng cao — dành cho cửa hàng có nhân viên."
+          "Pro: thêm tài khoản nhân viên và phân quyền, phê duyệt của quản lý, nhật ký hoạt động và bản ghi khôi phục — dành cho cửa hàng có nhân viên."
         ]
       },
       {

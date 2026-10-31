@@ -200,8 +200,7 @@
         "features": [
           "Työntekijätilit: jokaisella oma PIN, ja jokaiseen tilaukseen tallentuu, kuka sen myi",
           "Oikeudet ja hyväksynnät: alennusrajan ylitykset, tuotteiden ja varaston muokkaus, omakustannusten katselu",
-          "Toimintoloki ja palautushistoria",
-          "Laajennetut raportit: jaksojen vertailu, myynnin lämpökartta, hitaasti liikkuvat tuotteet, varaston arvo, uusintaostajat"
+          "Toimintoloki ja palautushistoria"
         ],
         "cta": "Aloita 30 päivän ilmainen kokeilu"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "Mitä voin käyttää ilmaisen kokeilun aikana?",
-          "a": "Ensimmäisestä asennuksesta 30 päivän ajan käytössäsi on kaikki ominaisuudet, myös Pro-ominaisuudet kuten henkilökunta, oikeudet ja laajennetut raportit – tiliä ei tarvita. Jos tilaat minkä tahansa paketin kokeilun aikana, kokeilu päättyy heti ja siirryt ostamaasi pakettiin."
+          "a": "Ensimmäisestä asennuksesta 30 päivän ajan käytössäsi on kaikki ominaisuudet, myös Pro-ominaisuudet kuten henkilökunta, oikeudet ja toimintoloki – tiliä ei tarvita. Jos tilaat minkä tahansa paketin kokeilun aikana, kokeilu päättyy heti ja siirryt ostamaasi pakettiin."
         },
         {
           "q": "Mitä tapahtuu, jos en tilaa kokeilun jälkeen?",

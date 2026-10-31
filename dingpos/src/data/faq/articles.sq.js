@@ -1046,7 +1046,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Në planin Pro, Krahasimi i shitjeve në të djathtë të shiritit të periudhës krahason periudhën me atë para saj ose me të njëjtën periudhë të vitit të kaluar — shih “Çfarë tregojnë raportet e avancuara të Pro?”"
+        "text": "Krahasimi i shitjeve në të djathtë të shiritit të periudhës krahason periudhën me atë para saj ose me të njëjtën periudhë të vitit të kaluar — shih “Çfarë tregojnë raportet e avancuara?”"
       },
       {
         "type": "note",
@@ -1063,10 +1063,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "Çfarë tregojnë raportet e avancuara të Pro?",
+    "question": "Çfarë tregojnë raportet e avancuara?",
     "keywords": [
       "raporte të avancuara",
-      "pro",
       "krahasimi i shitjeve",
       "viti i kaluar",
       "hartë nxehtësie",
@@ -1093,7 +1092,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pa Pro, secila nga këto pesë pika ka një dryn të vogël që hap një shpjegim për përmirësimin e planit; gjithçka tjetër në Statistika punon si më parë. Raportet lexojnë të dhëna që dyqani yt i mban tashmë, ndaj kur Pro mbaron fshihen vetëm raportet — nuk humb asnjë e dhënë."
+        "text": "Që nga v3.4, të pesë janë të hapura në çdo plan — Lite, Standard dhe Pro, gjatë provës dhe pas mbarimit të saj. Versionet e mëparshme i shfaqnin vetëm në Pro, me një dryn të vogël në planet e tjera; nëse ende i sheh drynat, përditëso DingPOS nga App Store."
+      },
+      {
+        "type": "p",
+        "text": "Lite nuk e ndjek stokun dhe pikat e besnikërisë, por “Tani” prapë tregon vlerësimin e inventarit dhe pikat e papërdorura që dyqani yt i ka tashmë (për shembull nga prova), ose zero."
       },
       {
         "type": "note",
@@ -1735,11 +1738,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Merr 30 ditë me çdo veçori të planit Pro që nga instalimi i parë, përfshirë llogaritë e punonjësve, lejet, regjistrin e aktivitetit dhe raportet e avancuara — pa nevojë për llogari."
+        "text": "Merr 30 ditë me çdo veçori të planit Pro që nga instalimi i parë, përfshirë llogaritë e punonjësve, lejet dhe regjistrin e aktivitetit — pa nevojë për llogari."
       },
       {
         "type": "p",
-        "text": "Nëse abonohesh në çdo plan gjatë provës, prova përfundon menjëherë dhe nga ai moment vlen plani që ke blerë. Pas provës, veçoritë Pro si punonjësit dhe raportet e avancuara mbeten të disponueshme vetëm me abonim Pro."
+        "text": "Nëse abonohesh në çdo plan gjatë provës, prova përfundon menjëherë dhe nga ai moment vlen plani që ke blerë. Pas provës, veçoritë Pro si punonjësit dhe regjistri i aktivitetit mbeten të disponueshme vetëm me abonim Pro. Që nga v3.4, raportet e avancuara mbeten të disponueshme në çdo plan."
       },
       {
         "type": "p",
@@ -1800,14 +1803,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Të tria planet përfshijnë funksionin e plotë të pagesës, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
+        "text": "Të tria planet përfshijnë funksionin e plotë të pagesës, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet (raportet e avancuara të përfshira që nga v3.4) dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
       },
       {
         "type": "list",
         "items": [
           "Lite: për një person që drejton një banak pazari dhe i duhen pagesa e produktet.",
           "Standard: shton promovime, pikë besnikërie dhe nivele anëtarësh, ndjekjen e stokut, blerjet te furnitorët, shitjet me afat pagese, porositë paraprake dhe vlerësimin e komisioneve të pagesës.",
-          "Pro: shton llogari punonjësish dhe leje, miratimin nga menaxheri, regjistrin e aktivitetit, regjistrimet e rivendosjes dhe raportet e avancuara — për dyqane me punonjës."
+          "Pro: shton llogari punonjësish dhe leje, miratimin nga menaxheri, regjistrin e aktivitetit dhe regjistrimet e rivendosjes — për dyqane me punonjës."
         ]
       },
       {

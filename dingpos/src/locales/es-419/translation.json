@@ -200,8 +200,7 @@
         "features": [
           "Cuentas del personal: cada quien con su PIN y cada pedido registra quién lo cobró",
           "Permisos y aprobaciones: descuentos sobre el tope, cambios de productos y stock, ver costos",
-          "Registro de actividad e historial de restauraciones",
-          "Reportes avanzados: comparación de periodos, mapa de calor de ventas, productos de baja rotación, valor del inventario, clientes recurrentes"
+          "Registro de actividad e historial de restauraciones"
         ],
         "cta": "Empieza la prueba gratuita de 30 días"
       }
@@ -361,7 +360,7 @@
       "items": [
         {
           "q": "¿Qué puedo usar durante la prueba gratuita?",
-          "a": "Durante 30 días desde la primera instalación tienes todas las funciones, incluidas las de Pro como personal, permisos y reportes avanzados, sin necesidad de cuenta. Si te suscribes a cualquier plan durante la prueba, esta termina de inmediato y pasas al plan que compraste."
+          "a": "Durante 30 días desde la primera instalación tienes todas las funciones, incluidas las de Pro como personal, permisos y registro de actividad, sin necesidad de cuenta. Si te suscribes a cualquier plan durante la prueba, esta termina de inmediato y pasas al plan que compraste."
         },
         {
           "q": "¿Qué pasa si no me suscribo al terminar la prueba?",

@@ -1039,7 +1039,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "No plano Pro, a Comparação de vendas, à direita da barra de período, compara o período com o anterior ou com o mesmo período do ano passado — veja “O que mostram os relatórios avançados do plano Pro?”"
+        "text": "A Comparação de vendas, à direita da barra de período, compara o período com o anterior ou com o mesmo período do ano passado — veja “O que mostram os relatórios avançados?”"
       },
       {
         "type": "note",
@@ -1056,10 +1056,9 @@ export const articles = [
     "slug": "advanced-reports",
     "category": "reports",
     "since": "3.0",
-    "question": "O que mostram os relatórios avançados do plano Pro?",
+    "question": "O que mostram os relatórios avançados?",
     "keywords": [
       "relatórios avançados",
-      "pro",
       "comparação de vendas",
       "ano passado",
       "mapa de calor",
@@ -1086,7 +1085,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sem o Pro, cada um desses cinco pontos exibe um pequeno cadeado que abre uma explicação sobre o upgrade; todo o resto do Resumo funciona como antes. Os relatórios leem dados que sua loja já guarda, então, quando o Pro termina, apenas os relatórios ficam ocultos — nenhum dado é perdido."
+        "text": "Desde a versão 3.4, os cinco estão disponíveis em todos os planos — Lite, Standard e Pro, durante o teste e depois dele. As versões anteriores os mostravam só no Pro, com um pequeno cadeado nos outros planos; se você ainda vê os cadeados, atualize o DingPOS pela App Store."
+      },
+      {
+        "type": "p",
+        "text": "O Lite não controla estoque nem pontos de fidelidade, mas Agora continua mostrando o valor do estoque e os pontos não resgatados que sua loja já tem (por exemplo, do período de teste), ou zero."
       },
       {
         "type": "note",
@@ -1727,11 +1730,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Você tem 30 dias com todos os recursos do plano Pro desde a primeira instalação, incluindo contas de funcionários, permissões, registro de atividades e relatórios avançados — sem precisar criar conta."
+        "text": "Você tem 30 dias com todos os recursos do plano Pro desde a primeira instalação, incluindo contas de funcionários, permissões e registro de atividades — sem precisar criar conta."
       },
       {
         "type": "p",
-        "text": "Assinar qualquer plano durante o teste encerra o teste na hora, e o plano contratado passa a valer a partir daí. Depois do teste, recursos Pro como funcionários e relatórios avançados continuam disponíveis só com a assinatura Pro."
+        "text": "Assinar qualquer plano durante o teste encerra o teste na hora, e o plano contratado passa a valer a partir daí. Depois do teste, recursos Pro como funcionários e registro de atividades continuam disponíveis só com a assinatura Pro. Desde a versão 3.4, os relatórios avançados continuam disponíveis em todos os planos."
       },
       {
         "type": "p",
@@ -1792,14 +1795,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Os três planos incluem finalização de venda completa, produtos, vendas (com anulações, devoluções e trocas), relatórios e backup na nuvem. A diferença está nas ferramentas para tocar a loja:"
+        "text": "Os três planos incluem finalização de venda completa, produtos, vendas (com anulações, devoluções e trocas), relatórios (os avançados incluídos desde a versão 3.4) e backup na nuvem. A diferença está nas ferramentas para tocar a loja:"
       },
       {
         "type": "list",
         "items": [
           "Lite: para quem trabalha sozinho em uma barraca e precisa finalizar vendas e cadastrar produtos.",
           "Standard: acrescenta promoções, pontos de fidelidade e níveis de membros, controle de estoque, compras, vendas a prazo, encomendas e estimativa de taxas de pagamento.",
-          "Pro: acrescenta contas de funcionários e permissões, aprovação do gerente, registro de atividades, registros de restauração e relatórios avançados — para lojas com equipe."
+          "Pro: acrescenta contas de funcionários e permissões, aprovação do gerente, registro de atividades e registros de restauração — para lojas com equipe."
         ]
       },
       {
