@@ -16,6 +16,9 @@
  * every guide pack has en's slugs, an answer-first opening, resolvable related
  * links and a snippet-sized summary; no two pages share a title or a
  * description; sitemap.xml lists exactly the pages built here.
+ *
+ * `--write-sitemap` rewrites the Sotto block of sitemap.xml from the page
+ * list instead of checking it, then exits without writing pages.
  */
 
 import process from "node:process";
@@ -37,6 +40,7 @@ const dist = join(__dirname, "..", "dist");
 const src = join(dist, "index.html");
 const sitemapPath = join(__dirname, "..", "..", "sitemap.xml");
 const registryPath = join(__dirname, "..", "l10n", "languages.json");
+const writeSitemap = process.argv.includes("--write-sitemap");
 
 const BASE_URL = "https://alu-studio.com/sotto";
 const SITE_NAME = "Sotto";
@@ -173,22 +177,30 @@ validateGuides();
 /** Every page of one locale, with its final title and description. */
 function localeRoutes(locale) {
   const { ui, guides } = locale;
+  const staticRoute = ({ path, meta }) => {
+    const [title, description] = meta(ui);
+    return { path, title, description };
+  };
+  const guidePages = guides.map((guide) => ({
+    path: `guides/${guide.slug}`,
+    title: `${guide.title} — ${SITE_NAME}`,
+    description: guide.summary,
+    jsonLd: breadcrumbList([
+      { name: SITE_NAME, url: routeUrl(locale, "") },
+      { name: ui.guides.title, url: routeUrl(locale, "guides") },
+      { name: guide.title, url: routeUrl(locale, `guides/${guide.slug}`) },
+    ]),
+  }));
+  // The order sitemap.xml lists them in: each guide follows the guides index.
+  const [beforeGuides, afterGuides] = [
+    STATIC_ROUTES.filter((r) => ["faq", "guides"].includes(r.path)),
+    STATIC_ROUTES.filter((r) => !["faq", "guides"].includes(r.path)),
+  ].map((routes) => routes.map(staticRoute));
   return [
     { path: "", title: ui.hero.meta_title, description: ui.hero.meta_description },
-    ...STATIC_ROUTES.map(({ path, meta }) => {
-      const [title, description] = meta(ui);
-      return { path, title, description };
-    }),
-    ...guides.map((guide) => ({
-      path: `guides/${guide.slug}`,
-      title: `${guide.title} — ${SITE_NAME}`,
-      description: guide.summary,
-      jsonLd: breadcrumbList([
-        { name: SITE_NAME, url: routeUrl(locale, "") },
-        { name: ui.guides.title, url: routeUrl(locale, "guides") },
-        { name: guide.title, url: routeUrl(locale, `guides/${guide.slug}`) },
-      ]),
-    })),
+    ...beforeGuides,
+    ...guidePages,
+    ...afterGuides,
   ];
 }
 
@@ -223,19 +235,39 @@ function validatePageMeta() {
 
 validatePageMeta();
 
-// Routes are derived from the data, but sitemap.xml is hand-maintained —
-// without this check a new guide (or locale) ships live pages that are never
-// submitted for indexing, and nothing fails.
+// Routes are derived from the data, but sitemap.xml is the URL membership
+// list for prerender and lastmod — without this check a new guide (or locale)
+// ships live pages that are never submitted for indexing, and nothing fails.
+// `--write-sitemap` regenerates the Sotto block from `pages` instead.
+const SOTTO_LOC = /<loc>\s*(https:\/\/alu-studio\.com\/sotto\/[^<\s]*)\s*<\/loc>/;
+
 function validateSitemap() {
   const sitemap = readFileSync(sitemapPath, "utf8");
-  const listed = new Set(
-    [...sitemap.matchAll(/<loc>\s*(https:\/\/alu-studio\.com\/sotto\/[^<\s]*)\s*<\/loc>/g)].map((m) => m[1]),
-  );
+  const listed = new Set([...sitemap.matchAll(new RegExp(SOTTO_LOC, "g"))].map((m) => m[1]));
   const expected = new Set(pages.map((p) => p.url));
   fail("Sitemap validation failed", [
     ...[...expected].filter((u) => !listed.has(u)).map((u) => `sitemap.xml is missing ${u}`),
-    ...[...listed].filter((u) => !expected.has(u)).map((u) => `sitemap.xml lists ${u} with no page`),
+    ...[...listed].filter((u) => !expected.has(u)).map((u) => `sitemap.xml lists ${u} with no page (run with --write-sitemap)`),
   ]);
+}
+
+/** Replace the contiguous Sotto <url> lines of sitemap.xml with one line per page. */
+function rewriteSitemap() {
+  const lines = readFileSync(sitemapPath, "utf8").split("\n");
+  const at = lines.flatMap((line, i) => (SOTTO_LOC.test(line) ? [i] : []));
+  if (at.length && at[at.length - 1] - at[0] + 1 !== at.length) {
+    fail("Sitemap rewrite failed", ["the Sotto <url> lines of sitemap.xml are not contiguous"]);
+  }
+  const start = at.length ? at[0] : lines.findIndex((line) => line.trim() === "</urlset>");
+  const block = pages.map((p) => `  <url><loc>${p.url}</loc></url>`);
+  lines.splice(start, at.length, ...block);
+  writeFileSync(sitemapPath, lines.join("\n"));
+  console.log(`  ✓ sitemap.xml: ${block.length} Sotto URLs in ${LOCALES.length} languages`);
+}
+
+if (writeSitemap) {
+  rewriteSitemap();
+  process.exit(0);
 }
 
 validateSitemap();
