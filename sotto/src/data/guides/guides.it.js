@@ -417,7 +417,7 @@ export const articles = [
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
     "title": "Quante persone si incontrano nella vita? I numeri reali dietro «1 in 8 Billion»",
-    "summary": "Le «80.000 persone nella vita» sono un esperimento mentale. La ricerca stima che tu conosca per nome circa 611 persone; per diventare amici stretti servono oltre 200 ore insieme.",
+    "summary": "Le «80.000 persone nella vita» sono un esperimento mentale. La ricerca stima circa 611 persone conosciute per nome; un amico stretto richiede oltre 200 ore.",
     "content": [
       {
         "type": "p",

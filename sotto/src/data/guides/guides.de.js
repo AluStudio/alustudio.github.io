@@ -417,7 +417,7 @@ export const articles = [
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
     "title": "Wie viele Menschen trifft man im Leben? Die echten Zahlen hinter „1 in 8 Billion“",
-    "summary": "Die virale Zahl „80.000 Menschen im Leben“ ist ein Gedankenspiel. Studien kommen auf rund 611 Menschen, die man mit Namen kennt; eine enge Freundschaft braucht über 200 Stunden.",
+    "summary": "Die virale Zahl „80.000 Menschen im Leben“ ist ein Gedankenspiel. Studien zufolge kennt man etwa 611 Menschen namentlich; enge Freundschaft: über 200 Stunden.",
     "content": [
       {
         "type": "p",
