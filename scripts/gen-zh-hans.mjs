@@ -254,6 +254,11 @@ const SOTTO_SITE_GLOSSARY = [
   ["底片", "胶片"], // film photography; 底片 reads as a negative
   ["则评分", "个评分"], // App Store counts ratings with 个
   ["回馈", "反馈"], // user feedback
+  ["史丹佛", "斯坦福"],
+  ["推估", "预测"],
+  ["转传", "转发"],
+  ["完整数据", "完整资料"], // 完整資料 is a full profile, not raw data; the app keeps 数据 for stored data
+  ["对方的文件", "对方的档案"], // 檔案 kept on a person; opencc reads it as a document
   // Converter mistranslations
   ["激活", "启用"], // 啟用
   ["内核", "核心"], // 核心 → kernel
