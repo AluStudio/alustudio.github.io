@@ -142,7 +142,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 寫給還不認識產品的人，回答他們選工具之前就會搜的問題，不是操作說明（操作說明是 support／FAQ）。
 
 - 每篇開頭 2–3 句直接回答標題，之後用 H2 分段，最後一段導回 app；標題用該語言實際的搜尋說法，不逐字翻譯。`summary` 同時是索引卡片文字與該頁的 description（160 字元內）。build 檢查每篇以段落開頭、至少一個 H2、related 都存在。
-- Sotto（`/sotto/guides/<slug>/`）的題目是各國通用的人際問題，所以每種語言有同一組文章（同 slug、同順序），由 en 翻譯；題目瞄準產品 ASO 已驗證的關鍵字背後的真實問題（`~/Developer/alustudio/sotto/docs/marketing/aso-keywords.md`），網站與商店用同一組詞。內容來自 `sotto/src/data/guides/guides.<code>.js`，schema 寫在 `guides.en.js` 開頭。
+- Sotto（`/sotto/guides/<slug>/`）的題目是各國通用的人際問題，所以每種語言有同一組文章（同 slug、同順序），由 en 翻譯；題目瞄準產品 ASO 已驗證的關鍵字背後的真實問題（`~/Developer/alustudio/sotto/docs/marketing/aso-keywords.md`），網站與商店用同一組詞。例外是時事帶起的常青問題（例如「一生會遇見多少人」，由 2026 年 10 月的《80 億分之 1》帶起）：時事只當開場，主體回答不會過時的問題，後半段要接回一個已驗證的關鍵字題目，並在 related 連到那篇（owner 2026-10-31）。內容來自 `sotto/src/data/guides/guides.<code>.js`，schema 寫在 `guides.en.js` 開頭。
 - DingPOS（`/dingpos/<prefix>/guides/<slug>/`）的題目是經營成本與法規，費率、稅、支付品牌和規定每個國家都不同，所以文章以市場為單位寫，不翻譯：每篇標一個 `market`（例如 `TW`），只發在那個市場讀的語言底下。語言不等於市場：zh-Hant 同時是台灣與香港，en 是澳洲、美國、英國，一個市場的文章不能翻成另一個市場的版本。
   - 只有存在 `dingpos/src/data/guides/guides.<code>.js` 的語言有 guides 區（索引頁、文章、導覽列與 footer 的連結）；這是「每種語言的內容都要完整」的唯一例外。區塊的 UI 字串放在 pack 的 `ui`，不放 `translation.json`，因為後者每個 key 都要 32 種語言齊全。schema 寫在 `guides.zh-Hant.js` 開頭。
   - guide 頁不輸出 hreflang 與 `og:locale:alternate`：沒有其他語言有同一頁，不同市場的同主題文章也不是彼此的翻譯。語言切換器在 guide 頁連到該語言的 guides 索引，沒有 guides 的語言連到首頁。
