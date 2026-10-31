@@ -500,7 +500,7 @@ export const articles = [
           "Right now: stock value (current stock × current cost), every stock movement in the selected period, and the points customers hold but haven't redeemed, with the most they can take off. These are current balances; the period doesn't change them.",
         ],
       },
-      { type: "p", text: "Since v3.4, all five are open on every plan — Lite, Standard and Pro, during the trial and after it ends. Earlier versions showed them on Pro only, with a small lock on other plans; if you still see the locks, update DingPOS from the App Store." },
+      { type: "p", text: "Since v3.4, all five are open on every plan, and they stay open after the trial ends. Earlier versions showed them on Pro only, with a small lock on other plans; if you still see the locks, update DingPOS from the App Store." },
       { type: "p", text: "Lite doesn't track stock or loyalty points, but Right now still shows the stock value and unredeemed points your store already holds (for example from the trial), or zero." },
       { type: "note", text: "Staff see advanced reports under the Dashboard permission; the stock value amounts also need the Cost & profit permission." },
     ],
@@ -814,7 +814,7 @@ export const articles = [
     keywords: ["trial", "free", "30 days"],
     content: [
       { type: "p", text: "You get 30 days of every Pro plan feature from first install, including staff accounts, permissions and the activity log — no account required." },
-      { type: "p", text: "Subscribing to any plan during the trial ends the trial right away, and the plan you bought applies from then on. After the trial, Pro features such as staff and the activity log stay available only with a Pro subscription. Since v3.4, advanced reports stay available on every plan." },
+      { type: "p", text: "Subscribing to any plan during the trial ends the trial right away, and the plan you bought applies from then on. After the trial, Pro features such as staff and the activity log stay available only with a Pro subscription. Advanced reports don't need one; since v3.4 every plan includes them." },
       { type: "p", text: "Within the last 7 days and on the final day, the app reminds you once each how many days are left, that checkout pauses when the trial ends, and that your data is kept." },
       { type: "p", text: "Everything you create during the trial (products, orders, members) is kept in full. Your data is never deleted, whether or not you subscribe afterwards." },
     ],

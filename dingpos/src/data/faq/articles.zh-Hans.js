@@ -1123,7 +1123,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "v3.4 起，这五个位置所有方案都能用，不论 Lite、Standard 或 Pro，也不论是在试用中或试用已结束。更早的版本只有 Pro 看得到，其他方案会看到小锁；如果你还看得到锁，请到 App Store 更新 DingPOS。"
+        "text": "v3.4 起，每个方案都能用这五个位置，试用结束后也照常开放。更早的版本只有 Pro 看得到，其他方案会看到小锁；如果你还看得到锁，请到 App Store 更新 DingPOS。"
       },
       {
         "type": "p",
