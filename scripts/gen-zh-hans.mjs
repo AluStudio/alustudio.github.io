@@ -257,6 +257,7 @@ const SOTTO_SITE_GLOSSARY = [
   ["史丹佛", "斯坦福"],
   ["推估", "预测"],
   ["转传", "转发"],
+  ["一支短片", "一段短视频"], // a social-media clip; 短片 reads as a short film
   ["管道", "渠道"], // a channel to meet people, not a pipe
   ["完整数据", "完整资料"], // 完整資料 is a full profile, not raw data; the app keeps 数据 for stored data
   // Converter mistranslations
