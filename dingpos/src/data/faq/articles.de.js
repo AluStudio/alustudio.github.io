@@ -1036,7 +1036,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Wählen Sie oben in der Statistik Heute, Gestern, Diese Woche, Dieser Monat, Dieses Jahr oder Gesamter Zeitraum, oder legen Sie über Benutzerdefiniert ein Start- und Enddatum fest. Diese Woche richtet sich nach dem ersten Wochentag des Geräts; Dieser Monat und Dieses Jahr beginnen am 1. bzw. am 1. Januar. Jede Option zeigt die Daten, die sie umfasst, und Gesamter Zeitraum beginnt mit der ersten Transaktion Ihres Geschäfts."
+        "text": "Wählen Sie oben in der Statistik Heute, Gestern, Diese Woche, Dieser Monat, Dieses Jahr oder Gesamter Zeitraum, oder legen Sie über Benutzerdefiniert ein Start- und Enddatum fest. Diese Woche richtet sich nach dem ersten Wochentag des Geräts; Dieser Monat und Dieses Jahr beginnen am 1. bzw. am 1. Januar. Jede Option zeigt den abgedeckten Zeitraum, und Gesamter Zeitraum beginnt mit der ersten Transaktion Ihres Geschäfts."
       },
       {
         "type": "p",
