@@ -186,11 +186,11 @@ export const articles = [
     summary: "The viral \"80,000 people in a lifetime\" is a thought experiment. Research puts the people you know by name near 611, and a close friend takes 200+ hours.",
     content: [
       { type: "p", text: "No study has ever counted how many people one person meets in a lifetime. The widely shared figure of 80,000 is a thought experiment: meet three new people every day for 73 years. Research that did survey people estimates that the average American knows about 611 people by name (median 472). Out of 8 billion, that is about one person in every 13 million." },
-      { type: "p", text: "The question came back into fashion with \"1 in 8 Billion\", a browser life simulator that an independent developer in South Korea built with AI in early October 2026. Using statistics from the United Nations, the World Health Organization and the World Bank, it makes you one of the 8 billion people at random and plays out that whole life. It took off on Threads and spread from Korea to Japan and Taiwan within weeks. Many players finished a life and started wondering who they have actually met in this one." },
+      { type: "p", text: "The question came back into fashion with \"1 in 8 Billion\", a browser life simulator that an independent developer in South Korea built with AI in early October 2026. Using statistics from the United Nations, the World Health Organization and the World Bank, it makes you one of the 8 billion people at random and plays out that whole life. It took off on Threads and spread from Korea to Japan and Taiwan within weeks. Many players finished a life and started wondering who they have met in their real one." },
       { type: "h2", text: "Where \"80,000 people\" and \"8 million people\" come from" },
       { type: "p", text: "A set of numbers circulates on Chinese-language social media: in a lifetime you will pass 8,263,563 people, greet 39,778, get to know 3,619, and grow close to 275. It usually travels with a short video, and no study behind it can be found." },
       { type: "p", text: "The 80,000 figure has a clearer origin. Max Roser, founder of Our World in Data, imagined someone who talks with three new people every single day for 73 years: they would get to know about 80,000 people. He used the number to make the opposite point: even someone that outgoing knows only 0.001% of the world." },
-      { type: "h2", text: "The numbers research actually measured" },
+      { type: "h2", text: "The numbers research has measured" },
       {
         type: "table",
         head: ["Number", "What it measures", "Source"],
