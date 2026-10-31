@@ -1,4 +1,5 @@
 {
+  "//": "Generated from en and the fr translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sotto sync fr`, then `npm run l10n -- sotto apply fr`.",
   "nav": {
     "features": "Fonctionnalités",
     "privacy": "Confidentialité",
@@ -11,7 +12,7 @@
   "hero": {
     "meta_title": "Sotto — CRM personnel : retenez tout de vos proches",
     "meta_description": "Sotto, le CRM personnel et privé pour iPhone et Android : retenez tailles, anniversaires, allergies et idées cadeaux de ceux que vous aimez.",
-    "tagline": "Votre CRM personnel pour les détails qui comptent",
+    "tagline": "Des notes tout en douceur sur vos proches, pour les détails qui comptent",
     "description": "Chaque personne porte en elle de petits détails qui méritent d'être retenus. Sotto les garde précieusement pour vous — tailles, préférences, ces choses que vous seul connaissez. Toutes les données restent sur votre téléphone, en toute discrétion.",
     "download": "Télécharger sur l'App Store",
     "downloadAndroid": "Disponible sur Google Play",
@@ -89,7 +90,7 @@
       "diadialydia": {
         "title": "Fonctionnalité réclamée~~",
         "date": "28 mai 2026",
-        "body": "Si l'on pouvait ajouter des amis, se connecter et s'envoyer des questions auxquelles on aimerait que l'autre réponde (par exemple « Quel souvenir de nous deux te reste le plus ? » ou « Quand te sens-tu aimé par moi ? »), ce serait une app vraiment puissante !",
+        "body": "Si l’on pouvait ajouter des amis, se connecter et s’envoyer des questions auxquelles on aimerait que l’autre réponde (par exemple « Quel souvenir de nous deux vous revient le plus ? » ou « À quel moment sentez-vous le plus que je vous aime ? »), ce serait une app vraiment puissante !",
         "response": "Nous ne voulions pas qu'un jour les coûts de serveur obligent à fermer cette fonctionnalité, voire l'app entière (et nous ne voulons pas d'abonnement). Nous avons donc créé un catalogue de questions : on en choisit une et on en parle longuement. Assis face à face autour d'un café ou d'un verre, on ressent mieux les pensées de l'autre qu'en répondant dans une app. Nous espérons qu'il vous plaira",
         "response_date": "19 juin 2026",
         "shipped": "un catalogue de 323 questions de conversation."
