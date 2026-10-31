@@ -1,4 +1,5 @@
 {
+  "//": "Generated from en and the ja translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sotto sync ja`, then `npm run l10n -- sotto apply ja`.",
   "nav": {
     "features": "機能",
     "privacy": "プライバシーポリシー",
@@ -11,7 +12,7 @@
   "hero": {
     "meta_title": "Sotto — 人脈メモアプリ｜大切な人のサイズや誕生日を記録",
     "meta_description": "Sotto は iPhone と Android で使えるプライベートな人脈メモアプリ。大切な人のサイズ、誕生日、アレルギー、ギフトアイデアを記録できます。",
-    "tagline": "大切な人の小さなことを忘れない人脈メモ",
+    "tagline": "大切な人の大切なことを覚えておく、やさしい人脈メモアプリ",
     "description": "誰もが覚えておきたい小さなことを持っています。Sotto はそんな細部を大切に守ります——身長、好み、あなただけが知っていること。すべてのデータはあなたのスマホだけに、静かに寄り添います。",
     "download": "App Store でダウンロード",
     "downloadAndroid": "Google Play で手に入れよう",
