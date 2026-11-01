@@ -536,7 +536,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "データはすべてスマホの中に保存され、必要ならスマホ自体の画面ロックで守れます。Sotto は5人まで無料で、iPhone と Android に対応しています。"
+        "text": "データはすべてスマホの中だけに保存され、必要ならスマホ自体の画面ロックで守れます。Sotto は5人まで無料で、iPhone と Android に対応しています。"
       }
     ],
     "related": [

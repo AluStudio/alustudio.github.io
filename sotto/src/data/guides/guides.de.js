@@ -417,7 +417,7 @@ export const articles = [
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
     "title": "Wie viele Menschen trifft man im Leben? Die echten Zahlen hinter „1 in 8 Billion“",
-    "summary": "Die virale „80.000“ ist ein Gedankenspiel. Studien zufolge kennt man etwa 611 Menschen mit Namen, und eine enge Freundschaft braucht über 200 Stunden.",
+    "summary": "Die virale Zahl von 80.000 ist ein Gedankenspiel. Laut einer US-Studie kennt man etwa 611 Menschen mit Namen; eine enge Freundschaft braucht über 200 Stunden.",
     "content": [
       {
         "type": "p",
@@ -520,7 +520,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Diese paar Zeilen geben dir außerdem etwas, wonach du beim nächsten Treffen fragen kannst: „Du wolltest doch umziehen. Wie ist es gelaufen?“ Eine solche Frage gehört zu den Dutzenden Stunden, die aus einer Bekanntschaft eine Freundschaft machen."
+        "text": "Diese paar Zeilen geben dir außerdem etwas, wonach du beim nächsten Treffen fragen kannst: „Du wolltest doch umziehen. Wie ist es gelaufen?“ Solche Gespräche sind Teil der vielen Stunden, in denen aus einer Bekanntschaft eine Freundschaft wird."
       },
       {
         "type": "note",
@@ -536,7 +536,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Alles bleibt auf deinem Handy, auf Wunsch hinter der Displaysperre deines Handys. Sotto ist für bis zu 5 Personen kostenlos, auf iPhone und Android."
+        "text": "Alles bleibt auf deinem Handy, auf Wunsch geschützt durch die Displaysperre. Sotto ist für bis zu 5 Personen kostenlos, auf iPhone und Android."
       }
     ],
     "related": [

@@ -487,7 +487,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Per le coppie funziona allo stesso modo. Il sociologo di Stanford Michael Rosenfeld e i colleghi hanno analizzato i dati sulle coppie eterosessuali negli Stati Uniti, pubblicati nel 2019: nel 2017 il 39% si era conosciuto online, il 27% in un bar o ristorante e il 20% tramite amici (una coppia può rientrare in più categorie). Circa 9 coppie su 10 conosciutesi online prima erano estranee. Oggi sono di più le coppie che si conoscono online, ma nella maggior parte dei casi si comincia comunque da sconosciuti."
+        "text": "Per le coppie funziona allo stesso modo. Il sociologo di Stanford Michael Rosenfeld e i colleghi hanno analizzato i dati sulle coppie eterosessuali negli Stati Uniti, pubblicati nel 2019. Nel 2017 il 39% si era conosciuto online, il 27% in un bar o ristorante e il 20% tramite amici (una coppia può rientrare in più categorie). Circa 9 coppie su 10 che si erano conosciute online non si conoscevano prima. Oggi sono di più le coppie che si conoscono online, ma nella maggior parte dei casi si comincia comunque da sconosciuti."
       },
       {
         "type": "p",
@@ -520,7 +520,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Quelle poche righe ti danno anche qualcosa da chiedere la prossima volta che vi vedete: «Ti stavi preparando al trasloco. Com'è andata?» Una domanda così fa parte delle decine di ore che trasformano un conoscente in un amico."
+        "text": "Quelle poche righe ti offrono uno spunto per la prossima volta che vi vedete. Puoi chiedere: «Ti stavi preparando al trasloco. Com'è andata?» Una domanda così fa parte delle decine di ore che trasformano un conoscente in un amico."
       },
       {
         "type": "note",
@@ -532,7 +532,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto è un CRM personale, cioè un'app per le note sulle persone, con una scheda per ognuna. Il campo «Incontro» è pensato per la storia di come vi siete conosciuti, e la data può andare nel campo «Anniversario»: attiva il suo promemoria e Sotto ti avvisa 7 giorni prima, alle 9 del mattino. Per approfondire la conoscenza con qualcuno di nuovo, prova le 33 domande della categoria «Conoscerci», adattate dallo studio del 1997 dello psicologo Arthur Aron su come gli estranei diventano intimi."
+        "text": "Sotto è un CRM personale, cioè un'app per le note sulle persone, con una scheda per ognuna. Il campo «Incontro» è pensato per raccontare come vi siete conosciuti. Puoi inserire la data nel campo «Anniversario» e attivare il promemoria: Sotto ti avvisa 7 giorni prima, alle 9 del mattino. Per conoscere meglio una persona nuova, prova le 33 domande della categoria «Conoscerci», adattate dallo studio del 1997 dello psicologo Arthur Aron su come due sconosciuti possono diventare amici intimi."
       },
       {
         "type": "p",

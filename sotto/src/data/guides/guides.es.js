@@ -520,7 +520,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Esas pocas líneas también te dan algo que preguntar la próxima vez que se vean: «Te estabas preparando para mudarte, ¿cómo te fue?». Una pregunta así forma parte de las decenas de horas que convierten a un conocido en un amigo."
+        "text": "Esas pocas líneas también te dan pie para preguntarle la próxima vez que os veáis: «Te estabas preparando para mudarte, ¿cómo te fue?». Una pregunta así ayuda a que un conocido se convierta en amigo con el paso de las horas."
       },
       {
         "type": "note",
@@ -536,7 +536,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Todo se queda en tu teléfono, protegido por el propio bloqueo de pantalla de tu teléfono si quieres. Sotto es gratis para hasta 5 personas, en iPhone y Android."
+        "text": "Todo se queda en tu móvil y, si quieres, queda protegido por el bloqueo de pantalla del propio móvil. Sotto es gratis para hasta 5 personas, en iPhone y Android."
       }
     ],
     "related": [
