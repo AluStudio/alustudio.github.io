@@ -487,7 +487,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Con las parejas pasa lo mismo. El sociólogo de Stanford Michael Rosenfeld y sus colegas analizaron datos de parejas heterosexuales de EE. UU., publicados en 2019: en 2017, el 39 % se había conocido por internet, el 27 % en un bar o restaurante y el 20 % a través de amigos (una pareja puede entrar en más de una categoría). Cerca de 9 de cada 10 parejas que se conocieron por internet eran desconocidas entre sí. El canal cambió; la mayoría de los encuentros sigue empezando entre desconocidos."
+        "text": "Con las parejas pasa lo mismo. El sociólogo de Stanford Michael Rosenfeld y sus colegas analizaron datos de parejas heterosexuales de EE. UU., publicados en 2019: en 2017, el 39 % se había conocido por internet, el 27 % en un bar o restaurante y el 20 % a través de amigos (una pareja puede entrar en más de una categoría). Cerca de 9 de cada 10 parejas que se conocieron por internet eran desconocidas entre sí. Hoy se conocen más parejas por internet, pero la mayoría sigue empezando como desconocidos."
       },
       {
         "type": "p",
@@ -520,7 +520,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Esas pocas líneas son más que un recuerdo. La próxima vez que se vean, preguntar «Te estabas preparando para mudarte, ¿cómo te fue?» es una de las decenas de horas que convierten a un conocido en un amigo."
+        "text": "Esas pocas líneas también te dan algo que preguntar la próxima vez que se vean: «Te estabas preparando para mudarte, ¿cómo te fue?». Una pregunta así forma parte de las decenas de horas que convierten a un conocido en un amigo."
       },
       {
         "type": "note",
@@ -532,7 +532,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto es una app de notas sobre personas, con una página para cada una. Su campo integrado Encuentro está pensado para la historia de cómo se conocieron, y la fecha puede ir en el campo Aniversario: activa su recordatorio y Sotto te avisa 7 días antes, a las 9:00 de la mañana. Para profundizar con alguien nuevo, las 33 preguntas de la categoría Conocernos están adaptadas del estudio de 1997 del psicólogo Arthur Aron sobre cómo los desconocidos llegan a sentirse cercanos."
+        "text": "Sotto es una app de notas sobre personas, con una página para cada una. Su campo integrado Encuentro está pensado para la historia de cómo se conocieron, y la fecha puede ir en el campo Aniversario: activa su recordatorio y Sotto te avisa 7 días antes, a las 9:00 de la mañana. Para profundizar con alguien nuevo, prueba las 33 preguntas de la categoría Conocernos, adaptadas del estudio de 1997 del psicólogo Arthur Aron sobre cómo los desconocidos llegan a sentirse cercanos."
       },
       {
         "type": "p",

@@ -487,7 +487,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Per le coppie funziona allo stesso modo. Il sociologo di Stanford Michael Rosenfeld e i colleghi hanno analizzato i dati sulle coppie eterosessuali negli Stati Uniti, pubblicati nel 2019: nel 2017 il 39% si era conosciuto online, il 27% in un bar o ristorante e il 20% tramite amici (una coppia può rientrare in più categorie). Circa 9 coppie su 10 conosciutesi online prima erano estranee. Il canale è cambiato; la maggior parte degli incontri parte comunque tra sconosciuti."
+        "text": "Per le coppie funziona allo stesso modo. Il sociologo di Stanford Michael Rosenfeld e i colleghi hanno analizzato i dati sulle coppie eterosessuali negli Stati Uniti, pubblicati nel 2019: nel 2017 il 39% si era conosciuto online, il 27% in un bar o ristorante e il 20% tramite amici (una coppia può rientrare in più categorie). Circa 9 coppie su 10 conosciutesi online prima erano estranee. Oggi sono di più le coppie che si conoscono online, ma nella maggior parte dei casi si comincia comunque da sconosciuti."
       },
       {
         "type": "p",
@@ -503,7 +503,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Non è una cattiva memoria. Nessuno sapeva che quel momento valesse la pena di ricordarlo mentre accadeva."
+        "text": "Non è colpa della tua memoria. Nessuno sapeva che quel momento valesse la pena di ricordarlo mentre accadeva."
       },
       {
         "type": "h2",
@@ -520,11 +520,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Quelle poche righe sono più di un ricordo. La prossima volta che vi vedete, chiedere «Ti stavi preparando al trasloco: com'è andata?» è una delle decine di ore che trasformano un conoscente in un amico."
+        "text": "Quelle poche righe ti danno anche qualcosa da chiedere la prossima volta che vi vedete: «Ti stavi preparando al trasloco. Com'è andata?» Una domanda così fa parte delle decine di ore che trasformano un conoscente in un amico."
       },
       {
         "type": "note",
-        "text": "Ciò che scrivi è il tuo ricordo, non un dossier su di lui o su di lei. Scrivi solo ciò che non ti imbarazzerebbe far leggere a lui o a lei."
+        "text": "Ciò che scrivi è il tuo ricordo, non un dossier sull'altra persona. Scrivi solo ciò che non ti imbarazzerebbe farle leggere."
       },
       {
         "type": "h2",
@@ -532,7 +532,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto è un CRM personale, cioè un'app per le note sulle persone, con una scheda per ognuna. Il campo «Incontro» è pensato per la storia di come vi siete conosciuti, e la data può andare nel campo «Anniversario»: attiva il suo promemoria e Sotto ti avvisa 7 giorni prima, alle 9 del mattino. Per approfondire la conoscenza con qualcuno di nuovo, le 33 domande della categoria «Conoscerci» sono adattate dallo studio del 1997 dello psicologo Arthur Aron su come gli estranei diventano intimi."
+        "text": "Sotto è un CRM personale, cioè un'app per le note sulle persone, con una scheda per ognuna. Il campo «Incontro» è pensato per la storia di come vi siete conosciuti, e la data può andare nel campo «Anniversario»: attiva il suo promemoria e Sotto ti avvisa 7 giorni prima, alle 9 del mattino. Per approfondire la conoscenza con qualcuno di nuovo, prova le 33 domande della categoria «Conoscerci», adattate dallo studio del 1997 dello psicologo Arthur Aron su come gli estranei diventano intimi."
       },
       {
         "type": "p",

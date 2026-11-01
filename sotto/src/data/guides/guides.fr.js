@@ -417,7 +417,7 @@ export const articles = [
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
     "title": "Combien de personnes rencontre-t-on dans une vie ? Les vrais chiffres derrière « 1 in 8 Billion »",
-    "summary": "Les « 80 000 personnes dans une vie » sont une hypothèse. Les études comptent environ 611 personnes connues par leur nom ; un ami proche, 200 h et plus.",
+    "summary": "Les « 80 000 personnes dans une vie » sont une hypothèse. Les études comptent environ 611 personnes connues par leur nom. Un ami proche demande plus de 200 h.",
     "content": [
       {
         "type": "p",
@@ -487,7 +487,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pour les couples, c’est la même logique. Michael Rosenfeld, sociologue à Stanford, et ses collègues ont analysé des données sur les couples hétérosexuels aux États-Unis, publiées en 2019 : en 2017, 39 % s’étaient rencontrés en ligne, 27 % dans un bar ou un restaurant et 20 % par des amis (un couple peut relever de plusieurs catégories). Environ 9 couples sur 10 formés en ligne étaient auparavant des inconnus. Le canal a changé ; la plupart des rencontres commencent toujours entre inconnus."
+        "text": "Pour les couples, c’est la même logique. Michael Rosenfeld, sociologue à Stanford, et ses collègues ont analysé des données sur les couples hétérosexuels aux États-Unis, publiées en 2019 : en 2017, 39 % s’étaient rencontrés en ligne, 27 % dans un bar ou un restaurant et 20 % par des amis (un couple peut relever de plusieurs catégories). Environ 9 couples sur 10 formés en ligne étaient auparavant des inconnus. Aujourd’hui, plus de couples se rencontrent en ligne, mais la plupart commencent toujours comme des inconnus."
       },
       {
         "type": "p",
@@ -520,7 +520,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ces quelques lignes valent plus qu’un souvenir. La prochaine fois que vous vous verrez, demander « Tu préparais ton déménagement : comment ça s’est passé ? » fait partie des dizaines d’heures qui transforment une connaissance en ami."
+        "text": "Ces quelques lignes vous donnent aussi de quoi relancer la conversation à votre prochaine rencontre : « Tu préparais ton déménagement. Comment ça s’est passé ? » Une question comme celle-là fait partie des dizaines d’heures qui transforment une connaissance en ami."
       },
       {
         "type": "note",
@@ -532,7 +532,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto est une app de carnet privé pour vos proches, avec une page pour chaque personne. Son champ intégré « Rencontre » est fait pour raconter comment vous vous êtes rencontrés, et la date peut aller dans le champ « Anniv. de couple » : activez son rappel et Sotto vous prévient 7 jours avant, à 9 h du matin. Pour aller plus loin avec une nouvelle connaissance, les 33 questions de la catégorie « Se connaître » sont adaptées de l’étude de 1997 du psychologue Arthur Aron sur la façon dont des inconnus deviennent proches."
+        "text": "Sotto est une app de carnet privé pour vos proches, avec une page pour chaque personne. Son champ intégré « Rencontre » est fait pour raconter comment vous vous êtes rencontrés, et la date peut aller dans le champ « Anniv. de couple » : activez son rappel et Sotto vous prévient 7 jours avant, à 9 h du matin. Pour aller plus loin avec une nouvelle connaissance, essayez les 33 questions de la catégorie « Se connaître », adaptées de l’étude de 1997 du psychologue Arthur Aron sur la façon dont des inconnus deviennent proches."
       },
       {
         "type": "p",

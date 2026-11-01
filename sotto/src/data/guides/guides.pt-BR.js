@@ -487,7 +487,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Com casais é parecido. O sociólogo Michael Rosenfeld, de Stanford, e colegas analisaram dados de casais heterossexuais nos Estados Unidos, publicados em 2019: em 2017, 39% tinham se conhecido on-line, 27% num bar ou restaurante e 20% por meio de amigos (um casal pode se encaixar em mais de uma categoria). Cerca de 9 em cada 10 casais que se conheceram on-line eram desconhecidos antes. O canal mudou; a maioria dos encontros ainda começa entre estranhos."
+        "text": "Com casais é parecido. O sociólogo Michael Rosenfeld, de Stanford, e colegas analisaram dados de casais heterossexuais nos Estados Unidos, publicados em 2019: em 2017, 39% tinham se conhecido on-line, 27% num bar ou restaurante e 20% por meio de amigos (um casal pode se encaixar em mais de uma categoria). Cerca de 9 em cada 10 casais que se conheceram on-line eram desconhecidos antes. Hoje mais casais se conhecem on-line, mas a maioria ainda começa entre estranhos."
       },
       {
         "type": "p",
@@ -520,7 +520,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Essas poucas linhas são mais do que uma lembrança. No próximo encontro, perguntar \"Você estava se preparando para mudar de casa. Como foi?\" é uma das dezenas de horas que transformam um conhecido em amigo."
+        "text": "Essas poucas linhas também dão a você algo para perguntar no próximo encontro: \"Você estava se preparando para mudar de casa. Como foi?\" Uma pergunta assim faz parte das dezenas de horas que transformam um conhecido em amigo."
       },
       {
         "type": "note",
@@ -532,7 +532,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "O Sotto é um app de notas sobre pessoas, com uma página para cada uma. O campo \"Encontro\", que já vem pronto, serve para a história de como vocês se conheceram, e a data pode ir no campo \"Aniversário de casal\": ative o lembrete dele e o Sotto avisa 7 dias antes, às 9h da manhã. Para se aprofundar com alguém que você acabou de conhecer, as 33 perguntas da categoria \"Nos conhecer\" são adaptadas do estudo de 1997 do psicólogo Arthur Aron sobre como estranhos ficam próximos."
+        "text": "O Sotto é um app de notas sobre pessoas, com uma página para cada uma. O campo \"Encontro\", que já vem pronto, serve para a história de como vocês se conheceram, e a data pode ir no campo \"Aniversário de casal\": ative o lembrete dele e o Sotto avisa 7 dias antes, às 9h da manhã. Para se aprofundar com alguém que você acabou de conhecer, experimente as 33 perguntas da categoria \"Nos conhecer\", adaptadas do estudo de 1997 do psicólogo Arthur Aron sobre como estranhos ficam próximos."
       },
       {
         "type": "p",

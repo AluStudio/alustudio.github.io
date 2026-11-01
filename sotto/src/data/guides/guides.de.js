@@ -417,7 +417,7 @@ export const articles = [
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
     "title": "Wie viele Menschen trifft man im Leben? Die echten Zahlen hinter „1 in 8 Billion“",
-    "summary": "Die virale Zahl „80.000 Menschen im Leben“ ist ein Gedankenspiel. Studien zufolge kennt man etwa 611 Menschen namentlich; enge Freundschaft: über 200 Stunden.",
+    "summary": "Die virale „80.000“ ist ein Gedankenspiel. Studien zufolge kennt man etwa 611 Menschen mit Namen, und eine enge Freundschaft braucht über 200 Stunden.",
     "content": [
       {
         "type": "p",
@@ -425,7 +425,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wieder aktuell wurde die Frage durch „1 in 8 Billion“ (auf Deutsch etwa „1 von 8 Milliarden“), einen Lebenssimulator im Browser, den jemand als unabhängiges Projekt in Südkorea Anfang Oktober 2026 mit KI gebaut hat. Anhand von Statistiken der Vereinten Nationen, der Weltgesundheitsorganisation und der Weltbank macht es dich zufällig zu einem der 8 Milliarden Menschen und spielt dieses ganze Leben durch. Auf Threads wurde es zum Hit und verbreitete sich innerhalb weniger Wochen von Korea nach Japan und Taiwan. Viele, die ein Leben zu Ende gespielt hatten, fragten sich danach, wen sie in ihrem eigenen Leben tatsächlich getroffen haben."
+        "text": "Wieder aktuell wurde die Frage durch „1 in 8 Billion“ (auf Deutsch etwa „1 von 8 Milliarden“), einen Lebenssimulator im Browser, den ein Indie-Entwickler aus Südkorea Anfang Oktober 2026 mit KI gebaut hat. Anhand von Statistiken der Vereinten Nationen, der Weltgesundheitsorganisation und der Weltbank macht es dich zufällig zu einem der 8 Milliarden Menschen und spielt dieses ganze Leben durch. Auf Threads wurde es zum Hit und verbreitete sich innerhalb weniger Wochen von Korea nach Japan und Taiwan. Viele, die ein Leben zu Ende gespielt hatten, fragten sich danach, wen sie in ihrem eigenen Leben tatsächlich getroffen haben."
       },
       {
         "type": "h2",
@@ -487,7 +487,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Bei Paaren ist es ähnlich. Der Stanford-Soziologe Michael Rosenfeld und Kollegen werteten Daten zu heterosexuellen Paaren in den USA aus, veröffentlicht 2019: 2017 hatten sich 39 % online kennengelernt, 27 % in einer Bar oder einem Restaurant und 20 % über Freunde (ein Paar kann in mehrere Kategorien fallen). Von den Paaren, die sich online kennengelernt hatten, waren sich etwa 9 von 10 vorher fremd. Der Kanal hat sich geändert; die meisten Begegnungen beginnen weiterhin zwischen Fremden."
+        "text": "Bei Paaren ist es ähnlich. Der Stanford-Soziologe Michael Rosenfeld und Kollegen werteten Daten zu heterosexuellen Paaren in den USA aus, veröffentlicht 2019: 2017 hatten sich 39 % online kennengelernt, 27 % in einer Bar oder einem Restaurant und 20 % über Freunde (ein Paar kann in mehrere Kategorien fallen). Von den Paaren, die sich online kennengelernt hatten, waren sich etwa 9 von 10 vorher fremd. Inzwischen lernen sich mehr Paare online kennen, doch die meisten beginnen weiterhin als Fremde."
       },
       {
         "type": "p",
@@ -520,7 +520,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Diese paar Zeilen sind mehr als eine Erinnerung. Wenn du beim nächsten Treffen fragst: „Du wolltest doch umziehen – wie ist es gelaufen?“, ist das eine der Dutzenden Stunden, die aus einer Bekanntschaft eine Freundschaft machen."
+        "text": "Diese paar Zeilen geben dir außerdem etwas, wonach du beim nächsten Treffen fragen kannst: „Du wolltest doch umziehen. Wie ist es gelaufen?“ Eine solche Frage gehört zu den Dutzenden Stunden, die aus einer Bekanntschaft eine Freundschaft machen."
       },
       {
         "type": "note",
@@ -532,7 +532,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto ist eine App für Notizen zu Menschen mit einer eigenen Seite für jede Person. Das integrierte Feld „Kennenlernen“ ist für die Geschichte gedacht, wie ihr euch getroffen habt, und das Datum kann ins Feld „Jahrestag“: Schalte dessen Erinnerung ein, und Sotto sagt dir 7 Tage vorher um 9 Uhr morgens Bescheid. Um mit jemand Neuem tiefer ins Gespräch zu kommen, sind die 33 Fragen der Kategorie „Einander kennen“ der Studie des Psychologen Arthur Aron von 1997 darüber nachempfunden, wie Fremde einander nahekommen."
+        "text": "Sotto ist eine App für Notizen zu Menschen mit einer eigenen Seite für jede Person. Das integrierte Feld „Kennenlernen“ ist für die Geschichte gedacht, wie ihr euch getroffen habt, und das Datum kann ins Feld „Jahrestag“: Schalte dessen Erinnerung ein, und Sotto sagt dir 7 Tage vorher um 9 Uhr morgens Bescheid. Um mit jemand Neuem tiefer ins Gespräch zu kommen, probier die 33 Fragen der Kategorie „Einander kennen“ aus, die der Studie des Psychologen Arthur Aron von 1997 darüber nachempfunden sind, wie Fremde einander nahekommen."
       },
       {
         "type": "p",
