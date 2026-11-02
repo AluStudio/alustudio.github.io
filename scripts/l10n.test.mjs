@@ -1,11 +1,11 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { cpSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync, utimesSync } from "node:fs";
+import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync, utimesSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { APPS, apply, check, enHash, enUnits, newLanguage, progress, readEn, readManifest, readRegistry, sitePaths, sync, textOf } from "./l10n.mjs";
+import { APPS, apply, changedSince, check, enHash, enUnits, newLanguage, progress, readEn, readManifest, readRegistry, sitePaths, sync, textOf } from "./l10n.mjs";
 
 const DINGPOS = APPS.dingpos;
 
@@ -304,6 +304,28 @@ test("sync: fails fast without the app's strings or glossary, and on a --since r
   await assert.rejects(sync(paths, "ja", { appRepo: join(appRepo, "missing") }), /app repo lacks .*en\.lproj/);
   execFileSync("git", ["init", "-q"], { cwd: paths.root });
   await assert.rejects(sync(paths, "ja", { appRepo, mode: "review", since: "no-such-ref" }), /--since no-such-ref is not a commit/);
+});
+
+test("--since: a pack loads at the ref with the sibling modules it imports; one that does not load fails with its path and ref", async () => {
+  const { paths } = fixture();
+  const git = (...args) => execFileSync("git", args, { cwd: paths.root, encoding: "utf8" }).trim();
+  const commit = (message) => {
+    git("add", "-A");
+    git("-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", message);
+    return git("rev-parse", "HEAD");
+  };
+  git("init", "-q");
+  const sibling = join(dirname(paths.pack("ja")), "labels.ja.js");
+  write(sibling, 'export const LABEL = "バックアップ";\n');
+  write(paths.pack("ja"), 'import { LABEL } from "./labels.ja.js";\nexport const categories = [{ key: "backup", label: LABEL }];\nexport const articles = [];\n');
+  const withSibling = commit("ja pack importing a sibling");
+  write(paths.pack("ja"), "export const articles = [;\n");
+  const broken = commit("broken ja pack");
+  rmSync(sibling);
+  write(paths.pack("ja"), 'export const categories = [{ key: "backup", label: "バックアップ" }];\nexport const articles = [];\n');
+
+  assert.deepEqual([...(await changedSince(paths, "ja", withSibling))], [], "the pack at the ref reads as the same category, not as missing");
+  await assert.rejects(changedSince(paths, "ja", broken), new RegExp(`dingpos/src/data/faq/articles\\.ja\\.js at ${broken} does not load`));
 });
 
 test("an en text change makes the unit stale: sync packs it with the old translation, an old output is refused", async () => {

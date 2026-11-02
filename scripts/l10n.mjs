@@ -43,7 +43,7 @@ import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, statSync, unlinkSync, writeFileSync, renameSync } from "node:fs";
 import { homedir, tmpdir } from "node:os";
-import { basename, dirname, isAbsolute, join, relative, resolve } from "node:path";
+import { dirname, isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { PACK_TEXT_FIELDS, placeholders, uiLeaves } from "./pack-fields.mjs";
 
@@ -404,25 +404,37 @@ function git(paths, args) {
   }
 }
 
+const RELATIVE_IMPORT = /\bfrom\s+["'](\.{1,2}\/[^"']+)["']/g;
+
 /** A language's (or en's) sources as committed at `ref`, plus the app's shared module; missing files are null. */
 async function sourcesAt(paths, code, ref) {
   const dir = mkdtempSync(join(tmpdir(), "l10n-"));
-  const show = (file) => git(paths, ["show", `${ref}:${rel(paths, file)}`]);
-  const uiText = show(paths.ui(code));
-  const packText = show(paths.pack(code));
-  const sharedText = paths.shared ? show(paths.shared) : null;
-  // A pack imports the shared module by its relative path, so the copy sits next to the pack's copy.
-  const sharedFile = sharedText === null ? null : join(dir, basename(paths.shared));
-  if (sharedFile) writeFileSync(sharedFile, sharedText);
   writeFileSync(join(dir, "package.json"), `{ "type": "module" }\n`);
-  const load = async (file, text) => {
-    if (text === null) return null;
-    writeFileSync(file, text);
-    // A pack from before its shared module existed cannot load; it counts as missing.
-    return importFresh(file).catch(() => null);
+  // Packs import sibling modules by relative path (Sotto's ring-sizes.js; guides.en.js before it existed), so each is written out at the same ref.
+  const staged = new Set();
+  const stage = (file) => {
+    const path = rel(paths, file);
+    if (staged.has(path)) return true;
+    const text = git(paths, ["show", `${ref}:${path}`]);
+    if (text === null) return false;
+    staged.add(path);
+    mkdirSync(dirname(join(dir, path)), { recursive: true });
+    writeFileSync(join(dir, path), text);
+    for (const [, specifier] of text.matchAll(RELATIVE_IMPORT)) stage(resolve(dirname(file), specifier));
+    return true;
   };
-  const shared = sharedFile ? await importShared(sharedFile).catch(() => null) : null;
-  return { ui: uiText === null ? null : JSON.parse(uiText), pack: await load(join(dir, "pack.js"), packText), shared };
+  const load = async (file, importer) => {
+    if (!stage(file)) return null;
+    try {
+      return await importer(join(dir, rel(paths, file)));
+    } catch (error) {
+      throw new Error(`${rel(paths, file)} at ${ref} does not load: ${error.message}`);
+    }
+  };
+  const uiText = git(paths, ["show", `${ref}:${rel(paths, paths.ui(code))}`]);
+  const shared = paths.shared ? await load(paths.shared, importShared) : null;
+  const pack = await load(paths.pack(code), importFresh);
+  return { ui: uiText === null ? null : JSON.parse(uiText), pack, shared };
 }
 
 /** For stale units: the en text whose hash the manifest recorded, found in git history. */
