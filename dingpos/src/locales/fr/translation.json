@@ -1,5 +1,5 @@
 {
-  "//": "Generated from en and the fr translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync fr`, then `npm run l10n -- apply fr`.",
+  "//": "Generated from en and the fr translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync fr`, then `npm run l10n -- dingpos apply fr`.",
   "nav": {
     "home": "Accueil",
     "pricing": "Tarifs",

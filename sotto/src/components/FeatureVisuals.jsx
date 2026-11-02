@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import { useTranslation } from "react-i18next";
 import { useStory } from "../story";
 import { RING_SIZE_ROWS } from "../data/guides/ring-sizes";
+import { SCENE_PROMPT_IDS } from "../data/scenes/keys";
+import { sceneString, scenePrompt } from "../data/scenes";
 
 // Small redraws of three app screens for the feature cards. Each one rests on
 // its finished frame (what prerender captures) and acts out its feature once
@@ -20,7 +21,6 @@ const RING_SYSTEMS = [
 const ringSteps = RING_SYSTEMS.map((_, i) => ({ active: i, ms: i === 0 ? 2600 : 1700 }));
 
 export function RingVisual() {
-  const { t } = useTranslation();
   const ref = useRef(null);
   const step = useStory(ref, ringSteps, 500, 0);
 
@@ -28,7 +28,7 @@ export function RingVisual() {
     <div className="visual visual--ring" ref={ref} aria-hidden="true">
       <div className="ring">
         <div className="ring__head">
-          <span className="ring__label">{t("scene.ring_label")}</span>
+          <span className="ring__label">{sceneString("field.leftRing")}</span>
           <span className="ring__mm">⌀ {US_SIX[2]} mm</span>
         </div>
         <div className="ring__values">
@@ -60,8 +60,7 @@ const promptSteps = [0, 1, 2].flatMap((front) => [
 ]);
 
 export function PromptVisual() {
-  const { t } = useTranslation();
-  const prompts = t("scene.prompts", { returnObjects: true });
+  const prompts = SCENE_PROMPT_IDS.map(scenePrompt);
   const ref = useRef(null);
   const step = useStory(ref, promptSteps, 1300, 0);
   const count = prompts.length;
@@ -70,7 +69,7 @@ export function PromptVisual() {
     <div className="visual visual--prompts" ref={ref} aria-hidden="true">
       <p className="prompts__title">
         <i className="bi bi-chat-heart"></i>
-        {t("scene.prompts_title")}
+        {sceneString("promptCatalog.title")}
       </p>
       <div className="prompts__stack">
         {prompts.map((text, i) => {

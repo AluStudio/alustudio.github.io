@@ -1,28 +1,24 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import registry from "../l10n/languages.json";
 
 const APP_BASE = "/sotto";
 
 // Each language has its own URL so search engines can index it; the URL is
 // the only language signal (no navigator / storage detection) — see
-// docs/specs/seo-aeo.md §多語系 URL. `pathPrefix` mirrors copy-spa-pages.js.
-export const supportedLanguages = [
-  { code: "zh-Hant", label: "繁體中文", pathPrefix: "/zh-hant" },
-  { code: "zh-Hans", label: "简体中文", pathPrefix: "/zh-hans" },
-  { code: "en",      label: "English", pathPrefix: "" },
-  { code: "ja",      label: "日本語", pathPrefix: "/ja" },
-  { code: "ko",      label: "한국어", pathPrefix: "/ko" },
-  { code: "de",      label: "Deutsch", pathPrefix: "/de" },
-  { code: "es",      label: "Español", pathPrefix: "/es" },
-  { code: "fr",      label: "Français", pathPrefix: "/fr" },
-  { code: "it",      label: "Italiano", pathPrefix: "/it" },
-  { code: "pt-BR",   label: "Português (BR)", pathPrefix: "/pt-br" },
-  { code: "ru",      label: "Русский", pathPrefix: "/ru" },
-  { code: "ar",      label: "العربية", pathPrefix: "/ar", dir: "rtl" },
-];
+// docs/specs/seo-aeo.md §多語系 URL. Only shipped languages get URLs.
+export const supportedLanguages = registry.languages
+  .filter((l) => l.shipped)
+  .map(({ code, label, hreflang, pathPrefix, dir }) => ({
+    code,
+    label,
+    hreflang,
+    pathPrefix: pathPrefix ? `/${pathPrefix}` : "",
+    dir,
+  }));
 
 // One language per page load (the URL decides it), so only that language's
-// strings are fetched instead of bundling all twelve into every page.
+// strings are fetched instead of bundling every language into every page.
 const uiModules = import.meta.glob("./locales/*/translation.json", { import: "default" });
 
 function languageFromPath(pathname) {
@@ -68,7 +64,7 @@ export const i18nReady = uiModules[`./locales/${current.code}/translation.json`]
   }),
 );
 
-document.documentElement.lang = current.code;
+document.documentElement.lang = current.hreflang;
 document.documentElement.dir = current.dir ?? "ltr";
 
 export default i18n;

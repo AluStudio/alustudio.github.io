@@ -52,35 +52,15 @@
   },
   "scene": {
     "alt": "Sotto's person page: a gift idea being saved, with a favorite drink, an allergy, a birthday and a ring size",
-    "edit": "Edit",
     "initials": "MC",
     "name": "Mia Chen",
     "meta": "Friend since 2019",
     "bio": "Shoots on film. Always early for brunch.",
-    "fields": [
-      {
-        "label": "Gift Ideas",
-        "value": "Film camera"
-      },
-      {
-        "label": "Fav Drink",
-        "value": "Oat latte, no sugar"
-      },
-      {
-        "label": "Allergy",
-        "value": "Peanuts"
-      },
-      {
-        "label": "Birthday",
-        "value": "1993/08/30"
-      }
-    ],
-    "ring_label": "Left Ring",
-    "prompts_title": "Pick a question",
-    "prompts": [
-      "How would you spend your perfect day?",
-      "What's your most precious childhood memory?",
-      "If you could invite anyone to dinner — alive or not — who would it be, and why?"
+    "field_values": [
+      "Film camera",
+      "Oat latte, no sugar",
+      "Peanuts",
+      "1993/08/30"
     ]
   },
   "reviews": {

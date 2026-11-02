@@ -1,4 +1,5 @@
 {
+  "//": "Generated from en and the es translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sotto sync es`, then `npm run l10n -- sotto apply es`.",
   "nav": {
     "features": "Funciones",
     "privacy": "Privacidad",
@@ -11,7 +12,7 @@
   "hero": {
     "meta_title": "Sotto — CRM personal para recordar a quienes quieres",
     "meta_description": "Sotto es un CRM personal y privado para iPhone y Android: guarda tallas, cumpleaños, alergias e ideas de regalo de las personas que quieres.",
-    "tagline": "Tu CRM personal para los detalles que importan",
+    "tagline": "Notas de personas, con cariño, para los detalles que importan",
     "description": "Cada persona lleva consigo pequeños detalles que vale la pena recordar. Sotto los guarda por ti — estaturas, gustos, esas cosas que solo tú sabes. Todos los datos se quedan en tu teléfono, acompañándote en silencio.",
     "download": "Descargar en el App Store",
     "downloadAndroid": "Disponible en Google Play",
@@ -52,35 +53,15 @@
   },
   "scene": {
     "alt": "Página de una persona en Sotto: se guarda una idea de regalo, junto a su bebida favorita, una alergia, su cumpleaños y su talla de anillo",
-    "edit": "Editar",
     "initials": "LR",
     "name": "Lucía Ruiz",
     "meta": "Amiga desde 2019",
     "bio": "Fotografía en analógico. Siempre llega pronto al brunch.",
-    "fields": [
-      {
-        "label": "Ideas de regalo",
-        "value": "Cámara analógica"
-      },
-      {
-        "label": "Bebida favorita",
-        "value": "Latte de avena"
-      },
-      {
-        "label": "Alergia",
-        "value": "Cacahuetes"
-      },
-      {
-        "label": "Cumpleaños",
-        "value": "1993/08/30"
-      }
-    ],
-    "ring_label": "Anular I",
-    "prompts_title": "Elige una pregunta",
-    "prompts": [
-      "¿Cómo sería tu día perfecto?",
-      "¿Cuál es tu recuerdo de infancia más preciado?",
-      "Si pudieras invitar a cenar a cualquier persona — viva o no — ¿a quién elegirías y por qué?"
+    "field_values": [
+      "Cámara analógica",
+      "Latte de avena",
+      "Cacahuetes",
+      "1993/08/30"
     ]
   },
   "reviews": {
@@ -109,7 +90,7 @@
       "diadialydia": {
         "title": "Pido esta función~~",
         "date": "28 may 2026",
-        "body": "Si se pudiera añadir amigos, conectarse y enviarse preguntas para que el otro las responda (como «¿Qué recuerdo nuestro es el que más recuerdas?» o «¿Cuándo te sientes querido por mí?»), ¡sería una app potentísima!",
+        "body": "Si pudiéramos añadir amigos, conectarnos y enviarnos preguntas que nos gustaría que la otra persona respondiera (como «¿Qué recuerdo de los dos tienes más presente?» o «¿Cuándo sientes que te quiero?»), ¡sería una app potentísima!",
         "response": "No queríamos que algún día los costes de servidor obligaran a cerrar esta función, o la app entera (y tampoco queremos cobrar una suscripción), así que creamos un catálogo de preguntas: eliges una y la habláis con calma. Sentados cara a cara, con un café o una copa, se sienten mejor los pensamientos del otro que respondiendo en una app. Esperamos que te guste",
         "response_date": "19 jun 2026",
         "shipped": "un catálogo de 323 preguntas para conversar."

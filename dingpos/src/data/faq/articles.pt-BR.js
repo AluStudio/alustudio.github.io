@@ -1,4 +1,4 @@
-// Generated from en and the pt-BR translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync pt-BR`, then `npm run l10n -- apply pt-BR`.
+// Generated from en and the pt-BR translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync pt-BR`, then `npm run l10n -- dingpos apply pt-BR`.
 
 export const categories = [
   {

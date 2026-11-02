@@ -1,5 +1,5 @@
 {
-  "//": "Generated from en and the fi translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync fi`, then `npm run l10n -- apply fi`.",
+  "//": "Generated from en and the fi translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync fi`, then `npm run l10n -- dingpos apply fi`.",
   "nav": {
     "home": "Etusivu",
     "pricing": "Hinnoittelu",

@@ -5,7 +5,7 @@
  * l10n/languages.json, so every scene label is the app's own wording
  * (AGENTS.md: scene strings come verbatim from the product repo).
  *
- * A local authoring step, like `npm run l10n -- sync`: CI never reads the app
+ * A local authoring step, like `npm run l10n -- dingpos sync`: CI never reads the app
  * repo and builds from the committed packs. Re-run it after the app changes a
  * listed string or ships a language.
  *

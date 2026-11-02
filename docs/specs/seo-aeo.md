@@ -8,7 +8,7 @@ read_when:
   - Writing or adding an acquisition article (Sotto or DingPOS guides), or a guide for a new market
   - Weighing SEO skill advice against this site's decisions
   - Changing DingPOS or Sotto en / zh-Hant copy, or anything about the generated zh-Hans
-  - Adding, shipping, or re-translating a DingPOS translated language (ja, th, …)
+  - Adding, shipping, or re-translating a DingPOS or Sotto translated language (ja, th, …), or changing scripts/l10n.mjs
 ---
 
 # SEO + AEO
@@ -41,15 +41,16 @@ read_when:
 
 只有獨立 URL 的語言才能被索引。同一個 URL 在 client 端切換語言，crawler 只看得到一種語言：Googlebot 從美國發出、不帶 `Accept-Language`（[Google](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites)）。
 
-- DingPOS 與 Sotto 有多語系 URL，英文都不加前綴（同時是 `x-default`），各語言的子路徑一一對應，前綴是 hreflang 代碼的小寫。DingPOS 的語言清單是 `dingpos/l10n/languages.json`：鏡像 app 的 `l10n/languages.json`（同樣的 code、kind 與順序），共 32 種，只有 `shipped: true` 的語言有 URL、hreflang 與 sitemap 條目；哪些語言已上線，以 registry 為準。Sotto 有十二種：`zh-hant`、`zh-hans`、`ja`、`ko`、`de`、`es`、`fr`、`it`、`pt-br`、`ru`、`ar`。home、pikgeon、babbby 仍只有 prerender 語言可被索引。
+- DingPOS 與 Sotto 有多語系 URL，英文都不加前綴（同時是 `x-default`），各語言的子路徑一一對應，前綴是 hreflang 代碼的小寫。DingPOS 的語言清單是 `dingpos/l10n/languages.json`：鏡像 app 的 `l10n/languages.json`（同樣的 code、kind 與順序），共 32 種，只有 `shipped: true` 的語言有 URL、hreflang 與 sitemap 條目；哪些語言已上線，以 registry 為準。Sotto 的語言清單是 `sotto/l10n/languages.json`：語言集合以 sotto-ios 的 `.lproj` 為準（`code` 就是 lproj id），同樣只有 `shipped: true` 的語言有 URL；目前十二種，除英文外是 `zh-hant`、`zh-hans`、`ja`、`ko`、`de`、`es`、`fr`、`it`、`pt-br`、`ru`、`ar`（阿拉伯文在 registry 另有 `dir: "rtl"`）。home、pikgeon、babbby 仍只有 prerender 語言可被索引。
 - hreflang 只標語言、不標地區（`ja`，不是 `ja-JP`）：網站不分地區內容，加上地區會把其他地區的同語使用者排除在外。地區碼只在 Google 接受時才保留（ISO 3166-1 alpha-2，例如 `pt-BR`）：Google 不接受 `es-419`，所以 DingPOS 的 es-419 以 `es` 上線，hreflang、`<html lang>` 都是 `es`，前綴是 `es/`；檔名與 app 對照仍用 `es-419`。
 - URL 是唯一的語言訊號：不看 navigator、不讀 localStorage，也不依使用者語系自動導向。Google 明確建議避免這種導向，因為會讓使用者和 crawler 看不到其他語言版本。語言切換器直接導到同一頁另一個語言的 URL，而且是 `<a href>` 連結（各帶 `hreflang` 與 `lang`），不是 `<select>`：crawler 只會沿著連結找頁面，`<select>` 的選項對它不存在，非英文頁就只剩 sitemap 一個入口。Google 也建議各語言版本互相連結。href 只用 pathname，prerender 與訪客才會 render 出同樣的值；一般點擊時才把 query 與 hash 帶過去。
 - 每一頁的每個語言版本都要有：self-canonical、`<html lang>`、`og:locale` 加上 `og:locale:alternate`，以及完整的 hreflang（該 app 的每種語言加 `x-default`，自己也要列）。Google 只採信雙向互指的 hreflang。`og:locale` 對應：`en_US`、`zh_TW`、`zh_CN`、`ja_JP`、`ko_KR`、`de_DE`、`es_ES`、`fr_FR`、`it_IT`、`pt_BR`、`ru_RU`、`ar_AR`；DingPOS 每種語言的值寫在 registry 的 `ogLocale`。
 - hreflang 只寫在 HTML `<head>`，sitemap 不重複寫。Google 認為兩種方式等價，同時維護兩份只會增加出錯的機會。
-- 語系前綴的單一來源：DingPOS 的 `src/i18n.js` 與 `scripts/copy-spa-pages.js` 都讀 `dingpos/l10n/languages.json`。Sotto 是 `src/i18n.js` 的 `supportedLanguages` 和 `scripts/copy-spa-pages.js` 的 `LOCALE_DEFS`，兩邊必須一致。
+- 語系前綴的單一來源：DingPOS 的 `src/i18n.js` 與 `scripts/copy-spa-pages.js` 都讀 `dingpos/l10n/languages.json`，Sotto 的兩支都讀 `sotto/l10n/languages.json`，沒有手寫的語言清單。`x-default` 是 `pathPrefix` 為空的那一筆，不看陣列順序；語言切換器照 registry 的順序列。Sotto 的 `copy-spa-pages.js` 在 registry 自相矛盾時讓 build 失敗：`pathPrefix` 不是 hreflang 的小寫、不是剛好一個無前綴的語言、`code` 或 `pathPrefix` 重複。
 - 每種語言的內容都要完整，不退回英文（唯一例外是 DingPOS 的獲客文章，見 [§獲客文章](#獲客文章)）：DingPOS 與 Sotto 的 `copy-spa-pages.js` 在任一語言的 UI 字串少了或多了 en 的 key，或 FAQ／guide pack 的 slug 與 en 不同時讓 build 失敗。兩者都沒有 fallback 語言，缺 key 會直接顯示 key 名稱。Sotto 另外拒絕任何空字串。DingPOS 另外擋 en 是陣列、其他語言卻不是陣列的 key（頁面會把它當成空清單，整段默默消失）；空字串只允許在 key 名稱以 `_before`／`_after` 結尾的句子片段，它們夾住行內的價格，語序可能讓其中一邊是空的。
 - DingPOS 與 Sotto 每次只載入當頁語言的字串與 FAQ／guides（`import.meta.glob` 動態載入，載完才 hydrate），加一種語言不會讓任何一頁下載更多 JS。
 - DingPOS 首頁的 scene（`dingpos/src/components/Scenes.jsx`）畫的是 app 畫面，介面字串逐字用 app 自己的譯文，不經網站的翻譯流程：`node dingpos/scripts/sync-scene-strings.mjs` 從本機 app repo 的 `Localizable.strings`，把 `dingpos/src/data/scenes/keys.js` 列出的 key 複製成每種語言一份 `dingpos/src/data/scenes/strings.<code>.json`，國名與時刻（短時間格式）用 CLDR 在 sync 時算好（和 app 的 `Locale`／`DateFormatter` 同源，render 時不讀時鐘也不讀語系），commit 進 repo；CI 不讀 app repo。簡中也直接用 app 的 zh-Hans，不由 `gen-zh-hans.mjs` 產生。`copy-spa-pages.js` 在已上線語言缺 pack、缺 key，或 placeholder 和 en 不同時讓 build 失敗。商品名稱是店家資料、不是 app 字串，scene 不顯示，商品只用照片表示。
+- Sotto 首頁的 scene（`sotto/src/components/HeroPhone.jsx`、`FeatureVisuals.jsx`）同樣逐字用 app 的字串：`node sotto/scripts/sync-scene-strings.mjs` 從本機 sotto-ios 的 `<code>.lproj/Localizable.strings` 與 `ConversationPrompts.json`，把 `sotto/src/data/scenes/keys.js` 列出的 key（Edit 按鈕、欄位標籤、「Pick a question」）與問題卡的 id 複製成每種語言一份 `sotto/src/data/scenes/strings.<code>.json`，commit 進 repo；CI 與 `npm test` 不讀 app repo。Sotto 沒有國名與時刻，pack 只有 `strings` 與 `prompts`。簡中同樣用 app 自己的 zh-Hans，不由 `gen-zh-hans.mjs` 產生。App 改了其中一句，或 registry 多了一種語言（script 對 registry 的每種語言都寫 pack，不看 `shipped`），就重跑 script 並 commit 結果。key 清單只收 en 值與網站原文逐字相同的 app key；找不到對應的字串先在 app repo 改措辭，不在網站另編。人名、簡介、欄位內容與圖片 alt 是示範資料，不是 app 字串，留在各語言的 `translation.json`（`scene` 下）由翻譯流程處理。`copy-spa-pages.js` 在已上線語言缺 pack、缺 key 或缺問題卡，或 placeholder 和 en 不同時讓 build 失敗。
 - 任兩頁的 title 與 description 都不可相同，跨語系也算：兩個 URL 用同一句話介紹自己，就是重複內容的訊號。`copy-spa-pages.js` 在 build 時檢查，違規即失敗。
 
 ### 簡中由繁中產生
@@ -71,24 +72,25 @@ read_when:
 
 ### 翻譯語言
 
-DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由 agent 從 en 翻譯，不從中文翻：zh-Hant 是 owner 寫的、zh-Hans 由它產生，兩者都不是翻譯來源。en 與 zh-Hant 說法不同時，翻譯跟著 en，差異記成給 owner 的 en finding。工具是 `scripts/l10n.mjs`（`npm run l10n -- …`），translator 是全域 agent `l10n-translator`，它讀本 repo 的合約 `.pi/l10n/translator.md`；reviewer 是 project agent `l10n-reviewer`。
+DingPOS 與 Sotto registry 裡 `kind: translated` 的語言（DingPOS 29 種：ja、th、ko…；Sotto 9 種：ja、ko、de、es、fr、it、pt-BR、ru、ar）由 agent 從 en 翻譯，不從中文翻：zh-Hant 是 owner 寫的、zh-Hans 由它產生，兩者都不是翻譯來源。en 與 zh-Hant 說法不同時，翻譯跟著 en，差異記成給 owner 的 en finding。工具是 `scripts/l10n.mjs`，每個指令都指定 app：`npm run l10n -- <app> new|sync|apply|progress <code>`（`<app>` 是 `dingpos` 或 `sotto`），只有 `npm run l10n -- check` 可以不帶 app，一次檢查所有 app。translator 是全域 agent `l10n-translator`，每個 app 一份合約：`.pi/l10n/dingpos.md`、`.pi/l10n/sotto.md`，packet 的 `contract` 欄位指向它，`.pi/l10n/translator.md` 只負責分派；reviewer 是 project agent `l10n-reviewer`，產品、讀者與不翻的詞從同一份合約讀。
 
-- 翻譯單位：一個 UI 字串（`ui:<key>`）、一整篇 FAQ（`faq:<slug>`）、一個 FAQ 分類（`cat:<key>`）。只有文字欄位會翻譯；slug、related、since、icon 這類結構欄位永遠從 en 複製。
-- 翻譯語言的 `dingpos/src/locales/<code>/translation.json` 與 `dingpos/src/data/faq/articles.<code>.js` 由 `npm run l10n -- apply <code>` 產生，不手改：手改的 slug 或 related 會在多種語言裡各自漂移。`apply` 拒絕 `{{…}}` placeholder 和 en 不同、空值（`_before`／`_after` 除外）、形狀和 en 不同（步驟數、區塊數）的值，以及從舊版 en 翻出來的值。
-- 每種語言一份 `dingpos/l10n/manifest/<code>.json`，記錄每個單位翻譯時的 en hash（只算文字欄位）。en 文字改了，該單位就過期，要重翻。
-- 用詞跟 app 一致：`sync` 從本機的 app repo（`~/Developer/alustudio/DingPOS`，`--app-repo` 可改）讀該語言的 glossary 與字串，把和網站 en 逐字相同的 app 字串的譯文（`appMatch`），以及 FAQ 裡逐字出現的 app 按鈕、畫面、分頁名稱（`appTerms`）放進 packet。translator 預設採用 app 的譯文，語境不同才改並說明理由。網站才有的詞記在 `dingpos/l10n/glossary/<code>.md`。app repo 只有 `sync` 會讀，CI 與 `npm test` 不依賴它。
+- 每個 app 的設定（路徑、文字欄位、翻譯單位與 segment、pack 格式、app repo 與其字串檔位置）集中在 script 的 `APPS`；新增 app 就是加一筆。路徑都在 app 目錄底下：registry `<app>/l10n/languages.json`、字串 `<app>/src/locales/<code>/translation.json`、manifest `<app>/l10n/manifest/<code>.json`、site glossary `<app>/l10n/glossary/<code>.md`；packet 與 translator 輸出在 `.logs/l10n/<app>/<code>/`，進度檔一個 app 一份（`npm run -s l10n -- <app> progress path`）。
+- 翻譯單位：一個 UI 字串（`ui:<key>`），加上 pack 的每一筆：DingPOS 是一整篇 FAQ（`faq:<slug>`）與一個 FAQ 分類（`cat:<key>`），Sotto 是一整篇 guide（`guide:<slug>`）。UI 依 top-level key 分 segment（DingPOS 的 pricing、privacy、terms，Sotto 的 privacy、terms 各自一段，其餘併成 `ui-site`）；DingPOS 的 FAQ 依分類分段，Sotto 一篇 guide 一段。只有文字欄位會翻譯；slug、related、since、icon 這類結構欄位永遠從 en 複製。Sotto 戒圍表的 `rows`（`RING_SIZE_ROWS`，鏡像 app 的換算表）也是結構：不進 packet，產生時從 en 複製；改了換算表，`apply` 就會寫進每種語言，不用重翻。其他表格的 `rows` 是文案，列數與每列的格數要和 en 相同。
+- 翻譯語言的字串與 pack（`dingpos/src/data/faq/articles.<code>.js`、`sotto/src/data/guides/guides.<code>.js`）由 `npm run l10n -- <app> apply <code>` 產生，不手改：手改的 slug 或 related 會在多種語言裡各自漂移。Sotto 產生的 pack 只 export `articles`，戒圍表的 rows 直接寫進檔案（和產生的簡中 pack 一樣），不 import `ring-sizes.js`。`apply` 拒絕 `{{…}}` placeholder 和 en 不同、空值、形狀和 en 不同（步驟數、區塊數、表格列數）的值，以及從舊版 en 翻出來的值。空值的例外和各 app 的 `copy-spa-pages.js` 一致：DingPOS 只允許 `_before`／`_after`，Sotto 一律不允許。
+- 每種語言一份 manifest，記錄每個單位翻譯時的 en hash（只算文字欄位）。en 文字改了，該單位就過期，要重翻。
+- 用詞跟 app 一致：`sync` 從本機的 app repo（DingPOS 是 `~/Developer/alustudio/DingPOS`，Sotto 是 `~/Developer/alustudio/sotto`，`--app-repo` 可改）讀該語言的字串，把和網站 en 逐字相同的 app 字串的譯文（`appMatch`），以及 pack 裡逐字出現、字串檔以 `@role` 註記為按鈕、畫面、分頁的 app 名稱（`appTerms`）放進 packet。DingPOS 另外讀 app 的 glossary（`l10n/glossary/<code>.md`），缺了就失敗；Sotto app 沒有 glossary，字串也沒有 `@role` 註記，所以 packet 的 `glossary.app` 是 `null`、`appTerms` 是空的，合約改指 app 的 `<code>.lproj/Localizable.strings`（`sotto-ios/Targets/Sotto/Resources/`）當畫面與欄位名稱的依據。translator 預設採用 app 的譯文，語境不同才改並說明理由。網站才有的詞記在 site glossary。app repo 只有 `sync` 會讀，CI 與 `npm test` 不依賴它。
 - 審查：第一輪 `l10n-reviewer` 完整審過每個 segment；之後每輪只重審上一輪修改的單位（`sync --mode review --since <ref>`，加上 `--ids` 帶入 translator 保留不改的 finding），最多兩輪修正。重審只看上一輪指名或修改的欄位，查意思、app 用詞、glossary；語感與搜尋詞偏好只能記成不擋關的 `note`（寫進報告的 review notes），translator 對 reviewer 的建議整句照套或整句保留並說明理由，不取一半。這是因為兩輪重審曾讓 reviewer 重挑自己上一輪寫的字（et、hu、ms）。還有 `translation` 或 `glossary` finding 沒收斂就不上線，交給 owner 裁決。
-- 上線：語言一加進 registry 就跑 `node dingpos/scripts/sync-scene-strings.mjs`，產生它的 scene 字串（script 對 registry 的每種語言都寫 pack，不看 `shipped`）。語言審查通過後，把 registry 的 `shipped` 改成 true，執行 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 改寫 `sitemap.xml` 的 DingPOS 區塊：這支 script 先檢查每種已上線語言的 scene pack，缺了就失敗、不寫 sitemap，所以 sync 必須在它之前。再跑 build 與 prerender。每種語言各自上線，不等其他語言。
-- Privacy 與 Terms 照常翻譯，不加「以英文版為準」：Sotto 的翻譯語言也沒有這類聲明。
-- `npm test` 對每種已上線的翻譯語言執行 `npm run l10n -- check`：缺少或多出的單位、過期的單位，以及和 `apply` 重新產生的結果不同的檔案（手改過，或 en 的 related、since 改了還沒套用），都會讓它失敗，所以英文改了、翻譯還沒補上時無法部署。
+- 上線：語言一加進 registry 就跑該 app 的 `node <app>/scripts/sync-scene-strings.mjs`，產生它的 scene 字串（script 對 registry 的每種語言都寫 pack，不看 `shipped`）。語言審查通過後，把 registry 的 `shipped` 改成 true，執行 `node <app>/scripts/copy-spa-pages.js --write-sitemap` 改寫 `sitemap.xml` 的該 app 區塊：這支 script 先檢查每種已上線語言的 scene pack，缺了就失敗、不寫 sitemap，所以 sync 必須在它之前。再跑 build 與 prerender。每種語言各自上線，不等其他語言。Sotto 網站的語言不超過 app 的語言（scene 字串逐字取自 app），新語言等 app 先上。
+- Privacy 與 Terms 照常翻譯，不加「以英文版為準」，兩個網站都一樣。
+- `npm test` 執行 `npm run l10n -- check`，檢查每個 app 每種已上線的翻譯語言：缺少或多出的單位、過期的單位，以及和 `apply` 重新產生的結果不同的檔案（手改過，或 en 的 related、since、戒圍表改了還沒套用），都會讓它失敗，所以英文改了、翻譯還沒補上時無法部署。還沒有 manifest 的語言（從沒跑過 `apply`）只回報缺少的單位，不比對產生的檔案。
 
 改 en 文案的流程（在上面的簡中流程之後做）：
 
-1. 改 en 與 zh-Hant，跑完簡中的流程。`npm test` 會列出每種已上線翻譯語言過期或缺少的單位。
-2. 每種被列出的語言：`npm run l10n -- sync <code>`，只把過期與缺少的單位寫成 `.logs/l10n/<code>/packets/<segment>.json`；過期的單位帶著現在的譯文與翻譯時的 en（`previousEn`，從 git 歷史找回）。需要本機的 app repo。
-3. 每個 packet 交給 translator：`subagent { agent: "l10n-translator", task: "Translate .logs/l10n/<code>/packets/<segment>.json for <code>." }`，它會先用 `apply --dry-run` 驗證自己的輸出。
-4. `npm run l10n -- apply <code>`，直到 `rejected 0`。一篇新文章或一整段新文案要再審：`npm run l10n -- sync <code> --mode review --since <改之前的 commit>`，交給 `l10n-reviewer`；幾個短字串可以不審。
-5. 只改了 related、since 這類結構欄位時不用重翻，`npm run l10n -- apply <code>` 就會把它寫進該語言的 pack。
+1. 改 en 與 zh-Hant，跑完簡中的流程。`npm test` 會列出每種已上線翻譯語言過期或缺少的單位，每一行開頭是 app 與語言（`sotto ja: …`）。
+2. 每種被列出的語言：`npm run l10n -- <app> sync <code>`，只把過期與缺少的單位寫成 `.logs/l10n/<app>/<code>/packets/<segment>.json`；過期的單位帶著現在的譯文與翻譯時的 en（`previousEn`，從 git 歷史找回）。需要本機的 app repo。
+3. 每個 packet 交給 translator：`subagent { agent: "l10n-translator", task: "Translate .logs/l10n/<app>/<code>/packets/<segment>.json for <code>." }`，它會先用 `npm run -s l10n -- <app> apply <code> --dry-run <output>` 驗證自己的輸出。
+4. `npm run l10n -- <app> apply <code>`，直到 `rejected 0`。一篇新文章或一整段新文案要再審：`npm run l10n -- <app> sync <code> --mode review --since <改之前的 commit>`，交給 `l10n-reviewer`；幾個短字串可以不審。
+5. 只改了 related、since、戒圍表這類結構時不用重翻，`npm run l10n -- <app> apply <code>` 就會把它寫進該語言的 pack。
 6. `npm test`，把產生的檔案、manifest 跟 en 的修改一起 commit。
 
 ## Prerender
@@ -106,7 +108,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 
 ## Sitemap
 
-- repo 根目錄的 `sitemap.xml` 是 URL 成員的唯一來源。dingpos 與 sotto 的 build 會驗證 sitemap 裡自己的 URL 跟產出的頁面（每種語言）完全一致，多一個少一個都會讓 build 失敗。Sotto 的區塊手動維護；DingPOS 的區塊由 `node dingpos/scripts/copy-spa-pages.js --write-sitemap` 從頁面清單改寫（32 種語言、每種 64 頁，手寫一定會漏）。
+- repo 根目錄的 `sitemap.xml` 是 URL 成員的唯一來源。dingpos 與 sotto 的 build 會驗證 sitemap 裡自己的 URL 跟產出的頁面（每種語言）完全一致，多一個少一個都會讓 build 失敗。兩個區塊都由 script 從頁面清單改寫，不手寫：`node dingpos/scripts/copy-spa-pages.js --write-sitemap`（32 種語言、每種 64 頁，手寫一定會漏）與 `node sotto/scripts/copy-spa-pages.js --write-sitemap`（改寫完立即結束，不寫頁面；不帶參數時維持驗證）。新增 guide 或語言後各跑一次。
 - DingPOS 每種語言的子頁 `lastmod` 只看該語言自己的字串與 FAQ pack；語言首頁看整個 `dingpos/src`，但用 git pathspec `:(exclude)` 排除其他語言的 `locales/<code>` 與 `articles.<code>.js`（`scripts/generate-sitemap.mjs` `dingposRules`）。所以共用元件改了，每種語言的首頁都會更新日期，但翻譯或上線一種語言，不會改到其他語言任何一頁的日期。首頁曾經直接看整個 `dingpos/src`，結果連續上線約 30 種語言時，每個語言首頁的日期被推了約 30 次，內容卻沒變。
 - 部署時由 `scripts/generate-sitemap.mjs` 輸出 `_site/sitemap.xml`，每個 URL 的 `lastmod` 取自產生該 route 的檔案的最後一次 git commit。這個 `lastmod` 不手填、不批次更新。CI checkout 必須用 `fetch-depth: 0`，shallow clone 會讓所有日期塌成同一天。
 - Google：sitemap 在 GSC 提交一次就夠，之後 Google 依自己的頻率回頭讀，新頁面靠準確的 `lastmod` 被發現。網址沒變時重新提交沒有加速效果，Google 也在 2023 年停用了 sitemap ping，所以上線新頁不重新提交。例外：Google 還不常來抓的期間，每上線一篇獲客文章，就在 GSC 的 URL 檢查對它「要求建立索引」（有每日配額，一個月幾篇用不到上限）。停止的條件：Sitemap 報表的「上次讀取」固定每隔幾天更新，而且新文章幾天內就被收錄。原因：2026-07-25 提交的舊版 sitemap 之後再也沒被讀過，Google 實際知道的 DingPOS URL 不到 10 個（OH-87）。
@@ -142,7 +144,7 @@ DingPOS registry 裡 `kind: translated` 的 29 種語言（ja、th、ko…）由
 寫給還不認識產品的人，回答他們選工具之前就會搜的問題，不是操作說明（操作說明是 support／FAQ）。
 
 - 每篇開頭 2–3 句直接回答標題，之後用 H2 分段，最後一段導回 app；標題用該語言實際的搜尋說法，不逐字翻譯。`summary` 同時是索引卡片文字與該頁的 description（160 字元內）。build 檢查每篇以段落開頭、至少一個 H2、related 都存在。
-- Sotto（`/sotto/guides/<slug>/`）的題目是各國通用的人際問題，所以每種語言有同一組文章（同 slug、同順序），由 en 翻譯；題目瞄準產品 ASO 已驗證的關鍵字背後的真實問題（`~/Developer/alustudio/sotto/docs/marketing/aso-keywords.md`），網站與商店用同一組詞。例外是時事帶起的常青問題（例如「一生會遇見多少人」，由 2026 年 10 月的《80 億分之 1》帶起）：時事只當開場，主體回答不會過時的問題，後半段要接回一個已驗證的關鍵字題目，並在 related 連到那篇（owner 2026-10-31）。內容來自 `sotto/src/data/guides/guides.<code>.js`，schema 寫在 `guides.en.js` 開頭。
+- Sotto（`/sotto/guides/<slug>/`）的題目是各國通用的人際問題，所以每種語言有同一組文章（同 slug、同順序），由 en 翻譯；題目瞄準產品 ASO 已驗證的關鍵字背後的真實問題（`~/Developer/alustudio/sotto/docs/marketing/aso-keywords.md`），網站與商店用同一組詞。翻譯語言的 pack 由 `npm run l10n -- sotto apply` 產生（[§翻譯語言](#翻譯語言)）。例外是時事帶起的常青問題（例如「一生會遇見多少人」，由 2026 年 10 月的《80 億分之 1》帶起）：時事只當開場，主體回答不會過時的問題，後半段要接回一個已驗證的關鍵字題目，並在 related 連到那篇（owner 2026-10-31）。內容來自 `sotto/src/data/guides/guides.<code>.js`，schema 寫在 `guides.en.js` 開頭。
 - DingPOS（`/dingpos/<prefix>/guides/<slug>/`）的題目是經營成本與法規，費率、稅、支付品牌和規定每個國家都不同，所以文章以市場為單位寫，不翻譯：每篇標一個 `market`（例如 `TW`），只發在那個市場讀的語言底下。語言不等於市場：zh-Hant 同時是台灣與香港，en 是澳洲、美國、英國，一個市場的文章不能翻成另一個市場的版本。
   - 只有存在 `dingpos/src/data/guides/guides.<code>.js` 的語言有 guides 區（索引頁、文章、導覽列與 footer 的連結）；這是「每種語言的內容都要完整」的唯一例外。區塊的 UI 字串放在 pack 的 `ui`，不放 `translation.json`，因為後者每個 key 都要 32 種語言齊全。schema 寫在 `guides.zh-Hant.js` 開頭。
   - guide 頁不輸出 hreflang 與 `og:locale:alternate`：沒有其他語言有同一頁，不同市場的同主題文章也不是彼此的翻譯。語言切換器在 guide 頁連到該語言的 guides 索引，沒有 guides 的語言連到首頁。

@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "Edit",
+    "field.giftIdeas": "Gift Ideas",
+    "field.favoriteDrink": "Fav Drink",
+    "field.allergy": "Allergy",
+    "field.birthday": "Birthday",
+    "field.leftRing": "Left Ring",
+    "promptCatalog.title": "Pick a question"
+  },
+  "prompts": {
+    "c1-q02": "How would you spend your perfect day?",
+    "c1-q07": "What's your most precious childhood memory?",
+    "c1-q01": "If you could invite anyone to dinner — alive or not — who would it be, and why?"
+  }
+}

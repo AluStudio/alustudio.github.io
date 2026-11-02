@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "تحرير",
+    "field.giftIdeas": "أفكار هدايا",
+    "field.favoriteDrink": "مشروب مفضل",
+    "field.allergy": "حساسية",
+    "field.birthday": "الميلاد",
+    "field.leftRing": "بنصر يس",
+    "promptCatalog.title": "اختر سؤالاً"
+  },
+  "prompts": {
+    "c1-q02": "كيف يبدو يومك المثالي؟",
+    "c1-q07": "أعزّ ذكرى من طفولتك؟",
+    "c1-q01": "لو استطعت دعوة أيّ شخص إلى العشاء — حيّاً كان أو غير حيّ — مَن تختار؟ ولماذا؟"
+  }
+}

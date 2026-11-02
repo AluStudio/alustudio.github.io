@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "Modifica",
+    "field.giftIdeas": "Idee regalo",
+    "field.favoriteDrink": "Bevanda pref.",
+    "field.allergy": "Allergia",
+    "field.birthday": "Compleanno",
+    "field.leftRing": "Anul. sx",
+    "promptCatalog.title": "Scegli una domanda"
+  },
+  "prompts": {
+    "c1-q02": "Come passeresti la tua giornata perfetta?",
+    "c1-q07": "Il ricordo d'infanzia più prezioso?",
+    "c1-q01": "Se potessi invitare a cena chiunque — vivo o no — chi sceglieresti e perché?"
+  }
+}

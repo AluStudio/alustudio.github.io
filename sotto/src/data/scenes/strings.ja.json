@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "編集",
+    "field.giftIdeas": "ギフトアイデア",
+    "field.favoriteDrink": "好きな飲み物",
+    "field.allergy": "アレルギー",
+    "field.birthday": "誕生日",
+    "field.leftRing": "左薬指",
+    "promptCatalog.title": "ひとつ選んで話してみる"
+  },
+  "prompts": {
+    "c1-q02": "あなたの「完璧な一日」って、どんなふうに過ごす？",
+    "c1-q07": "あなたのいちばん大切な子ども時代の記憶は？",
+    "c1-q01": "もし誰か一人と夕食を共にできるなら（生きている人でも、亡くなった人でも）、誰を選ぶ？ どうして？"
+  }
+}

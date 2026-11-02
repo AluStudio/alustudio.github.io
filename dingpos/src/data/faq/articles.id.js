@@ -1,4 +1,4 @@
-// Generated from en and the id translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync id`, then `npm run l10n -- apply id`.
+// Generated from en and the id translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync id`, then `npm run l10n -- dingpos apply id`.
 
 export const categories = [
   {

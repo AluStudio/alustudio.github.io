@@ -2,11 +2,15 @@ import { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useStory } from "../story";
 import { RING_SIZE_ROWS } from "../data/guides/ring-sizes";
+import { sceneString } from "../data/scenes";
 
 // The app's person page, redrawn: a gift idea is cleared and written again,
-// then saved. Field labels are the app's own localized strings.
+// then saved. The Edit button and field labels are the app's own strings
+// (data/scenes); the person and what they filled in are the site's demo data.
 
 const US_SIX = RING_SIZE_ROWS[2];
+// The labels of scene.field_values, in order.
+const FIELD_LABEL_KEYS = ["field.giftIdeas", "field.favoriteDrink", "field.allergy", "field.birthday"];
 
 function typingSteps(length) {
   return [
@@ -24,11 +28,14 @@ function HeroPhone() {
   const { t } = useTranslation();
   const s = t("scene", { returnObjects: true });
   const ref = useRef(null);
-  const glyphs = useMemo(() => Array.from(s.fields[0].value), [s.fields]);
+  const glyphs = useMemo(() => Array.from(s.field_values[0]), [s.field_values]);
   const steps = useMemo(() => typingSteps(glyphs.length), [glyphs.length]);
   const step = useStory(ref, steps, 900, 1);
 
-  const fields = [...s.fields, { label: s.ring_label, value: `${US_SIX[0]} US` }];
+  const fields = [
+    ...FIELD_LABEL_KEYS.map((key, i) => ({ label: sceneString(key), value: s.field_values[i] })),
+    { label: sceneString("field.leftRing"), value: `${US_SIX[0]} US` },
+  ];
 
   return (
     <div className="phone" ref={ref} role="img" aria-label={s.alt}>
@@ -46,7 +53,7 @@ function HeroPhone() {
             <span className="app__circle">
               <i className="bi bi-chevron-left"></i>
             </span>
-            <span className="app__pill">{s.edit}</span>
+            <span className="app__pill">{sceneString("personDetail.editButton")}</span>
           </div>
           <div className="app__profile">
             <span className="app__avatar">{s.initials}</span>

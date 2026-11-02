@@ -1,5 +1,5 @@
 {
-  "//": "Per translation unit, the hash of the en text the fi translation was made from. Written by `npm run l10n -- apply fi`; do not edit.",
+  "//": "Per translation unit, the hash of the en text the fi translation was made from. Written by `npm run l10n -- dingpos apply fi`; do not edit.",
   "units": {
     "cat:backup": "9ca995e6dd57",
     "cat:checkout": "01ada2e33c75",

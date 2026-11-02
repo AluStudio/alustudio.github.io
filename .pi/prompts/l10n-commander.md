@@ -9,7 +9,7 @@ Scope: ${@:-every language in the progress file's order}. Load the `herdr` skill
 ## Fixed values
 
 - Repo: this session's working directory, the repo's only checkout (`REPO=$(git rev-parse --show-toplevel)`). There are no worktrees: every worker runs in `$REPO`, switches it to its branch `dingpos-l10n/<code>`, and returns it to main when it ends. So exactly one worker runs at a time, and while it runs nobody else uses this checkout — not you, not the owner.
-- Progress file: `npm run -s l10n -- progress path` (outside git, `~/.local/state/alustudio-site-l10n/progress.json`). Read and write it only through `npm run -s l10n -- progress …`.
+- Progress file: `npm run -s l10n -- dingpos progress path` (outside git, `~/.local/state/alustudio-site-l10n/dingpos/progress.json`). Read and write it only through `npm run -s l10n -- dingpos progress …`.
 - Worker agent name: `l10n-` + the code lowercased (`l10n-pt-br`, `l10n-es-419`).
 - Worker launch flags (pi): `--model anthropic/claude-sonnet-5-5 --thinking medium --approve --name "l10n <code>"`.
 
@@ -17,7 +17,7 @@ Scope: ${@:-every language in the progress file's order}. Load the `herdr` skill
 
 1. `test "$HERDR_ENV" = 1`, else stop: you must run inside Herdr.
 2. `git -C "$REPO" worktree list` shows only this checkout. Another worktree means someone else is working here: stop and ask the owner.
-3. `npm run -s l10n -- progress show` — creates the file on first run, with every translated language in registry order; languages already shipped start as `done`.
+3. `npm run -s l10n -- dingpos progress show` — creates the file on first run, with every translated language in registry order; languages already shipped start as `done`.
 
 ## The loop
 

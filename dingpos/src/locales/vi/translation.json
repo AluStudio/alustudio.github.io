@@ -1,5 +1,5 @@
 {
-  "//": "Generated from en and the vi translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- sync vi`, then `npm run l10n -- apply vi`.",
+  "//": "Generated from en and the vi translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- dingpos sync vi`, then `npm run l10n -- dingpos apply vi`.",
   "nav": {
     "home": "Trang chủ",
     "pricing": "Bảng giá",

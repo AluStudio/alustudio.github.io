@@ -1,0 +1,16 @@
+{
+  "strings": {
+    "personDetail.editButton": "편집",
+    "field.giftIdeas": "선물 아이디어",
+    "field.favoriteDrink": "좋아하는 음료",
+    "field.allergy": "알레르기",
+    "field.birthday": "생일",
+    "field.leftRing": "왼약지",
+    "promptCatalog.title": "한 가지 골라서 같이 이야기해요"
+  },
+  "prompts": {
+    "c1-q02": "당신의 '완벽한 하루'는 어떻게 보내요?",
+    "c1-q07": "가장 소중한 어린 시절 기억은 뭐예요?",
+    "c1-q01": "누구든 한 사람과 저녁을 함께할 수 있다면 (살아 있든, 세상을 떠났든), 누구를 부를 거예요? 왜요?"
+  }
+}
