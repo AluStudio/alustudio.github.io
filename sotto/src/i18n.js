@@ -32,8 +32,12 @@ function languageFromPath(pathname) {
 
 const current = languageFromPath(window.location.pathname);
 
-/** Router basename for the language in the URL, e.g. "/sotto/ja". */
-export const routerBasename = `${APP_BASE}${current.pathPrefix}`;
+/**
+ * Router basename for the language in the URL, e.g. "/sotto/ja/". The
+ * trailing slash makes `<Link to="/">` render the root's served URL; without it
+ * the link points at "/sotto/ja", which the edge answers with a 307.
+ */
+export const routerBasename = `${APP_BASE}${current.pathPrefix}/`;
 
 /**
  * Same page in another language. `routePath` is the router-relative path

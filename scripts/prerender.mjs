@@ -93,11 +93,11 @@ export const UNIQUE_META_PREFIXES = ["/dingpos/", "/sotto/"];
 
 /**
  * Apps whose internal links must point straight at a sitemap route. A link to
- * "/dingpos/pricing" (no trailing slash) is answered with a 307, so every page
+ * "/dingpos/pricing" or "/sotto/faq" (no trailing slash) is answered with a 307, so every page
  * would cost crawlers a redirect hop per link; a link outside the sitemap is a
  * 404 or an unindexed page.
  */
-export const DIRECT_LINK_PREFIXES = ["/dingpos/"];
+export const DIRECT_LINK_PREFIXES = ["/dingpos/", "/sotto/"];
 
 /** Routes that must pass the hydration check. */
 export function hydratedRoutes(routes) {

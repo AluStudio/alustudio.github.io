@@ -16,7 +16,7 @@ function GuidePage() {
   const guide = guides.find((g) => g.slug === slug);
 
   if (!guide) {
-    return <Navigate to="/guides" replace />;
+    return <Navigate to="/guides/" replace />;
   }
 
   const related = guide.related.map((s) => guides.find((g) => g.slug === s)).filter(Boolean);
@@ -28,7 +28,7 @@ function GuidePage() {
         <div className="container">
           <article className="guide-article">
             <nav className="guide-breadcrumb" aria-label={t("guides.breadcrumb")}>
-              <Link to="/guides">
+              <Link to="/guides/">
                 <i className="bi bi-arrow-left" aria-hidden="true"></i>
                 {t("guides.back")}
               </Link>
@@ -52,7 +52,7 @@ function GuidePage() {
                 <ul>
                   {related.map((r) => (
                     <li key={r.slug}>
-                      <Link to={`/guides/${r.slug}`}>
+                      <Link to={`/guides/${r.slug}/`}>
                         {r.title}
                         <i className="bi bi-chevron-right" aria-hidden="true"></i>
                       </Link>

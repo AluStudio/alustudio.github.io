@@ -33,7 +33,7 @@ read_when:
 - 每個子頁要有自己的 description，不沿用首頁。
 - description 上限 160 字元（code point），這是 Bing 的上限，Sotto guide 的 `summary` 也用同一個數字（`scripts/meta-description.mjs` 的 `DESCRIPTION_MAX`）。DingPOS 的 FAQ 文章沒有手寫摘要，description 由 `fitDescription()` 從答案開頭推導：段落與每個清單項目各算一個單位，依閱讀順序整個塞進上限，塞不下就停；以冒號結尾的引言一定接上下一個單位的開頭，所以不會只剩「折扣分兩層：」這種沒有答案的半句。單位本身超過上限時，依序在句尾、子句、字詞邊界切（切在後半段，避免只剩「Yes.」），非句尾才補 `…`。DingPOS 的靜態頁（首頁、pricing、privacy、terms、support）也經過同一個函式，翻譯語言的 `meta_description` 超長時在這裡收斂，不手改產生的翻譯檔。Sotto 的 description 全是手寫，超過上限時 build 失敗，回頭改文案。
 - description 不設下限。Google 不看長度，只會換掉寫得差的 description；中日韓文用 Bing 的字數標準只能靠灌水達成。Bing WMT 的「title 太短」「description 太短」只在被點名的頁面確實缺資訊時才改，不為了消警告批次加長。
-- 站內連結直接指向 route 的 trailing-slash URL（`/dingpos/pricing/`），不寫 `/dingpos/pricing`：少了斜線，edge 會回 307 再導過去，crawler 在每一頁的每一條連結都多走一次 redirect，而且 307 是暫時性的，傳遞的訊號比直接連到 canonical 弱。DingPOS 的 router basename 帶結尾斜線（`/dingpos/ja/`），`<Link to="/">` 才會是首頁的 URL；其餘 `to` 一律寫成 `/pricing/`、`/support/<slug>/`。prerender 的 route audit 會擋下 `DIRECT_LINK_PREFIXES`（目前只有 `/dingpos/`）底下指向非 sitemap route 的站內連結。
+- 站內連結直接指向 route 的 trailing-slash URL（`/dingpos/pricing/`），不寫 `/dingpos/pricing`：少了斜線，edge 會回 307 再導過去，crawler 在每一頁的每一條連結都多走一次 redirect，而且 307 是暫時性的，傳遞的訊號比直接連到 canonical 弱。DingPOS 與 Sotto 的 router basename 帶結尾斜線（`/dingpos/ja/`、`/sotto/ja/`），`<Link to="/">` 才會是首頁的 URL；其餘 `to` 一律寫成 `/pricing/`、`/guides/<slug>/`。prerender 的 route audit 會擋下 `DIRECT_LINK_PREFIXES`（`/dingpos/`、`/sotto/`）底下指向非 sitemap route 的站內連結。
 - `<html lang>` 必須和 prerender 出來的正文語言一致：各 app 的 `i18n.js` 解析語系後同步 `document.documentElement.lang`。DingPOS 與 Sotto 另外由 copy script 在靜態 HTML 寫好 `lang`（Sotto 的阿拉伯文另加 `dir="rtl"`）。
 - 元件層的 render 限制（收合內容留在 DOM、不用 JS-gated scroll reveal）見 AGENTS.md §Sub-app Notes 與 §Project Skills。
 
