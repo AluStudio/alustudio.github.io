@@ -8,33 +8,33 @@ Fill "Term in language" with the one word or phrase every page will use, as a re
 
 | en | Term in language | Note |
 |----|------------------|------|
-| People notes app (the product category) | 人脈メモアプリ | ASO 主打詞「人脈メモ」（SWEET）。商品類別一律用「人脈メモアプリ」；描述「對你重要的人」時用「大切な人」（ASO 第二主打詞）。不要寫成「人物手帳」「CRM」「人脈管理」（後者偏商務、競爭激烈）。 |
-| Person page (a page for every person) | 人物ページ | App tab/標題用「人物」（tab.people、editPerson.newTitle）。行文可說「一人ひとりのページ」，但專有稱呼固定為「人物ページ」。 |
-| Note (a dated note about a person) | メモ | from app strings: personDetail.noteSection / addNote.title。不要用「ノート」（app 僅在分享畫面、備份提示出現）。 |
-| Field (size and measurement fields) | 項目 | from app strings: editPerson.fieldsSection / addField.title（「項目を追加」）。不要寫「フィールド」；唯一例外是 app 自己的「地域フィールド」（settings.regionalFields）。自訂欄位＝「カスタム項目」（addField.customSection）。 |
-| Ring size / shoe size | 指輪サイズ / 靴サイズ | from app strings: settings.unitRingSize「指輪サイズ」、field.shoeSize「靴サイズ」。十指各自的欄位名照 app：左親指／左示指／左中指／左薬指／左小指（右同）；app 欄位名是「示指」，泛指手指時用「人差し指」（field.finger.index「人差指」）。日本的戒圍單位是「号」（例：10号）。 |
-| Gift idea / gift log | ギフトアイデア / プレゼント記録 | 「ギフトアイデア」from app strings: field.giftIdeas。禮物本身行文用「プレゼント」（自然、親密）；紀錄用「プレゼント記録」，不要用偏商務的「贈答記録」。 |
-| Conversation question (the question catalog) | 会話のきっかけになる質問 / 質問カタログ | App 的目錄畫面標題是「ひとつ選んで話してみる」（promptCatalog.title），搜尋框「質問を探す」；計數 app 寫「%d 問」，站上寫成「323問」（不加空格）。短稱一律「質問」。 |
-| Guides (the article pages) | ガイド | 導覽列與索引頁都用「ガイド」。 |
-| FAQ / frequently asked questions | よくある質問 | 導覽列、頁面標題都用「よくある質問」，不要混用「FAQ」。 |
-| Privacy Policy | プライバシーポリシー | from app strings: settings.privacyPolicy。 |
-| Terms of Use | 利用規約 | from app strings: settings.termsOfUse。 |
-| One-time purchase, no subscription | 買い切り・サブスクリプションなし | 「一度の購入。サブスクリプションなし。」from app strings: paywall.subtitle。付費版稱「買い切り版」（settings.upgradeToPro）；不要用「Pro」「ライフタイム」「永久ライセンス」。「サブスク」簡寫不用，統一寫「サブスクリプション」。 |
-| Back up / restore (to your own cloud) | バックアップ / 復元（ご自身のクラウドへ） | from app strings: settings.backup、backup.restoreAction。備份目的地寫「ご自身のiCloud／Google Drive／Dropbox」，iCloud 僅 iPhone。 |
-| On your phone (data stays on the device) | スマホの中だけに保存 | 一般頁面與指南用「スマホ」；隱私權政策與利用規約用「お使いのデバイス内」（app 用「デバイス」，appLockUnavailable）。不要寫成「ローカル」。 |
-| Free version (free for up to 5 people) | 無料版 | from app strings: paywall.limitReachedTitle「無料版の上限に達しました」。 |
-| Person (a human being, in running text) | 人 / 大切な人 | 行文用「人」「大切な人」；「人物」只用在 app 畫面名（人物ページ、新しい人物）。不要把人稱作「顧客」「連絡先」（商務／通訊錄語感）。 |
-| Size and measurement fields (23 of them) | サイズと身体の項目 | 對應 app 欄位群組 personDetail.groupSizes「サイズ」、groupBody「身体」。「23のサイズ・身体計測項目」之類寫法固定這兩個詞，不要用「採寸」。 |
-| Shoe / ring size systems (column heads, conversion) | US・EU・UK・日本（号）・中国・香港・スイス | app 單位標籤 unit.ringUS/EU/UK/JP 為 US／EU／UK／JP；站上換算表欄名寫「米国・カナダ」「英国・オーストラリア」「EU」「日本（号）」「中国」，周長「円周（mm）」、內徑「内径（mm）」。鞋子日本尺寸是公分（cm）。 |
-| Reminder | リマインダー | from app strings: notification.title。「7日前の朝9時にお知らせ」類說法用「お知らせ」或「通知」，功能名稱固定「リマインダー」。 |
-| Birthday / Anniversary | 誕生日 / 記念日 | from app strings: field.birthday、field.anniversary。 |
-| How We Met (field) | 出会い | from app strings: field.howWeMet。引用欄位名時用「出会い」。 |
-| Wishlist (field) | ウィッシュリスト | from app strings: field.wishlistUrl。 |
-| Allergy | アレルギー | from app strings: field.allergy。 |
-| Knowing each other (question category) | お互いを知る | from app strings: promptCatalog.category.knowingEachOther。 |
-| App Lock | Appロック | from app strings: settings.appLock（Apple 日文慣用「App」）。說明鎖定方式時寫「スマホの画面ロック（Face ID、Touch ID、指紋、パスコードなど）」；「画面ロック」＝phone's own screen lock。 |
-| Custom field | カスタム項目 | from app strings: addField.customSection。 |
-| Theme (color themes) | テーマ | from app strings: settings.currentTheme / themePicker.title。「カラーテーマ」不用。 |
-| Share (a person's page as an image) | 共有 / 画像を保存 | from app strings: shareComposer.share、shareComposer.save。 |
-| Hidden people | 非表示の連絡先 | from app strings: settings.hiddenPeople（app 用「連絡先」，僅此處照抄；站上其他地方不要把人物叫「連絡先」）。 |
-| Studio / publisher name | ALU Studio | 不翻譯、不改大小寫。 |
+| People notes app (the product category) | 人脈メモアプリ | Main ASO term 人脈メモ (SWEET). Always call the product category 人脈メモアプリ; for "the people who matter to you" use 大切な人 (second ASO term). Do not write 人物手帳, CRM or 人脈管理 (the last reads as business and is heavily contested). |
+| Person page (a page for every person) | 人物ページ | The app's tab and titles say 人物 (tab.people, editPerson.newTitle). Running text may say 一人ひとりのページ, but the fixed name is 人物ページ. |
+| Note (a dated note about a person) | メモ | from app strings: personDetail.noteSection / addNote.title. Do not use ノート (the app shows it only on the share screen and backup prompts). |
+| Field (size and measurement fields) | 項目 | from app strings: editPerson.fieldsSection / addField.title (項目を追加). Do not write フィールド; the only exception is the app's own 地域フィールド (settings.regionalFields). Custom field = カスタム項目 (addField.customSection). |
+| Ring size / shoe size | 指輪サイズ / 靴サイズ | from app strings: settings.unitRingSize 指輪サイズ, field.shoeSize 靴サイズ. Per-finger field names follow the app: 左親指／左示指／左中指／左薬指／左小指 (right hand likewise); the app field name is 示指, while running text about the finger says 人差し指 (field.finger.index 人差指). Japanese ring sizes are counted in 号 (e.g. 10号). |
+| Gift idea / gift log | ギフトアイデア / プレゼント記録 | ギフトアイデア from app strings: field.giftIdeas. In running text a gift is プレゼント (natural, personal); the log is プレゼント記録, not the business-like 贈答記録. |
+| Conversation question (the question catalog) | 会話のきっかけになる質問 / 質問カタログ | The app's catalog screen title is ひとつ選んで話してみる (promptCatalog.title), its search field 質問を探す; the app counts %d 問, the site writes 323問 (no space). The short name is always 質問. |
+| Guides (the article pages) | ガイド | Navigation and the index page both say ガイド. |
+| FAQ / frequently asked questions | よくある質問 | Navigation and page titles both say よくある質問; do not mix in FAQ. |
+| Privacy Policy | プライバシーポリシー | from app strings: settings.privacyPolicy. |
+| Terms of Use | 利用規約 | from app strings: settings.termsOfUse. |
+| One-time purchase, no subscription | 買い切り・サブスクリプションなし | 一度の購入。サブスクリプションなし。 from app strings: paywall.subtitle. The paid version is 買い切り版 (settings.upgradeToPro); do not use Pro, ライフタイム or 永久ライセンス. Do not abbreviate to サブスク; always write サブスクリプション. |
+| Back up / restore (to your own cloud) | バックアップ / 復元（ご自身のクラウドへ） | from app strings: settings.backup, backup.restoreAction. Write the destination as ご自身のiCloud／Google Drive／Dropbox; iCloud is iPhone only. |
+| On your phone (data stays on the device) | スマホの中だけに保存 | General pages and guides say スマホ; the privacy policy and terms of use say お使いのデバイス内 (the app says デバイス, appLockUnavailable). Do not write ローカル. |
+| Free version (free for up to 5 people) | 無料版 | from app strings: paywall.limitReachedTitle 無料版の上限に達しました. |
+| Person (a human being, in running text) | 人 / 大切な人 | Running text says 人 or 大切な人; 人物 only in app screen names (人物ページ, 新しい人物). Never call people 顧客 or 連絡先 (business / address-book tone). |
+| Size and measurement fields (23 of them) | サイズと身体の項目 | Matches the app's field groups personDetail.groupSizes サイズ and groupBody 身体. Phrases like 23のサイズ・身体計測項目 keep these two words; do not use 採寸. |
+| Shoe / ring size systems (column heads, conversion) | US・EU・UK・日本（号）・中国・香港・スイス | The app's unit labels unit.ringUS/EU/UK/JP are US／EU／UK／JP. The site's conversion table heads are 米国・カナダ, 英国・オーストラリア, EU, 日本（号）, 中国; circumference 円周（mm）, inside diameter 内径（mm）. Japanese shoe sizes are in centimetres (cm). |
+| Reminder | リマインダー | from app strings: notification.title. Phrases like 7日前の朝9時にお知らせ use お知らせ or 通知; the feature name is always リマインダー. |
+| Birthday / Anniversary | 誕生日 / 記念日 | from app strings: field.birthday, field.anniversary. |
+| How We Met (field) | 出会い | from app strings: field.howWeMet. Quote the field as 出会い. |
+| Wishlist (field) | ウィッシュリスト | from app strings: field.wishlistUrl. |
+| Allergy | アレルギー | from app strings: field.allergy. |
+| Knowing each other (question category) | お互いを知る | from app strings: promptCatalog.category.knowingEachOther. |
+| App Lock | Appロック | from app strings: settings.appLock (Apple's Japanese convention writes App). When explaining the lock methods write スマホの画面ロック（Face ID、Touch ID、指紋、パスコードなど）; 画面ロック = the phone's own screen lock. |
+| Custom field | カスタム項目 | from app strings: addField.customSection. |
+| Theme (color themes) | テーマ | from app strings: settings.currentTheme / themePicker.title. Do not use カラーテーマ. |
+| Share (a person's page as an image) | 共有 / 画像を保存 | from app strings: shareComposer.share, shareComposer.save. |
+| Hidden people | 非表示の連絡先 | from app strings: settings.hiddenPeople (the app says 連絡先; copy it only here, and never call people 連絡先 elsewhere on the site). |
+| Studio / publisher name | ALU Studio | Not translated; keep the capitalization. |
