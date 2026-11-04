@@ -245,9 +245,8 @@ function startServer(siteDir) {
 async function renderRoute(page, origin, route) {
   await page.goto(`${origin}${route}`, { waitUntil: "load", timeout: 30_000 });
   // React mounted = #root has children. 15s is generous for a local bundle.
-  // Pages run concurrently and all but one are hidden tabs, where the default
-  // requestAnimationFrame polling never fires: an app that mounts after `load`
-  // (sotto awaits its language chunk) would time out at random.
+  // Mutation polling re-checks on the mount itself; dingpos and sotto mount
+  // after `load`, once their language chunks arrive.
   await page.waitForFunction(
     () => document.querySelector("#root")?.children.length > 0,
     { timeout: 15_000, polling: "mutation" }
@@ -294,7 +293,7 @@ async function checkHydration(page, origin, route) {
         const first = document.querySelector("#root")?.firstElementChild;
         return first && Object.keys(first).some((key) => key.startsWith("__reactFiber$"));
       },
-      // Interval, not rAF (hidden tab) or mutation (hydrating changes no DOM).
+      // Interval, not mutation: hydrating changes no DOM.
       { timeout: 15_000, polling: 100 }
     );
     await new Promise((r) => setTimeout(r, 150));
@@ -370,7 +369,12 @@ async function main() {
   const queue = [...routes];
 
   async function openPage(viewport) {
-    const page = await browser.newPage();
+    // One window per worker, not one tab each: every tab but a window's active
+    // one is hidden, and on macOS a hidden tab's renderer stalls at random for
+    // longer than any wait here (OH-141).
+    const page = await browser.newPage({ type: "window" });
+    const visibility = await page.evaluate(() => document.visibilityState);
+    if (visibility !== "visible") throw new Error(`prerender page is ${visibility}, expected visible`);
     await page.setViewport(viewport);
     // Block anything that isn't served by our local origin.
     await page.setRequestInterception(true);
