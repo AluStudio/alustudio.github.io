@@ -1678,7 +1678,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Pembatalan penjualan (void), retur, penjualan tempo, dan pembelian sengaja tidak memiliki izin; semuanya hanya mencatat siapa yang menanganinya. Untuk meninjaunya nanti, gunakan log aktivitas."
+        "text": "Batalkan penjualan (Void), retur, penjualan tempo, dan pembelian sengaja tidak memiliki izin; semuanya hanya mencatat siapa yang menanganinya. Untuk meninjaunya nanti, gunakan log aktivitas."
       }
     ],
     "related": [

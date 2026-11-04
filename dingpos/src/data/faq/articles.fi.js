@@ -1678,7 +1678,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Mitätöinneillä, palautuksilla, laskulle myynneillä ja ostoilla ei tarkoituksella ole oikeutta; niihin vain kirjataan, kuka ne hoiti. Voit tarkastella niitä myöhemmin toimintolokista."
+        "text": "Mitätöinneille, palautuksille, laskulle myynneille ja ostoille ei tarkoituksella ole määritetty oikeuksia; niihin vain kirjataan, kuka ne hoiti. Voit tarkastella niitä myöhemmin toimintolokista."
       }
     ],
     "related": [

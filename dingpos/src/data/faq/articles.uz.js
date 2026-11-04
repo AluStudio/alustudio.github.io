@@ -788,7 +788,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ha — uni Erkin narxli mahsulot qiling. Mahsulotni tahrirlash sahifasida Erkin narx’ni yoqing va narxni bo‘sh qoldiring; kassir va mahsulotlar ro‘yxatida narx o‘rnida «Erkin narx» ko‘rinadi. To‘lov paytida mahsulotga tegsangiz, avval narx so‘raladi; uni kiriting va «Savatga qo‘shish»ni bosing — mahsulot shu narxda qo‘shiladi."
+        "text": "Ha — uni Erkin narxli mahsulot qiling. Mahsulotni tahrirlash sahifasida «Erkin narx»ni yoqing va narxni bo‘sh qoldiring; kassir va mahsulotlar ro‘yxatida narx o‘rnida «Erkin narx» ko‘rinadi. To‘lov paytida mahsulotga tegsangiz, avval narx so‘raladi; uni kiriting va «Savatga qo‘shish»ni bosing — mahsulot shu narxda qo‘shiladi."
       },
       {
         "type": "list",
@@ -1660,7 +1660,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Boshlang‘ich sozlamalar: Menejerlarga zaxira nusxa va tiklashdan tashqari hamma narsa ruxsat etilgan, chegirma chegarasi yo‘q; Xodimlarga hamma narsa uchun tasdiq kerak, chegara 10%. Ega doim hamma narsaga ruxsatli va uni tahrirlab bo‘lmaydi. O‘zgartirish uchun Xodimlar → Lavozim ruxsatlari bo‘limiga o‘ting, Tahrirlash tugmasini bosing va bir marta saqlang — o‘zgarish hamma uchun darhol kuchga kiradi."
+        "text": "Boshlang‘ich sozlamalar: Menejerlarga zaxira nusxa va tiklashdan tashqari hamma narsa ruxsat etilgan, chegirma chegarasi yo‘q; Xodimlarga hamma narsa uchun tasdiq kerak, chegara 10%. Do‘kon egasiga doim hamma narsaga ruxsat berilgan va uning ruxsatlarini tahrirlab bo‘lmaydi. O‘zgartirish uchun Xodimlar → Lavozim ruxsatlari bo‘limiga o‘ting, Tahrirlash tugmasini bosing va bir marta saqlang — o‘zgarish hamma uchun darhol kuchga kiradi."
       },
       {
         "type": "note",

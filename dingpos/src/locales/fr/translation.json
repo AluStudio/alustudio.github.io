@@ -415,7 +415,7 @@
     "intro": "ALU Studio (« nous ») a développé DingPOS (« l’application »). DingPOS est une caisse conçue avec la confidentialité au cœur : les données de votre commerce vous appartiennent. Cette politique de confidentialité explique comment nous traitons vos informations lorsque vous utilisez l’application.",
     "local_storage": {
       "title": "Comment vos données sont stockées",
-      "desc": "DingPOS stocke toutes les données de votre commerce localement, sur votre appareil. Tant que vous n’activez pas la sauvegarde cloud et ne nous envoyez pas de rapport d’assistance, ces données ne quittent jamais votre appareil. Les données que vous créez dans l’application comprennent :",
+      "desc": "DingPOS stocke toutes les données de votre commerce localement, sur votre appareil. À moins que vous n’activiez la sauvegarde cloud ou que vous nous envoyiez un rapport d’assistance, ces données ne quittent jamais votre appareil. Les données que vous créez dans l’application comprennent :",
       "items": [
         "Les réglages de la boutique (nom, devise, taux de taxe, logo)",
         "Les données sur les produits (nom, prix, coût, code-barres, photo, catégorie, variantes, stock)",

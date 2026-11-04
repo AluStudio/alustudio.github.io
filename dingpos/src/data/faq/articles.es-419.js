@@ -1656,7 +1656,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Acciones (ajuste manual de stock, ajuste manual de puntos, administración de productos, cobrar por encima del tope de descuento): una aprobación cubre esa sola acción.",
+          "Acciones (ajuste manual de stock, ajuste manual de puntos, administración de productos, aplicar un descuento que supere el tope de descuento): una aprobación cubre esa sola acción.",
           "Vistas (costo y utilidad, Panel, Ajustes, respaldo y restauración): una aprobación desbloquea hasta que cambie el operador o la app pase a segundo plano.",
           "El tope de descuento aplica a los descuentos manuales y se revisa una sola vez al cobrar; las promociones automáticas y el canje de puntos no cuentan para el tope."
         ]

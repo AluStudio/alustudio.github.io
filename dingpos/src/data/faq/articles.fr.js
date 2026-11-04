@@ -799,7 +799,7 @@ export const articles = [
         "items": [
           "0 est un prix valide (livraison offerte, par exemple) ; un champ vide ne peut pas être ajouté. Saisissez le prix comme le mode de taxe de votre magasin le fait pour tout le reste.",
           "Un panier contient une seule ligne par produit à prix libre : le toucher à nouveau ouvre cette ligne pour que vous puissiez changer le prix.",
-          "Depuis la v3.3, Facturer selon bascule entre Montant et Pourcentage. À 5 %, la ligne correspond à 5 % du sous-total des autres articles (après les remises sur articles, avant les promotions, la remise sur le panier et l’utilisation de points), arrondi à la hausse (à partir de la moitié) au nombre de décimales de la devise ; elle suit le panier quand des articles sont ajoutés, retirés ou remisés. La ligne du panier affiche « 5 % du panier », et la commande enregistre le montant obtenu.",
+          "Depuis la v3.3, Facturer selon bascule entre Montant et Pourcentage. À 5 %, la ligne correspond à 5 % du sous-total des autres articles (après les remises sur articles, avant les promotions, la remise sur le panier et l’utilisation de points), arrondi à la décimale de la devise la plus proche, les valeurs à mi-chemin étant arrondies vers le haut ; elle suit le panier quand des articles sont ajoutés, retirés ou remisés. La ligne du panier affiche « 5 % du panier », et la commande enregistre le montant obtenu.",
           "Une ligne à prix libre n’accepte pas de remise sur article ; pour facturer moins, changez son prix. Les remises sur le panier, l’utilisation de points et les promotions (sauf si elle en est exclue) s’y appliquent toujours.",
           "Activer Prix libre active aussi Exclure des promotions : des frais ne sont donc pas remisés et ne comptent pas dans les seuils de dépense. Désactivez-le si un article négocié doit participer aux promotions.",
           "Une fois vendue, la ligne est taxée, rapporte des points et compte dans Stats comme les autres, et un retour rembourse le prix saisi.",
@@ -1672,7 +1672,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valeurs par défaut : les Responsables sont autorisés à tout sauf à la sauvegarde et à la restauration, sans plafond de remise ; le Personnel a besoin d’une approbation pour tout, avec un plafond de 10 %. Le propriétaire est toujours autorisé et ne peut pas être modifié. Pour changer cela, allez dans Personnel → Permissions des rôles, touchez Modifier et enregistrez une fois : le changement s’applique immédiatement à tout le monde."
+        "text": "Valeurs par défaut : les Responsables sont autorisés à tout sauf à la sauvegarde et à la restauration, sans plafond de remise ; le Personnel a besoin d’une approbation pour tout, avec un plafond de 10 %. Le propriétaire est toujours autorisé et ses permissions ne peuvent pas être modifiées. Pour changer cela, allez dans Personnel → Permissions des rôles, touchez Modifier et enregistrez une fois : le changement s’applique immédiatement à tout le monde."
       },
       {
         "type": "note",
@@ -1748,7 +1748,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Au cours des 7 derniers jours de l’essai, puis le dernier jour, l’app vous rappelle combien de jours il reste, que l’encaissement sera suspendu à la fin de l’essai et que vos données seront conservées."
+        "text": "Pendant les 7 derniers jours de l’essai, puis le dernier jour, l’app vous rappelle une fois combien de jours il reste, que l’encaissement sera suspendu à la fin de l’essai et que vos données seront conservées."
       },
       {
         "type": "p",

@@ -463,7 +463,7 @@
     },
     "support": {
       "title": "Yordam hisobotlari (faqat siz yuborganingizda)",
-      "desc": "Sozlamalar bo‘limidan yordam hisoboti yuborishni tanlasangiz, unga siz yozgan matn, biriktirgan har qanday foto yoki video (joylashuv va boshqa metama’lumotlar olib tashlangan holda), asosiy diagnostika ma’lumotlari (qurilma modeli, tizim va ilova versiyasi, til, vaqt mintaqasi, tarmoq holati, bo‘sh xotira, ma’lumotlar bazasi hajmi, obuna holati, do‘kon nomi) hamda muammoni qayta takrorlay olishimiz uchun do‘koningiz ma’lumotlar bazasining nusxasi kiradi. Bu nusxada mahsulotlaringiz, buyurtmalaringiz va mijoz yozuvlaringiz, jumladan ismlar, telefon raqamlari, e-pochtalar va tug‘ilgan kunlar (oy va kun) bor. U faqat yordam hisobotingizga javob berish uchun ishlatiladi."
+      "desc": "Sozlamalar bo‘limidan yordam hisoboti yuborishni tanlasangiz, unga siz yozgan matn, biriktirgan har qanday foto yoki video (joylashuv va boshqa metama’lumotlar olib tashlangan holda), asosiy diagnostika ma’lumotlari (qurilma modeli, tizim va ilova versiyasi, til, vaqt mintaqasi, tarmoq holati, qurilmadagi bo‘sh joy, ma’lumotlar bazasi hajmi, obuna holati, do‘kon nomi) hamda muammoni qayta takrorlay olishimiz uchun do‘koningiz ma’lumotlar bazasining nusxasi kiradi. Bu nusxada mahsulotlaringiz, buyurtmalaringiz va mijoz yozuvlaringiz, jumladan ismlar, telefon raqamlari, e-pochtalar va tug‘ilgan kunlar (oy va kun) bor. U faqat yordam hisobotingizga javob berish uchun ishlatiladi."
     },
     "children": {
       "title": "Bolalar maxfiyligi",
