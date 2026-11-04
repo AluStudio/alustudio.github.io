@@ -532,7 +532,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "O Sotto é um app de notas sobre pessoas, com uma página para cada uma. O campo \"Encontro\", que já vem pronto, serve para a história de como vocês se conheceram, e a data pode ir no campo \"Aniversário de casal\": ative o lembrete dele e o Sotto avisa 7 dias antes, às 9h da manhã. Para se aprofundar com alguém que você acabou de conhecer, experimente as 33 perguntas da categoria \"Nos conhecer\", adaptadas do estudo de 1997 do psicólogo Arthur Aron sobre como estranhos ficam próximos."
+        "text": "O Sotto é um app de notas sobre pessoas, com uma página para cada uma. O campo \"Encontro\", que já vem pronto, serve para a história de como vocês se conheceram, e, se for a pessoa com quem você tem um relacionamento, a data também pode ir no campo \"Aniv. de casal\": ative o lembrete dele e o Sotto avisa 7 dias antes, às 9h da manhã. Para se aprofundar com alguém que você acabou de conhecer, experimente as 33 perguntas da categoria \"Nos conhecer\", adaptadas do estudo de 1997 do psicólogo Arthur Aron sobre como estranhos ficam próximos."
       },
       {
         "type": "p",

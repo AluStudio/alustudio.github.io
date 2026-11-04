@@ -532,7 +532,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto est une app de carnet privé pour vos proches, avec une page pour chaque personne. Son champ intégré « Rencontre » est fait pour raconter comment vous vous êtes rencontrés, et la date peut aller dans le champ « Anniv. de couple » : activez son rappel et Sotto vous prévient 7 jours avant, à 9 h du matin. Pour aller plus loin avec une nouvelle connaissance, essayez les 33 questions de la catégorie « Se connaître », adaptées de l’étude de 1997 du psychologue Arthur Aron sur la façon dont des inconnus deviennent proches."
+        "text": "Sotto est une app de carnet privé pour vos proches, avec une page pour chaque personne. Son champ intégré « Rencontre » est fait pour raconter comment vous vous êtes rencontrés, et s’il s’agit de votre partenaire, la date peut aller dans le champ « Anniv. de couple » : activez son rappel et Sotto vous prévient 7 jours avant, à 9 h du matin. Pour aller plus loin avec une nouvelle connaissance, essayez les 33 questions de la catégorie « Se connaître », adaptées de l’étude de 1997 du psychologue Arthur Aron sur la façon dont des inconnus deviennent proches."
       },
       {
         "type": "p",
