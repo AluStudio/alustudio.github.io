@@ -1883,9 +1883,9 @@ export const articles = [
     "question": "Lite, Standard, Pro төлөвлөгөөний ялгаа юу вэ?",
     "keywords": [
       "төлөвлөгөө",
-      "lite",
-      "standard",
-      "pro",
+      "Lite",
+      "Standard",
+      "Pro",
       "ялгаа",
       "харьцуулах",
       "ахиулах",

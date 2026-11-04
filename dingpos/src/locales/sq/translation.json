@@ -303,7 +303,7 @@
         },
         "payment_fees": {
           "name": "Normat e komisionit të pagesave",
-          "desc": "Cakto normën e komisionit për çdo mënyrë pagese për të vlerësuar komisionet dhe të arkëtuara neto të vlerësuara"
+          "desc": "Cakto normën e komisionit për çdo mënyrë pagese për të vlerësuar komisionet dhe shumën neto të arkëtuar."
         },
         "comparison": {
           "name": "Krahasimi i periudhave",

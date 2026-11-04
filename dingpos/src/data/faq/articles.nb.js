@@ -2133,7 +2133,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Etter Avslå dukker det samme forslaget ikke opp igjen for denne handlekurven. En ny eller tømt handlekurv gir forslaget på nytt.",
-          "Fra og med v3.4 stopper ikke tilbud som fortsatt venter, kassen: en gul linje under betalingsknappen, for eksempel «1 ubesvart tilbud gjelder ikke», viser hvor mange som er utelatt (trykk på den for å se hvilke), og ordren går gjennom uten dem. For at kassen skal vente som før, slår du på Ta stilling til tilbud før kassen under Innstillinger → Enhetsinnstillinger. Det gjelder bare denne iPaden.",
+          "Fra og med v3.4 hindrer ikke tilbud som fortsatt venter, at du går til kassen: en gul linje under betalingsknappen, for eksempel «1 ventende tilbud blir ikke brukt», viser hvor mange tilbud som utelates (trykk på linjen for å se hvilke), og ordren gjennomføres uten dem. For at kassen skal vente som før, slår du på Ta stilling til tilbud før kassen under Innstillinger → Enhetsinnstillinger. Dette gjelder bare denne iPaden.",
           "Gave- og tilleggsvarelinjer kan ikke få ytterligere rabatt fra andre rabattkampanjer, og de teller ikke med mot terskelen i andre kampanjer."
         ]
       },

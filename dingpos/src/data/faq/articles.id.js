@@ -581,7 +581,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Mengganti pelanggan langsung menghitung ulang diskon tingkat, penawaran ulang tahun, dan penukaran poin. Uang tunai atau uang muka yang sudah Anda isi tetap tersimpan dan diperiksa terhadap total yang baru.",
-          "Tidak menemukannya? Ketuk Pelanggan Baru di kanan atas daftar pelanggan, atau di tengah saat tidak ada yang cocok dengan pencarian Anda. Kata yang Anda cari mengisi formulir — angka masuk ke telepon, selain itu ke nama — dan pelanggan baru langsung ditambahkan ke penjualan.",
+          "Tidak menemukannya? Ketuk Pelanggan Baru di kanan atas daftar pelanggan, atau di tengah saat tidak ada yang cocok dengan pencarian Anda. Kata yang Anda cari mengisi formulir — angka masuk ke telepon, selain itu ke nama — dan pelanggan baru langsung dikaitkan dengan penjualan.",
           "Mengetuk Penjualan tempo saat belum ada pelanggan membuka daftar pelanggan, dan Penjualan tempo terpilih setelah Anda memilih seseorang.",
           "Jika pelanggan baru membuat diskon manual melewati batas diskon operator, manajer menyetujui lebih dulu; batalkan persetujuan itu dan pelanggan tetap seperti semula."
         ]
@@ -729,7 +729,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Untuk menagih, ganti bagian atas Pesanan ke Piutang. Piutang dikelompokkan per pelanggan; buka salah satunya untuk melunasi satu pesanan, satu bulan penuh, atau semuanya — setiap kali DingPOS menanyakan bagaimana uangnya dibayar. Satu pesanan juga bisa dilunasi dari halaman rinciannya, dan pelunasan yang salah dimasukkan bisa ditarik kembali dengan Batalkan pelunasan."
+        "text": "Untuk menerima pelunasan, ganti bagian atas Pesanan ke Piutang. Piutang dikelompokkan per pelanggan; buka salah satunya untuk melunasi satu pesanan, satu bulan penuh, atau semuanya — setiap kali DingPOS menanyakan bagaimana uangnya dibayar. Satu pesanan juga bisa dilunasi dari halaman rinciannya, dan pelunasan yang salah dimasukkan bisa ditarik kembali dengan Batalkan pelunasan."
       },
       {
         "type": "list",

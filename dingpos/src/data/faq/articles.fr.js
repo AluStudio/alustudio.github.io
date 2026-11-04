@@ -399,7 +399,7 @@ export const articles = [
     "keywords": [
       "frais de traitement",
       "frais de carte",
-      "frais de transaction",
+      "frais de traitement",
       "taux de frais",
       "net estimé encaissé",
       "frais commerçant",
@@ -2123,7 +2123,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Après Refuser, la même suggestion ne réapparaît plus pour ce panier ; un nouveau panier, ou un panier vidé, la propose de nouveau.",
-          "Depuis la v3.4, les offres encore en attente n’empêchent plus l’encaissement : une ligne jaune sous le bouton Payer, comme « 1 offre en attente ne s’appliquera pas », indique combien sont écartées (touchez-la pour voir lesquelles), et la commande est validée sans elles. Pour que l’encaissement attende comme avant, activez Traiter les offres avant l’encaissement dans Réglages → Préférences de l’appareil ; cela ne s’applique qu’à cet iPad.",
+          "Depuis la v3.4, les offres encore en attente n’empêchent plus l’encaissement : une ligne jaune sous le bouton Encaisser, comme « 1 offre en attente ne s’appliquera pas », indique combien sont écartées (touchez-la pour voir lesquelles), et la commande est validée sans elles. Pour que l’encaissement attende comme avant, activez Traiter les offres avant l’encaissement dans Réglages → Préférences de l’appareil ; cela ne s’applique qu’à cet iPad.",
           "Les lignes de cadeau et d’extra ne peuvent plus recevoir d’autres remises, et ne comptent pas dans les seuils des autres promotions."
         ]
       },
@@ -2320,7 +2320,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Dans Stats, choisissez Ce mois-ci pour voir le chiffre d’affaires du mois, les sommes encaissées, le bénéfice et la répartition par mode de paiement.",
+          "Dans Stats, choisissez Ce mois-ci pour voir le chiffre d’affaires du mois, les sommes encaissées, la marge brute et la répartition par mode de paiement.",
           "Les achats auprès de fournisseurs avec paiement mensuel sont regroupés dans Factures impayées, sous Achats, où vous pouvez régler un mois entier d’un coup.",
           "Les ventes en compte aux clients sont regroupées dans Commandes → Créances, où vous pouvez régler un mois entier d’un coup."
         ]

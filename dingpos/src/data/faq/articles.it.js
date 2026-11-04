@@ -575,7 +575,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Associa il cliente nel carrello o nella schermata di cassa: la riga Cliente sotto l'importo apre l'elenco clienti quando nessuno è associato, e offre Cambia cliente o Rimuovi cliente quando qualcuno lo è. Il cliente scelto alla cassa è il cliente del carrello e resta nel carrello se esci dalla cassa."
+        "text": "Associa il cliente nel carrello o nella schermata di cassa: la riga Cliente sotto l'importo apre l'elenco clienti quando nessuno è associato, e offre Cambia cliente o Rimuovi cliente quando qualcuno lo è. Il cliente scelto alla cassa è il cliente del carrello e resta nel carrello se annulli la procedura di cassa."
       },
       {
         "type": "list",

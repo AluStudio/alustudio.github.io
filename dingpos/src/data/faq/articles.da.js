@@ -1227,7 +1227,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Derefter følger tre grafer: nettoresultatet for hver af de seneste 12 måneder, hver fast udgifts andel og udviklingen i de faste udgifter. I Statistik springer den sidste linje på kortet Dækningsbidrag direkte til Resultat: For en periode, der er præcis én måned, viser den månedens nettoresultat, f.eks. „oktober nettoresultat 12.300 kr.“; for alle andre perioder står der Se månedligt resultat."
+        "text": "Derefter følger tre grafer: nettoresultatet for hver af de seneste 12 måneder, hver fast udgifts andel og udviklingen i de faste udgifter. I Statistik springer den sidste linje på kortet Dækningsbidrag direkte til Resultat: For en periode, der er præcis én måned, viser den månedens nettoresultat, f.eks. „oktobers nettoresultat NT$12,300“; for alle andre perioder står der Se månedligt resultat."
       },
       {
         "type": "note",

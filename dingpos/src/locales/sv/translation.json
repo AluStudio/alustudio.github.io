@@ -298,12 +298,12 @@
           "desc": "Intäkt, vinst, rabatter, betalsätt och bästsäljare"
         },
         "profit_loss": {
-          "name": "Resultaträkning per månad",
+          "name": "Resultat per månad",
           "desc": "Registrera hyra, löner och andra kostnader och se nettovinsten för varje månad"
         },
         "payment_fees": {
           "name": "Avgiftssatser för betalningar",
-          "desc": "Ange avgiftssats för varje betalningssätt och beräkna avgifter och beräknat netto"
+          "desc": "Ange avgiftssats för varje betalningssätt för att uppskatta avgifterna och det beräknade nettot"
         },
         "comparison": {
           "name": "Periodjämförelse",

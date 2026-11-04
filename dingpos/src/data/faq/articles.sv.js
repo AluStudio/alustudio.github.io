@@ -1148,7 +1148,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Lite har ingen lagerstyrning eller några poäng, men Just nu visar ändå det lagervärde och de outlösta poäng som din butik redan har (till exempel från provperioden), eller noll."
+        "text": "Lite har ingen lagerstyrning eller några poäng, men Just nu visar ändå butikens lagervärde och de poäng som kunderna fortfarande har kvar och ännu inte löst in (till exempel från provperioden), eller noll."
       },
       {
         "type": "note",

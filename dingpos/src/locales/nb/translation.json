@@ -298,7 +298,7 @@
           "desc": "Salgsinntekt, fortjeneste, rabatter, betalingsfordeling og bestselgere"
         },
         "profit_loss": {
-          "name": "Månedlig resultat (P&L)",
+          "name": "Månedlig resultat",
           "desc": "Registrer husleie, lønn og andre utgifter, og se nettoresultatet for hver måned"
         },
         "payment_fees": {

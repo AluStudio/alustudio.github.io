@@ -303,7 +303,7 @@
         },
         "payment_fees": {
           "name": "Teenustasu määrad",
-          "desc": "Määra iga makseviisi teenustasu määr, et hinnata tasusid ja netolaekumist"
+          "desc": "Määra iga makseviisi teenustasu määr, et hinnata teenustasusid ja hinnangulist netolaekumist"
         },
         "comparison": {
           "name": "Perioodide võrdlus",

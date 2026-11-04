@@ -729,11 +729,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Kies Op rekening als betaalmethode, dan wordt de verkoop vastgelegd als schuld van de klant. Een schuld moet van iemand zijn, dus als er geen klant is gekoppeld, opent een tik op Op rekening eerst de klantenlijst (sinds v3.4; eerdere versies vragen je een klant in de winkelmand te koppelen)."
+        "text": "Ja. Kies Op rekening als betaalmethode, dan wordt de verkoop vastgelegd als openstaand bedrag van de klant. Dat bedrag moet aan een klant gekoppeld zijn, dus als er geen klant is gekoppeld, opent een tik op Op rekening eerst de klantenlijst (sinds v3.4; eerdere versies vragen je een klant in de winkelmand te koppelen)."
       },
       {
         "type": "p",
-        "text": "Om te innen schakel je bovenaan Orders naar Vorderingen. Schulden zijn per klant gegroepeerd; open er een om één bestelling, een hele maand of alles te vereffenen — telkens vraagt DingPOS hoe het geld is betaald. Een losse bestelling kun je ook vanuit de details vereffenen, en een per ongeluk ingevoerde vereffening haal je terug met Vereffening ongedaan maken."
+        "text": "Om te innen schakel je bovenaan Orders naar Vorderingen. Openstaande bedragen zijn per klant gegroepeerd; open een klant om één bestelling, een hele maand of alles te vereffenen — telkens vraagt DingPOS hoe het geld is betaald. Een losse bestelling kun je ook vanuit de details vereffenen, en een per ongeluk ingevoerde vereffening haal je terug met Vereffening ongedaan maken."
       },
       {
         "type": "list",
@@ -769,7 +769,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. De detailpagina's van bestellingen, klanten en inkooporders hebben elk notities — tik op de notitiekaart om te bewerken, tot 500 tekens, of op de enkele regel “Voeg een notitie toe” zolang er nog geen zijn. Je kunt ook meteen een notitie schrijven in het formulier bij het aanmaken van een klant of inkooporder."
+        "text": "Ja. Op de detailpagina's van bestellingen, klanten en inkooporders kun je notities toevoegen. Tik op de notitiekaart om die te bewerken (maximaal 500 tekens), of op de regel “Voeg een notitie toe” als er nog geen notities zijn. Je kunt ook een notitie schrijven in het formulier voor een nieuwe klant of inkooporder."
       },
       {
         "type": "p",
@@ -1213,7 +1213,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Open W&V, onder Cijfers in de zijbalk. Daar staat elke maand van nieuw naar oud met de nettowinst: de lopende maand is gemarkeerd met Lopend en de kop van elk jaar telt de nettowinst van de afgelopen maanden bij elkaar op."
+        "text": "Open W&V, onder Cijfers in de zijbalk. Daar staat elke maand van nieuw naar oud met de nettowinst: de lopende maand is gemarkeerd met Lopend en de kop van elk jaar telt de nettowinst van de afgesloten maanden bij elkaar op."
       },
       {
         "type": "p",

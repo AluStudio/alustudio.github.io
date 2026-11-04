@@ -302,7 +302,7 @@
           "desc": "Kira, maaş ve diğer giderleri kaydedin; her ayın net kârını görün"
         },
         "payment_fees": {
-          "name": "İşlem ücreti oranları",
+          "name": "Ücret oranları",
           "desc": "Her ödeme yönteminin ücret oranını belirleyin; ücretleri ve net alınan tutarı tahmin edin"
         },
         "comparison": {

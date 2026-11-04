@@ -738,7 +738,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Të ardhurat numërohen në ditën kur del malli; Para të arkëtuara dhe pikët e besnikërisë llogariten në ditën e shlyerjes.",
+          "Të ardhurat nga shitjet numërohen në ditën kur del malli; Para të arkëtuara dhe pikët e besnikërisë llogariten në ditën e shlyerjes.",
           "Porositë e pashlyera kanë një shenjë me ngjyrë qelibari në listë, dhe detajet e klientit tregojnë sa i ka mbetur për të paguar.",
           "Një klient me porosi të pashlyera nuk mund të fshihet."
         ]
@@ -1132,7 +1132,7 @@ export const articles = [
           "Krahasimi i shitjeve: në të djathtë të shiritit të periudhës, krahaso me të njëjtën periudhë të vitit të kaluar ose me periudhën para saj (një ditë të vetme me të njëjtën ditë të javës së kaluar, këtë javë me javën e kaluar, këtë muaj me muajin e kaluar, këtë vit me vitin e kaluar, një interval të personalizuar me po aq ditë para tij). Pllaka Para të arkëtuara tregon ndryshimin dhe ritmin e rritjes, dhe grafiku i të ardhurave nga shitjet shton një vijë më të zbehtë për periudhën e krahasimit. Sa kohë një periudhë është ende në vazhdim, periudha e krahasimit pritet në të njëjtin çast.",
           "Dita × ora: kalo titullin Shitjet në kohë te Dita × ora për një hartë nxehtësie me shtatë ditë dhe 24 orë — sa më e errët një qelizë, aq më shumë ke shitur. Kalo mes të ardhurave nga shitjet dhe porosive; me krahasimin e ndezur, shih cilat orë u rritën dhe cilat u ulën.",
           "Produkte me shitje të ngadalta: kalo titullin e kartës së renditjes te Produkte me shitje të ngadalta për të listuar produktet nga ato me më pak shitje te ato me më shumë, me stokun aktual dhe datën e fundit kur u shit secili. Produktet që nuk janë shitur kurrë shënohen “Nuk është shitur kurrë”. Si parazgjedhje shfaqen vetëm produktet me stok.",
-          "Ndryshimet (që nga v3.4): kalo titullin e kartës së renditjes te Ndryshimet për 3 produktet me rritjen më të madhe të të ardhurave dhe 3 me rënien më të madhe kundrejt periudhës së krahasimit, secilin me të ardhurat e të dy periudhave dhe ndryshimin. Zgjidh fillimisht një periudhë te Krahasimi i shitjeve; me Asnjë, ose te Gjithë kohës, karta të thotë ta bësh. Trokit te karta ose te Shiko të gjitha për listën e plotë Produktet me ndryshim, të ndarë në Në rritje dhe Në rënie.",
+          "Ndryshimet (që nga v3.4): kalo titullin e kartës së renditjes te Ndryshimet për 3 produktet me rritjen më të madhe të të ardhurave nga shitjet dhe 3 me rënien më të madhe kundrejt periudhës së krahasimit, secilin me të ardhurat nga shitjet e të dy periudhave dhe ndryshimin. Zgjidh fillimisht një periudhë te Krahasimi i shitjeve; me Asnjë, ose te Gjithë kohës, karta të thotë ta bësh. Trokit te karta ose te Shiko të gjitha për listën e plotë Produktet me ndryshim, të ndarë në Në rritje dhe Në rënie.",
           "Shkalla e blerjeve të përsëritura: rreshti i fundit i pllakës së klientëve është pjesa e anëtarëve që bënë blerje në periudhë dhe kanë blerë dy ose më shumë herë gjithsej.",
           "Tani: vlerësimi i inventarit (stoku aktual × kostoja aktuale), çdo lëvizje stoku në periudhën e zgjedhur, dhe pikat që klientët i kanë por nuk i kanë përdorur ende, me shumën maksimale që mund të zbritin. Këto janë gjendje aktuale; periudha nuk i ndryshon."
         ]
@@ -1760,7 +1760,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Një leje ka dy vlera: E lejuar ose Kërkon miratim — asgjë nuk është e ndaluar plotësisht. Kur punonjësit hasin një veprim që kërkon miratim, një koleg që ka të drejtë ta bëjë zgjedh emrin e vet dhe shkruan PIN-in për ta lejuar."
+        "text": "Një leje ka dy vlera: E lejuar ose Kërkon miratim — asgjë nuk është e ndaluar plotësisht. Kur punonjësit hasin një veprim që kërkon miratim, një koleg që lejohet ta kryejë atë zgjedh emrin e vet dhe shkruan PIN-in për ta lejuar."
       },
       {
         "type": "list",
@@ -2325,7 +2325,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Zgjidh Statistika te Këtë muaj për të parë të ardhurat nga shitjet e muajit, paratë e arkëtuara, fitimin dhe ndarjen sipas mënyrës së pagesës.",
+          "Te Statistika, zgjidh Këtë muaj për të parë të ardhurat nga shitjet e muajit, paratë e arkëtuara, fitimin dhe ndarjen sipas mënyrës së pagesës.",
           "Blerjet nga furnitorët me afat mujor mblidhen te Të papaguara në Blerje, ku mund të shlyesh menjëherë blerjet e një muaji të tërë.",
           "Shitjet me afat pagese për klientët mblidhen te Porosi → Të arkëtueshme, ku mund të shlyesh menjëherë shitjet e një muaji të tërë."
         ]

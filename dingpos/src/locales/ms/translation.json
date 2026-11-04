@@ -302,7 +302,7 @@
           "desc": "Rekod sewa, gaji dan perbelanjaan lain; lihat untung bersih setiap bulan"
         },
         "payment_fees": {
-          "name": "Kadar caj pemprosesan",
+          "name": "Kadar caj",
           "desc": "Tetapkan kadar caj bagi setiap kaedah pembayaran untuk mendapatkan anggaran caj dan anggaran diterima bersih"
         },
         "comparison": {

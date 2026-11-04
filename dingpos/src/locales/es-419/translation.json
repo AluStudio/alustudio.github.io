@@ -299,11 +299,11 @@
         },
         "profit_loss": {
           "name": "Estado de resultados mensual",
-          "desc": "Registra la renta, la nómina y otros gastos; ve la utilidad neta de cada mes"
+          "desc": "Registra la renta, la nómina y otros gastos; consulta la utilidad neta de cada mes"
         },
         "payment_fees": {
           "name": "Tasas de comisión de pago",
-          "desc": "Define la tasa de comisión de cada método de pago para estimar las comisiones y el neto recibido"
+          "desc": "Define la tasa de comisión de cada método de pago para estimar las comisiones y el neto estimado recibido"
         },
         "comparison": {
           "name": "Comparación de periodos",

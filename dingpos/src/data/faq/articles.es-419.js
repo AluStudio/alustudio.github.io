@@ -1226,7 +1226,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Después hay tres gráficos: la utilidad neta de cada uno de los últimos 12 meses, la proporción de cada gasto fijo y la tendencia de los gastos fijos. En Reportes, la última línea de la tarjeta de utilidad lleva directo a Resultados: si el periodo es exactamente un mes, muestra la utilidad neta de ese mes, como «Utilidad neta de octubre: NT$12,300»; en cualquier otro periodo dice Ver estado de resultados mensual."
+        "text": "Después hay tres gráficos: la utilidad neta de cada uno de los últimos 12 meses, la proporción de cada gasto fijo y la tendencia de los gastos fijos. En Reportes, la última línea de la tarjeta de utilidad lleva directo a Resultados: si el periodo es exactamente un mes, muestra la utilidad neta de ese mes, como «Utilidad neta de octubre: NT$12,300»; en cualquier otro periodo dice Ver resultados mensuales."
       },
       {
         "type": "note",
@@ -1285,7 +1285,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Escribe lo que la tienda realmente asume, sin incluir los impuestos que puedas recuperar. El stock que vas a vender va por Compras, porque se cuenta en el costo del producto cuando se vende; los depósitos en garantía, el capital de préstamos y el dinero que retira el propietario no son gastos. Los cambios se guardan juntos al tocar ✓, y si un cambio llega a un mes ya terminado, primero te avisa la utilidad neta de qué meses va a cambiar."
+        "text": "Escribe lo que la tienda realmente asume, sin incluir los impuestos que puedas recuperar. El stock que vas a vender va por Compras, porque se cuenta en el costo del producto cuando se vende; los depósitos en garantía, el capital del préstamo y el dinero que retira el propietario no son gastos. Los cambios se guardan juntos al tocar ✓, y si un cambio afecta un mes ya terminado, primero te indica qué meses tendrán un cambio en la utilidad neta."
       }
     ],
     "related": [
@@ -1898,7 +1898,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Los tres planes incluyen cobro completo, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (con los reportes avanzados y el estado de resultados mensual incluidos desde la v3.4) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
+        "text": "Los tres planes incluyen todas las funciones de cobro, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (con reportes avanzados y resultados mensuales incluidos desde la v3.4) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
       },
       {
         "type": "list",
@@ -2111,7 +2111,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Los regalos y complementos nunca modifican el carrito por sí solos. Cuando se cumplen las condiciones, aparece un aviso de sugerencia en la pantalla de caja y el carrito cambia solo cuando el cajero toca Elegir regalo o Elegir complemento. Es a propósito: los regalos implican stock físico, y alguien debe confirmar que hay existencias y que el cliente lo quiere."
+        "text": "Los regalos y complementos nunca modifican el carrito por sí solos. Cuando se cumplen las condiciones, aparece un aviso de sugerencia en la pantalla Caja y el carrito cambia solo cuando el cajero toca Elegir regalo o Elegir complemento. Es a propósito: los regalos implican stock físico, y alguien debe confirmar que hay existencias y que el cliente lo quiere."
       },
       {
         "type": "list",
