@@ -640,6 +640,21 @@ test("sotto apply: rejects placeholder changes, any empty string, misshapen guid
   assert.match(text, /guide:people-you-meet: content\.1\.rows\.1: has 1 entries, en has 2/);
 });
 
+test("sotto apply: rejects a guide summary longer than a meta description, counted in characters", async () => {
+  const { paths, appRepo } = sottoFixture();
+  newLanguage(paths, "ja");
+  await sync(paths, "ja", { appRepo });
+  const ring = SOTTO_JA["guide:find-ring-size"];
+  const people = SOTTO_JA["guide:people-you-meet"];
+  const long = {
+    "guide:find-ring-size": { ...ring, summary: "指".repeat(161) },
+    "guide:people-you-meet": { ...people, summary: "人".repeat(160) },
+  };
+  for (const segment of ["guide-find-ring-size", "guide-people-you-meet"]) writeOut(paths, segment, (u) => long[u.id]);
+  const { rejected } = await apply(paths, "ja", { dryRun: true });
+  assert.deepEqual(rejected, ["guide:find-ring-size: summary is 161 characters; the limit is 160"]);
+});
+
 test("sotto: an en guide change makes it stale; a ring-size change reaches the language through apply, without re-translation", async () => {
   let { paths, appRepo } = sottoFixture();
   await translateAll(paths, appRepo, SOTTO_JA);
