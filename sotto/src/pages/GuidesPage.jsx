@@ -16,7 +16,7 @@ export function GuideList({ headingLevel = "h2" }) {
       {guides.map((guide) => (
         <li key={guide.slug} className="guide-card">
           <Heading className="guide-card__title">
-            <Link to={`/guides/${guide.slug}`}>{guide.title}</Link>
+            <Link to={`/guides/${guide.slug}/`}>{guide.title}</Link>
           </Heading>
           <p className="guide-card__summary">{guide.summary}</p>
         </li>

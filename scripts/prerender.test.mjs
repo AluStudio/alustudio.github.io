@@ -195,7 +195,16 @@ test("auditRoutes flags dingpos links that miss their sitemap route", () => {
   ]);
 });
 
+test("auditRoutes flags sotto links that miss their sitemap route", () => {
+  const pages = new Map([["/sotto/ja/", linkPage(`<a href="/sotto/ja/faq">a</a><a href="/sotto/ja/guides/">b</a><a href="/sotto/ja">c</a>`)]]);
+  const sitemap = new Set(["/sotto/ja/", "/sotto/ja/faq/", "/sotto/ja/guides/"]);
+  assert.deepEqual(auditRoutes(pages, sitemap), [
+    "/sotto/ja/: links to /sotto/ja/faq, which is not a sitemap route",
+    "/sotto/ja/: links to /sotto/ja, which is not a sitemap route",
+  ]);
+});
+
 test("auditRoutes leaves links of apps outside DIRECT_LINK_PREFIXES alone", () => {
-  const pages = new Map([["/sotto/", linkPage(`<a href="/sotto/faq">faq</a>`)]]);
+  const pages = new Map([["/pikgeon/", linkPage(`<a href="/pikgeon/faq">faq</a>`)]]);
   assert.deepEqual(auditRoutes(pages), []);
 });
