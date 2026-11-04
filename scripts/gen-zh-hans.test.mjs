@@ -28,7 +28,7 @@ test("convertText: corner brackets become mainland quotation marks", () => {
 });
 
 test("convertText: rows and columns swap only inside the listed entries", () => {
-  assert.equal(convertText("有問題的列", APPS.dingpos, "faq:import-csv:content.1.items.2"), "有问题的行");
+  assert.equal(convertText("有問題的列", APPS.dingpos, "faq:open-price-products:content.1.items.1"), "有问题的行");
   assert.equal(convertText("有問題的列", APPS.dingpos, "faq:refund:content.0.text"), "有问题的列");
 });
 

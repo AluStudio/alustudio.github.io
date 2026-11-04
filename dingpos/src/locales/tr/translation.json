@@ -273,10 +273,6 @@
           "name": "Ürün yönetimi",
           "desc": "Varyantlar, barkodlar, fotoğraflar, kategoriler, serbest fiyatlı ürünler"
         },
-        "import": {
-          "name": "Veri içe aktarma",
-          "desc": "Ürünleri ve geçmiş satışları CSV ile başka sistemlerden içe aktarın"
-        },
         "inventory": {
           "name": "Stok takibi",
           "desc": "Stok satışta düşer; elle yapılan düzeltmeler hareket kaydı bırakır"
@@ -301,9 +297,13 @@
           "name": "İşletme panosu",
           "desc": "Satış geliri, kâr, indirimler, ödeme dağılımı ve en çok satanlar"
         },
+        "profit_loss": {
+          "name": "Aylık kâr/zarar",
+          "desc": "Kira, maaş ve diğer giderleri kaydedin; her ayın net kârını görün"
+        },
         "payment_fees": {
-          "name": "İşlem ücreti tahminleri",
-          "desc": "Her ödeme yönteminin ücret oranını belirleyin; ücretleri ve yönteme göre net alınan tutarı görün"
+          "name": "İşlem ücreti oranları",
+          "desc": "Her ödeme yönteminin ücret oranını belirleyin; ücretleri ve net alınan tutarı tahmin edin"
         },
         "comparison": {
           "name": "Dönem karşılaştırması",

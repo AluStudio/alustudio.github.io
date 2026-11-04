@@ -273,10 +273,6 @@
           "name": "Termékkezelés",
           "desc": "Változatok, vonalkódok, fotók, kategóriák, szabadáras termékek"
         },
-        "import": {
-          "name": "Adatimportálás",
-          "desc": "Termékek és korábbi eladások importálása más rendszerekből CSV-n keresztül"
-        },
         "inventory": {
           "name": "Készletkövetés",
           "desc": "Eladáskor csökken a készlet; a kézi módosításokról mozgásnapló készül"
@@ -301,9 +297,13 @@
           "name": "Üzleti irányítópult",
           "desc": "Árbevétel, nyereség, engedmények, fizetési módok megoszlása és sikertermékek"
         },
+        "profit_loss": {
+          "name": "Havi eredmény",
+          "desc": "Rögzítse a bérleti díjat, a béreket és más kiadásokat; lássa az egyes hónapok nettó eredményét"
+        },
         "payment_fees": {
-          "name": "Kezelési költség becslése",
-          "desc": "Állítsa be az egyes fizetési módok díjkulcsát; módonként látható a kezelési költség és a becsült nettó beérkezés"
+          "name": "Kezelési költség díjkulcsai",
+          "desc": "Állítsa be az egyes fizetési módok díjkulcsát, hogy megbecsülhesse a kezelési költséget és a nettó beérkezést"
         },
         "comparison": {
           "name": "Időszak-összehasonlítás",

@@ -427,7 +427,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Gebyrer er estimater ud fra den sats, du skriver. Din udbyders afregning viser det faktiske beløb. For at redigere gebyrsatser og se gebyrer under Statistik skal du have abonnementsniveauet Standard eller højere. På Lite er felterne låst, men betalinger registrerer stadig deres gebyrer, så de dukker op, når du opgraderer."
+        "text": "Gebyrer er estimater ud fra den sats, du skriver. Din udbyders afregning viser det faktiske beløb. For at redigere gebyrsatser skal du have abonnementsniveauet Standard eller højere, og på Lite er felterne låst. Siden v3.4 kan alle abonnementsniveauer se de registrerede gebyrer under Statistik og i Resultat, så en sats, der er angivet i prøveperioden, fortsætter med at estimere på Lite. Tidligere versioner viste kun gebyrer fra Standard og opefter."
       }
     ],
     "related": [
@@ -560,6 +560,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Hvordan tilføjer eller skifter jeg kunden på et salg?",
+    "keywords": [
+      "kunde",
+      "medlem",
+      "tilknyt kunde",
+      "skift kunde",
+      "ny kunde",
+      "betaling"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Tilknyt kunden i kurven eller på betalingsskærmen: rækken Kunde under beløbet åbner kundelisten, hvis ingen er tilknyttet, og tilbyder Skift kunde eller Fjern kunde, hvis nogen er. Den kunde, du vælger ved betaling, er kurvens kunde og bliver på kurven, hvis du annullerer betalingen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Når du skifter kunde, genberegnes niveaurabatter, fødselsdagstilbud og indløsning af point med det samme. Kontanter eller et depositum, du allerede har indtastet, bevares og kontrolleres mod det nye totalbeløb.",
+          "Kan du ikke finde kunden? Tryk på Ny kunde øverst til højre i kundelisten – eller midt på skærmen, hvis intet matcher din søgning. Det, du søgte efter, udfylder formularen (cifre går til telefonnummeret, alt andet til navnet), og den nye kunde tilknyttes salget.",
+          "Hvis du trykker på På konto, uden at der er tilknyttet en kunde, åbnes kundelisten, og På konto vælges, så snart du har valgt en kunde.",
+          "Hvis den nye kunde får en manuel rabat til at overskride den aktive medarbejders rabatloft, skal en leder godkende først. Annullerer du godkendelsen, forbliver kunden uændret."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Kunder er en del af abonnementsniveauet Standard. På Lite står der „Kunder — Standard-abonnement“ i rækken, og den åbner oplysninger om opgradering. Rækken Kunde på betalingsskærmen kom med v3.4; tidligere versioner tilknytter kun kunden i kurven."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Jeg har lavet en fejl ved betalingen – hvordan makulerer jeg en ordre?",
@@ -687,7 +725,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Vælg kunden ved betaling, og vælg På konto som betalingsmetode. Et tilgodehavende skal have en skyldner, så På konto er ikke tilgængelig uden en kunde."
+        "text": "Ja. Vælg På konto som betalingsmetode, så registreres salget som et tilgodehavende hos kunden. Et tilgodehavende skal have en skyldner, så uden en tilknyttet kunde åbner et tryk på På konto først kundelisten (siden v3.4; tidligere versioner beder dig tilknytte en kunde i kurven)."
       },
       {
         "type": "p",
@@ -708,7 +746,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -727,7 +765,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Detaljesiderne for ordrer, kunder og indkøbsordrer har hver et notatkort – tryk på det for at redigere, op til 500 tegn. Du kan også skrive et notat i formularen, når du opretter en kunde eller en indkøbsordre."
+        "text": "Ja. Detaljesiderne for ordrer, kunder og indkøbsordrer har hver notater – tryk på notatkortet for at redigere, op til 500 tegn, eller på den enkelte linje „Tilføj et notat“, så længe der endnu ikke er nogen. Du kan også skrive et notat i formularen, når du opretter en kunde eller en indkøbsordre."
       },
       {
         "type": "p",
@@ -1042,6 +1080,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Siden v3.4 kan du trykke og holde på grafen Omsætningsudvikling eller Udvikling i dækningsbidrag for at aflæse den periode for periode: Et kort viser datoen og periodens omsætning eller dækningsbidrag, og på Omsætningsudvikling med Salgssammenligning slået til også sammenligningsperiodens omsætning og forskellen. Træk til venstre eller højre for at flytte dig; stryger du op eller ned på grafen, ruller siden som sædvanligt."
+      },
+      {
+        "type": "p",
         "text": "Kortet Produktrangliste viser de 5 bedst sælgende produkter. Tryk på kortet eller Se alle for at vise alle produkter solgt i perioden, rangeret efter antal efter returer."
       },
       {
@@ -1071,6 +1113,7 @@ export const articles = [
       "heatmap",
       "travle timer",
       "langsomt sælgende varer",
+      "udsving",
       "lagerværdi",
       "genkøbsrate",
       "point"
@@ -1086,13 +1129,14 @@ export const articles = [
           "Salgssammenligning: til højre i periodelinjen kan du sammenligne med samme periode sidste år eller med den foregående periode (en enkelt dag mod samme dag i sidste uge, denne uge mod sidste uge, denne måned mod sidste måned, i år mod sidste år, en brugerdefineret periode mod lige så mange dage umiddelbart før). Feltet Modtagne betalinger viser forskellen og vækstraten, og omsætningsgrafen får en lysere linje for sammenligningsperioden. Mens en periode stadig løber, afkortes sammenligningsperioden på samme tidspunkt.",
           "Ugedag × time: skift overskriften Salg over tid til Ugedag × time for et heatmap over syv dage og 24 timer – jo mørkere en celle, jo mere har du solgt. Skift mellem omsætning og ordrer; med en sammenligning slået til kan du se, hvilke timer der voksede, og hvilke der faldt.",
           "Langsomt sælgende varer: skift rangeringskortets overskrift til Langsomt sælgende varer for at vise produkter fra færrest til flest salg, med nuværende lager og datoen for hvert produkts seneste salg. Produkter, der aldrig er solgt, er markeret Aldrig solgt. Som standard vises kun produkter på lager.",
+          "Udsving (siden v3.4): skift rangeringskortets overskrift til Udsving for de 3 produkter, hvis omsætning steg mest, og de 3, der faldt mest, i forhold til sammenligningsperioden – hver med begge perioders omsætning og forskellen. Vælg først en periode under Salgssammenligning; med Ingen eller på Samlet fortæller kortet dig det. Tryk på kortet eller Se alle for hele listen Produktudsving, delt i Stigende og Faldende.",
           "Genkøbsrate: sidste linje i kundefeltet er andelen af medlemmer, der har købt i perioden og i alt har købt to eller flere gange.",
           "Lige nu: lagerværdi (nuværende lager × nuværende kostpris), alle lagerbevægelser i den valgte periode og de point, kunderne har, men ikke har indløst, med det højeste beløb de kan trække fra. Det er aktuelle saldi; perioden ændrer dem ikke."
         ]
       },
       {
         "type": "p",
-        "text": "Siden v3.4 er alle fem åbne på alle abonnementsniveauer, og de forbliver åbne, efter at prøveperioden er slut. Tidligere versioner viste dem kun på Pro med en lille lås på de andre niveauer; hvis du stadig ser låsene, så opdatér DingPOS fra App Store."
+        "text": "Siden v3.4 er alle åbne på alle abonnementsniveauer, og de forbliver åbne, efter at prøveperioden er slut. Tidligere versioner viste dem kun på Pro med en lille lås på de andre niveauer; hvis du stadig ser låsene, så opdatér DingPOS fra App Store."
       },
       {
         "type": "p",
@@ -1146,6 +1190,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hvordan ser jeg, hvor meget jeg faktisk tjener hver måned?",
+    "keywords": [
+      "resultatopgørelse",
+      "resultat",
+      "nettoresultat",
+      "månedligt resultat",
+      "udgifter",
+      "driftsresultat",
+      "P&L"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Åbn Resultat under Statistik i sidepanelet. Den viser hver måned fra den nyeste til den ældste med dens nettoresultat: Den aktuelle måned er markeret I gang, og hvert års overskrift lægger nettoresultatet for årets afsluttede måneder sammen."
+      },
+      {
+        "type": "p",
+        "text": "Tryk på en måned for at se, hvordan dens nettoresultat beregnes:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Omsætning (ekskl. moms): omsætning efter alle rabatter minus moms, talt på den dag, varerne blev overdraget.",
+          "Produkternes kostpris: kostprisen for det, der er solgt, ud fra kostpriserne på dine produkter.",
+          "Transaktionsgebyrer (est.): de gebyrer, der estimeres ud fra satserne på dine betalingsmåder.",
+          "Fortabte depositummer: depositummer, du beholdt, da en forudbestilling blev annulleret.",
+          "Faste udgifter og Engangsudgifter: det, du har registreret for måneden – se „Hvordan registrerer jeg husleje, løn og andre udgifter?“"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Derefter følger tre grafer: nettoresultatet for hver af de seneste 12 måneder, hver fast udgifts andel og udviklingen i de faste udgifter. I Statistik springer den sidste linje på kortet Dækningsbidrag direkte til Resultat: For en periode, der er præcis én måned, viser den månedens nettoresultat, f.eks. „oktober nettoresultat 12.300 kr.“; for alle andre perioder står der Se månedligt resultat."
+      },
+      {
+        "type": "note",
+        "text": "Nettoresultat er driftsresultat før indkomstskat, beregnet ud fra det, DingPOS har registreret – ikke en selvangivelse. Hvis produkter er solgt uden kostpris, viser måneden stadig et nettoresultat, markeret „Udelader kostprisen for N produkter“; tryk på det for at se hvilke. Resultat er med på alle abonnementsniveauer. Med medarbejderkonti kræver det tilladelsen Resultat og udgifter at åbne den, og ledere og medarbejdere skal som standard have en godkendelse, fordi den viser produkters kostpriser og løn."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hvordan registrerer jeg husleje, løn og andre udgifter?",
+    "keywords": [
+      "udgifter",
+      "husleje",
+      "løn",
+      "el, vand og varme",
+      "faste udgifter",
+      "driftsomkostninger",
+      "fordele udgift",
+      "engangsudgift"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Tryk på Tilføj udgift i Resultat, og vælg en fast udgift eller en engangsudgift. En udgift tælles i den måned, den hører til, ikke i den måned, du betalte den, og nettoresultatet for hver måned følger med."
+      },
+      {
+        "type": "p",
+        "text": "En fast udgift er en, du betaler hver måned, f.eks. husleje, el, vand og varme eller løn:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Angiv navn, det månedlige beløb og den måned, den starter. Vælg en tidligere måned for at efterregistrere.",
+          "Når beløbet ændres, tryk på Ændr beløb, vælg måneden, og vælg Fra denne måned (f.eks. en huslejestigning) eller Kun denne måned (f.eks. månedens elregning). Hver ændring står på listen, og du kan åbne en for at redigere eller fjerne den.",
+          "Når du holder op med at betale den, så angiv Sidste måned medregnet: Den måned og månederne før den tæller stadig med."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "En engangsudgift betales én gang:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Til en indretning, udstyr eller en forudbetalt forsikring slår du Fordel over flere måneder til og vælger 2 til 120 måneder og Første måned medregnet. Formularen viser på forhånd, hvor meget der tælles hver måned, og hvilke måneder den dækker.",
+          "Uden fordeling kan du stadig vælge Måned medregnet: En regning for oktober, der kommer i november, kan tælles i oktober, og den rigtige dato bevares.",
+          "Hvis en fordeling slutter tidligt (f.eks. en opsagt forsikring), så brug Afslut fordeling tidligt: Det resterende tælles i den måned, du vælger."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Angiv det, butikken faktisk bærer, og udelad moms, du kan få fradrag for. Varer, du skal sælge, går i stedet gennem Indkøb, fordi de indgår i kostprisen, når de sælges; betalte depositummer, lånets hovedstol og penge, ejeren tager ud, er ikke udgifter. Ændringer gemmes samlet, når du trykker på ✓, og en ændring, der rammer en afsluttet måned, fortæller dig først, hvilke måneders nettoresultat der ændres."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1241,11 +1388,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Vælg medlemmet ved betaling, så optjenes point automatisk. For at indløse point skal du angive, hvor mange der skal bruges. Når du makulerer en ordre, trækkes de point, den gav, tilbage, og indløste point gives tilbage."
+        "text": "Tilknyt medlemmet til salget i kurven eller på betalingsskærmen, så optjenes point automatisk. For at indløse point skal du angive, hvor mange der skal bruges. Når du makulerer en ordre, trækkes de point, den gav, tilbage, og indløste point gives tilbage."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1468,55 +1616,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Kan jeg importere produkter og salg fra et andet kassesystem eller et regneark?",
-    "keywords": [
-      "import",
-      "csv",
-      "excel",
-      "regneark",
-      "flytte data",
-      "skifte kassesystem",
-      "masseimport",
-      "salgshistorik"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Ja. Gå til Indstillinger → Dataimport, vælg om du vil importere produkter eller salg, og vælg en CSV-fil (både Excel og Google Sheets kan gemme som CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Filen åbnes som en tabel. Almindelige kolonnenavne på engelsk og kinesisk (traditionelt eller forenklet) genkendes automatisk; tryk på en kolonneoverskrift for at ændre dens tilknytning.",
-          "Tryk på en celle for at rette værdien direkte – du behøver ikke redigere filen og starte forfra.",
-          "Tryk på Bekræft for at validere. Rækker med problemer markeres med rødt og en begrundelse; ved import af salg kan du springe ordrer med fejl over.",
-          "Afklar alt, der kræver en beslutning (dublerede produktnavne, en række der passer til flere kunder), gennemgå oversigten, og tryk derefter på Start importen."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Importerede salg placeres efter ordredato og genberegnes med din butiks valuta og momstilstand. De påvirker ikke lageret og giver ikke velkomstpoint.",
-          "Kunder matches med eksisterende kunder via telefonnummer eller e-mail; alle uden match oprettes.",
-          "Importerede ordrer viser en importdato (Importeret) og det oprindelige ordrenummer og kan ikke makuleres eller returneres.",
-          "Rækker med fejl kan eksporteres som en CSV med begrundelserne – ret dem, og importér igen. Dublerede rækker springes automatisk over."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Dataimport er i beta. Hver fil kan indeholde op til 50.000 rækker eller 20 MB. Tag en cloud-backup, før du importerer; hvis noget ikke kan importeres, eller resultatet ser forkert ud, så fortæl os det via Rapportér et problem på importskærmen."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1665,13 +1764,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Handlinger (manuel lagerregulering, manuel pointjustering, produktstyring, ekspedition med rabat over rabatloftet): én godkendelse dækker den ene handling.",
-          "Visninger (kostpris og fortjeneste, Overblik, Indstillinger, backup og gendannelse): en godkendelse låser op, indtil den aktive medarbejder skifter, eller appen går i baggrunden.",
+          "Visninger (kostpris og fortjeneste, Overblik, Resultat og udgifter, Indstillinger, backup og gendannelse): en godkendelse låser op, indtil den aktive medarbejder skifter, eller appen går i baggrunden.",
           "Rabatloftet gælder manuelle rabatter og kontrolleres én gang ved betaling. Automatiske kampagner og indløsning af point tæller ikke med."
         ]
       },
       {
         "type": "p",
-        "text": "Standardindstillinger: Ledere har lov til alt undtagen backup og gendannelse, uden rabatloft. Medarbejdere kræver godkendelse til alt, med et loft på 10 %. Ejeren har altid lov til alt, og ejerens tilladelser kan ikke ændres. Hvis du vil ændre det, går du til Personale → Rolletilladelser, trykker på Rediger og gemmer én gang – ændringen gælder straks for alle."
+        "text": "Standardindstillinger: Ledere har lov til alt undtagen backup og gendannelse samt Resultat og udgifter, uden rabatloft. Medarbejdere kræver godkendelse til alt, med et loft på 10 %. Ejeren har altid lov til alt, og ejerens tilladelser kan ikke ændres. Hvis du vil ændre det, går du til Personale → Rolletilladelser, trykker på Rediger og gemmer én gang – ændringen gælder straks for alle."
       },
       {
         "type": "note",
@@ -1803,13 +1902,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre abonnementsniveauer omfatter alle funktioner under Betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter (inklusive avancerede rapporter siden v3.4) og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
+        "text": "Alle tre abonnementsniveauer omfatter alle funktioner under Betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter (inklusive avancerede rapporter og det månedlige resultat siden v3.4) og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: til dig, der driver en markedsstand alene og har brug for betaling og produkter.",
-          "Standard: tilføjer kampagner, loyalitetspoint og medlemsniveauer, lagerstyring, indkøb, salg på konto, forudbestillinger og estimater af transaktionsgebyrer.",
+          "Standard: tilføjer kampagner, loyalitetspoint og medlemsniveauer, lagerstyring, indkøb, salg på konto, forudbestillinger og gebyrsatser for betalinger.",
           "Pro: tilføjer medarbejderkonti og tilladelser, lederens godkendelse, aktivitetslog og gendannelsesposter – til butikker med medarbejdere."
         ]
       },
@@ -2022,13 +2121,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Gaver og tilkøb ændrer aldrig kurven af sig selv. Når betingelserne er opfyldt, vises et forslagsbanner på kassesiden, og kurven ændres først, når kassemedarbejderen accepterer forslaget (Vælg gave eller Vælg tilkøb) — det er bevidst, fordi gaver involverer fysisk lager: Nogen skal bekræfte, at varen er på lager, og at kunden vil have den."
+        "text": "Gaver og tilkøb ændrer aldrig kurven af sig selv. Når betingelserne er opfyldt, vises et forslagsbanner på kassesiden, og kurven ændres først, når kassemedarbejderen trykker på Vælg gave eller Vælg tilkøb — det er bevidst, fordi gaver involverer fysisk lager: Nogen skal bekræfte, at varen er på lager, og at kunden vil have den."
       },
       {
         "type": "list",
         "items": [
           "Når du har trykket på Afslå, vises det samme forslag ikke igen for denne kurv; en ny eller tømt kurv udløser forslaget igen.",
-          "Hvis et nyt forslag dukker op før bekræftelsen ved betaling, skal det accepteres eller afslås, før ordren kan gennemføres.",
+          "Siden v3.4 stopper afventende tilbud ikke betalingen: En gul linje under betalingsknappen, f.eks. „1 afventende tilbud gælder ikke“, fortæller, hvor mange der er udeladt (tryk på den for at se hvilke), og ordren gennemføres uden dem. Hvis du vil have, at betalingen venter som før, så slå Håndtér tilbud før betaling til under Indstillinger → Enhedsvalg; den gælder kun for denne iPad.",
           "Gave- og tilkøbslinjer kan ikke få yderligere rabat fra andre rabatkampagner og tæller ikke med i andre kampagners minimumsgrænser."
         ]
       },
@@ -2220,7 +2319,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Der er endnu ingen dedikeret månedlig afregningsrapport, men alt, du skal bruge til afstemningen, findes allerede i appen:"
+        "text": "Siden v3.4 viser Resultat hver måneds nettoresultat efter produkternes kostpris, gebyrer og udgifter – se „Hvordan ser jeg, hvor meget jeg faktisk tjener hver måned?“ Der er endnu ingen afregningsrapport, du kan eksportere eller printe, men alt, du skal bruge til afstemningen, findes allerede i appen:"
       },
       {
         "type": "list",
@@ -2236,7 +2335,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

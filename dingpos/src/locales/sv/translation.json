@@ -273,10 +273,6 @@
           "name": "Produkthantering",
           "desc": "Varianter, streckkoder, foton, kategorier, produkter med fritt pris"
         },
-        "import": {
-          "name": "Dataimport",
-          "desc": "Importera produkter och tidigare försäljning från andra system via CSV"
-        },
         "inventory": {
           "name": "Lagerhållning",
           "desc": "Lagret dras av vid försäljning; manuella justeringar sparas i en rörelselogg"
@@ -301,9 +297,13 @@
           "name": "Översikt över verksamheten",
           "desc": "Intäkt, vinst, rabatter, betalsätt och bästsäljare"
         },
+        "profit_loss": {
+          "name": "Resultaträkning per månad",
+          "desc": "Registrera hyra, löner och andra kostnader och se nettovinsten för varje månad"
+        },
         "payment_fees": {
-          "name": "Beräknade betalningsavgifter",
-          "desc": "Ange avgiftssats för varje betalningssätt och se avgifter och beräknat netto per betalningssätt"
+          "name": "Avgiftssatser för betalningar",
+          "desc": "Ange avgiftssats för varje betalningssätt och beräkna avgifter och beräknat netto"
         },
         "comparison": {
           "name": "Periodjämförelse",

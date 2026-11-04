@@ -435,7 +435,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Maksukulut ovat arvioita antamastasi määrästä; todellinen summa on maksupalvelusi tiliotteella. Maksukulujen määrän muokkaaminen ja maksukulujen näkeminen Tilastoissa vaatii Standard-paketin tai sitä ylemmän. Lite-paketissa kentät on lukittu, mutta maksuihin kirjataan silti maksukulut, joten ne tulevat näkyviin, kun päivität."
+        "text": "Maksukulut ovat arvioita antamastasi määrästä; todellinen summa on maksupalvelusi tiliotteella. Maksukulujen määrän muokkaaminen vaatii Standard-paketin tai sitä ylemmän, ja Lite-paketissa kentät on lukittu. Versiosta 3.4 alkaen jokainen paketti näkee kirjatut maksukulut Tilastot- ja Tulos-välilehdellä, joten kokeilun aikana asetettu määrä arvioi maksukuluja edelleen myös Lite-paketissa. Aiemmat versiot näyttivät maksukulut vain Standard-paketissa ja sitä ylemmissä."
       }
     ],
     "related": [
@@ -570,6 +570,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Miten lisään tai vaihdan myyntiin liitetyn asiakkaan?",
+    "keywords": [
+      "asiakas",
+      "jäsen",
+      "liitä asiakas",
+      "vaihda asiakasta",
+      "uusi asiakas",
+      "kassa"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Liitä asiakas ostoskorissa tai kassanäkymässä: summan alla oleva Asiakas-rivi avaa asiakasluettelon, kun ketään ei ole liitetty, ja tarjoaa vaihtoehdot Vaihda asiakasta ja Poista asiakas, kun joku on liitetty. Kassalla valittu asiakas on ostoskorin asiakas ja pysyy ostoskorissa, vaikka peruutat maksamisen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Asiakkaan vaihtaminen laskee tasoalennukset, syntymäpäivätarjoukset ja pisteiden lunastuksen heti uudelleen. Jo syöttämäsi käteissumma tai etumaksu säilyy, ja se tarkistetaan uutta loppusummaa vasten.",
+          "Etkö löydä häntä? Napauta Uusi asiakas asiakasluettelon oikeasta yläkulmasta tai keskeltä, kun haullasi ei löydy ketään. Hakusanasi täyttyy lomakkeeseen – numerot menevät puhelinnumeroksi, kaikki muu nimeksi – ja uusi asiakas liitetään myyntiin.",
+          "Kun napautat Laskulle ilman liitettyä asiakasta, asiakasluettelo avautuu, ja Laskulle valitaan heti, kun olet valinnut jonkun.",
+          "Jos uusi asiakas nostaa käsin annetun alennuksen vuorossa olevan työntekijän alennusrajan yli, esihenkilön on ensin hyväksyttävä se; jos peruutat hyväksynnän, asiakas pysyy ennallaan."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Asiakkaat kuuluvat Standard-pakettiin; Lite-paketissa rivillä lukee ”Asiakkaat – Standard-paketti” ja se avaa tiedot päivityksestä. Kassan Asiakas-rivi tuli versiossa 3.4; aiemmissa versioissa asiakas liitetään vain ostoskorissa."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Tein kassalla virheen – miten mitätöin tilauksen?",
@@ -697,7 +735,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kyllä. Valitse kassalla asiakas ja valitse maksutavaksi Laskulle. Velalla pitää olla haltija, joten Laskulle ei ole käytettävissä ilman asiakasta."
+        "text": "Kyllä. Valitse maksutavaksi Laskulle, niin myynti kirjataan asiakkaan velaksi. Velalla pitää olla haltija, joten jos asiakasta ei ole liitetty, Laskulle-painikkeen napautus avaa ensin asiakasluettelon (versiosta 3.4 alkaen; aiemmissa versioissa asiakas pitää liittää ostoskorissa)."
       },
       {
         "type": "p",
@@ -718,7 +756,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -737,7 +775,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kyllä. Tilauksen, asiakkaan ja ostotilauksen tietosivuilla on kullakin muistiinpanokortti – muokkaa napauttamalla, enintään 500 merkkiä. Muistiinpanon voi kirjoittaa myös lomakkeeseen, kun luot asiakkaan tai ostotilauksen."
+        "text": "Kyllä. Tilauksen, asiakkaan ja ostotilauksen tietosivuilla on kullakin muistiinpanokortti – muokkaa napauttamalla korttia (enintään 500 merkkiä) tai, kun muistiinpanoja ei vielä ole, yksittäistä riviä ”Lisää muistiinpano”. Muistiinpanon voi kirjoittaa myös lomakkeeseen, kun luot asiakkaan tai ostotilauksen."
       },
       {
         "type": "p",
@@ -1049,6 +1087,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Versiosta 3.4 alkaen voit lukea Liikevaihdon kehitys- tai Myyntikatteen kehitys -kaaviota jakso kerrallaan painamalla sitä pitkään: kortti näyttää päivämäärän ja kyseisen jakson liikevaihdon tai myyntikatteen, ja kun Liikevaihdon kehitys -kaaviossa Myynnin vertailu on päällä, myös vertailujakson liikevaihdon ja eron. Siirry vetämällä vasemmalle tai oikealle; jos pyyhkäiset kaaviota ylös tai alas, sivu vierii tavalliseen tapaan."
+      },
+      {
+        "type": "p",
         "text": "Tuotteiden paremmuusjärjestys -kortti listaa viisi parasta. Napauta korttia tai Näytä kaikki, niin näet kaikki jaksolla myydyt tuotteet myydyn määrän mukaan järjestettynä palautusten jälkeen."
       },
       {
@@ -1078,6 +1120,7 @@ export const articles = [
       "lämpökartta",
       "ruuhkatunnit",
       "hitaasti liikkuvat tuotteet",
+      "muutostuotteet",
       "varaston arvo",
       "uusintaostoprosentti",
       "pisteet"
@@ -1093,13 +1136,14 @@ export const articles = [
           "Myynnin vertailu: jaksopalkin oikeassa reunassa voit verrata viime vuoden vastaavaan jaksoon tai edelliseen jaksoon (yksittäistä päivää viime viikon samaan päivään, tätä viikkoa viime viikkoon, tätä kuukautta viime kuukauteen, tätä vuotta viime vuoteen ja mukautettua jaksoa yhtä pitkään sitä edeltävään jaksoon). Saapunut maksu -ruutu näyttää eron ja kasvuprosentin, ja liikevaihtokaavioon tulee vaaleampi viiva vertailujaksolle. Jos jakso on vielä käynnissä, vertailujakso katkaistaan samaan hetkeen.",
           "Viikonpäivä × tunti: vaihda Myynti ajan mittaan -otsikon näkymäksi Viikonpäivä × tunti, niin saat seitsemän päivän ja 24 tunnin lämpökartan. Mitä tummempi ruutu, sitä enemmän myit. Voit vaihtaa liikevaihdon ja tilausten välillä, ja vertailun ollessa päällä näet, mitkä tunnit kasvoivat ja mitkä supistuivat.",
           "Hitaasti liikkuvat tuotteet: vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Hitaasti liikkuvat tuotteet, niin tuotteet listataan vähiten myydyistä eniten myytyihin. Listassa näkyvät nykyinen varasto ja kunkin tuotteen viimeinen myyntipäivä. Tuotteet, joita ei ole koskaan myyty, merkitään tekstillä Ei koskaan myyty. Oletuksena näytetään vain varastossa olevat tuotteet.",
+          "Muutokset (versiosta 3.4 alkaen): vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Muutokset, niin näet 3 tuotetta, joiden liikevaihto nousi eniten, ja 3, joiden liikevaihto laski eniten vertailujaksoon verrattuna, kunkin molempien jaksojen liikevaihdon ja eron kanssa. Valitse ensin jakso kohdasta Myynnin vertailu; jos valintana on Ei mitään tai jakso on Koko aika, kortti kehottaa tekemään niin. Napauta korttia tai Näytä kaikki, niin saat koko Tuotteiden muutokset -luettelon, joka on jaettu osioihin Nousussa ja Laskussa.",
           "Uusintaostoprosentti: asiakasruudun viimeinen rivi näyttää niiden jäsenten osuuden, jotka ostivat jaksolla ja ovat ostaneet yhteensä vähintään kaksi kertaa.",
           "Nykytilanne: varaston arvo (nykyinen varasto × nykyinen omakustannus), kaikki valitun jakson varastoliikkeet sekä pisteet, jotka asiakkailla on mutta joita he eivät ole lunastaneet, ja suurin mahdollinen alennus niillä. Nämä ovat tämänhetkisiä saldoja, joihin jakso ei vaikuta."
         ]
       },
       {
         "type": "p",
-        "text": "Versiosta 3.4 alkaen kaikki viisi ovat käytössä jokaisessa paketissa, ja ne pysyvät käytössä myös kokeilun päätyttyä. Aiemmissa versioissa ne näkyivät vain Pro-paketissa, ja muissa paketeissa niissä oli pieni lukko. Jos näet vielä lukot, päivitä DingPOS App Storesta."
+        "text": "Versiosta 3.4 alkaen kaikki ovat käytössä jokaisessa paketissa, ja ne pysyvät käytössä myös kokeilun päätyttyä. Aiemmissa versioissa ne näkyivät vain Pro-paketissa, ja muissa paketeissa niissä oli pieni lukko. Jos näet vielä lukot, päivitä DingPOS App Storesta."
       },
       {
         "type": "p",
@@ -1151,6 +1195,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Miten näen, paljonko tienasin oikeasti kunakin kuukautena?",
+    "keywords": [
+      "tuloslaskelma",
+      "tulos",
+      "P&L",
+      "liikevoitto",
+      "kuukausittainen voitto",
+      "kulut",
+      "liiketulos"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Avaa sivupalkista Tilastot-välilehden alapuolella oleva Tulos. Se listaa jokaisen kuukauden uusimmasta vanhimpaan liikevoittoineen: kuluvalla kuukaudella on merkintä Käynnissä, ja kunkin vuoden otsikko laskee yhteen sen valmiiden kuukausien liikevoiton."
+      },
+      {
+        "type": "p",
+        "text": "Napauta kuukautta nähdäksesi, miten sen liikevoitto muodostuu:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Liikevaihto (ilman veroa): kaikkien alennusten jälkeinen liikevaihto miinus vero, lasketaan sille päivälle, jona tavara luovutettiin.",
+          "Tuotteiden omakustannus: myytyjen tuotteiden kustannus tuotteisiin kirjattujen omakustannusten mukaan.",
+          "Maksukulut (arvio): maksutapojesi määristä arvioidut maksukulut.",
+          "Menetetyt etumaksut: etumaksut, jotka pidit, kun ennakkotilaus peruutettiin.",
+          "Kiinteät kulut ja Kertakulut: kyseiselle kuukaudelle kirjaamasi kulut – katso ”Miten kirjaan vuokran, palkat ja muut kulut?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Sen jälkeen tulee kolme kaaviota: liikevoitto kunakin viimeisistä 12 kuukaudesta, kunkin kiinteän kulun osuus ja kiinteiden kulujen kehitys. Tilastot-välilehdellä myyntikatekortin viimeinen rivi vie suoraan Tulos-välilehdelle: jos jakso on täsmälleen yksi kuukausi, rivillä näkyy kuukauden liikevoitto, esimerkiksi ”Liikevoitto (lokakuu): NT$12,300”; muilla jaksoilla siinä lukee Näytä kuukausittainen tuloslaskelma."
+      },
+      {
+        "type": "note",
+        "text": "Liikevoitto on voitto ennen tuloveroa, laskettuna DingPOSiin kirjatuista tiedoista – se ei ole veroilmoitus. Jos tuotteita on myyty ilman omakustannetta, kuukaudelle näytetään silti liikevoitto, jossa on merkintä ”Ei sisällä omakustannuksia”; napauttamalla näet, mitkä tuotteet se koskee. Tulos on käytössä kaikissa paketeissa. Jos käytössä on työntekijätilit, sen avaaminen vaatii oikeuden Tuloslaskelma ja kulut, johon esihenkilöt ja työntekijät tarvitsevat oletuksena hyväksynnän, koska se näyttää tuotteiden omakustannukset ja palkat."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Miten kirjaan vuokran, palkat ja muut kulut?",
+    "keywords": [
+      "kulut",
+      "vuokra",
+      "palkat",
+      "sähkö ja vesi",
+      "kiinteät kulut",
+      "yleiskulut",
+      "jaksotus",
+      "kertakulu"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Napauta Tulos-välilehdellä Lisää kulu ja valitse kiinteä kulu tai kertakulu. Kulu lasketaan kuukaudelle, jolle se kuuluu, ei maksukuukaudelle, ja jokaisen kuukauden liikevoitto muuttuu sen mukaan."
+      },
+      {
+        "type": "p",
+        "text": "Kiinteä kulu on kulu, jonka maksat joka kuukausi, kuten vuokra, sähkö ja vesi tai palkat:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Syötä nimi, kuukausisumma ja kuukausi, josta alkaen kulu lasketaan. Valitse aiempi kuukausi, jos haluat kirjata kulun taannehtivasti.",
+          "Kun summa muuttuu, napauta Muuta summaa, valitse kuukausi ja valitse Tästä kuukaudesta alkaen (esimerkiksi vuokrankorotus) tai Vain tämä kuukausi (tämän kuukauden sähkölasku). Jokainen muutos näkyy listassa, ja voit avata sen muokataksesi tai poistaaksesi sen.",
+          "Kun lopetat kulun maksamisen, aseta Viimeinen laskettu kuukausi: kyseinen kuukausi ja sitä edeltävät kuukaudet lasketaan edelleen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Kertakulu maksetaan kerran:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sisustuksen, kalusteiden tai ennalta maksetun vakuutuksen kohdalla ota käyttöön Jaa usealle kuukaudelle ja valitse 2–120 kuukautta sekä Ensimmäinen laskettu kuukausi. Lomake näyttää esikatselun siitä, paljonko kullekin kuukaudelle lasketaan ja mitkä kuukaudet kulu kattaa.",
+          "Ilman jakamistakin voit valita kuukauden, jolle kulu lasketaan: lokakuun lasku, joka saapuu marraskuussa, voidaan laskea lokakuulle, ja sen todellinen päivämäärä säilyy.",
+          "Jos jaksotettu kulu päättyy ennenaikaisesti (esimerkiksi vakuutus irtisanotaan), käytä toimintoa Lopeta jako ennenaikaisesti: jäljellä oleva osuus lasketaan valitsemallesi kuukaudelle."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Syötä summa, jonka myymälä todella kantaa, ja jätä pois vero, jonka voit vähentää. Myytävä varasto kirjataan Ostot-osiossa, koska se sisältyy omakustannukseen vasta myytäessä; takaisin saatavat vakuusmaksut, lainan pääoma ja omistajan nostamat rahat eivät ole kuluja. Muutokset tallentuvat yhdessä, kun napautat ✓, ja jos muutos ulottuu valmiiseen kuukauteen, sovellus kertoo ensin, minkä kuukausien liikevoitto muuttuu."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1248,11 +1395,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Valitse jäsen kassalla, niin pisteet kertyvät automaattisesti. Lunastaaksesi pisteitä syötä käytettävien pisteiden määrä. Tilauksen mitätöinti vähentää tilauksesta kertyneet pisteet ja palauttaa lunastetut pisteet."
+        "text": "Liitä jäsen myyntiin ostoskorissa tai kassanäkymässä, niin pisteet kertyvät automaattisesti. Lunastaaksesi pisteitä syötä käytettävien pisteiden määrä. Tilauksen mitätöinti vähentää tilauksesta kertyneet pisteet ja palauttaa lunastetut pisteet."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1475,55 +1623,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Voinko tuoda tuotteet ja myynnit toisesta kassajärjestelmästä tai taulukosta?",
-    "keywords": [
-      "tuonti",
-      "tuo tiedot",
-      "csv",
-      "excel",
-      "taulukko",
-      "vaihda kassajärjestelmää",
-      "massatuonti",
-      "myyntihistoria"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Kyllä. Avaa Asetukset → Tietojen tuonti, valitse tuodaanko tuotteita vai myyntejä ja valitse CSV-tiedosto (Excel ja Google Sheets osaavat molemmat tallentaa CSV-muotoon)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Tiedosto avautuu taulukkona. Yleiset sarakenimet englanniksi ja kiinaksi (perinteinen tai yksinkertaistettu) tunnistetaan automaattisesti; voit muuttaa sarakkeen kohdistusta napauttamalla sen otsikkoa.",
-          "Napauta mitä tahansa solua korjataksesi sen arvon suoraan – tiedostoa ei tarvitse muokata ja aloittaa alusta.",
-          "Napauta Vahvista tarkistaaksesi tiedot. Ongelmalliset rivit merkitään punaisella ja syy näytetään; myyntien tuonnissa voi ohittaa tilaukset, joissa on virheitä.",
-          "Ratkaise kaikki päätöstä vaativat tapaukset (samannimiset tuotteet, rivi joka vastaa useita asiakkaita), tarkista yhteenveto ja napauta Aloita tuonti."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Tuodut myynnit sijoitetaan tilauspäivän mukaan ja lasketaan uudelleen kauppasi valuutalla ja verotilalla. Ne eivät vaikuta varastoon eivätkä anna tervetuliaispisteitä.",
-          "Asiakkaat yhdistetään olemassa oleviin puhelinnumeron tai sähköpostin perusteella; tunnistamattomat luodaan uusiksi.",
-          "Tuoduissa tilauksissa näkyy Tuotu-päivä ja lähdejärjestelmän tilausnumero, eikä niitä voi mitätöidä tai palauttaa.",
-          "Virheelliset rivit voi viedä CSV-tiedostona, johon on merkitty syyt – korjaa ne ja tuo uudelleen. Kaksoisrivit ohitetaan automaattisesti."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Tietojen tuonti on beta-vaiheessa. Yksi tiedosto voi sisältää enintään 50 000 riviä tai 20 Mt. Tee pilvivarmuuskopio ennen tuontia; jos jokin ei tuo onnistu tai tulos näyttää väärältä, kerro meille tuontinäkymän kohdasta Ilmoita ongelmasta."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1668,13 +1767,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Toiminnot (varastosaldon manuaalinen korjaus, pisteiden manuaalinen korjaus, tuotehallinta, maksaminen alennusrajan ylittävällä alennuksella): yksi hyväksyntä kattaa sen yhden toiminnon.",
-          "Näkymät (omakustannus ja kate, Kojelauta, Asetukset, varmuuskopiointi ja palautus): hyväksyntä avaa näkymän, kunnes vuorossa oleva työntekijä vaihtuu tai sovellus siirtyy taustalle.",
+          "Näkymät (omakustannus ja kate, Kojelauta, Tuloslaskelma ja kulut, Asetukset, varmuuskopiointi ja palautus): hyväksyntä avaa näkymän, kunnes vuorossa oleva työntekijä vaihtuu tai sovellus siirtyy taustalle.",
           "Alennusraja koskee käsin annettuja alennuksia ja tarkistetaan kerran kassalla; automaattiset kampanjat ja pisteiden käyttö eivät lasketa siihen."
         ]
       },
       {
         "type": "p",
-        "text": "Tehdasasetukset: Esihenkilöt saavat tehdä kaiken paitsi varmuuskopioinnin ja palautuksen, eikä alennusrajaa ole; työntekijät tarvitsevat hyväksynnän kaikkeen, ja heidän alennusrajansa on 10 %. Omistaja saa aina tehdä kaiken, eikä hänen oikeuksiaan voi muokata. Voit muuttaa asetuksia kohdassa Henkilöstö → Roolien oikeudet: napauta Muokkaa ja tallenna kerran – muutos tulee voimaan heti kaikille."
+        "text": "Tehdasasetukset: Esihenkilöt saavat tehdä kaiken paitsi varmuuskopioinnin ja palautuksen sekä tuloslaskelman ja kulujen katselun, eikä alennusrajaa ole; työntekijät tarvitsevat hyväksynnän kaikkeen, ja heidän alennusrajansa on 10 %. Omistaja saa aina tehdä kaiken, eikä hänen oikeuksiaan voi muokata. Voit muuttaa asetuksia kohdassa Henkilöstö → Roolien oikeudet: napauta Muokkaa ja tallenna kerran – muutos tulee voimaan heti kaikille."
       },
       {
         "type": "note",
@@ -1807,13 +1906,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kaikki kolme pakettia sisältävät täyden kassatoiminnan, tuotteet, tilaukset (mitätöinnit, palautukset ja vaihdot mukaan lukien), raportit (versiosta 3.4 alkaen myös laajennetut raportit) ja pilvivarmuuskopion. Erona ovat kaupan pyörittämiseen tarkoitetut työkalut:"
+        "text": "Kaikki kolme pakettia sisältävät täyden kassatoiminnan, tuotteet, tilaukset (mitätöinnit, palautukset ja vaihdot mukaan lukien), raportit (versiosta 3.4 alkaen myös laajennetut raportit ja kuukausittainen tuloslaskelma) ja pilvivarmuuskopion. Erona ovat kaupan pyörittämiseen tarkoitetut työkalut:"
       },
       {
         "type": "list",
         "items": [
           "Lite: yhden hengen myyntikojulle, joka tarvitsee kassan ja tuotteet.",
-          "Standard: lisää kampanjat, kanta-asiakaspisteet ja -tasot, varastoseurannan, ostotilaukset, laskulle myynnin, ennakkotilaukset ja maksukulujen arviot.",
+          "Standard: lisää kampanjat, kanta-asiakaspisteet ja -tasot, varastoseurannan, ostotilaukset, laskulle myynnin, ennakkotilaukset ja maksukulujen määrät.",
           "Pro: lisää työntekijätilit ja oikeudet, esihenkilön hyväksynnän, toimintolokin ja palautusmerkinnät – kaupoille, joissa on henkilökuntaa."
         ]
       },
@@ -2024,13 +2123,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Lahjat ja maksulliset lisätuotteet eivät koskaan muuta ostoskoria itsestään. Kun ehdot täyttyvät, kassanäkymään ilmestyy ehdotusbanneri, ja ostoskori muuttuu vasta, kun kassanhoitaja napauttaa banneria (Valitse lahja / Valitse lisätuote) – tämä on tarkoituksellista, koska lahjat koskevat fyysistä varastoa: jonkun on varmistettava, että tuotetta on saatavilla ja että asiakas haluaa sen."
+        "text": "Lahjat ja maksulliset lisätuotteet eivät koskaan muuta ostoskoria itsestään. Kun ehdot täyttyvät, kassanäkymään ilmestyy ehdotusbanneri, ja ostoskori muuttuu vasta, kun kassanhoitaja napauttaa kohtaa Valitse lahja tai Valitse lisätuote – tämä on tarkoituksellista, koska lahjat koskevat fyysistä varastoa: jonkun on varmistettava, että tuotetta on saatavilla ja että asiakas haluaa sen."
       },
       {
         "type": "list",
         "items": [
           "Kun olet valinnut Hylkää, sama ehdotus ei tule uudelleen tälle ostoskorille; uusi tai tyhjennetty ostoskori tuo ehdotuksen uudelleen esiin.",
-          "Jos uusi ehdotus ilmestyy ennen kassavahvistusta, se on hyväksyttävä tai hylättävä ennen kuin tilauksen voi lähettää.",
+          "Versiosta 3.4 alkaen ratkaisemattomat tarjoukset eivät estä maksamista: maksupainikkeen alla oleva keltainen rivi, kuten ”1 ratkaisematon tarjous jää käyttämättä”, kertoo, montako tarjousta jää pois (napauta sitä nähdäksesi, mitkä), ja tilaus menee läpi ilman niitä. Jos haluat, että maksaminen odottaa kuten ennen, ota käyttöön Ratkaise tarjoukset ennen maksua kohdassa Asetukset → Laitteen asetukset; se koskee vain tätä iPadia.",
           "Lahja- ja lisätuoterivejä ei voi alentaa muilla rahallisilla kampanjoilla, eivätkä niiden hinnat kerrytä muiden kampanjoiden ostosummarajoja."
         ]
       },
@@ -2223,7 +2322,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Erillistä kuukausittaista täsmäytysraporttia ei vielä ole, mutta kaikki täsmäytykseen tarvittava löytyy jo sovelluksesta:"
+        "text": "Versiosta 3.4 alkaen Tulos-välilehti näyttää kunkin kuukauden liikevoiton tuotteiden omakustannusten, maksukulujen ja kulujen jälkeen – katso ”Miten näen, paljonko tienasin oikeasti kunakin kuukautena?” Vietävää tai tulostettavaa täsmäytysraporttia ei vielä ole, mutta kaikki täsmäytykseen tarvittava löytyy jo sovelluksesta:"
       },
       {
         "type": "list",
@@ -2239,7 +2338,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

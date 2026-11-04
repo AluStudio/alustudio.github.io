@@ -425,7 +425,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A költségek a megadott díjkulcsból számolt becslések; a tényleges összeget a szolgáltató kimutatása mutatja. A díjkulcsok szerkesztéséhez és a költségek Riportokban való megtekintéséhez Standard vagy magasabb csomag szükséges. Lite csomagon a mezők zároltak, de a fizetések a költségeiket ilyenkor is rögzítik, így váltás után megjelennek."
+        "text": "A költségek a megadott díjkulcsból számolt becslések; a tényleges összeget a szolgáltató kimutatása mutatja. A díjkulcsok szerkesztéséhez Standard vagy magasabb csomag szükséges, Lite csomagon a mezők zároltak. A 3.4-es verzió óta minden csomag látja a rögzített költségeket a Riportokban és az Eredmény fülön, így a próbaidőszakban megadott díjkulcs Lite csomagon is tovább becsül; a korábbi verziók a költségeket csak Standard vagy magasabb csomagon mutatták."
       }
     ],
     "related": [
@@ -554,6 +554,44 @@ export const articles = [
     "related": [
       "apply-discounts",
       "guide-priority-stacking"
+    ]
+  },
+  {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Hogyan adhatok hozzá vagy módosíthatom a vevőt egy eladásnál?",
+    "keywords": [
+      "vevő",
+      "tag",
+      "vevő hozzárendelése",
+      "vevő módosítása",
+      "új vevő",
+      "fizetés"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Rendelje hozzá a vevőt az eladáshoz a kosárban vagy a fizetési képernyőn: az összeg alatti Vevő sor vevő nélkül megnyitja a vevőlistát, ha pedig már van hozzárendelt vevő, a Vevő módosítása vagy a Vevő eltávolítása lehetőséget kínálja. A fizetésnél kiválasztott vevő a kosár vevője, és a fizetés megszakítása után is a kosárnál marad."
+      },
+      {
+        "type": "list",
+        "items": [
+          "A vevő módosításakor a szintengedmények, a születésnapi ajánlatok és a pontbeváltás azonnal újraszámolódnak. A már megadott készpénzt vagy előleget a rendszer megtartja, és az új végösszeggel veti össze.",
+          "Nem találja? Koppintson az Új vevő gombra a vevőlista jobb felső sarkában, vagy – ha egyetlen vevő sem felel meg a keresésnek – a lista közepén. A keresett kifejezés kitölti az űrlapot: a számjegyek a telefonszámba, minden más a névbe kerül, és az új vevő hozzárendelődik az eladáshoz.",
+          "Ha vevő nélkül koppint a Számlás eladás lehetőségre, megnyílik a vevőlista, és amint kiválaszt valakit, a Számlás eladás ki van választva.",
+          "Ha az új vevő miatt a kézi engedmény meghaladja a kezelő engedményének felső határát, először egy menedzser jóváhagyja; ha megszakítja a jóváhagyást, a vevő változatlan marad."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "A vevők a Standard csomag részei; Lite csomagon a sor ezt írja: „Vevők — Standard csomag”, és a frissítés részleteit nyitja meg. A fizetési képernyő Vevő sora a 3.4-es verzióban jelent meg; a korábbi verziókban a vevőt csak a kosárban lehet hozzárendelni."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
     ]
   },
   {
@@ -686,7 +724,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Igen. Válassza ki a vevőt fizetéskor, és fizetési módnak válassza a Számlás eladás lehetőséget. A tartozásnak kell, hogy legyen gazdája, ezért vevő nélkül a Számlás eladás nem érhető el."
+        "text": "Igen. Fizetési módnak válassza a Számlás eladás lehetőséget, és az eladás a vevő tartozásaként kerül rögzítésre. A tartozásnak kell, hogy legyen gazdája, ezért ha nincs vevő hozzárendelve, a Számlás eladásra koppintva először a vevőlista nyílik meg (a 3.4-es verzió óta; a korábbi verziókban előbb a kosárban kell vevőt hozzárendelni)."
       },
       {
         "type": "p",
@@ -707,7 +745,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -726,7 +764,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Igen. A rendelések, a vevők és a beszerzési rendelések részletes oldalán is van egy megjegyzéskártya – koppintson rá a szerkesztéshez, legfeljebb 500 karakter hosszan. Vevő vagy beszerzési rendelés létrehozásakor az űrlapon is írhat megjegyzést."
+        "text": "Igen. A rendelések, a vevők és a beszerzési rendelések részletes oldalán is vannak megjegyzések: koppintson a megjegyzéskártyára a szerkesztéshez, legfeljebb 500 karakter hosszan, vagy – amíg még nincs megjegyzés – az egyetlen „Megjegyzés hozzáadása” sorra. Vevő vagy beszerzési rendelés létrehozásakor az űrlapon is írhat megjegyzést."
       },
       {
         "type": "p",
@@ -1042,6 +1080,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "A 3.4-es verzió óta az Árbevétel alakulása vagy a Nyereség alakulása diagramot nyomva tartva időszakról időszakra olvashatja le az adatokat: egy kártya mutatja a dátumot és az adott időszak árbevételét vagy nyereségét, az Árbevétel alakulásánál pedig bekapcsolt Eladások összehasonlítása mellett az összehasonlítási időszak árbevételét és a különbséget is. Húzza balra vagy jobbra a továbblépéshez; ha a diagramon felfelé vagy lefelé söpör, az oldal a szokásos módon görög."
+      },
+      {
+        "type": "p",
         "text": "A Termékrangsor kártya az 5 legjobban teljesítő terméket listázza. Koppintson a kártyára vagy a Mind megtekintése lehetőségre, hogy lássa az időszakban eladott összes terméket, a visszavételek utáni mennyiség szerint rangsorolva."
       },
       {
@@ -1071,6 +1113,7 @@ export const articles = [
       "hőtérkép",
       "forgalmas órák",
       "lassan forgó termékek",
+      "termékek változása",
       "készletérték",
       "visszatérő vásárlók aránya",
       "pontok"
@@ -1086,13 +1129,14 @@ export const articles = [
           "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). A Beérkezett pénz csempéje a különbséget és a növekedési ütemet mutatja, az árbevétel-diagramon pedig halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszak is ugyanaddig tart.",
           "Hétnap × óra: az Eladások időben fejlécet átkapcsolva Hétnap × óra nézetre hétnapos, 24 órás hőtérkép jelenik meg – minél sötétebb egy cella, annál többet adott el. Váltogathat az árbevétel és a rendelések között; bekapcsolt összehasonlításnál látszik, mely órák nőttek, és melyek csökkentek.",
           "Lassan forgó termékek: a rangsorkártya fejlécét átkapcsolva Lassan forgó termékek nézetre a termékek a legkevesebbet eladottól a legtöbbig sorakoznak, a jelenlegi készlettel és az utolsó eladás dátumával. Azok a termékek, amelyekből még nem adtak el, a Még nem adták el jelölést kapják. Alapértelmezés szerint csak a készleten lévő termékek látszanak.",
+          "Változás (a 3.4-es verzió óta): a rangsorkártya fejlécét átkapcsolva Változás nézetre megjelenik az a 3 termék, amelynek árbevétele az összehasonlítási időszakhoz képest a legtöbbet nőtt, és az a 3, amelyé a legtöbbet csökkent, mindkét időszak árbevételével és a különbséggel. Előbb válasszon időszakot az Eladások összehasonlítása alatt; a Nincs beállításnál, illetve a Minden időszak esetén a kártya erre figyelmeztet. Koppintson a kártyára vagy a Mind megtekintése lehetőségre a teljes Termékek változása listáért, amely Növekedés és Csökkenés részre oszlik.",
           "Visszatérő vásárlók aránya: a Vevők csempéjének utolsó sora azoknak a törzsvásárlóknak az aránya, akik az időszakban vásároltak, és összesen legalább kétszer vásároltak.",
           "Aktuális állapot: a készletérték (jelenlegi készlet × jelenlegi költség), az adott időszak összes készletmozgása, valamint a vevők birtokában lévő, még be nem váltott pontok a legnagyobb levonható összeggel. Ezek aktuális egyenlegek; az időszak nem változtat rajtuk."
         ]
       },
       {
         "type": "p",
-        "text": "A 3.4-es verzió óta mind az öt elérhető minden csomagban, és a próbaidőszak lejárta után is megmaradnak. A korábbi verziók ezeket csak a Pro csomagban mutatták, a többi csomagnál egy kis lakattal; ha még lakatokat lát, frissítse a DingPOS-t az App Store-ból."
+        "text": "A 3.4-es verzió óta mindegyik elérhető minden csomagban, és a próbaidőszak lejárta után is megmaradnak. A korábbi verziók ezeket csak a Pro csomagban mutatták, a többi csomagnál egy kis lakattal; ha még lakatokat lát, frissítse a DingPOS-t az App Store-ból."
       },
       {
         "type": "p",
@@ -1145,6 +1189,110 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hogyan látom, mennyit kerestem ténylegesen havonta?",
+    "keywords": [
+      "eredménykimutatás",
+      "nyereség és veszteség",
+      "p&l",
+      "nettó eredmény",
+      "havi nyereség",
+      "kiadások",
+      "működési eredmény",
+      "havi eredmény"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Nyissa meg az Eredmény fület az oldalsávban, a Riportok alatt. Itt minden hónap látható a legújabbtól a legrégebbiig, a nettó eredményével: az aktuális hónap Folyamatban jelölést kap, az egyes évek fejléce pedig összeadja a lezárult hónapok nettó eredményét."
+      },
+      {
+        "type": "p",
+        "text": "Koppintson egy hónapra, és láthatja, hogyan jön ki a nettó eredménye:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Árbevétel (adó nélkül): az összes engedmény utáni árbevétel az adó levonásával, azon a napon számítva, amikor az árut átadták.",
+          "Termékköltség: az eladott áruk költsége, a termékeknél megadott költségek alapján.",
+          "Kezelési költség (becsült): a fizetési módok díjkulcsaiból becsült költségek.",
+          "Elvesztett előlegek: az előrendelés lemondásakor megtartott előlegek.",
+          "Fix kiadások és Egyszeri kiadások: az adott hónapra rögzített tételek – lásd: „Hogyan rögzíthetem a bérleti díjat, a béreket és más kiadásokat?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ezután három diagram következik: az utolsó 12 hónap nettó eredménye, az egyes fix kiadások részaránya és a fix kiadások alakulása. A Riportok képernyőn a nyereségkártya utolsó sora közvetlenül az Eredményre ugrik: pontosan egy hónapnyi időszaknál az adott hónap nettó eredményét mutatja, például „Október nettó eredménye: NT$12,300”, minden más időszaknál pedig a Havi eredmény megtekintése felirat áll."
+      },
+      {
+        "type": "note",
+        "text": "A nettó eredmény a jövedelemadó előtti működési eredmény, a DingPOS-ban rögzített adatokból számolva – nem adóbevallás. Ha vannak költség nélkül eladott termékek, a hónap akkor is mutat nettó eredményt, a „Nem tartalmazza N termék költségét” jelöléssel; koppintson rá, hogy lássa, melyek ezek. Az Eredmény minden csomagban elérhető. Munkatársi fiókok esetén a megnyitásához az Eredmény és kiadások jogosultság kell, amelyhez a Menedzserek és a Munkatársak alapértelmezés szerint jóváhagyást igényelnek, mert termékköltségeket és béreket is mutat."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hogyan rögzíthetem a bérleti díjat, a béreket és más kiadásokat?",
+    "keywords": [
+      "kiadások",
+      "bérleti díj",
+      "bérek",
+      "rezsi",
+      "fix kiadások",
+      "általános költségek",
+      "költségelosztás",
+      "egyszeri kiadás"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Az Eredmény fülön koppintson a Kiadás hozzáadása gombra, és válasszon fix vagy egyszeri kiadást. A kiadás abban a hónapban számít, amelyikhez tartozik, nem abban, amelyikben kifizette, és ehhez igazodik minden hónap nettó eredménye."
+      },
+      {
+        "type": "p",
+        "text": "A fix kiadás olyan, amelyet minden hónapban fizet, például a bérleti díj, a rezsi vagy a bérek:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Adja meg a nevet, a havi összeget és azt a hónapot, amelyben kezdődik. Korábbi hónapot választva visszamenőleg is rögzíthet.",
+          "Ha az összeg megváltozik, koppintson az Összeg módosítása gombra, válassza ki a hónapot, majd az Ettől a hónaptól (például bérleti díj emelésekor) vagy a Csak erre a hónapra (például az adott havi áramszámlánál) lehetőséget. Minden módosítás megjelenik a listában, és megnyitva szerkesztheti vagy eltávolíthatja.",
+          "Ha már nem fizeti, adja meg az Utolsó beszámított hónapot: az a hónap és az előtte lévők továbbra is beszámítanak."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Az egyszeri kiadás egyszer fizetendő:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Üzletberendezésnél, felszerelésnél vagy előre kifizetett biztosításnál kapcsolja be az Elosztás több hónapra beállítást, és válasszon 2–120 hónapot, valamint az első beszámított hónapot. Az űrlap előnézetben mutatja, havonta mekkora összeg számít be, és mely hónapokat érinti.",
+          "Elosztás nélkül is megválaszthatja a Beszámított hónapot: a novemberben érkező októberi számla októberben is beszámítható, a valós dátum megtartásával.",
+          "Ha az elosztás korán véget ér (például felmondtak egy biztosítást), használja az Elosztás korai befejezése lehetőséget: ami még hátravan, az Ön által választott hónapban számít be."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Azt adja meg, amit az üzlet ténylegesen visel, a visszaigényelhető adó nélkül. Az eladásra szánt áru ehelyett a Beszerzésen keresztül kerül be, mert eladáskor a termékköltségben számít be; a (visszajáró) kaució, a hitel tőkéje és a tulajdonos kivétele nem kiadás. A módosítások a ✓ koppintásakor együtt mentődnek, és ha a változás lezárult hónapot érint, a rendszer előbb megmondja, mely hónapok nettó eredménye módosul."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1241,11 +1389,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Válassza ki a tagot a fizetésnél, és a pontok automatikusan jóváíródnak; beváltáshoz adja meg a felhasználandó pontokat. A rendelés sztornózásakor a rendszer visszavonja a vele szerzett pontokat, a beváltott pontokat pedig visszatéríti."
+        "text": "Válassza ki a tagot az eladáshoz a kosárban vagy a fizetési képernyőn, és a pontok automatikusan jóváíródnak; beváltáshoz adja meg a felhasználandó pontokat. A rendelés sztornózásakor a rendszer visszavonja a vele szerzett pontokat, a beváltott pontokat pedig visszatéríti."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1467,55 +1616,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Importálhatom a termékeket és az eladásokat másik kasszarendszerből vagy táblázatból?",
-    "keywords": [
-      "importálás",
-      "csv",
-      "excel",
-      "táblázat",
-      "költözés",
-      "kasszarendszer váltás",
-      "tömeges",
-      "eladási előzmények"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Igen. Nyissa meg a Beállítások → Adatimportálás menüpontot, válassza ki, hogy termékeket vagy eladásokat importál, és válasszon ki egy CSV-fájlt (az Excel és a Google Táblázatok is tud CSV-formátumba menteni)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "A fájl táblázatként nyílik meg. Az angol és kínai (hagyományos vagy egyszerűsített) nyelvű gyakori oszlopneveket a program automatikusan párosítja; bármelyik oszlopfejlécre koppintva módosíthatja a hozzárendelést.",
-          "Bármelyik cellára koppintva rögtön javíthatja az értékét – nem kell szerkeszteni a fájlt és elölről kezdeni.",
-          "Az ellenőrzéshez koppintson a Megerősítés gombra. A hibás sorokat piros jelölés és az ok mutatja; az eladások importálásakor a hibás rendelések kihagyhatók.",
-          "Oldja meg, ami döntést igényel (azonos nevű termékek, több vevőnek megfelelő sor), nézze át az összegzést, majd koppintson az Importálás indítása gombra."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Az importált eladások a rendelés dátuma szerint kerülnek be, és az üzlet pénzneme és adómódja szerint újra kiszámítódnak. Nem érintik a készletet, és nem adnak üdvözlő pontokat.",
-          "A vevőket telefonszám vagy e-mail-cím alapján párosítja a meglévőkkel; akit nem talál, azt létrehozza.",
-          "Az importált rendelésen az Importálva dátuma és az eredeti rendelésszám látszik, és nem lehet sztornózni vagy visszavenni.",
-          "A hibás sorokat az okokkal kiegészített CSV-ként exportálhatja – javítsa ki őket, és importálja újra. Az ismétlődő sorokat a program automatikusan kihagyja."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Az adatimportálás béta állapotú. Egy fájl legfeljebb 50 000 sort vagy 20 MB-ot tartalmazhat. Importálás előtt készítsen felhőmentést; ha valami nem importálható, vagy az eredmény hibásnak tűnik, jelezze az importálási képernyő Hiba jelentése funkciójával."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1662,13 +1762,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Műveletek (kézi készletmódosítás, kézi pontmódosítás, termékkezelés, a felső határ feletti engedménnyel történő fizetés): egy jóváhagyás egyetlen műveletre érvényes.",
-          "Nézetek (költség és nyereség, Irányítópult, Beállítások, biztonsági mentés és visszaállítás): a jóváhagyás addig oldja fel a nézetet, amíg a kezelő nem változik, vagy az alkalmazás a háttérbe nem kerül.",
+          "Nézetek (költség és nyereség, Irányítópult, Eredmény és kiadások, Beállítások, biztonsági mentés és visszaállítás): a jóváhagyás addig oldja fel a nézetet, amíg a kezelő nem változik, vagy az alkalmazás a háttérbe nem kerül.",
           "Az engedmény felső határa a kézi engedményekre vonatkozik, és fizetéskor egyszer ellenőrizzük; az automatikus akciók és a pontbeváltás nem számítanak bele."
         ]
       },
       {
         "type": "p",
-        "text": "Gyári alapértelmezések: a Menedzserek mindent megtehetnek a biztonsági mentés és visszaállítás kivételével, engedmény felső határa nélkül; a Munkatársaknak mindenhez jóváhagyás kell, 10%-os felső határral. A tulajdonos mindig mindent megtehet, és nem szerkeszthető. A módosításhoz lépjen a Személyzet → Szerepkör-jogosultságok oldalra, koppintson a Szerkesztés gombra, és mentse egyszer – a változás azonnal mindenkire érvényes."
+        "text": "Gyári alapértelmezések: a Menedzserek mindent megtehetnek a biztonsági mentés és visszaállítás, valamint az Eredmény és kiadások kivételével, engedmény felső határa nélkül; a Munkatársaknak mindenhez jóváhagyás kell, 10%-os felső határral. A tulajdonos mindig mindent megtehet, és nem szerkeszthető. A módosításhoz lépjen a Személyzet → Szerepkör-jogosultságok oldalra, koppintson a Szerkesztés gombra, és mentse egyszer – a változás azonnal mindenkire érvényes."
       },
       {
         "type": "note",
@@ -1801,13 +1901,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Mindhárom csomag tartalmazza a teljes körű fizetési funkciókat, a termékeket, a rendeléseket (sztornóval, visszavétellel és cserével), a jelentéseket (a részletes jelentésekkel a 3.4-es verzió óta) és a felhőalapú biztonsági mentést. Az üzlet vezetéséhez nyújtott eszközökben térnek el:"
+        "text": "Mindhárom csomag tartalmazza a teljes körű fizetési funkciókat, a termékeket, a rendeléseket (sztornóval, visszavétellel és cserével), a jelentéseket (a részletes jelentésekkel és a havi eredménnyel a 3.4-es verzió óta) és a felhőalapú biztonsági mentést. Az üzlet vezetéséhez nyújtott eszközökben térnek el:"
       },
       {
         "type": "list",
         "items": [
           "Lite: egyedül dolgozó piaci standhoz, ahol fizetésre és termékekre van szükség.",
-          "Standard: kiegészül akciókkal, hűségpontokkal és tagi szintekkel, készletkövetéssel, beszerzéssel, számlás (utólag fizetett) eladással, előrendeléssel és a kezelési költség becslésével.",
+          "Standard: kiegészül akciókkal, hűségpontokkal és tagi szintekkel, készletkövetéssel, beszerzéssel, számlás (utólag fizetett) eladással, előrendeléssel és a kezelési költség díjkulcsaival.",
           "Pro: kiegészül munkatársi fiókokkal és jogosultságokkal, jóváhagyással, tevékenységnaplóval és visszaállítási bejegyzésekkel – munkatársakat foglalkoztató üzleteknek."
         ]
       },
@@ -2017,13 +2117,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Az ajándékok és a fizetős kiegészítők sosem módosítják maguktól a kosarat. Ha a feltételek teljesülnek, javaslatsáv jelenik meg a pénztárképernyőn, és a kosár csak akkor változik, ha a pénztáros az Elfogadás gombra koppint – ez szándékos, mert az ajándék fizikai készletet érint: valakinek meg kell erősítenie, hogy van belőle, és hogy a vevő kéri."
+        "text": "Az ajándékok és a fizetős kiegészítők sosem módosítják maguktól a kosarat. Ha a feltételek teljesülnek, javaslatsáv jelenik meg a pénztárképernyőn, és a kosár csak akkor változik, ha a pénztáros az Ajándék választása vagy a Kiegészítő választása gombra koppint – ez szándékos, mert az ajándék fizikai készletet érint: valakinek meg kell erősítenie, hogy van belőle, és hogy a vevő kéri."
       },
       {
         "type": "list",
         "items": [
           "Az Elutasítás után ugyanaz a javaslat ennél a kosárnál nem jelenik meg újra; új vagy kiürített kosárnál ismét felajánlja a rendszer.",
-          "Ha a fizetés megerősítése előtt új javaslat jelenik meg, a rendelés beküldése előtt azt el kell fogadni vagy el kell utasítani.",
+          "A 3.4-es verzió óta a függőben lévő ajánlatok nem akadályozzák a fizetést: a fizetési gomb alatti sárga sor, például „1 függőben lévő ajánlat nem érvényesül”, megmondja, hány maradt ki (koppintson rá, hogy lássa, melyek), a rendelés pedig nélkülük megy át. Ha azt szeretné, hogy a fizetés a korábbiakhoz hasonlóan várjon, kapcsolja be az Ajánlatok kezelése fizetés előtt beállítást a Beállítások → Eszközbeállítások alatt; ez csak erre az iPadre érvényes.",
           "Az ajándék és a kiegészítő tételekre más pénzbeli akciók nem adhatnak további engedményt, és ezek nem számítanak bele más akciók küszöbébe."
         ]
       },
@@ -2217,7 +2317,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Külön havi zárási riport még nincs, de az egyeztetéshez szükséges minden adat már megtalálható az alkalmazásban:"
+        "text": "A 3.4-es verzió óta az Eredmény a termékköltség, a kezelési költség és a kiadások levonása után mutatja az egyes hónapok nettó eredményét – lásd: „Hogyan látom, mennyit kerestem ténylegesen havonta?” Külön havi zárási riport még nincs, de az egyeztetéshez szükséges minden adat már megtalálható az alkalmazásban:"
       },
       {
         "type": "list",
@@ -2233,7 +2333,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

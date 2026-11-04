@@ -427,7 +427,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Phí chỉ là ước tính từ tỷ lệ bạn nhập; sao kê của nhà cung cấp mới là số tiền thực tế. Chỉnh tỷ lệ phí và xem phí trong Thống kê cần gói Standard trở lên. Ở gói Lite các ô này bị khóa, nhưng các khoản thanh toán vẫn ghi lại phí, nên phí sẽ hiện ra khi bạn nâng cấp."
+        "text": "Phí chỉ là ước tính từ tỷ lệ bạn nhập; sao kê của nhà cung cấp mới là số tiền thực tế. Chỉnh tỷ lệ phí cần gói Standard trở lên, còn ở gói Lite các ô này bị khóa. Từ v3.4, mọi gói đều xem được các khoản phí đã ghi trong Thống kê và Lãi lỗ, nên tỷ lệ đã đặt trong thời gian dùng thử vẫn tiếp tục ước tính phí ở gói Lite; các phiên bản cũ hơn chỉ hiển thị phí ở gói Standard trở lên."
       }
     ],
     "related": [
@@ -560,6 +560,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Làm sao để gắn hoặc đổi khách hàng cho một đơn hàng?",
+    "keywords": [
+      "khách hàng",
+      "thành viên",
+      "gắn khách hàng",
+      "đổi khách hàng",
+      "khách hàng mới",
+      "thanh toán"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Bạn có thể gắn khách hàng ngay trong giỏ hàng hoặc ở màn hình thanh toán: dòng Khách hàng bên dưới số tiền sẽ mở danh sách khách hàng khi chưa gắn ai, và hiện Đổi khách hàng hoặc Bỏ khách hàng khi đã gắn. Khách hàng chọn ở bước thanh toán chính là khách hàng của giỏ hàng, và vẫn được giữ trong giỏ nếu bạn hủy thanh toán."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Đổi khách hàng sẽ tính lại ngay giảm giá theo hạng thành viên, ưu đãi sinh nhật và việc đổi điểm. Tiền mặt hoặc tiền cọc bạn đã nhập vẫn được giữ và đối chiếu lại với tổng tiền mới.",
+          "Không tìm thấy khách? Chạm Khách hàng mới ở góc trên bên phải danh sách khách hàng, hoặc ở giữa màn hình khi không có kết quả khớp với từ khóa tìm kiếm. Nội dung bạn vừa tìm sẽ tự điền vào biểu mẫu — chữ số vào ô số điện thoại, còn lại vào ô tên — và khách hàng mới được gắn vào đơn.",
+          "Chạm Bán chịu khi chưa gắn khách hàng sẽ mở danh sách khách hàng, và Bán chịu được chọn ngay khi bạn chọn một khách.",
+          "Nếu khách hàng mới khiến giảm giá thủ công vượt mức giảm giá tối đa của người thao tác, quản lý sẽ phê duyệt trước; nếu hủy phê duyệt, khách hàng vẫn giữ như cũ."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Khách hàng thuộc gói Standard; ở gói Lite, dòng này hiện “Khách hàng — gói Standard” và mở chi tiết nâng cấp. Dòng Khách hàng ở màn hình thanh toán có từ v3.4; các phiên bản cũ hơn chỉ gắn được khách hàng trong giỏ hàng."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Bấm nhầm khi thanh toán thì vô hiệu hóa đơn hàng như thế nào?",
@@ -687,7 +725,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Được. Chọn khách hàng ở màn hình thanh toán rồi chọn Bán chịu làm phương thức thanh toán. Khoản nợ cần có người đứng tên, nên không dùng được Bán chịu khi chưa gắn khách hàng."
+        "text": "Được. Chọn Bán chịu làm phương thức thanh toán, và đơn được ghi nhận là khoản nợ của khách hàng. Khoản nợ cần có người đứng tên, nên khi chưa gắn khách hàng, chạm Bán chịu sẽ mở danh sách khách hàng trước (từ v3.4; các phiên bản cũ hơn yêu cầu bạn gắn khách hàng trong giỏ hàng)."
       },
       {
         "type": "p",
@@ -708,7 +746,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -727,7 +765,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Có. Trang chi tiết của đơn hàng, khách hàng và đơn nhập hàng đều có một thẻ ghi chú — chạm vào để sửa, tối đa 500 ký tự. Bạn cũng có thể viết ghi chú ngay trong biểu mẫu khi tạo khách hàng hoặc đơn nhập hàng."
+        "text": "Có. Trang chi tiết của đơn hàng, khách hàng và đơn nhập hàng đều có ghi chú: chạm vào thẻ ghi chú để sửa, tối đa 500 ký tự, hoặc dòng “Thêm ghi chú” duy nhất khi chưa có ghi chú nào. Bạn cũng có thể viết ghi chú ngay trong biểu mẫu khi tạo khách hàng hoặc đơn nhập hàng."
       },
       {
         "type": "p",
@@ -1042,6 +1080,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Từ v3.4, nhấn giữ biểu đồ Xu hướng doanh thu hoặc Xu hướng lợi nhuận để đọc từng kỳ một: một thẻ hiện ngày và doanh thu hoặc lợi nhuận của kỳ đó, còn trên Xu hướng doanh thu, khi bật So sánh doanh số, thẻ hiện thêm doanh thu của kỳ so sánh và mức chênh lệch. Kéo sang trái hoặc phải để di chuyển; vuốt lên hoặc xuống trên biểu đồ thì trang vẫn cuộn như bình thường."
+      },
+      {
+        "type": "p",
         "text": "Thẻ Xếp hạng sản phẩm liệt kê 5 sản phẩm đứng đầu. Chạm vào thẻ hoặc Xem tất cả để xem mọi sản phẩm đã bán trong khoảng thời gian đó, xếp theo số lượng sau khi trừ hàng trả."
       },
       {
@@ -1071,6 +1113,7 @@ export const articles = [
       "bản đồ nhiệt",
       "giờ đông khách",
       "hàng bán chậm",
+      "sản phẩm biến động",
       "giá trị tồn kho",
       "tỷ lệ mua lại",
       "điểm"
@@ -1086,13 +1129,14 @@ export const articles = [
           "So sánh doanh số: ở bên phải thanh Kỳ báo cáo, so sánh với cùng kỳ năm ngoái hoặc kỳ trước (một ngày so với cùng ngày tuần trước, tuần này so với tuần trước, tháng này so với tháng trước, năm nay so với năm trước, kỳ tùy chỉnh so với số ngày tương ứng ngay trước đó). Ô Tiền đã thu hiển thị mức chênh lệch và tốc độ tăng trưởng, còn biểu đồ doanh thu thêm một đường nhạt hơn cho kỳ so sánh. Khi Kỳ báo cáo chưa kết thúc, kỳ so sánh được cắt ở đúng thời điểm tương ứng.",
           "Thứ × giờ: chuyển tiêu đề Doanh số theo thời gian sang Thứ × giờ để xem bản đồ nhiệt bảy ngày, 24 giờ — ô càng đậm thì bạn bán được càng nhiều. Bạn có thể chuyển giữa doanh thu và số đơn; khi bật so sánh, bạn thấy được giờ nào tăng và giờ nào giảm.",
           "Hàng bán chậm: chuyển tiêu đề của thẻ xếp hạng sang Hàng bán chậm để liệt kê sản phẩm từ bán ít nhất đến nhiều nhất, kèm tồn kho hiện tại và ngày bán gần nhất của từng sản phẩm. Sản phẩm chưa từng bán được đánh dấu Chưa từng bán. Mặc định chỉ hiển thị sản phẩm còn hàng.",
+          "Biến động (từ v3.4): chuyển tiêu đề của thẻ xếp hạng sang Biến động để xem 3 sản phẩm tăng doanh thu nhiều nhất và 3 sản phẩm giảm nhiều nhất so với kỳ so sánh, kèm doanh thu của cả hai kỳ và mức chênh lệch. Hãy chọn một kỳ trong So sánh doanh số trước; nếu chọn Không, hoặc đang ở Toàn thời gian, thẻ sẽ nhắc bạn. Chạm vào thẻ hoặc Xem tất cả để mở danh sách Sản phẩm biến động doanh thu đầy đủ, chia thành Tăng và Giảm.",
           "Tỷ lệ mua lại: dòng cuối của ô khách hàng là tỷ lệ thành viên đã mua trong Kỳ báo cáo đó và tổng cộng đã mua từ hai lần trở lên.",
           "Hiện tại: giá trị tồn kho (tồn kho hiện tại × giá vốn hiện tại), mọi biến động tồn kho trong khoảng thời gian đã chọn, và số điểm khách đang giữ nhưng chưa quy đổi, cùng mức giảm tối đa họ có thể dùng. Đây là số dư hiện tại; khoảng thời gian không làm chúng thay đổi."
         ]
       },
       {
         "type": "p",
-        "text": "Từ phiên bản v3.4, cả năm báo cáo này đều mở trên mọi gói và vẫn mở sau khi hết dùng thử. Các phiên bản cũ hơn chỉ hiển thị chúng ở gói Pro, còn các gói khác có một biểu tượng khóa nhỏ; nếu bạn vẫn thấy biểu tượng khóa, hãy cập nhật DingPOS từ App Store."
+        "text": "Từ phiên bản v3.4, tất cả các báo cáo này đều mở trên mọi gói và vẫn mở sau khi hết dùng thử. Các phiên bản cũ hơn chỉ hiển thị chúng ở gói Pro, còn các gói khác có một biểu tượng khóa nhỏ; nếu bạn vẫn thấy biểu tượng khóa, hãy cập nhật DingPOS từ App Store."
       },
       {
         "type": "p",
@@ -1145,6 +1189,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Làm sao biết mỗi tháng cửa hàng lãi hay lỗ bao nhiêu?",
+    "keywords": [
+      "lãi lỗ",
+      "báo cáo lãi lỗ",
+      "lợi nhuận ròng",
+      "lợi nhuận hằng tháng",
+      "chi phí",
+      "lợi nhuận hoạt động",
+      "báo cáo kết quả kinh doanh"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Mở Lãi lỗ, bên dưới Thống kê trong thanh bên. Màn hình liệt kê mọi tháng từ mới đến cũ cùng lợi nhuận ròng của tháng đó: tháng hiện tại được đánh dấu Đang diễn ra, và tiêu đề của mỗi năm cộng lợi nhuận ròng của các tháng đã kết thúc."
+      },
+      {
+        "type": "p",
+        "text": "Chạm vào một tháng để xem lợi nhuận ròng được tính ra sao:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Doanh thu (chưa thuế): doanh thu sau mọi khoản giảm giá, trừ thuế, tính vào ngày giao hàng.",
+          "Giá vốn sản phẩm: giá vốn của hàng đã bán, lấy từ giá vốn trên các sản phẩm của bạn.",
+          "Phí xử lý thanh toán (ước tính): phí được ước tính từ tỷ lệ phí của các phương thức thanh toán.",
+          "Tiền mất cọc: tiền cọc bạn giữ lại khi một đơn đặt trước bị hủy.",
+          "Chi phí cố định và Chi phí một lần: những gì bạn đã ghi cho tháng đó — xem “Làm sao ghi tiền thuê mặt bằng, tiền lương và các chi phí khác?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Tiếp theo là ba biểu đồ: lợi nhuận ròng của từng tháng trong 12 tháng gần nhất, tỷ trọng của từng chi phí cố định, và xu hướng chi phí cố định. Trong Thống kê, dòng cuối của thẻ lợi nhuận dẫn thẳng đến Lãi lỗ: với kỳ báo cáo đúng bằng một tháng, dòng này hiện lợi nhuận ròng của tháng đó, như “Lợi nhuận ròng Tháng 10: NT$12,300”; với mọi kỳ khác, dòng này ghi Xem lãi lỗ hằng tháng."
+      },
+      {
+        "type": "note",
+        "text": "Lợi nhuận ròng ở đây là lợi nhuận hoạt động trước thuế thu nhập, tính từ những gì DingPOS đã ghi nhận — không phải tờ khai thuế. Nếu có sản phẩm bán ra mà chưa có giá vốn, tháng đó vẫn hiển thị lợi nhuận ròng, kèm dòng “Chưa gồm giá vốn của N sản phẩm”; chạm vào để xem là những sản phẩm nào. Lãi lỗ có trên mọi gói. Khi dùng tài khoản nhân viên, việc mở màn hình này cần quyền Lãi lỗ và chi phí — Quản lý và Nhân viên mặc định đều cần phê duyệt, vì màn hình hiển thị giá vốn sản phẩm và lương."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Làm sao ghi tiền thuê mặt bằng, tiền lương và các chi phí khác?",
+    "keywords": [
+      "chi phí",
+      "tiền thuê mặt bằng",
+      "lương nhân viên",
+      "điện nước",
+      "chi phí cố định",
+      "chi phí vận hành",
+      "phân bổ chi phí",
+      "chi phí một lần"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Trong Lãi lỗ, chạm Thêm chi phí rồi chọn chi phí cố định hoặc chi phí một lần. Chi phí được tính vào tháng mà nó thuộc về, không phải tháng bạn thanh toán, và lợi nhuận ròng của mọi tháng thay đổi theo."
+      },
+      {
+        "type": "p",
+        "text": "Chi phí cố định là khoản bạn trả mỗi tháng, như tiền thuê mặt bằng, điện nước hoặc lương:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nhập tên, số tiền hằng tháng và tháng bắt đầu. Chọn một tháng trước đó để nhập bù.",
+          "Khi số tiền thay đổi, chạm Đổi số tiền, chọn tháng rồi chọn Từ tháng này (ví dụ khi tăng tiền thuê) hoặc Chỉ tháng này (ví dụ hóa đơn điện của tháng này). Mọi thay đổi đều được liệt kê, và bạn có thể mở một thay đổi để sửa hoặc xóa.",
+          "Khi bạn ngừng chi khoản này, hãy đặt Tháng cuối được tính: tháng đó và các tháng trước vẫn được tính."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Chi phí một lần là khoản chỉ trả một lần:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Với sửa sang cửa hàng, thiết bị hoặc bảo hiểm trả trước, hãy bật Phân bổ nhiều tháng rồi chọn từ 2 đến 120 tháng và Tháng đầu được tính. Biểu mẫu xem trước mỗi tháng được tính bao nhiêu và gồm những tháng nào.",
+          "Nếu không phân bổ, bạn vẫn có thể chọn Tháng được tính: hóa đơn tháng 10 đến vào tháng 11 vẫn có thể tính vào tháng 10, và ngày thực tế vẫn được giữ.",
+          "Nếu một khoản phân bổ kết thúc sớm (ví dụ hủy hợp đồng bảo hiểm), hãy dùng Kết thúc phân bổ sớm: phần còn lại được tính vào tháng bạn chọn."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Hãy nhập số tiền cửa hàng thực sự chịu, không tính phần thuế bạn có thể được khấu trừ. Hàng bạn sẽ bán thì đi qua mục Nhập hàng, vì khi bán nó đã nằm trong giá vốn sản phẩm; tiền ký quỹ, gốc khoản vay và tiền chủ cửa hàng rút ra không phải là chi phí. Các thay đổi được lưu cùng lúc khi bạn chạm ✓, và nếu thay đổi chạm đến một tháng đã kết thúc, ứng dụng sẽ báo trước lợi nhuận ròng của những tháng nào sẽ thay đổi."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1244,11 +1391,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Chọn thành viên khi thanh toán để điểm được tự động tích lũy; khi muốn đổi điểm, hãy nhập số điểm cần dùng. Khi vô hiệu hóa một đơn hàng, số điểm đã tích từ đơn đó sẽ bị thu hồi và số điểm đã quy đổi sẽ được hoàn lại."
+        "text": "Gắn thành viên vào đơn hàng, trong giỏ hàng hoặc ở màn hình thanh toán, để điểm được tự động tích lũy; khi muốn đổi điểm, hãy nhập số điểm cần dùng. Khi vô hiệu hóa một đơn hàng, số điểm đã tích từ đơn đó sẽ bị thu hồi và số điểm đã quy đổi sẽ được hoàn lại."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1475,55 +1623,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Có nhập được sản phẩm và đơn hàng từ phần mềm bán hàng khác hoặc bảng tính không?",
-    "keywords": [
-      "nhập dữ liệu",
-      "csv",
-      "excel",
-      "bảng tính",
-      "chuyển từ phần mềm khác",
-      "đổi phần mềm bán hàng",
-      "nhập hàng loạt",
-      "lịch sử bán hàng"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Có. Vào Cài đặt → Nhập dữ liệu, chọn nhập sản phẩm hay đơn hàng, rồi chọn tệp CSV (Excel và Google Sheets đều có thể lưu thành CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Tệp được mở dưới dạng bảng. Các tên cột thông dụng bằng tiếng Anh và tiếng Trung (phồn thể hoặc giản thể) được ghép tự động; chạm vào tiêu đề cột bất kỳ để đổi cách ghép.",
-          "Chạm vào ô bất kỳ để sửa giá trị ngay tại chỗ — không cần sửa tệp rồi làm lại từ đầu.",
-          "Chạm Xác nhận để kiểm tra. Các dòng có vấn đề được đánh dấu đỏ kèm lý do; khi nhập đơn hàng, bạn có thể bỏ qua các đơn bị lỗi.",
-          "Xử lý những mục cần bạn quyết định (tên sản phẩm trùng, một dòng khớp nhiều khách hàng), xem lại phần tóm tắt, rồi chạm Bắt đầu nhập."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Đơn hàng đã nhập được xếp theo ngày đặt hàng và tính lại theo tiền tệ và chế độ thuế của cửa hàng. Chúng không ảnh hưởng tồn kho và không tặng điểm chào mừng.",
-          "Khách hàng được khớp với khách đã có theo số điện thoại hoặc email; ai chưa khớp sẽ được tạo mới.",
-          "Đơn hàng đã nhập hiển thị nhãn “Đã nhập ngày” cùng số phiếu nguồn, và không thể vô hiệu hóa hay trả hàng.",
-          "Các dòng bị lỗi có thể xuất thành tệp CSV kèm lý do — sửa rồi nhập lại. Các dòng trùng được tự động bỏ qua."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Tính năng nhập dữ liệu đang ở bản beta. Mỗi tệp chứa tối đa 50.000 dòng hoặc 20 MB. Hãy sao lưu đám mây trước khi nhập; nếu có gì không nhập được hoặc kết quả có vẻ sai, hãy báo cho chúng tôi qua Báo cáo sự cố trên màn hình nhập dữ liệu."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1668,13 +1767,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Thao tác (điều chỉnh tồn kho thủ công, điều chỉnh điểm thủ công, quản lý sản phẩm, thanh toán vượt mức giảm giá tối đa): một lần phê duyệt chỉ áp dụng cho đúng thao tác đó.",
-          "Màn hình xem (giá vốn & lợi nhuận, Tổng quan, Cài đặt, sao lưu & khôi phục): phê duyệt mở khóa cho đến khi người thao tác thay đổi hoặc ứng dụng chuyển xuống nền.",
+          "Màn hình xem (giá vốn & lợi nhuận, Tổng quan, Lãi lỗ và chi phí, Cài đặt, sao lưu & khôi phục): phê duyệt mở khóa cho đến khi người thao tác thay đổi hoặc ứng dụng chuyển xuống nền.",
           "Mức giảm giá tối đa áp dụng cho giảm giá thủ công và chỉ được kiểm tra một lần khi thanh toán; khuyến mãi tự động và đổi điểm không tính vào mức này."
         ]
       },
       {
         "type": "p",
-        "text": "Mặc định ban đầu: Quản lý được phép mọi thứ trừ sao lưu & khôi phục, không giới hạn mức giảm giá; Nhân viên cần phê duyệt cho mọi thứ, với mức giảm giá tối đa 10%. Chủ cửa hàng luôn được phép và không thể chỉnh sửa. Để thay đổi, vào Nhân viên → Quyền theo vai trò, chạm Sửa rồi lưu một lần — thay đổi áp dụng cho mọi người ngay lập tức."
+        "text": "Mặc định ban đầu: Quản lý được phép mọi thứ trừ sao lưu & khôi phục cùng Lãi lỗ và chi phí, không giới hạn mức giảm giá; Nhân viên cần phê duyệt cho mọi thứ, với mức giảm giá tối đa 10%. Chủ cửa hàng luôn được phép và không thể chỉnh sửa. Để thay đổi, vào Nhân viên → Quyền theo vai trò, chạm Sửa rồi lưu một lần — thay đổi áp dụng cho mọi người ngay lập tức."
       },
       {
         "type": "note",
@@ -1808,13 +1907,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Cả ba gói đều bao gồm đầy đủ chức năng thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo (từ phiên bản v3.4 đã gồm cả báo cáo nâng cao) và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
+        "text": "Cả ba gói đều bao gồm đầy đủ chức năng thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo (từ phiên bản v3.4 đã gồm cả báo cáo nâng cao và lãi lỗ hằng tháng) và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
       },
       {
         "type": "list",
         "items": [
           "Lite: dành cho một người bán ở quầy hàng, chỉ cần thanh toán và sản phẩm.",
-          "Standard: thêm khuyến mãi, điểm tích lũy và hạng thành viên, theo dõi tồn kho, nhập hàng, bán chịu, đơn đặt trước và ước tính phí thanh toán.",
+          "Standard: thêm khuyến mãi, điểm tích lũy và hạng thành viên, theo dõi tồn kho, nhập hàng, bán chịu, đơn đặt trước và tỷ lệ phí thanh toán.",
           "Pro: thêm tài khoản nhân viên và phân quyền, phê duyệt của quản lý, nhật ký hoạt động và bản ghi khôi phục — dành cho cửa hàng có nhân viên."
         ]
       },
@@ -2023,13 +2122,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Quà tặng và mua kèm không bao giờ tự thay đổi giỏ hàng. Khi đủ điều kiện, một biểu ngữ gợi ý hiện trên màn hình thu ngân, và giỏ hàng chỉ thay đổi khi thu ngân nhấn Chấp nhận — cố ý như vậy vì quà tặng liên quan đến hàng thật trong kho: cần có người xác nhận còn hàng và khách có muốn nhận."
+        "text": "Quà tặng và mua kèm không bao giờ tự thay đổi giỏ hàng. Khi đủ điều kiện, một biểu ngữ gợi ý hiện trên màn hình thu ngân, và giỏ hàng chỉ thay đổi khi thu ngân nhấn Chọn quà hoặc Chọn món mua kèm — cố ý như vậy vì quà tặng liên quan đến hàng thật trong kho: cần có người xác nhận còn hàng và khách có muốn nhận."
       },
       {
         "type": "list",
         "items": [
           "Sau khi nhấn Từ chối, gợi ý đó sẽ không hiện lại cho giỏ hàng này; giỏ hàng mới hoặc giỏ đã xóa sẽ gợi ý lại.",
-          "Nếu có gợi ý mới xuất hiện trước khi xác nhận thanh toán, bạn phải Chấp nhận hoặc Từ chối thì mới gửi được đơn.",
+          "Từ v3.4, ưu đãi đang chờ không còn chặn thanh toán: một dòng màu vàng dưới nút thanh toán, như “1 ưu đãi đang chờ sẽ không được áp dụng”, cho biết còn bao nhiêu ưu đãi bị bỏ qua (chạm vào để xem là ưu đãi nào), và đơn vẫn được gửi đi mà không có chúng. Để thanh toán chờ như trước, hãy bật Xử lý ưu đãi trước khi thanh toán trong Cài đặt → Tùy chỉnh thiết bị; tùy chọn này chỉ áp dụng cho iPad này.",
           "Dòng quà tặng và mua kèm không thể bị các khuyến mãi giảm tiền khác giảm thêm, và không được tính vào ngưỡng của các khuyến mãi khác."
         ]
       },
@@ -2221,7 +2320,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Hiện chưa có báo cáo đối soát cuối tháng riêng, nhưng mọi thứ bạn cần để đối chiếu đều đã có sẵn trong ứng dụng:"
+        "text": "Từ v3.4, Lãi lỗ hiển thị lợi nhuận ròng của từng tháng sau giá vốn sản phẩm, phí và chi phí — xem “Làm sao biết mỗi tháng cửa hàng lãi hay lỗ bao nhiêu?” Hiện chưa có báo cáo đối soát để xuất hoặc in, nhưng mọi thứ bạn cần để đối chiếu đều đã có sẵn trong ứng dụng:"
       },
       {
         "type": "list",
@@ -2237,7 +2336,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

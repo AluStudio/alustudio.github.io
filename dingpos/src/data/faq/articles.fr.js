@@ -425,7 +425,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Les frais sont des estimations d’après le taux saisi ; le relevé de votre prestataire fait foi. Modifier les taux de frais et voir les frais dans Stats nécessitent la formule Standard ou supérieure. Avec Lite, les champs sont verrouillés, mais les paiements enregistrent tout de même leurs frais, qui apparaissent dès que vous passez à une formule supérieure."
+        "text": "Les frais sont des estimations d’après le taux saisi ; le relevé de votre prestataire fait foi. Modifier les taux de frais nécessite la formule Standard ou supérieure ; avec Lite, les champs sont verrouillés. Depuis la v3.4, toutes les formules voient les frais enregistrés dans Stats et dans Résultat : un taux défini pendant l’essai continue donc d’estimer les frais avec Lite. Les versions antérieures n’affichaient les frais qu’avec Standard ou supérieure."
       }
     ],
     "related": [
@@ -559,6 +559,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Comment ajouter ou changer le client d’une vente ?",
+    "keywords": [
+      "client",
+      "membre",
+      "associer un client",
+      "changer de client",
+      "nouveau client",
+      "encaissement"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Associez le client dans le panier ou sur l’écran d’encaissement : la ligne Client sous le montant ouvre la liste des clients quand personne n’est associé, et propose Changer de client ou Retirer le client quand quelqu’un l’est. Le client choisi à l’encaissement est celui du panier, et il y reste si vous annulez l’encaissement."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Changer de client recalcule aussitôt les remises de niveau, les offres d’anniversaire et l’utilisation de points. Les espèces ou l’acompte déjà saisis sont conservés et vérifiés par rapport au nouveau total.",
+          "Vous ne le trouvez pas ? Touchez Nouveau client en haut à droite de la liste des clients, ou au milieu quand aucun résultat ne correspond à votre recherche. Ce que vous avez cherché remplit le formulaire (les chiffres vont dans le téléphone, tout le reste dans le nom), et le nouveau client est associé à la vente.",
+          "Toucher En compte alors qu’aucun client n’est associé ouvre la liste des clients, et En compte est sélectionné dès que vous choisissez quelqu’un.",
+          "Si le nouveau client fait dépasser le plafond de remise de l’opérateur par une remise manuelle, un responsable doit d’abord approuver ; si vous annulez l’approbation, le client reste celui d’avant."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Les clients font partie de la formule Standard ; avec Lite, la ligne affiche « Clients — formule Standard » et ouvre le détail de la mise à niveau. La ligne Client de l’encaissement est arrivée avec la v3.4 ; les versions antérieures n’associent le client que dans le panier."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Erreur à l’encaissement : comment invalider une commande ?",
@@ -686,7 +724,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Oui. Sélectionnez le client à l’encaissement et choisissez En compte comme mode de paiement. Une dette doit avoir un titulaire : En compte n’est donc pas disponible sans client."
+        "text": "Oui. Choisissez En compte comme mode de paiement : la vente est enregistrée comme une dette du client. Une dette doit avoir un titulaire : sans client associé, toucher En compte ouvre d’abord la liste des clients (depuis la v3.4 ; les versions antérieures vous demandent d’associer un client dans le panier)."
       },
       {
         "type": "p",
@@ -707,7 +745,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -726,7 +764,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Oui. Les pages de détail d’une commande, d’un client et d’un bon de commande ont chacune une carte de notes : touchez-la pour la modifier (500 caractères maximum). Vous pouvez aussi en écrire une dans le formulaire lors de la création d’un client ou d’un bon de commande."
+        "text": "Oui. Les pages de détail d’une commande, d’un client et d’un bon de commande ont chacune des notes : touchez la carte de notes pour la modifier (500 caractères maximum), ou la ligne unique « Ajouter une note » tant qu’il n’y en a pas. Vous pouvez aussi en écrire une dans le formulaire lors de la création d’un client ou d’un bon de commande."
       },
       {
         "type": "p",
@@ -1042,6 +1080,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Depuis la v3.4, maintenez le doigt appuyé sur le graphique Évolution du chiffre d’affaires ou Évolution de la marge brute pour le lire période par période : une carte affiche la date et le chiffre d’affaires ou la marge brute de cette période et, sur Évolution du chiffre d’affaires avec Comparaison des ventes activée, le chiffre d’affaires de la période de comparaison ainsi que l’écart. Faites glisser vers la gauche ou la droite pour vous déplacer ; balayez vers le haut ou le bas sur le graphique et la page défile comme d’habitude."
+      },
+      {
+        "type": "p",
         "text": "La carte Top produits affiche les 5 premiers. Touchez la carte ou Voir tout pour lister tous les produits vendus sur la période, classés par quantité après retours."
       },
       {
@@ -1070,6 +1112,7 @@ export const articles = [
       "année dernière",
       "carte thermique",
       "heures de pointe",
+      "variations de produits",
       "produits à faible rotation",
       "valeur du stock",
       "taux de réachat",
@@ -1086,13 +1129,14 @@ export const articles = [
           "Comparaison des ventes : à droite de la barre de période, comparez avec la même période de l’an dernier ou avec la période précédente (une journée avec le même jour de la semaine dernière, cette semaine avec la semaine dernière, ce mois-ci avec le mois dernier, cette année avec l’an dernier, une période personnalisée avec le même nombre de jours qui la précèdent). La tuile Encaissements affiche l’écart et le taux de croissance, et le graphique du chiffre d’affaires ajoute une ligne plus claire pour la période de comparaison. Tant qu’une période n’est pas terminée, la période de comparaison est coupée au même moment.",
           "Jour × heure : faites passer l’en-tête Ventes dans le temps sur Jour × heure pour obtenir une carte thermique de sept jours sur 24 heures — plus une case est foncée, plus vous avez vendu. Basculez entre chiffre d’affaires et commandes ; avec une comparaison activée, repérez les heures en hausse et celles en baisse.",
           "Produits à faible rotation : faites passer l’en-tête de la carte de classement sur Produits à faible rotation pour lister les produits du moins vendu au plus vendu, avec le stock actuel et la date de la dernière vente de chacun. Les produits jamais vendus sont marqués Jamais vendu. Par défaut, seuls les produits en stock sont affichés.",
+          "Variations (depuis la v3.4) : faites passer l’en-tête de la carte de classement sur Variations pour voir les 3 produits dont le chiffre d’affaires a le plus augmenté et les 3 dont il a le plus baissé par rapport à la période de comparaison, avec le chiffre d’affaires des deux périodes et l’écart. Choisissez d’abord une période sous Comparaison des ventes ; avec Aucune, ou sur Toute la période, la carte vous invite à le faire. Touchez la carte ou Voir tout pour ouvrir la liste complète Variations des produits, répartie entre En hausse et En baisse.",
           "Taux de réachat : la dernière ligne de la tuile clients indique la part des membres ayant acheté sur la période et ayant acheté au moins deux fois au total.",
           "Situation actuelle : la valorisation du stock (stock actuel × coût actuel), tous les mouvements de stock de la période sélectionnée, et les points que les clients détiennent sans les avoir utilisés, avec le montant maximal qu’ils permettent de déduire. Ce sont des soldes à l’instant T ; la période ne les modifie pas."
         ]
       },
       {
         "type": "p",
-        "text": "Depuis la v3.4, ces cinq rapports sont ouverts à toutes les formules, et le restent après la fin de l’essai. Les versions antérieures ne les affichaient qu’avec Pro, avec un petit cadenas sur les autres formules ; si vous voyez encore les cadenas, mettez à jour DingPOS depuis l’App Store."
+        "text": "Depuis la v3.4, tous ces rapports sont ouverts à toutes les formules, et le restent après la fin de l’essai. Les versions antérieures ne les affichaient qu’avec Pro, avec un petit cadenas sur les autres formules ; si vous voyez encore les cadenas, mettez à jour DingPOS depuis l’App Store."
       },
       {
         "type": "p",
@@ -1146,6 +1190,110 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Comment savoir combien ma boutique gagne réellement chaque mois ?",
+    "keywords": [
+      "compte de résultat",
+      "P&L",
+      "bénéfice net",
+      "bénéfice mensuel",
+      "dépenses",
+      "résultat d’exploitation",
+      "résultat net"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ouvrez Résultat, sous Stats dans la barre latérale. L’onglet liste chaque mois, du plus récent au plus ancien, avec son bénéfice net : le mois en cours est marqué En cours, et l’en-tête de chaque année additionne le bénéfice net de ses mois terminés."
+      },
+      {
+        "type": "p",
+        "text": "Touchez un mois pour voir comment son bénéfice net est calculé :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Chiffre d’affaires (hors taxe) : le chiffre d’affaires après toutes les remises, moins la taxe, compté à la date de remise des articles.",
+          "Coût des produits : le coût de ce qui a été vendu, d’après les coûts renseignés sur vos produits.",
+          "Frais de traitement (est.) : les frais estimés d’après les taux de vos moyens de paiement.",
+          "Acomptes conservés : les acomptes que vous avez gardés lors de l’annulation d’une précommande.",
+          "Dépenses fixes et Dépenses ponctuelles : ce que vous avez enregistré pour ce mois — voir « Comment enregistrer le loyer, les salaires et les autres dépenses ? »"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Trois graphiques suivent : le bénéfice net de chacun des 12 derniers mois, la part de chaque dépense fixe et l’évolution des dépenses fixes. Dans Stats, la dernière ligne de la carte de marge brute mène directement à Résultat : pour une période qui correspond exactement à un mois, elle affiche le bénéfice net de ce mois, par exemple « Bénéfice net (octobre) : NT$12,300 » ; pour toute autre période, elle indique Voir le compte de résultat mensuel."
+      },
+      {
+        "type": "note",
+        "text": "Le bénéfice net est le bénéfice d’exploitation avant impôt sur le revenu, calculé d’après ce que DingPOS a enregistré — ce n’est pas une déclaration fiscale. Si des produits ont été vendus sans coût, le mois affiche quand même un bénéfice net, accompagné de « Produits sans coût exclus : N » ; touchez-le pour voir lesquels. Résultat est disponible avec toutes les formules. Avec des comptes du personnel, l’ouvrir exige la permission Compte de résultat et dépenses, qui par défaut requiert une approbation pour les Responsables comme pour le Personnel, car elle donne accès aux coûts des produits et aux salaires."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Comment enregistrer le loyer, les salaires et les autres dépenses ?",
+    "keywords": [
+      "dépenses",
+      "loyer",
+      "salaires",
+      "charges",
+      "dépenses fixes",
+      "frais généraux",
+      "amortissement",
+      "étalement",
+      "dépense ponctuelle"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Dans Résultat, touchez Ajouter une dépense et choisissez une dépense fixe ou une dépense ponctuelle. Une dépense compte dans le mois auquel elle se rapporte, et non dans le mois où vous l’avez payée, et le bénéfice net de chaque mois en tient compte."
+      },
+      {
+        "type": "p",
+        "text": "Une dépense fixe est une dépense que vous payez chaque mois, comme le loyer, les charges ou les salaires :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Saisissez le nom, le montant mensuel et le mois de début. Choisissez un mois antérieur pour régulariser le passé.",
+          "Quand le montant change, touchez Changer le montant, choisissez le mois, puis À partir de ce mois (une hausse de loyer, par exemple) ou Ce mois seulement (la facture d’électricité du mois). Chaque changement figure dans la liste ; ouvrez-en un pour le modifier ou le supprimer.",
+          "Quand vous cessez de la payer, indiquez le Dernier mois compté : ce mois et les précédents continuent de compter."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Une dépense ponctuelle se paie une seule fois :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Pour un aménagement, du matériel ou une assurance payée d’avance, activez Étaler sur plusieurs mois et choisissez de 2 à 120 mois ainsi que le premier mois compté. Le formulaire affiche un aperçu du montant compté chaque mois et des mois couverts.",
+          "Sans étalement, vous pouvez quand même choisir le mois compté : une facture d’octobre reçue en novembre peut compter en octobre, sa date réelle étant conservée.",
+          "Si un étalement prend fin avant son terme (une assurance résiliée, par exemple), utilisez Terminer l’étalement plus tôt : le reste est compté dans le mois que vous choisissez."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Saisissez ce que la boutique supporte réellement, sans la taxe que vous pouvez récupérer. Le stock que vous revendrez passe plutôt par les Achats, car il entre dans le coût des produits à la vente ; les dépôts de garantie, le capital d’un emprunt et l’argent que le propriétaire prélève ne sont pas des dépenses. Les modifications s’enregistrent ensemble quand vous touchez ✓, et une modification qui touche un mois déjà terminé vous indique d’abord pour quels mois le bénéfice net va changer."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1243,11 +1391,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sélectionnez le membre à l’encaissement et les points s’accumulent automatiquement ; pour les utiliser, saisissez le nombre de points à déduire. L’invalidation d’une commande reprend les points qu’elle a fait gagner et restitue les points utilisés."
+        "text": "Associez le membre à la vente, dans le panier ou sur l’écran d’encaissement, et les points s’accumulent automatiquement ; pour les utiliser, saisissez le nombre de points à déduire. L’invalidation d’une commande reprend les points qu’elle a fait gagner et restitue les points utilisés."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1471,56 +1620,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Puis-je importer mes produits et mes ventes depuis une autre caisse ou un tableur ?",
-    "keywords": [
-      "importer",
-      "import",
-      "csv",
-      "excel",
-      "tableur",
-      "migration",
-      "changer de caisse",
-      "import en masse",
-      "historique des ventes"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Oui. Ouvrez Réglages → Import de données, choisissez d’importer des produits ou des ventes, puis sélectionnez un fichier CSV (Excel et Google Sheets peuvent tous deux enregistrer au format CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Le fichier s’ouvre sous forme de tableau. Les noms de colonnes courants en anglais et en chinois (traditionnel ou simplifié) sont reconnus automatiquement ; appuyez sur l’en-tête d’une colonne pour modifier sa correspondance.",
-          "Appuyez sur une cellule pour corriger sa valeur sur place, sans devoir modifier le fichier et tout recommencer.",
-          "Appuyez sur Confirmer pour lancer la vérification. Les lignes problématiques sont signalées en rouge avec le motif ; pour les ventes, vous pouvez ignorer les commandes en erreur.",
-          "Réglez ce qui demande une décision (noms de produits en double, ligne correspondant à plusieurs clients), vérifiez le récapitulatif, puis appuyez sur Lancer l’importation."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Les ventes importées sont classées selon leur date de commande et recalculées avec la devise et le mode de taxe de votre boutique. Elles n’affectent pas le stock et n’accordent pas de points de bienvenue.",
-          "Les clients sont associés aux clients existants par téléphone ou e-mail ; ceux qui ne correspondent à personne sont créés.",
-          "Les commandes importées portent le badge « Importée le » suivi de la date d’importation, affichent le numéro de commande d’origine et ne peuvent être ni invalidées ni retournées.",
-          "Les lignes en erreur peuvent être exportées dans un CSV annoté des motifs : corrigez-les et importez à nouveau. Les lignes en double sont ignorées automatiquement."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "L’import de données est en version bêta. Chaque fichier peut contenir jusqu’à 50 000 lignes ou 20 Mo. Faites une sauvegarde cloud avant d’importer ; si un élément ne s’importe pas ou si le résultat semble faux, signalez-le-nous avec Signaler un problème sur l’écran d’import."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1666,13 +1765,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Actions (ajustement manuel du stock, ajustement manuel des points, gestion des produits, encaissement au-delà du plafond de remise) : une approbation couvre cette seule action.",
-          "Consultations (Coûts et marges, Tableau de bord, Réglages, sauvegarde et restauration) : une approbation déverrouille l’accès jusqu’au changement d’opérateur ou jusqu’à ce que l’app passe en arrière-plan.",
+          "Consultations (Coûts et marges, Tableau de bord, Compte de résultat et dépenses, Réglages, sauvegarde et restauration) : une approbation déverrouille l’accès jusqu’au changement d’opérateur ou jusqu’à ce que l’app passe en arrière-plan.",
           "Le plafond de remise s’applique aux remises manuelles et est vérifié une seule fois à l’encaissement ; les promotions automatiques et l’utilisation de points n’y comptent pas."
         ]
       },
       {
         "type": "p",
-        "text": "Valeurs par défaut : les Responsables sont autorisés à tout sauf à la sauvegarde et à la restauration, sans plafond de remise ; le Personnel a besoin d’une approbation pour tout, avec un plafond de 10 %. Le propriétaire est toujours autorisé et ses permissions ne peuvent pas être modifiées. Pour changer cela, allez dans Personnel → Permissions des rôles, touchez Modifier et enregistrez une fois : le changement s’applique immédiatement à tout le monde."
+        "text": "Valeurs par défaut : les Responsables sont autorisés à tout sauf à la sauvegarde et à la restauration ainsi qu’à Compte de résultat et dépenses, sans plafond de remise ; le Personnel a besoin d’une approbation pour tout, avec un plafond de 10 %. Le propriétaire est toujours autorisé et ses permissions ne peuvent pas être modifiées. Pour changer cela, allez dans Personnel → Permissions des rôles, touchez Modifier et enregistrez une fois : le changement s’applique immédiatement à tout le monde."
       },
       {
         "type": "note",
@@ -1804,13 +1903,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Les trois formules comprennent l’encaissement complet, les produits, les commandes (avec invalidations, retours et échanges), les rapports (rapports avancés inclus depuis la v3.4) et la sauvegarde dans le cloud. Elles se distinguent par les outils pour gérer votre boutique :"
+        "text": "Les trois formules comprennent l’encaissement complet, les produits, les commandes (avec invalidations, retours et échanges), les rapports (rapports avancés et compte de résultat mensuel inclus depuis la v3.4) et la sauvegarde dans le cloud. Elles se distinguent par les outils pour gérer votre boutique :"
       },
       {
         "type": "list",
         "items": [
           "Lite : pour une personne qui tient seule un stand et a besoin de l’encaissement et des produits.",
-          "Standard : ajoute les promotions, les points de fidélité et les niveaux, le suivi du stock, les achats, les ventes en compte, les précommandes et l’estimation des frais de traitement.",
+          "Standard : ajoute les promotions, les points de fidélité et les niveaux, le suivi du stock, les achats, les ventes en compte, les précommandes et les taux de frais de traitement.",
           "Pro : ajoute les comptes du personnel et les permissions, l’approbation, le journal d’activité et le journal des restaurations, pour les boutiques avec du personnel."
         ]
       },
@@ -2018,13 +2117,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Les cadeaux et les extras payants ne modifient jamais le panier d’eux-mêmes. Lorsque les conditions sont remplies, un bandeau de suggestion apparaît sur l’écran de la caisse, et le panier ne change que lorsque le caissier touche Accepter — c’est voulu, car les cadeaux concernent du stock physique : quelqu’un doit vérifier qu’il est disponible et que le client en veut."
+        "text": "Les cadeaux et les extras payants ne modifient jamais le panier d’eux-mêmes. Lorsque les conditions sont remplies, un bandeau de suggestion apparaît sur l’écran de la caisse, et le panier ne change que lorsque le caissier touche Choisir le cadeau ou Choisir l’extra — c’est voulu, car les cadeaux concernent du stock physique : quelqu’un doit vérifier qu’il est disponible et que le client en veut."
       },
       {
         "type": "list",
         "items": [
           "Après Refuser, la même suggestion ne réapparaît plus pour ce panier ; un nouveau panier, ou un panier vidé, la propose de nouveau.",
-          "Si une nouvelle suggestion apparaît avant la confirmation de l’encaissement, il faut l’accepter ou la refuser avant de pouvoir valider la commande.",
+          "Depuis la v3.4, les offres encore en attente n’empêchent plus l’encaissement : une ligne jaune sous le bouton Payer, comme « 1 offre en attente ne s’appliquera pas », indique combien sont écartées (touchez-la pour voir lesquelles), et la commande est validée sans elles. Pour que l’encaissement attende comme avant, activez Traiter les offres avant l’encaissement dans Réglages → Préférences de l’appareil ; cela ne s’applique qu’à cet iPad.",
           "Les lignes de cadeau et d’extra ne peuvent plus recevoir d’autres remises, et ne comptent pas dans les seuils des autres promotions."
         ]
       },
@@ -2216,23 +2315,23 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Il n'existe pas encore de rapport de règlement mensuel dédié, mais tout ce qu'il faut pour faire votre rapprochement se trouve déjà dans l'application :"
+        "text": "Depuis la v3.4, Résultat affiche le bénéfice net de chaque mois après déduction du coût des produits, des frais et des dépenses — voir « Comment savoir combien ma boutique gagne réellement chaque mois ? » Il n’existe pas encore de rapport de règlement à exporter ou à imprimer, mais tout ce qu’il faut pour faire votre rapprochement se trouve déjà dans l’application :"
       },
       {
         "type": "list",
         "items": [
-          "Dans Stats, choisissez Ce mois-ci pour voir le chiffre d'affaires du mois, les sommes encaissées, le bénéfice et la répartition par mode de paiement.",
-          "Les achats auprès de fournisseurs avec paiement mensuel sont regroupés dans Factures impayées, sous Achats, où vous pouvez régler un mois entier d'un coup.",
-          "Les ventes en compte aux clients sont regroupées dans Commandes → Créances, où vous pouvez régler un mois entier d'un coup."
+          "Dans Stats, choisissez Ce mois-ci pour voir le chiffre d’affaires du mois, les sommes encaissées, le bénéfice et la répartition par mode de paiement.",
+          "Les achats auprès de fournisseurs avec paiement mensuel sont regroupés dans Factures impayées, sous Achats, où vous pouvez régler un mois entier d’un coup.",
+          "Les ventes en compte aux clients sont regroupées dans Commandes → Créances, où vous pouvez régler un mois entier d’un coup."
         ]
       },
       {
         "type": "p",
-        "text": "Si vous avez besoin d'un bilan de règlement mensuel à exporter ou à imprimer, écrivez-nous en indiquant les champs souhaités : nous donnons la priorité aux développements selon le nombre de demandes."
+        "text": "Si vous avez besoin d’un bilan de règlement mensuel à exporter ou à imprimer, écrivez-nous en indiquant les champs souhaités : nous donnons la priorité aux développements selon le nombre de demandes."
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

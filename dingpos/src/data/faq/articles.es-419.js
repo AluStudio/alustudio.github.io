@@ -427,7 +427,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Las comisiones son estimaciones basadas en la tasa que escribes; el estado de cuenta de tu proveedor muestra el monto real. Editar las tasas de comisión y ver las comisiones en Reportes requiere el plan Standard o superior. En Lite los campos están bloqueados, pero los pagos igualmente registran sus comisiones, así que aparecen cuando mejoras de plan."
+        "text": "Las comisiones son estimaciones basadas en la tasa que escribes; el estado de cuenta de tu proveedor muestra el monto real. Editar las tasas de comisión requiere el plan Standard o superior, y en Lite los campos están bloqueados. Desde la v3.4, todos los planes ven las comisiones registradas en Reportes y en Resultados, así que una tasa definida durante la prueba sigue estimando comisiones en Lite; las versiones anteriores mostraban las comisiones solo a partir de Standard."
       }
     ],
     "related": [
@@ -560,6 +560,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "¿Cómo agrego o cambio el cliente de una venta?",
+    "keywords": [
+      "cliente",
+      "miembro",
+      "asociar cliente",
+      "cambiar cliente",
+      "nuevo cliente",
+      "cobro"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Asocia al cliente en el carrito o en la pantalla de cobro: la fila Cliente, debajo del monto, abre la lista de clientes cuando no hay nadie asociado, y ofrece Cambiar cliente o Quitar cliente cuando sí lo hay. El cliente que eliges al cobrar es el cliente del carrito, y se queda en el carrito si cancelas el cobro."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Al cambiar de cliente se recalculan de inmediato los descuentos por nivel, las ofertas de cumpleaños y el canje de puntos. El efectivo o el anticipo que ya ingresaste se conserva y se verifica contra el nuevo total.",
+          "¿No lo encuentras? Toca Nuevo cliente en la parte superior derecha de la lista de clientes, o en el centro cuando nadie coincide con tu búsqueda. Lo que buscaste llena el formulario (los dígitos van al teléfono; cualquier otra cosa, al nombre) y el cliente nuevo se asocia a la venta.",
+          "Si tocas A cuenta sin un cliente asociado, se abre la lista de clientes, y A cuenta queda seleccionado en cuanto eliges a alguien.",
+          "Si el nuevo cliente hace que un descuento manual supere el tope de descuento del operador, primero lo aprueba un gerente; si cancelas la aprobación, el cliente queda como estaba."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Clientes es una función del plan Standard; en Lite la fila dice «Clientes — plan Standard» y abre los detalles para mejorar de plan. La fila Cliente del cobro llegó en la v3.4; las versiones anteriores asocian al cliente solo desde el carrito."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Me equivoqué al cobrar: ¿cómo anulo un pedido?",
@@ -686,7 +724,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sí. Selecciona al cliente al cobrar y elige A cuenta como método de pago. Una deuda necesita un responsable, por eso A cuenta no está disponible sin un cliente."
+        "text": "Sí. Elige A cuenta como método de pago y la venta se registra como deuda del cliente. Una deuda necesita un responsable, así que, si no hay un cliente asociado, al tocar A cuenta se abre primero la lista de clientes (desde la v3.4; las versiones anteriores piden asociar un cliente en el carrito)."
       },
       {
         "type": "p",
@@ -707,7 +745,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -726,7 +764,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sí. Las páginas de detalle de pedidos, clientes y órdenes de compra tienen una tarjeta de notas: tócala para editar, hasta 500 caracteres. También puedes escribir una en el formulario al crear un cliente o una orden de compra."
+        "text": "Sí. Las páginas de detalle de pedidos, clientes y órdenes de compra tienen notas: toca la tarjeta de notas para editar, hasta 500 caracteres, o la línea única «Agregar una nota» mientras no haya ninguna. También puedes escribir una en el formulario al crear un cliente o una orden de compra."
       },
       {
         "type": "p",
@@ -1040,6 +1078,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Desde la v3.4, mantén presionado el gráfico Tendencia de ingresos por ventas o Tendencia de utilidad para leerlo periodo por periodo: una tarjeta muestra la fecha y los ingresos por ventas o la utilidad de ese periodo y, en Tendencia de ingresos por ventas con Comparación de ventas activa, también los ingresos por ventas del periodo de comparación y la diferencia. Arrastra a la izquierda o a la derecha para avanzar; si deslizas hacia arriba o hacia abajo sobre el gráfico, la página se desplaza como siempre."
+      },
+      {
+        "type": "p",
         "text": "La tarjeta Ranking de productos muestra los 5 primeros. Toca la tarjeta o Ver todo para listar todos los productos vendidos en el periodo, ordenados por cantidad después de devoluciones."
       },
       {
@@ -1069,6 +1111,8 @@ export const articles = [
       "mapa de calor",
       "horas de más venta",
       "productos de baja rotación",
+      "variaciones",
+      "variación de productos",
       "valuación de inventario",
       "tasa de recompra",
       "puntos"
@@ -1084,13 +1128,14 @@ export const articles = [
           "Comparación de ventas: a la derecha de la barra de periodo, compara con el mismo periodo del año pasado o con el periodo anterior (un solo día contra el mismo día de la semana pasada, esta semana contra la semana pasada, este mes contra el mes pasado, este año contra el año pasado, un rango personalizado contra la misma cantidad de días anteriores). El indicador de Dinero recibido muestra la diferencia y la tasa de crecimiento, y el gráfico de ingresos por ventas agrega una línea más clara para el periodo de comparación. Mientras un periodo sigue en curso, el periodo de comparación se corta en el mismo momento.",
           "Día × hora: cambia el encabezado Ventas en el tiempo a Día × hora para ver un mapa de calor de siete días y 24 horas: cuanto más oscura la celda, más vendiste. Alterna entre ingresos y pedidos; con una comparación activa, verás qué horas crecieron y cuáles bajaron.",
           "Productos de baja rotación: cambia el encabezado de la tarjeta de ranking a Productos de baja rotación para listar los productos de menos a más ventas, con el stock actual y la última fecha en que se vendió cada uno. Los productos que nunca se vendieron aparecen como Nunca vendido. De forma predeterminada solo se muestran los productos con stock.",
+          "Variaciones (desde la v3.4): cambia el encabezado de la tarjeta de ranking a Variaciones para ver los 3 productos cuyos ingresos por ventas más subieron y los 3 que más bajaron respecto al periodo de comparación, cada uno con los ingresos por ventas de ambos periodos y la diferencia. Primero elige un periodo en Comparación de ventas; con Ninguno, o en Todo el tiempo, la tarjeta te lo indica. Toca la tarjeta o Ver todo para abrir la lista completa de Variación de productos, dividida en En alza y En baja.",
           "Tasa de recompra: la última línea del indicador de clientes es la proporción de miembros que compraron en el periodo y que han comprado dos o más veces en total.",
           "Ahora mismo: valuación de inventario (stock actual × costo actual), todos los movimientos de stock del periodo seleccionado y los puntos que los clientes tienen sin canjear, con el máximo que pueden descontar. Son saldos actuales; el periodo no los cambia."
         ]
       },
       {
         "type": "p",
-        "text": "Desde la v3.4, los cinco están disponibles en todos los planes y siguen disponibles después de que termina la prueba. Las versiones anteriores los mostraban solo en Pro, con un pequeño candado en los demás planes; si aún ves los candados, actualiza DingPOS desde el App Store."
+        "text": "Desde la v3.4, todos están disponibles en todos los planes y siguen disponibles después de que termina la prueba. Las versiones anteriores los mostraban solo en Pro, con un pequeño candado en los demás planes; si aún ves los candados, actualiza DingPOS desde el App Store."
       },
       {
         "type": "p",
@@ -1143,6 +1188,110 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "¿Cómo veo cuánto gané realmente cada mes?",
+    "keywords": [
+      "estado de resultados",
+      "pérdidas y ganancias",
+      "resultados",
+      "utilidad neta",
+      "utilidad mensual",
+      "gastos",
+      "utilidad operativa",
+      "p&l"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Abre Resultados, debajo de Reportes en la barra lateral. Ahí aparece cada mes, del más reciente al más antiguo, con su utilidad neta: el mes actual lleva la marca En curso, y el encabezado de cada año suma la utilidad neta de sus meses terminados."
+      },
+      {
+        "type": "p",
+        "text": "Toca un mes para ver cómo se calcula su utilidad neta:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ingresos por ventas (sin impuesto): los ingresos por ventas después de todos los descuentos, menos el impuesto, contados el día en que se entregó la mercancía.",
+          "Costo de productos: el costo de lo que se vendió, según los costos de tus productos.",
+          "Comisiones por procesamiento (est.): las comisiones estimadas con las tasas de tus métodos de pago.",
+          "Anticipos retenidos: los anticipos que conservaste cuando se canceló una preventa.",
+          "Gastos fijos y Gastos puntuales: lo que registraste para ese mes; consulta «¿Cómo registro la renta, la nómina y otros gastos?»."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Después hay tres gráficos: la utilidad neta de cada uno de los últimos 12 meses, la proporción de cada gasto fijo y la tendencia de los gastos fijos. En Reportes, la última línea de la tarjeta de utilidad lleva directo a Resultados: si el periodo es exactamente un mes, muestra la utilidad neta de ese mes, como «Utilidad neta de octubre: NT$12,300»; en cualquier otro periodo dice Ver estado de resultados mensual."
+      },
+      {
+        "type": "note",
+        "text": "La utilidad neta es la utilidad operativa antes del impuesto sobre la renta, calculada con lo que DingPOS ha registrado; no es una declaración de impuestos. Si se vendieron productos sin costo, el mes igual muestra una utilidad neta, marcada «No incluye el costo de N productos»; tócala para ver cuáles. Resultados está disponible en todos los planes. Con cuentas de personal, abrirlo requiere el permiso Resultados y gastos, que por defecto los Gerentes y el Personal necesitan que alguien apruebe, porque muestra los costos de los productos y la nómina."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "¿Cómo registro la renta, la nómina y otros gastos?",
+    "keywords": [
+      "gastos",
+      "renta",
+      "nómina",
+      "servicios básicos",
+      "gastos fijos",
+      "gastos operativos",
+      "distribuir un gasto",
+      "gasto puntual"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "En Resultados, toca Agregar gasto y elige un gasto fijo o un gasto puntual. Un gasto se cuenta en el mes al que corresponde, no en el mes en que lo pagaste, y la utilidad neta de cada mes se ajusta a eso."
+      },
+      {
+        "type": "p",
+        "text": "Un gasto fijo es el que pagas cada mes, como la renta, los servicios básicos o la nómina:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Escribe el nombre, el monto mensual y el mes en que inicia. Elige un mes anterior para registrar gastos pasados.",
+          "Cuando el monto cambia, toca Cambiar monto, elige el mes y escoge Desde este mes (un aumento de renta, por ejemplo) o Solo este mes (la cuenta de luz de este mes). Cada cambio aparece en una lista, y puedes abrir uno para editarlo o eliminarlo.",
+          "Cuando dejes de pagarlo, indica el Último mes contado: ese mes y los anteriores se siguen contando."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Un gasto puntual se paga una sola vez:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Para una remodelación, equipo o un seguro pagado por adelantado, activa Distribuir en varios meses y elige de 2 a 120 meses y el primer mes contado. El formulario muestra cuánto se cuenta cada mes y qué meses abarca.",
+          "Sin distribuir, igual puedes elegir el mes contado: una cuenta de octubre que llega en noviembre puede contarse en octubre, y se conserva su fecha real.",
+          "Si una distribución termina antes (un seguro cancelado, por ejemplo), usa Terminar distribución antes: lo que quede se cuenta en el mes que elijas."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Escribe lo que la tienda realmente asume, sin incluir los impuestos que puedas recuperar. El stock que vas a vender va por Compras, porque se cuenta en el costo del producto cuando se vende; los depósitos en garantía, el capital de préstamos y el dinero que retira el propietario no son gastos. Los cambios se guardan juntos al tocar ✓, y si un cambio llega a un mes ya terminado, primero te avisa la utilidad neta de qué meses va a cambiar."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1237,11 +1386,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Selecciona al miembro al cobrar y los puntos se acumulan solos; para canjearlos, ingresa los puntos que quieres usar. Al anular un pedido se descuentan los puntos que ganó y se devuelven los puntos que se canjearon."
+        "text": "Asocia al miembro a la venta, en el carrito o en la pantalla de cobro, y los puntos se acumulan solos; para canjearlos, ingresa los puntos que quieres usar. Al anular un pedido se descuentan los puntos que ganó y se devuelven los puntos que se canjearon."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1463,55 +1613,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "¿Puedo importar productos y ventas desde otro POS o una hoja de cálculo?",
-    "keywords": [
-      "importar",
-      "csv",
-      "excel",
-      "hoja de cálculo",
-      "migrar",
-      "cambiar de POS",
-      "carga masiva",
-      "historial de ventas"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Sí. Ve a Ajustes → Importar datos, elige si vas a importar productos o ventas y selecciona un archivo CSV (Excel y Google Sheets pueden guardar en CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "El archivo se abre como tabla. Los nombres de columna comunes en inglés y chino (tradicional o simplificado) se asocian automáticamente; toca el encabezado de cualquier columna para cambiar su asignación.",
-          "Toca cualquier celda para corregir su valor ahí mismo; no necesitas editar el archivo y empezar de nuevo.",
-          "Toca Confirmar para validar. Las filas con problemas se marcan en rojo con el motivo; en la importación de ventas se pueden omitir los pedidos con errores.",
-          "Resuelve lo que requiera una decisión (nombres de producto duplicados, una fila que coincide con varios clientes), revisa el resumen y toca Iniciar importación."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Las ventas importadas se ubican según la fecha del pedido y se recalculan con la moneda y el modo de impuestos de tu tienda. No afectan el stock y no otorgan puntos de bienvenida.",
-          "Los clientes se asocian con los existentes por teléfono o correo; los que no coincidan se crean.",
-          "Los pedidos importados muestran la fecha de Importado el y el número de pedido de origen, y no se pueden anular ni devolver.",
-          "Las filas con errores se pueden exportar como un CSV con los motivos anotados: corrígelas y vuelve a importar. Las filas duplicadas se omiten automáticamente."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "La importación de datos está en beta. Cada archivo puede tener hasta 50,000 filas o 20 MB. Haz un respaldo en la nube antes de importar; si algo no se importa o el resultado se ve mal, avísanos con Informar de un problema en la pantalla de importación."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1657,13 +1758,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Acciones (ajuste manual de stock, ajuste manual de puntos, administración de productos, aplicar un descuento que supere el tope de descuento): una aprobación cubre esa sola acción.",
-          "Vistas (costo y utilidad, Panel, Ajustes, respaldo y restauración): una aprobación desbloquea hasta que cambie el operador o la app pase a segundo plano.",
+          "Vistas (costo y utilidad, Panel, Resultados y gastos, Ajustes, respaldo y restauración): una aprobación desbloquea hasta que cambie el operador o la app pase a segundo plano.",
           "El tope de descuento aplica a los descuentos manuales y se revisa una sola vez al cobrar; las promociones automáticas y el canje de puntos no cuentan para el tope."
         ]
       },
       {
         "type": "p",
-        "text": "Valores de fábrica: los Gerentes tienen permitido todo excepto respaldo y restauración, sin tope de descuento; el Personal requiere aprobación para todo, con un tope de 10 %. El propietario siempre tiene permiso y no se puede editar. Para cambiarlo, ve a Personal → Permisos por rol, toca Editar y guarda una vez: se aplica a todos de inmediato."
+        "text": "Valores de fábrica: los Gerentes tienen permitido todo excepto respaldo y restauración, y Resultados y gastos, sin tope de descuento; el Personal requiere aprobación para todo, con un tope de 10 %. El propietario siempre tiene permiso y no se puede editar. Para cambiarlo, ve a Personal → Permisos por rol, toca Editar y guarda una vez: se aplica a todos de inmediato."
       },
       {
         "type": "note",
@@ -1797,13 +1898,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Los tres planes incluyen cobro completo, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (con los reportes avanzados incluidos desde la v3.4) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
+        "text": "Los tres planes incluyen cobro completo, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (con los reportes avanzados y el estado de resultados mensual incluidos desde la v3.4) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
       },
       {
         "type": "list",
         "items": [
           "Lite: para una persona que atiende un puesto y necesita cobro y productos.",
-          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y estimaciones de comisiones por procesamiento.",
+          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y tasas de comisión de pago.",
           "Pro: suma cuentas y permisos del personal, aprobación de gerente, registro de actividad y registros de restauración, para tiendas con personal."
         ]
       },
@@ -2010,13 +2111,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Los regalos y complementos nunca modifican el carrito por sí solos. Cuando se cumplen las condiciones, aparece un aviso de sugerencia en la pantalla de caja y el carrito cambia solo cuando el cajero toca Aceptar. Es a propósito: los regalos implican stock físico, y alguien debe confirmar que hay existencias y que el cliente lo quiere."
+        "text": "Los regalos y complementos nunca modifican el carrito por sí solos. Cuando se cumplen las condiciones, aparece un aviso de sugerencia en la pantalla de caja y el carrito cambia solo cuando el cajero toca Elegir regalo o Elegir complemento. Es a propósito: los regalos implican stock físico, y alguien debe confirmar que hay existencias y que el cliente lo quiere."
       },
       {
         "type": "list",
         "items": [
           "Después de tocar Rechazar, la misma sugerencia no vuelve a aparecer en este carrito; con un carrito nuevo o vaciado se vuelve a ofrecer.",
-          "Si aparece una sugerencia nueva antes de confirmar el cobro, hay que Aceptarla o Rechazarla antes de poder confirmar el pedido.",
+          "Desde la v3.4, las ofertas que siguen pendientes no impiden cobrar: una línea amarilla debajo del botón de pago, como «1 oferta pendiente no se aplicará», indica cuántas quedan fuera (tócala para ver cuáles), y el pedido se registra sin ellas. Para que el cobro espere como antes, activa Resolver ofertas antes de cobrar en Ajustes → Preferencias del dispositivo; se aplica solo a este iPad.",
           "Los artículos de regalo y de complemento no pueden recibir más descuentos de otras promociones de descuento, y no cuentan para los mínimos de otras promociones."
         ]
       },
@@ -2209,14 +2310,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Todavía no hay un reporte de cierre mensual específico, pero en la app ya tienes todo lo necesario para conciliar:"
+        "text": "Desde la v3.4, Resultados muestra la utilidad neta de cada mes después del costo de productos, las comisiones y los gastos; consulta «¿Cómo veo cuánto gané realmente cada mes?». Todavía no hay un reporte de cierre para exportar o imprimir, pero en la app ya tienes todo lo necesario para conciliar:"
       },
       {
         "type": "list",
         "items": [
-          "Elige Este mes en Reportes para ver los ingresos del mes, el dinero recibido, la utilidad y el desglose por método de pago.",
+          "Elige Este mes en Reportes para ver los ingresos por ventas del mes, el dinero recibido, la utilidad y el desglose por método de pago.",
           "Las compras a proveedores con pago mensual se reúnen en Por pagar, dentro de Compras, donde puedes liquidar todo un mes de una vez.",
-          "Las ventas a crédito a clientes se reúnen en Pedidos → Cuentas por cobrar, donde puedes liquidar todo un mes de una vez."
+          "Las ventas a cuenta a clientes se reúnen en Pedidos → Cuentas por cobrar, donde puedes liquidar todo un mes de una vez."
         ]
       },
       {
@@ -2225,7 +2326,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

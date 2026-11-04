@@ -426,7 +426,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Komissiya — siz kiritgan stavkadan hisoblangan taxmin; haqiqiy summa provayderingiz hisobotida ko‘rinadi. Komissiya stavkalarini tahrirlash va Statistika’da komissiyani ko‘rish uchun Standard yoki undan yuqori tarif kerak. Lite’da maydonlar qulflangan, lekin to‘lovlar baribir komissiyani yozib boradi, shuning uchun tarifni oshirgach ular ko‘rinadi."
+        "text": "Komissiya — siz kiritgan stavkadan hisoblangan taxmin; haqiqiy summa provayderingiz hisobotida ko‘rinadi. Komissiya stavkalarini tahrirlash uchun Standard yoki undan yuqori tarif kerak, Lite’da maydonlar qulflangan. v3.4 dan boshlab har bir tarif yozilgan komissiyalarni Statistika’da va P&L’da ko‘radi, shuning uchun sinov davrida belgilangan stavka Lite’da ham taxminni davom ettiradi; oldingi versiyalarda komissiya faqat Standard va undan yuqori tarifda ko‘rinardi."
       }
     ],
     "related": [
@@ -558,6 +558,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Sotuvga mijozni qanday biriktiraman yoki almashtiraman?",
+    "keywords": [
+      "mijoz",
+      "doimiy mijoz",
+      "mijozni biriktirish",
+      "mijozni almashtirish",
+      "yangi mijoz",
+      "to‘lov"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Mijozni savatda yoki to‘lov ekranida biriktiring: summa ostidagi Mijoz qatori hech kim biriktirilmagan bo‘lsa mijozlar ro‘yxatini ochadi, kimdir biriktirilgan bo‘lsa Mijozni almashtirish yoki Mijozni olib tashlash imkonini beradi. To‘lov ekranida tanlangan mijoz savatning mijozi bo‘ladi va to‘lovni bekor qilsangiz ham savatda qoladi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Mijozni almashtirsangiz, daraja chegirmalari, tug‘ilgan kun takliflari va ballarni ishlatish darhol qayta hisoblanadi. Allaqachon kiritilgan naqd pul yoki avans saqlanadi va yangi jami summaga nisbatan tekshiriladi.",
+          "Topa olmadingizmi? Mijozlar ro‘yxatining yuqori o‘ng burchagidagi Yangi mijoz tugmasini bosing, qidiruvingizga hech narsa mos kelmasa esa o‘rtadagisini. Qidirgan matningiz shaklga tushadi — raqamlar telefonga, qolgani ismga — va yangi mijoz sotuvga biriktiriladi.",
+          "Mijoz biriktirilmagan holda Nasiya tugmasini bossangiz, mijozlar ro‘yxati ochiladi va kimnidir tanlaganingizdan so‘ng Nasiya tanlanadi.",
+          "Yangi mijoz qo‘lda berilgan chegirmani joriy xodimning chegirma chegarasidan oshirib yuborsa, avval menejer tasdiqlaydi; tasdiqlashni bekor qilsangiz, mijoz avvalgidek qoladi."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Mijozlar Standard tarifiga kiradi; Lite’da qator “Mijozlar — Standard tarifi” deb ko‘rinadi va tarifni yangilash tafsilotlarini ochadi. To‘lov ekranidagi Mijoz qatori v3.4 da paydo bo‘lgan; oldingi versiyalarda mijoz faqat savatda biriktiriladi."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "To‘lovda xato qildim — buyurtmani qanday yaroqsiz deb belgilayman?",
@@ -682,7 +720,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ha. To‘lov oynasida mijozni tanlang va to‘lov usuli sifatida «Nasiya»ni belgilang. Qarzning egasi bo‘lishi kerak, shuning uchun mijozsiz «Nasiya» mavjud emas."
+        "text": "Ha. To‘lov usuli sifatida «Nasiya»ni tanlang — savdo mijozning qarzi sifatida yoziladi. Qarzning egasi bo‘lishi kerak, shuning uchun mijoz biriktirilmagan bo‘lsa, «Nasiya»ni bosganingizda avval mijozlar ro‘yxati ochiladi (v3.4 dan boshlab; oldingi versiyalarda mijozni savatda biriktirish so‘raladi)."
       },
       {
         "type": "p",
@@ -703,7 +741,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -722,7 +760,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ha. Buyurtma, mijoz va xarid buyurtmasi tafsilotlari sahifalarining har birida izohlar kartasi bor — tahrirlash uchun uni bosing, 500 belgigacha yozish mumkin. Mijoz yoki xarid buyurtmasini yaratayotganda ham formada izoh yozishingiz mumkin."
+        "text": "Ha. Buyurtma, mijoz va xarid buyurtmasi tafsilotlari sahifalarining har birida izohlar bor: tahrirlash uchun izohlar kartasini bosing (500 belgigacha yozish mumkin), izoh hali bo‘lmasa — yagona «Izoh qo‘shish» qatorini. Mijoz yoki xarid buyurtmasini yaratayotganda ham formada izoh yozishingiz mumkin."
       },
       {
         "type": "p",
@@ -1037,6 +1075,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "v3.4 dan boshlab Daromad dinamikasi yoki Foyda dinamikasi grafigini bosib turing — u davrma-davr o‘qiladi: karta sanani va shu davrning daromadi yoki foydasini ko‘rsatadi, Savdoni solishtirish yoqilgan Daromad dinamikasida esa solishtirish davrining daromadini va farqni ham. Davr bo‘ylab siljish uchun barmog‘ingizni chapga yoki o‘ngga suring; grafik ustida yuqoriga yoki pastga surilsa, sahifa odatdagidek aylanadi."
+      },
+      {
+        "type": "p",
         "text": "Mahsulotlar reytingi kartasida eng ko‘p sotilgan 5 ta mahsulot chiqadi. Kartani yoki Barchasini ko‘rish tugmasini bosing — davr ichida sotilgan barcha mahsulotlar qaytarishlardan keyingi miqdor bo‘yicha tartiblangan ro‘yxatda ochiladi."
       },
       {
@@ -1066,6 +1108,7 @@ export const articles = [
       "issiqlik xaritasi",
       "gavjum soatlar",
       "sekin sotiladigan mahsulotlar",
+      "daromadi o‘zgargan mahsulotlar",
       "ombor qiymati",
       "takroriy xarid ulushi",
       "ballar"
@@ -1081,13 +1124,14 @@ export const articles = [
           "Savdoni solishtirish: davr panelining o‘ng tomonida o‘tgan yilning shu davri yoki undan oldingi davr bilan taqqoslang (bir kunni o‘tgan haftaning shu kuni bilan, shu haftani o‘tgan hafta bilan, shu oyni o‘tgan oy bilan, shu yilni o‘tgan yil bilan, maxsus davrni undan oldingi xuddi shuncha kun bilan). Qabul qilingan pul kartasida farq va o‘sish sur’ati ko‘rinadi, daromad grafigiga esa solishtirish davri uchun ochroq chiziq qo‘shiladi. Davr hali tugamagan bo‘lsa, solishtirish davri ham xuddi shu paytda kesiladi.",
           "Hafta kuni × soat: Vaqt bo‘yicha savdo sarlavhasini Hafta kuni × soatga o‘tkazing — yetti kun va 24 soatlik issiqlik xaritasi chiqadi, katak qanchalik to‘q bo‘lsa, shunchalik ko‘p sotgansiz. Daromad va buyurtmalar o‘rtasida almashtiring; solishtirish yoqilganda qaysi soatlar o‘sgani va qaysilari kamaygani ko‘rinadi.",
           "Sekin sotiladigan mahsulotlar: reyting kartasi sarlavhasini Sekin sotiladigan mahsulotlarga o‘tkazing — mahsulotlar eng kam sotilganidan eng ko‘pigacha, hozirgi zaxirasi va oxirgi sotilgan sanasi bilan ro‘yxatlanadi. Hech sotilmagan mahsulotlar “Hech sotilmagan” deb belgilanadi. Odatda faqat zaxirada bor mahsulotlar ko‘rsatiladi.",
+          "O‘zgarishlar (v3.4 dan): reyting kartasi sarlavhasini O‘zgarishlarga o‘tkazing — solishtirish davriga nisbatan daromadi eng ko‘p oshgan 3 ta va eng ko‘p kamaygan 3 ta mahsulot chiqadi, har birida ikkala davrning daromadi va farqi ko‘rsatiladi. Avval Savdoni solishtirish bo‘limida davrni tanlang; Yo‘q yoki Butun davr tanlangan bo‘lsa, karta shuni eslatadi. To‘liq Daromadi o‘zgargan mahsulotlar ro‘yxati uchun kartani yoki Barchasini ko‘rish tugmasini bosing — u O‘sganlar va Tushganlar bo‘limlariga bo‘lingan.",
           "Takroriy xarid ulushi: mijozlar kartasining oxirgi qatori — davr ichida xarid qilgan va jami ikki yoki undan ko‘p marta xarid qilgan a’zolar ulushi.",
           "Hozir: ombor qiymati (hozirgi zaxira × hozirgi tannarx), tanlangan davrdagi barcha zaxira harakatlari hamda mijozlarda turgan, lekin ishlatilmagan ballar va ular bilan eng ko‘pi bilan qancha chegirma qilish mumkinligi. Bular joriy qoldiqlar; davr ularni o‘zgartirmaydi."
         ]
       },
       {
         "type": "p",
-        "text": "v3.4 dan boshlab bu beshalasi barcha tariflarda ochiq va sinov tugagandan keyin ham ochiq qoladi. Avvalgi versiyalarda ular faqat Pro tarifida ko‘rsatilgan, boshqa tariflarda esa kichik qulf turgan; agar hali ham qulflarni ko‘rsangiz, DingPOS’ni App Store orqali yangilang."
+        "text": "v3.4 dan boshlab bularning hammasi barcha tariflarda ochiq va sinov tugagandan keyin ham ochiq qoladi. Avvalgi versiyalarda ular faqat Pro tarifida ko‘rsatilgan, boshqa tariflarda esa kichik qulf turgan; agar hali ham qulflarni ko‘rsangiz, DingPOS’ni App Store orqali yangilang."
       },
       {
         "type": "p",
@@ -1140,6 +1184,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Do‘konim har oyda aslida qancha foyda qilganini qanday ko‘raman?",
+    "keywords": [
+      "foyda va zarar",
+      "p&l",
+      "sof foyda",
+      "oylik foyda",
+      "xarajatlar",
+      "operatsion foyda",
+      "moliyaviy natijalar hisoboti"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Yon paneldagi Statistika ostida joylashgan P&L bo‘limini oching. U har bir oyni yangisidan eskisigacha sof foydasi bilan ro‘yxatlaydi: joriy oy Davom etmoqda deb belgilanadi, har bir yil sarlavhasi esa shu yilning tugagan oylaridagi sof foydani qo‘shib ko‘rsatadi."
+      },
+      {
+        "type": "p",
+        "text": "Oyni bosing — uning sof foydasi qanday hisoblanganini ko‘rasiz:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Daromad (soliqsiz): barcha chegirmalardan keyingi daromad minus soliq; tovar topshirilgan kunda hisobga olinadi.",
+          "Mahsulot tannarxi: sotilgan tovarning tannarxi, mahsulotlaringizdagi tannarxlar asosida.",
+          "Komissiya haqi (taxm.): to‘lov usullaringiz stavkalari bo‘yicha taxmin qilingan komissiyalar.",
+          "Ushlab qolingan avanslar: oldindan buyurtma bekor qilinganda o‘zingizda qoldirgan avanslar.",
+          "Doimiy xarajatlar va Bir martalik xarajatlar: o‘sha oy uchun kiritgan xarajatlaringiz — “Ijara, ish haqi va boshqa xarajatlarni qanday kiritaman?” maqolasiga qarang."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Undan keyin uchta grafik keladi: oxirgi 12 oyning har biri uchun sof foyda, har bir doimiy xarajatning ulushi va doimiy xarajatlar dinamikasi. Statistikada foyda kartasining oxirgi qatori to‘g‘ridan-to‘g‘ri P&L’ga olib boradi: roppa-rosa bir oylik davrda u shu oyning sof foydasini ko‘rsatadi, masalan, “Oktyabr sof foyda: NT$12,300”; boshqa har qanday davrda esa Oylik foyda va zararni ko‘rish deb yoziladi."
+      },
+      {
+        "type": "note",
+        "text": "Sof foyda — daromad solig‘igacha bo‘lgan operatsion foyda; u DingPOS qayd etgan ma’lumotlardan hisoblanadi va soliq deklaratsiyasi emas. Agar mahsulotlar tannarxsiz sotilgan bo‘lsa, oy baribir sof foydani ko‘rsatadi, ammo “N ta mahsulotning tannarxi hisobga olinmagan” deb belgilanadi; qaysilari ekanini ko‘rish uchun uni bosing. P&L barcha tariflarda bor. Xodimlar qo‘shilgan bo‘lsa, uni ochish uchun Foyda va zarar, xarajatlar ruxsati kerak; u mahsulot tannarxi va ish haqini ko‘rsatgani uchun Menejerlar va Xodimlar uchun sukut bo‘yicha tasdiqlashni talab qiladi."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Ijara, ish haqi va boshqa xarajatlarni qanday kiritaman?",
+    "keywords": [
+      "xarajatlar",
+      "ijara",
+      "ish haqi",
+      "kommunal to‘lovlar",
+      "doimiy xarajatlar",
+      "qo‘shimcha xarajatlar",
+      "taqsimlash",
+      "bir martalik xarajat"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "P&L bo‘limida Xarajat qo‘shish tugmasini bosing va doimiy yoki bir martalik xarajatni tanlang. Xarajat to‘langan oyda emas, o‘zi tegishli bo‘lgan oyda hisobga olinadi va har oyning sof foydasi shunga qarab o‘zgaradi."
+      },
+      {
+        "type": "p",
+        "text": "Doimiy xarajat — har oy to‘lanadigan xarajat, masalan, ijara, kommunal to‘lovlar yoki ish haqi:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nomini, oylik summani va boshlanish oyini kiriting. Oldingi oylarni to‘ldirish uchun avvalgi oyni tanlang.",
+          "Summa o‘zgarganda Summani o‘zgartirish tugmasini bosing, oyni tanlang va Shu oydan boshlab (masalan, ijara oshganda) yoki Faqat shu oy (shu oydagi elektr hisobi) ni belgilang. Har bir o‘zgarish ro‘yxatda ko‘rinadi; uni ochib tahrirlash yoki olib tashlash mumkin.",
+          "To‘lashni to‘xtatganingizda Oxirgi hisoblangan oyni belgilang: o‘sha oy va undan oldingi oylar hisobga olinaveradi."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Bir martalik xarajat — bir marta to‘lanadigan xarajat:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Do‘kon ta’miri, jihozlar yoki oldindan to‘langan sug‘urta uchun Bir necha oyga taqsimlashni yoqing va 2 dan 120 gacha oyni hamda birinchi hisoblangan oyni tanlang. Forma har oyga qancha hisoblanishini va qaysi oylarni qamrab olishini oldindan ko‘rsatadi.",
+          "Taqsimlamasangiz ham, hisoblanadigan oyni tanlashingiz mumkin: noyabrda kelgan oktyabr hisobi oktyabrda hisobga olinishi mumkin, haqiqiy sanasi esa saqlanadi.",
+          "Taqsimlangan xarajat erta tugasa (masalan, sug‘urta polisi bekor qilingan bo‘lsa), Taqsimlashni erta tugatish tugmasidan foydalaning: qolgan qismi siz tanlagan oyda hisobga olinadi."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Do‘kon haqiqatda ko‘taradigan summani kiriting, qaytarib olish mumkin bo‘lgan soliqni kiritmang. Sotadigan tovaringiz o‘rniga Xaridlar orqali kiritiladi, chunki u sotilganda mahsulot tannarxiga kiradi; qaytariladigan garov pullari, kreditning asosiy qarzi va egasi olgan pul xarajat hisoblanmaydi. O‘zgarishlar ✓ ni bosganingizda birgalikda saqlanadi, tugagan oyga ta’sir qiladigan o‘zgarish esa avval qaysi oylarning sof foydasi o‘zgarishini aytadi."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1237,11 +1384,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "To‘lov paytida a’zoni tanlang — ballar avtomatik to‘planadi; ishlatish uchun sarflanadigan ballarni kiriting. Buyurtma yaroqsiz deb belgilansa, u uchun berilgan ballar qaytarib olinadi, ishlatilgan ballar esa qaytariladi."
+        "text": "A’zoni sotuvga savatda yoki to‘lov ekranida biriktiring — ballar avtomatik to‘planadi; ishlatish uchun sarflanadigan ballarni kiriting. Buyurtma yaroqsiz deb belgilansa, u uchun berilgan ballar qaytarib olinadi, ishlatilgan ballar esa qaytariladi."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1462,55 +1610,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Boshqa kassa dasturidan yoki jadvaldan mahsulot va savdolarni import qilsa bo‘ladimi?",
-    "keywords": [
-      "import",
-      "csv",
-      "excel",
-      "jadval",
-      "ko‘chirish",
-      "kassa dasturini almashtirish",
-      "ommaviy yuklash",
-      "savdo tarixi"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Ha. Sozlamalar → Ma’lumotlar importi bo‘limiga kiring, mahsulotlarni yoki savdolarni import qilishni tanlang va CSV faylni ko‘rsating (Excel va Google Sheets ikkalasi ham CSV sifatida saqlay oladi)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Fayl jadval ko‘rinishida ochiladi. Inglizcha va xitoycha (an’anaviy yoki soddalashtirilgan) keng tarqalgan ustun nomlari o‘zi moslashtiriladi; moslashtirishni o‘zgartirish uchun istalgan ustun sarlavhasini bosing.",
-          "Qiymatni joyida tuzatish uchun istalgan katakni bosing — faylni tahrirlab, boshidan boshlash shart emas.",
-          "Tekshirish uchun Tasdiqlash tugmasini bosing. Muammoli qatorlar sababi bilan qizil rangda belgilanadi; savdolarni import qilishda xatoli buyurtmalarni o‘tkazib yuborish mumkin.",
-          "Qaror talab qiladigan holatlarni hal qiling (takrorlangan mahsulot nomlari, bir nechta mijozga mos kelgan qator), xulosani ko‘rib chiqing va Importni boshlash tugmasini bosing."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Import qilingan savdolar buyurtma sanasi bo‘yicha joylashtiriladi va do‘koningizning valyutasi hamda soliq rejimi bilan qayta hisoblanadi. Ular zaxiraga tegmaydi va xush kelibsiz ballarini bermaydi.",
-          "Mijozlar mavjud mijozlarga telefon yoki email bo‘yicha moslashtiriladi; mos kelmaganlari yangi yaratiladi.",
-          "Import qilingan buyurtmalarda Import sanasi va manbadagi buyurtma raqami ko‘rsatiladi; ularni yaroqsiz deb belgilab yoki qaytarib bo‘lmaydi.",
-          "Xatoli qatorlarni sabablari yozilgan CSV sifatida eksport qilish mumkin — ularni tuzatib, qayta import qiling. Takrorlangan qatorlar o‘zi o‘tkazib yuboriladi."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Ma’lumotlar importi beta bosqichida. Har bir fayl ko‘pi bilan 50 000 qator yoki 20 MB bo‘lishi mumkin. Import qilishdan oldin bulutga zaxira nusxa oling; biror narsa import bo‘lmasa yoki natija noto‘g‘ri ko‘rinsa, import ekranidagi Muammo haqida xabar berish orqali bizga yozing."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1654,13 +1753,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Amallar (zaxirani qo‘lda o‘zgartirish, ballarni qo‘lda o‘zgartirish, mahsulotlarni boshqarish, chegirma chegarasidan oshiq chegirma bilan to‘lov qabul qilish): bitta tasdiq faqat shu bitta amalni qamrab oladi.",
-          "Ko‘rinishlar (tannarx va foyda, Boshqaruv paneli, Sozlamalar, zaxira nusxa va tiklash): tasdiq joriy xodim almashguncha yoki ilova fonga o‘tguncha ochiq turadi.",
+          "Ko‘rinishlar (tannarx va foyda, Boshqaruv paneli, “Foyda va zarar, xarajatlar”, Sozlamalar, zaxira nusxa va tiklash): tasdiq joriy xodim almashguncha yoki ilova fonga o‘tguncha ochiq turadi.",
           "Chegirma chegarasi qo‘lda berilgan chegirmalarga tatbiq etiladi va to‘lov paytida bir marta tekshiriladi; avtomatik aksiyalar va ballarni ishlatish unga kirmaydi."
         ]
       },
       {
         "type": "p",
-        "text": "Boshlang‘ich sozlamalar: Menejerlarga zaxira nusxa va tiklashdan tashqari hamma narsa ruxsat etilgan, chegirma chegarasi yo‘q; Xodimlarga hamma narsa uchun tasdiq kerak, chegara 10%. Do‘kon egasiga doim hamma narsaga ruxsat berilgan va uning ruxsatlarini tahrirlab bo‘lmaydi. O‘zgartirish uchun Xodimlar → Lavozim ruxsatlari bo‘limiga o‘ting, Tahrirlash tugmasini bosing va bir marta saqlang — o‘zgarish hamma uchun darhol kuchga kiradi."
+        "text": "Boshlang‘ich sozlamalar: Menejerlarga zaxira nusxa va tiklash hamda “Foyda va zarar, xarajatlar”dan tashqari hamma narsa ruxsat etilgan, chegirma chegarasi yo‘q; Xodimlarga hamma narsa uchun tasdiq kerak, chegara 10%. Do‘kon egasiga doim hamma narsaga ruxsat berilgan va uning ruxsatlarini tahrirlab bo‘lmaydi. O‘zgartirish uchun Xodimlar → Lavozim ruxsatlari bo‘limiga o‘ting, Tahrirlash tugmasini bosing va bir marta saqlang — o‘zgarish hamma uchun darhol kuchga kiradi."
       },
       {
         "type": "note",
@@ -1794,13 +1893,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Uchala tarifda ham to‘liq to‘lov qabul qilish, mahsulotlar, buyurtmalar (yaroqsiz deb belgilash, qaytarish va almashtirish bilan), hisobotlar (v3.4 dan boshlab kengaytirilgan hisobotlar ham) va bulutdagi nusxa bor. Farq do‘konni boshqarish vositalarida:"
+        "text": "Uchala tarifda ham to‘liq to‘lov qabul qilish, mahsulotlar, buyurtmalar (yaroqsiz deb belgilash, qaytarish va almashtirish bilan), hisobotlar (v3.4 dan boshlab kengaytirilgan hisobotlar va oylik P&L ham) va bulutdagi nusxa bor. Farq do‘konni boshqarish vositalarida:"
       },
       {
         "type": "list",
         "items": [
           "Lite: peshtaxtada yolg‘iz ishlaydigan, faqat to‘lov qabul qilish va mahsulotlar kerak bo‘lgan sotuvchi uchun.",
-          "Standard: aksiyalar, ballar va a’zolik darajalari, zaxirani hisobga olish, xaridlar, nasiya savdo, oldindan buyurtmalar va taxminiy to‘lov komissiyalarini qo‘shadi.",
+          "Standard: aksiyalar, ballar va a’zolik darajalari, zaxirani hisobga olish, xaridlar, nasiya savdo, oldindan buyurtmalar va to‘lov komissiyasi stavkalarini qo‘shadi.",
           "Pro: xodimlar uchun kirish profillari va ruxsatlar, menejer tomonidan PIN bilan tasdiqlash, faoliyat jurnali va tiklash yozuvlarini qo‘shadi — xodimlari bor do‘konlar uchun."
         ]
       },
@@ -2007,13 +2106,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sovg‘a va pullik qo‘shimcha savatni o‘zi o‘zgartirmaydi. Shartlar bajarilganda kassir ekranida taklif banneri chiqadi va savat faqat kassir Qabul qilish tugmasini bosganda o‘zgaradi — bu ataylab shunday, chunki sovg‘a jismoniy zaxiraga tegishli: kimdir u omborda borligini va mijoz uni xohlashini tasdiqlashi kerak."
+        "text": "Sovg‘a va pullik qo‘shimcha savatni o‘zi o‘zgartirmaydi. Shartlar bajarilganda kassir ekranida taklif banneri chiqadi va savat faqat kassir Sovg‘ani tanlash yoki Qo‘shimchani tanlash tugmasini bosganda o‘zgaradi — bu ataylab shunday, chunki sovg‘a jismoniy zaxiraga tegishli: kimdir u omborda borligini va mijoz uni xohlashini tasdiqlashi kerak."
       },
       {
         "type": "list",
         "items": [
           "Rad etish bosilgach, xuddi shu taklif ushbu savat uchun qayta chiqmaydi; yangi yoki tozalangan savatda yana taklif qilinadi.",
-          "To‘lovni tasdiqlashdan oldin yangi taklif chiqsa, buyurtmani yuborishdan oldin uni qabul qilish yoki rad etish kerak.",
+          "v3.4 dan boshlab kutilayotgan takliflar to‘lovni to‘xtatmaydi: to‘lov tugmasi ostidagi sariq qator, masalan, “1 ta kutilayotgan taklif qo‘llanmaydi”, nechta taklif chetda qolganini aytadi (qaysilari ekanini ko‘rish uchun uni bosing), buyurtma esa ularsiz o‘tadi. To‘lov avvalgidek kutib turishi uchun Sozlamalar → Qurilma sozlamalari bo‘limida To‘lovdan oldin takliflarni hal qilishni yoqing; bu faqat shu iPad’ga tegishli.",
           "Sovg‘a va qo‘shimcha qatorlariga boshqa pulli aksiyalar qo‘shimcha chegirma bera olmaydi va ular boshqa aksiyalar chegarasiga hisoblanmaydi."
         ]
       },
@@ -2204,7 +2303,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alohida oylik hisob-kitob hisoboti hozircha yo‘q, lekin solishtirish uchun kerak bo‘lgan hamma narsa ilovada allaqachon bor:"
+        "text": "v3.4 dan boshlab P&L har oyning sof foydasini mahsulot tannarxi, komissiya haqi va xarajatlardan keyin ko‘rsatadi — “Do‘konim har oyda aslida qancha foyda qilganini qanday ko‘raman?” maqolasiga qarang. Eksport qilish yoki chop etish mumkin bo‘lgan hisob-kitob hisoboti hozircha yo‘q, lekin solishtirish uchun kerak bo‘lgan hamma narsa ilovada allaqachon bor:"
       },
       {
         "type": "list",
@@ -2220,7 +2319,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

@@ -433,7 +433,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Avgifterna är beräkningar utifrån den sats du anger. Leverantörens utdrag visar det faktiska beloppet. För att ändra avgiftssatser och se avgifter i Statistik krävs planen Standard eller högre. På Lite är fälten låsta, men betalningar registrerar ändå sina avgifter, så de syns när du uppgraderar."
+        "text": "Avgifterna är beräkningar utifrån den sats du anger. Leverantörens utdrag visar det faktiska beloppet. För att ändra avgiftssatser krävs planen Standard eller högre, och på Lite är fälten låsta. Sedan v3.4 ser alla planer de registrerade avgifterna i Statistik och i fliken Resultat, så en sats som ställdes in under provperioden fortsätter att beräkna avgifter även på Lite. Tidigare versioner visade avgifter bara på Standard och högre."
       }
     ],
     "related": [
@@ -563,6 +563,45 @@ export const articles = [
     "related": [
       "apply-discounts",
       "guide-priority-stacking"
+    ]
+  },
+  {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Hur lägger jag till eller byter kund på ett köp?",
+    "keywords": [
+      "kund",
+      "medlem",
+      "koppla kund",
+      "byta kund",
+      "ny kund",
+      "betalning",
+      "kundregister"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Du kan koppla en kund till köpet i varukorgen eller på betalningsskärmen: raden Kund under beloppet öppnar kundlistan när ingen är kopplad, och erbjuder Byt kund eller Ta bort kund när någon är det. Kunden som väljs vid betalning blir varukorgens kund och ligger kvar i varukorgen om du avbryter betalningen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Om du byter kund räknas nivårabatter, födelsedagserbjudanden och inlösen av poäng om direkt. Kontanter eller en handpenning som du redan angett behålls och kontrolleras mot den nya totalen.",
+          "Hittar du inte kunden? Tryck på Ny kund uppe till höger i kundlistan, eller i mitten när inget matchar din sökning. Det du sökte på fyller i formuläret – siffror hamnar i telefonnumret, allt annat i namnet – och den nya kunden kopplas till köpet.",
+          "Om du trycker på På räkning utan att någon kund är kopplad öppnas kundlistan, och På räkning väljs så snart du har valt någon.",
+          "Om den nya kunden gör att en manuell rabatt överskrider den aktiva medarbetarens rabatttak måste en chef godkänna först. Avbryter du godkännandet förblir kunden som den var."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Kunder ingår i planen Standard. På Lite står det ”Kunder – planen Standard” på raden, och den öppnar uppgraderingsinformationen. Raden Kund på betalningsskärmen kom i v3.4; tidigare versioner kopplar kunden bara i varukorgen."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
     ]
   },
   {
@@ -696,7 +735,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Välj kunden i kassan och välj På räkning som betalningsmetod. En skuld måste ha en ägare, så På räkning går inte att välja utan kund."
+        "text": "Ja. Välj På räkning som betalningsmetod, så registreras köpet som kundens skuld. En skuld måste ha en ägare, så när ingen kund är kopplad öppnas kundlistan först när du trycker på På räkning (från v3.4; tidigare versioner ber dig koppla en kund i varukorgen)."
       },
       {
         "type": "p",
@@ -717,7 +756,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -736,7 +775,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Detaljsidorna för ordrar, kunder och inköpsordrar har var sitt anteckningskort – tryck på det för att redigera, upp till 500 tecken. Du kan också skriva en anteckning i formuläret när du skapar en kund eller en inköpsorder."
+        "text": "Ja. Detaljsidorna för ordrar, kunder och inköpsordrar har var sitt anteckningskort – tryck på det för att redigera, upp till 500 tecken, eller på den enda raden ”Lägg till en anteckning” så länge det inte finns någon. Du kan också skriva en anteckning i formuläret när du skapar en kund eller en inköpsorder."
       },
       {
         "type": "p",
@@ -1049,6 +1088,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Sedan v3.4 kan du trycka och hålla på diagrammet Intäktstrend eller Vinsttrend för att läsa av det period för period: ett kort visar datumet och periodens intäkt eller vinst, och i Intäktstrend med Försäljningsjämförelse påslagen även jämförelseperiodens intäkt och skillnaden. Dra åt vänster eller höger för att flytta dig längs diagrammet. Svep uppåt eller nedåt över diagrammet så rullar sidan som vanligt."
+      },
+      {
+        "type": "p",
         "text": "Kortet Produktranking visar de fem främsta. Tryck på kortet eller på Visa alla för att lista alla produkter som sålts under perioden, rankade efter antal efter returer."
       },
       {
@@ -1078,6 +1121,7 @@ export const articles = [
       "värmekarta",
       "rusningstider",
       "långsamgående produkter",
+      "produkter som ökar och minskar",
       "lagervärde",
       "återköpsfrekvens",
       "poäng"
@@ -1093,13 +1137,14 @@ export const articles = [
           "Försäljningsjämförelse: till höger i periodfältet jämför du med samma period förra året eller med perioden före (en enskild dag mot samma dag förra veckan, denna vecka mot förra veckan, denna månad mot förra månaden, detta år mot förra året, ett anpassat intervall mot lika många dagar närmast före). Rutan Mottagna betalningar visar skillnaden och tillväxttakten, och intäktsdiagrammet får en ljusare linje för jämförelseperioden. Medan en period pågår klipps jämförelseperioden vid samma tidpunkt.",
           "Veckodag × timme: växla rubriken Försäljning över tid till Veckodag × timme för en värmekarta över sju dagar och 24 timmar – ju mörkare ruta, desto mer sålde du. Växla mellan intäkt och ordrar. Med jämförelse påslagen ser du vilka timmar som ökat och vilka som minskat.",
           "Långsamgående produkter: växla rubriken på rankingkortet till Långsamgående produkter för att lista produkterna från minst till mest sålda, med aktuellt lagersaldo och datumet då varje produkt senast såldes. Produkter som aldrig sålts markeras Aldrig såld. Som standard visas bara produkter som finns i lager.",
+          "Förändring (sedan v3.4): växla rubriken på rankingkortet till Förändring för de 3 produkter vars intäkt ökat mest och de 3 som minskat mest jämfört med jämförelseperioden, med båda periodernas intäkt och skillnaden. Välj först en period under Försäljningsjämförelse. Med Ingen, eller på Hela tiden, säger kortet vad du ska göra. Tryck på kortet eller på Visa alla för hela listan Produkter med störst förändring, uppdelad i Ökar och Minskar.",
           "Återköpsfrekvens: sista raden i kundrutan visar andelen medlemmar som handlat under perioden och som totalt handlat två gånger eller fler.",
           "Just nu: lagervärde (aktuellt lagersaldo × aktuellt inköpspris), alla lagerrörelser under vald period samt de poäng kunderna har men inte löst in, med det mesta de kan dra av. Det är aktuella saldon, och perioden påverkar dem inte."
         ]
       },
       {
         "type": "p",
-        "text": "Sedan v3.4 är alla fem öppna i alla planer och förblir öppna även när provperioden har tagit slut. Tidigare versioner visade dem bara i Pro, med ett litet lås i övriga planer. Ser du fortfarande låsen, uppdatera DingPOS från App Store."
+        "text": "Sedan v3.4 är alla öppna i alla planer och förblir öppna även när provperioden har tagit slut. Tidigare versioner visade dem bara i Pro, med ett litet lås i övriga planer. Ser du fortfarande låsen, uppdatera DingPOS från App Store."
       },
       {
         "type": "p",
@@ -1152,6 +1197,110 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hur ser jag hur mycket butiken faktiskt tjänade varje månad?",
+    "keywords": [
+      "resultaträkning",
+      "resultat",
+      "nettovinst",
+      "vinst per månad",
+      "kostnader",
+      "rörelseresultat",
+      "P&L",
+      "månadsresultat"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Öppna Resultat, under Statistik i sidofältet. Där listas varje månad från den nyaste till den äldsta med sin nettovinst: den pågående månaden är markerad Pågår, och varje års rubrik summerar nettovinsten för årets avslutade månader."
+      },
+      {
+        "type": "p",
+        "text": "Tryck på en månad för att se hur nettovinsten räknas fram:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Intäkt (exkl. moms): intäkten efter alla rabatter, minus moms, räknad den dag varorna lämnades över.",
+          "Varukostnad: kostnaden för det som såldes, utifrån inköpspriserna på dina produkter.",
+          "Betalningsavgifter (uppsk.): avgifter som beräknats utifrån dina betalningssätts avgiftssatser.",
+          "Förverkade handpenningar: handpenningar du behöll när en förbeställning avbokades.",
+          "Fasta kostnader och Engångskostnader: det du registrerat för den månaden – se ”Hur registrerar jag hyra, löner och andra kostnader?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Därefter kommer tre diagram: nettovinsten för var och en av de senaste 12 månaderna, varje fast kostnads andel och trenden för de fasta kostnaderna. I Statistik hoppar sista raden i vinstrutan direkt till Resultat: för en period som är exakt en månad visar den månadens nettovinst, till exempel ”oktober nettovinst NT$12,300”. För alla andra perioder står det Visa resultaträkning per månad."
+      },
+      {
+        "type": "note",
+        "text": "Nettovinst är rörelseresultat före inkomstskatt, beräknat utifrån det DingPOS har registrerat – ingen skattedeklaration. Om produkter såldes utan inköpspris visar månaden ändå en nettovinst, markerad ”Exkluderar inköpspriset för N produkter”. Tryck på den för att se vilka. Resultat ingår i alla planer. Med medarbetarkonton krävs behörigheten Resultat och kostnader för att öppna fliken. Chefer och medarbetare behöver godkännande för den som standard, eftersom den visar produkternas inköpspris och löner."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hur registrerar jag hyra, löner och andra kostnader?",
+    "keywords": [
+      "kostnader",
+      "hyra",
+      "löner",
+      "el och vatten",
+      "fasta kostnader",
+      "omkostnader",
+      "fördela kostnad",
+      "engångskostnad"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "I Resultat trycker du på Lägg till kostnad och väljer en fast kostnad eller en engångskostnad. En kostnad räknas i den månad den hör till, inte i den månad du betalade den, och nettovinsten för varje månad följer med."
+      },
+      {
+        "type": "p",
+        "text": "En fast kostnad är en du betalar varje månad, som hyra, el och vatten eller löner:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ange namn, månadsbelopp och den månad den startar. Välj en tidigare månad för att räkna bakåt.",
+          "När beloppet ändras trycker du på Ändra belopp, väljer månad och väljer Från den här månaden (till exempel en hyreshöjning) eller Bara den här månaden (den här månadens elräkning). Varje ändring listas, och du kan öppna en för att redigera eller ta bort den.",
+          "När du slutar betala den anger du Sista månad som räknas: den månaden och månaderna före räknas fortfarande."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "En engångskostnad betalas en gång:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "För butiksinredning, utrustning eller förbetald försäkring slår du på Fördela på flera månader och väljer 2 till 120 månader och Första månad som räknas. Formuläret visar i förväg hur mycket som räknas varje månad och vilka månader det gäller.",
+          "Utan fördelning kan du ändå välja Månad som räknas: en oktoberräkning som kommer i november kan räknas i oktober, med det verkliga datumet bevarat.",
+          "Om en fördelning upphör i förtid (till exempel en uppsagd försäkring) använder du Avsluta fördelningen i förtid: det som återstår räknas i den månad du väljer."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Ange det butiken faktiskt står för och räkna inte med moms som du kan få tillbaka. Varor du ska sälja hör i stället till Inköp, eftersom de ingår i varukostnaden när de säljs. Depositioner som du får tillbaka, lånekapital och pengar som ägaren tar ut är inte kostnader. Ändringar sparas tillsammans när du trycker på ✓, och en ändring som når en avslutad månad talar först om för vilka månaders nettovinst som ändras."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1250,11 +1399,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Välj medlemmen vid betalning så samlas poängen automatiskt. Om du vill lösa in anger du hur många poäng som ska användas. När en order makuleras dras de poäng den gav tillbaka, och inlösta poäng återförs."
+        "text": "Koppla medlemmen till köpet, i varukorgen eller på betalningsskärmen, så samlas poängen automatiskt. Om du vill lösa in anger du hur många poäng som ska användas. När en order makuleras dras de poäng den gav tillbaka, och inlösta poäng återförs."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1476,55 +1626,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Kan jag importera produkter och försäljning från ett annat kassasystem eller ett kalkylblad?",
-    "keywords": [
-      "importera",
-      "csv",
-      "excel",
-      "kalkylblad",
-      "byta kassasystem",
-      "flytta data",
-      "massimport",
-      "försäljningshistorik"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Ja. Gå till Inställningar → Dataimport, välj om du vill importera produkter eller försäljning och välj en CSV-fil (Excel och Google Sheets kan båda spara som CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Filen öppnas som en tabell. Vanliga kolumnnamn på engelska och kinesiska (traditionell eller förenklad) matchas automatiskt. Tryck på en kolumnrubrik för att ändra dess koppling.",
-          "Tryck på en cell för att rätta värdet direkt – du behöver inte redigera filen och börja om.",
-          "Tryck på Bekräfta för att kontrollera filen. Rader med problem markeras med rött och orsak. Vid import av försäljning kan ordrar med fel hoppas över.",
-          "Lös allt som kräver ett val (produkter med samma namn, en rad som matchar flera kunder), gå igenom sammanfattningen och tryck sedan på Starta importen."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Importerad försäljning placeras efter orderdatum och räknas om med butikens valuta och momsläge. Den påverkar inte lagret och ger inga välkomstpoäng.",
-          "Kunder matchas mot befintliga via telefonnummer eller e-post. Kunder utan träff skapas.",
-          "Importerade ordrar visar ett importdatum och källans ordernummer och kan inte makuleras eller returneras.",
-          "Rader med fel kan exporteras som en CSV-fil med orsakerna angivna – rätta dem och importera igen. Dubblettrader hoppas över automatiskt."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Dataimporten är en betaversion. Varje fil kan innehålla upp till 50 000 rader eller 20 MB. Säkerhetskopiera till molnet före importen. Om något inte går att importera eller resultatet ser fel ut, berätta för oss via Rapportera ett problem på importskärmen."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1670,13 +1771,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Åtgärder (manuell lagerjustering, manuell poängjustering, produkthantering, genomföra ett köp med rabatt som överskrider rabatttaket): ett godkännande gäller just den åtgärden.",
-          "Vyer (inköpspris och vinst, Översikt, Inställningar, säkerhetskopiering och återställning): ett godkännande låser upp tills den aktiva medarbetaren byts eller appen går till bakgrunden.",
+          "Vyer (inköpspris och vinst, Översikt, Resultat och kostnader, Inställningar, säkerhetskopiering och återställning): ett godkännande låser upp tills den aktiva medarbetaren byts eller appen går till bakgrunden.",
           "Rabatttaket gäller manuella rabatter och kontrolleras en gång vid betalning. Automatiska kampanjer och inlösen av poäng räknas inte mot det."
         ]
       },
       {
         "type": "p",
-        "text": "Standardinställningar: Chefer får göra allt utom säkerhetskopiering och återställning, utan rabatttak. Medarbetare kräver godkännande för allt, med ett tak på 10 %. Ägaren har alltid behörighet och kan inte redigeras. Om du vill ändra något går du till Personal → Rollbehörigheter, trycker på Redigera och sparar en gång – det gäller direkt för alla."
+        "text": "Standardinställningar: Chefer får göra allt utom säkerhetskopiering och återställning samt Resultat och kostnader, utan rabatttak. Medarbetare kräver godkännande för allt, med ett tak på 10 %. Ägaren har alltid behörighet och kan inte redigeras. Om du vill ändra något går du till Personal → Rollbehörigheter, trycker på Redigera och sparar en gång – det gäller direkt för alla."
       },
       {
         "type": "note",
@@ -1809,13 +1910,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alla tre planerna ger dig full kassafunktion, produkter, ordrar (med makuleringar, returer och byten), rapporter (avancerade rapporter ingår sedan v3.4) och säkerhetskopiering i molnet. Skillnaden ligger i verktygen för att driva butiken:"
+        "text": "Alla tre planerna ger dig full kassafunktion, produkter, ordrar (med makuleringar, returer och byten), rapporter (avancerade rapporter och den månatliga resultaträkningen ingår sedan v3.4) och säkerhetskopiering i molnet. Skillnaden ligger i verktygen för att driva butiken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: för dig som driver ett marknadsstånd ensam och behöver kassa och produkter.",
-          "Standard: lägger till kampanjer, poäng och kundnivåer, lagerstyrning, inköp, försäljning på räkning, förbeställningar och beräknade betalningsavgifter.",
+          "Standard: lägger till kampanjer, poäng och kundnivåer, lagerstyrning, inköp, försäljning på räkning, förbeställningar och avgiftssatser för betalningar.",
           "Pro: lägger till medarbetarkonton och behörigheter, godkännande från en chef, aktivitetsloggen och återställningslogg – för butiker med personal."
         ]
       },
@@ -2028,13 +2129,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Gratisvaror och betalda tillval ändrar aldrig varukorgen på egen hand. När villkoren är uppfyllda visas en förslagsbanner på kassaskärmen, och varukorgen ändras först när kassören trycker på knappen i bannern (Välj gratisvara eller Välj tillval) – det är avsiktligt, eftersom gratisvaror rör fysiskt lager: någon måste bekräfta att varan finns och att kunden vill ha den."
+        "text": "Gratisvaror och betalda tillval ändrar aldrig varukorgen på egen hand. När villkoren är uppfyllda visas en förslagsbanner på kassaskärmen, och varukorgen ändras först när kassören trycker på Välj gratisvara eller Välj tillval – det är avsiktligt, eftersom gratisvaror rör fysiskt lager: någon måste bekräfta att varan finns och att kunden vill ha den."
       },
       {
         "type": "list",
         "items": [
           "Efter Avböj visas samma förslag inte igen för den här varukorgen; en ny eller tömd varukorg ger förslaget igen.",
-          "Om ett nytt förslag dyker upp innan betalningen bekräftas måste det accepteras eller avböjas innan ordern kan skickas in.",
+          "Sedan v3.4 stoppar obehandlade erbjudanden inte betalningen: en gul rad under betalknappen, till exempel ”1 obehandlat erbjudande tillämpas inte”, visar hur många som lämnas utanför (tryck på den för att se vilka), och ordern går igenom utan dem. Om du vill att betalningen ska vänta som tidigare slår du på Hantera erbjudanden före betalning under Inställningar → Enhetsval. Det gäller bara den här iPaden.",
           "Rader med gratisvaror och tillval kan inte rabatteras ytterligare av andra rabattkampanjer och räknas inte mot andra kampanjers gränser."
         ]
       },
@@ -2228,7 +2329,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Det finns ännu ingen särskild rapport för månadsavstämning, men allt du behöver för att stämma av finns redan i appen:"
+        "text": "Sedan v3.4 visar Resultat varje månads nettovinst efter varukostnad, avgifter och kostnader – se ”Hur ser jag hur mycket butiken faktiskt tjänade varje månad?” Det finns ännu ingen avstämningsrapport att exportera eller skriva ut, men allt du behöver för att stämma av finns redan i appen:"
       },
       {
         "type": "list",
@@ -2244,7 +2345,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

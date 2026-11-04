@@ -273,10 +273,6 @@
           "name": "Tuotteiden hallinta",
           "desc": "Variantit, viivakoodit, kuvat, luokat, avohintaiset tuotteet"
         },
-        "import": {
-          "name": "Tietojen tuonti",
-          "desc": "Tuo tuotteet ja aiemmat myynnit muista järjestelmistä CSV-tiedostolla"
-        },
         "inventory": {
           "name": "Varastoseuranta",
           "desc": "Varasto vähenee myynnistä; manuaaliset muutokset tallentuvat varastoliikkeisiin"
@@ -301,9 +297,13 @@
           "name": "Liiketoiminnan kojelauta",
           "desc": "Liikevaihto, myyntikate, alennukset, maksutavat ja myydyimmät tuotteet"
         },
+        "profit_loss": {
+          "name": "Kuukausittainen tuloslaskelma",
+          "desc": "Kirjaa vuokra, palkat ja muut kulut ja näe kunkin kuukauden liikevoitto"
+        },
         "payment_fees": {
-          "name": "Maksukulujen arviot",
-          "desc": "Määritä kunkin maksutavan maksukulun määrä; näet arvioidut maksukulut ja nettotulon maksutavoittain"
+          "name": "Maksukulujen määrät",
+          "desc": "Määritä kunkin maksutavan maksukulun määrä; näet arvioidut maksukulut ja arvioidun nettotulon"
         },
         "comparison": {
           "name": "Jaksojen vertailu",

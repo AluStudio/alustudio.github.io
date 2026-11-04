@@ -177,7 +177,7 @@ export const articles = [
           "Payments collected before the method had a rate carry no fee: Stats marks them “N missing a rate” and shows the net as “—”.",
         ],
       },
-      { type: "note", text: "Fees are estimates from the rate you enter; your provider's statement is the actual amount. Editing fee rates and seeing fees on Stats need the Standard plan or higher. On Lite the fields are locked, but payments still record their fees, so they show up once you upgrade." },
+      { type: "note", text: "Fees are estimates from the rate you enter; your provider's statement is the actual amount. Editing fee rates needs the Standard plan or higher, and on Lite the fields are locked. Since v3.4 every plan sees the recorded fees on Stats and in P&L, so a rate set during the trial keeps estimating on Lite; earlier versions showed fees on Standard and higher only." },
     ],
     related: ["payment-methods", "revenue-vs-cash", "plans-compare"],
   },
@@ -241,6 +241,27 @@ export const articles = [
       { type: "p", text: "Removing a manual discount restores the line's promotion eligibility on the next evaluation." },
     ],
     related: ["apply-discounts", "guide-priority-stacking"],
+  },
+  {
+    slug: "checkout-customer",
+    category: "checkout",
+    since: "3.4",
+    question: "How do I add or change the customer on a sale?",
+    keywords: ["customer", "member", "attach customer", "change customer", "new customer", "checkout"],
+    content: [
+      { type: "p", text: "Attach the customer in the cart, or on the checkout screen: the Customer row under the amount opens the customer list when no one is attached, and offers Change Customer or Remove Customer when someone is. The customer chosen at checkout is the cart's customer, and stays on the cart if you cancel checkout." },
+      {
+        type: "list",
+        items: [
+          "Changing the customer recalculates tier discounts, birthday offers, and points redemption right away. Cash or a deposit you already entered is kept and checked against the new total.",
+          "Can't find them? Tap New Customer at the top right of the customer list, or in the middle when nothing matches your search. What you searched for fills the form — digits go to the phone, anything else to the name — and the new customer is attached to the sale.",
+          "Tapping On Account with no customer attached opens the customer list, and On Account is selected once you pick someone.",
+          "If the new customer pushes a manual discount past the operator's discount cap, a manager approves first; cancel the approval and the customer stays as it was.",
+        ],
+      },
+      { type: "note", text: "Customers are part of the Standard plan; on Lite the row reads “Customers — Standard plan” and opens the upgrade details. The checkout Customer row arrived in v3.4; earlier versions attach the customer in the cart only." },
+    ],
+    related: ["loyalty-points",  "on-account",  "member-tiers"],
   },
 
   // ── Orders & Returns ────────────────────────────────────────
@@ -307,7 +328,7 @@ export const articles = [
     question: "Can regulars buy on account and pay later?",
     keywords: ["on account", "credit", "tab", "receivable", "settle", "pay later"],
     content: [
-      { type: "p", text: "Yes. Select the customer at checkout and choose On Account as the payment method. A debt needs someone to own it, so On Account isn't available without a customer." },
+      { type: "p", text: "Yes. Choose On Account as the payment method, and the sale is recorded as the customer's debt. A debt needs someone to own it, so with no customer attached, tapping On Account opens the customer list first (since v3.4; earlier versions ask you to attach a customer in the cart)." },
       { type: "p", text: "To collect, switch the top of Orders to Receivables. Debts are grouped by customer; open one to settle a single order, a whole month, or everything — each time DingPOS asks how the money was paid. A single order can also be settled from its detail view, and a settlement entered by mistake can be taken back with Undo Settlement." },
       {
         type: "list",
@@ -319,7 +340,7 @@ export const articles = [
       },
       { type: "note", text: "Creating on-account sales requires the Standard plan or higher. After a downgrade you can't start new ones, but existing receivables can still be viewed and settled." },
     ],
-    related: ["revenue-vs-cash", "payment-methods", "pre-orders"],
+    related: ["revenue-vs-cash", "checkout-customer", "pre-orders"],
   },
   {
     slug: "order-notes",
@@ -328,7 +349,7 @@ export const articles = [
     question: "Can I add notes to orders, customers, or purchase orders?",
     keywords: ["note", "notes", "memo", "comment", "remark"],
     content: [
-      { type: "p", text: "Yes. Order, customer, and purchase order detail pages each have a notes card — tap it to edit, up to 500 characters. You can also write one in the form when creating a customer or a purchase order." },
+      { type: "p", text: "Yes. Order, customer, and purchase order detail pages each have notes: tap the notes card to edit, up to 500 characters, or the single “Add a note” line while there are none. You can also write one in the form when creating a customer or a purchase order." },
       { type: "p", text: "Notes don't depend on status: completed orders, voided orders, and returns can all be annotated or edited. An order's amounts and items are fixed at checkout; the note sits alongside the document and never changes its contents." },
     ],
     related: ["void-order", "purchase-orders"],
@@ -478,6 +499,7 @@ export const articles = [
     content: [
       { type: "p", text: "Pick Today, Yesterday, This Week, This Month, This Year, or All Time at the top of Stats, or use Custom to choose a start and end date. This Week follows the device's first day of the week; This Month and This Year start on the 1st and on January 1. Each option shows the dates it covers, and All Time starts from your store's first transaction." },
       { type: "p", text: "For a single day, the trend chart becomes an hourly bar chart; longer periods use days, weeks, months, or years per bar depending on length." },
+      { type: "p", text: "Since v3.4, press and hold the Revenue Trend or Profit Trend chart to read it period by period: a card shows the date and that period's revenue or profit, and on Revenue Trend with Sales comparison on, the comparison period's revenue and the difference too. Drag left or right to move along; swipe up or down on the chart and the page scrolls as usual." },
       { type: "p", text: "The Product Ranking card lists the top 5. Tap the card or View All to list every product sold in the period, ranked by quantity after returns." },
       { type: "p", text: "Sales comparison on the right of the period bar compares the period with the one before it or with the same period last year — see “What do the advanced reports show?”" },
       { type: "note", text: "These calendar periods arrived in v2.4; earlier versions offered rolling ranges (Today / 7 Days / 30 Days / All Time). If you still see those, update DingPOS from the App Store." },
@@ -489,7 +511,7 @@ export const articles = [
     category: "reports",
     since: "3.0",
     question: "What do the advanced reports show?",
-    keywords: ["advanced reports", "sales comparison", "last year", "heatmap", "busy hours", "slow movers", "stock value", "repeat rate", "points"],
+    keywords: ["advanced reports", "sales comparison", "last year", "heatmap", "busy hours", "slow movers", "movers", "stock value", "repeat rate", "points"],
     content: [
       { type: "p", text: "Advanced reports aren't a separate screen — they sit right on Stats and follow the period you pick at the top:" },
       {
@@ -498,11 +520,12 @@ export const articles = [
           "Sales comparison: on the right of the period bar, compare with the same period last year or with the period before (a single day against the same day last week, this week against last week, this month against last month, this year against last year, a custom range against the same number of days before it). The Cash Received tile shows the difference and growth rate, and the revenue chart adds a lighter line for the comparison period. While a period is still running, the comparison period is cut at the same moment.",
           "Weekday × hour: switch the Sales over time header to Weekday × hour for a seven-day, 24-hour heatmap — the darker a cell, the more you sold. Switch between revenue and orders; with a comparison on, see which hours grew and which shrank.",
           "Slow Movers: switch the ranking card's header to Slow Movers to list products from fewest sales to most, with current stock and the last date each one sold. Products that never sold are marked Never sold. Only products in stock are shown by default.",
+          "Movers (since v3.4): switch the ranking card's header to Movers for the 3 products whose revenue rose most and the 3 that fell most against the comparison period, each with both periods' revenue and the difference. Pick a period under Sales comparison first; with None, or on All Time, the card tells you to. Tap the card or View All for the full Product movers list, split into Rising and Falling.",
           "Repeat rate: the last line of the customers tile is the share of members who bought in the period and have bought two or more times in total.",
           "Right now: stock value (current stock × current cost), every stock movement in the selected period, and the points customers hold but haven't redeemed, with the most they can take off. These are current balances; the period doesn't change them.",
         ],
       },
-      { type: "p", text: "Since v3.4, all five are open on every plan, and they stay open after the trial ends. Earlier versions showed them on Pro only, with a small lock on other plans; if you still see the locks, update DingPOS from the App Store." },
+      { type: "p", text: "Since v3.4, all of them are open on every plan, and they stay open after the trial ends. Earlier versions showed them on Pro only, with a small lock on other plans; if you still see the locks, update DingPOS from the App Store." },
       { type: "p", text: "Lite doesn't track stock or loyalty points, but Right now still shows the stock value and unredeemed points your store already holds (for example from the trial), or zero." },
       { type: "note", text: "Staff see advanced reports under the Dashboard permission; the stock value amounts also need the Cost & profit permission." },
     ],
@@ -520,6 +543,60 @@ export const articles = [
       { type: "note", text: "A cost you add affects later sales only; sales already made are not recalculated. This calculation arrived in v3.1: earlier versions only took off manual item discounts and counted inclusive tax as profit, so after updating, periods with discounts or inclusive tax show lower profit. That's a correction, not lost data." },
     ],
     related: ["report-periods", "product-variants", "purchase-orders"],
+  },
+  {
+    slug: "profit-loss",
+    category: "reports",
+    since: "3.4",
+    question: "How do I see how much I actually made each month?",
+    keywords: ["profit and loss", "p&l", "net profit", "monthly profit", "expenses", "operating profit", "income statement"],
+    content: [
+      { type: "p", text: "Open P&L, below Stats in the sidebar. It lists every month from newest to oldest with its net profit: the current month is marked In progress, and each year's header adds up the net profit of its finished months." },
+      { type: "p", text: "Tap a month to see how its net profit is worked out:" },
+      {
+        type: "list",
+        items: [
+          "Revenue (excl. tax): revenue after every discount, less tax, counted on the day the goods were handed over.",
+          "Product cost: the cost of what sold, from the costs on your products.",
+          "Processing fees (est.): the fees estimated from your payment methods' rates.",
+          "Forfeited deposits: deposits you kept when a pre-order was cancelled.",
+          "Fixed expenses and One-off expenses: what you recorded for that month — see “How do I record rent, payroll, and other expenses?”",
+        ],
+      },
+      { type: "p", text: "Three charts follow: net profit for each of the last 12 months, each fixed expense's share, and the fixed expenses trend. On Stats, the last line of the profit card jumps straight to P&L: for a period that is exactly one month it shows that month's net profit, like “October net profit NT$12,300”; for any other period it reads View monthly P&L." },
+      { type: "note", text: "Net profit is operating profit before income tax, worked out from what DingPOS has recorded — not a tax return. If products sold without a cost, the month still shows a net profit, marked “Excludes the cost of N products”; tap it to see which ones. P&L is on every plan. With staff accounts, opening it takes the P&L & expenses permission, which Managers and Staff need approval for by default, because it shows product costs and payroll." },
+    ],
+    related: ["record-expenses",  "profit-not-tracked",  "staff-permissions"],
+  },
+  {
+    slug: "record-expenses",
+    category: "reports",
+    since: "3.4",
+    question: "How do I record rent, payroll, and other expenses?",
+    keywords: ["expenses", "rent", "payroll", "utilities", "fixed expenses", "overhead", "amortization", "one-off expense"],
+    content: [
+      { type: "p", text: "In P&L, tap Add Expense and choose a fixed or a one-off expense. An expense counts in the month it belongs to, not the month you paid it, and every month's net profit follows." },
+      { type: "p", text: "A fixed expense is one you pay every month, like rent, utilities, or payroll:" },
+      {
+        type: "list",
+        items: [
+          "Enter the name, the monthly amount, and the month it starts. Pick an earlier month to backfill.",
+          "When the amount changes, tap Change Amount, pick the month, and choose From this month (a rent increase, say) or This month only (this month's power bill). Every change is listed, and you can open one to edit or remove it.",
+          "When you stop paying it, set Last month counted: that month and the ones before it still count.",
+        ],
+      },
+      { type: "p", text: "A one-off expense is paid once:" },
+      {
+        type: "list",
+        items: [
+          "For a fit-out, equipment, or prepaid insurance, turn on Spread over several months and choose 2 to 120 months and the first month counted. The form previews how much counts each month and which months it covers.",
+          "Without spreading, you can still pick the month counted: an October bill that arrives in November can count in October, with its real date kept.",
+          "If a spread ends early (an insurance policy cancelled, say), use End Spread Early: whatever is left counts in the month you pick.",
+        ],
+      },
+      { type: "note", text: "Enter what the shop actually bears, leaving out any tax you can reclaim. Stock you'll sell goes through Purchasing instead, because it's counted in product cost when sold; security deposits, loan principal, and money the owner takes out aren't expenses. Changes save together when you tap ✓, and a change that reaches a finished month first tells you which months' net profit will change." },
+    ],
+    related: ["profit-loss",  "purchase-orders",  "roadmap-monthly-settlement"],
   },
 
   // ── Promotions & Loyalty ────────────────────────────────────
@@ -572,9 +649,9 @@ export const articles = [
     keywords: ["points", "loyalty", "rewards", "redeem", "welcome points"],
     content: [
       { type: "p", text: "Go to Settings → Loyalty Program and define two rules: earn Y points per X spent, and redeem N points for M off (with an optional per-order redemption cap). You can also grant welcome points to new members automatically." },
-      { type: "p", text: "Select the member at checkout and points accrue automatically; to redeem, enter the points to use. Voiding an order takes back the points it earned and refunds any points that were redeemed." },
+      { type: "p", text: "Attach the member to the sale, in the cart or on the checkout screen, and points accrue automatically; to redeem, enter the points to use. Voiding an order takes back the points it earned and refunds any points that were redeemed." },
     ],
-    related: ["member-tiers", "void-order"],
+    related: ["member-tiers", "checkout-customer", "void-order"],
   },
   {
     slug: "member-tiers",
@@ -677,36 +754,6 @@ export const articles = [
     related: ["transfer-new-ipad", "supported-devices"],
   },
   {
-    slug: "import-csv",
-    category: "backup",
-    since: "2.3",
-    question: "Can I import products and sales from another POS or a spreadsheet?",
-    keywords: ["import", "csv", "excel", "spreadsheet", "migrate", "switch pos", "bulk", "sales history"],
-    content: [
-      { type: "p", text: "Yes. Go to Settings → Data Import, choose whether to import products or sales, and pick a CSV file (Excel and Google Sheets can both save as CSV)." },
-      {
-        type: "steps",
-        items: [
-          "The file opens as a table. Common column names in English and Chinese (Traditional or Simplified) are matched automatically; tap any column header to change its mapping.",
-          "Tap any cell to fix its value right there — no need to edit the file and start over.",
-          "Tap Confirm to validate. Rows with problems are flagged in red with the reason; sales imports can skip orders with errors.",
-          "Resolve anything that needs a decision (duplicate product names, a row matching several customers), review the summary, then tap Start Import.",
-        ],
-      },
-      {
-        type: "list",
-        items: [
-          "Imported sales are placed by order date and recalculated with your store's currency and tax mode. They don't touch stock and don't grant welcome points.",
-          "Customers are matched to existing ones by phone or email; anyone unmatched is created.",
-          "Imported orders show an Imported On date and the source order number, and can't be voided or returned.",
-          "Rows with errors can be exported as a CSV annotated with the reasons — fix them and import again. Duplicate rows are skipped automatically.",
-        ],
-      },
-      { type: "note", text: "Data import is in beta. Each file can hold up to 50,000 rows or 20 MB. Run a cloud backup before importing; if something won't import or the result looks wrong, tell us through Report a Problem on the import screen." },
-    ],
-    related: ["backup-data", "transfer-new-ipad", "product-variants"],
-  },
-  {
     slug: "undo-restore",
     category: "backup",
     since: "3.0",
@@ -776,11 +823,11 @@ export const articles = [
         type: "list",
         items: [
           "Actions (manual stock adjustment, manual points adjustment, product management, checking out above the discount cap): one approval covers that one action.",
-          "Views (cost & profit, Dashboard, Settings, backup & restore): an approval unlocks until the operator changes or the app goes to the background.",
+          "Views (cost & profit, Dashboard, P&L & expenses, Settings, backup & restore): an approval unlocks until the operator changes or the app goes to the background.",
           "The discount cap applies to manual discounts and is checked once at checkout; automatic promotions and points redemption don't count against it.",
         ],
       },
-      { type: "p", text: "Factory defaults: Managers are allowed everything except backup & restore, with no discount cap; Staff need approval for everything, with a 10% cap. The owner is always allowed and can't be edited. To change it, go to Staff → Role permissions, tap Edit, and save once — it applies to everyone immediately." },
+      { type: "p", text: "Factory defaults: Managers are allowed everything except backup & restore and P&L & expenses, with no discount cap; Staff need approval for everything, with a 10% cap. The owner is always allowed and can't be edited. To change it, go to Staff → Role permissions, tap Edit, and save once — it applies to everyone immediately." },
       { type: "note", text: "Voids, returns, on-account sales, and purchasing deliberately have no permission; they only record who handled them. To review them later, use the activity log." },
     ],
     related: ["staff-accounts", "activity-log", "apply-discounts"],
@@ -840,12 +887,12 @@ export const articles = [
     question: "What's the difference between Lite, Standard, and Pro?",
     keywords: ["plans", "lite", "standard", "pro", "difference", "compare", "upgrade", "downgrade", "pricing"],
     content: [
-      { type: "p", text: "All three plans include full checkout, products, orders (with voids, returns, and exchanges), reports (advanced reports included since v3.4), and cloud backup. They differ in the tools for running the shop:" },
+      { type: "p", text: "All three plans include full checkout, products, orders (with voids, returns, and exchanges), reports (advanced reports and the monthly P&L included since v3.4), and cloud backup. They differ in the tools for running the shop:" },
       {
         type: "list",
         items: [
           "Lite: for one person running a stall who needs checkout and products.",
-          "Standard: adds promotions, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, pre-orders, and payment fee estimates.",
+          "Standard: adds promotions, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, pre-orders, and payment fee rates.",
           "Pro: adds staff accounts and permissions, manager approval, the activity log, and restore records — for shops with staff.",
         ],
       },
@@ -958,12 +1005,12 @@ export const articles = [
     keywords: ["gift", "add-on", "bundle", "buy a get b", "guide"],
     content: [
       { type: "p", text: "Three composite offer types are available: gift with purchase (buy A get B), paid add-on (add $X to get Y), and bundle price (any N for $X). Gifts and paid add-ons wait for the cashier to confirm; bundle prices apply automatically." },
-      { type: "p", text: "Gifts and paid add-ons never modify the cart on their own. When conditions are met, a suggestion banner appears on the cashier screen, and the cart changes only when the cashier taps Accept — deliberate, because gifts involve physical stock: someone needs to confirm it's on hand and the customer wants it." },
+      { type: "p", text: "Gifts and paid add-ons never modify the cart on their own. When conditions are met, a suggestion banner appears on the cashier screen, and the cart changes only when the cashier taps Pick gift or Pick add-on — deliberate, because gifts involve physical stock: someone needs to confirm it's on hand and the customer wants it." },
       {
         type: "list",
         items: [
           "After Decline, the same suggestion won't reappear for this cart; a new or cleared cart prompts again.",
-          "If a new suggestion appears before checkout confirmation, it must be Accepted or Declined before the order can be submitted.",
+          "Since v3.4, offers still pending don't stop checkout: a yellow line under the pay button, like “1 pending offer won’t apply”, says how many are left out (tap it to see which), and the order goes through without them. To make checkout wait as before, turn on Handle offers before checkout in Settings → Device Preferences; it applies to this iPad only.",
           "Gift and add-on lines can't be discounted further by other money promotions, and don't count toward other promotions' thresholds.",
         ],
       },
@@ -1060,7 +1107,7 @@ export const articles = [
     question: "Will there be a monthly settlement report?",
     keywords: ["monthly settlement", "reconciliation", "closing", "monthly report", "payables", "receivables"],
     content: [
-      { type: "p", text: "There's no dedicated monthly settlement report yet, but everything you need to reconcile is already in the app:" },
+      { type: "p", text: "Since v3.4, P&L shows each month's net profit after product cost, fees, and expenses — see “How do I see how much I actually made each month?” There's no settlement report to export or print yet, but everything you need to reconcile is already in the app:" },
       {
         type: "list",
         items: [
@@ -1071,6 +1118,6 @@ export const articles = [
       },
       { type: "p", text: "If you need a monthly settlement report you can export or print, write to us with the fields you need — we prioritize development by the number of requests." },
     ],
-    related: ["revenue-vs-cash", "purchase-orders", "on-account"],
+    related: ["profit-loss", "purchase-orders", "on-account"],
   },
 ];

@@ -10,5 +10,5 @@ export const HOME_FAQ_SLUGS = [
   "after-trial",
   "backup-data",
   "multi-device",
-  "import-csv",
+  "plans-compare",
 ];

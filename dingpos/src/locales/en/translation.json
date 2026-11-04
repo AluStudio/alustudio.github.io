@@ -272,10 +272,6 @@
           "name": "Product management",
           "desc": "Variants, barcodes, photos, categories, open-price items"
         },
-        "import": {
-          "name": "Data import",
-          "desc": "Import products and past sales from other systems via CSV"
-        },
         "inventory": {
           "name": "Inventory tracking",
           "desc": "Stock deducts on sale; manual adjustments keep a movement record"
@@ -300,9 +296,13 @@
           "name": "Business dashboard",
           "desc": "Revenue, profit, discounts, payment mix and best sellers"
         },
+        "profit_loss": {
+          "name": "Monthly P&L",
+          "desc": "Record rent, payroll and other expenses; see each month's net profit"
+        },
         "payment_fees": {
-          "name": "Payment fee estimates",
-          "desc": "Set each payment method's fee rate; see fees and net received by method"
+          "name": "Payment fee rates",
+          "desc": "Set each payment method's fee rate to estimate fees and net received"
         },
         "comparison": {
           "name": "Period comparison",

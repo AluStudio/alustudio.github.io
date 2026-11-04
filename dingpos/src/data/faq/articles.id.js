@@ -427,7 +427,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Biaya adalah perkiraan dari tarif yang Anda masukkan; laporan penyedia Anda adalah jumlah sebenarnya. Mengubah tarif biaya dan melihat biaya di Statistik memerlukan paket Standard atau lebih tinggi. Di Lite kolomnya terkunci, tetapi pembayaran tetap mencatat biayanya, sehingga biaya itu muncul setelah Anda upgrade."
+        "text": "Biaya adalah perkiraan dari tarif yang Anda masukkan; laporan penyedia Anda adalah jumlah sebenarnya. Mengubah tarif biaya memerlukan paket Standard atau lebih tinggi, dan di Lite kolomnya terkunci. Sejak v3.4, semua paket melihat biaya yang tercatat di Statistik dan di Laba Rugi, sehingga tarif yang diatur selama masa uji coba tetap memperkirakan biaya di Lite; versi sebelumnya hanya menampilkan biaya di Standard ke atas."
       }
     ],
     "related": [
@@ -560,6 +560,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Bagaimana cara menambahkan atau mengganti pelanggan pada penjualan?",
+    "keywords": [
+      "pelanggan",
+      "member",
+      "pilih pelanggan",
+      "ganti pelanggan",
+      "pelanggan baru",
+      "bayar"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Pilih pelanggan di keranjang atau di layar Bayar: baris Pelanggan di bawah jumlah tagihan membuka daftar pelanggan jika belum ada yang dipilih, dan menawarkan Ganti Pelanggan atau Hapus Pelanggan jika sudah ada. Pelanggan yang dipilih saat bayar menjadi pelanggan keranjang, dan tetap di keranjang jika Anda membatalkan pembayaran."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Mengganti pelanggan langsung menghitung ulang diskon tingkat, penawaran ulang tahun, dan penukaran poin. Uang tunai atau uang muka yang sudah Anda isi tetap tersimpan dan diperiksa terhadap total yang baru.",
+          "Tidak menemukannya? Ketuk Pelanggan Baru di kanan atas daftar pelanggan, atau di tengah saat tidak ada yang cocok dengan pencarian Anda. Kata yang Anda cari mengisi formulir — angka masuk ke telepon, selain itu ke nama — dan pelanggan baru langsung ditambahkan ke penjualan.",
+          "Mengetuk Penjualan tempo saat belum ada pelanggan membuka daftar pelanggan, dan Penjualan tempo terpilih setelah Anda memilih seseorang.",
+          "Jika pelanggan baru membuat diskon manual melewati batas diskon operator, manajer menyetujui lebih dulu; batalkan persetujuan itu dan pelanggan tetap seperti semula."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Pelanggan termasuk dalam paket Standard; di Lite barisnya bertuliskan “Pelanggan — paket Standard” dan membuka rincian upgrade. Baris Pelanggan di layar Bayar hadir sejak v3.4; versi sebelumnya hanya memilih pelanggan di keranjang."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Salah input saat bayar, bagaimana cara membatalkan penjualan (void)?",
@@ -687,7 +725,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bisa. Pilih pelanggan saat bayar lalu pilih Penjualan tempo sebagai metode pembayaran. Setiap penjualan tempo harus terkait dengan pelanggan, jadi opsi Penjualan tempo tidak tersedia tanpa memilih pelanggan."
+        "text": "Bisa. Pilih Penjualan tempo sebagai metode pembayaran, maka penjualan itu dicatat sebagai tagihan pelanggan. Tagihan harus ada yang menanggungnya, jadi jika belum ada pelanggan, mengetuk Penjualan tempo membuka daftar pelanggan lebih dulu (sejak v3.4; versi sebelumnya meminta Anda memilih pelanggan di keranjang)."
       },
       {
         "type": "p",
@@ -708,7 +746,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -727,7 +765,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bisa. Halaman rincian pesanan, pelanggan, dan pesanan pembelian masing-masing punya kartu catatan — ketuk untuk mengedit, maksimal 500 karakter. Anda juga bisa menulisnya di formulir saat membuat pelanggan atau pesanan pembelian."
+        "text": "Bisa. Halaman rincian pesanan, pelanggan, dan pesanan pembelian masing-masing punya catatan — ketuk kartu catatan untuk mengedit, maksimal 500 karakter, atau baris “Tambah catatan” selama belum ada catatan. Anda juga bisa menulisnya di formulir saat membuat pelanggan atau pesanan pembelian."
       },
       {
         "type": "p",
@@ -1044,6 +1082,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Sejak v3.4, tekan dan tahan grafik Tren Pendapatan atau Tren Laba untuk membacanya periode demi periode: sebuah kartu menampilkan tanggal beserta pendapatan atau laba periode itu, dan pada Tren Pendapatan dengan perbandingan penjualan aktif, juga pendapatan periode pembanding serta selisihnya. Geser ke kiri atau kanan untuk berpindah; jika Anda menggesek ke atas atau bawah pada grafik, halaman bergulir seperti biasa."
+      },
+      {
+        "type": "p",
         "text": "Kartu Peringkat Produk menampilkan 5 teratas. Ketuk kartu atau Lihat Semua untuk menampilkan semua produk yang terjual dalam periode itu, diurutkan menurut jumlah setelah retur."
       },
       {
@@ -1073,6 +1115,7 @@ export const articles = [
       "peta panas",
       "jam ramai",
       "produk kurang laku",
+      "produk naik-turun",
       "nilai persediaan",
       "tingkat pembelian ulang",
       "poin"
@@ -1088,13 +1131,14 @@ export const articles = [
           "Perbandingan penjualan: di sisi kanan bilah periode, bandingkan dengan periode yang sama tahun lalu atau dengan periode pembanding (satu hari dengan hari yang sama minggu lalu, minggu ini dengan minggu lalu, bulan ini dengan bulan lalu, tahun ini dengan tahun lalu, rentang kustom dengan jumlah hari yang sama sebelumnya). Kartu Kas Diterima menampilkan selisih dan tingkat pertumbuhan, dan grafik pendapatan menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama.",
           "Hari × jam: ubah header Penjualan seiring waktu ke Hari × jam untuk melihat peta panas tujuh hari × 24 jam — semakin gelap sebuah sel, semakin banyak yang Anda jual. Beralihlah antara pendapatan dan pesanan; dengan perbandingan aktif, lihat jam mana yang naik dan mana yang turun.",
           "Produk Kurang Laku: ubah header kartu peringkat ke Produk Kurang Laku untuk menampilkan produk dari penjualan paling sedikit hingga paling banyak, lengkap dengan stok saat ini dan tanggal terakhir masing-masing terjual. Produk yang belum pernah terjual ditandai Belum pernah terjual. Secara default hanya produk yang ada stoknya yang ditampilkan.",
+          "Naik-Turun (sejak v3.4): ubah header kartu peringkat ke Naik-Turun untuk melihat 3 produk yang pendapatannya naik paling banyak dan 3 yang turun paling banyak dibandingkan periode pembanding, masing-masing dengan pendapatan kedua periode dan selisihnya. Pilih dulu periode di Perbandingan penjualan; jika Tidak ada, atau di Semua Waktu, kartu akan memberi tahu Anda. Ketuk kartu atau Lihat Semua untuk melihat daftar lengkap Produk naik-turun, yang dibagi menjadi Naik dan Turun.",
           "Tingkat pembelian ulang: baris terakhir pada kartu pelanggan adalah persentase anggota yang membeli dalam periode itu dan sudah membeli dua kali atau lebih secara total.",
           "Saat ini: nilai persediaan (stok saat ini × harga pokok saat ini), semua pergerakan stok dalam periode yang dipilih, serta poin yang dimiliki pelanggan tetapi belum ditukar, beserta potongan maksimum yang bisa didapat. Ini adalah saldo saat ini; periode tidak mengubahnya."
         ]
       },
       {
         "type": "p",
-        "text": "Sejak v3.4, kelima bagian ini terbuka di semua paket, dan tetap terbuka setelah uji coba berakhir. Versi sebelumnya hanya menampilkannya di Pro, dengan ikon gembok kecil di paket lain; jika Anda masih melihat gembok, perbarui DingPOS dari App Store."
+        "text": "Sejak v3.4, semuanya terbuka di semua paket, dan tetap terbuka setelah uji coba berakhir. Versi sebelumnya hanya menampilkannya di Pro, dengan ikon gembok kecil di paket lain; jika Anda masih melihat gembok, perbarui DingPOS dari App Store."
       },
       {
         "type": "p",
@@ -1147,6 +1191,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Bagaimana cara melihat laba bersih toko saya setiap bulan?",
+    "keywords": [
+      "laba rugi",
+      "p&l",
+      "laba bersih",
+      "untung bulanan",
+      "pengeluaran",
+      "laba operasional",
+      "laporan laba rugi"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Buka Laba Rugi, di bawah Statistik pada bilah samping. Halaman ini mencantumkan setiap bulan dari yang terbaru ke yang terlama beserta laba bersihnya: bulan berjalan ditandai Berjalan, dan header tiap tahun menjumlahkan laba bersih bulan-bulan yang sudah selesai."
+      },
+      {
+        "type": "p",
+        "text": "Ketuk sebuah bulan untuk melihat cara laba bersihnya dihitung:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Pendapatan (tanpa pajak): pendapatan setelah semua diskon, dikurangi pajak, dihitung pada hari barang diserahkan.",
+          "Harga pokok produk: harga pokok barang yang terjual, berdasarkan harga pokok pada produk Anda.",
+          "Biaya pemrosesan (perkiraan): biaya yang diperkirakan dari tarif metode pembayaran Anda.",
+          "Uang muka hangus: uang muka yang Anda simpan saat pra-pesan dibatalkan.",
+          "Pengeluaran tetap dan Pengeluaran sekali bayar: yang Anda catat untuk bulan itu — lihat “Bagaimana cara mencatat sewa, gaji, dan pengeluaran lain?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Tiga grafik menyusul: laba bersih tiap bulan dalam 12 bulan terakhir, porsi tiap pengeluaran tetap, dan tren pengeluaran tetap. Di Statistik, baris terakhir kartu laba langsung menuju Laba Rugi: untuk periode yang tepat satu bulan, baris itu menampilkan laba bersih bulan tersebut, seperti “Laba bersih Oktober NT$12,300”; untuk periode lain tertulis Lihat laba rugi bulanan."
+      },
+      {
+        "type": "note",
+        "text": "Laba bersih adalah laba operasional sebelum pajak penghasilan, dihitung dari data yang tercatat di DingPOS — bukan laporan pajak. Jika ada produk yang terjual tanpa harga pokok, bulan itu tetap menampilkan laba bersih, ditandai “Tidak termasuk harga pokok N produk”; ketuk untuk melihat produk mana saja. Laba Rugi tersedia di semua paket. Jika memakai akun staf, membukanya memerlukan izin Laba rugi & pengeluaran, yang secara default perlu persetujuan bagi Manajer dan Staf karena halaman ini menampilkan harga pokok produk dan gaji."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Bagaimana cara mencatat sewa, gaji, dan pengeluaran lain?",
+    "keywords": [
+      "pengeluaran",
+      "sewa",
+      "gaji",
+      "listrik dan air",
+      "pengeluaran tetap",
+      "biaya operasional",
+      "pembagian pengeluaran",
+      "pengeluaran sekali bayar"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Di Laba Rugi, ketuk Tambah Pengeluaran lalu pilih pengeluaran tetap atau pengeluaran sekali bayar. Pengeluaran dihitung pada bulan yang menjadi bebannya, bukan bulan Anda membayarnya, dan laba bersih setiap bulan mengikutinya."
+      },
+      {
+        "type": "p",
+        "text": "Pengeluaran tetap adalah yang Anda bayar setiap bulan, seperti sewa tempat, listrik, atau gaji:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Isi nama, jumlah per bulan, dan bulan mulainya. Pilih bulan sebelumnya untuk mengisi data yang terlewat.",
+          "Saat jumlahnya berubah, ketuk Ubah Jumlah, pilih bulannya, lalu pilih Mulai bulan ini (misalnya sewa naik) atau Hanya bulan ini (misalnya tagihan listrik bulan ini). Setiap perubahan tercatat dalam daftar, dan Anda bisa membukanya untuk mengedit atau menghapusnya.",
+          "Saat Anda berhenti membayarnya, atur Bulan terakhir dihitung: bulan itu dan bulan-bulan sebelumnya tetap dihitung."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Pengeluaran sekali bayar adalah yang dibayar satu kali:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Untuk renovasi, peralatan, atau asuransi yang dibayar di muka, aktifkan Bagi ke beberapa bulan lalu pilih 2 sampai 120 bulan dan Bulan pertama dihitung. Formulir menampilkan pratinjau berapa yang dihitung tiap bulan dan bulan mana saja yang tercakup.",
+          "Tanpa pembagian, Anda tetap bisa memilih Bulan dihitung: tagihan Oktober yang baru datang di November bisa dihitung di Oktober, dengan tanggal aslinya tetap tersimpan.",
+          "Jika pembagian berakhir lebih awal (misalnya polis asuransi dibatalkan), gunakan Akhiri Pembagian Lebih Awal: sisanya dihitung pada bulan yang Anda pilih."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Isi jumlah yang benar-benar ditanggung toko, tanpa pajak yang bisa diklaim kembali. Stok yang akan dijual dicatat lewat Pembelian, karena nilainya masuk ke harga pokok produk saat terjual; uang jaminan, pokok pinjaman, dan uang yang diambil pemilik bukan pengeluaran. Perubahan tersimpan sekaligus saat Anda mengetuk ✓, dan perubahan yang menjangkau bulan yang sudah selesai lebih dulu memberi tahu laba bersih bulan mana saja yang akan berubah."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1242,11 +1389,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pilih anggota saat pembayaran, lalu poin bertambah otomatis; untuk menukar, masukkan jumlah poin yang dipakai. Jika penjualan yang keliru dibatalkan lewat Batalkan penjualan (Void), poin yang diperoleh dari pesanan tersebut ditarik kembali dan poin yang sudah ditukar dikembalikan."
+        "text": "Pilih anggota untuk penjualan itu, di keranjang atau di layar Bayar, lalu poin bertambah otomatis; untuk menukar, masukkan jumlah poin yang dipakai. Jika penjualan yang keliru dibatalkan lewat Batalkan penjualan (Void), poin yang diperoleh dari pesanan tersebut ditarik kembali dan poin yang sudah ditukar dikembalikan."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1472,56 +1620,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Bisakah mengimpor produk dan penjualan dari aplikasi kasir lain atau spreadsheet?",
-    "keywords": [
-      "impor",
-      "impor data",
-      "csv",
-      "excel",
-      "spreadsheet",
-      "pindah aplikasi kasir",
-      "migrasi",
-      "impor massal",
-      "riwayat penjualan"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Bisa. Buka Pengaturan → Impor Data, pilih mengimpor produk atau penjualan, lalu pilih file CSV (Excel dan Google Sheets sama-sama bisa menyimpan sebagai CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "File terbuka sebagai tabel. Nama kolom umum dalam bahasa Inggris dan Tionghoa (Tradisional atau Sederhana) dicocokkan otomatis; ketuk judul kolom mana pun untuk mengubah pemetaannya.",
-          "Ketuk sel mana pun untuk memperbaiki nilainya langsung di tempat — tidak perlu mengedit file lalu mengulang dari awal.",
-          "Ketuk Konfirmasi untuk memvalidasi. Baris yang bermasalah ditandai merah beserta alasannya; impor penjualan bisa melewati pesanan yang berisi kesalahan.",
-          "Selesaikan hal yang perlu keputusan (nama produk ganda, satu baris yang cocok dengan beberapa pelanggan), periksa ringkasan, lalu ketuk Mulai impor."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Penjualan yang diimpor ditempatkan berdasarkan tanggal pesanan dan dihitung ulang dengan mata uang dan mode pajak toko Anda. Penjualan ini tidak memengaruhi stok dan tidak memberi bonus selamat datang.",
-          "Pelanggan dicocokkan dengan pelanggan yang sudah ada lewat nomor telepon atau email; yang tidak cocok akan dibuat baru.",
-          "Pesanan yang diimpor menampilkan tanggal Diimpor pada dan nomor pesanan asal, serta tidak bisa dibatalkan (void) atau diretur.",
-          "Baris yang berisi kesalahan bisa diekspor sebagai CSV yang dilengkapi alasannya — perbaiki lalu impor lagi. Baris ganda dilewati otomatis."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Impor data masih dalam versi beta. Setiap file dapat berisi hingga 50.000 baris atau 20 MB. Jalankan cadangan cloud sebelum mengimpor; jika ada yang tidak bisa diimpor atau hasilnya tampak keliru, beri tahu kami lewat Laporkan masalah di layar impor."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1668,13 +1766,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Tindakan (penyesuaian stok manual, penyesuaian poin manual, pengelolaan produk, menyelesaikan pembayaran dengan diskon di atas batas): satu persetujuan berlaku untuk satu tindakan itu saja.",
-          "Tampilan (biaya & laba, Dasbor, Pengaturan, cadangan & pemulihan): persetujuan membuka akses sampai operator berganti atau aplikasi masuk ke latar belakang.",
+          "Tampilan (harga pokok & laba, Dasbor, laba rugi & pengeluaran, Pengaturan, cadangan & pemulihan): persetujuan membuka akses sampai operator berganti atau aplikasi masuk ke latar belakang.",
           "Batas diskon berlaku untuk diskon manual dan diperiksa satu kali saat bayar; promo otomatis dan penukaran poin tidak dihitung."
         ]
       },
       {
         "type": "p",
-        "text": "Bawaan pabrik: Manajer diizinkan melakukan semuanya kecuali cadangan & pemulihan, tanpa batas diskon; Staf perlu persetujuan untuk semuanya, dengan batas 10%. Pemilik selalu diizinkan dan tidak bisa diedit. Untuk mengubahnya, buka Staf → Izin peran, ketuk Edit, lalu simpan sekali — berlaku untuk semua orang seketika."
+        "text": "Bawaan pabrik: Manajer diizinkan melakukan semuanya kecuali cadangan & pemulihan serta laba rugi & pengeluaran, tanpa batas diskon; Staf perlu persetujuan untuk semuanya, dengan batas 10%. Pemilik selalu diizinkan dan tidak bisa diedit. Untuk mengubahnya, buka Staf → Izin peran, ketuk Edit, lalu simpan sekali — berlaku untuk semua orang seketika."
       },
       {
         "type": "note",
@@ -1807,13 +1905,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan tindakan Batalkan penjualan (Void), retur, dan tukar barang), laporan (termasuk laporan lanjutan sejak v3.4), dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
+        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan tindakan Batalkan penjualan (Void), retur, dan tukar barang), laporan (termasuk laporan lanjutan dan Laba Rugi bulanan sejak v3.4), dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
       },
       {
         "type": "list",
         "items": [
           "Lite: untuk satu orang yang menjaga lapak dan butuh kasir serta pengelolaan produk.",
-          "Standard: menambah promo, poin loyalitas dan tingkat member, pelacakan stok, pembelian ke pemasok, penjualan tempo, pra-pesan, dan perkiraan biaya pembayaran.",
+          "Standard: menambah promo, poin loyalitas dan tingkat member, pelacakan stok, pembelian ke pemasok, penjualan tempo, pra-pesan, dan tarif biaya pembayaran.",
           "Pro: menambah akun staf dan izin, persetujuan manajer, log aktivitas, dan catatan pemulihan — untuk toko yang punya staf."
         ]
       },
@@ -2025,13 +2123,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Hadiah dan tambahan berbayar tidak pernah mengubah keranjang dengan sendirinya. Saat syarat terpenuhi, banner saran muncul di layar kasir, dan keranjang berubah hanya setelah kasir mengetuk Pilih (Pilih hadiah atau Pilih tambahan) — ini disengaja, karena hadiah menyangkut stok fisik: seseorang perlu memastikan barangnya ada dan pelanggan memang mau."
+        "text": "Hadiah dan tambahan berbayar tidak pernah mengubah keranjang dengan sendirinya. Saat syarat terpenuhi, banner saran muncul di layar kasir, dan keranjang berubah hanya setelah kasir mengetuk Pilih hadiah atau Pilih tambahan — ini disengaja, karena hadiah menyangkut stok fisik: seseorang perlu memastikan barangnya ada dan pelanggan memang mau."
       },
       {
         "type": "list",
         "items": [
           "Setelah Tolak, saran yang sama tidak muncul lagi untuk keranjang ini; keranjang baru atau yang sudah dikosongkan akan menawarkannya lagi.",
-          "Jika saran baru muncul sebelum konfirmasi pembayaran, saran itu harus dipilih atau ditolak sebelum pesanan bisa dikirim.",
+          "Sejak v3.4, tawaran yang masih tertunda tidak menghentikan pembayaran: baris kuning di bawah tombol bayar, seperti “1 tawaran tertunda tidak berlaku”, menunjukkan berapa yang dilewati (ketuk untuk melihat mana saja), dan pesanan tetap diproses tanpa tawaran itu. Agar pembayaran menunggu seperti sebelumnya, aktifkan Tangani tawaran sebelum bayar di Pengaturan → Preferensi Perangkat; pengaturan ini hanya berlaku untuk iPad ini.",
           "Baris hadiah dan tambahan tidak bisa didiskon lagi oleh promo uang lainnya, dan tidak dihitung untuk batas minimum promo lain."
         ]
       },
@@ -2224,7 +2322,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Belum ada laporan pelunasan bulanan khusus, tetapi semua yang Anda perlukan untuk rekonsiliasi sudah ada di aplikasi:"
+        "text": "Sejak v3.4, Laba Rugi menampilkan laba bersih tiap bulan setelah harga pokok produk, biaya, dan pengeluaran — lihat “Bagaimana cara melihat laba bersih toko saya setiap bulan?” Belum ada laporan pelunasan yang bisa diekspor atau dicetak, tetapi semua yang Anda perlukan untuk rekonsiliasi sudah ada di aplikasi:"
       },
       {
         "type": "list",
@@ -2240,7 +2338,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

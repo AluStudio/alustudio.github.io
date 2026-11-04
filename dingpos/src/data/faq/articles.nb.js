@@ -433,7 +433,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Gebyrene er anslag ut fra satsen du skriver inn. Tilbyderens oppgjør viser det faktiske beløpet. Du trenger Standard-planen eller høyere for å redigere gebyrsatser og se gebyrer i Rapporter. På Lite er feltene låst, men betalingene registrerer likevel gebyrene sine, så de vises når du oppgraderer."
+        "text": "Gebyrene er anslag ut fra satsen du skriver inn. Tilbyderens oppgjør viser det faktiske beløpet. Du trenger Standard-planen eller høyere for å redigere gebyrsatser, og på Lite er feltene låst. Fra og med v3.4 ser alle planer de registrerte gebyrene i Rapporter og under Resultat, så en sats som ble satt i prøveperioden, fortsetter å gi anslag på Lite. Tidligere versjoner viste gebyrer bare på Standard og høyere."
       }
     ],
     "related": [
@@ -566,6 +566,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Hvordan legger jeg til eller bytter kunde på et salg?",
+    "keywords": [
+      "kunde",
+      "medlem",
+      "legge til kunde",
+      "bytte kunde",
+      "ny kunde",
+      "kasse"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Du kan legge til kunden i handlekurven eller på kasseskjermen: raden Kunde under beløpet åpner kundelisten når ingen er lagt til, og gir deg Bytt kunde eller Fjern kunde når noen er det. Kunden som velges i kassen, blir handlekurvens kunde og blir stående på handlekurven hvis du avbryter kassen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Når du bytter kunde, beregnes nivårabatter, bursdagstilbud og innløsning av poeng på nytt med en gang. Kontantbeløp eller depositum du allerede har skrevet inn, beholdes og sjekkes mot den nye totalen.",
+          "Finner du ikke kunden? Trykk på Ny kunde øverst til høyre i kundelisten, eller midt i listen når ingenting samsvarer med søket. Det du søkte etter, fylles inn i skjemaet – sifre havner i telefonfeltet, alt annet i navnefeltet – og den nye kunden legges til på salget.",
+          "Hvis du trykker på På konto uten at en kunde er lagt til, åpnes kundelisten, og På konto velges så snart du har valgt noen.",
+          "Hvis den nye kunden gjør at en manuell rabatt går over den aktive ansattes rabattgrense, må en leder godkjenne først. Avbryter du godkjenningen, blir kunden som den var."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Kunder er en del av Standard-planen. På Lite står det «Kunder – Standard-plan» på raden, og den åpner detaljer om oppgradering. Raden Kunde i kassen kom i v3.4; tidligere versjoner legger til kunden bare i handlekurven."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Jeg gjorde en feil i kassen – hvordan annullerer jeg en ordre?",
@@ -695,7 +733,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Velg kunden i kassen og velg På konto som betalingsmåte. Et utestående beløp må ha en eier, så På konto er ikke tilgjengelig uten en kunde."
+        "text": "Ja. Velg På konto som betalingsmåte, så registreres salget som et utestående beløp på kunden. Et utestående beløp må ha en eier, så hvis ingen kunde er lagt til, åpner trykk på På konto kundelisten først (fra og med v3.4; eldre versjoner ber deg legge til en kunde i handlekurven)."
       },
       {
         "type": "p",
@@ -716,7 +754,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -735,7 +773,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Detaljsidene for ordrer, kunder og innkjøpsordrer har hver sitt notatkort – trykk på det for å redigere, opptil 500 tegn. Du kan også skrive et notat i skjemaet når du oppretter en kunde eller en innkjøpsordre."
+        "text": "Ja. Detaljsidene for ordrer, kunder og innkjøpsordrer har hver sitt notatkort – trykk på det for å redigere, opptil 500 tegn. Så lenge det ikke finnes noe notat, vises bare linjen «Legg til et notat». Du kan også skrive et notat i skjemaet når du oppretter en kunde eller en innkjøpsordre."
       },
       {
         "type": "p",
@@ -1052,6 +1090,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Fra og med v3.4 kan du trykke og holde på diagrammet Utvikling i salgsinntekt eller Utvikling i bruttofortjeneste for å lese det periode for periode: et kort viser datoen og salgsinntekten eller bruttofortjenesten for den perioden, og på Utvikling i salgsinntekt med Salgssammenligning på også sammenligningsperiodens salgsinntekt og differansen. Dra til venstre eller høyre for å flytte deg langs diagrammet. Sveiper du opp eller ned på diagrammet, ruller siden som vanlig."
+      },
+      {
+        "type": "p",
         "text": "Kortet Produktrangering viser de fem beste. Trykk på kortet eller Vis alle for å se alle produkter som er solgt i perioden, rangert etter antall etter returer."
       },
       {
@@ -1081,6 +1123,7 @@ export const articles = [
       "varmekart",
       "travle timer",
       "saktegående varer",
+      "produktendringer",
       "lagerverdi",
       "gjenkjøpsandel",
       "poeng"
@@ -1096,13 +1139,14 @@ export const articles = [
           "Salgssammenligning: til høyre i periodelinjen kan du sammenligne med samme periode i fjor eller med sammenligningsperioden (én dag mot samme dag forrige uke, denne uken mot forrige uke, denne måneden mot forrige måned, dette året mot i fjor, en egendefinert periode mot like mange dager rett før). Feltet for mottatt betaling viser differansen og vekstraten, og salgsdiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, kuttes sammenligningsperioden på samme tidspunkt.",
           "Ukedag × time: bytt overskriften Salg over tid til Ukedag × time for et varmekart med sju dager og 24 timer – jo mørkere rute, desto mer solgte du. Du kan bytte mellom salgsinntekt og ordrer, og med sammenligning på ser du hvilke timer som vokste og hvilke som krympet.",
           "Saktegående varer: bytt overskriften på rangeringskortet til Saktegående varer for å se produktene fra færrest til flest salg, med nåværende lagerbeholdning og siste salgsdato for hvert produkt. Produkter som aldri er solgt, er merket Aldri solgt. Som standard vises bare produkter som er på lager.",
+          "Endringer (fra og med v3.4): bytt overskriften på rangeringskortet til Endringer for å se de 3 produktene der salgsinntekten økte mest og de 3 der den falt mest sammenlignet med sammenligningsperioden, hver med salgsinntekt for begge periodene og differansen. Velg først en periode under Salgssammenligning. Med Ingen, eller på Hele perioden, ber kortet deg om å gjøre det. Trykk på kortet eller Vis alle for hele listen Produktendringer, delt i Økning og Nedgang.",
           "Gjenkjøpsandel: den siste linjen i kundefeltet er andelen medlemmer som handlet i perioden og har handlet to eller flere ganger totalt.",
           "Akkurat nå: lagerverdi (nåværende beholdning × nåværende kostpris), alle lagerbevegelser i den valgte perioden, og poengene kundene har, men ikke har brukt, med det høyeste beløpet de kan få trukket fra. Dette er nåværende saldoer, og perioden endrer dem ikke."
         ]
       },
       {
         "type": "p",
-        "text": "Fra og med v3.4 er alle fem åpne på alle planer, og de forblir åpne etter at prøveperioden er over. Tidligere versjoner viste dem bare på Pro, med en liten lås på de andre planene. Hvis du fortsatt ser låsene, oppdaterer du DingPOS fra App Store."
+        "text": "Fra og med v3.4 er de alle åpne på alle planer, og de forblir åpne etter at prøveperioden er over. Tidligere versjoner viste dem bare på Pro, med en liten lås på de andre planene. Hvis du fortsatt ser låsene, oppdaterer du DingPOS fra App Store."
       },
       {
         "type": "p",
@@ -1155,6 +1199,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hvordan ser jeg hvor mye jeg faktisk tjente hver måned?",
+    "keywords": [
+      "resultatregnskap",
+      "resultat",
+      "P&L",
+      "nettoresultat",
+      "månedlig fortjeneste",
+      "utgifter",
+      "driftsresultat"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Åpne Resultat, rett under Rapporter i sidemenyen. Der står hver måned fra nyeste til eldste med nettoresultatet: inneværende måned er merket Pågår, og overskriften for hvert år summerer nettoresultatet for månedene som er ferdige."
+      },
+      {
+        "type": "p",
+        "text": "Trykk på en måned for å se hvordan nettoresultatet regnes ut:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Salgsinntekt (eks. mva.): salgsinntekt etter alle rabatter, minus mva., regnet på dagen varene ble overlevert.",
+          "Kostpris: kostnaden for det som ble solgt, ut fra kostprisene på produktene dine.",
+          "Transaksjonsgebyrer (est.): gebyrene anslått ut fra satsene på betalingsmåtene dine.",
+          "Tapte depositum: depositum du beholdt da en forhåndsbestilling ble kansellert.",
+          "Faste utgifter og Engangsutgifter: det du har registrert for den måneden – se «Hvordan registrerer jeg husleie, lønn og andre utgifter?»"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Deretter kommer tre diagrammer: nettoresultatet for hver av de siste 12 månedene, hver fast utgifts andel og utviklingen i de faste utgiftene. I Rapporter hopper den siste linjen på fortjenestekortet rett til Resultat: for en periode som er nøyaktig én måned, viser den månedens nettoresultat, for eksempel «Oktober nettoresultat NT$12,300». For alle andre perioder står det Se månedlig resultat."
+      },
+      {
+        "type": "note",
+        "text": "Nettoresultat er driftsresultat før inntektsskatt, regnet ut fra det DingPOS har registrert – ikke en skattemelding. Hvis produkter ble solgt uten kostpris, viser måneden likevel et nettoresultat, merket «Utelater kostpris for produkter: N». Trykk på det for å se hvilke det gjelder. Resultat finnes på alle planer. Med ansattkontoer krever det tillatelsen Resultat og utgifter å åpne den. Ledere og ansatte trenger godkjenning for den som standard, fordi den viser kostpriser og lønn."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hvordan registrerer jeg husleie, lønn og andre utgifter?",
+    "keywords": [
+      "utgifter",
+      "husleie",
+      "lønn",
+      "strøm og vann",
+      "faste utgifter",
+      "driftskostnader",
+      "fordele utgift",
+      "engangsutgift"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "I Resultat trykker du på Legg til utgift og velger en fast utgift eller en engangsutgift. En utgift regnes i måneden den hører til, ikke måneden du betalte den, og nettoresultatet for hver måned følger med."
+      },
+      {
+        "type": "p",
+        "text": "En fast utgift er noe du betaler hver måned, som husleie, strøm og vann eller lønn:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Skriv inn navnet, det månedlige beløpet og måneden utgiften starter. Velg en tidligere måned for å legge inn bakover i tid.",
+          "Når beløpet endres, trykker du på Endre beløp, velger måneden og velger Fra denne måneden (for eksempel en husleieøkning) eller Bare denne måneden (for eksempel månedens strømregning). Hver endring står i en liste, og du kan åpne en for å redigere eller fjerne den.",
+          "Når du slutter å betale, setter du Siste måned som regnes: den måneden og månedene før den regnes fortsatt."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "En engangsutgift betales én gang:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "For innredning, utstyr eller forhåndsbetalt forsikring slår du på Fordel over flere måneder og velger 2 til 120 måneder og Første måned som regnes. Skjemaet viser en forhåndsvisning av hvor mye som regnes hver måned, og hvilke måneder det dekker.",
+          "Uten fordeling kan du likevel velge måneden som regnes: en regning for oktober som kommer i november, kan regnes i oktober, og den virkelige datoen beholdes.",
+          "Hvis en fordeling avsluttes tidlig (for eksempel en forsikring som sies opp), bruker du Avslutt fordeling tidlig: det som er igjen, regnes i måneden du velger."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Skriv inn det butikken faktisk bærer, uten mva. du kan få tilbake. Varer du skal selge går via Innkjøp, fordi de inngår i kostpris når de selges. Depositum du betaler og får tilbake, lånets hovedstol og penger eieren tar ut er ikke utgifter. Endringer lagres samlet når du trykker på ✓, og en endring som berører en ferdig måned, forteller deg først hvilke måneders nettoresultat som endres."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1253,11 +1400,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Velg medlemmet i kassen, så opptjenes poengene automatisk. Skriv inn hvor mange poeng du vil løse inn. Hvis du annullerer en ordre, trekkes poengene som ble opptjent på ordren tilbake, og eventuelle innløste poeng tilbakeføres."
+        "text": "Legg medlemmet til på salget, i handlekurven eller på kasseskjermen, så opptjenes poengene automatisk. Skriv inn hvor mange poeng du vil løse inn. Hvis du annullerer en ordre, trekkes poengene som ble opptjent på ordren tilbake, og eventuelle innløste poeng tilbakeføres."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1479,55 +1627,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Kan jeg importere produkter og salg fra et annet kassesystem eller et regneark?",
-    "keywords": [
-      "importere",
-      "csv",
-      "excel",
-      "regneark",
-      "flytte data",
-      "bytte kassesystem",
-      "masseimport",
-      "salgshistorikk"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Ja. Gå til Innstillinger → Dataimport, velg om du vil importere produkter eller salg, og velg en CSV-fil (både Excel og Google Sheets kan lagre som CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Filen åpnes som en tabell. Vanlige kolonnenavn på engelsk og kinesisk (tradisjonell eller forenklet) gjenkjennes automatisk. Trykk på en kolonneoverskrift for å endre hva den tilordnes.",
-          "Trykk på en celle for å rette verdien der og da, uten å redigere filen og begynne på nytt.",
-          "Trykk på Bekreft for å kontrollere. Rader med feil merkes med rødt og en forklaring. Ved import av salg kan du hoppe over ordrer med feil.",
-          "Løs alt som krever et valg (like produktnavn, en rad som passer til flere kunder), se over oppsummeringen og trykk på Start import."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Importerte salg plasseres etter ordredato og beregnes på nytt med butikkens valuta og avgiftsmodus. De påvirker ikke lageret og gir ingen velkomstpoeng.",
-          "Kunder kobles til eksisterende kunder via telefonnummer eller e-post. De som ikke finnes fra før, opprettes.",
-          "Importerte ordrer viser merket Importert med dato og kildens ordrenummer, og kan ikke annulleres eller returneres.",
-          "Rader med feil kan eksporteres som en CSV med forklaringer. Rett dem og importer på nytt. Like rader hoppes over automatisk."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Dataimport er i betaversjon. Hver fil kan inneholde opptil 50 000 rader eller 20 MB. Ta sikkerhetskopi i skyen før du importerer. Hvis noe ikke lar seg importere eller resultatet ser feil ut, gi oss beskjed via Meld fra om et problem på importskjermen."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1672,13 +1771,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Handlinger (manuell lagerjustering, manuell poengjustering, produktadministrasjon, gjennomføring av et kjøp med rabatt over rabattgrensen): én godkjenning gjelder den ene handlingen.",
-          "Visninger (kostpris og fortjeneste, Oversikt, Innstillinger, sikkerhetskopi og gjenoppretting): en godkjenning gir tilgang inntil den aktive ansatte byttes eller appen går i bakgrunnen.",
+          "Visninger (kostpris og fortjeneste, Oversikt, Resultat og utgifter, Innstillinger, sikkerhetskopi og gjenoppretting): en godkjenning gir tilgang inntil den aktive ansatte byttes eller appen går i bakgrunnen.",
           "Rabattgrensen gjelder manuelle rabatter og kontrolleres én gang i kassen. Automatiske kampanjer og innløsning av poeng teller ikke med."
         ]
       },
       {
         "type": "p",
-        "text": "Standardinnstillinger: Ledere har lov til alt unntatt sikkerhetskopi og gjenoppretting, uten rabattgrense. Ansatte trenger godkjenning for alt, med en grense på 10 %. Eieren har alltid lov til alt og kan ikke redigeres. For å endre dette går du til Ansatte → Tillatelser for roller, trykker på Rediger og lagrer én gang – endringen gjelder alle umiddelbart."
+        "text": "Standardinnstillinger: Ledere har lov til alt unntatt sikkerhetskopi og gjenoppretting og Resultat og utgifter, uten rabattgrense. Ansatte trenger godkjenning for alt, med en grense på 10 %. Eieren har alltid lov til alt og kan ikke redigeres. For å endre dette går du til Ansatte → Tillatelser for roller, trykker på Rediger og lagrer én gang – endringen gjelder alle umiddelbart."
       },
       {
         "type": "note",
@@ -1810,13 +1909,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre abonnementsplanene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (avanserte rapporter inkludert fra og med v3.4) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
+        "text": "Alle tre abonnementsplanene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (avanserte rapporter og månedlig resultat inkludert fra og med v3.4) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: for deg som driver en markedsstand alene og trenger kasse og produkter.",
-          "Standard: legger til kampanjer, poeng og medlemsnivåer, lagerstyring, innkjøp, salg på konto, forhåndsbestillinger og estimerte betalingsgebyrer.",
+          "Standard: legger til kampanjer, poeng og medlemsnivåer, lagerstyring, innkjøp, salg på konto, forhåndsbestillinger og gebyrsatser for betalinger.",
           "Pro: legger til ansatte og tillatelser, godkjenning fra leder, aktivitetslogg og gjenopprettingslogg, for butikker med ansatte."
         ]
       },
@@ -2034,7 +2133,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Etter Avslå dukker det samme forslaget ikke opp igjen for denne handlekurven. En ny eller tømt handlekurv gir forslaget på nytt.",
-          "Hvis et nytt forslag dukker opp før bekreftelsen i kassen, må det velges eller avslås før ordren kan sendes inn.",
+          "Fra og med v3.4 stopper ikke tilbud som fortsatt venter, kassen: en gul linje under betalingsknappen, for eksempel «1 ubesvart tilbud gjelder ikke», viser hvor mange som er utelatt (trykk på den for å se hvilke), og ordren går gjennom uten dem. For at kassen skal vente som før, slår du på Ta stilling til tilbud før kassen under Innstillinger → Enhetsinnstillinger. Det gjelder bare denne iPaden.",
           "Gave- og tilleggsvarelinjer kan ikke få ytterligere rabatt fra andre rabattkampanjer, og de teller ikke med mot terskelen i andre kampanjer."
         ]
       },
@@ -2228,7 +2327,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Det finnes ingen egen månedlig oppgjørsrapport ennå, men alt du trenger til avstemmingen finnes allerede i appen:"
+        "text": "Fra og med v3.4 viser Resultat nettoresultatet for hver måned etter kostpris, gebyrer og utgifter – se «Hvordan ser jeg hvor mye jeg faktisk tjente hver måned?» Det finnes ingen oppgjørsrapport du kan eksportere eller skrive ut ennå, men alt du trenger til avstemmingen finnes allerede i appen:"
       },
       {
         "type": "list",
@@ -2244,7 +2343,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

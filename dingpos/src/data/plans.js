@@ -81,7 +81,6 @@ export const COMPARISON = [
     key: "catalog",
     rows: [
       { key: "products", from: "lite" },
-      { key: "import", from: "lite" },
       { key: "inventory", from: "standard" },
       { key: "purchasing", from: "standard" },
     ],
@@ -98,6 +97,7 @@ export const COMPARISON = [
     key: "reports",
     rows: [
       { key: "dashboard", from: "lite" },
+      { key: "profit_loss", from: "lite" },
       { key: "comparison", from: "lite" },
       { key: "heatmap", from: "lite" },
       { key: "slow_movers", from: "lite" },

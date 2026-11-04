@@ -273,10 +273,6 @@
           "name": "Gestione prodotti",
           "desc": "Varianti, codici a barre, foto, categorie, prodotti a prezzo libero"
         },
-        "import": {
-          "name": "Importazione dei dati",
-          "desc": "Importa prodotti e vendite passate da altri sistemi tramite CSV"
-        },
         "inventory": {
           "name": "Gestione del magazzino",
           "desc": "La giacenza scala a ogni vendita; le rettifiche manuali lasciano traccia del movimento"
@@ -301,9 +297,13 @@
           "name": "Dashboard dell'attività",
           "desc": "Ricavi, utile, sconti, metodi di pagamento e articoli più venduti"
         },
+        "profit_loss": {
+          "name": "Conto economico mensile",
+          "desc": "Registra affitto, stipendi e altre spese; vedi l'utile netto di ogni mese"
+        },
         "payment_fees": {
-          "name": "Stima delle commissioni di pagamento",
-          "desc": "Imposta la tariffa della commissione di ogni metodo di pagamento; vedi commissioni e incassato netto per metodo"
+          "name": "Tariffe delle commissioni di pagamento",
+          "desc": "Imposta la tariffa della commissione di ogni metodo di pagamento per stimare commissioni e incassato netto"
         },
         "comparison": {
           "name": "Confronto tra periodi",

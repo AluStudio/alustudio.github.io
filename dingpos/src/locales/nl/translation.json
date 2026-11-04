@@ -273,10 +273,6 @@
           "name": "Productbeheer",
           "desc": "Varianten, barcodes, foto's, categorieën, producten met open prijs"
         },
-        "import": {
-          "name": "Gegevens importeren",
-          "desc": "Importeer producten en eerdere verkopen uit andere systemen via CSV"
-        },
         "inventory": {
           "name": "Voorraadbeheer",
           "desc": "Voorraad neemt af bij verkoop; handmatige correcties worden vastgelegd"
@@ -301,9 +297,13 @@
           "name": "Bedrijfsoverzicht",
           "desc": "Omzet, winst, kortingen, betaalmethoden en bestsellers"
         },
+        "profit_loss": {
+          "name": "W&V per maand",
+          "desc": "Leg huur, salarissen en andere kosten vast; zie de nettowinst per maand"
+        },
         "payment_fees": {
-          "name": "Schatting van transactiekosten",
-          "desc": "Stel per betaalmethode het kostenpercentage in; bekijk de kosten en het geschatte netto ontvangen bedrag per methode"
+          "name": "Kostenpercentages voor betaalmethoden",
+          "desc": "Stel per betaalmethode het kostenpercentage in om de transactiekosten en het netto ontvangen bedrag te schatten"
         },
         "comparison": {
           "name": "Periodevergelijking",

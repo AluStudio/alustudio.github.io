@@ -143,6 +143,15 @@ const DINGPOS_SITE_GLOSSARY = [
   ["中继数据", "元数据"], // metadata
   ["语系", "语言"], // mainland 语系 is a language family
   ["广告群组", "广告组"], // Apple Ads zh-CN term
+  ["顾客”列", "顾客”行"], // the checkout Customer row
+  ["每列有", "每行有"],
+  ["一颗按钮", "一个按钮"],
+  ["卷动", "滚动"],
+  ["营业利益", "营业利润"],
+  ["登录成本", "录入成本"], // mainland 登录 is logging in
+  ["摊提", "摊销"],
+  ["扣抵", "抵扣"],
+  ["提领", "提取"],
   ["预带", "预填"],
   ["备份档", "备份文件"],
   ["单档", "单个文件"],
@@ -172,7 +181,7 @@ const DINGPOS_SITE_GLOSSARY = [
 ];
 
 // Entry ids (or id prefixes ending in ":") whose 列 means a grid row.
-const DINGPOS_ROW_COLUMN_ENTRIES = ["faq:import-csv:", "faq:open-price-products:content.1.items.1"];
+const DINGPOS_ROW_COLUMN_ENTRIES = ["faq:open-price-products:content.1.items.1"];
 
 // Entry id → [zh-Hant source the override was written for, zh-Hans value].
 const DINGPOS_OVERRIDES = {

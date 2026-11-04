@@ -273,10 +273,6 @@
           "name": "Menaxhimi i produkteve",
           "desc": "Variante, barkode, foto, kategori, artikuj me çmim në shitje"
         },
-        "import": {
-          "name": "Importimi i të dhënave",
-          "desc": "Importo produkte dhe shitje të kaluara nga sisteme të tjera përmes CSV"
-        },
         "inventory": {
           "name": "Ndjekja e stokut",
           "desc": "Stoku zbritet me shitjen; rregullimet manuale lënë gjurmë lëvizjeje"
@@ -301,9 +297,13 @@
           "name": "Paneli i biznesit",
           "desc": "Të ardhura, fitim, zbritje, përzierja e pagesave dhe produktet më të shitura"
         },
+        "profit_loss": {
+          "name": "Fitimi dhe humbja mujore",
+          "desc": "Regjistro qiranë, pagat dhe shpenzime të tjera; shiko fitimin neto të çdo muaji"
+        },
         "payment_fees": {
-          "name": "Vlerësimi i komisioneve të pagesës",
-          "desc": "Cakto normën e komisionit për çdo mënyrë pagese; shiko komisionet dhe të arkëtuara neto të vlerësuara sipas mënyrës"
+          "name": "Normat e komisionit të pagesave",
+          "desc": "Cakto normën e komisionit për çdo mënyrë pagese për të vlerësuar komisionet dhe të arkëtuara neto të vlerësuara"
         },
         "comparison": {
           "name": "Krahasimi i periudhave",

@@ -433,7 +433,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Ücretler, girdiğiniz orandan hesaplanan tahminlerdir; gerçek tutar sağlayıcınızın ekstresindedir. Ücret oranlarını düzenlemek ve ücretleri İstatistik'te görmek için Standard veya üstü plan gerekir. Lite'ta alanlar kilitlidir, ancak ödemeler yine de ücretlerini kaydeder; yükselttiğinizde bunlar görünür."
+        "text": "Ücretler, girdiğiniz orandan hesaplanan tahminlerdir; gerçek tutar sağlayıcınızın ekstresindedir. Ücret oranlarını düzenlemek için Standard veya üstü plan gerekir ve Lite'ta alanlar kilitlidir. v3.4'ten beri her plan, kaydedilen ücretleri İstatistik'te ve Kâr/Zarar'da görür; bu yüzden deneme sırasında belirlenen bir oran Lite'ta da tahmin etmeyi sürdürür. Önceki sürümler ücretleri yalnızca Standard ve üstünde gösteriyordu."
       }
     ],
     "related": [
@@ -567,6 +567,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Bir satışa müşteriyi nasıl eklerim veya değiştiririm?",
+    "keywords": [
+      "müşteri",
+      "üye",
+      "müşteri ekleme",
+      "müşteriyi değiştirme",
+      "yeni müşteri",
+      "ödeme"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Müşteriyi sepette ya da ödeme ekranında ekleyin: tutarın altındaki Müşteri satırı, kimse seçili değilken müşteri listesini açar; biri seçiliyken Müşteriyi Değiştir veya Müşteriyi Kaldır seçeneklerini sunar. Ödemede seçilen müşteri sepetin müşterisidir ve ödemeden vazgeçseniz de sepette kalır."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Müşteriyi değiştirmek seviye indirimlerini, doğum günü avantajlarını ve puan kullanımını hemen yeniden hesaplar. Girdiğiniz nakit tutar ya da kapora korunur ve yeni toplama göre kontrol edilir.",
+          "Bulamadınız mı? Müşteri listesinin sağ üstündeki Yeni Müşteri'ye dokunun; aramanızla eşleşen kimse yoksa ortada çıkan Yeni Müşteri'ye dokunun. Aradığınız ifade forma otomatik yazılır — rakamlar telefona, diğer her şey ada gider — ve yeni müşteri satışa eklenir.",
+          "Müşteri seçili değilken Veresiye'ye dokunmak müşteri listesini açar; birini seçtiğinizde Veresiye seçilir.",
+          "Yeni müşteri, elle yapılan bir indirimi işlemi yapanın indirim üst sınırının üzerine çıkarırsa önce bir yönetici onaylar; onayı iptal ederseniz müşteri önceki hâliyle kalır."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Müşteriler Standard planın parçasıdır; Lite'ta satırda “Müşteriler — Standard planı” yazar ve yükseltme ayrıntılarını açar. Ödemedeki Müşteri satırı v3.4 ile geldi; önceki sürümlerde müşteri yalnızca sepette eklenir."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Kasada hata yaptım, siparişi nasıl geçersiz kılarım?",
@@ -694,7 +732,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Evet. Ödeme ekranında müşteriyi seçin ve ödeme yöntemi olarak Veresiye’yi seçin. Borcun bir sahibi olması gerektiğinden müşteri seçilmeden Veresiye kullanılamaz."
+        "text": "Evet. Ödeme yöntemi olarak Veresiye’yi seçin; satış müşterinin borcu olarak kaydedilir. Borcun bir sahibi olması gerektiğinden, müşteri seçilmemişken Veresiye’ye dokunmak önce müşteri listesini açar (v3.4’ten beri; önceki sürümlerde sepete bir müşteri eklemeniz istenir)."
       },
       {
         "type": "p",
@@ -715,7 +753,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -734,7 +772,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Evet. Sipariş, müşteri ve satın alma siparişi ayrıntı sayfalarının her birinde bir Notlar kartı bulunur; düzenlemek için kartına dokunun, en fazla 500 karakter yazabilirsiniz. Müşteri ya da satın alma siparişi oluştururken formda da not yazabilirsiniz."
+        "text": "Evet. Sipariş, müşteri ve satın alma siparişi ayrıntı sayfalarının her birinde notlar bulunur: düzenlemek için Notlar kartına dokunun (en fazla 500 karakter); henüz not yoksa tek satırlık “Not ekle” satırına dokunun. Müşteri ya da satın alma siparişi oluştururken formda da not yazabilirsiniz."
       },
       {
         "type": "p",
@@ -1051,6 +1089,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "v3.4'ten beri Satış Geliri Trendi veya Kâr Trendi grafiğine basılı tutarak dönemleri tek tek okuyabilirsiniz: bir kart tarihi ve o dönemin satış gelirini ya da kârını gösterir; Satış Geliri Trendi'nde Satış karşılaştırması açıksa karşılaştırma döneminin satış gelirini ve farkı da gösterir. İlerlemek için sola veya sağa sürükleyin; grafiğin üzerinde yukarı veya aşağı kaydırırsanız sayfa her zamanki gibi kayar."
+      },
+      {
+        "type": "p",
         "text": "Ürün Sıralaması kartı ilk 5 ürünü listeler. Dönemde satılan tüm ürünleri, iadeler düşüldükten sonra adede göre sıralı görmek için karta veya Tümünü Gör'e dokunun."
       },
       {
@@ -1080,6 +1122,7 @@ export const articles = [
       "ısı haritası",
       "yoğun saatler",
       "yavaş satan ürünler",
+      "hareketli ürünler",
       "stok değeri",
       "tekrar alışveriş oranı",
       "puan"
@@ -1095,13 +1138,14 @@ export const articles = [
           "Satış karşılaştırması: dönem çubuğunun sağında, seçili dönemi geçen yılın aynı dönemiyle ya da bir önceki dönemle karşılaştırın (tek gün geçen haftanın aynı günüyle, bu hafta geçen haftayla, bu ay geçen ayla, bu yıl geçen yılla, özel aralık ise kendisinden hemen önceki aynı uzunluktaki günlerle). Alınan tutar kutusu farkı ve büyüme oranını gösterir; satış geliri grafiğine karşılaştırma dönemi için daha açık renkli bir çizgi eklenir. Dönem henüz sürüyorsa karşılaştırma dönemi de aynı ana kadar kesilir.",
           "Haftanın günü × saat: Zaman içinde satışlar başlığını Haftanın günü × saat olarak değiştirin; yedi gün ve 24 saatlik bir ısı haritası görürsünüz — bir hücre ne kadar koyuysa o saatte o kadar çok satış yapmışsınızdır. Satış geliri ile sipariş sayısı arasında geçiş yapabilirsiniz; karşılaştırma açıkken hangi saatlerin arttığını, hangilerinin azaldığını görürsünüz.",
           "Yavaş Satan Ürünler: sıralama kartının başlığını Yavaş Satan Ürünler olarak değiştirin; ürünler en az satandan en çok satana doğru, güncel stokları ve her birinin son satış tarihiyle listelenir. Hiç satılmayan ürünler Hiç satılmadı olarak işaretlenir. Varsayılan olarak yalnızca stokta olan ürünler gösterilir.",
+          "Hareketliler (v3.4'ten beri): sıralama kartının başlığını Hareketliler olarak değiştirin; karşılaştırma dönemine göre satış geliri en çok artan 3 ürünü ve en çok düşen 3 ürünü, her birinin iki dönemdeki satış geliri ve farkıyla birlikte görürsünüz. Önce Satış karşılaştırması altından bir dönem seçin; Yok seçiliyken ya da Tüm dönemde kart sizi buna yönlendirir. Hareketli ürünler listesinin tamamı için karta veya Tümünü Gör'e dokunun; liste Yükselenler ve Düşenler olarak ikiye ayrılır.",
           "Tekrar alışveriş oranı: müşteri kutusunun son satırı, dönemde alışveriş yapan ve toplamda iki veya daha fazla kez alışveriş yapmış üyelerin oranıdır.",
           "Şu anda: stok değeri (güncel stok × güncel maliyet), seçili dönemdeki tüm stok hareketleri ve müşterilerin elinde duran, henüz kullanılmamış puanlar ile bunlarla yapılabilecek en yüksek indirim. Bunlar güncel durumu yansıtır; dönem seçimi bunları değiştirmez."
         ]
       },
       {
         "type": "p",
-        "text": "v3.4'ten beri bu beşi de her planda açıktır ve deneme bittikten sonra da açık kalır. Önceki sürümlerde yalnızca Pro'da gösteriliyor, diğer planlarda küçük bir kilit görünüyordu; kilitleri hâlâ görüyorsanız DingPOS'u App Store'dan güncelleyin."
+        "text": "v3.4'ten beri hepsi her planda açıktır ve deneme bittikten sonra da açık kalır. Önceki sürümlerde yalnızca Pro'da gösteriliyor, diğer planlarda küçük bir kilit görünüyordu; kilitleri hâlâ görüyorsanız DingPOS'u App Store'dan güncelleyin."
       },
       {
         "type": "p",
@@ -1154,6 +1198,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Her ay gerçekte ne kadar kâr ettiğimi nasıl görürüm?",
+    "keywords": [
+      "kâr zarar",
+      "kâr/zarar tablosu",
+      "net kâr",
+      "aylık kâr",
+      "giderler",
+      "faaliyet kârı",
+      "gelir tablosu"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Kenar çubuğunda İstatistik'in altındaki Kâr/Zarar'ı açın. Her ayı en yeniden en eskiye, net kârıyla birlikte listeler: içinde bulunulan ay Devam ediyor olarak işaretlenir ve her yılın başlığı, tamamlanan aylarının net kârını toplar."
+      },
+      {
+        "type": "p",
+        "text": "Bir ayın net kârının nasıl hesaplandığını görmek için aya dokunun:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Satış geliri (vergi hariç): her indirimden sonraki satış geliri eksi vergi; ürünün teslim edildiği gün sayılır.",
+          "Ürün maliyeti: satılanların maliyeti; ürünlerinizdeki maliyetlerden alınır.",
+          "İşlem ücretleri (tahmini): ödeme yöntemlerinizin oranlarından tahmin edilen ücretler.",
+          "Alıkonulan kapora: bir ön sipariş iptal edildiğinde alıkoyduğunuz kaporalar.",
+          "Sabit giderler ve Tek seferlik giderler: o ay için kaydettikleriniz — bkz. “Kira, maaş ve diğer giderleri nasıl kaydederim?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ardından üç grafik gelir: son 12 ayın her birinin net kârı, her sabit giderin payı ve sabit giderler trendi. İstatistik'te kâr kartının son satırı doğrudan Kâr/Zarar'a götürür: tam olarak bir ay olan bir dönemde o ayın net kârını gösterir, örneğin “Ekim net kârı NT$12,300”; başka her dönemde Aylık kâr/zararı gör yazar."
+      },
+      {
+        "type": "note",
+        "text": "Net kâr, gelir vergisinden önceki faaliyet kârıdır ve DingPOS'un kaydettiği verilerden hesaplanır — vergi beyannamesi değildir. Maliyeti olmadan satılan ürünler varsa ay yine de bir net kâr gösterir ve “N ürünün maliyeti dahil değil” diye işaretlenir; hangi ürünler olduğunu görmek için dokunun. Kâr/Zarar her planda vardır. Personel hesaplarında açmak için Kâr/zarar ve giderler yetkisi gerekir; ürün maliyetlerini ve maaşları gösterdiği için Yöneticiler ve Personel için varsayılan olarak onay gerekir."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Kira, maaş ve diğer giderleri nasıl kaydederim?",
+    "keywords": [
+      "giderler",
+      "kira",
+      "maaş",
+      "faturalar",
+      "sabit giderler",
+      "genel giderler",
+      "amortisman",
+      "tek seferlik gider"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Kâr/Zarar'da Gider Ekle'ye dokunun ve sabit gider ya da tek seferlik gider seçin. Bir gider, ödediğiniz ayda değil ait olduğu ayda sayılır ve her ayın net kârı buna göre değişir."
+      },
+      {
+        "type": "p",
+        "text": "Sabit gider, kira, faturalar veya maaşlar gibi her ay ödediğiniz giderdir:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Adı, aylık tutarı ve başlangıç ayını girin. Geriye dönük girmek için daha eski bir ay seçin.",
+          "Tutar değiştiğinde Tutarı Değiştir'e dokunun, ayı seçin ve Bu aydan itibaren (örneğin kira zammı) ya da Yalnızca bu ay (örneğin bu ayın elektrik faturası) seçeneğini belirleyin. Her değişiklik listelenir; düzenlemek veya kaldırmak için birini açabilirsiniz.",
+          "Ödemeyi bıraktığınızda Hesaplanan son ay alanını belirleyin: o ay ve öncesindeki aylar yine sayılır."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Tek seferlik gider bir kez ödenir:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Mağaza dekorasyonu, ekipman veya peşin ödenen sigorta için Birkaç aya yay seçeneğini açın; 2 ile 120 arasında bir ay sayısı ve Hesaplanan ilk ay'ı seçin. Form, her ay ne kadarının sayılacağını ve hangi ayları kapsadığını önizler.",
+          "Yaymasanız da hesaplanan ayı seçebilirsiniz: Kasım'da gelen bir Ekim faturası, gerçek tarihi korunarak Ekim'de sayılabilir.",
+          "Yayılan bir gider erken biterse (örneğin iptal edilen bir sigorta), Yayılmayı Erken Bitir'i kullanın: kalan tutar seçtiğiniz ayda sayılır."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Mağazanın gerçekte karşıladığı tutarı girin; geri alabileceğiniz vergiyi dahil etmeyin. Satacağınız stok bunun yerine Satın alma üzerinden girilir, çünkü satıldığında ürün maliyetinde sayılır; güvence depozitoları, kredi anaparası ve işletme sahibinin çektiği para gider değildir. Değişiklikler ✓'ya dokunduğunuzda birlikte kaydedilir; tamamlanmış bir aya ulaşan bir değişiklik önce hangi ayların net kârının değişeceğini söyler."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1251,11 +1398,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ödeme sırasında üyeyi seçin; puanlar otomatik birikir. Puan kullanmak için kullanılacak puanı girin. Bir siparişi geçersiz kılmak, o siparişten kazanılan puanları geri alır ve kullanılan puanları iade eder."
+        "text": "Üyeyi sepette ya da ödeme ekranında satışa ekleyin; puanlar otomatik birikir. Puan kullanmak için kullanılacak puanı girin. Bir siparişi geçersiz kılmak, o siparişten kazanılan puanları geri alır ve kullanılan puanları iade eder."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1479,54 +1627,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Başka bir POS'tan veya Excel tablosundan ürün ve satış aktarabilir miyim?",
-    "keywords": [
-      "içe aktarma",
-      "csv",
-      "excel",
-      "tablo",
-      "başka pos'tan geçiş",
-      "toplu ürün ekleme",
-      "satış geçmişi"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Evet. Ayarlar → Veri İçe Aktarma bölümüne gidin, ürün mü satış mı aktaracağınızı seçin ve bir CSV dosyası seçin (Excel ve Google Sheets CSV olarak kaydedebilir)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Dosya tablo olarak açılır. İngilizce ve Çince (Geleneksel veya Basitleştirilmiş) yaygın sütun adları otomatik eşleşir; eşlemeyi değiştirmek için herhangi bir sütun başlığına dokunun.",
-          "Değeri orada düzeltmek için herhangi bir hücreye dokunun — dosyayı düzenleyip baştan başlamanız gerekmez.",
-          "Doğrulamak için Onayla'ya dokunun. Sorunlu satırlar nedenleriyle birlikte kırmızıyla işaretlenir; satış aktarımında hatalı siparişler atlanabilir.",
-          "Karar gerektiren her şeyi çözün (yinelenen ürün adları, birden çok müşteriyle eşleşen satır), özeti inceleyin, ardından İçe aktarmayı başlat'a dokunun."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Aktarılan satışlar sipariş tarihine göre yerleştirilir ve mağazanızın para birimi ve vergi moduyla yeniden hesaplanır. Stoğa dokunmaz ve hoş geldin puanı vermez.",
-          "Müşteriler telefon veya e-postayla mevcut müşterilerle eşleştirilir; eşleşmeyenler yeni oluşturulur.",
-          "İçe aktarılan siparişlerde İçe aktarma tarihi ve kaynak sipariş numarası görünür; bu siparişler geçersiz kılınamaz veya iade edilemez.",
-          "Hatalı satırlar, nedenleriyle birlikte CSV olarak dışa aktarılabilir — düzeltip yeniden aktarın. Yinelenen satırlar otomatik olarak atlanır."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Veri içe aktarma beta aşamasındadır. Her dosya en fazla 50.000 satır veya 20 MB olabilir. Aktarmadan önce bulut yedeği alın; bir şey aktarılmazsa veya sonuç yanlış görünürse içe aktarma ekranındaki Sorun bildir ile bize bildirin."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1671,13 +1771,13 @@ export const articles = [
         "type": "list",
         "items": [
           "İşlemler (elle stok düzeltme, elle puan düzeltme, ürün yönetimi, indirim üst sınırının üzerinde ödeme alma): bir onay yalnızca o tek işlemi kapsar.",
-          "Görünümler (maliyet ve kâr, Pano, Ayarlar, yedekleme ve geri yükleme): onay, işlemi yapan kişi değişene veya uygulama arka plana geçene kadar kilidi açık tutar.",
+          "Görünümler (maliyet ve kâr, Pano, kâr/zarar ve giderler, Ayarlar, yedekleme ve geri yükleme): onay, işlemi yapan kişi değişene veya uygulama arka plana geçene kadar kilidi açık tutar.",
           "İndirim üst sınırı elle yapılan indirimlere uygulanır ve ödemede bir kez kontrol edilir; otomatik kampanyalar ve puan kullanımı bu sınıra sayılmaz."
         ]
       },
       {
         "type": "p",
-        "text": "Varsayılan ayarlar: Yöneticiler yedekleme ve geri yükleme dışında her şeye izinlidir ve indirim üst sınırı yoktur; Personel her şey için onay ister ve üst sınır %10'dur. Sahip her zaman izinlidir ve düzenlenemez. Değiştirmek için Personel → Rol yetkileri'ne gidin, Düzenle'ye dokunun ve bir kez kaydedin; değişiklik herkes için hemen geçerli olur."
+        "text": "Varsayılan ayarlar: Yöneticiler yedekleme ve geri yükleme ile kâr/zarar ve giderler dışında her şeye izinlidir ve indirim üst sınırı yoktur; Personel her şey için onay ister ve üst sınır %10'dur. Sahip her zaman izinlidir ve düzenlenemez. Değiştirmek için Personel → Rol yetkileri'ne gidin, Düzenle'ye dokunun ve bir kez kaydedin; değişiklik herkes için hemen geçerli olur."
       },
       {
         "type": "note",
@@ -1811,13 +1911,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları (gelişmiş raporlar v3.4'ten beri dahil) ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
+        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları (gelişmiş raporlar ve aylık Kâr/Zarar v3.4'ten beri dahil) ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
       },
       {
         "type": "list",
         "items": [
           "Lite: ödeme alma ve ürün yönetimi yeterli olan, tezgâhı tek başına işleten kişiler için.",
-          "Standard: kampanyalar, sadakat puanı ve üyelik seviyeleri, stok takibi, satın alma, veresiye satış, ön siparişler ve işlem ücreti tahminleri ekler.",
+          "Standard: kampanyalar, sadakat puanı ve üyelik seviyeleri, stok takibi, satın alma, veresiye satış, ön siparişler ve işlem ücreti oranları ekler.",
           "Pro: personel hesapları ve yetkiler, yönetici onayı, etkinlik günlüğü ve geri yükleme kayıtları ekler; personeli olan dükkânlar için."
         ]
       },
@@ -2028,13 +2128,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Hediye ve ücretli ek ürün sepeti kendiliğinden değiştirmez. Koşullar sağlandığında kasiyer ekranında bir öneri bandı çıkar ve sepet yalnızca kasiyer öneriyi kabul ettiğinde (bandın düğmesine dokunduğunda: Hediye seç / Ek ürün seç) değişir. Bu bilinçli bir tercihtir, çünkü hediyeler fiziksel stok içerir: ürünün elde olduğunu ve müşterinin istediğini birinin doğrulaması gerekir."
+        "text": "Hediye ve ücretli ek ürün sepeti kendiliğinden değiştirmez. Koşullar sağlandığında kasiyer ekranında bir öneri bandı çıkar ve sepet yalnızca kasiyer Hediye seç veya Ek ürün seç düğmesine dokunduğunda değişir. Bu bilinçli bir tercihtir, çünkü hediyeler fiziksel stok içerir: ürünün elde olduğunu ve müşterinin istediğini birinin doğrulaması gerekir."
       },
       {
         "type": "list",
         "items": [
           "Reddet'ten sonra aynı öneri bu sepet için tekrar çıkmaz; yeni veya boşaltılmış bir sepette yeniden sorulur.",
-          "Ödeme onayından önce yeni bir öneri çıkarsa, sipariş gönderilmeden önce kabul edilmeli veya reddedilmelidir.",
+          "v3.4'ten beri bekleyen teklifler ödemeyi durdurmaz: ödeme düğmesinin altındaki sarı bir satır, örneğin “1 bekleyen teklif uygulanmayacak”, kaç teklifin dışarıda kaldığını söyler (hangileri olduğunu görmek için dokunun) ve sipariş bunlar olmadan tamamlanır. Ödemenin eskisi gibi beklemesini istiyorsanız Ayarlar → Cihaz Tercihleri'nde Ödemeden önce teklifleri yanıtla seçeneğini açın; yalnızca bu iPad için geçerlidir.",
           "Hediye ve ek ürün satırlarına diğer parasal kampanyalar ek indirim uygulayamaz ve bu satırlar diğer kampanyaların eşiklerine sayılmaz."
         ]
       },
@@ -2227,7 +2327,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Henüz özel bir aylık borç kapatma raporu yok, ancak mutabakat için gereken her şey uygulamada zaten mevcut:"
+        "text": "v3.4'ten beri Kâr/Zarar, her ayın net kârını ürün maliyeti, ücretler ve giderler düşüldükten sonra gösterir — bkz. “Her ay gerçekte ne kadar kâr ettiğimi nasıl görürüm?” Dışa aktarabileceğiniz veya yazdırabileceğiniz bir aylık borç kapatma raporu henüz yok, ancak mutabakat için gereken her şey uygulamada zaten mevcut:"
       },
       {
         "type": "list",
@@ -2243,7 +2343,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

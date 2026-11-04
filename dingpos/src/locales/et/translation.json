@@ -273,10 +273,6 @@
           "name": "Toodete haldus",
           "desc": "Variandid, vöötkoodid, fotod, kategooriad, kohapealse hinnaga tooted"
         },
-        "import": {
-          "name": "Andmete import",
-          "desc": "Impordi tooted ja varasemad müügid teistest süsteemidest CSV-failiga"
-        },
         "inventory": {
           "name": "Laoseisu jälgimine",
           "desc": "Laoseis väheneb müügiga; käsitsi muudatustest jääb liikumiste kirje"
@@ -301,9 +297,13 @@
           "name": "Ettevõtte ülevaatepaneel",
           "desc": "Müügitulu, kasum, allahindlused, maksevahendite jaotus ja enimmüüdud tooted"
         },
+        "profit_loss": {
+          "name": "Kuine kasumiaruanne",
+          "desc": "Lisa üür, palgad ja muud kulud; vaata iga kuu puhaskasumit"
+        },
         "payment_fees": {
-          "name": "Teenustasude hinnang",
-          "desc": "Määra iga makseviisi teenustasu määr; vaata tasusid ja hinnangulist netolaekumist makseviisi kaupa"
+          "name": "Teenustasu määrad",
+          "desc": "Määra iga makseviisi teenustasu määr, et hinnata tasusid ja netolaekumist"
         },
         "comparison": {
           "name": "Perioodide võrdlus",
