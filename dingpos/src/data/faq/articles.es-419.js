@@ -785,7 +785,8 @@ export const articles = [
       "costo de envío",
       "cargo por servicio",
       "precio negociado",
-      "precio de mercado"
+      "precio de mercado",
+      "cargo por porcentaje"
     ],
     "content": [
       {
@@ -797,6 +798,8 @@ export const articles = [
         "items": [
           "0 es un precio válido (envío gratis, por ejemplo); un campo vacío no se puede agregar. Escribe el precio como tu tienda lo hace con todo lo demás, según su modo de impuesto.",
           "Un carrito tiene una sola línea por producto de precio abierto: al tocarlo de nuevo se abre esa línea para que cambies el precio.",
+          "Desde la v3.3, Cobrar por alterna entre Monto y Porcentaje. Con 5 %, la línea equivale al 5 % del subtotal de los demás artículos (después de los descuentos por artículo, antes de las promociones, el descuento del carrito y el canje de puntos), redondeado a los decimales de la moneda con la mitad hacia arriba, y acompaña al carrito cuando se agregan, quitan o descuentan artículos. La línea del carrito dice «5 % del carrito», y el pedido registra el monto al que llegó.",
+          "Una línea de precio abierto no admite descuento por artículo; para cobrar menos, cambia su precio. Los descuentos del carrito, el canje de puntos y las promociones (salvo que la excluyas de ellas) sí se le aplican.",
           "Al activar Precio abierto también se activa Excluir de promociones, para que un cargo no reciba descuento ni cuente para los montos mínimos de compra. Desactívalo de nuevo si un artículo negociado debe participar en promociones.",
           "Una vez vendida, la línea lleva impuesto, genera puntos y cuenta en Reportes como cualquier otra, y una devolución reembolsa el precio que se escribió.",
           "Un producto con variantes no puede usar precio abierto. Los productos de precio abierto nunca se ofrecen como regalos ni como complementos de pago, y nunca aparecen en la lista de reemplazo de un cambio."
@@ -1653,8 +1656,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Acciones (ajuste manual de stock, administración de productos, cobrar por encima del tope de descuento): una aprobación cubre esa sola acción.",
-          "Vistas (costo y utilidad, Reportes, Ajustes, respaldo y restauración): una aprobación desbloquea hasta que cambie el operador o la app pase a segundo plano.",
+          "Acciones (ajuste manual de stock, ajuste manual de puntos, administración de productos, cobrar por encima del tope de descuento): una aprobación cubre esa sola acción.",
+          "Vistas (costo y utilidad, Panel, Ajustes, respaldo y restauración): una aprobación desbloquea hasta que cambie el operador o la app pase a segundo plano.",
           "El tope de descuento aplica a los descuentos manuales y se revisa una sola vez al cobrar; las promociones automáticas y el canje de puntos no cuentan para el tope."
         ]
       },

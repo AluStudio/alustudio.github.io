@@ -782,7 +782,8 @@ export const articles = [
       "yetkazib berish haqi",
       "xizmat haqi",
       "kelishilgan narx",
-      "bozor narxi"
+      "bozor narxi",
+      "foizli haq"
     ],
     "content": [
       {
@@ -794,6 +795,8 @@ export const articles = [
         "items": [
           "0 narx ham mumkin (masalan, bepul yetkazib berish); bo‘sh maydonni qo‘shib bo‘lmaydi. Narxni do‘koningizning soliq rejimi qolgan hamma narsani narxlaganidek kiriting.",
           "Savatda har bir erkin narxli mahsulotga bitta qator to‘g‘ri keladi: unga yana tegsangiz, o‘sha qator ochiladi va narxni o‘zgartirishingiz mumkin.",
+          "v3.3 dan boshlab «Hisoblash usuli» Summa va Foiz o‘rtasida almashadi. 5% bo‘lganda qator boshqa mahsulotlar oraliq summasining 5% iga teng bo‘ladi (mahsulot chegirmalaridan keyin, aksiyalar, savat chegirmasi va ballarni ishlatishdan oldin); u valyutaning o‘nlik xonalarigacha yaxlitlanadi (0,5 yuqoriga) va mahsulotlar qo‘shilganda, olib tashlanganda yoki chegirma berilganda savat bilan birga o‘zgaradi. Savatdagi qator «savatning 5%» deb ko‘rinadi, buyurtmada esa chiqqan summa yoziladi.",
+          "Erkin narxli qatorga mahsulot chegirmasi berilmaydi; kamroq olish uchun uning narxini o‘zgartiring. Savat chegirmalari, ballarni ishlatish va aksiyalar (agar u aksiyalardan chiqarilmagan bo‘lsa) unga baribir tatbiq etiladi.",
           "Erkin narx yoqilganda «Aksiyalardan chiqarish» ham yoqiladi, shuning uchun haqqa chegirma berilmaydi va u summa chegaralariga hisoblanmaydi. Kelishilgan tovar aksiyalarda qatnashishi kerak bo‘lsa, uni qayta o‘chiring.",
           "Sotilgach, qator boshqalari kabi soliqqa tortiladi, ball beradi va Statistika’da hisobga olinadi; qaytarishda kiritilgan narx qaytariladi.",
           "Variantli mahsulotda erkin narxdan foydalanib bo‘lmaydi. Erkin narxli mahsulotlar hech qachon sovg‘a yoki pullik qo‘shimcha sifatida taklif qilinmaydi va almashtirishdagi almashtirilgan tovarlar ro‘yxatida ko‘rinmaydi."
@@ -1650,8 +1653,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Amallar (zaxirani qo‘lda tuzatish, mahsulotlarni boshqarish, chegirma chegarasidan oshiq chegirma bilan to‘lov qabul qilish): bitta tasdiq faqat shu bitta amalni qamrab oladi.",
-          "Ko‘rinishlar (tannarx va foyda, Statistika, Sozlamalar, zaxira nusxa va tiklash): tasdiq joriy xodim almashguncha yoki ilova fonga o‘tguncha ochiq turadi.",
+          "Amallar (zaxirani qo‘lda o‘zgartirish, ballarni qo‘lda o‘zgartirish, mahsulotlarni boshqarish, chegirma chegarasidan oshiq chegirma bilan to‘lov qabul qilish): bitta tasdiq faqat shu bitta amalni qamrab oladi.",
+          "Ko‘rinishlar (tannarx va foyda, Boshqaruv paneli, Sozlamalar, zaxira nusxa va tiklash): tasdiq joriy xodim almashguncha yoki ilova fonga o‘tguncha ochiq turadi.",
           "Chegirma chegarasi qo‘lda berilgan chegirmalarga tatbiq etiladi va to‘lov paytida bir marta tekshiriladi; avtomatik aksiyalar va ballarni ishlatish unga kirmaydi."
         ]
       },

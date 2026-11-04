@@ -784,7 +784,8 @@ export const articles = [
       "frete",
       "taxa de serviço",
       "preço negociado",
-      "preço de feira"
+      "preço de feira",
+      "taxa percentual"
     ],
     "content": [
       {
@@ -796,6 +797,8 @@ export const articles = [
         "items": [
           "0 é um preço válido (frete grátis, por exemplo); um campo vazio não pode ser adicionado. Digite o preço do mesmo jeito que o modo de imposto da sua loja usa nos demais produtos.",
           "O carrinho guarda uma linha por produto de preço aberto: tocar nele de novo abre essa linha para você mudar o preço.",
+          "Desde a v3.3, Cobrar por alterna entre Valor e Porcentagem. Com 5%, a linha equivale a 5% do subtotal dos outros itens (depois dos descontos nos itens, antes das promoções, do desconto no carrinho e do resgate de pontos), arredondado para cima no meio (0,5 sobe) até as casas decimais da moeda, e acompanha o carrinho conforme itens são adicionados, removidos ou recebem desconto. A linha no carrinho aparece como “5% do carrinho”, e a venda registra o valor a que chegou.",
+          "Uma linha de preço aberto não recebe desconto no item; para cobrar menos, altere o preço. Descontos no carrinho, resgate de pontos e promoções (a menos que ela esteja excluída delas) continuam valendo para ela.",
           "Ativar Preço aberto também ativa Excluir das promoções, para que uma taxa não receba desconto nem conte para valores mínimos de compra. Desative de novo se um item negociado deve participar das promoções.",
           "Depois de vendida, a linha tem imposto, gera pontos e entra no Resumo como qualquer outra, e uma devolução reembolsa o preço digitado.",
           "Um produto com variantes não pode ter preço aberto. Produtos de preço aberto nunca são oferecidos como brinde ou complemento pago e nunca aparecem na lista de itens da troca."
@@ -1654,8 +1657,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Ações (ajuste manual de estoque, gestão de produtos, finalizar venda acima do limite de desconto): uma aprovação vale para aquela única ação.",
-          "Telas (custo e lucro, Resumo, Ajustes, backup e restauração): a aprovação libera o acesso até o operador mudar ou o app ir para segundo plano.",
+          "Ações (ajuste manual de estoque, ajuste manual de pontos, gestão de produtos, finalizar venda acima do limite de desconto): uma aprovação vale para aquela única ação.",
+          "Telas (custo e lucro, Painel, Ajustes, backup e restauração): a aprovação libera o acesso até o operador mudar ou o app ir para segundo plano.",
           "O limite de desconto vale para descontos manuais e é verificado uma vez, ao finalizar a venda; promoções automáticas e resgate de pontos não contam para ele."
         ]
       },

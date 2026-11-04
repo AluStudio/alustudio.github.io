@@ -125,6 +125,7 @@ const DINGPOS_SITE_GLOSSARY = [
   // 列 as a row or bar: the mainland reads 列 as a column
   ["购物车列", "购物车栏"],
   ["期间列", "期间栏"],
+  ["这一列", "这一行"], // a cart line
   // Points: 点数→积分 in APP_GLOSSARY misses the bare unit
   ["另外发点", "另外发积分"],
   ["（赚点）", "（赚积分）"],
@@ -137,6 +138,7 @@ const DINGPOS_SITE_GLOSSARY = [
   ["跳出", "弹出"],
   ["略过", "跳过"],
   ["落差", "差异"],
+  ["遗失", "丢失"],
   ["预带", "预填"],
   ["备份档", "备份文件"],
   ["单档", "单个文件"],

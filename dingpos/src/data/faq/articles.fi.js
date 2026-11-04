@@ -796,7 +796,8 @@ export const articles = [
       "toimitusmaksu",
       "palvelumaksu",
       "sovittu hinta",
-      "torihinta"
+      "torihinta",
+      "prosenttimaksu"
     ],
     "content": [
       {
@@ -808,6 +809,8 @@ export const articles = [
         "items": [
           "0 on kelvollinen hinta (esim. ilmainen toimitus); tyhjää kenttää ei voi lisätä. Syötä hinta samalla tavalla kuin kaupassasi muutkin hinnat verotilan mukaan.",
           "Ostoskorissa on yksi rivi avohintaista tuotetta kohden: sen napauttaminen uudelleen avaa rivin, jotta voit muuttaa hintaa.",
+          "Versiosta 3.3 alkaen Veloitustapa-valinnalla voi vaihtaa Summan ja Prosentin välillä. Kun prosentti on 5 %, rivin hinta on 5 % muiden tuotteiden välisummasta (tuotekohtaisten alennusten jälkeen, mutta ennen kampanjoita, ostoskorin alennusta ja pisteiden käyttöä), pyöristettynä valuutan desimaalien tarkkuuteen puolikkaat ylöspäin, ja se seuraa ostoskoria, kun tuotteita lisätään, poistetaan tai alennetaan. Ostoskorin rivillä lukee ”5 % ostoskorista”, ja tilaukseen tallentuu syntynyt summa.",
+          "Avohintaiselle riville ei voi antaa tuotealennusta; jos haluat veloittaa vähemmän, muuta sen hintaa. Ostoskorin alennukset, pisteiden käyttö ja kampanjat (ellei riviä ole suljettu niiden ulkopuolelle) koskevat sitä edelleen.",
           "Avohinnan kytkeminen päälle kytkee päälle myös asetuksen Sulje pois kampanjoista, jolloin maksua ei alenneta eikä se lasketa ostosrajaan. Kytke se takaisin pois, jos sovitun hinnan tuotteen pitäisi osallistua kampanjoihin.",
           "Kun rivi on myyty, siihen lasketaan vero, se kerryttää pisteitä ja näkyy Tilastoissa kuten muutkin rivit, ja palautuksessa palautetaan syötetty hinta.",
           "Tuotteella, jolla on variantteja, ei voi käyttää avohintaa. Avohintaisia tuotteita ei koskaan tarjota lahjoina tai maksullisina lisätuotteina, eivätkä ne näy vaihdon korvaavien tuotteiden luettelossa."
@@ -1664,8 +1667,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Toiminnot (varastosaldon manuaalinen korjaus, tuotehallinta, maksaminen alennusrajan ylittävällä alennuksella): yksi hyväksyntä kattaa sen yhden toiminnon.",
-          "Näkymät (omakustannus ja kate, Tilastot, Asetukset, varmuuskopiointi ja palautus): hyväksyntä avaa näkymän, kunnes vuorossa oleva työntekijä vaihtuu tai sovellus siirtyy taustalle.",
+          "Toiminnot (varastosaldon manuaalinen korjaus, pisteiden manuaalinen korjaus, tuotehallinta, maksaminen alennusrajan ylittävällä alennuksella): yksi hyväksyntä kattaa sen yhden toiminnon.",
+          "Näkymät (omakustannus ja kate, Kojelauta, Asetukset, varmuuskopiointi ja palautus): hyväksyntä avaa näkymän, kunnes vuorossa oleva työntekijä vaihtuu tai sovellus siirtyy taustalle.",
           "Alennusraja koskee käsin annettuja alennuksia ja tarkistetaan kerran kassalla; automaattiset kampanjat ja pisteiden käyttö eivät lasketa siihen."
         ]
       },

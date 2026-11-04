@@ -794,7 +794,8 @@ export const articles = [
       "kargo ücreti",
       "hizmet bedeli",
       "pazarlık fiyatı",
-      "pazar fiyatı"
+      "pazar fiyatı",
+      "yüzdelik ücret"
     ],
     "content": [
       {
@@ -806,6 +807,8 @@ export const articles = [
         "items": [
           "0 geçerli bir fiyattır (örneğin ücretsiz kargo); boş alan eklenemez. Fiyatı, mağazanızın vergi modunun diğer her şeyi fiyatlandırdığı şekilde girin.",
           "Sepette serbest fiyatlı her ürün için tek satır bulunur: ürüne yeniden dokunmak o satırı açar ve fiyatı değiştirebilirsiniz.",
+          "v3.3’ten itibaren Ücretlendirme, Tutar ile Yüzde arasında geçiş yapar. %5’te satır, diğer ürünlerin ara toplamının %5’i tutarında olur (ürün indirimlerinden sonra; kampanyalardan, sepet indiriminden ve puan kullanımından önce); tutar para biriminin ondalık basamağına yarıdan yukarı yuvarlanır ve ürün eklendikçe, çıkarıldıkça ya da indirim aldıkça sepetle birlikte güncellenir. Sepet satırında “Sepetin %5 kadarı” yazar, sipariş ise ortaya çıkan tutarı kaydeder.",
+          "Serbest fiyatlı satıra ürün indirimi uygulanmaz; daha az ücret almak için fiyatını değiştirin. Sepet indirimleri, puan kullanımı ve kampanyalar (satır bunlardan hariç tutulmadıysa) bu satıra yine uygulanır.",
           "Serbest fiyatı açmak Kampanyalardan hariç tut seçeneğini de açar; böylece bir ücrete indirim uygulanmaz ve harcama eşiklerine sayılmaz. Pazarlıklı bir ürün kampanyalara katılsın istiyorsanız yeniden kapatın.",
           "Satıldıktan sonra satır, diğerleri gibi vergilendirilir, puan kazandırır ve İstatistik'te sayılır; ürün iadesinde girilen fiyat iade edilir.",
           "Varyantlı bir ürün serbest fiyat kullanamaz. Serbest fiyatlı ürünler hediye ya da ücretli eklenti olarak asla sunulmaz ve bir değişimin yerine konacak ürün listesinde hiç görünmez."
@@ -1667,8 +1670,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "İşlemler (elle stok düzeltme, ürün yönetimi, indirim üst sınırının üzerinde ödeme alma): bir onay yalnızca o tek işlemi kapsar.",
-          "Görünümler (maliyet ve kâr, İstatistik, Ayarlar, yedekleme ve geri yükleme): onay, işlemi yapan kişi değişene veya uygulama arka plana geçene kadar kilidi açık tutar.",
+          "İşlemler (elle stok düzeltme, elle puan düzeltme, ürün yönetimi, indirim üst sınırının üzerinde ödeme alma): bir onay yalnızca o tek işlemi kapsar.",
+          "Görünümler (maliyet ve kâr, Pano, Ayarlar, yedekleme ve geri yükleme): onay, işlemi yapan kişi değişene veya uygulama arka plana geçene kadar kilidi açık tutar.",
           "İndirim üst sınırı elle yapılan indirimlere uygulanır ve ödemede bir kez kontrol edilir; otomatik kampanyalar ve puan kullanımı bu sınıra sayılmaz."
         ]
       },

@@ -787,7 +787,8 @@ export const articles = [
       "phí vận chuyển",
       "phí dịch vụ",
       "giá thỏa thuận",
-      "giá thị trường"
+      "giá thị trường",
+      "phí theo phần trăm"
     ],
     "content": [
       {
@@ -799,6 +800,8 @@ export const articles = [
         "items": [
           "0 là giá hợp lệ (ví dụ miễn phí vận chuyển); ô để trống thì không thể thêm. Hãy nhập giá theo cách chế độ thuế của cửa hàng định giá mọi thứ khác.",
           "Giỏ hàng chỉ có một dòng cho mỗi sản phẩm giá tự đặt: chạm lại vào sản phẩm sẽ mở dòng đó để bạn đổi giá.",
+          "Từ v3.3, Tính giá theo cho phép chuyển giữa Số tiền và Phần trăm. Ở mức 5%, dòng này bằng 5% tạm tính của các mặt hàng khác (sau giảm giá theo mặt hàng, trước khuyến mãi, giảm giá giỏ hàng và đổi điểm), làm tròn lên từ 0,5 theo số chữ số thập phân của tiền tệ, và tự cập nhật khi mặt hàng được thêm, bớt hoặc giảm giá trong giỏ. Dòng trong giỏ hàng hiển thị “5% của giỏ hàng”, còn đơn hàng ghi lại số tiền đã tính ra.",
+          "Dòng giá tự đặt không có giảm giá theo mặt hàng; để tính thấp hơn, hãy đổi giá. Giảm giá giỏ hàng, đổi điểm và khuyến mãi (trừ khi đã loại khỏi khuyến mãi) vẫn áp dụng cho dòng này.",
           "Bật Giá tự đặt cũng bật Loại khỏi khuyến mãi, nên khoản phí không bị giảm giá và không được tính vào ngưỡng chi tiêu. Hãy tắt lại nếu món hàng thỏa thuận giá cần tham gia khuyến mãi.",
           "Sau khi bán, dòng này được tính thuế, tích điểm và tính vào Thống kê như mọi dòng khác, và khi trả hàng sẽ hoàn lại đúng giá đã nhập.",
           "Sản phẩm có biến thể không dùng được giá tự đặt. Sản phẩm giá tự đặt không bao giờ được tặng kèm hay làm món mua thêm có phí, và không xuất hiện trong danh sách hàng đổi sang của một lần đổi hàng."
@@ -1664,8 +1667,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Thao tác (điều chỉnh tồn kho thủ công, quản lý sản phẩm, thanh toán vượt mức giảm giá tối đa): một lần phê duyệt chỉ áp dụng cho đúng thao tác đó.",
-          "Màn hình xem (giá vốn & lợi nhuận, Thống kê, Cài đặt, sao lưu & khôi phục): phê duyệt mở khóa cho đến khi người thao tác thay đổi hoặc ứng dụng chuyển xuống nền.",
+          "Thao tác (điều chỉnh tồn kho thủ công, điều chỉnh điểm thủ công, quản lý sản phẩm, thanh toán vượt mức giảm giá tối đa): một lần phê duyệt chỉ áp dụng cho đúng thao tác đó.",
+          "Màn hình xem (giá vốn & lợi nhuận, Tổng quan, Cài đặt, sao lưu & khôi phục): phê duyệt mở khóa cho đến khi người thao tác thay đổi hoặc ứng dụng chuyển xuống nền.",
           "Mức giảm giá tối đa áp dụng cho giảm giá thủ công và chỉ được kiểm tra một lần khi thanh toán; khuyến mãi tự động và đổi điểm không tính vào mức này."
         ]
       },

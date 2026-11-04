@@ -790,7 +790,8 @@ export const articles = [
       "Versandkosten",
       "Servicegebühr",
       "verhandelter Preis",
-      "Tagespreis"
+      "Tagespreis",
+      "Prozentgebühr"
     ],
     "content": [
       {
@@ -802,6 +803,8 @@ export const articles = [
         "items": [
           "0 ist ein gültiger Preis (etwa für kostenlosen Versand); ein leeres Feld lässt sich nicht hinzufügen. Geben Sie den Preis so ein, wie der Steuermodus Ihres Geschäfts auch alle anderen Preise behandelt.",
           "Ein Warenkorb enthält pro Artikel mit freiem Preis nur eine Zeile: Tippen Sie ihn erneut an, öffnet sich diese Zeile, und Sie können den Preis ändern.",
+          "Seit v3.3 wechselt „Berechnung nach“ zwischen Betrag und Prozent. Bei 5 % ergibt die Zeile 5 % der Zwischensumme der übrigen Artikel (nach Artikelrabatten, vor Aktionen, Warenkorbrabatt und Einlösen von Punkten), kaufmännisch auf die Nachkommastellen der Währung gerundet, und sie passt sich dem Warenkorb an, wenn Artikel hinzukommen, entfernt oder rabattiert werden. Die Warenkorbzeile zeigt „5 % des Warenkorbs“, und die Bestellung hält den ermittelten Betrag fest.",
+          "Auf eine Zeile mit freiem Preis gibt es keinen Artikelrabatt; um weniger zu berechnen, ändern Sie den Preis. Warenkorbrabatt, Einlösen von Punkten und Aktionen (sofern der Artikel nicht davon ausgeschlossen ist) gelten weiterhin für sie.",
           "Mit „Freier Preis“ wird auch „Von Aktionen ausschließen“ aktiviert, damit auf eine Gebühr kein Rabatt gewährt wird und sie nicht zu Mindestumsätzen zählt. Schalten Sie es wieder aus, wenn verhandelte Ware an Aktionen teilnehmen soll.",
           "Nach dem Verkauf wird die Zeile versteuert, sammelt Punkte und zählt in der Statistik wie jede andere, und eine Rückgabe erstattet den eingegebenen Preis.",
           "Ein Artikel mit Varianten kann keinen freien Preis verwenden. Artikel mit freiem Preis werden nie als Geschenk oder kostenpflichtige Zusatzartikel angeboten und erscheinen nie in der Ersatzartikel-Liste eines Umtauschs."
@@ -1664,8 +1667,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Aktionen (manuelle Bestandskorrektur, Artikelverwaltung, Bezahlen über der Rabattgrenze): Eine Freigabe gilt für genau diese eine Aktion.",
-          "Ansichten (Einkaufspreis & Rohertrag, Statistik, Einstellungen, Backup & Wiederherstellung): Eine Freigabe schaltet frei, bis die Bediener:in wechselt oder die App in den Hintergrund geht.",
+          "Aktionen (manuelle Bestandskorrektur, manuelle Punktekorrektur, Artikelverwaltung, Bezahlen über der Rabattgrenze): Eine Freigabe gilt für genau diese eine Aktion.",
+          "Ansichten (Einkaufspreis & Rohertrag, Dashboard, Einstellungen, Backup & Wiederherstellung): Eine Freigabe schaltet frei, bis die Bediener:in wechselt oder die App in den Hintergrund geht.",
           "Die Rabattgrenze gilt für manuelle Rabatte und wird einmal beim Bezahlen geprüft; automatische Aktionen und das Einlösen von Punkten zählen nicht dazu."
         ]
       },

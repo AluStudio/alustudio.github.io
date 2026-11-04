@@ -791,7 +791,8 @@ export const articles = [
       "tarifa e transportit",
       "tarifa e shërbimit",
       "çmim i negociuar",
-      "çmim sipas marrëveshjes"
+      "çmim sipas marrëveshjes",
+      "tarifë në përqindje"
     ],
     "content": [
       {
@@ -803,6 +804,8 @@ export const articles = [
         "items": [
           "0 është çmim i vlefshëm (p.sh. transport falas); një fushë bosh nuk mund të shtohet. Shkruaje çmimin ashtu siç i çmon gjithçka tjetër mënyra e tatimit të dyqanit tënd.",
           "Shporta mban një rresht për çdo produkt me çmim në shitje: kur e troket sërish, hapet ai rresht që të ndryshosh çmimin.",
+          "Që nga v3.3, Llogarit sipas kalon midis Shuma dhe Përqindja. Me 5%, rreshti del 5% e nëntotalit të artikujve të tjerë (pas zbritjeve të artikujve, para promovimeve, zbritjes së shportës dhe shpërblimit të pikëve), i rrumbullakuar nga gjysma lart sipas shifrave dhjetore të monedhës, dhe ndjek shportën kur artikujt shtohen, hiqen ose zbriten. Rreshti në shportë shfaqet “5% e shportës”, ndërsa porosia regjistron shumën që doli.",
+          "Një rresht me çmim në shitje nuk merr zbritje artikulli; për të ngarkuar më pak, ndrysho çmimin e tij. Zbritjet e shportës, shpërblimi i pikëve dhe promovimet (përveç nëse është përjashtuar prej tyre) vlejnë prapë për të.",
           "Aktivizimi i Çmim në shitje aktivizon edhe Përjashto nga promovimet, ndaj një tarifë nuk zbritet dhe nuk numërohet te pragjet e shpenzimit. Çaktivizoje sërish nëse një artikull i negociuar duhet të marrë pjesë në promovime.",
           "Pasi shitet, rreshti tatohet, fiton pikë dhe numërohet te Statistika si çdo tjetër, ndërsa një kthim rimburson çmimin që u shkrua.",
           "Një produkt me variante nuk mund të ketë çmim në shitje. Produktet me çmim në shitje nuk ofrohen kurrë si dhurata ose shtesa me pagesë, dhe nuk shfaqen kurrë te lista e zëvendësimeve të një këmbimi."
@@ -1662,8 +1665,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Veprimet (rregullimi manual i stokut, menaxhimi i produkteve, kryerja e pagesës me zbritje mbi kufirin e lejuar): një miratim mbulon vetëm atë veprim.",
-          "Pamjet (kosto dhe fitim, Statistika, Cilësimet, kopje rezervë dhe rivendosje): miratimi zhbllokon derisa të ndërrojë operatori ose aplikacioni të kalojë në sfond.",
+          "Veprimet (rregullimi manual i stokut, rregullimi manual i pikëve, menaxhimi i produkteve, kryerja e pagesës me zbritje mbi kufirin e lejuar): një miratim mbulon vetëm atë veprim.",
+          "Pamjet (kosto dhe fitim, Paneli, Cilësimet, kopje rezervë dhe rivendosje): miratimi zhbllokon derisa të ndërrojë operatori ose aplikacioni të kalojë në sfond.",
           "Kufiri i zbritjes vlen për zbritjet manuale dhe kontrollohet një herë gjatë pagesës; promovimet automatike dhe shpërblimi i pikëve nuk llogariten në të."
         ]
       },

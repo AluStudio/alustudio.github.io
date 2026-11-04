@@ -786,7 +786,8 @@ export const articles = [
       "frais de port",
       "frais de service",
       "prix négocié",
-      "prix du marché"
+      "prix du marché",
+      "frais en pourcentage"
     ],
     "content": [
       {
@@ -798,6 +799,8 @@ export const articles = [
         "items": [
           "0 est un prix valide (livraison offerte, par exemple) ; un champ vide ne peut pas être ajouté. Saisissez le prix comme le mode de taxe de votre magasin le fait pour tout le reste.",
           "Un panier contient une seule ligne par produit à prix libre : le toucher à nouveau ouvre cette ligne pour que vous puissiez changer le prix.",
+          "Depuis la v3.3, Facturer selon bascule entre Montant et Pourcentage. À 5 %, la ligne correspond à 5 % du sous-total des autres articles (après les remises sur articles, avant les promotions, la remise sur le panier et l’utilisation de points), arrondi à la hausse (à partir de la moitié) au nombre de décimales de la devise ; elle suit le panier quand des articles sont ajoutés, retirés ou remisés. La ligne du panier affiche « 5 % du panier », et la commande enregistre le montant obtenu.",
+          "Une ligne à prix libre n’accepte pas de remise sur article ; pour facturer moins, changez son prix. Les remises sur le panier, l’utilisation de points et les promotions (sauf si elle en est exclue) s’y appliquent toujours.",
           "Activer Prix libre active aussi Exclure des promotions : des frais ne sont donc pas remisés et ne comptent pas dans les seuils de dépense. Désactivez-le si un article négocié doit participer aux promotions.",
           "Une fois vendue, la ligne est taxée, rapporte des points et compte dans Stats comme les autres, et un retour rembourse le prix saisi.",
           "Un produit avec variantes ne peut pas avoir de prix libre. Les produits à prix libre ne sont jamais proposés comme cadeaux ou compléments payants, et n’apparaissent jamais dans la liste des articles de remplacement d’un échange."
@@ -1662,8 +1665,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Actions (ajustement manuel du stock, gestion des produits, encaissement au-delà du plafond de remise) : une approbation couvre cette seule action.",
-          "Consultations (Coûts et marges, Stats, Réglages, sauvegarde et restauration) : une approbation déverrouille l’accès jusqu’au changement d’opérateur ou jusqu’à ce que l’app passe en arrière-plan.",
+          "Actions (ajustement manuel du stock, ajustement manuel des points, gestion des produits, encaissement au-delà du plafond de remise) : une approbation couvre cette seule action.",
+          "Consultations (Coûts et marges, Tableau de bord, Réglages, sauvegarde et restauration) : une approbation déverrouille l’accès jusqu’au changement d’opérateur ou jusqu’à ce que l’app passe en arrière-plan.",
           "Le plafond de remise s’applique aux remises manuelles et est vérifié une seule fois à l’encaissement ; les promotions automatiques et l’utilisation de points n’y comptent pas."
         ]
       },
