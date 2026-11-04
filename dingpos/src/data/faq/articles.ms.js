@@ -156,7 +156,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tidak. DingPOS tiada sistem akaun — muat turun dan terus mula berjualan. Produk, pesanan dan data pelanggan anda semuanya kekal pada iPad anda dan tidak pernah dimuat naik ke pelayan kami."
+        "text": "Tidak. DingPOS tiada sistem akaun — muat turun dan terus mula berjualan. Produk, pesanan dan data pelanggan anda semuanya kekal pada iPad anda. Data itu hanya sampai kepada kami jika anda menghantar laporan sokongan daripada Tetapan, yang melampirkan salinan data kedai anda supaya kami dapat menghasilkan semula masalah itu."
       },
       {
         "type": "p",
@@ -787,7 +787,8 @@ export const articles = [
       "caj penghantaran",
       "caj perkhidmatan",
       "harga tawar-menawar",
-      "harga pasaran"
+      "harga pasaran",
+      "caj peratusan"
     ],
     "content": [
       {
@@ -799,6 +800,8 @@ export const articles = [
         "items": [
           "0 ialah harga yang sah (penghantaran percuma, misalnya); medan kosong tidak boleh ditambah. Masukkan harga mengikut cara mod cukai kedai anda meletakkan harga bagi segala yang lain.",
           "Troli hanya mempunyai satu baris bagi setiap produk harga terbuka: mengetiknya sekali lagi membuka baris itu supaya anda boleh menukar harga.",
+          "Sejak v3.3, Caj Mengikut bertukar antara Jumlah dan Peratus. Pada 5%, baris itu bernilai 5% daripada subjumlah item lain (selepas diskaun item, sebelum promosi, diskaun troli dan penebusan mata), dibundarkan ke atas pada separuh (half-up) mengikut tempat perpuluhan mata wang, dan ia mengikut troli apabila item ditambah, dibuang atau didiskaunkan. Baris troli memaparkan “5% daripada troli”, dan pesanan merekodkan jumlah yang terhasil.",
+          "Baris harga terbuka tidak mendapat diskaun item; untuk mengecaj kurang, tukar harganya. Diskaun troli, penebusan mata dan promosi (kecuali ia dikecualikan daripadanya) masih terpakai padanya.",
           "Menghidupkan Harga Terbuka turut menghidupkan Kecualikan daripada promosi, jadi caj tidak didiskaunkan dan tidak dikira dalam ambang perbelanjaan. Matikannya semula jika barang yang ditawar patut mengambil bahagian dalam promosi.",
           "Setelah dijual, baris itu dikenakan cukai, mendapat mata dan dikira dalam Statistik seperti baris lain, dan pemulangan memulangkan harga yang dimasukkan.",
           "Produk yang mempunyai varian tidak boleh menggunakan harga terbuka. Produk harga terbuka tidak pernah ditawarkan sebagai hadiah atau tambahan berbayar, dan tidak pernah muncul dalam senarai barang gantian bagi tukar barang."
@@ -1656,8 +1659,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Tindakan (pelarasan stok manual, pengurusan produk, bayar melebihi had diskaun): satu kelulusan meliputi satu tindakan itu sahaja.",
-          "Paparan (kos & untung, Statistik, Tetapan, sandaran & pemulihan): kelulusan membuka kunci sehingga operator bertukar atau aplikasi dihantar ke latar belakang.",
+          "Tindakan (pelarasan stok manual, pelarasan mata manual, pengurusan produk, bayar melebihi had diskaun): satu kelulusan meliputi satu tindakan itu sahaja.",
+          "Paparan (kos & untung, Papan Pemuka, Tetapan, sandaran & pemulihan): kelulusan membuka kunci sehingga operator bertukar atau aplikasi dihantar ke latar belakang.",
           "Had diskaun terpakai pada diskaun manual dan disemak sekali semasa bayar; promosi automatik dan penebusan mata tidak dikira terhadapnya."
         ]
       },

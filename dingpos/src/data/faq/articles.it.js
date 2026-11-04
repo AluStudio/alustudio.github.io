@@ -154,7 +154,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "No. DingPOS non ha un sistema di account: scarica l'app e inizia a vendere. Prodotti, ordini e dati dei clienti restano sul tuo iPad e non vengono mai caricati sui nostri server."
+        "text": "No. DingPOS non ha un sistema di account: scarica l'app e inizia a vendere. Prodotti, ordini e dati dei clienti restano tutti sul tuo iPad. Ci arrivano solo se invii una segnalazione all'assistenza da Impostazioni, che allega una copia dei dati del tuo negozio così da poter riprodurre il problema."
       },
       {
         "type": "p",
@@ -786,7 +786,8 @@ export const articles = [
       "spese di spedizione",
       "costo del servizio",
       "prezzo trattato",
-      "prezzo di mercato"
+      "prezzo di mercato",
+      "spesa in percentuale"
     ],
     "content": [
       {
@@ -798,6 +799,8 @@ export const articles = [
         "items": [
           "0 è un prezzo valido (ad es. spedizione gratuita); un campo vuoto non si può aggiungere. Inserisci il prezzo come il resto del tuo negozio, in base alla modalità imposte.",
           "Un carrello contiene una sola riga per ogni prodotto a prezzo libero: toccandolo di nuovo si apre quella riga per cambiare il prezzo.",
+          "Dalla v3.3, Addebita per permette di scegliere tra Importo e Percentuale. Con il 5%, la riga vale il 5% del subtotale degli altri articoli (dopo gli sconti articolo, prima di promozioni, sconto carrello e riscatto dei punti), arrotondato alla cifra decimale della valuta più vicina, con i valori a metà arrotondati per eccesso. L'importo segue il carrello quando gli articoli vengono aggiunti, rimossi o scontati. Nel carrello la riga riporta “5% del carrello” e l'ordine registra l'importo risultante.",
+          "Una riga a prezzo libero non ha sconto articolo: per addebitare meno, cambia il prezzo. Sconto carrello, riscatto dei punti e promozioni (a meno che il prodotto non ne sia escluso) valgono comunque per questa riga.",
           "Attivando Prezzo libero si attiva anche Escludi dalle promozioni, così una spesa accessoria non viene scontata e non conta per le soglie di spesa. Disattivalo di nuovo se un articolo trattato deve partecipare alle promozioni.",
           "Una volta venduta, la riga è tassata, accumula punti e conta in Report come le altre, e un reso rimborsa il prezzo inserito.",
           "Un prodotto con varianti non può usare il prezzo libero. I prodotti a prezzo libero non vengono mai offerti come omaggi o aggiunte a pagamento e non compaiono mai nell'elenco degli articoli sostitutivi di un cambio."
@@ -1662,8 +1665,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Azioni (rettifica manuale della giacenza, gestione prodotti, pagamento oltre lo sconto massimo del ruolo): un'approvazione vale per quella sola azione.",
-          "Schermate (costi e utile, Report, Impostazioni, backup e ripristino): un'approvazione sblocca finché l'operatore non cambia o l'app va in background.",
+          "Azioni (rettifica manuale della giacenza, rettifica manuale dei punti, gestione prodotti, pagamento oltre lo sconto massimo del ruolo): un'approvazione vale per quella sola azione.",
+          "Schermate (costi e utile, Dashboard, Impostazioni, backup e ripristino): un'approvazione sblocca finché l'operatore non cambia o l'app va in background.",
           "Lo sconto massimo del ruolo si applica agli sconti manuali e viene controllato una sola volta al pagamento; le promozioni automatiche e il riscatto dei punti non vengono conteggiati."
         ]
       },

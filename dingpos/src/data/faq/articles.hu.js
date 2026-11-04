@@ -153,7 +153,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nem. A DingPOS-nak nincs fiókrendszere – töltse le, és kezdhet is eladni. A termékei, rendelései és vevőadatai az iPaden maradnak, és soha nem kerülnek fel a szervereinkre."
+        "text": "Nem. A DingPOS-nak nincs fiókrendszere – töltse le, és kezdhet is eladni. A termékei, rendelései és vevőadatai mind az iPaden maradnak. Csak akkor jutnak el hozzánk, ha a Beállításokból támogatási bejelentést küld, amely csatolja az üzlete adatainak másolatát, hogy újra elő tudjuk állítani a problémát."
       },
       {
         "type": "p",
@@ -786,7 +786,8 @@ export const articles = [
       "szállítási díj",
       "szolgáltatási díj",
       "alkudott ár",
-      "piaci ár"
+      "piaci ár",
+      "százalékos díj"
     ],
     "content": [
       {
@@ -798,6 +799,8 @@ export const articles = [
         "items": [
           "A 0 érvényes ár (például ingyenes szállításnál); üres mezővel nem lehet hozzáadni. Az árat úgy adja meg, ahogy az üzlet adózási módja szerint minden más árat is.",
           "A kosárban minden szabadáras termék egy sort kap: ha újra rákoppint, megnyílik az a sor, és módosíthatja az árat.",
+          "A v3.3 óta a Számítás módja átvált az Összeg és a Százalék között. 5%-nál a sor a többi tétel részösszegének 5%-a (a tételengedmények után, az akciók, a kosárengedmény és a pontbeváltás előtt), a pénznem tizedesjegyeire kerekítve (az .5 felfelé), és együtt változik a kosárral, ahogy tételeket adnak hozzá, vesznek ki belőle, vagy engedményt kapnak. A kosársor felirata „a kosár 5%-a”, a rendelés pedig a kijött összeget rögzíti.",
+          "A szabadáras sorra nem adható tételengedmény; ha kevesebbet szeretne felszámolni, módosítsa az árát. A kosárengedmény, a pontbeváltás és az akciók (hacsak ki nincs zárva belőlük) továbbra is vonatkoznak rá.",
           "A Szabad ár bekapcsolása a Kizárás az akciókból opciót is bekapcsolja, így a díjra nem vonatkozik engedmény, és nem számít bele az összegküszöbökbe. Kapcsolja vissza, ha egy alkudott tételnek részt kell vennie az akciókban.",
           "Eladás után a sor ugyanúgy adózik, pontot szerez és számít a Riportokban, mint bármelyik másik, a visszavétel pedig a megadott árat téríti vissza.",
           "A változatokkal rendelkező termék nem lehet szabadáras. A szabadáras termékek soha nem kerülnek fel ajándékként vagy fizetős kiegészítőként, és a csere cseretermék-listájában sem jelennek meg."
@@ -1658,8 +1661,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Műveletek (kézi készletmódosítás, termékkezelés, a felső határ feletti engedménnyel történő fizetés): egy jóváhagyás egyetlen műveletre érvényes.",
-          "Nézetek (költség és nyereség, Riportok, Beállítások, biztonsági mentés és visszaállítás): a jóváhagyás addig oldja fel a nézetet, amíg a kezelő nem változik, vagy az alkalmazás a háttérbe nem kerül.",
+          "Műveletek (kézi készletmódosítás, kézi pontmódosítás, termékkezelés, a felső határ feletti engedménnyel történő fizetés): egy jóváhagyás egyetlen műveletre érvényes.",
+          "Nézetek (költség és nyereség, Irányítópult, Beállítások, biztonsági mentés és visszaállítás): a jóváhagyás addig oldja fel a nézetet, amíg a kezelő nem változik, vagy az alkalmazás a háttérbe nem kerül.",
           "Az engedmény felső határa a kézi engedményekre vonatkozik, és fizetéskor egyszer ellenőrizzük; az automatikus akciók és a pontbeváltás nem számítanak bele."
         ]
       },

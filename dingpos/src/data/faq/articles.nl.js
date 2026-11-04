@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nee. DingPOS heeft geen accountsysteem — download de app en begin met verkopen. Je producten, bestellingen en klantgegevens blijven op je iPad en worden nooit naar onze servers geüpload."
+        "text": "Nee. DingPOS heeft geen accountsysteem — download de app en begin met verkopen. Je producten, bestellingen en klantgegevens blijven allemaal op je iPad. Ze komen alleen bij ons terecht als je vanuit Instellingen een supportrapport verstuurt, waarbij een kopie van je winkelgegevens wordt bijgevoegd zodat we het probleem kunnen reproduceren."
       },
       {
         "type": "p",
@@ -791,7 +791,8 @@ export const articles = [
       "verzendkosten",
       "servicekosten",
       "onderhandelde prijs",
-      "marktprijs"
+      "marktprijs",
+      "percentagekosten"
     ],
     "content": [
       {
@@ -801,8 +802,10 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "0 is een geldige prijs (bijvoorbeeld gratis verzending); een leeg veld kan niet worden toegevoegd. Voer de prijs in zoals de btw-modus van je winkel alle andere prijzen weergeeft.",
+          "0 is een geldige prijs (bijvoorbeeld gratis verzending); een leeg veld kan niet worden toegevoegd. Voer de prijs in op dezelfde manier als andere prijzen volgens de btw-modus van je winkel worden berekend.",
           "Een winkelmand bevat één regel per product met open prijs: tik er nogmaals op om die regel te openen en de prijs te wijzigen.",
+          "Sinds v3.3 schakelt Berekenen op basis van tussen Bedrag en Percentage. Bij 5% komt de regel op 5% van het subtotaal van de andere artikelen (na artikelkortingen, vóór acties, de korting op de winkelmand en het inwisselen van punten), afgerond op de decimalen van de valuta (vanaf 0,5 naar boven), en de regel loopt mee met de winkelmand als er artikelen worden toegevoegd, verwijderd of met korting worden verkocht. In de winkelmand staat op de regel “5% van winkelmand”, en de bestelling bewaart het bedrag waarop de regel uitkwam.",
+          "Een regel met open prijs krijgt geen artikelkorting; wijzig de prijs om minder te rekenen. Kortingen op de winkelmand, het inwisselen van punten en acties (tenzij de regel daarvan is uitgesloten) gelden er wel voor.",
           "Als je Open prijs aanzet, gaat ook Sluit uit van acties aan, zodat op kosten geen korting wordt gegeven en ze niet meetellen voor bestedingsdrempels. Zet het weer uit als een onderhandeld artikel wel aan acties mee moet doen.",
           "Na verkoop wordt de regel belast, levert punten op en telt mee in Cijfers zoals elke andere, en bij een retour wordt de ingevoerde prijs terugbetaald.",
           "Een product met varianten kan geen open prijs hebben. Producten met open prijs worden nooit aangeboden als cadeau of als betaalde extra en verschijnen nooit in de lijst met vervangende artikelen bij een omruiling."
@@ -1659,13 +1662,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Een toestemming heeft twee waarden: Toegestaan of Goedkeuring nodig. Niets is volledig verboden. Als een medewerker een handeling uitvoert die goedkeuring nodig heeft, kiest een collega die dit wel mag zijn of haar naam en voert de pincode in om het door te laten gaan."
+        "text": "Een toestemming heeft twee waarden: Toegestaan of Goedkeuring nodig. Niets is volledig verboden. Als een medewerker een handeling uitvoert waarvoor goedkeuring nodig is, kiest een collega die deze handeling wel mag uitvoeren diens naam en voert die collega diens pincode in om de handeling goed te keuren."
       },
       {
         "type": "list",
         "items": [
-          "Handelingen (handmatige voorraadcorrectie, productbeheer, afrekenen boven de kortingslimiet): één goedkeuring geldt voor die ene handeling.",
-          "Overzichten (kostprijs en winst, Cijfers, Instellingen, back-up en herstel): een goedkeuring ontgrendelt tot de actieve medewerker wisselt of de app naar de achtergrond gaat.",
+          "Handelingen (handmatige voorraadcorrectie, handmatige puntencorrectie, productbeheer, afrekenen boven de kortingslimiet): één goedkeuring geldt voor die ene handeling.",
+          "Overzichten (kostprijs en winst, Dashboard, Instellingen, back-up en herstel): een goedkeuring ontgrendelt tot de actieve medewerker wisselt of de app naar de achtergrond gaat.",
           "De kortingslimiet geldt voor handmatige kortingen en wordt één keer gecontroleerd bij het afrekenen. Automatische kortingsacties en het inwisselen van punten tellen niet mee."
         ]
       },

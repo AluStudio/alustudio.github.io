@@ -45,6 +45,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, statSync
 import { homedir, tmpdir } from "node:os";
 import { dirname, isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { DESCRIPTION_MAX } from "./meta-description.mjs";
 import { PACK_TEXT_FIELDS, placeholders, uiLeaves } from "./pack-fields.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -90,6 +91,8 @@ export const APPS = {
     freeLengthFields: new Set(),
     // copy-spa-pages.js rejects every empty string.
     mayBeEmpty: () => false,
+    // A guide's summary is its page's meta description, and copy-spa-pages.js fails a longer one.
+    maxLength: { summary: DESCRIPTION_MAX },
     uiSegments: ["privacy", "terms"],
     pack: "src/data/guides/guides.<code>.js",
     lists: [{ name: "articles", kind: "guide", key: "slug", segment: (guide) => `guide-${guide.slug}` }],
@@ -340,10 +343,14 @@ export function unitProblem(app, unit, value) {
   }
   try {
     mergeText(app, unit.source, value, "", unit.structure);
-    return null;
   } catch (error) {
     return error.message;
   }
+  for (const [field, max] of Object.entries(app.maxLength ?? {})) {
+    const length = typeof value[field] === "string" ? [...value[field]].length : 0;
+    if (length > max) return `${field} is ${length} characters; the limit is ${max}`;
+  }
+  return null;
 }
 
 // ── Reading sources ──────────────────────────────────────────

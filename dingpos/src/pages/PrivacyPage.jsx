@@ -72,6 +72,16 @@ function PrivacyPage() {
             </section>
 
             <section className="prose legal__section">
+              <h2>{t("privacy.apple_ads.title")}</h2>
+              <p>{t("privacy.apple_ads.desc")}</p>
+            </section>
+
+            <section className="prose legal__section">
+              <h2>{t("privacy.support.title")}</h2>
+              <p>{t("privacy.support.desc")}</p>
+            </section>
+
+            <section className="prose legal__section">
               <h2>{t("privacy.children.title")}</h2>
               <p>{t("privacy.children.desc")}</p>
             </section>

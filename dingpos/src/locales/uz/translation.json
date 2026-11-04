@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Maxfiylik siyosati",
     "meta_description": "Oflayn ishlaydigan iPad kassa dasturi DingPOS ma’lumotlaringiz bilan qanday ishlaydi: biznes yozuvlari qurilmangizda qoladi, ixtiyoriy zaxira nusxalar esa faqat o‘zingizning bulut hisobingizga yuboriladi.",
-    "effective_date": "Kuchga kirgan sana: 2026-yil 1-iyul",
+    "effective_date": "Kuchga kirgan sana: 2026-yil 4-noyabr",
     "intro": "ALU Studio («biz») DingPOS («ilova») dasturini ishlab chiqdi. DingPOS maxfiylik asosiga qurilgan kassa dasturi — biznes ma’lumotlaringiz sizga tegishli. Ushbu Maxfiylik siyosati ilovadan foydalanganingizda ma’lumotlaringiz bilan qanday ishlashimizni tushuntiradi.",
     "local_storage": {
       "title": "Ma’lumotlaringiz qanday saqlanadi",
-      "desc": "DingPOS barcha biznes ma’lumotlaringizni qurilmangizning o‘zida saqlaydi. Bulutdagi zaxira nusxani o‘zingiz yoqmasangiz, bu ma’lumotlar qurilmangizdan tashqariga chiqmaydi. Ilovada yaratadigan ma’lumotlar quyidagilarni o‘z ichiga oladi:",
+      "desc": "DingPOS barcha biznes ma’lumotlaringizni qurilmangizning o‘zida saqlaydi. Bulutdagi zaxira nusxani o‘zingiz yoqmasangiz yoki bizga yordam hisobotini yubormasangiz, bu ma’lumotlar qurilmangizdan tashqariga chiqmaydi. Ilovada yaratadigan ma’lumotlar quyidagilarni o‘z ichiga oladi:",
       "items": [
         "Do‘kon sozlamalari (do‘kon nomi, valyuta, soliq stavkasi, logotip)",
         "Mahsulot ma’lumotlari (nomi, narxi, tannarxi, shtrix-kod, rasm, toifa, variantlar, zaxira)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Biz nimalarni to‘plamaymiz",
-      "desc": "DingPOS biznes ma’lumotlaringizning hech birini to‘plamaydi, uzatmaydi va boshqalar bilan ulashmaydi. Xususan, biz:",
+      "desc": "Biznes mazmuningiz qurilmangizda qoladi. O‘zingiz tanlab yuboradigan yordam hisobotidan tashqari (pastga qarang), biz:",
       "items": [
         "Mahsulot, buyurtma, mijoz yoki a’zolik ma’lumotlaringizni to‘plamaymiz",
         "To‘lov jarayonlariga va kredit karta ma’lumotlariga tegmaymiz (ilova haqiqiy karta to‘lovlarini qayta ishlamaydi)",
-        "Joylashuvingizni kuzatmaymiz",
-        "Biznes ma’lumotlaringizni uchinchi tomonlar bilan ulashmaymiz"
+        "Joylashuvingizni kuzatmaymiz va sizni boshqa kompaniyalarning ilova va veb-saytlari bo‘ylab kuzatmaymiz",
+        "Ma’lumotlaringizni sotmaymiz va biznes ma’lumotlaringizni hech qanday uchinchi tomon bilan ulashmaymiz"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Obuna va xaridlar",
-      "desc": "DingPOS obunani Apple App Store ilova ichidagi xarid (IAP) orqali taklif qiladi va obuna holatini boshqarish uchun RevenueCat xizmatidan foydalanadi. To‘lovni Apple amalga oshiradi; kredit karta yoki to‘lov ma’lumotlaringiz bizga hech qachon yetib kelmaydi. RevenueCat faqat obuna holatiga bog‘langan anonim identifikatorni oladi va undan obunangiz faolligini tekshirish uchun foydalaniladi."
+      "desc": "DingPOS obunani Apple App Store ilova ichidagi xarid orqali taklif qiladi. To‘lovni Apple amalga oshiradi; kredit karta yoki to‘lov ma’lumotlaringiz bizga hech qachon yetib kelmaydi. Qaysi tarif faol ekanini aniqlash uchun bizning o‘z serverimiz Apple imzolagan tranzaksiyani tekshiradi. Buning uchun ilova ushbu o‘rnatishni serverimizda ilova yaratgan tasodifiy qurilma identifikatori (Apple’ning reklama identifikatori emas), ilova versiyasi, til, App Store davlati va do‘koningiz nomi bilan birga ro‘yxatdan o‘tkazadi hamda obunaga oid kichik hodisalar to‘plamini (masalan, tariflarni ko‘rish yoki xaridni boshlash) yuboradi."
     },
     "analytics": {
       "title": "Tahlil va nosozliklar haqida hisobot",
-      "desc": "DingPOS ilovadan qanday foydalanilishini tushunish hamda nosozliklarni aniqlab tuzatish uchun Google taqdim etadigan Firebase Analytics va Firebase Crashlytics xizmatlaridan foydalanadi. Bu xizmatlar quyidagilarni to‘playdi:",
+      "desc": "DingPOS ilovadan qanday foydalanilishini tushunish hamda nosozliklarni aniqlab tuzatish uchun Google taqdim etadigan Firebase Analytics va Firebase Crashlytics xizmatlaridan foydalanadi. Ular ilovaning tasodifiy qurilma identifikatoriga bog‘langan, shuning uchun nosozlik va undan oldingi qadamlarni birga o‘qish mumkin. Ular quyidagilarni to‘playdi:",
       "items": [
-        "Anonim foydalanish ma’lumotlari (masalan, qaysi funksiyalardan foydalanilgani, seans davomiyligi)",
+        "Foydalanish ma’lumotlari (masalan, qaysi funksiyalardan foydalanilgani, seans davomiyligi)",
         "Nosozlik hisobotlari (masalan, stack trace, qurilma modeli, tizim versiyasi)",
         "Qurilma haqida ma’lumot (masalan, qurilma turi, tizim, ilova versiyasi)",
-        "Tasodifiy yaratilgan nusxa identifikatori (shaxsingizga bog‘lanmagan)"
+        "Taxminiy joylashuv (shahar darajasida), uni Google tarmoq manzilidan aniqlaydi"
       ],
-      "note": "Bu ma’lumotlar anonim bo‘lib, biznes mazmuningizni (masalan, mahsulotlar, buyurtmalar, mijozlar yoki a’zolarni) o‘z ichiga olmaydi. Google bu ma’lumotlar bilan qanday ishlashi haqida ko‘proq bilish uchun Google Maxfiylik siyosatiga qarang: https://policies.google.com/privacy."
+      "note": "Bularning hech biri biznes mazmuningizni (mahsulotlar, buyurtmalar, mijozlar yoki a’zolarni) o‘z ichiga olmaydi. Google bu ma’lumotlar bilan qanday ishlashini bilish uchun Google Maxfiylik siyosatiga qarang: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Apple Ads atributsiyasi",
+      "desc": "Agar DingPOS’ni App Store’da Apple Ads reklamasini bosganingizdan keyin o‘rnatgan bo‘lsangiz, ilova Apple’ning AdServices frameworkidan bir marta qaysi reklama kampaniyasi o‘rnatishga olib kelganini so‘raydi. Apple raqamli kampaniya, reklama guruhi va kalit so‘z identifikatorlari hamda davlat va o‘rnatish turi bilan javob beradi; AdServices faqat Apple’ning o‘z ma’lumotlaridan foydalanadi va sizni yoki qurilmangizni aniqlamaydi. Qaysi reklamalar keyinchalik obuna bo‘ladigan do‘konlarni olib kelishini bilish uchun biz bu identifikatorlarni ilovaning tasodifiy qurilma identifikatori bilan birga serverimizda va Firebase Analytics’da (yuqoriga qarang) saqlaymiz. Bunda Apple’ning reklama identifikatori (IDFA) ishlatilmaydi va kuzatuvga ruxsat so‘ralmaydi; identifikatorlar hech qachon sotilmaydi, reklama beruvchilarga berilmaydi va sizni boshqa kompaniyalarning ilova yoki veb-saytlari bo‘ylab kuzatish uchun hech qachon ishlatilmaydi. Agar reklamadan kelmagan bo‘lsangiz, biz faqat shu natijani saqlaymiz, reklama identifikatorlarisiz."
+    },
+    "support": {
+      "title": "Yordam hisobotlari (faqat siz yuborganingizda)",
+      "desc": "Sozlamalar bo‘limidan yordam hisoboti yuborishni tanlasangiz, unga siz yozgan matn, biriktirgan har qanday foto yoki video (joylashuv va boshqa metama’lumotlar olib tashlangan holda), asosiy diagnostika ma’lumotlari (qurilma modeli, tizim va ilova versiyasi, til, vaqt mintaqasi, tarmoq holati, qurilmadagi bo‘sh joy, ma’lumotlar bazasi hajmi, obuna holati, do‘kon nomi) hamda muammoni qayta takrorlay olishimiz uchun do‘koningiz ma’lumotlar bazasining nusxasi kiradi. Bu nusxada mahsulotlaringiz, buyurtmalaringiz va mijoz yozuvlaringiz, jumladan ismlar, telefon raqamlari, e-pochtalar va tug‘ilgan kunlar (oy va kun) bor. U faqat yordam hisobotingizga javob berish uchun ishlatiladi."
     },
     "children": {
       "title": "Bolalar maxfiyligi",

@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Adatvédelmi irányelvek",
     "meta_description": "Hogyan kezeli adatait a DingPOS, az internetkapcsolat nélkül is működő iPad-es kassza-alkalmazás: az üzleti adatok az eszközén maradnak, az opcionális biztonsági mentések pedig kizárólag a saját felhőfiókjába kerülnek.",
-    "effective_date": "Hatálybalépés dátuma: 2026. július 1.",
+    "effective_date": "Hatálybalépés dátuma: 2026. november 4.",
     "intro": "Az ALU Studio („mi”) fejlesztette a DingPOS-t („az alkalmazás”). A DingPOS egy olyan kassza-alkalmazás, amelynek középpontjában az adatvédelem áll – az üzleti adatai az Öné. Az Adatvédelmi irányelvek bemutatják, hogyan kezeljük az adatait, amikor az alkalmazást használja.",
     "local_storage": {
       "title": "Hogyan tároljuk az adatait",
-      "desc": "A DingPOS az összes üzleti adatot helyben, az Ön eszközén tárolja. Ha Ön nem kapcsolja be aktívan a felhőalapú biztonsági mentést, ezek az adatok soha nem hagyják el az eszközt. Az alkalmazásban létrehozott adatok közé tartoznak:",
+      "desc": "A DingPOS az összes üzleti adatot helyben, az Ön eszközén tárolja. Hacsak nem kapcsolja be a felhőalapú biztonsági mentést, vagy nem küld nekünk támogatási bejelentést, ezek az adatok soha nem hagyják el az eszközt. Az alkalmazásban létrehozott adatok közé tartoznak:",
       "items": [
         "Üzletbeállítások (üzlet neve, pénznem, adókulcs, logó)",
         "Termékadatok (név, ár, költség, vonalkód, fotó, kategória, változatok, készlet)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Mit nem gyűjtünk",
-      "desc": "A DingPOS nem gyűjti, nem továbbítja és nem osztja meg az Ön üzleti tartalmait. Konkrétan:",
+      "desc": "Az Ön üzleti tartalmai az eszközén maradnak. Az Ön döntése alapján elküldött támogatási bejelentést leszámítva (lásd alább):",
       "items": [
         "nem gyűjtjük a termék-, rendelés-, vevő- vagy törzsvásárlói adatait",
         "nem érintünk semmilyen fizetési folyamatot vagy bankkártyaadatot (az alkalmazás nem dolgoz fel tényleges kártyás fizetéseket)",
-        "nem követjük nyomon a tartózkodási helyét",
-        "az üzleti adatait nem osztjuk meg harmadik féllel"
+        "nem követjük nyomon a tartózkodási helyét, és nem követjük Önt más vállalatok alkalmazásain és webhelyein keresztül",
+        "nem adjuk el az adatait, és az üzleti adatait nem osztjuk meg egyetlen harmadik féllel sem"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Előfizetés és vásárlások",
-      "desc": "A DingPOS előfizetést kínál az Apple App Store alkalmazáson belüli vásárlásán (IAP) keresztül, az előfizetés állapotának kezeléséhez pedig a RevenueCat szolgáltatást használja. A fizetést az Apple kezeli; a bankkártya- és fizetési adatait mi soha nem kapjuk meg. A RevenueCat csak egy, az előfizetés állapotához kötött anonim azonosítót kap, amellyel ellenőrzi, hogy az előfizetése aktív-e."
+      "desc": "A DingPOS előfizetést kínál az Apple App Store alkalmazáson belüli vásárlásán keresztül. A fizetést az Apple kezeli; a bankkártya- és fizetési adatait mi soha nem kapjuk meg. A saját szerverünk ellenőrzi az Apple aláírt tranzakcióját, hogy eldöntse, melyik csomag aktív. Ennek érdekében az alkalmazás az általa generált véletlenszerű eszközazonosítóval (nem az Apple hirdetési azonosítójával) regisztrálja ezt a telepítést a szerverünkön, az alkalmazás verziójával, a nyelvvel, az App Store-országgal és az Ön üzletének nevével együtt, és az előfizetéssel kapcsolatos események egy szűk körét is elküldi (például a csomagok megtekintését vagy a vásárlás megkezdését)."
     },
     "analytics": {
       "title": "Elemzés és összeomlásjelentés",
-      "desc": "A DingPOS a Google által biztosított Firebase Analytics és Firebase Crashlytics szolgáltatást használja, hogy megértsük, hogyan használják az alkalmazást, valamint hogy azonosítsuk és kijavítsuk az összeomlásokat. Ezek a szolgáltatások a következőket gyűjtik:",
+      "desc": "A DingPOS a Google által biztosított Firebase Analytics és Firebase Crashlytics szolgáltatást használja, hogy megértsük, hogyan használják az alkalmazást, valamint hogy megtaláljuk és kijavítsuk az összeomlásokat. Ezek az alkalmazás véletlenszerű eszközazonosítójához vannak kapcsolva, hogy egy összeomlást és az azt megelőző lépéseket együtt lehessen olvasni. A következőket gyűjtik:",
       "items": [
-        "Anonim használati adatok (pl. mely funkciókat használják, a munkamenet hossza)",
+        "Használati adatok (pl. mely funkciókat használják, a munkamenet hossza)",
         "Összeomlásjelentések (pl. hívásverem, eszköz típusa, operációs rendszer verziója)",
         "Eszközinformációk (pl. eszköztípus, operációs rendszer, az alkalmazás verziója)",
-        "Egy véletlenszerűen generált példányazonosító (nem kapcsolódik az Ön személyazonosságához)"
+        "Általános tartózkodási hely (városi szinten), amelyet a Google a hálózati címből állapít meg"
       ],
-      "note": "Ezek az adatok anonimak, és nem tartalmaznak semmilyen üzleti tartalmat (például termékeket, rendeléseket, vevőket vagy törzsvásárlókat). Ha többet szeretne megtudni arról, hogyan kezeli a Google ezeket az adatokat, olvassa el a Google adatvédelmi irányelveit: https://policies.google.com/privacy."
+      "note": "Ezek között nincs az Ön üzleti tartalma (termékek, rendelések, vevők vagy törzsvásárlók). Ha többet szeretne megtudni arról, hogyan kezeli a Google ezeket az adatokat, olvassa el a Google adatvédelmi irányelveit: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Apple Ads-attribúció",
+      "desc": "Ha azután telepítette a DingPOS-t, hogy az App Store-ban rákoppintott egy Apple Ads-hirdetésre, az alkalmazás egyszer megkérdezi az Apple AdServices keretrendszerét, hogy melyik hirdetési kampány vezetett a telepítéshez. Az Apple számszerű kampány-, hirdetéscsoport- és kulcsszóazonosítókkal válaszol, továbbá megadja az országot és a telepítés típusát; az AdServices kizárólag az Apple saját adatait használja, és nem azonosítja sem Önt, sem az eszközét. Ezeket az azonosítókat az alkalmazás véletlenszerű eszközazonosítójával együtt tároljuk a szerverünkön és a Firebase Analyticsben (lásd fent), hogy megtudjuk, mely hirdetések hoznak olyan üzleteket, amelyek később előfizetnek. Ehhez nem használjuk az Apple hirdetési azonosítóját (IDFA), és nem kérünk engedélyt a nyomon követésre; az azonosítókat soha nem adjuk el, soha nem adjuk át hirdetőknek, és soha nem használjuk arra, hogy más vállalatok alkalmazásain vagy webhelyein keresztül nyomon kövessük Önt. Ha nem hirdetésből érkezett, csak ezt az eredményt tároljuk, hirdetési azonosítók nélkül."
+    },
+    "support": {
+      "title": "Támogatási bejelentések (csak ha Ön küld egyet)",
+      "desc": "Ha úgy dönt, hogy a Beállításokból támogatási bejelentést küld, az tartalmazza az Ön által írtakat, az Ön által csatolt fotókat vagy videókat (a helyadatok és egyéb metaadatok eltávolításával), alapvető diagnosztikai adatokat (az eszköz típusa, az operációs rendszer és az alkalmazás verziója, nyelv, időzóna, hálózati állapot, szabad tárhely, az adatbázis mérete, előfizetési állapot, az üzlet neve), valamint az üzlete adatbázisának másolatát, hogy újra elő tudjuk állítani a problémát. Ez a másolat tartalmazza az Ön termékeit, rendeléseit és vevőadatait, beleértve a neveket, telefonszámokat, e-mail-címeket és a születésnapokat (hónap és nap). Kizárólag a bejelentésére adott válaszhoz használjuk."
     },
     "children": {
       "title": "Gyermekek adatainak védelme",

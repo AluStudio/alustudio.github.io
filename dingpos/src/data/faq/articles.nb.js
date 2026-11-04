@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nei. DingPOS har ikke noe kontosystem – last ned appen og begynn å selge. Produktene, ordrene og kundedataene dine blir på iPaden din og lastes aldri opp til serverne våre."
+        "text": "Nei. DingPOS har ikke noe kontosystem – last ned appen og begynn å selge. Produktene, ordrene og kundedataene dine blir på iPaden din. De når oss bare hvis du sender en støtterapport fra Innstillinger, som legger ved en kopi av butikkdataene dine slik at vi kan gjenskape problemet."
       },
       {
         "type": "p",
@@ -795,7 +795,8 @@ export const articles = [
       "frakt",
       "servicegebyr",
       "avtalt pris",
-      "dagspris"
+      "dagspris",
+      "prosentgebyr"
     ],
     "content": [
       {
@@ -807,6 +808,8 @@ export const articles = [
         "items": [
           "0 er en gyldig pris (for eksempel gratis frakt), men et tomt felt kan ikke legges til. Skriv inn prisen slik butikkens avgiftsmodus angir alle andre priser.",
           "Handlekurven har én linje per produkt med åpen pris: trykker du på det igjen, åpnes linjen så du kan endre prisen.",
+          "Fra og med v3.3 bytter du mellom Beløp og Prosent under «Beregn etter». Ved 5 % blir linjen 5 % av delsummen for de andre varene (etter varerabatter, før kampanjer, handlekurvrabatt og innløsning av poeng), rundet opp fra og med halvparten til valutaens antall desimaler, og den følger handlekurven når varer legges til, fjernes eller får rabatt. Handlekurvlinjen viser «5 % av handlekurven», og ordren registrerer beløpet den ble til.",
+          "En linje med åpen pris får ingen varerabatt; endre prisen hvis du vil ta mindre betalt. Handlekurvrabatt, innløsning av poeng og kampanjer (med mindre linjen er utelatt fra dem) gjelder fortsatt for den.",
           "Når du slår på Åpen pris, slås også Utelat fra kampanjer på, slik at et gebyr ikke får rabatt og ikke teller med i kjøpsgrenser. Slå det av igjen hvis en avtalt vare skal delta i kampanjer.",
           "Når linjen er solgt, beregnes det avgift på den, den gir poeng og telles med i Rapporter som alle andre, og en retur betaler tilbake prisen som ble skrevet inn.",
           "Et produkt med varianter kan ikke bruke åpen pris. Produkter med åpen pris tilbys aldri som gaver eller betalte tilleggsvarer, og de vises aldri i listen over erstatningsvarer ved et bytte."
@@ -1668,8 +1671,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Handlinger (manuell lagerjustering, produktadministrasjon, gjennomføring av et kjøp med rabatt over rabattgrensen): én godkjenning gjelder den ene handlingen.",
-          "Visninger (kostpris og fortjeneste, Rapporter, Innstillinger, sikkerhetskopi og gjenoppretting): en godkjenning gir tilgang inntil den aktive ansatte byttes eller appen går i bakgrunnen.",
+          "Handlinger (manuell lagerjustering, manuell poengjustering, produktadministrasjon, gjennomføring av et kjøp med rabatt over rabattgrensen): én godkjenning gjelder den ene handlingen.",
+          "Visninger (kostpris og fortjeneste, Oversikt, Innstillinger, sikkerhetskopi og gjenoppretting): en godkjenning gir tilgang inntil den aktive ansatte byttes eller appen går i bakgrunnen.",
           "Rabattgrensen gjelder manuelle rabatter og kontrolleres én gang i kassen. Automatiske kampanjer og innløsning av poeng teller ikke med."
         ]
       },

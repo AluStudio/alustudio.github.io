@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Kebijakan Privasi",
     "meta_description": "Cara DingPOS, aplikasi kasir iPad yang bisa dipakai tanpa internet, menangani data Anda: catatan usaha tetap di perangkat Anda, dan cadangan opsional hanya dikirim ke akun cloud milik Anda sendiri.",
-    "effective_date": "Berlaku sejak: 1 Juli 2026",
+    "effective_date": "Berlaku sejak: 4 November 2026",
     "intro": "ALU Studio (\"kami\") mengembangkan DingPOS (\"aplikasi\"). DingPOS adalah aplikasi kasir yang dibangun dengan privasi sebagai dasarnya — data usaha Anda adalah milik Anda. Kebijakan Privasi ini menjelaskan bagaimana kami menangani informasi Anda saat Anda menggunakan aplikasi.",
     "local_storage": {
       "title": "Cara data Anda disimpan",
-      "desc": "DingPOS menyimpan seluruh data usaha Anda secara lokal di perangkat Anda. Selama Anda tidak mengaktifkan cadangan cloud, data ini tidak pernah keluar dari perangkat Anda. Data yang Anda buat di aplikasi meliputi:",
+      "desc": "DingPOS menyimpan seluruh data usaha Anda secara lokal di perangkat Anda. Selama Anda tidak mengaktifkan cadangan cloud atau mengirim laporan dukungan kepada kami, data ini tidak pernah keluar dari perangkat Anda. Data yang Anda buat di aplikasi meliputi:",
       "items": [
         "Pengaturan toko (nama toko, mata uang, tarif pajak, logo)",
         "Data produk (nama, harga, harga pokok, barcode, foto, kategori, varian, stok)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Data yang tidak kami kumpulkan",
-      "desc": "DingPOS tidak mengumpulkan, mengirimkan, atau membagikan konten usaha Anda. Secara khusus, kami tidak:",
+      "desc": "Konten usaha Anda tetap berada di perangkat Anda. Selain laporan dukungan yang Anda pilih untuk dikirim (lihat di bawah), kami tidak:",
       "items": [
         "Mengumpulkan data produk, pesanan, pelanggan, atau keanggotaan Anda",
         "Terlibat dalam proses pembayaran apa pun atau mengakses informasi kartu kredit (aplikasi ini tidak memproses pembayaran kartu yang sebenarnya)",
-        "Melacak lokasi Anda",
-        "Membagikan data usaha Anda kepada pihak ketiga mana pun"
+        "Melacak lokasi Anda, atau melacak Anda di aplikasi dan situs web perusahaan lain",
+        "Menjual data Anda, atau membagikan data usaha Anda kepada pihak ketiga mana pun"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Langganan & pembelian",
-      "desc": "DingPOS menawarkan langganan melalui Pembelian Dalam Aplikasi (IAP) Apple App Store, dengan RevenueCat untuk mengelola status langganan. Pembayaran ditangani oleh Apple; kami tidak pernah menerima kartu kredit atau detail pembayaran Anda. RevenueCat hanya menerima pengenal anonim yang terkait dengan status langganan, yang digunakan untuk memverifikasi apakah langganan Anda aktif."
+      "desc": "DingPOS menawarkan langganan melalui Pembelian Dalam Aplikasi Apple App Store. Pembayaran ditangani oleh Apple; kami tidak pernah menerima kartu kredit atau detail pembayaran Anda. Server kami sendiri memverifikasi transaksi yang ditandatangani Apple untuk menentukan paket mana yang aktif. Untuk itu, aplikasi mendaftarkan instalasi ini ke server kami menggunakan pengenal perangkat acak yang dibuat oleh aplikasi (bukan pengenal iklan Apple), bersama versi aplikasi, bahasa, negara App Store, dan nama toko Anda, serta mengirimkan sejumlah kecil peristiwa langganan (misalnya, melihat paket atau memulai pembelian)."
     },
     "analytics": {
       "title": "Analitik & laporan error",
-      "desc": "DingPOS menggunakan Firebase Analytics dan Firebase Crashlytics dari Google untuk membantu kami memahami cara aplikasi digunakan serta mengidentifikasi dan memperbaiki error. Layanan ini mengumpulkan:",
+      "desc": "DingPOS menggunakan Firebase Analytics dan Firebase Crashlytics dari Google untuk memahami cara aplikasi digunakan serta menemukan dan memperbaiki crash. Keduanya dikaitkan dengan pengenal perangkat acak milik aplikasi sehingga sebuah crash dan langkah-langkah sebelumnya dapat dibaca bersama. Keduanya mengumpulkan:",
       "items": [
-        "Data penggunaan anonim (mis. fitur apa yang dipakai, lama sesi)",
+        "Data penggunaan (mis. fitur apa yang dipakai, lama sesi)",
         "Laporan error (mis. stack trace, model perangkat, versi OS)",
         "Informasi perangkat (mis. jenis perangkat, OS, versi aplikasi)",
-        "Pengenal instans yang dibuat secara acak (tidak terkait dengan identitas Anda)"
+        "Lokasi umum (tingkat kota), yang diperoleh Google dari alamat jaringan"
       ],
-      "note": "Data ini bersifat anonim dan tidak mencakup konten usaha Anda (seperti produk, pesanan, pelanggan, atau member). Untuk mengetahui lebih lanjut cara Google menangani data ini, lihat Kebijakan Privasi Google: https://policies.google.com/privacy."
+      "note": "Tidak satu pun dari data ini mencakup konten usaha Anda (produk, pesanan, pelanggan, atau member). Untuk mengetahui cara Google menangani data ini, lihat Kebijakan Privasi Google: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Atribusi Apple Ads",
+      "desc": "Jika Anda memasang DingPOS setelah mengetuk iklan Apple Ads di App Store, aplikasi menanyakan kepada framework AdServices milik Apple, satu kali, kampanye iklan mana yang mengarah ke pemasangan tersebut. Apple menjawab dengan pengenal numerik kampanye, grup iklan, dan kata kunci, ditambah negara dan jenis pemasangan; AdServices hanya menggunakan data milik Apple sendiri dan tidak mengidentifikasi Anda maupun perangkat Anda. Kami menyimpan pengenal ini bersama pengenal perangkat acak milik aplikasi, di server kami dan di Firebase Analytics (lihat di atas), untuk mengetahui iklan mana yang membawa toko yang kemudian berlangganan. Proses ini tidak menggunakan pengenal iklan Apple (IDFA) dan tidak meminta izin pelacakan; pengenal tersebut tidak pernah dijual, tidak pernah diberikan kepada pengiklan, dan tidak pernah digunakan untuk melacak Anda di aplikasi atau situs web perusahaan lain. Jika Anda tidak datang dari iklan, kami hanya menyimpan hasil itu, tanpa pengenal iklan."
+    },
+    "support": {
+      "title": "Laporan dukungan (hanya saat Anda mengirimnya)",
+      "desc": "Saat Anda memilih mengirim laporan dukungan dari Pengaturan, laporan itu mencakup apa yang Anda tulis, foto atau video apa pun yang Anda lampirkan (dengan lokasi dan metadata lainnya dihapus), diagnostik dasar (model perangkat, versi OS dan aplikasi, bahasa, zona waktu, status jaringan, sisa penyimpanan, ukuran basis data, status langganan, nama toko), dan salinan basis data toko Anda agar kami dapat mereproduksi masalahnya. Salinan itu berisi produk, pesanan, dan catatan pelanggan Anda, termasuk nama, nomor telepon, email, dan ulang tahun (bulan dan tanggal). Salinan itu hanya digunakan untuk menjawab laporan Anda."
     },
     "children": {
       "title": "Privasi anak",

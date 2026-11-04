@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Privacybeleid",
     "meta_description": "Zo gaat DingPOS, de kassa-app voor iPad die ook offline werkt, met je gegevens om: je bedrijfsgegevens blijven op je apparaat en optionele back-ups gaan alleen naar je eigen cloudaccount.",
-    "effective_date": "Ingangsdatum: 1 juli 2026",
+    "effective_date": "Ingangsdatum: 4 november 2026",
     "intro": "ALU Studio (‘wij’) heeft DingPOS (‘de app’) ontwikkeld. DingPOS is een kassa-app waarin privacy centraal staat: je bedrijfsgegevens zijn en blijven van jou. In dit privacybeleid leggen we uit hoe we omgaan met je gegevens wanneer je de app gebruikt.",
     "local_storage": {
       "title": "Hoe je gegevens worden opgeslagen",
-      "desc": "DingPOS bewaart al je bedrijfsgegevens lokaal op je apparaat. Tenzij je zelf de cloud-back-up inschakelt, verlaten deze gegevens je apparaat nooit. Dit zijn de gegevens die je in de app aanmaakt:",
+      "desc": "DingPOS bewaart al je bedrijfsgegevens lokaal op je apparaat. Tenzij je zelf de cloud-back-up inschakelt of ons een supportrapport stuurt, verlaten deze gegevens je apparaat nooit. Dit zijn de gegevens die je in de app aanmaakt:",
       "items": [
         "Winkelinstellingen (winkelnaam, valuta, btw-tarief, logo)",
         "Productgegevens (naam, prijs, kostprijs, barcode, foto, categorie, varianten, voorraad)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Wat we niet verzamelen",
-      "desc": "DingPOS verzamelt, verzendt of deelt geen enkele bedrijfsinhoud van jou. Concreet doen we het volgende niet:",
+      "desc": "Je bedrijfsinhoud blijft op je apparaat. Behalve een supportrapport dat je zelf besluit te versturen (zie hieronder), doen we het volgende niet:",
       "items": [
         "Je product-, bestel-, klant- of lidmaatschapsgegevens verzamelen",
         "Betalingen afhandelen of creditcardgegevens verwerken (de app verwerkt geen echte kaartbetalingen)",
-        "Je locatie volgen",
-        "Je bedrijfsgegevens delen met derden"
+        "Je locatie volgen, of jou volgen in de apps en websites van andere bedrijven",
+        "Je gegevens verkopen, of je bedrijfsgegevens delen met derden"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Abonnement en aankopen",
-      "desc": "DingPOS biedt een abonnement aan via een in-app aankoop in de Apple App Store en gebruikt RevenueCat om de abonnementsstatus te beheren. De betaling verloopt via Apple; wij ontvangen nooit je creditcard- of betaalgegevens. RevenueCat ontvangt alleen een anonieme identificatiecode die aan de abonnementsstatus is gekoppeld en wordt gebruikt om te controleren of je abonnement actief is."
+      "desc": "DingPOS biedt abonnementen aan via een in-app aankoop in de Apple App Store. De betaling verloopt via Apple; wij ontvangen nooit je creditcard- of betaalgegevens. Onze eigen server controleert de door Apple ondertekende transactie om vast te stellen welk abonnement actief is. Daarvoor registreert de app deze installatie bij onze server met een willekeurige apparaat-ID die door de app is gegenereerd (niet de advertentie-ID van Apple), samen met de appversie, de taal, het App Store-land en je winkelnaam, en verstuurt de app een beperkte set abonnementsgebeurtenissen (bijvoorbeeld het bekijken van de abonnementen of het starten van een aankoop)."
     },
     "analytics": {
       "title": "Analyse en crashrapportage",
-      "desc": "DingPOS gebruikt Firebase Analytics en Firebase Crashlytics van Google om te begrijpen hoe de app wordt gebruikt en om crashes op te sporen en te verhelpen. Deze diensten verzamelen:",
+      "desc": "DingPOS gebruikt Firebase Analytics en Firebase Crashlytics van Google om te begrijpen hoe de app wordt gebruikt en om crashes op te sporen en te verhelpen. Ze zijn gekoppeld aan de willekeurige apparaat-ID van de app, zodat een crash en de stappen die eraan voorafgingen samen kunnen worden bekeken. Ze verzamelen:",
       "items": [
-        "Anonieme gebruiksgegevens (bijvoorbeeld welke functies worden gebruikt en hoe lang een sessie duurt)",
+        "Gebruiksgegevens (bijvoorbeeld welke functies worden gebruikt en hoe lang een sessie duurt)",
         "Crashrapporten (bijvoorbeeld stack traces, apparaatmodel en iOS-versie)",
         "Apparaatgegevens (bijvoorbeeld apparaattype, besturingssysteem en appversie)",
-        "Een willekeurig gegenereerde instantie-ID (niet aan jouw identiteit gekoppeld)"
+        "Globale locatie (op stadsniveau), die Google afleidt uit het netwerkadres"
       ],
-      "note": "Deze gegevens zijn anoniem en bevatten niets van je bedrijfsinhoud (zoals producten, bestellingen, klanten of leden). Meer informatie over hoe Google met deze gegevens omgaat vind je in het privacybeleid van Google: https://policies.google.com/privacy."
+      "note": "Niets hiervan bevat je bedrijfsinhoud (zoals producten, bestellingen, klanten of leden). Meer informatie over hoe Google met deze gegevens omgaat vind je in het privacybeleid van Google: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Apple Ads-attributie",
+      "desc": "Als je DingPOS hebt geïnstalleerd nadat je in de App Store op een Apple Ads-advertentie hebt getikt, vraagt de app eenmalig aan het AdServices-framework van Apple welke advertentiecampagne tot de installatie heeft geleid. Apple antwoordt met numerieke ID’s voor campagne, advertentiegroep en zoekwoord, plus het land en het soort installatie; AdServices gebruikt alleen de eigen gegevens van Apple en identificeert jou of je apparaat niet. Wij bewaren deze ID’s samen met de willekeurige apparaat-ID van de app, op onze server en in Firebase Analytics (zie hierboven), om te weten welke advertenties winkels opleveren die vervolgens een abonnement nemen. Hierbij wordt de advertentie-ID (IDFA) van Apple niet gebruikt en wordt niet om toestemming voor tracking gevraagd; de ID’s worden nooit verkocht, nooit aan adverteerders gegeven en nooit gebruikt om jou te volgen in de apps of websites van andere bedrijven. Als je niet via een advertentie kwam, bewaren we alleen dat resultaat, zonder advertentie-ID’s."
+    },
+    "support": {
+      "title": "Supportrapporten (alleen wanneer je er een verstuurt)",
+      "desc": "Als je ervoor kiest om in Instellingen een supportrapport te versturen, bevat dat wat je schrijft, alle foto’s of video’s die je bijvoegt (met locatie en andere metadata verwijderd), basisdiagnostiek (apparaatmodel, versie van het besturingssysteem en van de app, taal, tijdzone, netwerkstatus, vrije opslagruimte, databasegrootte, abonnementsstatus, winkelnaam) en een kopie van de database van je winkel, zodat we het probleem kunnen reproduceren. Die kopie bevat je producten, bestellingen en klantgegevens, waaronder namen, telefoonnummers, e-mailadressen en verjaardagen (maand en dag). Ze wordt alleen gebruikt om je rapport te beantwoorden."
     },
     "children": {
       "title": "Privacy van kinderen",

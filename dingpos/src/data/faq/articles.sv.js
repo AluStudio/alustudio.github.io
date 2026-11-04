@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nej. DingPOS har inget kontosystem – ladda ner appen och börja sälja. Dina produkter, ordrar och kunduppgifter stannar på din iPad och laddas aldrig upp till våra servrar."
+        "text": "Nej. DingPOS har inget kontosystem – ladda ner appen och börja sälja. Dina produkter, ordrar och kunduppgifter finns kvar på din iPad. De når oss bara om du skickar en supportrapport från Inställningar, som bifogar en kopia av din butiksdata så att vi kan återskapa problemet."
       },
       {
         "type": "p",
@@ -795,7 +795,8 @@ export const articles = [
       "fraktavgift",
       "serviceavgift",
       "förhandlat pris",
-      "dagspris"
+      "dagspris",
+      "procentavgift"
     ],
     "content": [
       {
@@ -807,6 +808,8 @@ export const articles = [
         "items": [
           "0 är ett giltigt pris (till exempel fri frakt). Ett tomt fält kan inte läggas till. Ange priset på samma sätt som butikens momsläge prissätter allt annat.",
           "En varukorg har en rad per produkt med fritt pris: tryck på produkten igen så öppnas raden och du kan ändra priset.",
+          "Sedan v3.3 växlar Debitera efter mellan Belopp och Procent. Vid 5 % blir raden 5 % av delsumman för övriga varor (efter radrabatter, före kampanjer, varukorgsrabatt och inlösen av poäng), avrundat till valutans antal decimaler (vid exakt hälft uppåt), och den följer varukorgen när varor läggs till, tas bort eller rabatteras. Varukorgsraden visar ”5 % av varukorgen”, och ordern sparar det belopp raden blev.",
+          "En rad med fritt pris får ingen radrabatt; ändra priset om du vill ta ut ett lägre belopp. Varukorgsrabatter, inlösen av poäng och kampanjer (om den inte är undantagen från dem) gäller fortfarande för raden.",
           "När du slår på Fritt pris slås också Undanta från kampanjer på, så en avgift får ingen rabatt och räknas inte mot köptrösklar. Slå av den igen om en förhandlad vara ska delta i kampanjer.",
           "När raden är såld beskattas den, ger poäng och räknas i Statistik som alla andra, och en retur återbetalar det pris som angavs.",
           "En produkt med varianter kan inte ha fritt pris. Produkter med fritt pris erbjuds aldrig som gåvor eller betalda tillägg och visas aldrig i ersättningslistan vid ett byte."
@@ -1666,8 +1669,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Åtgärder (manuell lagerjustering, produkthantering, genomföra ett köp med rabatt som överskrider rabatttaket): ett godkännande gäller just den åtgärden.",
-          "Vyer (inköpspris och vinst, Statistik, Inställningar, säkerhetskopiering och återställning): ett godkännande låser upp tills den aktiva medarbetaren byts eller appen går till bakgrunden.",
+          "Åtgärder (manuell lagerjustering, manuell poängjustering, produkthantering, genomföra ett köp med rabatt som överskrider rabatttaket): ett godkännande gäller just den åtgärden.",
+          "Vyer (inköpspris och vinst, Översikt, Inställningar, säkerhetskopiering och återställning): ett godkännande låser upp tills den aktiva medarbetaren byts eller appen går till bakgrunden.",
           "Rabatttaket gäller manuella rabatter och kontrolleras en gång vid betalning. Automatiska kampanjer och inlösen av poäng räknas inte mot det."
         ]
       },

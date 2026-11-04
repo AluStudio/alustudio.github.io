@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ei. DingPOSil pole kontosüsteemi – laadi alla ja alusta müümist. Sinu tooted, müügid ja klientide andmed jäävad sinu iPadi ega laeta kunagi meie serveritesse."
+        "text": "Ei. DingPOSil pole kontosüsteemi – laadi alla ja alusta müümist. Sinu tooted, müügid ja klientide andmed jäävad sinu iPadi. Need jõuavad meieni ainult siis, kui saadad Seadetest tugiaruande, millega kaasneb sinu poeandmete koopia, et saaksime probleemi reprodutseerida."
       },
       {
         "type": "p",
@@ -790,7 +790,8 @@ export const articles = [
       "postikulu",
       "teenustasu",
       "kokkuleppehind",
-      "turuhind"
+      "turuhind",
+      "protsenttasu"
     ],
     "content": [
       {
@@ -802,6 +803,8 @@ export const articles = [
         "items": [
           "0 on kehtiv hind (näiteks tasuta postikulu); tühja väljaga ei saa lisada. Sisesta hind samamoodi, nagu sinu poe maksurežiim hindab kõike muud.",
           "Ostukorvis on kohapealse hinnaga toote kohta üks rida: sellele uuesti puudutades avaneb see rida, et hinda muuta.",
+          "Alates versioonist 3.3 lülitab Hinnastamine vahet valikute Summa ja Protsent vahel. 5% korral on rida 5% teiste toodete vahesummast (pärast toote allahindlusi, enne kampaaniaid, ostukorvi allahindlust ja punktide kasutamist), ümardatuna tavareegli järgi (pool üles) valuuta kümnendkohtadeni, ning see muutub koos ostukorviga, kui tooteid lisatakse, eemaldatakse või neile tehakse allahindlust. Ostukorvi rida näitab teksti „5% ostukorvist“ ja müük salvestab summa, milleni see jõudis.",
+          "Kohapealse hinnaga rida ei saa toote allahindlust; madalama hinna jaoks muuda selle hinda. Ostukorvi allahindlused, punktide kasutamine ja kampaaniad (kui seda neist välja pole jäetud) kehtivad sellele siiski.",
           "Kohapealse hinna sisselülitamine lülitab sisse ka Jäta kampaaniatest välja, nii et tasule ei anta allahindlust ja see ei lähe arvesse ostusumma lävedes. Lülita see uuesti välja, kui kokkuleppehinnaga toode peaks kampaaniates osalema.",
           "Müüdud rida maksustatakse, annab punkte ja läheb jaotises Aruanded arvesse nagu iga teinegi, ning tagastus tagastab sisestatud hinna.",
           "Variantidega toode ei saa kasutada kohapealset hinda. Kohapealse hinnaga tooteid ei pakuta kunagi kingitusena ega tasulise lisatootena ning need ei ilmu kunagi vahetuse asendustoodete loendisse."
@@ -1663,8 +1666,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Toimingud (käsitsi laoseisu korrigeerimine, toodete haldus, kassas ülempiirist suurema allahindlusega müük): üks heakskiit katab selle ühe toimingu.",
-          "Vaated (omahind ja kasum, Aruanded, Seaded, varundus ja taastamine): heakskiit avab vaate, kuni operaator vahetub või rakendus läheb taustale.",
+          "Toimingud (käsitsi laoseisu korrigeerimine, käsitsi punktide korrigeerimine, toodete haldus, kassas ülempiirist suurema allahindlusega müük): üks heakskiit katab selle ühe toimingu.",
+          "Vaated (omahind ja kasum, Ülevaatepaneel, Seaded, varundus ja taastamine): heakskiit avab vaate, kuni operaator vahetub või rakendus läheb taustale.",
           "Allahindluse ülempiir kehtib käsitsi allahindlustele ja seda kontrollitakse kassas üks kord; automaatsed kampaaniad ja punktide kasutamine sellesse ei arvestata."
         ]
       },

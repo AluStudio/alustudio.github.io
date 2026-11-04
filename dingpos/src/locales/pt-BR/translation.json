@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Política de Privacidade",
     "meta_description": "Como o DingPOS, o app de PDV para iPad que funciona offline, trata seus dados: os registros do seu negócio ficam no seu dispositivo, e os backups opcionais vão apenas para a sua própria conta na nuvem.",
-    "effective_date": "Em vigor desde: 1º de julho de 2026",
+    "effective_date": "Em vigor desde: 4 de novembro de 2026",
     "intro": "A ALU Studio (\"nós\") desenvolveu o DingPOS (\"o app\"). O DingPOS é um ponto de venda criado com a privacidade em primeiro lugar — os dados do seu negócio pertencem a você. Esta Política de Privacidade explica como tratamos suas informações quando você usa o app.",
     "local_storage": {
       "title": "Como seus dados são armazenados",
-      "desc": "O DingPOS armazena todos os dados do seu negócio localmente no seu dispositivo. A menos que você ative o backup na nuvem, esses dados nunca saem do dispositivo. Os dados que você cria no app incluem:",
+      "desc": "O DingPOS armazena todos os dados do seu negócio localmente no seu dispositivo. A menos que você ative o backup na nuvem ou nos envie um relatório de suporte, esses dados nunca saem do dispositivo. Os dados que você cria no app incluem:",
       "items": [
         "Configurações da loja (nome da loja, moeda, alíquota de imposto, logotipo)",
         "Dados de produtos (nome, preço, custo, código de barras, foto, categoria, variantes, estoque)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "O que não coletamos",
-      "desc": "O DingPOS não coleta, transmite nem compartilha nenhum conteúdo do seu negócio. Especificamente, não fazemos o seguinte:",
+      "desc": "O conteúdo do seu negócio fica no seu dispositivo. Exceto por um relatório de suporte que você escolha enviar (veja abaixo), nós não fazemos o seguinte:",
       "items": [
         "Não coletamos dados de produtos, vendas, clientes ou membros.",
         "Não acessamos nenhum fluxo de pagamento nem dados de cartão de crédito (o app não processa pagamentos reais com cartão).",
-        "Não rastreamos sua localização.",
-        "Não compartilhamos os dados do seu negócio com terceiros."
+        "Não rastreamos sua localização nem rastreamos você em apps e sites de outras empresas.",
+        "Não vendemos seus dados nem compartilhamos os dados do seu negócio com terceiros."
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Assinatura e compras",
-      "desc": "O DingPOS oferece assinatura por meio de compra dentro do app (IAP) da App Store da Apple e usa o RevenueCat para gerenciar o status da assinatura. O pagamento é processado pela Apple; nós nunca recebemos os dados do seu cartão de crédito nem de pagamento. O RevenueCat recebe apenas um identificador anônimo vinculado ao status da assinatura, usado para verificar se a sua assinatura está ativa."
+      "desc": "O DingPOS oferece assinaturas por meio de compra dentro do app (In-App Purchase) da App Store da Apple. O pagamento é processado pela Apple; nós nunca recebemos os dados do seu cartão de crédito nem de pagamento. Nosso próprio servidor verifica a transação assinada pela Apple para decidir qual plano está ativo. Para isso, o app registra esta instalação em nosso servidor usando um identificador de dispositivo aleatório gerado pelo app (não o identificador de publicidade da Apple), junto com a versão do app, o idioma, o país da App Store e o nome da sua loja, e envia um pequeno conjunto de eventos de assinatura (por exemplo, ver os planos ou iniciar uma compra)."
     },
     "analytics": {
       "title": "Análise de uso e relatórios de falhas",
-      "desc": "O DingPOS usa o Firebase Analytics e o Firebase Crashlytics, fornecidos pelo Google, para nos ajudar a entender como o app é usado e a identificar e corrigir falhas. Esses serviços coletam:",
+      "desc": "O DingPOS usa o Firebase Analytics e o Firebase Crashlytics, fornecidos pelo Google, para entender como o app é usado e para identificar e corrigir falhas. Eles são vinculados ao identificador de dispositivo aleatório do app, de modo que uma falha e as etapas anteriores a ela possam ser lidas em conjunto. Eles coletam:",
       "items": [
-        "Dados de uso anônimos (por exemplo, quais recursos são usados e a duração das sessões)",
+        "Dados de uso (por exemplo, quais recursos são usados e a duração das sessões)",
         "Relatórios de falhas (por exemplo, rastreamentos de pilha, modelo do dispositivo, versão do sistema)",
         "Informações do dispositivo (por exemplo, tipo de dispositivo, sistema e versão do app)",
-        "Um identificador de instância gerado aleatoriamente (não vinculado à sua identidade)"
+        "Localização geral (nível de cidade), que o Google deduz a partir do endereço de rede"
       ],
-      "note": "Esses dados são anônimos e não incluem nenhum conteúdo do seu negócio (como produtos, vendas, clientes ou membros). Para saber mais sobre como o Google trata esses dados, consulte a Política de Privacidade do Google: https://policies.google.com/privacy."
+      "note": "Nada disso inclui o conteúdo do seu negócio (produtos, vendas, clientes ou membros). Para saber como o Google trata esses dados, consulte a Política de Privacidade do Google: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Atribuição do Apple Ads",
+      "desc": "Se você instalou o DingPOS depois de tocar em um anúncio do Apple Ads na App Store, o app pergunta uma única vez ao framework AdServices da Apple qual campanha de anúncios levou à instalação. A Apple responde com identificadores numéricos de campanha, grupo de anúncios e palavra-chave, além do país e do tipo de instalação; o AdServices usa apenas dados da própria Apple e não identifica você nem o seu dispositivo. Guardamos esses identificadores junto com o identificador de dispositivo aleatório do app, em nosso servidor e no Firebase Analytics (veja acima), para saber quais anúncios trazem lojas que depois assinam. Isso não usa o identificador de publicidade da Apple (IDFA) e não pede permissão de rastreamento; os identificadores nunca são vendidos, nunca são entregues a anunciantes e nunca são usados para rastrear você em apps ou sites de outras empresas. Se você não veio de um anúncio, guardamos apenas esse resultado, sem identificadores de anúncio."
+    },
+    "support": {
+      "title": "Relatórios de suporte (somente quando você enviar um)",
+      "desc": "Quando você escolhe enviar um relatório de suporte pelos Ajustes, ele inclui o que você escrever, as fotos ou vídeos que anexar (com localização e outros metadados removidos), diagnósticos básicos (modelo do dispositivo, versão do sistema e do app, idioma, fuso horário, status da rede, armazenamento livre, tamanho do banco de dados, status da assinatura, nome da loja) e uma cópia do banco de dados da sua loja para que possamos reproduzir o problema. Essa cópia contém seus produtos, vendas e registros de clientes, incluindo nomes, telefones, e-mails e aniversários (dia e mês). Ela é usada somente para responder ao seu relatório."
     },
     "children": {
       "title": "Privacidade de crianças",

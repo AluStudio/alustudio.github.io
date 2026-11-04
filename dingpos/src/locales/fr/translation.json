@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Politique de confidentialité",
     "meta_description": "Comment DingPOS, l’application de caisse sur iPad conçue pour fonctionner sans connexion, traite vos données : les données de votre commerce restent sur votre appareil et les sauvegardes facultatives vont uniquement vers votre propre compte cloud.",
-    "effective_date": "Date d’entrée en vigueur : 1er juillet 2026",
+    "effective_date": "Date d’entrée en vigueur : 4 novembre 2026",
     "intro": "ALU Studio (« nous ») a développé DingPOS (« l’application »). DingPOS est une caisse conçue avec la confidentialité au cœur : les données de votre commerce vous appartiennent. Cette politique de confidentialité explique comment nous traitons vos informations lorsque vous utilisez l’application.",
     "local_storage": {
       "title": "Comment vos données sont stockées",
-      "desc": "DingPOS stocke toutes les données de votre commerce localement, sur votre appareil. Tant que vous n’activez pas la sauvegarde cloud, ces données ne quittent jamais votre appareil. Les données que vous créez dans l’application comprennent :",
+      "desc": "DingPOS stocke toutes les données de votre commerce localement, sur votre appareil. À moins que vous n’activiez la sauvegarde cloud ou que vous nous envoyiez un rapport d’assistance, ces données ne quittent jamais votre appareil. Les données que vous créez dans l’application comprennent :",
       "items": [
         "Les réglages de la boutique (nom, devise, taux de taxe, logo)",
         "Les données sur les produits (nom, prix, coût, code-barres, photo, catégorie, variantes, stock)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Ce que nous ne collectons pas",
-      "desc": "DingPOS ne collecte, ne transmet et ne partage aucun contenu de votre commerce. Concrètement, nous ne faisons pas ceci :",
+      "desc": "Le contenu de votre commerce reste sur votre appareil. À l’exception d’un rapport d’assistance que vous choisissez d’envoyer (voir ci-dessous), nous ne faisons pas ceci :",
       "items": [
         "Collecter vos données de produits, de commandes, de clients ou de fidélité",
         "Intervenir dans un flux de paiement ou accéder à des informations de carte bancaire (l’application ne traite pas les paiements par carte)",
-        "Suivre votre position",
-        "Partager les données de votre commerce avec un tiers"
+        "Suivre votre position, ou vous suivre sur les applications et les sites d’autres entreprises",
+        "Vendre vos données, ou partager les données de votre commerce avec un tiers"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Abonnement et achats",
-      "desc": "DingPOS propose un abonnement via les achats intégrés (IAP) de l’App Store d’Apple, et utilise RevenueCat pour gérer l’état de l’abonnement. Le paiement est géré par Apple ; nous ne recevons jamais votre carte bancaire ni vos informations de paiement. RevenueCat reçoit uniquement un identifiant anonyme lié à l’état de l’abonnement, utilisé pour vérifier si votre abonnement est actif."
+      "desc": "DingPOS propose des abonnements via les achats intégrés de l’App Store d’Apple. Le paiement est géré par Apple ; nous ne recevons jamais votre carte bancaire ni vos informations de paiement. Notre propre serveur vérifie la transaction signée par Apple pour déterminer quelle formule est active. Pour cela, l’application enregistre cette installation auprès de notre serveur à l’aide d’un identifiant d’appareil aléatoire généré par l’application (et non l’identifiant publicitaire d’Apple), ainsi que la version de l’application, la langue, le pays de l’App Store et le nom de votre boutique, et elle envoie un petit nombre d’événements liés à l’abonnement (par exemple, la consultation des formules ou le début d’un achat)."
     },
     "analytics": {
       "title": "Statistiques d’usage et rapports de plantage",
-      "desc": "DingPOS utilise Firebase Analytics et Firebase Crashlytics, fournis par Google, pour nous aider à comprendre comment l’application est utilisée et à identifier et corriger les plantages. Ces services collectent :",
+      "desc": "DingPOS utilise Firebase Analytics et Firebase Crashlytics, fournis par Google, pour comprendre comment l’application est utilisée et pour identifier et corriger les plantages. Ces services sont associés à l’identifiant d’appareil aléatoire de l’application, afin qu’un plantage et les étapes qui l’ont précédé puissent être lus ensemble. Ils collectent :",
       "items": [
-        "Des données d’usage anonymes (par exemple les fonctions utilisées, la durée des sessions)",
+        "Des données d’usage (par exemple les fonctions utilisées, la durée des sessions)",
         "Des rapports de plantage (par exemple les traces d’appels, le modèle d’appareil, la version du système)",
         "Des informations sur l’appareil (par exemple le type d’appareil, le système, la version de l’application)",
-        "Un identifiant d’instance généré aléatoirement (non lié à votre identité)"
+        "Une localisation générale (au niveau de la ville), que Google déduit de l’adresse réseau"
       ],
-      "note": "Ces données sont anonymes et n’incluent aucun contenu de votre commerce (comme les produits, commandes, clients ou membres). Pour en savoir plus sur la façon dont Google traite ces données, consultez la politique de confidentialité de Google : https://policies.google.com/privacy."
+      "note": "Rien de tout cela n’inclut le contenu de votre commerce (produits, commandes, clients ou membres). Pour savoir comment Google traite ces données, consultez la politique de confidentialité de Google : https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Attribution Apple Ads",
+      "desc": "Si vous avez installé DingPOS après avoir touché une publicité Apple Ads dans l’App Store, l’application interroge une seule fois le framework AdServices d’Apple pour savoir quelle campagne publicitaire a mené à l’installation. Apple répond par des identifiants numériques de campagne, de groupe d’annonces et de mot-clé, ainsi que par le pays et le type d’installation ; AdServices n’utilise que les données propres à Apple et ne vous identifie pas, pas plus que votre appareil. Nous conservons ces identifiants avec l’identifiant d’appareil aléatoire de l’application, sur notre serveur et dans Firebase Analytics (voir ci-dessus), afin de savoir quelles publicités amènent des boutiques qui s’abonnent ensuite. Cela n’utilise pas l’identifiant publicitaire d’Apple (IDFA) et ne demande pas l’autorisation de suivi ; les identifiants ne sont jamais vendus, jamais transmis aux annonceurs et jamais utilisés pour vous suivre sur les applications ou les sites d’autres entreprises. Si vous ne venez pas d’une publicité, nous ne conservons que ce résultat, sans aucun identifiant publicitaire."
+    },
+    "support": {
+      "title": "Rapports d’assistance (uniquement lorsque vous en envoyez un)",
+      "desc": "Lorsque vous choisissez d’envoyer un rapport d’assistance depuis Réglages, il comprend ce que vous rédigez, les photos ou vidéos que vous joignez (après suppression de la position et des autres métadonnées), des diagnostics de base (modèle d’appareil, version du système et de l’application, langue, fuseau horaire, état du réseau, espace de stockage disponible, taille de la base de données, état de l’abonnement, nom de la boutique) et une copie de la base de données de votre boutique afin que nous puissions reproduire le problème. Cette copie contient vos produits, vos commandes et vos fiches clients, y compris les noms, numéros de téléphone, adresses e-mail et anniversaires (mois et jour). Elle est utilisée uniquement pour répondre à votre rapport."
     },
     "children": {
       "title": "Confidentialité des enfants",

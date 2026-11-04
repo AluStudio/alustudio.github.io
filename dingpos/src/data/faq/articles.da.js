@@ -153,7 +153,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nej. DingPOS har intet kontosystem – download appen, og begynd at sælge. Dine produkter, ordrer og kundedata bliver på din iPad og uploades aldrig til vores servere."
+        "text": "Nej. DingPOS har intet kontosystem – download appen, og begynd at sælge. Dine produkter, ordrer og kundedata bliver på din iPad. De når kun til os, hvis du sender en supportrapport fra Indstillinger, som vedhæfter en kopi af dine butiksdata, så vi kan genskabe problemet."
       },
       {
         "type": "p",
@@ -787,7 +787,8 @@ export const articles = [
       "fragt",
       "servicegebyr",
       "forhandlet pris",
-      "markedspris"
+      "markedspris",
+      "procentgebyr"
     ],
     "content": [
       {
@@ -799,6 +800,8 @@ export const articles = [
         "items": [
           "0 er en gyldig pris (fx gratis fragt), mens et tomt felt ikke kan tilføjes. Skriv prisen på samme måde, som din butiks momstilstand prissætter alt andet.",
           "En kurv har én linje pr. produkt med åben pris: Trykker du på det igen, åbnes den linje, så du kan ændre prisen.",
+          "Siden v3.3 skifter Beregn efter mellem Beløb og Procent. Ved 5 % bliver linjen 5 % af de øvrige varers subtotal (efter varerabatter, før kampagner, kurvrabat og indløsning af point), afrundet (halve op) til valutaens antal decimaler, og den følger kurven, når varer tilføjes, fjernes eller rabatteres. Kurvlinjen viser „5 % af kurven“, og ordren registrerer det beløb, det blev til.",
+          "En linje med åben pris får ikke varerabat; ret prisen, hvis du vil tage mindre. Kurvrabatter, indløsning af point og kampagner (medmindre varen er udelukket fra dem) gælder stadig for den.",
           "Når Åben pris slås til, slås Udeluk fra kampagner også til, så et gebyr ikke bliver rabatteret og ikke tæller med i beløbsgrænser. Slå den fra igen, hvis en forhandlet vare skal deltage i kampagner.",
           "Når linjen er solgt, pålægges der moms, den giver point og tæller med i Statistik som enhver anden, og en retur refunderer den pris, der blev skrevet.",
           "Et produkt med varianter kan ikke bruge åben pris. Produkter med åben pris tilbydes aldrig som gaver eller betalte tilvalg og vises aldrig på listen over erstatningsvarer i en ombytning."
@@ -1661,8 +1664,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Handlinger (manuel lagerregulering, produktstyring, ekspedition med rabat over rabatloftet): én godkendelse dækker den ene handling.",
-          "Visninger (kostpris og fortjeneste, Statistik, Indstillinger, backup og gendannelse): en godkendelse låser op, indtil den aktive medarbejder skifter, eller appen går i baggrunden.",
+          "Handlinger (manuel lagerregulering, manuel pointjustering, produktstyring, ekspedition med rabat over rabatloftet): én godkendelse dækker den ene handling.",
+          "Visninger (kostpris og fortjeneste, Overblik, Indstillinger, backup og gendannelse): en godkendelse låser op, indtil den aktive medarbejder skifter, eller appen går i baggrunden.",
           "Rabatloftet gælder manuelle rabatter og kontrolleres én gang ved betaling. Automatiske kampagner og indløsning af point tæller ikke med."
         ]
       },

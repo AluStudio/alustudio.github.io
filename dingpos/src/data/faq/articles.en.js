@@ -55,7 +55,7 @@ export const articles = [
     question: "Do I need to create an account?",
     keywords: ["account", "sign up", "login", "register", "privacy"],
     content: [
-      { type: "p", text: "No. DingPOS has no account system — download it and start selling. Your products, orders, and customer data all stay on your iPad and are never uploaded to our servers." },
+      { type: "p", text: "No. DingPOS has no account system — download it and start selling. Your products, orders, and customer data all stay on your iPad. They reach us only if you send a support report from Settings, which attaches a copy of your store data so we can reproduce the problem." },
       { type: "p", text: "When you enable cloud backup, you sign in to your own cloud account (iCloud, Google Drive, or Dropbox). Backups live in your account — we cannot access them." },
     ],
     related: ["offline-usage", "backup-data"],
@@ -353,7 +353,7 @@ export const articles = [
     category: "products",
     since: "3.2",
     question: "Can I enter a product's price at checkout, like a shipping fee or a negotiated item?",
-    keywords: ["open price", "custom price", "enter price", "shipping fee", "service fee", "negotiated price", "market price"],
+    keywords: ["open price", "custom price", "enter price", "shipping fee", "service fee", "negotiated price", "market price", "percentage fee"],
     content: [
       { type: "p", text: "Yes — make it an Open Price product. Turn on Open Price on the product edit page and leave the price empty; the cashier and product list show “Open Price” where the price would be. At checkout, tapping the product asks for the price first; enter it and tap Add to Cart to add it at that price." },
       {
@@ -361,6 +361,8 @@ export const articles = [
         items: [
           "0 is a valid price (free shipping, say); an empty field can't be added. Enter the price the way your store's tax mode prices everything else.",
           "A cart holds one line per open-price product: tapping it again opens that line so you can change the price.",
+          "Since v3.3, Charge By switches between Amount and Percent. At 5%, the line comes to 5% of the other items' subtotal (after item discounts, before promotions, the cart discount, and points redemption), rounded half-up to the currency's decimal places, and it follows the cart as items are added, removed, or discounted. The cart line reads “5% of cart”, and the order records the amount it came to.",
+          "An open-price line takes no item discount; to charge less, change its price. Cart discounts, points redemption, and promotions (unless it's excluded from them) still apply to it.",
           "Turning on Open Price also turns on Exclude from promotions, so a fee isn't discounted and doesn't count toward spend thresholds. Turn it off again if a negotiated item should take part in promotions.",
           "Once sold, the line is taxed, earns points, and counts in Stats like any other, and a return refunds the price that was entered.",
           "A product with variants can't use an open price. Open-price products are never offered as gifts or paid add-ons, and never appear in the replacement list of an exchange.",
@@ -773,8 +775,8 @@ export const articles = [
       {
         type: "list",
         items: [
-          "Actions (manual stock adjustment, product management, checking out above the discount cap): one approval covers that one action.",
-          "Views (cost & profit, Stats, Settings, backup & restore): an approval unlocks until the operator changes or the app goes to the background.",
+          "Actions (manual stock adjustment, manual points adjustment, product management, checking out above the discount cap): one approval covers that one action.",
+          "Views (cost & profit, Dashboard, Settings, backup & restore): an approval unlocks until the operator changes or the app goes to the background.",
           "The discount cap applies to manual discounts and is checked once at checkout; automatic promotions and points redemption don't count against it.",
         ],
       },

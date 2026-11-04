@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Chính sách quyền riêng tư",
     "meta_description": "Cách DingPOS, ứng dụng bán hàng (POS) trên iPad hoạt động ngoại tuyến, xử lý dữ liệu của bạn: dữ liệu kinh doanh nằm trên thiết bị của bạn, và bản sao lưu tùy chọn chỉ được gửi đến tài khoản đám mây của chính bạn.",
-    "effective_date": "Có hiệu lực từ: 1 tháng 7, 2026",
+    "effective_date": "Ngày có hiệu lực: 4 tháng 11 năm 2026",
     "intro": "ALU Studio (\"chúng tôi\") đã phát triển DingPOS (\"ứng dụng\"). DingPOS là ứng dụng bán hàng được xây dựng với quyền riêng tư làm cốt lõi — dữ liệu kinh doanh thuộc về bạn. Chính sách quyền riêng tư này giải thích cách chúng tôi xử lý thông tin của bạn khi bạn sử dụng ứng dụng.",
     "local_storage": {
       "title": "Dữ liệu của bạn được lưu trữ như thế nào",
-      "desc": "DingPOS lưu toàn bộ dữ liệu kinh doanh của bạn ngay trên thiết bị. Trừ khi bạn chủ động bật sao lưu lên đám mây, dữ liệu này không bao giờ rời khỏi thiết bị của bạn. Dữ liệu bạn tạo trong ứng dụng gồm:",
+      "desc": "DingPOS lưu toàn bộ dữ liệu kinh doanh của bạn ngay trên thiết bị. Trừ khi bạn bật sao lưu lên đám mây hoặc gửi báo cáo hỗ trợ cho chúng tôi, dữ liệu này không bao giờ rời khỏi thiết bị của bạn. Dữ liệu bạn tạo trong ứng dụng gồm:",
       "items": [
         "Cài đặt cửa hàng (tên cửa hàng, tiền tệ, thuế suất, logo)",
         "Dữ liệu sản phẩm (tên, giá, giá vốn, mã vạch, ảnh, danh mục, biến thể, tồn kho)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Những gì chúng tôi không thu thập",
-      "desc": "DingPOS không thu thập, truyền đi hay chia sẻ bất kỳ nội dung kinh doanh nào của bạn. Cụ thể, chúng tôi không:",
+      "desc": "Nội dung kinh doanh của bạn luôn nằm trên thiết bị. Ngoài báo cáo hỗ trợ mà bạn chọn gửi (xem bên dưới), chúng tôi không:",
       "items": [
         "Thu thập dữ liệu sản phẩm, đơn hàng, khách hàng hay thành viên của bạn",
         "Can thiệp vào bất kỳ luồng thanh toán hay thông tin thẻ tín dụng nào (ứng dụng không xử lý thanh toán thẻ thực tế)",
-        "Theo dõi vị trí của bạn",
-        "Chia sẻ dữ liệu kinh doanh của bạn với bất kỳ bên thứ ba nào"
+        "Theo dõi vị trí của bạn, hoặc theo dõi bạn trên ứng dụng và trang web của các công ty khác",
+        "Bán dữ liệu của bạn, hoặc chia sẻ dữ liệu kinh doanh của bạn với bất kỳ bên thứ ba nào"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Đăng ký và giao dịch mua",
-      "desc": "DingPOS cung cấp gói đăng ký thông qua Mua hàng trong ứng dụng (IAP) của Apple App Store, và dùng RevenueCat để quản lý trạng thái đăng ký. Việc thanh toán do Apple xử lý; chúng tôi không bao giờ nhận thông tin thẻ tín dụng hay chi tiết thanh toán của bạn. RevenueCat chỉ nhận một mã định danh ẩn danh gắn với trạng thái đăng ký, dùng để xác minh đăng ký của bạn còn hiệu lực hay không."
+      "desc": "DingPOS cung cấp gói đăng ký thông qua Mua hàng trong ứng dụng của Apple App Store. Việc thanh toán do Apple xử lý; chúng tôi không bao giờ nhận thông tin thẻ tín dụng hay chi tiết thanh toán của bạn. Máy chủ của chúng tôi tự xác minh giao dịch đã được Apple ký để xác định gói nào đang có hiệu lực. Để làm được điều đó, ứng dụng đăng ký bản cài đặt này với máy chủ của chúng tôi bằng một mã định danh thiết bị ngẫu nhiên do ứng dụng tạo ra (không phải mã định danh quảng cáo của Apple), cùng với phiên bản ứng dụng, ngôn ngữ, quốc gia App Store và tên cửa hàng của bạn, và gửi một số ít sự kiện đăng ký (ví dụ: xem các gói hoặc bắt đầu một giao dịch mua)."
     },
     "analytics": {
       "title": "Phân tích và báo cáo sự cố",
-      "desc": "DingPOS dùng Firebase Analytics và Firebase Crashlytics do Google cung cấp, giúp chúng tôi hiểu cách ứng dụng được sử dụng, đồng thời phát hiện và khắc phục sự cố treo ứng dụng. Các dịch vụ này thu thập:",
+      "desc": "DingPOS dùng Firebase Analytics và Firebase Crashlytics do Google cung cấp, để hiểu cách ứng dụng được sử dụng, đồng thời phát hiện và khắc phục sự cố treo ứng dụng. Các dịch vụ này được liên kết với mã định danh thiết bị ngẫu nhiên của ứng dụng, để có thể đọc một sự cố cùng với các bước trước đó. Các dịch vụ này thu thập:",
       "items": [
-        "Dữ liệu sử dụng ẩn danh (ví dụ: tính năng nào được dùng, thời lượng phiên)",
+        "Dữ liệu sử dụng (ví dụ: tính năng nào được dùng, thời lượng phiên)",
         "Báo cáo sự cố (ví dụ: stack trace, kiểu máy, phiên bản hệ điều hành)",
         "Thông tin thiết bị (ví dụ: loại thiết bị, hệ điều hành, phiên bản ứng dụng)",
-        "Một mã định danh phiên bản được tạo ngẫu nhiên (không liên kết với danh tính của bạn)"
+        "Vị trí chung (cấp thành phố), do Google suy ra từ địa chỉ mạng"
       ],
-      "note": "Dữ liệu này là ẩn danh và không bao gồm bất kỳ nội dung kinh doanh nào của bạn (như sản phẩm, đơn hàng, khách hàng hay thành viên). Để biết thêm về cách Google xử lý dữ liệu này, hãy xem Chính sách quyền riêng tư của Google: https://policies.google.com/privacy."
+      "note": "Không có dữ liệu nào trong số này bao gồm nội dung kinh doanh của bạn (sản phẩm, đơn hàng, khách hàng hay thành viên). Để biết cách Google xử lý dữ liệu này, hãy xem Chính sách quyền riêng tư của Google: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Ghi nhận nguồn cài đặt từ Apple Ads",
+      "desc": "Nếu bạn cài đặt DingPOS sau khi nhấn vào một quảng cáo Apple Ads trên App Store, ứng dụng sẽ hỏi khung AdServices của Apple, một lần, xem chiến dịch quảng cáo nào đã dẫn đến lượt cài đặt. Apple trả lời bằng các mã định danh dạng số của chiến dịch, nhóm quảng cáo và từ khóa, cùng với quốc gia và loại lượt cài đặt; AdServices chỉ dùng dữ liệu của chính Apple và không nhận dạng bạn hay thiết bị của bạn. Chúng tôi lưu các mã định danh này cùng với mã định danh thiết bị ngẫu nhiên của ứng dụng, trên máy chủ của chúng tôi và trong Firebase Analytics (xem phần trên), để biết những quảng cáo nào mang đến các cửa hàng sau đó đăng ký gói. Việc này không dùng mã định danh quảng cáo của Apple (IDFA) và không yêu cầu quyền theo dõi; các mã định danh này không bao giờ bị bán, không bao giờ được đưa cho nhà quảng cáo, và không bao giờ được dùng để theo dõi bạn trên ứng dụng hoặc trang web của các công ty khác. Nếu bạn không đến từ một quảng cáo, chúng tôi chỉ lưu kết quả đó, không có mã định danh quảng cáo nào."
+    },
+    "support": {
+      "title": "Báo cáo hỗ trợ (chỉ khi bạn gửi)",
+      "desc": "Khi bạn chọn gửi báo cáo hỗ trợ từ Cài đặt, báo cáo gồm nội dung bạn viết, mọi ảnh hoặc video bạn đính kèm (đã xóa vị trí và siêu dữ liệu khác), thông tin chẩn đoán cơ bản (mẫu thiết bị, phiên bản hệ điều hành và ứng dụng, ngôn ngữ, múi giờ, trạng thái mạng, dung lượng trống, kích thước cơ sở dữ liệu, trạng thái đăng ký, tên cửa hàng), và một bản sao cơ sở dữ liệu cửa hàng của bạn để chúng tôi tái hiện sự cố. Bản sao đó chứa sản phẩm, đơn hàng và hồ sơ khách hàng của bạn, bao gồm tên, số điện thoại, email và ngày sinh (tháng và ngày). Bản sao này chỉ được dùng để trả lời báo cáo của bạn."
     },
     "children": {
       "title": "Quyền riêng tư của trẻ em",

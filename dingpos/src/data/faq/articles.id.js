@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tidak. DingPOS tidak memakai sistem akun — unduh saja dan langsung berjualan. Produk, pesanan, dan data pelanggan Anda tetap ada di iPad Anda dan tidak pernah diunggah ke server kami."
+        "text": "Tidak. DingPOS tidak memakai sistem akun — unduh saja dan langsung berjualan. Produk, pesanan, dan data pelanggan Anda semuanya tetap ada di iPad Anda. Data itu sampai ke kami hanya jika Anda mengirim laporan dukungan dari Pengaturan, yang melampirkan salinan data toko Anda agar kami dapat mereproduksi masalahnya."
       },
       {
         "type": "p",
@@ -787,7 +787,8 @@ export const articles = [
       "ongkos kirim",
       "biaya layanan",
       "harga tawar",
-      "harga pasar"
+      "harga pasar",
+      "biaya persentase"
     ],
     "content": [
       {
@@ -799,6 +800,8 @@ export const articles = [
         "items": [
           "0 adalah harga yang valid (misalnya gratis ongkir); kolom yang kosong tidak bisa ditambahkan. Masukkan harga sesuai mode pajak toko Anda, seperti harga lainnya.",
           "Keranjang hanya memuat satu baris per produk harga bebas: mengetuknya lagi membuka baris itu sehingga Anda bisa mengubah harganya.",
+          "Sejak v3.3, Dihitung Berdasarkan beralih antara Jumlah dan Persen. Pada 5%, baris ini bernilai 5% dari subtotal barang lain (setelah diskon item, sebelum promo, diskon keranjang, dan penukaran poin), dibulatkan ke angka terdekat (0,5 ke atas) sesuai jumlah desimal mata uang, dan mengikuti keranjang saat barang ditambah, dihapus, atau didiskon. Baris di keranjang tertulis “5% dari keranjang”, dan pesanan mencatat jumlah hasil hitungnya.",
+          "Baris harga bebas tidak mendapat diskon item; untuk menagih lebih rendah, ubah harganya. Diskon keranjang, penukaran poin, dan promo (kecuali produknya dikecualikan dari promo) tetap berlaku padanya.",
           "Mengaktifkan Harga Bebas juga mengaktifkan Kecualikan dari promo, sehingga biaya tidak didiskon dan tidak dihitung untuk minimal belanja. Nonaktifkan lagi jika barang hasil tawar-menawar boleh ikut promo.",
           "Setelah terjual, barisnya dikenai pajak, menghasilkan poin, dan dihitung di Statistik seperti barang lain, dan retur mengembalikan harga yang dimasukkan.",
           "Produk dengan varian tidak bisa memakai harga bebas. Produk harga bebas tidak pernah ditawarkan sebagai hadiah atau tambahan berbayar, dan tidak pernah muncul di daftar barang pengganti pada tukar barang."
@@ -1664,8 +1667,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Tindakan (penyesuaian stok manual, pengelolaan produk, menyelesaikan pembayaran dengan diskon di atas batas): satu persetujuan berlaku untuk satu tindakan itu saja.",
-          "Tampilan (biaya & laba, Statistik, Pengaturan, cadangan & pemulihan): persetujuan membuka akses sampai operator berganti atau aplikasi masuk ke latar belakang.",
+          "Tindakan (penyesuaian stok manual, penyesuaian poin manual, pengelolaan produk, menyelesaikan pembayaran dengan diskon di atas batas): satu persetujuan berlaku untuk satu tindakan itu saja.",
+          "Tampilan (biaya & laba, Dasbor, Pengaturan, cadangan & pemulihan): persetujuan membuka akses sampai operator berganti atau aplikasi masuk ke latar belakang.",
           "Batas diskon berlaku untuk diskon manual dan diperiksa satu kali saat bayar; promo otomatis dan penukaran poin tidak dihitung."
         ]
       },
@@ -1675,7 +1678,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Pembatalan penjualan (void), retur, penjualan tempo, dan pembelian sengaja tidak memiliki izin; semuanya hanya mencatat siapa yang menanganinya. Untuk meninjaunya nanti, gunakan log aktivitas."
+        "text": "Batalkan penjualan (Void), retur, penjualan tempo, dan pembelian sengaja tidak memiliki izin; semuanya hanya mencatat siapa yang menanganinya. Untuk meninjaunya nanti, gunakan log aktivitas."
       }
     ],
     "related": [

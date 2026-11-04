@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Privatlivspolitik",
     "meta_description": "Sådan behandler DingPOS, kassesystem-appen til iPad, der virker uden internet, dine data: dine forretningsdata bliver på din enhed, og valgfri backups gemmes kun i din egen cloudkonto.",
-    "effective_date": "Ikrafttrædelsesdato: 1. juli 2026",
+    "effective_date": "Ikrafttrædelsesdato: 4. november 2026",
     "intro": "ALU Studio (\"vi\") har udviklet DingPOS (\"appen\"). DingPOS er et kassesystem bygget med privatlivet i centrum – dine forretningsdata tilhører dig. Denne privatlivspolitik forklarer, hvordan vi behandler dine oplysninger, når du bruger appen.",
     "local_storage": {
       "title": "Sådan gemmes dine data",
-      "desc": "DingPOS gemmer alle dine forretningsdata lokalt på din enhed. Medmindre du selv aktiverer cloud-backup, forlader disse data aldrig din enhed. De data, du opretter i appen, omfatter:",
+      "desc": "DingPOS gemmer alle dine forretningsdata lokalt på din enhed. Medmindre du selv aktiverer cloud-backup eller sender os en supportrapport, forlader disse data aldrig din enhed. De data, du opretter i appen, omfatter:",
       "items": [
         "Butiksindstillinger (butikkens navn, valuta, momssats, logo)",
         "Produktdata (navn, pris, kostpris, stregkode, foto, kategori, varianter, lager)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Hvad vi ikke indsamler",
-      "desc": "DingPOS indsamler, sender eller deler ikke noget af dit forretningsindhold. Helt konkret gør vi ikke følgende:",
+      "desc": "Dit forretningsindhold bliver på din enhed. Bortset fra en supportrapport, som du selv vælger at sende (se nedenfor), gør vi ikke følgende:",
       "items": [
         "Vi indsamler ikke dine produkt-, ordre-, kunde- eller medlemsdata",
         "Vi håndterer ikke betalingsforløb eller kreditkortoplysninger (appen behandler ikke egentlige kortbetalinger)",
-        "Vi sporer ikke din placering",
-        "Vi deler ikke dine forretningsdata med tredjeparter"
+        "Vi sporer ikke din placering og sporer ikke dig på tværs af andre virksomheders apps og websites",
+        "Vi sælger ikke dine data og deler ikke dine forretningsdata med tredjeparter"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Abonnement og køb",
-      "desc": "DingPOS tilbyder et abonnement via køb i appen (IAP) i Apple App Store og bruger RevenueCat til at administrere abonnementsstatus. Betalingen håndteres af Apple; vi modtager aldrig dit kreditkort eller dine betalingsoplysninger. RevenueCat modtager kun et anonymt id knyttet til abonnementsstatus, som bruges til at kontrollere, om dit abonnement er aktivt."
+      "desc": "DingPOS tilbyder abonnementer via køb i appen i Apple App Store. Betalingen håndteres af Apple; vi modtager aldrig dit kreditkort eller dine betalingsoplysninger. Vores egen server verificerer Apples signerede transaktion for at afgøre, hvilket abonnementsniveau der er aktivt. Til det formål registrerer appen denne installation hos vores server med et tilfældigt enheds-id, som appen selv genererer (ikke Apples reklameidentifikator), sammen med appversion, sprog, App Store-land og dit butiksnavn, og den sender en lille række abonnementshændelser (f.eks. visning af abonnementsniveauerne eller start af et køb)."
     },
     "analytics": {
       "title": "Analyse og nedbrudsrapporter",
-      "desc": "DingPOS bruger Firebase Analytics og Firebase Crashlytics fra Google til at hjælpe os med at forstå, hvordan appen bruges, og til at finde og rette nedbrud. Disse tjenester indsamler:",
+      "desc": "DingPOS bruger Firebase Analytics og Firebase Crashlytics fra Google til at forstå, hvordan appen bruges, og til at finde og rette nedbrud. De er knyttet til appens tilfældige enheds-id, så et nedbrud og de trin, der gik forud, kan læses sammen. De indsamler:",
       "items": [
-        "Anonyme brugsdata (f.eks. hvilke funktioner der bruges, sessionens længde)",
+        "Brugsdata (f.eks. hvilke funktioner der bruges, sessionens længde)",
         "Nedbrudsrapporter (f.eks. stack traces, enhedsmodel, styresystemversion)",
         "Enhedsoplysninger (f.eks. enhedstype, styresystem, appversion)",
-        "Et tilfældigt genereret instans-id (ikke knyttet til din identitet)"
+        "Generel placering (på byniveau), som Google udleder af netværksadressen"
       ],
-      "note": "Disse data er anonyme og indeholder intet af dit forretningsindhold (såsom produkter, ordrer, kunder eller medlemmer). Du kan læse mere om, hvordan Google behandler disse data, i Googles privatlivspolitik: https://policies.google.com/privacy."
+      "note": "Intet af dette omfatter dit forretningsindhold (produkter, ordrer, kunder eller medlemmer). Du kan læse, hvordan Google behandler disse data, i Googles privatlivspolitik: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Apple Ads-attribution",
+      "desc": "Hvis du har installeret DingPOS, efter at du trykkede på en Apple Ads-annonce i App Store, spørger appen én gang Apples AdServices-framework, hvilken annoncekampagne der førte til installationen. Apple svarer med numeriske id'er for kampagne, annoncegruppe og søgeord samt land og type af installation; AdServices bruger kun Apples egne data og identificerer hverken dig eller din enhed. Vi gemmer disse id'er sammen med appens tilfældige enheds-id på vores server og i Firebase Analytics (se ovenfor) for at se, hvilke annoncer der bringer butikker, som går videre til at tegne et abonnement. Dette bruger ikke Apples reklameidentifikator (IDFA) og beder ikke om tilladelse til sporing; id'erne bliver aldrig solgt, aldrig givet til annoncører og aldrig brugt til at spore dig på tværs af andre virksomheders apps eller websites. Hvis du ikke kom fra en annonce, gemmer vi kun det resultat, uden annonce-id'er."
+    },
+    "support": {
+      "title": "Supportrapporter (kun når du sender en)",
+      "desc": "Når du vælger at sende en supportrapport fra Indstillinger, indeholder den det, du skriver, eventuelle fotos eller videoer, du vedhæfter (med placering og andre metadata fjernet), grundlæggende diagnostik (enhedsmodel, styresystem- og appversion, sprog, tidszone, netværksstatus, ledig lagerplads, databasestørrelse, abonnementsstatus, butiksnavn) og en kopi af din butiksdatabase, så vi kan genskabe problemet. Kopien indeholder dine produkter, ordrer og kundeposter, herunder navne, telefonnumre, e-mailadresser og fødselsdage (måned og dag). Den bruges kun til at besvare din rapport."
     },
     "children": {
       "title": "Børns privatliv",
