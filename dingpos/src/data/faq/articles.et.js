@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ei. DingPOSil pole kontosüsteemi – laadi alla ja alusta müümist. Sinu tooted, müügid ja klientide andmed jäävad sinu iPadi ega laeta kunagi meie serveritesse."
+        "text": "Ei. DingPOSil pole kontosüsteemi – laadi alla ja alusta müümist. Sinu tooted, müügid ja klientide andmed jäävad sinu iPadi. Need jõuavad meieni ainult siis, kui saadad Seadetest tugiaruande, millega kaasneb sinu poeandmete koopia, et saaksime probleemi reprodutseerida."
       },
       {
         "type": "p",

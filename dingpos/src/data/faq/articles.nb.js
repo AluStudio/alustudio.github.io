@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nei. DingPOS har ikke noe kontosystem – last ned appen og begynn å selge. Produktene, ordrene og kundedataene dine blir på iPaden din og lastes aldri opp til serverne våre."
+        "text": "Nei. DingPOS har ikke noe kontosystem – last ned appen og begynn å selge. Produktene, ordrene og kundedataene dine blir på iPaden din. De når oss bare hvis du sender en støtterapport fra Innstillinger, som legger ved en kopi av butikkdataene dine slik at vi kan gjenskape problemet."
       },
       {
         "type": "p",

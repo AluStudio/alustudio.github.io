@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nee. DingPOS heeft geen accountsysteem — download de app en begin met verkopen. Je producten, bestellingen en klantgegevens blijven op je iPad en worden nooit naar onze servers geüpload."
+        "text": "Nee. DingPOS heeft geen accountsysteem — download de app en begin met verkopen. Je producten, bestellingen en klantgegevens blijven allemaal op je iPad. Ze komen alleen bij ons terecht als je vanuit Instellingen een supportrapport verstuurt, waarbij een kopie van je winkelgegevens wordt bijgevoegd zodat we het probleem kunnen reproduceren."
       },
       {
         "type": "p",

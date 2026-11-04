@@ -68,7 +68,7 @@ export const articles = [
     question: "需要註冊帳號嗎？",
     keywords: ["帳號", "註冊", "登入", "隱私", "免帳號", "account"],
     content: [
-      { type: "p", text: "不需要。DingPOS 沒有帳號系統——下載開啟就能用。你的商品、訂單與會員資料全部儲存在你的 iPad 上，不會上傳到我們的伺服器。" },
+      { type: "p", text: "不需要。DingPOS 沒有帳號系統——下載開啟就能用。你的商品、訂單與顧客資料全部儲存在你的 iPad 上。只有你從「設定」送出問題回報時，才會附上一份店家資料的副本給我們，用來重現問題。" },
       { type: "p", text: "啟用雲端備份時，登入的是你自己的雲端帳號（iCloud、Google Drive 或 Dropbox），備份檔存在你的帳號裡，我們無法存取。" },
     ],
     related: ["offline-usage", "backup-data"],

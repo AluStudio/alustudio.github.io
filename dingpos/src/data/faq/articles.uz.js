@@ -154,7 +154,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Yo‘q. DingPOS’da akkaunt tizimi yo‘q — yuklab oling va sotishni boshlang. Mahsulotlaringiz, buyurtmalaringiz va mijozlar ma’lumotlari iPad’ingizda qoladi va hech qachon bizning serverlarimizga yuklanmaydi."
+        "text": "Yo‘q. DingPOS’da akkaunt tizimi yo‘q — yuklab oling va sotishni boshlang. Mahsulotlaringiz, buyurtmalaringiz va mijozlar ma’lumotlari iPad’ingizda qoladi. Ular bizga faqat Sozlamalar bo‘limidan yordam hisoboti yuborsangizgina yetib boradi: unga muammoni qayta takrorlay olishimiz uchun do‘koningiz ma’lumotlarining nusxasi ilova qilinadi."
       },
       {
         "type": "p",

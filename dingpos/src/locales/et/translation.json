@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Privaatsuspoliitika",
     "meta_description": "Kuidas DingPOS, ilma internetita töötav iPadi kassarakendus, sinu andmeid käsitleb: ärikirjed jäävad sinu seadmesse ja valikuline varundus liigub ainult sinu enda pilvekontole.",
-    "effective_date": "Jõustumiskuupäev: 1. juuli 2026",
+    "effective_date": "Jõustumiskuupäev: 4. november 2026",
     "intro": "ALU Studio („meie“) töötas välja rakenduse DingPOS („rakendus“). DingPOS on kassasüsteem, mille keskmes on privaatsus – sinu äriandmed kuuluvad sinule. See privaatsuspoliitika selgitab, kuidas me sinu teavet rakenduse kasutamisel käsitleme.",
     "local_storage": {
       "title": "Kuidas sinu andmeid salvestatakse",
-      "desc": "DingPOS salvestab kõik sinu äriandmed kohalikult sinu seadmesse. Kui sa pilvevarundust ise sisse ei lülita, need andmed seadmest ei lahku. Rakenduses loodud andmed hõlmavad järgmist:",
+      "desc": "DingPOS salvestab kõik sinu äriandmed kohalikult sinu seadmesse. Kui sa pilvevarundust ise sisse ei lülita ega meile tugiaruannet ei saada, need andmed seadmest ei lahku. Rakenduses loodud andmed hõlmavad järgmist:",
       "items": [
         "Poe seaded (poe nimi, valuuta, maksumäär, logo)",
         "Tootandmed (nimi, hind, omahind, vöötkood, foto, kategooria, variandid, laoseis)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Mida me ei kogu",
-      "desc": "DingPOS ei kogu, ei edasta ega jaga sinu äriandmeid. Täpsemalt me:",
+      "desc": "Sinu äriandmed jäävad sinu seadmesse. Peale tugiaruande, mille sa ise saata otsustad (vt allpool), me:",
       "items": [
         "ei kogu sinu toote-, müügi-, kliendi- ega liikmeandmeid;",
         "ei puutu kokku makseprotsesside ega krediitkaardiandmetega (rakendus ei töötle tegelikke kaardimakseid);",
-        "ei jälgi sinu asukohta;",
-        "ei jaga sinu äriandmeid ühegi kolmanda osapoolega."
+        "ei jälgi sinu asukohta ega jälgi sind teiste ettevõtete rakendustes ja veebisaitidel;",
+        "ei müü sinu andmeid ega jaga sinu äriandmeid ühegi kolmanda osapoolega."
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Tellimus ja ostud",
-      "desc": "DingPOS pakub tellimust Apple App Store'i rakendusesisese ostu (IAP) kaudu ning tellimuse olekut haldab RevenueCat. Makse töötleb Apple; me ei saa kunagi sinu krediitkaardi- ega makseandmeid. RevenueCat saab ainult anonüümse tunnuse, mis on seotud tellimuse olekuga ja mida kasutatakse tellimuse kehtivuse kontrollimiseks."
+      "desc": "DingPOS pakub tellimusi Apple App Store'i rakendusesisese ostu kaudu. Makse töötleb Apple; me ei saa kunagi sinu krediitkaardi- ega makseandmeid. Meie enda server kontrollib Apple'i allkirjastatud tehingut, et otsustada, milline pakett on aktiivne. Selleks registreerib rakendus selle paigalduse meie serveris juhusliku seadmetunnusega, mille rakendus ise genereerib (mitte Apple'i reklaamitunnusega), koos rakenduse versiooni, keele, App Store'i riigi ja sinu poe nimega ning saadab väikese hulga tellimussündmusi (näiteks pakettide vaatamine või ostu alustamine)."
     },
     "analytics": {
       "title": "Analüütika ja kokkujooksmiste aruandlus",
-      "desc": "DingPOS kasutab Google'i pakutavaid teenuseid Firebase Analytics ja Firebase Crashlytics, et mõista, kuidas rakendust kasutatakse, ning leida ja parandada kokkujooksmisi. Need teenused koguvad:",
+      "desc": "DingPOS kasutab Google'i pakutavaid teenuseid Firebase Analytics ja Firebase Crashlytics, et mõista, kuidas rakendust kasutatakse, ning leida ja parandada kokkujooksmisi. Need on seotud rakenduse juhusliku seadmetunnusega, et kokkujooksmist ja sellele eelnenud samme saaks lugeda koos. Need teenused koguvad:",
       "items": [
-        "Anonüümseid kasutusandmeid (nt milliseid funktsioone kasutatakse, seansi kestus)",
+        "Kasutusandmeid (nt milliseid funktsioone kasutatakse, seansi kestus)",
         "Kokkujooksmisaruandeid (nt virnajälg, seadme mudel, operatsioonisüsteemi versioon)",
         "Seadmeteavet (nt seadme tüüp, operatsioonisüsteem, rakenduse versioon)",
-        "Juhuslikult loodud instantsi tunnust (mis ei ole seotud sinu isikuga)"
+        "Üldist asukohta (linna tasemel), mille Google tuletab võrguaadressist"
       ],
-      "note": "Need andmed on anonüümsed ega sisalda sinu äriandmeid (nt tooteid, müüke, kliente ega liikmeid). Lisateavet selle kohta, kuidas Google neid andmeid käsitleb, leiad Google'i privaatsuspoliitikast: https://policies.google.com/privacy."
+      "note": "Nende andmete hulka ei kuulu sinu äriandmed (tooted, müügid, kliendid ega liikmed). Lisateavet selle kohta, kuidas Google neid andmeid käsitleb, leiad Google'i privaatsuspoliitikast: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Apple Adsi atributsioon",
+      "desc": "Kui installisid DingPOSi pärast seda, kui puudutasid App Store'is Apple Adsi reklaami, küsib rakendus ühe korra Apple'i AdServices raamistikult, milline reklaamikampaania installini viis. Apple vastab numbriliste kampaania-, reklaamirühma- ja märksõnatunnustega ning riigi ja installi liigiga; AdServices kasutab ainult Apple'i enda andmeid ega tuvasta sind ega sinu seadet. Me säilitame need tunnused koos rakenduse juhusliku seadmetunnusega oma serveris ja Firebase Analyticsis (vt eespool), et teada saada, millised reklaamid toovad poode, mis hiljem tellimuse võtavad. See ei kasuta Apple'i reklaamitunnust (IDFA) ega küsi jälgimisluba; tunnuseid ei müüda kunagi, ei anta reklaamijatele ega kasutata kunagi sinu jälgimiseks teiste ettevõtete rakendustes ega veebisaitidel. Kui sa reklaamilt ei tulnud, säilitame ainult selle tulemuse, ilma reklaamitunnusteta."
+    },
+    "support": {
+      "title": "Tugiaruanded (ainult siis, kui sa neid saadad)",
+      "desc": "Kui otsustad Seadetest tugiaruande saata, sisaldab see seda, mida sa kirjutad, kõiki lisatud fotosid või videoid (asukoht ja muud metaandmed eemaldatud), põhilist diagnostikat (seadme mudel, operatsioonisüsteemi ja rakenduse versioon, keel, ajavöönd, võrgu olek, vaba salvestusruum, andmebaasi suurus, tellimuse olek, poe nimi) ning sinu poe andmebaasi koopiat, et saaksime probleemi reprodutseerida. See koopia sisaldab sinu tooteid, müüke ja kliendikirjeid, sealhulgas nimesid, telefoninumbreid, e-posti aadresse ja sünnipäevi (kuu ja päev). Seda kasutatakse ainult sinu aruandele vastamiseks."
     },
     "children": {
       "title": "Laste privaatsus",

@@ -153,7 +153,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Não. O DingPOS não tem sistema de contas — baixe e comece a vender. Seus produtos, vendas e dados de clientes ficam no seu iPad e nunca são enviados aos nossos servidores."
+        "text": "Não. O DingPOS não tem sistema de contas — baixe e comece a vender. Seus produtos, vendas e dados de clientes ficam todos no seu iPad. Eles só chegam até nós se você enviar um relatório de suporte pelos Ajustes, que anexa uma cópia dos dados da sua loja para que possamos reproduzir o problema."
       },
       {
         "type": "p",

@@ -153,7 +153,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Non. DingPOS n’a pas de système de comptes : téléchargez l’app et commencez à vendre. Vos produits, commandes et données clients restent sur votre iPad et ne sont jamais envoyés sur nos serveurs."
+        "text": "Non. DingPOS n’a pas de système de comptes : téléchargez l’app et commencez à vendre. Vos produits, commandes et données clients restent sur votre iPad. Ils ne nous parviennent que si vous envoyez un rapport d’assistance depuis Réglages, qui joint une copie des données de votre boutique afin que nous puissions reproduire le problème."
       },
       {
         "type": "p",

@@ -55,7 +55,7 @@ export const articles = [
     question: "Do I need to create an account?",
     keywords: ["account", "sign up", "login", "register", "privacy"],
     content: [
-      { type: "p", text: "No. DingPOS has no account system — download it and start selling. Your products, orders, and customer data all stay on your iPad and are never uploaded to our servers." },
+      { type: "p", text: "No. DingPOS has no account system — download it and start selling. Your products, orders, and customer data all stay on your iPad. They reach us only if you send a support report from Settings, which attaches a copy of your store data so we can reproduce the problem." },
       { type: "p", text: "When you enable cloud backup, you sign in to your own cloud account (iCloud, Google Drive, or Dropbox). Backups live in your account — we cannot access them." },
     ],
     related: ["offline-usage", "backup-data"],

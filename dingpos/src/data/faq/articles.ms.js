@@ -156,7 +156,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tidak. DingPOS tiada sistem akaun — muat turun dan terus mula berjualan. Produk, pesanan dan data pelanggan anda semuanya kekal pada iPad anda dan tidak pernah dimuat naik ke pelayan kami."
+        "text": "Tidak. DingPOS tiada sistem akaun — muat turun dan terus mula berjualan. Produk, pesanan dan data pelanggan anda semuanya kekal pada iPad anda. Data itu hanya sampai kepada kami jika anda menghantar laporan sokongan daripada Tetapan, yang melampirkan salinan data kedai anda supaya kami dapat menghasilkan semula masalah itu."
       },
       {
         "type": "p",

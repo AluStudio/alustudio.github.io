@@ -155,7 +155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tidak. DingPOS tidak memakai sistem akun — unduh saja dan langsung berjualan. Produk, pesanan, dan data pelanggan Anda tetap ada di iPad Anda dan tidak pernah diunggah ke server kami."
+        "text": "Tidak. DingPOS tidak memakai sistem akun — unduh saja dan langsung berjualan. Produk, pesanan, dan data pelanggan Anda semuanya tetap ada di iPad Anda. Data itu sampai ke kami hanya jika Anda mengirim laporan dukungan dari Pengaturan, yang melampirkan salinan data toko Anda agar kami dapat mereproduksi masalahnya."
       },
       {
         "type": "p",

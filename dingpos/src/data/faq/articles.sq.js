@@ -157,7 +157,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Jo. DingPOS nuk ka sistem llogarish — shkarkoje dhe nis të shesësh. Produktet, porositë dhe të dhënat e klientëve qëndrojnë të gjitha në iPad-in tënd dhe nuk ngarkohen kurrë në serverët tanë."
+        "text": "Jo. DingPOS nuk ka sistem llogarish — shkarkoje dhe nis të shesësh. Produktet, porositë dhe të dhënat e klientëve qëndrojnë të gjitha në iPad-in tënd. Ato na arrijnë vetëm nëse dërgon një raport mbështetjeje nga Cilësimet, i cili bashkëngjit një kopje të të dhënave të dyqanit tënd që të mund ta riprodhojmë problemin."
       },
       {
         "type": "p",

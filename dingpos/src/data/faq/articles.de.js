@@ -157,7 +157,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nein. DingPOS hat kein Kontosystem – laden Sie die App herunter und legen Sie los. Ihre Artikel, Bestellungen und Kundendaten bleiben auf Ihrem iPad und werden nie auf unsere Server hochgeladen."
+        "text": "Nein. DingPOS hat kein Kontosystem – laden Sie die App herunter und legen Sie los. Ihre Artikel, Bestellungen und Kundendaten bleiben alle auf Ihrem iPad. Zu uns gelangen sie nur, wenn Sie in den Einstellungen eine Supportmeldung senden; dabei wird eine Kopie Ihrer Ladendaten angehängt, damit wir das Problem nachvollziehen können."
       },
       {
         "type": "p",

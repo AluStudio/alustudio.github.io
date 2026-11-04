@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Tietosuojakäytäntö",
     "meta_description": "Näin DingPOS, verkkoyhteydestä riippumaton iPad-kassajärjestelmä, käsittelee tietojasi: liiketoimintatietosi pysyvät laitteellasi, ja valinnaiset varmuuskopiot tallentuvat vain omalle pilvitilillesi.",
-    "effective_date": "Voimassa alkaen: 1. heinäkuuta 2026",
+    "effective_date": "Voimassa alkaen: 4. marraskuuta 2026",
     "intro": "ALU Studio (”me”) on kehittänyt DingPOS-sovelluksen (”sovellus”). DingPOS on kassajärjestelmä, jonka lähtökohta on tietosuoja – liiketoimintatietosi kuuluvat sinulle. Tässä tietosuojakäytännössä kerromme, miten käsittelemme tietojasi, kun käytät sovellusta.",
     "local_storage": {
       "title": "Miten tietosi tallennetaan",
-      "desc": "DingPOS tallentaa kaikki liiketoimintatietosi paikallisesti laitteellesi. Ellet ota pilvivarmuuskopiointia itse käyttöön, nämä tiedot eivät koskaan poistu laitteeltasi. Sovelluksessa luomiasi tietoja ovat:",
+      "desc": "DingPOS tallentaa kaikki liiketoimintatietosi paikallisesti laitteellesi. Ellet ota pilvivarmuuskopiointia käyttöön tai lähetä meille ongelmailmoitusta, nämä tiedot eivät koskaan poistu laitteeltasi. Sovelluksessa luomiasi tietoja ovat:",
       "items": [
         "Myymälän asetukset (myymälän nimi, valuutta, veroprosentti, logo)",
         "Tuotetiedot (nimi, hinta, omakustannushinta, viivakoodi, kuva, luokka, variantit, varasto)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Mitä emme kerää",
-      "desc": "DingPOS ei kerää, lähetä eikä jaa liiketoimintasisältöäsi. Tarkemmin sanottuna emme:",
+      "desc": "Liiketoimintasisältösi pysyy laitteellasi. Lukuun ottamatta ongelmailmoitusta, jonka itse päätät lähettää (katso alla), emme:",
       "items": [
         "Kerää tuote-, tilaus-, asiakas- tai kanta-asiakastietojasi",
         "Käsittele maksuliikennettä tai luottokorttitietoja (sovellus ei käsittele varsinaisia korttimaksuja)",
-        "Seuraa sijaintiasi",
-        "Jaa liiketoimintatietojasi kolmansille osapuolille"
+        "Seuraa sijaintiasi tai seuraa sinua muiden yritysten sovelluksissa ja verkkosivustoilla",
+        "Myy tietojasi tai jaa liiketoimintatietojasi kolmansille osapuolille"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Tilaus ja ostot",
-      "desc": "DingPOS tarjoaa tilauksen Apple App Storen sovelluksen sisäisenä ostona (IAP), ja tilauksen tilaa hallinnoidaan RevenueCatin avulla. Maksun käsittelee Apple; emme koskaan saa luottokorttisi tai maksutapasi tietoja. RevenueCat saa vain tilauksen tilaan liitetyn anonyymin tunnisteen, jolla varmistetaan, onko tilauksesi voimassa."
+      "desc": "DingPOS tarjoaa tilauksia Apple App Storen sovelluksen sisäisten ostojen kautta. Maksun käsittelee Apple; emme koskaan saa luottokorttisi tai maksutapasi tietoja. Oma palvelimemme varmentaa Applen allekirjoittaman tapahtuman päättääkseen, mikä paketti on käytössä. Tätä varten sovellus rekisteröi tämän asennuksen palvelimellemme sovelluksen luomalla satunnaisella laitetunnisteella (ei Applen mainostunnisteella) sekä sovelluksen version, kielen, App Store -maan ja myymäläsi nimen kanssa, ja se lähettää pienen joukon tilaustapahtumia (esimerkiksi pakettien katselu tai oston aloittaminen)."
     },
     "analytics": {
       "title": "Analytiikka ja kaatumisraportit",
-      "desc": "DingPOS käyttää Googlen tarjoamia Firebase Analyticsia ja Firebase Crashlyticsia, jotta ymmärrämme, miten sovellusta käytetään, ja voimme tunnistaa ja korjata kaatumiset. Nämä palvelut keräävät:",
+      "desc": "DingPOS käyttää Googlen tarjoamia Firebase Analyticsia ja Firebase Crashlyticsia, jotta ymmärrämme, miten sovellusta käytetään, ja voimme löytää ja korjata kaatumiset. Ne on yhdistetty sovelluksen satunnaiseen laitetunnisteeseen, jotta kaatumista ja sitä edeltäneitä vaiheita voi tarkastella yhdessä. Ne keräävät:",
       "items": [
-        "Anonyymia käyttötietoa (esim. mitä toimintoja käytetään, istunnon kesto)",
+        "Käyttötietoa (esim. mitä toimintoja käytetään, istunnon kesto)",
         "Kaatumisraportteja (esim. pinojäljet, laitemalli, käyttöjärjestelmän versio)",
         "Laitetietoja (esim. laitetyyppi, käyttöjärjestelmä, sovelluksen versio)",
-        "Satunnaisesti luotua asennustunnistetta (ei liity henkilöllisyyteesi)"
+        "Likimääräistä sijaintia (kaupunkitasolla), jonka Google johtaa verkko-osoitteesta"
       ],
-      "note": "Nämä tiedot ovat anonyymeja, eivätkä ne sisällä liiketoimintasisältöäsi (kuten tuotteita, tilauksia, asiakkaita tai kanta-asiakkaita). Lisätietoa siitä, miten Google käsittelee näitä tietoja, löytyy Googlen tietosuojakäytännöstä: https://policies.google.com/privacy."
+      "note": "Mikään näistä ei sisällä liiketoimintasisältöäsi (tuotteita, tilauksia, asiakkaita tai kanta-asiakkaita). Lisätietoa siitä, miten Google käsittelee näitä tietoja, löytyy Googlen tietosuojakäytännöstä: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Apple Ads -attribuutio",
+      "desc": "Jos asensit DingPOSin napautettuasi Apple Ads -mainosta App Storessa, sovellus kysyy kerran Applen AdServices-kehykseltä, mikä mainoskampanja johti asennukseen. Apple vastaa numeerisilla kampanjan, mainosryhmän ja avainsanan tunnisteilla sekä maalla ja asennuksen tyypillä; AdServices käyttää vain Applen omia tietoja eikä tunnista sinua tai laitettasi. Säilytämme nämä tunnisteet sovelluksen satunnaisen laitetunnisteen kanssa palvelimellamme ja Firebase Analyticsissa (katso yllä) selvittääksemme, mitkä mainokset tuovat myymälöitä, jotka päätyvät tilaamaan. Tämä ei käytä Applen mainostunnistetta (IDFA) eikä pyydä seurantalupaa; tunnisteita ei koskaan myydä, anneta mainostajille eikä käytetä seuraamaan sinua muiden yritysten sovelluksissa tai verkkosivustoilla. Jos et tullut mainoksesta, säilytämme vain tämän tuloksen ilman mainostunnisteita."
+    },
+    "support": {
+      "title": "Ongelmailmoitukset (vain kun lähetät sellaisen)",
+      "desc": "Kun päätät lähettää ongelmailmoituksen Asetuksista, se sisältää kirjoittamasi tekstin, mahdolliset liittämäsi kuvat tai videon (sijainti ja muut metatiedot poistettuina), perusdiagnostiikan (laitemalli, käyttöjärjestelmän ja sovelluksen versio, kieli, aikavyöhyke, verkon tila, vapaa tallennustila, tietokannan koko, tilauksen tila, myymälän nimi) sekä kopion myymäläsi tietokannasta, jotta voimme toistaa ongelman. Kopio sisältää tuotteesi, tilauksesi ja asiakastietosi, mukaan lukien nimet, puhelinnumerot, sähköpostiosoitteet ja syntymäpäivät (kuukausi ja päivä). Sitä käytetään vain ilmoitukseesi vastaamiseen."
     },
     "children": {
       "title": "Lasten yksityisyys",

@@ -139,6 +139,10 @@ const DINGPOS_SITE_GLOSSARY = [
   ["略过", "跳过"],
   ["落差", "差异"],
   ["遗失", "丢失"],
+  ["贩售", "出售"],
+  ["中继数据", "元数据"], // metadata
+  ["语系", "语言"], // mainland 语系 is a language family
+  ["广告群组", "广告组"], // Apple Ads zh-CN term
   ["预带", "预填"],
   ["备份档", "备份文件"],
   ["单档", "单个文件"],

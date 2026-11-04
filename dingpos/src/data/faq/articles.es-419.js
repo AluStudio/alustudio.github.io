@@ -154,7 +154,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "No. DingPOS no tiene cuentas: descárgalo y empieza a vender. Tus productos, pedidos y datos de clientes se quedan en tu iPad y nunca se suben a nuestros servidores."
+        "text": "No. DingPOS no tiene cuentas: descárgalo y empieza a vender. Tus productos, pedidos y datos de clientes se quedan en tu iPad. Solo llegan a nosotros si envías un informe de soporte desde Ajustes, que adjunta una copia de los datos de tu tienda para que podamos reproducir el problema."
       },
       {
         "type": "p",

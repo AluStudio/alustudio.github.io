@@ -153,7 +153,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nem. A DingPOS-nak nincs fiókrendszere – töltse le, és kezdhet is eladni. A termékei, rendelései és vevőadatai az iPaden maradnak, és soha nem kerülnek fel a szervereinkre."
+        "text": "Nem. A DingPOS-nak nincs fiókrendszere – töltse le, és kezdhet is eladni. A termékei, rendelései és vevőadatai mind az iPaden maradnak. Csak akkor jutnak el hozzánk, ha a Beállításokból támogatási bejelentést küld, amely csatolja az üzlete adatainak másolatát, hogy újra elő tudjuk állítani a problémát."
       },
       {
         "type": "p",

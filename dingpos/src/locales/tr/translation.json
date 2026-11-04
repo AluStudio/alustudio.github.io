@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Gizlilik Politikası",
     "meta_description": "İnternetsiz çalışan iPad POS uygulaması DingPOS verilerinizi nasıl işler: işletme kayıtlarınız cihazınızda kalır, isteğe bağlı yedekler yalnızca kendi bulut hesabınıza gider.",
-    "effective_date": "Yürürlük tarihi: 1 Temmuz 2026",
+    "effective_date": "Yürürlük tarihi: 4 Kasım 2026",
     "intro": "ALU Studio (\"biz\"), DingPOS'u (\"uygulama\") geliştirdi. DingPOS, gizliliği temele alan bir satış noktası uygulamasıdır; işletme verileriniz size aittir. Bu Gizlilik Politikası, uygulamayı kullandığınızda bilgilerinizi nasıl işlediğimizi açıklar.",
     "local_storage": {
       "title": "Verileriniz nasıl saklanır",
-      "desc": "DingPOS tüm işletme verilerinizi cihazınızda yerel olarak saklar. Bulut yedeklemeyi kendiniz açmadığınız sürece bu veriler cihazınızdan çıkmaz. Uygulamada oluşturduğunuz veriler şunlardır:",
+      "desc": "DingPOS tüm işletme verilerinizi cihazınızda yerel olarak saklar. Bulut yedeklemeyi kendiniz açmadığınız veya bize bir destek raporu göndermediğiniz sürece bu veriler cihazınızdan çıkmaz. Uygulamada oluşturduğunuz veriler şunlardır:",
       "items": [
         "Mağaza ayarları (mağaza adı, para birimi, vergi oranı, logo)",
         "Ürün verileri (ad, fiyat, maliyet, barkod, fotoğraf, kategori, varyantlar, stok)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Toplamadığımız veriler",
-      "desc": "DingPOS işletme içeriğinizin hiçbirini toplamaz, iletmez veya paylaşmaz. Özellikle şunları yapmayız:",
+      "desc": "İşletme içeriğiniz cihazınızda kalır. Göndermeyi seçtiğiniz bir destek raporu dışında (aşağıya bakın) şunları yapmayız:",
       "items": [
         "Ürün, sipariş, müşteri veya üyelik verilerinizi toplamayız",
         "Herhangi bir ödeme sürecine dahil olmayız ve kredi kartı bilgilerine erişmeyiz (uygulama gerçek kart ödemelerini işlemez)",
-        "Konumunuzu izlemeyiz",
-        "İşletme verilerinizi üçüncü taraflarla paylaşmayız"
+        "Konumunuzu izlemeyiz; sizi diğer şirketlerin uygulamaları ve web siteleri genelinde de izlemeyiz",
+        "Verilerinizi satmayız; işletme verilerinizi herhangi bir üçüncü tarafla paylaşmayız"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Abonelik ve satın alımlar",
-      "desc": "DingPOS, Apple App Store Uygulama İçi Satın Alma (IAP) üzerinden abonelik sunar ve abonelik durumunu yönetmek için RevenueCat kullanır. Ödemeyi Apple alır; kredi kartı veya ödeme bilgilerinizi hiçbir zaman almayız. RevenueCat yalnızca abonelik durumuna bağlı anonim bir tanımlayıcı alır ve bunu aboneliğinizin etkin olup olmadığını doğrulamak için kullanır."
+      "desc": "DingPOS, Apple App Store Uygulama İçi Satın Alma üzerinden abonelikler sunar. Ödemeyi Apple alır; kredi kartı veya ödeme bilgilerinizi hiçbir zaman almayız. Kendi sunucumuz, hangi planın etkin olduğuna karar vermek için Apple'ın imzaladığı işlemi doğrular. Bunun için uygulama, bu kurulumu sunucumuza; uygulamanın oluşturduğu rastgele bir cihaz tanımlayıcısıyla (Apple'ın reklam tanımlayıcısıyla değil), uygulama sürümü, dil, App Store ülkesi ve mağaza adınızla birlikte kaydeder ve az sayıda abonelik olayı gönderir (örneğin planları görüntüleme veya satın alma başlatma)."
     },
     "analytics": {
       "title": "Analiz ve çökme raporları",
-      "desc": "DingPOS, uygulamanın nasıl kullanıldığını anlamamıza ve çökmeleri tespit edip düzeltmemize yardımcı olması için Google tarafından sağlanan Firebase Analytics ve Firebase Crashlytics'i kullanır. Bu hizmetler şunları toplar:",
+      "desc": "DingPOS, uygulamanın nasıl kullanıldığını anlamak ve çökmeleri tespit edip düzeltmek için Google tarafından sağlanan Firebase Analytics ve Firebase Crashlytics'i kullanır. Bunlar, bir çökmenin ve öncesindeki adımların birlikte okunabilmesi için uygulamanın rastgele cihaz tanımlayıcısıyla ilişkilendirilir. Şunları toplarlar:",
       "items": [
-        "Anonim kullanım verileri (örn. hangi özelliklerin kullanıldığı, oturum süresi)",
+        "Kullanım verileri (örn. hangi özelliklerin kullanıldığı, oturum süresi)",
         "Çökme raporları (örn. yığın izleri, cihaz modeli, işletim sistemi sürümü)",
         "Cihaz bilgileri (örn. cihaz türü, işletim sistemi, uygulama sürümü)",
-        "Rastgele oluşturulmuş bir örnek tanımlayıcısı (kimliğinizle ilişkilendirilmez)"
+        "Genel konum (şehir düzeyinde); Google bunu ağ adresinden çıkarır"
       ],
-      "note": "Bu veriler anonimdir ve işletme içeriğinizin hiçbirini (ürünler, siparişler, müşteriler veya üyeler gibi) içermez. Google'ın bu verileri nasıl işlediği hakkında daha fazla bilgi için Google Gizlilik Politikası'na bakın: https://policies.google.com/privacy."
+      "note": "Bunların hiçbiri işletme içeriğinizi (ürünler, siparişler, müşteriler veya üyeler) içermez. Google'ın bu verileri nasıl işlediğini öğrenmek için Google Gizlilik Politikası'na bakın: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Apple Ads ilişkilendirmesi",
+      "desc": "DingPOS'u App Store'da bir Apple Ads reklamına dokunduktan sonra yüklediyseniz, uygulama Apple'ın AdServices çerçevesine, yüklemeye hangi reklam kampanyasının yol açtığını bir kez sorar. Apple; sayısal kampanya, reklam grubu ve anahtar kelime tanımlayıcılarını, ayrıca ülkeyi ve yükleme türünü yanıtlar; AdServices yalnızca Apple'ın kendi verilerini kullanır ve sizi veya cihazınızı tanımlamaz. Bu tanımlayıcıları, hangi reklamların ardından abone olan mağazalar geldiğini öğrenmek için uygulamanın rastgele cihaz tanımlayıcısıyla birlikte sunucumuzda ve Firebase Analytics'te (yukarıya bakın) saklarız. Bu işlem Apple'ın reklam tanımlayıcısını (IDFA) kullanmaz ve izleme izni istemez; tanımlayıcılar asla satılmaz, reklam verenlere verilmez ve sizi diğer şirketlerin uygulamaları veya web siteleri genelinde izlemek için asla kullanılmaz. Bir reklamdan gelmediyseniz yalnızca bu sonucu saklarız, reklam tanımlayıcısı saklamayız."
+    },
+    "support": {
+      "title": "Destek raporları (yalnızca siz gönderdiğinizde)",
+      "desc": "Ayarlar'dan bir destek raporu göndermeyi seçtiğinizde rapor şunları içerir: yazdıklarınız, eklediğiniz fotoğraf veya videolar (konum ve diğer meta veriler kaldırılmış olarak), temel tanılama bilgileri (cihaz modeli, işletim sistemi ve uygulama sürümü, dil, saat dilimi, ağ durumu, boş depolama alanı, veritabanı boyutu, abonelik durumu, mağaza adı) ve sorunu yeniden üretebilmemiz için mağaza veritabanınızın bir kopyası. Bu kopya ürünlerinizi, siparişlerinizi ve müşteri kayıtlarınızı içerir; müşteri kayıtlarında adlar, telefon numaraları, e-posta adresleri ve doğum günleri (ay ve gün) yer alır. Yalnızca raporunuza yanıt vermek için kullanılır."
     },
     "children": {
       "title": "Çocukların gizliliği",

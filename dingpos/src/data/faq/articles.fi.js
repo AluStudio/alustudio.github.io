@@ -157,7 +157,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ei. DingPOSissa ei ole käyttäjätilejä – lataa sovellus ja aloita myynti. Tuotteesi, tilauksesi ja asiakastietosi pysyvät iPadillasi, eikä niitä koskaan lähetetä palvelimillemme."
+        "text": "Ei. DingPOSissa ei ole käyttäjätilejä – lataa sovellus ja aloita myynti. Tuotteesi, tilauksesi ja asiakastietosi pysyvät iPadillasi. Ne päätyvät meille vain, jos lähetät Asetuksista ongelmailmoituksen, jonka mukana lähtee kopio myymäläsi tiedoista, jotta voimme toistaa ongelman."
       },
       {
         "type": "p",

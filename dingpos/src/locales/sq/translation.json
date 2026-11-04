@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Politika e privatësisë",
     "meta_description": "Si i trajton DingPOS, aplikacioni POS për iPad që punon pa internet, të dhënat e tua: regjistrat e biznesit mbeten në pajisjen tënde, ndërsa kopjet rezervë opsionale shkojnë vetëm në llogarinë tënde cloud.",
-    "effective_date": "Data e hyrjes në fuqi: 1 korrik 2026",
+    "effective_date": "Data e hyrjes në fuqi: 4 nëntor 2026",
     "intro": "ALU Studio („ne“) ka zhvilluar DingPOS („aplikacioni“). DingPOS është një arkë shitjeje e ndërtuar me privatësinë në qendër — të dhënat e biznesit tënd janë të tuat. Kjo Politikë e privatësisë shpjegon si i trajtojmë informacionet e tua kur përdor aplikacionin.",
     "local_storage": {
       "title": "Si ruhen të dhënat e tua",
-      "desc": "DingPOS i ruan të gjitha të dhënat e biznesit tënd lokalisht në pajisjen tënde. Përveç nëse e aktivizon vetë kopjen rezervë në cloud, këto të dhëna nuk e lënë kurrë pajisjen tënde. Të dhënat që krijon në aplikacion përfshijnë:",
+      "desc": "DingPOS i ruan të gjitha të dhënat e biznesit tënd lokalisht në pajisjen tënde. Përveç nëse e aktivizon kopjen rezervë në cloud ose na dërgon një raport mbështetjeje, këto të dhëna nuk e lënë kurrë pajisjen tënde. Të dhënat që krijon në aplikacion përfshijnë:",
       "items": [
         "Cilësimet e dyqanit (emri i dyqanit, monedha, norma e taksës, logoja)",
         "Të dhënat e produkteve (emri, çmimi, kostoja, barkodi, fotoja, kategoria, variantet, stoku)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Çfarë nuk mbledhim",
-      "desc": "DingPOS nuk mbledh, nuk transmeton dhe nuk ndan asnjë nga përmbajtjet e biznesit tënd. Konkretisht, ne nuk:",
+      "desc": "Përmbajtja e biznesit tënd qëndron në pajisjen tënde. Me përjashtim të një raporti mbështetjeje që zgjedh ta dërgosh (shih më poshtë), ne nuk:",
       "items": [
         "Mbledhim të dhënat e produkteve, porosive, klientëve ose anëtarësimit tënd",
         "Prekim asnjë proces pagese ose informacion të kartës së kreditit (aplikacioni nuk përpunon pagesa reale me kartë)",
-        "Gjurmojmë vendndodhjen tënde",
-        "Ndajmë të dhënat e biznesit tënd me asnjë palë të tretë"
+        "Gjurmojmë vendndodhjen tënde, ose të gjurmojmë ty nëpër aplikacionet dhe faqet e internetit të kompanive të tjera",
+        "Shesim të dhënat e tua, ose ndajmë të dhënat e biznesit tënd me asnjë palë të tretë"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Abonimi dhe blerjet",
-      "desc": "DingPOS ofron një abonim përmes blerjes brenda aplikacionit (IAP) të Apple App Store, duke përdorur RevenueCat për të menaxhuar statusin e abonimit. Pagesa trajtohet nga Apple; ne nuk marrim kurrë kartën tënde të kreditit ose detaje pagese. RevenueCat merr vetëm një identifikues anonim të lidhur me statusin e abonimit, që përdoret për të verifikuar nëse abonimi yt është aktiv."
+      "desc": "DingPOS ofron abonime përmes blerjes brenda aplikacionit të Apple App Store. Pagesa trajtohet nga Apple; ne nuk marrim kurrë kartën tënde të kreditit ose detaje pagese. Serveri ynë verifikon transaksionin e nënshkruar të Apple për të vendosur cili plan është aktiv. Për ta bërë këtë, aplikacioni e regjistron këtë instalim në serverin tonë me një identifikues të rastësishëm pajisjeje të gjeneruar nga aplikacioni (jo identifikuesin e reklamave të Apple), së bashku me versionin e aplikacionit, gjuhën, shtetin e App Store dhe emrin e dyqanit tënd, dhe dërgon një grup të vogël ngjarjesh abonimi (për shembull, shikimin e planeve ose nisjen e një blerjeje)."
     },
     "analytics": {
       "title": "Analitika dhe raportimi i prishjeve",
-      "desc": "DingPOS përdor Firebase Analytics dhe Firebase Crashlytics, të ofruara nga Google, për të na ndihmuar të kuptojmë si përdoret aplikacioni dhe të identifikojmë e të rregullojmë prishjet. Këto shërbime mbledhin:",
+      "desc": "DingPOS përdor Firebase Analytics dhe Firebase Crashlytics, të ofruara nga Google, për të kuptuar si përdoret aplikacioni dhe për të identifikuar e rregulluar prishjet. Ato lidhen me identifikuesin e rastësishëm të pajisjes së aplikacionit, në mënyrë që një prishje dhe hapat para saj të mund të lexohen së bashku. Ato mbledhin:",
       "items": [
-        "Të dhëna anonime përdorimi (p.sh. cilat veçori përdoren, kohëzgjatja e sesionit)",
+        "Të dhëna përdorimi (p.sh. cilat veçori përdoren, kohëzgjatja e sesionit)",
         "Raporte prishjesh (p.sh. gjurmët e stivës, modeli i pajisjes, versioni i sistemit)",
         "Informacion për pajisjen (p.sh. lloji i pajisjes, sistemi, versioni i aplikacionit)",
-        "Një identifikues instance i gjeneruar rastësisht (i palidhur me identitetin tënd)"
+        "Vendndodhje e përgjithshme (në nivel qyteti), të cilën Google e nxjerr nga adresa e rrjetit"
       ],
-      "note": "Këto të dhëna janë anonime dhe nuk përfshijnë asnjë nga përmbajtjet e biznesit tënd (si produkte, porosi, klientë ose anëtarë). Për të mësuar më shumë se si i trajton Google këto të dhëna, shih Politikën e privatësisë së Google: https://policies.google.com/privacy."
+      "note": "Asgjë nga këto nuk përfshin përmbajtjen e biznesit tënd (produkte, porosi, klientë ose anëtarë). Për të mësuar se si i trajton Google këto të dhëna, shih Politikën e privatësisë së Google: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Atribuimi i Apple Ads",
+      "desc": "Nëse e ke instaluar DingPOS pasi ke prekur një reklamë të Apple Ads në App Store, aplikacioni i kërkon një herë kornizës AdServices të Apple se cila fushatë reklamuese çoi te instalimi. Apple përgjigjet me identifikues numerikë të fushatës, të grupit të reklamave dhe të fjalës kyçe, plus shtetin dhe llojin e instalimit; AdServices përdor vetëm të dhënat e vetë Apple dhe nuk identifikon ty ose pajisjen tënde. Këta identifikues i ruajmë së bashku me identifikuesin e rastësishëm të pajisjes së aplikacionit, në serverin tonë dhe në Firebase Analytics (shih më sipër), për të mësuar cilat reklama sjellin dyqane që më pas abonohen. Kjo nuk përdor identifikuesin e reklamave të Apple (IDFA) dhe nuk kërkon leje për gjurmim; identifikuesit nuk shiten kurrë, nuk u jepen kurrë reklamuesve dhe nuk përdoren kurrë për të të gjurmuar nëpër aplikacionet ose faqet e internetit të kompanive të tjera. Nëse nuk ke ardhur nga një reklamë, ruajmë vetëm atë rezultat, pa identifikues reklamash."
+    },
+    "support": {
+      "title": "Raportet e mbështetjes (vetëm kur dërgon një)",
+      "desc": "Kur zgjedh të dërgosh një raport mbështetjeje nga Cilësimet, ai përfshin atë që shkruan, çdo foto ose video që bashkëngjit (me vendndodhjen dhe metadata të tjera të hequra), diagnostikime bazë (modeli i pajisjes, versioni i sistemit operativ dhe i aplikacionit, gjuha, zona orare, statusi i rrjetit, hapësira e lirë, madhësia e bazës së të dhënave, statusi i abonimit, emri i dyqanit) dhe një kopje të bazës së të dhënave të dyqanit tënd, që të mund ta riprodhojmë problemin. Kjo kopje përmban produktet, porositë dhe të dhënat e klientëve të tu, përfshirë emrat, numrat e telefonit, emailet dhe ditëlindjet (muaji dhe dita). Përdoret vetëm për t'iu përgjigjur raportit tënd të mbështetjes."
     },
     "children": {
       "title": "Privatësia e fëmijëve",

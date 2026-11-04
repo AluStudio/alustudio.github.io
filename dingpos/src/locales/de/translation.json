@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Datenschutzerklärung",
     "meta_description": "So geht DingPOS, die auch offline nutzbare Kassen-App für das iPad, mit Ihren Daten um: Geschäftsdaten bleiben auf Ihrem Gerät, optionale Backups landen nur in Ihrem eigenen Cloud-Konto.",
-    "effective_date": "Gültig ab: 1. Juli 2026",
+    "effective_date": "Gültig ab: 4. November 2026",
     "intro": "ALU Studio („wir“) hat DingPOS („die App“) entwickelt. DingPOS ist eine Kassen-App, bei der der Datenschutz im Mittelpunkt steht – Ihre Geschäftsdaten gehören Ihnen. Diese Datenschutzerklärung beschreibt, wie wir mit Ihren Informationen umgehen, wenn Sie die App nutzen.",
     "local_storage": {
       "title": "So werden Ihre Daten gespeichert",
-      "desc": "DingPOS speichert alle Ihre Geschäftsdaten lokal auf Ihrem Gerät. Solange Sie das Cloud-Backup nicht aktiv einschalten, verlassen diese Daten Ihr Gerät nie. Zu den Daten, die Sie in der App anlegen, gehören:",
+      "desc": "DingPOS speichert alle Ihre Geschäftsdaten lokal auf Ihrem Gerät. Solange Sie weder das Cloud-Backup einschalten noch uns eine Supportmeldung senden, verlassen diese Daten Ihr Gerät nie. Zu den Daten, die Sie in der App anlegen, gehören:",
       "items": [
         "Ladeneinstellungen (Ladenname, Währung, Steuersatz, Logo)",
         "Artikeldaten (Name, Preis, Einkaufspreis, Barcode, Foto, Kategorie, Varianten, Bestand)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Was wir nicht erfassen",
-      "desc": "DingPOS erfasst, überträgt oder teilt keine Ihrer Geschäftsdaten. Im Einzelnen gilt: Wir",
+      "desc": "Ihre Geschäftsinhalte bleiben auf Ihrem Gerät. Abgesehen von einer Supportmeldung, deren Versand Sie selbst veranlassen (siehe unten), gilt: Wir",
       "items": [
         "erfassen keine Ihrer Artikel-, Bestell-, Kunden- oder Mitgliedsdaten",
         "sind weder an Zahlungsvorgängen beteiligt noch verarbeiten wir Kreditkartendaten (die App wickelt keine echten Kartenzahlungen ab)",
-        "verfolgen Ihren Standort nicht",
-        "geben Ihre Geschäftsdaten an keine Dritten weiter"
+        "verfolgen weder Ihren Standort noch Sie über die Apps und Websites anderer Unternehmen hinweg",
+        "verkaufen Ihre Daten nicht und geben Ihre Geschäftsdaten an keine Dritten weiter"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Abo & Käufe",
-      "desc": "DingPOS bietet ein Abonnement über den In-App-Kauf (IAP) im Apple App Store an und verwendet RevenueCat, um den Abostatus zu verwalten. Die Zahlung wickelt Apple ab; Ihre Kreditkarten- oder Zahlungsdaten erhalten wir nie. RevenueCat erhält nur eine anonyme Kennung, die mit dem Abostatus verknüpft ist und dazu dient, zu prüfen, ob Ihr Abo aktiv ist."
+      "desc": "DingPOS bietet Abonnements über den In-App-Kauf im Apple App Store an. Die Zahlung wickelt Apple ab; Ihre Kreditkarten- oder Zahlungsdaten erhalten wir nie. Unser eigener Server prüft die von Apple signierte Transaktion, um festzustellen, welcher Tarif aktiv ist. Dazu registriert die App diese Installation bei unserem Server, und zwar mit einer von der App erzeugten zufälligen Gerätekennung (nicht der Werbekennung von Apple), zusammen mit App-Version, Sprache, App-Store-Land und Ihrem Ladennamen; außerdem sendet sie eine kleine Menge an Abo-Ereignissen (zum Beispiel das Ansehen der Tarife oder den Beginn eines Kaufs)."
     },
     "analytics": {
       "title": "Analyse & Absturzberichte",
-      "desc": "DingPOS nutzt Firebase Analytics und Firebase Crashlytics von Google, damit wir nachvollziehen können, wie die App verwendet wird, und Abstürze erkennen und beheben können. Diese Dienste erfassen:",
+      "desc": "DingPOS nutzt Firebase Analytics und Firebase Crashlytics von Google, um nachzuvollziehen, wie die App verwendet wird, und um Abstürze zu finden und zu beheben. Beide sind mit der zufälligen Gerätekennung der App verknüpft, damit ein Absturz und die Schritte davor zusammen gelesen werden können. Sie erfassen:",
       "items": [
-        "Anonyme Nutzungsdaten (z. B. welche Funktionen genutzt werden, Sitzungsdauer)",
+        "Nutzungsdaten (z. B. welche Funktionen genutzt werden, Sitzungsdauer)",
         "Absturzberichte (z. B. Stack-Traces, Gerätemodell, Betriebssystemversion)",
         "Geräteinformationen (z. B. Gerätetyp, Betriebssystem, App-Version)",
-        "Eine zufällig erzeugte Instanzkennung (nicht mit Ihrer Identität verknüpft)"
+        "Allgemeiner Standort (auf Stadtebene), den Google aus der Netzwerkadresse ableitet"
       ],
-      "note": "Diese Daten sind anonym und enthalten keine Ihrer Geschäftsinhalte (wie Artikel, Bestellungen, Kunden oder Mitglieder). Mehr dazu, wie Google mit diesen Daten umgeht, finden Sie in der Datenschutzerklärung von Google: https://policies.google.com/privacy."
+      "note": "Nichts davon enthält Ihre Geschäftsinhalte (Artikel, Bestellungen, Kunden oder Mitglieder). Wie Google mit diesen Daten umgeht, erfahren Sie in der Datenschutzerklärung von Google: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Zuordnung von Apple Ads",
+      "desc": "Wenn Sie DingPOS installiert haben, nachdem Sie im App Store auf eine Anzeige von Apple Ads getippt haben, fragt die App einmalig das AdServices-Framework von Apple, welche Anzeigenkampagne zur Installation geführt hat. Apple antwortet mit numerischen Kennungen für Kampagne, Anzeigengruppe und Keyword sowie mit dem Land und der Art der Installation; AdServices verwendet ausschließlich Daten von Apple selbst und identifiziert weder Sie noch Ihr Gerät. Wir speichern diese Kennungen zusammen mit der zufälligen Gerätekennung der App auf unserem Server und in Firebase Analytics (siehe oben), um zu erfahren, welche Anzeigen Läden bringen, die anschließend ein Abo abschließen. Dabei wird nicht die Werbekennung von Apple (IDFA) verwendet und nicht um eine Tracking-Erlaubnis gebeten; die Kennungen werden nie verkauft, nie an Werbetreibende weitergegeben und nie dazu verwendet, Sie über die Apps oder Websites anderer Unternehmen hinweg zu verfolgen. Wenn Sie nicht über eine Anzeige gekommen sind, speichern wir nur dieses Ergebnis, ohne Anzeigenkennungen."
+    },
+    "support": {
+      "title": "Supportmeldungen (nur wenn Sie eine senden)",
+      "desc": "Wenn Sie sich entscheiden, in den Einstellungen eine Supportmeldung zu senden, enthält sie Ihren Text, alle Fotos oder Videos, die Sie anhängen (ohne Standort und andere Metadaten), grundlegende Diagnosedaten (Gerätemodell, Betriebssystem- und App-Version, Sprache, Zeitzone, Netzwerkstatus, freier Speicherplatz, Datenbankgröße, Abostatus, Ladenname) sowie eine Kopie Ihrer Ladendatenbank, damit wir das Problem nachvollziehen können. Diese Kopie enthält Ihre Artikel, Bestellungen und Kundendatensätze, darunter Namen, Telefonnummern, E-Mail-Adressen und Geburtstage (Monat und Tag). Sie wird ausschließlich verwendet, um Ihre Supportmeldung zu beantworten."
     },
     "children": {
       "title": "Datenschutz für Kinder",

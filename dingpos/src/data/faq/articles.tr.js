@@ -157,7 +157,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Hayır. DingPOS'ta hesap sistemi yoktur — indirin ve satışa başlayın. Ürünleriniz, siparişleriniz ve müşteri verileriniz iPad'inizde kalır, sunucularımıza asla yüklenmez."
+        "text": "Hayır. DingPOS'ta hesap sistemi yoktur — indirin ve satışa başlayın. Ürünleriniz, siparişleriniz ve müşteri verileriniz iPad'inizde kalır. Bize yalnızca Ayarlar'dan bir destek raporu gönderirseniz ulaşırlar; bu rapor, sorunu yeniden üretebilmemiz için mağaza verilerinizin bir kopyasını ekler."
       },
       {
         "type": "p",

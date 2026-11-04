@@ -154,7 +154,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Không. DingPOS không có hệ thống tài khoản — tải về là bán hàng được ngay. Sản phẩm, đơn hàng và dữ liệu khách hàng của bạn đều nằm trên iPad và không bao giờ được tải lên máy chủ của chúng tôi."
+        "text": "Không. DingPOS không có hệ thống tài khoản — tải về là bán hàng được ngay. Sản phẩm, đơn hàng và dữ liệu khách hàng của bạn đều nằm trên iPad. Chúng chỉ đến được chỗ chúng tôi khi bạn gửi báo cáo hỗ trợ từ Cài đặt, báo cáo này đính kèm một bản sao dữ liệu cửa hàng của bạn để chúng tôi tái hiện sự cố."
       },
       {
         "type": "p",

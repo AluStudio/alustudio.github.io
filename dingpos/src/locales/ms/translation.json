@@ -411,11 +411,11 @@
   "privacy": {
     "title": "Dasar Privasi",
     "meta_description": "Cara DingPOS, aplikasi sistem point of sale (POS) untuk iPad yang berfungsi tanpa internet, mengendalikan data anda: rekod perniagaan kekal pada peranti anda, dan sandaran pilihan hanya dihantar ke akaun awan anda sendiri.",
-    "effective_date": "Tarikh berkuat kuasa: 1 Julai 2026",
+    "effective_date": "Tarikh berkuat kuasa: 4 November 2026",
     "intro": "ALU Studio (\"kami\") membangunkan DingPOS (\"aplikasi\"). DingPOS ialah aplikasi sistem point of sale (POS) yang dibina dengan privasi sebagai teras — data perniagaan anda milik anda. Dasar Privasi ini menerangkan cara kami mengendalikan maklumat anda apabila anda menggunakan aplikasi.",
     "local_storage": {
       "title": "Cara data anda disimpan",
-      "desc": "DingPOS menyimpan semua data perniagaan anda secara setempat pada peranti anda. Selagi anda tidak mengaktifkan sandaran awan, data ini tidak pernah meninggalkan peranti anda. Data yang anda cipta dalam aplikasi termasuk:",
+      "desc": "DingPOS menyimpan semua data perniagaan anda secara setempat pada peranti anda. Melainkan anda mengaktifkan sandaran awan atau menghantar laporan sokongan kepada kami, data ini tidak pernah meninggalkan peranti anda. Data yang anda cipta dalam aplikasi termasuk:",
       "items": [
         "Tetapan kedai (nama kedai, mata wang, kadar cukai, logo)",
         "Data produk (nama, harga, kos, kod bar, foto, kategori, varian, stok)",
@@ -430,12 +430,12 @@
     },
     "no_collection": {
       "title": "Apa yang tidak kami kumpul",
-      "desc": "DingPOS tidak mengumpul, menghantar atau berkongsi sebarang kandungan perniagaan anda. Secara khusus, kami tidak:",
+      "desc": "Kandungan perniagaan anda kekal pada peranti anda. Selain laporan sokongan yang anda pilih untuk hantar (lihat di bawah), kami tidak:",
       "items": [
         "Mengumpul data produk, pesanan, pelanggan atau keahlian anda",
         "Terlibat dalam sebarang proses pembayaran atau mengendalikan maklumat kad kredit (aplikasi tidak memproses pembayaran kad sebenar)",
-        "Menjejak lokasi anda",
-        "Berkongsi data perniagaan anda dengan mana-mana pihak ketiga"
+        "Menjejak lokasi anda, atau menjejak anda merentas aplikasi dan laman web syarikat lain",
+        "Menjual data anda, atau berkongsi data perniagaan anda dengan mana-mana pihak ketiga"
       ]
     },
     "camera": {
@@ -444,18 +444,26 @@
     },
     "subscription": {
       "title": "Langganan & pembelian",
-      "desc": "DingPOS menawarkan langganan melalui Pembelian Dalam Apl (IAP) Apple App Store, dengan RevenueCat digunakan untuk mengurus status langganan. Pembayaran dikendalikan oleh Apple; kami tidak pernah menerima kad kredit atau butiran pembayaran anda. RevenueCat hanya menerima pengecam tanpa nama yang dikaitkan dengan status langganan, digunakan untuk mengesahkan sama ada langganan anda aktif."
+      "desc": "DingPOS menawarkan langganan melalui Pembelian Dalam Apl Apple App Store. Pembayaran dikendalikan oleh Apple; kami tidak pernah menerima kad kredit atau butiran pembayaran anda. Pelayan kami sendiri mengesahkan transaksi yang ditandatangani oleh Apple untuk menentukan pelan yang aktif. Untuk berbuat demikian, aplikasi mendaftarkan pemasangan ini pada pelayan kami menggunakan pengecam peranti rawak yang dijana oleh aplikasi (bukan pengecam pengiklanan Apple), bersama versi aplikasi, bahasa, negara App Store dan nama kedai anda, dan ia menghantar satu set kecil peristiwa langganan (contohnya, melihat pelan atau memulakan pembelian)."
     },
     "analytics": {
       "title": "Analitik & laporan ranap",
-      "desc": "DingPOS menggunakan Firebase Analytics dan Firebase Crashlytics, yang disediakan oleh Google, untuk membantu kami memahami cara aplikasi digunakan serta mengenal pasti dan membetulkan ranap. Perkhidmatan ini mengumpul:",
+      "desc": "DingPOS menggunakan Firebase Analytics dan Firebase Crashlytics, yang disediakan oleh Google, untuk memahami cara aplikasi digunakan serta mengenal pasti dan membetulkan ranap. Perkhidmatan ini dipautkan kepada pengecam peranti rawak aplikasi supaya ranap dan langkah sebelumnya boleh dibaca bersama. Perkhidmatan ini mengumpul:",
       "items": [
-        "Data penggunaan tanpa nama (cth. ciri yang digunakan, tempoh sesi)",
+        "Data penggunaan (cth. ciri yang digunakan, tempoh sesi)",
         "Laporan ranap (cth. jejak tindanan, model peranti, versi OS)",
         "Maklumat peranti (cth. jenis peranti, OS, versi aplikasi)",
-        "Pengecam instans yang dijana secara rawak (tidak dikaitkan dengan identiti anda)"
+        "Lokasi umum (peringkat bandar), yang diperoleh Google daripada alamat rangkaian"
       ],
-      "note": "Data ini tanpa nama dan tidak termasuk sebarang kandungan perniagaan anda (seperti produk, pesanan, pelanggan atau ahli). Untuk mengetahui lebih lanjut tentang cara Google mengendalikan data ini, lihat Dasar Privasi Google: https://policies.google.com/privacy."
+      "note": "Semua ini tidak termasuk kandungan perniagaan anda (produk, pesanan, pelanggan atau ahli). Untuk mengetahui cara Google mengendalikan data ini, lihat Dasar Privasi Google: https://policies.google.com/privacy."
+    },
+    "apple_ads": {
+      "title": "Atribusi Apple Ads",
+      "desc": "Jika anda memasang DingPOS selepas mengetik iklan Apple Ads di App Store, aplikasi bertanya kepada rangka kerja AdServices Apple, sekali sahaja, kempen iklan mana yang membawa kepada pemasangan itu. Apple menjawab dengan pengecam berangka bagi kempen, kumpulan iklan dan kata kunci, serta negara dan jenis pemasangan; AdServices hanya menggunakan data Apple sendiri dan tidak mengenal pasti anda atau peranti anda. Kami menyimpan pengecam ini bersama pengecam peranti rawak aplikasi, pada pelayan kami dan dalam Firebase Analytics (lihat di atas), untuk mengetahui iklan mana yang membawa kedai yang kemudian melanggan. Ini tidak menggunakan pengecam pengiklanan Apple (IDFA) dan tidak meminta kebenaran penjejakan; pengecam ini tidak pernah dijual, tidak pernah diberikan kepada pengiklan dan tidak pernah digunakan untuk menjejak anda merentas aplikasi atau laman web syarikat lain. Jika anda tidak datang daripada iklan, kami hanya menyimpan keputusan itu, tanpa pengecam iklan."
+    },
+    "support": {
+      "title": "Laporan sokongan (hanya apabila anda menghantarnya)",
+      "desc": "Apabila anda memilih untuk menghantar laporan sokongan daripada Tetapan, laporan itu merangkumi apa yang anda tulis, sebarang foto atau video yang anda lampirkan (dengan lokasi dan metadata lain dibuang), diagnostik asas (model peranti, versi OS dan aplikasi, bahasa, zon waktu, status rangkaian, ruang storan kosong, saiz pangkalan data, status langganan, nama kedai), dan salinan pangkalan data kedai anda supaya kami dapat menghasilkan semula masalah itu. Salinan itu mengandungi rekod produk, pesanan dan pelanggan anda, termasuk nama, nombor telefon, e-mel dan hari lahir (bulan dan hari). Ia digunakan hanya untuk menjawab laporan anda."
     },
     "children": {
       "title": "Privasi kanak-kanak",
