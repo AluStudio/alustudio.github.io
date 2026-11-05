@@ -273,10 +273,6 @@
           "name": "Gestão de produtos",
           "desc": "Variantes, códigos de barras, fotos, categorias e produtos de preço aberto"
         },
-        "import": {
-          "name": "Importação de dados",
-          "desc": "Importe produtos e vendas anteriores de outros sistemas via CSV"
-        },
         "inventory": {
           "name": "Controle de estoque",
           "desc": "O estoque baixa a cada venda; ajustes manuais ficam registrados no histórico de movimentações"
@@ -301,9 +297,13 @@
           "name": "Painel do negócio",
           "desc": "Receita, lucro, descontos, formas de pagamento e mais vendidos"
         },
+        "profit_loss": {
+          "name": "DRE mensal",
+          "desc": "Registre aluguel, folha de pagamento e outras despesas; veja o lucro líquido de cada mês"
+        },
         "payment_fees": {
-          "name": "Estimativa de taxas de pagamento",
-          "desc": "Defina a alíquota da taxa de cada forma de pagamento e veja as taxas e o líquido estimado a receber por forma"
+          "name": "Alíquotas da taxa de pagamento",
+          "desc": "Defina a alíquota da taxa de cada forma de pagamento para estimar as taxas e o líquido a receber"
         },
         "comparison": {
           "name": "Comparação de períodos",

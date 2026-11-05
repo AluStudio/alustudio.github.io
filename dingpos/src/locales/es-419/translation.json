@@ -273,10 +273,6 @@
           "name": "Gestión de productos",
           "desc": "Variantes, códigos de barras, fotos, categorías y productos de precio abierto"
         },
-        "import": {
-          "name": "Importación de datos",
-          "desc": "Importa productos y ventas pasadas desde otros sistemas mediante CSV"
-        },
         "inventory": {
           "name": "Control de inventario",
           "desc": "El stock se descuenta con cada venta; los ajustes manuales dejan un registro de movimientos"
@@ -301,9 +297,13 @@
           "name": "Panel del negocio",
           "desc": "Ingresos por ventas, utilidad, descuentos, mezcla de formas de pago y más vendidos"
         },
+        "profit_loss": {
+          "name": "Estado de resultados mensual",
+          "desc": "Registra la renta, la nómina y otros gastos; consulta la utilidad neta de cada mes"
+        },
         "payment_fees": {
-          "name": "Estimación de comisiones de pago",
-          "desc": "Define la tasa de comisión de cada método de pago y consulta las comisiones y el neto recibido por método"
+          "name": "Tasas de comisión de pago",
+          "desc": "Define la tasa de comisión de cada método de pago para estimar las comisiones y el neto estimado recibido"
         },
         "comparison": {
           "name": "Comparación de periodos",

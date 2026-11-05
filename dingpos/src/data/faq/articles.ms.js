@@ -429,7 +429,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Caj ialah anggaran berdasarkan kadar yang anda masukkan; penyata penyedia anda ialah jumlah sebenar. Mengedit kadar caj dan melihat caj pada Statistik memerlukan pelan Standard atau lebih tinggi. Pada Lite, medan itu dikunci, tetapi bayaran tetap merekodkan cajnya, jadi ia akan muncul selepas anda menaik taraf."
+        "text": "Caj ialah anggaran berdasarkan kadar yang anda masukkan; penyata penyedia anda ialah jumlah sebenar. Mengedit kadar caj memerlukan pelan Standard atau lebih tinggi, dan pada Lite medan itu dikunci. Sejak v3.4, setiap pelan melihat caj yang direkodkan pada Statistik dan dalam P&L, jadi kadar yang ditetapkan semasa percubaan terus menganggar caj pada Lite; versi lebih awal hanya menunjukkan caj pada Standard dan ke atas."
       }
     ],
     "related": [
@@ -562,6 +562,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Bagaimana cara menambah atau menukar pelanggan pada sesuatu jualan?",
+    "keywords": [
+      "pelanggan",
+      "ahli",
+      "lampirkan pelanggan",
+      "tukar pelanggan",
+      "pelanggan baharu",
+      "bayar"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Lampirkan pelanggan pada troli, atau pada skrin bayar: baris Pelanggan di bawah jumlah membuka senarai pelanggan apabila tiada sesiapa dilampirkan, dan menawarkan Tukar Pelanggan atau Buang Pelanggan apabila ada. Pelanggan yang dipilih semasa bayar ialah pelanggan troli, dan kekal pada troli jika anda membatalkan bayaran."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Menukar pelanggan mengira semula diskaun peringkat, tawaran hari jadi dan penebusan mata serta-merta. Tunai atau deposit yang sudah anda masukkan dikekalkan dan disemak terhadap jumlah baharu.",
+          "Tidak jumpa? Ketik Pelanggan Baharu di penjuru kanan atas senarai pelanggan, atau di tengah apabila tiada yang sepadan dengan carian anda. Apa yang anda cari mengisi borang — digit masuk ke telefon, selain itu masuk ke nama — dan pelanggan baharu itu dilampirkan pada jualan.",
+          "Mengetik Jualan akaun tanpa pelanggan yang dilampirkan membuka senarai pelanggan, dan Jualan akaun dipilih sebaik sahaja anda memilih seseorang.",
+          "Jika pelanggan baharu menyebabkan diskaun manual melepasi had diskaun operator, pengurus meluluskan dahulu; batalkan kelulusan dan pelanggan kekal seperti sebelumnya."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Pelanggan ialah sebahagian daripada pelan Standard; pada Lite baris itu berbunyi “Pelanggan — pelan Standard” dan membuka butiran naik taraf. Baris Pelanggan pada skrin bayar tiba dalam v3.4; versi lebih awal hanya melampirkan pelanggan dalam troli."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Saya tersilap semasa bayar — bagaimana hendak batalkan jualan?",
@@ -688,7 +726,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Boleh. Pilih pelanggan semasa bayar dan pilih Jualan akaun sebagai kaedah pembayaran. Hutang perlu ada pemiliknya, jadi Jualan akaun tidak tersedia tanpa pelanggan."
+        "text": "Boleh. Pilih Jualan akaun sebagai kaedah pembayaran, dan jualan itu direkodkan sebagai hutang pelanggan. Hutang perlu ada pemiliknya, jadi tanpa pelanggan yang dilampirkan, mengetik Jualan akaun membuka senarai pelanggan dahulu (sejak v3.4; versi lebih awal meminta anda melampirkan pelanggan dalam troli)."
       },
       {
         "type": "p",
@@ -709,7 +747,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -728,7 +766,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Boleh. Halaman butiran pesanan, pelanggan dan pesanan belian masing-masing mempunyai kad nota — ketik untuk mengedit, sehingga 500 aksara. Anda juga boleh menulisnya dalam borang semasa membuat pelanggan atau pesanan belian."
+        "text": "Boleh. Halaman butiran pesanan, pelanggan dan pesanan belian masing-masing mempunyai nota: ketik kad nota untuk mengedit, sehingga 500 aksara, atau baris tunggal “Tambah nota” selagi belum ada nota. Anda juga boleh menulisnya dalam borang semasa membuat pelanggan atau pesanan belian."
       },
       {
         "type": "p",
@@ -1034,11 +1072,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pilih Hari ini, Semalam, Minggu Ini, Bulan Ini, Tahun Ini atau Sepanjang Masa di bahagian atas Statistik, atau guna Tersuai untuk memilih tarikh mula dan tarikh akhir. Minggu Ini mengikut hari pertama minggu pada peranti; Bulan Ini dan Tahun Ini bermula pada hari ke-1 dan pada 1 Januari. Setiap pilihan menunjukkan tarikh yang diliputi, dan Sepanjang Masa bermula dari transaksi pertama kedai anda."
+        "text": "Pilih Hari Ini, Semalam, Minggu Ini, Bulan Ini, Tahun Ini atau Sepanjang Masa di bahagian atas Statistik, atau guna Tersuai untuk memilih tarikh mula dan tarikh akhir. Minggu Ini mengikut hari pertama minggu pada peranti; Bulan Ini dan Tahun Ini bermula pada hari ke-1 dan pada 1 Januari. Setiap pilihan menunjukkan tarikh yang diliputi, dan Sepanjang Masa bermula dari transaksi pertama kedai anda."
       },
       {
         "type": "p",
         "text": "Untuk satu hari, carta trend bertukar menjadi carta bar mengikut jam; tempoh yang lebih panjang menggunakan hari, minggu, bulan atau tahun bagi setiap bar bergantung pada panjangnya."
+      },
+      {
+        "type": "p",
+        "text": "Sejak v3.4, tekan dan tahan carta Trend Hasil Jualan atau Trend Untung Kasar untuk membacanya tempoh demi tempoh: sebuah kad menunjukkan tarikh serta hasil jualan atau untung tempoh itu, dan pada Trend Hasil Jualan dengan Perbandingan jualan dihidupkan, turut hasil jualan tempoh perbandingan dan perbezaannya. Seret ke kiri atau kanan untuk bergerak; leret ke atas atau ke bawah pada carta dan halaman bergulir seperti biasa."
       },
       {
         "type": "p",
@@ -1071,6 +1113,7 @@ export const articles = [
       "peta haba",
       "waktu sibuk",
       "produk jualan perlahan",
+      "pergerakan produk",
       "nilai stok",
       "kadar belian berulang",
       "mata"
@@ -1086,13 +1129,14 @@ export const articles = [
           "Perbandingan jualan: di sebelah kanan bar tempoh, bandingkan dengan tempoh yang sama tahun lepas atau dengan tempoh sebelumnya (satu hari dengan hari yang sama minggu lepas, minggu ini dengan minggu lepas, bulan ini dengan bulan lepas, tahun ini dengan tahun lepas, julat tersuai dengan bilangan hari yang sama sebelumnya). Jubin Tunai Diterima menunjukkan perbezaan dan kadar pertumbuhan, dan carta hasil jualan menambah garisan yang lebih pudar untuk tempoh perbandingan. Semasa sesuatu tempoh masih berjalan, tempoh perbandingan dipotong pada saat yang sama.",
           "Hari dalam minggu × jam: tukar pengepala Jualan dari semasa ke semasa kepada Hari dalam minggu × jam untuk peta haba tujuh hari, 24 jam — semakin gelap sesuatu sel, semakin banyak anda jual. Tukar antara hasil jualan dan pesanan; apabila perbandingan dihidupkan, lihat jam mana yang meningkat dan mana yang menurun.",
           "Produk Jualan Perlahan: tukar pengepala kad kedudukan kepada Produk Jualan Perlahan untuk menyenaraikan produk dari jualan paling sedikit hingga paling banyak, bersama stok semasa dan tarikh terakhir setiap satu dijual. Produk yang tidak pernah terjual ditandakan Tiada jualan. Secara lalai, hanya produk yang ada stok dipaparkan.",
+          "Pergerakan (sejak v3.4): tukar pengepala kad kedudukan kepada Pergerakan untuk 3 produk yang hasil jualannya naik paling banyak dan 3 yang turun paling banyak berbanding tempoh perbandingan, masing-masing bersama hasil jualan kedua-dua tempoh dan perbezaannya. Pilih tempoh di bawah Perbandingan jualan dahulu; dengan Tiada, atau pada Sepanjang Masa, kad itu akan memberitahu anda. Ketik kad atau Lihat Semua untuk senarai penuh Pergerakan produk, dipisahkan kepada Meningkat dan Menurun.",
           "Kadar belian berulang: baris terakhir pada jubin pelanggan ialah peratusan ahli yang membeli dalam tempoh itu dan telah membeli dua kali atau lebih secara keseluruhan.",
           "Sekarang: nilai inventori (stok semasa × kos semasa), setiap pergerakan stok dalam tempoh yang dipilih, dan mata yang dipegang pelanggan tetapi belum ditebus, bersama jumlah maksimum yang boleh ditolak. Ini ialah baki semasa; tempoh tidak mengubahnya."
         ]
       },
       {
         "type": "p",
-        "text": "Sejak v3.4, kelima-limanya terbuka pada setiap pelan, dan kekal terbuka selepas percubaan tamat. Versi lebih awal memaparkannya pada Pro sahaja, dengan kunci kecil pada pelan lain; jika anda masih melihat kunci itu, kemas kini DingPOS daripada App Store."
+        "text": "Sejak v3.4, semuanya terbuka pada setiap pelan, dan kekal terbuka selepas percubaan tamat. Versi lebih awal memaparkannya pada Pro sahaja, dengan kunci kecil pada pelan lain; jika anda masih melihat kunci itu, kemas kini DingPOS daripada App Store."
       },
       {
         "type": "p",
@@ -1145,6 +1189,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Bagaimana saya melihat berapa sebenarnya untung saya setiap bulan?",
+    "keywords": [
+      "untung rugi",
+      "p&l",
+      "untung bersih",
+      "untung bulanan",
+      "perbelanjaan",
+      "untung operasi",
+      "penyata pendapatan"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Buka P&L, di bawah Statistik dalam bar sisi. Ia menyenaraikan setiap bulan dari yang terbaharu ke yang terlama bersama untung bersihnya: bulan semasa ditandakan Sedang berjalan, dan pengepala setiap tahun menjumlahkan untung bersih bulan-bulannya yang telah selesai."
+      },
+      {
+        "type": "p",
+        "text": "Ketik sesuatu bulan untuk melihat bagaimana untung bersihnya dikira:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hasil jualan (tanpa cukai): hasil jualan selepas setiap diskaun, tolak cukai, dikira pada hari barang diserahkan.",
+          "Kos produk: kos barang yang terjual, daripada kos pada produk anda.",
+          "Caj pemprosesan (anggaran): caj yang dianggarkan daripada kadar kaedah pembayaran anda.",
+          "Deposit hangus: deposit yang anda simpan apabila prapesanan dibatalkan.",
+          "Perbelanjaan tetap dan Perbelanjaan satu kali: apa yang anda rekodkan untuk bulan itu — lihat “Bagaimana saya merekodkan sewa, gaji dan perbelanjaan lain?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Sehingga tiga carta menyusul: untung bersih bulan demi bulan, bahagian setiap perbelanjaan tetap, dan trend perbelanjaan tetap. Kedua-dua carta trend meliputi paling banyak 12 bulan sehingga bulan yang anda buka, dan hanya muncul apabila terdapat sekurang-kurangnya dua bulan untuk dibandingkan, dikira dari bulan jualan atau perbelanjaan pertama anda. Carta bahagian memerlukan perbelanjaan tetap pada bulan itu; selagi belum ada, bahagian itu menunjukkan Tambah perbelanjaan tetap. Pada Statistik, baris terakhir kad untung terus melompat ke P&L: untuk tempoh yang tepat satu bulan, ia menunjukkan untung bersih bulan itu, seperti “Untung bersih Oktober NT$12,300”; untuk tempoh lain, ia berbunyi Lihat untung rugi bulanan."
+      },
+      {
+        "type": "note",
+        "text": "Untung bersih ialah untung operasi sebelum cukai pendapatan, dikira daripada apa yang telah direkodkan DingPOS — bukan penyata cukai. Jika ada produk dijual tanpa kos, bulan itu tetap menunjukkan untung bersih, ditandakan “Tidak termasuk kos N produk”; ketik untuk melihat yang mana. P&L tersedia pada setiap pelan. Dengan akaun kakitangan, membukanya memerlukan kebenaran Untung rugi & perbelanjaan, yang Pengurus dan Staf perlu kelulusan baginya secara lalai, kerana ia menunjukkan kos produk dan gaji."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Bagaimana saya merekodkan sewa, gaji dan perbelanjaan lain?",
+    "keywords": [
+      "perbelanjaan",
+      "sewa",
+      "gaji",
+      "utiliti",
+      "perbelanjaan tetap",
+      "kos operasi",
+      "agihan perbelanjaan",
+      "perbelanjaan satu kali"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Dalam P&L, ketik Tambah perbelanjaan dan pilih perbelanjaan tetap atau satu kali. Perbelanjaan dikira dalam bulan ia berkaitan, bukan bulan anda membayarnya, dan untung bersih setiap bulan mengikutinya."
+      },
+      {
+        "type": "p",
+        "text": "Perbelanjaan tetap ialah perbelanjaan yang anda bayar setiap bulan, seperti sewa, utiliti atau gaji:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Masukkan nama, jumlah bulanan dan bulan ia bermula. Pilih bulan yang lebih awal untuk mengisi data lepas.",
+          "Apabila jumlah berubah, ketik Ubah Jumlah, pilih bulan, dan pilih Dari bulan ini (kenaikan sewa, misalnya) atau Bulan ini sahaja (bil elektrik bulan ini). Setiap perubahan disenaraikan, dan anda boleh membukanya untuk mengedit atau mengalih keluarnya.",
+          "Apabila anda berhenti membayarnya, tetapkan Bulan terakhir dikira: bulan itu dan bulan sebelumnya tetap dikira."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Perbelanjaan satu kali ialah perbelanjaan yang dibayar sekali sahaja:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Untuk pengubahsuaian, peralatan atau insurans yang dibayar lebih awal, hidupkan Agihkan sepanjang beberapa bulan dan pilih 2 hingga 120 bulan serta Bulan pertama dikira. Borang memaparkan pratonton jumlah yang dikira setiap bulan dan bulan yang diliputinya.",
+          "Tanpa pengagihan, anda masih boleh memilih Bulan dikira: bil Oktober yang tiba pada November boleh dikira dalam Oktober, dengan tarikh sebenarnya dikekalkan.",
+          "Jika agihan tamat awal (polisi insurans dibatalkan, misalnya), guna Tamatkan agihan awal: baki yang tinggal dikira dalam bulan yang anda pilih."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Masukkan jumlah yang benar-benar ditanggung kedai, tanpa cukai yang boleh dituntut semula. Stok yang akan anda jual dimasukkan melalui Pembelian, kerana ia dikira dalam kos produk apabila dijual; deposit keselamatan, prinsipal pinjaman dan wang yang diambil pemilik bukan perbelanjaan. Perubahan disimpan sekali gus apabila anda mengetik ✓, dan perubahan yang menjangkau bulan yang telah selesai akan memberitahu anda dahulu untung bersih bulan mana yang akan berubah."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1242,11 +1389,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pilih ahli semasa bayar dan mata terkumpul secara automatik; untuk menebus, masukkan mata yang ingin digunakan. Membatalkan jualan akan menarik balik mata yang diperoleh daripadanya dan memulangkan mata yang telah ditebus."
+        "text": "Lampirkan ahli pada jualan, dalam troli atau pada skrin bayar, dan mata terkumpul secara automatik; untuk menebus, masukkan mata yang ingin digunakan. Membatalkan jualan akan menarik balik mata yang diperoleh daripadanya dan memulangkan mata yang telah ditebus."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1467,55 +1615,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Bolehkah saya import produk dan jualan daripada POS lain atau hamparan?",
-    "keywords": [
-      "import",
-      "csv",
-      "excel",
-      "hamparan",
-      "migrasi",
-      "tukar POS",
-      "pukal",
-      "sejarah jualan"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Boleh. Pergi ke Tetapan → Import Data, pilih sama ada hendak import produk atau jualan, dan pilih fail CSV (Excel dan Google Sheets kedua-duanya boleh menyimpan sebagai CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Fail dibuka sebagai jadual. Nama lajur lazim dalam bahasa Inggeris dan Cina (Tradisional atau Ringkas) dipadankan secara automatik; ketik mana-mana pengepala lajur untuk menukar pemetaannya.",
-          "Ketik mana-mana sel untuk membetulkan nilainya terus di situ — tidak perlu mengedit fail dan bermula semula.",
-          "Ketik Sahkan untuk menyemak. Baris yang bermasalah ditandakan merah beserta sebabnya; import jualan boleh melangkau pesanan yang mempunyai ralat.",
-          "Selesaikan apa-apa yang memerlukan keputusan (nama produk bertindih, baris yang sepadan dengan beberapa pelanggan), semak ringkasan, kemudian ketik Mulakan import."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Jualan yang diimport diletakkan mengikut tarikh pesanan dan dikira semula mengikut mata wang dan mod cukai kedai anda. Ia tidak menjejaskan stok dan tidak memberi mata bonus sambutan.",
-          "Pelanggan dipadankan dengan pelanggan sedia ada melalui telefon atau e-mel; yang tidak dipadankan akan dicipta.",
-          "Pesanan yang diimport memaparkan tarikh Diimport pada dan nombor pesanan sumber, dan tidak boleh dibatalkan atau dipulangkan.",
-          "Baris yang mempunyai ralat boleh dieksport sebagai CSV dengan anotasi sebab — betulkan dan import semula. Baris bertindih dilangkau secara automatik."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Import data masih dalam beta. Setiap fail boleh memuatkan sehingga 50,000 baris atau 20 MB. Jalankan sandaran awan sebelum import; jika sesuatu tidak dapat diimport atau hasilnya kelihatan salah, beritahu kami melalui Laporkan masalah pada skrin import."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1660,13 +1759,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Tindakan (pelarasan stok manual, pelarasan mata manual, pengurusan produk, bayar melebihi had diskaun): satu kelulusan meliputi satu tindakan itu sahaja.",
-          "Paparan (kos & untung, Papan Pemuka, Tetapan, sandaran & pemulihan): kelulusan membuka kunci sehingga operator bertukar atau aplikasi dihantar ke latar belakang.",
+          "Paparan (kos & untung, Papan Pemuka, untung rugi & perbelanjaan, Tetapan, sandaran & pemulihan): kelulusan membuka kunci sehingga operator bertukar atau aplikasi dihantar ke latar belakang.",
           "Had diskaun terpakai pada diskaun manual dan disemak sekali semasa bayar; promosi automatik dan penebusan mata tidak dikira terhadapnya."
         ]
       },
       {
         "type": "p",
-        "text": "Lalai kilang: Pengurus dibenarkan segala-galanya kecuali sandaran & pemulihan, tanpa had diskaun; Staf perlu kelulusan untuk semuanya, dengan had 10%. Pemilik sentiasa dibenarkan dan tidak boleh diedit. Untuk mengubahnya, pergi ke Staf → Kebenaran peranan, ketik Edit, dan simpan sekali — ia berkuat kuasa kepada semua orang serta-merta."
+        "text": "Lalai kilang: Pengurus dibenarkan segala-galanya kecuali sandaran & pemulihan serta untung rugi & perbelanjaan, tanpa had diskaun; Staf perlu kelulusan untuk semuanya, dengan had 10%. Pemilik sentiasa dibenarkan dan tidak boleh diedit. Untuk mengubahnya, pergi ke Staf → Kebenaran peranan, ketik Edit, dan simpan sekali — ia berkuat kuasa kepada semua orang serta-merta."
       },
       {
         "type": "note",
@@ -1800,13 +1899,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan (termasuk laporan lanjutan sejak v3.4) dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
+        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan (termasuk laporan lanjutan dan P&L bulanan sejak v3.4) dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
       },
       {
         "type": "list",
         "items": [
           "Lite: untuk seorang yang menjalankan gerai dan memerlukan fungsi pembayaran serta produk.",
-          "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun, prapesanan dan anggaran caj pemprosesan.",
+          "Standard: menambah promosi, mata kesetiaan dan peringkat keahlian, penjejakan stok, pembelian, jualan akaun, prapesanan dan kadar caj pemprosesan.",
           "Pro: menambah akaun kakitangan dan kebenaran, kelulusan pengurus, log aktiviti dan rekod pemulihan — untuk kedai yang mempunyai kakitangan."
         ]
       },
@@ -2012,13 +2111,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Hadiah dan tambahan berbayar tidak pernah mengubah troli dengan sendirinya. Apabila syarat dipenuhi, sepanduk cadangan muncul pada skrin juruwang, dan troli hanya berubah apabila juruwang mengetik Terima — ini disengajakan, kerana hadiah melibatkan stok fizikal: seseorang perlu mengesahkan stok ada dan pelanggan mahukannya."
+        "text": "Hadiah dan tambahan berbayar tidak pernah mengubah troli dengan sendirinya. Apabila syarat dipenuhi, sepanduk cadangan muncul pada skrin juruwang, dan troli hanya berubah apabila juruwang mengetik Pilih hadiah atau Pilih tambahan — ini disengajakan, kerana hadiah melibatkan stok fizikal: seseorang perlu mengesahkan stok ada dan pelanggan mahukannya."
       },
       {
         "type": "list",
         "items": [
           "Selepas Tolak, cadangan yang sama tidak akan muncul semula untuk troli ini; troli baharu atau yang dikosongkan akan menawarkannya semula.",
-          "Jika cadangan baharu muncul sebelum proses bayar disahkan, cadangan itu mesti diterima atau ditolak sebelum pesanan boleh dihantar.",
+          "Sejak v3.4, tawaran yang masih belum diputuskan tidak menghalang proses bayar: satu baris kuning di bawah butang bayar, seperti “1 tawaran belum diputuskan tidak akan digunakan”, menyatakan berapa banyak yang ditinggalkan (ketik untuk melihat yang mana), dan pesanan diteruskan tanpanya. Untuk membuat proses bayar menunggu seperti dahulu, hidupkan Uruskan tawaran sebelum bayar dalam Tetapan → Pilihan Peranti; ia hanya terpakai pada iPad ini.",
           "Baris hadiah dan tambahan tidak boleh didiskaun lagi oleh promosi wang yang lain, dan tidak dikira ke arah ambang promosi lain."
         ]
       },
@@ -2209,7 +2308,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Belum ada laporan penyelesaian bulanan khusus, tetapi semua yang anda perlukan untuk membuat penyesuaian akaun sudah ada dalam app:"
+        "text": "Sejak v3.4, P&L menunjukkan untung bersih setiap bulan selepas kos produk, caj dan perbelanjaan — lihat “Bagaimana saya melihat berapa sebenarnya untung saya setiap bulan?” Belum ada laporan penyelesaian yang boleh dieksport atau dicetak, tetapi semua yang anda perlukan untuk membuat penyesuaian akaun sudah ada dalam app:"
       },
       {
         "type": "list",
@@ -2225,7 +2324,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

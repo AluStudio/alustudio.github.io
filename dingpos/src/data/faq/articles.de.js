@@ -432,7 +432,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Gebühren sind Schätzungen auf Basis des eingetragenen Satzes; maßgeblich ist die Abrechnung Ihres Anbieters. Gebührensätze zu bearbeiten und Gebühren in der Statistik zu sehen erfordert den Tarif Standard oder höher. Bei Lite sind die Felder gesperrt, Zahlungen erfassen ihre Gebühren aber trotzdem, sodass sie nach einem Upgrade erscheinen."
+        "text": "Gebühren sind Schätzungen auf Basis des eingetragenen Satzes; maßgeblich ist die Abrechnung Ihres Anbieters. Gebührensätze zu bearbeiten erfordert den Tarif Standard oder höher, bei Lite sind die Felder gesperrt. Seit Version 3.4 sehen alle Tarife die erfassten Gebühren in der Statistik und in der GuV, sodass ein während der Testphase festgelegter Satz bei Lite weiter schätzt; frühere Versionen zeigten Gebühren nur ab Standard."
       }
     ],
     "related": [
@@ -565,6 +565,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Wie füge ich einem Verkauf einen Kunden hinzu oder ändere den Kunden?",
+    "keywords": [
+      "Kunde",
+      "Mitglied",
+      "Kunde zuordnen",
+      "Kunde ändern",
+      "neuer Kunde",
+      "Bezahlen"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ordnen Sie den Kunden im Warenkorb oder auf dem Bezahlbildschirm zu: Die Zeile „Kunde“ unter dem Betrag öffnet die Kundenliste, wenn noch niemand zugeordnet ist, und bietet „Kunde ändern“ oder „Kunde entfernen“ an, wenn bereits jemand zugeordnet ist. Der beim Bezahlen gewählte Kunde ist der Kunde des Warenkorbs und bleibt dort, auch wenn Sie das Bezahlen abbrechen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Wenn Sie den Kunden ändern, werden Stufenrabatte, Geburtstagsangebote und das Einlösen von Punkten sofort neu berechnet. Bereits eingegebenes Bargeld oder eine Anzahlung bleibt erhalten und wird gegen den neuen Gesamtbetrag geprüft.",
+          "Nicht gefunden? Tippen Sie oben rechts in der Kundenliste auf „Neuer Kunde“ – oder in der Mitte, wenn nichts zu Ihrer Suche passt. Ihr Suchbegriff füllt das Formular vor: Ziffern kommen ins Telefonfeld, alles andere in den Namen. Der neue Kunde wird dem Verkauf zugeordnet.",
+          "Tippen Sie auf „Auf Rechnung“, obwohl noch kein Kunde zugeordnet ist, öffnet sich die Kundenliste; „Auf Rechnung“ ist ausgewählt, sobald Sie jemanden gewählt haben.",
+          "Führt der neue Kunde dazu, dass ein manueller Rabatt die Rabattgrenze der Bediener:in übersteigt, muss zuerst eine Manager:in die Freigabe erteilen; brechen Sie die Freigabe ab, bleibt der Kunde unverändert."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Kunden gehören zum Tarif Standard; bei Lite steht in der Zeile „Kunden – Tarif Standard“, und sie öffnet die Upgrade-Details. Die Zeile „Kunde“ beim Bezahlen gibt es seit Version 3.4; frühere Versionen ordnen den Kunden nur im Warenkorb zu."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Beim Kassieren vertippt – wie annulliere ich eine Bestellung?",
@@ -690,7 +728,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Wählen Sie an der Kasse den Kunden aus und als Zahlungsart Auf Rechnung. Eine Schuld braucht jemanden, dem sie zugeordnet ist – ohne Kunden ist Auf Rechnung deshalb nicht verfügbar."
+        "text": "Ja. Wählen Sie „Auf Rechnung“ als Zahlungsart, und der Verkauf wird als Schuld des Kunden erfasst. Eine Schuld braucht jemanden, dem sie zugeordnet ist: Ist noch kein Kunde zugeordnet, öffnet „Auf Rechnung“ zuerst die Kundenliste (seit Version 3.4; frühere Versionen verlangen, dass Sie den Kunden im Warenkorb zuordnen)."
       },
       {
         "type": "p",
@@ -711,7 +749,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -730,7 +768,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Die Detailseiten von Bestellungen, Kunden und Einkaufsbestellungen haben jeweils eine Notizkarte – tippen Sie darauf, um zu bearbeiten, bis zu 500 Zeichen. Auch beim Anlegen eines Kunden oder einer Einkaufsbestellung können Sie im Formular eine Notiz eintragen."
+        "text": "Ja. Die Detailseiten von Bestellungen, Kunden und Einkaufsbestellungen haben jeweils Notizen – tippen Sie auf die Notizkarte, um zu bearbeiten, bis zu 500 Zeichen, oder, solange es noch keine gibt, auf die einzelne Zeile „Notiz hinzufügen“. Auch beim Anlegen eines Kunden oder einer Einkaufsbestellung können Sie im Formular eine Notiz eintragen."
       },
       {
         "type": "p",
@@ -1047,6 +1085,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Seit Version 3.4 können Sie das Diagramm Umsatzverlauf oder Rohertragsverlauf gedrückt halten, um es Zeitraum für Zeitraum abzulesen: Eine Karte zeigt das Datum sowie den Umsatz bzw. Rohertrag dieses Zeitraums, und beim Umsatzverlauf mit eingeschaltetem Umsatzvergleich zusätzlich den Umsatz des Vergleichszeitraums und die Differenz. Ziehen Sie nach links oder rechts, um weiterzugehen; wischen Sie auf dem Diagramm nach oben oder unten, scrollt die Seite wie gewohnt."
+      },
+      {
+        "type": "p",
         "text": "Die Karte Artikel-Ranking listet die Top 5. Tippen Sie auf die Karte oder auf „Alle anzeigen“, um jeden im Zeitraum verkauften Artikel zu sehen, sortiert nach Menge nach Rückgaben."
       },
       {
@@ -1076,6 +1118,7 @@ export const articles = [
       "Heatmap",
       "Stoßzeiten",
       "Ladenhüter",
+      "Auf- und Absteiger",
       "Lagerwert",
       "Wiederkaufrate",
       "Punkte"
@@ -1091,13 +1134,14 @@ export const articles = [
           "Umsatzvergleich: Rechts in der Zeitraumleiste vergleichen Sie mit demselben Zeitraum im Vorjahr oder mit dem Zeitraum davor (ein einzelner Tag mit demselben Tag der Vorwoche, diese Woche mit der letzten Woche, dieser Monat mit dem letzten Monat, dieses Jahr mit dem letzten Jahr, ein benutzerdefinierter Zeitraum mit der gleichen Anzahl Tage davor). Die Kachel Zahlungseingang zeigt die Differenz und die Wachstumsrate, und das Umsatzdiagramm erhält eine hellere Linie für den Vergleichszeitraum. Läuft ein Zeitraum noch, wird der Vergleichszeitraum zum gleichen Zeitpunkt abgeschnitten.",
           "Wochentag × Uhrzeit: Stellen Sie die Kopfzeile „Umsatz im Zeitverlauf“ auf Wochentag × Uhrzeit um und sehen Sie eine Heatmap mit sieben Tagen und 24 Stunden – je dunkler ein Feld, desto mehr haben Sie verkauft. Wechseln Sie zwischen Umsatz und Bestellungen; bei eingeschaltetem Vergleich sehen Sie, welche Stunden gewachsen und welche geschrumpft sind.",
           "Ladenhüter: Stellen Sie die Kopfzeile der Ranking-Karte auf Ladenhüter um, um Artikel von den wenigsten bis zu den meisten Verkäufen aufzulisten, mit aktuellem Bestand und dem Datum des letzten Verkaufs. Artikel, die nie verkauft wurden, sind mit „Nie verkauft“ markiert. Standardmäßig werden nur Artikel mit Bestand angezeigt.",
+          "Auf und ab (seit Version 3.4): Stellen Sie die Kopfzeile der Ranking-Karte auf Auf und ab um, um die 3 Artikel zu sehen, deren Umsatz gegenüber dem Vergleichszeitraum am stärksten gestiegen ist, und die 3, deren Umsatz am stärksten gefallen ist – jeweils mit dem Umsatz beider Zeiträume und der Differenz. Wählen Sie vorher unter Umsatzvergleich einen Zeitraum; bei „Keiner“ oder bei Gesamter Zeitraum weist die Karte Sie darauf hin. Tippen Sie auf die Karte oder auf „Alle anzeigen“ für die vollständige Liste „Auf- und Absteiger bei Artikeln“, aufgeteilt in Aufsteiger und Absteiger.",
           "Wiederkaufrate: Die letzte Zeile der Kundenkachel zeigt den Anteil der Mitglieder, die im Zeitraum gekauft haben und insgesamt mindestens zweimal gekauft haben.",
           "Aktuell: Lagerwert (aktueller Bestand × aktueller Einkaufspreis), alle Lagerbewegungen im gewählten Zeitraum sowie die Punkte, die Kunden besitzen, aber noch nicht eingelöst haben, samt dem höchstmöglichen Abzug. Das sind aktuelle Stände; der Zeitraum ändert sie nicht."
         ]
       },
       {
         "type": "p",
-        "text": "Seit Version 3.4 sind alle fünf Stellen in jedem Tarif geöffnet und bleiben es auch nach Ende der Testphase. Frühere Versionen zeigten sie nur in Pro, mit einem kleinen Schloss bei anderen Tarifen; wenn Sie die Schlösser noch sehen, aktualisieren Sie DingPOS im App Store."
+        "text": "Seit Version 3.4 sind sie alle in jedem Tarif geöffnet und bleiben es auch nach Ende der Testphase. Frühere Versionen zeigten sie nur in Pro, mit einem kleinen Schloss bei anderen Tarifen; wenn Sie die Schlösser noch sehen, aktualisieren Sie DingPOS im App Store."
       },
       {
         "type": "p",
@@ -1151,6 +1195,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Wie sehe ich, wie viel ich jeden Monat tatsächlich verdient habe?",
+    "keywords": [
+      "Gewinn und Verlust",
+      "GuV",
+      "Reingewinn",
+      "Monatsgewinn",
+      "Ausgaben",
+      "Betriebsergebnis",
+      "Gewinn- und Verlustrechnung"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Öffnen Sie GuV, in der Seitenleiste unter Statistik. Die Liste zeigt jeden Monat vom neuesten zum ältesten mit seinem Reingewinn: Der laufende Monat ist mit „Laufend“ markiert, und die Kopfzeile jedes Jahres addiert den Reingewinn seiner abgeschlossenen Monate."
+      },
+      {
+        "type": "p",
+        "text": "Tippen Sie auf einen Monat, um zu sehen, wie sich sein Reingewinn zusammensetzt:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Umsatz (ohne Steuer): der Umsatz nach allen Rabatten abzüglich Steuer, gezählt an dem Tag, an dem die Ware übergeben wurde.",
+          "Wareneinsatz: die Kosten der verkauften Ware, aus den Einkaufspreisen Ihrer Artikel.",
+          "Bearbeitungsgebühren (geschätzt): die Gebühren, geschätzt aus den Sätzen Ihrer Zahlungsarten.",
+          "Verfallene Anzahlungen: Anzahlungen, die Sie behalten haben, als eine Vorbestellung storniert wurde.",
+          "Feste Ausgaben und Einmalige Ausgaben: was Sie für diesen Monat erfasst haben – siehe „Wie erfasse ich Miete, Löhne und andere Ausgaben?“"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Darunter folgen bis zu drei Diagramme: der Reingewinn Monat für Monat, der Anteil jeder festen Ausgabe und der Verlauf der festen Ausgaben. Die beiden Verlaufsdiagramme umfassen höchstens die 12 Monate bis zu dem Monat, den Sie geöffnet haben, und erscheinen erst, wenn es mindestens zwei Monate zum Vergleichen gibt, gezählt ab dem Monat Ihres ersten Verkaufs oder Ihrer ersten Ausgabe. Das Anteilsdiagramm braucht in diesem Monat eine feste Ausgabe; solange es keine gibt, steht in diesem Bereich stattdessen „Feste Ausgabe hinzufügen“. In der Statistik springt die letzte Zeile der Kachel Rohertrag direkt zur GuV: Bei einem Zeitraum, der genau einen Monat umfasst, zeigt sie den Reingewinn dieses Monats, etwa „Oktober Reingewinn NT$12,300“; bei jedem anderen Zeitraum steht dort „Monatliche GuV ansehen“."
+      },
+      {
+        "type": "note",
+        "text": "Der Reingewinn ist das Betriebsergebnis vor Ertragsteuern, berechnet aus dem, was DingPOS erfasst hat – keine Steuererklärung. Wurden Artikel ohne Einkaufspreis verkauft, zeigt der Monat trotzdem einen Reingewinn, markiert mit „Ohne Einkaufspreise für N Artikel“; tippen Sie darauf, um zu sehen, welche. Die GuV gibt es in jedem Tarif. Bei Konten für Mitarbeiter:innen erfordert das Öffnen die Berechtigung „GuV & Ausgaben“, für die Manager:innen und Mitarbeiter:innen standardmäßig eine Freigabe brauchen, weil sie Einkaufspreise und Löhne zeigt."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Wie erfasse ich Miete, Löhne und andere Ausgaben?",
+    "keywords": [
+      "Ausgaben",
+      "Miete",
+      "Löhne und Gehälter",
+      "Nebenkosten",
+      "feste Ausgaben",
+      "Betriebskosten",
+      "Abschreibung",
+      "einmalige Ausgabe"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Tippen Sie in der GuV auf „Ausgabe hinzufügen“ und wählen Sie eine feste oder eine einmalige Ausgabe. Eine Ausgabe wird in dem Monat berücksichtigt, zu dem sie gehört, nicht in dem Monat, in dem Sie sie bezahlt haben – und der Reingewinn jedes Monats richtet sich danach."
+      },
+      {
+        "type": "p",
+        "text": "Eine feste Ausgabe zahlen Sie jeden Monat, etwa Miete, Nebenkosten oder Löhne und Gehälter:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Geben Sie den Namen, den monatlichen Betrag und den Monat ein, ab dem sie gilt. Wählen Sie einen früheren Monat, um rückwirkend zu erfassen.",
+          "Ändert sich der Betrag, tippen Sie auf „Betrag ändern“, wählen den Monat und dann „Ab diesem Monat“ (zum Beispiel bei einer Mieterhöhung) oder „Nur dieser Monat“ (zum Beispiel die Stromrechnung dieses Monats). Jede Änderung steht in einer Liste; öffnen Sie eine, um sie zu bearbeiten oder zu entfernen.",
+          "Zahlen Sie sie nicht mehr, legen Sie den „Letzten berücksichtigten Monat“ fest: Dieser Monat und die davor zählen weiterhin."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Eine einmalige Ausgabe wird nur einmal bezahlt:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Für einen Ladenausbau, Ausstattung oder eine im Voraus bezahlte Versicherung schalten Sie „Auf mehrere Monate verteilen“ ein und wählen 2 bis 120 Monate sowie den ersten berücksichtigten Monat. Das Formular zeigt vorab, welcher Betrag pro Monat zählt und welche Monate er abdeckt.",
+          "Auch ohne Verteilung können Sie den berücksichtigten Monat wählen: Eine Rechnung für Oktober, die erst im November eintrifft, kann im Oktober zählen, wobei das tatsächliche Datum erhalten bleibt.",
+          "Endet eine Verteilung vorzeitig (etwa weil eine Versicherung gekündigt wurde), nutzen Sie „Verteilung vorzeitig beenden“: Was übrig ist, wird in dem Monat berücksichtigt, den Sie wählen."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Geben Sie ein, was der Laden tatsächlich trägt, ohne Steuern, die Sie zurückfordern können. Ware, die Sie verkaufen, läuft stattdessen über den Einkauf, weil sie beim Verkauf im Wareneinsatz berücksichtigt wird; Kautionen, Darlehenstilgungen und Entnahmen der Inhaber:in sind keine Ausgaben. Änderungen werden gemeinsam gesichert, wenn Sie auf ✓ tippen, und betrifft eine Änderung einen abgeschlossenen Monat, erfahren Sie vorher, für welche Monate sich der Reingewinn ändert."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1248,11 +1395,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wählen Sie beim Bezahlen das Mitglied aus, dann werden die Punkte automatisch gesammelt; zum Einlösen geben Sie die einzusetzenden Punkte ein. Wird eine Bestellung annulliert, werden die dafür gesammelten Punkte wieder abgezogen und eingelöste Punkte zurückgegeben."
+        "text": "Ordnen Sie dem Verkauf das Mitglied zu, im Warenkorb oder auf dem Bezahlbildschirm, dann werden die Punkte automatisch gesammelt; zum Einlösen geben Sie die einzusetzenden Punkte ein. Wird eine Bestellung annulliert, werden die dafür gesammelten Punkte wieder abgezogen und eingelöste Punkte zurückgegeben."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1475,55 +1623,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Kann ich Artikel und Verkäufe aus einem anderen Kassensystem oder einer Tabelle importieren?",
-    "keywords": [
-      "Import",
-      "CSV",
-      "Excel",
-      "Tabelle",
-      "Daten übernehmen",
-      "Kassensystem wechseln",
-      "Massenimport",
-      "Verkaufshistorie"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Ja. Öffnen Sie Einstellungen → Datenimport, wählen Sie, ob Sie Artikel oder Verkäufe importieren möchten, und wählen Sie eine CSV-Datei (Excel und Google Sheets können beide als CSV speichern)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Die Datei öffnet sich als Tabelle. Gängige Spaltennamen auf Englisch und Chinesisch (traditionell oder vereinfacht) werden automatisch zugeordnet; tippen Sie auf eine Spaltenüberschrift, um die Zuordnung zu ändern.",
-          "Tippen Sie auf eine Zelle, um ihren Wert direkt zu korrigieren – Sie müssen die Datei nicht bearbeiten und neu beginnen.",
-          "Tippen Sie auf Bestätigen, um die Daten zu prüfen. Zeilen mit Problemen werden rot markiert und mit Grund angezeigt; beim Import von Verkäufen lassen sich Verkäufe mit Fehlern überspringen.",
-          "Klären Sie alles, was eine Entscheidung erfordert (doppelte Artikelnamen, eine Zeile, die zu mehreren Kunden passt), prüfen Sie die Zusammenfassung und tippen Sie dann auf Import starten."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Importierte Verkäufe werden nach Bestelldatum eingeordnet und mit der Währung und dem Steuermodus Ihres Geschäfts neu berechnet. Sie wirken sich nicht auf den Bestand aus und vergeben keine Willkommenspunkte.",
-          "Kunden werden anhand von Telefonnummer oder E-Mail bestehenden Kunden zugeordnet; wer nicht zugeordnet werden kann, wird neu angelegt.",
-          "Importierte Verkäufe zeigen das Datum „Importiert am“ und die ursprüngliche Belegnummer und können nicht annulliert oder zurückgegeben werden.",
-          "Zeilen mit Fehlern lassen sich als CSV exportieren, ergänzt um die Gründe – korrigieren Sie sie und importieren Sie erneut. Doppelte Zeilen werden automatisch übersprungen."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Der Datenimport befindet sich in der Beta-Phase. Jede Datei darf bis zu 50.000 Zeilen oder 20 MB enthalten. Führen Sie vor dem Import ein Cloud-Backup durch; lässt sich etwas nicht importieren oder sieht das Ergebnis falsch aus, melden Sie es uns über Problem melden auf dem Importbildschirm."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1668,13 +1767,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Aktionen (manuelle Bestandskorrektur, manuelle Punktekorrektur, Artikelverwaltung, Bezahlen über der Rabattgrenze): Eine Freigabe gilt für genau diese eine Aktion.",
-          "Ansichten (Einkaufspreis & Rohertrag, Dashboard, Einstellungen, Backup & Wiederherstellung): Eine Freigabe schaltet frei, bis die Bediener:in wechselt oder die App in den Hintergrund geht.",
+          "Ansichten (Einkaufspreis & Rohertrag, Dashboard, GuV & Ausgaben, Einstellungen, Backup & Wiederherstellung): Eine Freigabe schaltet frei, bis die Bediener:in wechselt oder die App in den Hintergrund geht.",
           "Die Rabattgrenze gilt für manuelle Rabatte und wird einmal beim Bezahlen geprüft; automatische Aktionen und das Einlösen von Punkten zählen nicht dazu."
         ]
       },
       {
         "type": "p",
-        "text": "Werkseinstellung: Manager:innen dürfen alles außer Backup & Wiederherstellung, ohne Rabattgrenze; Mitarbeiter:innen brauchen für alles eine Freigabe, bei einer Rabattgrenze von 10 %. Die Inhaber:in darf immer alles und kann nicht bearbeitet werden. Zum Ändern gehen Sie zu Personal → Rollenberechtigungen, tippen auf Bearbeiten und anschließend einmal auf Sichern – die Änderung gilt sofort für alle."
+        "text": "Werkseinstellung: Manager:innen dürfen alles außer Backup & Wiederherstellung und GuV & Ausgaben, ohne Rabattgrenze; Mitarbeiter:innen brauchen für alles eine Freigabe, bei einer Rabattgrenze von 10 %. Die Inhaber:in darf immer alles und kann nicht bearbeitet werden. Zum Ändern gehen Sie zu Personal → Rollenberechtigungen, tippen auf Bearbeiten und anschließend einmal auf Sichern – die Änderung gilt sofort für alle."
       },
       {
         "type": "note",
@@ -1808,13 +1907,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle drei Tarife enthalten die komplette Kasse, Artikel, Bestellungen (mit Annullierungen, Rückgaben und Umtausch), Berichte (erweiterte Berichte seit Version 3.4 inklusive) und Cloud-Backup. Sie unterscheiden sich in den Werkzeugen für den Ladenalltag:"
+        "text": "Alle drei Tarife enthalten die komplette Kasse, Artikel, Bestellungen (mit Annullierungen, Rückgaben und Umtausch), Berichte (erweiterte Berichte und die monatliche GuV seit Version 3.4 inklusive) und Cloud-Backup. Sie unterscheiden sich in den Werkzeugen für den Ladenalltag:"
       },
       {
         "type": "list",
         "items": [
           "Lite: für Einzelpersonen am Marktstand, die Kasse und Artikel brauchen.",
-          "Standard: zusätzlich Aktionen, Punkte und Kundenstufen, Bestandsverwaltung, Einkauf, Verkauf auf Rechnung, Vorbestellungen und Schätzung der Bearbeitungsgebühren.",
+          "Standard: zusätzlich Aktionen, Punkte und Kundenstufen, Bestandsverwaltung, Einkauf, Verkauf auf Rechnung, Vorbestellungen und Gebührensätze für Zahlungsarten.",
           "Pro: zusätzlich Mitarbeiter:innen-Konten und Berechtigungen, Freigaben, Aktivitätsprotokoll und Wiederherstellungsprotokoll – für Geschäfte mit Personal."
         ]
       },
@@ -2023,13 +2122,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Geschenke und Zusatzartikel verändern den Warenkorb nie von selbst. Sind die Bedingungen erfüllt, erscheint auf dem Kassenbildschirm ein Vorschlagsbanner, und der Warenkorb ändert sich erst, wenn die Kassierer:in auf „Annehmen“ tippt. Das ist Absicht, denn Geschenke betreffen den physischen Bestand: Jemand muss prüfen, ob der Artikel vorrätig ist und ob der Kunde ihn möchte."
+        "text": "Geschenke und Zusatzartikel verändern den Warenkorb nie von selbst. Sind die Bedingungen erfüllt, erscheint auf dem Kassenbildschirm ein Vorschlagsbanner, und der Warenkorb ändert sich erst, wenn die Kassierer:in auf „Geschenk wählen“ oder „Zusatzartikel wählen“ tippt. Das ist Absicht, denn Geschenke betreffen den physischen Bestand: Jemand muss prüfen, ob der Artikel vorrätig ist und ob der Kunde ihn möchte."
       },
       {
         "type": "list",
         "items": [
           "Nach „Ablehnen“ erscheint derselbe Vorschlag für diesen Warenkorb nicht erneut; bei einem neuen oder geleerten Warenkorb wird wieder gefragt.",
-          "Erscheint vor der Bestätigung beim Bezahlen ein neuer Vorschlag, muss er angenommen oder abgelehnt werden, bevor die Bestellung abgeschickt werden kann.",
+          "Seit Version 3.4 halten noch offene Angebote das Bezahlen nicht auf: Eine gelbe Zeile unter dem Bezahlen-Button, etwa „1 offenes Aktionsangebot wird nicht angewendet“, zeigt an, wie viele ausgelassen werden (tippen Sie darauf, um zu sehen, welche), und der Verkauf wird ohne sie abgeschlossen. Soll das Bezahlen wie bisher warten, aktivieren Sie unter Einstellungen → Geräteeinstellungen „Angebote vor dem Bezahlen klären“; die Option gilt nur für dieses iPad.",
           "Geschenk- und Zusatzartikel-Zeilen können von anderen Geldrabatt-Aktionen nicht weiter rabattiert werden und zählen nicht zu den Mindestbeträgen anderer Aktionen."
         ]
       },
@@ -2223,7 +2322,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Einen eigenen Monatsabschluss-Bericht gibt es noch nicht, aber alles, was Sie für den Abgleich brauchen, steckt bereits in der App:"
+        "text": "Seit Version 3.4 zeigt die GuV den Reingewinn jedes Monats nach Wareneinsatz, Gebühren und Ausgaben – siehe „Wie sehe ich, wie viel ich jeden Monat tatsächlich verdient habe?“ Einen Monatsabschluss-Bericht zum Exportieren oder Drucken gibt es noch nicht, aber alles, was Sie für den Abgleich brauchen, steckt bereits in der App:"
       },
       {
         "type": "list",
@@ -2239,7 +2338,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

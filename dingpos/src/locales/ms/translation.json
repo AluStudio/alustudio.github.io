@@ -273,10 +273,6 @@
           "name": "Pengurusan produk",
           "desc": "Varian, kod bar, foto, kategori, produk harga terbuka"
         },
-        "import": {
-          "name": "Import data",
-          "desc": "Import produk dan jualan lepas daripada sistem lain melalui CSV"
-        },
         "inventory": {
           "name": "Penjejakan stok",
           "desc": "Stok ditolak apabila terjual; pelarasan manual menyimpan rekod pergerakan"
@@ -301,9 +297,13 @@
           "name": "Papan pemuka perniagaan",
           "desc": "Hasil jualan, untung, diskaun, campuran pembayaran dan jualan terlaris"
         },
+        "profit_loss": {
+          "name": "Untung rugi bulanan",
+          "desc": "Rekod sewa, gaji dan perbelanjaan lain; lihat untung bersih setiap bulan"
+        },
         "payment_fees": {
-          "name": "Anggaran caj pemprosesan",
-          "desc": "Tetapkan kadar caj bagi setiap kaedah pembayaran; lihat caj dan anggaran diterima bersih mengikut kaedah"
+          "name": "Kadar caj",
+          "desc": "Tetapkan kadar caj bagi setiap kaedah pembayaran untuk mendapatkan anggaran caj dan anggaran diterima bersih"
         },
         "comparison": {
           "name": "Perbandingan tempoh",

@@ -273,10 +273,6 @@
           "name": "Mahsulotlarni boshqarish",
           "desc": "Variantlar, shtrix-kodlar, rasmlar, toifalar, erkin narxli mahsulotlar"
         },
-        "import": {
-          "name": "Ma’lumotlarni import qilish",
-          "desc": "Boshqa tizimlardan mahsulotlar va o‘tgan savdolarni CSV orqali import qiling"
-        },
         "inventory": {
           "name": "Zaxirani hisobga olish",
           "desc": "Sotilganda zaxira kamayadi; qo‘lda o‘zgartirishlar harakat yozuvini qoldiradi"
@@ -301,9 +297,13 @@
           "name": "Biznes boshqaruv paneli",
           "desc": "Daromad, foyda, chegirmalar, to‘lov turlari ulushi va eng ko‘p sotilganlar"
         },
+        "profit_loss": {
+          "name": "Oylik P&L",
+          "desc": "Ijara, ish haqi va boshqa xarajatlarni yuriting; har oyning sof foydasini ko‘ring"
+        },
         "payment_fees": {
-          "name": "Taxminiy to‘lov komissiyalari",
-          "desc": "Har bir to‘lov usuli uchun komissiya stavkasini belgilang; usullar bo‘yicha komissiya va taxminiy sof tushumni ko‘ring"
+          "name": "To‘lov komissiyasi stavkalari",
+          "desc": "Komissiya va taxminiy sof tushumni hisoblash uchun har bir to‘lov usulining komissiya stavkasini belgilang"
         },
         "comparison": {
           "name": "Davrlarni solishtirish",

@@ -273,10 +273,6 @@
           "name": "Artikelverwaltung",
           "desc": "Varianten, Barcodes, Fotos, Kategorien, Artikel mit freiem Preis"
         },
-        "import": {
-          "name": "Datenimport",
-          "desc": "Artikel und frühere Verkäufe per CSV aus anderen Systemen importieren"
-        },
         "inventory": {
           "name": "Bestandsführung",
           "desc": "Der Bestand sinkt beim Verkauf; manuelle Anpassungen werden als Bewegung protokolliert"
@@ -301,9 +297,13 @@
           "name": "Geschäfts-Dashboard",
           "desc": "Umsatz, Gewinn, Rabatte, Zahlungsarten und Bestseller"
         },
+        "profit_loss": {
+          "name": "Monatliche GuV",
+          "desc": "Miete, Löhne und andere Ausgaben erfassen; den Reingewinn jedes Monats sehen"
+        },
         "payment_fees": {
-          "name": "Geschätzte Bearbeitungsgebühren",
-          "desc": "Gebührensatz je Zahlungsart festlegen; Gebühren und voraussichtlichen Nettoeingang je Zahlungsart sehen"
+          "name": "Gebührensätze für Zahlungsarten",
+          "desc": "Gebührensatz je Zahlungsart festlegen, um Gebühren und voraussichtlichen Nettoeingang zu schätzen"
         },
         "comparison": {
           "name": "Zeitraumvergleich",

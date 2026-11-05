@@ -431,7 +431,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Tasud on hinnangud sisestatud määra põhjal; tegelik summa on sinu pakkuja väljavõttes. Teenustasu määrade muutmine ja tasude nägemine jaotises Aruanded nõuavad paketti Standard või kõrgemat. Paketis Lite on väljad lukus, kuid maksed salvestavad tasud siiski, nii et need ilmuvad pärast paketi uuendamist."
+        "text": "Tasud on hinnangud sisestatud määra põhjal; tegelik summa on sinu pakkuja väljavõttes. Teenustasu määrade muutmiseks on vaja paketti Standard või kõrgemat ning paketis Lite on väljad lukus. Alates versioonist v3.4 näevad salvestatud tasusid vahekaartidel Aruanded ja Kasum kõik paketid, nii et prooviperioodil määratud määr jätkab tasude hindamist ka paketis Lite; varasemad versioonid näitasid tasusid ainult paketis Standard ja kõrgemates."
       }
     ],
     "related": [
@@ -564,6 +564,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Kuidas lisada müügile klient või klienti vahetada?",
+    "keywords": [
+      "klient",
+      "liige",
+      "kliendi lisamine",
+      "kliendi vahetamine",
+      "uus klient",
+      "kassa"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Lisa klient ostukorvis või kassaekraanil: summa all olev rida Klient avab kliendiloendi, kui kedagi pole lisatud, ning pakub valikuid Vaheta klienti ja Eemalda klient, kui klient on lisatud. Kassas valitud klient on ostukorvi klient ja jääb ostukorvi alles ka siis, kui kassa tühistad."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Kliendi vahetamine arvutab taseme allahindlused, sünnipäevapakkumised ja punktide kasutamise kohe uuesti. Juba sisestatud sularaha või käsiraha jääb alles ja seda kontrollitakse uue kogusumma suhtes.",
+          "Ei leia teda? Puuduta kliendiloendi paremas ülanurgas nuppu Uus klient või – kui otsingule ei vasta keegi – loendi keskel. Otsitu täidab vormi: numbrid lähevad telefoniväljale, kõik muu nimeväljale, ning uus klient lisatakse müügile.",
+          "Kui puudutad Müük arvele ilma lisatud kliendita, avaneb kliendiloend ning Müük arvele valitakse alles pärast kliendi valimist.",
+          "Kui uus klient viib käsitsi allahindluse operaatori allahindluse ülempiirist kõrgemale, peab esmalt heaks kiitma juhataja; kui heakskiidu tühistad, jääb klient endiseks."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Kliendid kuuluvad paketti Standard; paketis Lite on rea tekst „Kliendid – pakett Standard“ ja see avab uuendamise üksikasjad. Kassaekraani rida Klient lisandus versioonis v3.4; varasemates versioonides lisatakse klient ainult ostukorvis."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Tegin kassas vea – kuidas müüki anuleerida?",
@@ -690,7 +728,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Jah. Vali kassas klient ja vali makseviisiks Müük arvele. Võlal peab olema omanik, seega ei ole Müük arvele ilma kliendita saadaval."
+        "text": "Jah. Vali makseviisiks Müük arvele ja müük salvestatakse kliendi võlana. Võlal peab olema omanik, seega avab Müük arvele puudutamine ilma lisatud kliendita kõigepealt kliendiloendi (alates versioonist v3.4; varasemad versioonid paluvad klient ostukorvis lisada)."
       },
       {
         "type": "p",
@@ -711,7 +749,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -730,7 +768,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Jah. Müügi, kliendi ja ostutellimuse detailvaates on igaühel märkuste kaart – puuduta seda, et muuta, kuni 500 tähemärki. Märkuse saab kirjutada ka kliendi või ostutellimuse loomise vormis."
+        "text": "Jah. Müügi, kliendi ja ostutellimuse detailvaates on igaühel märkuste kaart – puuduta seda muutmiseks (kuni 500 tähemärki) või, kui märkusi veel pole, ainsat rida „Lisa märkus“. Märkuse saab kirjutada ka kliendi või ostutellimuse loomise vormis."
       },
       {
         "type": "p",
@@ -1046,7 +1084,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kaart Toodete edetabel näitab top 5. Puuduta kaarti või valikut Kuva kõik, et näha kõiki perioodil müüdud tooteid, järjestatud kogusega pärast tagastusi."
+        "text": "Alates versioonist v3.4 saad diagrammi Müügitulu trend või Brutokasumi trend vajutades ja all hoides vaadata periood perioodi haaval: kaart näitab kuupäeva ning selle perioodi müügitulu või brutokasumit ning diagrammil Müügitulu trend koos sisselülitatud müügivõrdlusega ka võrdlusperioodi müügitulu ja vahet. Liikumiseks lohista vasakule või paremale; kui pühid diagrammil üles või alla, kerib leht nagu tavaliselt."
+      },
+      {
+        "type": "p",
+        "text": "Kaart Toodete edetabel näitab top 5. Puuduta kaarti või valikut Vaata kõiki, et näha kõiki perioodil müüdud tooteid, järjestatud kogusega pärast tagastusi."
       },
       {
         "type": "p",
@@ -1075,6 +1117,7 @@ export const articles = [
       "soojuskaart",
       "tipptunnid",
       "aeglase käibega tooted",
+      "muutused",
       "laojäägi väärtus",
       "korduvostude määr",
       "punktid"
@@ -1090,13 +1133,14 @@ export const articles = [
           "Müügivõrdlus: perioodiribast paremal saad võrrelda eelmise aasta sama perioodi või eelneva perioodiga (üks päev eelmise nädala sama päevaga, see nädal eelmise nädalaga, see kuu eelmise kuuga, see aasta eelmise aastaga, oma vahemik sama pikkuse varasema vahemikuga). Paneel Laekunud raha näitab vahet ja kasvumäära ning müügitulu graafikule lisandub heledam joon võrdlusperioodi kohta. Kui periood veel kestab, lõpeb võrdlusperiood sama ajahetkega.",
           "Nädalapäev × tund: lülita pealkiri Müük ajas valikule Nädalapäev × tund, et näha seitsmepäevast 24-tunnist soojuskaarti — mida tumedam lahter, seda rohkem müüsid. Lülitu müügitulu ja müükide vahel; kui võrdlus on sees, näed, millised tunnid kasvasid ja millised kahanesid.",
           "Aeglase käibega tooted: lülita edetabelikaardi pealkiri valikule Aeglase käibega tooted, et näha tooteid vähimast müügist suurimani koos praeguse laoseisu ja viimase müügikuupäevaga. Tooted, mida pole kunagi müüdud, on märgitud „Pole müüdud“. Vaikimisi näidatakse ainult laos olevaid tooteid.",
+          "Muutused (alates versioonist v3.4): lülita edetabelikaardi pealkiri valikule Muutused, et näha 3 toodet, mille müügitulu kasvas võrdlusperioodiga võrreldes enim, ja 3 toodet, mille müügitulu langes enim, koos mõlema perioodi müügitulu ja vahega. Vali esmalt periood jaotises Müügivõrdlus; valiku Pole korral või perioodil Kogu aeg annab kaart sellest teada. Puuduta kaarti või valikut Vaata kõiki, et avada täielik loend Toodete muutused, mis on jaotatud osadeks „Müügitulu kasv“ ja „Müügitulu langus“.",
           "Korduvostude määr: kliendipaneeli viimane rida näitab liikmete osakaalu, kes ostsid perioodis ja on kokku ostnud kaks või enam korda.",
           "Praegu: laojäägi väärtus (praegune laoseis × praegune omahind), kõik laoliikumised valitud perioodil ning punktid, mis kliendid hoiavad, kuid pole kasutanud, koos suurima summaga, mida nad saavad maha arvata. Need on praegused jäägid; periood neid ei muuda."
         ]
       },
       {
         "type": "p",
-        "text": "Alates versioonist v3.4 on kõik viis avatud igas paketis ning jäävad avatuks ka pärast prooviperioodi lõppu. Varasemad versioonid näitasid neid ainult Pro paketis ja teistel pakettidel oli väike lukk; kui näed lukke endiselt, uuenda DingPOS App Store'ist."
+        "text": "Alates versioonist v3.4 on kõik need avatud igas paketis ning jäävad avatuks ka pärast prooviperioodi lõppu. Varasemad versioonid näitasid neid ainult Pro paketis ja teistel pakettidel oli väike lukk; kui näed lukke endiselt, uuenda DingPOS App Store'ist."
       },
       {
         "type": "p",
@@ -1149,6 +1193,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Kuidas näha, kui palju ma iga kuu tegelikult teenisin?",
+    "keywords": [
+      "kasum ja kahjum",
+      "kasumiaruanne",
+      "puhaskasum",
+      "kuine kasum",
+      "kulud",
+      "tegevuskasum",
+      "poe kasum"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ava külgribal vahekaart Kasum, mis asub vahekaardi Aruanded all. See loetleb kõik kuud uuemast vanemani koos nende puhaskasumiga: jooksev kuu on märgitud Pooleli ning iga aasta päis liidab kokku selle aasta lõppenud kuude puhaskasumi."
+      },
+      {
+        "type": "p",
+        "text": "Puuduta kuud, et näha, kuidas selle puhaskasum välja arvutatakse:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Müügitulu (maksuta): müügitulu pärast kõiki allahindlusi, millest on maha arvatud maks; arvestatakse kauba üleandmise päeval.",
+          "Toodete omahind: müüdud kauba omahind, võetud sinu toodete omahindadest.",
+          "Teenustasud (hinn.): tasud, mis on hinnatud sinu makseviiside määrade järgi.",
+          "Kinnipeetud käsiraha: käsiraha, mille jätsid endale, kui ettetellimus tühistati.",
+          "Püsikulud ja Ühekordsed kulud: see, mille selle kuu kohta salvestasid — vaata „Kuidas lisada üüri, palku ja muid kulusid?“"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Järgneb kuni kolm diagrammi: puhaskasum kuude kaupa, iga püsikulu osakaal ja püsikulude trend. Mõlemad trendidiagrammid hõlmavad kuni 12 kuud avatud kuuni ja ilmuvad alles siis, kui võrrelda saab vähemalt kahte kuud, arvestades esimese müügi või kulu kuust. Osakaalu diagramm vajab sel kuul püsikulu; kuni seda pole, kuvatakse selles jaotises hoopis Lisa püsikulu. Vahekaardil Aruanded viib kasumikaardi viimane rida otse vahekaardile Kasum: täpselt ühe kuu pikkuse perioodi puhul näitab see selle kuu puhaskasumit, näiteks „Oktoobri puhaskasum NT$12,300“; mis tahes muu perioodi puhul on seal „Vaata kuu kasumiaruannet“."
+      },
+      {
+        "type": "note",
+        "text": "Puhaskasum on tegevuskasum enne tulumaksu, arvutatud DingPOS-i salvestatud andmete põhjal — see ei ole maksudeklaratsioon. Kui tooteid on müüdud ilma omahinnata, näitab kuu siiski puhaskasumit ja märgib selle „Ei sisalda N toote omahinda“; puuduta seda, et näha, millised tooted need on. Vahekaart Kasum on olemas igas paketis. Töötajakontode kasutamisel nõuab selle avamine õigust Kasumiaruanne ja kulud, mille jaoks vajavad Juhatajad ja Töötajad vaikimisi heakskiitu, sest see näitab toodete omahindu ja palku."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Kuidas lisada üüri, palku ja muid kulusid?",
+    "keywords": [
+      "kulud",
+      "üür",
+      "palgad",
+      "kommunaalkulud",
+      "püsikulud",
+      "üldkulud",
+      "kulu jaotamine",
+      "ühekordne kulu"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Puuduta vahekaardil Kasum nuppu Lisa kulu ja vali Lisa püsikulu või Lisa ühekordne kulu. Kulu arvestatakse selles kuus, kuhu see kuulub, mitte selles kuus, kui selle eest maksid, ning iga kuu puhaskasum järgib seda."
+      },
+      {
+        "type": "p",
+        "text": "Püsikulu on kulu, mida maksad igal kuul, näiteks üür, kommunaalkulud või palgad:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sisesta nimi, kuusumma ja kuu, millest kulu algab (väli Algab). Tagasiulatuvalt lisamiseks vali varasem kuu.",
+          "Kui summa muutub, puuduta Lisa summa muudatus, vali kuu ja vali Alates sellest kuust (näiteks üüri tõus) või Ainult see kuu (selle kuu elektriarve). Kõik muudatused on loetletud ning ühe saad avada, et seda muuta või kustutada.",
+          "Kui lõpetad selle maksmise, määra Viimane arvestatud kuu: see kuu ja varasemad kuud jäävad arvesse."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ühekordne kulu makstakse ühe korra:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sisustuse, seadmete või ettemaksuga tasutud kindlustuse puhul lülita sisse Jaota mitmele kuule ning vali 2–120 kuud ja Esimene arvestatud kuu. Vorm näitab eelvaates, kui palju igas kuus arvesse läheb ja millised kuud see hõlmab.",
+          "Ka jaotamata kulu puhul saad valida Arvestatud kuu: novembris saabunud oktoobri arve võib minna arvesse oktoobris, tegelik kuupäev jääb alles.",
+          "Kui jaotus lõpeb enneaegu (näiteks kindlustusleping öeldi üles), kasuta Lõpeta jaotus varem: allesjäänud summa arvestatakse sinu valitud kuus."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Sisesta summa, mille poe kanda tegelikult jääb, jättes välja maksu, mille saad tagasi nõuda. Müügiks ostetav kaup läheb hoopis läbi jaotise Ostmine, sest see arvestatakse toote omahinna sisse müügi hetkel; tagatisrahad, laenu põhiosa ja omaniku väljavõetud raha ei ole kulud. Muudatused salvestatakse kõik korraga, kui puudutad ✓, ning kui muudatus ulatub lõppenud kuusse, ütleb DingPOS esmalt, millistel kuudel puhaskasum muutub."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1245,11 +1392,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Vali kassas liige, siis punktid kogunevad automaatselt; punktide kasutamiseks sisesta kasutatavate punktide arv. Müügi anuleerimine võtab sellest teenitud punktid tagasi ja tagastab kasutatud punktid."
+        "text": "Lisa müügile liige ostukorvis või kassaekraanil, siis punktid kogunevad automaatselt; punktide kasutamiseks sisesta kasutatavate punktide arv. Müügi anuleerimine võtab sellest teenitud punktid tagasi ja tagastab kasutatud punktid."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1474,55 +1622,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Kas saan tooteid ja müüke importida teisest kassasüsteemist või tabelist?",
-    "keywords": [
-      "import",
-      "csv",
-      "excel",
-      "tabel",
-      "andmete teisaldamine",
-      "kassasüsteemi vahetus",
-      "hulgi",
-      "müügiajalugu"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Jah. Ava Seaded → Andmete import, vali, kas impordid tooteid või müüke, ja vali CSV-fail (Excel ja Google Sheets oskavad mõlemad CSV-vormingus salvestada)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Fail avaneb tabelina. Levinud veerunimed inglise ja hiina (traditsioonilises või lihtsustatud) keeles seotakse automaatselt; seotuse muutmiseks puuduta veeru päist.",
-          "Väärtuse parandamiseks puuduta lahtrit ja muuda seda otse – faili pole vaja redigeerida ja otsast alustada.",
-          "Kontrollimiseks puuduta Kinnita. Probleemidega read märgitakse punasega koos põhjusega; müükide impordil saab vigadega müügid vahele jätta.",
-          "Lahenda kõik, mis vajab otsust (korduvad toodete nimed, rida, mis sobib mitme kliendiga), vaata kokkuvõte üle ja puuduta Alusta importi."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Imporditud müügid paigutatakse müügikuupäeva järgi ja arvutatakse uuesti sinu poe valuuta ja maksurežiimiga. Need ei mõjuta laoseisu ega anna tervituspunkte.",
-          "Kliendid seotakse olemasolevatega telefoni või e-posti järgi; vastet mitte leidnud kliendid lisatakse uutena.",
-          "Imporditud müükidel kuvatakse impordimise kuupäev ja lähtesüsteemi müüginumber ning neid ei saa anuleerida ega tagastada.",
-          "Vigadega read saab eksportida põhjustega märgitud CSV-failina – paranda need ja impordi uuesti. Korduvad read jäetakse automaatselt vahele."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Andmete import on beetaversioonis. Üks fail võib sisaldada kuni 50 000 rida või 20 MB. Tee enne importi pilvevarundus; kui midagi ei õnnestu importida või tulemus tundub vale, anna meile teada impordiekraani valikuga Teata probleemist."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1667,13 +1766,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Toimingud (käsitsi laoseisu korrigeerimine, käsitsi punktide korrigeerimine, toodete haldus, kassas ülempiirist suurema allahindlusega müük): üks heakskiit katab selle ühe toimingu.",
-          "Vaated (omahind ja kasum, Ülevaatepaneel, Seaded, varundus ja taastamine): heakskiit avab vaate, kuni operaator vahetub või rakendus läheb taustale.",
+          "Vaated (omahind ja kasum, Ülevaatepaneel, Kasumiaruanne ja kulud, Seaded, varundus ja taastamine): heakskiit avab vaate, kuni operaator vahetub või rakendus läheb taustale.",
           "Allahindluse ülempiir kehtib käsitsi allahindlustele ja seda kontrollitakse kassas üks kord; automaatsed kampaaniad ja punktide kasutamine sellesse ei arvestata."
         ]
       },
       {
         "type": "p",
-        "text": "Tehaseseaded: Juhatajatel on lubatud kõik peale varunduse ja taastamise ning allahindluse ülempiiri pole; Töötajatel vajab kõik heakskiitu ja ülempiir on 10%. Omanikul on alati kõik lubatud ja seda ei saa muuta. Muutmiseks ava Töötajad → Rollide õigused, puuduta Muuda ja salvesta üks kord – muudatus jõustub kohe kõigile."
+        "text": "Tehaseseaded: Juhatajatel on lubatud kõik peale varunduse ja taastamise ning Kasumiaruande ja kulude; allahindluse ülempiiri neil pole, Töötajatel vajab kõik heakskiitu ja ülempiir on 10%. Omanikul on alati kõik lubatud ja seda ei saa muuta. Muutmiseks ava Töötajad → Rollide õigused, puuduta Muuda ja salvesta üks kord – muudatus jõustub kohe kõigile."
       },
       {
         "type": "note",
@@ -1806,13 +1905,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kõik kolm paketti sisaldavad täisfunktsionaalset kassat, tooteid, müüke (koos anuleerimiste, tagastuste ja vahetustega), aruandeid (täiustatud aruanded alates versioonist v3.4) ja pilvevarundust. Need erinevad poe juhtimise tööriistade poolest:"
+        "text": "Kõik kolm paketti sisaldavad täisfunktsionaalset kassat, tooteid, müüke (koos anuleerimiste, tagastuste ja vahetustega), aruandeid (alates versioonist v3.4 ka täiustatud aruanded ja kuine kasumiaruanne) ja pilvevarundust. Need erinevad poe juhtimise tööriistade poolest:"
       },
       {
         "type": "list",
         "items": [
           "Lite: ühele inimesele, kes peab turulettu ning vajab kassat ja tooteid.",
-          "Standard: lisab kampaaniad, püsikliendipunktid ja tasemed, laoseisu jälgimise, ostutellimused, müügi arvele, ettetellimused ja makse teenustasude hinnangud.",
+          "Standard: lisab kampaaniad, püsikliendipunktid ja tasemed, laoseisu jälgimise, ostutellimused, müügi arvele, ettetellimused ja makseviiside teenustasu määrad.",
           "Pro: lisab töötajakontod ja õigused, heakskiidu, tegevuslogi ja taastamise kirjed – töötajatega poodidele."
         ]
       },
@@ -2019,13 +2118,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kingitused ja tasulised lisatooted ei muuda ostukorvi kunagi omal käel. Kui tingimused on täidetud, ilmub kassaekraanile soovitusriba ning ostukorv muutub alles siis, kui kassapidaja puudutab nuppu „Vali kingitus“ või „Vali lisatoode“. See on teadlik valik, sest kingitused puudutavad füüsilist lao seisu: keegi peab kinnitama, et toode on olemas ja klient soovib seda."
+        "text": "Kingitused ja tasulised lisatooted ei muuda ostukorvi kunagi omal käel. Kui tingimused on täidetud, ilmub kassaekraanile soovitusriba ning ostukorv muutub alles siis, kui kassapidaja puudutab nuppu „Vali kingitus“ või „Vali lisatoode“. See on teadlik valik, sest kingitused puudutavad füüsilist laoseisu: keegi peab kinnitama, et toode on olemas ja klient soovib seda."
       },
       {
         "type": "list",
         "items": [
           "Pärast nupu „Keeldu“ puudutamist sama soovitus selles ostukorvis enam ei ilmu; uus või tühjendatud ostukorv pakub seda uuesti.",
-          "Kui enne kassas kinnitamist ilmub uus soovitus, tuleb see vastu võtta või sellest keelduda, enne kui müüki saab esitada.",
+          "Alates versioonist v3.4 ei takista ootel pakkumised kassat: kollane rida makse nupu all, näiteks „1 ootel pakkumine ei rakendu“, ütleb, mitu on välja jäetud (puuduta seda, et näha, millised), ja müük läheb läbi ilma nendeta. Et kassa ootaks nagu varem, lülita jaotises Seaded → Seadme eelistused sisse Käsitle pakkumised enne kassat; see kehtib ainult sellel iPadil.",
           "Kingituse ja lisatoote ridu ei saa muud rahalised kampaaniad edasi alandada ning need ei lähe arvesse teiste kampaaniate läviväärtuste täitmisel."
         ]
       },
@@ -2039,7 +2138,7 @@ export const articles = [
           "Komplekt moodustub ainult siis, kui see muudab ostukorvi odavamaks. Võrdse hinnaga toodete seast rühmitatakse esimesena allahindluseta tooted ning juba allahinnatud toodetele jääb nende allahindlus alles.",
           "See, millised tooted kokku rühmitatakse, sõltub ainult ostukorvi sisust, mitte skannimise järjekorrast.",
           "Iga komplekti kuuluv toode näitab oma osa komplekti allahindlusest ning iga rea summa on pärast allahindlusi.",
-          "Kassas rühmitatakse komplektid uuesti värskeimate hindadega; kui tulemus muutub, palutakse teil uus kogusumma kinnitada."
+          "Kassas rühmitatakse komplektid uuesti värskeimate hindadega; kui tulemus muutub, palutakse sul uus kogusumma kinnitada."
         ]
       }
     ],
@@ -2218,23 +2317,23 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Eraldi kuist tasumisaruannet veel pole, kuid kõik andmed kontrollimiseks on rakenduses juba olemas:"
+        "text": "Alates versioonist v3.4 näitab vahekaart Kasum iga kuu puhaskasumit pärast toodete omahinda, tasusid ja kulusid — vaata „Kuidas näha, kui palju ma iga kuu tegelikult teenisin?“ Eksporditavat ega prinditavat tasumisaruannet veel pole, kuid kõik andmed kontrollimiseks on rakenduses juba olemas:"
       },
       {
         "type": "list",
         "items": [
-          "Valige Aruanded all periood See kuu, et näha kuu müügitulu, laekunud raha, kasumit ja maksete jaotust.",
-          "Tarnijate kuutingimustega ostud koonduvad jaotises Ostud alla Tasumata arved, kus saab terve kuu korraga tasuda.",
+          "Vali Aruanded all periood See kuu, et näha kuu müügitulu, laekunud raha, kasumit ja maksete jaotust.",
+          "Tarnijate kuutingimustega ostud koonduvad jaotises Ostmine alla Tasumata arved, kus saab terve kuu korraga tasuda.",
           "Klientidele arvele müüdud kaubad koonduvad jaotises Müügid → Nõuded, kus saab terve kuu eest korraga tasuda."
         ]
       },
       {
         "type": "p",
-        "text": "Kui vajate kuist tasumisaruannet, mida saaks eksportida või printida, kirjutage meile, milliseid välju vajate. Arendust seame tähtsuse järjekorda päringute arvu järgi."
+        "text": "Kui vajad kuist tasumisaruannet, mida saaks eksportida või printida, kirjuta meile, milliseid välju vajad. Arendust seame tähtsuse järjekorda päringute arvu järgi."
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

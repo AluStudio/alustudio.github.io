@@ -273,10 +273,6 @@
           "name": "Gestion des produits",
           "desc": "Variantes, codes-barres, photos, catégories, produits à prix libre"
         },
-        "import": {
-          "name": "Importation de données",
-          "desc": "Importez vos produits et ventes passées depuis d’autres systèmes via CSV"
-        },
         "inventory": {
           "name": "Suivi du stock",
           "desc": "Le stock diminue à chaque vente ; les ajustements manuels laissent une trace des mouvements"
@@ -301,9 +297,13 @@
           "name": "Tableau de bord de l’activité",
           "desc": "Chiffre d’affaires, marge, remises, répartition des paiements et meilleures ventes"
         },
+        "profit_loss": {
+          "name": "Compte de résultat mensuel",
+          "desc": "Enregistrez loyer, salaires et autres dépenses ; consultez le bénéfice net de chaque mois"
+        },
         "payment_fees": {
-          "name": "Estimation des frais de traitement",
-          "desc": "Définissez le taux de frais de chaque moyen de paiement ; consultez les frais et le net estimé encaissé par moyen"
+          "name": "Taux de frais de traitement",
+          "desc": "Définissez le taux de frais de chaque moyen de paiement pour estimer les frais et le net encaissé"
         },
         "comparison": {
           "name": "Comparaison de périodes",

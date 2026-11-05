@@ -431,7 +431,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Kosten zijn schattingen op basis van het percentage dat je invult; het afschrift van je aanbieder toont het werkelijke bedrag. Kostenpercentages wijzigen en kosten zien bij Cijfers vereist het Standard-abonnement of hoger. Bij Lite zijn de velden vergrendeld, maar betalingen leggen hun kosten wel vast, dus ze verschijnen zodra je upgradet."
+        "text": "Kosten zijn schattingen op basis van het percentage dat je invult; het afschrift van je aanbieder toont het werkelijke bedrag. Kostenpercentages wijzigen vereist het Standard-abonnement of hoger; bij Lite zijn de velden vergrendeld. Sinds v3.4 zien alle abonnementen de vastgelegde kosten bij Cijfers en in W&V, dus een percentage dat tijdens de proefperiode is ingesteld blijft ook bij Lite kosten schatten; eerdere versies toonden kosten alleen bij Standard en hoger."
       }
     ],
     "related": [
@@ -564,6 +564,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Hoe voeg ik een klant toe aan een verkoop of wijzig ik die?",
+    "keywords": [
+      "klant",
+      "lid",
+      "klant koppelen",
+      "klant wijzigen",
+      "nieuwe klant",
+      "afrekenen"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Koppel de klant in de winkelmand of op het afrekenscherm: de rij Klant onder het bedrag opent de klantenlijst als er niemand is gekoppeld, en biedt Wijzig klant of Verwijder klant als er wel iemand is gekoppeld. De klant die je bij het afrekenen kiest, is de klant van de winkelmand en blijft eraan gekoppeld als je het afrekenen annuleert."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Als je de klant wijzigt, worden niveaukortingen, verjaardagsacties en het inwisselen van punten meteen opnieuw berekend. Een contant bedrag of een aanbetaling die je al hebt ingevoerd blijft staan en wordt gecontroleerd tegen het nieuwe totaal.",
+          "Kun je de klant niet vinden? Tik op Nieuwe klant rechtsboven in de klantenlijst, of in het midden als niets overeenkomt met je zoekopdracht. Wat je hebt gezocht komt in het formulier te staan — cijfers gaan naar het telefoonnummer, al het andere naar de naam — en de nieuwe klant wordt aan de verkoop gekoppeld.",
+          "Als je op Op rekening tikt zonder gekoppelde klant, opent de klantenlijst; Op rekening wordt geselecteerd zodra je iemand kiest.",
+          "Komt een handmatige korting door de nieuwe klant boven de kortingslimiet van de actieve medewerker uit, dan moet eerst een manager goedkeuren; annuleer je de goedkeuring, dan blijft de klant zoals hij was."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Klanten horen bij het Standard-abonnement; bij Lite staat er in de rij “Klanten — Standard-abonnement” en opent de rij de details over upgraden. De rij Klant bij het afrekenen is er sinds v3.4; eerdere versies koppelen de klant alleen in de winkelmand."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Ik heb een fout gemaakt bij het afrekenen — hoe maak ik een bestelling ongeldig?",
@@ -691,11 +729,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Kies bij het afrekenen de klant en selecteer Op rekening als betaalmethode. Een schuld moet van iemand zijn, dus Op rekening is niet beschikbaar zonder klant."
+        "text": "Ja. Kies Op rekening als betaalmethode, dan wordt de verkoop vastgelegd als openstaand bedrag van de klant. Dat bedrag moet aan een klant gekoppeld zijn, dus als er geen klant is gekoppeld, opent een tik op Op rekening eerst de klantenlijst (sinds v3.4; eerdere versies vragen je een klant in de winkelmand te koppelen)."
       },
       {
         "type": "p",
-        "text": "Om te innen schakel je bovenaan Orders naar Vorderingen. Schulden zijn per klant gegroepeerd; open er een om één bestelling, een hele maand of alles te vereffenen — telkens vraagt DingPOS hoe het geld is betaald. Een losse bestelling kun je ook vanuit de details vereffenen, en een per ongeluk ingevoerde vereffening haal je terug met Vereffening ongedaan maken."
+        "text": "Om te innen schakel je bovenaan Orders naar Vorderingen. Openstaande bedragen zijn per klant gegroepeerd; open een klant om één bestelling, een hele maand of alles te vereffenen — telkens vraagt DingPOS hoe het geld is betaald. Een losse bestelling kun je ook vanuit de details vereffenen, en een per ongeluk ingevoerde vereffening haal je terug met Vereffening ongedaan maken."
       },
       {
         "type": "list",
@@ -712,7 +750,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -731,7 +769,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. De detailpagina's van bestellingen, klanten en inkooporders hebben elk een notitiekaart — tik erop om te bewerken, tot 500 tekens. Je kunt ook meteen een notitie schrijven in het formulier bij het aanmaken van een klant of inkooporder."
+        "text": "Ja. Op de detailpagina's van bestellingen, klanten en inkooporders kun je notities toevoegen. Tik op de notitiekaart om die te bewerken (maximaal 500 tekens), of op de regel “Voeg een notitie toe” als er nog geen notities zijn. Je kunt ook een notitie schrijven in het formulier voor een nieuwe klant of inkooporder."
       },
       {
         "type": "p",
@@ -1047,6 +1085,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Sinds v3.4 houd je de grafiek Omzettrend of Winsttrend ingedrukt om hem periode voor periode te lezen: een kaart toont de datum en de omzet of winst van die periode, en bij Omzettrend met Verkoopvergelijking aan ook de omzet van de vergelijkingsperiode en het verschil. Sleep naar links of rechts om verder te gaan; veeg je omhoog of omlaag over de grafiek, dan scrolt de pagina zoals gewoonlijk."
+      },
+      {
+        "type": "p",
         "text": "De kaart Productranglijst toont de top 5. Tik op de kaart of op Toon alles om alle producten te zien die in de periode zijn verkocht, gerangschikt op aantal na retouren."
       },
       {
@@ -1076,6 +1118,7 @@ export const articles = [
       "heatmap",
       "drukke uren",
       "langzaam verkopende producten",
+      "stijgers en dalers",
       "voorraadwaarde",
       "herhaalaankooppercentage",
       "punten"
@@ -1091,13 +1134,14 @@ export const articles = [
           "Verkoopvergelijking: rechts van de periodebalk vergelijk je met dezelfde periode vorig jaar of met de voorgaande periode (één dag met dezelfde dag vorige week, deze week met vorige week, deze maand met vorige maand, dit jaar met vorig jaar, een aangepaste periode met evenveel dagen daarvoor). De tegel Ontvangen bedrag toont het verschil en het groeipercentage, en de omzetgrafiek krijgt een lichtere lijn voor de vergelijkingsperiode. Zolang een periode nog loopt, wordt de vergelijkingsperiode op hetzelfde moment afgekapt.",
           "Weekdag × uur: zet de kop Verkoop in de tijd op Weekdag × uur voor een heatmap van zeven dagen bij 24 uur — hoe donkerder een vak, hoe meer je verkocht. Wissel tussen omzet en bestellingen; met een vergelijking aan zie je welke uren groeiden en welke krompen.",
           "Langzaam verkopende producten: zet de kop van de rangschikkingskaart op Langzaam verkopende producten om producten van de minste naar de meeste verkopen te tonen, met de huidige voorraad en de datum waarop elk product het laatst is verkocht. Producten die nooit zijn verkocht, staan als ‘Nooit verkocht’. Standaard zie je alleen producten die op voorraad zijn.",
+          "Stijgers en dalers (sinds v3.4): zet de kop van de rangschikkingskaart op Stijgers en dalers voor de 3 producten waarvan de omzet het meest steeg en de 3 waarvan de omzet het meest daalde ten opzichte van de vergelijkingsperiode, elk met de omzet van beide periodes en het verschil. Kies eerst een periode onder Verkoopvergelijking; bij Geen of bij Altijd vraagt de kaart je een andere periode te kiezen. Tik op de kaart of op Toon alles voor de volledige lijst Stijgers en dalers, onderverdeeld in Stijgers en Dalers.",
           "Herhaalaankooppercentage: de laatste regel van de klantentegel is het aandeel leden dat in de periode kocht en in totaal al twee of meer keer heeft gekocht.",
           "Op dit moment: voorraadwaarde (huidige voorraad × huidige kostprijs), elke voorraadmutatie in de gekozen periode, en de punten die klanten hebben maar nog niet hebben ingewisseld, met het maximale bedrag dat ze ermee van de prijs kunnen halen. Dit zijn actuele standen; de periode verandert ze niet."
         ]
       },
       {
         "type": "p",
-        "text": "Sinds v3.4 zijn alle vijf beschikbaar in elk abonnement en blijven ze beschikbaar nadat de proefperiode is afgelopen. Eerdere versies toonden ze alleen bij Pro, met een klein slotje bij andere abonnementen; zie je de slotjes nog, werk dan DingPOS bij via de App Store."
+        "text": "Sinds v3.4 zijn ze allemaal beschikbaar in elk abonnement en blijven ze beschikbaar nadat de proefperiode is afgelopen. Eerdere versies toonden ze alleen bij Pro, met een klein slotje bij andere abonnementen; zie je de slotjes nog, werk dan DingPOS bij via de App Store."
       },
       {
         "type": "p",
@@ -1150,6 +1194,110 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hoe zie ik hoeveel ik elke maand echt heb verdiend?",
+    "keywords": [
+      "winst en verlies",
+      "w&v",
+      "nettowinst",
+      "winst per maand",
+      "kosten",
+      "bedrijfsresultaat",
+      "resultatenrekening"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Open W&V, onder Cijfers in de zijbalk. Daar staat elke maand van nieuw naar oud met de nettowinst: de lopende maand is gemarkeerd met Lopend en de kop van elk jaar telt de nettowinst van de afgesloten maanden bij elkaar op."
+      },
+      {
+        "type": "p",
+        "text": "Tik op een maand om te zien hoe de nettowinst is berekend:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Omzet (excl. btw): de omzet na alle kortingen, min btw, geteld op de dag dat de goederen zijn overhandigd.",
+          "Kostprijs producten: wat de verkochte goederen hebben gekost, op basis van de kostprijzen bij je producten.",
+          "Transactiekosten (geschat): de kosten, geschat op basis van de kostenpercentages van je betaalmethoden.",
+          "Ingehouden aanbetalingen: aanbetalingen die je hebt gehouden toen een voorbestelling werd geannuleerd.",
+          "Vaste kosten en Eenmalige kosten: wat je voor die maand hebt vastgelegd — zie “Hoe leg ik huur, salarissen en andere kosten vast?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Daarna volgen maximaal drie grafieken: de nettowinst per maand, het aandeel van elke vaste kostenpost en de trend van de vaste kosten. De twee trendgrafieken beslaan hooguit de 12 maanden tot en met de maand die je hebt geopend en verschijnen pas als er minstens twee maanden zijn om te vergelijken, geteld vanaf de maand van je eerste verkoop of kostenpost. De grafiek met aandelen heeft een vaste kostenpost in die maand nodig; zolang die er niet is, staat in dat onderdeel Voeg vaste kostenpost toe. In Cijfers springt de laatste regel van de winstkaart rechtstreeks naar W&V: bij een periode van precies één maand toont hij de nettowinst van die maand, zoals “Nettowinst oktober NT$12.300”; bij elke andere periode staat er Bekijk winst en verlies per maand."
+      },
+      {
+        "type": "note",
+        "text": "De nettowinst is het bedrijfsresultaat vóór inkomstenbelasting, berekend uit wat DingPOS heeft vastgelegd — geen belastingaangifte. Zijn er producten zonder kostprijs verkocht, dan toont de maand nog steeds een nettowinst, gemarkeerd met “Exclusief de kostprijs van N producten”; tik erop om te zien welke. W&V is beschikbaar in elk abonnement. Met medewerkersaccounts vraagt het openen om de toestemming Winst en verlies, kosten. Managers en Medewerkers hebben daarvoor standaard goedkeuring nodig, omdat W&V kostprijzen van producten en salarissen toont."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Hoe leg ik huur, salarissen en andere kosten vast?",
+    "keywords": [
+      "kosten",
+      "huur",
+      "salarissen",
+      "gas water en licht",
+      "vaste kosten",
+      "bedrijfskosten",
+      "kosten verspreiden",
+      "afschrijving",
+      "eenmalige kosten"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Tik in W&V op Voeg kostenpost toe en kies een vaste of een eenmalige kostenpost. Een kostenpost telt mee in de maand waartoe hij hoort, niet in de maand waarin je hem betaalde, en de nettowinst van elke maand volgt daarop."
+      },
+      {
+        "type": "p",
+        "text": "Een vaste kostenpost betaal je elke maand, zoals huur, gas, water en licht of salarissen:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Vul de naam, het bedrag per maand en de maand waarin de kostenpost begint in. Kies een eerdere maand om met terugwerkende kracht in te voeren.",
+          "Verandert het bedrag, tik dan op Wijzig bedrag, kies de maand en kies Vanaf deze maand (bijvoorbeeld een huurverhoging) of Alleen deze maand (bijvoorbeeld de energierekening van deze maand). Elke wijziging staat in een lijst en je kunt er een openen om te wijzigen of te verwijderen.",
+          "Stop je met betalen, stel dan Laatste maand meegeteld in: die maand en de maanden ervoor tellen nog mee."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Een eenmalige kostenpost betaal je één keer:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Zet voor een winkelinrichting, apparatuur of vooruitbetaalde verzekering Verspreid over meerdere maanden aan en kies 2 tot 120 maanden en de eerste maand meegeteld. Het formulier toont vooraf hoeveel er per maand meetelt en welke maanden dat zijn.",
+          "Zonder verspreiding kun je nog steeds de maand kiezen waarin de kostenpost meetelt: een rekening van oktober die in november binnenkomt, kan in oktober meetellen, met behoud van de echte datum.",
+          "Eindigt een verspreiding eerder (bijvoorbeeld een opgezegde verzekering), gebruik dan Verspreiding eerder beëindigen: wat er nog over is, telt mee in de maand die je kiest."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Voer in wat de winkel werkelijk draagt, zonder btw die je kunt terugvragen. Voorraad die je gaat verkopen loopt via Inkoop, omdat die bij verkoop in de kostprijs wordt meegeteld; waarborgsommen die je uitbetaalt, aflossingen van leningen en geld dat de eigenaar opneemt zijn geen kosten. Wijzigingen worden samen bewaard als je op ✓ tikt, en raakt een wijziging een afgelopen maand, dan krijg je eerst te zien voor welke maanden de nettowinst verandert."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1247,11 +1395,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kies bij het afrekenen de klant en de punten worden automatisch gespaard; om in te wisselen voer je het aantal te gebruiken punten in. Maak je een bestelling ongeldig, dan worden de daarmee gespaarde punten teruggedraaid en de ingewisselde punten teruggegeven."
+        "text": "Koppel de klant aan de verkoop, in de winkelmand of op het afrekenscherm, en de punten worden automatisch gespaard; om in te wisselen voer je het aantal te gebruiken punten in. Maak je een bestelling ongeldig, dan worden de daarmee gespaarde punten teruggedraaid en de ingewisselde punten teruggegeven."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1475,55 +1624,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Kan ik producten en verkopen importeren uit een ander kassasysteem of een spreadsheet?",
-    "keywords": [
-      "importeren",
-      "csv",
-      "excel",
-      "spreadsheet",
-      "overstappen",
-      "ander kassasysteem",
-      "bulk",
-      "verkoopgeschiedenis"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Ja. Ga naar Instellingen → Gegevens importeren, kies of je producten of verkopen importeert en selecteer een CSV-bestand (Excel en Google Sheets kunnen allebei als CSV opslaan)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Het bestand opent als tabel. Veelgebruikte kolomnamen in het Engels en Chinees (traditioneel of vereenvoudigd) worden automatisch herkend; tik op een kolomkop om de koppeling te wijzigen.",
-          "Tik op een cel om de waarde direct aan te passen. Je hoeft het bestand niet te bewerken en opnieuw te beginnen.",
-          "Tik op Bevestig om te controleren. Rijen met problemen krijgen een rode markering met de reden; bij het importeren van verkopen kun je bestellingen met fouten overslaan.",
-          "Los op wat een keuze vraagt (dubbele productnamen, een rij die bij meerdere klanten past), bekijk de samenvatting en tik op Importeren starten."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Geïmporteerde verkopen worden geplaatst op hun besteldatum en opnieuw berekend met de valuta en btw-modus van je winkel. Ze raken de voorraad niet en geven geen welkomstpunten.",
-          "Klanten worden op telefoonnummer of e-mailadres gekoppeld aan bestaande klanten; wie niet wordt gevonden, wordt aangemaakt.",
-          "Geïmporteerde bestellingen tonen de datum ‘Geïmporteerd op’ en het oorspronkelijke bestelnummer. Je kunt ze niet ongeldig maken of als retour verwerken.",
-          "Rijen met fouten kun je exporteren als CSV met de redenen erbij. Los ze op en importeer opnieuw. Dubbele rijen worden automatisch overgeslagen."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Gegevens importeren is in bèta. Elk bestand mag maximaal 50.000 rijen of 20 MB bevatten. Maak vóór het importeren een cloudback-up; lukt iets niet of ziet het resultaat er verkeerd uit, laat het ons dan weten via Meld een probleem op het importscherm."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1668,13 +1768,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Handelingen (handmatige voorraadcorrectie, handmatige puntencorrectie, productbeheer, afrekenen boven de kortingslimiet): één goedkeuring geldt voor die ene handeling.",
-          "Overzichten (kostprijs en winst, Dashboard, Instellingen, back-up en herstel): een goedkeuring ontgrendelt tot de actieve medewerker wisselt of de app naar de achtergrond gaat.",
+          "Overzichten (kostprijs en winst, Dashboard, W&V en kosten, Instellingen, back-up en herstel): een goedkeuring ontgrendelt tot de actieve medewerker wisselt of de app naar de achtergrond gaat.",
           "De kortingslimiet geldt voor handmatige kortingen en wordt één keer gecontroleerd bij het afrekenen. Automatische kortingsacties en het inwisselen van punten tellen niet mee."
         ]
       },
       {
         "type": "p",
-        "text": "Standaardinstellingen: Managers mogen alles behalve back-up en herstel, zonder kortingslimiet. Medewerkers hebben overal goedkeuring voor nodig, met een limiet van 10%. De eigenaar mag altijd alles; de toestemmingen van de eigenaar kunnen niet worden gewijzigd. Om dit te wijzigen ga je naar Personeel → Toestemmingen per rol, tik je op Wijzig en bewaar je één keer. Het geldt direct voor iedereen."
+        "text": "Standaardinstellingen: Managers mogen alles behalve back-up en herstel, en W&V en kosten, zonder kortingslimiet. Medewerkers hebben overal goedkeuring voor nodig, met een limiet van 10%. De eigenaar mag altijd alles; de toestemmingen van de eigenaar kunnen niet worden gewijzigd. Om dit te wijzigen ga je naar Personeel → Toestemmingen per rol, tik je op Wijzig en bewaar je één keer. Het geldt direct voor iedereen."
       },
       {
         "type": "note",
@@ -1806,13 +1906,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle drie de abonnementen bevatten alle functies voor afrekenen, producten, bestellingen (met ongeldig maken, retouren en omruilingen), rapporten (geavanceerde rapporten inbegrepen sinds v3.4) en back-up in de cloud. Ze verschillen in de hulpmiddelen om je winkel te runnen:"
+        "text": "Alle drie de abonnementen bevatten alle functies voor afrekenen, producten, bestellingen (met ongeldig maken, retouren en omruilingen), rapporten (geavanceerde rapporten en de maandelijkse W&V inbegrepen sinds v3.4) en back-up in de cloud. Ze verschillen in de hulpmiddelen om je winkel te runnen:"
       },
       {
         "type": "list",
         "items": [
           "Lite: voor wie alleen een kraam runt en afrekenen en producten nodig heeft.",
-          "Standard: voegt acties, spaarpunten en klantniveaus, voorraadbeheer, inkoop, verkoop op rekening, voorbestellingen en schattingen van transactiekosten toe.",
+          "Standard: voegt acties, spaarpunten en klantniveaus, voorraadbeheer, inkoop, verkoop op rekening, voorbestellingen en kostenpercentages voor betaalmethoden toe.",
           "Pro: voegt medewerkersaccounts en toestemmingen, goedkeuring door een manager, het activiteitenlogboek en herstelregistraties toe — voor winkels met medewerkers."
         ]
       },
@@ -2024,13 +2124,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Cadeaus en extra artikelen wijzigen de winkelmand nooit uit zichzelf. Zodra aan de voorwaarden is voldaan, verschijnt er een voorstelbanner op het kassascherm, en de winkelmand verandert pas als de kassamedewerker het voorstel accepteert (Kies cadeau / Kies extra artikel) — bewust, want bij cadeaus gaat het om fysieke voorraad: iemand moet bevestigen dat het artikel er is en dat de klant het wil."
+        "text": "Cadeaus en extra artikelen wijzigen de winkelmand nooit uit zichzelf. Zodra aan de voorwaarden is voldaan, verschijnt er een voorstelbanner op het kassascherm, en de winkelmand verandert pas als de kassamedewerker op Kies cadeau of Kies extra artikel tikt — bewust, want bij cadeaus gaat het om fysieke voorraad: iemand moet bevestigen dat het artikel er is en dat de klant het wil."
       },
       {
         "type": "list",
         "items": [
           "Nadat je op ‘Weiger’ hebt getikt, verschijnt hetzelfde voorstel niet opnieuw voor deze winkelmand; bij een nieuwe of geleegde winkelmand verschijnt het opnieuw.",
-          "Als er vóór de bevestiging bij het afrekenen een nieuw voorstel verschijnt, moet dat eerst worden geaccepteerd of geweigerd voordat de bestelling kan worden afgerond.",
+          "Sinds v3.4 houden openstaande aanbiedingen het afrekenen niet meer tegen: een gele regel onder de betaalknop, zoals “1 openstaande actieaanbieding wordt niet toegepast”, laat zien hoeveel er worden weggelaten (tik erop om te zien welke), en de bestelling gaat door zonder die aanbiedingen. Wil je dat het afrekenen zoals vroeger wacht, zet dan Aanbiedingen afhandelen voor het afrekenen aan in Instellingen → Apparaatvoorkeuren; dat geldt alleen voor deze iPad.",
           "Cadeau- en extraregels kunnen niet verder worden verlaagd door andere kortingsacties en tellen niet mee voor de drempels van andere acties."
         ]
       },
@@ -2223,7 +2323,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Er is nog geen apart rapport voor de maandelijkse vereffening, maar alles wat je nodig hebt om af te stemmen, zit al in de app:"
+        "text": "Sinds v3.4 toont W&V de nettowinst van elke maand na de kostprijs van producten, de transactiekosten en je vaste en eenmalige kosten — zie “Hoe zie ik hoeveel ik elke maand echt heb verdiend?” Er is nog geen vereffeningsrapport om te exporteren of te printen, maar alles wat je nodig hebt om af te stemmen, zit al in de app:"
       },
       {
         "type": "list",
@@ -2239,7 +2339,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

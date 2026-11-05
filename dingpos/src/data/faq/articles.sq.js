@@ -433,7 +433,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Komisionet janë vlerësime nga norma që shkruan; shuma reale është ajo e pasqyrës së ofruesit. Ndryshimi i normave dhe shikimi i komisioneve te Statistika kërkojnë planin Standard ose më lart. Te Lite fushat janë të bllokuara, por pagesat prapë regjistrojnë komisionet, ndaj ato shfaqen sapo të përmirësosh planin."
+        "text": "Komisionet janë vlerësime nga norma që shkruan; shuma reale është ajo e pasqyrës së ofruesit. Ndryshimi i normave kërkon planin Standard ose më lart, dhe te Lite fushat janë të bllokuara. Që nga v3.4 çdo plan i sheh komisionet e regjistruara te Statistika dhe te Fitimi, ndaj një normë e caktuar gjatë provës vazhdon të vlerësojë komisione edhe te Lite; versionet e mëparshme i shfaqnin komisionet vetëm te Standard e më lart."
       }
     ],
     "related": [
@@ -566,6 +566,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Si e shtoj ose e ndryshoj klientin në një shitje?",
+    "keywords": [
+      "klient",
+      "anëtar",
+      "lidh klientin",
+      "ndrysho klientin",
+      "klient i ri",
+      "pagesa"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Lidhe klientin në shportë ose në ekranin e pagesës: rreshti Klienti nën shumë hap listën e klientëve kur nuk është lidhur askush, dhe ofron Ndrysho klientin ose Hiq klientin kur është lidhur dikush. Klienti i zgjedhur në pagesë bëhet klienti i shportës dhe mbetet në shportë nëse e anulon pagesën."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ndryshimi i klientit rillogarit menjëherë zbritjet e nivelit, ofertat e ditëlindjes dhe përdorimin e pikëve. Paratë në dorë ose kapari që ke futur tashmë ruhen dhe kontrollohen sipas totalit të ri.",
+          "Nuk e gjen? Prek Klient i ri lart djathtas në listën e klientëve, ose në mes kur asgjë nuk përputhet me kërkimin tënd. Ajo që kërkove plotëson formularin — shifrat shkojnë te telefoni, çdo gjë tjetër te emri — dhe klienti i ri lidhet me shitjen.",
+          "Kur prek Me afat pagese pa klient të lidhur, hapet lista e klientëve, dhe Me afat pagese zgjidhet sapo të zgjedhësh dikë.",
+          "Nëse klienti i ri e çon një zbritje manuale mbi kufirin e zbritjes të operatorit, së pari miraton një menaxher; nëse e anulon miratimin, klienti mbetet siç ishte."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Klientët janë pjesë e planit Standard; te Lite rreshti shfaq “Klientët — plani Standard” dhe hap detajet e përmirësimit. Rreshti Klienti në pagesë erdhi në v3.4; versionet e mëparshme e lidhin klientin vetëm në shportë."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Bëra një gabim te pagesa — si e shfuqizoj një porosi?",
@@ -691,7 +729,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Po. Zgjidh klientin te pagesa dhe zgjidh Me afat pagese si mënyrë pagese. Një borxh duhet të ketë zotëruesin e vet, ndaj Me afat pagese nuk është i disponueshëm pa klient."
+        "text": "Po. Zgjidh Me afat pagese si mënyrë pagese dhe shitja regjistrohet si borxh i klientit. Një borxh duhet të ketë zotëruesin e vet, ndaj kur nuk ka klient të lidhur, prekja e Me afat pagese hap fillimisht listën e klientëve (që nga v3.4; versionet e mëparshme të kërkojnë ta lidhësh klientin në shportë)."
       },
       {
         "type": "p",
@@ -700,7 +738,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Të ardhurat numërohen në ditën kur del malli; Para të arkëtuara dhe pikët e besnikërisë llogariten në ditën e shlyerjes.",
+          "Të ardhurat nga shitjet numërohen në ditën kur del malli; Para të arkëtuara dhe pikët e besnikërisë llogariten në ditën e shlyerjes.",
           "Porositë e pashlyera kanë një shenjë me ngjyrë qelibari në listë, dhe detajet e klientit tregojnë sa i ka mbetur për të paguar.",
           "Një klient me porosi të pashlyera nuk mund të fshihet."
         ]
@@ -712,7 +750,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -731,7 +769,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Po. Faqet e detajeve të porosisë, të klientit dhe të porosisë së blerjes kanë secila një kartë shënimesh — trokite për ta ndryshuar; shënimi mund të ketë deri në 500 karaktere. Mund ta shkruash edhe në formular kur krijon një klient ose një porosi blerjeje."
+        "text": "Po. Faqet e detajeve të porosisë, të klientit dhe të porosisë së blerjes kanë secila shënime: trokit kartën e shënimeve për t’i ndryshuar, deri në 500 karaktere, ose rreshtin e vetëm “Shto një shënim” kur ende nuk ka asnjë. Mund ta shkruash edhe në formular kur krijon një klient ose një porosi blerjeje."
       },
       {
         "type": "p",
@@ -1045,6 +1083,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Që nga v3.4, mbaj shtypur grafikun Trendi i të ardhurave ose Trendi i fitimit bruto për ta lexuar periudhë pas periudhe: një kartë tregon datën dhe të ardhurat ose fitimin e asaj periudhe, dhe te Trendi i të ardhurave, me Krahasimin e shitjeve të ndezur, edhe të ardhurat e periudhës së krahasimit dhe ndryshimin. Zvarrit majtas ose djathtas për të lëvizur; rrëshqit lart ose poshtë mbi grafik dhe faqja lëviz si zakonisht."
+      },
+      {
+        "type": "p",
         "text": "Karta Renditja e produkteve liston 5 më të shiturit. Trokit te karta ose te Shiko të gjitha për të parë çdo produkt të shitur në periudhë, të renditur sipas sasisë pas kthimeve."
       },
       {
@@ -1074,6 +1116,7 @@ export const articles = [
       "hartë nxehtësie",
       "orët e ngarkuara",
       "produkte me shitje të ngadalta",
+      "produkte me ndryshim",
       "vlerësimi i inventarit",
       "shkalla e blerjeve të përsëritura",
       "pikë"
@@ -1089,13 +1132,14 @@ export const articles = [
           "Krahasimi i shitjeve: në të djathtë të shiritit të periudhës, krahaso me të njëjtën periudhë të vitit të kaluar ose me periudhën para saj (një ditë të vetme me të njëjtën ditë të javës së kaluar, këtë javë me javën e kaluar, këtë muaj me muajin e kaluar, këtë vit me vitin e kaluar, një interval të personalizuar me po aq ditë para tij). Pllaka Para të arkëtuara tregon ndryshimin dhe ritmin e rritjes, dhe grafiku i të ardhurave nga shitjet shton një vijë më të zbehtë për periudhën e krahasimit. Sa kohë një periudhë është ende në vazhdim, periudha e krahasimit pritet në të njëjtin çast.",
           "Dita × ora: kalo titullin Shitjet në kohë te Dita × ora për një hartë nxehtësie me shtatë ditë dhe 24 orë — sa më e errët një qelizë, aq më shumë ke shitur. Kalo mes të ardhurave nga shitjet dhe porosive; me krahasimin e ndezur, shih cilat orë u rritën dhe cilat u ulën.",
           "Produkte me shitje të ngadalta: kalo titullin e kartës së renditjes te Produkte me shitje të ngadalta për të listuar produktet nga ato me më pak shitje te ato me më shumë, me stokun aktual dhe datën e fundit kur u shit secili. Produktet që nuk janë shitur kurrë shënohen “Nuk është shitur kurrë”. Si parazgjedhje shfaqen vetëm produktet me stok.",
+          "Ndryshimet (që nga v3.4): kalo titullin e kartës së renditjes te Ndryshimet për 3 produktet me rritjen më të madhe të të ardhurave nga shitjet dhe 3 me rënien më të madhe kundrejt periudhës së krahasimit, secilin me të ardhurat nga shitjet e të dy periudhave dhe ndryshimin. Zgjidh fillimisht një periudhë te Krahasimi i shitjeve; me Asnjë, ose te Gjithë kohës, karta të thotë ta bësh. Trokit te karta ose te Shiko të gjitha për listën e plotë Produktet me ndryshim, të ndarë në Në rritje dhe Në rënie.",
           "Shkalla e blerjeve të përsëritura: rreshti i fundit i pllakës së klientëve është pjesa e anëtarëve që bënë blerje në periudhë dhe kanë blerë dy ose më shumë herë gjithsej.",
           "Tani: vlerësimi i inventarit (stoku aktual × kostoja aktuale), çdo lëvizje stoku në periudhën e zgjedhur, dhe pikat që klientët i kanë por nuk i kanë përdorur ende, me shumën maksimale që mund të zbritin. Këto janë gjendje aktuale; periudha nuk i ndryshon."
         ]
       },
       {
         "type": "p",
-        "text": "Që nga v3.4, të pesë janë të hapura në çdo plan dhe mbeten të hapura edhe pasi mbaron prova. Versionet e mëparshme i shfaqnin vetëm në Pro, me një dryn të vogël në planet e tjera; nëse ende i sheh drynat, përditëso DingPOS nga App Store."
+        "text": "Që nga v3.4, të gjitha janë të hapura në çdo plan dhe mbeten të hapura edhe pasi mbaron prova. Versionet e mëparshme i shfaqnin vetëm në Pro, me një dryn të vogël në planet e tjera; nëse ende i sheh drynat, përditëso DingPOS nga App Store."
       },
       {
         "type": "p",
@@ -1148,6 +1192,110 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Si e shoh sa fitova realisht çdo muaj?",
+    "keywords": [
+      "fitimi dhe humbja",
+      "p&l",
+      "fitimi neto",
+      "fitimi mujor",
+      "shpenzime",
+      "fitimi operativ",
+      "pasqyra e të ardhurave"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Hap skedën Fitimi, poshtë Statistikës në shiritin anësor. Ajo liston çdo muaj nga më i riu te më i vjetri me fitimin e tij neto: muaji aktual shënohet Në vazhdim, dhe titulli i çdo viti mbledh fitimin neto të muajve të tij të përfunduar."
+      },
+      {
+        "type": "p",
+        "text": "Trokit një muaj për të parë si llogaritet fitimi i tij neto:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Të ardhura nga shitjet (pa tatim): të ardhurat pas çdo zbritjeje, minus tatimin, të numëruara në ditën kur u dorëzua malli.",
+          "Kostoja e produkteve: kostoja e asaj që u shit, nga kostot e vëna te produktet e tua.",
+          "Komisione procesimi (vlerësim): komisionet e vlerësuara nga normat e mënyrave të tua të pagesës.",
+          "Kapare të mbajtura: kaparet që ke mbajtur kur një porosi paraprake u anulua.",
+          "Shpenzime fikse dhe Shpenzime të njëhershme: ato që ke regjistruar për atë muaj — shih “Si i regjistroj qiranë, pagat dhe shpenzimet e tjera?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Pas tyre vijnë deri në tre grafikë: fitimi neto sipas muajve, pesha e secilit shpenzim fiks dhe trendi i shpenzimeve fikse. Dy grafikët e trendit përfshijnë më së shumti 12 muajt deri te muaji që ke hapur dhe shfaqen vetëm kur ka të paktën dy muaj për t’u krahasuar, të numëruar nga muaji i shitjes ose i shpenzimit tënd të parë. Grafiku i peshës kërkon një shpenzim fiks në atë muaj; derisa të ketë një, ajo pjesë shfaq Shto shpenzim fiks. Te Statistika, rreshti i fundit i kartës së fitimit të çon drejt e te Fitimi: për një periudhë që është saktësisht një muaj tregon fitimin neto të atij muaji, si “Fitimi neto për tetor: NT$12,300”; për çdo periudhë tjetër shfaq Shiko fitimin dhe humbjen mujore."
+      },
+      {
+        "type": "note",
+        "text": "Fitimi neto është fitimi operativ para tatimit mbi të ardhurat, i llogaritur nga ato që ka regjistruar DingPOS — nuk është deklaratë tatimore. Nëse ka produkte të shitura pa kosto, muaji prapë tregon një fitim neto, të shënuar “Nuk përfshin koston e N produkteve”; trokite për të parë cilat janë. Skeda Fitimi është e hapur në çdo plan. Me llogari punonjësish, hapja e saj kërkon lejen Fitimi, humbja dhe shpenzimet, për të cilën Menaxherët dhe Punonjësit kanë nevojë për miratim si parazgjedhje, sepse tregon kostot e produkteve dhe pagat."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Si i regjistroj qiranë, pagat dhe shpenzimet e tjera?",
+    "keywords": [
+      "shpenzime",
+      "qira",
+      "paga",
+      "shërbime komunale",
+      "shpenzime fikse",
+      "shpenzime operative",
+      "amortizim",
+      "shpërndarje shpenzimi",
+      "shpenzim i njëhershëm"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Te Fitimi, trokit Shto shpenzim dhe zgjidh një shpenzim fiks ose të njëhershëm. Një shpenzim numërohet në muajin që i përket, jo në muajin kur e ke paguar, dhe fitimi neto i çdo muaji e ndjek këtë."
+      },
+      {
+        "type": "p",
+        "text": "Një shpenzim fiks është ai që e paguan çdo muaj, si qiraja, shërbimet komunale ose pagat:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Shkruaj emrin, shumën mujore dhe muajin kur fillon. Zgjidh një muaj më të hershëm për të plotësuar të kaluarën.",
+          "Kur ndryshon shuma, trokit Ndrysho shumën, zgjidh muajin dhe zgjidh Nga ky muaj (p.sh. një rritje qiraje) ose Vetëm këtë muaj (p.sh. fatura e rrymës e këtij muaji). Çdo ndryshim listohet dhe mund ta hapësh për ta ndryshuar ose hequr.",
+          "Kur ndalon ta paguash, cakto Muaji i fundit i numëruar: ai muaj dhe ata para tij numërohen prapë."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Një shpenzim i njëhershëm paguhet vetëm një herë:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Për një rregullim dyqani, pajisje ose sigurim të paguar paraprakisht, aktivizo Shpërndaje në disa muaj dhe zgjidh numrin e muajve (2 deri në 120) dhe Muaji i parë i numëruar. Formulari tregon paraprakisht sa numërohet çdo muaj dhe cilët muaj mbulon.",
+          "Pa shpërndarje, prapë mund të zgjedhësh Muaji i numëruar: një faturë e tetorit që arrin në nëntor mund të numërohet në tetor, ndërsa data e vërtetë ruhet.",
+          "Nëse një shpërndarje përfundon më herët (p.sh. një polisë sigurimi e anuluar), përdor Përfundo shpërndarjen më herët: ç’ka mbetur numërohet në muajin që zgjedh."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Shkruaj atë që dyqani e përballon realisht, pa tatimin që mund ta rikuperosh. Stoku që do ta shesësh kalon te Blerje, sepse numërohet te kostoja e produktit kur shitet; depozitat e garancisë, kryegjëja e huasë dhe paratë që merr pronari nuk janë shpenzime. Ndryshimet ruhen së bashku kur trokit ✓, dhe një ndryshim që arrin një muaj të përfunduar të tregon së pari fitimi neto i cilëve muaj do të ndryshojë."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1246,11 +1394,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zgjidh anëtarin në pagesë dhe pikët grumbullohen automatikisht; për t'i përdorur, shkruaj pikët që do të shpenzohen. Shfuqizimi i një porosie heq pikët që ajo kishte dhënë dhe kthen pikët që ishin përdorur."
+        "text": "Lidhe anëtarin me shitjen, në shportë ose në ekranin e pagesës, dhe pikët grumbullohen automatikisht; për t'i përdorur, shkruaj pikët që do të shpenzohen. Shfuqizimi i një porosie heq pikët që ajo kishte dhënë dhe kthen pikët që ishin përdorur."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1472,55 +1621,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Mund t’i importoj produktet dhe shitjet nga një POS tjetër ose nga një tabelë?",
-    "keywords": [
-      "importim",
-      "csv",
-      "excel",
-      "tabelë",
-      "migrim",
-      "ndërrim POS",
-      "në masë",
-      "historiku i shitjeve"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Po. Shko te Cilësimet → Importi i të dhënave, zgjidh nëse do të importosh produkte apo shitje dhe zgjidh një skedar CSV (Excel dhe Google Sheets mund të ruajnë të dyja si CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Skedari hapet si tabelë. Emrat e zakonshëm të kolonave në anglisht dhe kinezisht (tradicionale ose të thjeshtuar) përputhen automatikisht; prek kokën e çdo kolone për të ndryshuar përputhjen.",
-          "Prek çdo qelizë për ta korrigjuar vlerën aty për aty — nuk ka nevojë ta ndryshosh skedarin dhe ta nisësh nga e para.",
-          "Prek Konfirmo për ta verifikuar. Rreshtat me probleme shënohen me të kuqe me arsyen; importimet e shitjeve mund t’i anashkalojnë porositë me gabime.",
-          "Zgjidh çdo gjë që kërkon vendim (emra produktesh të dyfishtë, një rresht që përputhet me disa klientë), shqyrto përmbledhjen, pastaj prek Nis importimin."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Shitjet e importuara vendosen sipas datës së porosisë dhe rillogariten me monedhën dhe mënyrën e taksës së dyqanit tënd. Nuk ndikojnë stokun dhe nuk japin pikë mirëseardhjeje.",
-          "Klientët përputhen me ata ekzistues sipas telefonit ose emailit; kush nuk përputhet krijohet i ri.",
-          "Porositë e importuara shfaqin datën e importimit dhe numrin e porosisë burimore, dhe nuk mund të shfuqizohen ose të kthehen.",
-          "Rreshtat me gabime mund të eksportohen si CSV me arsyet e shënuara — korrigjoji dhe importo përsëri. Rreshtat e dyfishtë anashkalohen automatikisht."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "Importi i të dhënave është në beta. Çdo skedar mund të përmbajë deri në 50.000 rreshta ose 20 MB. Bëj një kopje rezervë në cloud përpara importimit; nëse diçka nuk importohet ose rezultati duket i gabuar, na e thuaj përmes Raporto një problem në ekranin e importimit."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1660,19 +1760,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Një leje ka dy vlera: E lejuar ose Kërkon miratim — asgjë nuk është e ndaluar plotësisht. Kur punonjësit hasin një veprim që kërkon miratim, një koleg që ka të drejtë ta bëjë zgjedh emrin e vet dhe shkruan PIN-in për ta lejuar."
+        "text": "Një leje ka dy vlera: E lejuar ose Kërkon miratim — asgjë nuk është e ndaluar plotësisht. Kur punonjësit hasin një veprim që kërkon miratim, një koleg që lejohet ta kryejë atë zgjedh emrin e vet dhe shkruan PIN-in për ta lejuar."
       },
       {
         "type": "list",
         "items": [
           "Veprimet (rregullimi manual i stokut, rregullimi manual i pikëve, menaxhimi i produkteve, kryerja e pagesës me zbritje mbi kufirin e lejuar): një miratim mbulon vetëm atë veprim.",
-          "Pamjet (kosto dhe fitim, Paneli, Cilësimet, kopje rezervë dhe rivendosje): miratimi zhbllokon derisa të ndërrojë operatori ose aplikacioni të kalojë në sfond.",
+          "Pamjet (kosto dhe fitim, Paneli, Fitimi, humbja dhe shpenzimet, Cilësimet, kopje rezervë dhe rivendosje): miratimi zhbllokon derisa të ndërrojë operatori ose aplikacioni të kalojë në sfond.",
           "Kufiri i zbritjes vlen për zbritjet manuale dhe kontrollohet një herë gjatë pagesës; promovimet automatike dhe përdorimi i pikëve nuk llogariten në të."
         ]
       },
       {
         "type": "p",
-        "text": "Parazgjedhjet: Menaxherët lejohen të bëjnë gjithçka përveç kopjes rezervë dhe rivendosjes, pa kufi zbritjeje; Punonjësit kanë nevojë për miratim për gjithçka, me kufi 10%. Pronari lejohet gjithmonë dhe lejet e tij nuk mund të ndryshohen. Për t'i ndryshuar, shko te Stafi → Lejet e roleve, prek Ndrysho dhe ruaj një herë — ndryshimet zbatohen menjëherë për të gjithë."
+        "text": "Parazgjedhjet: Menaxherët lejohen të bëjnë gjithçka përveç kopjes rezervë dhe rivendosjes dhe përveç fitimit, humbjes dhe shpenzimeve, pa kufi zbritjeje; Punonjësit kanë nevojë për miratim për gjithçka, me kufi 10%. Pronari lejohet gjithmonë dhe lejet e tij nuk mund të ndryshohen. Për t'i ndryshuar, shko te Stafi → Lejet e roleve, prek Ndrysho dhe ruaj një herë — ndryshimet zbatohen menjëherë për të gjithë."
       },
       {
         "type": "note",
@@ -1806,13 +1906,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Të tria planet përfshijnë funksionin e plotë të pagesës, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet (raportet e avancuara të përfshira që nga v3.4) dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
+        "text": "Të tria planet përfshijnë funksionin e plotë të pagesës, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet (raportet e avancuara dhe fitimi e humbja mujore të përfshira që nga v3.4) dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
       },
       {
         "type": "list",
         "items": [
           "Lite: për një person që drejton një banak pazari dhe i duhen pagesa e produktet.",
-          "Standard: shton promovime, pikë besnikërie dhe nivele anëtarësh, ndjekjen e stokut, blerjet te furnitorët, shitjet me afat pagese, porositë paraprake dhe vlerësimin e komisionit të procesimit.",
+          "Standard: shton promovime, pikë besnikërie dhe nivele anëtarësh, ndjekjen e stokut, blerjet te furnitorët, shitjet me afat pagese, porositë paraprake dhe normat e komisionit të pagesave.",
           "Pro: shton llogari punonjësish dhe leje, miratimin nga menaxheri, regjistrin e aktivitetit dhe regjistrimet e rivendosjes — për dyqane me punonjës."
         ]
       },
@@ -2023,13 +2123,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Dhuratat dhe shtesat me pagesë nuk e ndryshojnë kurrë vetë shportën. Kur plotësohen kushtet, në ekranin e arkëtarit shfaqet një banner sugjerimi, dhe shporta ndryshon vetëm kur arkëtari troket butonin e pranimit (Zgjidh dhuratën ose Zgjidh shtesën) — me qëllim, sepse dhuratat përfshijnë stok fizik: dikush duhet të konfirmojë që e ka në dispozicion dhe që klienti e dëshiron."
+        "text": "Dhuratat dhe shtesat me pagesë nuk e ndryshojnë kurrë vetë shportën. Kur plotësohen kushtet, në ekranin e arkëtarit shfaqet një banner sugjerimi, dhe shporta ndryshon vetëm kur arkëtari troket Zgjidh dhuratën ose Zgjidh shtesën — me qëllim, sepse dhuratat përfshijnë stok fizik: dikush duhet të konfirmojë që e ka në dispozicion dhe që klienti e dëshiron."
       },
       {
         "type": "list",
         "items": [
           "Pas Refuzo, i njëjti sugjerim nuk shfaqet më për këtë shportë; një shportë e re ose e pastruar e kërkon sërish.",
-          "Nëse para konfirmimit të pagesës shfaqet një sugjerim i ri, ai duhet pranuar ose refuzuar para se porosia të mund të dërgohet.",
+          "Që nga v3.4, ofertat ende në pritje nuk e ndalojnë pagesën: një rresht i verdhë nën butonin e pagesës, si “1 ofertë në pritje nuk do të zbatohet”, tregon sa janë lënë jashtë (trokite për të parë cilat), dhe porosia kalon pa to. Që pagesa të presë si më parë, aktivizo Zgjidh ofertat para pagesës te Cilësimet → Preferencat e pajisjes; vlen vetëm për këtë iPad.",
           "Rreshtat e dhuratave dhe të shtesave nuk mund të zbriten më tej nga promovime të tjera me para, dhe nuk numërohen për pragjet e promovimeve të tjera."
         ]
       },
@@ -2220,12 +2320,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ende nuk ka një raport të veçantë të shlyerjes mujore, por gjithçka që të duhet për rakordim është tashmë në aplikacion:"
+        "text": "Që nga v3.4, Fitimi tregon fitimin neto të çdo muaji pas kostos së produkteve, komisioneve dhe shpenzimeve — shih “Si e shoh sa fitova realisht çdo muaj?” Ende nuk ka raport shlyerjeje për ta eksportuar ose printuar, por gjithçka që të duhet për rakordim është tashmë në aplikacion:"
       },
       {
         "type": "list",
         "items": [
-          "Zgjidh Statistika te Këtë muaj për të parë të ardhurat nga shitjet e muajit, paratë e arkëtuara, fitimin dhe ndarjen sipas mënyrës së pagesës.",
+          "Te Statistika, zgjidh Këtë muaj për të parë të ardhurat nga shitjet e muajit, paratë e arkëtuara, fitimin dhe ndarjen sipas mënyrës së pagesës.",
           "Blerjet nga furnitorët me afat mujor mblidhen te Të papaguara në Blerje, ku mund të shlyesh menjëherë blerjet e një muaji të tërë.",
           "Shitjet me afat pagese për klientët mblidhen te Porosi → Të arkëtueshme, ku mund të shlyesh menjëherë shitjet e një muaji të tërë."
         ]
@@ -2236,7 +2336,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

@@ -93,6 +93,17 @@ test("retired page URL without trailing slash still redirects in one hop", async
   assert.equal(res.headers.get("location"), "https://alu-studio.com/dingpos/support/returns-exchanges/");
 });
 
+test("retired import-csv article -> that language's support home 301", async () => {
+  for (const [from, to] of [
+    ["/dingpos/support/import-csv/", "/dingpos/support/"],
+    ["/dingpos/ja/support/import-csv", "/dingpos/ja/support/"],
+  ]) {
+    const res = await worker.fetch(new Request(`https://alu-studio.com${from}`), mockEnv(), {});
+    assert.equal(res.status, 301);
+    assert.equal(res.headers.get("location"), `https://alu-studio.com${to}`);
+  }
+});
+
 test("withdrawn German guide -> German home 301", async () => {
   const req = new Request("https://alu-studio.com/dingpos/de/guides/payment-processing-fees-germany/");
   const res = await worker.fetch(req, mockEnv(), {});

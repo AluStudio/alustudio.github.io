@@ -273,10 +273,6 @@
           "name": "Produktadministrasjon",
           "desc": "Varianter, strekkoder, bilder, kategorier, produkter med åpen pris"
         },
-        "import": {
-          "name": "Dataimport",
-          "desc": "Importer produkter og tidligere salg fra andre systemer via CSV"
-        },
         "inventory": {
           "name": "Lagerstyring",
           "desc": "Lageret trekkes ved salg; manuelle justeringer gir en bevegelseslogg"
@@ -301,9 +297,13 @@
           "name": "Oversikt over virksomheten",
           "desc": "Salgsinntekt, fortjeneste, rabatter, betalingsfordeling og bestselgere"
         },
+        "profit_loss": {
+          "name": "Månedlig resultat",
+          "desc": "Registrer husleie, lønn og andre utgifter, og se nettoresultatet for hver måned"
+        },
         "payment_fees": {
-          "name": "Overslag over transaksjonsgebyrer",
-          "desc": "Angi gebyrsats for hver betalingsmåte, og se gebyrer og forventet nettobeløp mottatt per betalingsmåte"
+          "name": "Gebyrsatser for betalinger",
+          "desc": "Angi gebyrsats for hver betalingsmåte for å anslå gebyrer og forventet nettobeløp mottatt"
         },
         "comparison": {
           "name": "Periodesammenligning",

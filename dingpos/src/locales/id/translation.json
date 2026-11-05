@@ -273,10 +273,6 @@
           "name": "Pengelolaan produk",
           "desc": "Varian, barcode, foto, kategori, produk harga bebas"
         },
-        "import": {
-          "name": "Impor data",
-          "desc": "Impor produk dan penjualan lama dari sistem lain lewat CSV"
-        },
         "inventory": {
           "name": "Pelacakan stok",
           "desc": "Stok berkurang otomatis saat terjual; penyesuaian manual tercatat dalam riwayat pergerakan"
@@ -301,9 +297,13 @@
           "name": "Dasbor bisnis",
           "desc": "Pendapatan, laba, diskon, ragam pembayaran, dan produk terlaris"
         },
+        "profit_loss": {
+          "name": "Laba rugi bulanan",
+          "desc": "Catat sewa, gaji, dan pengeluaran lain; lihat laba bersih tiap bulan"
+        },
         "payment_fees": {
-          "name": "Perkiraan biaya pembayaran",
-          "desc": "Atur tarif biaya tiap metode pembayaran; lihat perkiraan biaya dan perkiraan kas bersih diterima per metode"
+          "name": "Tarif biaya pembayaran",
+          "desc": "Atur tarif biaya tiap metode pembayaran untuk memperkirakan biaya dan kas bersih diterima"
         },
         "comparison": {
           "name": "Perbandingan periode",

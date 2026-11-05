@@ -37,6 +37,10 @@ const MOVED_PATHS = new Map([
   // German guides withdrawn (owner, 2026-10-26): the de site has no guides section.
   ["/dingpos/de/guides/", "/dingpos/de/"],
   ["/dingpos/de/guides/payment-processing-fees-germany/", "/dingpos/de/"],
+  // DingPOS 3.4 removed Data Import. The languages that had the article, frozen: a later language never had the URL.
+  ...["", "zh-hant/", "zh-hans/", "ja/", "th/", "ko/", "vi/", "id/", "es/", "fr/", "de/", "pt-br/", "it/", "nl/", "ms/", "tr/",
+    "sv/", "da/", "nb/", "fi/", "et/", "el/", "hu/", "bg/", "sq/", "ka/", "mn/", "uz/", "km/", "lo/", "hi/", "bn/"]
+    .map((prefix) => [`/dingpos/${prefix}support/import-csv/`, `/dingpos/${prefix}support/`]),
 ]);
 
 export default {

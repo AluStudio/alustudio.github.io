@@ -425,7 +425,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "As taxas são estimativas a partir da alíquota que você informa; o extrato da operadora mostra o valor real. Editar as alíquotas das taxas e ver as taxas no Resumo exigem o plano Standard ou superior. No Lite os campos ficam bloqueados, mas os pagamentos continuam registrando as taxas, que aparecem quando você faz o upgrade."
+        "text": "As taxas são estimativas a partir da alíquota que você informa; o extrato da operadora mostra o valor real. Editar as alíquotas das taxas exige o plano Standard ou superior, e no Lite os campos ficam bloqueados. Desde a versão 3.4, todos os planos veem as taxas registradas no Resumo e na DRE, então uma alíquota definida durante o teste continua estimando no Lite; as versões anteriores mostravam as taxas só no Standard ou superior."
       }
     ],
     "related": [
@@ -558,6 +558,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Como adicionar ou trocar o cliente de uma venda?",
+    "keywords": [
+      "cliente",
+      "membro",
+      "vincular cliente",
+      "trocar cliente",
+      "novo cliente",
+      "finalizar venda"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Vincule o cliente no carrinho ou na tela Pagamento: a linha Cliente, abaixo do valor, abre a lista de clientes quando ninguém está vinculado e oferece Alterar cliente ou Remover cliente quando alguém está. O cliente escolhido no pagamento é o cliente do carrinho e continua nele se você cancelar o pagamento."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Trocar o cliente recalcula na hora os descontos de nível, as ofertas de aniversário e o resgate de pontos. O dinheiro ou o sinal que você já digitou é mantido e conferido com o novo total.",
+          "Não achou? Toque em Novo cliente no canto superior direito da lista de clientes ou, quando nada corresponde à busca, no meio da lista. O que você buscou preenche o formulário — números vão para o telefone, o resto para o nome — e o novo cliente é vinculado à venda.",
+          "Ao tocar em A prazo sem cliente vinculado, a lista de clientes abre, e A prazo fica selecionado assim que você escolhe alguém.",
+          "Se o novo cliente fizer um desconto manual passar do limite de desconto do operador, um gerente precisa aprovar antes; se você cancelar a aprovação, o cliente continua como estava."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Clientes fazem parte do plano Standard; no Lite a linha mostra “Clientes — plano Standard” e abre os detalhes do upgrade. A linha Cliente na tela Pagamento chegou na versão 3.4; as versões anteriores vinculam o cliente só no carrinho."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Errei na hora de finalizar a venda: como anulo uma venda?",
@@ -684,7 +722,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pode. Selecione o cliente ao finalizar a venda e escolha A prazo como forma de pagamento. Uma dívida precisa de alguém responsável por ela, por isso A prazo não está disponível sem um cliente."
+        "text": "Pode. Escolha A prazo como forma de pagamento e a venda é registrada como dívida do cliente. Uma dívida precisa de alguém responsável por ela; por isso, sem cliente vinculado, ao tocar em A prazo a lista de clientes abre primeiro (desde a versão 3.4; as versões anteriores pedem que você vincule um cliente no carrinho)."
       },
       {
         "type": "p",
@@ -705,7 +743,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -724,7 +762,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pode. As páginas de detalhes de vendas, clientes e pedidos de compra têm um cartão de observações: toque nele para editar, com até 500 caracteres. Você também pode escrever uma no formulário ao criar um cliente ou um pedido de compra."
+        "text": "Pode. As páginas de detalhes de vendas, clientes e pedidos de compra têm, cada uma, observações: toque no cartão de observações para editar, com até 500 caracteres, ou na única linha “Adicionar observação” enquanto não houver nenhuma. Você também pode escrever uma no formulário ao criar um cliente ou um pedido de compra."
       },
       {
         "type": "p",
@@ -1038,6 +1076,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Desde a versão 3.4, mantenha o dedo pressionado no gráfico Tendência da receita ou Tendência do lucro para lê-lo período a período: um card mostra a data e a receita ou o lucro daquele período e, na Tendência da receita com a Comparação de vendas ativada, também a receita do período de comparação e a diferença. Arraste para a esquerda ou para a direita para se mover; deslize para cima ou para baixo no gráfico e a página rola normalmente."
+      },
+      {
+        "type": "p",
         "text": "O card Ranking de produtos lista os 5 primeiros. Toque no card ou em Ver tudo para listar todos os produtos vendidos no período, ordenados pela quantidade após as devoluções."
       },
       {
@@ -1068,6 +1110,7 @@ export const articles = [
       "horários de pico",
       "produtos parados",
       "valor do estoque",
+      "variação por produto",
       "taxa de recompra",
       "pontos"
     ],
@@ -1082,13 +1125,14 @@ export const articles = [
           "Comparação de vendas: à direita da barra de período, compare com o mesmo período do ano passado ou com o período anterior (um único dia com o mesmo dia da semana passada, esta semana com a semana passada, este mês com o mês passado, este ano com o ano passado, um período personalizado com o mesmo número de dias imediatamente antes). O card Valor recebido mostra a diferença e a taxa de crescimento, e o gráfico de receita ganha uma linha mais clara para o período de comparação. Enquanto um período ainda está em andamento, o período de comparação é cortado no mesmo momento.",
           "Dia da semana × hora: troque o cabeçalho Vendas ao longo do tempo para Dia da semana × hora e veja um mapa de calor de sete dias por 24 horas — quanto mais escura a célula, mais você vendeu. Alterne entre receita e vendas; com uma comparação ativa, veja em quais horários houve alta e em quais houve queda.",
           "Produtos parados: troque o cabeçalho do card de ranking para Produtos parados para listar os produtos ordenados do menor para o maior número de vendas, com o estoque atual e a data da última venda de cada um. Produtos que nunca foram vendidos aparecem como Nunca vendido. Por padrão, só aparecem produtos com estoque.",
+          "Variações (desde a versão 3.4): troque o cabeçalho do card de ranking para Variações e veja os 3 produtos cuja receita mais subiu e os 3 que mais caíram em relação ao período de comparação, cada um com a receita dos dois períodos e a diferença. Escolha primeiro um período em Comparação de vendas; com Nenhum, ou em Todo o período, o card avisa. Toque no card ou em Ver tudo para abrir a lista completa de Variação por produto, dividida em Em alta e Em queda.",
           "Taxa de recompra: a última linha do card de clientes é a parcela dos membros que compraram no período e já compraram duas ou mais vezes no total.",
           "Agora: valor do estoque (estoque atual × custo atual), todas as movimentações de estoque no período selecionado e os pontos que os clientes têm e ainda não resgataram, com o desconto máximo que eles permitem. Esses valores são da posição atual; o período não os altera."
         ]
       },
       {
         "type": "p",
-        "text": "Desde a versão 3.4, os cinco estão disponíveis em todos os planos e continuam disponíveis depois que o teste termina. As versões anteriores os mostravam só no Pro, com um pequeno cadeado nos outros planos; se você ainda vê os cadeados, atualize o DingPOS pela App Store."
+        "text": "Desde a versão 3.4, todos esses relatórios estão disponíveis em todos os planos e continuam disponíveis depois que o teste termina. As versões anteriores os mostravam só no Pro, com um pequeno cadeado nos outros planos; se você ainda vê os cadeados, atualize o DingPOS pela App Store."
       },
       {
         "type": "p",
@@ -1141,6 +1185,109 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Como ver quanto minha loja realmente lucrou em cada mês?",
+    "keywords": [
+      "DRE",
+      "demonstração de resultado",
+      "lucro líquido",
+      "lucro mensal",
+      "despesas",
+      "lucro operacional",
+      "resultado do mês"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Abra a DRE, logo abaixo de Resumo na barra lateral. Ela lista todos os meses, do mais recente ao mais antigo, cada um com o lucro líquido: o mês atual aparece como Em andamento, e o cabeçalho de cada ano soma o lucro líquido dos meses já encerrados."
+      },
+      {
+        "type": "p",
+        "text": "Toque em um mês para ver como o lucro líquido dele é calculado:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Receita (sem imposto): a receita depois de todos os descontos, menos o imposto, contada no dia em que o produto foi entregue.",
+          "Custo dos produtos: o custo do que foi vendido, a partir dos custos cadastrados nos seus produtos.",
+          "Taxas de processamento (est.): as taxas estimadas a partir das alíquotas das suas formas de pagamento.",
+          "Sinais retidos: sinais que você reteve quando uma encomenda foi cancelada.",
+          "Despesas fixas e Despesas avulsas: o que você registrou para aquele mês — veja “Como registrar aluguel, folha de pagamento e outras despesas?”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Em seguida vêm até três gráficos: o lucro líquido mês a mês, a participação de cada despesa fixa e a tendência das despesas fixas. Os dois gráficos de tendência cobrem no máximo os 12 meses até o mês que você abriu e só aparecem quando há pelo menos dois meses para comparar, contados a partir do mês da primeira venda ou despesa. O gráfico de participação precisa de uma despesa fixa naquele mês; enquanto não houver, essa seção mostra Adicionar despesa fixa. No Resumo, a última linha do card de lucro leva direto à DRE: para um período que é exatamente um mês, ela mostra o lucro líquido daquele mês, como “Lucro líquido de outubro: NT$12,300”; para qualquer outro período, aparece Ver DRE mensal."
+      },
+      {
+        "type": "note",
+        "text": "O lucro líquido é o lucro operacional antes do imposto de renda, calculado com o que o DingPOS registrou — não é uma declaração de impostos. Se houver produtos vendidos sem custo, o mês ainda mostra um lucro líquido, marcado com “Não inclui o custo de N produto(s)”; toque nele para ver quais. A DRE está em todos os planos. Com contas de funcionários, abri-la exige a permissão DRE e despesas, que Gerentes e Funcionários só têm com aprovação por padrão, porque ela mostra custos de produtos e folha de pagamento."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Como registrar aluguel, folha de pagamento e outras despesas?",
+    "keywords": [
+      "despesas",
+      "aluguel",
+      "folha de pagamento",
+      "água e luz",
+      "despesas fixas",
+      "custos fixos",
+      "diluição de despesa",
+      "despesa avulsa"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Na DRE, toque em Adicionar despesa e escolha uma despesa fixa ou avulsa. Uma despesa conta no mês a que pertence, não no mês em que você a pagou, e o lucro líquido de cada mês acompanha."
+      },
+      {
+        "type": "p",
+        "text": "Uma despesa fixa é a que você paga todo mês, como aluguel, contas de água e luz ou folha de pagamento:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Informe o nome, o valor mensal e o mês de início. Escolha um mês anterior para incluir meses passados.",
+          "Quando o valor mudar, toque em Alterar valor, escolha o mês e selecione A partir deste mês (um aumento de aluguel, por exemplo) ou Só este mês (a conta de luz do mês). Todas as alterações ficam listadas, e você pode abrir uma para editar ou remover.",
+          "Quando você deixar de pagá-la, defina o Último mês contado: esse mês e os anteriores continuam contando."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Uma despesa avulsa é paga uma única vez:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Para uma reforma, equipamentos ou um seguro pago adiantado, ative Diluir em vários meses e escolha de 2 a 120 meses e o Primeiro mês contado. O formulário mostra uma prévia de quanto conta em cada mês e quais meses ela cobre.",
+          "Sem diluir, você ainda pode escolher o mês contado: uma conta de outubro que chega em novembro pode contar em outubro, com a data real mantida.",
+          "Se uma diluição terminar antes (um seguro cancelado, por exemplo), use Encerrar diluição antes: o que sobrar conta no mês que você escolher."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Informe o que a loja realmente paga, sem incluir impostos que você possa recuperar. O estoque que você vai vender passa por Compras, porque entra no custo dos produtos quando é vendido; depósitos caução, o principal de empréstimos e retiradas do proprietário não são despesas. As alterações são salvas juntas quando você toca em ✓, e uma alteração que alcança um mês já encerrado antes avisa de quais meses o lucro líquido vai mudar."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1233,15 +1380,16 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vá em Ajustes → Fidelidade e defina duas regras: quantos pontos o cliente ganha a cada X gasto e quantos pontos (N) valem M de desconto no resgate, com um limite de resgate por venda opcional. Você também pode dar um bônus de boas-vindas em pontos aos novos membros automaticamente."
+        "text": "Vá em Ajustes → Programa de fidelidade e defina duas regras: quantos pontos o cliente ganha a cada X gasto e quantos pontos (N) valem M de desconto no resgate, com um limite de resgate por venda opcional. Você também pode dar um bônus de boas-vindas em pontos aos novos membros automaticamente."
       },
       {
         "type": "p",
-        "text": "Selecione o membro na finalização da venda e os pontos são acumulados automaticamente; para resgatar, informe os pontos a usar. Anular uma venda reverte os pontos que ela gerou e devolve os pontos que foram resgatados."
+        "text": "Vincule o membro à venda, no carrinho ou na tela Pagamento, e os pontos são acumulados automaticamente; para resgatar, informe os pontos a usar. Anular uma venda reverte os pontos que ela gerou e devolve os pontos que foram resgatados."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1465,55 +1613,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Dá para importar produtos e vendas de outro PDV ou de uma planilha?",
-    "keywords": [
-      "importar",
-      "csv",
-      "excel",
-      "planilha",
-      "migrar",
-      "trocar de PDV",
-      "em massa",
-      "histórico de vendas"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Sim. Vá em Ajustes → Importar dados, escolha se quer importar produtos ou vendas e selecione um arquivo CSV (o Excel e o Planilhas Google salvam em CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "O arquivo abre como uma tabela. Nomes de coluna comuns em inglês e chinês (tradicional ou simplificado) são reconhecidos automaticamente; toque no cabeçalho de qualquer coluna para mudar o mapeamento.",
-          "Toque em qualquer célula para corrigir o valor ali mesmo — sem precisar editar o arquivo e recomeçar.",
-          "Toque em Confirmar para validar. As linhas com problemas ficam marcadas em vermelho com o motivo; na importação de vendas, é possível pular as vendas com erro.",
-          "Resolva o que exigir uma decisão (nomes de produto repetidos, uma linha que corresponde a vários clientes), confira o resumo e toque em Iniciar importação."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "As vendas importadas são posicionadas pela data da venda e recalculadas com a moeda e o modo de imposto da sua loja. Elas não afetam o estoque e não dão pontos de boas-vindas.",
-          "Os clientes são associados aos existentes por telefone ou e-mail; quem não for encontrado é criado.",
-          "As vendas importadas mostram a data em que foram importadas e o nº de origem, e não podem ser anuladas nem devolvidas.",
-          "As linhas com erro podem ser exportadas em um CSV com os motivos anotados — corrija e importe de novo. Linhas duplicadas são ignoradas automaticamente."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "A importação de dados está em beta. Cada arquivo pode ter até 50.000 linhas ou 20 MB. Faça um backup na nuvem antes de importar; se algo não for importado ou o resultado parecer errado, avise-nos em Relatar um problema na tela de importação."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1658,13 +1757,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Ações (ajuste manual de estoque, ajuste manual de pontos, gestão de produtos, finalizar venda acima do limite de desconto): uma aprovação vale para aquela única ação.",
-          "Telas (custo e lucro, Painel, Ajustes, backup e restauração): a aprovação libera o acesso até o operador mudar ou o app ir para segundo plano.",
+          "Telas (custo e lucro, Painel, DRE e despesas, Ajustes, backup e restauração): a aprovação libera o acesso até o operador mudar ou o app ir para segundo plano.",
           "O limite de desconto vale para descontos manuais e é verificado uma vez, ao finalizar a venda; promoções automáticas e resgate de pontos não contam para ele."
         ]
       },
       {
         "type": "p",
-        "text": "Padrões de fábrica: Gerentes podem tudo, exceto backup e restauração, e não têm limite de desconto; Funcionários precisam de aprovação para tudo, com limite de 10%. O proprietário sempre tem permissão e não pode ser editado. Para mudar, vá em Equipe → Permissões das funções, toque em Editar e salve uma vez — vale para todos imediatamente."
+        "text": "Padrões de fábrica: Gerentes podem tudo, exceto duas coisas — backup e restauração, e DRE e despesas — e não têm limite de desconto; Funcionários precisam de aprovação para tudo, com limite de 10%. O proprietário sempre tem permissão e não pode ser editado. Para mudar, vá em Equipe → Permissões das funções, toque em Editar e salve uma vez — vale para todos imediatamente."
       },
       {
         "type": "note",
@@ -1798,13 +1897,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Os três planos incluem finalização de venda completa, produtos, vendas (com anulações, devoluções e trocas), relatórios (os avançados incluídos desde a versão 3.4) e backup na nuvem. A diferença está nas ferramentas para tocar a loja:"
+        "text": "Os três planos incluem finalização de venda completa, produtos, vendas (com anulações, devoluções e trocas), relatórios (os avançados e a DRE mensal incluídos desde a versão 3.4) e backup na nuvem. A diferença está nas ferramentas para tocar a loja:"
       },
       {
         "type": "list",
         "items": [
           "Lite: para quem trabalha sozinho em uma barraca e precisa finalizar vendas e cadastrar produtos.",
-          "Standard: acrescenta promoções, pontos de fidelidade e níveis de membros, controle de estoque, compras, vendas a prazo, encomendas e estimativa de taxas de pagamento.",
+          "Standard: acrescenta promoções, pontos de fidelidade e níveis de membros, controle de estoque, compras, vendas a prazo, encomendas e alíquotas das taxas de pagamento.",
           "Pro: acrescenta contas de funcionários e permissões, aprovação do gerente, registro de atividades e registros de restauração — para lojas com equipe."
         ]
       },
@@ -2015,13 +2114,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Brindes e adicionais pagos nunca alteram o carrinho por conta própria. Quando as condições são atendidas, aparece um banner de sugestão na tela do caixa, e o carrinho só muda quando o caixa toca em Escolher — é de propósito, porque brindes envolvem estoque físico: alguém precisa confirmar que o item está disponível e que o cliente o quer."
+        "text": "Brindes e adicionais pagos nunca alteram o carrinho por conta própria. Quando as condições são atendidas, aparece um banner de sugestão na tela do caixa, e o carrinho só muda quando o caixa toca em Escolher brinde ou Escolher adicional — é de propósito, porque brindes envolvem estoque físico: alguém precisa confirmar que o item está disponível e que o cliente o quer."
       },
       {
         "type": "list",
         "items": [
           "Depois de tocar em Recusar, a mesma sugestão não volta a aparecer para este carrinho; um carrinho novo ou esvaziado exibe a sugestão de novo.",
-          "Se uma nova sugestão aparecer antes da confirmação na finalização da venda, ela precisa ser aceita ou recusada antes que a venda possa ser enviada.",
+          "Desde a versão 3.4, as ofertas ainda pendentes não impedem a finalização da venda: uma linha amarela sob o botão de pagamento, como “1 oferta pendente não será aplicada”, diz quantas ficaram de fora (toque nela para ver quais), e a venda segue sem elas. Para a finalização esperar como antes, ative Resolver ofertas antes de finalizar em Ajustes → Preferências do aparelho; vale só para este iPad.",
           "Os itens de brinde e de adicional não recebem desconto de outras promoções em dinheiro e não contam para o valor mínimo de outras promoções."
         ]
       },
@@ -2216,7 +2315,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ainda não existe um relatório de fechamento mensal próprio, mas tudo o que você precisa para conferir as contas já está no app:"
+        "text": "Desde a versão 3.4, a DRE mostra o lucro líquido de cada mês depois do custo dos produtos, das taxas e das despesas — veja “Como ver quanto minha loja realmente lucrou em cada mês?” Ainda não existe um relatório de fechamento para exportar ou imprimir, mas tudo o que você precisa para conferir as contas já está no app:"
       },
       {
         "type": "list",
@@ -2232,7 +2331,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]

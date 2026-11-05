@@ -426,7 +426,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Le commissioni sono stime basate sulla tariffa che inserisci; l'importo effettivo è quello dell'estratto conto del tuo fornitore. Per modificare le tariffe e vedere le commissioni in Report serve il piano Standard o superiore. Con Lite i campi sono bloccati, ma i pagamenti registrano comunque le loro commissioni, che compaiono quando passi a un piano superiore."
+        "text": "Le commissioni sono stime basate sulla tariffa che inserisci; l'importo effettivo è quello dell'estratto conto del tuo fornitore. Per modificare le tariffe serve il piano Standard o superiore e con Lite i campi sono bloccati. Dalla v3.4 ogni piano vede in Report e in Utile le commissioni registrate, quindi una tariffa impostata durante la prova continua a stimare le commissioni anche con Lite; le versioni precedenti mostravano le commissioni solo con Standard o superiore."
       }
     ],
     "related": [
@@ -560,6 +560,44 @@ export const articles = [
     ]
   },
   {
+    "slug": "checkout-customer",
+    "category": "checkout",
+    "since": "3.4",
+    "question": "Come aggiungo o cambio il cliente di una vendita?",
+    "keywords": [
+      "cliente",
+      "cliente fedeltà",
+      "associare cliente",
+      "cambiare cliente",
+      "nuovo cliente",
+      "cassa"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Associa il cliente nel carrello o nella schermata di cassa: la riga Cliente sotto l'importo apre l'elenco clienti quando nessuno è associato, e offre Cambia cliente o Rimuovi cliente quando qualcuno lo è. Il cliente scelto alla cassa è il cliente del carrello e resta nel carrello se annulli la procedura di cassa."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Cambiare il cliente ricalcola subito gli sconti del livello, le offerte di compleanno e il riscatto dei punti. Il contante o l'acconto che hai già inserito viene mantenuto e ricontrollato rispetto al nuovo totale.",
+          "Non lo trovi? Tocca Nuovo cliente in alto a destra nell'elenco clienti, oppure al centro quando nessun risultato corrisponde alla ricerca. Ciò che hai cercato riempie il modulo (le cifre vanno nel telefono, tutto il resto nel nome) e il nuovo cliente viene associato alla vendita.",
+          "Se tocchi A credito senza un cliente associato, si apre l'elenco clienti e A credito viene selezionato non appena scegli qualcuno.",
+          "Se il nuovo cliente porta uno sconto manuale oltre lo sconto massimo del ruolo dell'operatore, prima serve l'approvazione di un responsabile; se annulli l'approvazione, il cliente resta quello di prima."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "I clienti fanno parte del piano Standard; con Lite la riga riporta «Clienti — piano Standard» e apre i dettagli per passare a un piano superiore. La riga Cliente alla cassa è arrivata con la v3.4; le versioni precedenti associano il cliente solo nel carrello."
+      }
+    ],
+    "related": [
+      "loyalty-points",
+      "on-account",
+      "member-tiers"
+    ]
+  },
+  {
     "slug": "void-order",
     "category": "orders",
     "question": "Ho sbagliato alla cassa: come si storna un ordine?",
@@ -686,7 +724,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sì. Seleziona il cliente in cassa e scegli A credito come metodo di pagamento. Un debito deve avere un intestatario, quindi A credito non è disponibile senza un cliente."
+        "text": "Sì. Scegli A credito come metodo di pagamento e la vendita viene registrata come debito del cliente. Un debito deve avere un intestatario, quindi senza un cliente associato, toccando A credito si apre prima l'elenco clienti (dalla v3.4; le versioni precedenti chiedono di associare un cliente nel carrello)."
       },
       {
         "type": "p",
@@ -707,7 +745,7 @@ export const articles = [
     ],
     "related": [
       "revenue-vs-cash",
-      "payment-methods",
+      "checkout-customer",
       "pre-orders"
     ]
   },
@@ -726,7 +764,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sì. Le pagine di dettaglio di ordini, clienti e ordini d'acquisto hanno ciascuna una scheda Note: toccala per modificarla, fino a 500 caratteri. Puoi anche scriverne una nel modulo quando crei un cliente o un ordine d'acquisto."
+        "text": "Sì. Le pagine di dettaglio di ordini, clienti e ordini d'acquisto hanno ciascuna una scheda Note: toccala per modificarla, fino a 500 caratteri, oppure tocca l'unica riga «Aggiungi una nota» finché non ce ne sono. Puoi anche scriverne una nel modulo quando crei un cliente o un ordine d'acquisto."
       },
       {
         "type": "p",
@@ -1042,6 +1080,10 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Dalla v3.4, tieni premuto sul grafico Andamento dei ricavi o Andamento dell'utile per leggerlo periodo per periodo: una scheda mostra la data e i ricavi o l'utile di quel periodo e, su Andamento dei ricavi con Confronto vendite attivo, anche i ricavi del periodo di confronto e la differenza. Trascina a sinistra o a destra per spostarti; scorri verso l'alto o verso il basso sul grafico e la pagina scorre come al solito."
+      },
+      {
+        "type": "p",
         "text": "La scheda Classifica prodotti elenca i primi 5. Tocca la scheda o Mostra tutti per vedere ogni prodotto venduto nel periodo, in ordine di quantità al netto dei resi."
       },
       {
@@ -1071,6 +1113,7 @@ export const articles = [
       "mappa di calore",
       "orari di punta",
       "articoli a bassa rotazione",
+      "variazioni prodotti",
       "valore del magazzino",
       "tasso di riacquisto",
       "punti"
@@ -1086,13 +1129,14 @@ export const articles = [
           "Confronto vendite: a destra della barra del periodo, confronta con lo stesso periodo dell'anno scorso o con il periodo precedente (un singolo giorno con lo stesso giorno della settimana scorsa, questa settimana con la scorsa, questo mese con il mese scorso, quest'anno con l'anno scorso, un intervallo personalizzato con lo stesso numero di giorni che lo precedono). Il riquadro Incassato mostra la differenza e il tasso di crescita, e il grafico dei Ricavi aggiunge una linea più chiara per il periodo di confronto. Finché un periodo è ancora in corso, il periodo di confronto viene tagliato allo stesso momento.",
           "Giorno × ora: nell'intestazione Vendite nel tempo passa a Giorno × ora per una mappa di calore su sette giorni e 24 ore: più una cella è scura, più hai venduto. Passa tra ricavi e ordini; con un confronto attivo vedi quali ore sono cresciute e quali sono calate.",
           "Articoli a bassa rotazione: passa l'intestazione della scheda di classifica ad Articoli a bassa rotazione per elencare i prodotti dal meno al più venduto, con la giacenza attuale e l'ultima data in cui ciascuno è stato venduto. I prodotti mai venduti sono indicati come Mai venduto. Per impostazione predefinita sono mostrati solo i prodotti in giacenza.",
+          "Variazioni (dalla v3.4): passa l'intestazione della scheda di classifica a Variazioni per vedere i 3 prodotti i cui ricavi sono cresciuti di più e i 3 calati di più rispetto al periodo di confronto, ciascuno con i ricavi dei due periodi e la differenza. Scegli prima un periodo in Confronto vendite: con Nessuno, o su Sempre, la scheda te lo ricorda. Tocca la scheda o Mostra tutti per l'elenco completo Variazioni prodotti, diviso in In aumento e In calo.",
           "Tasso di riacquisto: l'ultima riga del riquadro dei clienti è la quota di clienti fedeltà che hanno acquistato nel periodo e hanno acquistato in totale due o più volte.",
           "Situazione attuale: il valore del magazzino (giacenza attuale × costo attuale), tutti i movimenti di magazzino del periodo selezionato e i punti che i clienti hanno ma non hanno ancora riscattato, con lo sconto massimo che possono ottenere. Sono saldi attuali: il periodo non li modifica."
         ]
       },
       {
         "type": "p",
-        "text": "Dalla v3.4 tutti e cinque sono disponibili con ogni piano e restano disponibili anche dopo la fine della prova. Le versioni precedenti li mostravano solo con Pro, con un piccolo lucchetto sugli altri piani; se vedi ancora i lucchetti, aggiorna DingPOS dall'App Store."
+        "text": "Dalla v3.4 sono tutti disponibili con ogni piano e restano disponibili anche dopo la fine della prova. Le versioni precedenti li mostravano solo con Pro, con un piccolo lucchetto sugli altri piani; se vedi ancora i lucchetti, aggiorna DingPOS dall'App Store."
       },
       {
         "type": "p",
@@ -1145,6 +1189,110 @@ export const articles = [
       "report-periods",
       "product-variants",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "profit-loss",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Come vedo quanto ho guadagnato davvero ogni mese?",
+    "keywords": [
+      "conto economico",
+      "profitti e perdite",
+      "p&l",
+      "utile netto",
+      "utile mensile",
+      "spese",
+      "utile operativo",
+      "conto economico mensile"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Apri Utile, sotto Report nella barra laterale, per il conto economico mensile: elenca ogni mese dal più recente al più vecchio con il suo utile netto; il mese corrente è contrassegnato In corso e l'intestazione di ogni anno somma l'utile netto dei suoi mesi conclusi."
+      },
+      {
+        "type": "p",
+        "text": "Tocca un mese per vedere come si calcola il suo utile netto:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ricavi (al netto delle imposte): i ricavi dopo ogni sconto, meno le imposte, conteggiati nel giorno in cui la merce è stata consegnata.",
+          "Costo dei prodotti: il costo di ciò che è stato venduto, in base ai costi indicati nei tuoi prodotti.",
+          "Commissioni (stima): le commissioni stimate in base alle tariffe dei tuoi metodi di pagamento.",
+          "Acconti trattenuti: gli acconti che hai trattenuto quando un preordine è stato annullato.",
+          "Spese fisse e Spese una tantum: ciò che hai registrato per quel mese — vedi «Come registro affitto, stipendi e altre spese?»"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Seguono fino a tre grafici: l'utile netto mese per mese, la quota di ogni spesa fissa e l'andamento delle spese fisse. I due grafici di andamento coprono al massimo i 12 mesi fino al mese che hai aperto e compaiono solo quando ci sono almeno due mesi da confrontare, contati dal mese della tua prima vendita o spesa. Il grafico delle quote richiede una spesa fissa in quel mese; finché non ce n'è una, quella sezione mostra Aggiungi spesa fissa. In Report, l'ultima riga della scheda dell'utile porta direttamente a Utile: per un periodo che è esattamente un mese mostra l'utile netto di quel mese, ad esempio «Utile netto di ottobre: NT$12,300»; per qualsiasi altro periodo riporta Vedi il conto economico mensile."
+      },
+      {
+        "type": "note",
+        "text": "L'utile netto è l'utile operativo al lordo delle imposte sul reddito, calcolato in base a quanto DingPOS ha registrato: non è una dichiarazione dei redditi. Se alcuni prodotti sono stati venduti senza costo, il mese mostra comunque un utile netto, contrassegnato «Esclude il costo di N prodotti»; toccalo per vedere quali. Utile è disponibile con ogni piano. Con i collaboratori, aprirlo richiede il permesso Conto economico e spese, per il quale Responsabili e Collaboratori hanno di default bisogno di approvazione, perché mostra i costi dei prodotti e gli stipendi."
+      }
+    ],
+    "related": [
+      "record-expenses",
+      "profit-not-tracked",
+      "staff-permissions"
+    ]
+  },
+  {
+    "slug": "record-expenses",
+    "category": "reports",
+    "since": "3.4",
+    "question": "Come registro affitto, stipendi e altre spese?",
+    "keywords": [
+      "spese",
+      "affitto",
+      "stipendi",
+      "utenze",
+      "spese fisse",
+      "costi generali",
+      "ammortamento",
+      "spesa una tantum"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "In Utile tocca Aggiungi spesa e scegli una spesa fissa o una spesa una tantum. Una spesa è conteggiata nel mese a cui appartiene, non in quello in cui l'hai pagata, e l'utile netto di ogni mese ne tiene conto."
+      },
+      {
+        "type": "p",
+        "text": "Una spesa fissa è una spesa che paghi ogni mese, come affitto, utenze o stipendi:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Inserisci il nome, l'importo mensile e il mese di inizio. Scegli un mese precedente per registrare spese passate.",
+          "Quando l'importo cambia, tocca Cambia importo, scegli il mese e poi Da questo mese (ad esempio un aumento dell'affitto) o Solo questo mese (la bolletta della luce del mese). Ogni variazione è elencata e puoi aprirla per modificarla o rimuoverla.",
+          "Quando smetti di pagarla, imposta Ultimo mese conteggiato: quel mese e quelli precedenti restano conteggiati."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Una spesa una tantum si paga una sola volta:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Per un allestimento, un'attrezzatura o un'assicurazione pagata in anticipo, attiva Ripartisci su più mesi e scegli da 2 a 120 mesi e il primo mese conteggiato. Il modulo mostra in anteprima quanto viene conteggiato ogni mese e quali mesi copre.",
+          "Anche senza ripartizione puoi scegliere il mese conteggiato: una fattura di ottobre che arriva a novembre può essere conteggiata in ottobre, mantenendo la data reale.",
+          "Se una ripartizione termina prima del previsto (ad esempio una polizza assicurativa annullata), usa Termina ripartizione in anticipo: ciò che resta è conteggiato nel mese che scegli."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Inserisci ciò che il negozio sostiene davvero, escludendo le imposte che puoi recuperare. La merce che venderai passa dagli Acquisti, perché viene conteggiata nel costo dei prodotti quando è venduta; depositi cauzionali, capitale di un prestito e prelievi del titolare non sono spese. Le modifiche si salvano insieme quando tocchi ✓, e una modifica che raggiunge un mese concluso ti dice prima l'utile netto di quali mesi cambierà."
+      }
+    ],
+    "related": [
+      "profit-loss",
+      "purchase-orders",
+      "roadmap-monthly-settlement"
     ]
   },
   {
@@ -1244,11 +1392,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Seleziona il cliente alla cassa e i punti si accumulano in automatico; per riscattarli, inserisci i punti da usare. Con lo storno di un ordine vengono tolti i punti che aveva fatto guadagnare e restituiti quelli riscattati."
+        "text": "Associa il cliente alla vendita, nel carrello o nella schermata di cassa, e i punti si accumulano in automatico; per riscattarli, inserisci i punti da usare. Con lo storno di un ordine vengono tolti i punti che aveva fatto guadagnare e restituiti quelli riscattati."
       }
     ],
     "related": [
       "member-tiers",
+      "checkout-customer",
       "void-order"
     ]
   },
@@ -1473,55 +1622,6 @@ export const articles = [
     ]
   },
   {
-    "slug": "import-csv",
-    "category": "backup",
-    "since": "2.3",
-    "question": "Posso importare prodotti e vendite da un altro POS o da un foglio di calcolo?",
-    "keywords": [
-      "importare",
-      "csv",
-      "excel",
-      "foglio di calcolo",
-      "migrare",
-      "cambiare pos",
-      "importazione massiva",
-      "storico vendite"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Sì. Vai in Impostazioni → Importa dati, scegli se importare prodotti o vendite e seleziona un file CSV (Excel e Fogli Google possono entrambi salvare in CSV)."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Il file si apre come tabella. I nomi di colonna più comuni in inglese e in cinese (tradizionale o semplificato) vengono riconosciuti automaticamente; tocca l'intestazione di una colonna per cambiarne l'abbinamento.",
-          "Tocca una cella per correggerne subito il valore, senza dover modificare il file e ricominciare.",
-          "Tocca Conferma per la verifica. Le righe con problemi sono segnalate in rosso con il motivo; l'importazione delle vendite può saltare gli ordini con errori.",
-          "Risolvi ciò che richiede una scelta (nomi di prodotto duplicati, una riga che corrisponde a più clienti), controlla il riepilogo, poi tocca Avvia importazione."
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "Le vendite importate vengono collocate in base alla data dell'ordine e ricalcolate con la valuta e la modalità imposte del tuo negozio. Non incidono sulla giacenza e non assegnano punti di benvenuto.",
-          "I clienti vengono abbinati a quelli esistenti tramite telefono o e-mail; chi non trova corrispondenza viene creato.",
-          "Gli ordini importati mostrano la data di importazione (Importato il) e il numero dell'ordine di origine, e non possono essere stornati né resi.",
-          "Le righe con errori si possono esportare in un CSV con i motivi annotati: correggile e importa di nuovo. Le righe duplicate vengono saltate automaticamente."
-        ]
-      },
-      {
-        "type": "note",
-        "text": "L'importazione dei dati è in versione beta. Ogni file può contenere fino a 50.000 righe o 20 MB. Prima di importare, esegui un backup su cloud; se qualcosa non si importa o il risultato ti sembra sbagliato, faccelo sapere con Segnala un problema nella schermata di importazione."
-      }
-    ],
-    "related": [
-      "backup-data",
-      "transfer-new-ipad",
-      "product-variants"
-    ]
-  },
-  {
     "slug": "undo-restore",
     "category": "backup",
     "since": "3.0",
@@ -1666,13 +1766,13 @@ export const articles = [
         "type": "list",
         "items": [
           "Azioni (rettifica manuale della giacenza, rettifica manuale dei punti, gestione prodotti, pagamento oltre lo sconto massimo del ruolo): un'approvazione vale per quella sola azione.",
-          "Schermate (costi e utile, Dashboard, Impostazioni, backup e ripristino): un'approvazione sblocca finché l'operatore non cambia o l'app va in background.",
+          "Schermate (costi e utile, Dashboard, conto economico e spese, Impostazioni, backup e ripristino): un'approvazione sblocca finché l'operatore non cambia o l'app va in background.",
           "Lo sconto massimo del ruolo si applica agli sconti manuali e viene controllato una sola volta al pagamento; le promozioni automatiche e il riscatto dei punti non vengono conteggiati."
         ]
       },
       {
         "type": "p",
-        "text": "Impostazioni di fabbrica: i Responsabili possono fare tutto tranne backup e ripristino, senza sconto massimo del ruolo; i Collaboratori richiedono approvazione per tutto, con uno sconto massimo del ruolo del 10%. Il titolare è sempre autorizzato e non è modificabile. Per cambiarle, vai in Collab. → Permessi dei ruoli, tocca Modifica e salva una volta: la modifica vale subito per tutti."
+        "text": "Impostazioni di fabbrica: i Responsabili possono fare tutto tranne backup e ripristino e conto economico e spese, senza sconto massimo del ruolo; i Collaboratori richiedono approvazione per tutto, con uno sconto massimo del ruolo del 10%. Il titolare è sempre autorizzato e non è modificabile. Per cambiarle, vai in Collab. → Permessi dei ruoli, tocca Modifica e salva una volta: la modifica vale subito per tutti."
       },
       {
         "type": "note",
@@ -1804,13 +1904,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tutti e tre i piani includono cassa completa, prodotti, ordini (con storni, resi e cambi), report (report avanzati inclusi dalla v3.4) e backup nel cloud. Cambiano gli strumenti per gestire il negozio:"
+        "text": "Tutti e tre i piani includono cassa completa, prodotti, ordini (con storni, resi e cambi), report (report avanzati e conto economico mensile inclusi dalla v3.4) e backup nel cloud. Cambiano gli strumenti per gestire il negozio:"
       },
       {
         "type": "list",
         "items": [
           "Lite: per chi gestisce un banco da solo e ha bisogno di cassa e prodotti.",
-          "Standard: aggiunge promozioni, punti fedeltà e livelli clienti, gestione del magazzino, acquisti, vendite a credito, preordini e stima delle commissioni di pagamento.",
+          "Standard: aggiunge promozioni, punti fedeltà e livelli clienti, gestione del magazzino, acquisti, vendite a credito, preordini e tariffe delle commissioni di pagamento.",
           "Pro: aggiunge collaboratori e permessi, approvazione del responsabile, registro attività e registro ripristino, pensato per i negozi con personale."
         ]
       },
@@ -2026,7 +2126,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Dopo Rifiuta, lo stesso suggerimento non ricompare per quel carrello; con un carrello nuovo o svuotato viene riproposto.",
-          "Se prima della conferma alla cassa compare un nuovo suggerimento, va accettato o rifiutato prima di poter inviare l’ordine.",
+          "Dalla v3.4 le offerte ancora in sospeso non bloccano la cassa: una riga gialla sotto il pulsante di pagamento, ad esempio «1 offerta in sospeso non verrà applicata», indica quante ne restano escluse (toccala per vedere quali) e l'ordine va a buon fine senza di esse. Per far attendere la cassa come prima, attiva Gestisci le proposte prima della cassa in Impostazioni → Preferenze del dispositivo; vale solo per questo iPad.",
           "Le righe di regali ed extra non possono ricevere altri sconti da altre promozioni in denaro e non contano per le soglie delle altre promozioni."
         ]
       },
@@ -2219,7 +2319,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Non esiste ancora un report di chiusura mensile dedicato, ma nell'app c'è già tutto ciò che serve per riconciliare i conti:"
+        "text": "Dalla v3.4, Utile mostra l'utile netto di ogni mese dopo costo dei prodotti, commissioni e spese — vedi «Come vedo quanto ho guadagnato davvero ogni mese?» Non esiste ancora un report di chiusura mensile da esportare o stampare, ma nell'app c'è già tutto ciò che serve per riconciliare i conti:"
       },
       {
         "type": "list",
@@ -2235,7 +2335,7 @@ export const articles = [
       }
     ],
     "related": [
-      "revenue-vs-cash",
+      "profit-loss",
       "purchase-orders",
       "on-account"
     ]
