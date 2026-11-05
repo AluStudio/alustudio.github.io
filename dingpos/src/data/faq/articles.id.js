@@ -1228,7 +1228,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tiga grafik menyusul: laba bersih tiap bulan dalam 12 bulan terakhir, porsi tiap pengeluaran tetap, dan tren pengeluaran tetap. Di Statistik, baris terakhir kartu laba langsung menuju Laba Rugi: untuk periode yang tepat satu bulan, baris itu menampilkan laba bersih bulan tersebut, seperti “Laba bersih Oktober NT$12,300”; untuk periode lain tertulis Lihat laba rugi bulanan."
+        "text": "Hingga tiga grafik menyusul: laba bersih dari bulan ke bulan, porsi tiap pengeluaran tetap, dan tren pengeluaran tetap. Kedua grafik tren mencakup paling banyak 12 bulan hingga bulan yang Anda buka, dan baru muncul setelah ada sedikitnya dua bulan untuk dibandingkan, dihitung sejak bulan penjualan atau pengeluaran pertama Anda. Grafik porsi membutuhkan pengeluaran tetap di bulan itu; selama belum ada, bagian tersebut menampilkan Tambah Pengeluaran Tetap. Di Statistik, baris terakhir kartu laba langsung menuju Laba Rugi: untuk periode yang tepat satu bulan, baris itu menampilkan laba bersih bulan tersebut, seperti “Laba bersih Oktober NT$12,300”; untuk periode lain tertulis Lihat laba rugi bulanan."
       },
       {
         "type": "note",

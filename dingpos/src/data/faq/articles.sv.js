@@ -1235,7 +1235,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Därefter kommer tre diagram: nettovinsten för var och en av de senaste 12 månaderna, varje fast kostnads andel och trenden för de fasta kostnaderna. I Statistik hoppar sista raden i vinstrutan direkt till Resultat: för en period som är exakt en månad visar den månadens nettovinst, till exempel ”oktober nettovinst NT$12,300”. För alla andra perioder står det Visa resultaträkning per månad."
+        "text": "Därefter kommer upp till tre diagram: nettovinsten månad för månad, varje fast kostnads andel och trenden för de fasta kostnaderna. De två trenddiagrammen omfattar högst de 12 månaderna fram till den månad du öppnade och visas först när det finns minst två månader att jämföra, räknat från månaden för din första försäljning eller kostnad. Andelsdiagrammet kräver en fast kostnad den månaden. Tills det finns en visas Lägg till fast kostnad i stället i den delen. I Statistik hoppar sista raden i vinstrutan direkt till Resultat: för en period som är exakt en månad visar den månadens nettovinst, till exempel ”oktober nettovinst NT$12,300”. För alla andra perioder står det Visa resultaträkning per månad."
       },
       {
         "type": "note",

@@ -1236,7 +1236,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Deretter kommer tre diagrammer: nettoresultatet for hver av de siste 12 månedene, hver fast utgifts andel og utviklingen i de faste utgiftene. I Rapporter hopper den siste linjen på fortjenestekortet rett til Resultat: for en periode som er nøyaktig én måned, viser den månedens nettoresultat, for eksempel «Oktober nettoresultat NT$12,300». For alle andre perioder står det Se månedlig resultat."
+        "text": "Opptil tre diagrammer følger: nettoresultatet måned for måned, hver fast utgifts andel og utviklingen i de faste utgiftene. De to trenddiagrammene dekker høyst de 12 månedene fram til måneden du har åpnet, og vises først når det finnes minst to måneder å sammenligne, regnet fra måneden for det første salget eller den første utgiften din. Andelsdiagrammet krever en fast utgift den måneden. Til du har lagt til en, viser denne delen Legg til fast utgift i stedet. I Rapporter hopper den siste linjen på fortjenestekortet rett til Resultat: for en periode som er nøyaktig én måned, viser den månedens nettoresultat, for eksempel «Oktober nettoresultat NT$12,300». For alle andre perioder står det Se månedlig resultat."
       },
       {
         "type": "note",

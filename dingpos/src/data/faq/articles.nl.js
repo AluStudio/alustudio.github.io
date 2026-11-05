@@ -1231,7 +1231,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Daarna volgen drie grafieken: de nettowinst van elk van de laatste 12 maanden, het aandeel van elke vaste kostenpost en de trend van de vaste kosten. In Cijfers springt de laatste regel van de winstkaart rechtstreeks naar W&V: bij een periode van precies één maand toont hij de nettowinst van die maand, zoals “Nettowinst oktober NT$12.300”; bij elke andere periode staat er Bekijk winst en verlies per maand."
+        "text": "Daarna volgen maximaal drie grafieken: de nettowinst per maand, het aandeel van elke vaste kostenpost en de trend van de vaste kosten. De twee trendgrafieken beslaan hooguit de 12 maanden tot en met de maand die je hebt geopend en verschijnen pas als er minstens twee maanden zijn om te vergelijken, geteld vanaf de maand van je eerste verkoop of kostenpost. De grafiek met aandelen heeft een vaste kostenpost in die maand nodig; zolang die er niet is, staat in dat onderdeel Voeg vaste kostenpost toe. In Cijfers springt de laatste regel van de winstkaart rechtstreeks naar W&V: bij een periode van precies één maand toont hij de nettowinst van die maand, zoals “Nettowinst oktober NT$12.300”; bij elke andere periode staat er Bekijk winst en verlies per maand."
       },
       {
         "type": "note",

@@ -1221,7 +1221,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Undan keyin uchta grafik keladi: oxirgi 12 oyning har biri uchun sof foyda, har bir doimiy xarajatning ulushi va doimiy xarajatlar dinamikasi. Statistikada foyda kartasining oxirgi qatori to‘g‘ridan-to‘g‘ri P&L’ga olib boradi: roppa-rosa bir oylik davrda u shu oyning sof foydasini ko‘rsatadi, masalan, “Oktyabr sof foyda: NT$12,300”; boshqa har qanday davrda esa Oylik foyda va zararni ko‘rish deb yoziladi."
+        "text": "Undan keyin uchtagacha grafik keladi: oylar bo‘yicha sof foyda, har bir doimiy xarajatning ulushi va doimiy xarajatlar dinamikasi. Ikkala dinamika grafigi siz ochgan oyga qadar eng ko‘pi bilan 12 oyni qamrab oladi va birinchi savdo yoki xarajat oyidan boshlab solishtirish uchun kamida ikki oy bo‘lgandagina ko‘rinadi. Ulush grafigi uchun o‘sha oyda doimiy xarajat bo‘lishi kerak; u bo‘lmaguncha bu bo‘lim o‘rnida Doimiy xarajat qo‘shish tugmasi chiqadi. Statistikada foyda kartasining oxirgi qatori to‘g‘ridan-to‘g‘ri P&L’ga olib boradi: roppa-rosa bir oylik davrda u shu oyning sof foydasini ko‘rsatadi, masalan, “Oktyabr sof foyda: NT$12,300”; boshqa har qanday davrda esa Oylik foyda va zararni ko‘rish deb yoziladi."
       },
       {
         "type": "note",

@@ -1226,7 +1226,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tiếp theo là ba biểu đồ: lợi nhuận ròng của từng tháng trong 12 tháng gần nhất, tỷ trọng của từng chi phí cố định, và xu hướng chi phí cố định. Trong Thống kê, dòng cuối của thẻ lợi nhuận dẫn thẳng đến Lãi lỗ: với kỳ báo cáo đúng bằng một tháng, dòng này hiện lợi nhuận ròng của tháng đó, như “Lợi nhuận ròng Tháng 10: NT$12,300”; với mọi kỳ khác, dòng này ghi Xem lãi lỗ hằng tháng."
+        "text": "Tiếp theo là tối đa ba biểu đồ: lợi nhuận ròng của từng tháng, tỷ trọng của từng chi phí cố định, và xu hướng chi phí cố định. Hai biểu đồ xu hướng chỉ hiển thị tối đa 12 tháng tính đến tháng bạn đang mở, và chỉ xuất hiện khi đã có ít nhất hai tháng để so sánh, tính từ tháng có đơn bán hoặc khoản chi phí đầu tiên. Biểu đồ tỷ trọng cần có chi phí cố định trong tháng đó; khi chưa có, phần này hiển thị Thêm chi phí cố định. Trong Thống kê, dòng cuối của thẻ lợi nhuận dẫn thẳng đến Lãi lỗ: với kỳ báo cáo đúng bằng một tháng, dòng này hiện lợi nhuận ròng của tháng đó, như “Lợi nhuận ròng Tháng 10: NT$12,300”; với mọi kỳ khác, dòng này ghi Xem lãi lỗ hằng tháng."
       },
       {
         "type": "note",

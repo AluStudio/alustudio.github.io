@@ -1232,7 +1232,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Darunter folgen drei Diagramme: der Reingewinn der letzten 12 Monate, der Anteil jeder festen Ausgabe und der Verlauf der festen Ausgaben. In der Statistik springt die letzte Zeile der Kachel Rohertrag direkt zur GuV: Bei einem Zeitraum, der genau einen Monat umfasst, zeigt sie den Reingewinn dieses Monats, etwa „Oktober Reingewinn NT$12,300“; bei jedem anderen Zeitraum steht dort „Monatliche GuV ansehen“."
+        "text": "Darunter folgen bis zu drei Diagramme: der Reingewinn Monat für Monat, der Anteil jeder festen Ausgabe und der Verlauf der festen Ausgaben. Die beiden Verlaufsdiagramme umfassen höchstens die 12 Monate bis zu dem Monat, den Sie geöffnet haben, und erscheinen erst, wenn es mindestens zwei Monate zum Vergleichen gibt, gezählt ab dem Monat Ihres ersten Verkaufs oder Ihrer ersten Ausgabe. Das Anteilsdiagramm braucht in diesem Monat eine feste Ausgabe; solange es keine gibt, steht in diesem Bereich stattdessen „Feste Ausgabe hinzufügen“. In der Statistik springt die letzte Zeile der Kachel Rohertrag direkt zur GuV: Bei einem Zeitraum, der genau einen Monat umfasst, zeigt sie den Reingewinn dieses Monats, etwa „Oktober Reingewinn NT$12,300“; bei jedem anderen Zeitraum steht dort „Monatliche GuV ansehen“."
       },
       {
         "type": "note",

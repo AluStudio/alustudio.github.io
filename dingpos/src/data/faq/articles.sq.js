@@ -1229,7 +1229,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pas tyre vijnë tre grafikë: fitimi neto për secilin nga 12 muajt e fundit, pesha e secilit shpenzim fiks dhe trendi i shpenzimeve fikse. Te Statistika, rreshti i fundit i kartës së fitimit të çon drejt e te Fitimi: për një periudhë që është saktësisht një muaj tregon fitimin neto të atij muaji, si “Fitimi neto për tetor: NT$12,300”; për çdo periudhë tjetër shfaq Shiko fitimin dhe humbjen mujore."
+        "text": "Pas tyre vijnë deri në tre grafikë: fitimi neto sipas muajve, pesha e secilit shpenzim fiks dhe trendi i shpenzimeve fikse. Dy grafikët e trendit përfshijnë më së shumti 12 muajt deri te muaji që ke hapur dhe shfaqen vetëm kur ka të paktën dy muaj për t’u krahasuar, të numëruar nga muaji i shitjes ose i shpenzimit tënd të parë. Grafiku i peshës kërkon një shpenzim fiks në atë muaj; derisa të ketë një, ajo pjesë shfaq Shto shpenzim fiks. Te Statistika, rreshti i fundit i kartës së fitimit të çon drejt e te Fitimi: për një periudhë që është saktësisht një muaj tregon fitimin neto të atij muaji, si “Fitimi neto për tetor: NT$12,300”; për çdo periudhë tjetër shfaq Shiko fitimin dhe humbjen mujore."
       },
       {
         "type": "note",

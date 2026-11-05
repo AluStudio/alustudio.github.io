@@ -143,7 +143,7 @@ const DINGPOS_SITE_GLOSSARY = [
   ["中继数据", "元数据"], // metadata
   ["语系", "语言"], // mainland 语系 is a language family
   ["广告群组", "广告组"], // Apple Ads zh-CN term
-  ["顾客”列", "顾客”行"], // the checkout Customer row
+  ["顾客」列", "顾客」行"], // the checkout Customer row; corner brackets become quotes after this table
   ["每列有", "每行有"],
   ["一颗按钮", "一个按钮"],
   ["卷动", "滚动"],

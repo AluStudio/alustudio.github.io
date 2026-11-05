@@ -1227,7 +1227,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ezután három diagram következik: az utolsó 12 hónap nettó eredménye, az egyes fix kiadások részaránya és a fix kiadások alakulása. A Riportok képernyőn a nyereségkártya utolsó sora közvetlenül az Eredményre ugrik: pontosan egy hónapnyi időszaknál az adott hónap nettó eredményét mutatja, például „Október nettó eredménye: NT$12,300”, minden más időszaknál pedig a Havi eredmény megtekintése felirat áll."
+        "text": "Legfeljebb három diagram következik: a nettó eredmény hónapról hónapra, az egyes fix kiadások részaránya és a fix kiadások alakulása. A két trenddiagram legfeljebb 12 hónapot fed le a megnyitott hónapig, és csak akkor jelenik meg, ha az első eladás vagy kiadás hónapjától számítva legalább két összehasonlítható hónap van. A részarány-diagramhoz az adott hónapban kell egy fix kiadás; amíg nincs, ezen a szakaszon a Fix kiadás hozzáadása felirat látható. A Riportok képernyőn a nyereségkártya utolsó sora közvetlenül az Eredményre ugrik: pontosan egy hónapnyi időszaknál az adott hónap nettó eredményét mutatja, például „Október nettó eredménye: NT$12,300”, minden más időszaknál pedig a Havi eredmény megtekintése felirat áll."
       },
       {
         "type": "note",

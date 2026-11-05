@@ -27,6 +27,10 @@ test("convertText: corner brackets become mainland quotation marks", () => {
   assert.equal(convertText("按「確認」或『取消』", APPS.dingpos), "按“确认”或‘取消’");
 });
 
+test("convertText: site glossary entries match before corner brackets become quotes", () => {
+  assert.equal(convertText("金額下方的「顧客」列，", APPS.dingpos), "金额下方的“顾客”行，");
+});
+
 test("convertText: rows and columns swap only inside the listed entries", () => {
   assert.equal(convertText("有問題的列", APPS.dingpos, "faq:open-price-products:content.1.items.1"), "有问题的行");
   assert.equal(convertText("有問題的列", APPS.dingpos, "faq:refund:content.0.text"), "有问题的列");

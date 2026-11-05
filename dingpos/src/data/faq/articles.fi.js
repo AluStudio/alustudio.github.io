@@ -1232,7 +1232,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sen jälkeen tulee kolme kaaviota: liikevoitto kunakin viimeisistä 12 kuukaudesta, kunkin kiinteän kulun osuus ja kiinteiden kulujen kehitys. Tilastot-välilehdellä myyntikatekortin viimeinen rivi vie suoraan Tulos-välilehdelle: jos jakso on täsmälleen yksi kuukausi, rivillä näkyy kuukauden liikevoitto, esimerkiksi ”Liikevoitto (lokakuu): NT$12,300”; muilla jaksoilla siinä lukee Näytä kuukausittainen tuloslaskelma."
+        "text": "Sen jälkeen tulee enintään kolme kaaviota: liikevoitto kuukausi kuukaudelta, kunkin kiinteän kulun osuus ja kiinteiden kulujen kehitys. Kaksi kehityskaaviota kattavat enintään 12 kuukautta avaamaasi kuukauteen asti, ja ne näkyvät vasta, kun vertailtavia kuukausia on vähintään kaksi – kuukaudet lasketaan ensimmäisen myynnin tai kulun kuukaudesta alkaen. Osuuskaavio vaatii kyseiselle kuukaudelle kiinteän kulun; kunnes sellainen on, osiossa näkyy sen sijaan Lisää kiinteä kulu. Tilastot-välilehdellä myyntikatekortin viimeinen rivi vie suoraan Tulos-välilehdelle: jos jakso on täsmälleen yksi kuukausi, rivillä näkyy kuukauden liikevoitto, esimerkiksi ”Liikevoitto (lokakuu): NT$12,300”; muilla jaksoilla siinä lukee Näytä kuukausittainen tuloslaskelma."
       },
       {
         "type": "note",

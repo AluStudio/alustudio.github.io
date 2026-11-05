@@ -1226,7 +1226,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tiga carta menyusul: untung bersih bagi setiap satu daripada 12 bulan lepas, bahagian setiap perbelanjaan tetap, dan trend perbelanjaan tetap. Pada Statistik, baris terakhir kad untung terus melompat ke P&L: untuk tempoh yang tepat satu bulan, ia menunjukkan untung bersih bulan itu, seperti “Untung bersih Oktober NT$12,300”; untuk tempoh lain, ia berbunyi Lihat untung rugi bulanan."
+        "text": "Sehingga tiga carta menyusul: untung bersih bulan demi bulan, bahagian setiap perbelanjaan tetap, dan trend perbelanjaan tetap. Kedua-dua carta trend meliputi paling banyak 12 bulan sehingga bulan yang anda buka, dan hanya muncul apabila terdapat sekurang-kurangnya dua bulan untuk dibandingkan, dikira dari bulan jualan atau perbelanjaan pertama anda. Carta bahagian memerlukan perbelanjaan tetap pada bulan itu; selagi belum ada, bahagian itu menunjukkan Tambah perbelanjaan tetap. Pada Statistik, baris terakhir kad untung terus melompat ke P&L: untuk tempoh yang tepat satu bulan, ia menunjukkan untung bersih bulan itu, seperti “Untung bersih Oktober NT$12,300”; untuk tempoh lain, ia berbunyi Lihat untung rugi bulanan."
       },
       {
         "type": "note",

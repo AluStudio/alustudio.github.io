@@ -1222,7 +1222,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Em seguida vêm três gráficos: o lucro líquido de cada um dos últimos 12 meses, a participação de cada despesa fixa e a tendência das despesas fixas. No Resumo, a última linha do card de lucro leva direto à DRE: para um período que é exatamente um mês, ela mostra o lucro líquido daquele mês, como “Lucro líquido de outubro: NT$12,300”; para qualquer outro período, aparece Ver DRE mensal."
+        "text": "Em seguida vêm até três gráficos: o lucro líquido mês a mês, a participação de cada despesa fixa e a tendência das despesas fixas. Os dois gráficos de tendência cobrem no máximo os 12 meses até o mês que você abriu e só aparecem quando há pelo menos dois meses para comparar, contados a partir do mês da primeira venda ou despesa. O gráfico de participação precisa de uma despesa fixa naquele mês; enquanto não houver, essa seção mostra Adicionar despesa fixa. No Resumo, a última linha do card de lucro leva direto à DRE: para um período que é exatamente um mês, ela mostra o lucro líquido daquele mês, como “Lucro líquido de outubro: NT$12,300”; para qualquer outro período, aparece Ver DRE mensal."
       },
       {
         "type": "note",

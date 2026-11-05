@@ -1227,7 +1227,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Seguono tre grafici: l'utile netto di ciascuno degli ultimi 12 mesi, la quota di ogni spesa fissa e l'andamento delle spese fisse. In Report, l'ultima riga della scheda dell'utile porta direttamente a Utile: per un periodo che è esattamente un mese mostra l'utile netto di quel mese, ad esempio «Utile netto di ottobre: NT$12,300»; per qualsiasi altro periodo riporta Vedi il conto economico mensile."
+        "text": "Seguono fino a tre grafici: l'utile netto mese per mese, la quota di ogni spesa fissa e l'andamento delle spese fisse. I due grafici di andamento coprono al massimo i 12 mesi fino al mese che hai aperto e compaiono solo quando ci sono almeno due mesi da confrontare, contati dal mese della tua prima vendita o spesa. Il grafico delle quote richiede una spesa fissa in quel mese; finché non ce n'è una, quella sezione mostra Aggiungi spesa fissa. In Report, l'ultima riga della scheda dell'utile porta direttamente a Utile: per un periodo che è esattamente un mese mostra l'utile netto di quel mese, ad esempio «Utile netto di ottobre: NT$12,300»; per qualsiasi altro periodo riporta Vedi il conto economico mensile."
       },
       {
         "type": "note",

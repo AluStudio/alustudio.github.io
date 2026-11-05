@@ -1227,7 +1227,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Derefter følger tre grafer: nettoresultatet for hver af de seneste 12 måneder, hver fast udgifts andel og udviklingen i de faste udgifter. I Statistik springer den sidste linje på kortet Dækningsbidrag direkte til Resultat: For en periode, der er præcis én måned, viser den månedens nettoresultat, f.eks. „oktobers nettoresultat NT$12,300“; for alle andre perioder står der Se månedligt resultat."
+        "text": "Derefter følger op til tre grafer: nettoresultatet måned for måned, hver fast udgifts andel og udviklingen i de faste udgifter. De to udviklingsgrafer dækker højst de 12 måneder frem til den måned, du har åbnet, og vises først, når der er mindst to måneder at sammenligne, regnet fra måneden for dit første salg eller din første udgift. Andelsgrafen kræver en fast udgift i den måned; indtil der er en, viser afsnittet i stedet Tilføj fast udgift. I Statistik springer den sidste linje på kortet Dækningsbidrag direkte til Resultat: For en periode, der er præcis én måned, viser den månedens nettoresultat, f.eks. „oktobers nettoresultat NT$12,300“; for alle andre perioder står der Se månedligt resultat."
       },
       {
         "type": "note",

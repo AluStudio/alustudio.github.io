@@ -1230,7 +1230,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Seejärel tulevad kolm diagrammi: puhaskasum iga viimase 12 kuu kohta, iga püsikulu osakaal ja püsikulude trend. Vahekaardil Aruanded viib kasumikaardi viimane rida otse vahekaardile Kasum: täpselt ühe kuu pikkuse perioodi puhul näitab see selle kuu puhaskasumit, näiteks „Oktoober puhaskasum NT$12,300“; mis tahes muu perioodi puhul on seal „Vaata kuu kasumiaruannet“."
+        "text": "Järgneb kuni kolm diagrammi: puhaskasum kuude kaupa, iga püsikulu osakaal ja püsikulude trend. Mõlemad trendidiagrammid hõlmavad kuni 12 kuud avatud kuuni ja ilmuvad alles siis, kui võrrelda saab vähemalt kahte kuud, arvestades esimese müügi või kulu kuust. Osakaalu diagramm vajab sel kuul püsikulu; kuni seda pole, kuvatakse selles jaotises hoopis Lisa püsikulu. Vahekaardil Aruanded viib kasumikaardi viimane rida otse vahekaardile Kasum: täpselt ühe kuu pikkuse perioodi puhul näitab see selle kuu puhaskasumit, näiteks „Oktoobri puhaskasum NT$12,300“; mis tahes muu perioodi puhul on seal „Vaata kuu kasumiaruannet“."
       },
       {
         "type": "note",

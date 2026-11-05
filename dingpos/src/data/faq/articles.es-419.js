@@ -1226,7 +1226,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Después hay tres gráficos: la utilidad neta de cada uno de los últimos 12 meses, la proporción de cada gasto fijo y la tendencia de los gastos fijos. En Reportes, la última línea de la tarjeta de utilidad lleva directo a Resultados: si el periodo es exactamente un mes, muestra la utilidad neta de ese mes, como «Utilidad neta de octubre: NT$12,300»; en cualquier otro periodo dice Ver resultados mensuales."
+        "text": "Después puedes ver hasta tres gráficos: la utilidad neta mes a mes, la proporción de cada gasto fijo y la tendencia de los gastos fijos. Los dos gráficos de tendencia abarcan como máximo los 12 meses hasta el mes que abriste, y solo aparecen cuando hay al menos dos meses para comparar, contados desde el mes de tu primera venta o gasto. El gráfico de proporción necesita un gasto fijo en ese mes; mientras no haya uno, esa sección muestra Agregar gasto fijo. En Reportes, la última línea de la tarjeta de utilidad lleva directo a Resultados: si el periodo es exactamente un mes, muestra la utilidad neta de ese mes, como «Utilidad neta de octubre: NT$12,300»; en cualquier otro periodo dice Ver resultados mensuales."
       },
       {
         "type": "note",

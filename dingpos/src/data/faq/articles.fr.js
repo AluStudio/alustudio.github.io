@@ -1227,7 +1227,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Trois graphiques suivent : le bénéfice net de chacun des 12 derniers mois, la part de chaque dépense fixe et l’évolution des dépenses fixes. Dans Stats, la dernière ligne de la carte de marge brute mène directement à Résultat : pour une période qui correspond exactement à un mois, elle affiche le bénéfice net de ce mois, par exemple « Bénéfice net (octobre) : NT$12,300 » ; pour toute autre période, elle indique Voir le compte de résultat mensuel."
+        "text": "Jusqu’à trois graphiques suivent : le bénéfice net mois par mois, la part de chaque dépense fixe et l’évolution des dépenses fixes. Les deux graphiques d’évolution couvrent au plus les 12 mois jusqu’au mois ouvert, et n’apparaissent qu’à partir de deux mois à comparer, comptés depuis le mois de votre première vente ou dépense. Le graphique des parts exige une dépense fixe ce mois-là ; tant qu’il n’y en a pas, cette section affiche Ajouter une dépense fixe à la place. Dans Stats, la dernière ligne de la carte de marge brute mène directement à Résultat : pour une période qui correspond exactement à un mois, elle affiche le bénéfice net de ce mois, par exemple « Bénéfice net (octobre) : NT$12,300 » ; pour toute autre période, elle indique Voir le compte de résultat mensuel."
       },
       {
         "type": "note",

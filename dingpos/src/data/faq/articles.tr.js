@@ -1235,7 +1235,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ardından üç grafik gelir: son 12 ayın her birinin net kârı, her sabit giderin payı ve sabit giderler trendi. İstatistik'te kâr kartının son satırı doğrudan Kâr/Zarar'a götürür: tam olarak bir ay olan bir dönemde o ayın net kârını gösterir, örneğin “Ekim net kârı NT$12,300”; başka her dönemde Aylık kâr/zararı gör yazar."
+        "text": "Ardından en fazla üç grafik gelir: ay ay net kâr, her sabit giderin payı ve sabit giderler trendi. İki trend grafiği, açtığınız aya kadar en fazla 12 ayı kapsar ve ilk satışınızın ya da giderinizin olduğu aydan başlayarak karşılaştırılacak en az iki ay olduğunda görünür. Pay grafiği için o ay bir sabit gider gerekir; olmadığı sürece bu bölümde Sabit Gider Ekle görünür. İstatistik'te kâr kartının son satırı doğrudan Kâr/Zarar'a götürür: tam olarak bir ay olan bir dönemde o ayın net kârını gösterir, örneğin “Ekim net kârı NT$12,300”; başka her dönemde Aylık kâr/zararı gör yazar."
       },
       {
         "type": "note",
