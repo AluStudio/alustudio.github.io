@@ -7,9 +7,11 @@
 #
 # Usage:
 #   ./scripts/build-guide-shots.sh <dir-with-crops>
+#   KINDS=settings ./scripts/build-guide-shots.sh <dir-with-crops>   # one screen only
 #
-# Expects <market>-settings.png and <market>-report.png for every market in
-# MARKETS below, already cropped to their final framing (this script never crops).
+# Expects <market>-<kind>.png for every market in MARKETS and every kind in KINDS
+# (default: settings and report), already cropped to their final framing (this
+# script never crops). Kinds left out of KINDS are neither read nor rewritten.
 #
 # What it does, and why:
 #   - Writes public/guides/fees-<market>-<kind>.webp at min(source width, 1440).
@@ -36,7 +38,7 @@ OUT="$(cd "$(dirname "$0")/.." && pwd)/public/guides"
 mkdir -p "$OUT"
 
 MARKETS="tw hk au ca nz sg us gb jp fr mx dk ee fi it nl in id kh kr my br th vn cn"
-KINDS="settings report"
+KINDS="${KINDS:-settings report}"
 
 MAX_WIDTH=1440
 PHONE_WIDTH=1080
