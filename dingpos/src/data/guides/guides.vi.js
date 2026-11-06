@@ -146,7 +146,7 @@ export const articles = [
       { type: "h2", text: "Làm sao biết mỗi cách nhận tiền thực sự mất bao nhiêu?" },
       { type: "p", text: "Con số chính xác nhất nằm trên sao kê hằng tháng: tổng phí trong tháng, gồm cả VAT, chia cho doanh số của kênh đó là mức phí thực tế. Tính riêng từng loại thẻ để thấy kênh nào đắt nhất." },
       { type: "p", text: "Cửa hàng không thuộc diện bắt buộc và bán hàng trên iPad có thể để [DingPOS](/) ước tính giúp. Vào Cài đặt → Phương thức thanh toán, chạm vào một phương thức rồi điền Phí xử lý thanh toán: tỷ lệ phần trăm, số tiền cố định mỗi giao dịch, hoặc cả hai. Nhập tỷ lệ thực sự bị khấu trừ, đã gồm VAT: phí 1% chưa VAT thì nhập 1,1%." },
-      { type: "image", src: "guides/fees-vn-settings.webp", width: 872, height: 764, alt: "DingPOS, Cài đặt → Phương thức thanh toán: các ô Phí xử lý thanh toán của một phương thức thanh toán, đã điền tỷ lệ phần trăm", caption: "Điền Phí xử lý thanh toán cho từng phương thức theo mức thực sự bị khấu trừ, đã gồm VAT." },
+      { type: "image", src: "guides/fees-vn-settings.webp", width: 872, height: 1164, alt: "DingPOS, Cài đặt → Phương thức thanh toán: các ô Phí xử lý thanh toán của một phương thức thanh toán, đã điền tỷ lệ phần trăm", caption: "Điền Phí xử lý thanh toán cho từng phương thức theo mức thực sự bị khấu trừ, đã gồm VAT." },
       { type: "p", text: "Từ đó, thẻ Phương thức thanh toán trong Thống kê hiển thị:" },
       {
         type: "list",

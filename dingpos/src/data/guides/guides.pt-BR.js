@@ -141,7 +141,7 @@ export const articles = [
       { type: "h2", text: "Como saber quanto a sua loja paga de verdade?" },
       { type: "p", text: "O número certo está no extrato da maquininha, que mostra a taxa descontada em cada venda. Some as taxas do mês e divida pelo valor vendido em cada forma de pagamento (Pix, débito, crédito à vista, cada número de parcelas). Esse é o seu custo real." },
       { type: "p", text: "Se você vende pelo iPad, o [DingPOS](/) estima essa conta com as suas taxas. Em Ajustes → Formas de pagamento, toque em uma forma e preencha Taxa de processamento: uma porcentagem, um valor fixo por transação ou os dois, com a taxa que a maquininha realmente desconta. Como a taxa muda com o número de parcelas, crie uma forma para cada modalidade, como Crédito à vista e Crédito 3x. “Percentual da taxa devolvido em reembolsos” vem ativado: desative se a maquininha não devolve a taxa no estorno, como em geral no Mercado Pago." },
-      { type: "image", src: "guides/fees-br-settings.webp", width: 872, height: 764, alt: "DingPOS, Ajustes → Formas de pagamento: a seção Taxa de processamento de uma forma de pagamento, com o percentual preenchido.", caption: "Cada forma de pagamento recebe a taxa que a maquininha realmente desconta." },
+      { type: "image", src: "guides/fees-br-settings.webp", width: 872, height: 1164, alt: "DingPOS, Ajustes → Formas de pagamento: a seção Taxa de processamento de uma forma de pagamento, com o percentual preenchido.", caption: "Cada forma de pagamento recebe a taxa que a maquininha realmente desconta." },
       { type: "p", text: "Daí em diante, cada pagamento registra uma taxa estimada, e o cartão Formas de pagamento do Resumo mostra:" },
       {
         type: "list",

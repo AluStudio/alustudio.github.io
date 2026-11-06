@@ -143,7 +143,7 @@ export const articles = [
       { type: "h2", text: "¿Cómo sabes cuánto te cobran de verdad?" },
       { type: "p", text: "El dato exacto está en tu estado de cuenta: divide la comisión del mes, con su IVA, entre lo cobrado y tendrás tu tasa real. Hazlo por forma de cobro y verás cuál te sale más cara." },
       { type: "p", text: "Si cobras con un iPad, [DingPOS](/) puede estimar esa cuenta con tus tasas. En Ajustes → Métodos de pago, toca cada método y completa Comisión por procesamiento: un porcentaje, un monto fijo por transacción o ambos. Escribe la tasa con IVA: 4.06% para Point, o 3.47% más $1.16 para Clip Bronce." },
-      { type: "image", src: "guides/fees-mx-settings.webp", width: 872, height: 764, alt: "DingPOS, Ajustes → Métodos de pago: la sección Comisión por procesamiento de un método de pago, con el porcentaje y el monto fijo por transacción.", caption: "Cada método de pago lleva la comisión que te descuenta tu proveedor, con IVA incluido." },
+      { type: "image", src: "guides/fees-mx-settings.webp", width: 872, height: 1196, alt: "DingPOS, Ajustes → Métodos de pago: la sección Comisión por procesamiento de un método de pago, con el porcentaje y el monto fijo por transacción.", caption: "Cada método de pago lleva la comisión que te descuenta tu proveedor, con IVA incluido." },
       { type: "p", text: "En Reportes, la tarjeta Métodos de pago muestra entonces:" },
       {
         type: "list",

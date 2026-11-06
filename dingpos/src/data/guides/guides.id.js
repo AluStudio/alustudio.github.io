@@ -143,7 +143,7 @@ export const articles = [
       { type: "h2", text: "Bagaimana mengetahui tarif yang sebenarnya Anda bayar?" },
       { type: "p", text: "Angka paling tepat ada di laporan settlement atau mutasi rekening (di GoPay Merchant: buka Keuangan, lalu pilih transaksinya). Bagi total potongan sebulan dengan penjualan metode itu: itulah tarif sebenarnya, termasuk PPN kalau ada." },
       { type: "p", text: "Kalau kasir Anda memakai iPad, [DingPOS](/) bisa menghitungnya. Di Pengaturan → Metode Pembayaran, ketuk sebuah metode dan isi Biaya pemrosesan: persentase, jumlah tetap per transaksi, atau keduanya. Masukkan tarif yang benar-benar dipotong, termasuk PPN kalau ditambahkan bank (2,22% untuk MDR 2%). Untuk QRIS yang gratis sampai batas tertentu, isi tarif rata-rata dari laporan bulan lalu, karena tarif di DingPOS berlaku untuk semua nominal." },
-      { type: "image", src: "guides/fees-id-settings.webp", width: 872, height: 764, alt: "DingPOS Pengaturan → Metode Pembayaran: kolom Biaya pemrosesan sebuah metode pembayaran, dengan persentase sudah diisi", caption: "Isi Biaya pemrosesan dengan tarif yang benar-benar dipotong, termasuk PPN kalau ditambahkan." },
+      { type: "image", src: "guides/fees-id-settings.webp", width: 872, height: 1266, alt: "DingPOS Pengaturan → Metode Pembayaran: kolom Biaya pemrosesan sebuah metode pembayaran, dengan persentase sudah diisi", caption: "Isi Biaya pemrosesan dengan tarif yang benar-benar dipotong, termasuk PPN kalau ditambahkan." },
       { type: "p", text: "Sejak itu, kartu Metode Pembayaran di Statistik menampilkan:" },
       {
         type: "list",

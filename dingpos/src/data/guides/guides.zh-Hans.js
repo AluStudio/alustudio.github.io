@@ -139,7 +139,7 @@ export const articles = [
       { type: "h2", text: "怎么知道每种收款方式实际被扣多少？" },
       { type: "p", text: "最准的数字在结算账单上：微信支付商户平台、支付宝对账中心和收单机构的对账单都列出每笔手续费。当月手续费除以交易金额，就是你实际的费率。" },
       { type: "p", text: "如果你已经用 iPad 收银，也可以让 [DingPOS](/) 帮你算。到“设置 → 付款方式”点开一个付款方式，在“手续费”填百分比、每笔固定金额，或两者都填。请填实际被扣的费率；微信支付的费率已含税，照合同填就行。" },
-      { type: "image", src: "guides/fees-cn-settings.webp", width: 872, height: 733, alt: "DingPOS“设置 → 付款方式”：一个付款方式的“手续费”字段，已填入百分比", caption: "在付款方式的“手续费”填上实际被扣的费率。" },
+      { type: "image", src: "guides/fees-cn-settings.webp", width: 872, height: 1030, alt: "DingPOS“设置 → 付款方式”：一个付款方式的“手续费”字段，已填入百分比", caption: "在付款方式的“手续费”填上实际被扣的费率。" },
       { type: "p", text: "之后用这种方式收的每一笔款都会估算手续费，报表的付款方式卡会这样显示：" },
       {
         type: "list",

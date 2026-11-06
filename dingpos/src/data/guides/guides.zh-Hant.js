@@ -142,7 +142,7 @@ export const articles = [
       { type: "h2", text: "怎麼知道每種收款方式實際被扣多少？" },
       { type: "p", text: "最準的數字在每月的撥款明細上：把當月的手續費除以交易金額，就是你實際的費率，含稅與否也看得出來。每種收款方式各記一欄，月底就能看出哪一種最貴。" },
       { type: "p", text: "如果你已經用 iPad 收銀，也可以讓 [DingPOS](/) 幫你算。到「設定 → 付款方式」點一個付款方式，在「手續費」填百分比、每筆固定金額，或兩者都填。請填實際被扣、含稅的費率，例如 LINE Pay 填 3.15%。" },
-      { type: "image", src: "guides/fees-tw-settings.webp", width: 872, height: 733, alt: "DingPOS「設定 → 付款方式」：一個付款方式的「手續費」欄位，已填入百分比", caption: "在付款方式的「手續費」填上實際被扣、含稅的費率。" },
+      { type: "image", src: "guides/fees-tw-settings.webp", width: 872, height: 1030, alt: "DingPOS「設定 → 付款方式」：一個付款方式的「手續費」欄位，已填入百分比", caption: "在付款方式的「手續費」填上實際被扣、含稅的費率。" },
       { type: "p", text: "之後每筆用這個方式收的款都會估算手續費，報表的付款方式卡會這樣顯示：" },
       {
         type: "list",
@@ -256,7 +256,7 @@ export const articles = [
       { type: "h2", text: "怎樣知道每種收款方式實際被扣幾多？" },
       { type: "p", text: "最準確的數字在每月的結算報表或月結單上：把當月的手續費除以交易金額，就是你實際的費率。" },
       { type: "p", text: "如果你已經用 iPad 收銀，也可以讓 [DingPOS](/) 代你計算。到「設定 → 付款方式」點一個付款方式，在「手續費」填上實際被扣的費率：百分比、每筆固定金額，或兩者都填。" },
-      { type: "image", src: "guides/fees-hk-settings.webp", width: 872, height: 733, alt: "DingPOS「設定 → 付款方式」：一個付款方式的「手續費」欄位，已填入百分比", caption: "在付款方式的「手續費」填上實際被扣的費率。" },
+      { type: "image", src: "guides/fees-hk-settings.webp", width: 872, height: 1030, alt: "DingPOS「設定 → 付款方式」：一個付款方式的「手續費」欄位，已填入百分比", caption: "在付款方式的「手續費」填上實際被扣的費率。" },
       { type: "p", text: "之後每筆收款都會估算手續費，報表的付款方式卡會這樣顯示：" },
       {
         type: "list",

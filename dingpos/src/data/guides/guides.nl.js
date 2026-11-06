@@ -140,7 +140,7 @@ export const articles = [
       { type: "h2", text: "Hoe zie je wat je echt aan transactiekosten betaalt?" },
       { type: "p", text: "Het echte getal staat in de overzichten van je aanbieder. Volgens Europese regels moet die je per kaartbetaling het bedrag en de kosten laten zien; je contract kan dat bundelen in een overzicht van minstens eens per maand. Deel de kosten van een maand door de omzet met die betaalmethode, en je hebt je echte tarief." },
       { type: "p", text: "Werk je met een iPad, dan kan [DingPOS](/) de kosten per methode voor je schatten. Tik onder Instellingen → Betaalmethoden op een betaalmethode en vul bij Transactiekosten een percentage in, een vast bedrag per transactie, of allebei. Vul in wat je aanbieder echt inhoudt, inclusief btw als die erop zit. Het vaste bedrag gaat in hele centen: bij € 0,065 vul je € 0,07 in, net iets meer dan je echt betaalt." },
-      { type: "image", src: "guides/fees-nl-settings.webp", width: 872, height: 764, alt: "DingPOS Instellingen → Betaalmethoden: de velden onder Transactiekosten van een betaalmethode, met een vast bedrag per transactie ingevuld", caption: "Vul per betaalmethode in wat je aanbieder echt inhoudt; het geldt voor de betalingen die daarna komen." },
+      { type: "image", src: "guides/fees-nl-settings.webp", width: 872, height: 1164, alt: "DingPOS Instellingen → Betaalmethoden: de velden onder Transactiekosten van een betaalmethode, met een vast bedrag per transactie ingevuld", caption: "Vul per betaalmethode in wat je aanbieder echt inhoudt; het geldt voor de betalingen die daarna komen." },
       {
         type: "list",
         items: [

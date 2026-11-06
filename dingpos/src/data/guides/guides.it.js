@@ -152,7 +152,7 @@ export const articles = [
       { type: "h2", text: "Registratore telematico e DingPOS" },
       { type: "p", text: "Chi vende al dettaglio deve certificare ogni vendita con il documento commerciale, emesso da un registratore telematico (RT), dalla procedura web dell'Agenzia delle Entrate o da un software approvato, e trasmettere i corrispettivi. [DingPOS](/) non fa nessuna delle due cose e non sostituisce questi strumenti: se il tuo negozio ha l'obbligo, non registrare le vendite in DingPOS e applica le formule ai dati del tuo RT e agli estratti dell'operatore. Il forfettario non esonera: gli esoneri dipendono dal tipo di attività, e nel dubbio chiedi al commercialista." },
       { type: "p", text: "Se la tua attività è esonerata da questi obblighi, DingPOS stima le commissioni sull'iPad. In Impostazioni → Metodi di pagamento compili la Commissione di ogni metodo: una percentuale, un importo fisso per operazione, oppure entrambi. Inserisci quello che l'operatore trattiene davvero." },
-      { type: "image", src: "guides/fees-it-settings.webp", width: 872, height: 764, alt: "DingPOS Impostazioni → Metodi di pagamento: i campi Commissione di un metodo di pagamento, con una percentuale compilata", caption: "La tariffa si inserisce una volta per ogni metodo di pagamento e vale per i pagamenti successivi." },
+      { type: "image", src: "guides/fees-it-settings.webp", width: 872, height: 1226, alt: "DingPOS Impostazioni → Metodi di pagamento: i campi Commissione di un metodo di pagamento, con una percentuale compilata", caption: "La tariffa si inserisce una volta per ogni metodo di pagamento e vale per i pagamenti successivi." },
       { type: "p", text: "In Report, la scheda Metodi di pagamento mostra poi:" },
       {
         type: "list",

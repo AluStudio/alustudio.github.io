@@ -144,7 +144,7 @@ export const articles = [
       { type: "h2", text: "Bagaimana mengetahui kadar sebenar yang anda bayar?" },
       { type: "p", text: "Angka paling tepat ada pada penyata penyelesaian: penyata akaun di portal e-Access CIMB, atau laporan penyelesaian harian Touch 'n Go eWallet. Bahagikan caj sebulan dengan jualan bagi kaedah itu: itulah kadar sebenar anda." },
       { type: "p", text: "Jika anda sudah menggunakan iPad di kaunter, [DingPOS](/) boleh menganggar caj ini untuk anda. Dalam Tetapan → Kaedah Pembayaran, ketik satu kaedah dan isikan Caj pemprosesan: peratusan, jumlah tetap bagi setiap transaksi, atau kedua-duanya. Masukkan kadar yang sebenarnya ditolak, termasuk cukai jika ada, contohnya 1.10% bagi kad kredit. Jika penyedia tidak memulangkan MDR semasa bayaran balik, seperti RHB bagi DuitNow QR, matikan suis \"Peratusan caj dikembalikan semasa bayaran balik\"." },
-      { type: "image", src: "guides/fees-my-settings.webp", width: 872, height: 764, alt: "DingPOS Tetapan → Kaedah Pembayaran: medan Caj pemprosesan bagi satu kaedah pembayaran, dengan peratusan diisi", caption: "Isikan Caj pemprosesan dengan kadar yang sebenarnya ditolak oleh penyedia anda." },
+      { type: "image", src: "guides/fees-my-settings.webp", width: 872, height: 1164, alt: "DingPOS Tetapan → Kaedah Pembayaran: medan Caj pemprosesan bagi satu kaedah pembayaran, dengan peratusan diisi", caption: "Isikan Caj pemprosesan dengan kadar yang sebenarnya ditolak oleh penyedia anda." },
       { type: "p", text: "Setiap bayaran melalui kaedah itu kemudian merekodkan anggaran caj, dan kad Kaedah Pembayaran pada Statistik memaparkan:" },
       {
         type: "list",

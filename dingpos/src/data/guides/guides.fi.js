@@ -150,7 +150,7 @@ export const articles = [
       { type: "h2", text: "Näin selvität todellisen maksukuluprosenttisi ja seuraat kuluja" },
       { type: "p", text: "Tarkin luku on tilitysraportissasi: jaa kuukauden maksukulut samalla maksutavalla samassa kuussa maksetulla myynnillä, niin saat todellisen prosenttisi. EU-asetuksen mukaan kulut on eriteltävä korttiluokittain ja -merkeittäin, ellet ole kirjallisesti pyytänyt yhtä hintaa. Tarjousten vertailuun laske vuoden maksukulut ja kuukausimaksut yhteen ja jaa summa vuoden korttimyynnillä." },
       { type: "p", text: "Jos kirjaat myynnit iPadilla, [DingPOS](/) voi arvioida kulut puolestasi. Kohdassa Asetukset → Maksutavat napautat maksutapaa ja täytät kohdan Maksukulu: prosenttiosuus, kiinteä summa tapahtumaa kohden tai molemmat. Syötä määrä, jonka maksupalvelusi todella vähentää, mahdollinen arvonlisävero mukaan lukien." },
-      { type: "image", src: "guides/fees-fi-settings.webp", width: 872, height: 764, alt: "DingPOS Asetukset → Maksutavat: maksutavan Maksukulu-kentät, joihin on täytetty prosenttiosuus", caption: "Syötä maksutavalle maksukulu, jonka maksupalvelusi todella vähentää." },
+      { type: "image", src: "guides/fees-fi-settings.webp", width: 872, height: 1204, alt: "DingPOS Asetukset → Maksutavat: maksutavan Maksukulu-kentät, joihin on täytetty prosenttiosuus", caption: "Syötä maksutavalle maksukulu, jonka maksupalvelusi todella vähentää." },
       { type: "p", text: "Sen jälkeen Tilastot-välilehden Maksutavat-kortissa näkyy:" },
       {
         type: "list",
