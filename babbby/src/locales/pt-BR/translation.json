@@ -1,0 +1,248 @@
+{
+  "//": "Generated from en and the pt-BR translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- babbby sync pt-BR`, then `npm run l10n -- babbby apply pt-BR`.",
+  "nav": {
+    "home": "Início",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "faq": "Perguntas frequentes",
+    "language": "Idioma"
+  },
+  "landing": {
+    "title": "Babbby",
+    "meta_title": "Babbby — Ideias de atividades para bebês e crianças de 0 a 6 anos",
+    "meta_description": "Babbby, app de atividades para bebês: ideias diárias para brincar com seu bebê, de 0 a 6 anos. Acompanhe marcos, crie rotinas e aproveite cada dia.",
+    "subtitle": "Ideias diárias de atividades para brincar com seu bebê, de 0 a 6 anos. Acompanhe marcos, crie rotinas e faça cada dia valer a pena.",
+    "appstore_sub": "Baixar na",
+    "appstore_main": "App Store",
+    "privacy_link": "Política de Privacidade",
+    "terms_link": "Termos de Uso"
+  },
+  "features": {
+    "heading": "Ideias de atividades para brincar de 0 a 6 anos, de acordo com a idade da criança",
+    "daily_plan": {
+      "title": "Plano de hoje, pronto.",
+      "desc": "Abra o app e as atividades já estão lá. Chega de “o que vamos fazer hoje?”. É só começar a brincar."
+    },
+    "library": {
+      "title": "Mais de 340 atividades para escolher",
+      "desc": "Motricidade ampla, motricidade fina, linguagem, sensorial… 8 categorias, de acordo com a idade da criança."
+    },
+    "materials": {
+      "title": "Filtre pelo que você tem",
+      "desc": "Escolha o que você tem à mão — giz de cera, papelão, blocos — e veja só as atividades que dá para fazer agora."
+    },
+    "stats": {
+      "title": "Acompanhe tudo",
+      "desc": "Atividades concluídas, divisão por categoria, tendências diárias. Olhe para trás e veja cada passo."
+    }
+  },
+  "footer": {
+    "tagline": "Companheiro de atividades diárias para pais e responsáveis",
+    "copyright": "Alu Studio. Todos os direitos reservados.",
+    "contact": "Fale conosco",
+    "privacy_policy": "Política de Privacidade",
+    "terms_of_use": "Termos de Uso"
+  },
+  "privacy_policy": {
+    "title": "Política de Privacidade",
+    "meta_description": "Como o Babbby trata os seus dados: o que é coletado, como é armazenado e quais escolhas você tem.",
+    "effective_date": "Data de vigência: 13 de março de 2026",
+    "intro": "Esta política de privacidade se aplica ao app Babbby para iOS (“Aplicativo”), criado pela Alu Studio (“Prestador de Serviço”) como um serviço gratuito. Este serviço é oferecido “NO ESTADO EM QUE SE ENCONTRA”. Ao usar o Aplicativo, você concorda com a coleta e o uso de informações conforme descrito nesta política.",
+    "info_collection": {
+      "title": "Coleta e uso de informações",
+      "desc": "O Aplicativo pode coletar certas informações automaticamente quando você o baixa e o utiliza, por meio de serviços de terceiros integrados. Essas informações podem incluir:",
+      "items": [
+        "O endereço de protocolo de Internet (endereço IP) do seu dispositivo",
+        "Tipo de dispositivo, versão do sistema operacional e identificadores exclusivos do dispositivo",
+        "Dados de uso, como interações com os recursos do app, duração das sessões e telas visitadas",
+        "Registros de falhas e diagnósticos de desempenho"
+      ],
+      "no_ads": "O Aplicativo não usa serviços de publicidade e não coleta identificadores de publicidade (IDFA)."
+    },
+    "local_storage": {
+      "title": "Armazenamento local de dados",
+      "desc": "Todo o conteúdo criado pelo usuário — incluindo perfis de crianças, registros de atividades, registros de conclusão e estatísticas — é armazenado exclusivamente no seu dispositivo, em um banco de dados local (GRDB/SQLite). Esses dados nunca são transmitidos aos servidores da Alu Studio nem a terceiros. Se você desinstalar o Aplicativo, todos os dados locais serão apagados permanentemente."
+    },
+    "iap": {
+      "title": "Compras dentro do app",
+      "desc": "O Aplicativo oferece uma compra opcional de apoio ao desenvolvedor, em pagamento único (“Pague um café ao desenvolvedor”), por meio do StoreKit da Apple. Todo o processamento de pagamentos é feito inteiramente pela Apple. A Alu Studio não coleta nem armazena nenhuma informação de pagamento, dados de cartão de crédito ou credenciais do Apple ID, e não tem acesso a eles."
+    },
+    "activity_disclaimer": {
+      "title": "Recomendações de atividades",
+      "desc": "As recomendações de atividades oferecidas pelo Aplicativo são geradas por algoritmo, apenas como inspiração. Elas não constituem orientação médica, educacional, psicológica ou sobre o desenvolvimento infantil. Os pais e responsáveis são os únicos responsáveis por avaliar se qualquer atividade é adequada para a criança."
+    },
+    "third_party": {
+      "title": "Serviços de terceiros",
+      "desc": "O Aplicativo usa os seguintes serviços de terceiros, cada um com a sua própria política de privacidade que rege o tratamento dos dados:",
+      "services": [
+        {
+          "name": "Firebase Analytics",
+          "url": "https://firebase.google.com/support/privacy/"
+        },
+        {
+          "name": "Firebase Crashlytics",
+          "url": "https://firebase.google.com/support/privacy/"
+        }
+      ]
+    },
+    "data_retention": {
+      "title": "Retenção de dados",
+      "desc": "Todos os dados de atividades e os ajustes do app são armazenados localmente no seu dispositivo e nunca são transmitidos aos nossos servidores. Os dados coletados por serviços de terceiros (Firebase Analytics, Firebase Crashlytics) são retidos de acordo com as respectivas políticas de retenção de dados. Para apagar os dados locais, desinstale o Aplicativo ou limpe os dados dele nos ajustes do seu dispositivo."
+    },
+    "children": {
+      "title": "Privacidade das crianças",
+      "desc": "O Aplicativo é uma ferramenta feita para pais e responsáveis planejarem atividades para suas crianças (de 0 a 6 anos). Ele não se destina ao uso direto por crianças. Não coletamos intencionalmente informações de identificação pessoal de menores de 13 anos. As informações do perfil da criança (nome, data de nascimento) são armazenadas apenas no dispositivo e nunca são transmitidas. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco pelo e-mail alustudio14@gmail.com."
+    },
+    "rights": {
+      "title": "Seus direitos e escolhas",
+      "desc": "Dependendo de onde você estiver, você pode ter certos direitos em relação aos seus dados pessoais:",
+      "gdpr_title": "Para usuários da UE/EEE (GDPR)",
+      "gdpr_items": [
+        "Direito de acessar seus dados pessoais",
+        "Direito de retificar dados pessoais incorretos",
+        "Direito ao apagamento (“direito de ser esquecido”)",
+        "Direito de restringir o tratamento de dados ou de se opor a ele",
+        "Direito à portabilidade dos dados"
+      ],
+      "ccpa_title": "Para usuários da Califórnia (CCPA)",
+      "ccpa_desc": "Você tem o direito de saber quais informações pessoais são coletadas, de solicitar a exclusão das suas informações pessoais e de optar por não ter suas informações pessoais vendidas. Nós não vendemos as suas informações pessoais.",
+      "opt_out_title": "Opções para recusar",
+      "opt_out_items": [
+        "iOS: acesse Ajustes → Privacidade e Segurança → Análises e Melhorias para gerenciar o compartilhamento de dados de análise",
+        "Desinstalação: você pode interromper toda a coleta de dados desinstalando o Aplicativo"
+      ]
+    },
+    "security": {
+      "title": "Segurança",
+      "desc": "Valorizamos a segurança das suas informações. Todos os dados do usuário são armazenados localmente no seu dispositivo e protegidos pelas medidas de segurança integradas do iOS. No entanto, nenhum método de armazenamento eletrônico é 100% seguro, e não podemos garantir segurança absoluta."
+    },
+    "changes": {
+      "title": "Alterações nesta Política de Privacidade",
+      "desc": "Podemos atualizar esta Política de Privacidade de tempos em tempos. As alterações serão publicadas nesta página, com a data de vigência atualizada. Recomendamos que você consulte esta página periodicamente. O uso continuado do Aplicativo após as alterações constitui aceitação da política atualizada."
+    },
+    "contact": {
+      "title": "Fale conosco",
+      "desc": "Se você tiver qualquer dúvida sobre esta Política de Privacidade ou sobre os seus dados, entre em contato conosco pelo e-mail"
+    }
+  },
+  "terms": {
+    "title": "Termos de Uso",
+    "meta_description": "Termos de Uso do Babbby, o app de atividades diárias para bebês da Alu Studio.",
+    "effective_date": "Data de vigência: 13 de março de 2026",
+    "intro": "Estes termos e condições se aplicam ao aplicativo Babbby («Aplicativo») para iOS, criado pela Alu Studio («Prestador de Serviço») como um serviço gratuito. Ao baixar ou usar o Aplicativo, você concorda com estes termos.",
+    "license": {
+      "title": "Licença de Uso",
+      "desc": "O Prestador de Serviço concede a você uma licença limitada, não exclusiva, intransferível e revogável para usar o Aplicativo para fins pessoais e não comerciais, de acordo com estes termos."
+    },
+    "restrictions": {
+      "title": "Restrições",
+      "desc": "Você concorda em não:",
+      "items": [
+        "Copiar, modificar ou criar obras derivadas com base no Aplicativo",
+        "Tentar extrair o código-fonte do Aplicativo",
+        "Traduzir o Aplicativo para outros idiomas ou criar versões derivadas",
+        "Usar o Aplicativo para qualquer finalidade ilícita ou em violação de quaisquer leis aplicáveis"
+      ]
+    },
+    "activity_disclaimer": {
+      "title": "Aviso sobre as Recomendações de Atividades",
+      "desc": "O Aplicativo oferece sugestões de atividades de acordo com a idade. Ao usar o Aplicativo, você reconhece e concorda que:",
+      "items": [
+        "As ideias de atividades são oferecidas apenas como inspiração e não constituem orientação profissional em saúde, educação, psicologia ou desenvolvimento infantil",
+        "Pais e responsáveis são os únicos responsáveis por supervisionar as crianças durante qualquer atividade sugerida pelo Aplicativo",
+        "As recomendações por idade são orientações gerais; cada criança se desenvolve de um jeito, e cabe aos pais e responsáveis avaliar se a atividade é adequada à sua criança",
+        "O Aplicativo não substitui a consulta a pediatras, terapeutas ou outros profissionais qualificados",
+        "O desenvolvedor não assume nenhuma responsabilidade por lesão, dano ou consequência decorrente da realização das atividades sugeridas"
+      ]
+    },
+    "third_party": {
+      "title": "Serviços de Terceiros",
+      "desc": "O Aplicativo utiliza serviços de terceiros, que têm seus próprios termos e condições:",
+      "services": [
+        {
+          "name": "Firebase Analytics",
+          "url": "https://firebase.google.com/terms/"
+        },
+        {
+          "name": "Firebase Crashlytics",
+          "url": "https://firebase.google.com/terms/crashlytics"
+        }
+      ]
+    },
+    "device_security": {
+      "title": "Segurança do Dispositivo",
+      "desc": "Você é responsável por manter a segurança do seu dispositivo e do acesso ao Aplicativo. Recomendamos fortemente que você não faça jailbreak no dispositivo, pois isso pode comprometer os recursos de segurança e fazer o Aplicativo funcionar de forma incorreta."
+    },
+    "connectivity": {
+      "title": "Conexão com a Internet",
+      "desc": "Alguns recursos do Aplicativo podem exigir uma conexão ativa com a internet (por exemplo, compras no app e análises de uso). O Prestador de Serviço não se responsabiliza pelo funcionamento do Aplicativo abaixo de sua capacidade total por falta de acesso à internet."
+    },
+    "updates": {
+      "title": "Atualizações do Aplicativo",
+      "desc": "O Prestador de Serviço pode lançar atualizações do Aplicativo de tempos em tempos. Você concorda em aceitar as atualizações quando estiverem disponíveis. O Prestador de Serviço também pode descontinuar o Aplicativo a qualquer momento, sem aviso prévio. Com o encerramento, seus direitos previstos nestes termos terminam, e você deve parar de usar o Aplicativo e apagá-lo."
+    },
+    "disclaimer": {
+      "title": "Isenção de Garantias",
+      "desc": "O Aplicativo é fornecido «NO ESTADO EM QUE SE ENCONTRA» («AS IS»), sem garantias de qualquer tipo, expressas ou implícitas. O Prestador de Serviço não garante que o Aplicativo ficará livre de erros, funcionará sem interrupções ou estará isento de componentes nocivos."
+    },
+    "liability": {
+      "title": "Limitação de Responsabilidade",
+      "desc": "Na máxima extensão permitida por lei, o Prestador de Serviço não será responsável por danos indiretos, incidentais, especiais, consequenciais ou punitivos, nem por qualquer perda de lucros ou receitas decorrente do seu uso do Aplicativo."
+    },
+    "changes": {
+      "title": "Alterações Nestes Termos",
+      "desc": "O Prestador de Serviço pode atualizar estes Termos de tempos em tempos. As alterações serão publicadas nesta página. O uso continuado do Aplicativo após as alterações constitui aceitação dos termos atualizados."
+    },
+    "contact": {
+      "title": "Fale Conosco",
+      "desc": "Se você tiver qualquer dúvida sobre estes Termos, entre em contato conosco pelo e-mail"
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "meta_title": "Babbby FAQ — app de atividades diárias para bebês",
+    "meta_description": "Respostas sobre o Babbby: idades atendidas, preço, ideias de atividades, acompanhamento do progresso e privacidade.",
+    "subtitle": "Respostas para as perguntas que pais e responsáveis mais fazem sobre as atividades diárias, a escolha por idade e a privacidade do Babbby.",
+    "contact_prompt": "Não encontrou sua resposta? Fale com a gente:",
+    "items": {
+      "what_is_babbby": {
+        "title": "O que é o Babbby?",
+        "answer": "O Babbby — Atividades diárias para bebês é um app gratuito para iOS que oferece a pais e responsáveis de crianças de 0 a 6 anos um plano diário de atividades pronto, sem precisar descobrir todo dia o que fazer com a criança. Ele traz uma Biblioteca com mais de 340 atividades em 8 categorias, escolhidas automaticamente de acordo com a idade da criança, com a opção de filtrar pelos materiais que você já tem em casa e de acompanhar as atividades concluídas ao longo do tempo."
+      },
+      "what_ages": {
+        "title": "Para quais idades o Babbby foi feito?",
+        "answer": "O Babbby foi feito para crianças de 0 a 6 anos. As mais de 340 atividades incluídas são escolhidas automaticamente de acordo com a idade da criança e abrangem categorias como motricidade ampla, motricidade fina, linguagem e desenvolvimento sensorial."
+      },
+      "is_babbby_free": {
+        "title": "O Babbby é gratuito?",
+        "answer": "Sim, o Babbby é gratuito para baixar na App Store, e usar os recursos principais não exige assinatura. A única compra disponível é uma gorjeta opcional e única, “Pague um café ao desenvolvedor”, processada pelo StoreKit da Apple e que não é necessária para acessar nenhuma atividade ou recurso."
+      },
+      "does_it_need_an_account": {
+        "title": "O Babbby exige conta ou cadastro?",
+        "answer": "Não. O Babbby não exige conta nem cadastro — você pode começar a usar logo depois de baixar. Os perfis das crianças, os registros de atividades e os dados de progresso ficam armazenados exclusivamente no seu dispositivo, em um banco de dados local, e nunca são enviados a um servidor."
+      },
+      "how_are_activities_recommended": {
+        "title": "Como o Babbby recomenda atividades?",
+        "answer": "O Babbby escolhe automaticamente, entre as mais de 340 atividades da Biblioteca, as que combinam com a idade da criança, e você pode filtrar ainda mais pelos materiais que já tem à mão — como giz de cera, papelão ou blocos — para ver só as atividades que dá para começar agora mesmo. As recomendações são geradas por algoritmo, apenas como inspiração; pais e responsáveis decidem o que é melhor para a criança."
+      },
+      "can_it_track_milestones": {
+        "title": "Dá para acompanhar os marcos e o progresso da criança no Babbby?",
+        "answer": "Sim, o Babbby registra as atividades concluídas, mostra a divisão por categoria e exibe as tendências diárias para você poder rever cada passo. Esses dados de acompanhamento ficam armazenados no seu dispositivo e refletem o histórico de atividades concluídas, não uma avaliação formal do desenvolvimento feita por um pediatra."
+      },
+      "is_my_data_private": {
+        "title": "Quais dados o Babbby coleta? Os dados da criança ficam privados?",
+        "answer": "Todo o conteúdo criado pelos usuários no Babbby — incluindo perfis das crianças, registros de atividades, registros de conclusão e estatísticas — fica armazenado exclusivamente no seu dispositivo, em um banco de dados local, e nunca é enviado aos servidores da Alu Studio nem a terceiros. O app não exibe anúncios e não coleta identificadores de publicidade (IDFA); usa o Firebase Analytics e o Crashlytics apenas para dados anônimos de uso e de falhas.",
+        "bullets": [
+          "Os dados do perfil da criança (nome, data de nascimento) nunca saem do dispositivo e são apagados definitivamente se você desinstalar o app",
+          "Sem anúncios e sem rastreamento por identificador de publicidade (IDFA)",
+          "Usuários da UE/EEE têm os direitos do Regulamento Geral sobre a Proteção de Dados (GDPR); usuários da Califórnia têm os direitos do CCPA, e a Alu Studio não vende informações pessoais",
+          "Você pode limitar a coleta de dados de análise em Ajustes → Privacidade e Segurança → Análises e Melhorias"
+        ]
+      },
+      "what_platforms": {
+        "title": "Em quais plataformas o Babbby está disponível?",
+        "answer": "No momento, o Babbby está disponível apenas para iOS, como download gratuito na App Store, nas categorias Estilo de vida e Educação."
+      }
+    }
+  }
+}

@@ -296,9 +296,46 @@ const SOTTO_OVERRIDES = {};
 const BABBBY_APP_GLOSSARY = [];
 
 // Website-only replacements for Babbby, applied after BABBBY_APP_GLOSSARY.
-const BABBBY_SITE_GLOSSARY = [];
+const BABBBY_SITE_GLOSSARY = [
+  // Taiwan wording opencc leaves (mainland form; reviewed 2026-11 by zh-hans-reviewer)
+  ["透过", "通过"],
+  ["隐私权", "隐私"], // 隐私政策, and iOS's 隐私与安全性
+  ["本地端", "本地"],
+  ["当机", "崩溃"],
+  ["互联网协定", "互联网协议"],
+  ["识别码", "标识符"], // Apple's 设备标识符 / 广告标识符
+  ["刊登", "发布"],
+  ["以「现状」", "按「原样」"], // the legal "AS IS"; quotes become “” after this step
+  ["应用程序内购买", "App 内购买"], // Apple's mainland term
+  ["拷贝", "复制"],
+  ["小儿科医师", "儿科医生"], // before 医师
+  ["医师", "医生"],
+  ["帐号", "账号"],
+  ["配对", "匹配"], // matching activities to an age, not pairing
+  ["大肢体", "大运动"], // early-education names of the gross and fine motor categories
+  ["小肌肉", "精细动作"],
+  ["创建日常", "养成日常习惯"], // "build routines"; 创建 reads as creating a thing
+  ["⋯⋯", "……"],
+  // Converter mistranslations
+  ["内核", "核心"], // 核心 → kernel
+  ["文件", "档案"], // a child's profile (檔案), not a document
+  ["纪录", "记录"], // 纪录 is a record-breaking best
+];
 
-const BABBBY_OVERRIDES = {};
+const BABBBY_OVERRIDES = {
+  // 執行 an activity is a child doing it; the converter's 运行 is a program running.
+  "ui:terms.activity_disclaimer.items.4": [
+    "開發者不對執行建議活動所導致的任何傷害、損害或後果承擔責任",
+    "开发者不对因进行建议活动所导致的任何伤害、损害或后果承担责任",
+  ],
+  "ui:privacy_policy.info_collection.items.2": ["使用數據，例如功能互動、使用時長及瀏覽畫面", "使用数据，例如功能交互、使用时长及访问页面"],
+  "ui:privacy_policy.rights.gdpr_items.4": ["資料可攜性的權利", "数据可携带权"],
+  // The mainland App Store names the Lifestyle category 生活.
+  "ui:faq.items.what_platforms.answer": [
+    "Babbby 目前僅提供 iOS 版本，可在 App Store 免費下載，上架分類為「生活風格」與「教育」。",
+    "Babbby 目前仅提供 iOS 版本，可在 App Store 免费下载，上架分类为“生活”与“教育”。",
+  ],
+};
 
 export const APPS = {
   dingpos: {
