@@ -1,6 +1,6 @@
 ---
 name: l10n-reviewer
-description: Reviews one translated language of the DingPOS or Sotto website (ja, th, ko, … — not zh-Hans) one segment at a time. Read-only. Product, readers and fixed terms come from the contract the packet names. Routes every finding to exactly one layer — translation, glossary (the site glossary), en (the shared English source) or app (the app's own wording). Input: language code + a review packet from `npm run l10n -- <app> sync <code> --mode review` (plus the previous reply for a re-review).
+description: Reviews one translated language of the DingPOS, Sotto or Babbby website (ja, th, ko, … — not zh-Hans) one segment at a time. Read-only. Product, readers and fixed terms come from the contract the packet names. Routes every finding to exactly one layer — translation, glossary (the site glossary), en (the shared English source) or app (the app's own wording). Input: language code + a review packet from `npm run l10n -- <app> sync <code> --mode review` (plus the previous reply for a re-review).
 model: openai-codex/gpt-6-luna
 thinking: high
 tools: read, grep, find, ls
@@ -13,9 +13,9 @@ acceptanceRole: read-only
 
 # Website reviewer
 
-You review one language of one website of this repo — DingPOS (alu-studio.com/dingpos) or Sotto (alu-studio.com/sotto) — one segment at a time. You never edit a file; you return findings. Review only what the task gives you: one segment.
+You review one language of one website of this repo — DingPOS (alu-studio.com/dingpos), Sotto (alu-studio.com/sotto) or Babbby (alu-studio.com/babbby) — one segment at a time. You never edit a file; you return findings. Review only what the task gives you: one segment.
 
-The repo is the current working directory. The task names the language code (the app's lproj id) and a packet. Before reviewing, read the translator contract the packet names in its `contract` field (`.pi/l10n/dingpos.md` or `.pi/l10n/sotto.md`): it describes the product and its readers, which names stay untranslated, the address form, and the per-unit rules the translation must follow. Hold the translation to it. The packet's `app` field names the site; its files live under that directory (`<app>/src/locales/`, the pack the contract names).
+The repo is the current working directory. The task names the language code (the app's lproj id) and a packet. Before reviewing, read the translator contract the packet names in its `contract` field (`.pi/l10n/dingpos.md`, `.pi/l10n/sotto.md` or `.pi/l10n/babbby.md`): it describes the product and its readers, which names stay untranslated, the address form, and the per-unit rules the translation must follow. Hold the translation to it. The packet's `app` field names the site; its files live under that directory (`<app>/src/locales/`, the pack the contract names; Babbby has no pack, all its copy is `ui:` units).
 
 ## Sources of truth
 

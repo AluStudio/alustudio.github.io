@@ -3,9 +3,9 @@
  * Generate each app's zh-Hans website copy from its zh-Hant source.
  *
  * zh-Hans is derived, never hand-edited, so it cannot drift from zh-Hant or
- * fall behind it. Every app in APPS has a UI strings file and one content pack
- * (DingPOS: FAQ articles; Sotto: guides). Every string value of both runs
- * through, in order:
+ * fall behind it. Every app in APPS has a UI strings file and at most one
+ * content pack (DingPOS: FAQ articles; Sotto: guides; Babbby: none). Every
+ * string value of both runs through, in order:
  *
  *   1. opencc-js `twp → cn` — Traditional (Taiwan, phrase level) → Simplified.
  *   2. appGlossary — the app's own zh-Hans wording, so the website names every
@@ -289,6 +289,17 @@ const SOTTO_SITE_GLOSSARY = [
 
 const SOTTO_OVERRIDES = {};
 
+// ── Babbby ───────────────────────────────────────────────────
+
+// The Babbby app's zh-Hans does not exist yet; mirror the GLOSSARY of its
+// `scripts/gen-zh-hans.py` here once the app repo has one.
+const BABBBY_APP_GLOSSARY = [];
+
+// Website-only replacements for Babbby, applied after BABBBY_APP_GLOSSARY.
+const BABBBY_SITE_GLOSSARY = [];
+
+const BABBBY_OVERRIDES = {};
+
 export const APPS = {
   dingpos: {
     paths: {
@@ -321,6 +332,19 @@ export const APPS = {
     rowColumnEntries: [],
     overrides: SOTTO_OVERRIDES,
     textFields: PACK_TEXT_FIELDS.sotto,
+  },
+  babbby: {
+    paths: {
+      uiEn: "babbby/src/locales/en/translation.json",
+      uiHant: "babbby/src/locales/zh-Hant/translation.json",
+      uiHans: "babbby/src/locales/zh-Hans/translation.json",
+    },
+    packPrefix: null,
+    appGlossary: BABBBY_APP_GLOSSARY,
+    siteGlossary: BABBBY_SITE_GLOSSARY,
+    rowColumnEntries: [],
+    overrides: BABBBY_OVERRIDES,
+    textFields: new Set(),
   },
 };
 
@@ -376,8 +400,8 @@ export function convertSources({ ui, pack }, app) {
     return out;
   });
 
-  const data = packData(pack);
-  const packOut = mapStrings(data, [], (text, path) => {
+  const data = pack ? packData(pack) : null;
+  const packOut = data && mapStrings(data, [], (text, path) => {
     const id = packId(app.packPrefix, data, path);
     const out = convert(text, id);
     if (out !== text && !app.textFields.has(fieldOf(path))) {
@@ -404,9 +428,10 @@ async function importModule(path) {
   return import(pathToFileURL(join(ROOT, path)).href);
 }
 
-/** File contents for both zh-Hans outputs of `app`, keyed by repo-relative path. */
+/** File contents for the zh-Hans outputs of `app` (UI, and the pack when it has one), keyed by repo-relative path. */
 export function renderOutputs({ ui, pack }, app) {
   const uiText = `${JSON.stringify({ "//": GENERATED_NOTE, ...ui }, null, 2)}\n`;
+  if (!app.paths.packHans) return { [app.paths.uiHans]: uiText };
   const packText = [
     `// ${GENERATED_NOTE}`,
     "",
@@ -423,7 +448,8 @@ export async function generate() {
   const errors = [];
   for (const [name, app] of Object.entries(APPS)) {
     const { uiHant } = app.paths;
-    const converted = convertSources({ ui: readJson(uiHant), pack: await importModule(app.paths.packHant) }, app);
+    const pack = app.paths.packHant ? await importModule(app.paths.packHant) : null;
+    const converted = convertSources({ ui: readJson(uiHant), pack }, app);
     errors.push(...converted.errors.map((e) => `[${name}] ${e}`));
     Object.assign(outputs, renderOutputs(converted, app));
   }
@@ -463,7 +489,7 @@ function gitLsFiles(ref, folder) {
   }
 }
 
-/** All six sources of `app` at a git ref (missing files → null). */
+/** Every source of `app` (three, or six with a pack) at a git ref (missing files → null). */
 export async function sourcesAt(app, ref) {
   const dir = mkdtempSync(join(tmpdir(), "zh-hans-"));
   writeFileSync(join(dir, "package.json"), '{ "type": "module" }\n');

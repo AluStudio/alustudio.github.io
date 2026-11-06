@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Translated languages of the DingPOS and Sotto sites: every registry
+ * Translated languages of the DingPOS, Sotto and Babbby sites: every registry
  * language of kind "translated" (<app>/l10n/languages.json) is translated
  * from en only, by agents, through packets this script writes and outputs it
  * applies. Each app's paths, units, pack format and app repo live in APPS.
  *
  * A translation unit is one UI string (`ui:<dotted.path>`) or one pack entry:
  * a DingPOS FAQ article (`faq:<slug>`) or FAQ category (`cat:<key>`), a Sotto
- * guide (`guide:<slug>`). Each language's manifest
+ * guide (`guide:<slug>`). Babbby has no pack: all its copy is UI strings. Each language's manifest
  * (<app>/l10n/manifest/<code>.json) records, per unit, the hash of the en
  * text it was translated from; a unit whose en text changed since is stale.
  * Only text fields are hashed and translated (scripts/pack-fields.mjs); slug,
@@ -20,11 +20,11 @@
  * edit them by hand.
  *
  * Packets carry the app's own wording for the language, read from a local
- * checkout of the app repo: its glossary (DingPOS only), the app's
+ * checkout of the app repo: its glossary (DingPOS and Babbby), the app's
  * translation of any site UI string whose en is identical to an app string
  * (`appMatch`), and the app's buttons, titles and tabs named verbatim in a
- * pack segment (`appTerms`, from the strings' `@role` notes, which only
- * DingPOS has). The app repo is read only by `sync`; nothing else needs it.
+ * pack segment (`appTerms`, from the strings' `@role` notes, which DingPOS
+ * and Babbby have). The app repo is read only by `sync`; nothing else needs it.
  *
  * Usage:
  *   npm run l10n -- check                    every app; exit 1 on any missing, extra or stale unit of a shipped language
@@ -33,7 +33,7 @@
  *   npm run l10n -- <app> sync <code> [--mode review] [--since <ref>] [--ids <id,…>] [--app-repo <path>]
  *   npm run l10n -- <app> apply <code> [--dry-run] [<out file> …]
  *   npm run l10n -- <app> progress show|path|next|report <code>|get <code>|set <code> key=value …
- *   <app> is dingpos or sotto
+ *   <app> is dingpos, sotto or babbby
  *
  * Procedure: docs/specs/seo-aeo.md §翻譯語言.
  */
@@ -57,7 +57,8 @@ const appRepoAt = (name) => join(homedir(), "Developer", "alustudio", name);
 /**
  * Per app: its translator contract, which pack fields are copy, the UI
  * segments that stand alone (the rest is `ui-site`), the pack file and the
- * lists it exports (each entry one unit `<kind>:<entry[key]>`), the module
+ * lists it exports (each entry one unit `<kind>:<entry[key]>`; `pack: null`
+ * for an app whose copy is all UI strings), the module
  * whose values are structure wherever en uses them under a text field, and
  * where the app repo keeps its strings and glossary (`<code>` is the lproj
  * id; no glossary means packets carry `glossary.app: null`).
@@ -102,6 +103,21 @@ export const APPS = {
     appStrings: "sotto-ios/Targets/Sotto/Resources/<code>.lproj/Localizable.strings",
     appGlossary: null,
   },
+  babbby: {
+    name: "Babbby",
+    contract: ".pi/l10n/babbby.md",
+    textFields: new Set(),
+    freeLengthFields: new Set(),
+    // copy-spa-pages.js rejects every empty string.
+    mayBeEmpty: () => false,
+    uiSegments: ["privacy_policy", "terms", "faq"],
+    pack: null,
+    lists: [],
+    shared: null,
+    appRepo: appRepoAt("babbby-ios"),
+    appStrings: "babbby/Babbby/Resources/<code>.lproj/Localizable.strings",
+    appGlossary: "l10n/glossary/<code>.md",
+  },
 };
 
 const USAGE = `usage:
@@ -134,7 +150,7 @@ export function sitePaths(appName, root = REPO_ROOT) {
     app,
     registry: at("l10n/languages.json"),
     ui: (code) => at("src/locales", code, "translation.json"),
-    pack: (code) => at(app.pack.replaceAll("<code>", code)),
+    pack: app.pack ? (code) => at(app.pack.replaceAll("<code>", code)) : null,
     shared: app.shared ? at(app.shared.file) : null,
     manifest: (code) => at("l10n/manifest", `${code}.json`),
     siteGlossary: (code) => at("l10n/glossary", `${code}.md`),
@@ -372,7 +388,7 @@ const readJson = (file) => JSON.parse(readFileSync(file, "utf8"));
 export async function readEn(paths) {
   return withStructure(paths.app, {
     ui: readJson(paths.ui("en")),
-    pack: await importFresh(paths.pack("en")),
+    pack: paths.pack ? await importFresh(paths.pack("en")) : null,
     shared: paths.shared ? await importShared(paths.shared) : null,
   });
 }
@@ -380,7 +396,7 @@ export async function readEn(paths) {
 async function readLanguage(paths, code) {
   return {
     ui: existsSync(paths.ui(code)) ? readJson(paths.ui(code)) : null,
-    pack: existsSync(paths.pack(code)) ? await importFresh(paths.pack(code)) : null,
+    pack: paths.pack && existsSync(paths.pack(code)) ? await importFresh(paths.pack(code)) : null,
   };
 }
 
@@ -440,7 +456,7 @@ async function sourcesAt(paths, code, ref) {
   };
   const uiText = git(paths, ["show", `${ref}:${rel(paths, paths.ui(code))}`]);
   const shared = paths.shared ? await load(paths.shared, importShared) : null;
-  const pack = await load(paths.pack(code), importFresh);
+  const pack = paths.pack ? await load(paths.pack(code), importFresh) : null;
   return { ui: uiText === null ? null : JSON.parse(uiText), pack, shared };
 }
 
@@ -448,11 +464,11 @@ async function sourcesAt(paths, code, ref) {
 async function previousEnTexts(paths, wanted, limit = 100) {
   const found = new Map();
   if (!wanted.size) return found;
-  const files = [rel(paths, paths.ui("en")), rel(paths, paths.pack("en"))];
+  const files = [paths.ui("en"), ...(paths.pack ? [paths.pack("en")] : [])].map((file) => rel(paths, file));
   const revisions = (git(paths, ["rev-list", `--max-count=${limit}`, "HEAD", "--", ...files]) ?? "").split("\n").filter(Boolean);
   for (const revision of revisions) {
     const at = await sourcesAt(paths, "en", revision);
-    if (!at.ui || !at.pack) continue;
+    if (!at.ui || (paths.pack && !at.pack)) continue;
     for (const unit of enUnits(paths.app, withStructure(paths.app, at))) {
       if (wanted.get(unit.id) === unit.enHash && !found.has(unit.id)) found.set(unit.id, unit.en);
     }
@@ -712,14 +728,15 @@ export function renderOutputs(paths, code, en, values, oldPack) {
   const ui = rebuildUi(en.ui, values);
   const pack = rebuildPack(paths.app, en, values, oldPack);
   const note = generatedNote(paths, code);
-  return {
-    [paths.ui(code)]: `${JSON.stringify({ "//": note, ...ui }, null, 2)}\n`,
-    [paths.pack(code)]: [
+  const outputs = { [paths.ui(code)]: `${JSON.stringify({ "//": note, ...ui }, null, 2)}\n` };
+  if (paths.pack) {
+    outputs[paths.pack(code)] = [
       `// ${note}`,
       "",
       ...paths.app.lists.flatMap((list) => [`export const ${list.name} = ${JSON.stringify(pack[list.name], null, 2)};`, ""]),
-    ].join("\n"),
-  };
+    ].join("\n");
+  }
+  return outputs;
 }
 
 const outFiles = (paths, code) => {

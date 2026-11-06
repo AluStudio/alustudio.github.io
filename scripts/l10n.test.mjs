@@ -692,3 +692,76 @@ test("sotto check: an unshipped language is not checked; a shipped one without a
   assert.equal(problems.length, 1, problems.join("\n"));
   assert.match(problems[0], /^sotto ja: 11 missing unit\(s\) — ui:nav\.faq, .* — npm run l10n -- sotto sync ja$/);
 });
+
+// ── Babbby ───────────────────────────────────────────────────
+
+const BABBBY_EN_UI = {
+  nav: { faq: "FAQ", language: "Language" },
+  landing: { appstore_main: "App Store" },
+  privacy_policy: { title: "Privacy Policy", items: ["No ads.", "No tracking."] },
+  faq: { items: { is_free: { title: "Is Babbby free?", answer: "Yes." } } },
+};
+
+const BABBBY_APP_EN = `/* @title — Settings row that opens the language picker */
+"settings.language" = "Language";
+`;
+
+const BABBBY_APP_JA = `"settings.language" = "言語";
+`;
+
+const BABBBY_JA = {
+  "ui:nav.faq": "よくある質問",
+  "ui:nav.language": "言語",
+  "ui:landing.appstore_main": "App Store",
+  "ui:privacy_policy.title": "プライバシーポリシー",
+  "ui:privacy_policy.items.0": "広告はありません。",
+  "ui:privacy_policy.items.1": "トラッキングはしません。",
+  "ui:faq.items.is_free.title": "Babbby は無料ですか？",
+  "ui:faq.items.is_free.answer": "はい。",
+};
+
+/** A throwaway Babbby site (UI strings only, no pack) + app repo with ja as its translated language. */
+function babbbyFixture() {
+  const root = mkdtempSync(join(tmpdir(), "l10n-babbby-"));
+  const appRepo = mkdtempSync(join(tmpdir(), "l10n-babbby-app-"));
+  const languages = [
+    { code: "en", kind: "source", label: "English", hreflang: "en", pathPrefix: "", ogLocale: "en_US", shipped: true },
+    { code: "ja", kind: "translated", label: "日本語", hreflang: "ja", pathPrefix: "ja", ogLocale: "ja_JP", shipped: false },
+  ];
+  write(join(root, "babbby/l10n/languages.json"), JSON.stringify({ languages }));
+  write(join(root, "babbby/src/locales/en/translation.json"), JSON.stringify(BABBBY_EN_UI));
+  cpSync(join(REPO, "babbby/l10n/glossary/_template.md"), join(root, "babbby/l10n/glossary/_template.md"));
+  write(join(appRepo, "babbby/Babbby/Resources/en.lproj/Localizable.strings"), BABBBY_APP_EN);
+  write(join(appRepo, "babbby/Babbby/Resources/ja.lproj/Localizable.strings"), BABBBY_APP_JA);
+  write(join(appRepo, "l10n/glossary/ja.md"), "# Glossary — Japanese (ja)\n");
+  return { paths: sitePaths("babbby", root), appRepo };
+}
+
+test("babbby sync: UI-only packets per top-level segment, with the app's glossary and its translation of identical strings", async () => {
+  const { paths, appRepo } = babbbyFixture();
+  assert.equal(paths.pack, null);
+  newLanguage(paths, "ja");
+  const { segments } = await sync(paths, "ja", { appRepo });
+  assert.deepEqual(segments.map((s) => s.segment), ["ui-site", "ui-privacy_policy", "ui-faq"]);
+  const site = JSON.parse(readFileSync(paths.logs("ja", "packets", "ui-site.json"), "utf8"));
+  assert.deepEqual([site.app, site.contract], ["babbby", ".pi/l10n/babbby.md"]);
+  assert.equal(site.glossary.app, join(appRepo, "l10n/glossary/ja.md"));
+  const language = site.units.find((u) => u.id === "ui:nav.language");
+  assert.equal(language.appMatch.value, "言語");
+});
+
+test("babbby apply and check: only the strings and the manifest are written; an en change makes the unit stale", async () => {
+  const { paths, appRepo } = babbbyFixture();
+  const result = await translateAll(paths, appRepo, BABBBY_JA);
+  assert.deepEqual(result.rejected, []);
+  assert.equal(result.written, 8);
+  const ui = JSON.parse(readFileSync(paths.ui("ja"), "utf8"));
+  assert.match(ui["//"], /npm run l10n -- babbby apply ja/);
+  assert.deepEqual(ui.privacy_policy.items, ["広告はありません。", "トラッキングはしません。"]);
+  assert.equal((await sync(paths, "ja", { appRepo })).total, 0);
+
+  shipTranslated(paths, ["ja"]);
+  assert.deepEqual(await check(paths), []);
+  write(paths.ui("en"), JSON.stringify({ ...BABBBY_EN_UI, nav: { ...BABBBY_EN_UI.nav, faq: "Questions" } }));
+  assert.deepEqual(await check(paths), ["babbby ja: 1 stale unit(s) — ui:nav.faq — en changed since translation; npm run l10n -- babbby sync ja"]);
+});

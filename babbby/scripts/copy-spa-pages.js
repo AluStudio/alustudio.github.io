@@ -91,10 +91,12 @@ const DEFAULT_LOCALE = LOCALES.find((l) => l.pathPrefix === "");
 // A missing key renders the raw key (there is no fallback language), and an
 // extra key is usually a typo of a real one.
 
-/** Dotted path → value for every leaf. */
+/** Dotted path → value for every leaf; the generator's "//" note is not copy. */
 function leaves(value, path = [], out = new Map()) {
   if (value && typeof value === "object") {
-    for (const [key, child] of Object.entries(value)) leaves(child, [...path, key], out);
+    for (const [key, child] of Object.entries(value)) {
+      if (key !== "//") leaves(child, [...path, key], out);
+    }
   } else {
     out.set(path.join("."), value);
   }
