@@ -11,7 +11,7 @@
     "title": "Babbby",
     "meta_title": "Babbby – Baby-Aktivitäten-App mit täglichen Ideen für 0–6 Jahre",
     "meta_description": "Babbby: Baby-Aktivitäten-App mit täglichen Aktivitätsideen für 0–6 Jahre. Halte Meilensteine fest, finde deinen Rhythmus und mach jeden Tag besonders.",
-    "subtitle": "Tägliche Aktivitätsideen für dein Baby und Kind, 0–6 Jahre. Halte Meilensteine fest, finde deinen Rhythmus und mach jeden Tag besonders.",
+    "subtitle": "Tägliche Aktivitätsideen für dein Baby und später dein Kind (0–6 Jahre). Halte Meilensteine fest, finde deinen Rhythmus und mach jeden Tag besonders.",
     "appstore_sub": "Laden im",
     "appstore_main": "App Store",
     "privacy_link": "Datenschutzerklärung",
@@ -179,7 +179,7 @@
     },
     "updates": {
       "title": "App-Updates",
-      "desc": "Der Dienstanbieter kann von Zeit zu Zeit Updates für die App veröffentlichen. Du erklärst dich damit einverstanden, verfügbare Updates zu installieren. Der Dienstanbieter kann die App außerdem jederzeit und ohne Vorankündigung einstellen. Mit der Einstellung enden deine Rechte aus diesen Bedingungen, und du musst die Nutzung der App beenden und sie löschen."
+      "desc": "Der Dienstanbieter kann von Zeit zu Zeit Updates für die App veröffentlichen. Du erklärst dich damit einverstanden, Updates anzunehmen, sobald sie verfügbar sind. Der Dienstanbieter kann die App außerdem jederzeit und ohne Vorankündigung einstellen. Mit der Einstellung enden deine Rechte aus diesen Bedingungen, und du musst die Nutzung der App beenden und sie löschen."
     },
     "disclaimer": {
       "title": "Haftungsausschluss",
@@ -207,11 +207,11 @@
     "items": {
       "what_is_babbby": {
         "title": "Was ist Babbby?",
-        "answer": "Babbby — Daily Baby Activities ist eine kostenlose iOS-App, die Eltern von Kindern von 0–6 Jahren einen fertigen Tagesplan mit Aktivitäten liefert – du musst dir also nicht jeden Tag neu überlegen, was ihr gemeinsam machen könnt. Die Bibliothek umfasst über 340 Aktivitäten in 8 Kategorien, die automatisch zum Alter deines Babys passen. Du kannst nach Material filtern, das du schon zu Hause hast, und erledigte Aktivitäten über die Zeit festhalten."
+        "answer": "Babbby — Daily Baby Activities ist eine kostenlose iOS-App, die Eltern von Kindern von 0–6 Jahren einen fertigen Tagesplan mit Aktivitäten liefert – du musst dir also nicht jeden Tag neu überlegen, was ihr gemeinsam machen könnt. Die Bibliothek umfasst über 340 Aktivitäten in 8 Kategorien, die automatisch zum Alter deines Kindes passen. Du kannst nach Material filtern, das du schon zu Hause hast, und erledigte Aktivitäten über die Zeit festhalten."
       },
       "what_ages": {
         "title": "Für welche Altersstufen ist Babbby gedacht?",
-        "answer": "Babbby ist für Kinder von 0 bis 6 Jahren gedacht. Die über 340 enthaltenen Aktivitäten passen automatisch zum Alter deines Babys und decken Bereiche wie Grobmotorik, Feinmotorik, Sprache und Sensorik ab."
+        "answer": "Babbby ist für Kinder von 0 bis 6 Jahren gedacht. Die über 340 enthaltenen Aktivitäten passen automatisch zum Alter deines Kindes und decken Bereiche wie Grobmotorik, Feinmotorik, Sprache und Sensorik ab."
       },
       "is_babbby_free": {
         "title": "Ist Babbby kostenlos?",
@@ -223,15 +223,15 @@
       },
       "how_are_activities_recommended": {
         "title": "Wie schlägt Babbby Aktivitäten vor?",
-        "answer": "Babbby wählt aus seiner Bibliothek mit über 340 Aktivitäten automatisch die passenden für das Alter deines Babys aus. Zusätzlich kannst du nach dem Material filtern, das du gerade zur Hand hast – zum Beispiel Buntstifte, Pappe oder Bauklötze –, und siehst dann nur Aktivitäten, mit denen ihr sofort starten könnt. Die Vorschläge werden algorithmisch erstellt und dienen nur als Anregung; Eltern und Erziehungsberechtigte entscheiden, was zu ihrem Kind passt."
+        "answer": "Babbby wählt aus seiner Bibliothek mit über 340 Aktivitäten automatisch die passenden für das Alter deines Kindes aus. Zusätzlich kannst du nach dem Material filtern, das du gerade zur Hand hast – zum Beispiel Buntstifte, Pappe oder Bauklötze –, und siehst dann nur Aktivitäten, mit denen ihr sofort starten könnt. Die Vorschläge werden algorithmisch erstellt und dienen nur als Anregung; Eltern und Erziehungsberechtigte entscheiden, was zu ihrem Kind passt."
       },
       "can_it_track_milestones": {
-        "title": "Kann Babbby Meilensteine und Fortschritte meines Babys festhalten?",
+        "title": "Kann Babbby Meilensteine und Fortschritte meines Kindes festhalten?",
         "answer": "Ja, Babbby hält erledigte Aktivitäten fest, zeigt eine Aufteilung nach Kategorie und den täglichen Verlauf, sodass du jeden Schritt nachvollziehen kannst. Diese Daten bleiben auf deinem Gerät. Sie zeigen, welche Aktivitäten erledigt wurden, und sind keine förmliche Entwicklungsbeurteilung durch eine Kinderärztin oder einen Kinderarzt."
       },
       "is_my_data_private": {
         "title": "Welche Daten erfasst Babbby, und sind die Daten meines Kindes privat?",
-        "answer": "Alle Inhalte, die du in Babbby anlegst – darunter Kinderprofile, Aktivitätsprotokolle, Erledigt-Einträge und Statistiken –, werden ausschließlich in einer lokalen Datenbank auf deinem Gerät gespeichert und nie an Server von Alu Studio oder an Dritte übertragen. Die App zeigt keine Werbung und erfasst keine Werbe-IDs (IDFA); Firebase Analytics und Crashlytics nutzt sie nur für anonyme Nutzungs- und Absturzdaten.",
+        "answer": "Alle Inhalte, die du in Babbby anlegst – darunter Kinderprofile, Aktivitätsprotokolle, Erledigt-Einträge und Statistiken –, werden ausschließlich in einer lokalen Datenbank auf deinem Gerät gespeichert und nie an Server von Alu Studio oder an Dritte übertragen. Die App zeigt keine Werbung und erfasst keine Werbe-IDs (IDFA); Firebase Analytics und Firebase Crashlytics nutzt sie nur für anonyme Nutzungs- und Absturzdaten.",
         "bullets": [
           "Die Daten des Kinderprofils (Name, Geburtsdatum) verlassen nie das Gerät und werden endgültig gelöscht, wenn du die App löschst",
           "Keine Werbung und kein Tracking über die Werbe-ID (IDFA)",

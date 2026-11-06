@@ -10,9 +10,9 @@
   "landing": {
     "title": "Babbby",
     "meta_title": "Babbby — Ideias de atividades para bebês e crianças de 0 a 6 anos",
-    "meta_description": "Babbby, app de atividades para bebês: ideias diárias para brincar com seu bebê, de 0 a 6 anos. Acompanhe marcos, crie rotinas e aproveite cada dia.",
-    "subtitle": "Ideias diárias de atividades para brincar com seu bebê, de 0 a 6 anos. Acompanhe marcos, crie rotinas e faça cada dia valer a pena.",
-    "appstore_sub": "Baixar na",
+    "meta_description": "Babbby: app de atividades para crianças de 0 a 6 anos, com ideias diárias para brincar. Acompanhe marcos, crie rotinas e aproveite cada dia.",
+    "subtitle": "Ideias diárias de atividades para brincar com a criança, de 0 a 6 anos. Acompanhe marcos, crie rotinas e faça cada dia valer a pena.",
+    "appstore_sub": "Baixe na",
     "appstore_main": "App Store",
     "privacy_link": "Política de Privacidade",
     "terms_link": "Termos de Uso"
@@ -108,7 +108,7 @@
       "ccpa_desc": "Você tem o direito de saber quais informações pessoais são coletadas, de solicitar a exclusão das suas informações pessoais e de optar por não ter suas informações pessoais vendidas. Nós não vendemos as suas informações pessoais.",
       "opt_out_title": "Opções para recusar",
       "opt_out_items": [
-        "iOS: acesse Ajustes → Privacidade e Segurança → Análises e Melhorias para gerenciar o compartilhamento de dados de análise",
+        "iOS: acesse Ajustes → Privacidade e Segurança → Análise e Melhorias para gerenciar o compartilhamento de dados de análise",
         "Desinstalação: você pode interromper toda a coleta de dados desinstalando o Aplicativo"
       ]
     },
@@ -149,8 +149,8 @@
       "desc": "O Aplicativo oferece sugestões de atividades de acordo com a idade. Ao usar o Aplicativo, você reconhece e concorda que:",
       "items": [
         "As ideias de atividades são oferecidas apenas como inspiração e não constituem orientação profissional em saúde, educação, psicologia ou desenvolvimento infantil",
-        "Pais e responsáveis são os únicos responsáveis por supervisionar as crianças durante qualquer atividade sugerida pelo Aplicativo",
-        "As recomendações por idade são orientações gerais; cada criança se desenvolve de um jeito, e cabe aos pais e responsáveis avaliar se a atividade é adequada à sua criança",
+        "A supervisão das crianças durante qualquer atividade sugerida pelo Aplicativo é de responsabilidade exclusiva dos pais e responsáveis",
+        "As recomendações por idade são orientações gerais; cada criança se desenvolve de um jeito, e cabe aos pais e responsáveis avaliar se cada atividade é adequada para a criança",
         "O Aplicativo não substitui a consulta a pediatras, terapeutas ou outros profissionais qualificados",
         "O desenvolvedor não assume nenhuma responsabilidade por lesão, dano ou consequência decorrente da realização das atividades sugeridas"
       ]
@@ -231,7 +231,7 @@
       },
       "is_my_data_private": {
         "title": "Quais dados o Babbby coleta? Os dados da criança ficam privados?",
-        "answer": "Todo o conteúdo criado pelos usuários no Babbby — incluindo perfis das crianças, registros de atividades, registros de conclusão e estatísticas — fica armazenado exclusivamente no seu dispositivo, em um banco de dados local, e nunca é enviado aos servidores da Alu Studio nem a terceiros. O app não exibe anúncios e não coleta identificadores de publicidade (IDFA); usa o Firebase Analytics e o Crashlytics apenas para dados anônimos de uso e de falhas.",
+        "answer": "Todo o conteúdo criado pelos usuários no Babbby — incluindo perfis das crianças, registros de atividades, registros de conclusão e estatísticas — fica armazenado exclusivamente no seu dispositivo, em um banco de dados local, e nunca é enviado aos servidores da Alu Studio nem a terceiros. O app não exibe anúncios e não coleta identificadores de publicidade (IDFA); usa Firebase Analytics e Firebase Crashlytics apenas para dados anônimos de uso e de falhas.",
         "bullets": [
           "Os dados do perfil da criança (nome, data de nascimento) nunca saem do dispositivo e são apagados definitivamente se você desinstalar o app",
           "Sem anúncios e sem rastreamento por identificador de publicidade (IDFA)",

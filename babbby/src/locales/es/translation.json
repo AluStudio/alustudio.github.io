@@ -32,8 +32,8 @@
       "desc": "Elige lo que tienes a la mano (crayones, cartón, bloques) y ve solo las actividades que puedes hacer ahora mismo."
     },
     "stats": {
-      "title": "Todo queda registrado",
-      "desc": "Actividades completadas, desglose por categoría, tendencias diarias. Mira atrás y descubre cada paso."
+      "title": "Lleva un registro de todo",
+      "desc": "Actividades completadas, desglose por categoría, tendencias diarias. Repasa el progreso y descubre cada paso."
     }
   },
   "footer": {
@@ -106,7 +106,7 @@
       ],
       "ccpa_title": "Para usuarios de California (CCPA)",
       "ccpa_desc": "Tienes derecho a saber qué información personal se recopila, a solicitar la eliminación de tu información personal y a optar por que no se venda tu información personal. No vendemos tu información personal.",
-      "opt_out_title": "Opciones para no participar",
+      "opt_out_title": "Opciones para desactivar la recopilación de datos",
       "opt_out_items": [
         "iOS: ve a Ajustes → Privacidad y seguridad → Analítica y mejoras para administrar el uso compartido de los datos de analítica",
         "Desinstalación: puedes detener toda la recopilación de datos desinstalando la Aplicación"
@@ -150,7 +150,7 @@
       "items": [
         "Las ideas de actividades se ofrecen solo como inspiración y no constituyen asesoría profesional en materia de salud, educación, psicología o desarrollo infantil",
         "Los padres y tutores son los únicos responsables de supervisar a sus hijos durante cualquier actividad sugerida por la Aplicación",
-        "Las recomendaciones según la edad son pautas generales; cada niño se desarrolla de manera distinta, y los padres deben evaluar si una actividad es adecuada para su hijo en particular",
+        "Las recomendaciones basadas en la edad son pautas generales; el desarrollo varía de una persona a otra, y los padres deben evaluar si cada actividad es adecuada para quien la realizará.",
         "La Aplicación no sustituye la consulta con pediatras, terapeutas u otros profesionales calificados",
         "El desarrollador no asume ninguna responsabilidad por lesiones, daños o resultados derivados de realizar las actividades sugeridas"
       ]
@@ -207,11 +207,11 @@
     "items": {
       "what_is_babbby": {
         "title": "¿Qué es Babbby?",
-        "answer": "Babbby es una app gratis para iOS que te da un plan diario de actividades ya preparado para tu bebé (de 0 a 6 años), así no tienes que pensar qué hacer cada día. Incluye una Biblioteca de más de 340 actividades en 8 categorías, elegidas automáticamente según la edad, con la opción de filtrar por los materiales que ya tienes en casa y de llevar el registro de las actividades completadas con el tiempo."
+        "answer": "Babbby es una app gratis para iOS que ofrece a las familias con niños de 0 a 6 años un plan diario de actividades ya preparado, así no tienen que pensar qué hacer cada día. Incluye una Biblioteca con 340 actividades o más en 8 categorías, ajustadas automáticamente según la edad, con la opción de filtrar por los materiales que ya tienen en casa y llevar un registro de las actividades completadas con el tiempo."
       },
       "what_ages": {
         "title": "¿Para qué edades es Babbby?",
-        "answer": "Babbby está pensada para niños de 0 a 6 años. Sus más de 340 actividades integradas se ajustan automáticamente a la edad de tu bebé y abarcan categorías como motricidad gruesa, motricidad fina, lenguaje y desarrollo sensorial."
+        "answer": "Babbby está pensada para niños de 0 a 6 años. Sus 340 actividades integradas o más se ajustan automáticamente a la edad de tu bebé y abarcan categorías como motricidad gruesa, motricidad fina, lenguaje y desarrollo sensorial."
       },
       "is_babbby_free": {
         "title": "¿Babbby es gratis?",
@@ -223,7 +223,7 @@
       },
       "how_are_activities_recommended": {
         "title": "¿Cómo recomienda actividades Babbby?",
-        "answer": "Babbby elige automáticamente actividades de su Biblioteca de más de 340 según la edad de tu bebé, y puedes filtrar aún más por los materiales que ya tienes a la mano —como crayones, cartón o bloques— para ver solo las que puedes empezar de inmediato. Las recomendaciones se generan con un algoritmo y son solo una fuente de inspiración: los padres y tutores deciden qué es lo más adecuado para su bebé."
+        "answer": "Babbby elige automáticamente actividades de su Biblioteca, que tiene 340 actividades o más, según la edad de tu bebé, y puedes filtrar aún más por los materiales que ya tienes a la mano —como crayones, cartón o bloques— para ver solo las que puedes empezar de inmediato. Las recomendaciones se generan con un algoritmo y son solo una fuente de inspiración: los padres y tutores deciden qué es lo más adecuado para su bebé."
       },
       "can_it_track_milestones": {
         "title": "¿Puedo seguir los hitos del desarrollo y el progreso de mi bebé con Babbby?",
