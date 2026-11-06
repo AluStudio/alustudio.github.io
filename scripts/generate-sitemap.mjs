@@ -168,6 +168,22 @@ const SOTTO_LANGUAGE_ROOTS = ["", "zh-hant", "zh-hans", "ja", "ko", "de", "es", 
   (prefix) => `/sotto/${prefix ? `${prefix}/` : ""}`,
 );
 
+/** Babbby rules for one language root; same shape as the Sotto ones, without guides. */
+function babbbyRules(root) {
+  return [
+    [`${root}privacy/`, page("babbby", "PrivacyPage.jsx")],
+    [`${root}terms/`, page("babbby", "TermsPage.jsx")],
+    [`${root}faq/`, page("babbby", "FaqPage.jsx")],
+    [root, ["babbby/src", ...appShell("babbby")]],
+  ];
+}
+
+const BABBBY_LANGUAGE_ROOTS = JSON.parse(
+  readFileSync(fileURLToPath(new URL("../babbby/l10n/languages.json", import.meta.url)), "utf8"),
+)
+  .languages.filter((l) => l.shipped)
+  .map(({ pathPrefix }) => `/babbby/${pathPrefix ? `${pathPrefix}/` : ""}`);
+
 export const LASTMOD_SOURCES = [
   ["/home/", ["home/src", "home/index.html"]],
 
@@ -176,10 +192,7 @@ export const LASTMOD_SOURCES = [
   ["/pikgeon/faq/", page("pikgeon", "FaqPage.jsx")],
   ["/pikgeon/", ["pikgeon/src", "pikgeon/index.html"]],
 
-  ["/babbby/privacy/", page("babbby", "PrivacyPage.jsx")],
-  ["/babbby/terms/", page("babbby", "TermsPage.jsx")],
-  ["/babbby/faq/", page("babbby", "FaqPage.jsx")],
-  ["/babbby/", ["babbby/src", "babbby/index.html"]],
+  ...BABBBY_LANGUAGE_ROOTS.flatMap(babbbyRules),
 
   ...SOTTO_LANGUAGE_ROOTS.flatMap(sottoRules),
 

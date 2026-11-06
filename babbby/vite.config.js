@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   base: '/babbby/',
   plugins: [react()],
+  define: {
+    // Footer copyright year. Fixed at build time so a page prerendered in one
+    // year still hydrates without a text mismatch in the next.
+    'import.meta.env.BUILD_YEAR': JSON.stringify(String(new Date().getFullYear())),
+  },
 })

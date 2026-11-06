@@ -3,10 +3,13 @@
     "home": "Home",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "language": "Language"
   },
   "landing": {
     "title": "Babbby",
+    "meta_title": "Babbby — Daily Baby Activity Ideas for Ages 0–6",
+    "meta_description": "Babbby — Daily activity ideas for your little one, ages 0–6. Track milestones, build routines, and make every day count.",
     "subtitle": "Daily activity ideas for your little one, ages 0–6. Track milestones, build routines, and make every day count.",
     "appstore_sub": "Download on the",
     "appstore_main": "App Store",
@@ -41,6 +44,7 @@
   },
   "privacy_policy": {
     "title": "Privacy Policy",
+    "meta_description": "How Babbby handles your data: what is collected, how it is stored, and your choices.",
     "effective_date": "Effective Date: March 13, 2026",
     "intro": "This privacy policy applies to the Babbby app (\"Application\") for iOS, created by Alu Studio (\"Service Provider\") as a free service. This service is intended for use \"AS IS\". By using the Application, you agree to the collection and use of information as described in this policy.",
     "info_collection": {
@@ -122,6 +126,7 @@
   },
   "terms": {
     "title": "Terms of Use",
+    "meta_description": "Terms of use for Babbby, the daily baby activities app by Alu Studio.",
     "effective_date": "Effective Date: March 13, 2026",
     "intro": "These terms and conditions apply to the Babbby app (\"Application\") for iOS, created by Alu Studio (\"Service Provider\") as a free service. By downloading or using the Application, you agree to these terms.",
     "license": {
@@ -194,6 +199,8 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
+    "meta_title": "Babbby FAQ — Daily Baby Activities App",
+    "meta_description": "Answers to common questions about Babbby: supported ages, pricing, activity ideas, milestone tracking, and privacy.",
     "subtitle": "Answers to the questions parents ask most about Babbby's daily activities, age matching, and privacy.",
     "contact_prompt": "Didn't find your answer? Reach out to us:",
     "items": {

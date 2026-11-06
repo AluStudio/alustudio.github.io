@@ -176,6 +176,13 @@ test("sourcesForRoute: every sotto language mirrors its English page, guides map
   assert.ok(sourcesForRoute("/sotto/ar/guides/find-ring-size-secretly/").includes("sotto/src/data/guides"));
 });
 
+test("sourcesForRoute: babbby zh-Hant mirrors its English page", () => {
+  for (const sub of ["faq/", "privacy/", "terms/", ""]) {
+    assert.deepEqual(sourcesForRoute(`/babbby/zh-hant/${sub}`), sourcesForRoute(`/babbby/${sub}`), `/babbby/zh-hant/${sub}`);
+  }
+  assert.ok(sourcesForRoute("/babbby/").includes("babbby/scripts/copy-spa-pages.js"));
+});
+
 test("sourcesForRoute: a dingpos language root tracks the shared app, not another language's strings or pack", async () => {
   // Shipping bn once re-dated every language's root, because the root rule was the whole src tree.
   const { readFileSync } = await import("node:fs");

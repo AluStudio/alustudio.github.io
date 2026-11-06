@@ -43,11 +43,11 @@ function HomePage() {
                 </a>
               </div>
               <div className="hero-links">
-                <Link to="/privacy" className="hero-link">
+                <Link to="/privacy/" className="hero-link">
                   {t("landing.privacy_link")}
                 </Link>
                 <span className="hero-link-sep">•</span>
-                <Link to="/terms" className="hero-link">
+                <Link to="/terms/" className="hero-link">
                   {t("landing.terms_link")}
                 </Link>
               </div>

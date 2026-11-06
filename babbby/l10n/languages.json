@@ -1,0 +1,7 @@
+{
+  "_doc": "The Babbby site's languages; code is the babbby-ios lproj id (Babbby/Babbby/Resources/<code>.lproj), also the locale folder name. label: the language's own name as the language switcher shows it. hreflang: the code Google accepts, also <html lang>. pathPrefix: hreflang in lowercase ('' for en, the x-default). ogLocale: og:locale. shipped: true once the language has its own URLs, hreflang entries and sitemap lines. kind: source | owner. Rules: docs/specs/seo-aeo.md §多語系 URL.",
+  "languages": [
+    { "code": "en", "kind": "source", "label": "English", "hreflang": "en", "pathPrefix": "", "ogLocale": "en_US", "shipped": true },
+    { "code": "zh-Hant", "kind": "owner", "label": "繁體中文", "hreflang": "zh-Hant", "pathPrefix": "zh-hant", "ogLocale": "zh_TW", "shipped": true }
+  ]
+}

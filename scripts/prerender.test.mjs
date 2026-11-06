@@ -72,11 +72,11 @@ test("auditRoutes passes a route with exactly one h1", () => {
 test("auditRoutes flags a route with two h1s or none", () => {
   const pages = new Map([
     ["/pikgeon/", `<body><h1>Hero</h1><footer><h1>Pikgeon</h1></footer></body>`],
-    ["/babbby/", `<body><h2>Only h2</h2><header>x</header></body>`],
+    ["/home/", `<body><h2>Only h2</h2><header>x</header></body>`],
   ]);
   assert.deepEqual(auditRoutes(pages), [
     "/pikgeon/: expected exactly one <h1>, found 2",
-    "/babbby/: expected exactly one <h1>, found 0",
+    "/home/: expected exactly one <h1>, found 0",
   ]);
 });
 
@@ -164,8 +164,8 @@ test("auditRoutes skips reciprocity for sitemap alternates left out of a partial
 
 test("hydratedRoutes keeps only the apps that hydrate, in every language", () => {
   assert.deepEqual(
-    hydratedRoutes(["/home/", "/dingpos/", "/dingpos/zh-hant/pricing/", "/pikgeon/faq/", "/dingposx/", "/sotto/ar/guides/"]),
-    ["/dingpos/", "/dingpos/zh-hant/pricing/", "/sotto/ar/guides/"]
+    hydratedRoutes(["/home/", "/babbby/zh-hant/faq/", "/dingpos/", "/dingpos/zh-hant/pricing/", "/pikgeon/faq/", "/dingposx/", "/sotto/ar/guides/"]),
+    ["/babbby/zh-hant/faq/", "/dingpos/", "/dingpos/zh-hant/pricing/", "/sotto/ar/guides/"]
   );
 });
 

@@ -3,7 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  const thisYear = new Date().getFullYear();
+  // The build year, not the visitor's clock: the prerendered footer and the
+  // hydrating client must render the same text (see vite.config.js).
+  const thisYear = import.meta.env.BUILD_YEAR;
   const { t } = useTranslation();
 
   return (
@@ -20,9 +22,9 @@ function Footer() {
         </div>
         <p>{t("footer.tagline")}</p>
         <div className="footer-legal-links mb-2">
-          <Link to="/privacy">{t("footer.privacy_policy")}</Link>
+          <Link to="/privacy/">{t("footer.privacy_policy")}</Link>
           <span className="mx-2">•</span>
-          <Link to="/terms">{t("footer.terms_of_use")}</Link>
+          <Link to="/terms/">{t("footer.terms_of_use")}</Link>
         </div>
         <p>
           &copy; {thisYear} {t("footer.copyright")}

@@ -3,10 +3,13 @@
     "home": "首頁",
     "privacy": "隱私權政策",
     "terms": "使用條款",
-    "faq": "常見問題"
+    "faq": "常見問題",
+    "language": "語言"
   },
   "landing": {
     "title": "Babbby",
+    "meta_title": "Babbby — 0–6 歲寶寶每日親子活動點子",
+    "meta_description": "Babbby 為 0–6 歲寶貝量身推薦每日活動靈感。紀錄成長、建立日常，讓每一天都有意義。",
     "subtitle": "為 0–6 歲寶貝量身推薦每日活動靈感。紀錄成長、建立日常，讓每一天都有意義。",
     "appstore_sub": "下載自",
     "appstore_main": "App Store",
@@ -41,6 +44,7 @@
   },
   "privacy_policy": {
     "title": "隱私權政策",
+    "meta_description": "Babbby 如何處理您的資料：收集哪些資訊、如何儲存，以及您有哪些選擇。",
     "effective_date": "生效日期：2026 年 3 月 13 日",
     "intro": "本隱私權政策適用於 Babbby 應用程式（以下簡稱「本應用程式」），由 Alu Studio（以下簡稱「服務提供者」）所開發的免費 iOS 應用程式。本服務以「現狀」提供。使用本應用程式即表示您同意依照本政策所述方式收集和使用資訊。",
     "info_collection": {
@@ -122,6 +126,7 @@
   },
   "terms": {
     "title": "使用條款",
+    "meta_description": "Babbby 的使用條款。Babbby 是 Alu Studio 開發的寶寶每日活動 App。",
     "effective_date": "生效日期：2026 年 3 月 13 日",
     "intro": "本使用條款適用於 Babbby 應用程式（以下簡稱「本應用程式」），由 Alu Studio（以下簡稱「服務提供者」）所開發的免費 iOS 應用程式。下載或使用本應用程式即表示您同意本條款。",
     "license": {
@@ -194,6 +199,8 @@
   },
   "faq": {
     "title": "常見問題",
+    "meta_title": "Babbby 常見問題 — 寶寶每日親子活動 App",
+    "meta_description": "Babbby 常見問題：適用年齡、是否付費、活動怎麼推薦、成長紀錄與隱私保護。",
     "subtitle": "關於 Babbby 的每日活動、年齡配對與隱私保護，家長最常問的問題都整理在這裡。",
     "contact_prompt": "沒有找到你要的答案？歡迎聯絡我們：",
     "items": {

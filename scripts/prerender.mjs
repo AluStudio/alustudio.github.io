@@ -82,14 +82,14 @@ function hreflangSet(html) {
  * (hydrateRoot) instead of re-rendering it. Each needs a clean hydration on
  * every route: on a mismatch React silently discards the prerendered nodes.
  */
-export const HYDRATED_PREFIXES = ["/dingpos/", "/sotto/"];
+export const HYDRATED_PREFIXES = ["/babbby/", "/dingpos/", "/sotto/"];
 
 /**
  * Apps that ship many routes from one template, once per language. A missing
  * per-route meta silently falls back to the app root's, so their titles and
  * descriptions must be unique within the app.
  */
-export const UNIQUE_META_PREFIXES = ["/dingpos/", "/sotto/"];
+export const UNIQUE_META_PREFIXES = ["/babbby/", "/dingpos/", "/sotto/"];
 
 /**
  * Apps whose internal links must point straight at a sitemap route. A link to
@@ -97,7 +97,7 @@ export const UNIQUE_META_PREFIXES = ["/dingpos/", "/sotto/"];
  * would cost crawlers a redirect hop per link; a link outside the sitemap is a
  * 404 or an unindexed page.
  */
-export const DIRECT_LINK_PREFIXES = ["/dingpos/", "/sotto/"];
+export const DIRECT_LINK_PREFIXES = ["/babbby/", "/dingpos/", "/sotto/"];
 
 /** Routes that must pass the hydration check. */
 export function hydratedRoutes(routes) {

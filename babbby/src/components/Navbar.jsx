@@ -1,18 +1,22 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import i18n, { supportedLanguages } from "../i18n.js";
+import { Link, useLocation } from "react-router-dom";
+import { supportedLanguages, localizedUrl, currentLanguage } from "../i18n.js";
 import "../assets/scss/navbar.scss";
 
 function Navbar() {
   const { t } = useTranslation();
+  const location = useLocation();
 
-  const handleChangeLang = (e) => {
-    const lang = e.target.value;
-    i18n.changeLanguage(lang);
+  // Another language is another URL (and document). The href is the bare page
+  // URL, which the prerender and every visitor render alike; a plain click
+  // also carries the query and hash over.
+  const handleChangeLang = (event, code) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (!location.search && !location.hash) return;
+    event.preventDefault();
+    window.location.assign(localizedUrl(code, location.pathname, location.search, location.hash));
   };
-
-  const currentLang = i18n.language.startsWith("zh") ? "zh-Hant" : i18n.language;
 
   // Scroll detection for navbar background
   useEffect(() => {
@@ -76,36 +80,38 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/privacy">
+              <Link className="nav-link text-center" to="/privacy/">
                 {t("nav.privacy")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/terms">
+              <Link className="nav-link text-center" to="/terms/">
                 {t("nav.terms")}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-center" to="/faq">
+              <Link className="nav-link text-center" to="/faq/">
                 {t("nav.faq")}
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Language switcher */}
-        <div className="d-flex align-items-center gap-2 ms-3 order-2 order-lg-3">
-          <select
-            value={currentLang}
-            onChange={handleChangeLang}
-            className="form-select form-select-sm"
-          >
-            {supportedLanguages.map((lang) => (
-              <option key={lang.code} value={lang.code}>
-                {lang.label}
-              </option>
-            ))}
-          </select>
+        {/* Language switcher: real links crawlers follow, in registry order. */}
+        <div className="lang-switch ms-3 order-2 order-lg-3" role="group" aria-label={t("nav.language")}>
+          {supportedLanguages.map((lang) => (
+            <a
+              key={lang.code}
+              className="lang-switch__item"
+              href={localizedUrl(lang.code, location.pathname)}
+              hrefLang={lang.hreflang}
+              lang={lang.hreflang}
+              aria-current={lang.code === currentLanguage ? "page" : undefined}
+              onClick={(event) => handleChangeLang(event, lang.code)}
+            >
+              {lang.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
