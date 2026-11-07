@@ -9,7 +9,7 @@ An acquisition guide (獲客文章) is a search landing page for people who do n
 The task gives:
 
 - the app (`babbby`, …) and the language (`zh-Hant` or `en`);
-- the output path, `.logs/guides/<app>/<slug>.<language>.draft.js`;
+- the output path, `.logs/guides/<app>/<slug>.<language>.draft.md`;
 - a brief: the angle, a title direction, the verified facts you may use (each with its source), the app activities or features you may name, and the target length.
 
 ## Hard rules
@@ -38,22 +38,30 @@ A separate cleanup pass removes AI-tone patterns after you, so spend your effort
 
 ## Output format
 
-The whole file is one JavaScript module, no Markdown fence:
+A restricted Markdown file that `scripts/guide-md.mjs` converts into the pack; anything outside this format makes the conversion fail.
 
-```js
-export const article = {
-  slug: "<english-kebab-case-slug>",
-  title: "...",
-  summary: "...",
-  content: [
-    { type: "p", text: "..." },
-    { type: "h2", text: "..." },
-    { type: "list", items: ["...", "..."] },
-  ],
-  related: [],
-};
+```markdown
+---
+slug: <english-kebab-case-slug>
+title: <title>
+summary: <summary>
+---
+
+<opening paragraph, one line>
+
+## <section heading>
+
+<paragraph, one line>
+
+- <list item>
+- <list item>
+
+1. <step>
+2. <step>
+
+> <note, one line>
 ```
 
-- Block types are the ones the app's `guides.en.js` header lists (the app contract names them); no other fields.
-- Double-quoted strings; escape inner double quotes as `\"`. No HTML, no Markdown inside strings.
-- `slug` is the brief's slug when it gives one, otherwise English kebab case. `related` stays `[]` unless the brief names slugs.
+- Blocks are separated by one blank line. A paragraph, `## ` heading or `> ` note is exactly one line, however long. A list block is only `- ` lines; a steps block only `1. ` lines.
+- Use only the block types the app contract lists. No other heading level, no bold, italics, links, code or HTML.
+- `slug` is the brief's slug when it gives one, otherwise English kebab case. Add `related: <slug>, <slug>` to the frontmatter only when the brief names slugs.

@@ -27,4 +27,4 @@ Activities the guide names are the app's own. Use only the names the brief lists
 
 ## Format
 
-Block types (`babbby/src/data/guides/guides.en.js` header): `{ type: "p" | "h2" | "note", text }` and `{ type: "list" | "steps", items: [text] }`. At most one `note`, for a caution such as "see a pediatrician when you suspect a delay".
+All five block types of `babbby/src/data/guides/guides.en.js` are available: paragraph, `## ` heading, `- ` list, `1. ` steps and `> ` note. At most one note, for a caution such as "see a pediatrician when you suspect a delay".

@@ -24,9 +24,9 @@ Before touching the file, read the signature-voice skill's `SKILL.md` in full, t
 
 - The mode is always Cleanup (§Draft vs Cleanup). Never Draft, never the Pre-Ship Audit, whatever the register would be.
 - zh-Hant text is checked against the 中文 table and `references/ai-tone.md`; en text against the English table. §不是 AI 味 binds as much as the red flags.
-- The file is a JavaScript module (`export const article = {…}`). Only these string values may change: `title`, `summary`, each `content[i].text` and each `content[i].items[j]`. Everything else is the locked frame: keys, `slug`, `related`, block types, block count and order, item count and order.
+- The file is a restricted Markdown draft (format: `.pi/guides/writer.md` §Output format). Only the text may change: the `title` and `summary` values, and the words of each paragraph, heading, note and list or step item. Everything else is the locked frame: the frontmatter keys, `slug`, `related`, every block marker (`## `, `- `, `1. `, `> `), the blank lines between blocks, block count and order, item count and order. A block stays on one line; never add bold, links or any other Markdown.
 - Information stays as written (Cleanup step 5): every number, year, age, study, country, source, product claim, app activity name and hedge. When a fix would need new content or a restructured argument, leave the sentence and note it.
-- Edit in place with `edit`, one targeted replacement per hit. Strings stay double-quoted, inner double quotes escaped as `\"`.
+- Edit in place with `edit`, one targeted replacement per hit.
 
 ## Reply
 
