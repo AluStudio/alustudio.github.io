@@ -36,7 +36,7 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Bildschirmfreie Spielideen für zu Hause nach Alter (0 bis 6 Jahre)"
+        "text": "Bildschirmfreie Aktivitätsideen für zu Hause nach Alter (0 bis 6 Jahre)"
       },
       {
         "type": "p",
@@ -148,7 +148,7 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Tägliche Spielideen mit Babbby bereithalten"
+        "text": "Tägliche Aktivitätsideen mit Babbby bereithalten"
       },
       {
         "type": "p",

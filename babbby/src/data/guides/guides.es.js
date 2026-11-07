@@ -3,12 +3,12 @@
 export const articles = [
   {
     "slug": "screen-free-play-by-age",
-    "title": "Juegos sin pantallas en casa: qué hacer con tu bebé según su edad (0-6 años)",
+    "title": "Juegos sin pantallas en casa para bebés y niños de 0 a 6 años: ideas por edad",
     "summary": "Reemplaza las pantallas en niños de 0-6 años con actividades caseras de 5 a 15 minutos que fomentan el habla, el movimiento y el juego manual, según la edad.",
     "content": [
       {
         "type": "p",
-        "text": "Si quieres reemplazar las pantallas en casa para tu bebé de 0 a 6 años, lo más práctico es tener listas unas cuantas actividades de 5 a 15 minutos con objetos cotidianos del hogar, como vasos, bloques, papel, cinta adhesiva o agua. La investigación sobre la primera infancia apunta en la misma dirección: los niños desarrollan vocabulario, coordinación motriz y concentración mediante la interacción de ida y vuelta con un adulto y el juego físico con las manos. Tener a mano una actividad corta y adecuada a la edad te quita la presión de inventar juegos sobre la marcha cuando tú y tu bebé están cansados."
+        "text": "Si quieres reducir el tiempo frente a pantallas en casa con un bebé o un niño pequeño de 0 a 6 años, lo más práctico es tener listas unas cuantas actividades de 5 a 15 minutos con objetos cotidianos del hogar, como vasos, bloques, papel, cinta adhesiva o agua. La investigación sobre la primera infancia apunta en la misma dirección: los niños desarrollan vocabulario, coordinación motriz y concentración mediante la interacción de ida y vuelta con un adulto y el juego físico con las manos. Tener a mano una actividad corta y adecuada a la edad te quita la presión de inventar juegos sobre la marcha cuando el cansancio llega para ti y para tu bebé."
       },
       {
         "type": "h2",
@@ -57,7 +57,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Pasos laterales por el sofá: Ayuda a tu bebé a ponerse de pie agarrado del sofá y coloca un juguete en el otro extremo para que dé pasos hacia el lado, mientras te quedas cerca para darle apoyo.",
+          "Pasos laterales por el sofá: Ayuda a tu bebé a ponerse de pie sujetándose del sofá y coloca un juguete en el otro extremo para que dé pasos hacia el lado, mientras te quedas cerca para darle apoyo.",
           "Juego de sonidos de animales: Miren juntos imágenes de animales e imiten el sonido de cada uno, haciendo una pausa para que tu bebé vocalice o repita el sonido.",
           "Practicar el adiós con la mano: Mueve la mano y di «adiós» cada vez que alguien salga de la habitación o de la casa, para que tu bebé conecte la palabra con el gesto."
         ]
@@ -70,7 +70,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Apilar y derribar: Apilen bloques para armar una torre pequeña y deja que tu bebé la derribe, porque tumbar los bloques es la parte divertida que mantiene vivo el juego.",
-          "Busca la pelota entre tres vasos: Esconde una pelota pequeña debajo de uno de tres vasos boca abajo y deslízalos despacio mientras tu bebé observa; luego invítalo a levantar un vaso para encontrarla.",
+          "Busca la pelota entre tres vasos: Esconde una pelota pequeña debajo de uno de tres vasos boca abajo y deslízalos despacio mientras tu bebé observa; luego invita a tu bebé a levantar un vaso para encontrarla.",
           "Pintura con los dedos: Prepara pintura lavable no tóxica y una hoja grande de papel para pintar con los dedos; usa ropa vieja o el piso del baño para que la limpieza sea rápida."
         ]
       },
@@ -121,7 +121,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Sumas y restas: Practiquen sumas sencillas dentro del 5 con bocadillos en un plato, donde agregar una pieza muestra la suma y comerse una cuenta como resta.",
+          "Sumas y restas: Practiquen sumas sencillas hasta el 5 con bocadillos en un plato: agregar uno representa la suma y comerse uno, la resta.",
           "Stop-motion con plastilina: Moldeen personajes de plastilina y tomen fotos moviéndolos un poquito cada vez; luego pasen las fotos juntos para ver cómo se mueve su escena."
         ]
       },
@@ -142,8 +142,8 @@ export const articles = [
         "items": [
           "Deja lista la siguiente actividad antes de que pidan una pantalla: Pon tres vasos y una pelota sobre la mesa o pega una línea de cinta en el piso antes de tu hora más ocupada, para que tu bebé encuentre algo listo para jugar.",
           "Que 5 minutos cuenten: Un juego concentrado de 5 a 15 minutos entre tareas del hogar basta para cambiar el ánimo de tu bebé y fomentar la conversación de ida y vuelta sin agotarte.",
-          "Rota las áreas del desarrollo a lo largo del día: Alterna el movimiento activo, como «Caminar por la barra de equilibrio», con un trabajo tranquilo de motricidad fina, como «Practicar a servir», y un juego de conversación, como «Juego de adivinanzas», para que ninguno de los dos se aburra.",
-          "Cuando uses una pantalla, elige contenido lento y adecuado a la edad, y míren y conversen juntos: Ver la pantalla acompañados y comentar lo que pasa convierte el rato en una conversación compartida."
+          "Rota las áreas del desarrollo a lo largo del día: Alterna el movimiento activo, como «Caminar por la barra de equilibrio», con un trabajo tranquilo de motricidad fina, como «Practicar a servir», y un juego de conversación, como «Juego de adivinanzas», para que nadie se aburra.",
+          "Cuando uses una pantalla, elige contenido lento y adecuado a la edad, y míralo en compañía y conversa sobre lo que ven: Ver la pantalla acompañados y comentar lo que pasa convierte el rato en una conversación compartida."
         ]
       },
       {

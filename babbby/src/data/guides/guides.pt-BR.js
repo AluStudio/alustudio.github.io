@@ -16,7 +16,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Vários estudos e uma atualização de política pediátrica sobre crianças pequenas e telas ganharam as notícias no mundo todo em 2026. Junto com pesquisas anteriores, eles apontam para uma conclusão prática em comum: o uso de telas na primeira infância importa principalmente pelo que ele tira das horas em que a criança está acordada, em especial a conversa de ida e volta, o movimento do corpo e a brincadeira com as mãos junto de quem cuida. Um estudo anterior mostra como isso aparece dentro de casa: em um estudo de 2024 na JAMA Pediatrics, pesquisadores australianos liderados por Brushe usaram gravadores de áudio em casa com crianças de 12 a 36 meses e verificaram que, entre crianças de 3 anos, cada minuto extra de tela estava associado a 6,6 palavras de adultos, 4,9 vocalizações da criança e 1,1 turno de conversa a menos ouvidos em casa."
+        "text": "Vários estudos e uma atualização de política pediátrica sobre crianças pequenas e telas ganharam as notícias no mundo todo em 2026. Junto com pesquisas anteriores, eles apontam para uma conclusão prática em comum: o uso de telas na primeira infância importa principalmente pelo que ele tira das horas em que a criança está acordada, em especial a conversa de ida e volta, o movimento do corpo e a brincadeira com as mãos junto de quem cuida. Um estudo anterior mostra como isso aparece dentro de casa: em um estudo de 2024 na JAMA Pediatrics, pesquisadores australianos liderados por Brushe usaram gravadores de áudio em casa com crianças de 12 a 36 meses e verificaram que, entre crianças de 3 anos, cada minuto extra de tela estava associado a 6,6 palavras de adultos a menos, 4,9 vocalizações da criança a menos e 1,1 turno de conversa a menos ouvidos em casa."
       },
       {
         "type": "p",
@@ -47,7 +47,7 @@ export const articles = [
         "items": [
           "Levantar a cabeça de bruços: Coloque seu bebê de bruços sobre um tapete macio, com um brinquedo à frente, para estimular o levantar da cabeça; comece com 1 minuto por vez, chegue aos poucos a 15 a 20 minutos no total por dia e pare se seu bebê parecer desconfortável.",
           "Narrar o que você faz: Descreva o que está fazendo em frases curtas durante a troca de fralda, a alimentação e a hora de vestir, falando um pouco mais devagar e com entonação animada para que seu bebê possa responder à sua voz.",
-          "Imitar a carinha: Observe seu bebê de perto e imite qualquer expressão que ele fizer, fazendo uma pausa para que ele perceba sua resposta e tente outra expressão."
+          "Imitar a carinha: Observe seu bebê de perto e imite qualquer expressão que a criança fizer, fazendo uma pausa para que perceba sua resposta e tente outra expressão."
         ]
       },
       {
