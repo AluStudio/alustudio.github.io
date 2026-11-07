@@ -26,12 +26,12 @@ The repo is the current working directory. The task names the language code (the
 
 ## Segment review
 
-The task gives a packet path (`.logs/l10n/<app>/<code>/packets/<segment>.json`, written with `--mode review`). Each unit has `id`, `en`, `current` (the translation) and possibly `appMatch`. A pack unit (`faq:` article or `cat:` category for DingPOS, `guide:` guide for Sotto) holds only its text fields, as the contract's unit table describes. Check every unit:
+The task gives a packet path (`.logs/l10n/<app>/<code>/packets/<segment>.json`, written with `--mode review`). Each unit has `id`, `en`, `current` (the translation) and possibly `appMatch`. A pack unit (`faq:` article or `cat:` category for DingPOS, `guide:` guide for Sotto and Babbby) holds only its text fields, as the contract's unit table describes. Check every unit:
 
 - Meaning: says what en says — no wrong referent, no missing or added claim. A product claim that drifts (a feature, a limit, a price, what works offline or stays on the device) misleads a reader deciding whether to use the app.
 - App wording: names of screens, buttons, tabs, fields and settings match `appTerms` / the app glossary or strings / `appMatch`, so a reader who follows the page in the app finds the same words — where the contract says readers follow steps on a device (DingPOS FAQ steps on an iPad), this matters most. A `ui:` value that differs from its `appMatch` needs a reason the site's sense differs.
 - Glossary and fixed terms: the glossary term is used for its concept; no word from an "Avoid" column; the names the contract keeps untranslated (and plan names, where the contract has them) stay as written; the same en concept is not worded two ways within the segment.
-- Search and answer: a page title (DingPOS FAQ `question`, Sotto guide `title`) reads like the question a reader in that market types into a search engine; the opening paragraph answers it directly; search fields the contract names (`keywords`, `summary`) are terms and sentences readers of the language would actually search and click.
+- Search and answer: a page title (DingPOS FAQ `question`, Sotto or Babbby guide `title`) reads like the question a reader in that market types into a search engine; the opening paragraph answers it directly; search fields the contract names (`keywords`, `summary`) are terms and sentences readers of the language would actually search and click.
 - Register and fluency: reads like a product site written in the language, not a translation; the address form the contract names, used consistently; natural for that site's reader.
 - Mechanics the build cannot catch: where the contract describes split sentences (DingPOS `_before` / `_after` around a price), the pair reads as one natural sentence; punctuation follows the language.
 

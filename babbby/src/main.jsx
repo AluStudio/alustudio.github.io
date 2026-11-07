@@ -4,7 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 import '@fontsource-variable/nunito'
 import './index.css'
 import App from './App.jsx'
-import { routerBasename, i18nReady } from "./i18n";
+import { routerBasename, currentLanguage, i18nReady } from "./i18n";
+import { loadGuides } from "./data/guides";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -20,7 +21,7 @@ const app = (
 // Deployed pages are prerendered (scripts/prerender.mjs), so hydrate them in
 // place: re-rendering would replace the painted nodes. The dev server and the
 // prerender pass itself get Vite's empty shell, which has nothing to hydrate.
-i18nReady.then(() => {
+Promise.all([i18nReady, loadGuides(currentLanguage)]).then(() => {
   if (container.firstElementChild) {
     hydrateRoot(container, app)
   } else {

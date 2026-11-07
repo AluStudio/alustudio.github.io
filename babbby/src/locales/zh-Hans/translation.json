@@ -5,6 +5,7 @@
     "privacy": "隐私政策",
     "terms": "使用条款",
     "faq": "常见问题",
+    "guides": "育儿指南",
     "language": "语言"
   },
   "landing": {
@@ -244,5 +245,16 @@
         "answer": "Babbby 目前仅提供 iOS 版本，可在 App Store 免费下载，上架分类为“生活”与“教育”。"
       }
     }
+  },
+  "guides": {
+    "title": "育儿指南",
+    "subtitle": "给 0–6 岁孩子爸妈的分龄陪玩点子与实用解答。",
+    "meta_title": "0–6 岁亲子游戏点子与育儿指南 — Babbby",
+    "meta_description": "0–6 岁分龄的无屏幕陪玩点子，以及爸妈选择活动前最常问的问题。由 Babbby 团队整理。",
+    "back": "所有指南",
+    "breadcrumb": "面包屑导航",
+    "related_title": "相关指南",
+    "cta_title": "每天都有现成的陪玩计划",
+    "cta_text": "Babbby 是 iPhone 与 iPad 上的 App，每天依孩子年龄从 342 个活动中推荐最多 6 个。无广告、可离线使用，前 14 天免费。"
   }
 }

@@ -8,12 +8,14 @@
  * Every page exists once per shipped language of l10n/languages.json —
  * English unprefixed, every other language under /babbby/<pathPrefix>/ — with
  * its own <html lang>, og:locale and the full hreflang set, so each language
- * is separately indexable (docs/specs/seo-aeo.md §多語系 URL).
+ * is separately indexable (docs/specs/seo-aeo.md §多語系 URL). Guide pages
+ * also get a BreadcrumbList (Babbby → Guides → guide) in the static head.
  *
  * Validated here so drift fails the build instead of shipping raw keys, 404s
- * or unindexed pages: every locale has exactly en's UI keys; no two pages
- * share a title or a description; sitemap.xml lists exactly the pages built
- * here.
+ * or unindexed pages: every locale has exactly en's UI keys; every guide pack
+ * has en's slugs, an answer-first opening and resolvable related links; no two
+ * pages share a title or a description; sitemap.xml lists exactly the pages
+ * built here.
  *
  * `--write-sitemap` rewrites the Babbby block of sitemap.xml from the page
  * list instead of checking it, then exits without writing pages.
@@ -22,8 +24,10 @@
 import process from "node:process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import {
+  addJsonLd,
+  breadcrumbList,
   setSelfCanonical,
   setPageMeta,
   setHtmlLang,
@@ -43,6 +47,9 @@ const SITE_NAME = "Babbby";
 
 const readLocale = (code) =>
   JSON.parse(readFileSync(join(__dirname, "..", "src", "locales", code, "translation.json"), "utf8"));
+
+const readGuides = async (code) =>
+  (await import(pathToFileURL(join(__dirname, "..", "src", "data", "guides", `guides.${code}.js`)).href)).articles;
 
 // Every shipped language gets its own URL tree; the registry's one unprefixed
 // language (en) is the x-default. src/i18n.js reads the same registry.
@@ -76,15 +83,18 @@ function validateRegistry() {
 
 validateRegistry();
 
-const LOCALES = registry
-  .filter((l) => l.shipped)
-  .map(({ code, hreflang, pathPrefix, ogLocale }) => ({
-    code,
-    hreflang,
-    pathPrefix: pathPrefix ? `${pathPrefix}/` : "",
-    ogLocale,
-    ui: readLocale(code),
-  }));
+const LOCALES = await Promise.all(
+  registry
+    .filter((l) => l.shipped)
+    .map(async ({ code, hreflang, pathPrefix, ogLocale }) => ({
+      code,
+      hreflang,
+      pathPrefix: pathPrefix ? `${pathPrefix}/` : "",
+      ogLocale,
+      ui: readLocale(code),
+      guides: await readGuides(code),
+    })),
+);
 const DEFAULT_LOCALE = LOCALES.find((l) => l.pathPrefix === "");
 
 // ── Locale completeness ─────────────────────────────────────
@@ -119,18 +129,63 @@ function validateLocales() {
 
 validateLocales();
 
+// ── Guide packs ─────────────────────────────────────────────
+
+// Block types GuideBlocks.jsx renders; anything else would render nothing.
+const GUIDE_BLOCK_TYPES = new Set(["p", "h2", "note", "list", "steps"]);
+
+function validateGuides() {
+  const enSlugs = DEFAULT_LOCALE.guides.map((g) => g.slug);
+  const errors = [];
+  for (const { code, guides } of LOCALES) {
+    const slugs = guides.map((g) => g.slug);
+    if (slugs.join(" ") !== enSlugs.join(" ")) {
+      errors.push(`${code} guides are [${slugs}] but en has [${enSlugs}] (same slugs, same order)`);
+    }
+    for (const guide of guides) {
+      const at = `[${code}] guide "${guide.slug}"`;
+      if (!guide.title?.trim()) errors.push(`${at} has no title`);
+      if (!guide.summary?.trim()) errors.push(`${at} has no summary`);
+      // Answer first: the opening paragraph answers the title before any section.
+      if (guide.content[0]?.type !== "p") errors.push(`${at} must open with a paragraph, not "${guide.content[0]?.type}"`);
+      if (!guide.content.some((b) => b.type === "h2")) errors.push(`${at} has no h2 section`);
+      guide.content.forEach((block, i) => {
+        if (!GUIDE_BLOCK_TYPES.has(block.type)) errors.push(`${at} block ${i} has unknown type "${block.type}"`);
+      });
+      for (const related of guide.related) {
+        if (related === guide.slug || !slugs.includes(related)) errors.push(`${at} has a bad related link "${related}"`);
+      }
+    }
+  }
+  fail("Guide validation failed", errors);
+}
+
+validateGuides();
+
 /** Absolute URL of `path` ("" = app root) in `locale`, trailing slash included. */
 function routeUrl(locale, path) {
   return `${BASE_URL}/${locale.pathPrefix}${path ? `${path}/` : ""}`;
 }
 
 /** Every page of one locale with its final title and description, in sitemap order. */
-function localeRoutes({ ui }) {
+function localeRoutes(locale) {
+  const { ui, guides } = locale;
   return [
     { path: "", title: ui.landing.meta_title, description: ui.landing.meta_description },
     { path: "privacy", title: `${ui.privacy_policy.title} — ${SITE_NAME}`, description: ui.privacy_policy.meta_description },
     { path: "terms", title: `${ui.terms.title} — ${SITE_NAME}`, description: ui.terms.meta_description },
     { path: "faq", title: ui.faq.meta_title, description: ui.faq.meta_description },
+    { path: "guides", title: ui.guides.meta_title, description: ui.guides.meta_description },
+    ...guides.map((guide) => ({
+      path: `guides/${guide.slug}`,
+      title: `${guide.title} — ${SITE_NAME}`,
+      description: guide.summary,
+      jsonLd: breadcrumbList([
+        { name: SITE_NAME, url: routeUrl(locale, "") },
+        { name: ui.guides.title, url: routeUrl(locale, "guides") },
+        { name: guide.title, url: routeUrl(locale, `guides/${guide.slug}`) },
+      ]),
+    })),
   ];
 }
 
@@ -202,7 +257,7 @@ validateSitemap();
 // Read once: dist/index.html is both the template and the en root's output.
 const template = readFileSync(src, "utf8");
 
-for (const { path, title, description, locale, url } of pages) {
+for (const { path, title, description, jsonLd, locale, url } of pages) {
   const versions = [
     ...LOCALES.map((l) => ({ hreflang: l.hreflang, href: routeUrl(l, path) })),
     { hreflang: "x-default", href: routeUrl(DEFAULT_LOCALE, path) },
@@ -215,6 +270,7 @@ for (const { path, title, description, locale, url } of pages) {
     ogLocaleAlternates: LOCALES.filter((l) => l !== locale).map((l) => l.ogLocale),
     versions,
   });
+  if (jsonLd) html = addJsonLd(html, jsonLd);
 
   const dest = join(dist, locale.pathPrefix, path, "index.html");
   mkdirSync(dirname(dest), { recursive: true });

@@ -702,6 +702,21 @@ const BABBBY_EN_UI = {
   faq: { items: { is_free: { title: "Is Babbby free?", answer: "Yes." } } },
 };
 
+const BABBBY_EN_GUIDES = `export const articles = [
+  {
+    slug: "screen-free-play",
+    title: "Screen-Free Play at Home",
+    summary: "Short activities by age.",
+    content: [
+      { type: "p", text: "Keep a short activity ready." },
+      { type: "h2", text: "Ideas by age" },
+      { type: "list", items: ["Stack and Crash.", "Pouring Practice."] },
+    ],
+    related: [],
+  },
+];
+`;
+
 const BABBBY_APP_EN = `/* @title — Settings row that opens the language picker */
 "settings.language" = "Language";
 `;
@@ -718,9 +733,14 @@ const BABBBY_JA = {
   "ui:privacy_policy.items.1": "トラッキングはしません。",
   "ui:faq.items.is_free.title": "Babbby は無料ですか？",
   "ui:faq.items.is_free.answer": "はい。",
+  "guide:screen-free-play": {
+    title: "画面なしでおうち遊び",
+    summary: "年齢別の短い遊び。",
+    content: [{ text: "すぐできる遊びを用意しておきます。" }, { text: "年齢別のアイデア" }, { items: ["積んで崩そう。", "水を注ぐ練習。"] }],
+  },
 };
 
-/** A throwaway Babbby site (UI strings only, no pack) + app repo with ja as its translated language. */
+/** A throwaway Babbby site (UI strings + a guides pack) + app repo with ja as its translated language. */
 function babbbyFixture() {
   const root = mkdtempSync(join(tmpdir(), "l10n-babbby-"));
   const appRepo = mkdtempSync(join(tmpdir(), "l10n-babbby-app-"));
@@ -730,6 +750,7 @@ function babbbyFixture() {
   ];
   write(join(root, "babbby/l10n/languages.json"), JSON.stringify({ languages }));
   write(join(root, "babbby/src/locales/en/translation.json"), JSON.stringify(BABBBY_EN_UI));
+  write(join(root, "babbby/src/data/guides/guides.en.js"), BABBBY_EN_GUIDES);
   cpSync(join(REPO, "babbby/l10n/glossary/_template.md"), join(root, "babbby/l10n/glossary/_template.md"));
   write(join(appRepo, "babbby/Babbby/Resources/en.lproj/Localizable.strings"), BABBBY_APP_EN);
   write(join(appRepo, "babbby/Babbby/Resources/ja.lproj/Localizable.strings"), BABBBY_APP_JA);
@@ -737,12 +758,11 @@ function babbbyFixture() {
   return { paths: sitePaths("babbby", root), appRepo };
 }
 
-test("babbby sync: UI-only packets per top-level segment, with the app's glossary and its translation of identical strings", async () => {
+test("babbby sync: packets per top-level UI segment and per guide, with the app's glossary and its translation of identical strings", async () => {
   const { paths, appRepo } = babbbyFixture();
-  assert.equal(paths.pack, null);
   newLanguage(paths, "ja");
   const { segments } = await sync(paths, "ja", { appRepo });
-  assert.deepEqual(segments.map((s) => s.segment), ["ui-site", "ui-privacy_policy", "ui-faq"]);
+  assert.deepEqual(segments.map((s) => s.segment), ["ui-site", "ui-privacy_policy", "ui-faq", "guide-screen-free-play"]);
   const site = JSON.parse(readFileSync(paths.logs("ja", "packets", "ui-site.json"), "utf8"));
   assert.deepEqual([site.app, site.contract], ["babbby", ".pi/l10n/babbby.md"]);
   assert.equal(site.glossary.app, join(appRepo, "l10n/glossary/ja.md"));
@@ -750,11 +770,13 @@ test("babbby sync: UI-only packets per top-level segment, with the app's glossar
   assert.equal(language.appMatch.value, "言語");
 });
 
-test("babbby apply and check: only the strings and the manifest are written; an en change makes the unit stale", async () => {
+test("babbby apply and check: the strings, the guides pack and the manifest are written; an en change makes the unit stale", async () => {
   const { paths, appRepo } = babbbyFixture();
   const result = await translateAll(paths, appRepo, BABBBY_JA);
   assert.deepEqual(result.rejected, []);
-  assert.equal(result.written, 8);
+  assert.equal(result.written, 9);
+  const { articles } = await import(`${pathToFileURL(paths.pack("ja")).href}?${Date.now()}`);
+  assert.deepEqual(articles[0].content[2], { type: "list", items: ["積んで崩そう。", "水を注ぐ練習。"] });
   const ui = JSON.parse(readFileSync(paths.ui("ja"), "utf8"));
   assert.match(ui["//"], /npm run l10n -- babbby apply ja/);
   assert.deepEqual(ui.privacy_policy.items, ["広告はありません。", "トラッキングはしません。"]);

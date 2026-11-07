@@ -1,0 +1,39 @@
+@import "../assets/scss/variables";
+
+.appstore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.4rem;
+  background: $babbby-ink-800;
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  i {
+    font-size: 1.6rem;
+  }
+
+  .badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-align: start;
+
+    small {
+      font-size: 0.65rem;
+      opacity: 0.8;
+    }
+
+    strong {
+      font-size: 1rem;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+}

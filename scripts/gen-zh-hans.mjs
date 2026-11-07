@@ -4,7 +4,7 @@
  *
  * zh-Hans is derived, never hand-edited, so it cannot drift from zh-Hant or
  * fall behind it. Every app in APPS has a UI strings file and at most one
- * content pack (DingPOS: FAQ articles; Sotto: guides; Babbby: none). Every
+ * content pack (DingPOS: FAQ articles; Sotto and Babbby: guides). Every
  * string value of both runs through, in order:
  *
  *   1. opencc-js `twp → cn` — Traditional (Taiwan, phrase level) → Simplified.
@@ -312,14 +312,28 @@ const BABBBY_SITE_GLOSSARY = [
   ["医师", "医生"],
   ["帐号", "账号"],
   ["配对", "匹配"], // matching activities to an age, not pairing
+  ["大肢体运动", "大运动"], // the full category names first, or 运动 / 操作 is left doubled
+  ["小肌肉操作", "精细动作"],
   ["大肢体", "大运动"], // early-education names of the gross and fine motor categories
   ["小肌肉", "精细动作"],
   ["创建日常", "养成日常习惯"], // "build routines"; 创建 reads as creating a thing
   ["⋯⋯", "……"],
+  // Guides (reviewed 2026-11 by zh-hans-reviewer)
+  ["配戴", "佩戴"],
+  ["字汇", "词汇"],
+  ["3C", "电子产品"], // Taiwan shorthand for screens and gadgets
+  ["码表", "秒表"],
+  ["家事", "家务"], // 家事 reads as family or legal matters
+  ["美劳", "手工"],
+  ["发展面向", "发展领域"],
+  ["创建最早", "建立最早"],
+  ["导览路径", "面包屑导航"], // the breadcrumb's aria-label
   // Converter mistranslations
   ["内核", "核心"], // 核心 → kernel
   ["文件", "档案"], // a child's profile (檔案), not a document
   ["纪录", "记录"], // 纪录 is a record-breaking best
+  ["交互", "互动"], // 互動 with a child, not software interaction
+  ["脱机", "离线"], // 離線 use, not the hardware term
 ];
 
 const BABBBY_OVERRIDES = {
@@ -375,13 +389,16 @@ export const APPS = {
       uiEn: "babbby/src/locales/en/translation.json",
       uiHant: "babbby/src/locales/zh-Hant/translation.json",
       uiHans: "babbby/src/locales/zh-Hans/translation.json",
+      packEn: "babbby/src/data/guides/guides.en.js",
+      packHant: "babbby/src/data/guides/guides.zh-Hant.js",
+      packHans: "babbby/src/data/guides/guides.zh-Hans.js",
     },
-    packPrefix: null,
+    packPrefix: "guide",
     appGlossary: BABBBY_APP_GLOSSARY,
     siteGlossary: BABBBY_SITE_GLOSSARY,
     rowColumnEntries: [],
     overrides: BABBBY_OVERRIDES,
-    textFields: new Set(),
+    textFields: PACK_TEXT_FIELDS.babbby,
   },
 };
 

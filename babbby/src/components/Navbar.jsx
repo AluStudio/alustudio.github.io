@@ -161,6 +161,11 @@ function Navbar() {
                 {t("nav.faq")}
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link text-center" to="/guides/">
+                {t("nav.guides")}
+              </Link>
+            </li>
           </ul>
         </div>
 

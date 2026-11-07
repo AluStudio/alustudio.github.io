@@ -168,9 +168,22 @@ const SOTTO_LANGUAGE_ROOTS = ["", "zh-hant", "zh-hans", "ja", "ko", "de", "es", 
   (prefix) => `/sotto/${prefix ? `${prefix}/` : ""}`,
 );
 
-/** Babbby rules for one language root; same shape as the Sotto ones, without guides. */
+/** Babbby rules for one language root; same shape as the Sotto ones. */
 function babbbyRules(root) {
   return [
+    [
+      `${root}guides/`,
+      [
+        "babbby/src/data/guides",
+        "babbby/src/pages/GuidesPage.jsx",
+        "babbby/src/pages/GuidePage.jsx",
+        "babbby/src/pages/guides.scss",
+        "babbby/src/components/GuideBlocks.jsx",
+        "babbby/src/components/AppStoreBadge.jsx",
+        "babbby/src/locales",
+        ...appShell("babbby"),
+      ],
+    ],
     [`${root}privacy/`, page("babbby", "PrivacyPage.jsx")],
     [`${root}terms/`, page("babbby", "TermsPage.jsx")],
     [`${root}faq/`, page("babbby", "FaqPage.jsx")],

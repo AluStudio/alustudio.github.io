@@ -5,6 +5,7 @@
     "privacy": "Datenschutzerklärung",
     "terms": "Nutzungsbedingungen",
     "faq": "FAQ",
+    "guides": "Ratgeber",
     "language": "Sprache"
   },
   "landing": {
@@ -244,5 +245,16 @@
         "answer": "Babbby gibt es derzeit nur für iOS, als kostenloser Download im App Store in den Kategorien Lifestyle und Bildung."
       }
     }
+  },
+  "guides": {
+    "title": "Ratgeber",
+    "subtitle": "Praktische Spielideen und Antworten für Eltern von Babys und Kleinkindern.",
+    "meta_title": "Spielideen und Ratgeber für Eltern von Babys und Kleinkindern – Babbby",
+    "meta_description": "Bildschirmfreie Spielideen nach Alter und praktische Antworten für Eltern von Kindern von 0–6 Jahren – von den Machern von Babbby.",
+    "back": "Alle Ratgeber",
+    "breadcrumb": "Navigationspfad",
+    "related_title": "Weitere Ratgeber",
+    "cta_title": "Jeden Tag ein fertiger Plan zum Spielen",
+    "cta_text": "Babbby ist eine App für iPhone und iPad, die dir täglich bis zu 6 Aktivitäten passend zum Alter deines Kindes vorschlägt – aus einer Bibliothek mit 342 Aktivitäten. Ohne Werbung, funktioniert offline, und die ersten 14 Tage sind kostenlos."
   }
 }

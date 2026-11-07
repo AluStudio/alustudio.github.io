@@ -5,6 +5,7 @@
     "privacy": "Política de Privacidade",
     "terms": "Termos de Uso",
     "faq": "Perguntas frequentes",
+    "guides": "Guias",
     "language": "Idioma"
   },
   "landing": {
@@ -244,5 +245,16 @@
         "answer": "No momento, o Babbby está disponível apenas para iOS, como download gratuito na App Store, nas categorias Estilo de vida e Educação."
       }
     }
+  },
+  "guides": {
+    "title": "Guias",
+    "subtitle": "Ideias práticas de brincadeiras e respostas para pais de bebês e crianças pequenas.",
+    "meta_title": "Ideias de brincadeiras e guias para pais de bebês e crianças pequenas — Babbby",
+    "meta_description": "Ideias de brincadeiras sem tela por idade e respostas práticas para pais de crianças de 0 a 6 anos, dos criadores do Babbby.",
+    "back": "Todos os guias",
+    "breadcrumb": "Trilha de navegação",
+    "related_title": "Guias relacionados",
+    "cta_title": "Um plano de brincadeiras pronto, todos os dias",
+    "cta_text": "O Babbby é um app para iPhone e iPad que sugere até 6 atividades por dia para a idade da criança, a partir de uma biblioteca com 342. Sem anúncios, funciona offline e os primeiros 14 dias são grátis."
   }
 }
