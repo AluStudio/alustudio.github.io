@@ -184,57 +184,121 @@ export const articles = [
   },
   {
     "slug": "find-ring-size-secretly",
-    "title": "Comment connaître la taille de bague de quelqu'un en secret",
-    "summary": "Empruntez une bague portée au même doigt, tracez-la, mesurez pendant son sommeil ou demandez à un proche. Les méthodes, et un tableau des tailles.",
+    "title": "Comment connaître la taille de bague de quelqu’un sans lui demander",
+    "summary": "Empruntez une bague portée au même doigt et mesurez-la. Ou tracez-la, comparez-la à l’une des vôtres, mesurez pendant son sommeil, ou demandez à un proche.",
     "content": [
       {
         "type": "p",
-        "text": "La méthode secrète la plus précise consiste à emprunter une bague qu'elle porte déjà au même doigt de la même main, puis à la faire mesurer par un bijoutier ou à mesurer vous-même son diamètre intérieur. Si vous ne pouvez pas emporter la bague, tracez son contour intérieur sur une feuille ou enfoncez-la dans un savon, ou demandez à un ami proche ou à un membre de sa famille de se renseigner pour vous."
+        "text": "Le moyen le plus fiable de connaître la taille de bague de quelqu’un sans lui demander est d’emprunter une bague que la personne porte déjà au même doigt de la même main, puis de la faire mesurer. Si vous ne pouvez pas l’emporter, vous pouvez la tracer sur une feuille, la comparer à l’une de vos bagues, mesurer le doigt pendant son sommeil ou interroger un proche."
       },
       {
         "type": "h2",
-        "text": "Méthode 1 : emprunter une bague qu'elle porte déjà"
+        "text": "Empruntez une bague déjà portée"
+      },
+      {
+        "type": "p",
+        "text": "Une bague qui va déjà au doigt est la meilleure référence possible. Assurez-vous qu’elle est portée au doigt pour lequel vous achetez, et non n’importe quelle bague de sa boîte à bijoux."
       },
       {
         "type": "steps",
         "items": [
-          "Choisissez une bague portée au doigt pour lequel vous achetez. Les doigts de la main dominante sont en général un peu plus larges.",
-          "Apportez-la chez un bijoutier, qui la mesurera en quelques secondes sur un baguier.",
-          "Ou mesurez son diamètre intérieur en millimètres et reportez-vous au tableau ci-dessous.",
-          "Remettez-la exactement là où vous l'avez trouvée."
+          "Choisissez une bague portée précisément au doigt et à la main pour lesquels vous achetez, et attendez qu’elle soit retirée.",
+          "Apportez-la chez un bijoutier, qui la mesurera en quelques instants sur un baguier. Ou, chez vous, posez-la contre une règle et mesurez son diamètre intérieur en millimètres, à l’endroit le plus large de l’ouverture, sans compter le métal : pas besoin de baguier.",
+          "Reportez ce diamètre intérieur dans le tableau ci-dessous.",
+          "Remettez la bague exactement là où vous l’avez trouvée, dans le même sens."
         ]
       },
       {
         "type": "h2",
-        "text": "Méthode 2 : tracer la bague ou en prendre l'empreinte"
+        "text": "Tracez-la ou prenez-en l’empreinte"
       },
       {
         "type": "p",
-        "text": "Si vous n'avez la bague qu'une minute, posez-la sur une feuille et tracez le bord intérieur avec un crayon bien taillé, ou enfoncez-la à moitié dans une savonnette pour en garder l'empreinte. Mesurez le diamètre intérieur plus tard. C'est moins précis que de mesurer la bague elle-même : si vous tombez entre deux tailles, prenez la plus grande."
+        "text": "Si vous ne pouvez pas sortir la bague de la maison, relevez sa taille sur place et remettez-la aussitôt. Posez la bague à plat sur une feuille et tracez le bord intérieur avec un crayon bien taillé, tenu bien droit pour que le cercle corresponde à l’ouverture, ou enfoncez la bague à moitié dans un pain de savon, puis essuyez le métal."
+      },
+      {
+        "type": "p",
+        "text": "Plus tard, mesurez en millimètres le diamètre intérieur du cercle au crayon ou de l’empreinte dans le savon, et reportez-vous au tableau ci-dessous. Ces deux méthodes sont moins précises que de mesurer la bague elle-même, car l’épaisseur du trait ou les bords mous du savon peuvent fausser légèrement la mesure."
       },
       {
         "type": "h2",
-        "text": "Méthode 3 : mesurer le doigt pendant son sommeil"
+        "text": "Comparez-la avec l’une de vos bagues"
       },
       {
         "type": "p",
-        "text": "Enroulez une fine bande de papier à la base du doigt, marquez l'endroit où elle se chevauche, et mesurez la longueur : c'est le tour de doigt. C'est risqué — elle peut se réveiller — et une ficelle s'étire, alors utilisez du papier et mesurez deux fois."
+        "text": "Si vous n’avez sa bague que quelques instants et pas de règle sous la main, servez-vous de vos propres doigts ou de vos propres bagues comme référence :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Glissez sa bague à l’un de vos doigts et repérez l’endroit exact où elle s’arrête. Entourez ensuite cet endroit d’une bande de papier pour le mesurer plus tard ; et si elle va à l’un de vos doigts dont vous connaissez la taille de bague, sa taille en est proche.",
+          "Prenez l’une de vos bagues dont vous connaissez la taille et posez-la à plat sur la sienne. Si les bords intérieurs coïncident, c’est la même taille ; sinon, vous voyez laquelle est la plus grande et de combien environ.",
+          "Pour une approche plus décontractée, qui évite de fouiller dans une boîte à bijoux, tendez-lui l’une de vos bagues à essayer comme pour rire, et regardez à quel doigt elle va et jusqu’où elle glisse."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Comparer avec votre propre bague ou votre propre doigt reste approximatif, mais cela réduit la fourchette à une taille ou deux."
       },
       {
         "type": "h2",
-        "text": "Méthode 4 : trouver un complice"
+        "text": "Mesurez son doigt pendant son sommeil"
       },
       {
         "type": "p",
-        "text": "Une amie peut proposer d'essayer des bagues pendant une sortie shopping, et un frère, une sœur ou un parent connaît peut-être tout simplement la taille. C'est la seule méthode qui ne demande pas de toucher à ses bijoux."
+        "text": "Si la personne ne porte pas de bague à ce doigt, vous pouvez mesurer le doigt lui-même pendant son sommeil. Enroulez une fine bande de papier bien ajustée à la base du doigt, marquez l’endroit où le papier se chevauche, puis mesurez avec une règle graduée en millimètres la longueur jusqu’au repère. Cette longueur est la circonférence, que le tableau ci-dessous indique à côté du diamètre intérieur."
+      },
+      {
+        "type": "p",
+        "text": "Utilisez du papier, pas de la ficelle : la ficelle s’étire quand on la tire et donne une mesure plus grande que le doigt. Mesurez deux fois pour être sûr et allez-y en douceur, car le principal risque de cette méthode est que la personne se réveille."
       },
       {
         "type": "h2",
-        "text": "Méthode 5 : comparer avec vos propres doigts"
+        "text": "Demandez à un proche"
       },
       {
         "type": "p",
-        "text": "Glissez sa bague sur vos propres doigts et repérez où elle s'arrête. Mesurez ensuite votre doigt à cet endroit. C'est approximatif, mais cela réduit la fourchette."
+        "text": "Interroger un ami, une sœur, un frère ou un parent est la seule méthode qui ne demande ni ses bijoux ni sa main endormie. Un membre de la famille ou un ami proche connaît peut-être tout simplement la taille, grâce à un ancien cadeau ou parce qu’il lui a déjà emprunté un bijou."
+      },
+      {
+        "type": "p",
+        "text": "Si personne ne la connaît de tête, un ami peut proposer d’essayer des bagues ensemble en faisant les boutiques. Quand l’idée vient d’un ami qui cherche pour lui-même, essayer quelques anneaux et en mentionner la taille paraît tout naturel."
+      },
+      {
+        "type": "h2",
+        "text": "Le bon doigt, la bonne main"
+      },
+      {
+        "type": "p",
+        "text": "Une bague empruntée à un autre doigt n’aura pas la même taille, et même le même doigt est rarement identique d’une main à l’autre. Le même doigt de la main dominante est en général environ une demi-taille plus grand que celui de l’autre main."
+      },
+      {
+        "type": "p",
+        "text": "Les usages varient aussi selon les pays : l’alliance se porte traditionnellement à la main droite en Russie, en Pologne et en Inde, par exemple, et à la main gauche dans de nombreux autres pays, comme les États-Unis, le Royaume-Uni, la France et l’Italie. Mesurez toujours le doigt exact de la main où la nouvelle bague sera portée."
+      },
+      {
+        "type": "h2",
+        "text": "Obtenir une mesure fiable"
+      },
+      {
+        "type": "p",
+        "text": "La taille des doigts change selon l’heure de la journée et la météo : ils sont plus gros l’après-midi, le soir et par temps chaud, et plus fins par temps froid. La forme du doigt compte aussi, car une articulation peut être plus large que la base du doigt, et la bague doit pouvoir la franchir."
+      },
+      {
+        "type": "note",
+        "text": "Quand la mesure tombe entre deux tailles, prenez la plus grande : une bague un peu large se porte quand même et se met à taille plus facilement qu’une bague trop serrée."
+      },
+      {
+        "type": "h2",
+        "text": "Si vous n’arrivez toujours pas à la connaître"
+      },
+      {
+        "type": "p",
+        "text": "Si aucune de ces méthodes ne fonctionne, choisissez un cadeau qui n’a pas besoin de taille, comme un collier, un bracelet ou des boucles d’oreilles, ou optez pour une bague ouverte et ajustable."
+      },
+      {
+        "type": "p",
+        "text": "Si vous achetez une bague pour une demande en mariage et devez deviner la taille, renseignez-vous auprès de la boutique sur la mise à taille avant d’acheter, afin que la bague puisse être ajustée après le oui. Évitez les alliances serties de pierres tout autour : elles sont difficiles, voire impossibles, à ajuster."
       },
       {
         "type": "h2",
@@ -242,10 +306,10 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "Le tour de doigt sert de référence. Chaque système affiche sa taille la plus proche de ce tour de doigt, selon la même conversion que Sotto.",
+        "caption": "La circonférence sert de référence. Chaque système affiche sa taille la plus proche de cette circonférence, selon la même conversion que Sotto.",
         "head": [
           "États-Unis / Canada",
-          "Tour de doigt (mm)",
+          "Circonférence (mm)",
           "Diamètre intérieur (mm)",
           "Royaume-Uni / Australie",
           "EU / France",
@@ -328,16 +392,16 @@ export const articles = [
         ]
       },
       {
-        "type": "note",
-        "text": "Les doigts gonflent avec la chaleur et en fin de journée, et une articulation peut être plus large que la base du doigt. En cas de doute, prenez la taille au-dessus : une bague un peu grande se porte quand même et se met plus facilement à taille."
-      },
-      {
         "type": "h2",
-        "text": "Enregistrez la taille de chaque doigt dans Sotto"
+        "text": "Gardez la taille là où vous la retrouverez dans des années"
       },
       {
         "type": "p",
-        "text": "Une fois la taille connue, gardez-la. Sotto enregistre une taille de bague pour chacun des dix doigts, main gauche et main droite, du pouce à l'auriculaire, et convertit entre les tailles US, EU, UK, japonaises, chinoises, hongkongaises et suisses. La taille reste privée sur votre téléphone, prête le jour venu."
+        "text": "Une fois la taille de bague connue, notez-la quelque part où vous la retrouverez dans des années, et non sur un bout de papier qui se perd une fois le cadeau ouvert."
+      },
+      {
+        "type": "p",
+        "text": "Sotto est un carnet privé pour vos proches, une app pour iPhone et Android avec une page pour chaque personne : notes, anniversaires, idées cadeaux et 23 champs de tailles et mensurations, dont une taille de bague pour chacun des dix doigts. Elle convertit les tailles de bague entre sept systèmes (US, EU, UK, japonais, chinois, hongkongais et suisse) et garde tout sur votre téléphone, sans compte et sans publicité."
       }
     ],
     "related": [

@@ -184,57 +184,121 @@ export const articles = [
   },
   {
     "slug": "find-ring-size-secretly",
-    "title": "Come scoprire la misura dell'anello di nascosto",
-    "summary": "Prendi in prestito un anello che porta sullo stesso dito, ricalcalo, misura mentre dorme o chiedi a un amico. Ogni metodo spiegato, con tabella delle misure.",
+    "title": "Come scoprire la misura dell'anello di qualcuno senza chiederglielo",
+    "summary": "Prendi in prestito un anello che porta sullo stesso dito e misuralo. Oppure ricalcalo, confrontalo con un tuo anello, misura mentre dorme o chiedi a un amico.",
     "content": [
       {
         "type": "p",
-        "text": "Il metodo segreto più preciso è prendere in prestito un anello che porta già sullo stesso dito della stessa mano e farlo misurare da un gioielliere, oppure misurarne tu il diametro interno. Se non puoi portare via l'anello, ricalcane l'interno su un foglio o premilo in una saponetta, oppure chiedi a un amico stretto o a un familiare di scoprirlo per te."
+        "text": "Il modo più preciso per scoprire la misura dell'anello di qualcuno senza chiederglielo è prendere in prestito un anello che porta già sullo stesso dito della stessa mano e farlo misurare. Se non puoi portare via l'anello, puoi ricalcarlo su un foglio, confrontarlo con un anello tuo, misurare il dito mentre dorme oppure chiedere a qualcuno che lo conosce bene."
       },
       {
         "type": "h2",
-        "text": "Metodo 1: prendi in prestito un anello che porta già"
+        "text": "Prendi in prestito un anello che porta già"
+      },
+      {
+        "type": "p",
+        "text": "Un anello che calza già bene sul dito è il miglior riferimento che puoi avere. Assicurati che sia uno che porta proprio sul dito per cui stai comprando, non un anello qualsiasi preso dal portagioie."
       },
       {
         "type": "steps",
         "items": [
-          "Scegli un anello portato sul dito per cui stai comprando. Le dita della mano dominante di solito sono un po' più grandi.",
-          "Portalo da un gioielliere, che può misurarlo in un attimo su un misuratore conico per anelli.",
-          "Oppure misura il diametro interno in millimetri e cercalo nella tabella qui sotto.",
-          "Rimettilo esattamente dove l'hai trovato."
+          "Scegli un anello che porta sullo stesso dito e sulla stessa mano per cui stai comprando e aspetta che se lo tolga.",
+          "Portalo da un gioielliere, che può misurarlo in un attimo su un mandrino per anelli, oppure appoggialo a casa su un righello e misura in millimetri il diametro interno, nel punto in cui l'apertura è più larga, senza contare lo spessore del metallo.",
+          "Cerca quel diametro interno nella tabella qui sotto.",
+          "Rimetti l'anello esattamente dove l'avevi trovato, con lo stesso verso."
         ]
       },
       {
         "type": "h2",
-        "text": "Metodo 2: ricalca l'anello o premilo nel sapone"
+        "text": "Ricalcalo o fanne un'impronta"
       },
       {
         "type": "p",
-        "text": "Se hai l'anello solo per un minuto, appoggialo su un foglio e ricalca il bordo interno con una matita ben appuntita, oppure premilo a metà in una saponetta per conservarne l'impronta. Misura il diametro interno con calma più tardi. È meno preciso che misurare l'anello stesso, quindi se sei a metà fra due misure, scegli la più grande."
+        "text": "Se non puoi portare l'anello fuori casa, registra la misura sul posto e rimettilo subito a posto. Appoggia l'anello su un foglio e ricalca il bordo interno con una matita ben appuntita, tenendola dritta in modo che il cerchio corrisponda all'apertura interna, oppure premi l'anello a metà in una saponetta e poi pulisci bene il metallo."
+      },
+      {
+        "type": "p",
+        "text": "Più tardi misura in millimetri il diametro interno del cerchio a matita o dell'impronta nel sapone e cercalo nella tabella qui sotto. Entrambi i metodi sono meno precisi che misurare l'anello stesso, perché lo spessore della matita o i bordi del sapone morbido possono spostare un po' la misura."
       },
       {
         "type": "h2",
-        "text": "Metodo 3: misura il dito mentre dorme"
+        "text": "Confrontalo con un anello tuo"
       },
       {
         "type": "p",
-        "text": "Avvolgi una sottile striscia di carta alla base del dito, segna il punto in cui si sovrappone e misurane la lunghezza: quella è la circonferenza. È rischioso — potrebbe svegliarsi — e lo spago si allunga, quindi usa la carta e misura due volte."
+        "text": "Se hai il suo anello solo per un momento e non hai un righello a portata di mano, usa le tue dita o i tuoi anelli come riferimento:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Infila il suo anello su una delle tue dita e nota il punto esatto in cui si ferma. Più tardi avvolgi una striscia di carta attorno a quel punto per misurarlo; se invece l'anello calza su un tuo dito di cui conosci già la misura, la sua è vicina a quella.",
+          "Prendi un anello tuo di cui conosci la misura e appoggialo sopra il suo. Se i bordi interni coincidono, la misura è la stessa; altrimenti vedi qual è il più grande e di quanto, più o meno.",
+          "Se non vuoi frugare nel portagioie, passagli un anello tuo da provare come per gioco e osserva su quale dito calza e fin dove scorre."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Confrontare con un tuo anello o un tuo dito è un metodo approssimativo, ma restringe il campo a una o due misure."
       },
       {
         "type": "h2",
-        "text": "Metodo 4: chiedi a un complice"
+        "text": "Misura il dito mentre dorme"
       },
       {
         "type": "p",
-        "text": "Un amico può proporre di provare qualche anello durante un giro per negozi, e un fratello o un genitore potrebbe semplicemente saperlo. È l'unico metodo che non richiede di toccare i suoi gioielli."
+        "text": "Se non porta anelli su quel dito, puoi misurare il dito stesso mentre dorme. Avvolgi con delicatezza una sottile striscia di carta alla base del dito, segna il punto in cui la carta si sovrappone e misura con un righello in millimetri la lunghezza fino al segno. Quella lunghezza è la circonferenza, che la tabella qui sotto riporta accanto al diametro interno."
+      },
+      {
+        "type": "p",
+        "text": "Usa la carta, non lo spago: lo spago si allunga quando lo tiri e dà una misura più grande del dito. Misura due volte per sicurezza e fai tutto con delicatezza, perché il rischio principale di questo metodo è che si svegli."
       },
       {
         "type": "h2",
-        "text": "Metodo 5: confronta con le tue dita"
+        "text": "Chiedi a qualcuno che lo conosce bene"
       },
       {
         "type": "p",
-        "text": "Infila il suo anello sulle tue dita e nota dove si ferma. Poi misura quel punto del tuo dito. È approssimativo, ma restringe il campo."
+        "text": "Chiedere a un'amica, un amico, una sorella, un fratello o un genitore è l'unico metodo che non richiede né i suoi gioielli né la sua mano mentre dorme. Un familiare o un amico stretto potrebbe semplicemente conoscere la misura per un regalo passato o per aver preso in prestito qualche gioiello."
+      },
+      {
+        "type": "p",
+        "text": "Se non la sa a memoria, un amico può proporre di provare qualche anello insieme durante un giro per negozi. Quando l'idea viene da un amico che guarda anelli per sé, provare qualche fede e dire la misura risulta del tutto naturale."
+      },
+      {
+        "type": "h2",
+        "text": "Scegli il dito e la mano giusti"
+      },
+      {
+        "type": "p",
+        "text": "Un anello preso da un altro dito avrà una misura diversa, e anche lo stesso dito di rado coincide fra le due mani. Di solito lo stesso dito della mano dominante è circa mezza misura più grande rispetto all'altra mano."
+      },
+      {
+        "type": "p",
+        "text": "Anche le usanze cambiano da paese a paese: la fede nuziale, per esempio, tradizionalmente si porta alla mano destra in Russia, Polonia e India, e alla sinistra in molti altri paesi, come Stati Uniti, Regno Unito, Francia e Italia. Misura sempre il dito esatto della mano su cui verrà portato il nuovo anello."
+      },
+      {
+        "type": "h2",
+        "text": "Come ottenere una misura affidabile"
+      },
+      {
+        "type": "p",
+        "text": "Le dita cambiano misura con l'ora del giorno e con il tempo: sono più grandi nel pomeriggio e alla sera e quando fa caldo, più piccole quando fa freddo. Conta anche la forma del dito, perché la nocca può essere più larga della base del dito e l'anello deve comunque passarci sopra."
+      },
+      {
+        "type": "note",
+        "text": "Quando la misura cade fra due numeri, scegli quello più grande: un anello un po' largo si può comunque portare ed è più facile da stringere di uno troppo stretto."
+      },
+      {
+        "type": "h2",
+        "text": "Se proprio non riesci a scoprirla"
+      },
+      {
+        "type": "p",
+        "text": "Se nessuno di questi metodi funziona, scegli un regalo che non richiede una misura, come una collana, un braccialetto o degli orecchini, oppure un anello aperto regolabile."
+      },
+      {
+        "type": "p",
+        "text": "Se stai comprando un anello per una proposta di matrimonio e devi andare a intuito, chiedi al negozio come funziona la modifica della misura prima di acquistare, così potrai sistemarlo dopo il sì. Evita le fedi eternity con pietre incastonate tutto attorno, perché sono difficili o impossibili da ridimensionare."
       },
       {
         "type": "h2",
@@ -328,16 +392,16 @@ export const articles = [
         ]
       },
       {
-        "type": "note",
-        "text": "Le dita si gonfiano con il caldo e la sera, e la nocca può essere più larga della base del dito. Se hai dubbi, scegli la misura più grande: un anello un po' largo si può comunque portare ed è più facile da stringere."
-      },
-      {
         "type": "h2",
-        "text": "Salva la misura di ogni dito in Sotto"
+        "text": "Conserva la misura dove la ritroverai tra anni"
       },
       {
         "type": "p",
-        "text": "Una volta che la conosci, conservala. Sotto salva una misura dell'anello per ciascuna delle dieci dita, sinistra e destra, dal pollice al mignolo, e converte tra misure US, EU, UK, giapponesi, cinesi, di Hong Kong e svizzere. La misura resta privata sul tuo telefono, pronta quando arriva l'occasione."
+        "text": "Quando conosci la misura del suo anello, scrivila in un posto dove la ritroverai anche tra anni, non su un biglietto che si perde dopo che il regalo è stato aperto."
+      },
+      {
+        "type": "p",
+        "text": "Sotto è un'app privata per le note sulle persone (un CRM personale) per iPhone e Android, con una scheda per ogni persona per note, compleanni, idee regalo e 23 campi di taglie e misure, tra cui la misura dell'anello per ciascuna delle dieci dita. Converte le misure degli anelli tra sette sistemi (US, EU, UK, Giappone, Cina, Hong Kong e Svizzera) e tiene tutto sul tuo telefono, senza account e senza pubblicità."
       }
     ],
     "related": [

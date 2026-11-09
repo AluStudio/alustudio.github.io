@@ -2,7 +2,7 @@
   "//": "Per translation unit, the hash of the en text the fr translation was made from. Written by `npm run l10n -- sotto apply fr`; do not edit.",
   "units": {
     "guide:find-gift-sizes-without-asking": "ee61f8906840",
-    "guide:find-ring-size-secretly": "d09a88156bca",
+    "guide:find-ring-size-secretly": "d451dc6a3efd",
     "guide:gift-log": "10aece05b6cb",
     "guide:how-many-people-do-you-meet-in-a-lifetime": "351e4680faf1",
     "guide:remember-details-about-people": "c20f5ba19645",
