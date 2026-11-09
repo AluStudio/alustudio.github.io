@@ -185,7 +185,7 @@ export const articles = [
   {
     "slug": "find-ring-size-secretly",
     "title": "Ringgröße heimlich herausfinden: So ermittelst du sie, ohne zu fragen",
-    "summary": "Leih dir einen Ring vom selben Finger und miss ihn. Oder zeichne ihn nach, vergleiche ihn mit einem eigenen Ring, miss im Schlaf oder frag jemanden.",
+    "summary": "Leih dir einen Ring vom selben Finger und miss ihn, zeichne ihn nach, vergleiche ihn mit einem eigenen Ring, miss im Schlaf oder frag jemanden. Mit Tabelle.",
     "content": [
       {
         "type": "p",
@@ -203,8 +203,8 @@ export const articles = [
         "type": "steps",
         "items": [
           "Such dir einen Ring aus, den die Person genau an dem Finger und an der Hand trägt, für die du kaufst, und warte, bis sie ihn abnimmt.",
-          "Bring ihn zum Juwelier, der ihn auf einem Ringstock im Handumdrehen misst, oder leg ihn zu Hause auf ein Lineal und miss den Innendurchmesser in Millimetern: die Breite der inneren Öffnung an der weitesten Stelle, ohne den Metallreif.",
-          "Schlag diesen Innendurchmesser in der Tabelle unten nach.",
+          "Bring ihn zum Juwelier, der ihn auf einem Ringstock im Handumdrehen misst.",
+          "Oder leg ihn zu Hause auf ein Lineal und miss den Innendurchmesser in Millimetern: die Breite der inneren Öffnung an der weitesten Stelle, ohne den Metallreif. Schlag den Wert dann in der Tabelle unten nach.",
           "Leg den Ring genau dorthin zurück, wo du ihn gefunden hast, und zwar mit derselben Seite nach oben."
         ]
       },
@@ -231,7 +231,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Schieb den Ring der Person auf einen deiner Finger und merk dir genau die Stelle, an der er stoppt. Wickle später einen Papierstreifen um diese Stelle und miss ihn. Oder, passt er auf einen deiner Finger, dessen Ringgröße du schon kennst, liegt ihre Größe in der Nähe davon.",
+          "Schieb den Ring der Person auf einen deiner Finger und merk dir genau die Stelle, an der er stoppt. Passt er auf einen deiner Finger, dessen Ringgröße du schon kennst, liegt ihre Größe in der Nähe davon; wenn nicht, wickle später einen Papierstreifen um diese Stelle und miss ihn.",
           "Nimm einen eigenen Ring, dessen Größe du kennst, und leg ihn flach auf ihren. Wenn die Innenkanten übereinanderliegen, ist es dieselbe Größe; wenn nicht, siehst du, welcher größer ist und ungefähr um wie viel.",
           "Wenn du nicht im Schmuckkästchen herumschleichen willst, gib der Person einen eigenen Ring von dir wie zum Spaß zum Anprobieren und schau, an welchen Finger er passt und wie weit er rutscht."
         ]
@@ -274,7 +274,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Auch die Bräuche unterscheiden sich je nach Land: Eheringe werden traditionell zum Beispiel in Russland, Polen und Indien an der rechten Hand getragen, in vielen anderen Ländern wie den USA, Großbritannien, Frankreich und Italien an der linken. Miss immer genau den Finger an der Hand, an der der neue Ring getragen werden soll."
+        "text": "Auch die Bräuche unterscheiden sich je nach Land. In Deutschland, Polen und Russland werden Eheringe traditionell an der rechten Hand getragen; in Brasilien trägt man den Verlobungsring an der rechten Hand, und er wechselt bei der Hochzeit nach links; in vielen anderen Ländern wie den USA, Großbritannien, Frankreich und Italien kommen Ringe an die linke Hand. Miss immer genau den Finger an der Hand, an der der neue Ring getragen werden soll."
       },
       {
         "type": "h2",
@@ -401,7 +401,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto ist eine private Notizen-App für Menschen für iPhone und Android mit einer eigenen Seite für jede Person: für Notizen, Geburtstage, Geschenkideen und 23 Größen- und Maßfelder, darunter eine Ringgröße für jeden der zehn Finger. Die App rechnet Ringgrößen zwischen sieben Systemen um (US, EU, UK, Japan, China, Hongkong und Schweiz) und behält alles auf deinem Handy – ohne Konto und ohne Werbung."
+        "text": "Sotto ist eine private Notizen-App für Menschen für iPhone und Android mit einer eigenen Seite für jede Person: für Notizen, Geburtstage, Geschenkideen und 23 Größen- und Maßfelder, darunter eine Ringgröße für jeden der zehn Finger. Die App rechnet Ringgrößen zwischen sieben Systemen um (US, EU, UK, Japan, China, Hongkong und Schweiz) und behält alles auf deinem Handy – ohne Konto und ohne Werbung. Die App lässt sich mit der Displaysperre deines Handys sperren."
       }
     ],
     "related": [

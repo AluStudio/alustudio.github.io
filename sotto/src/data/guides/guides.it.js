@@ -185,7 +185,7 @@ export const articles = [
   {
     "slug": "find-ring-size-secretly",
     "title": "Come scoprire la misura dell'anello di qualcuno senza chiederglielo",
-    "summary": "Prendi in prestito un anello che porta sullo stesso dito e misuralo. Oppure ricalcalo, confrontalo con un tuo anello, misura mentre dorme o chiedi a un amico.",
+    "summary": "Prendi in prestito un anello che porta sullo stesso dito e misuralo, ricalcalo, confrontalo con il tuo, misura mentre dorme o chiedi a un amico. Con tabella.",
     "content": [
       {
         "type": "p",
@@ -203,8 +203,8 @@ export const articles = [
         "type": "steps",
         "items": [
           "Scegli un anello che porta sullo stesso dito e sulla stessa mano per cui stai comprando e aspetta che se lo tolga.",
-          "Portalo da un gioielliere, che può misurarlo in un attimo su un mandrino per anelli, oppure appoggialo a casa su un righello e misura in millimetri il diametro interno, nel punto in cui l'apertura è più larga, senza contare lo spessore del metallo.",
-          "Cerca quel diametro interno nella tabella qui sotto.",
+          "Portalo da un gioielliere, che può misurarlo in un attimo su un mandrino per anelli.",
+          "Oppure appoggialo a casa su un righello e misura in millimetri il diametro interno, nel punto in cui l'apertura è più larga, senza contare lo spessore del metallo, poi cercalo nella tabella qui sotto.",
           "Rimetti l'anello esattamente dove l'avevi trovato, con lo stesso verso."
         ]
       },
@@ -231,7 +231,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Infila il suo anello su una delle tue dita e nota il punto esatto in cui si ferma. Più tardi avvolgi una striscia di carta attorno a quel punto per misurarlo; se invece l'anello calza su un tuo dito di cui conosci già la misura, la sua è vicina a quella.",
+          "Infila il suo anello su una delle tue dita e nota il punto esatto in cui si ferma. Se calza su un tuo dito di cui conosci già la misura, la sua è vicina a quella; altrimenti avvolgi più tardi una striscia di carta attorno a quel punto e misurala.",
           "Prendi un anello tuo di cui conosci la misura e appoggialo sopra il suo. Se i bordi interni coincidono, la misura è la stessa; altrimenti vedi qual è il più grande e di quanto, più o meno.",
           "Se non vuoi frugare nel portagioie, passagli un anello tuo da provare come per gioco e osserva su quale dito calza e fin dove scorre."
         ]
@@ -274,7 +274,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Anche le usanze cambiano da paese a paese: la fede nuziale, per esempio, tradizionalmente si porta alla mano destra in Russia, Polonia e India, e alla sinistra in molti altri paesi, come Stati Uniti, Regno Unito, Francia e Italia. Misura sempre il dito esatto della mano su cui verrà portato il nuovo anello."
+        "text": "Anche le usanze cambiano da paese a paese. In Germania, Polonia e Russia la fede nuziale si porta tradizionalmente alla mano destra; in Brasile l'anello di fidanzamento si porta alla destra e passa alla sinistra con il matrimonio; in molti altri paesi, come Stati Uniti, Regno Unito, Francia e Italia, gli anelli vanno alla mano sinistra. Misura sempre il dito esatto della mano su cui verrà portato il nuovo anello."
       },
       {
         "type": "h2",
@@ -401,7 +401,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto è un'app privata per le note sulle persone (un CRM personale) per iPhone e Android, con una scheda per ogni persona per note, compleanni, idee regalo e 23 campi di taglie e misure, tra cui la misura dell'anello per ciascuna delle dieci dita. Converte le misure degli anelli tra sette sistemi (US, EU, UK, Giappone, Cina, Hong Kong e Svizzera) e tiene tutto sul tuo telefono, senza account e senza pubblicità."
+        "text": "Sotto è un'app privata per le note sulle persone (un CRM personale) per iPhone e Android, con una scheda per ogni persona per note, compleanni, idee regalo e 23 campi di taglie e misure, tra cui la misura dell'anello per ciascuna delle dieci dita. Converte le misure degli anelli tra sette sistemi (US, EU, UK, Giappone, Cina, Hong Kong e Svizzera) e tiene tutto sul tuo telefono, senza account e senza pubblicità. L'app può essere bloccata con il blocco schermo del tuo telefono."
       }
     ],
     "related": [

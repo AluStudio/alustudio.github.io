@@ -104,7 +104,7 @@ export const articles = [
   {
     slug: "find-ring-size-secretly",
     title: "How to Find Out Someone's Ring Size Without Asking Them",
-    summary: "Borrow a ring they wear on the same finger and measure it. Or trace it, compare it with a ring of your own, measure while they sleep, or ask a friend.",
+    summary: "Borrow a ring they wear on the same finger and measure it, or trace it, compare it with your own ring, measure while they sleep or ask a friend. Chart included.",
     content: [
       { type: "p", text: "The most accurate way to find someone's ring size without asking is to borrow a ring they already wear on the same finger of the same hand and have it measured. If you cannot take a ring away, you can trace it on paper, compare it with a ring of your own, measure their finger while they sleep, or ask someone close to them." },
       { type: "h2", text: "Borrow a ring they already wear" },
@@ -113,8 +113,8 @@ export const articles = [
         type: "steps",
         items: [
           "Pick a ring they wear on the exact finger and hand you are buying for, and wait until they take it off.",
-          "Take it to a jeweler, who can size it on a ring mandrel in moments, or lay it on a ruler at home and measure its inside diameter in millimeters across the widest inner opening, excluding the metal band.",
-          "Look up that inside diameter in the chart below.",
+          "Take it to a jeweler, who can size it on a ring mandrel in moments.",
+          "Or, at home, lay it on a ruler and measure its inside diameter in millimeters across the widest inner opening, excluding the metal band, then look it up in the chart below.",
           "Put the ring back in the exact spot where you found it, facing the same way round.",
         ],
       },
@@ -126,7 +126,7 @@ export const articles = [
       {
         type: "list",
         items: [
-          "Slide their ring onto one of your own fingers and note the exact spot where it stops. Wrap a paper strip around that spot later to measure it, or if it fits one of your fingers whose ring size you already know, their size is close to that.",
+          "Slide their ring onto one of your own fingers and note the exact spot where it stops. If it fits a finger whose ring size you already know, their size is close to that; if not, wrap a paper strip around that spot later and measure it.",
           "Take a ring of your own whose size you know and lay it flat on top of theirs. If the inside edges line up, it is the same size; if not, you can see which one is bigger and by roughly how much.",
           "For a casual approach that does not involve sneaking into a jewelry box, hand them a ring of your own to try on as if for fun, and watch which finger it fits and how far it slides.",
         ],
@@ -140,7 +140,7 @@ export const articles = [
       { type: "p", text: "If they do not know it offhand, a friend can suggest trying on rings together while out shopping. When the idea comes from a friend browsing for themselves, trying on a few bands and mentioning the size feels natural." },
       { type: "h2", text: "Match the finger and the hand" },
       { type: "p", text: "A ring borrowed from a different finger will be a different size, and even the same finger rarely matches across both hands. The same finger on the dominant hand is usually about half a size larger than on the other hand." },
-      { type: "p", text: "Customs also differ by country: wedding rings are traditionally worn on the right hand in Russia, Poland and India, for example, and on the left hand in many other countries, such as the US, the UK, France and Italy. Always measure the exact finger on the hand where the new ring will be worn." },
+      { type: "p", text: "Customs also differ by country. In Germany, Poland and Russia, wedding rings are traditionally worn on the right hand; in Brazil, the engagement ring is worn on the right hand and moves to the left at the wedding; in many other countries, such as the US, the UK, France and Italy, rings go on the left hand. Always measure the exact finger on the hand where the new ring will be worn." },
       { type: "h2", text: "Getting a reading you can trust" },
       { type: "p", text: "Fingers change size with the time of day and the weather: they are larger in the afternoon and evening and in heat, and smaller in the cold. Finger shape matters as well, because a knuckle can be wider than the base of the finger, and the ring still has to pass over it." },
       { type: "note", text: "When a reading falls between two sizes, choose the larger one: a slightly loose ring can still be worn and is easier to resize than a tight one." },
@@ -156,7 +156,7 @@ export const articles = [
       },
       { type: "h2", text: "Keep the size where you will find it years later" },
       { type: "p", text: "Once you know their ring size, write it down somewhere you will still find it years later, not on a scrap of paper that gets lost after the gift is opened." },
-      { type: "p", text: "Sotto is a private people notes app for iPhone and Android with one page per person for notes, birthdays, gift ideas and 23 size and measurement fields, including a ring size for each of the ten fingers. It converts ring sizes between seven systems (US, EU, UK, Japanese, Chinese, Hong Kong and Swiss) and keeps everything on your phone, with no account and no ads." },
+      { type: "p", text: "Sotto is a private people notes app for iPhone and Android with one page per person for notes, birthdays, gift ideas and 23 size and measurement fields, including a ring size for each of the ten fingers. It converts ring sizes between seven systems (US, EU, UK, Japanese, Chinese, Hong Kong and Swiss) and keeps everything on your phone, with no account and no ads. The app can be locked with your phone's own screen lock." },
     ],
     related: ["find-gift-sizes-without-asking", "gift-log"],
   },

@@ -185,7 +185,7 @@ export const articles = [
   {
     "slug": "find-ring-size-secretly",
     "title": "Como descobrir o tamanho do anel de alguém sem perguntar",
-    "summary": "Pegue emprestado um anel que a pessoa usa no mesmo dedo e meça. Ou contorne no papel, compare com um seu, meça enquanto ela dorme ou pergunte a um amigo.",
+    "summary": "Pegue emprestado um anel que a pessoa usa no mesmo dedo e meça, ou contorne no papel, compare com um seu, meça com ela dormindo ou pergunte a alguém. Há tabela.",
     "content": [
       {
         "type": "p",
@@ -203,8 +203,8 @@ export const articles = [
         "type": "steps",
         "items": [
           "Escolha um anel que a pessoa use exatamente no dedo e na mão para os quais você vai comprar e espere até ela tirá-lo.",
-          "Leve-o a um joalheiro, que mede o tamanho em instantes num tribulê (o cone de medir anéis), ou apoie-o numa régua em casa e meça o diâmetro interno em milímetros, na parte mais larga da abertura, sem contar a espessura do metal.",
-          "Procure esse diâmetro interno na tabela abaixo.",
+          "Leve-o a um joalheiro, que mede o tamanho em instantes num tribulê (o cone de medir anéis).",
+          "Ou, em casa, apoie-o numa régua, meça o diâmetro interno em milímetros, na parte mais larga da abertura, sem contar a espessura do metal, e procure esse valor na tabela abaixo.",
           "Devolva o anel exatamente onde o encontrou, virado para o mesmo lado."
         ]
       },
@@ -231,7 +231,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Coloque o anel dela num dos seus dedos e repare exatamente onde ele para. Depois, enrole uma tira de papel nesse ponto para medir. Se o anel servir num dedo seu cujo tamanho de anel você já conhece, o tamanho dela é próximo desse.",
+          "Coloque o anel dela num dos seus dedos e repare exatamente onde ele para. Se o anel servir num dedo seu cujo tamanho de anel você já conhece, o tamanho dela é próximo desse; se não, enrole depois uma tira de papel nesse ponto e meça.",
           "Pegue um anel seu de tamanho conhecido e deite-o sobre o dela. Se as bordas internas coincidirem, o tamanho é o mesmo; se não, dá para ver qual é o maior e mais ou menos por quanto.",
           "Para um jeito mais discreto, que não envolve mexer na caixa de joias, entregue um anel seu para a pessoa experimentar como quem brinca e observe em qual dedo ele serve e até onde desliza."
         ]
@@ -274,7 +274,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Os costumes também variam de país para país: as alianças de casamento são usadas tradicionalmente na mão direita na Rússia, na Polônia e na Índia, por exemplo, e na mão esquerda em muitos outros países, como EUA, Reino Unido, França e Itália. Meça sempre o dedo exato da mão em que o novo anel será usado."
+        "text": "Os costumes também variam de país para país. Na Alemanha, na Polônia e na Rússia, as alianças de casamento são usadas tradicionalmente na mão direita; no Brasil, a aliança de noivado vai na mão direita e passa para a esquerda no casamento; em muitos outros países, como EUA, Reino Unido, França e Itália, as alianças vão na mão esquerda. Meça sempre o dedo exato da mão em que o novo anel será usado."
       },
       {
         "type": "h2",
@@ -401,7 +401,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "O Sotto é um app privado de notas sobre pessoas para iPhone e Android, com uma página para cada pessoa para notas, aniversários, ideias de presente e 23 campos de tamanhos e medidas, incluindo um tamanho de anel para cada um dos dez dedos. Ele converte tamanhos de anel entre sete sistemas (EUA, Europa, Reino Unido, Japão, China, Hong Kong e Suíça) e guarda tudo no seu celular, sem conta e sem anúncios."
+        "text": "O Sotto é um app privado de notas sobre pessoas para iPhone e Android, com uma página para cada pessoa para notas, aniversários, ideias de presente e 23 campos de tamanhos e medidas, incluindo um tamanho de anel para cada um dos dez dedos. Ele converte tamanhos de anel entre sete sistemas (EUA, Europa, Reino Unido, Japão, China, Hong Kong e Suíça) e guarda tudo no seu celular, sem conta e sem anúncios. O app pode ser bloqueado com o próprio bloqueio de tela do seu celular."
       }
     ],
     "related": [

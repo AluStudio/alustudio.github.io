@@ -185,7 +185,7 @@ export const articles = [
   {
     "slug": "find-ring-size-secretly",
     "title": "Cómo saber la talla de anillo de alguien sin preguntárselo",
-    "summary": "Toma prestado un anillo que lleve en el mismo dedo y mídelo. O calca el contorno, compáralo con uno tuyo, mide mientras duerme o pregunta a un amigo.",
+    "summary": "Toma prestado un anillo que lleve en el mismo dedo y mídelo, o calca el contorno, compáralo con uno tuyo, mide mientras duerme o pregunta a un amigo. Con tabla.",
     "content": [
       {
         "type": "p",
@@ -203,8 +203,8 @@ export const articles = [
         "type": "steps",
         "items": [
           "Elige un anillo que lleve en el dedo y la mano exactos para los que vas a comprar, y espera a que se lo quite.",
-          "Llévalo a un joyero, que puede medirlo en un momento con un anillero, o colócalo sobre una regla en casa y mide su diámetro interior en milímetros, de lado a lado por la parte más ancha de la abertura, sin contar el grosor del metal.",
-          "Busca ese diámetro interior en la tabla de abajo.",
+          "Llévalo a un joyero, que puede medirlo en un momento con un anillero.",
+          "O, en casa, colócalo sobre una regla y mide su diámetro interior en milímetros, de lado a lado por la parte más ancha de la abertura, sin contar el grosor del metal, y búscalo en la tabla de abajo.",
           "Deja el anillo en el mismo sitio donde lo encontraste y en la misma posición."
         ]
       },
@@ -231,7 +231,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Pruébate su anillo en uno de tus dedos y fíjate en el punto exacto donde se detiene. Después rodea ese punto con una tira de papel para medirlo; o, si le entra a un dedo tuyo del que ya conoces la talla de anillo, su talla se parecerá a esa.",
+          "Pruébate su anillo en uno de tus dedos y fíjate en el punto exacto donde se detiene. Si le entra a un dedo tuyo del que ya conoces la talla de anillo, su talla se parecerá a esa; si no, rodea ese punto más tarde con una tira de papel y mídelo.",
           "Coge un anillo tuyo cuya talla conozcas y colócalo plano encima del suyo. Si los bordes interiores coinciden, es la misma talla; si no, verás cuál es más grande y más o menos por cuánto.",
           "Para algo más natural, sin tener que rebuscar en su joyero, dale a probar un anillo tuyo como si fuera un juego y fíjate en qué dedo le entra y hasta dónde llega."
         ]
@@ -274,7 +274,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Las costumbres también cambian según el país: la alianza se lleva tradicionalmente en la mano derecha en Rusia, Polonia o India, por ejemplo, y en la izquierda en muchos otros países, como EE. UU., Reino Unido, Francia o Italia. Mide siempre el dedo exacto de la mano en la que se llevará el anillo nuevo."
+        "text": "Las costumbres también cambian según el país. En Alemania, Polonia y Rusia, la alianza se lleva tradicionalmente en la mano derecha; en Brasil, el anillo de compromiso se lleva en la mano derecha y pasa a la izquierda en la boda; en muchos otros países, como EE. UU., Reino Unido, Francia o Italia, los anillos van en la mano izquierda. Mide siempre el dedo exacto de la mano en la que se llevará el anillo nuevo."
       },
       {
         "type": "h2",
@@ -401,7 +401,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto es una app privada de notas sobre personas para iPhone y Android, con una página para cada persona donde guardar notas, cumpleaños, ideas de regalo y 23 campos de tallas y medidas, entre ellos una talla de anillo para cada uno de los diez dedos. Convierte las tallas de anillo entre siete sistemas (EE. UU., Europa, Reino Unido, Japón, China, Hong Kong y Suiza) y lo guarda todo en tu móvil, sin cuenta y sin anuncios."
+        "text": "Sotto es una app privada de notas sobre personas para iPhone y Android, con una página para cada persona donde guardar notas, cumpleaños, ideas de regalo y 23 campos de tallas y medidas, entre ellos una talla de anillo para cada uno de los diez dedos. Convierte las tallas de anillo entre siete sistemas (EE. UU., Europa, Reino Unido, Japón, China, Hong Kong y Suiza) y lo guarda todo en tu móvil, sin cuenta y sin anuncios. La app se puede bloquear con el propio bloqueo de pantalla de tu móvil."
       }
     ],
     "related": [

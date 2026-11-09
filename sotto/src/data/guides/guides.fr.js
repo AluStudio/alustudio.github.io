@@ -185,7 +185,7 @@ export const articles = [
   {
     "slug": "find-ring-size-secretly",
     "title": "Comment connaître la taille de bague de quelqu’un sans lui demander",
-    "summary": "Empruntez une bague portée au même doigt et mesurez-la. Ou tracez-la, comparez-la à l’une des vôtres, mesurez pendant son sommeil, ou demandez à un proche.",
+    "summary": "Empruntez sa bague du même doigt et mesurez-la, ou tracez-la, comparez-la à la vôtre, mesurez pendant son sommeil ou demandez à un proche. Tableau inclus.",
     "content": [
       {
         "type": "p",
@@ -203,8 +203,8 @@ export const articles = [
         "type": "steps",
         "items": [
           "Choisissez une bague portée précisément au doigt et à la main pour lesquels vous achetez, et attendez qu’elle soit retirée.",
-          "Apportez-la chez un bijoutier, qui la mesurera en quelques instants sur un baguier. Ou, chez vous, posez-la contre une règle et mesurez son diamètre intérieur en millimètres, à l’endroit le plus large de l’ouverture, sans compter le métal : pas besoin de baguier.",
-          "Reportez ce diamètre intérieur dans le tableau ci-dessous.",
+          "Apportez-la chez un bijoutier, qui la mesurera en quelques instants sur un baguier.",
+          "Ou, chez vous, posez-la contre une règle et mesurez son diamètre intérieur en millimètres, à l’endroit le plus large de l’ouverture, sans compter le métal, puis reportez-le dans le tableau ci-dessous.",
           "Remettez la bague exactement là où vous l’avez trouvée, dans le même sens."
         ]
       },
@@ -231,7 +231,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Glissez sa bague à l’un de vos doigts et repérez l’endroit exact où elle s’arrête. Entourez ensuite cet endroit d’une bande de papier pour le mesurer plus tard ; et si elle va à l’un de vos doigts dont vous connaissez la taille de bague, sa taille en est proche.",
+          "Glissez sa bague à l’un de vos doigts et repérez l’endroit exact où elle s’arrête. Si elle va à l’un de vos doigts dont vous connaissez la taille de bague, sa taille en est proche ; sinon, entourez plus tard cet endroit d’une bande de papier et mesurez-la.",
           "Prenez l’une de vos bagues dont vous connaissez la taille et posez-la à plat sur la sienne. Si les bords intérieurs coïncident, c’est la même taille ; sinon, vous voyez laquelle est la plus grande et de combien environ.",
           "Pour une approche plus décontractée, qui évite de fouiller dans une boîte à bijoux, tendez-lui l’une de vos bagues à essayer comme pour rire, et regardez à quel doigt elle va et jusqu’où elle glisse."
         ]
@@ -274,7 +274,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Les usages varient aussi selon les pays : l’alliance se porte traditionnellement à la main droite en Russie, en Pologne et en Inde, par exemple, et à la main gauche dans de nombreux autres pays, comme les États-Unis, le Royaume-Uni, la France et l’Italie. Mesurez toujours le doigt exact de la main où la nouvelle bague sera portée."
+        "text": "Les usages varient aussi selon les pays. En Allemagne, en Pologne et en Russie, l’alliance se porte traditionnellement à la main droite ; au Brésil, la bague de fiançailles se porte à la main droite, puis passe à la main gauche le jour du mariage ; dans de nombreux autres pays, comme les États-Unis, le Royaume-Uni, la France et l’Italie, les bagues se portent à la main gauche. Mesurez toujours le doigt exact de la main où la nouvelle bague sera portée."
       },
       {
         "type": "h2",
@@ -401,7 +401,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto est un carnet privé pour vos proches, une app pour iPhone et Android avec une page pour chaque personne : notes, anniversaires, idées cadeaux et 23 champs de tailles et mensurations, dont une taille de bague pour chacun des dix doigts. Elle convertit les tailles de bague entre sept systèmes (US, EU, UK, japonais, chinois, hongkongais et suisse) et garde tout sur votre téléphone, sans compte et sans publicité."
+        "text": "Sotto est un carnet privé pour vos proches, une app pour iPhone et Android avec une page pour chaque personne : notes, anniversaires, idées cadeaux et 23 champs de tailles et mensurations, dont une taille de bague pour chacun des dix doigts. Elle convertit les tailles de bague entre sept systèmes (US, EU, UK, japonais, chinois, hongkongais et suisse) et garde tout sur votre téléphone, sans compte et sans publicité. L’app peut être verrouillée avec le verrouillage d’écran de votre téléphone."
       }
     ],
     "related": [
