@@ -159,6 +159,86 @@ export const articles = [
         "text": "Você também pode salvar até 3 fotos por atividade concluída, ver as estatísticas de atividades concluídas e relembrar, em resumos semanais e mensais com fotos, as brincadeiras de vocês. O Babbby funciona offline, sem anúncios, e o download é gratuito e inclui 14 dias de teste grátis com acesso completo; depois, há um desbloqueio vitalício por compra única, sem assinatura."
       }
     ],
-    "related": []
+    "related": [
+      "choosing-parenting-apps"
+    ]
+  },
+  {
+    "slug": "choosing-parenting-apps",
+    "title": "Como escolher um app para pais que realmente facilita a rotina",
+    "summary": "Escolha um app para pais por uma necessidade atual, veja logo as regras do teste e o acesso aos dados e teste numa noite cansativa, só com o que há em casa.",
+    "content": [
+      {
+        "type": "p",
+        "text": "O jeito mais prático de escolher um app para pais é procurar um que poupe esforço no dia a dia sem criar mais uma tarefa. Comece definindo a única coisa em que você quer ajuda agora, seja a passagem de turno entre quem cuida da criança, ideias de brincadeiras para o dia ou a organização das fotos. Depois confira as regras do teste, o acesso aos dados e se o app funciona com objetos comuns de casa numa noite em que você já está cansado. Se uma ferramenta exige que você siga o ritmo dela, compre materiais extras ou se sinta culpado por um registro esquecido, não há motivo para continuar com ela."
+      },
+      {
+        "type": "h2",
+        "text": "Comece pela única coisa em que você precisa de ajuda agora"
+      },
+      {
+        "type": "p",
+        "text": "Separe as principais funções dos apps para pais, para não tentar resolver tudo de uma vez. Quando pai, mãe, avós ou outra pessoa de confiança se revezam durante o dia, um registro de rotina compartilhado mostra ao próximo adulto quando foi a última mamada, soneca ou troca de fralda. Quando o mais difícil da tarde é decidir o que fazer dentro de casa, sugestões de brincadeiras e guias de atividades ajudam mais. Quando o rolo da câmera está cheio, um diário de fotos serve para transformar imagens espalhadas em um registro organizado."
+      },
+      {
+        "type": "p",
+        "text": "Poucas famílias precisam de todas as ferramentas ao mesmo tempo, e as necessidades mudam conforme a criança cresce. Um registro compartilhado de mamadas e sono evita mensagens repetidas quando vários adultos dividem os cuidados durante o dia. Mas, se uma só pessoa cuida da maior parte da rotina ou se a criança já passou da fase de registrar tudo a toda hora, talvez você queira apenas meia hora de ideias de brincadeiras antes do jantar. Escolher o único problema que atrapalha você hoje evita que o celular vire mais trabalho."
+      },
+      {
+        "type": "h2",
+        "text": "Confira logo as regras do teste, o preço e o acesso aos dados"
+      },
+      {
+        "type": "p",
+        "text": "Apps para pais costumam guardar anotações e fotos da família ao longo do tempo. Por isso, veja o modelo de pagamento e as regras sobre os dados antes de inserir muitas informações. Os pais costumam comparar assinatura com pagamento único, e cada um pode fazer sentido conforme o serviço: a assinatura pode ser razoável quando a família usa com frequência armazenamento na nuvem, sincronização entre várias pessoas ou atualizações contínuas, enquanto um pagamento único, por si só, não garante que o app combine com a sua rotina. Nos primeiros dias de teste, verifique três pontos."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Regras do teste e cobrança: veja quanto tempo o teste dura, se depois dele vem uma assinatura ou um pagamento único, se a renovação é automática, quando a cobrança começa e como cancelar antes de preencher um perfil detalhado.",
+          "Acesso depois de parar de pagar: veja o que continua acessível quando o teste ou a assinatura termina, inclusive se os recursos do dia a dia são bloqueados na hora ou se ainda é possível consultar os registros existentes.",
+          "Como manter suas fotos e registros: antes de adicionar muitas fotos ou anotações, confira se você ainda poderá ver as lembranças passadas ou exportar suas fotos e registros caso deixe de pagar."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Teste as sugestões de brincadeiras com objetos de casa e a energia de uma noite cansativa"
+      },
+      {
+        "type": "p",
+        "text": "Se você está experimentando um app de ideias de brincadeiras ou atividades, teste numa noite comum de semana, quando sua energia já está baixa. Sugestões que parecem ótimas quando você está descansado só ajudam no dia a dia se você ainda conseguir começar quando estiver cansado e tiver por perto apenas objetos comuns de casa."
+      },
+      {
+        "type": "p",
+        "text": "Veja primeiro a lista de materiais e confira se itens do dia a dia, como copos de papel, colheres ou uma toalha, bastam para começar. Se o app pede com frequência kits de artesanato ou materiais especiais, conte as compras, o preparo e o espaço para guardar como parte do trabalho. Depois, veja se a atividade traz num só lugar os materiais, o tempo estimado, passos claros e a finalidade, para você começar na hora, sem precisar buscar instruções extras na internet."
+      },
+      {
+        "type": "h2",
+        "text": "Observe se registros, notificações e compartilhamento dão mais trabalho"
+      },
+      {
+        "type": "p",
+        "text": "Depois de uma semana de uso, observe se o app deixa seu dia mais leve ou faz você se sentir atrasado. Sequências, medalhas e gráficos de progresso ajudam alguns pais, mas, se deixam você preocupado em manter uma corrente sem falhas ou culpado por registros que ficaram de fora, o registro está dando trabalho. Usar um app é sempre opcional, e manter um registro não é prova de que você cuida bem da criança. Abrir o app só para buscar ideias, pular as caixinhas de marcação nos dias corridos ou apagar uma ferramenta que pressiona são escolhas perfeitamente válidas."
+      },
+      {
+        "type": "p",
+        "text": "Confira também cedo as configurações de notificação e as regras de compartilhamento. Se o app envia alertas ou mensagens com frequência, veja se dá para desativar as notificações e deixá-lo em silêncio até você abri-lo. No compartilhamento familiar, separe duas perguntas: se uma única compra vale para os familiares e se o registro da criança é sincronizado entre os dispositivos. Se você compartilha fotos com parentes no app, veja se é possível controlar quem pode ver e comentar."
+      },
+      {
+        "type": "h2",
+        "text": "Se você só quer ideias simples de brincadeiras para o dia a dia: Babbby"
+      },
+      {
+        "type": "p",
+        "text": "Se você só quer ideias de brincadeiras prontas assim que abre o celular, o Babbby é um app para iPhone voltado para pais e responsáveis, feito para adultos e não para crianças. Ele cobre de 0 a 6 anos, em sete faixas etárias, com 342 atividades incluídas em oito categorias de desenvolvimento. Todos os dias, sugere até seis atividades adequadas à idade, mostrando os materiais, uma dica e mais ou menos quantos minutos cada uma leva. Essas sugestões são opções, não seis tarefas obrigatórias por dia: você pode ajustar ou trocar e marcar uma atividade como concluída quando terminar."
+      },
+      {
+        "type": "p",
+        "text": "Você pode salvar até três fotos por atividade concluída, ver estatísticas de conclusão e consultar resumos semanais e mensais com fotos. O Babbby funciona off-line, sem anúncios, e o download gratuito inclui um teste de 14 dias com acesso completo, seguido do desbloqueio Vitalício, em compra única e sem assinatura."
+      }
+    ],
+    "related": [
+      "screen-free-play-by-age"
+    ]
   }
 ];

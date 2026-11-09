@@ -1,6 +1,7 @@
 {
   "//": "Per translation unit, the hash of the en text the ja translation was made from. Written by `npm run l10n -- babbby apply ja`; do not edit.",
   "units": {
+    "guide:choosing-parenting-apps": "c13d4a51f5b3",
     "guide:screen-free-play-by-age": "57b085227ca0",
     "ui:faq.contact_prompt": "1287830640ef",
     "ui:faq.items.can_it_track_milestones.answer": "59317934fb97",

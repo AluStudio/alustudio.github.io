@@ -159,6 +159,86 @@ export const articles = [
         "text": "Vous pouvez aussi enregistrer jusqu’à 3 photos par activité terminée, consulter vos statistiques et revenir sur les bilans de la semaine et du mois, en photos, de vos moments de jeu. Babbby fonctionne hors connexion, sans publicité ; le téléchargement est gratuit, avec un essai de 14 jours en accès complet, suivi d’un achat unique pour débloquer Babbby à vie, sans abonnement."
       }
     ],
-    "related": []
+    "related": [
+      "choosing-parenting-apps"
+    ]
+  },
+  {
+    "slug": "choosing-parenting-apps",
+    "title": "Comment choisir une application de parentalité qui simplifie le quotidien ?",
+    "summary": "Choisissez une application de parentalité pour un besoin précis, vérifiez l’essai et l’accès aux données d’emblée, puis testez-la un soir de fatigue.",
+    "content": [
+      {
+        "type": "p",
+        "text": "La façon la plus pratique de choisir une application de parentalité est d’en chercher une qui vous fait gagner du temps au quotidien sans ajouter une corvée de plus. Commencez par repérer le seul besoin pour lequel vous voulez de l’aide en ce moment : relais entre adultes qui s’occupent de l’enfant, idées d’activités du jour ou classement des photos. Vérifiez ensuite les conditions de l’essai, l’accès à vos données et la façon dont l’app fonctionne avec des objets de la maison, un soir où vous n’avez plus d’énergie. Si un outil vous impose son rythme, vous pousse à acheter du matériel en plus ou vous culpabilise d’un oubli de saisie, vous n’avez aucune raison de le garder."
+      },
+      {
+        "type": "h2",
+        "text": "Commencez par le seul besoin pour lequel vous voulez de l’aide en ce moment"
+      },
+      {
+        "type": "p",
+        "text": "Distinguez les principales missions des applications de parentalité pour ne pas chercher à tout résoudre d’un coup. Quand les parents, les grands-parents ou une nounou se relaient dans la journée, un journal de routine partagé indique à l’adulte suivant à quel moment a eu lieu le dernier repas, la dernière sieste ou le dernier change. Quand le plus dur de l’après-midi est de trouver quoi faire à l’intérieur, des suggestions et des guides d’activités sont plus utiles. Quand votre pellicule déborde, un journal photo sert surtout à transformer des images éparpillées en souvenirs bien rangés."
+      },
+      {
+        "type": "p",
+        "text": "Peu de familles ont besoin de tous les outils à la fois, et les besoins changent à mesure que l’enfant grandit. Un suivi partagé des repas et du sommeil évite les messages en double quand plusieurs adultes se partagent la journée ; mais si une seule personne gère l’essentiel de la routine, ou si votre enfant n’a plus besoin d’un suivi jour et nuit, une demi-heure d’idées d’activités avant le dîner peut suffire. En choisissant le seul problème qui vous ralentit aujourd’hui, vous évitez que votre téléphone ne devienne une charge de plus."
+      },
+      {
+        "type": "h2",
+        "text": "Vérifiez dès le début les conditions de l’essai, le prix et l’accès aux données"
+      },
+      {
+        "type": "p",
+        "text": "Les applications de parentalité conservent souvent des notes et des photos de famille sur la durée : examinez donc le modèle de paiement et les règles sur les données avant de saisir beaucoup d’informations. Beaucoup de parents comparent abonnement et achat unique, et chacun peut se défendre selon le service : un abonnement se justifie quand votre famille utilise régulièrement le stockage en ligne, la synchronisation entre plusieurs personnes ou des mises à jour continues, alors qu’un achat unique ne garantit pas à lui seul que l’app convient à votre quotidien. Pendant les premiers jours d’essai, vérifiez trois points."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Conditions de l’essai et facturation : vérifiez la durée de l’essai, s’il débouche sur un abonnement ou sur un achat unique, si le renouvellement est automatique, à quel moment le paiement commence et comment résilier, avant de remplir un profil détaillé.",
+          "Accès après l’arrêt du paiement : vérifiez ce qui reste accessible une fois l’essai ou l’abonnement terminé, notamment si les fonctions de base se verrouillent aussitôt ou si vous pouvez encore consulter ce que vous avez déjà saisi.",
+          "Conserver vos photos et vos notes : avant d’ajouter beaucoup de photos ou de notes, vérifiez que vous pourrez toujours relire vos souvenirs ou exporter vos photos et vos notes si vous arrêtez de payer."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Testez les suggestions d’activités avec le matériel de la maison et l’énergie d’un soir de fatigue"
+      },
+      {
+        "type": "p",
+        "text": "Si vous essayez une app pour ses idées d’activités, testez-la un soir de semaine ordinaire, quand votre énergie est déjà au plus bas. Des suggestions séduisantes quand on est reposé ne servent au quotidien que si vous pouvez encore les lancer quand vous êtes à plat, avec seulement des objets de la maison sous la main."
+      },
+      {
+        "type": "p",
+        "text": "Regardez d’abord la liste du matériel : des objets courants comme des gobelets en carton, des cuillères ou une serviette suffisent-ils pour commencer ? Si l’app demande régulièrement des kits de loisirs créatifs ou du matériel spécialisé, comptez les courses, la préparation et la place de rangement dans la charge de travail. Vérifiez ensuite si l’activité réunit au même endroit le matériel, la durée estimée, des étapes claires et son intérêt, pour pouvoir vous lancer tout de suite sans chercher des explications en ligne."
+      },
+      {
+        "type": "h2",
+        "text": "Observez si les saisies, les notifications et le partage ajoutent du travail"
+      },
+      {
+        "type": "p",
+        "text": "Après une semaine d’utilisation, demandez-vous si l’app vous allège la journée ou si elle vous donne l’impression d’être en retard. Les séries, les badges et les graphiques de progression aident certains parents ; mais s’ils vous font craindre de briser une chaîne ou culpabiliser d’une saisie manquée, c’est que le suivi vous ajoute du travail. Utiliser une app est toujours facultatif, et tenir un journal n’est pas un examen de bonne parentalité. N’ouvrir une app que pour trouver des idées, ignorer les cases à cocher les jours chargés ou supprimer un outil qui met la pression sont autant de choix tout à fait raisonnables."
+      },
+      {
+        "type": "p",
+        "text": "Vérifiez aussi tôt les réglages de notifications et les règles de partage. Si une app envoie des alertes ou des messages fréquents, regardez si vous pouvez désactiver les notifications pour qu’elle reste silencieuse tant que vous ne l’ouvrez pas. Pour le partage en famille, distinguez deux questions : un seul achat couvre-t-il tous les membres de la famille, et le dossier de l’enfant se synchronise-t-il entre les appareils ? Si vous partagez des photos avec des proches dans l’app, vérifiez que vous pouvez contrôler qui peut les voir et qui peut les commenter."
+      },
+      {
+        "type": "h2",
+        "text": "Si vous voulez seulement des idées d’activités simples chaque jour : Babbby"
+      },
+      {
+        "type": "p",
+        "text": "Si vous voulez simplement des idées d’activités toutes prêtes dès que vous ouvrez votre téléphone, Babbby est une app pour iPhone destinée aux parents, et non aux enfants. Elle couvre les âges de 0 à 6 ans en sept tranches d’âge, avec 342 activités intégrées réparties en huit catégories de développement. Chaque jour, elle propose jusqu’à six activités adaptées à l’âge, avec le matériel, une astuce et la durée approximative de chacune. Ces suggestions sont des options, pas six tâches obligatoires par jour : vous pouvez les ajuster ou les remplacer, et marquer une activité comme terminée quand vous avez fini."
+      },
+      {
+        "type": "p",
+        "text": "Vous pouvez enregistrer jusqu’à trois photos par activité terminée, consulter vos statistiques et parcourir les bilans de la semaine et du mois avec vos photos. Babbby fonctionne hors connexion et sans publicité ; le téléchargement est gratuit, avec un essai gratuit de 14 jours à accès complet, puis un déblocage à vie par achat unique, sans abonnement."
+      }
+    ],
+    "related": [
+      "screen-free-play-by-age"
+    ]
   }
 ];

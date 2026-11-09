@@ -330,6 +330,12 @@ const BABBBY_SITE_GLOSSARY = [
   ["发展面向", "发展领域"],
   ["创建最早", "建立最早"],
   ["导览路径", "面包屑导航"], // the breadcrumb's aria-label
+  ["禁用后的权限变化", "停用后的权限变化"],
+  ["基本数据", "基本资料"],
+  ["查数据", "查资料"],
+  ["保母", "保姆"],
+  ["推播", "推送"],
+  ["寄信", "发邮件"],
   // Converter mistranslations
   ["内核", "核心"], // 核心 → kernel
   ["文件", "档案"], // a child's profile (檔案), not a document

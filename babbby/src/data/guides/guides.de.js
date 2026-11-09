@@ -159,6 +159,86 @@ export const articles = [
         "text": "Außerdem kannst du pro erledigter Aktivität bis zu 3 Fotos hinzufügen, die Statistik zu erledigten Aktivitäten ansehen und in Wochen- und Monatsrückblicken mit Fotos auf euer gemeinsames Spielen zurückschauen. Babbby funktioniert offline und ohne Werbung, ist kostenlos zu laden und bietet eine kostenlose Testphase von 14 Tagen mit vollem Zugriff – danach folgt ein einmaliger Kauf von „Lebenslang“ ohne Abo."
       }
     ],
-    "related": []
+    "related": [
+      "choosing-parenting-apps"
+    ]
+  },
+  {
+    "slug": "choosing-parenting-apps",
+    "title": "Eltern-App auswählen: So findest du eine, die dir den Alltag wirklich erleichtert",
+    "summary": "Such dir eine Eltern-App für ein aktuelles Anliegen aus, prüfe Testphase und Datenzugriff früh und probiere sie an einem müden Abend mit Haushaltsdingen aus.",
+    "content": [
+      {
+        "type": "p",
+        "text": "Am praktischsten wählst du eine Eltern-App aus, wenn du eine suchst, die dir täglich Arbeit abnimmt, ohne dir eine neue Pflicht aufzubürden. Überlege zuerst, wobei du gerade am dringendsten Hilfe brauchst – etwa bei der Übergabe zwischen Betreuungspersonen, bei täglichen Aktivitätsideen oder beim Ordnen von Fotos. Prüfe dann die Testbedingungen, den Datenzugriff und ob die App an einem müden Abend mit ganz normalen Dingen aus dem Haushalt funktioniert. Wenn ein Tool verlangt, dass du dich nach seinem Zeitplan richtest, zusätzliches Zubehör kaufst oder dich schuldig fühlst, weil du einen Eintrag verpasst hast, musst du es nicht behalten."
+      },
+      {
+        "type": "h2",
+        "text": "Fang mit dem einen Anliegen an, bei dem du jetzt Hilfe brauchst"
+      },
+      {
+        "type": "p",
+        "text": "Trenne die wichtigsten Aufgaben, die Eltern-Apps übernehmen, damit du nicht versuchst, alles auf einmal zu lösen. Wenn sich Partner, Großeltern oder eine Betreuungsperson im Lauf des Tages abwechseln, zeigt ein gemeinsames Routineprotokoll der nächsten erwachsenen Person, wann zuletzt gefüttert, geschlafen oder gewickelt wurde. Wenn das Schwierigste am Nachmittag die Frage ist, was ihr drinnen unternehmt, sind Aktivitätsideen und Aktivitätsanleitungen nützlicher. Wenn deine Fotogalerie überquillt, hilft ein Foto-Tagebuch dabei, verstreute Bilder zu einer übersichtlichen Erinnerungssammlung zu machen."
+      },
+      {
+        "type": "p",
+        "text": "Nur wenige Familien brauchen alle Funktionen gleichzeitig, und der Bedarf ändert sich, wenn dein Kind wächst. Ein gemeinsames Protokoll für Füttern und Schlafen erspart dir wiederholte Nachrichten, wenn sich mehrere Erwachsene die Betreuung tagsüber teilen. Kümmert sich aber eine Person um den Großteil der Routine oder braucht dein Kind keine Protokollierung rund um die Uhr mehr, wünschst du dir vielleicht nur eine halbe Stunde Aktivitätsideen vor dem Abendessen. Wenn du das eine Problem auswählst, das dich heute ausbremst, wird dein Handy nicht zur zusätzlichen Arbeit."
+      },
+      {
+        "type": "h2",
+        "text": "Prüfe Testbedingungen, Preise und Datenzugriff früh"
+      },
+      {
+        "type": "p",
+        "text": "Eltern-Apps speichern mit der Zeit oft Familiennotizen und Fotos. Sieh dir deshalb das Bezahlmodell und die Datenregeln an, bevor du viele Angaben einträgst. Viele Eltern vergleichen Abos mit Einmalzahlungen, und je nach Dienst kann beides sinnvoll sein: Ein Abo kann angemessen sein, wenn deine Familie regelmäßig Cloud-Speicher, die Synchronisierung zwischen mehreren Personen oder laufende Updates nutzt. Eine Einmalzahlung allein garantiert dagegen noch nicht, dass eine App zu deinem Alltag passt. Achte in den ersten Tagen der Testphase auf drei Punkte."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Testbedingungen und Abrechnung: Prüfe, wie lange die Testphase dauert, ob danach ein Abo oder eine Einmalzahlung folgt, ob sich das Abo automatisch verlängert, wann die erste Abbuchung erfolgt und wie du kündigst – bevor du ein ausführliches Profil ausfüllst.",
+          "Zugriff nach Ende der Zahlung: Prüfe, was nach dem Ende einer Testphase oder eines Abos weiterhin zugänglich bleibt, etwa ob alltägliche Funktionen sofort gesperrt werden oder ob du bestehende Einträge noch ansehen kannst.",
+          "Fotos und Aufzeichnungen behalten: Bevor du viele Fotos oder Notizen hinzufügst, prüfe, ob du frühere Erinnerungen weiterhin ansehen oder deine Fotos und Aufzeichnungen exportieren kannst, wenn du nicht mehr zahlst."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Teste Aktivitätsideen mit Haushaltsdingen und der Energie eines müden Abends"
+      },
+      {
+        "type": "p",
+        "text": "Wenn du eine App für Aktivitätsideen ausprobierst, teste sie an einem ganz normalen Abend unter der Woche, an dem deine Energie ohnehin schon niedrig ist. Vorschläge, die dir ausgeruht verlockend erscheinen, helfen im Alltag nur dann, wenn du sie auch müde noch beginnen kannst und nur gewöhnliche Dinge aus dem Haushalt griffbereit hast."
+      },
+      {
+        "type": "p",
+        "text": "Sieh dir zuerst die Materialliste an: Reichen Alltagsgegenstände wie Pappbecher, Löffel oder ein Handtuch für den Start aus? Wenn eine App regelmäßig Bastelsets oder spezielles Zubehör verlangt, rechne Einkaufen, Vorbereiten und Stauraum zum Aufwand dazu. Schau als Nächstes, ob die Aktivität Material, geschätzte Dauer, klare Schritte und Zweck an einer Stelle auflistet, damit du sofort loslegen kannst, ohne online nach zusätzlichen Anleitungen zu suchen."
+      },
+      {
+        "type": "h2",
+        "text": "Achte darauf, ob Protokollieren, Benachrichtigungen und Teilen zusätzliche Arbeit machen"
+      },
+      {
+        "type": "p",
+        "text": "Achte nach einer Woche Nutzung darauf, ob die App deinen Tag leichter macht oder dir das Gefühl gibt, hinterherzuhinken. Serien, Abzeichen und Fortschrittsdiagramme helfen manchen Eltern. Wenn sie dich aber um eine ununterbrochene Kette bangen lassen oder ein schlechtes Gewissen wegen verpasster Einträge machen, macht das Protokollieren dir zusätzliche Arbeit. Eine App zu nutzen ist immer freiwillig, und Aufzeichnungen zu führen ist kein Test für gutes Elternsein. Eine App nur für Ideen zu öffnen, an stressigen Tagen Häkchen auszulassen oder ein Tool zu löschen, das Druck macht, sind allesamt praktische Entscheidungen."
+      },
+      {
+        "type": "p",
+        "text": "Sieh dir auch früh die Benachrichtigungseinstellungen und die Freigaberegeln an. Wenn eine App häufig Hinweise oder Nachrichten schickt, prüfe, ob du Benachrichtigungen ausschalten kannst, damit sie ruhig bleibt, bis du sie öffnest. Trenne bei der Familienfreigabe zwei Fragen: ob ein Kauf für alle Familienmitglieder gilt und ob der Eintrag eines Kindes geräteübergreifend synchronisiert wird. Wenn du in der App Fotos mit Verwandten teilst, prüfe, ob du steuern kannst, wer sie ansehen und kommentieren darf."
+      },
+      {
+        "type": "h2",
+        "text": "Wenn du nur einfache tägliche Aktivitätsideen möchtest: Babbby"
+      },
+      {
+        "type": "p",
+        "text": "Wenn du einfach fertige Aktivitätsideen haben möchtest, sobald du dein Handy öffnest: Babbby ist eine iPhone-App für Eltern, gemacht für Erwachsene und nicht für Kinder. Sie deckt das Alter von 0 bis 6 Jahren in sieben Altersstufen ab, mit 342 integrierten Aktivitäten in acht Entwicklungskategorien. Jeden Tag schlägt sie bis zu sechs zum Alter passende Aktivitäten vor und zeigt zu jeder das Material, einen Tipp und ungefähr, wie viele Minuten sie dauert. Diese Vorschläge sind Optionen und keine sechs Pflichtaufgaben pro Tag: Du kannst sie anpassen oder austauschen und eine Aktivität als erledigt markieren, wenn du fertig bist."
+      },
+      {
+        "type": "p",
+        "text": "Pro abgeschlossener Aktivität kannst du bis zu drei Fotos sichern, die Statistik zu erledigten Aktivitäten ansehen und Wochen- und Monatsrückblicke mit Fotos durchblättern. Babbby funktioniert offline und ohne Werbung. Der kostenlose Download enthält eine 14-tägige Testphase mit vollem Zugriff, danach folgt ein einmaliger Kauf, der Babbby lebenslang freischaltet – ohne Abo."
+      }
+    ],
+    "related": [
+      "screen-free-play-by-age"
+    ]
   }
 ];

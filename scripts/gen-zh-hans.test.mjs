@@ -23,6 +23,15 @@ test("convertText: the app glossary runs after OpenCC", () => {
   assert.equal(convertText("透過預設", APPS.dingpos), "通过默认");
 });
 
+test("convertText: Babbby guide keeps profile details and lookup wording distinct from data", () => {
+  assert.equal(convertText("停用後的權限變化", APPS.babbby), "停用后的权限变化");
+  assert.equal(convertText("填寫基本資料", APPS.babbby), "填写基本资料");
+  assert.equal(convertText("上網查資料", APPS.babbby), "上网查资料");
+  assert.equal(convertText("保母發推播、寄信", APPS.babbby), "保姆发推送、发邮件");
+  assert.equal(convertText("禁用通知", APPS.babbby), "禁用通知");
+  assert.equal(convertText("資料匯出", APPS.babbby), "数据导出");
+});
+
 test("convertText: corner brackets become mainland quotation marks", () => {
   assert.equal(convertText("按「確認」或『取消』", APPS.dingpos), "按“确认”或‘取消’");
 });
