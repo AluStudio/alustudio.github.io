@@ -19,8 +19,8 @@ $app-line: rgba(28, 26, 23, 0.08);
 $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 $system: system-ui, -apple-system, "Segoe UI", sans-serif;
 
-// Cormorant has no CJK or Arabic glyphs: those pages fall back to the sans
-// face, where italics are synthesized and sizes need to come down a step.
+// CJK and Arabic pages set headings in the sans text face (index.css), where
+// italics are synthesized and sizes need to come down a step.
 @mixin no-serif-script {
   html[lang^="zh"] &,
   html[lang="ja"] &,
@@ -179,7 +179,7 @@ main .container {
 
 .hero__title {
   padding-bottom: 0.08em; // room for descenders under background-clip: text
-  font-family: $headings-font-family;
+  font-family: $brand-font-family;
   font-size: 96px;
   line-height: 1;
   font-weight: 600;

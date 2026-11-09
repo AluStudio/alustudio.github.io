@@ -48,6 +48,17 @@
   /* Latin-script pages (en, de, ru, ar, …) never reach the Noto Sans TC
      family, so its full-width punctuation and CJK slices stay off them. */
   --sotto-font-text: "Sotto Text";
+  --sotto-font-heading: "Cormorant Garamond Variable", var(--sotto-font-text), Georgia, serif;
+}
+
+/* Cormorant has no CJK or Arabic glyphs, but it does have digits and Latin
+   letters, so a heading mixing the two drew "80" in serif old-style figures
+   beside sans Han. These pages set the whole heading in the text face. */
+html[lang^="zh"],
+html[lang="ja"],
+html[lang="ko"],
+html[lang="ar"] {
+  --sotto-font-heading: var(--sotto-font-text), system-ui, sans-serif;
 }
 
 html[lang="zh-Hant"] {

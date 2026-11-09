@@ -19,7 +19,9 @@ $link-color:    $gold-dark;
 
 // Text family per page language, set in index.css.
 $font-family-sans-serif: var(--sotto-font-text), system-ui, -apple-system, sans-serif;
-$headings-font-family:   "Cormorant Garamond Variable", var(--sotto-font-text), Georgia, serif;
+$headings-font-family:   var(--sotto-font-heading);
+// The wordmark stays in Cormorant in every language.
+$brand-font-family:      "Cormorant Garamond Variable", Georgia, serif;
 $headings-font-weight:   600;
 $headings-color:         $charcoal;
 
