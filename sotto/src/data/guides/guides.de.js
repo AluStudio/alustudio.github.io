@@ -185,7 +185,7 @@ export const articles = [
   {
     "slug": "find-ring-size-secretly",
     "title": "Ringgröße heimlich herausfinden: So ermittelst du sie, ohne zu fragen",
-    "summary": "Leih dir einen Ring vom selben Finger und miss ihn, zeichne ihn nach, vergleiche ihn mit einem eigenen Ring, miss im Schlaf oder frag jemanden. Mit Tabelle.",
+    "summary": "Leih dir einen Ring, den die Person an diesem Finger trägt, und miss ihn. Oder zeichne ihn nach, vergleiche ihn, miss im Schlaf oder frag jemanden. Mit Tabelle.",
     "content": [
       {
         "type": "p",

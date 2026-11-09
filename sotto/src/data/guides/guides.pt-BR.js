@@ -185,7 +185,7 @@ export const articles = [
   {
     "slug": "find-ring-size-secretly",
     "title": "Como descobrir o tamanho do anel de alguém sem perguntar",
-    "summary": "Pegue emprestado um anel que a pessoa usa no mesmo dedo e meça, ou contorne no papel, compare com um seu, meça com ela dormindo ou pergunte a alguém. Há tabela.",
+    "summary": "Pegue um anel que a pessoa usa no mesmo dedo e meça, ou contorne no papel, compare com um seu, meça o dedo enquanto ela dorme ou pergunte a alguém. Há tabela.",
     "content": [
       {
         "type": "p",
@@ -298,7 +298,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se você vai comprar um anel para um pedido de casamento e precisa chutar o tamanho, pergunte na loja sobre ajustes antes de comprar, para que o anel possa ser regulado depois do sim. Evite alianças de eternidade, com pedras em toda a volta, porque são difíceis ou até impossíveis de ajustar."
+        "text": "Se você vai comprar um anel para um pedido de casamento e precisa chutar o tamanho, pergunte na loja sobre ajustes antes de comprar, para que o anel possa ser regulado depois do sim. Evite anéis com pedras cravadas em toda a volta, porque são difíceis ou até impossíveis de ajustar."
       },
       {
         "type": "h2",

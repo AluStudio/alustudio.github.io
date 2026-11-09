@@ -184,7 +184,7 @@ export const articles = [
   },
   {
     "slug": "find-ring-size-secretly",
-    "title": "Come scoprire la misura dell'anello di qualcuno senza chiederglielo",
+    "title": "Come scoprire la misura dell’anello senza chiedere",
     "summary": "Prendi in prestito un anello che porta sullo stesso dito e misuralo, ricalcalo, confrontalo con il tuo, misura mentre dorme o chiedi a un amico. Con tabella.",
     "content": [
       {
@@ -298,7 +298,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se stai comprando un anello per una proposta di matrimonio e devi andare a intuito, chiedi al negozio come funziona la modifica della misura prima di acquistare, così potrai sistemarlo dopo il sì. Evita le fedi eternity con pietre incastonate tutto attorno, perché sono difficili o impossibili da ridimensionare."
+        "text": "Se stai comprando un anello per una proposta di matrimonio e devi andare a intuito, chiedi al negozio come funziona la modifica della misura prima di acquistare, così potrai sistemarlo dopo il sì. Evita gli anelli eternity con pietre incastonate lungo tutta la circonferenza, perché sono difficili o impossibili da ridimensionare."
       },
       {
         "type": "h2",
