@@ -184,61 +184,125 @@ export const articles = [
   },
   {
     "slug": "find-ring-size-secretly",
-    "title": "Ringgröße heimlich herausfinden: So geht's",
-    "summary": "Einen Ring vom selben Finger ausleihen, nachzeichnen, im Schlaf messen oder eine Freundin fragen: So funktioniert jede Methode, plus Ringgrößen-Tabelle.",
+    "title": "Ringgröße heimlich herausfinden: So ermittelst du sie, ohne zu fragen",
+    "summary": "Leih dir einen Ring, den die Person an diesem Finger trägt, und miss ihn. Oder zeichne ihn nach, vergleiche ihn, miss im Schlaf oder frag jemanden. Mit Tabelle.",
     "content": [
       {
         "type": "p",
-        "text": "Die genaueste heimliche Methode: Leih dir einen Ring, den die Person bereits am selben Finger derselben Hand trägt, und lass ihn beim Juwelier ausmessen oder miss seinen Innendurchmesser selbst. Kannst du den Ring nicht mitnehmen, zeichne seine Innenseite auf Papier nach oder drück ihn in ein Stück Seife – oder bitte eine enge Freundin oder ein Familienmitglied, es für dich herauszufinden."
+        "text": "Am genauesten ermittelst du eine Ringgröße ohne Nachfragen, indem du einen Ring ausleihst, den die Person schon am selben Finger derselben Hand trägt, und ihn ausmessen lässt. Kannst du keinen Ring mitnehmen, kannst du ihn auf Papier nachzeichnen, mit einem eigenen Ring vergleichen, den Finger im Schlaf messen oder jemanden fragen, der ihr nahesteht."
       },
       {
         "type": "h2",
-        "text": "Methode 1: Einen Ring ausleihen, den die Person schon trägt"
+        "text": "Einen Ring ausleihen, den die Person schon trägt"
+      },
+      {
+        "type": "p",
+        "text": "Ein Ring, der am Finger schon passt, ist die beste Vorlage, die du bekommen kannst. Achte darauf, dass es ein Ring ist, den die Person an dem Finger trägt, für den du kaufst – nicht irgendeiner aus dem Schmuckkästchen."
       },
       {
         "type": "steps",
         "items": [
-          "Wähle einen Ring, der an dem Finger getragen wird, für den du kaufst. Die Finger der dominanten Hand sind meist etwas dicker.",
-          "Bring ihn zum Juwelier, der ihn auf einem Ringstock in Sekunden ausmisst.",
-          "Oder miss seinen Innendurchmesser in Millimetern und schlag ihn in der Tabelle unten nach.",
-          "Leg ihn genau dorthin zurück, wo du ihn gefunden hast."
+          "Such dir einen Ring aus, den die Person genau an dem Finger und an der Hand trägt, für die du kaufst, und warte, bis sie ihn abnimmt.",
+          "Bring ihn zum Juwelier, der ihn auf einem Ringstock im Handumdrehen misst.",
+          "Oder leg ihn zu Hause auf ein Lineal und miss den Innendurchmesser in Millimetern: die Breite der inneren Öffnung an der weitesten Stelle, ohne den Metallreif. Schlag den Wert dann in der Tabelle unten nach.",
+          "Leg den Ring genau dorthin zurück, wo du ihn gefunden hast, und zwar mit derselben Seite nach oben."
         ]
       },
       {
         "type": "h2",
-        "text": "Methode 2: Den Ring nachzeichnen oder abdrücken"
+        "text": "Nachzeichnen oder abdrücken"
       },
       {
         "type": "p",
-        "text": "Hast du den Ring nur eine Minute, leg ihn auf Papier und zeichne mit einem spitzen Bleistift die Innenkante nach, oder drück ihn zur Hälfte in ein Stück Seife, um einen Abdruck zu behalten. Den Innendurchmesser misst du später. Das ist ungenauer, als den Ring selbst zu messen – liegst du zwischen zwei Größen, nimm die größere."
-      },
-      {
-        "type": "h2",
-        "text": "Methode 3: Den Finger im Schlaf messen"
+        "text": "Kannst du den Ring nicht aus dem Haus mitnehmen, halte seine Größe gleich vor Ort fest und leg ihn sofort zurück. Leg den Ring flach auf Papier und zeichne mit einem spitzen Bleistift die Innenkante nach – halte den Stift dabei senkrecht, damit der Kreis zur inneren Öffnung passt –, oder drück den Ring zur Hälfte in ein Stück Seife und wisch das Metall danach sauber."
       },
       {
         "type": "p",
-        "text": "Leg einen schmalen Papierstreifen um den Fingeransatz, markiere die Stelle, an der er sich überlappt, und miss die Länge: Das ist der Umfang. Das ist riskant – die Person könnte aufwachen –, und eine Schnur dehnt sich, also nimm Papier und miss zweimal."
+        "text": "Später misst du den Innendurchmesser des Bleistiftkreises oder des Seifenabdrucks in Millimetern und gleichst ihn mit der Tabelle unten ab. Beide Methoden sind ungenauer, als den Ring selbst zu messen, weil die Strichstärke oder weiche Seifenkanten den Wert leicht verschieben können."
       },
       {
         "type": "h2",
-        "text": "Methode 4: Komplizen einweihen"
+        "text": "Mit einem eigenen Ring vergleichen"
       },
       {
         "type": "p",
-        "text": "Eine Freundin kann beim Shoppen vorschlagen, Ringe anzuprobieren, und Geschwister oder Eltern wissen es vielleicht einfach. Das ist die einzige Methode, bei der du ihren Schmuck nicht anfassen musst."
+        "text": "Hast du den Ring nur für einen Moment und kein Lineal in der Nähe, nimm deine eigenen Finger oder Ringe als Maßstab:"
       },
       {
-        "type": "h2",
-        "text": "Methode 5: Mit den eigenen Fingern vergleichen"
+        "type": "list",
+        "items": [
+          "Schieb den Ring der Person auf einen deiner Finger und merk dir genau die Stelle, an der er stoppt. Passt er auf einen deiner Finger, dessen Ringgröße du schon kennst, liegt ihre Größe in der Nähe davon; wenn nicht, wickle später einen Papierstreifen um diese Stelle und miss ihn.",
+          "Nimm einen eigenen Ring, dessen Größe du kennst, und leg ihn flach auf ihren. Wenn die Innenkanten übereinanderliegen, ist es dieselbe Größe; wenn nicht, siehst du, welcher größer ist und ungefähr um wie viel.",
+          "Wenn du nicht im Schmuckkästchen herumschleichen willst, gib der Person einen eigenen Ring von dir wie zum Spaß zum Anprobieren und schau, an welchen Finger er passt und wie weit er rutscht."
+        ]
       },
       {
         "type": "p",
-        "text": "Schieb ihren Ring auf deine eigenen Finger und merk dir, wo er stoppt. Dann miss diese Stelle an deinem Finger. Das ist grob, grenzt den Bereich aber ein."
+        "text": "Der Vergleich mit deinem eigenen Ring oder Finger ist grob, grenzt den Bereich aber auf eine bis zwei Größen ein."
       },
       {
         "type": "h2",
-        "text": "Ringgrößen-Umrechnungstabelle"
+        "text": "Den Finger im Schlaf messen"
+      },
+      {
+        "type": "p",
+        "text": "Trägt die Person an diesem Finger keine Ringe, kannst du den Finger selbst messen, während sie schläft. Leg einen schmalen Papierstreifen eng um den Fingeransatz, markiere die Stelle, an der sich das Papier überlappt, und miss die Länge bis zur Markierung mit einem Lineal in Millimetern. Diese Länge ist der Umfang, den die Tabelle unten neben dem Innendurchmesser aufführt."
+      },
+      {
+        "type": "p",
+        "text": "Nimm Papier, keine Schnur: Eine Schnur dehnt sich beim Ziehen und ergibt einen größeren Wert, als der Finger hat. Miss zur Sicherheit zweimal und geh behutsam vor, denn das größte Risiko dieser Methode ist, dass die Person aufwacht."
+      },
+      {
+        "type": "h2",
+        "text": "Jemanden fragen, der ihr nahesteht"
+      },
+      {
+        "type": "p",
+        "text": "Bei Freunden, Geschwistern oder Eltern nachzufragen ist die einzige Methode, für die du weder den Schmuck noch die schlafende Hand brauchst. Wer der Person nahesteht, kennt die Größe vielleicht einfach von einem früheren Geschenk oder weil sie sich mal Schmuck geliehen hat."
+      },
+      {
+        "type": "p",
+        "text": "Weiß sie es nicht aus dem Stegreif, kann ein Freund oder eine Freundin vorschlagen, beim Shoppen gemeinsam Ringe anzuprobieren. Kommt die Idee von jemandem, der selbst gerade Ringe anschaut, wirkt es ganz natürlich, ein paar Ringe anzuprobieren und dabei die Größe zu erwähnen."
+      },
+      {
+        "type": "h2",
+        "text": "Auf Finger und Hand achten"
+      },
+      {
+        "type": "p",
+        "text": "Ein Ring von einem anderen Finger hat eine andere Größe, und selbst derselbe Finger ist an beiden Händen selten gleich. An der dominanten Hand ist derselbe Finger meist etwa eine halbe Größe größer als an der anderen."
+      },
+      {
+        "type": "p",
+        "text": "Auch die Bräuche unterscheiden sich je nach Land. In Deutschland, Polen und Russland werden Eheringe traditionell an der rechten Hand getragen; in Brasilien trägt man den Verlobungsring an der rechten Hand, und er wechselt bei der Hochzeit nach links; in vielen anderen Ländern wie den USA, Großbritannien, Frankreich und Italien kommen Ringe an die linke Hand. Miss immer genau den Finger an der Hand, an der der neue Ring getragen werden soll."
+      },
+      {
+        "type": "h2",
+        "text": "So wird die Messung verlässlich"
+      },
+      {
+        "type": "p",
+        "text": "Die Fingergröße schwankt mit Tageszeit und Wetter: Nachmittags und abends sowie bei Hitze sind die Finger größer, bei Kälte kleiner. Auch die Fingerform spielt eine Rolle, denn ein Knöchel kann breiter sein als der Fingeransatz, und der Ring muss trotzdem darüber."
+      },
+      {
+        "type": "note",
+        "text": "Liegt dein Messwert zwischen zwei Größen, nimm die größere: Ein etwas zu weiter Ring lässt sich trotzdem tragen und ist leichter anzupassen als ein zu enger."
+      },
+      {
+        "type": "h2",
+        "text": "Wenn du es nicht herausfindest"
+      },
+      {
+        "type": "p",
+        "text": "Klappt keine der Methoden, wähle ein Geschenk ohne Größe, etwa eine Kette, ein Armband oder Ohrringe, oder einen verstellbaren offenen Ring."
+      },
+      {
+        "type": "p",
+        "text": "Kaufst du einen Ring für einen Heiratsantrag und musst die Größe schätzen, frag vor dem Kauf im Geschäft, ob und wie sich die Größe ändern lässt, damit der Ring nach dem Ja angepasst werden kann. Meide Memoire-Ringe mit rundum gefassten Steinen, denn sie lassen sich nur schwer oder gar nicht ändern."
+      },
+      {
+        "type": "h2",
+        "text": "Ringgrößentabelle zum Umrechnen"
       },
       {
         "type": "table",
@@ -328,16 +392,16 @@ export const articles = [
         ]
       },
       {
-        "type": "note",
-        "text": "Finger schwellen bei Hitze und am Abend an, und ein Knöchel kann breiter sein als der Fingeransatz. Wenn du unsicher bist, nimm eine Größe größer: Ein etwas zu großer Ring lässt sich trotzdem tragen und leichter anpassen."
-      },
-      {
         "type": "h2",
-        "text": "Die Größe jedes Fingers in Sotto speichern"
+        "text": "Die Größe dort aufbewahren, wo du sie in Jahren noch findest"
       },
       {
         "type": "p",
-        "text": "Wenn du sie kennst, halte sie fest. Sotto speichert eine Ringgröße für jeden der zehn Finger, links und rechts, vom Daumen bis zum kleinen Finger, und rechnet zwischen US-, EU-, UK-, japanischen, chinesischen, Hongkonger und Schweizer Größen um. Die Größe bleibt privat auf deinem Handy, bereit für den richtigen Anlass."
+        "text": "Sobald du die Ringgröße kennst, schreib sie an einem Ort auf, an dem du sie auch in Jahren noch findest – nicht auf einen Zettel, der verloren geht, sobald das Geschenk ausgepackt ist."
+      },
+      {
+        "type": "p",
+        "text": "Sotto ist eine private Notizen-App für Menschen für iPhone und Android mit einer eigenen Seite für jede Person: für Notizen, Geburtstage, Geschenkideen und 23 Größen- und Maßfelder, darunter eine Ringgröße für jeden der zehn Finger. Die App rechnet Ringgrößen zwischen sieben Systemen um (US, EU, UK, Japan, China, Hongkong und Schweiz) und behält alles auf deinem Handy – ohne Konto und ohne Werbung. Die App lässt sich mit der Displaysperre deines Handys sperren."
       }
     ],
     "related": [

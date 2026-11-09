@@ -184,57 +184,121 @@ export const articles = [
   },
   {
     "slug": "find-ring-size-secretly",
-    "title": "Como descobrir o tamanho do anel de alguém sem a pessoa saber",
-    "summary": "Pegue emprestado um anel do mesmo dedo, contorne no papel, meça enquanto ela dorme ou peça ajuda a um amigo. Como funciona cada método, com tabela de conversão.",
+    "title": "Como descobrir o tamanho do anel de alguém sem perguntar",
+    "summary": "Pegue um anel que a pessoa usa no mesmo dedo e meça, ou contorne no papel, compare com um seu, meça o dedo enquanto ela dorme ou pergunte a alguém. Há tabela.",
     "content": [
       {
         "type": "p",
-        "text": "O método secreto mais preciso é pegar emprestado um anel que a pessoa já usa no mesmo dedo da mesma mão e pedir para um joalheiro medir, ou medir você mesmo o diâmetro interno. Se não der para levar o anel, contorne a parte de dentro dele num papel ou pressione-o num sabonete, ou peça a um amigo próximo ou a alguém da família que descubra para você."
+        "text": "A forma mais precisa de descobrir o tamanho do anel de alguém sem perguntar é pegar emprestado um anel que a pessoa já usa no mesmo dedo da mesma mão e pedir para medirem. Se não der para levar o anel, você pode contornar a parte de dentro dele num papel, comparar com um anel seu, medir o dedo enquanto ela dorme ou pedir ajuda a alguém próximo."
       },
       {
         "type": "h2",
-        "text": "Método 1: pegue emprestado um anel que ela já usa"
+        "text": "Pegue emprestado um anel que a pessoa já usa"
+      },
+      {
+        "type": "p",
+        "text": "Um anel que já serve no dedo é a melhor referência que você pode ter. Confira se é um anel que a pessoa usa no dedo para o qual você vai comprar, e não qualquer anel da caixa de joias."
       },
       {
         "type": "steps",
         "items": [
-          "Escolha um anel usado no dedo para o qual você vai comprar. Os dedos da mão dominante costumam ser um pouco maiores.",
+          "Escolha um anel que a pessoa use exatamente no dedo e na mão para os quais você vai comprar e espere até ela tirá-lo.",
           "Leve-o a um joalheiro, que mede o tamanho em instantes num tribulê (o cone de medir anéis).",
-          "Ou meça o diâmetro interno em milímetros e procure na tabela abaixo.",
-          "Devolva o anel exatamente onde você o encontrou."
+          "Ou, em casa, apoie-o numa régua, meça o diâmetro interno em milímetros, na parte mais larga da abertura, sem contar a espessura do metal, e procure esse valor na tabela abaixo.",
+          "Devolva o anel exatamente onde o encontrou, virado para o mesmo lado."
         ]
       },
       {
         "type": "h2",
-        "text": "Método 2: contorne ou marque o anel"
+        "text": "Contorne o anel ou faça uma marca"
       },
       {
         "type": "p",
-        "text": "Se você só tiver o anel por um minuto, coloque-o sobre um papel e contorne a borda interna com um lápis bem apontado, ou pressione-o até a metade num sabonete para guardar a marca. Meça o diâmetro interno depois. É menos preciso do que medir o próprio anel, então, se ficar entre dois tamanhos, escolha o maior."
+        "text": "Se não dá para tirar o anel de casa, registre o tamanho na hora e devolva-o logo em seguida. Deite o anel numa folha e contorne a borda interna com um lápis bem apontado, segurando o lápis na vertical para que o círculo acompanhe a abertura, ou pressione o anel até a metade numa barra de sabonete e limpe o metal depois."
+      },
+      {
+        "type": "p",
+        "text": "Mais tarde, meça em milímetros o diâmetro interno do círculo de lápis ou da marca no sabonete e compare com a tabela abaixo. Os dois métodos são menos precisos do que medir o próprio anel, porque a espessura do lápis ou as bordas moles do sabonete podem alterar um pouco a medida."
       },
       {
         "type": "h2",
-        "text": "Método 3: meça o dedo enquanto ela dorme"
+        "text": "Compare com um anel seu"
       },
       {
         "type": "p",
-        "text": "Enrole uma tira fina de papel na base do dedo, marque onde ela se sobrepõe e meça o comprimento: essa é a circunferência. É arriscado — a pessoa pode acordar — e barbante estica, então use papel e meça duas vezes."
+        "text": "Se você só fica com o anel da pessoa por um instante e não há régua por perto, use seus próprios dedos ou anéis como referência:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Coloque o anel dela num dos seus dedos e repare exatamente onde ele para. Se o anel servir num dedo seu cujo tamanho de anel você já conhece, o tamanho dela é próximo desse; se não, enrole depois uma tira de papel nesse ponto e meça.",
+          "Pegue um anel seu de tamanho conhecido e deite-o sobre o dela. Se as bordas internas coincidirem, o tamanho é o mesmo; se não, dá para ver qual é o maior e mais ou menos por quanto.",
+          "Para um jeito mais discreto, que não envolve mexer na caixa de joias, entregue um anel seu para a pessoa experimentar como quem brinca e observe em qual dedo ele serve e até onde desliza."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Comparar com o seu anel ou com o seu dedo é uma medida aproximada, mas reduz as opções a um ou dois tamanhos."
       },
       {
         "type": "h2",
-        "text": "Método 4: chame um cúmplice"
+        "text": "Meça o dedo enquanto a pessoa dorme"
       },
       {
         "type": "p",
-        "text": "Um amigo pode sugerir experimentar anéis num passeio de compras, e um irmão ou um dos pais pode simplesmente saber. É o único método que não exige mexer nas joias dela."
+        "text": "Se ela não usa anéis nesse dedo, dá para medir o próprio dedo enquanto ela dorme. Enrole uma tira fina de papel, bem justa, na base do dedo, marque o ponto onde o papel se sobrepõe e meça com uma régua em milímetros o comprimento até a marca. Esse comprimento é a circunferência, que a tabela abaixo traz ao lado do diâmetro interno."
+      },
+      {
+        "type": "p",
+        "text": "Use papel, não barbante: o barbante estica quando é puxado e dá uma medida maior do que a do dedo. Meça duas vezes para ter certeza e vá com delicadeza, porque o principal risco desse método é a pessoa acordar."
       },
       {
         "type": "h2",
-        "text": "Método 5: compare com os seus próprios dedos"
+        "text": "Pergunte a alguém próximo"
       },
       {
         "type": "p",
-        "text": "Coloque o anel dela nos seus dedos e repare onde ele para. Depois, meça esse ponto do seu dedo. É uma estimativa grosseira, mas estreita as opções."
+        "text": "Perguntar a um amigo, a uma irmã, a um irmão ou a um dos pais é o único método que não exige nem as joias da pessoa nem o dedo dela dormindo. Alguém da família ou um amigo próximo pode simplesmente saber o tamanho, por causa de um presente anterior ou de uma joia emprestada."
+      },
+      {
+        "type": "p",
+        "text": "Se a pessoa não souber de cabeça, um amigo pode sugerir experimentar anéis juntos num passeio de compras. Quando a ideia vem de um amigo que está procurando algo para si, experimentar alguns anéis e comentar o tamanho soa natural."
+      },
+      {
+        "type": "h2",
+        "text": "Acerte o dedo e a mão"
+      },
+      {
+        "type": "p",
+        "text": "Um anel emprestado de outro dedo terá outro tamanho, e até o mesmo dedo raramente é igual nas duas mãos. O mesmo dedo da mão dominante costuma ser cerca de meio tamanho maior do que na outra mão."
+      },
+      {
+        "type": "p",
+        "text": "Os costumes também variam de país para país. Na Alemanha, na Polônia e na Rússia, as alianças de casamento são usadas tradicionalmente na mão direita; no Brasil, a aliança de noivado vai na mão direita e passa para a esquerda no casamento; em muitos outros países, como EUA, Reino Unido, França e Itália, as alianças vão na mão esquerda. Meça sempre o dedo exato da mão em que o novo anel será usado."
+      },
+      {
+        "type": "h2",
+        "text": "Como chegar a uma medida confiável"
+      },
+      {
+        "type": "p",
+        "text": "Os dedos mudam de tamanho conforme a hora do dia e o clima: ficam maiores no fim da tarde, à noite e no calor, e menores no frio. O formato do dedo também importa, porque a junta pode ser mais larga do que a base do dedo, e o anel precisa passar por ela."
+      },
+      {
+        "type": "note",
+        "text": "Quando a medida ficar entre dois tamanhos, escolha o maior: um anel um pouco folgado ainda dá para usar e é mais fácil de ajustar do que um apertado."
+      },
+      {
+        "type": "h2",
+        "text": "Se mesmo assim você não conseguir descobrir"
+      },
+      {
+        "type": "p",
+        "text": "Se nenhum desses métodos funcionar, escolha um presente que não dependa de tamanho, como um colar, uma pulseira ou brincos, ou opte por um anel aberto e ajustável."
+      },
+      {
+        "type": "p",
+        "text": "Se você vai comprar um anel para um pedido de casamento e precisa chutar o tamanho, pergunte na loja sobre ajustes antes de comprar, para que o anel possa ser regulado depois do sim. Evite anéis com pedras cravadas em toda a volta, porque são difíceis ou até impossíveis de ajustar."
       },
       {
         "type": "h2",
@@ -328,16 +392,16 @@ export const articles = [
         ]
       },
       {
-        "type": "note",
-        "text": "Os dedos incham no calor e no fim do dia, e a junta pode ser mais larga do que a base do dedo. Na dúvida, escolha um tamanho acima: um anel um pouco largo ainda dá para usar e é mais fácil de ajustar."
-      },
-      {
         "type": "h2",
-        "text": "Guarde o tamanho de cada dedo no Sotto"
+        "text": "Guarde o tamanho onde você vá encontrá-lo daqui a anos"
       },
       {
         "type": "p",
-        "text": "Depois de descobrir, guarde. O Sotto registra um tamanho de anel para cada um dos dez dedos, da mão esquerda e da direita, do polegar ao mindinho, e converte entre os tamanhos dos EUA, da Europa, do Reino Unido, do Japão, da China, de Hong Kong e da Suíça. O tamanho fica guardado em sigilo no seu celular, pronto para quando a ocasião chegar."
+        "text": "Depois de descobrir o tamanho do anel, anote em um lugar onde você ainda o encontre daqui a anos, e não num pedaço de papel que se perde depois que o presente é aberto."
+      },
+      {
+        "type": "p",
+        "text": "O Sotto é um app privado de notas sobre pessoas para iPhone e Android, com uma página para cada pessoa para notas, aniversários, ideias de presente e 23 campos de tamanhos e medidas, incluindo um tamanho de anel para cada um dos dez dedos. Ele converte tamanhos de anel entre sete sistemas (EUA, Europa, Reino Unido, Japão, China, Hong Kong e Suíça) e guarda tudo no seu celular, sem conta e sem anúncios. O app pode ser bloqueado com o próprio bloqueio de tela do seu celular."
       }
     ],
     "related": [

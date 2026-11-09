@@ -184,57 +184,121 @@ export const articles = [
   },
   {
     "slug": "find-ring-size-secretly",
-    "title": "Cómo saber la talla de anillo de alguien sin que se entere",
-    "summary": "Toma prestado un anillo del mismo dedo, cálcalo, mide mientras duerme o pregunta a un amigo. Cómo funciona cada método y una tabla de tallas de anillo.",
+    "title": "Cómo saber la talla de anillo de alguien sin preguntárselo",
+    "summary": "Toma prestado un anillo que lleve en el mismo dedo y mídelo, o calca el contorno, compáralo con uno tuyo, mide mientras duerme o pregunta a un amigo. Con tabla.",
     "content": [
       {
         "type": "p",
-        "text": "El método secreto más preciso es tomar prestado un anillo que ya lleve en el mismo dedo de la misma mano y pedir a un joyero que lo mida, o medir tú mismo su diámetro interior. Si no puedes llevarte el anillo, calca su interior en un papel o presiónalo contra una pastilla de jabón, o pide a un amigo o a un familiar cercano que lo averigüe por ti."
+        "text": "La forma más precisa de saber la talla de anillo de alguien sin que se dé cuenta es tomar prestado un anillo que ya lleve en el mismo dedo de la misma mano y hacerlo medir. Si no puedes llevártelo, puedes calcarlo en un papel, compararlo con un anillo tuyo, medirle el dedo mientras duerme o preguntar a alguien cercano."
       },
       {
         "type": "h2",
-        "text": "Método 1: toma prestado un anillo que ya lleve"
+        "text": "Toma prestado un anillo que ya lleve"
+      },
+      {
+        "type": "p",
+        "text": "Un anillo que ya le queda bien en ese dedo es la mejor referencia que puedes conseguir. Asegúrate de que sea uno que lleve en el dedo para el que vas a comprar, no uno cualquiera de su joyero."
       },
       {
         "type": "steps",
         "items": [
-          "Elige un anillo que lleve en el dedo para el que vas a comprar. Los dedos de la mano dominante suelen ser un poco más gruesos.",
-          "Llévalo a un joyero, que puede medirlo en un momento con un medidor de anillos.",
-          "O mide su diámetro interior en milímetros y búscalo en la tabla de abajo.",
-          "Déjalo exactamente donde lo encontraste."
+          "Elige un anillo que lleve en el dedo y la mano exactos para los que vas a comprar, y espera a que se lo quite.",
+          "Llévalo a un joyero, que puede medirlo en un momento con un anillero.",
+          "O, en casa, colócalo sobre una regla y mide su diámetro interior en milímetros, de lado a lado por la parte más ancha de la abertura, sin contar el grosor del metal, y búscalo en la tabla de abajo.",
+          "Deja el anillo en el mismo sitio donde lo encontraste y en la misma posición."
         ]
       },
       {
         "type": "h2",
-        "text": "Método 2: calca o marca el anillo"
+        "text": "Calca el anillo o toma su molde"
       },
       {
         "type": "p",
-        "text": "Si solo tienes el anillo un minuto, colócalo sobre un papel y calca el borde interior con un lápiz bien afilado, o húndelo hasta la mitad en una pastilla de jabón para que quede la marca. Mide el diámetro interior más tarde. Es menos preciso que medir el anillo en sí, así que si te sale entre dos tallas, elige la mayor."
+        "text": "Si no puedes sacar el anillo de casa, deja registrada su medida en el momento y devuélvelo enseguida a su sitio. Coloca el anillo plano sobre un papel y calca el borde interior con un lápiz bien afilado, sujetándolo en vertical para que el círculo coincida con la abertura interior; o hunde el anillo hasta la mitad en una pastilla de jabón y límpialo bien después."
+      },
+      {
+        "type": "p",
+        "text": "Más tarde, mide en milímetros el diámetro interior del círculo de lápiz o de la marca en el jabón y búscalo en la tabla de abajo. Ambos métodos son menos precisos que medir el propio anillo, porque el grosor del lápiz o los bordes blandos del jabón pueden desplazar un poco la medida."
       },
       {
         "type": "h2",
-        "text": "Método 3: mide el dedo mientras duerme"
+        "text": "Compáralo con un anillo tuyo"
       },
       {
         "type": "p",
-        "text": "Rodea la base del dedo con una tira fina de papel, marca dónde se solapa y mide la longitud: esa es la circunferencia. Es arriesgado —puede despertarse— y el hilo se estira, así que usa papel y mide dos veces."
+        "text": "Si solo tienes su anillo un momento y no hay una regla a mano, usa tus propios dedos o anillos como referencia:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Pruébate su anillo en uno de tus dedos y fíjate en el punto exacto donde se detiene. Si le entra a un dedo tuyo del que ya conoces la talla de anillo, su talla se parecerá a esa; si no, rodea ese punto más tarde con una tira de papel y mídelo.",
+          "Coge un anillo tuyo cuya talla conozcas y colócalo plano encima del suyo. Si los bordes interiores coinciden, es la misma talla; si no, verás cuál es más grande y más o menos por cuánto.",
+          "Para algo más natural, sin tener que rebuscar en su joyero, dale a probar un anillo tuyo como si fuera un juego y fíjate en qué dedo le entra y hasta dónde llega."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Comparar con tu anillo o con tu dedo es poco exacto, pero reduce el margen a una o dos tallas."
       },
       {
         "type": "h2",
-        "text": "Método 4: busca un cómplice"
+        "text": "Mídele el dedo mientras duerme"
       },
       {
         "type": "p",
-        "text": "Un amigo puede proponer probarse anillos durante una tarde de compras, y un hermano, su padre o su madre puede que simplemente lo sepan. Es el único método que no requiere tocar sus joyas."
+        "text": "Si no lleva anillos en ese dedo, puedes medir el dedo en sí mientras duerme. Rodea la base del dedo, sin apretar, con una tira fina de papel, marca el punto donde se solapa y mide con una regla en milímetros la longitud hasta la marca. Esa longitud es la circunferencia, que la tabla de abajo muestra junto al diámetro interior."
+      },
+      {
+        "type": "p",
+        "text": "Usa papel, no hilo: el hilo se estira al tirar y da una medida mayor que la del dedo. Mide dos veces para asegurarte y ve con mucho cuidado, porque el principal riesgo de este método es que se despierte."
       },
       {
         "type": "h2",
-        "text": "Método 5: compáralo con tus propios dedos"
+        "text": "Pregunta a alguien cercano"
       },
       {
         "type": "p",
-        "text": "Prueba su anillo en tus propios dedos y fíjate en hasta dónde llega. Luego mide ese punto de tu dedo. Es aproximado, pero acota el rango."
+        "text": "Preguntar a un amigo, una hermana, un hermano o a su padre o madre es el único método que no necesita ni sus joyas ni su mano mientras duerme. Un familiar o un buen amigo puede que ya sepa la talla de algún regalo anterior o de haberle prestado joyas."
+      },
+      {
+        "type": "p",
+        "text": "Si no la sabe de memoria, un amigo puede proponer probarse anillos juntos mientras hacéis compras. Cuando la idea viene de un amigo que está mirando para sí mismo, probarse unos cuantos anillos y comentar la talla resulta de lo más natural."
+      },
+      {
+        "type": "h2",
+        "text": "Fíjate en el dedo y en la mano"
+      },
+      {
+        "type": "p",
+        "text": "Un anillo prestado de otro dedo tendrá otra talla, e incluso el mismo dedo rara vez mide igual en las dos manos. El mismo dedo de la mano dominante suele ser aproximadamente media talla mayor que el de la otra mano."
+      },
+      {
+        "type": "p",
+        "text": "Las costumbres también cambian según el país. En Alemania, Polonia y Rusia, la alianza se lleva tradicionalmente en la mano derecha; en Brasil, el anillo de compromiso se lleva en la mano derecha y pasa a la izquierda en la boda; en muchos otros países, como EE. UU., Reino Unido, Francia o Italia, los anillos van en la mano izquierda. Mide siempre el dedo exacto de la mano en la que se llevará el anillo nuevo."
+      },
+      {
+        "type": "h2",
+        "text": "Cómo conseguir una medida fiable"
+      },
+      {
+        "type": "p",
+        "text": "Los dedos cambian de tamaño según la hora del día y el tiempo: son más grandes por la tarde y por la noche y con calor, y más pequeños con frío. También influye la forma del dedo, porque el nudillo puede ser más ancho que la base del dedo y el anillo tiene que pasar por él."
+      },
+      {
+        "type": "note",
+        "text": "Si la medida cae entre dos tallas, elige la mayor: un anillo un poco holgado se puede llevar igualmente y es más fácil de ajustar que uno apretado."
+      },
+      {
+        "type": "h2",
+        "text": "Si aun así no consigues averiguarla"
+      },
+      {
+        "type": "p",
+        "text": "Si ningún método te funciona, elige un regalo que no necesite talla, como un collar, una pulsera o unos pendientes, o un anillo abierto y ajustable."
+      },
+      {
+        "type": "p",
+        "text": "Si vas a comprar un anillo para una pedida de mano y tienes que calcular la talla a ojo, pregunta en la tienda por el cambio de talla antes de comprar, para que se pueda ajustar después de que diga que sí. Evita los anillos de eternidad con piedras engastadas en todo el contorno, porque son difíciles o imposibles de reajustar."
       },
       {
         "type": "h2",
@@ -328,16 +392,16 @@ export const articles = [
         ]
       },
       {
-        "type": "note",
-        "text": "Los dedos se hinchan con el calor y por la tarde, y un nudillo puede ser más ancho que la base del dedo. Si dudas, elige una talla más: un anillo un poco grande se puede llevar igualmente y es más fácil de ajustar."
-      },
-      {
         "type": "h2",
-        "text": "Guarda la talla de cada dedo en Sotto"
+        "text": "Guarda la talla donde la encuentres dentro de unos años"
       },
       {
         "type": "p",
-        "text": "Cuando la sepas, guárdala. Sotto guarda una talla de anillo para cada uno de los diez dedos, izquierda y derecha, del pulgar al meñique, y convierte entre las tallas de EE. UU., Europa, Reino Unido, Japón, China, Hong Kong y Suiza. La talla queda en privado en tu teléfono, lista para cuando llegue la ocasión."
+        "text": "Cuando sepas su talla de anillo, apúntala en un sitio donde la sigas encontrando dentro de unos años, no en un papelito que se pierde en cuanto se abre el regalo."
+      },
+      {
+        "type": "p",
+        "text": "Sotto es una app privada de notas sobre personas para iPhone y Android, con una página para cada persona donde guardar notas, cumpleaños, ideas de regalo y 23 campos de tallas y medidas, entre ellos una talla de anillo para cada uno de los diez dedos. Convierte las tallas de anillo entre siete sistemas (EE. UU., Europa, Reino Unido, Japón, China, Hong Kong y Suiza) y lo guarda todo en tu móvil, sin cuenta y sin anuncios. La app se puede bloquear con el propio bloqueo de pantalla de tu móvil."
       }
     ],
     "related": [
