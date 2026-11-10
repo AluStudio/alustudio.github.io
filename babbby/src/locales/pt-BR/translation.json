@@ -121,8 +121,8 @@
   "privacy_policy": {
     "title": "Política de Privacidade",
     "meta_description": "Como o Babbby trata os seus dados: o que é coletado, como é armazenado e quais escolhas você tem.",
-    "effective_date": "Data de vigência: 13 de março de 2026",
-    "intro": "Esta política de privacidade se aplica ao app Babbby para iOS (“Aplicativo”), criado pela Alu Studio (“Prestador de Serviço”) como um serviço gratuito. Este serviço é oferecido “NO ESTADO EM QUE SE ENCONTRA”. Ao usar o Aplicativo, você concorda com a coleta e o uso de informações conforme descrito nesta política.",
+    "effective_date": "Data de vigência: 10 de novembro de 2026",
+    "intro": "Esta política de privacidade se aplica ao app Babbby (“Aplicativo”) para iPhone e iPad, criado pela Alu Studio (“Prestador de Serviço”). Este serviço é oferecido “NO ESTADO EM QUE SE ENCONTRA”. Ao usar o Aplicativo, você concorda com a coleta e o uso de informações conforme descrito nesta política.",
     "info_collection": {
       "title": "Coleta e uso de informações",
       "desc": "O Aplicativo pode coletar certas informações automaticamente quando você o baixa e o utiliza, por meio de serviços de terceiros integrados. Essas informações podem incluir:",
@@ -136,11 +136,11 @@
     },
     "local_storage": {
       "title": "Armazenamento local de dados",
-      "desc": "Todo o conteúdo criado pelo usuário — incluindo perfis de crianças, registros de atividades, registros de conclusão e estatísticas — é armazenado exclusivamente no seu dispositivo, em um banco de dados local (GRDB/SQLite). Esses dados nunca são transmitidos aos servidores da Alu Studio nem a terceiros. Se você desinstalar o Aplicativo, todos os dados locais serão apagados permanentemente."
+      "desc": "Tudo o que você cria no Aplicativo, incluindo os perfis das crianças (nome, data de nascimento e foto opcional), planos de atividades, registros de conclusão, anotações, fotos das atividades e estatísticas, é armazenado apenas no seu dispositivo. Nada disso é enviado à Alu Studio nem a terceiros. Como os demais dados de apps, ele pode ser incluído nos backups do dispositivo que você faz com o iCloud ou com um computador, conforme os seus ajustes de backup. O Aplicativo usa a câmera ou a sua Fototeca somente quando você escolhe adicionar uma foto, e apenas as fotos que você seleciona são copiadas para ele. O único item mantido fora do Aplicativo é a data de início do seu teste grátis, armazenada no Keychain do iOS para que reinstalar o Aplicativo não reinicie o teste; ela contém somente essa data."
     },
     "iap": {
       "title": "Compras dentro do app",
-      "desc": "O Aplicativo oferece uma compra opcional de apoio ao desenvolvedor, em pagamento único (“Pague um café ao desenvolvedor”), por meio do StoreKit da Apple. Todo o processamento de pagamentos é feito inteiramente pela Apple. A Alu Studio não coleta nem armazena nenhuma informação de pagamento, dados de cartão de crédito ou credenciais do Apple ID, e não tem acesso a eles."
+      "desc": "O Aplicativo oferece uma compra opcional dentro do app, o Vitalício, por meio do StoreKit da Apple. Todo o processamento de pagamentos é feito inteiramente pela Apple. A Alu Studio não coleta nem armazena nenhuma informação de pagamento, dados de cartão de crédito ou credenciais do Apple ID, e não tem acesso a eles."
     },
     "activity_disclaimer": {
       "title": "Recomendações de atividades",
@@ -162,11 +162,11 @@
     },
     "data_retention": {
       "title": "Retenção de dados",
-      "desc": "Todos os dados de atividades e os ajustes do app são armazenados localmente no seu dispositivo e nunca são transmitidos aos nossos servidores. Os dados coletados por serviços de terceiros (Firebase Analytics, Firebase Crashlytics) são retidos de acordo com as respectivas políticas de retenção de dados. Para apagar os dados locais, desinstale o Aplicativo ou limpe os dados dele nos ajustes do seu dispositivo."
+      "desc": "Os dados de atividades, as fotos e os ajustes do app são armazenados localmente no seu dispositivo e nunca são transmitidos aos nossos servidores. Os dados coletados por serviços de terceiros (Firebase Analytics, Firebase Crashlytics) são retidos de acordo com as respectivas políticas de retenção de dados. Desinstalar o Aplicativo apaga permanentemente os dados dele do seu dispositivo. A data de início do teste permanece no Keychain do iOS após a desinstalação."
     },
     "children": {
       "title": "Privacidade das crianças",
-      "desc": "O Aplicativo é uma ferramenta feita para pais e responsáveis planejarem atividades para suas crianças (de 0 a 6 anos). Ele não se destina ao uso direto por crianças. Não coletamos intencionalmente informações de identificação pessoal de menores de 13 anos. As informações do perfil da criança (nome, data de nascimento) são armazenadas apenas no dispositivo e nunca são transmitidas. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco pelo e-mail alustudio14@gmail.com."
+      "desc": "O Aplicativo é uma ferramenta feita para pais e responsáveis planejarem atividades para suas crianças (de 0 a 6 anos). Ele não se destina ao uso direto por crianças. Não coletamos intencionalmente informações de identificação pessoal de menores de 13 anos. As informações do perfil da criança (nome, data de nascimento e foto opcional) e as fotos das atividades são armazenadas apenas no dispositivo e nunca são enviadas à Alu Studio nem a terceiros. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco pelo e-mail alustudio14@gmail.com."
     },
     "rights": {
       "title": "Seus direitos e escolhas",
@@ -203,11 +203,15 @@
   "terms": {
     "title": "Termos de Uso",
     "meta_description": "Termos de Uso do Babbby, o app de atividades diárias para bebês da Alu Studio.",
-    "effective_date": "Data de vigência: 13 de março de 2026",
-    "intro": "Estes termos e condições se aplicam ao aplicativo Babbby («Aplicativo») para iOS, criado pela Alu Studio («Prestador de Serviço») como um serviço gratuito. Ao baixar ou usar o Aplicativo, você concorda com estes termos.",
+    "effective_date": "Data de vigência: 10 de novembro de 2026",
+    "intro": "Estes termos e condições se aplicam ao aplicativo Babbby («Aplicativo») para iPhone e iPad, criado pela Alu Studio («Prestador de Serviço»). Ao baixar ou usar o Aplicativo, você concorda com estes termos.",
     "license": {
       "title": "Licença de Uso",
       "desc": "O Prestador de Serviço concede a você uma licença limitada, não exclusiva, intransferível e revogável para usar o Aplicativo para fins pessoais e não comerciais, de acordo com estes termos."
+    },
+    "purchases": {
+      "title": "Teste e Compra",
+      "desc": "O Aplicativo é gratuito para baixar, e todos os recursos ficam disponíveis por 14 dias a partir da primeira abertura. Após o teste, adicionar ou concluir atividades, adicionar um bebê e adicionar fotos exigem o Vitalício, uma compra única no app, sem assinatura. Consultar seus planos, a Biblioteca de atividades, as Estatísticas e os resumos continua disponível sem ele. As compras são processadas pela Apple e estão sujeitas aos termos da Apple, incluindo a política de reembolso. Se você baixou o Babbby quando ele ainda era um aplicativo pago, você mantém o acesso completo sem comprar o Vitalício."
     },
     "restrictions": {
       "title": "Restrições",
@@ -227,7 +231,7 @@
         "A supervisão das crianças durante qualquer atividade sugerida pelo Aplicativo é de responsabilidade exclusiva dos pais e responsáveis",
         "As recomendações por idade são orientações gerais; cada criança se desenvolve de um jeito, e cabe aos pais e responsáveis avaliar se cada atividade é adequada para a criança",
         "O Aplicativo não substitui a consulta a pediatras, terapeutas ou outros profissionais qualificados",
-        "O desenvolvedor não assume nenhuma responsabilidade por lesão, dano ou consequência decorrente da realização das atividades sugeridas"
+        "O Prestador de Serviço não assume nenhuma responsabilidade por lesão, dano ou consequência decorrente da realização das atividades sugeridas"
       ]
     },
     "third_party": {

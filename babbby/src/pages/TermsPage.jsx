@@ -28,6 +28,12 @@ function TermsPage() {
                 <p>{t("terms.license.desc")}</p>
               </section>
 
+              {/* Trial and Purchase */}
+              <section className="legal-section">
+                <h2>{t("terms.purchases.title")}</h2>
+                <p>{t("terms.purchases.desc")}</p>
+              </section>
+
               {/* Restrictions */}
               <section className="legal-section">
                 <h2>{t("terms.restrictions.title")}</h2>

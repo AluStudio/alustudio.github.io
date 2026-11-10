@@ -120,8 +120,8 @@
   "privacy_policy": {
     "title": "Privacy Policy",
     "meta_description": "How Babbby handles your data: what is collected, how it is stored, and your choices.",
-    "effective_date": "Effective Date: March 13, 2026",
-    "intro": "This privacy policy applies to the Babbby app (\"Application\") for iOS, created by Alu Studio (\"Service Provider\") as a free service. This service is intended for use \"AS IS\". By using the Application, you agree to the collection and use of information as described in this policy.",
+    "effective_date": "Effective Date: November 10, 2026",
+    "intro": "This privacy policy applies to the Babbby app (\"Application\") for iPhone and iPad, created by Alu Studio (\"Service Provider\"). This service is intended for use \"AS IS\". By using the Application, you agree to the collection and use of information as described in this policy.",
     "info_collection": {
       "title": "Information Collection and Use",
       "desc": "The Application may collect certain information automatically when you download and use it, through integrated third-party services. This information may include:",
@@ -135,11 +135,11 @@
     },
     "local_storage": {
       "title": "Local Data Storage",
-      "desc": "All user-created content — including children's profiles, activity logs, completion records, and statistics — is stored exclusively on your device using a local database (GRDB/SQLite). This data is never transmitted to Alu Studio's servers or any third party. If you uninstall the Application, all local data will be permanently deleted."
+      "desc": "Everything you create in the Application, including your children's profiles (name, birth date and an optional photo), activity plans, completion records, notes, activity photos and statistics, is stored only on your device. None of it is sent to Alu Studio or any third party. Like other app data, it can be included in the device backups you make with iCloud or a computer, according to your backup settings. The Application uses the camera or your photo library only when you choose to add a photo, and only the photos you pick are copied into it. The one item kept outside the Application is the start date of your free trial, which is stored in the iOS Keychain so that reinstalling does not restart the trial; it contains nothing but that date."
     },
     "iap": {
       "title": "In-App Purchases",
-      "desc": "The Application offers an optional one-time sponsor purchase (\"Buy the Developer a Coffee\") through Apple's StoreKit. All payment processing is handled entirely by Apple. Alu Studio does not collect, store, or have access to any payment information, credit card details, or Apple ID credentials."
+      "desc": "The Application offers one optional in-app purchase, the Lifetime unlock, through Apple's StoreKit. All payment processing is handled entirely by Apple. Alu Studio does not collect, store, or have access to any payment information, credit card details, or Apple ID credentials."
     },
     "activity_disclaimer": {
       "title": "Activity Recommendations",
@@ -161,11 +161,11 @@
     },
     "data_retention": {
       "title": "Data Retention",
-      "desc": "All activity data and app settings are stored locally on your device and are never transmitted to our servers. Data collected by third-party services (Firebase Analytics, Firebase Crashlytics) is retained according to their respective data retention policies. To delete local data, uninstall the Application or clear its data through your device settings."
+      "desc": "Activity data, photos and app settings are stored locally on your device and are never transmitted to our servers. Data collected by third-party services (Firebase Analytics, Firebase Crashlytics) is retained according to their respective data retention policies. Uninstalling the Application permanently deletes its data from your device. The trial start date stays in the iOS Keychain after uninstalling."
     },
     "children": {
       "title": "Children's Privacy",
-      "desc": "The Application is a tool designed for parents and guardians to plan activities for their children (ages 0–6). It is not intended for direct use by children. We do not knowingly collect personally identifiable information from children under 13. Children's profile information (name, birth date) is stored only on the device and never transmitted. If you believe a child has provided personal information to us, please contact us at alustudio14@gmail.com."
+      "desc": "The Application is a tool designed for parents and guardians to plan activities for their children (ages 0–6). It is not intended for direct use by children. We do not knowingly collect personally identifiable information from children under 13. Children's profile information (name, birth date and optional photo) and activity photos are stored only on the device and never sent to Alu Studio or any third party. If you believe a child has provided personal information to us, please contact us at alustudio14@gmail.com."
     },
     "rights": {
       "title": "Your Rights and Choices",
@@ -202,11 +202,15 @@
   "terms": {
     "title": "Terms of Use",
     "meta_description": "Terms of use for Babbby, the daily baby activities app by Alu Studio.",
-    "effective_date": "Effective Date: March 13, 2026",
-    "intro": "These terms and conditions apply to the Babbby app (\"Application\") for iOS, created by Alu Studio (\"Service Provider\") as a free service. By downloading or using the Application, you agree to these terms.",
+    "effective_date": "Effective Date: November 10, 2026",
+    "intro": "These terms and conditions apply to the Babbby app (\"Application\") for iPhone and iPad, created by Alu Studio (\"Service Provider\"). By downloading or using the Application, you agree to these terms.",
     "license": {
       "title": "Use License",
       "desc": "The Service Provider grants you a limited, non-exclusive, non-transferable, revocable license to use the Application for personal, non-commercial purposes in accordance with these terms."
+    },
+    "purchases": {
+      "title": "Trial and Purchase",
+      "desc": "The Application is free to download, and every feature is available for 14 days from the first launch. After the trial, adding or completing activities, adding a child and adding photos require the Lifetime unlock, a single in-app purchase with no subscription. Browsing your plans, the activity library, statistics and reviews stays available without it. Purchases are processed by Apple and are subject to Apple's terms, including its refund policy. If you downloaded Babbby while it was a paid app, you keep full access without buying the unlock."
     },
     "restrictions": {
       "title": "Restrictions",
@@ -226,7 +230,7 @@
         "Parents and guardians are solely responsible for supervising their children during any activity suggested by the Application",
         "Age-based recommendations are general guidelines; every child develops differently, and parents must assess suitability for their specific child",
         "The Application does not replace consultation with pediatricians, therapists, or other qualified professionals",
-        "The developer assumes no liability for any injury, harm, or outcome resulting from performing suggested activities"
+        "The Service Provider assumes no liability for any injury, harm, or outcome resulting from performing suggested activities"
       ]
     },
     "third_party": {
