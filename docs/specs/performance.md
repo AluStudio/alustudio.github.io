@@ -38,26 +38,25 @@ read_when:
 
 - Lighthouse mobile 模擬的是 Slow 4G（150ms RTT、1.6Mbps）加 4x CPU 降速，大約是 4G 連線最差的 25%。在這個條件下，FCP / LCP 顯示 2–4 秒是常態，不代表一般使用者要等這麼久。
 - Core Web Vitals 的「LCP ≤ 2.5s」是真實使用者第 75 百分位數的門檻，不是 lab 門檻。Lighthouse mobile 的 LCP 評分曲線是 2.5s = 90 分、4.0s = 50 分。
-- Opacity 從 0 開始的進場動畫，會把 LCP 延後到元素在可見狀態下重新 paint 的時候，在真實使用者身上也一樣。home 與 dingpos 的 hero 目前就是這樣，各多約 1s。
+- Opacity 從 0 開始的進場動畫，會把 LCP 延後到元素在可見狀態下重新 paint 的時候，在真實使用者身上也一樣。home、dingpos 與 babbby 的 hero 目前就是這樣，各多約 1s。
 - `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP。dingpos 與 sotto 已改用 `hydrateRoot` 原地保留節點；home、pikgeon 仍是 `createRoot`，目前它們的 lab LCP 沒有被重繪拖到，但訪客語言跟 prerender 的英文不同時，換成另一種語言的新節點仍可能記下新的 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
 
 ## 目前基準
 
-正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。pikgeon hero 保留空間、dingpos 改 `hydrateRoot` 與手機版截圖、home 改版、babbby 改版（hero 截圖換成重繪的 app 畫面，LCP 元素會變）之後，這張表已經過時，部署後需重量。
+正式站，Lighthouse 13.6 mobile simulated throttling，五個 app 交錯量 3 輪，每個指標取 3 次的中位數，2026-11-10（babbby 改版上線後）量測。重新量測時直接更新這張表。
 
 | app | perf | FCP | LCP | CLS | LCP 元素 | desktop perf |
 |---|---|---|---|---|---|---|
-| home | 95 | 2.21s | 2.44s | 0 | `h1.intro__title` | 98 |
-| pikgeon | 71 | 1.90s | 3.44s | 0.411 | `img.ios-view-image` | 98 |
-| babbby | 98 | 1.88s | 2.08s | 0 | `img.hero-screenshot` | 98 |
-| sotto | 97 | 2.09s | 2.09s | 0.022 | `p.hero-desc` | 99 |
-| dingpos | 85 | 2.08s | 4.10s | 0.001 | `p.hero-desc` | 95 |
+| home | 98 | 1.06s | 1.22s | 0 | `h2.section__title` | 100 |
+| pikgeon | 93 | 1.25s | 3.20s | 0 | `img.img-fluid` | 99 |
+| babbby | 98 | 1.09s | 2.28s | 0 | `p.hero__eyebrow` | 99 |
+| sotto | 99 | 1.55s | 1.55s | 0 | `p.hero__desc` | 99 |
+| dingpos | 95 | 1.43s | 2.13s | 0.007 | `img`（iPad 結帳截圖） | 99 |
 
-- sotto 2026-10-17（OH-88 前）另量到 perf 89、LCP 2.9s、Accessibility 69。OH-88 上線後正式站 Accessibility 100、SEO 100（6 次皆同）；perf 只量到受背景負載污染的數字（對照組 dingpos、babbby 同時一起變慢），表中 sotto 一列待乾淨環境重量。本機 A/B（OH-88 前 vs 後）：LCP 7.73s → 7.4s、JS 569KB → 483KB，沒有 regression。
-
-- pikgeon 的 CLS 0.411 是 hero 圖片沒有保留空間（見 §圖片），3 次 run 中出現 2 次，不出現時分數是 98。已改成固定 `height: 500px` 修正。
-- dingpos 的 LCP 被 hero 進場動畫和 `createRoot` 重繪各拖約 1s（見 §解讀）。重繪的部分已改 `hydrateRoot` 消除，進場動畫保留。
-- home 改版（Geist、SVG 圖示、app 示意畫面）上線前的本機 A/B：同一個 `python3 -m http.server`、Lighthouse 13.5 mobile，改版前後與對照組 babbby 各 3 次交錯量測，對照組 3 次數值相同。中位數 perf 77 → 84、FCP 3.90s → 3.30s、LCP 4.14s → 3.47s，CLS 前後皆為 0；傳輸量 557 KB → 489 KB（字型 180 → 29 KB、CSS 93 → 30 KB，JS 259 → 372 KB、HTML 8 → 40 KB）。本機 LCP 元素從 `h1.intro__title` 變成 `h2.section__title`。本機沒有壓縮，只看前後差。2026-10-27 部署後正式站 3 次中位數：home mobile perf 91、FCP 2.46s、LCP 2.59s（`h2.section__title`），CLS 3 次皆 0，desktop 99；但同時段對照組 babbby 從表中的 98 掉到 83（LCP 3.60s），數字反映的是環境，依 §量測 不寫進表，home 一列待乾淨環境重量。
+- 五個 app 的 FCP 一起比 2026-10-14 的上一版基準（Lighthouse 13.5）快約 0.8s，連沒有改動 FCP 路徑的 app 也一樣，所以這是量測版本或環境的差異，不是網站變快。拿新數字比較時，只跟這張表比，不跟更早的紀錄比。
+- LCP 在 run 之間會差到 1s 以上，原因是 LCP 元素會換：pikgeon 與 dingpos 在 hero 文字和截圖之間換，home 只有 1 次 run 記到元素。單次 run 的 LCP 不能當 regression 的證據，要看 3 次的中位數。
+- pikgeon 改用固定高度的 hero 圖片後，3 次 run 的 CLS 都是 0，上一版的 0.411 已經消失。
+- babbby 的 hero 截圖換成重繪的 app 畫面後，LCP 元素從 `img.hero-screenshot` 變成 hero 文字。文字進場的 appear 動畫從 opacity 0 開始（見 §解讀），所以 LCP 比 FCP 晚約 1.2s；perf 和改版前一樣是 98。
 
 ## Related
 
