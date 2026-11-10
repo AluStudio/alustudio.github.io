@@ -55,7 +55,9 @@ export const apps = [
     id: "babbby",
     name: "Babbby",
     icon: `${base}babbby-icon.webp`,
-    languages: ["en", "zh-Hant"],
+    // babbby-ios ships these since 2.3, and its site has a URL for each.
+    languages: ["en", "zh-Hant", "zh-Hans", "ja", "ko", "es", "pt", "fr", "de"],
+    languageInUrl: true,
     stores: [
       {
         platform: "ios",
@@ -73,9 +75,10 @@ export function sceneLanguage(app, pageLanguage) {
   return "en";
 }
 
-// DingPOS and Sotto read their language from the URL only, so a link must carry
-// it; both ship every home language. Pikgeon and Babbby read the language home
-// already stored in localStorage (same origin, same i18next key).
+// DingPOS, Sotto and Babbby read their language from the URL only, so a link
+// must carry it; DingPOS and Sotto ship every home language, Babbby only its
+// `languages` (English elsewhere). Pikgeon reads the language home already
+// stored in localStorage (same origin, same i18next key).
 const URL_LANGUAGE_PREFIX = {
   "zh-Hant": "zh-hant",
   "zh-Hans": "zh-hans",
@@ -90,7 +93,8 @@ const URL_LANGUAGE_PREFIX = {
 
 // `route` is relative to the app root: "" for its home page, "privacy/" for its policy.
 export function appUrl(app, route, pageLanguage) {
-  const prefix = app.languageInUrl && URL_LANGUAGE_PREFIX[pageLanguage];
+  const hasLanguage = !app.languages || app.languages.includes(pageLanguage);
+  const prefix = app.languageInUrl && hasLanguage && URL_LANGUAGE_PREFIX[pageLanguage];
   return `/${app.id}/${prefix ? `${prefix}/` : ""}${route}`;
 }
 

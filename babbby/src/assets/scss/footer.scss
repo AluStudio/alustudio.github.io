@@ -1,36 +1,73 @@
-@import "./all";
+@use "tokens" as *;
 
-footer {
-  margin-top: 80px;
-  background-image: linear-gradient(
-    200deg,
-    rgba(255, 107, 74, 0.85) 0%,
-    rgba(241, 123, 84, 0.7) 100%
-  );
-  color: #fff;
-}
+.footer {
+  padding: s(700) 0 s(400);
+  border-top: 1px solid $line;
+  background: $surface;
 
-footer .footer-brand {
-  color: #fff;
-  font-weight: 800;
-}
+  &__inner {
+    display: grid;
+    gap: s(500);
 
-.mailto {
-  text-decoration: none;
-  color: #fff;
-  &:hover {
-    color: #FFF8F2;
-    text-decoration: underline;
-  }
-}
-
-.footer-legal-links {
-  a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    &:hover {
-      text-decoration: underline;
+    @media (min-width: $bp-md) {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
     }
+  }
+
+  &__home {
+    display: inline-flex;
+    border-radius: $radius-lg;
+    text-decoration: none;
+  }
+
+  &__tagline {
+    max-width: 360px;
+    margin-top: s(200);
+    color: $ink-soft;
+  }
+
+  &__mail {
+    display: inline-flex;
+    align-items: center;
+    gap: s(75);
+    margin-top: s(300);
+    color: $accent-deep;
+    @include text("sm");
+    font-weight: 600;
+    text-decoration: none;
+
+    @include hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+
+  &__cols {
+    display: flex;
+    gap: s(700);
+
+    li + li {
+      margin-top: s(100);
+    }
+
+    a {
+      @include text("sm");
+      color: $ink-soft;
+      text-decoration: none;
+      transition: color 0.3s $ease;
+
+      @include hover {
+        color: $ink;
+      }
+    }
+  }
+
+  &__copy {
+    margin-top: s(600);
+    padding-top: s(300);
+    border-top: 1px solid $line;
+    @include text("xs");
+    color: $ink-muted;
   }
 }

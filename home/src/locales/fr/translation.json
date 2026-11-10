@@ -27,7 +27,7 @@
   },
   "babbby": {
     "tagline": "Idées d’activités quotidiennes de 0 à 6 ans",
-    "desc": "Suivez les étapes clés, créez des routines et choisissez parmi plus de 340 activités adaptées à l’âge de votre enfant."
+    "desc": "Babbby associe chaque activité à l’âge de votre enfant et à ce que vous avez sous la main, puis tient le compte de ce que vous avez fait ensemble."
   },
   "sotto": {
     "tagline": "Retenez les détails qui comptent",
@@ -163,6 +163,48 @@
           "meta": "Granville Island · 17 févr."
         }
       ]
+    },
+    "babbby": {
+      "title": "Aujourd’hui",
+      "child": "Mochi",
+      "child_initial": "M",
+      "week": "1–7 nov.",
+      "days": [
+        "D",
+        "L",
+        "M",
+        "M",
+        "J",
+        "V",
+        "S"
+      ],
+      "age": "12-18 mois",
+      "activities": [
+        {
+          "name": "Coup de pied dans le ballon",
+          "category": "Motricité globale",
+          "category_id": "gross_motor"
+        },
+        {
+          "name": "Boîte à formes",
+          "category": "Cognition",
+          "category_id": "cognitive"
+        },
+        {
+          "name": "Gribouillis aux crayons",
+          "category": "Motricité fine",
+          "category_id": "fine_motor"
+        }
+      ],
+      "tabs": [
+        "Aujourd’hui",
+        "Bibliothèque",
+        "Statistiques",
+        "Réglages"
+      ],
+      "stats_range": "7 jours",
+      "stats_label": "Activités terminées",
+      "stats_trend": "Tendance quotidienne"
     }
   }
 }

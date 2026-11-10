@@ -27,7 +27,7 @@
   },
   "babbby": {
     "tagline": "Ideas de actividades diarias de 0 a 6 años",
-    "desc": "Registra hitos, crea rutinas y elige entre más de 340 actividades según la edad de tu hijo."
+    "desc": "Babbby adapta cada actividad a la edad de tu bebé y a lo que tienes a la mano, y lleva la cuenta de lo que han hecho juntos."
   },
   "sotto": {
     "tagline": "Recuerda los detalles que importan",
@@ -163,6 +163,48 @@
           "meta": "Granville Island · 17 feb"
         }
       ]
+    },
+    "babbby": {
+      "title": "Hoy",
+      "child": "Mochi",
+      "child_initial": "M",
+      "week": "1–7 nov",
+      "days": [
+        "D",
+        "L",
+        "M",
+        "X",
+        "J",
+        "V",
+        "S"
+      ],
+      "age": "12-18 meses",
+      "activities": [
+        {
+          "name": "Juego de patear la pelota",
+          "category": "Motricidad gruesa",
+          "category_id": "gross_motor"
+        },
+        {
+          "name": "Caja para encajar formas",
+          "category": "Cognitivo",
+          "category_id": "cognitive"
+        },
+        {
+          "name": "Hora de garabatear con crayones",
+          "category": "Motricidad fina",
+          "category_id": "fine_motor"
+        }
+      ],
+      "tabs": [
+        "Hoy",
+        "Biblioteca",
+        "Estadísticas",
+        "Ajustes"
+      ],
+      "stats_range": "7 días",
+      "stats_label": "Actividades completadas",
+      "stats_trend": "Tendencia diaria"
     }
   }
 }

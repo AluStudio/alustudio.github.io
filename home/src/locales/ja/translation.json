@@ -27,7 +27,7 @@
   },
   "babbby": {
     "tagline": "0〜6 歳向け、毎日のあそびアイデア",
-    "desc": "成長の記録や毎日のリズムづくりに。お子さまの年齢に合わせた 340 以上のアクティビティから選べます。"
+    "desc": "Babbbyは、すべてのあそびをお子さんの年齢と、手元にあるものに合わせて提案し、いっしょにやったことを数えていきます。"
   },
   "sotto": {
     "tagline": "大切な小さなことを覚えておく",
@@ -163,6 +163,48 @@
           "meta": "Granville Island · 2月17日"
         }
       ]
+    },
+    "babbby": {
+      "title": "今日",
+      "child": "Mochi",
+      "child_initial": "M",
+      "week": "11/01～11/07",
+      "days": [
+        "日",
+        "月",
+        "火",
+        "水",
+        "木",
+        "金",
+        "土"
+      ],
+      "age": "12〜18か月",
+      "activities": [
+        {
+          "name": "ボールけりあそび",
+          "category": "粗大運動",
+          "category_id": "gross_motor"
+        },
+        {
+          "name": "かたち落としボックス",
+          "category": "認知",
+          "category_id": "cognitive"
+        },
+        {
+          "name": "クレヨンでなぐり描き",
+          "category": "微細運動",
+          "category_id": "fine_motor"
+        }
+      ],
+      "tabs": [
+        "今日",
+        "ライブラリ",
+        "統計",
+        "設定"
+      ],
+      "stats_range": "7日間",
+      "stats_label": "完了したあそび",
+      "stats_trend": "1日ごとの推移"
     }
   }
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-// Copy of home/src/story.js (sotto/src/story.js is another): change all three
-// together.
+// Copy of home/src/story.js (babbby/ and sotto/ run the others): change all
+// four together.
 //
 // Plays a scene's story as a loop of timed steps. Step 0 is the resting frame
 // (the finished design): it renders first and the loop returns to it, so

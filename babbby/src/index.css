@@ -1,11 +1,18 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* CJK faces by page language; the reset and tokens live in assets/scss/base.scss.
+   The same character is drawn differently in Traditional, Simplified,
+   Japanese and Korean faces, so each page names its own. */
+:root {
+  --bb-font-cjk: "PingFang TC", "Noto Sans CJK TC", "Microsoft JhengHei";
 }
 
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root:lang(zh-Hans) {
+  --bb-font-cjk: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei";
+}
+
+:root:lang(ja) {
+  --bb-font-cjk: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", "Yu Gothic", Meiryo;
+}
+
+:root:lang(ko) {
+  --bb-font-cjk: "Apple SD Gothic Neo", "Noto Sans CJK KR", "Malgun Gothic";
 }
