@@ -15,9 +15,9 @@ Deleting/renaming/archiving this repo silently breaks the old-domain 301 and lea
 ```
 /
 ├── home/               # Alu Studio studio page — Vite + React (app showcase)
-├── pikgeon/            # Pikgeon support site — Vite + React + Bootstrap
+├── pikgeon/            # Pikgeon support site — Vite + React + Bootstrap + Sass
 ├── babbby/             # Babbby support site  — Vite + React + Sass, no Bootstrap
-├── sotto/              # Sotto support site   — same stack
+├── sotto/              # Sotto support site   — Vite + React + Bootstrap + Sass
 ├── dingpos/            # DingPOS support site  — Vite + React + Sass, no Bootstrap
 ├── src/worker.js       # Cloudflare Worker: host/path redirects, asset serving, 404
 ├── wrangler.jsonc      # Worker + static-assets config (routes, bindings)
