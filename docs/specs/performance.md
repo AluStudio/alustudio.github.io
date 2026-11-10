@@ -17,7 +17,8 @@ read_when:
   - 升級 fontsource 時，四個 `@font-face` 的 `unicode-range` 要跟 package `index.css` 的 named subset 一起更新（扣掉全形字的方法：比對各檔案 `hmtx` 寬度等於 1000 的字）。檔名改了的話，`sotto/vite.config.js` 的 `failOnUnresolvedFontUrl` 會讓 build 失敗，因為 Vite 對解析不到的 CSS `url()` 只會警告。
 - dingpos 的 CJK family 由 `--dp-font-cjk`（`dingpos/src/index.css`）依頁面語言決定：英文、繁中與非 CJK 語言的頁面用 Noto Sans TC，簡中頁用 Noto Sans SC，日文與韓文頁用系統字型（同 sotto 的 stack）。原因：同一個漢字在繁中與簡中字型的字形不同，Noto Sans TC 也會用繁中字形畫日文。SC 的 `@font-face` CSS 只在 `lang="zh-Hans"` 的頁面由 `main.jsx` 用 dynamic import 載入；prerender 會把它注入的 `<link>` 寫進 HTML，瀏覽器解析時就會抓，不必等 JS。全域 import 會讓每一頁多一份約 110 KB（未壓縮）的 render-blocking CSS。
 - home 只自託管 Geist（`@fontsource-variable/geist`，涵蓋拉丁、西里爾與越南文）；中日韓文字一律交給系統字型（PingFang、Hiragino、Apple SD Gothic Neo 等），不載 CJK webfont。app 示意畫面裡的 serif 與等寬字也用系統字型（`ui-serif`、`ui-monospace`），不另外下載。
-- 圖示用 inline SVG（home 與 dingpos 用 `@phosphor-icons/react`），不用 icon font。bootstrap-icons 的 woff2 一支約 131 KB，不管頁面用了幾個圖示都要整支下載；home 改用 SVG 後，字型傳輸量從 180 KB 降到 29 KB。pikgeon、babbby、sotto 仍載 bootstrap-icons。
+- 圖示用 inline SVG（home、dingpos 與 babbby 用 `@phosphor-icons/react`），不用 icon font。bootstrap-icons 的 woff2 一支約 131 KB，不管頁面用了幾個圖示都要整支下載；home 改用 SVG 後，字型傳輸量從 180 KB 降到 29 KB。pikgeon、sotto 仍載 bootstrap-icons。
+- babbby 只自託管 Manrope（`@fontsource-variable/manrope`，涵蓋拉丁、西里爾、希臘與越南文）；中日韓文字交給系統字型，由 `--bb-font-cjk`（`babbby/src/index.css`）依頁面語言挑繁中、簡中、日文或韓文的字型，不載 CJK webfont。app 示意畫面用 app 自己的系統字型（`ui-serif` 的 New York 標題、`system-ui` 內文），不另外下載。
 - dingpos 的翻譯語言不加 webfont：拉丁、西里爾、希臘與越南文由 Manrope 涵蓋；泰、高棉、寮、喬治亞、孟加拉與印地文交給系統字型（iOS、Android、Windows、macOS 都內建），不下載任何字型。只有在實機截圖出現豆腐字時，才改成自託管那一種文字的 Noto。
 
 ## 圖片
@@ -38,11 +39,11 @@ read_when:
 - Lighthouse mobile 模擬的是 Slow 4G（150ms RTT、1.6Mbps）加 4x CPU 降速，大約是 4G 連線最差的 25%。在這個條件下，FCP / LCP 顯示 2–4 秒是常態，不代表一般使用者要等這麼久。
 - Core Web Vitals 的「LCP ≤ 2.5s」是真實使用者第 75 百分位數的門檻，不是 lab 門檻。Lighthouse mobile 的 LCP 評分曲線是 2.5s = 90 分、4.0s = 50 分。
 - Opacity 從 0 開始的進場動畫，會把 LCP 延後到元素在可見狀態下重新 paint 的時候，在真實使用者身上也一樣。home 與 dingpos 的 hero 目前就是這樣，各多約 1s。
-- `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP。dingpos 與 sotto 已改用 `hydrateRoot` 原地保留節點；home、pikgeon、babbby 仍是 `createRoot`，目前它們的 lab LCP 沒有被重繪拖到，但訪客語言跟 prerender 的英文不同時，換成另一種語言的新節點仍可能記下新的 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
+- `createRoot` 會把 prerendered DOM 整棵換掉。新節點比原本的 LCP 元素大時，Chrome 會記一個新的 LCP，整包 JS 的下載與執行就被算進 LCP。dingpos 與 sotto 已改用 `hydrateRoot` 原地保留節點；home、pikgeon 仍是 `createRoot`，目前它們的 lab LCP 沒有被重繪拖到，但訪客語言跟 prerender 的英文不同時，換成另一種語言的新節點仍可能記下新的 LCP（見 [seo-aeo §Prerender](./seo-aeo.md#prerender)）。
 
 ## 目前基準
 
-正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。pikgeon hero 保留空間、dingpos 改 `hydrateRoot` 與手機版截圖、home 改版之後，這張表已經過時，部署後需重量。
+正式站，Lighthouse 13.5 mobile simulated throttling，3 次中位數，2026-10-14（OH-78 上線後）量測。重新量測時直接更新這張表。pikgeon hero 保留空間、dingpos 改 `hydrateRoot` 與手機版截圖、home 改版、babbby 改版（hero 截圖換成重繪的 app 畫面，LCP 元素會變）之後，這張表已經過時，部署後需重量。
 
 | app | perf | FCP | LCP | CLS | LCP 元素 | desktop perf |
 |---|---|---|---|---|---|---|
