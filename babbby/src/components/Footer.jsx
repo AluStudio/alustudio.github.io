@@ -1,6 +1,10 @@
-import "../assets/scss/footer.scss";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { EnvelopeSimple } from "@phosphor-icons/react";
+import Brand from "./Brand";
+import "../assets/scss/footer.scss";
+
+const CONTACT_EMAIL = "alustudio14@gmail.com";
 
 function Footer() {
   // The build year, not the visitor's clock: the prerendered footer and the
@@ -9,26 +13,40 @@ function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="p-3">
-      <div className="container">
-        <div className="d-flex justify-content-between align-items-center">
-          <p className="h1 footer-brand">Babbby</p>
-          <a
-            className="mailto fs-5"
-            href="mailto:alustudio14@gmail.com?subject=[Babbby] Support"
-          >
+    <footer className="footer">
+      <div className="shell footer__inner">
+        <div className="footer__brand">
+          <Link to="/" className="footer__home">
+            <Brand />
+          </Link>
+          <p className="footer__tagline">{t("footer.tagline")}</p>
+          <a className="footer__mail" href={`mailto:${CONTACT_EMAIL}?subject=[Babbby] Support`}>
+            <EnvelopeSimple size={16} weight="bold" aria-hidden="true" />
             {t("footer.contact")}
           </a>
         </div>
-        <p>{t("footer.tagline")}</p>
-        <div className="footer-legal-links mb-2">
-          <Link to="/privacy/">{t("footer.privacy_policy")}</Link>
-          <span className="mx-2">•</span>
-          <Link to="/terms/">{t("footer.terms_of_use")}</Link>
-          <span className="mx-2">•</span>
-          <Link to="/guides/">{t("nav.guides")}</Link>
-        </div>
-        <p>
+
+        <nav className="footer__cols" aria-label="Babbby">
+          <ul>
+            <li>
+              <Link to="/guides/">{t("nav.guides")}</Link>
+            </li>
+            <li>
+              <Link to="/faq/">{t("nav.faq")}</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Link to="/privacy/">{t("footer.privacy_policy")}</Link>
+            </li>
+            <li>
+              <Link to="/terms/">{t("footer.terms_of_use")}</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className="shell">
+        <p className="footer__copy">
           &copy; {thisYear} {t("footer.copyright")}
         </p>
       </div>

@@ -1,0 +1,119 @@
+@use "sass:map";
+@use "sass:list";
+
+// ─── Tokens ─────────────────────────────────────────────────────
+// Spacing, type and radius resolve only through these tables
+// (landing-page-design B1–B3); nothing in between. Mirrors dingpos/.
+$space: (
+  0: 0,
+  25: 2px,
+  50: 4px,
+  75: 8px,
+  100: 12px,
+  200: 16px,
+  300: 24px,
+  400: 32px,
+  500: 40px,
+  600: 48px,
+  700: 64px,
+  800: 80px,
+  900: 96px,
+);
+
+@function s($key) {
+  @return map.get($space, $key);
+}
+
+$type: (
+  "xs": (12px, 16px),
+  "sm": (14px, 20px),
+  "base": (16px, 24px),
+  "lg": (18px, 28px),
+  "xl": (20px, 28px),
+  "2xl": (24px, 32px),
+  "3xl": (30px, 36px),
+  "4xl": (36px, 40px),
+  "5xl": (48px, 1),
+  "6xl": (60px, 1),
+);
+
+@mixin text($key) {
+  $pair: map.get($type, $key);
+  font-size: list.nth($pair, 1);
+  line-height: list.nth($pair, 2);
+}
+
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-2xl: 16px;
+$radius-3xl: 24px;
+$radius-full: 9999px;
+
+// ─── Colour ─────────────────────────────────────────────────────
+// The app's "Soft Earth" palette (babbby-ios DesignSystem/AppColor.swift):
+// linen ivory canvas, white cards, terracotta brand, sage for done.
+$bg: #f8f6f3;
+$surface: #ffffff;
+$sunken: #f2efeb;
+$ink: #1c1c1e;
+$ink-soft: #4f4b47;
+// 5.5:1 on $bg, 5.2:1 on $sunken; the lightest grey allowed for text.
+$ink-muted: #66635f;
+$line: rgba(28, 28, 30, 0.08);
+$line-strong: rgba(28, 28, 30, 0.16);
+
+// Terracotta. $accent is the app's own coral, for shapes only (3.0:1);
+// text and filled buttons use the deeper two (5.5:1 and 5.9:1 on $bg).
+$accent: #c97b63;
+$accent-strong: #9e5440;
+$accent-deep: #8b4f3a;
+$accent-soft: #ebd3c9;
+$accent-wash: #f5ebe6;
+
+// ─── Motion ─────────────────────────────────────────────────────
+// Interface motion (landing-page-design B7).
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+// Scene intros and stories (design-to-motion B6).
+$e: cubic-bezier(0.16, 1, 0.3, 1);
+$e2: cubic-bezier(0.33, 1, 0.68, 1);
+$io: cubic-bezier(0.65, 0, 0.35, 1);
+
+// ─── Type ───────────────────────────────────────────────────────
+// Manrope covers Latin, Cyrillic, Greek and Vietnamese; Chinese, Japanese
+// and Korean use the system face --bb-font-cjk (index.css) picks by page
+// language, so no CJK font downloads (docs/specs/performance.md).
+$font: "Manrope Variable", var(--bb-font-cjk), system-ui, -apple-system, sans-serif;
+// Native language names in the picker: one system face for every script.
+$font-system: system-ui, -apple-system, sans-serif;
+// The app's own faces, for redrawn screens: New York headings over SF Pro
+// (babbby-ios DesignSystem/AppFont.swift). System faces, nothing downloads.
+$app-serif: ui-serif, "New York", Georgia, var(--bb-font-cjk), serif;
+$app-sans: system-ui, -apple-system, "Segoe UI", var(--bb-font-cjk), sans-serif;
+
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+// The floating nav: 16px off the top, 56px tall, 16px clear below it.
+$nav-offset: 88px;
+
+// Hero heading gradient, on the text only (landing-page-design B5). The
+// padding keeps background-clip from cutting off the last line's descenders.
+@mixin ink-gradient {
+  padding-bottom: 0.08em;
+  background: linear-gradient(90deg, #000000, #666666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin hover {
+  // Touch devices fire :hover on tap and leave it stuck.
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

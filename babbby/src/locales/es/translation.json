@@ -2,40 +2,114 @@
   "//": "Generated from en and the es translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- babbby sync es`, then `npm run l10n -- babbby apply es`.",
   "nav": {
     "home": "Inicio",
+    "features": "Funciones",
     "privacy": "Política de privacidad",
     "terms": "Términos de uso",
     "faq": "Preguntas frecuentes",
     "guides": "Guías",
-    "language": "Idioma"
+    "language": "Idioma",
+    "menu": "Menú",
+    "skip": "Saltar al contenido"
   },
   "landing": {
-    "title": "Babbby",
     "meta_title": "Babbby — Ideas de actividades diarias para bebés de 0-6 años",
-    "meta_description": "Babbby, la app de actividades para bebés de 0-6 años: ideas de actividades cada día, seguimiento de hitos del desarrollo y rutinas para disfrutar cada momento.",
-    "subtitle": "Ideas de actividades diarias para tu bebé, de 0 a 6 años. Sigue los hitos del desarrollo, crea rutinas y aprovecha cada día.",
+    "meta_description": "Babbby: hasta seis ideas de juego al día para la edad de tu bebé, de 342 actividades de 0-6 años. Filtra por lo que hay en casa. Sin anuncios ni suscripción.",
     "appstore_sub": "Descárgalo en el",
-    "appstore_main": "App Store",
-    "privacy_link": "Política de privacidad",
-    "terms_link": "Términos de uso"
+    "appstore_main": "App Store"
   },
-  "features": {
-    "heading": "Ideas de actividades diarias de 0 a 6 años, según la edad de tu bebé",
-    "daily_plan": {
-      "title": "El plan de hoy, listo.",
-      "desc": "Abre la app y las actividades ya están listas. Se acabó el «¿qué hacemos hoy?». Solo queda jugar."
+  "home": {
+    "hero": {
+      "eyebrow": "342 ideas de juego de 0 a 6 años",
+      "title": "¿A qué jugamos hoy? Babbby ya tiene un plan.",
+      "description": "Cada día, Babbby elige hasta seis actividades para la edad en meses de tu bebé, repartidas en ocho áreas del desarrollo. La mayoría toma diez minutos o menos.",
+      "note": "Gratis por 14 días; después, un solo pago lo desbloquea para siempre.",
+      "proof": [
+        "Sin anuncios",
+        "Sin suscripción",
+        "No necesitas cuenta"
+      ],
+      "phone_alt": "Pantalla Hoy de Babbby para un bebé de 12 a 18 meses: tres actividades por hacer y una ya completada, con la primera marcándose como completada."
     },
-    "library": {
-      "title": "Más de 340 actividades para elegir",
-      "desc": "Motricidad gruesa, motricidad fina, lenguaje, sensorial… 8 categorías, según la edad de tu bebé."
+    "facts": {
+      "label": "Babbby en cifras",
+      "items": [
+        {
+          "value": "342",
+          "label": "actividades en la biblioteca"
+        },
+        {
+          "value": "8",
+          "label": "áreas del desarrollo"
+        },
+        {
+          "value": "7",
+          "label": "etapas de edad, de recién nacido a seis años"
+        },
+        {
+          "value": "9",
+          "label": "idiomas, con todas las actividades incluidas"
+        }
+      ]
     },
-    "materials": {
-      "title": "Filtra por lo que tienes en casa",
-      "desc": "Elige lo que tienes a la mano (crayones, cartón, bloques) y ve solo las actividades que puedes hacer ahora mismo."
+    "features": {
+      "title": "Ideas que se ajustan a tu bebé y a tu casa",
+      "subtitle": "Babbby adapta cada actividad a la edad de tu bebé y a lo que tienes a la mano, y lleva la cuenta de lo que han hecho juntos.",
+      "age": {
+        "title": "Según su edad",
+        "desc": "Siete etapas, de recién nacido a seis años. Conforme tu bebé crece, el plan diario se adapta."
+      },
+      "materials": {
+        "title": "Juega con lo que hay en casa",
+        "desc": "Marca los materiales que tienes, desde crayones hasta cajas de cartón, y la Biblioteca te muestra lo que puedes empezar ahora. 99 actividades no necesitan nada."
+      },
+      "photos": {
+        "title": "Guarda el momento",
+        "desc": "Agrega hasta tres fotos a cada actividad completada. Cada semana y cada mes, Babbby las reúne en un breve resumen."
+      },
+      "children": {
+        "title": "Un plan para cada bebé",
+        "desc": "Agrega a cada bebé con su fecha de nacimiento. Cada uno tiene su propio plan diario y sus propias estadísticas."
+      },
+      "privacy": {
+        "title": "Se queda en tu dispositivo",
+        "desc": "Sin cuenta y sin anuncios. El nombre de tu bebé, sus planes y sus fotos se guardan solo en tu dispositivo."
+      },
+      "stats": {
+        "title": "Mira cómo pasaron los días",
+        "desc": "Cuenta las actividades completadas por semana, por mes o de todo el tiempo, y descubre en cuáles de las ocho áreas has jugado más."
+      }
     },
-    "stats": {
-      "title": "Lleva un registro de todo",
-      "desc": "Actividades completadas, desglose por categoría, tendencias diarias. Repasa el progreso y descubre cada paso."
+    "tagline": "Sin lista de compras ni planeación de clases. Solo diez minutos y lo que ya hay en casa.",
+    "steps": {
+      "title": "Cómo funciona",
+      "subtitle": "Configúralo una sola vez. Después, ábrelo cuando quieras jugar.",
+      "items": [
+        {
+          "title": "Cuéntale a Babbby sobre tu bebé",
+          "text": "Solo necesita un nombre y una fecha de nacimiento para ajustar las actividades a su edad."
+        },
+        {
+          "title": "Abre Hoy",
+          "text": "Te esperan hasta seis actividades, cada una con pasos breves y un consejo. Cambia cualquiera por otra de la Biblioteca."
+        },
+        {
+          "title": "Márcalas como completadas",
+          "text": "Toca para marcar una como completada y agrega una foto si quieres. Tu semana se suma en Estadísticas y en un resumen semanal."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas que hacen los padres",
+      "more": "Ver todas las preguntas"
+    },
+    "closing": {
+      "title": "Prueba todas las funciones gratis por 14 días",
+      "text": "Descarga Babbby, agrega a tu bebé y el plan de hoy estará listo. Si se gana un lugar en tu rutina, un solo pago te lo deja para siempre. Sin suscripción."
     }
+  },
+  "scene": {
+    "child": "Mochi",
+    "child_initial": "M"
   },
   "footer": {
     "tagline": "Actividades diarias para acompañarte en la crianza",
@@ -208,7 +282,7 @@
     "items": {
       "what_is_babbby": {
         "title": "¿Qué es Babbby?",
-        "answer": "Babbby es una app gratis para iOS que ofrece a las familias con niños de 0 a 6 años un plan diario de actividades ya preparado, así no tienen que pensar qué hacer cada día. Incluye una Biblioteca con 340 actividades o más en 8 categorías, ajustadas automáticamente según la edad, con la opción de filtrar por los materiales que ya tienen en casa y llevar un registro de las actividades completadas con el tiempo."
+        "answer": "Babbby es una app para iPhone y iPad que te da un plan diario de actividades ya preparado para niños de 0 a 6 años, así no tienes que pensar qué hacer cada día con tu bebé. Incluye una Biblioteca de 342 actividades en 8 categorías, elegidas automáticamente según la edad de tu bebé, con la opción de filtrar por los materiales que ya tienes en casa y llevar el registro de las actividades completadas con el tiempo."
       },
       "what_ages": {
         "title": "¿Para qué edades es Babbby?",
@@ -216,7 +290,7 @@
       },
       "is_babbby_free": {
         "title": "¿Babbby es gratis?",
-        "answer": "Sí, Babbby es gratis en la App Store y usar sus funciones principales no requiere suscripción. La única compra disponible es una propina opcional y única, «Invita un café al desarrollador», que se procesa con StoreKit de Apple y no es necesaria para acceder a ninguna actividad ni función."
+        "answer": "Babbby es gratis para descargar y todas sus funciones están desbloqueadas durante los primeros 14 días. Al terminar la prueba, un pago único mantiene todo desbloqueado para siempre; no hay suscripción ni anuncios. Sin el desbloqueo, aún puedes explorar Hoy, la Biblioteca, las Estadísticas y los Resúmenes anteriores, pero agregar o completar actividades y tomar fotos requiere desbloquear Babbby."
       },
       "does_it_need_an_account": {
         "title": "¿Babbby necesita una cuenta o registro?",
@@ -242,7 +316,7 @@
       },
       "what_platforms": {
         "title": "¿En qué plataformas está disponible Babbby?",
-        "answer": "Por ahora, Babbby solo está disponible en iOS, como descarga gratis en la App Store, en las categorías Estilo de vida y Educación."
+        "answer": "Babbby está disponible para iPhone y iPad en la App Store. Es gratis para descargar, con todas las funciones gratis durante los primeros 14 días."
       }
     }
   },

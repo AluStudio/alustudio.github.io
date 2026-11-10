@@ -2,40 +2,114 @@
   "//": "Generated from zh-Hant by scripts/gen-zh-hans.mjs. Do not edit: change the zh-Hant source or the script, then run `npm run zh-hans`.",
   "nav": {
     "home": "首页",
+    "features": "功能",
     "privacy": "隐私政策",
     "terms": "使用条款",
     "faq": "常见问题",
     "guides": "育儿指南",
-    "language": "语言"
+    "language": "语言",
+    "menu": "菜单",
+    "skip": "跳到主要内容"
   },
   "landing": {
-    "title": "Babbby",
     "meta_title": "Babbby — 0–6 岁宝宝每日亲子活动点子",
-    "meta_description": "Babbby 为 0–6 岁宝贝量身推荐每日活动灵感。记录成长、养成日常习惯，让每一天都有意义。",
-    "subtitle": "为 0–6 岁宝贝量身推荐每日活动灵感。记录成长、养成日常习惯，让每一天都有意义。",
+    "meta_description": "Babbby 每天依孩子的年龄，从 342 个 0–6 岁活动挑出最多六个陪玩点子，还能依家里现有材料筛选。没有广告，不用订阅。",
     "appstore_sub": "下载自",
-    "appstore_main": "App Store",
-    "privacy_link": "隐私政策",
-    "terms_link": "使用条款"
+    "appstore_main": "App Store"
   },
-  "features": {
-    "heading": "依宝宝年龄推荐，0–6 岁的每日亲子活动",
-    "daily_plan": {
-      "title": "每天帮你排好了",
-      "desc": "打开 app，今天的活动已经准备好。不用再想“跟宝宝玩什么”，直接开始。"
+  "home": {
+    "hero": {
+      "eyebrow": "342 个 0 到 6 岁的陪玩点子",
+      "title": "今天要陪孩子玩什么？Babbby 已经帮你排好了。",
+      "description": "Babbby 每天依孩子的月龄挑出最多六个活动，平均照顾八个发展领域，大多十分钟内就能玩完。",
+      "note": "前 14 天免费，之后一次买断，永久使用。",
+      "proof": [
+        "没有广告",
+        "不用订阅",
+        "不必注册账号"
+      ],
+      "phone_alt": "Babbby 的“今天”画面：12 到 18 个月宝宝的三个待完成活动和一个已完成活动，第一个正被打勾。"
     },
-    "library": {
-      "title": "340+ 种活动，随时翻",
-      "desc": "大运动、精细动作、语言、感官…… 八大类别，依年龄自动匹配。"
+    "facts": {
+      "label": "Babbby 的数字",
+      "items": [
+        {
+          "value": "342",
+          "label": "个内置活动"
+        },
+        {
+          "value": "8",
+          "label": "个发展领域"
+        },
+        {
+          "value": "7",
+          "label": "个年龄阶段，从新生儿到六岁"
+        },
+        {
+          "value": "9",
+          "label": "种语言，每个活动都有翻译"
+        }
+      ]
     },
-    "materials": {
-      "title": "家里有什么就玩什么",
-      "desc": "选好手边的材料——蜡笔、纸箱、积木——只看你现在能做的活动。"
+    "features": {
+      "title": "配合孩子，也配合你家现有的东西",
+      "subtitle": "Babbby 依孩子的年龄和手边有的材料挑活动，并帮你记下一起玩过的每一个。",
+      "age": {
+        "title": "依年龄匹配",
+        "desc": "从新生儿到六岁分成七个阶段。孩子长大了，每天的计划也跟着换。"
+      },
+      "materials": {
+        "title": "家里有什么就玩什么",
+        "desc": "勾选家里有的材料，从蜡笔到纸箱，活动库就只列出现在能玩的。有 99 个活动什么都不用准备。"
+      },
+      "photos": {
+        "title": "把当下留下来",
+        "desc": "每个完成的活动最多可以加三张照片。每周和每月，Babbby 会把它们整理成一段回顾。"
+      },
+      "children": {
+        "title": "每个孩子一份计划",
+        "desc": "每个孩子各自建档、填上生日，就有自己的每日计划和统计。"
+      },
+      "privacy": {
+        "title": "数据只在你的手机",
+        "desc": "不用账号，没有广告。孩子的名字、计划和照片只存在你的设备上。"
+      },
+      "stats": {
+        "title": "看看这些日子玩了什么",
+        "desc": "依周、月或全部时间统计完成的活动，看看八个发展领域里哪个玩得最多。"
+      }
     },
-    "stats": {
-      "title": "成长不漏记",
-      "desc": "完成的活动、类别分布、每日趋势，一目了然。回头看，每一步都记着。"
+    "tagline": "不用采买，不用备课。十分钟，加上家里现有的东西就够了。",
+    "steps": {
+      "title": "怎么开始",
+      "subtitle": "设置一次就好，之后想玩的时候打开就行。",
+      "items": [
+        {
+          "title": "告诉 Babbby 孩子是谁",
+          "text": "填上名字和生日，就能依年龄匹配活动。"
+        },
+        {
+          "title": "打开“今天”",
+          "text": "最多六个活动已经准备好，每个都有简短玩法和小提示。不想玩的，可以从活动库换一个。"
+        },
+        {
+          "title": "完成就打勾",
+          "text": "点一下标记完成，想的话再拍张照片。整周的累积会出现在统计和每周回顾里。"
+        }
+      ]
+    },
+    "faq": {
+      "title": "爸妈常问的问题",
+      "more": "看所有问题"
+    },
+    "closing": {
+      "title": "所有功能免费用 14 天",
+      "text": "下载 Babbby、加入孩子，今天的计划就准备好了。觉得好用，一次买断就能一直用，不用订阅。"
     }
+  },
+  "scene": {
+    "child": "肉球",
+    "child_initial": "肉"
   },
   "footer": {
     "tagline": "家长的每日活动伙伴",
@@ -208,7 +282,7 @@
     "items": {
       "what_is_babbby": {
         "title": "Babbby 是什么样的 App？",
-        "answer": "Babbby（App Store 上架名称“Babbby — Daily Baby Activities”）是一款免费的 iOS App，专为 0–6 岁孩子的家长设计，每天打开就有现成的活动计划，不用再烦恼“今天要跟宝宝玩什么”。内置 340+ 种活动、共八大类别，会依孩子年龄自动匹配，也能依手边现有材料筛选活动，并记录每天完成的进度。"
+        "answer": "Babbby（App Store 上架名称“Babbby — Daily Baby Activities”）是一款 iPhone 与 iPad App，专为 0–6 岁孩子的家长设计，每天打开就有现成的活动计划，不用再烦恼“今天要跟宝宝玩什么”。内置 342 个活动、共八大类别，会依孩子年龄自动匹配，也能依手边现有材料筛选活动，并记录每天完成的进度。"
       },
       "what_ages": {
         "title": "Babbby 适合几岁的孩子？",
@@ -216,7 +290,7 @@
       },
       "is_babbby_free": {
         "title": "Babbby 需要付费吗？",
-        "answer": "不需要，Babbby 在 App Store 可免费下载，核心功能也不需要订阅。App 内唯一的购买项目是一次性、非必要的“请开发者喝杯咖啡”赞助，通过 Apple StoreKit 处理，不影响任何活动或功能的使用。"
+        "answer": "Babbby 可免费下载，前 14 天所有功能都能使用。试用结束后，一次性购买就能永久解锁，没有订阅，也没有广告。没有购买的话，仍可浏览今天、活动库、统计和过去的回顾，但添加或完成活动、拍照需要解锁。"
       },
       "does_it_need_an_account": {
         "title": "使用 Babbby 需要注册账号吗？",
@@ -242,7 +316,7 @@
       },
       "what_platforms": {
         "title": "Babbby 支持哪些平台？",
-        "answer": "Babbby 目前仅提供 iOS 版本，可在 App Store 免费下载，上架分类为“生活”与“教育”。"
+        "answer": "Babbby 提供 iPhone 与 iPad 版本，可在 App Store 免费下载，所有功能前 14 天都能免费使用。"
       }
     }
   },

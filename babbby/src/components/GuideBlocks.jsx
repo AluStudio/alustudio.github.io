@@ -1,3 +1,5 @@
+import { Lightbulb } from "@phosphor-icons/react";
+
 // Renders a guide's content blocks (schema in src/data/guides/guides.en.js).
 
 function GuideBlocks({ blocks }) {
@@ -17,7 +19,7 @@ function GuideBlocks({ blocks }) {
         );
       case "steps":
         return (
-          <ol key={i} className="guide-steps">
+          <ol key={i}>
             {block.items.map((item, j) => (
               <li key={j}>{item}</li>
             ))}
@@ -25,8 +27,8 @@ function GuideBlocks({ blocks }) {
         );
       case "note":
         return (
-          <div key={i} className="guide-note">
-            <i className="bi bi-lightbulb" aria-hidden="true"></i>
+          <div key={i} className="note">
+            <Lightbulb size={20} weight="duotone" aria-hidden="true" />
             <p>{block.text}</p>
           </div>
         );

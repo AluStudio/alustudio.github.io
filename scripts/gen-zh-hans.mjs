@@ -352,11 +352,6 @@ const BABBBY_OVERRIDES = {
   ],
   "ui:privacy_policy.info_collection.items.2": ["使用數據，例如功能互動、使用時長及瀏覽畫面", "使用数据，例如功能交互、使用时长及访问页面"],
   "ui:privacy_policy.rights.gdpr_items.4": ["資料可攜性的權利", "数据可携带权"],
-  // The mainland App Store names the Lifestyle category 生活.
-  "ui:faq.items.what_platforms.answer": [
-    "Babbby 目前僅提供 iOS 版本，可在 App Store 免費下載，上架分類為「生活風格」與「教育」。",
-    "Babbby 目前仅提供 iOS 版本，可在 App Store 免费下载，上架分类为“生活”与“教育”。",
-  ],
 };
 
 export const APPS = {

@@ -1,40 +1,114 @@
 {
   "nav": {
     "home": "Home",
+    "features": "Features",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "faq": "FAQ",
     "guides": "Guides",
-    "language": "Language"
+    "language": "Language",
+    "menu": "Menu",
+    "skip": "Skip to content"
   },
   "landing": {
-    "title": "Babbby",
     "meta_title": "Babbby — Daily Baby Activity Ideas for Ages 0–6",
-    "meta_description": "Babbby — Daily activity ideas for your little one, ages 0–6. Track milestones, build routines, and make every day count.",
-    "subtitle": "Daily activity ideas for your little one, ages 0–6. Track milestones, build routines, and make every day count.",
+    "meta_description": "Babbby picks up to six play ideas a day for your child's age, from 342 activities for ages 0–6. Filter by what's at home. No ads, no subscription.",
     "appstore_sub": "Download on the",
-    "appstore_main": "App Store",
-    "privacy_link": "Privacy Policy",
-    "terms_link": "Terms of Use"
+    "appstore_main": "App Store"
   },
-  "features": {
-    "heading": "Daily play ideas for ages 0–6, matched to your child's age",
-    "daily_plan": {
-      "title": "Today's plan, done.",
-      "desc": "Open the app — activities are ready. No more \"what should we do today?\" Just start playing."
+  "home": {
+    "hero": {
+      "eyebrow": "342 play ideas for ages 0 to 6",
+      "title": "What should we play today? Babbby already has a plan.",
+      "description": "Every day, Babbby picks up to six activities for your child's age in months, balanced across eight areas of development. Most take ten minutes or less.",
+      "note": "Free for 14 days, then one purchase unlocks it for good.",
+      "proof": [
+        "No ads",
+        "No subscription",
+        "No account needed"
+      ],
+      "phone_alt": "Babbby's Today screen for a 12 to 18 month old: three activities to do and one already done, with the first being checked off."
     },
-    "library": {
-      "title": "340+ activities to pick from",
-      "desc": "Gross motor, fine motor, language, sensory… 8 categories, matched to your child's age."
+    "facts": {
+      "label": "Babbby in numbers",
+      "items": [
+        {
+          "value": "342",
+          "label": "activities in the library"
+        },
+        {
+          "value": "8",
+          "label": "areas of development"
+        },
+        {
+          "value": "7",
+          "label": "age stages, newborn to six"
+        },
+        {
+          "value": "9",
+          "label": "languages, every activity included"
+        }
+      ]
     },
-    "materials": {
-      "title": "Filter by what you have",
-      "desc": "Pick the stuff at hand — crayons, cardboard, blocks — and see only activities you can do right now."
+    "features": {
+      "title": "Ideas that fit your child and your home",
+      "subtitle": "Babbby matches every activity to your child's age and to what you have on hand, then keeps count of what you've done together.",
+      "age": {
+        "title": "Matched to their age",
+        "desc": "Seven stages from newborn to six. As your child grows, the daily plan grows with them."
+      },
+      "materials": {
+        "title": "Play with what's at home",
+        "desc": "Mark the materials you have, from crayons to cardboard boxes, and the library shows what you can start now. 99 activities need nothing at all."
+      },
+      "photos": {
+        "title": "Keep the moment",
+        "desc": "Add up to three photos to each finished activity. Every week and month, Babbby gathers them into a short review."
+      },
+      "children": {
+        "title": "A plan for each child",
+        "desc": "Add every child with their birthday. Each one gets a daily plan and stats of their own."
+      },
+      "privacy": {
+        "title": "Stays on your phone",
+        "desc": "No account and no ads. Your child's name, plans and photos are stored only on your device."
+      },
+      "stats": {
+        "title": "See where the days went",
+        "desc": "Count finished activities by week, by month or all time, and see which of the eight areas you've played most."
+      }
     },
-    "stats": {
-      "title": "Track it all",
-      "desc": "Completed activities, category breakdown, daily trends. Look back and see every step."
+    "tagline": "No shopping list, no lesson plan. Just ten minutes and whatever is already at home.",
+    "steps": {
+      "title": "How it works",
+      "subtitle": "Set it up once. After that, open it whenever you're ready to play.",
+      "items": [
+        {
+          "title": "Tell Babbby about your child",
+          "text": "A name and a birthday are all it needs to match activities to their age."
+        },
+        {
+          "title": "Open Today",
+          "text": "Up to six activities are waiting, each with short steps and a tip. Swap any of them for another from the library."
+        },
+        {
+          "title": "Check them off",
+          "text": "Tap to mark one done and add a photo if you like. Your week adds up in Stats and in a weekly review."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Questions parents ask",
+      "more": "See all questions"
+    },
+    "closing": {
+      "title": "Try every feature free for 14 days",
+      "text": "Download Babbby, add your child, and today's plan is ready. If it earns a place in your routine, one purchase keeps it for good. No subscription."
     }
+  },
+  "scene": {
+    "child": "Mochi",
+    "child_initial": "M"
   },
   "footer": {
     "tagline": "Daily activity companion for parents",
@@ -207,7 +281,7 @@
     "items": {
       "what_is_babbby": {
         "title": "What is Babbby?",
-        "answer": "Babbby — Daily Baby Activities is a free iOS app that gives parents of children ages 0–6 a ready-made daily activity plan, so there's no need to figure out what to do with your child each day. It includes a library of 340+ activities across 8 categories, matched automatically to your child's age, with the option to filter by materials you already have at home and track completed activities over time."
+        "answer": "Babbby — Daily Baby Activities is an iPhone and iPad app that gives parents of children ages 0–6 a ready-made daily activity plan, so there's no need to figure out what to do with your child each day. It includes a library of 342 activities across 8 categories, matched automatically to your child's age, with the option to filter by materials you already have at home and track completed activities over time."
       },
       "what_ages": {
         "title": "What ages is Babbby designed for?",
@@ -215,7 +289,7 @@
       },
       "is_babbby_free": {
         "title": "Is Babbby free?",
-        "answer": "Yes, Babbby is free to download on the App Store, and using its core features does not require a subscription. The only purchase available is an optional, one-time \"Buy the Developer a Coffee\" tip processed through Apple's StoreKit, which is not required to access any activity or feature."
+        "answer": "Babbby is free to download, and every feature is unlocked for the first 14 days. After the trial, a single purchase keeps everything unlocked for good; there is no subscription and there are no ads. Without it you can still browse Today, the library, stats and past reviews, but adding or completing activities and taking photos need the unlock."
       },
       "does_it_need_an_account": {
         "title": "Does Babbby require an account or sign-up?",
@@ -241,7 +315,7 @@
       },
       "what_platforms": {
         "title": "What platforms is Babbby available on?",
-        "answer": "Babbby is currently available on iOS only, as a free download from the App Store under the Lifestyle and Education categories."
+        "answer": "Babbby is available for iPhone and iPad on the App Store. It is free to download, with every feature free for the first 14 days."
       }
     }
   },
