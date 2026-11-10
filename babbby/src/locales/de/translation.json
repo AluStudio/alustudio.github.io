@@ -13,7 +13,7 @@
   },
   "landing": {
     "meta_title": "Babbby – Baby-Aktivitäten-App mit täglichen Ideen für 0–6 Jahre",
-    "meta_description": "Baby-Aktivitäten-App: bis zu 6 Aktivitätsideen pro Tag fürs Alter deines Kindes, aus 342 Aktivitäten (0–6 Jahre). Nach Material filtern. Keine Werbung, kein Abo",
+    "meta_description": "Baby-Aktivitäten-App: bis zu 6 Aktivitätsideen pro Tag fürs Alter deines Babys, aus 342 Aktivitäten (0–6 Jahre). Nach Material filtern. Keine Werbung, kein Abo",
     "appstore_sub": "Laden im",
     "appstore_main": "App Store"
   },
@@ -290,7 +290,7 @@
       },
       "is_babbby_free": {
         "title": "Ist Babbby kostenlos?",
-        "answer": "Babbby kannst du kostenlos laden, und in den ersten 14 Tagen sind alle Funktionen freigeschaltet. Nach der Testphase schaltet ein einziger Einmalkauf alles für immer frei; es gibt kein Abo und keine Werbung. Ohne Freischaltung kannst du dir weiterhin Heute, die Bibliothek, die Statistik und frühere Rückblicke ansehen, doch Aktivitäten hinzufügen oder erledigen und Fotos aufnehmen geht nur mit der Freischaltung."
+        "answer": "Babbby kannst du kostenlos laden, und in den ersten 14 Tagen sind alle Funktionen freigeschaltet. Nach der Testphase schaltet ein einziger Kauf alles für immer frei; es gibt kein Abo und keine Werbung. Ohne Freischaltung kannst du dir weiterhin „Heute“, die Bibliothek, die Statistik und frühere Rückblicke ansehen. Aktivitäten hinzufügen, als erledigt markieren und Fotos aufnehmen kannst du nur mit der Freischaltung."
       },
       "does_it_need_an_account": {
         "title": "Brauche ich für Babbby ein Konto oder eine Registrierung?",
