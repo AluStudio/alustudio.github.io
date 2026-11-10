@@ -27,7 +27,7 @@
   },
   "babbby": {
     "tagline": "매일 하는 0~6세 활동 아이디어",
-    "desc": "성장 이정표를 기록하고, 생활 루틴을 만들고, 아이 연령에 맞춘 340개 이상의 활동 중에서 골라 보세요."
+    "desc": "Babbby는 모든 활동을 아이의 연령과 집에 있는 준비물에 맞춰 보여 주고, 함께 마친 활동을 차곡차곡 세어 줘요."
   },
   "sotto": {
     "tagline": "사소하지만 소중한 것들을 기억하세요",
@@ -163,6 +163,48 @@
           "meta": "Granville Island · 2월 17일"
         }
       ]
+    },
+    "babbby": {
+      "title": "오늘",
+      "child": "모찌",
+      "child_initial": "모",
+      "week": "11월 1일~7일",
+      "days": [
+        "일",
+        "월",
+        "화",
+        "수",
+        "목",
+        "금",
+        "토"
+      ],
+      "age": "12~18개월",
+      "activities": [
+        {
+          "name": "공 차기 놀이",
+          "category": "대근육",
+          "category_id": "gross_motor"
+        },
+        {
+          "name": "모양 넣기 상자",
+          "category": "인지",
+          "category_id": "cognitive"
+        },
+        {
+          "name": "크레용 낙서 시간",
+          "category": "소근육",
+          "category_id": "fine_motor"
+        }
+      ],
+      "tabs": [
+        "오늘",
+        "라이브러리",
+        "통계",
+        "설정"
+      ],
+      "stats_range": "7일",
+      "stats_label": "완료한 활동",
+      "stats_trend": "일별 추이"
     }
   }
 }

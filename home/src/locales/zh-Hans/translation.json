@@ -27,7 +27,7 @@
   },
   "babbby": {
     "tagline": "为 0 到 6 岁宝贝推荐每日活动",
-    "desc": "记录成长里程碑、建立日常作息，从 340 多个按年龄挑选的活动开始。"
+    "desc": "Babbby 依孩子的年龄和手边有的材料挑活动，并帮你记下一起玩过的每一个。"
   },
   "sotto": {
     "tagline": "记住每一个重要的细节",
@@ -137,6 +137,48 @@
           "value": "1993/08/30"
         }
       ]
+    },
+    "babbby": {
+      "title": "今天",
+      "child": "肉球",
+      "child_initial": "肉",
+      "week": "11/1 – 11/7",
+      "days": [
+        "日",
+        "一",
+        "二",
+        "三",
+        "四",
+        "五",
+        "六"
+      ],
+      "age": "12-18 个月",
+      "activities": [
+        {
+          "name": "踢球大战",
+          "category": "大肢体运动",
+          "category_id": "gross_motor"
+        },
+        {
+          "name": "形状投入箱",
+          "category": "思考探索",
+          "category_id": "cognitive"
+        },
+        {
+          "name": "蜡笔涂鸦",
+          "category": "小肌肉操作",
+          "category_id": "fine_motor"
+        }
+      ],
+      "tabs": [
+        "今天",
+        "活动库",
+        "统计",
+        "设置"
+      ],
+      "stats_range": "7 天",
+      "stats_label": "已完成活动",
+      "stats_trend": "每日趋势"
     }
   }
 }

@@ -2,6 +2,7 @@ import { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import {
   BatteryFull,
+  BookOpen,
   Bread,
   Cake,
   CaretLeft,
@@ -12,15 +13,20 @@ import {
   Coffee,
   Cookie,
   DotsThree,
+  GearSix,
+  HandPalm,
   HourglassMedium,
   Leaf,
   MagnifyingGlass,
   OrangeSlice,
   Package,
   PencilSimple,
+  PersonSimpleRun,
   Plus,
+  PuzzlePiece,
   Receipt,
   ShoppingCartSimple,
+  Sun,
   User,
   UsersThree,
   WifiHigh,
@@ -306,16 +312,26 @@ function PikgeonScene({ lng }) {
 }
 
 // ─── Babbby ─────────────────────────────────────────────────────
-// Today's first activity is checked off and this week's chart grows.
+// Today's first activity is checked off and this week's chart grows. The
+// screen is babbby-ios 2.x ("Soft Earth"); its strings are the app's own, the
+// child and the chart are demo data.
 
 const babbbySteps = [
   { done: false, ms: 3400 },
   { done: false, tap: true, ms: 280 },
   { done: true, ms: 2600 },
 ];
-const weekBars = [2, 3, 1, 4, 2, 3, 0];
-const TODAY = 5;
+// The calendar week the strings were synced for, Sunday to Saturday; today is Saturday.
+const weekBars = [2, 3, 1, 4, 2, 3, 1];
+const TODAY = 6;
 const BAR_MAX = 5;
+// The app's category glyphs (ActivityCategory.icon), as Phosphor icons.
+const categoryIcons = {
+  gross_motor: [PersonSimpleRun, "bold"],
+  cognitive: [PuzzlePiece, "fill"],
+  fine_motor: [HandPalm, "regular"],
+};
+const babbbyTabs = [Sun, BookOpen, ChartBar, GearSix];
 
 function BabbbyScene({ lng }) {
   const s = useScene("babbby", lng);
@@ -330,58 +346,79 @@ function BabbbyScene({ lng }) {
         <div className="bb__nav">
           <span className="bb__title">{s.title}</span>
           <span className="bb__circle">
-            <PencilSimple size={14} weight="bold" />
+            <PencilSimple size={14} />
           </span>
         </div>
-        <div className="bb__child">
-          <span className="bb__avatar">{s.child_initial}</span>
-          {s.child}
+        <div className="bb__babies">
+          <span className="bb__child">
+            <span className="bb__avatar">{s.child_initial}</span>
+            {s.child}
+          </span>
+          <span className="bb__add">
+            <Plus size={12} />
+          </span>
         </div>
+        <p className="bb__range">{s.week}</p>
         <div className="bb__week">
           {s.days.map((day, i) => (
-            <span key={i} className="bb__day" data-today={i === TODAY || undefined} data-future={i > TODAY || undefined}>
+            <span key={i} className="bb__day" data-today={i === TODAY || undefined}>
               <span>{day}</span>
-              <span className="bb__date">{8 + i}</span>
+              <span className="bb__date">{i + 1}</span>
             </span>
           ))}
         </div>
         <ul className="bb__list">
-          {s.activities.map((activity, i) => (
-            <li key={activity.name} className="bb__card" data-done={(i === 0 && step.done) || undefined}>
-              <span className="bb__check" data-tapped={(i === 0 && step.tap) || undefined}>
-                <span className="bb__check-fill">
-                  <Check size={12} weight="bold" />
-                </span>
-                {i === 0 && step.done && (
-                  <span className="bb__burst">
-                    {Array.from({ length: 6 }, (_, k) => (
-                      <span key={k} style={{ "--a": `${k * 60}deg` }} />
-                    ))}
+          {s.activities.map((activity, i) => {
+            const [Icon, weight] = categoryIcons[activity.category_id];
+            return (
+              <li key={activity.category_id} className={`bb__card bb--${activity.category_id}`} data-done={(i === 0 && step.done) || undefined}>
+                <span className="bb__check" data-tapped={(i === 0 && step.tap) || undefined}>
+                  <span className="bb__check-fill">
+                    <Check size={12} weight="bold" />
                   </span>
-                )}
-              </span>
-              <span className="bb__card-text">
-                <span className="bb__card-title">{activity.name}</span>
-                <span className="bb__chips">
-                  <span className={`bb__chip bb__chip--${activity.category_id}`}>
-                    {activity.emoji} {activity.category}
-                  </span>
-                  <span className="bb__chip bb__chip--age">{s.age}</span>
+                  {i === 0 && step.done && (
+                    <span className="bb__burst">
+                      {Array.from({ length: 6 }, (_, k) => (
+                        <span key={k} style={{ "--a": `${k * 60}deg` }} />
+                      ))}
+                    </span>
+                  )}
                 </span>
-              </span>
-            </li>
-          ))}
+                <span className="bb__card-text">
+                  <span className="bb__card-title">{activity.name}</span>
+                  <span className="bb__chips">
+                    <span className="bb__chip">
+                      <Icon size={11} weight={weight} />
+                      {activity.category}
+                    </span>
+                    <span className="bb__age">{s.age}</span>
+                  </span>
+                </span>
+              </li>
+            );
+          })}
         </ul>
+        <div className="bb__tabs">
+          {babbbyTabs.map((Icon, i) => (
+            <span key={i} className="bb__tab" data-active={i === 0 || undefined}>
+              <Icon size={16} />
+              {s.tabs[i]}
+            </span>
+          ))}
+        </div>
       </Phone>
 
       <div className="bb__stats">
-        <p className="bb__stats-title">{s.week}</p>
+        <div className="bb__stats-head">
+          <p className="bb__stats-title">{s.stats_trend}</p>
+          <span className="bb__range-pill">{s.stats_range}</span>
+        </div>
         <p className="bb__stats-count">
           <span key={total} className="bb__tick">
             {total}
           </span>
-          <span>{s.done_label}</span>
         </p>
+        <p className="bb__stats-label">{s.stats_label}</p>
         <div className="bb__bars">
           {bars.map((value, i) => (
             <span key={i} className="bb__bar-col">

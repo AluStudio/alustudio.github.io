@@ -27,7 +27,7 @@
   },
   "babbby": {
     "tagline": "Daily activity ideas for ages 0 to 6",
-    "desc": "Track milestones, build routines, and pick from 340+ activities matched to your child's age."
+    "desc": "Babbby matches every activity to your child's age and to what you have on hand, then keeps count of what you've done together."
   },
   "sotto": {
     "tagline": "Remember the details that matter",
@@ -168,6 +168,7 @@
       "title": "Today",
       "child": "Mochi",
       "child_initial": "M",
+      "week": "Nov 1 – 7",
       "days": [
         "S",
         "M",
@@ -177,29 +178,33 @@
         "F",
         "S"
       ],
-      "age": "12–18 months",
+      "age": "12-18 months",
       "activities": [
         {
-          "name": "Up and Down Stairs",
+          "name": "Kick-the-Ball Game",
           "category": "Gross Motor",
-          "category_id": "gross_motor",
-          "emoji": "🏃"
+          "category_id": "gross_motor"
         },
         {
-          "name": "Color Sorting",
+          "name": "Shape Drop Box",
           "category": "Cognitive",
-          "category_id": "cognitive",
-          "emoji": "🧩"
+          "category_id": "cognitive"
         },
         {
           "name": "Crayon Scribble Time",
           "category": "Fine Motor",
-          "category_id": "fine_motor",
-          "emoji": "✋"
+          "category_id": "fine_motor"
         }
       ],
-      "week": "This week",
-      "done_label": "activities done"
+      "tabs": [
+        "Today",
+        "Library",
+        "Stats",
+        "Settings"
+      ],
+      "stats_range": "7 Days",
+      "stats_label": "Activities Completed",
+      "stats_trend": "Daily Trend"
     }
   }
 }
