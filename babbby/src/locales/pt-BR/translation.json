@@ -2,40 +2,114 @@
   "//": "Generated from en and the pt-BR translations by scripts/l10n.mjs. Do not edit: translate through `npm run l10n -- babbby sync pt-BR`, then `npm run l10n -- babbby apply pt-BR`.",
   "nav": {
     "home": "Início",
+    "features": "Recursos",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Uso",
     "faq": "Perguntas frequentes",
     "guides": "Guias",
-    "language": "Idioma"
+    "language": "Idioma",
+    "menu": "Menu",
+    "skip": "Ir para o conteúdo"
   },
   "landing": {
-    "title": "Babbby",
     "meta_title": "Babbby — Ideias de atividades para bebês e crianças de 0 a 6 anos",
-    "meta_description": "Babbby: app de atividades para crianças de 0 a 6 anos, com ideias diárias para brincar. Acompanhe marcos, crie rotinas e aproveite cada dia.",
-    "subtitle": "Ideias diárias de atividades para brincar com a criança, de 0 a 6 anos. Acompanhe marcos, crie rotinas e faça cada dia valer a pena.",
+    "meta_description": "Até seis brincadeiras por dia para a idade da criança, entre 342 atividades de 0 a 6 anos. Filtre pelo que tem em casa. Sem anúncios nem assinatura.",
     "appstore_sub": "Baixe na",
-    "appstore_main": "App Store",
-    "privacy_link": "Política de Privacidade",
-    "terms_link": "Termos de Uso"
+    "appstore_main": "App Store"
   },
-  "features": {
-    "heading": "Ideias de atividades para brincar de 0 a 6 anos, de acordo com a idade da criança",
-    "daily_plan": {
-      "title": "Plano de hoje, pronto.",
-      "desc": "Abra o app e as atividades já estão lá. Chega de “o que vamos fazer hoje?”. É só começar a brincar."
+  "home": {
+    "hero": {
+      "eyebrow": "342 ideias de brincadeiras para crianças de 0 a 6 anos",
+      "title": "Do que vamos brincar hoje? O Babbby já tem um plano.",
+      "description": "Todos os dias, o Babbby escolhe até seis atividades para a idade da criança em meses, equilibradas entre oito áreas do desenvolvimento. A maioria leva dez minutos ou menos.",
+      "note": "Teste grátis por 14 dias; depois, uma compra única libera tudo para sempre.",
+      "proof": [
+        "Sem anúncios",
+        "Sem assinatura",
+        "Sem precisar de conta"
+      ],
+      "phone_alt": "Tela Hoje do Babbby para uma criança de 12 a 18 meses: três atividades a fazer e uma já concluída, com a primeira sendo marcada como concluída."
     },
-    "library": {
-      "title": "Mais de 340 atividades para escolher",
-      "desc": "Motricidade ampla, motricidade fina, linguagem, sensorial… 8 categorias, de acordo com a idade da criança."
+    "facts": {
+      "label": "O Babbby em números",
+      "items": [
+        {
+          "value": "342",
+          "label": "atividades na Biblioteca"
+        },
+        {
+          "value": "8",
+          "label": "áreas do desenvolvimento"
+        },
+        {
+          "value": "7",
+          "label": "faixas etárias, do recém-nascido aos seis anos"
+        },
+        {
+          "value": "9",
+          "label": "idiomas, com todas as atividades incluídas"
+        }
+      ]
     },
-    "materials": {
-      "title": "Filtre pelo que você tem",
-      "desc": "Escolha o que você tem à mão — giz de cera, papelão, blocos — e veja só as atividades que dá para fazer agora."
+    "features": {
+      "title": "Ideias que combinam com a criança e com a sua casa",
+      "subtitle": "O Babbby ajusta cada atividade à idade da criança e ao que você tem à mão, e depois registra o que vocês já fizeram juntos.",
+      "age": {
+        "title": "Na medida da idade",
+        "desc": "Sete faixas etárias, do recém-nascido aos seis anos. À medida que a criança cresce, o plano diário cresce junto."
+      },
+      "materials": {
+        "title": "Brinque com o que tem em casa",
+        "desc": "Marque os materiais que você tem, de giz de cera a caixas de papelão, e a Biblioteca mostra o que dá para começar agora. 99 atividades não precisam de nada."
+      },
+      "photos": {
+        "title": "Guarde o momento",
+        "desc": "Adicione até três fotos a cada atividade concluída. Toda semana e todo mês, o Babbby reúne as fotos em um resumo curto."
+      },
+      "children": {
+        "title": "Um plano para cada criança",
+        "desc": "Adicione cada criança com a data de aniversário. Cada uma recebe um plano diário e estatísticas próprias."
+      },
+      "privacy": {
+        "title": "Fica no seu dispositivo",
+        "desc": "Sem conta e sem anúncios. O nome da criança, os planos e as fotos ficam armazenados apenas no seu dispositivo."
+      },
+      "stats": {
+        "title": "Veja como foram os dias",
+        "desc": "Conte as atividades concluídas por semana, por mês ou no total, e veja em quais das oito áreas vocês mais brincaram."
+      }
     },
-    "stats": {
-      "title": "Acompanhe tudo",
-      "desc": "Atividades concluídas, divisão por categoria, tendências diárias. Olhe para trás e veja cada passo."
+    "tagline": "Sem lista de compras, sem plano de aula. Só dez minutos e o que você já tem em casa.",
+    "steps": {
+      "title": "Como funciona",
+      "subtitle": "Configure uma vez. Depois, é só abrir quando for hora de brincar.",
+      "items": [
+        {
+          "title": "Apresente a criança ao Babbby",
+          "text": "Um nome e uma data de aniversário bastam para ajustar as atividades à idade da criança."
+        },
+        {
+          "title": "Abra a aba Hoje",
+          "text": "Até seis atividades esperam por você, cada uma com passos curtos e uma dica. Troque qualquer uma por outra da Biblioteca."
+        },
+        {
+          "title": "Marque como concluídas",
+          "text": "Toque para marcar uma como concluída e adicione uma foto, se quiser. Sua semana vai se somando em Estatísticas e no resumo semanal."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Perguntas de pais e responsáveis",
+      "more": "Ver todas as perguntas"
+    },
+    "closing": {
+      "title": "Teste todos os recursos grátis por 14 dias",
+      "text": "Baixe o Babbby, adicione a criança e o plano de hoje já está pronto. Se ele ganhar espaço na sua rotina, uma compra única garante o app para sempre. Sem assinatura."
     }
+  },
+  "scene": {
+    "child": "Mochi",
+    "child_initial": "M"
   },
   "footer": {
     "tagline": "Companheiro de atividades diárias para pais e responsáveis",
@@ -47,8 +121,8 @@
   "privacy_policy": {
     "title": "Política de Privacidade",
     "meta_description": "Como o Babbby trata os seus dados: o que é coletado, como é armazenado e quais escolhas você tem.",
-    "effective_date": "Data de vigência: 13 de março de 2026",
-    "intro": "Esta política de privacidade se aplica ao app Babbby para iOS (“Aplicativo”), criado pela Alu Studio (“Prestador de Serviço”) como um serviço gratuito. Este serviço é oferecido “NO ESTADO EM QUE SE ENCONTRA”. Ao usar o Aplicativo, você concorda com a coleta e o uso de informações conforme descrito nesta política.",
+    "effective_date": "Data de vigência: 10 de novembro de 2026",
+    "intro": "Esta política de privacidade se aplica ao app Babbby (“Aplicativo”) para iPhone e iPad, criado pela Alu Studio (“Prestador de Serviço”). Este serviço é oferecido “NO ESTADO EM QUE SE ENCONTRA”. Ao usar o Aplicativo, você concorda com a coleta e o uso de informações conforme descrito nesta política.",
     "info_collection": {
       "title": "Coleta e uso de informações",
       "desc": "O Aplicativo pode coletar certas informações automaticamente quando você o baixa e o utiliza, por meio de serviços de terceiros integrados. Essas informações podem incluir:",
@@ -62,11 +136,11 @@
     },
     "local_storage": {
       "title": "Armazenamento local de dados",
-      "desc": "Todo o conteúdo criado pelo usuário — incluindo perfis de crianças, registros de atividades, registros de conclusão e estatísticas — é armazenado exclusivamente no seu dispositivo, em um banco de dados local (GRDB/SQLite). Esses dados nunca são transmitidos aos servidores da Alu Studio nem a terceiros. Se você desinstalar o Aplicativo, todos os dados locais serão apagados permanentemente."
+      "desc": "Tudo o que você cria no Aplicativo, incluindo os perfis das crianças (nome, data de nascimento e foto opcional), planos de atividades, registros de conclusão, anotações, fotos das atividades e estatísticas, é armazenado apenas no seu dispositivo. Nada disso é enviado à Alu Studio nem a terceiros. Como os demais dados de apps, ele pode ser incluído nos backups do dispositivo que você faz com o iCloud ou com um computador, conforme os seus ajustes de backup. O Aplicativo usa a câmera ou a sua Fototeca somente quando você escolhe adicionar uma foto, e apenas as fotos que você seleciona são copiadas para ele. O único item mantido fora do Aplicativo é a data de início do seu teste grátis, armazenada no Keychain do iOS para que reinstalar o Aplicativo não reinicie o teste; ela contém somente essa data."
     },
     "iap": {
       "title": "Compras dentro do app",
-      "desc": "O Aplicativo oferece uma compra opcional de apoio ao desenvolvedor, em pagamento único (“Pague um café ao desenvolvedor”), por meio do StoreKit da Apple. Todo o processamento de pagamentos é feito inteiramente pela Apple. A Alu Studio não coleta nem armazena nenhuma informação de pagamento, dados de cartão de crédito ou credenciais do Apple ID, e não tem acesso a eles."
+      "desc": "O Aplicativo oferece uma compra opcional dentro do app, o Vitalício, por meio do StoreKit da Apple. Todo o processamento de pagamentos é feito inteiramente pela Apple. A Alu Studio não coleta nem armazena nenhuma informação de pagamento, dados de cartão de crédito ou credenciais do Apple ID, e não tem acesso a eles."
     },
     "activity_disclaimer": {
       "title": "Recomendações de atividades",
@@ -88,11 +162,11 @@
     },
     "data_retention": {
       "title": "Retenção de dados",
-      "desc": "Todos os dados de atividades e os ajustes do app são armazenados localmente no seu dispositivo e nunca são transmitidos aos nossos servidores. Os dados coletados por serviços de terceiros (Firebase Analytics, Firebase Crashlytics) são retidos de acordo com as respectivas políticas de retenção de dados. Para apagar os dados locais, desinstale o Aplicativo ou limpe os dados dele nos ajustes do seu dispositivo."
+      "desc": "Os dados de atividades, as fotos e os ajustes do app são armazenados localmente no seu dispositivo e nunca são transmitidos aos nossos servidores. Os dados coletados por serviços de terceiros (Firebase Analytics, Firebase Crashlytics) são retidos de acordo com as respectivas políticas de retenção de dados. Desinstalar o Aplicativo apaga permanentemente os dados dele do seu dispositivo. A data de início do teste permanece no Keychain do iOS após a desinstalação."
     },
     "children": {
       "title": "Privacidade das crianças",
-      "desc": "O Aplicativo é uma ferramenta feita para pais e responsáveis planejarem atividades para suas crianças (de 0 a 6 anos). Ele não se destina ao uso direto por crianças. Não coletamos intencionalmente informações de identificação pessoal de menores de 13 anos. As informações do perfil da criança (nome, data de nascimento) são armazenadas apenas no dispositivo e nunca são transmitidas. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco pelo e-mail alustudio14@gmail.com."
+      "desc": "O Aplicativo é uma ferramenta feita para pais e responsáveis planejarem atividades para suas crianças (de 0 a 6 anos). Ele não se destina ao uso direto por crianças. Não coletamos intencionalmente informações de identificação pessoal de menores de 13 anos. As informações do perfil da criança (nome, data de nascimento e foto opcional) e as fotos das atividades são armazenadas apenas no dispositivo e nunca são enviadas à Alu Studio nem a terceiros. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco pelo e-mail alustudio14@gmail.com."
     },
     "rights": {
       "title": "Seus direitos e escolhas",
@@ -129,11 +203,15 @@
   "terms": {
     "title": "Termos de Uso",
     "meta_description": "Termos de Uso do Babbby, o app de atividades diárias para bebês da Alu Studio.",
-    "effective_date": "Data de vigência: 13 de março de 2026",
-    "intro": "Estes termos e condições se aplicam ao aplicativo Babbby («Aplicativo») para iOS, criado pela Alu Studio («Prestador de Serviço») como um serviço gratuito. Ao baixar ou usar o Aplicativo, você concorda com estes termos.",
+    "effective_date": "Data de vigência: 10 de novembro de 2026",
+    "intro": "Estes termos e condições se aplicam ao aplicativo Babbby («Aplicativo») para iPhone e iPad, criado pela Alu Studio («Prestador de Serviço»). Ao baixar ou usar o Aplicativo, você concorda com estes termos.",
     "license": {
       "title": "Licença de Uso",
       "desc": "O Prestador de Serviço concede a você uma licença limitada, não exclusiva, intransferível e revogável para usar o Aplicativo para fins pessoais e não comerciais, de acordo com estes termos."
+    },
+    "purchases": {
+      "title": "Teste e Compra",
+      "desc": "O Aplicativo é gratuito para baixar, e todos os recursos ficam disponíveis por 14 dias a partir da primeira abertura. Após o teste, adicionar ou concluir atividades, adicionar um bebê e adicionar fotos exigem o Vitalício, uma compra única no app, sem assinatura. Consultar seus planos, a Biblioteca de atividades, as Estatísticas e os resumos continua disponível sem ele. As compras são processadas pela Apple e estão sujeitas aos termos da Apple, incluindo a política de reembolso. Se você baixou o Babbby quando ele ainda era um aplicativo pago, você mantém o acesso completo sem comprar o Vitalício."
     },
     "restrictions": {
       "title": "Restrições",
@@ -153,7 +231,7 @@
         "A supervisão das crianças durante qualquer atividade sugerida pelo Aplicativo é de responsabilidade exclusiva dos pais e responsáveis",
         "As recomendações por idade são orientações gerais; cada criança se desenvolve de um jeito, e cabe aos pais e responsáveis avaliar se cada atividade é adequada para a criança",
         "O Aplicativo não substitui a consulta a pediatras, terapeutas ou outros profissionais qualificados",
-        "O desenvolvedor não assume nenhuma responsabilidade por lesão, dano ou consequência decorrente da realização das atividades sugeridas"
+        "O Prestador de Serviço não assume nenhuma responsabilidade por lesão, dano ou consequência decorrente da realização das atividades sugeridas"
       ]
     },
     "third_party": {
@@ -208,7 +286,7 @@
     "items": {
       "what_is_babbby": {
         "title": "O que é o Babbby?",
-        "answer": "O Babbby — Atividades diárias para bebês é um app gratuito para iOS que oferece a pais e responsáveis de crianças de 0 a 6 anos um plano diário de atividades pronto, sem precisar descobrir todo dia o que fazer com a criança. Ele traz uma Biblioteca com mais de 340 atividades em 8 categorias, escolhidas automaticamente de acordo com a idade da criança, com a opção de filtrar pelos materiais que você já tem em casa e de acompanhar as atividades concluídas ao longo do tempo."
+        "answer": "O Babbby — Atividades diárias para bebês é um app para iPhone e iPad que oferece a pais e responsáveis de crianças de 0 a 6 anos um plano diário de atividades pronto, sem precisar descobrir todo dia o que fazer com a criança. Ele traz uma Biblioteca com 342 atividades em 8 categorias, escolhidas automaticamente de acordo com a idade da criança, com a opção de filtrar pelos materiais que você já tem em casa e de acompanhar as atividades concluídas ao longo do tempo."
       },
       "what_ages": {
         "title": "Para quais idades o Babbby foi feito?",
@@ -216,7 +294,7 @@
       },
       "is_babbby_free": {
         "title": "O Babbby é gratuito?",
-        "answer": "Sim, o Babbby é gratuito para baixar na App Store, e usar os recursos principais não exige assinatura. A única compra disponível é uma gorjeta opcional e única, “Pague um café ao desenvolvedor”, processada pelo StoreKit da Apple e que não é necessária para acessar nenhuma atividade ou recurso."
+        "answer": "O Babbby é gratuito para baixar, e todos os recursos ficam liberados nos primeiros 14 dias. Depois do teste grátis, uma compra única mantém tudo desbloqueado para sempre: não há assinatura nem anúncios. Sem ela, você ainda pode ver Hoje, a Biblioteca, as Estatísticas e os Resumos anteriores, mas adicionar ou concluir atividades e tirar fotos exigem o desbloqueio."
       },
       "does_it_need_an_account": {
         "title": "O Babbby exige conta ou cadastro?",
@@ -242,7 +320,7 @@
       },
       "what_platforms": {
         "title": "Em quais plataformas o Babbby está disponível?",
-        "answer": "No momento, o Babbby está disponível apenas para iOS, como download gratuito na App Store, nas categorias Estilo de vida e Educação."
+        "answer": "O Babbby está disponível para iPhone e iPad na App Store. O download é gratuito, e todos os recursos ficam liberados sem custo nos primeiros 14 dias."
       }
     }
   },

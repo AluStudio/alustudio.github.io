@@ -308,7 +308,10 @@ const BABBBY_SITE_GLOSSARY = [
   ["识别码", "标识符"], // Apple's 设备标识符 / 广告标识符
   ["刊登", "发布"],
   ["以「现状」", "按「原样」"], // the legal "AS IS"; quotes become “” after this step
+  ["的应用程序内购买", "的 App 内购买"], // before the bare rule, so a Chinese character keeps its space before App
+  ["如应用程序内购买", "如 App 内购买"],
   ["应用程序内购买", "App 内购买"], // Apple's mainland term
+  ["钥匙圈", "钥匙串"], // iOS Keychain, as mainland iOS names it
   ["拷贝", "复制"],
   ["小儿科医师", "儿科医生"], // before 医师
   ["医师", "医生"],
@@ -347,16 +350,11 @@ const BABBBY_SITE_GLOSSARY = [
 const BABBBY_OVERRIDES = {
   // 執行 an activity is a child doing it; the converter's 运行 is a program running.
   "ui:terms.activity_disclaimer.items.4": [
-    "開發者不對執行建議活動所導致的任何傷害、損害或後果承擔責任",
-    "开发者不对因进行建议活动所导致的任何伤害、损害或后果承担责任",
+    "服務提供者不對執行建議活動所導致的任何傷害、損害或後果承擔責任",
+    "服务提供者不对因进行建议活动所导致的任何伤害、损害或后果承担责任",
   ],
   "ui:privacy_policy.info_collection.items.2": ["使用數據，例如功能互動、使用時長及瀏覽畫面", "使用数据，例如功能交互、使用时长及访问页面"],
   "ui:privacy_policy.rights.gdpr_items.4": ["資料可攜性的權利", "数据可携带权"],
-  // The mainland App Store names the Lifestyle category 生活.
-  "ui:faq.items.what_platforms.answer": [
-    "Babbby 目前僅提供 iOS 版本，可在 App Store 免費下載，上架分類為「生活風格」與「教育」。",
-    "Babbby 目前仅提供 iOS 版本，可在 App Store 免费下载，上架分类为“生活”与“教育”。",
-  ],
 };
 
 export const APPS = {

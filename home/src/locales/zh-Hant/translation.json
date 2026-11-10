@@ -27,7 +27,7 @@
   },
   "babbby": {
     "tagline": "為 0 到 6 歲寶貝推薦每日活動",
-    "desc": "記錄成長里程碑、建立日常作息，從 340+ 個依年齡挑選的活動開始。"
+    "desc": "Babbby 依孩子的年齡和手邊有的材料挑活動，並幫你記下一起玩過的每一個。"
   },
   "sotto": {
     "tagline": "記住每一個重要的細節",
@@ -168,6 +168,7 @@
       "title": "今天",
       "child": "肉球",
       "child_initial": "肉",
+      "week": "11/1至11/7",
       "days": [
         "日",
         "一",
@@ -177,29 +178,33 @@
         "五",
         "六"
       ],
-      "age": "12–18 個月",
+      "age": "12-18 個月",
       "activities": [
         {
-          "name": "上下階梯",
+          "name": "踢球大戰",
           "category": "大肢體運動",
-          "category_id": "gross_motor",
-          "emoji": "🏃"
+          "category_id": "gross_motor"
         },
         {
-          "name": "顏色分類",
+          "name": "形狀投入箱",
           "category": "思考探索",
-          "category_id": "cognitive",
-          "emoji": "🧩"
+          "category_id": "cognitive"
         },
         {
           "name": "蠟筆塗鴉",
           "category": "小肌肉操作",
-          "category_id": "fine_motor",
-          "emoji": "✋"
+          "category_id": "fine_motor"
         }
       ],
-      "week": "本週",
-      "done_label": "個活動完成"
+      "tabs": [
+        "今天",
+        "活動庫",
+        "統計",
+        "設定"
+      ],
+      "stats_range": "7 天",
+      "stats_label": "已完成活動",
+      "stats_trend": "每日趨勢"
     }
   }
 }

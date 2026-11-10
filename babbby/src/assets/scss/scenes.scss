@@ -1,0 +1,747 @@
+@use "sass:list";
+@use "tokens" as *;
+
+// ─── App palette ────────────────────────────────────────────────
+// babbby-ios DesignSystem/AppColor.swift, for the redrawn screens only.
+$app-bg: #f8f6f3;
+$app-card: #ffffff;
+$app-card-2: #f2efeb;
+$app-border: #e2ded8;
+$app-divider: #edebe7;
+$app-ink: #1c1c1e;
+$app-ink-2: #6e6e73;
+$app-ink-3: #aeaeb2;
+$app-coral: #c97b63;
+$app-sage: #7ba696;
+
+// Category accents (AppColor.Accent): colour, label colour, tint.
+$categories: (
+  gross_motor: (#c97b63, #8b4f3a),
+  fine_motor: (#7ba696, #3d6b5a),
+  language: (#7b9eb8, #3d6580),
+  cognitive: (#b8a07b, #7a6440),
+  social_emotional: (#c48b9f, #8a4d65),
+  sensory: (#7bb8b3, #3d7a74),
+  creative: (#c4a86b, #7a6430),
+  daily_life: (#9b8bae, #5c4d6e),
+);
+
+@each $id, $pair in $categories {
+  .cat--#{$id} {
+    --c: #{list.nth($pair, 1)};
+    --c-label: #{list.nth($pair, 2)};
+    --c-tint: #{rgba(list.nth($pair, 1), 0.1)};
+  }
+}
+
+// ─── Phone ──────────────────────────────────────────────────────
+.bb-phone {
+  position: relative;
+  width: 300px;
+  height: 620px;
+  padding: s(75);
+  border-radius: 48px;
+  background: #1c1c1e;
+  box-shadow:
+    0 1px 2px rgba($ink, 0.3),
+    0 48px 80px -40px rgba(#5a3a2c, 0.5);
+
+  // Bezel radius minus its 8px edge (B3).
+  &__screen {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 40px;
+    background: $app-bg;
+    color: $app-ink;
+    font-family: $app-sans;
+
+    // The Dynamic Island.
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      z-index: 3;
+      width: 84px;
+      height: 24px;
+      margin-left: -42px;
+      border-radius: $radius-full;
+      background: #000000;
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    padding: 0 s(300) 0 s(400);
+    @include text("xs");
+    font-weight: 600;
+  }
+
+  &__glyphs {
+    display: flex;
+    align-items: center;
+    gap: s(50);
+  }
+}
+
+// The floating tab bar, Today selected.
+.bb-tabs {
+  position: absolute;
+  left: s(100);
+  right: s(100);
+  bottom: s(100);
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: 56px;
+  padding: s(50);
+  border-radius: $radius-full;
+  background: rgba($app-card, 0.94);
+  box-shadow: 0 8px 24px -12px rgba($app-ink, 0.25);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: s(25);
+    min-width: 0;
+    border-radius: $radius-full;
+    // The app's 10pt tab label: the one size below the type scale, because
+    // it mirrors the app rather than setting site copy.
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    &[data-active] {
+      background: $app-card-2;
+      color: $app-coral;
+    }
+  }
+}
+
+// ─── Today ──────────────────────────────────────────────────────
+.bb-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+
+  &__title {
+    @include text("sm");
+    font-weight: 600;
+  }
+
+  &__button {
+    position: absolute;
+    right: s(200);
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-full;
+    background: $app-card;
+    color: $app-ink-2;
+    box-shadow: 0 4px 12px -4px rgba($app-ink, 0.18);
+  }
+}
+
+.bb-babies {
+  display: flex;
+  align-items: center;
+  gap: s(75);
+  padding: s(75) s(200) 0;
+}
+
+.bb-baby {
+  display: inline-flex;
+  align-items: center;
+  gap: s(75);
+  padding: s(50) s(100) s(50) s(50);
+  border: 1px solid rgba($app-coral, 0.35);
+  border-radius: $radius-full;
+  background: rgba($app-coral, 0.1);
+  @include text("sm");
+  font-weight: 500;
+
+  &__avatar {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: $radius-full;
+    background: $app-coral;
+    color: $app-card;
+    @include text("xs");
+    font-weight: 600;
+  }
+}
+
+.bb-babies__add {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid $app-border;
+  border-radius: $radius-full;
+  color: $app-ink-3;
+}
+
+.bb-week {
+  margin-top: s(100);
+  text-align: center;
+
+  &__range {
+    font-family: $app-serif;
+    @include text("sm");
+    font-weight: 600;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 16px repeat(7, minmax(0, 1fr)) 16px;
+    align-items: end;
+    padding: s(50) s(75) 0;
+  }
+
+  &__arrow {
+    margin-bottom: s(75);
+    color: $app-ink-2;
+
+    &[data-disabled] {
+      color: $app-ink-3;
+      opacity: 0.5;
+    }
+  }
+
+  &__day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: s(25);
+    @include text("xs");
+    color: $app-ink-3;
+  }
+
+  &__date {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-full;
+    @include text("sm");
+    color: $app-ink;
+  }
+
+  &__day[data-today] &__date {
+    background: $app-coral;
+    color: $app-card;
+    font-weight: 600;
+  }
+}
+
+// Cards sit in fixed slots, so moving a done card to the end is a transform,
+// never a layout change.
+.bb-plan {
+  --card-h: 64px;
+  --card-gap: 8px;
+  position: relative;
+  height: calc(4 * var(--card-h) + 3 * var(--card-gap));
+  margin: s(100) s(100) 0;
+  transition: opacity 0.4s $e2;
+
+  &[data-hidden] {
+    opacity: 0;
+  }
+
+  &[data-instant] .bb-card {
+    transition: none;
+  }
+}
+
+.bb-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: s(75);
+  height: var(--card-h);
+  padding: 0 s(100) 0 s(200);
+  overflow: hidden;
+  border-radius: $radius-2xl;
+  background: $app-card;
+  box-shadow:
+    0 1px 2px rgba($app-ink, 0.04),
+    0 8px 16px -12px rgba($app-ink, 0.14);
+  transform: translateY(calc(var(--slot) * (var(--card-h) + var(--card-gap))));
+  transition: transform 0.7s $e;
+
+  &__edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background: var(--c);
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: s(50);
+    min-width: 0;
+    transition: opacity 0.4s $e2;
+  }
+
+  &__title {
+    overflow: hidden;
+    @include text("sm");
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: s(75);
+    min-width: 0;
+  }
+
+  &__age {
+    overflow: hidden;
+    @include text("xs");
+    color: $app-ink-3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__icon {
+    flex: none;
+    color: $app-ink-3;
+  }
+
+  &[data-done] &__body {
+    opacity: 0.45;
+  }
+}
+
+.bb-chip {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: s(50);
+  padding: 0 s(75);
+  border-radius: $radius-full;
+  background: var(--c-tint);
+  color: var(--c-label);
+  @include text("xs");
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.bb-check {
+  position: relative;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid $app-border;
+  border-radius: $radius-full;
+  transition: transform 0.3s $ease;
+
+  &[data-pressed] {
+    transform: scale(0.86);
+  }
+
+  &__fill {
+    position: absolute;
+    inset: -1.5px;
+    display: grid;
+    place-items: center;
+    border-radius: $radius-full;
+    background: $app-sage;
+    color: $app-card;
+    opacity: 0;
+    transform: scale(0.6);
+    transition:
+      opacity 0.3s $e2,
+      transform 0.5s $e;
+  }
+}
+
+.bb-card[data-done] .bb-check__fill {
+  opacity: 1;
+  transform: none;
+}
+
+// The app's CelebrationView: dots fly out from the check and fade.
+.bb-burst span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+  border-radius: $radius-full;
+  background: var(--c);
+  animation: burst 0.55s $e both;
+}
+
+@keyframes burst {
+  from {
+    opacity: 1;
+    transform: rotate(var(--a)) translateX(6px);
+  }
+
+  to {
+    opacity: 0;
+    transform: rotate(var(--a)) translateX(24px) scale(0.4);
+  }
+}
+
+// "Add a photo?", shown for two seconds after a completion.
+.bb-toast {
+  position: absolute;
+  left: 50%;
+  bottom: 84px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: s(75);
+  padding: s(75) s(200);
+  border-radius: $radius-full;
+  background: rgba($app-ink, 0.88);
+  color: $app-card;
+  @include text("xs");
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 8px);
+  transition:
+    opacity 0.3s $e2,
+    transform 0.5s $e;
+
+  &[data-shown] {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+// ─── Panels (feature card crops of a screen) ────────────────────
+.scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: $app-bg;
+  color: $app-ink;
+  font-family: $app-sans;
+}
+
+.bb-panel {
+  padding: s(200);
+}
+
+.bb-label {
+  margin-bottom: s(75);
+  @include text("xs");
+  font-weight: 500;
+  color: $app-ink-2;
+}
+
+.bb-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: s(75);
+}
+
+.bb-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: s(50);
+  padding: s(50) s(100);
+  border: 1px solid $app-border;
+  border-radius: $radius-full;
+  background: $app-card;
+  color: $app-ink-2;
+  @include text("xs");
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    background-color 0.3s $ease,
+    border-color 0.3s $ease,
+    color 0.3s $ease;
+
+  &[data-selected] {
+    border-color: $app-coral;
+    background: $app-coral;
+    color: $app-card;
+  }
+}
+
+// A newly listed activity resolves in place (design-to-motion `up`).
+@keyframes scene-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(4px);
+  }
+}
+
+.bb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: s(75);
+  margin-top: s(200);
+}
+
+.bb-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: s(50);
+  min-height: 92px;
+  padding: s(100) s(100) s(100) s(200);
+  overflow: hidden;
+  border-radius: $radius-xl;
+  background: $app-card;
+  animation: scene-in 0.6s $e both;
+
+  &__edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background: var(--c);
+  }
+
+  &__icon {
+    color: var(--c);
+  }
+
+  &__title {
+    display: -webkit-box;
+    overflow: hidden;
+    @include text("sm");
+    font-weight: 600;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  &__age {
+    margin-top: auto;
+    @include text("xs");
+    color: $app-ink-3;
+  }
+}
+
+.bb-sheet-title {
+  @include text("sm");
+  font-weight: 600;
+}
+
+.bb-sheet-sub {
+  margin: s(25) 0 s(100);
+  @include text("xs");
+  color: $app-ink-2;
+}
+
+.bb-results {
+  display: grid;
+  gap: s(75);
+  margin-top: s(200);
+}
+
+.bb-row {
+  display: flex;
+  align-items: center;
+  gap: s(100);
+  padding: s(75) s(100);
+  border-radius: $radius-xl;
+  background: $app-card;
+  animation: scene-in 0.6s $e both;
+
+  .bb-cell__icon {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-lg;
+    background: var(--c-tint);
+    color: var(--c-label);
+  }
+
+  &__title {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    @include text("sm");
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__age {
+    flex: none;
+    @include text("xs");
+    color: $app-ink-3;
+  }
+}
+
+// ─── Stats ──────────────────────────────────────────────────────
+.bb-segment {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: s(25);
+  border-radius: $radius-full;
+  background: $app-divider;
+
+  &__thumb {
+    position: absolute;
+    top: s(25);
+    bottom: s(25);
+    left: s(25);
+    width: calc((100% - 4px) / 3);
+    border-radius: $radius-full;
+    background: $app-card;
+    box-shadow: 0 2px 6px -2px rgba($app-ink, 0.2);
+    transform: translateX(calc(var(--active) * 100%));
+    transition: transform 0.6s $e;
+  }
+
+  &__item {
+    position: relative;
+    padding: s(50) 0;
+    @include text("xs");
+    font-weight: 500;
+    color: $app-ink-2;
+    text-align: center;
+    white-space: nowrap;
+    transition: color 0.3s $ease;
+
+    &[data-active] {
+      color: $app-ink;
+    }
+  }
+}
+
+.bb-stats {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: s(75);
+    margin-top: s(100);
+  }
+
+  &__card {
+    min-width: 0;
+    padding: s(100);
+    border-radius: $radius-2xl;
+    background: $app-card;
+  }
+
+  &__count {
+    margin-bottom: s(100);
+    font-family: $app-serif;
+    @include text("4xl");
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__trend-title {
+    margin-bottom: s(50);
+  }
+}
+
+.bb-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: calc(16px / var(--n));
+  height: 64px;
+
+  &__bar {
+    flex: 1;
+    height: 100%;
+    border-radius: $radius-sm $radius-sm 0 0;
+    background: $app-coral;
+    transform: scaleY(var(--h));
+    transform-origin: bottom;
+    animation: bar-grow 0.7s $io both;
+  }
+}
+
+@keyframes bar-grow {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+.bb-donut {
+  width: 88px;
+  margin: s(50) auto s(100);
+
+  svg {
+    transform: rotate(-90deg);
+  }
+
+  circle {
+    fill: none;
+    stroke-width: 10;
+  }
+
+  &__track {
+    stroke: $app-card-2;
+  }
+
+  &__segment {
+    stroke: var(--c);
+    transition:
+      stroke-dasharray 0.7s $io,
+      stroke-dashoffset 0.7s $io;
+  }
+}
+
+.bb-legend {
+  display: grid;
+  gap: s(25);
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: s(75);
+    @include text("xs");
+  }
+
+  &__dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: $radius-full;
+    background: var(--c);
+  }
+
+  &__name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    color: $app-ink-2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__value {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+}

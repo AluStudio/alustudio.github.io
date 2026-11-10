@@ -1,0 +1,239 @@
+@use "tokens" as *;
+
+// ─── Guide cards (home and the guides index) ────────────────────
+.guide-list {
+  display: grid;
+  gap: s(200);
+
+  @media (min-width: $bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+// The title link stretches over the whole card, so the card is the target
+// while the title stays the link's only text for screen readers.
+.guide-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: s(400) s(300) s(300);
+  border: 1px solid $line;
+  border-radius: $radius-3xl;
+  background: $surface;
+  transition:
+    border-color 0.3s $ease,
+    transform 0.5s $ease;
+
+  @include hover {
+    border-color: $accent-soft;
+    transform: translateY(-2px);
+  }
+
+  &:has(a:focus-visible) {
+    outline: 2px solid $accent-strong;
+    outline-offset: 3px;
+  }
+
+  &__title {
+    @include text("xl");
+    letter-spacing: -0.01em;
+
+    a {
+      color: $ink;
+      text-decoration: none;
+      outline: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+      }
+    }
+  }
+
+  &__summary {
+    margin-top: s(100);
+    color: $ink-soft;
+  }
+
+  &__arrow {
+    margin-top: auto;
+    padding-top: s(300);
+    box-sizing: content-box;
+    color: $accent-deep;
+    transition: transform 0.5s $ease;
+  }
+
+  @include hover {
+    .guide-card__arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// ─── Articles (guides and legal pages) ──────────────────────────
+.article {
+  padding-bottom: s(800);
+}
+
+.breadcrumb {
+  padding-top: s(600);
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: s(75);
+    @include text("sm");
+    font-weight: 600;
+    color: $accent-deep;
+    text-decoration: none;
+
+    svg {
+      transition: transform 0.5s $ease;
+    }
+
+    @include hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      svg {
+        transform: translateX(-2px);
+      }
+    }
+  }
+
+  + .page-head {
+    padding-top: s(300);
+  }
+}
+
+// An article's title runs long, so it stops at Heading 3.
+.article .page-head h1 {
+  @media (min-width: $bp-md) {
+    @include text("4xl");
+  }
+}
+
+// Running text: Body 3 on a 680px measure.
+.prose {
+  max-width: 680px;
+  color: $ink-soft;
+
+  > * + * {
+    margin-top: s(200);
+  }
+
+  h2 {
+    margin-top: s(600);
+    @include text("2xl");
+    letter-spacing: -0.01em;
+    color: $ink;
+  }
+
+  h3 {
+    margin-top: s(400);
+    @include text("lg");
+    color: $ink;
+  }
+
+  ul,
+  ol {
+    display: grid;
+    gap: s(75);
+    padding-inline-start: s(300);
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li::marker {
+    color: $accent;
+  }
+
+  a {
+    color: $accent-deep;
+    text-underline-offset: 3px;
+  }
+
+  strong {
+    color: $ink;
+  }
+}
+
+.note {
+  display: flex;
+  gap: s(100);
+  padding: s(200) s(300);
+  border: 1px solid $accent-soft;
+  border-radius: $radius-2xl;
+  background: $accent-wash;
+  color: $ink;
+
+  svg {
+    flex: none;
+    margin-top: s(25);
+    color: $accent-deep;
+  }
+}
+
+// The guide's call to action: the closing card at article scale.
+.article-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 680px;
+  margin-top: s(700);
+  padding: s(500) s(300);
+  border-radius: $radius-3xl;
+  background: $accent-strong;
+  color: $surface;
+  text-align: center;
+
+  h2 {
+    @include text("2xl");
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    max-width: 480px;
+    margin: s(100) 0 s(300);
+    color: rgba($surface, 0.86);
+  }
+
+  .button--store:focus-visible {
+    outline-color: $surface;
+  }
+}
+
+.related {
+  max-width: 680px;
+  margin-top: s(600);
+
+  h2 {
+    margin-bottom: s(100);
+    @include text("lg");
+  }
+}
+
+// ─── Legal ──────────────────────────────────────────────────────
+.legal-date {
+  margin-top: s(200);
+  @include text("sm");
+  color: $ink-muted;
+}
+
+.legal-section {
+  > * + * {
+    margin-top: s(200);
+  }
+
+  + .legal-section {
+    margin-top: s(500);
+  }
+}

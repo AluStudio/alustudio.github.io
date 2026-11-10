@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { CaretDown, Globe } from "@phosphor-icons/react";
 import { supportedLanguages, localizedUrl, currentLanguage } from "../i18n.js";
+import AppStoreButton from "./AppStoreButton";
+import Brand from "./Brand";
 import "../assets/scss/navbar.scss";
 
 /** Closes on Escape or a press outside `ref`, returning focus to `toggleRef`. */
@@ -45,7 +48,7 @@ function LanguagePicker() {
   };
 
   return (
-    <div className="lang ms-3 order-2 order-lg-3" ref={ref}>
+    <div className="lang" ref={ref}>
       <button
         ref={toggleRef}
         type="button"
@@ -55,9 +58,9 @@ function LanguagePicker() {
         aria-controls="lang-menu"
         onClick={() => setOpen((value) => !value)}
       >
-        <i className="bi bi-globe2" aria-hidden="true"></i>
+        <Globe size={16} weight="bold" aria-hidden="true" />
         <span className="lang__current">{current.label}</span>
-        <i className="bi bi-chevron-down lang__caret" aria-hidden="true"></i>
+        <CaretDown size={12} weight="bold" className="lang__caret" aria-hidden="true" />
       </button>
       {/* Always rendered: each language is a real <a href> crawlers follow,
           so the closed menu is hidden, never unmounted. The href is the bare
@@ -84,94 +87,109 @@ function LanguagePicker() {
 
 function Navbar() {
   const { t } = useTranslation();
+  const location = useLocation();
+  const [open, setOpen] = useState(false);
+  const toggleRef = useRef(null);
+  const isHome = location.pathname === "/" || location.pathname === "";
 
-  // Scroll detection for navbar background
   useEffect(() => {
-    const navbar = document.querySelector(".navbar-scroll");
-    if (!navbar) return;
-
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add("navbar-scrolled");
-      } else {
-        navbar.classList.remove("navbar-scrolled");
-      }
+    if (!open) return;
+    const handleKey = (event) => {
+      if (event.key !== "Escape") return;
+      setOpen(false);
+      toggleRef.current?.focus();
     };
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Track navbar height for content offset
-  useEffect(() => {
-    const updateNavbarHeight = () => {
-      const navbar = document.querySelector(".navbar");
-      if (navbar) {
-        const height = navbar.offsetHeight;
-        document.documentElement.style.setProperty(
-          "--navbar-height",
-          `${height}px`
-        );
-      }
+    // From $bp-md (navbar.scss) the menu and its toggle are hidden, so a menu
+    // left open by rotating or widening the window would keep the page locked
+    // with no way to close it.
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const handleWiden = (event) => {
+      if (event.matches) setOpen(false);
     };
+    document.addEventListener("keydown", handleKey);
+    desktop.addEventListener("change", handleWiden);
+    document.documentElement.classList.add("menu-open");
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      desktop.removeEventListener("change", handleWiden);
+      document.documentElement.classList.remove("menu-open");
+    };
+  }, [open]);
 
-    updateNavbarHeight();
-    window.addEventListener("resize", updateNavbarHeight);
-    return () => window.removeEventListener("resize", updateNavbarHeight);
-  }, []);
+  const close = () => setOpen(false);
+
+  const handleHome = () => {
+    close();
+    if (isHome) window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const links = [
+    { to: "/guides/", label: t("nav.guides") },
+    { to: "/faq/", label: t("nav.faq") },
+  ];
+
+  const menuLinks = [
+    { to: "/", label: t("nav.home"), end: true },
+    ...links,
+    { to: "/privacy/", label: t("nav.privacy") },
+    { to: "/terms/", label: t("nav.terms") },
+  ];
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-scroll fixed-top shadow-0 border-bottom">
-      <div className="container">
-        {/* Brand */}
-        <Link className="navbar-brand d-flex align-items-center" to="/">
-          <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "inherit" }}>
-            Babbby
-          </span>
+    <>
+      <header className="nav">
+        <Link to="/" className="nav__brand" onClick={handleHome}>
+          <Brand />
         </Link>
-
-        {/* Mobile toggler */}
-        <button
-          className="navbar-toggler order-3"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <i className="bi bi-list"></i>
-        </button>
-
-        {/* Nav links */}
-        <div
-          className="collapse navbar-collapse ms-auto order-4 order-lg-2"
-          id="navbarNav"
-        >
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/privacy/">
-                {t("nav.privacy")}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/terms/">
-                {t("nav.terms")}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/faq/">
-                {t("nav.faq")}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-center" to="/guides/">
-                {t("nav.guides")}
-              </Link>
-            </li>
-          </ul>
+        <nav className="nav__links" aria-label="Babbby">
+          {/* An in-page anchor on home, a link back to it elsewhere. */}
+          {isHome ? (
+            <a href="#features" className="nav__link">
+              {t("nav.features")}
+            </a>
+          ) : (
+            <Link to="/#features" className="nav__link">
+              {t("nav.features")}
+            </Link>
+          )}
+          {links.map(({ to, label }) => (
+            <NavLink key={to} to={to} className="nav__link">
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+        <div className="nav__end">
+          <LanguagePicker />
+          <button
+            ref={toggleRef}
+            type="button"
+            className="nav__toggle"
+            aria-expanded={open}
+            aria-controls="menu"
+            aria-label={t("nav.menu")}
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span />
+            <span />
+          </button>
         </div>
+      </header>
 
-        <LanguagePicker />
+      <div id="menu" className="menu" data-open={open || undefined} inert={!open}>
+        <nav className="menu__links" aria-label="Babbby">
+          {menuLinks.map(({ to, label, end }, i) => (
+            <span key={to} className="menu__item" style={{ "--i": i }}>
+              <NavLink to={to} end={end} className="menu__link" onClick={to === "/" ? handleHome : close}>
+                {label}
+              </NavLink>
+            </span>
+          ))}
+          <span className="menu__item" style={{ "--i": menuLinks.length }}>
+            <AppStoreButton />
+          </span>
+        </nav>
       </div>
-    </nav>
+    </>
   );
 }
 

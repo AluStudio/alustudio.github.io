@@ -1,6 +1,6 @@
 // Scene styles: each app's real screen redrawn small. Colours come from the
 // apps themselves (DingPOS slate, Sotto porcelain theme, Pikgeon cream,
-// Babbby peach). Steps from useStory flip data attributes; transitions here
+// Babbby Soft Earth). Steps from useStory flip data attributes; transitions here
 // do the moving.
 
 @use "sass:map";
@@ -900,11 +900,37 @@ $pk-line: rgba(43, 42, 38, 0.08);
 }
 
 // ─── Babbby ─────────────────────────────────────────────────────
-$bb-ink: #2f2622;
-$bb-muted: #9b8f88;
-$bb-orange: #f07a45;
-$bb-green: #6cc08b;
-$bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
+// babbby-ios 2.x "Soft Earth" (DesignSystem/AppColor.swift).
+$bb-bg: #f8f6f3;
+$bb-card: #ffffff;
+$bb-card-2: #f2efeb;
+$bb-border: #e2ded8;
+$bb-ink: #1c1c1e;
+$bb-ink-2: #6e6e73;
+$bb-ink-3: #aeaeb2;
+$bb-coral: #c97b63;
+$bb-sage: #7ba696;
+$bb-shadow:
+  0 1px 2px rgba($bb-ink, 0.04),
+  0 8px 16px -12px rgba($bb-ink, 0.14);
+$bb-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+$bb-serif: ui-serif, "New York", Georgia, "Songti TC", serif;
+
+// Category accents (AppColor.Accent): colour and label colour.
+.bb--gross_motor {
+  --c: #c97b63;
+  --c-label: #8b4f3a;
+}
+
+.bb--cognitive {
+  --c: #b8a07b;
+  --c-label: #7a6440;
+}
+
+.bb--fine_motor {
+  --c: #7ba696;
+  --c-label: #3d6b5a;
+}
 
 .bb {
   display: flex;
@@ -919,8 +945,9 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
 }
 
 .phone--babbby .phone__screen {
-  background: #fcefe7;
+  background: $bb-bg;
   color: $bb-ink;
+  font-family: $bb-sans;
 }
 
 .bb__nav {
@@ -929,7 +956,6 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
   align-items: center;
   justify-content: center;
   height: 32px;
-  margin-top: s(50);
 }
 
 .bb__title {
@@ -945,21 +971,28 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
   width: 32px;
   height: 32px;
   border-radius: 9999px;
-  background: #fff;
-  box-shadow: $bb-shadow;
+  background: $bb-card;
+  color: $bb-ink-2;
+  box-shadow: 0 4px 12px -4px rgba($bb-ink, 0.18);
+}
+
+.bb__babies {
+  display: flex;
+  align-items: center;
+  gap: s(75);
+  padding: s(75) s(200) 0;
 }
 
 .bb__child {
   display: inline-flex;
   align-items: center;
   gap: s(75);
-  margin: s(75) s(200) 0;
   padding: s(25) s(100) s(25) s(25);
-  border: 2px solid $bb-orange;
+  border: 1px solid rgba($bb-coral, 0.35);
   border-radius: 9999px;
-  background: #fff7f2;
+  background: rgba($bb-coral, 0.1);
   @include sm;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .bb__avatar {
@@ -968,17 +1001,36 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
   width: 24px;
   height: 24px;
   border-radius: 9999px;
-  background: $bb-orange;
-  color: #fff;
+  background: $bb-coral;
+  color: $bb-card;
   @include xs;
+  font-weight: 600;
+}
+
+.bb__add {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $bb-border;
+  border-radius: 9999px;
+  color: $bb-ink-3;
+}
+
+.bb__range {
+  margin-top: s(100);
+  font-family: $bb-serif;
+  @include sm;
+  font-weight: 600;
+  text-align: center;
 }
 
 .bb__week {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  margin: s(100) s(75) 0;
+  margin: s(50) s(100) 0;
   @include xs;
-  color: $bb-muted;
+  color: $bb-ink-3;
   text-align: center;
 }
 
@@ -992,20 +1044,16 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
 .bb__date {
   display: grid;
   place-items: center;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 9999px;
   color: $bb-ink;
   @include sm;
-  font-weight: 600;
 
   [data-today] > & {
-    background: $bb-orange;
-    color: #fff;
-  }
-
-  [data-future] > & {
-    color: #d4cbc5;
+    background: $bb-coral;
+    color: $bb-card;
+    font-weight: 600;
   }
 }
 
@@ -1017,17 +1065,26 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
 }
 
 .bb__card {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: s(100);
-  padding: s(100);
+  align-items: center;
+  gap: s(75);
+  min-height: 56px;
+  padding: s(75) s(100) s(75) s(200);
+  overflow: hidden;
   border-radius: 16px;
-  background: #fff;
+  background: $bb-card;
   box-shadow: $bb-shadow;
-  transition: opacity 0.6s $e2;
 
-  &[data-done] {
-    opacity: 0.6;
+  // The category edge.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background: var(--c);
   }
 }
 
@@ -1036,30 +1093,29 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
   width: 22px;
   height: 22px;
   flex-shrink: 0;
-  margin-top: s(25);
-  border: 2px solid #d8cfc9;
+  border: 1.5px solid $bb-border;
   border-radius: 9999px;
   transition: transform 0.3s $e;
 
   &[data-tapped] {
     transform: scale(0.86);
-    @include ripple(rgba($bb-green, 0.35));
+    @include ripple(rgba($bb-sage, 0.35));
   }
 }
 
 .bb__check-fill {
   position: absolute;
-  inset: -2px;
+  inset: -1.5px;
   display: grid;
   place-items: center;
   border-radius: inherit;
-  background: $bb-green;
-  color: #fff;
+  background: $bb-sage;
+  color: $bb-card;
   opacity: 0;
-  transform: scale(0.5);
+  transform: scale(0.6);
   transition:
     opacity 0.3s $e2,
-    transform 0.5s $spring;
+    transform 0.5s $e;
 
   [data-done] & {
     opacity: 1;
@@ -1075,18 +1131,24 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
   height: 4px;
   margin: -2px 0 0 -2px;
   border-radius: 9999px;
-  background: $bb-orange;
+  background: var(--c);
   animation: burst 0.7s $e both;
 
   &:nth-child(even) {
-    background: $bb-green;
+    background: $bb-sage;
   }
 }
 
 .bb__card-text {
   display: flex;
   flex-direction: column;
+  gap: s(25);
   min-width: 0;
+  transition: opacity 0.6s $e2;
+
+  [data-done] > & {
+    opacity: 0.45;
+  }
 }
 
 .bb__card-title {
@@ -1097,37 +1159,63 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
 
 .bb__chips {
   display: flex;
-  gap: s(50);
-  margin-top: s(50);
-  overflow: hidden;
-  mask-image: linear-gradient(to right, #000 80%, transparent);
+  align-items: center;
+  gap: s(75);
+  min-width: 0;
 }
 
 .bb__chip {
-  padding: s(25) s(75);
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: s(50);
+  padding: 0 s(75);
   border-radius: 9999px;
+  background: color-mix(in srgb, var(--c) 10%, transparent);
+  color: var(--c-label);
   @include xs;
   font-weight: 500;
   white-space: nowrap;
+}
 
-  &--gross_motor {
-    background: rgba(#ff6b35, 0.12);
-    color: #d4541f;
-  }
+.bb__age {
+  @extend %ellipsis;
+  @include xs;
+  color: $bb-ink-3;
+}
 
-  &--cognitive {
-    background: rgba(#96ceb4, 0.28);
-    color: #3e8e6a;
-  }
+// The floating tab bar, Today selected.
+.bb__tabs {
+  position: absolute;
+  left: s(75);
+  right: s(75);
+  bottom: s(75);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: 48px;
+  padding: s(50);
+  border-radius: 9999px;
+  background: rgba($bb-card, 0.94);
+  box-shadow: 0 8px 24px -12px rgba($bb-ink, 0.25);
+}
 
-  &--fine_motor {
-    background: rgba(#4ecdc4, 0.18);
-    color: #23998f;
-  }
+.bb__tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 9999px;
+  // The app's 10pt tab label, below the scale because it mirrors the app.
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: 500;
+  white-space: nowrap;
 
-  &--age {
-    background: #f8e8de;
-    color: #a8654a;
+  &[data-active] {
+    background: $bb-card-2;
+    color: $bb-coral;
   }
 }
 
@@ -1137,36 +1225,55 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
   margin-top: s(800);
   padding: s(200);
   border-radius: 16px;
-  background: #fff;
+  background: $bb-card;
   box-shadow:
-    0 1px 2px rgba(80, 40, 20, 0.06),
-    0 24px 48px -24px rgba(80, 40, 20, 0.3);
+    0 1px 2px rgba($bb-ink, 0.06),
+    0 24px 48px -24px rgba(#5a3a2c, 0.3);
   color: $bb-ink;
+  font-family: $bb-sans;
+}
+
+.bb__stats-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: s(75);
 }
 
 .bb__stats-title {
+  @extend %ellipsis;
   @include xs;
   font-weight: 600;
-  color: $bb-muted;
+  color: $bb-ink-2;
+}
+
+.bb__range-pill {
+  flex-shrink: 0;
+  padding: 0 s(75);
+  border-radius: 9999px;
+  background: $bb-card-2;
+  @include xs;
+  font-weight: 500;
+  color: $bb-ink-2;
 }
 
 .bb__stats-count {
-  display: flex;
-  align-items: baseline;
-  gap: s(50);
-  margin-top: s(25);
-  @include xs;
-  color: $bb-muted;
+  margin-top: s(75);
 
   .bb__tick {
     display: inline-block;
-    color: $bb-ink;
+    font-family: $bb-serif;
     font-size: 30px;
     line-height: 36px;
-    font-weight: 600;
+    font-weight: 700;
     font-variant-numeric: tabular-nums;
     animation: tick 0.5s $e both;
   }
+}
+
+.bb__stats-label {
+  @include xs;
+  color: $bb-ink-2;
 }
 
 .bb__bars {
@@ -1184,19 +1291,19 @@ $bb-shadow: 0 1px 2px rgba(80, 40, 20, 0.06);
   gap: s(50);
   height: 96px;
   @include xs;
-  color: $bb-muted;
+  color: $bb-ink-3;
 }
 
 .bb__bar {
   width: 100%;
   height: 72px;
-  border-radius: 4px;
-  background: #f8d9c6;
+  border-radius: 4px 4px 0 0;
+  background: rgba($bb-coral, 0.35);
   transform-origin: bottom;
   transition: transform 0.7s $e;
 
   &[data-today] {
-    background: $bb-orange;
+    background: $bb-coral;
   }
 }
 

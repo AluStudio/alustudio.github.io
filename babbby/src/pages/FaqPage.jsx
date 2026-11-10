@@ -1,49 +1,13 @@
-import "../assets/scss/all.scss";
-import "../assets/scss/footer.scss";
-import "./faq.scss";
+import { useTranslation } from "react-i18next";
+import { EnvelopeSimple, Plus } from "@phosphor-icons/react";
+import "../assets/scss/pages.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
 
-function FaqItem({ id, item, isOpen, onToggle }) {
-  return (
-    <div className={`faq-card ${isOpen ? "faq-card--open" : ""}`}>
-      {/* WAI-APG accordion: heading wraps button (button only allows
-          phrasing content, so no heading may live inside it). */}
-      <h2 className="faq-card__heading">
-        <button
-          className="faq-card__header"
-          onClick={onToggle}
-          aria-expanded={isOpen}
-          aria-controls={`faq-body-${id}`}
-        >
-          <span className="faq-card__title">{item.title}</span>
-          <i className="bi bi-chevron-down faq-card__chevron"></i>
-        </button>
-      </h2>
-
-      {/* Body stays in the DOM when collapsed — AI crawlers and search
-          engines only see the initial HTML, so unmounting would hide the
-          answers from them (same lesson as pikgeon's FAQ). */}
-      <div id={`faq-body-${id}`} className="faq-card__body" hidden={!isOpen}>
-        <p className="faq-card__answer">{item.answer}</p>
-        {Array.isArray(item.bullets) && (
-          <ul className="faq-card__bullets">
-            {item.bullets.map((bullet, i) => (
-              <li key={i}>{bullet}</li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
-  );
-}
+const CONTACT_EMAIL = "alustudio14@gmail.com";
 
 function FaqPage() {
   const { t } = useTranslation();
-  const [openId, setOpenId] = useState(null);
-
 
   // Content is fully locale-driven: every entry under faq.items renders.
   const items = t("faq.items", { returnObjects: true });
@@ -51,33 +15,44 @@ function FaqPage() {
   return (
     <>
       <Navbar />
-      <main className="main-content">
-        <div className="container">
-          <div className="faq-page">
-            <header className="faq-header">
-              <h1>{t("faq.title")}</h1>
-              <p className="faq-subtitle">{t("faq.subtitle")}</p>
-            </header>
+      <main id="main" className="page">
+        <div className="shell shell--narrow">
+          <header className="page-head page-head--center">
+            <h1>{t("faq.title")}</h1>
+            <p>{t("faq.subtitle")}</p>
+          </header>
 
-            <div className="faq-list">
-              {Object.entries(items).map(([id, item]) => (
-                <FaqItem
-                  key={id}
-                  id={id}
-                  item={item}
-                  isOpen={openId === id}
-                  onToggle={() => setOpenId((prev) => (prev === id ? null : id))}
-                />
-              ))}
-            </div>
+          {/* <details> keeps every answer in the DOM while collapsed, so the
+              prerendered HTML carries them for crawlers. */}
+          <div className="faq">
+            {Object.entries(items).map(([id, item]) => (
+              <details key={id} id={id} className="faq__item">
+                <summary>
+                  <h2>{item.title}</h2>
+                  <Plus size={20} weight="bold" aria-hidden="true" />
+                </summary>
+                <div className="faq__answer prose">
+                  <p>{item.answer}</p>
+                  {Array.isArray(item.bullets) && (
+                    <ul>
+                      {item.bullets.map((bullet, i) => (
+                        <li key={i}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
 
-            <div className="faq-contact">
-              <p>{t("faq.contact_prompt")}</p>
-              <a href="mailto:alustudio14@gmail.com" className="faq-contact__link">
-                <i className="bi bi-envelope"></i>
-                alustudio14@gmail.com
-              </a>
-            </div>
+          <div className="contact-card">
+            <span className="contact-card__icon">
+              <EnvelopeSimple size={24} weight="duotone" aria-hidden="true" />
+            </span>
+            <p className="contact-card__desc">{t("faq.contact_prompt")}</p>
+            <a className="button button--primary" href={`mailto:${CONTACT_EMAIL}?subject=[Babbby] Support`}>
+              {CONTACT_EMAIL}
+            </a>
           </div>
         </div>
       </main>

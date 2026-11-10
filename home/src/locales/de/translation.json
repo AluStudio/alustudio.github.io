@@ -27,7 +27,7 @@
   },
   "babbby": {
     "tagline": "Tägliche Ideen für Kinder von 0 bis 6",
-    "desc": "Halte Meilensteine fest, baue Routinen auf und wähle aus über 340 Aktivitäten, die zum Alter deines Kindes passen."
+    "desc": "Babbby stimmt jede Aktivität auf das Alter deines Kindes und auf das ab, was du gerade zur Hand hast – und zählt mit, was ihr zusammen schon gemacht habt."
   },
   "sotto": {
     "tagline": "Erinnere dich an die Details, die zählen",
@@ -163,6 +163,48 @@
           "meta": "Granville Island · 17. Feb."
         }
       ]
+    },
+    "babbby": {
+      "title": "Heute",
+      "child": "Mochi",
+      "child_initial": "M",
+      "week": "1.–7. Nov.",
+      "days": [
+        "S",
+        "M",
+        "D",
+        "M",
+        "D",
+        "F",
+        "S"
+      ],
+      "age": "12–18 Monate",
+      "activities": [
+        {
+          "name": "Ballkick-Spiel",
+          "category": "Grobmotorik",
+          "category_id": "gross_motor"
+        },
+        {
+          "name": "Formen-Einwurfbox",
+          "category": "Kognition",
+          "category_id": "cognitive"
+        },
+        {
+          "name": "Wachsmalstift-Kritzelzeit",
+          "category": "Feinmotorik",
+          "category_id": "fine_motor"
+        }
+      ],
+      "tabs": [
+        "Heute",
+        "Bibliothek",
+        "Statistik",
+        "Einstellungen"
+      ],
+      "stats_range": "7 Tage",
+      "stats_label": "Erledigte Aktivitäten",
+      "stats_trend": "Täglicher Verlauf"
     }
   }
 }
