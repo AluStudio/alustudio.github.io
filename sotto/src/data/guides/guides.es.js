@@ -4,7 +4,7 @@ export const articles = [
   {
     "slug": "remember-details-about-people",
     "title": "Cómo recordar los detalles de las personas que te importan",
-    "summary": "Apunta cada detalle el mismo día, ten una página por persona y léela antes de veros. Una forma sencilla de recordar lo que importa a quienes quieres.",
+    "summary": "Apunta cada detalle el mismo día, ten una página por persona y léela antes de quedar. Una forma sencilla de recordar lo que importa a quienes quieres.",
     "content": [
       {
         "type": "p",
@@ -20,7 +20,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Cómo toma el café un amigo o el nombre del perro de su hermana salen una sola vez, de pasada, mientras estás pendiente del resto de la conversación. Nada lo repite, así que nada lo refuerza. La investigación sobre la memoria, desde Hermann Ebbinghaus en la década de 1880, muestra siempre el mismo patrón: lo que nunca repasas se olvida más deprisa durante el primer o el segundo día."
+        "text": "El café que pide un amigo o el nombre del perro de su hermana salen una sola vez, de pasada, mientras estás pendiente del resto de la conversación. Nada lo repite, así que nada lo refuerza."
       },
       {
         "type": "p",
@@ -37,13 +37,13 @@ export const articles = [
           "Tallas: ropa, calzado, talla de anillo; los datos que necesitas para un regalo y que no puedes preguntar fácilmente.",
           "Fechas: cumpleaños, aniversarios, el día que empieza un trabajo nuevo, la operación de su padre o su madre.",
           "Las personas de su vida: pareja, hijos, mascotas, ese compañero de trabajo del que siempre habla.",
-          "Planes y preocupaciones: el viaje para el que está ahorrando, lo que le agobia, aquello de lo que está orgulloso.",
+          "Planes y preocupaciones: el viaje para el que está ahorrando, lo que le agobia, lo que le enorgullece.",
           "Cosas que ha dicho que quiere: un libro, un aparato, un lugar que le encantaría visitar."
         ]
       },
       {
         "type": "p",
-        "text": "No hace falta tenerlo todo de todo el mundo. Dos o tres detalles sólidos por persona valen más que una ficha completa que nunca abres."
+        "text": "No hace falta tenerlo todo de todo el mundo. Dos o tres detalles sólidos por persona valen más que un dosier completo que nunca abres."
       },
       {
         "type": "h2",
@@ -60,11 +60,11 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Lee tus notas antes de veros"
+        "text": "Lee tus notas antes de quedar"
       },
       {
         "type": "p",
-        "text": "Las notas solo ayudan si las lees. Echa un vistazo a la página de alguien unos minutos antes de verle o de llamarle. Pregúntale qué tal fue la entrevista, o acuérdate de que no toma café después de comer. La gente nota que te acuerdas, y eso se percibe como cariño, no como un sistema."
+        "text": "Las notas solo ayudan si las lees. Echa un vistazo a la página de alguien unos minutos antes de ver a esa persona o de llamarla. Pregúntale qué tal fue la entrevista, o acuérdate de que no toma café después de comer. La gente nota que te acuerdas, y eso se percibe como cariño, no como un sistema."
       },
       {
         "type": "note",
@@ -72,11 +72,11 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "¿Papel, una app de notas o un CRM personal?"
+        "text": "¿Papel, una app de notas o una app de notas sobre personas?"
       },
       {
         "type": "p",
-        "text": "Sirve cualquier sistema que vayas a usar de verdad. Una libreta es privada, pero cuesta buscar en ella. Una app de notas genérica funciona hasta que tus notas sobre veinte personas se convierten en una lista larguísima. La agenda de contactos tiene un campo de notas, pero es estrecho y lo comparte con todas las apps que pueden leer tus contactos."
+        "text": "Sirve cualquier sistema que vayas a usar de verdad. Una libreta es privada, pero cuesta buscar en ella. Una app de notas genérica funciona hasta que tus notas sobre veinte personas se convierten en una lista larguísima. La app de contactos del móvil tiene un campo de notas, pero es estrecho y lo comparte con todas las apps que pueden leer tus contactos."
       },
       {
         "type": "p",
@@ -88,11 +88,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto es una app de notas sobre personas, un CRM personal pensado justo para esto. Cada persona tiene una página con foto, una breve biografía, notas y cualquiera de sus 130 campos integrados, desde cumpleaños y alergias hasta el número de calzado y la talla de anillo. Activa un recordatorio para un cumpleaños y Sotto te avisará con una semana de antelación. Y cuando no sepas qué preguntar, un catálogo de 323 preguntas puede abrir la próxima conversación."
+        "text": "Sotto es una app de notas sobre personas pensada justo para esto: cada persona tiene su propia página, donde las notas, los cumpleaños, las tallas y las ideas de regalo que oyes de pasada se quedan todas juntas."
       },
       {
         "type": "p",
-        "text": "Todo se queda en tu teléfono, protegido por el propio bloqueo de pantalla de tu teléfono si quieres. Sotto es gratis para hasta 5 personas, en iPhone y Android."
+        "text": "Todo se queda en tu móvil, sin cuenta y sin anuncios, protegido por el propio bloqueo de pantalla de tu móvil si quieres. Sotto es gratis para hasta 5 personas, en iPhone y Android."
       }
     ],
     "related": [

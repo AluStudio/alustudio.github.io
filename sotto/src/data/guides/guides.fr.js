@@ -3,16 +3,16 @@
 export const articles = [
   {
     "slug": "remember-details-about-people",
-    "title": "Comment retenir les petits détails sur les personnes qu'on aime",
+    "title": "Comment retenir les petits détails sur les personnes qu’on aime",
     "summary": "Notez chaque détail le jour même, gardez une page par personne et relisez-la avant de la voir. Une méthode simple pour retenir ce qui compte pour vos proches.",
     "content": [
       {
         "type": "p",
-        "text": "Pour retenir les détails sur les gens, le plus fiable est d'arrêter de compter sur sa mémoire : notez chaque détail le jour même où vous l'apprenez, rassemblez tout ce qui concerne une personne au même endroit, et relisez cette page avant de la voir. Un petit fait entendu une seule fois s'efface en quelques jours ; une note, non."
+        "text": "Pour retenir les détails sur les gens, le plus fiable est d’arrêter de compter sur sa mémoire : notez chaque détail le jour même où vous l’apprenez, rassemblez tout ce qui concerne une personne au même endroit, et relisez cette page avant de la voir. Un petit fait entendu une seule fois s’efface en quelques jours ; une note, non."
       },
       {
         "type": "p",
-        "text": "Ce guide explique ce qui vaut la peine d'être noté, une habitude de prise de notes qui prend environ une minute, et comment vous servir de vos notes sans que cela ressemble à des devoirs."
+        "text": "Ce guide explique ce qui vaut la peine d’être noté, une habitude de prise de notes qui prend environ une minute, et comment vous servir de vos notes sans que cela ressemble à des devoirs."
       },
       {
         "type": "h2",
@@ -20,42 +20,42 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "La commande de café d'une amie ou le nom du chien de sa sœur surgit une fois, en passant, pendant que vous suivez le reste de la conversation. Rien ne le répète, donc rien ne l'ancre. Les recherches sur la mémoire, depuis Hermann Ebbinghaus dans les années 1880, montrent toujours la même chose : ce qu'on ne revoit jamais s'oublie le plus vite au cours des deux premiers jours."
+        "text": "La commande de café d’une amie ou le nom du chien de sa sœur ne se dit qu’une fois, en passant, pendant que vous suivez le reste de la conversation. Rien ne le répète, donc rien ne l’ancre."
       },
       {
         "type": "p",
-        "text": "La solution n'est pas d'avoir une meilleure mémoire. C'est d'avoir un endroit où poser le détail avant qu'il ne s'efface."
+        "text": "La solution n’est pas d’avoir une meilleure mémoire. C’est d’avoir un endroit où poser le détail avant qu’il ne s’efface."
       },
       {
         "type": "h2",
-        "text": "Ce qui vaut la peine d'être noté"
+        "text": "Ce qui vaut la peine d’être noté"
       },
       {
         "type": "list",
         "items": [
-          "Les goûts : sa commande de café, son plat et ses fleurs préférés, ce qu'elle évite, ses allergies.",
-          "Les tailles : vêtements, pointure, taille de bague — ce qu'il faut savoir pour un cadeau et qu'on ne peut pas facilement demander.",
-          "Les dates : anniversaires, anniversaires de couple, le premier jour d'un nouveau travail, l'opération d'un parent.",
-          "Les personnes de son entourage : partenaire, enfants, animaux, le collègue dont il parle sans arrêt.",
-          "Les projets et les soucis : le voyage pour lequel elle met de côté, ce qui le stresse, ce dont elle est fière.",
-          "Ce qu'il a dit vouloir : un livre, un gadget, un endroit qu'il rêve de visiter."
+          "Les goûts : sa commande de café, son plat et ses fleurs préférés, ce qu’elle évite, ses allergies.",
+          "Les tailles : vêtements, pointure, taille de bague — ce qu’il faut savoir pour un cadeau et qu’on ne peut pas facilement demander.",
+          "Les dates : anniversaires, anniversaires de couple, le premier jour d’un nouveau travail, l’opération d’un parent.",
+          "Les personnes de son entourage : partenaire, enfants, animaux, le collègue dont il parle sans arrêt.",
+          "Les projets et les soucis : le voyage pour lequel elle met de côté, ce qui le stresse, ce dont elle est fière.",
+          "Ce qu’il a dit vouloir : un livre, un gadget, un endroit qu’il rêve de visiter."
         ]
       },
       {
         "type": "p",
-        "text": "Inutile de tout noter pour tout le monde. Deux ou trois détails solides par personne valent mieux qu'une fiche complète que vous n'ouvrez jamais."
+        "text": "Inutile de tout noter pour tout le monde. Deux ou trois détails solides par personne valent mieux qu’une fiche complète que vous n’ouvrez jamais."
       },
       {
         "type": "h2",
-        "text": "Une habitude d'une minute"
+        "text": "Une habitude d’une minute"
       },
       {
         "type": "steps",
         "items": [
-          "Notez-le le jour même. Après un appel ou un dîner, prenez une minute pour noter ce que vous avez appris tant que c'est frais.",
-          "Gardez une page par personne. Un détail rangé sous le nom de la personne se retrouve facilement ; un détail enfoui dans une conversation de messagerie, non.",
-          "Reprenez ses mots. « Veut apprendre la poterie » vous servira plus tard bien mieux que « loisirs : travaux manuels ».",
-          "Datez tout ce qui va changer, comme une recherche d'emploi ou un déménagement, pour savoir si l'information est encore à jour."
+          "Notez-le le jour même. Après un appel ou un dîner, prenez une minute pour noter ce que vous avez appris tant que c’est frais.",
+          "Gardez une page par personne. Un détail rangé sous le nom de la personne se retrouve facilement ; un détail enfoui dans une conversation de messagerie, non.",
+          "Reprenez ses mots. « Veut apprendre la poterie » vous servira plus tard bien mieux que « loisirs : travaux manuels ».",
+          "Datez tout ce qui va changer, comme une recherche d’emploi ou un déménagement, pour savoir si l’information est encore à jour."
         ]
       },
       {
@@ -64,23 +64,23 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Des notes ne servent que si on les relit. Jetez un œil à la page de quelqu'un quelques minutes avant de le voir ou de l'appeler. Demandez comment s'est passé l'entretien, ou souvenez-vous qu'elle ne boit plus de café après midi. Les gens remarquent qu'on se souvient, et cela se lit comme de l'attention, pas comme une méthode."
+        "text": "Des notes ne servent que si on les relit. Jetez un œil à la page de quelqu’un quelques minutes avant de le voir ou de l’appeler. Demandez comment s’est passé l’entretien, ou souvenez-vous qu’elle ne boit plus de café après midi. Les gens remarquent qu’on se souvient, et cela se lit comme de l’attention, pas comme une méthode."
       },
       {
         "type": "note",
-        "text": "Restez bienveillant. Notez ce qui vous aide à être présent pour quelqu'un, pas des choses que vous seriez gêné qu'il lise."
+        "text": "Restez bienveillant. Notez ce qui vous aide à être présent pour quelqu’un, pas des choses que vous seriez gêné qu’il lise."
       },
       {
         "type": "h2",
-        "text": "Carnet papier, app de notes ou CRM personnel ?"
+        "text": "Carnet papier, app de notes ou app dédiée à vos proches ?"
       },
       {
         "type": "p",
-        "text": "N'importe quel système fonctionne, pourvu que vous l'utilisiez vraiment. Un carnet est privé mais difficile à fouiller. Une app de notes classique marche, jusqu'au jour où vos notes sur vingt personnes se fondent en une longue liste. L'app Contacts a bien un champ de notes, mais il est étroit et partagé avec toutes les apps qui ont accès à vos contacts."
+        "text": "N’importe quel système fonctionne, pourvu que vous l’utilisiez vraiment. Un carnet est privé mais difficile à fouiller. Une app de notes classique marche, jusqu’au jour où vos notes sur vingt personnes se fondent en une longue liste. L’app Contacts a bien un champ de notes, mais il est étroit et partagé avec toutes les apps qui ont accès à vos contacts."
       },
       {
         "type": "p",
-        "text": "Un CRM personnel range tout par personne, avec des champs prévus pour les détails ci-dessus — tailles, dates et goûts — si bien que vous n'avez pas à inventer de structure."
+        "text": "Une app dédiée à vos proches range tout par personne, avec des champs prévus pour les détails ci-dessus — tailles, dates et goûts — si bien que vous n’avez pas à inventer de structure."
       },
       {
         "type": "h2",
@@ -88,11 +88,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto est un CRM personnel conçu exactement pour cela. Chaque personne a sa page, avec une photo, une courte bio, des notes et n'importe lequel des 130 champs intégrés, de la date de naissance et des allergies à la pointure et à la taille de bague. Activez un rappel pour un anniversaire et Sotto vous prévient une semaine avant. Quand vous ne savez pas quoi demander, un catalogue de 323 questions peut lancer la prochaine conversation."
+        "text": "Sotto est un CRM personnel conçu exactement pour cela : chaque personne a sa propre page, où notes, anniversaires, tailles et idées cadeaux glanées au passage restent réunis."
       },
       {
         "type": "p",
-        "text": "Tout reste sur votre téléphone, derrière le verrouillage d'écran de votre téléphone si vous le souhaitez. Sotto est gratuit jusqu'à 5 personnes, sur iPhone et Android."
+        "text": "Tout reste sur votre téléphone, sans compte et sans publicité, derrière le verrouillage d’écran de votre téléphone si vous le souhaitez. Sotto est gratuit jusqu’à 5 personnes, sur iPhone et Android."
       }
     ],
     "related": [
