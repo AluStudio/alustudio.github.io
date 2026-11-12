@@ -143,7 +143,7 @@ export const articles = [
       { type: "h2", text: "國際戒圍對照表" },
       {
         type: "table",
-        caption: "以周長為基準，各規格取最接近該周長的尺寸，與 Sotto 的換算方式相同。",
+        caption: "以周長為基準，各規格取最接近該周長的尺寸，與 Sotto 的換算方式相同。沒有列出的國家（例如韓國）有自己的號數，請用周長或內徑對照。",
         head: ["美國／加拿大", "周長（mm）", "內徑（mm）", "英國／澳洲", "歐洲", "日本", "中國"],
         rows: RING_SIZE_ROWS,
       },

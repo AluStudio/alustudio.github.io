@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "Il riferimento è la circonferenza. Ogni sistema mostra la misura più vicina a quella circonferenza, la stessa conversione usata da Sotto.",
+        "caption": "Il riferimento è la circonferenza. Ogni sistema mostra la misura più vicina a quella circonferenza, la stessa conversione usata da Sotto. I paesi non elencati, come la Corea del Sud, numerano le misure a modo loro: per quelli confronta la circonferenza o il diametro interno.",
         "head": [
           "US / Canada",
           "Circonferenza (mm)",

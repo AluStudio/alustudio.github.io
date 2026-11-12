@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "La circonférence sert de référence. Chaque système affiche sa taille la plus proche de cette circonférence, selon la même conversion que Sotto.",
+        "caption": "La circonférence sert de référence. Chaque système affiche sa taille la plus proche de cette circonférence, selon la même conversion que Sotto. Les pays absents du tableau, comme la Corée du Sud, numérotent leurs tailles à leur façon : repérez-les grâce à la circonférence ou au diamètre intérieur.",
         "head": [
           "États-Unis / Canada",
           "Circonférence (mm)",

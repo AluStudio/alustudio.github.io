@@ -153,7 +153,7 @@ export const articles = [
       { type: "h2", text: "Ring size conversion chart" },
       {
         type: "table",
-        caption: "Circumference is the reference. Each system shows its size nearest to that circumference, the same conversion Sotto uses.",
+        caption: "Circumference is the reference. Each system shows its size nearest to that circumference, the same conversion Sotto uses. Countries not listed, such as South Korea, number sizes their own way; match those by circumference or inside diameter.",
         head: ["US / Canada", "Circumference (mm)", "Inside diameter (mm)", "UK / Australia", "EU", "Japan", "China"],
         rows: RING_SIZE_ROWS,
       },

@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "Der Umfang ist der Bezugswert. Jedes System zeigt die Größe, die diesem Umfang am nächsten kommt – dieselbe Umrechnung, die Sotto verwendet.",
+        "caption": "Der Umfang ist der Bezugswert. Jedes System zeigt die Größe, die diesem Umfang am nächsten kommt – dieselbe Umrechnung, die Sotto verwendet. Nicht aufgeführte Länder wie Südkorea zählen ihre Größen auf eigene Weise; ordne sie über den Umfang oder den Innendurchmesser zu.",
         "head": [
           "USA / Kanada",
           "Umfang (mm)",

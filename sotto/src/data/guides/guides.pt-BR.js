@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "A circunferência é a referência. Cada sistema mostra o tamanho mais próximo dessa circunferência, a mesma conversão que o Sotto usa.",
+        "caption": "A circunferência é a referência. Cada sistema mostra o tamanho mais próximo dessa circunferência, a mesma conversão que o Sotto usa. Países que não aparecem na tabela, como a Coreia do Sul, numeram os tamanhos de outro jeito; use a circunferência ou o diâmetro interno para encontrar o equivalente.",
         "head": [
           "EUA / Canadá",
           "Circunferência (mm)",
