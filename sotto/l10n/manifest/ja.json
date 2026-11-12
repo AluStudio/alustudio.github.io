@@ -2,9 +2,9 @@
   "//": "Per translation unit, the hash of the en text the ja translation was made from. Written by `npm run l10n -- sotto apply ja`; do not edit.",
   "units": {
     "guide:find-gift-sizes-without-asking": "ee61f8906840",
-    "guide:find-ring-size-secretly": "c2a7293a266d",
+    "guide:find-ring-size-secretly": "f57acc435fb7",
     "guide:gift-log": "10aece05b6cb",
-    "guide:how-many-people-do-you-meet-in-a-lifetime": "351e4680faf1",
+    "guide:how-many-people-do-you-meet-in-a-lifetime": "db16f04b3c78",
     "guide:remember-details-about-people": "bc816ffc5703",
     "guide:why-babies-are-one-at-birth": "2af4ea1fb719",
     "ui:closing.text": "0583626fbae7",

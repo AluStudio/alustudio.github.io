@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "Der Umfang ist der Bezugswert. Jedes System zeigt die Größe, die diesem Umfang am nächsten kommt – dieselbe Umrechnung, die Sotto verwendet.",
+        "caption": "Der Umfang ist der Bezugswert. Jedes System zeigt die Größe, die diesem Umfang am nächsten kommt – dieselbe Umrechnung, die Sotto verwendet. Nicht aufgeführte Länder wie Südkorea zählen ihre Größen auf eigene Weise; ordne sie über den Umfang oder den Innendurchmesser zu.",
         "head": [
           "USA / Kanada",
           "Umfang (mm)",
@@ -480,94 +480,68 @@ export const articles = [
   },
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
-    "title": "Wie viele Menschen trifft man im Leben? Die echten Zahlen hinter „1 in 8 Billion“",
-    "summary": "Die virale Zahl von 80.000 ist ein Gedankenspiel. Laut einer US-Studie kennt man etwa 611 Menschen mit Namen; eine enge Freundschaft braucht über 200 Stunden.",
+    "title": "Wie viele Menschen lernt man im Leben kennen? Die wenigen unter 8 Milliarden, denen man zufällig begegnet",
+    "summary": "Gezählt hat es niemand, doch die meisten kennen etwa 600 Menschen mit Namen. Die wichtigen traf man oft zufällig. Schreib auf, wie ihr euch begegnet seid.",
     "content": [
       {
         "type": "p",
-        "text": "Noch keine Studie hat gezählt, wie vielen Menschen ein Mensch im Leben begegnet. Die oft geteilte Zahl von 80.000 ist ein Gedankenexperiment: 73 Jahre lang jeden Tag drei neue Menschen kennenlernen. Forschung, die Menschen tatsächlich befragt hat, schätzt, dass ein durchschnittlicher Mensch in den USA etwa 611 Menschen mit Namen kennt (Median 472). Bei 8 Milliarden Menschen ist das etwa einer von 13 Millionen."
+        "text": "Noch nie hat jemand gezählt, wie vielen Menschen ein Mensch im Leben begegnet. Die Menschen, die du mit Namen kennst, sind etwa sechshundert; bei 8 Milliarden ist das ungefähr einer von 13 Millionen. Und die wenigen, die dir unter diesen Hunderten am meisten bedeuten, hast du meist zufällig getroffen."
       },
       {
         "type": "p",
-        "text": "Wieder aktuell wurde die Frage durch „1 in 8 Billion“ (auf Deutsch etwa „1 von 8 Milliarden“), einen Lebenssimulator im Browser, den ein Indie-Entwickler aus Südkorea Anfang Oktober 2026 mit KI gebaut hat. Anhand von Statistiken der Vereinten Nationen, der Weltgesundheitsorganisation und der Weltbank macht es dich zufällig zu einem der 8 Milliarden Menschen und spielt dieses ganze Leben durch. Auf Threads wurde es zum Hit und verbreitete sich innerhalb weniger Wochen von Korea nach Japan und Taiwan. Viele, die ein Leben zu Ende gespielt hatten, fragten sich danach, wen sie in ihrem eigenen Leben tatsächlich getroffen haben."
+        "text": "Im Oktober haben viele ein Browserspiel namens „1 in 8 Billion“ (auf Deutsch etwa „1 von 8 Milliarden“) gespielt: Du wirst zufällig als ein Mensch irgendwo auf der Welt geboren und lebst dieses ganze Leben durch. Als es zu Ende war, dachten viele von ihnen plötzlich über ihr eigenes Leben nach. Wen habe ich eigentlich getroffen?"
       },
       {
         "type": "h2",
-        "text": "Woher „80.000 Menschen“ und „8 Millionen Menschen“ kommen"
+        "text": "Die Menschen, die einfach aufgetaucht sind"
+      },
+      {
+        "type": "image",
+        "src": "guides/lifetime-umbrella.webp",
+        "phone": "guides/lifetime-umbrella-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "An einer verregneten Bushaltestelle neigt ein Filzhase seinen Regenschirm einem Filzbären zu; die beiden begegnen sich zum ersten Mal und lächeln ein bisschen schüchtern."
       },
       {
         "type": "p",
-        "text": "In chinesischsprachigen sozialen Netzwerken kursiert eine Reihe von Zahlen: Im Leben gehst du an 8.263.563 Menschen vorbei, grüßt 39.778, lernst 3.619 kennen und wirst mit 275 eng vertraut. Meist wird sie zusammen mit einem Kurzvideo geteilt, und eine Studie dahinter lässt sich nicht finden."
+        "text": "Deine engste Freundschaft hat vielleicht damit angefangen, dass du an einer neuen Schule neben einem Kind sitzen musstest. Die Person, mit der du heute zusammen bist, war vielleicht die Begleitung, die eine Freundin oder ein Freund auf eine Party mitbrachte, zu der du fast nicht gegangen wärst. Eine andere Schule, ein späterer Bus – und diese Menschen wären vielleicht nie in dein Leben getreten."
       },
       {
         "type": "p",
-        "text": "Die Zahl 80.000 hat einen klareren Ursprung. Max Roser, Gründer von Our World in Data, stellte sich jemanden vor, der 73 Jahre lang jeden einzelnen Tag mit drei neuen Menschen spricht: Diese Person würde etwa 80.000 Menschen kennenlernen. Roser wollte damit das Gegenteil zeigen: Selbst ein so kontaktfreudiger Mensch kennt nur 0,001 % der Welt."
+        "text": "Rückblickend hast du fast keinen der Menschen, die dich am meisten verändert haben, selbst ausgesucht. Sie saßen in der Nähe, wohnten in der Nähe und waren am selben Tag am selben Ort."
       },
       {
         "type": "h2",
-        "text": "Die Zahlen, die die Forschung tatsächlich gemessen hat"
-      },
-      {
-        "type": "table",
-        "head": [
-          "Zahl",
-          "Was sie misst",
-          "Quelle"
-        ],
-        "rows": [
-          [
-            "8 Milliarden",
-            "Weltbevölkerung; die Vereinten Nationen rechneten damit, dass sie am 15. November 2022 erreicht wird",
-            "Vereinte Nationen"
-          ],
-          [
-            "611 Menschen",
-            "Wie viele Menschen ein durchschnittlicher Mensch in den USA mit Namen kennt; der Median liegt bei 472",
-            "McCormick, Salganik & Zheng, 2010"
-          ],
-          [
-            "Etwa 150",
-            "Wie viele stabile Beziehungen ein Mensch pflegen kann",
-            "Dunbar, 1992; eine Studie von 2021 hielt die Unsicherheit für zu groß, um eine einzelne Zahl festzulegen"
-          ],
-          [
-            "50 / 90 / 200 Stunden",
-            "Gesamte gemeinsame Zeit, um von der Bekanntschaft zur lockeren Freundschaft, zur Freundschaft und zur engen Freundschaft zu kommen",
-            "Hall, 2018"
-          ]
-        ]
+        "text": "Vom Zufallstreffer zum Menschen, der dir wichtig ist"
       },
       {
         "type": "p",
-        "text": "Die 611 stammen aus einer Umfrage in den USA, und kein anderes Land hat eine Studie in vergleichbarer Größe, doch die Größenordnung stimmt: Von 8 Milliarden Menschen kennst du ein paar Hundert mit Namen, und die, mit denen du 200 Stunden verbringst, bleiben immer wenige."
+        "text": "Kennenlernen ist nur der Anfang. Von der Bekanntschaft zur engen Freundschaft braucht es ungefähr zweihundert gemeinsame Stunden: viele Mahlzeiten, viele Heimwege zu Fuß und viele „Das machen wir mal wieder“, auf die tatsächlich ein nächstes Mal folgte."
+      },
+      {
+        "type": "image",
+        "src": "guides/lifetime-cafe.webp",
+        "phone": "guides/lifetime-cafe-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "Jahre später sitzen der Filzbär und der Filzhase am Fenster an einem kleinen Cafétisch, zwei Kaffeetassen zwischen sich, und lachen zusammen."
+      },
+      {
+        "type": "p",
+        "text": "Ein Mensch wird dir wichtig, weil du ihn immer wieder siehst. Nach und nach erfährst du, dass er seinen Kaffee ohne Zucker trinkt, dass ihm immer kalt ist, dass er immer wieder von einer Schwester erzählt, die weit weg wohnt."
       },
       {
         "type": "h2",
-        "text": "Die wichtigen Menschen trifft man oft zufällig"
+        "text": "Warum du nicht mehr weißt, wie ihr euch kennengelernt habt"
       },
       {
         "type": "p",
-        "text": "1950 untersuchten der Psychologe Leon Festinger und seine Kollegen Westgate West, eine Wohnanlage für verheiratete Studierende am MIT. Die Menschen dort bezogen die Wohnungen in der Reihenfolge, in der sie frei wurden, niemand wählte also die Nachbarn. Auf demselben Stockwerk nannten Nachbarn von nebenan einander in etwa 41 % der Fälle unter den Menschen, die sie am häufigsten sahen; zwei Türen weiter sank der Wert auf etwa 22 %, an den entgegengesetzten Enden des Flurs auf etwa 10 %. Wer sich anfreundete, hing weniger von der Persönlichkeit ab als davon, wer wem jeden Tag über den Weg lief."
+        "text": "An dem Tag, an dem du jemanden zum ersten Mal triffst, weißt du nicht, dass die Person wichtig werden wird – es ist also ein ganz gewöhnlicher Tag. Du merkst dir nicht gezielt, wo du warst oder wer euch vorgestellt hat, und du versuchst nicht, festzuhalten, worüber ihr gesprochen habt. Jahre später, wenn ihr eng befreundet oder ein Paar seid und du eure Geschichte erzählen willst, sind die meisten Details weg."
       },
       {
         "type": "p",
-        "text": "Bei Paaren ist es ähnlich. Der Stanford-Soziologe Michael Rosenfeld und Kollegen werteten Daten zu heterosexuellen Paaren in den USA aus, veröffentlicht 2019: 2017 hatten sich 39 % online kennengelernt, 27 % in einer Bar oder einem Restaurant und 20 % über Freunde (ein Paar kann in mehrere Kategorien fallen). Von den Paaren, die sich online kennengelernt hatten, waren sich etwa 9 von 10 vorher fremd. Inzwischen lernen sich mehr Paare online kennen, doch die meisten beginnen weiterhin als Fremde."
-      },
-      {
-        "type": "p",
-        "text": "Kennenlernen ist aber nur der Anfang. Nach Halls Schätzung braucht es mehr als 200 gemeinsame Stunden, um enge Freunde zu werden. Die Menschen, denen du zufällig begegnet bist, wurden wichtig, weil du sie danach weiter gesehen hast."
-      },
-      {
-        "type": "h2",
-        "text": "Warum man vergisst, wie man sich kennengelernt hat"
-      },
-      {
-        "type": "p",
-        "text": "An dem Tag, an dem du jemanden zum ersten Mal triffst, weißt du nicht, dass die Person wichtig werden wird. Es ist also ein gewöhnlicher Tag: Du merkst dir nicht gezielt, wo du warst, wer euch vorgestellt hat oder worüber ihr gesprochen habt. Jahre später, wenn ihr eng befreundet oder ein Paar seid und du die Geschichte erzählen möchtest, sind die meisten Details weg."
-      },
-      {
-        "type": "p",
-        "text": "Das liegt nicht an einem schlechten Gedächtnis. Niemand wusste, während es geschah, dass dieser Moment es wert war, behalten zu werden."
+        "text": "Du vergisst es, weil damals niemand wusste, dass es sich lohnt, sich daran zu erinnern."
       },
       {
         "type": "h2",
@@ -576,31 +550,39 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Schreib am Tag des Kennenlernens zwei, drei Zeilen auf: wo, wer euch vorgestellt hat und was euch ins Gespräch gebracht hat.",
-          "Füge das Datum hinzu. In ein paar Jahren ist es vielleicht der Tag, den ihr feiert.",
-          "Halte eine Sache fest, die die Person dir zuerst erzählt hat: ihre Arbeit, etwas, das sie beschäftigt, oder einen Satz, der dir im Kopf geblieben ist.",
-          "Du musst das nicht bei jedem tun. Nur bei den Menschen, mit denen du gern wieder sprechen würdest."
+          "Schreib am Tag des Kennenlernens zwei, drei Zeilen auf: wo, wer euch vorgestellt hat und worüber ihr ins Gespräch gekommen seid.",
+          "Schreib das Datum dazu. In ein paar Jahren ist es vielleicht ein Tag, den ihr feiert.",
+          "Halte eine Sache fest, die die Person dir früh erzählt hat: ihre Arbeit, etwas, das sie beschäftigt, oder einen Satz, der dir im Kopf geblieben ist.",
+          "Du musst das nicht bei allen tun. Nur bei den Menschen, mit denen du gern wieder sprechen würdest."
         ]
       },
       {
+        "type": "image",
+        "src": "guides/lifetime-notebook.webp",
+        "phone": "guides/lifetime-notebook-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "Am Abend sitzt der Filzhase an einem kleinen Schreibtisch unter einer Lampe, schreibt mit einem Bleistift in ein kleines Notizbuch und lächelt."
+      },
+      {
         "type": "p",
-        "text": "Diese paar Zeilen geben dir außerdem etwas, wonach du beim nächsten Treffen fragen kannst: „Du wolltest doch umziehen. Wie ist es gelaufen?“ Solche Gespräche sind Teil der vielen Stunden, in denen aus einer Bekanntschaft eine Freundschaft wird."
+        "text": "Diese paar Zeilen sind mehr als eine Erinnerung. Wenn ihr euch das nächste Mal seht, ist die Frage „Du wolltest doch umziehen. Wie ist es gelaufen?“ ein kleines Stück dieser zweihundert Stunden."
       },
       {
         "type": "note",
-        "text": "Was du aufschreibst, ist deine eigene Erinnerung, keine Akte über die andere Person. Schreib nur auf, was die Person ruhig lesen dürfte."
+        "text": "Was du aufschreibst, ist deine eigene Erinnerung. Schreib nur auf, was die Person ruhig lesen dürfte."
       },
       {
         "type": "h2",
-        "text": "Wie Sotto dabei hilft"
+        "text": "Mit Sotto eine Seite für die Menschen führen, die du triffst"
       },
       {
         "type": "p",
-        "text": "Sotto ist eine App für Notizen zu Menschen mit einer eigenen Seite für jede Person. Das integrierte Feld „Kennenlernen“ ist für die Geschichte gedacht, wie ihr euch getroffen habt, und das Datum kann ins Feld „Jahrestag“: Schalte dessen Erinnerung ein, und Sotto sagt dir 7 Tage vorher um 9 Uhr morgens Bescheid. Um mit jemand Neuem tiefer ins Gespräch zu kommen, probier die 33 Fragen der Kategorie „Einander kennen“ aus, die der Studie des Psychologen Arthur Aron von 1997 darüber nachempfunden sind, wie Fremde einander nahekommen."
+        "text": "Sotto ist eine Notizen-App für Menschen: Für jede Person gibt es eine eigene Seite. Wenn du jemanden triffst, mit dem du gern wieder sprechen würdest, leg eine Seite für die Person an und mach aus dem Kennenlernen die erste Notiz. Ergänze mit der Zeit die kleinen Dinge, die du erfährst; jede Notiz behält das Datum, an dem du sie geschrieben hast."
       },
       {
         "type": "p",
-        "text": "Alles bleibt auf deinem Handy, auf Wunsch geschützt durch die Displaysperre. Sotto ist für bis zu 5 Personen kostenlos, auf iPhone und Android."
+        "text": "Alles bleibt auf deinem Handy, ganz ohne Konto. Die kostenlose Version bietet Platz für 5 Personen, auf iPhone und Android."
       }
     ],
     "related": [

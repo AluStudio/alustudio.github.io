@@ -96,7 +96,7 @@ test("convertSources: a changed value in a non-text FAQ field fails", () => {
 
 test("convertSources: each app applies its own glossary and text fields", () => {
   const source = { articles: [{ slug: "gift-log", title: "自訂欄位", content: [{ type: "table", head: ["尺寸"], rows: [["相片"]] }], related: [] }] };
-  const { pack, errors } = convertSources({ ui: { a: "預設" }, pack: source }, APPS.sotto);
+  const { pack, errors } = convertSources({ ui: { a: "預設" }, pack: source }, { ...APPS.sotto, overrides: {} });
   assert.deepEqual(errors, []);
   assert.equal(pack.articles[0].title, "自定义字段");
   assert.deepEqual(pack.articles[0].content[0].rows, [["照片"]]);

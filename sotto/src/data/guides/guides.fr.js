@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "La circonférence sert de référence. Chaque système affiche sa taille la plus proche de cette circonférence, selon la même conversion que Sotto.",
+        "caption": "La circonférence sert de référence. Chaque système affiche sa taille la plus proche de cette circonférence, selon la même conversion que Sotto. Les pays absents du tableau, comme la Corée du Sud, numérotent leurs tailles à leur façon : repérez-les grâce à la circonférence ou au diamètre intérieur.",
         "head": [
           "États-Unis / Canada",
           "Circonférence (mm)",
@@ -480,94 +480,68 @@ export const articles = [
   },
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
-    "title": "Combien de personnes rencontre-t-on dans une vie ? Les vrais chiffres derrière « 1 in 8 Billion »",
-    "summary": "Les « 80 000 personnes dans une vie » sont une hypothèse. Les études comptent environ 611 personnes connues par leur nom. Un ami proche demande plus de 200 h.",
+    "title": "Combien de personnes rencontre-t-on dans une vie ? Sur 8 milliards, ces quelques-unes croisées par hasard",
+    "summary": "Personne n’a compté, mais on connaît environ 600 personnes par leur nom. Les plus importantes, on les a souvent croisées par hasard. Notez la rencontre.",
     "content": [
       {
         "type": "p",
-        "text": "Aucune étude n’a jamais compté combien de personnes un individu rencontre au cours de sa vie. Le chiffre de 80 000 qui circule partout est une expérience de pensée : rencontrer trois nouvelles personnes chaque jour pendant 73 ans. Les recherches qui ont réellement interrogé des gens estiment qu’un Américain moyen connaît environ 611 personnes par leur nom (médiane : 472). Sur 8 milliards d’humains, cela fait environ une personne sur 13 millions."
+        "text": "Personne n’a jamais compté combien de personnes on rencontre au cours d’une vie. Celles que vous connaissez par leur nom sont environ six cents ; sur 8 milliards d’humains, cela fait à peu près une sur 13 millions. Et parmi ces centaines, les rares personnes qui comptent le plus, vous les avez surtout rencontrées par hasard."
       },
       {
         "type": "p",
-        "text": "La question est revenue à la mode avec « 1 in 8 Billion » (en français, « 1 sur 8 milliards »), un simulateur de vie dans le navigateur qu’un développeur indépendant sud-coréen a créé avec l’IA début octobre 2026. À partir de statistiques des Nations unies, de l’Organisation mondiale de la santé et de la Banque mondiale, il vous fait naître au hasard parmi les 8 milliards d’êtres humains et déroule toute cette vie. Le jeu a décollé sur Threads et s’est répandu de la Corée au Japon et à Taïwan en quelques semaines. Beaucoup de joueurs, leur vie terminée, se sont demandé qui ils avaient rencontré dans leur vraie vie."
+        "text": "En octobre, beaucoup de gens ont joué à un jeu de navigateur appelé « 1 in 8 Billion » (« 1 sur 8 milliards ») : on naît au hasard en tant que quelqu’un, quelque part dans le monde, puis on vit toute cette vie. Une fois la partie terminée, nombre de joueurs se sont surpris à penser à leur propre vie. Qui ai-je rencontré ?"
       },
       {
         "type": "h2",
-        "text": "D’où viennent les « 80 000 personnes » et les « 8 millions de personnes »"
+        "text": "Ceux qui se trouvaient simplement là"
+      },
+      {
+        "type": "image",
+        "src": "guides/lifetime-umbrella.webp",
+        "phone": "guides/lifetime-umbrella-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "À un arrêt de bus sous la pluie, un lapin en feutrine incline son parapluie vers un ours en feutrine ; c’est leur première rencontre, et tous deux sourient un peu timidement."
       },
       {
         "type": "p",
-        "text": "Une série de chiffres circule sur les réseaux sociaux en chinois : au cours d’une vie, on croiserait 8 263 563 personnes, on en saluerait 39 778, on en connaîtrait 3 619 et on se rapprocherait de 275. Elle accompagne généralement une courte vidéo, et aucune étude derrière ces chiffres n’a pu être retrouvée."
+        "text": "Votre meilleur ami n’était peut-être que l’enfant à qui l’on avait attribué la place voisine de la vôtre dans une nouvelle école. Votre partenaire, la personne en plus qu’un ami avait emmenée à une soirée que vous aviez failli manquer. Une autre école, un bus plus tardif, et ces personnes ne seraient peut-être jamais entrées dans votre vie."
       },
       {
         "type": "p",
-        "text": "Le chiffre de 80 000 a une origine plus claire. Max Roser, fondateur d’Our World in Data, a imaginé une personne qui parle à trois nouvelles personnes chaque jour pendant 73 ans : elle ferait la connaissance d’environ 80 000 personnes. Il s’en servait pour montrer l’inverse : même quelqu’un d’aussi sociable ne connaît que 0,001 % de la population mondiale."
+        "text": "Avec le recul, presque aucune des personnes qui ont le plus changé votre vie ne faisait partie de celles que vous aviez choisies. Elles étaient assises près de vous, habitaient près de chez vous, et se sont trouvées au même endroit le même jour."
       },
       {
         "type": "h2",
-        "text": "Les chiffres mesurés par la recherche"
-      },
-      {
-        "type": "table",
-        "head": [
-          "Chiffre",
-          "Ce qu’il mesure",
-          "Source"
-        ],
-        "rows": [
-          [
-            "8 milliards",
-            "Population mondiale, que les Nations unies projetaient d’atteindre le 15 novembre 2022",
-            "Nations unies"
-          ],
-          [
-            "611 personnes",
-            "Nombre de personnes qu’un Américain moyen connaît par leur nom ; la médiane est de 472",
-            "McCormick, Salganik & Zheng, 2010"
-          ],
-          [
-            "Environ 150",
-            "Nombre de relations stables qu’une personne peut entretenir",
-            "Dunbar, 1992 ; une étude de 2021 estime l’incertitude trop large pour retenir un chiffre unique"
-          ],
-          [
-            "50 / 90 / 200 heures",
-            "Temps total passé ensemble pour passer de simple connaissance à ami occasionnel, ami, puis ami proche",
-            "Hall, 2018"
-          ]
-        ]
+        "text": "Du hasard de la rencontre à quelqu’un qui compte"
       },
       {
         "type": "p",
-        "text": "Le chiffre de 611 vient d’une enquête américaine, et aucun autre pays n’a d’étude de même ampleur, mais l’ordre de grandeur tient : sur 8 milliards de personnes, vous en connaissez quelques centaines par leur nom, et celles avec qui vous passez 200 heures resteront toujours peu nombreuses."
+        "text": "Se rencontrer n’est qu’un début. Passer de simple connaissance à ami proche demande quelque chose comme deux cents heures passées ensemble : beaucoup de repas, beaucoup de trajets du retour à pied, et beaucoup de « on remet ça » qui ont vraiment eu lieu."
+      },
+      {
+        "type": "image",
+        "src": "guides/lifetime-cafe.webp",
+        "phone": "guides/lifetime-cafe-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "Des années plus tard, l’ours et le lapin en feutrine sont assis face à face à une petite table de café près de la fenêtre, deux tasses de café entre eux, et rient ensemble."
+      },
+      {
+        "type": "p",
+        "text": "Une personne devient importante parce que vous continuez à la voir. Peu à peu, vous apprenez qu’elle prend son café sans sucre, qu’elle a toujours froid, qu’elle revient sans cesse sur une sœur qui vit loin."
       },
       {
         "type": "h2",
-        "text": "Les personnes qui comptent sont souvent rencontrées par hasard"
+        "text": "Pourquoi on ne se souvient plus de la façon dont on s’est rencontrés"
       },
       {
         "type": "p",
-        "text": "En 1950, le psychologue Leon Festinger et ses collègues ont étudié Westgate West, une résidence du MIT pour étudiants mariés. Les logements étaient attribués dans l’ordre où ils se libéraient : personne ne choisissait ses voisins. Au sein d’un même étage, les voisins de palier se citaient parmi les personnes qu’ils voyaient le plus dans environ 41 % des cas ; à deux portes, cette part tombait à environ 22 %, et aux deux bouts du couloir à environ 10 %. Devenir amis dépendait moins de la personnalité que de qui croisait qui chaque jour."
+        "text": "Le jour où vous rencontrez quelqu’un, vous ne savez pas que cette personne va compter : c’est donc un jour ordinaire. Vous ne vous efforcez pas de retenir où vous étiez ni qui vous a présentés, et vous ne cherchez pas à garder ce dont vous avez parlé. Des années plus tard, quand cette personne est devenue un ami proche ou votre partenaire et que vous voulez raconter votre histoire, la plupart des détails ont disparu."
       },
       {
         "type": "p",
-        "text": "Pour les couples, c’est la même logique. Michael Rosenfeld, sociologue à Stanford, et ses collègues ont analysé des données sur les couples hétérosexuels aux États-Unis, publiées en 2019 : en 2017, 39 % s’étaient rencontrés en ligne, 27 % dans un bar ou un restaurant et 20 % par des amis (un couple peut relever de plusieurs catégories). Environ 9 couples sur 10 formés en ligne étaient auparavant des inconnus. Aujourd’hui, plus de couples se rencontrent en ligne, mais la plupart commencent toujours comme des inconnus."
-      },
-      {
-        "type": "p",
-        "text": "Mais rencontrer quelqu’un n’est qu’un début. D’après l’estimation de Hall, devenir ami proche demande plus de 200 heures passées ensemble. Les personnes rencontrées par hasard sont devenues importantes parce que vous avez continué à les voir ensuite."
-      },
-      {
-        "type": "h2",
-        "text": "Pourquoi on oublie comment on s’est rencontrés"
-      },
-      {
-        "type": "p",
-        "text": "Le jour où vous rencontrez quelqu’un, vous ne savez pas qu’il va compter : c’est une journée ordinaire. Vous ne cherchez pas à retenir où vous étiez, qui vous a présentés ou de quoi vous avez parlé. Des années plus tard, quand cette personne est devenue un ami proche ou votre partenaire et que vous voulez raconter cette histoire, la plupart des détails ont disparu."
-      },
-      {
-        "type": "p",
-        "text": "Ce n’est pas un problème de mémoire. Personne ne savait, sur le moment, que cela valait la peine d’être retenu."
+        "text": "On oublie parce que, au moment où cela s’est passé, personne ne savait que cela valait la peine d’être retenu."
       },
       {
         "type": "h2",
@@ -576,31 +550,39 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Écrivez deux ou trois lignes le jour de la rencontre : où, qui vous a présentés, et ce qui a lancé la conversation.",
-          "Ajoutez la date. Dans quelques années, ce sera peut-être le jour que vous fêterez.",
-          "Notez une chose que cette personne vous a dite en premier : son travail, un souci du moment, ou une phrase qui vous est restée.",
-          "Inutile de le faire pour tout le monde. Seulement pour les personnes avec qui vous aimeriez reparler."
+          "Écrivez deux ou trois lignes le jour même de la rencontre : où, qui vous a présentés, et ce qui vous a fait parler.",
+          "Ajoutez la date. Dans quelques années, ce sera peut-être un jour que vous fêterez.",
+          "Notez une chose que cette personne vous a dite dès le début : son travail, un souci du moment, ou une phrase qui vous est restée.",
+          "Inutile de le faire pour tout le monde. Seulement pour les personnes à qui vous aimeriez reparler."
         ]
       },
       {
+        "type": "image",
+        "src": "guides/lifetime-notebook.webp",
+        "phone": "guides/lifetime-notebook-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "Le soir, le lapin en feutrine est assis à un petit bureau sous une lampe, écrit dans un petit carnet avec un crayon et sourit."
+      },
+      {
         "type": "p",
-        "text": "Ces quelques lignes vous donnent aussi de quoi relancer la conversation à votre prochaine rencontre : « Tu préparais ton déménagement. Comment ça s’est passé ? » Une question comme celle-là fait partie des dizaines d’heures qui transforment une connaissance en ami."
+        "text": "Ces quelques lignes valent plus qu’un souvenir. La prochaine fois que vous vous verrez, demander « Vous étiez sur le point de déménager. Comment ça s’est passé ? » est un petit morceau de ces deux cents heures."
       },
       {
         "type": "note",
-        "text": "Ce que vous écrivez est votre propre souvenir, pas un dossier sur l’autre. N’écrivez que ce que vous seriez à l’aise de lui laisser lire."
+        "text": "Ce que vous écrivez est votre propre souvenir. N’écrivez que ce que vous seriez à l’aise de lui laisser lire."
       },
       {
         "type": "h2",
-        "text": "Comment Sotto vous aide"
+        "text": "Gardez une page pour les personnes que vous rencontrez, avec Sotto"
       },
       {
         "type": "p",
-        "text": "Sotto est une app de carnet privé pour vos proches, avec une page pour chaque personne. Son champ intégré « Rencontre » est fait pour raconter comment vous vous êtes rencontrés, et s’il s’agit de votre partenaire, la date peut aller dans le champ « Anniv. de couple » : activez son rappel et Sotto vous prévient 7 jours avant, à 9 h du matin. Pour aller plus loin avec une nouvelle connaissance, essayez les 33 questions de la catégorie « Se connaître », adaptées de l’étude de 1997 du psychologue Arthur Aron sur la façon dont des inconnus deviennent proches."
+        "text": "Sotto est une app de carnet privé pour vos proches, avec une page pour chaque personne. Quand vous rencontrez quelqu’un à qui vous aimeriez reparler, créez sa page et faites de votre rencontre la première note. Ajoutez au fil du temps les petites choses que vous entendez ; chaque note garde la date à laquelle vous l’avez écrite."
       },
       {
         "type": "p",
-        "text": "Tout reste sur votre téléphone, derrière le verrouillage d’écran de votre téléphone si vous le souhaitez. Sotto est gratuit jusqu’à 5 personnes, sur iPhone et Android."
+        "text": "Tout reste sur votre téléphone, sans compte. La version gratuite accueille 5 personnes, sur iPhone et Android."
       }
     ],
     "related": [

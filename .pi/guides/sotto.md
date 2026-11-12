@@ -10,7 +10,7 @@ The same guides ship in all twelve languages (same slug, same order), translated
 
 ## Product facts
 
-The only claims the article may make about Sotto. Checked against `~/Developer/alustudio/sotto` and the site's FAQ on 2026-11-08; when the app changes, update this list there first.
+The only claims the article may make about Sotto; the closing uses one or two of these that fit the article. Checked against `~/Developer/alustudio/sotto` and the site's FAQ on 2026-11-08; when the app changes, update this list there first.
 
 - A private people notes app for iPhone and Android: one page per person with notes, sizes and measurements, birthdays, gift ideas and other details.
 - Each note can carry up to 9 photos, videos or files, and shows the date it was written (and last edited).

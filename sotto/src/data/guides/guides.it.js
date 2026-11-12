@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "Il riferimento è la circonferenza. Ogni sistema mostra la misura più vicina a quella circonferenza, la stessa conversione usata da Sotto.",
+        "caption": "Il riferimento è la circonferenza. Ogni sistema mostra la misura più vicina a quella circonferenza, la stessa conversione usata da Sotto. I paesi non elencati, come la Corea del Sud, numerano le misure a modo loro: per quelli confronta la circonferenza o il diametro interno.",
         "head": [
           "US / Canada",
           "Circonferenza (mm)",
@@ -480,94 +480,68 @@ export const articles = [
   },
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
-    "title": "Quante persone si incontrano nella vita? I numeri reali dietro «1 in 8 Billion»",
-    "summary": "Le «80.000 persone nella vita» sono un esperimento mentale. La ricerca stima circa 611 persone conosciute per nome; un amico stretto richiede oltre 200 ore.",
+    "title": "Quante persone si incontrano nella vita? Su 8 miliardi, quelle poche incontrate per caso",
+    "summary": "Nessuno le ha contate, ma di solito conosci per nome circa 600 persone. Quelle che contano arrivano spesso per caso: annota come vi siete conosciuti.",
     "content": [
       {
         "type": "p",
-        "text": "Nessuno studio ha mai contato quante persone incontra un individuo nel corso della vita. La cifra di 80.000, molto condivisa, è un esperimento mentale: conoscere tre persone nuove ogni giorno per 73 anni. Le ricerche che hanno davvero intervistato le persone stimano che un americano medio conosca per nome circa 611 persone (mediana 472). Su 8 miliardi, è circa una persona ogni 13 milioni."
+        "text": "Nessuno ha mai contato quante persone incontra una persona nel corso della vita. Quelle che conosci per nome sono circa seicento; su 8 miliardi, più o meno una ogni 13 milioni. E le poche che contano davvero, tra quelle centinaia, per lo più le hai incontrate per caso."
       },
       {
         "type": "p",
-        "text": "La domanda è tornata di moda con «1 in 8 Billion», un simulatore di vita da browser che uno sviluppatore indipendente sudcoreano ha creato con l'IA all'inizio di ottobre 2026. Usando le statistiche delle Nazioni Unite, dell'Organizzazione mondiale della sanità e della Banca Mondiale, ti fa diventare a caso uno degli 8 miliardi di persone e ti fa vivere un'intera vita. Ha avuto successo su Threads e in poche settimane si è diffuso dalla Corea al Giappone e a Taiwan. Molti giocatori, finita una vita, hanno iniziato a chiedersi chi hanno incontrato nella loro vita vera."
+        "text": "A ottobre in tanti hanno giocato a un gioco da browser chiamato «1 in 8 Billion» (1 su 8 miliardi): nasci a caso come una persona qualsiasi da qualche parte nel mondo e poi vivi quell'intera vita. Quando finiva, a molti è venuto da pensare alla propria vita. Chi ho incontrato?"
       },
       {
         "type": "h2",
-        "text": "Da dove vengono «80.000 persone» e «8 milioni di persone»"
+        "text": "Le persone che sono arrivate per caso"
+      },
+      {
+        "type": "image",
+        "src": "guides/lifetime-umbrella.webp",
+        "phone": "guides/lifetime-umbrella-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "A una fermata dell'autobus sotto la pioggia, un coniglio di feltro inclina l'ombrello verso un orso di feltro; si incontrano per la prima volta e sorridono entrambi un po' timidi."
       },
       {
         "type": "p",
-        "text": "Sui social network in lingua cinese circola una serie di numeri: nella vita incrocerai 8.263.563 persone, ne saluterai 39.778, ne conoscerai 3.619 e con 275 diventerai intimo. Di solito gira insieme a un breve video, e non si trova nessuno studio dietro."
+        "text": "Il tuo migliore amico potrebbe essere stato semplicemente il bambino a cui hanno dato il banco accanto al tuo in una scuola nuova. Il tuo partner, la persona in più che un amico ha portato a una festa che stavi per saltare. Un'altra scuola, un autobus più tardi, e queste persone forse non sarebbero mai entrate nella tua vita."
       },
       {
         "type": "p",
-        "text": "La cifra di 80.000 ha un'origine più chiara. Max Roser, fondatore di Our World in Data, ha immaginato una persona che parla con tre persone nuove ogni singolo giorno per 73 anni: finirebbe per conoscerne circa 80.000. Usava quel numero per sostenere il contrario: anche chi è così socievole conosce solo lo 0,001% del mondo."
+        "text": "Se ci ripensi, quasi nessuna delle persone che ti hanno cambiato di più l'hai scelta tu. Erano sedute lì vicino, abitavano lì vicino e si sono trovate nello stesso posto lo stesso giorno."
       },
       {
         "type": "h2",
-        "text": "I numeri che la ricerca ha misurato"
-      },
-      {
-        "type": "table",
-        "head": [
-          "Numero",
-          "Cosa misura",
-          "Fonte"
-        ],
-        "rows": [
-          [
-            "8 miliardi",
-            "La popolazione mondiale, che secondo le proiezioni delle Nazioni Unite avrebbe raggiunto gli 8 miliardi il 15 novembre 2022",
-            "Nazioni Unite"
-          ],
-          [
-            "611 persone",
-            "Quante persone l'americano medio conosce per nome; la mediana è 472",
-            "McCormick, Salganik & Zheng, 2010"
-          ],
-          [
-            "Circa 150",
-            "Quante relazioni stabili una persona riesce a mantenere",
-            "Dunbar, 1992; uno studio del 2021 sostiene che l'incertezza è troppo ampia per fissare un unico numero"
-          ],
-          [
-            "50 / 90 / 200 ore",
-            "Tempo totale trascorso insieme per passare da conoscente ad amico occasionale, amico e amico stretto",
-            "Hall, 2018"
-          ]
-        ]
+        "text": "Da un incontro casuale a una persona che conta"
       },
       {
         "type": "p",
-        "text": "Il 611 viene da un'indagine americana e per altri paesi non esiste uno studio di pari portata, ma l'ordine di grandezza regge: su 8 miliardi di persone, ne conosci per nome qualche centinaio, e quelle con cui passi 200 ore saranno sempre poche."
+        "text": "Incontrarsi è solo l'inizio. Per passare da conoscente ad amico stretto servono circa duecento ore insieme: tante cene, tante passeggiate verso casa e tanti «rifacciamolo» che poi si sono davvero rifatti."
+      },
+      {
+        "type": "image",
+        "src": "guides/lifetime-cafe.webp",
+        "phone": "guides/lifetime-cafe-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "Anni dopo, il coniglio e l'orso di feltro sono seduti uno di fronte all'altro a un tavolino del bar vicino alla finestra, con due tazze di caffè in mezzo, e ridono insieme."
+      },
+      {
+        "type": "p",
+        "text": "Qualcuno diventa importante perché continui a vederlo. A poco a poco scopri che prende il caffè senza zucchero, che ha sempre freddo, che nomina spesso una sorella che vive lontano."
       },
       {
         "type": "h2",
-        "text": "Le persone che contano spesso si incontrano per caso"
+        "text": "Perché non ricordi come vi siete conosciuti"
       },
       {
         "type": "p",
-        "text": "Nel 1950 lo psicologo Leon Festinger e i suoi colleghi studiarono Westgate West, gli alloggi dell'MIT per studenti sposati. Gli inquilini prendevano gli appartamenti nell'ordine in cui si liberavano, quindi nessuno sceglieva i vicini. Sullo stesso piano, i vicini della porta accanto si indicavano a vicenda tra le persone che vedevano più spesso circa il 41% delle volte; a due porte di distanza la quota scendeva a circa il 22%, e alle estremità opposte del corridoio a circa il 10%. Chi diventava amico dipendeva meno dal carattere che da chi si incontrava ogni giorno."
+        "text": "Il giorno in cui conosci qualcuno non sai che diventerà importante, quindi è un giorno qualunque. Non ti sforzi di ricordare dove eri o chi vi ha presentati, e non cerchi di tenere a mente di cosa avete parlato. Anni dopo, quando è diventato un amico stretto o il tuo partner e vuoi raccontare la vostra storia, la maggior parte dei dettagli è svanita."
       },
       {
         "type": "p",
-        "text": "Per le coppie funziona allo stesso modo. Il sociologo di Stanford Michael Rosenfeld e i colleghi hanno analizzato i dati sulle coppie eterosessuali negli Stati Uniti, pubblicati nel 2019. Nel 2017 il 39% si era conosciuto online, il 27% in un bar o ristorante e il 20% tramite amici (una coppia può rientrare in più categorie). Circa 9 coppie su 10 che si erano conosciute online non si conoscevano prima. Oggi sono di più le coppie che si conoscono online, ma nella maggior parte dei casi si comincia comunque da sconosciuti."
-      },
-      {
-        "type": "p",
-        "text": "Incontrarsi, però, è solo l'inizio. Secondo la stima di Hall, per diventare amici stretti servono più di 200 ore insieme. Le persone incontrate per caso sono diventate importanti perché hai continuato a vederle dopo."
-      },
-      {
-        "type": "h2",
-        "text": "Perché dimentichi come vi siete conosciuti"
-      },
-      {
-        "type": "p",
-        "text": "Il giorno in cui conosci qualcuno non sai che diventerà importante, quindi è un giorno qualunque: non ti sforzi di ricordare dove eri, chi vi ha presentati o di cosa avete parlato. Anni dopo, quando è un amico stretto o il tuo partner e vuoi raccontare la storia, la maggior parte dei dettagli è svanita."
-      },
-      {
-        "type": "p",
-        "text": "Non è colpa della tua memoria. Nessuno sapeva che quel momento valesse la pena di ricordarlo mentre accadeva."
+        "text": "Dimentichi perché, quando è successo, nessuno sapeva che valesse la pena ricordarlo."
       },
       {
         "type": "h2",
@@ -577,30 +551,38 @@ export const articles = [
         "type": "steps",
         "items": [
           "Scrivi due o tre righe il giorno in cui vi conoscete: dove, chi vi ha presentati e cosa vi ha fatto iniziare a parlare.",
-          "Aggiungi la data. Tra qualche anno potrebbe essere il giorno che festeggiate.",
-          "Annota la prima cosa che ti ha raccontato: il suo lavoro, un pensiero che aveva in testa o una frase che ti è rimasta impressa.",
+          "Aggiungi la data. Tra qualche anno potrebbe essere un giorno da festeggiare.",
+          "Annota una cosa che ti ha detto fin dall'inizio: il suo lavoro, un pensiero che aveva in testa o una frase che ti è rimasta impressa.",
           "Non serve farlo per tutti. Solo per le persone con cui vorresti parlare di nuovo."
         ]
       },
       {
+        "type": "image",
+        "src": "guides/lifetime-notebook.webp",
+        "phone": "guides/lifetime-notebook-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "La sera, il coniglio di feltro è seduto a una piccola scrivania sotto una lampada e scrive con la matita su un taccuino, sorridendo."
+      },
+      {
         "type": "p",
-        "text": "Quelle poche righe ti offrono uno spunto per la prossima volta che vi vedete. Puoi chiedere: «Ti stavi preparando al trasloco. Com'è andata?» Una domanda così fa parte delle decine di ore che trasformano un conoscente in un amico."
+        "text": "Quelle poche righe sono più di un semplice ricordo. La prossima volta che vi vedete, chiedere «Stavi per traslocare. Com'è andata?» è un piccolo pezzo di quelle duecento ore."
       },
       {
         "type": "note",
-        "text": "Ciò che scrivi è il tuo ricordo, non un dossier sull'altra persona. Scrivi solo ciò che non ti imbarazzerebbe farle leggere."
+        "text": "Ciò che scrivi è il tuo ricordo. Scrivi solo ciò che non ti dispiacerebbe che l'altra persona leggesse."
       },
       {
         "type": "h2",
-        "text": "Come ti aiuta Sotto"
+        "text": "Una scheda per le persone che incontri, con Sotto"
       },
       {
         "type": "p",
-        "text": "Sotto è un CRM personale, cioè un'app per le note sulle persone, con una scheda per ognuna. Il campo «Incontro» è pensato per raccontare come vi siete conosciuti. Puoi inserire la data nel campo «Anniversario» e attivare il promemoria: Sotto ti avvisa 7 giorni prima, alle 9 del mattino. Per conoscere meglio una persona nuova, prova le 33 domande della categoria «Conoscerci», adattate dallo studio del 1997 dello psicologo Arthur Aron su come due sconosciuti possono diventare amici intimi."
+        "text": "Sotto è un CRM personale, cioè un'app per le note sulle persone della tua vita, con una scheda per ognuna. Quando conosci qualcuno con cui vorresti parlare di nuovo, crea una scheda e fai di come vi siete conosciuti la prima nota. Aggiungi col tempo le piccole cose che ascolti; ogni nota conserva la data in cui l'hai scritta."
       },
       {
         "type": "p",
-        "text": "Tutto resta sul tuo telefono, protetto se vuoi dal blocco schermo del telefono stesso. Sotto è gratis fino a 5 persone, su iPhone e Android."
+        "text": "Tutto resta sul tuo telefono, senza account. La versione gratuita contiene 5 persone, su iPhone e Android."
       }
     ],
     "related": [

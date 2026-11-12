@@ -4,35 +4,11 @@ export const articles = [
   {
     "slug": "screen-free-play-by-age",
     "title": "Activités sans écran à la maison : que faire avec votre bébé ou votre enfant, selon l’âge (0–6 ans)",
-    "summary": "Remplacez les écrans, de 0 à 6 ans, par des activités de 5 à 15 minutes avec ce que vous avez chez vous : langage, mouvement et manipulation, par tranche d’âge.",
+    "summary": "Pour moins d’écrans, gardez quelques jeux de 5 à 15 minutes prêts avec ce que vous avez déjà : idées de 0 à 6 ans, et comment tenir quand on est fatigué.",
     "content": [
       {
         "type": "p",
-        "text": "Pour remplacer les écrans à la maison avec un bébé ou un jeune enfant de 0 à 6 ans, le plus pratique est d’avoir sous la main quelques activités de 5 à 15 minutes, avec des objets du quotidien : gobelets, cubes, papier, ruban adhésif ou eau. Les recherches sur les jeunes enfants vont dans le même sens : vocabulaire, coordination motrice et concentration se construisent grâce aux échanges avec un adulte et au jeu physique, les mains dans le concret. Avoir une activité courte, adaptée à l’âge, prête à démarrer évite de devoir inventer des jeux sur le moment quand parent et enfant sont fatigués."
-      },
-      {
-        "type": "h2",
-        "text": "Ce que disent les recherches récentes sur les tout-petits, les écrans et le jeu au quotidien"
-      },
-      {
-        "type": "p",
-        "text": "En 2026, plusieurs études et une mise à jour des recommandations pédiatriques sur les tout-petits et les écrans ont fait l’actualité internationale. Associées à des recherches antérieures, elles convergent vers un constat pratique : l’écran dans la petite enfance compte surtout par ce qu’il remplace pendant les heures d’éveil, à savoir les échanges de paroles, le mouvement et le jeu avec les adultes. Une étude antérieure montre ce que cela donne à la maison : dans une étude de 2024 parue dans JAMA Pediatrics, des chercheurs australiens dirigés par Brushe ont utilisé des enregistreurs audio à domicile auprès d’enfants de 12 à 36 mois et constaté que, chez les enfants de 3 ans, chaque minute d’écran supplémentaire était associée à 6,6 mots d’adulte de moins, 4,9 vocalisations d’enfant de moins et 1,1 tour de conversation de moins entendus à la maison."
-      },
-      {
-        "type": "p",
-        "text": "Des études publiées en 2026 ont examiné le lien entre ces habitudes quotidiennes, le langage et les apprentissages. À la Western University, au Canada, une étude de 2026 reposant sur des IRM cérébrales et des évaluations du développement de 70 tout-petits a montré qu’un temps d’écran plus élevé à 2 ans était associé à un langage expressif plus pauvre à 2 ans. Une étude de 2026 de l’Inserm et de la National University of Singapore, parue dans le World Journal of Pediatrics, a suivi 502 enfants de 1 an à 8 ans : plus d’écran dans la petite enfance et vers 6 ans était associé à de moins bons résultats scolaires à 9 ans et à une mémoire de travail plus faible à 10,5 ans, avec l’association la plus forte à 1 an, tandis que les associations à 2 et 3 ans n’étaient pas statistiquement significatives. En octobre 2026, une synthèse de l’University of Georgia portant sur 30 études a relevé qu’une utilisation plus intensive des écrans chez les nourrissons et les tout-petits était liée à un langage moins développé et à un vocabulaire plus restreint, tout en soulignant que le contenu, l’âge et le fait de regarder ensemble comptent autant que les minutes, car un usage intensif prend la place de la lecture, du jeu en plein air et des moments en famille."
-      },
-      {
-        "type": "p",
-        "text": "Dans cette même logique, la déclaration de politique de l’Académie américaine de pédiatrie (AAP) « Digital Ecosystems, Children, and Adolescents », publiée dans Pediatrics en janvier 2026, dépasse les simples limites de durée pour s’intéresser à la qualité des contenus, au contexte familial et à la conversation. Elle rappelle que les nourrissons de moins de 18 mois apprennent mieux par l’interaction avec le monde réel et qu’un mauvais usage peut prendre la place de la lecture, du mouvement et de l’exploration avec les proches. Il faut aussi garder en tête que les études d’observation rapportent des associations statistiques et non une preuve directe de causalité, et que zéro écran n’est pas réaliste pour beaucoup de parents qui travaillent, de parents seuls ou de foyers qui gèrent les tâches ménagères et la maladie sans aide. La solution pratique consiste donc à remplacer la culpabilité ou le chronomètre par une activité manuelle toute prête quand un écran aurait sinon comblé le vide."
-      },
-      {
-        "type": "h2",
-        "text": "Les recommandations officielles sur les écrans varient selon les pays"
-      },
-      {
-        "type": "p",
-        "text": "Comme référence mondiale, l’Organisation mondiale de la santé (OMS) recommande de ne proposer aucun écran de façon sédentaire avant 2 ans et pas plus d’une heure par jour de 2 à 4 ans, en précisant que moins vaut mieux. L’Académie américaine de pédiatrie (AAP) aux États-Unis et l’Administration de la promotion de la santé de Taïwan donnent des seuils similaires (avant 2 ans : aucun écran ; à partir de 2 ans : jusqu’à une heure par jour), et l’Association japonaise de pédiatrie recommande elle aussi d’éviter la télévision et les vidéos avant 2 ans. Plusieurs pays fixent des limites d’âge plus strictes. En France, le carnet de santé officiel de l’enfant (édition 2025) conseille d’éviter tout écran avant 3 ans, et depuis le 3 juillet 2025, les écrans sont interdits dans les structures d’accueil de la petite enfance pour les enfants de moins de 3 ans. En Allemagne, l’agence fédérale d’éducation à la santé (BIÖG, anciennement BZgA) recommande idéalement de ne proposer aucun média à écran avant 3 ans, et jusqu’à 30 minutes par jour de 3 à 5 ans. En Espagne, l’Association espagnole de pédiatrie (AEP) recommande de ne proposer aucun écran avant 6 ans, en indiquant qu’il n’existe pas de durée sans risque dans la petite enfance. Les recommandations nationales différant d’un pays à l’autre, vérifiez ce que préconise l’autorité pédiatrique ou sanitaire de votre pays."
+        "text": "Pour que votre enfant passe moins de temps devant les écrans, le plus pratique est d’avoir sous la main quelques jeux de 5 à 15 minutes qui partent d’objets déjà présents à la maison : quelques gobelets et une boîte de cubes, ou un rouleau de ruban adhésif et un gobelet d’eau, suffisent. Quand on est fatigué, le plus dur est d’inventer un jeu sur le moment ; avec une activité adaptée à l’âge toute prête, l’écran n’a pas besoin de combler ce vide."
       },
       {
         "type": "h2",
@@ -126,8 +102,8 @@ export const articles = [
         ]
       },
       {
-        "type": "note",
-        "text": "Note sur le développement : les activités à la maison soutiennent la conversation au quotidien, mais elles ne remplacent pas une évaluation par un professionnel. Un enfant chez qui l’on soupçonne un retard de langage doit être vu par un pédiatre ou un spécialiste du développement."
+        "type": "p",
+        "text": "Jouer à la maison ne remplace pas une évaluation par un professionnel. Si vous pensez que votre enfant tarde à parler ou à bouger, parlez-en à un pédiatre ou à une consultation spécialisée dans le développement de l’enfant."
       },
       {
         "type": "h2",
@@ -135,7 +111,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Beaucoup de parents savent qu’ils veulent réduire les écrans, mais dès le troisième jour, ils n’ont plus d’idées à l’heure exacte où il faut préparer le repas et où l’énergie est au plus bas. Quand la fatigue de fin d’après-midi s’installe, quatre petites habitudes rendent le jeu sans écran bien plus facile à tenir :"
+        "text": "Beaucoup de parents savent qu’ils veulent réduire les écrans, mais dès le troisième jour, ils n’ont plus d’idées à l’heure exacte où il faut préparer le repas et où l’énergie est au plus bas. Quand la fatigue de fin d’après-midi s’installe, quatre petites habitudes rendent le jeu sans écran bien plus facile à tenir."
       },
       {
         "type": "steps",
@@ -148,15 +124,19 @@ export const articles = [
       },
       {
         "type": "h2",
+        "text": "Jusqu’à quel âge les pays recommandent-ils zéro écran ?"
+      },
+      {
+        "type": "p",
+        "text": "Les recommandations diffèrent selon les pays : pas d’écran avant 2 ans selon l’OMS, Taïwan, les États-Unis et le Japon ; pas avant 3 ans selon la France et l’Allemagne ; pas avant 6 ans selon l’Espagne. À partir de 2 ans, l’OMS, Taïwan et les États-Unis recommandent de ne pas dépasser 1 heure par jour. Suivez les conseils pédiatriques de votre pays."
+      },
+      {
+        "type": "h2",
         "text": "Garder des idées d’activités du jour sous la main avec Babbby"
       },
       {
         "type": "p",
-        "text": "Quand le plus difficile, pour réduire les écrans, est de décider quoi faire ensuite, Babbby est une app pour iPhone et iPad destinée aux parents, conçue comme un outil de planification pratique pour l’adulte et non comme une app que l’enfant utilise. Elle couvre de 0 à 6 ans en sept tranches d’âge (0–6 mois, 6–12 mois, 12–18 mois, 18–24 mois, 2–3 ans, 3–4 ans et 4–6 ans), avec 342 activités intégrées réparties en huit catégories de développement : motricité globale, motricité fine, langage, cognition, socio-émotionnel, sensoriel, créativité et vie quotidienne. Chaque jour, Babbby propose jusqu’à 6 activités adaptées à l’âge de votre enfant, avec le matériel, une astuce et la durée approximative de chacune, et vous pouvez les remplacer ou les ajuster avant de marquer chacune comme terminée."
-      },
-      {
-        "type": "p",
-        "text": "Vous pouvez aussi enregistrer jusqu’à 3 photos par activité terminée, consulter vos statistiques et revenir sur les bilans de la semaine et du mois, en photos, de vos moments de jeu. Babbby fonctionne hors connexion, sans publicité ; le téléchargement est gratuit, avec un essai de 14 jours en accès complet, suivi d’un achat unique pour débloquer Babbby à vie, sans abonnement."
+        "text": "Si le plus difficile est de décider à quoi jouer ensuite, Babbby propose jusqu’à 6 activités par jour adaptées à l’âge de votre enfant, avec le matériel à préparer et la durée approximative de chacune en minutes ; toutes les idées ci-dessus viennent de ses activités. C’est une app pour iPhone et iPad destinée aux parents : votre enfant n’a jamais besoin de toucher l’écran."
       }
     ],
     "related": [

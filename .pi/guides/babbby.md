@@ -10,7 +10,7 @@ The same guides ship in every language (same slug, same order), translated from 
 
 ## Product facts
 
-The only claims the article may make about Babbby. Checked against `~/Developer/alustudio/babbby-ios` on 2026-11-07 (device support and offline rechecked 2026-11-12); when the app changes, update this list there first.
+The only claims the article may make about Babbby; the closing uses one or two of these that fit the article. Checked against `~/Developer/alustudio/babbby-ios` on 2026-11-07 (device support and offline rechecked 2026-11-12); when the app changes, update this list there first.
 
 - An iPhone and iPad app for parents: a tool for the parent, not an app the child uses.
 - Ages 0–6 in seven age ranges: 0–6 months, 6–12 months, 12–18 months, 18–24 months, 2–3 years, 3–4 years, 4–6 years.

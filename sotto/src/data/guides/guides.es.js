@@ -306,7 +306,7 @@ export const articles = [
       },
       {
         "type": "table",
-        "caption": "La circunferencia es la referencia. Cada sistema muestra su talla más próxima a esa circunferencia, la misma conversión que usa Sotto.",
+        "caption": "La circunferencia es la referencia. Cada sistema muestra su talla más próxima a esa circunferencia, la misma conversión que usa Sotto. Los países que no aparecen, como Corea del Sur, numeran las tallas a su manera; búscalas por la circunferencia o el diámetro interior.",
         "head": [
           "EE. UU. / Canadá",
           "Circunferencia (mm)",
@@ -480,127 +480,109 @@ export const articles = [
   },
   {
     "slug": "how-many-people-do-you-meet-in-a-lifetime",
-    "title": "¿Cuántas personas conoces en la vida? Las cifras reales detrás de «1 in 8 Billion»",
-    "summary": "Las «80 000 personas en una vida» son un experimento mental. Según los estudios, conoces por su nombre a unas 611, y un amigo íntimo exige más de 200 horas.",
+    "title": "¿A cuántas personas conoces en la vida? De 8000 millones, las pocas que llegan por casualidad",
+    "summary": "Nadie lo ha contado, pero conoces por su nombre a unas 600 personas. Las que importan suelen llegar por casualidad. Apunta cómo os conocisteis mientras puedas.",
     "content": [
       {
         "type": "p",
-        "text": "Ningún estudio ha contado nunca a cuántas personas conoce alguien a lo largo de su vida. La cifra tan difundida de 80 000 es un experimento mental: conocer a tres personas nuevas cada día durante 73 años. Las investigaciones que sí han encuestado a la gente estiman que el estadounidense medio conoce por su nombre a unas 611 personas (mediana de 472). Sobre 8000 millones, eso es aproximadamente una persona de cada 13 millones."
+        "text": "Nadie ha contado nunca a cuántas personas conoce alguien a lo largo de su vida. Las personas a las que conoces por su nombre son unas seiscientas; sobre 8000 millones, eso es aproximadamente una de cada 13 millones. Y las pocas que más importan entre esas seiscientas casi siempre llegaron por casualidad."
       },
       {
         "type": "p",
-        "text": "La pregunta volvió a ponerse de moda con «1 in 8 Billion» (en español, «1 entre 8000 millones»), un simulador de vida para el navegador que un desarrollador independiente de Corea del Sur creó con IA a principios de octubre de 2026. Con estadísticas de Naciones Unidas, la Organización Mundial de la Salud y el Banco Mundial, te convierte al azar en una de esas 8000 millones de personas y recorre toda esa vida. Se hizo viral en Threads y en pocas semanas pasó de Corea a Japón y Taiwán. Muchos jugadores terminaron una vida y se preguntaron a quién han conocido de verdad en esta."
+        "text": "En octubre, mucha gente jugó a un juego de navegador llamado «1 in 8 Billion» (en español, «1 entre 8000 millones»): naces al azar como una persona cualquiera en algún lugar del mundo y vives esa vida entera. Al terminar, muchos acabaron pensando en la suya. ¿A quién he conocido yo?"
       },
       {
         "type": "h2",
-        "text": "De dónde salen las «80 000 personas» y los «8 millones de personas»"
+        "text": "Las personas que simplemente aparecieron"
+      },
+      {
+        "type": "image",
+        "src": "guides/lifetime-umbrella.webp",
+        "phone": "guides/lifetime-umbrella-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "En una parada de autobús bajo la lluvia, un conejo de fieltro inclina su paraguas hacia un oso de fieltro; se conocen por primera vez y los dos sonríen, un poco tímidos."
       },
       {
         "type": "p",
-        "text": "En las redes sociales en chino circula una serie de cifras: a lo largo de la vida te cruzarás con 8 263 563 personas, saludarás a 39 778, llegarás a conocer a 3619 y tendrás un vínculo cercano con 275. Suele viajar con un vídeo corto, y no se encuentra ningún estudio detrás."
+        "text": "Puede que tu mejor amigo fuera, sencillamente, el niño al que sentaron a tu lado en un colegio nuevo. Puede que tu pareja fuera la persona que un amigo llevó de acompañante a una fiesta a la que casi no ibas. Con otro colegio, o con un autobús más tarde, quizá esas personas nunca habrían entrado en tu vida."
       },
       {
         "type": "p",
-        "text": "La cifra de 80 000 tiene un origen más claro. Max Roser, fundador de Our World in Data, imaginó a alguien que habla con tres personas nuevas cada día durante 73 años: conocería a unas 80 000. Usó la cifra para defender lo contrario: incluso alguien tan sociable conoce solo el 0,001 % del mundo."
+        "text": "Si miras atrás, casi ninguna de las personas que más te cambiaron las elegiste tú. Se sentaban cerca, vivían cerca y coincidieron contigo en el mismo sitio el mismo día."
       },
       {
         "type": "h2",
-        "text": "Las cifras que la investigación sí ha medido"
-      },
-      {
-        "type": "table",
-        "head": [
-          "Cifra",
-          "Qué mide",
-          "Fuente"
-        ],
-        "rows": [
-          [
-            "8000 millones",
-            "Población mundial; Naciones Unidas proyectó que llegaría a esa cifra el 15 de noviembre de 2022",
-            "Naciones Unidas"
-          ],
-          [
-            "611 personas",
-            "A cuántas personas conoce por su nombre el estadounidense medio; la mediana es 472",
-            "McCormick, Salganik y Zheng, 2010"
-          ],
-          [
-            "Unas 150",
-            "Cuántas relaciones estables puede mantener una persona",
-            "Dunbar, 1992; un estudio de 2021 sostuvo que la incertidumbre es demasiado amplia para fijar una cifra única"
-          ],
-          [
-            "50 / 90 / 200 horas",
-            "Tiempo total juntos para pasar de conocido a amigo ocasional, a amigo y a amigo íntimo",
-            "Hall, 2018"
-          ]
-        ]
+        "text": "De conocerse por casualidad a ser alguien importante"
       },
       {
         "type": "p",
-        "text": "Las 611 salen de una encuesta de EE. UU. y ningún otro país tiene un estudio de la misma escala, pero el orden de magnitud se sostiene: entre 8000 millones de personas, conoces por su nombre a unos cientos, y las personas con las que pasas 200 horas serán siempre pocas."
+        "text": "Conocerse es solo el principio. Pasar de conocido a amigo íntimo lleva unas doscientas horas juntos: muchas comidas, muchos paseos de vuelta a casa y muchos «tenemos que repetir» que de verdad se repitieron."
+      },
+      {
+        "type": "image",
+        "src": "guides/lifetime-cafe.webp",
+        "phone": "guides/lifetime-cafe-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "Años después, el oso y el conejo de fieltro están sentados frente a frente en una mesita de cafetería junto a la ventana, con dos tazas de café entre ellos, riéndose juntos."
+      },
+      {
+        "type": "p",
+        "text": "Una persona se vuelve importante porque sigues viéndola. Poco a poco aprendes que toma el café sin azúcar, que siempre tiene frío, que no deja de mencionar a una hermana que vive lejos."
       },
       {
         "type": "h2",
-        "text": "Las personas que importan suelen llegar por casualidad"
+        "text": "Por qué olvidas cómo os conocisteis"
       },
       {
         "type": "p",
-        "text": "En 1950, el psicólogo Leon Festinger y sus colegas estudiaron Westgate West, las viviendas del MIT para estudiantes casados. Los residentes ocupaban los apartamentos por orden de disponibilidad, así que nadie eligió a sus vecinos. En una misma planta, los vecinos de la puerta contigua se nombraban entre las personas a las que más veían en un 41 % de los casos; a dos puertas bajaba a un 22 % y en extremos opuestos del pasillo, a un 10 %. Quién acababa siendo amigo de quién dependía menos de la personalidad que de con quién te cruzabas cada día."
+        "text": "El día que conoces a alguien no sabes que va a importarte, así que es un día corriente. No te empeñas en recordar dónde estabas ni quién os presentó, ni intentas recordar de qué hablasteis. Años después, cuando esa persona ya es alguien muy cercano o tu pareja y quieres contar vuestra historia, casi todos los detalles se han perdido."
       },
       {
         "type": "p",
-        "text": "Con las parejas pasa lo mismo. El sociólogo de Stanford Michael Rosenfeld y sus colegas analizaron datos de parejas heterosexuales de EE. UU., publicados en 2019: en 2017, el 39 % se había conocido por internet, el 27 % en un bar o restaurante y el 20 % a través de amigos (una pareja puede entrar en más de una categoría). Cerca de 9 de cada 10 parejas que se conocieron por internet eran desconocidas entre sí. Hoy se conocen más parejas por internet, pero la mayoría sigue empezando como desconocidos."
-      },
-      {
-        "type": "p",
-        "text": "Conocerse, sin embargo, es solo el principio. Según la estimación de Hall, hacerse amigos íntimos requiere más de 200 horas juntos. Las personas que conociste por casualidad se volvieron importantes porque siguieron formando parte de tu vida después."
+        "text": "Lo olvidas porque, cuando pasó, nadie sabía que merecía la pena recordarlo."
       },
       {
         "type": "h2",
-        "text": "Por qué olvidas cómo se conocieron"
-      },
-      {
-        "type": "p",
-        "text": "El día que conoces a alguien no sabes que será importante, así que es un día corriente: no te esfuerzas en recordar dónde estabas, quién los presentó ni de qué hablaron. Años después, cuando esa persona es un amigo íntimo o tu pareja y quieres contar la historia, casi todos los detalles se han perdido."
-      },
-      {
-        "type": "p",
-        "text": "No es mala memoria. Mientras ocurría, nadie sabía que ese momento merecía recordarse."
-      },
-      {
-        "type": "h2",
-        "text": "Apunta cómo se conocieron"
+        "text": "Apunta cómo os conocisteis"
       },
       {
         "type": "steps",
         "items": [
-          "Escribe dos o tres líneas el mismo día que se conocen: dónde, quién los presentó y qué los llevó a hablar.",
-          "Añade la fecha. Dentro de unos años, puede ser el día que celebren.",
-          "Anota lo primero que te contó: su trabajo, algo que le preocupaba o una frase que se te quedó grabada.",
+          "Escribe dos o tres líneas el mismo día que os conocéis: dónde, quién os presentó y de qué empezasteis a hablar.",
+          "Añade la fecha. Dentro de unos años, puede que sea un día que celebréis.",
+          "Anota algo que te contó al principio: su trabajo, algo que le rondaba la cabeza o una frase que se te quedó grabada.",
           "No hace falta hacerlo con todo el mundo. Solo con las personas con las que te gustaría volver a hablar."
         ]
       },
       {
+        "type": "image",
+        "src": "guides/lifetime-notebook.webp",
+        "phone": "guides/lifetime-notebook-1080w.webp",
+        "width": 2160,
+        "height": 1450,
+        "alt": "Por la noche, el conejo de fieltro está sentado a un escritorio pequeño, bajo una lámpara, escribiendo con un lápiz en una libreta diminuta y sonriendo."
+      },
+      {
         "type": "p",
-        "text": "Esas pocas líneas también te dan pie para preguntarle la próxima vez que os veáis: «Te estabas preparando para mudarte, ¿cómo te fue?». Una pregunta así ayuda a que un conocido se convierta en amigo con el paso de las horas."
+        "text": "Esas pocas líneas son más que un recuerdo. La próxima vez que os veáis, preguntar «Te estabas preparando para mudarte, ¿cómo te fue?» es un pequeño trocito de esas doscientas horas."
       },
       {
         "type": "note",
-        "text": "Lo que escribes es tu propio recuerdo, no un expediente sobre esa persona. Apunta solo lo que no te importaría que leyera."
+        "text": "Lo que escribes es tu propio recuerdo. Anota solo lo que no te importaría que esa persona leyera."
       },
       {
         "type": "h2",
-        "text": "Cómo te ayuda Sotto"
+        "text": "Una página de cada persona que conoces, con Sotto"
       },
       {
         "type": "p",
-        "text": "Sotto es una app de notas sobre personas, con una página para cada una. Su campo integrado Encuentro está pensado para la historia de cómo se conocieron, y la fecha puede ir en el campo Aniversario: activa su recordatorio y Sotto te avisa 7 días antes, a las 9:00 de la mañana. Para profundizar con alguien nuevo, prueba las 33 preguntas de la categoría Conocernos, adaptadas del estudio de 1997 del psicólogo Arthur Aron sobre cómo los desconocidos llegan a sentirse cercanos."
+        "text": "Sotto es una app de notas sobre las personas de tu vida, con una página para cada una. Cuando conozcas a alguien con quien te gustaría volver a hablar, crea su página y haz de cómo os conocisteis la primera nota. Añade con el tiempo las pequeñas cosas que vayas oyendo; cada nota guarda la fecha en que la escribiste."
       },
       {
         "type": "p",
-        "text": "Todo se queda en tu móvil y, si quieres, queda protegido por el bloqueo de pantalla del propio móvil. Sotto es gratis para hasta 5 personas, en iPhone y Android."
+        "text": "Todo se queda en tu móvil, sin cuenta. La versión gratuita admite 5 personas, en iPhone y Android."
       }
     ],
     "related": [
