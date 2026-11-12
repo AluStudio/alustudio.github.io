@@ -43,7 +43,7 @@ The task gives a packet path (`.logs/l10n/babbby/<code>/packets/<segment>.json`)
 | field | meaning |
 |-------|---------|
 | `id` | `ui:<dotted.key>` one UI string (a key ending `.0`, `.1` … is one item of a list); `guide:<slug>` one whole guide |
-| `en` | the en text: a string for `ui:`; for `guide:` an object holding only the text fields (`title`, `summary`, `content[i].text`, `content[i].items`) |
+| `en` | the en text: a string for `ui:`; for `guide:` an object holding only the text fields (`title`, `summary`, `content[i].text`, `content[i].items`, and an illustration's `content[i].alt` and `content[i].caption`) |
 | `enHash` | copy it unchanged into your output |
 | `appMatch` | `ui:` only: the app has a string with exactly this en — `{key, value, note}` is the app's translation; `alternatives` lists other app keys translating it differently |
 | `current`, `stale`, `previousEn` | an existing translation made from an older en (`previousEn`): revise `current` to the new meaning, keeping its wording where the meaning did not change |

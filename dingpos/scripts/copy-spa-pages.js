@@ -46,6 +46,7 @@ import {
   setLanguageAlternates,
 } from "../../scripts/rewrite-seo-tags.mjs";
 import { contentUnits, fitDescription, DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
+import { imageBlockErrors } from "../../scripts/guide-images.mjs";
 import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
 import { HOME_FAQ_SLUGS } from "../src/data/faq/home.js";
 import { INLINE_LINK, blockTexts } from "../src/data/guides/links.js";
@@ -280,76 +281,7 @@ const GUIDE_UI_KEYS = [
 ];
 const GUIDE_BLOCK_TYPES = new Set(["p", "h2", "note", "list", "steps", "table", "image"]);
 const publicDir = join(__dirname, "..", "public");
-// GuideBlocks.jsx declares an image's `phone` file at this width in its srcset.
-const PHONE_IMAGE_WIDTH = 1080;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
-
-/** [width, height] of a WebP file from its VP8 / VP8L / VP8X header, or null. */
-function webpSize(path) {
-  const b = readFileSync(path);
-  if (b.length < 30 || b.toString("ascii", 0, 4) !== "RIFF" || b.toString("ascii", 8, 12) !== "WEBP") return null;
-  switch (b.toString("ascii", 12, 16)) {
-    case "VP8 ":
-      return [b.readUInt16LE(26) & 0x3fff, b.readUInt16LE(28) & 0x3fff];
-    case "VP8L": {
-      const bits = b.readUInt32LE(21);
-      return [(bits & 0x3fff) + 1, ((bits >>> 14) & 0x3fff) + 1];
-    }
-    case "VP8X":
-      return [b.readUIntLE(24, 3) + 1, b.readUIntLE(27, 3) + 1];
-    default:
-      return null;
-  }
-}
-
-/** Errors of an image block: real WebP files under public/, sized as declared. */
-function imageBlockErrors(block, at) {
-  const errors = [];
-  const isPositiveInt = (n) => Number.isInteger(n) && n > 0;
-  if (!block.alt?.trim()) errors.push(`${at} has no alt`);
-  if (block.caption !== undefined && (typeof block.caption !== "string" || !block.caption.trim() || /[[\]]/.test(block.caption))) {
-    errors.push(`${at} caption is empty or carries link markup`);
-  }
-  if (!isPositiveInt(block.width) || !isPositiveInt(block.height)) {
-    errors.push(`${at} width/height ${block.width}x${block.height} are not positive integers`);
-  }
-  if (block.width > PHONE_IMAGE_WIDTH && !block.phone) {
-    errors.push(`${at} is ${block.width}px wide and has no ${PHONE_IMAGE_WIDTH}w phone file`);
-  }
-  if (block.phone && !(block.width > PHONE_IMAGE_WIDTH)) {
-    errors.push(`${at} has a phone file but is not wider than ${PHONE_IMAGE_WIDTH}px`);
-  }
-  const file = (field) => {
-    const rel = block[field];
-    if (typeof rel !== "string" || !/\.webp$/.test(rel) || rel.startsWith("/") || rel.split("/").includes("..")) {
-      errors.push(`${at} ${field} "${rel}" is not a .webp path relative to public/`);
-      return null;
-    }
-    const path = join(publicDir, rel);
-    if (!existsSync(path)) {
-      errors.push(`${at} ${field} public/${rel} does not exist`);
-      return null;
-    }
-    const size = webpSize(path);
-    if (!size) errors.push(`${at} ${field} public/${rel} is not a WebP file`);
-    return size;
-  };
-  const size = file("src");
-  if (size && (size[0] !== block.width || size[1] !== block.height)) {
-    errors.push(`${at} declares ${block.width}x${block.height}, but public/${block.src} is ${size[0]}x${size[1]}`);
-  }
-  if (block.phone) {
-    const phone = file("phone");
-    // The same picture at PHONE_IMAGE_WIDTH: height within a pixel of scale rounding.
-    const expectedHeight = (block.height * PHONE_IMAGE_WIDTH) / block.width;
-    if (phone && (phone[0] !== PHONE_IMAGE_WIDTH || Math.abs(phone[1] - expectedHeight) > 1)) {
-      errors.push(
-        `${at} phone public/${block.phone} is ${phone[0]}x${phone[1]}, not ${PHONE_IMAGE_WIDTH}x${Math.round(expectedHeight)}`,
-      );
-    }
-  }
-  return errors;
-}
 
 function validateGuides() {
   const errors = [];
@@ -380,7 +312,7 @@ function validateGuides() {
       if (!linksSupport) errors.push(`${at} links to no support article (docs/specs/seo-aeo.md §獲客文章)`);
       guide.content.forEach((block, i) => {
         if (!GUIDE_BLOCK_TYPES.has(block.type)) errors.push(`${at} block ${i} has unknown type "${block.type}"`);
-        if (block.type === "image") errors.push(...imageBlockErrors(block, `${at} image block ${i}`));
+        if (block.type === "image") errors.push(...imageBlockErrors(block, `${at} image block ${i}`, publicDir));
       });
       for (const { label, url } of guide.sources) {
         if (!label?.trim() || !url?.startsWith("https://")) errors.push(`${at} has a bad source ${JSON.stringify({ label, url })}`);

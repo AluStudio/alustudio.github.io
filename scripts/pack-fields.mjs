@@ -14,7 +14,7 @@
 export const PACK_TEXT_FIELDS = {
   dingpos: new Set(["label", "question", "keywords", "text", "items", "alt", "caption"]),
   sotto: new Set(["title", "summary", "text", "items", "head", "rows", "caption"]),
-  babbby: new Set(["title", "summary", "text", "items"]),
+  babbby: new Set(["title", "summary", "text", "items", "alt", "caption"]),
 };
 
 const PLACEHOLDER = /\{\{\s*[^}]+?\s*\}\}/g;

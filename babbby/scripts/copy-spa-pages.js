@@ -36,6 +36,7 @@ import {
   setLanguageAlternates,
 } from "../../scripts/rewrite-seo-tags.mjs";
 import { DESCRIPTION_MAX } from "../../scripts/meta-description.mjs";
+import { imageBlockErrors } from "../../scripts/guide-images.mjs";
 import {
   LIBRARY_CELLS,
   MATERIAL_CHIPS,
@@ -186,7 +187,8 @@ validateScenes();
 // ── Guide packs ─────────────────────────────────────────────
 
 // Block types GuideBlocks.jsx renders; anything else would render nothing.
-const GUIDE_BLOCK_TYPES = new Set(["p", "h2", "note", "list", "steps"]);
+const GUIDE_BLOCK_TYPES = new Set(["p", "h2", "note", "list", "steps", "image"]);
+const publicDir = join(__dirname, "..", "public");
 
 function validateGuides() {
   const enSlugs = DEFAULT_LOCALE.guides.map((g) => g.slug);
@@ -205,6 +207,7 @@ function validateGuides() {
       if (!guide.content.some((b) => b.type === "h2")) errors.push(`${at} has no h2 section`);
       guide.content.forEach((block, i) => {
         if (!GUIDE_BLOCK_TYPES.has(block.type)) errors.push(`${at} block ${i} has unknown type "${block.type}"`);
+        if (block.type === "image") errors.push(...imageBlockErrors(block, `${at} image block ${i}`, publicDir));
       });
       for (const related of guide.related) {
         if (related === guide.slug || !slugs.includes(related)) errors.push(`${at} has a bad related link "${related}"`);
