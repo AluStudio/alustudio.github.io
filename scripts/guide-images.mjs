@@ -1,5 +1,5 @@
 // Build-time checks for a guide `image` block, shared by every app whose
-// GuideBlocks.jsx renders one (DingPOS, Babbby). Rules: docs/specs/seo-aeo.md
+// GuideBlocks.jsx renders one (DingPOS, Babbby, Sotto). Rules: docs/specs/seo-aeo.md
 // §獲客文章 and docs/specs/performance.md §圖片.
 //
 // Block: { type: "image", src, phone?, width, height, alt, caption? }

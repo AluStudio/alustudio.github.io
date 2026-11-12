@@ -27,7 +27,7 @@ The task gives a packet path (`.logs/l10n/sotto/<code>/packets/<segment>.json`).
 | field | meaning |
 |-------|---------|
 | `id` | `ui:<dotted.key>` one UI string (a key ending `.0`, `.1` … is one item of a list); `guide:<slug>` one whole guide |
-| `en` | the en text: a string for `ui:`; for `guide:` an object holding only the text fields (`title`, `summary`, `content[i].text`, `content[i].items`, and for a table `content[i].caption`, `content[i].head`, `content[i].rows`) |
+| `en` | the en text: a string for `ui:`; for `guide:` an object holding only the text fields (`title`, `summary`, `content[i].text`, `content[i].items`, for a table `content[i].caption`, `content[i].head`, `content[i].rows`, and for an illustration `content[i].alt` and `content[i].caption`) |
 | `enHash` | copy it unchanged into your output |
 | `appMatch` | `ui:` only: the app has a string with exactly this en — `{key, value, note}` is the app's translation; `alternatives` lists other app keys translating it differently |
 | `current`, `stale`, `previousEn` | an existing translation made from an older en (`previousEn`): revise `current` to the new meaning, keeping its wording where the meaning did not change |
@@ -39,12 +39,13 @@ Per unit:
 1. `appMatch`: use `appMatch.value` as is. Change it only when the site uses the words in a different sense; then list the unit in `appMatchDeviations` with the reason.
 2. Names of screens, buttons and fields in the app are written exactly as the app shows them in this language. A reader looking for "Gift Ideas" in the app must find the same words.
 3. A guide `title` is the page title and a search result: write it the way a reader in that market types the question into a search engine, not a word-for-word rendering. `summary` is the index card and the meta description: at most 160 characters (the build fails above that). The first `content` paragraph answers the title directly in two or three sentences — keep the en's answer-first order. No two titles or summaries in the language may be identical, across guides and UI strings (`meta_title`, `meta_description`).
-4. `content[i].items` and a table's `head` and `rows` keep en's count and order (same rows, same cells per row). In a data table, numbers, years and citations stay as written (`McCormick, Salganik & Zheng, 2010`); translate the words around them.
-5. `{{placeholders}}` stay exactly as in en. Every value is non-empty: the build rejects an empty string.
-6. Keep untranslated: Sotto, iPhone, Android, Face ID, Touch ID, iCloud, Google Drive, Dropbox, App Store, Google Play, and the names of people, studies, books and products the guides cite (Threads; "1 in 8 Billion" keeps its title, and the translation may add the language's rendering after it in parentheses).
-7. Register: warm and personal, the way the language's best consumer apps talk to one person. Keep the address form the site's pages in this language already use — German du, French vous, Spanish (Spain) tú, Italian tu, Portuguese (Brazil) você, Russian вы, Japanese です・ます, Korean 해요체 (the privacy policy and terms of use keep 합니다체, the convention for Korean legal pages), Arabic the second person singular — and keep it consistent across the segment. `es` is the Spain storefront: Spain usage, not Latin American.
-8. Punctuation follows the language as the shared l10n guidelines describe. Arabic is shown right-to-left; keep Latin product names and numbers as they are.
-9. Privacy policy and terms of use are translated in full like every other page — no note that the English version prevails.
+4. An emotional guide (one built on a saying, with small scenes from someone's life) is translated as an essay in the language, not as an explainer: render a quoted saying the way people in that language would say it to a child, turn a child's mispronounced word ("appy") into the way toddlers in that language mangle the same word, and use the language's own name for a custom where it has one (Japanese 数え年, Korean 세는 나이 for East Asian age counting). Keep en's facts about which countries do what. An illustration's `alt` describes the picture plainly, without the article's emotional voice.
+5. `content[i].items` and a table's `head` and `rows` keep en's count and order (same rows, same cells per row). In a data table, numbers, years and citations stay as written (`McCormick, Salganik & Zheng, 2010`); translate the words around them.
+6. `{{placeholders}}` stay exactly as in en. Every value is non-empty: the build rejects an empty string.
+7. Keep untranslated: Sotto, iPhone, Android, Face ID, Touch ID, iCloud, Google Drive, Dropbox, App Store, Google Play, and the names of people, studies, books and products the guides cite (Threads; "1 in 8 Billion" keeps its title, and the translation may add the language's rendering after it in parentheses).
+8. Register: warm and personal, the way the language's best consumer apps talk to one person. Keep the address form the site's pages in this language already use — German du, French vous, Spanish (Spain) tú, Italian tu, Portuguese (Brazil) você, Russian вы, Japanese です・ます, Korean 해요체 (the privacy policy and terms of use keep 합니다체, the convention for Korean legal pages), Arabic the second person singular — and keep it consistent across the segment. `es` is the Spain storefront: Spain usage, not Latin American.
+9. Punctuation follows the language as the shared l10n guidelines describe. Arabic is shown right-to-left; keep Latin product names and numbers as they are.
+10. Privacy policy and terms of use are translated in full like every other page — no note that the English version prevails.
 
 Write the packet's `output` path:
 
