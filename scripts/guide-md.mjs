@@ -124,7 +124,9 @@ export function formatArticle(article) {
   ].join("\n");
 }
 
-const importFresh = (file) => import(`${pathToFileURL(file).href}?t=${Date.now()}`);
+// Two imports within one millisecond would share a Date.now() query and hit the module cache.
+let importCount = 0;
+const importFresh = (file) => import(`${pathToFileURL(file).href}?v=${++importCount}`);
 
 export async function appendToPack(article, packFile) {
   const file = resolve(packFile);
