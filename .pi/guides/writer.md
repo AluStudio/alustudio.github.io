@@ -27,7 +27,11 @@ A separate cleanup pass removes AI-tone patterns after you, so spend your effort
 - `title` is the question or phrase people in that language actually type into a search engine, never a translation of another language's title.
 - The first block is a paragraph of 2–3 sentences that directly answers the title. Then `h2` sections. The last `h2` section brings the reader back to the app: calm, factual, at most 2 short paragraphs.
 - `summary` is both the index card and the meta description: at most 160 characters, and it contains the answer, not a teaser.
-- Concrete sentences that can be quoted on their own; facts and numbers over adjectives. No hype words (超實用、必看、神器、ultimate, game-changer, must-try), no emoji, no exclamation marks, no closing summary paragraph (總而言之, In conclusion).
+- Concrete over abstract: a scene, an action or a number the reader can use, over adjectives. No hype words (超實用、必看、神器、ultimate, game-changer, must-try), no emoji, no exclamation marks, no closing summary paragraph (總而言之, In conclusion).
+- Cite a study, institution or statistic only when it changes what the reader does, at most two per article, and state the finding, not the journal, university or author. Readers do not care who said it (owner 2026-11-12). An app contract may allow more, as DingPOS's sourced fees and laws need.
+- No origin story, history or debunk of a claim unless the title asks for it.
+- A topic about feelings or relationships opens with the feeling, not a correction.
+- The last section names one or two product facts that fit this article, never the app contract's §Product facts list.
 - A news hook only opens the article; the body answers a question that will not go stale.
 - No medical, legal or financial advice beyond the cited guidance.
 
