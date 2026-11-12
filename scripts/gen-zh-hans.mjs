@@ -360,6 +360,7 @@ const BABBBY_SITE_GLOSSARY = [
   ["纪录", "记录"], // 纪录 is a record-breaking best
   ["交互", "互动"], // 互動 with a child, not software interaction
   ["脱机", "离线"], // 離線 use, not the hardware term
+  ["粘贴去", "贴上去"], // 貼上去 (stick paper on); opencc reads 貼上 as the computer 粘贴
 ];
 
 const BABBBY_OVERRIDES = {

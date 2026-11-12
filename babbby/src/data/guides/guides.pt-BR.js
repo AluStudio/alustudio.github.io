@@ -4,35 +4,11 @@ export const articles = [
   {
     "slug": "screen-free-play-by-age",
     "title": "Brincadeiras sem tela em casa: o que fazer com seu bebê ou criança pequena, por idade (0 a 6 anos)",
-    "summary": "Troque a tela por atividades de 5 a 15 minutos com itens de casa que estimulam conversa, movimento e brincadeira com as mãos, em sete faixas etárias.",
+    "summary": "Reduza as telas deixando prontas brincadeiras de 5 a 15 minutos com o que você já tem em casa: ideias para 0 a 6 anos e como seguir firme quando o cansaço bate.",
     "content": [
       {
         "type": "p",
-        "text": "Quando você quer trocar o tempo de tela em casa por outra coisa para um bebê ou uma criança de 0 a 6 anos, o caminho mais prático é deixar à mão algumas atividades de 5 a 15 minutos com itens comuns da casa, como copos, blocos, papel, fita adesiva ou água. As pesquisas sobre crianças pequenas apontam na mesma direção: elas desenvolvem vocabulário, coordenação motora e atenção na interação de ida e volta com um adulto e na brincadeira física, com as mãos. Ter uma atividade curta, adequada à idade, pronta para começar tira a pressão de inventar brincadeiras na hora, quando você e a criança estão cansados."
-      },
-      {
-        "type": "h2",
-        "text": "O que dizem as pesquisas recentes sobre crianças pequenas, telas e brincadeiras do dia a dia"
-      },
-      {
-        "type": "p",
-        "text": "Vários estudos e uma atualização de política pediátrica sobre crianças pequenas e telas ganharam as notícias no mundo todo em 2026. Junto com pesquisas anteriores, eles apontam para uma conclusão prática em comum: o uso de telas na primeira infância importa principalmente pelo que ele tira das horas em que a criança está acordada, em especial a conversa de ida e volta, o movimento do corpo e a brincadeira com as mãos junto de quem cuida. Um estudo anterior mostra como isso aparece dentro de casa: em um estudo de 2024 na JAMA Pediatrics, pesquisadores australianos liderados por Brushe usaram gravadores de áudio em casa com crianças de 12 a 36 meses e verificaram que, entre crianças de 3 anos, cada minuto extra de tela estava associado a 6,6 palavras de adultos a menos, 4,9 vocalizações da criança a menos e 1,1 turno de conversa a menos ouvidos em casa."
-      },
-      {
-        "type": "p",
-        "text": "Estudos publicados em 2026 examinaram como esses hábitos diários se relacionam com a linguagem e a aprendizagem. Na Western University, no Canadá, um estudo de 2026 com ressonância magnética do cérebro e avaliações do desenvolvimento de 70 crianças pequenas constatou que mais tempo de tela aos 2 anos estava associado a pior linguagem expressiva aos 2 anos. Um estudo de 2026 do Inserm e da National University of Singapore, no World Journal of Pediatrics, acompanhou 502 crianças de 1 a 8 anos de idade; mais tempo de tela na fase de bebê e por volta dos 6 anos esteve associado a pior desempenho escolar aos 9 anos e a memória de trabalho mais fraca aos 10,5 anos, com a maior associação com 1 ano de idade, enquanto as associações aos 2 e aos 3 anos não foram estatisticamente significativas. Em outubro de 2026, uma revisão de 30 estudos da University of Georgia concluiu que o uso intenso de telas por bebês e crianças pequenas estava ligado a pior linguagem e vocabulário menor, observando que conteúdo, idade e assistir junto também importam, além dos minutos, porque o uso intenso toma o lugar da leitura, da brincadeira ao ar livre e do tempo em família."
-      },
-      {
-        "type": "p",
-        "text": "Refletindo essa visão mais ampla, a declaração de política da American Academy of Pediatrics (AAP, Academia Americana de Pediatria) “Digital Ecosystems, Children, and Adolescents”, publicada na Pediatrics em janeiro de 2026, vai além de simples limites de tempo e passa a olhar a qualidade da mídia, o contexto familiar e a conversa, destacando que bebês com menos de 18 meses aprendem melhor com a interação no mundo real e que o uso inadequado pode tomar o lugar de ler, se mexer e explorar com quem se ama. É importante lembrar que estudos observacionais apontam associações estatísticas, e não prova direta de causa e efeito, e que tela zero é irreal para muitos pais que trabalham, responsáveis que cuidam sozinhos ou casas que lidam com tarefas e doenças sem ajuda extra. A solução prática, então, é trocar a culpa ou o cronômetro por uma atividade pronta, para fazer com as mãos, quando uma tela ocuparia esse espaço."
-      },
-      {
-        "type": "h2",
-        "text": "As recomendações oficiais de tempo de tela variam de país para país"
-      },
-      {
-        "type": "p",
-        "text": "Como referência global, a World Health Organization (WHO, ou Organização Mundial da Saúde, OMS) recomenda nenhum tempo sedentário de tela antes dos 2 anos e no máximo 1 hora por dia dos 2 aos 4 anos, ressaltando que quanto menos, melhor. A AAP, nos Estados Unidos, e a Health Promotion Administration de Taiwan indicam limites parecidos (menos de 2 anos: nenhum; a partir de 2 anos: até 1 hora por dia), e a Japan Pediatric Association (Sociedade Japonesa de Pediatria) também recomenda evitar televisão e vídeos antes dos 2 anos. Vários países definem limites de idade mais rígidos. Na França, a caderneta de saúde oficial da criança (carnet de santé, edição de 2025) recomenda nenhuma tela antes dos 3 anos e, desde 3 de julho de 2025, as telas estão proibidas em creches e outros espaços de cuidado infantil para crianças com menos de 3 anos. Na Alemanha, a agência federal de educação em saúde (BIÖG, antiga BZgA) recomenda, idealmente, nenhuma mídia de tela antes dos 3 anos e até 30 minutos por dia dos 3 aos 5 anos. Na Espanha, a Asociación Española de Pediatría (AEP, Associação Espanhola de Pediatria) recomenda nenhuma tela antes dos 6 anos, afirmando que não existe tempo seguro na primeira infância. Como as recomendações variam, confira o que a autoridade de pediatria ou de saúde do seu país recomenda."
+        "text": "Se você quer que a criança passe menos tempo nas telas, o passo mais prático é deixar prontas algumas brincadeiras de 5 a 15 minutos que começam com coisas que você já tem em casa: alguns copos e uma caixa de blocos, ou um rolo de fita adesiva e um copo d'água, já bastam. Quando o cansaço bate, o mais difícil é pensar numa brincadeira na hora; com uma atividade adequada à idade já pronta, a tela não precisa preencher esse vazio."
       },
       {
         "type": "h2",
@@ -126,8 +102,8 @@ export const articles = [
         ]
       },
       {
-        "type": "note",
-        "text": "Observação sobre o desenvolvimento: as brincadeiras em casa apoiam a conversa do dia a dia, mas não substituem uma avaliação profissional. A criança com suspeita de atraso na linguagem deve ser vista por um pediatra ou especialista em desenvolvimento."
+        "type": "p",
+        "text": "Brincar em casa não substitui uma avaliação profissional. Se você desconfia que a criança está demorando para falar ou se movimentar, converse com um pediatra ou procure uma clínica de desenvolvimento infantil."
       },
       {
         "type": "h2",
@@ -135,7 +111,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Muitos pais e responsáveis sabem que querem reduzir as telas, mas no terceiro dia ficam sem ideias justamente na hora em que é preciso preparar a refeição e a energia está baixa. Quando o cansaço do fim da tarde bate, quatro pequenos hábitos tornam muito mais fácil manter as brincadeiras sem tela:"
+        "text": "Muitos pais e responsáveis sabem que querem reduzir as telas, mas no terceiro dia ficam sem ideias justamente na hora em que é preciso preparar a refeição e a energia está baixa. Quando o cansaço do fim da tarde bate, quatro pequenos hábitos tornam muito mais fácil manter as brincadeiras sem tela."
       },
       {
         "type": "steps",
@@ -148,15 +124,19 @@ export const articles = [
       },
       {
         "type": "h2",
+        "text": "Até que idade os países recomendam não usar telas?"
+      },
+      {
+        "type": "p",
+        "text": "As recomendações variam de país para país: a WHO (Organização Mundial da Saúde, OMS), Taiwan, os Estados Unidos e o Japão recomendam nenhuma tela antes dos 2 anos; a França e a Alemanha, nenhuma antes dos 3 anos; e a Espanha, nenhuma antes dos 6 anos. A partir dos 2 anos, a WHO, Taiwan e os Estados Unidos recomendam no máximo 1 hora por dia. Siga a orientação pediátrica do lugar onde você mora."
+      },
+      {
+        "type": "h2",
         "text": "Como manter ideias de brincadeiras do dia a dia sempre à mão com o Babbby"
       },
       {
         "type": "p",
-        "text": "Quando a parte mais difícil de reduzir as telas é decidir o que fazer em seguida, o Babbby é um app para iPhone e iPad feito para pais e responsáveis, uma ferramenta prática de planejamento para o adulto, e não um app para a criança usar. Ele cobre de 0 a 6 anos em sete faixas etárias (0 a 6 meses, 6 a 12 meses, 12 a 18 meses, 18 a 24 meses, 2 a 3 anos, 3 a 4 anos e 4 a 6 anos), com 342 atividades incluídas em oito áreas do desenvolvimento: motricidade ampla, motricidade fina, linguagem, cognitivo, socioemocional, sensorial, criatividade e vida diária. Todos os dias, o Babbby sugere até 6 atividades para a idade da criança, mostrando materiais, uma dica e mais ou menos quantos minutos cada atividade leva, e você pode trocá-las ou ajustá-las antes de marcar cada uma como concluída."
-      },
-      {
-        "type": "p",
-        "text": "Você também pode salvar até 3 fotos por atividade concluída, ver as estatísticas de atividades concluídas e relembrar, em resumos semanais e mensais com fotos, as brincadeiras de vocês. O Babbby funciona offline, sem anúncios, e o download é gratuito e inclui 14 dias de teste grátis com acesso completo; depois, há um desbloqueio vitalício por compra única, sem assinatura."
+        "text": "Se a parte mais difícil é decidir o que brincar em seguida, o Babbby sugere até 6 atividades por dia para a idade da criança, com os materiais para separar e mais ou menos quantos minutos cada uma leva; todas as ideias acima vêm das atividades do Babbby. É um app para iPhone e iPad feito para pais e responsáveis, então a criança nunca precisa encostar na tela."
       }
     ],
     "related": [

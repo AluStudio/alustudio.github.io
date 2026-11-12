@@ -3,36 +3,12 @@
 export const articles = [
   {
     "slug": "screen-free-play-by-age",
-    "title": "Juegos sin pantallas en casa para bebés y niños de 0 a 6 años: ideas por edad",
-    "summary": "Reemplaza las pantallas en niños de 0-6 años con actividades caseras de 5 a 15 minutos que fomentan el habla, el movimiento y el juego manual, según la edad.",
+    "title": "Juegos sin pantallas en casa para bebés y niños de 0-6 años: ideas por edad",
+    "summary": "Reduce las pantallas con juegos de 5 a 15 minutos listos, con cosas que ya tienes en casa: ideas para 0-6 años y cómo seguir cuando llega el cansancio.",
     "content": [
       {
         "type": "p",
-        "text": "Si quieres reducir el tiempo frente a pantallas en casa con un bebé o un niño pequeño de 0 a 6 años, lo más práctico es tener listas unas cuantas actividades de 5 a 15 minutos con objetos cotidianos del hogar, como vasos, bloques, papel, cinta adhesiva o agua. La investigación sobre la primera infancia apunta en la misma dirección: los niños desarrollan vocabulario, coordinación motriz y concentración mediante la interacción de ida y vuelta con un adulto y el juego físico con las manos. Tener a mano una actividad corta y adecuada a la edad te quita la presión de inventar juegos sobre la marcha cuando el cansancio llega para ti y para tu bebé."
-      },
-      {
-        "type": "h2",
-        "text": "Qué dice la investigación reciente sobre los niños pequeños, las pantallas y el juego diario"
-      },
-      {
-        "type": "p",
-        "text": "En 2026, varios estudios y una actualización de las recomendaciones pediátricas sobre niños pequeños y pantallas llegaron a las noticias internacionales. Junto con investigaciones anteriores, apuntan a un hallazgo práctico coherente: el uso de pantallas en la primera infancia importa sobre todo por lo que desplaza durante las horas de vigilia, en concreto la conversación de ida y vuelta, el movimiento físico y el juego manual con quienes los cuidan. Un estudio anterior muestra cómo se ve esto en casa: en un estudio de 2024 publicado en JAMA Pediatrics, investigadores australianos dirigidos por Brushe usaron grabadoras de audio en casa con niños de 12 a 36 meses y encontraron que, entre los niños de 3 años, cada minuto adicional de pantalla se asociaba con 6,6 palabras menos de los adultos, 4,9 vocalizaciones menos de los niños y 1,1 turnos de conversación menos escuchados en casa."
-      },
-      {
-        "type": "p",
-        "text": "Los estudios publicados en 2026 examinaron cómo se relacionan estos patrones diarios con el lenguaje y el aprendizaje. En Western University, en Canadá, un estudio de 2026 con resonancia magnética cerebral y evaluaciones del desarrollo de 70 niños pequeños encontró que más tiempo de pantalla a los 2 años se asociaba con un peor lenguaje expresivo a esa misma edad. Un estudio de 2026 de Inserm y la National University of Singapore, publicado en el World Journal of Pediatrics, siguió a 502 niños desde el año hasta los 8 años; más tiempo frente a pantallas en la infancia temprana y alrededor de los 6 años se asoció con un menor rendimiento académico a los 9 años y una memoria de trabajo más débil a los 10,5 años, con la asociación más fuerte a la edad de 1 año, mientras que las asociaciones a los 2 y 3 años no fueron estadísticamente significativas. En octubre de 2026, una revisión de la University of Georgia que analizó 30 estudios concluyó que un mayor uso de pantallas en bebés y niños pequeños se vinculaba con un peor lenguaje y un vocabulario más reducido, y señaló que el contenido, la edad y ver las pantallas acompañados importan tanto como los minutos, porque el uso intensivo desplaza la lectura, el juego al aire libre y el tiempo en familia."
-      },
-      {
-        "type": "p",
-        "text": "En línea con esta visión más amplia, la declaración de política de la American Academy of Pediatrics (AAP) «Digital Ecosystems, Children, and Adolescents», publicada en Pediatrics en enero de 2026, va más allá de los simples límites de tiempo y se centra en la calidad de los contenidos, el contexto familiar y la conversación; señala que los bebés menores de 18 meses aprenden mejor de la interacción en el mundo real y que un mal uso puede desplazar la lectura, el movimiento y la exploración junto a los seres queridos. Es importante tener presente que los estudios observacionales reportan asociaciones estadísticas, no pruebas directas de causalidad, y que cero pantallas es poco realista para muchos padres que trabajan, cuidadores que están solos o familias que manejan quehaceres y enfermedades sin ayuda extra. Por eso la solución práctica es cambiar la culpa o el cronómetro por una actividad manual lista para cuando una pantalla ocuparía ese hueco."
-      },
-      {
-        "type": "h2",
-        "text": "Las pautas oficiales sobre el tiempo de pantalla varían según el país"
-      },
-      {
-        "type": "p",
-        "text": "Como referencia mundial, la Organización Mundial de la Salud (OMS) recomienda ningún tiempo sedentario frente a pantallas antes de los 2 años y no más de 1 hora al día entre los 2 y los 4 años, y señala que menos es mejor. La American Academy of Pediatrics (AAP) en Estados Unidos y la Administración de Promoción de la Salud de Taiwán (Health Promotion Administration) dan umbrales similares (menores de 2 años: ninguno; de 2 años en adelante: hasta 1 hora al día), y la Sociedad Japonesa de Pediatría (Japan Pediatric Association) también recomienda evitar la televisión y los videos antes de los 2 años. Varios países establecen límites de edad más estrictos. En Francia, la libreta oficial de salud infantil (carnet de santé, edición de 2025) aconseja evitar las pantallas antes de los 3 años, y desde el 3 de julio de 2025 las pantallas están prohibidas en los centros de cuidado infantil para menores de 3 años. En Alemania, el organismo federal de educación para la salud (BIÖG, antes BZgA) recomienda idealmente ningún medio con pantalla antes de los 3 años y hasta 30 minutos al día entre los 3 y los 5 años. En España, la Asociación Española de Pediatría (AEP) recomienda ninguna pantalla antes de los 6 años y afirma que no existe un tiempo seguro en la primera infancia. Como las pautas nacionales difieren, consulta qué recomienda la autoridad pediátrica o sanitaria de tu país."
+        "text": "Si quieres reducir el tiempo frente a pantallas en casa, lo más práctico es tener listos unos cuantos juegos de 5 a 15 minutos que partan de cosas que ya tienes: unos vasos y una caja de bloques, o un rollo de cinta y un vaso con agua, son suficientes. Cuando llega el cansancio, lo más difícil es inventar algo para jugar sobre la marcha; con una actividad adecuada a la edad ya lista, no hace falta que una pantalla llene ese hueco."
       },
       {
         "type": "h2",
@@ -58,7 +34,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Pasos laterales por el sofá: Ayuda a tu bebé a ponerse de pie sujetándose del sofá y coloca un juguete en el otro extremo para que dé pasos hacia el lado, mientras te quedas cerca para darle apoyo.",
-          "Juego de sonidos de animales: Miren juntos imágenes de animales e imiten el sonido de cada uno, haciendo una pausa para que tu bebé vocalice o repita el sonido.",
+          "Juego de sonidos de animales: Mira imágenes de animales junto con tu bebé e imita el sonido de cada uno, haciendo una pausa para que tu bebé vocalice o repita el sonido.",
           "Practicar el adiós con la mano: Mueve la mano y di «adiós» cada vez que alguien salga de la habitación o de la casa, para que tu bebé conecte la palabra con el gesto."
         ]
       },
@@ -69,7 +45,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Apilar y derribar: Apilen bloques para armar una torre pequeña y deja que tu bebé la derribe, porque tumbar los bloques es la parte divertida que mantiene vivo el juego.",
+          "Apilar y derribar: Apila bloques para armar una torre pequeña y deja que tu bebé la derribe, porque tumbar los bloques es la parte divertida que mantiene vivo el juego.",
           "Busca la pelota entre tres vasos: Esconde una pelota pequeña debajo de uno de tres vasos boca abajo y deslízalos despacio mientras tu bebé observa; luego invita a tu bebé a levantar un vaso para encontrarla.",
           "Pintura con los dedos: Prepara pintura lavable no tóxica y una hoja grande de papel para pintar con los dedos; usa ropa vieja o el piso del baño para que la limpieza sea rápida."
         ]
@@ -93,9 +69,9 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Collar de cuentas: Ensarten juntos cuentas medianas en un cordón o una agujeta; quédate cerca todo el tiempo y mantén las cuentas fuera de la boca.",
-          "Contar hasta 10: Alinea bloques o bocadillos pequeños y cuenten juntos del 1 al 10, señalando cada objeto uno por uno mientras dices el número.",
-          "Máscaras de platos de papel: Dibuja primero el contorno de una cara o de un animal en un plato de papel y deja que lo coloreen antes de turnarse para ponerse las máscaras."
+          "Collar de cuentas: Ensarta cuentas medianas en un cordón o una agujeta junto con tu bebé; quédate cerca todo el tiempo y mantén las cuentas fuera de su boca.",
+          "Contar hasta 10: Alinea bloques o bocadillos pequeños y cuenta junto con tu bebé del 1 al 10, señalando cada objeto uno por uno mientras dices el número.",
+          "Máscaras de platos de papel: Dibuja primero el contorno de una cara o de un animal en un plato de papel y deja que tu bebé lo coloree antes de turnarse para ponerse las máscaras."
         ]
       },
       {
@@ -121,13 +97,13 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Sumas y restas: Practiquen sumas sencillas hasta el 5 con bocadillos en un plato: agregar uno representa la suma y comerse uno, la resta.",
-          "Stop-motion con plastilina: Moldeen personajes de plastilina y tomen fotos moviéndolos un poquito cada vez; luego pasen las fotos juntos para ver cómo se mueve su escena."
+          "Sumas y restas: Practica sumas sencillas hasta el 5 con bocadillos en un plato: agregar uno representa la suma y comerse uno, la resta.",
+          "Stop-motion con plastilina: Modela personajes de plastilina y toma fotos mientras los mueves un poquito cada vez; luego mira las fotos con tu bebé para ver cómo se mueve la escena."
         ]
       },
       {
-        "type": "note",
-        "text": "Nota sobre el desarrollo: Las actividades de juego en casa favorecen la conversación diaria, pero no reemplazan una evaluación profesional. Ante la sospecha de un retraso del lenguaje, conviene consultar con un pediatra o un especialista en desarrollo infantil."
+        "type": "p",
+        "text": "Jugar en casa no reemplaza una evaluación profesional. Si sospechas que tu bebé tarda en hablar o en moverse, consulta con un pediatra o con una clínica de desarrollo infantil."
       },
       {
         "type": "h2",
@@ -135,7 +111,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Muchos padres saben que quieren reducir las pantallas, pero al tercer día se quedan sin ideas justo a la hora en que hay que cocinar y la energía está baja. Cuando llega el cansancio de la tarde, cuatro pequeños hábitos hacen mucho más fácil mantener el juego sin pantallas:"
+        "text": "Muchos padres saben que quieren reducir las pantallas, pero al tercer día se quedan sin ideas justo a la hora en que hay que cocinar y la energía está baja. Cuando llega el cansancio de la tarde, cuatro pequeños hábitos hacen mucho más fácil mantener el juego sin pantallas."
       },
       {
         "type": "steps",
@@ -148,15 +124,19 @@ export const articles = [
       },
       {
         "type": "h2",
+        "text": "¿Hasta qué edad recomiendan los países no usar pantallas?"
+      },
+      {
+        "type": "p",
+        "text": "Las recomendaciones varían según el país: la OMS, Taiwán, Estados Unidos y Japón indican ninguna pantalla antes de los 2 años; Francia y Alemania, ninguna antes de los 3 años, y España, ninguna antes de los 6 años. A partir de los 2 años, la OMS, Taiwán y Estados Unidos recomiendan no más de 1 hora al día. Sigue las indicaciones pediátricas del lugar donde vives."
+      },
+      {
+        "type": "h2",
         "text": "Cómo tener a mano ideas de juego diarias con Babbby"
       },
       {
         "type": "p",
-        "text": "Cuando lo más difícil de reducir las pantallas es decidir qué hacer después, Babbby es una app para iPhone y iPad pensada para los padres: una herramienta práctica de planificación para el adulto, no una app que usen los niños. Abarca de 0 a 6 años en siete rangos de edad (0-6 meses, 6-12 meses, 12-18 meses, 18-24 meses, 2-3 años, 3-4 años y 4-6 años) con 342 actividades integradas en ocho áreas del desarrollo: motricidad gruesa, motricidad fina, lenguaje, cognitivo, socioemocional, sensorial, creatividad y vida diaria. Cada día, Babbby sugiere hasta 6 actividades para la edad de tu bebé, con los materiales, un consejo y los minutos aproximados que lleva cada una, y puedes cambiarlas o ajustarlas antes de marcar cada una como completada."
-      },
-      {
-        "type": "p",
-        "text": "También puedes guardar hasta 3 fotos por actividad completada, ver tus estadísticas de actividades completadas y repasar los resúmenes semanales y mensuales de lo que jugaron juntos. Babbby funciona sin conexión y sin anuncios; se descarga gratis, con una prueba gratuita de 14 días con todas las funciones, y después un pago único «De por vida» sin suscripción."
+        "text": "Si lo más difícil es decidir qué jugar después, Babbby te sugiere hasta 6 actividades al día para la edad de tu bebé, con los materiales que debes preparar y los minutos aproximados que lleva cada una; todas las ideas de arriba salen de sus actividades. Es una app para iPhone y iPad pensada para los padres, así que tu bebé nunca tiene que tocar la pantalla."
       }
     ],
     "related": [
