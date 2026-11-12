@@ -655,7 +655,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Das erste Lächeln galt dir. Den ersten Zahn hast du entdeckt, als beim Essen der Löffel dagegen klirrte. Die ersten Lauflernschuhe waren 12,5 cm lang; dein Kind machte zwei Schritte, plumpste auf den Po und kicherte über sich selbst. Am Tag, an dem es einen Apfel „Appel“ nannte, hast du in der Küche so gelacht, dass du dich krümmen musstest."
+        "text": "Das erste Lächeln galt dir. Den ersten Zahn hast du entdeckt, als beim Essen der Löffel dagegen klirrte. Die ersten Lauflernschuhe waren 12,5 cm lang; dein Kind machte zwei Schritte, plumpste auf den Po und kicherte über sich selbst. Am Tag, an dem es einen Apfel „Afel“ nannte, hast du in der Küche so gelacht, dass du dich krümmen musstest."
       },
       {
         "type": "p",
@@ -689,7 +689,7 @@ export const articles = [
         "type": "steps",
         "items": [
           "Schreib es am selben Tag auf. Zwei, drei Zeilen reichen: was passiert ist und welches Gesicht dein Kind dabei gemacht hat.",
-          "Nimm die genauen Worte. „Appel“ sagt viel mehr als „kann jetzt Obst benennen“.",
+          "Nimm die genauen Worte. „Afel“ sagt viel mehr als „kann jetzt Obst benennen“.",
           "Füge ein Foto hinzu und notiere gleich Körpergröße und Schuhgröße. Jahre später siehst du, dass dein Kind schneller gewachsen ist, als du dachtest.",
           "Du musst nicht jeden Tag schreiben. Nur das, was dein Kind eines Tages wissen soll."
         ]

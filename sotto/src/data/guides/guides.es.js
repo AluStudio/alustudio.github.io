@@ -615,7 +615,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "«¿Por qué ya tenemos un año cuando nacemos? Porque mamá te tuvo solo para ella durante un año antes que nadie, así que siempre te querrá un año más que el resto del mundo». En Taiwán, China y Corea, la forma tradicional de contar la edad hace que un bebé tenga un año el mismo día en que nace, y eso es lo que se les cuenta a los niños. Ese año de más es el tiempo en que solo estuvo mamá."
+        "text": "«¿Por qué ya tenemos un año cuando nacemos? Porque mamá te tuvo solo para ella durante un año antes que nadie, así que siempre te habrá querido desde un año antes que el resto del mundo». En Taiwán, China y Corea, la forma tradicional de contar la edad hace que un bebé tenga un año el mismo día en que nace, y eso es lo que se les cuenta a los niños. Ese año de más es el tiempo en que solo estuvo mamá."
       },
       {
         "type": "p",

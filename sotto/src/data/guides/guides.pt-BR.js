@@ -610,7 +610,7 @@ export const articles = [
   },
   {
     "slug": "why-babies-are-one-at-birth",
-    "title": "Por que o bebê já nasce com 1 ano? Porque a mamãe te amou um ano antes do mundo",
+    "title": "Por que o bebê já nasce com 1 ano? Porque a mamãe te amou um ano antes de o mundo te amar",
     "summary": "Na contagem de idade tradicional do leste asiático, o bebê nasce com 1 ano: a mamãe teve você só para ela por um ano. Para mães que guardam as primeiras vezes.",
     "content": [
       {
@@ -635,7 +635,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Na primeira vez que o bebê se mexeu, você estava deitada numa noite qualquer, rolando a tela do celular. Parecia um peixinho soprando uma bolha dentro de você. Você congelou, depois deu uma gargalhada, e quem estava deitado ao seu lado não sentiu nada."
+        "text": "Na primeira vez que o bebê se mexeu, você estava deitada na cama numa noite qualquer, rolando a tela do celular. Parecia um peixinho soprando uma bolha dentro de você. Você congelou, depois deu uma gargalhada, e quem estava deitado ao seu lado não sentiu nada."
       },
       {
         "type": "p",

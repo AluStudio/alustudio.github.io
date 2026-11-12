@@ -655,7 +655,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Il suo primo sorriso è stato per te. Hai scoperto il primo dentino quando il cucchiaino ha tintinnato contro di lui durante la pappa. Le sue prime scarpine per camminare erano lunghe 12,5 cm; ha fatto due passi, si è seduto con un bel tonfo e si è messo a ridere di sé. Il giorno in cui ha chiamato la mela «mea», in cucina hai riso tanto da doverti piegare in due."
+        "text": "Il suo primo sorriso è stato per te. Hai scoperto il primo dentino quando il cucchiaino ha tintinnato contro di lui durante la pappa. Le sue prime scarpine per camminare erano lunghe 12,5 cm; ha fatto due passi, si è seduto con un bel tonfo e si è messo a ridere di sé. Il giorno in cui ha chiamato la mela «me», in cucina hai riso tanto da doverti piegare in due."
       },
       {
         "type": "p",
@@ -689,7 +689,7 @@ export const articles = [
         "type": "steps",
         "items": [
           "Scrivilo lo stesso giorno. Bastano due o tre righe: cosa è successo e che faccia ha fatto.",
-          "Usa le sue parole esatte. «Mea» vale molto più di «ora sa dire i nomi della frutta».",
+          "Usa le sue parole esatte. «Me» vale molto più di «ora sa dire i nomi della frutta».",
           "Aggiungi una foto e, già che ci sei, segna altezza e numero di scarpe. Anni dopo vedrai che è cresciuto più in fretta di quanto pensavi.",
           "Non devi scrivere ogni giorno. Solo le cose che vuoi che un giorno sappia."
         ]
