@@ -9,6 +9,9 @@
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
 //              { type: "table", caption?, head: [text], rows: [[text]] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//                an illustration in public/guides/, the same file in every
+//                language (checked by scripts/guide-images.mjs)
 //   related  — slugs of other guides
 //
 // Claims about Sotto must match the app's code (AGENTS.md §Product Repos).
@@ -248,5 +251,42 @@ export const articles = [
       { type: "p", text: "Everything stays on your phone, behind your phone's own screen lock if you want. Sotto is free for up to 5 people, on iPhone and Android." },
     ],
     related: ["remember-details-about-people", "gift-log"],
+  },
+  {
+    slug: "why-babies-are-one-at-birth",
+    title: "Why Is a Baby One Year Old at Birth? Because Mom Loved You a Year Before the World Did",
+    summary: "In traditional East Asian age, a baby is one at birth. The saying behind it: Mom had you to herself for a year first. For moms keeping their baby's firsts.",
+    content: [
+      { type: "p", text: "\"Why are we already one year old when we are born? Because Mom had you all to herself for a year before anyone else did, so she will always have loved you one year longer than the rest of the world.\" In Taiwan, China and Korea, the traditional way of counting age makes a baby one year old on the day they are born, and this is what people tell children about it. That extra year is the time only Mom was there for." },
+      { type: "p", text: "If you are a mom, or have a little one on the way, you know that year is real." },
+      { type: "h2", text: "The year only you knew them" },
+      { type: "image", src: "guides/mom-year-kick.webp", phone: "guides/mom-year-kick-1080w.webp", width: 2160, height: 1449, alt: "A pregnant felt mama bear sits on a quilt by a sunny window, both paws on her belly, laughing as she feels her baby kick." },
+      { type: "p", text: "The first time your baby moved, you were lying in bed one night scrolling on your phone. It felt like a little fish blowing a bubble inside you. You froze, then laughed out loud, and the person lying next to you felt nothing at all." },
+      { type: "p", text: "Soon you knew what time of day they liked to turn somersaults, that their hiccups came in small, steady taps, and that something sweet would wake them right up. You talked to them quietly on the bus and sang to them in the bath. You picked out name after name and crossed them off one by one. Nobody had met your baby yet, and you already knew them well." },
+      { type: "h2", text: "After they were born, you were still the first to know" },
+      { type: "image", src: "guides/mom-year-smile.webp", phone: "guides/mom-year-smile-1080w.webp", width: 2160, height: 1449, alt: "A felt mama bear lies on a rug nose to nose with her newborn cub, who gives her a big first smile." },
+      { type: "p", text: "Their first smile was for you. You found their first tooth when the spoon clinked against it at mealtime. Their first walking shoes were 12.5 cm long; they took two steps, sat down with a bump and giggled at themselves. The day they called an apple an \"appy\", you laughed so hard in the kitchen that you had to bend over." },
+      { type: "p", text: "People started saying how fast they were growing. Most of those very first firsts happened with only you there." },
+      { type: "h2", text: "They will not remember any of this" },
+      { type: "image", src: "guides/mom-year-steps.webp", phone: "guides/mom-year-steps-1080w.webp", width: 2160, height: 1449, alt: "A tiny felt bear cub in new walking shoes has tumbled onto its bottom and laughs with paws up, while the mama bear kneels nearby with open arms." },
+      { type: "p", text: "Your child won't remember how long their first shoes were, or what their first word was, or that once they would only fall asleep holding two of your fingers. They were too little when it happened." },
+      { type: "p", text: "You are the only one who can remember it for them. But busy days wear your memory down too, and a moment you are sure you will never forget may be a blur in a few years." },
+      { type: "h2", text: "Write it down while you still remember" },
+      {
+        type: "steps",
+        items: [
+          "Write it the same day. Two or three lines is enough: what happened, and the face they made.",
+          "Use their exact words. \"Appy\" means far more than \"can name fruit now\".",
+          "Add a photo, and note their height and shoe size while you are at it. Years later you will see that they grew faster than you thought.",
+          "You don't have to write every day. Only the things you want them to know one day.",
+        ],
+      },
+      { type: "image", src: "guides/mom-year-story.webp", phone: "guides/mom-year-story-1080w.webp", width: 2160, height: 1449, alt: "A felt mama bear on a sofa reads from a small notebook to the cub on her lap, who laughs with its head thrown back; tiny knitted baby shoes sit beside them." },
+      { type: "p", text: "One day they will ask what they were like when they were little, and you can read it to them, one note at a time. Tell them that before the world ever met them, you had already loved them for a year." },
+      { type: "h2", text: "Keep a page for your baby in Sotto" },
+      { type: "p", text: "Sotto is a notes app for the people in your life, with a page for each person. Make a page for your baby: their birthday, height and shoe size go in fields, and the firsts go in notes. Each note can hold photos or videos and keeps the date you wrote it." },
+      { type: "p", text: "Everything stays on your phone, with no account and no ads. The free version holds up to 5 people with 5 notes each, and one one-time purchase removes the limits. Sotto is on iPhone and Android." },
+    ],
+    related: ["remember-details-about-people"],
   },
 ];

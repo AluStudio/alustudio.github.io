@@ -277,6 +277,12 @@ const SOTTO_SITE_GLOSSARY = [
   ["完整数据", "完整资料"], // 完整資料 is a full profile, not raw data; the app keeps 数据 for stored data
   ["隐密", "隐蔽"],
   ["活围戒", "活口戒"], // an open, adjustable ring as mainland jewelers name it
+  ["副食品", "辅食"], // baby food
+  ["汤匙", "勺子"],
+  ["公车", "公交车"], // 公车 reads as an official vehicle
+  ["鞋子尺寸", "鞋码"], // the app's wording
+  ["每则", "每条"], // notes count with 条, as in the app
+  ["一则一则", "一条一条"],
   // Converter mistranslations
   ["激活", "启用"], // 啟用
   ["内核", "核心"], // 核心 → kernel

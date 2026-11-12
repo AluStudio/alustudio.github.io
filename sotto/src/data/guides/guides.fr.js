@@ -607,5 +607,120 @@ export const articles = [
       "remember-details-about-people",
       "gift-log"
     ]
+  },
+  {
+    "slug": "why-babies-are-one-at-birth",
+    "title": "Pourquoi un bébé a-t-il un an à la naissance ? Parce que maman l’aimait un an avant le monde entier",
+    "summary": "Âge traditionnel d’Asie de l’Est : un bébé a un an à la naissance. Dicton : maman l’a gardé un an pour elle. Pour les mamans qui notent ses premières fois.",
+    "content": [
+      {
+        "type": "p",
+        "text": "« Pourquoi a-t-on déjà un an quand on naît ? Parce que, pendant un an, tu as été rien qu’à maman, avant que personne d’autre ne te rencontre. Alors maman t’aimera toujours un an de plus que le reste du monde. » À Taïwan, en Chine et en Corée, la façon traditionnelle de compter l’âge donne un an à un bébé le jour de sa naissance, et c’est ce qu’on raconte aux enfants à ce sujet. Cette année en plus, c’est le temps où seule maman était là."
+      },
+      {
+        "type": "p",
+        "text": "Si vous êtes maman, ou si un petit est en route, vous savez que cette année est bien réelle."
+      },
+      {
+        "type": "h2",
+        "text": "L’année où vous seule connaissiez votre bébé"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-kick.webp",
+        "phone": "guides/mom-year-kick-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Une maman ourse en feutrine, enceinte, est assise sur un patchwork près d’une fenêtre ensoleillée, les deux pattes sur le ventre, et rit en sentant son bébé donner un coup."
+      },
+      {
+        "type": "p",
+        "text": "La première fois que votre bébé a bougé, vous étiez allongée dans votre lit un soir, à faire défiler l’écran de votre téléphone. On aurait dit un petit poisson soufflant une bulle en vous. Vous êtes restée figée, puis vous avez éclaté de rire, et la personne allongée à côté de vous n’a rien senti du tout."
+      },
+      {
+        "type": "p",
+        "text": "Bientôt, vous saviez à quel moment de la journée il aimait faire des galipettes, que ses hoquets arrivaient en petits tapotements réguliers, et que quelque chose de sucré le réveillait aussitôt. Vous lui parliez doucement dans le bus et lui chantiez des chansons dans le bain. Vous choisissiez prénom après prénom et les rayiez un à un. Personne n’avait encore rencontré votre bébé, et vous le connaissiez déjà bien."
+      },
+      {
+        "type": "h2",
+        "text": "Après la naissance, vous étiez encore la première à savoir"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-smile.webp",
+        "phone": "guides/mom-year-smile-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Une maman ourse en feutrine est allongée sur un tapis, nez à nez avec son nouveau-né, qui lui adresse un grand premier sourire."
+      },
+      {
+        "type": "p",
+        "text": "Son premier sourire était pour vous. Vous avez découvert sa première dent quand la cuillère a tinté contre elle au repas. Ses premières chaussures de marche mesuraient 12,5 cm ; il a fait deux pas, s’est assis par terre dans un bruit sourd et a ri de lui-même. Le jour où il a appelé la pomme « pom-pom », vous avez ri si fort dans la cuisine que vous avez dû vous plier en deux."
+      },
+      {
+        "type": "p",
+        "text": "Autour de vous, on s’est mis à dire comme il grandissait vite. La plupart de ces toutes premières fois se sont passées avec vous seule pour témoin."
+      },
+      {
+        "type": "h2",
+        "text": "Votre enfant ne se souviendra de rien de tout cela"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-steps.webp",
+        "phone": "guides/mom-year-steps-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Un tout petit ourson en feutrine, chaussé de ses premières chaussures de marche, est tombé sur les fesses et rit, les pattes en l’air, tandis que la maman ourse s’agenouille près de lui, les bras ouverts."
+      },
+      {
+        "type": "p",
+        "text": "Votre enfant ne se souviendra pas de la longueur de ses premières chaussures, ni de son premier mot, ni du temps où le sommeil ne venait qu’en serrant deux de vos doigts. C’était trop tôt pour s’en souvenir."
+      },
+      {
+        "type": "p",
+        "text": "Vous êtes la seule à pouvoir vous en souvenir pour lui. Mais les journées bien remplies usent aussi la mémoire, et un moment que vous êtes sûre de ne jamais oublier peut devenir flou en quelques années."
+      },
+      {
+        "type": "h2",
+        "text": "Notez-le tant que vous vous en souvenez"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Écrivez le jour même. Deux ou trois lignes suffisent : ce qui s’est passé, et la bouille qu’il a faite.",
+          "Gardez ses mots exacts. « Pom-pom » en dit bien plus que « sait nommer les fruits ».",
+          "Ajoutez une photo, et notez aussi sa stature et sa pointure au passage. Des années plus tard, vous verrez qu’il a grandi plus vite que vous ne le pensiez.",
+          "Inutile d’écrire tous les jours. Seulement ce que vous voulez qu’il sache un jour."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-story.webp",
+        "phone": "guides/mom-year-story-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Sur un canapé, une maman ourse en feutrine lit un petit carnet à l’ourson assis sur ses genoux, qui rit la tête renversée en arrière ; de minuscules chaussons tricotés sont posés à côté d’eux."
+      },
+      {
+        "type": "p",
+        "text": "Un jour, votre enfant vous demandera comment c’était, ses toutes premières années, et vous pourrez le lui lire, note après note. Dites-lui qu’avant même que le monde entier fasse sa connaissance, vous l’aimiez déjà depuis un an."
+      },
+      {
+        "type": "h2",
+        "text": "Gardez une page pour votre bébé dans Sotto"
+      },
+      {
+        "type": "p",
+        "text": "Sotto est un carnet privé pour vos proches, avec une page pour chaque personne. Créez une page pour votre bébé : son anniversaire, sa stature et sa pointure vont dans des champs, et ses premières fois dans des notes. Chaque note peut contenir des photos ou des vidéos et garde la date à laquelle vous l’avez écrite."
+      },
+      {
+        "type": "p",
+        "text": "Tout reste sur votre téléphone, sans compte et sans publicité. La version gratuite accepte jusqu’à 5 personnes avec 5 notes chacune, et un achat unique supprime les limites. Sotto est disponible sur iPhone et Android."
+      }
+    ],
+    "related": [
+      "remember-details-about-people"
+    ]
   }
 ];

@@ -607,5 +607,120 @@ export const articles = [
       "remember-details-about-people",
       "gift-log"
     ]
+  },
+  {
+    "slug": "why-babies-are-one-at-birth",
+    "title": "Por que o bebê já nasce com 1 ano? Porque a mamãe te amou um ano antes do mundo",
+    "summary": "Na contagem de idade tradicional do leste asiático, o bebê nasce com 1 ano: a mamãe teve você só para ela por um ano. Para mães que guardam as primeiras vezes.",
+    "content": [
+      {
+        "type": "p",
+        "text": "\"Por que a gente já nasce com 1 ano? Porque a mamãe ficou com você só para ela um ano inteiro antes de todo mundo, então sempre vai ter te amado um ano a mais do que o resto do mundo.\" Em Taiwan, na China e na Coreia, a forma tradicional de contar a idade faz o bebê ter 1 ano no dia em que nasce, e é isso que se conta às crianças. Esse ano a mais é o tempo em que só a mamãe estava lá."
+      },
+      {
+        "type": "p",
+        "text": "Se você é mãe, ou tem um pequeno a caminho, sabe que esse ano é de verdade."
+      },
+      {
+        "type": "h2",
+        "text": "O ano em que só você o conhecia"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-kick.webp",
+        "phone": "guides/mom-year-kick-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Uma mamãe ursa de feltro grávida está sentada numa colcha, perto de uma janela ensolarada, com as duas patas na barriga, rindo ao sentir o bebê chutar."
+      },
+      {
+        "type": "p",
+        "text": "Na primeira vez que o bebê se mexeu, você estava deitada numa noite qualquer, rolando a tela do celular. Parecia um peixinho soprando uma bolha dentro de você. Você congelou, depois deu uma gargalhada, e quem estava deitado ao seu lado não sentiu nada."
+      },
+      {
+        "type": "p",
+        "text": "Logo você já sabia a que horas do dia ele gostava de dar cambalhotas, que o soluço vinha em batidinhas pequenas e regulares e que algo doce o deixava bem acordado. Você conversava baixinho com ele no ônibus e cantava no banho. Escolheu nome atrás de nome e foi riscando um por um. Ninguém tinha conhecido seu bebê ainda, e você já o conhecia bem."
+      },
+      {
+        "type": "h2",
+        "text": "Depois que nasceu, você continuou sendo a primeira a saber"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-smile.webp",
+        "phone": "guides/mom-year-smile-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Uma mamãe ursa de feltro está deitada num tapete, nariz com nariz com seu filhote recém-nascido, que lhe dá um grande primeiro sorriso."
+      },
+      {
+        "type": "p",
+        "text": "O primeiro sorriso foi para você. Você descobriu o primeiro dentinho quando a colher bateu nele na hora da papa. O primeiro sapatinho de andar tinha 12,5 cm; ele deu dois passos, sentou com um baque e riu de si mesmo. No dia em que chamou a maçã de \"massã\", você riu tanto na cozinha que precisou se dobrar ao meio."
+      },
+      {
+        "type": "p",
+        "text": "As pessoas começaram a comentar como ele estava crescendo rápido. A maioria daquelas primeiríssimas vezes aconteceu só com você por perto."
+      },
+      {
+        "type": "h2",
+        "text": "Ele não vai se lembrar de nada disso"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-steps.webp",
+        "phone": "guides/mom-year-steps-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Um filhote de urso de feltro, com sapatinhos de andar novos, caiu sentado e ri com as patinhas para cima, enquanto a mamãe ursa se ajoelha perto, de braços abertos."
+      },
+      {
+        "type": "p",
+        "text": "Seu filho não vai se lembrar de quantos centímetros tinham os primeiros sapatos, nem de qual foi a primeira palavra, nem de que, numa fase, só dormia segurando dois dedos seus. Era pequeno demais quando aconteceu."
+      },
+      {
+        "type": "p",
+        "text": "Só você pode lembrar por ele. Mas os dias corridos também gastam a sua memória, e um momento que você tem certeza de que nunca vai esquecer pode virar uma lembrança borrada daqui a alguns anos."
+      },
+      {
+        "type": "h2",
+        "text": "Anote enquanto você ainda lembra"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Anote no mesmo dia. Duas ou três linhas bastam: o que aconteceu e a carinha que ele fez.",
+          "Use as palavras exatas dele. \"Massã\" significa muito mais do que \"já sabe o nome das frutas\".",
+          "Junte uma foto e aproveite para anotar a altura e o tamanho do calçado. Anos depois, você vai ver que ele cresceu mais rápido do que você pensava.",
+          "Não precisa anotar todo dia. Só o que você quer que ele saiba um dia."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-story.webp",
+        "phone": "guides/mom-year-story-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Uma mamãe ursa de feltro, num sofá, lê de um caderninho para o filhote no colo, que ri com a cabeça jogada para trás; sapatinhos de tricô de bebê estão ao lado dos dois."
+      },
+      {
+        "type": "p",
+        "text": "Um dia ele vai perguntar como era quando pequeno, e você poderá ler para ele, uma nota de cada vez. Conte que, antes de o mundo conhecê-lo, você já o amava havia um ano."
+      },
+      {
+        "type": "h2",
+        "text": "Guarde uma página do seu bebê no Sotto"
+      },
+      {
+        "type": "p",
+        "text": "O Sotto é um app de notas sobre as pessoas da sua vida, com uma página para cada uma. Crie uma página para o seu bebê: aniversário, altura e tamanho do calçado vão nos campos, e as primeiras vezes vão nas notas. Cada nota pode ter fotos ou vídeos e guarda a data em que você a escreveu."
+      },
+      {
+        "type": "p",
+        "text": "Tudo fica no seu celular, sem conta e sem anúncios. A versão gratuita comporta até 5 pessoas com 5 notas cada, e uma compra única remove os limites. O Sotto está disponível para iPhone e Android."
+      }
+    ],
+    "related": [
+      "remember-details-about-people"
+    ]
   }
 ];
