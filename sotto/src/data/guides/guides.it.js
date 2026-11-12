@@ -607,5 +607,120 @@ export const articles = [
       "remember-details-about-people",
       "gift-log"
     ]
+  },
+  {
+    "slug": "why-babies-are-one-at-birth",
+    "title": "Perché un neonato ha già un anno quando nasce? Perché la mamma ti voleva bene un anno prima del mondo",
+    "summary": "Nell'Asia orientale un neonato ha già un anno: la mamma lo ha avuto tutto per sé per un anno. Per le mamme che conservano i primi momenti del loro bimbo.",
+    "content": [
+      {
+        "type": "p",
+        "text": "«Perché abbiamo già un anno quando nasciamo? Perché la mamma ti ha avuto tutto per sé per un anno prima di chiunque altro, così ti avrà sempre voluto bene un anno più del resto del mondo.» A Taiwan, in Cina e in Corea il modo tradizionale di contare l'età fa avere un anno a un bambino il giorno stesso in cui nasce, ed è questo che si racconta ai più piccoli. Quell'anno in più è il tempo in cui c'era soltanto la mamma."
+      },
+      {
+        "type": "p",
+        "text": "Se sei mamma, o ne stai aspettando uno, sai che quell'anno è esistito davvero."
+      },
+      {
+        "type": "h2",
+        "text": "L'anno in cui solo tu lo conoscevi"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-kick.webp",
+        "phone": "guides/mom-year-kick-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Una mamma orsa di feltro, incinta, è seduta su una trapunta accanto a una finestra soleggiata, con le zampe sulla pancia, e ride perché sente scalciare il suo piccolo."
+      },
+      {
+        "type": "p",
+        "text": "La prima volta che il tuo bimbo si è mosso, una sera eri a letto a scorrere il telefono. Sembrava un pesciolino che soffiava una bolla dentro di te. Ti sei bloccata, poi hai riso forte, e la persona accanto a te non ha sentito niente."
+      },
+      {
+        "type": "p",
+        "text": "Presto hai saputo a che ora del giorno gli piaceva fare le capriole, che il suo singhiozzo arrivava a colpetti piccoli e regolari e che qualcosa di dolce lo svegliava subito. Gli parlavi piano sull'autobus e gli cantavi mentre facevi il bagno. Hai scelto un nome dopo l'altro e li hai cancellati uno a uno. Nessuno aveva ancora conosciuto il tuo bimbo, e tu lo conoscevi già bene."
+      },
+      {
+        "type": "h2",
+        "text": "Dopo la nascita, sei stata comunque la prima a sapere"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-smile.webp",
+        "phone": "guides/mom-year-smile-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Una mamma orsa di feltro è sdraiata su un tappeto, naso contro naso con il suo cucciolo appena nato, che le regala un grande primo sorriso."
+      },
+      {
+        "type": "p",
+        "text": "Il suo primo sorriso è stato per te. Hai scoperto il primo dentino quando il cucchiaino ha tintinnato contro di lui durante la pappa. Le sue prime scarpine per camminare erano lunghe 12,5 cm; ha fatto due passi, si è seduto con un bel tonfo e si è messo a ridere di sé. Il giorno in cui ha chiamato la mela «me», in cucina hai riso tanto da doverti piegare in due."
+      },
+      {
+        "type": "p",
+        "text": "Gli altri hanno cominciato a dire quanto stava crescendo in fretta. Quasi tutte quelle primissime prime volte sono capitate solo con te accanto."
+      },
+      {
+        "type": "h2",
+        "text": "Di tutto questo non si ricorderà"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-steps.webp",
+        "phone": "guides/mom-year-steps-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Un minuscolo cucciolo d'orso di feltro con le scarpine nuove è caduto seduto e ride con le zampe in alto, mentre la mamma orsa è inginocchiata lì vicino con le braccia aperte."
+      },
+      {
+        "type": "p",
+        "text": "Tuo figlio non ricorderà quanto erano lunghe le sue prime scarpe, né quale è stata la sua prima parola, né che per un periodo si addormentava solo stringendo due delle tue dita. Era troppo piccolo quando è successo."
+      },
+      {
+        "type": "p",
+        "text": "Sei l'unica che può ricordarlo al suo posto. Ma anche la tua memoria si consuma, nelle giornate piene, e un momento che sei sicura di non dimenticare mai potrebbe essere sfocato tra qualche anno."
+      },
+      {
+        "type": "h2",
+        "text": "Scrivilo finché te lo ricordi"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Scrivilo lo stesso giorno. Bastano due o tre righe: cosa è successo e che faccia ha fatto.",
+          "Usa le sue parole esatte. «Me» vale molto più di «ora sa dire i nomi della frutta».",
+          "Aggiungi una foto e, già che ci sei, segna altezza e numero di scarpe. Anni dopo vedrai che è cresciuto più in fretta di quanto pensavi.",
+          "Non devi scrivere ogni giorno. Solo le cose che vuoi che un giorno sappia."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-story.webp",
+        "phone": "guides/mom-year-story-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Una mamma orsa di feltro, seduta su un divano, legge da un piccolo quaderno al cucciolo in grembo, che ride con la testa all'indietro; accanto a loro ci sono minuscole scarpine da neonato lavorate a maglia."
+      },
+      {
+        "type": "p",
+        "text": "Un giorno ti chiederà com'era da piccolo, e tu potrai leggerglielo, una nota alla volta. Digli che, prima ancora che il mondo lo conoscesse, lo amavi già da un anno."
+      },
+      {
+        "type": "h2",
+        "text": "Crea in Sotto una scheda per il tuo bimbo"
+      },
+      {
+        "type": "p",
+        "text": "Sotto è un'app per le note sulle persone della tua vita, con una scheda per ciascuna. Crea una scheda per il tuo bimbo: compleanno, altezza e numero di scarpe vanno nei campi, i suoi primi momenti nelle note. Ogni nota può contenere foto o video e conserva la data in cui l'hai scritta."
+      },
+      {
+        "type": "p",
+        "text": "Tutto resta sul tuo telefono, senza account e senza pubblicità. La versione gratuita include fino a 5 persone con 5 note ciascuna, e un unico acquisto una tantum toglie i limiti. Sotto è disponibile su iPhone e Android."
+      }
+    ],
+    "related": [
+      "remember-details-about-people"
+    ]
   }
 ];

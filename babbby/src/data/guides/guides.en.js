@@ -10,6 +10,10 @@
 //   content  — blocks, opening with a paragraph that answers the title directly:
 //              { type: "p" | "h2" | "note", text }
 //              { type: "list" | "steps", items: [text] }
+//              { type: "image", src, phone?, width, height, alt, caption? }
+//                an illustration in public/guides/, the same file in every
+//                language; phone is the 1080w file, required when src is
+//                wider (checked by scripts/guide-images.mjs)
 //   related  — slugs of other guides
 //
 // Guides are written for every market at once: a fact that differs by country

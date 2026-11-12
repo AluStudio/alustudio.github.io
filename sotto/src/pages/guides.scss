@@ -148,6 +148,26 @@
   }
 }
 
+// A guide illustration: full column width, rounded like the guide cards.
+.guide-figure {
+  margin: 1.75rem 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    background: $cream;
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    color: $warm-gray;
+    font-size: 0.88rem;
+    text-align: center;
+  }
+}
+
 .guide-table-wrap {
   overflow-x: auto;
   margin: 1.25rem 0;

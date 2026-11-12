@@ -607,5 +607,120 @@ export const articles = [
       "remember-details-about-people",
       "gift-log"
     ]
+  },
+  {
+    "slug": "why-babies-are-one-at-birth",
+    "title": "Warum ist ein Baby bei der Geburt schon ein Jahr alt? Weil Mama dich ein Jahr früher geliebt hat als die Welt",
+    "summary": "Nach ostasiatischer Zählung ist ein Baby bei der Geburt ein Jahr alt. Der Spruch dazu: Mama hatte dich ein Jahr für sich. Für Mütter, die erste Male festhalten.",
+    "content": [
+      {
+        "type": "p",
+        "text": "„Warum sind wir schon ein Jahr alt, wenn wir geboren werden? Weil Mama dich ein ganzes Jahr lang ganz für sich allein hatte, bevor irgendjemand sonst dich kannte. Darum hat sie dich immer ein Jahr länger geliebt als der Rest der Welt.“ In Taiwan, China und Korea macht die traditionelle Alterszählung ein Baby am Tag seiner Geburt ein Jahr alt, und genau das erzählt man Kindern dazu. Dieses zusätzliche Jahr ist die Zeit, in der nur Mama da war."
+      },
+      {
+        "type": "p",
+        "text": "Wenn du Mama bist oder ein Baby erwartest, weißt du, dass dieses Jahr echt ist."
+      },
+      {
+        "type": "h2",
+        "text": "Das Jahr, in dem nur du dein Baby kanntest"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-kick.webp",
+        "phone": "guides/mom-year-kick-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Eine schwangere Bärenmama aus Filz sitzt neben einem sonnigen Fenster auf einer Patchworkdecke, beide Pfoten auf dem Bauch, und lacht, weil sie ihr Baby strampeln spürt."
+      },
+      {
+        "type": "p",
+        "text": "Als sich dein Baby zum ersten Mal bewegte, lagst du abends im Bett und scrolltest am Handy. Es fühlte sich an wie ein kleiner Fisch, der in dir eine Blase pustet. Du erstarrtest, dann lachtest du laut auf, und der Mensch neben dir spürte rein gar nichts."
+      },
+      {
+        "type": "p",
+        "text": "Bald wusstest du, zu welcher Tageszeit dein Baby am liebsten Purzelbäume schlug, dass sein Schluckauf in kleinen, gleichmäßigen Stupsern kam und dass etwas Süßes es sofort munter machte. Du sprachst im Bus leise mit ihm und sangst ihm in der Badewanne etwas vor. Du suchtest Name um Name aus und strichst einen nach dem anderen wieder durch. Noch hatte niemand dein Baby kennengelernt, und du kanntest es schon gut."
+      },
+      {
+        "type": "h2",
+        "text": "Auch nach der Geburt wusstest du es als Erste"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-smile.webp",
+        "phone": "guides/mom-year-smile-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Eine Bärenmama aus Filz liegt auf einem Teppich Nase an Nase mit ihrem neugeborenen Jungen, das ihr sein erstes breites Lächeln schenkt."
+      },
+      {
+        "type": "p",
+        "text": "Das erste Lächeln galt dir. Den ersten Zahn hast du entdeckt, als beim Essen der Löffel dagegen klirrte. Die ersten Lauflernschuhe waren 12,5 cm lang; dein Kind machte zwei Schritte, plumpste auf den Po und kicherte über sich selbst. Am Tag, an dem es einen Apfel „Afel“ nannte, hast du in der Küche so gelacht, dass du dich krümmen musstest."
+      },
+      {
+        "type": "p",
+        "text": "Irgendwann sagten alle, wie schnell dein Kind wächst. Die allermeisten dieser allerersten Male hast du ganz allein miterlebt."
+      },
+      {
+        "type": "h2",
+        "text": "Dein Kind wird sich an nichts davon erinnern"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-steps.webp",
+        "phone": "guides/mom-year-steps-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Ein winziges Bärenjunges aus Filz in neuen Lauflernschuhen ist auf den Po gepurzelt und lacht mit erhobenen Pfoten, während die Bärenmama in der Nähe kniet und die Arme öffnet."
+      },
+      {
+        "type": "p",
+        "text": "Dein Kind wird sich nicht daran erinnern, wie lang seine ersten Schuhe waren, was sein erstes Wort war oder dass es einmal nur einschlief, wenn es zwei deiner Finger hielt. Es war zu klein, als das passierte."
+      },
+      {
+        "type": "p",
+        "text": "Du bist die Einzige, die es für dein Kind behalten kann. Aber auch deine Erinnerung nutzt sich an vollen Tagen ab, und ein Moment, den du nie zu vergessen glaubst, kann in ein paar Jahren verschwommen sein."
+      },
+      {
+        "type": "h2",
+        "text": "Schreib es auf, solange du es noch weißt"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Schreib es am selben Tag auf. Zwei, drei Zeilen reichen: was passiert ist und welches Gesicht dein Kind dabei gemacht hat.",
+          "Nimm die genauen Worte. „Afel“ sagt viel mehr als „kann jetzt Obst benennen“.",
+          "Füge ein Foto hinzu und notiere gleich Körpergröße und Schuhgröße. Jahre später siehst du, dass dein Kind schneller gewachsen ist, als du dachtest.",
+          "Du musst nicht jeden Tag schreiben. Nur das, was dein Kind eines Tages wissen soll."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-story.webp",
+        "phone": "guides/mom-year-story-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Eine Bärenmama aus Filz sitzt auf einem Sofa und liest dem Jungen auf ihrem Schoß aus einem kleinen Notizbuch vor; das Junge lacht mit zurückgelegtem Kopf, neben den beiden stehen winzige gestrickte Babyschuhe."
+      },
+      {
+        "type": "p",
+        "text": "Eines Tages wird dein Kind fragen, wie es als Kleines war, und du kannst es ihm vorlesen, Notiz für Notiz. Sag ihm, dass du es schon ein Jahr lang geliebt hast, bevor die Welt es kennenlernte."
+      },
+      {
+        "type": "h2",
+        "text": "Leg in Sotto eine Seite für dein Baby an"
+      },
+      {
+        "type": "p",
+        "text": "Sotto ist eine App für Notizen zu Menschen, mit einer eigenen Seite für jede Person. Leg eine Seite für dein Baby an: Geburtstag, Körpergröße und Schuhgröße kommen in Felder, die ersten Male in Notizen. Jede Notiz kann Fotos oder Videos enthalten und merkt sich das Datum, an dem du sie geschrieben hast."
+      },
+      {
+        "type": "p",
+        "text": "Alles bleibt auf deinem Handy, ohne Konto und ohne Werbung. Die kostenlose Version bietet Platz für bis zu 5 Personen mit je 5 Notizen, und mit einem Einmalkauf fallen die Limits weg. Sotto gibt es für iPhone und Android."
+      }
+    ],
+    "related": [
+      "remember-details-about-people"
+    ]
   }
 ];

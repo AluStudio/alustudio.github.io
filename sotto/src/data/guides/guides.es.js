@@ -607,5 +607,120 @@ export const articles = [
       "remember-details-about-people",
       "gift-log"
     ]
+  },
+  {
+    "slug": "why-babies-are-one-at-birth",
+    "title": "¿Por qué un bebé tiene un año al nacer? Porque mamá te quiso un año antes que el mundo",
+    "summary": "En la edad tradicional de Asia oriental, el bebé nace con un año. El dicho: mamá te tuvo para ella sola un año. Para madres que guardan sus primeras veces.",
+    "content": [
+      {
+        "type": "p",
+        "text": "«¿Por qué ya tenemos un año cuando nacemos? Porque mamá te tuvo solo para ella durante un año antes que nadie, así que siempre te habrá querido desde un año antes que el resto del mundo». En Taiwán, China y Corea, la forma tradicional de contar la edad hace que un bebé tenga un año el mismo día en que nace, y eso es lo que se les cuenta a los niños. Ese año de más es el tiempo en que solo estuvo mamá."
+      },
+      {
+        "type": "p",
+        "text": "Si eres madre, o esperas a un peque, sabes que ese año existe de verdad."
+      },
+      {
+        "type": "h2",
+        "text": "El año en que solo tú lo conocías"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-kick.webp",
+        "phone": "guides/mom-year-kick-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Una mamá osa de fieltro embarazada está sentada sobre una colcha junto a una ventana soleada, con las dos patas sobre la barriga, y se ríe al notar la patadita de su bebé."
+      },
+      {
+        "type": "p",
+        "text": "La primera vez que tu bebé se movió, estabas tumbada en la cama una noche, mirando el móvil. Fue como un pececito soplando una burbuja dentro de ti. Te quedaste quieta y luego te echaste a reír a carcajadas, mientras la persona que dormía a tu lado no notó nada."
+      },
+      {
+        "type": "p",
+        "text": "Pronto supiste a qué hora del día le gustaba dar volteretas, que sus hipos llegaban en golpecitos pequeños y regulares, y que algo dulce lo despertaba al instante. Le hablabas bajito en el autobús y le cantabas en el baño. Fuiste eligiendo nombre tras nombre y los fuiste tachando uno a uno. Nadie había conocido aún a tu bebé, y tú ya lo conocías bien."
+      },
+      {
+        "type": "h2",
+        "text": "Cuando nació, seguiste siendo la primera en enterarte"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-smile.webp",
+        "phone": "guides/mom-year-smile-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Una mamá osa de fieltro está tumbada en una alfombra, nariz con nariz con su osezno recién nacido, que le regala su primera gran sonrisa."
+      },
+      {
+        "type": "p",
+        "text": "Su primera sonrisa fue para ti. Encontraste su primer diente cuando la cuchara tintineó contra él a la hora de comer. Sus primeros zapatos para caminar medían 12,5 cm; dio dos pasos, se sentó de golpe y se rio de sí mismo. El día que llamó «mazana» a la manzana, te reíste tanto en la cocina que tuviste que doblarte en dos."
+      },
+      {
+        "type": "p",
+        "text": "La gente empezó a decir lo rápido que crecía. Casi todas esas primerísimas primeras veces pasaron cuando solo estabas tú."
+      },
+      {
+        "type": "h2",
+        "text": "Ellos no se acordarán de nada de esto"
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-steps.webp",
+        "phone": "guides/mom-year-steps-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Un osezno de fieltro diminuto, con zapatos nuevos para caminar, se ha caído de culo y se ríe con las patitas en alto, mientras su mamá osa se arrodilla cerca con los brazos abiertos."
+      },
+      {
+        "type": "p",
+        "text": "Tu hijo no recordará cuánto medían sus primeros zapatos, ni cuál fue su primera palabra, ni que una vez solo se dormía agarrado a dos de tus dedos. Era demasiado pequeño cuando pasó."
+      },
+      {
+        "type": "p",
+        "text": "Solo tú puedes recordarlo por él. Pero los días ajetreados también gastan la memoria, y un momento que estás segura de que nunca olvidarás puede ser un borrón dentro de unos años."
+      },
+      {
+        "type": "h2",
+        "text": "Anótalo mientras lo recuerdas"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Anótalo el mismo día. Con dos o tres líneas basta: qué pasó y qué cara puso.",
+          "Usa sus palabras exactas. «Mazana» significa mucho más que «ya sabe decir el nombre de las frutas».",
+          "Añade una foto y apunta su estatura y su talla de calzado ya que estás. Dentro de unos años verás que creció más deprisa de lo que pensabas.",
+          "No hace falta escribir todos los días. Solo lo que quieras que sepa algún día."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "guides/mom-year-story.webp",
+        "phone": "guides/mom-year-story-1080w.webp",
+        "width": 2160,
+        "height": 1449,
+        "alt": "Una mamá osa de fieltro, sentada en un sofá, lee de una libretita a su osezno, que está en su regazo y se ríe con la cabeza echada hacia atrás; a su lado hay unos diminutos patucos de punto."
+      },
+      {
+        "type": "p",
+        "text": "Algún día te preguntará cómo era de pequeño, y podrás leérselo, nota a nota. Dile que, antes de que el mundo lo conociera, tú ya lo querías desde hacía un año."
+      },
+      {
+        "type": "h2",
+        "text": "Crea la página de tu bebé en Sotto"
+      },
+      {
+        "type": "p",
+        "text": "Sotto es una app de notas sobre las personas de tu vida, con una página para cada una. Crea la página de tu bebé: su cumpleaños, su estatura y su talla de calzado van en campos, y las primeras veces, en notas. Cada nota puede llevar fotos o vídeos y guarda la fecha en que la escribiste."
+      },
+      {
+        "type": "p",
+        "text": "Todo se queda en tu móvil, sin cuenta y sin anuncios. La versión gratuita admite hasta 5 personas con 5 notas cada una, y una compra única quita los límites. Sotto está en iPhone y Android."
+      }
+    ],
+    "related": [
+      "remember-details-about-people"
+    ]
   }
 ];
