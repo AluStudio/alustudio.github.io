@@ -170,7 +170,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "O jeito mais prático de escolher um app para pais é procurar um que poupe esforço no dia a dia sem criar mais uma tarefa. Comece definindo a única coisa em que você quer ajuda agora, seja a passagem de turno entre quem cuida da criança, ideias de brincadeiras para o dia ou a organização das fotos. Depois confira as regras do teste, o acesso aos dados e se o app funciona com objetos comuns de casa numa noite em que você já está cansado. Se uma ferramenta exige que você siga o ritmo dela, compre materiais extras ou se sinta culpado por um registro esquecido, não há motivo para continuar com ela."
+        "text": "O jeito mais prático de escolher um app para pais é procurar um que poupe esforço no dia a dia sem criar mais uma tarefa. Comece definindo a única coisa em que você quer ajuda agora, seja a passagem de turno entre quem cuida da criança, ideias de brincadeiras para o dia ou a organização das fotos. Depois confira as regras do teste, o acesso aos dados e se o app funciona com objetos comuns de casa numa noite em que a sua energia já está baixa. Se uma ferramenta exige que você siga o ritmo dela, compre materiais extras ou sinta culpa por um registro esquecido, não há motivo para continuar com ela."
       },
       {
         "type": "h2",
@@ -206,7 +206,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se você está experimentando um app de ideias de brincadeiras ou atividades, teste numa noite comum de semana, quando sua energia já está baixa. Sugestões que parecem ótimas quando você está descansado só ajudam no dia a dia se você ainda conseguir começar quando estiver cansado e tiver por perto apenas objetos comuns de casa."
+        "text": "Se você está experimentando um app de ideias de brincadeiras ou atividades, teste numa noite comum de semana, quando sua energia já está baixa. Sugestões que parecem ótimas quando você está com a energia em dia só ajudam no dia a dia se você ainda conseguir começar quando a energia estiver baixa e tiver por perto apenas objetos comuns de casa."
       },
       {
         "type": "p",
@@ -218,7 +218,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Depois de uma semana de uso, observe se o app deixa seu dia mais leve ou faz você se sentir atrasado. Sequências, medalhas e gráficos de progresso ajudam alguns pais, mas, se deixam você preocupado em manter uma corrente sem falhas ou culpado por registros que ficaram de fora, o registro está dando trabalho. Usar um app é sempre opcional, e manter um registro não é prova de que você cuida bem da criança. Abrir o app só para buscar ideias, pular as caixinhas de marcação nos dias corridos ou apagar uma ferramenta que pressiona são escolhas perfeitamente válidas."
+        "text": "Depois de uma semana de uso, observe se o app deixa seu dia mais leve ou faz você sentir que está ficando para trás. Sequências, medalhas e gráficos de progresso ajudam alguns pais, mas, se deixam você preocupado em manter uma sequência sem falhas ou com culpa por registros que ficaram de fora, o registro está dando trabalho. Usar um app é sempre opcional, e manter um registro não é prova de que você cuida bem da criança. Abrir o app só para buscar ideias, pular as caixinhas de marcação nos dias corridos ou apagar uma ferramenta que pressiona são escolhas perfeitamente válidas."
       },
       {
         "type": "p",
@@ -230,11 +230,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se você só quer ideias de brincadeiras prontas assim que abre o celular, o Babbby é um app para iPhone voltado para pais e responsáveis, feito para adultos e não para crianças. Ele cobre de 0 a 6 anos, em sete faixas etárias, com 342 atividades incluídas em oito categorias de desenvolvimento. Todos os dias, sugere até seis atividades adequadas à idade, mostrando os materiais, uma dica e mais ou menos quantos minutos cada uma leva. Essas sugestões são opções, não seis tarefas obrigatórias por dia: você pode ajustar ou trocar e marcar uma atividade como concluída quando terminar."
+        "text": "Se você só quer ideias de brincadeiras prontas assim que abre o celular, o Babbby é um app para iPhone e iPad feito para pais e responsáveis, não uma tela para crianças. Todos os dias, ele sugere até seis atividades para a idade da criança, cada uma com os materiais, uma dica e mais ou menos quantos minutos leva. São opções, não seis tarefas para cumprir: você pode trocar ou ajustar as sugestões e marcar uma como concluída quando chegar a hora."
       },
       {
         "type": "p",
-        "text": "Você pode salvar até três fotos por atividade concluída, ver estatísticas de conclusão e consultar resumos semanais e mensais com fotos. O Babbby funciona off-line, sem anúncios, e o download gratuito inclui um teste de 14 dias com acesso completo, seguido do desbloqueio Vitalício, em compra única e sem assinatura."
+        "text": "Você pode salvar até três fotos de uma atividade que fez e rever tudo nos resumos semanais e mensais com fotos. O Babbby é gratuito para baixar, com um teste de 14 dias com acesso completo; depois, basta o desbloqueio Vitalício, em compra única e sem assinatura."
       }
     ],
     "related": [
