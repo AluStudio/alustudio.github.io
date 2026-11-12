@@ -20,7 +20,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Die Kaffeebestellung einer Freundin oder der Name vom Hund ihrer Schwester fällt einmal nebenbei, während du damit beschäftigt bist, dem Rest des Gesprächs zu folgen. Nichts wiederholt es, also festigt es auch nichts. Die Gedächtnisforschung zeigt seit Hermann Ebbinghaus in den 1880er-Jahren dasselbe Muster: Was du nie wieder aufgreifst, verblasst am schnellsten in den ersten ein, zwei Tagen."
+        "text": "Die Kaffeebestellung einer Freundin oder der Name vom Hund ihrer Schwester fällt einmal nebenbei, während du damit beschäftigt bist, dem Rest des Gesprächs zu folgen. Nichts wiederholt es, also festigt es auch nichts."
       },
       {
         "type": "p",
@@ -72,7 +72,7 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Notizbuch, Notizen-App oder eine App für Notizen zu Menschen?"
+        "text": "Notizbuch, allgemeine Notizen-App oder Notizen-App für Menschen?"
       },
       {
         "type": "p",
@@ -80,7 +80,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Eine App für Notizen zu Menschen, im Grunde ein persönliches CRM, ordnet alles nach Person – mit Feldern für genau die Details von oben wie Größen, Daten und Vorlieben, sodass du dir keine eigene Struktur ausdenken musst."
+        "text": "Eine Notizen-App für Menschen ordnet alles nach Person – mit Feldern für genau die Details von oben wie Größen, Daten und Vorlieben, sodass du dir keine eigene Struktur ausdenken musst."
       },
       {
         "type": "h2",
@@ -88,11 +88,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto ist ein persönliches CRM, das genau dafür gemacht ist. Jeder Mensch bekommt eine Seite mit Foto, kurzer Bio, Notizen und beliebigen der 130 integrierten Felder, von Geburtstag und Allergien bis zu Schuh- und Ringgröße. Schalte für einen Geburtstag eine Erinnerung ein, und Sotto sagt dir eine Woche vorher Bescheid. Wenn du nicht weißt, was du fragen sollst, kann ein Katalog mit 323 Gesprächsfragen das nächste Gespräch anstoßen."
+        "text": "Sotto ist eine Notizen-App für Menschen, die genau dafür gemacht ist: Jeder Mensch bekommt eine eigene Seite, auf der Notizen, Geburtstage, Größen und die Geschenkideen, die du nebenbei aufschnappst, zusammenbleiben."
       },
       {
         "type": "p",
-        "text": "Alles bleibt auf deinem Handy, auf Wunsch hinter der Displaysperre deines Handys. Sotto ist für bis zu 5 Personen kostenlos, auf iPhone und Android."
+        "text": "Alles bleibt auf deinem Handy, ohne Konto und ohne Werbung, auf Wunsch hinter der Displaysperre deines Handys. Sotto ist für bis zu 5 Personen kostenlos, auf iPhone und Android."
       }
     ],
     "related": [

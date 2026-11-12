@@ -4,15 +4,15 @@ export const articles = [
   {
     "slug": "remember-details-about-people",
     "title": "Come ricordare i dettagli delle persone a cui tieni",
-    "summary": "Annota i dettagli il giorno stesso, tieni una pagina per persona e rileggila prima di incontrarla. Un modo semplice per ricordare ciò che conta per chi ami.",
+    "summary": "Annota i dettagli il giorno stesso, tieni una scheda per persona e rileggila prima di incontrarla. Un modo semplice per ricordare ciò che conta per chi ami.",
     "content": [
       {
         "type": "p",
-        "text": "Il modo affidabile per ricordare i dettagli delle persone è smettere di contare sulla memoria: annota ogni dettaglio il giorno stesso in cui lo senti, tieni tutto ciò che riguarda una persona in un unico posto e rileggi quella pagina prima di vederla. Le piccole cose sentite una volta sola svaniscono in pochi giorni; una nota no."
+        "text": "Il modo affidabile per ricordare i dettagli delle persone è smettere di contare sulla memoria: annota ogni dettaglio il giorno stesso in cui lo senti, tieni tutto ciò che riguarda una persona in un unico posto e rileggi la sua scheda prima di vederla. Le piccole cose sentite una volta sola svaniscono in pochi giorni; una nota no."
       },
       {
         "type": "p",
-        "text": "Questa guida spiega cosa vale la pena annotare, un'abitudine che richiede circa un minuto e come usare i tuoi appunti senza che sembrino compiti a casa."
+        "text": "Questa guida spiega cosa vale la pena annotare, un'abitudine che richiede circa un minuto e come usare le tue note senza che sembrino compiti a casa."
       },
       {
         "type": "h2",
@@ -20,7 +20,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Come un amico prende il caffè o il nome del cane di sua sorella saltano fuori una volta, di passaggio, mentre sei impegnato a seguire il resto della conversazione. Nessuno li ripete, quindi niente li rafforza. La ricerca sulla memoria, a partire da Hermann Ebbinghaus negli anni Ottanta dell'Ottocento, mostra sempre lo stesso schema: ciò che non riprendi mai svanisce più in fretta nel primo giorno o due."
+        "text": "Come prende il caffè un amico o come si chiama il cane di sua sorella: sono cose che saltano fuori una volta sola, di passaggio, mentre stai seguendo il resto della conversazione. Nessuno le ripete, quindi niente le rafforza."
       },
       {
         "type": "p",
@@ -35,7 +35,7 @@ export const articles = [
         "items": [
           "Gusti: come prende il caffè, cibo e fiori preferiti, cosa evita, allergie.",
           "Taglie: vestiti, scarpe, misura dell'anello — i dettagli che servono per i regali e che non si possono chiedere facilmente.",
-          "Date: compleanni, anniversari, il primo giorno di un nuovo lavoro, l'operazione di un genitore.",
+          "Date: compleanni, anniversari, il primo giorno in un nuovo lavoro, l'operazione di un genitore.",
           "Le persone della sua vita: partner, figli, animali, il collega che nomina sempre.",
           "Progetti e preoccupazioni: il viaggio per cui sta risparmiando, cosa lo stressa, di cosa va fiero.",
           "Cose che ha detto di volere: un libro, un gadget, un posto che sogna di visitare."
@@ -53,22 +53,22 @@ export const articles = [
         "type": "steps",
         "items": [
           "Scrivilo il giorno stesso. Dopo una telefonata o una cena, prenditi un minuto per annotare ciò che hai scoperto finché è fresco.",
-          "Tieni una pagina per persona. Un dettaglio archiviato sotto la persona è facile da ritrovare; uno sepolto in una chat no.",
-          "Usa le sue parole. \"Vuole imparare la ceramica\" ti sarà più utile di \"hobby: manualità\".",
+          "Tieni una scheda per persona. Un dettaglio archiviato sotto la persona è facile da ritrovare; uno sepolto in una chat no.",
+          "Usa le sue parole. «Vuole imparare la ceramica» ti sarà più utile, più avanti, di «hobby: manualità».",
           "Metti la data su ciò che cambierà, come una ricerca di lavoro o un trasloco, così sai quanto è aggiornato."
         ]
       },
       {
         "type": "h2",
-        "text": "Rileggi gli appunti prima di vederla"
+        "text": "Rileggi le note prima di incontrarvi"
       },
       {
         "type": "p",
-        "text": "Gli appunti servono solo se li leggi. Dai un'occhiata alla pagina di qualcuno qualche minuto prima di vederlo o chiamarlo. Chiedigli com'è andato il colloquio, o ricordati che non beve caffè dopo pranzo. Le persone se ne accorgono quando ti ricordi, e arriva come attenzione, non come un sistema."
+        "text": "Le note servono solo se le leggi. Dai un'occhiata alla scheda di una persona qualche minuto prima di vederla o chiamarla. Chiedile com'è andato il colloquio, o ricordati che non beve caffè dopo pranzo. Le persone se ne accorgono quando ricordi, e arriva come attenzione, non come un sistema."
       },
       {
         "type": "note",
-        "text": "Resta gentile. Annota ciò che ti aiuta a esserci per qualcuno, non cose che ti imbarazzerebbe fargli leggere."
+        "text": "Fallo con gentilezza. Annota ciò che ti aiuta a esserci per qualcuno, non cose che ti imbarazzerebbe far leggere alla persona stessa."
       },
       {
         "type": "h2",
@@ -76,11 +76,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Funziona qualsiasi sistema che userai davvero. Un quaderno è privato ma difficile da consultare. Un'app di note generica va bene finché gli appunti su venti persone non si confondono in un'unica lunga lista. La rubrica ha un campo note, ma è stretto e condiviso con ogni app che può leggere i tuoi contatti."
+        "text": "Funziona qualsiasi sistema che userai davvero. Un quaderno è privato ma difficile da consultare. Un'app di note generica va bene finché le note su venti persone non si confondono in un'unica lunga lista. La rubrica ha un campo note, ma è stretto e condiviso con ogni app che può leggere i tuoi contatti."
       },
       {
         "type": "p",
-        "text": "Un CRM personale, cioè un'app di appunti sulle persone, organizza tutto per persona, con campi pensati per i dettagli qui sopra — taglie, date e gusti — così non devi inventarti una struttura."
+        "text": "Un CRM personale, cioè un'app per le note sulle persone, organizza tutto per persona, con campi pensati per i dettagli qui sopra — taglie, date e gusti — così non devi inventarti una struttura."
       },
       {
         "type": "h2",
@@ -88,11 +88,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sotto è un CRM personale pensato proprio per questo. Ogni persona ha una pagina con foto, una breve biografia, note e uno qualsiasi dei 130 campi integrati, dal compleanno e le allergie al numero di scarpe e alla misura dell'anello. Attiva un promemoria per un compleanno e Sotto ti avvisa una settimana prima. Quando non sai cosa chiedere, un catalogo di 323 domande può avviare la prossima conversazione."
+        "text": "Sotto è un CRM personale pensato proprio per questo: ogni persona ha la sua scheda, dove note, compleanni, taglie e le idee regalo che raccogli al volo restano tutte insieme."
       },
       {
         "type": "p",
-        "text": "Tutto resta sul tuo telefono, protetto se vuoi dal blocco schermo del telefono stesso. Sotto è gratis fino a 5 persone, su iPhone e Android."
+        "text": "Tutto resta sul tuo telefono, senza account e senza pubblicità, protetto se vuoi dal blocco schermo del telefono stesso. Sotto è gratis fino a 5 persone, su iPhone e Android."
       }
     ],
     "related": [

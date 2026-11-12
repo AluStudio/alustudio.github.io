@@ -196,7 +196,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Condiciones de la prueba y cobro: Revisa cuánto dura la prueba, si lleva a una suscripción o a un pago único, si la renovación es automática, cuándo empieza el cobro y cómo cancelar antes de completar un perfil detallado.",
-          "Acceso tras dejar de pagar: Revisa qué sigue disponible cuando termina una prueba o una suscripción, incluso si las funciones del día a día se bloquean de inmediato o si aún puedes consultar las entradas existentes.",
+          "Acceso tras dejar de pagar: Revisa qué sigue disponible cuando termina una prueba o una suscripción, por ejemplo, si las funciones del día a día se bloquean de inmediato o si aún puedes consultar las entradas existentes.",
           "Cómo conservar tus fotos y registros: Antes de agregar muchas fotos o notas, revisa si todavía podrás ver tus recuerdos anteriores o exportar tus fotos y registros si dejas de pagar."
         ]
       },
@@ -230,11 +230,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si lo único que quieres son ideas de actividades listas para cuando abras el teléfono, Babbby es una app para iPhone pensada para madres, padres y cuidadores, no para niños. Abarca de 0 a 6 años en siete rangos de edad, con 342 actividades integradas en ocho categorías de desarrollo. Cada día sugiere hasta seis actividades acordes con la edad, y muestra los materiales, un consejo y cuántos minutos lleva cada una, aproximadamente. Esas sugerencias son opciones, no seis tareas obligatorias al día: puedes ajustarlas o cambiarlas y marcar una actividad como completada cuando termines."
+        "text": "Si lo único que quieres son ideas de actividades listas para cuando abras el teléfono, Babbby es una app para iPhone y iPad pensada para ti, no una pantalla para niños. Cada día sugiere hasta seis actividades acordes con la edad de tu bebé, cada una con los materiales, un consejo y los minutos aproximados que lleva. Son opciones, no seis tareas por cumplir: cámbialas o ajústalas y marca una como completada cuando llegues a ella."
       },
       {
         "type": "p",
-        "text": "Puedes guardar hasta tres fotos por actividad completada, ver las estadísticas de actividades completadas y revisar los resúmenes semanales y mensuales con fotos. Babbby funciona sin conexión y sin anuncios, y la descarga gratis incluye una prueba de 14 días con todas las funciones, seguida de un desbloqueo único de por vida, sin suscripción."
+        "text": "Puedes guardar hasta tres fotos de una actividad que hiciste y volver a verlas en los resúmenes semanales y mensuales con fotos. La descarga de Babbby es gratis e incluye una prueba de 14 días con acceso completo; después hay un desbloqueo único, sin suscripción."
       }
     ],
     "related": [

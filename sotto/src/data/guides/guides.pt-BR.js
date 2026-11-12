@@ -8,7 +8,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "O jeito confiável de lembrar detalhes sobre as pessoas é parar de depender da memória: anote cada detalhe no mesmo dia em que ouvir, junte tudo sobre uma pessoa num só lugar e leia essa página antes de encontrá-la. Os pequenos fatos que você ouve uma vez somem em poucos dias; uma anotação, não."
+        "text": "O jeito confiável de lembrar detalhes sobre as pessoas é parar de depender da memória: anote cada detalhe no mesmo dia em que ouvir, junte tudo sobre uma pessoa num só lugar e leia essa página antes de encontrá-la. Os pequenos fatos que você ouve uma vez somem em poucos dias; uma nota, não."
       },
       {
         "type": "p",
@@ -20,7 +20,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "O café que um amigo sempre pede ou o nome do cachorro da irmã dele aparecem uma vez, de passagem, enquanto você está ocupado acompanhando o resto da conversa. Ninguém repete, então nada reforça a lembrança. As pesquisas sobre memória desde Hermann Ebbinghaus, na década de 1880, mostram o mesmo padrão: aquilo que você nunca revisita é esquecido mais rápido nos primeiros um ou dois dias."
+        "text": "O café que um amigo sempre pede ou o nome do cachorro da irmã dele aparecem uma vez, de passagem, enquanto você está ocupado acompanhando o resto da conversa. Ninguém repete, então nada reforça a lembrança."
       },
       {
         "type": "p",
@@ -53,7 +53,7 @@ export const articles = [
         "type": "steps",
         "items": [
           "Anote no mesmo dia. Depois de uma ligação ou de um jantar, tire um minuto para registrar o que você descobriu enquanto ainda está fresco.",
-          "Mantenha uma página por pessoa. Um detalhe guardado no nome da pessoa é fácil de achar; um detalhe perdido numa conversa do WhatsApp, não.",
+          "Mantenha uma página por pessoa. Um detalhe guardado no nome da pessoa é fácil de achar; um detalhe perdido numa troca de mensagens, não.",
           "Use as palavras dela. \"Quer aprender cerâmica\" é mais útil depois do que \"hobbies: artesanato\".",
           "Coloque a data em tudo que vai mudar, como uma busca por emprego ou uma mudança de casa, para saber se a informação ainda vale."
         ]
@@ -72,15 +72,15 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Caderno, app de notas ou app de notas de pessoas?"
+        "text": "Caderno, app de notas ou app de notas sobre pessoas?"
       },
       {
         "type": "p",
-        "text": "Qualquer sistema que você realmente use funciona. Um caderno é privado, mas difícil de pesquisar. Um app de notas comum funciona até as anotações sobre vinte pessoas virarem uma lista enorme. A agenda de contatos tem um campo de notas, mas ele é apertado e compartilhado com todo app que pode ler seus contatos."
+        "text": "Qualquer sistema que você realmente use funciona. Um caderno é privado, mas difícil de pesquisar. Um app de notas comum funciona até as suas notas sobre vinte pessoas virarem uma lista enorme. A agenda de contatos tem um campo de notas, mas ele é apertado e compartilhado com todo app que pode ler seus contatos."
       },
       {
         "type": "p",
-        "text": "Um app de notas de pessoas organiza tudo por pessoa, com campos feitos para os detalhes acima — tamanhos, datas e preferências —, então você não precisa inventar uma estrutura. É uma espécie de CRM pessoal, só que para quem você ama."
+        "text": "Um app de notas sobre pessoas organiza tudo por pessoa, com campos feitos para os detalhes acima — tamanhos, datas e preferências —, então você não precisa inventar uma estrutura."
       },
       {
         "type": "h2",
@@ -88,11 +88,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "O Sotto é um app de notas de pessoas feito exatamente para isso. Cada pessoa ganha uma página com foto, uma bio curta, notas e qualquer um dos 130 campos prontos, de aniversário e alergias a número do calçado e tamanho do anel. Ative um lembrete para um aniversário e o Sotto avisa você com uma semana de antecedência. Quando não souber o que perguntar, um catálogo de 323 perguntas pode abrir a próxima conversa."
+        "text": "O Sotto é um app de notas sobre pessoas feito exatamente para isso: cada pessoa ganha a sua própria página, onde notas, aniversários, tamanhos e as ideias de presente que você ouve de passagem ficam todos juntos."
       },
       {
         "type": "p",
-        "text": "Tudo fica no seu celular, protegido pelo próprio bloqueio de tela do aparelho, se você quiser. O Sotto é gratuito para até 5 pessoas, no iPhone e no Android."
+        "text": "Tudo fica no seu celular, sem conta e sem anúncios, protegido pelo próprio bloqueio de tela do aparelho, se você quiser. O Sotto é gratuito para até 5 pessoas, no iPhone e no Android."
       }
     ],
     "related": [

@@ -230,11 +230,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wenn du einfach fertige Aktivitätsideen haben möchtest, sobald du dein Handy öffnest: Babbby ist eine iPhone-App für Eltern, gemacht für Erwachsene und nicht für Kinder. Sie deckt das Alter von 0 bis 6 Jahren in sieben Altersstufen ab, mit 342 integrierten Aktivitäten in acht Entwicklungskategorien. Jeden Tag schlägt sie bis zu sechs zum Alter passende Aktivitäten vor und zeigt zu jeder das Material, einen Tipp und ungefähr, wie viele Minuten sie dauert. Diese Vorschläge sind Optionen und keine sechs Pflichtaufgaben pro Tag: Du kannst sie anpassen oder austauschen und eine Aktivität als erledigt markieren, wenn du fertig bist."
+        "text": "Wenn du einfach fertige Aktivitätsideen haben möchtest, sobald du dein Handy öffnest: Babbby ist eine iPhone- und iPad-App für Eltern, kein Bildschirm für Kinder. Jeden Tag schlägt sie bis zu sechs Aktivitäten vor, die zum Alter deines Kindes passen, und zeigt zu jeder das Material, einen Tipp und ungefähr, wie viele Minuten sie dauert. Diese Vorschläge sind Optionen und keine sechs Pflichtaufgaben: Du kannst sie austauschen oder anpassen und eine Aktivität als erledigt markieren, sobald du dazu kommst."
       },
       {
         "type": "p",
-        "text": "Pro abgeschlossener Aktivität kannst du bis zu drei Fotos sichern, die Statistik zu erledigten Aktivitäten ansehen und Wochen- und Monatsrückblicke mit Fotos durchblättern. Babbby funktioniert offline und ohne Werbung. Der kostenlose Download enthält eine 14-tägige Testphase mit vollem Zugriff, danach folgt ein einmaliger Kauf, der Babbby lebenslang freischaltet – ohne Abo."
+        "text": "Von jeder Aktivität, die ihr gespielt habt, kannst du bis zu drei Fotos behalten und sie dir in Wochen- und Monatsrückblicken mit Fotos wieder ansehen. Babbby kannst du kostenlos laden und 14 Tage mit vollem Zugriff testen. Danach schaltest du es mit einem Einmalkauf frei – ohne Abo."
       }
     ],
     "related": [

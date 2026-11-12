@@ -222,7 +222,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Vérifiez aussi tôt les réglages de notifications et les règles de partage. Si une app envoie des alertes ou des messages fréquents, regardez si vous pouvez désactiver les notifications pour qu’elle reste silencieuse tant que vous ne l’ouvrez pas. Pour le partage en famille, distinguez deux questions : un seul achat couvre-t-il tous les membres de la famille, et le dossier de l’enfant se synchronise-t-il entre les appareils ? Si vous partagez des photos avec des proches dans l’app, vérifiez que vous pouvez contrôler qui peut les voir et qui peut les commenter."
+        "text": "Vérifiez aussi dès le début les réglages de notifications et les règles de partage. Si une app envoie des alertes ou des messages fréquents, regardez si vous pouvez désactiver les notifications pour qu’elle reste silencieuse tant que vous ne l’ouvrez pas. Pour le partage en famille, distinguez deux questions : un seul achat couvre-t-il tous les membres de la famille, et le dossier de l’enfant se synchronise-t-il entre les appareils ? Si vous partagez des photos avec des proches dans l’app, vérifiez que vous pouvez contrôler qui peut les voir et qui peut les commenter."
       },
       {
         "type": "h2",
@@ -230,11 +230,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si vous voulez simplement des idées d’activités toutes prêtes dès que vous ouvrez votre téléphone, Babbby est une app pour iPhone destinée aux parents, et non aux enfants. Elle couvre les âges de 0 à 6 ans en sept tranches d’âge, avec 342 activités intégrées réparties en huit catégories de développement. Chaque jour, elle propose jusqu’à six activités adaptées à l’âge, avec le matériel, une astuce et la durée approximative de chacune. Ces suggestions sont des options, pas six tâches obligatoires par jour : vous pouvez les ajuster ou les remplacer, et marquer une activité comme terminée quand vous avez fini."
+        "text": "Si vous voulez simplement des idées d’activités toutes prêtes dès que vous ouvrez votre téléphone, Babbby est une app pour iPhone et iPad destinée aux parents, pas un écran pour les enfants. Chaque jour, elle propose jusqu’à six activités adaptées à l’âge de votre enfant, avec le matériel, une astuce et la durée approximative de chacune. Ce sont des options, pas six tâches à terminer : remplacez-les ou ajustez-les, et marquez-en une comme terminée quand vous l’avez faite."
       },
       {
         "type": "p",
-        "text": "Vous pouvez enregistrer jusqu’à trois photos par activité terminée, consulter vos statistiques et parcourir les bilans de la semaine et du mois avec vos photos. Babbby fonctionne hors connexion et sans publicité ; le téléchargement est gratuit, avec un essai gratuit de 14 jours à accès complet, puis un déblocage à vie par achat unique, sans abonnement."
+        "text": "Vous pouvez conserver jusqu’à trois photos d’une activité que vous avez faite et les retrouver dans les bilans de la semaine et du mois. Babbby se télécharge gratuitement, avec un essai gratuit de 14 jours à accès complet, puis un déblocage à vie par achat unique, sans abonnement."
       }
     ],
     "related": [
