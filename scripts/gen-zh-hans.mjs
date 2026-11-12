@@ -298,7 +298,13 @@ const SOTTO_SITE_GLOSSARY = [
   ["则预填", "条预填"],
 ];
 
-const SOTTO_OVERRIDES = {};
+const SOTTO_OVERRIDES = {
+  // 國一 is Taiwan's grade name (mainland: 初一), and a mainland reader says 同桌 for the seat next to you.
+  "guide:how-many-people-do-you-meet-in-a-lifetime:content.4.text": [
+    "你和最好的朋友，也許只是國一分班時被排在隔壁。另一半是某次聚會上朋友臨時多約來的，那天你差點沒去。換一間學校、晚一班車，這些人可能就不會走進你的人生。",
+    "你和最好的朋友，也许只是初一分班时被排成了同桌。另一半是某次聚会上朋友临时多约来的，那天你差点没去。换一间学校、晚一班车，这些人可能就不会走进你的人生。",
+  ],
+};
 
 // ── Babbby ───────────────────────────────────────────────────
 
