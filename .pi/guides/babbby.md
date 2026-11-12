@@ -10,16 +10,28 @@ The same guides ship in every language (same slug, same order), translated from 
 
 ## Product facts
 
-The only claims the article may make about Babbby. Checked against `~/Developer/alustudio/babbby-ios` on 2026-11-07; when the app changes, update this list there first.
+The only claims the article may make about Babbby. Checked against `~/Developer/alustudio/babbby-ios` on 2026-11-07 (device support and offline rechecked 2026-11-12); when the app changes, update this list there first.
 
-- An iPhone app for parents: a tool for the parent, not an app the child uses.
+- An iPhone and iPad app for parents: a tool for the parent, not an app the child uses.
 - Ages 0–6 in seven age ranges: 0–6 months, 6–12 months, 12–18 months, 18–24 months, 2–3 years, 3–4 years, 4–6 years.
 - 342 built-in activities in 8 developmental categories. zh-Hant: 大肢體運動、小肌肉操作、語言溝通、思考探索、情緒社交、感官體驗、創意表達、生活自理. en: gross motor, fine motor, language, cognitive, social-emotional, sensory, creative, daily living.
 - Every day it suggests up to 6 activities for the child's age; the parent can swap or adjust them, then mark each one done. Each activity shows materials, a tip and roughly how many minutes it takes.
 - Up to 3 photos per completed activity; stats, plus weekly and monthly photo reviews.
-- Works offline, no ads. Free download with a 14-day full-access trial, then a one-time lifetime unlock (no subscription).
+- Works offline (suggestions, activities, records and reviews; buying the unlock needs a connection), no ads. Free download with a 14-day full-access trial, then a one-time lifetime unlock (no subscription).
 
-Never claim: content written or reviewed by experts or doctors, Android support, that data never leaves the phone, or anything not listed above.
+Never claim anything not listed above, and in particular:
+
+- content written or reviewed by experts or doctors, or "science-based" or research-proven;
+- milestones, "falling behind", golden periods, what a child "should" do at an age, Montessori or early-education claims, or any medical or developmental judgment beyond what a play practises;
+- outcomes such as balanced development or a smarter child;
+- personalized, tailored, AI, or endless or different every day;
+- safety guarantees;
+- data export, sync or family sharing, or that no data is ever collected or never leaves the phone;
+- being the only or first app, or naming competitors;
+- user counts, ratings or testimonials;
+- Android support.
+
+The list mirrors the product claims in `~/Developer/alustudio/marketing-kit/products/babbby/strategy/brand.md` §不說 (its voice, opening and CTA rules are social-only); change both together.
 
 ## Activities
 
