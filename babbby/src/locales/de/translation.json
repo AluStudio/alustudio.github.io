@@ -280,7 +280,7 @@
   "faq": {
     "title": "Häufig gestellte Fragen",
     "meta_title": "Babbby FAQ — Baby-Aktivitäten-App für jeden Tag",
-    "meta_description": "Antworten auf häufige Fragen zu Babbby: Altersstufen, Kosten, Aktivitätsideen, Meilensteine und Datenschutz.",
+    "meta_description": "Antworten auf häufige Fragen zu Babbby: Altersstufen, Kosten, wie Aktivitäten empfohlen werden, Fortschritte festhalten und Datenschutz.",
     "subtitle": "Antworten auf die Fragen, die Eltern am häufigsten zu den täglichen Aktivitäten, zur Altersauswahl und zum Datenschutz von Babbby stellen.",
     "contact_prompt": "Keine Antwort gefunden? Schreib uns:",
     "items": {
@@ -305,7 +305,7 @@
         "answer": "Babbby wählt aus seiner Bibliothek mit über 340 Aktivitäten automatisch die passenden für das Alter deines Kindes aus. Zusätzlich kannst du nach dem Material filtern, das du gerade zur Hand hast – zum Beispiel Buntstifte, Pappe oder Bauklötze –, und siehst dann nur Aktivitäten, mit denen ihr sofort starten könnt. Die Vorschläge werden algorithmisch erstellt und dienen nur als Anregung; Eltern und Erziehungsberechtigte entscheiden, was zu ihrem Kind passt."
       },
       "can_it_track_milestones": {
-        "title": "Kann Babbby Meilensteine und Fortschritte meines Kindes festhalten?",
+        "title": "Kann Babbby die Fortschritte meines Kindes festhalten?",
         "answer": "Ja, Babbby hält erledigte Aktivitäten fest, zeigt eine Aufteilung nach Kategorie und den täglichen Verlauf, sodass du jeden Schritt nachvollziehen kannst. Diese Daten bleiben auf deinem Gerät. Sie zeigen, welche Aktivitäten erledigt wurden, und sind keine förmliche Entwicklungsbeurteilung durch eine Kinderärztin oder einen Kinderarzt."
       },
       "is_my_data_private": {

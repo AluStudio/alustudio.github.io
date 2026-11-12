@@ -280,7 +280,7 @@
   "faq": {
     "title": "Preguntas frecuentes",
     "meta_title": "Preguntas frecuentes de Babbby: app de actividades para bebés",
-    "meta_description": "Respuestas sobre Babbby: edades, precio, ideas de actividades diarias, seguimiento de hitos del desarrollo y privacidad de los datos de tu bebé.",
+    "meta_description": "Respuestas sobre Babbby: edades, precio, cómo se recomiendan las actividades, registro del progreso de tu bebé y privacidad de sus datos.",
     "subtitle": "Respuestas a lo que más preguntan los padres sobre las actividades diarias de Babbby, la selección según la edad y la privacidad.",
     "contact_prompt": "¿No encontraste tu respuesta? Escríbenos:",
     "items": {
@@ -305,7 +305,7 @@
         "answer": "Babbby elige automáticamente actividades de su Biblioteca, que tiene 340 actividades o más, según la edad de tu bebé, y puedes filtrar aún más por los materiales que ya tienes a la mano —como crayones, cartón o bloques— para ver solo las que puedes empezar de inmediato. Las recomendaciones se generan con un algoritmo y son solo una fuente de inspiración: los padres y tutores deciden qué es lo más adecuado para su bebé."
       },
       "can_it_track_milestones": {
-        "title": "¿Puedo seguir los hitos del desarrollo y el progreso de mi bebé con Babbby?",
+        "title": "¿Babbby puede llevar un registro del progreso de mi bebé?",
         "answer": "Sí. Babbby registra las actividades completadas, muestra un desglose por categoría y tendencias diarias para que puedas mirar atrás y ver cada paso. Estos datos se quedan en tu dispositivo y reflejan el historial de actividades completadas, no una evaluación formal del desarrollo hecha por un pediatra."
       },
       "is_my_data_private": {
