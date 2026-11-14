@@ -6,7 +6,7 @@ You are the l10n worker for **$1** on the DingPOS website (`alu-studio.com/dingp
 
 Rules for the whole session:
 - Write your messages and the report in Traditional Chinese (Taiwan); only the copy is in $1.
-- Procedure, file formats and the tool: `docs/specs/seo-aeo.md` §翻譯語言 and the header of `scripts/l10n.mjs`. Agents: `l10n-translator` (writes) and `l10n-reviewer` (read-only). Never use the review pipeline, `review_plan`, or the builtin `reviewer`. You never translate or judge copy yourself.
+- Procedure, file formats and the tool: `docs/specs/seo-aeo.md` §翻譯語言 and the header of `scripts/l10n.mjs`. Agents: `l10n-translator` (writes) and `l10n-reviewer` (read-only), both global agents; the reviewer reads this repo's contract `.pi/l10n/reviewer.md`. Never use the review pipeline, `review_plan`, or the builtin `reviewer`. You never translate or judge copy yourself.
 - en is the only source. Never read the site's or the app's zh-Hant / zh-Hans to decide a translation, and never edit en or zh-Hant on this branch — a problem in the en source is an `en` finding you record in the report for the owner. The DingPOS app repo (`~/Developer/alustudio/DingPOS`) is read-only.
 - Never hand-edit `dingpos/src/locales/$1/translation.json`, `dingpos/src/data/faq/articles.$1.js` or `dingpos/l10n/manifest/$1.json`: they change only through `npm run l10n -- dingpos apply $1`.
 - This checkout is shared with the commander, one language at a time. Never create a worktree, never touch another language's files or branch, and never leave the checkout on `dingpos-l10n/$1`: every way out of this session (DONE or BLOCKED) ends with the checkout on main and `git status --porcelain` empty.
@@ -18,7 +18,7 @@ Rules for the whole session:
 
 Checks first, branch last, so a preflight failure leaves nothing behind.
 
-1. `subagent { action: "list" }` lists `l10n-translator` (the global agent; it reads this repo's contract router `.pi/l10n/translator.md`, which sends it to `.pi/l10n/dingpos.md`) and `l10n-reviewer (project)`. If either is missing, or the reviewer shows as a user agent, the session lacks project trust: BLOCKED.
+1. `subagent { action: "list" }` lists `l10n-translator` (the global agent; it reads this repo's contract router `.pi/l10n/translator.md`, which sends it to `.pi/l10n/dingpos.md`) and `l10n-reviewer` (the global agent; it reads this repo's contract `.pi/l10n/reviewer.md`), both as user agents. If either is missing, or a project agent of the same name shadows it, BLOCKED.
 2. The app has the language: `~/Developer/alustudio/DingPOS/l10n/glossary/$1.md` and `~/Developer/alustudio/DingPOS/DesignSystem/Sources/Resources/Strings/$1.lproj/Localizable.strings` exist. Root and `dingpos/` have `node_modules` (`npm ci` where missing).
 3. `git status --porcelain` is empty and `git branch --show-current` is `main` or `dingpos-l10n/$1`; anything else → BLOCKED "checkout not clean".
 4. `npm run -s l10n -- dingpos progress get $1`. If a stage past `preflight` is recorded, you are resuming: `git switch dingpos-l10n/$1`, skip the steps whose results are already committed on that branch, and continue from the recorded stage. A failure the report records from an earlier session is history, not a result: run the recorded stage again and report only what it does now. If the progress entry has an `ownerRuling`, it is the owner's decision: apply it as written through a translator fix task and `npm run l10n -- dingpos apply $1`, commit `fix(l10n): apply the $1 owner ruling`, and do not review the units it names again.
