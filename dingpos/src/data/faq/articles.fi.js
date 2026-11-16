@@ -84,7 +84,8 @@ export const articles = [
       "kaupan perustaminen",
       "kassajärjestelmän käyttöönotto",
       "maa",
-      "valuutta"
+      "valuutta",
+      "verot"
     ],
     "content": [
       {
@@ -94,8 +95,8 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Valitse maasi tai alueesi. Luettelon alussa näkyvät tämän iPadin alue ja yleisimmät markkinat; sen alla ovat kaikki 175 maata ja aluetta, joissa DingPOS on App Storessa, ja luetteloa voi hakea nimellä sovelluksen kielellä tai englanniksi. Valintasi täyttää valuutan, verokannan ja verotilan.",
-          "Anna Myymäläsi-vaiheessa kaupan nimi, lisää halutessasi logo ja tarkista valuutta, verokanta ja verotila (verollinen / veroton hinta). Valuutta on oletuksena maasi valuutta; napauttamalla sitä voit valita 130 valuutan joukosta."
+          "Valitse maasi tai alueesi. Luettelon alussa näkyvät ensin maa tai alue, jossa tämä iPad on, ja sitten yleisimmät markkinat; niiden alla ovat kaikki 175 maata ja aluetta, joissa DingPOS on App Storessa, ja luetteloa voi hakea nimellä sovelluksen kielellä tai englanniksi. Valintasi täyttää valuutan, verot ja verotilan.",
+          "Anna Myymäläsi-vaiheessa kaupan nimi, lisää halutessasi logo ja tarkista valuutta, verot ja verotila (verollinen / veroton hinta). Valuutta on oletuksena maasi valuutta; napauttamalla sitä voit valita 130 valuutan joukosta. Verot-luettelossa on maasi oletusverot: voit nimetä ne uudelleen, muuttaa verokantaa, poistaa veron tai napauttaa Lisää vero, jos tarvitset toisen rivin. Esimerkiksi Brittiläisessä Kolumbiassa sijaitseva kauppa muuttaa ensimmäisen rivin muotoon ”GST 5” ja lisää rivin ”PST 7”."
         ]
       },
       {
@@ -104,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Valuuttaa ja verotilaa ei voi muuttaa käyttöönoton jälkeen; verokannan voi edelleen vaihtaa myöhemmin Asetuksissa. Yhdysvalloissa, Kanadassa, Brasiliassa ja Mikronesiassa verokanta riippuu osavaltiosta, provinssista tai kaupungista, joten verokantakenttä on aluksi tyhjä ja jatkaaksesi syötät veloittamasi verokannan (0 käy). 175 maan luettelo ja valuutan valinta tulivat versiossa 3.2; aiemmissa versioissa oli 15 maata."
+        "text": "Valuuttaa ei voi muuttaa käyttöönoton jälkeen; verot ja verotavan voi molemmat vaihtaa myöhemmin kohdassa Asetukset → Myymälän tiedot. Yhdysvalloissa, Kanadassa, Brasiliassa ja Mikronesiassa verokanta riippuu osavaltiosta, provinssista tai kaupungista, joten verokantakenttä on aluksi tyhjä ja jatkaaksesi syötät veloittamasi verokannan. Verokannan on oltava yli 0: kauppa, joka ei peri veroa, poistaa rivin. 175 maan luettelo ja valuutan valinta tulivat versiossa 3.2; aiemmissa versioissa oli 15 maata."
       }
     ],
     "related": [
@@ -186,11 +187,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS tukee tällä hetkellä iPadeja, joissa on iPadOS 17 tai uudempi. Sovellus on suunniteltu ensisijaisesti vaaka-asentoon."
+        "text": "DingPOS tukee tällä hetkellä iPadeja, joissa on iPadOS 17.4 tai uudempi. Sovellus on suunniteltu ensisijaisesti vaaka-asentoon."
       },
       {
         "type": "p",
         "text": "iPhonea ja Macia ei vielä tueta. Jos haluat meidän tukevan jotain muuta laitetta, kirjoita meille ja kerro käyttötarkoituksestasi."
+      },
+      {
+        "type": "note",
+        "text": "Jokainen iPad, jossa toimii iPadOS 17, voidaan päivittää versioon 17.4, joten mikään malli ei jää ulkopuolelle. Jos iPadissa on yhä iPadOS 17.0–17.3, se täytyy ensin päivittää kohdassa Asetukset → Yleiset → Ohjelmistopäivitys, ennen kuin siihen voi asentaa DingPOSin version 3.5 tai uudemman."
       }
     ],
     "related": [
@@ -200,24 +205,34 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Voiko valuuttaa tai verotilaa vaihtaa käyttöönoton jälkeen?",
+    "question": "Voiko valuuttaa, verokantaa tai verotapaa vaihtaa käyttöönoton jälkeen?",
     "keywords": [
       "valuutta",
       "verotila",
       "vaihtaminen",
       "lukittu",
       "verokanta",
+      "verot",
       "alv",
+      "verollinen hinta",
       "veroton hinta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Verokannan voi muuttaa milloin tahansa kohdassa Asetukset – uusi verokanta koskee vain tulevia tilauksia."
+        "text": "Veroa voi muuttaa, valuuttaa ei. Verot ja verotapa vaihdetaan Vero-kortissa kohdassa Asetukset → Myymälän tiedot, ja muutos koskee vain myöhempiä myyntejä: aiemmat tilaukset, palautukset ja raportit säilyttävät kirjatut veromääränsä ja verotapansa."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Verot: lisää vero, nimeä se uudelleen, muuta sen verokantaa tai poista se – katso ”Miten vero lasketaan?”",
+          "Verotapa (Sisältää veron / Ei sisällä veroa): napauta toista vaihtoehtoa, niin vahvistusikkunassa näytetään esimerkki ensimmäisellä verollasi, esimerkiksi ”NT$100:n tuote, vero 5 %: asiakas maksaa NT$105”. Hintojen luvut säilyvät, ja avoin ostoskori lasketaan uudelleen uudessa tilassa, kun palaat kassalle. Verotavan voi vaihtaa versiosta 3.5 alkaen; aiemmat versiot lukitsevat sen käyttöönotossa.",
+          "Vaihdon jälkeen kokonainen palautus hyvittää alkuperäisen tilauksen sellaisena kuin se oli. Vaihto (korvaavilla tuotteilla) tilaukseen, joka on myyty toisella verotavalla, estetään: vaihda verotapa takaisin tai palauta tuotteet ja tee uusi myynti."
+        ]
       },
       {
         "type": "p",
-        "text": "Valuutta ja verotila (verollinen / veroton hinta) lukitaan, kun käyttöönotto on valmis. Kaikki aiemmat tilauksesi on laskettu niillä, joten niiden vaihtaminen kesken kaiken sotkisi raporttisi. Tarkista ne käyttöönoton Myymäläsi-vaiheessa: valuutta on oletuksena maasi valuutta, ja voit napauttaa sitä valitaksesi toisen."
+        "text": "Valuutta lukitaan, kun käyttöönotto on valmis. Kaikki aiemmat tilaukset on kirjattu siinä, joten valuutan vaihtaminen kesken kaiken sotkisi raporttisi. Tarkista se käyttöönoton Myymäläsi-vaiheessa: valuutta on oletuksena maasi valuutta, ja voit napauttaa sitä valitaksesi toisen."
       },
       {
         "type": "note",
@@ -336,30 +351,57 @@ export const articles = [
       "vero",
       "alv",
       "arvonlisävero",
+      "myyntivero",
       "verollinen hinta",
       "veroton hinta",
+      "useita veroja",
+      "gst",
+      "pst",
+      "keskeytä vero",
       "kuitti"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Vero lasketaan automaattisesti käyttöönotossa valitun verotilan mukaan. Kuitti näyttää veron määrän kummassakin tilassa:"
+        "text": "Vero lasketaan automaattisesti kohdassa Asetukset → Myymälän tiedot määritettyjen verojen ja verotavan mukaan. Verotapoja on kaksi, ja kuitti näyttää veron määrän kummassakin:"
       },
       {
         "type": "list",
         "items": [
-          "Verollinen hinta: hinnat sisältävät jo veron – loppusumma ei muutu, ja kuitissa eritellään hintaan sisältyvä vero (yleistä esimerkiksi Taiwanissa ja Japanissa).",
-          "Veroton hinta: vero lisätään alennuksen jälkeiseen summaan maksun yhteydessä (yleistä esimerkiksi Yhdysvalloissa ja Kanadassa)."
+          "Sisältää veron: hinnat sisältävät jo veron – loppusumma ei muutu, ja kuitissa eritellään hintaan sisältyvä vero (yleistä esimerkiksi Taiwanissa ja Japanissa).",
+          "Ei sisällä veroa: vero lisätään alennuksen jälkeiseen summaan maksun yhteydessä (yleistä esimerkiksi Yhdysvalloissa ja Kanadassa)."
         ]
       },
       {
         "type": "p",
-        "text": "Laskentajärjestys kokonaisuudessaan: tuotealennukset → ostoskorin alennus → vero. Summat pyöristetään tavallisen pyöristyssäännön mukaan (puolikas ylöspäin) valuutan desimaalien määrään (esim. 0 TWD:lle, 2 USD:lle)."
+        "text": "Myymälä voi periä useita veroja, esimerkiksi GST 5 % ja PST 7 % Brittiläisessä Kolumbiassa tai Japanissa 10 prosentin kulutusvero ja 8 prosentin alennettu verokanta rinnakkain:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Napauta Vero-kortissa Lisää vero ja anna nimi ja verokanta. Jos otat käyttöön Käytä uusille tuotteille, myöhemmin lisäämäsi tuotteet saavat tämän veron oletuksena. Jos myymälällä on jo oletusvero, uusi vero lisätään aluksi pois päältä; ota se käyttöön, kun tuotteesta peritään molemmat.",
+          "Jokainen tuote valitsee perimänsä verot tuotelomakkeen Verot-kohdassa – esimerkiksi bentosta voidaan periä vain 8 prosentin alennettu verokanta. Kun käytössä on kaksi tai useampi vero, lomake näyttää tuotteen verot yhteensä.",
+          "Napauttamalla veroa voit nimetä sen uudelleen, muuttaa sen verokantaa tai lisätä sen kaikkiin tuotteisiin tai poistaa sen kaikista tuotteista kerralla valinnalla Lisää kaikkiin tuotteisiin tai Poista kaikista tuotteista. Veroa poistettaessa näytetään ensin, kuinka monesta tuotteesta sitä ei enää veloiteta.",
+          "Myymälässä, jonka verotapa on Ei sisällä veroa, ostoskorin yhteenvedossa on yksi rivi kutakin veroa kohden, ja tilauksen tiedoissa on yksi rivi kutakin veroa kohden verokantoineen ja summoineen, joista vero veloitettiin."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Jos haluat lopettaa veron perimisen joksikin aikaa, poista Veron periminen -kytkin käytöstä Vero-kortin yläreunassa: kaikki myöhemmät myynnit ovat verottomia, myös ostoskorissa jo olevat tuotteet. Jokainen tuote säilyttää verot, ja kytkimen ottaminen uudelleen käyttöön palauttaa ne ennalleen."
+      },
+      {
+        "type": "p",
+        "text": "Laskentajärjestys kokonaisuudessaan: tuotealennukset ja kampanjat → ostoskorin alennus → pisteiden lunastus → vero. Summat pyöristetään tavallisen pyöristyssäännön mukaan (puolikas ylöspäin) valuutan desimaalien määrään (esim. 0 TWD:lle, 2 USD:lle)."
+      },
+      {
+        "type": "note",
+        "text": "Nimetyt verot tulivat versiossa 3.5. Päivityksen yhteydessä verokantasi muuttuu nimetyksi veroksi (esimerkiksi ”GST 10 %” Australiassa), ja jokainen olemassa oleva tuote perii sen; myymälä, jonka verokanta oli 0, ei saa veroa. Aiemmat tilaukset ja raportit säilyttävät lukunsa."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -384,11 +426,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Maksutavat ovat kirjanpidon merkintöjä – DingPOS ei käsittele varsinaisia maksuja. Ota kortti- tai mobiilimaksut vastaan nykyisellä maksupäätteellä tai sovelluksella ja valitse sitten DingPOSissa vastaava maksutapa kirjataksesi sen. Käteismaksuissa vaihtoraha lasketaan automaattisesti."
+        "text": "Maksutavat ovat kirjanpidon merkintöjä – DingPOS ei käsittele varsinaisia maksuja. Ota kortti- tai mobiilimaksut vastaan nykyisellä maksupäätteellä tai sovelluksella ja valitse sitten DingPOSissa vastaava maksutapa kirjataksesi sen. Käteismaksuissa vaihtoraha lasketaan automaattisesti, ja siellä, missä pienimpiä kolikoita ei enää käytetä, myös käteissumma voidaan pyöristää – katso ”Voiko käteismaksuja pyöristää käytössä oleviin kolikoihin?”"
       },
       {
         "type": "p",
-        "text": "Jos kortti- tai mobiilimaksupalvelusi perii maksukulun, anna maksutavalle maksukulun määrä, niin Tilastot arvioi kunkin maksutavan maksukulut ja arvioidun nettotulon – katso ”Voiko DingPOS seurata kortti- ja mobiilimaksujen maksukuluja?”"
+        "text": "Jos kortti- tai mobiilimaksupalvelusi perii maksukulun, anna maksutavalle maksukulun määrä, niin Tilastot arvioivat kunkin maksutavan maksukulut ja arvioidun nettotulon – katso ”Voiko DingPOS seurata kortti- ja mobiilimaksujen maksukuluja?”"
       },
       {
         "type": "p",
@@ -397,6 +439,7 @@ export const articles = [
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -442,6 +485,55 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Voiko käteismaksuja pyöristää käytössä oleviin kolikoihin?",
+    "keywords": [
+      "käteisen pyöristys",
+      "pyöristys",
+      "pyöristä ylös",
+      "pyöristä alas",
+      "kolikot",
+      "pennit",
+      "sentit",
+      "0,05",
+      "vaihtoraha",
+      "kanada",
+      "australia",
+      "sveitsi"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Kyllä. Kanada, Australia, Uusi-Seelanti, Sveitsi, Tanska, Ruotsi, Norja, Belgia, Suomi ja Unkari eivät enää käytä pienimpiä kolikoitaan, joten DingPOS pyöristää käteissumman määräksi, jonka voi oikeasti ojentaa: käteisellä maksettu C$12.99 tilaus otetaan summana C$13.00, ja vaihtoraha lasketaan summasta C$13.00. Korttimaksut ja muut ei-käteismaksut pysyvät tarkkoina."
+      },
+      {
+        "type": "p",
+        "text": "Uusi myymälä, joka otetaan käyttöön jossakin näistä maista ja kyseisen maan valuutalla, saa asetuksen automaattisesti. Muissa myymälöissä sen voi ottaa käyttöön Käteisen pyöristys -kortilla kohdan Asetukset → Maksutavat alareunassa: valitse, mihin käteinen pyöristetään (Ei pyöristystä, 0,05, 0,10, 0,50 tai 1,00) ja, jos arvo voi osua tasan puoliväliin, pyöristetäänkö ylös vai alas. Muutos koskee vain myöhempiä maksuja."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Maksunäkymässä lukee ”Käteismaksu C$13.00”. Jos asiakas pyytää maksamaan tarkan summan, napauta maksutapojen alla olevaa Ota tarkka summa; se koskee vain kyseistä myyntiä.",
+          "Tilauksen loppusumma, vero, liikevaihto, pisteet ja jäsenen ostosumma eivät muutu; pyöristyserä kirjataan maksuun, ja kuittinäkymä sekä tilauksen tiedot näyttävät sen loppusumman alla, esimerkiksi ”Käteisen pyöristys +C$0.01”.",
+          "Myös palautusten käteishyvitykset, ennakkotilausten käteisetumaksut ja noudon loppusummat, vaihtojen lisämaksut sekä käteisellä kuitatut myyntisaamiset pyöristetään; kun kuitataan useita kerralla, erä pyöristetään vain kerran.",
+          "Mitätöinnit, palautetut ennakkotilausten etumaksut ja peruutetut maksun kuittaukset maksavat takaisin täsmälleen kirjatun summan ilman uutta pyöristystä.",
+          "Tilastot-välilehden Saapunut maksu näyttää, kuinka suuri osa siitä oli käteisen pyöristystä, ja kuukausittainen Tulos-näkymä saa rivin Käteisen pyöristys, joka lasketaan mukaan liikevoittoon. Pyöristys ei ole koskaan liikevaihtoa."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Sveitsi pyöristää aina alas hintojen esittämissääntöjensä mukaan – CHF 12.98 otetaan summana CHF 12.95, eikä puolivälin valintaa ole. Belgia pyöristää vain summat, jotka ovat yli €0.05. Käteisen pyöristys kuuluu kaikkiin paketteihin, ja olemassa oleva myymälä ottaa käteisen vastaan täsmälleen kuten ennenkin, kunnes otat pyöristyksen käyttöön."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -621,7 +713,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Avaa Tilaukset, etsi tilaus ja avaa sen tiedot ja valitse Mitätöi. Vahvista, niin asia on hoidettu."
+        "text": "Avaa Tilaukset, etsi tilaus, avaa sen tiedot ja napauta Mitätöi. ”Mitätöidäänkö tämä tilaus?” -näkymässä voit kirjoittaa vapaaehtoisen syyn (enintään 100 merkkiä); napauta näkymän oikeasta yläkulmasta Mitätöi, niin asia on hoidettu. Syy näkyy tilauksen tiedoissa ja toimintolokissa, eikä sitä voi muokata lähettämisen jälkeen."
       },
       {
         "type": "p",
@@ -649,7 +741,9 @@ export const articles = [
       "tuotteen vaihto",
       "hyvitys",
       "osittainen palautus",
-      "koon vaihto"
+      "koon vaihto",
+      "romutus",
+      "palautuksen syy"
     ],
     "content": [
       {
@@ -662,9 +756,15 @@ export const articles = [
           "Alkuperäistä tilausta ei koskaan muuteta. Palautuksesta syntyy oma asiakirja, jonka päivämäärä on tämä päivä ja jonka numerossa on R-etuliite. Liikevaihto pienenee palautuspäivänä.",
           "Hyvitys on se summa, jonka asiakas todella maksoi kyseisestä tuotteesta: tuotealennukset, ostoskorin alennukset ja pisteillä maksettu osuus on jo huomioitu, joten hyvitystä ei makseta listahinnalla. Veroon käytetään sitä verokantaa, jolla alkuperäinen tilaus veloitettiin.",
           "Korvaavat tuotteet veloitetaan päivän hinnalla ilman kampanjoita tai alennuksia.",
-          "Seurattu varasto palautuu automaattisesti. Alkuperäisestä tilauksesta kertyneet pisteet vähennetään, käytetyt pisteet palautetaan, ja korvaavat tuotteet kerryttävät omat pisteensä.",
-          "Tilauksen voi palauttaa useassa erässä, mutta ei koskaan enempää kuin alun perin myytiin. Palautus ei palauta kampanjoiden käyttörajoja."
+          "Varastoseurannassa olevan tuotteen jokainen palautettu rivi voi palata varastoon (Varastoon, oletus) tai se voidaan hävittää (Romuta, versiosta 3.5 alkaen). Jos valitset Varastoon, tuote lisätään takaisin varastosaldoon. Romuta jättää varaston ennalleen ja laskee tuotteen myyntihetken omakustannuksen mukaan kuukauden varastotappioon Tulos-välilehdellä. Hyvitys, vero ja pisteet ovat kummassakin tapauksessa samat.",
+          "Alkuperäisestä tilauksesta kertyneet pisteet vähennetään, käytetyt pisteet palautetaan, ja korvaavat tuotteet kerryttävät omat pisteensä.",
+          "Jos alkuperäinen tilaus on kuittaamaton laskulle myynti, rahaa ei liiku: palautus vähennetään asiakkaan myyntisaamisista, ja kalliimpi korvaava tuote lisää erotuksen niihin.",
+          "Tilauksen voi palauttaa useassa erässä, mutta ei koskaan enempää kuin alun perin myytiin. Kun kaikki on palautettu, palautetut verot, alennukset ja pisteet vastaavat yhteensä täsmälleen alkuperäistä tilausta. Palautus ei palauta kampanjoiden käyttörajoja."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Syy-kenttä on vapaaehtoinen, enintään 100 merkkiä. Se näkyy tilauksen tiedoissa ja toimintolokissa, eikä sitä voi muokata lähettämisen jälkeen."
       },
       {
         "type": "note",
@@ -723,7 +823,7 @@ export const articles = [
     "slug": "on-account",
     "category": "orders",
     "since": "2.0",
-    "question": "Voiko kanta-asiakas ostaa laskulle ja maksaa myöhemmin?",
+    "question": "Voiko vakioasiakas ostaa laskulle ja maksaa myöhemmin?",
     "keywords": [
       "laskulle",
       "lasku",
@@ -735,7 +835,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kyllä. Valitse maksutavaksi Laskulle, niin myynti kirjataan asiakkaan velaksi. Velalla pitää olla haltija, joten jos asiakasta ei ole liitetty, Laskulle-painikkeen napautus avaa ensin asiakasluettelon (versiosta 3.4 alkaen; aiemmissa versioissa asiakas pitää liittää ostoskorissa)."
+        "text": "Kyllä. Valitse maksutavaksi Laskulle, niin myynti kirjataan asiakkaan velaksi. Velka on liitettävä asiakkaaseen, joten jos asiakasta ei ole liitetty, Laskulle-painikkeen napautus avaa ensin asiakasluettelon (versiosta 3.4 alkaen; aiemmissa versioissa asiakas pitää liittää ostoskorissa)."
       },
       {
         "type": "p",
@@ -746,6 +846,7 @@ export const articles = [
         "items": [
           "Liikevaihto kirjataan sinä päivänä, kun tavara lähtee; saapunut maksu ja kanta-asiakaspisteet odottavat kuittauspäivään.",
           "Kuittaamattomissa tilauksissa on listassa oranssi merkki, ja asiakkaan tiedoissa näkyy, paljonko hän on tällä hetkellä velkaa.",
+          "Kuittaamattoman tilauksen palautus ei palauta rahaa: summa vähennetään kyseisen asiakkaan myyntisaamisista.",
           "Asiakasta, jolla on kuittaamattomia tilauksia, ei voi poistaa."
         ]
       },
@@ -809,11 +910,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Omakustannusta ei tarvitse syöttää jokaiselle yhdistelmälle: tyhjä Omakustannus-kenttä tarkoittaa Tuotteen mukaan, eli käytössä on tuotteen omakustannus, ja se muuttuu tuotteen mukana. Luku tekee siitä erillisen omakustannuksen – myös 0. Painike Käytä tuotteen omakustannusta kaikille tyhjentää kaikki erilliset omakustannukset kerralla."
+        "text": "Omakustannusta ei tarvitse syöttää jokaiselle yhdistelmälle: tyhjä Omakustannus-kenttä tarkoittaa Tuotteen mukaan, eli käytössä on tuotteen omakustannus, ja se muuttuu tuotteen mukana. Luku tekee siitä tilan Erillinen – myös 0. Painike Käytä tuotteen omakustannusta kaikille tyhjentää kaikki erilliset omakustannukset kerralla."
       },
       {
         "type": "note",
-        "text": "Vaihtoehdon ja arvon nimi saa olla enintään 20 merkkiä pitkä, eikä se voi olla tyhjä: tyhjä vaihtoehdon nimi tai arvo korostuu punaisella tallennettaessa, joten täytä se tai poista tyhjä arvo. Tuotteella, jolla on variantteja, ei voi käyttää avohintaa."
+        "text": "Vaihtoehdon ja arvon nimi saa olla enintään 20 merkkiä pitkä, ja nimen alusta ja lopusta poistetaan välilyönnit tallennettaessa. Arvoa, johon et ole kirjoittanut mitään, ei lasketa yhdistelmäksi, vaan se ohitetaan tallennettaessa; punaisella korostuu vain tyhjä vaihtoehdon nimi tai vaihtoehto, jonka kaikki arvot ovat tyhjiä. Tuotteella, jolla on variantteja, ei voi käyttää avohintaa."
       }
     ],
     "related": [
@@ -944,12 +1045,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kun seuranta on päällä, myynnit ja ennakkotilaukset vähentävät varastoa automaattisesti. Mitätöinnit, palautukset ja peruutetut ennakkotilaukset palauttavat sen, ostotilauksen vastaanotto lisää sitä, ja voit säätää saldoa käsin milloin tahansa. Jokainen muutos kirjataan täydelliseen lokiin. Vähissä oleva varasto korostetaan värivaroituksella."
+        "text": "Kun seuranta on päällä, myynnit ja ennakkotilaukset vähentävät varastoa automaattisesti. Mitätöinnit, palautukset ja peruutetut ennakkotilaukset palauttavat sen, ja ostotilauksen vastaanotto lisää sitä. Jokainen muutos kirjataan täydelliseen lokiin. Vähissä oleva varasto korostetaan värivaroituksella."
+      },
+      {
+        "type": "p",
+        "text": "Lukua voi muuttaa käsin kahdella tavalla:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Uudelleenlaskenta: muokkaa tuotelomakkeessa varastomäärää vastaamaan laskemaasi määrää. Se ei koskaan vaikuta tuloslaskelmaan.",
+          "Muuta varastosaldoa (versiosta 3.5 alkaen): napauta tuotteen tiedoissa Muuta varastosaldoa, valitse Vähennä tai Lisää, määrä ja syy, esimerkiksi Vanh./pilaantunut, Vaurioitunut tai Näytteet ja lahjat. Varastosta vähennettyjen tuotteiden omakustannus lasketaan kyseisen kuukauden varastotappioon tuloslaskelmassa – katso ”Miten kirjaan varastosta vanhentuneet, rikkoutuneet tai näytteinä annetut tuotteet?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Miten kirjaan varastosta vanhentuneet, rikkoutuneet tai näytteinä annetut tuotteet?",
+    "keywords": [
+      "varastomuutos",
+      "varastotappio",
+      "hävikki",
+      "poistokirjaus",
+      "tuotteen hävikki",
+      "vanhentunut",
+      "vaurioitunut",
+      "näytteet",
+      "liikkeen tarvikkeet",
+      "uudelleenlaskenta"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Käytä toimintoa Muuta varastosaldoa. Kun tuotteen varastoa seurataan, napauta tuotteen tiedoissa Muuta varastosaldoa, valitse Vähennä tai Lisää, syötä määrä, valitse syy ja halutessasi lisää muistiinpano (enintään 100 merkkiä). Näkymä laskee varastosaldon muutoksen jälkeen, ja syyn alla oleva rivi kertoo, lasketaanko muutos tuloslaskelmaan."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Vähennyksen syyt: Tuotantokäyttö, Vanh./pilaantunut, Vaurioitunut, Kadonnut/varastettu, Henkilökunnan käyttö, Näytteet ja lahjat, Liikkeen tarvikkeet ja Muu. Lisäyksen syyt: Oma valmistus, Löytynyt ja Muu. Muu vaatii muistiinpanon.",
+          "Tuotantokäyttöä lukuun ottamatta vähennetyn määrän omakustannus kirjaushetkellä lasketaan kyseisen kuukauden varastotappioon tuloslaskelmassa. Se tulee myyntikatteen jälkeen ja pienentää liikevoittoa; myyntikate ja katemarginaali eivät muutu. Tuotantokäyttö vain vähentää varastosaldoa, koska materiaalin omakustannus sisältyy jo siitä valmistetun tuotteen omakustannukseen.",
+          "Löytynyt vähentää saman summan varastotappiosta. Lisäyspuolen Oma valmistus ja Muu vain lisäävät varastoa eivätkä koskaan vaikuta tuloslaskelmaan.",
+          "Varastomuutos lasketaan sille päivälle, jona kirjaat sen. Sitä ei voi päivätä taaksepäin, muokata tai poistaa; korjaa virhe kirjaamalla Löytynyt tai varastomuutos toiseen suuntaan.",
+          "Tuotteelle, jolla ei ole omakustannetta, voi silti tehdä varastomuutoksen, mutta tuloslaskelma ei voi antaa sille summaa, ja kuukauden kohdalla näkyy, montako kirjausta oli ilman omakustannetta."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Varastomäärän muokkaaminen tuotelomakkeessa on Uudelleenlaskenta: se vastaa laskemaasi määrää eikä koskaan vaikuta tuloslaskelmaan. Tilastot-välilehden varastoliikkeet suodattavat varastomuutokset ja uudelleenlaskennat erikseen, ja toimintoloki näyttää jokaisen varastomuutoksen syyn ja muistiinpanon."
+      },
+      {
+        "type": "note",
+        "text": "Muuta varastosaldoa vaatii Standard-paketin tai sitä korkeamman. Pro-paketissa työntekijöiltä, joiden roolilla oikeus Varaston käsinmuutos vaatii hyväksynnän, kysytään esihenkilön PIN-koodia vahvistettaessa."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -970,7 +1130,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Miinuksella oleva saldo tarkoittaa yleensä, ettei täydennystä ole kirjattu tai että ennakkotilattu tuote ei ole vielä saapunut (ennakkotilaukset vähentävät varastoa heti tehtäessä). Kirjaa täydennykset vastaanottamalla ostotilaus, niin saldo palautuu itsestään. Korjaa inventaarioerot käsin tehtävällä saldon säädöllä, joka tallentuu varastoliikkeiden lokiin."
+        "text": "Miinuksella oleva saldo tarkoittaa yleensä, ettei täydennystä ole kirjattu tai että ennakkotilattu tuote ei ole vielä saapunut (ennakkotilaukset vähentävät varastoa heti tehtäessä). Kirjaa täydennykset vastaanottamalla ostotilaus, niin saldo palautuu itsestään. Korjaa inventaarioero muokkaamalla varastomäärää tuotelomakkeessa (uudelleenlaskenta); rikkoutuneiden, vanhentuneiden tai lahjaksi annettujen tuotteiden syy kirjataan toiminnolla Muuta varastosaldoa. Molemmat tallentuvat varastoliikkeiden lokiin."
       },
       {
         "type": "note",
@@ -999,19 +1159,23 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sivupalkin Ostot-kohdassa hallitaan toimittajia ja ostotilauksia. Toimittajalle tallennetaan nimi, yhteyshenkilö, puhelinnumero, osoite ja oletusmaksuehto (maksu heti tai kuukausittain)."
+        "text": "Sivupalkin Ostot-kohdassa hallitaan toimittajia ja ostotilauksia. Toimittajalle tallennetaan nimi, yhteyshenkilö, puhelinnumero, osoite ja oletusmaksuehdot (Maksu vastaanotettaessa tai Kuukausilasku)."
       },
       {
         "type": "steps",
         "items": [
-          "Napauta Uusi osto, valitse toimittaja ja lisää tuotteet, määrät ja yksikköhinnat (esitäytettynä kunkin tuotteen nykyisellä hankintahinnalla). Myös toimituskulun voi lisätä. Jos toimittajaa ei ole vielä luotu, napauta toimittajaluettelon vasemmasta yläkulmasta Lisää toimittaja – uusi toimittaja palaa suoraan ostotilaukseen.",
+          "Napauta Uusi osto, valitse toimittaja ja lisää tuotteet, määrät ja yksikköhinnat (esitäytettynä kunkin tuotteen nykyisellä omakustannuksella). Myös toimituskulut voi lisätä. Jos toimittajaa ei ole vielä luotu, napauta toimittajaluettelon vasemmasta yläkulmasta Lisää toimittaja – uusi toimittaja palaa suoraan ostotilaukseen.",
           "Luonnos ei koskaan vaikuta varastoon tai ostovelkoihin, joten voit muokata tai poistaa sen vapaasti.",
-          "Kun tavara saapuu, napauta Vastaanota varasto: seurattu varasto kasvaa, ja ostotilaus saa numeron ja lukittuu. Oletuksena vastaanotto päivittää myös kunkin tuotteen hankintahinnan tähän yksikköhintaan; poista ostotilauksesta käytöstä Synkronoi tuotteen hankintahinta, jos haluat pitää hankintahinnat ennallaan."
+          "Kun tavara saapuu, napauta Vastaanota tuotteet: seurattu varasto kasvaa, ja ostotilaus saa numeron ja lukittuu. Oletuksena vastaanotto päivittää myös kunkin tuotteen omakustannuksen tähän yksikköhintaan; poista ostotilauksesta käytöstä Päivitä tuotteen hankintahinta, jos haluat pitää omakustannukset ennallaan."
         ]
       },
       {
         "type": "p",
-        "text": "Maksuehto ratkaisee, mitä seuraavaksi tapahtuu: heti maksettavat tilaukset merkitään maksetuiksi, kun taas kuukausittain maksettavat jäävät maksamattomiksi kohtaan Maksamattomat laskut, jossa voit kuitata ne toimittajakohtaisesti – yksittäisen tilauksen, kuukauden tai kaiken kerralla."
+        "text": "Maksuehdot ratkaisevat, mitä seuraavaksi tapahtuu: Maksu vastaanotettaessa -tilaukset merkitään maksetuiksi, kun taas Kuukausilasku-tilaukset jäävät maksamattomiksi kohtaan Maksamattomat laskut, jossa voit kuitata ne toimittajakohtaisesti – yksittäisen tilauksen, kuukauden tai kaiken kerralla."
+      },
+      {
+        "type": "p",
+        "text": "Myös raaka-aineita, joita et myy, kuten jauhoja tai pakkauksia, voi ostaa samalla tavalla: luo ne tuotteiksi, jotka eivät ole myynnissä – katso ”Voinko lisätä raaka-aineita, kuten jauhoja tai pakkauksia, tuotteina?”"
       },
       {
         "type": "note",
@@ -1020,8 +1184,54 @@ export const articles = [
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Voinko lisätä raaka-aineita, kuten jauhoja tai pakkauksia, tuotteina?",
+    "keywords": [
+      "myynnin ulkopuolinen tuote",
+      "raaka-aineet",
+      "ainekset",
+      "materiaalit",
+      "pakkaukset",
+      "tarvikkeet",
+      "myy kassalla",
+      "ostot",
+      "omakustannus"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Kyllä. Kytke tuotelomakkeessa kuvan alla oleva Myy kassalla pois päältä (oletuksena se on päällä), niin tuote on myynnin ulkopuolinen: sille ei tarvita hintaa, se säilyttää omakustannuksen, viivakoodin, varaston ja variantit, ja tuoteluettelossa hinnan paikalla lukee ”Ei myynnissä”."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Myynnin ulkopuolinen tuote ei koskaan näy kassan ruudukossa, luokissa, haussa tai viivakoodin luennassa, eikä se voi olla lahja, lisätuote, kampanjan kohde tai vaihdon korvaava tuote.",
+          "Ostotilaukset, vastaanotto, Päivitä tuotteen hankintahinta ja maksamattomat laskut toimivat täsmälleen kuten muillakin tuotteilla, joten materiaalin ostohinnan ja varaston voi kirjata kohdassa Ostot.",
+          "Muiden tuotteiden myynti ei vähennä sen varastoa. Kun käytät sitä, kirjaa vähennys tuotteen tiedoissa toiminnolla Muuta varastosaldoa: Tuotantokäyttö tuotteisiin menneelle määrälle, Liikkeen tarvikkeet esimerkiksi paperipusseille tai siivousvälineille.",
+          "Voit kytkeä sen takaisin myyntiin milloin tahansa, ja sen hinta ja verot ovat edelleen tallessa. Jo tehtyihin tilauksiin ja raportteihin tämä ei vaikuta."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Miten sen omakustannus päätyy tuloslaskelmaan: ostot eivät vaikuta siihen suoraan. Laita omakustannus tuotteelle, joka siitä valmistetaan, niin se vähennetään, kun kyseinen tuote myydään. Tarvikkeet, jotka eivät kuulu minkään tuotteen omakustannukseen, kirjataan käytettäessä Liikkeen tarvikkeiksi, jos niiden varastoa seurataan, tai kertakuluksi, jos ei. Älä kirjaa samaa rahaa molemmilla tavoilla, sillä silloin se lasketaan kahteen kertaan."
+      },
+      {
+        "type": "note",
+        "text": "Myynnin ulkopuoliset tuotteet ovat käytössä kaikissa paketeissa; ostot, varastonseuranta ja Muuta varastosaldoa vaativat Standard-paketin tai sitä korkeamman."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1040,7 +1250,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Liikevaihto kirjautuu sille päivälle, jona tuotteet luovutettiin, ja saapunut maksu sille päivälle, jona raha tuli. Kassalla maksetussa myynnissä molemmat osuvat samalle päivälle ja luvut täsmäävät. Ne eroavat toisistaan seuraavissa tilanteissa:"
+        "text": "Liikevaihto kirjautuu sille päivälle, jona tuotteet luovutettiin, kaikkien alennusten jälkeen ja ennen veroa. Saapunut maksu kirjautuu sille päivälle, jona raha tuli, ja se on raha, jonka todella otit vastaan, vero mukaan lukien. Siksi myymälässä, joka perii veroa, saapunut maksu on liikevaihtoa suurempi veron verran, myös kassalla maksetuissa tilauksissa. Sen lisäksi ne eroavat toisistaan seuraavissa tilanteissa:"
       },
       {
         "type": "list",
@@ -1048,12 +1258,17 @@ export const articles = [
           "Laskulle myynti: tuotteet lähtevät tänään ja kuuluvat tämän päivän liikevaihtoon. Raha kirjautuu saapuneeseen maksuun sinä päivänä, kun maksu kuitataan.",
           "Ennakkotilaus: etumaksu kirjautuu saapuneeseen maksuun maksupäivänä. Liikevaihto kirjataan kokonaisuudessaan noutopäivänä.",
           "Etumaksun menetys: kun asiakas peruu ennakkotilauksen ja etumaksu jää kauppiaalle, se on jo laskettu saapuneeseen maksuun maksupäivänä. Tilastot-välilehti näyttää sen erikseen menetettyinä etumaksuina, eikä se koskaan kuulu liikevaihtoon.",
-          "Aiemman tilauksen mitätöinti: palautettu raha kirjautuu saapuneeseen maksuun mitätöintipäivänä, joten sen päivän saapunut maksu voi olla negatiivinen, kun taas Mitätöidyt laskee tilauksen sen myyntipäivälle. Saapunut maksu- ja Mitätöidyt-ruutujen ⓘ-merkki selittää saman."
+          "Aiemman tilauksen mitätöinti: palautettu raha kirjautuu saapuneeseen maksuun mitätöintipäivänä, joten sen päivän saapunut maksu voi olla negatiivinen, kun taas Mitätöity laskee tilauksen sen myyntipäivälle.",
+          "Käteisen pyöristys: summa, jonka käteisen pyöristys lisää tilauksen loppusummaan tai vähentää siitä, kirjautuu saapuneeseen maksuun, ei koskaan liikevaihtoon."
         ]
       },
       {
         "type": "p",
-        "text": "Täsmäytä saapunut maksu kassalaatikkoon ja korttipäätteeseen. Jos haluat nähdä, paljonko myit jaksolla todellisuudessa, katso liikevaihtoa. Palautukset vähentävät liikevaihtoa palautuspäivältä."
+        "text": "Täsmäytä saapunut maksu kassalaatikkoon ja korttipäätteeseen. Jos haluat nähdä, paljonko myit jaksolla todellisuudessa, katso liikevaihtoa. Palautukset vähentävät liikevaihtoa palautuspäivältä. Ruutujen Liikevaihto, Saapunut maksu ja Mitätöity ⓘ-merkki selittää saman, ja itse vero on listattu kohdassa Liikevaihdosta myyntikatteeseen, joka aukeaa Myyntikate-ruudusta."
+      },
+      {
+        "type": "note",
+        "text": "Veroton liikevaihto tuli versiossa 3.5, ja aiemmat jaksot laskettiin uudelleen samalla tavalla, joten myymälässä, joka perii veroa, liikevaihto on päivityksen jälkeen aiempaa pienempi. Kyse on korjauksesta. Aiemmat versiot sisälsivät veron liikevaihtoon, ja myymälöissä, joissa hinnat ilmoitetaan ilman veroa, myös kerätty myyntivero laskettiin liikevaihdoksi."
       }
     ],
     "related": [
@@ -1083,15 +1298,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Yksittäiselle päivälle trendikaavio muuttuu tuntikohtaiseksi pylväskaavioksi. Pidemmillä jaksoilla yksi pylväs vastaa päivää, viikkoa, kuukautta tai vuotta jakson pituuden mukaan."
+        "text": "Jaksopalkin alla on kaksi riviä lukuruutuja (Liikevaihto, Saapunut maksu, Myyntikate, Tilaukset, Tilauksen keskiarvo; Alennukset yhteensä, Liikevoitto, Tuotteet ilman omakustannetta, Palvellut asiakkaat) ja sen jälkeen kehityskaavio. Kehityskaavion oikean yläkulman valikosta voit vaihtaa kaavion näyttämään liikevaihdon, tilaukset, tilauksen keskiarvon tai palvellut asiakkaat, ja sen vieressä Omakustannus ja myyntikate -kaavio pinoaa kunkin jakson tuotteiden omakustannuksen ja myyntikatteen yhteen pylvääseen. Yksittäinen päivä esitetään tunneittain; pidemmillä jaksoilla käytetään päiviä, viikkoja, kuukausia tai vuosia jakson pituuden mukaan."
       },
       {
         "type": "p",
-        "text": "Versiosta 3.4 alkaen voit lukea Liikevaihdon kehitys- tai Myyntikatteen kehitys -kaaviota jakso kerrallaan painamalla sitä pitkään: kortti näyttää päivämäärän ja kyseisen jakson liikevaihdon tai myyntikatteen, ja kun Liikevaihdon kehitys -kaaviossa Myynnin vertailu on päällä, myös vertailujakson liikevaihdon ja eron. Siirry vetämällä vasemmalle tai oikealle; jos pyyhkäiset kaaviota ylös tai alas, sivu vierii tavalliseen tapaan."
+        "text": "Voit lukea kehityskaaviota tai Omakustannus ja myyntikate -kaaviota jakso kerrallaan painamalla sitä pitkään; kun Myynnin vertailu on päällä, kehityskaavion kortti näyttää tämän jakson luvun ja vertailujakson luvun rinnakkain. Siirry vetämällä vasemmalle tai oikealle; jos pyyhkäiset kaaviota ylös tai alas, sivu vierii tavalliseen tapaan."
       },
       {
         "type": "p",
-        "text": "Tuotteiden paremmuusjärjestys -kortti listaa viisi parasta. Napauta korttia tai Näytä kaikki, niin näet kaikki jaksolla myydyt tuotteet myydyn määrän mukaan järjestettynä palautusten jälkeen."
+        "text": "Tuotteiden paremmuusjärjestys -kortti listaa viisi parasta. Napauta korttia tai Näytä kaikki, niin näet kaikki jaksolla myydyt tuotteet myydyn määrän mukaan järjestettynä palautusten jälkeen; tuotteella, jolla on variantteja, on yksi rivi kutakin varianttia kohti."
       },
       {
         "type": "p",
@@ -1121,6 +1336,7 @@ export const articles = [
       "ruuhkatunnit",
       "hitaasti liikkuvat tuotteet",
       "muutostuotteet",
+      "osuus luokittain",
       "varaston arvo",
       "uusintaostoprosentti",
       "pisteet"
@@ -1133,11 +1349,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Myynnin vertailu: jaksopalkin oikeassa reunassa voit verrata viime vuoden vastaavaan jaksoon tai edelliseen jaksoon (yksittäistä päivää viime viikon samaan päivään, tätä viikkoa viime viikkoon, tätä kuukautta viime kuukauteen, tätä vuotta viime vuoteen ja mukautettua jaksoa yhtä pitkään sitä edeltävään jaksoon). Saapunut maksu -ruutu näyttää eron ja kasvuprosentin, ja liikevaihtokaavioon tulee vaaleampi viiva vertailujaksolle. Jos jakso on vielä käynnissä, vertailujakso katkaistaan samaan hetkeen.",
-          "Viikonpäivä × tunti: vaihda Myynti ajan mittaan -otsikon näkymäksi Viikonpäivä × tunti, niin saat seitsemän päivän ja 24 tunnin lämpökartan. Mitä tummempi ruutu, sitä enemmän myit. Voit vaihtaa liikevaihdon ja tilausten välillä, ja vertailun ollessa päällä näet, mitkä tunnit kasvoivat ja mitkä supistuivat.",
-          "Hitaasti liikkuvat tuotteet: vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Hitaasti liikkuvat tuotteet, niin tuotteet listataan vähiten myydyistä eniten myytyihin. Listassa näkyvät nykyinen varasto ja kunkin tuotteen viimeinen myyntipäivä. Tuotteet, joita ei ole koskaan myyty, merkitään tekstillä Ei koskaan myyty. Oletuksena näytetään vain varastossa olevat tuotteet.",
-          "Muutokset (versiosta 3.4 alkaen): vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Muutokset, niin näet 3 tuotetta, joiden liikevaihto nousi eniten, ja 3, joiden liikevaihto laski eniten vertailujaksoon verrattuna, kunkin molempien jaksojen liikevaihdon ja eron kanssa. Valitse ensin jakso kohdasta Myynnin vertailu; jos valintana on Ei mitään tai jakso on Koko aika, kortti kehottaa tekemään niin. Napauta korttia tai Näytä kaikki, niin saat koko Tuotteiden muutokset -luettelon, joka on jaettu osioihin Nousussa ja Laskussa.",
-          "Uusintaostoprosentti: asiakasruudun viimeinen rivi näyttää niiden jäsenten osuuden, jotka ostivat jaksolla ja ovat ostaneet yhteensä vähintään kaksi kertaa.",
+          "Myynnin vertailu: jaksopalkin oikeassa reunassa voit verrata viime vuoden vastaavaan jaksoon tai edelliseen jaksoon (yksittäistä päivää viime viikon samaan päivään, tätä viikkoa viime viikkoon, tätä kuukautta viime kuukauteen, tätä vuotta viime vuoteen ja mukautettua jaksoa yhtä pitkään sitä edeltävään jaksoon). Ruudut Liikevaihto, Saapunut maksu, Myyntikate, Tilaukset, Tilauksen keskiarvo, Alennukset yhteensä ja Palvellut asiakkaat näyttävät kukin muutoksen ja vertailujakson luvun, esimerkiksi ”▼ 3 % vrt. viime kuukausi”; ruudun Alennukset yhteensä muutos on aina harmaa, koska suurempi alennus ei ole sellaisenaan hyvä eikä huono. Napauttamalla mitä tahansa vertailuriviä avaat Jaksojen vertailun, jossa on molempien jaksojen luvut. Kehityskaavioon tulee vaaleampi viiva vertailujaksolle. Jos jakso on vielä käynnissä, vertailujakso katkaistaan samaan hetkeen.",
+          "Viikonpäivä × tunti: vaihda kehityskaavion otsikon näkymä (Kehitys) näkymäksi Viikonpäivä × tunti, niin saat seitsemän päivän ja 24 tunnin lämpökartan. Mitä tummempi ruutu, sitä enemmän myit. Voit vaihtaa liikevaihdon ja tilausten välillä, ja vertailun ollessa päällä näet, mitkä tunnit kasvoivat ja mitkä supistuivat.",
+          "Hitaasti liikkuvat tuotteet: vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Hitaasti liikkuvat tuotteet, niin tuotteet listataan vähiten myydyistä eniten myytyihin. Listassa näkyvät nykyinen varasto ja kunkin tuotteen viimeinen myyntipäivä. Tuotteet, joita ei ole koskaan myyty, merkitään tekstillä Ei koskaan myyty, ja tuotteella, jolla on variantteja, on yksi rivi kutakin varianttia kohti. Oletuksena näytetään vain varastossa olevat tuotteet.",
+          "Muutokset (versiosta 3.4 alkaen): vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Muutokset, niin näet 3 tuotetta, joiden liikevaihto nousi eniten, ja 3, joiden liikevaihto laski eniten vertailujaksoon verrattuna, kunkin molempien jaksojen liikevaihdon ja eron kanssa; jokaista varianttia verrataan itseensä. Valitse ensin jakso kohdasta Myynnin vertailu; jos valintana on Ei mitään tai jakso on Koko aika, kortti kehottaa tekemään niin. Napauta korttia tai Näytä kaikki, niin saat koko Tuotteiden muutokset -luettelon, joka on jaettu osioihin Nousussa ja Laskussa.",
+          "Uusintaostoprosentti: asiakasruudun viimeinen rivi näyttää niiden jäsenten osuuden, jotka ostivat jaksolla ja ovat ostaneet yhteensä vähintään kaksi kertaa. Vertailun ollessa päällä alla oleva rivi näyttää muutoksen prosenttiyksikköinä ja vertailujakson prosentin.",
+          "Osuus luokittain: kunkin luokan liikevaihto ja osuus tuotteen nykyisen luokan mukaan, suurin ensin. Tuotteet, joilla ei ole luokkaa, näytetään kohdassa Ei luokkaa, ja rivit summautuvat täsmälleen liikevaihdoksi.",
           "Nykytilanne: varaston arvo (nykyinen varasto × nykyinen omakustannus), kaikki valitun jakson varastoliikkeet sekä pisteet, jotka asiakkailla on mutta joita he eivät ole lunastaneet, ja suurin mahdollinen alennus niillä. Nämä ovat tämänhetkisiä saldoja, joihin jakso ei vaikuta."
         ]
       },
@@ -1166,25 +1383,31 @@ export const articles = [
     "question": "Miten myyntikate raportoidaan, jos en ole syöttänyt omakustannuksia?",
     "keywords": [
       "omakustannus",
+      "voitto",
       "myyntikate",
       "kate",
+      "kateprosentti",
       "raportit",
       "ei seurannassa",
       "puuttuva omakustannus",
-      "myyntikate seurannassa"
+      "tuotteet ilman omakustannetta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Omakustannus on valinnainen kenttä. Tuotteet ilman omakustannusta jätetään pois myyntikatteesta, mutta niiden liikevaihto lasketaan silti kokonaan. Tilastot-välilehden Myyntikate seurannassa -kortti näyttää, kuinka monella jaksolla myydyllä tuotteella ei ole omakustannusta; omakustannus 0 lasketaan omakustannukseksi, joten niitä tuotteita ei luetella."
+        "text": "Omakustannus on valinnainen kenttä. Tuotteet ilman omakustannusta jätetään pois myyntikatteesta, mutta niiden liikevaihto lasketaan silti kokonaan. Tilastot-välilehden Tuotteet ilman omakustannetta -ruutu näyttää, kuinka monella jaksolla myydyllä tai palautetulla tuotteella ei ole omakustannusta, esimerkiksi ”12 tuotetta”. Omakustannus 0 lasketaan omakustannukseksi, joten niitä tuotteita ei luetella; kun jokaisella tuotteella on omakustannus, ruudussa lukee ”0 tuotetta · omakustannetiedot kunnossa”."
       },
       {
         "type": "p",
-        "text": "Napauta korttia tai Näytä tuotteet avataksesi näkymän Tuotteet ilman omakustannetta, jossa tuotteet on järjestetty sen mukaan, kuinka paljon liikevaihtoa on jäänyt myyntikatteen ulkopuolelle. Napauta riviä avataksesi tuotteen, lisää omakustannus Muokkaa-painikkeella, niin rivi on palatessasi merkitty tekstillä Omakustanne lisätty. Tuote, jolla on variantteja, merkitään tekstillä Omakustanne lisätty vasta, kun jokaisella ilman omakustannusta myydyllä variantilla on omakustannus – oma tai tuotteen omakustannus, jota variantti seuraa."
+        "text": "Napauta ruutua tai Näytä tuotteet avataksesi näkymän Tuotteet ilman omakustannetta, jossa tuotteet on järjestetty sen mukaan, kuinka paljon liikevaihtoa on jäänyt myyntikatteen ulkopuolelle. Napauta riviä avataksesi tuotteen, lisää omakustannus Muokkaa-painikkeella, niin rivi on palatessasi merkitty tekstillä Omakustanne lisätty. Tuote, jolla on variantteja, merkitään tekstillä Omakustanne lisätty vasta, kun jokaisella ilman omakustannusta myydyllä variantilla on omakustannus – oma tai tuotteen omakustannus, jota variantti seuraa."
       },
       {
         "type": "p",
-        "text": "Myyntikate on liikevaihto kaikkien alennusten jälkeen (tuote- ja ostoskorialennukset, kampanjat, pisteiden lunastus) ja ennen veroa, miinus omakustannus – siksi kentän nimi on Omakustannus ilman veroa (valinnainen): syötä hinta, jonka maksoit ennen veroa. Kateprosentti on myyntikate ÷ niiden tuotteiden veroton liikevaihto, joilla on omakustannus, joten tuotteet ilman omakustannusta eivät laske sitä. Palautus peruu palautuspäivänä sen myyntikatteen, jonka kyseiset tuotteet olivat tuoneet."
+        "text": "Myyntikate on liikevaihto kaikkien alennusten jälkeen (tuote- ja ostoskorialennukset, kampanjat, pisteiden lunastus) ja ennen veroa, miinus omakustannus – siksi myymälässä, joka perii veroa, kentän nimi on Omakustannus ilman veroa (valinnainen): syötä hinta, jonka maksoit ennen veroa. Kateprosentti on myyntikate ÷ niiden tuotteiden liikevaihto, joilla on omakustannus, joten tuotteet ilman omakustannusta eivät laske sitä. Palautus peruu palautuspäivänä sen myyntikatteen, jonka kyseiset tuotteet olivat tuoneet."
+      },
+      {
+        "type": "p",
+        "text": "Napauta Myyntikate-ruutua avataksesi näkymän Liikevaihdosta myyntikatteeseen, joka vähentää rivi riviltä: liikevaihto (sis. vero), vero, liikevaihto (ilman veroa), liikevaihto ilman omakustannetta, tuotteiden omakustannus ja lopuksi myyntikate ja kate. Rivit summautuvat täsmälleen ruudun lukuun."
       },
       {
         "type": "note",
@@ -1223,20 +1446,26 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Liikevaihto (ilman veroa): kaikkien alennusten jälkeinen liikevaihto miinus vero, lasketaan sille päivälle, jona tavara luovutettiin.",
+          "Liikevaihto (ilman veroa): kaikkien alennusten jälkeinen ja ennen veroa laskettu liikevaihto, lasketaan sille päivälle, jona tavara luovutettiin.",
           "Tuotteiden omakustannus: myytyjen tuotteiden kustannus tuotteisiin kirjattujen omakustannusten mukaan.",
+          "Varastotappio: sellaisten tuotteiden omakustannus, jotka Muuta varastosaldoa -toiminto poisti vanhentuneina, vaurioituneina, lahjoitettuina tai vastaavina, sekä romutetut palautukset. Se tulee myyntikatteen jälkeen – katso ”Miten kirjaan varastosta vanhentuneet, rikkoutuneet tai näytteinä annetut tuotteet?” Kuukaudella on myös Varastotappio-osio, joka summaa sen syittäin.",
           "Maksukulut (arvio): maksutapojesi määristä arvioidut maksukulut.",
           "Menetetyt etumaksut: etumaksut, jotka pidit, kun ennakkotilaus peruutettiin.",
+          "Käteisen pyöristys: summa, jonka käytössä oleviin kolikoihin pyöristetty käteinen toi tilausten loppusummiin yli tai ali.",
           "Kiinteät kulut ja Kertakulut: kyseiselle kuukaudelle kirjaamasi kulut – katso ”Miten kirjaan vuokran, palkat ja muut kulut?”"
         ]
       },
       {
         "type": "p",
-        "text": "Sen jälkeen tulee enintään kolme kaaviota: liikevoitto kuukausi kuukaudelta, kunkin kiinteän kulun osuus ja kiinteiden kulujen kehitys. Kaksi kehityskaaviota kattavat enintään 12 kuukautta avaamaasi kuukauteen asti, ja ne näkyvät vasta, kun vertailtavia kuukausia on vähintään kaksi – kuukaudet lasketaan ensimmäisen myynnin tai kulun kuukaudesta alkaen. Osuuskaavio vaatii kyseiselle kuukaudelle kiinteän kulun; kunnes sellainen on, osiossa näkyy sen sijaan Lisää kiinteä kulu. Tilastot-välilehdellä myyntikatekortin viimeinen rivi vie suoraan Tulos-välilehdelle: jos jakso on täsmälleen yksi kuukausi, rivillä näkyy kuukauden liikevoitto, esimerkiksi ”Liikevoitto (lokakuu): NT$12,300”; muilla jaksoilla siinä lukee Näytä kuukausittainen tuloslaskelma."
+        "text": "Sen jälkeen tulee enintään kolme kaaviota: liikevoitto kuukausi kuukaudelta, kunkin kiinteän kulun osuus ja kiinteiden kulujen kehitys. Kaksi kehityskaaviota kattavat enintään 12 kuukautta avaamaasi kuukauteen asti, ja ne näkyvät vasta, kun vertailtavia kuukausia on vähintään kaksi – kuukaudet lasketaan ensimmäisen myynnin tai kulun kuukaudesta alkaen. Osuuskaavio vaatii kyseiselle kuukaudelle kiinteän kulun; kunnes sellainen on, osiossa näkyy sen sijaan Lisää kiinteä kulu."
+      },
+      {
+        "type": "p",
+        "text": "Tilastot ja Tulos viittaavat toisiinsa. Kun Tilastot-välilehden jakso on Tämä kuukausi tai täsmälleen yksi kokonainen kuukausi, toinen ruuturivi saa Liikevoitto-ruudun (merkintä ”Käynnissä · koko kuukauden kulut vähennetään”, kun kuukausi on kesken); napauttamalla sitä näet kyseisen kuukauden erittelyn myyntikatteesta liikevoittoon. Muilla jaksoilla napauta Näytä kuukausittainen tuloslaskelma kohdan Liikevaihdosta myyntikatteeseen viimeiseltä riviltä. Toiseen suuntaan Tulos-näkymässä kuukauden otsikon alla oleva Näytä raportti: lokakuu avaa Tilastot-välilehden kyseiselle kuukaudelle."
       },
       {
         "type": "note",
-        "text": "Liikevoitto on voitto ennen tuloveroa, laskettuna DingPOSiin kirjatuista tiedoista – se ei ole veroilmoitus. Jos tuotteita on myyty ilman omakustannetta, kuukaudelle näytetään silti liikevoitto, jossa on merkintä ”Ei sisällä omakustannuksia”; napauttamalla näet, mitkä tuotteet se koskee. Tulos on käytössä kaikissa paketeissa. Jos käytössä on työntekijätilit, sen avaaminen vaatii oikeuden Tuloslaskelma ja kulut, johon esihenkilöt ja työntekijät tarvitsevat oletuksena hyväksynnän, koska se näyttää tuotteiden omakustannukset ja palkat."
+        "text": "Liikevoitto on voitto ennen tuloveroa, laskettuna DingPOSiin kirjatuista tiedoista – se ei ole veroilmoitus. Jos tuotteita on myyty ilman omakustannetta, kuukaudelle näytetään silti liikevoitto, jossa on merkintä ”Ei sisällä N tuotteen omakustannusta”; napauttamalla näet, mitkä tuotteet se koskee. Tulos on käytössä kaikissa paketeissa. Jos käytössä on työntekijätilit, sen avaaminen vaatii oikeuden Tuloslaskelma ja kulut, johon esihenkilöt ja työntekijät tarvitsevat oletuksena hyväksynnän, koska se näyttää tuotteiden omakustannukset ja palkat."
       }
     ],
     "related": [
@@ -1284,14 +1513,14 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Sisustuksen, kalusteiden tai ennalta maksetun vakuutuksen kohdalla ota käyttöön Jaa usealle kuukaudelle ja valitse 2–120 kuukautta sekä Ensimmäinen laskettu kuukausi. Lomake näyttää esikatselun siitä, paljonko kullekin kuukaudelle lasketaan ja mitkä kuukaudet kulu kattaa.",
+          "Myymälän varusteluun, laitteisiin tai ennalta maksettuun vakuutukseen liittyvässä kulussa ota käyttöön Jaa usealle kuukaudelle ja valitse 2–120 kuukautta sekä Ensimmäinen laskettu kuukausi. Lomake näyttää esikatselun siitä, paljonko kullekin kuukaudelle lasketaan ja mitkä kuukaudet kulu kattaa.",
           "Ilman jakamistakin voit valita kuukauden, jolle kulu lasketaan: lokakuun lasku, joka saapuu marraskuussa, voidaan laskea lokakuulle, ja sen todellinen päivämäärä säilyy.",
           "Jos jaksotettu kulu päättyy ennenaikaisesti (esimerkiksi vakuutus irtisanotaan), käytä toimintoa Lopeta jako ennenaikaisesti: jäljellä oleva osuus lasketaan valitsemallesi kuukaudelle."
         ]
       },
       {
         "type": "note",
-        "text": "Syötä summa, jonka myymälä todella kantaa, ja jätä pois vero, jonka voit vähentää. Myytävä varasto kirjataan Ostot-osiossa, koska se sisältyy omakustannukseen vasta myytäessä; takaisin saatavat vakuusmaksut, lainan pääoma ja omistajan nostamat rahat eivät ole kuluja. Muutokset tallentuvat yhdessä, kun napautat ✓, ja jos muutos ulottuu valmiiseen kuukauteen, sovellus kertoo ensin, minkä kuukausien liikevoitto muuttuu."
+        "text": "Syötä summa, jonka myymälä todella kantaa, ja jätä pois vero, jonka voit vähentää. Myytävä varasto ja raaka-aineet, joista sen valmistat, kirjataan Ostot-osiossa, koska ne sisältyvät omakustannukseen vasta myytäessä. Varastoseurannassa olevat tarvikkeet kirjataan käytettäessä toiminnolla Muuta varastosaldoa syyllä Liikkeen tarvikkeet, ei kuluna. Takaisin saatavat vakuusmaksut, lainan pääoma ja omistajan nostamat rahat eivät ole kuluja. Muutokset tallentuvat yhdessä, kun napautat ✓, ja jos muutos ulottuu valmiiseen kuukauteen, sovellus kertoo ensin, minkä kuukausien liikevoitto muuttuu."
       }
     ],
     "related": [
@@ -1396,6 +1625,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Liitä jäsen myyntiin ostoskorissa tai kassanäkymässä, niin pisteet kertyvät automaattisesti. Lunastaaksesi pisteitä syötä käytettävien pisteiden määrä. Tilauksen mitätöinti vähentää tilauksesta kertyneet pisteet ja palauttaa lunastetut pisteet."
+      },
+      {
+        "type": "p",
+        "text": "Voit lisätä tai vähentää pisteitä myös käsin, esimerkiksi jos ostos jäi kirjaamatta: napauta asiakkaan tiedoissa Pisteet-kortin Säädä-painiketta, valitse Lisää tai Vähennä, syötä pisteet ja halutessasi anna syy (enintään 100 merkkiä). Asiakkaalta ei voi vähentää enempää pisteitä kuin hänellä on. Jokainen muutos jää pistehistoriaan, ja siihen tallentuvat saldo ennen muutosta ja sen jälkeen, syy sekä muutoksen tekijä."
+      },
+      {
+        "type": "note",
+        "text": "Pisteiden käsinmuutos tuli käyttöön versiossa v3.5. Pro-paketissa työntekijältä, jonka rooli vaatii hyväksynnän oikeudelle Pisteiden käsinmuutos (työntekijän rooli vaatii sen oletuksena), pyydetään vahvistettaessa esihenkilön tai omistajan PIN-koodi."
       }
     ],
     "related": [
@@ -1585,6 +1822,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Napauta ensin Yritä uudelleen; jos se onnistuu, sovellus avautuu normaalisti. Jos ongelma toistuu, napauta Ota yhteyttä tukeen ja kerro meille, niin autamme palauttamaan tietosi. Tämä näkymä ei koskaan siirrä tai poista tiedostoja."
+      },
+      {
+        "type": "p",
+        "text": "Ensimmäinen käynnistys päivityksen jälkeen tai vanhemman version varmuuskopion palauttamisen jälkeen saattaa näyttää ensin tekstin ”Päivitetään tietoja…”. Silloin kauppasi tiedot siirtyvät uudempaan muotoon, mikä kestää sitä kauemmin, mitä enemmän tietoa on; sovellus avautuu itsestään, kun työ on valmis. Se ei ole jumiutunut."
       },
       {
         "type": "note",
@@ -1790,14 +2031,16 @@ export const articles = [
     "slug": "activity-log",
     "category": "staff",
     "since": "3.0",
-    "question": "Mistä näen, kuka mitätöi tilauksen, korjasi varastosaldoa tai muutti hintaa?",
+    "question": "Mistä näen, kuka mitätöi tilauksen tai muutti varastosaldoa tai hintaa?",
     "keywords": [
       "toimintoloki",
       "valvonta",
       "kuka muutti",
       "mitätöinti",
       "hinnanmuutos",
-      "varastosaldon korjaus",
+      "varastomuutos",
+      "uudelleenlaskenta",
+      "pistesäätö",
       "poistettu tuote",
       "hyväksynnät",
       "loki"
@@ -1805,21 +2048,21 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Käytä toimintolokia. Napauta Henkilöstö-sivun oikeasta yläkulmasta Toimintoloki ja anna omistajan PIN-koodi. Näet kaupan arkaluonteiset toiminnot uusin ensin: mitätöinnit, palautukset, varastosaldon manuaaliset korjaukset, hyväksynnät, henkilöstö- ja oikeusmuutokset, omistajan PIN-koodin vaihdot, tuotteiden hinta- ja omakustannusmuutokset sekä tuotteiden poistot. Tavallisia kassalla tehtyjä myyntejä ei listata."
+        "text": "Käytä toimintolokia. Napauta Henkilöstö-sivun oikeasta yläkulmasta Toimintoloki ja anna omistajan PIN-koodi. Näet kaupan arkaluonteiset toiminnot uusimmat ensin: mitätöinnit, palautukset, varastomuutokset ja uudelleenlaskennat, manuaaliset pistesäädöt, hyväksynnät, henkilöstö- ja oikeusmuutokset, omistajan PIN-koodin vaihdot, veroasetukset, tuotteiden hinta- ja omakustannusmuutokset sekä tuotteiden poistot. Tavallisia kassalla tehtyjä myyntejä ei listata."
       },
       {
         "type": "list",
         "items": [
-          "Jokaisesta merkinnästä näkyy, mitä se koski, kuka teki mitä ja milloin sekä lopputulos – esimerkiksi ”M-hinta $390 → $350”.",
+          "Jokaisesta merkinnästä näkyy, mitä se koski, kuka teki mitä ja milloin sekä lopputulos – esimerkiksi ”M-hinta $390 → $350”. Mitätöinnin, palautuksen, varastomuutoksen tai pistesäädön syy näkyy merkinnän kolmannella rivillä.",
           "Voit suodattaa työntekijän (myös käytöstä poistetut), toiminnon tyypin sekä jakson Tänään / Tämä viikko / Tämä kuukausi mukaan.",
           "Napauta merkintää, joka viittaa tilaukseen, tuotteeseen tai asiakkaaseen, niin avautuu sen tietosivu.",
-          "Tilauksen, tuotteen ja jokaisen työntekijän sivulla on oma merkintänsä, jossa näkyvät vain niitä koskevat tiedot.",
+          "Tilauksen, tuotteen ja jokaisen työntekijän sivulla on oma merkintäluettelonsa, jossa näkyvät vain kyseistä tilausta, tuotetta tai työntekijää koskevat merkinnät.",
           "Poistetuista tuotteista lokissa näkyy edelleen silloinen nimi ja hinta."
         ]
       },
       {
         "type": "note",
-        "text": "Lokiin tallentuu tietoja kaikilla paketeilla; vain sen katselu on Pro-ominaisuus, joten Pro-tilauksen katkon aikana tallentuneet merkinnät tulevat näkyviin, kun tilaat Pron uudelleen. Loki kulkee mukana pilvivarmuuskopioissa."
+        "text": "Lokiin tallentuu tietoja kaikilla paketeilla; vain sen katselu on Pro-ominaisuus, joten ajalta, jolloin Pro-tilaus oli päättynyt, tallentuneet merkinnät tulevat näkyviin, kun tilaat Pron uudelleen. Loki kulkee mukana pilvivarmuuskopioissa."
       }
     ],
     "related": [
