@@ -83,7 +83,8 @@ export const articles = [
       "abrir tienda",
       "configurar tienda",
       "país",
-      "moneda"
+      "moneda",
+      "impuestos"
     ],
     "content": [
       {
@@ -93,8 +94,8 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Elige tu país o región. En la parte superior de la lista aparecen la región de este iPad y los mercados más comunes; debajo están los 175 países y regiones donde DingPOS está en el App Store, con búsqueda por nombre en el idioma de la app o en inglés. Tu elección completa la moneda, la tasa de impuesto y el modo de impuesto.",
-          "En Tu tienda, escribe el nombre de la tienda, agrega un logotipo si quieres y revisa la moneda, la tasa de impuesto y el modo de impuesto (incluido / no incluido). La moneda predeterminada es la de tu país; tócala para elegir entre 130 monedas."
+          "Elige tu país o región. En la parte superior de la lista aparecen el país o la región donde está este iPad y los mercados más comunes; debajo están los 175 países y regiones donde DingPOS está en el App Store, con búsqueda por nombre en el idioma de la app o en inglés. Tu elección completa la moneda, los impuestos y el modo de impuesto.",
+          "En Tu tienda, escribe el nombre de la tienda, agrega un logotipo si quieres y revisa la moneda, los impuestos y el modo de impuesto (incluido / no incluido). La moneda predeterminada es la de tu país; tócala para elegir entre 130 monedas. La lista de impuestos muestra los impuestos predeterminados de tu país: cámbiales el nombre, modifica una tasa, elimina uno o toca Agregar impuesto para añadir otra fila. Una tienda en Columbia Británica, por ejemplo, cambia la primera fila a «GST 5» y agrega una fila «PST 7»."
         ]
       },
       {
@@ -103,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "La moneda y el modo de impuesto no se pueden cambiar después de la configuración; la tasa de impuesto sí se puede cambiar más adelante en Ajustes. En Estados Unidos, Canadá, Brasil y Micronesia la tasa depende del estado, la provincia o la ciudad, así que el campo de la tasa de impuesto empieza vacío y, para continuar, escribes la tasa que cobras (se permite 0). La lista de 175 países y la elección de moneda llegaron en la v3.2; las versiones anteriores ofrecían 15 países."
+        "text": "La moneda no se puede cambiar después de la configuración; los impuestos y el modo de impuesto sí se pueden cambiar más adelante en Ajustes → Datos de la tienda. En Estados Unidos, Canadá, Brasil y Micronesia la tasa depende del estado, la provincia o la ciudad, así que el campo de la tasa empieza vacío y, para continuar, escribes la tasa que cobras. La tasa debe ser mayor que 0: si una tienda no cobra impuesto, elimina la fila. La lista de 175 países y la elección de moneda llegaron en la v3.2; las versiones anteriores ofrecían 15 países."
       }
     ],
     "related": [
@@ -182,11 +183,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Por ahora DingPOS funciona en iPad con iPadOS 17 o posterior, y está pensado principalmente para usarse en horizontal."
+        "text": "Por ahora DingPOS funciona en iPad con iPadOS 17.4 o posterior, y está pensado principalmente para usarse en horizontal."
       },
       {
         "type": "p",
         "text": "Todavía no es compatible con iPhone ni con Mac. Si quieres que admitamos otro dispositivo, escríbenos y cuéntanos cómo lo usarías."
+      },
+      {
+        "type": "note",
+        "text": "Todos los iPad que funcionan con iPadOS 17 pueden actualizarse a la 17.4, así que ningún modelo queda fuera. Un iPad que sigue en iPadOS 17.0–17.3 necesita primero una actualización del sistema, en Ajustes → General → Actualización de software, antes de poder instalar DingPOS v3.5 o posterior."
       }
     ],
     "related": [
@@ -196,22 +201,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "¿Puedo cambiar la moneda o el modo de impuesto después de la configuración?",
+    "question": "¿Puedo cambiar la moneda, la tasa de impuesto o el modo de impuesto después de la configuración?",
     "keywords": [
       "moneda",
       "modo de impuesto",
       "cambiar",
       "bloqueado",
-      "tasa de impuesto"
+      "tasa de impuesto",
+      "impuestos",
+      "incluido",
+      "no incluido"
     ],
     "content": [
       {
         "type": "p",
-        "text": "La tasa de impuesto se puede cambiar cuando quieras en Ajustes; la nueva tasa solo se aplica a los pedidos futuros."
+        "text": "El impuesto se puede cambiar; la moneda, no. Los impuestos y el modo de impuesto se cambian en la sección Impuesto de Ajustes → Datos de la tienda, y el cambio se aplica solo a las ventas posteriores: los pedidos anteriores, las devoluciones y los reportes conservan los montos de impuesto y el modo con que se registraron."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Impuestos: agrega uno, cámbiale el nombre, modifica su tasa o elimínalo; consulta «¿Cómo se calcula el impuesto?».",
+          "Modo de impuesto (incluido / no incluido): toca el otro modo y la confirmación muestra un ejemplo con tu primer impuesto, como «un artículo de NT$100 con 5 % de impuesto: el cliente paga NT$105». Los precios conservan sus números, y un carrito abierto se recalcula con el nuevo modo cuando vuelves a la caja. El modo se puede cambiar desde la v3.5; las versiones anteriores lo bloquean en la configuración.",
+          "Después de un cambio de modo, una devolución completa sigue reembolsando el pedido original tal como quedó. Un cambio (con artículos de reemplazo) sobre un pedido vendido con el otro modo se bloquea: vuelve a cambiar el modo, o devuelve los artículos y cóbralos de nuevo."
+        ]
       },
       {
         "type": "p",
-        "text": "La moneda y el modo de impuesto (incluido / no incluido) se bloquean al terminar la configuración. Todos tus pedidos anteriores se calcularon con ellos, así que cambiarlos después dañaría tus reportes. Revísalos en el paso Tu tienda de la configuración: la moneda predeterminada es la de tu país y puedes tocarla para elegir otra."
+        "text": "La moneda se bloquea al terminar la configuración. Todos tus pedidos anteriores se registraron en ella, así que cambiarla después dañaría tus reportes. Revísala en el paso Tu tienda de la configuración: la moneda predeterminada es la de tu país y puedes tocarla para elegir otra."
       },
       {
         "type": "note",
@@ -331,12 +347,16 @@ export const articles = [
       "impuesto a las ventas",
       "incluido",
       "no incluido",
+      "varios impuestos",
+      "GST",
+      "PST",
+      "pausar impuesto",
       "recibo"
     ],
     "content": [
       {
         "type": "p",
-        "text": "El impuesto se calcula automáticamente según el modo de impuesto que elegiste al configurar la app. El recibo muestra el monto del impuesto en ambos modos:"
+        "text": "El impuesto se calcula automáticamente según los impuestos y el modo de impuesto que configuraste en Ajustes → Datos de la tienda. Hay dos modos de impuesto, y el recibo muestra el monto del impuesto en ambos:"
       },
       {
         "type": "list",
@@ -347,12 +367,34 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Orden completo del cálculo: descuentos en artículos → descuento en el carrito → impuesto. Los montos se redondean hacia arriba desde la mitad (0.5 sube) según los decimales de la moneda (por ejemplo, 0 para TWD y 2 para USD)."
+        "text": "Una tienda puede cobrar varios impuestos, como GST 5 % más PST 7 % en Columbia Británica, o el impuesto al consumo de 10 % de Japón junto con la tasa reducida de 8 %:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "En la sección Impuesto, toca Agregar impuesto e ingresa un nombre y una tasa. Activa Aplicar a productos nuevos y los productos que agregues después llevarán este impuesto por defecto. Si la tienda ya tiene un impuesto predeterminado, el que agregues empieza con ese interruptor desactivado; actívalo cuando se deban cobrar ambos.",
+          "Cada producto elige los impuestos que cobra en Impuestos, dentro del formulario del producto: un bento podría cobrar solo la tasa reducida de 8 %. Con dos o más activados, el formulario muestra la tasa combinada del producto.",
+          "Toca un impuesto para cambiarle el nombre o la tasa, o usa Aplicar a todos los productos o Quitar de todos los productos para agregarlo o quitarlo de todos los productos a la vez. Antes de eliminar un impuesto, la app te avisa a cuántos productos dejará de aplicarse.",
+          "En una tienda con impuesto no incluido, los totales del carrito muestran una fila por impuesto, y el detalle del pedido lista una fila por impuesto con su tasa y el monto sobre el que se cobró."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Para dejar de cobrar impuesto por un tiempo, desactiva Cobrar impuesto en la parte superior de la sección Impuesto: todas las ventas siguientes quedan sin impuesto, incluidos los artículos que ya estén en un carrito. Cada producto conserva sus impuestos, y al volver a activar el interruptor se restablecen tal como estaban."
+      },
+      {
+        "type": "p",
+        "text": "Orden completo del cálculo: descuentos y promociones en artículos → descuento en el carrito → canje de puntos → impuesto. Los montos se redondean hacia arriba desde la mitad (0.5 sube) según los decimales de la moneda (por ejemplo, 0 para TWD y 2 para USD)."
+      },
+      {
+        "type": "note",
+        "text": "Los impuestos con nombre llegaron en la v3.5. Al actualizar, tu tasa de impuesto pasa a ser un impuesto con nombre (por ejemplo, «GST 10 %» en Australia) y todos los productos existentes lo llevan; una tienda cuya tasa era 0 no queda con impuesto. Los pedidos y reportes anteriores conservan sus cifras."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -376,7 +418,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Los métodos de pago son etiquetas de registro: DingPOS no procesa pagos reales. Cobra con tarjeta o pago móvil en tu terminal o app de siempre y luego elige la etiqueta correspondiente en DingPOS para registrarlo. En los pagos en efectivo, el cambio se calcula automáticamente."
+        "text": "Los métodos de pago son etiquetas de registro: DingPOS no procesa pagos reales. Cobra con tarjeta o pago móvil en tu terminal o app de siempre y luego elige la etiqueta correspondiente en DingPOS para registrarlo. En los pagos en efectivo, el cambio se calcula automáticamente y, donde ya no se usan las monedas más pequeñas, el efectivo también se puede redondear. Consulta «¿Puedo redondear los pagos en efectivo a las monedas que se usan?»"
       },
       {
         "type": "p",
@@ -384,11 +426,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si un cliente frecuente se lleva la mercancía ahora y paga después, elige A cuenta: la venta se registra como cuenta por cobrar y se liquida cuando llega el dinero. Consulta «¿Puedo vender a cuenta a clientes frecuentes y cobrar después?»"
+        "text": "Si un cliente frecuente se lleva la mercancía ahora y paga después, elige A cuenta: la venta se registra como cuenta por cobrar y se liquida cuando llega el dinero. Consulta «¿Pueden mis clientes frecuentes comprar a cuenta y pagar después?»"
       }
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -434,6 +477,54 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "¿Puedo redondear los pagos en efectivo a las monedas que se usan?",
+    "keywords": [
+      "redondeo de efectivo",
+      "redondeo",
+      "redondear hacia arriba",
+      "redondear hacia abajo",
+      "monedas",
+      "centavos",
+      "0.05",
+      "cambio",
+      "Canadá",
+      "Australia",
+      "Suiza"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sí. Canadá, Australia, Nueva Zelanda, Suiza, Dinamarca, Suecia, Noruega, Bélgica, Finlandia y Hungría ya no usan sus monedas más pequeñas, así que DingPOS redondea el efectivo a un monto que sí se pueda entregar: un pedido de C$12.99 pagado en efectivo se cobra como C$13.00, y el cambio se calcula a partir de C$13.00. Los pagos con tarjeta y otros pagos sin efectivo se mantienen exactos."
+      },
+      {
+        "type": "p",
+        "text": "Una tienda nueva configurada en uno de estos países, con la moneda de ese país, lo recibe ya activado. Cualquier otra tienda puede activarlo en la sección Redondeo de efectivo, al final de Ajustes → Métodos de pago: elige a qué monto redondear el efectivo (Sin redondeo, 0.05, 0.10, 0.50 o 1.00) y, en un incremento que puede quedar justo a la mitad, si esa mitad se redondea hacia arriba o hacia abajo. Un cambio se aplica solo a los pagos posteriores."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Al cobrar aparece «Efectivo cobrado C$13.00». Si el cliente pide pagar el monto exacto, toca Cobrar el monto exacto debajo de los métodos de pago; se aplica solo a esa venta.",
+          "El total del pedido, el impuesto, los ingresos, los puntos y el gasto del cliente no cambian; la diferencia de redondeo queda en el pago, y la pantalla del recibo y el detalle del pedido la muestran debajo del total, como «Redondeo de efectivo +C$0.01».",
+          "También se redondean los reembolsos en efectivo por devoluciones, los anticipos y saldos cobrados al retirar las preventas, las diferencias a cobrar en los cambios y los saldos a cuenta liquidados en efectivo; si se liquidan varios a la vez, el lote se redondea una sola vez.",
+          "Las anulaciones, los anticipos reembolsados de preventas y las liquidaciones revertidas devuelven exactamente lo que se registró, sin redondear de nuevo.",
+          "Dinero recibido en Reportes indica qué parte fue redondeo de efectivo, y los Resultados mensuales incluyen una fila Redondeo de efectivo que cuenta para la utilidad neta. El redondeo nunca es un ingreso por ventas."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Suiza siempre redondea hacia abajo, conforme a sus reglas de exhibición de precios: CHF 12.98 se cobra como CHF 12.95, y no hay opción para la mitad. Bélgica redondea solo los totales superiores a €0.05. El redondeo de efectivo está en todos los planes, y una tienda existente cobra el efectivo exactamente como antes hasta que lo actives."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -611,7 +702,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ve a Pedidos, busca el pedido, abre su detalle y elige Anular. Confirma y listo."
+        "text": "Ve a Pedidos, busca el pedido, abre su detalle y toca Anular. La hoja «¿Anular este pedido?» pide un motivo opcional (hasta 100 caracteres); toca Anular en su esquina superior derecha y listo. El motivo aparece en el detalle del pedido y en el registro de actividad, y no se puede editar una vez enviado."
       },
       {
         "type": "p",
@@ -638,7 +729,9 @@ export const articles = [
       "cambio",
       "reembolso",
       "devolución parcial",
-      "cambiar talla"
+      "cambiar talla",
+      "desechar",
+      "motivo de devolución"
     ],
     "content": [
       {
@@ -651,9 +744,15 @@ export const articles = [
           "El pedido original nunca se modifica. La devolución crea su propio documento con fecha de hoy y numeración con prefijo R, y los ingresos por ventas se reducen el día de la devolución.",
           "El reembolso es lo que el cliente realmente pagó por ese artículo: los descuentos del artículo, los descuentos del carrito y el canje de puntos ya están prorrateados, así que no se reembolsa al precio de lista. El impuesto usa la tasa con la que se cobró el pedido original.",
           "Los artículos de reemplazo se cobran al precio de hoy, sin promociones ni descuentos.",
-          "El stock controlado se restituye automáticamente. Los puntos ganados con el pedido original se descuentan, los puntos canjeados se devuelven y los artículos de reemplazo generan sus propios puntos.",
-          "Un pedido puede devolverse en varias rondas, pero nunca por más de la cantidad vendida originalmente. Los límites de uso de las promociones no se restituyen con una devolución."
+          "En un producto con stock controlado, cada línea devuelta puede volver al stock (Reponer, la opción predeterminada) o desecharse (Desechar, desde la v3.5). Reponer suma el stock de nuevo. Desechar deja el stock como estaba y suma el costo que tenía el artículo al venderse a la pérdida de stock de ese mes en Resultados. El reembolso, el impuesto y los puntos son los mismos en ambos casos.",
+          "Los puntos ganados con el pedido original se descuentan, los puntos canjeados se devuelven y los artículos de reemplazo generan sus propios puntos.",
+          "Cuando el pedido original es una venta a cuenta sin liquidar, no se mueve dinero: la devolución se descuenta de las cuentas por cobrar del cliente, y un reemplazo más caro le suma la diferencia.",
+          "Un pedido puede devolverse en varias rondas, pero nunca por más de la cantidad vendida originalmente; cuando todo ha regresado, el impuesto, los descuentos y los puntos devueltos suman exactamente lo del pedido original. Los límites de uso de las promociones no se restituyen con una devolución."
         ]
+      },
+      {
+        "type": "p",
+        "text": "El campo Motivo es opcional, de hasta 100 caracteres. Aparece en el detalle del pedido y en el registro de actividad, y no se puede editar una vez enviado."
       },
       {
         "type": "note",
@@ -712,7 +811,7 @@ export const articles = [
     "slug": "on-account",
     "category": "orders",
     "since": "2.0",
-    "question": "¿Puedo venderles a cuenta a mis clientes frecuentes para que paguen después?",
+    "question": "¿Pueden mis clientes frecuentes comprar a cuenta y pagar después?",
     "keywords": [
       "venta a cuenta",
       "fiado",
@@ -735,6 +834,7 @@ export const articles = [
         "items": [
           "Los ingresos por ventas cuentan el día en que sale la mercancía; el dinero recibido y los puntos esperan hasta el día en que se liquida.",
           "Los pedidos sin liquidar llevan una insignia ámbar en la lista, y el detalle del cliente muestra cuánto debe en ese momento.",
+          "Una devolución sobre un pedido que aún no se liquida no reembolsa dinero: el monto se descuenta de las cuentas por cobrar de ese cliente.",
           "Un cliente con pedidos sin liquidar no se puede eliminar."
         ]
       },
@@ -802,7 +902,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Los nombres de opciones y valores están limitados a 20 caracteres y no pueden quedar en blanco: un nombre de opción o un valor vacío se marca con contorno rojo al guardar, así que complétalo o elimina el valor vacío. Un producto con variantes no puede usar precio abierto."
+        "text": "Los nombres de opciones y valores están limitados a 20 caracteres, y los espacios al principio y al final se recortan al guardar. Un valor en el que no escribiste nada no es una combinación y se omite al guardar; solo se marca con contorno rojo un nombre de opción en blanco, o una opción cuyos valores están todos en blanco. Un producto con variantes no puede usar precio abierto."
       }
     ],
     "related": [
@@ -935,12 +1035,68 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Una vez activado, las ventas y las preventas descuentan el stock automáticamente; las anulaciones, las devoluciones y las preventas canceladas lo regresan; recibir una orden de compra lo aumenta; y puedes ajustarlo a mano en cualquier momento. Cada movimiento queda registrado en un historial completo. El stock bajo se resalta con una alerta de color."
+        "text": "Una vez activado, las ventas y las preventas descuentan el stock automáticamente; las anulaciones, las devoluciones y las preventas canceladas lo regresan; y recibir una orden de compra lo aumenta. Cada movimiento queda registrado en un historial completo. El stock bajo se resalta con una alerta de color."
+      },
+      {
+        "type": "p",
+        "text": "Hay dos formas de cambiar la cifra a mano:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Reconteo: edita el número de stock en el formulario del producto para que coincida con lo que realmente contaste. Nunca llega a Resultados.",
+          "Ajustar stock (desde la v3.5): en el detalle del producto, toca Ajustar stock, elige Quitar o Agregar, la cantidad y un motivo, como Vencido/descompuesto, Dañado o Muestras y regalos. El costo de lo que quitas cuenta en la pérdida de stock de ese mes en Resultados; consulta «¿Cómo registro el stock que venció, se dañó o salió como muestra?»"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "¿Cómo registro el stock que venció, se dañó o salió como muestra?",
+    "keywords": [
+      "ajustar stock",
+      "pérdida de stock",
+      "vencido",
+      "dañado",
+      "muestras",
+      "insumos de la tienda",
+      "reconteo"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Usa Ajustar stock. En un producto con control de stock, toca Ajustar stock en el detalle del producto, elige Quitar o Agregar, escribe la cantidad, elige un motivo y, si quieres, agrega una nota (hasta 100 caracteres). La hoja calcula el stock que quedará después del cambio, y la línea debajo del motivo indica si llega a Resultados."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Motivos para quitar: Usado en producción, Vencido/descompuesto, Dañado, Perdido o robado, Uso del personal, Muestras y regalos, Insumos de la tienda y Otro. Motivos para agregar: Producción propia, Encontrado y Otro. Otro requiere una nota.",
+          "Salvo Usado en producción, lo que quitas cuenta, a su costo en ese momento, en la pérdida de stock de ese mes en Resultados. Va después de la utilidad bruta y reduce la utilidad neta; la utilidad bruta y el margen no cambian. Usado en producción solo descuenta el stock, porque el costo de un material ya está en el costo del producto elaborado con él.",
+          "Encontrado resta ese mismo monto de la pérdida de stock. Producción propia y Otro en el lado de Agregar solo suman stock y nunca llegan a Resultados.",
+          "Un ajuste cuenta en el día en que lo registras. No se puede poner con fecha anterior, editar ni eliminar; para corregir un error, registra Encontrado o un ajuste en sentido contrario.",
+          "Un producto sin costo sí se puede ajustar, pero Resultados no puede ponerle un monto, y el mes indica cuántos registros no tenían costo."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Editar el número de stock en el formulario del producto es un Reconteo: coincide con lo que realmente contaste y nunca llega a Resultados. La lista de movimientos de stock en Reportes filtra por separado los ajustes de stock y los reconteos, y el Registro de actividad muestra el motivo y la nota de cada ajuste."
+      },
+      {
+        "type": "note",
+        "text": "Ajustar stock requiere el plan Standard o superior. En Pro, al personal cuyo rol requiere aprobación para Ajuste manual de stock se le pide el PIN de un gerente al confirmar."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -961,7 +1117,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Un stock negativo suele significar que no se registró una reposición, o que un producto de preventa aún no llega (las preventas descuentan el stock al registrarse). Registra las reposiciones recibiendo una orden de compra y la cifra se recupera sola; corrige las diferencias de un conteo físico con un ajuste manual, que queda guardado en el historial de movimientos."
+        "text": "Un stock negativo suele significar que no se registró una reposición, o que un producto de preventa aún no llega (las preventas descuentan el stock al registrarse). Registra las reposiciones recibiendo una orden de compra y la cifra se recupera sola. Corrige la diferencia de un conteo físico editando el número de stock en el formulario del producto (un reconteo); para la mercancía que se dañó, venció o se regaló, registra el motivo con Ajustar stock. Ambos quedan guardados en el historial de movimientos."
       },
       {
         "type": "note",
@@ -1005,14 +1161,64 @@ export const articles = [
         "text": "La condición de pago decide qué sigue: las órdenes de pago inmediato se marcan como pagadas, mientras que las mensuales quedan pendientes en Por pagar, donde puedes saldarlas por proveedor: una orden, el mes o todo."
       },
       {
+        "type": "p",
+        "text": "Los materiales que no vendes, como harina o empaques, se pueden comprar de la misma forma: configúralos como productos que no se venden; consulta «¿Puedo agregar materiales como harina o empaques como productos?»"
+      },
+      {
         "type": "note",
         "text": "Compras requiere el plan Standard o superior. No se puede eliminar un proveedor con órdenes recibidas sin pagar."
       }
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "¿Puedo agregar materiales como harina o empaques como productos?",
+    "keywords": [
+      "no se vende",
+      "producto que no se vende",
+      "materiales",
+      "insumos",
+      "empaques",
+      "suministros",
+      "vender en la caja",
+      "compras",
+      "costo"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sí. En el formulario del producto, desactiva Vender en la caja debajo de la foto (viene activado de forma predeterminada) y el producto deja de venderse: no necesita precio, conserva su costo, código de barras, stock y variantes, y la lista de productos muestra «No se vende» donde iría el precio."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Un producto que no se vende nunca aparece en la cuadrícula de la caja, en las categorías, en la búsqueda ni al escanear códigos de barras, y no puede ser un regalo, un complemento, el objetivo de una promoción ni un artículo de reemplazo en un cambio.",
+          "Las órdenes de compra, la recepción, Sincronizar costo del producto y Por pagar funcionan igual que con los demás productos, así que el costo de compra y el stock de un material se pueden registrar desde Compras.",
+          "Vender otros productos no le descuenta stock. Cuando uses una parte, registra una reducción con Ajustar stock en el detalle del producto: Usado en producción para lo que entró en los productos, Insumos de la tienda para cosas como bolsas de papel o productos de limpieza.",
+          "Puedes volver a activarlo en cualquier momento, y su precio e impuestos siguen ahí. Los pedidos y reportes ya hechos no se ven afectados."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Cómo llega su costo a Resultados: las compras no cuentan ahí directamente. Para un producto elaborado con él, incluye el costo en ese producto y se descuenta cuando ese producto se vende. Los insumos que no están en el costo de ningún producto se registran como Insumos de la tienda al usarlos si se lleva el control de su stock, o como un gasto puntual si no. No registres el mismo dinero de las dos formas, o se contará dos veces."
+      },
+      {
+        "type": "note",
+        "text": "Los productos que no se venden están en todos los planes; las compras, el control de stock y Ajustar stock requieren el plan Standard o superior."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1031,20 +1237,25 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Los ingresos por ventas cuentan el día en que se entregó la mercancía; el dinero recibido cuenta el día en que entró el dinero. En un pedido pagado en caja ambos ocurren el mismo día y las cifras coinciden. Se separan cuando:"
+        "text": "Los ingresos por ventas cuentan el día en que se entregó la mercancía, después de todos los descuentos y antes de impuestos; el dinero recibido cuenta el día en que entró el dinero y es lo que realmente cobraste, con impuestos incluidos. Por eso, en una tienda que cobra impuesto, el dinero recibido es mayor que los ingresos por ventas por el monto del impuesto, incluso en pedidos pagados en el mostrador. Aparte de eso, se separan cuando:"
       },
       {
         "type": "list",
         "items": [
           "Venta a cuenta: la mercancía sale hoy y cuenta en los ingresos por ventas de hoy; el dinero cuenta en el dinero recibido el día en que se liquida.",
           "Preventa: el anticipo cuenta en el dinero recibido cuando se paga; los ingresos por ventas se reconocen completos en la fecha de retiro.",
-          "Anticipo retenido: cuando un cliente cancela una preventa y te quedas con el anticipo, este ya se contó en el dinero recibido al pagarse. Reportes lo muestra por separado como anticipos retenidos y nunca cuenta como ingreso por ventas.",
-          "Anulación de un pedido anterior: el dinero reembolsado cuenta en el dinero recibido el día de la anulación, por lo que el dinero recibido de ese día puede ser negativo, mientras que Anulados cuenta el pedido en su fecha de venta. El ⓘ de los mosaicos Dinero recibido y Anulados lo explica igual."
+          "Anticipo retenido: cuando un cliente cancela una preventa y te quedas con el anticipo, este ya se contó en el dinero recibido al pagarse. Reportes lo muestra por separado como anticipos retenidos y nunca cuenta como ingresos por ventas.",
+          "Anulación de un pedido anterior: el dinero reembolsado cuenta en el dinero recibido el día de la anulación, por lo que el dinero recibido de ese día puede ser negativo, mientras que Anulados cuenta el pedido en su fecha de venta.",
+          "Redondeo de efectivo: lo que el redondeo de efectivo suma o resta al total del pedido cuenta en el dinero recibido y nunca en los ingresos por ventas."
         ]
       },
       {
         "type": "p",
-        "text": "Para conciliar, compara el dinero recibido con tu caja y tu terminal de tarjetas; para saber cuánto vendiste realmente en un periodo, mira los ingresos por ventas. Las devoluciones restan de los ingresos por ventas el día de la devolución."
+        "text": "Para conciliar, compara el dinero recibido con tu caja y tu terminal de tarjetas; para saber cuánto vendiste realmente en un periodo, mira los ingresos por ventas. Las devoluciones restan de los ingresos por ventas el día de la devolución. El ⓘ de los mosaicos Ingresos por ventas, Dinero recibido y Anulados explica lo mismo, y el impuesto aparece en De los ingresos por ventas a la utilidad bruta, que se abre desde el mosaico de utilidad bruta."
+      },
+      {
+        "type": "note",
+        "text": "Los ingresos por ventas sin impuesto llegaron en la v3.5 y los periodos anteriores se recalcularon de la misma forma, así que una tienda que cobra impuesto ve ingresos por ventas menores que antes de la actualización. Es una corrección: las versiones anteriores incluían el impuesto en los ingresos por ventas, y las tiendas con precios sin impuesto incluso contaban como ingresos el impuesto que cobraban."
       }
     ],
     "related": [
@@ -1074,15 +1285,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Para un solo día, el gráfico de tendencia se convierte en un gráfico de barras por hora; los periodos más largos usan días, semanas, meses o años por barra según su duración."
+        "text": "Debajo de la barra de periodo hay dos filas de mosaicos con cifras (Ingresos por ventas, Dinero recibido, Utilidad bruta, Pedidos, Pedido promedio; Descuentos totales, Utilidad neta, Productos sin costo, Clientes atendidos) y después el gráfico de tendencia. El menú de la esquina superior derecha del gráfico de tendencia lo cambia entre ingresos por ventas, pedidos, pedido promedio y clientes atendidos, y junto a él el gráfico Costo y utilidad bruta apila en una barra el costo de los productos y la utilidad bruta de cada periodo. Un solo día se grafica por hora; los periodos más largos usan días, semanas, meses o años según su duración."
       },
       {
         "type": "p",
-        "text": "Desde la v3.4, mantén presionado el gráfico Tendencia de ingresos por ventas o Tendencia de utilidad para leerlo periodo por periodo: una tarjeta muestra la fecha y los ingresos por ventas o la utilidad de ese periodo y, en Tendencia de ingresos por ventas con Comparación de ventas activa, también los ingresos por ventas del periodo de comparación y la diferencia. Arrastra a la izquierda o a la derecha para avanzar; si deslizas hacia arriba o hacia abajo sobre el gráfico, la página se desplaza como siempre."
+        "text": "Mantén presionado el gráfico de tendencia o el gráfico Costo y utilidad bruta para leerlo periodo por periodo; con Comparación de ventas activa, la tarjeta del gráfico de tendencia muestra la cifra de este periodo y la del periodo de comparación una junto a la otra. Arrastra a la izquierda o a la derecha para avanzar; si deslizas hacia arriba o hacia abajo sobre el gráfico, la página se desplaza como siempre."
       },
       {
         "type": "p",
-        "text": "La tarjeta Ranking de productos muestra los 5 primeros. Toca la tarjeta o Ver todo para listar todos los productos vendidos en el periodo, ordenados por cantidad después de devoluciones."
+        "text": "La tarjeta Ranking de productos muestra los 5 primeros. Toca la tarjeta o Ver todo para listar todos los productos vendidos en el periodo, ordenados por cantidad después de devoluciones; un producto con variantes tiene una línea por variante."
       },
       {
         "type": "p",
@@ -1113,6 +1324,7 @@ export const articles = [
       "productos de baja rotación",
       "variaciones",
       "variación de productos",
+      "participación por categoría",
       "valuación de inventario",
       "tasa de recompra",
       "puntos"
@@ -1125,11 +1337,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Comparación de ventas: a la derecha de la barra de periodo, compara con el mismo periodo del año pasado o con el periodo anterior (un solo día contra el mismo día de la semana pasada, esta semana contra la semana pasada, este mes contra el mes pasado, este año contra el año pasado, un rango personalizado contra la misma cantidad de días anteriores). El indicador de Dinero recibido muestra la diferencia y la tasa de crecimiento, y el gráfico de ingresos por ventas agrega una línea más clara para el periodo de comparación. Mientras un periodo sigue en curso, el periodo de comparación se corta en el mismo momento.",
-          "Día × hora: cambia el encabezado Ventas en el tiempo a Día × hora para ver un mapa de calor de siete días y 24 horas: cuanto más oscura la celda, más vendiste. Alterna entre ingresos y pedidos; con una comparación activa, verás qué horas crecieron y cuáles bajaron.",
-          "Productos de baja rotación: cambia el encabezado de la tarjeta de ranking a Productos de baja rotación para listar los productos de menos a más ventas, con el stock actual y la última fecha en que se vendió cada uno. Los productos que nunca se vendieron aparecen como Nunca vendido. De forma predeterminada solo se muestran los productos con stock.",
-          "Variaciones (desde la v3.4): cambia el encabezado de la tarjeta de ranking a Variaciones para ver los 3 productos cuyos ingresos por ventas más subieron y los 3 que más bajaron respecto al periodo de comparación, cada uno con los ingresos por ventas de ambos periodos y la diferencia. Primero elige un periodo en Comparación de ventas; con Ninguno, o en Todo el tiempo, la tarjeta te lo indica. Toca la tarjeta o Ver todo para abrir la lista completa de Variación de productos, dividida en En alza y En baja.",
-          "Tasa de recompra: la última línea del indicador de clientes es la proporción de miembros que compraron en el periodo y que han comprado dos o más veces en total.",
+          "Comparación de ventas: a la derecha de la barra de periodo, compara con el mismo periodo del año pasado o con el periodo anterior (un solo día contra el mismo día de la semana pasada, esta semana contra la semana pasada, este mes contra el mes pasado, este año contra el año pasado, un rango personalizado contra la misma cantidad de días anteriores). Los mosaicos de Ingresos por ventas, Dinero recibido, Utilidad bruta, Pedidos, Pedido promedio, Descuentos totales y Clientes atendidos muestran cada uno el cambio y la cifra del periodo de comparación, como «▼ 3% vs. mes pasado»; el cambio en Descuentos totales siempre es gris, porque un descuento mayor no es bueno ni malo por sí mismo. Toca cualquier línea de comparación para abrir Comparación de periodos, que lista las cifras de ambos periodos. El gráfico de tendencia agrega una línea más clara para el periodo de comparación. Mientras un periodo sigue en curso, el periodo de comparación se corta en el mismo momento.",
+          "Día × hora: cambia el encabezado del gráfico de tendencia de Tendencia a Día × hora para ver un mapa de calor de siete días y 24 horas: cuanto más oscura la celda, más vendiste. Alterna entre ingresos y pedidos; con una comparación activa, verás qué horas crecieron y cuáles bajaron.",
+          "Productos de baja rotación: cambia el encabezado de la tarjeta de ranking a Productos de baja rotación para listar los productos de menos a más ventas, con el stock actual y la última fecha en que se vendió cada uno. Los productos que nunca se vendieron aparecen como Nunca vendido, y un producto con variantes tiene una línea por variante. De forma predeterminada solo se muestran los productos con stock.",
+          "Variaciones (desde la v3.4): cambia el encabezado de la tarjeta de ranking a Variaciones para ver los 3 productos cuyos ingresos por ventas más subieron y los 3 que más bajaron respecto al periodo de comparación, cada uno con los ingresos por ventas de ambos periodos y la diferencia; cada variante se compara consigo misma. Primero elige un periodo en Comparación de ventas; con Ninguno, o en Todo el tiempo, la tarjeta te lo indica. Toca la tarjeta o Ver todo para abrir la lista completa de Variación de productos, dividida en En alza y En baja.",
+          "Tasa de recompra: la última línea del mosaico de clientes es la proporción de miembros que compraron en el periodo y que han comprado dos o más veces en total. Con una comparación activa, una línea debajo indica el cambio en puntos porcentuales y la tasa del periodo de comparación.",
+          "Participación por categoría: los ingresos por ventas de cada categoría y su participación, según la categoría actual de cada producto, de mayor a menor. Los productos sin categoría van en Sin categoría, y las filas suman exactamente los ingresos por ventas.",
           "Ahora mismo: valuación de inventario (stock actual × costo actual), todos los movimientos de stock del periodo seleccionado y los puntos que los clientes tienen sin canjear, con el máximo que pueden descontar. Son saldos actuales; el periodo no los cambia."
         ]
       },
@@ -1155,33 +1368,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "¿Cómo se reporta la utilidad si no registré los costos?",
+    "question": "¿Cómo se reporta la utilidad bruta si no registré los costos?",
     "keywords": [
       "costo",
       "utilidad",
-      "margen",
       "utilidad bruta",
+      "margen",
+      "margen bruto",
       "reportes",
-      "utilidad sin registrar",
+      "sin registrar",
       "costo faltante",
-      "utilidad registrada"
+      "productos sin costo"
     ],
     "content": [
       {
         "type": "p",
-        "text": "El costo es un campo opcional. Los productos sin costo se dejan fuera de la utilidad, pero sus ingresos por ventas se cuentan completos. La tarjeta Utilidad registrada de Reportes muestra cuántos productos vendidos en el periodo no tienen costo; un costo de 0 cuenta como costo, así que esos productos no aparecen en la lista."
+        "text": "El costo es un campo opcional. Los productos sin costo se dejan fuera de la utilidad bruta, pero sus ingresos por ventas se cuentan completos. El mosaico Productos sin costo de Reportes muestra cuántos productos vendidos o devueltos en el periodo no tienen costo, como «12 productos». Un costo de 0 cuenta como costo, así que esos productos no aparecen en la lista; cuando todos tienen uno, el mosaico dice «0 productos · costos completos»."
       },
       {
         "type": "p",
-        "text": "Toca la tarjeta o Ver productos para abrir Productos sin costo, ordenados por los ingresos por ventas que quedan fuera de la utilidad. Toca una fila para abrir el producto, agrega su costo desde Editar y, al volver, la fila aparece marcada como Costo agregado. Un producto con variantes se marca como Costo agregado solo cuando cada variante vendida sin costo ya tiene uno: el suyo o el del producto, que se aplica a las variantes que no tengan costo propio."
+        "text": "Toca el mosaico o Ver productos para abrir Productos sin costo, ordenados por los ingresos por ventas que quedan fuera de la utilidad bruta. Toca una fila para abrir el producto, agrega su costo desde Editar y, al volver, la fila aparece marcada como Costo agregado. Un producto con variantes se marca como Costo agregado solo cuando cada variante vendida sin costo ya tiene uno: el suyo o el del producto, que se aplica a las variantes que no tengan costo propio."
       },
       {
         "type": "p",
-        "text": "La utilidad son los ingresos por ventas después de todos los descuentos (descuentos de artículo y de carrito, promociones, canje de puntos) y antes de impuestos, menos el costo; por eso el campo dice Costo sin impuestos (opcional): escribe lo que pagaste antes de impuestos. El margen es la utilidad ÷ los ingresos por ventas sin impuestos de los productos con costo, así que los productos sin costo no lo reducen. Una devolución quita, el día de la devolución, la utilidad que esos artículos habían aportado."
+        "text": "La utilidad bruta son los ingresos por ventas después de todos los descuentos (descuentos de artículo y de carrito, promociones, canje de puntos) y antes de impuestos, menos el costo; por eso, en una tienda que cobra impuesto, el campo dice Costo sin impuestos (opcional): escribe lo que pagaste antes de impuestos. El margen es la utilidad bruta ÷ los ingresos por ventas de los productos con costo, así que los productos sin costo no lo reducen. Una devolución quita, el día de la devolución, la utilidad bruta que esos artículos habían aportado."
+      },
+      {
+        "type": "p",
+        "text": "Toca el mosaico de utilidad bruta para abrir De los ingresos por ventas a la utilidad bruta, que resta fila por fila: ingresos por ventas (con impuesto), impuesto, ingresos por ventas (sin impuesto), ingresos sin costo, costo de productos y, al final, utilidad bruta y margen. Las filas suman exactamente el mosaico."
       },
       {
         "type": "note",
-        "text": "Un costo que agregas afecta solo a las ventas posteriores; las ventas ya hechas no se recalculan. Este cálculo llegó en la v3.1: las versiones anteriores solo descontaban los descuentos manuales por artículo y contaban el impuesto incluido como utilidad, así que después de actualizar, los periodos con descuentos o con impuesto incluido muestran una utilidad menor. Es una corrección, no una pérdida de datos."
+        "text": "Un costo que agregas afecta solo a las ventas posteriores; las ventas ya hechas no se recalculan. Este cálculo llegó en la v3.1: las versiones anteriores solo descontaban los descuentos manuales por artículo y contaban el impuesto incluido como utilidad, así que después de actualizar, los periodos con descuentos o con impuesto incluido muestran una utilidad bruta menor. Es una corrección, no una pérdida de datos."
       }
     ],
     "related": [
@@ -1219,14 +1437,20 @@ export const articles = [
         "items": [
           "Ingresos por ventas (sin impuesto): los ingresos por ventas después de todos los descuentos, menos el impuesto, contados el día en que se entregó la mercancía.",
           "Costo de productos: el costo de lo que se vendió, según los costos de tus productos.",
+          "Pérdida de stock: el costo de lo que Ajustar stock retiró por vencimiento, daño, regalo y similares, más las devoluciones desechadas. Va después de la utilidad bruta; consulta «¿Cómo registro el stock que venció, se dañó o salió como muestra?». El mes también tiene una sección Pérdida de stock que la suma por motivo.",
           "Comisiones por procesamiento (est.): las comisiones estimadas con las tasas de tus métodos de pago.",
           "Anticipos retenidos: los anticipos que conservaste cuando se canceló una preventa.",
+          "Redondeo de efectivo: lo que el redondeo del efectivo a las monedas en uso sumó o restó a los totales de los pedidos.",
           "Gastos fijos y Gastos puntuales: lo que registraste para ese mes; consulta «¿Cómo registro la renta, la nómina y otros gastos?»."
         ]
       },
       {
         "type": "p",
-        "text": "Después puedes ver hasta tres gráficos: la utilidad neta mes a mes, la proporción de cada gasto fijo y la tendencia de los gastos fijos. Los dos gráficos de tendencia abarcan como máximo los 12 meses hasta el mes que abriste, y solo aparecen cuando hay al menos dos meses para comparar, contados desde el mes de tu primera venta o gasto. El gráfico de proporción necesita un gasto fijo en ese mes; mientras no haya uno, esa sección muestra Agregar gasto fijo. En Reportes, la última línea de la tarjeta de utilidad lleva directo a Resultados: si el periodo es exactamente un mes, muestra la utilidad neta de ese mes, como «Utilidad neta de octubre: NT$12,300»; en cualquier otro periodo dice Ver resultados mensuales."
+        "text": "Después puedes ver hasta tres gráficos: la utilidad neta mes a mes, la proporción de cada gasto fijo y la tendencia de los gastos fijos. Los dos gráficos de tendencia abarcan como máximo los 12 meses hasta el mes que abriste, y solo aparecen cuando hay al menos dos meses para comparar, contados desde el mes de tu primera venta o gasto. El gráfico de proporción necesita un gasto fijo en ese mes; mientras no haya uno, esa sección muestra Agregar gasto fijo."
+      },
+      {
+        "type": "p",
+        "text": "Reportes y Resultados se enlazan entre sí. Cuando el periodo de Reportes es Este mes o exactamente un mes completo, la segunda fila de mosaicos agrega un mosaico Utilidad neta (marcado «En curso · se descuentan los gastos del mes completo» mientras el mes sigue en curso); tócalo para ver el desglose de ese mes, de la utilidad bruta a la utilidad neta. Para cualquier otro periodo, toca Ver estado de resultados mensual en la última línea de De los ingresos por ventas a la utilidad bruta. En sentido contrario, Ver el reporte de octubre, debajo del título de un mes en Resultados, abre Reportes en ese mes."
       },
       {
         "type": "note",
@@ -1285,7 +1509,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Escribe lo que la tienda realmente asume, sin incluir los impuestos que puedas recuperar. El stock que vas a vender va por Compras, porque se cuenta en el costo del producto cuando se vende; los depósitos en garantía, el capital del préstamo y el dinero que retira el propietario no son gastos. Los cambios se guardan juntos al tocar ✓, y si un cambio afecta un mes ya terminado, primero te indica qué meses tendrán un cambio en la utilidad neta."
+        "text": "Escribe lo que la tienda realmente asume, sin incluir los impuestos que puedas recuperar. El stock que vas a vender y los materiales con los que lo produces van por Compras, porque se cuentan en el costo del producto cuando se vende. Los insumos con stock controlado se registran con Ajustar stock al usarlos, con el motivo Insumos de la tienda, no como gasto. Los depósitos en garantía, el capital del préstamo y el dinero que retira el propietario tampoco son gastos. Los cambios se guardan juntos al tocar ✓, y si un cambio afecta un mes ya terminado, primero te indica qué meses tendrán un cambio en la utilidad neta."
       }
     ],
     "related": [
@@ -1387,6 +1611,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Asocia al miembro a la venta, en el carrito o en la pantalla de cobro, y los puntos se acumulan solos; para canjearlos, ingresa los puntos que quieres usar. Al anular un pedido se descuentan los puntos que ganó y se devuelven los puntos que se canjearon."
+      },
+      {
+        "type": "p",
+        "text": "Para agregar o quitar puntos a mano (por ejemplo, por una compra que no se registró), toca Ajustar en la tarjeta Puntos del detalle del cliente, elige Agregar o Restar, ingresa los puntos y, si quieres, escribe un motivo (hasta 100 caracteres). No puedes restar más puntos de los que tiene el cliente. Cada ajuste queda en el historial de puntos con el saldo antes y después, el motivo y quién lo hizo."
+      },
+      {
+        "type": "note",
+        "text": "El ajuste manual de puntos llegó en la versión 3.5. En Pro, al confirmar, se pide el PIN de un gerente o del propietario a los miembros del personal cuyo rol requiere aprobación para el Ajuste manual de puntos; por defecto, ese rol es Personal."
       }
     ],
     "related": [
@@ -1574,7 +1806,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Primero toca Reintentar; si funciona, la app abre como siempre. Si sigue pasando, toca Contactar a Soporte y cuéntanos, y te ayudaremos a recuperar tus datos. Esta pantalla nunca mueve ni elimina archivos."
+        "text": "Primero toca Reintentar; si funciona, la app se abre como siempre. Si sigue pasando, toca Contactar a Soporte y cuéntanos, y te ayudaremos a recuperar tus datos. Esta pantalla nunca mueve ni elimina archivos."
+      },
+      {
+        "type": "p",
+        "text": "Es posible que, la primera vez que abras la app después de una actualización o de restaurar un respaldo de una versión anterior, aparezca primero «Actualizando tus datos…». Esto significa que los datos de tu tienda se están convirtiendo a un formato más reciente; el proceso tarda más cuanto más datos tengas. La app se abre sola al terminar. No se ha congelado."
       },
       {
         "type": "note",
@@ -1796,12 +2032,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Usa el registro de actividad. En la página Personal, toca Registro de actividad en la esquina superior derecha e ingresa el PIN del propietario para ver las acciones sensibles de la tienda, de la más reciente a la más antigua: anulaciones, devoluciones, ajustes manuales de stock, aprobaciones, cambios de personal y de permisos, cambios del PIN del propietario, cambios de precio y costo de productos, y eliminación de productos. Los cobros normales no aparecen."
+        "text": "Usa el registro de actividad. En la página Personal, toca Registro de actividad en la esquina superior derecha e ingresa el PIN del propietario para ver las acciones sensibles de la tienda, de la más reciente a la más antigua: anulaciones, devoluciones, ajustes de stock y reconteos, ajustes manuales de puntos, aprobaciones, cambios de personal y de permisos, cambios del PIN del propietario, ajustes de impuestos, cambios de precio y costo de productos, y eliminación de productos. Los cobros normales no aparecen."
       },
       {
         "type": "list",
         "items": [
-          "Cada registro muestra qué se tocó, quién hizo qué y cuándo, y el resultado, por ejemplo «M precio $390 → $350».",
+          "Cada registro muestra qué se tocó, quién hizo qué y cuándo, y el resultado, por ejemplo «M precio $390 → $350». El motivo indicado en una anulación, una devolución, un ajuste de stock o un ajuste de puntos aparece en la tercera línea del registro.",
           "Filtra por miembro del personal (incluidos los desactivados), tipo de acción y Hoy / Esta semana / Este mes.",
           "Toca un registro que apunte a un pedido, producto o cliente para abrir su detalle.",
           "El detalle del pedido, el detalle del producto y la página de cada miembro del personal tienen su propia lista de registros, que muestra solo los que les corresponden.",
