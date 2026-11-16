@@ -272,7 +272,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "La pantalla de caja admite hasta 10 carritos al mismo tiempo. Toca «+» en la barra de carritos para agregar uno y toca una pestaña numerada para cambiar de carrito."
+        "text": "La pantalla de caja maneja diez carritos al mismo tiempo. Toca «+» en la barra de carritos para agregar uno y toca una pestaña numerada para cambiar de carrito."
       },
       {
         "type": "p",

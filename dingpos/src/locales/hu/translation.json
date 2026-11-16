@@ -16,7 +16,7 @@
     "description": "A DingPOS egy kassza-alkalmazás (POS) iPadre. Nem kell hozzá fiók, nem köti felhőszolgáltatáshoz, és internet nélkül is működik. A termékek, rendelések és vevők mind a saját eszközén maradnak.",
     "download": "Letöltés az App Store-ból",
     "note": "30 napos ingyenes próba.",
-    "shot_alt": "A DingPOS fizetési képernyője: balra termékrács kategóriaszűrőkkel, jobbra a kosár az automatikusan alkalmazott akciókkal és a végösszeggel"
+    "shot_alt": "A DingPOS fizetési képernyője: balra kategóriaszűrőkkel ellátott termékrács, jobbra egy VIP tag kosara, a végösszeg felett automatikusan alkalmazott második tételre járó engedménnyel, vásárlási értékhatár feletti engedménnyel és tagi engedménnyel"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Fizetés",
       "title": "Az eladás minden lépése egyetlen képernyőn",
-      "lead": "Akár 10 kosár egyszerre, gépelés közben megtalált termékek név vagy vonalkód alapján, az engedményeket és az adót pedig a fizetés előtt kiszámolja.",
+      "lead": "Tíz kosár egyszerre, a termékek pedig név vagy vonalkód alapján megtalálhatók már gépelés közben. Az engedményeket, a többféle adókulcsot és a készpénz visszajárót a program a fizetés előtt kiszámolja.",
       "items": [
-        "Akár 10 kosár egyidejűleg",
-        "Termékkeresés név és vonalkód szerint, gépelés közben",
-        "Tétel- és kosárengedmény, fix összeggel vagy százalékban",
-        "Bruttó / nettó adó automatikus számítása",
-        "Visszajáró készpénz és egyéni fizetési mód megnevezések",
-        "Minden eladást „Ding!” hang és rezgés zár le"
+        "Tíz kosár egyszerre nyitva",
+        "Keresés név vagy vonalkód szerint, gépelés közben",
+        "Tétel- és kosárengedmény, összeggel vagy százalékban",
+        "Többféle adókulcs, termékenként választva",
+        "Bruttó vagy nettó ár, bármikor átváltható",
+        "Szabadáras termékek, az ár a fizetéskor adható meg",
+        "Készpénz kerekítése az országában használt érmékhez",
+        "Minden eladást „Ding!” zár le – így hallja, hogy megérkezett a pénze"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Felhasználási korlátok (összesen vagy vevőnként)",
         "Fizetéskor automatikusan érvényesül — kuponkódok nélkül"
       ],
-      "shot_alt": "A Beállítások között az akciók listája csomagakciókra és engedményekre bontva, minden szabálynál az aktív állapottal és a prioritással"
+      "shot_alt": "A Beállítások között az akciók listája ajándékok és csomagakciók, engedmények és pontok szerint csoportosítva, minden szabálynál az aktív állapottal és a prioritással"
     },
     "reports": {
       "eyebrow": "Jelentések",
-      "title": "Mennyit kerestek ma — még nyitva tartás közben",
-      "lead": "Rendelésszám, árbevétel, bruttó nyereség, engedmények és fizetési módok megoszlása egy oldalon — a mai napra, 7 napra, 30 napra vagy a teljes időszakra.",
+      "title": "Az árbevételtől a nettó eredményig, egy pillantással",
+      "lead": "Az első képernyőn az árbevétel, a beérkezett pénz, a bruttó nyereség, a rendelések és az átlagos kosárérték látható; válasszon összehasonlítási időszakot, és mindegyik mellett megjelenik a változás. Minden összeg az engedmények után, az adó előtt értendő.",
       "items": [
-        "Ma: rendelésszám, árbevétel, bruttó nyereség, engedmény, fizetési módok megoszlása",
-        "Az 5 legtöbbet eladott termék mennyiség szerint",
-        "Napi / heti / havi időszakok",
-        "Árbevétel- és bruttó nyereség-trendgrafikonok"
+        "Összehasonlítás az előző időszakkal vagy a tavalyival",
+        "Az árbevételtől a bruttó nyereségig, havonta pedig a nettó eredményig",
+        "Legkelendőbb, nagy változású és lassan forgó termékek, változatonként",
+        "Eladások kategóriánként, fizetési módok becsült kezelési költséggel",
+        "Hőtérkép a hét napjai és az órák szerint a legforgalmasabb időszakokról",
+        "Ma, e héten, e hónapban, idén vagy tetszőleges időszakra"
       ],
-      "shot_alt": "Az irányítópult a mai árbevétellel, az összes engedménnyel, a nyereséggel és az átlagos kosárértékkel, alatta fizetésimód-fánkdiagram és a legkelendőbb termékek listája"
+      "shot_alt": "Az e havi jelentés: felül az árbevétel, a beérkezett pénz, a bruttó nyereség, a rendelések és az átlagos kosárérték, alatta az összes engedmény, a nettó eredmény, a költség nélküli termékek és a kiszolgált vevők, majd egy árbevétel-trendvonal, valamint egy napi költség- és bruttó nyereség-diagram"
     },
     "orders": {
       "eyebrow": "Rendelések",
-      "title": "Minden eladás megvan, és bármelyik visszavonható",
-      "lead": "Minden rendelés teljes nyilvántartást őriz: a tételeket és változatokat, az alkalmazott akciót, az adót, a fizetési módot és a visszajárót.",
+      "title": "Minden eladás egy kereséssel előkerül",
+      "lead": "Írjon be egy rendelésszámot, egy vevőt vagy egy fizetési módot, és már látja is az eladást. A visszavétel vagy csere külön bizonylatot kap, így az eredeti sosem változik, a részleges visszavételek pedig együtt is pontosan kiadják az eredeti összeget.",
       "items": [
-        "Időrendi rendeléslista, szűrés dátum és fizetési mód szerint",
-        "A tételes nézet megőrzi a tételeket, változatokat, engedményeket, az adót és a visszajárót",
-        "Sztornó megerősítéssel — a készlet és a pontok automatikusan visszaállnak"
+        "Napok szerint csoportosított rendelések, naponta a darabszámmal és a végösszeggel",
+        "Szűrés időszak, állapot, fizetési mód és összeg szerint",
+        "Minden rendelésen tételek, változatok, akciók, adó és visszajáró",
+        "A visszavett áru visszakerül a készletre, vagy leírásra kerül",
+        "Sztornó és visszavétel opcionális indokkal; a készlet és a pontok visszaállnak"
       ],
-      "shot_alt": "Balra időrendi rendeléslista, jobbra a kijelölt rendelés részletei: tételek, az alkalmazott engedmény, adó, végösszeg, fizetési mód és visszajáró"
+      "shot_alt": "Balra napok szerint csoportosított rendelések, a fejlécben a napi rendelésszámmal és végösszeggel; jobbra a kijelölt rendelés tételei, kosárengedménye, az árban foglalt adó, a végösszeg és a fizetési mód, a Visszavétel és a Sztornó gombbal"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Egyedül dolgozó árusnak, aki fizetésre és termékekre fókuszál",
         "heading": "Tartalmazza",
         "features": [
-          "Teljes értékű fizetés akár 10 kosárral",
+          "Teljes értékű fizetés tíz kosárral egyszerre",
           "Termékek változatokkal, vonalkódokkal, fotókkal és kategóriákkal",
           "Rendelési előzmények, sztornók, visszavételek és cserék",
           "Üzleti irányítópult: árbevétel, nyereség, sikertermékek",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Fizetés és több kosár",
-          "desc": "Akár 10 kosár egyszerre, élő keresés név vagy vonalkód alapján"
+          "desc": "Tíz kosár egyszerre, élő keresés név vagy vonalkód alapján"
         },
         "discounts_tax": {
           "name": "Engedmények és adó",
-          "desc": "Tétel- és rendelésengedmények; az adót bruttó vagy nettó árból is automatikusan kiszámolja"
+          "desc": "Tétel- és rendelésengedmények; több adókulcs is használható, az adót bruttó vagy nettó árból automatikusan kiszámolja"
         },
         "offline": {
           "name": "Fizetés internet nélkül",

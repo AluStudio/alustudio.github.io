@@ -16,7 +16,7 @@
     "description": "DingPOS ialah aplikasi sistem point of sale (POS) untuk iPad. Tiada akaun, tiada kurungan awan, dan terus berfungsi tanpa internet. Produk, pesanan dan pelanggan anda semuanya kekal pada peranti anda sendiri.",
     "download": "Muat turun di App Store",
     "note": "Percubaan percuma 30 hari.",
-    "shot_alt": "Skrin bayar DingPOS: grid produk dengan penapis kategori di sebelah kiri, dan troli dengan promosi yang dikenakan secara automatik serta jumlah di sebelah kanan"
+    "shot_alt": "Skrin bayar DingPOS: grid produk dengan penapis kategori di sebelah kiri; di sebelah kanan, troli ahli VIP dengan diskaun item kedua, diskaun ambang perbelanjaan dan diskaun ahli dikenakan secara automatik, di atas jumlah"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Bayar",
       "title": "Setiap langkah jualan dalam satu skrin",
-      "lead": "Sehingga 10 troli serentak, produk dicari mengikut nama atau kod bar semasa anda menaip, dan diskaun serta cukai dikira sebelum anda menerima bayaran.",
+      "lead": "Sepuluh troli serentak, dan produk dijumpai mengikut nama atau kod bar semasa anda menaip. Diskaun, pelbagai kadar cukai dan baki wang tunai dikira sebelum anda menerima bayaran.",
       "items": [
-        "Sehingga 10 troli berjalan serentak",
-        "Carian produk mengikut nama dan kod bar, semasa anda menaip",
+        "Sepuluh troli dibuka serentak",
+        "Cari mengikut nama atau kod bar semasa menaip",
         "Diskaun item dan troli, jumlah tetap atau peratusan",
-        "Cukai termasuk / tidak termasuk dikira secara automatik",
-        "Baki tunai dan label kaedah pembayaran tersuai",
-        "Setiap jualan berakhir dengan bunyi \"Ding!\" dan maklum balas haptik"
+        "Pelbagai kadar cukai, dipilih bagi setiap produk",
+        "Cukai termasuk atau tidak termasuk, tukar bila-bila masa",
+        "Item harga terbuka, harganya ditetapkan semasa pembayaran",
+        "Pembundaran tunai mengikut syiling negara anda",
+        "Setiap jualan berakhir dengan \"Ding!\" — itulah tanda anda sudah dibayar"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Had penggunaan (keseluruhan atau bagi setiap pelanggan)",
         "Dikenakan secara automatik semasa bayar — tiada kod kupon"
       ],
-      "shot_alt": "Senarai promosi dalam Tetapan, dibahagi kepada pakej dan diskaun, setiap peraturan menunjukkan status aktif dan keutamaannya"
+      "shot_alt": "Senarai promosi dalam Tetapan, dikumpulkan kepada hadiah dan pakej gabungan, serta diskaun dan mata, setiap peraturan menunjukkan status aktif dan keutamaannya"
     },
     "reports": {
       "eyebrow": "Laporan",
-      "title": "Apa yang anda peroleh hari ini, semasa kedai masih dibuka",
-      "lead": "Bilangan pesanan, hasil jualan, untung kasar, diskaun dan campuran pembayaran dalam satu halaman, bagi hari ini, 7 hari, 30 hari atau sepanjang masa.",
+      "title": "Daripada hasil jualan hingga untung bersih, sekali pandang",
+      "lead": "Hasil jualan, tunai diterima, untung kasar, pesanan dan purata nilai jualan memenuhi skrin pertama; pilih satu tempoh untuk dibandingkan dan setiap satu menunjukkan perubahannya. Setiap jumlah adalah selepas diskaun dan sebelum cukai.",
       "items": [
-        "Hari ini: bilangan pesanan, hasil jualan, untung kasar, diskaun, campuran pembayaran",
-        "5 produk teratas mengikut kuantiti",
-        "Julat hari / minggu / bulan",
-        "Carta aliran hasil jualan dan untung kasar"
+        "Bandingkan dengan tempoh sebelumnya atau tahun lepas",
+        "Hasil jualan hingga untung kasar, dan untung bersih bagi sebulan",
+        "Terlaris, produk beralih dan produk jualan perlahan, mengikut varian",
+        "Jualan mengikut kategori, kaedah pembayaran beserta anggaran caj pemprosesan",
+        "Peta haba hari dalam minggu × jam bagi waktu tersibuk anda",
+        "Hari ini, minggu ini, bulan ini, tahun ini atau mana-mana julat"
       ],
-      "shot_alt": "Papan pemuka yang menunjukkan hasil jualan hari ini, jumlah diskaun, untung dan purata bakul, di atas carta donat kaedah pembayaran dan senarai terlaris"
+      "shot_alt": "Laporan bulan ini: hasil jualan, tunai diterima, untung kasar, pesanan dan purata nilai jualan di bahagian atas, kemudian jumlah diskaun, untung bersih, produk tanpa kos dan pelanggan dilayan, di atas garis trend hasil jualan dan carta harian kos serta untung kasar"
     },
     "orders": {
       "eyebrow": "Pesanan",
-      "title": "Setiap jualan ada rekodnya, dan setiap jualan boleh dibatalkan",
-      "lead": "Setiap pesanan menyimpan rekod penuh: item dan varian, promosi yang dikenakan, cukai, kaedah pembayaran dan baki yang diberikan.",
+      "title": "Setiap jualan, satu carian sahaja",
+      "lead": "Taip nombor pesanan, nama pelanggan atau kaedah pembayaran, dan jualan itu terpapar. Pemulangan atau pertukaran mendapat dokumennya sendiri, jadi rekod asal tidak pernah berubah, dan pemulangan separa tetap berpadanan dengan jumlah asalnya.",
       "items": [
-        "Senarai pesanan mengikut kronologi, tapis mengikut tarikh dan kaedah pembayaran",
-        "Butiran baris menyimpan item, varian, diskaun, cukai dan baki",
-        "Batalkan jualan dengan pengesahan — stok dan mata dipulihkan secara automatik"
+        "Pesanan dikumpulkan mengikut hari, dengan bilangan dan jumlah setiap hari",
+        "Tapis mengikut tempoh, status, kaedah pembayaran dan jumlah",
+        "Item, varian, promosi, cukai dan baki wang pada setiap pesanan",
+        "Barang dipulangkan masuk semula ke stok, atau dilupuskan",
+        "Sebab pilihan semasa membatalkan jualan atau memulangkan barang; stok dan mata dipulihkan"
       ],
-      "shot_alt": "Senarai pesanan mengikut kronologi di sebelah kiri, dengan butiran pesanan yang dipilih di sebelah kanan: item, diskaun yang dikenakan, cukai, jumlah, kaedah pembayaran dan baki"
+      "shot_alt": "Pesanan dikumpulkan mengikut hari di sebelah kiri, dengan bilangan dan jumlah pesanan setiap hari pada pengepalanya; di sebelah kanan, item pesanan yang dipilih, diskaun troli, cukai termasuk, jumlah dan kaedah pembayaran, dengan butang Pulangkan dan Batalkan jualan"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Untuk seorang peniaga gerai yang perlukan pembayaran dan produk",
         "heading": "Termasuk",
         "features": [
-          "Fungsi Bayar lengkap untuk sehingga 10 troli",
+          "Fungsi Bayar lengkap dengan sepuluh troli serentak",
           "Produk dengan varian, kod bar, foto dan kategori",
           "Sejarah pesanan, batalkan jualan, pemulangan dan tukar barang",
           "Papan pemuka perniagaan: hasil jualan, untung, jualan terlaris",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Bayar & berbilang troli",
-          "desc": "Sehingga 10 troli serentak, carian langsung mengikut nama atau kod bar"
+          "desc": "Sepuluh troli serentak, carian langsung mengikut nama atau kod bar"
         },
         "discounts_tax": {
           "name": "Diskaun & cukai",
-          "desc": "Diskaun item dan pesanan; cukai termasuk atau tidak termasuk dikira untuk anda"
+          "desc": "Diskaun item dan pesanan; pelbagai kadar cukai, termasuk atau tidak termasuk, dikira untuk anda"
         },
         "offline": {
           "name": "Bayar tanpa internet",

@@ -276,7 +276,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kasseskjermen støtter opptil 10 handlekurver samtidig. Trykk på «+» i handlekurvlinjen for å legge til en ny, og trykk på en nummerert fane for å bytte."
+        "text": "Kasseskjermen kan kjøre ti handlekurver samtidig. Trykk på «+» i handlekurvlinjen for å legge til en ny, og trykk på en nummerert fane for å bytte."
       },
       {
         "type": "p",

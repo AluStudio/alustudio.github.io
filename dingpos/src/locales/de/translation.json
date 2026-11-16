@@ -16,7 +16,7 @@
     "description": "DingPOS ist eine Kassen-App für das iPad. Ohne Konto, ohne Cloud-Zwang und auch ohne Internet voll einsatzbereit. Ihre Artikel, Bestellungen und Kunden bleiben auf Ihrem eigenen Gerät.",
     "download": "Im App Store laden",
     "note": "30 Tage kostenlos testen.",
-    "shot_alt": "Der DingPOS-Bezahlbildschirm: links ein Artikelraster mit Kategoriefiltern, rechts der Warenkorb mit automatisch angewendeten Aktionen und der Gesamtsumme"
+    "shot_alt": "Der DingPOS-Bezahlbildschirm: links ein Artikelraster mit Kategoriefiltern, rechts der Warenkorb eines VIP-Mitglieds mit automatisch angewendetem Rabatt auf den zweiten Artikel, Rabatt ab Mindestumsatz und Mitgliederrabatt, darüber die Gesamtsumme"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Bezahlen",
       "title": "Jeder Schritt eines Verkaufs auf einem Bildschirm",
-      "lead": "Bis zu 10 Warenkörbe gleichzeitig, Artikelsuche per Name oder Barcode schon während der Eingabe, und Rabatte und Steuer sind berechnet, bevor Sie kassieren.",
+      "lead": "Zehn Warenkörbe gleichzeitig, und Artikel werden schon während der Eingabe nach Name oder Barcode gefunden. Rabatte, mehrere Steuern und Wechselgeld sind berechnet, bevor Sie kassieren.",
       "items": [
-        "Bis zu 10 Warenkörbe gleichzeitig",
-        "Artikelsuche nach Name und Barcode, schon während der Eingabe",
+        "Zehn Warenkörbe gleichzeitig geöffnet",
+        "Suche nach Name oder Barcode, schon während der Eingabe",
         "Rabatte auf Artikel und Warenkorb, als Festbetrag oder in Prozent",
-        "Steuern werden bei inklusiver oder exklusiver Angabe automatisch berechnet",
-        "Wechselgeld bei Barzahlung und eigene Bezeichnungen für Zahlungsarten",
-        "Jeder Verkauf endet mit einem „Ding!“ und haptischem Feedback"
+        "Mehrere Steuern, pro Artikel festgelegt",
+        "Preise mit oder ohne Steuer, jederzeit umschaltbar",
+        "Artikel mit freiem Preis, die erst an der Kasse bepreist werden",
+        "Barrundung auf die Münzen Ihres Landes",
+        "Jeder Verkauf endet mit einem „Ding!“ – so klingt es, wenn Sie bezahlt werden"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Nutzungsgrenzen (insgesamt oder pro Kunde)",
         "Automatisch an der Kasse angewendet – keine Gutscheincodes"
       ],
-      "shot_alt": "Die Aktionsliste in den Einstellungen, getrennt nach Festpreisbündeln und Rabatten; jede Regel zeigt ihren Status und ihre Priorität"
+      "shot_alt": "Die Aktionsliste in den Einstellungen, gruppiert nach Geschenken und Festpreisbündeln sowie nach Rabatten und Punkten; jede Regel zeigt ihren Status und ihre Priorität"
     },
     "reports": {
       "eyebrow": "Berichte",
-      "title": "Was Sie heute verdient haben – noch während der Laden geöffnet ist",
-      "lead": "Anzahl der Bestellungen, Umsatz, Rohertrag, Rabatte und Zahlungsarten auf einer Seite, für heute, die letzten 7 Tage, die letzten 30 Tage oder den gesamten Zeitraum.",
+      "title": "Vom Umsatz bis zum Reingewinn auf einen Blick",
+      "lead": "Umsatz, Zahlungseingang, Rohertrag, Bestellungen und durchschnittlicher Verkaufswert füllen den ersten Bildschirm; wählen Sie einen Zeitraum zum Vergleichen, und jede Zahl zeigt ihre Veränderung. Jeder Betrag gilt nach Rabatten und vor Steuern.",
       "items": [
-        "Heute: Anzahl der Bestellungen, Umsatz, Rohertrag, Rabatte, Verteilung der Zahlungsarten",
-        "Top 5 der Artikel nach Menge",
-        "Zeiträume nach Tag / Woche / Monat",
-        "Diagramme zu Umsatz- und Rohertragsentwicklung"
+        "Vergleich mit dem vorherigen Zeitraum oder dem Vorjahr",
+        "Vom Umsatz bis zum Rohertrag, dazu der Reingewinn pro Monat",
+        "Bestseller, Auf- und Absteiger und Ladenhüter, nach Variante",
+        "Umsatz nach Kategorie, Zahlungsarten mit geschätzten Gebühren",
+        "Eine Heatmap aus Wochentag × Uhrzeit zeigt Ihre stärksten Stunden",
+        "Heute, diese Woche, dieser Monat, dieses Jahr oder ein beliebiger Zeitraum"
       ],
-      "shot_alt": "Das Dashboard mit Umsatz, Gesamtrabatt, Gewinn und durchschnittlichem Warenkorb von heute, darunter ein Ringdiagramm der Zahlungsarten und eine Liste der Bestseller"
+      "shot_alt": "Der Bericht für diesen Monat: Umsatz, Zahlungseingang, Rohertrag, Bestellungen und durchschnittlicher Verkaufswert oben, darunter Gesamtrabatt, Reingewinn, Artikel ohne Einkaufspreis und bediente Kunden, über einer Umsatzverlaufslinie und einem Diagramm mit täglichen Kosten und Rohertrag"
     },
     "orders": {
       "eyebrow": "Verkäufe",
-      "title": "Jeder Verkauf ist nachvollziehbar, und jeder lässt sich annullieren",
-      "lead": "Jede Bestellung enthält den vollständigen Datensatz: Artikel und Varianten, angewendete Aktion, Steuer, Zahlungsart und Wechselgeld.",
+      "title": "Jeder Verkauf ist nur eine Suche entfernt",
+      "lead": "Geben Sie eine Bestellnummer, einen Kunden oder eine Zahlungsart ein, und der Verkauf ist da. Eine Rückgabe oder ein Umtausch erhält einen eigenen Beleg, sodass der ursprüngliche Verkauf unverändert bleibt und Teilrückgaben sich weiterhin darauf zurückrechnen lassen.",
       "items": [
-        "Chronologische Bestellliste, filterbar nach Datum und Zahlungsart",
-        "Die Zeilendetails enthalten Artikel, Varianten, Rabatte, Steuer und Wechselgeld",
-        "Annullieren mit Bestätigung – Bestand und Punkte werden automatisch zurückgebucht"
+        "Bestellungen nach Tag gruppiert, mit Anzahl und Summe je Tag",
+        "Filtern nach Zeitraum, Status, Zahlungsart und Betrag",
+        "Artikel, Varianten, Aktionen, Steuer und Wechselgeld in jeder Bestellung",
+        "Zurückgegebene Ware geht zurück in den Bestand oder wird als Bestandsverlust verbucht",
+        "Optionale Gründe fürs Annullieren und für Rückgaben; Bestand und Punkte werden wiederhergestellt"
       ],
-      "shot_alt": "Links eine chronologische Bestellliste, rechts die Details der ausgewählten Bestellung: Artikel, angewendeter Rabatt, Steuer, Gesamtsumme, Zahlungsart und Wechselgeld"
+      "shot_alt": "Links nach Tag gruppierte Bestellungen, in der Kopfzeile jeweils Anzahl und Summe des Tages; rechts Artikel, Warenkorbrabatt, enthaltene Steuer, Gesamtsumme und Zahlungsart der ausgewählten Bestellung, mit den Schaltflächen Rückgabe und Annullieren"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Für Einzelpersonen am Stand, die Kasse und Artikel brauchen",
         "heading": "Enthalten",
         "features": [
-          "Vollständige Kasse mit bis zu 10 Warenkörben",
+          "Vollständige Kasse mit zehn Warenkörben gleichzeitig",
           "Artikel mit Varianten, Barcodes, Fotos und Kategorien",
           "Bestellverlauf, Annullierungen, Rückgaben und Umtausch",
           "Geschäfts-Dashboard: Umsatz, Gewinn, Bestseller",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Bezahlen & mehrere Warenkörbe",
-          "desc": "Bis zu 10 Warenkörbe gleichzeitig, Livesuche nach Name oder Barcode"
+          "desc": "Zehn Warenkörbe gleichzeitig, Livesuche nach Name oder Barcode"
         },
         "discounts_tax": {
           "name": "Rabatte & Steuer",
-          "desc": "Artikel- und Bestellrabatte; Steuer inklusive oder exklusive wird für Sie berechnet"
+          "desc": "Artikel- und Bestellrabatte; mehrere Steuersätze, inklusive oder exklusive, werden für Sie berechnet"
         },
         "offline": {
           "name": "Offline bezahlen",

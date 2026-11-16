@@ -276,7 +276,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Der Kassenbildschirm unterstützt bis zu 10 Warenkörbe gleichzeitig. Tippen Sie in der Warenkorb-Leiste auf „+“, um einen neuen hinzuzufügen, und auf einen nummerierten Tab, um zu wechseln."
+        "text": "Der Kassenbildschirm führt zehn Warenkörbe gleichzeitig. Tippen Sie in der Warenkorb-Leiste auf „+“, um einen neuen hinzuzufügen, und auf einen nummerierten Tab, um zu wechseln."
       },
       {
         "type": "p",

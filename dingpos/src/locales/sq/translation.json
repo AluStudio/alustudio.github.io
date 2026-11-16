@@ -16,7 +16,7 @@
     "description": "DingPOS është një aplikacion arke (POS) për iPad. Pa llogari, pa varësi nga cloud-i, dhe vazhdon të punojë pa internet. Produktet, porositë dhe klientët e tu qëndrojnë të gjitha në pajisjen tënde.",
     "download": "Shkarko në App Store",
     "note": "Provë falas 30-ditore.",
-    "shot_alt": "Ekrani i pagesës në DingPOS: majtas një rrjet produktesh me filtra kategorish, djathtas shporta me promovimet e aplikuara automatikisht dhe totali"
+    "shot_alt": "Ekrani i pagesës në DingPOS: majtas një rrjet produktesh me filtra kategorish; djathtas shporta e një anëtari VIP me një zbritje për artikullin e dytë, një zbritje për pragun e shpenzimit dhe një zbritje anëtari, të aplikuara automatikisht, mbi totalin"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Pagesa",
       "title": "Çdo hap i një shitjeje në një ekran",
-      "lead": "Deri në 10 shporta njëkohësisht, produkte që gjenden sipas emrit ose barkodit sa shkruan, dhe zbritje e taksë të llogaritura para se të marrësh pagesën.",
+      "lead": "Dhjetë shporta njëherësh dhe produktet gjenden sipas emrit ose barkodit sa shkruan. Zbritjet, disa norma tatimi dhe kusuri llogariten para se të marrësh pagesën.",
       "items": [
-        "Deri në 10 shporta që punojnë në të njëjtën kohë",
-        "Kërkim produktesh sipas emrit dhe barkodit, sa shkruan",
-        "Zbritje për artikull dhe për shportë, me shumë fikse ose me përqindje",
-        "Taksa e përfshirë / e papërfshirë llogaritet automatikisht",
-        "Kusuri në para dhe emërtime të personalizuara për mënyrat e pagesës",
-        "Çdo shitje mbyllet me një «Ding!» dhe dridhje prekëse"
+        "Dhjetë shporta të hapura njëkohësisht",
+        "Kërko sipas emrit ose barkodit sa shkruan",
+        "Zbritje për artikull dhe për shportë, me shumë ose me përqindje",
+        "Disa norma tatimi, të zgjedhura për çdo produkt",
+        "Me tatim të përfshirë ose të papërfshirë, ndrysho kur të duash",
+        "Produkte me çmim në shitje, çmimi caktohet gjatë pagesës",
+        "Rrumbullakim i parave sipas monedhave të shtetit tënd",
+        "Çdo shitje mbyllet me një «Ding!» — ky është çasti kur paguhesh"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Kufij përdorimi (në total ose për klient)",
         "Aplikohen automatikisht në pagesë — pa kode kuponi"
       ],
-      "shot_alt": "Lista e promovimeve te Cilësimet, e ndarë në pako dhe zbritje, me secilin rregull që tregon gjendjen aktive dhe përparësinë"
+      "shot_alt": "Lista e promovimeve te Cilësimet, e ndarë në dhurata e pako, zbritje e pikë, ku çdo rregull tregon gjendjen aktive dhe përparësinë"
     },
     "reports": {
       "eyebrow": "Raportet",
-      "title": "Sa fitove sot, ndërkohë që dyqani është ende hapur",
-      "lead": "Numri i porosive, të ardhurat nga shitjet, fitimi bruto, zbritjet dhe përbërja e pagesave në një faqe, për sot, 7 ditët, 30 ditët ose gjithë kohën.",
+      "title": "Nga të ardhurat te fitimi neto, me një shikim",
+      "lead": "Të ardhurat nga shitjet, paratë e arkëtuara, fitimi bruto, porositë dhe shitja mesatare mbushin ekranin e parë; zgjidh një periudhë për krahasim dhe secila tregon ndryshimin. Çdo shumë është pas zbritjeve dhe para tatimit.",
       "items": [
-        "Sot: numri i porosive, të ardhurat nga shitjet, fitimi bruto, zbritjet, përbërja e pagesave",
-        "5 produktet kryesore sipas sasisë",
-        "Periudha ditore / javore / mujore",
-        "Grafikë të prirjes së të ardhurave dhe fitimit bruto"
+        "Krahaso me periudhën e mëparshme ose me vitin e kaluar",
+        "Nga të ardhurat te fitimi bruto, dhe fitimi neto për një muaj",
+        "Më të shiturit, produktet me ndryshim dhe ato me shitje të ngadalta, sipas variantit",
+        "Shitjet sipas kategorisë, mënyrat e pagesës me komisione të vlerësuara",
+        "Hartë nxehtësie sipas ditës së javës × orës, për orët më të ngarkuara",
+        "Sot, këtë javë, këtë muaj, këtë vit ose çdo interval"
       ],
-      "shot_alt": "Paneli me të ardhurat e sotme, zbritjet totale, fitimin dhe shportën mesatare, mbi një grafik unazor të mënyrave të pagesës dhe një listë të më të shiturve"
+      "shot_alt": "Raporti i këtij muaji: të ardhurat nga shitjet, paratë e arkëtuara, fitimi bruto, porositë dhe shitja mesatare lart, pastaj zbritjet gjithsej, fitimi neto, produktet pa kosto dhe klientët e shërbyer, mbi një vijë trendi të të ardhurave dhe një grafik ditor të kostos dhe fitimit bruto"
     },
     "orders": {
       "eyebrow": "Porosi",
-      "title": "Çdo shitje është aty, dhe çdo shitje mund të shfuqizohet",
-      "lead": "Çdo porosi mban të plotë regjistrimin: artikujt dhe variantet, cili promovim u aplikua, taksën, mënyrën e pagesës dhe kusurin e dhënë.",
+      "title": "Çdo shitje, një kërkim larg",
+      "lead": "Shkruaj një numër porosie, një klient ose një mënyrë pagese dhe shitja del aty. Një kthim ose këmbim merr dokumentin e vet, ndaj origjinali nuk ndryshon kurrë, dhe kthimet e pjesshme përsëri përputhen me të.",
       "items": [
-        "Listë porosish kronologjike, me filtër sipas datës dhe mënyrës së pagesës",
-        "Detajet e rreshtit ruajnë artikujt, variantet, zbritjet, taksën dhe kusurin",
-        "Shfuqizim me konfirmim — stoku dhe pikët rikthehen automatikisht"
+        "Porositë të grupuara sipas ditës, me numrin dhe totalin e çdo dite",
+        "Filtro sipas periudhës, statusit, mënyrës së pagesës dhe shumës",
+        "Artikujt, variantet, promovimet, tatimi dhe kusuri në çdo porosi",
+        "Malli i kthyer rikthehet në stok ose shkruhet si humbje",
+        "Arsye opsionale për shfuqizimet dhe kthimet; stoku dhe pikët rikthehen"
       ],
-      "shot_alt": "Majtas një listë kronologjike porosish, djathtas detajet e porosisë së zgjedhur: artikujt, zbritja e aplikuar, taksa, totali, mënyra e pagesës dhe kusuri"
+      "shot_alt": "Majtas: porositë janë të grupuara sipas ditës, me numrin dhe totalin e porosive të çdo dite në titull; djathtas: artikujt e porosisë së zgjedhur, zbritja e shportës, tatimi i përfshirë, totali dhe mënyra e pagesës, me butonat Kthim malli dhe Shfuqizim"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Për një person në një banak që ka nevojë për pagesë dhe produkte",
         "heading": "Përfshin",
         "features": [
-          "Pagesë e plotë me deri në 10 shporta",
+          "Pagesë e plotë me dhjetë shporta njëkohësisht",
           "Produkte me variante, barkode, foto dhe kategori",
           "Historiku i porosive, shfuqizime, kthime dhe këmbime",
           "Paneli i biznesit: të ardhura, fitim, produktet më të shitura",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Pagesa dhe shporta të shumta",
-          "desc": "Deri në 10 shporta njëkohësisht, kërkim i drejtpërdrejtë me emër ose barkod"
+          "desc": "Dhjetë shporta njëkohësisht, kërkim i drejtpërdrejtë me emër ose barkod"
         },
         "discounts_tax": {
           "name": "Zbritje dhe tatim",
-          "desc": "Zbritje për artikull dhe për porosi; tatimi i përfshirë ose i shtuar llogaritet për ty"
+          "desc": "Zbritje për artikull dhe për porosi; disa norma tatimore, të përfshira ose të shtuara, llogariten për ty"
         },
         "offline": {
           "name": "Pagesa pa internet",

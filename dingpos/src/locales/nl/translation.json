@@ -16,7 +16,7 @@
     "description": "DingPOS is een kassa-app voor iPad. Geen account, geen afhankelijkheid van de cloud, en alles werkt ook zonder internet. Je producten, bestellingen en klanten blijven op je eigen apparaat.",
     "download": "Download in de App Store",
     "note": "30 dagen gratis proefperiode.",
-    "shot_alt": "Het afrekenscherm van DingPOS: links een productraster met categoriefilters, rechts de winkelmand met automatisch toegepaste acties en het totaal"
+    "shot_alt": "Het afrekenscherm van DingPOS: links een productraster met categoriefilters; rechts de winkelmand van een VIP-lid, met automatisch toegepaste korting op het tweede artikel, drempelkorting en ledenkorting, boven het totaal"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Afrekenen",
       "title": "Elke stap van een verkoop op één scherm",
-      "lead": "Tot 10 winkelmanden tegelijk, producten zoeken op naam of barcode terwijl je typt, en korting en btw berekend voordat je de betaling aanneemt.",
+      "lead": "Je kunt tien winkelmanden tegelijk openhouden en producten op naam of barcode zoeken terwijl je typt. Kortingen, meerdere btw-tarieven en wisselgeld worden berekend voordat je de betaling aanneemt.",
       "items": [
-        "Tot 10 winkelmanden tegelijk open",
-        "Producten zoeken op naam en barcode, terwijl je typt",
-        "Korting op artikelen en op de hele winkelmand, vast bedrag of percentage",
-        "Btw inclusief of exclusief automatisch berekend",
-        "Wisselgeld bij contante betaling en eigen namen voor betaalmethoden",
-        "Elke verkoop eindigt met een \"Ding!\" en voelbare trilling"
+        "Tien winkelmanden tegelijk open",
+        "Zoeken op naam of barcode terwijl je typt",
+        "Korting op artikelen en winkelmand, bedrag of percentage",
+        "Meerdere btw-tarieven, te kiezen per product",
+        "Prijzen inclusief of exclusief btw, wissel wanneer je wilt",
+        "Producten met open prijs, geprijsd bij het afrekenen",
+        "Contante afronding op de munten van jouw land",
+        "Elke verkoop eindigt met een \"Ding!\" — dat betekent dat je betaald krijgt"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Gebruikslimieten (in totaal of per klant)",
         "Automatisch toegepast bij het afrekenen — geen couponcodes"
       ],
-      "shot_alt": "De lijst met acties in Instellingen, verdeeld in bundels en kortingen, waarbij elke regel zijn status en prioriteit toont"
+      "shot_alt": "De lijst met acties in Instellingen, gegroepeerd in cadeaus en bundels, kortingen en punten, waarbij elke regel zijn status en prioriteit toont"
     },
     "reports": {
       "eyebrow": "Rapporten",
-      "title": "Wat je vandaag hebt verdiend, terwijl de winkel nog open is",
-      "lead": "Aantal bestellingen, omzet, brutowinst, kortingen en verdeling van betaalmethoden op één pagina, voor vandaag, 7 dagen, 30 dagen of alle tijd.",
+      "title": "Van omzet tot nettowinst, in één oogopslag",
+      "lead": "Omzet, ontvangen bedrag, brutowinst, bestellingen en gemiddelde bonwaarde vullen het eerste scherm; kies een periode om mee te vergelijken en bij elk cijfer zie je de verandering. Elk bedrag is na korting en vóór btw.",
       "items": [
-        "Vandaag: aantal bestellingen, omzet, brutowinst, korting, verdeling van betaalmethoden",
-        "Top 5 producten op aantal",
-        "Periodes per dag / week / maand",
-        "Grafieken met het verloop van omzet en brutowinst"
+        "Vergelijk met de vorige periode of met vorig jaar",
+        "Van omzet tot brutowinst, plus de nettowinst van een maand",
+        "Bestsellers, stijgers, dalers en langzaam verkopende producten, per variant",
+        "Verkoop per categorie, betaalmethoden met geschatte transactiekosten",
+        "Een heatmap van weekdag × uur met je drukste uren",
+        "Vandaag, deze week, deze maand, dit jaar of een eigen periode"
       ],
-      "shot_alt": "Het dashboard met de omzet van vandaag, totale korting, winst en gemiddelde bonwaarde, boven een cirkeldiagram van betaalmethoden en een lijst met bestsellers"
+      "shot_alt": "Het rapport van deze maand: bovenaan omzet, ontvangen bedrag, brutowinst, bestellingen en gemiddelde bonwaarde, dan totale korting, nettowinst, producten zonder kostprijs en geholpen klanten, boven een lijn met het omzetverloop en een grafiek met de dagelijkse kosten en brutowinst"
     },
     "orders": {
       "eyebrow": "Orders",
-      "title": "Elke verkoop staat erin, en elke verkoop kan ongedaan worden gemaakt",
-      "lead": "Elke bestelling bewaart het volledige verloop: artikelen en varianten, welke actie gold, btw, betaalmethode en teruggegeven wisselgeld.",
+      "title": "Elke verkoop binnen handbereik met één zoekopdracht",
+      "lead": "Typ een bestelnummer, een klant of een betaalmethode en de verkoop staat er. Een retour of omruiling krijgt een eigen document, zodat het origineel nooit verandert, en gedeeltelijke retouren tellen nog steeds op tot dat origineel.",
       "items": [
-        "Chronologische lijst met bestellingen, filteren op datum en betaalmethode",
-        "Regeldetails bewaren artikelen, varianten, kortingen, btw en wisselgeld",
-        "Ongeldig maken met bevestiging — voorraad en punten automatisch hersteld"
+        "Bestellingen per dag gegroepeerd, met het aantal en het totaal van elke dag",
+        "Filter op periode, status, betaalmethode en bedrag",
+        "Artikelen, varianten, acties, btw en wisselgeld bij elke bestelling",
+        "Geretourneerde artikelen gaan terug de voorraad in, of worden weggegooid",
+        "Optionele redenen bij ongeldig maken en retouren; voorraad en punten worden hersteld"
       ],
-      "shot_alt": "Links een chronologische lijst met bestellingen, rechts de details van de geselecteerde bestelling: artikelen, toegepaste korting, btw, totaal, betaalmethode en wisselgeld"
+      "shot_alt": "Links de bestellingen per dag gegroepeerd, met in de kop het aantal bestellingen en het totaal van die dag; rechts de artikelen van de geselecteerde bestelling, korting op de winkelmand, inbegrepen btw, totaal en betaalmethode, met de knoppen Retour en Ongeldig maken"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Voor één persoon met een kraam die alleen afrekenen en producten nodig heeft",
         "heading": "Inbegrepen",
         "features": [
-          "Volledig afrekenen met maximaal 10 winkelmanden",
+          "Volledig afrekenen met tien winkelmanden tegelijk",
           "Producten met varianten, barcodes, foto's en categorieën",
           "Bestelgeschiedenis, ongeldig maken, retouren en omruilingen",
           "Bedrijfsoverzicht: omzet, winst, bestsellers",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Afrekenen en meerdere winkelmanden",
-          "desc": "Tot 10 winkelmanden tegelijk, direct zoeken op naam of barcode"
+          "desc": "Tien winkelmanden tegelijk, direct zoeken op naam of barcode"
         },
         "discounts_tax": {
           "name": "Kortingen en btw",
-          "desc": "Kortingen op artikelen en bestellingen; btw inclusief of exclusief automatisch berekend"
+          "desc": "Kortingen op artikelen en bestellingen; meerdere btw-tarieven, inclusief of exclusief, automatisch berekend"
         },
         "offline": {
           "name": "Offline afrekenen",

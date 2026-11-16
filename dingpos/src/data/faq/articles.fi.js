@@ -279,7 +279,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kassanäkymässä voi olla enintään 10 ostoskoria yhtä aikaa. Lisää uusi napauttamalla ostoskoripalkin \"+\"-painiketta ja vaihda koria napauttamalla numeroitua välilehteä."
+        "text": "Kassanäkymässä toimii kymmenen ostoskoria yhtä aikaa. Lisää uusi napauttamalla ostoskoripalkin \"+\"-painiketta ja vaihda koria napauttamalla numeroitua välilehteä."
       },
       {
         "type": "p",

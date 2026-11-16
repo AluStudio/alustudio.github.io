@@ -271,7 +271,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kassa ekrani bir vaqtning o‘zida 10 tagacha savatni qo‘llab-quvvatlaydi. Yangi savat qo‘shish uchun savat panelidagi “+” tugmasini bosing, almashtirish uchun raqamlangan yorliqni bosing."
+        "text": "Kassa ekrani bir vaqtning o‘zida o‘nta savat bilan ishlaydi. Yangi savat qo‘shish uchun savat panelidagi “+” tugmasini bosing, almashtirish uchun raqamlangan yorliqni bosing."
       },
       {
         "type": "p",

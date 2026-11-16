@@ -16,7 +16,7 @@
     "description": "DingPOS er et kassesystem for iPad. Ingen konto, ingen binding til skyen, og det fungerer også uten internett. Produkter, ordrer og kunder blir på din egen enhet.",
     "download": "Last ned på App Store",
     "note": "30 dagers gratis prøveperiode.",
-    "shot_alt": "Kasseskjermen i DingPOS: produktrutenett med kategorifilter til venstre, og handlekurven med automatisk brukte kampanjer og totalsum til høyre"
+    "shot_alt": "Kasseskjermen i DingPOS: et produktrutenett med kategorifilter til venstre; til høyre handlekurven til et VIP-medlem, med rabatt på vare nummer to, rabatt ved kjøp over en beløpsgrense og medlemsrabatt brukt automatisk, over totalsummen"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Kasse",
       "title": "Alle trinn i et salg på én skjerm",
-      "lead": "Opptil 10 handlekurver samtidig, produktene finner du ved å søke på navn eller strekkode mens du skriver, og rabatter og mva. regnes ut før du tar betalt.",
+      "lead": "Ti handlekurver samtidig, og produkter finner du på navn eller strekkode mens du skriver. Rabatter, flere avgiftssatser og vekselpenger er regnet ut før du tar betalt.",
       "items": [
-        "Opptil 10 handlekurver samtidig",
-        "Produktsøk på navn og strekkode mens du skriver",
-        "Rabatt på vare og handlekurv, fast beløp eller prosent",
-        "Priser med og uten mva. regnes ut automatisk",
-        "Vekselpenger og egne navn på betalingsmåter",
-        "Hvert salg avsluttes med et «Ding!» og haptisk tilbakemelding"
+        "Ti handlekurver åpne samtidig",
+        "Søk på navn eller strekkode mens du skriver",
+        "Rabatt på vare og handlekurv, i beløp eller prosent",
+        "Flere avgiftssatser, valgt per produkt",
+        "Pris med eller uten avgift, bytt når som helst",
+        "Produkter med åpen pris, prises i kassen",
+        "Kontantavrunding til myntene i landet ditt",
+        "Hvert salg ender med et «Ding!» – det er deg som får betalt"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Bruksgrenser (totalt eller per kunde)",
         "Brukes automatisk i kassen – ingen kampanjekoder"
       ],
-      "shot_alt": "Kampanjelisten i Innstillinger, delt i pakketilbud og rabatter, der hver regel viser om den er aktiv og hvilken prioritet den har"
+      "shot_alt": "Kampanjelisten i Innstillinger, gruppert i gaver og pakketilbud, rabatter og poeng, der hver regel viser om den er aktiv og hvilken prioritet den har"
     },
     "reports": {
       "eyebrow": "Rapporter",
-      "title": "Hva du har tjent i dag, mens butikken fortsatt er åpen",
-      "lead": "Antall ordrer, salgsinntekt, bruttofortjeneste, rabatter og betalingsfordeling på én side, for i dag, 7 dager, 30 dager eller hele perioden.",
+      "title": "Fra salgsinntekt til nettoresultat, med ett blikk",
+      "lead": "Salgsinntekt, mottatt betaling, bruttofortjeneste, ordrer og gjennomsnittlig ordreverdi fyller første skjermbilde; velg en periode å sammenligne med, så viser hver av dem endringen. Alle beløp er etter rabatter og før avgift.",
       "items": [
-        "I dag: antall ordrer, salgsinntekt, bruttofortjeneste, rabatt, betalingsfordeling",
-        "Topp 5 produkter etter antall",
-        "Perioder: dag / uke / måned",
-        "Grafer for utvikling i salgsinntekt og bruttofortjeneste"
+        "Sammenlign med forrige periode eller i fjor",
+        "Fra salgsinntekt til bruttofortjeneste, og nettoresultat for en måned",
+        "Bestselgere, produkter med størst endring og saktegående varer, per variant",
+        "Salg per kategori, betalingsmåter med estimerte transaksjonsgebyrer",
+        "Et varmekart over ukedag og time for de travleste timene",
+        "I dag, denne uken, denne måneden, i år eller en valgfri periode"
       ],
-      "shot_alt": "Oversikten med dagens salgsinntekt, total rabatt, fortjeneste og gjennomsnittlig kurv, over et smultringdiagram for betalingsmåter og en liste over bestselgere"
+      "shot_alt": "Månedens rapport: salgsinntekt, mottatt betaling, bruttofortjeneste, ordrer og gjennomsnittlig ordreverdi øverst, deretter total rabatt, nettoresultat, produkter uten kostpris og betjente kunder, over en trendlinje for salgsinntekt og et diagram over daglig kostnad og bruttofortjeneste"
     },
     "orders": {
       "eyebrow": "Ordrer",
-      "title": "Hvert salg er lagret, og hvert salg kan angres",
-      "lead": "Hver ordre beholder hele historikken: varer og varianter, hvilken kampanje som ble brukt, mva., betalingsmåte og vekselpenger.",
+      "title": "Hvert salg, ett søk unna",
+      "lead": "Skriv inn et ordrenummer, en kunde eller en betalingsmåte, så er salget der. En retur eller et bytte får sitt eget dokument, så originalen endres aldri, og delvise returer går likevel opp mot den.",
       "items": [
-        "Ordreliste i tidsrekkefølge, filtrer på dato og betalingsmåte",
-        "Linjedetaljer med varer, varianter, rabatter, mva. og vekselpenger",
-        "Annullering med bekreftelse – lager og poeng gjenopprettes automatisk"
+        "Ordrer gruppert per dag, med antall og sum for hver dag",
+        "Filtrer på periode, status, betalingsmåte og beløp",
+        "Varer, varianter, kampanjer, avgift og vekselpenger på hver ordre",
+        "Returvarer legges tilbake på lager, eller kasseres",
+        "Valgfri årsak til annulleringer og returer; lager og poeng gjenopprettes"
       ],
-      "shot_alt": "En ordreliste i tidsrekkefølge til venstre, med detaljer for valgt ordre til høyre: varer, rabatt, mva., totalsum, betalingsmåte og vekselpenger"
+      "shot_alt": "Ordrer gruppert per dag til venstre, med antall ordrer og sum i hver dags overskrift; til høyre varene i den valgte ordren, handlekurvrabatt, inkludert avgift, totalsum og betalingsmåte, med knappene Retur og Annuller"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "For én person på en markedsbod som trenger kasse og produkter",
         "heading": "Inkluderer",
         "features": [
-          "Full kassefunksjon med opptil 10 handlekurver",
+          "Full kassefunksjon med ti handlekurver samtidig",
           "Produkter med varianter, strekkoder, bilder og kategorier",
           "Ordrehistorikk, annulleringer, returer og bytter",
           "Oversikt over virksomheten: salgsinntekt, fortjeneste, bestselgere",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Kasse og flere handlekurver",
-          "desc": "Opptil 10 handlekurver samtidig, direktesøk på navn eller strekkode"
+          "desc": "Ti handlekurver samtidig, direktesøk på navn eller strekkode"
         },
         "discounts_tax": {
           "name": "Rabatter og mva.",
-          "desc": "Rabatter på vare og ordre; mva. beregnes for deg, enten den er inkludert i prisen eller kommer på toppen"
+          "desc": "Rabatter på vare og ordre; flere avgiftssatser, inkludert i prisen eller lagt til, beregnes for deg"
         },
         "offline": {
           "name": "Kasse uten nett",

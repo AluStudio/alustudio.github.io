@@ -16,7 +16,7 @@
     "description": "DingPOS là ứng dụng bán hàng (POS) cho iPad. Không cần tài khoản, không bị ràng buộc vào đám mây, và vẫn chạy bình thường khi không có internet. Sản phẩm, đơn hàng và khách hàng của bạn đều nằm trên thiết bị của chính bạn.",
     "download": "Tải về trên App Store",
     "note": "Dùng thử miễn phí 30 ngày.",
-    "shot_alt": "Màn hình thanh toán của DingPOS: lưới sản phẩm với bộ lọc danh mục ở bên trái, giỏ hàng với các khuyến mãi được áp dụng tự động và tổng tiền ở bên phải"
+    "shot_alt": "Màn hình thanh toán của DingPOS: bên trái là lưới sản phẩm với bộ lọc danh mục; bên phải là giỏ hàng của một khách VIP với giảm giá cho sản phẩm thứ hai, giảm giá khi đạt mức chi tiêu và giảm giá thành viên được áp dụng tự động, nằm phía trên phần tổng cộng"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Thanh toán",
       "title": "Mọi bước của một lần bán trên cùng một màn hình",
-      "lead": "Tối đa 10 giỏ hàng cùng lúc, tìm sản phẩm theo tên hoặc mã vạch ngay khi bạn gõ, giảm giá và thuế được tính xong trước khi thu tiền.",
+      "lead": "Mở cùng lúc 10 giỏ hàng, gõ đến đâu là tìm thấy sản phẩm theo tên hoặc mã vạch đến đó. Giảm giá, nhiều mức thuế và tiền thối lại đều được tính xong trước khi bạn thu tiền.",
       "items": [
-        "Tối đa 10 giỏ hàng chạy cùng lúc",
-        "Tìm sản phẩm theo tên và mã vạch, ngay khi bạn gõ",
-        "Giảm giá theo sản phẩm và theo giỏ hàng, số tiền cố định hoặc phần trăm",
-        "Tự động tính thuế đã gồm / chưa gồm trong giá",
-        "Tiền thối lại và nhãn phương thức thanh toán tùy chỉnh",
-        "Mỗi lần bán xong đều có tiếng “Ding!” và phản hồi rung"
+        "Mở cùng lúc 10 giỏ hàng",
+        "Tìm theo tên hoặc mã vạch ngay khi bạn gõ",
+        "Giảm giá theo sản phẩm và theo giỏ hàng, theo số tiền hoặc phần trăm",
+        "Nhiều mức thuế, chọn riêng cho từng sản phẩm",
+        "Giá đã gồm thuế hoặc chưa gồm thuế, đổi lúc nào cũng được",
+        "Sản phẩm giá tự đặt, nhập giá ngay lúc thanh toán",
+        "Làm tròn tiền mặt theo đồng xu của quốc gia bạn",
+        "Mỗi lần bán xong đều vang lên tiếng “Ding!” — chính là lúc bạn nhận được tiền"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Giới hạn lượt dùng (tổng cộng hoặc theo từng khách hàng)",
         "Tự động áp dụng khi thanh toán — không cần mã giảm giá"
       ],
-      "shot_alt": "Danh sách khuyến mãi trong Cài đặt, chia thành ưu đãi theo nhóm và giảm giá, mỗi quy tắc hiển thị trạng thái hoạt động và mức ưu tiên"
+      "shot_alt": "Danh sách khuyến mãi trong Cài đặt, chia thành nhóm quà tặng – ưu đãi theo nhóm và nhóm giảm giá – điểm, mỗi quy tắc hiển thị trạng thái hoạt động và mức ưu tiên"
     },
     "reports": {
       "eyebrow": "Báo cáo",
-      "title": "Hôm nay bạn kiếm được bao nhiêu, ngay khi cửa hàng còn mở",
-      "lead": "Số đơn hàng, doanh thu, lợi nhuận gộp, giảm giá và cơ cấu thanh toán trên một trang, theo hôm nay, 7 ngày, 30 ngày hoặc toàn thời gian.",
+      "title": "Từ doanh thu đến lợi nhuận ròng, nhìn là thấy ngay",
+      "lead": "Doanh thu, tiền đã thu, lợi nhuận gộp, số đơn hàng và giá trị đơn trung bình hiện ngay ở màn hình đầu tiên; chọn một kỳ để so sánh, mỗi chỉ số sẽ hiện mức thay đổi. Mọi số tiền đều tính sau giảm giá và trước thuế.",
       "items": [
-        "Hôm nay: số đơn hàng, doanh thu, lợi nhuận gộp, giảm giá, cơ cấu thanh toán",
-        "5 sản phẩm bán chạy nhất theo số lượng",
-        "Xem theo ngày / tuần / tháng",
-        "Biểu đồ xu hướng doanh thu và lợi nhuận gộp"
+        "So sánh với kỳ trước hoặc cùng kỳ năm ngoái",
+        "Từ doanh thu đến lợi nhuận gộp, và lợi nhuận ròng theo tháng",
+        "Bán chạy, biến động và hàng bán chậm, theo từng biến thể",
+        "Doanh thu theo danh mục, phương thức thanh toán kèm phí xử lý ước tính",
+        "Bản đồ nhiệt thứ trong tuần × giờ cho thấy khung giờ đông khách nhất",
+        "Hôm nay, tuần này, tháng này, năm nay hoặc khoảng thời gian bất kỳ"
       ],
-      "shot_alt": "Trang báo cáo hiển thị doanh thu hôm nay, tổng giảm giá, lợi nhuận và giá trị giỏ hàng trung bình, phía trên là biểu đồ tròn phương thức thanh toán và danh sách bán chạy"
+      "shot_alt": "Báo cáo tháng này: dọc phía trên là doanh thu, tiền đã thu, lợi nhuận gộp, số đơn hàng và giá trị đơn trung bình, tiếp đến là tổng giảm giá, lợi nhuận ròng, sản phẩm chưa có giá vốn và khách đã phục vụ, tất cả nằm phía trên đường xu hướng doanh thu và biểu đồ giá vốn, lợi nhuận gộp theo ngày"
     },
     "orders": {
       "eyebrow": "Đơn hàng",
-      "title": "Mọi lần bán đều được lưu lại, và đều có thể vô hiệu hóa",
-      "lead": "Mỗi đơn hàng lưu đầy đủ hồ sơ: sản phẩm và biến thể, khuyến mãi đã áp dụng, thuế, phương thức thanh toán và tiền thối lại.",
+      "title": "Mọi đơn hàng, tìm là thấy",
+      "lead": "Gõ số đơn hàng, tên khách hàng hoặc phương thức thanh toán là thấy ngay đơn đó. Trả hàng hay đổi hàng đều có chứng từ riêng nên đơn gốc không bao giờ thay đổi, và các lần trả hàng một phần vẫn cộng lại khớp với đơn gốc.",
       "items": [
-        "Danh sách đơn hàng theo thứ tự thời gian, lọc theo ngày và phương thức thanh toán",
-        "Chi tiết từng dòng lưu sản phẩm, biến thể, giảm giá, thuế và tiền thối lại",
-        "Vô hiệu hóa có xác nhận — tồn kho và điểm được hoàn lại tự động"
+        "Đơn hàng nhóm theo ngày, kèm số đơn và tổng tiền của từng ngày",
+        "Lọc theo kỳ, trạng thái, phương thức thanh toán và số tiền",
+        "Sản phẩm, biến thể, khuyến mãi, thuế và tiền thối lại trên từng đơn hàng",
+        "Hàng trả lại được nhập lại kho hoặc loại bỏ",
+        "Có thể ghi lý do khi vô hiệu hóa hoặc trả hàng; tồn kho và điểm được hoàn lại"
       ],
-      "shot_alt": "Danh sách đơn hàng theo thứ tự thời gian ở bên trái, chi tiết đơn hàng đang chọn ở bên phải: sản phẩm, giảm giá đã áp dụng, thuế, tổng tiền, phương thức thanh toán và tiền thối lại"
+      "shot_alt": "Bên trái là đơn hàng nhóm theo ngày, tiêu đề mỗi ngày ghi số đơn và tổng tiền; bên phải là đơn hàng đang chọn với sản phẩm, giảm giá giỏ hàng, thuế đã bao gồm, tổng cộng và phương thức thanh toán, cùng các nút Trả hàng và Vô hiệu hóa"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Dành cho một người bán ở quầy hàng, cần thanh toán và quản lý sản phẩm",
         "heading": "Bao gồm",
         "features": [
-          "Thanh toán đầy đủ với tối đa 10 giỏ hàng",
+          "Thanh toán đầy đủ với 10 giỏ hàng cùng lúc",
           "Sản phẩm có biến thể, mã vạch, ảnh, danh mục",
           "Lịch sử đơn hàng, vô hiệu hóa, trả hàng và đổi hàng",
           "Bảng điều khiển kinh doanh: doanh thu, lợi nhuận, hàng bán chạy",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Thanh toán và nhiều giỏ hàng",
-          "desc": "Tối đa 10 giỏ hàng cùng lúc, tìm kiếm tức thì theo tên hoặc mã vạch"
+          "desc": "10 giỏ hàng cùng lúc, tìm kiếm tức thì theo tên hoặc mã vạch"
         },
         "discounts_tax": {
           "name": "Giảm giá và thuế",
-          "desc": "Giảm giá theo sản phẩm và theo đơn hàng; tự tính thuế đã gồm hoặc chưa gồm trong giá"
+          "desc": "Giảm giá theo sản phẩm và theo đơn hàng; nhiều mức thuế, tự tính thuế đã gồm hoặc chưa gồm trong giá"
         },
         "offline": {
           "name": "Thanh toán ngoại tuyến",

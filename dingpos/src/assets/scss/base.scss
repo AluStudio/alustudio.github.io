@@ -53,6 +53,12 @@ dd {
   overflow-wrap: anywhere;
 }
 
+// Japanese has no spaces to keep-all on; auto-phrase breaks between phrases
+// where the browser supports it, and between characters elsewhere.
+:lang(ja) :is(h1, h2, h3) {
+  word-break: auto-phrase;
+}
+
 a {
   color: inherit;
 }
@@ -236,7 +242,7 @@ button {
     }
   }
 
-  p {
+  p:not(.eyebrow) {
     margin-top: s(200);
     @include text("lg");
     color: $ink-soft;

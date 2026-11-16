@@ -276,7 +276,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kassaskärmen klarar upp till 10 varukorgar samtidigt. Tryck på ”+” i varukorgsfältet för att lägga till en och tryck på en numrerad flik för att byta."
+        "text": "Kassaskärmen hanterar tio varukorgar samtidigt. Tryck på ”+” i varukorgsfältet för att lägga till en och tryck på en numrerad flik för att byta."
       },
       {
         "type": "p",

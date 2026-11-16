@@ -277,7 +277,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kasa ekranı aynı anda en fazla 10 sepeti destekler. Sepet çubuğundaki \"+\" düğmesine dokunarak yeni sepet ekleyin, numaralı bir sekmeye dokunarak sepetler arasında geçiş yapın."
+        "text": "Kasa ekranında aynı anda on sepet çalışır. Sepet çubuğundaki \"+\" düğmesine dokunarak yeni sepet ekleyin, numaralı bir sekmeye dokunarak sepetler arasında geçiş yapın."
       },
       {
         "type": "p",

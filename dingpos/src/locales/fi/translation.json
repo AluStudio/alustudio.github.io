@@ -16,7 +16,7 @@
     "description": "DingPOS on kassajärjestelmä iPadille. Ei tiliä, ei pilvilukkoa, ja se toimii myös ilman internetyhteyttä. Tuotteesi, tilauksesi ja asiakkaasi pysyvät omalla laitteellasi.",
     "download": "Lataa App Storesta",
     "note": "30 päivän ilmainen kokeilu.",
-    "shot_alt": "DingPOSin kassanäkymä: vasemmalla tuoteruudukko luokkasuodattimineen, oikealla ostoskori automaattisesti käytettyine kampanjoineen ja loppusumma"
+    "shot_alt": "DingPOSin kassanäkymä: vasemmalla tuoteruudukko luokkasuodattimineen, oikealla VIP-jäsenen ostoskori, jossa toisen tuotteen alennus, ostosummaan perustuva alennus ja jäsenalennus on lisätty automaattisesti, ja alla loppusumma"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Kassa",
       "title": "Myynnin jokainen vaihe yhdellä näytöllä",
-      "lead": "Jopa 10 ostoskoria yhtä aikaa, tuotteet löytyvät nimellä tai viivakoodilla kirjoittaessasi, ja alennukset ja vero lasketaan ennen maksua.",
+      "lead": "Kymmenen ostoskoria yhtä aikaa, ja tuotteet löytyvät nimellä tai viivakoodilla jo kirjoittaessasi. Alennukset, eri verokannat ja vaihtoraha lasketaan valmiiksi ennen kuin otat maksun vastaan.",
       "items": [
-        "Jopa 10 ostoskoria yhtä aikaa",
-        "Tuotehaku nimellä ja viivakoodilla kirjoittaessa",
-        "Tuote- ja ostoskorialennukset, kiinteä summa tai prosentti",
-        "Verollinen / veroton hinta lasketaan automaattisesti",
-        "Käteisen takaisinanto ja omat maksutapojen nimet",
-        "Jokainen myynti päättyy ”Ding!”-ääneen ja värinään"
+        "Kymmenen ostoskoria auki yhtä aikaa",
+        "Haku nimellä tai viivakoodilla kirjoittaessasi",
+        "Tuote- ja ostoskorialennukset, summana tai prosenttina",
+        "Useita verokantoja, valittavissa tuotekohtaisesti",
+        "Verollinen tai veroton hinta, vaihdettavissa milloin vain",
+        "Avohintaiset tuotteet, hinta määritetään kassalla",
+        "Käteisen pyöristys maasi kolikoihin",
+        "Jokainen myynti päättyy ”Ding!”-ääneen – se on ääni, kun saat maksun"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Käyttörajat (yhteensä tai asiakasta kohden)",
         "Käytetään automaattisesti kassalla – ei alennuskoodeja"
       ],
-      "shot_alt": "Asetusten kampanjaluettelo jaettuna pakettihintoihin ja alennuksiin; jokaisen säännön tila ja etusija näkyvät"
+      "shot_alt": "Asetusten kampanjaluettelo ryhmiteltynä lahjoihin ja paketteihin sekä alennuksiin ja pisteisiin; jokaisen säännön tila ja prioriteetti näkyvät"
     },
     "reports": {
       "eyebrow": "Raportit",
-      "title": "Mitä ansaitsit tänään, kun kauppa on vielä auki",
-      "lead": "Tilausmäärä, liikevaihto, myyntikate, alennukset ja maksutapajakauma yhdellä sivulla: tänään, 7 päivää, 30 päivää tai koko ajalta.",
+      "title": "Liikevaihdosta liikevoittoon yhdellä silmäyksellä",
+      "lead": "Liikevaihto, saapunut maksu, myyntikate, tilaukset ja tilauksen keskiarvo täyttävät ensimmäisen näkymän; valitse vertailtava jakso, niin jokaisen luvun muutos näkyy. Kaikki summat ovat alennusten jälkeen ja ennen veroa.",
       "items": [
-        "Tänään: tilausmäärä, liikevaihto, myyntikate, alennus, maksutapajakauma",
-        "5 myydyintä tuotetta määrän mukaan",
-        "Päivä- / viikko- / kuukausinäkymä",
-        "Liikevaihdon ja myyntikatteen kehityskaaviot"
+        "Vertaa edelliseen jaksoon tai viime vuoteen",
+        "Liikevaihdosta myyntikatteeseen ja kuukauden liikevoittoon",
+        "Myydyimmät, muutostuotteet ja hitaasti liikkuvat tuotteet variantteittain",
+        "Myynti luokittain, maksutavat arvioituine maksukuluineen",
+        "Viikonpäivä × tunti -lämpökartta vilkkaimmista tunneistasi",
+        "Tänään, tämä viikko, tämä kuukausi, tämä vuosi tai mikä tahansa mukautettu jakso"
       ],
-      "shot_alt": "Kojelauta, jossa tämän päivän liikevaihto, alennukset yhteensä, kate ja keskiostos sekä maksutapojen donitsikaavio ja myydyimpien tuotteiden luettelo"
+      "shot_alt": "Tämän kuukauden raportti: ylärivillä liikevaihto, saapunut maksu, myyntikate, tilaukset ja tilauksen keskiarvo, sen alla alennukset yhteensä, liikevoitto, tuotteet ilman omakustannetta ja palvellut asiakkaat, ja alimpana liikevaihdon kehityskäyrä sekä päiväkohtainen omakustannus- ja myyntikatekaavio"
     },
     "orders": {
       "eyebrow": "Tilaukset",
-      "title": "Jokainen myynti on tallessa, ja jokaisen voi mitätöidä",
-      "lead": "Jokainen tilaus säilyttää koko tiedon: tuotteet ja variantit, käytetty kampanja, vero, maksutapa ja annettu vaihtoraha.",
+      "title": "Jokainen myynti löytyy yhdellä haulla",
+      "lead": "Kirjoita tilausnumero, asiakas tai maksutapa, niin myynti löytyy. Palautus tai vaihto saa oman asiakirjansa, joten alkuperäinen tilaus ei koskaan muutu, ja osapalautuksetkin täsmäävät siihen.",
       "items": [
-        "Aikajärjestyksessä oleva tilausluettelo, suodatus päivän ja maksutavan mukaan",
-        "Rivitiedot säilyttävät tuotteet, variantit, alennukset, veron ja vaihtorahan",
-        "Mitätöinti vahvistuksella – varasto ja pisteet palautuvat automaattisesti"
+        "Tilaukset päivittäin ryhmiteltyinä, kunkin päivän tilausmäärä ja summa",
+        "Suodatus jakson, tilan, maksutavan ja summan mukaan",
+        "Tuotteet, variantit, kampanjat, vero ja vaihtoraha jokaisella tilauksella",
+        "Palautetut tuotteet palaavat varastoon tai romutetaan",
+        "Valinnaiset syyt mitätöinneille ja palautuksille; varasto ja pisteet palautuvat"
       ],
-      "shot_alt": "Vasemmalla aikajärjestyksessä oleva tilausluettelo, oikealla valitun tilauksen tiedot: tuotteet, käytetty alennus, vero, loppusumma, maksutapa ja vaihtoraha"
+      "shot_alt": "Vasemmalla tilaukset päivittäin ryhmiteltyinä, otsikossa kunkin päivän tilausmäärä ja summa; oikealla valitun tilauksen tuotteet, ostoskorialennus, sisältyvä vero, loppusumma ja maksutapa sekä Palauta- ja Mitätöi-painikkeet"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Yhdelle myyjälle, joka tarvitsee kassan ja tuotteet",
         "heading": "Sisältää",
         "features": [
-          "Täysi kassa, jopa 10 ostoskoria",
+          "Täysi kassa, 10 ostoskoria yhtä aikaa",
           "Tuotteet variantteineen, viivakoodeineen, kuvineen ja luokkineen",
           "Tilaushistoria, mitätöinnit, palautukset ja vaihdot",
           "Liiketoiminnan kojelauta: liikevaihto, myyntikate, myydyimmät tuotteet",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Kassa ja useat ostoskorit",
-          "desc": "Jopa 10 ostoskoria samanaikaisesti, reaaliaikainen haku nimellä tai viivakoodilla"
+          "desc": "10 ostoskoria samanaikaisesti, reaaliaikainen haku nimellä tai viivakoodilla"
         },
         "discounts_tax": {
           "name": "Alennukset ja verot",
-          "desc": "Tuote- ja tilausalennukset; verollinen tai veroton hinta lasketaan puolestasi"
+          "desc": "Tuote- ja tilausalennukset; useita verokantoja, verollinen tai veroton hinta lasketaan puolestasi"
         },
         "offline": {
           "name": "Kassa ilman verkkoa",
