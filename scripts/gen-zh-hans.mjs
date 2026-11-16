@@ -126,6 +126,15 @@ const DINGPOS_SITE_GLOSSARY = [
   ["购物车列", "购物车栏"],
   ["期间列", "期间栏"],
   ["这一列", "这一行"], // a cart line
+  ["再加一列", "再加一行"], // a tax row in onboarding
+  ["第一列改成", "第一行改成"],
+  ["那一列删掉", "那一行删掉"],
+  ["每个税项各一列", "每个税项各一行"],
+  ["月损益多一列", "月损益多一行"],
+  ["两列数字卡片", "两行数字卡片"], // rows of report tiles
+  ["第二列多一张", "第二行多一张"],
+  ["逐列相减", "逐行相减"], // the revenue-to-gross-profit breakdown
+  ["每一列加起来", "每一行加起来"],
   // Points: 点数→积分 in APP_GLOSSARY misses the bare unit
   ["另外发点", "另外发积分"],
   ["（赚点）", "（赚积分）"],
@@ -138,6 +147,9 @@ const DINGPOS_SITE_GLOSSARY = [
   ["跳出", "弹出"],
   ["略过", "跳过"],
   ["落差", "差异"],
+  ["原物料", "原材料"],
+  ["实际点到的数量", "实际清点的数量"], // mainland 点到 is a roll call
+  ["设置 → 一般 →", "设置 → 通用 →"], // iOS Settings → General on mainland iOS
   ["遗失", "丢失"],
   ["贩售", "出售"],
   ["中继数据", "元数据"], // metadata
@@ -190,8 +202,8 @@ const DINGPOS_OVERRIDES = {
   "faq:apply-discounts:question": ["如何套用折扣？", "怎么套用折扣？"],
   "faq:plans-compare:question": ["Lite、Standard、Pro 方案差在哪？", "Lite、Standard、Pro 方案有什么区别？"],
   "faq:supported-devices:content.0.text": [
-    "DingPOS 目前支援 iPadOS 17 以上的 iPad，以橫向畫面為主要設計。",
-    "DingPOS 目前支持 iPadOS 17 以上的 iPad，以横屏使用为主要设计。",
+    "DingPOS 目前支援 iPadOS 17.4 以上的 iPad，以橫向畫面為主要設計。",
+    "DingPOS 目前支持 iPadOS 17.4 以上的 iPad，以横屏使用为主要设计。",
   ],
   // 資料 here is a staff member's profile page, not their data.
   "faq:activity-log:content.1.items.3": [
@@ -203,12 +215,17 @@ const DINGPOS_OVERRIDES = {
     "每件成員商品底下會寫出它分到的折扣，商品列的金額是扣完優惠後的金額。",
     "每件成员商品底下会写出它分到的折扣，商品行的金额是扣完优惠后的金额。",
   ],
+  // 「軽減税率 8%」 is a Japanese store's tax name as the app shows it; the converter half-converts it to 軽减.
+  "faq:tax-calculation:content.3.items.1": [
+    "每個商品在商品表單的「收取的稅項」選要收哪些稅，例如便當只打開「軽減税率 8%」。同時打開兩個以上時，下方會寫出這個商品的合計稅率。",
+    "每个商品在商品表单的“收取的税项”选要收哪些税，例如便当只打开“軽減税率 8%”。同时打开两个以上时，下方会写出这个商品的合计税率。",
+  ],
   "faq:roadmap-payment-integration:keywords.0": ["金流", "支付接口"],
   "faq:payment-fees:keywords.6": ["金流", "支付服务商"],
   // 列 is a list row here, but 排列 in the same paragraph rules out the row/column swap.
   "faq:profit-not-tracked:content.1.text": [
-    "點卡片或「查看商品」，會打開「缺成本的商品」清單，依未計入利潤的金額由高到低排列。點一列直接打開該商品，從「編輯」補上成本，回到清單那一列會標示「已補成本」。有規格的商品，要每個缺成本賣出的規格都有成本（自己的，或可以跟隨的商品成本）才算已補。",
-    "点卡片或“查看商品”，会打开“缺成本的商品”列表，依未计入利润的金额由高到低排列。点一行直接打开该商品，从“编辑”补上成本，回到列表那一行会标示“已补成本”。有规格的商品，要每个缺成本卖出的规格都有成本（自己的，或可以跟随的商品成本）才算已补。",
+    "點卡片或「查看商品」，會打開「缺成本的商品」清單，依未計入毛利的金額由高到低排列。點一列直接打開該商品，從「編輯」補上成本，回到清單那一列會標示「已補成本」。有規格的商品，要每個缺成本賣出的規格都有成本（自己的，或可以跟隨的商品成本）才算已補。",
+    "点卡片或“查看商品”，会打开“缺成本的商品”列表，依未计入毛利的金额由高到低排列。点一行直接打开该商品，从“编辑”补上成本，回到列表那一行会标示“已补成本”。有规格的商品，要每个缺成本卖出的规格都有成本（自己的，或可以跟随的商品成本）才算已补。",
   ],
 };
 
