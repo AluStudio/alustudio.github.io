@@ -84,18 +84,19 @@ export const articles = [
       "Laden eröffnen",
       "Land",
       "Währung",
+      "Steuern",
       "Kassen-App einrichten"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Beim ersten Öffnen von DingPOS eröffnet ein Einrichtungsassistent Ihren Laden in zwei Schritten und wenigen Minuten:"
+        "text": "Beim ersten Öffnen von DingPOS richtet ein Einrichtungsassistent Ihren Laden in zwei Schritten und in wenigen Minuten ein:"
       },
       {
         "type": "steps",
         "items": [
-          "Wählen Sie Ihr Land oder Ihre Region. Oben in der Liste stehen die Region dieses iPad und die häufigsten Märkte; darunter finden Sie alle 175 Länder und Regionen, in denen DingPOS im App Store erhältlich ist – durchsuchbar nach Namen in der Sprache der App oder auf Englisch. Ihre Auswahl trägt Währung, Steuersatz und Steuermodus ein.",
-          "Geben Sie unter „Ihr Geschäft“ den Namen des Geschäfts ein, fügen Sie optional ein Logo hinzu und prüfen Sie Währung, Steuersatz und Steuermodus (inklusive / exklusive). Die Währung ist zunächst die Ihres Landes; tippen Sie darauf, um aus 130 Währungen zu wählen."
+          "Wählen Sie Ihr Land oder Ihre Region. Oben in der Liste steht das Land bzw. die Region, in der sich dieses iPad befindet, danach die häufigsten Märkte; darunter finden Sie alle 175 Länder und Regionen, in denen DingPOS im App Store erhältlich ist – durchsuchbar nach Namen in der Sprache der App oder auf Englisch. Ihre Auswahl trägt Währung, Steuern und Steuermodus ein.",
+          "Geben Sie unter „Ihr Geschäft“ den Namen des Geschäfts ein, fügen Sie optional ein Logo hinzu und prüfen Sie Währung, Steuern und Steuermodus (inklusive / exklusive). Die Währung ist zunächst die Ihres Landes; tippen Sie darauf, um aus 130 Währungen zu wählen. Die Steuern zeigen die Standardsteuern Ihres Landes: Sie können sie umbenennen, einen Steuersatz ändern, eine Steuer löschen oder mit „Steuer hinzufügen“ eine weitere Zeile anlegen. Ein Geschäft in British Columbia ändert zum Beispiel die erste Zeile in „GST 5“ und fügt eine Zeile „PST 7“ hinzu."
         ]
       },
       {
@@ -104,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Währung und Steuermodus lassen sich nach der Einrichtung nicht mehr ändern; den Steuersatz können Sie später weiterhin in den Einstellungen ändern. In den USA, Kanada, Brasilien und Mikronesien hängt der Satz vom Bundesstaat, der Provinz oder der Stadt ab; das Feld für den Steuersatz bleibt deshalb zunächst leer, und Sie tragen den Satz ein, den Sie berechnen (0 ist erlaubt), um fortzufahren. Die Liste mit 175 Ländern und die Wahl der Währung gibt es seit v3.2; frühere Versionen boten 15 Länder an."
+        "text": "Die Währung lässt sich nach der Einrichtung nicht mehr ändern; Steuern und Steuermodus können Sie später beide unter Einstellungen → Geschäftsdaten ändern. In den USA, Kanada, Brasilien und Mikronesien hängt der Steuersatz vom Bundesstaat, der Provinz oder der Stadt ab; das Feld für den Steuersatz bleibt deshalb zunächst leer, und Sie tragen den von Ihnen berechneten Steuersatz ein, um fortzufahren. Ein Steuersatz muss größer als 0 sein: Ein Geschäft, das keine Steuer erhebt, löscht die Zeile. Die Liste mit 175 Ländern und die Wahl der Währung gibt es seit v3.2; frühere Versionen boten 15 Länder an."
       }
     ],
     "related": [
@@ -185,11 +186,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS unterstützt derzeit iPads mit iPadOS 17 oder neuer und ist vorrangig für das Querformat ausgelegt."
+        "text": "DingPOS unterstützt derzeit iPads mit iPadOS 17.4 oder neuer und ist vorrangig für das Querformat ausgelegt."
       },
       {
         "type": "p",
         "text": "iPhone und Mac werden noch nicht unterstützt. Wenn Sie sich ein weiteres Gerät wünschen, schreiben Sie uns und schildern Sie Ihren Einsatzzweck."
+      },
+      {
+        "type": "note",
+        "text": "Jedes iPad, auf dem iPadOS 17 läuft, lässt sich auf 17.4 aktualisieren – somit ist kein Modell ausgeschlossen. Ein iPad mit iPadOS 17.0–17.3 braucht zuerst ein Systemupdate unter Einstellungen → Allgemein → Softwareupdate, bevor sich DingPOS ab v3.5 installieren lässt."
       }
     ],
     "related": [
@@ -199,22 +204,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Kann ich Währung oder Steuermodus nach der Einrichtung ändern?",
+    "question": "Kann ich Währung, Steuersatz oder Steuermodus nach der Einrichtung ändern?",
     "keywords": [
       "Währung",
       "Steuermodus",
       "ändern",
       "gesperrt",
-      "Steuersatz"
+      "Steuersatz",
+      "Steuern",
+      "inklusive",
+      "exklusive"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Den Steuersatz können Sie jederzeit in den Einstellungen ändern – der neue Satz gilt nur für künftige Bestellungen."
+        "text": "Die Steuer lässt sich ändern, die Währung nicht. Steuern und Steuermodus ändern Sie beide in der Karte „Steuer“ unter Einstellungen → Geschäftsdaten; eine Änderung gilt nur für spätere Verkäufe: Frühere Bestellungen, Rückgaben und Berichte behalten die Steuerbeträge und den Modus, mit denen sie erfasst wurden."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Steuern: Sie können eine hinzufügen, umbenennen, ihren Satz ändern oder sie löschen – siehe „Wie wird die Steuer berechnet?“",
+          "Steuermodus (inklusive / exklusive): Tippen Sie auf den anderen Modus, und die Bestätigung rechnet ein Beispiel mit Ihrer ersten Steuer vor, etwa „Ein Artikel für NT$100 bei 5 % Steuer: Der Kunde zahlt NT$105“. Die Preise bleiben unverändert, und ein offener Warenkorb wird im neuen Modus neu berechnet, sobald Sie zur Kasse zurückkehren. Der Modus lässt sich seit v3.5 umstellen; frühere Versionen sperren ihn bei der Einrichtung.",
+          "Nach einer Umstellung erstattet eine vollständige Rückgabe die ursprüngliche Bestellung weiterhin so, wie sie war. Ein Umtausch (mit Ersatzartikeln) bei einer Bestellung, die im anderen Modus verkauft wurde, ist nicht möglich: Stellen Sie den Modus zurück, oder geben Sie die Artikel zurück und verkaufen Sie sie erneut."
+        ]
       },
       {
         "type": "p",
-        "text": "Währung und Steuermodus (inklusive / exklusive) sind nach Abschluss der Einrichtung gesperrt. Alle bisherigen Bestellungen wurden damit berechnet; eine Änderung mittendrin würde Ihre Berichte verfälschen. Prüfen Sie beides im Einrichtungsschritt „Ihr Geschäft“: Die Währung ist zunächst die Ihres Landes, und Sie können darauf tippen, um eine andere zu wählen."
+        "text": "Die Währung ist nach Abschluss der Einrichtung gesperrt. Alle bisherigen Bestellungen wurden in ihr erfasst; ein Wechsel mittendrin würde Ihre Berichte verfälschen. Prüfen Sie sie im Einrichtungsschritt „Ihr Geschäft“: Sie ist zunächst die Währung Ihres Landes, und Sie können darauf tippen, um eine andere zu wählen."
       },
       {
         "type": "note",
@@ -335,12 +351,16 @@ export const articles = [
       "Umsatzsteuer",
       "inklusive",
       "exklusive",
+      "mehrere Steuern",
+      "GST",
+      "PST",
+      "Steuer pausieren",
       "Beleg"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Die Steuer wird automatisch anhand des Steuermodus berechnet, den Sie bei der Einrichtung gewählt haben. Der Beleg weist den Steuerbetrag in beiden Modi aus:"
+        "text": "Die Steuer wird automatisch anhand der Steuern und des Steuermodus berechnet, die unter Einstellungen → Geschäftsdaten hinterlegt sind. Es gibt zwei Steuermodi, und der Beleg weist den Steuerbetrag in beiden aus:"
       },
       {
         "type": "list",
@@ -351,12 +371,34 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Die Berechnung erfolgt in dieser Reihenfolge: Artikelrabatte → Warenkorb-Rabatt → Steuer. Beträge werden kaufmännisch auf die Dezimalstellen der Währung gerundet (z. B. 0 bei TWD, 2 bei USD)."
+        "text": "Ein Laden kann mehrere Steuern berechnen, etwa GST 5 % plus PST 7 % in British Columbia oder Japans Verbrauchsteuer von 10 % neben dem ermäßigten Satz von 8 %:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tippen Sie auf der Karte „Steuer“ auf „Steuer hinzufügen“ und geben Sie einen Namen und einen Satz ein. Schalten Sie „Für neue Artikel übernehmen“ ein. Dann wird diese Steuer standardmäßig auf später hinzugefügte Artikel angewendet. Hat der Laden bereits eine Standardsteuer, ist der Schalter bei einer neu hinzugefügten Steuer zunächst ausgeschaltet. Schalten Sie ihn ein, wenn beide Steuern berechnet werden sollen.",
+          "Jeder Artikel legt im Artikelformular unter „Steuern“ fest, welche Steuern er berechnet – ein Bento könnte nur den ermäßigten Satz von 8 % berechnen. Sind zwei oder mehr eingeschaltet, zeigt das Formular die Gesamtsteuer auf den Artikel.",
+          "Tippen Sie auf eine Steuer, um sie umzubenennen oder ihren Satz zu ändern. Mit „Auf alle Artikel anwenden“ oder „Von allen Artikeln entfernen“ fügen Sie sie allen Artikeln auf einmal hinzu oder nehmen sie von allen herunter. Beim Löschen einer Steuer erfahren Sie zuvor, für wie viele Artikel sie nicht mehr berechnet wird.",
+          "In einem Laden mit exklusivem Steuermodus zeigen die Summen im Warenkorb eine Zeile pro Steuer, und die Bestelldetails führen pro Steuer eine Zeile mit Satz und dem Betrag, auf den sie berechnet wurde."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Um vorübergehend keine Steuer zu berechnen, schalten Sie oben auf der Karte „Steuer“ die Option „Steuer berechnen“ aus: Bei allen späteren Verkäufen wird keine Steuer berechnet, auch nicht für Artikel, die bereits in einem Warenkorb liegen. Jeder Artikel behält seine Steuern, und beim Wiedereinschalten gelten sie wieder wie zuvor."
+      },
+      {
+        "type": "p",
+        "text": "Die vollständige Berechnungsreihenfolge: Artikelrabatte und Aktionen → Warenkorb-Rabatt → Punkteeinlösung → Steuer. Beträge werden kaufmännisch auf die Dezimalstellen der Währung gerundet (z. B. 0 bei TWD, 2 bei USD)."
+      },
+      {
+        "type": "note",
+        "text": "Benannte Steuern gibt es seit Version 3.5. Beim Update wird Ihr bisheriger Steuersatz zu einer benannten Steuer (z. B. „GST 10 %“ in Australien), und jeder vorhandene Artikel übernimmt sie; bei einem Laden, dessen Satz 0 war, wird keine Steuer angelegt. Frühere Bestellungen und Berichte behalten ihre Zahlen."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -367,7 +409,7 @@ export const articles = [
       "Zahlungsart",
       "Bargeld",
       "Kreditkarte",
-      "Line Pay",
+      "LINE Pay",
       "Wechselgeld",
       "eigene Zahlungsart",
       "auf Rechnung",
@@ -376,11 +418,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ein neuer Laden startet mit zwei Zahlungsarten, Bargeld und Kreditkarte, die bei der Einrichtung in der Sprache der App benannt werden. Unter Einstellungen → Zahlungsarten können Sie beliebige weitere Zahlungsarten hinzufügen (z. B. Apple Pay, Line Pay oder eine lokale Wallet) sowie löschen oder umsortieren."
+        "text": "Ein neuer Laden startet mit zwei Zahlungsarten, Bargeld und Kreditkarte, die bei der Einrichtung in der Sprache der App benannt werden. Unter Einstellungen → Zahlungsarten können Sie beliebige weitere Zahlungsarten hinzufügen (z. B. Apple Pay, LINE Pay oder eine lokale Wallet) sowie löschen oder umsortieren."
       },
       {
         "type": "p",
-        "text": "Zahlungsarten sind reine Bezeichnungen für die Buchführung – DingPOS wickelt keine echten Zahlungen ab. Nehmen Sie Karten- oder mobile Zahlungen mit Ihrem bestehenden Terminal oder Ihrer App entgegen und wählen Sie dann in DingPOS die passende Bezeichnung, um sie zu erfassen. Bei Barzahlungen wird das Wechselgeld automatisch berechnet."
+        "text": "Zahlungsarten sind reine Bezeichnungen für die Buchführung – DingPOS wickelt keine echten Zahlungen ab. Nehmen Sie Karten- oder mobile Zahlungen mit Ihrem bestehenden Terminal oder Ihrer App entgegen und wählen Sie dann in DingPOS die passende Bezeichnung, um sie zu erfassen. Bei Barzahlungen wird das Wechselgeld automatisch berechnet, und wo die kleinsten Münzen nicht mehr verwendet werden, kann auch Bargeld gerundet werden – siehe „Kann DingPOS Barzahlungen auf die gängigen Münzen runden?“"
       },
       {
         "type": "p",
@@ -388,11 +430,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Für Stammkunden, die die Ware jetzt mitnehmen und später bezahlen, wählen Sie „Auf Rechnung“: Der Verkauf wird als offener Posten erfasst und beglichen, sobald das Geld eintrifft. Siehe „Können Stammkunden auf Rechnung kaufen und später bezahlen?“"
+        "text": "Für Stammkunden, die die Ware jetzt mitnehmen und später bezahlen, wählen Sie „Auf Rechnung“: Der Verkauf wird als offener Posten erfasst und beglichen, sobald das Geld eintrifft. Siehe „Können Stammkunden auf Rechnung kaufen und später zahlen?“"
       }
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -439,6 +482,55 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Kann DingPOS Barzahlungen auf die gängigen Münzen runden?",
+    "keywords": [
+      "Barrundung",
+      "Runden",
+      "aufrunden",
+      "abrunden",
+      "Münzen",
+      "Rappen",
+      "Cent",
+      "0,05",
+      "Wechselgeld",
+      "Kanada",
+      "Australien",
+      "Schweiz"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. In Kanada, Australien, Neuseeland, der Schweiz, Dänemark, Schweden, Norwegen, Belgien, Finnland und Ungarn werden die kleinsten Münzen nicht mehr verwendet, daher rundet DingPOS Bargeld auf einen Betrag, den man tatsächlich übergeben kann: Eine Barzahlung über 12,99 C$ wird mit 13,00 C$ angenommen, und das Wechselgeld wird von 13,00 C$ aus berechnet. Karten- und andere unbare Zahlungen bleiben exakt."
+      },
+      {
+        "type": "p",
+        "text": "Ein neuer Laden, der in einem dieser Länder mit der Landeswährung eingerichtet wird, erhält die Rundung automatisch. Jeder andere Laden kann sie mit der Karte „Barrundung“ ganz unten unter Einstellungen → Zahlungsarten einschalten: Wählen Sie, worauf Bargeld gerundet wird („Keine Rundung“, 0,05, 0,10, 0,50 oder 1,00) und – bei einem Rundungsschritt, der genau in der Mitte landen kann – ob dann auf- oder abgerundet wird. Eine Änderung gilt nur für spätere Zahlungen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Beim Bezahlen steht „Bar angenommen 13,00 C$“. Möchte der Kunde den genauen Betrag zahlen, tippen Sie unter den Zahlungsarten auf „Genauen Betrag annehmen“; das gilt nur für diesen einen Verkauf.",
+          "Gesamtsumme der Bestellung, Steuer, Umsatz, Punkte und Einkaufssumme des Kunden ändern sich nicht; der Rundungsbetrag hängt an der Zahlung, und die Belegansicht sowie die Bestelldetails zeigen ihn unter der Summe an, etwa „Barrundung +0,01 C$“.",
+          "Auch Barerstattungen bei Rückgaben, Barzahlungen von Anzahlungen und Restbeträgen bei der Abholung von Vorbestellungen, Aufzahlungen beim Umtausch sowie bar beglichene offene Posten werden gerundet. Werden mehrere Beträge auf einmal beglichen, wird ihre Summe nur einmal gerundet.",
+          "Annullierungen, erstattete Anzahlungen von Vorbestellungen und rückgängig gemachte Begleichungen zahlen genau den erfassten Betrag zurück, ohne erneut zu runden.",
+          "Der Zahlungseingang in der Statistik zeigt, wie viel davon Barrundung war, und die monatliche GuV erhält eine Zeile „Barrundung“, die in den Reingewinn einfließt. Rundung ist nie Umsatz."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Die Schweiz rundet gemäß ihren Regeln zur Preisanzeige immer ab – CHF 12,98 werden als CHF 12,95 angenommen, und eine Wahl für die Mitte gibt es nicht. Belgien rundet nur Summen über 0,05 €. Die Barrundung ist in jedem Tarif enthalten, und ein bestehender Laden nimmt Bargeld wie bisher exakt an, bis Sie sie einschalten."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -616,7 +708,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Öffnen Sie Verkäufe, suchen Sie die Bestellung, rufen Sie die Detailansicht auf und wählen Sie Annullieren. Bestätigen Sie – fertig."
+        "text": "Öffnen Sie Verkäufe, suchen Sie die Bestellung, rufen Sie die Detailansicht auf und tippen Sie auf Annullieren. Im Fenster „Diese Bestellung annullieren?“ können Sie optional einen Grund eintragen (bis zu 100 Zeichen); tippen Sie oben rechts auf Annullieren – fertig. Der Grund erscheint in der Detailansicht der Bestellung und im Aktivitätsprotokoll und lässt sich nach dem Absenden nicht mehr ändern."
       },
       {
         "type": "p",
@@ -643,7 +735,9 @@ export const articles = [
       "Umtausch",
       "Erstattung",
       "Teilrückgabe",
-      "Größe tauschen"
+      "Größe tauschen",
+      "Ware entsorgen",
+      "Rückgabegrund"
     ],
     "content": [
       {
@@ -656,9 +750,15 @@ export const articles = [
           "Die ursprüngliche Bestellung wird nie verändert. Eine Rückgabe erzeugt einen eigenen Beleg mit dem heutigen Datum und dem Nummernpräfix R; der Umsatz sinkt am Tag der Rückgabe.",
           "Erstattet wird, was der Kunde für den Artikel tatsächlich bezahlt hat – Artikelrabatte, Warenkorbrabatte und eingelöste Punkte sind bereits anteilig herausgerechnet, es wird also nicht zum Listenpreis erstattet. Die Steuer richtet sich nach dem Satz, mit dem die ursprüngliche Bestellung berechnet wurde.",
           "Ersatzartikel werden zum heutigen Preis berechnet, ohne Aktionen oder Rabatte.",
-          "Der erfasste Bestand wird automatisch wieder gutgeschrieben. Punkte aus der ursprünglichen Bestellung werden abgezogen, eingelöste Punkte zurückgegeben, und Ersatzartikel sammeln eigene Punkte.",
-          "Eine Bestellung kann in mehreren Runden zurückgegeben werden, aber nie über die ursprünglich verkaufte Menge hinaus. Nutzungslimits von Aktionen werden durch eine Rückgabe nicht zurückgesetzt."
+          "Bei einem Artikel mit erfasstem Bestand kann jede zurückgegebene Zeile zurück in den Bestand (Einlagern, voreingestellt) oder entsorgt werden (Entsorgen, seit Version 3.5). Einlagern schreibt den Bestand wieder gut. Entsorgen lässt den Bestand unverändert und rechnet die Kosten, die der Artikel beim Verkauf hatte, dem Bestandsverlust des Monats in der GuV zu. Erstattung, Steuer und Punkte sind in beiden Fällen gleich.",
+          "Punkte aus der ursprünglichen Bestellung werden abgezogen, eingelöste Punkte zurückgegeben, und Ersatzartikel sammeln eigene Punkte.",
+          "Ist die ursprüngliche Bestellung ein noch nicht beglichener Verkauf auf Rechnung, fließt kein Geld: Die Rückgabe wird von den offenen Posten des Kunden abgezogen, und ein teurerer Ersatzartikel erhöht diese um die Differenz.",
+          "Eine Bestellung kann in mehreren Runden zurückgegeben werden, aber nie über die ursprünglich verkaufte Menge hinaus; sind alle Artikel zurück, ergeben Steuer, Rabatte und Punkte der Rückgaben zusammen genau die Werte der ursprünglichen Bestellung. Nutzungslimits von Aktionen werden durch eine Rückgabe nicht zurückgesetzt."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Der Grund ist optional (bis zu 100 Zeichen). Er erscheint in der Detailansicht der Bestellung und im Aktivitätsprotokoll und lässt sich nach dem Absenden nicht mehr ändern."
       },
       {
         "type": "note",
@@ -732,13 +832,14 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zum Kassieren stellen Sie oben in Verkäufe auf Offene Posten um. Die Schulden sind nach Kunden gruppiert; öffnen Sie einen Kunden, um eine einzelne Bestellung, einen ganzen Monat oder alles zu begleichen – jedes Mal fragt DingPOS, wie das Geld bezahlt wurde. Eine einzelne Bestellung lässt sich auch in ihrer Detailansicht begleichen, und eine versehentlich erfasste Begleichung können Sie mit Begleichung rückgängig machen zurücknehmen."
+        "text": "Zum Einziehen wechseln Sie oben in „Verkäufe“ zu „Offene Posten“. Die offenen Beträge sind nach Kunden gruppiert; öffnen Sie einen Kunden, um eine einzelne Bestellung, einen ganzen Monat oder alle offenen Beträge zu begleichen – DingPOS fragt Sie jedes Mal, welche Zahlungsart verwendet wurde. Eine einzelne Bestellung lässt sich auch in ihrer Detailansicht begleichen; eine versehentlich erfasste Begleichung können Sie über „Begleichung rückgängig machen“ zurücknehmen."
       },
       {
         "type": "list",
         "items": [
           "Der Umsatz zählt an dem Tag, an dem die Ware den Laden verlässt; Zahlungseingang und Treuepunkte folgen erst am Tag der Begleichung.",
           "Unbeglichene Bestellungen tragen in der Liste ein bernsteinfarbenes Abzeichen, und die Kundendetails zeigen, wie viel der Kunde aktuell schuldet.",
+          "Bei einer Rückgabe zu einer noch nicht beglichenen Bestellung fließt kein Geld: Der Betrag wird von den offenen Posten des Kunden abgezogen.",
           "Ein Kunde mit unbeglichenen Bestellungen kann nicht gelöscht werden."
         ]
       },
@@ -807,7 +908,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Namen von Optionen und Optionswerten sind auf 20 Zeichen begrenzt und dürfen nicht leer sein: Ein leerer Options- oder Wertname wird beim Sichern rot umrandet – füllen Sie ihn aus oder löschen Sie den leeren Wert. Ein Artikel mit Varianten kann keinen freien Preis verwenden."
+        "text": "Namen von Optionen und Optionswerten sind auf 20 Zeichen begrenzt; Leerzeichen am Anfang und Ende werden beim Sichern entfernt. Ein Wert, in den Sie nichts eingetragen haben, ist keine Kombination und wird beim Sichern übersprungen; nur ein leerer Optionsname oder eine Option, deren Werte alle leer sind, wird rot umrandet. Ein Artikel mit Varianten kann keinen freien Preis verwenden."
       }
     ],
     "related": [
@@ -932,7 +1033,8 @@ export const articles = [
       "Bestandsführung",
       "Inventur",
       "Mindestbestand",
-      "niedriger Bestand"
+      "niedriger Bestand",
+      "Bestand korrigieren"
     ],
     "content": [
       {
@@ -941,12 +1043,73 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ist sie aktiv, buchen Verkäufe und Vorbestellungen den Bestand automatisch ab; Annullierungen, Rückgaben und stornierte Vorbestellungen buchen ihn zurück; ein Wareneingang einer Einkaufsbestellung erhöht ihn; und Sie können ihn jederzeit manuell anpassen. Jede Bewegung wird lückenlos protokolliert. Niedriger Bestand wird farbig hervorgehoben."
+        "text": "Ist sie aktiv, buchen Verkäufe und Vorbestellungen den Bestand automatisch ab; Annullierungen, Rückgaben und stornierte Vorbestellungen buchen ihn zurück; ein Wareneingang einer Einkaufsbestellung erhöht ihn. Jede Bewegung wird lückenlos protokolliert. Niedriger Bestand wird farbig hervorgehoben."
+      },
+      {
+        "type": "p",
+        "text": "Von Hand ändern Sie die Zahl auf zwei Arten:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Neuzählung: Ändern Sie die Bestandszahl im Artikelformular auf das, was Sie tatsächlich gezählt haben. Sie wirkt sich nie auf die GuV aus.",
+          "Bestand korrigieren (seit v3.5): Tippen Sie in den Artikeldetails auf „Bestand korrigieren“, wählen Sie „Entfernen“ oder „Hinzufügen“, die Menge und einen Grund, etwa „Abgelaufen/verdorben“, „Beschädigt“ oder „Proben & Geschenke“. Die Kosten der entfernten Ware zählen zum Bestandsverlust des Monats in der GuV – siehe „Wie erfasse ich Ware, die abgelaufen, beschädigt oder als Probe abgegeben wurde?“"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Wie erfasse ich Ware, die abgelaufen, beschädigt oder als Probe abgegeben wurde?",
+    "keywords": [
+      "Bestand korrigieren",
+      "Bestandskorrektur",
+      "Bestandsverlust",
+      "Schwund",
+      "Abschreibung",
+      "Ausschuss",
+      "abgelaufen",
+      "verdorben",
+      "beschädigt",
+      "Proben",
+      "Ladenbedarf",
+      "Neuzählung"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Nutzen Sie „Bestand korrigieren“. Tippen Sie bei einem Artikel mit Bestandsführung in den Artikeldetails auf „Bestand korrigieren“, wählen Sie „Entfernen“ oder „Hinzufügen“, geben Sie die Menge ein, wählen Sie einen Grund und ergänzen Sie optional eine Notiz (bis zu 100 Zeichen). Das Fenster berechnet den Bestand nach der Änderung, und die Zeile unter dem Grund zeigt an, ob die Änderung die GuV betrifft."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Gründe zum Entfernen: Materialverbrauch, Abgelaufen/verdorben, Beschädigt, Verloren/gestohlen, Personalverbrauch, Proben & Geschenke, Ladenbedarf und Sonstiges. Gründe zum Hinzufügen: Selbst hergestellt, Wiedergefunden und Sonstiges. „Sonstiges“ erfordert eine Notiz.",
+          "Außer bei „Materialverbrauch“ zählt das Entfernte mit seinem Einkaufspreis zum Zeitpunkt der Korrektur zum Bestandsverlust des Monats in der GuV. Dieser steht nach dem Rohertrag und mindert den Reingewinn; Rohertrag und Marge bleiben unverändert. „Materialverbrauch“ senkt nur den Bestand, weil die Kosten eines Materials bereits in den Kosten des daraus hergestellten Artikels stecken.",
+          "„Wiedergefunden“ zieht denselben Betrag wieder vom Bestandsverlust ab. „Selbst hergestellt“ und „Sonstiges“ beim Hinzufügen erhöhen nur den Bestand und wirken sich nie auf die GuV aus.",
+          "Eine Korrektur zählt an dem Tag, an dem Sie sie erfassen. Sie lässt sich weder rückdatieren noch bearbeiten oder löschen; einen Fehler beheben Sie, indem Sie „Wiedergefunden“ oder eine Korrektur in die Gegenrichtung erfassen.",
+          "Ein Artikel ohne Einkaufspreis lässt sich trotzdem korrigieren, doch die GuV kann dafür keinen Betrag ansetzen; der Monat vermerkt, wie viele Einträge keinen Einkaufspreis hatten."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Wenn Sie die Bestandszahl im Artikelformular ändern, ist das eine Neuzählung: Sie gleicht den Bestand mit dem ab, was Sie tatsächlich gezählt haben, und wirkt sich nie auf die GuV aus. Die Liste der Bestandsbewegungen unter „Statistik“ filtert Korrekturen und Neuzählungen getrennt, und das Aktivitätsprotokoll zeigt zu jeder Korrektur Grund und Notiz."
+      },
+      {
+        "type": "note",
+        "text": "„Bestand korrigieren“ erfordert den Tarif Standard oder höher. Im Tarif Pro wird Mitarbeiter:innen, deren Rolle für „Manuelle Bestandskorrektur“ eine Freigabe braucht, beim Bestätigen die PIN eines Managers abgefragt."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -968,7 +1131,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ein negativer Bestand bedeutet meist, dass ein Wareneingang nicht erfasst wurde oder ein vorbestellter Artikel noch nicht eingetroffen ist (Vorbestellungen buchen den Bestand schon bei der Aufnahme ab). Erfassen Sie Nachschub über den Wareneingang einer Einkaufsbestellung, dann gleicht sich die Zahl von selbst aus; Differenzen aus der Inventur korrigieren Sie mit einer manuellen Anpassung, die im Bewegungsprotokoll erhalten bleibt."
+        "text": "Ein negativer Bestand bedeutet meist, dass ein Wareneingang nicht erfasst wurde oder ein vorbestellter Artikel noch nicht eingetroffen ist (Vorbestellungen buchen den Bestand schon bei der Aufnahme ab). Erfassen Sie Nachschub über den Wareneingang einer Einkaufsbestellung, dann gleicht sich die Zahl von selbst aus. Eine Differenz aus der Inventur beheben Sie, indem Sie die Bestandszahl im Artikelformular ändern (eine Neuzählung); für Ware, die kaputtgegangen, abgelaufen oder verschenkt wurde, erfassen Sie den Grund mit „Bestand korrigieren“. Beides bleibt im Bewegungsprotokoll erhalten."
       },
       {
         "type": "note",
@@ -1012,14 +1175,64 @@ export const articles = [
         "text": "Das Zahlungsziel entscheidet über den weiteren Ablauf: Bestellungen mit sofortiger Zahlung gelten als bezahlt, monatliche Bestellungen bleiben unter „Zu zahlen“ offen. Dort begleichen Sie sie pro Lieferant – einzelne Bestellung, diesen Monat oder alles."
       },
       {
+        "type": "p",
+        "text": "Material, das Sie nicht verkaufen, etwa Mehl oder Verpackung, lässt sich auf dieselbe Weise einkaufen: Legen Sie es als Artikel an, der nicht im Verkauf ist – siehe „Kann ich Material wie Mehl oder Verpackung als Artikel anlegen?“"
+      },
+      {
         "type": "note",
         "text": "Der Einkauf erfordert den Tarif Standard oder höher. Ein Lieferant mit unbezahlten, eingegangenen Bestellungen kann nicht gelöscht werden."
       }
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Kann ich Material wie Mehl oder Verpackung als Artikel anlegen?",
+    "keywords": [
+      "nicht im Verkauf",
+      "Material",
+      "Rohstoffe",
+      "Zutaten",
+      "Verpackung",
+      "Verbrauchsmaterial",
+      "An der Kasse verkaufen",
+      "Einkauf",
+      "Einkaufspreis"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Schalten Sie im Artikelformular unter dem Foto „An der Kasse verkaufen“ aus (standardmäßig ist es an), und der Artikel ist nicht im Verkauf: Er braucht keinen Preis, behält Einkaufspreis, Barcode, Bestand und Varianten, und die Artikelliste zeigt statt des Preises „Nicht im Verkauf“."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ein Artikel, der nicht im Verkauf ist, erscheint nie im Kassenraster, in Kategorien, in der Suche oder beim Scannen von Barcodes und kann weder Geschenk, Zusatzartikel, Ziel einer Aktion noch Ersatzartikel bei einem Umtausch sein.",
+          "Einkaufsbestellungen, Wareneingang, „Einkaufspreis des Artikels übernehmen“ und „Zu zahlen“ funktionieren genau wie bei anderen Artikeln, sodass sich Einkaufspreis und Bestand eines Materials über „Einkauf“ erfassen lassen.",
+          "Der Verkauf anderer Artikel senkt seinen Bestand nicht. Wenn Sie etwas davon verbrauchen, erfassen Sie eine Entnahme mit „Bestand korrigieren“ in den Artikeldetails: „Materialverbrauch“ für das, was in Artikel eingegangen ist, „Ladenbedarf“ für Dinge wie Papiertüten oder Reinigungsmittel.",
+          "Sie können die Option jederzeit wieder einschalten; Preis und Steuern sind weiterhin vorhanden. Bereits erfasste Verkäufe und Berichte bleiben unberührt."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "So gelangen die Kosten in die GuV: Einkäufe zählen dort nicht direkt. Bei einem Artikel, der aus dem Material hergestellt wird, tragen Sie die Kosten beim fertigen Artikel ein; sie werden abgezogen, wenn dieser Artikel verkauft wird. Verbrauchsmaterial, das in keinem Artikelpreis steckt, wird beim Verbrauch als „Ladenbedarf“ erfasst, wenn sein Bestand geführt wird, andernfalls als einmalige Ausgabe. Erfassen Sie denselben Betrag nicht auf beiden Wegen, sonst wird er doppelt gezählt."
+      },
+      {
+        "type": "note",
+        "text": "Artikel, die nicht im Verkauf sind, gibt es in jedem Tarif; Einkauf, Bestandsführung und „Bestand korrigieren“ erfordern den Tarif Standard oder höher."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1038,7 +1251,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Der Umsatz zählt an dem Tag, an dem die Ware übergeben wurde; der Zahlungseingang zählt an dem Tag, an dem das Geld eingeht. Bei einem Verkauf, der an der Kasse bezahlt wird, fallen beide auf denselben Tag, und die Zahlen stimmen überein. Auseinander laufen sie in diesen Fällen:"
+        "text": "Der Umsatz zählt an dem Tag, an dem die Ware übergeben wurde, nach allen Rabatten und vor Steuern; der Zahlungseingang zählt an dem Tag, an dem das Geld eingeht, und ist das Geld, das Sie tatsächlich eingenommen haben – inklusive Steuer. In einem Laden, der Steuer berechnet, liegt der Zahlungseingang deshalb um die Steuer über dem Umsatz, selbst bei Bestellungen, die an der Kasse bezahlt werden. Darüber hinaus laufen beide in diesen Fällen auseinander:"
       },
       {
         "type": "list",
@@ -1046,12 +1259,17 @@ export const articles = [
           "Verkauf auf Rechnung: Die Ware verlässt den Laden heute und zählt zum Umsatz von heute; das Geld zählt an dem Tag zum Zahlungseingang, an dem die Begleichung erfolgt.",
           "Vorbestellung: Die Anzahlung zählt zum Zahlungseingang, sobald sie bezahlt wird; der Umsatz wird am Abholtag in voller Höhe erfasst.",
           "Verfall der Anzahlung: Storniert ein Kunde eine Vorbestellung und Sie behalten die Anzahlung, wurde sie beim Bezahlen bereits als Zahlungseingang gezählt. In der Statistik erscheint sie separat als verfallene Anzahlungen und zählt nie als Umsatz.",
-          "Annullierung einer früheren Bestellung: Das erstattete Geld zählt am Tag der Annullierung zum Zahlungseingang, sodass der Zahlungseingang dieses Tages negativ sein kann, während „Annulliert“ die Bestellung an ihrem Verkaufstag zählt. Das ⓘ an den Kacheln „Zahlungseingang“ und „Annulliert“ erklärt dasselbe."
+          "Annullierung einer früheren Bestellung: Das erstattete Geld zählt am Tag der Annullierung zum Zahlungseingang, sodass der Zahlungseingang dieses Tages negativ sein kann, während „Annulliert“ die Bestellung an ihrem Verkaufstag zählt.",
+          "Barrundung: Was die Barrundung gegenüber dem Bestellbetrag zu viel oder zu wenig einnimmt, zählt zum Zahlungseingang, nie zum Umsatz."
         ]
       },
       {
         "type": "p",
-        "text": "Für den Abgleich vergleichen Sie den Zahlungseingang mit dem Bargeldbestand in der Kassenschublade und den Angaben Ihres Kartenterminals; wie viel Sie in einem Zeitraum tatsächlich verkauft haben, sehen Sie am Umsatz. Rückgaben mindern den Umsatz an dem Tag, an dem sie stattfinden."
+        "text": "Für den Abgleich vergleichen Sie den Zahlungseingang mit dem Bargeldbestand in der Kassenschublade und den Angaben Ihres Kartenterminals; wie viel Sie in einem Zeitraum tatsächlich verkauft haben, sehen Sie am Umsatz. Rückgaben mindern den Umsatz an dem Tag, an dem sie stattfinden. Das ⓘ an den Kacheln „Umsatz“, „Zahlungseingang“ und „Annulliert“ erklärt dasselbe, und die Steuer selbst steht unter „Vom Umsatz zum Rohertrag“, das sich über die Kachel „Rohertrag“ öffnen lässt."
+      },
+      {
+        "type": "note",
+        "text": "Den Umsatz vor Steuern gibt es seit Version 3.5, und vergangene Zeiträume wurden auf dieselbe Weise neu berechnet; ein Laden, der Steuer berechnet, sieht deshalb einen niedrigeren Umsatz als vor dem Update. Das ist eine Korrektur. Frühere Versionen rechneten die Steuer zum Umsatz, und Läden mit exklusiver Steuer (Preise ohne Steuer) zählten sogar die eingenommene Umsatzsteuer als Umsatz."
       }
     ],
     "related": [
@@ -1081,15 +1299,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Für einen einzelnen Tag wird das Verlaufsdiagramm zu einem Balkendiagramm nach Stunden; längere Zeiträume zeigen je nach Länge Tage, Wochen, Monate oder Jahre pro Balken."
+        "text": "Unter der Zeitraumleiste folgen zwei Reihen mit Kennzahl-Kacheln (Umsatz, Zahlungseingang, Rohertrag, Bestellungen, Durchschnittlicher Bestellwert; Rabatte gesamt, Reingewinn, Artikel ohne Einkaufspreis, Bediente Kunden), danach das Verlaufsdiagramm. Über das Menü oben rechts im Verlaufsdiagramm wechseln Sie zwischen Umsatz, Bestellungen, durchschnittlichem Bestellwert und bedienten Kunden; daneben zeigt das Diagramm „Kosten und Rohertrag“ in einem Balken pro Zeitraum den Wareneinsatz und den Rohertrag übereinandergestapelt. Ein einzelner Tag wird nach Stunden dargestellt; längere Zeiträume zeigen je nach Länge Tage, Wochen, Monate oder Jahre."
       },
       {
         "type": "p",
-        "text": "Seit Version 3.4 können Sie das Diagramm Umsatzverlauf oder Rohertragsverlauf gedrückt halten, um es Zeitraum für Zeitraum abzulesen: Eine Karte zeigt das Datum sowie den Umsatz bzw. Rohertrag dieses Zeitraums, und beim Umsatzverlauf mit eingeschaltetem Umsatzvergleich zusätzlich den Umsatz des Vergleichszeitraums und die Differenz. Ziehen Sie nach links oder rechts, um weiterzugehen; wischen Sie auf dem Diagramm nach oben oder unten, scrollt die Seite wie gewohnt."
+        "text": "Halten Sie das Verlaufsdiagramm oder das Diagramm „Kosten und Rohertrag“ gedrückt, um es Zeitraum für Zeitraum abzulesen; bei eingeschaltetem Umsatzvergleich zeigt die Karte des Verlaufsdiagramms den Wert dieses Zeitraums und den des Vergleichszeitraums nebeneinander. Ziehen Sie nach links oder rechts, um weiterzugehen; wischen Sie auf dem Diagramm nach oben oder unten, scrollt die Seite wie gewohnt."
       },
       {
         "type": "p",
-        "text": "Die Karte Artikel-Ranking listet die Top 5. Tippen Sie auf die Karte oder auf „Alle anzeigen“, um jeden im Zeitraum verkauften Artikel zu sehen, sortiert nach Menge nach Rückgaben."
+        "text": "Die Karte Artikel-Ranking listet die Top 5. Tippen Sie auf die Karte oder auf „Alle anzeigen“, um jeden im Zeitraum verkauften Artikel zu sehen, sortiert nach Menge nach Rückgaben; ein Artikel mit Varianten erhält eine Zeile pro Variante."
       },
       {
         "type": "p",
@@ -1119,6 +1337,7 @@ export const articles = [
       "Stoßzeiten",
       "Ladenhüter",
       "Auf- und Absteiger",
+      "Anteil nach Kategorie",
       "Lagerwert",
       "Wiederkaufrate",
       "Punkte"
@@ -1131,11 +1350,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Umsatzvergleich: Rechts in der Zeitraumleiste vergleichen Sie mit demselben Zeitraum im Vorjahr oder mit dem Zeitraum davor (ein einzelner Tag mit demselben Tag der Vorwoche, diese Woche mit der letzten Woche, dieser Monat mit dem letzten Monat, dieses Jahr mit dem letzten Jahr, ein benutzerdefinierter Zeitraum mit der gleichen Anzahl Tage davor). Die Kachel Zahlungseingang zeigt die Differenz und die Wachstumsrate, und das Umsatzdiagramm erhält eine hellere Linie für den Vergleichszeitraum. Läuft ein Zeitraum noch, wird der Vergleichszeitraum zum gleichen Zeitpunkt abgeschnitten.",
-          "Wochentag × Uhrzeit: Stellen Sie die Kopfzeile „Umsatz im Zeitverlauf“ auf Wochentag × Uhrzeit um und sehen Sie eine Heatmap mit sieben Tagen und 24 Stunden – je dunkler ein Feld, desto mehr haben Sie verkauft. Wechseln Sie zwischen Umsatz und Bestellungen; bei eingeschaltetem Vergleich sehen Sie, welche Stunden gewachsen und welche geschrumpft sind.",
-          "Ladenhüter: Stellen Sie die Kopfzeile der Ranking-Karte auf Ladenhüter um, um Artikel von den wenigsten bis zu den meisten Verkäufen aufzulisten, mit aktuellem Bestand und dem Datum des letzten Verkaufs. Artikel, die nie verkauft wurden, sind mit „Nie verkauft“ markiert. Standardmäßig werden nur Artikel mit Bestand angezeigt.",
-          "Auf und ab (seit Version 3.4): Stellen Sie die Kopfzeile der Ranking-Karte auf Auf und ab um, um die 3 Artikel zu sehen, deren Umsatz gegenüber dem Vergleichszeitraum am stärksten gestiegen ist, und die 3, deren Umsatz am stärksten gefallen ist – jeweils mit dem Umsatz beider Zeiträume und der Differenz. Wählen Sie vorher unter Umsatzvergleich einen Zeitraum; bei „Keiner“ oder bei Gesamter Zeitraum weist die Karte Sie darauf hin. Tippen Sie auf die Karte oder auf „Alle anzeigen“ für die vollständige Liste „Auf- und Absteiger bei Artikeln“, aufgeteilt in Aufsteiger und Absteiger.",
-          "Wiederkaufrate: Die letzte Zeile der Kundenkachel zeigt den Anteil der Mitglieder, die im Zeitraum gekauft haben und insgesamt mindestens zweimal gekauft haben.",
+          "Umsatzvergleich: Rechts in der Zeitraumleiste vergleichen Sie mit demselben Zeitraum im Vorjahr oder mit dem Zeitraum davor (ein einzelner Tag mit demselben Tag der Vorwoche, diese Woche mit der letzten Woche, dieser Monat mit dem letzten Monat, dieses Jahr mit dem letzten Jahr, ein benutzerdefinierter Zeitraum mit der gleichen Anzahl Tage davor). Die Kacheln Umsatz, Zahlungseingang, Rohertrag, Bestellungen, Durchschnittlicher Bestellwert, Rabatte gesamt und Bediente Kunden zeigen jeweils die Veränderung und den Wert des Vergleichszeitraums, etwa „▼ 3 % ggü. Vormonat“; die Veränderung bei „Rabatte gesamt“ ist immer grau, denn mehr Rabatt ist an sich weder gut noch schlecht. Tippen Sie auf eine beliebige Vergleichszeile, um „Zeitraumvergleich“ zu öffnen, der die Werte beider Zeiträume auflistet. Das Verlaufsdiagramm erhält eine hellere Linie für den Vergleichszeitraum. Läuft ein Zeitraum noch, wird der Vergleichszeitraum zum gleichen Zeitpunkt abgeschnitten.",
+          "Wochentag × Uhrzeit: Stellen Sie die Kopfzeile des Verlaufsdiagramms von „Verlauf“ auf „Wochentag × Uhrzeit“ um und sehen Sie eine Heatmap mit sieben Tagen und 24 Stunden – je dunkler ein Feld, desto mehr haben Sie verkauft. Wechseln Sie zwischen Umsatz und Bestellungen; bei eingeschaltetem Vergleich sehen Sie, welche Stunden gewachsen und welche geschrumpft sind.",
+          "Ladenhüter: Stellen Sie die Kopfzeile der Ranking-Karte auf Ladenhüter um, um Artikel von den wenigsten bis zu den meisten Verkäufen aufzulisten, mit aktuellem Bestand und dem Datum des letzten Verkaufs. Artikel, die nie verkauft wurden, sind mit „Nie verkauft“ markiert, und ein Artikel mit Varianten erhält eine Zeile pro Variante. Standardmäßig werden nur Artikel mit Bestand angezeigt.",
+          "Auf und ab (seit Version 3.4): Stellen Sie die Kopfzeile der Ranking-Karte auf Auf und ab um, um die 3 Artikel zu sehen, deren Umsatz gegenüber dem Vergleichszeitraum am stärksten gestiegen ist, und die 3, deren Umsatz am stärksten gefallen ist – jeweils mit dem Umsatz beider Zeiträume und der Differenz; jede Variante wird mit sich selbst verglichen. Wählen Sie vorher unter Umsatzvergleich einen Zeitraum; bei „Keiner“ oder bei Gesamter Zeitraum weist die Karte Sie darauf hin. Tippen Sie auf die Karte oder auf „Alle anzeigen“ für die vollständige Liste „Auf- und Absteiger bei Artikeln“, aufgeteilt in Aufsteiger und Absteiger.",
+          "Wiederkaufrate: Die letzte Zeile der Kundenkachel zeigt den Anteil der Mitglieder, die im Zeitraum gekauft haben und insgesamt mindestens zweimal gekauft haben. Bei eingeschaltetem Vergleich nennt eine Zeile darunter die Veränderung in Prozentpunkten und die Rate des Vergleichszeitraums.",
+          "Anteil nach Kategorie: Umsatz und Anteil jeder Kategorie, nach der aktuellen Kategorie des jeweiligen Artikels, die größte zuerst. Artikel ohne Kategorie stehen unter „Ohne Kategorie“, und die Zeilen ergeben genau den Umsatz.",
           "Aktuell: Lagerwert (aktueller Bestand × aktueller Einkaufspreis), alle Lagerbewegungen im gewählten Zeitraum sowie die Punkte, die Kunden besitzen, aber noch nicht eingelöst haben, samt dem höchstmöglichen Abzug. Das sind aktuelle Stände; der Zeitraum ändert sie nicht."
         ]
       },
@@ -1171,24 +1391,28 @@ export const articles = [
       "Berichte",
       "nicht erfasst",
       "fehlender Einkaufspreis",
-      "Rohertrag erfasst"
+      "Artikel ohne Einkaufspreis"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Der Einkaufspreis ist ein optionales Feld. Artikel ohne Einkaufspreis bleiben im Rohertrag unberücksichtigt, ihr Umsatz zählt aber weiterhin vollständig. Die Karte „Rohertrag erfasst“ in der Statistik zeigt, wie viele im Zeitraum verkaufte Artikel keinen Einkaufspreis haben; ein Einkaufspreis von 0 gilt als Einkaufspreis, solche Artikel werden also nicht aufgeführt."
+        "text": "Der Einkaufspreis ist ein optionales Feld. Artikel ohne Einkaufspreis bleiben im Rohertrag unberücksichtigt, ihr Umsatz zählt aber weiterhin vollständig. Die Kachel „Artikel ohne Einkaufspreis“ in der Statistik zeigt, wie viele im Zeitraum verkaufte oder zurückgegebene Artikel keinen Einkaufspreis haben, etwa „12 Artikel“. Ein Einkaufspreis von 0 gilt als Einkaufspreis, solche Artikel werden also nicht aufgeführt; hat jeder Artikel einen, steht auf der Kachel „0 Artikel · Einkaufspreise vollständig“."
       },
       {
         "type": "p",
-        "text": "Tippen Sie auf die Karte oder auf „Artikel ansehen“, um „Artikel ohne Einkaufspreis“ zu öffnen, sortiert nach dem Umsatz, der im Rohertrag fehlt. Tippen Sie auf eine Zeile, um den Artikel zu öffnen, tragen Sie über „Bearbeiten“ den Einkaufspreis nach, und die Zeile ist bei Ihrer Rückkehr mit „Einkaufspreis ergänzt“ markiert. Ein Artikel mit Varianten gilt erst dann als „Einkaufspreis ergänzt“, wenn jede ohne Einkaufspreis verkaufte Variante einen hat – ihren eigenen oder den des Artikels, der dann für sie gilt."
+        "text": "Tippen Sie auf die Kachel oder auf „Artikel ansehen“, um „Artikel ohne Einkaufspreis“ zu öffnen, sortiert nach dem Umsatz, der im Rohertrag fehlt. Tippen Sie auf eine Zeile, um den Artikel zu öffnen, tragen Sie über „Bearbeiten“ den Einkaufspreis nach, und die Zeile ist bei Ihrer Rückkehr mit „Einkaufspreis ergänzt“ markiert. Ein Artikel mit Varianten gilt erst dann als „Einkaufspreis ergänzt“, wenn jede ohne Einkaufspreis verkaufte Variante einen hat – ihren eigenen oder den des Artikels, der dann für sie gilt."
       },
       {
         "type": "p",
-        "text": "Der Rohertrag ist der Umsatz nach allen Rabatten (Artikel- und Warenkorbrabatte, Aktionen, Punkteeinlösung) und vor Steuern, abzüglich des Einkaufspreises – deshalb heißt das Feld „Einkaufspreis ohne Steuer (optional)“: Tragen Sie ein, was Sie vor Steuern bezahlt haben. Die Marge ist der Rohertrag geteilt durch den Umsatz vor Steuern der Artikel mit Einkaufspreis, sodass Artikel ohne Einkaufspreis sie nicht drücken. Eine Rückgabe nimmt an ihrem Tag den Rohertrag zurück, den diese Artikel eingebracht hatten."
+        "text": "Der Rohertrag ist der Umsatz nach allen Rabatten (Artikel- und Warenkorbrabatte, Aktionen, Punkteeinlösung) und vor Steuern, abzüglich des Einkaufspreises – deshalb heißt das Feld in einem Laden, der Steuer berechnet, „Einkaufspreis ohne Steuer (optional)“: Tragen Sie ein, was Sie vor Steuern bezahlt haben. Die Marge ist der Rohertrag geteilt durch den Umsatz der Artikel mit Einkaufspreis, sodass Artikel ohne Einkaufspreis sie nicht drücken. Eine Rückgabe nimmt an ihrem Tag den Rohertrag zurück, den diese Artikel eingebracht hatten."
+      },
+      {
+        "type": "p",
+        "text": "Tippen Sie auf die Kachel „Rohertrag“, um „Vom Umsatz zum Rohertrag“ zu öffnen, das Zeile für Zeile abzieht: Umsatz (inkl. Steuer), Steuer, Umsatz (ohne Steuer), Umsatz ohne Einkaufspreis, Wareneinsatz und schließlich Rohertrag und Marge. Die Zeilen ergeben genau den Wert der Kachel."
       },
       {
         "type": "note",
-        "text": "Ein nachgetragener Einkaufspreis wirkt sich nur auf spätere Verkäufe aus; bereits getätigte Verkäufe werden nicht neu berechnet. Diese Berechnung gibt es seit v3.1: Frühere Versionen zogen nur manuelle Artikelrabatte ab und zählten enthaltene Steuer als Rohertrag. Nach dem Update zeigen Zeiträume mit Rabatten oder enthaltener Steuer daher einen niedrigeren Rohertrag. Das ist eine Korrektur, kein Datenverlust."
+        "text": "Ein nachgetragener Einkaufspreis wirkt sich nur auf spätere Verkäufe aus; bereits getätigte Verkäufe werden nicht neu berechnet. Diese Berechnung gibt es seit Version 3.1: Frühere Versionen zogen nur manuelle Artikelrabatte ab und zählten enthaltene Steuer als Rohertrag. Nach dem Update zeigen Zeiträume mit Rabatten oder enthaltener Steuer daher einen niedrigeren Rohertrag. Das ist eine Korrektur, kein Datenverlust."
       }
     ],
     "related": [
@@ -1223,20 +1447,26 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Umsatz (ohne Steuer): der Umsatz nach allen Rabatten abzüglich Steuer, gezählt an dem Tag, an dem die Ware übergeben wurde.",
+          "Umsatz (ohne Steuer): der Umsatz nach allen Rabatten und vor Steuern, gezählt an dem Tag, an dem die Ware übergeben wurde.",
           "Wareneinsatz: die Kosten der verkauften Ware, aus den Einkaufspreisen Ihrer Artikel.",
+          "Bestandsverlust: die Kosten dessen, was „Bestand korrigieren“ als abgelaufen, beschädigt, verschenkt und Ähnliches abgebucht hat, plus entsorgte Rückgaben. Er kommt nach dem Rohertrag – siehe „Wie erfasse ich Ware, die abgelaufen, beschädigt oder als Probe abgegeben wurde?“ Der Monat hat außerdem einen Abschnitt „Bestandsverlust“, der ihn nach Grund aufsummiert.",
           "Bearbeitungsgebühren (geschätzt): die Gebühren, geschätzt aus den Sätzen Ihrer Zahlungsarten.",
           "Verfallene Anzahlungen: Anzahlungen, die Sie behalten haben, als eine Vorbestellung storniert wurde.",
+          "Barrundung: was das Runden von Bargeld auf die vorhandenen Münzen gegenüber den Bestellsummen zu viel oder zu wenig eingenommen hat.",
           "Feste Ausgaben und Einmalige Ausgaben: was Sie für diesen Monat erfasst haben – siehe „Wie erfasse ich Miete, Löhne und andere Ausgaben?“"
         ]
       },
       {
         "type": "p",
-        "text": "Darunter folgen bis zu drei Diagramme: der Reingewinn Monat für Monat, der Anteil jeder festen Ausgabe und der Verlauf der festen Ausgaben. Die beiden Verlaufsdiagramme umfassen höchstens die 12 Monate bis zu dem Monat, den Sie geöffnet haben, und erscheinen erst, wenn es mindestens zwei Monate zum Vergleichen gibt, gezählt ab dem Monat Ihres ersten Verkaufs oder Ihrer ersten Ausgabe. Das Anteilsdiagramm braucht in diesem Monat eine feste Ausgabe; solange es keine gibt, steht in diesem Bereich stattdessen „Feste Ausgabe hinzufügen“. In der Statistik springt die letzte Zeile der Kachel Rohertrag direkt zur GuV: Bei einem Zeitraum, der genau einen Monat umfasst, zeigt sie den Reingewinn dieses Monats, etwa „Oktober Reingewinn NT$12,300“; bei jedem anderen Zeitraum steht dort „Monatliche GuV ansehen“."
+        "text": "Darunter folgen bis zu drei Diagramme: der Reingewinn Monat für Monat, der Anteil jeder festen Ausgabe und der Verlauf der festen Ausgaben. Die beiden Verlaufsdiagramme umfassen höchstens die 12 Monate bis zu dem Monat, den Sie geöffnet haben, und erscheinen erst, wenn es mindestens zwei Monate zum Vergleichen gibt, gezählt ab dem Monat Ihres ersten Verkaufs oder Ihrer ersten Ausgabe. Das Anteilsdiagramm braucht in diesem Monat eine feste Ausgabe; solange es keine gibt, steht in diesem Bereich stattdessen „Feste Ausgabe hinzufügen“."
+      },
+      {
+        "type": "p",
+        "text": "Statistik und GuV verweisen aufeinander. Ist der Zeitraum in der Statistik dieser Monat oder genau ein ganzer Monat, enthält die zweite Kachelreihe zusätzlich eine Kachel „Reingewinn“ (solange der Monat läuft, markiert mit „Laufend · die Ausgaben des vollen Monats werden abgezogen“); tippen Sie darauf, sehen Sie die Aufschlüsselung dieses Monats vom Rohertrag bis zum Reingewinn. Bei jedem anderen Zeitraum tippen Sie in der letzten Zeile von „Vom Umsatz zum Rohertrag“ auf „Monatliche GuV ansehen“. Umgekehrt öffnet „Bericht für Oktober ansehen“ unter dem Titel eines Monats in der GuV die Statistik für diesen Monat."
       },
       {
         "type": "note",
-        "text": "Der Reingewinn ist das Betriebsergebnis vor Ertragsteuern, berechnet aus dem, was DingPOS erfasst hat – keine Steuererklärung. Wurden Artikel ohne Einkaufspreis verkauft, zeigt der Monat trotzdem einen Reingewinn, markiert mit „Ohne Einkaufspreise für N Artikel“; tippen Sie darauf, um zu sehen, welche. Die GuV gibt es in jedem Tarif. Bei Konten für Mitarbeiter:innen erfordert das Öffnen die Berechtigung „GuV & Ausgaben“, für die Manager:innen und Mitarbeiter:innen standardmäßig eine Freigabe brauchen, weil sie Einkaufspreise und Löhne zeigt."
+        "text": "Der Reingewinn ist das Betriebsergebnis vor Ertragsteuern, berechnet aus dem, was DingPOS erfasst hat – keine Steuererklärung. Wurden Artikel ohne Einkaufspreis verkauft, zeigt der Monat trotzdem einen Reingewinn, markiert mit „Nicht enthalten: Einkaufspreis von N Artikel“; tippen Sie darauf, um zu sehen, welche. Die GuV gibt es in jedem Tarif. Bei Konten für Mitarbeiter:innen erfordert das Öffnen die Berechtigung „GuV & Ausgaben“, für die Manager:innen und Mitarbeiter:innen standardmäßig eine Freigabe brauchen, weil sie Einkaufspreise und Löhne zeigt."
       }
     ],
     "related": [
@@ -1274,7 +1504,7 @@ export const articles = [
         "items": [
           "Geben Sie den Namen, den monatlichen Betrag und den Monat ein, ab dem sie gilt. Wählen Sie einen früheren Monat, um rückwirkend zu erfassen.",
           "Ändert sich der Betrag, tippen Sie auf „Betrag ändern“, wählen den Monat und dann „Ab diesem Monat“ (zum Beispiel bei einer Mieterhöhung) oder „Nur dieser Monat“ (zum Beispiel die Stromrechnung dieses Monats). Jede Änderung steht in einer Liste; öffnen Sie eine, um sie zu bearbeiten oder zu entfernen.",
-          "Zahlen Sie sie nicht mehr, legen Sie den „Letzten berücksichtigten Monat“ fest: Dieser Monat und die davor zählen weiterhin."
+          "Zahlen Sie sie nicht mehr, legen Sie „Letzter berücksichtigter Monat“ fest: Dieser Monat und die davor zählen weiterhin."
         ]
       },
       {
@@ -1284,14 +1514,14 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Für einen Ladenausbau, Ausstattung oder eine im Voraus bezahlte Versicherung schalten Sie „Auf mehrere Monate verteilen“ ein und wählen 2 bis 120 Monate sowie den ersten berücksichtigten Monat. Das Formular zeigt vorab, welcher Betrag pro Monat zählt und welche Monate er abdeckt.",
+          "Für einen Ladenausbau, für Ausstattung oder für eine im Voraus bezahlte Versicherung schalten Sie „Auf mehrere Monate verteilen“ ein und wählen 2 bis 120 Monate sowie den ersten berücksichtigten Monat. Das Formular zeigt vorab, welcher Betrag pro Monat zählt und welche Monate er abdeckt.",
           "Auch ohne Verteilung können Sie den berücksichtigten Monat wählen: Eine Rechnung für Oktober, die erst im November eintrifft, kann im Oktober zählen, wobei das tatsächliche Datum erhalten bleibt.",
           "Endet eine Verteilung vorzeitig (etwa weil eine Versicherung gekündigt wurde), nutzen Sie „Verteilung vorzeitig beenden“: Was übrig ist, wird in dem Monat berücksichtigt, den Sie wählen."
         ]
       },
       {
         "type": "note",
-        "text": "Geben Sie ein, was der Laden tatsächlich trägt, ohne Steuern, die Sie zurückfordern können. Ware, die Sie verkaufen, läuft stattdessen über den Einkauf, weil sie beim Verkauf im Wareneinsatz berücksichtigt wird; Kautionen, Darlehenstilgungen und Entnahmen der Inhaber:in sind keine Ausgaben. Änderungen werden gemeinsam gesichert, wenn Sie auf ✓ tippen, und betrifft eine Änderung einen abgeschlossenen Monat, erfahren Sie vorher, für welche Monate sich der Reingewinn ändert."
+        "text": "Geben Sie ein, was der Laden tatsächlich trägt, ohne Steuern, die Sie zurückfordern können. Ware, die Sie verkaufen, und das Material, aus dem Sie sie herstellen, laufen stattdessen über den Einkauf, weil sie beim Verkauf im Wareneinsatz berücksichtigt werden. Verbrauchsmaterial mit Bestandsführung erfassen Sie beim Verbrauch mit „Bestand korrigieren“ und dem Grund „Ladenbedarf“, nicht als Ausgabe. Kautionen, Darlehenstilgungen und Entnahmen der Inhaber:in sind keine Ausgaben. Änderungen werden gemeinsam gesichert, wenn Sie auf ✓ tippen. Betrifft eine Änderung einen abgeschlossenen Monat, erfahren Sie vorher, für welche Monate sich der Reingewinn ändert."
       }
     ],
     "related": [
@@ -1386,7 +1616,8 @@ export const articles = [
       "Treueprogramm",
       "Prämien",
       "Punkte einlösen",
-      "Willkommensbonus"
+      "Willkommensbonus",
+      "Punkte anpassen"
     ],
     "content": [
       {
@@ -1396,6 +1627,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Ordnen Sie dem Verkauf das Mitglied zu, im Warenkorb oder auf dem Bezahlbildschirm, dann werden die Punkte automatisch gesammelt; zum Einlösen geben Sie die einzusetzenden Punkte ein. Wird eine Bestellung annulliert, werden die dafür gesammelten Punkte wieder abgezogen und eingelöste Punkte zurückgegeben."
+      },
+      {
+        "type": "p",
+        "text": "Um Punkte von Hand gutzuschreiben oder abzuziehen (etwa für einen vergessenen Einkauf), tippen Sie in den Kundendetails auf der Karte Punkte auf Anpassen, wählen Hinzufügen oder Abziehen, geben die Punkte ein und nennen optional einen Grund (bis zu 100 Zeichen). Sie können nicht mehr Punkte abziehen, als der Kunde hat. Jede Anpassung bleibt im Punkteverlauf erhalten, mit Punktestand davor und danach, Grund und der Person, die sie vorgenommen hat."
+      },
+      {
+        "type": "note",
+        "text": "Die manuelle Punktekorrektur gibt es seit Version 3.5. Im Tarif Pro müssen Mitarbeiter:innen, deren Rolle für die Manuelle Punktekorrektur eine Freigabe braucht (standardmäßig die Rolle Mitarbeiter:in), beim Bestätigen die PIN einer Manager:in oder der Inhaber:in eingeben."
       }
     ],
     "related": [
@@ -1585,6 +1824,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Tippen Sie zuerst auf Erneut versuchen; klappt es, öffnet sich die App wie gewohnt. Tritt der Fehler weiter auf, tippen Sie auf Support kontaktieren und schildern Sie uns das Problem – wir helfen Ihnen, Ihre Daten zu retten. Dieser Bildschirm verschiebt oder löscht keine Dateien."
+      },
+      {
+        "type": "p",
+        "text": "Beim ersten Start nach einem Update oder nach dem Wiederherstellen einer Sicherung aus einer älteren Version kann zunächst „Ihre Daten werden aktualisiert …“ erscheinen. Dabei werden Ihre Ladendaten in ein neueres Format überführt – das dauert umso länger, je mehr Daten Sie haben; danach öffnet sich die App von selbst. Die App ist nicht eingefroren."
       },
       {
         "type": "note",
@@ -1805,14 +2048,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nutzen Sie das Aktivitätsprotokoll. Tippen Sie auf der Seite Personal oben rechts auf Aktivitätsprotokoll und geben Sie die Inhaber-PIN ein. Dann sehen Sie die sensiblen Vorgänge Ihres Ladens, die neuesten zuerst: Annullierungen, Rückgaben, manuelle Bestandskorrekturen, Freigaben, Änderungen an Personal und Berechtigungen, Änderungen der Inhaber-PIN, Preis- und Einkaufspreisänderungen bei Artikeln sowie gelöschte Artikel. Normale Verkäufe werden nicht aufgeführt."
+        "text": "Nutzen Sie das Aktivitätsprotokoll. Tippen Sie auf der Seite Personal oben rechts auf Aktivitätsprotokoll und geben Sie die PIN der Inhaber:in ein. Dann sehen Sie die sensiblen Vorgänge Ihres Ladens, die neuesten zuerst: Annullierungen, Rückgaben, Bestandskorrekturen und Neuzählungen, manuelle Punktekorrekturen, Freigaben, Änderungen an Personal und Berechtigungen, Änderungen an der PIN der Inhaber:in, Steuereinstellungen, Preis- und Einkaufspreisänderungen bei Artikeln sowie gelöschte Artikel. Normale Verkäufe werden nicht aufgeführt."
       },
       {
         "type": "list",
         "items": [
-          "Jeder Eintrag zeigt, was betroffen war, wer wann was getan hat und das Ergebnis – zum Beispiel „M Preis 390 € → 350 €“.",
+          "Jeder Eintrag zeigt, was betroffen war, wer wann was getan hat und das Ergebnis – zum Beispiel „M Preis $390 → $350“. Den Grund, der bei einer Annullierung, Rückgabe, Bestandskorrektur oder Punktekorrektur angegeben wurde, finden Sie in der dritten Zeile des Eintrags.",
           "Filtern Sie nach Mitarbeiter:in (auch deaktivierte), Vorgangsart und Heute / Diese Woche / Dieser Monat.",
-          "Tippen Sie auf einen Eintrag, der auf eine Bestellung, einen Artikel oder eine Kundschaft verweist, um die Details zu öffnen.",
+          "Tippen Sie auf einen Eintrag, der auf eine Bestellung, einen Artikel oder einen Kunden verweist, um die Details zu öffnen.",
           "Bestelldetails, Artikeldetails und die Seite jeder Mitarbeiter:in haben jeweils eine eigene Liste, die nur die Einträge zu genau diesem Objekt zeigt.",
           "Gelöschte Artikel zeigen im Protokoll weiterhin ihren damaligen Namen und Preis."
         ]

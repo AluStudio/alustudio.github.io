@@ -83,18 +83,19 @@ export const articles = [
       "abrir loja",
       "configurar loja",
       "país",
-      "moeda"
+      "moeda",
+      "impostos"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Na primeira vez que você abre o DingPOS, um assistente de configuração abre a sua loja em duas etapas e poucos minutos:"
+        "text": "Na primeira vez que você abre o DingPOS, um assistente de configuração prepara sua loja em duas etapas e em poucos minutos:"
       },
       {
         "type": "steps",
         "items": [
-          "Escolha seu país ou região. No topo da lista aparecem a região deste iPad e os mercados mais comuns; abaixo estão os 175 países e regiões em que o DingPOS está na App Store, com busca pelo nome no idioma do app ou em inglês. Sua escolha preenche a moeda, a alíquota e o modo de imposto.",
-          "Em Sua loja, digite o nome da loja, adicione um logotipo se quiser e confira a moeda, a alíquota e o modo de imposto (incluso / não incluso). A moeda começa com a do seu país; toque nela para escolher entre 130 moedas."
+          "Escolha seu país ou região. No topo da lista aparecem o país ou a região em que este iPad está e, depois, os mercados mais comuns; abaixo deles estão os 175 países e regiões em que o DingPOS está na App Store, com busca pelo nome no idioma do app ou em inglês. Sua escolha preenche a moeda, os impostos e o modo de imposto.",
+          "Na etapa Sua loja, digite o nome da loja, adicione um logotipo se quiser e confira a moeda, os impostos e o modo de imposto (Imposto incluso / Imposto não incluso). A moeda vem predefinida com a do seu país; toque nela para escolher entre 130 moedas. A lista de impostos traz os impostos padrão do seu país: renomeie, altere a alíquota, exclua um ou toque em Adicionar imposto para criar outra linha. Uma loja na Colúmbia Britânica, por exemplo, muda a primeira linha para “GST 5” e acrescenta uma linha “PST 7”."
         ]
       },
       {
@@ -103,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A moeda e o modo de imposto não podem ser alterados depois da configuração; a alíquota ainda pode ser alterada depois em Ajustes. Nos Estados Unidos, no Canadá, no Brasil e na Micronésia, a alíquota depende do estado, da província ou da cidade; por isso o campo de alíquota começa vazio e você informa a alíquota que cobra (0 é permitido) para continuar. A lista de 175 países e a escolha de moeda chegaram na v3.2; as versões anteriores ofereciam 15 países."
+        "text": "A moeda não pode ser alterada depois da configuração; os impostos e o modo de imposto podem ser alterados depois em Ajustes → Dados da loja. Nos Estados Unidos, no Canadá, no Brasil e na Micronésia, a alíquota depende do estado, da província ou da cidade; por isso o campo de alíquota começa vazio e você informa a alíquota que cobra para continuar. A alíquota precisa ser maior que 0: a loja que não cobra imposto exclui a linha. A lista de 175 países e a escolha de moeda chegaram na v3.2; as versões anteriores ofereciam 15 países."
       }
     ],
     "related": [
@@ -180,11 +181,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "No momento, o DingPOS funciona em iPads com iPadOS 17 ou posterior, pensado principalmente para uso na horizontal."
+        "text": "No momento, o DingPOS funciona em iPads com iPadOS 17.4 ou posterior, pensado principalmente para uso na horizontal."
       },
       {
         "type": "p",
         "text": "iPhone e Mac ainda não são compatíveis. Se você quiser que a gente ofereça suporte a outro aparelho, escreva para nós e conte como você pretende usar."
+      },
+      {
+        "type": "note",
+        "text": "Todo iPad que roda o iPadOS 17 pode atualizar para o 17.4, então nenhum modelo fica de fora. Um iPad que ainda esteja no iPadOS 17.0–17.3 precisa primeiro de uma atualização do sistema, em Ajustes → Geral → Atualização de Software, para poder instalar o DingPOS v3.5 ou posterior."
       }
     ],
     "related": [
@@ -194,22 +199,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Dá para mudar a moeda ou o modo de imposto depois da configuração?",
+    "question": "Dá para mudar a moeda, a alíquota ou o modo de imposto depois da configuração?",
     "keywords": [
       "moeda",
       "modo de imposto",
       "alterar",
       "bloqueado",
-      "alíquota"
+      "alíquota",
+      "impostos",
+      "incluso",
+      "não incluso"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A alíquota pode ser alterada a qualquer momento em Ajustes — a nova alíquota vale apenas para as próximas vendas."
+        "text": "O imposto pode mudar; a moeda, não. Os impostos e o modo de imposto são alterados no cartão Imposto, em Ajustes → Dados da loja, e a mudança vale apenas para as próximas vendas: vendas anteriores, devoluções e relatórios mantêm os valores de imposto e o modo que registraram."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Impostos: adicione, renomeie, altere a alíquota ou exclua — veja “Como o imposto é calculado?”",
+          "Modo de imposto (Imposto incluso / Imposto não incluso): toque no outro modo, e a confirmação mostra um exemplo com o seu primeiro imposto, como “um item de NT$100 com 5% de imposto: o cliente paga NT$105”. Os preços mantêm os mesmos números, e um carrinho aberto é recalculado no novo modo quando você volta ao caixa. O modo pode ser trocado desde a v3.5; as versões anteriores o bloqueiam na configuração.",
+          "Depois da troca, uma devolução total ainda reembolsa a venda original como ela foi feita. Uma troca (com itens de troca) em uma venda feita no outro modo fica bloqueada: volte o modo ao original ou devolva os itens e registre-os de novo."
+        ]
       },
       {
         "type": "p",
-        "text": "A moeda e o modo de imposto (incluso / não incluso) ficam bloqueados depois que a configuração é concluída. Todas as suas vendas anteriores foram calculadas com eles, então trocá-los no meio do caminho bagunçaria seus relatórios. Confira os dois na etapa Sua loja da configuração: a moeda começa com a do seu país e você pode tocar nela para escolher outra."
+        "text": "A moeda fica bloqueada depois que a configuração é concluída. Todas as suas vendas anteriores foram registradas nela, então trocá-la no meio do caminho bagunçaria seus relatórios. Confira a moeda na etapa Sua loja da configuração: ela começa com a moeda do seu país e você pode tocar nela para escolher outra."
       },
       {
         "type": "note",
@@ -326,15 +342,20 @@ export const articles = [
     "keywords": [
       "imposto",
       "iva",
+      "icms",
       "imposto sobre vendas",
       "imposto incluso",
       "imposto não incluso",
+      "vários impostos",
+      "gst",
+      "pst",
+      "pausar imposto",
       "recibo"
     ],
     "content": [
       {
         "type": "p",
-        "text": "O imposto é calculado automaticamente de acordo com o modo de imposto escolhido na configuração. O recibo mostra o valor do imposto nos dois modos:"
+        "text": "O imposto é calculado automaticamente a partir dos impostos e do modo de imposto definidos em Ajustes → Dados da loja. Há dois modos de imposto, e o recibo mostra o valor do imposto nos dois:"
       },
       {
         "type": "list",
@@ -345,18 +366,40 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ordem completa do cálculo: descontos em itens → desconto no carrinho → imposto. Os valores são arredondados para cima a partir de meio (0,5) nas casas decimais da moeda (por exemplo, 0 para TWD e 2 para USD)."
+        "text": "Uma loja pode cobrar vários impostos, como GST de 5% mais PST de 7% na Colúmbia Britânica, ou o imposto de consumo de 10% do Japão junto com a alíquota reduzida de 8%:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "No cartão Imposto, toque em Adicionar imposto e informe um nome e uma alíquota. Ative Aplicar a novos produtos e os produtos que você cadastrar depois já virão com esse imposto. Se a loja já tem um imposto padrão, um imposto recém-adicionado começa com essa chave desativada; ative-a quando os dois devem ser cobrados.",
+          "Cada produto escolhe os impostos que cobra em Impostos, no formulário do produto — um bentô pode cobrar só a alíquota reduzida de 8%. Com dois ou mais ativados, o formulário mostra a alíquota total do produto.",
+          "Toque em um imposto para renomeá-lo, mudar a alíquota ou usar Aplicar a todos os produtos ou Remover de todos os produtos, que o incluem ou retiram de todos os produtos de uma vez. Ao excluir um imposto, o app avisa antes quantos produtos deixarão de cobrá-lo.",
+          "Em uma loja com imposto não incluso, os totais do carrinho mostram uma linha por imposto, e o detalhe da venda lista uma linha por imposto, com a alíquota e o valor sobre o qual foi cobrado."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Para deixar de cobrar imposto por um tempo, desative Cobrar imposto no topo do cartão Imposto: todas as vendas seguintes ficam sem imposto, inclusive os itens que já estão no carrinho. Cada produto mantém os próprios impostos, e ao reativar a chave tudo volta como estava."
+      },
+      {
+        "type": "p",
+        "text": "Ordem completa do cálculo: descontos e promoções nos itens → desconto no carrinho → resgate de pontos → imposto. Os valores são arredondados para cima a partir de meio (0,5) nas casas decimais da moeda (por exemplo, 0 para TWD e 2 para USD)."
+      },
+      {
+        "type": "note",
+        "text": "Os impostos com nome chegaram na versão 3.5. Ao atualizar, sua alíquota vira um imposto com nome (“GST 10%” na Austrália, por exemplo) e todos os produtos existentes passam a cobrá-lo; uma loja cuja alíquota era 0 fica sem imposto. As vendas e os relatórios anteriores mantêm os valores."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
     "slug": "payment-methods",
     "category": "checkout",
-    "question": "Quais formas de pagamento o DingPOS aceita?",
+    "question": "Quais formas de pagamento posso registrar no DingPOS?",
     "keywords": [
       "pagamento",
       "dinheiro",
@@ -370,11 +413,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Uma loja nova começa com duas formas de pagamento, Dinheiro e Cartão de crédito, com os nomes no idioma do app na configuração. Em Ajustes → Formas de pagamento você pode adicionar qualquer outra forma (por exemplo, Apple Pay, Line Pay, uma carteira digital local), além de excluí-las ou reordená-las."
+        "text": "Uma loja nova começa com duas formas de pagamento, Dinheiro e Cartão de crédito, com os nomes no idioma do app na configuração. Em Ajustes → Formas de pagamento você pode adicionar qualquer outra forma (por exemplo, Apple Pay, LINE Pay, uma carteira digital local), além de excluí-las ou reordená-las."
       },
       {
         "type": "p",
-        "text": "As formas de pagamento são apenas etiquetas de controle: o DingPOS não processa pagamentos de verdade. Receba pagamentos por cartão ou celular na sua maquininha ou app de sempre e depois escolha a forma correspondente no DingPOS para registrar. Nos pagamentos em dinheiro, o troco é calculado automaticamente."
+        "text": "As formas de pagamento são apenas etiquetas de controle: o DingPOS não processa pagamentos de verdade. Receba pagamentos por cartão ou celular na sua maquininha ou app de sempre e depois escolha a forma correspondente no DingPOS para registrar. Nos pagamentos em dinheiro, o troco é calculado automaticamente e, onde as moedas de menor valor deixaram de circular, o dinheiro também pode ser arredondado — veja “O pagamento em dinheiro pode ser arredondado para as moedas em circulação?”"
       },
       {
         "type": "p",
@@ -382,11 +425,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Para o cliente fixo que leva a mercadoria agora e paga depois, escolha A prazo: a venda é registrada como conta a receber e quitada quando o dinheiro chegar. Veja “Clientes fixos podem comprar a prazo e pagar depois?”"
+        "text": "Para o cliente fixo que leva a mercadoria agora e paga depois, escolha A prazo: a venda é registrada como conta a receber e quitada quando o dinheiro chegar. Veja “Posso vender a prazo para clientes habituais e receber depois?”"
       }
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -432,6 +476,54 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "O pagamento em dinheiro pode ser arredondado para as moedas em circulação?",
+    "keywords": [
+      "arredondamento do dinheiro",
+      "arredondamento",
+      "arredondar para cima",
+      "arredondar para baixo",
+      "moedas",
+      "centavo",
+      "0,05",
+      "troco",
+      "canadá",
+      "austrália",
+      "suíça"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sim. Canadá, Austrália, Nova Zelândia, Suíça, Dinamarca, Suécia, Noruega, Bélgica, Finlândia e Hungria deixaram de usar as moedas de menor valor, então o DingPOS arredonda o dinheiro para um valor que dá para entregar de fato: uma venda de C$12,99 paga em dinheiro é recebida como C$13,00, e o troco é calculado a partir de C$13,00. Cartão e outros pagamentos que não são em dinheiro continuam exatos."
+      },
+      {
+        "type": "p",
+        "text": "Uma loja nova configurada em um desses países, com a moeda do país, já vem com o arredondamento ativado. Qualquer outra loja pode ativá-lo no cartão Arredondamento do dinheiro, no fim de Ajustes → Formas de pagamento: escolha para quanto arredondar o dinheiro (Sem arredondamento, 0,05, 0,10, 0,50 ou 1,00) e, para um múltiplo que pode cair exatamente no meio, se esse valor sobe ou desce. Uma alteração vale apenas para pagamentos futuros."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ao finalizar a venda, a tela mostra “Dinheiro recebido C$13,00”. Se o cliente pedir para pagar o valor exato, toque em Receber o valor exato, abaixo das formas de pagamento; isso vale só para aquela venda.",
+          "O total da venda, o imposto, a receita, os pontos e o gasto do cliente não mudam; a diferença de arredondamento fica no pagamento, e a tela do recibo e o detalhe da venda a mostram abaixo do total, como “Arredondamento do dinheiro +C$0,01”.",
+          "Reembolsos em dinheiro de devoluções, sinais em dinheiro e saldos na retirada de encomendas, complementos de trocas e vendas a prazo quitadas em dinheiro também são arredondados; ao quitar várias de uma vez, o lote é arredondado uma única vez.",
+          "Anulações, sinais de encomendas reembolsados e quitações desfeitas devolvem exatamente o que foi registrado, sem arredondar de novo.",
+          "O Valor recebido no Resumo mostra quanto dele foi arredondamento do dinheiro, e a DRE mensal ganha uma linha Arredondamento do dinheiro que entra no lucro líquido. O arredondamento nunca é receita."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "A Suíça sempre arredonda para baixo, seguindo suas regras de exibição de preços — CHF 12,98 é recebido como CHF 12,95, e não há escolha de meio. A Bélgica arredonda apenas totais acima de €0,05. O arredondamento do dinheiro está em todos os planos, e uma loja já existente recebe o dinheiro exatamente como antes até você ativá-lo."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -609,7 +701,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vá em Vendas, encontre a venda, abra os detalhes e escolha Anular. Confirme e pronto."
+        "text": "Vá em Vendas, encontre a venda, abra os detalhes e toque em Anular. A janela “Anular esta venda?” aceita um motivo opcional (até 100 caracteres); toque em Anular no canto superior direito e pronto. O motivo aparece nos detalhes da venda e no registro de atividades e não pode ser editado depois de enviado."
       },
       {
         "type": "p",
@@ -636,7 +728,9 @@ export const articles = [
       "troca",
       "reembolso",
       "devolução parcial",
-      "trocar tamanho"
+      "trocar tamanho",
+      "descartar produto devolvido",
+      "motivo da devolução"
     ],
     "content": [
       {
@@ -649,9 +743,15 @@ export const articles = [
           "A venda original nunca é alterada. A devolução cria um documento próprio, com a data de hoje e numeração com prefixo R, e a receita é reduzida no dia da devolução.",
           "O reembolso é o que o cliente realmente pagou por aquele item: descontos do item, descontos do carrinho e resgate de pontos já são rateados, então o valor não volta pelo preço de tabela. O imposto usa a alíquota com que a venda original foi cobrada.",
           "Os itens da troca são cobrados pelo preço de hoje, sem promoções nem descontos.",
-          "O estoque controlado volta automaticamente. Os pontos ganhos na venda original são retirados, os pontos resgatados são devolvidos e os itens da troca geram seus próprios pontos.",
-          "Uma venda pode ser devolvida em várias etapas, mas nunca além da quantidade vendida originalmente. Os limites de uso de promoção não são devolvidos pela devolução."
+          "Para um produto com estoque controlado, cada item devolvido pode voltar ao estoque (Repor, a opção padrão) ou ser descartado (Descartar, desde a v3.5). Repor devolve a quantidade ao estoque. Descartar mantém o estoque como estava e soma o custo que o item tinha quando foi vendido à Perda de estoque do mês no DRE. Reembolso, imposto e pontos são os mesmos nos dois casos.",
+          "Os pontos ganhos na venda original são retirados, os pontos resgatados são devolvidos e os itens da troca geram seus próprios pontos.",
+          "Quando a venda original é uma venda a prazo ainda não quitada, nenhum dinheiro troca de mãos: a devolução é abatida das contas a receber do cliente e, se o item da troca for mais caro, a diferença é somada ao que ele deve.",
+          "Uma venda pode ser devolvida em várias etapas, mas nunca além da quantidade vendida originalmente; quando tudo volta, o imposto, os descontos e os pontos devolvidos somam exatamente os da venda original. Os limites de uso de promoção não são devolvidos pela devolução."
         ]
+      },
+      {
+        "type": "p",
+        "text": "O campo Motivo é opcional, com até 100 caracteres. Ele aparece nos detalhes da venda e no registro de atividades e não pode ser editado depois de enviado."
       },
       {
         "type": "note",
@@ -733,6 +833,7 @@ export const articles = [
         "items": [
           "A receita conta no dia em que o produto sai; o valor recebido e os pontos de fidelidade esperam até o dia da quitação.",
           "As vendas não quitadas aparecem na lista com uma etiqueta âmbar, e os detalhes do cliente mostram quanto ele deve no momento.",
+          "Uma devolução em uma venda ainda não quitada não reembolsa dinheiro: o valor é abatido das contas a receber desse cliente.",
           "Um cliente com vendas não quitadas não pode ser excluído."
         ]
       },
@@ -801,7 +902,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Os nomes de opções e de valores podem ter até 20 caracteres e não podem ficar em branco: um nome de opção ou valor vazio fica destacado em vermelho ao salvar, então preencha ou exclua o valor vazio. Um produto com variantes não pode ter preço aberto."
+        "text": "Os nomes de opções e de valores podem ter até 20 caracteres, e os espaços no início e no fim são removidos ao salvar. Um valor em que você não digitou nada não é uma combinação e é ignorado ao salvar; só ficam destacados em vermelho um nome de opção em branco ou uma opção cujos valores estão todos em branco. Um produto com variantes não pode ter preço aberto."
       }
     ],
     "related": [
@@ -933,12 +1034,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Com o controle ativado, vendas e encomendas baixam o estoque automaticamente; anulações, devoluções e encomendas canceladas devolvem as unidades; o recebimento de um pedido de compra soma ao estoque; e você pode fazer ajustes manuais a qualquer momento. Toda movimentação fica registrada em um histórico completo. Estoque baixo aparece destacado com um alerta de cor."
+        "text": "Com o controle ativado, vendas e encomendas baixam o estoque automaticamente; anulações, devoluções e encomendas canceladas devolvem as unidades; e o recebimento de um pedido de compra soma ao estoque. Toda movimentação fica registrada em um histórico completo. Estoque baixo aparece destacado com um alerta de cor."
+      },
+      {
+        "type": "p",
+        "text": "Há duas formas de alterar o número manualmente:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Recontagem: edite o número do estoque no formulário do produto para igualá-lo ao que você realmente contou. Ela nunca chega à DRE.",
+          "Ajustar estoque (desde a v3.5): nos detalhes do produto, toque em Ajustar estoque, escolha Remover ou Adicionar, a quantidade e um motivo, como Vencido ou estragado, Danificado ou Amostras e brindes. O custo do que for removido entra na Perda de estoque do mês na DRE — veja “Como registrar produtos vencidos, danificados ou dados como amostra?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Como registrar produtos vencidos, danificados ou dados como amostra?",
+    "keywords": [
+      "ajustar estoque",
+      "perda de estoque",
+      "baixa de estoque",
+      "produto vencido",
+      "produto danificado",
+      "amostras",
+      "brindes",
+      "materiais da loja",
+      "recontagem",
+      "estoque estragado"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Use Ajustar estoque. Em um produto com estoque controlado, toque em Ajustar estoque nos detalhes do produto, escolha Remover ou Adicionar, informe a quantidade, escolha um motivo e, se quiser, acrescente uma observação (até 100 caracteres). A tela calcula o estoque depois da alteração, e a linha abaixo do motivo informa se ela chega à DRE."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Motivos para remover: Usado na produção, Vencido ou estragado, Danificado, Perdido ou roubado, Uso da equipe, Amostras e brindes, Materiais da loja e Outro. Motivos para adicionar: Feito na loja, Encontrado e Outro. Outro exige uma observação.",
+          "Com exceção de Usado na produção, o que você remove entra, pelo custo do momento, na Perda de estoque do mês na DRE. Ela vem depois do lucro bruto e reduz o lucro líquido; o lucro bruto e a margem não mudam. Usado na produção apenas tira o estoque, porque o custo de um material já está no custo do produto feito com ele.",
+          "Encontrado tira da Perda de estoque o mesmo valor. Feito na loja e Outro, do lado de adicionar, apenas acrescentam estoque e nunca chegam à DRE.",
+          "Um ajuste vale no dia em que você o registra. Não dá para datá-lo para trás, editá-lo nem excluí-lo; para corrigir um erro, registre Encontrado ou um ajuste no sentido contrário.",
+          "Um produto sem custo ainda pode ser ajustado, mas a DRE não consegue atribuir um valor a ele, e o mês indica quantos registros ficaram sem custo."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Editar o número do estoque no formulário do produto é uma Recontagem: ele passa a ser igual ao que você realmente contou e nunca chega à DRE. A lista de movimentações de estoque em Resumo filtra Ajustes e Recontagens separadamente, e o registro de atividades mostra o motivo e a observação de cada ajuste."
+      },
+      {
+        "type": "note",
+        "text": "Ajustar estoque exige o plano Standard ou superior. No Pro, funcionários cuja função requer aprovação para Ajuste manual de estoque precisam do PIN de um gerente ao confirmar."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -959,7 +1119,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Estoque negativo geralmente significa que uma reposição não foi registrada ou que um item encomendado ainda não chegou (as encomendas baixam o estoque quando são feitas). Registre as reposições recebendo um pedido de compra e o número se recupera sozinho; corrija diferenças de contagem com um ajuste manual, que fica guardado no histórico de movimentações."
+        "text": "Estoque negativo geralmente significa que uma reposição não foi registrada ou que um item encomendado ainda não chegou (as encomendas baixam o estoque quando são feitas). Registre as reposições recebendo um pedido de compra e o número se recupera sozinho. Corrija uma diferença de contagem editando o número do estoque no formulário do produto (uma recontagem); para mercadoria que estragou, venceu ou foi dada de brinde, registre o motivo com Ajustar estoque. As duas ações ficam guardadas no histórico de movimentações."
       },
       {
         "type": "note",
@@ -988,7 +1148,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Compras, na barra lateral, reúne os fornecedores e os pedidos de compra. O cadastro do fornecedor guarda nome, pessoa de contato, telefone, endereço e a condição de pagamento padrão (à vista ou mensal)."
+        "text": "Compras, na barra lateral, reúne os fornecedores e os pedidos de compra. O cadastro do fornecedor guarda nome, pessoa de contato, telefone, endereço e a condição de pagamento padrão (pagar no recebimento ou crédito mensal)."
       },
       {
         "type": "steps",
@@ -1000,7 +1160,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A condição de pagamento define o que acontece em seguida: pedidos à vista são marcados como pagos, enquanto os mensais ficam em aberto em Contas a pagar, onde você pode quitá-los por fornecedor — um pedido, o mês ou tudo de uma vez."
+        "text": "A condição de pagamento define o que acontece em seguida: pedidos com pagamento no recebimento são marcados como pagos, enquanto os de crédito mensal ficam em aberto em Contas a pagar, onde você pode quitá-los por fornecedor — um pedido, o mês ou tudo de uma vez."
+      },
+      {
+        "type": "p",
+        "text": "Insumos que você não vende, como farinha ou embalagens, podem ser comprados do mesmo jeito: cadastre-os como produtos não vendáveis — veja “Posso cadastrar insumos, como farinha ou embalagens, como produtos?”"
       },
       {
         "type": "note",
@@ -1009,8 +1173,55 @@ export const articles = [
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Posso cadastrar insumos, como farinha ou embalagens, como produtos?",
+    "keywords": [
+      "não vendável",
+      "matéria-prima",
+      "insumos",
+      "ingredientes",
+      "materiais",
+      "embalagens",
+      "suprimentos",
+      "vender no caixa",
+      "compras",
+      "custo"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Pode, sim. No formulário do produto, desative Vender no caixa, abaixo da foto (ele vem ativado por padrão), e o produto passa a ser não vendável: não precisa de preço, mantém custo, código de barras, estoque e variantes, e a lista de produtos mostra “Não vendável” no lugar do preço."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Um produto não vendável nunca aparece na grade do caixa, nas categorias, na busca nem na leitura de código de barras, e não pode ser brinde, adicional, alvo de uma promoção nem item da troca.",
+          "Pedidos de compra, recebimento, Sincronizar custo do produto e contas a pagar funcionam exatamente como nos outros produtos, então o custo de compra e o estoque de um material podem ser registrados em Compras.",
+          "Vender outros produtos não baixa o estoque dele. Quando você usar uma parte, registre uma remoção com Ajustar estoque nos detalhes do produto: Usado na produção para o que entrou nos produtos, Materiais da loja para coisas como sacolas de papel ou produtos de limpeza.",
+          "Você pode voltar atrás a qualquer momento, e o preço e os impostos continuam lá. As vendas e os relatórios já feitos não são afetados."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Como o custo dele chega à DRE: as compras não entram lá diretamente. Para um produto feito com ele, coloque o custo nesse produto, e ele é descontado quando esse produto é vendido. Materiais que não entram no custo de nenhum produto são registrados como Materiais da loja quando usados, se o estoque deles for controlado, ou como uma despesa avulsa, se não for. Não registre o mesmo dinheiro das duas formas, ou ele será contado duas vezes."
+      },
+      {
+        "type": "note",
+        "text": "Produtos não vendáveis estão em todos os planos; compras, controle de estoque e Ajustar estoque exigem o plano Standard ou superior."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1029,7 +1240,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "A Receita conta no dia em que a mercadoria foi entregue; o Valor recebido conta no dia em que o dinheiro entrou. Em uma venda paga no balcão, os dois acontecem no mesmo dia e os números são iguais. Eles se separam quando:"
+        "text": "A Receita conta no dia em que a mercadoria foi entregue, depois de todos os descontos e antes do imposto; o Valor recebido conta no dia em que o dinheiro entrou e é o dinheiro que você de fato recebeu, imposto incluído. Por isso, em uma loja que cobra imposto, o Valor recebido fica acima da Receita pelo valor do imposto, mesmo em vendas pagas no balcão. Além disso, os dois se separam quando:"
       },
       {
         "type": "list",
@@ -1037,12 +1248,17 @@ export const articles = [
           "Venda a prazo: a mercadoria sai hoje e entra na receita de hoje; o dinheiro entra no Valor recebido no dia em que for quitado.",
           "Encomenda: o sinal entra no Valor recebido quando é pago; a receita é reconhecida por inteiro na data da retirada.",
           "Perda do sinal: quando o cliente cancela uma encomenda e você fica com o sinal, esse valor já havia sido contado no Valor recebido quando foi pago. O Resumo o mostra à parte como perda do sinal, e ele nunca entra na receita.",
-          "Anulação de uma venda anterior: o dinheiro devolvido entra no Valor recebido no dia da anulação, então o Valor recebido desse dia pode ficar negativo, enquanto Anuladas conta a venda na data em que ela foi feita. O ⓘ nos blocos Valor recebido e Anuladas explica a mesma coisa."
+          "Anulação de uma venda anterior: o dinheiro devolvido entra no Valor recebido no dia da anulação, então o Valor recebido desse dia pode ficar negativo, enquanto Anuladas conta a venda na data em que ela foi feita.",
+          "Arredondamento do dinheiro: o que o arredondamento do dinheiro acrescenta ou tira do total da venda entra no Valor recebido, nunca na Receita."
         ]
       },
       {
         "type": "p",
-        "text": "Para conferir o caixa, compare o Valor recebido com o dinheiro da gaveta e com a maquininha de cartão; para saber quanto você realmente vendeu em um período, olhe a Receita. As devoluções reduzem a receita no dia da devolução."
+        "text": "Para conferir o caixa, compare o Valor recebido com o dinheiro da gaveta e com a maquininha de cartão; para saber quanto você realmente vendeu em um período, olhe a Receita. As devoluções reduzem a receita no dia da devolução. O ⓘ nos blocos Receita, Valor recebido e Anuladas explica a mesma coisa, e o imposto em si aparece em Da receita ao lucro bruto, que abre ao tocar no bloco Lucro bruto."
+      },
+      {
+        "type": "note",
+        "text": "A receita antes do imposto chegou na versão 3.5, e os períodos passados foram recalculados do mesmo jeito, então uma loja que cobra imposto vê uma receita menor do que antes da atualização. É uma correção. As versões anteriores incluíam o imposto na receita, e as lojas com preços sem imposto chegavam a contar como receita o imposto de venda que cobravam."
       }
     ],
     "related": [
@@ -1072,15 +1288,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Para um único dia, o gráfico de tendência vira um gráfico de barras por hora; períodos mais longos usam dias, semanas, meses ou anos por barra, conforme a duração."
+        "text": "Abaixo da barra de período vêm duas fileiras de blocos de números (Receita, Valor recebido, Lucro bruto, Vendas, Ticket médio; Total de descontos, Lucro líquido, Produtos sem custo, Clientes atendidos) e, depois, o gráfico de tendência. O menu no canto superior direito do gráfico de tendência alterna entre receita, vendas, ticket médio e clientes atendidos, e ao lado dele o gráfico Custo e lucro bruto empilha, em uma única barra, o custo dos produtos e o lucro bruto de cada período. Um único dia é exibido por hora; períodos mais longos usam dias, semanas, meses ou anos, conforme a duração."
       },
       {
         "type": "p",
-        "text": "Desde a versão 3.4, mantenha o dedo pressionado no gráfico Tendência da receita ou Tendência do lucro para lê-lo período a período: um card mostra a data e a receita ou o lucro daquele período e, na Tendência da receita com a Comparação de vendas ativada, também a receita do período de comparação e a diferença. Arraste para a esquerda ou para a direita para se mover; deslize para cima ou para baixo no gráfico e a página rola normalmente."
+        "text": "Mantenha o dedo pressionado no gráfico de tendência ou no gráfico Custo e lucro bruto para lê-lo período a período; com a Comparação de vendas ativada, o card do gráfico de tendência mostra lado a lado o valor deste período e o do período de comparação. Arraste para a esquerda ou para a direita para se mover; deslize para cima ou para baixo no gráfico e a página rola normalmente."
       },
       {
         "type": "p",
-        "text": "O card Ranking de produtos lista os 5 primeiros. Toque no card ou em Ver tudo para listar todos os produtos vendidos no período, ordenados pela quantidade após as devoluções."
+        "text": "O card Ranking de produtos lista os 5 primeiros. Toque no card ou em Ver tudo para listar todos os produtos vendidos no período, ordenados pela quantidade após as devoluções; um produto com variantes ganha uma linha por variante."
       },
       {
         "type": "p",
@@ -1112,6 +1328,7 @@ export const articles = [
       "valor do estoque",
       "variação por produto",
       "taxa de recompra",
+      "participação por categoria",
       "pontos"
     ],
     "content": [
@@ -1122,11 +1339,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Comparação de vendas: à direita da barra de período, compare com o mesmo período do ano passado ou com o período anterior (um único dia com o mesmo dia da semana passada, esta semana com a semana passada, este mês com o mês passado, este ano com o ano passado, um período personalizado com o mesmo número de dias imediatamente antes). O card Valor recebido mostra a diferença e a taxa de crescimento, e o gráfico de receita ganha uma linha mais clara para o período de comparação. Enquanto um período ainda está em andamento, o período de comparação é cortado no mesmo momento.",
-          "Dia da semana × hora: troque o cabeçalho Vendas ao longo do tempo para Dia da semana × hora e veja um mapa de calor de sete dias por 24 horas — quanto mais escura a célula, mais você vendeu. Alterne entre receita e vendas; com uma comparação ativa, veja em quais horários houve alta e em quais houve queda.",
-          "Produtos parados: troque o cabeçalho do card de ranking para Produtos parados para listar os produtos ordenados do menor para o maior número de vendas, com o estoque atual e a data da última venda de cada um. Produtos que nunca foram vendidos aparecem como Nunca vendido. Por padrão, só aparecem produtos com estoque.",
-          "Variações (desde a versão 3.4): troque o cabeçalho do card de ranking para Variações e veja os 3 produtos cuja receita mais subiu e os 3 que mais caíram em relação ao período de comparação, cada um com a receita dos dois períodos e a diferença. Escolha primeiro um período em Comparação de vendas; com Nenhum, ou em Todo o período, o card avisa. Toque no card ou em Ver tudo para abrir a lista completa de Variação por produto, dividida em Em alta e Em queda.",
-          "Taxa de recompra: a última linha do card de clientes é a parcela dos membros que compraram no período e já compraram duas ou mais vezes no total.",
+          "Comparação de vendas: à direita da barra de período, compare com o mesmo período do ano passado ou com o período anterior (um único dia com o mesmo dia da semana passada, esta semana com a semana passada, este mês com o mês passado, este ano com o ano passado, um período personalizado com o mesmo número de dias imediatamente antes). Os blocos Receita, Valor recebido, Lucro bruto, Vendas, Ticket médio, Total de descontos e Clientes atendidos mostram, cada um, a variação e o valor do período de comparação, como “▼ 3% em relação a mês passado”; a variação em Total de descontos é sempre cinza, porque mais desconto não é bom nem ruim em si. Toque em qualquer linha de comparação para abrir Comparação de períodos, que lista os valores dos dois períodos. O gráfico de tendência ganha uma linha mais clara para o período de comparação. Enquanto um período ainda está em andamento, o período de comparação é cortado no mesmo momento.",
+          "Dia da semana × hora: troque o cabeçalho do gráfico de tendência de Tendência para Dia da semana × hora e veja um mapa de calor de sete dias por 24 horas — quanto mais escura a célula, mais você vendeu. Alterne entre receita e vendas; com uma comparação ativa, veja em quais horários houve alta e em quais houve queda.",
+          "Produtos parados: troque o cabeçalho do card de ranking para Produtos parados para listar os produtos ordenados do menor para o maior número de vendas, com o estoque atual e a data da última venda de cada um. Produtos que nunca foram vendidos aparecem como Nunca vendido, e um produto com variantes ganha uma linha por variante. Por padrão, só aparecem produtos com estoque.",
+          "Variações (desde a versão 3.4): troque o cabeçalho do card de ranking para Variações e veja os 3 produtos cuja receita mais subiu e os 3 que mais caíram em relação ao período de comparação, cada um com a receita dos dois períodos e a diferença; cada variante é comparada com ela mesma. Escolha primeiro um período em Comparação de vendas; com Nenhum, ou em Todo o período, o card avisa. Toque no card ou em Ver tudo para abrir a lista completa de Variação por produto, dividida em Em alta e Em queda.",
+          "Taxa de recompra: a última linha do bloco de clientes é a parcela dos membros que compraram no período e já compraram duas ou mais vezes no total. Com uma comparação ativa, uma linha abaixo mostra a variação em pontos percentuais e a taxa do período de comparação.",
+          "Participação por categoria: a receita e a participação de cada categoria, pela categoria atual de cada produto, da maior para a menor. Produtos sem categoria ficam em Sem categoria, e as linhas somam exatamente a Receita.",
           "Agora: valor do estoque (estoque atual × custo atual), todas as movimentações de estoque no período selecionado e os pontos que os clientes têm e ainda não resgataram, com o desconto máximo que eles permitem. Esses valores são da posição atual; o período não os altera."
         ]
       },
@@ -1152,33 +1370,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Como o lucro aparece nos relatórios se eu não informei os custos?",
+    "question": "Como o lucro bruto aparece nos relatórios se eu não informei os custos?",
     "keywords": [
       "custo",
       "lucro",
+      "lucro bruto",
       "margem",
       "margem bruta",
       "relatórios",
       "lucro não calculável",
       "produto sem custo",
-      "lucro calculável"
+      "produtos sem custo"
     ],
     "content": [
       {
         "type": "p",
-        "text": "O custo é um campo opcional. Produtos sem custo ficam fora do lucro, mas a receita deles continua sendo contada por inteiro. O cartão Lucro calculável no Resumo mostra quantos produtos vendidos no período não têm custo; um custo de 0 conta como custo, então esses produtos não aparecem na lista."
+        "text": "O custo é um campo opcional. Produtos sem custo ficam fora do lucro bruto, mas a receita deles continua sendo contada por inteiro. O bloco Produtos sem custo no Resumo mostra quantos produtos vendidos ou devolvidos no período não têm custo, como “12 produtos”. Um custo de 0 conta como custo, então esses produtos não aparecem na lista; quando todos os produtos têm custo, o bloco mostra “0 produtos · custos completos”."
       },
       {
         "type": "p",
-        "text": "Toque no cartão ou em Ver produtos para abrir Produtos sem custo, ordenados pela receita que ficou fora do lucro. Toque em uma linha para abrir o produto, informe o custo em Editar e, ao voltar, a linha aparece marcada como Custo adicionado. Um produto com variantes só aparece como Custo adicionado quando todas as variantes vendidas sem custo passam a ter um — o próprio custo da variante ou o do produto, que ela segue."
+        "text": "Toque no bloco ou em Ver produtos para abrir Produtos sem custo, ordenados pela receita que ficou fora do lucro bruto. Toque em uma linha para abrir o produto, informe o custo em Editar e, ao voltar, a linha aparece marcada como Custo adicionado. Um produto com variantes só aparece como Custo adicionado quando todas as variantes vendidas sem custo passam a ter um — o próprio custo da variante ou o do produto, que ela segue."
       },
       {
         "type": "p",
-        "text": "O lucro é a receita depois de todos os descontos (de item e de carrinho, promoções e resgate de pontos) e antes do imposto, menos o custo — por isso o campo se chama Custo sem impostos (opcional): informe o que você pagou antes do imposto. A margem é o lucro ÷ a receita sem imposto dos produtos que têm custo, então os produtos sem custo não puxam a margem para baixo. Uma devolução desfaz, no dia da devolução, o lucro que esses itens tinham gerado."
+        "text": "O lucro bruto é a receita depois de todos os descontos (de item e de carrinho, promoções e resgate de pontos) e antes do imposto, menos o custo — por isso, em uma loja que cobra imposto, o campo se chama Custo sem impostos (opcional): informe o que você pagou antes do imposto. A margem é o lucro bruto ÷ a receita dos produtos que têm custo, então os produtos sem custo não puxam a margem para baixo. Uma devolução desfaz, no dia da devolução, o lucro bruto que esses itens tinham gerado."
+      },
+      {
+        "type": "p",
+        "text": "Toque no bloco Lucro bruto para abrir Da receita ao lucro bruto, que subtrai linha por linha: receita (com imposto), imposto, receita (sem imposto), receita sem custo, custo dos produtos e, por fim, lucro bruto e margem. As linhas somam exatamente o valor do bloco."
       },
       {
         "type": "note",
-        "text": "Um custo que você informa afeta apenas as vendas futuras; as vendas já feitas não são recalculadas. Este cálculo chegou na v3.1: as versões anteriores só descontavam os descontos manuais de item e contavam o imposto incluso como lucro, então, depois de atualizar, períodos com descontos ou imposto incluso mostram um lucro menor. É uma correção, não perda de dados."
+        "text": "Um custo que você informa afeta apenas as vendas futuras; as vendas já feitas não são recalculadas. Este cálculo chegou na v3.1: as versões anteriores só descontavam os descontos manuais de item e contavam o imposto incluso como lucro, então, depois de atualizar, períodos com descontos ou imposto incluso mostram um lucro bruto menor. É uma correção, não perda de dados."
       }
     ],
     "related": [
@@ -1213,16 +1436,22 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Receita (sem imposto): a receita depois de todos os descontos, menos o imposto, contada no dia em que o produto foi entregue.",
+          "Receita (sem imposto): a receita depois de todos os descontos e antes do imposto, contada no dia em que o produto foi entregue.",
           "Custo dos produtos: o custo do que foi vendido, a partir dos custos cadastrados nos seus produtos.",
+          "Perda de estoque: o custo do que Ajustar estoque retirou por vencimento, dano, doação e motivos parecidos, mais as devoluções descartadas. Ela entra depois do lucro bruto — veja “Como registrar produtos vencidos, danificados ou dados como amostra?” O mês também tem uma seção Perda de estoque que soma tudo por motivo.",
           "Taxas de processamento (est.): as taxas estimadas a partir das alíquotas das suas formas de pagamento.",
           "Sinais retidos: sinais que você reteve quando uma encomenda foi cancelada.",
+          "Arredondamento do dinheiro: o que o arredondamento do dinheiro para as moedas em uso acrescentou ou tirou dos totais das vendas.",
           "Despesas fixas e Despesas avulsas: o que você registrou para aquele mês — veja “Como registrar aluguel, folha de pagamento e outras despesas?”"
         ]
       },
       {
         "type": "p",
-        "text": "Em seguida vêm até três gráficos: o lucro líquido mês a mês, a participação de cada despesa fixa e a tendência das despesas fixas. Os dois gráficos de tendência cobrem no máximo os 12 meses até o mês que você abriu e só aparecem quando há pelo menos dois meses para comparar, contados a partir do mês da primeira venda ou despesa. O gráfico de participação precisa de uma despesa fixa naquele mês; enquanto não houver, essa seção mostra Adicionar despesa fixa. No Resumo, a última linha do card de lucro leva direto à DRE: para um período que é exatamente um mês, ela mostra o lucro líquido daquele mês, como “Lucro líquido de outubro: NT$12,300”; para qualquer outro período, aparece Ver DRE mensal."
+        "text": "Em seguida vêm até três gráficos: o lucro líquido mês a mês, a participação de cada despesa fixa e a tendência das despesas fixas. Os dois gráficos de tendência cobrem no máximo os 12 meses até o mês que você abriu e só aparecem quando há pelo menos dois meses para comparar, contados a partir do mês da primeira venda ou despesa. O gráfico de participação precisa de uma despesa fixa naquele mês; enquanto não houver, essa seção mostra Adicionar despesa fixa."
+      },
+      {
+        "type": "p",
+        "text": "O Resumo e a DRE levam um ao outro. Quando o período do Resumo é este mês ou exatamente um mês inteiro, a segunda fileira de blocos ganha um bloco Lucro líquido (marcado com “Em andamento · as despesas do mês inteiro são deduzidas” enquanto o mês está em curso); toque nele para ver o detalhamento daquele mês, do lucro bruto ao lucro líquido. Para qualquer outro período, toque em Ver DRE mensal na última linha de Da receita ao lucro bruto. No sentido contrário, Ver o relatório de outubro, abaixo do título de um mês na DRE, abre o Resumo naquele mês."
       },
       {
         "type": "note",
@@ -1281,7 +1510,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Informe o que a loja realmente paga, sem incluir impostos que você possa recuperar. O estoque que você vai vender passa por Compras, porque entra no custo dos produtos quando é vendido; depósitos caução, o principal de empréstimos e retiradas do proprietário não são despesas. As alterações são salvas juntas quando você toca em ✓, e uma alteração que alcança um mês já encerrado antes avisa de quais meses o lucro líquido vai mudar."
+        "text": "Informe o que realmente fica por conta da loja, sem incluir impostos que você possa recuperar. O estoque que você vai vender e os materiais com que você o fabrica passam por Compras, porque entram no custo dos produtos quando são vendidos. Materiais de consumo com estoque controlado são registrados com Ajustar estoque quando usados, com o motivo Materiais da loja, e não como despesa. Depósitos caução, o principal de empréstimos e retiradas do proprietário não são despesas. As alterações são salvas juntas quando você toca em ✓, e uma alteração que alcança um mês já encerrado antes avisa de quais meses o lucro líquido vai mudar."
       }
     ],
     "related": [
@@ -1385,6 +1614,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Vincule o membro à venda, no carrinho ou na tela Pagamento, e os pontos são acumulados automaticamente; para resgatar, informe os pontos a usar. Anular uma venda reverte os pontos que ela gerou e devolve os pontos que foram resgatados."
+      },
+      {
+        "type": "p",
+        "text": "Para adicionar ou tirar pontos manualmente (por exemplo, de uma compra que ficou sem registro), toque em Ajustar no cartão Pontos nos detalhes do cliente, escolha Adicionar ou Deduzir, informe os pontos e, se quiser, escreva um motivo (até 100 caracteres). Não é possível deduzir mais pontos do que o cliente tem. Todo ajuste fica no histórico de pontos, com o saldo antes e depois, o motivo e quem o fez."
+      },
+      {
+        "type": "note",
+        "text": "O ajuste manual de pontos chegou na v3.5. No Pro, os funcionários cuja função exige aprovação para Ajuste manual de pontos (a função Funcionário exige por padrão) precisam do PIN de um gerente ou do proprietário ao confirmar."
       }
     ],
     "related": [
@@ -1575,6 +1812,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Toque primeiro em Tentar novamente; se funcionar, o app abre normalmente. Se o problema continuar, toque em Falar com o suporte e conte para nós, que vamos ajudar você a recuperar seus dados. Esta tela nunca move nem exclui arquivos."
+      },
+      {
+        "type": "p",
+        "text": "A primeira abertura depois de uma atualização, ou depois de restaurar um backup de uma versão mais antiga, pode mostrar antes “Atualizando seus dados…”. São os dados da sua loja sendo convertidos para um formato mais novo, e quanto mais dados, mais demora; o app abre sozinho quando termina. Ele não travou."
       },
       {
         "type": "note",
@@ -1780,7 +2021,7 @@ export const articles = [
     "slug": "activity-log",
     "category": "staff",
     "since": "3.0",
-    "question": "Como ver quem anulou um pedido, ajustou o estoque ou mudou um preço?",
+    "question": "Como ver quem anulou uma venda, ajustou o estoque ou mudou um preço?",
     "keywords": [
       "registro de atividades",
       "auditoria",
@@ -1795,12 +2036,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Use o registro de atividades. Na página Equipe, toque em Registro de atividades no canto superior direito e digite o PIN do proprietário para ver as ações sensíveis da loja, das mais recentes às mais antigas: anulações, devoluções, ajustes manuais de estoque, aprovações, mudanças na equipe e nas permissões, trocas do PIN do proprietário, mudanças de preço e custo de produtos e exclusões de produtos. Vendas comuns não aparecem."
+        "text": "Use o registro de atividades. Na página Funcionários e permissões, toque em Registro de atividades no canto superior direito e digite o PIN do proprietário para ver as ações sensíveis da loja, das mais recentes às mais antigas: anulações, devoluções, ajustes e recontagens de estoque, ajustes manuais de pontos, aprovações, mudanças na equipe e nas permissões, trocas do PIN do proprietário, mudanças nos ajustes de imposto, mudanças de preço e custo de produtos e exclusões de produtos. Vendas comuns não aparecem."
       },
       {
         "type": "list",
         "items": [
-          "Cada registro mostra o que foi afetado, quem fez o quê e quando, e o resultado — por exemplo “M preço R$ 390 → R$ 350”.",
+          "Cada registro mostra o que foi afetado, quem fez o quê e quando, e o resultado — por exemplo “M preço R$ 390 → R$ 350”. O motivo informado em uma anulação, devolução, ajuste de estoque ou ajuste de pontos aparece na terceira linha do registro.",
           "Filtre por funcionário (inclusive os desativados), tipo de ação e Hoje / Esta semana / Este mês.",
           "Toque em um registro ligado a uma venda, produto ou cliente para abrir os detalhes correspondentes.",
           "Os detalhes da venda, os detalhes do produto e a página de cada funcionário têm uma entrada própria, que lista só os registros sobre eles.",

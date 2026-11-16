@@ -83,7 +83,8 @@ export const articles = [
       "ouvrir ma boutique",
       "prise en main",
       "pays",
-      "devise"
+      "devise",
+      "taxes"
     ],
     "content": [
       {
@@ -93,8 +94,8 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Choisissez votre pays ou votre région. Le haut de la liste affiche la région de cet iPad et les marchés les plus courants ; en dessous figurent les 175 pays et régions où DingPOS est disponible sur l’App Store, avec une recherche par nom dans la langue de l’app ou en anglais. Votre choix renseigne la devise, le taux de taxe et le mode de taxe.",
-          "Sur Votre magasin, saisissez le nom du magasin, ajoutez si vous le souhaitez un logo, puis vérifiez la devise, le taux de taxe et le mode de taxe (TTC / HT). La devise par défaut est celle de votre pays ; touchez-la pour choisir parmi 130 devises."
+          "Choisissez votre pays ou votre région. Le haut de la liste affiche le pays ou la région de cet iPad, puis les marchés les plus courants ; en dessous figurent les 175 pays et régions où DingPOS est disponible sur l’App Store, avec une recherche par nom dans la langue de l’app ou en anglais. Votre choix renseigne la devise, les taxes et le mode de taxe.",
+          "Dans l’écran « Votre magasin », saisissez le nom du magasin, ajoutez si vous le souhaitez un logo, puis vérifiez la devise, les taxes et le mode de taxe (TTC / HT). La devise par défaut est celle de votre pays ; touchez-la pour choisir parmi 130 devises. La liste des taxes reprend celles par défaut de votre pays : renommez-les, modifiez un taux, supprimez-en une ou touchez « Ajouter une taxe » pour obtenir une ligne de plus. Une boutique en Colombie-Britannique, par exemple, remplace le nom de la première taxe par « TPS 5 » et ajoute une taxe nommée « TVP 7 »."
         ]
       },
       {
@@ -103,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "La devise et le mode de taxe ne peuvent plus être modifiés après la configuration ; le taux de taxe, lui, reste modifiable plus tard dans Réglages. Aux États-Unis, au Canada, au Brésil et en Micronésie, le taux dépend de l’État, de la province ou de la ville : le champ du taux de taxe est donc vide au départ, et vous saisissez le taux que vous appliquez (0 est accepté) pour continuer. La liste de 175 pays et le choix de la devise sont arrivés avec la v3.2 ; les versions antérieures proposaient 15 pays."
+        "text": "La devise ne peut plus être modifiée après la configuration ; les taxes et le mode de taxe, eux, restent modifiables plus tard dans Réglages → Informations du magasin. Aux États-Unis, au Canada, au Brésil et en Micronésie, le taux dépend de l’État, de la province ou de la ville : le champ du taux est donc vide au départ, et vous saisissez le taux que vous appliquez pour continuer. Un taux doit être supérieur à 0 : un commerce qui ne facture aucune taxe supprime la ligne. La liste de 175 pays et le choix de la devise sont arrivés avec la v3.2 ; les versions antérieures proposaient 15 pays."
       }
     ],
     "related": [
@@ -180,11 +181,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS est actuellement compatible avec les iPad sous iPadOS 17 ou version ultérieure. L’app est conçue principalement pour une utilisation en mode paysage."
+        "text": "DingPOS est actuellement compatible avec les iPad sous iPadOS 17.4 ou version ultérieure. L’app est conçue principalement pour une utilisation en mode paysage."
       },
       {
         "type": "p",
         "text": "L’iPhone et le Mac ne sont pas encore pris en charge. Si vous souhaitez que nous prenions en charge un autre appareil, écrivez-nous en décrivant votre usage."
+      },
+      {
+        "type": "note",
+        "text": "Tous les iPad compatibles avec iPadOS 17 peuvent passer à la version 17.4 : aucun modèle n’est laissé de côté. Un iPad encore sous iPadOS 17.0 à 17.3 doit d’abord être mis à jour, dans Réglages → Général → Mise à jour logicielle, avant de pouvoir installer DingPOS v3.5 ou une version ultérieure."
       }
     ],
     "related": [
@@ -194,22 +199,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Peut-on changer la devise ou le mode de taxe après la configuration ?",
+    "question": "Peut-on changer la devise, les taxes ou le mode de taxe après la configuration ?",
     "keywords": [
       "devise",
       "mode de taxe",
       "modifier",
       "verrouillé",
-      "taux de taxe"
+      "taux",
+      "taxes",
+      "TTC",
+      "HT"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Le taux de taxe peut être modifié à tout moment dans Réglages ; le nouveau taux ne s’applique qu’aux commandes à venir."
+        "text": "Les taxes peuvent changer, la devise non. Les taxes et le mode de taxe se modifient dans la section Taxe de Réglages → Informations du magasin, et une modification ne s’applique qu’aux ventes à venir : les commandes passées, les retours et les rapports conservent les montants de taxe et le mode enregistrés."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Taxes : ajoutez-en une, renommez-la, modifiez son taux ou supprimez-la — voir « Comment la taxe est-elle calculée ? »",
+          "Mode de taxe (TTC / HT) : touchez l’autre mode, et la confirmation déroule un exemple avec votre première taxe, du type « un article à NT$100 avec une taxe de 5 % : le client paie NT$105 ». Les prix gardent leur montant, et un panier ouvert est recalculé dans le nouveau mode quand vous retournez à la caisse. Le mode peut être changé depuis la v3.5 ; les versions antérieures le verrouillent à la configuration.",
+          "Après un changement, un retour complet rembourse toujours la commande d’origine telle qu’elle était. Un échange (avec articles de remplacement) sur une commande vendue dans l’autre mode est bloqué : rebasculez le mode, ou retournez les articles et ressaisissez-les en caisse."
+        ]
       },
       {
         "type": "p",
-        "text": "La devise et le mode de taxe (TTC / HT) sont verrouillés une fois la configuration terminée. Toutes vos commandes passées ont été calculées avec ces paramètres : les modifier en cours de route fausserait vos rapports. Vérifiez-les à l’étape Votre magasin de la configuration : la devise est par défaut celle de votre pays, et vous pouvez la toucher pour en choisir une autre."
+        "text": "La devise est verrouillée une fois la configuration terminée. Toutes vos commandes passées ont été enregistrées dans cette devise : en changer en cours de route fausserait vos rapports. Vérifiez-la à l’étape Votre magasin de la configuration : elle correspond par défaut à celle de votre pays, et vous pouvez la toucher pour en choisir une autre."
       },
       {
         "type": "note",
@@ -329,28 +345,54 @@ export const articles = [
       "TTC",
       "HT",
       "prix toutes taxes comprises",
-      "ticket de caisse"
+      "plusieurs taxes",
+      "TPS",
+      "TVP",
+      "suspendre la taxe",
+      "reçu"
     ],
     "content": [
       {
         "type": "p",
-        "text": "La taxe est calculée automatiquement selon le mode de taxe choisi lors de la configuration. Le ticket indique le montant de la taxe dans les deux modes :"
+        "text": "La taxe est calculée automatiquement d’après les taxes et le mode de taxe définis dans Réglages → Informations du magasin. Il existe deux modes de taxe, et le reçu indique le montant de la taxe dans les deux :"
       },
       {
         "type": "list",
         "items": [
-          "TTC : les prix incluent déjà la taxe — le total ne change pas et le ticket détaille la taxe comprise (courant à Taïwan, au Japon, etc.).",
+          "TTC : les prix incluent déjà la taxe — le total ne change pas et le reçu détaille la taxe comprise (courant à Taïwan, au Japon, etc.).",
           "HT : la taxe s’ajoute au montant après remise lors de l’encaissement (courant aux États-Unis, au Canada, etc.)."
         ]
       },
       {
         "type": "p",
-        "text": "Ordre complet du calcul : remises sur article → remise sur le panier → taxe. Les montants sont arrondis à la valeur la plus proche, les demi-unités étant arrondies vers le haut, au nombre de décimales de la devise (p. ex. 0 pour le TWD, 2 pour l’USD)."
+        "text": "Un magasin peut appliquer plusieurs taxes, comme la TPS de 5 % plus la TVP de 7 % en Colombie-Britannique, ou la taxe de consommation japonaise de 10 % à côté du taux réduit de 8 % :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sur la carte Taxe, touchez Ajouter une taxe, puis saisissez un nom et un taux. Activez Appliquer aux nouveaux produits : les produits que vous ajouterez ensuite porteront cette taxe par défaut. Si le magasin a déjà une taxe par défaut, une taxe nouvellement ajoutée démarre avec ce réglage désactivé ; activez-le lorsque les deux doivent être appliquées.",
+          "Chaque produit choisit les taxes qu’il applique sous Taxes appliquées dans la fiche du produit — un bento peut n’appliquer que le taux réduit de 8 %. Quand deux taxes ou plus sont activées, la fiche affiche le taux cumulé du produit.",
+          "Touchez une taxe pour la renommer, modifier son taux, ou utiliser Appliquer à tous les produits ou Retirer de tous les produits afin de l’ajouter à tous les produits ou de la retirer de tous en une seule fois. Avant de supprimer une taxe, l’app vous indique combien de produits cesseront de l’appliquer.",
+          "Dans un magasin en mode HT, les totaux du panier affichent une ligne par taxe, et le détail de la commande liste une ligne par taxe avec son taux et le montant sur lequel elle a été appliquée."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Pour cesser un temps d’appliquer la taxe, désactivez Appliquer la taxe en haut de la carte Taxe : toutes les ventes suivantes sont sans taxe, y compris les articles déjà présents dans un panier. Chaque produit conserve ses taxes, et la réactivation du réglage les rétablit telles qu’elles étaient."
+      },
+      {
+        "type": "p",
+        "text": "Ordre complet du calcul : remises sur article et promotions → remise sur le panier → utilisation de points → taxe. Les montants sont arrondis à la valeur la plus proche, les demi-unités étant arrondies vers le haut, au nombre de décimales de la devise (p. ex. 0 pour le TWD, 2 pour l’USD)."
+      },
+      {
+        "type": "note",
+        "text": "Les taxes nommées sont arrivées avec la v3.5. À la mise à jour, votre taux de taxe devient une taxe nommée (« GST 10 % » en Australie, par exemple) et chaque produit existant l’applique ; un magasin dont le taux était de 0 n’obtient aucune taxe. Les commandes passées et les rapports conservent leurs chiffres."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -374,7 +416,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Les moyens de paiement sont de simples libellés de suivi : DingPOS ne traite aucun paiement réel. Encaissez les paiements par carte ou mobile avec votre terminal ou votre app habituels, puis choisissez le libellé correspondant dans DingPOS pour l’enregistrer. Les paiements en espèces calculent la monnaie automatiquement."
+        "text": "Les moyens de paiement sont de simples libellés de suivi : DingPOS ne traite aucun paiement réel. Encaissez les paiements par carte ou mobile avec votre terminal ou votre app habituels, puis choisissez le libellé correspondant dans DingPOS pour l’enregistrer. Les paiements en espèces calculent la monnaie automatiquement et, là où les plus petites pièces ne sont plus utilisées, les espèces peuvent aussi être arrondies — voir « Peut-on arrondir les paiements en espèces aux pièces en circulation ? »"
       },
       {
         "type": "p",
@@ -382,11 +424,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pour un habitué qui repart avec ses articles et paie plus tard, choisissez En compte : la vente est enregistrée comme une créance et réglée à l’arrivée de l’argent. Voir « Mes clients habituels peuvent-ils acheter en compte et payer plus tard ? »"
+        "text": "Pour un habitué qui repart avec ses articles et paie plus tard, choisissez En compte : la vente est enregistrée comme une créance et réglée à l’arrivée de l’argent. Voir « Mes habitués peuvent-ils acheter en compte et payer plus tard ? »"
       }
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -432,6 +475,55 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Peut-on arrondir les paiements en espèces aux pièces en circulation ?",
+    "keywords": [
+      "arrondi des espèces",
+      "arrondi",
+      "arrondir au-dessus",
+      "arrondir en dessous",
+      "pièces",
+      "centime",
+      "cent",
+      "0,05",
+      "monnaie",
+      "Canada",
+      "Australie",
+      "Suisse"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Oui. Le Canada, l’Australie, la Nouvelle-Zélande, la Suisse, le Danemark, la Suède, la Norvège, la Belgique, la Finlande et la Hongrie n’utilisent plus leurs plus petites pièces : DingPOS arrondit donc les espèces à un montant que vous pouvez réellement rendre ou encaisser. Une commande de C$12.99 payée en espèces est encaissée à C$13.00, et la monnaie est calculée à partir de C$13.00. Les paiements par carte et les autres paiements sans espèces restent exacts."
+      },
+      {
+        "type": "p",
+        "text": "Un nouveau magasin créé dans l’un de ces pays, dans la devise de ce pays, obtient cet arrondi automatiquement. Tout autre magasin peut l’activer avec la carte Arrondi des espèces, en bas de Réglages → Moyens de paiement : choisissez à quoi arrondir les espèces (Aucun arrondi, 0,05, 0,10, 0,50 ou 1,00) et, pour un pas qui peut tomber exactement à mi-chemin, si l’arrondi se fait au-dessus ou en dessous. Une modification ne s’applique qu’aux paiements suivants."
+      },
+      {
+        "type": "list",
+        "items": [
+          "L’encaissement affiche « Espèces encaissées C$13.00 ». Si le client demande à payer le montant exact, touchez Encaisser le montant exact sous les moyens de paiement ; cela ne vaut que pour cette vente.",
+          "Le total de la commande, la taxe, le chiffre d’affaires, les points et les dépenses du membre ne changent pas ; la différence d’arrondi est portée par le paiement, et l’écran du reçu comme le détail de la commande l’affichent sous le total, par exemple « Arrondi des espèces +C$0.01 ».",
+          "Les remboursements en espèces lors d’un retour, les acomptes en espèces et les soldes au retrait des précommandes, les compléments d’un échange et les créances réglées en espèces sont eux aussi arrondis ; lorsque plusieurs créances sont réglées en une fois, le lot n’est arrondi qu’une seule fois.",
+          "Les invalidations, les acomptes remboursés de précommandes et les règlements annulés restituent exactement ce qui avait été enregistré, sans nouvel arrondi.",
+          "Encaissements dans Stats indique la part due à l’arrondi des espèces, et le résultat mensuel comporte une ligne Arrondi des espèces qui entre dans le bénéfice net. L’arrondi n’est jamais du chiffre d’affaires."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "La Suisse arrondit toujours à l’inférieur, selon ses règles d’affichage des prix — CHF 12.98 sont encaissés à CHF 12.95, sans choix à mi-chemin. La Belgique n’arrondit que les totaux supérieurs à €0.05. L’arrondi des espèces est disponible dans toutes les formules, et un magasin existant encaisse les espèces exactement comme avant tant que vous ne l’activez pas."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -610,7 +702,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ouvrez Commandes, trouvez la commande, affichez son détail, puis choisissez Invalider. Confirmez, et c’est fait."
+        "text": "Ouvrez Commandes, trouvez la commande, affichez son détail, puis touchez Invalider. La feuille « Invalider cette commande ? » propose un motif facultatif (100 caractères maximum) ; touchez Invalider en haut à droite, et c’est fait. Le motif apparaît dans le détail de la commande et dans le journal d’activité, et ne peut plus être modifié une fois envoyé."
       },
       {
         "type": "p",
@@ -637,7 +729,9 @@ export const articles = [
       "échange",
       "remboursement",
       "retour partiel",
-      "changer de taille"
+      "changer de taille",
+      "mise au rebut",
+      "motif du retour"
     ],
     "content": [
       {
@@ -650,9 +744,15 @@ export const articles = [
           "La commande d’origine n’est jamais modifiée. Un retour crée son propre document daté du jour, numéroté avec le préfixe R, et le chiffre d’affaires est réduit le jour du retour.",
           "Le remboursement correspond à ce que le client a réellement payé pour l’article : remises sur article, remises sur le panier et utilisation de points sont déjà réparties, il n’est donc pas remboursé au prix catalogue. La taxe suit le taux appliqué à la commande d’origine.",
           "Les articles de remplacement sont facturés au prix du jour, sans promotion ni remise.",
-          "Le stock suivi est rétabli automatiquement. Les points gagnés sur la commande d’origine sont repris, les points utilisés sont recrédités, et les articles de remplacement rapportent leurs propres points.",
-          "Une commande peut être retournée en plusieurs fois, mais jamais au-delà de la quantité vendue à l’origine. Les utilisations des promotions ne sont pas rétablies après un retour."
+          "Pour un produit au stock suivi, chaque ligne retournée peut être remise en stock (« En stock », choix par défaut) ou jetée (« Au rebut », depuis la v3.5). « En stock » ajoute la quantité au stock. « Au rebut » laisse le stock tel quel et impute le coût de l’article au moment de la vente à la perte de stock du mois dans Résultat. Le remboursement, la taxe et les points sont les mêmes dans les deux cas.",
+          "Les points gagnés sur la commande d’origine sont repris, les points utilisés sont recrédités, et les articles de remplacement rapportent leurs propres points.",
+          "Lorsque la commande d’origine est une vente en compte non réglée, aucun argent ne change de mains : le retour est déduit des créances du client, et un article de remplacement plus cher ajoute la différence à ces créances.",
+          "Une commande peut être retournée en plusieurs fois, mais jamais au-delà de la quantité vendue à l’origine ; une fois tout retourné, la taxe, les remises et les points restitués correspondent exactement à la commande d’origine. Les limites d’utilisation des promotions ne sont pas rétablies après un retour."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Le champ Motif est facultatif (100 caractères maximum). Il apparaît dans le détail de la commande et dans le journal d’activité, et ne peut plus être modifié une fois envoyé."
       },
       {
         "type": "note",
@@ -735,6 +835,7 @@ export const articles = [
         "items": [
           "Le chiffre d’affaires est comptabilisé le jour où les articles sortent ; les encaissements et les points de fidélité attendent le jour du règlement.",
           "Les commandes non réglées portent un badge ambre dans la liste, et le détail du client indique combien il doit actuellement.",
+          "Un retour sur une commande pas encore réglée ne rembourse aucun argent : le montant est déduit des créances de ce client.",
           "Un client ayant des commandes non réglées ne peut pas être supprimé."
         ]
       },
@@ -799,11 +900,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Inutile de saisir un coût pour chaque combinaison : un champ Coût vide signifie « suit le coût du produit » : il reprend le coût du produit et change avec lui. Un nombre, 0 compris, donne un « coût propre ». Utiliser le coût du produit pour toutes efface d’un coup tous les coûts propres."
+        "text": "Inutile de saisir un coût pour chaque combinaison : un champ Coût vide signifie Suit le produit : il reprend le coût du produit et change avec lui. Un nombre, 0 compris, donne Coût propre. Utiliser le coût du produit pour toutes efface d’un coup tous les coûts propres."
       },
       {
         "type": "note",
-        "text": "Les noms d’options et de valeurs sont limités à 20 caractères et ne peuvent pas être vides : un nom d’option ou de valeur vide est entouré de rouge à l’enregistrement ; remplissez-le ou supprimez la valeur vide. Un produit avec variantes ne peut pas avoir de prix libre."
+        "text": "Les noms d’options et de valeurs sont limités à 20 caractères, et les espaces au début et à la fin sont supprimés à l’enregistrement. Une valeur dans laquelle vous n’avez rien saisi n’est pas une combinaison et est ignorée à l’enregistrement ; seul un nom d’option vide, ou une option dont toutes les valeurs sont vides, est entouré de rouge. Un produit avec variantes ne peut pas avoir de prix libre."
       }
     ],
     "related": [
@@ -936,12 +1037,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Une fois activé, les ventes et les précommandes déduisent le stock automatiquement ; les invalidations, les retours et les précommandes annulées le remettent ; la réception d’un bon de commande l’augmente ; et vous pouvez l’ajuster à la main à tout moment. Chaque mouvement est consigné dans un historique complet. Un stock faible est signalé par un avertissement en couleur."
+        "text": "Une fois activé, les ventes et les précommandes déduisent le stock automatiquement ; les invalidations, les retours et les précommandes annulées le remettent ; et la réception d’un bon de commande l’augmente. Chaque mouvement est consigné dans un historique complet. Un stock faible est signalé par un avertissement en couleur."
+      },
+      {
+        "type": "p",
+        "text": "Il y a deux façons de modifier le chiffre à la main :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Recomptage : modifiez le chiffre du stock dans le formulaire du produit pour qu’il corresponde à ce que vous avez réellement compté. Un recomptage n’affecte jamais le compte de résultat.",
+          "Ajuster le stock (depuis la v3.5) : dans la fiche du produit, touchez Ajuster le stock, choisissez Retirer ou Ajouter, la quantité et un motif comme Périmé ou avarié, Endommagé ou Échantillons et dons. Le coût de ce que vous retirez compte dans la perte de stock du mois, dans le compte de résultat — voir « Comment enregistrer du stock périmé, cassé ou distribué en échantillons ? »"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Comment enregistrer du stock périmé, cassé ou distribué en échantillons ?",
+    "keywords": [
+      "ajuster le stock",
+      "perte de stock",
+      "pertes",
+      "mise au rebut",
+      "déchets",
+      "périmé",
+      "endommagé",
+      "échantillons",
+      "consommables",
+      "recomptage"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Utilisez Ajuster le stock. Pour un produit dont le stock est suivi, touchez Ajuster le stock dans la fiche du produit, choisissez Retirer ou Ajouter, saisissez la quantité, sélectionnez un motif et, si vous le souhaitez, ajoutez une note (100 caractères maximum). La fenêtre calcule le stock après la modification, et la ligne sous le motif indique si l’ajustement touche le compte de résultat."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Motifs pour retirer : Matières utilisées, Périmé ou avarié, Endommagé, Perdu ou volé, Usage du personnel, Échantillons et dons, Consommables et Autre. Motifs pour ajouter : Fabriqué sur place, Retrouvé et Autre. Autre exige une note.",
+          "Sauf pour Matières utilisées, ce que vous retirez compte à son coût du moment dans la perte de stock du mois, dans le compte de résultat. Elle vient après la marge brute et réduit le bénéfice net ; la marge brute et le taux de marge ne changent pas. Matières utilisées retire seulement le stock, car le coût d’une matière est déjà inclus dans le coût du produit fabriqué avec.",
+          "Retrouvé retire le même montant de la perte de stock. Fabriqué sur place et Autre, côté Ajouter, ajoutent seulement du stock et n’affectent jamais le compte de résultat.",
+          "Un ajustement compte le jour où vous l’enregistrez. Il ne peut être ni antidaté, ni modifié, ni supprimé ; pour corriger une erreur, enregistrez Retrouvé ou un ajustement en sens inverse.",
+          "Un produit sans coût peut quand même être ajusté, mais le compte de résultat ne peut pas en chiffrer le montant, et le mois indique combien d’enregistrements n’avaient pas de coût."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Modifier le chiffre du stock dans le formulaire du produit est un recomptage : il correspond à ce que vous avez réellement compté et n’affecte jamais le compte de résultat. La liste des mouvements de stock dans Stats filtre séparément les ajustements et les recomptages, et le journal d’activité indique le motif et la note de chaque ajustement."
+      },
+      {
+        "type": "note",
+        "text": "Ajuster le stock nécessite la formule Standard ou supérieure. Avec Pro, le personnel dont le rôle exige une approbation pour Ajustement manuel du stock doit saisir le code PIN d’un responsable au moment de confirmer."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -962,7 +1122,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Un stock négatif signifie généralement qu’un réapprovisionnement n’a pas été enregistré, ou qu’un article précommandé n’est pas encore arrivé (les précommandes déduisent le stock dès leur création). Enregistrez les réapprovisionnements en réceptionnant un bon de commande et le chiffre se rétablit tout seul ; corrigez les écarts d’inventaire par un ajustement manuel, conservé dans l’historique des mouvements."
+        "text": "Un stock négatif signifie généralement qu’un réapprovisionnement n’a pas été enregistré, ou qu’un article précommandé n’est pas encore arrivé (les précommandes déduisent le stock dès leur création). Enregistrez les réapprovisionnements en réceptionnant un bon de commande et le chiffre se rétablit tout seul. Corrigez un écart d’inventaire en modifiant le chiffre du stock dans le formulaire du produit (un recomptage) ; pour de la marchandise cassée, périmée ou donnée, enregistrez le motif avec Ajuster le stock. Les deux sont conservés dans l’historique des mouvements."
       },
       {
         "type": "note",
@@ -1006,14 +1166,64 @@ export const articles = [
         "text": "Les conditions de paiement déterminent la suite : les commandes à paiement à la réception sont marquées comme payées, tandis que les commandes à crédit mensuel restent non payées dans Factures impayées, où vous pouvez les régler par fournisseur : une commande, le mois en cours, ou tout."
       },
       {
+        "type": "p",
+        "text": "Les matières premières que vous ne vendez pas, comme la farine ou les emballages, s’achètent de la même façon : créez-les comme des produits non vendus — voir « Puis-je ajouter des matières premières, comme de la farine ou des emballages, en tant que produits ? »"
+      },
+      {
         "type": "note",
         "text": "Les achats nécessitent la formule Standard ou supérieure. Un fournisseur ayant des commandes réceptionnées non payées ne peut pas être supprimé."
       }
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Puis-je ajouter des matières premières, comme de la farine ou des emballages, en tant que produits ?",
+    "keywords": [
+      "produit non vendu",
+      "matières premières",
+      "ingrédients",
+      "matières",
+      "emballages",
+      "fournitures",
+      "vendre en caisse",
+      "achats",
+      "coût"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Oui. Dans le formulaire du produit, désactivez Vendre en caisse sous la photo (il est activé par défaut) et le produit devient non vendu : il n’a pas besoin de prix, conserve son coût, son code-barres, son stock et ses variantes, et la liste des produits affiche « Non vendu » à la place du prix."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Un produit non vendu n’apparaît jamais dans la grille de la caisse, les catégories, la recherche ni les scans de code-barres, et ne peut être ni un cadeau, ni un extra, ni la cible d’une promotion, ni un article de remplacement dans un échange.",
+          "Les bons de commande, la réception, Synchroniser le coût des produits et les factures impayées fonctionnent exactement comme pour les autres produits : le coût d’achat et le stock d’une matière peuvent donc être enregistrés via Achats.",
+          "La vente d’autres produits ne diminue pas son stock. Quand vous en utilisez, enregistrez une sortie avec Ajuster le stock dans la fiche du produit : Matières utilisées pour ce qui est entré dans les produits, Consommables pour des choses comme les sacs en papier ou les produits d’entretien.",
+          "Vous pouvez le remettre en vente à tout moment ; son prix et ses taxes sont conservés. Les commandes et les rapports déjà établis ne sont pas modifiés."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Comment son coût arrive dans le compte de résultat : les achats n’y comptent pas directement. Pour un produit fabriqué avec cette matière, mettez le coût sur ce produit : il est déduit à la vente de ce produit. Les fournitures qui n’entrent dans le coût d’aucun produit sont enregistrées comme Consommables à l’utilisation si leur stock est suivi, ou comme une dépense ponctuelle sinon. N’enregistrez pas la même somme des deux façons, sinon elle est comptée deux fois."
+      },
+      {
+        "type": "note",
+        "text": "Les produits non vendus sont disponibles dans toutes les formules ; les achats, le suivi du stock et Ajuster le stock nécessitent la formule Standard ou supérieure."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1033,7 +1243,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Le chiffre d’affaires est compté le jour où la marchandise est remise ; les encaissements sont comptés le jour où l’argent arrive. Pour une commande payée au comptoir, les deux tombent le même jour et les chiffres sont identiques. Ils se séparent dans les cas suivants :"
+        "text": "Le chiffre d’affaires est compté le jour où la marchandise est remise, après toutes les remises et avant taxe ; les encaissements sont comptés le jour où l’argent arrive, et correspondent à l’argent réellement perçu, taxe comprise. Dans une boutique qui applique une taxe, les encaissements dépassent donc le chiffre d’affaires du montant de la taxe, même pour une commande payée au comptoir. Au-delà, les deux chiffres divergent dans les cas suivants :"
       },
       {
         "type": "list",
@@ -1041,12 +1251,17 @@ export const articles = [
           "Vente en compte : la marchandise part aujourd’hui et compte dans le chiffre d’affaires du jour ; l’argent compte dans les encaissements le jour du règlement.",
           "Précommande : l’acompte compte dans les encaissements au moment où il est versé ; le chiffre d’affaires est comptabilisé en totalité à la date de retrait.",
           "Acompte conservé : lorsqu’un client annule une précommande et que vous gardez l’acompte, celui-ci était déjà compté dans les encaissements au moment du versement. Stats l’affiche à part, sous « Acomptes conservés », et il ne compte jamais dans le chiffre d’affaires.",
-          "Invalidation d’une commande antérieure : l’argent remboursé compte dans les encaissements le jour de l’invalidation, si bien que les encaissements de ce jour peuvent être négatifs, tandis que Invalidées compte la commande à sa date de vente. Le ⓘ des tuiles Encaissements et Invalidées donne la même explication."
+          "Invalidation d’une commande antérieure : l’argent remboursé compte dans les encaissements le jour de l’invalidation, si bien que les encaissements de ce jour peuvent être négatifs, tandis que la tuile Invalidées compte la commande à sa date de vente.",
+          "Arrondi des espèces : ce que l’arrondi des espèces ajoute ou retire par rapport au total de la commande compte dans les encaissements, jamais dans le chiffre d’affaires."
         ]
       },
       {
         "type": "p",
-        "text": "Pour rapprocher vos comptes, comparez les encaissements avec le tiroir-caisse et votre terminal de carte ; pour savoir combien vous avez réellement vendu sur une période, lisez le chiffre d’affaires. Les retours réduisent le chiffre d’affaires le jour du retour."
+        "text": "Pour rapprocher vos comptes, comparez les encaissements avec le tiroir-caisse et votre terminal de carte ; pour savoir combien vous avez réellement vendu sur une période, lisez le chiffre d’affaires. Les retours réduisent le chiffre d’affaires le jour du retour. Le ⓘ des tuiles Chiffre d’affaires, Encaissements et Invalidées donne la même explication, et la taxe elle-même figure sous Du chiffre d’affaires à la marge brute, qui s’ouvre depuis la tuile Marge brute."
+      },
+      {
+        "type": "note",
+        "text": "Le chiffre d’affaires avant taxe est arrivé avec la v3.5, et les périodes passées ont été recalculées de la même façon : une boutique qui applique une taxe voit donc un chiffre d’affaires plus bas qu’avant la mise à jour. C’est une correction. Les versions antérieures incluaient la taxe dans le chiffre d’affaires, et les boutiques en prix hors taxe comptaient même la taxe collectée comme du chiffre d’affaires."
       }
     ],
     "related": [
@@ -1076,15 +1291,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pour une seule journée, le graphique d’évolution devient un histogramme par heure ; les périodes plus longues utilisent des jours, des semaines, des mois ou des années par barre selon leur durée."
+        "text": "Sous la barre de période viennent deux rangées de tuiles de chiffres (Chiffre d’affaires, Encaissements, Marge brute, Commandes, Commande moyenne ; Total des remises, Bénéfice net, Produits sans coût, Clients servis), puis le graphique d’évolution. Le menu en haut à droite du graphique d’évolution le fait basculer entre chiffre d’affaires, commandes, commande moyenne et clients servis ; à côté, le graphique Coût et marge brute empile dans une même barre le coût des produits et la marge brute de chaque période. Une seule journée est tracée heure par heure ; les périodes plus longues utilisent des jours, des semaines, des mois ou des années selon leur durée."
       },
       {
         "type": "p",
-        "text": "Depuis la v3.4, maintenez le doigt appuyé sur le graphique Évolution du chiffre d’affaires ou Évolution de la marge brute pour le lire période par période : une carte affiche la date et le chiffre d’affaires ou la marge brute de cette période et, sur Évolution du chiffre d’affaires avec Comparaison des ventes activée, le chiffre d’affaires de la période de comparaison ainsi que l’écart. Faites glisser vers la gauche ou la droite pour vous déplacer ; balayez vers le haut ou le bas sur le graphique et la page défile comme d’habitude."
+        "text": "Maintenez le doigt appuyé sur le graphique d’évolution ou sur le graphique Coût et marge brute pour le lire période par période ; avec Comparaison des ventes activée, la carte du graphique d’évolution affiche côte à côte le chiffre de cette période et celui de la période de comparaison. Faites glisser vers la gauche ou la droite pour vous déplacer ; balayez vers le haut ou le bas sur le graphique et la page défile comme d’habitude."
       },
       {
         "type": "p",
-        "text": "La carte Top produits affiche les 5 premiers. Touchez la carte ou Voir tout pour lister tous les produits vendus sur la période, classés par quantité après retours."
+        "text": "La carte Top produits affiche les 5 premiers. Touchez la carte ou Tout afficher pour lister tous les produits vendus sur la période, classés par quantité après retours ; un produit avec variantes occupe une ligne par variante."
       },
       {
         "type": "p",
@@ -1112,8 +1327,9 @@ export const articles = [
       "année dernière",
       "carte thermique",
       "heures de pointe",
-      "variations de produits",
       "produits à faible rotation",
+      "variations de produits",
+      "répartition par catégorie",
       "valeur du stock",
       "taux de réachat",
       "points"
@@ -1126,11 +1342,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Comparaison des ventes : à droite de la barre de période, comparez avec la même période de l’an dernier ou avec la période précédente (une journée avec le même jour de la semaine dernière, cette semaine avec la semaine dernière, ce mois-ci avec le mois dernier, cette année avec l’an dernier, une période personnalisée avec le même nombre de jours qui la précèdent). La tuile Encaissements affiche l’écart et le taux de croissance, et le graphique du chiffre d’affaires ajoute une ligne plus claire pour la période de comparaison. Tant qu’une période n’est pas terminée, la période de comparaison est coupée au même moment.",
-          "Jour × heure : faites passer l’en-tête Ventes dans le temps sur Jour × heure pour obtenir une carte thermique de sept jours sur 24 heures — plus une case est foncée, plus vous avez vendu. Basculez entre chiffre d’affaires et commandes ; avec une comparaison activée, repérez les heures en hausse et celles en baisse.",
-          "Produits à faible rotation : faites passer l’en-tête de la carte de classement sur Produits à faible rotation pour lister les produits du moins vendu au plus vendu, avec le stock actuel et la date de la dernière vente de chacun. Les produits jamais vendus sont marqués Jamais vendu. Par défaut, seuls les produits en stock sont affichés.",
-          "Variations (depuis la v3.4) : faites passer l’en-tête de la carte de classement sur Variations pour voir les 3 produits dont le chiffre d’affaires a le plus augmenté et les 3 dont il a le plus baissé par rapport à la période de comparaison, avec le chiffre d’affaires des deux périodes et l’écart. Choisissez d’abord une période sous Comparaison des ventes ; avec Aucune, ou sur Toute la période, la carte vous invite à le faire. Touchez la carte ou Voir tout pour ouvrir la liste complète Variations des produits, répartie entre En hausse et En baisse.",
-          "Taux de réachat : la dernière ligne de la tuile clients indique la part des membres ayant acheté sur la période et ayant acheté au moins deux fois au total.",
+          "Comparaison des ventes : à droite de la barre de période, comparez avec la même période de l’an dernier ou avec la période précédente (une journée avec le même jour de la semaine dernière, cette semaine avec la semaine dernière, ce mois-ci avec le mois dernier, cette année avec l’an dernier, une période personnalisée avec le même nombre de jours qui la précèdent). Les tuiles Chiffre d’affaires, Encaissements, Marge brute, Commandes, Commande moyenne, Total des remises et Clients servis affichent chacune l’écart et le chiffre de la période de comparaison, par exemple « ▼ 3 % vs mois dernier » ; l’écart du Total des remises reste toujours gris, car une remise plus élevée n’est en soi ni bonne ni mauvaise. Touchez une ligne de comparaison pour ouvrir Comparaison de périodes, qui liste les chiffres des deux périodes. Le graphique d’évolution ajoute une ligne plus claire pour la période de comparaison. Tant qu’une période n’est pas terminée, la période de comparaison est coupée au même moment.",
+          "Jour × heure : faites passer l’en-tête du graphique d’évolution de Évolution à Jour × heure pour obtenir une carte thermique de sept jours sur 24 heures — plus une case est foncée, plus vous avez vendu. Basculez entre chiffre d’affaires et commandes ; avec une comparaison activée, repérez les heures en hausse et celles en baisse.",
+          "Produits à faible rotation : faites passer l’en-tête de la carte de classement sur Produits à faible rotation pour lister les produits du moins vendu au plus vendu, avec le stock actuel et la date de la dernière vente de chacun. Les produits jamais vendus sont marqués Jamais vendu, et un produit avec variantes occupe une ligne par variante. Par défaut, seuls les produits en stock sont affichés.",
+          "Variations (depuis la v3.4) : faites passer l’en-tête de la carte de classement sur Variations pour voir les 3 produits dont le chiffre d’affaires a le plus augmenté et les 3 dont il a le plus baissé par rapport à la période de comparaison, avec le chiffre d’affaires des deux périodes et l’écart ; chaque variante est comparée à elle-même. Choisissez d’abord une période sous Comparaison des ventes ; avec Aucune, ou sur Toute la période, la carte vous invite à le faire. Touchez la carte ou Tout afficher pour ouvrir la liste complète Variations des produits, répartie entre En hausse et En baisse.",
+          "Taux de réachat : la dernière ligne de la tuile clients indique la part des membres ayant acheté sur la période et ayant acheté au moins deux fois au total. Avec une comparaison activée, une ligne en dessous donne l’écart en points de pourcentage et le taux de la période de comparaison.",
+          "Répartition par catégorie : le chiffre d’affaires et la part de chaque catégorie, selon la catégorie actuelle de chaque produit, de la plus grande à la plus petite. Les produits sans catégorie sont regroupés sous Sans catégorie, et les lignes s’additionnent exactement au chiffre d’affaires.",
           "Situation actuelle : la valorisation du stock (stock actuel × coût actuel), tous les mouvements de stock de la période sélectionnée, et les points que les clients détiennent sans les avoir utilisés, avec le montant maximal qu’ils permettent de déduire. Ce sont des soldes à l’instant T ; la période ne les modifie pas."
         ]
       },
@@ -1156,34 +1373,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Comment la marge est-elle calculée si je n’ai pas saisi les coûts ?",
+    "question": "Comment la marge brute est-elle calculée si je n’ai pas saisi les coûts ?",
     "keywords": [
       "coût",
-      "marge",
-      "marge brute",
       "bénéfice",
+      "marge brute",
+      "marge",
       "taux de marge",
       "rapports",
-      "marge non suivie",
+      "non suivi",
       "coût manquant",
-      "marge suivie"
+      "produits sans coût"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Le coût est un champ facultatif. Les produits sans coût sont exclus de la marge brute, alors que leur chiffre d’affaires est toujours compté en totalité. La carte Marge suivie de Stats indique combien de produits vendus sur la période n’ont pas de coût ; un coût de 0 compte comme un coût, ces produits ne sont donc pas listés."
+        "text": "Le coût est un champ facultatif. Les produits sans coût sont exclus de la marge brute, alors que leur chiffre d’affaires est toujours compté en totalité. La tuile Produits sans coût de Stats indique combien de produits vendus ou retournés sur la période n’ont pas de coût, par exemple « 12 produits ». Un coût de 0 compte comme un coût, ces produits ne sont donc pas listés ; quand tous les produits en ont un, la tuile affiche « 0 produit · coûts renseignés »."
       },
       {
         "type": "p",
-        "text": "Touchez la carte ou Afficher les produits pour ouvrir Produits sans coût, classés selon le chiffre d’affaires exclu de la marge. Touchez une ligne pour ouvrir le produit, ajoutez son coût depuis Modifier, et la ligne est marquée Coût ajouté à votre retour. Un produit avec variantes n’est marqué Coût ajouté que lorsque chaque variante vendue sans coût en a un — le sien, ou celui du produit à suivre."
+        "text": "Touchez la tuile ou Afficher les produits pour ouvrir Produits sans coût, classés selon le chiffre d’affaires exclu de la marge brute. Touchez une ligne pour ouvrir le produit, ajoutez son coût depuis Modifier, et la ligne est marquée Coût ajouté à votre retour. Un produit avec variantes n’est marqué Coût ajouté que lorsque chaque variante vendue sans coût en a un — le sien, ou celui du produit à suivre."
       },
       {
         "type": "p",
-        "text": "La marge brute est le chiffre d’affaires après toutes les remises (remises sur article et sur panier, promotions, utilisation de points) et avant taxe, moins le coût — c’est pourquoi le champ s’intitule Coût HT (facultatif) : saisissez ce que vous avez payé hors taxe. Le taux de marge est la marge brute ÷ le chiffre d’affaires hors taxe des produits ayant un coût, de sorte que les produits sans coût ne le tirent pas vers le bas. Un retour reprend, le jour du retour, la marge que ces articles avaient apportée."
+        "text": "La marge brute est le chiffre d’affaires après toutes les remises (remises sur article et sur panier, promotions, utilisation de points) et avant taxe, moins le coût — c’est pourquoi, dans une boutique qui applique une taxe, le champ s’intitule Coût HT (facultatif) : saisissez ce que vous avez payé hors taxe. Le taux de marge est la marge brute ÷ le chiffre d’affaires des produits ayant un coût, de sorte que les produits sans coût ne le tirent pas vers le bas. Un retour reprend, le jour du retour, la marge brute que ces articles avaient apportée."
+      },
+      {
+        "type": "p",
+        "text": "Touchez la tuile Marge brute pour ouvrir Du chiffre d’affaires à la marge brute, qui soustrait ligne par ligne : le chiffre d’affaires (TTC), la taxe, le chiffre d’affaires (hors taxe), le chiffre d’affaires sans coût, le coût des produits, et enfin la marge brute et le taux de marge. Les lignes s’additionnent exactement à la tuile."
       },
       {
         "type": "note",
-        "text": "Un coût que vous ajoutez n’affecte que les ventes futures ; les ventes déjà faites ne sont pas recalculées. Ce calcul est arrivé avec la v3.1 : les versions antérieures ne déduisaient que les remises manuelles sur article et comptaient la taxe incluse comme marge, si bien qu’après la mise à jour, les périodes avec remises ou taxe incluse affichent une marge plus faible. C’est une correction, pas une perte de données."
+        "text": "Un coût que vous ajoutez n’affecte que les ventes futures ; les ventes déjà faites ne sont pas recalculées. Ce calcul est arrivé avec la v3.1 : les versions antérieures ne déduisaient que les remises manuelles sur article et comptaient la taxe incluse comme marge, si bien qu’après la mise à jour, les périodes avec remises ou taxe incluse affichent une marge brute plus faible. C’est une correction, pas une perte de données."
       }
     ],
     "related": [
@@ -1218,20 +1439,26 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Chiffre d’affaires (hors taxe) : le chiffre d’affaires après toutes les remises, moins la taxe, compté à la date de remise des articles.",
+          "Chiffre d’affaires (hors taxe) : le chiffre d’affaires après toutes les remises et avant taxe, compté à la date de remise des articles.",
           "Coût des produits : le coût de ce qui a été vendu, d’après les coûts renseignés sur vos produits.",
+          "Perte de stock : le coût de ce qu’Ajuster le stock a retiré comme périmé, endommagé, offert et autres, plus les retours mis au rebut. Elle vient après la marge brute — voir « Comment enregistrer du stock périmé, cassé ou distribué en échantillons ? » Le mois comporte aussi une section Perte de stock qui la totalise par motif.",
           "Frais de traitement (est.) : les frais estimés d’après les taux de vos moyens de paiement.",
           "Acomptes conservés : les acomptes que vous avez gardés lors de l’annulation d’une précommande.",
+          "Arrondi des espèces : ce que l’arrondi des espèces aux pièces en circulation a ajouté ou retiré par rapport aux totaux des commandes.",
           "Dépenses fixes et Dépenses ponctuelles : ce que vous avez enregistré pour ce mois — voir « Comment enregistrer le loyer, les salaires et les autres dépenses ? »"
         ]
       },
       {
         "type": "p",
-        "text": "Jusqu’à trois graphiques suivent : le bénéfice net mois par mois, la part de chaque dépense fixe et l’évolution des dépenses fixes. Les deux graphiques d’évolution couvrent au plus les 12 mois jusqu’au mois ouvert, et n’apparaissent qu’à partir de deux mois à comparer, comptés depuis le mois de votre première vente ou dépense. Le graphique des parts exige une dépense fixe ce mois-là ; tant qu’il n’y en a pas, cette section affiche Ajouter une dépense fixe à la place. Dans Stats, la dernière ligne de la carte de marge brute mène directement à Résultat : pour une période qui correspond exactement à un mois, elle affiche le bénéfice net de ce mois, par exemple « Bénéfice net (octobre) : NT$12,300 » ; pour toute autre période, elle indique Voir le compte de résultat mensuel."
+        "text": "Jusqu’à trois graphiques suivent : le bénéfice net mois par mois, la part de chaque dépense fixe et l’évolution des dépenses fixes. Les deux graphiques d’évolution couvrent au plus les 12 mois jusqu’au mois ouvert, et n’apparaissent qu’à partir de deux mois à comparer, comptés depuis le mois de votre première vente ou dépense. Le graphique des parts exige une dépense fixe ce mois-là ; tant qu’il n’y en a pas, cette section affiche Ajouter une dépense fixe à la place."
+      },
+      {
+        "type": "p",
+        "text": "Stats et Résultat renvoient l’un à l’autre. Quand la période de Stats est Ce mois-ci ou exactement un mois entier, la deuxième rangée de tuiles ajoute une tuile Bénéfice net (marquée « En cours · les dépenses du mois entier sont déduites » tant que le mois court) ; touchez-la pour voir le détail de ce mois, de la marge brute au bénéfice net. Pour toute autre période, touchez Voir le compte de résultat mensuel sur la dernière ligne de Du chiffre d’affaires à la marge brute. Dans l’autre sens, Voir le rapport (octobre), sous le titre d’un mois dans Résultat, ouvre Stats sur ce mois."
       },
       {
         "type": "note",
-        "text": "Le bénéfice net est le bénéfice d’exploitation avant impôt sur le revenu, calculé d’après ce que DingPOS a enregistré — ce n’est pas une déclaration fiscale. Si des produits ont été vendus sans coût, le mois affiche quand même un bénéfice net, accompagné de « Produits sans coût exclus : N » ; touchez-le pour voir lesquels. Résultat est disponible avec toutes les formules. Avec des comptes du personnel, l’ouvrir exige la permission Compte de résultat et dépenses, qui par défaut requiert une approbation pour les Responsables comme pour le Personnel, car elle donne accès aux coûts des produits et aux salaires."
+        "text": "Le bénéfice net est le bénéfice d’exploitation avant impôt sur le revenu, calculé d’après ce que DingPOS a enregistré — ce n’est pas une déclaration fiscale. Si des produits ont été vendus sans coût, le mois affiche quand même un bénéfice net, accompagné de « Coût de N produits non inclus » ; touchez-le pour voir lesquels. Résultat est disponible avec toutes les formules. Avec des comptes du personnel, l’ouvrir exige la permission Compte de résultat et dépenses, qui par défaut requiert une approbation pour les Responsables comme pour le Personnel, car elle donne accès aux coûts des produits et aux salaires."
       }
     ],
     "related": [
@@ -1287,7 +1514,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Saisissez ce que la boutique supporte réellement, sans la taxe que vous pouvez récupérer. Le stock que vous revendrez passe plutôt par les Achats, car il entre dans le coût des produits à la vente ; les dépôts de garantie, le capital d’un emprunt et l’argent que le propriétaire prélève ne sont pas des dépenses. Les modifications s’enregistrent ensemble quand vous touchez ✓, et une modification qui touche un mois déjà terminé vous indique d’abord pour quels mois le bénéfice net va changer."
+        "text": "Saisissez ce que la boutique supporte réellement, sans la taxe que vous pouvez récupérer. Le stock que vous revendrez et les matières avec lesquelles vous le fabriquez passent plutôt par les Achats, car ils sont comptés dans le coût des produits à la vente. Les fournitures dont le stock est suivi s’enregistrent avec Ajuster le stock à l’utilisation, avec le motif Consommables, et non comme une dépense. Les dépôts de garantie, le capital d’un emprunt et l’argent que le propriétaire prélève ne sont pas des dépenses. Les modifications s’enregistrent ensemble quand vous touchez ✓, et une modification qui touche un mois déjà terminé vous indique d’abord pour quels mois le bénéfice net va changer."
       }
     ],
     "related": [
@@ -1387,11 +1614,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ouvrez Réglages → Programme de fidélité et définissez deux règles : gagner Y points pour X dépensés, et utiliser N points pour M de remise (avec, en option, un plafond d’utilisation par commande). Vous pouvez aussi offrir automatiquement des points de bienvenue aux nouveaux membres."
+        "text": "Ouvrez Réglages → Programme de fidélité et définissez deux règles : gagner Y points par tranche de X dépensés, et obtenir M de remise en utilisant N points (avec, en option, un plafond d’utilisation par commande). Vous pouvez aussi offrir automatiquement des points de bienvenue aux nouveaux membres."
       },
       {
         "type": "p",
-        "text": "Associez le membre à la vente, dans le panier ou sur l’écran d’encaissement, et les points s’accumulent automatiquement ; pour les utiliser, saisissez le nombre de points à déduire. L’invalidation d’une commande reprend les points qu’elle a fait gagner et restitue les points utilisés."
+        "text": "Associez le membre à la vente, dans le panier ou sur l’écran d’encaissement, et les points s’accumulent automatiquement ; pour les utiliser, saisissez le nombre de points à déduire. L’invalidation d’une commande retire les points qu’elle a fait gagner et restitue les points utilisés."
+      },
+      {
+        "type": "p",
+        "text": "Pour ajouter ou retirer des points à la main (par exemple pour un achat oublié), touchez Ajuster sur la carte Points dans les détails du client, choisissez Ajouter ou Déduire, saisissez le nombre de points et indiquez si vous le souhaitez un motif (100 caractères au maximum). Vous ne pouvez pas déduire plus de points que le client n’en a. Chaque ajustement reste dans l’historique des points, avec le solde avant et après, le motif et la personne qui l’a effectué."
+      },
+      {
+        "type": "note",
+        "text": "L’ajustement manuel des points est disponible depuis la version 3.5. Avec Pro, les membres du personnel dont le rôle exige une approbation pour l’Ajustement manuel des points (c’est le cas du rôle Personnel par défaut) doivent saisir le code PIN d’un responsable ou du propriétaire pour confirmer."
       }
     ],
     "related": [
@@ -1582,6 +1817,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Appuyez d’abord sur Réessayer ; si cela fonctionne, l’app s’ouvre normalement. Si le problème persiste, appuyez sur Contacter l’assistance et expliquez-nous la situation : nous vous aiderons à récupérer vos données. Cet écran ne déplace ni ne supprime jamais aucun fichier."
+      },
+      {
+        "type": "p",
+        "text": "Le premier lancement après une mise à jour, ou après la restauration d’une sauvegarde issue d’une version plus ancienne, peut d’abord afficher « Mise à jour de vos données… ». Il s’agit des données de votre boutique qui passent à un format plus récent : plus vous en avez, plus cela prend de temps. L’app s’ouvre toute seule une fois l’opération terminée ; elle n’est pas bloquée."
       },
       {
         "type": "note",
@@ -1803,21 +2042,21 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Utilisez le journal d’activité. Sur la page Personnel, touchez Journal d’activité en haut à droite et saisissez le code PIN du propriétaire pour voir les actions sensibles de la boutique, les plus récentes en premier : invalidations, retours, ajustements manuels du stock, approbations, modifications du personnel et des permissions, changements du code PIN du propriétaire, changements de prix et de coût des produits, et suppressions de produits. Les encaissements ordinaires n’y figurent pas."
+        "text": "Utilisez le journal d’activité. Sur la page Personnel, touchez Journal d’activité en haut à droite et saisissez le code PIN du propriétaire pour voir les actions sensibles de la boutique, les plus récentes en premier : invalidations, retours, ajustements du stock et recomptages, ajustements manuels de points, approbations, modifications du personnel et des permissions, changements du code PIN du propriétaire, réglages de taxe, changements de prix et de coût des produits, et suppressions de produits. Les encaissements ordinaires n’y figurent pas."
       },
       {
         "type": "list",
         "items": [
-          "Chaque entrée indique ce qui a été touché, qui a fait quoi et quand, ainsi que le résultat, par exemple « M prix 390 $ → 350 $ ».",
+          "Chaque entrée indique ce qui a été touché, qui a fait quoi et quand, ainsi que le résultat, par exemple « M prix 390 $ → 350 $ ». Le motif saisi pour une invalidation, un retour, un ajustement de stock ou un ajustement de points figure sur la troisième ligne de l’entrée.",
           "Filtrez par membre du personnel (y compris les personnes désactivées), par type d’action et par Aujourd’hui / Cette semaine / Ce mois-ci.",
           "Touchez une entrée qui renvoie à une commande, un produit ou un client pour ouvrir son détail.",
-          "Le détail d’une commande, d’un produit et la page de chaque membre du personnel ont leur propre entrée, qui ne liste que les enregistrements les concernant.",
+          "Les pages de détail des commandes et des produits, ainsi que la page de chaque membre du personnel, ont chacune leur propre journal d’activité, qui ne répertorie que les entrées les concernant.",
           "Les produits supprimés gardent leur nom et leur prix d’alors dans le journal."
         ]
       },
       {
         "type": "note",
-        "text": "Toutes les formules enregistrent ces actions ; seule la consultation est une fonction Pro, donc les enregistrements faits pendant que Pro était interrompu apparaissent dès que vous vous réabonnez. Le journal est inclus dans vos sauvegardes dans le cloud."
+        "text": "Toutes les formules enregistrent ces actions ; seule leur consultation est réservée à Pro. Les enregistrements datant d’une période où votre abonnement Pro avait expiré apparaissent dès que vous vous réabonnez. Le journal est inclus dans vos sauvegardes cloud."
       }
     ],
     "related": [
