@@ -84,7 +84,8 @@ export const articles = [
       "hapi i parë",
       "dyqan i ri",
       "shteti",
-      "monedha"
+      "monedha",
+      "tatimet"
     ],
     "content": [
       {
@@ -94,8 +95,8 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Zgjidh shtetin ose rajonin. Në krye të listës shfaqet rajoni i këtij iPad-i dhe tregjet më të zakonshme; poshtë tyre janë të gjitha 175 shtetet dhe rajonet ku DingPOS është në App Store, të kërkueshme me emër në gjuhën e aplikacionit ose në anglisht. Zgjedhja plotëson monedhën, normën e tatimit dhe mënyrën e tatimit.",
-          "Te Dyqani yt, shkruaj emrin e dyqanit, shto opsionalisht një logo dhe kontrollo monedhën, normën e tatimit dhe mënyrën e tatimit (me tatim të përfshirë / pa tatim të përfshirë). Monedha është si parazgjedhje ajo e shtetit tënd; trokite për të zgjedhur nga 130 monedha."
+          "Zgjidh shtetin ose rajonin. Në krye të listës shfaqet shteti ose rajoni ku ndodhet ky iPad, pastaj tregjet më të zakonshme; poshtë tyre janë të gjitha 175 shtetet dhe rajonet ku DingPOS është në App Store, të kërkueshme me emër në gjuhën e aplikacionit ose në anglisht. Zgjedhja plotëson monedhën, tatimet dhe mënyrën e taksës.",
+          "Te Dyqani yt, shkruaj emrin e dyqanit, shto opsionalisht një logo dhe kontrollo monedhën, tatimet dhe mënyrën e taksës (me tatim të përfshirë / pa tatim të përfshirë). Monedha është si parazgjedhje ajo e shtetit tënd; trokite për të zgjedhur nga 130 monedha. Lista e tatimeve përmban tatimet e paracaktuara të shtetit tënd: riemërtoji, ndrysho një normë, fshi një tatim ose trokit Shto tatim për një rresht tjetër. Një dyqan në British Columbia, për shembull, e ndryshon rreshtin e parë në “GST 5” dhe shton një rresht “PST 7”."
         ]
       },
       {
@@ -104,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Monedha dhe mënyra e tatimit nuk mund të ndryshohen pas konfigurimit; norma e tatimit mund të ndryshohet ende më vonë te Cilësimet. Në SHBA, Kanada, Brazil dhe Mikronezi norma varet nga shteti federal, provinca ose qyteti, ndaj fusha e normës së tatimit nis bosh dhe ti shkruan normën që aplikon (lejohet 0) për të vazhduar. Lista me 175 shtete dhe zgjedhja e monedhës erdhën në v3.2; versionet më të vjetra ofronin 15 shtete."
+        "text": "Monedha nuk mund të ndryshohet pas konfigurimit; tatimet dhe mënyra e tatimit mund të ndryshohen të dyja më vonë te Cilësimet → Të dhënat e dyqanit. Në SHBA, Kanada, Brazil dhe Mikronezi norma varet nga shteti, provinca ose qyteti, ndaj fusha e normës nis bosh dhe ti shkruan normën që aplikon për të vazhduar. Norma duhet të jetë mbi 0: një dyqan që nuk ngarkon tatim e fshin rreshtin. Lista me 175 shtete dhe zgjedhja e monedhës erdhën në v3.2; versionet më të vjetra ofronin 15 shtete."
       }
     ],
     "related": [
@@ -185,11 +186,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Aktualisht DingPOS mbështet iPad me iPadOS 17 ose më të ri dhe është projektuar kryesisht për orientim horizontal."
+        "text": "Aktualisht DingPOS mbështet iPad me iPadOS 17.4 ose më të ri dhe është projektuar kryesisht për orientim horizontal."
       },
       {
         "type": "p",
         "text": "iPhone dhe Mac nuk mbështeten ende. Nëse dëshiron që të mbështesim një pajisje tjetër, na shkruaj dhe na trego se si do ta përdorje."
+      },
+      {
+        "type": "note",
+        "text": "Çdo iPad që punon me iPadOS 17 mund të përditësohet në 17.4, ndaj asnjë model nuk mbetet jashtë. Një iPad që është ende në iPadOS 17.0–17.3 ka nevojë fillimisht për një përditësim sistemi, te Cilësimet → Të përgjithshme → Përditësimi i softuerit (në iPad në anglisht: Settings → General → Software Update), para se të instalojë DingPOS v3.5 ose më të ri."
       }
     ],
     "related": [
@@ -199,23 +204,35 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "A mund ta ndryshoj monedhën ose mënyrën e tatimit pas konfigurimit?",
+    "question": "A mund ta ndryshoj monedhën, normën e tatimit ose mënyrën e tatimit pas konfigurimit?",
     "keywords": [
       "monedha",
       "mënyra e tatimit",
       "ndryshim",
+      "e kyçur",
       "e bllokuar",
       "norma e tatimit",
-      "ndrysho monedhën"
+      "ndrysho monedhën",
+      "tatimet",
+      "me tatim të përfshirë",
+      "pa tatim të përfshirë"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Normën e tatimit mund ta ndryshosh në çdo kohë te Cilësimet — norma e re vlen vetëm për porositë e ardhshme."
+        "text": "Tatimi mund të ndryshojë; monedha jo. Tatimet dhe mënyra e tatimit ndryshohen të dyja te karta Tatimi te Cilësimet → Të dhënat e dyqanit, dhe ndryshimi vlen vetëm për shitjet e mëpasshme: porositë e kaluara, kthimet dhe raportet i mbajnë shumat e tatimit dhe mënyrën që kanë regjistruar."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tatimet: shto një, riemërtoje, ndrysho normën ose fshije — shih “Si llogaritet tatimi?”",
+          "Mënyra e tatimit (me tatim të përfshirë / pa tatim të përfshirë): trokit mënyrën tjetër dhe konfirmimi tregon një shembull me tatimin tënd të parë, si “një artikull NT$100 me tatim 5%: klienti paguan NT$105”. Çmimet i mbajnë numrat e tyre dhe një shportë e hapur rillogaritet në mënyrën e re kur kthehesh te Arka. Mënyra mund të ndërrohet që nga v3.5; versionet më të vjetra e kyçin gjatë konfigurimit.",
+          "Pas një ndërrimi, një kthim i plotë malli i kthen paratë për porosinë origjinale ashtu siç ishte. Një këmbim (me artikuj zëvendësues) në një porosi të shitur në mënyrën tjetër bllokohet: kthe mënyrën e tatimit te mënyra e mëparshme, ose kthe artikujt dhe bëj pagesën sërish."
+        ]
       },
       {
         "type": "p",
-        "text": "Monedha dhe mënyra e tatimit (me tatim të përfshirë / pa tatim të përfshirë) bllokohen sapo mbaron konfigurimi. Të gjitha porositë e mëparshme janë llogaritur me to, ndaj ndryshimi në mes të rrugës do t’i prishte raportet. Kontrolloji te hapi Dyqani yt i konfigurimit: monedha është si parazgjedhje ajo e shtetit tënd dhe mund ta trokasësh për të zgjedhur një tjetër."
+        "text": "Monedha kyçet sapo mbaron konfigurimi. Çdo porosi historike është regjistruar në të, ndaj ndërrimi i monedhës në mes të rrugës do t’i prishte raportet. Kontrolloje te hapi Dyqani yt i konfigurimit: si parazgjedhje është monedha e shtetit tënd dhe mund ta trokasësh për të zgjedhur një tjetër."
       },
       {
         "type": "note",
@@ -337,12 +354,16 @@ export const articles = [
       "tatim shitjeje",
       "tatim i përfshirë",
       "tatim i shtuar",
+      "disa tatime",
+      "GST",
+      "PST",
+      "pauzo tatimin",
       "faturë"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Tatimi llogaritet automatikisht sipas mënyrës së tatimit të zgjedhur gjatë konfigurimit. Fatura shfaq shumën e tatimit në të dyja mënyrat:"
+        "text": "Tatimi llogaritet automatikisht sipas tatimeve dhe mënyrës së tatimit te Cilësimet → Të dhënat e dyqanit. Ka dy mënyra tatimi, dhe fatura shfaq shumën e tatimit në të dyja:"
       },
       {
         "type": "list",
@@ -353,12 +374,34 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Rendi i plotë i llogaritjes: zbritjet për artikull → zbritja për shportën → tatimi. Shumat rrumbullakosen sipas rregullit që gjysmat rrumbullakosen lart, në bazë të shifrave dhjetore të monedhës (p.sh. 0 për TWD, 2 për USD)."
+        "text": "Një dyqan mund të ngarkojë disa tatime, si GST 5% plus PST 7% në British Columbia, ose tatimin e konsumit 10% të Japonisë krahas normës së reduktuar 8%:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Te karta Tatimi, prek Shto tatim dhe shkruaj një emër e një normë. Aktivizo Zbato për produktet e reja dhe produktet që shton më vonë e mbartin këtë tatim si të paracaktuar. Nëse dyqani ka tashmë një tatim të paracaktuar, tatimi i ri shtohet me këtë çelës të çaktivizuar; aktivizoje kur duhen ngarkuar të dyja.",
+          "Çdo produkt zgjedh tatimet që ngarkon te Tatimet e aplikuara në formularin e produktit — një kuti dreke bento mund të ngarkojë vetëm normën e reduktuar 8%. Kur ka dy ose më shumë tatime të aktivizuara, formulari shfaq normën e kombinuar të produktit.",
+          "Prek një tatim për ta riemërtuar, për të ndryshuar normën e tij, ose përdor Zbato për të gjitha produktet ose Hiqe nga të gjitha produktet për ta shtuar ose hequr nga çdo produkt me një prekje. Kur fshin një tatim, aplikacioni të tregon më parë sa produkte do të reshtin ta ngarkojnë.",
+          "Në një dyqan me tatim të shtuar, totalet e shportës shfaqin një rresht për secilin tatim, ndërsa detajet e porosisë listojnë një rresht për secilin tatim me normën e tij dhe shumën mbi të cilën është ngarkuar."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Për të ndalur së ngarkuari tatim për një farë kohe, çaktivizo Ngarko tatim në krye të kartës Tatimi: çdo shitje e mëpasshme është pa tatim, përfshirë artikujt që janë tashmë në një shportë. Çdo produkt i mban tatimet e tij, dhe kur ta aktivizosh përsëri çelësin, ato kthehen siç ishin."
+      },
+      {
+        "type": "p",
+        "text": "Rendi i plotë i llogaritjes: zbritjet për artikull dhe promovimet → zbritja për shportën → shpërblimi i pikëve → tatimi. Shumat rrumbullakosen sipas rregullit që gjysmat rrumbullakosen lart, në bazë të shifrave dhjetore të monedhës (p.sh. 0 për TWD, 2 për USD)."
+      },
+      {
+        "type": "note",
+        "text": "Tatimet me emër erdhën në v3.5. Kur përditëson, norma jote e tatimit bëhet një tatim me emër (për shembull “GST 10%” në Australi) dhe të gjitha produktet ekzistuese e mbartin atë; një dyqan që kishte normë 0 nuk ngarkon tatim. Porositë e kaluara dhe raportet i mbajnë shifrat e tyre."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -382,7 +425,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mënyrat e pagesës janë etiketa kontabël — DingPOS nuk përpunon pagesa të vërteta. Merr pagesat me kartë ose me celular me terminalin ose aplikacionin që ke tashmë, pastaj zgjidh etiketën përkatëse në DingPOS për ta regjistruar. Pagesat me para në dorë e llogaritin kusurin automatikisht."
+        "text": "Mënyrat e pagesës janë etiketa kontabël — DingPOS nuk përpunon pagesa të vërteta. Merr pagesat me kartë ose me celular me terminalin ose aplikacionin që ke tashmë, pastaj zgjidh etiketën përkatëse në DingPOS për ta regjistruar. Pagesat me para në dorë e llogaritin kusurin automatikisht, dhe aty ku monedhat më të vogla nuk përdoren më, edhe paratë mund të rrumbullakosen — shih “A mund të rrumbullakosen pagesat me para në dorë sipas monedhave në përdorim?”"
       },
       {
         "type": "p",
@@ -395,6 +438,7 @@ export const articles = [
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -440,6 +484,55 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "A mund të rrumbullakosen pagesat me para në dorë sipas monedhave në përdorim?",
+    "keywords": [
+      "rrumbullakimi i parave",
+      "rrumbullakim",
+      "rrumbullakim lart",
+      "rrumbullakim poshtë",
+      "monedha",
+      "qindarkë",
+      "cent",
+      "0.05",
+      "kusur",
+      "Kanada",
+      "Australia",
+      "Zvicër"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Po. Kanadaja, Australia, Zelanda e Re, Zvicra, Danimarka, Suedia, Norvegjia, Belgjika, Finlanda dhe Hungaria nuk i përdorin më monedhat e tyre më të vogla, ndaj DingPOS i rrumbullakos paratë në dorë në një shumë që mund ta japësh realisht: një porosi C$12.99 e paguar me para në dorë merret C$13.00, dhe kusuri llogaritet nga C$13.00. Pagesat me kartë dhe të tjerat pa para në dorë mbeten të sakta."
+      },
+      {
+        "type": "p",
+        "text": "Një dyqan i ri i konfiguruar në një nga këto shtete dhe me monedhën e atij shteti e ka këtë cilësim të aktivizuar automatikisht. Çdo dyqan tjetër mund ta aktivizojë te karta Rrumbullakimi i parave, në fund të Cilësimet → Mënyrat e pagesës: zgjidh shumën drejt së cilës do të rrumbullakosen pagesat me para në dorë (Pa rrumbullakim, 0.05, 0.10, 0.50 ose 1.00) dhe, kur një shumë mund të jetë saktësisht në mes të dy vlerave, nëse rrumbullakimi bëhet lart apo poshtë. Ndryshimi vlen vetëm për pagesat e mëvonshme."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Pagesa shfaq “Para të marra C$13.00”. Nëse klienti kërkon të paguajë shumën e saktë, prek Merr shumën e saktë nën mënyrat e pagesës; vlen vetëm për atë shitje.",
+          "Totali i porosisë, tatimi, të ardhurat nga shitjet, pikët dhe shpenzimet e anëtarit nuk ndryshojnë; diferenca e rrumbullakimit qëndron te pagesa, dhe ekrani i faturës e detajet e porosisë e shfaqin nën total, si “Rrumbullakimi i parave +C$0.01”.",
+          "Edhe rimbursimet me para në dorë për kthimet, kaparet me para në dorë dhe mbetjet e marrjes së mallit për porositë paraprake, diferencat e paguara në këmbime dhe borxhet e shitjeve me afat pagese të shlyera me para në dorë rrumbullakosen; kur shlyen disa bashkë, grupi rrumbullakoset vetëm një herë.",
+          "Shfuqizimet, kaparet e kthyera të porosive paraprake dhe shlyerjet e anuluara kthejnë saktësisht atë që është regjistruar, pa rrumbullakim të ri.",
+          "Para të arkëtuara te Statistika tregon sa prej tyre ishte rrumbullakim parash, dhe Fitimi mujor merr një rresht Rrumbullakimi i parave që llogaritet te fitimi neto. Rrumbullakimi nuk është kurrë e ardhur nga shitjet."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Zvicra rrumbullakos gjithmonë poshtë, sipas rregullave të saj të shfaqjes së çmimeve — CHF 12.98 merret CHF 12.95, dhe nuk ka zgjedhje në mes. Belgjika rrumbullakos vetëm totalet mbi €0.05. Rrumbullakimi i parave është në çdo plan, dhe një dyqan ekzistues vazhdon t’i pranojë pagesat me para në dorë në shumat e sakta si më parë, derisa ta aktivizosh."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -617,7 +710,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Shko te Porosi, gjej porosinë, hap detajet e saj dhe zgjidh Shfuqizo. Konfirmo dhe kaq."
+        "text": "Shko te Porosi, gjej porosinë, hap detajet e saj dhe trokit Shfuqizo. Fleta “Të shfuqizohet kjo porosi?” pranon një arsye opsionale (deri në 100 karaktere); trokit Shfuqizo lart djathtas dhe u krye. Arsyeja shfaqet te detajet e porosisë dhe në regjistrin e aktivitetit, dhe nuk mund të ndryshohet pasi të dërgohet."
       },
       {
         "type": "p",
@@ -644,7 +737,9 @@ export const articles = [
       "këmbim",
       "rimbursim",
       "kthim i pjesshëm",
-      "ndërrim të numrit"
+      "ndërrim numri",
+      "skartim",
+      "arsyeja e kthimit"
     ],
     "content": [
       {
@@ -657,9 +752,15 @@ export const articles = [
           "Porosia origjinale nuk ndryshohet kurrë. Një kthim krijon dokumentin e vet, me datën e sotme dhe me numër që fillon me R; të ardhurat zvogëlohen në ditën e kthimit.",
           "Rimbursimi është ajo që klienti ka paguar realisht për atë artikull — zbritjet e artikullit, zbritjet e shportës dhe përdorimi i pikëve janë ndarë tashmë, ndaj nuk rimbursohet me çmimin e listës. Tatimi përdor normën me të cilën u ngarkua porosia origjinale.",
           "Artikujt zëvendësues shiten me çmimin e sotëm, pa promovime ose zbritje.",
-          "Stoku i gjurmuar rikthehet automatikisht. Pikët e fituara nga porosia origjinale merren mbrapsht, pikët e përdorura rimbursohen, dhe artikujt zëvendësues fitojnë pikët e tyre.",
-          "Një porosi mund të kthehet në disa raunde, por kurrë mbi sasinë e shitur fillimisht. Kufijtë e përdorimit të promovimeve nuk rikthehen nga një kthim."
+          "Për një produkt me stok të gjurmuar, çdo rresht i kthyer mund të kthehet në stok (Kthe në stok, parazgjedhja) ose të hidhet tej (Skarto, që nga v3.5). Kthe në stok e shton stokun përsëri. Skarto e lë stokun siç ishte dhe e numëron koston që kishte artikulli kur u shit te Humbje stoku e atij muaji në skedën Fitimi. Rimbursimi, tatimi dhe pikët janë të njëjta në të dyja rastet.",
+          "Pikët e fituara nga porosia origjinale merren mbrapsht, pikët e përdorura rimbursohen, dhe artikujt zëvendësues fitojnë pikët e tyre.",
+          "Kur porosia origjinale është një shitje me afat pagese e pashlyer, nuk kalojnë para nga njëra palë te tjetra: kthimi zbritet nga të arkëtueshmet e klientit, dhe një artikull zëvendësues më i shtrenjtë ia shton diferencën.",
+          "Një porosi mund të kthehet në disa raunde, por kurrë mbi sasinë e shitur fillimisht; kur gjithçka është kthyer, tatimi, zbritjet dhe pikët e kthyera përputhen saktësisht me porosinë origjinale. Kufijtë e përdorimit të promovimeve nuk rikthehen nga një kthim."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Fusha Arsyeja është opsionale, deri në 100 karaktere. Shfaqet te detajet e porosisë dhe në regjistrin e aktivitetit, dhe nuk mund të ndryshohet pasi të dërgohet."
       },
       {
         "type": "note",
@@ -729,7 +830,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Po. Zgjidh Me afat pagese si mënyrë pagese dhe shitja regjistrohet si borxh i klientit. Një borxh duhet të ketë zotëruesin e vet, ndaj kur nuk ka klient të lidhur, prekja e Me afat pagese hap fillimisht listën e klientëve (që nga v3.4; versionet e mëparshme të kërkojnë ta lidhësh klientin në shportë)."
+        "text": "Po. Zgjidh Me afat pagese si mënyrë pagese dhe shitja regjistrohet si borxh i klientit. Një borxh duhet të ketë zotëruesin e vet, ndaj kur nuk ka klient të lidhur, prekja e Me afat pagese hap fillimisht listën e klientëve (që nga v3.4; versionet e mëparshme kërkojnë që ta lidhësh klientin në shportë)."
       },
       {
         "type": "p",
@@ -740,6 +841,7 @@ export const articles = [
         "items": [
           "Të ardhurat nga shitjet numërohen në ditën kur del malli; Para të arkëtuara dhe pikët e besnikërisë llogariten në ditën e shlyerjes.",
           "Porositë e pashlyera kanë një shenjë me ngjyrë qelibari në listë, dhe detajet e klientit tregojnë sa i ka mbetur për të paguar.",
+          "Një kthim për një porosi që nuk është shlyer ende nuk rimburson para: shuma zbritet nga të arkëtueshmet e atij klienti.",
           "Një klient me porosi të pashlyera nuk mund të fshihet."
         ]
       },
@@ -800,15 +902,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sapo një produkt ka variante, fusha Çmimi e tij zhduket dhe çdo kombinim merr çmimin e vet te Çmimi dhe stoku i varianteve, me stokun e vet (që nga v3.2; versionet më të vjetra kërkojnë ende çmim produkti). Arka, lista e produkteve dhe detajet e produktit shfaqin një interval nga çmimi më i ulët te më i larti, si “NT$350–NT$390”, ose një çmim të vetëm kur të gjitha kombinimet kushtojnë njësoj; renditja sipas çmimit përdor çmimin më të ulët të kombinimeve. Te pagesa, kur troket produktin shfaqet një zgjedhës variantesh përpara se ta shtosh në shportë."
+        "text": "Sapo një produkt ka variante, fusha Çmimi e tij zhduket dhe çdo kombinim merr çmimin e vet te Çmimi dhe stoku i varianteve, me stokun e vet (që nga v3.2; versionet më të vjetra kërkojnë ende çmim produkti). Arka, lista e produkteve dhe detajet e produktit shfaqin një interval nga çmimi më i ulët te më i larti, si “NT$350–NT$390”, ose një çmim të vetëm kur të gjitha kombinimet kushtojnë njësoj; renditja sipas çmimit përdor çmimin më të ulët të kombinimeve. Te pagesa, kur trokit produktin shfaqet një zgjedhës variantesh përpara se ta shtosh në shportë."
       },
       {
         "type": "p",
-        "text": "Nuk je i detyruar të shkruash koston për çdo kombinim: fusha Kostoja bosh do të thotë Ndjek produktin, pra përdor koston e produktit dhe ndryshon bashkë me të. Një numër e bën Kosto të veçantë — edhe 0. Përdor kostoen e produktit për të gjitha i pastron menjëherë të gjitha kostot e veçanta."
+        "text": "Nuk je i detyruar të shkruash koston për çdo kombinim: fusha Kostoja bosh do të thotë Ndjek produktin, pra përdor koston e produktit dhe ndryshon bashkë me të. Një numër e bën Kosto të veçantë — edhe 0. Përdorimi i butonit “Përdor kostoen e produktit për të gjitha” i pastron menjëherë të gjitha kostot e veçanta."
       },
       {
         "type": "note",
-        "text": "Emrat e opsioneve dhe të vlerave mund të kenë deri në 20 karaktere dhe nuk mund të jenë bosh: një emër ose vlerë bosh opsioni rrethohet me të kuqe kur ruan, ndaj plotësoje ose fshije vlerën bosh. Një produkt me variante nuk mund të ketë çmim në shitje."
+        "text": "Emrat e opsioneve dhe të vlerave mund të kenë deri në 20 karaktere dhe hapësirat në fillim e në fund hiqen kur ruan. Një vlerë ku nuk ke shkruar asgjë nuk është kombinim dhe anashkalohet kur ruan; rrethohet me të kuqe vetëm një emër opsioni bosh, ose një opsion që ka të gjitha vlerat bosh. Një produkt me variante nuk mund të përdorë çmim në shitje."
       }
     ],
     "related": [
@@ -940,12 +1042,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pasi aktivizohet, shitjet dhe porositë paraprake e zbresin stokun automatikisht; shfuqizimet, kthimet dhe porositë paraprake të anuluara e rikthejnë; marrja e një porosie blerjeje e shton; dhe mund ta rregullosh manualisht në çdo kohë. Çdo lëvizje regjistrohet në një regjistër të plotë. Stoku i ulët shënohet me një paralajmërim me ngjyrë."
+        "text": "Pasi aktivizohet, shitjet dhe porositë paraprake e zbresin stokun automatikisht; shfuqizimet, kthimet dhe porositë paraprake të anuluara e rikthejnë; dhe marrja në stok e një porosie blerjeje e shton. Çdo lëvizje regjistrohet në një regjistër të plotë. Stoku i ulët shënohet me një paralajmërim me ngjyrë."
+      },
+      {
+        "type": "p",
+        "text": "Ka dy mënyra për ta ndryshuar numrin me dorë:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Rinumërim: ndrysho numrin e stokut në formularin e produktit që të përputhet me atë që ke numëruar realisht. Nuk arrin kurrë te Fitimi.",
+          "Rregullo stokun (që nga v3.5): te detajet e produktit trokit Rregullo stokun, zgjidh Hiq ose Shto, sasinë dhe një arsye, si Skaduar ose prishur, Dëmtuar ose Mostra e dhurata. Kostoja e asaj që hiqet numërohet te Humbje stoku e atij muaji në Fitimi — shih “Si e regjistroj stokun që skadoi, u dëmtua ose u dha si mostër?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Si e regjistroj stokun që skadoi, u dëmtua ose u dha si mostër?",
+    "keywords": [
+      "rregullo stokun",
+      "humbje stoku",
+      "mall i skaduar",
+      "mall i prishur",
+      "mall i dëmtuar",
+      "mall i humbur",
+      "mostra",
+      "furnizime dyqani",
+      "hiq nga stoku",
+      "rinumërim"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Përdor Rregullo stokun. Për një produkt që ndjek stokun, te detajet e produktit trokit Rregullo stokun, zgjidh Hiq ose Shto, shkruaj sasinë, zgjidh një arsye dhe, nëse do, shto një shënim (deri në 100 karaktere). Fleta llogarit stokun pas ndryshimit, dhe rreshti nën arsyen tregon nëse ndikon te Fitimi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Arsyet për të hequr: Përdorim materialesh, Skaduar ose prishur, Dëmtuar, Humbur ose vjedhur, Përdorim nga stafi, Mostra e dhurata, Furnizime dyqani dhe Tjetër. Arsyet për të shtuar: Prodhuar në dyqan, Gjetur dhe Tjetër. Tjetër kërkon shënim.",
+          "Me përjashtim të Përdorim materialesh, ajo që heq numërohet me koston e atij çasti te Humbje stoku e atij muaji në Fitimi. Vjen pas fitimit bruto dhe ul fitimin neto; fitimi bruto dhe marzhi nuk ndryshojnë. Përdorim materialesh vetëm e heq nga stoku, sepse kostoja e një materiali është tashmë te kostoja e produktit të bërë prej tij.",
+          "Gjetur heq po aq nga Humbje stoku. Prodhuar në dyqan dhe Tjetër në anën e shtimit vetëm shtojnë stok dhe nuk arrijnë kurrë te Fitimi.",
+          "Një rregullim numërohet në ditën kur e regjistron. Nuk mund të vihet me datë të mëparshme, të ndryshohet ose të fshihet; për të korrigjuar një gabim, regjistro Gjetur ose një rregullim në drejtimin e kundërt.",
+          "Një produkt pa kosto mund të rregullohet prapë, por Fitimi nuk mund t’i caktojë një shumë, dhe muaji shënon sa regjistrime nuk kishin kosto."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ndryshimi i numrit të stokut në formularin e produktit është Rinumërim: e përputh stokun me atë që ke numëruar realisht dhe nuk arrin kurrë te Fitimi. Lista e lëvizjeve të stokut te Statistika i filtron veçmas rregullimet e stokut dhe rinumërimet, dhe regjistri i aktivitetit tregon arsyen dhe shënimin e çdo rregullimi."
+      },
+      {
+        "type": "note",
+        "text": "Rregullo stokun kërkon planin Standard ose më të lartë. Në Pro, punonjësve që roli i tyre kërkon miratim për Rregullim manual të stokut u kërkohet PIN-i i një menaxheri kur konfirmojnë."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -966,11 +1127,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Stoku negativ zakonisht do të thotë që një furnizim nuk është regjistruar, ose që një artikull i porositur paraprakisht nuk ka mbërritur ende (porositë paraprake e zbresin stokun kur krijohen). Regjistro furnizimet duke marrë në stok një porosi blerjeje dhe numri rikuperohet vetë; diferencat e inventarit fizik korrigjoji me një rregullim manual, që ruhet në regjistrin e lëvizjeve."
+        "text": "Stoku negativ zakonisht do të thotë që një furnizim nuk është regjistruar, ose që një artikull i porositur paraprakisht nuk ka mbërritur ende (porositë paraprake e zbresin stokun kur krijohen). Regjistro furnizimet duke marrë në stok një porosi blerjeje dhe numri rikuperohet vetë. Korrigjo një diferencë inventari duke ndryshuar numrin e stokut në formularin e produktit (Rinumërim); për mallin që u dëmtua, skadoi ose u dha, regjistro arsyen me Rregullo stokun. Të dyja ruhen në regjistrin e lëvizjeve."
       },
       {
         "type": "note",
-        "text": "Nëse arka nuk e gjen një produkt me stok 0, kontrollo nëse Fshih produktet pa stok është aktiv te Cilësimet → Preferencat e pajisjes: sa kohë është aktiv, ky iPad nuk mund t’i shtojë produktet pa stok në shportë."
+        "text": "Nëse arkëtari nuk e gjen një produkt me stok 0, kontrollo nëse Fshih produktet pa stok është aktiv te Cilësimet → Preferencat e pajisjes: sa kohë është aktiv, ky iPad nuk mund t’i shtojë produktet pa stok në shportë."
       }
     ],
     "related": [
@@ -995,7 +1156,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Blerjet në menynë anësore menaxhojnë furnitorët dhe porositë e blerjes. Një furnitor ruan emrin, personin e kontaktit, telefonin, adresën dhe kushtin e parazgjedhur të pagesës (paguaj tani ose paguaj çdo muaj)."
+        "text": "Blerjet në menynë anësore menaxhojnë furnitorët dhe porositë e blerjes. Një furnitor ruan emrin, personin e kontaktit, telefonin, adresën dhe kushtin e parazgjedhur të pagesës (Pagesë në marrje ose Kredi mujore)."
       },
       {
         "type": "steps",
@@ -1007,7 +1168,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kushti i pagesës vendos çfarë ndodh më pas: porositë me “paguaj tani” shënohen si të paguara, ndërsa ato mujore mbeten të papaguara te Të papaguara, ku mund t’i shlyesh për çdo furnitor — një porosi, këtë muaj, ose të gjitha."
+        "text": "Kushti i pagesës vendos çfarë ndodh më pas: porositë me Pagesë në marrje shënohen si të paguara, ndërsa ato me Kredi mujore mbeten të papaguara te Të papaguara, ku mund t’i shlyesh për çdo furnitor — një porosi, këtë muaj, ose të gjitha."
+      },
+      {
+        "type": "p",
+        "text": "Materialet që nuk i shet, si mielli ose paketimet, mund të blihen në të njëjtën mënyrë: krijoji si produkte jo për shitje — shih “A mund t’i shtoj materiale si mielli ose paketimet si produkte?”"
       },
       {
         "type": "note",
@@ -1016,8 +1181,54 @@ export const articles = [
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "A mund t’i shtoj materiale si mielli ose paketimet si produkte?",
+    "keywords": [
+      "jo për shitje",
+      "produkt jo për shitje",
+      "materiale",
+      "mielli",
+      "paketime",
+      "furnitura",
+      "shitet në arkë",
+      "blerje",
+      "kosto"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Po. Në formularin e produktit, çaktivizo Shitet në arkë poshtë fotos (është aktiv si parazgjedhje) dhe produkti është jo për shitje: nuk ka nevojë për çmim, mban koston, barkodin, stokun dhe variantet e veta, dhe lista e produkteve shfaq “Jo për shitje” aty ku do të ishte çmimi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Një produkt jo për shitje nuk shfaqet kurrë në rrjetën e arkës, te kategoritë, në kërkim ose në skanimet e barkodit, dhe nuk mund të jetë dhuratë, shtesë, produkt i synuar i një promovimi ose zëvendësim në një këmbim.",
+          "Porositë e blerjes, marrja në stok, Sinkronizo koston e produktit dhe faturat e papaguara funksionojnë saktësisht si për produktet e tjera, ndaj kostoja e blerjes dhe stoku i një materiali mund të regjistrohen përmes Blerjet.",
+          "Shitja e produkteve të tjera nuk ia zbret stokun. Kur përdor një pjesë prej tij, regjistro një heqje me Rregullo stokun te detajet e produktit: Përdorim materialesh për atë që hyri në produkte, Furnizime dyqani për gjëra si qeset e letrës ose produktet e pastrimit.",
+          "Mund ta kthesh në produkt për shitje kur të duash, dhe çmimi e tatimet e tij janë ende aty. Porositë dhe raportet që janë bërë tashmë nuk preken."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Si arrin kostoja e tij te Fitimi: blerjet nuk numërohen aty drejtpërdrejt. Për një produkt të bërë prej tij, vendose koston te ai produkt, dhe numërohet kur shitet ai produkt. Furnizimet që nuk hyjnë në koston e asnjë produkti regjistrohen si Furnizime dyqani kur përdoren, nëse stoku i tyre ndiqet, ose si shpenzim i njëhershëm nëse jo. Mos e regjistro të njëjtën shumë në të dyja mënyrat, përndryshe numërohet dy herë."
+      },
+      {
+        "type": "note",
+        "text": "Produktet jo për shitje ekzistojnë në çdo plan; blerjet, ndjekja e stokut dhe Rregullo stokun kërkojnë planin Standard ose më të lartë."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1036,20 +1247,25 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Të ardhurat nga shitjet numërohen ditën kur malli u dorëzua; paratë e arkëtuara numërohen ditën kur erdhën paratë. Për një porosi të paguar në arkë të dyja ndodhin në të njëjtën ditë dhe shifrat përputhen. Ndahen kur:"
+        "text": "Të ardhurat nga shitjet numërohen ditën kur malli u dorëzua, pas çdo zbritjeje dhe para tatimit; paratë e arkëtuara numërohen ditën kur erdhën paratë dhe janë paratë që more realisht, me tatim. Prandaj në një dyqan që ngarkon tatim, paratë e arkëtuara dalin më të larta se të ardhurat nga shitjet me vlerën e tatimit, edhe për porositë e paguara në arkë. Përtej kësaj, ndahen kur:"
       },
       {
         "type": "list",
         "items": [
           "Shitje me afat pagese: malli del sot dhe hyn te të ardhurat e sotme nga shitjet; paratë hyjnë te paratë e arkëtuara ditën kur shlyhet.",
           "Porosi paraprake: kapari hyn te paratë e arkëtuara kur paguhet; të ardhurat nga shitjet njihen të plota në datën e marrjes së mallit.",
-          "Kapar i mbajtur: kur një klient anulon një porosi paraprake dhe ti e mban kaparin, ai ishte numëruar tashmë te paratë e arkëtuara kur u pagua. Statistika e shfaq veçmas si kapare të mbajtura dhe nuk numërohet kurrë si e ardhur nga shitjet.",
-          "Shfuqizimi i një porosie të mëparshme: paratë e rimbursuara numërohen te Para të arkëtuara ditën e shfuqizimit, ndaj Para të arkëtuara të asaj dite mund të jenë negative, ndërsa Shfuqizuar e numëron porosinë në datën e shitjes. ⓘ te pllakat Para të arkëtuara dhe Shfuqizuar shpjegon të njëjtën gjë."
+          "Kapar i mbajtur: kur një klient anulon një porosi paraprake dhe ti e mban kaparin, ai ishte numëruar tashmë te paratë e arkëtuara kur u pagua. Statistika e shfaq veçmas si kapare të mbajtura dhe nuk numërohet kurrë te të ardhurat nga shitjet.",
+          "Shfuqizimi i një porosie të mëparshme: paratë e rimbursuara numërohen te Para të arkëtuara ditën e shfuqizimit, ndaj Para të arkëtuara të asaj dite mund të jenë negative, ndërsa Shfuqizuar e numëron porosinë në datën e shitjes.",
+          "Rrumbullakimi i parave: ajo që rrumbullakimi i parave në dorë merr mbi ose nën totalin e porosisë numërohet te Para të arkëtuara, kurrë te Të ardhurat nga shitjet."
         ]
       },
       {
         "type": "p",
-        "text": "Për të rakorduar, krahaso paratë e arkëtuara me sirtarin e parasë dhe me terminalin e kartave; për të parë sa ke shitur realisht në një periudhë, shiko të ardhurat nga shitjet. Kthimet e mallrave ulin të ardhurat nga shitjet ditën e kthimit."
+        "text": "Për të rakorduar, krahaso paratë e arkëtuara me sirtarin e parasë dhe me terminalin e kartave; për të parë sa ke shitur realisht në një periudhë, shiko të ardhurat nga shitjet. Kthimet e mallrave ulin të ardhurat nga shitjet ditën e kthimit. Ikona ⓘ te pllakat Të ardhura nga shitjet, Para të arkëtuara dhe Shfuqizuar shpjegon të njëjtën gjë, ndërsa vetë tatimi listohet te Nga të ardhurat nga shitjet te fitimi bruto, që hapet nga pllaka e fitimit bruto."
+      },
+      {
+        "type": "note",
+        "text": "Të ardhurat para tatimit erdhën në v3.5 dhe periudhat e kaluara u rillogaritën në të njëjtën mënyrë, ndaj një dyqan që ngarkon tatim sheh të ardhura nga shitjet më të ulëta se para përditësimit. Kjo është korrigjim. Versionet e mëparshme e përfshinin tatimin te të ardhurat nga shitjet, dhe dyqanet ku tatimi shtohet mbi çmim e numëronin si të ardhura nga shitjet edhe tatimin e shitjes që mblidhnin."
       }
     ],
     "related": [
@@ -1079,15 +1295,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Për një ditë të vetme, grafiku i trendit kthehet në grafik me shtylla sipas orës; periudhat më të gjata përdorin ditë, javë, muaj ose vite për çdo shtyllë, sipas gjatësisë."
+        "text": "Poshtë shiritit të periudhës vijnë dy rreshta pllakash me shifra (Të ardhura nga shitjet, Para të arkëtuara, Fitimi bruto, Porositë, Porosia mesatare; Zbritjet gjithsej, Fitimi neto, Produkte pa kosto, Klientë të shërbyer), pastaj grafiku i trendit. Menuja lart djathtas te grafiku i trendit e kalon mes të ardhurave nga shitjet, porosive, porosisë mesatare dhe klientëve të shërbyer, dhe pranë tij grafiku Kostoja dhe fitimi bruto vë në një shtyllë koston e produkteve dhe fitimin bruto të çdo periudhe. Një ditë e vetme paraqitet sipas orës; periudhat më të gjata përdorin ditë, javë, muaj ose vite, sipas gjatësisë."
       },
       {
         "type": "p",
-        "text": "Që nga v3.4, mbaj shtypur grafikun Trendi i të ardhurave ose Trendi i fitimit bruto për ta lexuar periudhë pas periudhe: një kartë tregon datën dhe të ardhurat ose fitimin e asaj periudhe, dhe te Trendi i të ardhurave, me Krahasimin e shitjeve të ndezur, edhe të ardhurat e periudhës së krahasimit dhe ndryshimin. Zvarrit majtas ose djathtas për të lëvizur; rrëshqit lart ose poshtë mbi grafik dhe faqja lëviz si zakonisht."
+        "text": "Mbaj shtypur grafikun e trendit ose grafikun Kostoja dhe fitimi bruto për ta lexuar periudhë pas periudhe; me Krahasimin e shitjeve të ndezur, karta e grafikut të trendit tregon krah për krah shifrën e kësaj periudhe dhe të periudhës së krahasimit. Zvarrit majtas ose djathtas për të lëvizur; rrëshqit lart ose poshtë mbi grafik dhe faqja lëviz si zakonisht."
       },
       {
         "type": "p",
-        "text": "Karta Renditja e produkteve liston 5 më të shiturit. Trokit te karta ose te Shiko të gjitha për të parë çdo produkt të shitur në periudhë, të renditur sipas sasisë pas kthimeve."
+        "text": "Karta Renditja e produkteve liston 5 më të shiturit. Trokit te karta ose te Shiko të gjitha për të parë çdo produkt të shitur në periudhë, të renditur sipas sasisë pas kthimeve; një produkt me variante merr një rresht për çdo variant."
       },
       {
         "type": "p",
@@ -1117,6 +1333,7 @@ export const articles = [
       "orët e ngarkuara",
       "produkte me shitje të ngadalta",
       "produkte me ndryshim",
+      "pjesa sipas kategorisë",
       "vlerësimi i inventarit",
       "shkalla e blerjeve të përsëritura",
       "pikë"
@@ -1129,11 +1346,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Krahasimi i shitjeve: në të djathtë të shiritit të periudhës, krahaso me të njëjtën periudhë të vitit të kaluar ose me periudhën para saj (një ditë të vetme me të njëjtën ditë të javës së kaluar, këtë javë me javën e kaluar, këtë muaj me muajin e kaluar, këtë vit me vitin e kaluar, një interval të personalizuar me po aq ditë para tij). Pllaka Para të arkëtuara tregon ndryshimin dhe ritmin e rritjes, dhe grafiku i të ardhurave nga shitjet shton një vijë më të zbehtë për periudhën e krahasimit. Sa kohë një periudhë është ende në vazhdim, periudha e krahasimit pritet në të njëjtin çast.",
-          "Dita × ora: kalo titullin Shitjet në kohë te Dita × ora për një hartë nxehtësie me shtatë ditë dhe 24 orë — sa më e errët një qelizë, aq më shumë ke shitur. Kalo mes të ardhurave nga shitjet dhe porosive; me krahasimin e ndezur, shih cilat orë u rritën dhe cilat u ulën.",
-          "Produkte me shitje të ngadalta: kalo titullin e kartës së renditjes te Produkte me shitje të ngadalta për të listuar produktet nga ato me më pak shitje te ato me më shumë, me stokun aktual dhe datën e fundit kur u shit secili. Produktet që nuk janë shitur kurrë shënohen “Nuk është shitur kurrë”. Si parazgjedhje shfaqen vetëm produktet me stok.",
-          "Ndryshimet (që nga v3.4): kalo titullin e kartës së renditjes te Ndryshimet për 3 produktet me rritjen më të madhe të të ardhurave nga shitjet dhe 3 me rënien më të madhe kundrejt periudhës së krahasimit, secilin me të ardhurat nga shitjet e të dy periudhave dhe ndryshimin. Zgjidh fillimisht një periudhë te Krahasimi i shitjeve; me Asnjë, ose te Gjithë kohës, karta të thotë ta bësh. Trokit te karta ose te Shiko të gjitha për listën e plotë Produktet me ndryshim, të ndarë në Në rritje dhe Në rënie.",
-          "Shkalla e blerjeve të përsëritura: rreshti i fundit i pllakës së klientëve është pjesa e anëtarëve që bënë blerje në periudhë dhe kanë blerë dy ose më shumë herë gjithsej.",
+          "Krahasimi i shitjeve: në të djathtë të shiritit të periudhës, krahaso me të njëjtën periudhë të vitit të kaluar ose me periudhën para saj (një ditë të vetme me të njëjtën ditë të javës së kaluar, këtë javë me javën e kaluar, këtë muaj me muajin e kaluar, këtë vit me vitin e kaluar, një interval të personalizuar me po aq ditë para tij). Pllakat Të ardhura nga shitjet, Para të arkëtuara, Fitimi bruto, Porositë, Porosia mesatare, Zbritjet gjithsej dhe Klientë të shërbyer tregojnë secila ndryshimin dhe shifrën e periudhës së krahasimit, si “▼ 3% kundrejt muajit të kaluar”; ndryshimi te Zbritjet gjithsej është gjithmonë gri, sepse më shumë zbritje nuk është vetvetiu e mirë apo e keqe. Trokit çdo rresht krahasimi për të hapur Krahasimi i periudhave, që liston shifrat e të dyja periudhave. Grafiku i trendit shton një vijë më të zbehtë për periudhën e krahasimit. Sa kohë një periudhë është ende në vazhdim, periudha e krahasimit pritet në të njëjtin çast.",
+          "Dita × ora: kalo titullin e grafikut të trendit nga Trendi te Dita × ora për një hartë nxehtësie me shtatë ditë dhe 24 orë — sa më e errët një qelizë, aq më shumë ke shitur. Kalo mes të ardhurave nga shitjet dhe porosive; me krahasimin e ndezur, shih cilat orë u rritën dhe cilat u ulën.",
+          "Produkte me shitje të ngadalta: kalo titullin e kartës së renditjes te Produkte me shitje të ngadalta për të listuar produktet nga ato me më pak shitje te ato me më shumë, me stokun aktual dhe datën e fundit kur u shit secili. Produktet që nuk janë shitur kurrë shënohen “Nuk është shitur kurrë”, dhe një produkt me variante merr një rresht për çdo variant. Si parazgjedhje shfaqen vetëm produktet me stok.",
+          "Ndryshimet (që nga v3.4): kalo titullin e kartës së renditjes te Ndryshimet për 3 produktet me rritjen më të madhe të të ardhurave nga shitjet dhe 3 me rënien më të madhe kundrejt periudhës së krahasimit, secilin me të ardhurat nga shitjet e të dy periudhave dhe ndryshimin; çdo variant krahasohet me vetveten. Zgjidh fillimisht një periudhë te Krahasimi i shitjeve; me Asnjë, ose te Gjithë kohës, karta të thotë ta bësh. Trokit te karta ose te Shiko të gjitha për listën e plotë Produktet me ndryshim, të ndarë në Në rritje dhe Në rënie.",
+          "Shkalla e blerjeve të përsëritura: rreshti i fundit i pllakës së klientëve është pjesa e anëtarëve që bënë blerje në periudhë dhe kanë blerë dy ose më shumë herë gjithsej. Me krahasimin e ndezur, një rresht poshtë jep ndryshimin në pikë përqindjeje dhe shkallën e periudhës së krahasimit.",
+          "Pjesa sipas kategorisë: të ardhurat nga shitjet dhe pjesa e çdo kategorie, sipas kategorisë aktuale të secilit produkt, nga më e madhja. Produktet pa kategori hyjnë te Pa kategori, dhe rreshtat mblidhen saktësisht në të ardhurat nga shitjet.",
           "Tani: vlerësimi i inventarit (stoku aktual × kostoja aktuale), çdo lëvizje stoku në periudhën e zgjedhur, dhe pikat që klientët i kanë por nuk i kanë përdorur ende, me shumën maksimale që mund të zbritin. Këto janë gjendje aktuale; periudha nuk i ndryshon."
         ]
       },
@@ -1159,33 +1377,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Si raportohet fitimi nëse nuk kam futur kostot?",
+    "question": "Si raportohet fitimi bruto nëse nuk kam futur kostot?",
     "keywords": [
       "kostoja",
       "fitimi",
+      "fitimi bruto",
       "marzhi",
       "marzhi bruto",
       "raporte",
       "nuk ndiqet",
       "kosto që mungon",
-      "fitimi i gjurmuar"
+      "produkte pa kosto"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kostoja është fushë opsionale. Produktet pa kosto lihen jashtë fitimit, ndërsa të ardhurat e tyre nga shitjet numërohen plotësisht. Karta Fitimi bruto i gjurmuar te Statistika tregon sa produkte të shitura në periudhë nuk kanë kosto; një kosto 0 llogaritet si kosto, ndaj ato produkte nuk listohen."
+        "text": "Kostoja është fushë opsionale. Produktet pa kosto lihen jashtë fitimit bruto, ndërsa të ardhurat e tyre nga shitjet numërohen plotësisht. Pllaka Produkte pa kosto te Statistika tregon sa produkte të shitura ose të kthyera në periudhë nuk kanë kosto, si “12 produkte”. Një kosto 0 llogaritet si kosto, ndaj ato produkte nuk listohen; kur çdo produkt ka kosto, pllaka shfaq “0 produkte · të dhënat e kostos janë të plota”."
       },
       {
         "type": "p",
-        "text": "Trokit kartën ose Shiko produktet për të hapur Produkte pa kosto, të renditura sipas të ardhurave nga shitjet që mbeten jashtë fitimit. Trokit një rresht për të hapur produktin, shto koston nga Ndrysho dhe rreshti shënohet Kostoja u shtua kur kthehesh. Një produkt me variante shënohet Kostoja u shtua vetëm kur çdo variant i shitur pa kosto ka një kosto — të vetën ose koston e produktit, që ndiqet."
+        "text": "Trokit pllakën ose Shiko produktet për të hapur Produkte pa kosto, të renditura sipas të ardhurave nga shitjet që mbeten jashtë fitimit bruto. Trokit një rresht për të hapur produktin, shto koston nga Ndrysho dhe rreshti shënohet Kostoja u shtua kur kthehesh. Një produkt me variante shënohet Kostoja u shtua vetëm kur çdo variant i shitur pa kosto ka një kosto — të vetën ose koston e produktit, që ndiqet."
       },
       {
         "type": "p",
-        "text": "Fitimi është të ardhurat nga shitjet pas çdo zbritjeje (zbritje artikulli dhe shporte, promovime, përdorim pikash) dhe para tatimit, minus koston — prandaj fusha quhet Kostoja pa tatim (opsionale): shkruaj çfarë ke paguar para tatimit. Marzhi është fitimi ÷ të ardhurat para tatimit të produkteve me kosto, ndaj produktet pa kosto nuk e ulin. Një kthim merr prapa, ditën e kthimit, fitimin që ato artikuj kishin sjellë."
+        "text": "Fitimi bruto është të ardhurat nga shitjet pas çdo zbritjeje (zbritje artikulli dhe shporte, promovime, përdorim pikash) dhe para tatimit, minus koston — prandaj, në një dyqan që ngarkon tatim, fusha quhet Kostoja pa tatim (opsionale): shkruaj çfarë ke paguar para tatimit. Marzhi është fitimi bruto ÷ të ardhurat nga shitjet të produkteve me kosto, ndaj produktet pa kosto nuk e ulin. Një kthim merr prapa, ditën e kthimit, fitimin bruto që ato artikuj kishin sjellë."
+      },
+      {
+        "type": "p",
+        "text": "Trokit pllakën e fitimit bruto për të hapur Nga të ardhurat nga shitjet te fitimi bruto, që zbret rresht pas rreshti: të ardhurat nga shitjet (me tatim), tatimin, të ardhurat nga shitjet (pa tatim), të ardhurat nga shitjet pa kosto, koston e produkteve dhe në fund fitimin bruto e marzhin. Rreshtat mblidhen saktësisht në pllakë."
       },
       {
         "type": "note",
-        "text": "Një kosto që shton prek vetëm shitjet e mëpasshme; shitjet e kryera nuk rillogariten. Ky llogaritje erdhi në v3.1: versionet më të vjetra zbrisnin vetëm zbritjet manuale të artikujve dhe e numëronin tatimin e përfshirë si fitim, ndaj pas përditësimit periudhat me zbritje ose tatim të përfshirë shfaqin fitim më të ulët. Kjo është korrigjim, jo humbje të dhënash."
+        "text": "Një kosto që shton prek vetëm shitjet e mëpasshme; shitjet e kryera nuk rillogariten. Kjo llogaritje erdhi në v3.1: versionet më të vjetra zbrisnin vetëm zbritjet manuale të artikujve dhe e numëronin tatimin e përfshirë si fitim, ndaj pas përditësimit periudhat me zbritje ose tatim të përfshirë shfaqin fitim bruto më të ulët. Kjo është korrigjim, jo humbje të dhënash."
       }
     ],
     "related": [
@@ -1220,16 +1443,22 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Të ardhura nga shitjet (pa tatim): të ardhurat pas çdo zbritjeje, minus tatimin, të numëruara në ditën kur u dorëzua malli.",
+          "Të ardhura nga shitjet (pa tatim): të ardhurat pas çdo zbritjeje dhe para tatimit, të numëruara në ditën kur u dorëzua malli.",
           "Kostoja e produkteve: kostoja e asaj që u shit, nga kostot e vëna te produktet e tua.",
+          "Humbje stoku: kostoja e asaj që hoqe me Rregullo stokun si të skaduar, të dëmtuar, të dhuruar dhe të ngjashme, plus kthimet e skartuara. Vjen pas fitimit bruto — shih “Si e regjistroj stokun që skadoi, u dëmtua ose u dha si mostër?” Muaji ka edhe një pjesë Humbje stoku që e mbledh sipas arsyes.",
           "Komisione procesimi (vlerësim): komisionet e vlerësuara nga normat e mënyrave të tua të pagesës.",
           "Kapare të mbajtura: kaparet që ke mbajtur kur një porosi paraprake u anulua.",
+          "Rrumbullakimi i parave: diferenca mbi ose nën totalet e porosive që solli rrumbullakimi i parave në dorë te monedhat në përdorim.",
           "Shpenzime fikse dhe Shpenzime të njëhershme: ato që ke regjistruar për atë muaj — shih “Si i regjistroj qiranë, pagat dhe shpenzimet e tjera?”"
         ]
       },
       {
         "type": "p",
-        "text": "Pas tyre vijnë deri në tre grafikë: fitimi neto sipas muajve, pesha e secilit shpenzim fiks dhe trendi i shpenzimeve fikse. Dy grafikët e trendit përfshijnë më së shumti 12 muajt deri te muaji që ke hapur dhe shfaqen vetëm kur ka të paktën dy muaj për t’u krahasuar, të numëruar nga muaji i shitjes ose i shpenzimit tënd të parë. Grafiku i peshës kërkon një shpenzim fiks në atë muaj; derisa të ketë një, ajo pjesë shfaq Shto shpenzim fiks. Te Statistika, rreshti i fundit i kartës së fitimit të çon drejt e te Fitimi: për një periudhë që është saktësisht një muaj tregon fitimin neto të atij muaji, si “Fitimi neto për tetor: NT$12,300”; për çdo periudhë tjetër shfaq Shiko fitimin dhe humbjen mujore."
+        "text": "Pas tyre vijnë deri në tre grafikë: fitimi neto sipas muajve, pesha e secilit shpenzim fiks dhe trendi i shpenzimeve fikse. Dy grafikët e trendit përfshijnë më së shumti 12 muajt deri te muaji që ke hapur dhe shfaqen vetëm kur ka të paktën dy muaj për t’u krahasuar, të numëruar nga muaji i shitjes ose i shpenzimit tënd të parë. Grafiku i peshës kërkon një shpenzim fiks në atë muaj; derisa të ketë një, ajo pjesë shfaq Shto shpenzim fiks."
+      },
+      {
+        "type": "p",
+        "text": "Statistika dhe Fitimi lidhen me njëra-tjetrën. Kur periudha në Statistika është Këtë muaj ose saktësisht një muaj i plotë, rreshti i dytë i pllakave shton një pllakë Fitimi neto (e shënuar “Në vazhdim · zbriten shpenzimet e plota të muajit” sa kohë muaji është në vazhdim); trokite për zbërthimin e atij muaji nga fitimi bruto te fitimi neto. Për çdo periudhë tjetër, trokit Shiko fitimin dhe humbjen mujore në rreshtin e fundit të Nga të ardhurat nga shitjet te fitimi bruto. Në drejtim të kundërt, Shiko raportin për tetor poshtë titullit të një muaji te Fitimi e hap Statistikën në atë muaj."
       },
       {
         "type": "note",
@@ -1284,12 +1513,12 @@ export const articles = [
         "items": [
           "Për një rregullim dyqani, pajisje ose sigurim të paguar paraprakisht, aktivizo Shpërndaje në disa muaj dhe zgjidh numrin e muajve (2 deri në 120) dhe Muaji i parë i numëruar. Formulari tregon paraprakisht sa numërohet çdo muaj dhe cilët muaj mbulon.",
           "Pa shpërndarje, prapë mund të zgjedhësh Muaji i numëruar: një faturë e tetorit që arrin në nëntor mund të numërohet në tetor, ndërsa data e vërtetë ruhet.",
-          "Nëse një shpërndarje përfundon më herët (p.sh. një polisë sigurimi e anuluar), përdor Përfundo shpërndarjen më herët: ç’ka mbetur numërohet në muajin që zgjedh."
+          "Nëse një shpërndarje përfundon më herët (p.sh. anulohet një policë sigurimi), përdor Përfundo shpërndarjen më herët: shuma e mbetur numërohet në muajin që zgjedh."
         ]
       },
       {
         "type": "note",
-        "text": "Shkruaj atë që dyqani e përballon realisht, pa tatimin që mund ta rikuperosh. Stoku që do ta shesësh kalon te Blerje, sepse numërohet te kostoja e produktit kur shitet; depozitat e garancisë, kryegjëja e huasë dhe paratë që merr pronari nuk janë shpenzime. Ndryshimet ruhen së bashku kur trokit ✓, dhe një ndryshim që arrin një muaj të përfunduar të tregon së pari fitimi neto i cilëve muaj do të ndryshojë."
+        "text": "Shkruaj atë që dyqani e përballon realisht, pa tatimin që mund ta rikuperosh. Stoku që do ta shesësh dhe lëndët e para nga të cilat e prodhon kalojnë te Blerje, sepse numërohen te kostoja e produktit kur shitet. Furnizimet me stok të ndjekur regjistrohen me Rregullo stokun kur përdoren, me arsyen Furnizime dyqani, jo si shpenzim. Depozitat e garancisë, kryegjëja e huasë dhe paratë që merr pronari nuk janë shpenzime. Ndryshimet ruhen së bashku kur trokit ✓; nëse një ndryshim prek një muaj të përfunduar, fillimisht të tregohet se cilët muaj do të ndryshojnë në fitimin neto."
       }
     ],
     "related": [
@@ -1385,7 +1614,8 @@ export const articles = [
       "shpërblime",
       "përdor pikët",
       "bonus mirëseardhjeje",
-      "program besnikërie"
+      "program besnikërie",
+      "rregullo pikët"
     ],
     "content": [
       {
@@ -1395,6 +1625,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Lidhe anëtarin me shitjen, në shportë ose në ekranin e pagesës, dhe pikët grumbullohen automatikisht; për t'i përdorur, shkruaj pikët që do të shpenzohen. Shfuqizimi i një porosie heq pikët që ajo kishte dhënë dhe kthen pikët që ishin përdorur."
+      },
+      {
+        "type": "p",
+        "text": "Për të shtuar ose hequr pikë me dorë (për shembull, për një blerje që nuk u regjistrua), prek Rregullo te karta Pikë në detajet e klientit, zgjidh Shto ose Zbrit, shkruaj pikët dhe, nëse dëshiron, jep një arsye (deri në 100 karaktere). Nuk mund të zbresësh më shumë pikë sesa ka klienti. Çdo rregullim mbetet në historikun e pikëve me gjendjen para dhe pas, arsyen dhe personin që e ka bërë."
+      },
+      {
+        "type": "note",
+        "text": "Rregullimi manual i pikëve erdhi me v3.5. Në Pro, punonjësit me një rol që kërkon miratim për Rregullim manual i pikëve (roli Punonjës e ka kështu si parazgjedhje) pyeten për PIN-in e një menaxheri ose të pronarit kur e konfirmojnë."
       }
     ],
     "related": [
@@ -1585,8 +1823,12 @@ export const articles = [
         "text": "Së pari prek Provo përsëri; nëse funksionon, aplikacioni hapet si zakonisht. Nëse vazhdon të ndodhë, prek Kontakto mbështetjen dhe na trego, dhe do të të ndihmojmë t’i rikuperosh të dhënat. Ky ekran nuk zhvendos dhe nuk fshin kurrë asnjë skedar."
       },
       {
+        "type": "p",
+        "text": "Nisja e parë pas një përditësimi, ose pas rivendosjes së një kopjeje rezervë nga një version më i vjetër, mund të shfaqë fillimisht “Po përditësohen të dhënat e tua…”. Kjo do të thotë që të dhënat e dyqanit po kalojnë në një format më të ri, gjë që zgjat më shumë sa më shumë të dhëna të kesh; aplikacioni hapet vetë kur mbaron. Nuk është ngrirë."
+      },
+      {
         "type": "note",
-        "text": "Shkaku më i shpeshtë është mbyllja e aplikacionit në mes të një rivendosjeje. Para v3.0, kjo e bënte aplikacionin të ndalonte në çdo nisje; që nga v3.0 ndalon në këtë ekran."
+        "text": "Shkaku më i shpeshtë është mbyllja e aplikacionit në mes të një rivendosjeje. Para v3.0, kjo e bënte aplikacionin të mbyllej papritur në çdo nisje; që nga v3.0 ai ndalet në këtë ekran."
       }
     ],
     "related": [
@@ -1804,15 +2046,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Përdor regjistrin e aktivitetit. Në faqen Stafi, prek Regjistri i aktivitetit lart djathtas dhe shkruaj PIN-in e pronarit për të parë veprimet e ndjeshme të dyqanit, nga më e reja: shfuqizime, kthime, rregullime manuale të stokut, miratime, ndryshime të stafit dhe lejeve, ndryshime të PIN-it të pronarit, ndryshime çmimi dhe kostoje të produkteve dhe fshirje produktesh. Pagesat e zakonshme nuk renditen."
+        "text": "Përdor regjistrin e aktivitetit. Në faqen Stafi, prek Regjistri i aktivitetit lart djathtas dhe shkruaj PIN-in e pronarit për të parë veprimet e ndjeshme të dyqanit, të renditura nga më të rejat te më të vjetrat: shfuqizime, kthime, rregullime të stokut dhe rinumërime, rregullime manuale të pikëve, miratime, ndryshime të stafit dhe lejeve, ndryshime të PIN-it të pronarit, cilësimet e tatimit, ndryshime çmimi dhe kostoje të produkteve dhe fshirje produktesh. Shitjet e zakonshme nuk renditen."
       },
       {
         "type": "list",
         "items": [
-          "Çdo regjistrim tregon çfarë ka prekur, kush ka bërë çfarë dhe kur, si dhe rezultatin — për shembull “M price $390 → $350”.",
+          "Çdo regjistrim tregon çfarë ka prekur, kush ka bërë çfarë dhe kur, si dhe rezultatin — për shembull “M price $390 → $350”. Arsyeja e dhënë për një shfuqizim, një kthim, një rregullim stoku ose një rregullim pikësh shfaqet në rreshtin e tretë të regjistrimit.",
           "Filtro sipas punonjësit (përfshirë ata të çaktivizuar), llojit të veprimit dhe Sot / Këtë javë / Këtë muaj.",
           "Prek një regjistrim që të çon te një porosi, produkt ose klient për të hapur detajet përkatëse.",
-          "Detajet e porosisë, detajet e produktit dhe faqja e secilit punonjës kanë hyrjen e vet që liston vetëm regjistrimet që i përkasin.",
+          "Detajet e porosisë, detajet e produktit dhe faqja e secilit punonjës kanë listën e vet të regjistrimeve, ku shfaqen vetëm regjistrimet që lidhen me to.",
           "Produkte të fshira shfaqen në regjistër me emrin dhe çmimin e asaj kohe."
         ]
       },
