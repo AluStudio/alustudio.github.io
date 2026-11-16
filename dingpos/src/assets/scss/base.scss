@@ -355,7 +355,7 @@ button {
     // object-fit enforces this ratio, so a capture from another iPad would be
     // cropped silently; scripts/build-screenshots.sh asserts every asset
     // against it (CSS_RATIO_W/H there) and refuses to write a mismatch.
-    aspect-ratio: 2388 / 1568;
+    aspect-ratio: 2420 / 1568;
     object-fit: cover;
     // Outer radius minus the bezel (B3).
     border-radius: $radius-xl;
