@@ -84,18 +84,19 @@ export const articles = [
       "öppna butik",
       "starta butik",
       "land",
-      "valuta"
+      "valuta",
+      "moms"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Första gången du öppnar DingPOS öppnar en guide din butik i två steg och på några minuter:"
+        "text": "Första gången du öppnar DingPOS startar en guide som hjälper dig att konfigurera butiken i två steg, på bara några minuter:"
       },
       {
         "type": "steps",
         "items": [
-          "Välj ditt land eller din region. Överst i listan visas den här iPadens region och de vanligaste marknaderna, och under dem finns alla 175 länder och regioner där DingPOS finns i App Store. Du kan söka på namnet i appens språk eller på engelska. Ditt val fyller i valuta, momssats och momsläge.",
-          "På Din butik anger du butikens namn, lägger eventuellt till en logotyp och kontrollerar valuta, momssats och momsläge (inklusive / exklusive moms). Valutan är som standard landets egen. Tryck på den för att välja bland 130 valutor."
+          "Välj ditt land eller din region. Överst i listan visas det land eller den region som den här iPaden finns i, och sedan de vanligaste marknaderna. Under dem finns alla 175 länder och regioner där DingPOS finns i App Store. Du kan söka på namnet i appens språk eller på engelska. Ditt val fyller i valuta, moms och momsläge.",
+          "På Din butik anger du butikens namn, lägger eventuellt till en logotyp och kontrollerar valuta, moms och momsläge (inklusive / exklusive moms). Valutan är som standard landets egen. Tryck på den för att välja bland 130 valutor. Momslistan visar landets standardmoms: byt namn, ändra en sats, radera en rad eller tryck på Lägg till moms för att få en rad till. En butik i British Columbia ändrar till exempel den första raden till ”GST 5” och lägger till en rad ”PST 7”."
         ]
       },
       {
@@ -104,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Valuta och momsläge kan inte ändras efter installationen, men momssatsen kan du fortfarande ändra senare i Inställningar. I USA, Kanada, Brasilien och Mikronesien beror satsen på delstat, provins eller stad, så momsfältet är tomt från början och du anger den sats du tar ut (0 är tillåtet) för att fortsätta. Listan med 175 länder och valet av valuta kom i v3.2. Tidigare versioner erbjöd 15 länder."
+        "text": "Valutan kan inte ändras efter installationen. Moms och momsläge kan båda ändras senare under Inställningar → Butiksuppgifter. I USA, Kanada, Brasilien och Mikronesien beror satsen på delstat, provins eller stad, så momsfältet är tomt från början och du anger den sats du tar ut för att fortsätta. En sats måste vara högre än 0: en butik som inte tar ut någon moms raderar raden. Listan med 175 länder och valet av valuta kom i v3.2. Tidigare versioner erbjöd 15 länder."
       }
     ],
     "related": [
@@ -183,11 +184,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS fungerar för närvarande på iPad med iPadOS 17 eller senare och är i första hand utformat för liggande läge."
+        "text": "DingPOS fungerar för närvarande på iPad med iPadOS 17.4 eller senare och är i första hand utformat för liggande läge."
       },
       {
         "type": "p",
         "text": "iPhone och Mac stöds inte ännu. Vill du att vi stöder en annan enhet kan du skriva till oss och berätta hur du skulle använda den."
+      },
+      {
+        "type": "note",
+        "text": "Alla iPad-modeller som kan köra iPadOS 17 kan uppdateras till 17.4, så det finns ingen modell som inte kan uppdateras. En iPad som fortfarande har iPadOS 17.0–17.3 behöver först en systemuppdatering, under Inställningar → Allmänt → Programuppdatering, innan den kan installera DingPOS v3.5 eller senare."
       }
     ],
     "related": [
@@ -197,23 +202,34 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Kan jag ändra valuta eller momsläge efter installationen?",
+    "question": "Kan jag ändra valuta, momssats eller momsläge efter installationen?",
     "keywords": [
       "valuta",
       "momsläge",
       "ändra",
       "låst",
       "momssats",
+      "moms",
+      "inklusive",
+      "exklusive",
       "byta valuta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Momssatsen kan ändras när som helst i Inställningar – den nya satsen gäller bara kommande ordrar."
+        "text": "Momsen kan ändras, men valutan kan inte. Moms och momsläge ändras båda på kortet Moms under Inställningar → Butiksuppgifter, och en ändring gäller bara senare försäljningar: tidigare ordrar, returer och rapporter behåller de momsbelopp och det momsläge som registrerades."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Moms: lägg till en, byt namn, ändra satsen eller radera den – se ”Hur räknas momsen ut?”",
+          "Momsläge (inklusive / exklusive): tryck på det andra läget, så visar bekräftelsen ett räkneexempel med din första moms, till exempel ”en vara för NT$100 med 5 % moms: kunden betalar NT$105”. Priserna behåller sina siffror, och en öppen varukorg räknas om i det nya läget när du går tillbaka till kassan. Läget kan bytas sedan v3.5. Tidigare versioner låser det vid installationen.",
+          "Efter ett byte av läge återbetalar en full retur fortfarande den ursprungliga ordern som den var. Ett byte (med ersättningsvaror) på en order som såldes i det andra läget blockeras: byt tillbaka läget, eller returnera varorna och registrera dem på nytt."
+        ]
       },
       {
         "type": "p",
-        "text": "Valuta och momsläge (inklusive / exklusive moms) är låsta när installationen är klar. Alla dina tidigare ordrar har beräknats med dem, så om de ändras mitt i skulle dina rapporter bli felaktiga. Kontrollera dem i steget Din butik under installationen: valutan är som standard landets egen, och du kan trycka på den för att välja en annan."
+        "text": "Valutan är låst när installationen är klar. Alla tidigare ordrar har registrerats i den, så om du bytte valuta mitt i skulle dina rapporter bli felaktiga. Kontrollera den i steget Din butik under installationen: valutan är som standard landets egen, och du kan trycka på den för att välja en annan."
       },
       {
         "type": "note",
@@ -334,44 +350,70 @@ export const articles = [
       "mervärdesskatt",
       "moms ingår",
       "moms tillkommer",
-      "kvitto",
       "inklusive moms",
-      "exklusive moms"
+      "exklusive moms",
+      "flera momssatser",
+      "GST",
+      "PST",
+      "pausa moms",
+      "kvitto"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Momsen räknas ut automatiskt utifrån det momsläge du valde vid konfigurationen. Kvittot visar momsbeloppet i båda lägena:"
+        "text": "Momsen räknas ut automatiskt utifrån momsen och momsläget under Inställningar → Butiksuppgifter. Det finns två momslägen, och kvittot visar momsbeloppet i båda:"
       },
       {
         "type": "list",
         "items": [
-          "Moms ingår: priserna innehåller redan moms – totalsumman ändras inte och kvittot specificerar den inräknade momsen (vanligt i Taiwan, Japan med flera).",
-          "Moms tillkommer: momsen läggs på det belopp som återstår efter rabatt vid betalning (vanligt i USA, Kanada med flera)."
+          "Inklusive moms: priserna innehåller redan moms – totalsumman ändras inte och kvittot specificerar den inräknade momsen (vanligt i Taiwan, Japan med flera).",
+          "Exklusive moms: momsen läggs på det belopp som återstår efter rabatt vid betalning (vanligt i USA, Kanada med flera)."
         ]
       },
       {
         "type": "p",
-        "text": "Fullständig beräkningsordning: varurabatter → varukorgsrabatt → moms. Belopp avrundas uppåt från hälften till valutans antal decimaler (t.ex. 0 för TWD, 2 för USD)."
+        "text": "En butik kan ta ut flera slags moms, till exempel GST 5 % plus PST 7 % i British Columbia, eller Japans konsumtionsskatt på 10 % vid sidan av den reducerade satsen på 8 %:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tryck på Lägg till moms på kortet Moms och ange ett namn och en sats. Slå på Använd för nya produkter så får produkter du lägger till senare den här momsen som standard. Om butiken redan har en standardmoms börjar en nyligen tillagd moms med den reglaget avstängt – slå på det när båda ska tas ut.",
+          "Varje produkt väljer vilken moms den tar ut under Moms som tas ut i produktformuläret – en bento-låda kan till exempel bara ta ut den reducerade satsen på 8 %. När två eller fler är påslagna visar formuläret produktens sammanlagda sats.",
+          "Tryck på en moms för att byta namn, ändra satsen eller använda Tillämpa på alla produkter eller Ta bort från alla produkter, så läggs den till på eller tas bort från alla produkter på en gång. När du raderar en moms får du först veta hur många produkter som slutar ta ut den.",
+          "I en butik med moms som tillkommer visar varukorgens summor en rad per moms, och orderdetaljerna listar en rad per moms med dess sats och det belopp den togs ut på."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Vill du sluta ta ut moms en tid slår du av Ta ut moms överst på kortet Moms: all försäljning efter det blir momsfri, även varor som redan ligger i en varukorg. Varje produkt behåller sin moms, och när du slår på reglaget igen är allt som det var."
+      },
+      {
+        "type": "p",
+        "text": "Fullständig beräkningsordning: varurabatter och kampanjer → varukorgsrabatt → poänginlösen → moms. Belopp avrundas till valutans antal decimaler (halvor avrundas uppåt; t.ex. 0 för TWD, 2 för USD)."
+      },
+      {
+        "type": "note",
+        "text": "Namngiven moms kom i v3.5. När du uppdaterar blir din momssats en namngiven moms (till exempel ”GST 10 %” i Australien) och alla befintliga produkter får den. En butik vars sats var 0 får ingen moms. Tidigare ordrar och rapporter behåller sina siffror."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
     "slug": "payment-methods",
     "category": "checkout",
-    "question": "Vilka betalsätt kan jag använda i kassan?",
+    "question": "Vilka betalningssätt kan jag använda i kassan?",
     "keywords": [
       "betalning",
-      "betalsätt",
+      "betalningssätt",
       "kontant",
       "kreditkort",
       "line pay",
       "växel",
-      "egna betalsätt",
+      "egna betalningssätt",
       "på räkning",
       "avgifter"
     ],
@@ -382,7 +424,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Betalsätten är etiketter för bokföringen – DingPOS hanterar inga riktiga betalningar. Ta emot kort- eller mobilbetalningar med din vanliga terminal eller app och välj sedan motsvarande etikett i DingPOS för att registrera dem. Vid kontantbetalning räknas växeln ut automatiskt."
+        "text": "Betalningssätten är etiketter för bokföringen – DingPOS hanterar inga riktiga betalningar. Ta emot kort- eller mobilbetalningar med din vanliga terminal eller app och välj sedan motsvarande etikett i DingPOS för att registrera dem. Vid kontantbetalning räknas växeln ut automatiskt, och där de minsta mynten inte längre används kan kontanter också avrundas – se ”Kan kontantbetalningar avrundas till de mynt som finns i omlopp?”"
       },
       {
         "type": "p",
@@ -395,6 +437,7 @@ export const articles = [
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -440,6 +483,54 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Kan kontantbetalningar avrundas till de mynt som finns i omlopp?",
+    "keywords": [
+      "kontantavrundning",
+      "avrundning",
+      "avrunda uppåt",
+      "avrunda nedåt",
+      "mynt",
+      "avrundning av kontanter",
+      "växel",
+      "0,05",
+      "Kanada",
+      "Australien",
+      "Schweiz"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Kanada, Australien, Nya Zeeland, Schweiz, Danmark, Sverige, Norge, Belgien, Finland och Ungern använder inte längre sina minsta mynt, så DingPOS avrundar kontanter till ett belopp du faktiskt kan lämna över: en order på C$12.99 som betalas kontant tas emot som C$13.00, och växeln räknas ut från C$13.00. Kort och andra betalningar som inte är kontanta förblir exakta."
+      },
+      {
+        "type": "p",
+        "text": "En ny butik som ställs in i något av de här länderna, med det landets valuta, får det inställt automatiskt. Alla andra butiker kan slå på det med kortet Kontantavrundning längst ned under Inställningar → Betalningssätt: välj vad kontanterna ska avrundas till (Ingen avrundning, 0.05, 0.10, 0.50 eller 1.00) och, för ett steg som kan hamna exakt på mitten, om det avrundas uppåt eller nedåt. En ändring gäller bara senare betalningar."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Vid betalning visas ”Mottagen kontant C$13.00”. Om kunden ber om att få betala exakt belopp trycker du på Ta emot exakt belopp under betalningssätten. Det gäller just den försäljningen.",
+          "Orderns totalsumma, moms, intäkt, poäng och medlemmens inköp ändras inte. Avrundningsdifferensen ligger på betalningen, och kvittovyn och orderdetaljerna visar den under totalsumman, till exempel ”Kontantavrundning +C$0.01”.",
+          "Kontantåterbetalningar vid returer, handpenningar och avhämtningsbelopp i kontanter för förbeställningar, tilläggsbetalningar vid byten och försäljningar på räkning som regleras kontant avrundas också. När flera regleras på en gång avrundas hela batchen en gång.",
+          "Makuleringar, återbetalda handpenningar för förbeställningar och ångrade regleringar betalar tillbaka exakt det som registrerades, utan ny avrundning.",
+          "Mottagna betalningar i Statistik visar hur mycket av beloppet som var kontantavrundning, och månadens Resultat får en rad Kontantavrundning som räknas med i nettovinsten. Avrundning är aldrig intäkt."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Schweiz avrundar alltid nedåt enligt sina regler för prisvisning – CHF 12.98 tas emot som CHF 12.95, och det finns inget val för exakt mitt emellan. Belgien avrundar bara totalsummor över €0.05. Kontantavrundning finns i alla planer, och en befintlig butik tar emot kontanter precis som förut tills du slår på det."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -619,7 +710,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gå till Ordrar, hitta ordern, öppna dess detaljvy och välj Makulera. Bekräfta så är det klart."
+        "text": "Gå till Ordrar, hitta ordern, öppna dess detaljvy och tryck på Makulera. Arket ”Makulera ordern?” tar emot en valfri orsak (högst 100 tecken). Tryck på Makulera uppe till höger så är det klart. Orsaken visas i orderdetaljerna och i aktivitetsloggen och kan inte redigeras när den har skickats."
       },
       {
         "type": "p",
@@ -648,7 +739,9 @@ export const articles = [
       "byta vara",
       "återbetalning",
       "delretur",
-      "byta storlek"
+      "byta storlek",
+      "kassera retur",
+      "orsak till retur"
     ],
     "content": [
       {
@@ -661,9 +754,15 @@ export const articles = [
           "Den ursprungliga ordern ändras aldrig. En retur skapar ett eget dokument med dagens datum, numrerat med prefixet R, och intäkten minskar den dag returen görs.",
           "Återbetalningen är det kunden faktiskt betalade för varan – radrabatter, varukorgsrabatter och poänginlösen är redan fördelade, så det blir inte en återbetalning till ordinarie pris. Momsen följer den sats som ordern debiterades med.",
           "Ersättningsvaror debiteras till dagens pris, utan kampanjer eller rabatter.",
-          "Spårat lager återställs automatiskt. Poäng som tjänats in på den ursprungliga ordern dras tillbaka, inlösta poäng återbetalas och ersättningsvarorna ger egna poäng.",
-          "En order kan returneras i flera omgångar, men aldrig fler än det som ursprungligen såldes. Kampanjernas användningsgränser återställs inte av en retur."
+          "För en produkt med spårat lager kan varje returnerad rad antingen läggas tillbaka i lager (Lägg i lager, standard) eller kasseras (Kassera, från v3.5). Lägg i lager lägger tillbaka lagersaldot. Kassera lämnar lagret som det var och räknar in det inköpspris varan hade när den såldes i månadens lagerförlust i Resultat. Återbetalning, moms och poäng blir desamma oavsett val.",
+          "Poäng som tjänats in på den ursprungliga ordern dras tillbaka, inlösta poäng återbetalas och ersättningsvarorna ger egna poäng.",
+          "När den ursprungliga ordern är en oreglerad försäljning på räkning flyttas inga pengar: returen dras av från kundens utestående belopp, och en dyrare ersättningsvara ökar beloppet med mellanskillnaden.",
+          "En order kan returneras i flera omgångar, men aldrig fler än det som ursprungligen såldes. När allt har kommit tillbaka summerar den returnerade momsen, rabatterna och poängen exakt till den ursprungliga ordern. Kampanjernas användningsgränser återställs inte av en retur."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Fältet Orsak är valfritt, högst 100 tecken. Det visas i orderdetaljerna och i aktivitetsloggen och kan inte redigeras när det har skickats."
       },
       {
         "type": "note",
@@ -746,6 +845,7 @@ export const articles = [
         "items": [
           "Intäkten räknas den dag varorna lämnar butiken. Mottagna betalningar och poäng väntar till dagen då ordern regleras.",
           "Oreglerade ordrar har en bärnstensfärgad märkning i listan, och kunddetaljerna visar hur mycket kunden är skyldig just nu.",
+          "En retur på en order som ännu inte är reglerad ger ingen återbetalning: beloppet dras av från kundens utestående belopp.",
           "En kund med oreglerade ordrar kan inte raderas."
         ]
       },
@@ -809,11 +909,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Du behöver inte ange inköpspris för varje kombination: ett tomt fält Inköpspris betyder Följer produkten, alltså används produktens inköpspris och det ändras när produktens ändras. Ett tal ger Eget inköpspris – också 0. Använd produktens inköpspris för alla tar bort alla egna inköpspris på en gång."
+        "text": "Du behöver inte ange inköpspris för varje kombination: ett tomt fält Inköpspris betyder Följer produkten, alltså används produktens inköpspris och det ändras när produktens inköpspris ändras. Ett tal ger Eget inköpspris – också 0. Använd produktens inköpspris för alla tar bort alla egna inköpspris på en gång."
       },
       {
         "type": "note",
-        "text": "Namn på alternativ och värden får vara högst 20 tecken långa och kan inte vara tomma: ett tomt alternativnamn eller värde omges av en röd ram när du sparar, så fyll i det eller radera det tomma värdet. En produkt med varianter kan inte ha fritt pris."
+        "text": "Namn på alternativ och värden får vara högst 20 tecken långa, och mellanslag i början och slutet tas bort när du sparar. Ett värde du inte skrivit något i räknas inte som en kombination och hoppas över när du sparar; bara ett tomt alternativnamn, eller ett alternativ där alla värden är tomma, omges av en röd ram. En produkt med varianter kan inte ha fritt pris."
       }
     ],
     "related": [
@@ -945,12 +1045,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "När den är på drar försäljningar och förbeställningar av lager automatiskt; makuleringar, returer och avbokade förbeställningar lägger tillbaka det; när du tar emot en inköpsorder ökar saldot; och du kan justera manuellt när som helst. Varje förändring registreras i en komplett logg. Lågt lager markeras med en färgvarning."
+        "text": "När den är på drar försäljningar och förbeställningar av lager automatiskt; makuleringar, returer och avbokade förbeställningar lägger tillbaka det; och när du tar emot en inköpsorder ökar saldot. Varje förändring registreras i en komplett logg. Lågt lager markeras med en färgvarning."
+      },
+      {
+        "type": "p",
+        "text": "Du kan ändra saldot manuellt på två sätt:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Saldokorrigering: ändra lagersaldot i produktformuläret så att det stämmer med det du faktiskt räknat. Den påverkar aldrig Resultat.",
+          "Justera lager (sedan v3.5): tryck på Justera lager i produktdetaljerna, välj Ta bort eller Lägg till, antal och en orsak, till exempel Utgånget/bedarvat, Skadat eller Smakprov och gåvor. Kostnaden för det som tas bort räknas in i månadens Lagerförlust i Resultat – se ”Hur registrerar jag lager som har gått ut i datum, gått sönder eller delats ut som prov?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Hur registrerar jag lager som har gått ut i datum, gått sönder eller delats ut som prov?",
+    "keywords": [
+      "justera lager",
+      "lagerförlust",
+      "svinn",
+      "kassera varor",
+      "matsvinn",
+      "utgånget",
+      "skadat",
+      "smakprov",
+      "förbrukningsmaterial",
+      "saldokorrigering"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Använd Justera lager. För en produkt med lagerföring trycker du på Justera lager i produktdetaljerna, väljer Ta bort eller Lägg till, anger antal, väljer en orsak och lägger vid behov till en anteckning (högst 100 tecken). Rutan räknar ut lagret efter ändringen, och raden under orsaken säger om justeringen påverkar Resultat."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Orsaker för att ta bort: Använt i produktion, Utgånget/bedarvat, Skadat, Borttappat/stulet, Personalens uttag, Smakprov och gåvor, Förbrukningsmaterial och Övrigt. Orsaker för att lägga till: Egentillverkat, Återfunnet och Övrigt. Övrigt kräver en anteckning.",
+          "Utom Använt i produktion räknas det du tar bort, till inköpspriset vid det tillfället, in i månadens Lagerförlust i Resultat. Den kommer efter bruttovinsten och sänker nettovinsten; bruttovinst och marginal ändras inte. Använt i produktion tar bara bort lagret, eftersom ett materials kostnad redan ingår i inköpspriset för produkten som tillverkas av det.",
+          "Återfunnet drar av samma belopp från Lagerförlust. Egentillverkat och Övrigt på Lägg till-sidan lägger bara till lager och påverkar aldrig Resultat.",
+          "En justering räknas på den dag du registrerar den. Den kan inte ges ett tidigare datum, redigeras eller raderas; för att rätta ett misstag registrerar du Återfunnet eller en justering åt andra hållet.",
+          "En produkt utan inköpspris går fortfarande att justera, men Resultat kan inte sätta något belopp på den, och månaden anger hur många poster som saknade inköpspris."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Att ändra lagersaldot i produktformuläret är en saldokorrigering: saldot stämmer då med det du faktiskt räknat, och det påverkar aldrig Resultat. Listan över lagerrörelser i Statistik filtrerar Justeringar och Saldokorrigeringar var för sig, och aktivitetsloggen visar varje justerings orsak och anteckning."
+      },
+      {
+        "type": "note",
+        "text": "Justera lager kräver planen Standard eller högre. I Pro ombeds medarbetare vars roll kräver godkännande för Manuell lagerjustering att ange en chefs PIN-kod när de bekräftar."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -971,7 +1130,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Negativt saldo betyder oftast att en påfyllning inte registrerats, eller att en förbeställd vara ännu inte kommit in (förbeställningar drar av lager när de läggs). Registrera påfyllningar genom att ta emot en inköpsorder, så rättar saldot sig självt. Differenser vid inventering rättar du med en manuell justering, som sparas i lagerloggen."
+        "text": "Negativt saldo betyder oftast att en påfyllning inte registrerats, eller att en förbeställd vara ännu inte kommit in (förbeställningar drar av lager när de läggs). Registrera påfyllningar genom att ta emot en inköpsorder, så rättar saldot sig självt. Differenser vid inventering rättar du genom att ändra lagersaldot i produktformuläret (en saldokorrigering); för varor som gått sönder, gått ut i datum eller delats ut registrerar du orsaken med Justera lager. Båda sparas i lagerloggen."
       },
       {
         "type": "note",
@@ -1000,7 +1159,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Under Inköp i sidofältet hanterar du leverantörer och inköpsorder. För en leverantör sparas namn, kontaktperson, telefon, adress och ett standardbetalningsvillkor (betala direkt eller månadskredit)."
+        "text": "Under Inköp i sidofältet hanterar du leverantörer och inköpsorder. För en leverantör sparas namn, kontaktperson, telefon, adress och ett standardbetalningsvillkor (Betalas vid leverans eller Månadskredit)."
       },
       {
         "type": "steps",
@@ -1012,7 +1171,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Betalningsvillkoret avgör vad som händer sedan: ordrar som betalas direkt markeras som betalda, medan ordrar med månadsbetalning ligger kvar som obetalda under Att betala, där du kan reglera dem per leverantör – en order, den här månaden eller allt."
+        "text": "Betalningsvillkoret avgör vad som händer sedan: ordrar med Betalas vid leverans markeras som betalda, medan ordrar med Månadskredit ligger kvar som obetalda under Att betala, där du kan reglera dem per leverantör – en order, den här månaden eller allt."
+      },
+      {
+        "type": "p",
+        "text": "Material du inte säljer, som mjöl eller förpackningar, kan köpas in på samma sätt: lägg upp dem som produkter som inte säljs i kassan – se ”Kan jag lägga upp material som mjöl eller förpackningar som produkter?”"
       },
       {
         "type": "note",
@@ -1021,8 +1184,54 @@ export const articles = [
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Kan jag lägga upp material som mjöl eller förpackningar som produkter?",
+    "keywords": [
+      "produkt som inte säljs",
+      "råvaror",
+      "ingredienser",
+      "material",
+      "förpackningar",
+      "förbrukningsmaterial",
+      "sälj i kassan",
+      "inköp",
+      "inköpspris"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Stäng av Sälj i kassan under fotot i produktformuläret (den är på som standard) så säljs produkten inte: den behöver inget pris, behåller sitt inköpspris, sin streckkod, sitt lager och sina varianter, och produktlistan visar ”Säljs inte” där priset annars skulle stå."
+      },
+      {
+        "type": "list",
+        "items": [
+          "En produkt som inte säljs visas aldrig i kassans produktrutnät, kategorier, sökning eller streckkodsskanning, och kan inte vara gåva, tillägg, mål för en kampanj eller ersättningsvara vid ett byte.",
+          "Inköpsordrar, inleverans, Uppdatera produkternas inköpspris och Att betala fungerar precis som för andra produkter, så ett materials inköpspris och lager kan registreras via Inköp.",
+          "Försäljning av andra produkter minskar inte dess lager. När du använder något registrerar du en minskning med Justera lager i produktdetaljerna: Använt i produktion för det som gått åt i produkter, Förbrukningsmaterial för sådant som papperspåsar eller städprodukter.",
+          "Du kan slå på den igen när som helst, och pris och moms finns kvar. Redan gjorda ordrar och rapporter påverkas inte."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Så når inköpspriset Resultat: inköp räknas inte in direkt där. För en produkt som tillverkas av materialet lägger du kostnaden på den produkten, så dras den av när produkten säljs. Förbrukningsmaterial som inte ingår i någon produkts inköpspris registreras som Förbrukningsmaterial när de används om lagret spåras, annars som en engångskostnad. Registrera inte samma pengar på båda sätten, annars räknas de två gånger."
+      },
+      {
+        "type": "note",
+        "text": "Produkter som inte säljs finns i alla planer; inköp, lagerföring och Justera lager kräver planen Standard eller högre."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1041,7 +1250,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Intäkten räknas den dag varorna lämnas över, mottagna betalningar den dag pengarna kommer in. Vid en order som betalas i kassan sker båda samma dag och siffrorna stämmer överens. De skiljer sig åt när:"
+        "text": "Intäkten räknas den dag varorna lämnas över, efter alla rabatter och före moms. Mottagna betalningar räknas den dag pengarna kommer in och är de pengar du faktiskt tog emot, inklusive moms. I en butik som tar ut moms är mottagna betalningar därför högre än intäkten med momsbeloppet, även för ordrar som betalas i kassan. Utöver det skiljer de sig åt när:"
       },
       {
         "type": "list",
@@ -1049,12 +1258,17 @@ export const articles = [
           "Försäljning på räkning: varorna lämnar butiken idag och räknas in i dagens intäkt, medan pengarna räknas som mottagna betalningar den dag ordern regleras.",
           "Förbeställning: handpenningen räknas som mottagna betalningar när den betalas, och intäkten bokförs i sin helhet på avhämtningsdagen.",
           "Förverkad handpenning: när en kund avbokar en förbeställning och du behåller handpenningen, räknades den redan som mottagna betalningar när den betalades. Statistik visar den separat som förverkade handpenningar, och den räknas aldrig som intäkt.",
-          "Makulering av en tidigare order: de återbetalade pengarna räknas som mottagna betalningar den dag ordern makuleras, så den dagens mottagna betalningar kan bli negativa, medan Makulerade räknar ordern på dess försäljningsdag. ⓘ på brickorna för mottagna betalningar och Makulerade förklarar samma sak."
+          "Makulering av en tidigare order: de återbetalade pengarna räknas som mottagna betalningar den dag ordern makuleras, så den dagens mottagna betalningar kan bli negativa, medan Makulerade räknar ordern på dess försäljningsdag.",
+          "Kontantavrundning: det som kontantavrundningen tar in över eller under ordersumman räknas som mottagna betalningar, aldrig som intäkt."
         ]
       },
       {
         "type": "p",
-        "text": "För avstämning jämför du mottagna betalningar med kassalådan och kortterminalen. Vill du se hur mycket du faktiskt sålt under en period tittar du på intäkt. Returer minskar intäkten den dag returen görs."
+        "text": "För avstämning jämför du mottagna betalningar med kassalådan och kortterminalen. Vill du se hur mycket du faktiskt sålt under en period tittar du på intäkt. Returer minskar intäkten den dag returen görs. ⓘ på rutorna Intäkt, Mottagna betalningar och Makulerade förklarar samma sak, och själva momsen redovisas under Från intäkt till bruttovinst, som öppnas från rutan Bruttovinst."
+      },
+      {
+        "type": "note",
+        "text": "Intäkt före moms kom i v3.5, och tidigare perioder räknades om på samma sätt, så en butik som tar ut moms ser lägre intäkt än före uppdateringen. Det är en korrigering. Tidigare versioner räknade in moms i intäkten, och i butiker med priser exklusive moms räknades till och med den uppburna momsen som intäkt."
       }
     ],
     "related": [
@@ -1084,15 +1298,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "För en enskild dag blir trenddiagrammet ett stapeldiagram per timme. Längre perioder använder dagar, veckor, månader eller år per stapel beroende på längd."
+        "text": "Under periodfältet kommer två rader med nyckeltalsrutor (Intäkt, Mottagna betalningar, Bruttovinst, Ordrar, Genomsnittlig order; Totala rabatter, Nettovinst, Produkter utan inköpspris, Betjänade kunder) och därefter trenddiagrammet. Menyn uppe till höger på trenddiagrammet växlar det mellan intäkt, ordrar, genomsnittlig order och betjänade kunder, och bredvid finns diagrammet Kostnad och bruttovinst, som staplar varje periods varukostnad och bruttovinst i en och samma stapel. En enskild dag visas per timme. Längre perioder använder dagar, veckor, månader eller år beroende på längd."
       },
       {
         "type": "p",
-        "text": "Sedan v3.4 kan du trycka och hålla på diagrammet Intäktstrend eller Vinsttrend för att läsa av det period för period: ett kort visar datumet och periodens intäkt eller vinst, och i Intäktstrend med Försäljningsjämförelse påslagen även jämförelseperiodens intäkt och skillnaden. Dra åt vänster eller höger för att flytta dig längs diagrammet. Svep uppåt eller nedåt över diagrammet så rullar sidan som vanligt."
+        "text": "Tryck och håll på trenddiagrammet eller diagrammet Kostnad och bruttovinst för att läsa av det period för period. Med Försäljningsjämförelse påslagen visar trenddiagrammets kort den här periodens siffra och jämförelseperiodens sida vid sida. Dra åt vänster eller höger för att flytta dig längs diagrammet. Svep uppåt eller nedåt över diagrammet så rullar sidan som vanligt."
       },
       {
         "type": "p",
-        "text": "Kortet Produktranking visar de fem främsta. Tryck på kortet eller på Visa alla för att lista alla produkter som sålts under perioden, rankade efter antal efter returer."
+        "text": "Kortet Produktranking visar de fem främsta. Tryck på kortet eller på Visa alla för att lista alla produkter som sålts under perioden, rangordnade efter antal efter returer. En produkt med varianter får en rad per variant."
       },
       {
         "type": "p",
@@ -1122,6 +1336,7 @@ export const articles = [
       "rusningstider",
       "långsamgående produkter",
       "produkter som ökar och minskar",
+      "andel per kategori",
       "lagervärde",
       "återköpsfrekvens",
       "poäng"
@@ -1134,11 +1349,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Försäljningsjämförelse: till höger i periodfältet jämför du med samma period förra året eller med perioden före (en enskild dag mot samma dag förra veckan, denna vecka mot förra veckan, denna månad mot förra månaden, detta år mot förra året, ett anpassat intervall mot lika många dagar närmast före). Rutan Mottagna betalningar visar skillnaden och tillväxttakten, och intäktsdiagrammet får en ljusare linje för jämförelseperioden. Medan en period pågår klipps jämförelseperioden vid samma tidpunkt.",
-          "Veckodag × timme: växla rubriken Försäljning över tid till Veckodag × timme för en värmekarta över sju dagar och 24 timmar – ju mörkare ruta, desto mer sålde du. Växla mellan intäkt och ordrar. Med jämförelse påslagen ser du vilka timmar som ökat och vilka som minskat.",
-          "Långsamgående produkter: växla rubriken på rankingkortet till Långsamgående produkter för att lista produkterna från minst till mest sålda, med aktuellt lagersaldo och datumet då varje produkt senast såldes. Produkter som aldrig sålts markeras Aldrig såld. Som standard visas bara produkter som finns i lager.",
-          "Förändring (sedan v3.4): växla rubriken på rankingkortet till Förändring för de 3 produkter vars intäkt ökat mest och de 3 som minskat mest jämfört med jämförelseperioden, med båda periodernas intäkt och skillnaden. Välj först en period under Försäljningsjämförelse. Med Ingen, eller på Hela tiden, säger kortet vad du ska göra. Tryck på kortet eller på Visa alla för hela listan Produkter med störst förändring, uppdelad i Ökar och Minskar.",
-          "Återköpsfrekvens: sista raden i kundrutan visar andelen medlemmar som handlat under perioden och som totalt handlat två gånger eller fler.",
+          "Försäljningsjämförelse: till höger i periodfältet jämför du med samma period förra året eller med perioden före (en enskild dag mot samma dag förra veckan, denna vecka mot förra veckan, denna månad mot förra månaden, detta år mot förra året, ett anpassat intervall mot lika många dagar närmast före). Rutorna Intäkt, Mottagna betalningar, Bruttovinst, Ordrar, Genomsnittlig order, Totala rabatter och Betjänade kunder visar var och en förändringen och jämförelseperiodens värde, till exempel ”▼ 3 % mot förra månaden”. Förändringen i Totala rabatter är alltid grå, eftersom mer rabatt varken är bra eller dåligt i sig. Tryck på en jämförelserad för att öppna Periodjämförelse, där båda periodernas värden listas. Trenddiagrammet får en ljusare linje för jämförelseperioden. Medan en period pågår klipps jämförelseperioden vid samma tidpunkt.",
+          "Veckodag × timme: växla trenddiagrammets rubrik från Trend till Veckodag × timme för en värmekarta över sju dagar och 24 timmar – ju mörkare ruta, desto mer sålde du. Växla mellan intäkt och ordrar. Med jämförelse påslagen ser du vilka timmar som ökat och vilka som minskat.",
+          "Långsamgående produkter: växla rubriken på rankingkortet till Långsamgående produkter för att lista produkterna från minst till mest sålda, med aktuellt lagersaldo och datumet då varje produkt senast såldes. Produkter som aldrig sålts markeras Aldrig såld, och en produkt med varianter får en rad per variant. Som standard visas bara produkter som finns i lager.",
+          "Förändring (sedan v3.4): växla rubriken på rankingkortet till Förändring för de 3 produkter vars intäkt ökat mest och de 3 som minskat mest jämfört med jämförelseperioden, med båda periodernas intäkt och skillnaden. Varje variant jämförs med sig själv. Välj först en period under Försäljningsjämförelse. Med Ingen, eller på Hela tiden, säger kortet vad du ska göra. Tryck på kortet eller på Visa alla för hela listan Produkter med störst förändring, uppdelad i Ökar och Minskar.",
+          "Återköpsfrekvens: sista raden i kundrutan visar andelen medlemmar som handlat under perioden och som totalt handlat två gånger eller fler. Med en jämförelse påslagen anger en rad under förändringen i procentenheter och jämförelseperiodens frekvens.",
+          "Andel per kategori: varje kategoris intäkt och andel, utifrån varje produkts nuvarande kategori, störst först. Produkter utan kategori hamnar under Utan kategori, och raderna summerar exakt till intäkten.",
           "Just nu: lagervärde (aktuellt lagersaldo × aktuellt inköpspris), alla lagerrörelser under vald period samt de poäng kunderna har men inte löst in, med det mesta de kan dra av. Det är aktuella saldon, och perioden påverkar dem inte."
         ]
       },
@@ -1164,33 +1380,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Hur redovisas vinsten om jag inte har angett inköpspris?",
+    "question": "Hur redovisas bruttovinsten om jag inte har angett inköpspris?",
     "keywords": [
       "inköpspris",
       "vinst",
+      "bruttovinst",
       "marginal",
       "bruttomarginal",
       "rapporter",
-      "vinst spåras inte",
+      "spåras inte",
       "saknar inköpspris",
-      "vinst spåras"
+      "produkter utan inköpspris"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Inköpspris är ett valfritt fält. Produkter utan inköpspris lämnas utanför vinsten, medan deras intäkt fortfarande räknas fullt ut. Kortet Vinst spåras i Statistik visar hur många produkter som sålts under perioden utan inköpspris. Ett inköpspris på 0 räknas som ett inköpspris, så de produkterna listas inte."
+        "text": "Inköpspris är ett valfritt fält. Produkter utan inköpspris lämnas utanför bruttovinsten, medan deras intäkt fortfarande räknas fullt ut. Rutan Produkter utan inköpspris i Statistik visar hur många produkter som sålts eller returnerats under perioden utan inköpspris, till exempel ”12 produkter”. Ett inköpspris på 0 räknas som ett inköpspris, så de produkterna listas inte. Har alla produkter ett inköpspris står det ”0 produkter · inköpspris finns för alla” i rutan."
       },
       {
         "type": "p",
-        "text": "Tryck på kortet eller på Visa produkter för att öppna Produkter utan inköpspris, rangordnade efter den intäkt som lämnats utanför vinsten. Tryck på en rad för att öppna produkten, lägg till inköpspriset från Redigera, så markeras raden Inköpspris tillagt när du kommer tillbaka. En produkt med varianter markeras Inköpspris tillagt först när varje variant som sålts utan inköpspris har ett – eget eller produktens inköpspris som den följer."
+        "text": "Tryck på rutan eller på Visa produkter för att öppna Produkter utan inköpspris, rangordnade efter den intäkt som lämnats utanför bruttovinsten. Tryck på en rad för att öppna produkten, lägg till inköpspriset från Redigera, så markeras raden Inköpspris tillagt när du kommer tillbaka. En produkt med varianter markeras Inköpspris tillagt först när varje variant som sålts utan inköpspris har ett – eget eller produktens inköpspris som den följer."
       },
       {
         "type": "p",
-        "text": "Vinsten är intäkten efter alla rabatter (rabatter på rader och varukorg, kampanjer, poänginlösen) och före moms, minus inköpspris – därför heter fältet Inköpspris exkl. moms (valfritt): ange vad du betalade före moms. Marginalen är vinsten ÷ den momsfria intäkten för produkter med inköpspris, så produkter utan inköpspris drar inte ned den. En retur tar tillbaka, den dag returen görs, den vinst som varorna hade gett."
+        "text": "Bruttovinsten är intäkten efter alla rabatter (rabatter på rader och varukorg, kampanjer, poänginlösen) och före moms, minus inköpspris – därför heter fältet i en butik som tar ut moms Inköpspris exkl. moms (valfritt): ange vad du betalade före moms. Marginalen är bruttovinsten ÷ intäkten för produkter med inköpspris, så produkter utan inköpspris drar inte ned den. En retur tar tillbaka, den dag returen görs, den bruttovinst som varorna hade gett."
+      },
+      {
+        "type": "p",
+        "text": "Tryck på rutan Bruttovinst för att öppna Från intäkt till bruttovinst, som drar av rad för rad: intäkt (inkl. moms), moms, intäkt (exkl. moms), intäkt utan inköpspris, varukostnad och till sist bruttovinst och marginal. Raderna summerar exakt till rutan."
       },
       {
         "type": "note",
-        "text": "Ett inköpspris du lägger till påverkar bara senare försäljning. Redan gjord försäljning räknas inte om. Den här beräkningen kom i v3.1: tidigare versioner drog bara av manuella radrabatter och räknade moms som ingick i priset som vinst, så efter uppdateringen visar perioder med rabatter eller moms i priset lägre vinst. Det är en korrigering, inte förlorade data."
+        "text": "Ett inköpspris du lägger till påverkar bara senare försäljning. Redan gjord försäljning räknas inte om. Den här beräkningen kom i v3.1: tidigare versioner drog bara av manuella radrabatter och räknade moms som ingick i priset som vinst, så efter uppdateringen visar perioder med rabatter eller moms i priset lägre bruttovinst. Det är en korrigering, inte förlorade data."
       }
     ],
     "related": [
@@ -1226,20 +1447,26 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Intäkt (exkl. moms): intäkten efter alla rabatter, minus moms, räknad den dag varorna lämnades över.",
+          "Intäkt (exkl. moms): intäkten efter alla rabatter och före moms, räknad den dag varorna lämnades över.",
           "Varukostnad: kostnaden för det som såldes, utifrån inköpspriserna på dina produkter.",
+          "Lagerförlust: kostnaden för det som Justera lager tog bort som utgånget, skadat, utdelat och liknande, plus kasserade returer. Den kommer efter bruttovinsten – se ”Hur registrerar jag lager som har gått ut i datum, gått sönder eller delats ut som prov?” Månaden har också ett avsnitt Lagerförlust som summerar den per orsak.",
           "Betalningsavgifter (uppsk.): avgifter som beräknats utifrån dina betalningssätts avgiftssatser.",
           "Förverkade handpenningar: handpenningar du behöll när en förbeställning avbokades.",
+          "Kontantavrundning: det som avrundningen av kontanter till de mynt som används tog in över eller under ordersummorna.",
           "Fasta kostnader och Engångskostnader: det du registrerat för den månaden – se ”Hur registrerar jag hyra, löner och andra kostnader?”"
         ]
       },
       {
         "type": "p",
-        "text": "Därefter kommer upp till tre diagram: nettovinsten månad för månad, varje fast kostnads andel och trenden för de fasta kostnaderna. De två trenddiagrammen omfattar högst de 12 månaderna fram till den månad du öppnade och visas först när det finns minst två månader att jämföra, räknat från månaden för din första försäljning eller kostnad. Andelsdiagrammet kräver en fast kostnad den månaden. Tills det finns en visas Lägg till fast kostnad i stället i den delen. I Statistik hoppar sista raden i vinstrutan direkt till Resultat: för en period som är exakt en månad visar den månadens nettovinst, till exempel ”oktober nettovinst NT$12,300”. För alla andra perioder står det Visa resultaträkning per månad."
+        "text": "Därefter kommer upp till tre diagram: nettovinsten månad för månad, varje fast kostnads andel och trenden för de fasta kostnaderna. De två trenddiagrammen omfattar högst de 12 månaderna fram till den månad du öppnade och visas först när det finns minst två månader att jämföra, räknat från månaden för din första försäljning eller kostnad. Andelsdiagrammet kräver en fast kostnad den månaden. Tills det finns en visas Lägg till fast kostnad i stället i den delen."
+      },
+      {
+        "type": "p",
+        "text": "Statistik och Resultat länkar till varandra. När perioden i Statistik är denna månad eller exakt en hel månad får den andra raden med rutor en ruta Nettovinst (markerad ”Pågår · hela månadens kostnader dras av” medan månaden pågår). Tryck på den för att se månadens uppställning från bruttovinst till nettovinst. För alla andra perioder trycker du på Visa resultaträkning per månad på sista raden i Från intäkt till bruttovinst. Omvänt öppnar Visa rapporten för oktober, under månadens rubrik i Resultat, Statistik med den månaden vald."
       },
       {
         "type": "note",
-        "text": "Nettovinst är rörelseresultat före inkomstskatt, beräknat utifrån det DingPOS har registrerat – ingen skattedeklaration. Om produkter såldes utan inköpspris visar månaden ändå en nettovinst, markerad ”Exkluderar inköpspriset för N produkter”. Tryck på den för att se vilka. Resultat ingår i alla planer. Med medarbetarkonton krävs behörigheten Resultat och kostnader för att öppna fliken. Chefer och medarbetare behöver godkännande för den som standard, eftersom den visar produkternas inköpspris och löner."
+        "text": "Nettovinst är rörelseresultat före inkomstskatt, beräknat utifrån det DingPOS har registrerat – ingen skattedeklaration. Om produkter såldes utan inköpspris visar månaden ändå en nettovinst, markerad ”Inköpspris för N produkter ingår inte”. Tryck på den för att se vilka. Resultat ingår i alla planer. Med medarbetarkonton krävs behörigheten Resultat och kostnader för att öppna fliken, och som standard behöver chefer och personal godkännande för den, eftersom den visar produkternas inköpspris och löner."
       }
     ],
     "related": [
@@ -1294,7 +1521,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Ange det butiken faktiskt står för och räkna inte med moms som du kan få tillbaka. Varor du ska sälja hör i stället till Inköp, eftersom de ingår i varukostnaden när de säljs. Depositioner som du får tillbaka, lånekapital och pengar som ägaren tar ut är inte kostnader. Ändringar sparas tillsammans när du trycker på ✓, och en ändring som når en avslutad månad talar först om för vilka månaders nettovinst som ändras."
+        "text": "Ange det butiken faktiskt står för och räkna inte med moms som du kan få tillbaka. Varor du ska sälja och råvarorna du tillverkar dem av hör i stället till Inköp, eftersom de ingår i varukostnaden när de säljs. Förbrukningsmaterial som du för lager på registreras med Justera lager när det används, med orsaken Förbrukningsmaterial, och inte som en kostnad. Depositioner som du får tillbaka, lånekapital och pengar som ägaren tar ut är inte kostnader. Ändringar sparas tillsammans när du trycker på ✓, och en ändring som når en avslutad månad talar först om för vilka månaders nettovinst som ändras."
       }
     ],
     "related": [
@@ -1400,6 +1627,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Koppla medlemmen till köpet, i varukorgen eller på betalningsskärmen, så samlas poängen automatiskt. Om du vill lösa in anger du hur många poäng som ska användas. När en order makuleras dras de poäng den gav tillbaka, och inlösta poäng återförs."
+      },
+      {
+        "type": "p",
+        "text": "Om du vill lägga till eller dra av poäng manuellt (till exempel för ett köp som missades) trycker du på Justera på kortet Poäng i kunduppgifterna, väljer Lägg till eller Dra av, anger antalet poäng och anger vid behov en orsak (högst 100 tecken). Du kan inte dra av fler poäng än kunden har. Varje justering sparas i poänghistoriken med saldot före och efter, orsaken och vem som gjorde den."
+      },
+      {
+        "type": "note",
+        "text": "Manuell poängjustering kom i v3.5. I Pro ombeds medarbetare vars roll kräver godkännande för Manuell poängjustering (Medarbetare gör det som standard) att ange en chefs eller ägarens PIN-kod när de bekräftar."
       }
     ],
     "related": [
@@ -1588,6 +1823,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Tryck först på Försök igen. Om det fungerar öppnas appen som vanligt. Om felet återkommer trycker du på Kontakta support och berättar för oss, så hjälper vi dig att få tillbaka din data. Den här skärmen flyttar eller raderar aldrig några filer."
+      },
+      {
+        "type": "p",
+        "text": "Vid första starten efter en uppdatering, eller efter att du återställt en säkerhetskopia från en äldre version, kan appen först visa ”Uppdaterar dina data…”. Det är din butiksdata som flyttas till ett nyare format, och det tar längre tid ju mer data du har. Appen öppnas av sig själv när det är klart. Den har inte hängt sig."
       },
       {
         "type": "note",
@@ -1809,21 +2048,21 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Använd aktivitetsloggen. På sidan Personal trycker du på Aktivitetslogg uppe till höger och anger ägarens PIN-kod. Då ser du butikens känsliga åtgärder med de senaste först: makuleringar, returer, manuella lagerjusteringar, godkännanden, ändringar av personal och behörigheter, ändringar av ägarens PIN-kod, ändringar av produkters pris och inköpspris samt borttagna produkter. Vanliga betalningar listas inte."
+        "text": "Använd aktivitetsloggen. På sidan Personal trycker du på Aktivitetslogg uppe till höger och anger ägarens PIN-kod. Då ser du butikens känsliga åtgärder med de senaste först: makuleringar, returer, lagerjusteringar och saldokorrigeringar, manuella poängjusteringar, godkännanden, ändringar av personal och behörigheter, ändringar av ägarens PIN-kod, momsinställningar, ändringar av produkters pris och inköpspris samt borttagna produkter. Vanliga köp i kassan listas inte."
       },
       {
         "type": "list",
         "items": [
-          "Varje post visar vad som berördes, vem som gjorde vad och när, samt resultatet – till exempel ”Pris M: $390 → $350”.",
+          "Varje post visar vad som berördes, vem som gjorde vad och när, samt resultatet – till exempel ”Pris M: $390 → $350”. Orsaken som angetts för en makulering, en retur, en lagerjustering eller en poängjustering står på postens tredje rad.",
           "Filtrera på medarbetare (även inaktiverade), typ av åtgärd och Idag / Denna vecka / Denna månad.",
           "Tryck på en post som hänvisar till en order, produkt eller kund för att öppna dess detaljer.",
-          "Orderinformationen, produktinformationen och varje medarbetares sida har en egen ingång som bara listar posterna om just den.",
+          "Orderinformationen, produktinformationen och varje medarbetares sida har en egen lista med poster som bara gäller just den.",
           "Raderade produkter visas fortfarande i loggen med namn och pris från den tiden."
         ]
       },
       {
         "type": "note",
-        "text": "Alla planer registrerar, men det är bara visningen som är en Pro-funktion, så poster från tiden då Pro var avbrutet syns när du prenumererar igen. Loggen följer med dina säkerhetskopior i molnet."
+        "text": "Alla planer registrerar, men det är bara visningen som är en Pro-funktion, så poster från tiden då Pro-prenumerationen hade löpt ut syns när du prenumererar igen. Loggen följer med dina säkerhetskopior i molnet."
       }
     ],
     "related": [
