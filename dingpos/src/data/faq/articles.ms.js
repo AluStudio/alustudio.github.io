@@ -274,7 +274,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Skrin juruwang menyokong sehingga 10 troli pada masa yang sama. Ketik \"+\" pada bar troli untuk menambah satu, dan ketik tab bernombor untuk bertukar."
+        "text": "Skrin juruwang menjalankan sepuluh troli pada masa yang sama. Ketik \"+\" pada bar troli untuk menambah satu, dan ketik tab bernombor untuk bertukar."
       },
       {
         "type": "p",

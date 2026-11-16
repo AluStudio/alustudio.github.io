@@ -271,7 +271,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kassen understøtter op til 10 kurve på samme tid. Tryk på \"+\" på kurvlinjen for at tilføje en, og tryk på en nummereret fane for at skifte."
+        "text": "Kassen kører ti kurve på samme tid. Tryk på \"+\" på kurvlinjen for at tilføje en, og tryk på en nummereret fane for at skifte."
       },
       {
         "type": "p",

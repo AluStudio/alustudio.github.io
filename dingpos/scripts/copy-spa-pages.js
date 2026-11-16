@@ -51,6 +51,7 @@ import { VERIFIED_APP_VERSION } from "../src/data/faq/version.js";
 import { HOME_FAQ_SLUGS } from "../src/data/faq/home.js";
 import { INLINE_LINK, blockTexts } from "../src/data/guides/links.js";
 import { SCENE_COUNTRIES, SCENE_STRING_KEYS, SCENE_TIMES, placeholders } from "../src/data/scenes/keys.js";
+import { SHOT_SIZES, shotPath } from "../src/data/shots.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -189,6 +190,23 @@ function validateSceneStrings() {
 }
 
 validateSceneStrings();
+
+// ── Screenshots ─────────────────────────────────────────────
+// Each language shows the app in its own language (scripts/build-screenshots.sh).
+function validateScreenshots() {
+  const errors = [];
+  for (const { code } of LOCALES) {
+    for (const name of Object.keys(SHOT_SIZES)) {
+      for (const phone of [false, true]) {
+        const file = join(__dirname, "..", "public", shotPath(code, name, phone));
+        if (!existsSync(file)) errors.push(`${code} lacks public/${shotPath(code, name, phone)} (run scripts/build-screenshots.sh)`);
+      }
+    }
+  }
+  fail("Screenshot validation failed", errors);
+}
+
+validateScreenshots();
 
 // ── FAQ data consistency guard ──────────────────────────────
 const VERSION_PATTERN = /^\d+\.\d+(\.\d+)?$/;

@@ -271,7 +271,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "La schermata cassa gestisce fino a 10 carrelli nello stesso momento. Tocca «+» sulla barra dei carrelli per aggiungerne uno e tocca una scheda numerata per passare da un carrello all'altro."
+        "text": "La schermata cassa gestisce dieci carrelli nello stesso momento. Tocca «+» sulla barra dei carrelli per aggiungerne uno e tocca una scheda numerata per passare da un carrello all'altro."
       },
       {
         "type": "p",

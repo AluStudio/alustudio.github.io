@@ -275,7 +275,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Het kassascherm ondersteunt maximaal 10 winkelmanden tegelijk. Tik op “+” in de mandbalk om er een toe te voegen en tik op een genummerd tabblad om te wisselen."
+        "text": "Het kassascherm werkt met tien winkelmanden tegelijk. Tik op “+” in de mandbalk om er een toe te voegen en tik op een genummerd tabblad om te wisselen."
       },
       {
         "type": "p",

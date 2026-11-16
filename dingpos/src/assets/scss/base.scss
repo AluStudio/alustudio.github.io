@@ -53,6 +53,12 @@ dd {
   overflow-wrap: anywhere;
 }
 
+// Japanese has no spaces to keep-all on; auto-phrase breaks between phrases
+// where the browser supports it, and between characters elsewhere.
+:lang(ja) :is(h1, h2, h3) {
+  word-break: auto-phrase;
+}
+
 a {
   color: inherit;
 }
@@ -236,7 +242,7 @@ button {
     }
   }
 
-  p {
+  p:not(.eyebrow) {
     margin-top: s(200);
     @include text("lg");
     color: $ink-soft;
@@ -355,7 +361,7 @@ button {
     // object-fit enforces this ratio, so a capture from another iPad would be
     // cropped silently; scripts/build-screenshots.sh asserts every asset
     // against it (CSS_RATIO_W/H there) and refuses to write a mismatch.
-    aspect-ratio: 2388 / 1568;
+    aspect-ratio: 2420 / 1568;
     object-fit: cover;
     // Outer radius minus the bezel (B3).
     border-radius: $radius-xl;

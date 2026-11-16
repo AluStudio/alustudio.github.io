@@ -16,7 +16,7 @@
     "description": "DingPOS, iPad için bir POS uygulamasıdır. Hesap açmak yok, buluta bağımlılık yok; internet olmadan da çalışmaya devam eder. Ürünleriniz, siparişleriniz ve müşterileriniz kendi cihazınızda kalır.",
     "download": "App Store'dan indirin",
     "note": "30 gün ücretsiz deneme.",
-    "shot_alt": "DingPOS ödeme ekranı: solda kategori filtreli ürün ızgarası, sağda otomatik uygulanan kampanyaları ve toplamı gösteren sepet"
+    "shot_alt": "DingPOS ödeme ekranı: solda kategori filtreli ürün ızgarası; sağda, toplamın üstünde, ikinci ürün indirimi, harcama eşiği indirimi ve üye indirimi otomatik uygulanmış bir VIP üyenin sepeti"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Ödemeye geç",
       "title": "Satışın her adımı tek ekranda",
-      "lead": "Aynı anda 10 sepete kadar, yazdıkça ada veya barkoda göre bulunan ürünler, ödemeyi almadan önce hesaplanmış indirim ve vergi.",
+      "lead": "Aynı anda on sepet, yazdıkça ada veya barkoda göre bulunan ürünler. İndirimler, birden fazla vergi oranı ve para üstü, ödemeyi almadan önce hesaplanır.",
       "items": [
-        "Aynı anda çalışan 10 sepete kadar",
-        "Yazdıkça ada ve barkoda göre ürün arama",
-        "Ürün ve sepet indirimleri, sabit tutar veya yüzde",
-        "KDV dahil / hariç otomatik hesaplanır",
-        "Para üstü ve özel ödeme yöntemi etiketleri",
-        "Her satış bir \"Ding!\" sesi ve titreşimle biter"
+        "Aynı anda on sepet açık",
+        "Yazdıkça ada veya barkoda göre arama",
+        "Ürün ve sepet indirimleri, tutar veya yüzde",
+        "Birden fazla vergi oranı, ürün bazında seçilir",
+        "Vergi dahil veya hariç, istediğiniz zaman değiştirin",
+        "Serbest fiyatlı ürünler, fiyat ödemede girilir",
+        "Ülkenizdeki madeni paralara göre nakit yuvarlama",
+        "Her satış bir \"Ding!\" ile biter — işte para kazandığınızın sesi"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Kullanım sınırları (toplam veya müşteri başına)",
         "Ödemede otomatik uygulanır — kupon kodu yok"
       ],
-      "shot_alt": "Ayarlar'daki kampanya listesi; grup fiyatları ve indirimler olarak ayrılmış, her kural etkin durumu ve önceliğiyle gösteriliyor"
+      "shot_alt": "Ayarlar'daki kampanya listesi; hediyeler ve grup fiyatları, indirimler ve puanlar olarak gruplanmış, her kural etkin durumu ve önceliğiyle gösteriliyor"
     },
     "reports": {
       "eyebrow": "Raporlar",
-      "title": "Dükkân hâlâ açıkken bugün ne kazandığınız",
-      "lead": "Sipariş sayısı, satış geliri, brüt kâr, indirimler ve ödeme dağılımı tek sayfada; bugün, 7 gün, 30 gün veya tüm zamanlar için.",
+      "title": "Satış gelirinden net kâra, tek bakışta",
+      "lead": "Satış geliri, alınan tutar, brüt kâr, sipariş sayısı ve ortalama sipariş ilk ekranı doldurur; karşılaştırmak için bir dönem seçin, her biri farkını gösterir. Her tutar indirimlerden sonra, vergiden önce hesaplanır.",
       "items": [
-        "Bugün: sipariş sayısı, satış geliri, brüt kâr, indirim, ödeme dağılımı",
-        "Adede göre en çok satan 5 ürün",
-        "Gün / hafta / ay aralıkları",
-        "Gelir ve brüt kâr eğilim grafikleri"
+        "Önceki dönemle veya geçen yılla karşılaştırma",
+        "Satış gelirinden brüt kâra, bir ay için de net kâra",
+        "Varyanta göre çok satanlar, hareketli ve yavaş satan ürünler",
+        "Kategoriye göre satışlar, tahmini işlem ücretleriyle ödeme yöntemleri",
+        "En yoğun saatleriniz için haftanın günü × saat ısı haritası",
+        "Bugün, bu hafta, bu ay, bu yıl veya istediğiniz aralık"
       ],
-      "shot_alt": "Bugünün satış gelirini, toplam indirimi, kârı ve ortalama sepeti gösteren pano; altında ödeme yöntemi halka grafiği ve en çok satanlar listesi"
+      "shot_alt": "Bu ayın raporu: üstte satış geliri, alınan tutar, brüt kâr, sipariş sayısı ve ortalama sipariş; altında toplam indirim, net kâr, maliyeti olmayan ürünler ve hizmet verilen müşteri; bunların altında satış geliri eğrisi ile günlük maliyet ve brüt kâr grafiği"
     },
     "orders": {
       "eyebrow": "Siparişler",
-      "title": "Her satış kayıtlı, her satış geri alınabilir",
-      "lead": "Her sipariş tüm kaydı tutar: ürünler ve varyantlar, hangi kampanyanın uygulandığı, vergi, ödeme yöntemi ve verilen para üstü.",
+      "title": "Her satış, bir aramayla elinizin altında",
+      "lead": "Bir sipariş numarası, müşteri veya ödeme yöntemi yazın, satış karşınıza çıksın. Ürün iadesi ya da değişim kendi belgesini alır; böylece asıl sipariş hiç değişmez, kısmi iadelerin toplamı da onunla tutar.",
       "items": [
-        "Kronolojik sipariş listesi, tarihe ve ödeme yöntemine göre filtre",
-        "Satır ayrıntısı ürünleri, varyantları, indirimleri, vergiyi ve para üstünü saklar",
-        "Onay adımıyla geçersiz kılma — stok ve puanlar otomatik geri yüklenir"
+        "Günlere göre gruplanmış siparişler, her günün sipariş sayısı ve toplamıyla",
+        "Döneme, duruma, ödeme yöntemine ve tutara göre filtreleme",
+        "Her siparişte ürünler, varyantlar, kampanyalar, vergi ve para üstü",
+        "İade edilen ürünler stoğa döner veya hurdaya ayrılır",
+        "Geçersiz kılma ve iadeler için isteğe bağlı nedenler; stok ve puanlar geri yüklenir"
       ],
-      "shot_alt": "Solda kronolojik sipariş listesi, sağda seçili siparişin ayrıntısı: ürünler, uygulanan indirim, vergi, toplam, ödeme yöntemi ve para üstü"
+      "shot_alt": "Solda günlere göre gruplanmış siparişler, her günün başlığında sipariş sayısı ve toplamı; sağda seçili siparişin ürünleri, sepet indirimi, fiyata dahil vergi, toplam ve ödeme yöntemi, yanında Ürünü iade et ve Geçersiz kıl düğmeleri"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Ödeme alma ve ürün yönetimi yeterli olan tek kişilik tezgâh için",
         "heading": "Neler dahil",
         "features": [
-          "10 sepete kadar eksiksiz ödeme alma",
+          "Aynı anda on sepetle eksiksiz ödeme alma",
           "Varyantlı ürünler, barkodlar, fotoğraflar, kategoriler",
           "Sipariş geçmişi, geçersiz kılma, ürün iadesi ve değişim",
           "İşletme panosu: satış geliri, kâr, en çok satanlar",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Ödeme alma ve çoklu sepet",
-          "desc": "Aynı anda 10 sepete kadar, ada veya barkoda göre anında arama"
+          "desc": "Aynı anda on sepet, ada veya barkoda göre anında arama"
         },
         "discounts_tax": {
           "name": "İndirim ve vergi",
-          "desc": "Ürün ve sipariş indirimleri; vergi dahil veya hariç fiyat sizin yerinize hesaplanır"
+          "desc": "Ürün ve sipariş indirimleri; vergi dahil veya hariç fiyat sizin yerinize hesaplanır, birden fazla vergi oranı tanımlanabilir"
         },
         "offline": {
           "name": "İnternetsiz ödeme alma",

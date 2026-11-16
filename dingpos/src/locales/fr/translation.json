@@ -16,7 +16,7 @@
     "description": "DingPOS est une application de caisse pour iPad. Pas de compte, pas de cloud imposé, et elle continue de fonctionner sans internet. Vos produits, vos commandes et vos clients restent sur votre appareil.",
     "download": "Télécharger sur l'App Store",
     "note": "30 jours d'essai gratuit.",
-    "shot_alt": "L'écran de caisse de DingPOS : à gauche, une grille de produits avec des filtres par catégorie ; à droite, le panier avec les promotions appliquées automatiquement et le total"
+    "shot_alt": "L'écran de caisse de DingPOS : à gauche, une grille de produits avec des filtres par catégorie ; à droite, le panier d'un membre VIP avec une remise sur le deuxième article, une remise par seuil de dépense et une remise membre appliquées automatiquement, au-dessus du total"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Encaisser",
       "title": "Toutes les étapes d'une vente sur un seul écran",
-      "lead": "Jusqu'à 10 paniers en même temps, produits trouvés par nom ou code-barres pendant la saisie, remises et taxes calculées avant l'encaissement.",
+      "lead": "Dix paniers à la fois, et des produits trouvés par nom ou code-barres au fil de la saisie. Remises, taxes à plusieurs taux et monnaie à rendre sont calculées avant l'encaissement.",
       "items": [
-        "Jusqu'à 10 paniers en parallèle",
-        "Recherche de produits par nom et code-barres, pendant la saisie",
-        "Remises sur un article ou sur le panier, montant fixe ou pourcentage",
-        "Taxes TTC / HT calculées automatiquement",
-        "Monnaie rendue et libellés de moyens de paiement personnalisés",
-        "Chaque vente se termine par un « Ding! » et un retour haptique"
+        "Dix paniers ouverts en même temps",
+        "Recherche par nom ou code-barres pendant la saisie",
+        "Remises sur un article ou sur le panier, en montant ou en pourcentage",
+        "Plusieurs taux de taxe, choisis produit par produit",
+        "Prix TTC ou HT, modifiable à tout moment",
+        "Produits à prix libre, tarifés à l'encaissement",
+        "Arrondi des espèces selon les pièces de votre pays",
+        "Chaque vente se termine par un « Ding! » : c'est vous qui êtes payé"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Limites d'utilisation (au total ou par client)",
         "Appliquées automatiquement à l'encaissement, sans code promo"
       ],
-      "shot_alt": "La liste des promotions dans les Réglages, répartie entre lots et remises, chaque règle indiquant son état d'activation et sa priorité"
+      "shot_alt": "La liste des promotions dans les Réglages, répartie entre cadeaux et lots d'un côté, remises et points de l'autre, chaque règle indiquant son état d'activation et sa priorité"
     },
     "reports": {
       "eyebrow": "Rapports",
-      "title": "Ce que vous avez gagné aujourd'hui, boutique encore ouverte",
-      "lead": "Nombre de commandes, chiffre d'affaires, marge brute, remises et répartition des paiements sur une seule page : aujourd'hui, 7 jours, 30 jours ou depuis le début.",
+      "title": "Du chiffre d'affaires au bénéfice net, en un coup d'œil",
+      "lead": "Chiffre d'affaires, encaissements, marge brute, commandes et panier moyen remplissent le premier écran ; choisissez une période à comparer et chaque indicateur affiche son évolution. Tous les montants s'entendent après remises et hors taxe.",
       "items": [
-        "Aujourd'hui : nombre de commandes, chiffre d'affaires, marge brute, remises, répartition des paiements",
-        "Top 5 des produits par quantité",
-        "Périodes jour / semaine / mois",
-        "Courbes d'évolution du chiffre d'affaires et de la marge brute"
+        "Comparaison avec la période précédente ou l'année dernière",
+        "Du chiffre d'affaires à la marge brute, et le bénéfice net sur un mois",
+        "Meilleures ventes, produits dont les ventes varient le plus et produits à faible rotation, par variante",
+        "Ventes par catégorie, moyens de paiement avec frais de traitement estimés",
+        "Une carte thermique jour de la semaine × heure pour repérer vos heures de pointe",
+        "Aujourd'hui, cette semaine, ce mois-ci, cette année ou toute période de votre choix"
       ],
-      "shot_alt": "Le tableau de bord affichant le chiffre d'affaires du jour, le total des remises, le bénéfice et le panier moyen, au-dessus d'un graphique en anneau des moyens de paiement et d'un classement des meilleures ventes"
+      "shot_alt": "Le rapport de ce mois-ci : chiffre d'affaires, encaissements, marge brute, commandes et panier moyen en haut, puis total des remises, bénéfice net, produits sans coût et clients servis, au-dessus d'une courbe d'évolution du chiffre d'affaires et d'un graphique quotidien des coûts et de la marge brute"
     },
     "orders": {
       "eyebrow": "Commandes",
-      "title": "Chaque vente est conservée, et chaque vente peut être invalidée",
-      "lead": "Chaque commande garde son historique complet : articles et variantes, promotion appliquée, taxe, moyen de paiement et monnaie rendue.",
+      "title": "Chaque vente à portée d’une recherche",
+      "lead": "Saisissez un numéro de commande, un client ou un moyen de paiement, et la vente s'affiche. Un retour ou un échange a son propre document : la commande d'origine ne change donc jamais, et les retours partiels y sont cumulés.",
       "items": [
-        "Liste des commandes par ordre chronologique, filtrable par date et moyen de paiement",
-        "Le détail des lignes conserve articles, variantes, remises, taxe et monnaie rendue",
-        "Invalidation avec confirmation : stock et points rétablis automatiquement"
+        "Commandes regroupées par jour, avec le nombre et le total de chaque jour",
+        "Filtres par période, statut, moyen de paiement et montant",
+        "Articles, variantes, promotions, taxe et monnaie rendue sur chaque commande",
+        "Les articles retournés sont remis en stock ou mis au rebut",
+        "Motifs facultatifs pour les invalidations et les retours ; stock et points rétablis"
       ],
-      "shot_alt": "À gauche, une liste chronologique de commandes ; à droite, le détail de la commande sélectionnée : articles, remise appliquée, taxe, total, moyen de paiement et monnaie rendue"
+      "shot_alt": "À gauche, les commandes regroupées par jour, avec le nombre de commandes et le total de chaque jour dans son en-tête ; à droite, les articles de la commande sélectionnée, la remise sur le panier, la taxe incluse, le total et le moyen de paiement, avec les boutons Effectuer un retour et Invalider"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Pour une personne seule sur un stand, avec encaissement et produits",
         "heading": "Inclus",
         "features": [
-          "Encaissement complet avec jusqu’à 10 paniers",
+          "Encaissement complet avec dix paniers à la fois",
           "Produits avec variantes, codes-barres, photos et catégories",
           "Historique des commandes, invalidations, retours et échanges",
           "Tableau de bord de l’activité : chiffre d’affaires, marge, meilleures ventes",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Encaissement et paniers multiples",
-          "desc": "Jusqu’à 10 paniers en même temps, recherche instantanée par nom ou code-barres"
+          "desc": "Dix paniers à la fois, recherche instantanée par nom ou code-barres"
         },
         "discounts_tax": {
           "name": "Remises et taxes",
-          "desc": "Remises par article et sur la commande ; taxe incluse ou en sus calculée pour vous"
+          "desc": "Remises par article et sur la commande ; plusieurs taux de taxe, incluse ou en sus, calculés pour vous"
         },
         "offline": {
           "name": "Encaissement hors ligne",

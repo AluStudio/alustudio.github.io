@@ -276,7 +276,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kassaekraanil saab korraga olla kuni 10 ostukorvi. Uue lisamiseks puuduta ostukorvide real nuppu „+“, vahetamiseks puuduta numbriga vahelehte."
+        "text": "Kassaekraanil töötab korraga kümme ostukorvi. Uue lisamiseks puuduta ostukorvide real nuppu „+“, vahetamiseks puuduta numbriga vahelehte."
       },
       {
         "type": "p",
@@ -284,7 +284,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Ostukorvid on ainult mälus – vormistamata ostukorvid tühjendatakse, kui rakendus täielikult sulgeda."
+        "text": "Ostukorvid on ainult mälus – vormistamata ostukorvid tühjendatakse, kui rakendus täielikult suletakse."
       }
     ],
     "related": [

@@ -16,7 +16,7 @@
     "description": "DingPOS är ett kassasystem för iPad. Inget konto, ingen molnbindning och det fungerar även utan internet. Dina produkter, ordrar och kunder stannar på din egen enhet.",
     "download": "Ladda ner från App Store",
     "note": "30 dagars gratis provperiod.",
-    "shot_alt": "Kassaskärmen i DingPOS: ett produktrutnät med kategorifilter till vänster, och varukorgen med automatiskt tillämpade kampanjer och totalsumman till höger"
+    "shot_alt": "Kassaskärmen i DingPOS: ett produktrutnät med kategorifilter till vänster; till höger en VIP-medlems varukorg där en rabatt på andra varan, en rabatt vid köp över ett visst belopp och en medlemsrabatt har tillämpats automatiskt, ovanför totalsumman"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Betala",
       "title": "Varje steg i en försäljning på en skärm",
-      "lead": "Upp till 10 varukorgar samtidigt, produkter hittas på namn eller streckkod medan du skriver, och rabatter och moms räknas ut innan du tar emot betalning.",
+      "lead": "Tio varukorgar samtidigt, och produkter hittas på namn eller streckkod medan du skriver. Rabatter, flera momssatser och växel vid kontantbetalning är uträknade innan du tar emot betalning.",
       "items": [
-        "Upp till 10 varukorgar igång samtidigt",
-        "Produktsökning på namn och streckkod medan du skriver",
-        "Rabatt på produkt eller varukorg, fast belopp eller procent",
-        "Moms inklusive eller exklusive beräknas automatiskt",
-        "Växel vid kontantbetalning och egna namn på betalningssätt",
-        "Varje försäljning avslutas med ett ”Ding!” och haptisk respons"
+        "Tio varukorgar öppna samtidigt",
+        "Sök på namn eller streckkod medan du skriver",
+        "Rabatt på produkt och varukorg, belopp eller procent",
+        "Flera momssatser, valda per produkt",
+        "Priser inklusive eller exklusive moms, byt när du vill",
+        "Produkter med fritt pris, prissatta i kassan",
+        "Kontantavrundning till de mynt som finns i ditt land",
+        "Varje försäljning avslutas med ett ”Ding!” – det är du som får betalt"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Användningsgränser (totalt eller per kund)",
         "Tillämpas automatiskt i kassan – inga rabattkoder"
       ],
-      "shot_alt": "Kampanjlistan i Inställningar, uppdelad i paketpriser och rabatter, där varje regel visar sin status och prioritet"
+      "shot_alt": "Kampanjlistan i Inställningar, indelad i gåvor och paketpriser, rabatter och poäng, där varje regel visar sin status och prioritet"
     },
     "reports": {
       "eyebrow": "Rapporter",
-      "title": "Vad du tjänat idag, medan butiken fortfarande är öppen",
-      "lead": "Antal ordrar, intäkt, bruttovinst, rabatter och betalningsfördelning på en sida, för idag, 7 dagar, 30 dagar eller all tid.",
+      "title": "Från intäkt till nettovinst, på ett ögonkast",
+      "lead": "Intäkt, mottagna betalningar, bruttovinst, ordrar och genomsnittlig order fyller första skärmen. Välj en period att jämföra med så visar var och en sin förändring. Alla belopp är efter rabatter och före moms.",
       "items": [
-        "Idag: antal ordrar, intäkt, bruttovinst, rabatt, betalningsfördelning",
-        "Topp 5 produkter efter antal",
-        "Dag-, vecko- och månadsintervall",
-        "Diagram över intäkt och bruttovinst över tid"
+        "Jämför med föregående period eller förra året",
+        "Från intäkt ner till bruttovinst, och nettovinst för en månad",
+        "Bästsäljare, produkter med stor förändring och långsamgående produkter, per variant",
+        "Försäljning per kategori, betalningssätt med beräknade avgifter",
+        "En värmekarta över veckodag × timme som visar dina mest hektiska timmar",
+        "Idag, denna vecka, denna månad, i år eller valfritt intervall"
       ],
-      "shot_alt": "Översikten med dagens intäkt, total rabatt, vinst och genomsnittligt köp, ovanför ett cirkeldiagram över betalningssätt och en lista över bästsäljare"
+      "shot_alt": "Rapporten för denna månad: intäkt, mottagna betalningar, bruttovinst, ordrar och genomsnittlig order överst, därunder total rabatt, nettovinst, produkter utan inköpspris och betjänade kunder, ovanför en trendlinje för intäkt och ett dagligt diagram över kostnad och bruttovinst"
     },
     "orders": {
       "eyebrow": "Ordrar",
-      "title": "Varje försäljning finns kvar, och varje försäljning kan göras ogjord",
-      "lead": "Varje order sparar hela försäljningsunderlaget: produkter och varianter, vilken kampanj som tillämpades, moms, betalningssätt och växel.",
+      "title": "Varje försäljning, en sökning bort",
+      "lead": "Skriv ett ordernummer, en kund eller ett betalningssätt så hittar du försäljningen. En retur eller ett byte får ett eget dokument, så originalet ändras aldrig, och flera delreturer summerar ändå till det.",
       "items": [
-        "Kronologisk orderlista, filtrera på datum och betalningssätt",
-        "Raddetaljer sparar produkter, varianter, rabatter, moms och växel",
-        "Makulera med bekräftelse – lager och poäng återställs automatiskt"
+        "Ordrar grupperade per dag, med antal och summa för varje dag",
+        "Filtrera på period, status, betalningssätt och belopp",
+        "Produkter, varianter, kampanjer, moms och växel på varje order",
+        "Returnerade varor går tillbaka till lagret eller kasseras",
+        "Valfria orsaker till makuleringar och returer; lager och poäng återställs"
       ],
-      "shot_alt": "En kronologisk orderlista till vänster, med den valda orderns detaljer till höger: produkter, tillämpad rabatt, moms, totalsumma, betalningssätt och växel"
+      "shot_alt": "Ordrar grupperade per dag till vänster, med varje dags antal ordrar och summa i rubriken; till höger den valda orderns produkter, varukorgsrabatt, ingående moms, totalsumma och betalningssätt, med knapparna Returnera och Makulera"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "För en person vid ett marknadsstånd som behöver kassa och produkter",
         "heading": "Ingår",
         "features": [
-          "Komplett kassa med upp till 10 varukorgar",
+          "Komplett kassa med tio varukorgar samtidigt",
           "Produkter med varianter, streckkoder, foton och kategorier",
           "Orderhistorik, makuleringar, returer och byten",
           "Översikt över verksamheten: intäkt, vinst, bästsäljare",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Kassa och flera varukorgar",
-          "desc": "Upp till 10 varukorgar samtidigt, direktsökning på namn eller streckkod"
+          "desc": "Tio varukorgar samtidigt, direktsökning på namn eller streckkod"
         },
         "discounts_tax": {
           "name": "Rabatter och moms",
-          "desc": "Rabatter på rad och order; moms inklusive eller exklusive beräknas åt dig"
+          "desc": "Rabatter på rad och order; flera momssatser, inklusive eller exklusive moms, beräknade åt dig"
         },
         "offline": {
           "name": "Kassa offline",

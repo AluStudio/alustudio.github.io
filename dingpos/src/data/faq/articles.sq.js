@@ -277,7 +277,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ekrani i arkës mbështet deri në 10 shporta në të njëjtën kohë. Prek \"+\" në shiritin e shportave për të shtuar një, dhe prek një skedë me numër për të kaluar te ajo."
+        "text": "Ekrani i arkës punon me dhjetë shporta në të njëjtën kohë. Prek \"+\" në shiritin e shportave për të shtuar një, dhe prek një skedë me numër për të kaluar te ajo."
       },
       {
         "type": "p",

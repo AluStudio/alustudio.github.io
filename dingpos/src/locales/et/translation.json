@@ -16,7 +16,7 @@
     "description": "DingPOS on iPadi kassarakendus. Kontot pole vaja, pilvest sõltuvust pole ning see töötab ka ilma internetita. Sinu tooted, müügid ja kliendid jäävad kõik sinu enda seadmesse.",
     "download": "Laadi alla App Store'ist",
     "note": "30-päevane tasuta prooviperiood.",
-    "shot_alt": "DingPOS-i kassaekraan: vasakul kategooriafiltritega tootevõrk, paremal ostukorv automaatselt rakendunud kampaaniate ja kogusummaga"
+    "shot_alt": "DingPOS-i kassaekraan: vasakul kategooriafiltritega tootevõrk; paremal VIP-liikme ostukorv, millele on automaatselt rakendunud teise toote allahindlus, summapiiri allahindlus ja liikmeallahindlus, ning selle all kogusumma"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Kassa",
       "title": "Müügi kõik sammud ühel ekraanil",
-      "lead": "Kuni 10 ostukorvi korraga, tooted leiab nime või vöötkoodi järgi kirjutamise ajal ning allahindlused ja maks arvutatakse enne makse vastuvõtmist.",
+      "lead": "Kümme ostukorvi korraga ja tooted leiad nime või vöötkoodi järgi juba kirjutamise ajal. Allahindlused, mitu maksumäära ja sularaha tagasiraha arvutatakse välja enne, kui makse vastu võtad.",
       "items": [
-        "Kuni 10 ostukorvi korraga",
-        "Toodete otsing nime ja vöötkoodi järgi kirjutamise ajal",
-        "Toote- ja ostukorvi allahindlused, kindel summa või protsent",
-        "Maksuga ja maksuta hindade automaatne arvutus",
-        "Sularaha tagasiraha ja enda nimetatud maksemeetodid",
-        "Iga müük lõpeb „Ding!“ helina ja haptilise tagasisidega"
+        "Kümme ostukorvi korraga avatud",
+        "Otsing nime või vöötkoodi järgi kirjutamise ajal",
+        "Toote- ja ostukorvi allahindlused, summa või protsent",
+        "Mitu maksumäära, valitav toote kaupa",
+        "Maksuga või maksuta hinnad, vaheta millal tahes",
+        "Kohapealse hinnaga tooted, hind määratakse kassas",
+        "Sularaha ümardus sinu riigi müntide järgi",
+        "Iga müük lõpeb „Ding!“ heliga – see on hetk, mil sa oma raha kätte saad"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Kasutuspiirangud (kokku või kliendi kohta)",
         "Rakenduvad kassas automaatselt – sooduskoode pole"
       ],
-      "shot_alt": "Seadete kampaaniate loend, jaotatud komplektihindadeks ja allahindlusteks; iga reegli juures on näha selle olek ja prioriteet"
+      "shot_alt": "Seadete kampaaniate loend, jaotatud kingituste ja komplektide, allahindluste ning punktide rühmadeks; iga reegli juures on näha selle olek ja prioriteet"
     },
     "reports": {
       "eyebrow": "Aruanded",
-      "title": "Mis täna sisse tuli, kui pood on veel avatud",
-      "lead": "Müükide arv, müügitulu, brutokasum, allahindlused ja maksemeetodite jaotus ühel lehel – tänase, 7 päeva, 30 päeva või kogu aja kohta.",
+      "title": "Müügitulust puhaskasumini ühe pilguga",
+      "lead": "Müügitulu, laekunud raha, brutokasum, müükide arv ja keskmine müük täidavad esimese ekraani; vali võrreldav periood ja igaühe juures on näha muutus. Iga summa on pärast allahindlusi ja enne maksu.",
       "items": [
-        "Täna: müükide arv, müügitulu, brutokasum, allahindlus, maksemeetodite jaotus",
-        "Top 5 toodet koguse järgi",
-        "Päeva, nädala ja kuu vahemikud",
-        "Müügitulu ja brutokasumi trendigraafikud"
+        "Võrdlus eelmise perioodi või eelmise aastaga",
+        "Müügitulust brutokasumini ja kuu puhaskasum",
+        "Enimmüüdud, toodete muutused ja aeglase käibega tooted variantide kaupa",
+        "Müük kategooriate kaupa, makseviisid hinnanguliste teenustasudega",
+        "Nädalapäeva × tunni soojuskaart sinu kiireimatest tundidest",
+        "Täna, käesolev nädal, kuu või aasta või mis tahes vahemik"
       ],
-      "shot_alt": "Ülevaatepaneel tänase müügitulu, kogu allahindluse, kasumi ja keskmise ostukorviga; all maksemeetodite sektordiagramm ja enimmüüdud toodete loend"
+      "shot_alt": "Selle kuu aruanne: ülal müügitulu, laekunud raha, brutokasum, müükide arv ja keskmine müük, seejärel allahindlused kokku, puhaskasum, omahinnata tooted ja teenindatud kliendid; all müügitulu trendijoon ning päevane omahinna ja brutokasumi diagramm"
     },
     "orders": {
       "eyebrow": "Müügid",
-      "title": "Iga müük on alles ja iga müüki saab anuleerida",
-      "lead": "Iga müük säilitab täieliku kirje: tooted ja variandid, rakendunud kampaania, maks, maksemeetod ja antud tagasiraha.",
+      "title": "Iga müük on ühe otsingu kaugusel",
+      "lead": "Sisesta tšeki number, klient või makseviis ja müük ongi käes. Tagastus või vahetus saab oma dokumendi, nii et algne müük ei muutu ja osalised tagastused klapivad sellega ikkagi kokku.",
       "items": [
-        "Müükide loend ajajärjestuses, filtreeritav kuupäeva ja maksemeetodi järgi",
-        "Rea üksikasjad säilitavad tooted, variandid, allahindlused, maksu ja tagasiraha",
-        "Anuleerimine kinnitusega – laoseis ja punktid taastuvad automaatselt"
+        "Müügid päevade kaupa, iga päeva müükide arvu ja kogusummaga",
+        "Filtreeri perioodi, oleku, makseviisi ja summa järgi",
+        "Igal müügil tooted, variandid, kampaaniad, maks ja tagasiraha",
+        "Tagastatud kaup pannakse lattu tagasi või kantakse maha",
+        "Valikulised põhjused anuleerimisele ja tagastusele; laoseis ja punktid taastuvad"
       ],
-      "shot_alt": "Vasakul müükide loend ajajärjestuses, paremal valitud müügi üksikasjad: tooted, rakendunud allahindlus, maks, kogusumma, maksemeetod ja tagasiraha"
+      "shot_alt": "Vasakul päevade kaupa rühmitatud müügid, iga päeva päises müükide arv ja kogusumma; paremal valitud müügi tooted, ostukorvi allahindlus, sisalduv maks, kogusumma ja makseviis ning nupud „Alusta tagastust“ ja „Anuleeri“"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Ühele inimesele turulaua taga, kes vajab kassat ja tooteid",
         "heading": "Sisaldab",
         "features": [
-          "Täielik kassa kuni 10 ostukorviga",
+          "Täielik kassa kümne ostukorviga korraga",
           "Tooted koos variantide, vöötkoodide, fotode ja kategooriatega",
           "Müügiajalugu, anuleerimised, tagastused ja vahetused",
           "Ettevõtte ülevaatepaneel: müügitulu, kasum, enimmüüdud tooted",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Kassa ja mitu ostukorvi",
-          "desc": "Kuni 10 ostukorvi korraga, kiirotsing nime või vöötkoodi järgi"
+          "desc": "Kümme ostukorvi korraga, kiirotsing nime või vöötkoodi järgi"
         },
         "discounts_tax": {
           "name": "Allahindlused ja maks",
-          "desc": "Toote- ja müügiallahindlused; käibemaks arvutatakse sinu eest, olgu hind maksuga või maksuta"
+          "desc": "Toote- ja müügiallahindlused; mitu maksumäära – hinnas sisalduv või sellele lisanduv maks arvutatakse sinu eest"
         },
         "offline": {
           "name": "Kassa ilma internetita",

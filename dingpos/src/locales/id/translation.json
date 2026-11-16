@@ -16,7 +16,7 @@
     "description": "DingPOS adalah aplikasi kasir untuk iPad. Tanpa akun, tanpa ketergantungan pada cloud, dan tetap berjalan tanpa internet. Produk, pesanan, dan pelanggan Anda tersimpan di perangkat Anda sendiri.",
     "download": "Unduh di App Store",
     "note": "Uji coba gratis 30 hari.",
-    "shot_alt": "Layar Bayar DingPOS: kisi produk dengan filter kategori di sebelah kiri, serta keranjang dengan promo yang diterapkan otomatis dan total di sebelah kanan"
+    "shot_alt": "Layar Bayar DingPOS: kisi produk dengan filter kategori di sebelah kiri; di sebelah kanan, keranjang anggota VIP dengan diskon barang kedua, diskon minimum belanja, dan diskon anggota yang diterapkan otomatis, di atas total"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Bayar",
       "title": "Setiap langkah penjualan dalam satu layar",
-      "lead": "Hingga 10 keranjang sekaligus, produk ditemukan lewat nama atau barcode saat Anda mengetik, dan diskon serta pajak dihitung sebelum Anda menerima pembayaran.",
+      "lead": "Sepuluh keranjang sekaligus, dan produk ditemukan lewat nama atau barcode saat Anda mengetik. Diskon, beberapa pajak berbeda, dan kembalian tunai sudah dihitung sebelum Anda menerima pembayaran.",
       "items": [
-        "Hingga 10 keranjang berjalan bersamaan",
-        "Cari produk berdasarkan nama dan barcode, langsung saat mengetik",
-        "Diskon per item dan per keranjang, nominal tetap atau persentase",
-        "Pajak termasuk harga / belum termasuk harga dihitung otomatis",
-        "Kembalian tunai dan label metode pembayaran kustom",
-        "Setiap penjualan diakhiri bunyi \"Ding!\" dan umpan balik haptik"
+        "Sepuluh keranjang terbuka sekaligus",
+        "Cari berdasarkan nama atau barcode saat Anda mengetik",
+        "Diskon per item dan per keranjang, nominal atau persentase",
+        "Beberapa pajak, dipilih per produk",
+        "Harga sudah termasuk pajak atau belum, bisa diganti kapan saja",
+        "Produk harga bebas, harganya diisi saat bayar",
+        "Pembulatan tunai sesuai koin yang berlaku di negara Anda",
+        "Setiap penjualan diakhiri bunyi \"Ding!\" — tandanya Anda sudah dibayar"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Batas pemakaian (total atau per pelanggan)",
         "Diterapkan otomatis saat bayar — tanpa kode kupon"
       ],
-      "shot_alt": "Daftar promo di Pengaturan, dibagi menjadi paket dan diskon, dengan setiap aturan menampilkan status aktif dan prioritasnya"
+      "shot_alt": "Daftar promo di Pengaturan, dikelompokkan menjadi hadiah dan paket harga, serta diskon dan poin, dengan setiap aturan menampilkan status aktif dan prioritasnya"
     },
     "reports": {
       "eyebrow": "Laporan",
-      "title": "Berapa hasil Anda hari ini, saat toko masih buka",
-      "lead": "Jumlah pesanan, pendapatan, laba kotor, diskon, dan komposisi pembayaran dalam satu halaman, untuk hari ini, 7 hari, 30 hari, atau seluruh waktu.",
+      "title": "Dari pendapatan hingga laba bersih, terlihat sekilas",
+      "lead": "Pendapatan, Kas Diterima, laba kotor, pesanan, dan rata-rata penjualan memenuhi layar pertama; pilih periode untuk dibandingkan, dan masing-masing menampilkan perubahannya. Setiap jumlah dihitung setelah diskon dan sebelum pajak.",
       "items": [
-        "Hari ini: jumlah pesanan, pendapatan, laba kotor, diskon, komposisi pembayaran",
-        "5 produk teratas berdasarkan jumlah",
-        "Rentang hari / minggu / bulan",
-        "Grafik tren pendapatan dan laba kotor"
+        "Bandingkan dengan periode sebelumnya atau tahun lalu",
+        "Dari pendapatan hingga laba kotor, dan laba bersih per bulan",
+        "Produk terlaris, produk naik-turun, dan produk kurang laku, per varian",
+        "Penjualan per kategori, metode pembayaran dengan perkiraan biaya pemrosesan",
+        "Heatmap hari × jam untuk melihat jam tersibuk Anda",
+        "Hari ini, minggu ini, bulan ini, tahun ini, atau rentang apa pun"
       ],
-      "shot_alt": "Dasbor yang menampilkan pendapatan hari ini, total diskon, laba, dan rata-rata belanja, di atas diagram donat metode pembayaran dan daftar produk terlaris"
+      "shot_alt": "Laporan bulan ini: pendapatan, kas diterima, laba kotor, pesanan, dan rata-rata penjualan di bagian atas, lalu total diskon, laba bersih, produk tanpa harga pokok, dan pelanggan yang membeli, di atas garis tren pendapatan serta grafik harian harga pokok dan laba kotor"
     },
     "orders": {
       "eyebrow": "Pesanan",
-      "title": "Setiap penjualan tercatat, dan setiap penjualan bisa dibatalkan",
-      "lead": "Setiap pesanan menyimpan catatan lengkap: item dan varian, promo yang berlaku, pajak, metode pembayaran, dan kembalian.",
+      "title": "Setiap penjualan, cukup sekali cari",
+      "lead": "Ketik nomor pesanan, nama pelanggan, atau metode pembayaran, dan penjualannya langsung muncul. Retur atau tukar barang punya dokumennya sendiri, jadi pesanan asli tidak pernah berubah, dan nilai retur sebagian tetap diakumulasikan terhadap total pesanan asli.",
       "items": [
-        "Daftar pesanan berurutan waktu, filter menurut tanggal dan metode pembayaran",
-        "Rincian baris menyimpan item, varian, diskon, pajak, dan kembalian",
-        "Batalkan penjualan dengan konfirmasi — stok dan poin dipulihkan otomatis"
+        "Pesanan dikelompokkan per hari, lengkap dengan jumlah dan total tiap hari",
+        "Filter menurut periode, status, metode pembayaran, dan nominal",
+        "Item, varian, promo, pajak, dan kembalian di setiap pesanan",
+        "Barang retur masuk kembali ke stok, atau dibuang",
+        "Alasan opsional saat membatalkan penjualan dan retur; stok dan poin dipulihkan"
       ],
-      "shot_alt": "Daftar pesanan berurutan waktu di sebelah kiri, dengan rincian pesanan yang dipilih di sebelah kanan: item, diskon yang berlaku, pajak, total, metode pembayaran, dan kembalian"
+      "shot_alt": "Pesanan dikelompokkan per hari di sebelah kiri, dengan jumlah pesanan dan total tiap hari di header-nya; di sebelah kanan, item pesanan yang dipilih, diskon keranjang, pajak yang sudah termasuk, total, dan metode pembayaran, dengan tombol Retur dan Batalkan penjualan"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Untuk satu orang di lapak yang butuh kasir dan produk",
         "heading": "Termasuk",
         "features": [
-          "Kasir lengkap dengan hingga 10 keranjang",
+          "Kasir lengkap dengan 10 keranjang sekaligus",
           "Produk dengan varian, barcode, foto, dan kategori",
           "Riwayat pesanan, pembatalan penjualan (void), retur, dan tukar barang",
           "Dasbor bisnis: pendapatan, laba, produk terlaris",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Kasir & banyak keranjang",
-          "desc": "Hingga 10 keranjang sekaligus, pencarian langsung berdasarkan nama atau barcode"
+          "desc": "10 keranjang sekaligus, pencarian langsung berdasarkan nama atau barcode"
         },
         "discounts_tax": {
           "name": "Diskon & pajak",
-          "desc": "Diskon per item dan per pesanan; pajak termasuk atau belum termasuk harga dihitung otomatis"
+          "desc": "Diskon per item dan per pesanan; beberapa tarif pajak, termasuk atau belum termasuk harga, dihitung otomatis"
         },
         "offline": {
           "name": "Kasir offline",

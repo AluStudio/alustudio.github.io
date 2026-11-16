@@ -272,7 +272,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Màn hình thu ngân hỗ trợ tối đa 10 giỏ hàng cùng lúc. Chạm \"+\" trên thanh giỏ hàng để thêm giỏ, chạm vào tab có số để chuyển giỏ."
+        "text": "Màn hình thu ngân chạy cùng lúc mười giỏ hàng. Chạm \"+\" trên thanh giỏ hàng để thêm giỏ, chạm vào tab có số để chuyển giỏ."
       },
       {
         "type": "p",

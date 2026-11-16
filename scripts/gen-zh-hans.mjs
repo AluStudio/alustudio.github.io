@@ -189,10 +189,6 @@ const DINGPOS_OVERRIDES = {
   // page's title. "套用" stays: the app's zh-Hans button says 套用.
   "faq:apply-discounts:question": ["如何套用折扣？", "怎么套用折扣？"],
   "faq:plans-compare:question": ["Lite、Standard、Pro 方案差在哪？", "Lite、Standard、Pro 方案有什么区别？"],
-  "ui:stories.reports.shot_alt": [
-    "儀表板顯示今日營收、總折扣、利潤與平均客單，下方是付款方式圓餅圖與熱銷商品排行",
-    "仪表板显示今日营收、总折扣、利润与平均客单价，下方是付款方式饼图与热销商品排行",
-  ],
   "faq:supported-devices:content.0.text": [
     "DingPOS 目前支援 iPadOS 17 以上的 iPad，以橫向畫面為主要設計。",
     "DingPOS 目前支持 iPadOS 17 以上的 iPad，以横屏使用为主要设计。",

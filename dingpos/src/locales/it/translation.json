@@ -16,7 +16,7 @@
     "description": "DingPOS è un punto cassa per iPad. Nessun account, nessun vincolo al cloud, e continua a funzionare senza internet. Prodotti, ordini e clienti restano sul tuo dispositivo.",
     "download": "Scarica dall'App Store",
     "note": "30 giorni di prova gratuita.",
-    "shot_alt": "La schermata di cassa di DingPOS: a sinistra la griglia dei prodotti con i filtri per categoria, a destra il carrello con le promozioni applicate in automatico e il totale"
+    "shot_alt": "La schermata di cassa di DingPOS: a sinistra la griglia dei prodotti con i filtri per categoria; a destra il carrello di un cliente fedeltà VIP, con sconto sul secondo articolo, sconto per soglia di spesa e sconto fedeltà applicati in automatico, sopra il totale"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Cassa",
       "title": "Ogni passaggio della vendita in un'unica schermata",
-      "lead": "Fino a 10 carrelli contemporanei, prodotti trovati per nome o codice a barre mentre digiti, sconti e imposte calcolati prima di incassare.",
+      "lead": "Dieci carrelli aperti insieme e prodotti trovati per nome o codice a barre mentre digiti. Sconti, imposte con aliquote diverse e resto in contanti sono calcolati prima dell'incasso.",
       "items": [
-        "Fino a 10 carrelli aperti contemporaneamente",
-        "Ricerca dei prodotti per nome e codice a barre, mentre digiti",
-        "Sconti sull'articolo e sul carrello, importo fisso o percentuale",
-        "Imposte incluse / escluse calcolate in automatico",
-        "Resto in contanti ed etichette personalizzate per i metodi di pagamento",
-        "Ogni vendita si chiude con un \"Ding!\" e un feedback aptico"
+        "Dieci carrelli aperti contemporaneamente",
+        "Ricerca per nome o codice a barre mentre digiti",
+        "Sconti sull'articolo e sul carrello, in importo o in percentuale",
+        "Imposte con aliquote diverse, scelte per prodotto",
+        "Imposta inclusa o esclusa, modificabile in qualsiasi momento",
+        "Prodotti a prezzo libero, con il prezzo inserito alla cassa",
+        "Arrotondamento contanti alle monete in uso nel tuo Paese",
+        "Ogni vendita si chiude con un \"Ding!\": è il suono del tuo incasso"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Limiti di utilizzo (totali o per cliente)",
         "Applicate in automatico alla cassa, senza codici coupon"
       ],
-      "shot_alt": "L'elenco delle promozioni in Impostazioni, diviso in offerte multiple e sconti, con stato attivo e priorità di ogni regola"
+      "shot_alt": "L'elenco delle promozioni in Impostazioni, raggruppate in regali e offerte multiple, sconti e punti, con stato attivo e priorità di ogni regola"
     },
     "reports": {
       "eyebrow": "Report",
-      "title": "Quanto hai incassato oggi, mentre il negozio è ancora aperto",
-      "lead": "Numero di ordini, ricavi, utile lordo, sconti e metodi di pagamento in un'unica pagina, per oggi, 7 giorni, 30 giorni o tutto il periodo.",
+      "title": "Dai ricavi all'utile netto, a colpo d'occhio",
+      "lead": "Ricavi, incassato, utile lordo, ordini e ordine medio riempiono la prima schermata; scegli un periodo di confronto e ognuno mostra la sua variazione. Ogni importo è al netto degli sconti e prima delle imposte.",
       "items": [
-        "Oggi: numero di ordini, ricavi, utile lordo, sconti, metodi di pagamento",
-        "I 5 prodotti più venduti per quantità",
-        "Intervalli per giorno / settimana / mese",
-        "Grafici dell'andamento di ricavi e utile lordo"
+        "Confronto con il periodo precedente o con l'anno scorso",
+        "Dai ricavi all'utile lordo, e all'utile netto del mese",
+        "Più venduti, variazioni e articoli a bassa rotazione, per variante",
+        "Ricavi per categoria, metodi di pagamento con commissioni stimate",
+        "Una mappa di calore per giorno della settimana e ora, per vedere le ore di punta",
+        "Oggi, questa settimana, questo mese, quest'anno o un intervallo a scelta"
       ],
-      "shot_alt": "La dashboard con i ricavi di oggi, lo sconto totale, l'utile e lo scontrino medio, sopra un grafico a ciambella dei metodi di pagamento e l'elenco dei prodotti più venduti"
+      "shot_alt": "Il report di questo mese: in alto ricavi, incassato, utile lordo, ordini e ordine medio, poi sconti totali, utile netto, prodotti senza costo e clienti serviti, sopra una linea dell'andamento dei ricavi e un grafico giornaliero di costi e utile lordo"
     },
     "orders": {
       "eyebrow": "Ordini",
-      "title": "Ogni vendita è registrata e ogni vendita si può stornare",
-      "lead": "Ogni ordine conserva il dettaglio completo: articoli e varianti, promozione applicata, imposte, metodo di pagamento e resto dato.",
+      "title": "Trova ogni vendita con una ricerca",
+      "lead": "Digita un numero d'ordine, un cliente o un metodo di pagamento e la vendita è lì. Un reso o un cambio ha un documento a parte, così l'originale non cambia mai, e i resi parziali, sommati, coincidono comunque con l'originale.",
       "items": [
-        "Elenco degli ordini in ordine cronologico, con filtro per data e metodo di pagamento",
-        "Il dettaglio riga conserva articoli, varianti, sconti, imposte e resto",
-        "Storno con conferma: giacenza e punti ripristinati in automatico"
+        "Ordini raggruppati per giorno, con numero e totale di ogni giorno",
+        "Filtra per periodo, stato, metodo di pagamento e importo",
+        "Articoli, varianti, promozioni, imposte e resto in ogni ordine",
+        "La merce resa torna in giacenza oppure viene scartata",
+        "Motivi facoltativi per storni e resi; giacenza e punti ripristinati"
       ],
-      "shot_alt": "A sinistra l'elenco cronologico degli ordini, a destra il dettaglio dell'ordine selezionato: articoli, sconto applicato, imposte, totale, metodo di pagamento e resto"
+      "shot_alt": "A sinistra gli ordini raggruppati per giorno, con numero di ordini e totale di ogni giorno nell'intestazione; a destra gli articoli dell'ordine selezionato, lo sconto sul carrello, l'imposta inclusa, il totale e il metodo di pagamento, con i pulsanti Reso e Storno"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Per chi lavora da solo al banco e ha bisogno di cassa e prodotti",
         "heading": "Include",
         "features": [
-          "Cassa completa con fino a 10 carrelli",
+          "Cassa completa con dieci carrelli contemporaneamente",
           "Prodotti con varianti, codici a barre, foto e categorie",
           "Storico ordini, storni, resi e cambi",
           "Dashboard dell'attività: ricavi, utile lordo, articoli più venduti",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Cassa e carrelli multipli",
-          "desc": "Fino a 10 carrelli contemporaneamente, ricerca in tempo reale per nome o codice a barre"
+          "desc": "Dieci carrelli contemporaneamente, ricerca in tempo reale per nome o codice a barre"
         },
         "discounts_tax": {
           "name": "Sconti e imposte",
-          "desc": "Sconti sul singolo articolo e sull'ordine; imposta inclusa o esclusa calcolata per te"
+          "desc": "Sconti sul singolo articolo e sull'ordine; più imposte, incluse o escluse dal prezzo, calcolate per te"
         },
         "offline": {
           "name": "Cassa offline",

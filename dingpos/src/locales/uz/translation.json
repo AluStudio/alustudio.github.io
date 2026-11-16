@@ -16,7 +16,7 @@
     "description": "DingPOS — iPad uchun kassa ilovasi. Akkaunt kerak emas, bulutga bog‘lanib qolmaysiz va internet bo‘lmasa ham ishlayveradi. Mahsulotlar, buyurtmalar va mijozlar ma’lumoti faqat o‘z qurilmangizda saqlanadi.",
     "download": "App Store’dan yuklab olish",
     "note": "30 kunlik bepul sinov.",
-    "shot_alt": "DingPOS to‘lov ekrani: chapda toifa filtrlari bilan mahsulotlar to‘ri, o‘ngda avtomatik qo‘llangan aksiyalar va jami summa ko‘rsatilgan savat"
+    "shot_alt": "DingPOS to‘lov ekrani: chapda toifa filtrlari bilan mahsulotlar to‘ri; o‘ngda jami summa ustida VIP a’zoning savati — ikkinchi mahsulotga chegirma, belgilangan summadan oshgan xaridga chegirma va a’zo chegirmasi avtomatik qo‘llangan"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "To‘lov",
       "title": "Savdoning har bir bosqichi bitta ekranda",
-      "lead": "Bir vaqtning o‘zida 10 tagacha savat, yozgan sari nomi yoki shtrix-kodi bo‘yicha topiladigan mahsulotlar, to‘lovni olishdan oldin hisoblangan chegirma va soliq.",
+      "lead": "Bir vaqtda o‘nta savat, yozgan sari nomi yoki shtrix-kodi bo‘yicha topiladigan mahsulotlar. Chegirmalar, bir nechta soliq stavkasi va naqd qaytim to‘lovni olishdan oldin hisoblab qo‘yiladi.",
       "items": [
-        "Bir vaqtda ishlaydigan 10 tagacha savat",
-        "Mahsulotni nomi va shtrix-kodi bo‘yicha yozgan sari qidirish",
-        "Mahsulot va savat chegirmalari, qat’iy summa yoki foiz",
-        "Soliq qo‘shilgan / qo‘shilmagan holda avtomatik hisoblanadi",
-        "Naqd pul qaytimi va o‘zingiz nomlagan to‘lov usullari",
-        "Har bir savdo “Ding!” ovozi va titrash bilan yakunlanadi"
+        "O‘nta savat bir vaqtda ochiq",
+        "Yozgan sari nomi yoki shtrix-kodi bo‘yicha qidirish",
+        "Mahsulot va savat chegirmalari — summa yoki foiz",
+        "Bir nechta soliq stavkasi, har bir mahsulot uchun alohida tanlanadi",
+        "Soliq narxga kiritilgan yoki ustiga qo‘shiladi — istalgan payt almashtiring",
+        "Erkin narxli mahsulotlar: narxi to‘lov paytida belgilanadi",
+        "Naqd pulni mamlakatingiz tangalariga qarab yaxlitlash",
+        "Har bir savdo “Ding!” bilan yakunlanadi — bu siz pul olayotganingiz"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Foydalanish chegarasi (jami yoki har bir mijozga)",
         "To‘lovda avtomatik qo‘llanadi — kupon kodlarisiz"
       ],
-      "shot_alt": "Sozlamalardagi aksiyalar ro‘yxati to‘plamlar va chegirmalarga bo‘lingan, har bir qoidada uning holati va ustuvorligi ko‘rsatilgan"
+      "shot_alt": "Sozlamalardagi aksiyalar ro‘yxati: sovg‘alar va to‘plamlar hamda chegirmalar va ballar guruhlariga ajratilgan, har bir qoidada uning holati va ustuvorligi ko‘rsatilgan"
     },
     "reports": {
       "eyebrow": "Hisobotlar",
-      "title": "Do‘kon hali ochiq paytda bugun qancha topganingiz",
-      "lead": "Buyurtmalar soni, daromad, yalpi foyda, chegirmalar va to‘lov usullari bitta sahifada — bugun, 7 kun, 30 kun yoki butun davr bo‘yicha.",
+      "title": "Daromaddan sof foydagacha — bir qarashda",
+      "lead": "Daromad, qabul qilingan pul, yalpi foyda, buyurtmalar va o‘rtacha savdo summasi birinchi ekranda; solishtirish uchun davrni tanlang — har biri o‘zgarishini ko‘rsatadi. Har bir summa chegirmalardan keyin va soliqdan oldin hisoblanadi.",
       "items": [
-        "Bugun: buyurtmalar soni, daromad, yalpi foyda, chegirma, to‘lov usullari ulushi",
-        "Soni bo‘yicha eng ko‘p sotilgan 5 ta mahsulot",
-        "Kun / hafta / oy davrlari",
-        "Daromad va yalpi foyda dinamikasi grafiklari"
+        "Oldingi davr yoki o‘tgan yil bilan solishtirish",
+        "Daromaddan yalpi foydagacha, oy uchun esa sof foyda",
+        "Eng ko‘p sotilganlar, o‘zgarishlar va sekin sotiladigan mahsulotlar — variantlar kesimida",
+        "Toifalar bo‘yicha savdo; taxminiy komissiya bilan to‘lov usullari",
+        "Eng gavjum soatlaringiz uchun hafta kuni × soat issiqlik xaritasi",
+        "Bugun, shu hafta, shu oy, shu yil yoki istalgan davr"
       ],
-      "shot_alt": "Boshqaruv paneli: bugungi daromad, jami chegirma, foyda va o‘rtacha chek; pastda to‘lov usullari doiraviy diagrammasi va eng ko‘p sotilganlar ro‘yxati"
+      "shot_alt": "Shu oy hisoboti: yuqorida daromad, qabul qilingan pul, yalpi foyda, buyurtmalar va o‘rtacha savdo summasi; undan keyin jami chegirmalar, sof foyda, tannarxsiz mahsulotlar va xizmat ko‘rsatilgan mijozlar; pastda daromad dinamikasi chizig‘i hamda kunlik tannarx va yalpi foyda grafigi"
     },
     "orders": {
       "eyebrow": "Buyurtma",
-      "title": "Har bir savdo saqlanadi va har birini bekor qilish mumkin",
-      "lead": "Har bir buyurtmada to‘liq yozuv saqlanadi: mahsulotlar va variantlar, qaysi aksiya qo‘llangani, soliq, to‘lov usuli va berilgan qaytim.",
+      "title": "Har bir savdo bir qidiruv bilan topiladi",
+      "lead": "Buyurtma raqamini, mijozni yoki to‘lov usulini yozing — savdo shu yerning o‘zida. Qaytarish yoki almashtirish alohida hujjat bo‘ladi, shuning uchun asl buyurtma o‘zgarmaydi, qisman qaytarishlar yig‘indisi ham unga mos keladi.",
       "items": [
-        "Vaqt bo‘yicha buyurtmalar ro‘yxati, sana va to‘lov usuli bo‘yicha filtr",
-        "Qator tafsilotida mahsulotlar, variantlar, chegirmalar, soliq va qaytim saqlanadi",
-        "Tasdiqlash bilan yaroqsiz deb belgilash — zaxira va ballar avtomatik tiklanadi"
+        "Buyurtmalar kunlar bo‘yicha guruhlangan, har kunning soni va jami summasi bilan",
+        "Davr, holat, to‘lov usuli va summa bo‘yicha filtrlash",
+        "Har bir buyurtmada mahsulotlar, variantlar, aksiyalar, soliq va qaytim",
+        "Qaytarilgan tovar omborga qaytadi yoki hisobdan chiqariladi",
+        "Yaroqsiz deb belgilash va qaytarishlar uchun ixtiyoriy sabablar; zaxira va ballar tiklanadi"
       ],
-      "shot_alt": "Chapda vaqt bo‘yicha buyurtmalar ro‘yxati, o‘ngda tanlangan buyurtma tafsiloti: mahsulotlar, qo‘llangan chegirma, soliq, jami summa, to‘lov usuli va qaytim"
+      "shot_alt": "Chapda kunlar bo‘yicha guruhlangan buyurtmalar, har kunning sarlavhasida buyurtmalar soni va jami summa; o‘ngda tanlangan buyurtmaning mahsulotlari, savat chegirmasi, kiritilgan soliq, jami summa va to‘lov usuli, “Qaytarish” va “Yaroqsiz deb belgilash” tugmalari bilan"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Bozorda yakka o‘zi savdo qiladigan, to‘lov va mahsulotlar kifoya qiladiganlar uchun",
         "heading": "Tarkibida",
         "features": [
-          "10 tagacha savatli to‘liq to‘lov jarayoni",
+          "Bir vaqtda o‘nta savat bilan to‘liq to‘lov jarayoni",
           "Variantlar, shtrix-kodlar, rasmlar va toifalar bilan mahsulotlar",
           "Buyurtmalar tarixi, yaroqsiz deb belgilash, qaytarish va almashtirish",
           "Biznes boshqaruv paneli: daromad, foyda, eng ko‘p sotilganlar",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "To‘lov va bir nechta savat",
-          "desc": "Bir vaqtda 10 tagacha savat, nom yoki shtrix-kod bo‘yicha jonli qidiruv"
+          "desc": "Bir vaqtda o‘nta savat, nom yoki shtrix-kod bo‘yicha jonli qidiruv"
         },
         "discounts_tax": {
           "name": "Chegirmalar va soliq",
-          "desc": "Mahsulot va buyurtma chegirmalari; soliq qo‘shilgan yoki qo‘shilmagan narxda siz uchun hisoblanadi"
+          "desc": "Mahsulot va buyurtma chegirmalari; bir nechta soliq, narxga qo‘shilgan yoki qo‘shilmagan holda, siz uchun hisoblanadi"
         },
         "offline": {
           "name": "Internetsiz to‘lov",

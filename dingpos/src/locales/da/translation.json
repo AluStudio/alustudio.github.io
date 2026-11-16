@@ -16,7 +16,7 @@
     "description": "DingPOS er et kassesystem til iPad. Ingen konto, ingen binding til skyen, og det virker også uden internet. Dine produkter, ordrer og kunder bliver på din egen enhed.",
     "download": "Hent i App Store",
     "note": "30 dages gratis prøveperiode.",
-    "shot_alt": "DingPOS' betalingsskærm: et produktgitter med kategorifiltre til venstre og kurven med automatisk anvendte kampagner og totalen til højre"
+    "shot_alt": "DingPOS' betalingsskærm: et produktgitter med kategorifiltre til venstre; til højre en VIP-medlems kurv med en rabat på den anden vare, en rabat ved køb over en beløbsgrænse og en medlemsrabat, alle anvendt automatisk, over totalen"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Betal",
       "title": "Hele salget samlet på én skærm",
-      "lead": "Op til 10 kurve på samme tid, produkter fundet på navn eller stregkode, mens du skriver, og rabatter og moms regnet ud, før kunden betaler.",
+      "lead": "Ti kurve på én gang, og produkter kan findes ved at søge på navn eller stregkode, mens du skriver. Rabatter, flere momssatser og byttepenge er regnet ud, før kunden betaler.",
       "items": [
-        "Op til 10 kurve kørende på samme tid",
-        "Produktsøgning på navn og stregkode, mens du skriver",
-        "Rabatter på varer og kurv, som fast beløb eller procent",
-        "Moms inklusive / eksklusive beregnes automatisk",
-        "Byttepenge og egne betalingsmåder som etiketter",
-        "Hvert salg afsluttes med et „Ding!“ og haptisk feedback"
+        "Ti kurve åbne på én gang",
+        "Søg på navn eller stregkode, mens du skriver",
+        "Rabat på vare og kurv, som beløb eller procent",
+        "Flere momssatser, valgt pr. produkt",
+        "Moms inklusive eller eksklusive – skift, når du vil",
+        "Produkter med åben pris, prissat ved betaling",
+        "Kontantafrunding til dit lands mønter",
+        "Hvert salg slutter med et „Ding!“ – det er dig, der bliver betalt"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Brugsgrænser (samlet eller pr. kunde)",
         "Anvendes automatisk i kassen – ingen rabatkoder"
       ],
-      "shot_alt": "Kampagnelisten i Indstillinger, opdelt i pakketilbud og rabatter, hvor hver regel viser sin aktive status og prioritet"
+      "shot_alt": "Kampagnelisten i Indstillinger, opdelt i gaver og pakketilbud samt rabatter og point, hvor hver regel viser sin aktive status og prioritet"
     },
     "reports": {
       "eyebrow": "Rapporter",
-      "title": "Hvad du har tjent i dag, mens butikken stadig er åben",
-      "lead": "Antal ordrer, omsætning, dækningsbidrag, rabatter og betalingsfordeling på én side – for i dag, 7 dage, 30 dage eller hele perioden.",
+      "title": "Fra omsætning til nettoresultat med ét blik",
+      "lead": "Omsætning, modtagne betalinger, dækningsbidrag, ordrer og gennemsnitlig ordre fylder første skærmbillede. Vælg en periode at sammenligne med, så viser hvert tal sin ændring. Alle beløb er efter rabatter og før moms.",
       "items": [
-        "I dag: antal ordrer, omsætning, dækningsbidrag, rabat, betalingsfordeling",
-        "Top 5-produkter efter antal",
-        "Dag / uge / måned",
-        "Grafer over udvikling i omsætning og dækningsbidrag"
+        "Sammenlign med foregående periode eller sidste år",
+        "Fra omsætning til dækningsbidrag og nettoresultat for en måned",
+        "Bedst sælgende varer, udsving og langsomt sælgende varer, pr. variant",
+        "Salg pr. kategori og betalingsmåder med forventede transaktionsgebyrer",
+        "Et varmekort over ugedag × time viser dine travleste timer",
+        "I dag, denne uge, denne måned, i år eller en selvvalgt periode"
       ],
-      "shot_alt": "Oversigten med dagens omsætning, samlet rabat, fortjeneste og gennemsnitlig kurv over et cirkeldiagram med betalingsmåder og en liste over bedst sælgende varer"
+      "shot_alt": "Rapporten for denne måned: omsætning, modtagne betalinger, dækningsbidrag, ordrer og gennemsnitlig ordre øverst, derefter samlet rabat, nettoresultat, produkter uden kostpris og betjente kunder, over en trendlinje for omsætning og et dagligt diagram over omkostninger og dækningsbidrag"
     },
     "orders": {
       "eyebrow": "Ordrer",
-      "title": "Hvert salg er gemt, og hvert salg kan fortrydes",
-      "lead": "Hver ordre gemmer hele forløbet: varer og varianter, hvilken kampagne der blev anvendt, moms, betalingsmåde og udleverede byttepenge.",
+      "title": "Alle salg er kun en søgning væk",
+      "lead": "Skriv et ordrenummer, en kunde eller en betalingsmåde, så finder du salget. En retur eller ombytning får sit eget dokument, så det oprindelige salg aldrig ændres, og delvise returer tælles stadig med i det.",
       "items": [
-        "Kronologisk ordreliste med filter på dato og betalingsmåde",
-        "Linjedetaljer gemmer varer, varianter, rabatter, moms og byttepenge",
-        "Makulering med bekræftelse – lager og point gendannes automatisk"
+        "Ordrer grupperet efter dag, med antal og total for hver dag",
+        "Filtrer efter periode, status, betalingsmåde og beløb",
+        "Varer, varianter, kampagner, moms og byttepenge på hver ordre",
+        "Returnerede varer lægges tilbage på lager eller kasseres",
+        "Valgfri årsag til makuleringer og returer; lager og point gendannes"
       ],
-      "shot_alt": "En kronologisk ordreliste til venstre og den valgte ordres detaljer til højre: varer, anvendt rabat, moms, total, betalingsmåde og byttepenge"
+      "shot_alt": "Ordrer grupperet efter dag til venstre, med dagens antal ordrer og total i overskriften; til højre den valgte ordres varer, kurvrabat, medregnet moms, total og betalingsmåde, med knapperne Retur og Makulér"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Til én person i en bod, som har brug for betaling og produkter",
         "heading": "Indeholder",
         "features": [
-          "Komplet betalingsflow med op til 10 kurve",
+          "Komplet betalingsflow med ti kurve på én gang",
           "Produkter med varianter, stregkoder, fotos og kategorier",
           "Ordrehistorik, makuleringer, returer og ombytninger",
           "Forretningsoversigt: omsætning, dækningsbidrag, bedst sælgende varer",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Betaling og flere kurve",
-          "desc": "Op til 10 kurve ad gangen, live søgning på navn eller stregkode"
+          "desc": "Ti kurve på én gang, live søgning på navn eller stregkode"
         },
         "discounts_tax": {
           "name": "Rabatter og moms",
-          "desc": "Rabatter på varer og ordrer; moms inklusive eller eksklusive beregnes for dig"
+          "desc": "Rabatter på varer og ordrer; flere momssatser, inklusive eller eksklusive moms, beregnes for dig"
         },
         "offline": {
           "name": "Betaling offline",

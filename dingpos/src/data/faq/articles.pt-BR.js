@@ -270,7 +270,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "A tela do caixa aceita até 10 carrinhos ao mesmo tempo. Toque em \"+\" na barra de carrinhos para adicionar um e toque em uma aba numerada para alternar."
+        "text": "A tela do caixa trabalha com dez carrinhos ao mesmo tempo. Toque em \"+\" na barra de carrinhos para adicionar um e toque em uma aba numerada para alternar."
       },
       {
         "type": "p",

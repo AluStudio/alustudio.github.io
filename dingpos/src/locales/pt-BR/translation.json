@@ -16,7 +16,7 @@
     "description": "O DingPOS é um PDV (ponto de venda) para iPad. Sem cadastro, sem prender você à nuvem e sem parar quando a internet cai. Seus produtos, vendas e clientes ficam no seu próprio aparelho.",
     "download": "Baixar na App Store",
     "note": "30 dias de teste grátis.",
-    "shot_alt": "A tela de venda do DingPOS: à esquerda, a grade de produtos com filtros de categoria; à direita, o carrinho com as promoções aplicadas automaticamente e o total"
+    "shot_alt": "A tela de venda do DingPOS: à esquerda, a grade de produtos com filtros de categoria; à direita, o carrinho de um cliente VIP com desconto no segundo item, desconto por valor de compra e desconto de membro aplicados automaticamente, acima do total"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Finalizar venda",
       "title": "Cada etapa da venda em uma só tela",
-      "lead": "Até 10 carrinhos ao mesmo tempo, produtos encontrados por nome ou código de barras enquanto você digita, e descontos e impostos calculados antes de receber o pagamento.",
+      "lead": "Dez carrinhos ao mesmo tempo e produtos encontrados por nome ou código de barras enquanto você digita. Descontos, vários impostos e troco em dinheiro já ficam calculados antes de você receber o pagamento.",
       "items": [
-        "Até 10 carrinhos abertos ao mesmo tempo",
-        "Busca de produtos por nome e código de barras, enquanto você digita",
-        "Descontos no item e no carrinho, em valor fixo ou porcentagem",
-        "Imposto incluso ou não incluso no preço, calculado automaticamente",
-        "Troco em dinheiro e nomes personalizados para as formas de pagamento",
-        "Toda venda termina com um “Ding!” e uma vibração"
+        "Dez carrinhos abertos ao mesmo tempo",
+        "Busca por nome ou código de barras enquanto você digita",
+        "Descontos no item e no carrinho, em valor ou porcentagem",
+        "Várias taxas de imposto, definidas por produto",
+        "Imposto incluso ou não incluso no preço, você muda quando quiser",
+        "Itens de preço aberto, com o preço definido na hora da venda",
+        "Arredondamento do dinheiro para as moedas do seu país",
+        "Toda venda termina com um “Ding!” — é você sendo pago"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Limites de uso (no total ou por cliente)",
         "Aplicadas automaticamente na venda — sem cupons"
       ],
-      "shot_alt": "A lista de promoções nos Ajustes, dividida em kits e descontos, com o estado de ativação e a prioridade de cada regra"
+      "shot_alt": "A lista de promoções nos Ajustes, dividida em brindes e kits promocionais, descontos e pontos, com o estado de ativação e a prioridade de cada regra"
     },
     "reports": {
       "eyebrow": "Relatórios",
-      "title": "Sua receita de hoje, com a loja ainda aberta",
-      "lead": "Número de vendas, receita, lucro bruto, descontos e formas de pagamento em uma só página, para hoje, 7 dias, 30 dias ou todo o período.",
+      "title": "Da receita ao lucro líquido, num relance",
+      "lead": "Receita, valor recebido, lucro bruto, vendas e ticket médio ocupam a primeira tela; escolha um período para comparar e cada indicador mostra a variação. Todos os valores são após descontos e antes do imposto.",
       "items": [
-        "Hoje: número de vendas, receita, lucro bruto, desconto e formas de pagamento",
-        "Os 5 produtos mais vendidos em quantidade",
-        "Períodos por dia, semana e mês",
-        "Gráficos de tendência da receita e do lucro bruto"
+        "Compare com o período anterior ou com o ano passado",
+        "Da receita ao lucro bruto, e o lucro líquido do mês",
+        "Mais vendidos, variação de vendas e produtos parados, por variante",
+        "Vendas por categoria e formas de pagamento com taxas estimadas",
+        "Um mapa de calor de dia da semana × hora com seus horários mais movimentados",
+        "Hoje, esta semana, este mês, este ano ou qualquer período"
       ],
-      "shot_alt": "O painel mostrando receita do dia, desconto total, lucro e ticket médio, acima de um gráfico de rosca das formas de pagamento e de uma lista dos mais vendidos"
+      "shot_alt": "O relatório do mês: receita, valor recebido, lucro bruto, vendas e ticket médio na parte de cima, depois descontos totais, lucro líquido, produtos sem custo e clientes atendidos, acima de uma linha de tendência da receita e de um gráfico diário de custo e lucro bruto"
     },
     "orders": {
       "eyebrow": "Vendas",
-      "title": "Toda venda fica registrada, e toda venda pode ser anulada",
-      "lead": "Cada venda guarda o registro completo: itens e variantes, a promoção aplicada, imposto, forma de pagamento e troco.",
+      "title": "Toda venda a uma busca de distância",
+      "lead": "Digite o número da venda, um cliente ou uma forma de pagamento e a venda aparece. Cada devolução ou troca gera um documento próprio, então a venda original nunca muda, e as devoluções parciais continuam somando com ela.",
       "items": [
-        "Lista de vendas em ordem cronológica, com filtro por data e forma de pagamento",
-        "O detalhe de cada linha guarda itens, variantes, descontos, imposto e troco",
-        "Anulação com confirmação — estoque e pontos voltam automaticamente"
+        "Vendas agrupadas por dia, com a quantidade e o total de cada dia",
+        "Filtre por período, status, forma de pagamento e valor",
+        "Itens, variantes, promoções, imposto e troco em cada venda",
+        "Mercadoria devolvida volta ao estoque ou é descartada",
+        "Motivo opcional para anulações e devoluções; estoque e pontos voltam"
       ],
-      "shot_alt": "À esquerda, uma lista de vendas em ordem cronológica; à direita, o detalhe da venda selecionada: itens, desconto aplicado, imposto, total, forma de pagamento e troco"
+      "shot_alt": "À esquerda, as vendas agrupadas por dia, com a quantidade e o total de cada dia no cabeçalho; à direita, os itens da venda selecionada, o desconto no carrinho, o imposto incluso, o total e a forma de pagamento, com os botões Devolver e Anular"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Para quem trabalha sozinho em uma barraca e precisa de venda e produtos",
         "heading": "Inclui",
         "features": [
-          "Venda completa com até 10 carrinhos",
+          "Venda completa com dez carrinhos ao mesmo tempo",
           "Produtos com variantes, códigos de barras, fotos e categorias",
           "Histórico de vendas, anulações, devoluções e trocas",
           "Painel do negócio: receita, lucro e mais vendidos",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Venda e vários carrinhos",
-          "desc": "Até 10 carrinhos ao mesmo tempo, busca instantânea por nome ou código de barras"
+          "desc": "Dez carrinhos ao mesmo tempo, busca instantânea por nome ou código de barras"
         },
         "discounts_tax": {
           "name": "Descontos e impostos",
-          "desc": "Descontos por item e na venda; imposto incluso ou adicional calculado para você"
+          "desc": "Descontos por item e na venda; vários impostos, inclusos ou adicionais, calculados para você"
         },
         "offline": {
           "name": "Venda offline",

@@ -272,11 +272,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Layar kasir mendukung hingga 10 keranjang sekaligus. Ketuk \"+\" di bilah keranjang untuk menambah keranjang, lalu ketuk tab bernomor untuk berpindah."
+        "text": "Layar kasir menjalankan sepuluh keranjang sekaligus. Ketuk \"+\" di bilah keranjang untuk menambah keranjang, lalu ketuk tab bernomor untuk berpindah."
       },
       {
         "type": "p",
-        "text": "Setiap keranjang dihitung sendiri-sendiri. Saat pelanggan A masih memilih-milih, pindah ke keranjang lain dan layani pelanggan B lebih dulu. Slot keranjang otomatis hilang setelah pembayarannya selesai."
+        "text": "Setiap keranjang dihitung sendiri-sendiri. Saat pelanggan A masih memilih-milih, pindah ke keranjang lain dan layani pelanggan B lebih dulu. Slot keranjang otomatis hilang setelah keranjang itu selesai dibayar."
       },
       {
         "type": "note",

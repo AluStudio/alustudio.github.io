@@ -270,7 +270,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "A kassza képernyője egyszerre legfeljebb 10 kosarat kezel. A „+” gombbal új kosarat adhat hozzá a kosársávon, a számozott fülre koppintva pedig válthat közöttük."
+        "text": "A kassza képernyője egyszerre tíz kosarat kezel. A „+” gombbal új kosarat adhat hozzá a kosársávon, a számozott fülre koppintva pedig válthat közöttük."
       },
       {
         "type": "p",

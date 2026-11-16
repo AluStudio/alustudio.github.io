@@ -270,11 +270,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "L’écran de caisse accepte jusqu’à 10 paniers en même temps. Touchez « + » dans la barre des paniers pour en ajouter un, puis touchez un onglet numéroté pour passer de l’un à l’autre."
+        "text": "L’écran de caisse gère dix paniers en même temps. Touchez « + » dans la barre des paniers pour en ajouter un, puis touchez un onglet numéroté pour passer de l’un à l’autre."
       },
       {
         "type": "p",
-        "text": "Chaque panier est calculé indépendamment. Pendant que le client A hésite encore, passez à un autre panier et encaissez d’abord le client B. Un panier disparaît automatiquement une fois son encaissement terminé."
+        "text": "Chaque panier est calculé indépendamment. Pendant que le client A regarde encore, passez à un autre panier et encaissez d’abord le client B. Un panier disparaît automatiquement une fois son encaissement terminé."
       },
       {
         "type": "note",

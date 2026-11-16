@@ -16,7 +16,7 @@
     "description": "DingPOS es un punto de venta para iPad. Sin cuenta, sin depender de la nube y sigue funcionando sin internet. Tus productos, pedidos y clientes se quedan en tu propio dispositivo.",
     "download": "Descargar en el App Store",
     "note": "Prueba gratuita de 30 días.",
-    "shot_alt": "La pantalla de cobro de DingPOS: a la izquierda, una cuadrícula de productos con filtros por categoría; a la derecha, el carrito con las promociones aplicadas automáticamente y el total"
+    "shot_alt": "La pantalla de cobro de DingPOS: a la izquierda, una cuadrícula de productos con filtros por categoría; a la derecha, el carrito de un miembro VIP con un descuento por el segundo artículo, un descuento por alcanzar un monto mínimo de compra y un descuento para miembros aplicados automáticamente, sobre el total"
   },
   "proof": {
     "items": [
@@ -29,14 +29,16 @@
     "cashier": {
       "eyebrow": "Cobrar",
       "title": "Todos los pasos de una venta en una sola pantalla",
-      "lead": "Hasta 10 carritos a la vez, productos que encuentras por nombre o código de barras mientras escribes, y descuentos e impuestos calculados antes de recibir el pago.",
+      "lead": "Diez carritos a la vez y productos que encuentras por nombre o código de barras mientras escribes. Los descuentos, los distintos impuestos y el cambio en efectivo quedan calculados antes de recibir el pago.",
       "items": [
-        "Hasta 10 carritos abiertos al mismo tiempo",
-        "Búsqueda de productos por nombre y código de barras, mientras escribes",
+        "Diez carritos abiertos al mismo tiempo",
+        "Búsqueda por nombre o código de barras mientras escribes",
         "Descuentos por artículo y por carrito, de monto fijo o porcentaje",
-        "Impuesto incluido o no incluido, calculado automáticamente",
-        "Cambio en efectivo y nombres personalizados para los métodos de pago",
-        "Cada venta termina con un «Ding!» y respuesta háptica"
+        "Varios impuestos, a elegir por producto",
+        "Impuesto incluido o no incluido, cámbialo cuando quieras",
+        "Productos de precio abierto: el precio se pone al cobrar",
+        "Redondeo de efectivo a las monedas de tu país",
+        "Cada venta termina con un «Ding!»: es el sonido de que te pagaron"
       ]
     },
     "promotion": {
@@ -53,30 +55,34 @@
         "Límites de uso (totales o por cliente)",
         "Se aplican solas al cobrar, sin códigos de cupón"
       ],
-      "shot_alt": "La lista de promociones en Ajustes, dividida en paquetes y descuentos; cada regla muestra si está activa y su prioridad"
+      "shot_alt": "La lista de promociones en Ajustes, agrupada en regalos y paquetes, descuentos y puntos; cada regla muestra si está activa y su prioridad"
     },
     "reports": {
       "eyebrow": "Reportes",
-      "title": "Lo que ganaste hoy, con la tienda aún abierta",
-      "lead": "Cantidad de pedidos, ingresos por ventas, utilidad bruta, descuentos y formas de pago en una sola página, de hoy, 7 días, 30 días o todo el historial.",
+      "title": "De los ingresos por ventas a la utilidad neta, de un vistazo",
+      "lead": "Ingresos por ventas, dinero recibido, utilidad bruta, pedidos y ticket promedio llenan la primera pantalla; elige un periodo para comparar y cada cifra muestra su variación. Todos los montos son después de descuentos y antes de impuestos.",
       "items": [
-        "Hoy: cantidad de pedidos, ingresos por ventas, utilidad bruta, descuentos y formas de pago",
-        "Los 5 productos más vendidos por cantidad",
-        "Rangos por día, semana y mes",
-        "Gráficas de tendencia de ingresos y utilidad bruta"
+        "Compara con el periodo anterior o con el año pasado",
+        "De los ingresos a la utilidad bruta, y la utilidad neta de un mes",
+        "Más vendidos, productos con mayor variación y de baja rotación, por variante",
+        "Ventas por categoría y métodos de pago con comisiones estimadas",
+        "Un mapa de calor de día de la semana × hora con tus horas de más movimiento",
+        "Hoy, esta semana, este mes, este año o cualquier rango"
       ],
-      "shot_alt": "El panel con los ingresos de hoy, el descuento total, la utilidad y el ticket promedio, sobre una gráfica de dona de métodos de pago y una lista de los más vendidos"
+      "shot_alt": "El reporte de este mes: ingresos por ventas, dinero recibido, utilidad bruta, pedidos y ticket promedio en la parte superior; después, descuento total, utilidad neta, productos sin costo y clientes atendidos, sobre una línea de tendencia de ingresos y una gráfica diaria de costo y utilidad bruta"
     },
     "orders": {
       "eyebrow": "Pedidos",
-      "title": "Cada venta queda registrada y cualquiera se puede anular",
-      "lead": "Cada pedido conserva el registro completo: artículos y variantes, la promoción aplicada, impuesto, método de pago y cambio entregado.",
+      "title": "Cada venta, a una búsqueda de distancia",
+      "lead": "Escribe un número de pedido, un cliente o un método de pago y ahí está la venta. Una devolución o un cambio genera su propio documento, así que el original nunca se modifica, y las devoluciones parciales también se acumulan hasta completar el total original.",
       "items": [
-        "Lista cronológica de pedidos, con filtro por fecha y método de pago",
-        "El detalle por línea conserva artículos, variantes, descuentos, impuesto y cambio",
-        "Anulación con confirmación: el stock y los puntos se restauran solos"
+        "Pedidos agrupados por día, con la cantidad y el total de cada día",
+        "Filtros por periodo, estado, método de pago y monto",
+        "Artículos, variantes, promociones, impuesto y cambio en cada pedido",
+        "La mercancía devuelta regresa al stock o se desecha",
+        "Motivos opcionales para anulaciones y devoluciones; el stock y los puntos se restauran"
       ],
-      "shot_alt": "A la izquierda, una lista cronológica de pedidos; a la derecha, el detalle del pedido seleccionado: artículos, descuento aplicado, impuesto, total, método de pago y cambio"
+      "shot_alt": "A la izquierda, pedidos agrupados por día, con la cantidad de pedidos y el total de cada día en su encabezado; a la derecha, los artículos del pedido seleccionado, el descuento del carrito, el impuesto incluido, el total y el método de pago, con los botones Devolver y Anular"
     }
   },
   "features": {
@@ -171,7 +177,7 @@
         "tagline": "Para una persona en un puesto que necesita cobro y productos",
         "heading": "Incluye",
         "features": [
-          "Cobro completo con hasta 10 carritos",
+          "Cobro completo con 10 carritos a la vez",
           "Productos con variantes, códigos de barras, fotos y categorías",
           "Historial de pedidos, anulaciones, devoluciones y cambios",
           "Panel del negocio: ingresos por ventas, utilidad y más vendidos",
@@ -247,11 +253,11 @@
       "rows": {
         "checkout_flow": {
           "name": "Cobro y varios carritos",
-          "desc": "Hasta 10 carritos a la vez, búsqueda en vivo por nombre o código de barras"
+          "desc": "10 carritos a la vez, búsqueda en vivo por nombre o código de barras"
         },
         "discounts_tax": {
           "name": "Descuentos e impuestos",
-          "desc": "Descuentos por artículo y por pedido; impuesto incluido o adicional calculado automáticamente"
+          "desc": "Descuentos por artículo y por pedido; varias tasas de impuesto, incluido o no incluido en el precio, calculadas automáticamente"
         },
         "offline": {
           "name": "Cobro sin conexión",

@@ -104,7 +104,7 @@ export const articles = [
     question: "How do I serve multiple customers at once?",
     keywords: ["carts", "multiple", "hold", "switch", "parallel", "queue"],
     content: [
-      { type: "p", text: "The cashier screen supports up to 10 carts at the same time. Tap \"+\" on the cart bar to add one, and tap a numbered tab to switch." },
+      { type: "p", text: "The cashier screen runs ten carts at the same time. Tap \"+\" on the cart bar to add one, and tap a numbered tab to switch." },
       { type: "p", text: "Each cart is calculated independently. While customer A is still browsing, switch to another cart and check out customer B first. A cart slot is removed automatically once its checkout completes." },
       { type: "note", text: "Carts live in memory only — carts that haven't been checked out are cleared when the app is fully closed." },
     ],
