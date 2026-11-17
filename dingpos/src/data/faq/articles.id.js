@@ -388,7 +388,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Pajak dengan nama hadir di v3.5. Saat Anda memperbarui aplikasi, tarif pajak Anda menjadi pajak dengan nama (misalnya “GST 10%” di Australia) dan setiap produk yang sudah ada memakainya; toko yang tarifnya 0 tidak mendapat pajak. Pesanan dan laporan sebelumnya tetap memakai angka yang tercatat."
+        "text": "Pajak dengan nama hadir di v3.5. Saat Anda memperbarui aplikasi, tarif pajak Anda menjadi pajak dengan nama (misalnya “GST 10%” di Australia) dan setiap produk yang sudah ada memakainya; toko yang tarifnya 0 tidak mendapat pajak. Pesanan dan retur sebelumnya tetap memakai tarif dan jumlah pajak yang tercatat; laporan kini menghitung pendapatan sebelum pajak, termasuk periode sebelumnya (lihat “Apa bedanya Pendapatan dan Kas Diterima?”)."
       }
     ],
     "related": [
@@ -506,7 +506,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Toko baru yang diatur di salah satu negara ini, dengan mata uang negara itu, otomatis mendapatkan pengaturan ini. Toko lain bisa mengaktifkannya lewat kartu Pembulatan tunai di bagian bawah Pengaturan → Metode Pembayaran: pilih ke mana tunai dibulatkan (Tanpa pembulatan, 0.05, 0.10, 0.50, atau 1.00), dan untuk kelipatan yang bisa jatuh tepat di tengah, apakah dibulatkan ke atas atau ke bawah. Perubahan hanya berlaku untuk pembayaran berikutnya."
+        "text": "Toko baru yang diatur di salah satu negara ini, dengan mata uang negara itu, otomatis mendapatkan pengaturan ini. Toko lain bisa mengaktifkannya lewat kartu Pembulatan tunai di bagian bawah Pengaturan → Metode Pembayaran: pilih ke mana tunai dibulatkan (Tanpa pembulatan, atau 0.05, 0.10, 0.50, atau 1.00 pada mata uang yang memakai sen; 5, 10, 50, atau 100 pada mata uang tanpa sen, seperti TWD atau JPY), dan untuk kelipatan yang bisa jatuh tepat di tengah, apakah dibulatkan ke atas atau ke bawah. Perubahan hanya berlaku untuk pembayaran berikutnya."
       },
       {
         "type": "list",
@@ -906,7 +906,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Nama opsi dan nama pilihan dibatasi maksimal 20 karakter, dan spasi di awal maupun akhir dipangkas saat Anda menyimpan. Pilihan yang belum Anda isi bukan sebuah kombinasi dan dilewati saat menyimpan; hanya nama opsi yang kosong, atau opsi yang semua pilihannya kosong, yang diberi garis merah. Produk dengan varian tidak bisa memakai harga bebas."
+        "text": "Nama opsi dan nama pilihan dibatasi maksimal 20 karakter, dan spasi di awal maupun akhir dipangkas saat Anda menyimpan. Pilihan yang belum Anda isi bukan sebuah kombinasi dan dilewati saat menyimpan. Penyimpanan berhenti dengan kolom yang diberi garis merah jika nama opsi kosong, jika semua pilihan sebuah opsi kosong, atau jika Anda mengosongkan pilihan yang sudah tersimpan di produk; ketik kembali, atau hapus dengan mengetuk ikon ×. Produk dengan varian tidak bisa memakai harga bebas."
       }
     ],
     "related": [

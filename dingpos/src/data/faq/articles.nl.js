@@ -390,7 +390,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Btw-tarieven met een eigen naam zijn er sinds v3.5. Bij de update wordt je btw-tarief een tarief met een naam (bijvoorbeeld “GST 10%” in Australië) en krijgt elk bestaand product dit tarief; een winkel met een tarief van 0 krijgt geen btw. Eerdere bestellingen en rapporten behouden hun bedragen."
+        "text": "Btw-tarieven met een eigen naam zijn er sinds v3.5. Bij de update wordt je btw-tarief een tarief met een naam (bijvoorbeeld “GST 10%” in Australië) en krijgt elk bestaand product dit tarief; een winkel met een tarief van 0 krijgt geen btw. Eerdere bestellingen en retouren behouden de btw-tarieven en bedragen waarmee ze zijn vastgelegd; rapporten tellen de omzet nu vóór btw, ook over eerdere periodes (zie “Wat is het verschil tussen omzet en ontvangen bedrag?”)."
       }
     ],
     "related": [
@@ -508,7 +508,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Een nieuwe winkel die in een van deze landen en in de valuta van dat land wordt ingesteld, krijgt dit automatisch. Elke andere winkel zet het aan met de kaart Contante afronding onderaan Instellingen → Betaalmethoden: kies waarop contant wordt afgerond (Niet afronden, 0,05, 0,10, 0,50 of 1,00) en, bij een stap die precies in het midden kan uitkomen, of er dan naar boven of naar beneden wordt afgerond. Een wijziging geldt alleen voor latere betalingen."
+        "text": "Een nieuwe winkel die in een van deze landen en in de valuta van dat land wordt ingesteld, krijgt dit automatisch. Elke andere winkel zet het aan met de kaart Contante afronding onderaan Instellingen → Betaalmethoden: kies waarop contant wordt afgerond (Niet afronden, of 0,05, 0,10, 0,50 of 1,00 in een valuta met centen; 5, 10, 50 of 100 in een valuta zonder centen, zoals TWD of JPY) en, bij een stap die precies in het midden kan uitkomen, of er dan naar boven of naar beneden wordt afgerond. Een wijziging geldt alleen voor latere betalingen."
       },
       {
         "type": "list",
@@ -908,7 +908,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Namen van opties en waarden mogen maximaal 20 tekens bevatten, en spaties aan het begin of einde worden bij het bewaren weggehaald. Een waarde waarin je niets hebt getypt is geen combinatie en wordt bij het bewaren overgeslagen; alleen een lege optienaam, of een optie waarvan alle waarden leeg zijn, krijgt een rode rand. Een product met varianten kan geen open prijs hebben."
+        "text": "Namen van opties en waarden mogen maximaal 20 tekens bevatten, en spaties aan het begin of einde worden bij het bewaren weggehaald. Een waarde waarin je niets hebt getypt is geen combinatie en wordt bij het bewaren overgeslagen. Het bewaren stopt, met een rode rand om het veld, als een optienaam leeg is, als alle waarden van een optie leeg zijn of als je een waarde wist die het product al had bewaard; typ de waarde opnieuw in of verwijder hem met de knop Verwijder (×) bij die waarde. Een product met varianten kan geen open prijs hebben."
       }
     ],
     "related": [

@@ -394,7 +394,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Adlandırılmış vergiler v3.5 ile geldi. Güncellediğinizde vergi oranınız adlandırılmış bir vergiye dönüşür (örneğin Avustralya'da “GST 10%”) ve mevcut tüm ürünler bu vergiyi uygular; oranı 0 olan bir mağazada vergi uygulanmaz. Geçmiş siparişler ve raporlar rakamlarını korur."
+        "text": "Adlandırılmış vergiler v3.5 ile geldi. Güncellediğinizde vergi oranınız adlandırılmış bir vergiye dönüşür (örneğin Avustralya'da “GST 10%”) ve mevcut tüm ürünler bu vergiyi uygular; oranı 0 olan bir mağazada vergi uygulanmaz. Geçmiş siparişler ve iadeler, kaydedildikleri vergi oranlarını ve tutarlarını korur; raporlar artık satış gelirini vergi öncesi tutar üzerinden sayar, geçmiş dönemler de dahil (bkz. “Satış geliri ile alınan tutar arasındaki fark nedir?”)."
       }
     ],
     "related": [
@@ -511,7 +511,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Bu ülkelerden birinde, o ülkenin para biriminde kurulan yeni bir mağazada yuvarlama otomatik olarak ayarlanır. Diğer mağazalar Ayarlar → Ödeme Yöntemleri'nin en altındaki Nakit yuvarlama kartından açabilir: nakdin neye yuvarlanacağını seçin (Yuvarlama yok, 0.05, 0.10, 0.50 veya 1.00) ve tam yarıya denk gelebilecek bir basamak için yarının yukarı mı aşağı mı yuvarlanacağını belirleyin. Yapılan değişiklik yalnızca sonraki ödemelere uygulanır."
+        "text": "Bu ülkelerden birinde, o ülkenin para biriminde kurulan yeni bir mağazada yuvarlama otomatik olarak ayarlanır. Diğer mağazalar Ayarlar → Ödeme Yöntemleri'nin en altındaki Nakit yuvarlama kartından açabilir: nakdin neye yuvarlanacağını seçin (Yuvarlama yok; kuruş birimi olan bir para biriminde 0.05, 0.10, 0.50 veya 1.00, TWD ya da JPY gibi kuruş birimi olmayan bir para biriminde 5, 10, 50 veya 100) ve tam yarıya denk gelebilecek bir basamak için yarının yukarı mı aşağı mı yuvarlanacağını belirleyin. Yapılan değişiklik yalnızca sonraki ödemelere uygulanır."
       },
       {
         "type": "list",
@@ -912,7 +912,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Seçenek ve seçenek değeri adları en fazla 20 karakter olabilir; baştaki ve sondaki boşluklar kaydederken silinir. Hiçbir şey yazmadığınız bir değer birleşim sayılmaz ve kaydederken atlanır; yalnızca boş bir seçenek adı ya da tüm değerleri boş olan bir seçenek kırmızı çerçeveyle işaretlenir. Varyantlı bir ürün serbest fiyat kullanamaz."
+        "text": "Seçenek ve seçenek değeri adları en fazla 20 karakter olabilir; baştaki ve sondaki boşluklar kaydederken silinir. Hiçbir şey yazmadığınız bir değer birleşim sayılmaz ve kaydederken atlanır. Bir seçenek adı boşsa, bir seçeneğin tüm değerleri boşsa ya da üründe daha önce kayıtlı olan bir değeri temizlediyseniz kaydetme, alan kırmızı çerçeveyle işaretlenerek durur; değeri geri yazın ya da yanındaki × simgesine dokunarak kaldırın. Varyantlı bir ürün serbest fiyat kullanamaz."
       }
     ],
     "related": [

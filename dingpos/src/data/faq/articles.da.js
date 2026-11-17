@@ -388,7 +388,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Navngivne momssatser kom med v3.5. Når du opdaterer, bliver din momssats til en navngiven moms (f.eks. „GST 10 %“ i Australien), og alle eksisterende produkter opkræver den; en butik, hvis sats var 0, får ingen moms. Tidligere ordrer og rapporter beholder deres tal."
+        "text": "Navngivne momssatser kom med v3.5. Når du opdaterer, bliver din momssats til en navngiven moms (f.eks. „GST 10 %“ i Australien), og alle eksisterende produkter opkræver den; en butik, hvis sats var 0, får ingen moms. Tidligere ordrer og returer beholder de momssatser og beløb, de blev registreret med; rapporterne tæller nu omsætning før moms, også for tidligere perioder (se „Hvad er forskellen på omsætning og modtagne betalinger?“)."
       }
     ],
     "related": [
@@ -508,7 +508,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "En ny butik, der oprettes i et af disse lande med landets valuta, får det slået til automatisk. Alle andre butikker kan slå det til med kortet Kontantafrunding nederst under Indstillinger → Betalingsmetoder: vælg, hvad kontanter skal afrundes til (Ingen afrunding, 0,05, 0,10, 0,50 eller 1,00), og for et trin, der kan ramme præcis midt imellem, om det rundes op eller ned. En ændring gælder kun senere betalinger."
+        "text": "En ny butik, der oprettes i et af disse lande med landets valuta, får det slået til automatisk. Alle andre butikker kan slå det til med kortet Kontantafrunding nederst under Indstillinger → Betalingsmetoder: vælg, hvad kontanter skal afrundes til (Ingen afrunding eller 0,05, 0,10, 0,50 eller 1,00 i en valuta med øre; 5, 10, 50 eller 100 i en valuta uden, f.eks. TWD eller JPY), og for et trin, der kan ramme præcis midt imellem, om det rundes op eller ned. En ændring gælder kun senere betalinger."
       },
       {
         "type": "list",
@@ -907,7 +907,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Navne på valgmuligheder og værdier må højst være 20 tegn lange, og mellemrum i begyndelsen og slutningen fjernes, når du gemmer. En værdi, du ikke har skrevet noget i, er ikke en kombination og springes over ved gemning; kun et tomt navn på en valgmulighed eller en valgmulighed, hvor alle værdier er tomme, får en rød kant. Et produkt med varianter kan ikke bruge åben pris."
+        "text": "Navne på valgmuligheder og værdier må højst være 20 tegn lange, og mellemrum i begyndelsen og slutningen fjernes, når du gemmer. En værdi, du ikke har skrevet noget i, er ikke en kombination og springes over ved gemning. Gemning stopper, og feltet får en rød kant, når et navn på en valgmulighed er tomt, når alle værdier i en valgmulighed er tomme, eller når du tømmer en værdi, som produktet allerede har gemt; skriv den ind igen, eller fjern den ved at trykke på ×. Et produkt med varianter kan ikke bruge åben pris."
       }
     ],
     "related": [

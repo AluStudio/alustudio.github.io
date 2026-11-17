@@ -395,7 +395,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Nimetyt verot tulivat versiossa 3.5. Päivityksen yhteydessä verokantasi muuttuu nimetyksi veroksi (esimerkiksi ”GST 10 %” Australiassa), ja jokainen olemassa oleva tuote perii sen; myymälä, jonka verokanta oli 0, ei saa veroa. Aiemmat tilaukset ja raportit säilyttävät lukunsa."
+        "text": "Nimetyt verot tulivat versiossa 3.5. Päivityksen yhteydessä verokantasi muuttuu nimetyksi veroksi (esimerkiksi ”GST 10 %” Australiassa), ja jokainen olemassa oleva tuote perii sen; myymälä, jonka verokanta oli 0, ei saa veroa. Aiemmat tilaukset ja palautukset säilyttävät verokannat ja summat, joilla ne kirjattiin; raportit laskevat liikevaihdon nyt ennen veroa, myös aiemmilta jaksoilta (katso ”Mikä ero on liikevaihdolla ja saapuneella maksulla?”)."
       }
     ],
     "related": [
@@ -513,7 +513,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Uusi myymälä, joka otetaan käyttöön jossakin näistä maista ja kyseisen maan valuutalla, saa asetuksen automaattisesti. Muissa myymälöissä sen voi ottaa käyttöön Käteisen pyöristys -kortilla kohdan Asetukset → Maksutavat alareunassa: valitse, mihin käteinen pyöristetään (Ei pyöristystä, 0,05, 0,10, 0,50 tai 1,00) ja, jos arvo voi osua tasan puoliväliin, pyöristetäänkö ylös vai alas. Muutos koskee vain myöhempiä maksuja."
+        "text": "Uusi myymälä, joka otetaan käyttöön jossakin näistä maista ja kyseisen maan valuutalla, saa asetuksen automaattisesti. Muissa myymälöissä sen voi ottaa käyttöön Käteisen pyöristys -kortilla kohdan Asetukset → Maksutavat alareunassa: valitse, mihin käteinen pyöristetään (Ei pyöristystä; valuutassa, jossa on senttejä: 0,05, 0,10, 0,50 tai 1,00; valuutassa, jossa ei ole senttejä, kuten TWD tai JPY: 5, 10, 50 tai 100) ja, jos arvo voi osua tasan puoliväliin, pyöristetäänkö ylös vai alas. Muutos koskee vain myöhempiä maksuja."
       },
       {
         "type": "list",
@@ -914,7 +914,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Vaihtoehdon ja arvon nimi saa olla enintään 20 merkkiä pitkä, ja nimen alusta ja lopusta poistetaan välilyönnit tallennettaessa. Arvoa, johon et ole kirjoittanut mitään, ei lasketa yhdistelmäksi, vaan se ohitetaan tallennettaessa; punaisella korostuu vain tyhjä vaihtoehdon nimi tai vaihtoehto, jonka kaikki arvot ovat tyhjiä. Tuotteella, jolla on variantteja, ei voi käyttää avohintaa."
+        "text": "Vaihtoehdon ja arvon nimi saa olla enintään 20 merkkiä pitkä, ja nimen alusta ja lopusta poistetaan välilyönnit tallennettaessa. Arvoa, johon et ole kirjoittanut mitään, ei lasketa yhdistelmäksi, vaan se ohitetaan tallennettaessa. Tallennus keskeytyy, ja kenttä korostuu punaisella, kun vaihtoehdon nimi on tyhjä, kun kaikki vaihtoehdon arvot ovat tyhjiä tai kun tyhjennät arvon, jonka tuote on jo tallennettuna; kirjoita se takaisin tai poista se napauttamalla sen ×-painiketta. Tuotteella, jolla on variantteja, ei voi käyttää avohintaa."
       }
     ],
     "related": [

@@ -392,7 +392,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Mva.-satser med navn kom i v3.5. Når du oppdaterer, blir mva.-satsen din til en mva.-sats med navn («GST 10 %» i Australia, for eksempel), og alle eksisterende produkter tar den. En butikk med sats 0 får ingen mva. Tidligere ordrer og rapporter beholder tallene sine."
+        "text": "Mva.-satser med navn kom i v3.5. Når du oppdaterer, blir mva.-satsen din til en mva.-sats med navn («GST 10 %» i Australia, for eksempel), og alle eksisterende produkter tar den. En butikk med sats 0 får ingen mva. Tidligere ordrer og returer beholder mva.-satsene og beløpene de ble registrert med; rapporter regner nå salgsinntekt før mva., også for tidligere perioder (se «Hva er forskjellen på salgsinntekt og mottatt betaling?»)."
       }
     ],
     "related": [
@@ -511,7 +511,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "En ny butikk som settes opp i ett av disse landene, med landets valuta, får dette slått på automatisk. Andre butikker kan slå det på med kortet Kontantavrunding nederst under Innstillinger → Betalingsmåter: velg hva kontanter skal avrundes til (Ingen avrunding, 0,05, 0,10, 0,50 eller 1,00), og for en enhet som kan havne nøyaktig midt imellom, om det avrundes opp eller ned. En endring gjelder bare senere betalinger."
+        "text": "En ny butikk som settes opp i ett av disse landene, med landets valuta, får dette slått på automatisk. Andre butikker kan slå det på med kortet Kontantavrunding nederst under Innstillinger → Betalingsmåter: velg hva kontanter skal avrundes til (Ingen avrunding, eller 0,05, 0,10, 0,50 eller 1,00 i en valuta med øre; 5, 10, 50 eller 100 i en valuta uten øre, for eksempel TWD eller JPY), og for en enhet som kan havne nøyaktig midt imellom, om det avrundes opp eller ned. En endring gjelder bare senere betalinger."
       },
       {
         "type": "list",
@@ -913,7 +913,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Navn på produktvalg og valgverdier kan ha maks 20 tegn, og mellomrom i begynnelsen og slutten fjernes når du lagrer. En verdi du ikke har skrevet noe i, er ikke en kombinasjon og hoppes over ved lagring. Bare et tomt navn på produktvalget, eller et produktvalg der alle verdiene er tomme, får rød kant. Et produkt med varianter kan ikke bruke åpen pris."
+        "text": "Navn på produktvalg og valgverdier kan ha maks 20 tegn, og mellomrom i begynnelsen og slutten fjernes når du lagrer. En verdi du ikke har skrevet noe i, er ikke en kombinasjon og hoppes over ved lagring. Lagringen stopper, og feltet får rød kant, når navnet på et produktvalg er tomt, når alle verdiene til et produktvalg er tomme, eller når du tømmer en verdi produktet allerede hadde lagret; skriv den inn igjen, eller fjern den med ×-knappen. Et produkt med varianter kan ikke bruke åpen pris."
       }
     ],
     "related": [

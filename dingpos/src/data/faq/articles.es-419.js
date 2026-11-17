@@ -388,7 +388,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Los impuestos con nombre llegaron en la v3.5. Al actualizar, tu tasa de impuesto pasa a ser un impuesto con nombre (por ejemplo, «GST 10 %» en Australia) y todos los productos existentes lo llevan; una tienda cuya tasa era 0 no queda con impuesto. Los pedidos y reportes anteriores conservan sus cifras."
+        "text": "Los impuestos con nombre llegaron en la v3.5. Al actualizar, tu tasa de impuesto pasa a ser un impuesto con nombre (por ejemplo, «GST 10 %» en Australia) y todos los productos existentes lo llevan; una tienda cuya tasa era 0 no queda con impuesto. Los pedidos y las devoluciones anteriores conservan las tasas y los montos de impuesto con los que se registraron; los reportes ahora cuentan los ingresos antes de impuesto, también los de periodos pasados (consulta «¿Cuál es la diferencia entre ingresos por ventas y dinero recibido?»)."
       }
     ],
     "related": [
@@ -504,7 +504,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Una tienda nueva configurada en uno de estos países, con la moneda de ese país, lo recibe ya activado. Cualquier otra tienda puede activarlo en la sección Redondeo de efectivo, al final de Ajustes → Métodos de pago: elige a qué monto redondear el efectivo (Sin redondeo, 0.05, 0.10, 0.50 o 1.00) y, en un incremento que puede quedar justo a la mitad, si esa mitad se redondea hacia arriba o hacia abajo. Un cambio se aplica solo a los pagos posteriores."
+        "text": "Una tienda nueva configurada en uno de estos países, con la moneda de ese país, lo recibe ya activado. Cualquier otra tienda puede activarlo en la sección Redondeo de efectivo, al final de Ajustes → Métodos de pago: elige a qué monto redondear el efectivo (Sin redondeo, o bien 0.05, 0.10, 0.50 o 1.00 en una moneda con centavos; 5, 10, 50 o 100 en una sin centavos, como TWD o JPY) y, en un incremento que puede quedar justo a la mitad, si esa mitad se redondea hacia arriba o hacia abajo. Un cambio se aplica solo a los pagos posteriores."
       },
       {
         "type": "list",
@@ -902,7 +902,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Los nombres de opciones y valores están limitados a 20 caracteres, y los espacios al principio y al final se recortan al guardar. Un valor en el que no escribiste nada no es una combinación y se omite al guardar; solo se marca con contorno rojo un nombre de opción en blanco, o una opción cuyos valores están todos en blanco. Un producto con variantes no puede usar precio abierto."
+        "text": "Los nombres de opciones y valores están limitados a 20 caracteres, y los espacios al principio y al final se recortan al guardar. Un valor en el que no escribiste nada no es una combinación y se omite al guardar. El guardado se detiene, con el campo marcado con contorno rojo, cuando un nombre de opción está en blanco, cuando todos los valores de una opción están en blanco o cuando borras un valor que el producto ya tenía guardado; vuelve a escribirlo o quítalo con su ×. Un producto con variantes no puede usar precio abierto."
       }
     ],
     "related": [

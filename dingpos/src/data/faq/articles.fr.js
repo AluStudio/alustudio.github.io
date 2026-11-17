@@ -386,7 +386,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Les taxes nommées sont arrivées avec la v3.5. À la mise à jour, votre taux de taxe devient une taxe nommée (« GST 10 % » en Australie, par exemple) et chaque produit existant l’applique ; un magasin dont le taux était de 0 n’obtient aucune taxe. Les commandes passées et les rapports conservent leurs chiffres."
+        "text": "Les taxes nommées sont arrivées avec la v3.5. À la mise à jour, votre taux de taxe devient une taxe nommée (« GST 10 % » en Australie, par exemple) et chaque produit existant l’applique ; un magasin dont le taux était de 0 n’obtient aucune taxe. Les commandes passées et les retours conservent les taux et montants de taxe avec lesquels ils ont été enregistrés ; les rapports comptent désormais le chiffre d’affaires hors taxes, périodes passées comprises (voir « Quelle différence entre chiffre d’affaires et encaissements ? »)."
       }
     ],
     "related": [
@@ -503,7 +503,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Un nouveau magasin créé dans l’un de ces pays, dans la devise de ce pays, obtient cet arrondi automatiquement. Tout autre magasin peut l’activer avec la carte Arrondi des espèces, en bas de Réglages → Moyens de paiement : choisissez à quoi arrondir les espèces (Aucun arrondi, 0,05, 0,10, 0,50 ou 1,00) et, pour un pas qui peut tomber exactement à mi-chemin, si l’arrondi se fait au-dessus ou en dessous. Une modification ne s’applique qu’aux paiements suivants."
+        "text": "Un nouveau magasin créé dans l’un de ces pays, dans la devise de ce pays, obtient cet arrondi automatiquement. Tout autre magasin peut l’activer avec la carte Arrondi des espèces, en bas de Réglages → Moyens de paiement : choisissez à quoi arrondir les espèces (Aucun arrondi ; 0,05, 0,10, 0,50 ou 1,00 dans une devise avec centimes ; 5, 10, 50 ou 100 dans une devise sans centimes, comme le TWD ou le JPY) et, pour un pas qui peut tomber exactement à mi-chemin, si l’arrondi se fait au-dessus ou en dessous. Une modification ne s’applique qu’aux paiements suivants."
       },
       {
         "type": "list",
@@ -904,7 +904,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Les noms d’options et de valeurs sont limités à 20 caractères, et les espaces au début et à la fin sont supprimés à l’enregistrement. Une valeur dans laquelle vous n’avez rien saisi n’est pas une combinaison et est ignorée à l’enregistrement ; seul un nom d’option vide, ou une option dont toutes les valeurs sont vides, est entouré de rouge. Un produit avec variantes ne peut pas avoir de prix libre."
+        "text": "Les noms d’options et de valeurs sont limités à 20 caractères, et les espaces au début et à la fin sont supprimés à l’enregistrement. Une valeur dans laquelle vous n’avez rien saisi n’est pas une combinaison et est ignorée à l’enregistrement. L’enregistrement s’arrête, avec le champ entouré de rouge, quand un nom d’option est vide, quand toutes les valeurs d’une option sont vides, ou quand vous effacez une valeur que le produit avait déjà enregistrée ; saisissez-la de nouveau, ou supprimez-la en touchant le bouton ×. Un produit avec variantes ne peut pas avoir de prix libre."
       }
     ],
     "related": [

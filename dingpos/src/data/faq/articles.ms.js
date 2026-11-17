@@ -390,7 +390,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Cukai bernama diperkenalkan dalam v3.5. Apabila anda mengemas kini, kadar cukai anda menjadi cukai bernama (contohnya “GST 10%” di Australia) dan setiap produk sedia ada mengenakannya; kedai yang kadarnya 0 tidak dikenakan sebarang cukai. Pesanan lepas dan laporan kekal dengan angka masing-masing."
+        "text": "Cukai bernama diperkenalkan dalam v3.5. Apabila anda mengemas kini, kadar cukai anda menjadi cukai bernama (contohnya “GST 10%” di Australia) dan setiap produk sedia ada mengenakannya; kedai yang kadarnya 0 tidak dikenakan sebarang cukai. Pesanan dan pemulangan lepas mengekalkan kadar dan jumlah cukai yang direkodkan bersamanya; laporan kini mengira hasil jualan sebelum cukai, termasuk tempoh lepas (lihat “Apakah beza antara Hasil Jualan dan Tunai Diterima?”)."
       }
     ],
     "related": [
@@ -506,7 +506,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kedai baharu yang disediakan di salah sebuah negara ini, dalam mata wang negara itu, akan ditetapkan secara automatik. Kedai lain boleh menghidupkannya melalui kad Pembundaran tunai di bahagian bawah Tetapan → Kaedah Pembayaran: pilih jumlah untuk membundarkan tunai (Tiada pembundaran, 0.05, 0.10, 0.50 atau 1.00), dan bagi kenaikan yang boleh jatuh tepat di tengah, sama ada ia dibundarkan ke atas atau ke bawah. Perubahan hanya terpakai untuk bayaran yang kemudian."
+        "text": "Kedai baharu yang disediakan di salah sebuah negara ini, dalam mata wang negara itu, akan ditetapkan secara automatik. Kedai lain boleh menghidupkannya melalui kad Pembundaran tunai di bahagian bawah Tetapan → Kaedah Pembayaran: pilih jumlah untuk membundarkan tunai (Tiada pembundaran, atau 0.05, 0.10, 0.50 atau 1.00 dalam mata wang yang ada sen; 5, 10, 50 atau 100 dalam mata wang yang tiada sen, seperti TWD atau JPY), dan bagi kenaikan yang boleh jatuh tepat di tengah, sama ada ia dibundarkan ke atas atau ke bawah. Perubahan hanya terpakai untuk bayaran yang kemudian."
       },
       {
         "type": "list",
@@ -904,7 +904,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Nama pilihan dan nama nilai dihadkan kepada 20 aksara, dan ruang pada kedua-dua hujung nama dibuang apabila anda menyimpan. Nilai yang belum ditaip apa-apa bukan satu gabungan dan dilangkau semasa menyimpan; hanya nama pilihan yang kosong, atau pilihan yang semua nilainya kosong, ditandakan dengan garis merah. Produk yang mempunyai varian tidak boleh menggunakan harga terbuka."
+        "text": "Nama pilihan dan nama nilai dihadkan kepada 20 aksara, dan ruang pada kedua-dua hujung nama dibuang apabila anda menyimpan. Nilai yang belum ditaip apa-apa bukan satu gabungan dan dilangkau semasa menyimpan. Penyimpanan terhenti dengan medan ditandakan dengan garis merah apabila nama pilihan kosong, apabila semua nilai sesuatu pilihan kosong, atau apabila anda mengosongkan nilai yang sudah disimpan pada produk; taip semula nilai itu, atau buangkannya dengan ×. Produk yang mempunyai varian tidak boleh menggunakan harga terbuka."
       }
     ],
     "related": [

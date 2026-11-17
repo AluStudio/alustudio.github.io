@@ -395,7 +395,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Tatimet me emër erdhën në v3.5. Kur përditëson, norma jote e tatimit bëhet një tatim me emër (për shembull “GST 10%” në Australi) dhe të gjitha produktet ekzistuese e mbartin atë; një dyqan që kishte normë 0 nuk ngarkon tatim. Porositë e kaluara dhe raportet i mbajnë shifrat e tyre."
+        "text": "Tatimet me emër erdhën në v3.5. Kur përditëson, norma jote e tatimit bëhet një tatim me emër (për shembull “GST 10%” në Australi) dhe të gjitha produktet ekzistuese e mbartin atë; një dyqan që kishte normë 0 nuk ngarkon tatim. Porositë e kaluara dhe kthimet i mbajnë normat e tatimit dhe shumat me të cilat u regjistruan; raportet tani i numërojnë të ardhurat para tatimit, përfshirë periudhat e kaluara (shih “Cili është ndryshimi mes të ardhurave nga shitjet dhe parave të arkëtuara?”)."
       }
     ],
     "related": [
@@ -512,7 +512,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Një dyqan i ri i konfiguruar në një nga këto shtete dhe me monedhën e atij shteti e ka këtë cilësim të aktivizuar automatikisht. Çdo dyqan tjetër mund ta aktivizojë te karta Rrumbullakimi i parave, në fund të Cilësimet → Mënyrat e pagesës: zgjidh shumën drejt së cilës do të rrumbullakosen pagesat me para në dorë (Pa rrumbullakim, 0.05, 0.10, 0.50 ose 1.00) dhe, kur një shumë mund të jetë saktësisht në mes të dy vlerave, nëse rrumbullakimi bëhet lart apo poshtë. Ndryshimi vlen vetëm për pagesat e mëvonshme."
+        "text": "Një dyqan i ri i konfiguruar në një nga këto shtete dhe me monedhën e atij shteti e ka këtë cilësim të aktivizuar automatikisht. Çdo dyqan tjetër mund ta aktivizojë te karta Rrumbullakimi i parave, në fund të Cilësimet → Mënyrat e pagesës: zgjidh shumën drejt së cilës do të rrumbullakosen pagesat me para në dorë (Pa rrumbullakim; në një monedhë me cent 0.05, 0.10, 0.50 ose 1.00; në një monedhë pa cent 5, 10, 50 ose 100, si TWD ose JPY) dhe, kur një shumë mund të jetë saktësisht në mes të dy vlerave, nëse rrumbullakimi bëhet lart apo poshtë. Ndryshimi vlen vetëm për pagesat e mëvonshme."
       },
       {
         "type": "list",
@@ -910,7 +910,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Emrat e opsioneve dhe të vlerave mund të kenë deri në 20 karaktere dhe hapësirat në fillim e në fund hiqen kur ruan. Një vlerë ku nuk ke shkruar asgjë nuk është kombinim dhe anashkalohet kur ruan; rrethohet me të kuqe vetëm një emër opsioni bosh, ose një opsion që ka të gjitha vlerat bosh. Një produkt me variante nuk mund të përdorë çmim në shitje."
+        "text": "Emrat e opsioneve dhe të vlerave mund të kenë deri në 20 karaktere dhe hapësirat në fillim e në fund hiqen kur ruan. Një vlerë ku nuk ke shkruar asgjë nuk është kombinim dhe anashkalohet kur ruan. Ruajtja ndalet me fushën e rrethuar me të kuqe kur një emër opsioni është bosh, kur të gjitha vlerat e një opsioni janë bosh, ose kur pastron një vlerë që produkti e kishte të ruajtur; shkruaje përsëri ose hiqe duke prekur ikonën ×. Një produkt me variante nuk mund të përdorë çmim në shitje."
       }
     ],
     "related": [

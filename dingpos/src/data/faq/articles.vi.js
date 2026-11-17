@@ -388,7 +388,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Thuế có tên xuất hiện từ v3.5. Khi bạn cập nhật, thuế suất hiện có sẽ trở thành một loại thuế có tên (ví dụ “GST 10%” ở Úc) và mọi sản phẩm hiện có đều áp dụng loại thuế đó; cửa hàng có thuế suất 0 thì không có thuế nào. Các đơn hàng và báo cáo cũ giữ nguyên số liệu."
+        "text": "Thuế có tên xuất hiện từ v3.5. Khi bạn cập nhật, thuế suất hiện có sẽ trở thành một loại thuế có tên (ví dụ “GST 10%” ở Úc) và mọi sản phẩm hiện có đều áp dụng loại thuế đó; cửa hàng có thuế suất 0 thì không có thuế nào. Các đơn hàng và đơn trả hàng cũ giữ nguyên thuế suất và số tiền thuế đã ghi nhận; báo cáo nay tính doanh thu trước thuế, kể cả các kỳ trước (xem “Doanh thu và Tiền đã thu khác nhau thế nào?”)."
       }
     ],
     "related": [
@@ -505,7 +505,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Cửa hàng mới thiết lập ở một trong các quốc gia này, với đồng tiền của quốc gia đó, sẽ được bật sẵn. Cửa hàng khác có thể bật bằng thẻ Làm tròn tiền mặt ở cuối Cài đặt → Phương thức thanh toán: chọn mức làm tròn tiền mặt (Không làm tròn, 0.05, 0.10, 0.50 hoặc 1.00), và với mức làm tròn có thể rơi đúng ở giữa thì chọn làm tròn lên hay xuống. Thay đổi chỉ áp dụng cho các khoản thanh toán sau đó."
+        "text": "Cửa hàng mới thiết lập ở một trong các quốc gia này, với đồng tiền của quốc gia đó, sẽ được bật sẵn. Cửa hàng khác có thể bật bằng thẻ Làm tròn tiền mặt ở cuối Cài đặt → Phương thức thanh toán: chọn mức làm tròn tiền mặt (Không làm tròn, 0.05, 0.10, 0.50 hoặc 1.00 với loại tiền có xu; 5, 10, 50 hoặc 100 với loại tiền không có xu, như TWD hoặc JPY), và với mức làm tròn có thể rơi đúng ở giữa thì chọn làm tròn lên hay xuống. Thay đổi chỉ áp dụng cho các khoản thanh toán sau đó."
       },
       {
         "type": "list",
@@ -905,7 +905,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Tên tùy chọn và tên lựa chọn tối đa 20 ký tự, và khoảng trắng ở hai đầu sẽ được cắt bỏ khi bạn lưu. Một lựa chọn bạn chưa nhập gì không phải là tổ hợp và sẽ bị bỏ qua khi lưu; chỉ tên tùy chọn để trống, hoặc tùy chọn mà mọi lựa chọn đều để trống, mới bị viền đỏ. Sản phẩm có biến thể không dùng được giá tự đặt."
+        "text": "Tên tùy chọn và tên lựa chọn tối đa 20 ký tự, và khoảng trắng ở hai đầu sẽ được cắt bỏ khi bạn lưu. Một lựa chọn bạn chưa nhập gì không phải là tổ hợp và sẽ bị bỏ qua khi lưu. Việc lưu sẽ dừng lại, với ô bị viền đỏ, khi tên tùy chọn để trống, khi mọi lựa chọn của một tùy chọn đều để trống, hoặc khi bạn xóa trống một lựa chọn mà sản phẩm đã lưu trước đó; hãy nhập lại, hoặc xóa nó bằng nút × (Xóa). Sản phẩm có biến thể không dùng được giá tự đặt."
       }
     ],
     "related": [

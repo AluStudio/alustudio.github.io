@@ -388,7 +388,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Nomli soliqlar v3.5 da paydo bo‘lgan. Yangilaganingizda soliq stavkangiz nomli soliqqa aylanadi (masalan, Avstraliyada “GST 10%”) va barcha mavjud mahsulotlar uni oladi; stavkasi 0 bo‘lgan do‘konda soliq bo‘lmaydi. Oldingi buyurtmalar va hisobotlar o‘z raqamlarini saqlab qoladi."
+        "text": "Nomli soliqlar v3.5 da paydo bo‘lgan. Yangilaganingizda soliq stavkangiz nomli soliqqa aylanadi (masalan, Avstraliyada “GST 10%”) va barcha mavjud mahsulotlar uni oladi; stavkasi 0 bo‘lgan do‘konda soliq bo‘lmaydi. Oldingi buyurtmalar va qaytarishlar yozilgan soliq stavkalari va summalarini saqlab qoladi; hisobotlar endi daromadni soliqdan oldin hisoblaydi, o‘tgan davrlar ham (qarang: “Daromad bilan qabul qilingan pul o‘rtasida qanday farq bor?”)."
       }
     ],
     "related": [
@@ -505,7 +505,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Shu mamlakatlardan birida, o‘sha mamlakat valyutasida sozlangan yangi do‘konda bu avtomatik yoqiladi. Boshqa har qanday do‘kon uni Sozlamalar → To‘lov usullari ekranining pastidagi Naqd pulni yaxlitlash kartasi orqali yoqishi mumkin: naqd pul nimagacha yaxlitlanishini tanlang (Yaxlitlanmaydi, 0.05, 0.10, 0.50 yoki 1.00), aynan o‘rtaga tushishi mumkin bo‘lgan qadam uchun esa o‘rtasi yuqoriga (Yuqoriga yaxlitlash) yoki pastga (Pastga yaxlitlash) yaxlitlanishini. O‘zgartirish faqat keyingi to‘lovlarga ta’sir qiladi."
+        "text": "Shu mamlakatlardan birida, o‘sha mamlakat valyutasida sozlangan yangi do‘konda bu avtomatik yoqiladi. Boshqa har qanday do‘kon uni Sozlamalar → To‘lov usullari ekranining pastidagi Naqd pulni yaxlitlash kartasi orqali yoqishi mumkin: naqd pul nimagacha yaxlitlanishini tanlang (Yaxlitlanmaydi yoki sentli valyutada 0.05, 0.10, 0.50, 1.00; TWD yoki JPY kabi sentsiz valyutada 5, 10, 50, 100), aynan o‘rtaga tushishi mumkin bo‘lgan qadam uchun esa o‘rtasi yuqoriga (Yuqoriga yaxlitlash) yoki pastga (Pastga yaxlitlash) yaxlitlanishini. O‘zgartirish faqat keyingi to‘lovlarga ta’sir qiladi."
       },
       {
         "type": "list",
@@ -901,7 +901,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Xususiyat va qiymat nomlari 20 belgidan oshmasligi kerak, saqlaganingizda esa ikki chetdagi bo‘shliqlar olib tashlanadi. Hech narsa yozilmagan qiymat kombinatsiya hisoblanmaydi va saqlashda o‘tkazib yuboriladi; faqat bo‘sh xususiyat nomi yoki barcha qiymatlari bo‘sh bo‘lgan xususiyat qizil ramka bilan ajratiladi. Variantli mahsulotda erkin narxdan foydalanib bo‘lmaydi."
+        "text": "Xususiyat va qiymat nomlari 20 belgidan oshmasligi kerak, saqlaganingizda esa ikki chetdagi bo‘shliqlar olib tashlanadi. Hech narsa yozilmagan qiymat kombinatsiya hisoblanmaydi va saqlashda o‘tkazib yuboriladi; xususiyat nomi bo‘sh bo‘lsa, xususiyatning barcha qiymatlari bo‘sh bo‘lsa yoki mahsulotda avval saqlangan qiymatni tozalab qo‘ysangiz, saqlash qizil ramkaga olingan maydonda to‘xtaydi; uni qayta yozing yoki yonidagi × belgisini bosib olib tashlang. Variantli mahsulotda erkin narxdan foydalanib bo‘lmaydi."
       }
     ],
     "related": [

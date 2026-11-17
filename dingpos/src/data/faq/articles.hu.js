@@ -386,7 +386,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Az elnevezett adók a 3.5-ös verzióval érkeztek. Frissítéskor az Ön adókulcsa elnevezett adóvá válik (például Ausztráliában „GST 10%”), és minden meglévő termék ezt számítja fel; ha az üzlet kulcsa 0 volt, nem kap adót. A korábbi rendelések és riportok megtartják a számaikat."
+        "text": "Az elnevezett adók a 3.5-ös verzióval érkeztek. Frissítéskor az Ön adókulcsa elnevezett adóvá válik (például Ausztráliában „GST 10%”), és minden meglévő termék ezt számítja fel; ha az üzlet kulcsa 0 volt, nem kap adót. A korábbi rendelések és visszavételek megtartják azokat az adókulcsokat és összegeket, amelyekkel rögzítették őket; a riportok mostantól az adó nélküli árbevételt számolják, a korábbi időszakokat is beleértve (lásd: „Mi a különbség az árbevétel és a beérkezett pénz között?”)."
       }
     ],
     "related": [
@@ -504,7 +504,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Az ezen országok valamelyikében, az adott ország pénznemében létrehozott új üzletnél ez automatikusan be van állítva. Bármely más üzlet a Beállítások → Fizetési módok alján található Készpénz kerekítése kártyán kapcsolhatja be: válassza ki, mire kerekítsen a rendszer (Nincs kerekítés, 0,05, 0,10, 0,50 vagy 1,00), és azoknál a kerekítési egységeknél, amelyek pontosan félútra eshetnek, azt is, hogy ilyenkor felfelé vagy lefelé kerekítsen. A módosítás csak a későbbi fizetésekre vonatkozik."
+        "text": "Az ezen országok valamelyikében, az adott ország pénznemében létrehozott új üzletnél ez automatikusan be van állítva. Bármely más üzlet a Beállítások → Fizetési módok alján található Készpénz kerekítése kártyán kapcsolhatja be: válassza ki, mire kerekítsen a rendszer (Nincs kerekítés, vagy centtel rendelkező pénznemnél 0,05, 0,10, 0,50 vagy 1,00; cent nélküli pénznemnél, például TWD vagy JPY esetén 5, 10, 50 vagy 100), és azoknál a kerekítési egységeknél, amelyek pontosan félútra eshetnek, azt is, hogy ilyenkor felfelé vagy lefelé kerekítsen. A módosítás csak a későbbi fizetésekre vonatkozik."
       },
       {
         "type": "list",
@@ -904,7 +904,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A jellemzők és az értékek neve legfeljebb 20 karakter lehet, és mentéskor a két végén lévő szóközöket a rendszer levágja. Az az érték, amelybe nem írt semmit, nem kombináció, ezért mentéskor kimarad; pirosan bekeretezve csak az üres jellemzőnév, illetve az a jellemző jelenik meg, amelynek minden értéke üres. A változatokkal rendelkező termék nem lehet szabadáras."
+        "text": "A jellemzők és az értékek neve legfeljebb 20 karakter lehet, és mentéskor a két végén lévő szóközöket a rendszer levágja. Az az érték, amelybe nem írt semmit, nem kombináció, ezért mentéskor kimarad; a mentés megáll, és a mező pirosan bekeretezve jelenik meg, ha a jellemzőnév üres, ha egy jellemző minden értéke üres, vagy ha olyan értéket töröl, amely a terméknél már el volt mentve; írja vissza, vagy koppintson az érték melletti × ikonra az eltávolításához. A változatokkal rendelkező termék nem lehet szabadáras."
       }
     ],
     "related": [

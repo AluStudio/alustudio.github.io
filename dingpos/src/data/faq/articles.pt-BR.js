@@ -387,7 +387,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Os impostos com nome chegaram na versão 3.5. Ao atualizar, sua alíquota vira um imposto com nome (“GST 10%” na Austrália, por exemplo) e todos os produtos existentes passam a cobrá-lo; uma loja cuja alíquota era 0 fica sem imposto. As vendas e os relatórios anteriores mantêm os valores."
+        "text": "Os impostos com nome chegaram na versão 3.5. Ao atualizar, sua alíquota vira um imposto com nome (“GST 10%” na Austrália, por exemplo) e todos os produtos existentes passam a cobrá-lo; uma loja cuja alíquota era 0 fica sem imposto. As vendas e as devoluções anteriores mantêm as alíquotas e os valores com que foram registradas; os relatórios agora contam a receita antes do imposto, inclusive de períodos passados (veja “Qual é a diferença entre Receita e Valor recebido?”)."
       }
     ],
     "related": [
@@ -503,7 +503,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Uma loja nova configurada em um desses países, com a moeda do país, já vem com o arredondamento ativado. Qualquer outra loja pode ativá-lo no cartão Arredondamento do dinheiro, no fim de Ajustes → Formas de pagamento: escolha para quanto arredondar o dinheiro (Sem arredondamento, 0,05, 0,10, 0,50 ou 1,00) e, para um múltiplo que pode cair exatamente no meio, se esse valor sobe ou desce. Uma alteração vale apenas para pagamentos futuros."
+        "text": "Uma loja nova configurada em um desses países, com a moeda do país, já vem com o arredondamento ativado. Qualquer outra loja pode ativá-lo no cartão Arredondamento do dinheiro, no fim de Ajustes → Formas de pagamento: escolha para quanto arredondar o dinheiro (Sem arredondamento, ou 0,05, 0,10, 0,50 ou 1,00 em uma moeda com centavos; 5, 10, 50 ou 100 em uma sem centavos, como TWD ou JPY) e, para um múltiplo que pode cair exatamente no meio, se esse valor sobe ou desce. Uma alteração vale apenas para pagamentos futuros."
       },
       {
         "type": "list",
@@ -902,7 +902,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Os nomes de opções e de valores podem ter até 20 caracteres, e os espaços no início e no fim são removidos ao salvar. Um valor em que você não digitou nada não é uma combinação e é ignorado ao salvar; só ficam destacados em vermelho um nome de opção em branco ou uma opção cujos valores estão todos em branco. Um produto com variantes não pode ter preço aberto."
+        "text": "Os nomes de opções e de valores podem ter até 20 caracteres, e os espaços no início e no fim são removidos ao salvar. Um valor em que você não digitou nada não é uma combinação e é ignorado ao salvar. O salvamento é interrompido, com o campo destacado em vermelho, quando um nome de opção está em branco, quando todos os valores de uma opção estão em branco ou quando você apaga um valor que o produto já tinha salvo; digite-o de volta ou exclua-o pelo botão de exclusão, que exibe apenas o ícone ×. Um produto com variantes não pode ter preço aberto."
       }
     ],
     "related": [

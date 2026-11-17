@@ -393,7 +393,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Namngiven moms kom i v3.5. När du uppdaterar blir din momssats en namngiven moms (till exempel ”GST 10 %” i Australien) och alla befintliga produkter får den. En butik vars sats var 0 får ingen moms. Tidigare ordrar och rapporter behåller sina siffror."
+        "text": "Namngiven moms kom i v3.5. När du uppdaterar blir din momssats en namngiven moms (till exempel ”GST 10 %” i Australien) och alla befintliga produkter får den. En butik vars sats var 0 får ingen moms. Tidigare ordrar och returer behåller de momssatser och belopp de registrerades med. Rapporterna räknar nu intäkt före moms, även för tidigare perioder (se ”Vad är skillnaden mellan intäkt och mottagna betalningar?”)."
       }
     ],
     "related": [
@@ -510,7 +510,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "En ny butik som ställs in i något av de här länderna, med det landets valuta, får det inställt automatiskt. Alla andra butiker kan slå på det med kortet Kontantavrundning längst ned under Inställningar → Betalningssätt: välj vad kontanterna ska avrundas till (Ingen avrundning, 0.05, 0.10, 0.50 eller 1.00) och, för ett steg som kan hamna exakt på mitten, om det avrundas uppåt eller nedåt. En ändring gäller bara senare betalningar."
+        "text": "En ny butik som ställs in i något av de här länderna, med det landets valuta, får det inställt automatiskt. Alla andra butiker kan slå på det med kortet Kontantavrundning längst ned under Inställningar → Betalningssätt: välj vad kontanterna ska avrundas till (Ingen avrundning, eller 0.05, 0.10, 0.50 eller 1.00 i en valuta med cent; 5, 10, 50 eller 100 i en valuta utan cent, till exempel TWD eller JPY) och, för ett steg som kan hamna exakt på mitten, om det avrundas uppåt eller nedåt. En ändring gäller bara senare betalningar."
       },
       {
         "type": "list",
@@ -913,7 +913,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Namn på alternativ och värden får vara högst 20 tecken långa, och mellanslag i början och slutet tas bort när du sparar. Ett värde du inte skrivit något i räknas inte som en kombination och hoppas över när du sparar; bara ett tomt alternativnamn, eller ett alternativ där alla värden är tomma, omges av en röd ram. En produkt med varianter kan inte ha fritt pris."
+        "text": "Namn på alternativ och värden får vara högst 20 tecken långa, och mellanslag i början och slutet tas bort när du sparar. Ett värde du inte skrivit något i räknas inte som en kombination och hoppas över när du sparar. Sparandet stoppas, och fältet omges av en röd ram, när ett alternativnamn är tomt, när alla värden i ett alternativ är tomma eller när du tömmer ett värde som produkten redan har sparat; skriv tillbaka värdet eller ta bort det med dess ×. En produkt med varianter kan inte ha fritt pris."
       }
     ],
     "related": [

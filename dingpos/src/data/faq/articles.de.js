@@ -392,7 +392,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Benannte Steuern gibt es seit Version 3.5. Beim Update wird Ihr bisheriger Steuersatz zu einer benannten Steuer (z. B. „GST 10 %“ in Australien), und jeder vorhandene Artikel übernimmt sie; bei einem Laden, dessen Satz 0 war, wird keine Steuer angelegt. Frühere Bestellungen und Berichte behalten ihre Zahlen."
+        "text": "Benannte Steuern gibt es seit Version 3.5. Beim Update wird Ihr bisheriger Steuersatz zu einer benannten Steuer (z. B. „GST 10 %“ in Australien), und jeder vorhandene Artikel übernimmt sie; bei einem Laden, dessen Satz 0 war, wird keine Steuer angelegt. Frühere Bestellungen und Rückgaben behalten die Steuersätze und Beträge, mit denen sie erfasst wurden; Berichte zählen den Umsatz jetzt vor Steuern, auch für vergangene Zeiträume (siehe „Was ist der Unterschied zwischen Umsatz und Zahlungseingang?“)."
       }
     ],
     "related": [
@@ -510,7 +510,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ein neuer Laden, der in einem dieser Länder mit der Landeswährung eingerichtet wird, erhält die Rundung automatisch. Jeder andere Laden kann sie mit der Karte „Barrundung“ ganz unten unter Einstellungen → Zahlungsarten einschalten: Wählen Sie, worauf Bargeld gerundet wird („Keine Rundung“, 0,05, 0,10, 0,50 oder 1,00) und – bei einem Rundungsschritt, der genau in der Mitte landen kann – ob dann auf- oder abgerundet wird. Eine Änderung gilt nur für spätere Zahlungen."
+        "text": "Ein neuer Laden, der in einem dieser Länder mit der Landeswährung eingerichtet wird, erhält die Rundung automatisch. Jeder andere Laden kann sie mit der Karte „Barrundung“ ganz unten unter Einstellungen → Zahlungsarten einschalten: Wählen Sie, worauf Bargeld gerundet wird („Keine Rundung“, in einer Währung mit Cent 0,05, 0,10, 0,50 oder 1,00; in einer Währung ohne Cent 5, 10, 50 oder 100, etwa bei TWD oder JPY) und – bei einem Rundungsschritt, der genau in der Mitte landen kann – ob dann auf- oder abgerundet wird. Eine Änderung gilt nur für spätere Zahlungen."
       },
       {
         "type": "list",
@@ -908,7 +908,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Namen von Optionen und Optionswerten sind auf 20 Zeichen begrenzt; Leerzeichen am Anfang und Ende werden beim Sichern entfernt. Ein Wert, in den Sie nichts eingetragen haben, ist keine Kombination und wird beim Sichern übersprungen; nur ein leerer Optionsname oder eine Option, deren Werte alle leer sind, wird rot umrandet. Ein Artikel mit Varianten kann keinen freien Preis verwenden."
+        "text": "Namen von Optionen und Optionswerten sind auf 20 Zeichen begrenzt; Leerzeichen am Anfang und Ende werden beim Sichern entfernt. Ein Wert, in den Sie nichts eingetragen haben, ist keine Kombination und wird beim Sichern übersprungen. Das Sichern stoppt mit rot umrandetem Feld, wenn ein Optionsname leer ist, wenn alle Werte einer Option leer sind oder wenn Sie einen Wert löschen, den der Artikel bereits gespeichert hatte; tragen Sie ihn wieder ein oder entfernen Sie ihn durch Tippen auf das ×-Symbol. Ein Artikel mit Varianten kann keinen freien Preis verwenden."
       }
     ],
     "related": [

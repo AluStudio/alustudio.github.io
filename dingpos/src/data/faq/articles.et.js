@@ -392,7 +392,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Nimega maksud tulid versiooniga 3.5. Uuendamisel muutub sinu maksumäär nimega maksuks (näiteks Austraalias „GST 10%“) ja iga olemasolev toode arvestab seda; kui poe määr oli 0, siis maksu ei lisandu. Varasemad müügid ja aruanded säilitavad oma numbrid."
+        "text": "Nimega maksud tulid versiooniga 3.5. Uuendamisel muutub sinu maksumäär nimega maksuks (näiteks Austraalias „GST 10%“) ja iga olemasolev toode arvestab seda; kui poe määr oli 0, siis maksu ei lisandu. Varasemad müügid ja tagastused säilitavad maksumäärad ja -summad, millega need salvestati; aruannetes arvestatakse müügitulu nüüd enne maksu, ka varasemate perioodide puhul (vt „Mis vahe on müügitulul ja laekunud rahal?“)."
       }
     ],
     "related": [
@@ -509,7 +509,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Uuel poel, mis on seadistatud ühes neist riikidest selle riigi valuutas, on see automaatselt sees. Iga teine pood saab selle sisse lülitada kaardil Sularaha ümardamine jaotise Seaded → Makseviisid allosas: vali, milleni sularaha ümardada (Ümardamata, 0,05, 0,10, 0,50 või 1,00) ning sammu puhul, mis võib sattuda täpselt poole peale, kas ümardatakse üles või alla. Muudatus kehtib ainult hilisematele maksetele."
+        "text": "Uuel poel, mis on seadistatud ühes neist riikidest selle riigi valuutas, on see automaatselt sees. Iga teine pood saab selle sisse lülitada kaardil Sularaha ümardamine jaotise Seaded → Makseviisid allosas: vali, milleni sularaha ümardada (Ümardamata või sendidega valuutas 0,05, 0,10, 0,50 või 1,00; sendideta valuutas, näiteks TWD või JPY, 5, 10, 50 või 100) ning sammu puhul, mis võib sattuda täpselt poole peale, kas ümardatakse üles või alla. Muudatus kehtib ainult hilisematele maksetele."
       },
       {
         "type": "list",
@@ -908,7 +908,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Valiku ja väärtuse nimi võib olla kuni 20 märki pikk ning tühikud nime mõlemas otsas eemaldatakse salvestamisel. Väärtus, kuhu pole midagi kirjutatud, ei ole kombinatsioon ja jäetakse salvestamisel vahele; punase äärisega tõstetakse esile ainult tühi valiku nimi või valik, mille kõik väärtused on tühjad. Variantidega toode ei saa kasutada kohapealset hinda."
+        "text": "Valiku ja väärtuse nimi võib olla kuni 20 märki pikk ning tühikud nime mõlemas otsas eemaldatakse salvestamisel. Väärtus, kuhu pole midagi kirjutatud, ei ole kombinatsioon ja jäetakse salvestamisel vahele; salvestamine peatub ja väli tõstetakse punase äärisega esile, kui valiku nimi on tühi, kui valiku kõik väärtused on tühjad või kui tühjendad väärtuse, mis tootel juba salvestatud oli; kirjuta see tagasi või eemalda see selle ×-nupuga. Variantidega toode ei saa kasutada kohapealset hinda."
       }
     ],
     "related": [

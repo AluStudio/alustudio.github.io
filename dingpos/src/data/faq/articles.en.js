@@ -163,7 +163,7 @@ export const articles = [
       },
       { type: "p", text: "To stop charging tax for a while, turn off Charge tax at the top of the Tax card: every later sale is tax-free, including items already in a cart. Each product keeps its taxes, and turning the switch back on restores them as they were." },
       { type: "p", text: "Full calculation order: item discounts and promotions → cart discount → points redemption → tax. Amounts are rounded half-up to the currency's decimal places (e.g. 0 for TWD, 2 for USD)." },
-      { type: "note", text: "Named taxes arrived in v3.5. When you update, your tax rate becomes a named tax (“GST 10%” in Australia, for example) and every existing product carries it; a store whose rate was 0 gets no tax. Past orders and reports keep their numbers." },
+      { type: "note", text: "Named taxes arrived in v3.5. When you update, your tax rate becomes a named tax (“GST 10%” in Australia, for example) and every existing product carries it; a store whose rate was 0 gets no tax. Past orders and returns keep the tax rates and amounts they were recorded with; reports now count revenue before tax, past periods included (see “What's the difference between Revenue and Cash Received?”)." },
     ],
     related: ["change-currency", "apply-discounts", "revenue-vs-cash"],
   },
@@ -210,7 +210,7 @@ export const articles = [
     keywords: ["cash rounding", "rounding", "round up", "round down", "coins", "penny", "cent", "0.05", "change", "canada", "australia", "switzerland"],
     content: [
       { type: "p", text: "Yes. Canada, Australia, New Zealand, Switzerland, Denmark, Sweden, Norway, Belgium, Finland, and Hungary no longer use their smallest coins, so DingPOS rounds cash to an amount you can actually hand over: a C$12.99 order paid in cash is taken as C$13.00, and change is worked out from C$13.00. Card and other non-cash payments stay exact." },
-      { type: "p", text: "A new store set up in one of these countries, in that country's currency, gets it set automatically. Any other store can turn it on with the Cash rounding card at the bottom of Settings → Payment Methods: pick what to round cash to (No rounding, 0.05, 0.10, 0.50, or 1.00), and for an increment that can land exactly halfway, whether that rounds up or down. A change applies to later payments only." },
+      { type: "p", text: "A new store set up in one of these countries, in that country's currency, gets it set automatically. Any other store can turn it on with the Cash rounding card at the bottom of Settings → Payment Methods: pick what to round cash to (No rounding, or 0.05, 0.10, 0.50, or 1.00 in a currency with cents; 5, 10, 50, or 100 in one without, such as TWD or JPY), and for an increment that can land exactly halfway, whether that rounds up or down. A change applies to later payments only." },
       {
         type: "list",
         items: [
@@ -413,7 +413,7 @@ export const articles = [
       { type: "p", text: "In the product edit page, tap Add Option under Variant Options to add an option (e.g. “Color”), then use “+ Value” to add each of its choices (e.g. Red, Blue). With two or more options (e.g. Color × Size), DingPOS expands every combination for you (Red/S, Red/M, Blue/S…)." },
       { type: "p", text: "Once a product has variants, its Price field folds away and each combination gets its own price under Variant Pricing & Stock, with its own stock (since v3.2; earlier versions still ask for a product price). The cashier, product list, and product detail show a range from the lowest to the highest price, like “NT$350–NT$390”, or a single price when every combination costs the same; sorting by price uses the lowest combination price. At checkout, tapping the product shows a variant picker before adding it to the cart." },
       { type: "p", text: "You don't have to enter a cost for every combination: an empty Cost field means Follows product, so it uses the product's cost and changes when that does. A number makes it Own cost — 0 included. Use product cost for all clears every own cost at once." },
-      { type: "note", text: "Option and value names are limited to 20 characters, and spaces at either end are trimmed when you save. A value you haven't typed anything into isn't a combination and is skipped on save; only a blank option name, or an option whose values are all blank, is outlined in red. A product with variants can't use an open price." },
+      { type: "note", text: "Option and value names are limited to 20 characters, and spaces at either end are trimmed when you save. A value you haven't typed anything into isn't a combination and is skipped on save. Saving stops with the field outlined in red when an option name is blank, when all of an option's values are blank, or when you clear a value the product already had saved; type it back, or remove it with its ×. A product with variants can't use an open price." },
     ],
     related: ["open-price-products", "barcode-scanning", "inventory-tracking"],
   },

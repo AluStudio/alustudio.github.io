@@ -388,7 +388,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Le imposte con nome sono arrivate con la v3.5. Quando aggiorni, la tua aliquota diventa un'imposta con nome (ad esempio «GST 10%» in Australia) e viene applicata a ogni prodotto esistente; un negozio con aliquota 0 non avrà alcuna imposta. Gli ordini passati e i report mantengono i loro numeri."
+        "text": "Le imposte con nome sono arrivate con la v3.5. Quando aggiorni, la tua aliquota diventa un'imposta con nome (ad esempio «GST 10%» in Australia) e viene applicata a ogni prodotto esistente; un negozio con aliquota 0 non avrà alcuna imposta. Gli ordini passati e i resi mantengono le aliquote e gli importi con cui sono stati registrati; i report ora contano i ricavi al netto dell'imposta, anche per i periodi passati (vedi «Che differenza c'è tra Ricavi e Incassato?»)."
       }
     ],
     "related": [
@@ -504,7 +504,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Un nuovo negozio configurato in uno di questi paesi, con la valuta di quel paese, ha l'arrotondamento già attivo. Qualsiasi altro negozio può attivarlo dalla scheda Arrotondamento contanti in fondo a Impostazioni → Metodi di pagamento: scegli a quale importo arrotondare i contanti (Nessun arrotondamento, 0,05, 0,10, 0,50 o 1,00) e, per un multiplo che può cadere esattamente a metà, se arrotondare per eccesso o per difetto. Una modifica vale solo per i pagamenti successivi."
+        "text": "Un nuovo negozio configurato in uno di questi paesi, con la valuta di quel paese, ha l'arrotondamento già attivo. Qualsiasi altro negozio può attivarlo dalla scheda Arrotondamento contanti in fondo a Impostazioni → Metodi di pagamento: scegli a quale importo arrotondare i contanti (Nessun arrotondamento, oppure 0,05, 0,10, 0,50 o 1,00 in una valuta con centesimi; 5, 10, 50 o 100 in una senza, come TWD o JPY) e, per un multiplo che può cadere esattamente a metà, se arrotondare per eccesso o per difetto. Una modifica vale solo per i pagamenti successivi."
       },
       {
         "type": "list",
@@ -904,7 +904,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "I nomi delle opzioni e dei valori possono avere al massimo 20 caratteri e gli spazi all'inizio e alla fine vengono eliminati al salvataggio. Un valore in cui non hai scritto nulla non è una combinazione e viene saltato al salvataggio; solo un nome di opzione vuoto, o un'opzione con tutti i valori vuoti, viene evidenziato in rosso. Un prodotto con varianti non può usare il prezzo libero."
+        "text": "I nomi delle opzioni e dei valori possono avere al massimo 20 caratteri e gli spazi all'inizio e alla fine vengono eliminati al salvataggio. Un valore in cui non hai scritto nulla non è una combinazione e viene saltato al salvataggio. Il salvataggio si interrompe, con il campo evidenziato in rosso, quando un nome di opzione è vuoto, quando tutti i valori di un'opzione sono vuoti o quando cancelli un valore che il prodotto aveva già salvato: riscrivilo oppure tocca la × per eliminarlo. Un prodotto con varianti non può usare il prezzo libero."
       }
     ],
     "related": [

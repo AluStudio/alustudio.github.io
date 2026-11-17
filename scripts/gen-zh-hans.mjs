@@ -112,6 +112,8 @@ const DINGPOS_SITE_GLOSSARY = [
   ["结列表张", "结清单张"], // APP_GLOSSARY 清单→列表 also hits 結清單張 (settle one bill)
   ["数据报括", "数据包括"], // OpenCC splits 資料包括 as 資料包 + 括
   ["小数字数", "小数位数"],
+  ["日圆", "日元"],
+  ["已存过的", "已保存的"],
   ["内核", "核心"], // 核心 is not an OS kernel
   ["开店精灵", "开店向导"], // mainland 精灵 is a sprite
   ["该车位", "该购物车"], // mainland 车位 is a parking space
