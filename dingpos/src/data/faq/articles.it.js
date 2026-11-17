@@ -84,18 +84,19 @@ export const articles = [
       "aprire il negozio",
       "app per punto cassa",
       "paese",
-      "valuta"
+      "valuta",
+      "imposte"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Alla prima apertura di DingPOS, una procedura guidata ti accompagna nell'apertura del negozio in due passaggi e pochi minuti:"
+        "text": "Alla prima apertura di DingPOS, una procedura guidata ti accompagna nell'apertura del negozio in due passaggi e in pochi minuti:"
       },
       {
         "type": "steps",
         "items": [
-          "Scegli il tuo paese o la tua regione. In cima all'elenco trovi la regione di questo iPad e i mercati più comuni; sotto ci sono tutti i 175 paesi e regioni in cui DingPOS è sull'App Store, ricercabili per nome nella lingua dell'app o in inglese. La tua scelta compila in automatico valuta, aliquota e modalità imposte.",
-          "In Il tuo negozio, inserisci il nome del negozio, se vuoi carica un logo e controlla valuta, aliquota e modalità imposte (inclusa / esclusa). La valuta è quella del tuo paese; toccala per sceglierne una tra 130 valute."
+          "Scegli il tuo paese o la tua regione. In cima all'elenco trovi il paese o la regione in cui si trova questo iPad e i mercati più comuni; sotto ci sono tutti i 175 paesi e regioni in cui DingPOS è sull'App Store, ricercabili per nome nella lingua dell'app o in inglese. La tua scelta compila in automatico valuta, imposte e modalità imposte.",
+          "Nel passaggio Il tuo negozio, inserisci il nome del negozio, se vuoi carica un logo e controlla valuta, imposte e modalità imposte (inclusa / esclusa). La valuta è quella del tuo paese; toccala per sceglierne una tra 130 valute. L'elenco delle imposte contiene quelle predefinite del tuo paese: puoi rinominarle, cambiare un'aliquota, eliminarne una o toccare Aggiungi imposta per un'altra riga. Un negozio nella British Columbia, ad esempio, cambia la prima riga in «GST 5» e aggiunge una riga «PST 7»."
         ]
       },
       {
@@ -104,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Valuta e modalità imposte non si possono cambiare dopo la configurazione; l'aliquota si può ancora modificare in seguito in Impostazioni. Negli Stati Uniti, in Canada, in Brasile e in Micronesia l'aliquota dipende dallo stato, dalla provincia o dalla città: il campo dell'aliquota parte vuoto e, per continuare, inserisci l'aliquota che applichi (0 è ammesso). L'elenco di 175 paesi e la scelta della valuta sono arrivati con la v3.2; le versioni precedenti offrivano 15 paesi."
+        "text": "La valuta non si può cambiare dopo la configurazione; imposte e modalità imposte si possono modificare in seguito in Impostazioni → Info negozio. Negli Stati Uniti, in Canada, in Brasile e in Micronesia l'aliquota dipende dallo stato, dalla provincia o dalla città: il campo dell'aliquota parte vuoto e, per continuare, inserisci l'aliquota che applichi. Un'aliquota deve essere superiore a 0: un negozio che non applica imposte elimina la riga. L'elenco di 175 paesi e la scelta della valuta sono arrivati con la v3.2; le versioni precedenti offrivano 15 paesi."
       }
     ],
     "related": [
@@ -181,11 +182,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Al momento DingPOS funziona su iPad con iPadOS 17 o successivo, pensato soprattutto per l'uso in orizzontale."
+        "text": "Al momento DingPOS funziona su iPad con iPadOS 17.4 o versioni successive ed è pensato soprattutto per l'uso in orizzontale."
       },
       {
         "type": "p",
         "text": "iPhone e Mac non sono ancora supportati. Se vuoi che supportiamo un altro dispositivo, scrivici e raccontaci come lo useresti."
+      },
+      {
+        "type": "note",
+        "text": "Ogni iPad che supporta iPadOS 17 può passare alla 17.4, quindi nessun modello resta escluso. Un iPad ancora fermo a iPadOS 17.0–17.3 richiede prima un aggiornamento di sistema, in Impostazioni → Generali → Aggiornamento software, per poter installare DingPOS v3.5 o versioni successive."
       }
     ],
     "related": [
@@ -195,22 +200,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Posso cambiare valuta o modalità imposte dopo la configurazione?",
+    "question": "Posso cambiare valuta, aliquota o modalità imposte dopo la configurazione?",
     "keywords": [
       "valuta",
       "modalità imposte",
       "cambiare",
       "bloccata",
-      "aliquota"
+      "aliquota",
+      "imposte",
+      "imposta inclusa",
+      "imposta esclusa"
     ],
     "content": [
       {
         "type": "p",
-        "text": "L'aliquota d'imposta si può cambiare in qualsiasi momento in Impostazioni: la nuova aliquota vale solo per i nuovi ordini."
+        "text": "Le imposte si possono cambiare; la valuta no. Imposte e modalità imposte si modificano entrambe nella scheda Imposta in Impostazioni → Info negozio, e la modifica vale solo per le vendite successive: ordini, resi e report passati mantengono gli importi e la modalità imposte con cui sono stati registrati."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Imposte: aggiungine una, rinominala, cambia la sua aliquota o eliminala — vedi «Come viene calcolata l'IVA?»",
+          "Modalità imposte (inclusa / esclusa): tocca l'altra modalità e la conferma mostra un esempio con la tua prima imposta, come «un articolo da NT$100 con imposta al 5%: il cliente paga NT$105». I prezzi mantengono i loro numeri e un carrello aperto viene ricalcolato nella nuova modalità quando torni in cassa. La modalità si può cambiare dalla v3.5; le versioni precedenti la bloccano alla configurazione.",
+          "Dopo il cambio, un reso completo rimborsa comunque l'ordine originale così com'era. Un cambio (con articoli sostitutivi) su un ordine venduto con l'altra modalità è bloccato: rimetti la modalità precedente, oppure rendi gli articoli e registrali di nuovo."
+        ]
       },
       {
         "type": "p",
-        "text": "Valuta e modalità imposte (imposta inclusa / esclusa) non sono più modificabili al termine della configurazione. Tutti gli ordini passati sono stati calcolati con quei valori, quindi cambiarli a metà strada falserebbe i report. Controllali nel passaggio Il tuo negozio della configurazione: la valuta è quella del tuo paese e puoi toccarla per sceglierne un'altra."
+        "text": "La valuta è bloccata al termine della configurazione. Ogni ordine passato è stato registrato in quella valuta, quindi cambiarla a metà strada falserebbe i report. Controllala nel passaggio Il tuo negozio della configurazione: per impostazione predefinita è la valuta del tuo paese e puoi toccarla per sceglierne un'altra."
       },
       {
         "type": "note",
@@ -328,14 +344,19 @@ export const articles = [
       "imposta",
       "IVA",
       "tasse",
+      "aliquota",
       "imposta inclusa",
       "imposta esclusa",
+      "più imposte",
+      "GST",
+      "PST",
+      "sospendere l'imposta",
       "scontrino"
     ],
     "content": [
       {
         "type": "p",
-        "text": "L'imposta viene calcolata in automatico in base alla modalità scelta durante la configurazione. In entrambe le modalità lo scontrino riporta l'importo dell'imposta:"
+        "text": "L'imposta viene calcolata in automatico in base alle imposte e alla modalità imposta definite in Impostazioni → Info negozio. Le modalità sono due e in entrambe lo scontrino riporta l'importo dell'imposta:"
       },
       {
         "type": "list",
@@ -346,12 +367,34 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ordine completo del calcolo: sconti sugli articoli → sconto sul carrello → imposta. Gli importi vengono arrotondati al numero di decimali previsto per la valuta (ad es. 0 per TWD, 2 per USD); le frazioni esattamente a metà vengono arrotondate per eccesso."
+        "text": "Un negozio può applicare più imposte, come GST 5% più PST 7% nella Columbia Britannica, oppure l'imposta sui consumi del 10% del Giappone insieme all'aliquota ridotta dell'8%:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nella scheda Imposta, tocca Aggiungi imposta e inserisci un nome e un'aliquota. Attiva Applica ai nuovi prodotti e i prodotti che aggiungerai in seguito avranno questa imposta in modo predefinito. Se il negozio ha già un'imposta predefinita, quella appena aggiunta parte con l'interruttore disattivato: attivalo quando vanno applicate entrambe.",
+          "Ogni prodotto sceglie le imposte che applica sotto Imposte applicate nel modulo del prodotto: un bento potrebbe applicare solo l'aliquota ridotta dell'8%. Con due o più imposte attive, il modulo mostra l'aliquota complessiva del prodotto.",
+          "Tocca un'imposta per rinominarla, cambiarne l'aliquota oppure usare Applica a tutti i prodotti o Rimuovi da tutti i prodotti per aggiungerla o toglierla a tutti i prodotti in una volta. Prima di eliminare un'imposta, l'app ti dice a quanti prodotti smetterà di essere applicata.",
+          "In un negozio con imposta esclusa, i totali del carrello mostrano una riga per ogni imposta, e il dettaglio dell'ordine elenca una riga per ogni imposta con la sua aliquota e l'importo su cui è stata applicata."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Per non applicare l'imposta per un po', disattiva Applica imposta in cima alla scheda Imposta: ogni vendita successiva è senza imposta, compresi gli articoli già nel carrello. Ogni prodotto mantiene le sue imposte e, riattivando l'interruttore, tornano com'erano."
+      },
+      {
+        "type": "p",
+        "text": "Ordine completo del calcolo: sconti sugli articoli e promozioni → sconto sul carrello → utilizzo dei punti → imposta. Gli importi vengono arrotondati al numero di decimali previsto per la valuta (ad es. 0 per TWD, 2 per USD); le frazioni esattamente a metà vengono arrotondate per eccesso."
+      },
+      {
+        "type": "note",
+        "text": "Le imposte con nome sono arrivate con la v3.5. Quando aggiorni, la tua aliquota diventa un'imposta con nome (ad esempio «GST 10%» in Australia) e viene applicata a ogni prodotto esistente; un negozio con aliquota 0 non avrà alcuna imposta. Gli ordini passati e i resi mantengono le aliquote e gli importi con cui sono stati registrati; i report ora contano i ricavi al netto dell'imposta, anche per i periodi passati (vedi «Che differenza c'è tra Ricavi e Incassato?»)."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -371,11 +414,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Un nuovo negozio parte con due metodi di pagamento, Contanti e Carta di credito, con il nome nella lingua dell'app scelta durante la configurazione. In Impostazioni → Metodi di pagamento puoi aggiungere qualsiasi altro metodo (ad es. Apple Pay, LINE Pay, un portafoglio digitale locale), eliminarlo o riordinarli."
+        "text": "Un nuovo negozio parte con due metodi di pagamento, Contanti e Carta di credito, con i nomi nella lingua dell'app durante la configurazione. In Impostazioni → Metodi di pagamento puoi aggiungere qualsiasi altro metodo (ad es. Apple Pay, LINE Pay, un portafoglio digitale locale), eliminarlo o riordinarlo."
       },
       {
         "type": "p",
-        "text": "I metodi di pagamento sono etichette per la contabilità: DingPOS non elabora pagamenti reali. Incassa carte o pagamenti da mobile con il tuo POS o la tua app abituale, poi scegli l'etichetta corrispondente in DingPOS per registrarlo. Con i contanti il resto viene calcolato in automatico."
+        "text": "I metodi di pagamento sono etichette per la contabilità: DingPOS non elabora pagamenti reali. Incassa carte o pagamenti da mobile con il tuo POS o la tua app abituale, poi scegli l'etichetta corrispondente in DingPOS per registrarlo. Con i contanti il resto viene calcolato in automatico e, dove le monete più piccole non sono più in uso, anche i contanti possono essere arrotondati: vedi «Posso arrotondare i pagamenti in contanti alle monete in uso?»"
       },
       {
         "type": "p",
@@ -388,6 +431,7 @@ export const articles = [
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -433,6 +477,54 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Posso arrotondare i pagamenti in contanti alle monete in uso?",
+    "keywords": [
+      "arrotondamento contanti",
+      "arrotondamento",
+      "arrotondare per eccesso",
+      "arrotondare per difetto",
+      "monete",
+      "centesimi",
+      "0,05",
+      "resto",
+      "Canada",
+      "Australia",
+      "Svizzera"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sì. Canada, Australia, Nuova Zelanda, Svizzera, Danimarca, Svezia, Norvegia, Belgio, Finlandia e Ungheria non usano più le monete di taglio più piccolo, quindi DingPOS arrotonda i contanti a un importo che si può davvero consegnare: un ordine da C$12,99 pagato in contanti viene incassato come C$13,00 e il resto si calcola su C$13,00. I pagamenti con carta e gli altri pagamenti non in contanti restano esatti."
+      },
+      {
+        "type": "p",
+        "text": "Un nuovo negozio configurato in uno di questi paesi, con la valuta di quel paese, ha l'arrotondamento già attivo. Qualsiasi altro negozio può attivarlo dalla scheda Arrotondamento contanti in fondo a Impostazioni → Metodi di pagamento: scegli a quale importo arrotondare i contanti (Nessun arrotondamento, oppure 0,05, 0,10, 0,50 o 1,00 in una valuta con centesimi; 5, 10, 50 o 100 in una senza, come TWD o JPY) e, per un multiplo che può cadere esattamente a metà, se arrotondare per eccesso o per difetto. Una modifica vale solo per i pagamenti successivi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Alla cassa compare «Contanti incassati C$13,00». Se il cliente chiede di pagare l'importo esatto, tocca Incassa l'importo esatto sotto i metodi di pagamento: vale solo per quella vendita.",
+          "Il totale dell'ordine, l'imposta, i ricavi, i punti e la spesa del cliente non cambiano; la differenza di arrotondamento resta sul pagamento, e la schermata dello scontrino e il dettaglio dell'ordine la mostrano sotto il totale, ad esempio «Arrotondamento contanti +C$0,01».",
+          "Vengono arrotondati anche i rimborsi in contanti sui resi, gli acconti in contanti e i saldi al ritiro dei preordini, i conguagli pagati nei cambi e le vendite a credito saldate in contanti; saldando più vendite insieme, l'arrotondamento si applica una sola volta al totale.",
+          "Gli storni, gli acconti rimborsati dei preordini e gli annullamenti del saldo restituiscono esattamente quanto era stato registrato, senza arrotondare di nuovo.",
+          "Incassato in Report mostra quanta parte è dovuta all'arrotondamento dei contanti, e nel Conto economico compare una riga Arrotondamento contanti che entra nell'utile netto. L'arrotondamento non è mai un ricavo."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "La Svizzera arrotonda sempre per difetto, secondo le sue regole sull'indicazione dei prezzi: CHF 12,98 viene incassato come CHF 12,95, e non c'è la scelta per il caso a metà. Il Belgio arrotonda solo i totali superiori a 0,05 €. L'arrotondamento dei contanti è disponibile in ogni piano e un negozio esistente incassa i contanti esattamente come prima finché non lo attivi."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -611,7 +703,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vai in Ordini, trova l'ordine, apri il dettaglio e scegli Storna. Conferma e hai finito."
+        "text": "Vai in Ordini, trova l'ordine, apri il dettaglio e tocca Storna. La finestra «Stornare questo ordine?» accetta un motivo facoltativo (fino a 100 caratteri): tocca Storna in alto a destra e hai finito. Il motivo compare nel dettaglio dell'ordine e nel registro attività e, una volta inviato, non si può modificare."
       },
       {
         "type": "p",
@@ -638,7 +730,9 @@ export const articles = [
       "cambio",
       "rimborso",
       "reso parziale",
-      "cambio taglia"
+      "cambio taglia",
+      "scarto",
+      "motivo del reso"
     ],
     "content": [
       {
@@ -651,9 +745,15 @@ export const articles = [
           "L'ordine originale non viene mai modificato. Il reso crea un documento a sé, con la data di oggi e un numero con prefisso R, e i ricavi si riducono nel giorno del reso.",
           "Il rimborso è quanto il cliente ha effettivamente pagato per quell'articolo: sconti sull'articolo, sconti sul carrello e utilizzo dei punti sono già ripartiti, quindi non si rimborsa a prezzo di listino. L'imposta usa l'aliquota applicata all'ordine originale.",
           "Gli articoli sostitutivi si addebitano al prezzo di oggi, senza promozioni né sconti.",
-          "La giacenza tracciata viene ripristinata in automatico. I punti guadagnati con l'ordine originale vengono tolti, quelli utilizzati vengono restituiti e gli articoli sostitutivi maturano i propri punti.",
-          "Un ordine può essere reso in più riprese, ma mai oltre la quantità venduta in origine. I limiti di utilizzo delle promozioni non vengono ripristinati da un reso."
+          "Per un prodotto con giacenza tracciata, ogni riga resa può tornare in giacenza (Riponi, l'opzione predefinita) oppure essere buttata (Scarta, dalla v3.5). Riponi aggiunge di nuovo la giacenza. Scarta lascia la giacenza com'era e porta il costo che l'articolo aveva al momento della vendita nelle Perdite di magazzino del mese, nella scheda Utile. Rimborso, imposta e punti sono gli stessi in entrambi i casi.",
+          "I punti guadagnati con l'ordine originale vengono tolti, quelli utilizzati vengono restituiti e gli articoli sostitutivi maturano i propri punti.",
+          "Se l'ordine originale è una vendita a credito non ancora saldata, non si scambia denaro: il reso viene dedotto dai crediti da clienti e un articolo sostitutivo più caro aggiunge loro la differenza.",
+          "Un ordine può essere reso in più riprese, ma mai oltre la quantità venduta in origine; quando tutto è rientrato, imposta, sconti e punti restituiti sommano esattamente quelli dell'ordine originale. I limiti di utilizzo delle promozioni non vengono ripristinati da un reso."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Il campo Motivo è facoltativo, fino a 100 caratteri. Compare nel dettaglio dell'ordine e nel registro attività e, una volta inviato, non si può modificare."
       },
       {
         "type": "note",
@@ -735,6 +835,7 @@ export const articles = [
         "items": [
           "I ricavi contano nel giorno in cui la merce esce; l'Incassato e i punti fedeltà arrivano solo nel giorno del saldo.",
           "Gli ordini da saldare hanno un badge ambra nell'elenco, e il dettaglio del cliente mostra quanto deve al momento.",
+          "Un reso su un ordine non ancora saldato non rimborsa denaro: l'importo viene dedotto dai crediti da clienti di quel cliente.",
           "Un cliente con ordini da saldare non può essere eliminato."
         ]
       },
@@ -803,7 +904,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "I nomi delle opzioni e dei valori possono avere al massimo 20 caratteri e non possono essere vuoti: un nome di opzione o un valore vuoto viene evidenziato in rosso al salvataggio, quindi compilalo o elimina il valore vuoto. Un prodotto con varianti non può usare il prezzo libero."
+        "text": "I nomi delle opzioni e dei valori possono avere al massimo 20 caratteri e gli spazi all'inizio e alla fine vengono eliminati al salvataggio. Un valore in cui non hai scritto nulla non è una combinazione e viene saltato al salvataggio. Il salvataggio si interrompe, con il campo evidenziato in rosso, quando un nome di opzione è vuoto, quando tutti i valori di un'opzione sono vuoti o quando cancelli un valore che il prodotto aveva già salvato: riscrivilo oppure tocca la × per eliminarlo. Un prodotto con varianti non può usare il prezzo libero."
       }
     ],
     "related": [
@@ -936,12 +1037,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Una volta attivato, vendite e preordini scalano la giacenza in automatico; storni, resi e preordini annullati la rimettono a magazzino; ricevere un ordine d'acquisto la aumenta; e puoi correggerla a mano in qualsiasi momento. Ogni movimento viene registrato in un registro completo. Le giacenze basse sono evidenziate da un avviso colorato."
+        "text": "Una volta attivata, vendite e preordini scalano la giacenza in automatico; storni, resi e preordini annullati la rimettono a magazzino; ricevere un ordine d'acquisto la aumenta. Ogni movimento viene registrato in un registro completo. Le giacenze basse sono evidenziate da un avviso colorato."
+      },
+      {
+        "type": "p",
+        "text": "Per cambiare il numero a mano ci sono due modi:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Riconteggio: modifica il numero di giacenza nel modulo del prodotto in modo che corrisponda a ciò che hai contato davvero. Non incide mai sul conto economico.",
+          "Rettifica giacenza (dalla v3.5): nel dettaglio del prodotto tocca Rettifica giacenza, scegli Rimuovi o Aggiungi, la quantità e un motivo, ad esempio Scaduto o avariato, Danneggiato o Campioni e omaggi. Il costo di ciò che rimuovi rientra nella Perdita di magazzino del mese nel conto economico: vedi «Come registro la merce scaduta, danneggiata o uscita come campione?»"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Come registro la merce scaduta, danneggiata o uscita come campione?",
+    "keywords": [
+      "rettifica giacenza",
+      "perdita di magazzino",
+      "ammanco",
+      "scarto",
+      "spreco",
+      "scaduto",
+      "danneggiato",
+      "campioni",
+      "materiali di consumo",
+      "riconteggio"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Usa Rettifica giacenza. Per un prodotto con giacenza tracciata, tocca Rettifica giacenza nel dettaglio del prodotto, scegli Rimuovi o Aggiungi, inserisci la quantità, scegli un motivo e, se vuoi, aggiungi una nota (fino a 100 caratteri). La schermata calcola la giacenza dopo la modifica e la riga sotto il motivo indica se incide sul conto economico."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Motivi per rimuovere: Usato in produzione, Scaduto o avariato, Danneggiato, Perso o rubato, Uso collaboratori, Campioni e omaggi, Materiali di consumo e Altro. Motivi per aggiungere: Produzione interna, Ritrovato e Altro. Altro richiede una nota.",
+          "Tranne Usato in produzione, ciò che rimuovi rientra, al suo costo in quel momento, nella Perdita di magazzino del mese nel conto economico. Viene dopo l'utile lordo e riduce l'utile netto; utile lordo e margine non cambiano. Usato in produzione toglie solo la giacenza, perché il costo di un materiale è già incluso nel costo del prodotto realizzato con esso.",
+          "Ritrovato toglie la stessa somma dalla Perdita di magazzino. Produzione interna e Altro tra i motivi per aggiungere aumentano solo la giacenza e non incidono mai sul conto economico.",
+          "Una rettifica conta nel giorno in cui la registri. Non può essere retrodatata, modificata o eliminata; per correggere un errore, registra Ritrovato o una rettifica nel senso opposto.",
+          "Un prodotto senza costo può comunque essere rettificato, ma il conto economico non può attribuirgli un importo, e il mese indica quante registrazioni erano senza costo."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Modificare il numero di giacenza nel modulo del prodotto è un Riconteggio: lo allinea a ciò che hai contato davvero e non incide mai sul conto economico. L'elenco dei movimenti di magazzino in Report filtra separatamente le Rettifiche e i Riconteggi, e il registro attività mostra motivo e nota di ogni rettifica."
+      },
+      {
+        "type": "note",
+        "text": "Rettifica giacenza richiede il piano Standard o superiore. Con Pro, ai collaboratori il cui ruolo richiede approvazione per la Rettifica manuale della giacenza viene chiesto il PIN di un responsabile al momento della conferma."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -963,7 +1123,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Una giacenza negativa di solito significa che un rifornimento non è stato registrato, oppure che un articolo preordinato non è ancora arrivato (i preordini scalano la giacenza quando vengono inseriti). Registra i rifornimenti ricevendo un ordine d'acquisto e il numero si ripristina da solo; correggi le differenze di inventario con una rettifica manuale, che resta nel registro dei movimenti."
+        "text": "Una giacenza negativa di solito significa che un rifornimento non è stato registrato, oppure che un articolo preordinato non è ancora arrivato (i preordini scalano la giacenza quando vengono inseriti). Registra i rifornimenti ricevendo un ordine d'acquisto e il numero si ripristina da solo. Correggi una differenza di inventario modificando il numero di giacenza nel modulo del prodotto (un riconteggio); per merce rotta, scaduta o regalata, registra il motivo con Rettifica giacenza. Entrambe restano nel registro dei movimenti."
       },
       {
         "type": "note",
@@ -992,7 +1152,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Acquisti, nella barra laterale, gestisce fornitori e ordini d'acquisto. Un fornitore conserva nome, referente, telefono, indirizzo e una condizione di pagamento predefinita (pagamento immediato o mensile)."
+        "text": "La sezione Acquisti nella barra laterale gestisce fornitori e ordini d'acquisto. Un fornitore conserva nome, referente, telefono, indirizzo e una condizione di pagamento predefinita (Pagamento alla consegna o Credito mensile)."
       },
       {
         "type": "steps",
@@ -1004,7 +1164,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "La condizione di pagamento decide cosa succede dopo: gli ordini con pagamento immediato vengono segnati come pagati, mentre quelli mensili restano non pagati in Da pagare, dove puoi saldarli per fornitore: un ordine, il mese in corso o tutto."
+        "text": "La condizione di pagamento decide cosa succede dopo: gli ordini con Pagamento alla consegna vengono segnati come pagati, mentre quelli a Credito mensile restano non pagati in Da pagare, dove puoi saldarli per fornitore: un ordine, il mese in corso o tutto."
+      },
+      {
+        "type": "p",
+        "text": "I materiali che non vendi, come farina o imballaggi, si acquistano allo stesso modo: impostali come prodotti non in vendita — vedi «Posso aggiungere tra i prodotti materiali come farina o imballaggi?»"
       },
       {
         "type": "note",
@@ -1013,8 +1177,54 @@ export const articles = [
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Posso aggiungere tra i prodotti materiali come farina o imballaggi?",
+    "keywords": [
+      "non in vendita",
+      "materiali",
+      "ingredienti",
+      "materie prime",
+      "imballaggi",
+      "forniture",
+      "vendi in cassa",
+      "acquisti",
+      "costo"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Sì. Nel modulo del prodotto, sotto la foto, disattiva Vendi in cassa (è attivo per impostazione predefinita) e il prodotto diventa non in vendita: non serve un prezzo, conserva costo, codice a barre, giacenza e varianti, e l'elenco prodotti mostra “Non in vendita” al posto del prezzo."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Un prodotto non in vendita non compare mai nella griglia della cassa, nelle categorie, nella ricerca o nella scansione dei codici a barre, e non può essere un regalo, un extra, il prodotto a cui si applica una promozione o un articolo sostitutivo in un cambio.",
+          "Ordini d'acquisto, ricezione, Sincronizza costo prodotto e conti da pagare funzionano esattamente come per gli altri prodotti, quindi costo d'acquisto e giacenza di un materiale si possono registrare da Acquisti.",
+          "Vendere altri prodotti non ne scala la giacenza. Quando ne usi un po', registra una diminuzione con Rettifica giacenza nel dettaglio del prodotto: Usato in produzione per ciò che è finito nei prodotti, Materiali di consumo per cose come sacchetti di carta o detersivi.",
+          "Puoi riattivarlo quando vuoi: prezzo e imposte restano al loro posto. Gli ordini e i report già creati non cambiano."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Come il suo costo arriva nel conto economico: gli acquisti non contano direttamente. Per un prodotto realizzato con esso, inserisci il costo su quel prodotto: viene conteggiato quando quel prodotto si vende. Le forniture che non rientrano nel costo di nessun prodotto vengono registrate come Materiali di consumo quando le usi, se la loro giacenza è tracciata, oppure come spesa una tantum se non lo è. Non registrare la stessa somma in entrambi i modi, o verrà contata due volte."
+      },
+      {
+        "type": "note",
+        "text": "I prodotti non in vendita sono disponibili con ogni piano; acquisti, gestione del magazzino e Rettifica giacenza richiedono il piano Standard o superiore."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1033,7 +1243,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "I Ricavi contano nel giorno in cui la merce passa di mano; l'Incassato conta nel giorno in cui entra il denaro. Per un ordine pagato alla cassa le due cose avvengono lo stesso giorno e i numeri coincidono. Si differenziano quando:"
+        "text": "I Ricavi contano nel giorno in cui la merce passa di mano, dopo tutti gli sconti e prima delle imposte; l'Incassato conta nel giorno in cui entra il denaro ed è il denaro che hai effettivamente incassato, imposte comprese. Quindi, in un negozio che applica l'imposta, l'Incassato supera i Ricavi dell'importo dell'imposta, anche per gli ordini pagati alla cassa. Per il resto, le due cifre si differenziano quando:"
       },
       {
         "type": "list",
@@ -1041,12 +1251,17 @@ export const articles = [
           "Vendita a credito: la merce esce oggi e rientra nei Ricavi di oggi; il denaro rientra nell'Incassato nel giorno in cui viene saldato.",
           "Preordine: l'acconto rientra nell'Incassato quando viene pagato; i Ricavi vengono riconosciuti per intero alla data del ritiro.",
           "Acconto trattenuto: quando un cliente annulla un preordine e tu trattieni l'acconto, questo era già stato contato nell'Incassato al momento del pagamento. Report lo mostra a parte come acconti trattenuti e non rientra mai nei Ricavi.",
-          "Storno di un ordine precedente: il denaro rimborsato rientra nell'Incassato nel giorno dello storno, quindi l'Incassato di quel giorno può essere negativo, mentre Stornati conta l'ordine alla data della vendita. Lo spiega anche l'ⓘ sulle schede Incassato e Stornati."
+          "Storno di un ordine precedente: il denaro rimborsato rientra nell'Incassato nel giorno dello storno, quindi l'Incassato di quel giorno può essere negativo, mentre Stornati conta l'ordine alla data della vendita.",
+          "Arrotondamento contanti: ciò che l'arrotondamento dei contanti aggiunge o toglie al totale dell'ordine rientra nell'Incassato, mai nei Ricavi."
         ]
       },
       {
         "type": "p",
-        "text": "Per far quadrare i conti, confronta l'Incassato con il cassetto e con il terminale carte; per sapere quanto hai davvero venduto in un periodo, guarda i Ricavi. I resi riducono i ricavi nel giorno del reso."
+        "text": "Per far quadrare i conti, confronta l'Incassato con il cassetto e con il terminale carte; per sapere quanto hai davvero venduto in un periodo, guarda i Ricavi. I resi riducono i ricavi nel giorno del reso. Lo spiega anche l'ⓘ sui riquadri Ricavi, Incassato e Stornati, mentre l'imposta è elencata in Dai ricavi all’utile lordo, che si apre dal riquadro Utile lordo."
+      },
+      {
+        "type": "note",
+        "text": "I ricavi al netto delle imposte sono arrivati con la v3.5 e anche i periodi passati sono stati ricalcolati allo stesso modo, quindi un negozio che applica l'imposta vede ricavi più bassi rispetto a prima dell'aggiornamento. È una correzione. Le versioni precedenti includevano l'imposta nei ricavi e nei negozi con prezzi al netto delle imposte si contava come ricavo persino l'imposta sulle vendite incassata."
       }
     ],
     "related": [
@@ -1076,15 +1291,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Per un singolo giorno il grafico dell'andamento diventa un grafico a barre orario; i periodi più lunghi usano giorni, settimane, mesi o anni per ogni barra, in base alla durata."
+        "text": "Sotto la barra del periodo ci sono due righe di riquadri (Ricavi, Incassato, Utile lordo, Ordini, Ordine medio; Sconti totali, Utile netto, Prodotti senza costo, Clienti serviti), poi il grafico dell'andamento. Il menu in alto a destra del grafico dell'andamento permette di passare tra ricavi, ordini, ordine medio e clienti serviti e, accanto, il grafico Costo e utile lordo impila in un'unica barra il costo dei prodotti e l'utile lordo di ogni periodo. Un singolo giorno è mostrato per ora; i periodi più lunghi usano giorni, settimane, mesi o anni, in base alla durata."
       },
       {
         "type": "p",
-        "text": "Dalla v3.4, tieni premuto sul grafico Andamento dei ricavi o Andamento dell'utile per leggerlo periodo per periodo: una scheda mostra la data e i ricavi o l'utile di quel periodo e, su Andamento dei ricavi con Confronto vendite attivo, anche i ricavi del periodo di confronto e la differenza. Trascina a sinistra o a destra per spostarti; scorri verso l'alto o verso il basso sul grafico e la pagina scorre come al solito."
+        "text": "Tieni premuto sul grafico dell'andamento o sul grafico Costo e utile lordo per leggerli periodo per periodo; con Confronto vendite attivo, la scheda del grafico dell'andamento mostra affiancate la cifra di questo periodo e quella del periodo di confronto. Trascina a sinistra o a destra per spostarti; scorri verso l'alto o verso il basso sul grafico e la pagina scorre come al solito."
       },
       {
         "type": "p",
-        "text": "La scheda Classifica prodotti elenca i primi 5. Tocca la scheda o Mostra tutti per vedere ogni prodotto venduto nel periodo, in ordine di quantità al netto dei resi."
+        "text": "La scheda Classifica prodotti elenca i primi 5. Tocca la scheda o Mostra tutti per vedere ogni prodotto venduto nel periodo, in ordine di quantità al netto dei resi; un prodotto con varianti ha una riga per ogni variante."
       },
       {
         "type": "p",
@@ -1114,6 +1329,7 @@ export const articles = [
       "orari di punta",
       "articoli a bassa rotazione",
       "variazioni prodotti",
+      "quota per categoria",
       "valore del magazzino",
       "tasso di riacquisto",
       "punti"
@@ -1126,11 +1342,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Confronto vendite: a destra della barra del periodo, confronta con lo stesso periodo dell'anno scorso o con il periodo precedente (un singolo giorno con lo stesso giorno della settimana scorsa, questa settimana con la scorsa, questo mese con il mese scorso, quest'anno con l'anno scorso, un intervallo personalizzato con lo stesso numero di giorni che lo precedono). Il riquadro Incassato mostra la differenza e il tasso di crescita, e il grafico dei Ricavi aggiunge una linea più chiara per il periodo di confronto. Finché un periodo è ancora in corso, il periodo di confronto viene tagliato allo stesso momento.",
-          "Giorno × ora: nell'intestazione Vendite nel tempo passa a Giorno × ora per una mappa di calore su sette giorni e 24 ore: più una cella è scura, più hai venduto. Passa tra ricavi e ordini; con un confronto attivo vedi quali ore sono cresciute e quali sono calate.",
-          "Articoli a bassa rotazione: passa l'intestazione della scheda di classifica ad Articoli a bassa rotazione per elencare i prodotti dal meno al più venduto, con la giacenza attuale e l'ultima data in cui ciascuno è stato venduto. I prodotti mai venduti sono indicati come Mai venduto. Per impostazione predefinita sono mostrati solo i prodotti in giacenza.",
-          "Variazioni (dalla v3.4): passa l'intestazione della scheda di classifica a Variazioni per vedere i 3 prodotti i cui ricavi sono cresciuti di più e i 3 calati di più rispetto al periodo di confronto, ciascuno con i ricavi dei due periodi e la differenza. Scegli prima un periodo in Confronto vendite: con Nessuno, o su Sempre, la scheda te lo ricorda. Tocca la scheda o Mostra tutti per l'elenco completo Variazioni prodotti, diviso in In aumento e In calo.",
-          "Tasso di riacquisto: l'ultima riga del riquadro dei clienti è la quota di clienti fedeltà che hanno acquistato nel periodo e hanno acquistato in totale due o più volte.",
+          "Confronto vendite: a destra della barra del periodo, confronta con lo stesso periodo dell'anno scorso o con il periodo precedente (un singolo giorno con lo stesso giorno della settimana scorsa, questa settimana con la scorsa, questo mese con il mese scorso, quest'anno con l'anno scorso, un intervallo personalizzato con lo stesso numero di giorni che lo precedono). I riquadri Ricavi, Incassato, Utile lordo, Ordini, Ordine medio, Sconti totali e Clienti serviti mostrano ciascuno la variazione e la cifra del periodo di confronto, ad esempio «▼ 3% rispetto a mese scorso»; la variazione di Sconti totali è sempre grigia, perché uno sconto in più non è di per sé un bene né un male. Tocca una qualsiasi riga di confronto per aprire Confronto tra periodi, che elenca le cifre di entrambi i periodi. Il grafico dell'andamento aggiunge una linea più chiara per il periodo di confronto. Finché un periodo è ancora in corso, il periodo di confronto viene tagliato allo stesso momento.",
+          "Giorno × ora: nell'intestazione del grafico dell'andamento passa da Andamento a Giorno × ora per una mappa di calore su sette giorni e 24 ore: più una cella è scura, più hai venduto. Passa tra ricavi e ordini; con un confronto attivo vedi quali ore sono cresciute e quali sono calate.",
+          "Articoli a bassa rotazione: passa l'intestazione della scheda di classifica ad Articoli a bassa rotazione per elencare i prodotti dal meno al più venduto, con la giacenza attuale e l'ultima data in cui ciascuno è stato venduto. I prodotti mai venduti sono indicati come Mai venduto e un prodotto con varianti ha una riga per ogni variante. Per impostazione predefinita sono mostrati solo i prodotti in giacenza.",
+          "Variazioni (dalla v3.4): passa l'intestazione della scheda di classifica a Variazioni per vedere i 3 prodotti i cui ricavi sono cresciuti di più e i 3 calati di più rispetto al periodo di confronto, ciascuno con i ricavi dei due periodi e la differenza; ogni variante è confrontata con se stessa. Scegli prima un periodo in Confronto vendite: con Nessuno, o su Sempre, la scheda te lo ricorda. Tocca la scheda o Mostra tutti per l'elenco completo Variazioni prodotti, diviso in In aumento e In calo.",
+          "Tasso di riacquisto: l'ultima riga del riquadro dei clienti è la quota di clienti fedeltà che hanno acquistato nel periodo e hanno acquistato in totale due o più volte. Con un confronto attivo, una riga sotto indica la variazione in punti percentuali e il tasso del periodo di confronto.",
+          "Quota per categoria: i ricavi e la quota di ogni categoria, in base alla categoria attuale di ogni prodotto, dalla più grande. I prodotti senza categoria rientrano in Senza categoria e le righe sommano esattamente i Ricavi.",
           "Situazione attuale: il valore del magazzino (giacenza attuale × costo attuale), tutti i movimenti di magazzino del periodo selezionato e i punti che i clienti hanno ma non hanno ancora riscattato, con lo sconto massimo che possono ottenere. Sono saldi attuali: il periodo non li modifica."
         ]
       },
@@ -1156,33 +1373,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Come viene calcolato l'utile se non ho inserito i costi?",
+    "question": "Come viene calcolato l'utile lordo se non ho inserito i costi?",
     "keywords": [
       "costo",
       "utile",
+      "utile lordo",
       "margine",
       "margine lordo",
       "report",
       "utile non tracciato",
       "costo mancante",
-      "utile lordo tracciato"
+      "prodotti senza costo"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Il costo è un campo facoltativo. I prodotti senza costo sono esclusi dall'utile, mentre i loro ricavi contano comunque per intero. La scheda Utile lordo tracciato in Report mostra quanti prodotti venduti nel periodo non hanno un costo; un costo pari a 0 conta come costo, quindi quei prodotti non vengono elencati."
+        "text": "Il costo è un campo facoltativo. I prodotti senza costo sono esclusi dall'utile lordo, mentre i loro ricavi contano comunque per intero. Il riquadro Prodotti senza costo in Report mostra quanti prodotti venduti o resi nel periodo non hanno un costo, ad esempio «12 prodotti». Un costo pari a 0 conta come costo, quindi quei prodotti non vengono elencati; quando ogni prodotto ha un costo, il riquadro riporta «0 prodotti · costi completi»."
       },
       {
         "type": "p",
-        "text": "Tocca la scheda o Mostra prodotti per aprire Prodotti senza costo, ordinati per i ricavi esclusi dall'utile. Tocca una riga per aprire il prodotto, aggiungi il costo da Modifica e al ritorno la riga risulta contrassegnata come Costo aggiunto. Un prodotto con varianti è contrassegnato come Costo aggiunto solo quando ogni variante venduta senza costo ne ha uno: il proprio oppure quello del prodotto, da seguire."
+        "text": "Tocca il riquadro o Mostra prodotti per aprire Prodotti senza costo, ordinati per i ricavi esclusi dall'utile lordo. Tocca una riga per aprire il prodotto, aggiungi il costo da Modifica e al ritorno la riga risulta contrassegnata come Costo aggiunto. Un prodotto con varianti è contrassegnato come Costo aggiunto solo quando ogni variante venduta senza costo ne ha uno: il proprio oppure quello del prodotto, da seguire."
       },
       {
         "type": "p",
-        "text": "L'utile è il ricavo dopo tutti gli sconti (sconti sugli articoli e sul carrello, promozioni, riscatto punti) e prima delle tasse, meno il costo: per questo il campo si chiama Costo al netto delle tasse (facoltativo), quindi inserisci quanto hai pagato prima delle tasse. Il margine è l'utile diviso per il ricavo al netto delle tasse dei prodotti con un costo, così quelli senza costo non lo abbassano. Un reso riprende, nel giorno del reso, l'utile che quegli articoli avevano portato."
+        "text": "L'utile lordo è il ricavo dopo tutti gli sconti (sconti sugli articoli e sul carrello, promozioni, riscatto punti) e prima delle imposte, meno il costo: per questo, in un negozio che applica l'imposta, il campo si chiama Costo al netto delle tasse (facoltativo), quindi inserisci quanto hai pagato prima delle imposte. Il margine è l'utile lordo diviso per i ricavi dei prodotti con un costo, così quelli senza costo non lo abbassano. Un reso riprende, nel giorno del reso, l'utile lordo che quegli articoli avevano portato."
+      },
+      {
+        "type": "p",
+        "text": "Tocca il riquadro Utile lordo per aprire Dai ricavi all’utile lordo, che sottrae riga per riga: ricavi (imposte incluse), imposta, ricavi (al netto delle imposte), ricavi senza costo, costo dei prodotti e infine utile lordo e margine. Le righe sommano esattamente il riquadro."
       },
       {
         "type": "note",
-        "text": "Un costo che aggiungi riguarda solo le vendite successive; le vendite già fatte non vengono ricalcolate. Questo calcolo è arrivato con la v3.1: le versioni precedenti toglievano solo gli sconti manuali sugli articoli e contavano come utile l'imposta inclusa, quindi dopo l'aggiornamento i periodi con sconti o imposta inclusa mostrano un utile più basso. È una correzione, non una perdita di dati."
+        "text": "Un costo che aggiungi riguarda solo le vendite successive; le vendite già fatte non vengono ricalcolate. Questo calcolo è arrivato con la v3.1: le versioni precedenti toglievano solo gli sconti manuali sugli articoli e contavano come utile l'imposta inclusa nel prezzo, quindi dopo l'aggiornamento i periodi con sconti o imposta inclusa mostrano un utile lordo più basso. È una correzione, non una perdita di dati."
       }
     ],
     "related": [
@@ -1218,16 +1440,22 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Ricavi (al netto delle imposte): i ricavi dopo ogni sconto, meno le imposte, conteggiati nel giorno in cui la merce è stata consegnata.",
+          "Ricavi (al netto delle imposte): i ricavi dopo ogni sconto e prima delle imposte, conteggiati nel giorno in cui la merce è stata consegnata.",
           "Costo dei prodotti: il costo di ciò che è stato venduto, in base ai costi indicati nei tuoi prodotti.",
+          "Perdite di magazzino: il costo di ciò che Rettifica giacenza ha tolto perché scaduto, danneggiato, regalato e simili, più i resi scartati. Viene dopo l'utile lordo — vedi «Come registro la merce scaduta, danneggiata o uscita come campione?» Il mese ha anche una sezione Perdite di magazzino che le totalizza per motivo.",
           "Commissioni (stima): le commissioni stimate in base alle tariffe dei tuoi metodi di pagamento.",
           "Acconti trattenuti: gli acconti che hai trattenuto quando un preordine è stato annullato.",
+          "Arrotondamento contanti: ciò che l'arrotondamento dei contanti alle monete in uso ha aggiunto o tolto ai totali degli ordini.",
           "Spese fisse e Spese una tantum: ciò che hai registrato per quel mese — vedi «Come registro affitto, stipendi e altre spese?»"
         ]
       },
       {
         "type": "p",
-        "text": "Seguono fino a tre grafici: l'utile netto mese per mese, la quota di ogni spesa fissa e l'andamento delle spese fisse. I due grafici di andamento coprono al massimo i 12 mesi fino al mese che hai aperto e compaiono solo quando ci sono almeno due mesi da confrontare, contati dal mese della tua prima vendita o spesa. Il grafico delle quote richiede una spesa fissa in quel mese; finché non ce n'è una, quella sezione mostra Aggiungi spesa fissa. In Report, l'ultima riga della scheda dell'utile porta direttamente a Utile: per un periodo che è esattamente un mese mostra l'utile netto di quel mese, ad esempio «Utile netto di ottobre: NT$12,300»; per qualsiasi altro periodo riporta Vedi il conto economico mensile."
+        "text": "Seguono fino a tre grafici: l'utile netto mese per mese, la quota di ogni spesa fissa e l'andamento delle spese fisse. I due grafici di andamento coprono al massimo i 12 mesi fino al mese che hai aperto e compaiono solo quando ci sono almeno due mesi da confrontare, contati dal mese della tua prima vendita o spesa. Il grafico delle quote richiede una spesa fissa in quel mese; finché non ce n'è una, quella sezione mostra Aggiungi spesa fissa."
+      },
+      {
+        "type": "p",
+        "text": "Report e Utile si collegano tra loro. Quando il periodo di Report è questo mese o esattamente un mese intero, la seconda riga di riquadri aggiunge un riquadro Utile netto (contrassegnato «In corso · vengono detratte le spese dell’intero mese» mentre il mese è in corso); toccalo per vedere il dettaglio di quel mese dall'utile lordo all'utile netto. Per qualsiasi altro periodo, tocca Vedi il conto economico mensile nell'ultima riga di Dai ricavi all’utile lordo. Nell'altro senso, Vedi il report di ottobre sotto il titolo di un mese in Utile apre Report su quel mese."
       },
       {
         "type": "note",
@@ -1286,7 +1514,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Inserisci ciò che il negozio sostiene davvero, escludendo le imposte che puoi recuperare. La merce che venderai passa dagli Acquisti, perché viene conteggiata nel costo dei prodotti quando è venduta; depositi cauzionali, capitale di un prestito e prelievi del titolare non sono spese. Le modifiche si salvano insieme quando tocchi ✓, e una modifica che raggiunge un mese concluso ti dice prima l'utile netto di quali mesi cambierà."
+        "text": "Inserisci ciò che il negozio sostiene davvero, escludendo le imposte che puoi recuperare. La merce che venderai e le materie prime con cui la produci passano dagli Acquisti, perché vengono conteggiate nel costo dei prodotti quando sono vendute. I materiali di consumo con giacenza tracciata si registrano con Rettifica giacenza quando li usi, con il motivo Materiali di consumo, non come spesa. Depositi cauzionali, capitale di un prestito e prelievi del titolare non sono spese. Le modifiche si salvano insieme quando tocchi ✓, e una modifica che raggiunge un mese concluso ti dice prima l'utile netto di quali mesi cambierà."
       }
     ],
     "related": [
@@ -1393,6 +1621,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Associa il cliente alla vendita, nel carrello o nella schermata di cassa, e i punti si accumulano in automatico; per riscattarli, inserisci i punti da usare. Con lo storno di un ordine vengono tolti i punti che aveva fatto guadagnare e restituiti quelli riscattati."
+      },
+      {
+        "type": "p",
+        "text": "Per aggiungere o togliere punti a mano (ad esempio per un acquisto non registrato), nella scheda del cliente tocca Rettifica sulla card Punti, scegli Aggiungi o Sottrai, inserisci i punti e, se vuoi, indica un motivo (fino a 100 caratteri). Non puoi sottrarre più punti di quelli che il cliente ha. Ogni rettifica resta nello storico dei punti con il saldo prima e dopo, il motivo e chi l'ha eseguita."
+      },
+      {
+        "type": "note",
+        "text": "La rettifica manuale dei punti è disponibile dalla v3.5. Con Pro, ai collaboratori il cui ruolo richiede l'approvazione per la Rettifica manuale dei punti (per il ruolo Collaboratore è così in modo predefinito) viene chiesto il PIN di un responsabile o del titolare al momento della conferma."
       }
     ],
     "related": [
@@ -1583,7 +1819,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tocca prima Riprova; se funziona, l'app si apre come al solito. Se il problema si ripresenta, tocca Contatta l'assistenza e scrivici: ti aiuteremo a recuperare i dati. Questa schermata non sposta né elimina mai alcun file."
+        "text": "Tocca prima Riprova; se funziona, l'app si apre come al solito. Se il problema si ripresenta, tocca Contatta l’assistenza e scrivici: ti aiuteremo a recuperare i dati. Questa schermata non sposta né elimina mai alcun file."
+      },
+      {
+        "type": "p",
+        "text": "Il primo avvio dopo un aggiornamento, o dopo il ripristino di un backup di una versione precedente, può mostrare prima “Aggiornamento dei dati in corso…”. Sono i dati del tuo negozio che passano a un formato più recente: più dati hai, più ci vuole. Quando ha finito, l'app si apre da sola. Non si è bloccata."
       },
       {
         "type": "note",
@@ -1804,12 +2044,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Usa il registro attività. Nella pagina Collab. tocca Registro attività in alto a destra e inserisci il PIN del titolare per vedere le operazioni sensibili del negozio, dalla più recente: storni, resi, rettifiche manuali della giacenza, approvazioni, modifiche a collaboratori e permessi, modifiche al PIN del titolare, modifiche a prezzo e costo dei prodotti ed eliminazioni di prodotti. I normali pagamenti in cassa non sono elencati."
+        "text": "Usa il registro attività. Nella pagina Collab. tocca Registro attività in alto a destra e inserisci il PIN del titolare per vedere le operazioni sensibili del negozio, dalla più recente: storni, resi, rettifiche della giacenza e riconteggi, rettifiche manuali dei punti, approvazioni, modifiche a collaboratori e permessi, modifiche al PIN del titolare, modifiche alle impostazioni delle imposte, modifiche a prezzo e costo dei prodotti ed eliminazioni di prodotti. I normali pagamenti in cassa non sono elencati."
       },
       {
         "type": "list",
         "items": [
-          "Ogni voce mostra cosa ha riguardato, chi ha fatto cosa e quando, e il risultato, per esempio «M prezzo $390 → $350».",
+          "Ogni voce mostra cosa ha riguardato, chi ha fatto cosa e quando, e il risultato, per esempio «M prezzo $390 → $350». Il motivo indicato per uno storno, un reso, una rettifica della giacenza o una rettifica dei punti si trova sulla terza riga della voce.",
           "Filtra per collaboratore (inclusi quelli disattivati), tipo di azione e Oggi / Questa settimana / Questo mese.",
           "Tocca una voce che rimanda a un ordine, un prodotto o un cliente per aprirne il dettaglio.",
           "Il dettaglio dell'ordine, quello del prodotto e la pagina di ogni collaboratore hanno un accesso dedicato che elenca solo le registrazioni che li riguardano.",

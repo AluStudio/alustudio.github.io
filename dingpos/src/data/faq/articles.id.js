@@ -80,10 +80,11 @@ export const articles = [
       "mulai",
       "pengaturan awal",
       "panduan awal",
-      "wizard",
+      "panduan pengaturan",
       "buka toko",
       "negara",
       "mata uang",
+      "pajak",
       "aplikasi kasir"
     ],
     "content": [
@@ -94,17 +95,17 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Pilih negara atau wilayah Anda. Bagian atas daftar menampilkan wilayah iPad ini dan pasar yang paling umum; di bawahnya ada semua 175 negara dan wilayah tempat DingPOS tersedia di App Store, yang bisa dicari berdasarkan nama dalam bahasa aplikasi atau bahasa Inggris. Pilihan Anda mengisi mata uang, tarif pajak, dan mode pajak secara otomatis.",
-          "Di Toko Anda, masukkan nama toko, tambahkan logo jika mau, lalu periksa mata uang, tarif pajak, dan mode pajak (termasuk pajak / belum termasuk pajak). Mata uang default mengikuti negara Anda; ketuk untuk memilih dari 130 mata uang."
+          "Pilih negara atau wilayah Anda. Bagian atas daftar menampilkan negara atau wilayah tempat iPad ini berada, lalu pasar yang paling umum; di bawahnya ada semua 175 negara dan wilayah tempat DingPOS tersedia di App Store, yang bisa dicari berdasarkan nama dalam bahasa aplikasi atau bahasa Inggris. Pilihan Anda mengisi mata uang, pajak, dan mode pajak secara otomatis.",
+          "Di Toko Anda, masukkan nama toko, tambahkan logo jika mau, lalu periksa mata uang, pajak, dan mode pajak (termasuk pajak / belum termasuk pajak). Mata uang default mengikuti negara Anda; ketuk untuk memilih dari 130 mata uang. Daftar pajak berisi pajak default negara Anda: ubah namanya, ganti tarifnya, hapus salah satunya, atau ketuk Tambah Pajak untuk baris lain. Toko di British Columbia, misalnya, mengubah baris pertama menjadi “GST 5” dan menambahkan baris “PST 7”."
         ]
       },
       {
         "type": "p",
-        "text": "Ketuk Lanjutkan dan Anda akan melihat “Ding! Toko Anda siap.” DingPOS juga menyiapkan dua metode pembayaran, Tunai dan Kartu Kredit. Lalu tambahkan produk Anda di Produk dan mulai mencatat penjualan."
+        "text": "Ketuk Lanjutkan dan Anda akan melihat “Ding! Toko Anda sudah siap.” DingPOS juga menyiapkan dua metode pembayaran, Tunai dan Kartu Kredit. Lalu tambahkan produk Anda di Produk dan mulai mencatat penjualan."
       },
       {
         "type": "note",
-        "text": "Mata uang dan mode pajak tidak bisa diubah setelah pengaturan awal; tarif pajak masih bisa diubah nanti di Pengaturan. Di Amerika Serikat, Kanada, Brasil, dan Mikronesia, tarif pajak bergantung pada negara bagian, provinsi, atau kota, sehingga kolom tarif pajak awalnya kosong dan Anda memasukkan tarif yang Anda kenakan (0 diperbolehkan) untuk melanjutkan. Daftar 175 negara dan pilihan mata uang hadir di v3.2; versi sebelumnya hanya menawarkan 15 negara."
+        "text": "Mata uang tidak bisa diubah setelah pengaturan awal; pajak dan mode pajak keduanya bisa diubah nanti di Pengaturan → Info Toko. Di Amerika Serikat, Kanada, Brasil, dan Mikronesia, tarifnya bergantung pada negara bagian, provinsi, atau kota, sehingga kolom tarif awalnya kosong dan Anda memasukkan tarif yang Anda kenakan untuk melanjutkan. Tarif harus di atas 0: toko yang tidak mengenakan pajak menghapus barisnya. Daftar 175 negara dan pilihan mata uang hadir di v3.2; versi sebelumnya hanya menawarkan 15 negara."
       }
     ],
     "related": [
@@ -182,11 +183,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Saat ini DingPOS mendukung iPad dengan iPadOS 17 atau lebih baru, dan dirancang terutama untuk orientasi lanskap."
+        "text": "Saat ini DingPOS mendukung iPad dengan iPadOS 17.4 atau lebih baru, dan dirancang terutama untuk orientasi lanskap."
       },
       {
         "type": "p",
         "text": "iPhone dan Mac belum didukung. Jika Anda ingin kami mendukung perangkat lain, tulis kepada kami dan ceritakan kebutuhan Anda."
+      },
+      {
+        "type": "note",
+        "text": "Setiap iPad yang menjalankan iPadOS 17 bisa diperbarui ke 17.4, jadi tidak ada model yang tertinggal. iPad yang masih memakai iPadOS 17.0–17.3 perlu memperbarui sistem lebih dulu, di Pengaturan → Umum → Pembaruan Software, sebelum bisa memasang DingPOS v3.5 atau yang lebih baru."
       }
     ],
     "related": [
@@ -196,22 +201,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Bisakah mata uang atau mode pajak diubah setelah pengaturan awal?",
+    "question": "Bisakah mata uang, tarif pajak, atau mode pajak diubah setelah pengaturan awal?",
     "keywords": [
       "mata uang",
       "mode pajak",
       "ubah",
       "terkunci",
-      "tarif pajak"
+      "tarif pajak",
+      "pajak",
+      "termasuk pajak",
+      "belum termasuk pajak"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Tarif pajak bisa diubah kapan saja di Pengaturan — tarif baru hanya berlaku untuk pesanan berikutnya."
+        "text": "Pajak bisa diubah; mata uang tidak. Pajak dan mode pajak sama-sama diubah di kartu Pajak pada Pengaturan → Info Toko, dan perubahan hanya berlaku untuk penjualan berikutnya: pesanan lama, retur, dan laporan tetap memakai jumlah pajak dan mode yang tercatat saat itu."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Pajak: tambah, ubah nama, ganti tarif, atau hapus — lihat “Bagaimana pajak dihitung di aplikasi kasir?”",
+          "Mode pajak (termasuk pajak / belum termasuk pajak): ketuk mode yang lain, lalu konfirmasi akan menunjukkan contoh hitungan dengan pajak pertama Anda, misalnya “barang NT$100 dengan pajak 5%: pelanggan membayar NT$105”. Harga tetap sama angkanya, dan keranjang yang sedang terbuka dihitung ulang dengan mode baru saat Anda kembali ke kasir. Mode bisa diganti sejak v3.5; versi sebelumnya mengunci mode saat pengaturan awal.",
+          "Setelah mode diganti, retur penuh tetap mengembalikan dana pesanan asli apa adanya. Tukar barang (dengan barang pengganti) pada pesanan yang dijual dengan mode lain akan diblokir: ganti kembali modenya, atau retur barangnya lalu catat penjualannya lagi."
+        ]
       },
       {
         "type": "p",
-        "text": "Mata uang dan mode pajak (termasuk pajak / belum termasuk pajak) terkunci setelah pengaturan awal selesai. Semua pesanan lama Anda dihitung dengan keduanya, jadi mengubahnya di tengah jalan akan merusak laporan Anda. Periksa keduanya di langkah Toko Anda saat pengaturan awal: mata uang default mengikuti negara Anda, dan Anda bisa mengetuknya untuk memilih yang lain."
+        "text": "Mata uang terkunci setelah pengaturan awal selesai. Semua pesanan lama tercatat dalam mata uang itu, jadi mengganti mata uang di tengah jalan akan merusak laporan Anda. Periksa di langkah Toko Anda saat pengaturan awal: mata uang default mengikuti negara Anda, dan Anda bisa mengetuknya untuk memilih yang lain."
       },
       {
         "type": "note",
@@ -331,12 +347,16 @@ export const articles = [
       "pajak penjualan",
       "termasuk pajak",
       "belum termasuk pajak",
+      "beberapa pajak",
+      "GST",
+      "PST",
+      "jeda pajak",
       "struk"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Pajak dihitung otomatis sesuai mode pajak yang dipilih saat pengaturan awal. Struk menampilkan jumlah pajak di kedua mode:"
+        "text": "Pajak dihitung otomatis dari pajak dan mode pajak di Pengaturan → Info Toko. Ada dua mode pajak, dan struk menampilkan jumlah pajak di keduanya:"
       },
       {
         "type": "list",
@@ -347,12 +367,34 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Urutan perhitungan lengkap: diskon item → diskon keranjang → pajak. Jumlah dibulatkan ke atas pada angka setengah sesuai jumlah desimal mata uang (misalnya 0 untuk TWD, 2 untuk USD)."
+        "text": "Satu toko bisa mengenakan beberapa pajak, misalnya GST 5% plus PST 7% di British Columbia, atau pajak konsumsi 10% di Jepang bersama tarif ringan 8%:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Di kartu Pajak, ketuk Tambah Pajak lalu isi nama dan tarif. Aktifkan Terapkan ke Produk Baru agar produk yang Anda tambahkan kemudian otomatis memakai pajak ini. Jika toko sudah punya pajak default, pajak yang baru ditambahkan awalnya nonaktif pada sakelar itu; aktifkan jika keduanya harus dikenakan.",
+          "Tiap produk memilih pajak yang dikenakannya di Pajak Dikenakan pada formulir produk — sebuah bento mungkin hanya dikenai tarif ringan 8%. Jika dua pajak atau lebih diaktifkan, formulir menampilkan total pajak untuk produk itu.",
+          "Ketuk sebuah pajak untuk mengganti namanya, mengubah tarifnya, atau pakai Terapkan ke Semua Produk atau Hapus dari Semua Produk untuk menambahkan atau mencabutnya dari semua produk sekaligus. Saat Anda menghapus pajak, aplikasi lebih dulu memberi tahu berapa produk yang tidak akan lagi dikenai pajak itu.",
+          "Di toko dengan mode belum termasuk pajak, total keranjang menampilkan satu baris per pajak, dan rincian pesanan mencantumkan satu baris per pajak beserta tarifnya dan jumlah dasar yang dikenai pajak tersebut."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Untuk berhenti mengenakan pajak sementara, matikan Kenakan pajak di bagian atas kartu Pajak: semua penjualan berikutnya tanpa pajak, termasuk barang yang sudah ada di keranjang. Tiap produk tetap menyimpan pajaknya, dan menyalakan kembali sakelar itu mengembalikannya seperti semula."
+      },
+      {
+        "type": "p",
+        "text": "Urutan perhitungan lengkap: diskon item dan promo → diskon keranjang → penukaran poin → pajak. Jumlah dibulatkan ke atas pada angka setengah sesuai jumlah desimal mata uang (misalnya 0 untuk TWD, 2 untuk USD)."
+      },
+      {
+        "type": "note",
+        "text": "Pajak dengan nama hadir di v3.5. Saat Anda memperbarui aplikasi, tarif pajak Anda menjadi pajak dengan nama (misalnya “GST 10%” di Australia) dan setiap produk yang sudah ada memakainya; toko yang tarifnya 0 tidak mendapat pajak. Pesanan dan retur sebelumnya tetap memakai tarif dan jumlah pajak yang tercatat; laporan kini menghitung pendapatan sebelum pajak, termasuk periode sebelumnya (lihat “Apa bedanya Pendapatan dan Kas Diterima?”)."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -376,7 +418,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Metode pembayaran hanyalah label pembukuan — DingPOS tidak memproses pembayaran sungguhan. Terima pembayaran kartu atau ponsel dengan terminal atau aplikasi yang sudah Anda pakai, lalu pilih label yang sesuai di DingPOS untuk mencatatnya. Pembayaran tunai menghitung kembalian secara otomatis."
+        "text": "Metode pembayaran hanyalah label pembukuan — DingPOS tidak memproses pembayaran sungguhan. Terima pembayaran kartu atau ponsel dengan terminal atau aplikasi yang sudah Anda pakai, lalu pilih label yang sesuai di DingPOS untuk mencatatnya. Pembayaran tunai menghitung kembalian secara otomatis, dan di negara yang koin terkecilnya tidak lagi dipakai, tunai juga bisa dibulatkan — lihat “Bisakah pembayaran tunai dibulatkan ke koin yang masih dipakai?”"
       },
       {
         "type": "p",
@@ -384,11 +426,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Untuk pelanggan tetap yang membawa barang sekarang dan membayar nanti, pilih Penjualan tempo: penjualan dicatat sebagai piutang dan dilunasi saat uangnya diterima. Lihat “Bisakah pelanggan tetap membeli dengan tempo dan membayar nanti?”"
+        "text": "Untuk pelanggan tetap yang membawa barang sekarang dan membayar nanti, pilih Penjualan tempo: penjualan dicatat sebagai piutang dan dilunasi saat uangnya diterima. Lihat “Bisakah pelanggan tetap membeli secara tempo dan membayar belakangan?”"
       }
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -434,6 +477,56 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Bisakah pembayaran tunai dibulatkan ke koin yang masih dipakai?",
+    "keywords": [
+      "pembulatan tunai",
+      "pembulatan",
+      "bulatkan ke atas",
+      "bulatkan ke bawah",
+      "koin",
+      "uang receh",
+      "sen",
+      "0,05",
+      "0.05",
+      "kembalian",
+      "kanada",
+      "australia",
+      "swiss"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Bisa. Kanada, Australia, Selandia Baru, Swiss, Denmark, Swedia, Norwegia, Belgia, Finlandia, dan Hungaria tidak lagi memakai koin terkecil mereka, jadi DingPOS membulatkan tunai ke jumlah yang benar-benar bisa diserahkan: pesanan C$12.99 yang dibayar tunai diterima sebagai C$13.00, dan kembalian dihitung dari C$13.00. Pembayaran kartu dan nontunai lainnya tetap persis."
+      },
+      {
+        "type": "p",
+        "text": "Toko baru yang diatur di salah satu negara ini, dengan mata uang negara itu, otomatis mendapatkan pengaturan ini. Toko lain bisa mengaktifkannya lewat kartu Pembulatan tunai di bagian bawah Pengaturan → Metode Pembayaran: pilih ke mana tunai dibulatkan (Tanpa pembulatan, atau 0.05, 0.10, 0.50, atau 1.00 pada mata uang yang memakai sen; 5, 10, 50, atau 100 pada mata uang tanpa sen, seperti TWD atau JPY), dan untuk kelipatan yang bisa jatuh tepat di tengah, apakah dibulatkan ke atas atau ke bawah. Perubahan hanya berlaku untuk pembayaran berikutnya."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Layar bayar menampilkan “Tunai diterima C$13.00”. Jika pelanggan ingin membayar jumlah pas, ketuk Terima jumlah pas di bawah metode pembayaran; ini hanya berlaku untuk satu penjualan itu.",
+          "Total pesanan, pajak, pendapatan, poin, dan total belanja pelanggan tidak berubah; selisih pembulatan melekat pada pembayaran, dan layar struk serta rincian pesanan menampilkannya di bawah total, seperti “Pembulatan tunai +C$0.01”.",
+          "Pengembalian dana tunai pada retur, uang muka tunai dan sisa tagihan saat pengambilan pada pra-pesan, tambahan bayar pada tukar barang, serta penjualan tempo yang dilunasi tunai ikut dibulatkan; jika beberapa dilunasi sekaligus, pembulatan dilakukan satu kali untuk seluruh kelompok.",
+          "Void, uang muka pra-pesan yang dikembalikan, dan pelunasan yang dibatalkan mengembalikan persis yang tercatat, tanpa dibulatkan lagi.",
+          "Kas Diterima di Statistik menunjukkan berapa bagian darinya yang berupa pembulatan tunai, dan Laba Rugi bulanan mendapat baris Pembulatan tunai yang ikut dihitung ke laba bersih. Pembulatan tidak pernah menjadi pendapatan."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Swiss selalu membulatkan ke bawah, mengikuti aturan penampilan harganya — CHF 12.98 diterima sebagai CHF 12.95, dan tidak ada pilihan tepat di tengah. Belgia hanya membulatkan total di atas €0.05. Pembulatan tunai tersedia di setiap paket, dan toko yang sudah ada menerima tunai persis seperti sebelumnya sampai Anda mengaktifkannya."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -611,7 +704,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Buka Pesanan, cari pesanannya, buka halaman rinciannya, lalu pilih Batalkan penjualan. Konfirmasi, selesai."
+        "text": "Buka Pesanan, cari pesanannya, buka halaman rinciannya, lalu ketuk Batalkan penjualan. Jendela “Batalkan penjualan ini?” menerima alasan opsional (maksimal 100 karakter); ketuk Batalkan penjualan di kanan atas jendela itu, selesai. Alasan tampil di rincian pesanan dan log aktivitas, dan tidak bisa diedit setelah dikirim."
       },
       {
         "type": "p",
@@ -638,7 +731,9 @@ export const articles = [
       "tukar barang",
       "pengembalian dana",
       "retur sebagian",
-      "tukar ukuran"
+      "tukar ukuran",
+      "buang barang retur",
+      "alasan retur"
     ],
     "content": [
       {
@@ -651,9 +746,15 @@ export const articles = [
           "Pesanan asli tidak pernah diubah. Retur membuat dokumen sendiri bertanggal hari ini dengan nomor berawalan R, dan pendapatan dikurangi pada hari retur.",
           "Dana yang dikembalikan adalah yang benar-benar dibayar pelanggan untuk barang itu — diskon barang, diskon keranjang, dan penukaran poin sudah dibagi proporsional, jadi bukan dikembalikan sesuai harga normal. Pajak memakai tarif yang dikenakan pada pesanan asli.",
           "Barang pengganti dikenakan harga hari ini, tanpa promo atau diskon.",
-          "Stok yang dilacak dikembalikan otomatis. Poin yang didapat dari pesanan asli ditarik kembali, poin yang ditukarkan dikembalikan, dan barang pengganti mendapat poinnya sendiri.",
-          "Satu pesanan bisa diretur dalam beberapa kali, tetapi tidak boleh melebihi jumlah yang dijual semula. Batas pemakaian promo tidak dikembalikan oleh retur."
+          "Untuk produk dengan stok yang dilacak, tiap baris retur bisa dikembalikan ke stok (Restok, bawaan) atau dibuang (Buang, sejak v3.5). Restok menambahkan stok kembali. Buang membiarkan stok seperti semula dan memasukkan harga pokok barang saat dijual ke Kerugian stok bulan itu di Laba Rugi. Dana yang dikembalikan, pajak, dan poin sama saja pada kedua pilihan.",
+          "Poin yang didapat dari pesanan asli ditarik kembali, poin yang ditukarkan dikembalikan, dan barang pengganti mendapat poinnya sendiri.",
+          "Jika pesanan asli adalah penjualan tempo yang belum lunas, tidak ada uang yang berpindah: retur dipotong dari piutang pelanggan, dan barang pengganti yang lebih mahal menambahkan selisihnya ke piutang itu.",
+          "Satu pesanan bisa diretur dalam beberapa kali, tetapi tidak boleh melebihi jumlah yang dijual semula; setelah semuanya dikembalikan, jumlah pajak, diskon, dan poin yang dikembalikan persis sama dengan pesanan asli. Batas pemakaian promo tidak dikembalikan oleh retur."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Kolom Alasan bersifat opsional, maksimal 100 karakter. Alasan tampil di rincian pesanan dan log aktivitas, dan tidak bisa diedit setelah dikirim."
       },
       {
         "type": "note",
@@ -736,6 +837,7 @@ export const articles = [
         "items": [
           "Pendapatan dihitung pada hari barang keluar; Kas Diterima dan poin loyalitas menunggu sampai hari pelunasan.",
           "Pesanan yang belum lunas diberi lencana kuning di daftar, dan rincian pelanggan menunjukkan berapa yang masih terutang.",
+          "Retur pada pesanan yang belum lunas tidak mengembalikan uang: jumlahnya dipotong dari piutang pelanggan itu.",
           "Pelanggan yang masih punya pesanan belum lunas tidak bisa dihapus."
         ]
       },
@@ -796,15 +898,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Setelah produk punya varian, kolom Harga-nya disembunyikan dan setiap kombinasi mendapat harga sendiri di bawah Harga & Stok Varian, lengkap dengan stoknya sendiri (sejak v3.2; versi sebelumnya masih meminta harga produk). Kasir, daftar produk, dan rincian produk menampilkan rentang dari harga terendah sampai tertinggi, seperti “NT$350–NT$390”, atau satu harga jika semua kombinasi harganya sama; pengurutan berdasarkan harga memakai harga kombinasi terendah. Saat bayar, mengetuk produk akan menampilkan pemilih varian sebelum produk dimasukkan ke keranjang."
+        "text": "Setelah produk punya varian, kolom Harga disembunyikan dan setiap kombinasi mendapat harga sendiri di bawah Harga & Stok Varian, lengkap dengan stoknya sendiri (sejak v3.2; versi sebelumnya masih meminta harga produk). Kasir, daftar produk, dan rincian produk menampilkan rentang dari harga terendah sampai tertinggi, seperti “NT$350–NT$390”, atau satu harga jika semua kombinasi harganya sama; pengurutan berdasarkan harga memakai harga kombinasi terendah. Saat bayar, mengetuk produk akan menampilkan pemilih varian sebelum produk dimasukkan ke keranjang."
       },
       {
         "type": "p",
-        "text": "Anda tidak perlu mengisi harga pokok untuk setiap kombinasi: kolom Harga pokok yang kosong berarti mengikuti harga pokok produk, jadi memakai harga pokok produk dan ikut berubah saat harga pokok produk berubah. Jika diisi angka, kombinasi itu memakai Harga pokok sendiri — termasuk angka 0. Pakai harga pokok produk untuk semua menghapus semua harga pokok sendiri sekaligus."
+        "text": "Anda tidak perlu mengisi harga pokok untuk setiap kombinasi: kolom Harga pokok yang kosong berarti Ikut produk, jadi memakai harga pokok produk dan ikut berubah saat harga pokok produk berubah. Jika diisi angka, kombinasi itu memakai Harga pokok sendiri — termasuk angka 0. Pakai harga pokok produk untuk semua menghapus semua harga pokok sendiri sekaligus."
       },
       {
         "type": "note",
-        "text": "Nama opsi dan nama pilihan dibatasi maksimal 20 karakter dan tidak boleh kosong: nama opsi atau pilihan yang kosong diberi garis merah saat Anda menyimpan, jadi isi atau hapus pilihan yang kosong itu. Produk dengan varian tidak bisa memakai harga bebas."
+        "text": "Nama opsi dan nama pilihan dibatasi maksimal 20 karakter, dan spasi di awal maupun akhir dipangkas saat Anda menyimpan. Pilihan yang belum Anda isi bukan sebuah kombinasi dan dilewati saat menyimpan. Penyimpanan berhenti dengan kolom yang diberi garis merah jika nama opsi kosong, jika semua pilihan sebuah opsi kosong, atau jika Anda mengosongkan pilihan yang sudah tersimpan di produk; ketik kembali, atau hapus dengan mengetuk ikon ×. Produk dengan varian tidak bisa memakai harga bebas."
       }
     ],
     "related": [
@@ -938,12 +1040,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Setelah aktif, penjualan dan pra-pesan otomatis mengurangi stok; pembatalan penjualan (void), retur, dan pra-pesan yang dibatalkan mengembalikannya; penerimaan pesanan pembelian menambahkannya; dan Anda bisa menyesuaikannya secara manual kapan saja. Setiap perubahan tercatat dalam riwayat lengkap. Stok menipis ditandai dengan peringatan warna."
+        "text": "Setelah aktif, penjualan dan pra-pesan otomatis mengurangi stok; pembatalan penjualan (void), retur, dan pra-pesan yang dibatalkan mengembalikannya; dan penerimaan pesanan pembelian menambahkannya. Setiap perubahan tercatat dalam riwayat lengkap. Stok menipis ditandai dengan peringatan warna."
+      },
+      {
+        "type": "p",
+        "text": "Ada dua cara mengubah angkanya secara manual:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hitung ulang: ubah angka stok di formulir produk agar sesuai dengan hasil hitungan Anda. Tidak pernah memengaruhi laba rugi.",
+          "Sesuaikan Stok (sejak v3.5): di rincian produk, ketuk Sesuaikan Stok, pilih Kurangi atau Tambah, isi jumlahnya, lalu pilih alasan seperti Kedaluwarsa/busuk, Rusak, atau Sampel dan hadiah. Harga pokok barang yang dikurangi dihitung dalam Kerugian stok bulan itu di laba rugi — lihat “Bagaimana cara mencatat stok yang kedaluwarsa, rusak, atau keluar sebagai sampel?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Bagaimana cara mencatat stok yang kedaluwarsa, rusak, atau keluar sebagai sampel?",
+    "keywords": [
+      "sesuaikan stok",
+      "kerugian stok",
+      "penyusutan stok",
+      "stok dihapus",
+      "barang busuk",
+      "kedaluwarsa",
+      "barang rusak",
+      "sampel",
+      "perlengkapan toko",
+      "hitung ulang"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Gunakan Sesuaikan Stok. Untuk produk yang stoknya dilacak, ketuk Sesuaikan Stok di rincian produk, pilih Kurangi atau Tambah, isi jumlahnya, pilih alasan, lalu tambahkan catatan jika perlu (maksimal 100 karakter). Lembar itu menghitung stok sesudah perubahan, dan baris di bawah alasan menunjukkan apakah perubahan itu masuk ke laba rugi."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Alasan untuk mengurangi: Dipakai produksi, Kedaluwarsa/busuk, Rusak, Hilang atau dicuri, Dipakai staf, Sampel dan hadiah, Perlengkapan toko, dan Lainnya. Alasan untuk menambah: Buatan sendiri, Ditemukan, dan Lainnya. Lainnya wajib diberi catatan.",
+          "Kecuali Dipakai produksi, barang yang dikurangi dihitung dengan harga pokoknya pada saat itu ke dalam Kerugian stok bulan tersebut di laba rugi. Kerugian ini muncul setelah laba kotor dan mengurangi laba bersih; laba kotor dan marginnya tidak berubah. Dipakai produksi hanya mengurangi stok, karena harga pokok bahan sudah termasuk dalam harga pokok produk yang dibuat darinya.",
+          "Ditemukan mengurangi Kerugian stok dengan jumlah yang sama. Buatan sendiri dan Lainnya di sisi Tambah hanya menambah stok dan tidak pernah masuk ke laba rugi.",
+          "Penyesuaian dihitung pada hari Anda mencatatnya. Penyesuaian tidak bisa diberi tanggal mundur, diedit, atau dihapus; untuk memperbaiki kesalahan, catat Ditemukan atau penyesuaian ke arah sebaliknya.",
+          "Produk tanpa harga pokok tetap bisa disesuaikan, tetapi laba rugi tidak bisa menghitung nilainya, dan bulan tersebut mencatat berapa banyak catatan yang tidak punya harga pokok."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Mengubah angka stok di formulir produk adalah Hitung ulang: angkanya disesuaikan dengan hasil hitungan Anda dan tidak pernah masuk ke laba rugi. Daftar pergerakan stok di Statistik menyaring penyesuaian stok dan hitung ulang secara terpisah, dan log aktivitas menampilkan alasan serta catatan tiap penyesuaian."
+      },
+      {
+        "type": "note",
+        "text": "Sesuaikan Stok memerlukan paket Standard atau yang lebih tinggi. Di Pro, staf yang perannya memerlukan persetujuan untuk Penyesuaian stok manual akan diminta memasukkan PIN manajer saat mengonfirmasi."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -965,7 +1126,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Stok minus biasanya berarti penambahan stok belum dicatat, atau barang pra-pesan belum tiba (pra-pesan mengurangi stok saat dibuat). Catat penambahan stok dengan menerima pesanan pembelian dan angkanya pulih sendiri; perbaiki selisih stok opname dengan penyesuaian manual, yang tersimpan di riwayat pergerakan stok."
+        "text": "Stok minus biasanya berarti penambahan stok belum dicatat, atau barang pra-pesan belum tiba (pra-pesan mengurangi stok saat dibuat). Catat penambahan stok dengan menerima pesanan pembelian dan angkanya pulih sendiri. Perbaiki selisih hasil penghitungan stok dengan mengubah angka stok di formulir produk (Hitung ulang); untuk barang yang rusak, kedaluwarsa, atau diberikan gratis, catat alasannya dengan Sesuaikan Stok. Keduanya tersimpan di riwayat pergerakan stok."
       },
       {
         "type": "note",
@@ -994,7 +1155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pembelian di sidebar mengelola pemasok dan pesanan pembelian. Data pemasok menyimpan nama, kontak, telepon, alamat, dan termin pembayaran bawaan (bayar langsung atau bulanan)."
+        "text": "Pembelian di sidebar mengelola pemasok dan pesanan pembelian. Data pemasok menyimpan nama, kontak, telepon, alamat, dan ketentuan pembayaran default (bayar langsung atau bulanan)."
       },
       {
         "type": "steps",
@@ -1006,7 +1167,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Termin pembayaran menentukan langkah berikutnya: pesanan bayar langsung ditandai lunas, sedangkan pesanan bulanan tetap belum lunas di Belum Lunas, tempat Anda bisa melunasinya per pemasok — satu pesanan, bulan ini, atau semuanya."
+        "text": "Ketentuan pembayaran menentukan langkah berikutnya: pesanan bayar langsung ditandai lunas, sedangkan pesanan bulanan tetap belum lunas di Belum Lunas, tempat Anda bisa melunasinya per pemasok — satu pesanan, bulan ini, atau semuanya."
+      },
+      {
+        "type": "p",
+        "text": "Bahan baku yang tidak Anda jual, seperti tepung atau kemasan, bisa dibeli dengan cara yang sama: daftarkan sebagai produk yang tidak dijual — lihat “Bisakah saya menambahkan bahan baku seperti tepung atau kemasan sebagai produk?”"
       },
       {
         "type": "note",
@@ -1015,8 +1180,53 @@ export const articles = [
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Bisakah saya menambahkan bahan baku seperti tepung atau kemasan sebagai produk?",
+    "keywords": [
+      "produk tidak dijual",
+      "bahan baku",
+      "bahan",
+      "kemasan",
+      "perlengkapan",
+      "jual di kasir",
+      "pembelian",
+      "harga pokok"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Bisa. Di formulir produk, matikan Jual di kasir di bawah foto (secara default aktif) dan produk itu menjadi tidak dijual: tidak perlu harga, tetap menyimpan harga pokok, barcode, stok, dan variannya, dan daftar produk menampilkan “Tidak dijual” di tempat harga biasanya berada."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Produk yang tidak dijual tidak pernah muncul di kisi kasir, kategori, pencarian, maupun pemindaian barcode, dan tidak bisa menjadi hadiah, item tambahan, target promo, atau barang pengganti saat tukar barang.",
+          "Pesanan pembelian, penerimaan stok, Sinkronkan harga pokok produk, dan tagihan belum lunas bekerja persis seperti pada produk lain, sehingga harga pokok pembelian dan stok bahan bisa dicatat lewat Pembelian.",
+          "Menjual produk lain tidak mengurangi stoknya. Saat Anda memakainya, catat pengurangan dengan Sesuaikan Stok di rincian produk: Dipakai produksi untuk yang masuk ke produk, Perlengkapan toko untuk hal seperti kantong kertas atau pembersih.",
+          "Anda bisa mengaktifkan Jual di kasir lagi kapan saja, dan harga serta pajaknya masih tersimpan. Pesanan dan laporan yang sudah dibuat tidak terpengaruh."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Bagaimana harga pokoknya masuk ke laba rugi: pembelian tidak dihitung langsung di sana. Untuk produk yang dibuat dari bahan itu, masukkan harga pokoknya ke produk tersebut, dan harga pokok itu dikurangkan saat produk tersebut terjual. Perlengkapan yang tidak termasuk dalam harga pokok produk mana pun dicatat sebagai Perlengkapan toko saat dipakai jika stoknya dilacak, atau sebagai pengeluaran sekali bayar jika tidak. Jangan catat uang yang sama dengan kedua cara, agar tidak terhitung dua kali."
+      },
+      {
+        "type": "note",
+        "text": "Produk yang tidak dijual tersedia di semua paket; pembelian, pelacakan stok, dan Sesuaikan Stok memerlukan paket Standard atau yang lebih tinggi."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1035,7 +1245,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pendapatan dihitung pada hari barang diserahkan, sedangkan Kas Diterima dihitung pada hari uangnya masuk. Untuk pesanan yang dibayar di kasir, keduanya terjadi di hari yang sama sehingga angkanya sama. Keduanya berbeda saat:"
+        "text": "Pendapatan dihitung pada hari barang diserahkan, setelah semua diskon dan sebelum pajak; Kas Diterima dihitung pada hari uangnya masuk, yaitu uang yang benar-benar Anda terima, termasuk pajak. Jadi di toko yang mengenakan pajak, Kas Diterima lebih tinggi daripada Pendapatan sebesar pajaknya, bahkan untuk pesanan yang dibayar di kasir. Selain itu, keduanya berbeda saat:"
       },
       {
         "type": "list",
@@ -1043,12 +1253,17 @@ export const articles = [
           "Penjualan tempo: barang keluar hari ini dan masuk ke pendapatan hari ini; uangnya masuk ke Kas Diterima pada hari pelunasan.",
           "Pra-pesan: uang muka masuk ke Kas Diterima saat dibayar; pendapatan diakui penuh pada tanggal pengambilan.",
           "Uang muka hangus: jika pelanggan membatalkan pra-pesan dan Anda menyimpan uang mukanya, uang itu sudah masuk ke Kas Diterima saat dibayar. Statistik menampilkannya terpisah sebagai uang muka hangus, dan tidak pernah dihitung sebagai pendapatan.",
-          "Membatalkan (void) pesanan sebelumnya: uang yang dikembalikan masuk ke Kas Diterima pada hari pembatalan, sehingga Kas Diterima hari itu bisa negatif, sedangkan Di-void menghitung pesanan itu pada tanggal penjualannya. Ikon ⓘ pada ubin Kas Diterima dan Di-void menjelaskan hal yang sama."
+          "Membatalkan (void) pesanan sebelumnya: uang yang dikembalikan masuk ke Kas Diterima pada hari pembatalan, sehingga Kas Diterima hari itu bisa negatif, sedangkan Di-void menghitung pesanan itu pada tanggal penjualannya.",
+          "Pembulatan tunai: selisih lebih atau kurang dari total pesanan yang timbul saat tunai dibulatkan ke koin yang beredar dihitung di Kas Diterima, tidak pernah di Pendapatan."
         ]
       },
       {
         "type": "p",
-        "text": "Untuk rekonsiliasi, cocokkan Kas Diterima dengan isi laci kasir dan mesin kartu Anda; untuk melihat berapa yang benar-benar terjual dalam suatu periode, lihat Pendapatan. Retur mengurangi pendapatan pada hari retur dilakukan."
+        "text": "Untuk rekonsiliasi, cocokkan Kas Diterima dengan isi laci kasir dan mesin kartu Anda; untuk melihat berapa yang benar-benar terjual dalam suatu periode, lihat Pendapatan. Retur mengurangi pendapatan pada hari retur dilakukan. Ikon ⓘ pada ubin Pendapatan, Kas Diterima, dan Di-void menjelaskan hal yang sama, dan pajaknya sendiri tercantum di Dari Pendapatan ke Laba Kotor, yang dibuka dari ubin laba kotor."
+      },
+      {
+        "type": "note",
+        "text": "Pendapatan sebelum pajak hadir di v3.5, dan periode-periode sebelumnya dihitung ulang dengan cara yang sama, jadi toko yang mengenakan pajak melihat pendapatan lebih rendah daripada sebelum pembaruan. Itu koreksi. Versi sebelumnya memasukkan pajak ke dalam pendapatan, dan toko dengan harga belum termasuk pajak bahkan menghitung pajak penjualan yang dipungutnya sebagai pendapatan."
       }
     ],
     "related": [
@@ -1078,19 +1293,19 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Untuk satu hari, grafik tren berubah menjadi grafik batang per jam; periode yang lebih panjang memakai hari, minggu, bulan, atau tahun per batang sesuai panjangnya."
+        "text": "Di bawah bilah periode ada dua baris ubin angka (Pendapatan, Kas Diterima, Laba kotor, Pesanan, Rata-rata Pesanan; Total Diskon, Laba bersih, Produk Tanpa Harga Pokok, Pelanggan yang Membeli), lalu grafik tren. Menu di kanan atas grafik tren mengalihkannya antara pendapatan, pesanan, rata-rata pesanan, dan pelanggan yang membeli, dan di sebelahnya grafik Harga Pokok dan Laba Kotor menumpuk harga pokok produk dan laba kotor tiap periode dalam satu batang. Satu hari digambar per jam; periode yang lebih panjang memakai hari, minggu, bulan, atau tahun sesuai panjangnya."
       },
       {
         "type": "p",
-        "text": "Sejak v3.4, tekan dan tahan grafik Tren Pendapatan atau Tren Laba untuk membacanya periode demi periode: sebuah kartu menampilkan tanggal beserta pendapatan atau laba periode itu, dan pada Tren Pendapatan dengan perbandingan penjualan aktif, juga pendapatan periode pembanding serta selisihnya. Geser ke kiri atau kanan untuk berpindah; jika Anda menggesek ke atas atau bawah pada grafik, halaman bergulir seperti biasa."
+        "text": "Tekan dan tahan grafik tren atau grafik Harga Pokok dan Laba Kotor untuk membacanya periode demi periode; dengan Perbandingan pendapatan aktif, kartu pada grafik tren menampilkan angka periode ini dan periode pembanding berdampingan. Geser ke kiri atau kanan untuk berpindah; jika Anda menggesek ke atas atau bawah pada grafik, halaman bergulir seperti biasa."
       },
       {
         "type": "p",
-        "text": "Kartu Peringkat Produk menampilkan 5 teratas. Ketuk kartu atau Lihat Semua untuk menampilkan semua produk yang terjual dalam periode itu, diurutkan menurut jumlah setelah retur."
+        "text": "Kartu Peringkat Produk menampilkan 5 teratas. Ketuk kartu atau Lihat Semua untuk menampilkan semua produk yang terjual dalam periode itu, diurutkan menurut jumlah setelah retur; produk dengan varian mendapat satu baris per varian."
       },
       {
         "type": "p",
-        "text": "Perbandingan penjualan di sisi kanan bilah periode membandingkan periode itu dengan periode pembanding atau dengan periode yang sama tahun lalu — lihat “Apa saja yang ditampilkan laporan lanjutan?”"
+        "text": "Perbandingan pendapatan di sisi kanan bilah periode membandingkan periode itu dengan periode sebelumnya atau dengan periode yang sama tahun lalu — lihat “Apa saja yang ditampilkan laporan lanjutan?”"
       },
       {
         "type": "note",
@@ -1110,12 +1325,13 @@ export const articles = [
     "question": "Apa saja yang ditampilkan laporan lanjutan?",
     "keywords": [
       "laporan lanjutan",
-      "perbandingan penjualan",
+      "perbandingan pendapatan",
       "tahun lalu",
       "peta panas",
       "jam ramai",
       "produk kurang laku",
       "produk naik-turun",
+      "proporsi per kategori",
       "nilai persediaan",
       "tingkat pembelian ulang",
       "poin"
@@ -1128,11 +1344,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Perbandingan penjualan: di sisi kanan bilah periode, bandingkan dengan periode yang sama tahun lalu atau dengan periode pembanding (satu hari dengan hari yang sama minggu lalu, minggu ini dengan minggu lalu, bulan ini dengan bulan lalu, tahun ini dengan tahun lalu, rentang kustom dengan jumlah hari yang sama sebelumnya). Kartu Kas Diterima menampilkan selisih dan tingkat pertumbuhan, dan grafik pendapatan menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama.",
-          "Hari × jam: ubah header Penjualan seiring waktu ke Hari × jam untuk melihat peta panas tujuh hari × 24 jam — semakin gelap sebuah sel, semakin banyak yang Anda jual. Beralihlah antara pendapatan dan pesanan; dengan perbandingan aktif, lihat jam mana yang naik dan mana yang turun.",
-          "Produk Kurang Laku: ubah header kartu peringkat ke Produk Kurang Laku untuk menampilkan produk dari penjualan paling sedikit hingga paling banyak, lengkap dengan stok saat ini dan tanggal terakhir masing-masing terjual. Produk yang belum pernah terjual ditandai Belum pernah terjual. Secara default hanya produk yang ada stoknya yang ditampilkan.",
-          "Naik-Turun (sejak v3.4): ubah header kartu peringkat ke Naik-Turun untuk melihat 3 produk yang pendapatannya naik paling banyak dan 3 yang turun paling banyak dibandingkan periode pembanding, masing-masing dengan pendapatan kedua periode dan selisihnya. Pilih dulu periode di Perbandingan penjualan; jika Tidak ada, atau di Semua Waktu, kartu akan memberi tahu Anda. Ketuk kartu atau Lihat Semua untuk melihat daftar lengkap Produk naik-turun, yang dibagi menjadi Naik dan Turun.",
-          "Tingkat pembelian ulang: baris terakhir pada kartu pelanggan adalah persentase anggota yang membeli dalam periode itu dan sudah membeli dua kali atau lebih secara total.",
+          "Perbandingan pendapatan: di sisi kanan bilah periode, bandingkan dengan periode yang sama tahun lalu atau dengan periode sebelumnya (satu hari dengan hari yang sama minggu lalu, minggu ini dengan minggu lalu, bulan ini dengan bulan lalu, tahun ini dengan tahun lalu, rentang kustom dengan jumlah hari yang sama sebelumnya). Ubin Pendapatan, Kas Diterima, Laba kotor, Pesanan, Rata-rata Pesanan, Total Diskon, dan Pelanggan yang Membeli masing-masing menampilkan perubahan dan angka periode pembanding, seperti “▼ 3% vs Bulan lalu”; perubahan pada Total Diskon selalu abu-abu, karena diskon yang lebih besar tidak otomatis baik atau buruk. Ketuk baris perbandingan mana pun untuk membuka Perbandingan periode, yang mencantumkan angka kedua periode. Grafik tren menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama.",
+          "Hari × jam: ubah header grafik tren dari Tren ke Hari × jam untuk melihat peta panas tujuh hari × 24 jam — semakin gelap sebuah sel, semakin banyak yang Anda jual. Beralihlah antara pendapatan dan pesanan; dengan perbandingan aktif, lihat jam mana yang naik dan mana yang turun.",
+          "Produk Kurang Laku: ubah header kartu peringkat ke Produk Kurang Laku untuk menampilkan produk dari penjualan paling sedikit hingga paling banyak, lengkap dengan stok saat ini dan tanggal terakhir masing-masing terjual. Produk yang belum pernah terjual ditandai Belum pernah terjual, dan produk dengan varian mendapat satu baris per varian. Secara default hanya produk yang ada stoknya yang ditampilkan.",
+          "Naik-Turun (sejak v3.4): ubah header kartu peringkat ke Naik-Turun untuk melihat 3 produk yang pendapatannya naik paling banyak dan 3 yang turun paling banyak dibandingkan periode pembanding, masing-masing dengan pendapatan kedua periode dan selisihnya; setiap varian dibandingkan dengan dirinya sendiri. Pilih dulu periode di Perbandingan pendapatan; jika Tidak ada, atau di Semua Waktu, kartu akan memberi tahu Anda. Ketuk kartu atau Lihat Semua untuk melihat daftar lengkap Produk naik-turun, yang dibagi menjadi Naik dan Turun.",
+          "Tingkat pembelian ulang: baris terakhir pada ubin pelanggan adalah persentase anggota yang membeli dalam periode itu dan sudah membeli dua kali atau lebih secara total. Dengan perbandingan aktif, satu baris di bawahnya menampilkan perubahan dalam poin persentase dan tingkat periode pembanding.",
+          "Proporsi per Kategori: pendapatan dan porsi tiap kategori, menurut kategori produk saat ini, dari yang terbesar. Produk tanpa kategori masuk ke Tanpa kategori, dan jumlah semua barisnya tepat sama dengan Pendapatan.",
           "Saat ini: nilai persediaan (stok saat ini × harga pokok saat ini), semua pergerakan stok dalam periode yang dipilih, serta poin yang dimiliki pelanggan tetapi belum ditukar, beserta potongan maksimum yang bisa didapat. Ini adalah saldo saat ini; periode tidak mengubahnya."
         ]
       },
@@ -1158,33 +1375,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Bagaimana laba dilaporkan jika saya tidak mengisi harga pokok?",
+    "question": "Bagaimana laba kotor dilaporkan jika saya tidak mengisi harga pokok?",
     "keywords": [
       "harga pokok",
       "laba",
       "laba kotor",
       "margin",
+      "margin kotor",
       "laporan",
       "tidak dilacak",
       "harga pokok kosong",
-      "laba kotor terlacak"
+      "produk tanpa harga pokok"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Harga pokok adalah kolom opsional. Produk tanpa harga pokok tidak diikutkan dalam perhitungan laba, sedangkan pendapatannya tetap dihitung penuh. Kartu Laba Kotor Terlacak di Statistik menunjukkan berapa produk yang terjual pada periode itu tanpa harga pokok; harga pokok 0 dihitung sebagai harga pokok, jadi produk tersebut tidak dicantumkan."
+        "text": "Harga pokok adalah kolom opsional. Produk tanpa harga pokok tidak diikutkan dalam laba kotor, sedangkan pendapatannya tetap dihitung penuh. Ubin Produk Tanpa Harga Pokok di Statistik menunjukkan berapa produk yang terjual atau diretur pada periode itu tanpa harga pokok, seperti “12 produk”. Harga pokok 0 dihitung sebagai harga pokok, jadi produk tersebut tidak dicantumkan; saat semua produk sudah punya harga pokok, ubin menampilkan “0 produk · data harga pokok lengkap”."
       },
       {
         "type": "p",
-        "text": "Ketuk kartu itu atau Lihat produk untuk membuka Produk Tanpa Harga Pokok, diurutkan berdasarkan pendapatan yang tidak masuk ke laba. Ketuk sebuah baris untuk membuka produknya, tambahkan harga pokoknya dari Edit, dan baris itu ditandai Harga pokok ditambahkan saat Anda kembali. Produk dengan varian ditandai Harga pokok ditambahkan setelah setiap varian yang terjual tanpa harga pokok punya harga pokok—baik harga pokoknya sendiri maupun harga pokok produk yang diikutinya."
+        "text": "Ketuk ubin itu atau Lihat produk untuk membuka Produk Tanpa Harga Pokok, diurutkan berdasarkan pendapatan yang tidak masuk ke laba kotor. Ketuk sebuah baris untuk membuka produknya, tambahkan harga pokoknya dari Edit, dan baris itu ditandai Harga pokok ditambahkan saat Anda kembali. Produk dengan varian ditandai Harga pokok ditambahkan setelah setiap varian yang terjual tanpa harga pokok punya harga pokok—baik harga pokoknya sendiri maupun harga pokok produk yang diikutinya."
       },
       {
         "type": "p",
-        "text": "Laba adalah pendapatan setelah semua diskon (diskon barang dan keranjang, promo, penukaran poin) dan sebelum pajak, dikurangi harga pokok — itulah sebabnya kolomnya bernama Harga pokok sebelum pajak (opsional): masukkan harga yang Anda bayar sebelum pajak. Margin adalah laba ÷ pendapatan sebelum pajak dari produk yang punya harga pokok, sehingga produk tanpa harga pokok tidak menurunkannya. Retur menarik kembali, pada hari retur, laba yang pernah dihasilkan barang-barang itu."
+        "text": "Laba kotor adalah pendapatan setelah semua diskon (diskon barang dan keranjang, promo, penukaran poin) dan sebelum pajak, dikurangi harga pokok — itulah sebabnya, di toko yang mengenakan pajak, kolomnya bernama Harga pokok sebelum pajak (opsional): masukkan harga yang Anda bayar sebelum pajak. Margin adalah laba kotor ÷ pendapatan produk yang punya harga pokok, sehingga produk tanpa harga pokok tidak menurunkannya. Retur menarik kembali, pada hari retur, laba kotor yang pernah dihasilkan barang-barang itu."
+      },
+      {
+        "type": "p",
+        "text": "Ketuk ubin laba kotor untuk membuka Dari Pendapatan ke Laba Kotor, yang mengurangkan baris demi baris: pendapatan (termasuk pajak), pajak, pendapatan (tanpa pajak), pendapatan tanpa harga pokok, harga pokok produk, dan terakhir laba kotor serta margin. Jumlah baris-barisnya tepat sama dengan ubin."
       },
       {
         "type": "note",
-        "text": "Harga pokok yang Anda tambahkan hanya memengaruhi penjualan berikutnya; penjualan yang sudah terjadi tidak dihitung ulang. Perhitungan ini hadir di v3.1: versi sebelumnya hanya mengurangi diskon barang manual dan menghitung pajak yang sudah termasuk sebagai laba, jadi setelah pembaruan, periode dengan diskon atau pajak termasuk menampilkan laba yang lebih rendah. Itu koreksi, bukan data yang hilang."
+        "text": "Harga pokok yang Anda tambahkan hanya memengaruhi penjualan berikutnya; penjualan yang sudah terjadi tidak dihitung ulang. Perhitungan ini hadir di v3.1: versi sebelumnya hanya mengurangi diskon barang manual dan menghitung pajak yang sudah termasuk sebagai laba, jadi setelah pembaruan, periode dengan diskon atau pajak termasuk menampilkan laba kotor yang lebih rendah. Itu koreksi, bukan data yang hilang."
       }
     ],
     "related": [
@@ -1219,20 +1441,26 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Pendapatan (tanpa pajak): pendapatan setelah semua diskon, dikurangi pajak, dihitung pada hari barang diserahkan.",
+          "Pendapatan (tanpa pajak): pendapatan setelah semua diskon dan sebelum pajak, dihitung pada hari barang diserahkan.",
           "Harga pokok produk: harga pokok barang yang terjual, berdasarkan harga pokok pada produk Anda.",
+          "Kerugian stok: harga pokok barang yang dikeluarkan lewat Sesuaikan Stok karena kedaluwarsa, rusak, diberikan gratis, dan sejenisnya, ditambah retur yang dibuang. Posisinya setelah laba kotor — lihat “Bagaimana cara mencatat stok yang kedaluwarsa, rusak, atau keluar sebagai sampel?” Bulan itu juga punya bagian Kerugian Stok yang menjumlahkannya menurut alasan.",
           "Biaya pemrosesan (perkiraan): biaya yang diperkirakan dari tarif metode pembayaran Anda.",
           "Uang muka hangus: uang muka yang Anda simpan saat pra-pesan dibatalkan.",
+          "Pembulatan tunai: selisih lebih atau kurang dari total pesanan yang timbul saat tunai dibulatkan ke koin yang beredar.",
           "Pengeluaran tetap dan Pengeluaran sekali bayar: yang Anda catat untuk bulan itu — lihat “Bagaimana cara mencatat sewa, gaji, dan pengeluaran lain?”"
         ]
       },
       {
         "type": "p",
-        "text": "Hingga tiga grafik menyusul: laba bersih dari bulan ke bulan, porsi tiap pengeluaran tetap, dan tren pengeluaran tetap. Kedua grafik tren mencakup paling banyak 12 bulan hingga bulan yang Anda buka, dan baru muncul setelah ada sedikitnya dua bulan untuk dibandingkan, dihitung sejak bulan penjualan atau pengeluaran pertama Anda. Grafik porsi membutuhkan pengeluaran tetap di bulan itu; selama belum ada, bagian tersebut menampilkan Tambah Pengeluaran Tetap. Di Statistik, baris terakhir kartu laba langsung menuju Laba Rugi: untuk periode yang tepat satu bulan, baris itu menampilkan laba bersih bulan tersebut, seperti “Laba bersih Oktober NT$12,300”; untuk periode lain tertulis Lihat laba rugi bulanan."
+        "text": "Hingga tiga grafik menyusul: laba bersih dari bulan ke bulan, porsi tiap pengeluaran tetap, dan tren pengeluaran tetap. Kedua grafik tren mencakup paling banyak 12 bulan hingga bulan yang Anda buka, dan baru muncul setelah ada sedikitnya dua bulan untuk dibandingkan, dihitung sejak bulan penjualan atau pengeluaran pertama Anda. Grafik porsi membutuhkan pengeluaran tetap di bulan itu; selama belum ada, bagian tersebut menampilkan Tambah Pengeluaran Tetap."
+      },
+      {
+        "type": "p",
+        "text": "Statistik dan Laba Rugi saling terhubung. Jika periode di Statistik adalah bulan ini atau tepat satu bulan penuh, baris ubin kedua menambahkan ubin Laba bersih (ditandai “Berjalan · pengeluaran sebulan penuh dikurangkan” selama bulan itu masih berjalan); ketuk untuk melihat rincian bulan itu dari laba kotor sampai laba bersih. Untuk periode lain, ketuk Lihat laba rugi bulanan di baris terakhir Dari Pendapatan ke Laba Kotor. Sebaliknya, Lihat laporan Oktober di bawah judul sebuah bulan di Laba Rugi membuka Statistik pada bulan itu."
       },
       {
         "type": "note",
-        "text": "Laba bersih adalah laba operasional sebelum pajak penghasilan, dihitung dari data yang tercatat di DingPOS — bukan laporan pajak. Jika ada produk yang terjual tanpa harga pokok, bulan itu tetap menampilkan laba bersih, ditandai “Tidak termasuk harga pokok N produk”; ketuk untuk melihat produk mana saja. Laba Rugi tersedia di semua paket. Jika memakai akun staf, membukanya memerlukan izin Laba rugi & pengeluaran, yang secara default perlu persetujuan bagi Manajer dan Staf karena halaman ini menampilkan harga pokok produk dan gaji."
+        "text": "Laba bersih adalah laba operasional sebelum pajak penghasilan, dihitung dari data yang tercatat di DingPOS — bukan laporan pajak. Jika ada produk yang terjual tanpa harga pokok, bulan itu tetap menampilkan laba bersih, ditandai “Belum termasuk harga pokok N produk”; ketuk untuk melihat produk mana saja. Laba Rugi tersedia di semua paket. Jika memakai akun staf, membukanya memerlukan izin Laba rugi & pengeluaran, yang secara default perlu persetujuan bagi Manajer dan Staf karena halaman ini menampilkan harga pokok produk dan gaji."
       }
     ],
     "related": [
@@ -1287,7 +1515,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Isi jumlah yang benar-benar ditanggung toko, tanpa pajak yang bisa diklaim kembali. Stok yang akan dijual dicatat lewat Pembelian, karena nilainya masuk ke harga pokok produk saat terjual; uang jaminan, pokok pinjaman, dan uang yang diambil pemilik bukan pengeluaran. Perubahan tersimpan sekaligus saat Anda mengetuk ✓, dan perubahan yang menjangkau bulan yang sudah selesai lebih dulu memberi tahu laba bersih bulan mana saja yang akan berubah."
+        "text": "Isi jumlah yang benar-benar ditanggung toko, tanpa pajak yang bisa diklaim kembali. Stok yang akan dijual dan bahan baku untuk membuatnya dicatat lewat Pembelian, karena nilainya masuk ke harga pokok produk saat terjual. Perlengkapan dengan stok yang dilacak dicatat lewat Sesuaikan Stok saat dipakai, dengan alasan Perlengkapan toko, bukan sebagai pengeluaran. Uang jaminan, pokok pinjaman, dan uang yang diambil pemilik bukan pengeluaran. Perubahan tersimpan sekaligus saat Anda mengetuk ✓, dan perubahan yang menjangkau bulan yang sudah selesai lebih dulu memberi tahu laba bersih bulan mana saja yang akan berubah."
       }
     ],
     "related": [
@@ -1390,6 +1618,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Pilih anggota untuk penjualan itu, di keranjang atau di layar Bayar, lalu poin bertambah otomatis; untuk menukar, masukkan jumlah poin yang dipakai. Jika penjualan yang keliru dibatalkan lewat Batalkan penjualan (Void), poin yang diperoleh dari pesanan tersebut ditarik kembali dan poin yang sudah ditukar dikembalikan."
+      },
+      {
+        "type": "p",
+        "text": "Untuk menambah atau mengurangi poin secara manual (misalnya untuk pembelian yang terlewat), ketuk Sesuaikan pada kartu Poin di detail pelanggan, pilih Tambah atau Kurangi, masukkan jumlah poin, lalu isi alasan jika perlu (maksimal 100 karakter). Anda tidak dapat mengurangi lebih banyak daripada poin yang dimiliki pelanggan. Setiap penyesuaian tercatat di riwayat poin, lengkap dengan saldo sebelum dan sesudahnya, alasan, dan siapa yang melakukannya."
+      },
+      {
+        "type": "note",
+        "text": "Penyesuaian poin manual hadir sejak v3.5. Di paket Pro, staf yang perannya memerlukan persetujuan untuk Penyesuaian poin manual (secara default, peran Staf) akan diminta memasukkan PIN manajer atau pemilik saat menekan Konfirmasi."
       }
     ],
     "related": [
@@ -1571,7 +1807,8 @@ export const articles = [
       "crash saat dibuka",
       "database",
       "data toko",
-      "aplikasi error"
+      "aplikasi error",
+      "memperbarui data"
     ],
     "content": [
       {
@@ -1581,6 +1818,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Ketuk Coba Lagi terlebih dahulu; jika berhasil, aplikasi terbuka seperti biasa. Jika terus terjadi, ketuk Hubungi Dukungan dan beri tahu kami, dan kami akan membantu memulihkan data Anda. Layar ini tidak pernah memindahkan atau menghapus file apa pun."
+      },
+      {
+        "type": "p",
+        "text": "Saat pertama kali dibuka setelah pembaruan, atau setelah memulihkan cadangan dari versi lama, aplikasi mungkin menampilkan “Memperbarui data Anda…” lebih dulu. Itu berarti data toko Anda sedang dipindahkan ke format yang lebih baru; makin banyak datanya, makin lama prosesnya, dan aplikasi akan terbuka sendiri setelah selesai. Aplikasi tidak macet."
       },
       {
         "type": "note",
@@ -1805,12 +2046,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gunakan log aktivitas. Di halaman Staf, ketuk Log aktivitas di kanan atas dan masukkan PIN pemilik untuk melihat tindakan sensitif di toko, dari yang terbaru: pembatalan penjualan (void), retur, penyesuaian stok manual, persetujuan, perubahan staf dan izin, perubahan PIN pemilik, perubahan harga jual dan harga pokok produk, serta penghapusan produk. Transaksi kasir biasa tidak dicantumkan."
+        "text": "Gunakan log aktivitas. Di halaman Staf, ketuk Log aktivitas di kanan atas dan masukkan PIN pemilik untuk melihat tindakan sensitif di toko, dari yang terbaru: pembatalan penjualan (void), retur, penyesuaian stok dan hitung ulang, penyesuaian poin manual, persetujuan, perubahan staf dan izin, perubahan PIN pemilik, pengaturan pajak, perubahan harga jual dan harga pokok produk, serta penghapusan produk. Transaksi kasir biasa tidak dicantumkan."
       },
       {
         "type": "list",
         "items": [
-          "Setiap entri menunjukkan apa yang disentuh, siapa melakukan apa dan kapan, serta hasilnya — misalnya “M harga $390 → $350”.",
+          "Setiap entri menunjukkan apa yang disentuh, siapa melakukan apa dan kapan, serta hasilnya — misalnya “M harga $390 → $350”. Alasan untuk pembatalan penjualan, retur, penyesuaian stok, atau penyesuaian poin tertera di baris ketiga entri.",
           "Saring berdasarkan staf (termasuk yang dinonaktifkan), jenis tindakan, dan Hari ini / Minggu Ini / Bulan Ini.",
           "Ketuk entri yang merujuk ke pesanan, produk, atau pelanggan untuk membuka rinciannya.",
           "Rincian pesanan, rincian produk, dan halaman setiap staf masing-masing memiliki daftar entri sendiri yang hanya menampilkan catatan tentangnya.",

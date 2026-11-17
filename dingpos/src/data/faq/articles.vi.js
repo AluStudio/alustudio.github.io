@@ -83,18 +83,19 @@ export const articles = [
       "trình hướng dẫn",
       "mở cửa hàng",
       "quốc gia",
-      "tiền tệ"
+      "tiền tệ",
+      "thuế"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Lần đầu mở DingPOS, trình hướng dẫn thiết lập sẽ giúp bạn mở cửa hàng chỉ với hai bước, trong vài phút:"
+        "text": "Lần đầu mở DingPOS, trình hướng dẫn thiết lập sẽ giúp bạn thiết lập cửa hàng qua hai bước, chỉ mất vài phút:"
       },
       {
         "type": "steps",
         "items": [
-          "Chọn quốc gia hoặc khu vực của bạn. Đầu danh sách là khu vực của iPad này và các thị trường phổ biến nhất; bên dưới là toàn bộ 175 quốc gia và khu vực có DingPOS trên App Store, có thể tìm theo tên bằng ngôn ngữ của ứng dụng hoặc tiếng Anh. Lựa chọn của bạn sẽ tự điền tiền tệ, thuế suất và chế độ thuế.",
-          "Ở bước Cửa hàng của bạn, nhập tên cửa hàng, có thể thêm logo, rồi kiểm tra tiền tệ, thuế suất và chế độ thuế (giá đã gồm thuế / giá chưa gồm thuế). Tiền tệ mặc định theo quốc gia của bạn; chạm vào đó để chọn trong 130 loại tiền tệ."
+          "Chọn quốc gia hoặc khu vực của bạn. Đầu danh sách là quốc gia hoặc khu vực hiện tại của iPad, rồi đến các thị trường phổ biến nhất; bên dưới là toàn bộ 175 quốc gia và khu vực có DingPOS trên App Store, có thể tìm theo tên bằng ngôn ngữ của ứng dụng hoặc tiếng Anh. Lựa chọn của bạn sẽ tự điền tiền tệ, thuế và chế độ thuế.",
+          "Ở bước Cửa hàng của bạn, nhập tên cửa hàng, có thể thêm logo, rồi kiểm tra tiền tệ, thuế và chế độ thuế (giá đã gồm thuế / giá chưa gồm thuế). Tiền tệ mặc định theo quốc gia của bạn; chạm vào đó để chọn trong 130 loại tiền tệ. Danh sách thuế hiển thị các loại thuế mặc định của quốc gia bạn: bạn có thể đổi tên, sửa thuế suất, xóa một dòng hoặc chạm Thêm thuế để thêm dòng khác. Ví dụ, cửa hàng ở British Columbia sẽ đổi dòng đầu thành “GST 5” và thêm một dòng “PST 7”."
         ]
       },
       {
@@ -103,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Tiền tệ và chế độ thuế không thể đổi sau khi thiết lập; thuế suất vẫn có thể đổi sau trong Cài đặt. Tại Hoa Kỳ, Canada, Brazil và Micronesia, thuế suất tùy theo bang, tỉnh hoặc thành phố, nên ô thuế suất ban đầu để trống và bạn nhập mức thuế mình áp dụng (được phép nhập 0) để tiếp tục. Danh sách 175 quốc gia và lựa chọn tiền tệ có từ phiên bản v3.2; các phiên bản trước chỉ có 15 quốc gia."
+        "text": "Tiền tệ không thể đổi sau khi thiết lập; thuế và chế độ thuế đều có thể đổi sau trong Cài đặt → Thông tin cửa hàng. Tại Hoa Kỳ, Canada, Brazil và Micronesia, thuế suất tùy theo bang, tỉnh hoặc thành phố, nên ô thuế suất ban đầu để trống và bạn nhập mức thuế mình áp dụng để tiếp tục. Thuế suất phải lớn hơn 0: cửa hàng không tính thuế thì xóa dòng đó. Danh sách 175 quốc gia và lựa chọn tiền tệ có từ phiên bản v3.2; các phiên bản trước chỉ có 15 quốc gia."
       }
     ],
     "related": [
@@ -181,11 +182,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Hiện tại DingPOS hỗ trợ iPad chạy iPadOS 17 trở lên, được thiết kế chủ yếu cho chiều ngang."
+        "text": "Hiện tại DingPOS hỗ trợ iPad chạy iPadOS 17.4 trở lên; ứng dụng được thiết kế chủ yếu để sử dụng theo chiều ngang."
       },
       {
         "type": "p",
         "text": "iPhone và Mac chưa được hỗ trợ. Nếu bạn muốn chúng tôi hỗ trợ thiết bị khác, hãy viết thư và cho chúng tôi biết nhu cầu sử dụng của bạn."
+      },
+      {
+        "type": "note",
+        "text": "Mọi iPad chạy được iPadOS 17 đều cập nhật được lên 17.4, nên không có dòng máy nào bị loại. iPad còn ở iPadOS 17.0–17.3 cần cập nhật hệ thống trước, trong Cài đặt → Cài đặt chung → Cập nhật phần mềm, rồi mới cài được DingPOS v3.5 trở lên."
       }
     ],
     "related": [
@@ -195,22 +200,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Sau khi thiết lập, tôi có đổi được tiền tệ hoặc chế độ thuế không?",
+    "question": "Sau khi thiết lập, tôi có đổi được tiền tệ, thuế suất hoặc chế độ thuế không?",
     "keywords": [
       "tiền tệ",
       "chế độ thuế",
       "thay đổi",
       "bị khóa",
-      "thuế suất"
+      "thuế suất",
+      "thuế",
+      "giá đã gồm thuế",
+      "giá chưa gồm thuế"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Bạn có thể đổi thuế suất bất cứ lúc nào trong Cài đặt — thuế suất mới chỉ áp dụng cho các đơn hàng sau đó."
+        "text": "Thuế thì đổi được, còn tiền tệ thì không. Thuế và chế độ thuế đều được đổi ở thẻ Thuế trong Cài đặt → Thông tin cửa hàng, và thay đổi chỉ áp dụng cho các đơn hàng sau đó: đơn hàng, đơn trả hàng và báo cáo trước đó giữ nguyên số thuế và chế độ thuế đã ghi nhận."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Thuế: thêm, đổi tên, sửa thuế suất hoặc xóa — xem “Thuế được tính như thế nào?”",
+          "Chế độ thuế (giá đã gồm thuế / giá chưa gồm thuế): chạm vào chế độ còn lại, hộp xác nhận sẽ tính thử một ví dụ với loại thuế đầu tiên của bạn, như “sản phẩm giá NT$100 với thuế 5%: khách trả NT$105”. Giá giữ nguyên con số, và giỏ hàng đang mở sẽ được tính lại theo chế độ mới khi bạn quay lại tab Thu ngân. Chế độ thuế có thể chuyển từ v3.5; các phiên bản trước khóa chế độ này ngay khi thiết lập.",
+          "Sau khi chuyển, trả hàng toàn bộ vẫn hoàn tiền đơn gốc đúng như lúc bán. Đổi hàng (có hàng đổi sang) trên đơn đã bán theo chế độ còn lại sẽ bị chặn: hãy chuyển chế độ thuế về như cũ, hoặc trả hàng rồi thanh toán lại."
+        ]
       },
       {
         "type": "p",
-        "text": "Tiền tệ và chế độ thuế (giá đã gồm thuế / giá chưa gồm thuế) bị khóa sau khi thiết lập xong. Toàn bộ đơn hàng trước đó đã được tính theo chúng, nên đổi giữa chừng sẽ làm sai lệch báo cáo của bạn. Hãy kiểm tra chúng ở bước Cửa hàng của bạn trong phần thiết lập: tiền tệ mặc định theo quốc gia của bạn và bạn có thể chạm vào đó để chọn loại khác."
+        "text": "Tiền tệ bị khóa sau khi thiết lập xong. Toàn bộ đơn hàng trước đó đã được ghi theo tiền tệ này, nên đổi giữa chừng sẽ làm sai lệch báo cáo của bạn. Hãy kiểm tra tiền tệ ở bước Cửa hàng của bạn trong phần thiết lập: tiền tệ mặc định theo quốc gia của bạn và bạn có thể chạm vào đó để chọn loại khác."
       },
       {
         "type": "note",
@@ -331,12 +347,16 @@ export const articles = [
       "thuế bán hàng",
       "giá đã gồm thuế",
       "giá chưa gồm thuế",
+      "nhiều loại thuế",
+      "GST",
+      "PST",
+      "tạm dừng tính thuế",
       "hóa đơn"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Thuế được tính tự động theo chế độ thuế bạn chọn khi thiết lập. Hóa đơn hiển thị số tiền thuế ở cả hai chế độ:"
+        "text": "Thuế được tính tự động theo các loại thuế và chế độ thuế trong Cài đặt → Thông tin cửa hàng. Có hai chế độ thuế, và hóa đơn hiển thị số tiền thuế ở cả hai:"
       },
       {
         "type": "list",
@@ -347,12 +367,34 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Thứ tự tính đầy đủ: giảm giá theo món → giảm giá giỏ hàng → thuế. Số tiền được làm tròn lên từ 0,5 theo số chữ số thập phân của loại tiền tệ (ví dụ 0 với TWD, 2 với USD)."
+        "text": "Một cửa hàng có thể tính nhiều loại thuế, như GST 5% cộng PST 7% ở British Columbia, hoặc thuế tiêu dùng 10% của Nhật Bản cùng thuế suất giảm 8%:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ở thẻ Thuế, chạm Thêm thuế rồi nhập tên và thuế suất. Bật Áp dụng cho sản phẩm mới thì các sản phẩm bạn thêm sau này sẽ mặc định tính loại thuế đó. Nếu cửa hàng đã có thuế mặc định, loại thuế mới thêm sẽ để công tắc này tắt; hãy bật lên khi cần tính cả hai.",
+          "Mỗi sản phẩm chọn các loại thuế mà nó tính ở mục Thuế áp dụng trong biểu mẫu sản phẩm — một hộp cơm bento có thể chỉ tính thuế suất giảm 8%. Khi bật từ hai loại trở lên, biểu mẫu hiển thị tổng thuế suất của sản phẩm.",
+          "Chạm vào một loại thuế để đổi tên, đổi thuế suất, hoặc dùng Áp dụng cho tất cả sản phẩm hay Gỡ khỏi tất cả sản phẩm để thêm hoặc bỏ loại thuế đó cho mọi sản phẩm cùng lúc. Khi xóa một loại thuế, ứng dụng sẽ báo trước có bao nhiêu sản phẩm sẽ không còn tính thuế đó.",
+          "Ở cửa hàng dùng giá chưa gồm thuế, phần tổng của giỏ hàng hiển thị mỗi loại thuế một dòng, còn chi tiết đơn hàng liệt kê mỗi loại thuế một dòng kèm thuế suất và số tiền bị tính thuế."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Để tạm ngừng tính thuế, hãy tắt Tính thuế ở đầu thẻ Thuế: mọi giao dịch sau đó đều không có thuế, kể cả các món đã nằm trong giỏ hàng. Mỗi sản phẩm vẫn giữ các loại thuế của nó, và khi bật lại công tắc, mọi thứ trở về như trước."
+      },
+      {
+        "type": "p",
+        "text": "Thứ tự tính đầy đủ: giảm giá theo món và khuyến mãi → giảm giá giỏ hàng → đổi điểm → thuế. Số tiền được làm tròn lên từ 0,5 theo số chữ số thập phân của loại tiền tệ (ví dụ 0 với TWD, 2 với USD)."
+      },
+      {
+        "type": "note",
+        "text": "Thuế có tên xuất hiện từ v3.5. Khi bạn cập nhật, thuế suất hiện có sẽ trở thành một loại thuế có tên (ví dụ “GST 10%” ở Úc) và mọi sản phẩm hiện có đều áp dụng loại thuế đó; cửa hàng có thuế suất 0 thì không có thuế nào. Các đơn hàng và đơn trả hàng cũ giữ nguyên thuế suất và số tiền thuế đã ghi nhận; báo cáo nay tính doanh thu trước thuế, kể cả các kỳ trước (xem “Doanh thu và Tiền đã thu khác nhau thế nào?”)."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -376,7 +418,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Phương thức thanh toán chỉ là nhãn ghi sổ — DingPOS không xử lý thanh toán thực tế. Hãy nhận tiền thẻ hoặc thanh toán di động bằng máy quẹt thẻ hoặc ứng dụng sẵn có của bạn, rồi chọn nhãn tương ứng trong DingPOS để ghi lại. Với tiền mặt, ứng dụng tự tính tiền thối."
+        "text": "Phương thức thanh toán chỉ là nhãn ghi sổ — DingPOS không xử lý thanh toán thực tế. Hãy nhận tiền thẻ hoặc thanh toán di động bằng máy quẹt thẻ hoặc ứng dụng sẵn có của bạn, rồi chọn nhãn tương ứng trong DingPOS để ghi lại. Với tiền mặt, ứng dụng tự tính tiền thối, và ở nơi đã không còn dùng các đồng xu nhỏ nhất, tiền mặt cũng có thể được làm tròn — xem “Thanh toán tiền mặt có thể làm tròn theo đồng xu đang lưu hành không?”"
       },
       {
         "type": "p",
@@ -384,11 +426,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Với khách quen lấy hàng trước và trả tiền sau, hãy chọn Bán chịu: đơn được ghi nhận là khoản phải thu và được tất toán khi tiền về. Xem “Khách quen có thể mua chịu và trả sau không?”"
+        "text": "Với khách quen lấy hàng trước và trả tiền sau, hãy chọn Bán chịu: đơn được ghi nhận là khoản phải thu và được tất toán khi tiền về. Xem “Khách quen có thể mua chịu, trả tiền sau không?”"
       }
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -434,6 +477,55 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Thanh toán tiền mặt có thể làm tròn theo đồng xu đang lưu hành không?",
+    "keywords": [
+      "làm tròn tiền mặt",
+      "làm tròn",
+      "làm tròn lên",
+      "làm tròn xuống",
+      "đồng xu",
+      "xu",
+      "cent",
+      "0.05",
+      "tiền thối",
+      "Canada",
+      "Úc",
+      "Thụy Sĩ"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Có. Canada, Úc, New Zealand, Thụy Sĩ, Đan Mạch, Thụy Điển, Na Uy, Bỉ, Phần Lan và Hungary không còn dùng các đồng xu nhỏ nhất, nên DingPOS làm tròn tiền mặt thành số tiền bạn thực sự có thể đưa: một đơn C$12.99 trả bằng tiền mặt được thu là C$13.00, và tiền thối tính từ C$13.00. Thanh toán bằng thẻ và các hình thức không dùng tiền mặt vẫn giữ đúng số tiền."
+      },
+      {
+        "type": "p",
+        "text": "Cửa hàng mới thiết lập ở một trong các quốc gia này, với đồng tiền của quốc gia đó, sẽ được bật sẵn. Cửa hàng khác có thể bật bằng thẻ Làm tròn tiền mặt ở cuối Cài đặt → Phương thức thanh toán: chọn mức làm tròn tiền mặt (Không làm tròn, 0.05, 0.10, 0.50 hoặc 1.00 với loại tiền có xu; 5, 10, 50 hoặc 100 với loại tiền không có xu, như TWD hoặc JPY), và với mức làm tròn có thể rơi đúng ở giữa thì chọn làm tròn lên hay xuống. Thay đổi chỉ áp dụng cho các khoản thanh toán sau đó."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Màn hình thanh toán hiển thị “Tiền mặt thu C$13.00”. Nếu khách yêu cầu trả đúng số tiền, hãy chạm Thu đúng số tiền bên dưới các phương thức thanh toán; lựa chọn này chỉ áp dụng cho giao dịch đó.",
+          "Tổng tiền đơn hàng, thuế, doanh thu, điểm và mức chi tiêu của thành viên không thay đổi; phần chênh lệch làm tròn nằm ở khoản thanh toán, và màn hình hóa đơn cùng chi tiết đơn hàng hiển thị phần này bên dưới tổng tiền, ví dụ “Làm tròn tiền mặt +C$0.01”.",
+          "Các khoản hoàn tiền mặt khi trả hàng, tiền cọc và số tiền còn lại khi nhận hàng của đơn đặt trước thanh toán bằng tiền mặt, khoản bù chênh lệch khi đổi hàng và khoản bán chịu được tất toán bằng tiền mặt cũng được làm tròn; tất toán nhiều khoản cùng lúc thì cả lô chỉ làm tròn một lần.",
+          "Vô hiệu hóa, hoàn lại tiền cọc đơn đặt trước và hủy tất toán sẽ trả lại đúng số tiền đã ghi nhận, không làm tròn lại.",
+          "Tiền đã thu trên Thống kê cho biết phần nào trong đó là làm tròn tiền mặt, và Lãi lỗ hằng tháng có thêm dòng Làm tròn tiền mặt được tính vào lợi nhuận ròng. Làm tròn không bao giờ là doanh thu."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Thụy Sĩ luôn làm tròn xuống theo quy định hiển thị giá của nước này — CHF 12.98 được thu là CHF 12.95, và không có lựa chọn ở giữa. Bỉ chỉ làm tròn các tổng tiền trên €0.05. Làm tròn tiền mặt có ở mọi gói, và cửa hàng hiện có vẫn thu tiền mặt chính xác như trước cho đến khi bạn bật tính năng này."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -611,7 +703,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vào Đơn hàng, tìm đơn cần xử lý, mở chi tiết đơn rồi chọn Vô hiệu hóa. Xác nhận là xong."
+        "text": "Vào Đơn hàng, tìm đơn cần xử lý, mở chi tiết đơn rồi chạm Vô hiệu hóa. Bảng “Vô hiệu hóa đơn hàng này?” có ô lý do không bắt buộc (tối đa 100 ký tự); chạm Vô hiệu hóa ở góc trên bên phải là xong. Lý do hiển thị trong chi tiết đơn và nhật ký hoạt động, và không thể sửa sau khi đã gửi."
       },
       {
         "type": "p",
@@ -638,7 +730,9 @@ export const articles = [
       "đổi hàng",
       "hoàn tiền",
       "trả một phần",
-      "đổi size"
+      "đổi size",
+      "loại bỏ hàng trả",
+      "lý do trả hàng"
     ],
     "content": [
       {
@@ -651,9 +745,15 @@ export const articles = [
           "Đơn gốc không bao giờ bị sửa. Mỗi lần trả hàng tạo một chứng từ riêng, ghi ngày hôm nay, đánh số có tiền tố R, và doanh thu bị trừ vào đúng ngày trả hàng.",
           "Số tiền hoàn là số khách thực sự đã trả cho mặt hàng đó — giảm giá theo mặt hàng, giảm giá giỏ hàng và điểm đã dùng đều đã được phân bổ sẵn, nên không hoàn theo giá niêm yết. Thuế tính theo mức thuế suất của đơn gốc.",
           "Hàng đổi sang được tính theo giá hôm nay, không áp dụng khuyến mãi hay giảm giá.",
-          "Tồn kho đang theo dõi được cộng lại tự động. Điểm đã tích từ đơn gốc bị thu hồi, điểm đã dùng được hoàn lại, và hàng đổi sang tự tích điểm riêng.",
-          "Một đơn có thể trả hàng nhiều lần, nhưng không vượt quá số lượng đã bán ban đầu. Giới hạn lượt dùng khuyến mãi không được hoàn lại khi trả hàng."
+          "Với sản phẩm có theo dõi tồn kho, mỗi dòng hàng trả có thể quay lại kho (Nhập lại kho, là mặc định) hoặc bị bỏ đi (Loại bỏ, từ v3.5). Nhập lại kho sẽ cộng lại tồn kho. Loại bỏ giữ nguyên tồn kho và tính giá vốn của mặt hàng lúc bán vào Hao hụt tồn kho của tháng đó trong Lãi lỗ. Số tiền hoàn, thuế và điểm đều giống nhau trong cả hai trường hợp.",
+          "Điểm đã tích từ đơn gốc bị thu hồi, điểm đã dùng được hoàn lại, và hàng đổi sang tự tích điểm riêng.",
+          "Khi đơn gốc là đơn bán chịu chưa tất toán, không có khoản tiền nào được trao tay: khoản trả hàng được trừ vào công nợ của khách, và nếu hàng đổi sang đắt hơn thì phần chênh lệch được cộng thêm vào công nợ đó.",
+          "Một đơn có thể trả hàng nhiều lần, nhưng không bao giờ vượt quá số lượng đã bán ban đầu; khi tất cả đã được trả lại, thuế, giảm giá và điểm đã hoàn cộng lại đúng bằng đơn gốc. Giới hạn lượt dùng khuyến mãi không được hoàn lại khi trả hàng."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Trường Lý do không bắt buộc, tối đa 100 ký tự. Lý do hiển thị trong chi tiết đơn và nhật ký hoạt động, và không thể sửa sau khi đã gửi."
       },
       {
         "type": "note",
@@ -736,6 +836,7 @@ export const articles = [
         "items": [
           "Doanh thu được tính vào ngày hàng ra khỏi cửa hàng; Tiền đã thu và điểm thành viên chờ đến ngày tất toán.",
           "Đơn chưa tất toán có huy hiệu màu hổ phách trong danh sách, và chi tiết khách hàng cho biết khách hiện đang nợ bao nhiêu.",
+          "Trả hàng trên đơn chưa tất toán không hoàn tiền: số tiền được trừ vào công nợ của khách đó.",
           "Không thể xóa khách hàng còn đơn chưa tất toán."
         ]
       },
@@ -804,7 +905,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Tên tùy chọn và tên lựa chọn tối đa 20 ký tự và không được để trống: tên tùy chọn hoặc lựa chọn bị bỏ trống sẽ được viền đỏ khi bạn lưu, hãy điền vào hoặc xóa lựa chọn trống đó. Sản phẩm có biến thể không dùng được giá tự đặt."
+        "text": "Tên tùy chọn và tên lựa chọn tối đa 20 ký tự, và khoảng trắng ở hai đầu sẽ được cắt bỏ khi bạn lưu. Một lựa chọn bạn chưa nhập gì không phải là tổ hợp và sẽ bị bỏ qua khi lưu. Việc lưu sẽ dừng lại, với ô bị viền đỏ, khi tên tùy chọn để trống, khi mọi lựa chọn của một tùy chọn đều để trống, hoặc khi bạn xóa trống một lựa chọn mà sản phẩm đã lưu trước đó; hãy nhập lại, hoặc xóa nó bằng nút × (Xóa). Sản phẩm có biến thể không dùng được giá tự đặt."
       }
     ],
     "related": [
@@ -936,12 +1037,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sau khi bật, đơn bán và đơn đặt trước sẽ tự trừ kho; vô hiệu hóa, trả hàng và hủy đơn đặt trước sẽ cộng lại; nhận đơn nhập hàng sẽ cộng thêm; và bạn có thể điều chỉnh thủ công bất cứ lúc nào. Mọi biến động đều được ghi đầy đủ vào sổ biến động. Hàng sắp hết được tô màu cảnh báo."
+        "text": "Sau khi bật, đơn bán và đơn đặt trước sẽ tự trừ kho; vô hiệu hóa, trả hàng và hủy đơn đặt trước sẽ cộng lại; nhập kho cho một đơn nhập hàng sẽ cộng thêm. Mọi biến động đều được ghi đầy đủ vào sổ biến động. Hàng sắp hết được tô màu cảnh báo."
+      },
+      {
+        "type": "p",
+        "text": "Có hai cách để thay đổi con số này bằng tay:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Đếm lại: sửa số tồn kho trong trang sửa sản phẩm cho khớp với số bạn đã đếm thực tế. Cách này không bao giờ ảnh hưởng đến lãi lỗ.",
+          "Điều chỉnh tồn kho (từ v3.5): trong chi tiết sản phẩm, chạm Điều chỉnh tồn kho, chọn Bớt hoặc Thêm, số lượng và một lý do như Hết hạn hoặc hỏng, Hư hỏng, hay Mẫu thử và quà tặng. Giá vốn của phần bị bớt đi sẽ được tính vào Hao hụt tồn kho của tháng đó trong lãi lỗ — xem “Cách ghi nhận hàng hết hạn, hư hỏng hoặc đã xuất làm hàng mẫu?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Cách ghi nhận hàng hết hạn, hư hỏng hoặc đã xuất làm hàng mẫu?",
+    "keywords": [
+      "điều chỉnh tồn kho",
+      "hao hụt tồn kho",
+      "hao hụt",
+      "xóa sổ hàng",
+      "hàng bỏ đi",
+      "hết hạn",
+      "hư hỏng",
+      "hàng mẫu",
+      "vật tư cửa hàng",
+      "đếm lại"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Hãy dùng Điều chỉnh tồn kho. Với sản phẩm có theo dõi tồn kho, chạm Điều chỉnh tồn kho trong chi tiết sản phẩm, chọn Bớt hoặc Thêm, nhập số lượng, chọn một lý do và có thể thêm ghi chú (tối đa 100 ký tự). Bảng điều chỉnh sẽ tính sẵn tồn kho sau thay đổi, và dòng dưới phần lý do cho biết thay đổi đó có ảnh hưởng đến lãi lỗ hay không."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Lý do để bớt: Dùng để sản xuất, Hết hạn hoặc hỏng, Hư hỏng, Mất hoặc bị trộm, Nhân viên dùng, Mẫu thử và quà tặng, Vật tư cửa hàng và Khác. Lý do để thêm: Tự sản xuất, Tìm thấy và Khác. Lý do Khác bắt buộc phải có ghi chú.",
+          "Trừ Dùng để sản xuất, phần hàng bạn bớt đi được tính theo giá vốn tại thời điểm đó vào Hao hụt tồn kho của tháng đó trong lãi lỗ. Khoản này nằm sau lợi nhuận gộp và làm giảm lợi nhuận ròng; lợi nhuận gộp và biên lợi nhuận không đổi. Dùng để sản xuất chỉ trừ tồn kho, vì giá vốn của nguyên liệu đã nằm trong giá vốn của sản phẩm làm từ nó.",
+          "Tìm thấy sẽ trừ lại đúng số tiền đó khỏi Hao hụt tồn kho. Tự sản xuất và Khác ở phía Thêm chỉ cộng tồn kho và không bao giờ ảnh hưởng đến lãi lỗ.",
+          "Mỗi lần điều chỉnh được tính vào ngày bạn ghi. Không thể ghi lùi ngày, sửa hay xóa; muốn sửa một lần ghi nhầm, hãy ghi Tìm thấy hoặc một lần điều chỉnh theo chiều ngược lại.",
+          "Sản phẩm chưa có giá vốn vẫn điều chỉnh được, nhưng lãi lỗ không thể tính khoản tiền nào cho nó, và tháng đó sẽ ghi chú có bao nhiêu bản ghi không có giá vốn."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Sửa số tồn kho trong trang sửa sản phẩm là Đếm lại: nó khớp với số bạn đã đếm thực tế và không bao giờ ảnh hưởng đến lãi lỗ. Danh sách biến động tồn kho trong Thống kê lọc riêng Điều chỉnh và Đếm lại, còn Nhật ký hoạt động hiển thị lý do và ghi chú của từng lần điều chỉnh."
+      },
+      {
+        "type": "note",
+        "text": "Điều chỉnh tồn kho cần gói Standard trở lên. Trên gói Pro, nhân viên có vai trò cần phê duyệt cho Điều chỉnh tồn kho thủ công sẽ được yêu cầu nhập mã PIN của quản lý khi xác nhận."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -962,7 +1122,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tồn kho âm thường do chưa ghi nhận lần nhập hàng, hoặc món đặt trước chưa về (đơn đặt trước trừ kho ngay khi tạo). Hãy ghi nhập hàng bằng cách nhận đơn nhập hàng, con số sẽ tự trở lại đúng; còn chênh lệch khi kiểm kho thì sửa bằng điều chỉnh thủ công, và điều chỉnh này được lưu trong sổ biến động."
+        "text": "Tồn kho âm thường do chưa ghi nhận lần nhập hàng, hoặc món đặt trước chưa về (đơn đặt trước trừ kho ngay khi tạo). Hãy ghi nhập hàng bằng cách nhập kho cho đơn nhập hàng, con số sẽ tự trở lại đúng. Chênh lệch khi kiểm kho thì sửa bằng cách sửa số tồn kho trong trang sửa sản phẩm (Đếm lại); còn hàng bị hỏng, hết hạn hoặc đã tặng thì hãy ghi lý do bằng Điều chỉnh tồn kho. Cả hai đều được lưu trong sổ biến động."
       },
       {
         "type": "note",
@@ -1006,14 +1166,64 @@ export const articles = [
         "text": "Kỳ hạn thanh toán quyết định bước tiếp theo: đơn trả ngay được đánh dấu đã thanh toán, còn đơn theo tháng vẫn còn nợ trong Hóa đơn còn nợ, nơi bạn có thể tất toán theo từng nhà cung cấp — một đơn, trong tháng này, hoặc toàn bộ."
       },
       {
+        "type": "p",
+        "text": "Nguyên liệu bạn không bán, như bột mì hay bao bì, cũng có thể nhập hàng theo cách tương tự: hãy tạo chúng thành sản phẩm không bán — xem “Có thể thêm nguyên liệu như bột mì hay bao bì làm sản phẩm không?”"
+      },
+      {
         "type": "note",
         "text": "Nhập hàng yêu cầu gói Standard trở lên. Nhà cung cấp còn đơn đã nhận chưa thanh toán thì không thể xóa."
       }
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Có thể thêm nguyên liệu như bột mì hay bao bì làm sản phẩm không?",
+    "keywords": [
+      "sản phẩm không bán",
+      "nguyên liệu",
+      "bột mì",
+      "vật liệu",
+      "bao bì",
+      "vật tư",
+      "bán tại quầy thu ngân",
+      "nhập hàng",
+      "giá vốn"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Được. Trong trang sửa sản phẩm, hãy tắt Bán tại quầy thu ngân bên dưới ảnh (mặc định đang bật), sản phẩm sẽ là sản phẩm không bán: không cần giá, vẫn giữ giá vốn, mã vạch, tồn kho và biến thể, và danh sách sản phẩm hiển thị “Không bán” ở chỗ lẽ ra là giá."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sản phẩm không bán không bao giờ hiện trong lưới thu ngân, danh mục, tìm kiếm hay khi quét mã vạch, và không thể làm quà tặng, món mua kèm, đối tượng của khuyến mãi hay hàng đổi sang.",
+          "Đơn nhập hàng, nhập kho, Đồng bộ giá vốn sản phẩm và Hóa đơn còn nợ hoạt động y hệt như với các sản phẩm khác, nên giá vốn nhập và tồn kho của nguyên liệu có thể ghi qua Nhập hàng.",
+          "Việc bán các sản phẩm khác không làm giảm tồn kho của nó. Khi bạn dùng một phần, hãy ghi một lần bớt bằng Điều chỉnh tồn kho trong chi tiết sản phẩm: Dùng để sản xuất cho phần đã đi vào sản phẩm, Vật tư cửa hàng cho những thứ như túi giấy hay đồ vệ sinh.",
+          "Bạn có thể bật lại bất cứ lúc nào, giá và thuế của nó vẫn còn đó. Đơn hàng và báo cáo đã có không bị ảnh hưởng."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Giá vốn của nó đi vào lãi lỗ như thế nào: khoản nhập hàng không được tính trực tiếp ở đó. Với sản phẩm làm từ nó, hãy cộng giá vốn vào sản phẩm đó, và khoản này được trừ khi sản phẩm đó bán. Vật tư không nằm trong giá vốn của sản phẩm nào sẽ được ghi là Vật tư cửa hàng khi dùng nếu có theo dõi tồn kho, hoặc là chi phí một lần nếu không. Đừng ghi cùng một khoản tiền theo cả hai cách, nếu không sẽ bị tính hai lần."
+      },
+      {
+        "type": "note",
+        "text": "Sản phẩm không bán có ở mọi gói; nhập hàng, theo dõi tồn kho và Điều chỉnh tồn kho cần gói Standard trở lên."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1033,7 +1243,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Doanh thu được tính vào ngày giao hàng; Tiền đã thu được tính vào ngày tiền về tay bạn. Với đơn thanh toán ngay tại quầy, hai việc diễn ra cùng ngày nên hai con số khớp nhau. Chúng lệch nhau khi:"
+        "text": "Doanh thu được tính vào ngày giao hàng, sau mọi khoản giảm giá và trước thuế; Tiền đã thu được tính vào ngày tiền về tay bạn, là số tiền bạn thực nhận, đã gồm thuế. Vì vậy ở cửa hàng có tính thuế, Tiền đã thu cao hơn Doanh thu đúng bằng số thuế, kể cả với đơn thanh toán ngay tại quầy. Ngoài ra, hai con số còn lệch nhau khi:"
       },
       {
         "type": "list",
@@ -1041,12 +1251,17 @@ export const articles = [
           "Bán chịu: hàng giao hôm nay và được tính vào doanh thu hôm nay; tiền được tính vào Tiền đã thu vào ngày tất toán.",
           "Đơn đặt trước: tiền cọc được tính vào Tiền đã thu ngay khi khách trả; doanh thu được ghi nhận toàn bộ vào ngày khách lấy hàng.",
           "Mất cọc: khi khách hủy đơn đặt trước và bạn giữ lại tiền cọc, khoản này đã nằm trong Tiền đã thu từ lúc khách trả. Thống kê hiển thị riêng khoản này là mất cọc, và nó không bao giờ được tính vào doanh thu.",
-          "Vô hiệu hóa đơn trước đó: số tiền hoàn lại được tính vào Tiền đã thu vào ngày vô hiệu hóa, nên Tiền đã thu của ngày đó có thể âm, còn Đã vô hiệu hóa tính đơn theo ngày bán. Biểu tượng ⓘ trên các ô Tiền đã thu và Đã vô hiệu hóa cũng giải thích điều này."
+          "Vô hiệu hóa đơn trước đó: số tiền hoàn lại được tính vào Tiền đã thu vào ngày vô hiệu hóa, nên Tiền đã thu của ngày đó có thể âm, còn Đã vô hiệu hóa tính đơn theo ngày bán.",
+          "Làm tròn tiền mặt: phần chênh lệch (thừa hoặc thiếu) do làm tròn tiền mặt so với tổng đơn hàng được tính vào Tiền đã thu, không bao giờ tính vào Doanh thu."
         ]
       },
       {
         "type": "p",
-        "text": "Để đối chiếu, hãy so Tiền đã thu với két tiền và máy quẹt thẻ; để biết thực tế bạn đã bán được bao nhiêu trong một khoảng thời gian, hãy xem Doanh thu. Trả hàng làm giảm doanh thu vào ngày trả hàng."
+        "text": "Để đối chiếu, hãy so Tiền đã thu với két tiền và máy quẹt thẻ; để biết thực tế bạn đã bán được bao nhiêu trong một khoảng thời gian, hãy xem Doanh thu. Trả hàng làm giảm doanh thu vào ngày trả hàng. Biểu tượng ⓘ trên các ô Doanh thu, Tiền đã thu và Đã vô hiệu hóa cũng giải thích điều này, còn bản thân khoản thuế được liệt kê trong Từ doanh thu đến lợi nhuận gộp, mở từ ô lợi nhuận gộp."
+      },
+      {
+        "type": "note",
+        "text": "Doanh thu trước thuế có từ phiên bản v3.5, và các kỳ trước cũng được tính lại theo cách này, nên cửa hàng có tính thuế sẽ thấy doanh thu thấp hơn so với trước khi cập nhật. Đó là một điều chỉnh cho đúng. Các phiên bản trước tính cả thuế vào doanh thu, và cửa hàng dùng giá chưa gồm thuế thậm chí còn tính cả thuế bán hàng đã thu vào doanh thu."
       }
     ],
     "related": [
@@ -1076,19 +1291,19 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Với một ngày, biểu đồ xu hướng chuyển thành biểu đồ cột theo giờ; các khoảng dài hơn dùng ngày, tuần, tháng hoặc năm cho mỗi cột tùy độ dài."
+        "text": "Bên dưới thanh kỳ báo cáo là hai hàng ô số liệu (Doanh thu, Tiền đã thu, Lợi nhuận gộp, Đơn hàng, Giá trị đơn hàng trung bình; Tổng giảm giá, Lợi nhuận ròng, Sản phẩm chưa có giá vốn, Khách đã phục vụ), rồi đến biểu đồ xu hướng. Menu ở góc trên bên phải biểu đồ xu hướng chuyển biểu đồ giữa doanh thu, số đơn, giá trị đơn hàng trung bình và khách đã phục vụ; bên cạnh đó, biểu đồ Giá vốn và lợi nhuận gộp xếp giá vốn sản phẩm và lợi nhuận gộp của mỗi kỳ chồng lên nhau trong cùng một cột. Một ngày được vẽ theo giờ; các khoảng dài hơn dùng ngày, tuần, tháng hoặc năm tùy độ dài."
       },
       {
         "type": "p",
-        "text": "Từ v3.4, nhấn giữ biểu đồ Xu hướng doanh thu hoặc Xu hướng lợi nhuận để đọc từng kỳ một: một thẻ hiện ngày và doanh thu hoặc lợi nhuận của kỳ đó, còn trên Xu hướng doanh thu, khi bật So sánh doanh số, thẻ hiện thêm doanh thu của kỳ so sánh và mức chênh lệch. Kéo sang trái hoặc phải để di chuyển; vuốt lên hoặc xuống trên biểu đồ thì trang vẫn cuộn như bình thường."
+        "text": "Nhấn giữ biểu đồ xu hướng hoặc biểu đồ Giá vốn và lợi nhuận gộp để đọc từng kỳ một; khi bật So sánh doanh số, thẻ của biểu đồ xu hướng hiển thị số liệu của kỳ này và của kỳ so sánh cạnh nhau. Kéo sang trái hoặc phải để di chuyển; vuốt lên hoặc xuống trên biểu đồ thì trang vẫn cuộn như bình thường."
       },
       {
         "type": "p",
-        "text": "Thẻ Xếp hạng sản phẩm liệt kê 5 sản phẩm đứng đầu. Chạm vào thẻ hoặc Xem tất cả để xem mọi sản phẩm đã bán trong khoảng thời gian đó, xếp theo số lượng sau khi trừ hàng trả."
+        "text": "Thẻ Xếp hạng sản phẩm liệt kê 5 sản phẩm đứng đầu. Chạm vào thẻ hoặc Xem tất cả để xem mọi sản phẩm đã bán trong khoảng thời gian đó, xếp theo số lượng sau khi trừ hàng trả; sản phẩm có biến thể được hiển thị một dòng cho mỗi biến thể."
       },
       {
         "type": "p",
-        "text": "So sánh doanh số ở bên phải thanh khoảng thời gian cho phép so sánh khoảng thời gian đang xem với khoảng liền trước hoặc với cùng kỳ năm ngoái — xem “Báo cáo nâng cao hiển thị những gì?”"
+        "text": "So sánh doanh số ở bên phải thanh kỳ báo cáo cho phép so sánh khoảng thời gian đang xem với khoảng liền trước hoặc với cùng kỳ năm ngoái — xem “Báo cáo nâng cao hiển thị những gì?”"
       },
       {
         "type": "note",
@@ -1114,6 +1329,7 @@ export const articles = [
       "giờ đông khách",
       "hàng bán chậm",
       "sản phẩm biến động",
+      "tỷ trọng theo danh mục",
       "giá trị tồn kho",
       "tỷ lệ mua lại",
       "điểm"
@@ -1126,11 +1342,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "So sánh doanh số: ở bên phải thanh Kỳ báo cáo, so sánh với cùng kỳ năm ngoái hoặc kỳ trước (một ngày so với cùng ngày tuần trước, tuần này so với tuần trước, tháng này so với tháng trước, năm nay so với năm trước, kỳ tùy chỉnh so với số ngày tương ứng ngay trước đó). Ô Tiền đã thu hiển thị mức chênh lệch và tốc độ tăng trưởng, còn biểu đồ doanh thu thêm một đường nhạt hơn cho kỳ so sánh. Khi Kỳ báo cáo chưa kết thúc, kỳ so sánh được cắt ở đúng thời điểm tương ứng.",
-          "Thứ × giờ: chuyển tiêu đề Doanh số theo thời gian sang Thứ × giờ để xem bản đồ nhiệt bảy ngày, 24 giờ — ô càng đậm thì bạn bán được càng nhiều. Bạn có thể chuyển giữa doanh thu và số đơn; khi bật so sánh, bạn thấy được giờ nào tăng và giờ nào giảm.",
-          "Hàng bán chậm: chuyển tiêu đề của thẻ xếp hạng sang Hàng bán chậm để liệt kê sản phẩm từ bán ít nhất đến nhiều nhất, kèm tồn kho hiện tại và ngày bán gần nhất của từng sản phẩm. Sản phẩm chưa từng bán được đánh dấu Chưa từng bán. Mặc định chỉ hiển thị sản phẩm còn hàng.",
-          "Biến động (từ v3.4): chuyển tiêu đề của thẻ xếp hạng sang Biến động để xem 3 sản phẩm tăng doanh thu nhiều nhất và 3 sản phẩm giảm nhiều nhất so với kỳ so sánh, kèm doanh thu của cả hai kỳ và mức chênh lệch. Hãy chọn một kỳ trong So sánh doanh số trước; nếu chọn Không, hoặc đang ở Toàn thời gian, thẻ sẽ nhắc bạn. Chạm vào thẻ hoặc Xem tất cả để mở danh sách Sản phẩm biến động doanh thu đầy đủ, chia thành Tăng và Giảm.",
-          "Tỷ lệ mua lại: dòng cuối của ô khách hàng là tỷ lệ thành viên đã mua trong Kỳ báo cáo đó và tổng cộng đã mua từ hai lần trở lên.",
+          "So sánh doanh số: ở bên phải thanh kỳ báo cáo, so sánh với cùng kỳ năm ngoái hoặc kỳ trước (một ngày so với cùng ngày tuần trước, tuần này so với tuần trước, tháng này so với tháng trước, năm nay so với năm trước, kỳ tùy chỉnh so với số ngày tương ứng ngay trước đó). Các ô Doanh thu, Tiền đã thu, Lợi nhuận gộp, Đơn hàng, Giá trị đơn hàng trung bình, Tổng giảm giá và Khách đã phục vụ đều hiển thị mức chênh lệch và số liệu của kỳ so sánh, như “▼ 3% so với tháng trước”; mức chênh lệch của Tổng giảm giá luôn có màu xám, vì giảm giá nhiều hơn tự nó không tốt cũng không xấu. Chạm vào bất kỳ dòng so sánh nào để mở So sánh kỳ, nơi liệt kê số liệu của cả hai kỳ. Biểu đồ xu hướng thêm một đường nhạt hơn cho kỳ so sánh. Khi kỳ báo cáo chưa kết thúc, kỳ so sánh được cắt ở đúng thời điểm tương ứng.",
+          "Thứ × giờ: chuyển tiêu đề của biểu đồ xu hướng từ Xu hướng sang Thứ × giờ để xem bản đồ nhiệt bảy ngày, 24 giờ — ô càng đậm thì bạn bán được càng nhiều. Bạn có thể chuyển giữa doanh thu và số đơn; khi bật so sánh, bạn thấy được giờ nào tăng và giờ nào giảm.",
+          "Hàng bán chậm: chuyển tiêu đề của thẻ xếp hạng sang Hàng bán chậm để liệt kê sản phẩm từ bán ít nhất đến nhiều nhất, kèm tồn kho hiện tại và ngày bán gần nhất của từng sản phẩm. Sản phẩm chưa từng bán được đánh dấu Chưa từng bán, và sản phẩm có biến thể được hiển thị một dòng cho mỗi biến thể. Mặc định chỉ hiển thị sản phẩm còn hàng.",
+          "Biến động (từ v3.4): chuyển tiêu đề của thẻ xếp hạng sang Biến động để xem 3 sản phẩm tăng doanh thu nhiều nhất và 3 sản phẩm giảm nhiều nhất so với kỳ so sánh, kèm doanh thu của cả hai kỳ và mức chênh lệch; mỗi biến thể được so sánh với chính nó. Hãy chọn một kỳ trong So sánh doanh số trước; nếu chọn Không, hoặc đang ở Toàn thời gian, thẻ sẽ nhắc bạn. Chạm vào thẻ hoặc Xem tất cả để mở danh sách Sản phẩm biến động doanh thu đầy đủ, chia thành Tăng và Giảm.",
+          "Tỷ lệ mua lại: dòng cuối của ô khách hàng là tỷ lệ thành viên đã mua trong kỳ báo cáo đó và tổng cộng đã mua từ hai lần trở lên. Khi bật so sánh, một dòng bên dưới cho biết mức thay đổi tính bằng điểm phần trăm và tỷ lệ của kỳ so sánh.",
+          "Tỷ trọng theo danh mục: doanh thu và tỷ trọng của từng danh mục, theo danh mục hiện tại của từng sản phẩm, từ lớn đến nhỏ. Sản phẩm không có danh mục được xếp vào Chưa phân loại, và các dòng cộng lại đúng bằng Doanh thu.",
           "Hiện tại: giá trị tồn kho (tồn kho hiện tại × giá vốn hiện tại), mọi biến động tồn kho trong khoảng thời gian đã chọn, và số điểm khách đang giữ nhưng chưa quy đổi, cùng mức giảm tối đa họ có thể dùng. Đây là số dư hiện tại; khoảng thời gian không làm chúng thay đổi."
         ]
       },
@@ -1156,33 +1373,37 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Báo cáo lợi nhuận thế nào nếu tôi không nhập giá vốn?",
+    "question": "Báo cáo lợi nhuận gộp thế nào nếu tôi không nhập giá vốn?",
     "keywords": [
       "giá vốn",
       "lợi nhuận",
-      "biên lợi nhuận",
       "lợi nhuận gộp",
+      "biên lợi nhuận",
       "báo cáo",
-      "chưa theo dõi lợi nhuận",
+      "chưa theo dõi lợi nhuận gộp",
       "thiếu giá vốn",
-      "tính được lợi nhuận"
+      "sản phẩm chưa có giá vốn"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Giá vốn là trường không bắt buộc. Sản phẩm không có giá vốn bị bỏ ra khỏi lợi nhuận, còn doanh thu của chúng vẫn được tính đầy đủ. Thẻ Tính được lợi nhuận trong Thống kê cho biết có bao nhiêu sản phẩm đã bán trong kỳ chưa có giá vốn; giá vốn bằng 0 vẫn được coi là có giá vốn nên các sản phẩm đó không nằm trong danh sách."
+        "text": "Giá vốn là trường không bắt buộc. Sản phẩm không có giá vốn bị bỏ ra khỏi lợi nhuận gộp, còn doanh thu của chúng vẫn được tính đầy đủ. Ô Sản phẩm chưa có giá vốn trong Thống kê cho biết có bao nhiêu sản phẩm đã bán hoặc đã trả trong kỳ mà chưa có giá vốn, như “12 sản phẩm”. Giá vốn bằng 0 vẫn được coi là có giá vốn nên các sản phẩm đó không nằm trong danh sách; khi mọi sản phẩm đều có giá vốn, ô này hiển thị “0 sản phẩm · đủ dữ liệu giá vốn”."
       },
       {
         "type": "p",
-        "text": "Chạm vào thẻ hoặc Xem sản phẩm để mở Sản phẩm chưa có giá vốn, xếp theo doanh thu bị bỏ ra khỏi lợi nhuận. Chạm một dòng để mở sản phẩm, thêm giá vốn từ Sửa, và khi quay lại dòng đó sẽ được đánh dấu Đã thêm giá vốn. Sản phẩm có biến thể chỉ được đánh dấu Đã thêm giá vốn khi mọi biến thể đã bán mà chưa có giá vốn đều có giá vốn — của riêng biến thể, hoặc giá vốn của sản phẩm để áp dụng theo."
+        "text": "Chạm vào ô hoặc Xem sản phẩm để mở Sản phẩm chưa có giá vốn, xếp theo doanh thu bị bỏ ra khỏi lợi nhuận gộp. Chạm một dòng để mở sản phẩm, thêm giá vốn từ Sửa, và khi quay lại dòng đó sẽ được đánh dấu Đã thêm giá vốn. Sản phẩm có biến thể chỉ được đánh dấu Đã thêm giá vốn khi mọi biến thể đã bán mà chưa có giá vốn đều có giá vốn — của riêng biến thể, hoặc giá vốn của sản phẩm để áp dụng theo."
       },
       {
         "type": "p",
-        "text": "Lợi nhuận là doanh thu sau mọi khoản giảm giá (giảm giá theo sản phẩm và giỏ hàng, khuyến mãi, đổi điểm) và trước thuế, trừ giá vốn — vì vậy trường này ghi Giá vốn chưa thuế (không bắt buộc): hãy nhập số tiền bạn đã trả trước thuế. Biên lợi nhuận là lợi nhuận ÷ doanh thu trước thuế của các sản phẩm có giá vốn, nên sản phẩm chưa có giá vốn không kéo con số này xuống. Khi trả hàng, lợi nhuận mà các mặt hàng đó đã mang lại sẽ bị trừ lại vào ngày trả hàng."
+        "text": "Lợi nhuận gộp là doanh thu sau mọi khoản giảm giá (giảm giá theo sản phẩm và giỏ hàng, khuyến mãi, đổi điểm) và trước thuế, trừ giá vốn — vì vậy, ở cửa hàng có tính thuế, trường này ghi Giá vốn chưa thuế (không bắt buộc): hãy nhập số tiền bạn đã trả trước thuế. Biên lợi nhuận là lợi nhuận gộp ÷ doanh thu của các sản phẩm có giá vốn, nên sản phẩm chưa có giá vốn không kéo con số này xuống. Khi trả hàng, lợi nhuận gộp mà các mặt hàng đó đã mang lại sẽ bị trừ lại vào ngày trả hàng."
+      },
+      {
+        "type": "p",
+        "text": "Chạm vào ô lợi nhuận gộp để mở Từ doanh thu đến lợi nhuận gộp, nơi trừ dần từng dòng: doanh thu (đã gồm thuế), thuế, doanh thu (chưa thuế), doanh thu chưa có giá vốn, giá vốn sản phẩm, và cuối cùng là lợi nhuận gộp và biên lợi nhuận. Các dòng cộng lại đúng bằng con số ở ô đó."
       },
       {
         "type": "note",
-        "text": "Giá vốn bạn thêm chỉ ảnh hưởng các đơn bán sau đó; các đơn đã bán không được tính lại. Cách tính này có từ v3.1: các phiên bản trước chỉ trừ giảm giá thủ công theo sản phẩm và tính cả thuế đã gồm trong giá vào lợi nhuận, nên sau khi cập nhật, các kỳ có giảm giá hoặc giá đã gồm thuế sẽ hiện lợi nhuận thấp hơn. Đó là điều chỉnh cho đúng, không phải mất dữ liệu."
+        "text": "Giá vốn bạn thêm chỉ ảnh hưởng các đơn bán sau đó; các đơn đã bán không được tính lại. Cách tính này có từ v3.1: các phiên bản trước chỉ trừ giảm giá thủ công theo sản phẩm và tính cả thuế đã gồm trong giá vào lợi nhuận, nên sau khi cập nhật, các kỳ có giảm giá hoặc giá đã gồm thuế sẽ hiện lợi nhuận gộp thấp hơn. Đó là điều chỉnh cho đúng, không phải mất dữ liệu."
       }
     ],
     "related": [
@@ -1217,20 +1438,26 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Doanh thu (chưa thuế): doanh thu sau mọi khoản giảm giá, trừ thuế, tính vào ngày giao hàng.",
+          "Doanh thu (chưa thuế): doanh thu sau mọi khoản giảm giá và trước thuế, tính vào ngày giao hàng.",
           "Giá vốn sản phẩm: giá vốn của hàng đã bán, lấy từ giá vốn trên các sản phẩm của bạn.",
+          "Hao hụt tồn kho: giá vốn của hàng bị Điều chỉnh tồn kho trừ ra vì hết hạn, hư hỏng, tặng đi và những lý do tương tự, cộng với hàng trả bị loại bỏ. Khoản này nằm sau lợi nhuận gộp — xem “Cách ghi nhận hàng hết hạn, hư hỏng hoặc đã xuất làm hàng mẫu?” Tháng đó cũng có mục Hao hụt tồn kho tổng hợp khoản này theo lý do.",
           "Phí xử lý thanh toán (ước tính): phí được ước tính từ tỷ lệ phí của các phương thức thanh toán.",
           "Tiền mất cọc: tiền cọc bạn giữ lại khi một đơn đặt trước bị hủy.",
+          "Làm tròn tiền mặt: phần chênh lệch (thừa hoặc thiếu) do làm tròn tiền mặt theo mệnh giá tiền đang dùng so với tổng đơn hàng.",
           "Chi phí cố định và Chi phí một lần: những gì bạn đã ghi cho tháng đó — xem “Làm sao ghi tiền thuê mặt bằng, tiền lương và các chi phí khác?”"
         ]
       },
       {
         "type": "p",
-        "text": "Tiếp theo là tối đa ba biểu đồ: lợi nhuận ròng của từng tháng, tỷ trọng của từng chi phí cố định, và xu hướng chi phí cố định. Hai biểu đồ xu hướng chỉ hiển thị tối đa 12 tháng tính đến tháng bạn đang mở, và chỉ xuất hiện khi đã có ít nhất hai tháng để so sánh, tính từ tháng có đơn bán hoặc khoản chi phí đầu tiên. Biểu đồ tỷ trọng cần có chi phí cố định trong tháng đó; khi chưa có, phần này hiển thị Thêm chi phí cố định. Trong Thống kê, dòng cuối của thẻ lợi nhuận dẫn thẳng đến Lãi lỗ: với kỳ báo cáo đúng bằng một tháng, dòng này hiện lợi nhuận ròng của tháng đó, như “Lợi nhuận ròng Tháng 10: NT$12,300”; với mọi kỳ khác, dòng này ghi Xem lãi lỗ hằng tháng."
+        "text": "Tiếp theo là tối đa ba biểu đồ: lợi nhuận ròng của từng tháng, tỷ trọng của từng chi phí cố định, và xu hướng chi phí cố định. Hai biểu đồ xu hướng chỉ hiển thị tối đa 12 tháng tính đến tháng bạn đang mở, và chỉ xuất hiện khi đã có ít nhất hai tháng để so sánh, tính từ tháng có đơn bán hoặc khoản chi phí đầu tiên. Biểu đồ tỷ trọng cần có chi phí cố định trong tháng đó; khi chưa có, phần này hiển thị Thêm chi phí cố định."
+      },
+      {
+        "type": "p",
+        "text": "Thống kê và Lãi lỗ liên kết với nhau. Khi kỳ trong Thống kê là Tháng này hoặc đúng một tháng trọn vẹn, hàng ô thứ hai có thêm ô Lợi nhuận ròng (đánh dấu “Đang diễn ra · trừ toàn bộ chi phí của tháng” khi tháng đang diễn ra); chạm vào ô đó để xem bảng phân tích của tháng ấy từ lợi nhuận gộp đến lợi nhuận ròng. Với mọi kỳ khác, chạm Xem lãi lỗ hằng tháng ở dòng cuối của Từ doanh thu đến lợi nhuận gộp. Chiều ngược lại, Xem báo cáo Tháng 10 bên dưới tiêu đề của một tháng trong Lãi lỗ sẽ mở Thống kê ở tháng đó."
       },
       {
         "type": "note",
-        "text": "Lợi nhuận ròng ở đây là lợi nhuận hoạt động trước thuế thu nhập, tính từ những gì DingPOS đã ghi nhận — không phải tờ khai thuế. Nếu có sản phẩm bán ra mà chưa có giá vốn, tháng đó vẫn hiển thị lợi nhuận ròng, kèm dòng “Chưa gồm giá vốn của N sản phẩm”; chạm vào để xem là những sản phẩm nào. Lãi lỗ có trên mọi gói. Khi dùng tài khoản nhân viên, việc mở màn hình này cần quyền Lãi lỗ và chi phí — Quản lý và Nhân viên mặc định đều cần phê duyệt, vì màn hình hiển thị giá vốn sản phẩm và lương."
+        "text": "Lợi nhuận ròng ở đây là lợi nhuận hoạt động trước thuế thu nhập, tính từ những gì DingPOS đã ghi nhận — không phải tờ khai thuế. Nếu có sản phẩm bán ra mà chưa có giá vốn, tháng đó vẫn hiển thị lợi nhuận ròng, kèm dòng “Chưa tính giá vốn của N sản phẩm”; chạm vào để xem là những sản phẩm nào. Lãi lỗ có trên mọi gói. Khi dùng tài khoản nhân viên, việc mở màn hình này cần quyền Lãi lỗ và chi phí — Quản lý và Nhân viên mặc định đều cần phê duyệt, vì màn hình hiển thị giá vốn sản phẩm và lương."
       }
     ],
     "related": [
@@ -1285,7 +1512,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Hãy nhập số tiền cửa hàng thực sự chịu, không tính phần thuế bạn có thể được khấu trừ. Hàng bạn sẽ bán thì đi qua mục Nhập hàng, vì khi bán nó đã nằm trong giá vốn sản phẩm; tiền ký quỹ, gốc khoản vay và tiền chủ cửa hàng rút ra không phải là chi phí. Các thay đổi được lưu cùng lúc khi bạn chạm ✓, và nếu thay đổi chạm đến một tháng đã kết thúc, ứng dụng sẽ báo trước lợi nhuận ròng của những tháng nào sẽ thay đổi."
+        "text": "Hãy nhập số tiền cửa hàng thực sự chịu, không tính phần thuế bạn có thể được khấu trừ. Hàng bạn sẽ bán và nguyên liệu dùng để làm ra hàng đó thì đi qua mục Nhập hàng, vì chúng được tính vào giá vốn sản phẩm khi bán. Vật tư có theo dõi tồn kho được ghi bằng Điều chỉnh tồn kho khi dùng, với lý do Vật tư cửa hàng, chứ không ghi là chi phí. Tiền ký quỹ, gốc khoản vay và tiền chủ cửa hàng rút ra không phải là chi phí. Các thay đổi được lưu cùng lúc khi bạn chạm ✓, và nếu thay đổi chạm đến một tháng đã kết thúc, ứng dụng sẽ báo trước lợi nhuận ròng của những tháng nào sẽ thay đổi."
       }
     ],
     "related": [
@@ -1391,7 +1618,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Gắn thành viên vào đơn hàng, trong giỏ hàng hoặc ở màn hình thanh toán, để điểm được tự động tích lũy; khi muốn đổi điểm, hãy nhập số điểm cần dùng. Khi vô hiệu hóa một đơn hàng, số điểm đã tích từ đơn đó sẽ bị thu hồi và số điểm đã quy đổi sẽ được hoàn lại."
+        "text": "Gắn khách hàng vào đơn hàng, trong giỏ hàng hoặc ở màn hình thanh toán, để điểm được tự động tích lũy; khi muốn đổi điểm, hãy nhập số điểm cần dùng. Khi vô hiệu hóa một đơn hàng, số điểm đã tích từ đơn đó sẽ bị thu hồi và số điểm đã quy đổi sẽ được hoàn lại."
+      },
+      {
+        "type": "p",
+        "text": "Để cộng hoặc trừ điểm thủ công (ví dụ khi bỏ sót một lần mua), hãy nhấn Điều chỉnh trên thẻ Điểm trong chi tiết khách hàng, chọn Cộng hoặc Trừ, nhập số điểm và có thể nhập lý do (tối đa 100 ký tự). Bạn không thể trừ nhiều hơn số điểm khách đang có. Mọi lần điều chỉnh đều được lưu trong Lịch sử điểm cùng số dư trước và sau, lý do và người thực hiện."
+      },
+      {
+        "type": "note",
+        "text": "Điều chỉnh điểm thủ công có từ phiên bản v3.5. Trên gói Pro, nhân viên có vai trò cần phê duyệt cho quyền Điều chỉnh điểm thủ công (mặc định là vai trò Nhân viên) sẽ được yêu cầu nhập mã PIN của quản lý hoặc chủ cửa hàng khi xác nhận."
       }
     ],
     "related": [
@@ -1584,6 +1819,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Hãy chạm Thử lại trước; nếu được, ứng dụng sẽ mở như bình thường. Nếu lỗi cứ lặp lại, hãy chạm Liên hệ hỗ trợ và cho chúng tôi biết, chúng tôi sẽ giúp bạn lấy lại dữ liệu. Màn hình này không bao giờ di chuyển hay xóa bất kỳ tệp nào."
+      },
+      {
+        "type": "p",
+        "text": "Lần mở đầu tiên sau khi cập nhật, hoặc sau khi khôi phục bản sao lưu từ phiên bản cũ hơn, có thể hiện “Đang cập nhật dữ liệu của bạn…” trước. Đó là dữ liệu cửa hàng đang được chuyển sang định dạng mới hơn; dữ liệu càng nhiều thì càng lâu, và ứng dụng sẽ tự mở khi xong. Ứng dụng không bị treo."
       },
       {
         "type": "note",
@@ -1790,12 +2029,12 @@ export const articles = [
     "slug": "activity-log",
     "category": "staff",
     "since": "3.0",
-    "question": "Làm sao xem ai đã vô hiệu hóa đơn, điều chỉnh tồn kho hoặc đổi giá?",
+    "question": "Làm sao xem ai đã vô hiệu hóa đơn hàng, điều chỉnh tồn kho hoặc đổi giá?",
     "keywords": [
       "nhật ký hoạt động",
       "kiểm tra",
       "ai đã thay đổi",
-      "vô hiệu hóa đơn",
+      "vô hiệu hóa đơn hàng",
       "đổi giá",
       "điều chỉnh tồn kho",
       "sản phẩm đã xóa",
@@ -1805,12 +2044,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Hãy dùng Nhật ký hoạt động. Trong trang Nhân viên, chạm Nhật ký hoạt động ở góc trên bên phải và nhập mã PIN chủ cửa hàng để xem các thao tác nhạy cảm của cửa hàng, mới nhất ở trên: vô hiệu hóa đơn, trả hàng, điều chỉnh tồn kho thủ công, phê duyệt, thay đổi nhân viên và quyền, đổi mã PIN chủ cửa hàng, đổi giá bán và giá vốn sản phẩm, và xóa sản phẩm. Các lần thanh toán thông thường không được liệt kê."
+        "text": "Hãy dùng Nhật ký hoạt động. Trong trang Nhân viên, chạm Nhật ký hoạt động ở góc trên bên phải và nhập mã PIN chủ cửa hàng để xem các thao tác nhạy cảm của cửa hàng, mới nhất ở trên: vô hiệu hóa đơn hàng, trả hàng, điều chỉnh và đếm lại tồn kho, điều chỉnh điểm thủ công, phê duyệt, thay đổi nhân viên và quyền, đổi mã PIN chủ cửa hàng, cài đặt thuế, đổi giá bán và giá vốn sản phẩm, và xóa sản phẩm. Các lần thanh toán thông thường không được liệt kê."
       },
       {
         "type": "list",
         "items": [
-          "Mỗi mục cho biết đối tượng bị tác động, ai làm gì và lúc nào, cùng kết quả — ví dụ “Giá M $390 → $350”.",
+          "Mỗi mục cho biết đối tượng bị tác động, ai làm gì và lúc nào, cùng kết quả — ví dụ “Giá M $390 → $350”. Lý do khi vô hiệu hóa đơn hàng, trả hàng, điều chỉnh tồn kho hoặc điều chỉnh điểm nằm ở dòng thứ ba của mục.",
           "Lọc theo nhân viên (kể cả người đã bị vô hiệu hóa), loại thao tác và Hôm nay / Tuần này / Tháng này.",
           "Chạm vào mục có liên kết đến đơn hàng, sản phẩm hoặc khách hàng để mở chi tiết.",
           "Trang chi tiết đơn hàng, chi tiết sản phẩm và trang của từng nhân viên đều có mục riêng, chỉ liệt kê các bản ghi liên quan đến họ.",

@@ -83,18 +83,19 @@ export const articles = [
       "beállítási varázsló",
       "kezdés",
       "ország",
-      "pénznem"
+      "pénznem",
+      "adók"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A DingPOS első megnyitásakor egy beállítási varázsló két lépésben, néhány perc alatt megnyitja az üzletét:"
+        "text": "A DingPOS első megnyitásakor a beállítási varázsló két lépésben, néhány perc alatt beállítja az üzletét:"
       },
       {
         "type": "steps",
         "items": [
-          "Válassza ki az országát vagy régióját. A lista élén az iPad régiója és a leggyakoribb piacok állnak; alatta mind a 175 ország és régió megtalálható, ahol a DingPOS elérhető az App Store-ban, az app nyelvén vagy angolul név szerint kereshetően. A választás kitölti a pénznemet, az adókulcsot és az adózási módot.",
-          "Az „Az Ön üzlete” képernyőn adja meg az üzlet nevét, ha szeretné, adjon hozzá logót, és ellenőrizze a pénznemet, az adókulcsot és az adózási módot (adóval együtt / adó nélkül). A pénznem alapból az országé; koppintson rá, hogy 130 pénznem közül válasszon."
+          "Válassza ki az országát vagy régióját. A lista élén az az ország vagy régió áll, ahol az iPad van, utána a leggyakoribb piacok; alattuk mind a 175 ország és régió megtalálható, ahol a DingPOS elérhető az App Store-ban. Az ország neve az app nyelvén vagy angolul is kereshető. A választás kitölti a pénznemet, az adókat és az adózási módot.",
+          "Az „Az Ön üzlete” képernyőn adja meg az üzlet nevét, ha szeretné, adjon hozzá logót, és ellenőrizze a pénznemet, az adókat és az adózási módot (adóval együtt / adó nélkül). A pénznem alapból az országé; koppintson rá, hogy 130 pénznem közül válasszon. Az adók listája az Ön országának alapértelmezett adóit tartalmazza: átnevezheti őket, módosíthatja az adókulcsukat, törölhet egyet, vagy az Adó hozzáadása gombbal felvehet egy újabb sort. Egy British Columbia-beli üzlet például az első sort „GST 5”-re módosítja, és hozzáad egy „PST 7” sort."
         ]
       },
       {
@@ -103,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A pénznem és az adózási mód a beállítás után nem módosítható; az adókulcs később is megváltoztatható a Beállítások között. Az Egyesült Államokban, Kanadában, Brazíliában és Mikronéziában a kulcs az államtól, tartománytól vagy várostól függ, ezért az adókulcs mezője üresen indul, és a továbblépéshez meg kell adnia az Ön által felszámított kulcsot (a 0 is megengedett). A 175 országos lista és a pénznemválasztás a 3.2-es verzióban jelent meg; a korábbi verziók 15 országot kínáltak."
+        "text": "A pénznem a beállítás után nem módosítható; az adók és az adózási mód később egyaránt módosíthatók a Beállítások → Üzletadatok menüpontban. Az Egyesült Államokban, Kanadában, Brazíliában és Mikronéziában az adókulcs az államtól, tartománytól vagy várostól függ, ezért az adókulcs mezője üresen indul, és a továbblépéshez meg kell adnia az Ön által felszámított adókulcsot. Az adókulcsnak 0-nál nagyobbnak kell lennie: az az üzlet, amely nem számít fel adót, törli a sort. A 175 országos lista és a pénznemválasztás a 3.2-es verzióban jelent meg; a korábbi verziók 15 országot kínáltak."
       }
     ],
     "related": [
@@ -180,11 +181,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "A DingPOS jelenleg az iPadOS 17-es vagy újabb verzióját futtató iPadeken működik, elsősorban fekvő tájolásra tervezve."
+        "text": "A DingPOS jelenleg az iPadOS 17.4-es vagy újabb verzióját futtató iPadeken működik, elsősorban fekvő tájolásra tervezve."
       },
       {
         "type": "p",
         "text": "Az iPhone és a Mac egyelőre nem támogatott. Ha szeretné, hogy más eszközt is támogassunk, írjon nekünk, és meséljen a felhasználási módjáról."
+      },
+      {
+        "type": "note",
+        "text": "Minden iPad, amelyen fut az iPadOS 17, frissíthető a 17.4-es verzióra, így egyetlen modell sem marad ki. Az iPadOS 17.0–17.3 rendszeren maradt iPaden először rendszerfrissítést kell végezni a Beállítások → Általános → Szoftverfrissítés menüpontban, mielőtt telepíthető rá a DingPOS 3.5-ös vagy újabb verziója."
       }
     ],
     "related": [
@@ -194,22 +199,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Megváltoztatható a pénznem vagy az adózási mód a beállítás után?",
+    "question": "Megváltoztatható a pénznem, az adókulcs vagy az adózási mód a beállítás után?",
     "keywords": [
       "pénznem",
       "adózási mód",
       "módosítás",
       "zárolt",
-      "adókulcs"
+      "adókulcs",
+      "adók",
+      "adóval együtt",
+      "adó nélkül"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Az adókulcs bármikor módosítható a Beállítások között – az új kulcs csak a későbbi rendelésekre vonatkozik."
+        "text": "Az adó módosítható, a pénznem nem. Az adókat és az adózási módot is a Beállítások → Üzletadatok képernyő Adó kártyáján lehet módosítani, és a változás csak a későbbi eladásokra vonatkozik: a korábbi rendelések, visszavételek és jelentések megtartják a rögzített adóösszegeket és adózási módot."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Adók: felvehet egyet, átnevezheti, módosíthatja a kulcsát, vagy törölheti – lásd a „Hogyan számolódik az adó?” című cikket.",
+          "Adózási mód (adóval együtt / adó nélkül): koppintson a másik módra, és a megerősítés az első adójával számol ki egy példát, például: „egy 5% adójú NT$100-as termék: a vevő NT$105-öt fizet”. Az árak számértéke nem változik, a nyitott kosarat pedig az új módban számolja újra a DingPOS, amikor visszatér a kasszához. A mód a 3.5-ös verzió óta váltható; a korábbi verziókban a beállításkor rögzül.",
+          "Váltás után a teljes visszavétel továbbra is az eredeti rendelést téríti vissza úgy, ahogyan az volt. Az a csere (cseretermékekkel), amely a másik módban lebonyolított rendelésre vonatkozik, le van tiltva: állítsa vissza a módot, vagy végezzen visszavételt, és üsse be újra a termékeket."
+        ]
       },
       {
         "type": "p",
-        "text": "A pénznem és az adózási mód (adóval együtt / adó nélkül) a beállítás befejezése után zárolt. Az összes korábbi rendelés ezekkel lett kiszámítva, ezért menet közbeni módosításuk tönkretenné a jelentéseket. Ellenőrizze őket a beállítás „Az Ön üzlete” lépésében: a pénznem alapból az országé, és rákoppintva másikat választhat."
+        "text": "A pénznem a beállítás befejezése után zárolt. Minden korábbi rendelés ebben lett rögzítve, ezért menet közbeni módosítása tönkretenné a jelentéseket. Ellenőrizze a beállítás „Az Ön üzlete” lépésében: a pénznem alapból az országé, és rákoppintva másikat választhat."
       },
       {
         "type": "note",
@@ -329,28 +345,54 @@ export const articles = [
       "forgalmi adó",
       "bruttó ár",
       "nettó ár",
+      "több adó",
+      "gst",
+      "pst",
+      "adó szüneteltetése",
       "nyugta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Az adót a rendszer automatikusan számolja a beállításkor választott adómód alapján. A nyugta mindkét módban kiírja az adó összegét:"
+        "text": "Az adót a rendszer automatikusan számolja a Beállítások → Üzletadatok alatt megadott adók és adómód alapján. Két adómód van, és a nyugta mindkettőben kiírja az adó összegét:"
       },
       {
         "type": "list",
         "items": [
-          "Adót tartalmazó (bruttó): az árak már tartalmazzák az adót – a végösszeg nem változik, a nyugta pedig külön feltünteti a benne foglalt adót (jellemző például Tajvanon, Japánban).",
-          "Adó nélküli (nettó): az adó a fizetéskor kerül hozzáadásra az engedmény utáni összeghez (jellemző például az Egyesült Államokban, Kanadában)."
+          "Adóval együtt (bruttó): az árak már tartalmazzák az adót – a végösszeg nem változik, a nyugta pedig külön feltünteti a benne foglalt adót (jellemző például Tajvanon, Japánban).",
+          "Adó nélkül (nettó): az adó a fizetéskor kerül hozzáadásra az engedmény utáni összeghez (jellemző például az Egyesült Államokban, Kanadában)."
         ]
       },
       {
         "type": "p",
-        "text": "A teljes számítási sorrend: tételengedmények → kosárengedmény → adó. Az összegeket a pénznem tizedesjegyeire kerekíti, fél esetén felfelé (pl. 0 a TWD-nél, 2 az USD-nél)."
+        "text": "Az üzlet több adót is felszámíthat, például GST 5% és PST 7% Brit Columbiában, vagy Japánban a 10%-os fogyasztási adót a 8%-os kedvezményes kulccsal együtt:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Az Adó kártyán koppintson az Adó hozzáadása gombra, és adjon meg nevet és kulcsot. Ha bekapcsolja az Alkalmazás az új termékeknél opciót, a később felvett termékek alapértelmezés szerint ezt az adót számítják fel. Ha az üzletnek már van alapértelmezett adója, az újonnan hozzáadott adónál ez a kapcsoló kikapcsolva indul; kapcsolja be, ha mindkettőt fel kell számítani.",
+          "Minden termék a termékűrlap Felszámított adók részében választja ki, mely adókat számítja fel – egy bento például csak a 8%-os kedvezményes kulcsot. Két vagy több bekapcsolt adónál az űrlap a termék összesített adókulcsát mutatja.",
+          "Egy adóra koppintva átnevezheti, módosíthatja a kulcsát, vagy az Alkalmazás az összes termékre, illetve az Eltávolítás az összes termékről gombbal egyszerre hozzáadhatja az összes termékhez, illetve levehet minden termékről. Egy adó törlése előtt a rendszer megmondja, hány termékre nem vonatkozik majd többé.",
+          "Ha az üzlet adózási módja Adó nélkül, a kosár végösszegei adónként egy sort mutatnak, a rendelés részletei pedig adónként egy sort a kulccsal és azzal az összeggel, amelyre az adót felszámították."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ha egy időre nem szeretne adót felszámítani, kapcsolja ki az Adó felszámítása kapcsolót az Adó kártya tetején: ezután minden eladás adómentes, a kosárban már lévő tételeket is beleértve. Minden termék megtartja az adóit, és a kapcsoló visszakapcsolásakor ugyanúgy állnak vissza, ahogy voltak."
+      },
+      {
+        "type": "p",
+        "text": "A teljes számítási sorrend: tételengedmények és akciók → kosárengedmény → pontbeváltás → adó. Az összegeket a pénznem tizedesjegyeire kerekíti, fél esetén felfelé (pl. 0 a TWD-nél, 2 az USD-nél)."
+      },
+      {
+        "type": "note",
+        "text": "Az elnevezett adók a 3.5-ös verzióval érkeztek. Frissítéskor az Ön adókulcsa elnevezett adóvá válik (például Ausztráliában „GST 10%”), és minden meglévő termék ezt számítja fel; ha az üzlet kulcsa 0 volt, nem kap adót. A korábbi rendelések és visszavételek megtartják azokat az adókulcsokat és összegeket, amelyekkel rögzítették őket; a riportok mostantól az adó nélküli árbevételt számolják, a korábbi időszakokat is beleértve (lásd: „Mi a különbség az árbevétel és a beérkezett pénz között?”)."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -374,7 +416,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A fizetési módok könyvelési címkék – a DingPOS nem bonyolít le tényleges fizetést. A kártyás vagy mobilos fizetést fogadja a meglévő terminálján vagy alkalmazásán, majd a DingPOS-ban válassza ki a megfelelő címkét a rögzítéshez. Készpénznél a visszajárót automatikusan kiszámolja."
+        "text": "A fizetési módok könyvelési címkék – a DingPOS nem bonyolít le tényleges fizetést. A kártyás vagy mobilos fizetést fogadja a meglévő terminálján vagy alkalmazásán, majd a DingPOS-ban válassza ki a megfelelő címkét a rögzítéshez. Készpénznél a visszajárót automatikusan kiszámolja, és ahol a legkisebb érméket már nem használják, a készpénz kerekítése is megoldható – lásd: „Kerekíthető a készpénzes fizetés a forgalomban lévő érmékre?”"
       },
       {
         "type": "p",
@@ -387,6 +429,7 @@ export const articles = [
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -432,6 +475,56 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Kerekíthető a készpénzes fizetés a forgalomban lévő érmékre?",
+    "keywords": [
+      "készpénz kerekítése",
+      "kerekítés",
+      "felkerekítés",
+      "lekerekítés",
+      "érmék",
+      "fillér",
+      "cent",
+      "0,05",
+      "visszajáró",
+      "kanada",
+      "ausztrália",
+      "svájc",
+      "forint kerekítés"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Igen. Kanada, Ausztrália, Új-Zéland, Svájc, Dánia, Svédország, Norvégia, Belgium, Finnország és Magyarország már nem használja a legkisebb érméit, ezért a DingPOS a készpénzt olyan összegre kerekíti, amelyet ténylegesen át is lehet adni: a készpénzzel fizetett C$12,99-os rendelést C$13,00-ként fogadja el, és a visszajárót C$13,00-ből számolja. A kártyás és egyéb nem készpénzes fizetések pontosak maradnak."
+      },
+      {
+        "type": "p",
+        "text": "Az ezen országok valamelyikében, az adott ország pénznemében létrehozott új üzletnél ez automatikusan be van állítva. Bármely más üzlet a Beállítások → Fizetési módok alján található Készpénz kerekítése kártyán kapcsolhatja be: válassza ki, mire kerekítsen a rendszer (Nincs kerekítés, vagy centtel rendelkező pénznemnél 0,05, 0,10, 0,50 vagy 1,00; cent nélküli pénznemnél, például TWD vagy JPY esetén 5, 10, 50 vagy 100), és azoknál a kerekítési egységeknél, amelyek pontosan félútra eshetnek, azt is, hogy ilyenkor felfelé vagy lefelé kerekítsen. A módosítás csak a későbbi fizetésekre vonatkozik."
+      },
+      {
+        "type": "list",
+        "items": [
+          "A Fizetésnél az „Átvett készpénz C$13,00” felirat látható. Ha a vevő a pontos összeggel szeretne fizetni, koppintson a fizetési módok alatti Pontos összeg beszedése gombra; ez csak az adott eladásra vonatkozik.",
+          "A rendelés végösszege, az adó, az árbevétel, a pontok és a vevő költése nem változik; a kerekítési különbség a fizetésnél jelenik meg, a nyugta képernyőjén és a rendelés részleteinél a végösszeg alatt, például „Készpénz kerekítése +C$0,01”.",
+          "A visszavételnél kiadott készpénz-visszatérítés, az előrendelések készpénzes előlege és átvételkori fennmaradó összege, a cserénél fizetett különbözet, valamint a készpénzben kiegyenlített számlás eladások szintén kerekítődnek; több tétel egyszerre történő kiegyenlítésekor a teljes köteget egyszer kerekíti.",
+          "A sztornók, a visszatérített előrendelési előlegek és a visszavont kiegyenlítések pontosan azt fizetik vissza, amit rögzítettek, újabb kerekítés nélkül.",
+          "A Riportok fülön a Beérkezett pénz mutatja, mennyi volt ebből készpénz-kerekítés, az Eredmény fül havi kimutatása pedig kap egy Készpénz kerekítése sort, amely beleszámít a nettó eredménybe. A kerekítés soha nem árbevétel."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Svájc – az árkijelzési szabályait követve – mindig lefelé kerekít: a CHF 12,98 CHF 12,95-ként számít, és nincs választás a félútra eső összegekre. Belgium csak a €0,05-nál nagyobb végösszegeket kerekíti. A készpénz kerekítése minden csomagban elérhető, a meglévő üzlet pedig a bekapcsolásig a korábbiak szerint, pontosan fogadja el a készpénzt."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -609,7 +702,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Nyissa meg a Rendelések fület, keresse meg a rendelést, nyissa meg a részleteit, és válassza a Sztornó gombot. Erősítse meg (Megerősítés), és kész."
+        "text": "Nyissa meg a Rendelések fület, keresse meg a rendelést, nyissa meg a részleteit, és koppintson a Sztornó gombra. A „Sztornózza ezt a rendelést?” lap nem kötelező indoklást kér (legfeljebb 100 karakter); koppintson a jobb felső sarokban lévő Sztornó gombra, és kész. Az indok megjelenik a rendelés részleteiben és a tevékenységnaplóban, és elküldés után már nem szerkeszthető."
       },
       {
         "type": "p",
@@ -637,7 +730,8 @@ export const articles = [
       "visszatérítés",
       "részleges visszavétel",
       "méretcsere",
-      "áru visszavétele"
+      "selejtezés",
+      "visszavétel oka"
     ],
     "content": [
       {
@@ -650,9 +744,15 @@ export const articles = [
           "Az eredeti rendelés soha nem módosul. A visszavétel saját bizonylatot hoz létre a mai dátummal és R előtaggal ellátott számmal, az árbevétel pedig a visszavétel napján csökken.",
           "A visszatérítés az az összeg, amelyet a vevő az adott tételért ténylegesen kifizetett – a tételenkénti és a kosárra adott engedmények, valamint a pontbeváltás már arányosan le vannak vonva, így nem listaáron kap vissza pénzt. Az adó azzal a kulccsal számolódik, amellyel az eredeti rendelést terhelték.",
           "A cseretermékek a mai áron kerülnek felszámításra, akciók és engedmények nélkül.",
-          "A nyomon követett készlet automatikusan visszakerül. Az eredeti rendelésen szerzett pontok levonásra kerülnek, a beváltott pontok visszajárnak, a cseretermékek után pedig új pontok járnak.",
-          "Egy rendelés több körben is visszavehető, de soha nem az eredetileg eladott mennyiségnél többet. Az akciók felhasználási korlátait a visszavétel nem adja vissza."
+          "Nyomon követett készletű terméknél minden visszavett tétel visszakerülhet a készletre (Visszatöltés, ez az alapértelmezés), vagy kidobható (Selejtezés, a 3.5-ös verzió óta). A Visszatöltés visszaadja a készletet. A Selejtezés a készletet változatlanul hagyja, a tétel eladáskori költségét pedig az adott hónap készletveszteségébe számítja az Eredmény fülön. A visszatérítés, az adó és a pontok mindkét esetben ugyanazok.",
+          "Az eredeti rendelésen szerzett pontok levonásra kerülnek, a beváltott pontok visszajárnak, a cseretermékek után pedig új pontok járnak.",
+          "Ha az eredeti rendelés egy még ki nem egyenlített, számlás eladás, nem történik pénzmozgás: a visszavétel összege levonódik a vevő kintlévőségéből, a drágább cseretermék különbözete pedig hozzáadódik.",
+          "Egy rendelés több körben is visszavehető, de soha nem az eredetileg eladott mennyiségnél többet; ha minden visszakerült, a visszaadott adó, engedmények és pontok pontosan kiadják az eredeti rendelés értékét. Az akciók felhasználási korlátait a visszavétel nem adja vissza."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Az Indok mező nem kötelező, legfeljebb 100 karakter. Megjelenik a rendelés részleteiben és a tevékenységnaplóban, és elküldés után már nem szerkeszthető."
       },
       {
         "type": "note",
@@ -735,6 +835,7 @@ export const articles = [
         "items": [
           "Az árbevétel azon a napon számít, amikor az áru kikerül a boltból; a beérkezett pénz és a hűségpontok a kiegyenlítés napjáig várnak.",
           "A ki nem egyenlített rendeléseket borostyánsárga jelvény jelöli a listában, a vevő részletei pedig megmutatják, mennyivel tartozik jelenleg.",
+          "Egy még ki nem egyenlített rendelés visszavételénél nem történik pénzmozgás: az összeg levonódik a vevő kintlévőségéből.",
           "Az a vevő, akinek ki nem egyenlített rendelései vannak, nem törölhető."
         ]
       },
@@ -791,7 +892,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "A termék szerkesztőoldalán, a Változat jellemzői alatt koppintson a Jellemző hozzáadása gombra, és adjon meg egy jellemzőt (pl. „Szín”), majd a + Jellemzőérték gombbal vegye fel az értékeit (pl. piros, kék). Két vagy több jellemzőnél (pl. szín × méret) a DingPOS automatikusan előállítja az összes kombinációt (piros/S, piros/M, kék/S…)."
+        "text": "A termék szerkesztőoldalán, a Változat jellemzői alatt koppintson a Jellemző hozzáadása gombra, és adjon meg egy jellemzőt (pl. „Szín”), majd a „+ Jellemzőérték” gombbal vegye fel az értékeit (pl. piros, kék). Két vagy több jellemzőnél (pl. szín × méret) a DingPOS automatikusan előállítja az összes kombinációt (piros/S, piros/M, kék/S…)."
       },
       {
         "type": "p",
@@ -803,7 +904,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A jellemzők és az értékek neve legfeljebb 20 karakter lehet, és nem lehet üres: az üres jellemző- vagy értéknév mentéskor pirosan bekeretezve jelenik meg, ilyenkor töltse ki, vagy törölje az üres értéket. A változatokkal rendelkező termék nem lehet szabadáras."
+        "text": "A jellemzők és az értékek neve legfeljebb 20 karakter lehet, és mentéskor a két végén lévő szóközöket a rendszer levágja. Az az érték, amelybe nem írt semmit, nem kombináció, ezért mentéskor kimarad; a mentés megáll, és a mező pirosan bekeretezve jelenik meg, ha a jellemzőnév üres, ha egy jellemző minden értéke üres, vagy ha olyan értéket töröl, amely a terméknél már el volt mentve; írja vissza, vagy koppintson az érték melletti × ikonra az eltávolításához. A változatokkal rendelkező termék nem lehet szabadáras."
       }
     ],
     "related": [
@@ -935,12 +1036,72 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Bekapcsolás után az eladások és az előrendelések automatikusan csökkentik a készletet; a sztornók, visszavételek és lemondott előrendelések visszaállítják; a beszerzési rendelés átvétele pedig növeli. A készletet kézzel is bármikor módosíthatja. Minden készletmozgás bekerül a teljes mozgásnaplóba. Az alacsony készletet színes figyelmeztetés jelzi."
+        "text": "Bekapcsolás után az eladások és az előrendelések automatikusan csökkentik a készletet; a sztornók, visszavételek és lemondott előrendelések visszaállítják; a beszerzési rendelés átvétele pedig növeli. Minden készletmozgás bekerül a teljes mozgásnaplóba. Az alacsony készletet színes figyelmeztetés jelzi."
+      },
+      {
+        "type": "p",
+        "text": "A számot kétféleképpen módosíthatja kézzel:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Újraszámlálás: a termékűrlapon írja át a készletszámot arra, amennyit valóban megszámolt. Soha nem kerül be az eredménykimutatásba.",
+          "Készlet módosítása (a 3.5-ös verzió óta): a termék részleteiben koppintson a Készlet módosítása gombra, válassza az Eltávolítás vagy a Hozzáadás lehetőséget, adja meg a mennyiséget és egy indokot, például Lejárt vagy romlott, Sérült, illetve Kóstoló és ajándék. Az eltávolított áru költsége beleszámít az adott hónap készletveszteségébe az eredménykimutatásban – lásd: „Hogyan rögzíthetem a lejárt, tönkrement vagy mintaként kiadott készletet?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Hogyan rögzíthetem a lejárt, tönkrement vagy mintaként kiadott készletet?",
+    "keywords": [
+      "készlet módosítása",
+      "készletveszteség",
+      "apadás",
+      "leírás",
+      "selejt",
+      "lejárt",
+      "sérült",
+      "kóstoló",
+      "ajándék",
+      "bolti fogyóeszköz",
+      "újraszámlálás"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Használja a Készlet módosítása funkciót. Készletkövetéses terméknél koppintson a termék részleteiben a Készlet módosítása gombra, válassza az Eltávolítás vagy a Hozzáadás lehetőséget, adja meg a mennyiséget, válasszon indokot, és ha szeretné, írjon megjegyzést (legfeljebb 100 karakter). A megjelenő lap kiszámolja a módosítás utáni készletet, az indok alatti sor pedig megmondja, hogy a módosítás bekerül-e az eredménykimutatásba."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Eltávolítás indokai: Anyagfelhasználás, Lejárt vagy romlott, Sérült, Elveszett/ellopott, Munkatársi használat, Kóstoló és ajándék, Bolti fogyóeszköz és Egyéb. Hozzáadás indokai: Saját gyártás, Megkerült és Egyéb. Az Egyéb indokhoz megjegyzés kell.",
+          "Az Anyagfelhasználás kivételével az eltávolított mennyiség az akkori költségén beleszámít az adott hónap készletveszteségébe az eredménykimutatásban. Ez a bruttó nyereség után következik, és a nettó eredményt csökkenti; a bruttó nyereség és az árrés nem változik. Az Anyagfelhasználás csak levonja a készletet, mert az alapanyag költsége már benne van az ebből készült termék költségében.",
+          "A Megkerült ugyanennyivel csökkenti a készletveszteséget. A Hozzáadás oldalon a Saját gyártás és az Egyéb csak növeli a készletet, és soha nem kerül be az eredménykimutatásba.",
+          "A módosítás a rögzítés napján számít. Nem lehet visszadátumozni, szerkeszteni vagy törölni; hiba javításához rögzítsen Megkerült indokú vagy ellenkező irányú módosítást.",
+          "A költség nélküli terméket is lehet módosítani, de az eredménykimutatás nem tud összeget rendelni hozzá, és a hónap jelzi, hány bejegyzésnek nem volt költsége."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ha a termékűrlapon írja át a készletszámot, az Újraszámlálás: azt rögzíti, amennyit valóban megszámolt, és soha nem kerül be az eredménykimutatásba. A Riportok alatti készletmozgások listájában a Módosítások és az Újraszámlálás külön szűrhető, a Tevékenységnapló pedig megmutatja az egyes módosítások indokát és megjegyzését."
+      },
+      {
+        "type": "note",
+        "text": "A Készlet módosítása funkcióhoz Standard vagy magasabb csomag szükséges. Pro csomagnál azoknál a munkatársaknál, akiknek a szerepköre a Kézi készletmódosításhoz jóváhagyást kér, a megerősítéskor egy menedzser PIN-kódját kéri a rendszer."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -962,7 +1123,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A negatív készlet általában azt jelenti, hogy egy utánpótlást nem rögzítettek, vagy egy előrendelt termék még nem érkezett meg (az előrendelés leadáskor levonja a készletet). Az utánpótlást a beszerzési rendelés átvételével rögzítse, és a szám magától helyreáll; a leltári eltéréseket kézi módosítással javítsa, amely bekerül a mozgásnaplóba."
+        "text": "A negatív készlet általában azt jelenti, hogy egy utánpótlást nem rögzítettek, vagy egy előrendelt termék még nem érkezett meg (az előrendelés leadáskor levonja a készletet). Az utánpótlást a beszerzési rendelés átvételével rögzítse, és a szám magától helyreáll. A leltári eltérést a termékűrlapon a készletszám átírásával javítsa (újraszámlálás); a tönkrement, lejárt vagy elajándékozott áru indokát pedig a Készlet módosítása funkcióval rögzítse. Mindkettő bekerül a mozgásnaplóba."
       },
       {
         "type": "note",
@@ -991,7 +1152,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Az oldalsávban a Beszerzés menüpont alatt kezelheti a beszállítókat és a beszerzési rendeléseket. A beszállítónál megadhatja a nevet, a kapcsolattartót, a telefonszámot, a címet és az alapértelmezett fizetési feltételt (fizetés átvételkor vagy havi hitel)."
+        "text": "Az oldalsávban a Beszerzés menüpont alatt kezelheti a beszállítókat és a beszerzési rendeléseket. A beszállítónál megadhatja a nevet, a kapcsolattartót, a telefonszámot, a címet és az alapértelmezett fizetési feltételt (Fizetés átvételkor vagy Havi hitel)."
       },
       {
         "type": "steps",
@@ -1006,14 +1167,64 @@ export const articles = [
         "text": "A fizetési feltétel dönti el, mi történik ezután: a „Fizetés átvételkor” feltételű rendelések fizetettnek lesznek jelölve, a „Havi hitel” feltételűek pedig kifizetetlenek maradnak a Nyitott számlák alatt, ahol beszállítónként kiegyenlítheti őket – egy rendelést, az adott hónapot vagy mindent."
       },
       {
+        "type": "p",
+        "text": "Az eladásra nem szánt alapanyagokat, például a lisztet vagy a csomagolóanyagot ugyanígy beszerezheti: vegye fel őket nem árusított termékként – lásd: „Hozzáadhatok alapanyagot, például lisztet vagy csomagolóanyagot termékként?”"
+      },
+      {
         "type": "note",
         "text": "A Beszerzés funkcióhoz Standard vagy magasabb csomag szükséges. Az a beszállító, akinél kifizetetlen, átvett rendelések vannak, nem törölhető."
       }
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Hozzáadhatok alapanyagot, például lisztet vagy csomagolóanyagot termékként?",
+    "keywords": [
+      "nem árusított",
+      "alapanyag",
+      "összetevők",
+      "anyagok",
+      "csomagolóanyag",
+      "fogyóeszköz",
+      "árusítás a pénztárban",
+      "beszerzés",
+      "költség"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Igen. A termékűrlapon kapcsolja ki a fotó alatti Árusítás a pénztárban kapcsolót (alapértelmezés szerint be van kapcsolva), és a termék nem árusított lesz: nem kell árat megadni hozzá, megtartja a költségét, a vonalkódját, a készletét és a változatait, a terméklista pedig az ár helyén a „Nem árusított” feliratot mutatja."
+      },
+      {
+        "type": "list",
+        "items": [
+          "A nem árusított termék soha nem jelenik meg a pénztár rácsában, a kategóriákban, a keresésben és a vonalkódolvasásnál, és nem lehet ajándék, kiegészítő, akció célterméke vagy cseretermék.",
+          "A beszerzési rendelések, az átvétel, a Termékköltség szinkronizálása és a nyitott számlák pontosan úgy működnek, mint a többi terméknél, így az alapanyag beszerzési költsége és készlete a Beszerzésen keresztül rögzíthető.",
+          "Más termékek eladása nem csökkenti a készletét. Amikor felhasznál belőle, rögzítse a csökkentést a termék részleteiben a Készlet módosítása funkcióval: Anyagfelhasználás arra, ami termékekbe került, Bolti fogyóeszköz az olyan dolgokra, mint a papírzacskó vagy a tisztítószer.",
+          "Bármikor visszakapcsolhatja, az ára és az adói megmaradnak. A már elkészült rendeléseket és riportokat ez nem érinti."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Így kerül a költsége az eredménybe: a beszerzések közvetlenül nem számítanak bele. Az ebből készült termékeknél a költséget azon a terméken adja meg, és az a termék eladásakor számít bele. Azokat a fogyóeszközöket, amelyek egyetlen termék költségében sincsenek benne, ha követi a készletüket, felhasználáskor Bolti fogyóeszközként rögzítse, ha nem követi, egyszeri kiadásként. Ne rögzítse ugyanazt az összeget mindkét módon, mert akkor kétszer számít."
+      },
+      {
+        "type": "note",
+        "text": "A nem árusított termékek minden csomagban elérhetők; a beszerzéshez, a készletkövetéshez és a Készlet módosítása funkcióhoz Standard vagy magasabb csomag szükséges."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1033,7 +1244,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Az árbevételnél az számít, mikor adta át az árut; a beérkezett pénznél az, mikor érkezett meg a pénz. A pultnál kifizetett rendelésnél mindkettő ugyanarra a napra esik, így a két szám megegyezik. Eltérnek, ha:"
+        "text": "Az árbevétel azon a napon számít, amikor az árut átadta, minden engedmény után és adó nélkül; a beérkezett pénz pedig azon a napon, amikor az összeg beérkezik, és azt a ténylegesen átvett pénz adja, adóval együtt. Ezért az adót felszámító boltban a beérkezett pénz az adó összegével magasabb az árbevételnél, még a pultnál kifizetett rendeléseknél is. Ezen túl akkor térnek el egymástól, ha:"
       },
       {
         "type": "list",
@@ -1041,12 +1252,17 @@ export const articles = [
           "Számlás eladás: az áru ma elhagyja a boltot, és a mai árbevételbe számít; a pénz azon a napon számít bele a beérkezett pénzbe, amikor kiegyenlítik.",
           "Előrendelés: az előleg a befizetés napján számít bele a beérkezett pénzbe; az árbevétel az átvétel napján jelenik meg teljes összegben.",
           "Elvesztett előleg: ha a vevő lemond egy előrendelést, és Ön megtartja az előleget, az a befizetéskor már bekerült a beérkezett pénzbe. A Riportok ezt külön, elvesztett előlegként mutatja, és soha nem számít árbevételnek.",
-          "Korábbi rendelés sztornózása: a visszatérített pénz a sztornó napján számít bele a beérkezett pénzbe, így az adott nap beérkezett pénze negatív is lehet, míg a Sztornózva a rendelést az eladás napján számolja. A beérkezett pénz és a Sztornózva csempén az ⓘ ugyanezt magyarázza."
+          "Korábbi rendelés sztornózása: a visszatérített pénz a sztornó napján számít bele a beérkezett pénzbe, így az adott nap beérkezett pénze negatív is lehet, míg a Sztornózva a rendelést az eladás napján számolja.",
+          "Készpénz kerekítése: amennyivel a kerekítés a rendelés végösszege fölé vagy alá visz, az a beérkezett pénzbe számít bele, az árbevételbe soha."
         ]
       },
       {
         "type": "p",
-        "text": "Az egyeztetéshez a beérkezett pénzt vesse össze a kasszafiók és a kártyaterminál adataival; ha azt szeretné látni, mennyit adott el valójában egy időszakban, az árbevételt nézze. A visszavételek a visszavétel napján csökkentik az árbevételt."
+        "text": "Az egyeztetéshez a beérkezett pénzt vesse össze a kasszafiók és a kártyaterminál adataival; ha azt szeretné látni, mennyit adott el valójában egy időszakban, az árbevételt nézze. A visszavételek a visszavétel napján csökkentik az árbevételt. Az Árbevétel, a Beérkezett pénz és a Sztornózva csempén az ⓘ ugyanezt magyarázza, maga az adó pedig az „Az árbevételtől a bruttó nyereségig” nézetben szerepel, amely a bruttó nyereség csempéjéről nyílik meg."
+      },
+      {
+        "type": "note",
+        "text": "Az adó nélküli árbevétel a 3.5-ös verzióban jelent meg, és a korábbi időszakokat is ugyanígy számolták újra, ezért az adót felszámító bolt a frissítés előttinél alacsonyabb árbevételt lát. Ez javítás. A korábbi verziók az árbevételben az adót is tartalmazták, az adó nélkül árazó boltok pedig még a beszedett adót is árbevételnek számolták."
       }
     ],
     "related": [
@@ -1076,15 +1292,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Egyetlen napnál a trenddiagram óránkénti oszlopdiagrammá változik; hosszabb időszakoknál az oszlopok az időszak hosszától függően napokat, heteket, hónapokat vagy éveket jelölnek."
+        "text": "Az időszaksáv alatt két sor mutatószám-csempe következik (Árbevétel, Beérkezett pénz, Bruttó nyereség, Rendelések, Átlagos rendelés; Engedmények összesen, Nettó eredmény, Költség nélküli termékek, Kiszolgált vevők), majd a trenddiagram. A trenddiagram jobb felső sarkában lévő menüvel váltogathat az árbevétel, a rendelések, az átlagos rendelés és a kiszolgált vevők között; mellette a Költség és bruttó nyereség diagram egy-egy oszlopban halmozza az egyes időszakok termékköltségét és bruttó nyereségét. Egyetlen nap óránkénti bontásban látszik; hosszabb időszakoknál az időszak hosszától függően napokra, hetekre, hónapokra vagy évekre bontva."
       },
       {
         "type": "p",
-        "text": "A 3.4-es verzió óta az Árbevétel alakulása vagy a Nyereség alakulása diagramot nyomva tartva időszakról időszakra olvashatja le az adatokat: egy kártya mutatja a dátumot és az adott időszak árbevételét vagy nyereségét, az Árbevétel alakulásánál pedig bekapcsolt Eladások összehasonlítása mellett az összehasonlítási időszak árbevételét és a különbséget is. Húzza balra vagy jobbra a továbblépéshez; ha a diagramon felfelé vagy lefelé söpör, az oldal a szokásos módon görög."
+        "text": "Nyomja le és tartsa nyomva a trenddiagramot vagy a Költség és bruttó nyereség diagramot, hogy időszakról időszakra leolvashassa; bekapcsolt Eladások összehasonlítása mellett a trenddiagram kártyája egymás mellett mutatja az adott időszak és az összehasonlítási időszak értékét. Húzza balra vagy jobbra a továbblépéshez; ha a diagramon felfelé vagy lefelé söpör, az oldal a szokásos módon görög."
       },
       {
         "type": "p",
-        "text": "A Termékrangsor kártya az 5 legjobban teljesítő terméket listázza. Koppintson a kártyára vagy a Mind megtekintése lehetőségre, hogy lássa az időszakban eladott összes terméket, a visszavételek utáni mennyiség szerint rangsorolva."
+        "text": "A Termékrangsor kártya az 5 legjobban teljesítő terméket listázza. Koppintson a kártyára vagy az Összes megtekintése lehetőségre, hogy lássa az időszakban eladott összes terméket, a visszavételek utáni mennyiség szerint rangsorolva; a változatokkal rendelkező termék változatonként egy sort kap."
       },
       {
         "type": "p",
@@ -1114,6 +1330,7 @@ export const articles = [
       "forgalmas órák",
       "lassan forgó termékek",
       "termékek változása",
+      "megoszlás kategóriánként",
       "készletérték",
       "visszatérő vásárlók aránya",
       "pontok"
@@ -1126,17 +1343,18 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). A Beérkezett pénz csempéje a különbséget és a növekedési ütemet mutatja, az árbevétel-diagramon pedig halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszak is ugyanaddig tart.",
-          "Hétnap × óra: az Eladások időben fejlécet átkapcsolva Hétnap × óra nézetre hétnapos, 24 órás hőtérkép jelenik meg – minél sötétebb egy cella, annál többet adott el. Váltogathat az árbevétel és a rendelések között; bekapcsolt összehasonlításnál látszik, mely órák nőttek, és melyek csökkentek.",
-          "Lassan forgó termékek: a rangsorkártya fejlécét átkapcsolva Lassan forgó termékek nézetre a termékek a legkevesebbet eladottól a legtöbbig sorakoznak, a jelenlegi készlettel és az utolsó eladás dátumával. Azok a termékek, amelyekből még nem adtak el, a Még nem adták el jelölést kapják. Alapértelmezés szerint csak a készleten lévő termékek látszanak.",
-          "Változás (a 3.4-es verzió óta): a rangsorkártya fejlécét átkapcsolva Változás nézetre megjelenik az a 3 termék, amelynek árbevétele az összehasonlítási időszakhoz képest a legtöbbet nőtt, és az a 3, amelyé a legtöbbet csökkent, mindkét időszak árbevételével és a különbséggel. Előbb válasszon időszakot az Eladások összehasonlítása alatt; a Nincs beállításnál, illetve a Minden időszak esetén a kártya erre figyelmeztet. Koppintson a kártyára vagy a Mind megtekintése lehetőségre a teljes Termékek változása listáért, amely Növekedés és Csökkenés részre oszlik.",
-          "Visszatérő vásárlók aránya: a Vevők csempéjének utolsó sora azoknak a törzsvásárlóknak az aránya, akik az időszakban vásároltak, és összesen legalább kétszer vásároltak.",
+          "Eladások összehasonlítása: az időszaksáv jobb oldalán összevetheti az időszakot az előző év azonos időszakával vagy az előző időszakkal (egy napot a múlt heti azonos nappal, ezt a hetet a múlt héttel, ezt a hónapot a múlt hónappal, ezt az évet a tavalyival, az egyéni időszakot az előtte lévő ugyanennyi nappal). Az Árbevétel, a Beérkezett pénz, a Bruttó nyereség, a Rendelések, az Átlagos rendelés, az Engedmények összesen és a Kiszolgált vevők csempén egyaránt látszik a változás és az összehasonlítási időszak értéke, például „▼ 3% vs. múlt hónap”; az Engedmények összesen változása mindig szürke, mert a több engedmény önmagában sem jó, sem rossz. Koppintson bármelyik összehasonlító sorra az Időszak-összehasonlítás megnyitásához, amely mindkét időszak értékeit listázza. A trenddiagramon halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszak is ugyanaddig tart.",
+          "Hétnap × óra: a trenddiagram fejlécét Alakulás nézetről átkapcsolva Hétnap × óra nézetre hétnapos, 24 órás hőtérkép jelenik meg – minél sötétebb egy cella, annál többet adott el. Váltogathat az árbevétel és a rendelések között; bekapcsolt összehasonlításnál látszik, mely órák nőttek, és melyek csökkentek.",
+          "Lassan forgó termékek: a rangsorkártya fejlécét átkapcsolva Lassan forgó termékek nézetre a termékek a legkevesebbet eladottól a legtöbbig sorakoznak, a jelenlegi készlettel és az utolsó eladás dátumával. Azok a termékek, amelyekből még nem adtak el, a Még nem adták el jelölést kapják, a változatokkal rendelkező termék pedig változatonként egy sort. Alapértelmezés szerint csak a készleten lévő termékek látszanak.",
+          "Változás (a 3.4-es verzió óta): a rangsorkártya fejlécét átkapcsolva Változás nézetre megjelenik az a 3 termék, amelynek árbevétele az összehasonlítási időszakhoz képest a legtöbbet nőtt, és az a 3, amelyé a legtöbbet csökkent, mindkét időszak árbevételével és a különbséggel; minden változatot önmagához hasonlít. Előbb válasszon időszakot az Eladások összehasonlítása alatt; a Nincs beállításnál, illetve a Minden időszak esetén a kártya erre figyelmeztet. Koppintson a kártyára vagy az Összes megtekintése lehetőségre a teljes Termékek változása listáért, amely Növekedés és Csökkenés részre oszlik.",
+          "Visszatérő vásárlók aránya: a Kiszolgált vevők csempéjének utolsó sora azoknak a tagoknak az aránya, akik az időszakban vásároltak, és összesen legalább kétszer vásároltak. Bekapcsolt összehasonlításnál egy alatta lévő sor megadja a változást százalékpontban és az összehasonlítási időszak arányát.",
+          "Megoszlás kategóriánként: az egyes kategóriák árbevétele és részesedése a termékek jelenlegi kategóriája szerint, a legnagyobbtól kezdve. A kategória nélküli termékek a Kategória nélkül sor alá kerülnek, és a sorok pontosan az árbevételre jönnek ki.",
           "Aktuális állapot: a készletérték (jelenlegi készlet × jelenlegi költség), az adott időszak összes készletmozgása, valamint a vevők birtokában lévő, még be nem váltott pontok a legnagyobb levonható összeggel. Ezek aktuális egyenlegek; az időszak nem változtat rajtuk."
         ]
       },
       {
         "type": "p",
-        "text": "A 3.4-es verzió óta mindegyik elérhető minden csomagban, és a próbaidőszak lejárta után is megmaradnak. A korábbi verziók ezeket csak a Pro csomagban mutatták, a többi csomagnál egy kis lakattal; ha még lakatokat lát, frissítse a DingPOS-t az App Store-ból."
+        "text": "A 3.4-es verzió óta valamennyi elérhető minden csomagban, és a próbaidőszak lejárta után is nyitva marad. A korábbi verziók ezeket csak a Pro csomagban mutatták, a többi csomagnál egy kis lakattal; ha még lakatokat lát, frissítse a DingPOS-t az App Store-ból."
       },
       {
         "type": "p",
@@ -1156,33 +1374,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Hogyan számolja a nyereséget a rendszer, ha nem adtam meg költséget?",
+    "question": "Hogyan számolja a rendszer a bruttó nyereséget, ha nem adtam meg költséget?",
     "keywords": [
       "költség",
       "nyereség",
+      "bruttó nyereség",
       "árrés",
       "bruttó árrés",
       "riportok",
-      "nem követett nyereség",
+      "nincs megadott költség",
       "hiányzó költség",
-      "követett nyereség"
+      "költség nélküli termékek"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A költség nem kötelező mező. A költség nélküli termékek kimaradnak a nyereségből, miközben az árbevételük teljes egészében beleszámít. A Riportok Követett nyereség kártyája megmutatja, hány, az időszakban eladott terméknek nincs költsége; a 0 költségnek számít, ezért az ilyen termékek nem szerepelnek a listán."
+        "text": "A költség nem kötelező mező. A költség nélküli termékek kimaradnak a bruttó nyereségből, miközben az árbevételük teljes egészében beleszámít. A Riportok Költség nélküli termékek csempéje megmutatja, hány, az időszakban eladott vagy visszavett terméknek nincs költsége, például „12 termék”; a 0 költségnek számít, ezért az ilyen termékek nem szerepelnek a listán. Ha minden terméknek van költsége, a csempén ez áll: „0 termék · a költségadatok teljesek”."
       },
       {
         "type": "p",
-        "text": "Koppintson a kártyára vagy a Termékek megtekintése gombra a Költség nélküli termékek megnyitásához, amelyek a nyereségből kimaradó árbevétel szerint vannak rangsorolva. Koppintson egy sorra a termék megnyitásához, adja hozzá a költségét a Szerkesztés alatt, és visszatérve a sor a Költség hozzáadva jelölést kapja. A változatokkal rendelkező termék csak akkor kap Költség hozzáadva jelölést, ha minden költség nélkül eladott változatának van költsége – a sajátja, vagy a termék költsége, amelyet követ."
+        "text": "Koppintson a csempére vagy a Termékek megtekintése gombra a Költség nélküli termékek megnyitásához, amelyek a bruttó nyereségből kimaradó árbevétel szerint vannak rangsorolva. Koppintson egy sorra a termék megnyitásához, a Szerkesztés gombbal adja hozzá a költségét, és visszatérve a sor a Költség hozzáadva jelölést kapja. A változatokkal rendelkező termék csak akkor kap Költség hozzáadva jelölést, ha minden költség nélkül eladott változatának van költsége – a sajátja, vagy a termék költsége, amelyet követ."
       },
       {
         "type": "p",
-        "text": "A nyereség a minden engedmény (tétel- és kosárengedmények, akciók, pontbeváltás) utáni, adó nélküli árbevétel mínusz a költség – ezért olvasható a mező úgy, hogy Beszerzési ár adó nélkül (nem kötelező): azt adja meg, amennyit adó nélkül fizetett. Az árrés a nyereség osztva a költséggel rendelkező termékek adó nélküli árbevételével, így a költség nélküliek nem húzzák le. A visszavétel a visszavétel napján visszaveszi azt a nyereséget, amelyet ezek a tételek hoztak."
+        "text": "A bruttó nyereség az összes engedmény (tétel- és kosárengedmények, akciók, pontbeváltás) utáni, adó nélküli árbevétel mínusz a költség – ezért olvasható az adót felszámító boltban a mező úgy, hogy Beszerzési ár adó nélkül (nem kötelező): azt adja meg, amennyit adó nélkül fizetett. Az árrés a bruttó nyereség osztva a költséggel rendelkező termékek árbevételével, így a költség nélküliek nem húzzák le. A visszavétel a visszavétel napján visszaveszi azt a bruttó nyereséget, amelyet ezek a tételek hoztak."
+      },
+      {
+        "type": "p",
+        "text": "Koppintson a bruttó nyereség csempére az „Az árbevételtől a bruttó nyereségig” nézetért, amely soronként von le: árbevétel (adóval), adó, árbevétel (adó nélkül), költség nélküli árbevétel, termékköltség, végül bruttó nyereség és árrés. A sorok pontosan kiadják a csempe értékét."
       },
       {
         "type": "note",
-        "text": "A megadott költség csak a későbbi eladásokat érinti; a már megtörtént eladásokat nem számolja újra a rendszer. Ez a számítás a 3.1-es verzióban jelent meg: a korábbi verziók csak a kézi tételengedményeket vonták le, és az adóval együtt megadott árban lévő adót nyereségnek számolták, ezért a frissítés után az engedményes vagy adóval együtt árazott időszakok alacsonyabb nyereséget mutatnak. Ez javítás, nem adatvesztés."
+        "text": "A megadott költség csak a későbbi eladásokat érinti; a már megtörtént eladásokat nem számolja újra a rendszer. Ez a számítás a 3.1-es verzióban jelent meg: a korábbi verziók csak a kézi tételengedményeket vonták le, és az adóval együtt megadott árban lévő adót nyereségnek számolták, ezért a frissítés után az engedményes vagy adóval együtt árazott időszakok alacsonyabb bruttó nyereséget mutatnak. Ez javítás, nem adatvesztés."
       }
     ],
     "related": [
@@ -1218,16 +1441,22 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Árbevétel (adó nélkül): az összes engedmény utáni árbevétel az adó levonásával, azon a napon számítva, amikor az árut átadták.",
+          "Árbevétel (adó nélkül): az összes engedmény utáni, adó nélküli árbevétel, azon a napon számítva, amikor az árut átadták.",
           "Termékköltség: az eladott áruk költsége, a termékeknél megadott költségek alapján.",
+          "Készletveszteség: annak a költsége, amit a Készlet módosítása lejárat, sérülés, ajándékozás és hasonló okból kivett a készletből, plusz a selejtezett visszáru. A bruttó nyereség után következik – lásd: „Hogyan rögzíthetem a lejárt, tönkrement vagy mintaként kiadott készletet?” A hónapnál külön Készletveszteség szakasz is van, amely indok szerint összesíti.",
           "Kezelési költség (becsült): a fizetési módok díjkulcsaiból becsült költségek.",
           "Elvesztett előlegek: az előrendelés lemondásakor megtartott előlegek.",
+          "Készpénz kerekítése: amennyivel a használatban lévő érmékre kerekítés a rendelések végösszegét meghaladta vagy elmaradt tőle.",
           "Fix kiadások és Egyszeri kiadások: az adott hónapra rögzített tételek – lásd: „Hogyan rögzíthetem a bérleti díjat, a béreket és más kiadásokat?”"
         ]
       },
       {
         "type": "p",
-        "text": "Legfeljebb három diagram következik: a nettó eredmény hónapról hónapra, az egyes fix kiadások részaránya és a fix kiadások alakulása. A két trenddiagram legfeljebb 12 hónapot fed le a megnyitott hónapig, és csak akkor jelenik meg, ha az első eladás vagy kiadás hónapjától számítva legalább két összehasonlítható hónap van. A részarány-diagramhoz az adott hónapban kell egy fix kiadás; amíg nincs, ezen a szakaszon a Fix kiadás hozzáadása felirat látható. A Riportok képernyőn a nyereségkártya utolsó sora közvetlenül az Eredményre ugrik: pontosan egy hónapnyi időszaknál az adott hónap nettó eredményét mutatja, például „Október nettó eredménye: NT$12,300”, minden más időszaknál pedig a Havi eredmény megtekintése felirat áll."
+        "text": "Legfeljebb három diagram következik: a nettó eredmény hónapról hónapra, az egyes fix kiadások részaránya és a fix kiadások alakulása. A két trenddiagram legfeljebb 12 hónapot fed le a megnyitott hónapig, és csak akkor jelenik meg, ha az első eladás vagy kiadás hónapjától számítva legalább két összehasonlítható hónap van. A részarány-diagramhoz az adott hónapban kell egy fix kiadás; amíg nincs, ezen a szakaszon a Fix kiadás hozzáadása felirat látható."
+      },
+      {
+        "type": "p",
+        "text": "A Riportok és az Eredmény összekapcsolódik. Ha a Riportok időszaka ez a hónap vagy pontosan egy egész hónap, a csempék második sora kiegészül egy Nettó eredmény csempével (amíg a hónap tart, „Folyamatban · a hónap teljes kiadása levonásra kerül” jelöléssel); koppintson rá, hogy lássa a hónap bontását a bruttó nyereségtől a nettó eredményig. Minden más időszaknál koppintson a Havi eredmény megtekintése sorra az „Az árbevételtől a bruttó nyereségig” nézet utolsó sorában. Fordítva: az Eredményben a hónap címe alatti „Október jelentés megtekintése” megnyitja a Riportokat az adott hónappal."
       },
       {
         "type": "note",
@@ -1279,14 +1508,14 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Üzletberendezésnél, felszerelésnél vagy előre kifizetett biztosításnál kapcsolja be az Elosztás több hónapra beállítást, és válasszon 2–120 hónapot, valamint az első beszámított hónapot. Az űrlap előnézetben mutatja, havonta mekkora összeg számít be, és mely hónapokat érinti.",
+          "Üzletberendezésnél, felszerelésnél vagy előre kifizetett biztosításnál kapcsolja be az Elosztás több hónapra beállítást, és válasszon 2–120 hónapos időtartamot, valamint az első beszámított hónapot. Az űrlap előnézetben mutatja, havonta mekkora összeg számít be, és mely hónapokat érinti.",
           "Elosztás nélkül is megválaszthatja a Beszámított hónapot: a novemberben érkező októberi számla októberben is beszámítható, a valós dátum megtartásával.",
           "Ha az elosztás korán véget ér (például felmondtak egy biztosítást), használja az Elosztás korai befejezése lehetőséget: ami még hátravan, az Ön által választott hónapban számít be."
         ]
       },
       {
         "type": "note",
-        "text": "Azt adja meg, amit az üzlet ténylegesen visel, a visszaigényelhető adó nélkül. Az eladásra szánt áru ehelyett a Beszerzésen keresztül kerül be, mert eladáskor a termékköltségben számít be; a (visszajáró) kaució, a hitel tőkéje és a tulajdonos kivétele nem kiadás. A módosítások a ✓ koppintásakor együtt mentődnek, és ha a változás lezárult hónapot érint, a rendszer előbb megmondja, mely hónapok nettó eredménye módosul."
+        "text": "Azt adja meg, amit az üzlet ténylegesen visel, a visszaigényelhető adó nélkül. Az eladásra szánt áru és az alapanyagok, amelyekből elkészíti, ehelyett a Beszerzésen keresztül kerülnek be, mert eladáskor a termékköltségben számítanak be. A követett készletű fogyóeszközöket felhasználáskor a Készlet módosítása rögzíti Bolti fogyóeszköz indoklással, nem kiadásként. A (visszajáró) kaució, a hitel tőkéje és a tulajdonos kivétele nem kiadás. A módosítások a ✓ koppintásakor együtt mentődnek, és ha a változás lezárult hónapot érint, a rendszer előbb megmondja, mely hónapok nettó eredménye módosul."
       }
     ],
     "related": [
@@ -1380,7 +1609,8 @@ export const articles = [
       "hűségprogram",
       "jutalom",
       "pontbeváltás",
-      "üdvözlő pontok"
+      "üdvözlő pontok",
+      "kézi pontmódosítás"
     ],
     "content": [
       {
@@ -1390,6 +1620,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Válassza ki a tagot az eladáshoz a kosárban vagy a fizetési képernyőn, és a pontok automatikusan jóváíródnak; beváltáshoz adja meg a felhasználandó pontokat. A rendelés sztornózásakor a rendszer visszavonja a vele szerzett pontokat, a beváltott pontokat pedig visszatéríti."
+      },
+      {
+        "type": "p",
+        "text": "Ha kézzel szeretne pontot hozzáadni vagy levonni (például egy kimaradt vásárlás miatt), koppintson a vevő adatlapján a Pontok kártya Módosítás gombjára, válassza a Hozzáadás vagy a Levonás lehetőséget, adja meg a pontok számát, és szükség esetén írjon indoklást (legfeljebb 100 karakter). A vevő meglévő pontjainál többet nem vonhat le. Minden módosítás megmarad a pontok előzményei között az előtte és utána érvényes egyenleggel, az indoklással és a módosító nevével."
+      },
+      {
+        "type": "note",
+        "text": "A kézi pontmódosítás a 3.5-ös verzióban jelent meg. Pro csomagban azok a munkatársak, akiknek a szerepköre a Kézi pontmódosításhoz jóváhagyást kér (alapértelmezés szerint a Munkatárs szerepkörnél ez így van), a megerősítéskor egy menedzser vagy a tulajdonos PIN-kódját kell megadniuk."
       }
     ],
     "related": [
@@ -1578,6 +1816,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Először koppintson az Újra gombra; ha sikerül, az alkalmazás a szokott módon megnyílik. Ha a probléma továbbra is fennáll, koppintson a Kapcsolatfelvétel az ügyfélszolgálattal gombra, és írjon nekünk. Segítünk helyreállítani az adatait. Ez a képernyő soha nem helyez át és nem töröl fájlokat."
+      },
+      {
+        "type": "p",
+        "text": "Egy frissítés utáni első indításkor, vagy egy régebbi verzióból készült biztonsági mentés visszaállítása után előfordulhat, hogy először az „Adatok frissítése…” felirat jelenik meg. Ilyenkor az üzlet adatai új formátumra állnak át, ami annál tovább tart, minél több az adat; ha végzett, az alkalmazás magától megnyílik. Nem fagyott le."
       },
       {
         "type": "note",
@@ -1800,12 +2042,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Használja a Tevékenységnaplót. A Személyzet oldalon koppintson a jobb felső sarokban lévő Tevékenységnapló gombra, és adja meg a tulajdonos PIN-kódját. Itt az üzlet érzékeny műveletei láthatók, a legújabbakkal kezdve: sztornók, visszavételek, kézi készletmódosítások, jóváhagyások, a munkatársak és jogosultságok módosításai, a tulajdonos PIN-kódjának módosításai, a termékárak és -költségek változásai, valamint a terméktörlések. A szokásos eladások nem szerepelnek benne."
+        "text": "Használja a Tevékenységnaplót. A Személyzet oldalon koppintson a jobb felső sarokban lévő Tevékenységnapló gombra, és adja meg a tulajdonos PIN-kódját. Itt az üzlet érzékeny műveletei láthatók, a legújabbakkal kezdve: sztornók, visszavételek, készletmódosítások és újraszámlálások, kézi pontmódosítások, jóváhagyások, a munkatársak és jogosultságok módosításai, a tulajdonos PIN-kódjának módosításai, az adóbeállítások, a termékárak és -költségek változásai, valamint a terméktörlések. A szokásos eladások nem szerepelnek benne."
       },
       {
         "type": "list",
         "items": [
-          "Minden bejegyzés megmutatja, mit érintett, ki mit tett és mikor, valamint az eredményt – például „M ár 390 Ft → 350 Ft”.",
+          "Minden bejegyzés megmutatja, mit érintett, ki mit tett és mikor, valamint az eredményt – például „M ár 390 Ft → 350 Ft”. A sztornóhoz, visszavételhez, készletmódosításhoz vagy pontmódosításhoz megadott indok a bejegyzés harmadik sorában látható.",
           "Szűrhet munkatárs (az inaktiváltakat is beleértve), művelettípus, valamint Ma / Ez a hét / Ez a hónap szerint.",
           "Koppintson egy rendelésre, termékre vagy vevőre mutató bejegyzésre a részletei megnyitásához.",
           "A rendelés- és termékrészletek oldalán, valamint minden munkatárs saját oldalán külön lista jeleníti meg a csak rájuk vonatkozó bejegyzéseket.",

@@ -84,6 +84,7 @@ export const articles = [
       "winkel openen",
       "land kiezen",
       "valuta",
+      "btw-tarieven",
       "kassa-app instellen"
     ],
     "content": [
@@ -94,8 +95,8 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Kies je land of regio. Bovenaan de lijst staan de regio van deze iPad en de meest gekozen markten; daaronder staan alle 175 landen en regio's waar DingPOS in de App Store staat, doorzoekbaar op naam in de taal van de app of in het Engels. Je keuze vult de valuta, het btw-tarief en de btw-modus in.",
-          "Vul bij Je winkel de winkelnaam in, voeg eventueel een logo toe en controleer de valuta, het btw-tarief en de btw-modus (inclusief / exclusief). De valuta staat standaard op die van je land; tik erop om uit 130 valuta's te kiezen."
+          "Kies je land of regio. Bovenaan de lijst staat het land of de regio waarin deze iPad zich bevindt, gevolgd door de meest gekozen markten; daaronder staan alle 175 landen en regio's waar DingPOS in de App Store staat, doorzoekbaar op naam in de taal van de app of in het Engels. Je keuze vult de valuta, de btw-tarieven en de btw-modus in.",
+          "Vul bij Je winkel de winkelnaam in, voeg eventueel een logo toe en controleer de valuta, de btw-tarieven en de btw-modus (inclusief / exclusief). De valuta staat standaard op die van je land; tik erop om uit 130 valuta's te kiezen. De lijst met btw-tarieven toont de standaardtarieven van je land: geef een tarief een andere naam, wijzig het percentage, verwijder een tarief of tik op Voeg btw-tarief toe voor nog een rij. Een winkel in British Columbia past bijvoorbeeld de eerste rij aan naar “GST 5” en voegt een rij “PST 7” toe."
         ]
       },
       {
@@ -104,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Valuta en btw-modus kun je na de installatie niet meer wijzigen; het btw-tarief kun je later nog wel aanpassen in Instellingen. In de Verenigde Staten, Canada, Brazilië en Micronesië hangt het tarief af van de staat, provincie of stad. Daarom is het veld voor het btw-tarief daar eerst leeg en vul je het tarief in dat je rekent (0 mag) om door te gaan. De lijst met 175 landen en de keuze van valuta kwamen met v3.2; eerdere versies boden 15 landen."
+        "text": "De valuta kun je na de installatie niet meer wijzigen; de btw-tarieven en de btw-modus kun je later allebei aanpassen in Instellingen → Winkelgegevens. In de Verenigde Staten, Canada, Brazilië en Micronesië hangt het tarief af van de staat, provincie of stad. Daarom is het tariefveld daar eerst leeg en vul je het tarief in dat je rekent om door te gaan. Een tarief moet hoger zijn dan 0: een winkel die geen btw rekent, verwijdert de rij. De lijst met 175 landen en de keuze van valuta kwamen met v3.2; eerdere versies boden 15 landen."
       }
     ],
     "related": [
@@ -183,11 +184,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS ondersteunt op dit moment iPads met iPadOS 17 of nieuwer, en is in de eerste plaats ontworpen voor liggend gebruik."
+        "text": "DingPOS ondersteunt op dit moment iPads met iPadOS 17.4 of nieuwer, en is in de eerste plaats ontworpen voor liggend gebruik."
       },
       {
         "type": "p",
         "text": "iPhone en Mac worden nog niet ondersteund. Wil je dat we een ander apparaat ondersteunen? Schrijf ons en vertel hoe je het zou gebruiken."
+      },
+      {
+        "type": "note",
+        "text": "Elke iPad die iPadOS 17 draait, kan worden bijgewerkt naar 17.4, dus er valt geen enkel model af. Een iPad die nog op iPadOS 17.0–17.3 staat, heeft eerst een systeemupdate nodig, via Instellingen → Algemeen → Software-update, voordat DingPOS v3.5 of nieuwer erop kan worden geïnstalleerd."
       }
     ],
     "related": [
@@ -197,23 +202,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Kan ik na het instellen de valuta of btw-modus nog wijzigen?",
+    "question": "Kan ik na het instellen de valuta, het btw-tarief of de btw-modus nog wijzigen?",
     "keywords": [
       "valuta",
       "btw-modus",
       "wijzigen",
       "vergrendeld",
       "btw-tarief",
-      "inclusief btw"
+      "btw-tarieven",
+      "inclusief btw",
+      "exclusief btw"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Het btw-tarief kun je op elk moment wijzigen in Instellingen — het nieuwe tarief geldt alleen voor toekomstige bestellingen."
+        "text": "De btw kun je wijzigen; de valuta niet. Btw-tarieven en de btw-modus pas je allebei aan op de kaart Btw in Instellingen → Winkelgegevens, en een wijziging geldt alleen voor latere verkopen: eerdere bestellingen, retouren en rapporten behouden de btw-bedragen en de modus waarmee ze zijn vastgelegd."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Btw-tarieven: voeg er een toe, geef een tarief een andere naam, wijzig het percentage of verwijder het — zie “Hoe wordt de btw berekend?”",
+          "Btw-modus (inclusief / exclusief): tik op de andere modus en de bevestiging rekent een voorbeeld uit met je eerste btw-tarief, zoals “een artikel van NT$100 met 5% btw: de klant betaalt NT$105”. De prijzen behouden hun bedragen en een openstaande winkelmand wordt in de nieuwe modus opnieuw berekend zodra je teruggaat naar de kassa. De modus kun je sinds v3.5 omzetten; eerdere versies vergrendelen hem bij de installatie.",
+          "Na een omschakeling wordt bij een volledige retour nog steeds het oorspronkelijke bedrag van de bestelling terugbetaald. Een omruiling (met vervangende artikelen) op een bestelling die in de andere modus is verkocht, wordt geblokkeerd: zet de modus terug, of neem de artikelen retour en reken ze opnieuw af."
+        ]
       },
       {
         "type": "p",
-        "text": "Valuta en btw-modus (inclusief / exclusief) zijn vergrendeld zodra de installatie klaar is. Al je eerdere bestellingen zijn ermee berekend, dus tussentijds wijzigen zou je rapporten onbetrouwbaar maken. Controleer ze daarom in de stap Je winkel van de installatie: de valuta staat standaard op die van je land en je kunt erop tikken om een andere te kiezen."
+        "text": "De valuta is vergrendeld zodra de installatie klaar is. Elke eerdere bestelling is erin vastgelegd, dus tussentijds van valuta wisselen zou je rapporten onbetrouwbaar maken. Controleer de valuta daarom in de stap Je winkel van de installatie: die staat standaard op de valuta van je land en je kunt erop tikken om een andere te kiezen."
       },
       {
         "type": "note",
@@ -334,28 +349,54 @@ export const articles = [
       "omzetbelasting",
       "inclusief btw",
       "exclusief btw",
+      "meerdere btw-tarieven",
+      "gst",
+      "pst",
+      "belasting pauzeren",
       "bon"
     ],
     "content": [
       {
         "type": "p",
-        "text": "De btw wordt automatisch berekend op basis van de belastingmodus die je bij het instellen hebt gekozen. De bon toont het btw-bedrag in beide modi:"
+        "text": "De btw wordt automatisch berekend op basis van de btw-tarieven en de btw-modus onder Instellingen → Winkelgegevens. Er zijn twee modi, en de bon toont het btw-bedrag in beide:"
       },
       {
         "type": "list",
         "items": [
-          "Inclusief: de prijzen bevatten al btw — het totaal blijft gelijk en de bon specificeert de btw die erin zit (gebruikelijk in Taiwan, Japan enz.).",
-          "Exclusief: de btw wordt bij het afrekenen bovenop het bedrag na korting gezet (gebruikelijk in de VS, Canada enz.)."
+          "Incl. btw: de prijzen bevatten al btw — het totaal blijft gelijk en de bon specificeert de btw die erin zit (gebruikelijk in Taiwan, Japan enz.).",
+          "Excl. btw: de btw wordt bij het afrekenen bovenop het bedrag na korting gezet (gebruikelijk in de VS, Canada enz.)."
         ]
       },
       {
         "type": "p",
-        "text": "Volledige rekenvolgorde: artikelkortingen → winkelmandkorting → btw. Bedragen worden afgerond volgens de half-up-methode: vanaf 0,5 naar boven, op het aantal decimalen van de valuta (bijv. 0 voor TWD, 2 voor USD)."
+        "text": "Een winkel kan meerdere belastingen berekenen, zoals 5% GST plus 7% PST in Brits-Columbia, of de Japanse consumptiebelasting van 10% naast het verlaagde tarief van 8%:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Tik op de kaart Btw op Voeg btw-tarief toe en vul een naam en een percentage in. Zet Toepassen op nieuwe producten aan, dan krijgen producten die je later toevoegt dit btw-tarief standaard. Heeft de winkel al een standaardtarief, dan staat die schakelaar bij een nieuw btw-tarief eerst uit; zet hem aan als beide moeten worden berekend.",
+          "Elk product kiest zelf onder Btw-tarieven in het productformulier welke btw-tarieven het berekent — een bentobox kan bijvoorbeeld alleen het verlaagde tarief van 8% berekenen. Staan er twee of meer aan, dan toont het formulier het gecombineerde tarief van het product.",
+          "Tik op een btw-tarief om de naam of het percentage te wijzigen, of gebruik Pas toe op alle producten of Verwijder van alle producten om het in één keer aan elk product toe te voegen of van elk product te halen. Bij het verwijderen van een btw-tarief zie je eerst voor hoeveel producten het niet meer wordt berekend.",
+          "In een winkel met Excl. btw toont het totaal van de winkelmand één regel per btw-tarief, en de bestelgegevens tonen één regel per btw-tarief met het percentage en het bedrag waarover het is berekend."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Wil je een tijdje geen belasting berekenen, zet dan bovenaan de kaart Btw Belasting berekenen uit: alle latere verkopen zijn zonder belasting, ook voor artikelen die al in een winkelmand zitten. Elk product behoudt zijn btw-tarieven, en als je de schakelaar weer aanzet, zijn ze weer zoals ze waren."
+      },
+      {
+        "type": "p",
+        "text": "Volledige rekenvolgorde: artikelkortingen en acties → winkelmandkorting → inwisselen van punten → btw. Bedragen worden afgerond volgens de half-up-methode: vanaf 0,5 naar boven, op het aantal decimalen van de valuta (bijv. 0 voor TWD, 2 voor USD)."
+      },
+      {
+        "type": "note",
+        "text": "Btw-tarieven met een eigen naam zijn er sinds v3.5. Bij de update wordt je btw-tarief een tarief met een naam (bijvoorbeeld “GST 10%” in Australië) en krijgt elk bestaand product dit tarief; een winkel met een tarief van 0 krijgt geen btw. Eerdere bestellingen en retouren behouden de btw-tarieven en bedragen waarmee ze zijn vastgelegd; rapporten tellen de omzet nu vóór btw, ook over eerdere periodes (zie “Wat is het verschil tussen omzet en ontvangen bedrag?”)."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -380,7 +421,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Betaalmethoden zijn labels voor je boekhouding — DingPOS verwerkt zelf geen echte betalingen. Neem pinbetalingen of mobiele betalingen aan met je bestaande terminal of app en kies daarna het bijbehorende label in DingPOS om de betaling vast te leggen. Bij contante betalingen wordt het wisselgeld automatisch berekend."
+        "text": "Betaalmethoden zijn labels voor je boekhouding — DingPOS verwerkt zelf geen echte betalingen. Neem pinbetalingen of mobiele betalingen aan met je bestaande terminal of app en kies daarna het bijbehorende label in DingPOS om de betaling vast te leggen. Bij contante betalingen wordt het wisselgeld automatisch berekend, en waar de kleinste munten niet meer worden gebruikt, kan ook het contante bedrag worden afgerond — zie “Kunnen contante betalingen worden afgerond op de munten die nog in omloop zijn?”"
       },
       {
         "type": "p",
@@ -393,6 +434,7 @@ export const articles = [
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -438,6 +480,55 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Kunnen contante betalingen worden afgerond op de munten die nog in omloop zijn?",
+    "keywords": [
+      "contante afronding",
+      "afronden",
+      "naar boven afronden",
+      "naar beneden afronden",
+      "munten",
+      "kleine munten",
+      "centen",
+      "0,05",
+      "wisselgeld",
+      "canada",
+      "australië",
+      "zwitserland"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Canada, Australië, Nieuw-Zeeland, Zwitserland, Denemarken, Zweden, Noorwegen, België, Finland en Hongarije gebruiken hun kleinste munten niet meer, dus rondt DingPOS contant geld af op een bedrag dat je echt kunt overhandigen: een bestelling van C$12,99 die contant wordt betaald, wordt aangenomen als C$13,00, en het wisselgeld wordt berekend vanaf C$13,00. Pinbetalingen en andere niet-contante betalingen blijven exact."
+      },
+      {
+        "type": "p",
+        "text": "Een nieuwe winkel die in een van deze landen en in de valuta van dat land wordt ingesteld, krijgt dit automatisch. Elke andere winkel zet het aan met de kaart Contante afronding onderaan Instellingen → Betaalmethoden: kies waarop contant wordt afgerond (Niet afronden, of 0,05, 0,10, 0,50 of 1,00 in een valuta met centen; 5, 10, 50 of 100 in een valuta zonder centen, zoals TWD of JPY) en, bij een stap die precies in het midden kan uitkomen, of er dan naar boven of naar beneden wordt afgerond. Een wijziging geldt alleen voor latere betalingen."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Bij het afrekenen staat “Contant ontvangen C$13,00”. Vraagt de klant om het exacte bedrag te betalen, tik dan onder de betaalmethoden op Exact bedrag aannemen; dat geldt voor die ene verkoop.",
+          "Het totaal van de bestelling, de btw, de omzet, de punten en de bestedingen van de klant blijven ongewijzigd; het afrondingsverschil hoort bij de betaling, en het bonscherm en de bestelgegevens tonen het onder het totaal, bijvoorbeeld “Contante afronding +C$0,01”.",
+          "Contante terugbetalingen bij retouren, contante aanbetalingen en restbedragen bij het afhalen van voorbestellingen, bijbetalingen bij een omruiling en openstaande bedragen op rekening die contant worden vereffend, worden ook afgerond; worden er meerdere tegelijk vereffend, dan wordt het geheel één keer afgerond.",
+          "Ongeldig gemaakte bestellingen, terugbetaalde aanbetalingen op voorbestellingen en ongedaan gemaakte vereffeningen betalen precies terug wat is vastgelegd, zonder opnieuw af te ronden.",
+          "Ontvangen bedrag in Cijfers laat zien hoeveel daarvan contante afronding was, en de maandelijkse W&V krijgt een regel Contante afronding die meetelt voor de nettowinst. Afronding is nooit omzet."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Zwitserland rondt altijd naar beneden af, volgens de regels voor prijsaanduiding — CHF 12,98 wordt aangenomen als CHF 12,95, en er is geen keuze voor het midden. België rondt alleen totalen boven €0,05 af. Contante afronding zit in elk abonnement, en een bestaande winkel neemt contant geld precies zo aan als voorheen totdat je het aanzet."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -615,7 +706,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ga naar Orders, zoek de bestelling, open de details en kies Maak ongeldig. Bevestig, en het is gebeurd."
+        "text": "Ga naar Orders, zoek de bestelling, open de details en tik op Maak ongeldig. In het venster ‘Deze bestelling ongeldig maken?’ kun je een reden invullen (optioneel, maximaal 100 tekens); tik rechtsboven op Maak ongeldig en het is gebeurd. De reden staat in de bestelgegevens en in het activiteitenlogboek en kan na verzending niet meer worden gewijzigd."
       },
       {
         "type": "p",
@@ -623,7 +714,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Ongeldig maken betekent: ‘deze verkoop heeft nooit plaatsgevonden’ — gebruik het voor een bestelling die ter plekke verkeerd is ingetoetst. Brengt een klant later spullen terug, gebruik dan Retour: de oorspronkelijke bestelling blijft bewaard, je kunt maar een deel van de artikelen retourneren en de omzet wordt verlaagd op de dag waarop de retour wordt verwerkt."
+        "text": "Ongeldig maken betekent: ‘deze verkoop heeft nooit plaatsgevonden’ — gebruik het voor een bestelling die ter plekke verkeerd is ingetoetst. Brengt een klant later spullen terug, gebruik dan Retour: de oorspronkelijke bestelling blijft bewaard, je kunt maar een deel van de artikelen retourneren en de omzet wordt verlaagd op de dag van de retour."
       }
     ],
     "related": [
@@ -643,7 +734,9 @@ export const articles = [
       "terugbetaling",
       "gedeeltelijk retour",
       "andere maat",
-      "ruilen"
+      "ruilen",
+      "weggooien",
+      "reden van retour"
     ],
     "content": [
       {
@@ -653,12 +746,18 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "De oorspronkelijke bestelling wordt nooit gewijzigd. Een retour maakt een eigen document met de datum van vandaag en een nummer dat met R begint, en de omzet wordt verlaagd op de dag waarop de retour wordt verwerkt.",
+          "De oorspronkelijke bestelling wordt nooit gewijzigd. Een retour maakt een eigen document met de datum van vandaag en een nummer dat met R begint, en de omzet wordt verlaagd op de dag van de retour.",
           "De terugbetaling is wat de klant echt voor dat artikel heeft betaald — kortingen op artikelen, kortingen op de winkelmand en ingewisselde punten zijn al evenredig verwerkt, dus er wordt niet tegen de catalogusprijs terugbetaald. De btw volgt het tarief waarmee de oorspronkelijke bestelling is afgerekend.",
           "Vervangende artikelen worden berekend tegen de prijs van vandaag, zonder acties of kortingen.",
-          "Bijgehouden voorraad komt automatisch terug. Punten die met de oorspronkelijke bestelling zijn verdiend worden ingetrokken, ingewisselde punten worden teruggegeven en vervangende artikelen leveren hun eigen punten op.",
-          "Een bestelling kan in meerdere rondes worden geretourneerd, maar nooit meer dan het oorspronkelijk verkochte aantal. Gebruikslimieten van acties komen door een retour niet terug."
+          "Bij een product met bijgehouden voorraad kan elke geretourneerde regel terug de voorraad in (Terugleggen, de standaardkeuze) of worden weggegooid (Weggooien, sinds v3.5). Terugleggen voegt de voorraad weer toe. Weggooien laat de voorraad zoals die was en telt de kostprijs die het artikel bij de verkoop had mee in het Voorraadverlies van die maand op de W&V. Terugbetaling, btw en punten zijn in beide gevallen hetzelfde.",
+          "Punten die met de oorspronkelijke bestelling zijn verdiend worden ingetrokken, ingewisselde punten worden teruggegeven en vervangende artikelen leveren hun eigen punten op.",
+          "Is de oorspronkelijke bestelling een nog niet vereffende verkoop op rekening, dan gaat er geen geld over de toonbank: het retour wordt in mindering gebracht op de vorderingen van de klant, en een duurder vervangend artikel telt het verschil daarbij op.",
+          "Een bestelling kan in meerdere rondes worden geretourneerd, maar nooit meer dan het oorspronkelijk verkochte aantal; zodra alles terug is, komen de geretourneerde btw, kortingen en punten samen exact uit op de oorspronkelijke bestelling. Gebruikslimieten van acties komen door een retour niet terug."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Het veld Reden is optioneel, maximaal 100 tekens. De reden staat in de bestelgegevens en in het activiteitenlogboek en kan na verzending niet meer worden gewijzigd."
       },
       {
         "type": "note",
@@ -740,6 +839,7 @@ export const articles = [
         "items": [
           "De omzet telt mee op de dag dat de spullen de deur uit gaan; het ontvangen bedrag en de spaarpunten volgen pas op de dag van de vereffening.",
           "Niet-vereffende bestellingen hebben in de lijst een oranje label, en in de klantdetails staat hoeveel de klant op dat moment nog schuldig is.",
+          "Een retour op een bestelling die nog niet is vereffend betaalt geen geld terug: het bedrag wordt in mindering gebracht op de vorderingen van die klant.",
           "Een klant met niet-vereffende bestellingen kan niet worden verwijderd."
         ]
       },
@@ -796,7 +896,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tik op de productpagina onder Variantopties op Voeg optie toe om een optie toe te voegen (bijv. “Kleur”) en gebruik daarna “+ Optiewaarde” voor elke keuze (bijv. Rood, Blauw). Heb je twee of meer opties (bijv. Kleur × Maat), dan maakt DingPOS automatisch alle combinaties aan (Rood/S, Rood/M, Blauw/S…)."
+        "text": "Tik op het scherm Wijzig product onder Variantopties op Voeg optie toe om een optie toe te voegen (bijv. “Kleur”) en gebruik daarna “+ Optiewaarde” voor elke keuze (bijv. Rood, Blauw). Heb je twee of meer opties (bijv. Kleur × Maat), dan maakt DingPOS automatisch alle combinaties aan (Rood/S, Rood/M, Blauw/S…)."
       },
       {
         "type": "p",
@@ -808,7 +908,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Namen van opties en waarden mogen maximaal 20 tekens bevatten en niet leeg zijn: een lege optienaam of waarde krijgt bij het bewaren een rode rand, dus vul die in of verwijder de lege waarde. Een product met varianten kan geen open prijs hebben."
+        "text": "Namen van opties en waarden mogen maximaal 20 tekens bevatten, en spaties aan het begin of einde worden bij het bewaren weggehaald. Een waarde waarin je niets hebt getypt is geen combinatie en wordt bij het bewaren overgeslagen. Het bewaren stopt, met een rode rand om het veld, als een optienaam leeg is, als alle waarden van een optie leeg zijn of als je een waarde wist die het product al had bewaard; typ de waarde opnieuw in of verwijder hem met de knop Verwijder (×) bij die waarde. Een product met varianten kan geen open prijs hebben."
       }
     ],
     "related": [
@@ -940,12 +1040,71 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Zodra het aan staat, verlagen verkopen en voorbestellingen de voorraad automatisch. Bij ongeldig gemaakte verkopen, retouren en geannuleerde voorbestellingen wordt de voorraad weer aangevuld; een ontvangen inkooporder verhoogt de voorraad. Je kunt de voorraad ook altijd handmatig aanpassen. Elke mutatie wordt vastgelegd in een volledig overzicht. Lage voorraad wordt met een kleur gemarkeerd."
+        "text": "Zodra het aan staat, verlagen verkopen en voorbestellingen de voorraad automatisch. Bij ongeldig gemaakte verkopen, retouren en geannuleerde voorbestellingen wordt de voorraad weer aangevuld; een ontvangen inkooporder verhoogt de voorraad. Elke mutatie wordt vastgelegd in een volledig overzicht. Lage voorraad wordt met een kleur gemarkeerd."
+      },
+      {
+        "type": "p",
+        "text": "Je kunt het aantal op twee manieren met de hand wijzigen:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hertelling: wijzig het voorraadaantal op het productformulier zodat het klopt met wat je hebt geteld. Het telt nooit mee in de W&V.",
+          "Pas voorraad aan (sinds v3.5): tik in de productdetails op Pas voorraad aan, kies Haal eruit of Voeg toe, het aantal en een reden, zoals Verlopen of bedorven, Beschadigd of Samples en cadeaus. De kostprijs van wat je eruit haalt telt mee in het Voorraadverlies van die maand in de W&V — zie “Hoe leg ik voorraad vast die is verlopen, beschadigd of als sample is weggegeven?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
+    ]
+  },
+  {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Hoe leg ik voorraad vast die is verlopen, beschadigd of als sample is weggegeven?",
+    "keywords": [
+      "voorraad aanpassen",
+      "voorraadaanpassing",
+      "voorraadverlies",
+      "voorraad verminderen",
+      "verlopen",
+      "bedorven",
+      "beschadigd",
+      "samples",
+      "winkelbenodigdheden",
+      "hertelling"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Gebruik Pas voorraad aan. Tik bij een product waarvan je de voorraad bijhoudt in de productdetails op Pas voorraad aan, kies Haal eruit of Voeg toe, vul het aantal in, kies een reden en voeg eventueel een notitie toe (maximaal 100 tekens). Het scherm berekent de voorraad na de wijziging, en de regel onder de reden zegt of het in de W&V terechtkomt."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Redenen om eruit te halen: Productieverbruik, Verlopen of bedorven, Beschadigd, Kwijt of gestolen, Gebruik medewerker, Samples en cadeaus, Winkelbenodigdheden en Overig. Redenen om toe te voegen: Zelf gemaakt, Teruggevonden en Overig. Overig vereist een notitie.",
+          "Behalve bij Productieverbruik telt wat je eruit haalt, tegen de kostprijs op dat moment, mee in het Voorraadverlies van die maand in de W&V. Het komt na de brutowinst en verlaagt de nettowinst; de brutowinst en de marge veranderen niet. Productieverbruik haalt alleen de voorraad weg, omdat de kostprijs van een materiaal al in de kostprijs van het product zit dat ervan is gemaakt.",
+          "Teruggevonden haalt hetzelfde bedrag weer van het Voorraadverlies af. Zelf gemaakt en Overig bij Voeg toe voegen alleen voorraad toe en komen nooit in de W&V.",
+          "Een aanpassing telt mee op de dag waarop je hem vastlegt. Je kunt hem niet met terugwerkende kracht invoeren, wijzigen of verwijderen; leg om een fout te herstellen Teruggevonden of een aanpassing in de andere richting vast.",
+          "Een product zonder kostprijs kun je wel aanpassen, maar de W&V kan er geen bedrag aan koppelen, en de maand vermeldt bij hoeveel registraties een kostprijs ontbrak."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Het voorraadaantal wijzigen op het productformulier is een Hertelling: het zet de voorraad gelijk aan wat je hebt geteld en komt nooit in de W&V. De lijst met voorraadmutaties in Cijfers filtert voorraadaanpassingen en hertellingen apart, en het activiteitenlogboek toont de reden en de notitie van elke aanpassing."
+      },
+      {
+        "type": "note",
+        "text": "Pas voorraad aan vereist het Standard-abonnement of hoger. Bij Pro wordt aan medewerkers van wie de rol goedkeuring nodig heeft voor Handmatige voorraadcorrectie bij het bevestigen om de pincode van een manager gevraagd."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
     ]
   },
   {
@@ -966,7 +1125,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Een negatieve voorraad betekent meestal dat een aanvulling niet is vastgelegd, of dat een voorbesteld artikel nog niet binnen is (voorbestellingen verlagen de voorraad op het moment van bestellen). Leg aanvullingen vast door een inkooporder te ontvangen en het aantal herstelt zich vanzelf. Corrigeer verschillen na een telling met een handmatige aanpassing, die in het overzicht van voorraadmutaties bewaard blijft."
+        "text": "Een negatieve voorraad betekent meestal dat een aanvulling niet is vastgelegd, of dat een voorbesteld artikel nog niet binnen is (voorbestellingen verlagen de voorraad op het moment van bestellen). Leg aanvullingen vast door een inkooporder te ontvangen en het aantal herstelt zich vanzelf. Corrigeer een verschil na een telling door het voorraadaantal op het productformulier te wijzigen (een hertelling); leg bij goederen die kapot zijn gegaan, zijn verlopen of zijn weggegeven de reden vast met Pas voorraad aan. Beide worden bewaard in het overzicht van voorraadmutaties."
       },
       {
         "type": "note",
@@ -995,19 +1154,23 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bij Inkoop in de zijbalk beheer je leveranciers en inkooporders. Bij een leverancier bewaar je een naam, contactpersoon, telefoonnummer, adres en de standaard betaalvoorwaarde (direct betalen of maandkrediet)."
+        "text": "Bij Inkoop in de zijbalk beheer je leveranciers en inkooporders. Bij een leverancier bewaar je een naam, contactpersoon, telefoonnummer, adres en de standaard betaalvoorwaarde (Betalen bij ontvangst of Maandkrediet)."
       },
       {
         "type": "steps",
         "items": [
           "Tik op Nieuwe inkoop, kies de leverancier en voeg de producten, aantallen en kostprijzen per stuk toe (vooraf ingevuld met de huidige kostprijs van elk product). Je kunt ook verzendkosten toevoegen. Staat de leverancier er nog niet bij, tik dan linksboven in de leverancierslijst op Voeg leverancier toe. De nieuwe leverancier komt direct terug in de inkooporder.",
           "Een concept raakt de voorraad of de te betalen bedragen nooit aan. Je kunt het vrij wijzigen of verwijderen.",
-          "Zodra de goederen binnen zijn, tik je op Ontvang voorraad: de bijgehouden voorraad gaat omhoog en de inkooporder krijgt een nummer en wordt vergrendeld. Bij ontvangst wordt standaard ook de kostprijs van elk product bijgewerkt naar deze kostprijs per stuk. Zet Productkostprijs synchroniseren op de inkooporder uit om de kostprijzen ongewijzigd te laten."
+          "Zodra de goederen binnen zijn, tik je op Voorraad ontvangen: de bijgehouden voorraad gaat omhoog en de inkooporder krijgt een nummer en wordt vergrendeld. Bij ontvangst wordt standaard ook de kostprijs van elk product bijgewerkt naar deze kostprijs per stuk. Zet Productkostprijs synchroniseren op de inkooporder uit om de kostprijzen ongewijzigd te laten."
         ]
       },
       {
         "type": "p",
-        "text": "De betaalvoorwaarde bepaalt wat er daarna gebeurt: orders met directe betaling worden als betaald gemarkeerd, terwijl orders met maandkrediet onbetaald onder Te betalen blijven staan. Daar vereffen je ze per leverancier: één order, deze maand of alles."
+        "text": "De betaalvoorwaarde bepaalt wat er daarna gebeurt: orders met Betalen bij ontvangst worden als betaald gemarkeerd, terwijl orders met Maandkrediet onbetaald onder Te betalen blijven staan. Daar vereffen je ze per leverancier: één order, deze maand of alles."
+      },
+      {
+        "type": "p",
+        "text": "Grondstoffen die je niet verkoopt, zoals meel of verpakking, kun je op dezelfde manier inkopen: maak er producten van die niet voor verkoop zijn — zie “Kan ik grondstoffen zoals meel of verpakking als producten toevoegen?”"
       },
       {
         "type": "note",
@@ -1016,8 +1179,54 @@ export const articles = [
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Kan ik grondstoffen zoals meel of verpakking als producten toevoegen?",
+    "keywords": [
+      "niet voor verkoop",
+      "grondstoffen",
+      "ingrediënten",
+      "materialen",
+      "verpakking",
+      "benodigdheden",
+      "verkopen aan de kassa",
+      "inkoop",
+      "kostprijs"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ja. Zet op het productformulier onder de foto Verkopen aan de kassa uit (het staat standaard aan) en het product is niet voor verkoop: het heeft geen prijs nodig, behoudt zijn kostprijs, barcode, voorraad en varianten, en de productlijst toont “Niet voor verkoop” op de plek van de prijs."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Een product dat niet voor verkoop is, verschijnt nooit in het kassaoverzicht, de categorieën, de zoekfunctie of bij het scannen van barcodes, en kan geen cadeau, betaalde extra, doelproduct van een actie of vervangend artikel bij een omruiling zijn.",
+          "Inkooporders, voorraad ontvangen, Productkostprijs synchroniseren en Te betalen werken precies zoals bij andere producten, dus de inkoopkostprijs en de voorraad van een materiaal kun je via Inkoop vastleggen.",
+          "De verkoop van andere producten verlaagt de voorraad ervan niet. Gebruik je er iets van, leg dan met Pas voorraad aan in de productdetails een afname vast: Productieverbruik voor wat in producten is gegaan, Winkelbenodigdheden voor zaken als papieren tassen of schoonmaakmiddelen.",
+          "Je kunt het op elk moment weer terugzetten; de prijs en belastingen staan er dan nog. Bestellingen en rapporten die al zijn gemaakt, blijven ongewijzigd."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Zo komt de kostprijs in de W&V: inkopen tellen daar niet rechtstreeks mee. Reken de kostprijs bij een product dat ervan wordt gemaakt mee in dat product; die telt mee zodra dat product wordt verkocht. Benodigdheden die in de kostprijs van geen enkel product zitten, worden bij gebruik vastgelegd als Winkelbenodigdheden als je de voorraad ervan bijhoudt, of als eenmalige kostenpost als je dat niet doet. Leg hetzelfde geld niet op beide manieren vast, anders telt het dubbel."
+      },
+      {
+        "type": "note",
+        "text": "Producten die niet voor verkoop zijn, zijn er in elk abonnement; inkoop, voorraadbeheer en Pas voorraad aan vereisen het Standard-abonnement of hoger."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1037,7 +1246,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Omzet telt op de dag dat de goederen worden overhandigd; Ontvangen bedrag telt op de dag dat het geld binnenkomt. Bij een bestelling die aan de kassa wordt betaald gebeurt beide op dezelfde dag en kloppen de cijfers. Ze lopen uiteen bij:"
+        "text": "Omzet telt op de dag dat de goederen zijn overhandigd, na alle kortingen en vóór btw; Ontvangen bedrag telt op de dag dat het geld binnenkomt en is het geld dat je echt hebt binnengekregen, inclusief btw. In een winkel die btw berekent ligt Ontvangen bedrag dus hoger dan Omzet, met het bedrag aan btw, zelfs bij bestellingen die aan de kassa zijn betaald. Verder lopen ze uiteen bij:"
       },
       {
         "type": "list",
@@ -1045,12 +1254,17 @@ export const articles = [
           "Verkoop op rekening: de goederen gaan vandaag mee en tellen mee in de omzet van vandaag; het geld telt mee in Ontvangen bedrag op de dag dat het wordt vereffend.",
           "Voorbestelling: de aanbetaling telt mee in Ontvangen bedrag op het moment dat die wordt betaald; de omzet wordt volledig geboekt op de afhaaldatum.",
           "Ingehouden aanbetaling: als een klant een voorbestelling annuleert en jij de aanbetaling houdt, was die al meegeteld in Ontvangen bedrag toen die werd betaald. Cijfers toont dit apart als ingehouden aanbetalingen en het telt nooit mee als omzet.",
-          "Een eerdere bestelling ongeldig maken: het terugbetaalde geld telt mee in Ontvangen bedrag op de dag van het ongeldig maken, dus Ontvangen bedrag van die dag kan negatief zijn, terwijl Ongeldig gemaakt de bestelling telt op de verkoopdatum. De ⓘ op de tegels Ontvangen bedrag en Ongeldig gemaakt legt hetzelfde uit."
+          "Een eerdere bestelling ongeldig maken: het terugbetaalde geld telt mee in Ontvangen bedrag op de dag van het ongeldig maken, dus Ontvangen bedrag van die dag kan negatief zijn, terwijl Ongeldig gemaakt de bestelling telt op de verkoopdatum.",
+          "Contante afronding: wat de contante afronding boven of onder het totaalbedrag van de bestelling binnenhaalt, telt mee in Ontvangen bedrag, nooit in Omzet."
         ]
       },
       {
         "type": "p",
-        "text": "Om af te stemmen vergelijk je Ontvangen bedrag met de kassalade en je pinautomaat; om te zien hoeveel je in een periode echt hebt verkocht, kijk je naar Omzet. Retouren verlagen de omzet op de dag van de retour."
+        "text": "Om af te stemmen vergelijk je Ontvangen bedrag met de kassalade en je pinautomaat; om te zien hoeveel je in een periode echt hebt verkocht, kijk je naar Omzet. Retouren verlagen de omzet op de dag van de retour. De ⓘ op de tegels Omzet, Ontvangen bedrag en Ongeldig gemaakt legt hetzelfde uit, en de btw zelf staat onder Van omzet naar brutowinst, dat je opent via de tegel Brutowinst."
+      },
+      {
+        "type": "note",
+        "text": "Omzet vóór btw kwam met v3.5, en eerdere periodes zijn op dezelfde manier herberekend, dus een winkel die btw berekent ziet een lagere omzet dan vóór de update. Dat is een correctie. Eerdere versies rekenden btw mee in de omzet, en winkels met prijzen exclusief btw telden zelfs de btw die ze in rekening brachten als omzet."
       }
     ],
     "related": [
@@ -1081,15 +1295,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Voor één dag wordt de trendgrafiek een staafdiagram per uur; langere periodes gebruiken dagen, weken, maanden of jaren per staaf, afhankelijk van de lengte."
+        "text": "Onder de periodebalk staan twee rijen cijfertegels (Omzet, Ontvangen bedrag, Brutowinst, Bestellingen, Gemiddelde bestelling; Totale kortingen, Nettowinst, Producten zonder kostprijs, Geholpen klanten), daarna de trendgrafiek. Met het menu rechtsboven in de trendgrafiek wissel je tussen omzet, bestellingen, gemiddelde bestelling en geholpen klanten, en ernaast toont de grafiek Kosten en brutowinst de productkosten en de brutowinst van elke periode samen in één staaf. Een enkele dag wordt per uur weergegeven; langere periodes gebruiken dagen, weken, maanden of jaren, afhankelijk van de lengte."
       },
       {
         "type": "p",
-        "text": "Sinds v3.4 houd je de grafiek Omzettrend of Winsttrend ingedrukt om hem periode voor periode te lezen: een kaart toont de datum en de omzet of winst van die periode, en bij Omzettrend met Verkoopvergelijking aan ook de omzet van de vergelijkingsperiode en het verschil. Sleep naar links of rechts om verder te gaan; veeg je omhoog of omlaag over de grafiek, dan scrolt de pagina zoals gewoonlijk."
+        "text": "Houd de trendgrafiek of de grafiek Kosten en brutowinst ingedrukt om ze periode voor periode te lezen; met Verkoopvergelijking aan toont de kaart van de trendgrafiek het cijfer van deze periode en dat van de vergelijkingsperiode naast elkaar. Sleep naar links of rechts om verder te gaan; veeg je omhoog of omlaag over de grafiek, dan scrolt de pagina zoals gewoonlijk."
       },
       {
         "type": "p",
-        "text": "De kaart Productranglijst toont de top 5. Tik op de kaart of op Toon alles om alle producten te zien die in de periode zijn verkocht, gerangschikt op aantal na retouren."
+        "text": "De kaart Productranglijst toont de top 5. Tik op de kaart of op Toon alles om alle producten te zien die in de periode zijn verkocht, gerangschikt op aantal na retouren; een product met varianten krijgt één regel per variant."
       },
       {
         "type": "p",
@@ -1119,6 +1333,7 @@ export const articles = [
       "drukke uren",
       "langzaam verkopende producten",
       "stijgers en dalers",
+      "aandeel per categorie",
       "voorraadwaarde",
       "herhaalaankooppercentage",
       "punten"
@@ -1131,11 +1346,12 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Verkoopvergelijking: rechts van de periodebalk vergelijk je met dezelfde periode vorig jaar of met de voorgaande periode (één dag met dezelfde dag vorige week, deze week met vorige week, deze maand met vorige maand, dit jaar met vorig jaar, een aangepaste periode met evenveel dagen daarvoor). De tegel Ontvangen bedrag toont het verschil en het groeipercentage, en de omzetgrafiek krijgt een lichtere lijn voor de vergelijkingsperiode. Zolang een periode nog loopt, wordt de vergelijkingsperiode op hetzelfde moment afgekapt.",
-          "Weekdag × uur: zet de kop Verkoop in de tijd op Weekdag × uur voor een heatmap van zeven dagen bij 24 uur — hoe donkerder een vak, hoe meer je verkocht. Wissel tussen omzet en bestellingen; met een vergelijking aan zie je welke uren groeiden en welke krompen.",
-          "Langzaam verkopende producten: zet de kop van de rangschikkingskaart op Langzaam verkopende producten om producten van de minste naar de meeste verkopen te tonen, met de huidige voorraad en de datum waarop elk product het laatst is verkocht. Producten die nooit zijn verkocht, staan als ‘Nooit verkocht’. Standaard zie je alleen producten die op voorraad zijn.",
-          "Stijgers en dalers (sinds v3.4): zet de kop van de rangschikkingskaart op Stijgers en dalers voor de 3 producten waarvan de omzet het meest steeg en de 3 waarvan de omzet het meest daalde ten opzichte van de vergelijkingsperiode, elk met de omzet van beide periodes en het verschil. Kies eerst een periode onder Verkoopvergelijking; bij Geen of bij Altijd vraagt de kaart je een andere periode te kiezen. Tik op de kaart of op Toon alles voor de volledige lijst Stijgers en dalers, onderverdeeld in Stijgers en Dalers.",
-          "Herhaalaankooppercentage: de laatste regel van de klantentegel is het aandeel leden dat in de periode kocht en in totaal al twee of meer keer heeft gekocht.",
+          "Verkoopvergelijking: rechts van de periodebalk vergelijk je met dezelfde periode vorig jaar of met de voorgaande periode (één dag met dezelfde dag vorige week, deze week met vorige week, deze maand met vorige maand, dit jaar met vorig jaar, een aangepaste periode met evenveel dagen daarvoor). De tegels Omzet, Ontvangen bedrag, Brutowinst, Bestellingen, Gemiddelde bestelling, Totale kortingen en Geholpen klanten tonen elk de verandering en het cijfer van de vergelijkingsperiode, zoals “▼ 3% t.o.v. vorige maand”; de verandering bij Totale kortingen is altijd grijs, want meer korting is op zich niet goed of slecht. Tik op een vergelijkingsregel om Periodevergelijking te openen, met de cijfers van beide periodes. De trendgrafiek krijgt een lichtere lijn voor de vergelijkingsperiode. Zolang een periode nog loopt, wordt de vergelijkingsperiode op hetzelfde moment afgekapt.",
+          "Weekdag × uur: zet de kop van de trendgrafiek van Trend op Weekdag × uur voor een heatmap van zeven dagen bij 24 uur — hoe donkerder een vak, hoe meer je verkocht. Wissel tussen omzet en bestellingen; met een vergelijking aan zie je welke uren groeiden en welke krompen.",
+          "Langzaam verkopende producten: zet de kop van de rangschikkingskaart op Langzaam verkopende producten om producten van de minste naar de meeste verkopen te tonen, met de huidige voorraad en de datum waarop elk product het laatst is verkocht. Producten die nooit zijn verkocht, staan als ‘Nooit verkocht’ en een product met varianten krijgt één regel per variant. Standaard zie je alleen producten die op voorraad zijn.",
+          "Stijgers en dalers (sinds v3.4): zet de kop van de rangschikkingskaart op Stijgers en dalers voor de 3 producten waarvan de omzet het meest steeg en de 3 waarvan de omzet het meest daalde ten opzichte van de vergelijkingsperiode, elk met de omzet van beide periodes en het verschil; elke variant wordt met zichzelf vergeleken. Kies eerst een periode onder Verkoopvergelijking; bij Geen of bij Altijd vraagt de kaart je een andere periode te kiezen. Tik op de kaart of op Toon alles voor de volledige lijst Stijgers en dalers, onderverdeeld in Stijgers en Dalers.",
+          "Herhaalaankooppercentage: de laatste regel van de klantentegel is het aandeel leden dat in de periode kocht en in totaal al twee of meer keer heeft gekocht. Met een vergelijking aan geeft een regel eronder de verandering in procentpunten en het percentage van de vergelijkingsperiode.",
+          "Aandeel per categorie: de omzet en het aandeel van elke categorie, volgens de huidige categorie van elk product, van groot naar klein. Producten zonder categorie staan onder Zonder categorie en de rijen tellen precies op tot Omzet.",
           "Op dit moment: voorraadwaarde (huidige voorraad × huidige kostprijs), elke voorraadmutatie in de gekozen periode, en de punten die klanten hebben maar nog niet hebben ingewisseld, met het maximale bedrag dat ze ermee van de prijs kunnen halen. Dit zijn actuele standen; de periode verandert ze niet."
         ]
       },
@@ -1161,33 +1377,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Hoe wordt winst getoond als ik geen kostprijzen heb ingevoerd?",
+    "question": "Hoe wordt brutowinst getoond als ik geen kostprijzen heb ingevoerd?",
     "keywords": [
       "kostprijs",
       "winst",
+      "brutowinst",
       "marge",
       "brutomarge",
       "rapporten",
-      "winst niet bijgehouden",
+      "niet bijgehouden",
       "kostprijs ontbreekt",
-      "winst bijgehouden"
+      "producten zonder kostprijs"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kostprijs is een optioneel veld. Producten zonder kostprijs blijven buiten de winst, terwijl hun omzet nog steeds volledig meetelt. De kaart Winst bijgehouden bij Cijfers toont hoeveel producten die in de periode zijn verkocht geen kostprijs hebben; een kostprijs van 0 telt als kostprijs, dus die producten staan niet in de lijst."
+        "text": "Kostprijs is een optioneel veld. Producten zonder kostprijs blijven buiten de brutowinst, terwijl hun omzet nog steeds volledig meetelt. De tegel Producten zonder kostprijs in Cijfers toont hoeveel producten die in de periode zijn verkocht of geretourneerd geen kostprijs hebben, zoals “12 producten”. Een kostprijs van 0 telt als kostprijs, dus die producten staan niet in de lijst; heeft elk product er een, dan staat er “0 producten · kostprijzen compleet”."
       },
       {
         "type": "p",
-        "text": "Tik op de kaart of op Toon producten om Producten zonder kostprijs te openen, gerangschikt op de omzet die buiten de winst blijft. Tik op een rij om het product te openen, voeg de kostprijs toe via Wijzig, en de rij is gemarkeerd met Kostprijs toegevoegd als je terugkomt. Een product met varianten krijgt Kostprijs toegevoegd pas zodra elke verkochte variant zonder kostprijs er een heeft — een eigen kostprijs, of die van het product."
+        "text": "Tik op de tegel of op Toon producten om Producten zonder kostprijs te openen, gerangschikt op de omzet die buiten de brutowinst blijft. Tik op een rij om het product te openen, voeg de kostprijs toe via Wijzig, en de rij is gemarkeerd met Kostprijs toegevoegd als je terugkomt. Een product met varianten krijgt Kostprijs toegevoegd pas zodra elke verkochte variant zonder kostprijs er een heeft — een eigen kostprijs, of die van het product."
       },
       {
         "type": "p",
-        "text": "Winst is de omzet na alle kortingen (korting op artikelen en winkelmand, acties, inwisseling van punten) en vóór btw, minus de kostprijs — daarom heet het veld Kostprijs excl. btw (optioneel): vul in wat je vóór btw hebt betaald. De marge is de winst ÷ de omzet vóór btw van producten met een kostprijs, zodat producten zonder kostprijs de marge niet omlaag halen. Een retour neemt op de dag van de retour de winst terug die die artikelen hadden opgeleverd."
+        "text": "Brutowinst is de omzet na alle kortingen (korting op artikelen en winkelmand, acties, inwisseling van punten) en vóór btw, minus de kostprijs — daarom heet het veld in een winkel die btw berekent Kostprijs excl. btw (optioneel): vul in wat je vóór btw hebt betaald. De marge is de brutowinst ÷ de omzet van producten met een kostprijs, zodat producten zonder kostprijs de marge niet omlaag halen. Een retour neemt op de dag van de retour de brutowinst terug die die artikelen hadden opgeleverd."
+      },
+      {
+        "type": "p",
+        "text": "Tik op de tegel Brutowinst voor Van omzet naar brutowinst, dat rij voor rij aftrekt: omzet (incl. btw), belasting, omzet (excl. btw), omzet zonder kostprijs, kostprijs producten en ten slotte brutowinst en marge. De rijen tellen precies op tot de tegel."
       },
       {
         "type": "note",
-        "text": "Een kostprijs die je toevoegt, geldt alleen voor latere verkopen; verkopen die al zijn gedaan worden niet opnieuw berekend. Deze berekening kwam met v3.1: eerdere versies trokken alleen handmatige kortingen op artikelen af en telden btw in de prijs als winst mee, dus na de update tonen periodes met kortingen of btw in de prijs een lagere winst. Dat is een correctering, geen verloren gegevens."
+        "text": "Een kostprijs die je toevoegt, geldt alleen voor latere verkopen; verkopen die al zijn gedaan worden niet opnieuw berekend. Deze berekening kwam met v3.1: eerdere versies trokken alleen handmatige kortingen op artikelen af en telden btw in de prijs als winst mee, dus na de update tonen periodes met kortingen of btw in de prijs een lagere brutowinst. Dat is een correctie, geen verloren gegevens."
       }
     ],
     "related": [
@@ -1222,16 +1443,22 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Omzet (excl. btw): de omzet na alle kortingen, min btw, geteld op de dag dat de goederen zijn overhandigd.",
+          "Omzet (excl. btw): de omzet na alle kortingen en vóór btw, geteld op de dag dat de goederen zijn overhandigd.",
           "Kostprijs producten: wat de verkochte goederen hebben gekost, op basis van de kostprijzen bij je producten.",
+          "Voorraadverlies: de kostprijs van wat via Pas voorraad aan is afgeboekt als verlopen, beschadigd, weggegeven en dergelijke, plus weggegooide retouren. Het komt na de brutowinst — zie “Hoe leg ik voorraad vast die is verlopen, beschadigd of als sample is weggegeven?” De maand heeft ook een onderdeel Voorraadverlies dat het per reden optelt.",
           "Transactiekosten (geschat): de kosten, geschat op basis van de kostenpercentages van je betaalmethoden.",
           "Ingehouden aanbetalingen: aanbetalingen die je hebt gehouden toen een voorbestelling werd geannuleerd.",
+          "Contante afronding: wat het afronden van contant geld op de gangbare munten boven of onder het totaalbedrag van de bestellingen heeft opgeleverd.",
           "Vaste kosten en Eenmalige kosten: wat je voor die maand hebt vastgelegd — zie “Hoe leg ik huur, salarissen en andere kosten vast?”"
         ]
       },
       {
         "type": "p",
-        "text": "Daarna volgen maximaal drie grafieken: de nettowinst per maand, het aandeel van elke vaste kostenpost en de trend van de vaste kosten. De twee trendgrafieken beslaan hooguit de 12 maanden tot en met de maand die je hebt geopend en verschijnen pas als er minstens twee maanden zijn om te vergelijken, geteld vanaf de maand van je eerste verkoop of kostenpost. De grafiek met aandelen heeft een vaste kostenpost in die maand nodig; zolang die er niet is, staat in dat onderdeel Voeg vaste kostenpost toe. In Cijfers springt de laatste regel van de winstkaart rechtstreeks naar W&V: bij een periode van precies één maand toont hij de nettowinst van die maand, zoals “Nettowinst oktober NT$12.300”; bij elke andere periode staat er Bekijk winst en verlies per maand."
+        "text": "Daarna volgen maximaal drie grafieken: de nettowinst per maand, het aandeel van elke vaste kostenpost en de trend van de vaste kosten. De twee trendgrafieken beslaan hooguit de 12 maanden tot en met de maand die je hebt geopend en verschijnen pas als er minstens twee maanden zijn om te vergelijken, geteld vanaf de maand van je eerste verkoop of kostenpost. De grafiek met aandelen heeft een vaste kostenpost in die maand nodig; zolang die er niet is, staat in dat onderdeel Voeg vaste kostenpost toe."
+      },
+      {
+        "type": "p",
+        "text": "Cijfers en W&V verwijzen naar elkaar. Is de periode in Cijfers deze maand of precies één hele maand, dan krijgt de tweede rij tegels een tegel Nettowinst (gemarkeerd met “Lopend · de kosten van de hele maand worden afgetrokken” zolang de maand loopt); tik erop voor de uitsplitsing van die maand van brutowinst naar nettowinst. Tik bij elke andere periode op Bekijk winst en verlies per maand op de laatste regel van Van omzet naar brutowinst. Andersom opent Bekijk het rapport van oktober onder de titel van een maand in W&V de pagina Cijfers op die maand."
       },
       {
         "type": "note",
@@ -1291,7 +1518,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Voer in wat de winkel werkelijk draagt, zonder btw die je kunt terugvragen. Voorraad die je gaat verkopen loopt via Inkoop, omdat die bij verkoop in de kostprijs wordt meegeteld; waarborgsommen die je uitbetaalt, aflossingen van leningen en geld dat de eigenaar opneemt zijn geen kosten. Wijzigingen worden samen bewaard als je op ✓ tikt, en raakt een wijziging een afgelopen maand, dan krijg je eerst te zien voor welke maanden de nettowinst verandert."
+        "text": "Voer in wat de winkel werkelijk draagt, zonder btw die je kunt terugvragen. Voorraad die je gaat verkopen en de grondstoffen waarvan je die maakt, lopen via Inkoop, omdat ze bij verkoop in de kostprijs worden meegeteld. Benodigdheden met bijgehouden voorraad leg je bij gebruik vast met Pas voorraad aan, met de reden Winkelbenodigdheden, niet als kostenpost. Waarborgsommen die je uitbetaalt, aflossingen van leningen en geld dat de eigenaar opneemt zijn geen kosten. Wijzigingen worden samen bewaard als je op ✓ tikt, en raakt een wijziging een afgelopen maand, dan krijg je eerst te zien voor welke maanden de nettowinst verandert."
       }
     ],
     "related": [
@@ -1386,7 +1613,8 @@ export const articles = [
       "spaarprogramma",
       "klantenkaart",
       "inwisselen",
-      "welkomstbonus"
+      "welkomstbonus",
+      "puntencorrectie"
     ],
     "content": [
       {
@@ -1396,6 +1624,14 @@ export const articles = [
       {
         "type": "p",
         "text": "Koppel de klant aan de verkoop, in de winkelmand of op het afrekenscherm, en de punten worden automatisch gespaard; om in te wisselen voer je het aantal te gebruiken punten in. Maak je een bestelling ongeldig, dan worden de daarmee gespaarde punten teruggedraaid en de ingewisselde punten teruggegeven."
+      },
+      {
+        "type": "p",
+        "text": "Wil je zelf punten toevoegen of aftrekken (bijvoorbeeld voor een gemiste aankoop)? Tik in de klantgegevens op Pas aan op de kaart Punten, kies Voeg toe of Trek af, voer de punten in en geef eventueel een reden (maximaal 100 tekens). Je kunt niet meer punten aftrekken dan de klant heeft. Elke aanpassing blijft in de puntenhistorie staan, met het saldo ervoor en erna, de reden en wie de aanpassing heeft gedaan."
+      },
+      {
+        "type": "note",
+        "text": "Handmatige puntencorrectie is er sinds v3.5. Bij Pro moeten medewerkers van wie de rol goedkeuring vereist voor Handmatige puntencorrectie (standaard de rol Medewerker) bij het bevestigen de pincode van een manager of de eigenaar invoeren."
       }
     ],
     "related": [
@@ -1586,6 +1822,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Tik eerst op Probeer opnieuw; als dat lukt, opent de app zoals gewoonlijk. Blijft het gebeuren, tik dan op Neem contact op met support en laat het ons weten, dan helpen we je je gegevens terug te krijgen. Dit scherm verplaatst of verwijdert nooit bestanden."
+      },
+      {
+        "type": "p",
+        "text": "Bij de eerste start na een update, of na het herstellen van een back-up van een oudere versie, zie je mogelijk eerst “Je gegevens worden bijgewerkt…”. Dan worden je winkelgegevens omgezet naar een nieuwer formaat; hoe meer gegevens je hebt, hoe langer dat duurt. De app opent vanzelf zodra het klaar is. Hij is niet vastgelopen."
       },
       {
         "type": "note",
@@ -1798,7 +2038,7 @@ export const articles = [
       "wie heeft gewijzigd",
       "ongeldig maken",
       "prijswijziging",
-      "voorraadcorrectie",
+      "voorraadaanpassing",
       "verwijderd product",
       "goedkeuringen",
       "controle"
@@ -1806,12 +2046,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gebruik het activiteitenlogboek. Tik op de pagina Personeel rechtsboven op Activiteitenlogboek en voer de pincode van de eigenaar in. Je ziet dan de gevoelige handelingen van de winkel, de nieuwste eerst: ongeldig gemaakte bestellingen, retouren, handmatige voorraadcorrecties, goedkeuringen, wijzigingen van medewerkers en toestemmingen, wijzigingen van de pincode van de eigenaar, wijzigingen van productprijs en kostprijs en verwijderde producten. Gewone afrekeningen staan er niet in."
+        "text": "Gebruik het activiteitenlogboek. Tik op de pagina Personeel rechtsboven op Activiteitenlogboek en voer de pincode van de eigenaar in. Je ziet dan de gevoelige handelingen van de winkel, de nieuwste eerst: ongeldig gemaakte bestellingen, retouren, voorraadaanpassingen en hertellingen, handmatige puntenaanpassingen, goedkeuringen, wijzigingen van medewerkers en toestemmingen, wijzigingen van de pincode van de eigenaar, belastinginstellingen, wijzigingen van productprijs en kostprijs en verwijderde producten. Gewone afrekeningen staan er niet in."
       },
       {
         "type": "list",
         "items": [
-          "Elke regel toont waar het om gaat, wie wat wanneer heeft gedaan en wat het resultaat was, bijvoorbeeld “M prijs $390 → $350”.",
+          "Elke regel toont waar het om gaat, wie wat wanneer heeft gedaan en wat het resultaat was, bijvoorbeeld “M prijs $390 → $350”. De reden die is opgegeven bij een ongeldig gemaakte bestelling, een retour, een voorraadaanpassing of een puntenaanpassing staat op de derde regel.",
           "Filter op medewerker (ook gedeactiveerde), soort handeling en Vandaag / Deze week / Deze maand.",
           "Tik op een regel die naar een bestelling, product of klant verwijst om de details te openen.",
           "De details van een bestelling, een product en de pagina van elke medewerker hebben elk een eigen lijst met alleen de registraties over dat onderdeel.",
@@ -1820,7 +2060,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Bij elk abonnement wordt alles vastgelegd; alleen het bekijken is een Pro-functie. Registraties uit de periode dat Pro was verlopen zie je dus zodra je weer een Pro-abonnement neemt. Het logboek wordt meegenomen in je back-ups in de cloud."
+        "text": "Alle abonnementen leggen activiteiten vast; alleen het bekijken is een Pro-functie. Registraties uit de periode waarin Pro was verlopen, zie je dus zodra je weer een Pro-abonnement neemt. Het logboek wordt meegenomen in je back-ups in de cloud."
       }
     ],
     "related": [

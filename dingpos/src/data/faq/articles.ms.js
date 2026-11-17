@@ -84,18 +84,19 @@ export const articles = [
       "kedai pertama",
       "pembantu persediaan",
       "negara",
-      "mata wang"
+      "mata wang",
+      "cukai"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kali pertama anda membuka DingPOS, pembantu persediaan akan membuka kedai anda dalam dua langkah dan beberapa minit sahaja:"
+        "text": "Kali pertama anda membuka DingPOS, pembantu persediaan akan menyediakan kedai anda dalam dua langkah dan beberapa minit sahaja:"
       },
       {
         "type": "steps",
         "items": [
-          "Pilih negara atau wilayah anda. Bahagian atas senarai menunjukkan wilayah iPad ini dan pasaran yang paling lazim; di bawahnya terdapat semua 175 negara dan wilayah tempat DingPOS ada di App Store, boleh dicari mengikut nama dalam bahasa aplikasi atau dalam bahasa Inggeris. Pilihan anda mengisi mata wang, kadar cukai dan mod cukai secara automatik.",
-          "Pada Kedai anda, masukkan nama kedai, tambah logo jika mahu, dan semak mata wang, kadar cukai serta mod cukai (termasuk cukai / tidak termasuk cukai). Mata wang lalai mengikut negara anda; ketik untuk memilih daripada 130 mata wang."
+          "Pilih negara atau wilayah anda. Bahagian atas senarai menunjukkan negara atau wilayah tempat iPad ini berada, kemudian pasaran yang paling lazim; di bawahnya terdapat semua 175 negara dan wilayah tempat DingPOS ada di App Store, boleh dicari mengikut nama dalam bahasa aplikasi atau dalam bahasa Inggeris. Pilihan anda mengisi mata wang, cukai dan mod cukai secara automatik.",
+          "Pada Kedai anda, masukkan nama kedai, tambah logo jika mahu, dan semak mata wang, cukai serta mod cukai (termasuk cukai / tidak termasuk cukai). Mata wang lalai mengikut negara anda; ketik untuk memilih daripada 130 mata wang. Senarai cukai memaparkan cukai lalai negara anda: namakan semula, ubah kadar, padam satu, atau ketik Tambah Cukai untuk baris lain. Kedai di British Columbia, sebagai contoh, mengubah baris pertama kepada “GST 5” dan menambah baris “PST 7”."
         ]
       },
       {
@@ -104,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Mata wang dan mod cukai tidak boleh diubah selepas persediaan; kadar cukai masih boleh diubah kemudian dalam Tetapan. Di Amerika Syarikat, Kanada, Brazil dan Micronesia, kadar cukai bergantung pada negeri, wilayah atau bandar, jadi ruang kadar cukai bermula kosong dan anda perlu memasukkan kadar yang anda caj (0 dibenarkan) untuk meneruskan. Senarai 175 negara dan pilihan mata wang diperkenalkan dalam v3.2; versi terdahulu hanya menawarkan 15 negara."
+        "text": "Mata wang tidak boleh diubah selepas persediaan; cukai dan mod cukai kedua-duanya boleh diubah kemudian dalam Tetapan → Maklumat Kedai. Di Amerika Syarikat, Kanada, Brazil dan Micronesia, kadar cukai bergantung pada negeri, wilayah atau bandar, jadi ruang kadar bermula kosong dan anda perlu memasukkan kadar yang anda caj untuk meneruskan. Kadar mestilah melebihi 0: kedai yang tidak mengenakan cukai perlu memadam baris itu. Senarai 175 negara dan pilihan mata wang diperkenalkan dalam v3.2; versi terdahulu hanya menawarkan 15 negara."
       }
     ],
     "related": [
@@ -183,11 +184,15 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "DingPOS pada masa ini menyokong iPad yang menjalankan iPadOS 17 atau lebih baharu, dan direka terutamanya untuk orientasi landskap."
+        "text": "DingPOS pada masa ini menyokong iPad yang menjalankan iPadOS 17.4 atau lebih baharu, dan direka terutamanya untuk orientasi landskap."
       },
       {
         "type": "p",
         "text": "iPhone dan Mac belum disokong. Jika anda mahu kami menyokong peranti lain, hubungi kami dan ceritakan kegunaan anda."
+      },
+      {
+        "type": "note",
+        "text": "Setiap iPad yang menjalankan iPadOS 17 boleh dikemas kini kepada 17.4, jadi tiada model yang ketinggalan. iPad yang masih menggunakan iPadOS 17.0–17.3 perlu dikemas kini sistemnya dahulu, dalam Tetapan → Umum → Kemas Kini Perisian, sebelum boleh memasang DingPOS v3.5 atau lebih baharu."
       }
     ],
     "related": [
@@ -197,22 +202,33 @@ export const articles = [
   {
     "slug": "change-currency",
     "category": "getting-started",
-    "question": "Bolehkah saya menukar mata wang atau mod cukai selepas persediaan?",
+    "question": "Bolehkah saya menukar mata wang, kadar cukai atau mod cukai selepas persediaan?",
     "keywords": [
       "mata wang",
       "mod cukai",
       "tukar",
       "dikunci",
-      "kadar cukai"
+      "kadar cukai",
+      "cukai",
+      "termasuk cukai",
+      "tidak termasuk cukai"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kadar cukai boleh diubah bila-bila masa dalam Tetapan — kadar baharu hanya digunakan untuk pesanan akan datang."
+        "text": "Cukai boleh diubah; mata wang tidak boleh. Cukai dan mod cukai kedua-duanya diubah pada kad Cukai dalam Tetapan → Maklumat Kedai, dan perubahan hanya terpakai pada jualan akan datang: pesanan lepas, pemulangan dan laporan mengekalkan jumlah cukai dan mod yang direkodkan."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Cukai: tambah satu, namakan semula, ubah kadarnya atau padamnya — lihat “Bagaimana cukai dikira?”",
+          "Mod cukai (termasuk cukai / tidak termasuk cukai): ketik mod yang lain, dan pengesahan akan menunjukkan contoh dengan cukai pertama anda, seperti “item NT$100 dengan cukai 5%: pelanggan membayar NT$105”. Harga kekal dengan angkanya, dan troli yang masih terbuka dikira semula dalam mod baharu apabila anda kembali ke juruwang. Mod boleh ditukar sejak v3.5; versi terdahulu menguncinya semasa persediaan.",
+          "Selepas penukaran, pemulangan penuh masih memulangkan wang pesanan asal seperti yang direkodkan. Tukar barang (dengan barang gantian) pada pesanan yang dijual dalam mod lain disekat: tukar mod kembali, atau pulangkan barang itu dan jual semula."
+        ]
       },
       {
         "type": "p",
-        "text": "Mata wang dan mod cukai (termasuk cukai / tidak termasuk cukai) dikunci sebaik sahaja persediaan selesai. Semua pesanan lama anda dikira dengannya, jadi menukarnya di pertengahan jalan akan merosakkan laporan anda. Semaklah pada langkah Kedai anda semasa persediaan: mata wang lalai mengikut negara anda, dan anda boleh mengetiknya untuk memilih yang lain."
+        "text": "Mata wang dikunci sebaik sahaja persediaan selesai. Semua pesanan lama direkodkan dengannya, jadi menukar mata wang di pertengahan jalan akan merosakkan laporan anda. Semaklah pada langkah Kedai anda semasa persediaan: mata wang lalai mengikut negara anda, dan anda boleh mengetiknya untuk memilih yang lain."
       },
       {
         "type": "note",
@@ -333,12 +349,16 @@ export const articles = [
       "cukai jualan",
       "termasuk cukai",
       "tidak termasuk cukai",
+      "berbilang cukai",
+      "gst",
+      "pst",
+      "henti kenakan cukai",
       "resit"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Cukai dikira secara automatik berdasarkan mod cukai yang dipilih semasa persediaan. Resit memaparkan jumlah cukai dalam kedua-dua mod:"
+        "text": "Cukai dikira secara automatik berdasarkan cukai dan mod cukai dalam Tetapan → Maklumat Kedai. Terdapat dua mod cukai, dan resit memaparkan jumlah cukai dalam kedua-dua mod:"
       },
       {
         "type": "list",
@@ -349,12 +369,34 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Susunan pengiraan penuh: diskaun item → diskaun troli → cukai. Jumlah dibundarkan separuh ke atas mengikut bilangan tempat perpuluhan mata wang (cth. 0 untuk TWD, 2 untuk USD)."
+        "text": "Sesebuah kedai boleh mengenakan beberapa cukai, seperti GST 5% ditambah PST 7% di British Columbia, atau cukai penggunaan 10% di Jepun bersama kadar dikurangkan 8%:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Pada kad Cukai, ketik Tambah Cukai dan masukkan nama serta kadar. Hidupkan Guna pada Produk Baharu dan produk yang anda tambah kemudian akan mengenakan cukai ini secara lalai. Jika kedai sudah mempunyai cukai lalai, cukai yang baru ditambah bermula dengan suis itu dimatikan; hidupkan jika kedua-duanya perlu dikenakan.",
+          "Setiap produk memilih cukai yang dikenakan di bawah Cukai Dikenakan dalam borang produk — sebuah bento mungkin hanya dikenakan kadar dikurangkan 8%. Apabila dua atau lebih cukai dihidupkan, borang memaparkan kadar gabungan produk itu.",
+          "Ketik sesuatu cukai untuk menukar namanya atau kadarnya, atau pilih Guna pada Semua Produk atau Buang daripada Semua Produk untuk menambah atau membuangnya daripada semua produk sekali gus. Apabila anda memadam cukai, anda akan diberitahu dahulu berapa banyak produk yang tidak lagi dikenakan cukai itu.",
+          "Dalam kedai tidak termasuk cukai, jumlah dalam troli menunjukkan satu baris bagi setiap cukai, dan butiran pesanan menyenaraikan satu baris bagi setiap cukai bersama kadarnya dan jumlah yang dikenakan cukai itu."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Untuk berhenti mengenakan cukai buat sementara, matikan Kenakan cukai di bahagian atas kad Cukai: setiap jualan selepas itu bebas cukai, termasuk barang yang sudah ada dalam troli. Setiap produk mengekalkan cukainya, dan menghidupkan semula suis itu memulihkan cukai seperti sedia ada."
+      },
+      {
+        "type": "p",
+        "text": "Susunan pengiraan penuh: diskaun item dan promosi → diskaun troli → penebusan mata → cukai. Jumlah dibundarkan separuh ke atas mengikut bilangan tempat perpuluhan mata wang (cth. 0 untuk TWD, 2 untuk USD)."
+      },
+      {
+        "type": "note",
+        "text": "Cukai bernama diperkenalkan dalam v3.5. Apabila anda mengemas kini, kadar cukai anda menjadi cukai bernama (contohnya “GST 10%” di Australia) dan setiap produk sedia ada mengenakannya; kedai yang kadarnya 0 tidak dikenakan sebarang cukai. Pesanan dan pemulangan lepas mengekalkan kadar dan jumlah cukai yang direkodkan bersamanya; laporan kini mengira hasil jualan sebelum cukai, termasuk tempoh lepas (lihat “Apakah beza antara Hasil Jualan dan Tunai Diterima?”)."
       }
     ],
     "related": [
       "change-currency",
-      "apply-discounts"
+      "apply-discounts",
+      "revenue-vs-cash"
     ]
   },
   {
@@ -378,7 +420,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kaedah pembayaran ialah label untuk merekod sahaja — DingPOS tidak memproses pembayaran sebenar. Terima bayaran kad atau mudah alih dengan terminal atau app sedia ada anda, kemudian pilih label yang sepadan dalam DingPOS untuk merekodnya. Baki wang bagi bayaran tunai dikira secara automatik."
+        "text": "Kaedah pembayaran ialah label untuk merekod sahaja — DingPOS tidak memproses pembayaran sebenar. Terima bayaran kad atau mudah alih dengan terminal atau app sedia ada anda, kemudian pilih label yang sepadan dalam DingPOS untuk merekodnya. Baki wang bagi bayaran tunai dikira secara automatik, dan di negara yang tidak lagi menggunakan syiling terkecil, tunai juga boleh dibundarkan — lihat “Bolehkah bayaran tunai dibundarkan kepada syiling yang digunakan?”"
       },
       {
         "type": "p",
@@ -386,11 +428,12 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Untuk pelanggan tetap yang mengambil barang sekarang dan membayar kemudian, pilih Jualan akaun: jualan direkodkan sebagai akaun belum terima dan diselesaikan apabila wang diterima. Lihat “Bolehkah pelanggan tetap membeli secara akaun dan membayar kemudian?”"
+        "text": "Untuk pelanggan tetap yang mengambil barang sekarang dan membayar kemudian, pilih Jualan akaun: jualan direkodkan sebagai akaun belum terima dan diselesaikan apabila wang diterima. Lihat “Bolehkah pelanggan tetap beli secara akaun dan bayar kemudian?”"
       }
     ],
     "related": [
       "payment-fees",
+      "cash-rounding",
       "on-account",
       "roadmap-payment-integration"
     ]
@@ -436,6 +479,54 @@ export const articles = [
       "payment-methods",
       "revenue-vs-cash",
       "plans-compare"
+    ]
+  },
+  {
+    "slug": "cash-rounding",
+    "category": "checkout",
+    "since": "3.5",
+    "question": "Bolehkah bayaran tunai dibundarkan kepada syiling yang digunakan?",
+    "keywords": [
+      "pembundaran tunai",
+      "pembundaran",
+      "bundar ke atas",
+      "bundar ke bawah",
+      "syiling",
+      "sen",
+      "0.05",
+      "baki wang",
+      "kanada",
+      "australia",
+      "switzerland"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Boleh. Kanada, Australia, New Zealand, Switzerland, Denmark, Sweden, Norway, Belgium, Finland dan Hungary tidak lagi menggunakan syiling terkecil mereka, jadi DingPOS membundarkan tunai kepada jumlah yang benar-benar boleh diserahkan: pesanan C$12.99 yang dibayar secara tunai diambil sebagai C$13.00, dan baki wang dikira daripada C$13.00. Bayaran kad dan bayaran bukan tunai lain kekal tepat."
+      },
+      {
+        "type": "p",
+        "text": "Kedai baharu yang disediakan di salah sebuah negara ini, dalam mata wang negara itu, akan ditetapkan secara automatik. Kedai lain boleh menghidupkannya melalui kad Pembundaran tunai di bahagian bawah Tetapan → Kaedah Pembayaran: pilih jumlah untuk membundarkan tunai (Tiada pembundaran, atau 0.05, 0.10, 0.50 atau 1.00 dalam mata wang yang ada sen; 5, 10, 50 atau 100 dalam mata wang yang tiada sen, seperti TWD atau JPY), dan bagi kenaikan yang boleh jatuh tepat di tengah, sama ada ia dibundarkan ke atas atau ke bawah. Perubahan hanya terpakai untuk bayaran yang kemudian."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Bayar memaparkan “Tunai diambil C$13.00”. Jika pelanggan meminta membayar jumlah tepat, ketik Ambil jumlah tepat di bawah kaedah pembayaran; ia hanya terpakai untuk satu jualan itu.",
+          "Jumlah pesanan, cukai, hasil jualan, mata dan perbelanjaan ahli tidak berubah; perbezaan pembundaran terletak pada bayaran, dan skrin resit serta butiran pesanan menunjukkannya di bawah jumlah, seperti “Pembundaran tunai +C$0.01”.",
+          "Bayaran balik tunai bagi pemulangan, deposit tunai dan baki pengambilan bagi prapesanan, tambahan bayaran tukar barang, dan jualan akaun yang diselesaikan secara tunai turut dibundarkan; menyelesaikan beberapa sekali gus membundarkan kumpulan itu sekali sahaja.",
+          "Batalkan jualan, deposit prapesanan yang dipulangkan dan pembatalan penyelesaian membayar balik tepat seperti yang direkodkan, tanpa dibundarkan sekali lagi.",
+          "Tunai Diterima pada Statistik menunjukkan berapa banyak daripadanya ialah pembundaran tunai, dan P&L bulanan mendapat baris Pembundaran tunai yang dikira dalam untung bersih. Pembundaran tidak pernah dikira sebagai hasil jualan."
+        ]
+      },
+      {
+        "type": "note",
+        "text": "Switzerland sentiasa membundarkan ke bawah, mengikut peraturan paparan harganya — CHF 12.98 diambil sebagai CHF 12.95, dan tiada pilihan tepat di tengah. Belgium hanya membundarkan jumlah melebihi €0.05. Pembundaran tunai tersedia pada setiap pelan, dan kedai sedia ada mengambil tunai tepat seperti sebelumnya sehingga anda menghidupkannya."
+      }
+    ],
+    "related": [
+      "payment-methods",
+      "revenue-vs-cash",
+      "profit-loss"
     ]
   },
   {
@@ -613,7 +704,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pergi ke Pesanan, cari pesanan itu, buka butirannya, kemudian pilih Batalkan jualan. Sahkan dan selesai."
+        "text": "Pergi ke Pesanan, cari pesanan itu, buka butirannya, dan ketik Batalkan jualan. Helaian “Batalkan jualan ini?” menerima sebab pilihan (sehingga 100 aksara); ketik Batalkan jualan di penjuru kanan atas dan selesai. Sebab itu dipaparkan dalam butiran pesanan dan log aktiviti, dan tidak boleh diedit selepas dihantar."
       },
       {
         "type": "p",
@@ -640,7 +731,9 @@ export const articles = [
       "tukar barang",
       "bayaran balik",
       "pulang sebahagian",
-      "tukar saiz"
+      "tukar saiz",
+      "lupuskan barang",
+      "sebab pemulangan"
     ],
     "content": [
       {
@@ -653,9 +746,15 @@ export const articles = [
           "Pesanan asal tidak pernah diubah. Pemulangan mencipta dokumennya sendiri bertarikh hari ini, dinomborkan dengan awalan R, dan hasil jualan dikurangkan pada hari pemulangan.",
           "Bayaran balik ialah jumlah yang sebenarnya dibayar pelanggan untuk barang itu — diskaun barang, diskaun troli dan penebusan mata sudah diagihkan, jadi ia tidak dibayar balik pada harga senarai. Cukai menggunakan kadar yang dikenakan pada pesanan asal.",
           "Barang gantian dicaj pada harga hari ini, tanpa promosi atau diskaun.",
-          "Stok yang dijejak dipulihkan secara automatik. Mata yang diperoleh daripada pesanan asal ditarik balik, mata yang ditebus dikembalikan, dan barang gantian memperoleh matanya sendiri.",
-          "Satu pesanan boleh dipulangkan dalam beberapa pusingan, tetapi tidak melebihi kuantiti yang asalnya dijual. Had penggunaan promosi tidak dipulihkan oleh pemulangan."
+          "Bagi produk yang stoknya dijejak, setiap baris yang dipulangkan boleh dimasukkan semula ke dalam stok (Stok semula, pilihan lalai) atau dibuang (Lupuskan, sejak v3.5). Stok semula menambah kuantiti stok. Lupuskan membiarkan stok seperti sedia ada dan mengira kos barang itu semasa dijual sebagai kerugian stok bulan itu dalam P&L. Bayaran balik, cukai dan mata adalah sama tanpa mengira pilihan anda.",
+          "Mata yang diperoleh daripada pesanan asal ditarik balik, mata yang ditebus dikembalikan, dan barang gantian memperoleh matanya sendiri.",
+          "Apabila pesanan asal ialah jualan akaun yang belum diselesaikan, tiada wang bertukar tangan: pemulangan ditolak daripada akaun belum terima pelanggan, dan barang gantian yang lebih mahal menambah bezanya pada akaun itu.",
+          "Satu pesanan boleh dipulangkan beberapa kali, tetapi tidak melebihi kuantiti yang asalnya dijual; apabila semuanya sudah dipulangkan, jumlah cukai, diskaun dan mata yang dikembalikan tepat sama dengan pesanan asal. Had penggunaan promosi tidak dipulihkan oleh pemulangan."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Ruangan Sebab bersifat pilihan, sehingga 100 aksara. Sebab itu dipaparkan dalam butiran pesanan dan log aktiviti, dan tidak boleh diedit selepas dihantar."
       },
       {
         "type": "note",
@@ -737,6 +836,7 @@ export const articles = [
         "items": [
           "Hasil jualan dikira pada hari barang diserahkan; Tunai Diterima dan mata kesetiaan menunggu sehingga hari ia diselesaikan.",
           "Pesanan yang belum diselesaikan mempunyai lencana ambar dalam senarai, dan butiran pelanggan menunjukkan jumlah yang kini terhutang.",
+          "Pemulangan pada pesanan yang belum diselesaikan tidak membayar balik wang: jumlahnya ditolak daripada akaun belum terima pelanggan itu.",
           "Pelanggan yang mempunyai pesanan belum diselesaikan tidak boleh dipadam."
         ]
       },
@@ -781,30 +881,30 @@ export const articles = [
   {
     "slug": "product-variants",
     "category": "products",
-    "question": "Bagaimana cara membuat produk dengan varian (saiz, warna)?",
+    "question": "Bagaimana hendak mencipta produk dengan varian seperti saiz dan warna?",
     "keywords": [
       "varian",
       "saiz",
       "warna",
-      "pilihan",
+      "pilihan produk",
       "spesifikasi"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Pada halaman edit produk, ketik Tambah Pilihan di bawah Pilihan Varian untuk menambah satu pilihan produk (cth. “Warna”), kemudian gunakan “+ Nilai” untuk menambah setiap nilai pilihan (cth. Merah, Biru). Jika ada dua pilihan produk atau lebih (cth. Warna × Saiz), DingPOS menjana setiap gabungan untuk anda (Merah/S, Merah/M, Biru/S…)."
+        "text": "Pada halaman edit produk, ketik Tambah Pilihan di bawah Pilihan Varian untuk menambah satu pilihan (cth. “Warna”), kemudian gunakan “+ Nilai” untuk menambah setiap nilainya (cth. Merah, Biru). Jika ada dua pilihan atau lebih (cth. Warna × Saiz), DingPOS menjana setiap gabungan untuk anda (Merah/S, Merah/M, Biru/S…)."
       },
       {
         "type": "p",
-        "text": "Setelah produk mempunyai varian, medan Harga akan dilipat dan setiap gabungan mendapat harga sendiri di bawah Harga & Stok Varian, bersama stoknya sendiri (sejak v3.2; versi terdahulu masih meminta harga produk). Juruwang, senarai produk dan butiran produk menunjukkan julat daripada harga terendah hingga tertinggi, seperti “NT$350–NT$390”, atau satu harga apabila setiap gabungan berharga sama; isihan mengikut harga menggunakan harga gabungan yang terendah. Semasa bayar, mengetik produk akan memaparkan pemilih varian sebelum produk ditambah ke troli."
+        "text": "Setelah produk mempunyai varian, medan Harga disembunyikan dan setiap gabungan mendapat harga sendiri di bawah Harga & Stok Varian, bersama stoknya sendiri (sejak v3.2; versi terdahulu masih meminta harga produk). Juruwang, senarai produk dan butiran produk menunjukkan julat daripada harga terendah hingga tertinggi, seperti “NT$350–NT$390”, atau satu harga sahaja jika semua gabungan berharga sama; isihan mengikut harga menggunakan harga gabungan yang terendah. Semasa bayar, mengetik produk memaparkan pemilih varian sebelum produk ditambah ke troli."
       },
       {
         "type": "p",
-        "text": "Anda tidak perlu memasukkan kos untuk setiap gabungan: medan Kos yang kosong bermaksud Ikut produk, jadi ia menggunakan kos produk dan berubah apabila kos produk berubah. Sebarang nombor menjadikannya Kos sendiri — termasuk 0. Guna kos produk untuk semua mengosongkan setiap kos sendiri sekali gus."
+        "text": "Anda tidak perlu memasukkan kos untuk setiap gabungan: medan Kos yang kosong bermaksud Ikut produk, jadi ia menggunakan kos produk dan berubah apabila kos produk berubah. Jika diisi dengan nombor, ia menjadi Kos sendiri — termasuk 0. Guna kos produk untuk semua mengosongkan setiap kos sendiri sekali gus."
       },
       {
         "type": "note",
-        "text": "Nama pilihan dan nama nilai dihadkan kepada 20 aksara dan tidak boleh kosong: nama pilihan atau nilai yang kosong ditandakan dengan garis merah semasa anda menyimpan, jadi isikannya atau padam nilai yang kosong itu. Produk yang mempunyai varian tidak boleh menggunakan harga terbuka."
+        "text": "Nama pilihan dan nama nilai dihadkan kepada 20 aksara, dan ruang pada kedua-dua hujung nama dibuang apabila anda menyimpan. Nilai yang belum ditaip apa-apa bukan satu gabungan dan dilangkau semasa menyimpan. Penyimpanan terhenti dengan medan ditandakan dengan garis merah apabila nama pilihan kosong, apabila semua nilai sesuatu pilihan kosong, atau apabila anda mengosongkan nilai yang sudah disimpan pada produk; taip semula nilai itu, atau buangkannya dengan ×. Produk yang mempunyai varian tidak boleh menggunakan harga terbuka."
       }
     ],
     "related": [
@@ -921,7 +1021,7 @@ export const articles = [
   {
     "slug": "inventory-tracking",
     "category": "products",
-    "question": "Bagaimana cara menjejak inventori atau stok kedai?",
+    "question": "Bagaimana hendak menjejak inventori atau stok kedai?",
     "keywords": [
       "inventori",
       "stok",
@@ -936,18 +1036,77 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Apabila diaktifkan, jualan dan prapesanan menolak stok secara automatik; pembatalan jualan, pemulangan dan prapesanan yang dibatalkan memulangkannya; menerima pesanan belian menambahnya; dan anda boleh melaraskannya secara manual pada bila-bila masa. Setiap pergerakan direkodkan dalam lejar yang lengkap. Stok rendah diserlahkan dengan amaran warna."
+        "text": "Apabila diaktifkan, jualan dan prapesanan menolak stok secara automatik; pembatalan jualan, pemulangan dan prapesanan yang dibatalkan memulihkannya; dan menerima pesanan belian menambahnya. Setiap pergerakan direkodkan dalam lejar yang lengkap. Stok rendah diserlahkan dengan amaran warna."
+      },
+      {
+        "type": "p",
+        "text": "Ada dua cara untuk mengubah nombor itu secara manual:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Kira semula: edit nombor stok dalam borang produk supaya sama dengan kiraan sebenar anda. Ia tidak pernah masuk ke dalam P&L.",
+          "Laraskan Stok (sejak v3.5): dalam butiran produk, ketik Laraskan Stok, pilih Keluarkan atau Tambah, kuantiti, dan satu sebab seperti Luput atau busuk, Rosak, atau Sampel & hadiah. Kos barang yang dikeluarkan dikira dalam Kerugian stok bulan itu pada P&L — lihat “Bagaimana saya merekodkan stok yang luput, rosak atau diberikan sebagai sampel?”"
+        ]
       }
     ],
     "related": [
+      "stock-adjustment",
       "negative-inventory",
       "purchase-orders"
     ]
   },
   {
+    "slug": "stock-adjustment",
+    "category": "products",
+    "since": "3.5",
+    "question": "Bagaimana saya merekodkan stok yang luput, rosak atau diberikan sebagai sampel?",
+    "keywords": [
+      "laraskan stok",
+      "kerugian stok",
+      "susut nilai",
+      "hapus kira",
+      "pembaziran",
+      "luput",
+      "rosak",
+      "sampel",
+      "bekalan kedai",
+      "kira semula"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Gunakan Laraskan Stok. Untuk produk yang stoknya dijejak, ketik Laraskan Stok dalam butiran produk, pilih Keluarkan atau Tambah, masukkan kuantiti, pilih satu sebab, dan tambah nota jika mahu (sehingga 100 aksara). Helaian itu mengira stok selepas perubahan, dan baris di bawah sebab menyatakan sama ada ia masuk ke dalam P&L."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sebab untuk mengeluarkan: Penggunaan bahan, Luput atau busuk, Rosak, Hilang atau dicuri, Kegunaan kakitangan, Sampel & hadiah, Bekalan kedai dan Lain-lain. Sebab untuk menambah: Dibuat sendiri, Ditemui dan Lain-lain. Lain-lain memerlukan nota.",
+          "Kecuali Penggunaan bahan, apa yang anda keluarkan dikira pada kosnya ketika itu dalam Kerugian stok bulan itu pada P&L. Ia datang selepas untung kasar dan mengurangkan untung bersih; untung kasar dan margin tidak berubah. Penggunaan bahan hanya menolak stok, kerana kos sesuatu bahan sudah termasuk dalam kos produk yang dibuat daripadanya.",
+          "Ditemui menolak jumlah yang sama daripada Kerugian stok. Dibuat sendiri dan Lain-lain di sebelah Tambah hanya menambah stok dan tidak pernah masuk ke dalam P&L.",
+          "Pelarasan dikira pada hari anda merekodkannya. Ia tidak boleh dibuat dengan tarikh lampau, diedit atau dipadam; untuk membetulkan kesilapan, rekodkan Ditemui atau pelarasan ke arah yang bertentangan.",
+          "Produk yang tiada kos masih boleh dilaraskan, tetapi P&L tidak dapat meletakkan amaun padanya, dan bulan itu mencatat berapa banyak rekod yang tiada kos."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Mengedit nombor stok dalam borang produk ialah Kira semula: ia disamakan dengan kiraan sebenar anda dan tidak pernah masuk ke dalam P&L. Senarai pergerakan stok pada Statistik menapis pelarasan stok dan kira semula secara berasingan, dan log aktiviti menunjukkan sebab dan nota bagi setiap pelarasan."
+      },
+      {
+        "type": "note",
+        "text": "Laraskan Stok memerlukan pelan Standard atau lebih tinggi. Pada Pro, kakitangan yang peranannya memerlukan kelulusan untuk Pelarasan stok manual akan diminta memasukkan PIN pengurus apabila mereka mengesahkan."
+      }
+    ],
+    "related": [
+      "inventory-tracking",
+      "profit-loss",
+      "not-for-sale-products"
+    ]
+  },
+  {
     "slug": "negative-inventory",
     "category": "products",
-    "question": "Kenapa stok boleh jadi negatif?",
+    "question": "Kenapa stok boleh menjadi negatif?",
     "keywords": [
       "negatif",
       "stok",
@@ -962,7 +1121,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Stok negatif biasanya bermakna tambah stok tidak direkodkan, atau barang prapesanan belum tiba (prapesanan menolak stok apabila dibuat). Rekodkan tambah stok dengan menerima pesanan belian dan angkanya pulih dengan sendiri; betulkan perbezaan semakan stok dengan pelarasan manual, yang disimpan dalam lejar pergerakan."
+        "text": "Stok negatif biasanya bermakna tambahan stok tidak direkodkan, atau barang prapesanan belum tiba (prapesanan menolak stok apabila dibuat). Rekodkan tambahan stok dengan menerima pesanan belian dan angkanya pulih dengan sendirinya. Betulkan perbezaan semakan stok dengan mengedit nombor stok dalam borang produk (kira semula); untuk barang yang rosak, luput atau diberikan percuma, rekodkan sebabnya dengan Laraskan Stok. Kedua-duanya disimpan dalam lejar pergerakan."
       },
       {
         "type": "note",
@@ -979,7 +1138,7 @@ export const articles = [
     "slug": "purchase-orders",
     "category": "products",
     "since": "2.0",
-    "question": "Bagaimana cara merekod pembelian dan pembekal?",
+    "question": "Bagaimana saya merekodkan pembelian dan pembekal?",
     "keywords": [
       "pesanan belian",
       "pembelian",
@@ -991,19 +1150,23 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pembelian dalam bar sisi menguruskan pembekal dan pesanan belian. Seorang pembekal menyimpan nama, orang untuk dihubungi, telefon, alamat, dan terma bayaran lalai (bayar sekarang atau bulanan)."
+        "text": "Pembelian dalam bar sisi menguruskan pembekal dan pesanan belian. Seorang pembekal menyimpan nama, orang untuk dihubungi, telefon, alamat, dan terma bayaran lalai (Bayar Semasa Terima atau Kredit Bulanan)."
       },
       {
         "type": "steps",
         "items": [
-          "Ketik Pembelian Baharu, pilih pembekal, dan tambah produk, kuantiti dan kos seunit (diisi awal dengan kos semasa setiap produk). Yuran penghantaran juga boleh ditambah. Jika pembekal belum disediakan, ketik Tambah Pembekal di bahagian kiri atas senarai pembekal — selepas pembekal baharu ditambah, anda akan kembali ke pesanan belian.",
-          "Draf tidak pernah menjejaskan stok atau akaun belum bayar — edit atau padamnya dengan bebas.",
+          "Ketik Pembelian Baharu, pilih pembekal, dan tambah produk, kuantiti dan kos seunit (diisi awal dengan kos semasa setiap produk). Yuran penghantaran juga boleh ditambah. Jika pembekal belum disediakan, ketik Tambah Pembekal di bahagian kiri atas senarai pembekal — pembekal baharu itu terus kembali ke pesanan belian.",
+          "Draf tidak pernah menjejaskan stok atau akaun belum bayar — edit atau padamkannya dengan bebas.",
           "Apabila barang tiba, ketik Terima stok: stok yang dijejak bertambah, dan pesanan belian mendapat nombornya lalu dikunci. Secara lalai, penerimaan juga mengemas kini kos setiap produk kepada kos seunit ini; matikan Segerakkan kos produk pada pesanan belian untuk mengekalkan kos tanpa perubahan."
         ]
       },
       {
         "type": "p",
-        "text": "Terma bayaran menentukan apa yang berlaku seterusnya: pesanan bayar-sekarang ditandakan telah dibayar, manakala pesanan bulanan kekal belum dibayar di bawah Belum Dibayar, tempat anda boleh menyelesaikannya mengikut pembekal — satu pesanan, bulan ini, atau semuanya."
+        "text": "Terma bayaran menentukan apa yang berlaku seterusnya: pesanan Bayar Semasa Terima ditandakan sebagai dibayar, manakala pesanan Kredit Bulanan kekal belum dibayar di bawah Belum Dibayar, tempat anda boleh menyelesaikannya mengikut pembekal — satu pesanan, bulan ini, atau semuanya."
+      },
+      {
+        "type": "p",
+        "text": "Bahan yang tidak anda jual, seperti tepung atau pembungkusan, boleh dibeli dengan cara yang sama: sediakannya sebagai produk yang tidak dijual — lihat “Bolehkah saya menambah bahan seperti tepung atau pembungkusan sebagai produk?”"
       },
       {
         "type": "note",
@@ -1012,8 +1175,53 @@ export const articles = [
     ],
     "related": [
       "inventory-tracking",
+      "not-for-sale-products",
       "negative-inventory",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "not-for-sale-products",
+    "category": "products",
+    "since": "3.5",
+    "question": "Bolehkah saya menambah bahan seperti tepung atau pembungkusan sebagai produk?",
+    "keywords": [
+      "tidak dijual",
+      "bahan",
+      "tepung",
+      "pembungkusan",
+      "bekalan",
+      "jual di juruwang",
+      "pembelian",
+      "kos"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Boleh. Dalam borang produk, matikan Jual di Juruwang di bawah foto (ia hidup secara lalai) dan produk itu menjadi tidak dijual: ia tidak memerlukan harga, mengekalkan kos, kod bar, stok dan variannya, dan senarai produk memaparkan “Tidak dijual” di tempat harga biasanya berada."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Produk yang tidak dijual tidak pernah muncul dalam grid juruwang, kategori, carian atau imbasan kod bar, dan tidak boleh menjadi hadiah, tambahan, sasaran promosi atau barang gantian dalam tukar barang.",
+          "Pesanan belian, penerimaan stok, Segerakkan kos produk dan bil belum bayar berfungsi sama seperti produk lain, jadi kos belian dan stok sesuatu bahan boleh direkodkan melalui Pembelian.",
+          "Menjual produk lain tidak menolak stoknya. Apabila anda menggunakan sebahagiannya, rekodkan pengeluaran dengan Laraskan Stok dalam butiran produk: Penggunaan bahan untuk yang dimasukkan ke dalam produk, Bekalan kedai untuk barang seperti beg kertas atau bahan pembersih.",
+          "Anda boleh menukarnya kembali pada bila-bila masa, dan harga serta cukainya masih ada. Pesanan dan laporan yang sudah dibuat tidak terjejas."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Cara kosnya masuk ke dalam P&L: pembelian tidak dikira di sana secara langsung. Untuk produk yang dibuat daripadanya, masukkan kos itu pada produk tersebut, dan ia ditolak apabila produk itu dijual. Bekalan yang tiada dalam kos mana-mana produk direkodkan sebagai Bekalan kedai apabila digunakan jika stoknya dijejak, atau sebagai perbelanjaan satu kali jika tidak. Jangan rekodkan wang yang sama dengan kedua-dua cara, atau ia dikira dua kali."
+      },
+      {
+        "type": "note",
+        "text": "Produk yang tidak dijual tersedia pada setiap pelan; pembelian, penjejakan stok dan Laraskan Stok memerlukan pelan Standard atau lebih tinggi."
+      }
+    ],
+    "related": [
+      "purchase-orders",
+      "stock-adjustment",
+      "record-expenses"
     ]
   },
   {
@@ -1024,16 +1232,15 @@ export const articles = [
     "keywords": [
       "hasil jualan",
       "tunai diterima",
-      "hasil jualan",
+      "pendapatan",
       "padanan akaun",
-      "penyelesaian",
       "deposit",
       "jualan akaun"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Hasil Jualan dikira pada hari barang diserahkan; Tunai Diterima dikira pada hari wang masuk. Bagi pesanan yang dibayar di kaunter, kedua-duanya berlaku pada hari yang sama dan angkanya sama. Angka berbeza apabila:"
+        "text": "Hasil Jualan dikira pada hari barang diserahkan, selepas semua diskaun dan sebelum cukai; Tunai Diterima dikira pada hari wang masuk, dan ialah wang yang benar-benar anda terima, termasuk cukai. Jadi dalam kedai yang mengenakan cukai, Tunai Diterima lebih tinggi daripada Hasil Jualan sebanyak cukai itu, malah bagi pesanan yang dibayar di kaunter. Selain itu, kedua-duanya berbeza apabila:"
       },
       {
         "type": "list",
@@ -1041,12 +1248,17 @@ export const articles = [
           "Jualan akaun: barang keluar hari ini dan dikira dalam Hasil Jualan hari ini; wang dikira dalam Tunai Diterima pada hari ia diselesaikan.",
           "Prapesanan: deposit dikira dalam Tunai Diterima apabila dibayar; hasil jualan diiktiraf sepenuhnya pada tarikh pengambilan.",
           "Deposit hangus: apabila pelanggan membatalkan prapesanan dan anda menyimpan deposit, deposit itu sudah dikira dalam Tunai Diterima semasa dibayar. Statistik memaparkannya secara berasingan sebagai deposit hangus, dan ia tidak pernah dikira sebagai hasil jualan.",
-          "Membatalkan pesanan terdahulu: wang yang dikembalikan dikira dalam Tunai Diterima pada hari pembatalan, jadi Tunai Diterima hari itu boleh negatif, manakala Dibatalkan mengira pesanan itu pada tarikh jualannya. Ikon ⓘ pada jubin Tunai Diterima dan Dibatalkan menerangkan perkara yang sama."
+          "Batalkan jualan terdahulu: wang yang dipulangkan dikira dalam Tunai Diterima pada hari jualan itu dibatalkan, jadi Tunai Diterima pada hari itu boleh negatif, manakala Dibatalkan mengira jualan itu pada tarikh jualannya.",
+          "Pembundaran tunai: lebihan atau kekurangan yang timbul apabila tunai dibundarkan kepada syiling yang digunakan, berbanding jumlah pesanan, dikira dalam Tunai Diterima dan tidak pernah dalam Hasil Jualan."
         ]
       },
       {
         "type": "p",
-        "text": "Untuk menyemak baki, padankan Tunai Diterima dengan laci wang dan terminal kad anda; untuk melihat jumlah sebenar yang anda jual dalam sesuatu tempoh, lihat Hasil Jualan. Pemulangan mengurangkan hasil jualan pada hari pemulangan dibuat."
+        "text": "Untuk menyemak baki, padankan Tunai Diterima dengan laci wang dan terminal kad anda; untuk melihat jumlah sebenar yang anda jual dalam sesuatu tempoh, lihat Hasil Jualan. Pemulangan mengurangkan hasil jualan pada hari pemulangan dibuat. Ikon ⓘ pada jubin Hasil Jualan, Tunai Diterima dan Dibatalkan menerangkan perkara yang sama, dan cukai itu sendiri disenaraikan di bawah Daripada hasil jualan kepada untung kasar, yang dibuka daripada jubin untung kasar."
+      },
+      {
+        "type": "note",
+        "text": "Hasil Jualan sebelum cukai diperkenalkan dalam v3.5, dan tempoh yang lepas dikira semula dengan cara yang sama, jadi kedai yang mengenakan cukai melihat hasil jualan yang lebih rendah berbanding sebelum kemas kini. Itu pembetulan. Versi terdahulu memasukkan cukai dalam hasil jualan, dan kedai yang harganya belum termasuk cukai malah mengira cukai jualan yang dikutip sebagai hasil jualan."
       }
     ],
     "related": [
@@ -1076,15 +1288,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Untuk satu hari, carta trend bertukar menjadi carta bar mengikut jam; tempoh yang lebih panjang menggunakan hari, minggu, bulan atau tahun bagi setiap bar bergantung pada panjangnya."
+        "text": "Di bawah bar tempoh terdapat dua baris jubin angka (Hasil Jualan, Tunai Diterima, Untung kasar, Pesanan, Purata Pesanan; Jumlah Diskaun, Untung bersih, Produk Tanpa Kos, Pelanggan Dilayan), kemudian carta trend. Menu di bahagian kanan atas carta trend menukarnya antara hasil jualan, pesanan, purata pesanan dan pelanggan dilayan, dan di sebelahnya carta Kos dan untung kasar menyusun kos produk dan untung kasar setiap tempoh dalam satu bar. Satu hari dipaparkan mengikut jam; tempoh yang lebih panjang menggunakan hari, minggu, bulan atau tahun bergantung pada panjangnya."
       },
       {
         "type": "p",
-        "text": "Sejak v3.4, tekan dan tahan carta Trend Hasil Jualan atau Trend Untung Kasar untuk membacanya tempoh demi tempoh: sebuah kad menunjukkan tarikh serta hasil jualan atau untung tempoh itu, dan pada Trend Hasil Jualan dengan Perbandingan jualan dihidupkan, turut hasil jualan tempoh perbandingan dan perbezaannya. Seret ke kiri atau kanan untuk bergerak; leret ke atas atau ke bawah pada carta dan halaman bergulir seperti biasa."
+        "text": "Tekan dan tahan carta trend atau carta Kos dan untung kasar untuk membacanya tempoh demi tempoh; dengan Perbandingan jualan dihidupkan, kad pada carta trend menunjukkan angka tempoh ini dan angka tempoh perbandingan secara bersebelahan. Seret ke kiri atau kanan untuk bergerak; leret ke atas atau ke bawah pada carta dan halaman bergulir seperti biasa."
       },
       {
         "type": "p",
-        "text": "Kad Produk menyenaraikan 5 produk teratas. Ketik kad itu atau Lihat Semua untuk menyenaraikan setiap produk yang dijual dalam tempoh tersebut, disusun mengikut kuantiti selepas pemulangan."
+        "text": "Kad Produk menyenaraikan 5 teratas. Ketik kad itu atau Lihat semua untuk menyenaraikan setiap produk yang dijual dalam tempoh tersebut, disusun mengikut kuantiti selepas pemulangan; produk yang mempunyai varian mendapat satu baris bagi setiap varian."
       },
       {
         "type": "p",
@@ -1114,6 +1326,7 @@ export const articles = [
       "waktu sibuk",
       "produk jualan perlahan",
       "pergerakan produk",
+      "bahagian mengikut kategori",
       "nilai stok",
       "kadar belian berulang",
       "mata"
@@ -1126,12 +1339,13 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Perbandingan jualan: di sebelah kanan bar tempoh, bandingkan dengan tempoh yang sama tahun lepas atau dengan tempoh sebelumnya (satu hari dengan hari yang sama minggu lepas, minggu ini dengan minggu lepas, bulan ini dengan bulan lepas, tahun ini dengan tahun lepas, julat tersuai dengan bilangan hari yang sama sebelumnya). Jubin Tunai Diterima menunjukkan perbezaan dan kadar pertumbuhan, dan carta hasil jualan menambah garisan yang lebih pudar untuk tempoh perbandingan. Semasa sesuatu tempoh masih berjalan, tempoh perbandingan dipotong pada saat yang sama.",
-          "Hari dalam minggu × jam: tukar pengepala Jualan dari semasa ke semasa kepada Hari dalam minggu × jam untuk peta haba tujuh hari, 24 jam — semakin gelap sesuatu sel, semakin banyak anda jual. Tukar antara hasil jualan dan pesanan; apabila perbandingan dihidupkan, lihat jam mana yang meningkat dan mana yang menurun.",
-          "Produk Jualan Perlahan: tukar pengepala kad kedudukan kepada Produk Jualan Perlahan untuk menyenaraikan produk dari jualan paling sedikit hingga paling banyak, bersama stok semasa dan tarikh terakhir setiap satu dijual. Produk yang tidak pernah terjual ditandakan Tiada jualan. Secara lalai, hanya produk yang ada stok dipaparkan.",
-          "Pergerakan (sejak v3.4): tukar pengepala kad kedudukan kepada Pergerakan untuk 3 produk yang hasil jualannya naik paling banyak dan 3 yang turun paling banyak berbanding tempoh perbandingan, masing-masing bersama hasil jualan kedua-dua tempoh dan perbezaannya. Pilih tempoh di bawah Perbandingan jualan dahulu; dengan Tiada, atau pada Sepanjang Masa, kad itu akan memberitahu anda. Ketik kad atau Lihat Semua untuk senarai penuh Pergerakan produk, dipisahkan kepada Meningkat dan Menurun.",
-          "Kadar belian berulang: baris terakhir pada jubin pelanggan ialah peratusan ahli yang membeli dalam tempoh itu dan telah membeli dua kali atau lebih secara keseluruhan.",
-          "Sekarang: nilai inventori (stok semasa × kos semasa), setiap pergerakan stok dalam tempoh yang dipilih, dan mata yang dipegang pelanggan tetapi belum ditebus, bersama jumlah maksimum yang boleh ditolak. Ini ialah baki semasa; tempoh tidak mengubahnya."
+          "Perbandingan jualan: di sebelah kanan bar tempoh, bandingkan dengan tempoh yang sama tahun lepas atau dengan tempoh sebelumnya (satu hari dengan hari yang sama minggu lepas, minggu ini dengan minggu lepas, bulan ini dengan bulan lepas, tahun ini dengan tahun lepas, julat tersuai dengan bilangan hari yang sama sebelumnya). Jubin Hasil Jualan, Tunai Diterima, Untung kasar, Pesanan, Purata Pesanan, Jumlah Diskaun dan Pelanggan Dilayan masing-masing menunjukkan perubahan dan angka tempoh perbandingan, seperti “▼ 3% berbanding bulan lepas”; perubahan pada Jumlah Diskaun sentiasa kelabu, kerana diskaun yang lebih banyak bukan baik atau buruk dengan sendirinya. Ketik mana-mana baris perbandingan untuk membuka Perbandingan tempoh, yang menyenaraikan angka kedua-dua tempoh. Carta trend menambah garisan yang lebih pudar untuk tempoh perbandingan. Semasa sesuatu tempoh masih berjalan, tempoh perbandingan dipotong pada saat yang sama.",
+          "Hari dalam minggu × jam: tukar pengepala carta trend daripada Trend kepada Hari dalam minggu × jam untuk peta haba tujuh hari, 24 jam — semakin gelap sesuatu sel, semakin banyak anda jual. Tukar antara hasil jualan dan pesanan; apabila perbandingan dihidupkan, lihat jam mana yang meningkat dan mana yang menurun.",
+          "Produk Jualan Perlahan: tukar pengepala kad kedudukan kepada Produk Jualan Perlahan untuk menyenaraikan produk dari jualan paling sedikit hingga paling banyak, bersama stok semasa dan tarikh terakhir setiap satu dijual. Produk yang tidak pernah terjual ditandakan Tidak pernah dijual, dan produk yang mempunyai varian mendapat satu baris bagi setiap varian. Secara lalai, hanya produk yang ada stok dipaparkan.",
+          "Pergerakan (sejak v3.4): tukar pengepala kad kedudukan kepada Pergerakan untuk 3 produk yang hasil jualannya naik paling banyak dan 3 yang turun paling banyak berbanding tempoh perbandingan, masing-masing bersama hasil jualan kedua-dua tempoh dan perbezaannya; setiap varian dibandingkan dengan dirinya sendiri. Pilih tempoh di bawah Perbandingan jualan dahulu; dengan Tiada, atau pada Sepanjang Masa, kad itu akan memberitahu anda. Ketik kad atau Lihat semua untuk senarai penuh Pergerakan produk, dipisahkan kepada Meningkat dan Menurun.",
+          "Kadar belian berulang: baris terakhir pada jubin pelanggan ialah peratusan ahli yang membeli dalam tempoh itu dan telah membeli dua kali atau lebih secara keseluruhan. Apabila perbandingan dihidupkan, satu baris di bawahnya memberikan perubahan dalam mata peratus dan kadar tempoh perbandingan.",
+          "Bahagian mengikut kategori: hasil jualan dan bahagian setiap kategori, mengikut kategori semasa setiap produk, dari yang terbesar. Produk tanpa kategori diletakkan di bawah Tiada kategori, dan jumlah semua baris tepat sama dengan Hasil Jualan.",
+          "Sekarang: nilai stok (stok semasa × kos semasa), setiap pergerakan stok dalam tempoh yang dipilih, dan mata yang dipegang pelanggan tetapi belum ditebus, bersama jumlah maksimum yang boleh ditolak. Ini ialah baki semasa; tempoh tidak mengubahnya."
         ]
       },
       {
@@ -1156,33 +1370,38 @@ export const articles = [
   {
     "slug": "profit-not-tracked",
     "category": "reports",
-    "question": "Bagaimana untung dilaporkan jika saya tidak memasukkan kos?",
+    "question": "Bagaimana untung kasar dilaporkan jika saya tidak memasukkan kos?",
     "keywords": [
       "kos",
       "untung",
-      "margin",
       "untung kasar",
+      "margin",
+      "margin kasar",
       "laporan",
-      "untung tidak dijejak",
+      "untung kasar tidak dijejak",
       "kos tiada",
-      "untung dapat dijejak"
+      "produk tanpa kos"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kos ialah medan pilihan. Produk tanpa kos dikecualikan daripada untung, manakala hasil jualannya tetap dikira sepenuhnya. Kad Untung dapat dijejak pada Statistik menunjukkan bilangan produk yang dijual dalam tempoh itu tanpa kos; kos 0 dikira sebagai kos, jadi produk tersebut tidak disenaraikan."
+        "text": "Kos ialah medan pilihan. Produk tanpa kos dikecualikan daripada untung kasar, manakala hasil jualannya tetap dikira sepenuhnya. Jubin Produk Tanpa Kos pada Statistik menunjukkan bilangan produk yang dijual atau dipulangkan dalam tempoh itu yang tiada kos, seperti “12 produk”. Kos 0 dikira sebagai kos, jadi produk tersebut tidak disenaraikan; apabila setiap produk sudah mempunyai kos, jubin itu berbunyi “0 produk · data kos lengkap”."
       },
       {
         "type": "p",
-        "text": "Ketik kad itu atau Lihat produk untuk membuka Produk Tanpa Kos, disusun mengikut hasil jualan yang tidak dimasukkan dalam untung. Ketik satu baris untuk membuka produk, tambah kosnya daripada Edit, dan baris itu ditandakan Kos ditambah apabila anda kembali. Produk yang mempunyai varian ditandakan Kos ditambah hanya apabila setiap varian yang dijual tanpa kos sudah mempunyai kos — sama ada kos variannya sendiri atau kos produk yang diwarisinya."
+        "text": "Ketik jubin itu atau Lihat produk untuk membuka Produk Tanpa Kos, disusun mengikut hasil jualan yang tidak dimasukkan dalam untung kasar. Ketik satu baris untuk membuka produk, tambah kosnya daripada Edit, dan baris itu ditandakan Kos ditambah apabila anda kembali. Produk yang mempunyai varian ditandakan Kos ditambah hanya apabila setiap varian yang dijual tanpa kos sudah mempunyai kos — sama ada kos variannya sendiri atau kos produk yang diwarisinya."
       },
       {
         "type": "p",
-        "text": "Untung ialah hasil jualan selepas setiap diskaun (diskaun item dan troli, promosi, penebusan mata) dan sebelum cukai, ditolak kos — sebab itu medan tersebut berbunyi Kos tanpa cukai (pilihan): masukkan jumlah yang anda bayar sebelum cukai. Margin ialah untung ÷ hasil jualan sebelum cukai bagi produk yang berkos, jadi produk tanpa kos tidak menurunkannya. Pemulangan menarik balik, pada hari pemulangan, untung yang pernah dibawa oleh item tersebut."
+        "text": "Untung kasar ialah hasil jualan selepas setiap diskaun (diskaun item dan troli, promosi, penebusan mata) dan sebelum cukai, ditolak kos — sebab itu, dalam kedai yang mengenakan cukai, medan tersebut berbunyi Kos tanpa cukai (pilihan): masukkan jumlah yang anda bayar sebelum cukai. Margin ialah untung kasar ÷ hasil jualan produk yang berkos, jadi produk tanpa kos tidak menurunkannya. Pemulangan menarik balik, pada hari pemulangan, untung kasar yang pernah dibawa oleh item tersebut."
+      },
+      {
+        "type": "p",
+        "text": "Ketik jubin untung kasar untuk membuka Daripada hasil jualan kepada untung kasar, yang menolak baris demi baris: hasil jualan (termasuk cukai), cukai, hasil jualan (tanpa cukai), hasil jualan tanpa kos, kos produk, dan akhirnya untung kasar serta margin. Jumlah semua baris tepat sama dengan jubin itu."
       },
       {
         "type": "note",
-        "text": "Kos yang anda tambah hanya menjejaskan jualan kemudian; jualan yang sudah dibuat tidak dikira semula. Pengiraan ini diperkenalkan dalam v3.1: versi terdahulu hanya menolak diskaun item manual dan mengira cukai termasuk sebagai untung, jadi selepas mengemas kini, tempoh yang mempunyai diskaun atau cukai termasuk menunjukkan untung yang lebih rendah. Itu pembetulan, bukan data yang hilang."
+        "text": "Kos yang anda tambah hanya menjejaskan jualan kemudian; jualan yang sudah dibuat tidak dikira semula. Pengiraan ini diperkenalkan dalam v3.1: versi terdahulu hanya menolak diskaun item manual dan mengira cukai termasuk sebagai untung, jadi selepas mengemas kini, tempoh yang mempunyai diskaun atau cukai termasuk menunjukkan untung kasar yang lebih rendah. Itu pembetulan, bukan data yang hilang."
       }
     ],
     "related": [
@@ -1217,16 +1436,22 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Hasil jualan (tanpa cukai): hasil jualan selepas setiap diskaun, tolak cukai, dikira pada hari barang diserahkan.",
+          "Hasil jualan (tanpa cukai): hasil jualan selepas setiap diskaun dan sebelum cukai, dikira pada hari barang diserahkan.",
           "Kos produk: kos barang yang terjual, daripada kos pada produk anda.",
+          "Kerugian stok: kos barang yang dikeluarkan oleh Laraskan Stok kerana luput, rosak, diberikan percuma dan seumpamanya, serta pemulangan yang dilupuskan. Ia datang selepas untung kasar — lihat “Bagaimana saya merekodkan stok yang luput, rosak atau diberikan sebagai sampel?” Bulan itu juga mempunyai bahagian Kerugian Stok yang menjumlahkannya mengikut sebab.",
           "Caj pemprosesan (anggaran): caj yang dianggarkan daripada kadar kaedah pembayaran anda.",
           "Deposit hangus: deposit yang anda simpan apabila prapesanan dibatalkan.",
+          "Pembundaran tunai: lebihan atau kekurangan yang timbul apabila tunai dibundarkan kepada syiling yang digunakan, berbanding jumlah pesanan.",
           "Perbelanjaan tetap dan Perbelanjaan satu kali: apa yang anda rekodkan untuk bulan itu — lihat “Bagaimana saya merekodkan sewa, gaji dan perbelanjaan lain?”"
         ]
       },
       {
         "type": "p",
-        "text": "Sehingga tiga carta menyusul: untung bersih bulan demi bulan, bahagian setiap perbelanjaan tetap, dan trend perbelanjaan tetap. Kedua-dua carta trend meliputi paling banyak 12 bulan sehingga bulan yang anda buka, dan hanya muncul apabila terdapat sekurang-kurangnya dua bulan untuk dibandingkan, dikira dari bulan jualan atau perbelanjaan pertama anda. Carta bahagian memerlukan perbelanjaan tetap pada bulan itu; selagi belum ada, bahagian itu menunjukkan Tambah perbelanjaan tetap. Pada Statistik, baris terakhir kad untung terus melompat ke P&L: untuk tempoh yang tepat satu bulan, ia menunjukkan untung bersih bulan itu, seperti “Untung bersih Oktober NT$12,300”; untuk tempoh lain, ia berbunyi Lihat untung rugi bulanan."
+        "text": "Sehingga tiga carta menyusul: untung bersih bulan demi bulan, bahagian setiap perbelanjaan tetap, dan trend perbelanjaan tetap. Kedua-dua carta trend meliputi paling banyak 12 bulan sehingga bulan yang anda buka, dan hanya muncul apabila terdapat sekurang-kurangnya dua bulan untuk dibandingkan, dikira dari bulan jualan atau perbelanjaan pertama anda. Carta bahagian memerlukan perbelanjaan tetap pada bulan itu; selagi belum ada, bahagian itu menunjukkan Tambah perbelanjaan tetap."
+      },
+      {
+        "type": "p",
+        "text": "Statistik dan P&L saling berpaut. Apabila tempoh pada Statistik ialah bulan ini atau tepat satu bulan penuh, baris kedua jubin menambah jubin Untung bersih (ditandakan “Sedang berjalan · perbelanjaan sebulan penuh ditolak” semasa bulan itu berjalan); ketik jubin itu untuk pecahan bulan itu daripada untung kasar kepada untung bersih. Untuk tempoh lain, ketik Lihat untung rugi bulanan pada baris terakhir Daripada hasil jualan kepada untung kasar. Sebaliknya, Lihat laporan Oktober di bawah tajuk sesuatu bulan dalam P&L membuka Statistik pada bulan itu."
       },
       {
         "type": "note",
@@ -1285,7 +1510,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Masukkan jumlah yang benar-benar ditanggung kedai, tanpa cukai yang boleh dituntut semula. Stok yang akan anda jual dimasukkan melalui Pembelian, kerana ia dikira dalam kos produk apabila dijual; deposit keselamatan, prinsipal pinjaman dan wang yang diambil pemilik bukan perbelanjaan. Perubahan disimpan sekali gus apabila anda mengetik ✓, dan perubahan yang menjangkau bulan yang telah selesai akan memberitahu anda dahulu untung bersih bulan mana yang akan berubah."
+        "text": "Masukkan jumlah yang benar-benar ditanggung kedai, tanpa cukai yang boleh dituntut semula. Stok yang akan anda jual dan bahan yang anda gunakan untuk membuatnya dimasukkan melalui Pembelian, kerana ia dikira dalam kos produk apabila dijual. Bekalan yang stoknya dijejak direkodkan dengan Laraskan Stok apabila digunakan, dengan sebab Bekalan kedai, bukan sebagai perbelanjaan. Deposit keselamatan, prinsipal pinjaman dan wang yang diambil pemilik bukan perbelanjaan. Perubahan disimpan sekali gus apabila anda mengetik ✓, dan perubahan yang menjangkau bulan yang telah selesai akan memberitahu anda dahulu untung bersih bulan mana yang akan berubah."
       }
     ],
     "related": [
@@ -1389,7 +1614,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Lampirkan ahli pada jualan, dalam troli atau pada skrin bayar, dan mata terkumpul secara automatik; untuk menebus, masukkan mata yang ingin digunakan. Membatalkan jualan akan menarik balik mata yang diperoleh daripadanya dan memulangkan mata yang telah ditebus."
+        "text": "Lampirkan pelanggan pada jualan, sama ada dalam troli atau pada skrin bayar, dan mata akan terkumpul secara automatik; untuk menebus mata, masukkan jumlah mata yang ingin digunakan. Membatalkan jualan akan menarik balik mata yang diperoleh daripada jualan itu dan memulangkan mata yang telah ditebus."
+      },
+      {
+        "type": "p",
+        "text": "Untuk menambah atau menolak mata secara manual (contohnya bagi pembelian yang terlepas), ketik Laras pada kad Mata dalam butiran pelanggan, pilih Tambah atau Tolak, masukkan jumlah mata, dan jika mahu, nyatakan sebab (maksimum 100 aksara). Anda tidak boleh menolak lebih daripada mata yang dimiliki pelanggan. Setiap pelarasan kekal dalam Sejarah Mata bersama baki sebelum dan selepas, sebab, serta siapa yang melakukannya."
+      },
+      {
+        "type": "note",
+        "text": "Pelarasan mata manual diperkenalkan dalam v3.5. Pada pelan Pro, kakitangan yang peranannya memerlukan kelulusan untuk Pelarasan mata manual (peranan Kakitangan secara lalai) akan diminta memasukkan PIN pengurus atau pemilik semasa mereka mengesahkan."
       }
     ],
     "related": [
@@ -1560,7 +1793,7 @@ export const articles = [
     "slug": "launch-failure",
     "category": "backup",
     "since": "3.0",
-    "question": "Apl terbuka ke “Tidak Dapat Membuka Data Kedai Anda” — apa yang perlu dibuat?",
+    "question": "Apl memaparkan “Tidak Dapat Membuka Data Kedai Anda” — apa yang perlu dibuat?",
     "keywords": [
       "tidak dapat dibuka",
       "tidak boleh dibuka",
@@ -1577,6 +1810,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Ketik Cuba Lagi dahulu; jika berjaya, apl akan terbuka seperti biasa. Jika masalah berulang, ketik Hubungi Sokongan dan beritahu kami, dan kami akan membantu anda memulihkan data. Skrin ini tidak pernah mengalih atau memadam sebarang fail."
+      },
+      {
+        "type": "p",
+        "text": "Pembukaan pertama selepas kemas kini, atau selepas memulihkan sandaran daripada versi lama, mungkin memaparkan “Mengemas kini data anda…” dahulu. Itu ialah data kedai anda sedang dipindahkan ke format yang lebih baharu, dan prosesnya lebih lama jika data anda banyak; apl akan terbuka sendiri apabila selesai. Apl tidak beku."
       },
       {
         "type": "note",
@@ -1797,12 +2034,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Guna log aktiviti. Di halaman Staf, ketik Log aktiviti di penjuru kanan atas dan masukkan PIN pemilik untuk melihat tindakan sensitif kedai, terbaharu dahulu: pembatalan jualan, pemulangan, pelarasan stok manual, kelulusan, perubahan kakitangan dan kebenaran, perubahan PIN pemilik, perubahan harga dan kos produk, serta pemadaman produk. Jualan biasa di kaunter tidak disenaraikan."
+        "text": "Guna log aktiviti. Di halaman Staf, ketik Log aktiviti di penjuru kanan atas dan masukkan PIN pemilik untuk melihat tindakan sensitif kedai, terbaharu dahulu: pembatalan jualan, pemulangan, pelarasan stok dan kira semula, pelarasan mata manual, kelulusan, perubahan kakitangan dan kebenaran, perubahan PIN pemilik, tetapan cukai, perubahan harga dan kos produk, serta pemadaman produk. Jualan biasa di kaunter tidak disenaraikan."
       },
       {
         "type": "list",
         "items": [
-          "Setiap entri menunjukkan apa yang terlibat, siapa melakukan apa dan bila, serta hasilnya — contohnya “M price $390 → $350”.",
+          "Setiap entri menunjukkan apa yang terlibat, siapa melakukan apa dan bila, serta hasilnya — contohnya “Harga M $390 → $350”. Sebab yang diberikan untuk pembatalan jualan, pemulangan, pelarasan stok atau pelarasan mata terdapat pada baris ketiga entri.",
           "Tapis mengikut kakitangan (termasuk yang dinyahaktifkan), jenis tindakan, dan Hari ini / Minggu Ini / Bulan Ini.",
           "Ketik entri yang merujuk pesanan, produk atau pelanggan untuk membuka butirannya.",
           "Butiran pesanan, butiran produk dan halaman setiap kakitangan mempunyai senarai entri tersendiri yang hanya memaparkan rekod berkaitan.",
