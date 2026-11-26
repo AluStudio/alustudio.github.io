@@ -534,7 +534,7 @@ export const articles = [
     question: "How do I record purchases and suppliers?",
     keywords: ["purchase order", "purchasing", "supplier", "receive", "restock", "payables"],
     content: [
-      { type: "p", text: "Purchasing in the sidebar manages suppliers and purchase orders. A supplier stores a name, contact person, phone, address, and a default payment term (pay now or monthly)." },
+      { type: "p", text: "Purchasing in the sidebar manages suppliers and purchase orders. A supplier stores a name, contact person, phone, address, and a default payment term: Pay on Receipt or Monthly Credit." },
       {
         type: "steps",
         items: [
@@ -543,7 +543,7 @@ export const articles = [
           "When the goods arrive, tap Receive Stock: tracked stock goes up, and the purchase order gets its number and locks. By default receiving also updates each product's cost to this unit cost; turn off Sync Product Cost on the purchase order to keep costs unchanged. Below it, Include shipping in cost (on for new purchase orders) splits the shipping fee across the lines by amount, so the cost written to each product includes its share: flour 10 × $30, butter 1 × $60 and $25 shipping give flour a cost of $32 and butter $64.",
         ],
       },
-      { type: "p", text: "The payment term decides what happens next: pay-now orders are marked paid, while monthly orders stay unpaid under Unpaid Bills, where you can settle them per supplier — one order, this month, or everything." },
+      { type: "p", text: "The payment term decides what happens next: Pay on Receipt orders are marked paid, while Monthly Credit orders stay unpaid under Unpaid Bills, where you can settle them per supplier — one order, this month, or everything." },
       { type: "p", text: "Raw materials you don't sell, like flour or packaging, can be purchased the same way: set them up as products that aren't for sale — see “Can I add raw materials like flour or packaging as products?”" },
       { type: "note", text: "Purchasing requires the Standard plan or higher. A supplier with unpaid received orders can't be deleted." },
     ],
