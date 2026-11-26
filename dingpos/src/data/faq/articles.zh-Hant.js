@@ -7,10 +7,12 @@
 //
 // Content block types (rendered by FaqBlocks.jsx):
 //   { type: "p",     text }
+//   { type: "h2",    text }            section heading; never part of the meta description
 //   { type: "list",  items: [] }
 //   { type: "steps", items: [] }
 //   { type: "note",  text }
-//   { type: "image", src, alt, caption? }
+//   { type: "shot",  name, alt, caption? }   app screenshot in the page's language,
+//                    public/faq/<code>/<name>.webp; name registered in ./shots.js
 //   { type: "video", src, poster?, caption? }
 //   { type: "youtube", id, caption? }
 

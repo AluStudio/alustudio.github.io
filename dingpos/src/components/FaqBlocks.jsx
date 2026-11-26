@@ -1,13 +1,16 @@
-// Renders FAQ article content blocks. Media types (image / video / youtube)
-// are supported so future articles can embed screenshots and walkthroughs
-// without touching the renderer.
+// Renders FAQ article content blocks (schema in src/data/faq/articles.zh-Hant.js).
 import { Info } from "@phosphor-icons/react";
+import Figure from "./Figure";
+import { currentLanguage } from "../i18n";
+import { FAQ_SHOT_SIZES, faqShotPath, hasPhoneShot } from "../data/faq/shots";
 
 function FaqBlocks({ blocks }) {
   return blocks.map((block, i) => {
     switch (block.type) {
       case "p":
         return <p key={i}>{block.text}</p>;
+      case "h2":
+        return <h2 key={i}>{block.text}</h2>;
       case "list":
         return (
           <ul key={i}>
@@ -31,13 +34,20 @@ function FaqBlocks({ blocks }) {
             <p>{block.text}</p>
           </div>
         );
-      case "image":
+      case "shot": {
+        const [width, height] = FAQ_SHOT_SIZES[block.name];
         return (
-          <figure key={i} className="media">
-            <img src={block.src} alt={block.alt || ""} loading="lazy" />
-            {block.caption && <figcaption>{block.caption}</figcaption>}
-          </figure>
+          <Figure
+            key={i}
+            src={faqShotPath(currentLanguage, block.name)}
+            phone={hasPhoneShot(block.name) ? faqShotPath(currentLanguage, block.name, true) : undefined}
+            width={width}
+            height={height}
+            alt={block.alt}
+            caption={block.caption}
+          />
         );
+      }
       case "video":
         return (
           <figure key={i} className="media">
