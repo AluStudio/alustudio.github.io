@@ -25,6 +25,7 @@ read_when:
 
 - 頁面上的圖片用 WebP，尺寸約為最大渲染尺寸的 3 倍（原圖比這個小就用原尺寸）。QR code 用 lossless WebP。PNG 只留給平台規定的用途：favicon、apple-touch-icon、og-image。
 - 同一張圖在手機與桌機的渲染寬度差很多時（例如 dingpos 截圖：手機約 350px、桌機約 1100px），用 `srcset` 加 `sizes` 另外提供手機版，寬度約為手機渲染寬度的 3 倍（dingpos 用 1080w），讓手機不必下載桌機尺寸。`sizes` 要跟 CSS 版面一起改，算錯時瀏覽器會選到過大或過小的檔案。
+- DingPOS FAQ 截圖（`dingpos/public/faq/`）是例外：檔案是模擬器 2x 原圖的裁切（最寬 1440px），渲染寬度是檔案寬的一半，也就是 iPad 上的 pt 寬，上限是文章欄（`Figure.jsx`）。原圖就是 2x，放大到 3x 只增加檔案大小，不增加細節。超過 1080px 寬的一樣附 1080w 手機檔。規則見 [seo-aeo §FAQ 圖文](./seo-aeo.md#faq-圖文)。
 - 每個 `<img>` 帶 `width` / `height` 屬性，讓瀏覽器在圖片到達前先保留空間。只有在 CSS 至少決定一個維度時，屬性推導出的 aspect-ratio 才有作用；寬高都是 `auto` 時（例如 `max-height` 加 `width: auto`），盒子高度仍是 0，圖片晚到就會推動版面。
 
 ## 量測
