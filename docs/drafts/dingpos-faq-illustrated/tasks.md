@@ -4,7 +4,7 @@ Read `requirements.md` and `plan.md` in this folder first. DEC ids below refer t
 
 ## Phase 1: Foundation
 
-- [ ] T001 [REQ-011] Create branch `faq-reports` from `main` (DEC-009); every later commit lands there. Verify: `git branch --show-current` → `faq-reports`
+- [x] T001 [REQ-011] Create branch `faq-reports` from `main` (DEC-009); every later commit lands there. Verify: `git branch --show-current` → `faq-reports`
 - [ ] T002 [REQ-003] Add `dingpos/src/data/faq/shots.js` (`FAQ_SHOT_SIZES` empty for now, `faqShotPath(code, name, phone)`) and extract `GuideImage` from `dingpos/src/components/GuideBlocks.jsx` into `dingpos/src/components/Figure.jsx`; GuideBlocks renders through it (DEC-001, DEC-002). Verify: `cd dingpos && npm run build` → passes; a guide page's `<img>` markup in `dist` is byte-identical to before
 - [ ] T003 [REQ-003, REQ-006] `dingpos/src/components/FaqBlocks.jsx`: render `shot` through `Figure` with the page language's file, and `h2` as `<h2>`; pass the language code from `SupportArticlePage.jsx` if FaqBlocks cannot read it (DEC-002, DEC-003). Verify: `cd dingpos && npm run build` → passes
 - [ ] T004 [REQ-006] `scripts/meta-description.mjs` `contentUnits` skips `h2`, with a test next to its existing tests. Verify: `npm test` → GREEN
