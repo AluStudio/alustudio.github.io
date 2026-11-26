@@ -100,3 +100,17 @@
 - Choice: 申報對照的文章 slug 用 `tax-return-boxes`，shot 用 `return-boxes`，不用 T009 暫定的 `filing-boxes`。App 的卡片名稱是「申報對照」／"Return boxes"，en 讀者搜的是 "VAT return boxes"、"BAS boxes"；`tax-` 前綴讓它和 `tax-report`、`export-tax-report` 在 URL 上排在一起。
 - Alternatives: `filing-boxes`（"filing" 不是 App 用的字，也不是四國申報表的說法）。
 - Satisfies: REQ-001, REQ-005
+
+### DEC-011 截圖實作與 DEC-004 / DEC-005 的差異
+- Choice（T012–T014 實際做法，取代 DEC-004 / DEC-005 的對應部分）：
+  - App 從 DingPOS 的 `v3.6` tag clone 到 `/tmp/dingpos-v36` build，不在工作中的 repo build：那邊的 branch 帶著未發布的改動，截進去就會畫出 App Store 上還沒有的畫面。
+  - 報表頁的期間用「本月」：fixture 的資料落在建資料當天前後幾天，「今日」的磚太空。
+  - 裁切框不寫死在 build script，而是 capture script 從 AX tree 的 frame 算出、每張寫一個 `<name>.crop`（pt），build script 照它裁。文字較長的語言會換行，框跟著長，所以尺寸是每種語言各一份，寫在產生的 `dingpos/src/data/faq/shot-sizes.js`，不是單一的 `FAQ_SHOT_SIZES`。
+  - 顯示寬度是圖在 iPad 上的 pt 寬（檔寬的一半），不是一律 480px：字和 App 裡一樣大；版面欄寬仍是上限。
+  - `advanced-reports`：本週比上週（`screenshots-*` 只有近兩週的資料，比上個月會是空的）；只截比較說明與第一列磚，不含圖表。
+  - `report-periods`：期間列是一排分段按鈕，不是選單；截「自選區間」選中、開始／結束日彈窗打開的樣子。
+  - `profit-not-tracked`：用各語言的稅務 fixture（`taxReport` / `taxReportGB`），不是 `dashboardRanking`：它也有六個缺成本的商品，又省一次重開。
+  - `profit-loss-month`：本月的月份頁（「本月進行中」），不是已結束的月份：`profitLoss` 只有本月有銷售，過去月份的營收是 0。
+  - `expense-form`：編輯 Rent 的固定支出表單，不是空白的新增表單：有金額與起訖月份才看得出欄位。
+- 已知限制：`profitLoss` 是台灣店，`profit-loss-month` 與 `expense-form` 在每種語言都是 NT$；fixture 的商品名稱在中文截圖裡也是英文。都是 fixture 的資料，不能在這個 repo 改，交給 owner 在 H001 判斷。
+- Satisfies: REQ-005, AC-005

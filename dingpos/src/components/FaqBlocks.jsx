@@ -2,7 +2,7 @@
 import { Info } from "@phosphor-icons/react";
 import Figure from "./Figure";
 import { currentLanguage } from "../i18n";
-import { FAQ_SHOT_SIZES, faqShotPath, hasPhoneShot } from "../data/faq/shots";
+import { faqShotPath, faqShotSize, hasPhoneShot } from "../data/faq/shots";
 
 function FaqBlocks({ blocks }) {
   return blocks.map((block, i) => {
@@ -35,14 +35,15 @@ function FaqBlocks({ blocks }) {
           </div>
         );
       case "shot": {
-        const [width, height] = FAQ_SHOT_SIZES[block.name];
+        const [width, height] = faqShotSize(currentLanguage, block.name);
         return (
           <Figure
             key={i}
             src={faqShotPath(currentLanguage, block.name)}
-            phone={hasPhoneShot(block.name) ? faqShotPath(currentLanguage, block.name, true) : undefined}
+            phone={hasPhoneShot(currentLanguage, block.name) ? faqShotPath(currentLanguage, block.name, true) : undefined}
             width={width}
             height={height}
+            displayWidth={Math.round(width / 2)}
             alt={block.alt}
             caption={block.caption}
           />

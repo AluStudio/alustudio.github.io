@@ -29,9 +29,9 @@ Checkpoint: briefs and shot list fixed. Commit `plan.md`.
 
 Independent Test: `dingpos/public/faq/<code>/` holds every pinned shot for all 32 languages and `npm run build` passes with a test article referencing them.
 
-- [ ] T012 [REQ-005] Build the DingPOS Debug app from `~/Developer/alustudio/DingPOS`, install on "iPad Pro 11-inch (M5)", enable app accessibility (`make sim-ax-enable AX_SIM=<udid>`), rotate landscape-right (sim-use skill). Verify: `sim-use ios ui --json` returns the app's sidebar entries
-- [ ] T013 [REQ-005] Write `dingpos/scripts/capture-faq-shots.sh` per DEC-005 and run it for `en` and `zh-Hant`. Verify: every pinned shot PNG exists for both, no `!` line; evidence: `evidence/T013-en-<name>.png` copies
-- [ ] T014 [REQ-005] Write `dingpos/scripts/build-faq-shots.sh` with one fixed crop box per shot; fill `FAQ_SHOT_SIZES`. Verify: `public/faq/{en,zh-Hant}/*.webp` exist; read each crop image and confirm it frames the intended UI region (agent-driven, evidence in `evidence/T014-*`)
+- [x] T012 [REQ-005] Build the DingPOS Debug app from `~/Developer/alustudio/DingPOS`, install on "iPad Pro 11-inch (M5)", enable app accessibility (`make sim-ax-enable AX_SIM=<udid>`), rotate landscape-right (sim-use skill). Verify: `sim-use ios ui --json` returns the app's sidebar entries
+- [x] T013 [REQ-005] Write `dingpos/scripts/capture-faq-shots.sh` per DEC-005 and run it for `en` and `zh-Hant`. Verify: every pinned shot PNG exists for both, no `!` line; evidence: `evidence/T013-en-<name>.png` copies
+- [x] T014 [REQ-005] Write `dingpos/scripts/build-faq-shots.sh` with one fixed crop box per shot; fill `FAQ_SHOT_SIZES` (as built, per DEC-011: crops come from capture's `.crop` files, sizes per language in `src/data/faq/shot-sizes.js`). Verify: `public/faq/{en,zh-Hant}/*.webp` exist; read each crop image and confirm it frames the intended UI region (agent-driven, evidence in `evidence/T014-*`)
 - [ ] T015 [REQ-005] Run capture + build for the remaining 30 languages (codes from `dingpos/l10n/languages.json`). Verify: `ls dingpos/public/faq/*/ | grep -c webp` equals 32 × (shots + phone files); no `!` lines; spot-read ja, th, de crops (evidence `evidence/T015-*`)
 
 Checkpoint: screenshots complete and committed (`chore(dingpos): add FAQ screenshots`).

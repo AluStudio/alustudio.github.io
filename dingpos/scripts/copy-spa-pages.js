@@ -52,7 +52,7 @@ import { HOME_FAQ_SLUGS } from "../src/data/faq/home.js";
 import { INLINE_LINK, blockTexts } from "../src/data/guides/links.js";
 import { SCENE_COUNTRIES, SCENE_STRING_KEYS, SCENE_TIMES, placeholders } from "../src/data/scenes/keys.js";
 import { SHOT_SIZES, shotPath } from "../src/data/shots.js";
-import { FAQ_SHOT_SIZES, faqShotPath, hasPhoneShot } from "../src/data/faq/shots.js";
+import { faqShotPath, faqShotSize, hasPhoneShot } from "../src/data/faq/shots.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -251,13 +251,13 @@ function validateFaqVersions(errors) {
 
 const FAQ_BLOCK_TYPES = new Set(["p", "h2", "list", "steps", "note", "shot", "video", "youtube"]);
 
-/** Errors of a FAQ shot block in one language: a registered name whose files in that language are sized as registered. */
+/** Errors of a FAQ shot block in one language: a shot recorded for that language whose files are its recorded size. */
 function faqShotErrors(block, code, at) {
-  const size = FAQ_SHOT_SIZES[block.name];
-  if (!size) return [`${at} names shot "${block.name}", which src/data/faq/shots.js does not register`];
+  const size = faqShotSize(code, block.name);
+  if (!size) return [`${at} names shot "${block.name}", which src/data/faq/shot-sizes.js does not record for ${code} (run scripts/capture-faq-shots.sh + build-faq-shots.sh)`];
   const image = {
     src: faqShotPath(code, block.name),
-    phone: hasPhoneShot(block.name) ? faqShotPath(code, block.name, true) : undefined,
+    phone: hasPhoneShot(code, block.name) ? faqShotPath(code, block.name, true) : undefined,
     width: size[0],
     height: size[1],
     alt: block.alt,
