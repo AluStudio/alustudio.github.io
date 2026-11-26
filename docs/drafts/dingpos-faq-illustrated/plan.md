@@ -27,21 +27,21 @@
 - Satisfies: REQ-006
 
 ### DEC-004 Shot 清單與 fixture 對應
-- Choice: 以下是試點的暫定清單，寫 brief 時可增減，變動記成新的 DEC。zh-Hant 與 zh-Hans 用台灣店的 fixture，其他語言用英國店；申報對照只有 AU/NZ/SG/GB 的店有，所以每種語言都用 `taxReportGB`。每次 launch 都帶 `-uitest-reset -DisableDevTweakBall -DingSubscriptionTier pro`。
+- Choice: 以下 11 張是 T011 依十份 brief 定案的清單（`grep -o 'shot:[a-z-]*' .logs/faq/dingpos/briefs/*.md | sort -u`），之後增減記成新的 DEC。zh-Hant 與 zh-Hans 用台灣店的 fixture，其他語言用英國店；申報對照只有 AU/NZ/SG/GB 的店有，所以每種語言都用 `taxReportGB`。每次 launch 都帶 `-uitest-reset -DisableDevTweakBall -DingSubscriptionTier pro`。
 
   | name | 畫面 | zh-Hant / zh-Hans | 其他語言 |
   |---|---|---|---|
-  | `dashboard-tiles` | 報表頁上方 KPI 磚（營收、實收、稅額） | `taxReport` | `taxReportGB` |
-  | `report-periods` | 期間切換 | `taxReport` | `taxReportGB` |
-  | `advanced-reports` | 進階報表 | `screenshots-zh` | `screenshots-en` |
-  | `profit-not-tracked` | 沒填成本時的毛利顯示 | `dashboardRanking` | `dashboardRanking` |
-  | `profit-loss-month` | 損益月份頁 | `profitLoss` | `profitLoss` |
+  | `dashboard-tiles` | 報表頁上方兩列 KPI 磚（營收、實收、稅額與「稅務報表 ›」） | `taxReport` | `taxReportGB` |
+  | `report-periods` | 期間選單展開（今日…自選區間） | `taxReport` | `taxReportGB` |
+  | `advanced-reports` | 銷售比較選「上個月」後的磚與趨勢圖 | `screenshots-zh` | `screenshots-en` |
+  | `profit-not-tracked` | 「缺成本的商品」清單 | `dashboardRanking` | `dashboardRanking` |
+  | `profit-loss-month` | 損益已結束月份的月份頁 | `profitLoss` | `profitLoss` |
   | `expense-form` | 新增固定支出表單 | `profitLoss` | `profitLoss` |
-  | `tax-report` | 稅務報表 | `taxReport` | `taxReportGB` |
-  | `filing-boxes` | 申報對照卡 | `taxReportGB` | `taxReportGB` |
+  | `tax-report` | 稅務報表的「依稅率的銷售與稅額」與「合計」 | `taxReport` | `taxReportGB` |
+  | `return-boxes` | 英國店的「申報對照」卡（VAT Return） | `taxReportGB` | `taxReportGB` |
   | `tax-export` | 匯出格式選單 | `taxReport` | `taxReportGB` |
-  | `input-tax-toggle` | 商店資訊「扣抵進項稅」開關 | `inputTax` | `taxReportGB` |
-  | `input-tax-po` | 進貨單的進項稅區塊 | `inputTax` | `taxReportGB` |
+  | `input-tax-toggle` | 商店資訊稅務卡片，「扣抵進項稅」打開與說明 | `inputTax` | `taxReportGB` |
+  | `input-tax-po` | 進貨單的進項稅區塊與合計 | `inputTax` | `taxReportGB` |
 
 - Rationale: `taxReport` / `inputTax` 的稅名是「營業稅」，放進英文或日文截圖會變成中文店家資料；英國店的 VAT 在非中文語言比較自然，而且它的 fixture 已經含進貨單與進項稅。
 - Satisfies: REQ-005
@@ -95,3 +95,8 @@
 - Build: `cd dingpos && npm run build`（`copy-spa-pages.js` 的 shot、slug、description 檢查）。
 - Prerender: `.github/workflows/` 部署流程裡的 assemble + `scripts/prerender.mjs` 步驟，在本機照跑。
 - Agent-driven: `vite preview` 加 agent-browser 打開 en、zh-Hant、ja 的文章頁，檢查 `<img>` 的 src/srcset/width/alt；截圖存證據。
+
+### DEC-010 申報對照的 slug 與 shot 名稱
+- Choice: 申報對照的文章 slug 用 `tax-return-boxes`，shot 用 `return-boxes`，不用 T009 暫定的 `filing-boxes`。App 的卡片名稱是「申報對照」／"Return boxes"，en 讀者搜的是 "VAT return boxes"、"BAS boxes"；`tax-` 前綴讓它和 `tax-report`、`export-tax-report` 在 URL 上排在一起。
+- Alternatives: `filing-boxes`（"filing" 不是 App 用的字，也不是四國申報表的說法）。
+- Satisfies: REQ-001, REQ-005
