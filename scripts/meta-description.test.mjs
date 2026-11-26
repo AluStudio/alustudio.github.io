@@ -85,3 +85,13 @@ test("contentUnits flattens paragraphs, notes, and each list or step item", () =
   ]);
   assert.deepEqual(units, ["Intro:", "A.", "B.", "Note.", "One.", "Two."]);
 });
+
+test("contentUnits skips section headings and screenshots", () => {
+  const units = contentUnits([
+    { type: "p", text: "Answer." },
+    { type: "h2", text: "Reading the report" },
+    { type: "shot", name: "tax-report", alt: "The tax report" },
+    { type: "steps", items: ["One."] },
+  ]);
+  assert.deepEqual(units, ["Answer.", "One."]);
+});
