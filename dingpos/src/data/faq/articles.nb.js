@@ -1091,7 +1091,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bruk Juster lager. For et produkt med sporet lager trykker du på Juster lager i produktdetaljene, velger Fjern eller Legg til, stiller inn antallet med + og − (det starter på 1; trykk på tallet for å skrive det inn), velger en årsak og legger eventuelt til et notat (opptil 100 tegn). Arket regner ut lageret etter endringen, og linjen under årsaken sier om justeringen kommer med i resultatregnskapet."
+        "text": "Bruk Juster lager. For et produkt der lagerføring er aktivert trykker du på Juster lager i produktdetaljene, velger Fjern eller Legg til, stiller inn antallet med + og − (det starter på 1; trykk på tallet for å skrive det inn), velger en årsak og legger eventuelt til et notat (opptil 100 tegn). Arket regner ut lageret etter endringen, og linjen under årsaken sier om justeringen kommer med i resultatregnskapet."
       },
       {
         "type": "list",
@@ -2081,7 +2081,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Fradragsberettiget avgift starter tom. DingPOS beregner den aldri ut fra satsen og godtar avrunding fra fakturaen. For eksempel gir mel 10 × $300 pluss $100 i frakt på faktura AB-12345678 datert 30. juni 2026, med én 5 %-linje med Før avgift $3,100 og Fradragsberettiget avgift $155, Totalt før avgift $3,100, Inngående avgift $155 og Skyldig beløp $3,255, som vises i listen, ordredetaljene og Å betale. Et Leverandørens avgiftsnummer som er lagt inn på en leverandør, fylles ut på nye ordrer, mens lagrede ordrer beholder sitt eget."
+        "text": "Fradragsberettiget avgift starter tom. DingPOS beregner den aldri ut fra satsen og godtar avrunding fra fakturaen. For eksempel gir mel 10 × $300 pluss $100 i frakt på faktura AB-12345678 datert 30. juni 2026, med én 5 %-linje med Før avgift $3,100 og Fradragsberettiget avgift $155, Totalt før avgift $3,100, Inngående avgift $155 og Skyldig beløp $3,255, som vises i listen, ordredetaljene og Å betale. Hvis leverandørens avgiftsnummer er registrert på en leverandør, fylles det ut på nye ordrer; lagrede ordrer beholder sitt eget."
       },
       {
         "type": "p",

@@ -95,7 +95,7 @@ export const articles = [
         "type": "steps",
         "items": [
           "Vali oma riik või piirkond. Loendi ülaosas on riik või piirkond, kus see iPad asub, ning seejärel levinumad turud; allpool on kõik 175 riiki ja piirkonda, kus DingPOS on App Store'is saadaval, ning neid saab otsida nime järgi rakenduse keeles või inglise keeles. Sinu valiku põhjal määratakse valuuta, maksud ja maksurežiim.",
-          "Sammus Teie pood sisesta poe nimi, soovi korral lisa logo ning kontrolli valuutat, makse ja maksurežiimi (maksuga / maksuta hinnad). Valuuta on vaikimisi sinu riigi oma; puuduta seda, et valida 130 valuuta hulgast. Maksude loendis on sinu riigi vaikimisi maksud: nimeta neid ümber, muuda määra, kustuta mõni või puuduta Lisa maks, et lisada uus rida. Näiteks Briti Columbia pood muudab esimese rea nimeks „GST 5” ja lisab rea „PST 7”."
+          "Jaotises Teie pood sisesta poe nimi, soovi korral lisa logo ning kontrolli valuutat, makse ja maksurežiimi (maksuga / maksuta hinnad). Valuuta on vaikimisi sinu riigi oma; puuduta seda, et valida 130 valuuta hulgast. Maksude loendis on sinu riigi vaikimisi maksud: nimeta neid ümber, muuda määra, kustuta mõni või puuduta Lisa maks, et lisada uus rida. Näiteks Briti Columbia pood muudab esimese rea nimeks „GST 5” ja lisab rea „PST 7”."
         ]
       },
       {
@@ -796,7 +796,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Laoseis arvatakse maha ettetellimuse tegemisel, nii et müüdava koguse arv muutub kohe. See on märguanne, mitte reserveering: hilisem müük võib viimase ühiku siiski ära võtta. Laost otsas olevad tooted lähevad miinusesse ja taastuvad ostutellimuse kättesaamisel.",
-          "Kui klient tuleb järele, puuduta müügi detailvaates Anna üle, et jääk kätte saada. Seejärel muutub müük tavaliseks lõpetatud müügiks ja hilisemad tagastused käivad tavapärase tagastuse kaudu.",
+          "Kui klient tuleb tellimusele järele, puuduta tellimuse üksikasjades nuppu Anna üle, et ülejäänud summa sisse nõuda. Seejärel muutub müük tavaliseks lõpetatud müügiks ja hilisemad tagastused käivad tavapärase tagastuse kaudu.",
           "Kui klient ei tule, puuduta müügi detailvaates Loobu ettetellimusest ning vali, kas tagastada käsiraha või see alles jätta. Laoseis lisatakse tagasi.",
           "Käsiraha tšekil ja lõplikul kättesaamise tšekil on sama number."
         ]
@@ -912,7 +912,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Valiku ja väärtuse nimi võib olla kuni 20 märki pikk ning tühikud nime mõlemas otsas eemaldatakse salvestamisel. Väärtus, kuhu pole midagi kirjutatud, ei ole kombinatsioon ja jäetakse salvestamisel vahele; salvestamine peatub ja väli tõstetakse punase äärisega esile, kui valiku nimi on tühi, kui valiku kõik väärtused on tühjad või kui tühjendad väärtuse, mis tootel juba salvestatud oli; kirjuta see tagasi või eemalda see selle ×-nupuga. Variantidega toode ei saa kasutada kohapealset hinda."
+        "text": "Valiku ja väärtuse nimi võib olla kuni 20 märki pikk ning tühikud nime mõlemas otsas eemaldatakse salvestamisel. Väärtus, kuhu pole midagi kirjutatud, ei ole kombinatsioon ja jäetakse salvestamisel vahele; salvestamine peatub ja väli tõstetakse punase äärisega esile, kui valiku nimi on tühi, kui valiku kõik väärtused on tühjad või kui tühjendad väärtuse, mis tootel juba salvestatud oli; kirjuta see tagasi või eemalda see selle ×-nupuga. Variantidega toode ei saa olla kohapealse hinnaga toode."
       }
     ],
     "related": [
@@ -2466,7 +2466,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ava Seaded → Püsikliendiprogramm ja määra kaks reeglit: mitu punkti saab iga kulutatud X kohta ning mitu punkti tuleb kasutada, et saada M allahindlust (soovi korral koos ühe müügi kohta kehtiva kasutuslimiidiga). Uutele liikmetele saad automaatselt anda ka tervitusbonuse. Uues poes on punktid algul välja lülitatud: lülita sisse Luba püsikliendiprogramm ja täida reegel. Kui lüliti on sees, aga reeglit pole, hoiatab rakendus: „Teenimis- ega lunastusreeglit pole veel seadistatud, seega müükidega punkte ei teenita ega lunastata.“"
+        "text": "Ava Seaded → Püsikliendiprogramm ja määra kaks reeglit: mitu punkti saab iga kulutatud X kohta ning mitu punkti tuleb kasutada, et saada M allahindlust (soovi korral koos ühe müügi kohta kehtiva kasutuslimiidiga). Uutele liikmetele saad automaatselt anda ka tervitusbonuse. Uutes poodides on punktid algul välja lülitatud: lülita sisse Luba püsikliendiprogramm ja lisa vähemalt üks reegel. Kui lüliti on sees, aga reeglit pole, hoiatab rakendus: „Teenimis- ega lunastusreeglit pole veel seadistatud, seega müükidega punkte ei teenita ega lunastata.“"
       },
       {
         "type": "p",
@@ -2850,7 +2850,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Õigusel on kaks väärtust: Lubatud või Vajab heakskiitu – päris keelatud pole midagi. Kui töötaja jõuab toiminguni, mis vajab heakskiitu, valib seda tohtiv kolleeg oma nime ja sisestab oma PIN-koodi, et toiming läbi lasta."
+        "text": "Õigusel on kaks võimalikku olekut: Lubatud või Vajab heakskiitu – midagi pole täielikult keelatud. Kui töötaja jõuab toiminguni, mis vajab heakskiitu, valib seda tohtiv kolleeg oma nime ja sisestab oma PIN-koodi, et toiming läbi lasta."
       },
       {
         "type": "list",
@@ -3204,7 +3204,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Saadaval on kolm liitpakkumise liiki: kingitus ostu kõrvale (osta A, saa B), tasuline lisatoode (lisa X €, et saada Y) ja komplektihind (mis tahes N toodet hinnaga X €). Kingitused ja tasulised lisatooted ootavad kassapidaja kinnitust; komplektihinnad rakenduvad automaatselt."
+        "text": "Saadaval on kolm kombineeritud pakkumise liiki: kingitus ostuga (osta A, saa B), tasuline lisatoode (maksa X € lisaks, et saada Y) ja komplektihind (ükskõik millised N toodet hinnaga X €). Kingitused ja tasulised lisatooted ootavad kassapidaja kinnitust; komplektihinnad rakenduvad automaatselt."
       },
       {
         "type": "p",
@@ -3215,13 +3215,13 @@ export const articles = [
         "items": [
           "Pärast riba ✕ („Keeldu“) puudutamist sama soovitus selles ostukorvis enam ei ilmu; uus või tühjendatud ostukorv pakub seda uuesti.",
           "Kui ostukorv enam tingimustele ei vasta (näiteks eemaldati toode, mis kingituse käivitas), eemaldatakse kingitus või lisatoode automaatselt ja ülaosas kuvatakse teade; see ei lähe kasutuskorra hulka (alates versioonist v3.6).",
-          "Alates versioonist v3.4 ei takista ootel pakkumised kassat: kollane rida makse nupu all, näiteks „1 ootel pakkumine ei rakendu“, ütleb, mitu on välja jäetud (puuduta seda, et näha, millised), ja müük läheb läbi ilma nendeta. Et kassa ootaks nagu varem, lülita jaotises Seaded → Seadme eelistused sisse Käsitle pakkumised enne kassat; see kehtib ainult sellel iPadil.",
+          "Alates versioonist v3.4 ei takista ootel pakkumised kassas maksmist: kollane rida maksenupu all, näiteks „1 ootel pakkumine ei rakendu“, näitab, mitu pakkumist välja jääb (puuduta rida, et näha millised), ja müük läheb läbi ilma nendeta. Et kassa ootaks nagu varem, lülita jaotises Seaded → Seadme eelistused sisse Käsitle pakkumised enne kassat; see kehtib ainult sellel iPadil.",
           "Kingituse ja lisatoote ridu ei saa muud rahalised kampaaniad edasi alandada ning need ei lähe arvesse teiste kampaaniate läviväärtuste täitmisel."
         ]
       },
       {
         "type": "p",
-        "text": "Komplektihinnad (automaatsed alates versioonist v2.4): kui ostukorvist saab komplekti moodustada, rühmitab DingPOS selle ja arvestab kogusummasse – küsimata, ning komplekte ei saa poolitada."
+        "text": "Komplektihindu rakendatakse automaatselt alates versioonist v2.4: kui ostukorvist saab komplekti moodustada, rühmitab DingPOS tooted komplektiks ja lisab selle kogusummasse ilma kinnitust küsimata; komplekte ei saa poolitada."
       },
       {
         "type": "list",
@@ -3415,7 +3415,7 @@ export const articles = [
         "items": [
           "Vali Aruanded all periood See kuu, et näha kuu müügitulu, laekunud raha, kasumit ja maksete jaotust.",
           "Tarnijate kuutingimustega ostud koonduvad jaotises Ostmine alla Tasumata arved, kus saab terve kuu korraga tasuda.",
-          "Klientidele arvele müüdud kaubad koonduvad jaotises Müügid → Nõuded, kus saab terve kuu eest korraga tasuda."
+          "Klientidele arvele müüdud kaupade nõuded koonduvad jaotises Müügid → Nõuded, kus saab terve kuu eest korraga tasuda."
         ]
       },
       {

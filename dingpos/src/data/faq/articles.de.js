@@ -796,7 +796,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Der Bestand wird bereits beim Anlegen der Vorbestellung abgebucht, sodass die verkaufbare Menge sofort sinkt. Das ist ein Signal, keine Reservierung: Ein späterer Verkauf kann noch die letzte Einheit nehmen. Nicht vorrätige Artikel gehen in den negativen Bereich und gleichen sich aus, sobald eine Einkaufsbestellung eingegangen ist.",
-          "Holt der Kunde die Ware ab, tippen Sie in den Bestelldetails auf Übergeben und kassieren den Restbetrag. Die Bestellung wird dann zu einem ganz normalen abgeschlossenen Verkauf; spätere Rückgaben laufen wie gewohnt über den Rückgabe-Ablauf.",
+          "Holt der Kunde die Ware ab, tippen Sie in den Bestelldetails auf Übergeben und kassieren den Restbetrag. Die Vorbestellung wird dann zu einem ganz normalen abgeschlossenen Verkauf; spätere Rückgaben laufen wie gewohnt über den Rückgabe-Ablauf.",
           "Kommt der Kunde nicht, tippen Sie in den Bestelldetails auf Bestellung stornieren und wählen, ob die Anzahlung erstattet oder einbehalten wird. Der Bestand wird wieder gutgeschrieben.",
           "Der Beleg über die Anzahlung und der Abholbeleg tragen dieselbe Nummer."
         ]
@@ -1315,7 +1315,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Den Umsatz vor Steuern gibt es seit Version 3.5, und vergangene Zeiträume wurden auf dieselbe Weise neu berechnet; ein Laden, der Steuer berechnet, sieht deshalb einen niedrigeren Umsatz als vor dem Update. Das ist eine Korrektur: Frühere Versionen rechneten die Steuer zum Umsatz, und Läden mit exklusiver Steuer (Preise ohne Steuer) zählten sogar die eingenommene Umsatzsteuer als Umsatz."
+        "text": "Den Umsatz vor Steuern gibt es seit Version 3.5, und vergangene Zeiträume wurden auf dieselbe Weise neu berechnet; ein Laden, der Steuer berechnet, sieht deshalb einen niedrigeren Umsatz als vor dem Update. Das ist eine Korrektur: Frühere Versionen rechneten die Steuer zum Umsatz, und Läden mit Preisen ohne Steuer zählten sogar die eingenommene Umsatzsteuer als Umsatz."
       }
     ],
     "related": [

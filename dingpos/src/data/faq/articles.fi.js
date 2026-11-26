@@ -95,8 +95,8 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Valitse maasi tai alueesi. Luettelon alussa näkyvät ensin maa tai alue, jossa tämä iPad on, ja sitten yleisimmät markkinat; niiden alla ovat kaikki 175 maata ja aluetta, joissa DingPOS on App Storessa, ja luetteloa voi hakea nimellä sovelluksen kielellä tai englanniksi. Valintasi täyttää valuutan, verot ja verotavan.",
-          "Anna Myymäläsi-vaiheessa kaupan nimi, lisää halutessasi logo ja tarkista valuutta, verot ja verotapa (Sisältää veron / Ei sisällä veroa). Valuutta on oletuksena maasi valuutta; napauttamalla sitä voit valita 130 valuutan joukosta. Verot-luettelossa on maasi oletusverot: voit nimetä ne uudelleen, muuttaa verokantaa, poistaa veron tai napauttaa Lisää vero, jos tarvitset toisen rivin. Esimerkiksi Brittiläisessä Kolumbiassa sijaitseva kauppa muuttaa ensimmäisen rivin muotoon ”GST 5” ja lisää rivin ”PST 7”."
+          "Valitse maasi tai alueesi. Luettelon alussa näkyvät ensin iPadin nykyinen maa tai alue ja sitten yleisimmät maat ja alueet; niiden alla ovat kaikki 175 maata ja aluetta, joissa DingPOS on App Storessa, ja luetteloa voi hakea nimellä sovelluksen kielellä tai englanniksi. Valintasi täyttää valuutan, verot ja verotavan.",
+          "Anna kohdassa Myymäläsi kaupan nimi, lisää halutessasi logo ja tarkista valuutta, verot ja verotapa (Sisältää veron / Ei sisällä veroa). Valuutta on oletuksena maasi valuutta; napauttamalla sitä voit valita 130 valuutan joukosta. Verot-luettelossa on maasi oletusverot: voit nimetä ne uudelleen, muuttaa verokantaa, poistaa veron tai napauttaa Lisää vero -painiketta, jos tarvitset toisen rivin. Esimerkiksi Brittiläisessä Kolumbiassa sijaitseva kauppa muuttaa ensimmäisen rivin muotoon ”GST 5” ja lisää rivin ”PST 7”."
         ]
       },
       {
@@ -384,7 +384,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Napauta Vero-kortissa Lisää vero ja anna nimi ja verokanta. Jos otat käyttöön Käytä uusille tuotteille, myöhemmin lisäämäsi tuotteet saavat tämän veron oletuksena. Jos myymälällä on jo oletusvero, uusi vero lisätään aluksi pois päältä; ota se käyttöön, kun tuotteesta peritään molemmat.",
-          "Jokainen tuote valitsee perimänsä verot tuotelomakkeen Verot-kohdassa – esimerkiksi bentosta voidaan periä vain 8 prosentin alennettu verokanta. Kun käytössä on kaksi tai useampi vero, lomake näyttää tuotteen verot yhteensä.",
+          "Jokainen tuote valitsee perimänsä verot tuotelomakkeen Verot-kohdassa – esimerkiksi bentosta voidaan periä vain 8 prosentin alennettu verokanta. Kun käytössä on kaksi tai useampi vero, lomake näyttää verokantojen yhteissumman.",
           "Napauttamalla veroa voit nimetä sen uudelleen, muuttaa sen verokantaa tai lisätä sen kaikkiin tuotteisiin tai poistaa sen kaikista tuotteista kerralla valinnalla Lisää kaikkiin tuotteisiin tai Poista kaikista tuotteista. Veroa poistettaessa näytetään ensin, kuinka monesta tuotteesta sitä ei enää veloiteta.",
           "Myymälässä, jonka verotapa on Ei sisällä veroa, ostoskorin yhteenvedossa on yksi rivi kutakin veroa kohden, ja tilauksen tiedoissa on yksi rivi kutakin veroa kohden verokantoineen ja summoineen, joista vero veloitettiin."
         ]
@@ -2479,7 +2479,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Liitä jäsen myyntiin ostoskorissa tai kassanäkymässä, niin pisteet kertyvät automaattisesti. Lunastaaksesi pisteitä syötä käytettävien pisteiden määrä. Onnistumisnäkymä näyttää ansaitut pisteet ja uuden saldon, esimerkiksi ”+22 pist. · yhteensä 122 pist.”. Laskulle myydyssä myynnissä ja ennakkotilauksessa, jota ei ole vielä maksettu kokonaan, pisteet lisätään vasta, kun raha tulee maksuna, ja näkymässä lukee ”lisätään, kun maksu kuitataan” tai ”lisätään, kun loppu maksetaan noudossa”. Tilauksen mitätöinti vähentää tilauksesta kertyneet pisteet ja palauttaa lunastetut pisteet."
+        "text": "Liitä jäsen myyntiin ostoskorissa tai kassanäkymässä, niin pisteet kertyvät automaattisesti. Lunastaaksesi pisteitä syötä käytettävien pisteiden määrä. Onnistumisnäkymä näyttää ansaitut pisteet ja uuden saldon, esimerkiksi ”+22 pist. · yhteensä 122 pist.”. Laskulle myynnissä tai ennakkotilauksessa, jota ei ole vielä maksettu kokonaan, pisteet lisätään vasta, kun raha tulee maksuna, ja näkymässä lukee ”lisätään, kun maksu kuitataan” tai ”lisätään, kun loppu maksetaan noudossa”. Tilauksen mitätöinti vähentää tilauksesta kertyneet pisteet ja palauttaa lunastetut pisteet."
       },
       {
         "type": "p",
@@ -3217,7 +3217,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Käytössä on kolme yhdistelmätarjoustyyppiä: lahja ostoksen mukana (osta A, saat B), maksullinen lisätuote (lisää X €, saat Y) ja pakettihinta (mitkä tahansa N tuotetta hintaan X €). Lahjat ja maksulliset lisätuotteet odottavat kassanhoitajan vahvistusta; pakettihinnat tulevat voimaan automaattisesti."
+        "text": "Yhdistelmätarjouksia on kolmea tyyppiä: lahja ostoksen mukana (osta A, saat B), maksullinen lisätuote (lisää X €, saat Y) ja pakettihinta (mitkä tahansa N tuotetta hintaan X €). Lahjat ja maksulliset lisätuotteet odottavat kassanhoitajan vahvistusta; pakettihinnat tulevat voimaan automaattisesti."
       },
       {
         "type": "p",
@@ -3421,7 +3421,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Versiosta 3.4 alkaen Tulos-välilehti näyttää kunkin kuukauden liikevoiton tuotteiden omakustannusten, maksukulujen ja kulujen jälkeen – katso ”Miten näen, paljonko tienasin oikeasti kunakin kuukautena?” Versiosta 3.6 alkaen veroraportti vie valitun jakson (esimerkiksi Tämä kuukausi) kirjanpitäjällesi CSV-tiedostona, Excel-työkirjana tai PDF-raporttina, ja mukana ovat myynti, vero, kunkin maksutavan saapuneet maksut ja myyntisaamiset. Tulosta ja muita raportteja ei voi vielä viedä, mutta kaikki täsmäytykseen tarvittava löytyy jo sovelluksesta:"
+        "text": "Versiosta 3.4 alkaen Tulos-välilehti näyttää kunkin kuukauden liikevoiton tuotteiden omakustannusten, maksukulujen ja kulujen jälkeen – katso ”Miten näen, paljonko tienasin oikeasti kunakin kuukautena?” Versiosta 3.6 alkaen veroraportti vie valitun jakson (esimerkiksi Tämä kuukausi) tiedot kirjanpitäjällesi CSV-tiedostona, Excel-työkirjana tai PDF-raporttina, ja mukana ovat myynti, vero, kunkin maksutavan saapuneet maksut ja myyntisaamiset. Tulosta ja muita raportteja ei voi vielä viedä, mutta kaikki täsmäytykseen tarvittava löytyy jo sovelluksesta:"
       },
       {
         "type": "list",

@@ -351,7 +351,7 @@ export const articles = [
   {
     "slug": "tax-calculation",
     "category": "checkout",
-    "question": "Vergi (KDV) nasıl hesaplanır?",
+    "question": "Vergi nasıl hesaplanır?",
     "keywords": [
       "vergi",
       "KDV",
@@ -1060,7 +1060,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Sayım düzeltme: ürün formundaki stok sayısını gerçekte saydığınız miktara göre düzenleyin. Kâr/Zarar’a hiçbir zaman yansımaz.",
-          "Stoku Düzelt (v3.5’ten beri): ürün ayrıntısında Stoku Düzelt’e dokunun; Çıkar ya da Ekle’yi, miktarı ve Süresi doldu/bozuldu, Hasarlı veya Numune ve hediye gibi bir nedeni seçin. Çıkardığınız ürünlerin maliyeti, Kâr/Zarar’da o ayın stok kaybına yazılır — bkz. “Süresi geçen, kırılan veya numune olarak verilen stoğu nasıl kaydederim?”"
+          "Stoku Düzelt (v3.5’ten beri): ürün ayrıntısında Stoku Düzelt’e dokunun; Kaldır ya da Ekle’yi, miktarı ve Süresi doldu/bozuldu, Hasarlı veya Numune ve hediye gibi bir nedeni seçin. Çıkardığınız ürünlerin maliyeti, Kâr/Zarar’da o ayın stok kaybına yazılır — bkz. “Süresi geçen, kırılan veya numune olarak verilen stoğu nasıl kaydederim?”"
         ]
       }
     ],
@@ -1091,7 +1091,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Stoku Düzelt’i kullanın. Stoğu takip edilen bir üründe, ürün ayrıntısında Stoku Düzelt’e dokunun; Çıkar ya da Ekle’yi seçin, miktarı + ve − ile ayarlayın (1’den başlar; yazmak için sayıya dokunun), bir neden belirleyin ve isterseniz not ekleyin (en fazla 100 karakter). Açılan ekran değişiklikten sonraki stoğu hesaplar; nedenin altındaki satır da bunun Kâr/Zarar’a yansıyıp yansımadığını söyler."
+        "text": "Stoku Düzelt’i kullanın. Stoğu takip edilen bir üründe, ürün ayrıntısında Stoku Düzelt’e dokunun; Kaldır ya da Ekle’yi seçin, miktarı + ve − ile ayarlayın (1’den başlar; yazmak için sayıya dokunun), bir neden belirleyin ve isterseniz not ekleyin (en fazla 100 karakter). Açılan ekran değişiklikten sonraki stoğu hesaplar; nedenin altındaki satır da bunun Kâr/Zarar’a yansıyıp yansımadığını söyler."
       },
       {
         "type": "list",
@@ -2371,7 +2371,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "İndirilecek vergi kutuları (AU 1B, NZ 11, SG 5 ve 7, UK 4 ve 7) İndirilecek Vergi Takibi gerektirir; aksi hâlde — ve İndirilecek vergi kaydedilmedi gösterirler, hiçbir zaman 0 göstermezler. UK Box 7 hem Satın Alma Siparişlerindeki İndirilecek Vergi hem de Giderlerdeki İndirilecek Vergi kartlarını gerektirir; yalnızca satın alma siparişleri Box 4'ü doldurur ve Box 7'yi — olarak bırakır."
+        "text": "İndirilecek vergi kutuları (AU 1B, NZ 11, SG 5 ve 7, UK 4 ve 7) için İndirilecek Vergi Takibi açık olmalıdır; aksi hâlde kutularda — ve İndirilecek vergi kaydedilmedi yazar, hiçbir zaman 0 yazmaz. UK Box 7 hem Satın Alma Siparişlerindeki İndirilecek Vergi hem de Giderlerdeki İndirilecek Vergi kartlarını gerektirir; yalnızca satın alma siparişleri Box 4'ü doldurur ve Box 7'yi — olarak bırakır."
       },
       {
         "type": "p",
@@ -2878,7 +2878,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Geçersiz kılma, ürün iadesi, veresiye satış ve satın alma için bilerek yetki yoktur; bunlar yalnızca işlemi kimin yaptığını kaydeder. Bunları sonradan incelemek için etkinlik günlüğünü kullanın."
+        "text": "Geçersiz kılma işlemleri, ürün iadeleri, veresiye satışlar ve satın alma işlemleri için bilerek yetki yoktur; bunlar yalnızca işlemi kimin yaptığını kaydeder. Bunları sonradan incelemek için etkinlik günlüğünü kullanın."
       }
     ],
     "related": [

@@ -1040,7 +1040,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Apabila diaktifkan, jualan dan prapesanan menolak stok secara automatik; pembatalan jualan, pemulangan dan prapesanan yang dibatalkan memulihkannya; dan menerima pesanan belian menambahnya. Setiap pergerakan direkodkan dalam lejar yang lengkap. Pada 10 atau kurang, stok ditandakan rendah dengan warna oren dalam senarai produk, juruwang dan butiran produk."
+        "text": "Apabila diaktifkan, jualan dan prapesanan menolak stok secara automatik; jualan yang dibatalkan, pemulangan dan prapesanan yang dibatalkan memulihkannya; dan menerima pesanan belian menambahnya. Setiap pergerakan direkodkan dalam lejar yang lengkap. Pada 10 atau kurang, stok ditandakan rendah dengan warna oren dalam senarai produk, juruwang dan butiran produk."
       },
       {
         "type": "p",
@@ -1080,7 +1080,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gunakan Laraskan Stok. Untuk produk yang stoknya dijejak, ketik Laraskan Stok dalam butiran produk, pilih Keluarkan atau Tambah, tetapkan kuantiti dengan + dan − (ia bermula pada 1; ketik nombor itu untuk menaipnya), pilih satu sebab, dan tambah nota jika mahu (sehingga 100 aksara). Helaian itu mengira stok selepas perubahan, dan baris di bawah sebab menyatakan sama ada ia masuk ke dalam P&L."
+        "text": "Gunakan Laraskan Stok. Untuk produk yang stoknya dijejak, ketik Laraskan Stok dalam butiran produk, pilih Buang atau Tambah, tetapkan kuantiti dengan + dan − (ia bermula pada 1; ketik nombor itu untuk menaipnya), pilih satu sebab, dan tambah nota jika mahu (sehingga 100 aksara). Helaian itu mengira stok selepas perubahan, dan baris di bawah sebab menyatakan sama ada ia masuk ke dalam P&L."
       },
       {
         "type": "list",
@@ -1202,12 +1202,12 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Boleh. Dalam borang produk, matikan Jual di Juruwang di bawah foto (ia hidup secara lalai) dan produk itu menjadi tidak dijual: ia tidak memerlukan harga, mengekalkan kos, kod bar, stok dan variannya, dan senarai produk memaparkan “Tidak dijual” di tempat harga biasanya berada."
+        "text": "Boleh. Dalam borang produk, matikan Jual di Juruwang di bawah foto (ia hidup secara lalai) dan produk itu menjadi produk tidak dijual: ia tidak memerlukan harga, mengekalkan kos, kod bar, stok dan variannya, dan senarai produk memaparkan “Tidak dijual” di tempat harga biasanya berada."
       },
       {
         "type": "list",
         "items": [
-          "Produk yang tidak dijual tidak pernah muncul dalam grid juruwang, kategori, carian atau imbasan kod bar, dan tidak boleh menjadi hadiah, tambahan, sasaran promosi atau barang gantian dalam tukar barang. Kategori yang hanya mengandungi produk yang tidak dijual tidak dipaparkan pada bar kategori juruwang.",
+          "Produk tidak dijual tidak pernah muncul dalam grid juruwang, kategori, carian atau imbasan kod bar, dan tidak boleh menjadi hadiah, tambahan, sasaran promosi atau barang gantian dalam tukar barang. Kategori yang hanya mengandungi produk yang tidak dijual tidak dipaparkan pada bar kategori juruwang.",
           "Apabila kedai mempunyai produk yang tidak dijual, butang tapis muncul di bahagian kanan atas Produk: pilih Semua Produk, Untuk Dijual atau Tidak Dijual, bersama carian dan kategori.",
           "Pesanan belian, penerimaan stok, Segerakkan kos produk dan bil belum bayar berfungsi sama seperti produk lain, jadi kos belian dan stok sesuatu bahan boleh direkodkan melalui Pembelian.",
           "Menjual produk lain tidak menolak stoknya. Apabila anda menggunakan sebahagiannya, rekodkan pengeluaran dengan Laraskan Stok dalam butiran produk: Penggunaan bahan untuk yang dimasukkan ke dalam produk, Bekalan kedai untuk barang seperti beg kertas atau bahan pembersih.",
@@ -1374,7 +1374,7 @@ export const articles = [
           "Baris jubin pertama: Hasil Jualan, Tunai Diterima, Untung kasar, Pesanan dan Purata Pesanan.",
           "Baris jubin kedua: Jumlah Diskaun, Cukai, Untung bersih, Produk Tanpa Kos dan Pelanggan Dilayan.",
           "Pasangan pertama: carta trend jualan di sebelah Kos dan untung kasar.",
-          "Pasangan kedua: kad Produk (kedudukan produk) di sebelah Bahagian mengikut kategori.",
+          "Pasangan kedua: kad Produk di sebelah Bahagian mengikut kategori.",
           "Pasangan ketiga: Kaedah Pembayaran di sebelah kad promosi.",
           "Kad bawah: Sekarang."
         ]

@@ -1037,7 +1037,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Theo dõi tồn kho được bật hoặc tắt riêng cho từng sản phẩm — hãy bật trong trang sửa sản phẩm và nhập số lượng hiện có. Mỗi biến thể của một sản phẩm theo dõi tồn kho riêng."
+        "text": "Theo dõi tồn kho là tùy chọn bật/tắt riêng cho từng sản phẩm — hãy bật trong trang sửa sản phẩm và nhập số lượng hiện có. Mỗi biến thể của một sản phẩm theo dõi tồn kho riêng."
       },
       {
         "type": "p",

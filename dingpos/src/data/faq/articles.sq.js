@@ -1056,7 +1056,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Rinumërim: ndrysho numrin e stokut në formularin e produktit që të përputhet me atë që ke numëruar realisht. Nuk arrin kurrë te Fitimi.",
+          "Rinumërim: ndrysho numrin e stokut në formularin e produktit që të përputhet me atë që ke numëruar realisht. Nuk ndikon kurrë te Fitimi.",
           "Rregullo stokun (që nga v3.5): te detajet e produktit trokit Rregullo stokun, zgjidh Hiq ose Shto, sasinë dhe një arsye, si Skaduar ose prishur, Dëmtuar ose Mostra e dhurata. Kostoja e asaj që hiqet numërohet te Humbje stoku e atij muaji në Fitimi — shih “Si e regjistroj stokun që skadoi, u dëmtua ose u dha si mostër?”"
         ]
       }
@@ -1087,7 +1087,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Përdor Rregullo stokun. Për një produkt që ndjek stokun, te detajet e produktit trokit Rregullo stokun, zgjidh Hiq ose Shto, vendos sasinë me + dhe − (fillon nga 1; trokit numrin për ta shkruar), zgjidh një arsye dhe, nëse do, shto një shënim (deri në 100 karaktere). Fleta llogarit stokun pas ndryshimit, dhe rreshti nën arsyen tregon nëse ndikon te Fitimi."
+        "text": "Përdor Rregullo stokun. Për një produkt me ndjekje stoku, te detajet e produktit trokit Rregullo stokun, zgjidh Hiq ose Shto, cakto sasinë me + dhe − (nis nga 1; trokit numrin për ta shkruar), zgjidh një arsye dhe, nëse do, shto një shënim (deri në 100 karaktere). Fleta llogarit stokun pas ndryshimit dhe rreshti nën arsyen tregon nëse ndikon te Fitimi."
       },
       {
         "type": "list",
@@ -1168,7 +1168,7 @@ export const articles = [
         "items": [
           "Trokit Blerje e re, zgjidh furnitorin dhe shto produktet, sasitë dhe kostot për njësi (të plotësuara paraprakisht me koston aktuale të çdo produkti). Mund të shtosh edhe një tarifë transporti. Për mallrat që nuk janë krijuar ende si produkte, trokit Produkt i ri te zgjedhësi Shto produkt; produkti i ri hyn drejt në porosinë e blerjes si rresht. Nëse furnitori nuk është krijuar ende, trokit Shto furnitor lart majtas në listën e furnitorëve — furnitori i ri kthehet drejt në porosinë e blerjes.",
           "Një draft nuk prek kurrë stokun ose detyrimet — ndryshoje ose fshije lirisht.",
-          "Kur mbërrin malli, trokit Merr stokun: stoku i ndjekur rritet, dhe porosia e blerjes merr numrin e vet dhe kyçet. Si parazgjedhje, marrja përditëson edhe koston e çdo produkti me këtë kosto për njësi; çaktivizo Sinkronizo koston e produktit në porosinë e blerjes për t’i lënë kostot të pandryshuara. Poshtë tij, Përfshi transportin në kosto (aktiv për porositë e reja të blerjes) e ndan tarifën e transportit mes rreshtave sipas shumës, ndaj kostoja e shkruar te çdo produkt përfshin pjesën e vet: miell 10 × $30, gjalpë 1 × $60 dhe $25 transport e çojnë koston e miellit në $32 dhe të gjalpit në $64."
+          "Kur mbërrin malli, trokit Merr stokun: stoku i ndjekur rritet, dhe porosia e blerjes merr numrin e vet dhe kyçet. Si parazgjedhje, marrja përditëson edhe koston e çdo produkti me këtë kosto për njësi; çaktivizo Sinkronizo koston e produktit në porosinë e blerjes për t’i lënë kostot të pandryshuara. Poshtë saj, Përfshi transportin në kosto (aktiv për porositë e reja të blerjes) e ndan tarifën e transportit mes rreshtave sipas shumës, ndaj kostoja e shkruar te çdo produkt përfshin pjesën e vet: miell 10 × $30, gjalpë 1 × $60 dhe $25 transport e çojnë koston e miellit në $32 dhe të gjalpit në $64."
         ]
       },
       {
@@ -1210,7 +1210,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Po. Në formularin e produktit, çaktivizo Shitet në arkë poshtë fotos (është aktiv si parazgjedhje) dhe produkti është jo për shitje: nuk ka nevojë për çmim, mban koston, barkodin, stokun dhe variantet e veta, dhe lista e produkteve shfaq “Jo për shitje” aty ku do të ishte çmimi."
+        "text": "Po. Në formularin e produktit, çaktivizo Shitet në arkë poshtë fotos (është aktive si parazgjedhje) dhe produkti nuk është për shitje: nuk ka nevojë për çmim, mban koston, barkodin, stokun dhe variantet e veta, dhe lista e produkteve shfaq “Jo për shitje” aty ku do të ishte çmimi."
       },
       {
         "type": "list",

@@ -1211,7 +1211,7 @@ export const articles = [
           "Do‘konda sotuvga mo‘ljallanmagan mahsulotlar bo‘lsa, «Mahsulot» ekranining yuqori o‘ng burchagida filtr tugmasi paydo bo‘ladi: qidiruv va toifalar bilan birga «Barcha mahsulotlar», «Sotuvda» yoki «Sotuvga mo‘ljallanmagan»ni tanlang.",
           "Xarid buyurtmalari, qabul qilish, «Mahsulot tannarxini yangilash» va to‘lanmagan hisoblar boshqa mahsulotlardagi kabi ishlaydi, shuning uchun materialning xarid tannarxi va zaxirasini «Xaridlar» orqali yozib borish mumkin.",
           "Boshqa mahsulotlarni sotish uning zaxirasini kamaytirmaydi. Bir qismini ishlatganingizda mahsulot tafsilotlarida «Zaxirani tuzatish» bilan ayirishni yozing: mahsulotlarga ketgani uchun «Ishlab chiqarishga», qog‘oz paketlar yoki tozalash vositalari kabilar uchun «Do‘kon materiallari».",
-          "Uni istalgan vaqtda qaytarishingiz mumkin, narxi va soliqlari saqlanib turadi. Allaqachon yaratilgan buyurtmalar va hisobotlarga ta’sir qilmaydi."
+          "Uni istalgan vaqtda yana sotuvga qo‘yishingiz mumkin, narxi va soliqlari saqlanib turadi. Allaqachon yaratilgan buyurtmalar va hisobotlarga ta’sir qilmaydi."
         ]
       },
       {
@@ -2072,7 +2072,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Faktura kech kelsa, qabul qilingan buyurtmani oching va Kirim solig‘i kartasida Kirim solig‘ini kiritish yoki o‘zgartirish uchun Tahrirlash tugmasini bosing. Faqat To‘lanadigan summa o‘zgaradi; zaxira, mahsulot tannarxi va to‘langan yoki to‘lanmagan holati o‘zgarmaydi. Yaroqsiz deb belgilangan buyurtmalarda Kirim solig‘i faqat o‘qish uchun qoladi, yangilanishdan oldin saqlangan buyurtmalar esa orqaga qarab to‘ldirilmaydi."
+        "text": "Faktura kech kelsa, qabul qilingan buyurtmani oching va Kirim solig‘i kartasida Kirim solig‘ini kiritish tugmasini bosing yoki uni o‘zgartirish uchun Tahrirlash tugmasini bosing. Faqat To‘lanadigan summa o‘zgaradi; zaxira, mahsulot tannarxi va to‘langan yoki to‘lanmagan holati o‘zgarmaydi. Yaroqsiz deb belgilangan buyurtmalarda Kirim solig‘i faqat o‘qish uchun qoladi, yangilanishdan oldin saqlangan buyurtmalar esa orqaga qarab to‘ldirilmaydi."
       },
       {
         "type": "h2",

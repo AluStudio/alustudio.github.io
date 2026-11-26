@@ -1168,7 +1168,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A fizetési feltétel dönti el, mi történik ezután: a „Fizetés átvételkor” feltételű rendelések fizetettnek lesznek jelölve, a „Havi hitel” feltételűek pedig kifizetetlenek maradnak a Nyitott számlák alatt, ahol beszállítónként kiegyenlítheti őket – egy rendelést, az adott hónapot vagy mindent."
+        "text": "A fizetési feltétel dönti el, mi történik ezután: a „Fizetés átvételkor” feltételű rendelések fizetettként lesznek megjelölve, a „Havi hitel” feltételűek pedig kifizetetlenek maradnak a Nyitott számlák között, ahol beszállítónként rendezheti őket – egy rendelést, az adott hónap összes rendelését vagy az összeset."
       },
       {
         "type": "p",
@@ -1251,7 +1251,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Az árbevétel azon a napon számít, amikor az árut átadták, minden engedmény után és adó előtt; a beérkezett pénz pedig azon a napon, amikor a pénz befolyt, és azt a ténylegesen átvett összeg adja, adóval együtt. Az adót felszámító boltban a beérkezett pénz ezért az adó összegével magasabb az árbevételnél, még a pultnál kifizetett rendeléseknél is. Mindkettő a Riportok első sorának első két csempéjeként szerepel, a Bruttó nyereség, a Rendelések és az Átlagos rendelés mellett."
+        "text": "Az árbevétel azon a napon számít, amikor az árut átadták, minden engedmény után és adó előtt; a beérkezett pénz pedig azon a napon, amikor a pénz befolyt, és a ténylegesen beérkezett összeget jelenti, adóval együtt. Az adót felszámító boltban a beérkezett pénz ezért az adó összegével magasabb az árbevételnél, még a pultnál kifizetett rendeléseknél is. Mindkettő a Riportok első sorának első két csempéjeként szerepel, a Bruttó nyereség, a Rendelések és az Átlagos rendelés mellett."
       },
       {
         "type": "shot",
@@ -1382,7 +1382,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A második sor két csempéje csak bizonyos esetekben jelenik meg. A 3.6-os verzióban megjelent Adó csempe csak az adóval rendelkező boltoknál látszik, vagy ha a kiválasztott időszakban adó alatt történt eladás van. A Nettó eredmény csempe csak akkor jelenik meg, ha az időszak az Ez a hónap, vagy pontosan egy egész hónapot fed le."
+        "text": "A második sor két csempéje csak bizonyos esetekben jelenik meg. A 3.6-os verzióban megjelent Adó csempe csak az adót felszámító boltoknál látszik, vagy ha a kiválasztott időszakban adó felszámításával történt eladás. A Nettó eredmény csempe csak akkor jelenik meg, ha az időszak az Ez a hónap, vagy pontosan egy egész hónapot fed le."
       },
       {
         "type": "note",
@@ -1644,7 +1644,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A bruttó nyereség az összes engedmény (tétel- és kosárengedmények, akciók, pontbeváltás) utáni, adó nélküli árbevétel mínusz a költség. Az árrés a bruttó nyereség osztva a költséggel rendelkező termékek árbevételével, így a költség nélküli termékek nem húzzák le. A visszavétel a visszavétel napján visszaveszi azt a bruttó nyereséget, amelyet ezek a tételek hoztak."
+        "text": "A bruttó nyereség az összes engedmény (tétel- és kosárengedmények, akciók, pontbeváltás) utáni, adó nélküli árbevétel mínusz a költség. Az árrés a bruttó nyereség osztva a költséggel rendelkező termékek árbevételével, így a költség nélküli termékek nem csökkentik az árrést. A visszavétel a visszavétel napján visszaveszi azt a bruttó nyereséget, amelyet ezek a tételek hoztak."
       },
       {
         "type": "p",
@@ -2074,7 +2074,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Az Eredmény → Egyszeri kiadások alatt az űrlap az összeg alatt Számlaszám mezővel és előzetesen felszámított adó sorokkal bővül. Az összeget a levonható adó előtt tartsa, és csak a levonható adót másolja át. Egy $1,100-os irodaszer-számlánál, amelyből $100 levonható, adjon meg $1,000-et és egy 10%-os, $1,000 és $100 összegű sort; a Bruttó $1,100-at mutat, az eredménykimutatás pedig $1,000-et számol. Az ehhez tartozó előzetesen felszámított adó egészében a kiadás dátumán számít, soha nem követi a Beszámított hónapot vagy az elosztást."
+        "text": "Az Eredmény → Egyszeri kiadások alatt az űrlap az összeg alatt Számlaszám mezővel és előzetesen felszámított adó sorokkal bővül. Az összeget a levonható adó előtt tartsa, és csak a levonható adót másolja át. Egy $1,100-os irodaszer-számlánál, amelyből $100 levonható, adjon meg $1,000-et és egy 10%-os, $1,000 és $100 összegű sort; a Bruttó $1,100-at mutat, az Eredmény pedig $1,000-et számol. Az ehhez tartozó előzetesen felszámított adó egészében a kiadás dátumán számít, soha nem követi a Beszámított hónapot vagy az elosztást."
       },
       {
         "type": "p",
@@ -2086,7 +2086,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A DingPOS nem számolja ki az importált áfát, a fordított adózást és a részleges levonást. A levonható adót másolja át a számláról, a nem levonható adót pedig tegye a nettó összegbe."
+        "text": "A DingPOS nem számolja ki az importáfát, a fordított adózást és a részleges levonást. A levonható adót másolja át a számláról, a nem levonható adót pedig tegye a nettó összegbe."
       },
       {
         "type": "h2",
@@ -2474,7 +2474,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A kézi pontmódosítás a 3.5-ös verzióban jelent meg. Pro csomagban azok a munkatársak, akiknek a szerepköre a Kézi pontmódosításhoz jóváhagyást kér (alapértelmezés szerint a Munkatárs szerepkörnél ez így van), a megerősítéskor egy menedzser vagy a tulajdonos PIN-kódját kell megadniuk."
+        "text": "A kézi pontmódosítás a 3.5-ös verzióban jelent meg. Pro csomagban azoknak a munkatársaknak, akiknek a szerepköre jóváhagyást kér a kézi pontmódosításhoz (alapértelmezés szerint a Munkatárs szerepkörnél ez így van), a megerősítéskor egy menedzser vagy a tulajdonos PIN-kódját kell megadniuk."
       }
     ],
     "related": [

@@ -332,7 +332,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Os descontos que você dá com frequência podem ser salvos: vá em Ajustes → Fidelidade e promoções → Descontos predefinidos e toque em Adicionar desconto predefinido, por exemplo “Preço de funcionário 20% off”. No caixa, tanto o desconto em itens quanto o desconto no carrinho têm um menu Predefinidos; ao escolher um, o tipo e o valor do desconto são preenchidos exatamente como se você os tivesse digitado, então ele continua contando para o limite de desconto do funcionário. Os descontos predefinidos chegaram na versão 3.6 e exigem o plano Standard ou superior."
+        "text": "Os descontos que você dá com frequência podem ser salvos: vá em Ajustes → Fidelidade e promoções → Descontos predefinidos e toque em Adicionar desconto predefinido, por exemplo “Preço de funcionário com 20% de desconto”. No caixa, tanto o desconto em itens quanto o desconto no carrinho têm um menu Predefinidos; ao escolher um, o tipo e o valor do desconto são preenchidos exatamente como se você os tivesse digitado, então ele continua contando para o limite de desconto do funcionário. Os descontos predefinidos chegaram na versão 3.6 e exigem o plano Standard ou superior."
       }
     ],
     "related": [
@@ -422,7 +422,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "As formas de pagamento são apenas etiquetas de controle: o DingPOS não processa pagamentos de verdade. Receba pagamentos por cartão ou celular na sua maquininha ou app de sempre e depois escolha a forma correspondente no DingPOS para registrar. Nos pagamentos em dinheiro, o troco é calculado automaticamente e, onde as moedas de menor valor deixaram de circular, o dinheiro também pode ser arredondado — veja “O pagamento em dinheiro pode ser arredondado para as moedas em circulação?”"
+        "text": "As formas de pagamento são apenas etiquetas de controle: o DingPOS não processa pagamentos de verdade. Receba pagamentos por cartão ou celular na sua maquininha ou app de sempre e depois escolha a forma correspondente no DingPOS para registrar. Nos pagamentos em dinheiro, o troco é calculado automaticamente e, onde as moedas de menor valor deixaram de circular, o valor pago em dinheiro também pode ser arredondado — veja “O pagamento em dinheiro pode ser arredondado para as moedas em circulação?”"
       },
       {
         "type": "p",
@@ -798,7 +798,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "No Resumo, a receita de uma encomenda é reconhecida por inteiro na data da retirada, enquanto o sinal entra em Valor recebido no dia em que é pago, então os dois números ficam diferentes por um tempo. Veja “Qual é a diferença entre receita e valor recebido?”"
+        "text": "No Resumo, a receita de uma encomenda é reconhecida por inteiro na data da retirada, enquanto o sinal entra em Valor recebido no dia em que é pago; por isso, os dois números ficam diferentes por um tempo. Veja “Qual é a diferença entre receita e valor recebido?”"
       },
       {
         "type": "note",

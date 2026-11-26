@@ -90,7 +90,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Als je DingPOS voor het eerst opent, zet een installatiewizard je winkel op in twee stappen en een paar minuten:"
+        "text": "Als je DingPOS voor het eerst opent, helpt een installatiewizard je om je winkel in een paar minuten en twee stappen in te stellen:"
       },
       {
         "type": "steps",
@@ -386,7 +386,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wil je een tijdje geen belasting berekenen, zet dan bovenaan de kaart Btw Belasting berekenen uit: alle latere verkopen zijn zonder belasting, ook voor artikelen die al in een winkelmand zitten. Elk product behoudt zijn btw-tarieven, en als je de schakelaar weer aanzet, zijn ze weer zoals ze waren."
+        "text": "Wil je een tijdje geen belasting berekenen, zet dan bovenaan de kaart Btw de schakelaar Belasting berekenen uit: alle latere verkopen zijn zonder belasting, ook voor artikelen die al in een winkelmand zitten. Elk product behoudt zijn btw-tarieven, en als je de schakelaar weer aanzet, zijn ze weer zoals ze waren."
       },
       {
         "type": "p",
@@ -3016,7 +3016,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Lite: voor wie alleen een kraam runt en afrekenen en producten nodig heeft.",
+          "Lite: voor één persoon met een kraam die afrekenen en producten nodig heeft.",
           "Standard: voegt acties, kortingsvoorinstellingen, spaarpunten en klantniveaus, voorraadbeheer, inkoop, verkoop op rekening, voorbestellingen en kostenpercentages voor betaalmethoden toe.",
           "Pro: voegt medewerkersaccounts en toestemmingen, goedkeuring door een manager, het activiteitenlogboek en herstelregistraties toe — voor winkels met medewerkers."
         ]
@@ -3429,7 +3429,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sinds v3.4 toont W&V de nettowinst van elke maand na de kostprijs van producten, de transactiekosten en je vaste en eenmalige kosten — zie “Hoe zie ik hoeveel ik elke maand echt heb verdiend?” Sinds v3.6 exporteert het belastingrapport een periode (bijvoorbeeld Deze maand) als CSV, Excel-werkmap of PDF-rapport voor je boekhouder, met de verkopen, de belasting, het ontvangen bedrag per betaalmethode en de vorderingen. W&V en de andere rapporten kun je nog niet exporteren, maar alles wat je nodig hebt om af te stemmen, zit al in de app:"
+        "text": "Sinds v3.4 toont W&V de nettowinst van elke maand na de kostprijs van producten, de transactiekosten en je vaste en eenmalige kosten — zie “Hoe zie ik hoeveel ik elke maand echt heb verdiend?” Sinds v3.6 kun je in het belastingrapport een periode (bijvoorbeeld Deze maand) exporteren als CSV, Excel-werkmap of PDF-rapport voor je boekhouder, met de verkopen, de belasting, het ontvangen bedrag per betaalmethode en de vorderingen. W&V en de andere rapporten kun je nog niet exporteren, maar alles wat je nodig hebt om af te stemmen, zit al in de app:"
       },
       {
         "type": "list",

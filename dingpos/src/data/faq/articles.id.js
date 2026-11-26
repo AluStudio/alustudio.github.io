@@ -468,7 +468,7 @@ export const articles = [
         "items": [
           "Masukkan tarif yang benar-benar dipotong penyedia Anda. Jika biayanya dikenai pajak, sertakan pajaknya: untuk 3% plus pajak 5%, masukkan 3,15%. Kosongkan kedua kolom jika tanpa biaya.",
           "Perubahan tarif hanya berlaku untuk pembayaran berikutnya; biaya yang sudah tercatat tetap seperti semula.",
-          "“Persentase biaya dikembalikan saat retur dan pembatalan pra-pesan” awalnya aktif untuk toko di Taiwan dan Jepang, dan nonaktif di tempat lain, karena penyedia seperti Stripe, Square, dan PayPal tidak mengembalikan biayanya saat pengembalian dana; atur sesuai penyedia Anda. Pengaturan ini mengatur retur dan uang muka pra-pesan yang dikembalikan: jika aktif, persentasenya dikembalikan; biaya tetap tidak pernah dikembalikan. Pembatalan penjualan (Void) atau pembatalan pelunasan mengabaikan pengaturan ini dan menarik kembali seluruh biaya yang tercatat, termasuk biaya tetap. Dalam kedua kasus, pelanggan menerima kembali jumlah yang sama.",
+          "“Persentase biaya dikembalikan saat retur dan pembatalan pra-pesan” awalnya aktif untuk toko di Taiwan dan Jepang, dan nonaktif di tempat lain, karena penyedia seperti Stripe, Square, dan PayPal tidak mengembalikan biayanya saat pengembalian dana; atur sesuai penyedia Anda. Pengaturan ini mengatur retur dan uang muka pra-pesan yang dikembalikan: jika aktif, persentasenya dikembalikan; biaya tetap tidak pernah dikembalikan. Batalkan penjualan (Void) atau pembatalan pelunasan mengabaikan pengaturan ini dan menarik kembali seluruh biaya yang tercatat, termasuk biaya tetap. Dalam kedua kasus, pelanggan menerima kembali jumlah yang sama.",
           "Pembayaran yang diterima sebelum metode itu punya tarif tidak membawa biaya: Statistik menandainya “(N tanpa tarif)” dan menampilkan kas bersih sebagai “—”."
         ]
       },
@@ -906,7 +906,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Harga pokok bekerja dengan cara yang sama: harga pokok yang kosong menampilkan harga pokok produk dengan warna abu-abu dan ikut berubah saat harga pokok produk berubah, sedangkan angka yang diisi adalah harga pokok milik kombinasi itu sendiri, ditampilkan dengan warna hitam — termasuk angka 0. Pakai harga pokok produk, di ikon ⓘ di samping kolom Hrg. pokok, menghapus harga pokok sendiri dari semua kombinasi sekaligus."
+        "text": "Harga pokok bekerja dengan cara yang sama: harga pokok yang kosong menampilkan harga pokok produk dengan warna abu-abu dan ikut berubah saat harga pokok produk berubah, sedangkan angka yang diisi adalah harga pokok milik kombinasi itu sendiri, ditampilkan dengan warna hitam — termasuk angka 0. Pakai harga pokok produk di ikon ⓘ di samping kolom Hrg. pokok untuk menghapus harga pokok sendiri dari semua kombinasi sekaligus."
       },
       {
         "type": "note",

@@ -94,7 +94,7 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Vælg dit land eller din region. Øverst på listen står det land eller den region, som denne iPad befinder sig i, derefter de mest almindelige markeder; nedenunder finder du alle 175 lande og regioner, hvor DingPOS er i App Store. Du kan søge på navn på appens sprog eller på engelsk. Dit valg udfylder valuta, moms og momstilstand.",
+          "Vælg dit land eller din region. Øverst på listen står det land eller den region, som denne iPad befinder sig i, derefter de mest almindelige markeder; nedenunder finder du alle 175 lande og regioner, hvor DingPOS er tilgængelig i App Store. Du kan søge på navn på appens sprog eller på engelsk. Dit valg udfylder valuta, moms og momstilstand.",
           "Under Din butik skriver du butikkens navn, tilføjer eventuelt et logo og tjekker valuta, moms og momstilstand (inkl. moms / ekskl. moms). Valutaen er som standard dit lands valuta; tryk på den for at vælge blandt 130 valutaer. Momslisten viser dit lands standardmoms: omdøb en række, ret satsen, slet en række, eller tryk på Tilføj moms for at tilføje endnu en. En butik i British Columbia ændrer fx den første række til „GST 5“ og tilføjer en række „PST 7“."
         ]
       },
@@ -903,7 +903,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Når et produkt har varianter, har hver kombination under Variantpris og lager sit eget lager, og dens pris følger produktets Pris: En kombination uden egen pris viser produktets pris i gråt og ændrer sig, når den gør, og et tal, du skriver, er kombinationens egen pris, vist i sort. Sæt fx prisen på en T-shirt til 390, og ændr kun L til 350: M og XL sælges for 390, og når produktets Pris senere bliver 420, følger M og XL med til 420, mens L bliver ved med at koste 350. ⓘ ved siden af kolonnen Pris rummer Brug produktets pris, som sætter alle kombinationer tilbage til at følge produktets pris. Produkter oprettet før v3.6 beholder hver variantpris som kombinationens egen pris, og produktets Pris er den laveste af dem. Kassen, produktlisten og produktdetaljerne viser et interval fra laveste til højeste pris, fx „NT$350–NT$390“, eller én pris, når alle kombinationer koster det samme; sortering efter pris bruger den laveste kombinationspris. Ved betaling vises en variantvælger, når du trykker på produktet, før det lægges i kurven."
+        "text": "Når et produkt har varianter, har hver kombination under Variantpris og lager sit eget lager, og dens pris følger produktets Pris: En kombination uden egen pris viser produktets pris i gråt og ændrer sig, når den gør, og et tal, du skriver, er kombinationens egen pris, vist i sort. Sæt fx prisen på en T-shirt til 390, og ændr kun L til 350: M og XL sælges for 390, og når produktets Pris senere bliver 420, følger M og XL med til 420, mens L bliver ved med at koste 350. ⓘ ved siden af kolonnen Pris rummer Brug produktets pris, som sætter alle kombinationer tilbage til at følge produktets pris. Produkter oprettet før v3.6 beholder hver variantpris som kombinationens egen pris, og produktets Pris er den laveste af dem. Kassen, produktlisten og produktdetaljerne viser et interval fra laveste til højeste pris, fx „NT$350–NT$390“, eller én pris, når alle kombinationer koster det samme; sortering efter pris bruger den laveste kombinationspris. Ved betaling åbnes en variantvælger, når du trykker på produktet, før det lægges i kurven."
       },
       {
         "type": "p",
@@ -1052,7 +1052,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Optællingsrettelse: Ret lagerantallet på produktets redigeringsside, så det passer med det, du faktisk har talt op. Den indgår aldrig i resultatopgørelsen.",
+          "Optællingsrettelse: Ret lagerantallet på produktets formular, så det passer med det, du faktisk har talt op. Den indgår aldrig i resultatopgørelsen.",
           "Reguler lager (siden v3.5): Tryk på Reguler lager i produktdetaljerne, vælg Fjern eller Tilføj, antallet og en årsag som Udløbet/fordærvet, Beskadiget eller Smagsprøver og gaver. Kostprisen for det, du fjerner, tæller med i denne måneds lagertab i resultatopgørelsen – se „Hvordan registrerer jeg varer, der er udløbet, gået i stykker eller givet væk som smagsprøver?“"
         ]
       }
@@ -1216,7 +1216,7 @@ export const articles = [
           "Et produkt, der ikke er til salg, vises aldrig i kassens produktgitter, kategorier, søgning eller stregkodescanning og kan ikke være en gave, et tilvalg, målet for en kampagne eller en erstatningsvare ved en ombytning. En kategori, der kun indeholder produkter, der ikke er til salg, udelades fra kassens kategorilinje.",
           "Når butikken har produkter, der ikke er til salg, vises en filterknap øverst til højre i Produkter: Vælg Alle produkter, Til salg eller Ikke til salg, sammen med søgning og kategorier.",
           "Indkøbsordrer, modtagelse, Synkronisér produktets kostpris og ubetalte regninger fungerer præcis som for andre produkter, så et materiales indkøbspris og lager kan registreres via Indkøb.",
-          "Når du sælger andre produkter, trækker det ikke fra dets lager. Når du bruger noget af det, registrerer du en fjernelse med Reguler lager i produktdetaljerne: Brugt i produktion for det, der er gået i produkter, og Butiksforbrug for ting som papirposer eller rengøringsmidler.",
+          "Når du sælger andre produkter, trækkes der ikke fra materialets lager. Når du bruger noget af det, registrerer du en fjernelse med Reguler lager i produktdetaljerne: Brugt i produktion for det, der er gået i produkter, og Butiksforbrug for ting som papirposer eller rengøringsmidler.",
           "Du kan til enhver tid slå det til igen, og prisen og skatten er der stadig. Ordrer og rapporter, der allerede er lavet, påvirkes ikke."
         ]
       },
@@ -1769,7 +1769,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Den anden vej åbner Se rapporten for oktober under en måneds titel i Resultat Statistik på den måned (brugerdefineret periode 1/10–31/10); for måneden i gang åbner den Denne måned."
+        "text": "Den anden vej åbner Statistik for den måned (brugerdefineret periode 1/10–31/10), når du trykker på Se rapporten for oktober under månedens titel i Resultat; for måneden i gang åbner den Denne måned."
       },
       {
         "type": "note",
@@ -2852,7 +2852,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "En tilladelse har to værdier: Tilladt eller Kræver godkendelse – intet er direkte forbudt. Når en medarbejder støder på en handling, der kræver godkendelse, vælger en kollega med lov til at udføre den sit navn og indtaster sin PIN for at lade den gå igennem."
+        "text": "En tilladelse har to værdier: Tilladt eller Kræver godkendelse – intet er direkte forbudt. Når en medarbejder støder på en handling, der kræver godkendelse, vælger en kollega, som har tilladelse til at udføre den, sit eget navn og indtaster sin PIN for at godkende handlingen."
       },
       {
         "type": "list",
@@ -3414,7 +3414,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Siden v3.4 viser Resultat hver måneds nettoresultat efter produkternes kostpris, gebyrer og udgifter – se „Hvordan ser jeg, hvor meget jeg faktisk tjener hver måned?“ Siden v3.6 eksporterer momsrapporten en periode (fx Denne måned) som CSV, som Excel-projektmappe eller som PDF-rapport til din bogholder, med salg, moms, beløbet modtaget med hver betalingsmåde og tilgodehavender. Resultat og de øvrige rapporter kan endnu ikke eksporteres, men alt, du skal bruge til afstemningen, findes allerede i appen:"
+        "text": "Siden v3.4 viser Resultat hver måneds nettoresultat efter produkternes kostpris, gebyrer og udgifter – se „Hvordan ser jeg, hvor meget jeg faktisk tjener hver måned?“ Siden v3.6 kan momsrapporten eksporteres for en periode (fx Denne måned) som CSV, som Excel-projektmappe eller som PDF-rapport til din bogholder, med salg, moms, beløbet modtaget med hver betalingsmåde og tilgodehavender. Resultat og de øvrige rapporter kan endnu ikke eksporteres, men alt, du skal bruge til afstemningen, findes allerede i appen:"
       },
       {
         "type": "list",

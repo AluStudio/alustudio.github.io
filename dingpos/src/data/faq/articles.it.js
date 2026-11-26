@@ -332,7 +332,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Gli sconti che dai spesso si possono salvare: vai in Impostazioni → Fedeltà e promozioni → Sconti predefiniti e tocca Aggiungi sconto predefinito, ad esempio «Prezzo collaboratori −20%». Alla cassa, sia lo sconto sugli articoli sia lo sconto sul carrello hanno un menu Predefiniti: scegliendone uno, tipo e valore dello sconto si compilano esattamente come se li avessi digitati, quindi conta comunque ai fini dello sconto massimo di un collaboratore. Gli sconti predefiniti sono arrivati con la v3.6 e richiedono il piano Standard o superiore."
+        "text": "Gli sconti che dai spesso si possono salvare: vai in Impostazioni → Fedeltà e promozioni → Sconti predefiniti e tocca Aggiungi sconto predefinito, ad esempio «Prezzo collaboratori −20%». Alla cassa, sia lo sconto sugli articoli sia lo sconto sul carrello hanno un menu Predefiniti: scegliendone uno, tipo e valore dello sconto si compilano esattamente come se li avessi digitati, quindi conta comunque ai fini dello sconto massimo del ruolo del collaboratore. Gli sconti predefiniti sono arrivati con la v3.6 e richiedono il piano Standard o superiore."
       }
     ],
     "related": [
@@ -1613,7 +1613,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Un prodotto con varianti è contrassegnato come Costo aggiunto solo quando ogni variante venduta senza costo ne ha uno: il proprio oppure quello del prodotto, da seguire. Dalla v3.6, un ordine d'acquisto può anche ripartire la spedizione nel costo del prodotto che scrive, quando è attivo Includi spedizione nel costo."
+        "text": "Un prodotto con varianti è contrassegnato come Costo aggiunto solo quando ogni variante venduta senza costo ne ha uno: il proprio oppure quello del prodotto, se impostato per essere seguito. Dalla v3.6, un ordine d'acquisto può anche ripartire la spedizione nel costo del prodotto che scrive, quando è attivo Includi spedizione nel costo."
       },
       {
         "type": "note",
@@ -2854,7 +2854,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Azioni (rettifica manuale della giacenza, rettifica manuale dei punti, gestione prodotti, pagamento oltre lo sconto massimo del ruolo): un'approvazione vale per quella sola azione.",
-          "Schermate (costi e utile, Report, conto economico e spese, Impostazioni, backup e ripristino): un'approvazione sblocca finché l'operatore non cambia o l'app va in background.",
+          "Schermate (costi e utile, Report, conto economico e spese, Impostazioni, backup e ripristino): un'approvazione sblocca l'accesso finché l'operatore non cambia o l'app va in background.",
           "Lo sconto massimo del ruolo si applica agli sconti manuali e viene controllato una sola volta al pagamento; le promozioni automatiche e il riscatto dei punti non vengono conteggiati."
         ]
       },
