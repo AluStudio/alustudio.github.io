@@ -114,3 +114,8 @@
   - `expense-form`：編輯 Rent 的固定支出表單，不是空白的新增表單：有金額與起訖月份才看得出欄位。
 - 已知限制：`profitLoss` 是台灣店，`profit-loss-month` 與 `expense-form` 在每種語言都是 NT$；fixture 的商品名稱在中文截圖裡也是英文。都是 fixture 的資料，不能在這個 repo 改，交給 owner 在 H001 判斷。
 - Satisfies: REQ-005, AC-005
+
+### DEC-012 Phase 4 的 build 驗收
+- Choice: Phase 4（T018–T021）的 `npm run build` 只接受一種失敗：`slug "<new>" missing from <code> pack`，`<code>` 是翻譯語言。build 要求每個 pack 的 slug 一致，四篇新文章要到 Phase 5 的 `npm run l10n -- dingpos apply`（T023–T025）和 `npm run zh-hans`（T022）才會進到其他語言，所以 tasks.md 寫的「Phase 4 build 就會過」做不到。T018–T020 用 `npm run build 2>&1 | grep ✗ | grep -v "missing from"` 為空來驗；T021 的頁面檢查用 `vite dev`（SPA 路由，不需要 copy-spa-pages 寫出每個路由），完整的 build 與 prerender 留給 T029。
+- Alternatives: 先在翻譯 pack 放 en 內容佔位（違反「翻譯檔只由 `apply` 產生」）；把四篇新文章延到 Phase 5 才寫入 pack（en / zh-Hant 的事實查核就無法在網頁上看）。
+- Satisfies: REQ-008, REQ-011
