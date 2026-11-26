@@ -1156,7 +1156,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Achats, dans la barre latérale, sert à gérer les fournisseurs et les bons de commande. Une fiche fournisseur contient un nom, un interlocuteur, un téléphone, une adresse et des conditions de paiement par défaut (paiement à la réception ou crédit mensuel)."
+        "text": "Achats, dans la barre latérale, sert à gérer les fournisseurs et les bons de commande. Une fiche fournisseur contient un nom, un interlocuteur, un téléphone, une adresse et des conditions de paiement par défaut : Paiement à la réception ou Crédit mensuel."
       },
       {
         "type": "steps",
@@ -1168,7 +1168,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Les conditions de paiement déterminent la suite : les commandes à paiement à la réception sont marquées comme payées, tandis que les commandes à crédit mensuel restent non payées dans Factures impayées, où vous pouvez les régler par fournisseur : une commande, le mois en cours, ou tout."
+        "text": "Les conditions de paiement déterminent la suite : les commandes en Paiement à la réception sont marquées comme payées, tandis que les commandes en Crédit mensuel restent non payées dans Factures impayées, où vous pouvez les régler par fournisseur : une commande, le mois en cours, ou tout."
       },
       {
         "type": "p",

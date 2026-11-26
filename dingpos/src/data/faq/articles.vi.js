@@ -1155,7 +1155,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Mục Nhập hàng trên thanh bên quản lý nhà cung cấp và đơn nhập hàng. Mỗi nhà cung cấp lưu tên, người liên hệ, số điện thoại, địa chỉ và kỳ hạn thanh toán mặc định (trả ngay hoặc theo tháng)."
+        "text": "Mục Nhập hàng trên thanh bên quản lý nhà cung cấp và đơn nhập hàng. Mỗi nhà cung cấp lưu tên, người liên hệ, số điện thoại, địa chỉ và kỳ hạn thanh toán mặc định: Trả khi nhận hàng hoặc Công nợ theo tháng."
       },
       {
         "type": "steps",
@@ -1167,7 +1167,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kỳ hạn thanh toán quyết định bước tiếp theo: đơn trả ngay được đánh dấu đã thanh toán, còn đơn theo tháng vẫn còn nợ trong Hóa đơn còn nợ, nơi bạn có thể tất toán theo từng nhà cung cấp — một đơn, trong tháng này, hoặc toàn bộ."
+        "text": "Kỳ hạn thanh toán quyết định bước tiếp theo: đơn Trả khi nhận hàng được đánh dấu đã thanh toán, còn đơn Công nợ theo tháng vẫn còn nợ trong Hóa đơn còn nợ, nơi bạn có thể tất toán theo từng nhà cung cấp — một đơn, trong tháng này, hoặc toàn bộ."
       },
       {
         "type": "p",

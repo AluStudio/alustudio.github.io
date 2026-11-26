@@ -1153,7 +1153,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Compras, na barra lateral, reúne os fornecedores e os pedidos de compra. O cadastro do fornecedor guarda nome, pessoa de contato, telefone, endereço e a condição de pagamento padrão (pagar no recebimento ou crédito mensal)."
+        "text": "Compras, na barra lateral, reúne os fornecedores e os pedidos de compra. O cadastro do fornecedor guarda nome, pessoa de contato, telefone, endereço e a condição de pagamento padrão: Pagar no recebimento ou Crédito mensal."
       },
       {
         "type": "steps",
@@ -1165,7 +1165,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "A condição de pagamento define o que acontece em seguida: pedidos com pagamento no recebimento são marcados como pagos, enquanto os de crédito mensal ficam em aberto em Contas a pagar, onde você pode quitá-los por fornecedor — um pedido, o mês ou tudo de uma vez."
+        "text": "A condição de pagamento define o que acontece em seguida: pedidos com Pagar no recebimento são marcados como pagos, enquanto os de Crédito mensal ficam em aberto em Contas a pagar, onde você pode quitá-los por fornecedor — um pedido, o mês ou tudo de uma vez."
       },
       {
         "type": "p",

@@ -105,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Para birimi kurulumdan sonra değiştirilemez; vergiler ve vergi modu ise sonradan Ayarlar → Mağaza Bilgileri'nden değiştirilebilir. ABD, Kanada, Brezilya ve Mikronezya'da oran eyalete, vilayete veya şehre göre değiştiği için oran alanı boş başlar; devam etmek için uyguladığınız oranı girersiniz. Oran 0'dan büyük olmalıdır: vergi uygulamayan bir mağaza ilgili satırı siler. 175 ülkelik liste ve para birimi seçimi v3.2 ile geldi; önceki sürümlerde 15 ülke vardı."
+        "text": "Para birimi kurulumdan sonra değiştirilemez; vergiler ve vergi modu ise sonradan Ayarlar → Mağaza Bilgileri'nden değiştirilebilir. ABD, Kanada, Brezilya ve Mikronezya'da oran eyalete, vilayete veya şehre göre değiştiği için oran alanı boş başlar; devam etmek için uyguladığınız oranı girersiniz. Oran 0'dan büyük olmalıdır: vergi uygulamayan bir mağaza ilgili satırı siler. Almanya, Fransa, İtalya ve diğer Avrupa ülkelerinde liste, yerel perakendede yaygın olan indirimli oranları da yerel vergi adıyla içerir; örneğin Almanya'da “MwSt. 19%” ve “MwSt. 7%”. İndirimli oranlar yeni ürünlere varsayılan olarak uygulanmaz; bunları ürün bazında açın. 175 ülkelik liste ve para birimi seçimi v3.2 ile geldi; önceki sürümlerde 15 ülke vardı."
       }
     ],
     "related": [
@@ -319,7 +319,8 @@ export const articles = [
       "sabit tutar indirim",
       "fiyat indirimi",
       "ürün indirimi",
-      "sepet indirimi"
+      "sepet indirimi",
+      "indirim ön ayarı"
     ],
     "content": [
       {
@@ -336,6 +337,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Her ürüne ve sepete aynı anda yalnızca bir indirim uygulanabilir — yeniden uygulamak öncekinin üzerine yazar, indirim rozetine dokunmak ise indirimi kaldırır. İndirimler perakendede standart olan sırayla, vergiden önce uygulanır."
+      },
+      {
+        "type": "p",
+        "text": "Sık verdiğiniz indirimleri kaydedebilirsiniz: Ayarlar → Sadakat ve Kampanyalar → İndirim Ön Ayarları'na gidip Ön Ayar Ekle'ye dokunun; örneğin “Personel fiyatı %20 indirim”. Kasada hem ürün indirimi hem de sepet indiriminde bir Ön ayarlar menüsü bulunur; birini seçmek indirim türünü ve değerini siz yazmışsınız gibi aynen doldurur, bu yüzden personelin indirim üst sınırına yine sayılır. İndirim ön ayarları v3.6 ile geldi ve Standard veya üstü plan gerektirir."
       }
     ],
     "related": [
@@ -390,7 +395,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tam hesaplama sırası: ürün indirimleri ve kampanyalar → sepet indirimi → puan kullanımı → vergi. Tutarlar, para biriminin ondalık basamak sayısına göre yarım yukarı yuvarlanır (örneğin TWD için 0, USD için 2)."
+        "text": "Tam hesaplama sırası: ürün indirimleri ve kampanyalar → sepet indirimi → puan kullanımı → vergi. Tutarlar, para biriminin ondalık basamak sayısına göre yarım yukarı yuvarlanır (örneğin TWD için 0, USD için 2). Vergi, her siparişte vergi başına bir kez hesaplanır ve ondalıkları Vergi kartındaki Vergi yuvarlama ayarını izler: En yakına yuvarla, Aşağı yuvarla veya Yukarı yuvarla. Japonya'daki yeni mağazalar Aşağı yuvarla ile başlar; diğer mağazalar En yakına yuvarla ile başlar."
       },
       {
         "type": "note",
@@ -420,7 +425,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Yeni bir mağaza, kurulumda uygulamanın dilinde adlandırılan Nakit ve Kredi Kartı olmak üzere iki ödeme yöntemiyle başlar. Ayarlar → Ödeme Yöntemleri bölümünden istediğiniz başka bir yöntemi (örneğin Apple Pay, LINE Pay, yerel bir dijital cüzdan) ekleyebilir, yöntemleri silebilir veya yeniden sıralayabilirsiniz."
+        "text": "Yeni bir mağaza, kurulumda uygulamanın dilinde adlandırılan Nakit ve Kredi Kartı olmak üzere iki ödeme yöntemiyle başlar. Ayarlar → Ödeme Yöntemleri bölümünden istediğiniz başka bir yöntemi (örneğin Apple Pay, LINE Pay, yerel bir dijital cüzdan) ekleyebilir ve yöntemleri yeniden sıralayabilirsiniz. Bir yöntemin adını değiştirmek için ona dokunun; örneğin Kredi Kartı'nı “Kart (Square)” yapabilirsiniz. İstatistik, ad değişikliğinden önceki satışları da yeni adla sayar (v3.6'dan beri). Ödeme Yöntemini Sil düğmesi düzenleme sayfasının altındadır ve silmeden önce sorar; geçmiş siparişler ödendikleri yöntemi korur, kalan son yöntem ise silinemez."
       },
       {
         "type": "p",
@@ -459,7 +464,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Evet. Ayarlar → Ödeme Yöntemleri bölümünde bir ödeme yöntemine dokunun (veya yeni bir tane ekleyin) ve İşlem ücreti alanını doldurun: bir yüzde, işlem başına sabit bir tutar ya da ikisi birden. Bundan sonra o yöntemle tahsil edilen her ödeme, o andaki orana göre tahmin edilen bir ücretle kaydedilir."
+        "text": "Evet. Ayarlar → Ödeme Yöntemleri bölümünde bir ödeme yöntemine dokunun (veya yeni bir tane ekleyin) ve İşlem ücreti alanını doldurun: bir yüzde, işlem başına sabit bir tutar ya da ikisi birden. Nakit türündeki yöntemlerde ücret yoktur. Bundan sonra o yöntemle tahsil edilen her ödeme, o andaki orana göre tahmin edilen bir ücretle kaydedilir."
       },
       {
         "type": "p",
@@ -468,9 +473,9 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Sağlayıcınızın gerçekte kestiği oranı vergisi dahil girin — %3 artı %5 vergi için %3,15 yazın. Ücret yoksa iki alanı da boş bırakın.",
+          "Sağlayıcınızın gerçekte kestiği oranı girin. Ücret üzerinden vergi alınıyorsa onu da dahil edin: %3 artı %5 vergi için %3,15 yazın. Ücret yoksa iki alanı da boş bırakın.",
           "Oran değişikliği yalnızca sonraki ödemelere uygulanır; daha önce kaydedilen ücretler olduğu gibi kalır.",
-          "“Yüzde ücret iadelerde geri verilir” varsayılan olarak açıktır; iade yapınca ücretini geri veren sağlayıcılar içindir. Ürün iadelerini ve iade edilen ön sipariş kaporalarını yönetir: açıkken yüzde geri gelir, sabit ücret hiçbir zaman geri gelmez. Geçersiz kılma ve geri alınan borç kapatma bu anahtarı yok sayar ve kaydettiği ücretin tamamını, sabit ücret dahil, geri alır. Hangi durumda olursa olsun müşteri aynı tutarı geri alır.",
+          "“Yüzde ücret iadelerde geri verilir” Tayvan ve Japonya'daki mağazalarda açık, diğer yerlerde kapalı başlar; çünkü Stripe, Square ve PayPal gibi sağlayıcılar iade durumunda ücretlerini geri vermez. Anahtarı sağlayıcınıza göre ayarlayın. Ürün iadelerini ve iade edilen ön sipariş kaporalarını yönetir: açıkken yüzde geri gelir, sabit ücret hiçbir zaman geri gelmez. Geçersiz kılma ve geri alınan borç kapatma bu anahtarı yok sayar ve kaydettiği ücretin tamamını, sabit ücret dahil, geri alır. Hangi durumda olursa olsun müşteri aynı tutarı geri alır.",
           "Yöntemin oranı olmadan önce tahsil edilen ödemelerin ücreti yoktur: İstatistik bunları “N işlemde oran eksik” diye işaretler ve neti “—” olarak gösterir."
         ]
       },
@@ -790,7 +795,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ödeme ekranında üstteki Satış seçimini Ön sipariş olarak değiştirin, teslim tarihini seçin, kaporayı girin (0’dan toplam tutara kadar herhangi bir tutar; %30 / %50 / tamamı kısayolları var) ve kaporanın nasıl ödendiğini seçin. Mal geldiğinde ulaşabilmek için bir müşteri ekleyin."
+        "text": "Ödeme ekranında üstteki Satış seçimini Ön sipariş olarak değiştirin, teslim tarihini seçin, kaporayı girin (0’dan toplam tutara kadar herhangi bir tutar; %30 / %50 / tamamı kısayolları var) ve kaporanın nasıl ödendiğini seçin. Teslim alma konusunda ulaşabilmeniz için siparişe bir müşteri ekleyin."
       },
       {
         "type": "list",
@@ -803,7 +808,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "İstatistik sekmesinde ön siparişin satış geliri teslim günü tamamen sayılır; kapora ise ödendiği gün Alınan tutar’a eklenir. Bu yüzden iki rakam bir süre farklı görünür. Bkz. “Satış geliri ile Alınan tutar arasındaki fark nedir?”"
+        "text": "İstatistik sekmesinde ön siparişin satış geliri teslim günü tamamen sayılır; kapora ise ödendiği gün Alınan tutar’a eklenir. Bu yüzden iki rakam bir süre farklı görünür. Bkz. “Satış geliri ile alınan tutar arasındaki fark nedir?”"
       },
       {
         "type": "note",
@@ -904,11 +909,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ürünün varyantları olduğunda Fiyat alanı kapanır; her birleşimin fiyatı Varyant Fiyatı ve Stoku altında ayrı girilir ve kendi stoğu da vardır (v3.2'den beri; önceki sürümler hâlâ ürün fiyatı ister). Kasada, ürün listesinde ve ürün ayrıntısında en düşük fiyattan en yükseğe bir aralık görünür, örneğin “NT$350–NT$390”; tüm birleşimler aynı fiyattaysa tek fiyat gösterilir. Fiyata göre sıralama en düşük birleşim fiyatını kullanır. Kasada ürüne dokunduğunuzda, sepete eklenmeden önce bir varyant seçim ekranı açılır."
+        "text": "Ürünün varyantları olduğunda her birleşim, Varyant Fiyatı ve Stoku altında kendi stoğunu tutar; fiyatı ise ürünün Fiyat alanını izler: kendi fiyatı olmayan bir birleşim ürün fiyatını gri renkte gösterir ve ürün fiyatı değişince o da değişir; yazdığınız bir sayı ise o birleşimin kendi fiyatıdır ve siyah görünür. Örneğin bir tişörtün Fiyat alanını 390 yapıp yalnızca L’yi 350 yaparsanız M ve XL 390’dan satılır; Fiyat sonradan 420 olduğunda M ve XL de 420’ye geçer, L ise 350’de kalır. Fiyat sütununun yanındaki ⓘ simgesinde Ürün fiyatını kullan bulunur; bu seçenek tüm birleşimleri yeniden ürün fiyatını izler hâle getirir. v3.6’dan önce oluşturulan ürünlerde her varyant fiyatı o birleşimin kendi fiyatı olarak kalır ve ürünün Fiyat alanı bunların en düşüğüdür. Kasada, ürün listesinde ve ürün ayrıntısında en düşük fiyattan en yükseğe bir aralık görünür, örneğin “NT$350–NT$390”; tüm birleşimler aynı fiyattaysa tek fiyat gösterilir. Fiyata göre sıralama en düşük birleşim fiyatını kullanır. Kasada ürüne dokunduğunuzda, sepete eklenmeden önce bir varyant seçim ekranı açılır."
       },
       {
         "type": "p",
-        "text": "Her birleşim için maliyet girmeniz gerekmez: boş bir Maliyet alanı Üründen alınır demektir; ürünün maliyetini kullanır ve o değişince birlikte değişir. Bir sayı girerseniz Kendi maliyeti olur — 0 dahil. Tümünde ürün maliyetini kullan, tüm kendi maliyetlerini tek seferde temizler."
+        "text": "Maliyet de aynı şekilde çalışır: boş bir maliyet alanı ürünün maliyetini gri renkte gösterir ve o değişince birlikte değişir; bir sayı ise birleşimin kendi maliyetidir ve siyah görünür — 0 dahil. Maliyet sütununun yanındaki ⓘ simgesinde bulunan Ürün maliyetini kullan, tüm birleşimlerin kendi maliyetini tek seferde temizler."
       },
       {
         "type": "note",
@@ -1045,7 +1050,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Açıldıktan sonra satışlar ve ön siparişler stoğu otomatik olarak azaltır; geçersiz kılma, ürün iadesi ve iptal edilen ön siparişler stoğu geri ekler; satın alma siparişi için stok girişi yapmak stoğu artırır. Her stok hareketi eksiksiz bir defterde kayıt altına alınır. Azalan stok renkli bir uyarıyla vurgulanır."
+        "text": "Açıldıktan sonra satışlar ve ön siparişler stoğu otomatik olarak azaltır; geçersiz kılma, ürün iadesi ve iptal edilen ön siparişler stoğu geri ekler; satın alma siparişi için stok girişi yapmak stoğu artırır. Her stok hareketi eksiksiz bir defterde kayıt altına alınır. Stok 10 veya altına indiğinde ürün listesinde, kasada ve ürün ayrıntısında düşük stok turuncu renkle işaretlenir."
       },
       {
         "type": "p",
@@ -1086,7 +1091,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Stoku Düzelt’i kullanın. Stoğu takip edilen bir üründe, ürün ayrıntısında Stoku Düzelt’e dokunun; Çıkar ya da Ekle’yi seçin, miktarı girin, bir neden belirleyin ve isterseniz not ekleyin (en fazla 100 karakter). Açılan ekran değişiklikten sonraki stoğu hesaplar; nedenin altındaki satır da bunun Kâr/Zarar’a yansıyıp yansımadığını söyler."
+        "text": "Stoku Düzelt’i kullanın. Stoğu takip edilen bir üründe, ürün ayrıntısında Stoku Düzelt’e dokunun; Çıkar ya da Ekle’yi seçin, miktarı + ve − ile ayarlayın (1’den başlar; yazmak için sayıya dokunun), bir neden belirleyin ve isterseniz not ekleyin (en fazla 100 karakter). Açılan ekran değişiklikten sonraki stoğu hesaplar; nedenin altındaki satır da bunun Kâr/Zarar’a yansıyıp yansımadığını söyler."
       },
       {
         "type": "list",
@@ -1167,9 +1172,9 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Yeni Alım’a dokunun, tedarikçiyi seçin; ürünleri, miktarları ve birim maliyetleri ekleyin (birim maliyet her ürünün mevcut maliyetiyle önceden dolar). Nakliye ücreti de eklenebilir. Tedarikçi henüz tanımlı değilse tedarikçi listesinin sol üstündeki Tedarikçi Ekle’ye dokunun; yeni tedarikçi doğrudan satın alma siparişine döner.",
+          "Yeni Alım’a dokunun, tedarikçiyi seçin; ürünleri, miktarları ve birim maliyetleri ekleyin (birim maliyet her ürünün mevcut maliyetiyle önceden dolar). Nakliye ücreti de eklenebilir. Henüz ürün olarak tanımlanmamış mallar için Ürün Ekle seçicisinde Yeni Ürün’e dokunun; yeni ürün doğrudan satın alma siparişine bir kalem olarak girer. Tedarikçi henüz tanımlı değilse tedarikçi listesinin sol üstündeki Tedarikçi Ekle’ye dokunun; yeni tedarikçi doğrudan satın alma siparişine döner.",
           "Taslak stoğa da ödeme yükümlülüklerine de dokunmaz; dilediğiniz gibi düzenleyin veya silin.",
-          "Mallar geldiğinde Stok girişi yap’a dokunun: takip edilen stok artar, satın alma siparişi numarasını alır ve kilitlenir. Stok girişi varsayılan olarak her ürünün maliyetini de bu birim maliyetle günceller; maliyetlerin değişmemesi için satın alma siparişindeki Ürün maliyetini eşitle ayarını kapatın."
+          "Mallar geldiğinde Stok girişi yap’a dokunun: takip edilen stok artar, satın alma siparişi numarasını alır ve kilitlenir. Stok girişi varsayılan olarak her ürünün maliyetini de bu birim maliyetle günceller; maliyetlerin değişmemesi için satın alma siparişindeki Ürün maliyetini eşitle ayarını kapatın. Hemen altındaki Nakliyeyi maliyete dahil et (yeni satın alma siparişlerinde açıktır), nakliye ücretini kalemlere tutarlarına göre bölüştürür; böylece her ürüne yazılan maliyet kendi nakliye payını içerir: 10 × $30 un, 1 × $60 tereyağı ve $25 nakliye için unun maliyeti $32, tereyağının $64 olur."
         ]
       },
       {
@@ -1216,7 +1221,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Satış dışı bir ürün kasa ekranındaki ızgarada, kategorilerde, aramada ve barkod okutmada hiç görünmez; hediye, ek ürün, kampanya hedefi ya da değişimde yerine verilen ürün olamaz.",
+          "Satış dışı bir ürün kasa ekranındaki ızgarada, kategorilerde, aramada ve barkod okutmada hiç görünmez; hediye, ek ürün, kampanya hedefi ya da değişimde yerine verilen ürün olamaz. Yalnızca satış dışı ürünler içeren bir kategori, kasadaki kategori çubuğunda yer almaz.",
+          "Mağazada satış dışı ürünler olduğunda Ürünler ekranının sağ üstünde bir filtre düğmesi belirir: arama ve kategorilerle birlikte Tüm ürünler, Satışta veya Satış dışı seçeneğini seçebilirsiniz.",
           "Satın alma siparişleri, stok girişi, Ürün maliyetini eşitle ve açık faturalar diğer ürünlerdekiyle aynı çalışır; böylece bir malzemenin alış maliyeti ve stoğu Satın Alma üzerinden kaydedilebilir.",
           "Diğer ürünler satıldığında bunun stoğu düşmez. Bir miktar kullandığınızda ürün ayrıntısında Stoku Düzelt ile bir çıkarma kaydedin: ürünlerin içine girenler için Üretimde kullanıldı, kâğıt poşet ya da temizlik ürünü gibi şeyler için Sarf malzemesi.",
           "İstediğiniz zaman geri açabilirsiniz; fiyatı ve vergileri yerinde durur. Daha önce yapılmış siparişler ve raporlar etkilenmez."
@@ -1245,39 +1251,80 @@ export const articles = [
     "keywords": [
       "satış geliri",
       "alınan tutar",
-      "gelir",
+      "istatistik",
+      "brüt kâr",
+      "satış gelirinden brüt kâra",
       "kasa mutabakatı",
       "kapora",
-      "veresiye"
+      "veresiye",
+      "vergi"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Satış geliri, ürünün teslim edildiği güne yazılır ve tüm indirimlerden sonraki, vergiden önceki tutardır; alınan tutar ise paranın geldiği güne yazılır ve gerçekte aldığınız paradır, vergi dahil. Bu yüzden vergi uygulayan bir mağazada, kasada ödenen siparişlerde bile alınan tutar, satış gelirinden vergi kadar yüksek çıkar. Bunun dışında şu durumlarda birbirinden ayrılırlar:"
+        "text": "Satış geliri, ürünün teslim edildiği güne yazılır ve tüm indirimlerden sonraki, vergiden önceki tutardır; alınan tutar ise paranın geldiği güne yazılır ve gerçekte aldığınız paradır, vergi dahil. Bu yüzden vergi uygulayan bir mağazada, kasada ödenen siparişlerde bile alınan tutar satış gelirinden vergi kadar yüksek çıkar. İkisi de İstatistik ekranındaki ilk sıranın ilk iki kutucuğudur; yanlarında Brüt kâr, Siparişler ve Ortalama sipariş yer alır."
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "İlk sırada Satış geliri ile Alınan tutar kutucuklarının yan yana durduğu İstatistik kutucuk sıraları"
+      },
+      {
+        "type": "h2",
+        "text": "Satış geliri ile alınan tutarın ayrıştığı durumlar"
+      },
+      {
+        "type": "p",
+        "text": "Örneğin vergi dahil fiyat uygulayan bir mağaza %5 vergi dahil NT$1.050'lik bir satış yaptığında ve müşteri kasada ödediğinde satış geliri NT$1.000, alınan tutar NT$1.050 olur. Vergiden başka, iki rakam şu durumlarda da ayrışır:"
       },
       {
         "type": "list",
         "items": [
           "Veresiye satış: ürün bugün çıkar ve bugünün satış gelirine yazılır; para, borç kapatıldığı gün alınan tutara yazılır.",
           "Ön sipariş: kapora ödendiği gün alınan tutara yazılır; satış geliri ise teslim alma tarihinde tamamı birden kaydedilir.",
-          "Alıkonulan kapora: müşteri ön siparişi iptal eder ve kaporayı siz alıkoyarsanız, kapora ödendiği gün zaten alınan tutara yazılmıştır. İstatistik ekranında ayrıca alıkonulan kapora olarak gösterilir ve hiçbir zaman satış geliri sayılmaz.",
-          "Daha önceki bir siparişi geçersiz kılma: iade edilen para, geçersiz kılma gününün alınan tutarına yazılır; bu yüzden o günün alınan tutarı eksi olabilir, Geçersiz kılındı ise siparişi satış tarihinde sayar.",
-          "Nakit yuvarlama: nakit yuvarlamanın sipariş toplamının üstünde veya altında kalan farkı alınan tutara yazılır, satış gelirine hiçbir zaman yazılmaz."
+          "Alıkonulan kapora: müşteri bir ön siparişi iptal eder ve kaporayı siz alıkoyarsanız, kapora ödendiği gün zaten alınan tutara yazılmıştır. İstatistik ekranında ayrıca Alıkonulan kapora olarak gösterilir ve hiçbir zaman satış geliri sayılmaz.",
+          "Daha önceki bir siparişi geçersiz kılma: iade edilen para, geçersiz kılma gününün alınan tutarına yazılır; bu yüzden o günün alınan tutarı eksi olabilir. Geçersiz kılınan sipariş ise satış tarihinde sayılır ve Siparişler kutucuğunun alt satırında gösterilir.",
+          "Nakit yuvarlama: Nakit yuvarlamanın sipariş toplamının üstünde veya altında kalan farkı alınan tutara yazılır, satış gelirine hiçbir zaman yazılmaz."
         ]
       },
       {
         "type": "p",
-        "text": "Mutabakat için alınan tutarı kasadaki parayla ve kart terminalinizle karşılaştırın; bir dönemde gerçekte ne kadar sattığınızı görmek için satış gelirine bakın. Ürün iadeleri, satış gelirini iadenin yapıldığı gün düşürür. Satış geliri, Alınan tutar ve Geçersiz kılındı kutucuklarındaki ⓘ da aynısını açıklar; verginin kendisi ise brüt kâr kutucuğundan açılan Satış gelirinden brüt kâra ekranında listelenir."
+        "text": "Bu tutarlardan biri sıfırdan farklıysa, Alınan tutar kutucuğunun alt satırında Nakit yuvarlama veya Alıkonulan kapora gösterilir."
+      },
+      {
+        "type": "h2",
+        "text": "Vergi ve kutucuk ayrıntıları"
+      },
+      {
+        "type": "p",
+        "text": "Satış geliri ile alınan tutar arasındaki farkı oluşturan vergi, Brüt kâr kutucuğunun altından açılan Satış gelirinden brüt kâra ekranında listelenir. Orada Satış geliri (vergi dahil), Vergi ve Satış geliri (vergi hariç) satırları görünür. Avustralya, Birleşik Krallık, Yeni Zelanda ve Singapur'daki mağazalar burada yerel vergi adını görür; örneğin Satış geliri (GST dahil), GST ve Satış geliri (GST hariç)."
+      },
+      {
+        "type": "p",
+        "text": "Beyan için tahsil edilen vergiyi görmek istiyorsanız Vergi kutucuğundan Vergi Raporu'nu açın."
+      },
+      {
+        "type": "p",
+        "text": "Satış geliri, Alınan tutar ve Siparişler kutucuklarındaki ⓘ simgesi bu kuralları uygulama içinde açıklar; Siparişler kutucuğunun alt satırında listelenen geçersiz kılınan siparişler de buna dahildir."
+      },
+      {
+        "type": "h2",
+        "text": "Mutabakat ve satışları okuma"
+      },
+      {
+        "type": "p",
+        "text": "Mutabakat için alınan tutarı kasadaki parayla ve kart terminalinizle karşılaştırın. İstatistik'teki Ödeme Yöntemleri kartı her yöntem için bir satır gösterir; bir yöntemi yeniden adlandırmadan önce yapılan satışlar da yeni ad altında sayılır. Bir dönemde ne kadar sattığınızı görmek için satış gelirine bakın. Ürün iadeleri, satış gelirini iadenin yapıldığı gün düşürür."
       },
       {
         "type": "note",
-        "text": "Vergi öncesi satış geliri v3.5 ile geldi ve geçmiş dönemler de aynı şekilde yeniden hesaplandı; bu yüzden vergi uygulayan bir mağaza, güncellemeden öncesine göre daha düşük satış geliri görür. Bu bir düzeltmedir. Önceki sürümler satış gelirine vergiyi de katıyordu; vergi hariç fiyat uygulayan mağazalar, topladıkları satış vergisini bile satış geliri sayıyordu."
+        "text": "Vergi öncesi satış geliri v3.5 ile geldi ve geçmiş dönemler de aynı şekilde yeniden hesaplandı; bu yüzden vergi uygulayan bir mağaza, güncellemeden öncesine göre daha düşük satış geliri görür. Bu bir düzeltmedir: önceki sürümler satış gelirine vergiyi de katıyordu; vergi hariç fiyat uygulayan mağazalar, topladıkları satış vergisini bile satış geliri sayıyordu."
       }
     ],
     "related": [
       "on-account",
       "pre-orders",
-      "report-periods"
+      "report-periods",
+      "tax-report"
     ]
   },
   {
@@ -1285,45 +1332,100 @@ export const articles = [
     "category": "reports",
     "question": "Raporlar hangi dönemleri gösterebilir?",
     "keywords": [
+      "istatistik",
       "raporlar",
       "dönem",
       "bu hafta",
       "bu ay",
       "bu yıl",
       "özel tarih aralığı",
-      "tarih",
+      "karşılaştır",
+      "ürün sıralaması",
       "en çok satan ürünler"
     ],
     "content": [
       {
         "type": "p",
-        "text": "İstatistik ekranının üstünden Bugün, Dün, Bu Hafta, Bu Ay, Bu Yıl veya Tüm dönem seçeneklerinden birini seçin ya da Özel ile başlangıç ve bitiş tarihini belirleyin. Bu Hafta, cihazdaki haftanın ilk gününe göre hesaplanır; Bu Ay ve Bu Yıl ise ayın 1'inde ve 1 Ocak'ta başlar. Her seçenek kapsadığı tarihleri gösterir; Tüm dönem, mağazanızın ilk satışından başlar."
+        "text": "İstatistik ekranının en üstündeki dönem çubuğundan Bugün, Dün, Bu Hafta, Bu Ay, Bu Yıl ya da Tüm dönem seçeneklerinden birini seçin; istediğiniz başlangıç ve bitiş tarihini belirlemek için Özel'e dokunun. Sayfadaki her kart seçtiğiniz döneme göre değişir. Bu Hafta, cihazınızdaki haftanın ilk gününe göre hesaplanır; Bu Ay ayın 1'inde, Bu Yıl 1 Ocak'ta başlar; Tüm dönem mağazanızın ilk işleminden başlar. Her seçenek kapsadığı tarihleri gösterir."
+      },
+      {
+        "type": "shot",
+        "name": "report-periods",
+        "alt": "İstatistik'in üstündeki dönem çubuğunda Özel seçili; Başlangıç ve Bitiş tarihlerini seçmek için tarih penceresi açık"
+      },
+      {
+        "type": "h2",
+        "text": "Özel aralık seçme"
       },
       {
         "type": "p",
-        "text": "Dönem çubuğunun altında iki sıra rakam kutucuğu gelir (Satış geliri, Alınan tutar, Brüt kâr, Siparişler, Ortalama sipariş; Toplam indirim, Net kâr, Maliyeti Olmayan Ürünler, Hizmet verilen müşteri), ardından eğilim grafiği. Eğilim grafiğinin sağ üstündeki menü onu satış geliri, sipariş, ortalama sipariş ve hizmet verilen müşteri arasında değiştirir; yanındaki Maliyet ve brüt kâr grafiği ise her dönemin ürün maliyetini ve brüt kârını tek bir sütunda üst üste gösterir. Tek bir gün saate göre gösterilir; daha uzun dönemlerde süreye göre günler, haftalar, aylar veya yıllar kullanılır."
+        "text": "Hazır takvim dönemlerinin dışında bir aralığa ihtiyacınız olduğunda, örneğin iki aylık ya da üç aylık bir vergi beyan dönemi için Özel'i kullanın."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "İstatistik'i açın ve dönem çubuğunda Özel'e dokunun.",
+          "Açılan pencerede başlangıç ve bitiş tarihlerini seçin.",
+          "Raporu güncellemek için tarihleri onaylayın."
+        ]
       },
       {
         "type": "p",
-        "text": "Eğilim grafiğine ya da Maliyet ve brüt kâr grafiğine basılı tutarak dönemleri tek tek okuyabilirsiniz; Satış karşılaştırması açıksa eğilim grafiğinin kartı bu dönemin rakamını ve karşılaştırma döneminin rakamını yan yana gösterir. İlerlemek için sola veya sağa sürükleyin; grafiğin üzerinde yukarı veya aşağı kaydırırsanız sayfa her zamanki gibi kayar."
+        "text": "Vergi kutucuğu ve vergi raporu da seçilen döneme göre değişir; bu yüzden Özel ile bir beyan aralığı belirlediğinizde ikisi de güncellenir — ayrıntılar için ilgili vergi raporu makalesine bakın. Dönem çubuğunun sağındaki Karşılaştır'a dokunarak seçili dönemi bir önceki dönemle ya da geçen yılın aynı dönemiyle yan yana görebilirsiniz; ayrıntılar için ilgili gelişmiş raporlar makalesine bakın."
+      },
+      {
+        "type": "h2",
+        "text": "Sayfadaki kutucuklar ve kartlar"
       },
       {
         "type": "p",
-        "text": "Ürün Sıralaması kartı ilk 5 ürünü listeler. Dönemde satılan tüm ürünleri, iadeler düşüldükten sonra adede göre sıralı görmek için karta ya da Tümünü gör düğmesine dokunun; varyantı olan bir ürün her varyant için ayrı bir satır alır."
+        "text": "Dönem çubuğunun altında İstatistik, iki sıra rakam kutucuğunu, ardından çiftler hâlinde grafikleri ve özet kartlarını gösterir; en altta Şu anda yer alır."
+      },
+      {
+        "type": "list",
+        "items": [
+          "İlk kutucuk sırası: Satış geliri, Alınan tutar, Brüt kâr, Siparişler ve Ortalama sipariş.",
+          "İkinci kutucuk sırası: Toplam indirim, Vergi, Net kâr, Maliyeti Olmayan Ürünler ve Hizmet verilen müşteri.",
+          "İlk çift: satış eğilimi grafiği ile yanında Maliyet ve brüt kâr.",
+          "İkinci çift: Ürün Sıralaması ile yanında Kategoriye göre pay.",
+          "Üçüncü çift: Ödeme Yöntemleri ile yanında kampanya kartı.",
+          "En alttaki kart: Şu anda."
+        ]
       },
       {
         "type": "p",
-        "text": "Dönem çubuğunun sağındaki Satış karşılaştırması, seçili dönemi bir önceki dönemle ya da geçen yılın aynı dönemiyle karşılaştırır — bkz. “Gelişmiş raporlar neleri gösterir?”"
+        "text": "İkinci sıradaki iki kutucuk yalnızca belirli durumlarda görünür. v3.6'da eklenen Vergi, yalnızca vergisi olan bir mağazada ya da seçili dönemde bir vergi altında yapılmış satışlar varsa görünür. Net kâr, yalnızca dönem Bu Ay olduğunda ya da tam olarak bir tam ayı kapsadığında görünür."
       },
       {
         "type": "note",
-        "text": "Bu takvim dönemleri v2.4 ile geldi; önceki sürümlerde kayan aralıklar vardı (Bugün / 7 Gün / 30 Gün / Tüm dönem). Hâlâ bunları görüyorsanız DingPOS'u App Store'dan güncelleyin."
+        "text": "Bir dönemde hiç sipariş yoksa İstatistik yalnızca dönem çubuğunu, bir mesajı ve Şu anda'yı gösterir."
+      },
+      {
+        "type": "h2",
+        "text": "Grafikleri ve Ürün Sıralaması'nı okuma"
+      },
+      {
+        "type": "p",
+        "text": "Satış eğilimi grafiğinin sağ üstündeki menü onu Satış geliri, Siparişler, Ortalama sipariş ve Hizmet verilen müşteri arasında değiştirir. Grafik ayrıca Trend ile Haftanın günü × saat arasında geçiş sunar; bu görünüm için ilgili gelişmiş raporlar makalesine bakın. Yanındaki Maliyet ve brüt kâr grafiği, her dönemin ürün maliyetini ve brüt kârını tek bir sütunda üst üste gösterir. Tek bir gün saate göre gösterilir; daha uzun dönemlerde veriler süreye göre günlere, haftalara, aylara veya yıllara gruplanır."
+      },
+      {
+        "type": "p",
+        "text": "Satış eğilimi grafiğine, Maliyet ve brüt kâr grafiğine ya da Ödeme Yöntemleri kartına basılı tutarak tek bir dilim için okuma kartı açabilirsiniz. Karşılaştır açıkken satış eğilimi grafiğinin okuma kartı, bu dönemin rakamını ve karşılaştırma döneminin rakamını yan yana gösterir. Dilimler arasında ilerlemek için sola veya sağa sürükleyin; grafiğin üzerinde yukarı veya aşağı kaydırırsanız sayfa her zamanki gibi kayar."
+      },
+      {
+        "type": "p",
+        "text": "Ürün Sıralaması kartı, seçili dönemin ilk 5 ürününü listeler. O dönemde satılan tüm ürünleri iadeler düşüldükten sonra adede göre sıralı görmek için karta ya da Tümünü gör düğmesine dokunun; varyantı olan bir ürün her varyant için ayrı bir satır alır."
+      },
+      {
+        "type": "note",
+        "text": "Takvim dönemleri v2.4 ile geldi; önceki sürümlerde kayan aralıklar vardı (Bugün / 7 Gün / 30 Gün / Tüm dönem). Hâlâ bunları görüyorsanız DingPOS'u App Store'dan güncelleyin."
       }
     ],
     "related": [
       "advanced-reports",
       "revenue-vs-cash",
-      "profit-not-tracked"
+      "profit-not-tracked",
+      "tax-report"
     ]
   },
   {
@@ -1333,12 +1435,13 @@ export const articles = [
     "question": "Gelişmiş raporlar neleri gösterir?",
     "keywords": [
       "gelişmiş raporlar",
-      "satış karşılaştırması",
-      "geçen yıl",
+      "istatistik",
+      "karşılaştır",
+      "dönem karşılaştırması",
       "ısı haritası",
       "yoğun saatler",
       "yavaş satan ürünler",
-      "hareketli ürünler",
+      "hareketliler",
       "kategoriye göre pay",
       "stok değeri",
       "tekrar alışveriş oranı",
@@ -1347,23 +1450,124 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gelişmiş raporlar ayrı bir ekran değildir — doğrudan İstatistik ekranında yer alır ve üstten seçtiğiniz döneme göre değişir:"
+        "text": "Gelişmiş raporlar ayrı bir ekran değildir; doğrudan İstatistik ekranında yer alır ve üstten seçtiğiniz döneme göre değişir. Dönem karşılaştırmaları, haftanın günü ve saat ısı haritası, Yavaş Satan Ürünler, Hareketliler, üye tekrar alışveriş oranı, Kategoriye göre pay ve stok ile puanlar için bir Şu anda bölümü ekler. Hepsi her planda vardır ve deneme bittikten sonra da açık kalır."
       },
       {
-        "type": "list",
+        "type": "h2",
+        "text": "Karşılaştır"
+      },
+      {
+        "type": "p",
+        "text": "Karşılaştır, İstatistik'te dönem çubuğunun sağında yer alır ve seçili dönemi daha önceki bir dönemle kıyaslar."
+      },
+      {
+        "type": "steps",
         "items": [
-          "Satış karşılaştırması: dönem çubuğunun sağında, seçili dönemi geçen yılın aynı dönemiyle ya da bir önceki dönemle karşılaştırın (tek gün geçen haftanın aynı günüyle, bu hafta geçen haftayla, bu ay geçen ayla, bu yıl geçen yılla, özel aralık ise kendisinden hemen önceki aynı uzunluktaki günlerle). Satış geliri, Alınan tutar, Brüt kâr, Siparişler, Ortalama sipariş, Toplam indirim ve Hizmet verilen müşteri kutucuklarının her biri değişimi ve karşılaştırma döneminin rakamını “▼ %3 · Geçen ay ile kıyasla” gibi gösterir; Toplam indirimdeki değişim her zaman gri görünür, çünkü daha fazla indirim kendi başına ne iyidir ne kötü. Herhangi bir karşılaştırma satırına dokunursanız iki dönemin rakamlarını listeleyen Dönem karşılaştırması açılır. Eğilim grafiğine karşılaştırma dönemi için daha açık renkli bir çizgi eklenir. Dönem henüz sürüyorsa karşılaştırma dönemi de aynı ana kadar kesilir.",
-          "Haftanın günü × saat: eğilim grafiğinin başlığını Trend yerine Haftanın günü × saat olarak değiştirin; yedi gün ve 24 saatlik bir ısı haritası görürsünüz — bir hücre ne kadar koyuysa o saatte o kadar çok satış yapmışsınızdır. Satış geliri ile sipariş sayısı arasında geçiş yapabilirsiniz; karşılaştırma açıkken hangi saatlerin arttığını, hangilerinin azaldığını görürsünüz.",
-          "Yavaş Satan Ürünler: sıralama kartının başlığını Yavaş Satan Ürünler olarak değiştirin; ürünler en az satandan en çok satana doğru, güncel stokları ve her birinin son satış tarihiyle listelenir. Hiç satılmayan ürünler Hiç satılmadı olarak işaretlenir; varyantı olan bir ürün her varyant için ayrı bir satır alır. Varsayılan olarak yalnızca stokta olan ürünler gösterilir.",
-          "Hareketliler (v3.4'ten beri): sıralama kartının başlığını Hareketliler olarak değiştirin; karşılaştırma dönemine göre satış geliri en çok artan 3 ürünü ve en çok düşen 3 ürünü, her birinin iki dönemdeki satış geliri ve farkıyla birlikte görürsünüz; her varyant yalnızca kendisiyle karşılaştırılır. Önce Satış karşılaştırması altından bir dönem seçin; Yok seçiliyken ya da Tüm dönemde kart sizi buna yönlendirir. Hareketli ürünler listesinin tamamı için karta veya Tümünü gör düğmesine dokunun; liste Yükselenler ve Düşenler olarak ikiye ayrılır.",
-          "Tekrar alışveriş oranı: müşteri kutusunun son satırı, dönemde alışveriş yapan ve toplamda iki veya daha fazla kez alışveriş yapmış üyelerin oranıdır. Karşılaştırma açıkken altındaki bir satır, yüzde puanı cinsinden değişimi ve karşılaştırma döneminin oranını gösterir.",
-          "Kategoriye göre pay: her kategorinin satış geliri ve payı, ürünün güncel kategorisine göre ve en büyükten küçüğe doğru sıralanır. Kategorisi olmayan ürünler Kategorisiz altında toplanır; satırların toplamı Satış gelirine tam olarak eşittir.",
-          "Şu anda: stok değeri (güncel stok × güncel maliyet), seçili dönemdeki tüm stok hareketleri ve müşterilerin elinde duran, henüz kullanılmamış puanlar ile bunlarla yapılabilecek en yüksek indirim. Bunlar güncel durumu yansıtır; dönem seçimi bunları değiştirmez."
+          "Kenar çubuğundan İstatistik'i açın.",
+          "Üstten bir dönem seçin.",
+          "Dönem çubuğunun sağındaki Karşılaştır'a dokunun.",
+          "Menüden bir karşılaştırma seçeneği belirleyin."
         ]
       },
       {
         "type": "p",
-        "text": "v3.4'ten beri hepsi her planda açıktır ve deneme bittikten sonra da açık kalır. Önceki sürümlerde yalnızca Pro'da gösteriliyor, diğer planlarda küçük bir kilit görünüyordu; kilitleri hâlâ görüyorsanız DingPOS'u App Store'dan güncelleyin."
+        "text": "Kullanılabilen seçenekler seçtiğiniz döneme göre değişir:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yok, karşılaştırmayı kapatır.",
+          "Geçen hafta, tek bir günü geçen haftanın aynı günüyle ya da bu haftayı geçen haftayla karşılaştırır.",
+          "Geçen ay, bu ayı geçen ayla karşılaştırır.",
+          "Geçen yıl, bu yılı geçen yılla ya da seçili dönemi geçen yılın aynı dönemiyle karşılaştırır.",
+          "Önceki, özel bir aralığı hemen öncesindeki aynı sayıda günle karşılaştırır."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Karşılaştırma açıkken İstatistik, Vergi, Net kâr ve Maliyeti Olmayan Ürünler dışındaki her kutucuğa değişimi ve karşılaştırma döneminin rakamını ekler. Satış geliri, Alınan tutar, Brüt kâr, Siparişler, Ortalama sipariş, Toplam indirim ve Hizmet verilen müşteri kutucuklarının her biri “▼ %3 · Geçen ay ile kıyasla” gibi bir karşılaştırma satırı gösterir."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "İstatistik Bu Hafta döneminde ve Karşılaştır Geçen hafta olarak ayarlı: karşılaştırma çubuğu ile ilk kutucuk sırası, her kutucuğun altında değişim ve karşılaştırma rakamıyla görünüyor",
+        "caption": "İki dönemin rakamlarını görmek için bir kutucuğun altındaki herhangi bir karşılaştırma satırına dokunarak Dönem karşılaştırması'nı açın."
+      },
+      {
+        "type": "p",
+        "text": "Toplam indirimdeki değişim her zaman gri görünür, çünkü daha fazla indirim kendi başına ne iyidir ne kötü. İki dönemin rakamlarını listeleyen Dönem karşılaştırması'nı açmak için herhangi bir karşılaştırma satırına dokunun. Eğilim grafiğine karşılaştırma dönemi için daha açık renkli bir çizgi eklenir. Dönem henüz sürüyorsa karşılaştırma dönemi de aynı ana kadar kesilir."
+      },
+      {
+        "type": "h2",
+        "text": "Haftanın günü × saat"
+      },
+      {
+        "type": "p",
+        "text": "Yedi gün ve 24 saatlik bir ısı haritası görmek için eğilim grafiğinin başlığını Trend'den Haftanın günü × saat'e çevirin. Bir hücre ne kadar koyuysa o saatte o kadar çok satış yapmışsınızdır. Isı haritasını satış geliri ile sipariş sayısı arasında değiştirebilirsiniz. Karşılaştır altında bir karşılaştırma açıkken ısı haritası hangi saatlerin arttığını, hangilerinin azaldığını da gösterir."
+      },
+      {
+        "type": "h2",
+        "text": "Yavaş Satan Ürünler"
+      },
+      {
+        "type": "p",
+        "text": "Ürünleri en az satandan en çok satana doğru listelemek için sıralama kartının başlığını Yavaş Satan Ürünler olarak değiştirin. Her satır, ürünün güncel stokunu ve son satıldığı tarihi gösterir. Hiç satılmayan ürünler Hiç satılmadı olarak işaretlenir; varyantı olan bir ürün her varyant için ayrı bir satır alır. Varsayılan olarak yalnızca stokta olan ürünler gösterilir."
+      },
+      {
+        "type": "h2",
+        "text": "Hareketliler"
+      },
+      {
+        "type": "p",
+        "text": "Karşılaştırma dönemine göre satış geliri en çok artan 3 ürünü ve en çok düşen 3 ürünü görmek için sıralama kartının başlığını Hareketliler olarak değiştirin. Her satır iki dönemdeki satış gelirini ve farkı gösterir; her varyant yalnızca kendisiyle karşılaştırılır."
+      },
+      {
+        "type": "p",
+        "text": "Önce Karşılaştır altından bir dönem seçin. Karşılaştır Yok olarak ayarlıyken ya da dönem Tüm dönem olduğunda kart sizden bir karşılaştırma dönemi seçmenizi ister. Hareketli ürünler listesinin tamamını açmak için karta ya da Tümünü gör düğmesine dokunun; liste Yükselenler ve Düşenler olarak ikiye ayrılır."
+      },
+      {
+        "type": "h2",
+        "text": "Tekrar alışveriş oranı"
+      },
+      {
+        "type": "p",
+        "text": "Hizmet verilen müşteri kutucuğunun son satırı, tekrar alışveriş oranını “Tekrar alışveriş oranı … · … üye geri döndü” biçiminde gösterir. Bu oran, seçili dönemde alışveriş yapan ve toplamda iki veya daha fazla kez alışveriş yapmış üyelerin payıdır. Karşılaştır altında bir karşılaştırma açıkken, altındaki bir satır yüzde puanı cinsinden değişimi ve karşılaştırma döneminin oranını gösterir."
+      },
+      {
+        "type": "h2",
+        "text": "Kategoriye göre pay"
+      },
+      {
+        "type": "p",
+        "text": "Kategoriye göre pay, her kategorinin satış gelirini ve payını, ürünün güncel kategorisine göre en büyükten küçüğe doğru listeler. Kategorisi olmayan ürünler Kategorisiz altında toplanır; satırların toplamı Satış gelirine tam olarak eşittir."
+      },
+      {
+        "type": "h2",
+        "text": "Şu anda"
+      },
+      {
+        "type": "p",
+        "text": "Şu anda, stok ve puanlarla ilgili üç ayrıntı gösterir:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Stok değeri: güncel stok × güncel maliyet olarak hesaplanır.",
+          "Seçili dönemdeki tüm stok hareketleri.",
+          "Müşterilerin elinde duran, henüz kullanılmamış puanlar ve bunlarla yapılabilecek en yüksek indirim."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Stok değeri ve kullanılmamış puanlar güncel rakamlardır; bu yüzden üstteki dönemi değiştirmek onları değiştirmez."
+      },
+      {
+        "type": "h2",
+        "text": "Planlar ve yetkiler"
+      },
+      {
+        "type": "p",
+        "text": "v3.4'ten beri tüm gelişmiş raporlar Lite dahil her planda açıktır ve deneme bittikten sonra da açık kalır. Hareketliler de v3.4'te eklendi. Önceki sürümlerde gelişmiş raporlar yalnızca Pro'da gösteriliyor, diğer planlarda küçük bir kilit görünüyordu; kilitleri hâlâ görüyorsanız DingPOS'u App Store'dan güncelleyin."
       },
       {
         "type": "p",
@@ -1371,7 +1575,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Personel gelişmiş raporları Pano yetkisi altında görür; stok değeri tutarları için ayrıca Maliyet ve kâr yetkisi gerekir."
+        "text": "Personel gelişmiş raporları İstatistik yetkisi altında görür; Stok değeri tutarları için ayrıca Maliyet ve kâr yetkisi gerekir."
       }
     ],
     "related": [
@@ -1393,34 +1597,99 @@ export const articles = [
       "raporlar",
       "takip edilmiyor",
       "eksik maliyet",
-      "maliyeti olmayan ürünler"
+      "maliyeti olmayan ürünler",
+      "satış gelirinden brüt kâra"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Maliyet isteğe bağlı bir alandır. Maliyeti olmayan ürünler brüt kârın dışında kalır; satış gelirleri ise yine tam olarak sayılır. İstatistik'teki Maliyeti Olmayan Ürünler kutucuğu, dönemde satılan veya iade edilen ürünlerden kaçının maliyetinin olmadığını “12 ürün” gibi gösterir. Maliyeti 0 olan ürün maliyetli sayılır, bu yüzden listelenmez; her ürünün maliyeti varsa kutucukta “0 ürün · maliyet verisi tam” yazar."
+        "text": "Maliyet isteğe bağlı bir alandır; bu yüzden maliyeti olmayan ürünler brüt kârın dışında kalır, satış gelirleri ise yine tam olarak sayılır. İstatistik'teki Maliyeti Olmayan Ürünler kutucuğu, dönemde satılan veya iade edilen ürünlerden kaçının maliyetinin olmadığını “12 ürün” gibi gösterir. Maliyeti 0 olan ürün maliyetli sayılır ve listelenmez; her ürünün maliyeti varsa kutucukta “0 ürün · maliyet verisi tam” yazar."
+      },
+      {
+        "type": "h2",
+        "text": "Maliyeti olmayan ürünleri bulma"
       },
       {
         "type": "p",
-        "text": "Kutucuğa veya Ürünleri gör düğmesine dokunarak Maliyeti Olmayan Ürünler listesini açın; liste, brüt kârın dışında kalan satış gelirine göre sıralanır. Bir satıra dokunup ürünü açın, Düzenle'den maliyetini ekleyin; geri döndüğünüzde satır Maliyet eklendi olarak işaretlenir. Varyantı olan bir ürün, maliyetsiz satılan her varyant için bir maliyet belirlendiğinde Maliyet eklendi olarak işaretlenir; bu maliyet varyantın kendisinin ya da ürünün maliyeti olabilir."
+        "text": "İstatistik'te Maliyeti Olmayan Ürünler kutucuğuna ya da Ürünleri gör düğmesine dokunarak Maliyeti Olmayan Ürünler listesini açın. Liste, ürünleri brüt kârın dışında kalan satış gelirine göre yüksekten düşüğe sıralar."
+      },
+      {
+        "type": "shot",
+        "name": "profit-not-tracked",
+        "alt": "Ürünleri brüt kârın dışında kalan satış gelirine göre sıralayan Maliyeti Olmayan Ürünler listesi"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ürünü açmak için Maliyeti Olmayan Ürünler listesinde bir satıra dokunun.",
+          "Düzenle'ye dokunun ve maliyeti Maliyet (isteğe bağlı) alanına girin.",
+          "Maliyeti Olmayan Ürünler listesine dönün; satırın Maliyet eklendi olarak işaretlendiğini görürsünüz."
+        ]
       },
       {
         "type": "p",
-        "text": "Brüt kâr, tüm indirimlerden (kalem ve sepet indirimleri, kampanyalar, puan kullanımı) sonraki ve vergiden önceki satış gelirinden maliyetin çıkarılmasıyla bulunur — vergi uygulayan bir mağazada alanın adı bu yüzden Vergi hariç maliyet (isteğe bağlı) olur: vergiden önce ödediğiniz tutarı girin. Marj, brüt kârın maliyeti olan ürünlerin satış gelirine bölünmesidir; yani maliyeti olmayan ürünler onu aşağı çekmez. Ürün iadesi, iade günü, o ürünlerin getirdiği brüt kârı geri alır."
-      },
-      {
-        "type": "p",
-        "text": "Brüt kâr kutucuğuna dokunarak Satış gelirinden brüt kâra ekranını açın; burada satır satır çıkarma yapılır: satış geliri (vergi dahil), vergi, satış geliri (vergi hariç), maliyeti olmayan satış geliri, ürün maliyeti ve son olarak brüt kâr ile marj. Satırların toplamı kutucukla tam olarak eşleşir."
+        "text": "Varyantı olan bir ürün, maliyetsiz satılan her varyant için bir maliyet belirlendiğinde Maliyet eklendi olarak işaretlenir; bu maliyet varyantın kendisinin ya da izleyeceği ürün maliyeti olabilir. v3.6'dan beri, Nakliyeyi maliyete dahil et açıkken bir satın alma siparişi, nakliyeyi yazdığı ürün maliyetine de dağıtabilir."
       },
       {
         "type": "note",
-        "text": "Eklediğiniz maliyet yalnızca sonraki satışları etkiler; yapılmış satışlar yeniden hesaplanmaz. Bu hesaplama v3.1 ile geldi: önceki sürümler yalnızca elle girilen kalem indirimlerini düşüyor ve vergi dahil tutarı kâr sayıyordu; bu yüzden güncellemeden sonra indirimli veya vergi dahil fiyatlı dönemlerde brüt kâr daha düşük görünür. Bu bir düzeltmedir, veri kaybı değildir."
+        "text": "Eklediğiniz maliyet yalnızca sonraki satışları etkiler. Yapılmış satışlar yeniden hesaplanmaz."
+      },
+      {
+        "type": "h2",
+        "text": "Maliyet ve vergi girişi"
+      },
+      {
+        "type": "p",
+        "text": "Ürün formunda maliyet alanı her mağazada Maliyet (isteğe bağlı) olarak görünür. Vergisi olan bir mağazada, Maliyet (isteğe bağlı) alanının yanında, İndirilecek Vergi Takibi ayarına göre verginin nasıl uygulanacağını gösteren bir ⓘ belirir:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "İndirilecek Vergi Takibi açıksa: maliyeti, geri alabileceğiniz vergiden önceki tutar olarak girin. ⓘ notu şöyledir: “Maliyeti, indirebileceğiniz vergi hariç girin; bu vergi indirilecek vergi olarak kaydedilir. İndiremediğiniz vergi maliyetin bir parçasıdır.”",
+          "İndirilecek Vergi Takibi kapalıysa: ödediğiniz tutardan geri alabileceğiniz vergiyi çıkararak girin. ⓘ notu şöyledir: “İndirilebilir vergi maliyete dahil değildir; indirilemeyen vergi ise maliyete dahildir. İndirilecek vergi takibini kullanıyorsanız Mağaza Bilgileri'nde İndirilecek Vergi Takibi'ni açın.”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "İşletmeniz indirilecek vergi beyan ediyorsa Mağaza Bilgileri'nde İndirilecek Vergi Takibi'ni açın."
+      },
+      {
+        "type": "h2",
+        "text": "Brüt kâr dökümünü okuma"
+      },
+      {
+        "type": "p",
+        "text": "Brüt kâr, tüm indirimlerden (kalem ve sepet indirimleri, kampanyalar, puan kullanımı) sonraki ve vergiden önceki satış gelirinden maliyetin çıkarılmasıyla bulunur. Marj, brüt kârın maliyeti olan ürünlerin satış gelirine bölünmesidir; yani maliyeti olmayan ürünler marjı aşağı çekmez. Ürün iadesi, iade günü, o ürünlerin getirdiği brüt kârı geri alır."
+      },
+      {
+        "type": "p",
+        "text": "İstatistik'te Brüt kâr kutucuğuna dokunarak, satır satır çıkarma yapan Satış gelirinden brüt kâra ekranını açın:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Satış geliri (vergi dahil)",
+          "Vergi",
+          "Satış geliri (vergi hariç)",
+          "Maliyeti olmayan satış geliri",
+          "Ürün maliyeti",
+          "Brüt kâr ve marj"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Satırların toplamı Brüt kâr kutucuğuyla tam olarak eşleşir. Avustralya, Birleşik Krallık, Yeni Zelanda ve Singapur'daki mağazalar vergi satırlarında yerel vergi adını görür; örneğin Satış geliri (GST dahil)."
+      },
+      {
+        "type": "note",
+        "text": "Bu brüt kâr hesaplaması v3.1 ile geldi. Önceki sürümler yalnızca elle girilen kalem indirimlerini düşüyor ve vergi dahil tutarı kâr sayıyordu; bu yüzden güncellemeden sonra indirimli veya vergi dahil fiyatlı dönemlerde brüt kâr daha düşük görünür. Bu bir düzeltmedir, veri kaybı değildir."
       }
     ],
     "related": [
       "report-periods",
       "product-variants",
-      "purchase-orders"
+      "purchase-orders",
+      "input-tax"
     ]
   },
   {
@@ -1432,43 +1701,92 @@ export const articles = [
       "kâr zarar",
       "kâr/zarar tablosu",
       "net kâr",
+      "brüt kâr",
       "aylık kâr",
-      "giderler",
+      "sabit giderler",
       "faaliyet kârı",
       "gelir tablosu"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kenar çubuğunda İstatistik'in altındaki Kâr/Zarar'ı açın. Her ayı en yeniden en eskiye, net kârıyla birlikte listeler: içinde bulunulan ay Devam ediyor olarak işaretlenir ve her yılın başlığı, tamamlanan aylarının net kârını toplar."
+        "text": "Her ayın net kârını ve nasıl hesaplandığını görmek için kenar çubuğunda İstatistik'in altındaki Kâr/Zarar'ı açın. Liste, ilk satışınızın ya da giderinizin olduğu aydan başlayarak en yeniden en eskiye doğru gider; içinde bulunulan ay Devam ediyor olarak işaretlenir ve her yılın başlığı, tamamlanan aylarının net kârını toplar. İlk satırı Tüm Giderler, ay fark etmeksizin tüm giderleri açar."
+      },
+      {
+        "type": "h2",
+        "text": "Aylık döküm"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Kenar çubuğunda İstatistik'in altındaki Kâr/Zarar'ı açın.",
+          "Bir ayın net kârının nasıl hesaplandığını görmek için aya dokunun."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "profit-loss-month",
+        "alt": "Devam ediyor bildirimi, net kâr ve satış gelirinden giderlere tüm dökümü gösteren Kâr/Zarar ay sayfası"
       },
       {
         "type": "p",
-        "text": "Bir ayın net kârının nasıl hesaplandığını görmek için aya dokunun:"
+        "text": "Ay sayfası, satışlardan net kâra kadar her satırı sırasıyla listeler. Satış gelirinden brüt kâra kadar olan satırlar, İstatistik'teki Satış gelirinden brüt kâra ekranıyla aynı adları ve rakamları taşır."
       },
       {
         "type": "list",
         "items": [
-          "Satış geliri (vergi hariç): her indirimden sonraki ve vergiden önceki satış geliri; ürünün teslim edildiği gün sayılır.",
+          "Satış geliri (vergi dahil), Vergi ve Satış geliri (vergi hariç): vergi dahil satış geliri, vergi tutarı ve ürünün teslim edildiği gün sayılan, tüm indirimlerden sonraki ve vergiden önceki satış geliri. Avustralya, Birleşik Krallık, Yeni Zelanda ve Singapur'daki mağazalar yerel vergi adını görür.",
+          "Maliyeti olmayan satış geliri: ürün maliyetinden önce çıkarılır; yalnızca sıfırdan farklıysa gösterilir.",
           "Ürün maliyeti: satılanların maliyeti; ürünlerinizdeki maliyetlerden alınır.",
-          "Stok kaybı: Stoku Düzelt ile süresi dolan, hasar gören, hediye edilen gibi nedenlerle stoktan çıkarılanların maliyeti, artı hurdaya ayrılan iadeler. Brüt kârdan sonra gelir — bkz. “Süresi geçen, kırılan veya numune olarak verilen stoğu nasıl kaydederim?” Ayda ayrıca bunu nedene göre toplayan bir Stok Kaybı bölümü de vardır.",
+          "Brüt kâr: marjıyla birlikte gösterilir.",
+          "Maliyeti olmayan satış geliri: sıfırdan farklıysa brüt kârdan sonra geri eklenir.",
+          "Stok kaybı: yalnızca ayda varsa gösterilir; Stoku Düzelt ile süresi dolan, hasar gören, hediye edilen gibi nedenlerle stoktan çıkarılanların maliyeti, artı hurdaya ayrılan iadeler. Brüt kârdan sonra gelir. Bkz. “Süresi geçen, kırılan veya numune olarak verilen stoğu nasıl kaydederim?” Ayda ayrıca bunu nedene göre toplayan bir Stok Kaybı bölümü de vardır.",
           "İşlem ücretleri (tahmini): ödeme yöntemlerinizin oranlarından tahmin edilen ücretler.",
-          "Alıkonulan kapora: bir ön sipariş iptal edildiğinde alıkoyduğunuz kaporalar.",
-          "Nakit yuvarlama: nakdin kullanımdaki bozuk paralara yuvarlanması sonucu sipariş toplamlarının üstünde veya altında kalan fark.",
-          "Sabit giderler ve Tek seferlik giderler: o ay için kaydettikleriniz — bkz. “Kira, maaş ve diğer giderleri nasıl kaydederim?”"
+          "Alıkonulan kapora: yalnızca sıfırdan farklıysa gösterilir; bir ön sipariş iptal edildiğinde alıkoyduğunuz kaporalar.",
+          "Nakit yuvarlama: yalnızca sıfırdan farklıysa gösterilir; nakdin kullanımdaki bozuk paralara yuvarlanması sonucu sipariş toplamlarının üstünde veya altında kalan fark.",
+          "Sabit giderler ve Tek seferlik giderler: o ay için kaydettikleriniz — bkz. “Kira, maaş ve diğer giderleri nasıl kaydederim?”",
+          "Net kâr: satış geliri (vergi hariç) − ürün maliyeti − stok kaybı − işlem ücretleri + alıkonulan kapora + nakit yuvarlama − sabit giderler − tek seferlik giderler olarak hesaplanır."
         ]
       },
       {
-        "type": "p",
-        "text": "Ardından en fazla üç grafik gelir: ay ay net kâr, her sabit giderin payı ve sabit giderler trendi. İki trend grafiği, açtığınız aya kadar en fazla 12 ayı kapsar ve ilk satışınızın ya da giderinizin olduğu aydan başlayarak karşılaştırılacak en az iki ay olduğunda görünür. Pay grafiği için o ay bir sabit gider gerekir; olmadığı sürece bu bölümde Sabit Gider Ekle görünür."
+        "type": "h2",
+        "text": "Devam eden aylar"
       },
       {
         "type": "p",
-        "text": "İstatistik ve Kâr/Zarar birbirine bağlıdır. İstatistik dönemi Bu Ay ya da tam olarak bir ay olduğunda, ikinci kutucuk sırasına bir Net kâr kutucuğu eklenir (ay sürerken “Devam ediyor · ayın tüm giderleri düşülür” yazar); dokunursanız o ayın brüt kârdan net kâra dökümünü görürsünüz. Başka her dönemde, Satış gelirinden brüt kâra ekranının son satırındaki Aylık kâr/zararı gör'e dokunun. Tersi yönde, Kâr/Zarar'da bir ayın başlığının altındaki Ekim raporunu görüntüle, İstatistik'i o ay için açar."
+        "text": "Bir ay sürerken Kâr/Zarar, ayın tüm sabit giderlerini şimdiden düşer. Örneğin 5 Ekim'de şimdiye kadarki satış geliri (vergi hariç) 20.000, ürün maliyeti 10.000 ve sabit giderler 65.700 ise net kâr −55.700 olur ve Devam ediyor · ayın tüm giderleri düşülür olarak işaretlenir."
+      },
+      {
+        "type": "p",
+        "text": "Ayın giderlerinin tamamı zaten sayıldığı için, bu ayın net kârı ay listesinde, ay sayfasında ve İstatistik'teki Net kâr kutucuğunda hiçbir zaman kırmızı gösterilmez. Zararla biten tamamlanmış bir ay ise net kârını uyarı renginde gösterir."
+      },
+      {
+        "type": "h2",
+        "text": "Grafikler"
+      },
+      {
+        "type": "p",
+        "text": "Dökümün ardından en fazla üç grafik gelir: ay ay net kâr, her sabit giderin payı ve sabit giderler trendi. İki trend grafiği, açtığınız aya kadar en fazla 12 ayı kapsar ve ilk satışınızın ya da giderinizin olduğu aydan başlayarak karşılaştırılacak en az iki ay olduğunda görünür. Pay grafiği için o ay bir sabit gider gerekir; olmadığı sürece bu bölümde Sabit Gider Ekle görünür."
+      },
+      {
+        "type": "h2",
+        "text": "İstatistik ile Kâr/Zarar arasında geçiş"
+      },
+      {
+        "type": "p",
+        "text": "İstatistik ve Kâr/Zarar birbirine bağlıdır. İstatistik'teki dönem Bu Ay ya da tam olarak bir tam ay olduğunda, ikinci kutucuk sırasına bir Net kâr kutucuğu eklenir; ay sürerken kutucukta Devam ediyor · ayın tüm giderleri düşülür yazar. O ayın brüt kârdan net kâra dökümünü görmek için bu kutucuğa dokunun. Başka her dönemde, Satış gelirinden brüt kâra ekranının son satırındaki Aylık kâr/zararı gör'e dokunun."
+      },
+      {
+        "type": "p",
+        "text": "Tersi yönde, Kâr/Zarar'da bir ayın başlığının altındaki Ekim raporunu görüntüle, İstatistik'i o ay için açar (1–31 Ekim özel aralığı); devam eden ayda ise Bu Ay'ı açar."
       },
       {
         "type": "note",
-        "text": "Net kâr, gelir vergisinden önceki faaliyet kârıdır ve DingPOS'un kaydettiği verilerden hesaplanır — vergi beyannamesi değildir. Maliyeti olmadan satılan ürünler varsa ay yine de bir net kâr gösterir ve “N ürünün maliyeti hariç” diye işaretlenir; hangi ürünler olduğunu görmek için dokunun. Kâr/Zarar her planda vardır. Personel hesaplarında açmak için Kâr/zarar ve giderler yetkisi gerekir; ürün maliyetlerini ve maaşları gösterdiği için Yöneticiler ve Personel için varsayılan olarak onay gerekir."
+        "text": "Net kâr, gelir vergisinden önceki faaliyet kârıdır ve DingPOS'un kaydettiği verilerden hesaplanır; vergi beyannamesi değildir. Maliyeti olmadan satılan ürünler varsa ay yine de bir net kâr gösterir ve “N ürünün maliyeti hariç” diye işaretlenir; hangi ürünler olduğunu görmek için dokunabilirsiniz."
+      },
+      {
+        "type": "note",
+        "text": "Kâr/Zarar her planda vardır. Personel hesaplarında açmak için Kâr/zarar ve giderler yetkisi gerekir; ürün maliyetlerini ve maaşları gösterdiği için Yöneticiler ve Personel için varsayılan olarak onay gerekir."
       }
     ],
     "related": [
@@ -1488,38 +1806,98 @@ export const articles = [
       "maaş",
       "faturalar",
       "sabit giderler",
+      "tek seferlik giderler",
+      "tüm giderler",
       "genel giderler",
       "amortisman",
-      "tek seferlik gider"
+      "kâr zarar"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kâr/Zarar'da Gider Ekle'ye dokunun ve sabit gider ya da tek seferlik gider seçin. Bir gider, ödediğiniz ayda değil ait olduğu ayda sayılır ve her ayın net kârı buna göre değişir."
+        "text": "Kira, maaş, elektrik ve su gibi faturalar ve diğer işletme giderlerini kaydetmek için Kâr/Zarar'da Gider Ekle'ye dokunun ve Sabit Gider Ekle ya da Tek Seferlik Gider Ekle'yi seçin. Her gider, ödediğiniz ayda değil ait olduğu ayda sayılır ve her ayın net kârı buna göre güncellenir. Sabit giderler her ay tekrarlanır ve isteğe bağlı olarak tutar değişiklikleri alır; tek seferlik giderler tek bir ayda sayılır ya da birkaç aya yayılır."
+      },
+      {
+        "type": "h2",
+        "text": "Sabit Giderler"
       },
       {
         "type": "p",
-        "text": "Sabit gider, kira, faturalar veya maaşlar gibi her ay ödediğiniz giderdir:"
+        "text": "Sabit gider, kira, faturalar veya maaşlar gibi her ay ödediğiniz yinelenen bir giderdir."
       },
       {
-        "type": "list",
+        "type": "steps",
         "items": [
+          "Kâr/Zarar'ı açın.",
+          "Gider Ekle'ye dokunun.",
+          "Sabit Gider Ekle'yi seçin.",
           "Adı, aylık tutarı ve başlangıç ayını girin. Geriye dönük girmek için daha eski bir ay seçin.",
-          "Tutar değiştiğinde Tutarı Değiştir'e dokunun, ayı seçin ve Bu aydan itibaren (örneğin kira zammı) ya da Yalnızca bu ay (örneğin bu ayın elektrik faturası) seçeneğini belirleyin. Her değişiklik listelenir; düzenlemek veya kaldırmak için birini açabilirsiniz.",
-          "Ödemeyi bıraktığınızda Hesaplanan son ay alanını belirleyin: o ay ve öncesindeki aylar yine sayılır."
+          "Kaydetmek için ✓'ya dokunun."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "expense-form",
+        "alt": "Adı, aylık tutarı, başlangıç ayını ve tutar değişikliklerini gösteren sabit gider formu"
+      },
+      {
+        "type": "p",
+        "text": "Tutar değiştiğinde gideri açın ve Tutarı Değiştir'e dokunun. Değişikliğin başladığı ayı seçin; ardından kira zammı gibi sürekli bir değişiklik için Bu aydan itibaren'i, bu ayın elektrik faturası gibi tek aylık bir fark için Yalnızca bu ay'ı seçin. Her değişiklik formda listelenir ve düzenlemek veya kaldırmak için herhangi birini açabilirsiniz."
+      },
+      {
+        "type": "p",
+        "text": "Bir sabit gideri ödemeyi bıraktığınızda Hesaplanan son ay alanını belirleyin. O ay ve öncesindeki aylar Kâr/Zarar'da yine sayılır; sonraki aylara ise dahil edilmez."
+      },
+      {
+        "type": "h2",
+        "text": "Tüm Giderler'deki planlı değişiklikler"
+      },
+      {
+        "type": "p",
+        "text": "Tüm Giderler'de her sabit gider satırı, ileriye dönük planlananları gösterir. Satır; başlangıç ayını, varsa bir sonraki planlı tutar değişikliğini ve hesaplanan son ayı birleştirir. Örneğin bir satır şöyle okunabilir: Ocak 2026 itibarıyla · Aralık 2026 itibarıyla aylık $420 · Hesaplanan son ay: Mart 2027."
+      },
+      {
+        "type": "p",
+        "text": "Sağdaki tutar, yaklaşan tutar değil bugünkü aylık tutar olarak kalır. Yalnızca bu ay olarak ayarlanan bir değişiklik satırda listelenmez."
+      },
+      {
+        "type": "h2",
+        "text": "Tek Seferlik Giderler"
+      },
+      {
+        "type": "p",
+        "text": "Tek seferlik gider, mağaza dekorasyonu, ekipman, peşin ödenen sigorta ya da tek bir fatura gibi bir kez ödenen giderdir."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Kâr/Zarar'ı açın.",
+          "Gider Ekle'ye dokunun.",
+          "Tek Seferlik Gider Ekle'yi seçin.",
+          "Tutarı ve tarihi girin.",
+          "Tek bir ay için Hesaplanan ay'ı belirleyin ya da Birkaç aya yay'ı açın.",
+          "Kaydetmek için ✓'ya dokunun."
         ]
       },
       {
         "type": "p",
-        "text": "Tek seferlik gider bir kez ödenir:"
+        "text": "Yaymasanız da Hesaplanan ay'ı seçebilirsiniz; böylece gider ait olduğu ayda sayılır. Örneğin Kasım'da gelen bir Ekim faturası, gerçek tarihi korunarak Ekim'de sayılabilir."
       },
       {
-        "type": "list",
-        "items": [
-          "Mağaza dekorasyonu, ekipman veya peşin ödenen sigorta için Birkaç aya yay seçeneğini açın; 2 ile 120 arasında bir ay sayısı ve Hesaplanan ilk ay'ı seçin. Form, her ay ne kadarının sayılacağını ve hangi ayları kapsadığını önizler.",
-          "Yaymasanız da hesaplanan ayı seçebilirsiniz: Kasım'da gelen bir Ekim faturası, gerçek tarihi korunarak Ekim'de sayılabilir.",
-          "Yayılan bir gider erken biterse (örneğin iptal edilen bir sigorta), Yayılmayı Erken Bitir'i kullanın: kalan tutar seçtiğiniz ayda sayılır."
-        ]
+        "type": "p",
+        "text": "Mağaza dekorasyonu, ekipman veya peşin ödenen sigorta için Birkaç aya yay'ı açın, 2 ile 120 arasında bir ay sayısı seçin ve Hesaplanan ilk ay'ı belirleyin. Form, her ay ne kadarının sayılacağını ve hangi ayları kapsadığını önizler."
+      },
+      {
+        "type": "p",
+        "text": "Yayılan bir gider erken biterse (örneğin iptal edilen bir sigorta poliçesi), gideri açın ve Yayılmayı Erken Bitir'i kullanın. Kalan tutar seçtiğiniz ayda sayılır."
+      },
+      {
+        "type": "h2",
+        "text": "Giderlerde indirilecek vergi"
+      },
+      {
+        "type": "p",
+        "text": "İndirilecek Vergi Takibi açıkken, tek seferlik bir gidere fatura numarası ve indirilebilir vergi kaydedebilir, sabit bir giderin her faturasını da Faturalar altında Fatura Kaydet ile kaydedebilirsiniz. Kâr/Zarar'da sayılan tutar, mağazanın gerçekte karşıladığı tutar olarak kalır; indirilebilir verginin nasıl çalıştığını ilgili indirilecek vergi makalesi anlatır."
       },
       {
         "type": "note",
@@ -1529,7 +1907,485 @@ export const articles = [
     "related": [
       "profit-loss",
       "purchase-orders",
+      "input-tax",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "export-tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Vergi raporunu muhasebecim için nasıl dışa aktarırım?",
+    "keywords": [
+      "vergi raporunu dışa aktar",
+      "Vergi Raporu",
+      "Dışa Aktar",
+      "Excel çalışma kitabı",
+      "CSV",
+      "PDF raporu",
+      "vergi özeti",
+      "indirilecek vergi ayrıntıları",
+      "muhasebeci"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Vergi Raporu'nu açın, sağ üstteki Dışa Aktar'a dokunun ve bir CSV, Excel çalışma kitabı (XLSX) ya da PDF raporu seçin. Dosya tam ekran bir önizlemede açılır; paylaş düğmesine dokunarak kaydedebilir veya muhasebecinize gönderebilirsiniz. Her biçim, ekrandaki aynı rakamları içerir."
+      },
+      {
+        "type": "h2",
+        "text": "Nasıl dışa aktarılır"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "İstatistik'i açın ve dönemi seçin; örneğin iki aylık bir beyan dönemi için 1 Kasım – 31 Aralık özel aralığını ya da üç aylık bir aralığı.",
+          "Vergi Raporu'nu açmak için Vergi kutucuğuna dokunun. Dışa aktarma tam olarak bu dönemi kapsar.",
+          "Vergi Raporu'nun sağ üstündeki Dışa Aktar'a dokunun. Bir menü biçimleri listeler; bu iPad'de en son dışa aktarılan biçim işaretli görünür.",
+          "Tam ekran bir önizleme açmak için bir biçim seçin; örneğin Excel çalışma kitabı (XLSX). CSV dosyaları tablo olarak görünür; Excel çalışma kitabında ise sayfalar arasında geçiş yapabilirsiniz, örneğin önce Summary sayfasına bakabilirsiniz.",
+          "Dosyayı kaydetmek veya muhasebecinize göndermek için önizlemenin sağ üstündeki paylaş düğmesine dokunun. Önizlemeyi kapatmak sizi Vergi Raporu'na döndürür."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "tax-export",
+        "alt": "Dışa Aktar menüsü açık ve dosya biçimlerini listeleyen Vergi Raporu"
+      },
+      {
+        "type": "p",
+        "text": "Dışa aktarma başarısız olursa uygulama Dosya dışa aktarılamadı ve Yeniden dışa aktarmayı deneyin. mesajını gösterir. Hiçbir şey yazılmaz; yeniden dışa aktarın."
+      },
+      {
+        "type": "h2",
+        "text": "Dışa aktarma biçimleri"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Vergi özeti (CSV): Rapor satırı başına bir satır (her vergi ve oran, sıfır oranlı ve vergisiz); vergi öncesi ve vergi olarak satışlar, ürün iadeleri ve net tutarlar.",
+          "Tüm belgeler (CSV): Her verginin altında belge başına bir satır; tarih ve saat, fiş numarası, belge türü (satış, ürün iadesi ya da geçersiz kılmanın ters kaydı), müşteri adı, tutarlar ve ödeme yöntemleri yer alır. Geçersiz kılma, geçersiz kılma tarihine bir ters kayıt satırı ekler.",
+          "Günlük özet (CSV): Gün başına özet; ardından gün ve yöntem başına ödemelerin ikinci bir tablosu.",
+          "İndirilecek vergi ayrıntıları (CSV): Yalnızca raporda bir indirilecek vergi kartı olduğunda gösterilir. Her satın alma siparişinin ve giderin her indirilecek vergi satırı için bir satır; tedarikçi, tedarikçi vergi numarası ve fatura numarasıyla.",
+          "Excel çalışma kitabı (XLSX): Üç satış CSV'sine karşılık gelen Summary, Documents ve Daily sayfaları; rapor indirilecek vergi gösteriyorsa ayrıca Purchases. Tutarlar sayı hücreleridir ve her sütun içeriğine göre genişler; böylece hiçbir şey kesik açılmaz.",
+          "PDF raporu: Uygulamanın dilinde; mağaza adı, dönem, vergi modu, para birimi ve rapor bölümlerini içeren bir A4 rapor. Avustralya, Yeni Zelanda, Singapur ve Birleşik Krallık'taki mağazalarda önce Beyanname Kutuları gelir; gösteriliyorsa indirilecek vergi kartları bunları izler. Önizlemede, işaretlenmiş dosyayı paylaşmak için İşaretleme ile imzalayın veya not ekleyin; aynı dönemi yeniden dışa aktarmak temiz bir kopya yazar."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Muhasebe yazılımı için biçimlendirme"
+      },
+      {
+        "type": "p",
+        "text": "CSV dosyaları UTF-8 ve virgülle ayrılmıştır; muhasebe yazılımı okuyabilsin diye sütun adları, uygulama dili ne olursa olsun sabit İngilizcedir. Tutarlar para biriminin ondalık basamaklarını ve eksi işaretini kullanır; simge ya da binlik ayırıcı yoktur (80.97, -40.00 ya da yen kullanan bir mağaza için 1000 gibi). Tarihler 2026-11-03 gibi görünür."
+      },
+      {
+        "type": "p",
+        "text": "=, +, - veya @ ile başlayan metin hücrelerinin (örneğin =1+1 adlı bir müşteri) başına bir ' eklenir; böylece e-tablolar formül çalıştırmak yerine metni gösterir. Tutarlara hiçbir zaman eklenmez."
+      },
+      {
+        "type": "p",
+        "text": "Dosya adları dönemi taşır; örneğin tax-report-summary_2026-11-01_2026-11-30.csv, tax-report_2026-11-01_2026-11-30.xlsx ve tax-report_2026-11-01_2026-11-30.pdf. Böylece farklı dönemlerin dosyaları birbirinin üzerine yazılmaz."
+      },
+      {
+        "type": "h2",
+        "text": "Yetkiler ve gizlilik"
+      },
+      {
+        "type": "p",
+        "text": "Lite dahil her plan dışa aktarabilir. Personelin, Vergi Raporu için olduğu gibi İstatistik yetkisine ihtiyacı vardır."
+      },
+      {
+        "type": "p",
+        "text": "İndirilecek vergi içeren dosyalar, kartlarının gerektirdiği onayları önce ister: satın alma siparişleri için Maliyet ve kâr, giderler için Kâr/zarar ve giderler. Bu, İndirilecek vergi ayrıntıları (CSV) ile indirilecek vergi kartları göründüğünde Excel çalışma kitabı (XLSX) ve PDF raporunu kapsar. Vazgeçmek hiçbir şey yazmaz; üç satış CSV'si hiçbir zaman onay istemez."
+      },
+      {
+        "type": "note",
+        "text": "Tüm belgeler (CSV) müşteri adlarını, indirilecek vergi dosyaları ise tedarikçi adlarını ve vergi numaralarını içerir. Bunları yalnızca görmesi gereken kişilerle paylaşın."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "input-tax",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "input-tax",
+    "category": "reports",
+    "since": "3.6",
+    "question": "İndirilecek vergiyi (alışlardaki KDV, VAT veya GST) nasıl kaydederim?",
+    "keywords": [
+      "indirilecek vergi",
+      "KDV",
+      "VAT",
+      "GST",
+      "İndirilecek Vergi Takibi",
+      "satın alma siparişlerinde indirilecek vergi",
+      "giderlerde indirilecek vergi",
+      "tedarikçi vergi numarası",
+      "satın alma siparişleri",
+      "vergi raporu"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Satın alma siparişlerinde ve giderlerde tedarikçi faturalarındaki indirilebilir vergiyi kaydetmek için Ayarlar → Mağaza Bilgileri'nde İndirilecek Vergi Takibi'ni açın. Bunun ardından her iki formda da, indirilebilir vergiyi her faturadan aktardığınız bir indirilecek vergi bölümü olur. Vergi raporu bunu iki kartta listeler: Satın Alma Siparişlerindeki İndirilecek Vergi ve Giderlerdeki İndirilecek Vergi."
+      },
+      {
+        "type": "h2",
+        "text": "İndirilecek Vergi Takibi'ni açma"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ayarlar → Mağaza Bilgileri'ni açın ve vergi kartını bulun.",
+          "Vergi Uygula altında İndirilecek Vergi Takibi'ni açın."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-toggle",
+        "alt": "İndirilecek Vergi Takibi açık ve altında ipucu görünen Mağaza Bilgileri vergi kartı"
+      },
+      {
+        "type": "p",
+        "text": "İndirilecek Vergi Takibi yalnızca mağazada en az bir vergi olduğunda görünür; yeni mağazalarda ve güncellemeden sonra kapalı başlar. Anahtarı değiştirmek hemen kaydedilir ve Etkinlik günlüğü'nde Vergi ayarları altında kayıt oluşturur. Açıkken alış fiyatlarını ve ürün maliyetlerini indirilebilir vergiden önceki tutar olarak girin; indirilemeyen vergi maliyetin içinde kalır."
+      },
+      {
+        "type": "note",
+        "text": "İndirilecek Vergi Takibi anahtarı her planda vardır; Satın alma ise Standard veya üzeri gerektirir. Anahtarı kapatmak yeni kayıtlarda alanları gizler; mevcut kayıtlar indirilecek vergilerini ve ödenecek tutarlarını korur, geçmiş vergi raporları da değişmez."
+      },
+      {
+        "type": "h2",
+        "text": "Satın alma siparişleri"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Satın alma'yı açın ve Yeni alım oluştur'a dokunun.",
+          "Birim fiyatları indirilebilir vergiden önceki tutar olarak girin, ardından ek maliyetlerin altından İndirilecek Vergi'ye kaydırın.",
+          "Varsayılan olarak sipariş tarihi olan Fatura tarihi'ni kontrol edin ve isteğe bağlı olarak Fatura numarası ile Tedarikçi vergi numarası ekleyin.",
+          "Oran için mağaza vergilerinden birini seçin ya da %9,975 gibi en fazla 3 ondalık basamaklı bir oran yazmak için Başka oran…'ı seçin.",
+          "Siparişin vergi öncesi toplamından başlayan Vergi öncesi tutarını kontrol edin ve İndirilebilir vergi'yi faturadan aktarın.",
+          "Ek oranlar için Oran Ekle'ye dokunun."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-po",
+        "alt": "Fatura alanlarını, tek bir oran satırını ve toplamları gösteren İndirilecek Vergi bölümlü satın alma siparişi"
+      },
+      {
+        "type": "p",
+        "text": "İndirilebilir vergi boş başlar; DingPOS bunu hiçbir zaman orandan hesaplamaz ve fatura yuvarlamasını kabul eder. Örneğin 30 Haziran 2026 tarihli AB-12345678 numaralı faturada, 10 × $300 un artı $100 nakliye ve Vergi öncesi $3.100, İndirilebilir vergi $155 olan tek bir %5'lik satır varsa Vergi öncesi toplam $3.100, İndirilecek Vergi $155 ve Ödenecek tutar $3.255 olur; bu tutar listede, sipariş ayrıntısında ve Açık Fatura'da görünür. Bir tedarikçide kayıtlı Tedarikçi vergi numarası yeni siparişleri doldurur; kayıtlı siparişler kendi numaralarını korur."
+      },
+      {
+        "type": "p",
+        "text": "Bir fatura geç gelirse teslim alınan siparişi açın ve İndirilecek Vergi kartında İndirilecek Vergiyi Kaydet'e dokunun; değiştirmek için Düzenle'ye dokunun. Yalnızca Ödenecek tutar değişir; stok, ürün maliyeti ve ödendi ya da ödenmedi durumu aynı kalır. Geçersiz kılınan siparişlerde İndirilecek Vergi salt okunur kalır; güncellemeden önce kaydedilmiş siparişler geriye dönük doldurulmaz."
+      },
+      {
+        "type": "h2",
+        "text": "Giderler"
+      },
+      {
+        "type": "p",
+        "text": "Kâr/Zarar → Tek Seferlik Giderler'de form, tutarın altına Fatura numarası ve indirilecek vergi satırları ekler. Tutarı indirilebilir vergiden önceki hâliyle bırakın ve yalnızca indirilebilir vergiyi aktarın. İndirilebilir vergisi $100 olan $1.100 tutarındaki bir kırtasiye faturasında $1.000 girin ve $1.000 ile $100 olan bir %10 satırı ekleyin; Vergi dahil $1.100 gösterir, Kâr/Zarar ise $1.000 sayar. İndirilecek vergisi, Hesaplanan ay'a ya da yayılmaya hiçbir zaman uymaz; gider tarihinde tamamen sayılır."
+      },
+      {
+        "type": "p",
+        "text": "Kâr/Zarar → Sabit Giderler'de kira veya faturalar gibi kayıtlı bir gideri açın ve her fatura geldikçe Faturalar altında Fatura Kaydet'e dokunun; fatura tarihini, isteğe bağlı fatura numarasını ve en az bir oran satırını girin. Kira ayda $30.000 ise ve Temmuz ile Ağustos faturalarının her biri $30.000 ve $1.500 olan %5'lik bir satır taşıyorsa, Temmuz–Eylül raporu $3.000 indirilecek vergi içerir; Kâr/Zarar ise her ay yine $30.000 sayar."
+      },
+      {
+        "type": "p",
+        "text": "Geçmiş bir aydaki indirilecek vergi değişikliğini kaydetmek Değişiklik kaydedilsin mi? sorusunu getirir ve o ayın vergi raporunu zaten beyan ettiyseniz bu raporun değişeceği konusunda uyarır. Cari ay düzenlemeleri ve taslaklar sormadan kaydedilir."
+      },
+      {
+        "type": "note",
+        "text": "DingPOS ithalat KDV'sini, reverse charge'ı ve kısmi indirimi hesaplamaz. İndirilebilir vergiyi faturadan aktarın ve indiremediğiniz vergiyi vergi öncesi tutara dahil edin."
+      },
+      {
+        "type": "h2",
+        "text": "Vergi raporu"
+      },
+      {
+        "type": "p",
+        "text": "Satış kartlarından sonra iki kart gelir: Satın Alma Siparişlerindeki İndirilecek Vergi ve Giderlerdeki İndirilecek Vergi. Her biri oran başına bir satırı, bir İndirilecek vergi yok satırını ve Vergi öncesi, İndirilebilir vergi ile Vergi dahil için toplamları listeler. Toplamlar indirilecek vergisi olmayan alımları da içerir; ancak bazı beyannameler yalnızca indirilecek vergisi olan satırları sayar."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Satın alma siparişleri Fatura tarihinde sayılır; boşsa sipariş tarihinde.",
+          "Geçersiz kılınan satın alma siparişleri, geçersiz kılma tarihinde negatif tutar olarak sayılır.",
+          "Tek seferlik giderler gider tarihinde tamamen sayılır.",
+          "Sabit gider faturaları fatura tarihinde sayılır."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Satın Alma Siparişlerindeki İndirilecek Vergi için Maliyet ve kâr, Giderlerdeki İndirilecek Vergi için Kâr/zarar ve giderler yetkisi gerekir; yetkisi olmayan personel kart başlığının altında Yöneticiden onay isteyin yazısını görür. Vergi kutucuğu yine yalnızca satışlarda tahsil edilen vergiyi gösterir, hiçbir zaman indirilecek vergi düşülmüş hâlini göstermez; çünkü Japonya'nın basitleştirilmiş yöntemi ve Birleşik Krallık'ın Flat Rate Scheme'i farklı çalışır. Avustralya, Yeni Zelanda, Singapur ve Birleşik Krallık'taki mağazalar bu tutarları Beyanname Kutuları'nda da görür."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "purchase-orders",
+      "record-expenses"
+    ]
+  },
+  {
+    "slug": "tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Vergi raporu nerede ve nasıl okunur?",
+    "keywords": [
+      "vergi raporu",
+      "Vergi Raporu",
+      "KDV",
+      "VAT",
+      "GST",
+      "satış vergisi",
+      "istatistik",
+      "vergi kutucuğu",
+      "orana göre satış ve vergi",
+      "ödeme yöntemine göre"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "İstatistik'i açın ve dönem için orana göre satışları ve vergiyi listeleyen Vergi Raporu'nu görmek üzere Vergi kutucuğuna dokunun. Rapor, İstatistik'in gösterdiği dönemi kapsar. Bu rakamları bir KDV, GST veya satış vergisi beyannamesine aktarın ya da muhasebeciye gönderin. Sonraki vergi değişiklikleri, kaydedilmiş belge rakamlarını hiçbir zaman değiştirmez."
+      },
+      {
+        "type": "h2",
+        "text": "Vergi raporunu açma"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "İstatistik'i açın ve Bu Ay ya da özel bir aralık gibi dönemi seçin.",
+          "İkinci sırada Toplam indirim'in ardından gelen Vergi kutucuğunu bulun.",
+          "Vergi kutucuğuna ya da altındaki Vergi Raporu › bağlantısına dokunun."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Bu Ay seçili İstatistik; Vergi kutucuğu ve altındaki Vergi Raporu › bağlantısı"
+      },
+      {
+        "type": "p",
+        "text": "Bu kutucuk tek giriş yoludur. Alt başlığı, dönemde tahsil edilen vergileri en büyük tutardan başlayarak adlandırır: ikisini adıyla, üç veya daha fazlasını ise örneğin 3 vergi, PST %7 dahil biçiminde. Başlık İstatistik'in dönemini gösterir (Bu Ay · 1 Kasım – 30 Kasım); dönem seçici ya da geçen ay kısayolu yoktur, çünkü beyan dönemleri farklıdır (Tayvan'da iki ay, Avustralya'da üç ay, Japonya'da bir yıl)."
+      },
+      {
+        "type": "p",
+        "text": "Vergisi olmayan ve dönemde vergili satışı bulunmayan mağazalar Vergi kutucuğunu görmez; belgesi olmayan dönemlerde İstatistik'in boş durumu gösterilir. Silinmiş vergiler, altında satış bulunan dönemler için kutucuğu korur."
+      },
+      {
+        "type": "note",
+        "text": "Lite ve deneme dahil her planda kutucuk, rapor ve tüm dışa aktarma biçimleri vardır. Personelin İstatistik yetkisi gerekir; onay gerektiren roller, bir yönetici onaylayana kadar onay yer tutucusunu görür."
+      },
+      {
+        "type": "h2",
+        "text": "Raporu okuma"
+      },
+      {
+        "type": "p",
+        "text": "Avustralya, Yeni Zelanda, Singapur ve Birleşik Krallık'taki mağazalar önce Beyanname Kutuları'nı görür."
+      },
+      {
+        "type": "p",
+        "text": "Orana Göre Satış ve Vergi her oran için bir satır listeler: en yüksek oran önce, ardından %0 sıfır oranlı, en sonda Vergisiz (vergisi olmayan ürünler). Sütunlar Satışlar, Ürün iadeleri ve geçersiz kılmalar ile Net'tir; her biri Vergi öncesi ve Vergi içerir; sıfır oranlı ve Vergisiz satırlarda vergi satırı yoktur. Satışı olmasa bile her mağaza vergisi bir satır alır. Yeniden adlandırma tek satırı korur; oran değişikliği bir satır ekler."
+      },
+      {
+        "type": "p",
+        "text": "Toplamlar; Vergi öncesi satışlar, Vergi ve Vergi dahil satışlar'ı gösterir. İki veya daha fazla vergi varsa bir not, bir satışın birden fazla vergi taşıyabileceğini ve bu yüzden satır satışlarının toplanamayacağını söyler; Vergi öncesi satışlar her satışı bir kez sayar. Örneğin bir Birleşik Krallık çeyreğinde VAT %20 için Vergi öncesi £1.000 ve Vergi £200, sıfır oranlı %0 için £300 ve Vergisiz £50 görünebilir: Toplamlar, Vergi öncesi satışlar £1.350, Vergi £200 ve Vergi dahil satışlar £1.550 verir."
+      },
+      {
+        "type": "shot",
+        "name": "tax-report",
+        "alt": "Orana Göre Satış ve Vergi satırlarını ve altındaki Toplamlar'ı gösteren Vergi Raporu"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ödeme Yöntemine Göre, bu belgelerin dönem sonuna kadar yapılan ödemelerini listeler; ödenmeyen tutarlar Alacaklar olarak, nakit yuvarlama ise nakit satırının içindeki Nakit yuvarlama dahil … satırında görünür.",
+          "Satış Sayılmayanlar yalnızca alıkonulan kaporalar için görünür; Alıkonulan kaporalar'ı, bunları beyan edip etmeyeceğinizi muhasebeciye sormanızı öneren bir alt başlıkla listeler ve ne satışa ne de vergiye eklenir.",
+          "İndirilecek Vergi Takibi açık olan ya da dönemde indirilecek vergi kaydeden mağazalar ayrıca Satın Alma Siparişlerindeki İndirilecek Vergi ve Giderlerdeki İndirilecek Vergi kartlarını görür."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Her belgenin hangi güne sayıldığı"
+      },
+      {
+        "type": "p",
+        "text": "Orana Göre Satış ve Vergi'nin yanındaki ⓘ'ye dokunun:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Geçersiz kılınan satış, geçersiz kılındığı dönemde eksi tutar olarak sayılır; böylece beyan edilmiş bir dönem hiç değişmez. İstatistik ise satışı kendi döneminden çıkarır.",
+          "Ürün iadesi kendi tarihinde sayılır. Değişimde yeni ürünler satış, geri verilenler ürün iadesi olarak sayılır.",
+          "Ön sipariş teslim alma gününde, veresiye satış ise satışın yapıldığı günde sayılır."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "30 Ekim'deki bir satış 2 Kasım'da geçersiz kılınırsa Ekim Satışları'nda kalır ve Kasım'ın Ürün iadeleri ve geçersiz kılmalar sütununda eksi tutar olarak görünür. Veresiye bir satışın sonradan kapatılması onu başka döneme taşımaz."
+      },
+      {
+        "type": "h2",
+        "text": "Tahsil edilen vergi ve İstatistik toplamları"
+      },
+      {
+        "type": "p",
+        "text": "Vergi kutucuğu, Vergi Raporu'nun Vergi toplamına eşittir. İstatistik'in Satış gelirinden brüt kâra ekranındaki Vergi satırından yalnızca dönemler arası geçersiz kılmalarda farklıdır; çünkü İstatistik, geçersiz kılınan satışı özgün döneminden çıkarır."
+      },
+      {
+        "type": "note",
+        "text": "Vergi Raporu satışlarda tahsil edilen vergiyi gösterir, ödenecek vergiyi (tahsil edilen eksi indirilecek vergi) hiçbir zaman göstermez; çünkü her ülke bunu bu şekilde hesaplamaz, örneğin Japonya'nın basitleştirilmiş yöntemi veya Birleşik Krallık'ın Flat Rate Scheme'i."
+      }
+    ],
+    "related": [
+      "tax-return-boxes",
+      "input-tax",
+      "export-tax-report",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "tax-return-boxes",
+    "category": "reports",
+    "since": "3.6",
+    "question": "BAS, GST veya VAT beyanname kutularına hangi rakamlar yazılır?",
+    "keywords": [
+      "beyanname kutuları",
+      "vergi raporu",
+      "istatistik",
+      "BAS",
+      "Simpler BAS",
+      "GST101A",
+      "GST F5",
+      "VAT Return",
+      "indirilecek vergi takibi"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Avustralya, Yeni Zelanda, Singapur veya Birleşik Krallık'taki mağazalar için Vergi Raporu, her kutuyu ve tutarını aynı rapordan gösteren Beyanname Kutuları ile açılır. Her planda Avustralya BAS · Simpler BAS, Yeni Zelanda GST101A, Singapur GST F5 ve Birleşik Krallık VAT Return'ü kapsar."
+      },
+      {
+        "type": "h2",
+        "text": "Beyanname Kutularını açma"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "İstatistik'i açın.",
+          "Vergi Raporu'nu açmak için Vergi kutucuğuna dokunun."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Beyanname Kutuları, Orana Göre Satış ve Vergi'nin üstündeki ilk karttır ve alt başlığı beyannameyi adlandırır. Her tutar sent dahil aynı rapordan gelir ve hiçbir şey yeniden hesaplanmaz. Dışa aktarılan PDF raporu da aynı kartla açılır. Uygulama ülkeyi kaydetmeden önce kurulmuş mağazalar para birimine göre sayılır (AUD, NZD, SGD veya GBP); diğer mağazalarda Beyanname Kutuları kartı yoktur."
+      },
+      {
+        "type": "shot",
+        "name": "return-boxes",
+        "alt": "Vergi Raporu'nun en üstünde, Birleşik Krallık VAT Return Box 1, 4, 6 ve 7'yi gösteren Beyanname Kutuları kartı"
+      },
+      {
+        "type": "h2",
+        "text": "Avustralya BAS · Simpler BAS"
+      },
+      {
+        "type": "list",
+        "items": [
+          "G1 Total sales: GST'li, GST'siz ve vergisiz satışlar dahil satışlar; “Does the amount shown at G1 include GST?” (G1'de gösterilen tutar GST içeriyor mu?) sorusuna Yes (Evet) yanıtı verin",
+          "1A GST on sales: Satışlardaki vergi",
+          "1B GST on purchases: Satın alma siparişlerindeki ve giderlerdeki indirilebilir vergi"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "ATO tam dolar ister: BAS'ta sentleri yazmayın, asla yukarı yuvarlamayın."
+      },
+      {
+        "type": "h2",
+        "text": "Yeni Zelanda GST101A"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Box 5 Total sales and income: GST'li satışlar; sıfır oranlı satışlar dahil, vergisiz satışlar hariç",
+          "Box 6 Zero-rated supplies: Sıfır oranlı satışlar",
+          "Box 11 Total purchases and expenses: GST'li satın alma siparişleri ve giderler, GST dahil; indirilecek vergisi olmayan veya sıfır oranlı alımlar hariç"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "myIR, Box 8 ve Box 12'yi 3/23 olarak hesaplar; bu, rapordaki vergiden birkaç sent farklı olabilir."
+      },
+      {
+        "type": "h2",
+        "text": "Singapur GST F5"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Box 1 Total value of standard-rated supplies: Vergili satışlar, vergi öncesi",
+          "Box 2 Total value of zero-rated supplies: Sıfır oranlı satışlar; yalnızca ihracat ve uluslararası hizmetler sıfır oranlı olabilir",
+          "Box 5 Total value of taxable purchases: GST'li veya sıfır oranlı satın alma siparişleri ve giderler, vergi öncesi; indirilecek vergisi olmayan alımlar hariç",
+          "Box 6 Output tax due: Satışlardaki vergi",
+          "Box 7 Input tax and refunds claimed: Satın alma siparişlerindeki ve giderlerdeki indirilebilir vergi"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Birleşik Krallık VAT Return"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Box 1 VAT due on sales and other outputs: Satışlardaki vergi",
+          "Box 4 VAT reclaimed on purchases and other inputs: Satın alma siparişlerindeki ve giderlerdeki indirilebilir vergi",
+          "Box 6 Total value of sales and all other outputs excluding any VAT: Vergi öncesi satışlar; sıfır oranlı, muaf ve vergisiz satışlar dahil",
+          "Box 7 Total value of purchases and all other inputs excluding any VAT: Vergi öncesi satın alma siparişleri ve giderler; indirilecek vergisi olmayan alımlar dahil. Kaydettiğiniz maaşları ve iş yeri vergisini (business rates) çıkarın"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Standart VAT muhasebesi içindir; Flat Rate Scheme'de Box 1 ve Box 6 farklı hesaplanır. Birleşik Krallık'ta kaporanın VAT'ı kaporayı aldığınızda doğar; DingPOS ise ön siparişi teslim alındığında beyana işler."
+      },
+      {
+        "type": "p",
+        "text": "Örnek Birleşik Krallık çeyreği: vergi öncesi £1.000'lık VAT %20 satış (vergi £200), £300 sıfır oranlı satış, £50 vergisiz satış, £400 artı £80 VAT'lık satın alma siparişleri ve indirilecek vergisi olmayan £250'lık giderler şu sonucu verir: Box 1 £200, Box 4 £80, Box 6 £1.350 ve Box 7 £650."
+      },
+      {
+        "type": "h2",
+        "text": "Boş kutular ve personel erişimi"
+      },
+      {
+        "type": "p",
+        "text": "Vergi dairesinin hesapladığı kutular ve borç tutarları dahil edilmez (Birleşik Krallık Box 3 ve 5; Singapur Box 3, muaf satışlar). Yeni Zelanda ve Singapur'da vergisiz satışlar hiçbir kutuda yer almaz; vergi uygulanması gerekiyorsa muhasebecinize danışın."
+      },
+      {
+        "type": "p",
+        "text": "İndirilecek vergi kutuları (AU 1B, NZ 11, SG 5 ve 7, UK 4 ve 7) İndirilecek Vergi Takibi gerektirir; aksi hâlde — ve İndirilecek vergi kaydedilmedi gösterirler, hiçbir zaman 0 göstermezler. UK Box 7 hem Satın Alma Siparişlerindeki İndirilecek Vergi hem de Giderlerdeki İndirilecek Vergi kartlarını gerektirir; yalnızca satın alma siparişleri Box 4'ü doldurur ve Box 7'yi — olarak bırakır."
+      },
+      {
+        "type": "p",
+        "text": "Kâr/zarar ve giderler ya da Maliyet ve kâr yetkisi olmayan personel, bir yönetici Yöneticiden onay isteyin ile onaylayana kadar her iki kartı da toplayan kutuları görmez."
+      },
+      {
+        "type": "note",
+        "text": "Satış ve fatura tarihlerine göre hesaplanır; DingPOS ödeme tarihlerini izlemez. Beyanı nakit veya ödeme esasına göre veriyorsanız bu rakamları düzeltin."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "input-tax",
+      "export-tax-report"
     ]
   },
   {
@@ -1623,11 +2479,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ayarlar → Sadakat Programı bölümüne gidin ve iki kural tanımlayın: harcanan her X tutar için Y puan kazanma ve N puan karşılığında M indirim kullanma (isteğe bağlı sipariş başına kullanım sınırıyla). Yeni üyelere otomatik olarak hoş geldin puanı da verebilirsiniz."
+        "text": "Ayarlar → Sadakat Programı bölümüne gidin ve iki kural tanımlayın: harcanan her X tutar için Y puan kazanma ve N puan karşılığında M indirim kullanma (isteğe bağlı sipariş başına kullanım sınırıyla). Yeni üyelere otomatik olarak hoş geldin puanı da verebilirsiniz. Yeni mağazalarda puan özelliği kapalı başlar: Sadakat Programını Etkinleştir anahtarını açın ve bir kural girin. Anahtar açıkken hiç kural tanımlı değilse şu uyarı görünür: “Henüz puan kazanma veya kullanma kuralı belirlenmedi; bu yüzden satışlarda puan kazanılmaz ve kullanılamaz.”"
       },
       {
         "type": "p",
-        "text": "Üyeyi sepette ya da ödeme ekranında satışa ekleyin; puanlar otomatik birikir. Puan kullanmak için kullanılacak puanı girin. Bir siparişi geçersiz kılmak, o siparişten kazanılan puanları geri alır ve kullanılan puanları iade eder."
+        "text": "Üyeyi sepette ya da ödeme ekranında satışa ekleyin; puanlar otomatik birikir. Puan kullanmak için kullanılacak puanı girin. Satış sonrası açılan Ding! ekranı kazanılan puanı ve yeni bakiyeyi gösterir, örneğin “+22 puan · toplam 122 puan”. Veresiye satışta ya da tamamı ödenmemiş bir ön siparişte puanlar ancak para tahsil edilince eklenir; ekranda “borç kapatılınca eklenir” veya “teslim alınırken ödenince eklenir” yazar. Bir siparişi geçersiz kılmak, o siparişten kazanılan puanları geri alır ve kullanılan puanları iade eder."
       },
       {
         "type": "p",
@@ -2006,19 +2862,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bir yetkinin iki değeri vardır: İzinli veya Onay gerekir; hiçbir şey tümüyle yasak değildir. Personel onay gerektiren bir işleme geldiğinde, o işleme izni olan bir meslektaşı adını seçip PIN'ini girerek işlemin geçmesini sağlar."
+        "text": "Bir yetkinin iki değeri vardır: İzinli veya Onay gerekir; hiçbir şey tümüyle yasak değildir. Personel onay gerektiren bir işlemle karşılaştığında, o işlem için izni olan bir meslektaş adını seçip PIN'ini girerek işlemin geçmesini sağlar."
       },
       {
         "type": "list",
         "items": [
           "İşlemler (elle stok düzeltme, elle puan düzeltme, ürün yönetimi, indirim üst sınırının üzerinde ödeme alma): bir onay yalnızca o tek işlemi kapsar.",
-          "Görünümler (maliyet ve kâr, Pano, kâr/zarar ve giderler, Ayarlar, yedekleme ve geri yükleme): onay, işlemi yapan kişi değişene veya uygulama arka plana geçene kadar kilidi açık tutar.",
-          "İndirim üst sınırı elle yapılan indirimlere uygulanır ve ödemede bir kez kontrol edilir; otomatik kampanyalar ve puan kullanımı bu sınıra sayılmaz."
+          "Görünümler (maliyet ve kâr, İstatistik, Kâr/Zarar ve giderler, Ayarlar, yedekleme ve geri yükleme): onay, işlemi yapan kişi değişene veya uygulama arka plana geçene kadar kilit açık kalır.",
+          "İndirim üst sınırı elle yapılan indirimlere uygulanır ve ödemede bir kez kontrol edilir; otomatik kampanyalar ve puan kullanımı bu sınıra dahil edilmez."
         ]
       },
       {
         "type": "p",
-        "text": "Varsayılan ayarlar: Yöneticiler yedekleme ve geri yükleme ile kâr/zarar ve giderler dışında her şeye izinlidir ve indirim üst sınırı yoktur; Personel her şey için onay ister ve üst sınır %10'dur. Sahip her zaman izinlidir ve düzenlenemez. Değiştirmek için Personel → Rol yetkileri'ne gidin, Düzenle'ye dokunun ve bir kez kaydedin; değişiklik herkes için hemen geçerli olur."
+        "text": "Varsayılan ayarlar: Yöneticiler yedekleme ve geri yükleme ile Kâr/Zarar ve giderler dışında her şeye izinlidir ve indirim üst sınırı yoktur; Personel her şey için onay ister ve üst sınır %10'dur. Sahip her zaman izinlidir ve düzenlenemez. Değiştirmek için Personel → Rol yetkileri'ne gidin, Düzenle'ye dokunun ve bir kez kaydedin; değişiklik herkes için hemen geçerli olur."
       },
       {
         "type": "note",
@@ -2152,13 +3008,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları (gelişmiş raporlar ve aylık Kâr/Zarar v3.4'ten beri dahil) ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
+        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları (gelişmiş raporlar ve aylık Kâr/Zarar v3.4'ten beri, vergi raporu ve dışa aktarımı v3.6'dan beri dahil) ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
       },
       {
         "type": "list",
         "items": [
           "Lite: ödeme alma ve ürün yönetimi yeterli olan, tezgâhı tek başına işleten kişiler için.",
-          "Standard: kampanyalar, sadakat puanı ve üyelik seviyeleri, stok takibi, satın alma, veresiye satış, ön siparişler ve işlem ücreti oranları ekler.",
+          "Standard: kampanyalar, indirim ön ayarları, sadakat puanı ve üyelik seviyeleri, stok takibi, satın alma, veresiye satış, ön siparişler ve işlem ücreti oranları ekler.",
           "Pro: personel hesapları ve yetkiler, yönetici onayı, etkinlik günlüğü ve geri yükleme kayıtları ekler; personeli olan dükkânlar için."
         ]
       },
@@ -2369,12 +3225,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Hediye ve ücretli ek ürün sepeti kendiliğinden değiştirmez. Koşullar sağlandığında kasiyer ekranında bir öneri bandı çıkar ve sepet yalnızca kasiyer Hediye seç veya Ek ürün seç düğmesine dokunduğunda değişir. Bu bilinçli bir tercihtir, çünkü hediyeler fiziksel stok içerir: ürünün elde olduğunu ve müşterinin istediğini birinin doğrulaması gerekir."
+        "text": "Hediye ve ücretli ek ürün sepeti kendiliğinden değiştirmez. Koşullar sağlandığında kasiyer ekranında bir öneri bandı çıkar ve sepet yalnızca kasiyer bandın üzerindeki hediye veya + düğmesine (Hediye seç veya Ek ürün seç) dokunduğunda değişir. Bu bilinçli bir tercihtir, çünkü hediyeler fiziksel stok içerir: ürünün elde olduğunu ve müşterinin istediğini birinin doğrulaması gerekir."
       },
       {
         "type": "list",
         "items": [
-          "Reddet'ten sonra aynı öneri bu sepet için tekrar çıkmaz; yeni veya boşaltılmış bir sepette yeniden sorulur.",
+          "Bandın ✕ (Reddet) düğmesinden sonra aynı öneri bu sepet için tekrar çıkmaz; yeni veya boşaltılmış bir sepette yeniden sorulur.",
+          "Sepet koşulları sağlamaz hâle gelirse (örneğin hediyeyi tetikleyen ürün çıkarılırsa), hediye veya ek ürün otomatik olarak kaldırılır, üstte bir mesaj görünür ve bu bir kullanım olarak sayılmaz (v3.6'dan beri).",
           "v3.4'ten beri bekleyen teklifler ödemeyi durdurmaz: ödeme düğmesinin altındaki sarı bir satır, örneğin “1 bekleyen teklif uygulanmayacak”, kaç teklifin dışarıda kaldığını söyler (hangileri olduğunu görmek için dokunun) ve sipariş bunlar olmadan tamamlanır. Ödemenin eskisi gibi beklemesini istiyorsanız Ayarlar → Cihaz Tercihleri'nde Ödemeden önce teklifleri yanıtla seçeneğini açın; yalnızca bu iPad için geçerlidir.",
           "Hediye ve ek ürün satırlarına diğer parasal kampanyalar ek indirim uygulayamaz ve bu satırlar diğer kampanyaların eşiklerine sayılmaz."
         ]
@@ -2568,7 +3425,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "v3.4'ten beri Kâr/Zarar, her ayın net kârını ürün maliyeti, ücretler ve giderler düşüldükten sonra gösterir — bkz. “Her ay gerçekte ne kadar kâr ettiğimi nasıl görürüm?” Dışa aktarabileceğiniz veya yazdırabileceğiniz bir aylık borç kapatma raporu henüz yok, ancak mutabakat için gereken her şey uygulamada zaten mevcut:"
+        "text": "v3.4'ten beri Kâr/Zarar, her ayın net kârını ürün maliyeti, ücretler ve giderler düşüldükten sonra gösterir — bkz. “Her ay gerçekte ne kadar kâr ettiğimi nasıl görürüm?” v3.6'dan beri Vergi raporu, bir dönemi (örneğin Bu Ay) muhasebeciniz için CSV, Excel çalışma kitabı veya PDF raporu olarak dışa aktarır; içinde satışlar, vergi, her ödeme yöntemiyle alınan tutar ve alacaklar yer alır. Kâr/Zarar ve diğer raporlar henüz dışa aktarılamıyor, ancak mutabakat için gereken her şey uygulamada zaten mevcut:"
       },
       {
         "type": "list",
@@ -2580,7 +3437,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Dışa aktarabileceğiniz veya yazdırabileceğiniz bir aylık borç kapatma raporuna ihtiyacınız varsa gereken alanları bize yazın; geliştirme sırasını gelen talep sayısına göre belirliyoruz."
+        "text": "Vergi raporunun kapsadığının ötesinde, dışa aktarabileceğiniz veya yazdırabileceğiniz bir aylık borç kapatma raporuna ihtiyacınız varsa gereken alanları bize yazın; geliştirme sırasını gelen talep sayısına göre belirliyoruz."
       }
     ],
     "related": [

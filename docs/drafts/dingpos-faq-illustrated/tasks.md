@@ -55,7 +55,7 @@ Independent Test: `npm test`, `npm run l10n -- check`, `cd dingpos && npm run bu
 
 - [x] T022 [REQ-010] `npm run zh-hans`; send `.logs/zh-hans-review-dingpos.json` to `zh-hans-reviewer`; fix per layer; regenerate (seo-aeo.md §簡中由繁中產生). Verify: zh-Hans part of `npm test` passes
 - [x] T023 [REQ-010] For the first 10 translated languages in registry order: `npm run l10n -- dingpos sync <code>`, `l10n-translator` per packet (parallel), `apply` until `rejected 0`. Verify: `npm run l10n -- check` reports nothing for these codes
-- [ ] T024 [REQ-010] Same for the next 10 translated languages. Verify: same
+- [x] T024 [REQ-010] Same for the next 10 translated languages. Verify: same
 - [ ] T025 [REQ-010] Same for the remaining translated languages. Verify: `npm run l10n -- check` → clean for all
 - [ ] T026 [REQ-010] Review round: `sync --mode review --since <commit before T018>` per language, `l10n-reviewer` per segment, translator fixes, at most two rounds (seo-aeo.md §翻譯語言); unresolved `translation`/`glossary` findings go to `## Notes` for the owner. Verify: `npm run l10n -- check` → clean
 - [ ] T027 [REQ-011] `node dingpos/scripts/copy-spa-pages.js --write-sitemap`. Verify: `cd dingpos && npm run build` → passes (sitemap check)

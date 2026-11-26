@@ -1159,19 +1159,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Pembelian di sidebar mengelola pemasok dan pesanan pembelian. Data pemasok menyimpan nama, kontak, telepon, alamat, dan ketentuan pembayaran default (bayar langsung atau bulanan)."
+        "text": "Pembelian di sidebar mengelola pemasok dan pesanan pembelian. Data pemasok menyimpan nama, kontak, telepon, alamat, dan ketentuan pembayaran default: Bayar saat Terima atau Kredit Bulanan."
       },
       {
         "type": "steps",
         "items": [
           "Ketuk Pembelian Baru, pilih pemasok, lalu tambahkan produk, jumlah, dan harga pokok satuan (terisi otomatis dengan harga pokok produk saat ini). Ongkos kirim juga bisa ditambahkan. Untuk barang yang belum diatur sebagai produk, ketuk Produk Baru di pemilih Tambah Produk; produk baru langsung masuk ke pesanan pembelian sebagai satu baris. Jika pemasok belum terdaftar, ketuk Tambah Pemasok di kiri atas daftar pemasok — pemasok baru langsung kembali ke pesanan pembelian.",
           "Draf tidak pernah memengaruhi stok maupun utang — edit atau hapus sesuka Anda.",
-          "Saat barang tiba, ketuk Terima stok: stok yang dilacak bertambah, dan pesanan pembelian mendapat nomor lalu terkunci. Secara default, penerimaan juga memperbarui harga pokok tiap produk menjadi harga pokok satuan ini; matikan Sinkronkan harga pokok produk di pesanan pembelian agar harga pokok tidak berubah. Di bawahnya, Sertakan ongkos kirim dalam harga pokok (aktif untuk pesanan pembelian baru) membagi ongkos kirim ke setiap baris menurut jumlahnya, sehingga harga pokok yang tertulis di tiap produk sudah termasuk bagiannya: tepung 10 × $30, mentega 1 × $60, dan ongkos kirim $25 membuat harga pokok tepung $32 dan mentega $64."
+          "Saat barang tiba, ketuk Terima stok: stok yang dilacak bertambah, dan pesanan pembelian mendapat nomor lalu terkunci. Secara default, penerimaan juga memperbarui harga pokok tiap produk menjadi harga pokok satuan ini; matikan Sinkronkan harga pokok produk di pesanan pembelian agar harga pokok tidak berubah. Di bawahnya, Masukkan ongkos kirim ke harga pokok (aktif untuk pesanan pembelian baru) membagi ongkos kirim ke setiap baris menurut jumlahnya, sehingga harga pokok yang tertulis di tiap produk sudah termasuk bagiannya: tepung 10 × $30, mentega 1 × $60, dan ongkos kirim $25 membuat harga pokok tepung $32 dan mentega $64."
         ]
       },
       {
         "type": "p",
-        "text": "Ketentuan pembayaran menentukan langkah berikutnya: pesanan bayar langsung ditandai lunas, sedangkan pesanan bulanan tetap belum lunas di Belum Lunas, tempat Anda bisa melunasinya per pemasok — satu pesanan, bulan ini, atau semuanya."
+        "text": "Ketentuan pembayaran menentukan langkah berikutnya: pesanan Bayar saat Terima ditandai lunas, sedangkan pesanan Kredit Bulanan tetap belum lunas di Belum Lunas, tempat Anda bisa melunasinya per pemasok — satu pesanan, bulan ini, atau semuanya."
       },
       {
         "type": "p",

@@ -1164,7 +1164,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Unter „Einkauf“ in der Seitenleiste verwalten Sie Lieferanten und Einkaufsbestellungen. Ein Lieferant enthält Name, Ansprechperson, Telefonnummer, Adresse und ein Standard-Zahlungsziel (sofort oder monatlich)."
+        "text": "Unter „Einkauf“ in der Seitenleiste verwalten Sie Lieferanten und Einkaufsbestellungen. Ein Lieferant enthält Name, Ansprechperson, Telefonnummer, Adresse und ein Standard-Zahlungsziel: „Zahlung bei Erhalt“ oder „Monatliches Zahlungsziel“."
       },
       {
         "type": "steps",
@@ -1176,7 +1176,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Das Zahlungsziel entscheidet über den weiteren Ablauf: Bestellungen mit sofortiger Zahlung gelten als bezahlt, monatliche Bestellungen bleiben unter „Zu zahlen“ offen. Dort begleichen Sie sie pro Lieferant – einzelne Bestellung, diesen Monat oder alles."
+        "text": "Das Zahlungsziel entscheidet über den weiteren Ablauf: Einkaufsbestellungen mit „Zahlung bei Erhalt“ gelten als bezahlt, solche mit „Monatliches Zahlungsziel“ bleiben unter „Zu zahlen“ offen. Dort begleichen Sie sie pro Lieferant – einzelne Bestellung, diesen Monat oder alles."
       },
       {
         "type": "p",

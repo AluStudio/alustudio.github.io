@@ -1156,7 +1156,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "La sezione Acquisti nella barra laterale gestisce fornitori e ordini d'acquisto. Un fornitore conserva nome, referente, telefono, indirizzo e una condizione di pagamento predefinita (Pagamento alla consegna o Credito mensile)."
+        "text": "La sezione Acquisti nella barra laterale gestisce fornitori e ordini d'acquisto. Un fornitore conserva nome, referente, telefono, indirizzo e una condizione di pagamento predefinita: Pagamento alla consegna o Credito mensile."
       },
       {
         "type": "steps",

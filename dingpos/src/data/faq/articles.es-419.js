@@ -1150,7 +1150,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Compras, en la barra lateral, administra proveedores y órdenes de compra. Un proveedor guarda nombre, persona de contacto, teléfono, dirección y una condición de pago predeterminada (pago inmediato o mensual)."
+        "text": "Compras, en la barra lateral, administra proveedores y órdenes de compra. Un proveedor guarda nombre, persona de contacto, teléfono, dirección y una condición de pago predeterminada: Pago al recibir o Crédito mensual."
       },
       {
         "type": "steps",
@@ -1162,7 +1162,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "La condición de pago decide qué sigue: las órdenes de pago inmediato se marcan como pagadas, mientras que las mensuales quedan pendientes en Por pagar, donde puedes saldarlas por proveedor: una orden, el mes o todo."
+        "text": "La condición de pago decide qué sigue: las órdenes con Pago al recibir se marcan como pagadas, mientras que las de Crédito mensual quedan pendientes en Por pagar, donde puedes saldarlas por proveedor: una orden, el mes o todo."
       },
       {
         "type": "p",
