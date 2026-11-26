@@ -45,7 +45,7 @@ Independent Test: `npm run build` passes with the ten articles in en and zh-Hant
 - [x] T018 [REQ-008, REQ-009] Fact-check each clean draft against its brief and the app strings, fix in the `.clean.md`, then `node scripts/faq-md.mjs` into `articles.en.js` / `articles.zh-Hant.js`. Verify: AC-007 holds for all ten; each article opens with a paragraph and has ≥ 1 shot block; `cd dingpos && npm run build` → passes
 - [x] T019 [REQ-002] Read DingPOS `CHANGELOG.md` §[3.6] entry by entry against all FAQ articles (every category) and fix outdated en + zh-Hant text directly (DEC-008); record each entry → article decision in `## Notes` of the ralph task file. Verify: AC-002; `npm run build` → passes
 - [x] T020 [REQ-001, REQ-002] Set `VERIFIED_APP_VERSION = "3.6"` and `since: "3.6"` on the four new articles in both packs. Verify: `curl -s 'https://itunes.apple.com/lookup?id=6788988943&country=tw' | jq -r '.results[0].version'` → `3.6`; `npm run build` → passes
-- [ ] T021 [REQ-003] Agent-driven page check: `vite preview` the build, open `/dingpos/support/tax-report/`, `/dingpos/zh-hant/support/tax-report/` with agent-browser; assert `<img>` src is the page language's file with width/height/srcset/alt, one `<h1>`, `<h2>` sections. Verify: DOM assertions pass; evidence `evidence/T021-*.png`
+- [x] T021 [REQ-003] Agent-driven page check: `vite preview` the build, open `/dingpos/support/tax-report/`, `/dingpos/zh-hant/support/tax-report/` with agent-browser; assert `<img>` src is the page language's file with width/height/srcset/alt, one `<h1>`, `<h2>` sections. Verify: DOM assertions pass; evidence `evidence/T021-*.png`
 
 Checkpoint: en + zh-Hant content complete. Commit.
 
