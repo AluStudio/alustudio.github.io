@@ -134,6 +134,7 @@ export const articles = [
         ],
       },
       { type: "p", text: "Each item and each cart can hold one discount at a time — applying again overwrites the previous one, and tapping the discount badge removes it. Discounts are applied before tax, the standard order in retail." },
+      { type: "p", text: "Discounts you give often can be saved: go to Settings → Loyalty & Promotions → Discount Presets and tap Add Preset, for example “Staff price 20% off”. At the cashier, the item discount and the cart discount both have a Presets menu; picking one fills in the discount type and value exactly as if you typed them, so it still counts toward a staff member's discount cap. Discount presets arrived in v3.6 and need the Standard plan or higher." },
     ],
     related: ["create-promotion", "tax-calculation"],
   },
@@ -162,7 +163,7 @@ export const articles = [
         ],
       },
       { type: "p", text: "To stop charging tax for a while, turn off Charge tax at the top of the Tax card: every later sale is tax-free, including items already in a cart. Each product keeps its taxes, and turning the switch back on restores them as they were." },
-      { type: "p", text: "Full calculation order: item discounts and promotions → cart discount → points redemption → tax. Amounts are rounded half-up to the currency's decimal places (e.g. 0 for TWD, 2 for USD)." },
+      { type: "p", text: "Full calculation order: item discounts and promotions → cart discount → points redemption → tax. Amounts are rounded half-up to the currency's decimal places (e.g. 0 for TWD, 2 for USD). Tax is worked out once per tax on each order, and its decimals follow Tax rounding on the Tax card: Round half up, Round down, or Round up. New stores in Japan start on Round down; other stores start on Round half up." },
       { type: "note", text: "Named taxes arrived in v3.5. When you update, your tax rate becomes a named tax (“GST 10%” in Australia, for example) and every existing product carries it; a store whose rate was 0 gets no tax. Past orders and returns keep the tax rates and amounts they were recorded with; reports now count revenue before tax, past periods included (see “What's the difference between Revenue and Cash Received?”)." },
     ],
     related: ["change-currency", "apply-discounts", "revenue-vs-cash"],
@@ -173,7 +174,7 @@ export const articles = [
     question: "Which payment methods are supported?",
     keywords: ["payment", "cash", "credit card", "line pay", "change", "custom", "on account", "fees"],
     content: [
-      { type: "p", text: "A new store starts with two payment methods, Cash and Credit Card, named in the app's language at setup. In Settings → Payment Methods you can add any other method (e.g. Apple Pay, LINE Pay, a local wallet), and delete or reorder them." },
+      { type: "p", text: "A new store starts with two payment methods, Cash and Credit Card, named in the app's language at setup. In Settings → Payment Methods you can add any other method (e.g. Apple Pay, LINE Pay, a local wallet), and reorder them. Tap a method to rename it, say from Credit Card to “Card (Square)”; Stats counts sales made before the rename under the new name (since v3.6). Delete Payment Method sits at the bottom of the edit sheet and asks before it deletes; past orders keep the method they were paid with, and the last remaining method can't be deleted." },
       { type: "p", text: "Payment methods are bookkeeping labels — DingPOS does not process actual payments. Take card or mobile payments with your existing terminal or app, then pick the matching label in DingPOS to record it. Cash payments calculate change automatically, and where the smallest coins are no longer used, cash can be rounded too — see “Can cash payments round to the coins in use?”" },
       { type: "p", text: "If your card or mobile payment provider takes a fee, give the method a fee rate and Stats estimates each method's fees and net received — see “Can DingPOS track card and mobile payment fees?”" },
       { type: "p", text: "For a regular who takes the goods now and pays later, choose On Account: the sale is recorded as a receivable and settled when the money arrives. See “Can regulars buy on account and pay later?”" },
@@ -187,14 +188,14 @@ export const articles = [
     question: "Can DingPOS track card and mobile payment fees?",
     keywords: ["processing fee", "card fee", "transaction fee", "fee rate", "net received", "merchant fee", "line pay"],
     content: [
-      { type: "p", text: "Yes. In Settings → Payment Methods, tap a payment method (or add a new one) and fill in Processing fee: a percentage, a fixed amount per transaction, or both. From then on, every payment collected through that method records a fee estimated at the rate in effect at that moment." },
+      { type: "p", text: "Yes. In Settings → Payment Methods, tap a payment method (or add a new one) and fill in Processing fee: a percentage, a fixed amount per transaction, or both. Cash-type methods have no fee. From then on, every payment collected through that method records a fee estimated at the rate in effect at that moment." },
       { type: "p", text: "On Stats, the Payment Methods card adds a line “Fee · Net” under each method that has a fee, and the foot of the card shows the estimated fees and estimated net received for the whole period." },
       {
         type: "list",
         items: [
-          "Enter the rate your provider actually deducts, tax included — for 3% plus 5% tax, enter 3.15%. Leave both fields empty for no fee.",
+          "Enter the rate your provider actually deducts. If tax is charged on the fee, include it: for 3% plus 5% tax, enter 3.15%. Leave both fields empty for no fee.",
           "A rate change only applies to later payments; fees already recorded stay as they were.",
-          "“Percentage fee returned on refunds” is on by default, for providers that give their fee back when you refund. It governs returns and refunded pre-order deposits: with it on, the percentage comes back; the fixed fee never does. A void or an undone settlement ignores the switch and takes back the whole fee it recorded, fixed fee included. Either way, the customer gets back the same amount.",
+          "“Percentage fee returned on refunds” starts on for stores in Taiwan and Japan and off elsewhere, because providers such as Stripe, Square and PayPal keep their fee on a refund; set it to match your provider. It governs returns and refunded pre-order deposits: with it on, the percentage comes back; the fixed fee never does. A void or an undone settlement ignores the switch and takes back the whole fee it recorded, fixed fee included. Either way, the customer gets back the same amount.",
           "Payments collected before the method had a rate carry no fee: Stats marks them “N missing a rate” and shows the net as “—”.",
         ],
       },
@@ -353,7 +354,7 @@ export const articles = [
     question: "How do I take a pre-order with a deposit?",
     keywords: ["pre-order", "preorder", "deposit", "pickup", "balance", "reserve"],
     content: [
-      { type: "p", text: "At checkout, switch the top of the screen from Sale to Pre-order, pick the pickup date, enter the deposit (anything from 0 to the full amount, with 30% / 50% / full shortcuts), and choose how the deposit is paid. Attach a customer so you can reach them when the goods arrive." },
+      { type: "p", text: "At checkout, switch the top of the screen from Sale to Pre-order, pick the pickup date, enter the deposit (anything from 0 to the full amount, with 30% / 50% / full shortcuts), and choose how the deposit is paid. Attach a customer so you can reach them about pickup." },
       {
         type: "list",
         items: [
@@ -411,8 +412,8 @@ export const articles = [
     keywords: ["variants", "size", "color", "options", "spec"],
     content: [
       { type: "p", text: "In the product edit page, tap Add Option under Variant Options to add an option (e.g. “Color”), then use “+ Value” to add each of its choices (e.g. Red, Blue). With two or more options (e.g. Color × Size), DingPOS expands every combination for you (Red/S, Red/M, Blue/S…)." },
-      { type: "p", text: "Once a product has variants, its Price field folds away and each combination gets its own price under Variant Pricing & Stock, with its own stock (since v3.2; earlier versions still ask for a product price). The cashier, product list, and product detail show a range from the lowest to the highest price, like “NT$350–NT$390”, or a single price when every combination costs the same; sorting by price uses the lowest combination price. At checkout, tapping the product shows a variant picker before adding it to the cart." },
-      { type: "p", text: "You don't have to enter a cost for every combination: an empty Cost field means Follows product, so it uses the product's cost and changes when that does. A number makes it Own cost — 0 included. Use product cost for all clears every own cost at once." },
+      { type: "p", text: "Once a product has variants, each combination under Variant Pricing & Stock keeps its own stock, and its price follows the product's Price: a combination with no price of its own shows the product price in grey and changes when it does, and a number you type is that combination's own price, shown in black. For example, set a T-shirt's Price to 390 and change only L to 350: M and XL sell for 390, and when the Price later becomes 420, M and XL follow to 420 while L stays at 350. The ⓘ next to the Price column holds Use product price, which sets every combination back to following the product price. Products made before v3.6 keep each variant price as that combination's own price, and the product's Price is the lowest of them. The cashier, product list, and product detail show a range from the lowest to the highest price, like “NT$350–NT$390”, or a single price when every combination costs the same; sorting by price uses the lowest combination price. At checkout, tapping the product shows a variant picker before adding it to the cart." },
+      { type: "p", text: "Cost works the same way: an empty cost shows the product's cost in grey and changes when that does, and a number is the combination's own cost, shown in black — 0 included. Use product cost, in the ⓘ next to the Cost column, clears every combination's own cost at once." },
       { type: "note", text: "Option and value names are limited to 20 characters, and spaces at either end are trimmed when you save. A value you haven't typed anything into isn't a combination and is skipped on save. Saving stops with the field outlined in red when an option name is blank, when all of an option's values are blank, or when you clear a value the product already had saved; type it back, or remove it with its ×. A product with variants can't use an open price." },
     ],
     related: ["open-price-products", "barcode-scanning", "inventory-tracking"],
@@ -479,7 +480,7 @@ export const articles = [
     keywords: ["inventory", "stock", "tracking", "count", "low stock"],
     content: [
       { type: "p", text: "Inventory tracking is a per-product toggle — turn it on in the product edit page and enter the current quantity. Each variant of a product tracks its own stock." },
-      { type: "p", text: "Once enabled, sales and pre-orders deduct stock automatically; voids, returns, and cancelled pre-orders put it back; and receiving a purchase order adds to it. Every movement is recorded in a complete ledger. Low stock is highlighted with a color warning." },
+      { type: "p", text: "Once enabled, sales and pre-orders deduct stock automatically; voids, returns, and cancelled pre-orders put it back; and receiving a purchase order adds to it. Every movement is recorded in a complete ledger. At 10 or fewer, stock is marked low in orange in the product list, the cashier and the product detail." },
       { type: "p", text: "There are two ways to change the number by hand:" },
       {
         type: "list",
@@ -498,7 +499,7 @@ export const articles = [
     question: "How do I record stock that expired, broke, or went out as samples?",
     keywords: ["adjust stock", "stock loss", "shrinkage", "write-off", "waste", "expired", "damaged", "samples", "store supplies", "recount"],
     content: [
-      { type: "p", text: "Use Adjust Stock. For a product with tracked stock, tap Adjust Stock in the product detail, choose Remove or Add, enter the quantity, pick a reason, and optionally add a note (up to 100 characters). The sheet works out the stock after the change, and the line under the reason says whether it reaches the P&L." },
+      { type: "p", text: "Use Adjust Stock. For a product with tracked stock, tap Adjust Stock in the product detail, choose Remove or Add, set the quantity with + and − (it starts at 1; tap the number to type it), pick a reason, and optionally add a note (up to 100 characters). The sheet works out the stock after the change, and the line under the reason says whether it reaches the P&L." },
       {
         type: "list",
         items: [
@@ -537,9 +538,9 @@ export const articles = [
       {
         type: "steps",
         items: [
-          "Tap New Purchase, pick the supplier, and add the products, quantities, and unit costs (pre-filled with each product's current cost). A shipping fee can be added too. If the supplier isn't set up yet, tap Add Supplier at the top left of the supplier list — the new supplier comes straight back into the purchase order.",
+          "Tap New Purchase, pick the supplier, and add the products, quantities, and unit costs (pre-filled with each product's current cost). A shipping fee can be added too. For goods not set up as products yet, tap New Product in the Add Product picker; the new product comes straight into the purchase order as a line. If the supplier isn't set up yet, tap Add Supplier at the top left of the supplier list — the new supplier comes straight back into the purchase order.",
           "A draft never touches stock or payables — edit or delete it freely.",
-          "When the goods arrive, tap Receive Stock: tracked stock goes up, and the purchase order gets its number and locks. By default receiving also updates each product's cost to this unit cost; turn off Sync Product Cost on the purchase order to keep costs unchanged.",
+          "When the goods arrive, tap Receive Stock: tracked stock goes up, and the purchase order gets its number and locks. By default receiving also updates each product's cost to this unit cost; turn off Sync Product Cost on the purchase order to keep costs unchanged. Below it, Include shipping in cost (on for new purchase orders) splits the shipping fee across the lines by amount, so the cost written to each product includes its share: flour 10 × $30, butter 1 × $60 and $25 shipping give flour a cost of $32 and butter $64.",
         ],
       },
       { type: "p", text: "The payment term decides what happens next: pay-now orders are marked paid, while monthly orders stay unpaid under Unpaid Bills, where you can settle them per supplier — one order, this month, or everything." },
@@ -559,7 +560,8 @@ export const articles = [
       {
         type: "list",
         items: [
-          "A product that's not for sale never shows in the cashier's grid, categories, search, or barcode scans, and can't be a gift, an add-on, a promotion's target, or an exchange replacement.",
+          "A product that's not for sale never shows in the cashier's grid, categories, search, or barcode scans, and can't be a gift, an add-on, a promotion's target, or an exchange replacement. A category holding only products that aren't for sale is left off the cashier's category bar.",
+          "When the store has products that aren't for sale, a filter button appears at the top right of Products: choose All products, For sale, or Not for sale, together with search and categories.",
           "Purchase orders, receiving, Sync Product Cost, and unpaid bills work exactly as for other products, so a material's purchase cost and stock can be recorded through Purchasing.",
           "Selling other products doesn't take its stock down. When you use some, record a removal with Adjust Stock in the product detail: Used in production for what went into products, Store supplies for things like paper bags or cleaning products.",
           "You can switch it back anytime, and its price and taxes are still there. Orders and reports already made aren't affected.",
@@ -757,8 +759,8 @@ export const articles = [
     question: "How do loyalty points work?",
     keywords: ["points", "loyalty", "rewards", "redeem", "welcome points"],
     content: [
-      { type: "p", text: "Go to Settings → Loyalty Program and define two rules: earn Y points per X spent, and redeem N points for M off (with an optional per-order redemption cap). You can also grant welcome points to new members automatically." },
-      { type: "p", text: "Attach the member to the sale, in the cart or on the checkout screen, and points accrue automatically; to redeem, enter the points to use. Voiding an order takes back the points it earned and refunds any points that were redeemed." },
+      { type: "p", text: "Go to Settings → Loyalty Program and define two rules: earn Y points per X spent, and redeem N points for M off (with an optional per-order redemption cap). You can also grant welcome points to new members automatically. New stores start with points off: turn on Enable Loyalty Program and fill in a rule. With the switch on and no rule set, it warns “No earn or redeem rule is set yet, so sales won't earn or redeem points.”" },
+      { type: "p", text: "Attach the member to the sale, in the cart or on the checkout screen, and points accrue automatically; to redeem, enter the points to use. The success screen shows the points earned and the new balance, like “+22 pts · 122 pts total”; on an on-account sale or a pre-order not yet paid in full, points are added only when the money comes in, and it says “added when settled” or “added when paid at pickup”. Voiding an order takes back the points it earned and refunds any points that were redeemed." },
       { type: "p", text: "To add or take off points by hand (say, for a purchase that was missed), tap Adjust on the Points card in the customer detail, choose Add or Deduct, enter the points, and optionally give a reason (up to 100 characters). You can't deduct more than the customer holds. Every adjustment stays in the points history with the balance before and after, the reason, and who made it." },
       { type: "note", text: "Manual points adjustment arrived in v3.5. On Pro, staff whose role needs approval for Manual points adjustment (Staff do by default) are asked for a manager's or the owner's PIN when they confirm." },
     ],
@@ -935,7 +937,7 @@ export const articles = [
         type: "list",
         items: [
           "Actions (manual stock adjustment, manual points adjustment, product management, checking out above the discount cap): one approval covers that one action.",
-          "Views (cost & profit, Dashboard, P&L & expenses, Settings, backup & restore): an approval unlocks until the operator changes or the app goes to the background.",
+          "Views (cost & profit, Stats, P&L & expenses, Settings, backup & restore): an approval unlocks until the operator changes or the app goes to the background.",
           "The discount cap applies to manual discounts and is checked once at checkout; automatic promotions and points redemption don't count against it.",
         ],
       },
@@ -999,12 +1001,12 @@ export const articles = [
     question: "What's the difference between Lite, Standard, and Pro?",
     keywords: ["plans", "lite", "standard", "pro", "difference", "compare", "upgrade", "downgrade", "pricing"],
     content: [
-      { type: "p", text: "All three plans include full checkout, products, orders (with voids, returns, and exchanges), reports (advanced reports and the monthly P&L included since v3.4), and cloud backup. They differ in the tools for running the shop:" },
+      { type: "p", text: "All three plans include full checkout, products, orders (with voids, returns, and exchanges), reports (advanced reports and the monthly P&L included since v3.4, the tax report and its export since v3.6), and cloud backup. They differ in the tools for running the shop:" },
       {
         type: "list",
         items: [
           "Lite: for one person running a stall who needs checkout and products.",
-          "Standard: adds promotions, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, pre-orders, and payment fee rates.",
+          "Standard: adds promotions, discount presets, loyalty points and member tiers, inventory tracking, purchasing, on-account sales, pre-orders, and payment fee rates.",
           "Pro: adds staff accounts and permissions, manager approval, the activity log, and restore records — for shops with staff.",
         ],
       },
@@ -1117,11 +1119,12 @@ export const articles = [
     keywords: ["gift", "add-on", "bundle", "buy a get b", "guide"],
     content: [
       { type: "p", text: "Three composite offer types are available: gift with purchase (buy A get B), paid add-on (add $X to get Y), and bundle price (any N for $X). Gifts and paid add-ons wait for the cashier to confirm; bundle prices apply automatically." },
-      { type: "p", text: "Gifts and paid add-ons never modify the cart on their own. When conditions are met, a suggestion banner appears on the cashier screen, and the cart changes only when the cashier taps Pick gift or Pick add-on — deliberate, because gifts involve physical stock: someone needs to confirm it's on hand and the customer wants it." },
+      { type: "p", text: "Gifts and paid add-ons never modify the cart on their own. When conditions are met, a suggestion banner appears on the cashier screen, and the cart changes only when the cashier taps the gift or + button on the banner (Pick gift or Pick add-on) — deliberate, because gifts involve physical stock: someone needs to confirm it's on hand and the customer wants it." },
       {
         type: "list",
         items: [
-          "After Decline, the same suggestion won't reappear for this cart; a new or cleared cart prompts again.",
+          "After the banner's ✕ (Decline), the same suggestion won't reappear for this cart; a new or cleared cart prompts again.",
+          "If the cart stops qualifying (say the item that triggered a gift is removed), the gift or add-on is removed automatically with a message at the top, and it doesn't count as a use (since v3.6).",
           "Since v3.4, offers still pending don't stop checkout: a yellow line under the pay button, like “1 pending offer won’t apply”, says how many are left out (tap it to see which), and the order goes through without them. To make checkout wait as before, turn on Handle offers before checkout in Settings → Device Preferences; it applies to this iPad only.",
           "Gift and add-on lines can't be discounted further by other money promotions, and don't count toward other promotions' thresholds.",
         ],
@@ -1219,7 +1222,7 @@ export const articles = [
     question: "Will there be a monthly settlement report?",
     keywords: ["monthly settlement", "reconciliation", "closing", "monthly report", "payables", "receivables"],
     content: [
-      { type: "p", text: "Since v3.4, P&L shows each month's net profit after product cost, fees, and expenses — see “How do I see how much I actually made each month?” There's no settlement report to export or print yet, but everything you need to reconcile is already in the app:" },
+      { type: "p", text: "Since v3.4, P&L shows each month's net profit after product cost, fees, and expenses — see “How do I see how much I actually made each month?” Since v3.6, the tax report exports a period (This Month, for example) as CSV, an Excel workbook or a PDF report for your accountant, with sales, tax, the amount received by each payment method, and receivables. P&L and the other reports can't be exported yet, but everything you need to reconcile is already in the app:" },
       {
         type: "list",
         items: [
@@ -1228,7 +1231,7 @@ export const articles = [
           "Customer on-account sales collect under Orders → Receivables, where a whole month can be settled at once.",
         ],
       },
-      { type: "p", text: "If you need a monthly settlement report you can export or print, write to us with the fields you need — we prioritize development by the number of requests." },
+      { type: "p", text: "If you need a monthly settlement report beyond the tax report that you can export or print, write to us with the fields you need — we prioritize development by the number of requests." },
     ],
     related: ["profit-loss", "purchase-orders", "on-account"],
   },
