@@ -104,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "La moneda no se puede cambiar después de la configuración; los impuestos y el modo de impuesto sí se pueden cambiar más adelante en Ajustes → Datos de la tienda. En Estados Unidos, Canadá, Brasil y Micronesia la tasa depende del estado, la provincia o la ciudad, así que el campo de la tasa empieza vacío y, para continuar, escribes la tasa que cobras. La tasa debe ser mayor que 0: si una tienda no cobra impuesto, elimina la fila. La lista de 175 países y la elección de moneda llegaron en la v3.2; las versiones anteriores ofrecían 15 países."
+        "text": "La moneda no se puede cambiar después de la configuración; los impuestos y el modo de impuesto sí se pueden cambiar más adelante en Ajustes → Datos de la tienda. En Estados Unidos, Canadá, Brasil y Micronesia la tasa depende del estado, la provincia o la ciudad, así que el campo de la tasa empieza vacío y, para continuar, escribes la tasa que cobras. La tasa debe ser mayor que 0: si una tienda no cobra impuesto, elimina la fila. En Alemania, Francia, Italia y otros países europeos, la lista también incluye las tasas reducidas comunes en el comercio local, con el nombre local del impuesto, como «MwSt. 19 %» y «MwSt. 7 %» en Alemania; las tasas reducidas no se aplican de forma predeterminada a los productos nuevos, así que actívalas producto por producto. La lista de 175 países y la elección de moneda llegaron en la v3.2; las versiones anteriores ofrecían 15 países."
       }
     ],
     "related": [
@@ -330,6 +330,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Cada artículo y cada carrito pueden tener un solo descuento a la vez: si aplicas otro, reemplaza al anterior, y si tocas la insignia del descuento, se quita. Los descuentos se aplican antes del impuesto, el orden habitual en el comercio."
+      },
+      {
+        "type": "p",
+        "text": "Los descuentos que das seguido se pueden guardar: ve a Ajustes → Lealtad y promociones → Descuentos predefinidos y toca Agregar descuento predefinido, por ejemplo «Precio para el personal: 20 % de descuento». En la caja, tanto el descuento en artículos como el descuento en el carrito tienen un menú Predefinidos; al elegir uno, se completan el tipo y el valor del descuento exactamente como si los hubieras escrito, así que sigue contando para el tope de descuento del miembro del personal. Los descuentos predefinidos llegaron en la v3.6 y requieren el plan Standard o superior."
       }
     ],
     "related": [
@@ -384,7 +388,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Orden completo del cálculo: descuentos y promociones en artículos → descuento en el carrito → canje de puntos → impuesto. Los montos se redondean hacia arriba desde la mitad (0.5 sube) según los decimales de la moneda (por ejemplo, 0 para TWD y 2 para USD)."
+        "text": "Orden completo del cálculo: descuentos y promociones en artículos → descuento en el carrito → canje de puntos → impuesto. Los montos se redondean hacia arriba desde la mitad (0.5 sube) según los decimales de la moneda (por ejemplo, 0 para TWD y 2 para USD). El impuesto se calcula una sola vez por cada impuesto en cada pedido, y sus decimales siguen la opción Redondeo del impuesto de la sección Impuesto: Redondear al más cercano, Redondear hacia abajo o Redondear hacia arriba. Las tiendas nuevas en Japón empiezan con Redondear hacia abajo; las demás empiezan con Redondear al más cercano."
       },
       {
         "type": "note",
@@ -414,7 +418,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Una tienda nueva empieza con dos métodos de pago, Efectivo y Tarjeta de crédito, con el nombre en el idioma de la app al configurarla. En Ajustes → Métodos de pago puedes agregar cualquier otro método (por ejemplo, Apple Pay, LINE Pay o una billetera local), y también eliminarlos o reordenarlos."
+        "text": "Una tienda nueva empieza con dos métodos de pago, Efectivo y Tarjeta de crédito, con el nombre en el idioma de la app al configurarla. En Ajustes → Métodos de pago puedes agregar cualquier otro método (por ejemplo, Apple Pay, LINE Pay o una billetera local) y reordenarlos. Toca un método para cambiarle el nombre, por ejemplo de Tarjeta de crédito a «Tarjeta (Square)»; Reportes cuenta las ventas hechas antes del cambio con el nombre nuevo (desde la v3.6). Eliminar método de pago está al final de la hoja de edición y pide confirmación antes de eliminar; los pedidos anteriores conservan el método con el que se pagaron, y el último método que queda no se puede eliminar."
       },
       {
         "type": "p",
@@ -453,7 +457,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sí. En Ajustes → Métodos de pago, toca un método de pago (o agrega uno nuevo) y completa Comisión por procesamiento: un porcentaje, un monto fijo por transacción o ambos. A partir de ahí, cada pago cobrado con ese método registra una comisión estimada con la tasa vigente en ese momento."
+        "text": "Sí. En Ajustes → Métodos de pago, toca un método de pago (o agrega uno nuevo) y completa Comisión por procesamiento: un porcentaje, un monto fijo por transacción o ambos. Los métodos de tipo efectivo no tienen comisión. A partir de ahí, cada pago cobrado con ese método registra una comisión estimada con la tasa vigente en ese momento."
       },
       {
         "type": "p",
@@ -462,9 +466,9 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Escribe la tasa que tu proveedor descuenta realmente, con impuestos incluidos: para 3 % más 5 % de impuesto, escribe 3.15 %. Deja ambos campos vacíos si no hay comisión.",
+          "Escribe la tasa que tu proveedor descuenta realmente. Si se cobra impuesto sobre la comisión, inclúyelo: para 3 % más 5 % de impuesto, escribe 3.15 %. Deja ambos campos vacíos si no hay comisión.",
           "Un cambio de tasa solo se aplica a los pagos posteriores; las comisiones ya registradas se quedan como estaban.",
-          "«Porcentaje devuelto en reembolsos» viene activado de forma predeterminada, para los proveedores que devuelven su comisión cuando reembolsas. Rige las devoluciones y los anticipos de preventa reembolsados: con la opción activada, el porcentaje se devuelve; la parte fija nunca. Una anulación o una reversión de liquidación ignora el interruptor y revierte toda la comisión que registró, parte fija incluida. En ambos casos, el cliente recibe de vuelta el mismo monto.",
+          "«Porcentaje devuelto en reembolsos» viene activado en las tiendas de Taiwán y Japón y desactivado en las demás, porque proveedores como Stripe, Square y PayPal se quedan con su comisión cuando haces un reembolso; configúralo según tu proveedor. Rige las devoluciones y los anticipos de preventa reembolsados: con la opción activada, el porcentaje se devuelve; la parte fija nunca. Una anulación o una reversión de liquidación ignora el interruptor y revierte toda la comisión que registró, parte fija incluida. En ambos casos, el cliente recibe de vuelta el mismo monto.",
           "Los pagos cobrados antes de que el método tuviera una tasa no llevan comisión: Reportes los marca como «N sin tasa» y muestra el neto como «—»."
         ]
       },
@@ -781,7 +785,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Al cobrar, cambia la parte superior de la pantalla de Venta a Preventa, elige la fecha de retiro, ingresa el anticipo (desde 0 hasta el monto total, con atajos de 30 %, 50 % y total) y elige cómo se paga el anticipo. Asocia un cliente para poder avisarle cuando llegue la mercancía."
+        "text": "Al cobrar, cambia la parte superior de la pantalla de Venta a Preventa, elige la fecha de retiro, ingresa el anticipo (desde 0 hasta el monto total, con atajos de 30 %, 50 % y total) y elige cómo se paga el anticipo. Asocia un cliente para poder avisarle sobre el retiro."
       },
       {
         "type": "list",
@@ -894,11 +898,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Cuando un producto tiene variantes, su campo Precio se oculta y cada combinación tiene su propio precio en Precio y stock por variante, con su propio stock (desde la v3.2; las versiones anteriores aún piden un precio de producto). La caja, la lista de productos y el detalle del producto muestran un rango del precio más bajo al más alto, como «NT$350–NT$390», o un solo precio cuando todas las combinaciones cuestan lo mismo; al ordenar por precio se usa el precio más bajo de las combinaciones. Al cobrar, al tocar el producto aparece un selector de variante antes de agregarlo al carrito."
+        "text": "Cuando un producto tiene variantes, cada combinación en Precio y stock por variante lleva su propio stock, y su precio sigue al Precio del producto: una combinación sin precio propio muestra el precio del producto en gris y cambia cuando este cambia, y un número que escribes es el precio propio de esa combinación, que se muestra en negro. Por ejemplo, fija el Precio de una camiseta en 390 y cambia solo la L a 350: la M y la XL se venden a 390, y cuando el Precio pase después a 420, la M y la XL siguen a 420 mientras la L se queda en 350. El ⓘ junto a la columna Precio contiene Usar precio del producto, que hace que todas las combinaciones vuelvan a seguir el precio del producto. Los productos creados antes de la v3.6 conservan cada precio de variante como el precio propio de esa combinación, y el Precio del producto es el más bajo de ellos. La caja, la lista de productos y el detalle del producto muestran un rango del precio más bajo al más alto, como «NT$350–NT$390», o un solo precio cuando todas las combinaciones cuestan lo mismo; al ordenar por precio se usa el precio más bajo de las combinaciones. Al cobrar, al tocar el producto aparece un selector de variante antes de agregarlo al carrito."
       },
       {
         "type": "p",
-        "text": "No tienes que escribir un costo para cada combinación: un campo Costo vacío significa Usa el del producto, es decir, toma el costo del producto y cambia cuando este cambia. Un número lo convierte en Costo propio, incluido el 0. Usar el costo del producto en todas borra todos los costos propios de una vez."
+        "text": "El costo funciona igual: un costo vacío muestra el costo del producto en gris y cambia cuando este cambia, y un número es el costo propio de la combinación, que se muestra en negro, incluido el 0. Usar costo del producto, en el ⓘ junto a la columna Costo, borra de una vez el costo propio de todas las combinaciones."
       },
       {
         "type": "note",
@@ -1035,7 +1039,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Una vez activado, las ventas y las preventas descuentan el stock automáticamente; las anulaciones, las devoluciones y las preventas canceladas lo regresan; y recibir una orden de compra lo aumenta. Cada movimiento queda registrado en un historial completo. El stock bajo se resalta con una alerta de color."
+        "text": "Una vez activado, las ventas y las preventas descuentan el stock automáticamente; las anulaciones, las devoluciones y las preventas canceladas lo regresan; y recibir una orden de compra lo aumenta. Cada movimiento queda registrado en un historial completo. Con 10 o menos, el stock se marca como bajo en naranja en la lista de productos, en la caja y en el detalle del producto."
       },
       {
         "type": "p",
@@ -1072,7 +1076,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Usa Ajustar stock. En un producto con control de stock, toca Ajustar stock en el detalle del producto, elige Quitar o Agregar, escribe la cantidad, elige un motivo y, si quieres, agrega una nota (hasta 100 caracteres). La hoja calcula el stock que quedará después del cambio, y la línea debajo del motivo indica si llega a Resultados."
+        "text": "Usa Ajustar stock. En un producto con control de stock, toca Ajustar stock en el detalle del producto, elige Quitar o Agregar, fija la cantidad con + y − (empieza en 1; toca el número para escribirlo), elige un motivo y, si quieres, agrega una nota (hasta 100 caracteres). La hoja calcula el stock que quedará después del cambio, y la línea debajo del motivo indica si llega a Resultados."
       },
       {
         "type": "list",
@@ -1151,9 +1155,9 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Toca Nueva compra, elige el proveedor y agrega los productos, cantidades y costos unitarios (que se rellenan con el costo actual de cada producto). También puedes agregar un costo de envío. Si el proveedor aún no existe, toca Agregar proveedor en la parte superior izquierda de la lista de proveedores: el nuevo proveedor vuelve directo a la orden de compra.",
+          "Toca Nueva compra, elige el proveedor y agrega los productos, cantidades y costos unitarios (que se rellenan con el costo actual de cada producto). También puedes agregar un costo de envío. Para mercancía que aún no está configurada como producto, toca Nuevo producto en el selector Agregar producto: el nuevo producto entra directo en la orden de compra como una línea. Si el proveedor aún no existe, toca Agregar proveedor en la parte superior izquierda de la lista de proveedores: el nuevo proveedor vuelve directo a la orden de compra.",
           "Un borrador nunca afecta el stock ni las cuentas por pagar: edítalo o elimínalo con libertad.",
-          "Cuando llegue la mercancía, toca Recibir stock: el stock con control sube, y la orden de compra recibe su número y se bloquea. De forma predeterminada, al recibir también se actualiza el costo de cada producto con este costo unitario; desactiva Sincronizar costo del producto en la orden de compra para dejar los costos sin cambios."
+          "Cuando llegue la mercancía, toca Recibir stock: el stock con control sube, y la orden de compra recibe su número y se bloquea. De forma predeterminada, al recibir también se actualiza el costo de cada producto con este costo unitario; desactiva Sincronizar costo del producto en la orden de compra para dejar los costos sin cambios. Debajo, Incluir envío en el costo (activado en las órdenes de compra nuevas) reparte el costo de envío entre las líneas según su monto, de modo que el costo que se registra en cada producto incluye su parte: con harina 10 × $30, mantequilla 1 × $60 y $25 de envío, la harina queda con un costo de $32 y la mantequilla de $64."
         ]
       },
       {
@@ -1200,7 +1204,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Un producto que no se vende nunca aparece en la cuadrícula de la caja, en las categorías, en la búsqueda ni al escanear códigos de barras, y no puede ser un regalo, un complemento, el objetivo de una promoción ni un artículo de reemplazo en un cambio.",
+          "Un producto que no se vende nunca aparece en la cuadrícula de la caja, en las categorías, en la búsqueda ni al escanear códigos de barras, y no puede ser un regalo, un complemento, el objetivo de una promoción ni un artículo de reemplazo en un cambio. Una categoría que solo tiene productos que no se venden no aparece en la barra de categorías de la caja.",
+          "Cuando la tienda tiene productos que no se venden, aparece un botón de filtro en la parte superior derecha de Productos: elige Todos los productos, Se vende o No se vende, y funciona junto con la búsqueda y las categorías.",
           "Las órdenes de compra, la recepción, Sincronizar costo del producto y Por pagar funcionan igual que con los demás productos, así que el costo de compra y el stock de un material se pueden registrar desde Compras.",
           "Vender otros productos no le descuenta stock. Cuando uses una parte, registra una reducción con Ajustar stock en el detalle del producto: Usado en producción para lo que entró en los productos, Insumos de la tienda para cosas como bolsas de papel o productos de limpieza.",
           "Puedes volver a activarlo en cualquier momento, y su precio e impuestos siguen ahí. Los pedidos y reportes ya hechos no se ven afectados."
@@ -1229,29 +1234,69 @@ export const articles = [
     "keywords": [
       "ingresos por ventas",
       "dinero recibido",
-      "dinero que entra",
+      "reportes",
+      "utilidad bruta",
+      "de los ingresos por ventas a la utilidad bruta",
       "conciliar",
       "anticipo",
-      "venta a cuenta"
+      "venta a cuenta",
+      "impuesto"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Los ingresos por ventas cuentan el día en que se entregó la mercancía, después de todos los descuentos y antes de impuestos; el dinero recibido cuenta el día en que entró el dinero y es lo que realmente cobraste, con impuestos incluidos. Por eso, en una tienda que cobra impuesto, el dinero recibido es mayor que los ingresos por ventas por el monto del impuesto, incluso en pedidos pagados en el mostrador. Aparte de eso, se separan cuando:"
+        "text": "Los ingresos por ventas cuentan el día en que se entregó la mercancía, después de todos los descuentos y antes de impuestos; el dinero recibido cuenta el día en que entró el dinero y es lo que cobraste, con impuestos incluidos. En una tienda que cobra impuesto, el dinero recibido es mayor que los ingresos por ventas por el monto del impuesto, incluso en pedidos pagados en el mostrador. Ambos aparecen como los dos primeros mosaicos de la primera fila de Reportes, junto con Utilidad bruta, Pedidos y Pedido promedio."
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Filas de mosaicos de Reportes con Ingresos por ventas y Dinero recibido lado a lado en la primera fila"
+      },
+      {
+        "type": "h2",
+        "text": "Cuando los ingresos por ventas y el dinero recibido difieren"
+      },
+      {
+        "type": "p",
+        "text": "Por ejemplo, si una tienda con precios con impuesto incluido vende NT$1,050 con 5% de impuesto y el cliente paga en el mostrador, los ingresos por ventas son NT$1,000 y el dinero recibido es NT$1,050. Además del impuesto, las dos cifras se separan en estos casos:"
       },
       {
         "type": "list",
         "items": [
-          "Venta a cuenta: la mercancía sale hoy y cuenta en los ingresos por ventas de hoy; el dinero cuenta en el dinero recibido el día en que se liquida.",
+          "Venta a cuenta: la mercancía sale hoy y cuenta en los ingresos por ventas de hoy; el dinero cuenta en el dinero recibido el día en que se liquida el pedido.",
           "Preventa: el anticipo cuenta en el dinero recibido cuando se paga; los ingresos por ventas se reconocen completos en la fecha de retiro.",
-          "Anticipo retenido: cuando un cliente cancela una preventa y te quedas con el anticipo, este ya se contó en el dinero recibido al pagarse. Reportes lo muestra por separado como anticipos retenidos y nunca cuenta como ingresos por ventas.",
-          "Anulación de un pedido anterior: el dinero reembolsado cuenta en el dinero recibido el día de la anulación, por lo que el dinero recibido de ese día puede ser negativo, mientras que Anulados cuenta el pedido en su fecha de venta.",
-          "Redondeo de efectivo: lo que el redondeo de efectivo suma o resta al total del pedido cuenta en el dinero recibido y nunca en los ingresos por ventas."
+          "Anticipos retenidos: cuando un cliente cancela una preventa y te quedas con el anticipo, este ya se contó en el dinero recibido al pagarse. Reportes lo muestra por separado como Anticipos retenidos y nunca cuenta como ingresos por ventas.",
+          "Anulación de un pedido anterior: el dinero reembolsado cuenta en el dinero recibido el día de la anulación, por lo que el dinero recibido de ese día puede ser negativo. El pedido anulado se cuenta en su fecha de venta y aparece en el subtítulo del mosaico Pedidos.",
+          "Redondeo de efectivo: cualquier monto que el redondeo de efectivo cobre de más o de menos respecto al total del pedido cuenta en el dinero recibido y nunca en los ingresos por ventas."
         ]
       },
       {
         "type": "p",
-        "text": "Para conciliar, compara el dinero recibido con tu caja y tu terminal de tarjetas; para saber cuánto vendiste realmente en un periodo, mira los ingresos por ventas. Las devoluciones restan de los ingresos por ventas el día de la devolución. El ⓘ de los mosaicos Ingresos por ventas, Dinero recibido y Anulados explica lo mismo, y el impuesto aparece en De los ingresos por ventas a la utilidad bruta, que se abre desde el mosaico de utilidad bruta."
+        "text": "Cuando alguno de los dos montos es distinto de cero, el subtítulo del mosaico Dinero recibido muestra el Redondeo de efectivo o los Anticipos retenidos."
+      },
+      {
+        "type": "h2",
+        "text": "Impuesto y detalles de los mosaicos"
+      },
+      {
+        "type": "p",
+        "text": "El impuesto que separa los ingresos por ventas del dinero recibido aparece en De los ingresos por ventas a la utilidad bruta, que se abre desde el pie del mosaico Utilidad bruta. Muestra Ingresos por ventas (con impuesto), Impuesto e Ingresos por ventas (sin impuesto). Las tiendas de Australia, el Reino Unido, Nueva Zelanda y Singapur ven ahí el nombre local del impuesto, como Ingresos por ventas (con GST), GST e Ingresos por ventas (sin GST)."
+      },
+      {
+        "type": "p",
+        "text": "Para ver el impuesto cobrado y declararlo, abre Reporte de impuestos desde el mosaico Impuesto."
+      },
+      {
+        "type": "p",
+        "text": "El ⓘ de los mosaicos Ingresos por ventas, Dinero recibido y Pedidos explica estas reglas en la app, incluidos los pedidos anulados que aparecen en el subtítulo del mosaico Pedidos."
+      },
+      {
+        "type": "h2",
+        "text": "Conciliar y leer las ventas"
+      },
+      {
+        "type": "p",
+        "text": "Para conciliar, compara el dinero recibido con tu caja y tu terminal de tarjetas. La tarjeta Métodos de pago de Reportes muestra una fila por método, y las ventas hechas antes de que renombres un método se cuentan con el nombre nuevo. Para saber cuánto vendiste en un periodo, mira los ingresos por ventas. Las devoluciones restan de los ingresos por ventas el día de la devolución."
       },
       {
         "type": "note",
@@ -1261,7 +1306,8 @@ export const articles = [
     "related": [
       "on-account",
       "pre-orders",
-      "report-periods"
+      "report-periods",
+      "tax-report"
     ]
   },
   {
@@ -1276,38 +1322,92 @@ export const articles = [
       "este año",
       "rango personalizado",
       "fecha",
-      "productos más vendidos"
+      "ranking de productos",
+      "comparar"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Elige Hoy, Ayer, Esta semana, Este mes, Este año o Todo el tiempo en la parte superior de Reportes, o usa Personalizado para elegir una fecha de inicio y una de fin. Esta semana sigue el primer día de la semana del dispositivo; Este mes y Este año empiezan el día 1 y el 1 de enero. Cada opción muestra las fechas que abarca, y Todo el tiempo empieza desde la primera transacción de tu tienda."
+        "text": "Elige Hoy, Ayer, Esta semana, Este mes, Este año o Todo el tiempo en la barra de periodo de la parte superior de Reportes, o toca Personalizado para elegir cualquier fecha de inicio y de fin. Todas las tarjetas de la página siguen el periodo que elijas. Esta semana sigue el primer día de la semana del dispositivo, Este mes empieza el día 1, Este año empieza el 1 de enero, Todo el tiempo empieza desde la primera transacción de tu tienda, y cada opción muestra las fechas que abarca."
+      },
+      {
+        "type": "shot",
+        "name": "report-periods",
+        "alt": "Barra de periodo en la parte superior de Reportes con Personalizado seleccionado y su ventana abierta para elegir las fechas de Inicio y Fin"
+      },
+      {
+        "type": "h2",
+        "text": "Elegir un rango personalizado"
       },
       {
         "type": "p",
-        "text": "Debajo de la barra de periodo hay dos filas de mosaicos con cifras (Ingresos por ventas, Dinero recibido, Utilidad bruta, Pedidos, Pedido promedio; Descuentos totales, Utilidad neta, Productos sin costo, Clientes atendidos) y después el gráfico de tendencia. El menú de la esquina superior derecha del gráfico de tendencia lo cambia entre ingresos por ventas, pedidos, pedido promedio y clientes atendidos, y junto a él el gráfico Costo y utilidad bruta apila en una barra el costo de los productos y la utilidad bruta de cada periodo. Un solo día se grafica por hora; los periodos más largos usan días, semanas, meses o años según su duración."
+        "text": "Usa Personalizado cuando necesites un rango distinto de los periodos de calendario predefinidos, como un periodo de declaración de impuestos de dos meses o trimestral."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abre Reportes y toca Personalizado en la barra de periodo.",
+          "Elige las fechas de inicio y de fin en la ventana.",
+          "Confirma las fechas para actualizar el reporte."
+        ]
       },
       {
         "type": "p",
-        "text": "Mantén presionado el gráfico de tendencia o el gráfico Costo y utilidad bruta para leerlo periodo por periodo; con Comparación de ventas activa, la tarjeta del gráfico de tendencia muestra la cifra de este periodo y la del periodo de comparación una junto a la otra. Arrastra a la izquierda o a la derecha para avanzar; si deslizas hacia arriba o hacia abajo sobre el gráfico, la página se desplaza como siempre."
+        "text": "El mosaico Impuesto y el reporte de impuestos también siguen el periodo elegido, así que al fijar un rango de declaración con Personalizado se actualizan ambos; consulta el artículo relacionado sobre el reporte de impuestos. A la derecha de la barra de periodo, toca Comparar para ver el periodo elegido junto al anterior o al mismo periodo del año pasado; consulta el artículo relacionado sobre los reportes avanzados."
+      },
+      {
+        "type": "h2",
+        "text": "Mosaicos y tarjetas de la página"
       },
       {
         "type": "p",
-        "text": "La tarjeta Ranking de productos muestra los 5 primeros. Toca la tarjeta o Ver todo para listar todos los productos vendidos en el periodo, ordenados por cantidad después de devoluciones; un producto con variantes tiene una línea por variante."
+        "text": "Debajo de la barra de periodo, Reportes muestra dos filas de mosaicos con cifras, seguidas de gráficos y tarjetas de resumen en pares, con Ahora mismo al final."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Primera fila de mosaicos: Ingresos por ventas, Dinero recibido, Utilidad bruta, Pedidos y Pedido promedio.",
+          "Segunda fila de mosaicos: Descuentos totales, Impuesto, Utilidad neta, Productos sin costo y Clientes atendidos.",
+          "Primer par: el gráfico de tendencia de ventas junto a Costo y utilidad bruta.",
+          "Segundo par: Ranking de productos junto a Participación por categoría.",
+          "Tercer par: Métodos de pago junto a la tarjeta de promociones.",
+          "Tarjeta final: Ahora mismo."
+        ]
       },
       {
         "type": "p",
-        "text": "Comparación de ventas, a la derecha de la barra de periodo, compara el periodo con el anterior o con el mismo periodo del año pasado; consulta «¿Qué muestran los reportes avanzados?»."
+        "text": "Dos mosaicos de la segunda fila aparecen solo en casos específicos. Impuesto, agregado en la v3.6, aparece solo en una tienda con impuestos o cuando el periodo elegido tiene ventas hechas con un impuesto. Utilidad neta aparece solo cuando el periodo es Este mes o abarca exactamente un mes completo."
       },
       {
         "type": "note",
-        "text": "Estos periodos de calendario llegaron en la v2.4; las versiones anteriores ofrecían rangos móviles (Hoy / 7 días / 30 días / Todo el tiempo). Si aún los ves, actualiza DingPOS desde el App Store."
+        "text": "Si un periodo no tiene pedidos, Reportes muestra solo la barra de periodo, un mensaje y Ahora mismo."
+      },
+      {
+        "type": "h2",
+        "text": "Leer los gráficos y el Ranking de productos"
+      },
+      {
+        "type": "p",
+        "text": "El menú de la esquina superior derecha del gráfico de tendencia de ventas lo cambia entre Ingresos por ventas, Pedidos, Pedido promedio y Clientes atendidos. El gráfico también ofrece un selector entre Tendencia y Día × hora; consulta el artículo relacionado sobre los reportes avanzados para esa vista. Junto a él, el gráfico Costo y utilidad bruta apila en una barra el costo de los productos y la utilidad bruta de cada periodo. Un solo día se grafica por hora; los periodos más largos agrupan los datos por días, semanas, meses o años según su duración."
+      },
+      {
+        "type": "p",
+        "text": "Mantén presionado el gráfico de tendencia de ventas, Costo y utilidad bruta o Métodos de pago para ver una tarjeta con la lectura de un intervalo. Con Comparar activado, la tarjeta del gráfico de tendencia de ventas muestra la cifra de este periodo y la del periodo de comparación una junto a la otra. Arrastra a la izquierda o a la derecha para avanzar por los intervalos; si deslizas hacia arriba o hacia abajo sobre el gráfico, la página se desplaza como siempre."
+      },
+      {
+        "type": "p",
+        "text": "Ranking de productos muestra los 5 productos principales del periodo elegido. Toca la tarjeta o Ver todo para listar todos los productos vendidos en ese periodo, ordenados por cantidad después de devoluciones. Un producto con variantes aparece con una línea por variante."
+      },
+      {
+        "type": "note",
+        "text": "Los periodos de calendario llegaron en la v2.4; las versiones anteriores ofrecían rangos móviles (Hoy / 7 días / 30 días / Todo el tiempo). Si aún ves esas opciones, actualiza DingPOS desde el App Store."
       }
     ],
     "related": [
       "advanced-reports",
       "revenue-vs-cash",
-      "profit-not-tracked"
+      "profit-not-tracked",
+      "tax-report"
     ]
   },
   {
@@ -1317,38 +1417,138 @@ export const articles = [
     "question": "¿Qué muestran los reportes avanzados?",
     "keywords": [
       "reportes avanzados",
-      "comparación de ventas",
-      "año pasado",
+      "reportes",
+      "comparar periodos",
+      "comparación de periodos",
       "mapa de calor",
-      "horas de más venta",
+      "día × hora",
       "productos de baja rotación",
       "variaciones",
-      "variación de productos",
       "participación por categoría",
       "valuación de inventario",
-      "tasa de recompra",
-      "puntos"
+      "tasa de recompra"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Los reportes avanzados no son una pantalla aparte: están directamente en Reportes y siguen el periodo que elijas arriba:"
+        "text": "Los reportes avanzados no son una pantalla aparte: están directamente en Reportes y siguen el periodo que elijas arriba. Agregan comparaciones de periodos, un mapa de calor por día de la semana y hora, Productos de baja rotación, Variaciones, la tasa de recompra de los miembros, Participación por categoría y una sección Ahora mismo con el stock y los puntos. Todos los planes los incluyen y siguen disponibles después de que termina la prueba."
       },
       {
-        "type": "list",
+        "type": "h2",
+        "text": "Comparar"
+      },
+      {
+        "type": "p",
+        "text": "Comparar está a la derecha de la barra de periodo de Reportes y mide el periodo elegido frente a uno anterior."
+      },
+      {
+        "type": "steps",
         "items": [
-          "Comparación de ventas: a la derecha de la barra de periodo, compara con el mismo periodo del año pasado o con el periodo anterior (un solo día contra el mismo día de la semana pasada, esta semana contra la semana pasada, este mes contra el mes pasado, este año contra el año pasado, un rango personalizado contra la misma cantidad de días anteriores). Los mosaicos de Ingresos por ventas, Dinero recibido, Utilidad bruta, Pedidos, Pedido promedio, Descuentos totales y Clientes atendidos muestran cada uno el cambio y la cifra del periodo de comparación, como «▼ 3% vs. mes pasado»; el cambio en Descuentos totales siempre es gris, porque un descuento mayor no es bueno ni malo por sí mismo. Toca cualquier línea de comparación para abrir Comparación de periodos, que lista las cifras de ambos periodos. El gráfico de tendencia agrega una línea más clara para el periodo de comparación. Mientras un periodo sigue en curso, el periodo de comparación se corta en el mismo momento.",
-          "Día × hora: cambia el encabezado del gráfico de tendencia de Tendencia a Día × hora para ver un mapa de calor de siete días y 24 horas: cuanto más oscura la celda, más vendiste. Alterna entre ingresos y pedidos; con una comparación activa, verás qué horas crecieron y cuáles bajaron.",
-          "Productos de baja rotación: cambia el encabezado de la tarjeta de ranking a Productos de baja rotación para listar los productos de menos a más ventas, con el stock actual y la última fecha en que se vendió cada uno. Los productos que nunca se vendieron aparecen como Nunca vendido, y un producto con variantes tiene una línea por variante. De forma predeterminada solo se muestran los productos con stock.",
-          "Variaciones (desde la v3.4): cambia el encabezado de la tarjeta de ranking a Variaciones para ver los 3 productos cuyos ingresos por ventas más subieron y los 3 que más bajaron respecto al periodo de comparación, cada uno con los ingresos por ventas de ambos periodos y la diferencia; cada variante se compara consigo misma. Primero elige un periodo en Comparación de ventas; con Ninguno, o en Todo el tiempo, la tarjeta te lo indica. Toca la tarjeta o Ver todo para abrir la lista completa de Variación de productos, dividida en En alza y En baja.",
-          "Tasa de recompra: la última línea del mosaico de clientes es la proporción de miembros que compraron en el periodo y que han comprado dos o más veces en total. Con una comparación activa, una línea debajo indica el cambio en puntos porcentuales y la tasa del periodo de comparación.",
-          "Participación por categoría: los ingresos por ventas de cada categoría y su participación, según la categoría actual de cada producto, de mayor a menor. Los productos sin categoría van en Sin categoría, y las filas suman exactamente los ingresos por ventas.",
-          "Ahora mismo: valuación de inventario (stock actual × costo actual), todos los movimientos de stock del periodo seleccionado y los puntos que los clientes tienen sin canjear, con el máximo que pueden descontar. Son saldos actuales; el periodo no los cambia."
+          "Abre Reportes desde la barra lateral.",
+          "Elige un periodo en la parte superior.",
+          "Toca Comparar, a la derecha de la barra de periodo.",
+          "Elige una opción de comparación en el menú."
         ]
       },
       {
         "type": "p",
-        "text": "Desde la v3.4, todos están disponibles en todos los planes y siguen disponibles después de que termina la prueba. Las versiones anteriores los mostraban solo en Pro, con un pequeño candado en los demás planes; si aún ves los candados, actualiza DingPOS desde el App Store."
+        "text": "Las opciones disponibles dependen del periodo que elijas:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ninguno desactiva la comparación.",
+          "Semana pasada compara un solo día con el mismo día de la semana pasada, o esta semana con la semana pasada.",
+          "Mes pasado compara este mes con el mes pasado.",
+          "Año pasado compara este año con el año pasado, o el periodo elegido con el mismo periodo del año pasado.",
+          "Anterior compara un rango personalizado con la misma cantidad de días anteriores."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Con una comparación activa, Reportes agrega el cambio y la cifra del periodo de comparación a todos los mosaicos, excepto Impuesto, Utilidad neta y Productos sin costo. Ingresos por ventas, Dinero recibido, Utilidad bruta, Pedidos, Pedido promedio, Descuentos totales y Clientes atendidos muestran cada uno una línea de comparación, como «▼ 3% vs. Mes pasado»."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Reportes en Esta semana con Comparar en Semana pasada, con la barra de comparación y la primera fila de mosaicos, cada uno con su cambio y la cifra de comparación debajo",
+        "caption": "Toca cualquier línea de comparación debajo de un mosaico para abrir Comparación de periodos y ver las cifras de ambos periodos."
+      },
+      {
+        "type": "p",
+        "text": "El cambio en Descuentos totales siempre es gris, porque un descuento mayor no es bueno ni malo por sí mismo. Toca cualquier línea de comparación para abrir Comparación de periodos, que lista las cifras de ambos periodos. El gráfico de tendencia agrega una línea más clara para el periodo de comparación. Mientras un periodo sigue en curso, el periodo de comparación se corta en el mismo momento."
+      },
+      {
+        "type": "h2",
+        "text": "Día × hora"
+      },
+      {
+        "type": "p",
+        "text": "Cambia el encabezado del gráfico de tendencia de Tendencia a Día × hora para ver un mapa de calor de siete días y 24 horas. Cuanto más oscura es una celda, más vendiste en esa hora. Puedes alternar el mapa de calor entre ingresos por ventas y pedidos. Con una comparación activada en Comparar, el mapa de calor también muestra qué horas crecieron y cuáles bajaron."
+      },
+      {
+        "type": "h2",
+        "text": "Productos de baja rotación"
+      },
+      {
+        "type": "p",
+        "text": "Cambia el encabezado de la tarjeta de ranking a Productos de baja rotación para listar los productos de menos a más ventas. Cada fila muestra el stock actual del producto y la última fecha en que se vendió. Los productos que nunca se vendieron aparecen como Nunca vendido, y un producto con variantes tiene una línea por variante. De forma predeterminada solo se muestran los productos con stock."
+      },
+      {
+        "type": "h2",
+        "text": "Variaciones"
+      },
+      {
+        "type": "p",
+        "text": "Cambia el encabezado de la tarjeta de ranking a Variaciones para ver los 3 productos cuyos ingresos por ventas más subieron y los 3 que más bajaron respecto al periodo de comparación. Cada fila muestra los ingresos por ventas de ambos periodos y la diferencia, y cada variante se compara consigo misma."
+      },
+      {
+        "type": "p",
+        "text": "Primero elige un periodo en Comparar. Con Comparar en Ninguno, o con el periodo Todo el tiempo, la tarjeta te pide elegir un periodo de comparación. Toca la tarjeta o Ver todo para abrir la lista completa de Variación de productos, dividida en En alza y En baja."
+      },
+      {
+        "type": "h2",
+        "text": "Tasa de recompra"
+      },
+      {
+        "type": "p",
+        "text": "La última línea del mosaico Clientes atendidos muestra la tasa de recompra como «Tasa de recompra … · … miembros volvieron a comprar». Es la proporción de miembros que compraron en el periodo elegido y que han comprado dos o más veces en total. Con una comparación activada en Comparar, una línea debajo indica el cambio en puntos porcentuales y la tasa del periodo de comparación."
+      },
+      {
+        "type": "h2",
+        "text": "Participación por categoría"
+      },
+      {
+        "type": "p",
+        "text": "Participación por categoría lista los ingresos por ventas de cada categoría y su participación, de mayor a menor, según la categoría actual de cada producto. Los productos sin categoría van en Sin categoría, y las filas suman exactamente los ingresos por ventas."
+      },
+      {
+        "type": "h2",
+        "text": "Ahora mismo"
+      },
+      {
+        "type": "p",
+        "text": "Ahora mismo muestra tres datos de inventario y puntos:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Valuación de inventario, calculada como stock actual × costo actual.",
+          "Todos los movimientos de stock del periodo seleccionado.",
+          "Los puntos que los clientes tienen sin canjear, junto con el máximo que pueden descontar."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "La valuación de inventario y los puntos sin canjear son saldos actuales, así que cambiar el periodo en la parte superior no los modifica."
+      },
+      {
+        "type": "h2",
+        "text": "Planes y permisos"
+      },
+      {
+        "type": "p",
+        "text": "Desde la v3.4, todos los reportes avanzados están disponibles en todos los planes, incluido Lite, y siguen disponibles después de que termina la prueba. Variaciones también se agregó en la v3.4. Las versiones anteriores mostraban los reportes avanzados solo en Pro, con un pequeño candado en los demás planes; si aún ves los candados, actualiza DingPOS desde el App Store."
       },
       {
         "type": "p",
@@ -1356,7 +1556,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "El personal ve los reportes avanzados con el permiso de Panel; los montos de valuación de inventario además requieren el permiso de Costos y utilidad."
+        "text": "El personal ve los reportes avanzados con el permiso de Reportes; los montos de valuación de inventario además requieren el permiso de Costos y utilidad."
       }
     ],
     "related": [
@@ -1371,41 +1571,105 @@ export const articles = [
     "question": "¿Cómo se reporta la utilidad bruta si no registré los costos?",
     "keywords": [
       "costo",
-      "utilidad",
       "utilidad bruta",
       "margen",
       "margen bruto",
       "reportes",
       "sin registrar",
       "costo faltante",
-      "productos sin costo"
+      "productos sin costo",
+      "de los ingresos por ventas a la utilidad bruta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "El costo es un campo opcional. Los productos sin costo se dejan fuera de la utilidad bruta, pero sus ingresos por ventas se cuentan completos. El mosaico Productos sin costo de Reportes muestra cuántos productos vendidos o devueltos en el periodo no tienen costo, como «12 productos». Un costo de 0 cuenta como costo, así que esos productos no aparecen en la lista; cuando todos tienen uno, el mosaico dice «0 productos · costos completos»."
+        "text": "El costo es un campo opcional, así que los productos sin costo se dejan fuera de la utilidad bruta, pero sus ingresos por ventas se cuentan completos. El mosaico Productos sin costo de Reportes muestra cuántos productos vendidos o devueltos en el periodo no tienen costo, como «12 productos». Un costo de 0 cuenta como costo y no aparece en la lista; cuando todos los productos tienen costo, el mosaico dice «0 productos · costos completos»."
+      },
+      {
+        "type": "h2",
+        "text": "Encontrar los productos sin costo"
       },
       {
         "type": "p",
-        "text": "Toca el mosaico o Ver productos para abrir Productos sin costo, ordenados por los ingresos por ventas que quedan fuera de la utilidad bruta. Toca una fila para abrir el producto, agrega su costo desde Editar y, al volver, la fila aparece marcada como Costo agregado. Un producto con variantes se marca como Costo agregado solo cuando cada variante vendida sin costo ya tiene uno: el suyo o el del producto, que se aplica a las variantes que no tengan costo propio."
+        "text": "En Reportes, toca el mosaico Productos sin costo o Ver productos para abrir Productos sin costo. La hoja lista los productos ordenados de mayor a menor por los ingresos por ventas que quedan fuera de la utilidad bruta."
+      },
+      {
+        "type": "shot",
+        "name": "profit-not-tracked",
+        "alt": "Hoja Productos sin costo con los productos ordenados por los ingresos por ventas que quedan fuera de la utilidad bruta"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Toca una fila de Productos sin costo para abrir el producto.",
+          "Toca Editar e ingresa el costo en Costo (opcional).",
+          "Regresa a Productos sin costo para ver la fila marcada como Costo agregado."
+        ]
       },
       {
         "type": "p",
-        "text": "La utilidad bruta son los ingresos por ventas después de todos los descuentos (descuentos de artículo y de carrito, promociones, canje de puntos) y antes de impuestos, menos el costo; por eso, en una tienda que cobra impuesto, el campo dice Costo sin impuestos (opcional): escribe lo que pagaste antes de impuestos. El margen es la utilidad bruta ÷ los ingresos por ventas de los productos con costo, así que los productos sin costo no lo reducen. Una devolución quita, el día de la devolución, la utilidad bruta que esos artículos habían aportado."
-      },
-      {
-        "type": "p",
-        "text": "Toca el mosaico de utilidad bruta para abrir De los ingresos por ventas a la utilidad bruta, que resta fila por fila: ingresos por ventas (con impuesto), impuesto, ingresos por ventas (sin impuesto), ingresos sin costo, costo de productos y, al final, utilidad bruta y margen. Las filas suman exactamente el mosaico."
+        "text": "Un producto con variantes se marca como Costo agregado solo cuando cada variante vendida sin costo ya tiene uno: el suyo o el del producto, que se aplica a las variantes que no tengan costo propio. Desde la v3.6, una orden de compra también puede repartir su envío en el costo del producto que registra cuando Incluir envío en el costo está activado."
       },
       {
         "type": "note",
-        "text": "Un costo que agregas afecta solo a las ventas posteriores; las ventas ya hechas no se recalculan. Este cálculo llegó en la v3.1: las versiones anteriores solo descontaban los descuentos manuales por artículo y contaban el impuesto incluido como utilidad, así que después de actualizar, los periodos con descuentos o con impuesto incluido muestran una utilidad bruta menor. Es una corrección, no una pérdida de datos."
+        "text": "Un costo que agregas afecta solo a las ventas posteriores. Las ventas ya hechas no se recalculan."
+      },
+      {
+        "type": "h2",
+        "text": "Ingresar el costo y el impuesto"
+      },
+      {
+        "type": "p",
+        "text": "En el formulario del producto, el campo de costo dice Costo (opcional) en todas las tiendas. En una tienda con impuestos, junto a Costo (opcional) aparece un ⓘ que explica cómo se aplica el impuesto según Acreditar impuesto de facturas:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Acreditar impuesto de facturas está activado: ingresa el costo antes del impuesto que puedas acreditar. La nota del ⓘ dice: «Ingresa el costo sin el impuesto que puedes acreditar, que va en el impuesto acreditable. El impuesto que no puedes acreditar forma parte del costo.»",
+          "Acreditar impuesto de facturas está desactivado: ingresa lo que pagaste, menos el impuesto que puedas acreditar. La nota del ⓘ dice: «El impuesto que puedes acreditar no forma parte del costo; el que no puedes acreditar sí. Si acreditas impuesto de facturas, activa Acreditar impuesto de facturas en Datos de la tienda.»"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Si tu tienda declara el impuesto acreditable, activa Acreditar impuesto de facturas en Datos de la tienda."
+      },
+      {
+        "type": "h2",
+        "text": "Leer el desglose de la utilidad bruta"
+      },
+      {
+        "type": "p",
+        "text": "La utilidad bruta son los ingresos por ventas después de todos los descuentos (descuentos de artículo y de carrito, promociones, canje de puntos) y antes de impuestos, menos el costo. El margen es la utilidad bruta ÷ los ingresos por ventas de los productos con costo, así que los productos sin costo no lo reducen. Una devolución quita, el día de la devolución, la utilidad bruta que esos artículos habían aportado."
+      },
+      {
+        "type": "p",
+        "text": "Toca el mosaico Utilidad bruta de Reportes para abrir De los ingresos por ventas a la utilidad bruta, que resta fila por fila:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ingresos por ventas (con impuesto)",
+          "Impuesto",
+          "Ingresos por ventas (sin impuesto)",
+          "Ingresos sin costo",
+          "Costo de productos",
+          "Utilidad bruta y margen"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Las filas suman exactamente el mosaico Utilidad bruta. Las tiendas de Australia, el Reino Unido, Nueva Zelanda y Singapur ven el nombre local del impuesto en las filas de impuesto, como Ingresos por ventas (con GST)."
+      },
+      {
+        "type": "note",
+        "text": "Este cálculo de la utilidad bruta llegó en la v3.1. Las versiones anteriores solo descontaban los descuentos manuales por artículo y contaban el impuesto incluido como utilidad, así que después de actualizar, los periodos con descuentos o con impuesto incluido muestran una utilidad bruta menor. Es una corrección, no una pérdida de datos."
       }
     ],
     "related": [
       "report-periods",
       "product-variants",
-      "purchase-orders"
+      "purchase-orders",
+      "input-tax"
     ]
   },
   {
@@ -1419,42 +1683,90 @@ export const articles = [
       "resultados",
       "utilidad neta",
       "utilidad mensual",
-      "gastos",
+      "gastos fijos",
       "utilidad operativa",
       "p&l"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Abre Resultados, debajo de Reportes en la barra lateral. Ahí aparece cada mes, del más reciente al más antiguo, con su utilidad neta: el mes actual lleva la marca En curso, y el encabezado de cada año suma la utilidad neta de sus meses terminados."
+        "text": "Abre Resultados, debajo de Reportes en la barra lateral, para ver la utilidad neta de cada mes y cómo se calcula. La lista va del mes más reciente al más antiguo, empezando por tu primer mes con actividad; el mes actual lleva la marca En curso y el encabezado de cada año suma la utilidad neta de sus meses terminados. Su primera fila, Todos los gastos, abre todos los gastos sin importar el mes."
+      },
+      {
+        "type": "h2",
+        "text": "Desglose mensual"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abre Resultados, debajo de Reportes en la barra lateral.",
+          "Toca un mes para ver cómo se calcula su utilidad neta."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "profit-loss-month",
+        "alt": "Página de un mes de Resultados con el aviso En curso, la utilidad neta y el desglose completo desde los ingresos por ventas hasta los gastos"
       },
       {
         "type": "p",
-        "text": "Toca un mes para ver cómo se calcula su utilidad neta:"
+        "text": "La página del mes lista en orden todas las líneas, desde las ventas hasta la utilidad neta. Las filas desde los ingresos por ventas hasta la utilidad bruta llevan los mismos nombres y cifras que De los ingresos por ventas a la utilidad bruta en Reportes."
       },
       {
         "type": "list",
         "items": [
-          "Ingresos por ventas (sin impuesto): los ingresos por ventas después de todos los descuentos, menos el impuesto, contados el día en que se entregó la mercancía.",
+          "Ingresos por ventas (con impuesto), Impuesto e Ingresos por ventas (sin impuesto): los ingresos por ventas con impuesto incluido, el monto del impuesto y los ingresos por ventas después de todos los descuentos y antes de impuestos, contados el día en que se entregó la mercancía. Las tiendas de Australia, el Reino Unido, Nueva Zelanda y Singapur ven el nombre local del impuesto.",
+          "Ingresos sin costo: se resta antes del costo de productos y aparece solo cuando es distinto de cero.",
           "Costo de productos: el costo de lo que se vendió, según los costos de tus productos.",
-          "Pérdida de stock: el costo de lo que Ajustar stock retiró por vencimiento, daño, regalo y similares, más las devoluciones desechadas. Va después de la utilidad bruta; consulta «¿Cómo registro el stock que venció, se dañó o salió como muestra?». El mes también tiene una sección Pérdida de stock que la suma por motivo.",
+          "Utilidad bruta: se muestra con su margen.",
+          "Ingresos sin costo: se suma de nuevo después de la utilidad bruta cuando es distinto de cero.",
+          "Pérdida de stock: aparece solo cuando el mes tiene una; es el costo de lo que Ajustar stock retiró por vencimiento, daño, regalo y similares, más las devoluciones desechadas. Va después de la utilidad bruta. Consulta «¿Cómo registro el stock que venció, se dañó o salió como muestra?». El mes también tiene una sección Pérdida de stock que la suma por motivo.",
           "Comisiones por procesamiento (est.): las comisiones estimadas con las tasas de tus métodos de pago.",
-          "Anticipos retenidos: los anticipos que conservaste cuando se canceló una preventa.",
-          "Redondeo de efectivo: lo que el redondeo del efectivo a las monedas en uso sumó o restó a los totales de los pedidos.",
-          "Gastos fijos y Gastos puntuales: lo que registraste para ese mes; consulta «¿Cómo registro la renta, la nómina y otros gastos?»."
+          "Anticipos retenidos: aparece solo cuando es distinto de cero; los anticipos que conservaste cuando se canceló una preventa.",
+          "Redondeo de efectivo: aparece solo cuando es distinto de cero; lo que el redondeo del efectivo a las monedas en uso sumó o restó a los totales de los pedidos.",
+          "Gastos fijos y Gastos puntuales: lo que registraste para ese mes; consulta «¿Cómo registro la renta, la nómina y otros gastos?».",
+          "Utilidad neta: se calcula como ingresos por ventas (sin impuesto) − costo de productos − pérdida de stock − comisiones por procesamiento + anticipos retenidos + redondeo de efectivo − gastos fijos − gastos puntuales."
         ]
       },
       {
-        "type": "p",
-        "text": "Después puedes ver hasta tres gráficos: la utilidad neta mes a mes, la proporción de cada gasto fijo y la tendencia de los gastos fijos. Los dos gráficos de tendencia abarcan como máximo los 12 meses hasta el mes que abriste, y solo aparecen cuando hay al menos dos meses para comparar, contados desde el mes de tu primera venta o gasto. El gráfico de proporción necesita un gasto fijo en ese mes; mientras no haya uno, esa sección muestra Agregar gasto fijo."
+        "type": "h2",
+        "text": "Meses en curso"
       },
       {
         "type": "p",
-        "text": "Reportes y Resultados se enlazan entre sí. Cuando el periodo de Reportes es Este mes o exactamente un mes completo, la segunda fila de mosaicos agrega un mosaico Utilidad neta (marcado «En curso · se descuentan los gastos del mes completo» mientras el mes sigue en curso); tócalo para ver el desglose de ese mes, de la utilidad bruta a la utilidad neta. Para cualquier otro periodo, toca Ver estado de resultados mensual en la última línea de De los ingresos por ventas a la utilidad bruta. En sentido contrario, Ver el reporte de octubre, debajo del título de un mes en Resultados, abre Reportes en ese mes."
+        "text": "Mientras un mes sigue en curso, Resultados ya descuenta los gastos fijos del mes completo. Por ejemplo, el 5 de octubre, si los ingresos por ventas (sin impuesto) llevan 20,000, el costo de productos es 10,000 y los gastos fijos son 65,700, la utilidad neta es −55,700 y aparece marcada como En curso · se descuentan los gastos del mes completo."
+      },
+      {
+        "type": "p",
+        "text": "Como los gastos del mes completo ya están contados, la utilidad neta de este mes nunca se muestra en rojo en la lista de meses, en la página del mes ni en el mosaico Utilidad neta de Reportes. Un mes terminado que cierra con pérdida muestra su utilidad neta en el color de advertencia."
+      },
+      {
+        "type": "h2",
+        "text": "Gráficos"
+      },
+      {
+        "type": "p",
+        "text": "Después del desglose puedes ver hasta tres gráficos: la utilidad neta mes a mes, la proporción de cada gasto fijo y la tendencia de los gastos fijos. Los dos gráficos de tendencia abarcan como máximo los 12 meses hasta el mes que abriste, y solo aparecen cuando hay al menos dos meses para comparar, contados desde el mes de tu primera venta o gasto. El gráfico de proporción necesita un gasto fijo en ese mes; mientras no haya uno, esa sección muestra Agregar gasto fijo."
+      },
+      {
+        "type": "h2",
+        "text": "Pasar de Reportes a Resultados"
+      },
+      {
+        "type": "p",
+        "text": "Reportes y Resultados se enlazan entre sí. Cuando el periodo de Reportes es Este mes o exactamente un mes completo, la segunda fila de mosaicos agrega un mosaico Utilidad neta marcado En curso · se descuentan los gastos del mes completo mientras el mes sigue en curso. Toca ese mosaico para ver el desglose de ese mes, de la utilidad bruta a la utilidad neta. Para cualquier otro periodo, toca Ver estado de resultados mensual en la última línea de De los ingresos por ventas a la utilidad bruta."
+      },
+      {
+        "type": "p",
+        "text": "En sentido contrario, Ver el reporte de octubre, debajo del título de un mes en Resultados, abre Reportes en ese mes (rango personalizado del 1 al 31 de octubre); para el mes en curso, abre Este mes."
       },
       {
         "type": "note",
-        "text": "La utilidad neta es la utilidad operativa antes del impuesto sobre la renta, calculada con lo que DingPOS ha registrado; no es una declaración de impuestos. Si se vendieron productos sin costo, el mes igual muestra una utilidad neta, marcada «No incluye el costo de N productos»; tócala para ver cuáles. Resultados está disponible en todos los planes. Con cuentas de personal, abrirlo requiere el permiso Resultados y gastos, que por defecto los Gerentes y el Personal necesitan que alguien apruebe, porque muestra los costos de los productos y la nómina."
+        "text": "La utilidad neta es la utilidad operativa antes del impuesto sobre la renta, calculada con lo que DingPOS ha registrado; no es una declaración de impuestos. Si se vendieron productos sin costo, el mes igual muestra una utilidad neta, marcada No incluye el costo de N productos, y puedes tocarla para ver cuáles."
+      },
+      {
+        "type": "note",
+        "text": "Resultados está disponible en todos los planes. Con cuentas de personal, abrirlo requiere el permiso Resultados y gastos, que por defecto los Gerentes y el Personal necesitan que alguien apruebe, porque muestra los costos de los productos y la nómina."
       }
     ],
     "related": [
@@ -1474,48 +1786,584 @@ export const articles = [
       "nómina",
       "servicios básicos",
       "gastos fijos",
-      "gastos operativos",
+      "gastos puntuales",
+      "todos los gastos",
       "distribuir un gasto",
-      "gasto puntual"
+      "gastos operativos",
+      "resultados"
     ],
     "content": [
       {
         "type": "p",
-        "text": "En Resultados, toca Agregar gasto y elige un gasto fijo o un gasto puntual. Un gasto se cuenta en el mes al que corresponde, no en el mes en que lo pagaste, y la utilidad neta de cada mes se ajusta a eso."
+        "text": "En Resultados, toca Agregar gasto y elige Agregar gasto fijo o Agregar gasto puntual para registrar la renta, la nómina, los servicios básicos y otros costos de operación. Un gasto se cuenta en el mes al que corresponde, no en el mes en que lo pagaste, y la utilidad neta de cada mes se ajusta a eso. Los gastos fijos se repiten cada mes, con cambios de monto opcionales; los gastos puntuales se cuentan en un solo mes o se distribuyen en varios."
+      },
+      {
+        "type": "h2",
+        "text": "Gastos fijos"
       },
       {
         "type": "p",
-        "text": "Un gasto fijo es el que pagas cada mes, como la renta, los servicios básicos o la nómina:"
+        "text": "Un gasto fijo es un costo recurrente que pagas cada mes, como la renta, los servicios básicos o la nómina."
       },
       {
-        "type": "list",
+        "type": "steps",
         "items": [
+          "Abre Resultados.",
+          "Toca Agregar gasto.",
+          "Elige Agregar gasto fijo.",
           "Escribe el nombre, el monto mensual y el mes en que inicia. Elige un mes anterior para registrar gastos pasados.",
-          "Cuando el monto cambia, toca Cambiar monto, elige el mes y escoge Desde este mes (un aumento de renta, por ejemplo) o Solo este mes (la cuenta de luz de este mes). Cada cambio aparece en una lista, y puedes abrir uno para editarlo o eliminarlo.",
-          "Cuando dejes de pagarlo, indica el Último mes contado: ese mes y los anteriores se siguen contando."
+          "Toca ✓ para guardar."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "expense-form",
+        "alt": "Formulario de gasto fijo con el nombre, el monto mensual, el mes de inicio y los cambios de monto"
+      },
+      {
+        "type": "p",
+        "text": "Cuando el monto cambia, abre el gasto y toca Cambiar monto. Elige el mes en que empieza el cambio y luego Desde este mes para un cambio continuo, como un aumento de renta, o Solo este mes para una diferencia de un solo mes, como la cuenta de luz de este mes. Cada cambio aparece en una lista en el formulario, y puedes abrir cualquiera para editarlo o eliminarlo."
+      },
+      {
+        "type": "p",
+        "text": "Cuando dejes de pagar un gasto fijo, indica el Último mes contado. Ese mes y los anteriores se siguen contando en Resultados, mientras que los meses posteriores ya no lo incluyen."
+      },
+      {
+        "type": "h2",
+        "text": "Cambios programados en Todos los gastos"
+      },
+      {
+        "type": "p",
+        "text": "En Todos los gastos, cada fila de gasto fijo muestra lo que está programado hacia adelante. La fila junta su mes de inicio con el siguiente cambio de monto programado y el último mes contado. Por ejemplo, una fila puede decir Desde enero de 2026 · $420/mes desde diciembre de 2026 · Último mes contado: marzo de 2027."
+      },
+      {
+        "type": "p",
+        "text": "El monto de la derecha sigue siendo el monto mensual de hoy, no el próximo. Un cambio con Solo este mes no aparece en la fila."
+      },
+      {
+        "type": "h2",
+        "text": "Gastos puntuales"
+      },
+      {
+        "type": "p",
+        "text": "Un gasto puntual es un costo que se paga una sola vez, como una remodelación, equipo, un seguro pagado por adelantado o una sola cuenta."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abre Resultados.",
+          "Toca Agregar gasto.",
+          "Elige Agregar gasto puntual.",
+          "Ingresa el monto y la fecha.",
+          "Indica el Mes contado para un solo mes, o activa Distribuir en varios meses.",
+          "Toca ✓ para guardar."
         ]
       },
       {
         "type": "p",
-        "text": "Un gasto puntual se paga una sola vez:"
+        "text": "Sin distribuir, igual puedes elegir el Mes contado para que el costo se cuente en el mes al que corresponde. Por ejemplo, una cuenta de octubre que llega en noviembre puede contarse en octubre y se conserva su fecha real."
       },
       {
-        "type": "list",
-        "items": [
-          "Para una remodelación, equipo o un seguro pagado por adelantado, activa Distribuir en varios meses y elige de 2 a 120 meses y el primer mes contado. El formulario muestra cuánto se cuenta cada mes y qué meses abarca.",
-          "Sin distribuir, igual puedes elegir el mes contado: una cuenta de octubre que llega en noviembre puede contarse en octubre, y se conserva su fecha real.",
-          "Si una distribución termina antes (un seguro cancelado, por ejemplo), usa Terminar distribución antes: lo que quede se cuenta en el mes que elijas."
-        ]
+        "type": "p",
+        "text": "Para una remodelación, equipo o un seguro pagado por adelantado, activa Distribuir en varios meses, elige de 2 a 120 meses y selecciona el primer mes contado. El formulario muestra cuánto se cuenta cada mes y qué meses abarca."
+      },
+      {
+        "type": "p",
+        "text": "Si una distribución termina antes, como cuando se cancela una póliza de seguro, abre el gasto y usa Terminar distribución antes. Lo que quede se cuenta en el mes que elijas."
+      },
+      {
+        "type": "h2",
+        "text": "Impuesto acreditable en los gastos"
+      },
+      {
+        "type": "p",
+        "text": "Cuando Acreditar impuesto de facturas está activado, puedes registrar un número de factura y el impuesto a acreditar en un gasto puntual, y registrar cada factura de un gasto fijo en Facturas con Registrar una factura. El monto que se cuenta en Resultados sigue siendo lo que la tienda asume; el artículo relacionado sobre el impuesto acreditable explica cómo funciona el impuesto a acreditar."
       },
       {
         "type": "note",
-        "text": "Escribe lo que la tienda realmente asume, sin incluir los impuestos que puedas recuperar. El stock que vas a vender y los materiales con los que lo produces van por Compras, porque se cuentan en el costo del producto cuando se vende. Los insumos con stock controlado se registran con Ajustar stock al usarlos, con el motivo Insumos de la tienda, no como gasto. Los depósitos en garantía, el capital del préstamo y el dinero que retira el propietario tampoco son gastos. Los cambios se guardan juntos al tocar ✓, y si un cambio afecta un mes ya terminado, primero te indica qué meses tendrán un cambio en la utilidad neta."
+        "text": "Ingresa lo que la tienda asume, sin incluir los impuestos que puedas recuperar. El stock que vas a vender y los materiales con los que lo produces van por Compras, porque se cuentan en el costo del producto cuando se vende. Los insumos con stock controlado se registran con Ajustar stock al usarlos, con el motivo Insumos de la tienda, no como gasto. Los depósitos en garantía, el capital del préstamo y el dinero que retira el propietario tampoco son gastos. Los cambios se guardan juntos al tocar ✓, y si un cambio afecta un mes ya terminado, primero te indica qué meses tendrán un cambio en la utilidad neta."
       }
     ],
     "related": [
       "profit-loss",
       "purchase-orders",
+      "input-tax",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "export-tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "¿Cómo exporto el reporte de impuestos para mi contador?",
+    "keywords": [
+      "exportar reporte de impuestos",
+      "reporte de impuestos",
+      "exportar",
+      "libro de Excel",
+      "CSV",
+      "reporte en PDF",
+      "resumen de impuestos",
+      "líneas de impuesto acreditable",
+      "contador"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Abre Reporte de impuestos, toca Exportar en la esquina superior derecha y elige CSV, Libro de Excel (XLSX) o Reporte en PDF. El archivo se abre en una vista previa de pantalla completa, donde puedes tocar el botón de compartir para guardarlo o enviarlo a tu contador. Todos los formatos contienen las mismas cifras que se ven en pantalla."
+      },
+      {
+        "type": "h2",
+        "text": "Cómo exportar"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abre Reportes y elige el periodo, por ejemplo un rango personalizado del 1 de noviembre al 31 de diciembre para un periodo de declaración de dos meses, o un rango trimestral.",
+          "Toca el mosaico Impuesto para abrir Reporte de impuestos. La exportación cubre exactamente ese periodo.",
+          "Toca Exportar en la esquina superior derecha de Reporte de impuestos. Un menú lista los formatos, con el último que se exportó en este iPad marcado.",
+          "Elige un formato, como Libro de Excel (XLSX), para abrir una vista previa de pantalla completa. Los archivos CSV se muestran como una tabla, y el libro de Excel te permite cambiar entre hojas, por ejemplo para revisar primero Summary.",
+          "Toca el botón de compartir en la esquina superior derecha de la vista previa para guardar el archivo o enviarlo a tu contador. Al cerrar la vista previa regresas a Reporte de impuestos."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "tax-export",
+        "alt": "Reporte de impuestos con el menú Exportar abierto, con la lista de formatos de archivo"
+      },
+      {
+        "type": "p",
+        "text": "Si una exportación falla, la app muestra «No se pudo exportar el archivo» e «Intenta exportar de nuevo». No se guarda nada; vuelve a exportar."
+      },
+      {
+        "type": "h2",
+        "text": "Formatos de exportación"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Resumen de impuestos (CSV): una línea por cada fila del reporte (cada impuesto y tasa, tasa cero y sin impuesto), con ventas, devoluciones y neto, antes de impuestos e impuesto.",
+          "Todos los documentos (CSV): una línea por documento bajo cada impuesto, con fecha y hora, número de recibo, tipo de documento (venta, devolución o la reversión de una anulación), nombre del cliente, montos y métodos de pago. Una anulación agrega una línea de reversión en la fecha de la anulación.",
+          "Resumen diario (CSV): el resumen por día, y después una segunda tabla de pagos por día y método.",
+          "Líneas de impuesto acreditable (CSV): aparece solo cuando el reporte tiene una tarjeta de impuesto acreditable. Una línea por cada línea de impuesto acreditable de cada orden de compra y gasto, con proveedor, ID fiscal del proveedor y número de factura.",
+          "Libro de Excel (XLSX): las hojas Summary, Documents y Daily (con esos nombres fijos en inglés) equivalen a los tres CSV de ventas, más Purchases cuando el reporte muestra impuesto acreditable. Los montos son celdas numéricas, y cada columna se ajusta a su contenido para que nada se abra cortado.",
+          "Reporte en PDF: un reporte en A4 en el idioma de la app, con el nombre de la tienda, el periodo, el modo de impuesto, la moneda y las secciones del reporte. Las tiendas de Australia, Nueva Zelanda, Singapur y el Reino Unido reciben primero Casillas de la declaración; las tarjetas de impuesto acreditable siguen cuando se muestran. En la vista previa, firma o anota con Marcado para compartir el archivo marcado; si exportas el mismo periodo otra vez, se genera una copia limpia."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Formato para software de contabilidad"
+      },
+      {
+        "type": "p",
+        "text": "Los archivos CSV están en UTF-8 y separados por comas, con nombres de columna fijos en inglés en cualquier idioma de la app para que el software de contabilidad pueda leerlos. Los montos usan los decimales de la moneda y un signo menos, sin símbolo ni separador de miles (como 80.97, -40.00 o 1000 en una tienda que usa yenes). Las fechas tienen el formato 2026-11-03."
+      },
+      {
+        "type": "p",
+        "text": "Las celdas de texto que empiezan con =, +, - o @ (como un cliente llamado =1+1) llevan un ' al inicio para que las hojas de cálculo muestren texto en lugar de ejecutar una fórmula. Los montos nunca lo llevan."
+      },
+      {
+        "type": "p",
+        "text": "Los nombres de archivo incluyen el periodo, como tax-report-summary_2026-11-01_2026-11-30.csv, tax-report_2026-11-01_2026-11-30.xlsx y tax-report_2026-11-01_2026-11-30.pdf, para que los archivos de distintos periodos nunca se sobrescriban entre sí."
+      },
+      {
+        "type": "h2",
+        "text": "Permisos y privacidad"
+      },
+      {
+        "type": "p",
+        "text": "Todos los planes pueden exportar, incluido Lite. El personal necesita el permiso de Reportes, igual que para Reporte de impuestos."
+      },
+      {
+        "type": "p",
+        "text": "Los archivos con impuesto acreditable piden primero las aprobaciones que necesitan sus tarjetas: Costos y utilidad para las órdenes de compra y Resultados y gastos para los gastos. Esto abarca Líneas de impuesto acreditable (CSV), además de Libro de Excel (XLSX) y Reporte en PDF cuando aparecen tarjetas de impuesto acreditable. Si cancelas, no se guarda nada; los tres CSV de ventas nunca lo piden."
+      },
+      {
+        "type": "note",
+        "text": "Todos los documentos (CSV) contiene nombres de clientes, y los archivos de impuesto acreditable contienen nombres de proveedores e IDs fiscales. Compártelos solo con quienes deban verlos."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "input-tax",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "input-tax",
+    "category": "reports",
+    "since": "3.6",
+    "question": "¿Cómo registro el impuesto acreditable (IVA o GST de mis compras)?",
+    "keywords": [
+      "impuesto acreditable",
+      "IVA acreditable",
+      "IVA de compras",
+      "VAT",
+      "GST",
+      "acreditar impuesto de facturas",
+      "ID fiscal del proveedor",
+      "órdenes de compra",
+      "reporte de impuestos"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Activa Acreditar impuesto de facturas en Ajustes → Datos de la tienda para registrar el impuesto a acreditar de las facturas de proveedores en órdenes de compra y gastos. Ambos formularios tendrán una sección de impuesto acreditable donde copias de cada factura el impuesto a acreditar. El reporte de impuestos lo lista en dos tarjetas, Impuesto acreditable en órdenes de compra e Impuesto acreditable en gastos."
+      },
+      {
+        "type": "h2",
+        "text": "Activar Acreditar impuesto de facturas"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abre Ajustes → Datos de la tienda y busca la tarjeta de impuestos.",
+          "En Cobrar impuesto, activa Acreditar impuesto de facturas."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-toggle",
+        "alt": "Tarjeta de impuestos de Datos de la tienda con Acreditar impuesto de facturas activado y su aviso debajo"
+      },
+      {
+        "type": "p",
+        "text": "Acreditar impuesto de facturas aparece solo cuando la tienda tiene al menos un impuesto, y empieza desactivado en las tiendas nuevas y después de actualizar. Al cambiarlo se guarda de inmediato y queda registrado en Ajustes de impuestos del Registro de actividad. Con él activado, ingresa los precios de compra y los costos de los productos antes del impuesto a acreditar; el impuesto que no se puede acreditar se queda en el costo."
+      },
+      {
+        "type": "note",
+        "text": "Todos los planes tienen el interruptor Acreditar impuesto de facturas, mientras que Compras requiere Standard o superior. Al desactivarlo, los campos se ocultan en los registros nuevos; los registros existentes conservan su impuesto acreditable y su monto a pagar, y los reportes de impuestos anteriores no cambian."
+      },
+      {
+        "type": "h2",
+        "text": "Órdenes de compra"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abre Compras y toca Nueva compra.",
+          "Ingresa los precios unitarios antes del impuesto a acreditar y desplázate, pasando los costos adicionales, hasta Impuesto acreditable.",
+          "Revisa la Fecha de factura, que por defecto es la fecha de la orden, y agrega, si quieres, el Número de factura y el ID fiscal del proveedor.",
+          "Elige un impuesto de la tienda en Tasa, o elige Otra tasa… para escribir hasta 3 decimales, como 9.975%.",
+          "Revisa Antes de impuestos, que empieza con el total de la orden antes de impuestos, y copia de la factura el Impuesto a acreditar.",
+          "Toca Agregar una tasa para tasas adicionales."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-po",
+        "alt": "Orden de compra con la sección Impuesto acreditable, con los campos de la factura, una línea de tasa y los totales"
+      },
+      {
+        "type": "p",
+        "text": "El Impuesto a acreditar empieza en blanco; DingPOS nunca lo calcula a partir de la tasa y acepta el redondeo de la factura. Por ejemplo, harina 10 × $300 más $100 de envío en la factura AB-12345678 con fecha del 30 de junio de 2026, con una línea de 5% de Antes de impuestos $3,100 e Impuesto a acreditar $155, da Total antes de impuestos $3,100, Impuesto acreditable $155 y Monto a pagar $3,255, que aparece en la lista, en el detalle de la orden y en Por pagar. El ID fiscal de un proveedor llena las órdenes nuevas; las órdenes guardadas conservan el suyo."
+      },
+      {
+        "type": "p",
+        "text": "Si una factura llega tarde, abre la orden recibida y toca Registrar impuesto acreditable en la tarjeta Impuesto acreditable, o Editar para cambiarlo. Solo cambia el Monto a pagar; el stock, el costo del producto y el estado de pagada o por pagar no cambian. Las órdenes anuladas conservan Impuesto acreditable en solo lectura, y las órdenes guardadas antes de la actualización no se completan con datos anteriores."
+      },
+      {
+        "type": "h2",
+        "text": "Gastos"
+      },
+      {
+        "type": "p",
+        "text": "En Resultados → Gastos puntuales, el formulario agrega Número de factura y líneas de impuesto acreditable debajo del monto. Deja el monto antes del impuesto a acreditar y copia solo el impuesto a acreditar. En una factura de papelería de $1,100 con $100 a acreditar, ingresa $1,000 y una línea de 10% de $1,000 y $100; Con impuesto muestra $1,100 y Resultados cuenta $1,000. Su impuesto acreditable se cuenta completo en la fecha del gasto, sin seguir nunca el Mes contado ni una distribución."
+      },
+      {
+        "type": "p",
+        "text": "En Resultados → Gastos fijos, abre un gasto guardado, como la renta o los servicios básicos, y toca Registrar una factura en Facturas cuando llegue cada factura, con la fecha de la factura, el número de factura opcional y al menos una línea de tasa. Si la renta es de $30,000 al mes y las facturas de julio y agosto llevan cada una una línea de 5% de $30,000 y $1,500, el reporte de julio a septiembre contiene $3,000 de impuesto acreditable, mientras que Resultados sigue contando $30,000 cada mes."
+      },
+      {
+        "type": "p",
+        "text": "Al guardar un cambio de impuesto acreditable en un mes anterior, la app pregunta ¿Guardar el cambio? y avisa que el reporte de impuestos de ese mes cambia si ya presentaste la declaración. Las ediciones del mes actual y los borradores se guardan sin preguntar."
+      },
+      {
+        "type": "note",
+        "text": "DingPOS no calcula el IVA de importación, la inversión del sujeto pasivo (reverse charge) ni el crédito parcial. Copia de la factura el impuesto a acreditar, y pon cualquier impuesto que no puedas acreditar en el monto antes de impuestos."
+      },
+      {
+        "type": "h2",
+        "text": "Reporte de impuestos"
+      },
+      {
+        "type": "p",
+        "text": "Dos tarjetas van después de las tarjetas de ventas: Impuesto acreditable en órdenes de compra e Impuesto acreditable en gastos. Cada una lista una fila por tasa, una fila Sin impuesto acreditable y los totales de Antes de impuestos, Impuesto a acreditar y Con impuesto. Los totales incluyen las compras sin impuesto acreditable, aunque algunas declaraciones toman solo las filas con impuesto acreditable."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Las órdenes de compra se cuentan en la Fecha de factura, o en la fecha de la orden si está en blanco.",
+          "Las órdenes de compra anuladas se cuentan como monto negativo en la fecha de la anulación.",
+          "Los gastos puntuales se cuentan completos en la fecha del gasto.",
+          "Las facturas de gastos fijos se cuentan en la fecha de la factura."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Impuesto acreditable en órdenes de compra requiere el permiso Costos y utilidad, e Impuesto acreditable en gastos requiere Resultados y gastos; el personal sin un permiso ve Pedir aprobación a un gerente debajo del título de la tarjeta. El mosaico Impuesto sigue mostrando solo el impuesto cobrado en ventas, nunca restando el impuesto acreditable, porque el método simplificado de Japón y la tarifa plana del Reino Unido funcionan de otra forma. Las tiendas de Australia, Nueva Zelanda, Singapur y el Reino Unido también ven estos montos en Casillas de la declaración."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "purchase-orders",
+      "record-expenses"
+    ]
+  },
+  {
+    "slug": "tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "¿Dónde está el reporte de impuestos y cómo se lee?",
+    "keywords": [
+      "reporte de impuestos",
+      "IVA",
+      "VAT",
+      "GST",
+      "impuesto sobre las ventas",
+      "reportes",
+      "impuesto",
+      "ventas e impuesto por tasa",
+      "por método de pago"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Abre Reportes y toca el mosaico Impuesto para ver Reporte de impuestos, que lista las ventas y el impuesto por tasa del periodo que muestra Reportes. Copia estas cifras en una declaración de VAT, GST o impuesto sobre las ventas, o envíalas a un contador. Los cambios posteriores en los impuestos nunca alteran las cifras guardadas de los documentos."
+      },
+      {
+        "type": "h2",
+        "text": "Abrir el reporte de impuestos"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abre Reportes y elige el periodo, por ejemplo Este mes o un rango personalizado.",
+          "Busca el mosaico Impuesto en la segunda fila, después de Descuentos totales.",
+          "Toca el mosaico Impuesto o Reporte de impuestos ›."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Reportes en Este mes con el mosaico Impuesto y su pie Reporte de impuestos ›"
+      },
+      {
+        "type": "p",
+        "text": "Este mosaico es la única entrada. Su subtítulo nombra los impuestos cobrados en el periodo, del monto mayor al menor: dos por su nombre; tres o más como, por ejemplo, 3 impuestos (incluye PST 7%). El encabezado muestra el periodo de Reportes (Este mes · 1 nov – 30 nov) sin selector de periodo ni acceso directo al mes pasado, porque los periodos de declaración varían (en Taiwán son dos meses, en Australia un trimestre, en Japón un año)."
+      },
+      {
+        "type": "p",
+        "text": "Las tiendas sin impuestos y sin ventas con impuesto en el periodo no ven el mosaico Impuesto; los periodos sin documentos muestran el estado vacío de Reportes. Los impuestos eliminados conservan el mosaico en los periodos que tienen ventas con ellos."
+      },
+      {
+        "type": "note",
+        "text": "Todos los planes, incluido Lite y la prueba, tienen el mosaico, el reporte y todas las exportaciones. El personal necesita el permiso de Reportes; los roles que necesitan aprobación ven el aviso de aprobación hasta que un gerente apruebe."
+      },
+      {
+        "type": "h2",
+        "text": "Leer el reporte"
+      },
+      {
+        "type": "p",
+        "text": "Las tiendas de Australia, Nueva Zelanda, Singapur y el Reino Unido ven primero Casillas de la declaración."
+      },
+      {
+        "type": "p",
+        "text": "Ventas e impuesto por tasa lista una fila por tasa: primero la más alta, luego la de tasa cero 0% y al final Sin impuesto (productos sin impuesto). Las columnas son Ventas, Devoluciones y anulaciones y Neto, cada una con Antes de impuestos e Impuesto; las filas de tasa cero y Sin impuesto no tienen línea de impuesto. Cada impuesto de la tienda tiene una fila aunque no tenga ventas. Si renombras un impuesto, sigue una sola fila; si cambias una tasa, se agrega una."
+      },
+      {
+        "type": "p",
+        "text": "Totales muestra Ventas antes de impuestos, Impuesto y Ventas con impuesto. Con dos o más impuestos, una nota indica que una venta puede tener varios impuestos, así que las ventas de cada fila no se pueden sumar; Ventas antes de impuestos cuenta cada venta una sola vez. En un trimestre del Reino Unido, VAT 20% podría mostrar Antes de impuestos £1,000 e Impuesto £200, Tasa cero 0% £300 y Sin impuesto £50: Totales da Ventas antes de impuestos £1,350, Impuesto £200 y Ventas con impuesto £1,550."
+      },
+      {
+        "type": "shot",
+        "name": "tax-report",
+        "alt": "Reporte de impuestos con las filas de Ventas e impuesto por tasa y Totales debajo"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Por método de pago lista los pagos de estos documentos hasta el cierre del periodo, los montos sin pagar como Cuentas por cobrar y el redondeo de efectivo en una línea Incluye redondeo de efectivo … dentro de la fila de efectivo.",
+          "No se cuentan como ventas aparece solo para los anticipos retenidos, y lista Anticipos retenidos con un subtítulo para consultar con un contador cómo declararlos; no se suman ni a las ventas ni al impuesto.",
+          "Las tiendas con Acreditar impuesto de facturas activado, o con impuesto acreditable registrado en el periodo, también ven Impuesto acreditable en órdenes de compra e Impuesto acreditable en gastos."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "En qué día se cuenta cada documento"
+      },
+      {
+        "type": "p",
+        "text": "Toca el ⓘ junto a Ventas e impuesto por tasa:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Una anulación se cuenta en el periodo en que se anuló, como monto negativo, así que un periodo ya declarado nunca cambia. En cambio, Reportes la quita del periodo de la venta.",
+          "Una devolución se cuenta en su propia fecha. En un cambio, los artículos nuevos cuentan como ventas y los devueltos como devoluciones.",
+          "Una preventa se cuenta el día del retiro; una venta a cuenta, el día de la venta."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Una venta del 30 de octubre anulada el 2 de noviembre sigue en las Ventas de octubre y aparece como monto negativo en Devoluciones y anulaciones de noviembre. Liquidar una venta a cuenta más tarde no la mueve."
+      },
+      {
+        "type": "h2",
+        "text": "Impuesto cobrado y totales de Reportes"
+      },
+      {
+        "type": "p",
+        "text": "El mosaico Impuesto es igual al total de Impuesto de Reporte de impuestos. Difiere de la fila Impuesto de De los ingresos por ventas a la utilidad bruta, en Reportes, solo en anulaciones de periodos distintos, porque Reportes quita una venta anulada de su periodo original."
+      },
+      {
+        "type": "note",
+        "text": "Reporte de impuestos muestra el impuesto cobrado en ventas, nunca el impuesto por pagar (impuesto de salida menos impuesto acreditable), porque no todos los países lo calculan así, como el método simplificado de Japón o el Flat Rate Scheme del Reino Unido."
+      }
+    ],
+    "related": [
+      "tax-return-boxes",
+      "input-tax",
+      "export-tax-report",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "tax-return-boxes",
+    "category": "reports",
+    "since": "3.6",
+    "question": "¿Qué cifras van en las casillas de mi declaración de BAS, GST o VAT?",
+    "keywords": [
+      "casillas de la declaración",
+      "reporte de impuestos",
+      "reportes",
+      "BAS",
+      "BAS simplificado",
+      "GST101A",
+      "GST F5",
+      "declaración de VAT",
+      "acreditar impuesto de facturas"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Para las tiendas de Australia, Nueva Zelanda, Singapur o el Reino Unido, Reporte de impuestos abre con Casillas de la declaración, que muestra cada casilla y el monto del mismo reporte. Cubre Australia BAS · BAS simplificado, Nueva Zelanda GST101A, Singapur GST F5 y Declaración de VAT del Reino Unido en todos los planes."
+      },
+      {
+        "type": "h2",
+        "text": "Abrir Casillas de la declaración"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abre Reportes.",
+          "Toca el mosaico Impuesto para abrir Reporte de impuestos."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Casillas de la declaración es la primera tarjeta, arriba de Ventas e impuesto por tasa, y su subtítulo nombra la declaración. Todos los montos salen del mismo reporte, centavos incluidos, y no se recalcula nada. El Reporte en PDF exportado abre con la misma tarjeta. Las tiendas configuradas antes de que la app registrara el país cuentan según la moneda (AUD, NZD, SGD o GBP); las demás tiendas no tienen la tarjeta Casillas de la declaración."
+      },
+      {
+        "type": "shot",
+        "name": "return-boxes",
+        "alt": "Tarjeta Casillas de la declaración en la parte superior de Reporte de impuestos, con las casillas 1, 4, 6 y 7 de la declaración de VAT del Reino Unido"
+      },
+      {
+        "type": "h2",
+        "text": "Australia BAS · BAS simplificado"
+      },
+      {
+        "type": "list",
+        "items": [
+          "G1 «Total sales» (ventas totales): Ventas con GST, libres de GST y sin impuesto incluidas; responde Sí a «¿El monto de G1 incluye GST?»",
+          "1A «GST on sales» (GST sobre las ventas): Impuesto sobre las ventas",
+          "1B «GST on purchases» (GST sobre las compras): Impuesto a acreditar en órdenes de compra y gastos"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "La ATO pide dólares enteros: en el BAS omite los centavos, nunca redondees hacia arriba."
+      },
+      {
+        "type": "h2",
+        "text": "Nueva Zelanda GST101A"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Casilla 5 «Total sales and income» (ventas e ingresos totales): Ventas con GST, incluidas las de tasa cero; las ventas sin impuesto no se incluyen",
+          "Casilla 6 «Zero-rated supplies» (suministros de tasa cero): Ventas de tasa cero",
+          "Casilla 11 «Total purchases and expenses» (compras y gastos totales): Órdenes de compra y gastos con GST, GST incluido; no se incluyen las compras sin impuesto acreditable ni las de tasa cero"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "myIR calcula la casilla 8 y la casilla 12 como 3/23, lo que puede diferir unos centavos del impuesto del reporte."
+      },
+      {
+        "type": "h2",
+        "text": "Singapur GST F5"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Casilla 1 «Total value of standard-rated supplies» (valor total de suministros con tasa estándar): Ventas con impuesto, antes de impuestos",
+          "Casilla 2 «Total value of zero-rated supplies» (valor total de suministros de tasa cero): Ventas de tasa cero; solo las exportaciones y los servicios internacionales pueden tener tasa cero",
+          "Casilla 5 «Total value of taxable purchases» (valor total de compras gravables): Órdenes de compra y gastos con GST o de tasa cero, antes de impuestos; no se incluyen las compras sin impuesto acreditable",
+          "Casilla 6 «Output tax due» (impuesto de salida por pagar): Impuesto sobre las ventas",
+          "Casilla 7 «Input tax and refunds claimed» (impuesto acreditable y reembolsos solicitados): Impuesto a acreditar en órdenes de compra y gastos"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Declaración de VAT del Reino Unido"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Casilla 1 «VAT due on sales and other outputs» (VAT por pagar sobre ventas y otras salidas): Impuesto sobre las ventas",
+          "Casilla 4 «VAT reclaimed on purchases and other inputs» (VAT recuperado en compras y otras entradas): Impuesto a acreditar en órdenes de compra y gastos",
+          "Casilla 6 «Total value of sales and all other outputs excluding any VAT» (valor total de ventas y demás salidas sin VAT): Ventas antes de impuestos; incluye las de tasa cero, las exentas y las sin impuesto",
+          "Casilla 7 «Total value of purchases and all other inputs excluding any VAT» (valor total de compras y demás entradas sin VAT): Órdenes de compra y gastos antes de impuestos, incluidas las compras sin impuesto acreditable; resta los sueldos y el impuesto sobre propiedades comerciales (business rates) que hayas registrado"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Para la contabilidad estándar de VAT. En el Flat Rate Scheme (régimen de tarifa plana), la casilla 1 y la casilla 6 se calculan de otra forma. En el Reino Unido, el VAT de un anticipo se debe al recibirlo; DingPOS declara una preventa cuando se retira."
+      },
+      {
+        "type": "p",
+        "text": "Ejemplo de un trimestre en el Reino Unido: £1,000 de ventas con VAT 20% antes de impuestos (impuesto £200), £300 de tasa cero, £50 sin impuesto, órdenes de compra de £400 más £80 de VAT y gastos de £250 sin impuesto acreditable dan casilla 1 £200, casilla 4 £80, casilla 6 £1,350 y casilla 7 £650."
+      },
+      {
+        "type": "h2",
+        "text": "Casillas en blanco y acceso del personal"
+      },
+      {
+        "type": "p",
+        "text": "Se omiten las casillas que calcula la oficina de impuestos y los montos adeudados (casillas 3 y 5 del Reino Unido; casilla 3 de Singapur, suministros exentos). En Nueva Zelanda y Singapur, las ventas sin impuesto no están en ninguna casilla; consulta con tu contador si debían llevar impuesto."
+      },
+      {
+        "type": "p",
+        "text": "Las casillas de impuesto acreditable (1B de AU, 11 de NZ, 5 y 7 de SG, 4 y 7 de UK) requieren Acreditar impuesto de facturas; de lo contrario muestran — y Sin impuesto acreditable registrado, nunca 0. La casilla 7 del Reino Unido necesita tanto Impuesto acreditable en órdenes de compra como Impuesto acreditable en gastos; solo con órdenes de compra se llena la casilla 4 y la casilla 7 queda en —."
+      },
+      {
+        "type": "p",
+        "text": "El personal sin el permiso Resultados y gastos o Costos y utilidad no ve las casillas que suman ambas tarjetas hasta que un gerente apruebe mediante Pedir aprobación a un gerente."
+      },
+      {
+        "type": "note",
+        "text": "Calculado con las fechas de venta y de factura; DingPOS no registra las fechas de pago. Si declaras con base en efectivo o en pagos, ajusta estas cifras."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "input-tax",
+      "export-tax-report"
     ]
   },
   {
@@ -1606,11 +2454,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ve a Ajustes → Programa de lealtad y define dos reglas: cuántos puntos se ganan (Y) por cada monto gastado (X), y cuánto descuento (M) se obtiene al canjear N puntos (con un tope de canje por pedido, opcional). También puedes dar puntos de bienvenida a los nuevos miembros de forma automática."
+        "text": "Ve a Ajustes → Programa de lealtad y define dos reglas: cuántos puntos se ganan (Y) por cada monto gastado (X), y cuánto descuento (M) se obtiene al canjear N puntos (con un tope de canje por pedido, opcional). También puedes dar puntos de bienvenida a los nuevos miembros de forma automática. Las tiendas nuevas empiezan con los puntos desactivados: activa Activar programa de lealtad y completa una regla. Si el interruptor está activado y no hay ninguna regla, aparece el aviso «Aún no hay una regla para ganar o canjear puntos, así que las ventas no ganarán ni canjearán puntos.»"
       },
       {
         "type": "p",
-        "text": "Asocia al miembro a la venta, en el carrito o en la pantalla de cobro, y los puntos se acumulan solos; para canjearlos, ingresa los puntos que quieres usar. Al anular un pedido se descuentan los puntos que ganó y se devuelven los puntos que se canjearon."
+        "text": "Asocia al miembro a la venta, en el carrito o en la pantalla de cobro, y los puntos se acumulan solos; para canjearlos, ingresa los puntos que quieres usar. La pantalla de éxito muestra los puntos ganados y el nuevo saldo, por ejemplo «+22 pts · 122 pts en total»; en una venta a cuenta o en una preventa que aún no se paga por completo, los puntos se suman solo cuando entra el dinero, y aparece «se suman al liquidar» o «se suman al pagar en el retiro». Al anular un pedido se descuentan los puntos que ganó y se devuelven los puntos que se canjearon."
       },
       {
         "type": "p",
@@ -1994,7 +2842,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Acciones (ajuste manual de stock, ajuste manual de puntos, administración de productos, aplicar un descuento que supere el tope de descuento): una aprobación cubre esa sola acción.",
-          "Vistas (costo y utilidad, Panel, Resultados y gastos, Ajustes, respaldo y restauración): una aprobación desbloquea hasta que cambie el operador o la app pase a segundo plano.",
+          "Vistas (costo y utilidad, Reportes, Resultados y gastos, Ajustes, respaldo y restauración): una aprobación desbloquea hasta que cambie el operador o la app pase a segundo plano.",
           "El tope de descuento aplica a los descuentos manuales y se revisa una sola vez al cobrar; las promociones automáticas y el canje de puntos no cuentan para el tope."
         ]
       },
@@ -2134,13 +2982,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Los tres planes incluyen todas las funciones de cobro, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (con reportes avanzados y resultados mensuales incluidos desde la v3.4) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
+        "text": "Los tres planes incluyen todas las funciones de cobro, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (con reportes avanzados y resultados mensuales incluidos desde la v3.4, y el reporte de impuestos y su exportación desde la v3.6) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
       },
       {
         "type": "list",
         "items": [
           "Lite: para una persona que atiende un puesto y necesita cobro y productos.",
-          "Standard: suma promociones, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y tasas de comisión de pago.",
+          "Standard: suma promociones, descuentos predefinidos, puntos de lealtad y niveles de miembro, control de stock, compras, ventas a cuenta, preventas y tasas de comisión de pago.",
           "Pro: suma cuentas y permisos del personal, aprobación de gerente, registro de actividad y registros de restauración, para tiendas con personal."
         ]
       },
@@ -2347,12 +3195,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Los regalos y complementos nunca modifican el carrito por sí solos. Cuando se cumplen las condiciones, aparece un aviso de sugerencia en la pantalla Caja y el carrito cambia solo cuando el cajero toca Elegir regalo o Elegir complemento. Es a propósito: los regalos implican stock físico, y alguien debe confirmar que hay existencias y que el cliente lo quiere."
+        "text": "Los regalos y complementos nunca modifican el carrito por sí solos. Cuando se cumplen las condiciones, aparece un aviso de sugerencia en la pantalla Caja y el carrito cambia solo cuando el cajero toca el botón de regalo o el botón + del aviso (Elegir regalo o Elegir complemento). Es a propósito: los regalos implican stock físico, y alguien debe confirmar que hay existencias y que el cliente lo quiere."
       },
       {
         "type": "list",
         "items": [
-          "Después de tocar Rechazar, la misma sugerencia no vuelve a aparecer en este carrito; con un carrito nuevo o vaciado se vuelve a ofrecer.",
+          "Después de tocar la ✕ del aviso (Rechazar), la misma sugerencia no vuelve a aparecer en este carrito; con un carrito nuevo o vaciado se vuelve a ofrecer.",
+          "Si el carrito deja de cumplir las condiciones (por ejemplo, se quita el artículo que activó un regalo), el regalo o complemento se quita automáticamente con un mensaje en la parte superior, y no cuenta como un uso (desde la v3.6).",
           "Desde la v3.4, las ofertas que siguen pendientes no impiden cobrar: una línea amarilla debajo del botón de pago, como «1 oferta pendiente no se aplicará», indica cuántas quedan fuera (tócala para ver cuáles), y el pedido se registra sin ellas. Para que el cobro espere como antes, activa Resolver ofertas antes de cobrar en Ajustes → Preferencias del dispositivo; se aplica solo a este iPad.",
           "Los artículos de regalo y de complemento no pueden recibir más descuentos de otras promociones de descuento, y no cuentan para los mínimos de otras promociones."
         ]
@@ -2546,7 +3395,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Desde la v3.4, Resultados muestra la utilidad neta de cada mes después del costo de productos, las comisiones y los gastos; consulta «¿Cómo veo cuánto gané realmente cada mes?». Todavía no hay un reporte de cierre para exportar o imprimir, pero en la app ya tienes todo lo necesario para conciliar:"
+        "text": "Desde la v3.4, Resultados muestra la utilidad neta de cada mes después del costo de productos, las comisiones y los gastos; consulta «¿Cómo veo cuánto gané realmente cada mes?». Desde la v3.6, el reporte de impuestos exporta un periodo (por ejemplo, Este mes) como CSV, libro de Excel o reporte en PDF para tu contador, con las ventas, los impuestos, el monto recibido por cada método de pago y las cuentas por cobrar. Resultados y los demás reportes todavía no se pueden exportar, pero en la app ya tienes todo lo necesario para conciliar:"
       },
       {
         "type": "list",
@@ -2558,7 +3407,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si necesitas un reporte de cierre mensual que puedas exportar o imprimir, escríbenos con los campos que necesitas: priorizamos el desarrollo según el número de solicitudes."
+        "text": "Si necesitas un reporte de cierre mensual que puedas exportar o imprimir, más allá de lo que cubre el reporte de impuestos, escríbenos con los campos que necesitas: priorizamos el desarrollo según el número de solicitudes."
       }
     ],
     "related": [
