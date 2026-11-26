@@ -28,7 +28,7 @@ const INLINE_MARKUP = /\*\*|__|`|\]\(|<\/?[a-z]/i;
 const LIST_ITEM = /^- /;
 const STEP_ITEM = /^\d+\. /;
 
-function frontmatterValue(raw, at) {
+export function frontmatterValue(raw, at) {
   if (!raw.startsWith('"')) return raw;
   try {
     return JSON.parse(raw);
@@ -62,7 +62,7 @@ function itemsOf(lines, pattern, kind, at) {
   });
 }
 
-function parseBlock(lines, at) {
+export function parseBlock(lines, at) {
   const [first] = lines;
   if (LIST_ITEM.test(first)) return { type: "list", items: itemsOf(lines, LIST_ITEM, "list", at) };
   if (STEP_ITEM.test(first)) return { type: "steps", items: itemsOf(lines, STEP_ITEM, "steps", at) };
@@ -73,30 +73,45 @@ function parseBlock(lines, at) {
   return { type: "p", text: first.trim() };
 }
 
-export function parseGuideMarkdown(source) {
+/**
+ * A draft split into its frontmatter lines and its blank-line-separated body
+ * chunks; `start` values are 1-based line numbers. scripts/faq-md.mjs reads
+ * FAQ drafts through the same split.
+ */
+export function splitDraft(source) {
   const lines = source.replace(/\r\n/g, "\n").split("\n");
   if (lines[0] !== "---") throw new Error("line 1: the draft must start with --- frontmatter");
   const end = lines.indexOf("---", 1);
   if (end < 0) throw new Error("frontmatter: no closing ---");
-  const meta = parseFrontmatter(lines.slice(1, end), 2);
 
-  const content = [];
-  let chunk = [];
-  let chunkStart = 0;
-  const flush = () => {
-    if (chunk.length) content.push(parseBlock(chunk, `line ${chunkStart}`));
-    chunk = [];
-  };
+  const chunks = [];
+  let chunk = null;
   lines.slice(end + 1).forEach((line, i) => {
-    const lineNo = end + 2 + i;
-    if (!line.trim()) return flush();
-    if (INLINE_MARKUP.test(line)) throw new Error(`line ${lineNo}: inline Markdown or HTML is not supported in guides`);
-    if (!chunk.length) chunkStart = lineNo;
-    chunk.push(line.trim());
+    if (!line.trim()) {
+      chunk = null;
+      return;
+    }
+    if (!chunk) chunks.push((chunk = { start: end + 2 + i, lines: [] }));
+    chunk.lines.push(line.trim());
   });
-  flush();
-  if (!content.length) throw new Error("the draft has no body");
+  if (!chunks.length) throw new Error("the draft has no body");
+  return { meta: lines.slice(1, end), metaStart: 2, chunks };
+}
 
+/** Rejects inline Markdown or HTML on any line of a chunk; drafts are plain text. */
+export function assertPlainText(chunk) {
+  chunk.lines.forEach((line, i) => {
+    if (INLINE_MARKUP.test(line)) throw new Error(`line ${chunk.start + i}: inline Markdown or HTML is not supported`);
+  });
+}
+
+export function parseGuideMarkdown(source) {
+  const { meta: metaLines, metaStart, chunks } = splitDraft(source);
+  const meta = parseFrontmatter(metaLines, metaStart);
+  const content = chunks.map((chunk) => {
+    assertPlainText(chunk);
+    return parseBlock(chunk.lines, `line ${chunk.start}`);
+  });
   return { slug: meta.slug, title: meta.title, summary: meta.summary, content, related: meta.related };
 }
 
