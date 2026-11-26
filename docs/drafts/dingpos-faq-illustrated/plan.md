@@ -119,3 +119,8 @@
 - Choice: Phase 4（T018–T021）的 `npm run build` 只接受一種失敗：`slug "<new>" missing from <code> pack`，`<code>` 是翻譯語言。build 要求每個 pack 的 slug 一致，四篇新文章要到 Phase 5 的 `npm run l10n -- dingpos apply`（T023–T025）和 `npm run zh-hans`（T022）才會進到其他語言，所以 tasks.md 寫的「Phase 4 build 就會過」做不到。T018–T020 用 `npm run build 2>&1 | grep ✗ | grep -v "missing from"` 為空來驗；T021 的頁面檢查用 `vite dev`（SPA 路由，不需要 copy-spa-pages 寫出每個路由），完整的 build 與 prerender 留給 T029。
 - Alternatives: 先在翻譯 pack 放 en 內容佔位（違反「翻譯檔只由 `apply` 產生」）；把四篇新文章延到 Phase 5 才寫入 pack（en / zh-Hant 的事實查核就無法在網頁上看）。
 - Satisfies: REQ-008, REQ-011
+
+### DEC-013 Phase 5 進行中的 gate 例外
+- Choice: DEC-012 的例外延伸到 Phase 5 完成前：build 另外允許 `shot-sizes.js does not record for <code>`（該語言的截圖等 T015 build 完才有），`npm test` 允許 #56「every shipped translated language … is current with en」（en 已改、翻譯語言要到 T023–T025 的 `l10n sync/apply` 才追上）。T022 只看 zh-Hans 的測試（過期檢查）通過。T029 的 full gate 不留任何例外。
+- Alternatives: 先做完 T015 與 l10n 才跑 zh-Hans（截圖要再跑約 3 小時，zh-Hans 審查卻與截圖無關）。
+- Satisfies: REQ-010

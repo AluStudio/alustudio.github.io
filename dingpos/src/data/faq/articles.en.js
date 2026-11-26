@@ -34,7 +34,7 @@ export const articles = [
         ],
       },
       { type: "p", text: "Tap Continue and you'll see “Ding! Your store is ready.” DingPOS also sets up two payment methods, Cash and Credit Card. Then add your products under Products and start ringing up sales." },
-      { type: "note", text: "The currency can't be changed after setup; taxes and the tax mode can both be changed later in Settings → Store Info. In the United States, Canada, Brazil, and Micronesia the rate depends on the state, province, or city, so the rate field starts empty and you enter the rate you charge to continue. A rate must be above 0: a store that charges no tax deletes the row. The 175-country list and the currency choice arrived in v3.2; earlier versions offered 15 countries." },
+      { type: "note", text: "The currency can't be changed after setup; taxes and the tax mode can both be changed later in Settings → Store Info. In the United States, Canada, Brazil, and Micronesia the rate depends on the state, province, or city, so the rate field starts empty and you enter the rate you charge to continue. A rate must be above 0: a store that charges no tax deletes the row. In Germany, France, Italy, and other European countries the list also includes the reduced rates common in local retail, under the local tax name, such as “MwSt. 19%” and “MwSt. 7%” in Germany; reduced rates are not applied to new products by default, so turn them on per product. The 175-country list and the currency choice arrived in v3.2; earlier versions offered 15 countries." },
     ],
     related: ["change-currency", "free-trial", "product-variants"],
   },

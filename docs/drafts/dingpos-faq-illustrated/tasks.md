@@ -53,7 +53,7 @@ Checkpoint: en + zh-Hant content complete. Commit.
 
 Independent Test: `npm test`, `npm run l10n -- check`, `cd dingpos && npm run build` and local prerender all pass.
 
-- [ ] T022 [REQ-010] `npm run zh-hans`; send `.logs/zh-hans-review-dingpos.json` to `zh-hans-reviewer`; fix per layer; regenerate (seo-aeo.md §簡中由繁中產生). Verify: zh-Hans part of `npm test` passes
+- [x] T022 [REQ-010] `npm run zh-hans`; send `.logs/zh-hans-review-dingpos.json` to `zh-hans-reviewer`; fix per layer; regenerate (seo-aeo.md §簡中由繁中產生). Verify: zh-Hans part of `npm test` passes
 - [ ] T023 [REQ-010] For the first 10 translated languages in registry order: `npm run l10n -- dingpos sync <code>`, `l10n-translator` per packet (parallel), `apply` until `rejected 0`. Verify: `npm run l10n -- check` reports nothing for these codes
 - [ ] T024 [REQ-010] Same for the next 10 translated languages. Verify: same
 - [ ] T025 [REQ-010] Same for the remaining translated languages. Verify: `npm run l10n -- check` → clean for all
