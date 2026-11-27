@@ -1334,10 +1334,12 @@ export const articles = [
       "raportin jakso",
       "tämä viikko",
       "tämä kuukausi",
-      "tämä vuosi",
       "mukautettu jakso",
       "myydyimmät tuotteet",
-      "vertaa jaksoja"
+      "hitaasti liikkuvat tuotteet",
+      "viikonpäivä × tunti",
+      "lämpökartta",
+      "varaston arvo"
     ],
     "content": [
       {
@@ -1367,7 +1369,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Vero-ruutu ja veroraportti seuraavat myös valittua jaksoa, joten ilmoitusjakson asettaminen Mukautettu-vaihtoehdolla päivittää molemmat; lisätietoja on veroraporttia käsittelevässä artikkelissa. Jaksopalkin oikeassa reunassa Vertaa-painike näyttää valitun jakson sitä edeltävän jakson tai viime vuoden vastaavan jakson rinnalla; lisätietoja on laajennettuja raportteja käsittelevässä artikkelissa."
+        "text": "Vero-ruutu ja veroraportti seuraavat myös valittua jaksoa, joten ilmoitusjakson asettaminen Mukautettu-vaihtoehdolla päivittää molemmat; lisätietoja on veroraporttia käsittelevässä artikkelissa. Jaksopalkin oikeassa reunassa Vertaa-painike näyttää valitun jakson sitä edeltävän jakson tai viime vuoden vastaavan jakson rinnalla; lisätietoja on jaksojen vertailua käsittelevässä artikkelissa."
       },
       {
         "type": "h2",
@@ -1402,144 +1404,35 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Myynnin kehityskaavion oikean yläkulman valikko vaihtaa kaavion näyttämään liikevaihdon, tilaukset, tilauksen keskiarvon tai palvellut asiakkaat. Kaaviossa on myös vaihtaja Kehitys ja Viikonpäivä × tunti; tästä näkymästä kerrotaan laajennettuja raportteja käsittelevässä artikkelissa. Sen vieressä Omakustannus ja myyntikate -kaavio pinoaa kunkin jakson tuotteiden omakustannuksen ja myyntikatteen yhteen pylvääseen. Yksittäinen päivä esitetään tunneittain; pidemmillä jaksoilla tiedot ryhmitellään päiviin, viikkoihin, kuukausiin tai vuosiin jakson pituuden mukaan."
+        "text": "Myynnin kehityskaavion oikean yläkulman valikko vaihtaa kaavion näyttämään liikevaihdon, tilaukset, tilauksen keskiarvon tai palvellut asiakkaat. Sen vieressä Omakustannus ja myyntikate -kaavio pinoaa kunkin jakson tuotteiden omakustannuksen ja myyntikatteen yhteen pylvääseen. Yksittäinen päivä esitetään tunneittain; pidemmillä jaksoilla tiedot ryhmitellään päiviin, viikkoihin, kuukausiin tai vuosiin jakson pituuden mukaan."
       },
       {
         "type": "p",
-        "text": "Paina pitkään myynnin kehityskaaviota, Omakustannus ja myyntikate -kaaviota tai Maksutavat-korttia, niin näet yhden jakson lukemakortin. Kun Vertaa on päällä, kehityskaavion lukemakortti näyttää tämän jakson luvun ja vertailujakson luvun rinnakkain. Siirry vetämällä vasemmalle tai oikealle; jos pyyhkäiset kaaviota ylös tai alas, sivu vierii tavalliseen tapaan."
+        "text": "Paina pitkään myynnin kehityskaaviota, Omakustannus ja myyntikate -kaaviota tai Maksutavat-korttia, niin näet yhden aikavälin lukemakortin. Kun Vertaa on päällä, kehityskaavion lukemakortti näyttää tämän jakson luvun ja vertailujakson luvun rinnakkain. Siirry aikavälistä toiseen vetämällä vasemmalle tai oikealle; jos pyyhkäiset kaaviota ylös tai alas, sivu vierii tavalliseen tapaan."
+      },
+      {
+        "type": "p",
+        "text": "Vaihda kehityskaavion otsikossa Kehitys-näkymästä Viikonpäivä × tunti -näkymään, niin näet seitsemän päivän ja 24 tunnin lämpökartan. Mitä tummempi solu on, sitä enemmän olet myynyt kyseisen tunnin aikana, ja lämpökartan voi vaihtaa näyttämään joko liikevaihdon tai tilaukset."
       },
       {
         "type": "p",
         "text": "Tuotteiden paremmuusjärjestys -kortti listaa valitun jakson viisi parasta tuotetta. Napauta korttia tai Näytä kaikki, niin näet kaikki jaksolla myydyt tuotteet myydyn määrän mukaan järjestettynä palautusten jälkeen. Tuotteella, jolla on variantteja, on yksi rivi kutakin varianttia kohti."
       },
       {
-        "type": "note",
-        "text": "Kalenterijaksot tulivat versiossa 2.4; aiemmissa versioissa oli liukuvia jaksoja (Tänään / 7 päivää / 30 päivää / Koko aika). Jos näet vielä ne, päivitä DingPOS App Storesta."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked",
-      "tax-report"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "Mitä laajennetut raportit näyttävät?",
-    "keywords": [
-      "laajennetut raportit",
-      "tilastot",
-      "vertaa",
-      "jaksojen vertailu",
-      "viikonpäivä × tunti",
-      "lämpökartta",
-      "hitaasti liikkuvat tuotteet",
-      "muutokset",
-      "osuus luokittain",
-      "varaston arvo",
-      "uusintaostoprosentti",
-      "pisteet"
-    ],
-    "content": [
-      {
         "type": "p",
-        "text": "Laajennetut raportit eivät ole erillinen näkymä: ne ovat Tilastot-välilehdellä ja seuraavat yläreunasta valitsemaasi jaksoa. Ne lisäävät jaksojen vertailut, viikonpäivän ja tunnin lämpökartan, Hitaasti liikkuvat tuotteet, Muutokset, jäsenten uusintaostoprosentin, Osuus luokittain ja Nykytilanne-osion varastolle ja pisteille. Kaikki ovat käytössä jokaisessa paketissa, ja ne pysyvät käytössä myös kokeilun päätyttyä."
+        "text": "Vaihda Tuotteiden paremmuusjärjestys -kortin otsikko näkymään Hitaasti liikkuvat tuotteet, niin tuotteet listataan vähiten myydystä eniten myytyyn. Jokaisella rivillä näkyvät tuotteen nykyinen varasto ja viimeinen myyntipäivä. Tuotteet, joita ei ole koskaan myyty, on merkitty tekstillä Ei koskaan myyty, ja oletuksena näytetään vain varastossa olevat tuotteet. Muutokset-otsikko listaa tuotteet, joiden liikevaihto kasvoi tai laski eniten vertailujaksoon nähden; lisätietoja on jaksojen vertailua käsittelevässä artikkelissa."
       },
       {
         "type": "h2",
-        "text": "Vertaa"
+        "text": "Osuus luokittain, uusintaostoprosentti ja Nykytilanne"
       },
       {
         "type": "p",
-        "text": "Vertaa on Tilastot-välilehden jaksopalkin oikeassa reunassa, ja se vertaa valittua jaksoa aiempaan jaksoon."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Avaa Tilastot sivupalkista.",
-          "Valitse jakso yläreunasta.",
-          "Napauta jaksopalkin oikeassa reunassa Vertaa.",
-          "Valitse vertailu valikosta."
-        ]
+        "text": "Osuus luokittain -kortti listaa kunkin luokan liikevaihdon ja osuuden suurimmasta pienimpään tuotteen nykyisen luokan mukaan. Tuotteet, joilla ei ole luokkaa, näkyvät kohdassa Ei luokkaa, ja rivit summautuvat täsmälleen Liikevaihdoksi."
       },
       {
         "type": "p",
-        "text": "Vaihtoehdot riippuvat valitsemastasi jaksosta:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Ei mitään: vertailu on pois päältä.",
-          "Viime viikko: vertaa yksittäistä päivää viime viikon samaan päivään tai tätä viikkoa viime viikkoon.",
-          "Viime kuu: vertaa tätä kuukautta viime kuukauteen.",
-          "Viime vuosi: vertaa tätä vuotta viime vuoteen tai valittua jaksoa viime vuoden vastaavaan jaksoon.",
-          "Edellinen: vertaa mukautettua jaksoa yhtä pitkään sitä edeltävään jaksoon."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Kun vertailu on käytössä, Tilastot lisää muutoksen ja vertailujakson luvun jokaiseen ruutuun paitsi Vero-, Liikevoitto- ja Tuotteet ilman omakustannetta -ruutuun. Liikevaihto, Saapunut maksu, Myyntikate, Tilaukset, Tilauksen keskiarvo, Alennukset yhteensä ja Palvellut asiakkaat näyttävät kukin vertailurivin, esimerkiksi ”▼ 3 % vrt. viime kuu”."
-      },
-      {
-        "type": "shot",
-        "name": "advanced-reports",
-        "alt": "Tilastot-välilehti jaksolla Tämä viikko ja vertailuna Viime viikko: näkyvissä ovat vertailupalkki ja ensimmäinen ruuturivi, jossa kunkin ruudun alla ovat muutos ja vertailujakson luku",
-        "caption": "Napauta mitä tahansa ruudun alla olevaa vertailuriviä, niin Jaksojen vertailu aukeaa ja näet molempien jaksojen luvut."
-      },
-      {
-        "type": "p",
-        "text": "Alennukset yhteensä -ruudun muutos on aina harmaa, koska suurempi alennus ei ole sellaisenaan hyvä eikä huono. Napauta mitä tahansa vertailuriviä, niin avautuu Jaksojen vertailu, jossa on molempien jaksojen luvut. Kehityskaavioon tulee vaaleampi viiva vertailujaksolle. Kun jakso on vielä käynnissä, vertailujakso katkaistaan samaan hetkeen."
-      },
-      {
-        "type": "h2",
-        "text": "Viikonpäivä × tunti"
-      },
-      {
-        "type": "p",
-        "text": "Vaihda kehityskaavion otsikosta näkymä Kehitys näkymäksi Viikonpäivä × tunti, niin saat seitsemän päivän ja 24 tunnin lämpökartan. Mitä tummempi ruutu on, sitä enemmän myit kyseisenä tuntina. Lämpökartan voi vaihtaa näyttämään liikevaihdon tai tilaukset. Kun Vertaa-valinnalla on otettu käyttöön vertailu, lämpökartta näyttää myös, mitkä tunnit kasvoivat ja mitkä supistuivat."
-      },
-      {
-        "type": "h2",
-        "text": "Hitaasti liikkuvat tuotteet"
-      },
-      {
-        "type": "p",
-        "text": "Vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Hitaasti liikkuvat tuotteet, niin tuotteet listataan vähiten myydyistä eniten myytyihin. Jokaisella rivillä näkyvät tuotteen nykyinen varasto ja viimeinen myyntipäivä. Tuotteet, joita ei ole koskaan myyty, merkitään tekstillä Ei koskaan myyty, ja tuotteella, jolla on variantteja, on yksi rivi kutakin varianttia kohti. Oletuksena näytetään vain varastossa olevat tuotteet."
-      },
-      {
-        "type": "h2",
-        "text": "Muutokset"
-      },
-      {
-        "type": "p",
-        "text": "Vaihda Tuotteiden paremmuusjärjestys -kortin otsikoksi Muutokset, niin näet 3 tuotetta, joiden liikevaihto nousi eniten, ja 3, joiden liikevaihto laski eniten vertailujaksoon verrattuna. Jokaisella rivillä näkyvät molempien jaksojen liikevaihto ja ero, ja jokaista varianttia verrataan itseensä."
-      },
-      {
-        "type": "p",
-        "text": "Valitse ensin jakso kohdasta Vertaa. Kun Vertaa on Ei mitään tai jakso on Koko aika, kortti kehottaa valitsemaan vertailujakson. Napauta korttia tai Näytä kaikki, niin avautuu koko Tuotteiden muutokset -luettelo, joka on jaettu osioihin Nousussa ja Laskussa."
-      },
-      {
-        "type": "h2",
-        "text": "Uusintaostoprosentti"
-      },
-      {
-        "type": "p",
-        "text": "Palvellut asiakkaat -ruudun viimeisellä rivillä uusintaostoprosentti näkyy muodossa ”Uusintaostoprosentti … · … jäsentä palasi”. Se näyttää niiden jäsenten osuuden, jotka ostivat valitulla jaksolla ja ovat ostaneet yhteensä vähintään kaksi kertaa. Kun Vertaa-valinnalla on otettu käyttöön vertailu, alla oleva rivi näyttää muutoksen prosenttiyksikköinä ja vertailujakson prosentin."
-      },
-      {
-        "type": "h2",
-        "text": "Osuus luokittain"
-      },
-      {
-        "type": "p",
-        "text": "Osuus luokittain listaa kunkin luokan liikevaihdon ja osuuden suurimmasta pienimpään tuotteen nykyisen luokan mukaan. Tuotteet, joilla ei ole luokkaa, näytetään kohdassa Ei luokkaa, ja rivit summautuvat täsmälleen liikevaihdoksi."
-      },
-      {
-        "type": "h2",
-        "text": "Nykytilanne"
+        "text": "Palvellut asiakkaat -ruudun viimeisellä rivillä näkyy uusintaostoprosentti muodossa ”Uusintaostoprosentti … · … jäsentä palasi”. Se kertoo, kuinka suuri osa valitulla jaksolla ostaneista jäsenistä on ostanut yhteensä vähintään kaksi kertaa."
       },
       {
         "type": "p",
@@ -1548,36 +1441,119 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Varaston arvo, joka lasketaan kaavalla nykyinen varasto × nykyinen omakustannus.",
+          "Varaston arvo, jonka laskentakaava on nykyinen varasto × nykyinen omakustannus.",
           "Kaikki valitun jakson varastoliikkeet.",
-          "Pisteet, jotka asiakkailla on mutta joita he eivät ole lunastaneet, sekä suurin mahdollinen alennus niillä."
+          "Asiakkaiden hallussa olevat lunastamattomat pisteet sekä suurin alennus, jonka niillä voi enintään saada."
         ]
       },
       {
         "type": "p",
-        "text": "Varaston arvo ja lunastamattomat pisteet ovat tämänhetkisiä saldoja, joten yläreunan jakson vaihtaminen ei muuta niitä."
-      },
-      {
-        "type": "h2",
-        "text": "Paketit ja oikeudet"
-      },
-      {
-        "type": "p",
-        "text": "Versiosta 3.4 alkaen kaikki laajennetut raportit ovat käytössä jokaisessa paketissa, myös Lite-paketissa, ja ne pysyvät käytössä myös kokeilun päätyttyä. Myös Muutokset lisättiin versiossa 3.4. Aiemmissa versioissa laajennetut raportit näkyivät vain Pro-paketissa, ja muissa paketeissa niissä oli pieni lukko; jos näet vielä lukot, päivitä DingPOS App Storesta."
-      },
-      {
-        "type": "p",
-        "text": "Lite ei seuraa varastoa eikä kanta-asiakaspisteitä, mutta Nykytilanne näyttää silti myymäläsi jo sisältämän varaston arvon ja lunastamattomat pisteet (esimerkiksi kokeilusta) tai nollan."
+        "text": "Varaston arvo ja lunastamattomat pisteet ovat tämänhetkisiä saldoja, joten ylhäältä vaihdettava jakso ei muuta niitä."
       },
       {
         "type": "note",
-        "text": "Henkilökunta näkee laajennetut raportit Tilastot-oikeudella; Varaston arvon summat vaativat lisäksi Kustannukset ja kate -oikeuden."
+        "text": "Henkilökunta näkee Tilastot-välilehden Tilastot-oikeuden perusteella; Varaston arvon summat vaativat lisäksi Kustannukset ja kate -oikeuden."
+      },
+      {
+        "type": "note",
+        "text": "Kalenterijaksot tulivat versiossa 2.4; aiemmissa versioissa oli liukuvia jaksoja (Tänään / 7 päivää / 30 päivää / Koko aika). Jos näet vielä ne, päivitä DingPOS App Storesta."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Miten vertaan myyntiä viime viikkoon, viime kuuhun tai viime vuoteen?",
+    "keywords": [
+      "vertaa",
+      "jaksojen vertailu",
+      "myynnin vertailu",
+      "viime viikko",
+      "viime kuu",
+      "viime vuosi",
+      "sama jakso viime vuonna",
+      "muutokset",
+      "tilastot",
+      "kasvu",
+      "uusintaostoprosentti"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Napauta Tilastot-välilehdellä jaksopalkin oikeassa reunassa Vertaa ja valitse aiempi jakso, esimerkiksi Viime viikko tai Viime vuosi. Jokaisessa ruudussa näkyy sen jälkeen, kuinka paljon sen luku on noussut tai laskenut, esimerkiksi ”▼ 3 % vrt. Viime kuu”, ja sen alla vertailujakson luku."
+      },
+      {
+        "type": "h2",
+        "text": "Vertailun ottaminen käyttöön"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Avaa Tilastot sivupalkista.",
+          "Valitse jakso ylhäältä.",
+          "Napauta jaksopalkin oikeassa reunassa Vertaa.",
+          "Valitse vertailuvaihtoehto valikosta."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Käytettävissä olevat vaihtoehdot riippuvat valitsemastasi jaksosta:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ei mitään: vertailu poistetaan käytöstä.",
+          "Viime viikko: vertaa yhtä päivää viime viikon samaan päivään tai tätä viikkoa viime viikkoon.",
+          "Viime kuu: vertaa tätä kuukautta viime kuuhun.",
+          "Viime vuosi: vertaa tätä vuotta viime vuoteen tai valittua jaksoa viime vuoden samaan jaksoon.",
+          "Edellinen: vertaa mukautettua jaksoa samaan määrään päiviä sitä edeltävältä ajalta."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Kun vertailu on käytössä, Tilastot lisää muutoksen ja vertailujakson luvun jokaiseen ruutuun paitsi Vero-, Liikevoitto- ja Tuotteet ilman omakustannetta -ruutuun. Liikevaihto, Saapunut maksu, Myyntikate, Tilaukset, Tilauksen keskiarvo, Alennukset yhteensä ja Palvellut asiakkaat näyttävät kukin vertailurivin, esimerkiksi ”▼ 3 % vrt. Viime kuu”."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Tilastot jaksolla Tämä viikko ja Vertaa-asetuksella Viime viikko: vertailupalkki ja ensimmäinen ruuturivi, jossa kunkin ruudun muutos ja vertailuluku näkyvät sen alla",
+        "caption": "Napauta ruudun alla olevaa vertailuriviä, niin avautuu Jaksojen vertailu ja näet molempien jaksojen luvut."
+      },
+      {
+        "type": "p",
+        "text": "Alennukset yhteensä -ruudun muutos on aina harmaa, koska suurempi alennus ei sellaisenaan ole hyvä eikä huono. Napauta mitä tahansa vertailuriviä, niin avautuu Jaksojen vertailu, jossa näkyvät molempien jaksojen luvut. Kehityskaavioon tulee vaaleampi viiva vertailujaksolle. Kun jakso on vielä käynnissä, vertailujakso katkaistaan samaan hetkeen."
+      },
+      {
+        "type": "h2",
+        "text": "Muutokset"
+      },
+      {
+        "type": "p",
+        "text": "Vaihda Tuotteiden paremmuusjärjestys -kortin otsikosta Muutokset, niin näet kolme tuotetta, joiden liikevaihto kasvoi eniten, ja kolme, joiden liikevaihto laski eniten vertailujaksoon nähden. Jokaisella rivillä näkyvät molempien jaksojen liikevaihto ja erotus, ja kutakin varianttia verrataan itseensä."
+      },
+      {
+        "type": "p",
+        "text": "Valitse ensin jakso kohdasta Vertaa. Jos Vertaa on asetettu arvoon Ei mitään tai jakso on Koko aika, kortti kehottaa valitsemaan vertailujakson. Napauta korttia tai Näytä kaikki, niin avautuu koko Tuotteiden muutokset -luettelo, joka on jaettu osiin Nousussa ja Laskussa."
+      },
+      {
+        "type": "h2",
+        "text": "Lämpökartta ja uusintaostoprosentti"
+      },
+      {
+        "type": "p",
+        "text": "Kun vertailu on käytössä, kehityskaavion Viikonpäivä × tunti -lämpökartta näyttää myös, mitkä tunnit kasvoivat ja mitkä pienenivät, ja Palvellut asiakkaat -ruudun uusintaostoprosentin alle tulee rivi, jolla näkyvät muutos prosenttiyksikköinä ja vertailujakson prosentti."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2943,7 +2919,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jos tilaat jonkin paketin kokeilun aikana, kokeilu päättyy heti ja ostamasi paketti on voimassa siitä lähtien. Kokeilun jälkeen Pro-ominaisuudet, kuten henkilökunta ja toimintoloki, ovat käytettävissä vain Pro-tilauksella. Laajennetut raportit eivät vaadi Pro-tilausta: versiosta 3.4 alkaen ne sisältyvät kaikkiin paketteihin."
+        "text": "Jos tilaat jonkin paketin kokeilun aikana, kokeilu päättyy heti ja ostamasi paketti on voimassa siitä lähtien. Kokeilun jälkeen Pro-ominaisuudet, kuten henkilökunta ja toimintoloki, ovat käytettävissä vain Pro-tilauksella. Tilastot eivät vaadi Pro-tilausta: kaikki paketit sisältävät ne kokonaan."
       },
       {
         "type": "p",
@@ -3004,13 +2980,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kaikki kolme pakettia sisältävät täyden kassatoiminnan, tuotteet, tilaukset (mitätöinnit, palautukset ja vaihdot mukaan lukien), raportit (versiosta 3.4 alkaen myös laajennetut raportit ja kuukausittainen tuloslaskelma, versiosta 3.6 alkaen veroraportti ja sen vienti) ja pilvivarmuuskopion. Erona ovat kaupan pyörittämiseen tarkoitetut työkalut:"
+        "text": "Kaikki kolme pakettia sisältävät täyden kassatoiminnan, tuotteet, tilaukset (mitätöinnit, palautukset ja vaihdot mukaan lukien), raportit (koko Tilastot-välilehti ja kuukausittainen tuloslaskelma versiosta 3.4 alkaen, veroraportti ja sen vienti versiosta 3.6 alkaen) ja pilvivarmuuskopion. Erona ovat kaupan pyörittämiseen tarkoitetut työkalut:"
       },
       {
         "type": "list",
         "items": [
           "Lite: yhden hengen myyntikojulle, joka tarvitsee kassan ja tuotteet.",
-          "Standard: lisää kampanjat, alennusesiasetukset, kanta-asiakaspisteet ja -tasot, varastoseurannan, ostotilaukset, laskulle myynnin, ennakkotilaukset ja maksukulujen määrät.",
+          "Standard: lisää kampanjat, alennusesiasetukset, kanta-asiakaspisteet ja -tasot, varastoseurannan, ostotilaukset, laskulle myynnin, ennakkotilaukset sekä maksukulun määrät maksutavoittain.",
           "Pro: lisää työntekijätilit ja oikeudet, esihenkilön hyväksynnän, toimintolokin ja palautusmerkinnät – kaupoille, joissa on henkilökuntaa."
         ]
       },

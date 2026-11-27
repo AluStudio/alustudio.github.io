@@ -1325,11 +1325,12 @@ export const articles = [
       "periodo",
       "questa settimana",
       "questo mese",
-      "quest'anno",
       "intervallo personalizzato",
-      "data",
       "classifica prodotti",
-      "confronta"
+      "articoli a bassa rotazione",
+      "mappa di calore",
+      "giorno × ora",
+      "valore del magazzino"
     ],
     "content": [
       {
@@ -1359,7 +1360,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Anche il riquadro Imposta e il report imposte seguono il periodo scelto, quindi impostare un intervallo di dichiarazione con Personalizzato aggiorna entrambi; vedi l'articolo correlato sul report imposte. A destra della barra del periodo, tocca Confronta per vedere il periodo selezionato accanto a quello precedente o allo stesso periodo dell'anno scorso; vedi l'articolo correlato sui report avanzati."
+        "text": "Anche il riquadro Imposta e il report imposte seguono il periodo scelto, quindi impostare un intervallo di dichiarazione con Personalizzato aggiorna entrambi; vedi l'articolo correlato sul report imposte. A destra della barra del periodo, tocca Confronta per vedere il periodo selezionato accanto a quello precedente o allo stesso periodo dell'anno scorso; vedi l'articolo correlato sul confronto tra periodi."
       },
       {
         "type": "h2",
@@ -1394,7 +1395,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Il menu in alto a destra del grafico dell'andamento delle vendite permette di passare tra Ricavi, Ordini, Ordine medio e Clienti serviti. Il grafico offre anche un selettore Andamento e Giorno × ora; per questa vista vedi l'articolo correlato sui report avanzati. Accanto, il grafico Costo e utile lordo impila in un'unica barra il costo dei prodotti e l'utile lordo di ogni periodo. Un singolo giorno è mostrato per ora, mentre i periodi più lunghi raggruppano i dati per giorni, settimane, mesi o anni in base alla durata."
+        "text": "Il menu in alto a destra del grafico dell'andamento delle vendite permette di passare tra Ricavi, Ordini, Ordine medio e Clienti serviti. Accanto, il grafico Costo e utile lordo impila in un'unica barra il costo dei prodotti e l'utile lordo di ogni periodo. Un singolo giorno è mostrato per ora, mentre i periodi più lunghi raggruppano i dati per giorni, settimane, mesi o anni in base alla durata."
       },
       {
         "type": "p",
@@ -1402,7 +1403,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Nell'intestazione del grafico dell'andamento, passa da Andamento a Giorno × ora per vedere una mappa di calore di sette giorni per 24 ore. Più scura è una cella, più hai venduto in quell'ora, e puoi passare la mappa tra ricavi e ordini."
+      },
+      {
+        "type": "p",
         "text": "Classifica prodotti elenca i primi 5 prodotti del periodo selezionato. Tocca la scheda o Mostra tutti per elencare ogni prodotto venduto in quel periodo, in ordine di quantità al netto dei resi. Un prodotto con varianti compare con una riga per ogni variante."
+      },
+      {
+        "type": "p",
+        "text": "Nell'intestazione della scheda della classifica, passa a Articoli a bassa rotazione per elencare i prodotti dal meno al più venduto. Ogni riga mostra la giacenza attuale del prodotto e la data dell'ultima vendita. I prodotti mai venduti sono contrassegnati da Mai venduto e, per impostazione predefinita, compaiono solo quelli disponibili. L'intestazione Variazioni elenca i prodotti i cui ricavi sono aumentati o calati di più rispetto a un periodo di confronto; vedi l'articolo correlato sul confronto tra periodi."
+      },
+      {
+        "type": "h2",
+        "text": "Quota per categoria, tasso di riacquisto e Situazione attuale"
+      },
+      {
+        "type": "p",
+        "text": "Quota per categoria elenca i ricavi e la quota di ogni categoria, dalla più grande alla più piccola, in base alla categoria attuale di ogni prodotto. I prodotti senza categoria vanno sotto Senza categoria e le righe sommano esattamente i Ricavi."
+      },
+      {
+        "type": "p",
+        "text": "L'ultima riga del riquadro Clienti serviti mostra il tasso di riacquisto come «Tasso di riacquisto … · … clienti tornati». Indica la quota di membri che hanno acquistato nel periodo selezionato e hanno acquistato due o più volte in totale."
+      },
+      {
+        "type": "p",
+        "text": "Situazione attuale mostra tre dati su magazzino e punti:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Valore del magazzino, calcolato come giacenza attuale × costo attuale.",
+          "Tutti i movimenti di magazzino del periodo selezionato.",
+          "I punti che i clienti hanno e non hanno ancora riscattato, con lo sconto massimo che possono ottenere."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Valore del magazzino e punti non riscattati sono saldi attuali, quindi cambiare il periodo in alto non li modifica."
+      },
+      {
+        "type": "note",
+        "text": "I collaboratori vedono Report con il permesso Report; gli importi di Valore del magazzino richiedono anche il permesso Costi e utile."
       },
       {
         "type": "note",
@@ -1410,41 +1451,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Che cosa mostrano i report avanzati?",
+    "question": "Come confronto le vendite con la settimana scorsa, il mese scorso o l'anno scorso?",
     "keywords": [
-      "report avanzati",
-      "report",
-      "confronta",
+      "Confronta",
       "confronto tra periodi",
-      "giorno × ora",
-      "articoli a bassa rotazione",
-      "variazioni",
-      "quota per categoria",
-      "valore del magazzino",
+      "settimana scorsa",
+      "mese scorso",
+      "anno scorso",
+      "stesso periodo dell'anno scorso",
+      "Variazioni",
+      "report",
+      "crescita",
       "tasso di riacquisto"
     ],
     "content": [
       {
         "type": "p",
-        "text": "I report avanzati non sono una schermata a parte: stanno in Report e seguono il periodo che scegli in alto. Aggiungono i confronti tra periodi, una mappa di calore per giorno della settimana e ora, Articoli a bassa rotazione, Variazioni, il tasso di riacquisto dei clienti fedeltà, Quota per categoria e una sezione Situazione attuale per giacenza e punti. Sono tutti inclusi in ogni piano e restano disponibili anche dopo la fine della prova."
+        "text": "Tocca Confronta a destra della barra del periodo in Report e scegli un periodo precedente, ad esempio Settimana scorsa o Anno scorso. Ogni riquadro mostra poi di quanto il suo valore è salito o sceso, ad esempio «▼ 3% rispetto a Mese scorso», con sotto il valore del periodo di confronto."
       },
       {
         "type": "h2",
-        "text": "Confronta"
-      },
-      {
-        "type": "p",
-        "text": "Confronta si trova a destra della barra del periodo in Report e mette il periodo selezionato a confronto con uno precedente."
+        "text": "Attivare un confronto"
       },
       {
         "type": "steps",
@@ -1457,13 +1494,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Le opzioni disponibili dipendono dal periodo che scegli:"
+        "text": "Le opzioni disponibili dipendono dal periodo scelto:"
       },
       {
         "type": "list",
         "items": [
           "Nessuno disattiva il confronto.",
-          "Settimana scorsa confronta un singolo giorno con lo stesso giorno della settimana scorsa, oppure questa settimana con la scorsa.",
+          "Settimana scorsa confronta un singolo giorno con lo stesso giorno della settimana scorsa, oppure questa settimana con la settimana scorsa.",
           "Mese scorso confronta questo mese con il mese scorso.",
           "Anno scorso confronta quest'anno con l'anno scorso, oppure il periodo selezionato con lo stesso periodo dell'anno scorso.",
           "Precedente confronta un intervallo personalizzato con lo stesso numero di giorni che lo precedono."
@@ -1471,33 +1508,17 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Quando un confronto è attivo, Report aggiunge la variazione e la cifra del periodo di confronto a ogni riquadro tranne Imposta, Utile netto e Prodotti senza costo. Ricavi, Incassato, Utile lordo, Ordini, Ordine medio, Sconti totali e Clienti serviti mostrano ciascuno una riga di confronto come «▼ 3% rispetto a Mese scorso»."
+        "text": "Quando un confronto è attivo, Report aggiunge la variazione e il valore del periodo di confronto a ogni riquadro tranne Imposta, Utile netto e Prodotti senza costo. Ricavi, Incassato, Utile lordo, Ordini, Ordine medio, Sconti totali e Clienti serviti mostrano ciascuno una riga di confronto come «▼ 3% rispetto a Mese scorso»."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "Report su Questa settimana con Confronta impostato su Settimana scorsa: si vedono la barra di confronto e la prima riga di riquadri, ciascuno con la propria variazione e la cifra di confronto sotto",
-        "caption": "Tocca una qualsiasi riga di confronto sotto un riquadro per aprire Confronto tra periodi e vedere le cifre di entrambi i periodi."
+        "alt": "Report su Questa settimana con Confronta impostato su Settimana scorsa: si vedono la barra di confronto e la prima riga di riquadri, ciascuno con la propria variazione e il valore di confronto sotto",
+        "caption": "Tocca una riga di confronto sotto un riquadro per aprire Confronto tra periodi e vedere i valori di entrambi i periodi."
       },
       {
         "type": "p",
-        "text": "La variazione di Sconti totali è sempre grigia, perché uno sconto in più non è di per sé un bene né un male. Tocca una qualsiasi riga di confronto per aprire Confronto tra periodi, che elenca le cifre di entrambi i periodi. Il grafico dell'andamento aggiunge una linea più chiara per il periodo di confronto. Finché un periodo è ancora in corso, il periodo di confronto viene tagliato allo stesso momento."
-      },
-      {
-        "type": "h2",
-        "text": "Giorno × ora"
-      },
-      {
-        "type": "p",
-        "text": "Nell'intestazione del grafico dell'andamento passa da Andamento a Giorno × ora per vedere una mappa di calore su sette giorni e 24 ore. Più una cella è scura, più hai venduto in quell'ora. Puoi passare la mappa tra ricavi e ordini. Con un confronto attivo in Confronta, la mappa mostra anche quali ore sono cresciute e quali sono calate."
-      },
-      {
-        "type": "h2",
-        "text": "Articoli a bassa rotazione"
-      },
-      {
-        "type": "p",
-        "text": "Passa l'intestazione della scheda di classifica ad Articoli a bassa rotazione per elencare i prodotti dal meno al più venduto. Ogni riga mostra la giacenza attuale del prodotto e l'ultima data in cui è stato venduto. I prodotti mai venduti sono indicati come Mai venduto e un prodotto con varianti ha una riga per ogni variante. Per impostazione predefinita sono mostrati solo i prodotti in giacenza."
+        "text": "La variazione di Sconti totali è sempre grigia, perché uno sconto maggiore non è di per sé né un bene né un male. Tocca una riga di confronto per aprire Confronto tra periodi, che elenca i valori di entrambi i periodi. Il grafico dell'andamento aggiunge una linea più chiara per il periodo di confronto. Finché un periodo è ancora in corso, il periodo di confronto viene tagliato allo stesso momento."
       },
       {
         "type": "h2",
@@ -1505,69 +1526,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Passa l'intestazione della scheda di classifica a Variazioni per vedere i 3 prodotti i cui ricavi sono cresciuti di più e i 3 calati di più rispetto al periodo di confronto. Ogni riga mostra i ricavi dei due periodi e la differenza, e ogni variante è confrontata con se stessa."
+        "text": "Nell'intestazione della scheda della classifica, passa a Variazioni per vedere i 3 prodotti i cui ricavi sono aumentati di più e i 3 che sono calati di più rispetto al periodo di confronto. Ogni riga mostra i ricavi di entrambi i periodi e la differenza, e ogni variante è confrontata con se stessa."
       },
       {
         "type": "p",
-        "text": "Scegli prima un periodo in Confronta. Quando Confronta è impostato su Nessuno, o quando il periodo è Sempre, la scheda ti invita a scegliere un periodo di confronto. Tocca la scheda o Mostra tutti per aprire l'elenco completo Variazioni prodotti, diviso in In aumento e In calo."
+        "text": "Scegli prima un periodo in Confronta. Quando Confronta è su Nessuno, o quando il periodo è Sempre, la scheda ti invita a scegliere un periodo di confronto. Tocca la scheda o Mostra tutti per aprire l'elenco completo Variazioni prodotti, diviso in In aumento e In calo."
       },
       {
         "type": "h2",
-        "text": "Tasso di riacquisto"
+        "text": "Mappa di calore e tasso di riacquisto"
       },
       {
         "type": "p",
-        "text": "L'ultima riga del riquadro Clienti serviti mostra il tasso di riacquisto come «Tasso di riacquisto … · … clienti tornati». Indica la quota di clienti fedeltà che hanno acquistato nel periodo selezionato e hanno acquistato in totale due o più volte. Con un confronto attivo in Confronta, una riga sotto indica la variazione in punti percentuali e il tasso del periodo di confronto."
-      },
-      {
-        "type": "h2",
-        "text": "Quota per categoria"
-      },
-      {
-        "type": "p",
-        "text": "Quota per categoria elenca i ricavi e la quota di ogni categoria, dalla più grande alla più piccola, in base alla categoria attuale di ogni prodotto. I prodotti senza categoria rientrano in Senza categoria e le righe sommano esattamente i Ricavi."
-      },
-      {
-        "type": "h2",
-        "text": "Situazione attuale"
-      },
-      {
-        "type": "p",
-        "text": "Situazione attuale mostra tre dettagli su magazzino e punti:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Valore del magazzino, calcolato come giacenza attuale × costo attuale.",
-          "Tutti i movimenti di magazzino del periodo selezionato.",
-          "I punti che i clienti hanno e non hanno ancora riscattato, con lo sconto massimo che possono ottenere."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Il valore del magazzino e i punti non riscattati sono saldi attuali, quindi cambiare il periodo in alto non li modifica."
-      },
-      {
-        "type": "h2",
-        "text": "Piani e permessi"
-      },
-      {
-        "type": "p",
-        "text": "Dalla v3.4 tutti i report avanzati sono disponibili con ogni piano, Lite compreso, e restano disponibili anche dopo la fine della prova. Anche Variazioni è stato aggiunto con la v3.4. Le versioni precedenti mostravano i report avanzati solo con Pro, con un piccolo lucchetto sugli altri piani; se vedi ancora i lucchetti, aggiorna DingPOS dall'App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite non gestisce giacenza né punti fedeltà, ma Situazione attuale mostra comunque il valore del magazzino e i punti non riscattati che il tuo negozio ha già (per esempio dalla prova), oppure zero."
-      },
-      {
-        "type": "note",
-        "text": "I collaboratori vedono i report avanzati con il permesso Report; gli importi del valore del magazzino richiedono anche il permesso Costi e utile."
+        "text": "Con un confronto attivo, la mappa di calore Giorno × ora nel grafico dell'andamento mostra anche quali ore sono cresciute e quali sono calate, e il tasso di riacquisto nel riquadro Clienti serviti guadagna una riga con la variazione in punti percentuali e il tasso del periodo di confronto."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2932,7 +2908,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se ti abboni a un piano durante la prova, la prova termina subito e da quel momento vale il piano acquistato. Dopo la prova, le funzioni Pro come collaboratori e registro attività restano disponibili solo con un abbonamento Pro. I report avanzati non richiedono un abbonamento Pro: dalla v3.4 ogni piano li include."
+        "text": "Se ti abboni a un piano durante la prova, la prova termina subito e da quel momento vale il piano acquistato. Dopo la prova, le funzioni Pro come collaboratori e registro attività restano disponibili solo con un abbonamento Pro. La scheda Report non richiede un abbonamento Pro: ogni piano la include per intero."
       },
       {
         "type": "p",
@@ -2992,7 +2968,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tutti e tre i piani includono cassa completa, prodotti, ordini (con storni, resi e cambi), report (report avanzati e conto economico mensile inclusi dalla v3.4, report imposte e relativa esportazione dalla v3.6) e backup nel cloud. Cambiano gli strumenti per gestire il negozio:"
+        "text": "Tutti e tre i piani includono cassa completa, prodotti, ordini (con storni, resi e cambi), report (tutta la scheda Report e il conto economico mensile dalla v3.4, report imposte e relativa esportazione dalla v3.6) e backup nel cloud. Cambiano gli strumenti per gestire il negozio:"
       },
       {
         "type": "list",

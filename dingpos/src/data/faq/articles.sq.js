@@ -1331,10 +1331,11 @@ export const articles = [
       "periudha kohore",
       "këtë javë",
       "këtë muaj",
-      "këtë vit",
       "interval i personalizuar",
       "renditja e produkteve",
-      "krahaso"
+      "produkte me shitje të ngadalta",
+      "dita × ora",
+      "vlerësimi i inventarit"
     ],
     "content": [
       {
@@ -1364,7 +1365,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pllaka Tatimi dhe raporti tatimor e ndjekin gjithashtu periudhën e zgjedhur, ndaj caktimi i një intervali deklarimi me Personalizuar përditëson të dyja; shih artikullin përkatës për raportin tatimor. Në të djathtë të shiritit të periudhës, trokit Krahaso për ta parë periudhën e zgjedhur krah për krah me atë para saj ose me të njëjtën periudhë të vitit të kaluar; shih artikullin përkatës për raportet e avancuara."
+        "text": "Pllaka Tatimi dhe raporti tatimor e ndjekin gjithashtu periudhën e zgjedhur, ndaj caktimi i një intervali deklarimi me Personalizuar përditëson të dyja; shih artikullin përkatës për raportin tatimor. Në të djathtë të shiritit të periudhës, trokit Krahaso për ta parë periudhën e zgjedhur krah për krah me atë para saj ose me të njëjtën periudhë të vitit të kaluar; shih artikullin përkatës për krahasimin e periudhave."
       },
       {
         "type": "h2",
@@ -1399,7 +1400,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Menuja lart djathtas te grafiku i trendit të shitjeve e kalon mes Të ardhurave nga shitjet, Porosive, Porosisë mesatare dhe Klientëve të shërbyer. Grafiku ka edhe kalimin Trendi / Dita × ora; shih artikullin për raportet e avancuara për atë pamje. Pranë tij, grafiku Kostoja dhe fitimi bruto vë në një shtyllë koston e produkteve dhe fitimin bruto të çdo periudhe. Një ditë e vetme paraqitet sipas orës, ndërsa periudhat më të gjata grupojnë të dhënat sipas ditëve, javëve, muajve ose viteve, në varësi të gjatësisë."
+        "text": "Menuja lart djathtas te grafiku i trendit të shitjeve e kalon mes Të ardhurave nga shitjet, Porosive, Porosisë mesatare dhe Klientëve të shërbyer. Pranë tij, grafiku Kostoja dhe fitimi bruto vë në një shtyllë koston e produkteve dhe fitimin bruto të çdo periudhe. Një ditë e vetme paraqitet sipas orës, ndërsa periudhat më të gjata grupojnë të dhënat sipas ditëve, javëve, muajve ose viteve, në varësi të gjatësisë."
       },
       {
         "type": "p",
@@ -1407,7 +1408,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Në titullin e grafikut të trendit, kalo nga Trendi te Dita × ora për të parë një hartë nxehtësie me shtatë ditë dhe 24 orë. Sa më e errët të jetë një qelizë, aq më shumë ke shitur gjatë asaj ore, dhe hartën mund ta kalosh mes të ardhurave nga shitjet dhe porosive."
+      },
+      {
+        "type": "p",
         "text": "Renditja e produkteve liston 5 produktet më të shitura të periudhës së zgjedhur. Trokit te karta ose te Shiko të gjitha për të parë çdo produkt të shitur në atë periudhë, të renditur sipas sasisë pas kthimeve. Një produkt me variante shfaqet me një rresht për çdo variant."
+      },
+      {
+        "type": "p",
+        "text": "Në titullin e kartës së renditjes, kalo te Produkte me shitje të ngadalta për të listuar produktet nga ato me më pak shitje te ato me më shumë. Çdo rresht tregon stokun aktual të produktit dhe datën e fundit kur u shit. Produktet që nuk janë shitur kurrë shënohen Nuk është shitur kurrë, dhe si parazgjedhje shfaqen vetëm produktet në stok. Titulli Ndryshimet liston produktet të ardhurat e të cilëve u rritën ose ranë më shumë kundrejt një periudhe krahasimi; shih artikullin përkatës për krahasimin e periudhave."
+      },
+      {
+        "type": "h2",
+        "text": "Pjesa sipas kategorisë, shkalla e blerjeve të përsëritura dhe Tani"
+      },
+      {
+        "type": "p",
+        "text": "Pjesa sipas kategorisë liston të ardhurat dhe pjesën e çdo kategorie, të renditura nga më e madhja te më e vogla, sipas kategorisë aktuale të çdo produkti. Produktet pa kategori shfaqen te Pa kategori, dhe rreshtat mblidhen saktësisht me Të ardhurat nga shitjet."
+      },
+      {
+        "type": "p",
+        "text": "Rreshti i fundit i pllakës Klientë të shërbyer shfaq shkallën e blerjeve të përsëritura si “Shkalla e blerjeve të përsëritura … · … anëtarë u kthyen”. Tregon pjesën e anëtarëve që kanë blerë në periudhën e zgjedhur dhe kanë blerë dy herë ose më shumë gjithsej."
+      },
+      {
+        "type": "p",
+        "text": "Tani shfaq tre detaje për inventarin dhe pikët:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Vlerësimi i inventarit, llogaritur si stoku aktual × kostoja aktuale.",
+          "Çdo lëvizje stoku në periudhën e zgjedhur.",
+          "Pikët që klientët i kanë dhe nuk i kanë përdorur ende, bashkë me maksimumin që mund të zbresin."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Vlerësimi i inventarit dhe pikët e papërdorura janë gjendje aktuale, ndaj ndryshimi i periudhës lart nuk i ndryshon."
+      },
+      {
+        "type": "note",
+        "text": "Stafi e sheh Statistikën me lejen Statistika; shumat e Vlerësimit të inventarit kërkojnë edhe lejen Kostoja dhe fitimi."
       },
       {
         "type": "note",
@@ -1415,48 +1456,43 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Çfarë tregojnë raportet e avancuara?",
+    "question": "Si i krahasoj shitjet me javën e kaluar, muajin e kaluar ose vitin e kaluar?",
     "keywords": [
-      "raporte të avancuara",
-      "Statistika",
       "krahaso",
-      "krahasimi i periudhave",
-      "Dita × ora",
-      "hartë nxehtësie",
-      "produkte me shitje të ngadalta",
-      "ndryshimet",
-      "pjesa sipas kategorisë",
-      "vlerësimi i inventarit",
+      "Krahasimi i periudhave",
+      "java e kaluar",
+      "muaji i kaluar",
+      "viti i kaluar",
+      "e njëjta periudhë vitin e kaluar",
+      "Ndryshimet",
+      "Statistika",
+      "rritje e shitjeve",
       "shkalla e blerjeve të përsëritura"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Raportet e avancuara nuk janë një ekran më vete; ato shfaqen te Statistika dhe ndjekin periudhën që zgjedh në krye. Ato shtojnë krahasime periudhash, një hartë nxehtësie të ditës dhe orës, Produkte me shitje të ngadalta, Ndryshimet, shkallën e blerjeve të përsëritura të anëtarëve, Pjesën sipas kategorisë dhe një pjesë Tani për stokun dhe pikat. Çdo plan i përfshin të gjitha, dhe mbeten të hapura edhe pasi mbaron prova."
+        "text": "Trokit Krahaso në të djathtë të shiritit të periudhës te Statistika dhe zgjidh një periudhë më të hershme, si Java e kaluar ose Viti i kaluar. Çdo pllakë shfaq pastaj sa u rrit ose u ul shifra e saj, si “▼ 3% kundrejt Muaji i kaluar”, me shifrën e periudhës së krahasimit poshtë."
       },
       {
         "type": "h2",
-        "text": "Krahaso"
-      },
-      {
-        "type": "p",
-        "text": "Krahaso ndodhet në të djathtë të shiritit të periudhës te Statistika dhe e mat periudhën e zgjedhur kundrejt një periudhe më të hershme."
+        "text": "Ndezja e një krahasimi"
       },
       {
         "type": "steps",
         "items": [
           "Hap Statistikën nga shiriti anësor.",
-          "Zgjidh një periudhë në krye.",
+          "Zgjidh një periudhë lart.",
           "Trokit Krahaso në të djathtë të shiritit të periudhës.",
           "Zgjidh një opsion krahasimi nga menuja."
         ]
@@ -1471,39 +1507,23 @@ export const articles = [
           "Asnjë e fik krahasimin.",
           "Java e kaluar krahason një ditë të vetme me të njëjtën ditë javën e kaluar, ose këtë javë me javën e kaluar.",
           "Muaji i kaluar krahason këtë muaj me muajin e kaluar.",
-          "Viti i kaluar krahason këtë vit me vitin e kaluar, ose periudhën e zgjedhur me të njëjtën periudhë të vitit të kaluar.",
-          "Më parë krahason një interval të personalizuar me po aq ditë para tij."
+          "Viti i kaluar krahason këtë vit me vitin e kaluar, ose krahason periudhën e zgjedhur me të njëjtën periudhë vitin e kaluar.",
+          "Më parë krahason një interval të personalizuar me të njëjtin numër ditësh para tij."
         ]
       },
       {
         "type": "p",
-        "text": "Kur një krahasim është aktiv, Statistika shton ndryshimin dhe shifrën e periudhës së krahasimit në çdo pllakë, përveç Tatimi, Fitimi neto dhe Produkte pa kosto. Të ardhura nga shitjet, Para të arkëtuara, Fitimi bruto, Porositë, Porosia mesatare, Zbritjet gjithsej dhe Klientë të shërbyer shfaqin secila një rresht krahasimi si “▼ 3% kundrejt muajit të kaluar”."
+        "text": "Kur krahasimi është aktiv, Statistika shton ndryshimin dhe shifrën e periudhës së krahasimit te çdo pllakë, përveç Tatimit, Fitimit neto dhe Produkteve pa kosto. Të ardhurat nga shitjet, Paratë e arkëtuara, Fitimi bruto, Porositë, Porosia mesatare, Zbritjet gjithsej dhe Klientët e shërbyer shfaqin secila një rresht krahasimi si “▼ 3% kundrejt Muaji i kaluar”."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "Statistika te Këtë javë me Krahaso të vendosur te Java e kaluar, me shiritin e krahasimit dhe rreshtin e parë të pllakave, secila me ndryshimin dhe shifrën e krahasimit poshtë",
-        "caption": "Trokit çdo rresht krahasimi poshtë një pllake për të hapur Krahasimi i periudhave dhe për të parë shifrat e të dyja periudhave."
+        "alt": "Statistika te Këtë javë me Krahaso të vendosur te Java e kaluar, që tregon shiritin e krahasimit dhe rreshtin e parë të pllakave me ndryshimin e secilës pllakë dhe shifrën e krahasimit poshtë",
+        "caption": "Trokit çdo rresht krahasimi nën një pllakë për të hapur Krahasimin e periudhave dhe për të parë shifrat e të dyja periudhave."
       },
       {
         "type": "p",
-        "text": "Ndryshimi te Zbritjet gjithsej është gjithmonë gri, sepse më shumë zbritje nuk është vetvetiu e mirë apo e keqe. Trokit çdo rresht krahasimi për të hapur Krahasimi i periudhave, që liston shifrat e të dyja periudhave. Grafiku i trendit shton një vijë më të zbehtë për periudhën e krahasimit. Sa kohë një periudhë është ende në vazhdim, periudha e krahasimit pritet në të njëjtin çast."
-      },
-      {
-        "type": "h2",
-        "text": "Dita × ora"
-      },
-      {
-        "type": "p",
-        "text": "Kalo titullin e grafikut të trendit nga Trendi te Dita × ora për të parë një hartë nxehtësie me shtatë ditë dhe 24 orë. Sa më e errët të jetë një qelizë, aq më shumë ke shitur gjatë asaj ore. Hartën mund ta kalosh mes të ardhurave nga shitjet dhe porosive. Me një krahasim të ndezur te Krahaso, harta tregon edhe cilat orë u rritën dhe cilat u ulën."
-      },
-      {
-        "type": "h2",
-        "text": "Produkte me shitje të ngadalta"
-      },
-      {
-        "type": "p",
-        "text": "Kalo titullin e kartës së renditjes te Produkte me shitje të ngadalta për të listuar produktet nga ato me më pak shitje te ato me më shumë. Çdo rresht tregon stokun aktual të produktit dhe datën e fundit kur u shit. Produktet që nuk janë shitur kurrë shënohen Nuk është shitur kurrë, dhe një produkt me variante merr një rresht për çdo variant. Si parazgjedhje shfaqen vetëm produktet në stok."
+        "text": "Ndryshimi te Zbritjet gjithsej është gjithmonë gri, sepse më shumë zbritje nuk është në vetvete as e mirë, as e keqe. Trokit çdo rresht krahasimi për të hapur Krahasimin e periudhave, që liston shifrat e të dyja periudhave. Grafiku i trendit shton një vijë më të çelët për periudhën e krahasimit. Ndërsa një periudhë është ende në vazhdim, periudha e krahasimit pritet në të njëjtin çast."
       },
       {
         "type": "h2",
@@ -1511,69 +1531,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kalo titullin e kartës së renditjes te Ndryshimet për të parë 3 produktet me rritjen më të madhe të të ardhurave nga shitjet dhe 3 me rënien më të madhe kundrejt periudhës së krahasimit. Çdo rresht tregon të ardhurat nga shitjet të të dyja periudhave dhe diferencën, dhe çdo variant krahasohet me vetveten."
+        "text": "Në titullin e kartës së renditjes, kalo te Ndryshimet për të parë 3 produktet me rritjen më të madhe të të ardhurave dhe 3 me rënien më të madhe kundrejt periudhës së krahasimit. Çdo rresht tregon të ardhurat e të dyja periudhave dhe diferencën, dhe çdo variant krahasohet me veten."
       },
       {
         "type": "p",
-        "text": "Zgjidh fillimisht një periudhë te Krahaso. Kur Krahaso është te Asnjë, ose kur periudha është Gjithë kohës, karta të thotë të zgjedhësh një periudhë krahasimi. Trokit te karta ose te Shiko të gjitha për të hapur listën e plotë Produktet me ndryshim, të ndarë në Në rritje dhe Në rënie."
+        "text": "Zgjidh fillimisht një periudhë te Krahaso. Kur Krahaso është Asnjë, ose kur periudha është Gjithë kohës, karta të kërkon të zgjedhësh një periudhë krahasimi. Trokit kartën ose Shiko të gjitha për të hapur listën e plotë Produktet me ndryshim, të ndarë në Në rritje dhe Në rënie."
       },
       {
         "type": "h2",
-        "text": "Shkalla e blerjeve të përsëritura"
+        "text": "Harta e nxehtësisë dhe shkalla e blerjeve të përsëritura"
       },
       {
         "type": "p",
-        "text": "Rreshti i fundit i pllakës Klientë të shërbyer shfaq shkallën e blerjeve të përsëritura si “Shkalla e blerjeve të përsëritura … · … anëtarë u kthyen”. Ajo tregon pjesën e anëtarëve që bënë blerje në periudhën e zgjedhur dhe kanë blerë dy ose më shumë herë gjithsej. Me një krahasim të ndezur te Krahaso, një rresht poshtë jep ndryshimin në pikë përqindjeje dhe shkallën e periudhës së krahasimit."
-      },
-      {
-        "type": "h2",
-        "text": "Pjesa sipas kategorisë"
-      },
-      {
-        "type": "p",
-        "text": "Pjesa sipas kategorisë liston të ardhurat nga shitjet dhe pjesën e çdo kategorie, nga më e madhja te më e vogla, sipas kategorisë aktuale të secilit produkt. Produktet pa kategori hyjnë te Pa kategori, dhe rreshtat mblidhen saktësisht në të ardhurat nga shitjet."
-      },
-      {
-        "type": "h2",
-        "text": "Tani"
-      },
-      {
-        "type": "p",
-        "text": "Tani shfaq tre detaje për inventarin dhe pikat:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Vlerësimi i inventarit, llogaritur si stoku aktual × kostoja aktuale.",
-          "Çdo lëvizje stoku në periudhën e zgjedhur.",
-          "Pikat që klientët i kanë por nuk i kanë përdorur ende, së bashku me shumën maksimale që mund të zbresin."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Vlerësimi i inventarit dhe pikat e papërdorura janë gjendje aktuale, ndaj ndryshimi i periudhës në krye nuk i ndryshon ato."
-      },
-      {
-        "type": "h2",
-        "text": "Planet dhe lejet"
-      },
-      {
-        "type": "p",
-        "text": "Që nga v3.4, të gjitha raportet e avancuara janë të hapura në çdo plan, përfshirë Lite, dhe mbeten të hapura edhe pasi mbaron prova. Edhe Ndryshimet u shtuan në v3.4. Versionet e mëparshme i shfaqnin raportet e avancuara vetëm në Pro, me një dryn të vogël në planet e tjera; nëse ende i sheh drynat, përditëso DingPOS nga App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite nuk e ndjek stokun dhe pikat e besnikërisë, por Tani prapë tregon vlerësimin e inventarit dhe pikat e papërdorura që dyqani yt i ka tashmë (për shembull nga prova), ose zero."
-      },
-      {
-        "type": "note",
-        "text": "Stafi i sheh raportet e avancuara me lejen Statistika; shumat e Vlerësimit të inventarit kërkojnë edhe lejen Kostoja dhe fitimi."
+        "text": "Me krahasimin të ndezur, harta e nxehtësisë Dita × ora te grafiku i trendit tregon edhe cilat orë u rritën e cilat u pakësuan, dhe shkalla e blerjeve të përsëritura te pllaka Klientë të shërbyer shton një rresht me ndryshimin në pikë përqindjeje dhe shkallën e periudhës së krahasimit."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2937,7 +2912,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Nëse abonohesh në çdo plan gjatë provës, prova përfundon menjëherë dhe nga ai moment vlen plani që ke blerë. Pas provës, veçoritë Pro si punonjësit dhe regjistri i aktivitetit mbeten të disponueshme vetëm me abonim Pro. Raportet e avancuara nuk kanë nevojë për të; që nga v3.4 çdo plan i përfshin."
+        "text": "Nëse abonohesh në çdo plan gjatë provës, prova përfundon menjëherë dhe nga ai moment vlen plani që ke blerë. Pas provës, veçoritë Pro si punonjësit dhe regjistri i aktivitetit mbeten të disponueshme vetëm me abonim Pro. Statistika nuk ka nevojë për të; çdo plan e përfshin të gjithë."
       },
       {
         "type": "p",
@@ -2998,7 +2973,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Të tria planet përfshijnë funksionin e plotë të pagesës, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet (raportet e avancuara dhe fitimi e humbja mujore të përfshira që nga v3.4, raporti tatimor dhe eksporti i tij që nga v3.6) dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
+        "text": "Të tria planet përfshijnë funksionin e plotë të pagesës, produktet, porositë (me shfuqizime, kthime malli dhe këmbime), raportet (e gjithë Statistika dhe fitimi e humbja mujore që nga v3.4, raporti tatimor dhe eksporti i tij që nga v3.6) dhe kopjen rezervë në cloud. Ndryshojnë te veglat për drejtimin e dyqanit:"
       },
       {
         "type": "list",

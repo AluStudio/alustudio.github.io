@@ -1334,14 +1334,14 @@ export const articles = [
     "keywords": [
       "istatistik",
       "raporlar",
-      "dönem",
+      "rapor dönemi",
       "bu hafta",
       "bu ay",
-      "bu yıl",
       "özel tarih aralığı",
-      "karşılaştır",
       "ürün sıralaması",
-      "en çok satan ürünler"
+      "yavaş satan ürünler",
+      "haftanın günü × saat",
+      "stok değeri"
     ],
     "content": [
       {
@@ -1371,7 +1371,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Vergi kutucuğu ve vergi raporu da seçilen döneme göre değişir; bu yüzden Özel ile bir beyan aralığı belirlediğinizde ikisi de güncellenir — ayrıntılar için ilgili vergi raporu makalesine bakın. Dönem çubuğunun sağındaki Karşılaştır'a dokunarak seçili dönemi bir önceki dönemle ya da geçen yılın aynı dönemiyle yan yana görebilirsiniz; ayrıntılar için ilgili gelişmiş raporlar makalesine bakın."
+        "text": "Vergi kutucuğu ve vergi raporu da seçilen döneme göre değişir; bu yüzden Özel ile bir beyan aralığı belirlediğinizde ikisi de güncellenir — ayrıntılar için ilgili vergi raporu makalesine bakın. Dönem çubuğunun sağındaki Karşılaştır'a dokunarak seçili dönemi bir önceki dönemle ya da geçen yılın aynı dönemiyle yan yana görebilirsiniz; ayrıntılar için dönemleri karşılaştırmaya ilişkin makaleye bakın."
       },
       {
         "type": "h2",
@@ -1406,7 +1406,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Satış eğilimi grafiğinin sağ üstündeki menü onu Satış geliri, Siparişler, Ortalama sipariş ve Hizmet verilen müşteri arasında değiştirir. Grafik ayrıca Trend ile Haftanın günü × saat arasında geçiş sunar; bu görünüm için ilgili gelişmiş raporlar makalesine bakın. Yanındaki Maliyet ve brüt kâr grafiği, her dönemin ürün maliyetini ve brüt kârını tek bir sütunda üst üste gösterir. Tek bir gün saate göre gösterilir; daha uzun dönemlerde veriler süreye göre günlere, haftalara, aylara veya yıllara gruplanır."
+        "text": "Satış eğilimi grafiğinin sağ üstündeki menü onu Satış geliri, Siparişler, Ortalama sipariş ve Hizmet verilen müşteri arasında değiştirir. Yanındaki Maliyet ve brüt kâr grafiği, her dönemin ürün maliyetini ve brüt kârını tek bir sütunda üst üste gösterir. Tek bir gün saate göre gösterilir; daha uzun dönemlerde veriler süreye göre günlere, haftalara, aylara veya yıllara gruplanır."
       },
       {
         "type": "p",
@@ -1414,7 +1414,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Eğilim grafiğinin başlığını Trend'den Haftanın günü × saat'e çevirerek yedi günlük, 24 saatlik bir ısı haritası görebilirsiniz. Bir hücre ne kadar koyuysa o saatte o kadar çok satış yapmışsınız demektir; ısı haritasını satış geliri ile siparişler arasında değiştirebilirsiniz."
+      },
+      {
+        "type": "p",
         "text": "Ürün Sıralaması kartı, seçili dönemin ilk 5 ürününü listeler. O dönemde satılan tüm ürünleri iadeler düşüldükten sonra adede göre sıralı görmek için karta ya da Tümünü gör düğmesine dokunun; varyantı olan bir ürün her varyant için ayrı bir satır alır."
+      },
+      {
+        "type": "p",
+        "text": "Sıralama kartının başlığını Yavaş Satan Ürünler'e çevirirseniz ürünler en az satandan en çok satana doğru listelenir. Her satırda ürünün güncel stoku ve en son satıldığı tarih görünür. Hiç satılmayan ürünlerde Hiç satılmadı yazar ve varsayılan olarak yalnızca stokta olan ürünler gösterilir. Hareketliler başlığı ise geliri bir karşılaştırma dönemine göre en çok artan ya da azalan ürünleri listeler; dönemleri karşılaştırmaya ilişkin makaleye bakın."
+      },
+      {
+        "type": "h2",
+        "text": "Kategoriye göre pay, tekrar alışveriş oranı ve Şu anda"
+      },
+      {
+        "type": "p",
+        "text": "Kategoriye göre pay, her kategorinin gelirini ve payını, ürünün güncel kategorisine göre en büyükten en küçüğe sıralayarak listeler. Kategorisi olmayan ürünler Kategorisiz altında toplanır ve satırların toplamı tam olarak Satış gelirine eşittir."
+      },
+      {
+        "type": "p",
+        "text": "Hizmet verilen müşteri kutucuğunun son satırında tekrar alışveriş oranı “Tekrar alışveriş oranı … · … üye geri döndü” biçiminde görünür. Bu oran, seçili dönemde alışveriş yapan ve toplamda iki veya daha fazla kez alışveriş yapmış üyelerin payını gösterir."
+      },
+      {
+        "type": "p",
+        "text": "Şu anda stok ve puanlarla ilgili üç bilgiyi gösterir:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Stok değeri; güncel stok × güncel maliyet olarak hesaplanır.",
+          "Seçili dönemdeki her stok hareketi.",
+          "Müşterilerin elindeki ve henüz kullanılmamış puanlar ile bunlardan düşülebilecek en yüksek tutar."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Stok değeri ve kullanılmamış puanlar güncel bakiyelerdir; bu yüzden üstteki dönemi değiştirmek bunları değiştirmez."
+      },
+      {
+        "type": "note",
+        "text": "Personel, İstatistik'i İstatistik yetkisi sayesinde görür; Stok değeri tutarları için ayrıca Maliyet ve kâr yetkisi gerekir."
       },
       {
         "type": "note",
@@ -1422,43 +1462,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Gelişmiş raporlar neleri gösterir?",
+    "question": "Satışları geçen hafta, geçen ay veya geçen yılla nasıl karşılaştırırım?",
     "keywords": [
-      "gelişmiş raporlar",
-      "istatistik",
       "karşılaştır",
       "dönem karşılaştırması",
-      "ısı haritası",
-      "yoğun saatler",
-      "yavaş satan ürünler",
+      "geçen hafta",
+      "geçen ay",
+      "geçen yıl",
+      "geçen yılın aynı dönemi",
       "hareketliler",
-      "kategoriye göre pay",
-      "stok değeri",
-      "tekrar alışveriş oranı",
-      "puan"
+      "istatistik",
+      "büyüme",
+      "tekrar alışveriş oranı"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Gelişmiş raporlar ayrı bir ekran değildir; doğrudan İstatistik ekranında yer alır ve üstten seçtiğiniz döneme göre değişir. Dönem karşılaştırmaları, haftanın günü ve saat ısı haritası, Yavaş Satan Ürünler, Hareketliler, üye tekrar alışveriş oranı, Kategoriye göre pay ve stok ile puanlar için bir Şu anda bölümü ekler. Hepsi her planda vardır ve deneme bittikten sonra da açık kalır."
+        "text": "İstatistik'te dönem çubuğunun sağındaki Karşılaştır'a dokunun ve Geçen hafta ya da Geçen yıl gibi daha önceki bir dönem seçin. Her kutucuk, rakamının ne kadar arttığını veya azaldığını — örneğin “▼ %3 · Geçen ay ile kıyasla” — altında karşılaştırma döneminin rakamıyla birlikte gösterir."
       },
       {
         "type": "h2",
-        "text": "Karşılaştır"
-      },
-      {
-        "type": "p",
-        "text": "Karşılaştır, İstatistik'te dönem çubuğunun sağında yer alır ve seçili dönemi daha önceki bir dönemle kıyaslar."
+        "text": "Karşılaştırmayı açma"
       },
       {
         "type": "steps",
@@ -1471,7 +1505,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kullanılabilen seçenekler seçtiğiniz döneme göre değişir:"
+        "text": "Seçenekler, seçtiğiniz döneme göre değişir:"
       },
       {
         "type": "list",
@@ -1480,38 +1514,22 @@ export const articles = [
           "Geçen hafta, tek bir günü geçen haftanın aynı günüyle ya da bu haftayı geçen haftayla karşılaştırır.",
           "Geçen ay, bu ayı geçen ayla karşılaştırır.",
           "Geçen yıl, bu yılı geçen yılla ya da seçili dönemi geçen yılın aynı dönemiyle karşılaştırır.",
-          "Önceki, özel bir aralığı hemen öncesindeki aynı sayıda günle karşılaştırır."
+          "Önceki, özel bir aralığı ondan hemen önceki aynı gün sayısındaki aralıkla karşılaştırır."
         ]
       },
       {
         "type": "p",
-        "text": "Karşılaştırma açıkken İstatistik, Vergi, Net kâr ve Maliyeti Olmayan Ürünler dışındaki her kutucuğa değişimi ve karşılaştırma döneminin rakamını ekler. Satış geliri, Alınan tutar, Brüt kâr, Siparişler, Ortalama sipariş, Toplam indirim ve Hizmet verilen müşteri kutucuklarının her biri “▼ %3 · Geçen ay ile kıyasla” gibi bir karşılaştırma satırı gösterir."
+        "text": "Karşılaştırma açıkken İstatistik, Vergi, Net kâr ve Maliyeti Olmayan Ürünler dışındaki her kutucuğa değişimi ve karşılaştırma döneminin rakamını ekler. Satış geliri, Alınan tutar, Brüt kâr, Siparişler, Ortalama sipariş, Toplam indirim ve Hizmet verilen müşteri kutucuklarının her birinde “▼ %3 · Geçen ay ile kıyasla” gibi bir karşılaştırma satırı görünür."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "İstatistik Bu Hafta döneminde ve Karşılaştır Geçen hafta olarak ayarlı: karşılaştırma çubuğu ile ilk kutucuk sırası, her kutucuğun altında değişim ve karşılaştırma rakamıyla görünüyor",
+        "alt": "Bu Hafta seçiliyken Karşılaştır Geçen hafta olarak ayarlanmış İstatistik; karşılaştırma çubuğu ve ilk kutucuk sırası, her kutucuğun değişimi ve altındaki karşılaştırma rakamıyla birlikte görünüyor",
         "caption": "İki dönemin rakamlarını görmek için bir kutucuğun altındaki herhangi bir karşılaştırma satırına dokunarak Dönem karşılaştırması'nı açın."
       },
       {
         "type": "p",
-        "text": "Toplam indirimdeki değişim her zaman gri görünür, çünkü daha fazla indirim kendi başına ne iyidir ne kötü. İki dönemin rakamlarını listeleyen Dönem karşılaştırması'nı açmak için herhangi bir karşılaştırma satırına dokunun. Eğilim grafiğine karşılaştırma dönemi için daha açık renkli bir çizgi eklenir. Dönem henüz sürüyorsa karşılaştırma dönemi de aynı ana kadar kesilir."
-      },
-      {
-        "type": "h2",
-        "text": "Haftanın günü × saat"
-      },
-      {
-        "type": "p",
-        "text": "Yedi gün ve 24 saatlik bir ısı haritası görmek için eğilim grafiğinin başlığını Trend'den Haftanın günü × saat'e çevirin. Bir hücre ne kadar koyuysa o saatte o kadar çok satış yapmışsınızdır. Isı haritasını satış geliri ile sipariş sayısı arasında değiştirebilirsiniz. Karşılaştır altında bir karşılaştırma açıkken ısı haritası hangi saatlerin arttığını, hangilerinin azaldığını da gösterir."
-      },
-      {
-        "type": "h2",
-        "text": "Yavaş Satan Ürünler"
-      },
-      {
-        "type": "p",
-        "text": "Ürünleri en az satandan en çok satana doğru listelemek için sıralama kartının başlığını Yavaş Satan Ürünler olarak değiştirin. Her satır, ürünün güncel stokunu ve son satıldığı tarihi gösterir. Hiç satılmayan ürünler Hiç satılmadı olarak işaretlenir; varyantı olan bir ürün her varyant için ayrı bir satır alır. Varsayılan olarak yalnızca stokta olan ürünler gösterilir."
+        "text": "Toplam indirimdeki değişim her zaman gridir, çünkü daha fazla indirim kendi başına ne iyi ne de kötüdür. İki dönemin rakamlarını listeleyen Dönem karşılaştırması'nı açmak için herhangi bir karşılaştırma satırına dokunun. Eğilim grafiği, karşılaştırma dönemi için daha açık renkli bir çizgi ekler. Bir dönem hâlâ sürüyorsa karşılaştırma dönemi de aynı ana kadar kesilir."
       },
       {
         "type": "h2",
@@ -1519,69 +1537,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Karşılaştırma dönemine göre satış geliri en çok artan 3 ürünü ve en çok düşen 3 ürünü görmek için sıralama kartının başlığını Hareketliler olarak değiştirin. Her satır iki dönemdeki satış gelirini ve farkı gösterir; her varyant yalnızca kendisiyle karşılaştırılır."
+        "text": "Sıralama kartının başlığını Hareketliler'e çevirirseniz karşılaştırma dönemine göre geliri en çok artan 3 ürünü ve en çok düşen 3 ürünü görürsünüz. Her satır iki dönemin gelirini ve farkı gösterir; her varyant yalnızca kendisiyle karşılaştırılır."
       },
       {
         "type": "p",
-        "text": "Önce Karşılaştır altından bir dönem seçin. Karşılaştır Yok olarak ayarlıyken ya da dönem Tüm dönem olduğunda kart sizden bir karşılaştırma dönemi seçmenizi ister. Hareketli ürünler listesinin tamamını açmak için karta ya da Tümünü gör düğmesine dokunun; liste Yükselenler ve Düşenler olarak ikiye ayrılır."
+        "text": "Önce Karşılaştır altından bir dönem seçin. Karşılaştır Yok olarak ayarlıysa ya da dönem Tüm dönem ise kart, bir karşılaştırma dönemi seçmenizi söyler. Yükselenler ve Düşenler olarak ayrılmış Hareketli ürünler listesinin tamamını açmak için karta ya da Tümünü gör'e dokunun."
       },
       {
         "type": "h2",
-        "text": "Tekrar alışveriş oranı"
+        "text": "Isı haritası ve tekrar alışveriş oranı"
       },
       {
         "type": "p",
-        "text": "Hizmet verilen müşteri kutucuğunun son satırı, tekrar alışveriş oranını “Tekrar alışveriş oranı … · … üye geri döndü” biçiminde gösterir. Bu oran, seçili dönemde alışveriş yapan ve toplamda iki veya daha fazla kez alışveriş yapmış üyelerin payıdır. Karşılaştır altında bir karşılaştırma açıkken, altındaki bir satır yüzde puanı cinsinden değişimi ve karşılaştırma döneminin oranını gösterir."
-      },
-      {
-        "type": "h2",
-        "text": "Kategoriye göre pay"
-      },
-      {
-        "type": "p",
-        "text": "Kategoriye göre pay, her kategorinin satış gelirini ve payını, ürünün güncel kategorisine göre en büyükten küçüğe doğru listeler. Kategorisi olmayan ürünler Kategorisiz altında toplanır; satırların toplamı Satış gelirine tam olarak eşittir."
-      },
-      {
-        "type": "h2",
-        "text": "Şu anda"
-      },
-      {
-        "type": "p",
-        "text": "Şu anda, stok ve puanlarla ilgili üç ayrıntı gösterir:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Stok değeri: güncel stok × güncel maliyet olarak hesaplanır.",
-          "Seçili dönemdeki tüm stok hareketleri.",
-          "Müşterilerin elinde duran, henüz kullanılmamış puanlar ve bunlarla yapılabilecek en yüksek indirim."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Stok değeri ve kullanılmamış puanlar güncel rakamlardır; bu yüzden üstteki dönemi değiştirmek onları değiştirmez."
-      },
-      {
-        "type": "h2",
-        "text": "Planlar ve yetkiler"
-      },
-      {
-        "type": "p",
-        "text": "v3.4'ten beri tüm gelişmiş raporlar Lite dahil her planda açıktır ve deneme bittikten sonra da açık kalır. Hareketliler de v3.4'te eklendi. Önceki sürümlerde gelişmiş raporlar yalnızca Pro'da gösteriliyor, diğer planlarda küçük bir kilit görünüyordu; kilitleri hâlâ görüyorsanız DingPOS'u App Store'dan güncelleyin."
-      },
-      {
-        "type": "p",
-        "text": "Lite stok ya da sadakat puanı takibi yapmaz; yine de Şu anda bölümü, mağazanızın zaten elinde bulunan stok değerini ve kullanılmamış puanları (örneğin denemeden kalanları) gösterir, yoksa sıfır görünür."
-      },
-      {
-        "type": "note",
-        "text": "Personel gelişmiş raporları İstatistik yetkisi altında görür; Stok değeri tutarları için ayrıca Maliyet ve kâr yetkisi gerekir."
+        "text": "Karşılaştırma açıkken eğilim grafiğindeki Haftanın günü × saat ısı haritası hangi saatlerin büyüdüğünü ve hangilerinin küçüldüğünü de gösterir; Hizmet verilen müşteri kutucuğundaki tekrar alışveriş oranına ise yüzde puan cinsinden değişimi ve karşılaştırma döneminin oranını gösteren bir satır eklenir."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2947,7 +2920,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plan o andan itibaren geçerli olur. Deneme bittikten sonra personel ve etkinlik günlüğü gibi Pro özellikleri yalnızca Pro abonelikle kullanılabilir. Gelişmiş raporlar için abonelik gerekmez; v3.4'ten beri her plana dahildir."
+        "text": "Deneme sırasında herhangi bir plana abone olursanız deneme hemen sona erer ve satın aldığınız plan o andan itibaren geçerli olur. Deneme bittikten sonra personel ve etkinlik günlüğü gibi Pro özellikleri yalnızca Pro abonelikle kullanılabilir. İstatistik için abonelik gerekmez; her plan İstatistik'in tamamını içerir."
       },
       {
         "type": "p",
@@ -3008,7 +2981,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları (gelişmiş raporlar ve aylık Kâr/Zarar v3.4'ten beri, vergi raporu ve dışa aktarımı v3.6'dan beri dahil) ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
+        "text": "Üç plan da eksiksiz ödeme işlemlerini, ürünleri, siparişleri (geçersiz kılma, ürün iadesi ve değişim dahil), raporları (İstatistik'in tamamı ve aylık Kâr/Zarar v3.4'ten beri, vergi raporu ve dışa aktarımı v3.6'dan beri dahil) ve bulut yedeklemeyi içerir. Aralarındaki fark, dükkânı yönetmeye yarayan araçlardadır:"
       },
       {
         "type": "list",

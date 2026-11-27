@@ -1327,10 +1327,11 @@ export const articles = [
       "période",
       "cette semaine",
       "ce mois-ci",
-      "cette année",
       "période personnalisée",
       "top produits",
-      "comparer"
+      "produits à faible rotation",
+      "jour × heure",
+      "valeur du stock"
     ],
     "content": [
       {
@@ -1360,7 +1361,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "La tuile Taxe et le rapport de taxes suivent eux aussi la période choisie : définir une période de déclaration avec Personnalisée met donc les deux à jour ; voir l’article sur le rapport de taxes pour le détail. À droite de la barre de période, touchez Comparer pour afficher la période choisie à côté de la précédente ou de la même période l’an dernier ; voir l’article sur les rapports avancés pour le détail."
+        "text": "La tuile Taxe et le rapport de taxes suivent eux aussi la période choisie : définir une période de déclaration avec Personnalisée met donc les deux à jour ; voir l’article sur le rapport de taxes pour le détail. À droite de la barre de période, touchez Comparer pour afficher la période choisie à côté de la précédente ou de la même période l’an dernier ; voir l’article sur la comparaison de périodes pour le détail."
       },
       {
         "type": "h2",
@@ -1395,7 +1396,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Le menu en haut à droite du graphique d’évolution des ventes le fait basculer entre Chiffre d’affaires, Commandes, Commande moyenne et Clients servis. Le graphique propose aussi un sélecteur Évolution et Jour × heure ; voir l’article sur les rapports avancés pour cette vue. À côté, le graphique Coût et marge brute empile dans une même barre le coût des produits et la marge brute de chaque période. Une seule journée est tracée heure par heure, tandis que les périodes plus longues regroupent les données par jours, semaines, mois ou années selon leur durée."
+        "text": "Le menu en haut à droite du graphique d’évolution des ventes le fait basculer entre Chiffre d’affaires, Commandes, Commande moyenne et Clients servis. À côté, le graphique Coût et marge brute empile dans une même barre le coût des produits et la marge brute de chaque période. Une seule journée est tracée heure par heure, tandis que les périodes plus longues regroupent les données par jours, semaines, mois ou années selon leur durée."
       },
       {
         "type": "p",
@@ -1403,7 +1404,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Faites passer l’en-tête du graphique d’évolution d’Évolution à Jour × heure pour afficher une carte thermique de sept jours sur 24 heures. Plus une case est foncée, plus vous avez vendu pendant cette heure, et vous pouvez basculer la carte entre chiffre d’affaires et commandes."
+      },
+      {
+        "type": "p",
         "text": "Top produits liste les 5 premiers produits de la période choisie. Touchez la carte ou Tout afficher pour lister tous les produits vendus sur cette période, classés par quantité après retours. Un produit avec variantes occupe une ligne par variante."
+      },
+      {
+        "type": "p",
+        "text": "Faites passer l’en-tête de la carte de classement sur Produits à faible rotation pour lister les produits du moins vendu au plus vendu. Chaque ligne affiche le stock actuel du produit et la date de sa dernière vente. Les produits jamais vendus sont marqués Jamais vendu, et seuls les produits en stock sont affichés par défaut. L’en-tête Variations liste les produits dont le chiffre d’affaires a le plus augmenté ou le plus baissé par rapport à une période de comparaison ; voir l’article sur la comparaison de périodes."
+      },
+      {
+        "type": "h2",
+        "text": "Répartition par catégorie, taux de réachat et Situation actuelle"
+      },
+      {
+        "type": "p",
+        "text": "Répartition par catégorie liste le chiffre d’affaires et la part de chaque catégorie, de la plus grande à la plus petite, selon la catégorie actuelle de chaque produit. Les produits sans catégorie sont regroupés sous Sans catégorie, et les lignes s’additionnent exactement au chiffre d’affaires."
+      },
+      {
+        "type": "p",
+        "text": "La dernière ligne de la tuile Clients servis affiche le taux de réachat sous la forme « Taux de réachat … · … membres revenus ». Il indique la part des membres ayant acheté sur la période choisie et ayant acheté au moins deux fois au total."
+      },
+      {
+        "type": "p",
+        "text": "Situation actuelle affiche trois informations sur le stock et les points :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Valeur du stock, calculée comme stock actuel × coût actuel.",
+          "Tous les mouvements de stock de la période sélectionnée.",
+          "Les points que les clients détiennent sans les avoir utilisés, avec le montant maximal qu’ils permettent de déduire."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "La valeur du stock et les points non utilisés sont des soldes à l’instant T : modifier la période en haut ne les change donc pas."
+      },
+      {
+        "type": "note",
+        "text": "Le personnel accède à Stats avec la permission Stats ; les montants de la valeur du stock nécessitent aussi la permission Coûts et marges."
       },
       {
         "type": "note",
@@ -1411,43 +1452,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Que montrent les rapports avancés ?",
+    "question": "Comment comparer mes ventes avec la semaine dernière, le mois dernier ou l’an dernier ?",
     "keywords": [
-      "rapports avancés",
-      "Stats",
       "comparer",
       "comparaison de périodes",
-      "jour × heure",
-      "carte thermique",
-      "heures de pointe",
-      "produits à faible rotation",
+      "semaine dernière",
+      "mois dernier",
+      "année dernière",
+      "même période l’an dernier",
       "variations",
-      "répartition par catégorie",
-      "valeur du stock",
+      "Stats",
+      "croissance",
       "taux de réachat"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Les rapports avancés ne sont pas un écran séparé : ils se trouvent dans Stats et suivent la période choisie en haut. Ils ajoutent des comparaisons de périodes, une carte thermique par jour et par heure, Produits à faible rotation, Variations, le taux de réachat des membres, Répartition par catégorie et une section Situation actuelle pour le stock et les points. Toutes les formules les incluent, et ils restent ouverts après la fin de l’essai."
+        "text": "Touchez Comparer à droite de la barre de période dans Stats et choisissez une période antérieure, comme Semaine dernière ou Année dernière. Chaque tuile indique alors de combien son chiffre a augmenté ou baissé, par exemple « ▼ 3 % vs Mois dernier », avec le chiffre de la période de comparaison en dessous."
       },
       {
         "type": "h2",
-        "text": "Comparer"
-      },
-      {
-        "type": "p",
-        "text": "Comparer se trouve à droite de la barre de période dans Stats et mesure la période choisie par rapport à une période antérieure."
+        "text": "Activer une comparaison"
       },
       {
         "type": "steps",
@@ -1488,22 +1523,6 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Jour × heure"
-      },
-      {
-        "type": "p",
-        "text": "Faites passer l’en-tête du graphique d’évolution d’Évolution à Jour × heure pour afficher une carte thermique de sept jours sur 24 heures. Plus une case est foncée, plus vous avez vendu pendant cette heure. Vous pouvez basculer la carte entre chiffre d’affaires et commandes. Avec une comparaison activée sous Comparer, la carte thermique montre aussi les heures en hausse et celles en baisse."
-      },
-      {
-        "type": "h2",
-        "text": "Produits à faible rotation"
-      },
-      {
-        "type": "p",
-        "text": "Faites passer l’en-tête de la carte de classement sur Produits à faible rotation pour lister les produits du moins vendu au plus vendu. Chaque ligne affiche le stock actuel du produit et la date de sa dernière vente. Les produits jamais vendus sont marqués Jamais vendu, et un produit avec variantes occupe une ligne par variante. Par défaut, seuls les produits en stock sont affichés."
-      },
-      {
-        "type": "h2",
         "text": "Variations"
       },
       {
@@ -1516,61 +1535,16 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Taux de réachat"
+        "text": "Carte thermique et taux de réachat"
       },
       {
         "type": "p",
-        "text": "La dernière ligne de la tuile Clients servis affiche le taux de réachat sous la forme « Taux de réachat … · … membres revenus ». Il indique la part des membres ayant acheté sur la période choisie et ayant acheté au moins deux fois au total. Avec une comparaison activée sous Comparer, une ligne en dessous donne l’écart en points de pourcentage et le taux de la période de comparaison."
-      },
-      {
-        "type": "h2",
-        "text": "Répartition par catégorie"
-      },
-      {
-        "type": "p",
-        "text": "Répartition par catégorie liste le chiffre d’affaires et la part de chaque catégorie, de la plus grande à la plus petite, selon la catégorie actuelle de chaque produit. Les produits sans catégorie sont regroupés sous Sans catégorie, et les lignes s’additionnent exactement au chiffre d’affaires."
-      },
-      {
-        "type": "h2",
-        "text": "Situation actuelle"
-      },
-      {
-        "type": "p",
-        "text": "Situation actuelle affiche trois informations sur le stock et les points :"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Valeur du stock, calculée comme stock actuel × coût actuel.",
-          "Tous les mouvements de stock de la période sélectionnée.",
-          "Les points que les clients détiennent sans les avoir utilisés, avec le montant maximal qu’ils permettent de déduire."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "La valeur du stock et les points non utilisés sont des soldes à l’instant T : modifier la période en haut ne les change donc pas."
-      },
-      {
-        "type": "h2",
-        "text": "Formules et permissions"
-      },
-      {
-        "type": "p",
-        "text": "Depuis la v3.4, tous les rapports avancés sont ouverts à toutes les formules, Lite comprise, et le restent après la fin de l’essai. Variations a aussi été ajouté dans la v3.4. Les versions antérieures ne montraient les rapports avancés qu’avec Pro, avec un petit cadenas sur les autres formules ; si vous voyez encore les cadenas, mettez à jour DingPOS depuis l’App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite ne suit ni le stock ni les points de fidélité, mais Situation actuelle affiche tout de même la valeur du stock et les points non utilisés que votre boutique détient déjà (par exemple depuis l’essai), ou zéro."
-      },
-      {
-        "type": "note",
-        "text": "Le personnel voit les rapports avancés avec la permission Stats ; les montants de la valeur du stock nécessitent aussi la permission Coûts et marges."
+        "text": "Avec une comparaison activée, la carte thermique Jour × heure du graphique d’évolution montre aussi quelles heures ont progressé et lesquelles ont reculé, et le taux de réachat de la tuile Clients servis gagne une ligne avec l’écart en points de pourcentage et le taux de la période de comparaison."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2937,7 +2911,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si vous souscrivez à une formule pendant l’essai, celui-ci prend fin immédiatement et la formule achetée s’applique dès lors. Après l’essai, les fonctions Pro comme le personnel et le journal d’activité ne restent disponibles qu’avec un abonnement Pro. Les rapports avancés n’en nécessitent pas : depuis la v3.4, toutes les formules les incluent."
+        "text": "Si vous souscrivez à une formule pendant l’essai, celui-ci prend fin immédiatement et la formule achetée s’applique dès lors. Après l’essai, les fonctions Pro comme le personnel et le journal d’activité ne restent disponibles qu’avec un abonnement Pro. Stats n’en nécessite pas ; toutes les formules l’incluent en entier."
       },
       {
         "type": "p",
@@ -2997,7 +2971,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Les trois formules comprennent l’encaissement complet, les produits, les commandes (avec invalidations, retours et échanges), les rapports (rapports avancés et compte de résultat mensuel inclus depuis la v3.4, le rapport de taxes et son export depuis la v3.6) et la sauvegarde dans le cloud. Elles se distinguent par les outils pour gérer votre boutique :"
+        "text": "Les trois formules comprennent l’encaissement complet, les produits, les commandes (avec invalidations, retours et échanges), les rapports (tout Stats et le compte de résultat mensuel depuis la v3.4, le rapport de taxes et son export depuis la v3.6) et la sauvegarde dans le cloud. Elles se distinguent par les outils pour gérer votre boutique :"
       },
       {
         "type": "list",

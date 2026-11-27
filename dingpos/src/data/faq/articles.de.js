@@ -1330,16 +1330,16 @@ export const articles = [
     "category": "reports",
     "question": "Für welche Zeiträume kann ich Berichte anzeigen?",
     "keywords": [
-      "Berichte",
       "Statistik",
+      "Berichte",
       "Zeitraum",
       "Diese Woche",
       "Dieser Monat",
-      "Dieses Jahr",
-      "benutzerdefinierter Zeitraum",
-      "Datum",
+      "Benutzerdefiniert",
       "Artikel-Ranking",
-      "Vergleichen"
+      "Ladenhüter",
+      "Wochentag × Uhrzeit",
+      "Lagerwert"
     ],
     "content": [
       {
@@ -1369,7 +1369,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Die Kachel „Steuer“ und der Steuerbericht folgen ebenfalls dem gewählten Zeitraum; ein Meldezeitraum, den Sie über Benutzerdefiniert festlegen, aktualisiert also beide – Details im verwandten Artikel zum Steuerbericht. Rechts in der Zeitraumleiste tippen Sie auf Vergleichen, um den gewählten Zeitraum neben dem davor oder neben demselben Zeitraum im Vorjahr zu sehen – Details im verwandten Artikel zu den erweiterten Berichten."
+        "text": "Die Kachel „Steuer“ und der Steuerbericht folgen ebenfalls dem gewählten Zeitraum; ein Meldezeitraum, den Sie über Benutzerdefiniert festlegen, aktualisiert also beide – Details im verwandten Artikel zum Steuerbericht. Rechts in der Zeitraumleiste tippen Sie auf Vergleichen, um den gewählten Zeitraum neben dem davor oder neben demselben Zeitraum im Vorjahr zu sehen – Details im verwandten Artikel zum Vergleich von Zeiträumen."
       },
       {
         "type": "h2",
@@ -1404,7 +1404,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Über das Menü oben rechts im Verlaufsdiagramm wechseln Sie zwischen „Umsatz“, „Verkäufe“, „Durchschnittlicher Verkaufswert“ und „Bediente Kunden“. Das Diagramm bietet außerdem den Umschalter Verlauf und Wochentag × Uhrzeit; diese Ansicht beschreibt der verwandte Artikel zu den erweiterten Berichten. Daneben stapelt das Diagramm „Kosten und Rohertrag“ in einem Balken pro Zeitabschnitt den Wareneinsatz und den Rohertrag. Ein einzelner Tag wird nach Stunden dargestellt, längere Zeiträume fassen je nach Länge Tage, Wochen, Monate oder Jahre zusammen."
+        "text": "Über das Menü oben rechts im Verlaufsdiagramm wechseln Sie zwischen „Umsatz“, „Verkäufe“, „Durchschnittlicher Verkaufswert“ und „Bediente Kunden“. Daneben stapelt das Diagramm „Kosten und Rohertrag“ in einem Balken pro Zeitabschnitt den Wareneinsatz und den Rohertrag. Ein einzelner Tag wird nach Stunden dargestellt, längere Zeiträume fassen je nach Länge Tage, Wochen, Monate oder Jahre zusammen."
       },
       {
         "type": "p",
@@ -1412,7 +1412,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Stellen Sie die Kopfzeile des Verlaufsdiagramms von Verlauf auf Wochentag × Uhrzeit um, um eine Heatmap mit sieben Tagen und 24 Stunden zu sehen. Je dunkler ein Feld ist, desto mehr haben Sie in dieser Stunde verkauft; die Heatmap lässt sich zwischen Umsatz und Verkäufen umschalten."
+      },
+      {
+        "type": "p",
         "text": "Artikel-Ranking listet die Top 5 Artikel des gewählten Zeitraums. Tippen Sie auf die Karte oder auf „Alle anzeigen“, um jeden in diesem Zeitraum verkauften Artikel zu sehen, sortiert nach Menge nach Rückgaben. Ein Artikel mit Varianten erscheint mit einer Zeile pro Variante."
+      },
+      {
+        "type": "p",
+        "text": "Stellen Sie die Kopfzeile der Ranking-Karte auf Ladenhüter um, um die Artikel vom am wenigsten bis zum am meisten verkauften aufzulisten. Jede Zeile zeigt den aktuellen Bestand des Artikels und das Datum des letzten Verkaufs. Artikel, die nie verkauft wurden, sind mit Nie verkauft markiert, und standardmäßig werden nur vorrätige Artikel angezeigt. Die Kopfzeile Auf und ab listet die Artikel, deren Umsatz gegenüber einem Vergleichszeitraum am stärksten gestiegen oder gefallen ist; siehe den verwandten Artikel zum Vergleich von Zeiträumen."
+      },
+      {
+        "type": "h2",
+        "text": "Anteil nach Kategorie, Wiederkaufrate und Aktuell"
+      },
+      {
+        "type": "p",
+        "text": "Anteil nach Kategorie listet Umsatz und Anteil jeder Kategorie, vom größten zum kleinsten, anhand der aktuellen Kategorie jedes Artikels. Artikel ohne Kategorie stehen unter Ohne Kategorie, und die Zeilen ergeben genau den Umsatz."
+      },
+      {
+        "type": "p",
+        "text": "Die letzte Zeile der Kachel „Bediente Kunden“ zeigt die Wiederkaufrate als „Wiederkaufrate … · … Mitglieder wiedergekommen“. Sie gibt den Anteil der Mitglieder an, die im gewählten Zeitraum gekauft haben und insgesamt mindestens zweimal gekauft haben."
+      },
+      {
+        "type": "p",
+        "text": "Aktuell zeigt drei Angaben zu Bestand und Punkten:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Lagerwert, berechnet als aktueller Bestand × aktueller Einkaufspreis.",
+          "Jede Lagerbewegung im gewählten Zeitraum.",
+          "Die Punkte, die Kunden besitzen und noch nicht eingelöst haben, samt dem höchsten Betrag, den sie damit abziehen können."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Lagerwert und nicht eingelöste Punkte sind aktuelle Stände; ein anderer Zeitraum oben ändert sie daher nicht."
+      },
+      {
+        "type": "note",
+        "text": "Mitarbeiter:innen sehen die Statistik mit der Berechtigung Statistik; die Beträge beim Lagerwert erfordern zusätzlich die Berechtigung Einkaufspreis & Rohertrag."
       },
       {
         "type": "note",
@@ -1420,45 +1460,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Was zeigen die erweiterten Berichte?",
+    "question": "Wie vergleiche ich den Umsatz mit der letzten Woche, dem letzten Monat oder dem Vorjahr?",
     "keywords": [
-      "erweiterte Berichte",
-      "Statistik",
       "Vergleichen",
       "Zeitraumvergleich",
+      "Vorwoche",
+      "Vormonat",
       "Vorjahr",
-      "Heatmap",
-      "Wochentag × Uhrzeit",
-      "Stoßzeiten",
-      "Ladenhüter",
+      "Vorjahreszeitraum",
       "Auf und ab",
-      "Anteil nach Kategorie",
-      "Lagerwert",
-      "Wiederkaufrate",
-      "Punkte"
+      "Statistik",
+      "Wachstum",
+      "Wiederkaufrate"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Erweiterte Berichte sind kein eigener Bildschirm; sie sitzen direkt in der Statistik und folgen dem Zeitraum, den Sie oben wählen. Sie ergänzen Zeitraumvergleiche, eine Heatmap nach Wochentag und Uhrzeit, Ladenhüter, Auf und ab, die Wiederkaufrate von Mitgliedern, Anteil nach Kategorie und den Bereich Aktuell für Bestand und Punkte. Alle sind in jedem Tarif enthalten und bleiben auch nach Ende der Testphase geöffnet."
+        "text": "Tippen Sie in der Statistik rechts in der Zeitraumleiste auf Vergleichen und wählen Sie einen früheren Zeitraum, etwa Vorwoche oder Vorjahr. Jede Kachel zeigt dann, um wie viel ihr Wert gestiegen oder gefallen ist, zum Beispiel „▼ 3 % ggü. Vormonat“, und darunter den Wert des Vergleichszeitraums."
       },
       {
         "type": "h2",
-        "text": "Vergleichen"
-      },
-      {
-        "type": "p",
-        "text": "Vergleichen steht rechts in der Zeitraumleiste der Statistik und misst den gewählten Zeitraum an einem früheren."
+        "text": "Einen Vergleich einschalten"
       },
       {
         "type": "steps",
@@ -1471,7 +1503,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Welche Optionen es gibt, hängt vom gewählten Zeitraum ab:"
+        "text": "Welche Optionen zur Wahl stehen, hängt vom gewählten Zeitraum ab:"
       },
       {
         "type": "list",
@@ -1485,33 +1517,17 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ist ein Vergleich aktiv, ergänzt die Statistik die Veränderung und den Wert des Vergleichszeitraums auf jeder Kachel außer Steuer, Reingewinn und Artikel ohne Einkaufspreis. Umsatz, Zahlungseingang, Rohertrag, Verkäufe, Durchschnittlicher Verkaufswert, Rabatte gesamt und Bediente Kunden zeigen jeweils eine Vergleichszeile wie „▼ 3 % ggü. Vormonat“."
+        "text": "Ist ein Vergleich aktiv, ergänzt die Statistik bei jeder Kachel außer Steuer, Reingewinn und Artikel ohne Einkaufspreis die Veränderung und den Wert des Vergleichszeitraums. Umsatz, Zahlungseingang, Rohertrag, Verkäufe, Durchschnittlicher Verkaufswert, Rabatte gesamt und Bediente Kunden zeigen jeweils eine Vergleichszeile wie „▼ 3 % ggü. Vormonat“."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "Statistik für Diese Woche mit Vergleichen auf Vorwoche: die Vergleichsleiste und die erste Kachelreihe, darunter jeweils Veränderung und Vergleichswert",
-        "caption": "Tippen Sie auf eine Vergleichszeile unter einer Kachel, um „Zeitraumvergleich“ zu öffnen und die Werte beider Zeiträume zu sehen."
+        "alt": "Statistik auf Diese Woche mit Vergleichen auf Vorwoche: Vergleichsleiste und erste Kachelreihe, darunter bei jeder Kachel Veränderung und Vergleichswert",
+        "caption": "Tippen Sie auf eine Vergleichszeile unter einer Kachel, um den Zeitraumvergleich zu öffnen und die Werte beider Zeiträume zu sehen."
       },
       {
         "type": "p",
-        "text": "Die Veränderung bei „Rabatte gesamt“ ist immer grau, denn mehr Rabatt ist an sich weder gut noch schlecht. Tippen Sie auf eine beliebige Vergleichszeile, um „Zeitraumvergleich“ zu öffnen, der die Werte beider Zeiträume auflistet. Das Verlaufsdiagramm erhält eine hellere Linie für den Vergleichszeitraum. Läuft ein Zeitraum noch, wird der Vergleichszeitraum zum gleichen Zeitpunkt abgeschnitten."
-      },
-      {
-        "type": "h2",
-        "text": "Wochentag × Uhrzeit"
-      },
-      {
-        "type": "p",
-        "text": "Stellen Sie die Kopfzeile des Verlaufsdiagramms von Verlauf auf Wochentag × Uhrzeit um, um eine Heatmap mit sieben Tagen und 24 Stunden zu sehen. Je dunkler ein Feld, desto mehr haben Sie in dieser Stunde verkauft. Sie können die Heatmap zwischen Umsatz und Verkäufen umschalten. Ist unter Vergleichen ein Vergleich eingeschaltet, zeigt die Heatmap außerdem, welche Stunden gewachsen und welche geschrumpft sind."
-      },
-      {
-        "type": "h2",
-        "text": "Ladenhüter"
-      },
-      {
-        "type": "p",
-        "text": "Stellen Sie die Kopfzeile der Ranking-Karte auf Ladenhüter um, um Artikel von den wenigsten bis zu den meisten Verkäufen aufzulisten. Jede Zeile zeigt den aktuellen Bestand des Artikels und das Datum des letzten Verkaufs. Artikel, die nie verkauft wurden, sind mit „Nie verkauft“ markiert, und ein Artikel mit Varianten erhält eine Zeile pro Variante. Standardmäßig werden nur Artikel mit Bestand angezeigt."
+        "text": "Die Veränderung bei „Rabatte gesamt“ ist immer grau, denn mehr Rabatt ist für sich genommen weder gut noch schlecht. Tippen Sie auf eine beliebige Vergleichszeile, um den Zeitraumvergleich zu öffnen, der die Werte beider Zeiträume auflistet. Das Verlaufsdiagramm ergänzt eine hellere Linie für den Vergleichszeitraum. Läuft ein Zeitraum noch, wird der Vergleichszeitraum zum gleichen Zeitpunkt abgeschnitten."
       },
       {
         "type": "h2",
@@ -1523,65 +1539,20 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wählen Sie vorher unter Vergleichen einen Zeitraum. Steht Vergleichen auf „Keiner“ oder ist der Zeitraum Gesamter Zeitraum, weist die Karte Sie darauf hin, einen Vergleichszeitraum zu wählen. Tippen Sie auf die Karte oder auf „Alle anzeigen“, um die vollständige Liste „Auf- und Absteiger bei Artikeln“ zu öffnen, aufgeteilt in Aufsteiger und Absteiger."
+        "text": "Wählen Sie zuerst unter Vergleichen einen Zeitraum. Steht Vergleichen auf Keiner oder ist der Zeitraum Gesamter Zeitraum, fordert die Karte Sie auf, einen Vergleichszeitraum zu wählen. Tippen Sie auf die Karte oder auf „Alle anzeigen“, um die vollständige Liste „Auf- und Absteiger bei Artikeln“ zu öffnen, aufgeteilt in Aufsteiger und Absteiger."
       },
       {
         "type": "h2",
-        "text": "Wiederkaufrate"
+        "text": "Heatmap und Wiederkaufrate"
       },
       {
         "type": "p",
-        "text": "Die letzte Zeile der Kachel „Bediente Kunden“ zeigt die Wiederkaufrate als „Wiederkaufrate … · … Mitglieder wiedergekommen“. Sie gibt den Anteil der Mitglieder an, die im gewählten Zeitraum gekauft haben und insgesamt mindestens zweimal gekauft haben. Ist unter Vergleichen ein Vergleich eingeschaltet, nennt eine Zeile darunter die Veränderung in Prozentpunkten und die Rate des Vergleichszeitraums."
-      },
-      {
-        "type": "h2",
-        "text": "Anteil nach Kategorie"
-      },
-      {
-        "type": "p",
-        "text": "Anteil nach Kategorie listet Umsatz und Anteil jeder Kategorie auf, die größte zuerst, nach der aktuellen Kategorie des jeweiligen Artikels. Artikel ohne Kategorie stehen unter „Ohne Kategorie“, und die Zeilen ergeben genau den Umsatz."
-      },
-      {
-        "type": "h2",
-        "text": "Aktuell"
-      },
-      {
-        "type": "p",
-        "text": "Aktuell zeigt drei Angaben zu Bestand und Punkten:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Lagerwert, berechnet als aktueller Bestand × aktueller Einkaufspreis.",
-          "Alle Lagerbewegungen im gewählten Zeitraum.",
-          "Die Punkte, die Kunden besitzen und noch nicht eingelöst haben, samt dem höchstmöglichen Abzug."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Lagerwert und nicht eingelöste Punkte sind aktuelle Stände; eine Änderung des Zeitraums oben ändert sie nicht."
-      },
-      {
-        "type": "h2",
-        "text": "Tarife und Berechtigungen"
-      },
-      {
-        "type": "p",
-        "text": "Seit Version 3.4 sind alle erweiterten Berichte in jedem Tarif geöffnet, auch in Lite, und bleiben es nach Ende der Testphase. Auf und ab kam ebenfalls mit Version 3.4 dazu. Frühere Versionen zeigten erweiterte Berichte nur in Pro, mit einem kleinen Schloss bei anderen Tarifen; wenn Sie die Schlösser noch sehen, aktualisieren Sie DingPOS im App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite erfasst weder Bestände noch Treuepunkte, aber Aktuell zeigt weiterhin den Lagerwert und die nicht eingelösten Punkte, die Ihr Laden bereits hält (zum Beispiel aus der Testphase) – oder null."
-      },
-      {
-        "type": "note",
-        "text": "Mitarbeiter:innen sehen erweiterte Berichte mit der Berechtigung „Statistik“; die Beträge beim Lagerwert erfordern zusätzlich die Berechtigung „Einkaufspreis & Rohertrag“."
+        "text": "Ist ein Vergleich eingeschaltet, zeigt die Heatmap Wochentag × Uhrzeit im Verlaufsdiagramm auch, welche Stunden gewachsen und welche geschrumpft sind, und die Wiederkaufrate in der Kachel „Bediente Kunden“ erhält eine Zeile mit der Veränderung in Prozentpunkten und der Rate des Vergleichszeitraums."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2950,7 +2921,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Wenn Sie während der Testphase einen Tarif abonnieren, endet die Testphase sofort, und ab dann gilt der gekaufte Tarif. Nach der Testphase bleiben Pro-Funktionen wie Personal und das Aktivitätsprotokoll nur mit einem Pro-Abonnement verfügbar. Erweiterte Berichte brauchen kein Pro-Abonnement; seit Version 3.4 enthält jeder Tarif sie."
+        "text": "Wenn Sie während der Testphase einen Tarif abonnieren, endet die Testphase sofort, und ab dann gilt der gekaufte Tarif. Nach der Testphase bleiben Pro-Funktionen wie Personal und das Aktivitätsprotokoll nur mit einem Pro-Abonnement verfügbar. Die Statistik braucht kein Pro-Abonnement; sie ist in jedem Tarif vollständig enthalten."
       },
       {
         "type": "p",
@@ -3011,7 +2982,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle drei Tarife enthalten die komplette Kasse, Artikel, Bestellungen (mit Annullierungen, Rückgaben und Umtausch), Berichte (erweiterte Berichte und die monatliche GuV seit Version 3.4 inklusive, der Steuerbericht und sein Export seit Version 3.6) und Cloud-Backup. Sie unterscheiden sich in den Werkzeugen für den Ladenalltag:"
+        "text": "Alle drei Tarife enthalten die komplette Kasse, Artikel, Bestellungen (mit Annullierungen, Rückgaben und Umtausch), Berichte (die gesamte Statistik und die monatliche GuV seit Version 3.4, der Steuerbericht und sein Export seit Version 3.6) und Cloud-Backup. Sie unterscheiden sich in den Werkzeugen für den Ladenalltag:"
       },
       {
         "type": "list",

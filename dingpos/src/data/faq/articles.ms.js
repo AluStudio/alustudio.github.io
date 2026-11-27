@@ -1327,8 +1327,9 @@ export const articles = [
       "julat tersuai",
       "julat tarikh",
       "kedudukan produk",
-      "produk terlaris",
-      "banding"
+      "produk jualan perlahan",
+      "hari dalam minggu × jam",
+      "nilai stok"
     ],
     "content": [
       {
@@ -1358,7 +1359,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jubin Cukai dan laporan cukai juga mengikut tempoh yang dipilih, jadi menetapkan julat pemfailan dengan Tersuai mengemas kini kedua-duanya; lihat artikel laporan cukai yang berkaitan untuk butiran. Di sebelah kanan bar tempoh, ketik Banding untuk melihat tempoh yang dipilih bersebelahan dengan tempoh sebelumnya atau tempoh yang sama tahun lepas; lihat artikel laporan lanjutan yang berkaitan untuk butiran."
+        "text": "Jubin Cukai dan laporan cukai juga mengikut tempoh yang dipilih, jadi menetapkan julat pemfailan dengan Tersuai mengemas kini kedua-duanya; lihat artikel laporan cukai yang berkaitan untuk butiran. Di sebelah kanan bar tempoh, ketik Banding untuk melihat tempoh yang dipilih bersebelahan dengan tempoh sebelumnya atau tempoh yang sama tahun lepas; lihat artikel berkaitan tentang membandingkan tempoh untuk butiran."
       },
       {
         "type": "h2",
@@ -1393,7 +1394,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Menu di bahagian kanan atas carta trend jualan menukarnya antara Hasil Jualan, Pesanan, Purata Pesanan dan Pelanggan Dilayan. Carta itu juga menawarkan suis Trend dan Hari dalam minggu × jam; lihat artikel laporan lanjutan yang berkaitan untuk paparan itu. Di sebelahnya, carta Kos dan untung kasar menyusun kos produk dan untung kasar setiap tempoh dalam satu bar. Satu hari dipaparkan mengikut jam, manakala tempoh yang lebih panjang mengumpulkan data mengikut hari, minggu, bulan atau tahun bergantung pada panjangnya."
+        "text": "Menu di bahagian kanan atas carta trend jualan menukarnya antara Hasil Jualan, Pesanan, Purata Pesanan dan Pelanggan Dilayan. Di sebelahnya, carta Kos dan untung kasar menyusun kos produk dan untung kasar setiap tempoh dalam satu bar. Satu hari dipaparkan mengikut jam, manakala tempoh yang lebih panjang mengumpulkan data mengikut hari, minggu, bulan atau tahun bergantung pada panjangnya."
       },
       {
         "type": "p",
@@ -1401,7 +1402,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Tukar pengepala carta trend daripada Trend kepada Hari dalam minggu × jam untuk melihat peta haba tujuh hari kali 24 jam. Semakin gelap sesuatu sel, semakin banyak anda menjual pada jam itu, dan anda boleh menukar peta haba antara hasil jualan dengan pesanan."
+      },
+      {
+        "type": "p",
         "text": "Kad Produk menyenaraikan 5 produk teratas untuk tempoh yang dipilih. Ketik kad itu atau ketik Lihat semua untuk menyenaraikan setiap produk yang dijual dalam tempoh itu, disusun mengikut kuantiti selepas pemulangan. Produk yang mempunyai varian dipaparkan sebagai satu baris bagi setiap varian."
+      },
+      {
+        "type": "p",
+        "text": "Tukar pengepala kad Produk kepada Produk Jualan Perlahan untuk menyenaraikan produk daripada jualan paling sedikit kepada paling banyak. Setiap baris menunjukkan stok semasa produk dan tarikh terakhir ia dijual. Produk yang tidak pernah dijual ditandakan Tidak pernah dijual, dan secara lalai hanya produk yang ada stok dipaparkan. Pengepala Pergerakan menyenaraikan produk yang hasil jualannya paling banyak naik atau turun berbanding tempoh perbandingan; lihat artikel berkaitan tentang membandingkan tempoh."
+      },
+      {
+        "type": "h2",
+        "text": "Bahagian mengikut kategori, kadar berulang dan Sekarang"
+      },
+      {
+        "type": "p",
+        "text": "Bahagian mengikut kategori menyenaraikan hasil jualan dan bahagian setiap kategori, disusun daripada terbesar kepada terkecil, berdasarkan kategori semasa setiap produk. Produk tanpa kategori disenaraikan di bawah Tiada kategori, dan baris-barisnya berjumlah tepat dengan Hasil Jualan."
+      },
+      {
+        "type": "p",
+        "text": "Baris terakhir jubin Pelanggan Dilayan memaparkan kadar berulang sebagai \"Berulang … · … ahli kembali\". Ia menunjukkan bahagian ahli yang membeli dalam tempoh yang dipilih dan telah membeli dua kali atau lebih secara keseluruhan."
+      },
+      {
+        "type": "p",
+        "text": "Sekarang menunjukkan tiga butiran tentang inventori dan mata:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nilai stok, dikira sebagai stok semasa × kos semasa.",
+          "Setiap pergerakan stok dalam tempoh yang dipilih.",
+          "Mata yang dipegang pelanggan dan belum ditebus, bersama jumlah maksimum yang boleh ditolak."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Nilai stok dan mata yang belum ditebus ialah baki semasa, jadi menukar tempoh di bahagian atas tidak mengubahnya."
+      },
+      {
+        "type": "note",
+        "text": "Kakitangan melihat Statistik di bawah kebenaran Statistik; jumlah Nilai stok juga memerlukan kebenaran Kos & untung."
       },
       {
         "type": "note",
@@ -1409,43 +1450,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Apakah yang dipaparkan oleh laporan lanjutan?",
+    "question": "Bagaimana saya membandingkan jualan dengan minggu lepas, bulan lepas atau tahun lepas?",
     "keywords": [
-      "laporan lanjutan",
-      "statistik",
       "banding",
       "perbandingan tempoh",
-      "hari dalam minggu × jam",
-      "peta haba",
-      "produk jualan perlahan",
-      "pergerakan",
-      "bahagian mengikut kategori",
-      "nilai stok",
-      "kadar belian berulang",
-      "mata"
+      "minggu lepas",
+      "bulan lepas",
+      "tahun lepas",
+      "tempoh yang sama tahun lepas",
+      "pergerakan produk",
+      "statistik",
+      "pertumbuhan jualan",
+      "kadar berulang"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Laporan lanjutan bukan skrin berasingan; ia terletak pada Statistik dan mengikut tempoh yang anda pilih di bahagian atas. Ia menambah perbandingan tempoh, peta haba hari dalam minggu dan jam, Produk Jualan Perlahan, Pergerakan, kadar belian berulang ahli, Bahagian mengikut kategori, dan bahagian Sekarang untuk stok dan mata. Setiap pelan menyertakan kesemuanya, dan ia kekal terbuka selepas percubaan tamat."
+        "text": "Ketik Banding di sebelah kanan bar tempoh pada Statistik dan pilih tempoh terdahulu, seperti Minggu lepas atau Tahun lepas. Setiap jubin kemudian menunjukkan berapa banyak angkanya naik atau turun, seperti \"▼ 3% berbanding Bulan lepas\", dengan angka tempoh perbandingan di bawahnya."
       },
       {
         "type": "h2",
-        "text": "Banding"
-      },
-      {
-        "type": "p",
-        "text": "Banding terletak di sebelah kanan bar tempoh pada Statistik dan mengukur tempoh yang dipilih berbanding tempoh yang lebih awal."
+        "text": "Menghidupkan perbandingan"
       },
       {
         "type": "steps",
@@ -1458,7 +1493,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pilihan yang tersedia bergantung pada tempoh yang anda pilih:"
+        "text": "Pilihan yang ada bergantung pada tempoh yang anda pilih:"
       },
       {
         "type": "list",
@@ -1472,7 +1507,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Apabila perbandingan aktif, Statistik menambah perubahan dan angka tempoh perbandingan pada setiap jubin kecuali Cukai, Untung bersih dan Produk Tanpa Kos. Hasil Jualan, Tunai Diterima, Untung kasar, Pesanan, Purata Pesanan, Jumlah Diskaun dan Pelanggan Dilayan masing-masing memaparkan baris perbandingan seperti “▼ 3% berbanding Bulan lepas”."
+        "text": "Apabila perbandingan aktif, Statistik menambah perubahan dan angka tempoh perbandingan pada setiap jubin kecuali Cukai, Untung bersih dan Produk Tanpa Kos. Hasil Jualan, Tunai Diterima, Untung kasar, Pesanan, Purata Pesanan, Jumlah Diskaun dan Pelanggan Dilayan masing-masing memaparkan baris perbandingan seperti \"▼ 3% berbanding Bulan lepas\"."
       },
       {
         "type": "shot",
@@ -1482,23 +1517,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Perubahan pada Jumlah Diskaun sentiasa kelabu, kerana diskaun yang lebih banyak bukan baik atau buruk dengan sendirinya. Ketik mana-mana baris perbandingan untuk membuka Perbandingan tempoh, yang menyenaraikan angka kedua-dua tempoh. Carta trend menambah garisan yang lebih pudar untuk tempoh perbandingan. Semasa sesuatu tempoh masih berjalan, tempoh perbandingan dipotong pada saat yang sama."
-      },
-      {
-        "type": "h2",
-        "text": "Hari dalam minggu × jam"
-      },
-      {
-        "type": "p",
-        "text": "Tukar pengepala carta trend daripada Trend kepada Hari dalam minggu × jam untuk melihat peta haba tujuh hari, 24 jam. Semakin gelap sesuatu sel, semakin banyak anda jual pada jam itu. Anda boleh menukar peta haba antara hasil jualan dan pesanan. Dengan perbandingan dihidupkan di bawah Banding, peta haba turut menunjukkan jam mana yang meningkat dan mana yang menurun."
-      },
-      {
-        "type": "h2",
-        "text": "Produk Jualan Perlahan"
-      },
-      {
-        "type": "p",
-        "text": "Tukar pengepala kad Produk kepada Produk Jualan Perlahan untuk menyenaraikan produk dari jualan paling sedikit hingga paling banyak. Setiap baris menunjukkan stok semasa produk dan tarikh terakhir ia dijual. Produk yang tidak pernah terjual ditandakan Tidak pernah dijual, dan produk yang mempunyai varian mendapat satu baris bagi setiap varian. Secara lalai, hanya produk yang ada stok dipaparkan."
+        "text": "Perubahan pada Jumlah Diskaun sentiasa kelabu, kerana diskaun yang lebih banyak tidak baik atau buruk dengan sendirinya. Ketik mana-mana baris perbandingan untuk membuka Perbandingan tempoh, yang menyenaraikan angka kedua-dua tempoh. Carta trend menambah garis yang lebih cerah untuk tempoh perbandingan. Semasa sesuatu tempoh masih berjalan, tempoh perbandingan dipotong pada saat yang sama."
       },
       {
         "type": "h2",
@@ -1506,69 +1525,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tukar pengepala kad Produk kepada Pergerakan untuk melihat 3 produk yang hasil jualannya naik paling banyak dan 3 yang turun paling banyak berbanding tempoh perbandingan. Setiap baris menunjukkan hasil jualan kedua-dua tempoh dan perbezaannya, dan setiap varian dibandingkan dengan dirinya sendiri."
+        "text": "Tukar pengepala kad Produk kepada Pergerakan untuk melihat 3 produk yang hasil jualannya paling banyak naik dan 3 yang paling banyak turun berbanding tempoh perbandingan. Setiap baris menunjukkan hasil jualan kedua-dua tempoh dan perbezaannya, dan setiap varian dibandingkan dengan dirinya sendiri."
       },
       {
         "type": "p",
-        "text": "Pilih tempoh di bawah Banding dahulu. Apabila Banding ditetapkan kepada Tiada, atau apabila tempoh ialah Sepanjang Masa, kad itu meminta anda memilih tempoh perbandingan. Ketik kad atau Lihat semua untuk membuka senarai penuh Pergerakan produk, dipisahkan kepada Meningkat dan Menurun."
+        "text": "Pilih tempoh di bawah Banding dahulu. Apabila Banding ditetapkan kepada Tiada, atau apabila tempoh ialah Sepanjang Masa, kad itu meminta anda memilih tempoh perbandingan. Ketik kad itu atau Lihat semua untuk membuka senarai penuh Pergerakan produk, dibahagikan kepada Meningkat dan Menurun."
       },
       {
         "type": "h2",
-        "text": "Kadar belian berulang"
+        "text": "Peta haba dan kadar berulang"
       },
       {
         "type": "p",
-        "text": "Baris terakhir jubin Pelanggan Dilayan memaparkan kadar belian berulang sebagai “Berulang … · … ahli kembali”. Ia menunjukkan peratusan ahli yang membeli dalam tempoh yang dipilih dan telah membeli dua kali atau lebih secara keseluruhan. Dengan perbandingan dihidupkan di bawah Banding, satu baris di bawahnya memberikan perubahan dalam mata peratus dan kadar tempoh perbandingan."
-      },
-      {
-        "type": "h2",
-        "text": "Bahagian mengikut kategori"
-      },
-      {
-        "type": "p",
-        "text": "Bahagian mengikut kategori menyenaraikan hasil jualan dan bahagian setiap kategori, disusun dari yang terbesar hingga terkecil, berdasarkan kategori semasa setiap produk. Produk tanpa kategori diletakkan di bawah Tiada kategori, dan jumlah semua baris tepat sama dengan Hasil Jualan."
-      },
-      {
-        "type": "h2",
-        "text": "Sekarang"
-      },
-      {
-        "type": "p",
-        "text": "Sekarang menunjukkan tiga butiran inventori dan mata:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Nilai stok, dikira sebagai stok semasa × kos semasa.",
-          "Setiap pergerakan stok dalam tempoh yang dipilih.",
-          "Mata yang dipegang pelanggan tetapi belum ditebus, bersama jumlah maksimum yang boleh ditolak."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Nilai stok dan mata yang belum ditebus ialah baki semasa, jadi menukar tempoh di bahagian atas tidak mengubahnya."
-      },
-      {
-        "type": "h2",
-        "text": "Pelan dan kebenaran"
-      },
-      {
-        "type": "p",
-        "text": "Sejak v3.4, semua laporan lanjutan terbuka pada setiap pelan, termasuk Lite, dan kekal terbuka selepas percubaan tamat. Pergerakan juga ditambah dalam v3.4. Versi terdahulu memaparkan laporan lanjutan pada Pro sahaja, dengan kunci kecil pada pelan lain; jika anda masih melihat kunci itu, kemas kini DingPOS daripada App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite tidak menjejak stok atau mata kesetiaan, tetapi Sekarang tetap menunjukkan nilai stok dan mata yang belum ditebus yang sudah ada pada kedai anda (contohnya daripada percubaan), atau sifar."
-      },
-      {
-        "type": "note",
-        "text": "Kakitangan melihat laporan lanjutan di bawah kebenaran Statistik; jumlah Nilai stok juga memerlukan kebenaran Kos & untung."
+        "text": "Dengan perbandingan dihidupkan, peta haba Hari dalam minggu × jam pada carta trend turut menunjukkan jam mana yang meningkat dan mana yang menyusut, dan kadar berulang pada jubin Pelanggan Dilayan mendapat satu baris dengan perubahan dalam mata peratusan dan kadar tempoh perbandingan."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2930,7 +2904,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta, dan pelan yang anda beli terpakai mulai saat itu. Selepas percubaan, ciri Pro seperti kakitangan dan log aktiviti hanya tersedia dengan langganan Pro. Laporan lanjutan tidak memerlukannya; sejak v3.4 setiap pelan menyertakannya."
+        "text": "Melanggan mana-mana pelan semasa percubaan akan menamatkan percubaan serta-merta, dan pelan yang anda beli terpakai mulai saat itu. Selepas percubaan, ciri Pro seperti kakitangan dan log aktiviti hanya tersedia dengan langganan Pro. Statistik tidak memerlukannya; setiap pelan menyertakan kesemuanya."
       },
       {
         "type": "p",
@@ -2991,7 +2965,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan (termasuk laporan lanjutan dan P&L bulanan sejak v3.4, laporan cukai dan eksportnya sejak v3.6) dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
+        "text": "Ketiga-tiga pelan merangkumi fungsi pembayaran yang lengkap, produk, pesanan (termasuk batalkan jualan, pemulangan dan tukar barang), laporan (semua Statistik dan P&L bulanan sejak v3.4, laporan cukai dan eksportnya sejak v3.6) dan sandaran awan. Perbezaannya ialah alat untuk menguruskan kedai:"
       },
       {
         "type": "list",

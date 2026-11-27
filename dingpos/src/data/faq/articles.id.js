@@ -1324,17 +1324,17 @@ export const articles = [
     "category": "reports",
     "question": "Laporan bisa menampilkan periode waktu apa saja?",
     "keywords": [
+      "statistik",
       "laporan",
       "periode laporan",
-      "statistik",
-      "hari ini",
+      "periode waktu",
       "minggu ini",
       "bulan ini",
-      "tahun ini",
-      "semua waktu",
       "rentang kustom",
       "peringkat produk",
-      "bandingkan periode"
+      "produk kurang laku",
+      "hari × jam",
+      "nilai persediaan"
     ],
     "content": [
       {
@@ -1364,7 +1364,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ubin Pajak dan laporan pajak juga mengikuti periode yang dipilih, jadi menetapkan rentang pelaporan dengan Kustom memperbarui keduanya; lihat artikel laporan pajak terkait untuk detailnya. Di sisi kanan bilah periode, ketuk Bandingkan untuk melihat periode yang dipilih berdampingan dengan periode sebelumnya atau periode yang sama tahun lalu; lihat artikel laporan lanjutan terkait untuk detailnya."
+        "text": "Ubin Pajak dan laporan pajak juga mengikuti periode yang dipilih, jadi menetapkan rentang pelaporan dengan Kustom memperbarui keduanya; lihat artikel laporan pajak terkait untuk detailnya. Di sisi kanan bilah periode, ketuk Bandingkan untuk melihat periode yang dipilih berdampingan dengan periode sebelumnya atau periode yang sama tahun lalu; lihat artikel terkait tentang perbandingan periode untuk detailnya."
       },
       {
         "type": "h2",
@@ -1399,7 +1399,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Menu di kanan atas grafik tren penjualan mengalihkannya antara Pendapatan, Pesanan, Rata-rata Pesanan, dan Pelanggan yang Membeli. Grafik ini juga punya pengalih Tren dan Hari × jam; lihat artikel laporan lanjutan terkait untuk tampilan itu. Di sebelahnya, grafik Harga Pokok dan Laba Kotor menumpuk harga pokok produk dan laba kotor tiap periode dalam satu batang. Satu hari digambar per jam, sedangkan periode yang lebih panjang mengelompokkan data per hari, minggu, bulan, atau tahun sesuai panjangnya."
+        "text": "Menu di kanan atas grafik tren penjualan mengalihkannya antara Pendapatan, Pesanan, Rata-rata Pesanan, dan Pelanggan yang Membeli. Di sebelahnya, grafik Harga Pokok dan Laba Kotor menumpuk harga pokok produk dan laba kotor tiap periode dalam satu batang. Satu hari digambar per jam, sedangkan periode yang lebih panjang mengelompokkan data per hari, minggu, bulan, atau tahun sesuai panjangnya."
       },
       {
         "type": "p",
@@ -1407,7 +1407,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Ubah header grafik tren dari Tren ke Hari × jam untuk melihat heatmap tujuh hari × 24 jam. Semakin gelap sebuah sel, semakin banyak penjualan Anda pada jam itu, dan heatmap bisa dialihkan antara pendapatan dan pesanan."
+      },
+      {
+        "type": "p",
         "text": "Peringkat Produk menampilkan 5 produk teratas pada periode yang dipilih. Ketuk kartunya atau ketuk Lihat semua untuk menampilkan setiap produk yang terjual pada periode itu, diurutkan menurut jumlah setelah retur. Produk dengan varian tampil sebagai satu baris per varian."
+      },
+      {
+        "type": "p",
+        "text": "Ubah header kartu peringkat ke Produk Kurang Laku untuk menampilkan produk dari yang paling sedikit terjual hingga yang paling banyak. Setiap baris menampilkan stok produk saat ini dan tanggal terakhir produk itu terjual. Produk yang belum pernah terjual diberi tanda Belum pernah terjual, dan secara bawaan hanya produk yang ada stoknya yang ditampilkan. Header Naik-Turun menampilkan produk yang pendapatannya paling naik atau turun dibanding periode pembanding; lihat artikel terkait tentang perbandingan periode."
+      },
+      {
+        "type": "h2",
+        "text": "Proporsi per Kategori, tingkat pembelian ulang, dan Saat ini"
+      },
+      {
+        "type": "p",
+        "text": "Proporsi per Kategori menampilkan pendapatan dan proporsi tiap kategori, diurutkan dari yang terbesar ke yang terkecil, berdasarkan kategori produk saat ini. Produk tanpa kategori dikelompokkan di bawah Tanpa kategori, dan jumlah semua barisnya persis sama dengan Pendapatan."
+      },
+      {
+        "type": "p",
+        "text": "Baris terakhir di ubin Pelanggan yang Membeli menampilkan tingkat pembelian ulang sebagai \"Pembelian ulang … · … anggota kembali\". Angka ini menunjukkan persentase anggota yang berbelanja pada periode yang dipilih dan secara total sudah berbelanja dua kali atau lebih."
+      },
+      {
+        "type": "p",
+        "text": "Saat ini menampilkan tiga rincian persediaan dan poin:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nilai persediaan, dihitung dari stok saat ini × harga pokok saat ini.",
+          "Setiap mutasi stok pada periode yang dipilih.",
+          "Poin yang dimiliki pelanggan dan belum ditukar, beserta potongan maksimum yang bisa diberikan."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Nilai persediaan dan poin yang belum ditukar adalah saldo saat ini, jadi mengubah periode di bagian atas tidak mengubahnya."
+      },
+      {
+        "type": "note",
+        "text": "Staf melihat Statistik dengan izin Statistik; jumlah Nilai persediaan juga memerlukan izin Harga pokok & laba."
       },
       {
         "type": "note",
@@ -1415,45 +1455,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Apa saja yang ditampilkan laporan lanjutan?",
+    "question": "Bagaimana cara membandingkan penjualan dengan minggu lalu, bulan lalu, atau tahun lalu?",
     "keywords": [
-      "laporan lanjutan",
-      "statistik",
-      "bandingkan periode",
+      "bandingkan",
       "perbandingan periode",
+      "minggu lalu",
+      "bulan lalu",
       "tahun lalu",
-      "peta panas",
-      "hari × jam",
-      "jam ramai",
-      "produk kurang laku",
+      "periode yang sama tahun lalu",
       "produk naik-turun",
-      "proporsi per kategori",
-      "nilai persediaan",
-      "tingkat pembelian ulang",
-      "poin"
+      "statistik",
+      "pertumbuhan penjualan",
+      "tingkat pembelian ulang"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Laporan lanjutan bukan layar terpisah; laporan ini ada di Statistik dan mengikuti periode yang Anda pilih di bagian atas. Isinya mencakup perbandingan periode, peta panas hari dan jam, Produk Kurang Laku, Naik-Turun, tingkat pembelian ulang anggota, Proporsi per Kategori, dan bagian Saat ini untuk stok dan poin. Semuanya tersedia di setiap paket, dan tetap terbuka setelah uji coba berakhir."
+        "text": "Ketuk Bandingkan di sisi kanan bilah periode pada Statistik, lalu pilih periode pembanding, seperti Minggu lalu atau Tahun lalu. Setiap ubin kemudian menampilkan seberapa besar angkanya naik atau turun, misalnya \"▼ 3% vs Bulan lalu\", dengan angka periode pembanding di bawahnya."
       },
       {
         "type": "h2",
-        "text": "Bandingkan"
-      },
-      {
-        "type": "p",
-        "text": "Bandingkan ada di sisi kanan bilah periode di Statistik dan membandingkan periode yang dipilih dengan periode sebelumnya."
+        "text": "Mengaktifkan perbandingan"
       },
       {
         "type": "steps",
@@ -1475,38 +1507,22 @@ export const articles = [
           "Minggu lalu membandingkan satu hari dengan hari yang sama minggu lalu, atau minggu ini dengan minggu lalu.",
           "Bulan lalu membandingkan bulan ini dengan bulan lalu.",
           "Tahun lalu membandingkan tahun ini dengan tahun lalu, atau membandingkan periode yang dipilih dengan periode yang sama tahun lalu.",
-          "Sebelumnya membandingkan rentang kustom dengan rentang yang jumlah harinya sama tepat sebelumnya."
+          "Sebelumnya membandingkan rentang kustom dengan rentang berjumlah hari yang sama tepat sebelum rentang itu."
         ]
       },
       {
         "type": "p",
-        "text": "Saat perbandingan aktif, Statistik menambahkan perubahan dan angka periode pembanding ke setiap ubin kecuali Pajak, Laba bersih, dan Produk Tanpa Harga Pokok. Pendapatan, Kas Diterima, Laba kotor, Pesanan, Rata-rata Pesanan, Total Diskon, dan Pelanggan yang Membeli masing-masing menampilkan baris perbandingan seperti “▼ 3% vs Bulan lalu”."
+        "text": "Saat perbandingan aktif, Statistik menambahkan perubahan dan angka periode pembanding ke setiap ubin kecuali Pajak, Laba bersih, dan Produk Tanpa Harga Pokok. Pendapatan, Kas Diterima, Laba kotor, Pesanan, Rata-rata Pesanan, Total Diskon, dan Pelanggan yang Membeli masing-masing menampilkan baris perbandingan seperti \"▼ 3% vs Bulan lalu\"."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "Statistik pada Minggu Ini dengan Bandingkan diatur ke Minggu lalu, menampilkan bilah perbandingan dan baris ubin pertama dengan perubahan dan angka pembanding di bawah tiap ubin",
+        "alt": "Statistik pada Minggu Ini dengan Bandingkan diatur ke Minggu lalu, menampilkan bilah perbandingan dan baris ubin pertama dengan perubahan dan angka pembanding tiap ubin di bawahnya",
         "caption": "Ketuk baris perbandingan mana pun di bawah ubin untuk membuka Perbandingan periode dan melihat angka kedua periode."
       },
       {
         "type": "p",
-        "text": "Perubahan pada Total Diskon selalu abu-abu, karena diskon yang lebih besar tidak otomatis baik atau buruk. Ketuk baris perbandingan mana pun untuk membuka Perbandingan periode, yang mencantumkan angka kedua periode. Grafik tren menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama."
-      },
-      {
-        "type": "h2",
-        "text": "Hari × jam"
-      },
-      {
-        "type": "p",
-        "text": "Ubah header grafik tren dari Tren ke Hari × jam untuk melihat peta panas tujuh hari × 24 jam. Semakin gelap sebuah sel, semakin banyak yang Anda jual pada jam itu. Peta panas bisa dialihkan antara pendapatan dan pesanan. Dengan perbandingan aktif di Bandingkan, peta panas juga menunjukkan jam mana yang naik dan mana yang turun."
-      },
-      {
-        "type": "h2",
-        "text": "Produk Kurang Laku"
-      },
-      {
-        "type": "p",
-        "text": "Ubah header kartu peringkat ke Produk Kurang Laku untuk menampilkan produk dari penjualan paling sedikit hingga paling banyak. Setiap baris menampilkan stok produk saat ini dan tanggal terakhir produk itu terjual. Produk yang belum pernah terjual ditandai Belum pernah terjual, dan produk dengan varian mendapat satu baris per varian. Secara default hanya produk yang ada stoknya yang ditampilkan."
+        "text": "Perubahan pada Total Diskon selalu berwarna abu-abu, karena diskon yang lebih besar tidak dengan sendirinya baik atau buruk. Ketuk baris perbandingan mana pun untuk membuka Perbandingan periode, yang mencantumkan angka kedua periode. Grafik tren menambahkan garis yang lebih terang untuk periode pembanding. Selama suatu periode masih berjalan, periode pembanding dipotong pada saat yang sama."
       },
       {
         "type": "h2",
@@ -1514,69 +1530,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ubah header kartu peringkat ke Naik-Turun untuk melihat 3 produk yang pendapatannya naik paling banyak dan 3 yang turun paling banyak dibandingkan periode pembanding. Setiap baris menampilkan pendapatan kedua periode dan selisihnya, dan setiap varian dibandingkan dengan dirinya sendiri."
+        "text": "Ubah header kartu peringkat ke Naik-Turun untuk melihat 3 produk yang pendapatannya paling naik dan 3 produk yang paling turun dibanding periode pembanding. Setiap baris menampilkan pendapatan kedua periode beserta selisihnya, dan setiap varian dibandingkan dengan dirinya sendiri."
       },
       {
         "type": "p",
-        "text": "Pilih dulu periode di Bandingkan. Jika Bandingkan diatur ke Tidak ada, atau periodenya Semua Waktu, kartu akan meminta Anda memilih periode pembanding. Ketuk kartu atau Lihat semua untuk membuka daftar lengkap Produk naik-turun, yang dibagi menjadi Naik dan Turun."
+        "text": "Pilih periode di bawah Bandingkan terlebih dahulu. Saat Bandingkan diatur ke Tidak ada, atau saat periodenya Semua Waktu, kartu meminta Anda memilih periode pembanding. Ketuk kartu atau Lihat semua untuk membuka daftar lengkap Produk naik-turun, yang dibagi menjadi Naik dan Turun."
       },
       {
         "type": "h2",
-        "text": "Tingkat pembelian ulang"
+        "text": "Heatmap dan tingkat pembelian ulang"
       },
       {
         "type": "p",
-        "text": "Baris terakhir ubin Pelanggan yang Membeli menampilkan tingkat pembelian ulang sebagai “Pembelian ulang … · … anggota kembali”. Angka ini menunjukkan persentase anggota yang membeli pada periode yang dipilih dan sudah membeli dua kali atau lebih secara total. Dengan perbandingan aktif di Bandingkan, satu baris di bawahnya menampilkan perubahan dalam poin persentase dan tingkat periode pembanding."
-      },
-      {
-        "type": "h2",
-        "text": "Proporsi per Kategori"
-      },
-      {
-        "type": "p",
-        "text": "Proporsi per Kategori mencantumkan pendapatan dan porsi tiap kategori, dari yang terbesar ke yang terkecil, menurut kategori produk saat ini. Produk tanpa kategori masuk ke Tanpa kategori, dan jumlah semua barisnya tepat sama dengan Pendapatan."
-      },
-      {
-        "type": "h2",
-        "text": "Saat ini"
-      },
-      {
-        "type": "p",
-        "text": "Saat ini menampilkan tiga rincian persediaan dan poin:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Nilai persediaan, dihitung dari stok saat ini × harga pokok saat ini.",
-          "Semua mutasi stok dalam periode yang dipilih.",
-          "Poin yang dimiliki pelanggan tetapi belum ditukar, beserta potongan maksimum yang bisa didapat."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Nilai persediaan dan poin yang belum ditukar adalah saldo saat ini, jadi mengganti periode di bagian atas tidak mengubahnya."
-      },
-      {
-        "type": "h2",
-        "text": "Paket dan izin"
-      },
-      {
-        "type": "p",
-        "text": "Sejak v3.4, semua laporan lanjutan terbuka di setiap paket, termasuk Lite, dan tetap terbuka setelah uji coba berakhir. Naik-Turun juga ditambahkan di v3.4. Versi sebelumnya menampilkan laporan lanjutan hanya di Pro, dengan ikon gembok kecil di paket lain; jika Anda masih melihat gembok, perbarui DingPOS dari App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite tidak melacak stok atau poin loyalitas, tetapi Saat ini tetap menampilkan Nilai persediaan dan poin yang belum ditukar yang sudah dimiliki toko Anda (misalnya dari masa uji coba), atau nol."
-      },
-      {
-        "type": "note",
-        "text": "Staf melihat laporan lanjutan melalui izin Statistik; jumlah Nilai persediaan juga memerlukan izin Harga pokok & laba."
+        "text": "Dengan perbandingan aktif, heatmap Hari × jam pada grafik tren juga menunjukkan jam mana yang naik dan mana yang turun, dan tingkat pembelian ulang pada ubin Pelanggan yang Membeli mendapat satu baris tambahan berisi perubahan dalam poin persentase dan tingkat periode pembanding."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2948,7 +2919,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Jika Anda berlangganan paket apa pun selama masa uji coba, uji coba langsung berakhir dan paket yang Anda beli berlaku sejak saat itu. Setelah uji coba, fitur Pro seperti staf dan log aktivitas hanya tersedia dengan langganan Pro. Laporan lanjutan tidak memerlukannya; sejak v3.4 semua paket sudah menyertakannya."
+        "text": "Jika Anda berlangganan paket apa pun selama masa uji coba, uji coba langsung berakhir dan paket yang Anda beli berlaku sejak saat itu. Setelah uji coba, fitur Pro seperti staf dan log aktivitas hanya tersedia dengan langganan Pro. Statistik tidak memerlukannya; semua paket sudah menyertakan seluruhnya."
       },
       {
         "type": "p",
@@ -3008,7 +2979,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan tindakan Batalkan penjualan (Void), retur, dan tukar barang), laporan (termasuk laporan lanjutan dan Laba Rugi bulanan sejak v3.4, laporan pajak beserta ekspornya sejak v3.6), dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
+        "text": "Ketiga paket mencakup fitur kasir lengkap, produk, pesanan (dengan tindakan Batalkan penjualan (Void), retur, dan tukar barang), laporan (seluruh Statistik dan Laba Rugi bulanan sejak v3.4, laporan pajak beserta ekspornya sejak v3.6), dan cadangan cloud. Bedanya ada pada alat untuk menjalankan toko:"
       },
       {
         "type": "list",

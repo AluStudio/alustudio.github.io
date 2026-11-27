@@ -1325,10 +1325,11 @@ export const articles = [
       "khoảng thời gian",
       "tuần này",
       "tháng này",
-      "năm nay",
       "tùy chỉnh",
       "xếp hạng sản phẩm",
-      "so sánh"
+      "hàng bán chậm",
+      "thứ × giờ",
+      "giá trị tồn kho"
     ],
     "content": [
       {
@@ -1358,7 +1359,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ô Thuế và báo cáo thuế cũng theo kỳ đã chọn, nên đặt kỳ khai thuế bằng Tùy chỉnh sẽ cập nhật cả hai; xem bài về báo cáo thuế liên quan để biết chi tiết. Ở bên phải thanh kỳ báo cáo, chạm So sánh để xem kỳ đã chọn cạnh kỳ liền trước hoặc cùng kỳ năm ngoái; xem bài về báo cáo nâng cao liên quan để biết chi tiết."
+        "text": "Ô Thuế và báo cáo thuế cũng theo kỳ đã chọn, nên đặt kỳ khai thuế bằng Tùy chỉnh sẽ cập nhật cả hai; xem bài về báo cáo thuế liên quan để biết chi tiết. Ở bên phải thanh kỳ báo cáo, chạm So sánh để xem kỳ đã chọn cạnh kỳ liền trước hoặc cùng kỳ năm ngoái; xem bài về so sánh các kỳ liên quan để biết chi tiết."
       },
       {
         "type": "h2",
@@ -1393,7 +1394,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Menu ở góc trên bên phải biểu đồ xu hướng bán hàng chuyển biểu đồ giữa Doanh thu, Đơn hàng, Giá trị đơn hàng trung bình và Khách đã phục vụ. Biểu đồ còn có nút chuyển giữa Xu hướng và Thứ × giờ; xem bài về báo cáo nâng cao liên quan để biết chế độ xem đó. Bên cạnh, biểu đồ Giá vốn và lợi nhuận gộp xếp giá vốn sản phẩm và lợi nhuận gộp của mỗi kỳ chồng lên nhau trong cùng một cột. Một ngày được vẽ theo giờ, còn các kỳ dài hơn gom dữ liệu theo ngày, tuần, tháng hoặc năm tùy độ dài."
+        "text": "Menu ở góc trên bên phải biểu đồ xu hướng bán hàng chuyển biểu đồ giữa Doanh thu, Đơn hàng, Giá trị đơn hàng trung bình và Khách đã phục vụ. Bên cạnh, biểu đồ Giá vốn và lợi nhuận gộp xếp giá vốn sản phẩm và lợi nhuận gộp của mỗi kỳ chồng lên nhau trong cùng một cột. Một ngày được vẽ theo giờ, còn các kỳ dài hơn gom dữ liệu theo ngày, tuần, tháng hoặc năm tùy độ dài."
       },
       {
         "type": "p",
@@ -1401,135 +1402,27 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Chuyển tiêu đề của biểu đồ xu hướng từ Xu hướng sang Thứ × giờ để xem bản đồ nhiệt gồm bảy ngày và 24 giờ. Ô càng đậm thì bạn bán được càng nhiều trong giờ đó, và bạn có thể chuyển bản đồ nhiệt giữa doanh thu và số đơn hàng."
+      },
+      {
+        "type": "p",
         "text": "Xếp hạng sản phẩm liệt kê 5 sản phẩm đứng đầu của kỳ đã chọn. Chạm vào thẻ hoặc chạm Xem tất cả để liệt kê mọi sản phẩm đã bán trong kỳ đó, xếp theo số lượng sau khi trừ hàng trả. Sản phẩm có biến thể được hiển thị một dòng cho mỗi biến thể."
       },
       {
-        "type": "note",
-        "text": "Các khoảng thời gian theo lịch này có từ phiên bản v2.4; các phiên bản cũ hơn dùng khoảng thời gian cuốn chiếu (Hôm nay / 7 ngày / 30 ngày / Toàn thời gian). Nếu bạn vẫn thấy các lựa chọn đó, hãy cập nhật DingPOS từ App Store."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked",
-      "tax-report"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "Báo cáo nâng cao hiển thị những gì?",
-    "keywords": [
-      "báo cáo nâng cao",
-      "Thống kê",
-      "so sánh",
-      "so sánh kỳ",
-      "bản đồ nhiệt thứ × giờ",
-      "giờ đông khách",
-      "hàng bán chậm",
-      "sản phẩm biến động",
-      "tỷ trọng theo danh mục",
-      "giá trị tồn kho",
-      "tỷ lệ mua lại"
-    ],
-    "content": [
-      {
         "type": "p",
-        "text": "Báo cáo nâng cao không phải một màn hình riêng; chúng nằm ngay trong Thống kê và theo kỳ bạn chọn ở đầu màn hình. Chúng bổ sung phần so sánh giữa các kỳ, bản đồ nhiệt theo thứ và giờ, Hàng bán chậm, Biến động, tỷ lệ mua lại của thành viên, Tỷ trọng theo danh mục và mục Hiện tại cho tồn kho và điểm. Mọi gói đều có tất cả các báo cáo này, và chúng vẫn mở sau khi hết dùng thử."
+        "text": "Chuyển tiêu đề của thẻ xếp hạng sang Hàng bán chậm để liệt kê sản phẩm từ bán ít nhất đến bán nhiều nhất. Mỗi dòng hiển thị tồn kho hiện tại của sản phẩm và ngày bán gần nhất. Sản phẩm chưa bán lần nào được đánh dấu Chưa từng bán, và mặc định chỉ hiển thị sản phẩm còn hàng. Tiêu đề Biến động liệt kê các sản phẩm có doanh thu tăng hoặc giảm nhiều nhất so với một kỳ so sánh; xem bài về so sánh các kỳ liên quan."
       },
       {
         "type": "h2",
-        "text": "So sánh"
+        "text": "Tỷ trọng theo danh mục, tỷ lệ mua lại và Hiện tại"
       },
       {
         "type": "p",
-        "text": "So sánh nằm ở bên phải thanh kỳ báo cáo trong Thống kê và đặt kỳ đã chọn cạnh một kỳ trước đó."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Mở Thống kê từ thanh bên.",
-          "Chọn một kỳ ở đầu màn hình.",
-          "Chạm So sánh ở bên phải thanh kỳ báo cáo.",
-          "Chọn một phương án so sánh trong menu."
-        ]
+        "text": "Tỷ trọng theo danh mục liệt kê doanh thu và tỷ trọng của từng danh mục, xếp từ lớn đến nhỏ, dựa trên danh mục hiện tại của mỗi sản phẩm. Sản phẩm không có danh mục được xếp vào Chưa phân loại, và tổng các dòng đúng bằng Doanh thu."
       },
       {
         "type": "p",
-        "text": "Các lựa chọn có sẵn phụ thuộc vào kỳ bạn chọn:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Không tắt chế độ so sánh.",
-          "Tuần trước so sánh một ngày với cùng ngày tuần trước, hoặc tuần này với tuần trước.",
-          "Tháng trước so sánh tháng này với tháng trước.",
-          "Năm trước so sánh năm nay với năm trước, hoặc so sánh kỳ đã chọn với cùng kỳ năm ngoái.",
-          "Kỳ trước so sánh một khoảng Tùy chỉnh với số ngày tương ứng ngay trước đó."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Khi đang so sánh, Thống kê thêm mức chênh lệch và số liệu của kỳ so sánh vào mọi ô trừ Thuế, Lợi nhuận ròng và Sản phẩm chưa có giá vốn. Các ô Doanh thu, Tiền đã thu, Lợi nhuận gộp, Đơn hàng, Giá trị đơn hàng trung bình, Tổng giảm giá và Khách đã phục vụ đều hiển thị một dòng so sánh như “▼ 3% so với Tháng trước”."
-      },
-      {
-        "type": "shot",
-        "name": "advanced-reports",
-        "alt": "Thống kê ở Tuần này với So sánh đặt là Tuần trước, hiển thị thanh so sánh và hàng ô đầu tiên, mỗi ô có mức chênh lệch và số liệu so sánh bên dưới",
-        "caption": "Chạm vào bất kỳ dòng so sánh nào dưới một ô để mở So sánh kỳ và xem số liệu của cả hai kỳ."
-      },
-      {
-        "type": "p",
-        "text": "Mức chênh lệch của Tổng giảm giá luôn có màu xám, vì giảm giá nhiều hơn tự nó không tốt cũng không xấu. Chạm vào bất kỳ dòng so sánh nào để mở So sánh kỳ, nơi liệt kê số liệu của cả hai kỳ. Biểu đồ xu hướng thêm một đường nhạt hơn cho kỳ so sánh. Khi một kỳ chưa kết thúc, kỳ so sánh được cắt ở đúng thời điểm tương ứng."
-      },
-      {
-        "type": "h2",
-        "text": "Thứ × giờ"
-      },
-      {
-        "type": "p",
-        "text": "Chuyển tiêu đề của biểu đồ xu hướng từ Xu hướng sang Thứ × giờ để xem bản đồ nhiệt bảy ngày, 24 giờ. Ô càng đậm thì bạn bán được càng nhiều trong giờ đó. Bạn có thể chuyển bản đồ nhiệt giữa doanh thu và số đơn. Khi bật một phương án so sánh trong So sánh, bản đồ nhiệt còn cho thấy giờ nào tăng và giờ nào giảm."
-      },
-      {
-        "type": "h2",
-        "text": "Hàng bán chậm"
-      },
-      {
-        "type": "p",
-        "text": "Chuyển tiêu đề của thẻ xếp hạng sang Hàng bán chậm để liệt kê sản phẩm từ bán ít nhất đến nhiều nhất. Mỗi dòng hiển thị tồn kho hiện tại và ngày bán gần nhất của sản phẩm. Sản phẩm chưa từng bán được đánh dấu Chưa từng bán, và sản phẩm có biến thể được hiển thị một dòng cho mỗi biến thể. Mặc định chỉ hiển thị sản phẩm còn hàng."
-      },
-      {
-        "type": "h2",
-        "text": "Biến động"
-      },
-      {
-        "type": "p",
-        "text": "Chuyển tiêu đề của thẻ xếp hạng sang Biến động để xem 3 sản phẩm tăng doanh thu nhiều nhất và 3 sản phẩm giảm nhiều nhất so với kỳ so sánh. Mỗi dòng hiển thị doanh thu của cả hai kỳ và mức chênh lệch, và mỗi biến thể được so sánh với chính nó."
-      },
-      {
-        "type": "p",
-        "text": "Hãy chọn một kỳ trong So sánh trước. Khi So sánh đặt là Không, hoặc khi kỳ là Toàn thời gian, thẻ sẽ nhắc bạn chọn một kỳ so sánh. Chạm vào thẻ hoặc Xem tất cả để mở danh sách Sản phẩm biến động doanh thu đầy đủ, chia thành Tăng và Giảm."
-      },
-      {
-        "type": "h2",
-        "text": "Tỷ lệ mua lại"
-      },
-      {
-        "type": "p",
-        "text": "Dòng cuối của ô Khách đã phục vụ hiển thị tỷ lệ mua lại dưới dạng “Tỷ lệ mua lại … · … thành viên quay lại”. Đó là tỷ lệ thành viên đã mua trong kỳ đã chọn và tổng cộng đã mua từ hai lần trở lên. Khi bật so sánh trong So sánh, một dòng bên dưới cho biết mức thay đổi tính bằng điểm phần trăm và tỷ lệ của kỳ so sánh."
-      },
-      {
-        "type": "h2",
-        "text": "Tỷ trọng theo danh mục"
-      },
-      {
-        "type": "p",
-        "text": "Tỷ trọng theo danh mục liệt kê doanh thu và tỷ trọng của từng danh mục, từ lớn đến nhỏ, theo danh mục hiện tại của từng sản phẩm. Sản phẩm không có danh mục được xếp vào Chưa phân loại, và các dòng cộng lại đúng bằng Doanh thu."
-      },
-      {
-        "type": "h2",
-        "text": "Hiện tại"
+        "text": "Dòng cuối của ô Khách đã phục vụ hiển thị tỷ lệ mua lại dưới dạng “Tỷ lệ mua lại … · … thành viên quay lại”. Đó là tỷ lệ thành viên đã mua trong kỳ đã chọn và có tổng cộng từ hai lần mua trở lên."
       },
       {
         "type": "p",
@@ -1540,34 +1433,116 @@ export const articles = [
         "items": [
           "Giá trị tồn kho, tính bằng tồn kho hiện tại × giá vốn hiện tại.",
           "Mọi biến động tồn kho trong kỳ đã chọn.",
-          "Số điểm khách đang giữ nhưng chưa quy đổi, cùng mức giảm tối đa họ có thể dùng."
+          "Số điểm khách đang giữ mà chưa quy đổi, cùng mức giảm tối đa họ có thể quy đổi."
         ]
       },
       {
         "type": "p",
-        "text": "Giá trị tồn kho và điểm chưa quy đổi là số dư hiện tại, nên đổi kỳ ở đầu màn hình không làm chúng thay đổi."
-      },
-      {
-        "type": "h2",
-        "text": "Gói và quyền"
-      },
-      {
-        "type": "p",
-        "text": "Từ phiên bản v3.4, mọi báo cáo nâng cao đều mở trên mọi gói, kể cả Lite, và vẫn mở sau khi hết dùng thử. Biến động cũng được thêm vào từ v3.4. Các phiên bản cũ hơn chỉ hiển thị báo cáo nâng cao ở gói Pro, còn các gói khác có một biểu tượng khóa nhỏ; nếu bạn vẫn thấy biểu tượng khóa, hãy cập nhật DingPOS từ App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite không theo dõi tồn kho và điểm tích lũy, nhưng mục Hiện tại vẫn hiển thị giá trị tồn kho và số điểm chưa quy đổi mà cửa hàng của bạn đã có sẵn (ví dụ từ thời gian dùng thử), hoặc bằng 0."
+        "text": "Giá trị tồn kho và điểm chưa quy đổi là số dư hiện tại, nên đổi kỳ ở đầu trang không làm chúng thay đổi."
       },
       {
         "type": "note",
-        "text": "Nhân viên xem được báo cáo nâng cao theo quyền Thống kê; các số liệu Giá trị tồn kho còn cần quyền Giá vốn và lợi nhuận."
+        "text": "Nhân viên xem được Thống kê theo quyền Thống kê; các số tiền Giá trị tồn kho còn cần quyền Giá vốn và lợi nhuận."
+      },
+      {
+        "type": "note",
+        "text": "Các khoảng thời gian theo lịch này có từ phiên bản v2.4; các phiên bản cũ hơn dùng khoảng thời gian cuốn chiếu (Hôm nay / 7 ngày / 30 ngày / Toàn thời gian). Nếu bạn vẫn thấy các lựa chọn đó, hãy cập nhật DingPOS từ App Store."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Làm sao so sánh doanh số với tuần trước, tháng trước hoặc năm trước?",
+    "keywords": [
+      "so sánh",
+      "so sánh kỳ",
+      "tuần trước",
+      "tháng trước",
+      "năm trước",
+      "cùng kỳ năm trước",
+      "biến động",
+      "thống kê",
+      "tăng trưởng",
+      "tỷ lệ mua lại"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Chạm So sánh ở bên phải thanh kỳ báo cáo trong Thống kê rồi chọn một kỳ trước đó, chẳng hạn Tuần trước hoặc Năm trước. Mỗi ô khi đó sẽ cho biết số liệu tăng hay giảm bao nhiêu, ví dụ “▼ 3% so với Tháng trước”, kèm số liệu của kỳ so sánh ở bên dưới."
+      },
+      {
+        "type": "h2",
+        "text": "Bật chế độ so sánh"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Mở Thống kê từ thanh bên.",
+          "Chọn một kỳ ở đầu trang.",
+          "Chạm So sánh ở bên phải thanh kỳ báo cáo.",
+          "Chọn một phương án so sánh trong menu."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Các phương án có sẵn phụ thuộc vào kỳ bạn chọn:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Không tắt chế độ so sánh.",
+          "Tuần trước so sánh một ngày với cùng ngày của tuần trước, hoặc tuần này với tuần trước.",
+          "Tháng trước so sánh tháng này với tháng trước.",
+          "Năm trước so sánh năm nay với năm trước, hoặc so sánh kỳ đã chọn với cùng kỳ năm trước.",
+          "Kỳ trước so sánh một khoảng tùy chỉnh với khoảng có cùng số ngày ngay trước đó."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Khi đang so sánh, Thống kê thêm mức thay đổi và số liệu của kỳ so sánh vào mọi ô, trừ Thuế, Lợi nhuận ròng và Sản phẩm chưa có giá vốn. Doanh thu, Tiền đã thu, Lợi nhuận gộp, Đơn hàng, Giá trị đơn hàng trung bình, Tổng giảm giá và Khách đã phục vụ đều hiển thị một dòng so sánh như “▼ 3% so với Tháng trước”."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Thống kê ở Tuần này với So sánh đặt là Tuần trước, hiển thị thanh so sánh và hàng ô đầu tiên, mỗi ô kèm mức thay đổi và số liệu của kỳ so sánh bên dưới",
+        "caption": "Chạm vào bất kỳ dòng so sánh nào dưới một ô để mở So sánh kỳ và xem số liệu của cả hai kỳ."
+      },
+      {
+        "type": "p",
+        "text": "Mức thay đổi ở Tổng giảm giá luôn có màu xám, vì giảm giá nhiều hơn tự nó không tốt cũng không xấu. Chạm vào bất kỳ dòng so sánh nào để mở So sánh kỳ, nơi liệt kê số liệu của cả hai kỳ. Biểu đồ xu hướng thêm một đường nhạt hơn cho kỳ so sánh. Khi một kỳ vẫn đang diễn ra, kỳ so sánh được cắt đúng tại cùng thời điểm."
+      },
+      {
+        "type": "h2",
+        "text": "Biến động"
+      },
+      {
+        "type": "p",
+        "text": "Chuyển tiêu đề của thẻ xếp hạng sang Biến động để xem 3 sản phẩm có doanh thu tăng nhiều nhất và 3 sản phẩm giảm nhiều nhất so với kỳ so sánh. Mỗi dòng hiển thị doanh thu của cả hai kỳ cùng mức chênh lệch, và mỗi biến thể được so sánh với chính nó."
+      },
+      {
+        "type": "p",
+        "text": "Hãy chọn một kỳ trong So sánh trước. Khi So sánh đặt là Không, hoặc khi kỳ là Toàn thời gian, thẻ sẽ nhắc bạn chọn một kỳ so sánh. Chạm vào thẻ hoặc Xem tất cả để mở danh sách đầy đủ Sản phẩm biến động doanh thu, chia thành Tăng và Giảm."
+      },
+      {
+        "type": "h2",
+        "text": "Bản đồ nhiệt và tỷ lệ mua lại"
+      },
+      {
+        "type": "p",
+        "text": "Khi bật so sánh, bản đồ nhiệt Thứ × giờ trên biểu đồ xu hướng cũng cho thấy khung giờ nào tăng và khung giờ nào giảm, còn tỷ lệ mua lại trên ô Khách đã phục vụ có thêm một dòng ghi mức thay đổi theo điểm phần trăm và tỷ lệ của kỳ so sánh."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2934,7 +2909,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Nếu đăng ký bất kỳ gói nào trong thời gian dùng thử, thời gian dùng thử sẽ kết thúc ngay và gói bạn đã mua được áp dụng từ lúc đó. Sau khi hết dùng thử, các tính năng Pro như nhân viên và nhật ký hoạt động chỉ còn dùng được khi bạn đăng ký gói Pro. Báo cáo nâng cao thì không cần gói Pro; từ phiên bản v3.4, mọi gói đều có sẵn."
+        "text": "Nếu đăng ký bất kỳ gói nào trong thời gian dùng thử, thời gian dùng thử sẽ kết thúc ngay và gói bạn đã mua được áp dụng từ lúc đó. Sau khi hết dùng thử, các tính năng Pro như nhân viên và nhật ký hoạt động chỉ còn dùng được khi bạn đăng ký gói Pro. Thống kê thì không cần gói Pro; mọi gói đều có đầy đủ."
       },
       {
         "type": "p",
@@ -2996,7 +2971,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Cả ba gói đều bao gồm đầy đủ chức năng thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo (báo cáo nâng cao và lãi lỗ hằng tháng có từ phiên bản v3.4, báo cáo thuế và việc xuất báo cáo này có từ phiên bản v3.6) và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
+        "text": "Cả ba gói đều bao gồm đầy đủ chức năng thanh toán, sản phẩm, đơn hàng (gồm vô hiệu hóa, trả hàng và đổi hàng), báo cáo (toàn bộ Thống kê và Lãi lỗ hằng tháng từ phiên bản v3.4, báo cáo thuế và việc xuất báo cáo này từ phiên bản v3.6) và sao lưu đám mây. Điểm khác nhau nằm ở công cụ để vận hành cửa hàng:"
       },
       {
         "type": "list",

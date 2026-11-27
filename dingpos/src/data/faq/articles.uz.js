@@ -1324,12 +1324,12 @@ export const articles = [
       "hisobot davri",
       "shu hafta",
       "shu oy",
-      "shu yil",
       "maxsus davr",
       "sana",
       "mahsulotlar reytingi",
-      "solishtirish",
-      "eng ko‘p sotilgan mahsulotlar"
+      "sekin sotiladigan mahsulotlar",
+      "hafta kuni × soat",
+      "ombor qiymati"
     ],
     "content": [
       {
@@ -1359,7 +1359,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Soliq kartasi va soliq hisoboti ham tanlangan davrga ergashadi, shuning uchun Maxsus bilan topshirish oralig‘ini belgilasangiz, ikkalasi ham yangilanadi; batafsil ma’lumot uchun tegishli soliq hisoboti maqolasiga qarang. Davr panelining o‘ng tomonidagi Solishtirish tugmasi tanlangan davrni undan oldingi davr yoki o‘tgan yilning shu davri bilan yonma-yon ko‘rsatadi; batafsil ma’lumot uchun tegishli kengaytirilgan hisobotlar maqolasiga qarang."
+        "text": "Soliq kartasi va soliq hisoboti ham tanlangan davrga ergashadi, shuning uchun Maxsus bilan topshirish oralig‘ini belgilasangiz, ikkalasi ham yangilanadi; batafsil ma’lumot uchun tegishli soliq hisoboti maqolasiga qarang. Davr panelining o‘ng tomonidagi Solishtirish tugmasi tanlangan davrni undan oldingi davr yoki o‘tgan yilning shu davri bilan yonma-yon ko‘rsatadi; batafsil ma’lumot uchun tegishli davrlarni solishtirish maqolasiga qarang."
       },
       {
         "type": "h2",
@@ -1394,7 +1394,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Dinamika grafigining yuqori o‘ng burchagidagi menyu uni Daromad, Buyurtmalar, O‘rtacha buyurtma va Xizmat ko‘rsatilgan mijozlar o‘rtasida almashtiradi. Grafikda Dinamika va Hafta kuni × soat almashtirgichi ham bor; bu ko‘rinish haqida tegishli kengaytirilgan hisobotlar maqolasiga qarang. Uning yonidagi Tannarx va yalpi foyda grafigi har bir davrning mahsulot tannarxi va yalpi foydasini bitta ustunda jamlab ko‘rsatadi. Bitta kun soatma-soat chiziladi, uzunroq davrlarda esa uzunligiga qarab ma’lumotlar kun, hafta, oy yoki yil bo‘yicha guruhlanadi."
+        "text": "Dinamika grafigining yuqori o‘ng burchagidagi menyu uni Daromad, Buyurtmalar, O‘rtacha buyurtma va Xizmat ko‘rsatilgan mijozlar o‘rtasida almashtiradi. Uning yonidagi Tannarx va yalpi foyda grafigi har bir davrning mahsulot tannarxi va yalpi foydasini bitta ustunda jamlab ko‘rsatadi. Bitta kun soatma-soat chiziladi, uzunroq davrlarda esa uzunligiga qarab ma’lumotlar kun, hafta, oy yoki yil bo‘yicha guruhlanadi."
       },
       {
         "type": "p",
@@ -1402,7 +1402,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Dinamika grafigining sarlavhasini Dinamikadan Hafta kuni × soatga almashtirsangiz, yetti kunlik, 24 soatlik issiqlik xaritasi chiqadi. Katak qanchalik to‘q bo‘lsa, o‘sha soatda shunchalik ko‘p sotgansiz; xaritani daromad va buyurtmalar o‘rtasida almashtirish mumkin."
+      },
+      {
+        "type": "p",
         "text": "Mahsulotlar reytingi tanlangan davr uchun eng ko‘p sotilgan 5 ta mahsulotni ko‘rsatadi. Kartani yoki Barchasini ko‘rish tugmasini bosing — o‘sha davrda sotilgan barcha mahsulotlar qaytarishlardan keyingi miqdor bo‘yicha tartiblangan ro‘yxatda ochiladi. Variantli mahsulot har bir variant uchun alohida qatorda chiqadi."
+      },
+      {
+        "type": "p",
+        "text": "Reyting kartasining sarlavhasini Sekin sotiladigan mahsulotlarga almashtirsangiz, mahsulotlar eng kam sotilganidan eng ko‘p sotilganigacha ro‘yxatlanadi. Har bir qatorda mahsulotning joriy zaxirasi va oxirgi sotilgan sanasi ko‘rsatiladi. Hech sotilmagan mahsulotlar Hech sotilmagan deb belgilanadi, odatda esa faqat zaxirada bor mahsulotlar chiqadi. O‘zgarishlar sarlavhasi solishtirish davriga nisbatan daromadi eng ko‘p oshgan yoki kamaygan mahsulotlarni ko‘rsatadi; tegishli davrlarni solishtirish maqolasiga qarang."
+      },
+      {
+        "type": "h2",
+        "text": "Toifalar bo‘yicha ulush, takroriy xarid ulushi va Hozir"
+      },
+      {
+        "type": "p",
+        "text": "Toifalar bo‘yicha ulush har bir toifaning daromadi va ulushini eng kattasidan eng kichigigacha tartiblab ko‘rsatadi; hisob har bir mahsulotning joriy toifasiga asoslanadi. Toifasiz mahsulotlar Toifasiz qatoriga tushadi, qatorlar yig‘indisi esa Daromadga roppa-rosa teng bo‘ladi."
+      },
+      {
+        "type": "p",
+        "text": "Xizmat ko‘rsatilgan mijozlar kartasining oxirgi qatorida takroriy xarid ulushi “Takroriy xarid ulushi … · … ta a’zo qaytdi” ko‘rinishida chiqadi. U tanlangan davrda xarid qilgan va jami kamida ikki marta xarid qilgan a’zolarning ulushini bildiradi."
+      },
+      {
+        "type": "p",
+        "text": "Hozir bo‘limi ombor va ballar haqida uch ma’lumotni ko‘rsatadi:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ombor qiymati — joriy zaxira × joriy tannarx bo‘yicha hisoblanadi.",
+          "Tanlangan davrdagi har bir zaxira harakati.",
+          "Mijozlar qo‘lidagi va hali ishlatilmagan ballar hamda ular bilan eng ko‘pi bilan qancha chegirma qilish mumkinligi."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ombor qiymati va ishlatilmagan ballar joriy qoldiqlardir, shuning uchun tepadagi davrni o‘zgartirsangiz, ular o‘zgarmaydi."
+      },
+      {
+        "type": "note",
+        "text": "Xodimlar Statistikani Statistika ruxsati bilan ko‘radi; Ombor qiymati summalarini ko‘rish uchun Tannarx va foyda ruxsati ham kerak."
       },
       {
         "type": "note",
@@ -1410,51 +1450,43 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Kengaytirilgan hisobotlar nimani ko‘rsatadi?",
+    "question": "Savdoni o‘tgan hafta, o‘tgan oy yoki o‘tgan yil bilan qanday solishtiraman?",
     "keywords": [
-      "kengaytirilgan hisobotlar",
-      "statistika",
       "solishtirish",
       "davrlarni solishtirish",
+      "o‘tgan hafta",
+      "o‘tgan oy",
       "o‘tgan yil",
-      "hafta kuni × soat",
-      "issiqlik xaritasi",
-      "gavjum soatlar",
-      "sekin sotiladigan mahsulotlar",
-      "daromadi o‘zgargan mahsulotlar",
-      "toifalar bo‘yicha ulush",
-      "ombor qiymati",
-      "takroriy xarid ulushi",
-      "ballar"
+      "o‘tgan yilning shu davri",
+      "o‘zgarishlar",
+      "statistika",
+      "o‘sish",
+      "takroriy xarid ulushi"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kengaytirilgan hisobotlar alohida ekran emas: ular Statistikada turadi va tepada tanlangan davrga ergashadi. Ular davrlarni solishtirish, hafta kuni va soat bo‘yicha issiqlik xaritasi, Sekin sotiladigan mahsulotlar, O‘zgarishlar, a’zolarning takroriy xarid ulushi, Toifalar bo‘yicha ulush hamda zaxira va ballar uchun Hozir bo‘limini qo‘shadi. Ularning hammasi har bir tarifda mavjud va sinov tugagandan keyin ham ochiq qoladi."
+        "text": "Statistikadagi davr panelining o‘ng tomonidagi Solishtirish tugmasini bosing va oldingi davrni tanlang, masalan, O‘tgan hafta yoki O‘tgan yil. Shundan so‘ng har bir karta o‘z ko‘rsatkichi qanchaga oshgani yoki kamaygani — masalan, “▼ 3%, O‘tgan oy bilan solishtirganda” — va uning ostida solishtirish davrining ko‘rsatkichini ko‘rsatadi."
       },
       {
         "type": "h2",
-        "text": "Solishtirish"
-      },
-      {
-        "type": "p",
-        "text": "Solishtirish Statistikadagi davr panelining o‘ng tomonida turadi va tanlangan davrni oldingi davr bilan solishtiradi."
+        "text": "Solishtirishni yoqish"
       },
       {
         "type": "steps",
         "items": [
           "Yon paneldan Statistikani oching.",
-          "Tepada davrni tanlang.",
+          "Tepadan davrni tanlang.",
           "Davr panelining o‘ng tomonidagi Solishtirish tugmasini bosing.",
           "Menyudan solishtirish variantini tanlang."
         ]
@@ -1466,42 +1498,26 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Yo‘q solishtirishni o‘chiradi.",
-          "O‘tgan hafta bir kunni o‘tgan haftaning shu kuni bilan yoki shu haftani o‘tgan hafta bilan solishtiradi.",
-          "O‘tgan oy shu oyni o‘tgan oy bilan solishtiradi.",
-          "O‘tgan yil shu yilni o‘tgan yil bilan yoki tanlangan davrni o‘tgan yilning shu davri bilan solishtiradi.",
-          "Oldingi maxsus davrni undan oldingi xuddi shuncha kun bilan solishtiradi."
+          "Yo‘q — solishtirish o‘chiriladi.",
+          "O‘tgan hafta — bitta kunni o‘tgan haftaning shu kuni bilan yoki shu haftani o‘tgan hafta bilan solishtiradi.",
+          "O‘tgan oy — shu oyni o‘tgan oy bilan solishtiradi.",
+          "O‘tgan yil — shu yilni o‘tgan yil bilan yoki tanlangan davrni o‘tgan yilning shu davri bilan solishtiradi.",
+          "Oldingi — maxsus oraliqni undan oldingi xuddi shuncha kun bilan solishtiradi."
         ]
       },
       {
         "type": "p",
-        "text": "Solishtirish faol bo‘lsa, Statistika Soliq, Sof foyda va Tannarxsiz mahsulotlardan tashqari har bir kartaga o‘zgarishni va solishtirish davrining ko‘rsatkichini qo‘shadi. Daromad, Qabul qilingan pul, Yalpi foyda, Buyurtmalar, O‘rtacha buyurtma, Jami chegirmalar va Xizmat ko‘rsatilgan mijozlar kartalarining har birida “▼ 3%, o‘tgan oy bilan solishtirganda” kabi solishtirish qatori chiqadi."
+        "text": "Solishtirish yoqilganda Statistika Soliq, Sof foyda va Tannarxsiz mahsulotlardan tashqari har bir kartaga o‘zgarishni va solishtirish davrining ko‘rsatkichini qo‘shadi. Daromad, Qabul qilingan pul, Yalpi foyda, Buyurtmalar, O‘rtacha buyurtma, Jami chegirmalar va Xizmat ko‘rsatilgan mijozlar kartalarining har birida “▼ 3%, O‘tgan oy bilan solishtirganda” kabi solishtirish qatori chiqadi."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "Statistika Shu hafta davrida, Solishtirish O‘tgan haftaga o‘rnatilgan: solishtirish paneli va birinchi qator kartalari, har birining ostida o‘zgarish va solishtirish ko‘rsatkichi",
-        "caption": "Ikkala davrning ko‘rsatkichlarini ko‘rish uchun kartaning ostidagi istalgan solishtirish qatorini bosib, Davrlarni solishtirish sahifasini oching."
+        "alt": "Statistika Shu hafta davrida, Solishtirish O‘tgan hafta qilib o‘rnatilgan: solishtirish paneli va birinchi qator kartalar, har birining ostida o‘zgarish va solishtirish davrining ko‘rsatkichi",
+        "caption": "Davrlarni solishtirish oynasini ochib, ikkala davrning ko‘rsatkichlarini ko‘rish uchun kartadagi istalgan solishtirish qatorini bosing."
       },
       {
         "type": "p",
-        "text": "Jami chegirmalardagi o‘zgarish doim kulrang bo‘ladi, chunki chegirmaning ko‘pligi o‘z-o‘zidan yaxshi ham, yomon ham emas. Ikkala davrning ko‘rsatkichlari ro‘yxatlangan Davrlarni solishtirish sahifasini ochish uchun istalgan solishtirish qatorini bosing. Dinamika grafigiga solishtirish davri uchun ochroq chiziq qo‘shiladi. Davr hali tugamagan bo‘lsa, solishtirish davri ham xuddi shu paytda kesiladi."
-      },
-      {
-        "type": "h2",
-        "text": "Hafta kuni × soat"
-      },
-      {
-        "type": "p",
-        "text": "Dinamika grafigi sarlavhasidagi Dinamika tugmasini Hafta kuni × soatga o‘tkazing — yetti kun va 24 soatlik issiqlik xaritasi chiqadi. Katak qanchalik to‘q bo‘lsa, o‘sha soatda shunchalik ko‘p sotgansiz. Issiqlik xaritasini daromad va buyurtmalar o‘rtasida almashtirish mumkin. Solishtirish orqali taqqoslash yoqilgan bo‘lsa, xarita qaysi soatlar o‘sgani va qaysilari kamaygani ham ko‘rsatadi."
-      },
-      {
-        "type": "h2",
-        "text": "Sekin sotiladigan mahsulotlar"
-      },
-      {
-        "type": "p",
-        "text": "Reyting kartasi sarlavhasini Sekin sotiladigan mahsulotlarga o‘tkazing — mahsulotlar eng kam sotilganidan eng ko‘pigacha tartiblanadi. Har bir qatorda mahsulotning hozirgi zaxirasi va oxirgi sotilgan sanasi ko‘rsatiladi. Hech sotilmagan mahsulotlar Hech sotilmagan deb belgilanadi, variantli mahsulot uchun esa har bir variantga alohida qator beriladi. Odatda faqat zaxirada bor mahsulotlar ko‘rsatiladi."
+        "text": "Jami chegirmalardagi o‘zgarish doim kulrang bo‘ladi, chunki chegirmaning ko‘payishi o‘z-o‘zidan yaxshi ham, yomon ham emas. Ikkala davrning ko‘rsatkichlari ro‘yxatini ko‘rish uchun istalgan solishtirish qatorini bosing — Davrlarni solishtirish ochiladi. Dinamika grafigiga solishtirish davri uchun ochroq chiziq qo‘shiladi. Davr hali tugamagan bo‘lsa, solishtirish davri ham xuddi shu paytda uziladi."
       },
       {
         "type": "h2",
@@ -1509,69 +1525,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Reyting kartasi sarlavhasini O‘zgarishlarga o‘tkazing — solishtirish davriga nisbatan daromadi eng ko‘p oshgan 3 ta va eng ko‘p kamaygan 3 ta mahsulot chiqadi. Har bir qatorda ikkala davrning daromadi va farqi ko‘rsatiladi; har bir variant o‘zi bilan solishtiriladi."
+        "text": "Reyting kartasining sarlavhasini O‘zgarishlarga almashtirsangiz, solishtirish davriga nisbatan daromadi eng ko‘p oshgan 3 ta va eng ko‘p kamaygan 3 ta mahsulot chiqadi. Har bir qatorda ikkala davrning daromadi va farqi ko‘rsatiladi, har bir variant faqat o‘zi bilan solishtiriladi."
       },
       {
         "type": "p",
-        "text": "Avval Solishtirish bo‘limida davrni tanlang. Solishtirish Yo‘q bo‘lsa yoki davr Butun davr bo‘lsa, karta solishtirish davrini tanlashni eslatadi. To‘liq Daromadi o‘zgargan mahsulotlar ro‘yxatini ochish uchun kartani yoki Barchasini ko‘rish tugmasini bosing — u O‘sganlar va Tushganlar bo‘limlariga bo‘lingan."
+        "text": "Avval Solishtirish orqali davrni tanlang. Solishtirish Yo‘q holatida yoki davr Butun davr bo‘lsa, karta solishtirish davrini tanlashni so‘raydi. Daromadi o‘zgargan mahsulotlarning to‘liq ro‘yxatini ochish uchun kartani yoki Barchasini ko‘rish tugmasini bosing; u O‘sganlar va Tushganlar bo‘limlariga bo‘lingan."
       },
       {
         "type": "h2",
-        "text": "Takroriy xarid ulushi"
+        "text": "Issiqlik xaritasi va takroriy xarid ulushi"
       },
       {
         "type": "p",
-        "text": "Xizmat ko‘rsatilgan mijozlar kartasining oxirgi qatorida takroriy xarid ulushi “Takroriy xarid ulushi … · … ta a’zo qaytdi” ko‘rinishida chiqadi. U tanlangan davrda xarid qilgan va jami ikki yoki undan ko‘p marta xarid qilgan a’zolar ulushini ko‘rsatadi. Solishtirish orqali taqqoslash yoqilgan bo‘lsa, quyidagi qatorda foiz punktlaridagi o‘zgarish va solishtirish davrining ulushi ko‘rsatiladi."
-      },
-      {
-        "type": "h2",
-        "text": "Toifalar bo‘yicha ulush"
-      },
-      {
-        "type": "p",
-        "text": "Toifalar bo‘yicha ulush har bir toifaning daromadi va ulushini mahsulotning joriy toifasi bo‘yicha kattasidan kichigigacha ro‘yxatlaydi. Toifasiz mahsulotlar Toifasiz qatoriga tushadi va qatorlar yig‘indisi roppa-rosa Daromadga teng bo‘ladi."
-      },
-      {
-        "type": "h2",
-        "text": "Hozir"
-      },
-      {
-        "type": "p",
-        "text": "Hozir bo‘limi ombor va ballar haqida uchta ma’lumotni ko‘rsatadi:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Ombor qiymati: hozirgi zaxira × hozirgi tannarx.",
-          "Tanlangan davrdagi barcha zaxira harakatlari.",
-          "Mijozlarda turgan, lekin ishlatilmagan ballar va ular bilan eng ko‘pi bilan qancha chegirma qilish mumkinligi."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Ombor qiymati va ishlatilmagan ballar joriy qoldiqlardir, shuning uchun tepadagi davrni o‘zgartirish ularni o‘zgartirmaydi."
-      },
-      {
-        "type": "h2",
-        "text": "Tariflar va ruxsatlar"
-      },
-      {
-        "type": "p",
-        "text": "v3.4 dan boshlab barcha kengaytirilgan hisobotlar har bir tarifda, jumladan Lite tarifida, ochiq va sinov tugagandan keyin ham ochiq qoladi. O‘zgarishlar ham v3.4 da qo‘shilgan. Avvalgi versiyalarda kengaytirilgan hisobotlar faqat Pro tarifida ko‘rsatilgan, boshqa tariflarda esa kichik qulf turgan; agar hali ham qulflarni ko‘rsangiz, DingPOS’ni App Store orqali yangilang."
-      },
-      {
-        "type": "p",
-        "text": "Lite tarifi zaxira va sodiqlik ballarini yuritmaydi, ammo Hozir bo‘limi do‘koningizda allaqachon mavjud Ombor qiymati va ishlatilmagan ballarni (masalan, sinov davridan qolganini) yoki nolni baribir ko‘rsatadi."
-      },
-      {
-        "type": "note",
-        "text": "Xodimlar kengaytirilgan hisobotlarni Statistika ruxsati bilan ko‘radi; Ombor qiymati summalari uchun esa Tannarx va foyda ruxsati ham kerak."
+        "text": "Solishtirish yoqilganda, dinamika grafigidagi Hafta kuni × soat issiqlik xaritasi qaysi soatlarda savdo o‘sganini va qaysilarida kamayganini ham ko‘rsatadi, Xizmat ko‘rsatilgan mijozlar kartasidagi takroriy xarid ulushiga esa foiz punktlaridagi o‘zgarish va solishtirish davrining ulushi ko‘rsatilgan qator qo‘shiladi."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2931,7 +2902,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va keyin siz sotib olgan tarif amal qiladi. Sinovdan keyin xodimlar va faoliyat jurnali kabi Pro imkoniyatlari faqat Pro obunasi bilan ishlaydi. Kengaytirilgan hisobotlar uchun obuna shart emas: v3.4 dan boshlab ular har bir tarifga kiradi."
+        "text": "Sinov paytida istalgan tarifga obuna bo‘lsangiz, sinov darhol tugaydi va keyin siz sotib olgan tarif amal qiladi. Sinovdan keyin xodimlar va faoliyat jurnali kabi Pro imkoniyatlari faqat Pro obunasi bilan ishlaydi. Statistika uchun obuna shart emas: u to‘liq har bir tarifga kiradi."
       },
       {
         "type": "p",
@@ -2992,7 +2963,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Uchala tarifda ham to‘liq to‘lov qabul qilish, mahsulotlar, buyurtmalar (yaroqsiz deb belgilash, qaytarish va almashtirish bilan), hisobotlar (v3.4 dan boshlab kengaytirilgan hisobotlar va oylik P&L, v3.6 dan boshlab soliq hisoboti va uni eksport qilish ham) va bulutdagi nusxa bor. Farq do‘konni boshqarish vositalarida:"
+        "text": "Uchala tarifda ham to‘liq to‘lov qabul qilish, mahsulotlar, buyurtmalar (yaroqsiz deb belgilash, qaytarish va almashtirish bilan), hisobotlar (Statistikaning hammasi va oylik P&L — v3.4 dan boshlab, soliq hisoboti va uni eksport qilish — v3.6 dan boshlab) va bulutdagi nusxa bor. Farq do‘konni boshqarish vositalarida:"
       },
       {
         "type": "list",

@@ -1339,11 +1339,11 @@ export const articles = [
       "tidsperiode",
       "denne uken",
       "denne måneden",
-      "dette året",
       "egendefinert periode",
-      "dato",
       "produktrangering",
-      "sammenlign perioder"
+      "saktegående varer",
+      "ukedag × time",
+      "lagerverdi"
     ],
     "content": [
       {
@@ -1373,7 +1373,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Feltet Avgift og avgiftsrapporten følger også den valgte perioden, så når du angir en innrapporteringsperiode med Egendefinert, oppdateres begge. Se den tilhørende artikkelen om avgiftsrapporten for detaljer. Til høyre i periodelinjen trykker du på Sammenlign for å se den valgte perioden ved siden av perioden før eller samme periode i fjor. Se den tilhørende artikkelen om avanserte rapporter for detaljer."
+        "text": "Feltet Avgift og avgiftsrapporten følger også den valgte perioden, så når du angir en innrapporteringsperiode med Egendefinert, oppdateres begge. Se den tilhørende artikkelen om avgiftsrapporten for detaljer. Til høyre i periodelinjen trykker du på Sammenlign for å se den valgte perioden ved siden av perioden før den eller samme periode i fjor. Se den tilhørende artikkelen om sammenligning av perioder for detaljer."
       },
       {
         "type": "h2",
@@ -1408,7 +1408,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Menyen øverst til høyre på trenddiagrammet bytter det mellom Salgsinntekt, Ordrer, Gjennomsnittlig ordreverdi og Betjente kunder. Diagrammet har også en bryter mellom Utvikling og Ukedag × time. Se den tilhørende artikkelen om avanserte rapporter for den visningen. Ved siden av stabler diagrammet Kostnad og bruttofortjeneste hver periodes kostpris og bruttofortjeneste i én søyle. En enkelt dag vises per time, mens lengre perioder grupperes i dager, uker, måneder eller år, avhengig av lengden."
+        "text": "Menyen øverst til høyre på trenddiagrammet bytter det mellom Salgsinntekt, Ordrer, Gjennomsnittlig ordreverdi og Betjente kunder. Ved siden av ligger diagrammet Kostnad og bruttofortjeneste, som stabler hver periodes kostpris og bruttofortjeneste i én søyle. En enkelt dag vises per time, mens lengre perioder grupperes i dager, uker, måneder eller år, avhengig av lengden."
       },
       {
         "type": "p",
@@ -1416,136 +1416,27 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Produktrangering viser de fem beste produktene i den valgte perioden. Trykk på kortet eller Vis alle for å se alle produkter som er solgt i perioden, rangert etter antall etter returer. Et produkt med varianter får én linje per variant."
+        "text": "Bytt overskriften på trenddiagrammet fra Utvikling til Ukedag × time for å se et varmekart over sju dager og 24 timer. Jo mørkere en rute er, desto mer solgte du i den timen, og du kan bytte varmekartet mellom salgsinntekt og ordrer."
       },
       {
-        "type": "note",
-        "text": "Kalenderperiodene kom i v2.4. Eldre versjoner hadde løpende perioder (I dag / 7 dager / 30 dager / Hele perioden). Hvis du fortsatt ser dem, oppdaterer du DingPOS fra App Store."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked",
-      "tax-report"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "Hva viser de avanserte rapportene?",
-    "keywords": [
-      "avanserte rapporter",
-      "rapporter",
-      "sammenlign",
-      "periodesammenligning",
-      "ukedag × time",
-      "varmekart",
-      "saktegående varer",
-      "endringer",
-      "andel per kategori",
-      "lagerverdi",
-      "gjenkjøpsandel",
-      "poeng"
-    ],
-    "content": [
+        "type": "p",
+        "text": "Produktrangering viser de fem beste produktene i den valgte perioden. Trykk på kortet eller Vis alle for å se alle produkter som er solgt i perioden, rangert etter antall solgt, med returer trukket fra. Et produkt med varianter får én linje per variant."
+      },
       {
         "type": "p",
-        "text": "Avanserte rapporter er ikke en egen skjerm. De ligger i Rapporter og følger perioden du velger øverst. De gir deg periodesammenligninger, et varmekart over ukedag og time, Saktegående varer, Endringer, gjenkjøpsandel for medlemmer, Andel per kategori og en seksjon, Akkurat nå, for lager og poeng. Alle planer har alle disse, og de forblir åpne etter at prøveperioden er over."
+        "text": "Bytt overskriften på rangeringskortet til Saktegående varer for å liste produktene fra færrest til flest salg. Hver rad viser produktets nåværende lager og datoen det sist ble solgt. Produkter som aldri er solgt, er merket Aldri solgt, og som standard vises bare produkter på lager. Overskriften Endringer viser produktene hvis salgsinntekt økte eller sank mest mot en sammenligningsperiode. Se den tilhørende artikkelen om sammenligning av perioder."
       },
       {
         "type": "h2",
-        "text": "Sammenlign"
+        "text": "Andel per kategori, gjenkjøpsandel og Akkurat nå"
       },
       {
         "type": "p",
-        "text": "Sammenlign ligger til høyre i periodelinjen i Rapporter og måler den valgte perioden mot en tidligere periode."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Åpne Rapporter fra sidemenyen.",
-          "Velg en periode øverst.",
-          "Trykk på Sammenlign til høyre i periodelinjen.",
-          "Velg et sammenligningsalternativ fra menyen."
-        ]
+        "text": "Andel per kategori viser salgsinntekten og andelen for hver kategori, sortert fra størst til minst, etter produktenes nåværende kategori. Produkter uten kategori havner under Uten kategori, og radene summerer seg nøyaktig til Salgsinntekt."
       },
       {
         "type": "p",
-        "text": "Hvilke valg du har, avhenger av perioden du velger:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Ingen slår av sammenligningen.",
-          "Forrige uke sammenligner én enkelt dag med samme dag forrige uke, eller denne uken med forrige uke.",
-          "Forrige måned sammenligner denne måneden med forrige måned.",
-          "I fjor sammenligner dette året med i fjor, eller den valgte perioden med samme periode i fjor.",
-          "Forrige sammenligner en egendefinert periode med like mange dager rett før den."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Når en sammenligning er aktiv, legger Rapporter endringen og sammenligningsperiodens tall til alle felt unntatt Avgift, Nettoresultat og Produkter uten kostpris. Salgsinntekt, Mottatt betaling, Bruttofortjeneste, Ordrer, Gjennomsnittlig ordreverdi, Rabatter totalt og Betjente kunder viser hvert sin sammenligningslinje, for eksempel «▼ 3 % mot Forrige måned»."
-      },
-      {
-        "type": "shot",
-        "name": "advanced-reports",
-        "alt": "Rapporter med Denne uken og Sammenlign satt til Forrige uke, med sammenligningslinjen og første rad med felt, der hvert felt viser endringen og sammenligningstallet under seg",
-        "caption": "Trykk på en sammenligningslinje under et felt for å åpne Periodesammenligning og se tallene for begge periodene."
-      },
-      {
-        "type": "p",
-        "text": "Endringen i Rabatter totalt er alltid grå, siden mer rabatt verken er bra eller dårlig i seg selv. Trykk på en sammenligningslinje for å åpne Periodesammenligning, som viser tallene for begge periodene. Trenddiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, kuttes sammenligningsperioden på samme tidspunkt."
-      },
-      {
-        "type": "h2",
-        "text": "Ukedag × time"
-      },
-      {
-        "type": "p",
-        "text": "Bytt overskriften på trenddiagrammet fra Utvikling til Ukedag × time for å se et varmekart med syv dager og 24 timer. Jo mørkere rute, desto mer solgte du i den timen. Du kan bytte varmekartet mellom salgsinntekt og ordrer. Når en sammenligning er slått på under Sammenlign, viser varmekartet også hvilke timer som vokste og hvilke som krympet."
-      },
-      {
-        "type": "h2",
-        "text": "Saktegående varer"
-      },
-      {
-        "type": "p",
-        "text": "Bytt overskriften på rangeringskortet til Saktegående varer for å se produktene fra færrest til flest salg. Hver rad viser produktets nåværende lagerbeholdning og siste salgsdato. Produkter som aldri er solgt, er merket Aldri solgt, og et produkt med varianter får én linje per variant. Som standard vises bare produkter som er på lager."
-      },
-      {
-        "type": "h2",
-        "text": "Endringer"
-      },
-      {
-        "type": "p",
-        "text": "Bytt overskriften på rangeringskortet til Endringer for å se de 3 produktene der salgsinntekten økte mest og de 3 der den falt mest sammenlignet med sammenligningsperioden. Hver rad viser salgsinntekten for begge periodene og differansen, og hver variant sammenlignes med seg selv."
-      },
-      {
-        "type": "p",
-        "text": "Velg først en periode under Sammenlign. Når Sammenlign er satt til Ingen, eller perioden er Hele perioden, ber kortet deg om å velge en sammenligningsperiode. Trykk på kortet eller Vis alle for å åpne hele listen Produktendringer, delt i Økning og Nedgang."
-      },
-      {
-        "type": "h2",
-        "text": "Gjenkjøpsandel"
-      },
-      {
-        "type": "p",
-        "text": "Den siste linjen i feltet Betjente kunder viser gjenkjøpsandelen som «Gjenkjøpsandel … · … medlemmer kom tilbake». Den viser andelen medlemmer som handlet i den valgte perioden og har handlet to eller flere ganger totalt. Når en sammenligning er slått på under Sammenlign, gir en linje under endringen i prosentpoeng og sammenligningsperiodens andel."
-      },
-      {
-        "type": "h2",
-        "text": "Andel per kategori"
-      },
-      {
-        "type": "p",
-        "text": "Andel per kategori viser hver kategoris salgsinntekt og andel, med størst først, etter produktenes nåværende kategori. Produkter uten kategori havner under Uten kategori, og radene summerer seg nøyaktig til salgsinntekten."
-      },
-      {
-        "type": "h2",
-        "text": "Akkurat nå"
+        "text": "Den siste linjen i feltet Betjente kunder viser gjenkjøpsandelen som «Gjenkjøpsandel … · … medlemmer kom tilbake». Den viser andelen av medlemmene som handlet i den valgte perioden og har handlet to ganger eller mer til sammen."
       },
       {
         "type": "p",
@@ -1554,36 +1445,118 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Lagerverdi, beregnet som nåværende beholdning × nåværende kostpris.",
+          "Lagerverdi, beregnet som nåværende lager × nåværende kostpris.",
           "Alle lagerbevegelser i den valgte perioden.",
-          "Poengene kundene har, men ikke har brukt, sammen med det høyeste beløpet de kan få trukket fra."
+          "Poengene kundene har og ikke har løst inn, sammen med det høyeste beløpet de kan trekke fra."
         ]
       },
       {
         "type": "p",
-        "text": "Lagerverdi og ubrukte poeng er nåværende saldoer, så de endres ikke når du bytter periode øverst."
-      },
-      {
-        "type": "h2",
-        "text": "Planer og tillatelser"
-      },
-      {
-        "type": "p",
-        "text": "Fra og med v3.4 er alle avanserte rapporter åpne på alle planer, også Lite, og de forblir åpne etter at prøveperioden er over. Endringer ble også lagt til i v3.4. Tidligere versjoner viste avanserte rapporter bare på Pro, med en liten lås på de andre planene. Hvis du fortsatt ser låsene, oppdaterer du DingPOS fra App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite sporer ikke lager eller lojalitetspoeng, men Akkurat nå viser likevel Lagerverdi og de ubrukte poengene butikken din allerede har (for eksempel fra prøveperioden), eller null."
+        "text": "Lagerverdi og poeng som ikke er løst inn, er nåværende saldoer, så de endres ikke når du bytter periode øverst."
       },
       {
         "type": "note",
-        "text": "Ansatte ser avanserte rapporter under tillatelsen Rapporter. Beløpene for Lagerverdi krever i tillegg tillatelsen Kostpris og fortjeneste."
+        "text": "Ansatte ser Rapporter med tillatelsen Rapporter. Beløpene under Lagerverdi krever i tillegg tillatelsen Kostpris og fortjeneste."
+      },
+      {
+        "type": "note",
+        "text": "Kalenderperiodene kom i v2.4. Eldre versjoner hadde løpende perioder (I dag / 7 dager / 30 dager / Hele perioden). Hvis du fortsatt ser dem, oppdaterer du DingPOS fra App Store."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Hvordan sammenligner jeg salget med forrige uke, forrige måned eller i fjor?",
+    "keywords": [
+      "Sammenlign",
+      "periodesammenligning",
+      "forrige uke",
+      "forrige måned",
+      "i fjor",
+      "samme periode i fjor",
+      "endringer",
+      "rapporter",
+      "vekst",
+      "gjenkjøpsandel"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Trykk på Sammenlign til høyre i periodelinjen i Rapporter og velg en tidligere periode, for eksempel Forrige uke eller I fjor. Hvert felt viser da hvor mye tallet har gått opp eller ned, for eksempel «▼ 3 % mot Forrige måned», med sammenligningsperiodens tall under."
+      },
+      {
+        "type": "h2",
+        "text": "Slå på en sammenligning"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Rapporter fra sidepanelet.",
+          "Velg en periode øverst.",
+          "Trykk på Sammenlign til høyre i periodelinjen.",
+          "Velg et sammenligningsalternativ fra menyen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Hvilke valg du får, avhenger av perioden du velger:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ingen slår av sammenligningen.",
+          "Forrige uke sammenligner én enkelt dag med samme dag forrige uke, eller denne uken med forrige uke.",
+          "Forrige måned sammenligner denne måneden med forrige måned.",
+          "I fjor sammenligner dette året med fjoråret, eller den valgte perioden med samme periode i fjor.",
+          "Forrige sammenligner en egendefinert periode med et like langt tidsrom rett før den."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Når en sammenligning er på, legger Rapporter endringen og sammenligningsperiodens tall til i alle felt unntatt Avgift, Nettoresultat og Produkter uten kostpris. Salgsinntekt, Mottatt betaling, Bruttofortjeneste, Ordrer, Gjennomsnittlig ordreverdi, Rabatter totalt og Betjente kunder viser hver en sammenligningslinje som «▼ 3 % mot Forrige måned»."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Rapporter med Denne uken og Sammenlign satt til Forrige uke, med sammenligningslinjen og første rad med felt, der hvert felt viser endringen og sammenligningstallet under",
+        "caption": "Trykk på en sammenligningslinje under et felt for å åpne Periodesammenligning og se tallene for begge periodene."
+      },
+      {
+        "type": "p",
+        "text": "Endringen på Rabatter totalt er alltid grå, fordi mer rabatt verken er bra eller dårlig i seg selv. Trykk på en sammenligningslinje for å åpne Periodesammenligning, som viser tallene for begge periodene. Trenddiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, avgrenses sammenligningsperioden til samme tidspunkt."
+      },
+      {
+        "type": "h2",
+        "text": "Endringer"
+      },
+      {
+        "type": "p",
+        "text": "Bytt overskriften på rangeringskortet til Endringer for å se de tre produktene hvis salgsinntekt økte mest og de tre som sank mest mot sammenligningsperioden. Hver rad viser salgsinntekten for begge periodene og differansen, og hver variant sammenlignes med seg selv."
+      },
+      {
+        "type": "p",
+        "text": "Velg først en periode under Sammenlign. Når Sammenlign er satt til Ingen, eller perioden er Hele perioden, ber kortet deg velge en sammenligningsperiode. Trykk på kortet eller Vis alle for å åpne hele listen Produktendringer, delt i Økning og Nedgang."
+      },
+      {
+        "type": "h2",
+        "text": "Varmekart og gjenkjøpsandel"
+      },
+      {
+        "type": "p",
+        "text": "Med en sammenligning slått på viser varmekartet Ukedag × time i trenddiagrammet også hvilke timer som vokste og hvilke som krympet, og gjenkjøpsandelen i feltet Betjente kunder får en linje med endringen i prosentpoeng og sammenligningsperiodens andel."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2947,7 +2920,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og abonnementsplanen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Avanserte rapporter krever ikke det. Fra og med v3.4 er de inkludert i alle abonnementsplaner."
+        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og abonnementsplanen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Det trenger du ikke for Rapporter: alle abonnementsplaner inkluderer alt der."
       },
       {
         "type": "p",
@@ -3007,7 +2980,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre abonnementsplanene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (avanserte rapporter og månedlig resultat inkludert fra og med v3.4, avgiftsrapporten og eksport av den fra og med v3.6) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
+        "text": "Alle tre abonnementsplanene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (hele Rapporter-fanen og månedlig Resultat fra og med v3.4, avgiftsrapporten og eksport av den fra og med v3.6) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
       },
       {
         "type": "list",

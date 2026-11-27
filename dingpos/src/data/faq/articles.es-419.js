@@ -1316,14 +1316,15 @@ export const articles = [
     "question": "¿Qué periodos puedo ver en los reportes?",
     "keywords": [
       "reportes",
+      "estadísticas de ventas",
       "periodo",
       "esta semana",
       "este mes",
-      "este año",
       "rango personalizado",
-      "fecha",
       "ranking de productos",
-      "comparar"
+      "productos de baja rotación",
+      "día × hora",
+      "valuación de inventario"
     ],
     "content": [
       {
@@ -1353,7 +1354,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "El mosaico Impuesto y el reporte de impuestos también siguen el periodo elegido, así que al fijar un rango de declaración con Personalizado se actualizan ambos; consulta el artículo relacionado sobre el reporte de impuestos. A la derecha de la barra de periodo, toca Comparar para ver el periodo elegido junto al anterior o al mismo periodo del año pasado; consulta el artículo relacionado sobre los reportes avanzados."
+        "text": "El mosaico Impuesto y el reporte de impuestos también siguen el periodo elegido, así que al fijar un rango de declaración con Personalizado se actualizan ambos; consulta el artículo relacionado sobre el reporte de impuestos. A la derecha de la barra de periodo, toca Comparar para ver el periodo elegido junto al anterior o al mismo periodo del año pasado; consulta el artículo relacionado sobre cómo comparar periodos."
       },
       {
         "type": "h2",
@@ -1388,7 +1389,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "El menú de la esquina superior derecha del gráfico de tendencia de ventas lo cambia entre Ingresos por ventas, Pedidos, Pedido promedio y Clientes atendidos. El gráfico también ofrece un selector entre Tendencia y Día × hora; consulta el artículo relacionado sobre los reportes avanzados para esa vista. Junto a él, el gráfico Costo y utilidad bruta apila en una barra el costo de los productos y la utilidad bruta de cada periodo. Un solo día se grafica por hora; los periodos más largos agrupan los datos por días, semanas, meses o años según su duración."
+        "text": "El menú de la esquina superior derecha del gráfico de tendencia de ventas lo cambia entre Ingresos por ventas, Pedidos, Pedido promedio y Clientes atendidos. Junto a él, el gráfico Costo y utilidad bruta apila en una barra el costo de los productos y la utilidad bruta de cada periodo. Un solo día se grafica por hora; los periodos más largos agrupan los datos por días, semanas, meses o años según su duración."
       },
       {
         "type": "p",
@@ -1396,7 +1397,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Cambia el encabezado del gráfico de tendencia de Tendencia a Día × hora para ver un mapa de calor de siete días y 24 horas. Cuanto más oscura es una celda, más vendiste en esa hora, y puedes alternar el mapa de calor entre ingresos por ventas y pedidos."
+      },
+      {
+        "type": "p",
         "text": "Ranking de productos muestra los 5 productos principales del periodo elegido. Toca la tarjeta o Ver todo para listar todos los productos vendidos en ese periodo, ordenados por cantidad después de devoluciones. Un producto con variantes aparece con una línea por variante."
+      },
+      {
+        "type": "p",
+        "text": "Cambia el encabezado de la tarjeta de ranking a Productos de baja rotación para listar los productos de menos a más ventas. Cada fila muestra el stock actual del producto y la última fecha en que se vendió. Los productos que nunca se vendieron aparecen como Nunca vendido, y de forma predeterminada solo se muestran los productos con stock. El encabezado Variaciones lista los productos cuyos ingresos por ventas más subieron o bajaron frente a un periodo de comparación; consulta el artículo relacionado sobre cómo comparar periodos."
+      },
+      {
+        "type": "h2",
+        "text": "Participación por categoría, tasa de recompra y Ahora mismo"
+      },
+      {
+        "type": "p",
+        "text": "Participación por categoría lista los ingresos por ventas de cada categoría y su participación, de mayor a menor, según la categoría actual de cada producto. Los productos sin categoría van en Sin categoría, y las filas suman exactamente los ingresos por ventas."
+      },
+      {
+        "type": "p",
+        "text": "La última línea del mosaico Clientes atendidos muestra la tasa de recompra como «Tasa de recompra … · … miembros volvieron a comprar». Es la proporción de miembros que compraron en el periodo elegido y que han comprado dos o más veces en total."
+      },
+      {
+        "type": "p",
+        "text": "Ahora mismo muestra tres datos de inventario y puntos:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Valuación de inventario, calculada como stock actual × costo actual.",
+          "Todos los movimientos de stock del periodo seleccionado.",
+          "Los puntos que los clientes tienen sin canjear, junto con el máximo que pueden descontar."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "La valuación de inventario y los puntos sin canjear son saldos actuales, así que cambiar el periodo en la parte superior no los modifica."
+      },
+      {
+        "type": "note",
+        "text": "El personal ve Reportes con el permiso de Reportes; los montos de Valuación de inventario además requieren el permiso de Costos y utilidad."
       },
       {
         "type": "note",
@@ -1404,42 +1445,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "¿Qué muestran los reportes avanzados?",
+    "question": "¿Cómo comparo las ventas con la semana pasada, el mes pasado o el año pasado?",
     "keywords": [
-      "reportes avanzados",
-      "reportes",
-      "comparar periodos",
+      "comparar",
       "comparación de periodos",
-      "mapa de calor",
-      "día × hora",
-      "productos de baja rotación",
+      "semana pasada",
+      "mes pasado",
+      "año pasado",
+      "mismo periodo del año pasado",
       "variaciones",
-      "participación por categoría",
-      "valuación de inventario",
+      "reportes",
+      "crecimiento de ventas",
       "tasa de recompra"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Los reportes avanzados no son una pantalla aparte: están directamente en Reportes y siguen el periodo que elijas arriba. Agregan comparaciones de periodos, un mapa de calor por día de la semana y hora, Productos de baja rotación, Variaciones, la tasa de recompra de los miembros, Participación por categoría y una sección Ahora mismo con el stock y los puntos. Todos los planes los incluyen y siguen disponibles después de que termina la prueba."
+        "text": "Toca Comparar, a la derecha de la barra de periodo de Reportes, y elige un periodo anterior, como Semana pasada o Año pasado. Cada mosaico muestra entonces cuánto subió o bajó su cifra, por ejemplo «▼ 3% vs. Mes pasado», con la cifra del periodo de comparación debajo."
       },
       {
         "type": "h2",
-        "text": "Comparar"
-      },
-      {
-        "type": "p",
-        "text": "Comparar está a la derecha de la barra de periodo de Reportes y mide el periodo elegido frente a uno anterior."
+        "text": "Activar una comparación"
       },
       {
         "type": "steps",
@@ -1461,7 +1497,7 @@ export const articles = [
           "Semana pasada compara un solo día con el mismo día de la semana pasada, o esta semana con la semana pasada.",
           "Mes pasado compara este mes con el mes pasado.",
           "Año pasado compara este año con el año pasado, o el periodo elegido con el mismo periodo del año pasado.",
-          "Anterior compara un rango personalizado con la misma cantidad de días anteriores."
+          "Anterior compara un rango personalizado con la misma cantidad de días inmediatamente anteriores."
         ]
       },
       {
@@ -1480,22 +1516,6 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Día × hora"
-      },
-      {
-        "type": "p",
-        "text": "Cambia el encabezado del gráfico de tendencia de Tendencia a Día × hora para ver un mapa de calor de siete días y 24 horas. Cuanto más oscura es una celda, más vendiste en esa hora. Puedes alternar el mapa de calor entre ingresos por ventas y pedidos. Con una comparación activada en Comparar, el mapa de calor también muestra qué horas crecieron y cuáles bajaron."
-      },
-      {
-        "type": "h2",
-        "text": "Productos de baja rotación"
-      },
-      {
-        "type": "p",
-        "text": "Cambia el encabezado de la tarjeta de ranking a Productos de baja rotación para listar los productos de menos a más ventas. Cada fila muestra el stock actual del producto y la última fecha en que se vendió. Los productos que nunca se vendieron aparecen como Nunca vendido, y un producto con variantes tiene una línea por variante. De forma predeterminada solo se muestran los productos con stock."
-      },
-      {
-        "type": "h2",
         "text": "Variaciones"
       },
       {
@@ -1508,61 +1528,16 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Tasa de recompra"
+        "text": "Mapa de calor y tasa de recompra"
       },
       {
         "type": "p",
-        "text": "La última línea del mosaico Clientes atendidos muestra la tasa de recompra como «Tasa de recompra … · … miembros volvieron a comprar». Es la proporción de miembros que compraron en el periodo elegido y que han comprado dos o más veces en total. Con una comparación activada en Comparar, una línea debajo indica el cambio en puntos porcentuales y la tasa del periodo de comparación."
-      },
-      {
-        "type": "h2",
-        "text": "Participación por categoría"
-      },
-      {
-        "type": "p",
-        "text": "Participación por categoría lista los ingresos por ventas de cada categoría y su participación, de mayor a menor, según la categoría actual de cada producto. Los productos sin categoría van en Sin categoría, y las filas suman exactamente los ingresos por ventas."
-      },
-      {
-        "type": "h2",
-        "text": "Ahora mismo"
-      },
-      {
-        "type": "p",
-        "text": "Ahora mismo muestra tres datos de inventario y puntos:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Valuación de inventario, calculada como stock actual × costo actual.",
-          "Todos los movimientos de stock del periodo seleccionado.",
-          "Los puntos que los clientes tienen sin canjear, junto con el máximo que pueden descontar."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "La valuación de inventario y los puntos sin canjear son saldos actuales, así que cambiar el periodo en la parte superior no los modifica."
-      },
-      {
-        "type": "h2",
-        "text": "Planes y permisos"
-      },
-      {
-        "type": "p",
-        "text": "Desde la v3.4, todos los reportes avanzados están disponibles en todos los planes, incluido Lite, y siguen disponibles después de que termina la prueba. Variaciones también se agregó en la v3.4. Las versiones anteriores mostraban los reportes avanzados solo en Pro, con un pequeño candado en los demás planes; si aún ves los candados, actualiza DingPOS desde el App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite no controla el stock ni los puntos de lealtad, pero Ahora mismo sigue mostrando la valuación de inventario y los puntos sin canjear que tu tienda ya tiene (por ejemplo, de la prueba), o cero."
-      },
-      {
-        "type": "note",
-        "text": "El personal ve los reportes avanzados con el permiso de Reportes; los montos de valuación de inventario además requieren el permiso de Costos y utilidad."
+        "text": "Con una comparación activada, el mapa de calor Día × hora del gráfico de tendencia también muestra qué horas crecieron y cuáles bajaron, y la tasa de recompra del mosaico Clientes atendidos agrega una línea con el cambio en puntos porcentuales y la tasa del periodo de comparación."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2921,7 +2896,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si te suscribes a cualquier plan durante la prueba, esta termina de inmediato y el plan que compraste se aplica desde ese momento. Al terminar la prueba, las funciones Pro, como el personal y el registro de actividad, solo siguen disponibles con una suscripción Pro. Los reportes avanzados no necesitan una; desde la v3.4 todos los planes los incluyen."
+        "text": "Si te suscribes a cualquier plan durante la prueba, esta termina de inmediato y el plan que compraste se aplica desde ese momento. Al terminar la prueba, las funciones Pro, como el personal y el registro de actividad, solo siguen disponibles con una suscripción Pro. Reportes no necesita una; todos los planes lo incluyen completo."
       },
       {
         "type": "p",
@@ -2982,7 +2957,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Los tres planes incluyen todas las funciones de cobro, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (con reportes avanzados y resultados mensuales incluidos desde la v3.4, y el reporte de impuestos y su exportación desde la v3.6) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
+        "text": "Los tres planes incluyen todas las funciones de cobro, productos, pedidos (con anulaciones, devoluciones y cambios), reportes (todo Reportes y los Resultados mensuales desde la v3.4, y el reporte de impuestos y su exportación desde la v3.6) y respaldo en la nube. Se diferencian en las herramientas para administrar la tienda:"
       },
       {
         "type": "list",

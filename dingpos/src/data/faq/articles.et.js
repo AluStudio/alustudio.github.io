@@ -1323,17 +1323,18 @@ export const articles = [
   {
     "slug": "report-periods",
     "category": "reports",
-    "question": "Milliseid perioode saab aruannetes vaadata?",
+    "question": "Milliseid ajavahemikke saab aruannetes vaadata?",
     "keywords": [
       "aruanded",
-      "periood",
+      "aruandeperiood",
       "ajavahemik",
       "see nädal",
       "see kuu",
-      "see aasta",
       "oma vahemik",
       "toodete edetabel",
-      "võrdle"
+      "aeglase käibega tooted",
+      "nädalapäev × tund",
+      "laojäägi väärtus"
     ],
     "content": [
       {
@@ -1363,7 +1364,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kaart Maks ja maksuaruanne järgivad samuti valitud perioodi, nii et deklareerimisperioodi valimine valikuga Oma vahemik uuendab mõlemat; täpsemalt vaata seotud artiklit maksuaruande kohta. Perioodiriba paremal küljel puuduta Võrdle, et vaadata valitud perioodi koos eelneva perioodiga või eelmise aasta sama perioodiga; täpsemalt vaata seotud artiklit täiustatud aruannete kohta."
+        "text": "Kaart Maks ja maksuaruanne järgivad samuti valitud perioodi, nii et deklareerimisperioodi valimine valikuga Oma vahemik uuendab mõlemat; täpsemalt vaata seotud artiklit maksuaruande kohta. Perioodiriba paremal küljel puuduta Võrdle, et vaadata valitud perioodi koos eelneva perioodiga või eelmise aasta sama perioodiga; täpsemalt vaata seotud artiklit perioodide võrdlemise kohta."
       },
       {
         "type": "h2",
@@ -1398,7 +1399,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Müügitrendi graafiku paremas ülanurgas olev menüü lülitab seda valikute Müügitulu, Müügid, Keskmine müük ja Teenindatud kliendid vahel. Graafikul on ka lüliti Trend ja Nädalapäev × tund; selle vaate kohta vaata seotud artiklit täiustatud aruannete kohta. Selle kõrval paneb graafik Omahind ja brutokasum iga perioodi toodete omahinna ja brutokasumi ühte tulpa kokku. Üks päev kuvatakse tunnipõhiselt, pikemate perioodide andmed rühmitatakse pikkusest olenevalt päevade, nädalate, kuude või aastate kaupa."
+        "text": "Müügitrendi graafiku paremas ülanurgas olev menüü lülitab seda valikute Müügitulu, Müügid, Keskmine müük ja Teenindatud kliendid vahel. Selle kõrval paneb graafik Omahind ja brutokasum iga perioodi toodete omahinna ja brutokasumi ühte tulpa kokku. Üks päev kuvatakse tunnipõhiselt, pikemate perioodide andmed rühmitatakse pikkusest olenevalt päevade, nädalate, kuude või aastate kaupa."
       },
       {
         "type": "p",
@@ -1406,7 +1407,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Lülita trendigraafiku päis valikult Trend valikule Nädalapäev × tund, et näha seitsmepäevast ja 24-tunnist soojuskaarti. Mida tumedam on lahter, seda rohkem sa sel tunnil müüsid, ning soojuskaarti saab lülitada müügitulu ja müükide vahel."
+      },
+      {
+        "type": "p",
         "text": "Toodete edetabel näitab valitud perioodi 5 enimmüüdud toodet. Puuduta kaarti või valikut Vaata kõiki, et näha kõiki selles perioodis müüdud tooteid, järjestatud koguse järgi pärast tagastusi. Variantidega toode kuvatakse ühe reana iga variandi kohta."
+      },
+      {
+        "type": "p",
+        "text": "Lülita edetabelikaardi päis valikule Aeglase käibega tooted, et näha tooteid vähimmüüdust enimmüüdud tooteni. Iga rida näitab toote praegust laoseisu ja viimast müügipäeva. Tooted, mida pole kunagi müüdud, on märgitud tekstiga Pole müüdud, ning vaikimisi kuvatakse ainult laos olevad tooted. Päis Muutused loetleb tooted, mille müügitulu võrdlusperioodiga võrreldes kõige rohkem kasvas või langes; vaata seotud artiklit perioodide võrdlemise kohta."
+      },
+      {
+        "type": "h2",
+        "text": "Osakaal kategooriate kaupa, korduvostude määr ja Praegu"
+      },
+      {
+        "type": "p",
+        "text": "Osakaal kategooriate kaupa loetleb iga kategooria müügitulu ja osakaalu suuruse järgi suurimast väikseimani, lähtudes iga toote praegusest kategooriast. Kategooriata tooted jäävad kategooria Kategooriata alla ning read annavad kokku täpselt Müügitulu."
+      },
+      {
+        "type": "p",
+        "text": "Kaardi Teenindatud kliendid viimasel real on korduvostude määr kujul „Korduvostude määr … · … liiget naasis“. See näitab nende liikmete osakaalu, kes ostsid valitud perioodis ja on ostnud kokku kaks või rohkem korda."
+      },
+      {
+        "type": "p",
+        "text": "Praegu näitab kolme laoseisu ja punktide andmekogumit:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Laojäägi väärtus, mis arvutatakse kui praegune laoseis × praegune omahind.",
+          "Kõik laoliikumised valitud perioodis.",
+          "Punktid, mis kliendid hoiavad ja pole veel kasutanud, ning suurim summa, mille nende arvelt maha saab võtta."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Laojäägi väärtus ja kasutamata punktid on praegused jäägid, mistõttu ülaosas perioodi muutmine neid ei muuda."
+      },
+      {
+        "type": "note",
+        "text": "Töötajad näevad Aruandeid õiguse Aruanded alusel; Laojäägi väärtuse summade nägemiseks on vaja ka õigust Omahind ja kasum."
       },
       {
         "type": "note",
@@ -1414,48 +1455,44 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Mida näitavad täiustatud aruanded?",
+    "question": "Kuidas võrrelda müüki eelmise nädala, kuu või aastaga?",
     "keywords": [
-      "täiustatud aruanded",
-      "aruanded",
       "võrdle",
       "perioodide võrdlus",
-      "nädalapäev × tund",
-      "aeglase käibega tooted",
+      "eelmine nädal",
+      "eelmine kuu",
+      "eelmine aasta",
+      "sama periood eelmisel aastal",
       "muutused",
-      "osakaal kategooriate kaupa",
-      "laojäägi väärtus",
+      "aruanded",
+      "müügi kasv",
       "korduvostude määr"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Täiustatud aruanded pole eraldi ekraan, vaid asuvad vahekaardil Aruanded ja järgivad ülaosas valitud perioodi. Need lisavad perioodide võrdlused, nädalapäeva ja tunni soojuskaardi, jaotised Aeglase käibega tooted ja Muutused, liikmete korduvostude määra, jaotise Osakaal kategooriate kaupa ning jaotise Praegu laoseisu ja punktide jaoks. Need on kaasatud igas paketis ja jäävad avatuks ka pärast prooviperioodi lõppu."
+        "text": "Puuduta vahekaardil Aruanded perioodiriba paremal küljel valikut Võrdle ja vali varasem periood, näiteks Eelmine nädal või Eelmine aasta. Iga kaart näitab siis, kui palju selle näitaja kasvas või langes, näiteks „▼ 3% võrreldes Eelmine kuu“, ning selle all võrdlusperioodi näitajat."
       },
       {
         "type": "h2",
-        "text": "Võrdle"
-      },
-      {
-        "type": "p",
-        "text": "Võrdle asub vahekaardil Aruanded perioodiriba paremal küljel ja võrdleb valitud perioodi varasemaga."
+        "text": "Võrdluse sisselülitamine"
       },
       {
         "type": "steps",
         "items": [
-          "Ava külgribal Aruanded.",
+          "Ava külgribalt Aruanded.",
           "Vali ülaosas periood.",
-          "Puuduta perioodiriba paremal küljel Võrdle.",
+          "Puuduta perioodiriba paremal küljel valikut Võrdle.",
           "Vali menüüst võrdlusvalik."
         ]
       },
@@ -1467,41 +1504,25 @@ export const articles = [
         "type": "list",
         "items": [
           "Pole lülitab võrdluse välja.",
-          "Eelmine nädal võrdleb üht päeva eelmise nädala sama päevaga või seda nädalat eelmise nädalaga.",
+          "Eelmine nädal võrdleb ühte päeva sama päevaga eelmisel nädalal või seda nädalat eelmise nädalaga.",
           "Eelmine kuu võrdleb seda kuud eelmise kuuga.",
-          "Eelmine aasta võrdleb seda aastat eelmise aastaga või valitud perioodi eelmise aasta sama perioodiga.",
-          "Eelnev võrdleb oma vahemikku sama päevade arvuga vahetult eelneva vahemikuga."
+          "Eelmine aasta võrdleb seda aastat eelmise aastaga või valitud perioodi sama perioodiga eelmisel aastal.",
+          "Eelnev võrdleb oma vahemikku sama paljude päevadega enne seda vahemikku."
         ]
       },
       {
         "type": "p",
-        "text": "Kui võrdlus on aktiivne, lisab Aruanded muutuse ja võrdlusperioodi näitaja igale kaardile peale kaartide Maks, Puhaskasum ja Omahinnata tooted. Kaardid Müügitulu, Laekunud raha, Brutokasum, Müügid, Keskmine müük, Allahindlused kokku ja Teenindatud kliendid näitavad kõik võrdlusrida, näiteks „▼ 3% võrreldes eelmise kuuga“."
+        "text": "Kui võrdlus on aktiivne, lisab Aruanded muutuse ja võrdlusperioodi näitaja igale kaardile peale kaartide Maks, Puhaskasum ja Omahinnata tooted. Müügitulu, Laekunud raha, Brutokasum, Müügid, Keskmine müük, Allahindlused kokku ja Teenindatud kliendid kuvavad kõik võrdlusrida, näiteks „▼ 3% võrreldes Eelmine kuu“."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "Aruanded perioodil See nädal, Võrdle seatud valikule Eelmine nädal: näha on võrdlusriba ja esimene kaardirida, mille iga kaardi all on muutus ja võrdlusperioodi näitaja",
+        "alt": "Aruanded perioodil See nädal, Võrdle seatud väärtusele Eelmine nädal: näha on võrdlusriba ja esimene kaardirida, kus iga kaardi all on selle muutus ja võrdlusperioodi näitaja",
         "caption": "Puuduta mis tahes võrdlusrida kaardi all, et avada Perioodide võrdlus ja näha mõlema perioodi näitajaid."
       },
       {
         "type": "p",
-        "text": "Kaardi Allahindlused kokku muutus on alati hall, sest suurem allahindlus ei ole iseenesest hea ega halb. Puuduta mis tahes võrdlusrida, et avada Perioodide võrdlus, mis loetleb mõlema perioodi näitajad. Müügitrendi graafikule lisandub võrdlusperioodi kohta heledam joon. Kui periood veel kestab, lõpeb võrdlusperiood sama ajahetkega."
-      },
-      {
-        "type": "h2",
-        "text": "Nädalapäev × tund"
-      },
-      {
-        "type": "p",
-        "text": "Lülita müügitrendi graafiku päis valikult Trend valikule Nädalapäev × tund, et näha seitsmepäevast 24-tunnist soojuskaarti. Mida tumedam on lahter, seda rohkem sellel tunnil müüsid. Soojuskaarti saab lülitada müügitulu ja müükide vahel. Kui jaotises Võrdle on võrdlus sisse lülitatud, näitab soojuskaart ka seda, millised tunnid kasvasid ja millised kahanesid."
-      },
-      {
-        "type": "h2",
-        "text": "Aeglase käibega tooted"
-      },
-      {
-        "type": "p",
-        "text": "Lülita edetabelikaardi päis valikule Aeglase käibega tooted, et näha tooteid vähimast müügist suurimani. Iga rida näitab toote praegust laoseisu ja viimast müügikuupäeva. Tooted, mida pole kunagi müüdud, on märgitud „Pole müüdud“, ja variantidega toode saab iga variandi kohta ühe rea. Vaikimisi näidatakse ainult laos olevaid tooteid."
+        "text": "Kaardi Allahindlused kokku muutus on alati hall, sest suurem allahindlus ei ole iseenesest hea ega halb. Puuduta mis tahes võrdlusrida, et avada Perioodide võrdlus, mis loetleb mõlema perioodi näitajad. Trendigraafik lisab võrdlusperioodi jaoks heledama joone. Kui periood alles käib, lõigatakse võrdlusperiood samas hetkes."
       },
       {
         "type": "h2",
@@ -1509,69 +1530,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Lülita edetabelikaardi päis valikule Muutused, et näha 3 toodet, mille müügitulu kasvas võrdlusperioodiga võrreldes enim, ja 3 toodet, mille müügitulu langes enim. Iga rida näitab mõlema perioodi müügitulu ja vahet ning iga varianti võrreldakse iseendaga."
+        "text": "Lülita edetabelikaardi päis valikule Muutused, et näha 3 toodet, mille müügitulu võrdlusperioodiga võrreldes kõige rohkem kasvas, ja 3 toodet, mille müügitulu kõige rohkem langes. Iga rida näitab mõlema perioodi müügitulu ja vahet ning iga varianti võrreldakse iseendaga."
       },
       {
         "type": "p",
-        "text": "Vali esmalt periood jaotises Võrdle. Kui Võrdle on seatud valikule Pole või periood on Kogu aeg, palub kaart valida võrdlusperioodi. Puuduta kaarti või valikut Vaata kõiki, et avada täielik loend Toodete muutused, mis on jaotatud osadeks Müügitulu kasv ja Müügitulu langus."
+        "text": "Vali kõigepealt jaotises Võrdle periood. Kui Võrdle on seatud väärtusele Pole või periood on Kogu aeg, palub kaart valida võrdlusperioodi. Puuduta kaarti või valikut Vaata kõiki, et avada Toodete muutuste täielik loend, mis on jaotatud osadeks Müügitulu kasv ja Müügitulu langus."
       },
       {
         "type": "h2",
-        "text": "Korduvostude määr"
+        "text": "Soojuskaart ja korduvostude määr"
       },
       {
         "type": "p",
-        "text": "Kaardi Teenindatud kliendid viimane rida näitab korduvostude määra kujul „Korduvostude määr … · … liiget naasis“. See on nende liikmete osakaal, kes ostsid valitud perioodis ja on kokku ostnud kaks või enam korda. Kui jaotises Võrdle on võrdlus sisse lülitatud, annab selle all olev rida muutuse protsendipunktides ja võrdlusperioodi määra."
-      },
-      {
-        "type": "h2",
-        "text": "Osakaal kategooriate kaupa"
-      },
-      {
-        "type": "p",
-        "text": "Osakaal kategooriate kaupa loetleb iga kategooria müügitulu ja osakaalu, suurimast väikseimani, lähtudes iga toote praegusest kategooriast. Kategooriata tooted lähevad rubriiki Kategooriata ja read annavad kokku täpselt müügitulu."
-      },
-      {
-        "type": "h2",
-        "text": "Praegu"
-      },
-      {
-        "type": "p",
-        "text": "Jaotis Praegu näitab kolme laoseisu ja punktidega seotud andmet:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Laojäägi väärtus, arvutatud kui praegune laoseis × praegune omahind.",
-          "Kõik laoliikumised valitud perioodil.",
-          "Punktid, mis kliendid hoiavad ja pole lunastanud, koos suurima summaga, mille nad saavad maha arvata."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Laojäägi väärtus ja lunastamata punktid on praegused jäägid, seega ülaosas perioodi muutmine neid ei muuda."
-      },
-      {
-        "type": "h2",
-        "text": "Paketid ja õigused"
-      },
-      {
-        "type": "p",
-        "text": "Alates versioonist v3.4 on kõik täiustatud aruanded avatud igas paketis, sh Lite, ja jäävad avatuks ka pärast prooviperioodi lõppu. Muutused lisandus samuti versioonis v3.4. Varasemad versioonid näitasid täiustatud aruandeid ainult Pro paketis ja teistel pakettidel oli väike lukk; kui näed lukke endiselt, uuenda DingPOS App Store'ist."
-      },
-      {
-        "type": "p",
-        "text": "Lite ei jälgi laoseisu ega püsikliendipunkte, kuid Praegu näitab siiski laojäägi väärtust ja lunastamata punkte, mis su poel juba on (näiteks prooviperioodist), või nulli."
-      },
-      {
-        "type": "note",
-        "text": "Töötajad näevad täiustatud aruandeid õiguse Aruanded alusel; laojäägi väärtuse summade nägemiseks on vaja ka õigust Omahind ja kasum."
+        "text": "Kui võrdlus on sisse lülitatud, näitab trendigraafiku soojuskaart Nädalapäev × tund ka seda, millised tunnid kasvasid ja millised vähenesid, ning kaardi Teenindatud kliendid korduvostude määra rida saab juurde rea, kus on muutus protsendipunktides ja võrdlusperioodi määr."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2934,7 +2910,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajakontod ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Täiustatud aruanded seda ei vaja: alates versioonist v3.4 sisaldab neid iga pakett."
+        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajakontod ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Aruanded seda ei vaja: iga pakett sisaldab neid täies mahus."
       },
       {
         "type": "p",
@@ -2995,19 +2971,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kõik kolm paketti sisaldavad täisfunktsionaalset kassat, tooteid, müüke (koos anuleerimiste, tagastuste ja vahetustega), aruandeid (alates versioonist v3.4 ka täiustatud aruanded ja kuine kasumiaruanne, alates versioonist v3.6 maksuaruanne ja selle eksport) ja pilvevarundust. Need erinevad poe juhtimise tööriistade poolest:"
+        "text": "Kõik kolm paketti sisaldavad kassat kõigi funktsioonidega, tooteid, müüke (koos anuleerimiste, tagastuste ja vahetustega), aruandeid (alates versioonist v3.4 kogu vahekaart Aruanded ja kuine kasumiaruanne, alates versioonist v3.6 maksuaruanne ja selle eksport) ning pilvevarundust. Need erinevad poe juhtimise tööriistade poolest:"
       },
       {
         "type": "list",
         "items": [
           "Lite: ühele inimesele, kes peab turulettu ning vajab kassat ja tooteid.",
-          "Standard: lisab kampaaniad, allahindluse eelseadistused, püsikliendipunktid ja tasemed, laoseisu jälgimise, ostutellimused, müügi arvele, ettetellimused ja makseviiside teenustasu määrad.",
+          "Standard: lisab kampaaniad, allahindluse eelseadistused, püsikliendipunktid ja liikmetasemed, laoseisu jälgimise, ostutellimused, müügi arvele, ettetellimused ja makseviiside teenustasu määrad.",
           "Pro: lisab töötajakontod ja õigused, heakskiidu, tegevuslogi ja taastamise kirjed – töötajatega poodidele."
         ]
       },
       {
         "type": "p",
-        "text": "Oled juba Standard paketis? Uuenda Pro paketile tellimuse lehel: arveldustsükkel jääb samaks, paketiuuendus jõustub kohe ja Apple arvutab hinnavahe proportsionaalselt. Üleminek Pro paketilt tagasi Standardile jõustub pikendamise hetkel. Hinnad on rakenduses nähtaval ning pakette saad võrrelda meie lehel Hinnad."
+        "text": "Kas kasutad juba Standard-paketti? Uuenda tellimuse lehel Pro-paketile: arveldustsükkel jääb samaks, uuendus jõustub kohe ja Apple arvestab hinnavahe proportsionaalselt. Üleminek Pro-paketilt tagasi Standard-paketile jõustub tellimuse pikendamisel. Hinnad on rakenduses nähtaval ning pakette saad võrrelda meie lehel Hinnad."
       },
       {
         "type": "note",

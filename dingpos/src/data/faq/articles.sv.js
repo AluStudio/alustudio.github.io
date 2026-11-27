@@ -1333,10 +1333,11 @@ export const articles = [
       "tidsperiod",
       "denna vecka",
       "denna månad",
-      "detta år",
       "anpassad",
       "produktranking",
-      "jämför"
+      "långsamgående produkter",
+      "veckodag × timme",
+      "lagervärde"
     ],
     "content": [
       {
@@ -1366,7 +1367,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Rutan Moms och momsrapporten följer också den valda perioden, så när du anger ett redovisningsintervall med Anpassad uppdateras båda. Läs mer i den relaterade artikeln om momsrapporten. Till höger i periodfältet trycker du på Jämför för att visa den valda perioden bredvid perioden före eller samma period förra året. Läs mer i den relaterade artikeln om avancerade rapporter."
+        "text": "Rutan Moms och momsrapporten följer också den valda perioden, så när du anger ett redovisningsintervall med Anpassad uppdateras båda. Läs mer i den relaterade artikeln om momsrapporten. Till höger i periodfältet trycker du på Jämför för att visa den valda perioden bredvid perioden före eller samma period förra året. Läs mer i den relaterade artikeln om att jämföra perioder."
       },
       {
         "type": "h2",
@@ -1401,7 +1402,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Menyn uppe till höger på försäljningstrenddiagrammet växlar det mellan Intäkt, Ordrar, Genomsnittlig order och Betjänade kunder. Diagrammet har också en omkopplare mellan Trend och Veckodag × timme – läs om den vyn i den relaterade artikeln om avancerade rapporter. Bredvid finns diagrammet Kostnad och bruttovinst, som staplar varje periods varukostnad och bruttovinst i en och samma stapel. En enskild dag visas per timme, medan längre perioder grupperas per dag, vecka, månad eller år beroende på längd."
+        "text": "Menyn uppe till höger på försäljningstrenddiagrammet växlar det mellan Intäkt, Ordrar, Genomsnittlig order och Betjänade kunder. Bredvid finns diagrammet Kostnad och bruttovinst, som staplar varje periods varukostnad och bruttovinst i en och samma stapel. En enskild dag visas per timme, medan längre perioder grupperas per dag, vecka, månad eller år beroende på längd."
       },
       {
         "type": "p",
@@ -1409,7 +1410,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Växla trenddiagrammets rubrik från Trend till Veckodag × timme för att se en värmekarta över sju dagar och 24 timmar. Ju mörkare ruta, desto mer sålde du under den timmen, och du kan växla värmekartan mellan intäkt och ordrar."
+      },
+      {
+        "type": "p",
         "text": "Produktranking listar de 5 mest sålda produkterna under den valda perioden. Tryck på kortet eller på Visa alla för att lista alla produkter som sålts under perioden, rangordnade efter sålt antal minus returer. En produkt med varianter visas som en rad per variant."
+      },
+      {
+        "type": "p",
+        "text": "Växla rankingkortets rubrik till Långsamgående produkter för att lista produkterna från minst till mest sålda. Varje rad visar produktens aktuella lagersaldo och datumet då den senast såldes. Produkter som aldrig sålts markeras Aldrig såld, och som standard visas bara produkter som finns i lager. Rubriken Förändring listar de produkter vars intäkt ökat eller minskat mest jämfört med en jämförelseperiod. Läs mer i den relaterade artikeln om att jämföra perioder."
+      },
+      {
+        "type": "h2",
+        "text": "Andel per kategori, återköpsfrekvens och Just nu"
+      },
+      {
+        "type": "p",
+        "text": "Andel per kategori listar varje kategoris intäkt och andel, störst först, utifrån varje produkts nuvarande kategori. Produkter utan kategori hamnar under Utan kategori, och raderna summerar exakt till Intäkt."
+      },
+      {
+        "type": "p",
+        "text": "Sista raden i rutan Betjänade kunder visar återköpsfrekvensen som ”Återköpsfrekvens … · … kunder återkom”. Den visar andelen medlemmar som handlat under den valda perioden och som totalt handlat två gånger eller fler."
+      },
+      {
+        "type": "p",
+        "text": "Just nu visar tre uppgifter om lager och poäng:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Lagervärde, beräknat som aktuellt lagersaldo × aktuellt inköpspris.",
+          "Alla lagerrörelser under den valda perioden.",
+          "De poäng kunderna har men inte löst in, tillsammans med det mesta de kan dra av."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Lagervärde och ej inlösta poäng är aktuella saldon, så en ändrad period högst upp påverkar dem inte."
+      },
+      {
+        "type": "note",
+        "text": "Personal ser Statistik under behörigheten Statistik. För beloppen i Lagervärde krävs dessutom behörigheten Inköpspris och vinst."
       },
       {
         "type": "note",
@@ -1417,42 +1458,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Vad visar de avancerade rapporterna?",
+    "question": "Hur jämför jag försäljningen med förra veckan, förra månaden eller förra året?",
     "keywords": [
-      "avancerade rapporter",
-      "statistik",
       "jämför",
       "periodjämförelse",
-      "veckodag × timme",
-      "långsamgående produkter",
+      "förra veckan",
+      "förra månaden",
+      "förra året",
+      "samma period förra året",
       "förändring",
-      "andel per kategori",
-      "lagervärde",
-      "återköpsfrekvens",
-      "värmekarta"
+      "statistik",
+      "tillväxt",
+      "återköpsfrekvens"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Avancerade rapporter är ingen separat skärm – de finns direkt i Statistik och följer den period du väljer högst upp. De lägger till periodjämförelser, en värmekarta över veckodag och timme, Långsamgående produkter, Förändring, återköpsfrekvens för medlemmar, Andel per kategori och ett avsnitt Just nu för lager och poäng. Alla planer innehåller dem alla, och de förblir öppna även när provperioden har tagit slut."
+        "text": "Tryck på Jämför till höger i periodfältet i Statistik och välj en tidigare period, till exempel Förra veckan eller Förra året. Varje ruta visar då hur mycket dess värde ökat eller minskat, till exempel ”▼ 3 % mot Förra månaden”, med jämförelseperiodens värde under."
       },
       {
         "type": "h2",
-        "text": "Jämför"
-      },
-      {
-        "type": "p",
-        "text": "Jämför finns till höger i periodfältet i Statistik och mäter den valda perioden mot en tidigare."
+        "text": "Slå på en jämförelse"
       },
       {
         "type": "steps",
@@ -1493,22 +1529,6 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Veckodag × timme"
-      },
-      {
-        "type": "p",
-        "text": "Växla trenddiagrammets rubrik från Trend till Veckodag × timme för att se en värmekarta över sju dagar och 24 timmar. Ju mörkare ruta, desto mer sålde du under den timmen. Du kan växla värmekartan mellan intäkt och ordrar. Med en jämförelse påslagen under Jämför visar värmekartan också vilka timmar som ökat och vilka som minskat."
-      },
-      {
-        "type": "h2",
-        "text": "Långsamgående produkter"
-      },
-      {
-        "type": "p",
-        "text": "Växla rankingkortets rubrik till Långsamgående produkter för att lista produkterna från minst till mest sålda. Varje rad visar produktens aktuella lagersaldo och datumet då den senast såldes. Produkter som aldrig sålts markeras Aldrig såld, och en produkt med varianter får en rad per variant. Som standard visas bara produkter som finns i lager."
-      },
-      {
-        "type": "h2",
         "text": "Förändring"
       },
       {
@@ -1521,61 +1541,16 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Återköpsfrekvens"
+        "text": "Värmekarta och återköpsfrekvens"
       },
       {
         "type": "p",
-        "text": "Sista raden i rutan Betjänade kunder visar återköpsfrekvensen som ”Återköpsfrekvens … · … kunder återkom”. Den visar andelen medlemmar som handlat under den valda perioden och som totalt handlat två gånger eller fler. Med en jämförelse påslagen under Jämför anger en rad under förändringen i procentenheter och jämförelseperiodens frekvens."
-      },
-      {
-        "type": "h2",
-        "text": "Andel per kategori"
-      },
-      {
-        "type": "p",
-        "text": "Andel per kategori listar varje kategoris intäkt och andel, störst först, utifrån varje produkts nuvarande kategori. Produkter utan kategori hamnar under Utan kategori, och raderna summerar exakt till intäkten."
-      },
-      {
-        "type": "h2",
-        "text": "Just nu"
-      },
-      {
-        "type": "p",
-        "text": "Just nu visar tre uppgifter om lager och poäng:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Lagervärde, beräknat som aktuellt lagersaldo × aktuellt inköpspris.",
-          "Alla lagerrörelser under den valda perioden.",
-          "De poäng kunderna har men inte löst in, tillsammans med det mesta de kan dra av."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Lagervärde och ej inlösta poäng är aktuella saldon, så en ändrad period högst upp påverkar dem inte."
-      },
-      {
-        "type": "h2",
-        "text": "Planer och behörigheter"
-      },
-      {
-        "type": "p",
-        "text": "Sedan v3.4 är alla avancerade rapporter öppna i alla planer, även Lite, och de förblir öppna även när provperioden har tagit slut. Förändring lades också till i v3.4. Tidigare versioner visade avancerade rapporter bara i Pro, med ett litet lås i övriga planer. Ser du fortfarande låsen, uppdatera DingPOS från App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite har ingen lagerstyrning eller några poäng, men Just nu visar ändå det lagervärde och de ej inlösta poäng som butiken redan har (till exempel från provperioden), eller noll."
-      },
-      {
-        "type": "note",
-        "text": "Personal ser avancerade rapporter under behörigheten Statistik. För beloppen i Lagervärde krävs dessutom behörigheten Inköpspris och vinst."
+        "text": "Med en jämförelse påslagen visar värmekartan Veckodag × timme i trenddiagrammet också vilka timmar som ökat och vilka som minskat. Återköpsfrekvensen i rutan Betjänade kunder får dessutom en rad med förändringen i procentenheter och jämförelseperiodens frekvens."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2939,7 +2914,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Om du prenumererar på en plan under provperioden avslutas provperioden direkt, och den plan du köpt gäller från och med då. Efter provperioden finns Pro-funktioner som medarbetare och aktivitetsloggen kvar bara med en Pro-prenumeration. Avancerade rapporter kräver ingen; sedan v3.4 ingår de i alla planer."
+        "text": "Om du prenumererar på en plan under provperioden avslutas provperioden direkt, och den plan du köpt gäller från och med då. Efter provperioden finns Pro-funktioner som medarbetare och aktivitetsloggen kvar bara med en Pro-prenumeration. Statistik kräver ingen; allt i den ingår i alla planer."
       },
       {
         "type": "p",
@@ -3000,7 +2975,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alla tre planerna ger dig full kassafunktion, produkter, ordrar (med makuleringar, returer och byten), rapporter (avancerade rapporter och den månatliga resultaträkningen ingår sedan v3.4, momsrapporten och dess export sedan v3.6) och säkerhetskopiering i molnet. Skillnaden ligger i verktygen för att driva butiken:"
+        "text": "Alla tre planerna ger dig full kassafunktion, produkter, ordrar (med makuleringar, returer och byten), rapporter (hela Statistik och månadens Resultat sedan v3.4, momsrapporten och dess export sedan v3.6) och säkerhetskopiering i molnet. Skillnaden ligger i verktygen för att driva butiken:"
       },
       {
         "type": "list",

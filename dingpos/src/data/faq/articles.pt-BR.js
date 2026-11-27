@@ -1324,11 +1324,12 @@ export const articles = [
       "período",
       "Esta semana",
       "Este mês",
-      "Este ano",
       "Personalizado",
       "período personalizado",
       "Ranking de produtos",
-      "Comparar"
+      "Produtos parados",
+      "Dia da semana × hora",
+      "Valor do estoque"
     ],
     "content": [
       {
@@ -1358,7 +1359,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "O bloco Imposto e o relatório de impostos também seguem o período escolhido, então definir um intervalo de declaração em Personalizado atualiza os dois; veja o artigo relacionado sobre o relatório de impostos. À direita da barra de período, toque em Comparar para ver o período escolhido ao lado do anterior ou do mesmo período do ano passado; veja o artigo relacionado sobre relatórios avançados."
+        "text": "O bloco Imposto e o relatório de impostos também seguem o período escolhido, então definir um intervalo de declaração em Personalizado atualiza os dois; veja o artigo relacionado sobre o relatório de impostos. À direita da barra de período, toque em Comparar para ver o período escolhido ao lado do anterior ou do mesmo período do ano passado; veja o artigo relacionado sobre como comparar períodos."
       },
       {
         "type": "h2",
@@ -1393,7 +1394,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "O menu no canto superior direito do gráfico de tendência de vendas alterna entre Receita, Vendas, Ticket médio e Clientes atendidos. O gráfico também oferece a alternância entre Tendência e Dia da semana × hora; veja o artigo relacionado sobre relatórios avançados para essa visão. Ao lado, o gráfico Custo e lucro bruto empilha, em uma única barra, o custo dos produtos e o lucro bruto de cada período. Um único dia é exibido por hora, enquanto períodos mais longos agrupam os dados por dias, semanas, meses ou anos, conforme a duração."
+        "text": "O menu no canto superior direito do gráfico de tendência de vendas alterna entre Receita, Vendas, Ticket médio e Clientes atendidos. Ao lado, o gráfico Custo e lucro bruto empilha, em uma única barra, o custo dos produtos e o lucro bruto de cada período. Um único dia é exibido por hora, enquanto períodos mais longos agrupam os dados por dias, semanas, meses ou anos, conforme a duração."
       },
       {
         "type": "p",
@@ -1401,7 +1402,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Troque o cabeçalho do gráfico de tendência de Tendência para Dia da semana × hora para ver um mapa de calor de sete dias por 24 horas. Quanto mais escura a célula, mais você vendeu naquela hora, e é possível alternar o mapa de calor entre receita e vendas."
+      },
+      {
+        "type": "p",
         "text": "O Ranking de produtos lista os 5 primeiros produtos do período escolhido. Toque no card ou em Ver tudo para listar todos os produtos vendidos nesse período, ordenados pela quantidade após as devoluções. Um produto com variantes aparece em uma linha por variante."
+      },
+      {
+        "type": "p",
+        "text": "Troque o cabeçalho do card de ranking para Produtos parados para listar os produtos das menores vendas para as maiores. Cada linha mostra o estoque atual do produto e a data da última venda. Os produtos que nunca foram vendidos aparecem como Nunca vendido, e por padrão só aparecem os produtos em estoque. O cabeçalho Variações lista os produtos cuja receita mais subiu ou caiu em relação a um período de comparação; veja o artigo relacionado sobre como comparar períodos."
+      },
+      {
+        "type": "h2",
+        "text": "Participação por categoria, taxa de recompra e Agora"
+      },
+      {
+        "type": "p",
+        "text": "Participação por categoria lista a receita e a participação de cada categoria, da maior para a menor, com base na categoria atual de cada produto. Produtos sem categoria ficam em Sem categoria, e as linhas somam exatamente a Receita."
+      },
+      {
+        "type": "p",
+        "text": "A última linha do bloco Clientes atendidos exibe a taxa de recompra como “Taxa de recompra … · … clientes voltaram”. Ela mostra a parcela dos clientes cadastrados que compraram no período escolhido e já compraram duas ou mais vezes no total."
+      },
+      {
+        "type": "p",
+        "text": "Agora mostra três informações de estoque e pontos:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Valor do estoque, calculado como estoque atual × custo atual.",
+          "Todas as movimentações de estoque no período escolhido.",
+          "Os pontos que os clientes têm e ainda não resgataram, junto com o máximo que podem abater."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "O Valor do estoque e os pontos a resgatar são saldos atuais, então mudar o período no topo não os altera."
+      },
+      {
+        "type": "note",
+        "text": "A equipe vê o Resumo com a permissão Resumo; os valores de Valor do estoque também exigem a permissão Custo e lucro."
       },
       {
         "type": "note",
@@ -1409,41 +1450,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "O que mostram os relatórios avançados?",
+    "question": "Como comparar as vendas com a semana passada, o mês passado ou o ano passado?",
     "keywords": [
-      "relatórios avançados",
-      "Resumo",
       "Comparar",
       "Comparação de períodos",
-      "Dia da semana × hora",
-      "Produtos parados",
+      "Semana passada",
+      "Mês passado",
+      "Ano passado",
+      "mesmo período do ano passado",
       "Variações",
-      "Participação por categoria",
-      "Valor do estoque",
+      "Resumo",
+      "crescimento",
       "taxa de recompra"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Os relatórios avançados não são uma tela separada: ficam no Resumo e acompanham o período que você escolhe no topo. Eles acrescentam comparações de períodos, um mapa de calor por dia da semana e hora, Produtos parados, Variações, a taxa de recompra de clientes, Participação por categoria e uma seção Agora para estoque e pontos. Todos os planos incluem todos eles, e eles continuam disponíveis depois que o teste termina."
+        "text": "Toque em Comparar à direita da barra de período no Resumo e escolha um período anterior, como Semana passada ou Ano passado. Cada bloco passa a mostrar quanto seu valor subiu ou caiu, como “▼ 3% em relação a Mês passado”, com o valor do período de comparação logo abaixo."
       },
       {
         "type": "h2",
-        "text": "Comparar"
-      },
-      {
-        "type": "p",
-        "text": "Comparar fica à direita da barra de período no Resumo e mede o período escolhido contra um período anterior."
+        "text": "Como ativar uma comparação"
       },
       {
         "type": "steps",
@@ -1470,33 +1507,17 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Quando uma comparação está ativa, o Resumo acrescenta a variação e o valor do período de comparação a todos os blocos, exceto Imposto, Lucro líquido e Produtos sem custo. Receita, Valor recebido, Lucro bruto, Vendas, Ticket médio, Total de descontos e Clientes atendidos mostram, cada um, uma linha de comparação como “▼ 3% em relação a mês passado”."
+        "text": "Com uma comparação ativa, o Resumo acrescenta a variação e o valor do período de comparação a todos os blocos, exceto Imposto, Lucro líquido e Produtos sem custo. Receita, Valor recebido, Lucro bruto, Vendas, Ticket médio, Total de descontos e Clientes atendidos exibem, cada um, uma linha de comparação como “▼ 3% em relação a Mês passado”."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "Resumo em Esta semana com Comparar definido como Semana passada, mostrando a barra de comparação e a primeira fileira de blocos, com a variação e o valor de comparação de cada bloco logo abaixo",
+        "alt": "Resumo em Esta semana com Comparar definido como Semana passada, mostrando a barra de comparação e a primeira fileira de blocos, cada um com sua variação e o valor de comparação logo abaixo",
         "caption": "Toque em qualquer linha de comparação sob um bloco para abrir Comparação de períodos e ver os valores dos dois períodos."
       },
       {
         "type": "p",
-        "text": "A variação de Total de descontos é sempre cinza, porque mais desconto não é bom nem ruim em si. Toque em qualquer linha de comparação para abrir Comparação de períodos, que lista os valores dos dois períodos. O gráfico de tendência ganha uma linha mais clara para o período de comparação. Enquanto um período ainda está em andamento, o período de comparação é cortado no mesmo momento."
-      },
-      {
-        "type": "h2",
-        "text": "Dia da semana × hora"
-      },
-      {
-        "type": "p",
-        "text": "Troque o cabeçalho do gráfico de tendência de Tendência para Dia da semana × hora e veja um mapa de calor de sete dias por 24 horas. Quanto mais escura a célula, mais você vendeu naquela hora. Você pode alternar o mapa de calor entre receita e vendas. Com uma comparação ativada em Comparar, o mapa de calor também mostra em quais horários houve alta e em quais houve queda."
-      },
-      {
-        "type": "h2",
-        "text": "Produtos parados"
-      },
-      {
-        "type": "p",
-        "text": "Troque o cabeçalho do card de ranking para Produtos parados para listar os produtos do menor para o maior número de vendas. Cada linha mostra o estoque atual do produto e a data da última venda. Produtos que nunca foram vendidos aparecem como Nunca vendido, e um produto com variantes ganha uma linha por variante. Por padrão, só aparecem produtos com estoque."
+        "text": "A variação em Total de descontos é sempre cinza, porque mais desconto não é bom nem ruim por si só. Toque em qualquer linha de comparação para abrir Comparação de períodos, que lista os valores dos dois períodos. O gráfico de tendência acrescenta uma linha mais clara para o período de comparação. Enquanto um período ainda está em andamento, o período de comparação é cortado no mesmo momento."
       },
       {
         "type": "h2",
@@ -1504,69 +1525,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Troque o cabeçalho do card de ranking para Variações e veja os 3 produtos cuja receita mais subiu e os 3 que mais caíram em relação ao período de comparação. Cada linha mostra a receita dos dois períodos e a diferença, e cada variante é comparada com ela mesma."
+        "text": "Troque o cabeçalho do card de ranking para Variações para ver os 3 produtos cuja receita mais subiu e os 3 que mais caíram em relação ao período de comparação. Cada linha mostra a receita dos dois períodos e a diferença, e cada variante é comparada consigo mesma."
       },
       {
         "type": "p",
-        "text": "Escolha primeiro um período em Comparar. Com Comparar em Nenhuma, ou quando o período é Todo o período, o card pede que você escolha um período de comparação. Toque no card ou em Ver tudo para abrir a lista completa de Variação por produto, dividida em Em alta e Em queda."
+        "text": "Escolha antes um período em Comparar. Com Comparar em Nenhuma, ou quando o período é Todo o período, o card pede que você escolha um período de comparação. Toque no card ou em Ver tudo para abrir a lista completa Variação por produto, dividida em Em alta e Em queda."
       },
       {
         "type": "h2",
-        "text": "Taxa de recompra"
+        "text": "Mapa de calor e taxa de recompra"
       },
       {
         "type": "p",
-        "text": "A última linha do bloco Clientes atendidos mostra a taxa de recompra como “Taxa de recompra … · … clientes voltaram”. É a parcela dos clientes cadastrados que compraram no período escolhido e já compraram duas ou mais vezes no total. Com uma comparação ativada em Comparar, uma linha abaixo mostra a variação em pontos percentuais e a taxa do período de comparação."
-      },
-      {
-        "type": "h2",
-        "text": "Participação por categoria"
-      },
-      {
-        "type": "p",
-        "text": "Participação por categoria lista a receita e a participação de cada categoria, da maior para a menor, pela categoria atual de cada produto. Produtos sem categoria ficam em Sem categoria, e as linhas somam exatamente a Receita."
-      },
-      {
-        "type": "h2",
-        "text": "Agora"
-      },
-      {
-        "type": "p",
-        "text": "Agora mostra três detalhes de estoque e pontos:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Valor do estoque, calculado como estoque atual × custo atual.",
-          "Todas as movimentações de estoque no período selecionado.",
-          "Os pontos que os clientes têm e ainda não resgataram, com o desconto máximo que eles permitem."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "O valor do estoque e os pontos não resgatados são posições atuais, então mudar o período no topo não os altera."
-      },
-      {
-        "type": "h2",
-        "text": "Planos e permissões"
-      },
-      {
-        "type": "p",
-        "text": "Desde a v3.4, todos os relatórios avançados estão disponíveis em todos os planos, inclusive o Lite, e continuam disponíveis depois que o teste termina. Variações também foi adicionado na v3.4. As versões anteriores mostravam os relatórios avançados só no Pro, com um pequeno cadeado nos outros planos; se você ainda vê os cadeados, atualize o DingPOS pela App Store."
-      },
-      {
-        "type": "p",
-        "text": "O Lite não controla estoque nem pontos de fidelidade, mas Agora continua mostrando o valor do estoque e os pontos não resgatados que sua loja já tem (por exemplo, do período de teste), ou zero."
-      },
-      {
-        "type": "note",
-        "text": "A equipe vê os relatórios avançados com a permissão Resumo; os valores de estoque também exigem a permissão Custo e lucro."
+        "text": "Com uma comparação ativada, o mapa de calor Dia da semana × hora do gráfico de tendência também mostra quais horas cresceram e quais encolheram, e a taxa de recompra no bloco Clientes atendidos ganha uma linha com a variação em pontos percentuais e a taxa do período de comparação."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2928,7 +2904,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Assinar qualquer plano durante o teste encerra o teste na hora, e o plano contratado passa a valer a partir daí. Depois do teste, recursos Pro como funcionários e registro de atividades continuam disponíveis só com a assinatura Pro. Os relatórios avançados não exigem assinatura; desde a versão 3.4, todos os planos os incluem."
+        "text": "Assinar qualquer plano durante o teste encerra o teste na hora, e o plano contratado passa a valer a partir daí. Depois do teste, recursos Pro como funcionários e registro de atividades continuam disponíveis só com a assinatura Pro. O Resumo não exige assinatura; todos os planos incluem tudo o que há nele."
       },
       {
         "type": "p",
@@ -2989,7 +2965,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Os três planos incluem finalização de venda completa, produtos, vendas (com anulações, devoluções e trocas), relatórios (os avançados e a DRE mensal incluídos desde a versão 3.4, o relatório de impostos e a exportação dele desde a versão 3.6) e backup na nuvem. A diferença está nas ferramentas para tocar a loja:"
+        "text": "Os três planos incluem finalização de venda completa, produtos, vendas (com anulações, devoluções e trocas), relatórios (todo o Resumo e a DRE mensal desde a versão 3.4, o relatório de impostos e a exportação dele desde a versão 3.6) e backup na nuvem. A diferença está nas ferramentas para tocar a loja:"
       },
       {
         "type": "list",

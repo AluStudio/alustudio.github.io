@@ -1319,17 +1319,18 @@ export const articles = [
   {
     "slug": "report-periods",
     "category": "reports",
-    "question": "Milyen időszakokat jeleníthetnek meg a jelentések?",
+    "question": "Milyen időszakokra mutatnak adatokat a riportok?",
     "keywords": [
       "riportok",
       "jelentések",
       "időszak",
       "ez a hét",
       "ez a hónap",
-      "ez az év",
       "egyéni időszak",
       "termékrangsor",
-      "összehasonlítás"
+      "lassan forgó termékek",
+      "hétnap × óra",
+      "készletérték"
     ],
     "content": [
       {
@@ -1359,7 +1360,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Az Adó csempe és az adójelentés is a kiválasztott időszakot követi, így az Egyéni lehetőséggel beállított bevallási időszak mindkettőt frissíti; részletekért lásd a kapcsolódó adójelentés-cikket. Az időszaksáv jobb oldalán az Összehasonlítás gombbal a kiválasztott időszakot az előzővel vagy az előző év azonos időszakával vetheti össze; részletekért lásd a kapcsolódó részletes jelentések cikket."
+        "text": "Az Adó csempe és az adójelentés is a kiválasztott időszakot követi, így az Egyéni lehetőséggel beállított bevallási időszak mindkettőt frissíti; részletekért lásd a kapcsolódó adójelentés-cikket. Az időszaksáv jobb oldalán az Összehasonlítás gombbal a kiválasztott időszakot az előzővel vagy az előző év azonos időszakával vetheti össze; részletekért lásd a kapcsolódó cikket az időszakok összehasonlításáról."
       },
       {
         "type": "h2",
@@ -1394,7 +1395,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Az eladási trend diagramjának jobb felső sarkában lévő menü az Árbevétel, a Rendelések, az Átlagos rendelés és a Kiszolgált vevők között vált. A diagramon az Alakulás és a Hétnap × óra nézet között is választhat; ehhez lásd a kapcsolódó részletes jelentések cikket. Mellette a Költség és bruttó nyereség diagram egy-egy oszlopban halmozza az egyes időszakok termékköltségét és bruttó nyereségét. Egyetlen nap óránkénti bontásban látszik, a hosszabb időszakok pedig az időszak hosszától függően napokra, hetekre, hónapokra vagy évekre bontva."
+        "text": "Az eladási trend diagramjának jobb felső sarkában lévő menü az Árbevétel, a Rendelések, az Átlagos rendelés és a Kiszolgált vevők között vált. Mellette a Költség és bruttó nyereség diagram egy-egy oszlopban halmozza az egyes időszakok termékköltségét és bruttó nyereségét. Egyetlen nap óránkénti bontásban látszik, a hosszabb időszakok pedig az időszak hosszától függően napokra, hetekre, hónapokra vagy évekre bontva."
       },
       {
         "type": "p",
@@ -1402,7 +1403,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Ha a trenddiagram fejlécében az Alakulás helyett a Hétnap × óra nézetet választja, hétnapos, 24 órás hőtérképet kap. Minél sötétebb egy cella, annál többet adott el az adott órában, és a hőtérképet átválthatja árbevétel és rendelések között."
+      },
+      {
+        "type": "p",
         "text": "A Termékrangsor az adott időszak 5 legjobban teljesítő termékét listázza. Koppintson a kártyára vagy az Összes megtekintése gombra, hogy lássa az időszakban eladott összes terméket, a visszavételek utáni mennyiség szerint rangsorolva. A változatokkal rendelkező termék változatonként egy sort kap."
+      },
+      {
+        "type": "p",
+        "text": "Ha a rangsorkártya fejlécében a Lassan forgó termékek nézetre vált, a termékeket a legkevesebbet eladottól a legtöbbet eladottig listázza. Minden sor megmutatja a termék aktuális készletét és az utolsó eladás dátumát. A még sosem eladott termékek mellett a Még nem adták el felirat áll, és alapértelmezés szerint csak a készleten lévő termékek látszanak. A Változás nézet azokat a termékeket listázza, amelyek árbevétele az összehasonlítási időszakhoz képest a legjobban nőtt vagy csökkent; lásd a kapcsolódó cikket az időszakok összehasonlításáról."
+      },
+      {
+        "type": "h2",
+        "text": "Megoszlás kategóriánként, visszatérők aránya és Aktuális állapot"
+      },
+      {
+        "type": "p",
+        "text": "A Megoszlás kategóriánként kártya felsorolja az egyes kategóriák árbevételét és részesedését a legnagyobbtól a legkisebbig, a termékek aktuális kategóriája alapján. A kategória nélküli termékek a Kategória nélkül sorba kerülnek, és a sorok összege pontosan kiadja az Árbevételt."
+      },
+      {
+        "type": "p",
+        "text": "A Kiszolgált vevők csempe utolsó sora a visszatérők arányát mutatja „Visszatérők aránya … · … tag tért vissza” formában. Azon tagok arányát adja meg, akik a kiválasztott időszakban vásároltak, és összesen legalább kétszer vásároltak már."
+      },
+      {
+        "type": "p",
+        "text": "Az Aktuális állapot három készlettel és pontokkal kapcsolatos adatot mutat:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Készletérték, az aktuális készlet × aktuális költség szorzataként számítva.",
+          "A kiválasztott időszak minden készletmozgása.",
+          "A vevők kezében lévő, még be nem váltott pontok, valamint a legnagyobb engedmény, amelyre beválthatók."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A készletérték és a be nem váltott pontok aktuális egyenlegek, ezért a felül kiválasztott időszak nem változtat rajtuk."
+      },
+      {
+        "type": "note",
+        "text": "A személyzet a Riportokat a Riportok jogosultság alapján látja; a Készletérték összegeihez emellett a Költség és nyereség jogosultság is kell."
       },
       {
         "type": "note",
@@ -1410,94 +1451,74 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Mit mutatnak a részletes jelentések?",
+    "question": "Hogyan hasonlíthatom össze az eladásokat a múlt héttel, a múlt hónappal vagy a tavalyi évvel?",
     "keywords": [
-      "részletes jelentések",
-      "riportok",
       "összehasonlítás",
       "időszak-összehasonlítás",
-      "hétnap × óra",
-      "lassan forgó termékek",
-      "termékek változása",
-      "megoszlás kategóriánként",
-      "készletérték",
+      "múlt hét",
+      "múlt hónap",
+      "tavaly",
+      "tavalyi azonos időszak",
+      "változás",
+      "riportok",
+      "növekedés",
       "visszatérők aránya"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A részletes jelentések nem külön képernyők: a Riportokban jelennek meg, és a felül kiválasztott időszakot követik. Időszak-összehasonlításokat, hétnap és óra szerinti hőtérképet, Lassan forgó termékeket, Változás nézetet, a tagok visszatérési arányát, a Megoszlás kategóriánként kártyát, valamint az Aktuális állapot részt adják a készlethez és a pontokhoz. Minden csomag tartalmazza őket, és a próbaidőszak lejárta után is nyitva maradnak."
+        "text": "Koppintson a Riportok időszaksávjának jobb oldalán az Összehasonlítás gombra, és válasszon egy korábbi időszakot, például a Múlt hetet vagy a Tavalyt. Ezután minden csempén látszik, mennyivel nőtt vagy csökkent az értéke, például „▼ 3% vs. Múlt hónap”, alatta pedig az összehasonlítási időszak értéke."
       },
       {
         "type": "h2",
-        "text": "Összehasonlítás"
-      },
-      {
-        "type": "p",
-        "text": "Az Összehasonlítás a Riportok időszaksávjának jobb oldalán található, és a kiválasztott időszakot egy korábbival veti össze."
+        "text": "Az összehasonlítás bekapcsolása"
       },
       {
         "type": "steps",
         "items": [
-          "Nyissa meg a Riportokat az oldalsávból.",
+          "Nyissa meg a Riportokat az oldalsávról.",
           "Válasszon időszakot felül.",
           "Koppintson az Összehasonlítás gombra az időszaksáv jobb oldalán.",
-          "Válasszon összehasonlítási lehetőséget a menüből."
+          "Válasszon egy összehasonlítási lehetőséget a menüből."
         ]
       },
       {
         "type": "p",
-        "text": "A választható lehetőségek a kiválasztott időszaktól függnek:"
+        "text": "Az elérhető lehetőségek a kiválasztott időszaktól függnek:"
       },
       {
         "type": "list",
         "items": [
           "A Nincs kikapcsolja az összehasonlítást.",
-          "A Múlt hét egy napot a múlt heti azonos nappal, ezt a hetet pedig a múlt héttel hasonlítja össze.",
-          "A Múlt hónap ezt a hónapot a múlt hónappal hasonlítja össze.",
-          "A Tavaly ezt az évet a tavalyival hasonlítja össze, vagy a kiválasztott időszakot az előző év azonos időszakával.",
-          "Az Előző az egyéni időszakot az előtte lévő, ugyanennyi napos időszakkal hasonlítja össze."
+          "A Múlt hét egyetlen napot az előző hét azonos napjával, az adott hetet pedig az előző héttel veti össze.",
+          "A Múlt hónap az adott hónapot az előző hónappal veti össze.",
+          "A Tavaly az adott évet az előző évvel, vagy a kiválasztott időszakot az előző év azonos időszakával veti össze.",
+          "Az Előző az egyéni tartományt az előtte lévő, ugyanannyi napból álló időszakkal veti össze."
         ]
       },
       {
         "type": "p",
-        "text": "Aktív összehasonlításnál a Riportok az Adó, a Nettó eredmény és a Költség nélküli termékek kivételével minden csempén megmutatja a változást és az összehasonlítási időszak értékét. Az Árbevétel, a Beérkezett pénz, a Bruttó nyereség, a Rendelések, az Átlagos rendelés, az Engedmények összesen és a Kiszolgált vevők csempén egy-egy összehasonlító sor látszik, például „▼ 3% vs. Múlt hónap”."
+        "text": "Aktív összehasonlításnál a Riportok minden csempéhez hozzáadja a változást és az összehasonlítási időszak értékét, kivéve az Adó, a Nettó eredmény és a Költség nélküli termékek csempét. Az Árbevétel, a Beérkezett pénz, a Bruttó nyereség, a Rendelések, az Átlagos rendelés, az Engedmények összesen és a Kiszolgált vevők mind összehasonlító sort kapnak, például „▼ 3% vs. Múlt hónap”."
       },
       {
         "type": "shot",
         "name": "advanced-reports",
-        "alt": "A Riportok az Ez a hét időszakkal és Múlt hét összehasonlítással: az összehasonlító sáv és a csempék első sora, mindegyik alatt a változással és az összehasonlítási értékkel",
-        "caption": "Koppintson bármelyik csempe alatti összehasonlító sorra az Időszak-összehasonlítás megnyitásához, ahol mindkét időszak értékei láthatók."
+        "alt": "A Riportok az Ez a hét időszakkal és Múlt hét összehasonlítással: látszik az összehasonlító sáv és a csempék első sora, minden csempe alatt a változással és az összehasonlítási értékkel",
+        "caption": "Koppintson bármelyik csempe alatti összehasonlító sorra az Időszak-összehasonlítás megnyitásához, ahol mindkét időszak értékét látja."
       },
       {
         "type": "p",
-        "text": "Az Engedmények összesen változása mindig szürke, mert a több engedmény önmagában sem jó, sem rossz. Koppintson bármelyik összehasonlító sorra az Időszak-összehasonlítás megnyitásához, amely mindkét időszak értékeit listázza. A trenddiagramon halványabb vonal jelenik meg az összehasonlítási időszakhoz. Amíg egy időszak még tart, az összehasonlítási időszakot is ugyanannál a pontnál vágja el a rendszer."
-      },
-      {
-        "type": "h2",
-        "text": "Hétnap × óra"
-      },
-      {
-        "type": "p",
-        "text": "Ha a trenddiagram fejlécét Alakulás nézetről Hétnap × óra nézetre kapcsolja, hétnapos, 24 órás hőtérkép jelenik meg. Minél sötétebb egy cella, annál többet adott el abban az órában. A hőtérképen válthat az árbevétel és a rendelések között. Ha az Összehasonlítás alatt be van kapcsolva egy összehasonlítás, a hőtérkép azt is megmutatja, mely órák nőttek, és melyek csökkentek."
-      },
-      {
-        "type": "h2",
-        "text": "Lassan forgó termékek"
-      },
-      {
-        "type": "p",
-        "text": "Ha a rangsorkártya fejlécét átkapcsolja a Lassan forgó termékek nézetre, a termékek a legkevesebbet eladottól a legtöbbig sorakoznak. Minden sor a termék jelenlegi készletét és az utolsó eladás dátumát mutatja. Azok a termékek, amelyekből még nem adtak el, a Még nem adták el jelölést kapják, a változatokkal rendelkező termék pedig változatonként egy sort. Alapértelmezés szerint csak a készleten lévő termékek látszanak."
+        "text": "Az Engedmények összesen változása mindig szürke, mert a több engedmény önmagában nem jó és nem rossz. Koppintson bármelyik összehasonlító sorra az Időszak-összehasonlítás megnyitásához, amely mindkét időszak értékeit felsorolja. A trenddiagramon az összehasonlítási időszakot egy halványabb vonal mutatja. Amíg egy időszak még tart, az összehasonlítási időszakot ugyanabban a pillanatban vágja el."
       },
       {
         "type": "h2",
@@ -1505,69 +1526,24 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ha a rangsorkártya fejlécét átkapcsolja a Változás nézetre, az a 3 termék látszik, amelynek árbevétele az összehasonlítási időszakhoz képest a legtöbbet nőtt, és az a 3, amelyé a legtöbbet csökkent. Minden sor mindkét időszak árbevételét és a különbséget mutatja, és minden változatot önmagával hasonlít össze."
+        "text": "Ha a rangsorkártya fejlécében a Változás nézetre vált, látja azt a 3 terméket, amelynek árbevétele az összehasonlítási időszakhoz képest a legjobban nőtt, és azt a 3-at, amelyé a legjobban csökkent. Minden sor mindkét időszak árbevételét és a különbséget mutatja, és minden változatot önmagával hasonlít össze."
       },
       {
         "type": "p",
-        "text": "Előbb válasszon időszakot az Összehasonlítás alatt. Ha az Összehasonlítás értéke Nincs, vagy az időszak Minden időszak, a kártya arra kéri, hogy válasszon összehasonlítási időszakot. Koppintson a kártyára vagy az Összes megtekintése gombra a teljes Termékek változása lista megnyitásához, amely Növekedés és Csökkenés részre oszlik."
+        "text": "Előbb válasszon időszakot az Összehasonlítás alatt. Ha az Összehasonlítás Nincs értéken áll, vagy az időszak Minden időszak, a kártya felszólít egy összehasonlítási időszak kiválasztására. Koppintson a kártyára vagy az Összes megtekintése gombra a teljes Termékek változása lista megnyitásához, amely Növekedés és Csökkenés részre oszlik."
       },
       {
         "type": "h2",
-        "text": "Visszatérők aránya"
+        "text": "Hőtérkép és visszatérők aránya"
       },
       {
         "type": "p",
-        "text": "A Kiszolgált vevők csempe utolsó sora a visszatérők arányát mutatja „Visszatérők aránya … · … tag tért vissza” formában. Azoknak a tagoknak az arányát adja, akik a kiválasztott időszakban vásároltak, és összesen legalább kétszer vásároltak. Ha az Összehasonlítás alatt be van kapcsolva egy összehasonlítás, egy alatta lévő sor megadja a változást százalékpontban és az összehasonlítási időszak arányát."
-      },
-      {
-        "type": "h2",
-        "text": "Megoszlás kategóriánként"
-      },
-      {
-        "type": "p",
-        "text": "A Megoszlás kategóriánként az egyes kategóriák árbevételét és részesedését listázza a legnagyobbtól a legkisebbig, a termékek jelenlegi kategóriája alapján. A kategória nélküli termékek a Kategória nélkül sor alá kerülnek, és a sorok pontosan az árbevételre jönnek ki."
-      },
-      {
-        "type": "h2",
-        "text": "Aktuális állapot"
-      },
-      {
-        "type": "p",
-        "text": "Az Aktuális állapot három készlet- és pontadatot mutat:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Készletérték, a jelenlegi készlet × jelenlegi költség alapján számolva.",
-          "A kiválasztott időszak összes készletmozgása.",
-          "A vevők birtokában lévő, még be nem váltott pontok, a legnagyobb levonható összeggel együtt."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "A készletérték és a be nem váltott pontok aktuális egyenlegek, ezért a felül választott időszak nem változtat rajtuk."
-      },
-      {
-        "type": "h2",
-        "text": "Csomagok és jogosultságok"
-      },
-      {
-        "type": "p",
-        "text": "A 3.4-es verzió óta minden részletes jelentés minden csomagban elérhető, a Lite csomagot is beleértve, és a próbaidőszak lejárta után is nyitva marad. A Változás nézet szintén a 3.4-es verzióban jelent meg. A korábbi verziók a részletes jelentéseket csak a Pro csomagban mutatták, a többi csomagnál egy kis lakattal; ha még lakatokat lát, frissítse a DingPOS-t az App Store-ból."
-      },
-      {
-        "type": "p",
-        "text": "A Lite csomag nem követi a készletet és a hűségpontokat, de az Aktuális állapot ilyenkor is megmutatja az üzlet által már tárolt készletértéket és be nem váltott pontokat (például a próbaidőszakból), vagy nullát."
-      },
-      {
-        "type": "note",
-        "text": "A személyzet a Riportok jogosultság alatt látja a részletes jelentéseket; a Készletérték összegeihez a Költség és nyereség jogosultság is kell."
+        "text": "Bekapcsolt összehasonlítás mellett a trenddiagram Hétnap × óra hőtérképe azt is megmutatja, mely órák nőttek és melyek csökkentek, a Kiszolgált vevők csempén a visszatérők aránya pedig kap egy sort a százalékpontos változással és az összehasonlítási időszak arányával."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2929,7 +2905,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ha a próbaidőszak alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és onnantól a megvásárolt csomag érvényes. A próbaidőszak után a Pro funkciók, például a személyzet kezelése és a tevékenységnapló csak Pro előfizetéssel maradnak elérhetők. A részletes jelentésekhez erre nincs szükség: a 3.4-es verzió óta minden csomag tartalmazza őket."
+        "text": "Ha a próbaidőszak alatt bármelyik csomagra előfizet, a próba azonnal véget ér, és onnantól a megvásárolt csomag érvényes. A próbaidőszak után a Pro funkciók, például a személyzet kezelése és a tevékenységnapló csak Pro előfizetéssel maradnak elérhetők. A Riportok használatához erre nincs szükség: minden csomag teljes egészében tartalmazza."
       },
       {
         "type": "p",
@@ -2990,7 +2966,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Mindhárom csomag tartalmazza a teljes körű fizetési funkciókat, a termékeket, a rendeléseket (sztornóval, visszavétellel és cserével), a jelentéseket (a részletes jelentésekkel és a havi eredménnyel a 3.4-es verzió óta, az adójelentéssel és exportjával a 3.6-os verzió óta) és a felhőalapú biztonsági mentést. Az üzlet vezetéséhez nyújtott eszközökben térnek el:"
+        "text": "Mindhárom csomag tartalmazza a teljes körű fizetési funkciókat, a termékeket, a rendeléseket (sztornóval, visszavétellel és cserével), a jelentéseket (a Riportok teljes egészét és a havi Eredményt a 3.4-es verzió óta, az adójelentést és exportját a 3.6-os verzió óta) és a felhőalapú biztonsági mentést. Az üzlet vezetéséhez nyújtott eszközökben térnek el:"
       },
       {
         "type": "list",

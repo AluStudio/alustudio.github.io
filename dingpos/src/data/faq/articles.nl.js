@@ -1331,12 +1331,12 @@ export const articles = [
       "periode",
       "deze week",
       "deze maand",
-      "dit jaar",
       "aangepaste periode",
-      "datum",
-      "vergelijken",
       "productranglijst",
-      "bestverkochte producten"
+      "langzaam verkopende producten",
+      "weekdag × uur",
+      "heatmap",
+      "voorraadwaarde"
     ],
     "content": [
       {
@@ -1366,7 +1366,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "De tegel Belasting en het belastingrapport volgen ook de gekozen periode; met Aangepast stel je dus voor beide een aangifteperiode in. Zie het bijbehorende artikel over het belastingrapport voor details. Rechts van de periodebalk tik je op Vergelijk om de gekozen periode naast de voorgaande periode of dezelfde periode vorig jaar te zien; zie het bijbehorende artikel over geavanceerde rapporten voor details."
+        "text": "De tegel Belasting en het belastingrapport volgen ook de gekozen periode; met Aangepast stel je dus voor beide een aangifteperiode in. Zie het bijbehorende artikel over het belastingrapport voor details. Rechts van de periodebalk tik je op Vergelijk om de gekozen periode naast de voorgaande periode of dezelfde periode vorig jaar te zien; zie het bijbehorende artikel over het vergelijken van periodes voor details."
       },
       {
         "type": "h2",
@@ -1401,7 +1401,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Met het menu rechtsboven in de trendgrafiek wissel je tussen Omzet, Bestellingen, Gemiddelde bestelling en Geholpen klanten. De grafiek heeft ook een schakelaar tussen Trend en Weekdag × uur; zie het bijbehorende artikel over geavanceerde rapporten voor die weergave. Ernaast toont de grafiek Kosten en brutowinst de productkosten en de brutowinst van elke periode samen in één staaf. Een enkele dag wordt per uur weergegeven; langere periodes groeperen de gegevens per dag, week, maand of jaar, afhankelijk van de lengte."
+        "text": "Met het menu rechtsboven in de trendgrafiek wissel je tussen Omzet, Bestellingen, Gemiddelde bestelling en Geholpen klanten. Ernaast toont de grafiek Kosten en brutowinst de productkosten en de brutowinst van elke periode samen in één staaf. Een enkele dag wordt per uur weergegeven; langere periodes groeperen de gegevens per dag, week, maand of jaar, afhankelijk van de lengte."
       },
       {
         "type": "p",
@@ -1409,7 +1409,47 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Zet de kop van de trendgrafiek van Trend op Weekdag × uur voor een heatmap van zeven dagen bij 24 uur. Hoe donkerder een vak, hoe meer je in dat uur hebt verkocht, en je kunt de heatmap wisselen tussen omzet en bestellingen."
+      },
+      {
+        "type": "p",
         "text": "De Productranglijst toont de top 5 producten van de gekozen periode. Tik op de kaart of op Toon alles om alle producten te zien die in die periode zijn verkocht, gerangschikt op aantal na retouren. Een product met varianten staat met één regel per variant."
+      },
+      {
+        "type": "p",
+        "text": "Zet de kop van de rangschikkingskaart op Langzaam verkopende producten om producten van de minste naar de meeste verkopen te tonen. Elke rij toont de huidige voorraad van het product en de datum waarop het voor het laatst is verkocht. Producten die nooit zijn verkocht, staan als Nooit verkocht en standaard zie je alleen producten die op voorraad zijn. De kop Stijgers en dalers toont de producten waarvan de omzet ten opzichte van een vergelijkingsperiode het meest steeg of daalde; zie het bijbehorende artikel over het vergelijken van periodes."
+      },
+      {
+        "type": "h2",
+        "text": "Aandeel per categorie, herhaalaankoop en Op dit moment"
+      },
+      {
+        "type": "p",
+        "text": "Aandeel per categorie toont de omzet en het aandeel van elke categorie, van groot naar klein, volgens de huidige categorie van elk product. Producten zonder categorie staan onder Zonder categorie en de rijen tellen precies op tot Omzet."
+      },
+      {
+        "type": "p",
+        "text": "De laatste regel van de tegel Geholpen klanten toont het herhaalaankooppercentage als “Herhaalaankooppercentage … · … leden teruggekomen”. Het toont het aandeel leden dat in de gekozen periode kocht en in totaal al twee of meer keer heeft gekocht."
+      },
+      {
+        "type": "p",
+        "text": "Op dit moment toont drie gegevens over voorraad en punten:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Voorraadwaarde, berekend als huidige voorraad × huidige kostprijs.",
+          "Elke voorraadmutatie in de gekozen periode.",
+          "De punten die klanten hebben maar nog niet hebben ingewisseld, met het maximale bedrag dat ze ermee van de prijs kunnen halen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Voorraadwaarde en niet-ingewisselde punten zijn actuele standen, dus de periode bovenaan verandert ze niet."
+      },
+      {
+        "type": "note",
+        "text": "Medewerkers zien Cijfers met de toestemming Cijfers; voor de bedragen van de voorraadwaarde is ook de toestemming Kostprijs en winst nodig."
       },
       {
         "type": "note",
@@ -1417,45 +1457,37 @@ export const articles = [
       }
     ],
     "related": [
-      "advanced-reports",
+      "compare-periods",
       "revenue-vs-cash",
       "profit-not-tracked",
       "tax-report"
     ]
   },
   {
-    "slug": "advanced-reports",
+    "slug": "compare-periods",
     "category": "reports",
     "since": "3.0",
-    "question": "Wat laten de geavanceerde rapporten zien?",
+    "question": "Hoe vergelijk ik mijn verkoop met vorige week, vorige maand of vorig jaar?",
     "keywords": [
-      "geavanceerde rapporten",
-      "cijfers",
       "vergelijk",
       "periodevergelijking",
+      "vorige week",
+      "vorige maand",
       "vorig jaar",
-      "weekdag × uur",
-      "heatmap",
-      "drukke uren",
-      "langzaam verkopende producten",
+      "dezelfde periode vorig jaar",
       "stijgers en dalers",
-      "aandeel per categorie",
-      "voorraadwaarde",
-      "herhaalaankooppercentage",
-      "punten"
+      "cijfers",
+      "groei",
+      "herhaalaankooppercentage"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Geavanceerde rapporten zijn geen apart scherm; ze staan in Cijfers en volgen de periode die je bovenaan kiest. Ze voegen periodevergelijkingen toe, een heatmap van weekdag en uur, Langzaam verkopende producten, Stijgers en dalers, het herhaalaankooppercentage van leden, Aandeel per categorie en een onderdeel Op dit moment voor voorraad en punten. Elk abonnement bevat ze allemaal en ze blijven beschikbaar nadat de proefperiode is afgelopen."
+        "text": "Tik in Cijfers rechts van de periodebalk op Vergelijk en kies een eerdere periode, zoals Vorige week of Vorig jaar. Elke tegel toont dan hoeveel het cijfer is gestegen of gedaald, bijvoorbeeld “▼ 3% t.o.v. Vorige maand”, met daaronder het cijfer van de vergelijkingsperiode."
       },
       {
         "type": "h2",
-        "text": "Vergelijk"
-      },
-      {
-        "type": "p",
-        "text": "Vergelijk staat rechts van de periodebalk in Cijfers en zet de gekozen periode af tegen een eerdere periode."
+        "text": "Een vergelijking aanzetten"
       },
       {
         "type": "steps",
@@ -1477,12 +1509,12 @@ export const articles = [
           "Vorige week vergelijkt één dag met dezelfde dag vorige week, of deze week met vorige week.",
           "Vorige maand vergelijkt deze maand met vorige maand.",
           "Vorig jaar vergelijkt dit jaar met vorig jaar, of de gekozen periode met dezelfde periode vorig jaar.",
-          "Daarvoor vergelijkt een aangepaste periode met evenveel dagen daarvoor."
+          "Daarvoor vergelijkt een aangepaste periode met een even lange periode direct daarvoor."
         ]
       },
       {
         "type": "p",
-        "text": "Als een vergelijking actief is, voegt Cijfers de verandering en het cijfer van de vergelijkingsperiode toe aan elke tegel behalve Belasting, Nettowinst en Producten zonder kostprijs. Omzet, Ontvangen bedrag, Brutowinst, Bestellingen, Gemiddelde bestelling, Totale kortingen en Geholpen klanten tonen elk een vergelijkingsregel zoals “▼ 3% t.o.v. vorige maand”."
+        "text": "Als een vergelijking actief is, voegt Cijfers de verandering en het cijfer van de vergelijkingsperiode toe aan elke tegel behalve Belasting, Nettowinst en Producten zonder kostprijs. Omzet, Ontvangen bedrag, Brutowinst, Bestellingen, Gemiddelde bestelling, Totale kortingen en Geholpen klanten tonen elk een vergelijkingsregel zoals “▼ 3% t.o.v. Vorige maand”."
       },
       {
         "type": "shot",
@@ -1493,22 +1525,6 @@ export const articles = [
       {
         "type": "p",
         "text": "De verandering bij Totale kortingen is altijd grijs, want meer korting is op zich niet goed of slecht. Tik op een vergelijkingsregel om Periodevergelijking te openen, met de cijfers van beide periodes. De trendgrafiek krijgt een lichtere lijn voor de vergelijkingsperiode. Zolang een periode nog loopt, wordt de vergelijkingsperiode op hetzelfde moment afgekapt."
-      },
-      {
-        "type": "h2",
-        "text": "Weekdag × uur"
-      },
-      {
-        "type": "p",
-        "text": "Zet de kop van de trendgrafiek van Trend op Weekdag × uur voor een heatmap van zeven dagen bij 24 uur. Hoe donkerder een vak, hoe meer je in dat uur hebt verkocht. Je kunt de heatmap wisselen tussen omzet en bestellingen. Met een vergelijking aan onder Vergelijk zie je in de heatmap ook welke uren groeiden en welke krompen."
-      },
-      {
-        "type": "h2",
-        "text": "Langzaam verkopende producten"
-      },
-      {
-        "type": "p",
-        "text": "Zet de kop van de rangschikkingskaart op Langzaam verkopende producten om producten van de minste naar de meeste verkopen te tonen. Elke rij toont de huidige voorraad van het product en de datum waarop het het laatst is verkocht. Producten die nooit zijn verkocht, staan als Nooit verkocht en een product met varianten krijgt één regel per variant. Standaard zie je alleen producten die op voorraad zijn."
       },
       {
         "type": "h2",
@@ -1524,61 +1540,16 @@ export const articles = [
       },
       {
         "type": "h2",
-        "text": "Herhaalaankooppercentage"
+        "text": "Heatmap en herhaalaankooppercentage"
       },
       {
         "type": "p",
-        "text": "De laatste regel van de tegel Geholpen klanten toont het herhaalaankooppercentage als “Herhaalaankooppercentage … · … leden teruggekomen”. Het toont het aandeel leden dat in de gekozen periode kocht en in totaal al twee of meer keer heeft gekocht. Met een vergelijking aan onder Vergelijk geeft een regel eronder de verandering in procentpunten en het percentage van de vergelijkingsperiode."
-      },
-      {
-        "type": "h2",
-        "text": "Aandeel per categorie"
-      },
-      {
-        "type": "p",
-        "text": "Aandeel per categorie toont de omzet en het aandeel van elke categorie, van groot naar klein, volgens de huidige categorie van elk product. Producten zonder categorie staan onder Zonder categorie en de rijen tellen precies op tot Omzet."
-      },
-      {
-        "type": "h2",
-        "text": "Op dit moment"
-      },
-      {
-        "type": "p",
-        "text": "Op dit moment toont drie gegevens over voorraad en punten:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Voorraadwaarde, berekend als huidige voorraad × huidige kostprijs.",
-          "Elke voorraadmutatie in de gekozen periode.",
-          "De punten die klanten hebben maar nog niet hebben ingewisseld, met het maximale bedrag dat ze ermee van de prijs kunnen halen."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Voorraadwaarde en niet-ingewisselde punten zijn actuele standen, dus de periode bovenaan verandert ze niet."
-      },
-      {
-        "type": "h2",
-        "text": "Abonnementen en toestemmingen"
-      },
-      {
-        "type": "p",
-        "text": "Sinds v3.4 zijn alle geavanceerde rapporten beschikbaar in elk abonnement, ook Lite, en blijven ze beschikbaar nadat de proefperiode is afgelopen. Stijgers en dalers is ook met v3.4 toegevoegd. Eerdere versies toonden geavanceerde rapporten alleen bij Pro, met een klein slotje bij andere abonnementen; zie je de slotjes nog, werk dan DingPOS bij via de App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite houdt geen voorraad of spaarpunten bij, maar Op dit moment toont nog steeds de voorraadwaarde en de niet-ingewisselde punten die je winkel al heeft (bijvoorbeeld uit de proefperiode), of nul."
-      },
-      {
-        "type": "note",
-        "text": "Medewerkers zien geavanceerde rapporten met de toestemming Cijfers; voor de bedragen van de voorraadwaarde is ook de toestemming Kostprijs en winst nodig."
+        "text": "Met een vergelijking aan laat de heatmap Weekdag × uur in de trendgrafiek ook zien welke uren groeiden en welke krompen. Het herhaalaankooppercentage op de tegel Geholpen klanten krijgt er een regel bij met de verandering in procentpunten en het percentage van de vergelijkingsperiode."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2951,7 +2922,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Als je tijdens de proefperiode een abonnement afsluit, eindigt de proefperiode meteen en geldt vanaf dat moment het abonnement dat je hebt gekocht. Na de proefperiode blijven Pro-functies zoals medewerkers en het activiteitenlogboek alleen beschikbaar met een Pro-abonnement. Voor geavanceerde rapporten is dat niet nodig: sinds v3.4 zitten ze in elk abonnement."
+        "text": "Als je tijdens de proefperiode een abonnement afsluit, eindigt de proefperiode meteen en geldt vanaf dat moment het abonnement dat je hebt gekocht. Na de proefperiode blijven Pro-functies zoals medewerkers en het activiteitenlogboek alleen beschikbaar met een Pro-abonnement. Voor Cijfers is dat niet nodig: elk abonnement bevat alles daarvan."
       },
       {
         "type": "p",
@@ -3011,7 +2982,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle drie de abonnementen bevatten alle functies voor afrekenen, producten, bestellingen (met ongeldig maken, retouren en omruilingen), rapporten (geavanceerde rapporten en de maandelijkse W&V inbegrepen sinds v3.4, het belastingrapport en de export ervan sinds v3.6) en back-up in de cloud. Ze verschillen in de hulpmiddelen om je winkel te runnen:"
+        "text": "Alle drie de abonnementen bevatten alle functies voor afrekenen, producten, bestellingen (met ongeldig maken, retouren en omruilingen), rapporten (alles in Cijfers en de maandelijkse W&V sinds v3.4, het belastingrapport en de export ervan sinds v3.6) en back-up in de cloud. Ze verschillen in de hulpmiddelen om je winkel te runnen:"
       },
       {
         "type": "list",

@@ -1329,10 +1329,11 @@ export const articles = [
       "tidsperiode",
       "denne uge",
       "denne måned",
-      "i år",
       "brugerdefineret periode",
       "produktrangliste",
-      "sammenlign"
+      "langsomt sælgende varer",
+      "ugedag × time",
+      "lagerværdi"
     ],
     "content": [
       {
@@ -1362,7 +1363,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Feltet Moms og momsrapporten følger også den valgte periode, så en periode til indberetning, som du sætter med Brugerdefineret, opdaterer begge; se den tilknyttede artikel om momsrapporten for detaljer. Til højre i periodelinjen kan du trykke på Sammenlign for at se den valgte periode ved siden af den foregående eller samme periode sidste år; se den tilknyttede artikel om avancerede rapporter for detaljer."
+        "text": "Feltet Moms og momsrapporten følger også den valgte periode, så en periode til indberetning, som du sætter med Brugerdefineret, opdaterer begge; se den tilknyttede artikel om momsrapporten for detaljer. Til højre i periodelinjen kan du trykke på Sammenlign for at se den valgte periode ved siden af den foregående eller samme periode sidste år; se den tilknyttede artikel om sammenligning af perioder for detaljer."
       },
       {
         "type": "h2",
@@ -1397,7 +1398,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Menuen øverst til højre på tendensgrafen skifter den mellem Omsætning, Ordrer, Gennemsnitlig ordre og Betjente kunder. Grafen har også et skift mellem Tendens og Ugedag × time; se den tilknyttede artikel om avancerede rapporter for den visning. Ved siden af viser grafen Kostpris og dækningsbidrag hver periodes produktkostpris og dækningsbidrag stablet i én søjle. En enkelt dag vises pr. time, mens længere perioder grupperer data i dage, uger, måneder eller år afhængigt af længden."
+        "text": "Menuen øverst til højre på tendensgrafen skifter den mellem Omsætning, Ordrer, Gennemsnitlig ordre og Betjente kunder. Ved siden af viser grafen Kostpris og dækningsbidrag hver periodes produktkostpris og dækningsbidrag stablet i én søjle. En enkelt dag vises pr. time, mens længere perioder grupperer data i dage, uger, måneder eller år afhængigt af længden."
       },
       {
         "type": "p",
@@ -1405,147 +1406,38 @@ export const articles = [
       },
       {
         "type": "p",
+        "text": "Skift tendensgrafens overskrift fra Tendens til Ugedag × time for at se et varmekort over syv dage og 24 timer. Jo mørkere en celle er, jo mere solgte du i den time, og du kan skifte varmekortet mellem omsætning og ordrer."
+      },
+      {
+        "type": "p",
         "text": "Produktrangliste viser de 5 bedst sælgende produkter i den valgte periode. Tryk på kortet eller Se alle for at vise alle produkter solgt i perioden, rangeret efter antal efter returer. Et produkt med varianter vises som én linje pr. variant."
       },
       {
-        "type": "note",
-        "text": "Kalenderperioder kom i v2.4; tidligere versioner havde glidende intervaller (I dag / 7 dage / 30 dage / Samlet). Hvis du stadig ser dem, så opdatér DingPOS fra App Store."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked",
-      "tax-report"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "Hvad viser de avancerede rapporter?",
-    "keywords": [
-      "avancerede rapporter",
-      "statistik",
-      "sammenlign",
-      "periodesammenligning",
-      "ugedag × time",
-      "langsomt sælgende varer",
-      "udsving",
-      "andel pr. kategori",
-      "lagerværdi",
-      "genkøbsrate",
-      "heatmap",
-      "point"
-    ],
-    "content": [
-      {
         "type": "p",
-        "text": "Avancerede rapporter er ikke en separat skærm; de sidder i Statistik og følger den periode, du vælger øverst. De tilføjer periodesammenligninger, et heatmap over ugedag og time, Langsomt sælgende varer, Udsving, medlemmers genkøbsrate, Andel pr. kategori og et afsnit Lige nu for lager og point. Alle abonnementsniveauer inkluderer dem alle, og de forbliver åbne, efter at prøveperioden er slut."
+        "text": "Skift ranglistekortets overskrift til Langsomme for at se produkterne fra færrest til flest salg. Hver række viser produktets aktuelle lager og datoen for seneste salg. Produkter, der aldrig er solgt, er markeret Aldrig solgt, og som standard vises kun produkter på lager. Overskriften Udsving viser de produkter, hvis omsætning er steget eller faldet mest i forhold til en sammenligningsperiode; se den tilknyttede artikel om sammenligning af perioder."
       },
       {
         "type": "h2",
-        "text": "Sammenlign"
+        "text": "Andel pr. kategori, genkøbsrate og Lige nu"
       },
       {
         "type": "p",
-        "text": "Sammenlign står til højre i periodelinjen i Statistik og måler den valgte periode mod en tidligere."
-      },
-      {
-        "type": "steps",
-        "items": [
-          "Åbn Statistik fra sidepanelet.",
-          "Vælg en periode øverst.",
-          "Tryk på Sammenlign til højre i periodelinjen.",
-          "Vælg en sammenligning i menuen."
-        ]
+        "text": "Andel pr. kategori viser hver kategoris omsætning og andel, sorteret fra størst til mindst, ud fra hvert produkts nuværende kategori. Produkter uden kategori samles under Uden kategori, og rækkerne summerer præcis til Omsætning."
       },
       {
         "type": "p",
-        "text": "De mulige valg afhænger af den periode, du vælger:"
+        "text": "Den sidste linje i feltet Betjente kunder viser genkøbsraten som »Genkøbsrate … · … medlemmer købte igen«. Den viser andelen af medlemmer, der har købt i den valgte periode og i alt har købt to eller flere gange."
+      },
+      {
+        "type": "p",
+        "text": "Lige nu viser tre oplysninger om lager og point:"
       },
       {
         "type": "list",
         "items": [
-          "Ingen slår sammenligning fra.",
-          "Sidste uge sammenligner en enkelt dag med samme dag i sidste uge eller denne uge med sidste uge.",
-          "Sidste måned sammenligner denne måned med sidste måned.",
-          "Sidste år sammenligner i år med sidste år eller den valgte periode med samme periode sidste år.",
-          "Forrige sammenligner en brugerdefineret periode med det samme antal dage lige før den."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Når en sammenligning er aktiv, tilføjer Statistik ændringen og sammenligningsperiodens tal til alle felter undtagen Moms, Nettoresultat og Produkter uden kostpris. Omsætning, Modtagne betalinger, Dækningsbidrag, Ordrer, Gennemsnitlig ordre, Rabatter i alt og Betjente kunder viser hver en sammenligningslinje som “▼ 3 % ift. Sidste måned”."
-      },
-      {
-        "type": "shot",
-        "name": "advanced-reports",
-        "alt": "Statistik for Denne uge med Sammenlign sat til Sidste uge, med sammenligningslinjen og første række af felter, hvor hvert felt har sin ændring og sit sammenligningstal under sig",
-        "caption": "Tryk på en sammenligningslinje under et felt for at åbne Periodesammenligning og se begge perioders tal."
-      },
-      {
-        "type": "p",
-        "text": "Ændringen i Rabatter i alt er altid grå, fordi mere rabat ikke i sig selv er godt eller dårligt. Tryk på en sammenligningslinje for at åbne Periodesammenligning, som viser begge perioders tal. Tendensgrafen får en lysere linje for sammenligningsperioden. Mens en periode stadig løber, afkortes sammenligningsperioden på samme tidspunkt."
-      },
-      {
-        "type": "h2",
-        "text": "Ugedag × time"
-      },
-      {
-        "type": "p",
-        "text": "Skift tendensgrafens overskrift fra Tendens til Ugedag × time for at se et heatmap over syv dage og 24 timer. Jo mørkere en celle er, jo mere har du solgt i den time. Du kan skifte heatmappet mellem omsætning og ordrer. Når en sammenligning er slået til under Sammenlign, viser heatmappet også, hvilke timer der voksede, og hvilke der faldt."
-      },
-      {
-        "type": "h2",
-        "text": "Langsomt sælgende varer"
-      },
-      {
-        "type": "p",
-        "text": "Skift rangeringskortets overskrift til Langsomt sælgende varer for at vise produkter fra færrest til flest salg. Hver række viser produktets nuværende lager og datoen for seneste salg. Produkter, der aldrig er solgt, er markeret Aldrig solgt, og et produkt med varianter får én linje pr. variant. Som standard vises kun produkter på lager."
-      },
-      {
-        "type": "h2",
-        "text": "Udsving"
-      },
-      {
-        "type": "p",
-        "text": "Skift rangeringskortets overskrift til Udsving for at se de 3 produkter, hvis omsætning steg mest, og de 3, der faldt mest, i forhold til sammenligningsperioden. Hver række viser begge perioders omsætning og forskellen, og hver variant sammenlignes med sig selv."
-      },
-      {
-        "type": "p",
-        "text": "Vælg først en periode under Sammenlign. Når Sammenlign er sat til Ingen, eller perioden er Samlet, beder kortet dig vælge en sammenligningsperiode. Tryk på kortet eller Se alle for at åbne hele listen Produktudsving, delt i Stigende og Faldende."
-      },
-      {
-        "type": "h2",
-        "text": "Genkøbsrate"
-      },
-      {
-        "type": "p",
-        "text": "Sidste linje i feltet Betjente kunder viser genkøbsraten som “Genkøbsrate … · … medlemmer købte igen”. Den viser andelen af medlemmer, der har købt i den valgte periode og i alt har købt to eller flere gange. Når en sammenligning er slået til under Sammenlign, angiver en linje under den ændringen i procentpoint og sammenligningsperiodens rate."
-      },
-      {
-        "type": "h2",
-        "text": "Andel pr. kategori"
-      },
-      {
-        "type": "p",
-        "text": "Andel pr. kategori viser hver kategoris omsætning og andel, den største først, efter hvert produkts nuværende kategori. Produkter uden kategori står under Uden kategori, og rækkerne summerer præcis til Omsætning."
-      },
-      {
-        "type": "h2",
-        "text": "Lige nu"
-      },
-      {
-        "type": "p",
-        "text": "Lige nu viser tre detaljer om lager og point:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Lagerværdi, beregnet som nuværende lager × nuværende kostpris.",
+          "Lagerværdi, beregnet som aktuelt lager × aktuel kostpris.",
           "Alle lagerbevægelser i den valgte periode.",
-          "De point, kunderne har, men ikke har indløst, sammen med det højeste beløb, de kan trække fra."
+          "De point, kunderne har og endnu ikke har indløst, sammen med det højeste beløb, de kan trække fra."
         ]
       },
       {
@@ -1553,26 +1445,108 @@ export const articles = [
         "text": "Lagerværdi og uindløste point er aktuelle saldi, så en ændring af perioden øverst ændrer dem ikke."
       },
       {
-        "type": "h2",
-        "text": "Abonnementsniveauer og tilladelser"
-      },
-      {
-        "type": "p",
-        "text": "Siden v3.4 er alle avancerede rapporter åbne på alle abonnementsniveauer, også Lite, og de forbliver åbne, efter at prøveperioden er slut. Udsving blev også tilføjet i v3.4. Tidligere versioner viste avancerede rapporter kun på Pro med en lille lås på de andre niveauer; hvis du stadig ser låsene, så opdatér DingPOS fra App Store."
-      },
-      {
-        "type": "p",
-        "text": "Lite holder ikke styr på lager eller loyalitetspoint, men Lige nu viser stadig den lagerværdi og de uindløste point, din butik allerede har (for eksempel fra prøveperioden), eller nul."
+        "type": "note",
+        "text": "Medarbejdere ser Statistik med tilladelsen Statistik; beløbene under Lagerværdi kræver også tilladelsen Kostpris og fortjeneste."
       },
       {
         "type": "note",
-        "text": "Medarbejdere ser avancerede rapporter under tilladelsen Statistik; lagerværdibeløbene kræver også tilladelsen Kostpris og fortjeneste."
+        "text": "Kalenderperioder kom i v2.4; tidligere versioner havde glidende intervaller (I dag / 7 dage / 30 dage / Samlet). Hvis du stadig ser dem, så opdatér DingPOS fra App Store."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Hvordan sammenligner jeg salget med sidste uge, sidste måned eller sidste år?",
+    "keywords": [
+      "sammenlign",
+      "periodesammenligning",
+      "sidste uge",
+      "sidste måned",
+      "sidste år",
+      "samme periode sidste år",
+      "udsving",
+      "statistik",
+      "vækst",
+      "genkøbsrate"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Tryk på Sammenlign til højre i periodelinjen i Statistik, og vælg en tidligere periode, f.eks. Sidste uge eller Sidste år. Hvert felt viser derefter, hvor meget tallet er steget eller faldet, f.eks. »▼ 3 % ift. Sidste måned«, med sammenligningsperiodens tal nedenunder."
+      },
+      {
+        "type": "h2",
+        "text": "Sådan slår du en sammenligning til"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åbn Statistik i sidepanelet.",
+          "Vælg en periode øverst.",
+          "Tryk på Sammenlign til højre i periodelinjen.",
+          "Vælg en sammenligning i menuen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "De tilgængelige valg afhænger af den periode, du vælger:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ingen slår sammenligningen fra.",
+          "Sidste uge sammenligner en enkelt dag med samme dag i sidste uge, eller denne uge med sidste uge.",
+          "Sidste måned sammenligner denne måned med sidste måned.",
+          "Sidste år sammenligner dette år med sidste år, eller den valgte periode med samme periode sidste år.",
+          "Forrige sammenligner en brugerdefineret periode med det samme antal dage lige før den."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Når en sammenligning er aktiv, tilføjer Statistik ændringen og sammenligningsperiodens tal til hvert felt undtagen Moms, Nettoresultat og Produkter uden kostpris. Omsætning, Modtagne betalinger, Dækningsbidrag, Ordrer, Gennemsnitlig ordre, Rabatter i alt og Betjente kunder viser hver en sammenligningslinje som »▼ 3 % ift. Sidste måned«."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Statistik på Denne uge med Sammenlign sat til Sidste uge, med sammenligningslinjen og den første række af felter, hvor hvert felt viser sin ændring og sit sammenligningstal nedenunder",
+        "caption": "Tryk på en sammenligningslinje under et felt for at åbne Periodesammenligning og se begge perioders tal."
+      },
+      {
+        "type": "p",
+        "text": "Ændringen på Rabatter i alt er altid grå, fordi flere rabatter hverken er godt eller dårligt i sig selv. Tryk på en sammenligningslinje for at åbne Periodesammenligning, som viser begge perioders tal. Tendensgrafen får en lysere linje for sammenligningsperioden. Mens en periode stadig er i gang, afskæres sammenligningsperioden på samme tidspunkt."
+      },
+      {
+        "type": "h2",
+        "text": "Udsving"
+      },
+      {
+        "type": "p",
+        "text": "Skift ranglistekortets overskrift til Udsving for at se de 3 produkter, hvis omsætning er steget mest, og de 3, hvor den er faldet mest, i forhold til sammenligningsperioden. Hver række viser begge perioders omsætning og forskellen, og hver variant sammenlignes med sig selv."
+      },
+      {
+        "type": "p",
+        "text": "Vælg først en periode under Sammenlign. Når Sammenlign er sat til Ingen, eller perioden er Samlet, beder kortet dig vælge en sammenligningsperiode. Tryk på kortet eller Se alle for at åbne den fulde liste Produktudsving, opdelt i Stigende og Faldende."
+      },
+      {
+        "type": "h2",
+        "text": "Varmekort og genkøbsrate"
+      },
+      {
+        "type": "p",
+        "text": "Med en sammenligning slået til viser varmekortet Ugedag × time på tendensgrafen også, hvilke timer der er vokset, og hvilke der er skrumpet, og genkøbsraten i feltet Betjente kunder får en linje med ændringen i procentpoint og sammenligningsperiodens rate."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -2936,7 +2910,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og det abonnement, du har købt, gælder fra da af. Efter prøveperioden er Pro-funktioner som medarbejdere og aktivitetsloggen kun tilgængelige med et Pro-abonnement. Avancerede rapporter kræver ikke et Pro-abonnement; siden v3.4 er de med i alle abonnementsniveauer."
+        "text": "Hvis du tegner et abonnement i prøveperioden, slutter prøveperioden med det samme, og det abonnement, du har købt, gælder fra da af. Efter prøveperioden er Pro-funktioner som medarbejdere og aktivitetsloggen kun tilgængelige med et Pro-abonnement. Statistik kræver ikke et Pro-abonnement; alle abonnementsniveauer omfatter det hele."
       },
       {
         "type": "p",
@@ -2996,7 +2970,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre abonnementsniveauer omfatter alle funktioner under Betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter (inklusive avancerede rapporter og det månedlige resultat siden v3.4 samt momsrapporten og dens eksport siden v3.6) og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
+        "text": "Alle tre abonnementsniveauer omfatter alle funktioner under Betaling, produkter, ordrer (med makuleringer, returneringer og ombytninger), rapporter (hele Statistik og det månedlige Resultat siden v3.4 samt momsrapporten og dens eksport siden v3.6) og cloud-backup. De adskiller sig i værktøjerne til at drive butikken:"
       },
       {
         "type": "list",
