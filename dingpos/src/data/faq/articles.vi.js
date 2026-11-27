@@ -1498,7 +1498,7 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Không tắt chế độ so sánh.",
+          "Chọn Không để tắt chế độ so sánh.",
           "Tuần trước so sánh một ngày với cùng ngày của tuần trước, hoặc tuần này với tuần trước.",
           "Tháng trước so sánh tháng này với tháng trước.",
           "Năm trước so sánh năm nay với năm trước, hoặc so sánh kỳ đã chọn với cùng kỳ năm trước.",
