@@ -104,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "A moeda não pode ser alterada depois da configuração; os impostos e o modo de imposto podem ser alterados depois em Ajustes → Dados da loja. Nos Estados Unidos, no Canadá, no Brasil e na Micronésia, a alíquota depende do estado, da província ou da cidade; por isso o campo de alíquota começa vazio e você informa a alíquota que cobra para continuar. A alíquota precisa ser maior que 0: a loja que não cobra imposto exclui a linha. A lista de 175 países e a escolha de moeda chegaram na v3.2; as versões anteriores ofereciam 15 países."
+        "text": "A moeda não pode ser alterada depois da configuração; os impostos e o modo de imposto podem ser alterados depois em Ajustes → Dados da loja. Nos Estados Unidos, no Canadá, no Brasil e na Micronésia, a alíquota depende do estado, da província ou da cidade; por isso o campo de alíquota começa vazio e você informa a alíquota que cobra para continuar. A alíquota precisa ser maior que 0: a loja que não cobra imposto exclui a linha. Na Alemanha, na França, na Itália e em outros países europeus, a lista também inclui as alíquotas reduzidas comuns no comércio local, com o nome do imposto local, como “MwSt. 19%” e “MwSt. 7%” na Alemanha; as alíquotas reduzidas não são aplicadas por padrão a novos produtos, então ative-as em cada produto. A lista de 175 países e a escolha de moeda chegaram na v3.2; as versões anteriores ofereciam 15 países."
       }
     ],
     "related": [
@@ -311,7 +311,8 @@ export const articles = [
       "porcentagem",
       "valor fixo",
       "abatimento",
-      "preço promocional"
+      "preço promocional",
+      "desconto predefinido"
     ],
     "content": [
       {
@@ -328,6 +329,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Cada item e cada carrinho podem ter um desconto por vez: aplicar de novo substitui o anterior, e tocar na etiqueta do desconto o remove. Os descontos são aplicados antes do imposto, a ordem padrão no varejo."
+      },
+      {
+        "type": "p",
+        "text": "Os descontos que você dá com frequência podem ser salvos: vá em Ajustes → Fidelidade e promoções → Descontos predefinidos e toque em Adicionar desconto predefinido, por exemplo “Preço de funcionário com 20% de desconto”. No caixa, tanto o desconto em itens quanto o desconto no carrinho têm um menu Predefinidos; ao escolher um, o tipo e o valor do desconto são preenchidos exatamente como se você os tivesse digitado, então ele continua contando para o limite de desconto do funcionário. Os descontos predefinidos chegaram na versão 3.6 e exigem o plano Standard ou superior."
       }
     ],
     "related": [
@@ -383,7 +388,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ordem completa do cálculo: descontos e promoções nos itens → desconto no carrinho → resgate de pontos → imposto. Os valores são arredondados para cima a partir de meio (0,5) nas casas decimais da moeda (por exemplo, 0 para TWD e 2 para USD)."
+        "text": "Ordem completa do cálculo: descontos e promoções nos itens → desconto no carrinho → resgate de pontos → imposto. Os valores são arredondados para cima a partir de meio (0,5) nas casas decimais da moeda (por exemplo, 0 para TWD e 2 para USD). O imposto é calculado uma vez por imposto em cada venda, e suas frações seguem o Arredondamento do imposto no cartão Imposto: Arredondar para cima a partir da metade, Arredondar para baixo ou Arredondar para cima. As lojas novas no Japão começam em Arredondar para baixo; as demais começam em Arredondar para cima a partir da metade."
       },
       {
         "type": "note",
@@ -413,11 +418,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Uma loja nova começa com duas formas de pagamento, Dinheiro e Cartão de crédito, com os nomes no idioma do app na configuração. Em Ajustes → Formas de pagamento você pode adicionar qualquer outra forma (por exemplo, Apple Pay, LINE Pay, uma carteira digital local), além de excluí-las ou reordená-las."
+        "text": "Uma loja nova começa com duas formas de pagamento, Dinheiro e Cartão de crédito, com os nomes no idioma do app na configuração. Em Ajustes → Formas de pagamento você pode adicionar qualquer outra forma (por exemplo, Apple Pay, LINE Pay, uma carteira digital local) e reordená-las. Toque em uma forma para renomeá-la, por exemplo de Cartão de crédito para “Cartão (Square)”; o Resumo conta as vendas feitas antes da mudança de nome com o novo nome (desde a versão 3.6). Excluir forma de pagamento fica no fim da tela de edição e pergunta antes de excluir; as vendas anteriores mantêm a forma com que foram pagas, e a última forma restante não pode ser excluída."
       },
       {
         "type": "p",
-        "text": "As formas de pagamento são apenas etiquetas de controle: o DingPOS não processa pagamentos de verdade. Receba pagamentos por cartão ou celular na sua maquininha ou app de sempre e depois escolha a forma correspondente no DingPOS para registrar. Nos pagamentos em dinheiro, o troco é calculado automaticamente e, onde as moedas de menor valor deixaram de circular, o dinheiro também pode ser arredondado — veja “O pagamento em dinheiro pode ser arredondado para as moedas em circulação?”"
+        "text": "As formas de pagamento são apenas etiquetas de controle: o DingPOS não processa pagamentos de verdade. Receba pagamentos por cartão ou celular na sua maquininha ou app de sempre e depois escolha a forma correspondente no DingPOS para registrar. Nos pagamentos em dinheiro, o troco é calculado automaticamente e, onde as moedas de menor valor deixaram de circular, o valor pago em dinheiro também pode ser arredondado — veja “O pagamento em dinheiro pode ser arredondado para as moedas em circulação?”"
       },
       {
         "type": "p",
@@ -452,7 +457,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sim. Em Ajustes → Formas de pagamento, toque em uma forma (ou adicione uma nova) e preencha Taxa de processamento: uma porcentagem, um valor fixo por transação ou os dois. A partir daí, cada pagamento recebido por essa forma registra uma taxa estimada com a alíquota em vigor naquele momento."
+        "text": "Sim. Em Ajustes → Formas de pagamento, toque em uma forma (ou adicione uma nova) e preencha Taxa de processamento: uma porcentagem, um valor fixo por transação ou os dois. As formas do tipo Dinheiro não têm taxa. A partir daí, cada pagamento recebido por essa forma registra uma taxa estimada com a alíquota em vigor naquele momento."
       },
       {
         "type": "p",
@@ -461,9 +466,9 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Informe a alíquota que a operadora realmente desconta, com impostos incluídos — para 3% mais 5% de imposto, informe 3,15%. Deixe os dois campos vazios para nenhuma taxa.",
+          "Informe a alíquota que a operadora realmente desconta. Se ela cobra imposto sobre a taxa, inclua-o: para 3% mais 5% de imposto, informe 3,15%. Deixe os dois campos vazios para nenhuma taxa.",
           "Mudar a alíquota vale apenas para os pagamentos seguintes; as taxas já registradas continuam como estavam.",
-          "“Percentual da taxa devolvido em reembolsos” vem ativado por padrão, para operadoras que devolvem a taxa quando você faz um reembolso. Ele vale para devoluções e para sinais de encomendas reembolsados: com ele ativado, a porcentagem é devolvida; a taxa fixa nunca. Uma anulação ou um estorno da quitação ignora a chave e estorna a taxa inteira que registrou, taxa fixa incluída. Nos dois casos, o cliente recebe de volta o mesmo valor.",
+          "“Percentual da taxa devolvido em reembolsos” vem ativado para lojas em Taiwan e no Japão e desativado nas demais, porque operadoras como Stripe, Square e PayPal ficam com a taxa em um reembolso; ajuste-o conforme a sua operadora. Ele vale para devoluções e para sinais de encomendas reembolsados: com ele ativado, a porcentagem é devolvida; a taxa fixa nunca. Uma anulação ou um estorno da quitação ignora a chave e estorna a taxa inteira que registrou, taxa fixa incluída. Nos dois casos, o cliente recebe de volta o mesmo valor.",
           "Pagamentos recebidos antes de a forma ter uma alíquota ficam sem taxa: o Resumo os marca como “N sem alíquota” e mostra o líquido como “—”."
         ]
       },
@@ -780,7 +785,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ao finalizar a venda, troque a parte de cima da tela de Venda para Encomenda, escolha a data de retirada, informe o sinal (de 0 até o valor total, com atalhos de 30% / 50% / total) e escolha como o sinal é pago. Associe um cliente para poder avisá-lo quando o produto chegar."
+        "text": "Ao finalizar a venda, troque a parte de cima da tela de Venda para Encomenda, escolha a data de retirada, informe o sinal (de 0 até o valor total, com atalhos de 30% / 50% / total) e escolha como o sinal é pago. Associe um cliente para poder avisá-lo sobre a retirada."
       },
       {
         "type": "list",
@@ -793,7 +798,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "No Resumo, a receita de uma encomenda é reconhecida por inteiro na data da retirada, enquanto o sinal entra em Valor recebido no dia em que é pago, então os dois números ficam diferentes por um tempo. Veja “Qual é a diferença entre receita e valor recebido?”"
+        "text": "No Resumo, a receita de uma encomenda é reconhecida por inteiro na data da retirada, enquanto o sinal entra em Valor recebido no dia em que é pago; por isso, os dois números ficam diferentes por um tempo. Veja “Qual é a diferença entre receita e valor recebido?”"
       },
       {
         "type": "note",
@@ -894,11 +899,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Quando um produto tem variantes, o campo Preço some e cada combinação ganha o próprio preço em Preço e estoque das variantes, com estoque próprio (desde a v3.2; as versões anteriores ainda pedem um preço do produto). O caixa, a lista de produtos e os detalhes do produto mostram uma faixa de preço do menor ao maior, como “R$ 35–R$ 39”, ou um preço só quando todas as combinações custam o mesmo; a ordenação por preço usa o menor preço entre as combinações. Na hora da venda, ao tocar no produto, aparece a escolha da variante antes de ele ir para o carrinho."
+        "text": "Quando um produto tem variantes, cada combinação em Preço e estoque das variantes tem o próprio estoque, e o preço dela acompanha o Preço do produto: uma combinação sem preço próprio mostra o preço do produto em cinza e muda junto com ele, e um número que você digita é o preço próprio dessa combinação, exibido em preto. Por exemplo, defina o Preço de uma camiseta como 39 e altere só o G para 35: M e GG são vendidos por 39 e, quando o Preço passar a 42, M e GG acompanham e vão para 42, enquanto o G continua em 35. O ⓘ ao lado da coluna Preço traz Usar preço do produto, que faz todas as combinações voltarem a acompanhar o preço do produto. Os produtos criados antes da v3.6 mantêm cada preço de variante como preço próprio da combinação, e o Preço do produto é o menor deles. O caixa, a lista de produtos e os detalhes do produto mostram uma faixa de preço do menor ao maior, como “R$ 35–R$ 39”, ou um preço só quando todas as combinações custam o mesmo; a ordenação por preço usa o menor preço entre as combinações. Na hora da venda, ao tocar no produto, aparece a escolha da variante antes de ele ir para o carrinho."
       },
       {
         "type": "p",
-        "text": "Você não precisa informar o custo de cada combinação: o campo Custo vazio significa Segue o produto, ou seja, usa o custo do produto e muda junto com ele. Um número vira Custo próprio — inclusive 0. Usar o custo do produto em todas apaga todos os custos próprios de uma vez."
+        "text": "O custo funciona do mesmo jeito: um custo vazio mostra o custo do produto em cinza e muda junto com ele, e um número é o custo próprio da combinação, exibido em preto — inclusive 0. Usar custo do produto, no ⓘ ao lado da coluna Custo, apaga de uma vez o custo próprio de todas as combinações."
       },
       {
         "type": "note",
@@ -1034,7 +1039,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Com o controle ativado, vendas e encomendas baixam o estoque automaticamente; anulações, devoluções e encomendas canceladas devolvem as unidades; e o recebimento de um pedido de compra soma ao estoque. Toda movimentação fica registrada em um histórico completo. Estoque baixo aparece destacado com um alerta de cor."
+        "text": "Com o controle ativado, vendas e encomendas baixam o estoque automaticamente; anulações, devoluções e encomendas canceladas devolvem as unidades; e o recebimento de um pedido de compra soma ao estoque. Toda movimentação fica registrada em um histórico completo. Com 10 unidades ou menos, o estoque aparece marcado como baixo, em laranja, na lista de produtos, no caixa e nos detalhes do produto."
       },
       {
         "type": "p",
@@ -1074,7 +1079,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Use Ajustar estoque. Em um produto com estoque controlado, toque em Ajustar estoque nos detalhes do produto, escolha Remover ou Adicionar, informe a quantidade, escolha um motivo e, se quiser, acrescente uma observação (até 100 caracteres). A tela calcula o estoque depois da alteração, e a linha abaixo do motivo informa se ela chega à DRE."
+        "text": "Use Ajustar estoque. Em um produto com estoque controlado, toque em Ajustar estoque nos detalhes do produto, escolha Remover ou Adicionar, defina a quantidade com + e − (começa em 1; toque no número para digitá-lo), escolha um motivo e, se quiser, acrescente uma observação (até 100 caracteres). A tela calcula o estoque depois da alteração, e a linha abaixo do motivo informa se ela chega à DRE."
       },
       {
         "type": "list",
@@ -1148,19 +1153,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Compras, na barra lateral, reúne os fornecedores e os pedidos de compra. O cadastro do fornecedor guarda nome, pessoa de contato, telefone, endereço e a condição de pagamento padrão (pagar no recebimento ou crédito mensal)."
+        "text": "Compras, na barra lateral, reúne os fornecedores e os pedidos de compra. O cadastro do fornecedor guarda nome, pessoa de contato, telefone, endereço e a condição de pagamento padrão: Pagar no recebimento ou Crédito mensal."
       },
       {
         "type": "steps",
         "items": [
-          "Toque em Nova compra, escolha o fornecedor e adicione os produtos, as quantidades e os custos unitários (já preenchidos com o custo atual de cada produto). Também dá para incluir o valor do frete. Se o fornecedor ainda não estiver cadastrado, toque em Adicionar fornecedor no canto superior esquerdo da lista de fornecedores — o novo fornecedor volta direto para o pedido de compra.",
+          "Toque em Nova compra, escolha o fornecedor e adicione os produtos, as quantidades e os custos unitários (já preenchidos com o custo atual de cada produto). Também dá para incluir o valor do frete. Para mercadorias que ainda não foram cadastradas como produtos, toque em Novo produto no seletor Adicionar produto; o novo produto entra direto no pedido de compra como um item. Se o fornecedor ainda não estiver cadastrado, toque em Adicionar fornecedor no canto superior esquerdo da lista de fornecedores — o novo fornecedor volta direto para o pedido de compra.",
           "Um rascunho nunca mexe no estoque nem nas contas a pagar — edite ou exclua à vontade.",
-          "Quando a mercadoria chegar, toque em Receber estoque: o estoque controlado aumenta, e o pedido de compra recebe seu número e é bloqueado. Por padrão, o recebimento também atualiza o custo de cada produto para este custo unitário; desative Sincronizar custo do produto no pedido de compra para manter os custos como estão."
+          "Quando a mercadoria chegar, toque em Receber estoque: o estoque controlado aumenta, e o pedido de compra recebe seu número e é bloqueado. Por padrão, o recebimento também atualiza o custo de cada produto para este custo unitário; desative Sincronizar custo do produto no pedido de compra para manter os custos como estão. Logo abaixo, Incluir frete no custo (ativado nos novos pedidos de compra) divide o valor do frete entre os itens de acordo com o valor de cada um, e o custo gravado em cada produto inclui a sua parte: farinha 10 × R$ 30, manteiga 1 × R$ 60 e R$ 25 de frete dão à farinha um custo de R$ 32 e à manteiga, R$ 64."
         ]
       },
       {
         "type": "p",
-        "text": "A condição de pagamento define o que acontece em seguida: pedidos com pagamento no recebimento são marcados como pagos, enquanto os de crédito mensal ficam em aberto em Contas a pagar, onde você pode quitá-los por fornecedor — um pedido, o mês ou tudo de uma vez."
+        "text": "A condição de pagamento define o que acontece em seguida: pedidos com Pagar no recebimento são marcados como pagos, enquanto os de Crédito mensal ficam em aberto em Contas a pagar, onde você pode quitá-los por fornecedor — um pedido, o mês ou tudo de uma vez."
       },
       {
         "type": "p",
@@ -1203,7 +1208,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Um produto não vendável nunca aparece na grade do caixa, nas categorias, na busca nem na leitura de código de barras, e não pode ser brinde, adicional, alvo de uma promoção nem item da troca.",
+          "Um produto não vendável nunca aparece na grade do caixa, nas categorias, na busca nem na leitura de código de barras, e não pode ser brinde, adicional, alvo de uma promoção nem item da troca. Uma categoria que só tem produtos não vendáveis não aparece na barra de categorias do caixa.",
+          "Quando a loja tem produtos não vendáveis, aparece um botão de filtro no canto superior direito de Produtos: escolha Todos os produtos, Vendáveis ou Não vendáveis, junto com a busca e as categorias.",
           "Pedidos de compra, recebimento, Sincronizar custo do produto e contas a pagar funcionam exatamente como nos outros produtos, então o custo de compra e o estoque de um material podem ser registrados em Compras.",
           "Vender outros produtos não baixa o estoque dele. Quando você usar uma parte, registre uma remoção com Ajustar estoque nos detalhes do produto: Usado na produção para o que entrou nos produtos, Materiais da loja para coisas como sacolas de papel ou produtos de limpeza.",
           "Você pode voltar atrás a qualquer momento, e o preço e os impostos continuam lá. As vendas e os relatórios já feitos não são afetados."
@@ -1232,39 +1238,80 @@ export const articles = [
     "keywords": [
       "receita",
       "valor recebido",
-      "receita da loja",
+      "resumo",
+      "lucro bruto",
+      "da receita ao lucro bruto",
       "conferir caixa",
       "sinal",
-      "venda a prazo"
+      "venda a prazo",
+      "imposto"
     ],
     "content": [
       {
         "type": "p",
-        "text": "A Receita conta no dia em que a mercadoria foi entregue, depois de todos os descontos e antes do imposto; o Valor recebido conta no dia em que o dinheiro entrou e é o dinheiro que você de fato recebeu, imposto incluído. Por isso, em uma loja que cobra imposto, o Valor recebido fica acima da Receita pelo valor do imposto, mesmo em vendas pagas no balcão. Além disso, os dois se separam quando:"
+        "text": "A Receita conta no dia em que a mercadoria foi entregue, depois de todos os descontos e antes do imposto; o Valor recebido conta no dia em que o dinheiro entrou e é o dinheiro que você recebeu, imposto incluído. Em uma loja que cobra imposto, o Valor recebido fica acima da Receita pelo valor do imposto, até mesmo em vendas pagas no balcão. Os dois são os primeiros blocos da primeira fileira do Resumo, ao lado de Lucro bruto, Vendas e Ticket médio."
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Fileiras de blocos do Resumo com Receita e Valor recebido lado a lado na primeira fileira"
+      },
+      {
+        "type": "h2",
+        "text": "Quando Receita e Valor recebido diferem"
+      },
+      {
+        "type": "p",
+        "text": "Por exemplo, quando uma loja com preços com imposto incluso vende por NT$1,050 com 5% de imposto e o cliente paga no balcão, a Receita é NT$1,000 e o Valor recebido é NT$1,050. Além do imposto, os dois valores se separam nestas situações:"
       },
       {
         "type": "list",
         "items": [
-          "Venda a prazo: a mercadoria sai hoje e entra na receita de hoje; o dinheiro entra no Valor recebido no dia em que for quitado.",
-          "Encomenda: o sinal entra no Valor recebido quando é pago; a receita é reconhecida por inteiro na data da retirada.",
-          "Perda do sinal: quando o cliente cancela uma encomenda e você fica com o sinal, esse valor já havia sido contado no Valor recebido quando foi pago. O Resumo o mostra à parte como perda do sinal, e ele nunca entra na receita.",
-          "Anulação de uma venda anterior: o dinheiro devolvido entra no Valor recebido no dia da anulação, então o Valor recebido desse dia pode ficar negativo, enquanto Anuladas conta a venda na data em que ela foi feita.",
-          "Arredondamento do dinheiro: o que o arredondamento do dinheiro acrescenta ou tira do total da venda entra no Valor recebido, nunca na Receita."
+          "Venda a prazo: a mercadoria sai hoje e entra na Receita de hoje; o dinheiro entra no Valor recebido no dia em que a venda for quitada.",
+          "Encomenda: o sinal entra no Valor recebido quando é pago; a Receita é reconhecida por inteiro na data da retirada.",
+          "Sinais retidos: quando o cliente cancela uma encomenda e você fica com o sinal, ele já havia sido contado no Valor recebido quando foi pago. O Resumo o mostra à parte como Sinais retidos, e ele nunca entra na Receita.",
+          "Anulação de uma venda anterior: o dinheiro devolvido entra no Valor recebido no dia da anulação, então o Valor recebido desse dia pode ficar negativo. A venda anulada em si é contada na data em que foi feita e aparece no subtítulo do bloco Vendas.",
+          "Arredondamento do dinheiro: o valor que o arredondamento do dinheiro acrescenta ou tira do total da venda entra no Valor recebido, nunca na Receita."
         ]
       },
       {
         "type": "p",
-        "text": "Para conferir o caixa, compare o Valor recebido com o dinheiro da gaveta e com a maquininha de cartão; para saber quanto você realmente vendeu em um período, olhe a Receita. As devoluções reduzem a receita no dia da devolução. O ⓘ nos blocos Receita, Valor recebido e Anuladas explica a mesma coisa, e o imposto em si aparece em Da receita ao lucro bruto, que abre ao tocar no bloco Lucro bruto."
+        "text": "Quando um dos dois valores não é zero, o subtítulo do bloco Valor recebido mostra o Arredondamento do dinheiro ou os Sinais retidos."
+      },
+      {
+        "type": "h2",
+        "text": "Imposto e detalhes dos blocos"
+      },
+      {
+        "type": "p",
+        "text": "O imposto que separa a Receita do Valor recebido aparece em Da receita ao lucro bruto, que abre no rodapé do bloco Lucro bruto. Ali você vê Receita (com impostos), Imposto e Receita (sem imposto). Lojas na Austrália, no Reino Unido, na Nova Zelândia e em Singapura veem ali o nome do imposto local, como Receita (com GST), GST e Receita (sem GST)."
+      },
+      {
+        "type": "p",
+        "text": "Para ver o imposto cobrado para a declaração, abra Relatório de impostos pelo bloco Imposto."
+      },
+      {
+        "type": "p",
+        "text": "O ícone ⓘ nos blocos Receita, Valor recebido e Vendas explica essas regras no app, inclusive as vendas anuladas listadas no subtítulo do bloco Vendas."
+      },
+      {
+        "type": "h2",
+        "text": "Como conferir o caixa e ler as vendas"
+      },
+      {
+        "type": "p",
+        "text": "Para conferir o caixa, compare o Valor recebido com o dinheiro da gaveta e com a maquininha de cartão. O card Formas de pagamento do Resumo mostra uma linha por forma, e as vendas feitas antes de você renomear uma forma são contadas sob o novo nome. Para saber quanto você vendeu em um período, olhe a Receita. As devoluções reduzem a Receita no dia da devolução."
       },
       {
         "type": "note",
-        "text": "A receita antes do imposto chegou na versão 3.5, e os períodos passados foram recalculados do mesmo jeito, então uma loja que cobra imposto vê uma receita menor do que antes da atualização. É uma correção. As versões anteriores incluíam o imposto na receita, e as lojas com preços sem imposto chegavam a contar como receita o imposto de venda que cobravam."
+        "text": "A Receita antes do imposto chegou na versão 3.5, e os períodos passados foram recalculados do mesmo jeito, então uma loja que cobra imposto vê uma Receita menor do que antes da atualização. É uma correção: as versões anteriores incluíam o imposto na Receita, e as lojas com preços sem imposto chegavam a contar como Receita o imposto de venda que cobravam."
       }
     ],
     "related": [
       "on-account",
       "pre-orders",
-      "report-periods"
+      "report-periods",
+      "tax-report"
     ]
   },
   {
@@ -1272,99 +1319,230 @@ export const articles = [
     "category": "reports",
     "question": "Quais períodos os relatórios podem mostrar?",
     "keywords": [
+      "Resumo",
       "relatórios",
       "período",
-      "esta semana",
-      "este mês",
-      "este ano",
+      "Esta semana",
+      "Este mês",
+      "Personalizado",
       "período personalizado",
-      "data",
-      "produtos mais vendidos"
+      "Ranking de produtos",
+      "Produtos parados",
+      "Dia da semana × hora",
+      "Valor do estoque"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Escolha Hoje, Ontem, Esta semana, Este mês, Este ano ou Todo o período no topo do Resumo, ou use Personalizado para definir uma data inicial e uma final. Esta semana segue o primeiro dia da semana configurado no aparelho; Este mês e Este ano começam no dia 1º e em 1º de janeiro. Cada opção mostra as datas que cobre, e Todo o período começa na primeira venda da sua loja."
+        "text": "Escolha Hoje, Ontem, Esta semana, Este mês, Este ano ou Todo o período na barra de período no topo do Resumo, ou toque em Personalizado para definir qualquer data inicial e final. Todos os cards da página seguem o período escolhido. Esta semana segue o primeiro dia da semana configurado no aparelho, Este mês começa no dia 1º, Este ano começa em 1º de janeiro, Todo o período começa na primeira venda da sua loja e cada opção mostra as datas que cobre."
+      },
+      {
+        "type": "shot",
+        "name": "report-periods",
+        "alt": "Barra de período no topo do Resumo com Personalizado selecionado e o seletor de datas aberto para escolher Início e Fim"
+      },
+      {
+        "type": "h2",
+        "text": "Como escolher um período personalizado"
       },
       {
         "type": "p",
-        "text": "Abaixo da barra de período vêm duas fileiras de blocos de números (Receita, Valor recebido, Lucro bruto, Vendas, Ticket médio; Total de descontos, Lucro líquido, Produtos sem custo, Clientes atendidos) e, depois, o gráfico de tendência. O menu no canto superior direito do gráfico de tendência alterna entre receita, vendas, ticket médio e clientes atendidos, e ao lado dele o gráfico Custo e lucro bruto empilha, em uma única barra, o custo dos produtos e o lucro bruto de cada período. Um único dia é exibido por hora; períodos mais longos usam dias, semanas, meses ou anos, conforme a duração."
+        "text": "Use Personalizado quando precisar de um intervalo fora dos períodos de calendário prontos, como um período de declaração de impostos de dois meses ou trimestral."
       },
       {
-        "type": "p",
-        "text": "Mantenha o dedo pressionado no gráfico de tendência ou no gráfico Custo e lucro bruto para lê-lo período a período; com a Comparação de vendas ativada, o card do gráfico de tendência mostra lado a lado o valor deste período e o do período de comparação. Arraste para a esquerda ou para a direita para se mover; deslize para cima ou para baixo no gráfico e a página rola normalmente."
-      },
-      {
-        "type": "p",
-        "text": "O card Ranking de produtos lista os 5 primeiros. Toque no card ou em Ver tudo para listar todos os produtos vendidos no período, ordenados pela quantidade após as devoluções; um produto com variantes ganha uma linha por variante."
-      },
-      {
-        "type": "p",
-        "text": "A Comparação de vendas, à direita da barra de período, compara o período com o anterior ou com o mesmo período do ano passado — veja “O que mostram os relatórios avançados?”"
-      },
-      {
-        "type": "note",
-        "text": "Esses períodos de calendário chegaram na versão 2.4; as versões anteriores ofereciam intervalos móveis (Hoje / 7 dias / 30 dias / Todo o período). Se você ainda os vê, atualize o DingPOS pela App Store."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "O que mostram os relatórios avançados?",
-    "keywords": [
-      "relatórios avançados",
-      "comparação de vendas",
-      "ano passado",
-      "mapa de calor",
-      "horários de pico",
-      "produtos parados",
-      "valor do estoque",
-      "variação por produto",
-      "taxa de recompra",
-      "participação por categoria",
-      "pontos"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Os relatórios avançados não são uma tela separada — ficam no próprio Resumo e acompanham o período escolhido no topo:"
-      },
-      {
-        "type": "list",
+        "type": "steps",
         "items": [
-          "Comparação de vendas: à direita da barra de período, compare com o mesmo período do ano passado ou com o período anterior (um único dia com o mesmo dia da semana passada, esta semana com a semana passada, este mês com o mês passado, este ano com o ano passado, um período personalizado com o mesmo número de dias imediatamente antes). Os blocos Receita, Valor recebido, Lucro bruto, Vendas, Ticket médio, Total de descontos e Clientes atendidos mostram, cada um, a variação e o valor do período de comparação, como “▼ 3% em relação a mês passado”; a variação em Total de descontos é sempre cinza, porque mais desconto não é bom nem ruim em si. Toque em qualquer linha de comparação para abrir Comparação de períodos, que lista os valores dos dois períodos. O gráfico de tendência ganha uma linha mais clara para o período de comparação. Enquanto um período ainda está em andamento, o período de comparação é cortado no mesmo momento.",
-          "Dia da semana × hora: troque o cabeçalho do gráfico de tendência de Tendência para Dia da semana × hora e veja um mapa de calor de sete dias por 24 horas — quanto mais escura a célula, mais você vendeu. Alterne entre receita e vendas; com uma comparação ativa, veja em quais horários houve alta e em quais houve queda.",
-          "Produtos parados: troque o cabeçalho do card de ranking para Produtos parados para listar os produtos ordenados do menor para o maior número de vendas, com o estoque atual e a data da última venda de cada um. Produtos que nunca foram vendidos aparecem como Nunca vendido, e um produto com variantes ganha uma linha por variante. Por padrão, só aparecem produtos com estoque.",
-          "Variações (desde a versão 3.4): troque o cabeçalho do card de ranking para Variações e veja os 3 produtos cuja receita mais subiu e os 3 que mais caíram em relação ao período de comparação, cada um com a receita dos dois períodos e a diferença; cada variante é comparada com ela mesma. Escolha primeiro um período em Comparação de vendas; com Nenhum, ou em Todo o período, o card avisa. Toque no card ou em Ver tudo para abrir a lista completa de Variação por produto, dividida em Em alta e Em queda.",
-          "Taxa de recompra: a última linha do bloco de clientes é a parcela dos membros que compraram no período e já compraram duas ou mais vezes no total. Com uma comparação ativa, uma linha abaixo mostra a variação em pontos percentuais e a taxa do período de comparação.",
-          "Participação por categoria: a receita e a participação de cada categoria, pela categoria atual de cada produto, da maior para a menor. Produtos sem categoria ficam em Sem categoria, e as linhas somam exatamente a Receita.",
-          "Agora: valor do estoque (estoque atual × custo atual), todas as movimentações de estoque no período selecionado e os pontos que os clientes têm e ainda não resgataram, com o desconto máximo que eles permitem. Esses valores são da posição atual; o período não os altera."
+          "Abra o Resumo e toque em Personalizado na barra de período.",
+          "Escolha as datas inicial e final no seletor.",
+          "Confirme as datas para atualizar o relatório."
         ]
       },
       {
         "type": "p",
-        "text": "Desde a versão 3.4, todos esses relatórios estão disponíveis em todos os planos e continuam disponíveis depois que o teste termina. As versões anteriores os mostravam só no Pro, com um pequeno cadeado nos outros planos; se você ainda vê os cadeados, atualize o DingPOS pela App Store."
+        "text": "O bloco Imposto e o relatório de impostos também seguem o período escolhido, então definir um intervalo de declaração em Personalizado atualiza os dois; veja o artigo relacionado sobre o relatório de impostos. À direita da barra de período, toque em Comparar para ver o período escolhido ao lado do anterior ou do mesmo período do ano passado; veja o artigo relacionado sobre como comparar períodos."
+      },
+      {
+        "type": "h2",
+        "text": "Blocos e cards da página"
       },
       {
         "type": "p",
-        "text": "O Lite não controla estoque nem pontos de fidelidade, mas Agora continua mostrando o valor do estoque e os pontos não resgatados que sua loja já tem (por exemplo, do período de teste), ou zero."
+        "text": "Abaixo da barra de período, o Resumo exibe duas fileiras de blocos de números, seguidas de gráficos e cards de resumo em pares, com Agora no final."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Primeira fileira de blocos: Receita, Valor recebido, Lucro bruto, Vendas e Ticket médio.",
+          "Segunda fileira de blocos: Total de descontos, Imposto, Lucro líquido, Produtos sem custo e Clientes atendidos.",
+          "Primeiro par: o gráfico de tendência de vendas ao lado de Custo e lucro bruto.",
+          "Segundo par: Ranking de produtos ao lado de Participação por categoria.",
+          "Terceiro par: Formas de pagamento ao lado do card de promoções.",
+          "Card final: Agora."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Dois blocos da segunda fileira aparecem só em casos específicos. O bloco Imposto, adicionado na v3.6, aparece apenas para uma loja com impostos ou quando o período escolhido tem vendas feitas com imposto. O bloco Lucro líquido aparece apenas quando o período é Este mês ou cobre exatamente um mês inteiro."
       },
       {
         "type": "note",
-        "text": "A equipe vê os relatórios avançados com a permissão Painel; os valores do estoque também exigem a permissão Custo e lucro."
+        "text": "Se um período não tem vendas, o Resumo mostra apenas a barra de período, uma mensagem e Agora."
+      },
+      {
+        "type": "h2",
+        "text": "Como ler os gráficos e o Ranking de produtos"
+      },
+      {
+        "type": "p",
+        "text": "O menu no canto superior direito do gráfico de tendência de vendas alterna entre Receita, Vendas, Ticket médio e Clientes atendidos. Ao lado, o gráfico Custo e lucro bruto empilha, em uma única barra, o custo dos produtos e o lucro bruto de cada período. Um único dia é exibido por hora, enquanto períodos mais longos agrupam os dados por dias, semanas, meses ou anos, conforme a duração."
+      },
+      {
+        "type": "p",
+        "text": "Mantenha o dedo pressionado no gráfico de tendência de vendas, em Custo e lucro bruto ou em Formas de pagamento para mostrar um card de leitura de um intervalo. Com Comparar ativado, o card de leitura do gráfico de tendência de vendas mostra lado a lado o valor deste período e o do período de comparação. Arraste para a esquerda ou para a direita para percorrer os intervalos; deslize para cima ou para baixo no gráfico para rolar a página normalmente."
+      },
+      {
+        "type": "p",
+        "text": "Troque o cabeçalho do gráfico de tendência de Tendência para Dia da semana × hora para ver um mapa de calor de sete dias por 24 horas. Quanto mais escura a célula, mais você vendeu naquela hora, e é possível alternar o mapa de calor entre receita e vendas."
+      },
+      {
+        "type": "p",
+        "text": "O Ranking de produtos lista os 5 primeiros produtos do período escolhido. Toque no card ou em Ver tudo para listar todos os produtos vendidos nesse período, ordenados pela quantidade após as devoluções. Um produto com variantes aparece em uma linha por variante."
+      },
+      {
+        "type": "p",
+        "text": "Troque o cabeçalho do card de ranking para Produtos parados para listar os produtos das menores vendas para as maiores. Cada linha mostra o estoque atual do produto e a data da última venda. Os produtos que nunca foram vendidos aparecem como Nunca vendido, e por padrão só aparecem os produtos em estoque. O cabeçalho Variações lista os produtos cuja receita mais subiu ou caiu em relação a um período de comparação; veja o artigo relacionado sobre como comparar períodos."
+      },
+      {
+        "type": "h2",
+        "text": "Participação por categoria, taxa de recompra e Agora"
+      },
+      {
+        "type": "p",
+        "text": "Participação por categoria lista a receita e a participação de cada categoria, da maior para a menor, com base na categoria atual de cada produto. Produtos sem categoria ficam em Sem categoria, e as linhas somam exatamente a Receita."
+      },
+      {
+        "type": "p",
+        "text": "A última linha do bloco Clientes atendidos exibe a taxa de recompra como “Taxa de recompra … · … clientes voltaram”. Ela mostra a parcela dos clientes cadastrados que compraram no período escolhido e já compraram duas ou mais vezes no total."
+      },
+      {
+        "type": "p",
+        "text": "Agora mostra três informações de estoque e pontos:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Valor do estoque, calculado como estoque atual × custo atual.",
+          "Todas as movimentações de estoque no período escolhido.",
+          "Os pontos que os clientes têm e ainda não resgataram, junto com o máximo que podem abater."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "O Valor do estoque e os pontos a resgatar são saldos atuais, então mudar o período no topo não os altera."
+      },
+      {
+        "type": "note",
+        "text": "A equipe vê o Resumo com a permissão Resumo; os valores de Valor do estoque também exigem a permissão Custo e lucro."
+      },
+      {
+        "type": "note",
+        "text": "Os períodos de calendário chegaram na versão 2.4; as versões anteriores ofereciam intervalos móveis (Hoje / 7 dias / 30 dias / Todo o período). Se você ainda vê essas opções, atualize o DingPOS pela App Store."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Como comparar as vendas com a semana passada, o mês passado ou o ano passado?",
+    "keywords": [
+      "Comparar",
+      "Comparação de períodos",
+      "Semana passada",
+      "Mês passado",
+      "Ano passado",
+      "mesmo período do ano passado",
+      "Variações",
+      "Resumo",
+      "crescimento",
+      "taxa de recompra"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Toque em Comparar à direita da barra de período no Resumo e escolha um período anterior, como Semana passada ou Ano passado. Cada bloco passa a mostrar quanto seu valor subiu ou caiu, como “▼ 3% em relação a Mês passado”, com o valor do período de comparação logo abaixo."
+      },
+      {
+        "type": "h2",
+        "text": "Como ativar uma comparação"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abra o Resumo pela barra lateral.",
+          "Escolha um período no topo.",
+          "Toque em Comparar à direita da barra de período.",
+          "Escolha uma opção de comparação no menu."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "As opções disponíveis dependem do período escolhido:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nenhuma desativa a comparação.",
+          "Semana passada compara um único dia com o mesmo dia da semana passada, ou esta semana com a semana passada.",
+          "Mês passado compara este mês com o mês passado.",
+          "Ano passado compara este ano com o ano passado, ou compara o período escolhido com o mesmo período do ano passado.",
+          "Anterior compara um período personalizado com o mesmo número de dias imediatamente antes dele."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Com uma comparação ativa, o Resumo acrescenta a variação e o valor do período de comparação a todos os blocos, exceto Imposto, Lucro líquido e Produtos sem custo. Receita, Valor recebido, Lucro bruto, Vendas, Ticket médio, Total de descontos e Clientes atendidos exibem, cada um, uma linha de comparação como “▼ 3% em relação a Mês passado”."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Resumo em Esta semana com Comparar definido como Semana passada, mostrando a barra de comparação e a primeira fileira de blocos, cada um com sua variação e o valor de comparação logo abaixo",
+        "caption": "Toque em qualquer linha de comparação sob um bloco para abrir Comparação de períodos e ver os valores dos dois períodos."
+      },
+      {
+        "type": "p",
+        "text": "A variação em Total de descontos é sempre cinza, porque mais desconto não é bom nem ruim por si só. Toque em qualquer linha de comparação para abrir Comparação de períodos, que lista os valores dos dois períodos. O gráfico de tendência acrescenta uma linha mais clara para o período de comparação. Enquanto um período ainda está em andamento, o período de comparação é cortado no mesmo momento."
+      },
+      {
+        "type": "h2",
+        "text": "Variações"
+      },
+      {
+        "type": "p",
+        "text": "Troque o cabeçalho do card de ranking para Variações para ver os 3 produtos cuja receita mais subiu e os 3 que mais caíram em relação ao período de comparação. Cada linha mostra a receita dos dois períodos e a diferença, e cada variante é comparada consigo mesma."
+      },
+      {
+        "type": "p",
+        "text": "Escolha antes um período em Comparar. Com Comparar em Nenhuma, ou quando o período é Todo o período, o card pede que você escolha um período de comparação. Toque no card ou em Ver tudo para abrir a lista completa Variação por produto, dividida em Em alta e Em queda."
+      },
+      {
+        "type": "h2",
+        "text": "Mapa de calor e taxa de recompra"
+      },
+      {
+        "type": "p",
+        "text": "Com uma comparação ativada, o mapa de calor Dia da semana × hora do gráfico de tendência também mostra quais horas cresceram e quais encolheram, e a taxa de recompra no bloco Clientes atendidos ganha uma linha com a variação em pontos percentuais e a taxa do período de comparação."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -1373,41 +1551,105 @@ export const articles = [
     "question": "Como o lucro bruto aparece nos relatórios se eu não informei os custos?",
     "keywords": [
       "custo",
-      "lucro",
       "lucro bruto",
       "margem",
       "margem bruta",
       "relatórios",
+      "custo faltando",
       "lucro não calculável",
-      "produto sem custo",
-      "produtos sem custo"
+      "Produtos sem custo",
+      "Da receita ao lucro bruto"
     ],
     "content": [
       {
         "type": "p",
-        "text": "O custo é um campo opcional. Produtos sem custo ficam fora do lucro bruto, mas a receita deles continua sendo contada por inteiro. O bloco Produtos sem custo no Resumo mostra quantos produtos vendidos ou devolvidos no período não têm custo, como “12 produtos”. Um custo de 0 conta como custo, então esses produtos não aparecem na lista; quando todos os produtos têm custo, o bloco mostra “0 produtos · custos completos”."
+        "text": "O custo é um campo opcional, então produtos sem custo ficam fora do lucro bruto, enquanto a receita deles continua sendo contada por inteiro. O bloco Produtos sem custo no Resumo mostra quantos produtos vendidos ou devolvidos no período não têm custo, como “12 produtos”. Um custo de 0 conta como custo e não aparece na lista; quando todos os produtos têm custo, o bloco mostra “0 produtos · custos completos”."
+      },
+      {
+        "type": "h2",
+        "text": "Como encontrar produtos sem custo"
       },
       {
         "type": "p",
-        "text": "Toque no bloco ou em Ver produtos para abrir Produtos sem custo, ordenados pela receita que ficou fora do lucro bruto. Toque em uma linha para abrir o produto, informe o custo em Editar e, ao voltar, a linha aparece marcada como Custo adicionado. Um produto com variantes só aparece como Custo adicionado quando todas as variantes vendidas sem custo passam a ter um — o próprio custo da variante ou o do produto, que ela segue."
+        "text": "No Resumo, toque no bloco Produtos sem custo ou em Ver produtos para abrir Produtos sem custo. A lista ordena os produtos da maior para a menor receita que ficou fora do lucro bruto."
+      },
+      {
+        "type": "shot",
+        "name": "profit-not-tracked",
+        "alt": "Lista Produtos sem custo com os produtos ordenados pela receita que ficou fora do lucro bruto"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Toque em uma linha de Produtos sem custo para abrir o produto.",
+          "Toque em Editar e informe o custo em Custo (opcional).",
+          "Volte a Produtos sem custo para ver a linha marcada como Custo adicionado."
+        ]
       },
       {
         "type": "p",
-        "text": "O lucro bruto é a receita depois de todos os descontos (de item e de carrinho, promoções e resgate de pontos) e antes do imposto, menos o custo — por isso, em uma loja que cobra imposto, o campo se chama Custo sem impostos (opcional): informe o que você pagou antes do imposto. A margem é o lucro bruto ÷ a receita dos produtos que têm custo, então os produtos sem custo não puxam a margem para baixo. Uma devolução desfaz, no dia da devolução, o lucro bruto que esses itens tinham gerado."
-      },
-      {
-        "type": "p",
-        "text": "Toque no bloco Lucro bruto para abrir Da receita ao lucro bruto, que subtrai linha por linha: receita (com imposto), imposto, receita (sem imposto), receita sem custo, custo dos produtos e, por fim, lucro bruto e margem. As linhas somam exatamente o valor do bloco."
+        "text": "Um produto com variantes só aparece como Custo adicionado quando todas as variantes vendidas sem custo passam a ter um: o próprio custo da variante ou o do produto, que ela segue. Desde a v3.6, um pedido de compra também pode ratear o frete no custo do produto que ele grava, quando Incluir frete no custo está ativado."
       },
       {
         "type": "note",
-        "text": "Um custo que você informa afeta apenas as vendas futuras; as vendas já feitas não são recalculadas. Este cálculo chegou na v3.1: as versões anteriores só descontavam os descontos manuais de item e contavam o imposto incluso como lucro, então, depois de atualizar, períodos com descontos ou imposto incluso mostram um lucro bruto menor. É uma correção, não perda de dados."
+        "text": "Um custo que você informa afeta apenas as vendas futuras. As vendas já feitas não são recalculadas."
+      },
+      {
+        "type": "h2",
+        "text": "Como informar custo e imposto"
+      },
+      {
+        "type": "p",
+        "text": "No formulário do produto, o campo de custo se chama Custo (opcional) em todas as lojas. Em uma loja com impostos, aparece um ⓘ ao lado de Custo (opcional) para mostrar como o imposto se aplica, conforme a Recuperação de impostos:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Recuperação de impostos ativada: informe o custo sem o imposto que você pode recuperar. A nota do ⓘ diz: “Informe o custo sem o imposto creditável, que vai em imposto a recuperar. O imposto que você não pode recuperar faz parte do custo.”",
+          "Recuperação de impostos desativada: informe o que você pagou, sem o imposto que você pode recuperar. A nota do ⓘ diz: “O imposto que você pode recuperar não entra no custo; o que você não pode recuperar entra. Se você registra imposto a recuperar, ative Recuperação de impostos em Dados da loja.”"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Se a sua loja declara imposto a recuperar, ative Recuperação de impostos em Dados da loja."
+      },
+      {
+        "type": "h2",
+        "text": "Como ler o detalhamento do lucro bruto"
+      },
+      {
+        "type": "p",
+        "text": "O lucro bruto é a receita depois de todos os descontos (de item e de carrinho, promoções e resgate de pontos) e antes do imposto, menos o custo. A margem é o lucro bruto ÷ a receita dos produtos que têm custo, então os produtos sem custo não puxam a margem para baixo. Uma devolução desfaz, no dia da devolução, o lucro bruto que esses itens tinham gerado."
+      },
+      {
+        "type": "p",
+        "text": "Toque no bloco Lucro bruto no Resumo para abrir Da receita ao lucro bruto, que subtrai linha por linha:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Receita (com impostos)",
+          "Imposto",
+          "Receita (sem imposto)",
+          "Receita sem custo",
+          "Custo dos produtos",
+          "Lucro bruto e margem"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "As linhas somam exatamente o valor do bloco Lucro bruto. Lojas na Austrália, no Reino Unido, na Nova Zelândia e em Singapura veem o nome do imposto local nas linhas de imposto, como Receita (com GST)."
+      },
+      {
+        "type": "note",
+        "text": "Esse cálculo do lucro bruto chegou na v3.1. As versões anteriores só descontavam os descontos manuais de item e contavam o imposto incluso como lucro, então, depois de atualizar, períodos com descontos ou imposto incluso mostram um lucro bruto menor. É uma correção, não perda de dados."
       }
     ],
     "related": [
       "report-periods",
       "product-variants",
-      "purchase-orders"
+      "purchase-orders",
+      "input-tax"
     ]
   },
   {
@@ -1419,43 +1661,92 @@ export const articles = [
       "DRE",
       "demonstração de resultado",
       "lucro líquido",
+      "lucro bruto",
       "lucro mensal",
-      "despesas",
+      "despesas fixas",
       "lucro operacional",
       "resultado do mês"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Abra a DRE, logo abaixo de Resumo na barra lateral. Ela lista todos os meses, do mais recente ao mais antigo, cada um com o lucro líquido: o mês atual aparece como Em andamento, e o cabeçalho de cada ano soma o lucro líquido dos meses já encerrados."
+        "text": "Abra a DRE, logo abaixo de Resumo na barra lateral, para ver o lucro líquido de cada mês e como ele é calculado. A lista vai do mais recente ao mais antigo, a partir do primeiro mês com atividade; o mês atual aparece como Em andamento, e o cabeçalho de cada ano soma o lucro líquido dos meses já encerrados. A primeira linha, Todas as despesas, abre todas as despesas, de qualquer mês."
+      },
+      {
+        "type": "h2",
+        "text": "Detalhamento mensal"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abra a DRE, logo abaixo de Resumo na barra lateral.",
+          "Toque em um mês para ver como o lucro líquido dele é calculado."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "profit-loss-month",
+        "alt": "Página de um mês da DRE com o aviso Em andamento, o lucro líquido e o detalhamento completo, da receita às despesas"
       },
       {
         "type": "p",
-        "text": "Toque em um mês para ver como o lucro líquido dele é calculado:"
+        "text": "A página do mês lista todas as linhas, das vendas até o lucro líquido, em ordem. As linhas da receita ao lucro bruto têm os mesmos nomes e valores de Da receita ao lucro bruto, no Resumo."
       },
       {
         "type": "list",
         "items": [
-          "Receita (sem imposto): a receita depois de todos os descontos e antes do imposto, contada no dia em que o produto foi entregue.",
+          "Receita (com impostos), Imposto e Receita (sem imposto): a receita com imposto incluído, o valor do imposto e a receita depois de todos os descontos e antes do imposto, contada no dia em que o produto foi entregue. Lojas na Austrália, no Reino Unido, na Nova Zelândia e em Singapura veem o nome do imposto local.",
+          "Receita sem custo: subtraída antes do custo dos produtos, mostrada apenas quando não é zero.",
           "Custo dos produtos: o custo do que foi vendido, a partir dos custos cadastrados nos seus produtos.",
-          "Perda de estoque: o custo do que Ajustar estoque retirou por vencimento, dano, doação e motivos parecidos, mais as devoluções descartadas. Ela entra depois do lucro bruto — veja “Como registrar produtos vencidos, danificados ou dados como amostra?” O mês também tem uma seção Perda de estoque que soma tudo por motivo.",
+          "Lucro bruto: mostrado com a margem.",
+          "Receita sem custo: somada de volta depois do lucro bruto, quando não é zero.",
+          "Perda de estoque: mostrada apenas quando o mês tem uma; o custo do que Ajustar estoque retirou por vencimento, dano, doação e motivos parecidos, mais as devoluções descartadas. Ela entra depois do lucro bruto. Veja “Como registrar produtos vencidos, danificados ou dados como amostra?” O mês também tem uma seção Perda de estoque que soma tudo por motivo.",
           "Taxas de processamento (est.): as taxas estimadas a partir das alíquotas das suas formas de pagamento.",
-          "Sinais retidos: sinais que você reteve quando uma encomenda foi cancelada.",
-          "Arredondamento do dinheiro: o que o arredondamento do dinheiro para as moedas em uso acrescentou ou tirou dos totais das vendas.",
-          "Despesas fixas e Despesas avulsas: o que você registrou para aquele mês — veja “Como registrar aluguel, folha de pagamento e outras despesas?”"
+          "Sinais retidos: mostrados apenas quando não são zero; sinais que você reteve quando uma encomenda foi cancelada.",
+          "Arredondamento do dinheiro: mostrado apenas quando não é zero; o que o arredondamento do dinheiro para as moedas em uso acrescentou ou tirou dos totais das vendas.",
+          "Despesas fixas e Despesas avulsas: o que você registrou para aquele mês — veja “Como registrar aluguel, folha de pagamento e outras despesas?”",
+          "Lucro líquido: calculado como receita (sem imposto) − custo dos produtos − perda de estoque − taxas de processamento + sinais retidos + arredondamento do dinheiro − despesas fixas − despesas avulsas."
         ]
       },
       {
-        "type": "p",
-        "text": "Em seguida vêm até três gráficos: o lucro líquido mês a mês, a participação de cada despesa fixa e a tendência das despesas fixas. Os dois gráficos de tendência cobrem no máximo os 12 meses até o mês que você abriu e só aparecem quando há pelo menos dois meses para comparar, contados a partir do mês da primeira venda ou despesa. O gráfico de participação precisa de uma despesa fixa naquele mês; enquanto não houver, essa seção mostra Adicionar despesa fixa."
+        "type": "h2",
+        "text": "Meses em andamento"
       },
       {
         "type": "p",
-        "text": "O Resumo e a DRE levam um ao outro. Quando o período do Resumo é este mês ou exatamente um mês inteiro, a segunda fileira de blocos ganha um bloco Lucro líquido (marcado com “Em andamento · as despesas do mês inteiro são deduzidas” enquanto o mês está em curso); toque nele para ver o detalhamento daquele mês, do lucro bruto ao lucro líquido. Para qualquer outro período, toque em Ver DRE mensal na última linha de Da receita ao lucro bruto. No sentido contrário, Ver o relatório de outubro, abaixo do título de um mês na DRE, abre o Resumo naquele mês."
+        "text": "Enquanto um mês ainda está em andamento, a DRE já deduz as despesas fixas do mês inteiro. Por exemplo, em 5/10, se a receita (sem imposto) até agora é 20.000, o custo dos produtos é 10.000 e as despesas fixas são 65.700, o lucro líquido é −55.700 e aparece marcado como Em andamento · as despesas do mês inteiro são deduzidas."
+      },
+      {
+        "type": "p",
+        "text": "Como as despesas do mês inteiro já estão contadas, o lucro líquido do mês atual nunca aparece em vermelho na lista de meses, na página do mês nem no bloco Lucro líquido do Resumo. Um mês encerrado que termina em prejuízo mostra o lucro líquido na cor de alerta."
+      },
+      {
+        "type": "h2",
+        "text": "Gráficos"
+      },
+      {
+        "type": "p",
+        "text": "Até três gráficos vêm depois do detalhamento: o lucro líquido mês a mês, a participação de cada despesa fixa e a tendência das despesas fixas. Os dois gráficos de tendência cobrem no máximo os 12 meses até o mês que você abriu e só aparecem quando há pelo menos dois meses para comparar, contados a partir do mês da primeira venda ou despesa. O gráfico de participação precisa de uma despesa fixa naquele mês; enquanto não houver, essa seção mostra Adicionar despesa fixa."
+      },
+      {
+        "type": "h2",
+        "text": "Alternar entre o Resumo e a DRE"
+      },
+      {
+        "type": "p",
+        "text": "O Resumo e a DRE levam um ao outro. Quando o período do Resumo é Este mês ou exatamente um mês inteiro, a segunda fileira de blocos ganha um bloco Lucro líquido, marcado com Em andamento · as despesas do mês inteiro são deduzidas enquanto o mês está em curso. Toque nesse bloco para ver o detalhamento daquele mês, do lucro bruto ao lucro líquido. Para qualquer outro período, toque em Ver DRE mensal na última linha de Da receita ao lucro bruto."
+      },
+      {
+        "type": "p",
+        "text": "No sentido contrário, Ver o relatório de outubro, abaixo do título de um mês na DRE, abre o Resumo naquele mês (período personalizado de 1/10 a 31/10); para o mês em andamento, abre Este mês."
       },
       {
         "type": "note",
-        "text": "O lucro líquido é o lucro operacional antes do imposto de renda, calculado com o que o DingPOS registrou — não é uma declaração de impostos. Se houver produtos vendidos sem custo, o mês ainda mostra um lucro líquido, marcado com “Não inclui o custo de N produto(s)”; toque nele para ver quais. A DRE está em todos os planos. Com contas de funcionários, abri-la exige a permissão DRE e despesas, que Gerentes e Funcionários só têm com aprovação por padrão, porque ela mostra custos de produtos e folha de pagamento."
+        "text": "O lucro líquido é o lucro operacional antes do imposto de renda, calculado com o que o DingPOS registrou, e não uma declaração de impostos. Se houver produtos vendidos sem custo, o mês ainda mostra um lucro líquido, marcado com Não inclui o custo de N produtos; toque nele para ver quais."
+      },
+      {
+        "type": "note",
+        "text": "A DRE está em todos os planos. Com contas de funcionários, abri-la exige a permissão DRE e despesas, que Gerentes e Funcionários só têm com aprovação por padrão, porque ela mostra custos de produtos e folha de pagamento."
       }
     ],
     "related": [
@@ -1475,38 +1766,98 @@ export const articles = [
       "folha de pagamento",
       "água e luz",
       "despesas fixas",
-      "custos fixos",
+      "despesas avulsas",
+      "Todas as despesas",
       "diluição de despesa",
-      "despesa avulsa"
+      "custos fixos",
+      "DRE"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Na DRE, toque em Adicionar despesa e escolha uma despesa fixa ou avulsa. Uma despesa conta no mês a que pertence, não no mês em que você a pagou, e o lucro líquido de cada mês acompanha."
+        "text": "Na DRE, toque em Adicionar despesa e escolha Adicionar despesa fixa ou Adicionar despesa avulsa para registrar aluguel, folha de pagamento, contas de água e luz e outros custos de operação. Toda despesa conta no mês a que pertence, e não no mês em que você a pagou, e o lucro líquido de cada mês é atualizado. As despesas fixas se repetem todo mês, com alterações de valor opcionais, e as avulsas contam em um único mês ou são diluídas em vários meses."
+      },
+      {
+        "type": "h2",
+        "text": "Despesas fixas"
       },
       {
         "type": "p",
-        "text": "Uma despesa fixa é a que você paga todo mês, como aluguel, contas de água e luz ou folha de pagamento:"
+        "text": "Uma despesa fixa é um custo recorrente que você paga todo mês, como aluguel, contas de água e luz ou folha de pagamento."
       },
       {
-        "type": "list",
+        "type": "steps",
         "items": [
+          "Abra a DRE.",
+          "Toque em Adicionar despesa.",
+          "Escolha Adicionar despesa fixa.",
           "Informe o nome, o valor mensal e o mês de início. Escolha um mês anterior para incluir meses passados.",
-          "Quando o valor mudar, toque em Alterar valor, escolha o mês e selecione A partir deste mês (um aumento de aluguel, por exemplo) ou Só este mês (a conta de luz do mês). Todas as alterações ficam listadas, e você pode abrir uma para editar ou remover.",
-          "Quando você deixar de pagá-la, defina o Último mês contado: esse mês e os anteriores continuam contando."
+          "Toque em ✓ para salvar."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "expense-form",
+        "alt": "Formulário de despesa fixa com o nome, o valor mensal, o mês de início e as alterações de valor"
+      },
+      {
+        "type": "p",
+        "text": "Quando o valor mudar, abra a despesa e toque em Alterar valor. Escolha o mês em que a mudança começa e depois A partir deste mês, para uma mudança contínua, como um aumento de aluguel, ou Só este mês, para uma diferença de um único mês, como a conta de luz do mês. Todas as alterações ficam listadas no formulário, e você pode abrir qualquer uma para editar ou remover."
+      },
+      {
+        "type": "p",
+        "text": "Quando você deixar de pagar uma despesa fixa, defina o Último mês contado. Esse mês e os anteriores continuam contando na DRE, e os meses seguintes deixam de incluí-la."
+      },
+      {
+        "type": "h2",
+        "text": "Alterações programadas em Todas as despesas"
+      },
+      {
+        "type": "p",
+        "text": "Em Todas as despesas, cada linha de despesa fixa mostra o que está programado. A linha junta o mês de início com a próxima alteração de valor programada e o último mês contado. Por exemplo, uma linha pode mostrar Desde janeiro de 2026 · $420/mês a partir de dezembro de 2026 · Contada até março de 2027."
+      },
+      {
+        "type": "p",
+        "text": "O valor à direita continua sendo o valor mensal de hoje, não o da alteração futura. Uma alteração definida como Só este mês não aparece na linha."
+      },
+      {
+        "type": "h2",
+        "text": "Despesas avulsas"
+      },
+      {
+        "type": "p",
+        "text": "Uma despesa avulsa é um custo pago uma única vez, como uma reforma, equipamentos, um seguro pago adiantado ou uma conta isolada."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abra a DRE.",
+          "Toque em Adicionar despesa.",
+          "Escolha Adicionar despesa avulsa.",
+          "Informe o valor e a data.",
+          "Defina o Mês contado para um único mês ou ative Diluir em vários meses.",
+          "Toque em ✓ para salvar."
         ]
       },
       {
         "type": "p",
-        "text": "Uma despesa avulsa é paga uma única vez:"
+        "text": "Sem diluir, você ainda pode escolher o Mês contado para que o custo conte no mês a que pertence. Por exemplo, uma conta de outubro que chega em novembro pode contar em outubro, com a data real mantida."
       },
       {
-        "type": "list",
-        "items": [
-          "Para uma reforma, equipamentos ou um seguro pago adiantado, ative Diluir em vários meses e escolha de 2 a 120 meses e o Primeiro mês contado. O formulário mostra uma prévia de quanto conta em cada mês e quais meses ela cobre.",
-          "Sem diluir, você ainda pode escolher o mês contado: uma conta de outubro que chega em novembro pode contar em outubro, com a data real mantida.",
-          "Se uma diluição terminar antes (um seguro cancelado, por exemplo), use Encerrar diluição antes: o que sobrar conta no mês que você escolher."
-        ]
+        "type": "p",
+        "text": "Para uma reforma, equipamentos ou um seguro pago adiantado, ative Diluir em vários meses, escolha de 2 a 120 meses e selecione o Primeiro mês contado. O formulário mostra uma prévia de quanto conta em cada mês e quais meses ela cobre."
+      },
+      {
+        "type": "p",
+        "text": "Se uma diluição terminar antes, como quando uma apólice de seguro é cancelada, abra a despesa e use Encerrar diluição antes. O valor que sobrar conta no mês que você escolher."
+      },
+      {
+        "type": "h2",
+        "text": "Imposto a recuperar em despesas"
+      },
+      {
+        "type": "p",
+        "text": "Com a Recuperação de impostos ativada, você pode registrar o número da nota fiscal e o imposto creditável em uma despesa avulsa e registrar cada nota fiscal de uma despesa fixa em Notas fiscais, com Registrar nota fiscal. O valor contado na DRE continua sendo o que a loja assume, e o artigo relacionado sobre imposto a recuperar explica como o imposto creditável funciona."
       },
       {
         "type": "note",
@@ -1516,7 +1867,483 @@ export const articles = [
     "related": [
       "profit-loss",
       "purchase-orders",
+      "input-tax",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "export-tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Como exportar o relatório de impostos para o meu contador?",
+    "keywords": [
+      "exportar relatório de impostos",
+      "Relatório de impostos",
+      "Exportar",
+      "Planilha do Excel",
+      "CSV",
+      "Relatório em PDF",
+      "Resumo de impostos",
+      "Detalhes do imposto a recuperar",
+      "contador"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Abra o Relatório de impostos, toque em Exportar no canto superior direito e escolha CSV, Planilha do Excel (XLSX) ou Relatório em PDF. O arquivo abre em uma prévia em tela cheia, onde você toca no botão de compartilhar para salvá-lo ou enviá-lo ao seu contador. Todos os formatos trazem os mesmos valores mostrados na tela."
+      },
+      {
+        "type": "h2",
+        "text": "Como exportar"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abra o Resumo e escolha o período, como um período personalizado de 1/11 a 31/12 para uma declaração bimestral, ou um trimestre.",
+          "Toque no bloco Imposto para abrir o Relatório de impostos. A exportação cobre exatamente esse período.",
+          "Toque em Exportar no canto superior direito do Relatório de impostos. Um menu lista os formatos, com o último exportado neste iPad marcado.",
+          "Escolha um formato, como Planilha do Excel (XLSX), para abrir uma prévia em tela cheia. Os arquivos CSV aparecem como tabela, e a planilha do Excel permite alternar entre as abas, por exemplo conferindo primeiro a aba Summary.",
+          "Toque no botão de compartilhar no canto superior direito da prévia para salvar o arquivo ou enviá-lo ao seu contador. Ao fechar a prévia, você volta ao Relatório de impostos."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "tax-export",
+        "alt": "Relatório de impostos com o menu Exportar aberto, listando os formatos de arquivo"
+      },
+      {
+        "type": "p",
+        "text": "Se a exportação falhar, o app mostra Não foi possível exportar o arquivo e Tente exportar de novo. Nada é gravado; exporte outra vez."
+      },
+      {
+        "type": "h2",
+        "text": "Formatos de exportação"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Resumo de impostos (CSV): uma linha por linha do relatório (cada imposto e alíquota, alíquota zero e sem imposto), com vendas, devoluções e líquido, antes do imposto e imposto.",
+          "Todos os documentos (CSV): uma linha por documento em cada imposto, com data e hora, número do recibo, tipo de documento (venda, devolução ou o lançamento de reversão de uma anulação), nome do cliente, valores e formas de pagamento. Uma anulação acrescenta uma linha de reversão na data da anulação.",
+          "Resumo diário (CSV): o resumo por dia e, em seguida, uma segunda tabela com os pagamentos por dia e por forma.",
+          "Detalhes do imposto a recuperar (CSV): aparece só quando o relatório tem um card de imposto a recuperar. Uma linha por linha de imposto a recuperar de cada pedido de compra e despesa, com fornecedor, ID fiscal do fornecedor e número da nota fiscal.",
+          "Planilha do Excel (XLSX): as abas Summary, Documents e Daily, equivalentes aos três CSVs de vendas, mais Purchases quando o relatório mostra imposto a recuperar. Os valores são células numéricas, e cada coluna se ajusta ao conteúdo para que nada abra cortado.",
+          "Relatório em PDF: um relatório em A4, no idioma do app, com nome da loja, período, modo de imposto, moeda e as seções do relatório. Lojas na Austrália, Nova Zelândia, Singapura e Reino Unido veem Campos da declaração primeiro; os cards de imposto a recuperar vêm em seguida, quando aparecem. Na prévia, assine ou anote com Marcação para compartilhar o arquivo marcado; exportar o mesmo período de novo grava uma cópia limpa."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Formatação para programas de contabilidade"
+      },
+      {
+        "type": "p",
+        "text": "Os arquivos CSV são UTF-8, separados por vírgula, com nomes de coluna fixos em inglês em qualquer idioma do app, para que programas de contabilidade consigam lê-los. Os valores usam as casas decimais da moeda e um sinal de menos, sem símbolo nem separador de milhar (como 80.97, -40.00 ou 1000 para uma loja em iene). As datas têm o formato 2026-11-03."
+      },
+      {
+        "type": "p",
+        "text": "Células de texto que começam com =, +, - ou @ (como um cliente chamado =1+1) recebem um ' no início, para que as planilhas mostrem texto em vez de executar uma fórmula. Os valores nunca recebem esse caractere."
+      },
+      {
+        "type": "p",
+        "text": "Os nomes dos arquivos trazem o período, como tax-report-summary_2026-11-01_2026-11-30.csv, tax-report_2026-11-01_2026-11-30.xlsx e tax-report_2026-11-01_2026-11-30.pdf, para que arquivos de períodos diferentes nunca se sobrescrevam."
+      },
+      {
+        "type": "h2",
+        "text": "Permissões e privacidade"
+      },
+      {
+        "type": "p",
+        "text": "Todos os planos podem exportar, inclusive o Lite. Funcionários precisam da permissão Resumo, a mesma do Relatório de impostos."
+      },
+      {
+        "type": "p",
+        "text": "Os arquivos com imposto a recuperar pedem antes as aprovações que os cards exigem: Custo e lucro para pedidos de compra e DRE e despesas para despesas. Isso vale para Detalhes do imposto a recuperar (CSV), além da Planilha do Excel (XLSX) e do Relatório em PDF quando os cards de imposto a recuperar aparecem. Cancelar não grava nada; os três CSVs de vendas nunca pedem aprovação."
+      },
+      {
+        "type": "note",
+        "text": "Todos os documentos (CSV) contém nomes de clientes, e os arquivos de imposto a recuperar contêm nomes de fornecedores e IDs fiscais. Compartilhe-os apenas com quem deve vê-los."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "input-tax",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "input-tax",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Como registrar o imposto a recuperar (VAT ou GST das compras)?",
+    "keywords": [
+      "imposto a recuperar",
+      "VAT",
+      "GST",
+      "Recuperação de impostos",
+      "Imposto a recuperar em pedidos de compra",
+      "Imposto a recuperar em despesas",
+      "ID fiscal do fornecedor",
+      "pedidos de compra",
+      "relatório de impostos"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ative Recuperação de impostos em Ajustes → Dados da loja para registrar o imposto creditável das notas fiscais de fornecedores em pedidos de compra e despesas. Os dois formulários ganham então uma seção Imposto a recuperar, onde você copia o imposto creditável de cada nota. O relatório de impostos o lista em dois cards, Imposto a recuperar em pedidos de compra e Imposto a recuperar em despesas."
+      },
+      {
+        "type": "h2",
+        "text": "Como ativar a Recuperação de impostos"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abra Ajustes → Dados da loja e encontre a seção Imposto.",
+          "Em Cobrar imposto, ative Recuperação de impostos."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-toggle",
+        "alt": "Seção Imposto de Dados da loja com Recuperação de impostos ativada e a dica logo abaixo"
+      },
+      {
+        "type": "p",
+        "text": "Recuperação de impostos só aparece quando a loja tem pelo menos um imposto e começa desativada em lojas novas e depois de atualizar. Ao mudar a chave, a alteração é salva na hora e registrada em Ajustes de imposto no Registro de atividades. Com ela ativada, informe preços de compra e custos de produtos sem o imposto creditável; o imposto que não pode ser recuperado continua no custo."
+      },
+      {
+        "type": "note",
+        "text": "Todos os planos têm a chave Recuperação de impostos, mas Compras exige o Standard ou superior. Desativá-la oculta os campos em novos registros; os registros existentes mantêm o imposto a recuperar e o valor a pagar, e os relatórios de impostos passados não mudam."
+      },
+      {
+        "type": "h2",
+        "text": "Pedidos de compra"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abra Compras e toque em Nova compra.",
+          "Informe os preços unitários sem o imposto creditável e role além de Encargos até Imposto a recuperar.",
+          "Confira a Data da nota fiscal, que por padrão é a data do pedido, e preencha, se quiser, o Número da nota fiscal e o ID fiscal do fornecedor.",
+          "Escolha um imposto da loja em Alíquota ou toque em Outra alíquota… para digitar até 3 casas decimais, como 9,975%.",
+          "Confira Sem imposto, que começa com o total do pedido sem imposto, e copie da nota o Imposto creditável.",
+          "Toque em Adicionar alíquota para incluir outras alíquotas."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-po",
+        "alt": "Pedido de compra mostrando a seção Imposto a recuperar com os campos da nota fiscal, uma linha de alíquota e os totais"
+      },
+      {
+        "type": "p",
+        "text": "O Imposto creditável começa em branco; o DingPOS nunca o calcula a partir da alíquota e aceita o arredondamento da nota. Por exemplo, farinha 10 × $300 mais $100 de frete, na nota AB-12345678 de 30 de junho de 2026, com uma linha de 5% com Sem imposto de $3,100 e Imposto creditável de $155, dá Total sem imposto de $3,100, Imposto a recuperar de $155 e Valor a pagar de $3,255, que aparece na lista, nos detalhes do pedido e em Contas a pagar. O ID fiscal de um fornecedor preenche os novos pedidos; os pedidos salvos mantêm o seu."
+      },
+      {
+        "type": "p",
+        "text": "Se a nota chegar atrasada, abra o pedido recebido e toque em Registrar imposto a recuperar no card Imposto a recuperar, ou em Editar para alterá-lo. Só o Valor a pagar muda; o estoque, o custo dos produtos e o status de pago ou a pagar continuam iguais. Pedidos anulados mantêm o Imposto a recuperar somente para leitura, e os pedidos salvos antes da atualização não são preenchidos retroativamente."
+      },
+      {
+        "type": "h2",
+        "text": "Despesas"
+      },
+      {
+        "type": "p",
+        "text": "Em DRE → Despesas avulsas, o formulário acrescenta Número da nota fiscal e linhas de imposto a recuperar abaixo do valor. Mantenha o valor sem o imposto creditável e copie apenas o imposto creditável. Em uma nota de papelaria de $1,100 com $100 creditáveis, informe $1,000 e uma linha de 10% com $1,000 e $100; Com imposto mostra $1,100 e a DRE conta $1,000. O imposto a recuperar entra por inteiro na data da despesa, sem seguir o Mês contado nem a diluição."
+      },
+      {
+        "type": "p",
+        "text": "Em DRE → Despesas fixas, abra uma despesa salva, como aluguel ou água e luz, e toque em Registrar nota fiscal, em Notas fiscais, conforme cada nota chegar, com a data da nota, o número da nota (opcional) e pelo menos uma linha de alíquota. Se o Aluguel é $30,000 por mês e as notas de julho e agosto trazem, cada uma, uma linha de 5% com $30,000 e $1,500, o relatório de julho a setembro tem $3,000 de imposto a recuperar, enquanto a DRE continua contando $30,000 em cada mês."
+      },
+      {
+        "type": "p",
+        "text": "Salvar uma alteração de imposto a recuperar em um mês passado mostra Salvar a alteração? e avisa que o relatório de impostos daquele mês muda, caso você já tenha declarado. Edições do mês atual e rascunhos são salvos sem perguntar."
+      },
+      {
+        "type": "note",
+        "text": "O DingPOS não calcula VAT de importação, reverse charge nem crédito parcial. Copie da nota o imposto creditável e coloque qualquer imposto que você não possa recuperar no valor Sem imposto."
+      },
+      {
+        "type": "h2",
+        "text": "Relatório de impostos"
+      },
+      {
+        "type": "p",
+        "text": "Dois cards vêm depois dos cards de vendas: Imposto a recuperar em pedidos de compra e Imposto a recuperar em despesas. Cada um lista uma linha por alíquota, uma linha Sem imposto a recuperar e os totais de Sem imposto, Imposto creditável e Com imposto. Os totais incluem compras sem imposto a recuperar, embora algumas declarações considerem apenas as linhas com imposto a recuperar."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Pedidos de compra contam na Data da nota fiscal, ou na data do pedido se ela estiver em branco.",
+          "Pedidos de compra anulados contam como valor negativo na data da anulação.",
+          "Despesas avulsas contam por inteiro na data da despesa.",
+          "As notas fiscais de despesas fixas contam na data da nota."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Imposto a recuperar em pedidos de compra exige a permissão Custo e lucro, e Imposto a recuperar em despesas exige DRE e despesas; funcionários sem a permissão veem Peça a um gerente para aprovar abaixo do título do card. O bloco Imposto continua mostrando apenas o imposto cobrado nas vendas, nunca descontado do imposto a recuperar, porque o método simplificado do Japão e a taxa fixa do Reino Unido funcionam de outro jeito. Lojas na Austrália, Nova Zelândia, Singapura e Reino Unido também veem esses valores em Campos da declaração."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "purchase-orders",
+      "record-expenses"
+    ]
+  },
+  {
+    "slug": "tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Onde encontro o relatório de impostos e como leio os números?",
+    "keywords": [
+      "relatório de impostos",
+      "Relatório de impostos",
+      "VAT",
+      "GST",
+      "imposto sobre vendas",
+      "Resumo",
+      "Imposto",
+      "Vendas e impostos por alíquota",
+      "Por forma de pagamento"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Abra o Resumo e toque no bloco Imposto para ver o Relatório de impostos, que lista vendas e impostos por alíquota no período mostrado no Resumo. Copie esses valores para uma declaração de VAT, GST ou imposto sobre vendas, ou envie-os a um contador. Mudanças posteriores nos impostos nunca alteram os valores já gravados nos documentos."
+      },
+      {
+        "type": "h2",
+        "text": "Como abrir o relatório de impostos"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abra o Resumo e escolha o período, como Este mês ou um período personalizado.",
+          "Encontre o bloco Imposto na segunda fileira, depois de Total de descontos.",
+          "Toque no bloco Imposto ou em Relatório de impostos ›."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Resumo em Este mês com o bloco Imposto e o rodapé Relatório de impostos ›"
+      },
+      {
+        "type": "p",
+        "text": "Esse bloco é a única entrada. O subtítulo dele nomeia os impostos cobrados no período, do maior valor para o menor: dois pelo nome e, com três ou mais, algo como 3 impostos, incl. PST 7%. O cabeçalho mostra o período do Resumo (Este mês · 1/11 – 30/11), sem seletor de período nem atalho para o mês passado, porque os períodos de declaração variam (em Taiwan, dois meses; na Austrália, um trimestre; no Japão, um ano)."
+      },
+      {
+        "type": "p",
+        "text": "Lojas sem imposto e sem vendas com imposto no período não veem o bloco Imposto; períodos sem documentos mostram o estado vazio do Resumo. Impostos excluídos mantêm o bloco nos períodos que têm vendas feitas com eles."
+      },
+      {
+        "type": "note",
+        "text": "Todos os planos, inclusive o Lite e o teste, têm o bloco, o relatório e todas as exportações. Funcionários precisam da permissão Resumo; as funções que exigem aprovação veem o aviso de aprovação até que um gerente aprove."
+      },
+      {
+        "type": "h2",
+        "text": "Como ler o relatório"
+      },
+      {
+        "type": "p",
+        "text": "Lojas na Austrália, Nova Zelândia, Singapura e Reino Unido veem primeiro os Campos da declaração."
+      },
+      {
+        "type": "p",
+        "text": "Vendas e impostos por alíquota lista uma linha por alíquota: a mais alta primeiro, depois a linha de alíquota zero (0%) e, por último, Sem imposto (produtos sem imposto). As colunas são Vendas, Devoluções e anulações e Líquido, cada uma com Antes do imposto e Imposto; as linhas de alíquota zero e Sem imposto não têm linha de imposto. Todo imposto da loja ganha uma linha, mesmo sem vendas. Renomear mantém uma só linha; mudar a alíquota adiciona uma."
+      },
+      {
+        "type": "p",
+        "text": "Totais mostra Vendas antes do imposto, Imposto e Vendas com imposto. Com dois ou mais impostos, uma nota avisa que uma venda pode ter mais de um imposto, então as vendas das linhas não podem ser somadas; Vendas antes do imposto conta cada venda uma só vez. Em um trimestre no Reino Unido, VAT 20% poderia mostrar Antes do imposto £1,000 e Imposto £200, alíquota zero 0% £300 e Sem imposto £50: Totais dá Vendas antes do imposto £1,350, Imposto £200 e Vendas com imposto £1,550."
+      },
+      {
+        "type": "shot",
+        "name": "tax-report",
+        "alt": "Relatório de impostos com as linhas de Vendas e impostos por alíquota e os Totais logo abaixo"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Por forma de pagamento lista os pagamentos desses documentos até o fim do período, os valores não pagos como Contas a receber e o arredondamento do dinheiro em uma linha Inclui arredondamento do dinheiro … dentro da linha de dinheiro.",
+          "Não contam como vendas aparece só para sinais retidos: lista Sinais retidos com um subtítulo para você confirmar a declaração com um contador, e não soma nem às vendas nem ao imposto.",
+          "Lojas com Recuperação de impostos ativada, ou com imposto a recuperar registrado no período, também veem Imposto a recuperar em pedidos de compra e Imposto a recuperar em despesas."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Em que dia cada documento é contado"
+      },
+      {
+        "type": "p",
+        "text": "Toque em ⓘ ao lado de Vendas e impostos por alíquota:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Uma anulação conta no período em que foi feita, com valor negativo, então um período já declarado nunca muda. Já o Resumo a tira do período da venda.",
+          "Uma devolução conta na própria data. Em uma troca, os itens novos contam como vendas e os itens devolvidos como devoluções.",
+          "Uma encomenda conta no dia da retirada; uma venda a prazo, no dia da venda."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Uma venda de 30/10 anulada em 2/11 continua em Vendas de outubro e aparece como valor negativo em Devoluções e anulações de novembro. Quitar uma venda a prazo depois não a muda de lugar."
+      },
+      {
+        "type": "h2",
+        "text": "Imposto cobrado e totais do Resumo"
+      },
+      {
+        "type": "p",
+        "text": "O bloco Imposto é igual ao total de Imposto do Relatório de impostos. Ele só difere da linha Imposto de Da receita ao lucro bruto, no Resumo, em anulações entre períodos, porque o Resumo tira uma venda anulada do período original."
+      },
+      {
+        "type": "note",
+        "text": "O Relatório de impostos mostra o imposto cobrado nas vendas, nunca o imposto a pagar (imposto sobre vendas menos imposto a recuperar), porque nem todo país o calcula assim, como o método simplificado do Japão ou o Flat Rate Scheme do Reino Unido."
+      }
+    ],
+    "related": [
+      "tax-return-boxes",
+      "input-tax",
+      "export-tax-report",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "tax-return-boxes",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Quais valores vão nos campos da declaração de BAS, GST ou VAT?",
+    "keywords": [
+      "Campos da declaração",
+      "Relatório de impostos",
+      "Resumo",
+      "BAS",
+      "Simpler BAS",
+      "GST101A",
+      "GST F5",
+      "VAT Return",
+      "Recuperação de impostos"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Para lojas na Austrália, na Nova Zelândia, em Singapura ou no Reino Unido, o Relatório de impostos abre com Campos da declaração, que mostra cada campo e o valor do mesmo relatório. Ele cobre o BAS da Austrália · Simpler BAS, o GST101A da Nova Zelândia, o GST F5 de Singapura e o VAT Return do Reino Unido, em todos os planos."
+      },
+      {
+        "type": "h2",
+        "text": "Como abrir Campos da declaração"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Abra o Resumo.",
+          "Toque no bloco Imposto para abrir o Relatório de impostos."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Campos da declaração é o primeiro card, acima de Vendas e impostos por alíquota, e o subtítulo dele nomeia a declaração. Todos os valores vêm do mesmo relatório, centavos incluídos, e nada é recalculado. O Relatório em PDF exportado abre com o mesmo card. Lojas configuradas antes de o app registrar o país são identificadas pela moeda (AUD, NZD, SGD ou GBP); as demais lojas não têm o card Campos da declaração."
+      },
+      {
+        "type": "shot",
+        "name": "return-boxes",
+        "alt": "Card Campos da declaração no topo do Relatório de impostos mostrando os campos 1, 4, 6 e 7 do VAT Return do Reino Unido"
+      },
+      {
+        "type": "h2",
+        "text": "BAS da Austrália · Simpler BAS"
+      },
+      {
+        "type": "list",
+        "items": [
+          "G1 Total sales: vendas com GST, incluindo vendas isentas de GST e sem imposto; responda Sim a “O valor mostrado em G1 inclui GST?”",
+          "1A GST on sales: imposto sobre vendas",
+          "1B GST on purchases: imposto a recuperar em pedidos de compra e despesas"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A ATO pede valores em dólares inteiros: omita os centavos no BAS, sem nunca arredondar para cima."
+      },
+      {
+        "type": "h2",
+        "text": "GST101A da Nova Zelândia"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Campo 5 Total sales and income: vendas com GST, incluindo vendas com alíquota zero e sem contar as vendas sem imposto",
+          "Campo 6 Zero-rated supplies: vendas com alíquota zero",
+          "Campo 11 Total purchases and expenses: pedidos de compra e despesas com GST, com o GST incluído; ficam de fora as compras sem imposto a recuperar ou com alíquota zero"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "O myIR calcula o campo 8 e o campo 12 como 3/23, o que pode diferir em alguns centavos do imposto do relatório."
+      },
+      {
+        "type": "h2",
+        "text": "GST F5 de Singapura"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Campo 1 Total value of standard-rated supplies: vendas tributadas antes do imposto",
+          "Campo 2 Total value of zero-rated supplies: vendas com alíquota zero; só exportações e serviços internacionais podem ter alíquota zero",
+          "Campo 5 Total value of taxable purchases: pedidos de compra e despesas com GST ou alíquota zero, antes do imposto; ficam de fora as compras sem imposto a recuperar",
+          "Campo 6 Output tax due: imposto sobre vendas",
+          "Campo 7 Input tax and refunds claimed: imposto a recuperar em pedidos de compra e despesas"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "VAT Return do Reino Unido"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Campo 1 VAT due on sales and other outputs: imposto sobre vendas",
+          "Campo 4 VAT reclaimed on purchases and other inputs: imposto a recuperar em pedidos de compra e despesas",
+          "Campo 6 Total value of sales and all other outputs excluding any VAT: vendas antes do imposto, incluindo vendas com alíquota zero, isentas e sem imposto",
+          "Campo 7 Total value of purchases and all other inputs excluding any VAT: pedidos de compra e despesas antes do imposto, incluindo compras sem imposto a recuperar; subtraia os salários e os impostos sobre imóveis comerciais que você tiver registrado"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Para a contabilidade padrão de VAT; no Flat Rate Scheme, o campo 1 e o campo 6 são calculados de outra forma. No Reino Unido, o VAT de um sinal é devido quando você o recebe; o DingPOS inclui a encomenda na declaração quando ela é retirada."
+      },
+      {
+        "type": "p",
+        "text": "Exemplo de um trimestre no Reino Unido: £1,000 de vendas com VAT 20% antes do imposto (imposto de £200), £300 com alíquota zero, £50 sem imposto, pedidos de compra de £400 mais £80 de VAT e despesas de £250 sem imposto a recuperar dão: campo 1 £200, campo 4 £80, campo 6 £1,350 e campo 7 £650."
+      },
+      {
+        "type": "h2",
+        "text": "Campos em branco e acesso da equipe"
+      },
+      {
+        "type": "p",
+        "text": "Os campos que a autoridade fiscal calcula e os valores devidos ficam de fora (campos 3 e 5 do Reino Unido; campo 3 de Singapura, vendas isentas). Na Nova Zelândia e em Singapura, as vendas sem imposto não estão em nenhum campo; consulte seu contador se elas deveriam ter tido imposto."
+      },
+      {
+        "type": "p",
+        "text": "Os campos de imposto a recuperar (1B da Austrália, 11 da Nova Zelândia, 5 e 7 de Singapura, 4 e 7 do Reino Unido) exigem Recuperação de impostos; sem ela, mostram — e Nenhum imposto a recuperar registrado, nunca 0. O campo 7 do Reino Unido precisa de Imposto a recuperar em pedidos de compra e de Imposto a recuperar em despesas; só com pedidos de compra, o campo 4 é preenchido e o campo 7 fica como —."
+      },
+      {
+        "type": "p",
+        "text": "Funcionários sem a permissão DRE e despesas ou Custo e lucro não veem os campos que somam os dois cards até que um gerente aprove em Peça a um gerente para aprovar."
+      },
+      {
+        "type": "note",
+        "text": "Calculado com base nas datas de venda e de nota fiscal; o DingPOS não registra datas de pagamento. Se você declara pelo regime de caixa ou de pagamentos, ajuste estes valores."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "input-tax",
+      "export-tax-report"
     ]
   },
   {
@@ -1609,11 +2436,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vá em Ajustes → Programa de fidelidade e defina duas regras: quantos pontos o cliente ganha a cada X gasto e quantos pontos (N) valem M de desconto no resgate, com um limite de resgate por venda opcional. Você também pode dar um bônus de boas-vindas em pontos aos novos membros automaticamente."
+        "text": "Vá em Ajustes → Programa de fidelidade e defina duas regras: quantos pontos o cliente ganha a cada X gasto e quantos pontos (N) valem M de desconto no resgate, com um limite de resgate por venda opcional. Você também pode dar um bônus de boas-vindas em pontos aos novos membros automaticamente. Em lojas novas, o programa começa desativado: ative Ativar programa de fidelidade e preencha uma regra. Com a chave ligada e nenhuma regra definida, aparece o aviso “Nenhuma regra de acúmulo ou resgate foi definida ainda, então as vendas não acumulam nem resgatam pontos.”"
       },
       {
         "type": "p",
-        "text": "Vincule o membro à venda, no carrinho ou na tela Pagamento, e os pontos são acumulados automaticamente; para resgatar, informe os pontos a usar. Anular uma venda reverte os pontos que ela gerou e devolve os pontos que foram resgatados."
+        "text": "Vincule o membro à venda, no carrinho ou na tela Pagamento, e os pontos são acumulados automaticamente; para resgatar, informe os pontos a usar. A tela de sucesso mostra os pontos ganhos e o novo saldo, como “+22 pts · 122 pts no total”; numa venda a prazo ou numa encomenda ainda não paga por completo, os pontos só entram quando o dinheiro chega, e a tela indica “creditados na quitação” ou “creditados ao pagar na retirada”. Anular uma venda reverte os pontos que ela gerou e devolve os pontos que foram resgatados."
       },
       {
         "type": "p",
@@ -1998,7 +2825,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Ações (ajuste manual de estoque, ajuste manual de pontos, gestão de produtos, finalizar venda acima do limite de desconto): uma aprovação vale para aquela única ação.",
-          "Telas (custo e lucro, Painel, DRE e despesas, Ajustes, backup e restauração): a aprovação libera o acesso até o operador mudar ou o app ir para segundo plano.",
+          "Telas (custo e lucro, Resumo, DRE e despesas, Ajustes, backup e restauração): a aprovação libera o acesso até o operador mudar ou o app ir para segundo plano.",
           "O limite de desconto vale para descontos manuais e é verificado uma vez, ao finalizar a venda; promoções automáticas e resgate de pontos não contam para ele."
         ]
       },
@@ -2077,7 +2904,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Assinar qualquer plano durante o teste encerra o teste na hora, e o plano contratado passa a valer a partir daí. Depois do teste, recursos Pro como funcionários e registro de atividades continuam disponíveis só com a assinatura Pro. Os relatórios avançados não exigem assinatura; desde a versão 3.4, todos os planos os incluem."
+        "text": "Assinar qualquer plano durante o teste encerra o teste na hora, e o plano contratado passa a valer a partir daí. Depois do teste, recursos Pro como funcionários e registro de atividades continuam disponíveis só com a assinatura Pro. O Resumo não exige assinatura; todos os planos incluem tudo o que há nele."
       },
       {
         "type": "p",
@@ -2138,13 +2965,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Os três planos incluem finalização de venda completa, produtos, vendas (com anulações, devoluções e trocas), relatórios (os avançados e a DRE mensal incluídos desde a versão 3.4) e backup na nuvem. A diferença está nas ferramentas para tocar a loja:"
+        "text": "Os três planos incluem finalização de venda completa, produtos, vendas (com anulações, devoluções e trocas), relatórios (todo o Resumo e a DRE mensal desde a versão 3.4, o relatório de impostos e a exportação dele desde a versão 3.6) e backup na nuvem. A diferença está nas ferramentas para tocar a loja:"
       },
       {
         "type": "list",
         "items": [
           "Lite: para quem trabalha sozinho em uma barraca e precisa finalizar vendas e cadastrar produtos.",
-          "Standard: acrescenta promoções, pontos de fidelidade e níveis de membros, controle de estoque, compras, vendas a prazo, encomendas e alíquotas das taxas de pagamento.",
+          "Standard: acrescenta promoções, descontos predefinidos, pontos de fidelidade e níveis de membros, controle de estoque, compras, vendas a prazo, encomendas e alíquotas das taxas de pagamento.",
           "Pro: acrescenta contas de funcionários e permissões, aprovação do gerente, registro de atividades e registros de restauração — para lojas com equipe."
         ]
       },
@@ -2355,12 +3182,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Brindes e adicionais pagos nunca alteram o carrinho por conta própria. Quando as condições são atendidas, aparece um banner de sugestão na tela do caixa, e o carrinho só muda quando o caixa toca em Escolher brinde ou Escolher adicional — é de propósito, porque brindes envolvem estoque físico: alguém precisa confirmar que o item está disponível e que o cliente o quer."
+        "text": "Brindes e adicionais pagos nunca alteram o carrinho por conta própria. Quando as condições são atendidas, aparece um banner de sugestão na tela do caixa, e o carrinho só muda quando o caixa toca no botão de brinde ou no botão + do banner (Escolher brinde ou Escolher adicional) — é de propósito, porque brindes envolvem estoque físico: alguém precisa confirmar que o item está disponível e que o cliente o quer."
       },
       {
         "type": "list",
         "items": [
-          "Depois de tocar em Recusar, a mesma sugestão não volta a aparecer para este carrinho; um carrinho novo ou esvaziado exibe a sugestão de novo.",
+          "Depois de tocar no ✕ do banner (Recusar), a mesma sugestão não volta a aparecer para este carrinho; um carrinho novo ou esvaziado exibe a sugestão de novo.",
+          "Se o carrinho deixar de atender às condições (por exemplo, o item que ativou o brinde foi removido), o brinde ou o adicional é removido automaticamente, com um aviso no topo, e isso não conta como um uso da promoção (desde a v3.6).",
           "Desde a versão 3.4, as ofertas ainda pendentes não impedem a finalização da venda: uma linha amarela sob o botão de pagamento, como “1 oferta pendente não será aplicada”, diz quantas ficaram de fora (toque nela para ver quais), e a venda segue sem elas. Para a finalização esperar como antes, ative Resolver ofertas antes de finalizar em Ajustes → Preferências do aparelho; vale só para este iPad.",
           "Os itens de brinde e de adicional não recebem desconto de outras promoções em dinheiro e não contam para o valor mínimo de outras promoções."
         ]
@@ -2556,7 +3384,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Desde a versão 3.4, a DRE mostra o lucro líquido de cada mês depois do custo dos produtos, das taxas e das despesas — veja “Como ver quanto minha loja realmente lucrou em cada mês?” Ainda não existe um relatório de fechamento para exportar ou imprimir, mas tudo o que você precisa para conferir as contas já está no app:"
+        "text": "Desde a versão 3.4, a DRE mostra o lucro líquido de cada mês depois do custo dos produtos, das taxas e das despesas — veja “Como ver quanto minha loja realmente lucrou em cada mês?” Desde a versão 3.6, o relatório de impostos exporta um período (Este mês, por exemplo) em CSV, em planilha do Excel ou em Relatório em PDF para o seu contador, com vendas, impostos, o valor recebido em cada forma de pagamento e as contas a receber. A DRE e os demais relatórios ainda não podem ser exportados, mas tudo o que você precisa para conferir as contas já está no app:"
       },
       {
         "type": "list",
@@ -2568,7 +3396,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se você precisa de um relatório de fechamento mensal que possa exportar ou imprimir, escreva para nós dizendo quais campos quer ver. Priorizamos o desenvolvimento pelo número de solicitações."
+        "text": "Se você precisa de um relatório de fechamento mensal que possa exportar ou imprimir, além do que o relatório de impostos já cobre, escreva para nós dizendo quais campos quer ver. Priorizamos o desenvolvimento pelo número de solicitações."
       }
     ],
     "related": [

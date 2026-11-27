@@ -104,6 +104,17 @@ test("retired import-csv article -> that language's support home 301", async () 
   }
 });
 
+test("retired advanced-reports article -> that language's compare-periods 301", async () => {
+  for (const [from, to] of [
+    ["/dingpos/support/advanced-reports/", "/dingpos/support/compare-periods/"],
+    ["/dingpos/zh-hant/support/advanced-reports", "/dingpos/zh-hant/support/compare-periods/"],
+  ]) {
+    const res = await worker.fetch(new Request(`https://alu-studio.com${from}`), mockEnv(), {});
+    assert.equal(res.status, 301);
+    assert.equal(res.headers.get("location"), `https://alu-studio.com${to}`);
+  }
+});
+
 test("withdrawn German guide -> German home 301", async () => {
   const req = new Request("https://alu-studio.com/dingpos/de/guides/payment-processing-fees-germany/");
   const res = await worker.fetch(req, mockEnv(), {});

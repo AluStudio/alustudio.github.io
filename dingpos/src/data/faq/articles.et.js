@@ -95,7 +95,7 @@ export const articles = [
         "type": "steps",
         "items": [
           "Vali oma riik või piirkond. Loendi ülaosas on riik või piirkond, kus see iPad asub, ning seejärel levinumad turud; allpool on kõik 175 riiki ja piirkonda, kus DingPOS on App Store'is saadaval, ning neid saab otsida nime järgi rakenduse keeles või inglise keeles. Sinu valiku põhjal määratakse valuuta, maksud ja maksurežiim.",
-          "Sammus Teie pood sisesta poe nimi, soovi korral lisa logo ning kontrolli valuutat, makse ja maksurežiimi (maksuga / maksuta hinnad). Valuuta on vaikimisi sinu riigi oma; puuduta seda, et valida 130 valuuta hulgast. Maksude loendis on sinu riigi vaikimisi maksud: nimeta neid ümber, muuda määra, kustuta mõni või puuduta Lisa maks, et lisada uus rida. Näiteks Briti Columbia pood muudab esimese rea nimeks „GST 5” ja lisab rea „PST 7”."
+          "Jaotises Teie pood sisesta poe nimi, soovi korral lisa logo ning kontrolli valuutat, makse ja maksurežiimi (maksuga / maksuta hinnad). Valuuta on vaikimisi sinu riigi oma; puuduta seda, et valida 130 valuuta hulgast. Maksude loendis on sinu riigi vaikimisi maksud: nimeta neid ümber, muuda määra, kustuta mõni või puuduta Lisa maks, et lisada uus rida. Näiteks Briti Columbia pood muudab esimese rea nimeks „GST 5” ja lisab rea „PST 7”."
         ]
       },
       {
@@ -104,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Valuutat ei saa pärast seadistamist muuta; makse ja maksurežiimi saab hiljem muuta jaotises Seaded → Poe andmed. Ameerika Ühendriikides, Kanadas, Brasiilias ja Mikroneesias sõltub määr osariigist, provintsist või linnast, mistõttu määra väli on alguses tühi ja jätkamiseks sisesta määr, mida sa rakendad. Määr peab olema suurem kui 0: kui pood maksu ei arvesta, kustuta see rida. 175 riigi loend ja valuuta valik lisandusid versioonis v3.2; varasemad versioonid pakkusid 15 riiki."
+        "text": "Valuutat ei saa pärast seadistamist muuta; makse ja maksurežiimi saab hiljem muuta jaotises Seaded → Poe andmed. Ameerika Ühendriikides, Kanadas, Brasiilias ja Mikroneesias sõltub määr osariigist, provintsist või linnast, mistõttu määra väli on alguses tühi ja jätkamiseks sisesta määr, mida sa rakendad. Määr peab olema suurem kui 0: kui pood maksu ei arvesta, kustuta see rida. Saksamaal, Prantsusmaal, Itaalias ja teistes Euroopa riikides on loendis ka kohalikus jaekaubanduses levinud vähendatud määrad kohaliku maksunime all, näiteks Saksamaal „MwSt. 19%” ja „MwSt. 7%”; vähendatud määrasid uutele toodetele vaikimisi ei rakendata, seega lülita need sisse toote kaupa. 175 riigi loend ja valuuta valik lisandusid versioonis v3.2; varasemad versioonid pakkusid 15 riiki."
       }
     ],
     "related": [
@@ -334,6 +334,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Igal tootel ja igal ostukorvil võib korraga olla üks allahindlus – uue andmisel kirjutatakse eelmine üle ning allahindluse märgist puudutades eemaldub see. Allahindlused rakendatakse enne maksu, nagu jaekaubanduses tavaks."
+      },
+      {
+        "type": "p",
+        "text": "Sageli antavaid allahindlusi saab salvestada: ava Seaded → Lojaalsus ja kampaaniad → Allahindluse eelseadistused ja puuduta Lisa eelseadistus, näiteks „Töötajahind −20%“. Kassas on nii toote kui ka ostukorvi allahindlusel menüü Eelseadistused; eelseadistuse valimine täidab allahindluse liigi ja väärtuse täpselt nii, nagu oleksid need ise sisestanud, mistõttu läheb see arvesse ka töötaja allahindluse ülempiiri puhul. Allahindluse eelseadistused tulid versiooniga 3.6 ja neid on vaja paketti Standard või kõrgemat."
       }
     ],
     "related": [
@@ -388,7 +392,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Arvutuse täielik järjekord: toote allahindlused ja kampaaniad → ostukorvi allahindlus → punktide lunastamine → maks. Summad ümardatakse valuuta kümnendkohtadeni, poole korral ülespoole (nt 0 TWD puhul, 2 USD puhul)."
+        "text": "Arvutuse täielik järjekord: toote allahindlused ja kampaaniad → ostukorvi allahindlus → punktide lunastamine → maks. Summad ümardatakse valuuta kümnendkohtadeni, poole korral ülespoole (nt 0 TWD puhul, 2 USD puhul). Maks arvutatakse iga müügi kohta iga maksu jaoks üks kord ning selle kümnendkohad järgivad kaardil Maks valikut Maksu ümardamine: Ümarda poolest üles, Ümarda alla või Ümarda üles. Uued poed Jaapanis alustavad valikuga Ümarda alla, teised poed valikuga Ümarda poolest üles."
       },
       {
         "type": "note",
@@ -418,7 +422,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Uus pood alustab kahe makseviisiga, Sularaha ja Krediitkaart, mis saavad seadistamisel rakenduse keele nimed. Jaotises Seaded → Makseviisid saad lisada mis tahes muid makseviise (nt Apple Pay, LINE Pay, kohalik rahakott) ning neid kustutada või ümber järjestada."
+        "text": "Uus pood alustab kahe makseviisiga, Sularaha ja Krediitkaart, mis saavad seadistamisel rakenduse keele nimed. Jaotises Seaded → Makseviisid saad lisada mis tahes muid makseviise (nt Apple Pay, LINE Pay, kohalik rahakott) ning neid ümber järjestada. Makseviisi nime muutmiseks puuduta seda, näiteks Krediitkaart → „Kaart (Square)“; Aruanded loevad enne ümbernimetamist tehtud müügid uue nime alla (alates versioonist v3.6). Kustuta makseviis asub muutmislehe allosas ja küsib enne kustutamist kinnitust; varasemad müügid säilitavad makseviisi, millega need tasuti, ning viimast alles jäänud makseviisi kustutada ei saa."
       },
       {
         "type": "p",
@@ -457,7 +461,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Jah. Puuduta jaotises Seaded → Makseviisid mõnda makseviisi (või lisa uus) ja täida Teenustasu: protsent, fikseeritud summa tehingu kohta või mõlemad. Sellest hetkest salvestab iga selle makseviisiga laekunud makse tasu, mis on hinnatud sel hetkel kehtinud määra järgi."
+        "text": "Jah. Puuduta jaotises Seaded → Makseviisid mõnda makseviisi (või lisa uus) ja täida Teenustasu: protsent, fikseeritud summa tehingu kohta või mõlemad. Sularahatüüpi makseviisidel tasu pole. Sellest hetkest salvestab iga selle makseviisiga laekunud makse tasu, mis on hinnatud sel hetkel kehtinud määra järgi."
       },
       {
         "type": "p",
@@ -466,9 +470,9 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Sisesta määr, mille sinu pakkuja tegelikult maha arvab, koos maksuga – 3% pluss 5% maks tähendab 3,15%. Kui tasu pole, jäta mõlemad väljad tühjaks.",
+          "Sisesta määr, mille sinu pakkuja tegelikult maha arvab. Kui tasult võetakse maksu, lisa see juurde: 3% pluss 5% maks tähendab 3,15%. Kui tasu pole, jäta mõlemad väljad tühjaks.",
           "Määra muutmine mõjutab ainult hilisemaid makseid; juba salvestatud tasud jäävad samaks.",
-          "„Protsentuaalne tasu tagastatakse tagasimaksel“ on vaikimisi sees, pakkujatele, kes annavad tasu tagasimaksel tagasi. See reguleerib tagastusi ja tagasimakstud ettetellimuste käsiraha: sisselülitatuna tagastatakse protsent; fikseeritud tasu ei tagastata kunagi. Anuleerimine või tasumise tühistamine lülitit ei arvesta ja võtab tagasi kogu salvestatud tasu, fikseeritud tasu kaasa arvatud. Klient saab mõlemal juhul sama summa tagasi.",
+          "„Protsentuaalne tasu tagastatakse tagasimaksel“ on Taiwani ja Jaapani poodides algselt sees, mujal väljas, sest pakkujad nagu Stripe, Square ja PayPal jätavad tasu tagasimakse puhul endale; sea see oma pakkuja järgi. See reguleerib tagastusi ja tagasimakstud ettetellimuste käsiraha: sisselülitatuna tagastatakse protsent; fikseeritud tasu ei tagastata kunagi. Anuleerimine või tasumise tühistamine lülitit ei arvesta ja võtab tagasi kogu salvestatud tasu, fikseeritud tasu kaasa arvatud. Klient saab mõlemal juhul sama summa tagasi.",
           "Maksed, mis laekusid enne, kui makseviisil oli määr, ei kanna tasu: Aruanded märgivad need „N ilma määrata“ ja näitavad netot kui „—“."
         ]
       },
@@ -786,13 +790,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vaheta kassas ekraani ülaosas valik Müük valikuks Ettetellimus, vali kättesaamise kuupäev, sisesta käsiraha (0-st kogusummani, kiirvalikud 30% / 50% / Täis) ja vali, kuidas käsiraha tasutakse. Lisa klient, et saaksid temaga kaupade saabumisel ühendust võtta."
+        "text": "Vaheta kassas ekraani ülaosas valik Müük valikuks Ettetellimus, vali kättesaamise kuupäev, sisesta käsiraha (0-st kogusummani, kiirvalikud 30% / 50% / Täis) ja vali, kuidas käsiraha tasutakse. Lisa klient, et saaksid temaga kättesaamise asjus ühendust võtta."
       },
       {
         "type": "list",
         "items": [
           "Laoseis arvatakse maha ettetellimuse tegemisel, nii et müüdava koguse arv muutub kohe. See on märguanne, mitte reserveering: hilisem müük võib viimase ühiku siiski ära võtta. Laost otsas olevad tooted lähevad miinusesse ja taastuvad ostutellimuse kättesaamisel.",
-          "Kui klient tuleb järele, puuduta müügi detailvaates Anna üle, et jääk kätte saada. Seejärel muutub müük tavaliseks lõpetatud müügiks ja hilisemad tagastused käivad tavapärase tagastuse kaudu.",
+          "Kui klient tuleb tellimusele järele, puuduta tellimuse üksikasjades nuppu Anna üle, et ülejäänud summa sisse nõuda. Seejärel muutub müük tavaliseks lõpetatud müügiks ja hilisemad tagastused käivad tavapärase tagastuse kaudu.",
           "Kui klient ei tule, puuduta müügi detailvaates Loobu ettetellimusest ning vali, kas tagastada käsiraha või see alles jätta. Laoseis lisatakse tagasi.",
           "Käsiraha tšekil ja lõplikul kättesaamise tšekil on sama number."
         ]
@@ -900,15 +904,15 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Kui tootel on variandid, kaob selle väli Hind ära ning iga kombinatsioon saab jaotises Variantide hind ja laoseis oma hinna ja oma laoseisu (alates versioonist v3.2; varasemad versioonid küsivad endiselt toote hinda). Kassa, tootenimekiri ja toote üksikasjad näitavad hinnavahemikku madalaimast kõrgeimani, nt „NT$350–NT$390“, või ühte hinda, kui kõik kombinatsioonid maksavad sama; hinna järgi sortimine kasutab madalaima kombinatsiooni hinda. Kassas kuvatakse toodet puudutades enne ostukorvi lisamist variandi valik."
+        "text": "Kui tootel on variandid, on igal kombinatsioonil jaotises Variantide hind ja laoseis oma laoseis ning selle hind järgib toote välja Hind: kombinatsioon, millel pole oma hinda, näitab toote hinda halliga ja muutub koos sellega, ning sisestatud number on selle kombinatsiooni enda hind, mida näidatakse mustaga. Näiteks kui määrad T-särgi Hinnaks 390 ja muudad ainult suuruse L hinnaks 350, müüakse M ja XL hinnaga 390; kui Hind muutub hiljem 420-ks, järgivad M ja XL seda ning maksavad 420, L jääb aga 350 peale. Veeru Hind kõrval olevas ⓘ-s asub valik Kasuta toote hinda, mis seab kõik kombinatsioonid uuesti toote hinda järgima. Enne versiooni v3.6 loodud toodetel jääb iga variandi hind selle kombinatsiooni enda hinnaks ning toote Hind on neist madalaim. Kassa, tootenimekiri ja toote üksikasjad näitavad hinnavahemikku madalaimast kõrgeimani, nt „NT$350–NT$390“, või ühte hinda, kui kõik kombinatsioonid maksavad sama; hinna järgi sortimine kasutab madalaima kombinatsiooni hinda. Kassas kuvatakse toodet puudutades enne ostukorvi lisamist variandi valik."
       },
       {
         "type": "p",
-        "text": "Omahinda pole vaja iga kombinatsiooni jaoks sisestada: tühi väli Omahind tähendab Järgib toodet, ehk kasutatakse toote omahinda ja see muutub koos sellega. Numbri sisestamisel muutub see Oma omahinnaks – ka 0. Nupp „Kasuta kõigile toote omahinda“ tühjendab kõik omahinnad korraga."
+        "text": "Omahind töötab samamoodi: tühi omahind näitab toote omahinda halliga ja muutub koos sellega, number on kombinatsiooni enda omahind, mida näidatakse mustaga – ka 0. Veeru Omahind kõrval olevas ⓘ-s asuv valik Kasuta toote omahinda tühjendab kõigi kombinatsioonide enda omahinnad korraga."
       },
       {
         "type": "note",
-        "text": "Valiku ja väärtuse nimi võib olla kuni 20 märki pikk ning tühikud nime mõlemas otsas eemaldatakse salvestamisel. Väärtus, kuhu pole midagi kirjutatud, ei ole kombinatsioon ja jäetakse salvestamisel vahele; salvestamine peatub ja väli tõstetakse punase äärisega esile, kui valiku nimi on tühi, kui valiku kõik väärtused on tühjad või kui tühjendad väärtuse, mis tootel juba salvestatud oli; kirjuta see tagasi või eemalda see selle ×-nupuga. Variantidega toode ei saa kasutada kohapealset hinda."
+        "text": "Valiku ja väärtuse nimi võib olla kuni 20 märki pikk ning tühikud nime mõlemas otsas eemaldatakse salvestamisel. Väärtus, kuhu pole midagi kirjutatud, ei ole kombinatsioon ja jäetakse salvestamisel vahele; salvestamine peatub ja väli tõstetakse punase äärisega esile, kui valiku nimi on tühi, kui valiku kõik väärtused on tühjad või kui tühjendad väärtuse, mis tootel juba salvestatud oli; kirjuta see tagasi või eemalda see selle ×-nupuga. Variantidega toode ei saa olla kohapealse hinnaga toode."
       }
     ],
     "related": [
@@ -1041,7 +1045,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Pärast sisselülitamist vähendavad müügid ja ettetellimused laoseisu automaatselt; anuleerimised, tagastused ja ettetellimusest loobumised panevad selle tagasi; ostutellimuse vastuvõtmine suurendab seda. Iga liikumine kantakse täielikku laoseisu ajalukku. Väike laoseis tõstetakse esile värvilise hoiatusega."
+        "text": "Pärast sisselülitamist vähendavad müügid ja ettetellimused laoseisu automaatselt; anuleerimised, tagastused ja ettetellimusest loobumised panevad selle tagasi; ostutellimuse vastuvõtmine suurendab seda. Iga liikumine kantakse täielikku laoseisu ajalukku. Kui laoseisu on 10 või vähem, märgitakse see tootenimekirjas, kassas ja toote üksikasjades oranžiga väikese laoseisuna."
       },
       {
         "type": "p",
@@ -1081,7 +1085,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kasuta Korrigeeri laoseisu. Jälgitava laoseisuga toote puhul puuduta toote üksikasjades Korrigeeri laoseisu, vali Eemalda või Lisa, sisesta kogus, vali põhjus ja soovi korral lisa märkus (kuni 100 märki). Leht arvutab välja laoseisu pärast muudatust ning põhjuse all olev rida ütleb, kas see jõuab Kasumisse."
+        "text": "Kasuta Korrigeeri laoseisu. Jälgitava laoseisuga toote puhul puuduta toote üksikasjades Korrigeeri laoseisu, vali Eemalda või Lisa, määra kogus nuppudega + ja − (algväärtus on 1; numbrit puudutades saad selle ise sisestada), vali põhjus ja soovi korral lisa märkus (kuni 100 märki). Leht arvutab välja laoseisu pärast muudatust ning põhjuse all olev rida ütleb, kas see jõuab Kasumisse."
       },
       {
         "type": "list",
@@ -1161,9 +1165,9 @@ export const articles = [
       {
         "type": "steps",
         "items": [
-          "Puuduta Uus ost, vali tarnija ning lisa tooted, kogused ja ühikuomahinnad (eeltäidetud iga toote praeguse omahinnaga). Lisada saab ka saatmistasu. Kui tarnijat pole veel loodud, puuduta tarnijate loendi vasakus ülanurgas Lisa tarnija – uus tarnija jõuab otse tagasi ostutellimusse.",
+          "Puuduta Uus ost, vali tarnija ning lisa tooted, kogused ja ühikuomahinnad (eeltäidetud iga toote praeguse omahinnaga). Lisada saab ka saatmistasu. Kauba jaoks, mis pole veel tootena loodud, puuduta valijas Lisa toode nuppu Uus toode – uus toode jõuab otse ostutellimusse reana. Kui tarnijat pole veel loodud, puuduta tarnijate loendi vasakus ülanurgas Lisa tarnija – uus tarnija jõuab otse tagasi ostutellimusse.",
           "Mustand ei mõjuta kunagi laoseisu ega tasumata arveid – seda saab vabalt muuta või kustutada.",
-          "Kui kaup saabub, puuduta Võta kaup vastu: jälgitav laoseis suureneb ning ostutellimus saab numbri ja lukustub. Vaikimisi uuendab vastuvõtt ka iga toote omahinna selle ühikuomahinnaga; omahindade muutmata jätmiseks lülita ostutellimusel välja Sünkrooni toodete omahind."
+          "Kui kaup saabub, puuduta Võta kaup vastu: jälgitav laoseis suureneb ning ostutellimus saab numbri ja lukustub. Vaikimisi uuendab vastuvõtt ka iga toote omahinna selle ühikuomahinnaga; omahindade muutmata jätmiseks lülita ostutellimusel välja Sünkrooni toodete omahind. Selle all olev lüliti Arvesta saatmine omahinda (uutel ostutellimustel sisse lülitatud) jagab saatmistasu ridade vahel summa järgi ära, nii et igale tootele kirjutatav omahind sisaldab tema osa saatmistasust: jahu 10 × $30, või 1 × $60 ja saatmistasu $25 annavad jahu omahinnaks $32 ja või omahinnaks $64."
         ]
       },
       {
@@ -1210,7 +1214,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Müügiväline toode ei ilmu kunagi kassa tootevalikus, kategooriates, otsingus ega vöötkoodi skannimisel ning ei saa olla kingitus, lisatoode, kampaania sihttoode ega vahetuse asendustoode.",
+          "Müügiväline toode ei ilmu kunagi kassa tootevalikus, kategooriates, otsingus ega vöötkoodi skannimisel ning ei saa olla kingitus, lisatoode, kampaania sihttoode ega vahetuse asendustoode. Kategooria, kus on ainult müügiväliseid tooteid, jäetakse kassa kategooriaribalt välja.",
+          "Kui poes on müügiväliseid tooteid, ilmub vahekaardi Tooted paremasse ülanurka filtrinupp: vali Kõik tooted, Müügil või Müügivälised, koos otsingu ja kategooriatega.",
           "Ostutellimused, vastuvõtmine, Sünkrooni toodete omahind ja tasumata arved toimivad täpselt nagu teiste toodete puhul, nii et materjali ostuhinna ja laoseisu saab salvestada jaotise Ostud kaudu.",
           "Teiste toodete müük ei vähenda selle laoseisu. Kui kasutad seda, salvesta eemaldamine valikuga Korrigeeri laoseisu toote üksikasjades: Kasutatud tootmises toodetesse läinud koguse jaoks, Poe tarvikud selliste asjade jaoks nagu paberkotid või puhastusvahendid.",
           "Selle saab igal ajal tagasi müüdavaks lülitada ning selle hind ja maksud on alles. Juba tehtud müüke ja aruandeid see ei mõjuta."
@@ -1239,139 +1244,310 @@ export const articles = [
     "keywords": [
       "müügitulu",
       "laekunud raha",
-      "sissetulek",
+      "aruanded",
+      "brutokasum",
+      "müügitulust brutokasumini",
       "kassa kontrollimine",
       "käsiraha",
-      "müük arvele"
+      "müük arvele",
+      "maks"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Müügitulu arvestatakse päeval, mil kaup üle anti, pärast kõiki allahindlusi ja enne maksu; laekunud raha arvestatakse päeval, mil raha laekus, ja see on raha, mille tegelikult said, maks kaasa arvatud. Seega on poes, kus arvestatakse maksu, laekunud raha müügitulust maksu võrra suurem isegi letis makstud müükide puhul. Peale selle lähevad need lahku, kui:"
+        "text": "Müügitulu läheb arvesse kauba üleandmise päeval, pärast kõiki allahindlusi ja enne maksu; laekunud raha läheb arvesse raha laekumise päeval ning see on raha, mille said, maks kaasa arvatud. Maksu arvestavas poes on laekunud raha müügitulust maksu võrra suurem isegi letis makstud müükide puhul. Mõlemad on vahekaardi Aruanded esimese rea kaks esimest kaarti, koos kaartidega Brutokasum, Müügid ja Keskmine müük."
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Aruannete kaardiread, esimeses reas kõrvuti Müügitulu ja Laekunud raha"
+      },
+      {
+        "type": "h2",
+        "text": "Millal müügitulu ja laekunud raha erinevad"
+      },
+      {
+        "type": "p",
+        "text": "Näiteks kui maksu sisaldavate hindadega pood müüb kauba hinnaga NT$1,050, millest 5% on maks, ja klient maksab letis, on müügitulu NT$1,000 ja laekunud raha NT$1,050. Lisaks maksule lähevad need kaks näitajat lahku järgmistes olukordades:"
       },
       {
         "type": "list",
         "items": [
-          "Müük arvele: kaup läheb täna ja kuulub tänasesse müügitulusse; raha kuulub laekunud raha hulka tasumise päeval.",
+          "Müük arvele: kaup läheb täna ja kuulub tänasesse müügitulusse; raha läheb laekunud raha hulka müügi tasumise päeval.",
           "Ettetellimus: käsiraha läheb laekunud raha hulka makse päeval; müügitulu arvestatakse tervikuna kättesaamise päeval.",
           "Kinnipeetud käsiraha: kui klient ettetellimusest loobub ja jätad käsiraha endale, oli see makse hetkel juba laekunud raha hulgas. Aruanded näitavad seda eraldi kinnipeetud käsirahana ja see ei lähe kunagi müügitulu hulka.",
-          "Varasema müügi anuleerimine: tagastatud raha läheb laekunud raha hulka anuleerimise päeval, nii et selle päeva laekunud raha võib olla negatiivne, samas kui Anuleeritud arvestab müügi selle müügikuupäeval.",
-          "Sularaha ümardus: summa, mille võrra sularaha ümardamine tellimuse kogusummast üle või alla jääb, läheb laekunud raha hulka, mitte kunagi müügitulu hulka."
+          "Varasema müügi anuleerimine: tagasi makstud raha läheb laekunud raha hulka anuleerimise päeval, nii et selle päeva laekunud raha võib olla negatiivne. Anuleeritud müük ise arvestatakse müügikuupäeval ja kuvatakse kaardi Müügid alapealkirjas.",
+          "Sularaha ümardus: summa, mille võrra sularaha ümardamine müügi kogusummast üle või alla jääb, läheb laekunud raha hulka, mitte kunagi müügitulu hulka."
         ]
       },
       {
         "type": "p",
-        "text": "Kassa kontrollimiseks võrdle laekunud raha kassasahtli ja kaardimakseterminaliga; et näha, kui palju perioodi jooksul tegelikult müüsid, vaata müügitulu. Tagastused vähendavad müügitulu tagastuse päeval. Sedasama selgitab ⓘ kaartidel Müügitulu, Laekunud raha ja Anuleeritud ning maksu enda leiad jaotisest Müügitulust brutokasumini, mis avaneb brutokasumi kaardilt."
+        "text": "Kui kumbki neist summadest pole null, näitab kaardi Laekunud raha alapealkiri sularaha ümardust või kinnipeetud käsiraha."
+      },
+      {
+        "type": "h2",
+        "text": "Maks ja kaartide üksikasjad"
+      },
+      {
+        "type": "p",
+        "text": "Maksu, mis müügitulu ja laekunud raha vahele jääb, näed jaotises Müügitulust brutokasumini, mille avad kaardi Brutokasum allosast. Seal on read Müügitulu (koos maksuga), Maks ja Müügitulu (maksuta). Austraalia, Ühendkuningriigi, Uus-Meremaa ja Singapuri poed näevad seal oma riigi maksunime, näiteks Müügitulu (GST kaasa arvatud), GST ja Müügitulu (GST välja arvatud)."
+      },
+      {
+        "type": "p",
+        "text": "Müükides arvestatud maksu nägemiseks deklareerimiseks ava kaardilt Maks Maksuaruanne."
+      },
+      {
+        "type": "p",
+        "text": "Kaartidel Müügitulu, Laekunud raha ja Müügid olev ikoon ⓘ selgitab neid reegleid rakenduses, sealhulgas kaardi Müügid alapealkirjas loetletud anuleeritud müüke."
+      },
+      {
+        "type": "h2",
+        "text": "Kontrollimine ja müügi lugemine"
+      },
+      {
+        "type": "p",
+        "text": "Kassa kontrollimiseks võrdle laekunud raha oma kassasahtli ja kaardimakseterminaliga. Kaardil Makseviisid on iga makseviisi kohta üks rida ning enne makseviisi ümbernimetamist tehtud müügid loetakse uue nime alla. Et näha, kui palju perioodi jooksul müüsid, vaata müügitulu. Tagastused vähendavad müügitulu tagastuse päeval."
       },
       {
         "type": "note",
-        "text": "Müügitulu enne maksu lisandus versioonis v3.5 ja varasemad perioodid arvutati samamoodi ümber, seega näeb maksu arvestav pood nüüd väiksemat müügitulu kui enne uuendust. See on parandus: varasemad versioonid lugesid maksu müügitulu sisse ning maksuta hindadega poed lugesid müügitulu hulka isegi kogutud müügimaksu."
+        "text": "Müügitulu enne maksu lisandus versioonis v3.5 ja varasemad perioodid arvutati samamoodi ümber, nii et maksu arvestav pood näeb nüüd väiksemat müügitulu kui enne uuendust. See on parandus: varasemad versioonid lugesid maksu müügitulu sisse ning maksuta hindadega poed lugesid müügitulu hulka isegi kogutud müügimaksu."
       }
     ],
     "related": [
       "on-account",
       "pre-orders",
-      "report-periods"
+      "report-periods",
+      "tax-report"
     ]
   },
   {
     "slug": "report-periods",
     "category": "reports",
-    "question": "Milliseid perioode saab aruannetes vaadata?",
+    "question": "Milliseid ajavahemikke saab aruannetes vaadata?",
     "keywords": [
       "aruanded",
-      "periood",
+      "aruandeperiood",
+      "ajavahemik",
       "see nädal",
       "see kuu",
-      "see aasta",
       "oma vahemik",
-      "kuupäev",
-      "toodete edetabel"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Vali vahekaardi Aruanded ülaosas Täna, Eile, See nädal, See kuu, See aasta või Kogu aeg või kasuta valikut Oma vahemik, et määrata algus- ja lõppkuupäev. See nädal järgib seadme nädala esimest päeva; See kuu ja See aasta algavad vastavalt 1. kuupäeval ja 1. jaanuaril. Iga valik näitab kuupäevi, mida see hõlmab, ja Kogu aeg algab poe esimesest müügist."
-      },
-      {
-        "type": "p",
-        "text": "Perioodiriba all on kaks rida näitajakaarte (Müügitulu, Laekunud raha, Brutokasum, Müügid, Keskmine müük; Allahindlused kokku, Puhaskasum, Omahinnata tooted, Teenindatud kliendid) ning seejärel trendigraafik. Trendigraafiku paremas ülanurgas olev menüü lülitab seda müügitulu, müükide, keskmise müügi ja teenindatud klientide vahel ning selle kõrval paneb diagramm Omahind ja brutokasum iga perioodi toodete omahinna ja brutokasumi ühte tulpa kokku. Ühte päeva kuvatakse tunnipõhiselt; pikemate perioodide puhul vastab iga tulp perioodi pikkusest olenevalt päevale, nädalale, kuule või aastale."
-      },
-      {
-        "type": "p",
-        "text": "Puuduta trendigraafikut või diagrammi Omahind ja brutokasum ja hoia all, et vaadata seda periood perioodi haaval; kui Müügivõrdlus on sisse lülitatud, näitab trendigraafiku kaart selle perioodi ja võrdlusperioodi näitajat kõrvuti. Liikumiseks lohista vasakule või paremale; kui pühid diagrammil üles või alla, kerib leht nagu tavaliselt."
-      },
-      {
-        "type": "p",
-        "text": "Kaart Toodete edetabel näitab viit parimat toodet. Puuduta kaarti või valikut Vaata kõiki, et näha kõiki perioodil müüdud tooteid, järjestatud kogusega pärast tagastusi; variantidega toode saab iga variandi kohta ühe rea."
-      },
-      {
-        "type": "p",
-        "text": "Perioodiriba paremal küljel olev Müügivõrdlus võrdleb perioodi eelneva perioodi või eelmise aasta sama perioodiga — vaata „Mida näitavad täiustatud aruanded?“"
-      },
-      {
-        "type": "note",
-        "text": "Need kalendriperioodid lisandusid versioonis v2.4; varasemad versioonid pakkusid libisevaid vahemikke (Täna / 7 päeva / 30 päeva / Kogu aeg). Kui näed neid endiselt, uuenda DingPOS App Store'ist."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "Mida näitavad täiustatud aruanded?",
-    "keywords": [
-      "täiustatud aruanded",
-      "müügivõrdlus",
-      "eelmine aasta",
-      "soojuskaart",
-      "tipptunnid",
+      "toodete edetabel",
       "aeglase käibega tooted",
-      "muutused",
-      "osakaal kategooriate kaupa",
-      "laojäägi väärtus",
-      "korduvostude määr",
-      "punktid"
+      "nädalapäev × tund",
+      "laojäägi väärtus"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Täiustatud aruanded pole eraldi ekraan — need asuvad otse vahekaardil Aruanded ja järgivad ülaosas valitud perioodi:"
+        "text": "Vali vahekaardi Aruanded ülaosas olevalt perioodiribalt Täna, Eile, See nädal, See kuu, See aasta või Kogu aeg või puuduta Oma vahemik, et valida mis tahes algus- ja lõppkuupäev. Iga lehe kaart järgib valitud perioodi. See nädal järgib seadme nädala esimest päeva, See kuu algab 1. kuupäeval, See aasta algab 1. jaanuaril, Kogu aeg algab poe esimesest müügist ning iga valik näitab kuupäevi, mida see hõlmab."
       },
       {
-        "type": "list",
+        "type": "shot",
+        "name": "report-periods",
+        "alt": "Perioodiriba vahekaardi Aruanded ülaosas: valitud on Oma vahemik ja selle kuupäevaaken on avatud, et valida Algus ja Lõpp"
+      },
+      {
+        "type": "h2",
+        "text": "Oma vahemiku valimine"
+      },
+      {
+        "type": "p",
+        "text": "Kasuta valikut Oma vahemik, kui vajad vahemikku, mis ei kattu valmis kalendriperioodidega, näiteks kahekuulist või kvartaalset maksudeklaratsiooni perioodi."
+      },
+      {
+        "type": "steps",
         "items": [
-          "Müügivõrdlus: perioodiribast paremal saad võrrelda eelmise aasta sama perioodi või eelneva perioodiga (üks päev eelmise nädala sama päevaga, see nädal eelmise nädalaga, see kuu eelmise kuuga, see aasta eelmise aastaga, oma vahemik sama pikkuse varasema vahemikuga). Kaardid Müügitulu, Laekunud raha, Brutokasum, Müügid, Keskmine müük, Allahindlused kokku ja Teenindatud kliendid näitavad kõik muutust ja võrdlusperioodi näitajat, näiteks „▼ 3% võrreldes eelmise kuuga“; kaardi Allahindlused kokku muutus on alati hall, sest suurem allahindlus ei ole iseenesest hea ega halb. Puuduta mis tahes võrdlusrida, et avada Perioodide võrdlus, mis loetleb mõlema perioodi näitajad. Trendigraafikule lisandub võrdlusperioodi kohta heledam joon. Kui periood veel kestab, lõpeb võrdlusperiood sama ajahetkega.",
-          "Nädalapäev × tund: lülita trendigraafiku päis valikult Trend valikule Nädalapäev × tund, et näha seitsmepäevast 24-tunnist soojuskaarti — mida tumedam lahter, seda rohkem müüsid. Lülitu müügitulu ja müükide vahel; kui võrdlus on sees, näed, millised tunnid kasvasid ja millised kahanesid.",
-          "Aeglase käibega tooted: lülita edetabelikaardi pealkiri valikule Aeglase käibega tooted, et näha tooteid vähimast müügist suurimani koos praeguse laoseisu ja viimase müügikuupäevaga. Tooted, mida pole kunagi müüdud, on märgitud „Pole müüdud“, ja variantidega toode saab iga variandi kohta ühe rea. Vaikimisi näidatakse ainult laos olevaid tooteid.",
-          "Muutused (alates versioonist v3.4): lülita edetabelikaardi pealkiri valikule Muutused, et näha 3 toodet, mille müügitulu kasvas võrdlusperioodiga võrreldes enim, ja 3 toodet, mille müügitulu langes enim, koos mõlema perioodi müügitulu ja vahega; iga varianti võrreldakse iseendaga. Vali esmalt periood jaotises Müügivõrdlus; valiku Pole korral või perioodil Kogu aeg annab kaart sellest teada. Puuduta kaarti või valikut Vaata kõiki, et avada täielik loend Toodete muutused, mis on jaotatud osadeks „Müügitulu kasv“ ja „Müügitulu langus“.",
-          "Korduvostude määr: kliendikaardi viimane rida näitab liikmete osakaalu, kes ostsid perioodis ja on kokku ostnud kaks või enam korda. Kui võrdlus on sees, annab selle all olev rida muutuse protsendipunktides ja võrdlusperioodi määra.",
-          "Osakaal kategooriate kaupa: iga kategooria müügitulu ja osakaal toote praeguse kategooria järgi, suurimast väikseimani. Kategooriata tooted lähevad rubriiki Kategooriata ja read annavad kokku täpselt müügitulu.",
-          "Praegu: laojäägi väärtus (praegune laoseis × praegune omahind), kõik laoliikumised valitud perioodil ning punktid, mis kliendid hoiavad, kuid pole kasutanud, koos suurima summaga, mida nad saavad maha arvata. Need on praegused jäägid; periood neid ei muuda."
+          "Ava Aruanded ja puuduta perioodiribal Oma vahemik.",
+          "Vali hüpikaknas algus- ja lõppkuupäev.",
+          "Kinnita kuupäevad, et aruanne uueneks."
         ]
       },
       {
         "type": "p",
-        "text": "Alates versioonist v3.4 on kõik need avatud igas paketis ning jäävad avatuks ka pärast prooviperioodi lõppu. Varasemad versioonid näitasid neid ainult Pro paketis ja teistel pakettidel oli väike lukk; kui näed lukke endiselt, uuenda DingPOS App Store'ist."
+        "text": "Kaart Maks ja maksuaruanne järgivad samuti valitud perioodi, nii et deklareerimisperioodi valimine valikuga Oma vahemik uuendab mõlemat; täpsemalt vaata seotud artiklit maksuaruande kohta. Perioodiriba paremal küljel puuduta Võrdle, et vaadata valitud perioodi koos eelneva perioodiga või eelmise aasta sama perioodiga; täpsemalt vaata seotud artiklit perioodide võrdlemise kohta."
+      },
+      {
+        "type": "h2",
+        "text": "Lehe kaardid ja diagrammid"
       },
       {
         "type": "p",
-        "text": "Lite ei jälgi laoseisu ega püsikliendipunkte, kuid Praegu näitab siiski laojäägi väärtust ja kasutamata punkte, mis su poel juba on (näiteks prooviperioodist), või nulli."
+        "text": "Perioodiriba all kuvab Aruanded kaks rida näitajakaarte, seejärel diagramme ja kokkuvõttekaarte paaridena ning kõige all jaotist Praegu."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Esimene kaardirida: Müügitulu, Laekunud raha, Brutokasum, Müügid ja Keskmine müük.",
+          "Teine kaardirida: Allahindlused kokku, Maks, Puhaskasum, Omahinnata tooted ja Teenindatud kliendid.",
+          "Esimene paar: müügitrendi graafik ja Omahind ja brutokasum kõrvuti.",
+          "Teine paar: Toodete edetabel ja Osakaal kategooriate kaupa kõrvuti.",
+          "Kolmas paar: Makseviisid ja kampaaniakaart kõrvuti.",
+          "Alumine kaart: Praegu."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Kaks teise rea kaarti ilmuvad ainult teatud juhtudel. Maks, mis lisandus versioonis v3.6, ilmub ainult maksudega poes või siis, kui valitud periood sisaldab maksuga tehtud müüke. Puhaskasum ilmub ainult siis, kui periood on See kuu või hõlmab täpselt ühte täiskuud."
       },
       {
         "type": "note",
-        "text": "Töötajad näevad täiustatud aruandeid õiguse Ülevaade alusel; laojäägi väärtuse summade nägemiseks on vaja ka õigust Omahind ja kasum."
+        "text": "Kui perioodis müüke pole, näitab Aruanded ainult perioodiriba, teadet ja jaotist Praegu."
+      },
+      {
+        "type": "h2",
+        "text": "Diagrammide ja Toodete edetabeli lugemine"
+      },
+      {
+        "type": "p",
+        "text": "Müügitrendi graafiku paremas ülanurgas olev menüü lülitab seda valikute Müügitulu, Müügid, Keskmine müük ja Teenindatud kliendid vahel. Selle kõrval paneb graafik Omahind ja brutokasum iga perioodi toodete omahinna ja brutokasumi ühte tulpa kokku. Üks päev kuvatakse tunnipõhiselt, pikemate perioodide andmed rühmitatakse pikkusest olenevalt päevade, nädalate, kuude või aastate kaupa."
+      },
+      {
+        "type": "p",
+        "text": "Vajuta müügitrendi graafikul, graafikul Omahind ja brutokasum või kaardil Makseviisid ja hoia all, et näha ühe lõigu infokaarti. Kui Võrdle on sees, näitab müügitrendi graafiku infokaart selle perioodi ja võrdlusperioodi näitajat kõrvuti. Lõikude vahel liikumiseks lohista vasakule või paremale; graafikul üles või alla pühkides kerib leht nagu tavaliselt."
+      },
+      {
+        "type": "p",
+        "text": "Lülita trendigraafiku päis valikult Trend valikule Nädalapäev × tund, et näha seitsmepäevast ja 24-tunnist soojuskaarti. Mida tumedam on lahter, seda rohkem sa sel tunnil müüsid, ning soojuskaarti saab lülitada müügitulu ja müükide vahel."
+      },
+      {
+        "type": "p",
+        "text": "Toodete edetabel näitab valitud perioodi 5 enimmüüdud toodet. Puuduta kaarti või valikut Vaata kõiki, et näha kõiki selles perioodis müüdud tooteid, järjestatud koguse järgi pärast tagastusi. Variantidega toode kuvatakse ühe reana iga variandi kohta."
+      },
+      {
+        "type": "p",
+        "text": "Lülita edetabelikaardi päis valikule Aeglase käibega tooted, et näha tooteid vähimmüüdust enimmüüdud tooteni. Iga rida näitab toote praegust laoseisu ja viimast müügipäeva. Tooted, mida pole kunagi müüdud, on märgitud tekstiga Pole müüdud, ning vaikimisi kuvatakse ainult laos olevad tooted. Päis Muutused loetleb tooted, mille müügitulu võrdlusperioodiga võrreldes kõige rohkem kasvas või langes; vaata seotud artiklit perioodide võrdlemise kohta."
+      },
+      {
+        "type": "h2",
+        "text": "Osakaal kategooriate kaupa, korduvostude määr ja Praegu"
+      },
+      {
+        "type": "p",
+        "text": "Osakaal kategooriate kaupa loetleb iga kategooria müügitulu ja osakaalu suuruse järgi suurimast väikseimani, lähtudes iga toote praegusest kategooriast. Kategooriata tooted jäävad kategooria Kategooriata alla ning read annavad kokku täpselt Müügitulu."
+      },
+      {
+        "type": "p",
+        "text": "Kaardi Teenindatud kliendid viimasel real on korduvostude määr kujul „Korduvostude määr … · … liiget naasis“. See näitab nende liikmete osakaalu, kes ostsid valitud perioodis ja on ostnud kokku kaks või rohkem korda."
+      },
+      {
+        "type": "p",
+        "text": "Praegu näitab kolme laoseisu ja punktide andmekogumit:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Laojäägi väärtus, mis arvutatakse kui praegune laoseis × praegune omahind.",
+          "Kõik laoliikumised valitud perioodis.",
+          "Punktid, mis kliendid hoiavad ja pole veel kasutanud, ning suurim summa, mille nende arvelt maha saab võtta."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Laojäägi väärtus ja kasutamata punktid on praegused jäägid, mistõttu ülaosas perioodi muutmine neid ei muuda."
+      },
+      {
+        "type": "note",
+        "text": "Töötajad näevad Aruandeid õiguse Aruanded alusel; Laojäägi väärtuse summade nägemiseks on vaja ka õigust Omahind ja kasum."
+      },
+      {
+        "type": "note",
+        "text": "Kalendriperioodid lisandusid versioonis v2.4; varasemad versioonid pakkusid libisevaid vahemikke (Täna / 7 päeva / 30 päeva / Kogu aeg). Kui näed neid endiselt, uuenda DingPOS App Store'ist."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Kuidas võrrelda müüki eelmise nädala, kuu või aastaga?",
+    "keywords": [
+      "võrdle",
+      "perioodide võrdlus",
+      "eelmine nädal",
+      "eelmine kuu",
+      "eelmine aasta",
+      "sama periood eelmisel aastal",
+      "muutused",
+      "aruanded",
+      "müügi kasv",
+      "korduvostude määr"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Puuduta vahekaardil Aruanded perioodiriba paremal küljel valikut Võrdle ja vali varasem periood, näiteks Eelmine nädal või Eelmine aasta. Iga kaart näitab siis, kui palju selle näitaja kasvas või langes, näiteks „▼ 3% võrreldes Eelmine kuu“, ning selle all võrdlusperioodi näitajat."
+      },
+      {
+        "type": "h2",
+        "text": "Võrdluse sisselülitamine"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ava külgribalt Aruanded.",
+          "Vali ülaosas periood.",
+          "Puuduta perioodiriba paremal küljel valikut Võrdle.",
+          "Vali menüüst võrdlusvalik."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Saadaolevad valikud sõltuvad valitud perioodist:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Pole lülitab võrdluse välja.",
+          "Eelmine nädal võrdleb ühte päeva sama päevaga eelmisel nädalal või seda nädalat eelmise nädalaga.",
+          "Eelmine kuu võrdleb seda kuud eelmise kuuga.",
+          "Eelmine aasta võrdleb seda aastat eelmise aastaga või valitud perioodi sama perioodiga eelmisel aastal.",
+          "Eelnev võrdleb oma vahemikku sama paljude päevadega enne seda vahemikku."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Kui võrdlus on aktiivne, lisab Aruanded muutuse ja võrdlusperioodi näitaja igale kaardile peale kaartide Maks, Puhaskasum ja Omahinnata tooted. Müügitulu, Laekunud raha, Brutokasum, Müügid, Keskmine müük, Allahindlused kokku ja Teenindatud kliendid kuvavad kõik võrdlusrida, näiteks „▼ 3% võrreldes Eelmine kuu“."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Aruanded perioodil See nädal, Võrdle seatud väärtusele Eelmine nädal: näha on võrdlusriba ja esimene kaardirida, kus iga kaardi all on selle muutus ja võrdlusperioodi näitaja",
+        "caption": "Puuduta mis tahes võrdlusrida kaardi all, et avada Perioodide võrdlus ja näha mõlema perioodi näitajaid."
+      },
+      {
+        "type": "p",
+        "text": "Kaardi Allahindlused kokku muutus on alati hall, sest suurem allahindlus ei ole iseenesest hea ega halb. Puuduta mis tahes võrdlusrida, et avada Perioodide võrdlus, mis loetleb mõlema perioodi näitajad. Trendigraafik lisab võrdlusperioodi jaoks heledama joone. Kui periood alles käib, lõigatakse võrdlusperiood samas hetkes."
+      },
+      {
+        "type": "h2",
+        "text": "Muutused"
+      },
+      {
+        "type": "p",
+        "text": "Lülita edetabelikaardi päis valikule Muutused, et näha 3 toodet, mille müügitulu võrdlusperioodiga võrreldes kõige rohkem kasvas, ja 3 toodet, mille müügitulu kõige rohkem langes. Iga rida näitab mõlema perioodi müügitulu ja vahet ning iga varianti võrreldakse iseendaga."
+      },
+      {
+        "type": "p",
+        "text": "Vali kõigepealt jaotises Võrdle periood. Kui Võrdle on seatud väärtusele Pole või periood on Kogu aeg, palub kaart valida võrdlusperioodi. Puuduta kaarti või valikut Vaata kõiki, et avada Toodete muutuste täielik loend, mis on jaotatud osadeks Müügitulu kasv ja Müügitulu langus."
+      },
+      {
+        "type": "h2",
+        "text": "Soojuskaart ja korduvostude määr"
+      },
+      {
+        "type": "p",
+        "text": "Kui võrdlus on sisse lülitatud, näitab trendigraafiku soojuskaart Nädalapäev × tund ka seda, millised tunnid kasvasid ja millised vähenesid, ning kaardi Teenindatud kliendid korduvostude määra rida saab juurde rea, kus on muutus protsendipunktides ja võrdlusperioodi määr."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -1380,41 +1556,105 @@ export const articles = [
     "question": "Kuidas arvestatakse brutokasumit, kui ma omahindu ei sisestanud?",
     "keywords": [
       "omahind",
-      "kasum",
       "brutokasum",
       "marginaal",
       "brutomarginaal",
       "aruanded",
-      "kasumit ei jälgita",
       "omahind puudub",
-      "omahinnata tooted"
+      "kasumit ei jälgita",
+      "omahinnata tooted",
+      "müügitulust brutokasumini"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Omahind on valikuline väli. Tooted ilma omahinnata jäetakse brutokasumist välja, samas kui nende müügitulu arvestatakse endiselt täielikult. Kaart Omahinnata tooted vahekaardil Aruanded näitab, mitmel perioodil müüdud või tagastatud tootel omahind puudub, näiteks „12 toodet“. Omahind 0 loetakse omahinnaks, seega neid tooteid loendis ei ole; kui igal tootel on omahind, on kaardil kirjas „0 toodet · omahinnad olemas“."
+        "text": "Omahind on valikuline väli, seega jäetakse tooted ilma omahinnata brutokasumist välja, samas kui nende müügitulu arvestatakse endiselt täielikult. Kaart Omahinnata tooted vahekaardil Aruanded näitab, mitmel selles perioodis müüdud või tagastatud tootel omahind puudub, näiteks „12 toodet“. Omahind 0 loetakse omahinnaks ja neid tooteid loendis ei ole; kui igal tootel on omahind, on kaardil kirjas „0 toodet · omahinnad olemas“."
+      },
+      {
+        "type": "h2",
+        "text": "Omahinnata toodete leidmine"
       },
       {
         "type": "p",
-        "text": "Puuduta kaarti või valikut Vaata tooteid, et avada Omahinnata tooted, mis on järjestatud brutokasumist välja jäänud müügitulu järgi. Puuduta rida, et toode avada, lisa selle omahind valikust Muuda ja tagasi tulles on rida märgitud Omahind lisatud. Variantidega toode märgitakse Omahind lisatud alles siis, kui igal omahinnata müüdud variandil on omahind – oma või toote oma, mida variant järgib."
+        "text": "Puuduta vahekaardil Aruanded kaarti Omahinnata tooted või nuppu Vaata tooteid, et avada Omahinnata tooted. Aken loetleb tooted brutokasumist välja jäänud müügitulu järgi suurimast väikseimani."
+      },
+      {
+        "type": "shot",
+        "name": "profit-not-tracked",
+        "alt": "Aken Omahinnata tooted, mis loetleb tooted brutokasumist välja jäänud müügitulu järgi"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Puuduta aknas Omahinnata tooted rida, et toode avada.",
+          "Puuduta Muuda ja sisesta omahind väljale Omahind (valikuline).",
+          "Mine tagasi aknasse Omahinnata tooted, et näha rida märkega Omahind lisatud."
+        ]
       },
       {
         "type": "p",
-        "text": "Brutokasum on müügitulu pärast kõiki allahindlusi (kauba- ja ostukorvi allahindlused, kampaaniad, punktide kasutamine) ja enne maksu, millest on lahutatud omahind – seetõttu on maksu arvestavas poes väli nimega Omahind ilma maksuta (valikuline): sisesta see, mis sa maksid enne maksu. Marginaal on brutokasum ÷ omahinnaga toodete müügitulu, nii et omahinnata tooted seda ei langeta. Tagastus võtab tagastuse päeval tagasi brutokasumi, mille need tooted olid toonud."
-      },
-      {
-        "type": "p",
-        "text": "Puuduta brutokasumi kaarti, et avada Müügitulust brutokasumini, mis lahutab rida-realt: müügitulu (koos maksuga), maks, müügitulu (maksuta), omahinnata müügitulu, toodete omahind ja lõpuks brutokasum ja marginaal. Read annavad kokku täpselt kaardi näitaja."
+        "text": "Variantidega toode märgitakse Omahind lisatud alles siis, kui igal omahinnata müüdud variandil on omahind – kas oma või toote oma, mida variant järgib. Alates versioonist v3.6 saab ostutellimus jaotada oma saatmiskulu ka toote omahinda, mille see kirjutab, kui Arvesta saatmine omahinda on sisse lülitatud."
       },
       {
         "type": "note",
-        "text": "Lisatud omahind mõjutab ainult hilisemaid müüke; juba tehtud müüke ei arvutata ümber. See arvutus lisandus versioonis v3.1: varasemad versioonid lahutasid ainult käsitsi antud kaubaallahindlused ja lugesid maksu sisaldava hinna maksu kasumiks, mistõttu näitavad allahindluste või maksu sisaldavate hindadega perioodid pärast uuendamist väiksemat brutokasumit. See on parandus, mitte kadunud andmed."
+        "text": "Lisatud omahind mõjutab ainult hilisemaid müüke. Juba tehtud müüke ei arvutata ümber."
+      },
+      {
+        "type": "h2",
+        "text": "Omahinna ja maksu sisestamine"
+      },
+      {
+        "type": "p",
+        "text": "Tootevormil on omahinna väli igas poes nimega Omahind (valikuline). Maksudega poes ilmub välja Omahind (valikuline) kõrvale ⓘ, mis näitab, kuidas maks sõltub valikust Sisendmaksu mahaarvamine:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sisendmaksu mahaarvamine on sees: sisesta omahind enne maksu, mille saad tagasi nõuda. Märkus ⓘ ütleb: „Sisesta omahind ilma mahaarvatava maksuta – see läheb sisendmaksu alla. Mahaarvamatu maks kuulub omahinna hulka.“",
+          "Sisendmaksu mahaarvamine on väljas: sisesta summa, mille maksid, miinus maks, mille saad tagasi nõuda. Märkus ⓘ ütleb: „Mahaarvatav maks ei kuulu omahinna hulka, mahaarvamatu maks aga kuulub. Kui arvestad sisendmaksu maha, lülita jaotises Poe andmed sisse Sisendmaksu mahaarvamine.“"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Kui su pood deklareerib sisendmaksu, lülita jaotises Poe andmed sisse Sisendmaksu mahaarvamine."
+      },
+      {
+        "type": "h2",
+        "text": "Brutokasumi jaotuse lugemine"
+      },
+      {
+        "type": "p",
+        "text": "Brutokasum on müügitulu pärast kõiki allahindlusi (kauba- ja ostukorvi allahindlused, kampaaniad, punktide lunastamine) ja enne maksu, millest on lahutatud omahind. Marginaal on brutokasum ÷ omahinnaga toodete müügitulu, nii et omahinnata tooted marginaali ei langeta. Tagastus võtab tagastuse päeval tagasi brutokasumi, mille need tooted olid toonud."
+      },
+      {
+        "type": "p",
+        "text": "Puuduta vahekaardil Aruanded kaarti Brutokasum, et avada Müügitulust brutokasumini, mis lahutab rida-realt:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Müügitulu (koos maksuga)",
+          "Maks",
+          "Müügitulu (maksuta)",
+          "Omahinnata müügitulu",
+          "Toodete omahind",
+          "Brutokasum ja marginaal"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Read annavad kokku täpselt kaardi Brutokasum näitaja. Austraalia, Ühendkuningriigi, Uus-Meremaa ja Singapuri poed näevad maksuridadel kohalikku maksunime, näiteks Müügitulu (GST kaasa arvatud)."
+      },
+      {
+        "type": "note",
+        "text": "See brutokasumi arvutus lisandus versioonis v3.1. Varasemad versioonid lahutasid ainult käsitsi antud kaubaallahindlused ja lugesid maksu sisaldava hinna maksu kasumiks, mistõttu näitavad allahindluste või maksu sisaldavate hindadega perioodid pärast uuendamist väiksemat brutokasumit. See on parandus, mitte kadunud andmed."
       }
     ],
     "related": [
       "report-periods",
       "product-variants",
-      "purchase-orders"
+      "purchase-orders",
+      "input-tax"
     ]
   },
   {
@@ -1423,46 +1663,95 @@ export const articles = [
     "since": "3.4",
     "question": "Kuidas näha, kui palju ma iga kuu tegelikult teenisin?",
     "keywords": [
+      "kasum",
       "kasum ja kahjum",
-      "kasumiaruanne",
       "puhaskasum",
+      "brutokasum",
       "kuine kasum",
-      "kulud",
+      "püsikulud",
       "tegevuskasum",
-      "poe kasum"
+      "kasumiaruanne"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Ava külgribal vahekaart Kasum, mis asub vahekaardi Aruanded all. See loetleb kõik kuud uuemast vanemani koos nende puhaskasumiga: jooksev kuu on märgitud Pooleli ning iga aasta päis liidab kokku selle aasta lõppenud kuude puhaskasumi."
+        "text": "Ava külgribal vahekaardi Aruanded all olev Kasum, et näha iga kuu puhaskasumit ja seda, kuidas see välja arvutatakse. Loend on uuemast vanemani, alates sinu esimesest tegevusega kuust; jooksev kuu on märgitud Pooleli ja iga aasta päis liidab kokku selle aasta lõppenud kuude puhaskasumi. Selle esimene rida Kõik kulud avab kõik kulud kuust sõltumata."
+      },
+      {
+        "type": "h2",
+        "text": "Kuu jaotus"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ava külgribal vahekaardi Aruanded all olev Kasum.",
+          "Puuduta kuud, et näha, kuidas selle puhaskasum välja arvutatakse."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "profit-loss-month",
+        "alt": "Kasumi kuuleht märkega Pooleli, puhaskasumi ja täieliku jaotusega müügitulust kuludeni"
       },
       {
         "type": "p",
-        "text": "Puuduta kuud, et näha, kuidas selle puhaskasum välja arvutatakse:"
+        "text": "Kuulehel on iga rida müügist puhaskasumini järjekorras. Read müügitulust brutokasumini kannavad samu nimesid ja summasid nagu Müügitulust brutokasumini vahekaardil Aruanded."
       },
       {
         "type": "list",
         "items": [
-          "Müügitulu (maksuta): müügitulu pärast kõiki allahindlusi ja enne maksu; arvestatakse kauba üleandmise päeval.",
+          "Müügitulu (koos maksuga), Maks ja Müügitulu (maksuta): müügitulu koos maksuga, maksusumma ning müügitulu pärast kõiki allahindlusi ja enne maksu, arvestatud kauba üleandmise päeval. Austraalia, Ühendkuningriigi, Uus-Meremaa ja Singapuri poed näevad kohalikku maksunime.",
+          "Omahinnata müügitulu: lahutatakse enne toodete omahinda, kuvatakse ainult siis, kui see ei ole null.",
           "Toodete omahind: müüdud kauba omahind, võetud sinu toodete omahindadest.",
-          "Laokadu: selle kauba omahind, mille Korrigeeri laoseisu on laost eemaldanud aegununa, kahjustatuna, ära antuna vms, ning praagitud tagastused. See tuleb pärast brutokasumit — vaata „Kuidas laost maha kanda aegunud, katki läinud või proovina ära antud kaupa?“ Kuul on ka jaotis Laokadu, mis annab selle põhjuste kaupa kokku.",
-          "Teenustasud (hinn.): tasud, mis on hinnatud sinu makseviiside määrade järgi.",
-          "Kinnipeetud käsiraha: käsiraha, mille jätsid endale, kui ettetellimus tühistati.",
-          "Sularaha ümardus: summa, mille võrra kasutusel olevatele müntidele ümardatud sularaha tellimuste kogusummadest suurem või väiksem oli.",
-          "Püsikulud ja Ühekordsed kulud: see, mille selle kuu kohta salvestasid — vaata „Kuidas lisada üüri, palku ja muid kulusid?“"
+          "Brutokasum: kuvatakse koos marginaaliga.",
+          "Omahinnata müügitulu: lisatakse pärast brutokasumit tagasi, kui see ei ole null.",
+          "Laokadu: kuvatakse ainult siis, kui kuul see on; selle kauba omahind, mille Korrigeeri laoseisu on laost eemaldanud aegununa, kahjustatuna, ära antuna vms, ning praagitud tagastused. See tuleb pärast brutokasumit. Vaata „Kuidas laost maha kanda aegunud, katki läinud või proovina ära antud kaupa?“ Kuul on ka jaotis Laokadu, mis annab selle põhjuste kaupa kokku.",
+          "Teenustasud (hinn.): makseviiside määradest hinnatud tasud.",
+          "Kinnipeetud käsiraha: kuvatakse ainult siis, kui see ei ole null; käsiraha, mille jätsid endale, kui ettetellimusest loobuti.",
+          "Sularaha ümardus: kuvatakse ainult siis, kui see ei ole null; summa, mille võrra kasutusel olevatele müntidele ümardatud sularaha müükide kogusummadest suurem või väiksem oli.",
+          "Püsikulud ja Ühekordsed kulud: see, mille selle kuu kohta salvestasid – vaata „Kuidas lisada üüri, palku ja muid kulusid?“",
+          "Puhaskasum: arvutatakse kui müügitulu (maksuta) − toodete omahind − laokadu − teenustasud + kinnipeetud käsiraha + sularaha ümardus − püsikulud − ühekordsed kulud."
         ]
       },
       {
-        "type": "p",
-        "text": "Järgneb kuni kolm diagrammi: puhaskasum kuude kaupa, iga püsikulu osakaal ja püsikulude trend. Mõlemad trendidiagrammid hõlmavad kuni 12 kuud avatud kuuni ja ilmuvad alles siis, kui võrrelda saab vähemalt kahte kuud, arvestades esimese müügi või kulu kuust. Osakaalu diagramm vajab sel kuul püsikulu; kuni seda pole, kuvatakse selles jaotises hoopis Lisa püsikulu."
+        "type": "h2",
+        "text": "Pooleli kuud"
       },
       {
         "type": "p",
-        "text": "Aruanded ja Kasum viivad üksteise juurde. Kui vahekaardil Aruanded on periood See kuu või täpselt üks täiskuu, lisandub teisele näitajakaartide reale kaart Puhaskasum (jooksval kuul märgitud „Pooleli · kogu kuu kulud on maha arvatud“); puuduta seda, et näha selle kuu jaotust brutokasumist puhaskasumini. Mis tahes muu perioodi puhul puuduta jaotise Müügitulust brutokasumini viimasel real valikut Vaata kuu kasumiaruannet. Teistpidi avab vahekaardil Kasum kuu pealkirja all olev Ava aruanne: oktoober vahekaardi Aruanded just selle kuu peal."
+        "text": "Kuni kuu veel kestab, arvab Kasum maha kogu kuu püsikulud. Näiteks 5.10 on müügitulu (maksuta) seni 20,000, toodete omahind 10,000 ja püsikulud 65,700, seega on puhaskasum −55,700 ja märgitud Pooleli · kogu kuu kulud on maha arvatud."
+      },
+      {
+        "type": "p",
+        "text": "Kuna kogu kuu kulud on juba arvesse võetud, ei näidata selle kuu puhaskasumit kunagi punasena ei kuuloendis, kuulehel ega kaardil Puhaskasum vahekaardil Aruanded. Kahjumiga lõppenud kuu puhaskasum kuvatakse hoiatusvärviga."
+      },
+      {
+        "type": "h2",
+        "text": "Diagrammid"
+      },
+      {
+        "type": "p",
+        "text": "Jaotusele järgneb kuni kolm diagrammi: puhaskasum kuude kaupa, iga püsikulu osakaal ja püsikulude trend. Mõlemad trendidiagrammid hõlmavad kuni 12 kuud avatud kuuni ja ilmuvad alles siis, kui võrrelda saab vähemalt kahte kuud, arvestades esimese müügi või kulu kuust. Osakaalu diagramm vajab sel kuul püsikulu; kuni seda pole, kuvatakse selles jaotises hoopis Lisa püsikulu."
+      },
+      {
+        "type": "h2",
+        "text": "Aruannete ja Kasumi vahel liikumine"
+      },
+      {
+        "type": "p",
+        "text": "Aruanded ja Kasum viivad üksteise juurde. Kui perioodiks on vahekaardil Aruanded See kuu või täpselt üks täiskuu, lisab teine kaardirida kaardi Puhaskasum, mille märge on jooksval kuul Pooleli · kogu kuu kulud on maha arvatud. Puuduta seda kaarti, et näha selle kuu jaotust brutokasumist puhaskasumini. Mis tahes muu perioodi puhul puuduta jaotise Müügitulust brutokasumini viimasel real valikut Vaata kuu kasumiaruannet."
+      },
+      {
+        "type": "p",
+        "text": "Teistpidi avab vahekaardil Kasum kuu pealkirja all olev Ava aruanne: oktoober vahekaardi Aruanded sellel kuul (oma vahemik 1.10–31.10); pooleli kuu puhul avab see perioodi See kuu."
       },
       {
         "type": "note",
-        "text": "Puhaskasum on tegevuskasum enne tulumaksu, arvutatud DingPOS-i salvestatud andmete põhjal — see ei ole maksudeklaratsioon. Kui tooteid on müüdud ilma omahinnata, näitab kuu siiski puhaskasumit ja märgib selle „Arvesse pole võetud N toote omahinda“; puuduta seda, et näha, millised tooted need on. Vahekaart Kasum on olemas igas paketis. Töötajakontode kasutamisel nõuab selle avamine õigust Kasumiaruanne ja kulud, mille jaoks vajavad Juhatajad ja Töötajad vaikimisi heakskiitu, sest see näitab toodete omahindu ja palku."
+        "text": "Puhaskasum on tegevuskasum enne tulumaksu, arvutatud DingPOS-i salvestatud andmete põhjal – see ei ole maksudeklaratsioon. Kui tooteid on müüdud ilma omahinnata, näitab kuu siiski puhaskasumit märkega Arvesse pole võetud N toote omahinda ning seda puudutades näed, millised tooted need on."
+      },
+      {
+        "type": "note",
+        "text": "Kasum on olemas igas paketis. Töötajakontode kasutamisel nõuab selle avamine õigust Kasumiaruanne ja kulud, mille jaoks vajavad Juhatajad ja Töötajad vaikimisi heakskiitu, sest see näitab toodete omahindu ja palku."
       }
     ],
     "related": [
@@ -1482,38 +1771,98 @@ export const articles = [
       "palgad",
       "kommunaalkulud",
       "püsikulud",
-      "üldkulud",
+      "ühekordsed kulud",
+      "kõik kulud",
       "kulu jaotamine",
-      "ühekordne kulu"
+      "üldkulud",
+      "kasum"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Puuduta vahekaardil Kasum nuppu Lisa kulu ja vali Lisa püsikulu või Lisa ühekordne kulu. Kulu arvestatakse selles kuus, kuhu see kuulub, mitte selles kuus, kui selle eest maksid, ning iga kuu puhaskasum järgib seda."
+        "text": "Puuduta vahekaardil Kasum nuppu Lisa kulu ja vali Lisa püsikulu või Lisa ühekordne kulu, et lisada üür, palgad, kommunaalkulud ja muud tegevuskulud. Iga kulu arvestatakse selles kuus, kuhu see kuulub, mitte selles kuus, kui selle eest maksid, ning iga kuu puhaskasum uueneb vastavalt. Püsikulud kehtivad igal kuul, vajadusel muutuva summaga, ühekordsed kulud aga arvestatakse ühes kuus või jaotatakse mitme kuu peale."
+      },
+      {
+        "type": "h2",
+        "text": "Püsikulud"
       },
       {
         "type": "p",
-        "text": "Püsikulu on kulu, mida maksad igal kuul, näiteks üür, kommunaalkulud või palgad:"
+        "text": "Püsikulu on korduv kulu, mida maksad igal kuul, näiteks üür, kommunaalkulud või palgad."
       },
       {
-        "type": "list",
+        "type": "steps",
         "items": [
-          "Sisesta nimi, kuusumma ja kuu, millest kulu algab (väli Algab). Tagasiulatuvalt lisamiseks vali varasem kuu.",
-          "Kui summa muutub, puuduta Lisa summa muudatus, vali kuu ja vali Alates sellest kuust (näiteks üüri tõus) või Ainult see kuu (selle kuu elektriarve). Kõik muudatused on loetletud ning ühe saad avada, et seda muuta või kustutada.",
-          "Kui lõpetad selle maksmise, määra Viimane arvestatud kuu: see kuu ja varasemad kuud jäävad arvesse."
+          "Ava Kasum.",
+          "Puuduta Lisa kulu.",
+          "Vali Lisa püsikulu.",
+          "Sisesta nimi, kuusumma ja kuu, millest kulu algab. Tagasiulatuvalt lisamiseks vali varasem kuu.",
+          "Salvestamiseks puuduta ✓."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "expense-form",
+        "alt": "Püsikulu vorm, kus on nimi, kuusumma, alguskuu ja summa muudatused"
+      },
+      {
+        "type": "p",
+        "text": "Kui summa muutub, ava kulu ja puuduta Lisa summa muudatus. Vali kuu, millest muudatus algab, ning seejärel Alates sellest kuust jätkuva muudatuse jaoks (näiteks üüri tõus) või Ainult see kuu ühe kuu erinevuse jaoks (näiteks selle kuu elektriarve). Kõik muudatused on vormil loetletud ja iga kirje saad avada, et seda muuta või kustutada."
+      },
+      {
+        "type": "p",
+        "text": "Kui lõpetad püsikulu maksmise, määra Viimane arvestatud kuu. See kuu ja varasemad kuud jäävad kasumiaruandes arvesse, hilisemad kuud seda enam ei sisalda."
+      },
+      {
+        "type": "h2",
+        "text": "Ajastatud muudatused jaotises Kõik kulud"
+      },
+      {
+        "type": "p",
+        "text": "Jaotises Kõik kulud näitab iga püsikulu rida, mis on ees ootamas. Rida ühendab alguskuu järgmise ajastatud summamuudatuse ja viimase arvestatud kuuga. Näiteks võib rida olla: Alates jaanuar 2026 · detsember 2026 — $420 kuus · Viimati arvestatud märts 2027."
+      },
+      {
+        "type": "p",
+        "text": "Paremal olev summa jääb tänaseks kuusummaks, mitte tulevaseks määraks. Valikuga Ainult see kuu seatud muudatust real ei loetleta."
+      },
+      {
+        "type": "h2",
+        "text": "Ühekordsed kulud"
+      },
+      {
+        "type": "p",
+        "text": "Ühekordne kulu on ühe korra makstav kulu, näiteks sisustus, seadmed, ettemaksuga tasutud kindlustus või üks arve."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ava Kasum.",
+          "Puuduta Lisa kulu.",
+          "Vali Lisa ühekordne kulu.",
+          "Sisesta summa ja kuupäev.",
+          "Määra Arvestatud kuu ühe kuu jaoks või lülita sisse Jaota mitmele kuule.",
+          "Salvestamiseks puuduta ✓."
         ]
       },
       {
         "type": "p",
-        "text": "Ühekordne kulu makstakse ühe korra:"
+        "text": "Ka jaotamata kulu puhul saad valida Arvestatud kuu, et kulu läheks arvesse selles kuus, kuhu see kuulub. Näiteks novembris saabunud oktoobri arve võib minna arvesse oktoobris, tegelik kuupäev jääb alles."
       },
       {
-        "type": "list",
-        "items": [
-          "Sisustuse, seadmete või ettemaksuga tasutud kindlustuse puhul lülita sisse Jaota mitmele kuule ning vali 2–120 kuud ja Esimene arvestatud kuu. Vorm näitab eelvaates, kui palju igas kuus arvesse läheb ja millised kuud see hõlmab.",
-          "Ka jaotamata kulu puhul saad valida Arvestatud kuu: novembris saabunud oktoobri arve võib minna arvesse oktoobris, tegelik kuupäev jääb alles.",
-          "Kui jaotus lõpeb enneaegu (näiteks kindlustusleping öeldi üles), kasuta Lõpeta jaotus varem: allesjäänud summa arvestatakse sinu valitud kuus."
-        ]
+        "type": "p",
+        "text": "Sisustuse, seadmete või ettemaksuga tasutud kindlustuse puhul lülita sisse Jaota mitmele kuule, vali 2–120 kuud ja Esimene arvestatud kuu. Vorm näitab eelvaates, kui palju igas kuus arvesse läheb ja millised kuud see hõlmab."
+      },
+      {
+        "type": "p",
+        "text": "Kui jaotus lõpeb enneaegu (näiteks kindlustusleping öeldi üles), ava kulu ja kasuta Lõpeta jaotus varem. Allesjäänud summa arvestatakse sinu valitud kuus."
+      },
+      {
+        "type": "h2",
+        "text": "Sisendmaks kuludelt"
+      },
+      {
+        "type": "p",
+        "text": "Kui Sisendmaksu mahaarvamine on sees, saad ühekordsele kulule lisada arve numbri ja mahaarvatava maksu ning salvestada püsikulu iga arve jaotises Arved nupuga Lisa arve. Kasumiaruandes arvesse minev summa jääb selleks, mille poe kanda jääb; mahaarvatava maksu toimimist selgitab seotud sisendmaksu artikkel."
       },
       {
         "type": "note",
@@ -1523,7 +1872,484 @@ export const articles = [
     "related": [
       "profit-loss",
       "purchase-orders",
+      "input-tax",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "export-tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Kuidas eksportida maksuaruanne raamatupidajale?",
+    "keywords": [
+      "maksuaruande eksport",
+      "Maksuaruanne",
+      "Ekspordi",
+      "Exceli tööraamat",
+      "CSV",
+      "PDF-aruanne",
+      "Maksukokkuvõte",
+      "Sisendmaksu andmed",
+      "raamatupidaja"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ava Maksuaruanne, puuduta paremas ülanurgas Ekspordi ja vali CSV, Exceli tööraamat (XLSX) või PDF-aruanne. Fail avatakse täisekraanil eelvaates, kus saad jagamisnupust faili salvestada või raamatupidajale saata. Kõik vormingud sisaldavad samu näitajaid, mis ekraanil."
+      },
+      {
+        "type": "h2",
+        "text": "Kuidas eksportida"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ava Aruanded ja vali periood, näiteks oma vahemik 1.11 kuni 31.12 kahekuulise deklareerimisperioodi jaoks või kvartalivahemik.",
+          "Puuduta kaarti Maks, et avada Maksuaruanne. Eksport hõlmab täpselt seda perioodi.",
+          "Puuduta Maksuaruande paremas ülanurgas Ekspordi. Menüü loetleb vormingud ja selle iPadi viimati eksporditud vorming on märgitud.",
+          "Vali vorming, näiteks Exceli tööraamat (XLSX), et avada täisekraanil eelvaade. CSV-failid kuvatakse tabelina ja Exceli tööraamatus saad lehtede vahel lülituda, näiteks vaadata esmalt lehte Summary.",
+          "Puuduta eelvaate paremas ülanurgas jagamisnuppu, et fail salvestada või raamatupidajale saata. Eelvaate sulgemine viib tagasi Maksuaruande juurde."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "tax-export",
+        "alt": "Maksuaruanne avatud menüüga Ekspordi, mis loetleb failivormingud"
+      },
+      {
+        "type": "p",
+        "text": "Kui eksport ebaõnnestub, näitab rakendus teadet Faili ei saanud eksportida ja Proovi uuesti eksportida. Midagi ei kirjutata; ekspordi uuesti."
+      },
+      {
+        "type": "h2",
+        "text": "Eksporditavad vormingud"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Maksukokkuvõte (CSV): üks rida aruande rea kohta (iga maks ja määr, nullmääraga ja maksustamata), koos müügi, tagastuste ja netoga, nii enne maksu kui maksu osas.",
+          "Kõik dokumendid (CSV): üks rida dokumendi kohta iga maksu all, koos kuupäeva ja kellaaja, tšeki numbri, dokumenditüübi (müük, tagastus või anuleerimise tühistusrida), kliendi nime, summade ja makseviisidega. Anuleerimine lisab anuleerimise kuupäevale tühistusrea.",
+          "Päevakokkuvõte (CSV): kokkuvõte päevade kaupa ja seejärel teine tabel maksetest päeva ja makseviisi kaupa.",
+          "Sisendmaksu andmed (CSV): kuvatakse ainult siis, kui aruandes on sisendmaksu kaart. Üks rida iga ostutellimuse ja kulu sisendmaksu rea kohta, koos tarnija, tarnija maksukohustuslase numbri ja arve numbriga.",
+          "Exceli tööraamat (XLSX): lehed Summary, Documents ja Daily, mis vastavad kolmele müügi-CSV-le, ning lisaks Purchases, kui aruandes on sisendmaks. Summad on arvurakud ja iga veerg sobitub sisuga, nii et midagi ei avane äralõigatuna.",
+          "PDF-aruanne: A4-formaadis aruanne rakenduse keeles poe nime, perioodi, maksurežiimi, valuuta ja aruande osadega. Austraalia, Uus-Meremaa, Singapuri ja Ühendkuningriigi poed saavad esimesena Deklaratsiooni lahtrid; sisendmaksu kaardid järgnevad, kui need on olemas. Eelvaates saad märgistusega (Markup) faili allkirjastada või sellele märkusi lisada ja märgistatud faili jagada; sama perioodi uuesti eksportimine kirjutab puhta koopia."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Vormistus raamatupidamistarkvara jaoks"
+      },
+      {
+        "type": "p",
+        "text": "CSV-failid on UTF-8 ja komaga eraldatud, püsivate ingliskeelsete veerunimedega igas rakenduse keeles, et raamatupidamistarkvara neid lugeda saaks. Summad kasutavad valuuta kümnendkohti ja miinusmärki, ilma sümboli ja tuhandete eraldajata (näiteks 80.97, -40.00 või 1000 jeeni poes). Kuupäevad on kujul 2026-11-03."
+      },
+      {
+        "type": "p",
+        "text": "Tekstilahtritele, mis algavad märgiga =, +, - või @ (näiteks klient nimega =1+1), lisatakse ette ', et arvutustabelid näitaksid teksti, mitte ei käivitaks valemit. Summadele seda ei lisata."
+      },
+      {
+        "type": "p",
+        "text": "Failinimed sisaldavad perioodi, näiteks tax-report-summary_2026-11-01_2026-11-30.csv, tax-report_2026-11-01_2026-11-30.xlsx ja tax-report_2026-11-01_2026-11-30.pdf, nii et eri perioodide failid kunagi üksteist üle ei kirjuta."
+      },
+      {
+        "type": "h2",
+        "text": "Õigused ja privaatsus"
+      },
+      {
+        "type": "p",
+        "text": "Eksportida saab igas paketis, sh Lite. Töötajad vajavad õigust Aruanded, nagu Maksuaruande puhulgi."
+      },
+      {
+        "type": "p",
+        "text": "Sisendmaksuga failid küsivad esmalt heakskiitu, mida nende kaardid vajavad: Omahind ja kasum ostutellimuste jaoks ning Kasumiaruanne ja kulud kulude jaoks. See hõlmab faili Sisendmaksu andmed (CSV) ning Exceli tööraamatut (XLSX) ja PDF-aruannet, kui sisendmaksu kaardid kuvatakse. Tühistamine ei kirjuta midagi; kolm müügi-CSV-d ei küsi kunagi."
+      },
+      {
+        "type": "note",
+        "text": "Kõik dokumendid (CSV) sisaldab kliendinimesid ning sisendmaksu failid tarnijate nimesid ja maksukohustuslase numbreid. Jaga neid ainult inimestega, kes neid nägema peavad."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "input-tax",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "input-tax",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Kuidas sisendmaksu (VAT või GST ostudelt) salvestada?",
+    "keywords": [
+      "sisendmaks",
+      "käibemaks",
+      "VAT",
+      "GST",
+      "sisendmaksu mahaarvamine",
+      "sisendmaks ostutellimustelt",
+      "sisendmaks kuludelt",
+      "tarnija maksukohustuslase number",
+      "ostutellimused",
+      "maksuaruanne"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Lülita jaotises Seaded → Poe andmed sisse Sisendmaksu mahaarvamine, et salvestada ostutellimustel ja kuludel tarnijate arvetel olev mahaarvatav maks. Mõlemad vormid saavad siis sisendmaksu jaotise, kuhu kopeerid mahaarvatava maksu iga arve pealt. Maksuaruanne loetleb selle kahel kaardil: Sisendmaks ostutellimustelt ja Sisendmaks kuludelt."
+      },
+      {
+        "type": "h2",
+        "text": "Sisendmaksu mahaarvamise sisselülitamine"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ava Seaded → Poe andmed ja leia maksukaart.",
+          "Lülita jaotises Arvesta maksu sisse Sisendmaksu mahaarvamine."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-toggle",
+        "alt": "Poe andmete maksukaart, kus Sisendmaksu mahaarvamine on sisse lülitatud ja selle all on vihje"
+      },
+      {
+        "type": "p",
+        "text": "Sisendmaksu mahaarvamine ilmub ainult siis, kui poes on vähemalt üks maks, ning uutes poodides ja pärast uuendamist on see algselt väljas. Lüliti salvestub kohe ja logitakse Tegevuslogis jaotise Maksuseaded all. Kui see on sees, sisesta ostuhinnad ja toodete omahinnad enne mahaarvatavat maksu; mahaarvamatu maks jääb omahinna sisse."
+      },
+      {
+        "type": "note",
+        "text": "Lüliti Sisendmaksu mahaarvamine on igas paketis, ostude jaoks (Ostud) on aga vaja paketti Standard või kõrgemat. Väljalülitamine peidab väljad uutelt kirjetelt; olemasolevad kirjed säilitavad oma sisendmaksu ja makstava summa ning varasemad maksuaruanded jäävad samaks."
+      },
+      {
+        "type": "h2",
+        "text": "Ostutellimused"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ava Ostud ja puuduta Uus ost.",
+          "Sisesta ühikuhinnad enne mahaarvatavat maksu, seejärel keri lisakulude mööda alla jaotiseni Sisendmaks.",
+          "Kontrolli Arve kuupäev, mis on vaikimisi tellimuse kuupäev, ning lisa soovi korral Arve number ja Tarnija maksukohustuslase number.",
+          "Vali Määr jaoks poe maks või vali Muu määr… ja sisesta kuni 3 kümnendkohta, näiteks 9,975%.",
+          "Kontrolli Enne maksu, mis algab tellimuse kogusummast enne maksu, ja kopeeri Mahaarvatav maks arvelt.",
+          "Täiendavate määrade jaoks puuduta Lisa määr."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-po",
+        "alt": "Ostutellimus, millel on jaotis Sisendmaks koos arve väljade, ühe määrareaga ja kogusummadega"
+      },
+      {
+        "type": "p",
+        "text": "Mahaarvatav maks algab tühjana; DingPOS ei arvuta seda kunagi määra järgi ja aktsepteerib arve ümardust. Näiteks jahu 10 × $300 pluss $100 saatmist arvel AB-12345678 kuupäevaga 30. juuni 2026, ühe 5% reaga, kus Enne maksu on $3,100 ja Mahaarvatav maks $155, annab Kokku enne maksu $3,100, Sisendmaks $155 ja Makstav summa $3,255, mis kuvatakse loendis, tellimuse üksikasjades ja ekraanil Tasumata arved. Tarnija maksukohustuslase number tarnijal täidab uued tellimused; salvestatud tellimused säilitavad oma numbri."
+      },
+      {
+        "type": "p",
+        "text": "Kui arve saabub hilja, ava vastuvõetud tellimus ja puuduta kaardil Sisendmaks Lisa sisendmaks või muutmiseks Muuda. Muutub ainult Makstav summa; laoseis, toote omahind ning makstud või tasumata olek jäävad samaks. Anuleeritud tellimustel on Sisendmaks kirjutuskaitstud ja enne uuendust salvestatud tellimusi tagantjärele ei täideta."
+      },
+      {
+        "type": "h2",
+        "text": "Kulud"
+      },
+      {
+        "type": "p",
+        "text": "Jaotises Kasum → Ühekordsed kulud lisab vorm summa alla Arve numbri ja sisendmaksu read. Jäta summaks summa enne mahaarvatavat maksu ja kopeeri ainult mahaarvatav maks. $1,100 kantseleitarvete arve puhul, millest $100 on mahaarvatav, sisesta $1,000 ja 10% rida $1,000 ja $100; Maksuga näitab $1,100 ja kasumiaruanne arvestab $1,000. Selle sisendmaks läheb tervikuna arvesse kulu kuupäeval ega järgi kunagi Arvestatud kuud ega jaotust."
+      },
+      {
+        "type": "p",
+        "text": "Jaotises Kasum → Püsikulud ava salvestatud kulu, näiteks üür või kommunaalkulud, ja puuduta jaotises Arved iga arve saabumisel Lisa arve, märkides arve kuupäeva, soovi korral arve numbri ja vähemalt ühe määrarea. Kui üür on $30,000 kuus ja juuli ning augusti arvetel on kummalgi 5% rida $30,000 ja $1,500, sisaldab juuli–septembri aruanne $3,000 sisendmaksu, samal ajal kui kasumiaruanne arvestab igal kuul endiselt $30,000."
+      },
+      {
+        "type": "p",
+        "text": "Sisendmaksu muudatuse salvestamisel varasemas kuus küsitakse Salvestada muudatus? ja hoiatatakse, et kuu maksuaruanne muutub, kui oled selle juba esitanud. Jooksva kuu muudatused ja mustandid salvestatakse küsimata."
+      },
+      {
+        "type": "note",
+        "text": "DingPOS ei arvuta impordi käibemaksu, pöördmaksustamist ega osalist mahaarvamist. Kopeeri mahaarvatav maks arvelt ja pane mahaarvamatu maks summasse enne maksu."
+      },
+      {
+        "type": "h2",
+        "text": "Maksuaruanne"
+      },
+      {
+        "type": "p",
+        "text": "Müügikaartide järel on kaks kaarti: Sisendmaks ostutellimustelt ja Sisendmaks kuludelt. Kumbki loetleb ühe rea määra kohta, rea Sisendmaksu pole ja kogusummad: Enne maksu, Mahaarvatav maks ja Maksuga. Kogusummad sisaldavad oste, millel sisendmaksu pole, kuigi mõni deklaratsioon arvestab ainult sisendmaksuga ridu."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ostutellimused arvestatakse Arve kuupäeval või tellimuse kuupäeval, kui see on tühi.",
+          "Anuleeritud ostutellimused arvestatakse negatiivse summana anuleerimise kuupäeval.",
+          "Ühekordsed kulud arvestatakse tervikuna kulu kuupäeval.",
+          "Püsikulu arved arvestatakse arve kuupäeval."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Sisendmaks ostutellimustelt vajab õigust Omahind ja kasum ning Sisendmaks kuludelt õigust Kasumiaruanne ja kulud; töötajad, kellel õigust pole, näevad kaardi pealkirja all teadet Palu juhatajal heaks kiita. Kaart Maks näitab siiski ainult müükides arvestatud maksu, mitte kunagi sisendmaksu mahaarvamisega, sest Jaapani lihtsustatud meetod ja Ühendkuningriigi fikseeritud määr töötavad teisiti. Austraalia, Uus-Meremaa, Singapuri ja Ühendkuningriigi poed näevad neid summasid ka jaotises Deklaratsiooni lahtrid."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "purchase-orders",
+      "record-expenses"
+    ]
+  },
+  {
+    "slug": "tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Kus on maksuaruanne ja kuidas seda lugeda?",
+    "keywords": [
+      "maksuaruanne",
+      "käibemaks",
+      "VAT",
+      "GST",
+      "müügimaks",
+      "aruanded",
+      "Maks",
+      "Müük ja maks määrade kaupa",
+      "Makseviisi järgi"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ava Aruanded ja puuduta kaarti Maks, et näha Maksuaruannet, mis loetleb müügi ja maksu määrade kaupa perioodil, mida Aruanded näitab. Kopeeri need näitajad käibemaksu (VAT), GST või müügimaksu deklaratsiooni või saada need raamatupidajale. Hilisemad maksumuudatused ei muuda kunagi salvestatud dokumentide näitajaid."
+      },
+      {
+        "type": "h2",
+        "text": "Maksuaruande avamine"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ava Aruanded ja vali periood, näiteks See kuu või oma vahemik.",
+          "Leia teisest reast pärast kaarti Allahindlused kokku kaart Maks.",
+          "Puuduta kaarti Maks või Maksuaruanne ›."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Aruanded perioodil See kuu, kaart Maks ja selle jalus Maksuaruanne ›"
+      },
+      {
+        "type": "p",
+        "text": "See kaart on ainus sissepääs. Selle alapealkiri nimetab perioodil arvestatud maksud, suurima summaga esimesena: kaks nimeliselt, kolm või enam näiteks kujul 3 maksu, sh PST 7%. Päis näitab Aruannete perioodi (See kuu · 1.11 – 30.11) ilma perioodivalija või eelmise kuu otseteeta, sest deklareerimisperioodid on erinevad (Taiwanil kaks kuud, Austraalias kvartal, Jaapanis aasta)."
+      },
+      {
+        "type": "p",
+        "text": "Maksuta poed, kus perioodis pole ka maksustatud müüke, kaarti Maks ei näe; perioodid ilma dokumentideta näitavad Aruannete tühja olekut. Kustutatud maksud jätavad kaardi alles perioodideks, kus on nende alusel tehtud müüke."
+      },
+      {
+        "type": "note",
+        "text": "Kaart, aruanne ja kõik ekspordid on igas paketis, sh Lite ja prooviperioodil. Töötajad vajavad õigust Aruanded; heakskiitu vajavad rollid näevad kuni juhataja heakskiiduni heakskiidu teadet."
+      },
+      {
+        "type": "h2",
+        "text": "Aruande lugemine"
+      },
+      {
+        "type": "p",
+        "text": "Austraalia, Uus-Meremaa, Singapuri ja Ühendkuningriigi poed näevad esimesena Deklaratsiooni lahtreid."
+      },
+      {
+        "type": "p",
+        "text": "Müük ja maks määrade kaupa loetleb ühe rea määra kohta: kõrgeim esimesena, seejärel 0% nullmääraga ja viimasena Maksustamata (tooted ilma maksuta). Veerud on Müük, Tagastused ja anuleerimised ning Neto, igaühes Enne maksu ja Maks; nullmääraga ja Maksustamata ridadel maksurida pole. Iga poe maks saab rea ka siis, kui müüki pole. Ümbernimetamine jätab alles ühe rea; määra muutus lisab uue."
+      },
+      {
+        "type": "p",
+        "text": "Kokku näitab Müük enne maksu, Maks ja Müük maksuga. Kahe või enama maksu korral selgitab märge, et ühel müügil võib olla mitu maksu, mistõttu ridade müüki ei saa kokku liita; Müük enne maksu arvestab iga müüki ühe korra. Ühendkuningriigi kvartali puhul võib VAT 20% näidata Enne maksu £1,000 ja Maks £200, Nullmääraga 0% £300 ja Maksustamata £50: Kokku annab Müük enne maksu £1,350, Maks £200, Müük maksuga £1,550."
+      },
+      {
+        "type": "shot",
+        "name": "tax-report",
+        "alt": "Maksuaruanne, kus on read Müük ja maks määrade kaupa ning all Kokku"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Makseviisi järgi loetleb nende dokumentide maksed perioodi lõpu seisuga, tasumata summad kui Laekumata nõuded ja sularaha ümardus real Sh sularaha ümardus … sularaharea sees.",
+          "Müügina arvesse võtmata kuvatakse ainult kinnipeetud käsirahade puhul: see loetleb Kinnipeetud käsirahad ja alapealkirja, mis soovitab deklareerimist raamatupidajaga kontrollida; see ei lisandu ei müügile ega maksule.",
+          "Poed, kus Sisendmaksu mahaarvamine on sees või kus perioodis on sisendmaks salvestatud, näevad ka kaarte Sisendmaks ostutellimustelt ja Sisendmaks kuludelt."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Millisel päeval iga dokument arvesse läheb"
+      },
+      {
+        "type": "p",
+        "text": "Puuduta ⓘ jaotise Müük ja maks määrade kaupa kõrval:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Anuleerimine arvestatakse perioodis, mil see anuleeriti, negatiivse summana, nii et juba esitatud periood ei muutu. Aruanded eemaldavad selle hoopis müügi perioodist.",
+          "Tagastus arvestatakse oma kuupäeval. Vahetuse puhul lähevad uued tooted arvesse müügina ja tagastatud tooted tagastustena.",
+          "Ettetellimus arvestatakse kättesaamise päeval; müük arvele müügi päeval."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Müük 30.10, mis anuleeriti 2.11, jääb oktoobri müügi hulka ja ilmub novembri veerus Tagastused ja anuleerimised negatiivse summana. Müügi arvele hilisem tasumine seda ei liiguta."
+      },
+      {
+        "type": "h2",
+        "text": "Kogutud maks ja Aruannete kogusummad"
+      },
+      {
+        "type": "p",
+        "text": "Kaart Maks võrdub Maksuaruande Maksu kogusummaga. See erineb Aruannete jaotise Müügitulust brutokasumini reast Maks ainult perioodidevaheliste anuleerimiste puhul, sest Aruanded võtavad anuleeritud müügi välja selle algsest perioodist."
+      },
+      {
+        "type": "note",
+        "text": "Maksuaruanne näitab müükides kogutud maksu, mitte kunagi tasumisele kuuluvat maksu (müügimaks miinus sisendmaks), sest kõik riigid ei arvuta seda nii, näiteks Jaapani lihtsustatud meetod või Ühendkuningriigi fikseeritud määra skeem (Flat Rate Scheme)."
+      }
+    ],
+    "related": [
+      "tax-return-boxes",
+      "input-tax",
+      "export-tax-report",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "tax-return-boxes",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Millised näitajad lähevad minu BAS-i, GST või VAT deklaratsiooni lahtritesse?",
+    "keywords": [
+      "Deklaratsiooni lahtrid",
+      "Maksuaruanne",
+      "Aruanded",
+      "BAS",
+      "Simpler BAS",
+      "GST101A",
+      "GST F5",
+      "VAT-deklaratsioon",
+      "Sisendmaksu mahaarvamine"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Austraalia, Uus-Meremaa, Singapuri või Ühendkuningriigi poodide jaoks avaneb Maksuaruanne lahtritega Deklaratsiooni lahtrid, mis näitab iga lahtrit ja summat samast aruandest. See hõlmab igas paketis Austraalia BAS · Simpler BAS, Uus-Meremaa GST101A, Singapuri GST F5 ja Ühendkuningriigi VAT-deklaratsiooni."
+      },
+      {
+        "type": "h2",
+        "text": "Deklaratsiooni lahtrite avamine"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ava Aruanded.",
+          "Puuduta kaarti Maks, et avada Maksuaruanne."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Deklaratsiooni lahtrid on esimene kaart, jaotise Müük ja maks määrade kaupa kohal, ja selle alapealkiri nimetab deklaratsiooni. Iga summa tuleb samast aruandest, sentidega, ning midagi ei arvutata ümber. Eksporditud PDF-aruanne algab sama kaardiga. Poed, mis seadistati enne, kui rakendus riiki salvestas, loetakse valuuta järgi (AUD, NZD, SGD või GBP); teistel poodidel kaarti Deklaratsiooni lahtrid pole."
+      },
+      {
+        "type": "shot",
+        "name": "return-boxes",
+        "alt": "Maksuaruande ülaosas olev kaart Deklaratsiooni lahtrid, mis näitab Ühendkuningriigi VAT-deklaratsiooni lahtreid 1, 4, 6 ja 7"
+      },
+      {
+        "type": "h2",
+        "text": "Austraalia BAS · Simpler BAS"
+      },
+      {
+        "type": "list",
+        "items": [
+          "G1 Total sales: müük GST-ga, sh GST-vaba ja maksustamata müük; vasta küsimusele „Does the amount shown at G1 include GST?“ vastusega Yes",
+          "1A GST on sales: müügilt arvestatud maks",
+          "1B GST on purchases: mahaarvatav maks ostutellimustelt ja kuludelt"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "ATO nõuab täisdollareid: jäta BAS-is sendid ära, ära ümarda kunagi üles."
+      },
+      {
+        "type": "h2",
+        "text": "Uus-Meremaa GST101A"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Box 5 Total sales and income: müük GST-ga, sh nullmääraga müük; maksustamata müüki ei arvestata",
+          "Box 6 Zero-rated supplies: nullmääraga müük",
+          "Box 11 Total purchases and expenses: GST-ga ostutellimused ja kulud, GST kaasa arvatud; sisendmaksuta ja nullmääraga oste ei arvestata"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "myIR arvutab lahtrid Box 8 ja Box 12 kui 3/23, mis võib aruande maksust erineda mõne sendi võrra."
+      },
+      {
+        "type": "h2",
+        "text": "Singapuri GST F5"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Box 1 Total value of standard-rated supplies: maksustatud müük enne maksu",
+          "Box 2 Total value of zero-rated supplies: nullmääraga müük; nullmääraga võivad olla ainult eksport ja rahvusvahelised teenused",
+          "Box 5 Total value of taxable purchases: GST-ga või nullmääraga ostutellimused ja kulud enne maksu; sisendmaksuta oste ei arvestata",
+          "Box 6 Output tax due: müügilt arvestatud maks",
+          "Box 7 Input tax and refunds claimed: mahaarvatav maks ostutellimustelt ja kuludelt"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Ühendkuningriigi VAT-deklaratsioon"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Box 1 VAT due on sales and other outputs: müügilt arvestatud maks",
+          "Box 4 VAT reclaimed on purchases and other inputs: mahaarvatav maks ostutellimustelt ja kuludelt",
+          "Box 6 Total value of sales and all other outputs excluding any VAT: müük enne maksu, sh nullmääraga, vabastatud ja maksustamata müük",
+          "Box 7 Total value of purchases and all other inputs excluding any VAT: ostutellimused ja kulud enne maksu, sh sisendmaksuta ostud; lahuta kõik kajastatud palgad ja äriruumide kinnisvaramaksud (Ühendkuningriigi business rates)"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Tavapärase käibemaksuarvestuse jaoks; fikseeritud määra skeemi (Flat Rate Scheme) puhul arvutatakse Box 1 ja Box 6 teisiti. Ühendkuningriigis tuleb käsirahalt käibemaks tasuda selle laekumisel; DingPOS kajastab ettetellimuse aruandes alles siis, kui see kätte saadakse."
+      },
+      {
+        "type": "p",
+        "text": "Näide Ühendkuningriigi kvartalist: £1,000 VAT 20% müüki enne maksu (maks £200), £300 nullmääraga, £50 maksustamata, ostutellimused £400 pluss £80 VAT ning kulud £250 ilma sisendmaksuta annavad Box 1 £200, Box 4 £80, Box 6 £1,350 ja Box 7 £650."
+      },
+      {
+        "type": "h2",
+        "text": "Tühjad lahtrid ja töötajate juurdepääs"
+      },
+      {
+        "type": "p",
+        "text": "Lahtrid, mille maksuamet ise välja arvutab, ja võlgnetavad summad jäetakse välja (Ühendkuningriigi Box 3 ja 5; Singapuri Box 3, vabastatud müük). Uus-Meremaal ja Singapuris ei kuulu maksustamata müük ühtegi lahtrisse; kui sellelt oleks pidanud maksu arvestama, küsi nõu oma raamatupidajalt."
+      },
+      {
+        "type": "p",
+        "text": "Sisendmaksu lahtrid (AU 1B, NZ 11, SG 5 ja 7, UK 4 ja 7) vajavad Sisendmaksu mahaarvamist, vastasel juhul näitavad need — ja Sisendmaksu pole registreeritud, mitte kunagi 0. Ühendkuningriigi Box 7 vajab nii kaarti Sisendmaks ostutellimustelt kui ka Sisendmaks kuludelt; ainult ostutellimused täidavad Box 4 ja jätavad Box 7 väärtusele —."
+      },
+      {
+        "type": "p",
+        "text": "Töötajad, kellel puudub õigus Kasumiaruanne ja kulud või Omahind ja kasum, ei näe mõlema kaardi summat liitvaid lahtreid, kuni juhataja need heaks kiidab; selleks on nupp Palu juhatajal heaks kiita."
+      },
+      {
+        "type": "note",
+        "text": "Arvutatud müügi- ja arvekuupäevade järgi; DingPOS ei jälgi maksekuupäevi. Kui deklareerid kassa- või laekumispõhiselt, kohanda neid summasid."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "input-tax",
+      "export-tax-report"
     ]
   },
   {
@@ -1616,11 +2442,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ava Seaded → Püsikliendiprogramm ja määra kaks reeglit: mitu punkti saab iga kulutatud X kohta ning mitu punkti tuleb kasutada, et saada M allahindlust (soovi korral koos ühe müügi kohta kehtiva kasutuslimiidiga). Uutele liikmetele saad automaatselt anda ka tervitusbonuse."
+        "text": "Ava Seaded → Püsikliendiprogramm ja määra kaks reeglit: mitu punkti saab iga kulutatud X kohta ning mitu punkti tuleb kasutada, et saada M allahindlust (soovi korral koos ühe müügi kohta kehtiva kasutuslimiidiga). Uutele liikmetele saad automaatselt anda ka tervitusbonuse. Uutes poodides on punktid algul välja lülitatud: lülita sisse Luba püsikliendiprogramm ja lisa vähemalt üks reegel. Kui lüliti on sees, aga reeglit pole, hoiatab rakendus: „Teenimis- ega lunastusreeglit pole veel seadistatud, seega müükidega punkte ei teenita ega lunastata.“"
       },
       {
         "type": "p",
-        "text": "Lisa müügile liige ostukorvis või kassaekraanil, siis punktid kogunevad automaatselt; punktide kasutamiseks sisesta kasutatavate punktide arv. Müügi anuleerimine võtab sellest teenitud punktid tagasi ja tagastab kasutatud punktid."
+        "text": "Lisa müügile liige ostukorvis või kassaekraanil, siis punktid kogunevad automaatselt; punktide kasutamiseks sisesta kasutatavate punktide arv. Müügi lõpuekraanil näed teenitud punkte ja uut saldot, näiteks „+22 p · kokku 122 p“; müügil arvele või täielikult tasumata ettetellimusel lisatakse punktid alles raha laekumisel ning ekraanil on kirjas „lisatakse tasumisel“ või „lisatakse kättesaamisel tasudes“. Müügi anuleerimine võtab sellest teenitud punktid tagasi ja tagastab kasutatud punktid."
       },
       {
         "type": "p",
@@ -2000,23 +2826,23 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Õigusel on kaks väärtust: Lubatud või Vajab heakskiitu – päris keelatud pole midagi. Kui töötaja satub toimingu juurde, mis vajab heakskiitu, valib seda lubatud kolleeg oma nime ja sisestab oma PIN-koodi, et toiming läbi lasta."
+        "text": "Õigusel on kaks võimalikku olekut: Lubatud või Vajab heakskiitu – midagi pole täielikult keelatud. Kui töötaja jõuab toiminguni, mis vajab heakskiitu, valib seda tohtiv kolleeg oma nime ja sisestab oma PIN-koodi, et toiming läbi lasta."
       },
       {
         "type": "list",
         "items": [
           "Toimingud (käsitsi laoseisu korrigeerimine, käsitsi punktide korrigeerimine, toodete haldus, kassas ülempiirist suurema allahindlusega müük): üks heakskiit katab selle ühe toimingu.",
-          "Vaated (omahind ja kasum, Ülevaatepaneel, Kasumiaruanne ja kulud, Seaded, varundus ja taastamine): heakskiit avab vaate, kuni operaator vahetub või rakendus läheb taustale.",
-          "Allahindluse ülempiir kehtib käsitsi allahindlustele ja seda kontrollitakse kassas üks kord; automaatsed kampaaniad ja punktide kasutamine sellesse ei arvestata."
+          "Vaated (omahind ja kasum, Aruanded, Kasumiaruanne ja kulud, Seaded, varundus ja taastamine): heakskiit avab vaate, kuni operaator vahetub või rakendus läheb taustale.",
+          "Allahindluse ülempiir kehtib käsitsi allahindlustele ja seda kontrollitakse kassas üks kord; automaatsed kampaaniad ja punktide kasutamine sellesse arvesse ei lähe."
         ]
       },
       {
         "type": "p",
-        "text": "Tehaseseaded: Juhatajatel on lubatud kõik peale varunduse ja taastamise ning Kasumiaruande ja kulude; allahindluse ülempiiri neil pole, Töötajatel vajab kõik heakskiitu ja ülempiir on 10%. Omanikul on alati kõik lubatud ja seda ei saa muuta. Muutmiseks ava Töötajad → Rollide õigused, puuduta Muuda ja salvesta üks kord – muudatus jõustub kohe kõigile."
+        "text": "Tehaseseaded: Juhatajatel on lubatud kõik peale varunduse ja taastamise ning Kasumiaruande ja kulude, allahindluse ülempiiri neil pole; Töötajatel vajab kõik heakskiitu ja ülempiir on 10%. Omanikul on alati kõik lubatud ja seda ei saa muuta. Muutmiseks ava Töötajad → Rollide õigused, puuduta Muuda ja salvesta üks kord – muudatus jõustub kohe kõigile."
       },
       {
         "type": "note",
-        "text": "Müük arvele, anuleerimised, tagastused ja ostud on teadlikult õiguste seadistusest välja jäetud; nende puhul salvestatakse ainult see, kes neid käsitles. Hiljem saad neid vaadata tegevuslogist."
+        "text": "Anuleerimised, tagastused, müük arvele ja ostutellimused on teadlikult õiguste seadistusest välja jäetud; nende puhul salvestatakse ainult see, kes neid käsitles. Hiljem saad neid vaadata tegevuslogist."
       }
     ],
     "related": [
@@ -2084,7 +2910,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajakontod ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Täiustatud aruanded seda ei vaja: alates versioonist v3.4 sisaldab neid iga pakett."
+        "text": "Mis tahes paketi tellimine prooviperioodi ajal lõpetab prooviperioodi kohe ning edaspidi kehtib sinu ostetud pakett. Pärast prooviperioodi jäävad Pro funktsioonid, näiteks töötajakontod ja tegevuslogi, kättesaadavaks vaid Pro tellimusega. Aruanded seda ei vaja: iga pakett sisaldab neid täies mahus."
       },
       {
         "type": "p",
@@ -2145,19 +2971,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Kõik kolm paketti sisaldavad täisfunktsionaalset kassat, tooteid, müüke (koos anuleerimiste, tagastuste ja vahetustega), aruandeid (alates versioonist v3.4 ka täiustatud aruanded ja kuine kasumiaruanne) ja pilvevarundust. Need erinevad poe juhtimise tööriistade poolest:"
+        "text": "Kõik kolm paketti sisaldavad kassat kõigi funktsioonidega, tooteid, müüke (koos anuleerimiste, tagastuste ja vahetustega), aruandeid (alates versioonist v3.4 kogu vahekaart Aruanded ja kuine kasumiaruanne, alates versioonist v3.6 maksuaruanne ja selle eksport) ning pilvevarundust. Need erinevad poe juhtimise tööriistade poolest:"
       },
       {
         "type": "list",
         "items": [
           "Lite: ühele inimesele, kes peab turulettu ning vajab kassat ja tooteid.",
-          "Standard: lisab kampaaniad, püsikliendipunktid ja tasemed, laoseisu jälgimise, ostutellimused, müügi arvele, ettetellimused ja makseviiside teenustasu määrad.",
+          "Standard: lisab kampaaniad, allahindluse eelseadistused, püsikliendipunktid ja liikmetasemed, laoseisu jälgimise, ostutellimused, müügi arvele, ettetellimused ja makseviiside teenustasu määrad.",
           "Pro: lisab töötajakontod ja õigused, heakskiidu, tegevuslogi ja taastamise kirjed – töötajatega poodidele."
         ]
       },
       {
         "type": "p",
-        "text": "Oled juba Standard paketis? Uuenda Pro paketile tellimuse lehel: arveldustsükkel jääb samaks, paketiuuendus jõustub kohe ja Apple arvutab hinnavahe proportsionaalselt. Üleminek Pro paketilt tagasi Standardile jõustub pikendamise hetkel. Hinnad on rakenduses nähtaval ning pakette saad võrrelda meie lehel Hinnad."
+        "text": "Kas kasutad juba Standard-paketti? Uuenda tellimuse lehel Pro-paketile: arveldustsükkel jääb samaks, uuendus jõustub kohe ja Apple arvestab hinnavahe proportsionaalselt. Üleminek Pro-paketilt tagasi Standard-paketile jõustub tellimuse pikendamisel. Hinnad on rakenduses nähtaval ning pakette saad võrrelda meie lehel Hinnad."
       },
       {
         "type": "note",
@@ -2354,23 +3180,24 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Saadaval on kolm liitpakkumise liiki: kingitus ostu kõrvale (osta A, saa B), tasuline lisatoode (lisa X €, et saada Y) ja komplektihind (mis tahes N toodet hinnaga X €). Kingitused ja tasulised lisatooted ootavad kassapidaja kinnitust; komplektihinnad rakenduvad automaatselt."
+        "text": "Saadaval on kolm kombineeritud pakkumise liiki: kingitus ostuga (osta A, saa B), tasuline lisatoode (maksa X € lisaks, et saada Y) ja komplektihind (ükskõik millised N toodet hinnaga X €). Kingitused ja tasulised lisatooted ootavad kassapidaja kinnitust; komplektihinnad rakenduvad automaatselt."
       },
       {
         "type": "p",
-        "text": "Kingitused ja tasulised lisatooted ei muuda ostukorvi kunagi omal käel. Kui tingimused on täidetud, ilmub kassaekraanile soovitusriba ning ostukorv muutub alles siis, kui kassapidaja puudutab nuppu „Vali kingitus“ või „Vali lisatoode“. See on teadlik valik, sest kingitused puudutavad füüsilist laoseisu: keegi peab kinnitama, et toode on olemas ja klient soovib seda."
+        "text": "Kingitused ja tasulised lisatooted ei muuda ostukorvi kunagi omal käel. Kui tingimused on täidetud, ilmub kassaekraanile soovitusriba ning ostukorv muutub alles siis, kui kassapidaja puudutab riba kingitusenuppu või +-nuppu („Vali kingitus“ või „Vali lisatoode“). See on teadlik valik, sest kingitused puudutavad füüsilist laoseisu: keegi peab kinnitama, et toode on olemas ja klient soovib seda."
       },
       {
         "type": "list",
         "items": [
-          "Pärast nupu „Keeldu“ puudutamist sama soovitus selles ostukorvis enam ei ilmu; uus või tühjendatud ostukorv pakub seda uuesti.",
-          "Alates versioonist v3.4 ei takista ootel pakkumised kassat: kollane rida makse nupu all, näiteks „1 ootel pakkumine ei rakendu“, ütleb, mitu on välja jäetud (puuduta seda, et näha, millised), ja müük läheb läbi ilma nendeta. Et kassa ootaks nagu varem, lülita jaotises Seaded → Seadme eelistused sisse Käsitle pakkumised enne kassat; see kehtib ainult sellel iPadil.",
+          "Pärast riba ✕ („Keeldu“) puudutamist sama soovitus selles ostukorvis enam ei ilmu; uus või tühjendatud ostukorv pakub seda uuesti.",
+          "Kui ostukorv enam tingimustele ei vasta (näiteks eemaldati toode, mis kingituse käivitas), eemaldatakse kingitus või lisatoode automaatselt ja ülaosas kuvatakse teade; see ei lähe kasutuskorra hulka (alates versioonist v3.6).",
+          "Alates versioonist v3.4 ei takista ootel pakkumised kassas maksmist: kollane rida maksenupu all, näiteks „1 ootel pakkumine ei rakendu“, näitab, mitu pakkumist välja jääb (puuduta rida, et näha millised), ja müük läheb läbi ilma nendeta. Et kassa ootaks nagu varem, lülita jaotises Seaded → Seadme eelistused sisse Käsitle pakkumised enne kassat; see kehtib ainult sellel iPadil.",
           "Kingituse ja lisatoote ridu ei saa muud rahalised kampaaniad edasi alandada ning need ei lähe arvesse teiste kampaaniate läviväärtuste täitmisel."
         ]
       },
       {
         "type": "p",
-        "text": "Komplektihinnad (automaatsed alates versioonist v2.4): kui ostukorvist saab komplekti moodustada, rühmitab DingPOS selle ja arvestab kogusummasse – küsimata, ning komplekte ei saa poolitada."
+        "text": "Komplektihindu rakendatakse automaatselt alates versioonist v2.4: kui ostukorvist saab komplekti moodustada, rühmitab DingPOS tooted komplektiks ja lisab selle kogusummasse ilma kinnitust küsimata; komplekte ei saa poolitada."
       },
       {
         "type": "list",
@@ -2557,19 +3384,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alates versioonist v3.4 näitab vahekaart Kasum iga kuu puhaskasumit pärast toodete omahinda, tasusid ja kulusid — vaata „Kuidas näha, kui palju ma iga kuu tegelikult teenisin?“ Eksporditavat ega prinditavat tasumisaruannet veel pole, kuid kõik andmed kontrollimiseks on rakenduses juba olemas:"
+        "text": "Alates versioonist v3.4 näitab vahekaart Kasum iga kuu puhaskasumit pärast toodete omahinda, tasusid ja kulusid — vaata „Kuidas näha, kui palju ma iga kuu tegelikult teenisin?“ Alates versioonist v3.6 saab maksuaruandest eksportida perioodi (näiteks See kuu) CSV-failina, Exceli tööraamatuna või PDF-aruandena raamatupidajale: müük, maks, iga makseviisi kaudu laekunud summa ja laekumata nõuded. Kasumit ja teisi aruandeid eksportida veel ei saa, kuid kõik andmed kontrollimiseks on rakenduses juba olemas:"
       },
       {
         "type": "list",
         "items": [
           "Vali Aruanded all periood See kuu, et näha kuu müügitulu, laekunud raha, kasumit ja maksete jaotust.",
           "Tarnijate kuutingimustega ostud koonduvad jaotises Ostmine alla Tasumata arved, kus saab terve kuu korraga tasuda.",
-          "Klientidele arvele müüdud kaubad koonduvad jaotises Müügid → Nõuded, kus saab terve kuu eest korraga tasuda."
+          "Klientidele arvele müüdud kaupade nõuded koonduvad jaotises Müügid → Nõuded, kus saab terve kuu eest korraga tasuda."
         ]
       },
       {
         "type": "p",
-        "text": "Kui vajad kuist tasumisaruannet, mida saaks eksportida või printida, kirjuta meile, milliseid välju vajad. Arendust seame tähtsuse järjekorda päringute arvu järgi."
+        "text": "Kui vajad kuist tasumisaruannet, mida saaks eksportida või printida ja mis läheb maksuaruande sisust kaugemale, kirjuta meile, milliseid välju vajad. Arendust seame tähtsuse järjekorda päringute arvu järgi."
       }
     ],
     "related": [

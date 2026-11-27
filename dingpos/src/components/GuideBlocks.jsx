@@ -1,14 +1,8 @@
 // Renders a guide's content blocks (schema in src/data/guides/guides.zh-Hant.js).
 import { Info } from "@phosphor-icons/react";
 import TransitionLink from "./TransitionLink";
+import Figure from "./Figure";
 import { INLINE_LINK } from "../data/guides/links.js";
-
-// Width of an image block's `phone` file; the build checks it.
-const PHONE_IMAGE_WIDTH = 1080;
-
-// Rendered image width, mirroring .figure in pages/article.scss: capped at
-// 480px, else the article column inside the shell's 24px gutters.
-const IMAGE_SIZES = "(min-width: 528px) 480px, calc(100vw - 48px)";
 
 /** Text with [label](/route/) and [label](https://…) links; the build checks every target. */
 function InlineText({ text }) {
@@ -109,32 +103,11 @@ function GuideBlocks({ blocks }) {
           </div>
         );
       case "image":
-        return <GuideImage key={i} block={block} />;
+        return <Figure key={i} {...block} />;
       default:
         throw new Error(`Unknown guide block type "${block.type}"`);
     }
   });
-}
-
-/** A product screenshot crop: pure screen pixels, framed by CSS. */
-function GuideImage({ block }) {
-  const base = import.meta.env.BASE_URL;
-  const { src, phone, width, height, alt, caption } = block;
-  return (
-    <figure className="figure">
-      <img
-        src={`${base}${src}`}
-        srcSet={phone ? `${base}${phone} ${PHONE_IMAGE_WIDTH}w, ${base}${src} ${width}w` : undefined}
-        sizes={phone ? IMAGE_SIZES : undefined}
-        width={width}
-        height={height}
-        alt={alt}
-        loading="lazy"
-        decoding="async"
-      />
-      {caption && <figcaption>{caption}</figcaption>}
-    </figure>
-  );
 }
 
 export default GuideBlocks;

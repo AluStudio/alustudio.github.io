@@ -105,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "La valuta non si può cambiare dopo la configurazione; imposte e modalità imposte si possono modificare in seguito in Impostazioni → Info negozio. Negli Stati Uniti, in Canada, in Brasile e in Micronesia l'aliquota dipende dallo stato, dalla provincia o dalla città: il campo dell'aliquota parte vuoto e, per continuare, inserisci l'aliquota che applichi. Un'aliquota deve essere superiore a 0: un negozio che non applica imposte elimina la riga. L'elenco di 175 paesi e la scelta della valuta sono arrivati con la v3.2; le versioni precedenti offrivano 15 paesi."
+        "text": "La valuta non si può cambiare dopo la configurazione; imposte e modalità imposte si possono modificare in seguito in Impostazioni → Info negozio. Negli Stati Uniti, in Canada, in Brasile e in Micronesia l'aliquota dipende dallo stato, dalla provincia o dalla città: il campo dell'aliquota parte vuoto e, per continuare, inserisci l'aliquota che applichi. Un'aliquota deve essere superiore a 0: un negozio che non applica imposte elimina la riga. In Germania, Francia, Italia e in altri paesi europei l'elenco comprende anche le aliquote ridotte più comuni nel commercio al dettaglio locale, con il nome locale dell'imposta, ad esempio «MwSt. 19%» e «MwSt. 7%» in Germania; le aliquote ridotte non vengono applicate di default ai nuovi prodotti, quindi attivale prodotto per prodotto. L'elenco di 175 paesi e la scelta della valuta sono arrivati con la v3.2; le versioni precedenti offrivano 15 paesi."
       }
     ],
     "related": [
@@ -329,6 +329,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Ogni articolo e ogni carrello possono avere un solo sconto alla volta: applicarne un altro sostituisce il precedente, e toccando il badge dello sconto lo rimuovi. Gli sconti si applicano prima dell'imposta, come da prassi nel commercio al dettaglio."
+      },
+      {
+        "type": "p",
+        "text": "Gli sconti che dai spesso si possono salvare: vai in Impostazioni → Fedeltà e promozioni → Sconti predefiniti e tocca Aggiungi sconto predefinito, ad esempio «Prezzo collaboratori −20%». Alla cassa, sia lo sconto sugli articoli sia lo sconto sul carrello hanno un menu Predefiniti: scegliendone uno, tipo e valore dello sconto si compilano esattamente come se li avessi digitati, quindi conta comunque ai fini dello sconto massimo del ruolo del collaboratore. Gli sconti predefiniti sono arrivati con la v3.6 e richiedono il piano Standard o superiore."
       }
     ],
     "related": [
@@ -384,7 +388,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ordine completo del calcolo: sconti sugli articoli e promozioni → sconto sul carrello → utilizzo dei punti → imposta. Gli importi vengono arrotondati al numero di decimali previsto per la valuta (ad es. 0 per TWD, 2 per USD); le frazioni esattamente a metà vengono arrotondate per eccesso."
+        "text": "Ordine completo del calcolo: sconti sugli articoli e promozioni → sconto sul carrello → utilizzo dei punti → imposta. Gli importi vengono arrotondati al numero di decimali previsto per la valuta, con le frazioni esattamente a metà arrotondate per eccesso (ad es. 0 per TWD, 2 per USD). L'imposta viene calcolata una sola volta per ciascuna imposta su ogni ordine e i suoi decimali seguono Arrotondamento dell'imposta nella scheda Imposta: Arrotonda al più vicino, Arrotonda per difetto o Arrotonda per eccesso. I nuovi negozi in Giappone partono con Arrotonda per difetto; tutti gli altri partono con Arrotonda al più vicino."
       },
       {
         "type": "note",
@@ -414,7 +418,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Un nuovo negozio parte con due metodi di pagamento, Contanti e Carta di credito, con i nomi nella lingua dell'app durante la configurazione. In Impostazioni → Metodi di pagamento puoi aggiungere qualsiasi altro metodo (ad es. Apple Pay, LINE Pay, un portafoglio digitale locale), eliminarlo o riordinarlo."
+        "text": "Un nuovo negozio parte con due metodi di pagamento, Contanti e Carta di credito, con i nomi nella lingua dell'app durante la configurazione. In Impostazioni → Metodi di pagamento puoi aggiungere qualsiasi altro metodo (ad es. Apple Pay, LINE Pay, un portafoglio digitale locale) e cambiare l'ordine dei metodi. Tocca un metodo per rinominarlo, ad esempio da Carta di credito a «Carta (Square)»: Report conta con il nuovo nome anche le vendite fatte prima della ridenominazione (dalla v3.6). Elimina metodo di pagamento si trova in fondo alla schermata di modifica e chiede conferma prima di eliminare; gli ordini passati mantengono il metodo con cui sono stati pagati e l'ultimo metodo rimasto non può essere eliminato."
       },
       {
         "type": "p",
@@ -453,7 +457,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Sì. In Impostazioni → Metodi di pagamento tocca un metodo di pagamento (o aggiungine uno nuovo) e compila Commissione: una percentuale, un importo fisso per operazione, oppure entrambi. Da quel momento ogni pagamento incassato con quel metodo registra una commissione stimata con la tariffa in vigore in quel momento."
+        "text": "Sì. In Impostazioni → Metodi di pagamento tocca un metodo di pagamento (o aggiungine uno nuovo) e compila Commissione: una percentuale, un importo fisso per operazione, oppure entrambi. I metodi di tipo contanti non hanno commissione. Da quel momento ogni pagamento incassato con quel metodo registra una commissione stimata con la tariffa in vigore in quel momento."
       },
       {
         "type": "p",
@@ -462,9 +466,9 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Inserisci la tariffa che il fornitore trattiene davvero, tasse incluse: per il 3% più il 5% di tasse, inserisci 3,15%. Lascia vuoti entrambi i campi se non c'è commissione.",
+          "Inserisci la tariffa che il fornitore trattiene davvero. Se sulla commissione si applica un'imposta, includila: per il 3% più il 5% di imposta, inserisci 3,15%. Lascia vuoti entrambi i campi se non c'è commissione.",
           "Una modifica della tariffa vale solo per i pagamenti successivi; le commissioni già registrate restano come sono.",
-          "«Percentuale della commissione restituita sui rimborsi» è attiva di default, per i fornitori che restituiscono la commissione quando fai un rimborso. Riguarda i resi e gli acconti dei preordini rimborsati: se è attiva, la percentuale viene restituita; la parte fissa mai. Uno Storno o un Annullamento del saldo ignorano l'interruttore e stornano l'intera commissione registrata, parte fissa inclusa. In ogni caso il cliente riceve lo stesso importo.",
+          "«Percentuale della commissione restituita sui rimborsi» parte attiva per i negozi a Taiwan e in Giappone e disattivata altrove, perché fornitori come Stripe, Square e PayPal trattengono la commissione in caso di rimborso: impostala in base al tuo fornitore. Riguarda i resi e gli acconti dei preordini rimborsati: se è attiva, la percentuale viene restituita; la parte fissa mai. Uno Storno o un Annullamento del saldo ignorano l'interruttore e stornano l'intera commissione registrata, parte fissa inclusa. In ogni caso il cliente riceve lo stesso importo.",
           "I pagamenti incassati prima che il metodo avesse una tariffa non hanno commissione: Report li segnala con «N senza tariffa» e mostra il netto come «—»."
         ]
       },
@@ -782,7 +786,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "In cassa, cambia in alto la schermata da Vendita a Preordine, scegli la data di ritiro, inserisci l'acconto (da 0 fino all'importo totale, con le scorciatoie 30% / 50% / totale) e indica come viene pagato. Associa un cliente, così potrai contattarlo quando arriva la merce."
+        "text": "In cassa, cambia in alto la schermata da Vendita a Preordine, scegli la data di ritiro, inserisci l'acconto (da 0 fino all'importo totale, con le scorciatoie 30% / 50% / totale) e indica come viene pagato. Associa un cliente, così potrai contattarlo per il ritiro."
       },
       {
         "type": "list",
@@ -896,11 +900,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Quando un prodotto ha varianti, il campo Prezzo si chiude e ogni combinazione ha il proprio prezzo in Prezzo e giacenza delle varianti, con la propria giacenza (dalla v3.2; le versioni precedenti chiedono ancora un prezzo del prodotto). La cassa, l'elenco prodotti e il dettaglio prodotto mostrano un intervallo dal prezzo più basso al più alto, come “NT$350–NT$390”, oppure un prezzo unico quando tutte le combinazioni costano uguale; l'ordinamento per prezzo usa il prezzo più basso tra le combinazioni. Alla cassa, toccando il prodotto compare la scelta della variante prima di aggiungerlo al carrello."
+        "text": "Quando un prodotto ha varianti, ogni combinazione in Prezzo e giacenza delle varianti ha la propria giacenza e il suo prezzo segue il Prezzo del prodotto: una combinazione senza un prezzo proprio mostra il prezzo del prodotto in grigio e cambia quando cambia questo, mentre un numero che digiti è il prezzo proprio di quella combinazione, mostrato in nero. Ad esempio, imposta il Prezzo di una maglietta a 390 e cambia solo la L a 350: M e XL si vendono a 390 e, quando in seguito il Prezzo diventa 420, M e XL passano a 420 mentre L resta a 350. Il simbolo ⓘ accanto alla colonna Prezzo contiene Usa prezzo prodotto, che riporta tutte le combinazioni a seguire il prezzo del prodotto. I prodotti creati prima della v3.6 mantengono ogni prezzo di variante come prezzo proprio di quella combinazione, e il Prezzo del prodotto è il più basso tra questi. La cassa, l'elenco prodotti e il dettaglio prodotto mostrano un intervallo dal prezzo più basso al più alto, come “NT$350–NT$390”, oppure un prezzo unico quando tutte le combinazioni costano uguale; l'ordinamento per prezzo usa il prezzo più basso tra le combinazioni. Alla cassa, toccando il prodotto compare la scelta della variante prima di aggiungerlo al carrello."
       },
       {
         "type": "p",
-        "text": "Non devi inserire un costo per ogni combinazione: un campo Costo vuoto significa Segue il prodotto, cioè usa il costo del prodotto e cambia quando cambia quello. Un numero lo rende Costo proprio, anche se è 0. Usa il costo del prodotto per tutte cancella in un colpo solo tutti i costi propri."
+        "text": "Il costo funziona allo stesso modo: un costo vuoto mostra in grigio il costo del prodotto e cambia quando cambia quello, mentre un numero è il costo proprio della combinazione, mostrato in nero, anche se è 0. Usa costo prodotto, nel simbolo ⓘ accanto alla colonna Costo, cancella in un colpo solo i costi propri di tutte le combinazioni."
       },
       {
         "type": "note",
@@ -1037,7 +1041,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Una volta attivata, vendite e preordini scalano la giacenza in automatico; storni, resi e preordini annullati la rimettono a magazzino; ricevere un ordine d'acquisto la aumenta. Ogni movimento viene registrato in un registro completo. Le giacenze basse sono evidenziate da un avviso colorato."
+        "text": "Una volta attivata, vendite e preordini scalano la giacenza in automatico; storni, resi e preordini annullati la rimettono a magazzino; ricevere un ordine d'acquisto la aumenta. Ogni movimento viene registrato in un registro completo. Con 10 pezzi o meno, la giacenza è segnalata come bassa in arancione nell'elenco prodotti, alla cassa e nel dettaglio prodotto."
       },
       {
         "type": "p",
@@ -1077,7 +1081,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Usa Rettifica giacenza. Per un prodotto con giacenza tracciata, tocca Rettifica giacenza nel dettaglio del prodotto, scegli Rimuovi o Aggiungi, inserisci la quantità, scegli un motivo e, se vuoi, aggiungi una nota (fino a 100 caratteri). La schermata calcola la giacenza dopo la modifica e la riga sotto il motivo indica se incide sul conto economico."
+        "text": "Usa Rettifica giacenza. Per un prodotto con giacenza tracciata, tocca Rettifica giacenza nel dettaglio del prodotto, scegli Rimuovi o Aggiungi, imposta la quantità con + e − (parte da 1; tocca il numero per digitarlo), scegli un motivo e, se vuoi, aggiungi una nota (fino a 100 caratteri). La schermata calcola la giacenza dopo la modifica e la riga sotto il motivo indica se incide sul conto economico."
       },
       {
         "type": "list",
@@ -1152,14 +1156,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "La sezione Acquisti nella barra laterale gestisce fornitori e ordini d'acquisto. Un fornitore conserva nome, referente, telefono, indirizzo e una condizione di pagamento predefinita (Pagamento alla consegna o Credito mensile)."
+        "text": "La sezione Acquisti nella barra laterale gestisce fornitori e ordini d'acquisto. Un fornitore conserva nome, referente, telefono, indirizzo e una condizione di pagamento predefinita: Pagamento alla consegna o Credito mensile."
       },
       {
         "type": "steps",
         "items": [
-          "Tocca Nuovo acquisto, scegli il fornitore e aggiungi prodotti, quantità e costi unitari (precompilati con il costo attuale di ciascun prodotto). Si possono aggiungere anche le spese di spedizione. Se il fornitore non è ancora stato creato, tocca Aggiungi fornitore in alto a sinistra nell'elenco dei fornitori: il nuovo fornitore torna direttamente nell'ordine d'acquisto.",
+          "Tocca Nuovo acquisto, scegli il fornitore e aggiungi prodotti, quantità e costi unitari (precompilati con il costo attuale di ciascun prodotto). Si possono aggiungere anche le spese di spedizione. Per la merce non ancora creata come prodotto, tocca Nuovo prodotto nel selettore Aggiungi prodotto: il nuovo prodotto entra direttamente nell'ordine d'acquisto come riga. Se il fornitore non è ancora stato creato, tocca Aggiungi fornitore in alto a sinistra nell'elenco dei fornitori: il nuovo fornitore torna direttamente nell'ordine d'acquisto.",
           "Una bozza non tocca mai la giacenza né i debiti: modificala o eliminala liberamente.",
-          "Quando la merce arriva, tocca Ricevi merce: la giacenza tracciata aumenta e l'ordine d'acquisto riceve il suo numero e si blocca. Per impostazione predefinita la ricezione aggiorna anche il costo di ogni prodotto con questo costo unitario; disattiva Sincronizza costo prodotto nell'ordine d'acquisto per lasciare i costi invariati."
+          "Quando la merce arriva, tocca Ricevi merce: la giacenza tracciata aumenta e l'ordine d'acquisto riceve il suo numero e si blocca. Per impostazione predefinita la ricezione aggiorna anche il costo di ogni prodotto con questo costo unitario; disattiva Sincronizza costo prodotto nell'ordine d'acquisto per lasciare i costi invariati. Subito sotto, Includi spedizione nel costo (attivo per i nuovi ordini d'acquisto) ripartisce le spese di spedizione sulle righe in base all'importo, così il costo scritto su ogni prodotto include la sua quota: farina 10 × $30, burro 1 × $60 e $25 di spedizione danno alla farina un costo di $32 e al burro di $64."
         ]
       },
       {
@@ -1206,7 +1210,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Un prodotto non in vendita non compare mai nella griglia della cassa, nelle categorie, nella ricerca o nella scansione dei codici a barre, e non può essere un regalo, un extra, il prodotto a cui si applica una promozione o un articolo sostitutivo in un cambio.",
+          "Un prodotto non in vendita non compare mai nella griglia della cassa, nelle categorie, nella ricerca o nella scansione dei codici a barre, e non può essere un regalo, un extra, il prodotto a cui si applica una promozione o un articolo sostitutivo in un cambio. Una categoria che contiene solo prodotti non in vendita non compare nella barra delle categorie della cassa.",
+          "Quando il negozio ha prodotti non in vendita, in alto a destra in Prodotti compare un pulsante filtro: scegli Tutti i prodotti, In vendita o Non in vendita, insieme a ricerca e categorie.",
           "Ordini d'acquisto, ricezione, Sincronizza costo prodotto e conti da pagare funzionano esattamente come per gli altri prodotti, quindi costo d'acquisto e giacenza di un materiale si possono registrare da Acquisti.",
           "Vendere altri prodotti non ne scala la giacenza. Quando ne usi un po', registra una diminuzione con Rettifica giacenza nel dettaglio del prodotto: Usato in produzione per ciò che è finito nei prodotti, Materiali di consumo per cose come sacchetti di carta o detersivi.",
           "Puoi riattivarlo quando vuoi: prezzo e imposte restano al loro posto. Gli ordini e i report già creati non cambiano."
@@ -1235,39 +1240,80 @@ export const articles = [
     "keywords": [
       "ricavi",
       "incassato",
-      "incassi",
+      "report",
+      "utile lordo",
+      "dai ricavi all'utile lordo",
       "quadratura cassa",
       "acconto",
-      "vendita a credito"
+      "vendita a credito",
+      "imposta"
     ],
     "content": [
       {
         "type": "p",
-        "text": "I Ricavi contano nel giorno in cui la merce passa di mano, dopo tutti gli sconti e prima delle imposte; l'Incassato conta nel giorno in cui entra il denaro ed è il denaro che hai effettivamente incassato, imposte comprese. Quindi, in un negozio che applica l'imposta, l'Incassato supera i Ricavi dell'importo dell'imposta, anche per gli ordini pagati alla cassa. Per il resto, le due cifre si differenziano quando:"
+        "text": "I Ricavi contano nel giorno in cui la merce passa di mano, dopo tutti gli sconti e prima delle imposte; l'Incassato conta nel giorno in cui entra il denaro ed è il denaro che hai incassato, imposte comprese. In un negozio che applica l'imposta, l'Incassato supera quindi i Ricavi dell'importo dell'imposta, anche per gli ordini pagati alla cassa. Sono i primi due riquadri della prima riga di Report, accanto a Utile lordo, Ordini e Ordine medio."
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Righe di riquadri di Report con Ricavi e Incassato affiancati nella prima riga"
+      },
+      {
+        "type": "h2",
+        "text": "Quando Ricavi e Incassato differiscono"
+      },
+      {
+        "type": "p",
+        "text": "Ad esempio, un negozio con imposta inclusa nei prezzi vende a NT$1,050, 5% di imposta compresa, e il cliente paga alla cassa: i Ricavi sono NT$1,000 e l'Incassato è NT$1,050. Oltre all'imposta, le due cifre si differenziano in questi casi:"
       },
       {
         "type": "list",
         "items": [
-          "Vendita a credito: la merce esce oggi e rientra nei Ricavi di oggi; il denaro rientra nell'Incassato nel giorno in cui viene saldato.",
+          "Vendita a credito: la merce esce oggi e rientra nei Ricavi di oggi; il denaro rientra nell'Incassato nel giorno in cui l'ordine viene saldato.",
           "Preordine: l'acconto rientra nell'Incassato quando viene pagato; i Ricavi vengono riconosciuti per intero alla data del ritiro.",
-          "Acconto trattenuto: quando un cliente annulla un preordine e tu trattieni l'acconto, questo era già stato contato nell'Incassato al momento del pagamento. Report lo mostra a parte come acconti trattenuti e non rientra mai nei Ricavi.",
-          "Storno di un ordine precedente: il denaro rimborsato rientra nell'Incassato nel giorno dello storno, quindi l'Incassato di quel giorno può essere negativo, mentre Stornati conta l'ordine alla data della vendita.",
-          "Arrotondamento contanti: ciò che l'arrotondamento dei contanti aggiunge o toglie al totale dell'ordine rientra nell'Incassato, mai nei Ricavi."
+          "Acconti trattenuti: quando un cliente annulla un preordine e tu trattieni l'acconto, questo era già stato contato nell'Incassato al momento del pagamento. Report lo mostra a parte come Acconti trattenuti e non rientra mai nei Ricavi.",
+          "Storno di un ordine precedente: il denaro rimborsato rientra nell'Incassato nel giorno dello storno, quindi l'Incassato di quel giorno può essere negativo. L'ordine stornato resta conteggiato alla data della vendita e compare nel sottotitolo del riquadro Ordini.",
+          "Arrotondamento contanti: ciò che l'Arrotondamento contanti aggiunge o toglie al totale dell'ordine rientra nell'Incassato, mai nei Ricavi."
         ]
       },
       {
         "type": "p",
-        "text": "Per far quadrare i conti, confronta l'Incassato con il cassetto e con il terminale carte; per sapere quanto hai davvero venduto in un periodo, guarda i Ricavi. I resi riducono i ricavi nel giorno del reso. Lo spiega anche l'ⓘ sui riquadri Ricavi, Incassato e Stornati, mentre l'imposta è elencata in Dai ricavi all’utile lordo, che si apre dal riquadro Utile lordo."
+        "text": "Quando uno dei due importi è diverso da zero, il sottotitolo del riquadro Incassato mostra l'Arrotondamento contanti o gli Acconti trattenuti."
+      },
+      {
+        "type": "h2",
+        "text": "Imposta e dettagli dei riquadri"
+      },
+      {
+        "type": "p",
+        "text": "L'imposta che separa Ricavi e Incassato è elencata in Dai ricavi all’utile lordo, che si apre dalla riga in fondo al riquadro Utile lordo. Mostra Ricavi (imposte incluse), Imposta e Ricavi (al netto delle imposte). I negozi in Australia, Regno Unito, Nuova Zelanda e Singapore vi vedono il nome locale dell'imposta, ad esempio Ricavi (incl. GST), GST e Ricavi (al netto di GST)."
+      },
+      {
+        "type": "p",
+        "text": "Per vedere l'imposta incassata da dichiarare, apri Report imposte dal riquadro Imposta."
+      },
+      {
+        "type": "p",
+        "text": "L'icona ⓘ sui riquadri Ricavi, Incassato e Ordini spiega queste regole nell'app, compresi gli ordini stornati elencati nel sottotitolo del riquadro Ordini."
+      },
+      {
+        "type": "h2",
+        "text": "Quadratura e lettura delle vendite"
+      },
+      {
+        "type": "p",
+        "text": "Per far quadrare i conti, confronta l'Incassato con il cassetto e con il terminale carte. La scheda Metodi di pagamento in Report mostra una riga per metodo e le vendite fatte prima di rinominare un metodo vengono conteggiate con il nuovo nome. Per sapere quanto hai venduto in un periodo, guarda i Ricavi. I resi riducono i Ricavi nel giorno del reso."
       },
       {
         "type": "note",
-        "text": "I ricavi al netto delle imposte sono arrivati con la v3.5 e anche i periodi passati sono stati ricalcolati allo stesso modo, quindi un negozio che applica l'imposta vede ricavi più bassi rispetto a prima dell'aggiornamento. È una correzione. Le versioni precedenti includevano l'imposta nei ricavi e nei negozi con prezzi al netto delle imposte si contava come ricavo persino l'imposta sulle vendite incassata."
+        "text": "I ricavi al netto delle imposte sono arrivati con la v3.5 e anche i periodi passati sono stati ricalcolati allo stesso modo, quindi un negozio che applica l'imposta vede Ricavi più bassi rispetto a prima dell'aggiornamento. È una correzione: le versioni precedenti includevano l'imposta nei Ricavi e nei negozi con prezzi al netto delle imposte si contava come ricavo persino l'imposta sulle vendite incassata."
       }
     ],
     "related": [
       "on-account",
       "pre-orders",
-      "report-periods"
+      "report-periods",
+      "tax-report"
     ]
   },
   {
@@ -1279,95 +1325,225 @@ export const articles = [
       "periodo",
       "questa settimana",
       "questo mese",
-      "quest'anno",
       "intervallo personalizzato",
-      "data",
-      "classifica prodotti"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "In alto in Report scegli Oggi, Ieri, Questa settimana, Questo mese, Quest'anno o Sempre, oppure usa Personalizzato per indicare una data di inizio e una di fine. Questa settimana segue il primo giorno della settimana impostato sul dispositivo; Questo mese e Quest'anno partono dal 1° del mese e dal 1° gennaio. Ogni opzione mostra le date che copre e Sempre parte dalla prima vendita del tuo negozio."
-      },
-      {
-        "type": "p",
-        "text": "Sotto la barra del periodo ci sono due righe di riquadri (Ricavi, Incassato, Utile lordo, Ordini, Ordine medio; Sconti totali, Utile netto, Prodotti senza costo, Clienti serviti), poi il grafico dell'andamento. Il menu in alto a destra del grafico dell'andamento permette di passare tra ricavi, ordini, ordine medio e clienti serviti e, accanto, il grafico Costo e utile lordo impila in un'unica barra il costo dei prodotti e l'utile lordo di ogni periodo. Un singolo giorno è mostrato per ora; i periodi più lunghi usano giorni, settimane, mesi o anni, in base alla durata."
-      },
-      {
-        "type": "p",
-        "text": "Tieni premuto sul grafico dell'andamento o sul grafico Costo e utile lordo per leggerli periodo per periodo; con Confronto vendite attivo, la scheda del grafico dell'andamento mostra affiancate la cifra di questo periodo e quella del periodo di confronto. Trascina a sinistra o a destra per spostarti; scorri verso l'alto o verso il basso sul grafico e la pagina scorre come al solito."
-      },
-      {
-        "type": "p",
-        "text": "La scheda Classifica prodotti elenca i primi 5. Tocca la scheda o Mostra tutti per vedere ogni prodotto venduto nel periodo, in ordine di quantità al netto dei resi; un prodotto con varianti ha una riga per ogni variante."
-      },
-      {
-        "type": "p",
-        "text": "Confronto vendite, a destra della barra del periodo, mette a confronto il periodo con quello precedente o con lo stesso periodo dell'anno scorso — vedi «Che cosa mostrano i report avanzati?»"
-      },
-      {
-        "type": "note",
-        "text": "Questi periodi di calendario sono arrivati con la v2.4; le versioni precedenti offrivano intervalli mobili (Oggi / 7 giorni / 30 giorni / Sempre). Se li vedi ancora, aggiorna DingPOS dall'App Store."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "Che cosa mostrano i report avanzati?",
-    "keywords": [
-      "report avanzati",
-      "confronto vendite",
-      "anno scorso",
-      "mappa di calore",
-      "orari di punta",
+      "classifica prodotti",
       "articoli a bassa rotazione",
-      "variazioni prodotti",
-      "quota per categoria",
-      "valore del magazzino",
-      "tasso di riacquisto",
-      "punti"
+      "mappa di calore",
+      "giorno × ora",
+      "valore del magazzino"
     ],
     "content": [
       {
         "type": "p",
-        "text": "I report avanzati non sono una schermata a parte: stanno direttamente in Report e seguono il periodo che scegli in alto:"
+        "text": "Scegli Oggi, Ieri, Questa settimana, Questo mese, Quest'anno o Sempre nella barra del periodo in alto in Report, oppure tocca Personalizzato per scegliere una data di inizio e una di fine qualsiasi. Ogni scheda della pagina segue il periodo scelto. Questa settimana segue il primo giorno della settimana impostato sul dispositivo, Questo mese parte dal 1° del mese, Quest'anno parte dal 1° gennaio, Sempre parte dalla prima vendita del tuo negozio e ogni opzione mostra le date che copre."
       },
       {
-        "type": "list",
+        "type": "shot",
+        "name": "report-periods",
+        "alt": "Barra del periodo in alto in Report con Personalizzato selezionato e il popover delle date aperto per scegliere Inizio e Fine"
+      },
+      {
+        "type": "h2",
+        "text": "Scegliere un intervallo personalizzato"
+      },
+      {
+        "type": "p",
+        "text": "Usa Personalizzato quando ti serve un intervallo diverso dai periodi di calendario predefiniti, ad esempio un periodo di dichiarazione fiscale bimestrale o trimestrale."
+      },
+      {
+        "type": "steps",
         "items": [
-          "Confronto vendite: a destra della barra del periodo, confronta con lo stesso periodo dell'anno scorso o con il periodo precedente (un singolo giorno con lo stesso giorno della settimana scorsa, questa settimana con la scorsa, questo mese con il mese scorso, quest'anno con l'anno scorso, un intervallo personalizzato con lo stesso numero di giorni che lo precedono). I riquadri Ricavi, Incassato, Utile lordo, Ordini, Ordine medio, Sconti totali e Clienti serviti mostrano ciascuno la variazione e la cifra del periodo di confronto, ad esempio «▼ 3% rispetto a mese scorso»; la variazione di Sconti totali è sempre grigia, perché uno sconto in più non è di per sé un bene né un male. Tocca una qualsiasi riga di confronto per aprire Confronto tra periodi, che elenca le cifre di entrambi i periodi. Il grafico dell'andamento aggiunge una linea più chiara per il periodo di confronto. Finché un periodo è ancora in corso, il periodo di confronto viene tagliato allo stesso momento.",
-          "Giorno × ora: nell'intestazione del grafico dell'andamento passa da Andamento a Giorno × ora per una mappa di calore su sette giorni e 24 ore: più una cella è scura, più hai venduto. Passa tra ricavi e ordini; con un confronto attivo vedi quali ore sono cresciute e quali sono calate.",
-          "Articoli a bassa rotazione: passa l'intestazione della scheda di classifica ad Articoli a bassa rotazione per elencare i prodotti dal meno al più venduto, con la giacenza attuale e l'ultima data in cui ciascuno è stato venduto. I prodotti mai venduti sono indicati come Mai venduto e un prodotto con varianti ha una riga per ogni variante. Per impostazione predefinita sono mostrati solo i prodotti in giacenza.",
-          "Variazioni (dalla v3.4): passa l'intestazione della scheda di classifica a Variazioni per vedere i 3 prodotti i cui ricavi sono cresciuti di più e i 3 calati di più rispetto al periodo di confronto, ciascuno con i ricavi dei due periodi e la differenza; ogni variante è confrontata con se stessa. Scegli prima un periodo in Confronto vendite: con Nessuno, o su Sempre, la scheda te lo ricorda. Tocca la scheda o Mostra tutti per l'elenco completo Variazioni prodotti, diviso in In aumento e In calo.",
-          "Tasso di riacquisto: l'ultima riga del riquadro dei clienti è la quota di clienti fedeltà che hanno acquistato nel periodo e hanno acquistato in totale due o più volte. Con un confronto attivo, una riga sotto indica la variazione in punti percentuali e il tasso del periodo di confronto.",
-          "Quota per categoria: i ricavi e la quota di ogni categoria, in base alla categoria attuale di ogni prodotto, dalla più grande. I prodotti senza categoria rientrano in Senza categoria e le righe sommano esattamente i Ricavi.",
-          "Situazione attuale: il valore del magazzino (giacenza attuale × costo attuale), tutti i movimenti di magazzino del periodo selezionato e i punti che i clienti hanno ma non hanno ancora riscattato, con lo sconto massimo che possono ottenere. Sono saldi attuali: il periodo non li modifica."
+          "Apri Report e tocca Personalizzato nella barra del periodo.",
+          "Scegli la data di inizio e quella di fine nel popover.",
+          "Conferma le date per aggiornare il report."
         ]
       },
       {
         "type": "p",
-        "text": "Dalla v3.4 sono tutti disponibili con ogni piano e restano disponibili anche dopo la fine della prova. Le versioni precedenti li mostravano solo con Pro, con un piccolo lucchetto sugli altri piani; se vedi ancora i lucchetti, aggiorna DingPOS dall'App Store."
+        "text": "Anche il riquadro Imposta e il report imposte seguono il periodo scelto, quindi impostare un intervallo di dichiarazione con Personalizzato aggiorna entrambi; vedi l'articolo correlato sul report imposte. A destra della barra del periodo, tocca Confronta per vedere il periodo selezionato accanto a quello precedente o allo stesso periodo dell'anno scorso; vedi l'articolo correlato sul confronto tra periodi."
+      },
+      {
+        "type": "h2",
+        "text": "Riquadri e schede della pagina"
       },
       {
         "type": "p",
-        "text": "Lite non gestisce giacenza né punti fedeltà, ma Situazione attuale mostra comunque il valore del magazzino e i punti non riscattati che il tuo negozio ha già (per esempio dalla prova), oppure zero."
+        "text": "Sotto la barra del periodo, Report mostra due righe di riquadri con i valori, seguite da grafici e schede riepilogative a coppie, con Situazione attuale in fondo."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Prima riga di riquadri: Ricavi, Incassato, Utile lordo, Ordini e Ordine medio.",
+          "Seconda riga di riquadri: Sconti totali, Imposta, Utile netto, Prodotti senza costo e Clienti serviti.",
+          "Prima coppia: il grafico dell'andamento delle vendite accanto a Costo e utile lordo.",
+          "Seconda coppia: Classifica prodotti accanto a Quota per categoria.",
+          "Terza coppia: Metodi di pagamento accanto alla scheda delle promozioni.",
+          "Scheda in fondo: Situazione attuale."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Due riquadri della seconda riga compaiono solo in casi particolari. Imposta, aggiunto con la v3.6, compare solo per un negozio con imposte o quando il periodo selezionato contiene vendite fatte con un'imposta. Utile netto compare solo quando il periodo è Questo mese o copre esattamente un mese intero."
       },
       {
         "type": "note",
-        "text": "I collaboratori vedono i report avanzati con il permesso Dashboard; gli importi del valore del magazzino richiedono anche il permesso Costi e utile."
+        "text": "Se un periodo non ha ordini, Report mostra solo la barra del periodo, un messaggio e Situazione attuale."
+      },
+      {
+        "type": "h2",
+        "text": "Lettura dei grafici e di Classifica prodotti"
+      },
+      {
+        "type": "p",
+        "text": "Il menu in alto a destra del grafico dell'andamento delle vendite permette di passare tra Ricavi, Ordini, Ordine medio e Clienti serviti. Accanto, il grafico Costo e utile lordo impila in un'unica barra il costo dei prodotti e l'utile lordo di ogni periodo. Un singolo giorno è mostrato per ora, mentre i periodi più lunghi raggruppano i dati per giorni, settimane, mesi o anni in base alla durata."
+      },
+      {
+        "type": "p",
+        "text": "Tieni premuto sul grafico dell'andamento delle vendite, su Costo e utile lordo o su Metodi di pagamento per mostrare una scheda di lettura per un singolo intervallo. Con Confronta attivo, la scheda di lettura del grafico dell'andamento delle vendite mostra affiancate la cifra di questo periodo e quella del periodo di confronto. Trascina a sinistra o a destra per spostarti tra gli intervalli; scorri verso l'alto o verso il basso sul grafico per far scorrere la pagina come al solito."
+      },
+      {
+        "type": "p",
+        "text": "Nell'intestazione del grafico dell'andamento, passa da Andamento a Giorno × ora per vedere una mappa di calore di sette giorni per 24 ore. Più scura è una cella, più hai venduto in quell'ora, e puoi passare la mappa tra ricavi e ordini."
+      },
+      {
+        "type": "p",
+        "text": "Classifica prodotti elenca i primi 5 prodotti del periodo selezionato. Tocca la scheda o Mostra tutti per elencare ogni prodotto venduto in quel periodo, in ordine di quantità al netto dei resi. Un prodotto con varianti compare con una riga per ogni variante."
+      },
+      {
+        "type": "p",
+        "text": "Nell'intestazione della scheda della classifica, passa a Articoli a bassa rotazione per elencare i prodotti dal meno al più venduto. Ogni riga mostra la giacenza attuale del prodotto e la data dell'ultima vendita. I prodotti mai venduti sono contrassegnati da Mai venduto e, per impostazione predefinita, compaiono solo quelli disponibili. L'intestazione Variazioni elenca i prodotti i cui ricavi sono aumentati o calati di più rispetto a un periodo di confronto; vedi l'articolo correlato sul confronto tra periodi."
+      },
+      {
+        "type": "h2",
+        "text": "Quota per categoria, tasso di riacquisto e Situazione attuale"
+      },
+      {
+        "type": "p",
+        "text": "Quota per categoria elenca i ricavi e la quota di ogni categoria, dalla più grande alla più piccola, in base alla categoria attuale di ogni prodotto. I prodotti senza categoria vanno sotto Senza categoria e le righe sommano esattamente i Ricavi."
+      },
+      {
+        "type": "p",
+        "text": "L'ultima riga del riquadro Clienti serviti mostra il tasso di riacquisto come «Tasso di riacquisto … · … clienti tornati». Indica la quota di membri che hanno acquistato nel periodo selezionato e hanno acquistato due o più volte in totale."
+      },
+      {
+        "type": "p",
+        "text": "Situazione attuale mostra tre dati su magazzino e punti:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Valore del magazzino, calcolato come giacenza attuale × costo attuale.",
+          "Tutti i movimenti di magazzino del periodo selezionato.",
+          "I punti che i clienti hanno e non hanno ancora riscattato, con lo sconto massimo che possono ottenere."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Valore del magazzino e punti non riscattati sono saldi attuali, quindi cambiare il periodo in alto non li modifica."
+      },
+      {
+        "type": "note",
+        "text": "I collaboratori vedono Report con il permesso Report; gli importi di Valore del magazzino richiedono anche il permesso Costi e utile."
+      },
+      {
+        "type": "note",
+        "text": "I periodi di calendario sono arrivati con la v2.4; le versioni precedenti offrivano intervalli mobili (Oggi / 7 giorni / 30 giorni / Sempre). Se vedi ancora queste opzioni, aggiorna DingPOS dall'App Store."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Come confronto le vendite con la settimana scorsa, il mese scorso o l'anno scorso?",
+    "keywords": [
+      "Confronta",
+      "confronto tra periodi",
+      "settimana scorsa",
+      "mese scorso",
+      "anno scorso",
+      "stesso periodo dell'anno scorso",
+      "Variazioni",
+      "report",
+      "crescita",
+      "tasso di riacquisto"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Tocca Confronta a destra della barra del periodo in Report e scegli un periodo precedente, ad esempio Settimana scorsa o Anno scorso. Ogni riquadro mostra poi di quanto il suo valore è salito o sceso, ad esempio «▼ 3% rispetto a Mese scorso», con sotto il valore del periodo di confronto."
+      },
+      {
+        "type": "h2",
+        "text": "Attivare un confronto"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Apri Report dalla barra laterale.",
+          "Scegli un periodo in alto.",
+          "Tocca Confronta a destra della barra del periodo.",
+          "Scegli un'opzione di confronto dal menu."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Le opzioni disponibili dipendono dal periodo scelto:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nessuno disattiva il confronto.",
+          "Settimana scorsa confronta un singolo giorno con lo stesso giorno della settimana scorsa, oppure questa settimana con la settimana scorsa.",
+          "Mese scorso confronta questo mese con il mese scorso.",
+          "Anno scorso confronta quest'anno con l'anno scorso, oppure il periodo selezionato con lo stesso periodo dell'anno scorso.",
+          "Precedente confronta un intervallo personalizzato con lo stesso numero di giorni che lo precedono."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Quando un confronto è attivo, Report aggiunge la variazione e il valore del periodo di confronto a ogni riquadro tranne Imposta, Utile netto e Prodotti senza costo. Ricavi, Incassato, Utile lordo, Ordini, Ordine medio, Sconti totali e Clienti serviti mostrano ciascuno una riga di confronto come «▼ 3% rispetto a Mese scorso»."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Report su Questa settimana con Confronta impostato su Settimana scorsa: si vedono la barra di confronto e la prima riga di riquadri, ciascuno con la propria variazione e il valore di confronto sotto",
+        "caption": "Tocca una riga di confronto sotto un riquadro per aprire Confronto tra periodi e vedere i valori di entrambi i periodi."
+      },
+      {
+        "type": "p",
+        "text": "La variazione di Sconti totali è sempre grigia, perché uno sconto maggiore non è di per sé né un bene né un male. Tocca una riga di confronto per aprire Confronto tra periodi, che elenca i valori di entrambi i periodi. Il grafico dell'andamento aggiunge una linea più chiara per il periodo di confronto. Finché un periodo è ancora in corso, il periodo di confronto viene tagliato allo stesso momento."
+      },
+      {
+        "type": "h2",
+        "text": "Variazioni"
+      },
+      {
+        "type": "p",
+        "text": "Nell'intestazione della scheda della classifica, passa a Variazioni per vedere i 3 prodotti i cui ricavi sono aumentati di più e i 3 che sono calati di più rispetto al periodo di confronto. Ogni riga mostra i ricavi di entrambi i periodi e la differenza, e ogni variante è confrontata con se stessa."
+      },
+      {
+        "type": "p",
+        "text": "Scegli prima un periodo in Confronta. Quando Confronta è su Nessuno, o quando il periodo è Sempre, la scheda ti invita a scegliere un periodo di confronto. Tocca la scheda o Mostra tutti per aprire l'elenco completo Variazioni prodotti, diviso in In aumento e In calo."
+      },
+      {
+        "type": "h2",
+        "text": "Mappa di calore e tasso di riacquisto"
+      },
+      {
+        "type": "p",
+        "text": "Con un confronto attivo, la mappa di calore Giorno × ora nel grafico dell'andamento mostra anche quali ore sono cresciute e quali sono calate, e il tasso di riacquisto nel riquadro Clienti serviti guadagna una riga con la variazione in punti percentuali e il tasso del periodo di confronto."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -1376,41 +1552,105 @@ export const articles = [
     "question": "Come viene calcolato l'utile lordo se non ho inserito i costi?",
     "keywords": [
       "costo",
-      "utile",
       "utile lordo",
       "margine",
       "margine lordo",
       "report",
-      "utile non tracciato",
       "costo mancante",
-      "prodotti senza costo"
+      "utile lordo non tracciato",
+      "prodotti senza costo",
+      "dai ricavi all'utile lordo"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Il costo è un campo facoltativo. I prodotti senza costo sono esclusi dall'utile lordo, mentre i loro ricavi contano comunque per intero. Il riquadro Prodotti senza costo in Report mostra quanti prodotti venduti o resi nel periodo non hanno un costo, ad esempio «12 prodotti». Un costo pari a 0 conta come costo, quindi quei prodotti non vengono elencati; quando ogni prodotto ha un costo, il riquadro riporta «0 prodotti · costi completi»."
+        "text": "Il costo è un campo facoltativo, quindi i prodotti senza costo sono esclusi dall'utile lordo, mentre i loro ricavi contano comunque per intero. Il riquadro Prodotti senza costo in Report mostra quanti prodotti venduti o resi nel periodo non hanno un costo, ad esempio «12 prodotti». Un costo pari a 0 conta come costo e non viene elencato; quando ogni prodotto ha un costo, il riquadro riporta «0 prodotti · costi completi»."
+      },
+      {
+        "type": "h2",
+        "text": "Trovare i prodotti senza costo"
       },
       {
         "type": "p",
-        "text": "Tocca il riquadro o Mostra prodotti per aprire Prodotti senza costo, ordinati per i ricavi esclusi dall'utile lordo. Tocca una riga per aprire il prodotto, aggiungi il costo da Modifica e al ritorno la riga risulta contrassegnata come Costo aggiunto. Un prodotto con varianti è contrassegnato come Costo aggiunto solo quando ogni variante venduta senza costo ne ha uno: il proprio oppure quello del prodotto, da seguire."
+        "text": "In Report tocca il riquadro Prodotti senza costo o Mostra prodotti per aprire Prodotti senza costo. Il foglio elenca i prodotti in ordine decrescente per i ricavi esclusi dall'utile lordo."
+      },
+      {
+        "type": "shot",
+        "name": "profit-not-tracked",
+        "alt": "Foglio Prodotti senza costo con i prodotti ordinati per i ricavi esclusi dall'utile lordo"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Tocca una riga in Prodotti senza costo per aprire il prodotto.",
+          "Tocca Modifica e inserisci il costo in Costo (facoltativo).",
+          "Torna a Prodotti senza costo per vedere la riga contrassegnata come Costo aggiunto."
+        ]
       },
       {
         "type": "p",
-        "text": "L'utile lordo è il ricavo dopo tutti gli sconti (sconti sugli articoli e sul carrello, promozioni, riscatto punti) e prima delle imposte, meno il costo: per questo, in un negozio che applica l'imposta, il campo si chiama Costo al netto delle tasse (facoltativo), quindi inserisci quanto hai pagato prima delle imposte. Il margine è l'utile lordo diviso per i ricavi dei prodotti con un costo, così quelli senza costo non lo abbassano. Un reso riprende, nel giorno del reso, l'utile lordo che quegli articoli avevano portato."
-      },
-      {
-        "type": "p",
-        "text": "Tocca il riquadro Utile lordo per aprire Dai ricavi all’utile lordo, che sottrae riga per riga: ricavi (imposte incluse), imposta, ricavi (al netto delle imposte), ricavi senza costo, costo dei prodotti e infine utile lordo e margine. Le righe sommano esattamente il riquadro."
+        "text": "Un prodotto con varianti è contrassegnato come Costo aggiunto solo quando ogni variante venduta senza costo ne ha uno: il proprio oppure quello del prodotto, se impostato per essere seguito. Dalla v3.6, un ordine d'acquisto può anche ripartire la spedizione nel costo del prodotto che scrive, quando è attivo Includi spedizione nel costo."
       },
       {
         "type": "note",
-        "text": "Un costo che aggiungi riguarda solo le vendite successive; le vendite già fatte non vengono ricalcolate. Questo calcolo è arrivato con la v3.1: le versioni precedenti toglievano solo gli sconti manuali sugli articoli e contavano come utile l'imposta inclusa nel prezzo, quindi dopo l'aggiornamento i periodi con sconti o imposta inclusa mostrano un utile lordo più basso. È una correzione, non una perdita di dati."
+        "text": "Un costo che aggiungi riguarda solo le vendite successive. Le vendite già fatte non vengono ricalcolate."
+      },
+      {
+        "type": "h2",
+        "text": "Inserire costo e imposta"
+      },
+      {
+        "type": "p",
+        "text": "Nella scheda del prodotto il campo del costo si chiama Costo (facoltativo) in ogni negozio. In un negozio con imposte, accanto a Costo (facoltativo) compare un ⓘ che mostra come si applica l'imposta a seconda di Detrazione imposta sugli acquisti:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Detrazione imposta sugli acquisti è attiva: inserisci il costo al netto dell'imposta che puoi detrarre. La nota ⓘ dice: «Inserisci il costo senza l’imposta che puoi detrarre, da registrare come imposta sugli acquisti. L’imposta che non puoi detrarre fa parte del costo.»",
+          "Detrazione imposta sugli acquisti è disattivata: inserisci quanto hai pagato, meno l'imposta che puoi detrarre. La nota ⓘ dice: «L’imposta detraibile non fa parte del costo; quella non detraibile sì. Se detrai l’imposta sugli acquisti, attiva Detrazione imposta sugli acquisti in Info negozio.»"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Se il tuo negozio dichiara l'imposta sugli acquisti, attiva Detrazione imposta sugli acquisti in Info negozio."
+      },
+      {
+        "type": "h2",
+        "text": "Leggere il dettaglio dell'utile lordo"
+      },
+      {
+        "type": "p",
+        "text": "L'utile lordo è il ricavo dopo tutti gli sconti (sconti sugli articoli e sul carrello, promozioni, riscatto punti) e prima delle imposte, meno il costo. Il margine è l'utile lordo diviso per i ricavi dei prodotti con un costo, così quelli senza costo non lo abbassano. Un reso riprende, nel giorno del reso, l'utile lordo che quegli articoli avevano portato."
+      },
+      {
+        "type": "p",
+        "text": "Tocca il riquadro Utile lordo in Report per aprire Dai ricavi all’utile lordo, che sottrae riga per riga:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ricavi (imposte incluse)",
+          "Imposta",
+          "Ricavi (al netto delle imposte)",
+          "Ricavi senza costo",
+          "Costo dei prodotti",
+          "Utile lordo e margine"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Le righe sommano esattamente il riquadro Utile lordo. I negozi in Australia, Regno Unito, Nuova Zelanda e Singapore vedono il nome locale dell'imposta nelle righe dell'imposta, ad esempio Ricavi (incl. GST)."
+      },
+      {
+        "type": "note",
+        "text": "Questo calcolo dell'utile lordo è arrivato con la v3.1. Le versioni precedenti toglievano solo gli sconti manuali sugli articoli e contavano come utile l'imposta inclusa nel prezzo, quindi dopo l'aggiornamento i periodi con sconti o imposta inclusa mostrano un utile lordo più basso. È una correzione, non una perdita di dati."
       }
     ],
     "related": [
       "report-periods",
       "product-variants",
-      "purchase-orders"
+      "purchase-orders",
+      "input-tax"
     ]
   },
   {
@@ -1419,47 +1659,95 @@ export const articles = [
     "since": "3.4",
     "question": "Come vedo quanto ho guadagnato davvero ogni mese?",
     "keywords": [
+      "utile",
       "conto economico",
       "profitti e perdite",
-      "p&l",
       "utile netto",
+      "utile lordo",
       "utile mensile",
-      "spese",
-      "utile operativo",
-      "conto economico mensile"
+      "spese fisse",
+      "utile operativo"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Apri Utile, sotto Report nella barra laterale, per il conto economico mensile: elenca ogni mese dal più recente al più vecchio con il suo utile netto; il mese corrente è contrassegnato In corso e l'intestazione di ogni anno somma l'utile netto dei suoi mesi conclusi."
+        "text": "Apri Utile, sotto Report nella barra laterale, per vedere l'utile netto di ogni mese e come viene calcolato. L'elenco va dal mese più recente al più vecchio, a partire dal primo mese con attività; il mese corrente è contrassegnato In corso e l'intestazione di ogni anno somma l'utile netto dei suoi mesi conclusi. La prima riga, Tutte le spese, apre ogni spesa a prescindere dal mese."
+      },
+      {
+        "type": "h2",
+        "text": "Dettaglio mensile"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Apri Utile, sotto Report nella barra laterale.",
+          "Tocca un mese per vedere come si calcola il suo utile netto."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "profit-loss-month",
+        "alt": "Pagina di un mese in Utile con l'avviso In corso, l'utile netto e il dettaglio completo dai ricavi alle spese"
       },
       {
         "type": "p",
-        "text": "Tocca un mese per vedere come si calcola il suo utile netto:"
+        "text": "La pagina del mese elenca in ordine ogni riga, dalle vendite all'utile netto. Le righe dai ricavi all'utile lordo hanno gli stessi nomi e gli stessi importi di Dai ricavi all’utile lordo in Report."
       },
       {
         "type": "list",
         "items": [
-          "Ricavi (al netto delle imposte): i ricavi dopo ogni sconto e prima delle imposte, conteggiati nel giorno in cui la merce è stata consegnata.",
+          "Ricavi (imposte incluse), Imposta e Ricavi (al netto delle imposte): i ricavi con l'imposta inclusa, l'importo dell'imposta e i ricavi dopo ogni sconto e prima delle imposte, conteggiati nel giorno in cui la merce è stata consegnata. I negozi in Australia, Regno Unito, Nuova Zelanda e Singapore vedono il nome locale dell'imposta.",
+          "Ricavi senza costo: sottratti prima del costo dei prodotti, mostrati solo se diversi da zero.",
           "Costo dei prodotti: il costo di ciò che è stato venduto, in base ai costi indicati nei tuoi prodotti.",
-          "Perdite di magazzino: il costo di ciò che Rettifica giacenza ha tolto perché scaduto, danneggiato, regalato e simili, più i resi scartati. Viene dopo l'utile lordo — vedi «Come registro la merce scaduta, danneggiata o uscita come campione?» Il mese ha anche una sezione Perdite di magazzino che le totalizza per motivo.",
+          "Utile lordo: mostrato con il suo margine.",
+          "Ricavi senza costo: aggiunti di nuovo dopo l'utile lordo, se diversi da zero.",
+          "Perdite di magazzino: mostrate solo se il mese ne ha; il costo di ciò che Rettifica giacenza ha tolto perché scaduto, danneggiato, regalato e simili, più i resi scartati. Vengono dopo l'utile lordo. Vedi «Come registro la merce scaduta, danneggiata o uscita come campione?» Il mese ha anche una sezione Perdite di magazzino che le totalizza per motivo.",
           "Commissioni (stima): le commissioni stimate in base alle tariffe dei tuoi metodi di pagamento.",
-          "Acconti trattenuti: gli acconti che hai trattenuto quando un preordine è stato annullato.",
-          "Arrotondamento contanti: ciò che l'arrotondamento dei contanti alle monete in uso ha aggiunto o tolto ai totali degli ordini.",
-          "Spese fisse e Spese una tantum: ciò che hai registrato per quel mese — vedi «Come registro affitto, stipendi e altre spese?»"
+          "Acconti trattenuti: mostrati solo se diversi da zero; gli acconti che hai trattenuto quando un preordine è stato annullato.",
+          "Arrotondamento contanti: mostrato solo se diverso da zero; ciò che l'arrotondamento dei contanti alle monete in uso ha aggiunto o tolto ai totali degli ordini.",
+          "Spese fisse e Spese una tantum: ciò che hai registrato per quel mese — vedi «Come registro affitto, stipendi e altre spese?»",
+          "Utile netto: calcolato come ricavi (al netto delle imposte) − costo dei prodotti − perdite di magazzino − commissioni + acconti trattenuti + arrotondamento contanti − spese fisse − spese una tantum."
         ]
       },
       {
-        "type": "p",
-        "text": "Seguono fino a tre grafici: l'utile netto mese per mese, la quota di ogni spesa fissa e l'andamento delle spese fisse. I due grafici di andamento coprono al massimo i 12 mesi fino al mese che hai aperto e compaiono solo quando ci sono almeno due mesi da confrontare, contati dal mese della tua prima vendita o spesa. Il grafico delle quote richiede una spesa fissa in quel mese; finché non ce n'è una, quella sezione mostra Aggiungi spesa fissa."
+        "type": "h2",
+        "text": "Mesi in corso"
       },
       {
         "type": "p",
-        "text": "Report e Utile si collegano tra loro. Quando il periodo di Report è questo mese o esattamente un mese intero, la seconda riga di riquadri aggiunge un riquadro Utile netto (contrassegnato «In corso · vengono detratte le spese dell’intero mese» mentre il mese è in corso); toccalo per vedere il dettaglio di quel mese dall'utile lordo all'utile netto. Per qualsiasi altro periodo, tocca Vedi il conto economico mensile nell'ultima riga di Dai ricavi all’utile lordo. Nell'altro senso, Vedi il report di ottobre sotto il titolo di un mese in Utile apre Report su quel mese."
+        "text": "Finché un mese è ancora in corso, Utile detrae già le spese fisse dell'intero mese. Ad esempio, il 5/10, se finora i ricavi (al netto delle imposte) sono 20,000, il costo dei prodotti è 10,000 e le spese fisse sono 65,700, l'utile netto è −55,700 e viene contrassegnato In corso · vengono detratte le spese dell’intero mese."
+      },
+      {
+        "type": "p",
+        "text": "Poiché le spese dell'intero mese sono già conteggiate, l'utile netto di questo mese non è mai mostrato in rosso nell'elenco dei mesi, nella pagina del mese né nel riquadro Utile netto di Report. Un mese concluso in perdita mostra il suo utile netto nel colore di avviso."
+      },
+      {
+        "type": "h2",
+        "text": "Grafici"
+      },
+      {
+        "type": "p",
+        "text": "Dopo il dettaglio seguono fino a tre grafici: l'utile netto mese per mese, la quota di ogni spesa fissa e l'andamento delle spese fisse. I due grafici di andamento coprono al massimo i 12 mesi fino al mese che hai aperto e compaiono solo quando ci sono almeno due mesi da confrontare, contati dal mese della tua prima vendita o spesa. Il grafico delle quote richiede una spesa fissa in quel mese; finché non ce n'è una, quella sezione mostra Aggiungi spesa fissa."
+      },
+      {
+        "type": "h2",
+        "text": "Passare da Report a Utile"
+      },
+      {
+        "type": "p",
+        "text": "Report e Utile si collegano tra loro. Quando il periodo di Report è questo mese o esattamente un mese intero, la seconda riga di riquadri aggiunge un riquadro Utile netto, contrassegnato In corso · vengono detratte le spese dell’intero mese mentre il mese è in corso. Toccalo per vedere il dettaglio di quel mese dall'utile lordo all'utile netto. Per qualsiasi altro periodo, tocca Vedi il conto economico mensile nell'ultima riga di Dai ricavi all’utile lordo."
+      },
+      {
+        "type": "p",
+        "text": "Nell'altro senso, Vedi il report di ottobre sotto il titolo di un mese in Utile apre Report su quel mese (intervallo personalizzato 1/10–31/10); per il mese in corso apre Questo mese."
       },
       {
         "type": "note",
-        "text": "L'utile netto è l'utile operativo al lordo delle imposte sul reddito, calcolato in base a quanto DingPOS ha registrato: non è una dichiarazione dei redditi. Se alcuni prodotti sono stati venduti senza costo, il mese mostra comunque un utile netto, contrassegnato «Esclude il costo di N prodotti»; toccalo per vedere quali. Utile è disponibile con ogni piano. Con i collaboratori, aprirlo richiede il permesso Conto economico e spese, per il quale Responsabili e Collaboratori hanno di default bisogno di approvazione, perché mostra i costi dei prodotti e gli stipendi."
+        "text": "L'utile netto è l'utile operativo al lordo delle imposte sul reddito, calcolato in base a quanto DingPOS ha registrato: non è una dichiarazione dei redditi. Se alcuni prodotti sono stati venduti senza costo, il mese mostra comunque un utile netto contrassegnato Esclude il costo di N prodotti, e puoi toccarlo per vedere quali."
+      },
+      {
+        "type": "note",
+        "text": "Utile è disponibile con ogni piano. Con i collaboratori, aprirlo richiede il permesso Conto economico e spese, per il quale Responsabili e Collaboratori hanno di default bisogno di approvazione, perché mostra i costi dei prodotti e gli stipendi."
       }
     ],
     "related": [
@@ -1479,38 +1767,98 @@ export const articles = [
       "stipendi",
       "utenze",
       "spese fisse",
-      "costi generali",
+      "spese una tantum",
+      "tutte le spese",
       "ammortamento",
-      "spesa una tantum"
+      "costi generali",
+      "utile"
     ],
     "content": [
       {
         "type": "p",
-        "text": "In Utile tocca Aggiungi spesa e scegli una spesa fissa o una spesa una tantum. Una spesa è conteggiata nel mese a cui appartiene, non in quello in cui l'hai pagata, e l'utile netto di ogni mese ne tiene conto."
+        "text": "In Utile tocca Aggiungi spesa e scegli Aggiungi spesa fissa o Aggiungi spesa una tantum per registrare affitto, stipendi, utenze e altri costi di gestione. Ogni spesa è conteggiata nel mese a cui appartiene, non in quello in cui l'hai pagata, e l'utile netto di ogni mese si aggiorna di conseguenza. Le spese fisse si ripetono ogni mese con eventuali variazioni di importo facoltative, mentre quelle una tantum sono conteggiate in un solo mese o ripartite su più mesi."
+      },
+      {
+        "type": "h2",
+        "text": "Spese fisse"
       },
       {
         "type": "p",
-        "text": "Una spesa fissa è una spesa che paghi ogni mese, come affitto, utenze o stipendi:"
+        "text": "Una spesa fissa è un costo ricorrente che paghi ogni mese, come affitto, utenze o stipendi."
       },
       {
-        "type": "list",
+        "type": "steps",
         "items": [
+          "Apri Utile.",
+          "Tocca Aggiungi spesa.",
+          "Scegli Aggiungi spesa fissa.",
           "Inserisci il nome, l'importo mensile e il mese di inizio. Scegli un mese precedente per registrare spese passate.",
-          "Quando l'importo cambia, tocca Cambia importo, scegli il mese e poi Da questo mese (ad esempio un aumento dell'affitto) o Solo questo mese (la bolletta della luce del mese). Ogni variazione è elencata e puoi aprirla per modificarla o rimuoverla.",
-          "Quando smetti di pagarla, imposta Ultimo mese conteggiato: quel mese e quelli precedenti restano conteggiati."
+          "Tocca ✓ per salvare."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "expense-form",
+        "alt": "Modulo della spesa fissa con nome, importo mensile, mese di inizio e variazioni dell'importo"
+      },
+      {
+        "type": "p",
+        "text": "Quando l'importo cambia, apri la spesa e tocca Cambia importo. Scegli il mese da cui parte la variazione, poi Da questo mese per un cambiamento duraturo, come un aumento dell'affitto, oppure Solo questo mese per una differenza di un solo mese, come la bolletta della luce del mese. Ogni variazione è elencata nel modulo e puoi aprirla per modificarla o rimuoverla."
+      },
+      {
+        "type": "p",
+        "text": "Quando smetti di pagare una spesa fissa, imposta Ultimo mese conteggiato. Quel mese e i precedenti restano conteggiati in Utile, mentre i mesi successivi non la includono più."
+      },
+      {
+        "type": "h2",
+        "text": "Variazioni programmate in Tutte le spese"
+      },
+      {
+        "type": "p",
+        "text": "In Tutte le spese, ogni riga di spesa fissa mostra ciò che è programmato in seguito. La riga unisce il mese di inizio con l'eventuale prossima variazione dell'importo e l'ultimo mese conteggiato. Ad esempio, una riga può riportare Da gennaio 2026 · $420/mese da dicembre 2026 · Ultimo conteggio: marzo 2027."
+      },
+      {
+        "type": "p",
+        "text": "L'importo a destra resta quello mensile di oggi, non la tariffa futura. Una variazione impostata su Solo questo mese non compare nella riga."
+      },
+      {
+        "type": "h2",
+        "text": "Spese una tantum"
+      },
+      {
+        "type": "p",
+        "text": "Una spesa una tantum è un costo pagato una sola volta, come un allestimento, un'attrezzatura, un'assicurazione pagata in anticipo o una singola fattura."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Apri Utile.",
+          "Tocca Aggiungi spesa.",
+          "Scegli Aggiungi spesa una tantum.",
+          "Inserisci l'importo e la data.",
+          "Imposta Mese conteggiato per un solo mese, oppure attiva Ripartisci su più mesi.",
+          "Tocca ✓ per salvare."
         ]
       },
       {
         "type": "p",
-        "text": "Una spesa una tantum si paga una sola volta:"
+        "text": "Anche senza ripartizione puoi scegliere il Mese conteggiato, così il costo è conteggiato nel mese a cui appartiene. Ad esempio, una fattura di ottobre che arriva a novembre può essere conteggiata in ottobre, mantenendo la data reale."
       },
       {
-        "type": "list",
-        "items": [
-          "Per un allestimento, un'attrezzatura o un'assicurazione pagata in anticipo, attiva Ripartisci su più mesi e scegli da 2 a 120 mesi e il primo mese conteggiato. Il modulo mostra in anteprima quanto viene conteggiato ogni mese e quali mesi copre.",
-          "Anche senza ripartizione puoi scegliere il mese conteggiato: una fattura di ottobre che arriva a novembre può essere conteggiata in ottobre, mantenendo la data reale.",
-          "Se una ripartizione termina prima del previsto (ad esempio una polizza assicurativa annullata), usa Termina ripartizione in anticipo: ciò che resta è conteggiato nel mese che scegli."
-        ]
+        "type": "p",
+        "text": "Per un allestimento, un'attrezzatura o un'assicurazione pagata in anticipo, attiva Ripartisci su più mesi, scegli da 2 a 120 mesi e seleziona il primo mese conteggiato. Il modulo mostra in anteprima quanto viene conteggiato ogni mese e quali mesi copre."
+      },
+      {
+        "type": "p",
+        "text": "Se una ripartizione termina prima del previsto, ad esempio quando una polizza assicurativa viene annullata, apri la spesa e usa Termina ripartizione in anticipo. L'importo residuo è conteggiato nel mese che scegli."
+      },
+      {
+        "type": "h2",
+        "text": "Imposta sugli acquisti nelle spese"
+      },
+      {
+        "type": "p",
+        "text": "Quando Detrazione imposta sugli acquisti è attiva, in una spesa una tantum puoi registrare un numero di fattura e l'imposta detraibile, e per una spesa fissa puoi registrare ogni fattura in Fatture con Registra una fattura. L'importo conteggiato in Utile resta quello a carico del negozio; l'articolo correlato sull'imposta sugli acquisti spiega come funziona l'imposta detraibile."
       },
       {
         "type": "note",
@@ -1520,7 +1868,483 @@ export const articles = [
     "related": [
       "profit-loss",
       "purchase-orders",
+      "input-tax",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "export-tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Come esporto il report imposte per il mio commercialista?",
+    "keywords": [
+      "esportare report imposte",
+      "Report imposte",
+      "Esporta",
+      "cartella di lavoro Excel",
+      "CSV",
+      "report PDF",
+      "riepilogo imposte",
+      "righe imposta sugli acquisti",
+      "commercialista"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Apri Report imposte, tocca Esporta in alto a destra e scegli un CSV, una Cartella di lavoro Excel (XLSX) o un Report PDF. Il file si apre in un'anteprima a schermo intero, dove puoi toccare il pulsante di condivisione per salvarlo o inviarlo al tuo commercialista. Ogni formato contiene gli stessi importi mostrati sullo schermo."
+      },
+      {
+        "type": "h2",
+        "text": "Come esportare"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Apri Report e scegli il periodo, ad esempio un intervallo personalizzato dal 1/11 al 31/12 per un periodo di dichiarazione bimestrale, oppure un intervallo trimestrale.",
+          "Tocca il riquadro Imposta per aprire Report imposte. L'esportazione copre esattamente quel periodo.",
+          "Tocca Esporta in alto a destra in Report imposte. Un menu elenca i formati, con l'ultimo esportato su questo iPad spuntato.",
+          "Scegli un formato, ad esempio Cartella di lavoro Excel (XLSX), per aprire un'anteprima a schermo intero. I file CSV si mostrano come tabella e la cartella di lavoro Excel permette di passare da un foglio all'altro, ad esempio controllando prima Summary.",
+          "Tocca il pulsante di condivisione in alto a destra nell'anteprima per salvare il file o inviarlo al tuo commercialista. Chiudendo l'anteprima torni a Report imposte."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "tax-export",
+        "alt": "Report imposte con il menu Esporta aperto che elenca i formati di file"
+      },
+      {
+        "type": "p",
+        "text": "Se un'esportazione non riesce, l'app mostra Impossibile esportare il file e Prova a esportare di nuovo. Non viene scritto nulla: esporta di nuovo."
+      },
+      {
+        "type": "h2",
+        "text": "Formati di esportazione"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Riepilogo imposte (CSV): una riga per ogni riga del report (ogni imposta e aliquota, ad aliquota zero e senza imposta), con vendite, resi e netto, al netto dell'imposta e imposta.",
+          "Tutti i documenti (CSV): una riga per documento sotto ogni imposta, con data e ora, numero dello scontrino, tipo di documento (vendita, reso o contropartita di uno storno), nome del cliente, importi e metodi di pagamento. Uno storno aggiunge una riga di contropartita alla data dello storno.",
+          "Riepilogo giornaliero (CSV): il riepilogo per giorno, poi una seconda tabella dei pagamenti per giorno e metodo.",
+          "Righe imposta sugli acquisti (CSV): compare solo quando il report ha una scheda dell'imposta sugli acquisti. Una riga per ogni riga di imposta sugli acquisti di ogni ordine d'acquisto e spesa, con fornitore, ID fiscale del fornitore e numero fattura.",
+          "Cartella di lavoro Excel (XLSX): fogli Summary, Documents e Daily che corrispondono ai tre CSV delle vendite, più Purchases quando il report mostra l'imposta sugli acquisti. Gli importi sono celle numeriche e ogni colonna si adatta al contenuto, così nulla si apre tagliato.",
+          "Report PDF: un report in formato A4 nella lingua dell'app, con nome del negozio, periodo, modalità imposta, valuta e le sezioni del report. I negozi in Australia, Nuova Zelanda, Singapore e Regno Unito ottengono prima le Caselle della dichiarazione; seguono le schede dell'imposta sugli acquisti, quando presenti. Nell'anteprima, firma o annota con Annotazione per condividere il file annotato; esportare di nuovo lo stesso periodo scrive una copia pulita."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Formattazione per i software di contabilità"
+      },
+      {
+        "type": "p",
+        "text": "I file CSV sono in UTF-8 e separati da virgole, con nomi di colonna fissi in inglese in qualsiasi lingua dell'app, così i software di contabilità possono leggerli. Gli importi usano i decimali della valuta e il segno meno, senza simbolo né separatore delle migliaia (ad esempio 80.97, -40.00 oppure 1000 per un negozio in yen). Le date hanno il formato 2026-11-03."
+      },
+      {
+        "type": "p",
+        "text": "Le celle di testo che iniziano con =, +, - o @ (ad esempio un cliente di nome =1+1) ricevono un ' iniziale, così i fogli di calcolo mostrano testo invece di eseguire una formula. Gli importi non lo ricevono mai."
+      },
+      {
+        "type": "p",
+        "text": "I nomi dei file riportano il periodo, ad esempio tax-report-summary_2026-11-01_2026-11-30.csv, tax-report_2026-11-01_2026-11-30.xlsx e tax-report_2026-11-01_2026-11-30.pdf, così i file di periodi diversi non si sovrascrivono mai."
+      },
+      {
+        "type": "h2",
+        "text": "Permessi e privacy"
+      },
+      {
+        "type": "p",
+        "text": "Ogni piano può esportare, Lite compreso. I collaboratori hanno bisogno del permesso Report, lo stesso richiesto per Report imposte."
+      },
+      {
+        "type": "p",
+        "text": "I file con l'imposta sugli acquisti chiedono prima le approvazioni di cui hanno bisogno le loro schede: Costi e utile per gli ordini d'acquisto e Conto economico e spese per le spese. Vale per Righe imposta sugli acquisti (CSV), più la Cartella di lavoro Excel (XLSX) e il Report PDF quando compaiono le schede dell'imposta sugli acquisti. Annullando non viene scritto nulla; i tre CSV delle vendite non lo chiedono mai."
+      },
+      {
+        "type": "note",
+        "text": "Tutti i documenti (CSV) contiene i nomi dei clienti e i file con l'imposta sugli acquisti contengono nomi e ID fiscali dei fornitori. Condividili solo con chi deve vederli."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "input-tax",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "input-tax",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Come registro l'imposta sugli acquisti (IVA o GST sulle fatture dei fornitori)?",
+    "keywords": [
+      "imposta sugli acquisti",
+      "IVA",
+      "GST",
+      "Detrazione imposta sugli acquisti",
+      "Imposta sugli acquisti degli ordini d'acquisto",
+      "Imposta sugli acquisti delle spese",
+      "ID fiscale del fornitore",
+      "ordini d'acquisto",
+      "report imposte"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Attiva Detrazione imposta sugli acquisti in Impostazioni → Info negozio per registrare l'imposta detraibile delle fatture dei fornitori su ordini d'acquisto e spese. Entrambi i moduli avranno una sezione Imposta sugli acquisti in cui copiare l'imposta detraibile da ogni fattura. Il report imposte la elenca in due schede, Imposta sugli acquisti degli ordini d’acquisto e Imposta sugli acquisti delle spese."
+      },
+      {
+        "type": "h2",
+        "text": "Attivare Detrazione imposta sugli acquisti"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Apri Impostazioni → Info negozio e trova la scheda delle imposte.",
+          "Sotto Applica imposta, attiva Detrazione imposta sugli acquisti."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-toggle",
+        "alt": "Scheda delle imposte di Info negozio con Detrazione imposta sugli acquisti attivata e il suo suggerimento sotto"
+      },
+      {
+        "type": "p",
+        "text": "Detrazione imposta sugli acquisti compare solo quando il negozio ha almeno un'imposta ed è disattivata per i nuovi negozi e dopo l'aggiornamento. L'interruttore si salva subito e viene registrato in Impostazioni imposta nel Registro attività. Quando è attiva, inserisci prezzi d'acquisto e costi dei prodotti al netto dell'imposta detraibile; l'imposta non detraibile resta nel costo."
+      },
+      {
+        "type": "note",
+        "text": "Ogni piano ha l'interruttore Detrazione imposta sugli acquisti, mentre Acquisti richiede Standard o superiore. Disattivarlo nasconde i campi sui nuovi record; i record esistenti mantengono la loro imposta sugli acquisti e il loro importo da pagare, e i report imposte passati restano invariati."
+      },
+      {
+        "type": "h2",
+        "text": "Ordini d'acquisto"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Apri Acquisti e tocca Nuovo acquisto.",
+          "Inserisci i prezzi unitari al netto dell'imposta detraibile, poi scorri oltre i costi extra fino a Imposta sugli acquisti.",
+          "Controlla Data fattura, che per impostazione predefinita è la data dell'ordine, e aggiungi se vuoi Numero fattura e ID fiscale del fornitore.",
+          "Scegli un'imposta del negozio per Aliquota, oppure Altra aliquota… per digitare fino a 3 decimali, ad esempio 9.975%.",
+          "Controlla Al netto dell’imposta, che parte dal totale dell'ordine al netto dell'imposta, e copia Imposta detraibile dalla fattura.",
+          "Tocca Aggiungi un’aliquota per altre aliquote."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-po",
+        "alt": "Ordine d'acquisto con la sezione Imposta sugli acquisti, i campi della fattura, una riga di aliquota e i totali"
+      },
+      {
+        "type": "p",
+        "text": "Imposta detraibile parte vuota; DingPOS non la calcola mai dall'aliquota e accetta gli arrotondamenti della fattura. Ad esempio, farina 10 × $300 più $100 di spedizione sulla fattura AB-12345678 del 30 giugno 2026, con una riga al 5% di Al netto dell’imposta $3,100 e Imposta detraibile $155, dà Totale al netto dell’imposta $3,100, Imposta sugli acquisti $155 e Importo da pagare $3,255, che compare nell'elenco, nel dettaglio dell'ordine e in Da pagare. Un ID fiscale del fornitore indicato sul fornitore compila i nuovi ordini; gli ordini salvati mantengono il proprio."
+      },
+      {
+        "type": "p",
+        "text": "Se una fattura arriva in ritardo, apri l'ordine ricevuto e tocca Registra imposta sugli acquisti nella scheda Imposta sugli acquisti, oppure Modifica per cambiarla. Cambia solo l'Importo da pagare; giacenza, costo dei prodotti e stato pagato o non pagato restano invariati. Gli ordini stornati mantengono Imposta sugli acquisti in sola lettura e gli ordini salvati prima dell'aggiornamento non vengono compilati retroattivamente."
+      },
+      {
+        "type": "h2",
+        "text": "Spese"
+      },
+      {
+        "type": "p",
+        "text": "In Utile → Spese una tantum, il modulo aggiunge Numero fattura e le righe dell'imposta sugli acquisti sotto l'importo. Mantieni l'importo al netto dell'imposta detraibile e copia solo l'imposta detraibile. Su una fattura di cancelleria da $1,100 con $100 detraibili, inserisci $1,000 e una riga al 10% di $1,000 e $100; Con imposta mostra $1,100 e Utile conta $1,000. La sua imposta sugli acquisti è conteggiata per intero alla data della spesa, senza mai seguire Mese conteggiato né una ripartizione."
+      },
+      {
+        "type": "p",
+        "text": "In Utile → Spese fisse, apri una spesa salvata come affitto o utenze e tocca Registra una fattura in Fatture man mano che arriva ogni fattura, con la data della fattura, il numero fattura facoltativo e almeno una riga di aliquota. Se l'affitto è $30,000 al mese e le fatture di luglio e agosto riportano ciascuna una riga al 5% di $30,000 e $1,500, il report luglio–settembre contiene $3,000 di imposta sugli acquisti mentre Utile conta comunque $30,000 ogni mese."
+      },
+      {
+        "type": "p",
+        "text": "Salvare una modifica all'imposta sugli acquisti in un mese passato chiede Salvare la modifica? e avvisa che il report imposte di quel mese cambia se hai già presentato la dichiarazione. Le modifiche al mese corrente e le bozze si salvano senza chiedere."
+      },
+      {
+        "type": "note",
+        "text": "DingPOS non calcola l'IVA all'importazione, l'inversione contabile (reverse charge) né la detrazione parziale. Copia l'imposta detraibile dalla fattura e metti l'imposta che non puoi detrarre nell'importo al netto dell'imposta."
+      },
+      {
+        "type": "h2",
+        "text": "Report imposte"
+      },
+      {
+        "type": "p",
+        "text": "Dopo le schede delle vendite ci sono due schede: Imposta sugli acquisti degli ordini d’acquisto e Imposta sugli acquisti delle spese. Ognuna elenca una riga per aliquota, una riga Nessuna imposta sugli acquisti e i totali di Al netto dell’imposta, Imposta detraibile e Con imposta. I totali comprendono gli acquisti senza imposta sugli acquisti, anche se alcune dichiarazioni considerano solo le righe con imposta sugli acquisti."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Gli ordini d'acquisto contano alla Data fattura, o alla data dell'ordine se vuota.",
+          "Gli ordini d'acquisto stornati contano come importo negativo alla data dello storno.",
+          "Le spese una tantum contano per intero alla data della spesa.",
+          "Le fatture delle spese fisse contano alla data della fattura."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Imposta sugli acquisti degli ordini d’acquisto richiede Costi e utile e Imposta sugli acquisti delle spese richiede Conto economico e spese; i collaboratori senza un permesso vedono Chiedi l’approvazione di un responsabile sotto il titolo della scheda. Il riquadro Imposta mostra comunque solo l'imposta incassata sulle vendite, mai al netto dell'imposta sugli acquisti, perché il metodo semplificato giapponese e il flat rate del Regno Unito funzionano diversamente. I negozi in Australia, Nuova Zelanda, Singapore e Regno Unito vedono questi importi anche nelle Caselle della dichiarazione."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "purchase-orders",
+      "record-expenses"
+    ]
+  },
+  {
+    "slug": "tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Dov'è il report imposte e come si legge?",
+    "keywords": [
+      "report imposte",
+      "Report imposte",
+      "IVA",
+      "GST",
+      "imposta sulle vendite",
+      "Report",
+      "Imposta",
+      "Vendite e imposta per aliquota",
+      "Per metodo di pagamento"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Apri Report e tocca il riquadro Imposta per vedere Report imposte, che elenca vendite e imposta per aliquota per il periodo mostrato da Report. Copia questi importi in una dichiarazione IVA, GST o dell'imposta sulle vendite, oppure inviali a un commercialista. Le modifiche successive alle imposte non alterano mai gli importi dei documenti già registrati."
+      },
+      {
+        "type": "h2",
+        "text": "Aprire il report imposte"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Apri Report e scegli il periodo, ad esempio Questo mese o un intervallo personalizzato.",
+          "Trova il riquadro Imposta nella seconda riga, dopo Sconti totali.",
+          "Tocca il riquadro Imposta o Report imposte ›."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Report su Questo mese con il riquadro Imposta e la sua riga in fondo Report imposte ›"
+      },
+      {
+        "type": "p",
+        "text": "Questo riquadro è l'unico accesso. Il suo sottotitolo indica le imposte incassate nel periodo, a partire dall'importo maggiore: due per nome, tre o più come, ad esempio, 3 imposte, tra cui PST 7%. L'intestazione mostra il periodo di Report (Questo mese · 1/11 – 30/11) senza selettore del periodo né scorciatoia al mese scorso, perché i periodi di dichiarazione variano (Taiwan due mesi, Australia un trimestre, Giappone un anno)."
+      },
+      {
+        "type": "p",
+        "text": "I negozi senza imposte e senza vendite tassate nel periodo non vedono il riquadro Imposta; i periodi senza documenti mostrano lo stato vuoto di Report. Le imposte eliminate mantengono il riquadro per i periodi che contengono vendite con quelle imposte."
+      },
+      {
+        "type": "note",
+        "text": "Ogni piano, compresi Lite e la prova, ha il riquadro, il report e ogni esportazione. I collaboratori hanno bisogno del permesso Report; i ruoli che richiedono approvazione vedono il segnaposto di approvazione finché un responsabile non approva."
+      },
+      {
+        "type": "h2",
+        "text": "Leggere il report"
+      },
+      {
+        "type": "p",
+        "text": "I negozi in Australia, Nuova Zelanda, Singapore e Regno Unito vedono prima le Caselle della dichiarazione."
+      },
+      {
+        "type": "p",
+        "text": "Vendite e imposta per aliquota elenca una riga per aliquota: prima la più alta, poi lo 0% ad aliquota zero e infine Senza imposta (prodotti senza imposta). Le colonne sono Vendite, Resi e storni e Netto, ognuna con Al netto dell’imposta e Imposta; le righe ad aliquota zero e Senza imposta non hanno la riga dell'imposta. Ogni imposta del negozio ha una riga anche senza vendite. Rinominare un'imposta mantiene una sola riga; un cambio di aliquota ne aggiunge una."
+      },
+      {
+        "type": "p",
+        "text": "Totali mostra Vendite al netto dell’imposta, Imposta e Vendite con imposta. Con due o più imposte, una nota spiega che una vendita può avere più imposte, quindi le vendite delle singole righe non si possono sommare; Vendite al netto dell’imposta conta ogni vendita una sola volta. Per un trimestre nel Regno Unito, IVA 20% potrebbe mostrare Al netto dell’imposta £1,000 e Imposta £200, Aliquota zero 0% £300 e Senza imposta £50: Totali dà Vendite al netto dell’imposta £1,350, Imposta £200, Vendite con imposta £1,550."
+      },
+      {
+        "type": "shot",
+        "name": "tax-report",
+        "alt": "Report imposte con le righe di Vendite e imposta per aliquota e Totali sotto"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Per metodo di pagamento elenca i pagamenti di questi documenti alla fine del periodo, gli importi non pagati come Crediti da clienti e l'arrotondamento contanti in una riga Incl. arrotondamento contanti … dentro la riga dei contanti.",
+          "Non conteggiati come vendite compare solo per gli acconti trattenuti: elenca Acconti trattenuti con un sottotitolo che invita a verificare la dichiarazione con un commercialista, e non si somma né alle vendite né all'imposta.",
+          "I negozi con Detrazione imposta sugli acquisti attiva, o con imposta sugli acquisti registrata nel periodo, vedono anche Imposta sugli acquisti degli ordini d’acquisto e Imposta sugli acquisti delle spese."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "In quale giorno viene conteggiato ogni documento"
+      },
+      {
+        "type": "p",
+        "text": "Tocca ⓘ accanto a Vendite e imposta per aliquota:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Uno storno viene conteggiato nel periodo in cui è stato stornato, come importo negativo, così un periodo già dichiarato non cambia mai. Report, invece, lo toglie dal periodo della vendita.",
+          "Un reso viene conteggiato alla propria data. In un cambio, gli articoli nuovi contano come vendite e quelli restituiti come resi.",
+          "Un preordine conta nel giorno del ritiro; una vendita a credito nel giorno della vendita."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Una vendita del 30/10 stornata il 2/11 resta nelle Vendite di ottobre e compare come importo negativo in Resi e storni di novembre. Saldare più tardi una vendita a credito non la sposta."
+      },
+      {
+        "type": "h2",
+        "text": "Imposta incassata e totali di Report"
+      },
+      {
+        "type": "p",
+        "text": "Il riquadro Imposta è uguale al totale Imposta di Report imposte. Differisce dalla riga Imposta di Dai ricavi all’utile lordo di Report solo per gli storni a cavallo di periodi, perché Report toglie una vendita stornata dal periodo originale."
+      },
+      {
+        "type": "note",
+        "text": "Report imposte mostra l'imposta incassata sulle vendite, mai l'imposta da versare (imposta sulle vendite meno imposta sugli acquisti), perché non tutti i paesi la calcolano così, come il metodo semplificato giapponese o il Flat Rate Scheme del Regno Unito."
+      }
+    ],
+    "related": [
+      "tax-return-boxes",
+      "input-tax",
+      "export-tax-report",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "tax-return-boxes",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Quali importi vanno nelle caselle della dichiarazione BAS, GST o IVA?",
+    "keywords": [
+      "Caselle della dichiarazione",
+      "Report imposte",
+      "Report",
+      "BAS",
+      "Simpler BAS",
+      "GST101A",
+      "GST F5",
+      "dichiarazione IVA",
+      "Detrazione imposta sugli acquisti"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Per i negozi in Australia, Nuova Zelanda, Singapore o Regno Unito, Report imposte si apre con Caselle della dichiarazione, che mostra ogni casella e l'importo tratto dallo stesso report. Copre Australia BAS · Simpler BAS, Nuova Zelanda GST101A, Singapore GST F5 e Dichiarazione IVA del Regno Unito con ogni piano."
+      },
+      {
+        "type": "h2",
+        "text": "Aprire Caselle della dichiarazione"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Apri Report.",
+          "Tocca il riquadro Imposta per aprire Report imposte."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Caselle della dichiarazione è la prima scheda, sopra Vendite e imposta per aliquota, e il suo sottotitolo indica la dichiarazione. Ogni importo proviene dallo stesso report, centesimi compresi, e nulla viene ricalcolato. Il report PDF esportato si apre con la stessa scheda. I negozi configurati prima che l'app registrasse il paese contano in base alla valuta (AUD, NZD, SGD o GBP); gli altri negozi non hanno la scheda Caselle della dichiarazione."
+      },
+      {
+        "type": "shot",
+        "name": "return-boxes",
+        "alt": "Scheda Caselle della dichiarazione in cima a Report imposte con le caselle 1, 4, 6 e 7 della Dichiarazione IVA del Regno Unito"
+      },
+      {
+        "type": "h2",
+        "text": "Australia BAS · Simpler BAS"
+      },
+      {
+        "type": "list",
+        "items": [
+          "G1 Total sales: Vendite con GST, comprese quelle esenti da GST e non tassate; rispondi Yes a «Does the amount shown at G1 include GST?»",
+          "1A GST on sales: Imposta sulle vendite",
+          "1B GST on purchases: Imposta detraibile su ordini d’acquisto e spese"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "L'ATO richiede dollari interi: nel BAS ometti i centesimi, senza mai arrotondare per eccesso."
+      },
+      {
+        "type": "h2",
+        "text": "Nuova Zelanda GST101A"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Casella 5 Total sales and income: Vendite con GST, comprese quelle ad aliquota zero, escluse quelle non tassate",
+          "Casella 6 Zero-rated supplies: Vendite ad aliquota zero",
+          "Casella 11 Total purchases and expenses: Ordini d’acquisto e spese con GST, GST inclusa; esclusi gli acquisti senza imposta sugli acquisti o ad aliquota zero"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "myIR calcola le caselle 8 e 12 come 3/23, un valore che può differire di pochi centesimi dall'imposta del report."
+      },
+      {
+        "type": "h2",
+        "text": "Singapore GST F5"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Casella 1 Total value of standard-rated supplies: Vendite tassate al netto dell’imposta",
+          "Casella 2 Total value of zero-rated supplies: Vendite ad aliquota zero; solo esportazioni e servizi internazionali possono essere ad aliquota zero",
+          "Casella 5 Total value of taxable purchases: Ordini d’acquisto e spese con GST o ad aliquota zero, al netto dell’imposta; esclusi gli acquisti senza imposta sugli acquisti",
+          "Casella 6 Output tax due: Imposta sulle vendite",
+          "Casella 7 Input tax and refunds claimed: Imposta detraibile su ordini d’acquisto e spese"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Dichiarazione IVA del Regno Unito"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Casella 1 VAT due on sales and other outputs: Imposta sulle vendite",
+          "Casella 4 VAT reclaimed on purchases and other inputs: Imposta detraibile su ordini d’acquisto e spese",
+          "Casella 6 Total value of sales and all other outputs excluding any VAT: Vendite al netto dell’imposta, comprese quelle ad aliquota zero, esenti e non tassate",
+          "Casella 7 Total value of purchases and all other inputs excluding any VAT: Ordini d’acquisto e spese al netto dell’imposta, compresi gli acquisti senza imposta sugli acquisti; togli eventuali stipendi e imposte locali sugli immobili commerciali (business rates) che hai registrato"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Per la contabilità IVA standard; con il Flat Rate Scheme, le caselle 1 e 6 si calcolano in modo diverso. Nel Regno Unito l'IVA su un acconto è dovuta quando lo ricevi; DingPOS registra un preordine al momento del ritiro."
+      },
+      {
+        "type": "p",
+        "text": "Esempio di trimestre nel Regno Unito: £1,000 di vendite con IVA 20% al netto dell'imposta (imposta £200), £300 ad aliquota zero, £50 senza imposta, ordini d'acquisto per £400 più £80 di IVA e spese per £250 senza imposta sugli acquisti danno Casella 1 £200, Casella 4 £80, Casella 6 £1,350 e Casella 7 £650."
+      },
+      {
+        "type": "h2",
+        "text": "Caselle vuote e accesso dei collaboratori"
+      },
+      {
+        "type": "p",
+        "text": "Le caselle che calcola l'ente fiscale e gli importi dovuti sono omessi (Regno Unito caselle 3 e 5; Singapore casella 3, forniture esenti). In Nuova Zelanda e a Singapore le vendite non tassate non rientrano in nessuna casella; chiedi al tuo commercialista se avrebbero dovuto avere l'imposta."
+      },
+      {
+        "type": "p",
+        "text": "Le caselle degli acquisti (AU 1B, NZ 11, SG 5 e 7, UK 4 e 7) richiedono Detrazione imposta sugli acquisti, altrimenti mostrano — e Nessuna imposta sugli acquisti registrata, mai 0. La casella 7 del Regno Unito richiede sia Imposta sugli acquisti degli ordini d’acquisto sia Imposta sugli acquisti delle spese; i soli ordini d'acquisto compilano la casella 4 e lasciano la casella 7 come —."
+      },
+      {
+        "type": "p",
+        "text": "I collaboratori senza il permesso Conto economico e spese o Costi e utile non vedono le caselle che sommano entrambe le schede finché un responsabile non approva tramite Chiedi l’approvazione di un responsabile."
+      },
+      {
+        "type": "note",
+        "text": "Calcolato sulle date di vendita e di fattura; DingPOS non tiene traccia delle date di pagamento. Se dichiari per cassa o per pagamenti, correggi questi importi."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "input-tax",
+      "export-tax-report"
     ]
   },
   {
@@ -1616,11 +2440,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Vai in Impostazioni → Programma fedeltà e definisci due regole: quanti punti Y si guadagnano ogni X spesi e quanti punti N si riscattano per M di sconto (con un limite di riscatto per ordine, facoltativo). Puoi anche assegnare in automatico un bonus di benvenuto ai nuovi clienti."
+        "text": "Vai in Impostazioni → Programma fedeltà e definisci due regole: quanti punti Y si guadagnano ogni X spesi e quanti punti N si riscattano per M di sconto (con un limite di riscatto per ordine, facoltativo). Puoi anche assegnare in automatico un bonus di benvenuto ai nuovi clienti. I nuovi negozi partono con i punti disattivati: attiva l'opzione “Attiva programma fedeltà” e imposta una regola. Se l'interruttore è attivo ma non c'è alcuna regola, compare l'avviso “Non è ancora impostata alcuna regola di accumulo o di utilizzo, quindi le vendite non accumuleranno né utilizzeranno punti.”"
       },
       {
         "type": "p",
-        "text": "Associa il cliente alla vendita, nel carrello o nella schermata di cassa, e i punti si accumulano in automatico; per riscattarli, inserisci i punti da usare. Con lo storno di un ordine vengono tolti i punti che aveva fatto guadagnare e restituiti quelli riscattati."
+        "text": "Associa il cliente alla vendita, nel carrello o nella schermata di cassa, e i punti si accumulano in automatico; per riscattarli, inserisci i punti da usare. La schermata di conferma mostra i punti guadagnati e il nuovo saldo, ad esempio “+22 punti · 122 punti in totale”; con una vendita a credito o un preordine non ancora pagato per intero, i punti vengono aggiunti solo quando arriva il pagamento e compare la dicitura “accreditati al saldo” oppure “accreditati al pagamento al ritiro”. Con lo storno di un ordine vengono tolti i punti che aveva fatto guadagnare e restituiti quelli riscattati."
       },
       {
         "type": "p",
@@ -2006,7 +2830,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Azioni (rettifica manuale della giacenza, rettifica manuale dei punti, gestione prodotti, pagamento oltre lo sconto massimo del ruolo): un'approvazione vale per quella sola azione.",
-          "Schermate (costi e utile, Dashboard, conto economico e spese, Impostazioni, backup e ripristino): un'approvazione sblocca finché l'operatore non cambia o l'app va in background.",
+          "Schermate (costi e utile, Report, conto economico e spese, Impostazioni, backup e ripristino): un'approvazione sblocca l'accesso finché l'operatore non cambia o l'app va in background.",
           "Lo sconto massimo del ruolo si applica agli sconti manuali e viene controllato una sola volta al pagamento; le promozioni automatiche e il riscatto dei punti non vengono conteggiati."
         ]
       },
@@ -2084,7 +2908,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se ti abboni a un piano durante la prova, la prova termina subito e da quel momento vale il piano acquistato. Dopo la prova, le funzioni Pro come collaboratori e registro attività restano disponibili solo con un abbonamento Pro. I report avanzati non richiedono un abbonamento Pro: dalla v3.4 ogni piano li include."
+        "text": "Se ti abboni a un piano durante la prova, la prova termina subito e da quel momento vale il piano acquistato. Dopo la prova, le funzioni Pro come collaboratori e registro attività restano disponibili solo con un abbonamento Pro. La scheda Report non richiede un abbonamento Pro: ogni piano la include per intero."
       },
       {
         "type": "p",
@@ -2144,13 +2968,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Tutti e tre i piani includono cassa completa, prodotti, ordini (con storni, resi e cambi), report (report avanzati e conto economico mensile inclusi dalla v3.4) e backup nel cloud. Cambiano gli strumenti per gestire il negozio:"
+        "text": "Tutti e tre i piani includono cassa completa, prodotti, ordini (con storni, resi e cambi), report (tutta la scheda Report e il conto economico mensile dalla v3.4, report imposte e relativa esportazione dalla v3.6) e backup nel cloud. Cambiano gli strumenti per gestire il negozio:"
       },
       {
         "type": "list",
         "items": [
           "Lite: per chi gestisce un banco da solo e ha bisogno di cassa e prodotti.",
-          "Standard: aggiunge promozioni, punti fedeltà e livelli clienti, gestione del magazzino, acquisti, vendite a credito, preordini e tariffe delle commissioni di pagamento.",
+          "Standard: aggiunge promozioni, sconti predefiniti, punti fedeltà e livelli clienti, gestione del magazzino, acquisti, vendite a credito, preordini e tariffe delle commissioni di pagamento.",
           "Pro: aggiunge collaboratori e permessi, approvazione del responsabile, registro attività e registro ripristino, pensato per i negozi con personale."
         ]
       },
@@ -2360,12 +3184,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Regali ed extra a pagamento non modificano mai il carrello da soli. Quando le condizioni sono soddisfatte, sulla schermata del cassiere compare un banner con il suggerimento, e il carrello cambia solo quando il cassiere tocca Scegli regalo o Scegli extra. È voluto, perché i regali coinvolgono merce fisica: qualcuno deve verificare che sia disponibile e che il cliente la voglia."
+        "text": "Regali ed extra a pagamento non modificano mai il carrello da soli. Quando le condizioni sono soddisfatte, sulla schermata del cassiere compare un banner con il suggerimento, e il carrello cambia solo quando il cassiere tocca il pulsante del regalo o il pulsante + sul banner (Scegli regalo o Scegli extra). È voluto, perché i regali coinvolgono merce fisica: qualcuno deve verificare che sia disponibile e che il cliente la voglia."
       },
       {
         "type": "list",
         "items": [
-          "Dopo Rifiuta, lo stesso suggerimento non ricompare per quel carrello; con un carrello nuovo o svuotato viene riproposto.",
+          "Dopo aver toccato ✕ (Rifiuta) sul banner, lo stesso suggerimento non ricompare per quel carrello; con un carrello nuovo o svuotato viene riproposto.",
+          "Se il carrello non soddisfa più le condizioni (ad esempio perché viene tolto l’articolo che aveva attivato un regalo), il regalo o l’extra viene rimosso in automatico con un messaggio in alto e non conta come utilizzo (dalla v3.6).",
           "Dalla v3.4 le offerte ancora in sospeso non bloccano la cassa: una riga gialla sotto il pulsante di pagamento, ad esempio «1 offerta in sospeso non verrà applicata», indica quante ne restano escluse (toccala per vedere quali) e l'ordine va a buon fine senza di esse. Per far attendere la cassa come prima, attiva Gestisci le proposte prima della cassa in Impostazioni → Preferenze del dispositivo; vale solo per questo iPad.",
           "Le righe di regali ed extra non possono ricevere altri sconti da altre promozioni in denaro e non contano per le soglie delle altre promozioni."
         ]
@@ -2559,7 +3384,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Dalla v3.4, Utile mostra l'utile netto di ogni mese dopo costo dei prodotti, commissioni e spese — vedi «Come vedo quanto ho guadagnato davvero ogni mese?» Non esiste ancora un report di chiusura mensile da esportare o stampare, ma nell'app c'è già tutto ciò che serve per riconciliare i conti:"
+        "text": "Dalla v3.4, Utile mostra l'utile netto di ogni mese dopo costo dei prodotti, commissioni e spese — vedi «Come vedo quanto ho guadagnato davvero ogni mese?» Dalla v3.6, il Report imposte esporta un periodo (ad esempio Questo mese) in CSV, in una cartella di lavoro Excel o in un Report PDF da dare al commercialista, con vendite, imposte, importo incassato per ogni metodo di pagamento e crediti da clienti. Utile e gli altri report non si possono ancora esportare, ma nell'app c'è già tutto ciò che serve per riconciliare i conti:"
       },
       {
         "type": "list",
@@ -2571,7 +3396,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Se ti serve un report di chiusura mensile da esportare o stampare, scrivici indicando i campi che vorresti: diamo priorità allo sviluppo in base al numero di richieste."
+        "text": "Se ti serve un report di chiusura mensile da esportare o stampare, oltre a quanto già copre il Report imposte, scrivici indicando i campi che vorresti: diamo priorità allo sviluppo in base al numero di richieste."
       }
     ],
     "related": [

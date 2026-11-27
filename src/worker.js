@@ -30,6 +30,10 @@ const HASHED_ASSET_RE = /-[A-Za-z0-9_-]{8,}\.(js|css|woff2?|png|jpe?g|svg|webp|a
 
 // Retired page URLs that search engines already indexed, mapped to the page
 // that now answers the same question. Keys are canonical trailing-slash paths.
+// The DingPOS language prefixes live when the FAQ articles below were retired. Frozen: a later language never had those URLs.
+const RETIRED_FAQ_PREFIXES = ["", "zh-hant/", "zh-hans/", "ja/", "th/", "ko/", "vi/", "id/", "es/", "fr/", "de/", "pt-br/", "it/", "nl/", "ms/", "tr/",
+  "sv/", "da/", "nb/", "fi/", "et/", "el/", "hu/", "bg/", "sq/", "ka/", "mn/", "uz/", "km/", "lo/", "hi/", "bn/"];
+
 const MOVED_PATHS = new Map([
   // DingPOS 2.0 shipped these roadmap items; the FAQ now documents the feature.
   ["/dingpos/support/roadmap-purchase-orders/", "/dingpos/support/purchase-orders/"],
@@ -37,10 +41,10 @@ const MOVED_PATHS = new Map([
   // German guides withdrawn (owner, 2026-10-26): the de site has no guides section.
   ["/dingpos/de/guides/", "/dingpos/de/"],
   ["/dingpos/de/guides/payment-processing-fees-germany/", "/dingpos/de/"],
-  // DingPOS 3.4 removed Data Import. The languages that had the article, frozen: a later language never had the URL.
-  ...["", "zh-hant/", "zh-hans/", "ja/", "th/", "ko/", "vi/", "id/", "es/", "fr/", "de/", "pt-br/", "it/", "nl/", "ms/", "tr/",
-    "sv/", "da/", "nb/", "fi/", "et/", "el/", "hu/", "bg/", "sq/", "ka/", "mn/", "uz/", "km/", "lo/", "hi/", "bn/"]
-    .map((prefix) => [`/dingpos/${prefix}support/import-csv/`, `/dingpos/${prefix}support/`]),
+  // DingPOS 3.4 removed Data Import.
+  ...RETIRED_FAQ_PREFIXES.map((prefix) => [`/dingpos/${prefix}support/import-csv/`, `/dingpos/${prefix}support/`]),
+  // "Advanced reports" stopped being a separate idea once every plan got all of Stats; its Compare half became compare-periods.
+  ...RETIRED_FAQ_PREFIXES.map((prefix) => [`/dingpos/${prefix}support/advanced-reports/`, `/dingpos/${prefix}support/compare-periods/`]),
 ]);
 
 export default {

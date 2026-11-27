@@ -5,6 +5,7 @@ read_when:
   - Changing the prerender, sitemap, or copy-spa-pages build steps
   - Editing robots.txt, llms.txt, JSON-LD, or Cloudflare AI Crawl Control
   - Writing FAQ or landing copy meant to be cited by search or AI engines
+  - Writing or illustrating a DingPOS FAQ (support) article, or re-capturing its screenshots
   - Writing or adding an acquisition article (Sotto or DingPOS guides), or a guide for a new market
   - Weighing SEO skill advice against this site's decisions
   - Changing DingPOS or Sotto en / zh-Hant copy, or anything about the generated zh-Hans
@@ -138,6 +139,16 @@ DingPOS、Sotto 與 Babbby registry 裡 `kind: translated` 的語言（DingPOS 2
 - 產品 claim 以產品 repo 為準（見 AGENTS.md §Product Repos）。
 - FAQ 題數少時用單頁 `/faq/`（pikgeon、babbby、sotto）。題數成長到十題以上時，改用 dingpos `/support/` 的模式：索引頁加每篇一條 route，內容來自各語系的 data pack。
 - 首頁 h1 不只寫品牌名：同名產品很多時，單獨的「Sotto」無法消歧。Sotto 首頁的 h1 是品牌加上含該語言 SWEET 詞的 tagline，視覺上仍是大字品牌加副標。
+
+### FAQ 圖文
+
+DingPOS 的 support 文章（`/dingpos/<prefix>/support/<slug>/`）用 app 在讀者語言下的實機截圖配步驟說明，因為讀者常一邊讀一邊在 iPad 上照做，畫面上的字要和文章一致（owner 2026-11-25，第一批是 reports 類的 10 篇）。
+
+- 文章的 block：`p`、`h2`、`list`、`steps`、`note`、`shot`、`video`、`youtube`。第一個 block 是 2–3 句直接回答問題的段落（meta description 從它截取）；一篇涵蓋不只一件事時（例如看報表和匯出）用 `h2` 分段，標題是平實的標籤，不寫成問句。
+- `shot` block 是 `{ type: "shot", name, alt, caption? }`，圖檔由語言決定：`dingpos/public/faq/<code>/<name>.webp`，檔案寬超過 1080px 時另有同比例的 `<name>-1080w.webp` 手機檔。同一個 `name` 在每種語言框的是同一塊畫面，但長的語言會換行、裁切跟著變大，所以尺寸按語言記在 `src/data/faq/shot-sizes.js`。`alt` 與 `caption` 隨翻譯流程翻。截圖不拆開編號步驟：屬於某一步的畫面放在整串步驟之後，因為中斷後的編號清單會從 1 重新開始。
+- 截圖只來自 `dingpos/scripts/capture-faq-shots.sh` 加 `build-faq-shots.sh`：前者在 iPad 模擬器上，用已上架版本的 tag build 的 app 載入 UI-test fixtures 拍每種語言（zh-Hant、zh-Hans 用台灣的店，其他語言用英國的店），裁切框依 accessibility frame 計算；後者裁切、編碼成 WebP 並寫入 `shot-sizes.js`。不用 app 的假資料產生器，也不畫 UI。兩支都是本機工具，產出要 commit，CI 不跑；app 改了截圖裡的畫面、或新增一種語言時，重拍該語言。腳本開頭列出每張截圖拍的畫面與前置條件。
+- build 檢查（`copy-spa-pages.js`）：block 型別只能是上面這幾種；每種已上線語言的每個 `shot` 都要在 `shot-sizes.js` 有記錄，檔案存在、是 WebP、尺寸與記錄相符，手機檔 1080px 寬且比例相同，`alt` 不為空、`caption` 不含連結（和 guide 的 `image` block 共用 `scripts/guide-images.mjs`）。
+- 撰稿流程，形狀和 [§獲客文章](#獲客文章) 的撰稿流程相同：主 session 對 DingPOS repo 查證，寫成 brief（`.logs/faq/dingpos/briefs/<slug>.md`：事實與出處、en 與 zh-Hant 的畫面名稱、可用的截圖、related）→ `faq-writer` project agent（Gemini 4 Neon）照 `.pi/faq/dingpos.md` 寫 en 與 zh-Hant 的 Markdown 草稿 → `guide-cleaner` 的 FAQ 模式清掉 AI 味（frontmatter、截圖標記與畫面名稱鎖定不改）→ 主 session 用 word diff 對照 brief 檢查 → `node scripts/faq-md.mjs <clean.md> dingpos/src/data/faq/articles.<code>.js` 寫進 pack（同 slug 就地取代，保留 category 與 `since`）→ zh-Hans 由 `npm run zh-hans` 產生，翻譯語言走 [§翻譯語言](#翻譯語言)。畫面名稱以 app 的 `Localizable.strings` 為準：DingPOS 的 spec 或 CHANGELOG 和 app 字串不一致時，照 app 寫，因為讀者對照的是螢幕。
 
 ### 獲客文章
 

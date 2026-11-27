@@ -104,7 +104,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "La devise ne peut plus être modifiée après la configuration ; les taxes et le mode de taxe, eux, restent modifiables plus tard dans Réglages → Informations du magasin. Aux États-Unis, au Canada, au Brésil et en Micronésie, le taux dépend de l’État, de la province ou de la ville : le champ du taux est donc vide au départ, et vous saisissez le taux que vous appliquez pour continuer. Un taux doit être supérieur à 0 : un commerce qui ne facture aucune taxe supprime la ligne. La liste de 175 pays et le choix de la devise sont arrivés avec la v3.2 ; les versions antérieures proposaient 15 pays."
+        "text": "La devise ne peut plus être modifiée après la configuration ; les taxes et le mode de taxe, eux, restent modifiables plus tard dans Réglages → Informations du magasin. Aux États-Unis, au Canada, au Brésil et en Micronésie, le taux dépend de l’État, de la province ou de la ville : le champ du taux est donc vide au départ, et vous saisissez le taux que vous appliquez pour continuer. Un taux doit être supérieur à 0 : un commerce qui ne facture aucune taxe supprime la ligne. En Allemagne, en France, en Italie et dans d’autres pays européens, la liste inclut aussi les taux réduits courants dans le commerce local, sous le nom de la taxe locale, par exemple « MwSt. 19% » et « MwSt. 7% » en Allemagne ; les taux réduits ne sont pas appliqués par défaut aux nouveaux produits, activez-les donc produit par produit. La liste de 175 pays et le choix de la devise sont arrivés avec la v3.2 ; les versions antérieures proposaient 15 pays."
       }
     ],
     "related": [
@@ -311,7 +311,8 @@ export const articles = [
       "pourcentage",
       "montant fixe",
       "remise sur article",
-      "remise sur panier"
+      "remise sur le panier",
+      "préréglage de remise"
     ],
     "content": [
       {
@@ -328,6 +329,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Chaque article et chaque panier ne peuvent porter qu’une remise à la fois : en appliquer une nouvelle remplace la précédente, et toucher le badge de la remise la supprime. Les remises sont appliquées avant la taxe, selon l’ordre habituel du commerce de détail."
+      },
+      {
+        "type": "p",
+        "text": "Les remises que vous accordez souvent peuvent être enregistrées : allez dans Réglages → Fidélité et promotions → Préréglages de remise, puis touchez Ajouter un préréglage, par exemple « Tarif du personnel −20 % ». En caisse, la remise sur article et la remise sur le panier ont toutes deux un menu Préréglages ; en choisir un renseigne le type et la valeur de la remise exactement comme si vous les aviez saisis, et il compte donc toujours dans le plafond de remise d’un membre du personnel. Les préréglages de remise sont arrivés avec la v3.6 et nécessitent la formule Standard ou supérieure."
       }
     ],
     "related": [
@@ -382,7 +387,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Ordre complet du calcul : remises sur article et promotions → remise sur le panier → utilisation de points → taxe. Les montants sont arrondis à la valeur la plus proche, les demi-unités étant arrondies vers le haut, au nombre de décimales de la devise (p. ex. 0 pour le TWD, 2 pour l’USD)."
+        "text": "Ordre complet du calcul : remises sur article et promotions → remise sur le panier → utilisation de points → taxe. Les montants sont arrondis à la valeur la plus proche, les demi-unités étant arrondies vers le haut, au nombre de décimales de la devise (p. ex. 0 pour le TWD, 2 pour l’USD). La taxe est calculée une seule fois par taxe et par commande, et ses décimales suivent Arrondi de la taxe sur la carte Taxe : Arrondir au plus proche, Arrondir à l’inférieur ou Arrondir au supérieur. Les nouveaux magasins au Japon démarrent sur Arrondir à l’inférieur ; les autres magasins démarrent sur Arrondir au plus proche."
       },
       {
         "type": "note",
@@ -412,7 +417,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Un nouveau magasin démarre avec deux moyens de paiement, Espèces et Carte bancaire, nommés dans la langue de l’app lors de la configuration. Dans Réglages → Moyens de paiement, vous pouvez ajouter tout autre moyen (p. ex. Apple Pay, LINE Pay, un portefeuille local), les supprimer ou les réordonner."
+        "text": "Un nouveau magasin démarre avec deux moyens de paiement, Espèces et Carte bancaire, nommés dans la langue de l’app lors de la configuration. Dans Réglages → Moyens de paiement, vous pouvez ajouter tout autre moyen (p. ex. Apple Pay, LINE Pay, un portefeuille local) et les réordonner. Touchez un moyen pour le renommer, par exemple de Carte bancaire en « Carte (Square) » ; Stats compte sous le nouveau nom les ventes faites avant le changement de nom (depuis la v3.6). Supprimer le moyen de paiement se trouve en bas de la feuille de modification et demande confirmation avant de supprimer ; les commandes passées conservent le moyen avec lequel elles ont été payées, et le dernier moyen restant ne peut pas être supprimé."
       },
       {
         "type": "p",
@@ -442,7 +447,7 @@ export const articles = [
     "keywords": [
       "frais de traitement",
       "frais de carte",
-      "frais de traitement",
+      "frais par transaction",
       "taux de frais",
       "net estimé encaissé",
       "frais commerçant",
@@ -451,7 +456,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Oui. Dans Réglages → Moyens de paiement, touchez un moyen de paiement (ou ajoutez-en un) et renseignez Frais de traitement : un pourcentage, un montant fixe par transaction, ou les deux. Dès lors, chaque paiement encaissé par ce moyen enregistre des frais estimés au taux en vigueur à ce moment-là."
+        "text": "Oui. Dans Réglages → Moyens de paiement, touchez un moyen de paiement (ou ajoutez-en un) et renseignez Frais de traitement : un pourcentage, un montant fixe par transaction, ou les deux. Les moyens de type espèces n’ont pas de frais. Dès lors, chaque paiement encaissé par ce moyen enregistre des frais estimés au taux en vigueur à ce moment-là."
       },
       {
         "type": "p",
@@ -460,9 +465,9 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Saisissez le taux que votre prestataire prélève réellement, taxe comprise : pour 3 % plus 5 % de taxe, saisissez 3,15 %. Laissez les deux champs vides pour aucun frais.",
+          "Saisissez le taux que votre prestataire prélève réellement. Si une taxe s’applique aux frais, incluez-la : pour 3 % plus 5 % de taxe, saisissez 3,15 %. Laissez les deux champs vides pour aucun frais.",
           "Un changement de taux ne s’applique qu’aux paiements suivants ; les frais déjà enregistrés restent tels quels.",
-          "« Pourcentage de frais restitué lors des remboursements » est activé par défaut, pour les prestataires qui rendent leurs frais en cas de remboursement. Il régit les retours et les acomptes de précommande remboursés : activé, le pourcentage est restitué ; la part fixe ne l’est jamais. Une invalidation ou une annulation du règlement ignore ce réglage et reprend la totalité des frais enregistrés, part fixe comprise. Dans tous les cas, le client récupère le même montant.",
+          "« Pourcentage de frais restitué lors des remboursements » est activé au départ pour les magasins à Taïwan et au Japon, et désactivé ailleurs, car des prestataires comme Stripe, Square et PayPal conservent leurs frais en cas de remboursement ; réglez-le selon votre prestataire. Il régit les retours et les acomptes de précommande remboursés : activé, le pourcentage est restitué ; la part fixe ne l’est jamais. Une invalidation ou une annulation du règlement ignore ce réglage et reprend la totalité des frais enregistrés, part fixe comprise. Dans tous les cas, le client récupère le même montant.",
           "Les paiements encaissés avant que le moyen ait un taux n’ont aucun frais : Stats les signale par « N sans taux » et affiche le net sous la forme « — »."
         ]
       },
@@ -781,7 +786,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "À l’encaissement, faites passer le haut de l’écran de Vente à Précommande, choisissez la date de retrait, saisissez l’acompte (de 0 au montant total, avec les raccourcis 30 % / 50 % / total) et indiquez comment il est payé. Associez un client pour pouvoir le joindre à l’arrivée des articles."
+        "text": "À l’encaissement, faites passer le haut de l’écran de Vente à Précommande, choisissez la date de retrait, saisissez l’acompte (de 0 au montant total, avec les raccourcis 30 % / 50 % / total) et indiquez comment il est payé. Associez un client pour pouvoir le joindre au sujet du retrait."
       },
       {
         "type": "list",
@@ -896,11 +901,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Dès qu’un produit a des variantes, son champ Prix se replie et chaque combinaison reçoit son propre prix sous Prix et stock des variantes, avec son propre stock (depuis la v3.2 ; les versions antérieures demandent encore un prix de produit). La caisse, la liste des produits et la fiche produit affichent une fourchette du prix le plus bas au plus élevé, comme « NT$350–NT$390 », ou un prix unique lorsque toutes les combinaisons coûtent pareil ; le tri par prix s’appuie sur le prix de combinaison le plus bas. À l’encaissement, toucher le produit affiche un sélecteur de variante avant l’ajout au panier."
+        "text": "Dès qu’un produit a des variantes, chaque combinaison sous Prix et stock des variantes garde son propre stock, et son prix suit le Prix du produit : une combinaison sans prix propre affiche le prix du produit en gris et change avec lui, et un nombre que vous saisissez est le prix propre de cette combinaison, affiché en noir. Par exemple, réglez le Prix d’un T-shirt à 390 et ne modifiez que L à 350 : M et XL se vendent 390, et quand le Prix passe plus tard à 420, M et XL suivent à 420 tandis que L reste à 350. Le ⓘ à côté de la colonne Prix contient Utiliser le prix du produit, qui fait de nouveau suivre à chaque combinaison le prix du produit. Les produits créés avant la v3.6 conservent chaque prix de variante comme prix propre de la combinaison, et le Prix du produit est le plus bas d’entre eux. La caisse, la liste des produits et la fiche produit affichent une fourchette du prix le plus bas au plus élevé, comme « NT$350–NT$390 », ou un prix unique lorsque toutes les combinaisons coûtent pareil ; le tri par prix s’appuie sur le prix de combinaison le plus bas. À l’encaissement, toucher le produit affiche un sélecteur de variante avant l’ajout au panier."
       },
       {
         "type": "p",
-        "text": "Inutile de saisir un coût pour chaque combinaison : un champ Coût vide signifie Suit le produit : il reprend le coût du produit et change avec lui. Un nombre, 0 compris, donne Coût propre. Utiliser le coût du produit pour toutes efface d’un coup tous les coûts propres."
+        "text": "Le coût fonctionne de la même façon : un coût vide affiche le coût du produit en gris et change avec lui, et un nombre est le coût propre de la combinaison, affiché en noir — 0 compris. Utiliser le coût du produit, dans le ⓘ à côté de la colonne Coût, efface d’un coup le coût propre de chaque combinaison."
       },
       {
         "type": "note",
@@ -1037,7 +1042,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Une fois activé, les ventes et les précommandes déduisent le stock automatiquement ; les invalidations, les retours et les précommandes annulées le remettent ; et la réception d’un bon de commande l’augmente. Chaque mouvement est consigné dans un historique complet. Un stock faible est signalé par un avertissement en couleur."
+        "text": "Une fois activé, les ventes et les précommandes déduisent le stock automatiquement ; les invalidations, les retours et les précommandes annulées le remettent ; et la réception d’un bon de commande l’augmente. Chaque mouvement est consigné dans un historique complet. Quand il en reste 10 ou moins, le stock est signalé comme faible, en orange, dans la liste des produits, à la caisse et dans la fiche produit."
       },
       {
         "type": "p",
@@ -1077,7 +1082,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Utilisez Ajuster le stock. Pour un produit dont le stock est suivi, touchez Ajuster le stock dans la fiche du produit, choisissez Retirer ou Ajouter, saisissez la quantité, sélectionnez un motif et, si vous le souhaitez, ajoutez une note (100 caractères maximum). La fenêtre calcule le stock après la modification, et la ligne sous le motif indique si l’ajustement touche le compte de résultat."
+        "text": "Utilisez Ajuster le stock. Pour un produit dont le stock est suivi, touchez Ajuster le stock dans la fiche du produit, choisissez Retirer ou Ajouter, réglez la quantité avec + et − (elle démarre à 1 ; touchez le nombre pour le saisir), sélectionnez un motif et, si vous le souhaitez, ajoutez une note (100 caractères maximum). La fenêtre calcule le stock après la modification, et la ligne sous le motif indique si l’ajustement touche le compte de résultat."
       },
       {
         "type": "list",
@@ -1151,19 +1156,19 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Achats, dans la barre latérale, sert à gérer les fournisseurs et les bons de commande. Une fiche fournisseur contient un nom, un interlocuteur, un téléphone, une adresse et des conditions de paiement par défaut (paiement à la réception ou crédit mensuel)."
+        "text": "Achats, dans la barre latérale, sert à gérer les fournisseurs et les bons de commande. Une fiche fournisseur contient un nom, un interlocuteur, un téléphone, une adresse et des conditions de paiement par défaut : Paiement à la réception ou Crédit mensuel."
       },
       {
         "type": "steps",
         "items": [
-          "Touchez Nouvel achat, choisissez le fournisseur, puis ajoutez les produits, les quantités et les coûts unitaires (préremplis avec le coût actuel de chaque produit). Des frais de livraison peuvent aussi être ajoutés. Si le fournisseur n’existe pas encore, touchez Ajouter un fournisseur en haut à gauche de la liste des fournisseurs : le nouveau fournisseur revient directement dans le bon de commande.",
+          "Touchez Nouvel achat, choisissez le fournisseur, puis ajoutez les produits, les quantités et les coûts unitaires (préremplis avec le coût actuel de chaque produit). Des frais de livraison peuvent aussi être ajoutés. Pour une marchandise qui n’est pas encore créée comme produit, touchez Nouveau produit dans le sélecteur Ajouter un produit : le nouveau produit arrive directement dans le bon de commande sous forme de ligne. Si le fournisseur n’existe pas encore, touchez Ajouter un fournisseur en haut à gauche de la liste des fournisseurs : le nouveau fournisseur revient directement dans le bon de commande.",
           "Un brouillon n’affecte jamais le stock ni les sommes dues : modifiez-le ou supprimez-le librement.",
-          "À l’arrivée de la marchandise, touchez Réceptionner le stock : le stock suivi augmente, et le bon de commande reçoit son numéro et se verrouille. Par défaut, la réception met aussi à jour le coût de chaque produit avec ce coût unitaire ; désactivez Synchroniser le coût des produits sur le bon de commande pour conserver les coûts inchangés."
+          "À l’arrivée de la marchandise, touchez Réceptionner le stock : le stock suivi augmente, et le bon de commande reçoit son numéro et se verrouille. Par défaut, la réception met aussi à jour le coût de chaque produit avec ce coût unitaire ; désactivez Synchroniser le coût des produits sur le bon de commande pour conserver les coûts inchangés. Juste en dessous, Inclure les frais de port dans le coût (activé pour les nouveaux bons de commande) répartit les frais de livraison entre les lignes selon leur montant, de sorte que le coût inscrit sur chaque produit inclut sa part : 10 × 30 $ de farine, 1 × 60 $ de beurre et 25 $ de frais de livraison donnent un coût de 32 $ pour la farine et de 64 $ pour le beurre."
         ]
       },
       {
         "type": "p",
-        "text": "Les conditions de paiement déterminent la suite : les commandes à paiement à la réception sont marquées comme payées, tandis que les commandes à crédit mensuel restent non payées dans Factures impayées, où vous pouvez les régler par fournisseur : une commande, le mois en cours, ou tout."
+        "text": "Les conditions de paiement déterminent la suite : les commandes en Paiement à la réception sont marquées comme payées, tandis que les commandes en Crédit mensuel restent non payées dans Factures impayées, où vous pouvez les régler par fournisseur : une commande, le mois en cours, ou tout."
       },
       {
         "type": "p",
@@ -1205,7 +1210,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Un produit non vendu n’apparaît jamais dans la grille de la caisse, les catégories, la recherche ni les scans de code-barres, et ne peut être ni un cadeau, ni un extra, ni la cible d’une promotion, ni un article de remplacement dans un échange.",
+          "Un produit non vendu n’apparaît jamais dans la grille de la caisse, les catégories, la recherche ni les scans de code-barres, et ne peut être ni un cadeau, ni un extra, ni la cible d’une promotion, ni un article de remplacement dans un échange. Une catégorie qui ne contient que des produits non vendus est absente de la barre des catégories de la caisse.",
+          "Quand le magasin a des produits non vendus, un bouton de filtre apparaît en haut à droite de Produits : choisissez Tous les produits, À vendre en caisse ou Non vendus, en plus de la recherche et des catégories.",
           "Les bons de commande, la réception, Synchroniser le coût des produits et les factures impayées fonctionnent exactement comme pour les autres produits : le coût d’achat et le stock d’une matière peuvent donc être enregistrés via Achats.",
           "La vente d’autres produits ne diminue pas son stock. Quand vous en utilisez, enregistrez une sortie avec Ajuster le stock dans la fiche du produit : Matières utilisées pour ce qui est entré dans les produits, Consommables pour des choses comme les sacs en papier ou les produits d’entretien.",
           "Vous pouvez le remettre en vente à tout moment ; son prix et ses taxes sont conservés. Les commandes et les rapports déjà établis ne sont pas modifiés."
@@ -1234,30 +1240,70 @@ export const articles = [
     "keywords": [
       "chiffre d’affaires",
       "encaissements",
-      "revenus",
+      "Stats",
+      "marge brute",
+      "du chiffre d’affaires à la marge brute",
       "rapprochement",
       "rapprocher la caisse",
       "acompte",
-      "vente en compte"
+      "vente en compte",
+      "taxe"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Le chiffre d’affaires est compté le jour où la marchandise est remise, après toutes les remises et avant taxe ; les encaissements sont comptés le jour où l’argent arrive, et correspondent à l’argent réellement perçu, taxe comprise. Dans une boutique qui applique une taxe, les encaissements dépassent donc le chiffre d’affaires du montant de la taxe, même pour une commande payée au comptoir. Au-delà, les deux chiffres divergent dans les cas suivants :"
+        "text": "Le chiffre d’affaires est compté le jour où la marchandise est remise, après toutes les remises et avant taxe ; les encaissements sont comptés le jour où l’argent arrive, et correspondent à l’argent perçu, taxe comprise. Dans une boutique qui applique une taxe, les encaissements dépassent le chiffre d’affaires du montant de la taxe, même pour une commande payée au comptoir. Les deux figurent dans les deux premières tuiles de la première rangée de Stats, avec Marge brute, Commandes et Commande moyenne."
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Rangées de tuiles de Stats, avec Chiffre d’affaires et Encaissements côte à côte dans la première rangée"
+      },
+      {
+        "type": "h2",
+        "text": "Quand le chiffre d’affaires et les encaissements diffèrent"
+      },
+      {
+        "type": "p",
+        "text": "Par exemple, dans une boutique dont les prix incluent la taxe, qui vend pour NT$1,050 taxe de 5 % comprise à un client qui paie au comptoir, le chiffre d’affaires est de NT$1,000 et les encaissements de NT$1,050. Au-delà de la taxe, les deux chiffres divergent dans les cas suivants :"
       },
       {
         "type": "list",
         "items": [
-          "Vente en compte : la marchandise part aujourd’hui et compte dans le chiffre d’affaires du jour ; l’argent compte dans les encaissements le jour du règlement.",
+          "Vente en compte : la marchandise part aujourd’hui et compte dans le chiffre d’affaires du jour ; l’argent compte dans les encaissements le jour où la commande est réglée.",
           "Précommande : l’acompte compte dans les encaissements au moment où il est versé ; le chiffre d’affaires est comptabilisé en totalité à la date de retrait.",
-          "Acompte conservé : lorsqu’un client annule une précommande et que vous gardez l’acompte, celui-ci était déjà compté dans les encaissements au moment du versement. Stats l’affiche à part, sous « Acomptes conservés », et il ne compte jamais dans le chiffre d’affaires.",
-          "Invalidation d’une commande antérieure : l’argent remboursé compte dans les encaissements le jour de l’invalidation, si bien que les encaissements de ce jour peuvent être négatifs, tandis que la tuile Invalidées compte la commande à sa date de vente.",
-          "Arrondi des espèces : ce que l’arrondi des espèces ajoute ou retire par rapport au total de la commande compte dans les encaissements, jamais dans le chiffre d’affaires."
+          "Acomptes conservés : lorsqu’un client annule une précommande et que vous gardez l’acompte, celui-ci était déjà compté dans les encaissements au moment du versement. Stats l’affiche à part sous Acomptes conservés, et il ne compte jamais dans le chiffre d’affaires.",
+          "Invalidation d’une commande antérieure : l’argent remboursé compte dans les encaissements le jour de l’invalidation, si bien que les encaissements de ce jour peuvent être négatifs. La commande invalidée elle-même est comptée à sa date de vente et figure dans le sous-titre de la tuile Commandes.",
+          "Arrondi des espèces : tout montant que l’arrondi des espèces ajoute ou retire par rapport au total de la commande compte dans les encaissements, jamais dans le chiffre d’affaires."
         ]
       },
       {
         "type": "p",
-        "text": "Pour rapprocher vos comptes, comparez les encaissements avec le tiroir-caisse et votre terminal de carte ; pour savoir combien vous avez réellement vendu sur une période, lisez le chiffre d’affaires. Les retours réduisent le chiffre d’affaires le jour du retour. Le ⓘ des tuiles Chiffre d’affaires, Encaissements et Invalidées donne la même explication, et la taxe elle-même figure sous Du chiffre d’affaires à la marge brute, qui s’ouvre depuis la tuile Marge brute."
+        "text": "Quand l’un de ces montants n’est pas nul, le sous-titre de la tuile Encaissements affiche l’arrondi des espèces ou les acomptes conservés correspondants."
+      },
+      {
+        "type": "h2",
+        "text": "Taxe et détail des tuiles"
+      },
+      {
+        "type": "p",
+        "text": "La taxe qui sépare le chiffre d’affaires des encaissements figure dans Du chiffre d’affaires à la marge brute, qui s’ouvre depuis le pied de la tuile Marge brute. Cet écran affiche Chiffre d’affaires (TTC), Taxe et Chiffre d’affaires (hors taxe). Les boutiques d’Australie, du Royaume-Uni, de Nouvelle-Zélande et de Singapour y voient le nom de leur taxe locale, par exemple Chiffre d’affaires (avec GST), GST et Chiffre d’affaires (hors GST)."
+      },
+      {
+        "type": "p",
+        "text": "Pour voir la taxe collectée à déclarer, ouvrez Rapport de taxes depuis la tuile Taxe."
+      },
+      {
+        "type": "p",
+        "text": "Le ⓘ des tuiles Chiffre d’affaires, Encaissements et Commandes explique ces règles dans l’app, y compris les commandes invalidées listées dans le sous-titre de la tuile Commandes."
+      },
+      {
+        "type": "h2",
+        "text": "Rapprocher les comptes et lire les ventes"
+      },
+      {
+        "type": "p",
+        "text": "Pour rapprocher vos comptes, comparez les encaissements avec le tiroir-caisse et votre terminal de carte. La carte Moyens de paiement de Stats affiche une ligne par moyen, et les ventes réalisées avant le changement de nom d’un moyen sont comptées sous le nouveau nom. Pour savoir combien vous avez vendu sur une période, lisez le chiffre d’affaires. Les retours réduisent le chiffre d’affaires le jour du retour."
       },
       {
         "type": "note",
@@ -1267,7 +1313,8 @@ export const articles = [
     "related": [
       "on-account",
       "pre-orders",
-      "report-periods"
+      "report-periods",
+      "tax-report"
     ]
   },
   {
@@ -1275,99 +1322,229 @@ export const articles = [
     "category": "reports",
     "question": "Sur quelles périodes puis-je consulter mes rapports de ventes ?",
     "keywords": [
+      "Stats",
       "rapports",
       "période",
       "cette semaine",
       "ce mois-ci",
-      "cette année",
       "période personnalisée",
-      "dates",
-      "top produits"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Choisissez Aujourd’hui, Hier, Cette semaine, Ce mois-ci, Cette année ou Toute la période en haut de Stats, ou utilisez Personnalisée pour définir une date de début et une date de fin. Cette semaine suit le premier jour de la semaine réglé sur l’appareil ; Ce mois-ci et Cette année commencent le 1er du mois et le 1er janvier. Chaque option affiche les dates qu’elle couvre, et Toute la période démarre à la première transaction de votre magasin."
-      },
-      {
-        "type": "p",
-        "text": "Sous la barre de période viennent deux rangées de tuiles de chiffres (Chiffre d’affaires, Encaissements, Marge brute, Commandes, Commande moyenne ; Total des remises, Bénéfice net, Produits sans coût, Clients servis), puis le graphique d’évolution. Le menu en haut à droite du graphique d’évolution le fait basculer entre chiffre d’affaires, commandes, commande moyenne et clients servis ; à côté, le graphique Coût et marge brute empile dans une même barre le coût des produits et la marge brute de chaque période. Une seule journée est tracée heure par heure ; les périodes plus longues utilisent des jours, des semaines, des mois ou des années selon leur durée."
-      },
-      {
-        "type": "p",
-        "text": "Maintenez le doigt appuyé sur le graphique d’évolution ou sur le graphique Coût et marge brute pour le lire période par période ; avec Comparaison des ventes activée, la carte du graphique d’évolution affiche côte à côte le chiffre de cette période et celui de la période de comparaison. Faites glisser vers la gauche ou la droite pour vous déplacer ; balayez vers le haut ou le bas sur le graphique et la page défile comme d’habitude."
-      },
-      {
-        "type": "p",
-        "text": "La carte Top produits affiche les 5 premiers. Touchez la carte ou Tout afficher pour lister tous les produits vendus sur la période, classés par quantité après retours ; un produit avec variantes occupe une ligne par variante."
-      },
-      {
-        "type": "p",
-        "text": "Comparaison des ventes, à droite de la barre de période, compare la période avec la précédente ou avec la même période de l’an dernier — voir « Que montrent les rapports avancés ? »"
-      },
-      {
-        "type": "note",
-        "text": "Ces périodes calendaires sont arrivées avec la v2.4 ; les versions antérieures proposaient des plages glissantes (Aujourd’hui / 7 jours / 30 jours / Toute la période). Si vous les voyez encore, mettez à jour DingPOS depuis l’App Store."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "Que montrent les rapports avancés ?",
-    "keywords": [
-      "rapports avancés",
-      "comparaison des ventes",
-      "année dernière",
-      "carte thermique",
-      "heures de pointe",
+      "top produits",
       "produits à faible rotation",
-      "variations de produits",
-      "répartition par catégorie",
-      "valeur du stock",
-      "taux de réachat",
-      "points"
+      "jour × heure",
+      "valeur du stock"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Les rapports avancés ne sont pas un écran séparé : ils se trouvent directement dans Stats et suivent la période choisie en haut :"
+        "text": "Choisissez Aujourd’hui, Hier, Cette semaine, Ce mois-ci, Cette année ou Toute la période dans la barre de période en haut de Stats, ou touchez Personnalisée pour choisir n’importe quelle date de début et de fin. Chaque carte de la page suit la période choisie. Cette semaine suit le premier jour de la semaine réglé sur votre appareil, Ce mois-ci commence le 1er du mois, Cette année commence le 1er janvier, Toute la période démarre à la première transaction de votre boutique, et chaque option affiche les dates qu’elle couvre."
       },
       {
-        "type": "list",
+        "type": "shot",
+        "name": "report-periods",
+        "alt": "Barre de période en haut de Stats avec Personnalisée sélectionnée et sa fenêtre de dates ouverte pour choisir les dates de Début et de Fin"
+      },
+      {
+        "type": "h2",
+        "text": "Choisir une période personnalisée"
+      },
+      {
+        "type": "p",
+        "text": "Utilisez Personnalisée quand vous avez besoin d’une période en dehors des périodes calendaires prédéfinies, par exemple une période de déclaration de taxe de deux mois ou trimestrielle."
+      },
+      {
+        "type": "steps",
         "items": [
-          "Comparaison des ventes : à droite de la barre de période, comparez avec la même période de l’an dernier ou avec la période précédente (une journée avec le même jour de la semaine dernière, cette semaine avec la semaine dernière, ce mois-ci avec le mois dernier, cette année avec l’an dernier, une période personnalisée avec le même nombre de jours qui la précèdent). Les tuiles Chiffre d’affaires, Encaissements, Marge brute, Commandes, Commande moyenne, Total des remises et Clients servis affichent chacune l’écart et le chiffre de la période de comparaison, par exemple « ▼ 3 % vs mois dernier » ; l’écart du Total des remises reste toujours gris, car une remise plus élevée n’est en soi ni bonne ni mauvaise. Touchez une ligne de comparaison pour ouvrir Comparaison de périodes, qui liste les chiffres des deux périodes. Le graphique d’évolution ajoute une ligne plus claire pour la période de comparaison. Tant qu’une période n’est pas terminée, la période de comparaison est coupée au même moment.",
-          "Jour × heure : faites passer l’en-tête du graphique d’évolution de Évolution à Jour × heure pour obtenir une carte thermique de sept jours sur 24 heures — plus une case est foncée, plus vous avez vendu. Basculez entre chiffre d’affaires et commandes ; avec une comparaison activée, repérez les heures en hausse et celles en baisse.",
-          "Produits à faible rotation : faites passer l’en-tête de la carte de classement sur Produits à faible rotation pour lister les produits du moins vendu au plus vendu, avec le stock actuel et la date de la dernière vente de chacun. Les produits jamais vendus sont marqués Jamais vendu, et un produit avec variantes occupe une ligne par variante. Par défaut, seuls les produits en stock sont affichés.",
-          "Variations (depuis la v3.4) : faites passer l’en-tête de la carte de classement sur Variations pour voir les 3 produits dont le chiffre d’affaires a le plus augmenté et les 3 dont il a le plus baissé par rapport à la période de comparaison, avec le chiffre d’affaires des deux périodes et l’écart ; chaque variante est comparée à elle-même. Choisissez d’abord une période sous Comparaison des ventes ; avec Aucune, ou sur Toute la période, la carte vous invite à le faire. Touchez la carte ou Tout afficher pour ouvrir la liste complète Variations des produits, répartie entre En hausse et En baisse.",
-          "Taux de réachat : la dernière ligne de la tuile clients indique la part des membres ayant acheté sur la période et ayant acheté au moins deux fois au total. Avec une comparaison activée, une ligne en dessous donne l’écart en points de pourcentage et le taux de la période de comparaison.",
-          "Répartition par catégorie : le chiffre d’affaires et la part de chaque catégorie, selon la catégorie actuelle de chaque produit, de la plus grande à la plus petite. Les produits sans catégorie sont regroupés sous Sans catégorie, et les lignes s’additionnent exactement au chiffre d’affaires.",
-          "Situation actuelle : la valorisation du stock (stock actuel × coût actuel), tous les mouvements de stock de la période sélectionnée, et les points que les clients détiennent sans les avoir utilisés, avec le montant maximal qu’ils permettent de déduire. Ce sont des soldes à l’instant T ; la période ne les modifie pas."
+          "Ouvrez Stats et touchez Personnalisée dans la barre de période.",
+          "Choisissez les dates de début et de fin dans la fenêtre qui s’ouvre.",
+          "Confirmez vos dates pour mettre à jour le rapport."
         ]
       },
       {
         "type": "p",
-        "text": "Depuis la v3.4, tous ces rapports sont ouverts à toutes les formules, et le restent après la fin de l’essai. Les versions antérieures ne les affichaient qu’avec Pro, avec un petit cadenas sur les autres formules ; si vous voyez encore les cadenas, mettez à jour DingPOS depuis l’App Store."
+        "text": "La tuile Taxe et le rapport de taxes suivent eux aussi la période choisie : définir une période de déclaration avec Personnalisée met donc les deux à jour ; voir l’article sur le rapport de taxes pour le détail. À droite de la barre de période, touchez Comparer pour afficher la période choisie à côté de la précédente ou de la même période l’an dernier ; voir l’article sur la comparaison de périodes pour le détail."
+      },
+      {
+        "type": "h2",
+        "text": "Tuiles et cartes de la page"
       },
       {
         "type": "p",
-        "text": "Lite ne suit ni le stock ni les points de fidélité, mais Situation actuelle affiche tout de même la valorisation du stock et les points non utilisés que votre boutique détient déjà (par exemple depuis l’essai), ou zéro."
+        "text": "Sous la barre de période, Stats affiche deux rangées de tuiles de chiffres, suivies de graphiques et de cartes de synthèse par paires, avec Situation actuelle en bas."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Première rangée de tuiles : Chiffre d’affaires, Encaissements, Marge brute, Commandes et Commande moyenne.",
+          "Deuxième rangée de tuiles : Total des remises, Taxe, Bénéfice net, Produits sans coût et Clients servis.",
+          "Première paire : le graphique d’évolution des ventes à côté de Coût et marge brute.",
+          "Deuxième paire : Top produits à côté de Répartition par catégorie.",
+          "Troisième paire : Moyens de paiement à côté de la carte des promotions.",
+          "Carte du bas : Situation actuelle."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Deux tuiles de la deuxième rangée n’apparaissent que dans certains cas. Taxe, ajoutée dans la v3.6, n’apparaît que pour une boutique avec des taxes ou lorsque la période choisie contient des ventes réalisées sous une taxe. Bénéfice net n’apparaît que lorsque la période est Ce mois-ci ou couvre exactement un mois entier."
       },
       {
         "type": "note",
-        "text": "Le personnel voit les rapports avancés avec la permission Tableau de bord ; les montants de la valorisation du stock nécessitent aussi la permission Coûts et marges."
+        "text": "Si une période n’a aucune commande, Stats n’affiche que la barre de période, un message et Situation actuelle."
+      },
+      {
+        "type": "h2",
+        "text": "Lire les graphiques et Top produits"
+      },
+      {
+        "type": "p",
+        "text": "Le menu en haut à droite du graphique d’évolution des ventes le fait basculer entre Chiffre d’affaires, Commandes, Commande moyenne et Clients servis. À côté, le graphique Coût et marge brute empile dans une même barre le coût des produits et la marge brute de chaque période. Une seule journée est tracée heure par heure, tandis que les périodes plus longues regroupent les données par jours, semaines, mois ou années selon leur durée."
+      },
+      {
+        "type": "p",
+        "text": "Maintenez le doigt appuyé sur le graphique d’évolution des ventes, sur Coût et marge brute ou sur Moyens de paiement pour afficher une carte de lecture pour un intervalle donné. Quand Comparer est activé, la carte de lecture du graphique d’évolution des ventes affiche côte à côte le chiffre de cette période et celui de la période de comparaison. Faites glisser vers la gauche ou la droite pour passer d’un intervalle à l’autre ; balayez vers le haut ou le bas sur le graphique pour faire défiler la page comme d’habitude."
+      },
+      {
+        "type": "p",
+        "text": "Faites passer l’en-tête du graphique d’évolution d’Évolution à Jour × heure pour afficher une carte thermique de sept jours sur 24 heures. Plus une case est foncée, plus vous avez vendu pendant cette heure, et vous pouvez basculer la carte entre chiffre d’affaires et commandes."
+      },
+      {
+        "type": "p",
+        "text": "Top produits liste les 5 premiers produits de la période choisie. Touchez la carte ou Tout afficher pour lister tous les produits vendus sur cette période, classés par quantité après retours. Un produit avec variantes occupe une ligne par variante."
+      },
+      {
+        "type": "p",
+        "text": "Faites passer l’en-tête de la carte de classement sur Produits à faible rotation pour lister les produits du moins vendu au plus vendu. Chaque ligne affiche le stock actuel du produit et la date de sa dernière vente. Les produits jamais vendus sont marqués Jamais vendu, et seuls les produits en stock sont affichés par défaut. L’en-tête Variations liste les produits dont le chiffre d’affaires a le plus augmenté ou le plus baissé par rapport à une période de comparaison ; voir l’article sur la comparaison de périodes."
+      },
+      {
+        "type": "h2",
+        "text": "Répartition par catégorie, taux de réachat et Situation actuelle"
+      },
+      {
+        "type": "p",
+        "text": "Répartition par catégorie liste le chiffre d’affaires et la part de chaque catégorie, de la plus grande à la plus petite, selon la catégorie actuelle de chaque produit. Les produits sans catégorie sont regroupés sous Sans catégorie, et les lignes s’additionnent exactement au chiffre d’affaires."
+      },
+      {
+        "type": "p",
+        "text": "La dernière ligne de la tuile Clients servis affiche le taux de réachat sous la forme « Taux de réachat … · … membres revenus ». Il indique la part des membres ayant acheté sur la période choisie et ayant acheté au moins deux fois au total."
+      },
+      {
+        "type": "p",
+        "text": "Situation actuelle affiche trois informations sur le stock et les points :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Valeur du stock, calculée comme stock actuel × coût actuel.",
+          "Tous les mouvements de stock de la période sélectionnée.",
+          "Les points que les clients détiennent sans les avoir utilisés, avec le montant maximal qu’ils permettent de déduire."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "La valeur du stock et les points non utilisés sont des soldes à l’instant T : modifier la période en haut ne les change donc pas."
+      },
+      {
+        "type": "note",
+        "text": "Le personnel accède à Stats avec la permission Stats ; les montants de la valeur du stock nécessitent aussi la permission Coûts et marges."
+      },
+      {
+        "type": "note",
+        "text": "Les périodes calendaires sont arrivées avec la v2.4 ; les versions antérieures proposaient des plages glissantes (Aujourd’hui / 7 jours / 30 jours / Toute la période). Si vous voyez encore ces options, mettez à jour DingPOS depuis l’App Store."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Comment comparer mes ventes avec la semaine dernière, le mois dernier ou l’an dernier ?",
+    "keywords": [
+      "comparer",
+      "comparaison de périodes",
+      "semaine dernière",
+      "mois dernier",
+      "année dernière",
+      "même période l’an dernier",
+      "variations",
+      "Stats",
+      "croissance",
+      "taux de réachat"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Touchez Comparer à droite de la barre de période dans Stats et choisissez une période antérieure, comme Semaine dernière ou Année dernière. Chaque tuile indique alors de combien son chiffre a augmenté ou baissé, par exemple « ▼ 3 % vs Mois dernier », avec le chiffre de la période de comparaison en dessous."
+      },
+      {
+        "type": "h2",
+        "text": "Activer une comparaison"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ouvrez Stats depuis la barre latérale.",
+          "Choisissez une période en haut.",
+          "Touchez Comparer à droite de la barre de période.",
+          "Choisissez une option de comparaison dans le menu."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Les choix proposés dépendent de la période choisie :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Aucune désactive la comparaison.",
+          "Semaine dernière compare une journée avec le même jour de la semaine dernière, ou cette semaine avec la semaine dernière.",
+          "Mois dernier compare ce mois-ci avec le mois dernier.",
+          "Année dernière compare cette année avec l’an dernier, ou compare la période choisie avec la même période l’an dernier.",
+          "Précédente compare une période personnalisée avec le même nombre de jours qui la précèdent."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Quand une comparaison est active, Stats ajoute l’écart et le chiffre de la période de comparaison à chaque tuile, sauf Taxe, Bénéfice net et Produits sans coût. Chiffre d’affaires, Encaissements, Marge brute, Commandes, Commande moyenne, Total des remises et Clients servis affichent chacune une ligne de comparaison, par exemple « ▼ 3 % vs Mois dernier »."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Stats sur Cette semaine avec Comparer réglé sur Semaine dernière, montrant la barre de comparaison et la première rangée de tuiles, avec sous chaque tuile son écart et le chiffre de comparaison",
+        "caption": "Touchez une ligne de comparaison sous une tuile pour ouvrir Comparaison de périodes et voir les chiffres des deux périodes."
+      },
+      {
+        "type": "p",
+        "text": "L’écart du Total des remises reste toujours gris, car une remise plus élevée n’est en soi ni bonne ni mauvaise. Touchez une ligne de comparaison pour ouvrir Comparaison de périodes, qui liste les chiffres des deux périodes. Le graphique d’évolution ajoute une ligne plus claire pour la période de comparaison. Tant qu’une période n’est pas terminée, la période de comparaison est coupée au même moment."
+      },
+      {
+        "type": "h2",
+        "text": "Variations"
+      },
+      {
+        "type": "p",
+        "text": "Faites passer l’en-tête de la carte de classement sur Variations pour voir les 3 produits dont le chiffre d’affaires a le plus augmenté et les 3 dont il a le plus baissé par rapport à la période de comparaison. Chaque ligne affiche le chiffre d’affaires des deux périodes et l’écart, et chaque variante est comparée à elle-même."
+      },
+      {
+        "type": "p",
+        "text": "Choisissez d’abord une période sous Comparer. Avec Aucune, ou sur Toute la période, la carte vous invite à choisir une période de comparaison. Touchez la carte ou Tout afficher pour ouvrir la liste complète Variations des produits, répartie entre En hausse et En baisse."
+      },
+      {
+        "type": "h2",
+        "text": "Carte thermique et taux de réachat"
+      },
+      {
+        "type": "p",
+        "text": "Avec une comparaison activée, la carte thermique Jour × heure du graphique d’évolution montre aussi quelles heures ont progressé et lesquelles ont reculé, et le taux de réachat de la tuile Clients servis gagne une ligne avec l’écart en points de pourcentage et le taux de la période de comparaison."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -1376,41 +1553,106 @@ export const articles = [
     "question": "Comment la marge brute est-elle calculée si je n’ai pas saisi les coûts ?",
     "keywords": [
       "coût",
-      "bénéfice",
       "marge brute",
       "marge",
       "taux de marge",
+      "bénéfice",
       "rapports",
-      "non suivi",
       "coût manquant",
-      "produits sans coût"
+      "non suivi",
+      "produits sans coût",
+      "du chiffre d’affaires à la marge brute"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Le coût est un champ facultatif. Les produits sans coût sont exclus de la marge brute, alors que leur chiffre d’affaires est toujours compté en totalité. La tuile Produits sans coût de Stats indique combien de produits vendus ou retournés sur la période n’ont pas de coût, par exemple « 12 produits ». Un coût de 0 compte comme un coût, ces produits ne sont donc pas listés ; quand tous les produits en ont un, la tuile affiche « 0 produit · coûts renseignés »."
+        "text": "Le coût est un champ facultatif : les produits sans coût sont donc exclus de la marge brute, alors que leur chiffre d’affaires est toujours compté en totalité. La tuile Produits sans coût de Stats indique combien de produits vendus ou retournés sur la période n’ont pas de coût, par exemple « 12 produits ». Un coût de 0 compte comme un coût et n’est pas listé ; quand tous les produits ont un coût, la tuile affiche « 0 produit · coûts renseignés »."
+      },
+      {
+        "type": "h2",
+        "text": "Trouver les produits sans coût"
       },
       {
         "type": "p",
-        "text": "Touchez la tuile ou Afficher les produits pour ouvrir Produits sans coût, classés selon le chiffre d’affaires exclu de la marge brute. Touchez une ligne pour ouvrir le produit, ajoutez son coût depuis Modifier, et la ligne est marquée Coût ajouté à votre retour. Un produit avec variantes n’est marqué Coût ajouté que lorsque chaque variante vendue sans coût en a un — le sien, ou celui du produit à suivre."
+        "text": "Dans Stats, touchez la tuile Produits sans coût ou Afficher les produits pour ouvrir Produits sans coût. La fenêtre liste les produits classés du plus élevé au plus faible selon le chiffre d’affaires exclu de la marge brute."
+      },
+      {
+        "type": "shot",
+        "name": "profit-not-tracked",
+        "alt": "Fenêtre Produits sans coût listant les produits classés selon le chiffre d’affaires exclu de la marge brute"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Touchez une ligne dans Produits sans coût pour ouvrir le produit.",
+          "Touchez Modifier et saisissez le coût dans Coût (facultatif).",
+          "Revenez à Produits sans coût pour voir la ligne marquée Coût ajouté."
+        ]
       },
       {
         "type": "p",
-        "text": "La marge brute est le chiffre d’affaires après toutes les remises (remises sur article et sur panier, promotions, utilisation de points) et avant taxe, moins le coût — c’est pourquoi, dans une boutique qui applique une taxe, le champ s’intitule Coût HT (facultatif) : saisissez ce que vous avez payé hors taxe. Le taux de marge est la marge brute ÷ le chiffre d’affaires des produits ayant un coût, de sorte que les produits sans coût ne le tirent pas vers le bas. Un retour reprend, le jour du retour, la marge brute que ces articles avaient apportée."
-      },
-      {
-        "type": "p",
-        "text": "Touchez la tuile Marge brute pour ouvrir Du chiffre d’affaires à la marge brute, qui soustrait ligne par ligne : le chiffre d’affaires (TTC), la taxe, le chiffre d’affaires (hors taxe), le chiffre d’affaires sans coût, le coût des produits, et enfin la marge brute et le taux de marge. Les lignes s’additionnent exactement à la tuile."
+        "text": "Un produit avec variantes n’est marqué Coût ajouté que lorsque chaque variante vendue sans coût en a un, le sien ou celui du produit à suivre. Depuis la v3.6, un bon de commande peut aussi répartir ses frais de port dans le coût du produit qu’il enregistre, lorsque Inclure les frais de port dans le coût est activé."
       },
       {
         "type": "note",
-        "text": "Un coût que vous ajoutez n’affecte que les ventes futures ; les ventes déjà faites ne sont pas recalculées. Ce calcul est arrivé avec la v3.1 : les versions antérieures ne déduisaient que les remises manuelles sur article et comptaient la taxe incluse comme marge, si bien qu’après la mise à jour, les périodes avec remises ou taxe incluse affichent une marge brute plus faible. C’est une correction, pas une perte de données."
+        "text": "Un coût que vous ajoutez n’affecte que les ventes à venir. Les ventes déjà effectuées ne sont pas recalculées."
+      },
+      {
+        "type": "h2",
+        "text": "Saisir le coût et la taxe"
+      },
+      {
+        "type": "p",
+        "text": "Dans le formulaire du produit, le champ de coût s’intitule Coût (facultatif) dans toutes les boutiques. Dans une boutique avec des taxes, un ⓘ apparaît à côté de Coût (facultatif) pour indiquer comment la taxe s’applique selon Déduire la taxe en amont :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Déduire la taxe en amont est activé : saisissez le coût avant toute taxe que vous pouvez récupérer. La note ⓘ indique : « Saisissez le coût sans la taxe déductible, qui est enregistrée comme taxe en amont. La taxe non déductible fait partie du coût. »",
+          "Déduire la taxe en amont est désactivé : saisissez ce que vous avez payé, moins la taxe que vous pouvez récupérer. La note ⓘ indique : « La taxe déductible n’entre pas dans le coût ; la taxe non déductible, si. Si vous déduisez la taxe en amont, activez Déduire la taxe en amont dans Informations du magasin. »"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Si votre boutique déclare la taxe en amont, activez Déduire la taxe en amont dans Informations du magasin."
+      },
+      {
+        "type": "h2",
+        "text": "Lire le détail de la marge brute"
+      },
+      {
+        "type": "p",
+        "text": "La marge brute est le chiffre d’affaires après toutes les remises (remises sur article et sur panier, promotions, utilisation de points) et avant taxe, moins le coût. Le taux de marge est la marge brute ÷ le chiffre d’affaires des produits ayant un coût, de sorte que les produits sans coût ne le tirent pas vers le bas. Un retour reprend, le jour du retour, la marge brute que ces articles avaient apportée."
+      },
+      {
+        "type": "p",
+        "text": "Touchez la tuile Marge brute dans Stats pour ouvrir Du chiffre d’affaires à la marge brute, qui soustrait ligne par ligne :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Chiffre d’affaires (TTC)",
+          "Taxe",
+          "Chiffre d’affaires (hors taxe)",
+          "Chiffre d’affaires sans coût",
+          "Coût des produits",
+          "Marge brute et taux de marge"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Les lignes s’additionnent exactement à la tuile Marge brute. Les boutiques d’Australie, du Royaume-Uni, de Nouvelle-Zélande et de Singapour voient le nom de leur taxe locale sur les lignes de taxe, par exemple Chiffre d’affaires (avec GST)."
+      },
+      {
+        "type": "note",
+        "text": "Ce calcul de la marge brute est arrivé avec la v3.1 : les versions antérieures ne déduisaient que les remises manuelles sur article et comptaient la taxe incluse comme marge, si bien qu’après la mise à jour, les périodes avec remises ou taxe incluse affichent une marge brute plus faible. C’est une correction, pas une perte de données."
       }
     ],
     "related": [
       "report-periods",
       "product-variants",
-      "purchase-orders"
+      "purchase-orders",
+      "input-tax"
     ]
   },
   {
@@ -1419,46 +1661,96 @@ export const articles = [
     "since": "3.4",
     "question": "Comment savoir combien ma boutique gagne réellement chaque mois ?",
     "keywords": [
+      "Résultat",
       "compte de résultat",
       "P&L",
       "bénéfice net",
+      "marge brute",
       "bénéfice mensuel",
-      "dépenses",
+      "dépenses fixes",
       "résultat d’exploitation",
       "résultat net"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Ouvrez Résultat, sous Stats dans la barre latérale. L’onglet liste chaque mois, du plus récent au plus ancien, avec son bénéfice net : le mois en cours est marqué En cours, et l’en-tête de chaque année additionne le bénéfice net de ses mois terminés."
+        "text": "Ouvrez Résultat, sous Stats dans la barre latérale, pour voir le bénéfice net de chaque mois et la façon dont il est calculé. La liste va du plus récent au plus ancien à partir de votre premier mois d’activité : le mois en cours est marqué En cours, et l’en-tête de chaque année additionne le bénéfice net de ses mois terminés. Sa première ligne, Toutes les dépenses, ouvre toutes les dépenses, quel que soit le mois."
+      },
+      {
+        "type": "h2",
+        "text": "Détail mensuel"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ouvrez Résultat, sous Stats dans la barre latérale.",
+          "Touchez un mois pour voir comment son bénéfice net est calculé."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "profit-loss-month",
+        "alt": "Page d’un mois dans Résultat, avec la mention En cours, le bénéfice net et le détail complet du chiffre d’affaires jusqu’aux dépenses"
       },
       {
         "type": "p",
-        "text": "Touchez un mois pour voir comment son bénéfice net est calculé :"
+        "text": "La page du mois liste dans l’ordre toutes les lignes, des ventes jusqu’au bénéfice net. Les lignes allant du chiffre d’affaires à la marge brute portent les mêmes noms et les mêmes chiffres que Du chiffre d’affaires à la marge brute dans Stats."
       },
       {
         "type": "list",
         "items": [
-          "Chiffre d’affaires (hors taxe) : le chiffre d’affaires après toutes les remises et avant taxe, compté à la date de remise des articles.",
+          "Chiffre d’affaires (TTC), Taxe et Chiffre d’affaires (hors taxe) : le chiffre d’affaires taxe comprise, le montant de la taxe, et le chiffre d’affaires après toutes les remises et avant taxe, compté à la date de remise des articles. Les boutiques d’Australie, du Royaume-Uni, de Nouvelle-Zélande et de Singapour voient le nom de leur taxe locale.",
+          "Chiffre d’affaires sans coût : soustrait avant le coût des produits, affiché seulement s’il n’est pas nul.",
           "Coût des produits : le coût de ce qui a été vendu, d’après les coûts renseignés sur vos produits.",
-          "Perte de stock : le coût de ce qu’Ajuster le stock a retiré comme périmé, endommagé, offert et autres, plus les retours mis au rebut. Elle vient après la marge brute — voir « Comment enregistrer du stock périmé, cassé ou distribué en échantillons ? » Le mois comporte aussi une section Perte de stock qui la totalise par motif.",
+          "Marge brute : affichée avec son taux de marge.",
+          "Chiffre d’affaires sans coût : réintégré après la marge brute lorsqu’il n’est pas nul.",
+          "Perte de stock : affichée seulement quand le mois en comporte une ; le coût de ce qu’Ajuster le stock a retiré comme périmé, endommagé, offert et autres, plus les retours mis au rebut. Elle vient après la marge brute. Voir « Comment enregistrer du stock périmé, cassé ou distribué en échantillons ? » Le mois comporte aussi une section Perte de stock qui la totalise par motif.",
           "Frais de traitement (est.) : les frais estimés d’après les taux de vos moyens de paiement.",
-          "Acomptes conservés : les acomptes que vous avez gardés lors de l’annulation d’une précommande.",
-          "Arrondi des espèces : ce que l’arrondi des espèces aux pièces en circulation a ajouté ou retiré par rapport aux totaux des commandes.",
-          "Dépenses fixes et Dépenses ponctuelles : ce que vous avez enregistré pour ce mois — voir « Comment enregistrer le loyer, les salaires et les autres dépenses ? »"
+          "Acomptes conservés : affichés seulement s’ils ne sont pas nuls ; les acomptes que vous avez gardés lors de l’annulation d’une précommande.",
+          "Arrondi des espèces : affiché seulement s’il n’est pas nul ; ce que l’arrondi des espèces aux pièces en circulation a ajouté ou retiré par rapport aux totaux des commandes.",
+          "Dépenses fixes et Dépenses ponctuelles : ce que vous avez enregistré pour ce mois — voir « Comment enregistrer le loyer, les salaires et les autres dépenses ? »",
+          "Bénéfice net : calculé comme chiffre d’affaires (hors taxe) − coût des produits − perte de stock − frais de traitement + acomptes conservés + arrondi des espèces − dépenses fixes − dépenses ponctuelles."
         ]
       },
       {
-        "type": "p",
-        "text": "Jusqu’à trois graphiques suivent : le bénéfice net mois par mois, la part de chaque dépense fixe et l’évolution des dépenses fixes. Les deux graphiques d’évolution couvrent au plus les 12 mois jusqu’au mois ouvert, et n’apparaissent qu’à partir de deux mois à comparer, comptés depuis le mois de votre première vente ou dépense. Le graphique des parts exige une dépense fixe ce mois-là ; tant qu’il n’y en a pas, cette section affiche Ajouter une dépense fixe à la place."
+        "type": "h2",
+        "text": "Mois en cours"
       },
       {
         "type": "p",
-        "text": "Stats et Résultat renvoient l’un à l’autre. Quand la période de Stats est Ce mois-ci ou exactement un mois entier, la deuxième rangée de tuiles ajoute une tuile Bénéfice net (marquée « En cours · les dépenses du mois entier sont déduites » tant que le mois court) ; touchez-la pour voir le détail de ce mois, de la marge brute au bénéfice net. Pour toute autre période, touchez Voir le compte de résultat mensuel sur la dernière ligne de Du chiffre d’affaires à la marge brute. Dans l’autre sens, Voir le rapport (octobre), sous le titre d’un mois dans Résultat, ouvre Stats sur ce mois."
+        "text": "Tant qu’un mois n’est pas terminé, Résultat déduit déjà l’ensemble des dépenses fixes du mois. Par exemple, le 5 octobre, si le chiffre d’affaires (hors taxe) est jusqu’ici de 20 000, le coût des produits de 10 000 et les dépenses fixes de 65 700, le bénéfice net est de −55 700 et porte la mention En cours · les dépenses du mois entier sont déduites."
+      },
+      {
+        "type": "p",
+        "text": "Comme les dépenses du mois entier sont déjà comptées, le bénéfice net du mois en cours n’est jamais affiché en rouge dans la liste des mois, sur la page du mois ni sur la tuile Bénéfice net de Stats. Un mois terminé qui se solde par une perte affiche son bénéfice net dans la couleur d’alerte."
+      },
+      {
+        "type": "h2",
+        "text": "Graphiques"
+      },
+      {
+        "type": "p",
+        "text": "Jusqu’à trois graphiques suivent le détail : le bénéfice net mois par mois, la part de chaque dépense fixe et l’évolution des dépenses fixes. Les deux graphiques d’évolution couvrent au plus les 12 mois jusqu’au mois ouvert, et n’apparaissent qu’à partir de deux mois à comparer, comptés depuis le mois de votre première vente ou dépense. Le graphique des parts exige une dépense fixe ce mois-là ; tant qu’il n’y en a pas, cette section affiche Ajouter une dépense fixe à la place."
+      },
+      {
+        "type": "h2",
+        "text": "Passer de Stats à Résultat et inversement"
+      },
+      {
+        "type": "p",
+        "text": "Stats et Résultat renvoient l’un à l’autre. Quand la période de Stats est Ce mois-ci ou exactement un mois entier, la deuxième rangée de tuiles ajoute une tuile Bénéfice net, marquée En cours · les dépenses du mois entier sont déduites tant que le mois court. Touchez cette tuile pour voir le détail de ce mois, de la marge brute au bénéfice net. Pour toute autre période, touchez Voir le compte de résultat mensuel sur la dernière ligne de Du chiffre d’affaires à la marge brute."
+      },
+      {
+        "type": "p",
+        "text": "Dans l’autre sens, Voir le rapport (octobre), sous le titre d’un mois dans Résultat, ouvre Stats sur ce mois (période personnalisée du 1er au 31 octobre) ; pour le mois en cours, il ouvre Ce mois-ci."
       },
       {
         "type": "note",
-        "text": "Le bénéfice net est le bénéfice d’exploitation avant impôt sur le revenu, calculé d’après ce que DingPOS a enregistré — ce n’est pas une déclaration fiscale. Si des produits ont été vendus sans coût, le mois affiche quand même un bénéfice net, accompagné de « Coût de N produits non inclus » ; touchez-le pour voir lesquels. Résultat est disponible avec toutes les formules. Avec des comptes du personnel, l’ouvrir exige la permission Compte de résultat et dépenses, qui par défaut requiert une approbation pour les Responsables comme pour le Personnel, car elle donne accès aux coûts des produits et aux salaires."
+        "text": "Le bénéfice net est le bénéfice d’exploitation avant impôt sur le revenu, calculé d’après ce que DingPOS a enregistré, et non une déclaration fiscale. Si des produits ont été vendus sans coût, le mois affiche quand même un bénéfice net, accompagné de la mention Coût de N produits non inclus ; touchez-la pour voir lesquels."
+      },
+      {
+        "type": "note",
+        "text": "Résultat est disponible avec toutes les formules. Avec des comptes du personnel, l’ouvrir exige la permission Compte de résultat et dépenses, qui par défaut requiert une approbation pour les Responsables comme pour le Personnel, car elle donne accès aux coûts des produits et aux salaires."
       }
     ],
     "related": [
@@ -1478,39 +1770,99 @@ export const articles = [
       "salaires",
       "charges",
       "dépenses fixes",
+      "dépenses ponctuelles",
+      "toutes les dépenses",
       "frais généraux",
       "amortissement",
       "étalement",
-      "dépense ponctuelle"
+      "compte de résultat"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Dans Résultat, touchez Ajouter une dépense et choisissez une dépense fixe ou une dépense ponctuelle. Une dépense compte dans le mois auquel elle se rapporte, et non dans le mois où vous l’avez payée, et le bénéfice net de chaque mois en tient compte."
+        "text": "Dans Résultat, touchez Ajouter une dépense et choisissez Ajouter une dépense fixe ou Ajouter une dépense ponctuelle pour enregistrer le loyer, les salaires, les charges et les autres frais d’exploitation. Chaque dépense compte dans le mois auquel elle se rapporte et non dans le mois où vous l’avez payée, et le bénéfice net de chaque mois se met à jour en conséquence. Les dépenses fixes se répètent chaque mois, avec des changements de montant facultatifs, tandis que les dépenses ponctuelles comptent dans un seul mois ou s’étalent sur plusieurs mois."
+      },
+      {
+        "type": "h2",
+        "text": "Dépenses fixes"
       },
       {
         "type": "p",
-        "text": "Une dépense fixe est une dépense que vous payez chaque mois, comme le loyer, les charges ou les salaires :"
+        "text": "Une dépense fixe est une dépense récurrente que vous payez chaque mois, comme le loyer, les charges ou les salaires."
       },
       {
-        "type": "list",
+        "type": "steps",
         "items": [
-          "Saisissez le nom, le montant mensuel et le mois de début. Choisissez un mois antérieur pour régulariser le passé.",
-          "Quand le montant change, touchez Changer le montant, choisissez le mois, puis À partir de ce mois (une hausse de loyer, par exemple) ou Ce mois seulement (la facture d’électricité du mois). Chaque changement figure dans la liste ; ouvrez-en un pour le modifier ou le supprimer.",
-          "Quand vous cessez de la payer, indiquez le Dernier mois compté : ce mois et les précédents continuent de compter."
+          "Ouvrez Résultat.",
+          "Touchez Ajouter une dépense.",
+          "Choisissez Ajouter une dépense fixe.",
+          "Saisissez le nom, le montant mensuel et le mois de début. Choisissez un mois antérieur pour régulariser les mois passés.",
+          "Touchez ✓ pour enregistrer."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "expense-form",
+        "alt": "Formulaire de dépense fixe affichant le nom, le montant mensuel, le mois de début et les changements de montant"
+      },
+      {
+        "type": "p",
+        "text": "Quand le montant change, ouvrez la dépense et touchez Changer le montant. Choisissez le mois à partir duquel le changement s’applique, puis À partir de ce mois pour un changement durable, comme une hausse de loyer, ou Ce mois uniquement pour un écart sur un seul mois, comme la facture d’électricité du mois. Chaque changement figure dans la liste du formulaire, et vous pouvez ouvrir n’importe quelle ligne pour la modifier ou la supprimer."
+      },
+      {
+        "type": "p",
+        "text": "Quand vous cessez de payer une dépense fixe, indiquez le Dernier mois compté. Ce mois et les précédents continuent de compter dans Résultat, tandis que les mois suivants ne l’incluent plus."
+      },
+      {
+        "type": "h2",
+        "text": "Changements programmés dans Toutes les dépenses"
+      },
+      {
+        "type": "p",
+        "text": "Dans Toutes les dépenses, chaque ligne de dépense fixe indique ce qui est programmé pour la suite. La ligne réunit son mois de début, le prochain changement de montant programmé et le dernier mois compté. Par exemple, une ligne peut indiquer Depuis janvier 2026 · $420/mois à partir de décembre 2026 · Dernier mois compté : mars 2027."
+      },
+      {
+        "type": "p",
+        "text": "Le montant à droite reste le montant mensuel d’aujourd’hui, et non le futur montant. Un changement défini sur Ce mois uniquement n’est pas listé sur la ligne."
+      },
+      {
+        "type": "h2",
+        "text": "Dépenses ponctuelles"
+      },
+      {
+        "type": "p",
+        "text": "Une dépense ponctuelle est une dépense payée une seule fois, comme un aménagement, du matériel, une assurance payée d’avance ou une facture isolée."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ouvrez Résultat.",
+          "Touchez Ajouter une dépense.",
+          "Choisissez Ajouter une dépense ponctuelle.",
+          "Saisissez le montant et la date.",
+          "Réglez Mois compté pour un seul mois, ou activez Étaler sur plusieurs mois.",
+          "Touchez ✓ pour enregistrer."
         ]
       },
       {
         "type": "p",
-        "text": "Une dépense ponctuelle se paie une seule fois :"
+        "text": "Sans étalement, vous pouvez quand même choisir Mois compté pour que la dépense compte dans le mois auquel elle se rapporte. Par exemple, une facture d’octobre reçue en novembre peut compter en octobre, sa date réelle étant conservée."
       },
       {
-        "type": "list",
-        "items": [
-          "Pour un aménagement, du matériel ou une assurance payée d’avance, activez Étaler sur plusieurs mois et choisissez de 2 à 120 mois ainsi que le premier mois compté. Le formulaire affiche un aperçu du montant compté chaque mois et des mois couverts.",
-          "Sans étalement, vous pouvez quand même choisir le mois compté : une facture d’octobre reçue en novembre peut compter en octobre, sa date réelle étant conservée.",
-          "Si un étalement prend fin avant son terme (une assurance résiliée, par exemple), utilisez Terminer l’étalement plus tôt : le reste est compté dans le mois que vous choisissez."
-        ]
+        "type": "p",
+        "text": "Pour un aménagement, du matériel ou une assurance payée d’avance, activez Étaler sur plusieurs mois, choisissez de 2 à 120 mois et sélectionnez le premier mois compté. Le formulaire affiche un aperçu du montant compté chaque mois et des mois couverts."
+      },
+      {
+        "type": "p",
+        "text": "Si un étalement prend fin avant son terme, par exemple quand une assurance est résiliée, ouvrez la dépense et utilisez Terminer l’étalement plus tôt. Le montant restant est compté dans le mois que vous choisissez."
+      },
+      {
+        "type": "h2",
+        "text": "Taxe en amont sur les dépenses"
+      },
+      {
+        "type": "p",
+        "text": "Quand Déduire la taxe en amont est activé, vous pouvez enregistrer un numéro de facture et la taxe déductible sur une dépense ponctuelle, et enregistrer chaque facture d’une dépense fixe sous Factures avec Enregistrer une facture. Le montant compté dans Résultat reste ce que la boutique supporte ; l’article sur la taxe en amont explique le fonctionnement de la taxe déductible."
       },
       {
         "type": "note",
@@ -1520,7 +1872,484 @@ export const articles = [
     "related": [
       "profit-loss",
       "purchase-orders",
+      "input-tax",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "export-tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Comment exporter le rapport de taxes pour mon comptable ?",
+    "keywords": [
+      "exporter le rapport de taxes",
+      "Rapport de taxes",
+      "Exporter",
+      "classeur Excel",
+      "CSV",
+      "rapport PDF",
+      "récapitulatif des taxes",
+      "détail de la taxe en amont",
+      "comptable"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ouvrez Rapport de taxes, touchez Exporter en haut à droite et choisissez un CSV, un Classeur Excel (XLSX) ou un Rapport PDF. Le fichier s’ouvre dans un aperçu plein écran, où vous pouvez toucher le bouton de partage pour l’enregistrer ou l’envoyer à votre comptable. Chaque format contient les mêmes chiffres que ceux affichés à l’écran."
+      },
+      {
+        "type": "h2",
+        "text": "Comment exporter"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ouvrez Stats et choisissez la période, par exemple une période personnalisée du 1er novembre au 31 décembre pour une période de déclaration de deux mois, ou une période trimestrielle.",
+          "Touchez la tuile Taxe pour ouvrir Rapport de taxes. L’export couvre exactement cette période.",
+          "Touchez Exporter en haut à droite de Rapport de taxes. Un menu liste les formats, le dernier exporté sur cet iPad étant coché.",
+          "Choisissez un format, par exemple Classeur Excel (XLSX), pour ouvrir un aperçu plein écran. Les fichiers CSV s’affichent sous forme de tableau, et le classeur Excel permet de passer d’une feuille à l’autre, par exemple de consulter d’abord la feuille Summary.",
+          "Touchez le bouton de partage en haut à droite de l’aperçu pour enregistrer le fichier ou l’envoyer à votre comptable. Fermer l’aperçu ramène à Rapport de taxes."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "tax-export",
+        "alt": "Rapport de taxes avec le menu Exporter ouvert et la liste des formats de fichier"
+      },
+      {
+        "type": "p",
+        "text": "Si un export échoue, l’app affiche Impossible d’exporter le fichier et Essayez de nouveau d’exporter. Rien n’est écrit ; exportez de nouveau."
+      },
+      {
+        "type": "h2",
+        "text": "Formats d’export"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Récapitulatif des taxes (CSV) : une ligne par ligne du rapport (chaque taxe et chaque taux, taux zéro et non taxées), avec les ventes, les retours et le net, hors taxe et taxe.",
+          "Tous les documents (CSV) : une ligne par document sous chaque taxe, avec la date et l’heure, le numéro de reçu, le type de document (vente, retour ou contrepartie d’une invalidation), le nom du client, les montants et les moyens de paiement. Une invalidation ajoute une ligne de contrepartie à la date de l’invalidation.",
+          "Récapitulatif quotidien (CSV) : le récapitulatif jour par jour, puis un second tableau des paiements par jour et par moyen.",
+          "Détail de la taxe en amont (CSV) : affiché seulement quand le rapport comporte une carte de taxe en amont. Une ligne par ligne de taxe en amont de chaque bon de commande et de chaque dépense, avec le fournisseur, l’identifiant fiscal du fournisseur et le numéro de facture.",
+          "Classeur Excel (XLSX) : feuilles Summary, Documents et Daily correspondant aux trois CSV de ventes, plus Purchases quand le rapport affiche de la taxe en amont. Les montants sont des cellules numériques, et chaque colonne s’ajuste à son contenu pour que rien ne s’ouvre tronqué.",
+          "Rapport PDF : un rapport A4 dans la langue de l’app avec le nom du magasin, la période, le mode de taxe, la devise et les sections du rapport. Les boutiques d’Australie, de Nouvelle-Zélande, de Singapour et du Royaume-Uni voient d’abord Cases de la déclaration ; les cartes de taxe en amont suivent quand elles sont affichées. Dans l’aperçu, signez ou annotez avec Annotation pour partager le fichier annoté ; exporter de nouveau la même période écrit une copie vierge."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mise en forme pour les logiciels de comptabilité"
+      },
+      {
+        "type": "p",
+        "text": "Les fichiers CSV sont en UTF-8, séparés par des virgules, avec des noms de colonnes fixes en anglais quelle que soit la langue de l’app, pour que les logiciels de comptabilité puissent les lire. Les montants utilisent les décimales de la devise et un signe moins, sans symbole ni séparateur de milliers (par exemple 80.97, -40.00 ou 1000 pour une boutique en yens). Les dates ont la forme 2026-11-03."
+      },
+      {
+        "type": "p",
+        "text": "Les cellules de texte commençant par =, +, - ou @ (par exemple un client nommé =1+1) reçoivent une apostrophe ' en tête pour que les tableurs affichent du texte au lieu d’exécuter une formule. Les montants n’en reçoivent jamais."
+      },
+      {
+        "type": "p",
+        "text": "Les noms de fichier portent la période, par exemple tax-report-summary_2026-11-01_2026-11-30.csv, tax-report_2026-11-01_2026-11-30.xlsx et tax-report_2026-11-01_2026-11-30.pdf, afin que les fichiers de périodes différentes ne s’écrasent jamais."
+      },
+      {
+        "type": "h2",
+        "text": "Permissions et confidentialité"
+      },
+      {
+        "type": "p",
+        "text": "Toutes les formules peuvent exporter, Lite comprise. Le personnel a besoin de la permission Stats, comme pour Rapport de taxes."
+      },
+      {
+        "type": "p",
+        "text": "Les fichiers avec taxe en amont demandent d’abord les approbations dont leurs cartes ont besoin : Coûts et marges pour les bons de commande et Compte de résultat et dépenses pour les dépenses. Cela concerne Détail de la taxe en amont (CSV), ainsi que Classeur Excel (XLSX) et Rapport PDF quand des cartes de taxe en amont apparaissent. Annuler n’écrit rien ; les trois CSV de ventes ne demandent jamais d’approbation."
+      },
+      {
+        "type": "note",
+        "text": "Tous les documents (CSV) contient des noms de clients, et les fichiers de taxe en amont contiennent des noms de fournisseurs et des identifiants fiscaux. Ne les partagez qu’avec les personnes qui doivent les voir."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "input-tax",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "input-tax",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Comment enregistrer la taxe en amont (TVA ou GST sur les achats) ?",
+    "keywords": [
+      "taxe en amont",
+      "TVA",
+      "GST",
+      "Déduire la taxe en amont",
+      "Taxe en amont sur les bons de commande",
+      "Taxe en amont sur les dépenses",
+      "identifiant fiscal du fournisseur",
+      "bons de commande",
+      "rapport de taxes",
+      "TVA déductible"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Activez Déduire la taxe en amont dans Réglages → Informations du magasin pour enregistrer la taxe déductible des factures fournisseur sur les bons de commande et les dépenses. Les deux formulaires reçoivent alors une section de taxe en amont où vous reportez la taxe déductible de chaque facture. Le rapport de taxes la liste dans deux cartes, Taxe en amont sur les bons de commande et Taxe en amont sur les dépenses."
+      },
+      {
+        "type": "h2",
+        "text": "Activer Déduire la taxe en amont"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ouvrez Réglages → Informations du magasin et repérez la carte de taxe.",
+          "Sous Appliquer la taxe, activez Déduire la taxe en amont."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-toggle",
+        "alt": "Carte de taxe d’Informations du magasin avec Déduire la taxe en amont activé et son indication en dessous"
+      },
+      {
+        "type": "p",
+        "text": "Déduire la taxe en amont n’apparaît que lorsque la boutique a au moins une taxe, et il est désactivé au départ pour les nouvelles boutiques et après la mise à jour. Le réglage s’enregistre immédiatement et est consigné sous Réglages de taxe dans le Journal d’activité. Quand il est activé, saisissez les prix d’achat et les coûts des produits avant la taxe déductible ; la taxe non déductible reste dans le coût."
+      },
+      {
+        "type": "note",
+        "text": "Toutes les formules disposent de l’interrupteur Déduire la taxe en amont, tandis que les Achats exigent Standard ou supérieur. Le désactiver masque les champs sur les nouveaux enregistrements ; les enregistrements existants conservent leur taxe en amont et leur montant à payer, et les rapports de taxes passés restent inchangés."
+      },
+      {
+        "type": "h2",
+        "text": "Bons de commande"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ouvrez Achats et touchez Nouvel achat.",
+          "Saisissez les prix unitaires avant la taxe déductible, puis faites défiler au-delà de la section Frais jusqu’à Taxe en amont.",
+          "Vérifiez la Date de facture, qui par défaut est la date de commande, et ajoutez au besoin un Numéro de facture et un Identifiant fiscal du fournisseur.",
+          "Choisissez une taxe de la boutique pour Taux, ou Autre taux… pour saisir jusqu’à 3 décimales, comme 9,975 %.",
+          "Vérifiez Hors taxe, qui part du total de la commande avant taxe, et reportez la Taxe déductible depuis la facture.",
+          "Touchez Ajouter un taux pour des taux supplémentaires."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-po",
+        "alt": "Bon de commande affichant la section Taxe en amont avec les champs de facture, une ligne de taux et les totaux"
+      },
+      {
+        "type": "p",
+        "text": "La Taxe déductible démarre vide ; DingPOS ne la calcule jamais à partir du taux et accepte les arrondis de la facture. Par exemple, de la farine 10 × $300 plus $100 de frais de port, sur la facture AB-12345678 datée du 30 juin 2026 avec une ligne à 5 % de Hors taxe $3,100 et de Taxe déductible $155, donnent Total hors taxe $3,100, Taxe en amont $155 et Montant à payer $3,255, ce qui s’affiche dans la liste, le détail de la commande et Factures impayées. Un Identifiant fiscal du fournisseur renseigné sur un fournisseur préremplit les nouvelles commandes ; les commandes enregistrées conservent le leur."
+      },
+      {
+        "type": "p",
+        "text": "Si une facture arrive en retard, ouvrez la commande réceptionnée et touchez Enregistrer la taxe en amont sur la carte Taxe en amont, ou Modifier pour la changer. Seul le Montant à payer change ; le stock, le coût des produits et le statut payé ou impayé restent inchangés. Les commandes invalidées gardent la Taxe en amont en lecture seule, et les commandes enregistrées avant la mise à jour ne sont pas complétées rétroactivement."
+      },
+      {
+        "type": "h2",
+        "text": "Dépenses"
+      },
+      {
+        "type": "p",
+        "text": "Dans Résultat → Dépenses ponctuelles, le formulaire ajoute Numéro de facture et des lignes de taxe en amont sous le montant. Gardez le montant avant la taxe déductible et ne reportez que la taxe déductible. Pour une facture de papeterie de $1,100 dont $100 sont déductibles, saisissez $1,000 et une ligne à 10 % de $1,000 et $100 ; Taxe comprise affiche $1,100 et le compte de résultat compte $1,000. Sa taxe en amont est comptée en entier à la date de la dépense, sans jamais suivre Mois compté ni un étalement."
+      },
+      {
+        "type": "p",
+        "text": "Dans Résultat → Dépenses fixes, ouvrez une dépense enregistrée comme le loyer ou les charges et touchez Enregistrer une facture sous Factures à l’arrivée de chaque facture, avec la date de facture, un numéro de facture facultatif et au moins une ligne de taux. Si le Loyer est de $30,000 par mois et que les factures de juillet et d’août comportent chacune une ligne à 5 % de $30,000 et $1,500, le rapport de juillet à septembre contient $3,000 de taxe en amont, tandis que le compte de résultat continue de compter $30,000 chaque mois."
+      },
+      {
+        "type": "p",
+        "text": "Enregistrer une modification de taxe en amont sur un mois passé affiche Enregistrer la modification ? et avertit que le rapport de taxes de ce mois change si vous l’avez déjà déclaré. Les modifications du mois en cours et les brouillons s’enregistrent sans demande."
+      },
+      {
+        "type": "note",
+        "text": "DingPOS ne calcule ni la TVA à l’importation, ni l’autoliquidation, ni le crédit partiel. Reportez la taxe déductible depuis la facture, et mettez toute taxe que vous ne pouvez pas déduire dans le montant avant taxe."
+      },
+      {
+        "type": "h2",
+        "text": "Rapport de taxes"
+      },
+      {
+        "type": "p",
+        "text": "Deux cartes suivent les cartes de ventes : Taxe en amont sur les bons de commande et Taxe en amont sur les dépenses. Chacune liste une ligne par taux, une ligne Aucune taxe en amont et des totaux pour Hors taxe, Taxe déductible et Taxe comprise. Les totaux incluent les achats sans taxe en amont, mais certaines déclarations ne retiennent que les lignes avec taxe en amont."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Les bons de commande comptent à la Date de facture, ou à la date de commande si elle est vide.",
+          "Les bons de commande invalidés comptent en montant négatif à la date de l’invalidation.",
+          "Les dépenses ponctuelles comptent en entier à la date de la dépense.",
+          "Les factures de dépenses fixes comptent à la date de facture."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Taxe en amont sur les bons de commande exige Coûts et marges et Taxe en amont sur les dépenses exige Compte de résultat et dépenses ; le personnel sans l’une de ces permissions voit Demander l’approbation d’un responsable sous le titre de la carte. La tuile Taxe n’affiche toujours que la taxe collectée sur les ventes, jamais diminuée de la taxe en amont, car la méthode simplifiée du Japon et le taux forfaitaire du Royaume-Uni fonctionnent différemment. Les boutiques d’Australie, de Nouvelle-Zélande, de Singapour et du Royaume-Uni retrouvent aussi ces montants dans Cases de la déclaration."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "purchase-orders",
+      "record-expenses"
+    ]
+  },
+  {
+    "slug": "tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Où trouver le rapport de taxes et comment le lire ?",
+    "keywords": [
+      "rapport de taxes",
+      "TVA",
+      "GST",
+      "taxe de vente",
+      "Stats",
+      "Taxe",
+      "Ventes et taxe par taux",
+      "Par moyen de paiement"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ouvrez Stats et touchez la tuile Taxe pour afficher Rapport de taxes, qui liste les ventes et la taxe par taux pour la période affichée par Stats. Reportez ces chiffres dans une déclaration de TVA, de GST ou de taxe de vente, ou envoyez-les à un comptable. Les changements de taxe ultérieurs ne modifient jamais les chiffres enregistrés des documents."
+      },
+      {
+        "type": "h2",
+        "text": "Ouvrir le rapport de taxes"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ouvrez Stats et choisissez la période, par exemple Ce mois-ci ou une période personnalisée.",
+          "Repérez la tuile Taxe dans la deuxième rangée, après Total des remises.",
+          "Touchez la tuile Taxe ou Rapport de taxes ›."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Stats sur Ce mois-ci avec la tuile Taxe et son pied Rapport de taxes ›"
+      },
+      {
+        "type": "p",
+        "text": "Cette tuile est le seul accès. Son sous-titre nomme les taxes collectées sur la période, la plus élevée d’abord : deux par leur nom, trois ou plus sous la forme, par exemple, 3 taxes dont PST 7 %. L’en-tête affiche la période de Stats (Ce mois-ci · 1/11 – 30/11) sans sélecteur de période ni raccourci vers le mois dernier, car les périodes de déclaration diffèrent (deux mois à Taïwan, un trimestre en Australie, un an au Japon)."
+      },
+      {
+        "type": "p",
+        "text": "Les boutiques sans taxe et sans vente taxée sur la période ne voient pas de tuile Taxe ; les périodes sans document affichent l’état vide de Stats. Les taxes supprimées conservent la tuile pour les périodes contenant des ventes réalisées sous ces taxes."
+      },
+      {
+        "type": "note",
+        "text": "Toutes les formules, Lite et essai compris, disposent de la tuile, du rapport et de tous les exports. Le personnel a besoin de la permission Stats ; les rôles qui exigent une approbation voient l’écran d’invite à l’approbation jusqu’à ce qu’un responsable approuve."
+      },
+      {
+        "type": "h2",
+        "text": "Lire le rapport"
+      },
+      {
+        "type": "p",
+        "text": "Les boutiques d’Australie, de Nouvelle-Zélande, de Singapour et du Royaume-Uni voient d’abord Cases de la déclaration."
+      },
+      {
+        "type": "p",
+        "text": "Ventes et taxe par taux liste une ligne par taux : le plus élevé d’abord, puis le taux zéro à 0 %, et Non taxées (produits sans taxe) en dernier. Les colonnes sont Ventes, Retours et invalidations et Net, chacune avec Avant taxe et Taxe ; les lignes à taux zéro et Non taxées n’ont pas de ligne de taxe. Chaque taxe de la boutique a une ligne, même sans vente. Renommer une taxe conserve une seule ligne ; un changement de taux en ajoute une."
+      },
+      {
+        "type": "p",
+        "text": "Totaux affiche Ventes avant taxe, Taxe et Ventes TTC. Avec deux taxes ou plus, une note précise qu’une vente peut porter plusieurs taxes, si bien que les ventes par ligne ne peuvent pas être additionnées ; Ventes avant taxe compte chaque vente une seule fois. Pour un trimestre au Royaume-Uni, TVA 20 % pourrait afficher Avant taxe £1,000 et Taxe £200, Taux zéro 0 % £300 et Non taxées £50 : Totaux donne Ventes avant taxe £1,350, Taxe £200 et Ventes TTC £1,550."
+      },
+      {
+        "type": "shot",
+        "name": "tax-report",
+        "alt": "Rapport de taxes avec les lignes Ventes et taxe par taux et Totaux en dessous"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Par moyen de paiement liste les paiements de ces documents à la fin de la période, les montants impayés sous Créances clients, et l’arrondi des espèces sur une ligne Dont arrondi des espèces … à l’intérieur de la ligne des espèces.",
+          "Non comptés comme ventes ne s’affiche que pour les acomptes conservés : il liste Acomptes conservés avec un sous-titre invitant à vérifier la déclaration auprès d’un comptable, et ne s’ajoute ni aux ventes ni à la taxe.",
+          "Les boutiques qui ont activé Déduire la taxe en amont, ou qui ont enregistré de la taxe en amont sur la période, voient aussi Taxe en amont sur les bons de commande et Taxe en amont sur les dépenses."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Jour auquel chaque document est compté"
+      },
+      {
+        "type": "p",
+        "text": "Touchez ⓘ à côté de Ventes et taxe par taux :"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Une invalidation est comptée sur la période où elle a eu lieu, en montant négatif : une période déjà déclarée ne change donc jamais. Stats, à l’inverse, la retire de la période de la vente.",
+          "Un retour est compté à sa propre date. Dans un échange, les nouveaux articles comptent comme des ventes et les articles retournés comme des retours.",
+          "Une précommande est comptée le jour du retrait ; une vente en compte, le jour de la vente."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Une vente du 30 octobre invalidée le 2 novembre reste dans les Ventes d’octobre et apparaît en montant négatif dans les Retours et invalidations de novembre. Régler plus tard une vente en compte ne la déplace pas."
+      },
+      {
+        "type": "h2",
+        "text": "Taxe collectée et totaux de Stats"
+      },
+      {
+        "type": "p",
+        "text": "La tuile Taxe est égale au total Taxe de Rapport de taxes. Elle ne diffère de la ligne Taxe de Du chiffre d’affaires à la marge brute de Stats que pour les invalidations à cheval sur deux périodes, car Stats retire une vente invalidée de sa période d’origine."
+      },
+      {
+        "type": "note",
+        "text": "Rapport de taxes affiche la taxe collectée sur les ventes, jamais la taxe à payer (taxe collectée moins taxe en amont), car tous les pays ne la calculent pas ainsi, comme la méthode simplifiée du Japon ou le Flat Rate Scheme britannique."
+      }
+    ],
+    "related": [
+      "tax-return-boxes",
+      "input-tax",
+      "export-tax-report",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "tax-return-boxes",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Quels chiffres reporter dans les cases de ma déclaration BAS, GST ou TVA ?",
+    "keywords": [
+      "Cases de la déclaration",
+      "Rapport de taxes",
+      "Stats",
+      "BAS",
+      "Simpler BAS",
+      "GST101A",
+      "GST F5",
+      "VAT Return",
+      "déclaration de TVA",
+      "Déduire la taxe en amont"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Pour les boutiques d’Australie, de Nouvelle-Zélande, de Singapour ou du Royaume-Uni, Rapport de taxes s’ouvre sur Cases de la déclaration, qui montre chaque case et le montant tiré du même rapport. Il couvre le BAS · Simpler BAS australien, la GST101A néo-zélandaise, la GST F5 de Singapour et la déclaration de TVA (VAT Return) britannique, avec toutes les formules."
+      },
+      {
+        "type": "h2",
+        "text": "Ouvrir Cases de la déclaration"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ouvrez Stats.",
+          "Touchez la tuile Taxe pour ouvrir Rapport de taxes."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Cases de la déclaration est la première carte, au-dessus de Ventes et taxe par taux, et son sous-titre nomme la déclaration. Chaque montant provient du même rapport, centimes compris, et rien n’est recalculé. Le Rapport PDF exporté s’ouvre sur la même carte. Les boutiques configurées avant que l’app n’enregistre le pays sont rattachées par la devise (AUD, NZD, SGD ou GBP) ; les autres boutiques n’ont pas de carte Cases de la déclaration."
+      },
+      {
+        "type": "shot",
+        "name": "return-boxes",
+        "alt": "Carte Cases de la déclaration en haut de Rapport de taxes, affichant les cases 1, 4, 6 et 7 de la déclaration de TVA britannique"
+      },
+      {
+        "type": "h2",
+        "text": "Australie : BAS · Simpler BAS"
+      },
+      {
+        "type": "list",
+        "items": [
+          "G1 « Total sales » : Ventes avec GST, y compris les ventes exonérées de GST et non taxées ; répondez « Yes » à « Does the amount shown at G1 include GST? »",
+          "1A « GST on sales » : Taxe sur les ventes",
+          "1B « GST on purchases » : Taxe déductible sur les bons de commande et les dépenses"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "L’ATO demande des dollars entiers : omettez les centimes dans le BAS, sans jamais arrondir à l’unité supérieure."
+      },
+      {
+        "type": "h2",
+        "text": "Nouvelle-Zélande : GST101A"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Case 5 « Total sales and income » : Ventes avec GST, ventes à taux zéro comprises, ventes non taxées exclues",
+          "Case 6 « Zero-rated supplies » : Ventes à taux zéro",
+          "Case 11 « Total purchases and expenses » : Bons de commande et dépenses avec GST, montants TTC ; achats sans taxe en amont ou à taux zéro exclus"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "myIR calcule les cases 8 et 12 à 3/23, ce qui peut différer de quelques centimes de la taxe du rapport."
+      },
+      {
+        "type": "h2",
+        "text": "Singapour : GST F5"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Case 1 « Total value of standard-rated supplies » : Ventes taxées, hors taxe",
+          "Case 2 « Total value of zero-rated supplies » : Ventes à taux zéro ; seules les exportations et les prestations de services internationales peuvent l’être",
+          "Case 5 « Total value of taxable purchases » : Bons de commande et dépenses avec GST ou à taux zéro, hors taxe ; achats sans taxe en amont exclus",
+          "Case 6 « Output tax due » : Taxe sur les ventes",
+          "Case 7 « Input tax and refunds claimed » : Taxe déductible sur les bons de commande et les dépenses"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Royaume-Uni : déclaration de TVA (VAT Return)"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Case 1 « VAT due on sales and other outputs » : Taxe sur les ventes",
+          "Case 4 « VAT reclaimed on purchases and other inputs » : Taxe déductible sur les bons de commande et les dépenses",
+          "Case 6 « Total value of sales and all other outputs excluding any VAT » : Ventes avant taxe, ventes à taux zéro, exonérées et non taxées comprises",
+          "Case 7 « Total value of purchases and all other inputs excluding any VAT » : Bons de commande et dépenses hors taxe, y compris les achats sans taxe en amont ; excluez les salaires et les taxes locales sur les locaux commerciaux (business rates) que vous avez enregistrés"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Valable pour la comptabilité de TVA standard. Avec le Flat Rate Scheme, les cases 1 et 6 se calculent autrement. Au Royaume-Uni, la TVA sur un acompte est due dès sa réception ; DingPOS déclare une précommande au moment du retrait."
+      },
+      {
+        "type": "p",
+        "text": "Exemple de trimestre au Royaume-Uni : £1,000 de ventes à TVA 20 % hors taxe (taxe £200), £300 à taux zéro, £50 non taxées, des bons de commande de £400 plus £80 de TVA et des dépenses de £250 sans taxe en amont donnent case 1 £200, case 4 £80, case 6 £1,350 et case 7 £650."
+      },
+      {
+        "type": "h2",
+        "text": "Cases vides et accès du personnel"
+      },
+      {
+        "type": "p",
+        "text": "Les cases que l’administration fiscale calcule elle-même et les montants dus sont omis (cases 3 et 5 au Royaume-Uni ; case 3, fournitures exonérées, à Singapour). En Nouvelle-Zélande et à Singapour, les ventes non taxées ne figurent dans aucune case ; vérifiez auprès de votre comptable si elles auraient dû être taxées."
+      },
+      {
+        "type": "p",
+        "text": "Les cases de taxe en amont (AU 1B, NZ 11, SG 5 et 7, UK 4 et 7) exigent Déduire la taxe en amont, sinon elles affichent — et Aucune taxe en amont enregistrée, jamais 0. La case 7 du Royaume-Uni exige à la fois Taxe en amont sur les bons de commande et Taxe en amont sur les dépenses ; les bons de commande seuls remplissent la case 4 et laissent la case 7 sur —."
+      },
+      {
+        "type": "p",
+        "text": "Le personnel sans la permission Compte de résultat et dépenses ou Coûts et marges ne voit pas les cases qui additionnent les deux cartes tant qu’un responsable n’a pas approuvé via Demander l’approbation d’un responsable."
+      },
+      {
+        "type": "note",
+        "text": "Calculé sur les dates de vente et de facture ; DingPOS ne suit pas les dates de paiement. Si vous déclarez sur une base de caisse ou d’encaissements, ajustez ces montants."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "input-tax",
+      "export-tax-report"
     ]
   },
   {
@@ -1614,11 +2443,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ouvrez Réglages → Programme de fidélité et définissez deux règles : gagner Y points par tranche de X dépensés, et obtenir M de remise en utilisant N points (avec, en option, un plafond d’utilisation par commande). Vous pouvez aussi offrir automatiquement des points de bienvenue aux nouveaux membres."
+        "text": "Ouvrez Réglages → Programme de fidélité et définissez deux règles : gagner Y points par tranche de X dépensés, et obtenir M de remise en utilisant N points (avec, en option, un plafond d’utilisation par commande). Vous pouvez aussi offrir automatiquement des points de bienvenue aux nouveaux membres. Dans un nouveau commerce, les points sont désactivés : activez « Activer le programme de fidélité » et renseignez une règle. Si l’option est activée sans aucune règle, l’app vous avertit : « Aucune règle de gain ni d’utilisation n’est encore définie : les ventes ne permettront ni de gagner ni d’utiliser des points. »"
       },
       {
         "type": "p",
-        "text": "Associez le membre à la vente, dans le panier ou sur l’écran d’encaissement, et les points s’accumulent automatiquement ; pour les utiliser, saisissez le nombre de points à déduire. L’invalidation d’une commande retire les points qu’elle a fait gagner et restitue les points utilisés."
+        "text": "Associez le membre à la vente, dans le panier ou sur l’écran d’encaissement, et les points s’accumulent automatiquement ; pour les utiliser, saisissez le nombre de points à déduire. L’écran de confirmation de la vente indique les points gagnés et le nouveau solde, par exemple « +22 pts · 122 pts au total » ; pour une vente en compte ou une précommande pas encore payée en totalité, les points ne sont ajoutés qu’à l’encaissement de la somme due, ce qu’indiquent les mentions « ajoutés au règlement » ou « ajoutés après paiement au retrait ». L’invalidation d’une commande retire les points qu’elle a fait gagner et restitue les points utilisés."
       },
       {
         "type": "p",
@@ -2004,7 +2833,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Actions (ajustement manuel du stock, ajustement manuel des points, gestion des produits, encaissement au-delà du plafond de remise) : une approbation couvre cette seule action.",
-          "Consultations (Coûts et marges, Tableau de bord, Compte de résultat et dépenses, Réglages, sauvegarde et restauration) : une approbation déverrouille l’accès jusqu’au changement d’opérateur ou jusqu’à ce que l’app passe en arrière-plan.",
+          "Consultations (Coûts et marges, Stats, Compte de résultat et dépenses, Réglages, sauvegarde et restauration) : une approbation déverrouille l’accès jusqu’au changement d’opérateur ou jusqu’à ce que l’app passe en arrière-plan.",
           "Le plafond de remise s’applique aux remises manuelles et est vérifié une seule fois à l’encaissement ; les promotions automatiques et l’utilisation de points n’y comptent pas."
         ]
       },
@@ -2082,7 +2911,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si vous souscrivez à une formule pendant l’essai, celui-ci prend fin immédiatement et la formule achetée s’applique dès lors. Après l’essai, les fonctions Pro comme le personnel et le journal d’activité ne restent disponibles qu’avec un abonnement Pro. Les rapports avancés n’en nécessitent pas : depuis la v3.4, toutes les formules les incluent."
+        "text": "Si vous souscrivez à une formule pendant l’essai, celui-ci prend fin immédiatement et la formule achetée s’applique dès lors. Après l’essai, les fonctions Pro comme le personnel et le journal d’activité ne restent disponibles qu’avec un abonnement Pro. Stats n’en nécessite pas ; toutes les formules l’incluent en entier."
       },
       {
         "type": "p",
@@ -2142,13 +2971,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Les trois formules comprennent l’encaissement complet, les produits, les commandes (avec invalidations, retours et échanges), les rapports (rapports avancés et compte de résultat mensuel inclus depuis la v3.4) et la sauvegarde dans le cloud. Elles se distinguent par les outils pour gérer votre boutique :"
+        "text": "Les trois formules comprennent l’encaissement complet, les produits, les commandes (avec invalidations, retours et échanges), les rapports (tout Stats et le compte de résultat mensuel depuis la v3.4, le rapport de taxes et son export depuis la v3.6) et la sauvegarde dans le cloud. Elles se distinguent par les outils pour gérer votre boutique :"
       },
       {
         "type": "list",
         "items": [
           "Lite : pour une personne qui tient seule un stand et a besoin de l’encaissement et des produits.",
-          "Standard : ajoute les promotions, les points de fidélité et les niveaux, le suivi du stock, les achats, les ventes en compte, les précommandes et les taux de frais de traitement.",
+          "Standard : ajoute les promotions, les préréglages de remise, les points de fidélité et les niveaux, le suivi du stock, les achats, les ventes en compte, les précommandes et les taux de frais de traitement.",
           "Pro : ajoute les comptes du personnel et les permissions, l’approbation, le journal d’activité et le journal des restaurations, pour les boutiques avec du personnel."
         ]
       },
@@ -2356,12 +3185,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Les cadeaux et les extras payants ne modifient jamais le panier d’eux-mêmes. Lorsque les conditions sont remplies, un bandeau de suggestion apparaît sur l’écran de la caisse, et le panier ne change que lorsque le caissier touche Choisir le cadeau ou Choisir l’extra — c’est voulu, car les cadeaux concernent du stock physique : quelqu’un doit vérifier qu’il est disponible et que le client en veut."
+        "text": "Les cadeaux et les extras payants ne modifient jamais le panier d’eux-mêmes. Lorsque les conditions sont remplies, un bandeau de suggestion apparaît sur l’écran de la caisse, et le panier ne change que lorsque le caissier touche le bouton cadeau ou + du bandeau (Choisir le cadeau ou Choisir l’extra) — c’est voulu, car les cadeaux concernent du stock physique : quelqu’un doit vérifier qu’il est disponible et que le client en veut."
       },
       {
         "type": "list",
         "items": [
-          "Après Refuser, la même suggestion ne réapparaît plus pour ce panier ; un nouveau panier, ou un panier vidé, la propose de nouveau.",
+          "Après le ✕ (Refuser) du bandeau, la même suggestion ne réapparaît plus pour ce panier ; un nouveau panier, ou un panier vidé, la propose de nouveau.",
+          "Si le panier ne remplit plus les conditions (par exemple, l’article qui déclenchait un cadeau est retiré), le cadeau ou l’extra est retiré automatiquement avec un message en haut de l’écran, et il ne compte pas comme une utilisation (depuis la v3.6).",
           "Depuis la v3.4, les offres encore en attente n’empêchent plus l’encaissement : une ligne jaune sous le bouton Encaisser, comme « 1 offre en attente ne s’appliquera pas », indique combien sont écartées (touchez-la pour voir lesquelles), et la commande est validée sans elles. Pour que l’encaissement attende comme avant, activez Traiter les offres avant l’encaissement dans Réglages → Préférences de l’appareil ; cela ne s’applique qu’à cet iPad.",
           "Les lignes de cadeau et d’extra ne peuvent plus recevoir d’autres remises, et ne comptent pas dans les seuils des autres promotions."
         ]
@@ -2554,7 +3384,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Depuis la v3.4, Résultat affiche le bénéfice net de chaque mois après déduction du coût des produits, des frais et des dépenses — voir « Comment savoir combien ma boutique gagne réellement chaque mois ? » Il n’existe pas encore de rapport de règlement à exporter ou à imprimer, mais tout ce qu’il faut pour faire votre rapprochement se trouve déjà dans l’application :"
+        "text": "Depuis la v3.4, Résultat affiche le bénéfice net de chaque mois après déduction du coût des produits, des frais et des dépenses — voir « Comment savoir combien ma boutique gagne réellement chaque mois ? » Depuis la v3.6, le rapport de taxes exporte une période (Ce mois-ci, par exemple) en CSV, en classeur Excel ou en rapport PDF à remettre à votre comptable, avec les ventes, les taxes, les sommes encaissées par mode de paiement et les créances. Résultat et les autres rapports ne peuvent pas encore être exportés, mais tout ce qu’il faut pour faire votre rapprochement se trouve déjà dans l’application :"
       },
       {
         "type": "list",
@@ -2566,7 +3396,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Si vous avez besoin d’un bilan de règlement mensuel à exporter ou à imprimer, écrivez-nous en indiquant les champs souhaités : nous donnons la priorité aux développements selon le nombre de demandes."
+        "text": "Si vous avez besoin d’un bilan de règlement mensuel à exporter ou à imprimer, au-delà de ce que couvre le rapport de taxes, écrivez-nous en indiquant les champs souhaités : nous donnons la priorité aux développements selon le nombre de demandes."
       }
     ],
     "related": [

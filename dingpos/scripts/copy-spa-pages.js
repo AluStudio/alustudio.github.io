@@ -52,6 +52,7 @@ import { HOME_FAQ_SLUGS } from "../src/data/faq/home.js";
 import { INLINE_LINK, blockTexts } from "../src/data/guides/links.js";
 import { SCENE_COUNTRIES, SCENE_STRING_KEYS, SCENE_TIMES, placeholders } from "../src/data/scenes/keys.js";
 import { SHOT_SIZES, shotPath } from "../src/data/shots.js";
+import { faqShotPath, faqShotSize, hasPhoneShot } from "../src/data/faq/shots.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dist = join(__dirname, "..", "dist");
@@ -248,6 +249,25 @@ function validateFaqVersions(errors) {
   }
 }
 
+const FAQ_BLOCK_TYPES = new Set(["p", "h2", "list", "steps", "note", "shot", "video", "youtube"]);
+
+/** Errors of a FAQ shot block in one language: a shot recorded for that language whose files are its recorded size. */
+function faqShotErrors(block, code, at) {
+  const size = faqShotSize(code, block.name);
+  if (!size) return [`${at} names shot "${block.name}", which src/data/faq/shot-sizes.js does not record for ${code} (run scripts/capture-faq-shots.sh + build-faq-shots.sh)`];
+  const image = {
+    src: faqShotPath(code, block.name),
+    phone: hasPhoneShot(code, block.name) ? faqShotPath(code, block.name, true) : undefined,
+    width: size[0],
+    height: size[1],
+    alt: block.alt,
+    caption: block.caption,
+  };
+  return imageBlockErrors(image, at, join(__dirname, "..", "public")).map(
+    (error) => `${error} (run scripts/capture-faq-shots.sh + build-faq-shots.sh)`,
+  );
+}
+
 function validateFaqPacks() {
   const enSet = new Set(en.articles.map((a) => a.slug));
   const errors = [];
@@ -271,6 +291,11 @@ function validateFaqPacks() {
           errors.push(`[${code}] article "${article.slug}" has dangling related link "${related}"`);
         }
       }
+      article.content.forEach((block, i) => {
+        const at = `[${code}] article "${article.slug}" block ${i}`;
+        if (!FAQ_BLOCK_TYPES.has(block.type)) errors.push(`${at} has unknown type "${block.type}"`);
+        if (block.type === "shot") errors.push(...faqShotErrors(block, code, `${at} shot`));
+      });
     }
   }
 

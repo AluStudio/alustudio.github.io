@@ -91,7 +91,11 @@ export function fitDescription(units, max = DESCRIPTION_MAX) {
   return description;
 }
 
+// Blocks that carry the answer. Headings label a section rather than answer the
+// question, and screenshots have only alt text.
+const ANSWER_BLOCKS = new Set(["p", "note", "list", "steps"]);
+
 /** The text units of a FAQ answer, in reading order: paragraphs, notes, and each list or step item. */
 export function contentUnits(content) {
-  return content.flatMap((block) => block.items ?? [block.text]);
+  return content.filter((block) => ANSWER_BLOCKS.has(block.type)).flatMap((block) => block.items ?? [block.text]);
 }

@@ -105,7 +105,7 @@ export const articles = [
       },
       {
         "type": "note",
-        "text": "Valuta kan ikke endres etter oppsettet. Avgifter og Mva.-modus kan begge endres senere under Innstillinger → Butikkinfo. I USA, Canada, Brasil og Mikronesia avhenger satsen av delstat, provins eller by. Derfor er satsfeltet tomt til å begynne med, og du må skrive inn satsen du bruker for å gå videre. En sats må være over 0: en butikk som ikke tar avgift, sletter raden. Listen med 175 land og valget av valuta kom i v3.2. Tidligere versjoner hadde 15 land."
+        "text": "Valuta kan ikke endres etter oppsettet. Avgifter og Mva.-modus kan begge endres senere under Innstillinger → Butikkinfo. I USA, Canada, Brasil og Mikronesia avhenger satsen av delstat, provins eller by. Derfor er satsfeltet tomt til å begynne med, og du må skrive inn satsen du bruker for å gå videre. En sats må være over 0: en butikk som ikke tar avgift, sletter raden. I Tyskland, Frankrike, Italia og andre europeiske land inneholder listen også reduserte satser som er vanlige i lokal detaljhandel, under det lokale avgiftsnavnet, for eksempel «MwSt. 19%» og «MwSt. 7%» i Tyskland. Reduserte satser brukes ikke på nye produkter som standard, så slå dem på for hvert produkt. Listen med 175 land og valget av valuta kom i v3.2. Tidligere versjoner hadde 15 land."
       }
     ],
     "related": [
@@ -334,6 +334,10 @@ export const articles = [
       {
         "type": "p",
         "text": "Hver vare og hver handlekurv kan ha én rabatt om gangen – gir du rabatt på nytt, erstatter den den forrige, og et trykk på rabattmerket fjerner den. Rabatter trekkes fra før mva., som er vanlig rekkefølge i detaljhandel."
+      },
+      {
+        "type": "p",
+        "text": "Rabatter du gir ofte, kan lagres: gå til Innstillinger → Lojalitet og kampanjer → Rabattforvalg og trykk på Legg til forvalg, for eksempel «Ansattpris 20 % rabatt». Ved kassen har både varerabatten og handlekurvrabatten en Forvalg-meny; når du velger ett, fylles rabattypen og verdien ut nøyaktig som om du hadde skrevet dem inn selv, så det teller fortsatt med i en ansatts rabattgrense. Rabattforvalg kom i v3.6 og krever Standard-planen eller høyere."
       }
     ],
     "related": [
@@ -388,7 +392,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Full beregningsrekkefølge: varerabatter og kampanjer → handlekurvrabatt → poenginnløsning → mva. Beløp avrundes opp ved ½ til valutaens antall desimaler (f.eks. 0 for TWD, 2 for USD)."
+        "text": "Full beregningsrekkefølge: varerabatter og kampanjer → handlekurvrabatt → poenginnløsning → mva. Beløp avrundes etter vanlige regler (½ og over opp) til valutaens antall desimaler (f.eks. 0 for TWD, 2 for USD). Mva. regnes ut én gang per mva.-sats på hver ordre, og desimalene følger Avrunding av avgift i kortet Mva.: Rund av til nærmeste, Rund ned eller Rund opp. Nye butikker i Japan starter med Rund ned, andre butikker med Rund av til nærmeste."
       },
       {
         "type": "note",
@@ -419,7 +423,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "En ny butikk starter med to betalingsmåter, Kontant og Kredittkort, med navn på appens språk ved oppsettet. Under Innstillinger → Betalingsmåter kan du legge til andre måter (for eksempel Apple Pay, LINE Pay eller en lokal lommebok), og slette eller sortere dem på nytt."
+        "text": "En ny butikk starter med to betalingsmåter, Kontant og Kredittkort, med navn på appens språk ved oppsettet. Under Innstillinger → Betalingsmåter kan du legge til andre måter (for eksempel Apple Pay, LINE Pay eller en lokal lommebok) og endre rekkefølgen. Trykk på en betalingsmåte for å gi den nytt navn, for eksempel fra Kredittkort til «Kort (Square)»; Rapporter teller salg fra før navnebyttet under det nye navnet (fra og med v3.6). Slett betalingsmåte ligger nederst i redigeringsarket og spør før den sletter; tidligere ordrer beholder betalingsmåten de ble betalt med, og den siste gjenværende betalingsmåten kan ikke slettes."
       },
       {
         "type": "p",
@@ -459,7 +463,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Ja. Under Innstillinger → Betalingsmåter trykker du på en betalingsmåte (eller legger til en ny) og fyller ut Transaksjonsgebyr: en prosent, et fast beløp per transaksjon, eller begge deler. Fra da av registrerer hver betaling som tas imot med den betalingsmåten et gebyr, anslått med satsen som gjelder i øyeblikket."
+        "text": "Ja. Under Innstillinger → Betalingsmåter trykker du på en betalingsmåte (eller legger til en ny) og fyller ut Transaksjonsgebyr: en prosent, et fast beløp per transaksjon, eller begge deler. Kontantmåter har ikke gebyr. Fra da av registrerer hver betaling som tas imot med den betalingsmåten et gebyr, anslått med satsen som gjelder i øyeblikket."
       },
       {
         "type": "p",
@@ -468,15 +472,15 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Skriv inn satsen tilbyderen faktisk trekker, inkludert avgift – for 3 % pluss 5 % avgift skriver du 3,15 %. La begge feltene stå tomme hvis det ikke er noe gebyr.",
+          "Skriv inn satsen tilbyderen faktisk trekker. Hvis det legges mva. på gebyret, tar du den med: for 3 % pluss 5 % mva. skriver du 3,15 %. La begge feltene stå tomme hvis det ikke er noe gebyr.",
           "En endring av satsen gjelder bare senere betalinger. Gebyrer som allerede er registrert, blir stående som de var.",
-          "«Prosentandelen av gebyret refunderes ved refusjoner» er på som standard, for tilbydere som gir gebyret tilbake når du refunderer. Det styrer returer og refunderte depositum på forhåndsbestillinger: når den er på, refunderes prosentandelen, mens det faste gebyret aldri refunderes. En annullering eller en tilbakeføring av oppgjør ignorerer bryteren og reverserer hele gebyret som ble registrert, også det faste. Uansett får kunden tilbake samme beløp.",
+          "«Prosentandelen av gebyret refunderes ved refusjoner» er på som standard for butikker i Taiwan og Japan og av for butikker andre steder, fordi tilbydere som Stripe, Square og PayPal beholder gebyret ved refusjon. Still den inn etter tilbyderen din. Den styrer returer og refunderte depositum på forhåndsbestillinger: når den er på, refunderes prosentandelen, mens det faste gebyret aldri refunderes. En annullering eller en tilbakeføring av oppgjør ignorerer bryteren og reverserer hele gebyret som ble registrert, også det faste. Uansett får kunden tilbake samme beløp.",
           "Betalinger som ble tatt imot før betalingsmåten hadde en sats, har ikke noe gebyr: Rapporter merker dem «N mangler sats» og viser nettobeløpet som «—»."
         ]
       },
       {
         "type": "note",
-        "text": "Gebyrene er anslag ut fra satsen du skriver inn. Tilbyderens oppgjør viser det faktiske beløpet. Du trenger Standard-planen eller høyere for å redigere gebyrsatser, og på Lite er feltene låst. Fra og med v3.4 ser alle planer de registrerte gebyrene i Rapporter og under Resultat, så en sats som ble satt i prøveperioden, fortsetter å gi anslag på Lite. Tidligere versjoner viste gebyrer bare på Standard og høyere."
+        "text": "Gebyrene er anslag ut fra satsen du skriver inn. Tilbyderens oppgjør viser det faktiske beløpet. Du trenger Standard-planen eller høyere for å redigere gebyrsatser, og på Lite er feltene låst. Fra og med v3.4 ser alle planer de registrerte gebyrene i Rapporter og i Resultat, så en sats som ble satt i prøveperioden, fortsetter å gi anslag på Lite. Tidligere versjoner viste gebyrer bare på Standard og høyere."
       }
     ],
     "related": [
@@ -790,7 +794,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "I kassen bytter du øverst på skjermen fra Salg til Forhåndsbestilling, velger hentedato, skriver inn depositumet (alt fra 0 til hele beløpet, med snarveiene 30 % / 50 % / Hele) og velger hvordan depositumet betales. Legg til en kunde, så du kan nå vedkommende når varene kommer."
+        "text": "I kassen bytter du øverst på skjermen fra Salg til Forhåndsbestilling, velger hentedato, skriver inn depositumet (alt fra 0 til hele beløpet, med snarveiene 30 % / 50 % / Hele) og velger hvordan depositumet betales. Legg til en kunde, så du kan kontakte vedkommende om henting."
       },
       {
         "type": "list",
@@ -905,11 +909,11 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Når et produkt har varianter, forsvinner feltet Pris, og hver kombinasjon får egen pris under Pris og lager per variant, med eget lager (siden v3.2; tidligere versjoner ber fortsatt om en produktpris). Kassen, produktlisten og produktdetaljene viser et prisområde fra laveste til høyeste pris, for eksempel «NT$350–NT$390», eller én pris når alle kombinasjonene koster det samme. Sortering etter pris bruker den laveste kombinasjonsprisen. I kassen vises en variantvelger når du trykker på produktet, før det legges i handlekurven."
+        "text": "Når et produkt har varianter, har hver kombinasjon under Pris og lager per variant sitt eget lager, og prisen følger produktets Pris: en kombinasjon uten egen pris viser produktets pris i grått og endres når den endres, og et tall du skriver inn, er kombinasjonens egen pris, vist i svart. Sett for eksempel Pris for en T-skjorte til 390 og endre bare L til 350: M og XL selges for 390, og når Pris senere blir 420, følger M og XL med til 420, mens L blir stående på 350. ⓘ ved siden av kolonnen Pris inneholder Bruk produktets pris, som setter alle kombinasjoner tilbake til å følge produktprisen. Produkter laget før v3.6 beholder hver variantpris som kombinasjonens egen pris, og produktets Pris er den laveste av dem. Kassen, produktlisten og produktdetaljene viser et prisområde fra laveste til høyeste pris, for eksempel «NT$350–NT$390», eller én pris når alle kombinasjonene koster det samme; sortering etter pris bruker den laveste kombinasjonsprisen. I kassen vises en variantvelger når du trykker på produktet, før det legges i handlekurven."
       },
       {
         "type": "p",
-        "text": "Du trenger ikke legge inn kostpris for hver kombinasjon: et tomt felt for Kostpris betyr Følger produktet, så kombinasjonen bruker produktets kostpris og endres når den endres. Et tall gir Egen kostpris – også 0. Bruk produktets kostpris for alle fjerner alle egne kostpriser på én gang."
+        "text": "Kostpris fungerer på samme måte: et tomt felt viser produktets kostpris i grått og endres når den endres, og et tall er kombinasjonens egen kostpris, vist i svart – også 0. Bruk produktets kostpris, i ⓘ ved siden av kolonnen Kostpris, fjerner alle egne kostpriser på én gang."
       },
       {
         "type": "note",
@@ -1047,7 +1051,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Når sporingen er på, trekker salg og forhåndsbestillinger fra lageret automatisk. Annulleringer, returer og kansellerte forhåndsbestillinger legger varene tilbake, og mottak av en innkjøpsordre øker beholdningen. Alle endringer føres i en fullstendig logg over lagerbevegelser. Lav beholdning utheves med en fargeadvarsel."
+        "text": "Når sporingen er på, trekker salg og forhåndsbestillinger fra lageret automatisk. Annulleringer, returer og kansellerte forhåndsbestillinger legger varene tilbake, og mottak av en innkjøpsordre øker beholdningen. Alle endringer føres i en fullstendig logg over lagerbevegelser. Ved 10 eller færre merkes lageret som lavt, med oransje farge, i produktlisten, i kassen og i produktdetaljene."
       },
       {
         "type": "p",
@@ -1087,7 +1091,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Bruk Juster lager. For et produkt med sporet lager trykker du på Juster lager i produktdetaljene, velger Fjern eller Legg til, skriver inn antallet, velger en årsak og legger eventuelt til et notat (opptil 100 tegn). Arket regner ut lageret etter endringen, og linjen under årsaken sier om justeringen kommer med i resultatregnskapet."
+        "text": "Bruk Juster lager. For et produkt der lagerføring er aktivert trykker du på Juster lager i produktdetaljene, velger Fjern eller Legg til, stiller inn antallet med + og − (det starter på 1; trykk på tallet for å skrive det inn), velger en årsak og legger eventuelt til et notat (opptil 100 tegn). Arket regner ut lageret etter endringen, og linjen under årsaken sier om justeringen kommer med i resultatregnskapet."
       },
       {
         "type": "list",
@@ -1163,14 +1167,14 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Under Innkjøp i sidemenyen administrerer du leverandører og innkjøpsordrer. En leverandør lagrer navn, kontaktperson, telefon, adresse og standard betalingsvilkår (Betaling ved mottak eller Månedskreditt)."
+        "text": "Under Innkjøp i sidemenyen administrerer du leverandører og innkjøpsordrer. En leverandør lagrer navn, kontaktperson, telefon, adresse og standard betalingsvilkår: Betaling ved mottak eller Månedskreditt."
       },
       {
         "type": "steps",
         "items": [
-          "Trykk på Nytt innkjøp, velg leverandør og legg til produkter, antall og enhetskostnad (forhåndsutfylt med kostprisen produktet har nå). Du kan også legge til fraktkostnad. Er leverandøren ikke opprettet ennå, trykker du på Legg til leverandør øverst til venstre i leverandørlisten – den nye leverandøren havner rett tilbake i innkjøpsordren.",
+          "Trykk på Nytt innkjøp, velg leverandør og legg til produkter, antall og enhetskostnad (forhåndsutfylt med kostprisen produktet har nå). Du kan også legge til fraktkostnad. For varer som ikke er opprettet som produkter ennå, trykker du på Nytt produkt i valget Legg til produkt – det nye produktet havner rett i innkjøpsordren som en linje. Er leverandøren ikke opprettet ennå, trykker du på Legg til leverandør øverst til venstre i leverandørlisten – den nye leverandøren havner rett tilbake i innkjøpsordren.",
           "Et utkast rører aldri lager eller ubetalte regninger – rediger eller slett det som du vil.",
-          "Når varene kommer, trykker du på Motta varer: lageret for sporede produkter øker, og innkjøpsordren får nummer og låses. Som standard oppdaterer mottaket også kostprisen på hvert produkt til denne enhetskostnaden. Slå av Synkroniser produktets kostpris på innkjøpsordren for å la kostprisene stå uendret."
+          "Når varene kommer, trykker du på Motta varer: lageret for sporede produkter øker, og innkjøpsordren får nummer og låses. Som standard oppdaterer mottaket også kostprisen på hvert produkt til denne enhetskostnaden. Slå av Synkroniser produktets kostpris på innkjøpsordren for å la kostprisene stå uendret. Under den fordeler Inkluder frakt i kostpris (på for nye innkjøpsordrer) fraktkostnaden på linjene etter beløp, slik at kostprisen som skrives til hvert produkt inkluderer sin andel: mel 10 × $30, smør 1 × $60 og $25 i frakt gir mel en kostpris på $32 og smør $64."
         ]
       },
       {
@@ -1218,7 +1222,8 @@ export const articles = [
       {
         "type": "list",
         "items": [
-          "Et produkt som ikke selges, vises aldri i kassens rutenett, i kategorier, i søk eller ved skanning av strekkode, og kan ikke være en gave, en tilleggsvare, målet for en kampanje eller en erstatningsvare ved bytte.",
+          "Et produkt som ikke selges, vises aldri i kassens rutenett, i kategorier, i søk eller ved skanning av strekkode, og kan ikke være en gave, en tilleggsvare, målet for en kampanje eller en erstatningsvare ved bytte. En kategori som bare har produkter som ikke selges, vises ikke i kassens kategorilinje.",
+          "Når butikken har produkter som ikke selges, vises en filterknapp øverst til høyre i Produkter: velg Alle produkter, Selges i kassen eller Selges ikke, sammen med søk og kategorier.",
           "Innkjøpsordrer, mottak, Synkroniser produktets kostpris og ubetalte regninger fungerer akkurat som for andre produkter, så innkjøpskostnaden og lageret for et materiale kan registreres under Innkjøp.",
           "Salg av andre produkter trekker ikke fra lageret. Når du bruker noe av det, registrerer du en fjerning med Juster lager i produktdetaljene: Brukt i produksjon for det som gikk inn i produkter, Butikkrekvisita for ting som papirposer eller rengjøringsmidler.",
           "Du kan slå det på igjen når som helst, og pris og avgifter er fortsatt der. Ordrer og rapporter som allerede er laget, påvirkes ikke."
@@ -1247,29 +1252,70 @@ export const articles = [
     "keywords": [
       "salgsinntekt",
       "mottatt betaling",
+      "rapporter",
+      "bruttofortjeneste",
+      "fra salgsinntekt til bruttofortjeneste",
       "kasseavstemming",
       "avstemming",
       "depositum",
-      "salg på konto"
+      "salg på konto",
+      "avgift"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Salgsinntekt telles den dagen varene ble overlevert, etter alle rabatter og før avgift. Mottatt betaling telles den dagen pengene kom inn, og er pengene du faktisk tok imot, avgift inkludert. I en butikk som tar avgift, er mottatt betaling derfor høyere enn salgsinntekten med like mye som avgiften, selv for ordrer som betales i kassen. Utover det skiller de lag når:"
+        "text": "Salgsinntekt telles den dagen varene ble overlevert, etter alle rabatter og før avgift. Mottatt betaling telles den dagen pengene kom inn, og er pengene du tok imot, avgift inkludert. I en butikk som tar avgift, er mottatt betaling høyere enn salgsinntekten med like mye som avgiften, selv for ordrer som betales i kassen. Begge vises som de to første feltene i første rad i Rapporter, sammen med Bruttofortjeneste, Ordrer og Gjennomsnittlig ordreverdi."
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Rader med felt i Rapporter, med Salgsinntekt og Mottatt betaling side om side i første rad"
+      },
+      {
+        "type": "h2",
+        "text": "Når salgsinntekt og mottatt betaling er forskjellige"
+      },
+      {
+        "type": "p",
+        "text": "For eksempel: En butikk med priser inkludert avgift selger for NT$1,050 inkludert 5 % avgift, og kunden betaler i kassen. Da er salgsinntekten NT$1,000 og mottatt betaling NT$1,050. Utover avgiften skiller de to tallene lag i disse tilfellene:"
       },
       {
         "type": "list",
         "items": [
           "Salg på konto: varene går ut i dag og teller med i dagens salgsinntekt, mens pengene teller som mottatt betaling den dagen oppgjøret skjer.",
           "Forhåndsbestilling: depositumet teller som mottatt betaling når det betales, mens salgsinntekten regnes i sin helhet på hentedatoen.",
-          "Tapt depositum: hvis en kunde kansellerer en forhåndsbestilling og du beholder depositumet, ble det allerede regnet som mottatt betaling da det ble betalt. Rapporter viser det separat som tapte depositum, og det regnes aldri som salgsinntekt.",
-          "Annullering av en tidligere ordre: pengene som refunderes, teller som mottatt betaling på dagen ordren annulleres, så mottatt betaling den dagen kan bli negativ, mens Annullert teller ordren på salgsdatoen.",
+          "Tapt depositum: hvis en kunde kansellerer en forhåndsbestilling og du beholder depositumet, ble det allerede regnet som mottatt betaling da det ble betalt. Rapporter viser det separat som Tapt depositum, og det regnes aldri som salgsinntekt.",
+          "Annullering av en tidligere ordre: pengene som refunderes, teller som mottatt betaling på dagen ordren annulleres, så mottatt betaling den dagen kan bli negativ. Selve den annullerte ordren telles på salgsdatoen og vises i undertittelen til feltet Ordrer.",
           "Kontantavrunding: det kontantavrundingen legger til eller trekker fra ordretotalen, regnes som mottatt betaling, aldri som salgsinntekt."
         ]
       },
       {
         "type": "p",
-        "text": "For å avstemme sammenligner du mottatt betaling med kasseskuffen og kortterminalen. For å se hvor mye du faktisk har solgt i en periode, leser du salgsinntekt. Returer reduserer salgsinntekten den dagen returen skjer. ⓘ på feltene Salgsinntekt, Mottatt betaling og Annullert forklarer det samme, og selve avgiften står under Fra salgsinntekt til bruttofortjeneste, som åpnes fra feltet for bruttofortjeneste."
+        "text": "Når ett av beløpene ikke er null, viser undertittelen til feltet Mottatt betaling kontantavrunding eller tapt depositum."
+      },
+      {
+        "type": "h2",
+        "text": "Avgift og detaljer om feltene"
+      },
+      {
+        "type": "p",
+        "text": "Avgiften som skiller salgsinntekt og mottatt betaling, står i Fra salgsinntekt til bruttofortjeneste, som åpnes fra nederste linje i feltet Bruttofortjeneste. Der ser du Salgsinntekt (inkl. mva.), Avgift og Salgsinntekt (eks. mva.). Butikker i Australia, Storbritannia, New Zealand og Singapore ser det lokale avgiftsnavnet der, for eksempel Salgsinntekt (inkl. GST), GST og Salgsinntekt (eks. GST)."
+      },
+      {
+        "type": "p",
+        "text": "For å se avgiften du har tatt inn og skal innrapportere, åpner du Avgiftsrapport fra feltet Avgift."
+      },
+      {
+        "type": "p",
+        "text": "ⓘ-ikonet på feltene Salgsinntekt, Mottatt betaling og Ordrer forklarer disse reglene i appen, også de annullerte ordrene som står i undertittelen til feltet Ordrer."
+      },
+      {
+        "type": "h2",
+        "text": "Avstemming og lesing av salgstall"
+      },
+      {
+        "type": "p",
+        "text": "For å avstemme sammenligner du mottatt betaling med kasseskuffen og kortterminalen. Kortet Betalingsmåter i Rapporter viser én rad per betalingsmåte, og salg som er gjort før du endrer navn på en betalingsmåte, telles under det nye navnet. For å se hvor mye du har solgt i en periode, leser du salgsinntekt. Returer reduserer salgsinntekten den dagen returen skjer."
       },
       {
         "type": "note",
@@ -1279,7 +1325,8 @@ export const articles = [
     "related": [
       "on-account",
       "pre-orders",
-      "report-periods"
+      "report-periods",
+      "tax-report"
     ]
   },
   {
@@ -1289,97 +1336,227 @@ export const articles = [
     "keywords": [
       "rapporter",
       "periode",
+      "tidsperiode",
       "denne uken",
       "denne måneden",
-      "dette året",
       "egendefinert periode",
-      "dato",
-      "toppprodukter"
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Velg I dag, I går, Denne uken, Denne måneden, Dette året eller Hele perioden øverst i Rapporter, eller bruk Egendefinert for å velge start- og sluttdato. Denne uken følger enhetens første ukedag, mens Denne måneden og Dette året starter den 1. og 1. januar. Hvert valg viser datoene det dekker, og Hele perioden starter ved butikkens første transaksjon."
-      },
-      {
-        "type": "p",
-        "text": "Under periodelinjen kommer to rader med felt for tall (Salgsinntekt, Mottatt betaling, Bruttofortjeneste, Ordrer, Gjennomsnittlig ordreverdi; Rabatter totalt, Nettoresultat, Produkter uten kostpris, Betjente kunder), og deretter trenddiagrammet. Menyen øverst til høyre på trenddiagrammet bytter det mellom salgsinntekt, ordrer, gjennomsnittlig ordre og betjente kunder, og ved siden av det stabler diagrammet Kostnad og bruttofortjeneste hver periodes kostpris og bruttofortjeneste i én søyle. En enkelt dag vises per time. Lengre perioder bruker dager, uker, måneder eller år, avhengig av lengden."
-      },
-      {
-        "type": "p",
-        "text": "Trykk og hold på trenddiagrammet eller diagrammet Kostnad og bruttofortjeneste for å lese det periode for periode. Med Salgssammenligning på viser kortet på trenddiagrammet denne periodens tall og sammenligningsperiodens tall side om side. Dra til venstre eller høyre for å flytte deg langs diagrammet. Sveiper du opp eller ned på diagrammet, ruller siden som vanlig."
-      },
-      {
-        "type": "p",
-        "text": "Kortet Produktrangering viser de fem beste. Trykk på kortet eller Vis alle for å se alle produkter som er solgt i perioden, rangert etter antall etter returer. Et produkt med varianter får én linje per variant."
-      },
-      {
-        "type": "p",
-        "text": "Med Salgssammenligning til høyre i periodelinjen kan du sammenligne perioden med sammenligningsperioden eller med samme periode i fjor – se «Hva viser de avanserte rapportene?»"
-      },
-      {
-        "type": "note",
-        "text": "Disse kalenderperiodene kom i v2.4. Eldre versjoner hadde løpende perioder (I dag / 7 dager / 30 dager / Hele perioden). Hvis du fortsatt ser dem, oppdaterer du DingPOS fra App Store."
-      }
-    ],
-    "related": [
-      "advanced-reports",
-      "revenue-vs-cash",
-      "profit-not-tracked"
-    ]
-  },
-  {
-    "slug": "advanced-reports",
-    "category": "reports",
-    "since": "3.0",
-    "question": "Hva viser de avanserte rapportene?",
-    "keywords": [
-      "avanserte rapporter",
-      "salgssammenligning",
-      "i fjor",
-      "varmekart",
-      "travle timer",
+      "produktrangering",
       "saktegående varer",
-      "produktendringer",
-      "andel per kategori",
-      "lagerverdi",
-      "gjenkjøpsandel",
-      "poeng"
+      "ukedag × time",
+      "lagerverdi"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Avanserte rapporter er ikke en egen skjerm. De ligger rett i Rapporter og følger perioden du velger øverst:"
+        "text": "Velg I dag, I går, Denne uken, Denne måneden, Dette året eller Hele perioden i periodelinjen øverst i Rapporter, eller trykk på Egendefinert for å velge en valgfri start- og sluttdato. Alle kortene på siden følger perioden du velger. Denne uken følger enhetens første ukedag, Denne måneden starter den 1., Dette året starter 1. januar, Hele perioden starter ved butikkens første transaksjon, og hvert valg viser datoene det dekker."
       },
       {
-        "type": "list",
+        "type": "shot",
+        "name": "report-periods",
+        "alt": "Periodelinjen øverst i Rapporter med Egendefinert valgt og datovelgeren åpen for å velge Start og Slutt"
+      },
+      {
+        "type": "h2",
+        "text": "Velge en egendefinert periode"
+      },
+      {
+        "type": "p",
+        "text": "Bruk Egendefinert når du trenger en periode utenfor de ferdige kalenderperiodene, for eksempel en tomåneders eller kvartalsvis innrapporteringsperiode for avgift."
+      },
+      {
+        "type": "steps",
         "items": [
-          "Salgssammenligning: til høyre i periodelinjen kan du sammenligne med samme periode i fjor eller med perioden før (én dag mot samme dag forrige uke, denne uken mot forrige uke, denne måneden mot forrige måned, dette året mot i fjor, en egendefinert periode mot like mange dager rett før). Feltene Salgsinntekt, Mottatt betaling, Bruttofortjeneste, Ordrer, Gjennomsnittlig ordreverdi, Rabatter totalt og Betjente kunder viser hvert sin endring og sammenligningsperiodens tall, for eksempel «▼ 3 % mot forrige måned». Endringen i Rabatter totalt er alltid grå, siden mer rabatt verken er bra eller dårlig i seg selv. Trykk på en sammenligningslinje for å åpne Periodesammenligning, som viser tallene for begge periodene. Trenddiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, kuttes sammenligningsperioden på samme tidspunkt.",
-          "Ukedag × time: bytt overskriften på trenddiagrammet fra Utvikling til Ukedag × time for et varmekart med syv dager og 24 timer – jo mørkere rute, desto mer solgte du. Du kan bytte mellom salgsinntekt og ordrer, og med sammenligning på ser du hvilke timer som vokste og hvilke som krympet.",
-          "Saktegående varer: bytt overskriften på rangeringskortet til Saktegående varer for å se produktene fra færrest til flest salg, med nåværende lagerbeholdning og siste salgsdato for hvert produkt. Produkter som aldri er solgt, er merket Aldri solgt, og et produkt med varianter får én linje per variant. Som standard vises bare produkter som er på lager.",
-          "Endringer (fra og med v3.4): bytt overskriften på rangeringskortet til Endringer for å se de 3 produktene der salgsinntekten økte mest og de 3 der den falt mest sammenlignet med sammenligningsperioden, hver med salgsinntekt for begge periodene og differansen. Hver variant sammenlignes med seg selv. Velg først en periode under Salgssammenligning. Med Ingen, eller på Hele perioden, ber kortet deg om å gjøre det. Trykk på kortet eller Vis alle for hele listen Produktendringer, delt i Økning og Nedgang.",
-          "Gjenkjøpsandel: den siste linjen i kundefeltet er andelen medlemmer som handlet i perioden og har handlet to eller flere ganger totalt. Med sammenligning på gir en linje under endringen i prosentpoeng og sammenligningsperiodens andel.",
-          "Andel per kategori: hver kategoris salgsinntekt og andel, etter produktenes nåværende kategori, størst først. Produkter uten kategori havner under Uten kategori, og radene summerer seg nøyaktig til salgsinntekten.",
-          "Akkurat nå: lagerverdi (nåværende beholdning × nåværende kostpris), alle lagerbevegelser i den valgte perioden, og poengene kundene har, men ikke har brukt, med det høyeste beløpet de kan få trukket fra. Dette er nåværende saldoer, og perioden endrer dem ikke."
+          "Åpne Rapporter og trykk på Egendefinert i periodelinjen.",
+          "Velg start- og sluttdato i datovelgeren.",
+          "Bekreft datoene for å oppdatere rapporten."
         ]
       },
       {
         "type": "p",
-        "text": "Fra og med v3.4 er de alle åpne på alle planer, og de forblir åpne etter at prøveperioden er over. Tidligere versjoner viste dem bare på Pro, med en liten lås på de andre planene. Hvis du fortsatt ser låsene, oppdaterer du DingPOS fra App Store."
+        "text": "Feltet Avgift og avgiftsrapporten følger også den valgte perioden, så når du angir en innrapporteringsperiode med Egendefinert, oppdateres begge. Se den tilhørende artikkelen om avgiftsrapporten for detaljer. Til høyre i periodelinjen trykker du på Sammenlign for å se den valgte perioden ved siden av perioden før den eller samme periode i fjor. Se den tilhørende artikkelen om sammenligning av perioder for detaljer."
+      },
+      {
+        "type": "h2",
+        "text": "Felt og kort på siden"
       },
       {
         "type": "p",
-        "text": "Lite sporer ikke lager eller poeng, men Akkurat nå viser likevel lagerverdien og de ubrukte poengene butikken din allerede har (for eksempel fra prøveperioden), eller null."
+        "text": "Under periodelinjen viser Rapporter to rader med tallfelt, etterfulgt av diagrammer og oppsummeringskort i par, med Akkurat nå nederst."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Første rad med felt: Salgsinntekt, Mottatt betaling, Bruttofortjeneste, Ordrer og Gjennomsnittlig ordreverdi.",
+          "Andre rad med felt: Rabatter totalt, Avgift, Nettoresultat, Produkter uten kostpris og Betjente kunder.",
+          "Første par: trenddiagrammet ved siden av Kostnad og bruttofortjeneste.",
+          "Andre par: Produktrangering ved siden av Andel per kategori.",
+          "Tredje par: Betalingsmåter ved siden av kortet Kampanjer.",
+          "Nederste kort: Akkurat nå."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "To av feltene i andre rad vises bare i bestemte tilfeller. Avgift, som kom i v3.6, vises bare for en butikk med avgifter eller når den valgte perioden har salg gjort med avgift. Nettoresultat vises bare når perioden er Denne måneden eller dekker nøyaktig én hel måned."
       },
       {
         "type": "note",
-        "text": "Ansatte ser avanserte rapporter under tillatelsen Oversikt. Lagerverdibeløpene krever i tillegg tillatelsen Kostpris og fortjeneste."
+        "text": "Hvis en periode ikke har ordrer, viser Rapporter bare periodelinjen, en melding og Akkurat nå."
+      },
+      {
+        "type": "h2",
+        "text": "Slik leser du diagrammer og Produktrangering"
+      },
+      {
+        "type": "p",
+        "text": "Menyen øverst til høyre på trenddiagrammet bytter det mellom Salgsinntekt, Ordrer, Gjennomsnittlig ordreverdi og Betjente kunder. Ved siden av ligger diagrammet Kostnad og bruttofortjeneste, som stabler hver periodes kostpris og bruttofortjeneste i én søyle. En enkelt dag vises per time, mens lengre perioder grupperes i dager, uker, måneder eller år, avhengig av lengden."
+      },
+      {
+        "type": "p",
+        "text": "Trykk og hold på trenddiagrammet, Kostnad og bruttofortjeneste eller Betalingsmåter for å vise et avlesningskort for ett punkt i diagrammet. Når Sammenlign er på, viser avlesningskortet på trenddiagrammet denne periodens tall og sammenligningsperiodens tall side om side. Dra til venstre eller høyre for å flytte deg fra punkt til punkt. Sveiper du opp eller ned på diagrammet, ruller siden som vanlig."
+      },
+      {
+        "type": "p",
+        "text": "Bytt overskriften på trenddiagrammet fra Utvikling til Ukedag × time for å se et varmekart over sju dager og 24 timer. Jo mørkere en rute er, desto mer solgte du i den timen, og du kan bytte varmekartet mellom salgsinntekt og ordrer."
+      },
+      {
+        "type": "p",
+        "text": "Produktrangering viser de fem beste produktene i den valgte perioden. Trykk på kortet eller Vis alle for å se alle produkter som er solgt i perioden, rangert etter antall solgt, med returer trukket fra. Et produkt med varianter får én linje per variant."
+      },
+      {
+        "type": "p",
+        "text": "Bytt overskriften på rangeringskortet til Saktegående varer for å liste produktene fra færrest til flest salg. Hver rad viser produktets nåværende lager og datoen det sist ble solgt. Produkter som aldri er solgt, er merket Aldri solgt, og som standard vises bare produkter på lager. Overskriften Endringer viser produktene hvis salgsinntekt økte eller sank mest mot en sammenligningsperiode. Se den tilhørende artikkelen om sammenligning av perioder."
+      },
+      {
+        "type": "h2",
+        "text": "Andel per kategori, gjenkjøpsandel og Akkurat nå"
+      },
+      {
+        "type": "p",
+        "text": "Andel per kategori viser salgsinntekten og andelen for hver kategori, sortert fra størst til minst, etter produktenes nåværende kategori. Produkter uten kategori havner under Uten kategori, og radene summerer seg nøyaktig til Salgsinntekt."
+      },
+      {
+        "type": "p",
+        "text": "Den siste linjen i feltet Betjente kunder viser gjenkjøpsandelen som «Gjenkjøpsandel … · … medlemmer kom tilbake». Den viser andelen av medlemmene som handlet i den valgte perioden og har handlet to ganger eller mer til sammen."
+      },
+      {
+        "type": "p",
+        "text": "Akkurat nå viser tre opplysninger om lager og poeng:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Lagerverdi, beregnet som nåværende lager × nåværende kostpris.",
+          "Alle lagerbevegelser i den valgte perioden.",
+          "Poengene kundene har og ikke har løst inn, sammen med det høyeste beløpet de kan trekke fra."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Lagerverdi og poeng som ikke er løst inn, er nåværende saldoer, så de endres ikke når du bytter periode øverst."
+      },
+      {
+        "type": "note",
+        "text": "Ansatte ser Rapporter med tillatelsen Rapporter. Beløpene under Lagerverdi krever i tillegg tillatelsen Kostpris og fortjeneste."
+      },
+      {
+        "type": "note",
+        "text": "Kalenderperiodene kom i v2.4. Eldre versjoner hadde løpende perioder (I dag / 7 dager / 30 dager / Hele perioden). Hvis du fortsatt ser dem, oppdaterer du DingPOS fra App Store."
+      }
+    ],
+    "related": [
+      "compare-periods",
+      "revenue-vs-cash",
+      "profit-not-tracked",
+      "tax-report"
+    ]
+  },
+  {
+    "slug": "compare-periods",
+    "category": "reports",
+    "since": "3.0",
+    "question": "Hvordan sammenligner jeg salget med forrige uke, forrige måned eller i fjor?",
+    "keywords": [
+      "Sammenlign",
+      "periodesammenligning",
+      "forrige uke",
+      "forrige måned",
+      "i fjor",
+      "samme periode i fjor",
+      "endringer",
+      "rapporter",
+      "vekst",
+      "gjenkjøpsandel"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Trykk på Sammenlign til høyre i periodelinjen i Rapporter og velg en tidligere periode, for eksempel Forrige uke eller I fjor. Hvert felt viser da hvor mye tallet har gått opp eller ned, for eksempel «▼ 3 % mot Forrige måned», med sammenligningsperiodens tall under."
+      },
+      {
+        "type": "h2",
+        "text": "Slå på en sammenligning"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Rapporter fra sidepanelet.",
+          "Velg en periode øverst.",
+          "Trykk på Sammenlign til høyre i periodelinjen.",
+          "Velg et sammenligningsalternativ fra menyen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Hvilke valg du får, avhenger av perioden du velger:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ingen slår av sammenligningen.",
+          "Forrige uke sammenligner én enkelt dag med samme dag forrige uke, eller denne uken med forrige uke.",
+          "Forrige måned sammenligner denne måneden med forrige måned.",
+          "I fjor sammenligner dette året med fjoråret, eller den valgte perioden med samme periode i fjor.",
+          "Forrige sammenligner en egendefinert periode med et like langt tidsrom rett før den."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Når en sammenligning er på, legger Rapporter endringen og sammenligningsperiodens tall til i alle felt unntatt Avgift, Nettoresultat og Produkter uten kostpris. Salgsinntekt, Mottatt betaling, Bruttofortjeneste, Ordrer, Gjennomsnittlig ordreverdi, Rabatter totalt og Betjente kunder viser hver en sammenligningslinje som «▼ 3 % mot Forrige måned»."
+      },
+      {
+        "type": "shot",
+        "name": "advanced-reports",
+        "alt": "Rapporter med Denne uken og Sammenlign satt til Forrige uke, med sammenligningslinjen og første rad med felt, der hvert felt viser endringen og sammenligningstallet under",
+        "caption": "Trykk på en sammenligningslinje under et felt for å åpne Periodesammenligning og se tallene for begge periodene."
+      },
+      {
+        "type": "p",
+        "text": "Endringen på Rabatter totalt er alltid grå, fordi mer rabatt verken er bra eller dårlig i seg selv. Trykk på en sammenligningslinje for å åpne Periodesammenligning, som viser tallene for begge periodene. Trenddiagrammet får en lysere linje for sammenligningsperioden. Mens en periode ennå pågår, avgrenses sammenligningsperioden til samme tidspunkt."
+      },
+      {
+        "type": "h2",
+        "text": "Endringer"
+      },
+      {
+        "type": "p",
+        "text": "Bytt overskriften på rangeringskortet til Endringer for å se de tre produktene hvis salgsinntekt økte mest og de tre som sank mest mot sammenligningsperioden. Hver rad viser salgsinntekten for begge periodene og differansen, og hver variant sammenlignes med seg selv."
+      },
+      {
+        "type": "p",
+        "text": "Velg først en periode under Sammenlign. Når Sammenlign er satt til Ingen, eller perioden er Hele perioden, ber kortet deg velge en sammenligningsperiode. Trykk på kortet eller Vis alle for å åpne hele listen Produktendringer, delt i Økning og Nedgang."
+      },
+      {
+        "type": "h2",
+        "text": "Varmekart og gjenkjøpsandel"
+      },
+      {
+        "type": "p",
+        "text": "Med en sammenligning slått på viser varmekartet Ukedag × time i trenddiagrammet også hvilke timer som vokste og hvilke som krympet, og gjenkjøpsandelen i feltet Betjente kunder får en linje med endringen i prosentpoeng og sammenligningsperiodens andel."
       }
     ],
     "related": [
       "report-periods",
-      "inventory-tracking",
-      "staff-permissions"
+      "revenue-vs-cash"
     ]
   },
   {
@@ -1393,36 +1570,101 @@ export const articles = [
       "margin",
       "bruttomargin",
       "rapporter",
-      "ikke registrert",
       "mangler kostpris",
-      "produkter uten kostpris"
+      "ikke registrert",
+      "produkter uten kostpris",
+      "fra salgsinntekt til bruttofortjeneste"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Kostpris er et valgfritt felt. Produkter uten kostpris utelates fra bruttofortjenesten, mens salgsinntekten deres fortsatt telles fullt ut. Feltet Produkter uten kostpris i Rapporter viser hvor mange produkter som er solgt eller returnert i perioden uten kostpris, for eksempel «12 produkter». En kostpris på 0 regnes som en kostpris, så slike produkter står ikke i listen. Når alle produkter har kostpris, står det «0 produkter · kostpriser komplette»."
+        "text": "Kostpris er et valgfritt felt, så produkter uten kostpris utelates fra bruttofortjenesten, mens salgsinntekten deres fortsatt telles fullt ut. Feltet Produkter uten kostpris i Rapporter viser hvor mange produkter som er solgt eller returnert i perioden uten kostpris, for eksempel «12 produkter». En kostpris på 0 regnes som en kostpris og står ikke i listen. Når alle produkter har kostpris, står det «0 produkter · kostpriser komplette»."
+      },
+      {
+        "type": "h2",
+        "text": "Finne produkter uten kostpris"
       },
       {
         "type": "p",
-        "text": "Trykk på feltet eller Vis produkter for å åpne Produkter uten kostpris, sortert etter salgsinntekten som er utelatt fra bruttofortjenesten. Trykk på en rad for å åpne produktet, legg inn kostprisen via Rediger, så er raden merket Kostpris lagt til når du kommer tilbake. Et produkt med varianter merkes Kostpris lagt til først når hver variant som er solgt uten kostpris har fått en – sin egen, eller produktets kostpris som den følger."
+        "text": "I Rapporter trykker du på feltet Produkter uten kostpris eller Vis produkter for å åpne Produkter uten kostpris. Arket viser produktene sortert fra høyest til lavest etter salgsinntekten som er utelatt fra bruttofortjenesten."
+      },
+      {
+        "type": "shot",
+        "name": "profit-not-tracked",
+        "alt": "Arket Produkter uten kostpris med produkter sortert etter salgsinntekten som er utelatt fra bruttofortjenesten"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Trykk på en rad i Produkter uten kostpris for å åpne produktet.",
+          "Trykk på Rediger og skriv inn kostprisen i Kostpris (valgfritt).",
+          "Gå tilbake til Produkter uten kostpris for å se raden merket Kostpris lagt til."
+        ]
       },
       {
         "type": "p",
-        "text": "Bruttofortjeneste er salgsinntekt etter alle rabatter (rabatt på varelinjer og handlekurv, kampanjer og innløsning av poeng) og før avgift, minus kostpris – derfor heter feltet i en butikk som tar avgift Kostpris eks. mva. (valgfritt): skriv inn det du betalte før avgift. Marginen er bruttofortjeneste ÷ salgsinntekten til produkter med kostpris, så produkter uten kostpris trekker den ikke ned. En retur tar tilbake, på returdagen, bruttofortjenesten disse varene hadde gitt."
-      },
-      {
-        "type": "p",
-        "text": "Trykk på feltet for bruttofortjeneste for å åpne Fra salgsinntekt til bruttofortjeneste, som trekker fra rad for rad: salgsinntekt (inkl. mva.), avgift, salgsinntekt (eks. mva.), salgsinntekt uten kostpris, kostpris og til slutt bruttofortjeneste og margin. Radene summerer seg nøyaktig til feltet."
+        "text": "Et produkt med varianter merkes Kostpris lagt til først når hver variant som er solgt uten kostpris har fått en, enten sin egen eller produktets kostpris som den følger. Fra og med v3.6 kan en innkjøpsordre også fordele frakten på kostprisen den skriver, når Inkluder frakt i kostpris er slått på."
       },
       {
         "type": "note",
-        "text": "En kostpris du legger inn, påvirker bare senere salg. Salg som allerede er gjort, beregnes ikke på nytt. Denne beregningen kom i v3.1: tidligere versjoner trakk bare fra manuelle rabatter på varelinjer og regnet inkludert avgift som fortjeneste, så etter oppdateringen viser perioder med rabatter eller inkludert avgift lavere bruttofortjeneste. Det er en korrigering, ikke tapte data."
+        "text": "En kostpris du legger til, påvirker bare senere salg. Salg som allerede er gjort, beregnes ikke på nytt."
+      },
+      {
+        "type": "h2",
+        "text": "Kostpris og avgift"
+      },
+      {
+        "type": "p",
+        "text": "I produktskjemaet heter kostprisfeltet Kostpris (valgfritt) i alle butikker. I en butikk med avgifter vises et ⓘ ved siden av Kostpris (valgfritt) som viser hvordan avgift gjelder, avhengig av Krev fradrag for inngående avgift:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Krev fradrag for inngående avgift er på: skriv inn kostprisen før avgift du kan få tilbake. ⓘ-notatet lyder: «Oppgi kostprisen uten avgiften du kan kreve fradrag for. Den registrerer du som inngående avgift. Avgift du ikke kan kreve fradrag for, er en del av kostprisen.»",
+          "Krev fradrag for inngående avgift er av: skriv inn det du betalte, minus avgift du kan få tilbake. ⓘ-notatet lyder: «Avgift du kan kreve fradrag for, er ikke en del av kostprisen. Avgift du ikke kan kreve fradrag for, er det. Krever du fradrag for inngående avgift, slår du på ‘Krev fradrag for inngående avgift’ i Butikkinfo.»"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Hvis butikken din innrapporterer inngående avgift, slår du på Krev fradrag for inngående avgift i Butikkinfo."
+      },
+      {
+        "type": "h2",
+        "text": "Slik leser du bruttofortjenesten"
+      },
+      {
+        "type": "p",
+        "text": "Bruttofortjeneste er salgsinntekt etter alle rabatter (rabatt på varelinjer og handlekurv, kampanjer og innløsning av poeng) og før avgift, minus kostpris. Marginen er bruttofortjeneste ÷ salgsinntekten til produkter med kostpris, så produkter uten kostpris trekker ikke marginen ned. En retur tar tilbake, på returdagen, bruttofortjenesten disse varene hadde gitt."
+      },
+      {
+        "type": "p",
+        "text": "Trykk på feltet Bruttofortjeneste i Rapporter for å åpne Fra salgsinntekt til bruttofortjeneste, som trekker fra rad for rad:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Salgsinntekt (inkl. mva.)",
+          "Avgift",
+          "Salgsinntekt (eks. mva.)",
+          "Salgsinntekt uten kostpris",
+          "Kostpris",
+          "Bruttofortjeneste og margin"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Radene summerer seg nøyaktig til feltet Bruttofortjeneste. Butikker i Australia, Storbritannia, New Zealand og Singapore ser det lokale avgiftsnavnet på avgiftsradene, for eksempel Salgsinntekt (inkl. GST)."
+      },
+      {
+        "type": "note",
+        "text": "Denne beregningen av bruttofortjeneste kom i v3.1. Tidligere versjoner trakk bare fra manuelle rabatter på varelinjer og regnet inkludert avgift som fortjeneste, så etter oppdateringen viser perioder med rabatter eller inkludert avgift lavere bruttofortjeneste. Det er en korrigering, ikke tapte data."
       }
     ],
     "related": [
       "report-periods",
       "product-variants",
-      "purchase-orders"
+      "purchase-orders",
+      "input-tax"
     ]
   },
   {
@@ -1435,42 +1677,92 @@ export const articles = [
       "resultat",
       "P&L",
       "nettoresultat",
+      "bruttofortjeneste",
       "månedlig fortjeneste",
+      "faste utgifter",
       "utgifter",
       "driftsresultat"
     ],
     "content": [
       {
         "type": "p",
-        "text": "Åpne Resultat, rett under Rapporter i sidemenyen. Der står hver måned fra nyeste til eldste med nettoresultatet: inneværende måned er merket Pågår, og overskriften for hvert år summerer nettoresultatet for månedene som er ferdige."
+        "text": "Åpne Resultat, rett under Rapporter i sidemenyen, for å se nettoresultatet for hver måned og hvordan det regnes ut. Listen går fra nyeste til eldste måned, fra den første måneden med aktivitet. Inneværende måned er merket Pågår, og overskriften for hvert år summerer nettoresultatet for månedene som er ferdige. Den første raden, Alle utgifter, åpner alle utgifter uansett måned."
+      },
+      {
+        "type": "h2",
+        "text": "Månedlig oppstilling"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Resultat, rett under Rapporter i sidemenyen.",
+          "Trykk på en måned for å se hvordan nettoresultatet regnes ut."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "profit-loss-month",
+        "alt": "Månedssiden i Resultat med merknaden Pågår, nettoresultatet og hele oppstillingen fra salgsinntekt til utgifter"
       },
       {
         "type": "p",
-        "text": "Trykk på en måned for å se hvordan nettoresultatet regnes ut:"
+        "text": "Månedssiden viser alle linjer fra salg ned til nettoresultat i rekkefølge. Radene fra salgsinntekt til bruttofortjeneste har samme navn og tall som Fra salgsinntekt til bruttofortjeneste i Rapporter."
       },
       {
         "type": "list",
         "items": [
-          "Salgsinntekt (eks. mva.): salgsinntekt etter alle rabatter og før avgift, regnet på dagen varene ble overlevert.",
+          "Salgsinntekt (inkl. mva.), Avgift og Salgsinntekt (eks. mva.): salgsinntekt med avgift, avgiftsbeløpet og salgsinntekt etter alle rabatter og før avgift, regnet på dagen varene ble overlevert. Butikker i Australia, Storbritannia, New Zealand og Singapore ser det lokale avgiftsnavnet.",
+          "Salgsinntekt uten kostpris: trekkes fra før kostpris, og vises bare når den ikke er null.",
           "Kostpris: kostnaden for det som ble solgt, ut fra kostprisene på produktene dine.",
-          "Lagertap: kostnaden for det Juster lager fjernet som utløpt, ødelagt, gitt bort og lignende, pluss kasserte returer. Det kommer etter bruttofortjenesten – se «Hvordan registrerer jeg varer som har gått ut på dato, blitt ødelagt eller gitt bort som prøver?» Måneden har også en seksjon Lagertap som summerer det per årsak.",
+          "Bruttofortjeneste: vises sammen med marginen.",
+          "Salgsinntekt uten kostpris: legges til igjen etter bruttofortjenesten når den ikke er null.",
+          "Lagertap: vises bare når måneden har et; kostnaden for det Juster lager fjernet som utløpt, ødelagt, gitt bort og lignende, pluss kasserte returer. Det kommer etter bruttofortjenesten. Se «Hvordan registrerer jeg varer som har gått ut på dato, blitt ødelagt eller gitt bort som prøver?» Måneden har også en seksjon Lagertap som summerer det per årsak.",
           "Transaksjonsgebyrer (est.): gebyrene anslått ut fra satsene på betalingsmåtene dine.",
-          "Tapte depositum: depositum du beholdt da en forhåndsbestilling ble kansellert.",
-          "Kontantavrunding: det avrundingen av kontanter til myntene som er i bruk tok inn over eller under ordretotalene.",
-          "Faste utgifter og Engangsutgifter: det du har registrert for den måneden – se «Hvordan registrerer jeg husleie, lønn og andre utgifter?»"
+          "Tapte depositum: vises bare når de ikke er null; depositum du beholdt da en forhåndsbestilling ble kansellert.",
+          "Kontantavrunding: vises bare når den ikke er null; det avrundingen av kontanter til myntene som er i bruk tok inn over eller under ordretotalene.",
+          "Faste utgifter og Engangsutgifter: det du har registrert for den måneden – se «Hvordan registrerer jeg husleie, lønn og andre utgifter?»",
+          "Nettoresultat: regnes ut som salgsinntekt (eks. mva.) − kostpris − lagertap − transaksjonsgebyrer + tapte depositum + kontantavrunding − faste utgifter − engangsutgifter."
         ]
       },
       {
-        "type": "p",
-        "text": "Opptil tre diagrammer følger: nettoresultatet måned for måned, hver fast utgifts andel og utviklingen i de faste utgiftene. De to trenddiagrammene dekker høyst de 12 månedene fram til måneden du har åpnet, og vises først når det finnes minst to måneder å sammenligne, regnet fra måneden for det første salget eller den første utgiften din. Andelsdiagrammet krever en fast utgift den måneden. Til du har lagt til en, viser denne delen Legg til fast utgift i stedet."
+        "type": "h2",
+        "text": "Måneder som pågår"
       },
       {
         "type": "p",
-        "text": "Rapporter og Resultat lenker til hverandre. Når perioden i Rapporter er denne måneden eller nøyaktig én hel måned, får den andre raden med felt et felt for Nettoresultat (merket «Pågår · hele månedens utgifter trekkes fra» mens måneden pågår). Trykk på det for å se månedens oppstilling fra bruttofortjeneste til nettoresultat. For alle andre perioder trykker du på Se månedlig resultat på den siste linjen i Fra salgsinntekt til bruttofortjeneste. Den andre veien åpner Se rapporten for oktober, under månedens tittel i Resultat, åpner Rapporter med den måneden valgt."
+        "text": "Mens en måned pågår, trekker Resultat allerede fra hele månedens faste utgifter. For eksempel, den 5. oktober, hvis salgsinntekten (eks. mva.) så langt er 20 000, kostprisen er 10 000 og de faste utgiftene er 65 700, er nettoresultatet −55 700, merket Pågår · hele månedens utgifter trekkes fra."
+      },
+      {
+        "type": "p",
+        "text": "Siden hele månedens utgifter allerede er regnet med, vises nettoresultatet for denne måneden aldri i rødt på månedslisten, på månedssiden eller i feltet Nettoresultat i Rapporter. En ferdig måned som ender med tap, viser nettoresultatet i varselfargen."
+      },
+      {
+        "type": "h2",
+        "text": "Diagrammer"
+      },
+      {
+        "type": "p",
+        "text": "Opptil tre diagrammer følger etter oppstillingen: nettoresultatet måned for måned, hver fast utgifts andel og utviklingen i de faste utgiftene. De to trenddiagrammene dekker høyst de 12 månedene fram til måneden du har åpnet, og vises først når det finnes minst to måneder å sammenligne, regnet fra måneden for det første salget eller den første utgiften din. Andelsdiagrammet krever en fast utgift den måneden. Til du har lagt til en, viser denne delen Legg til fast utgift i stedet."
+      },
+      {
+        "type": "h2",
+        "text": "Bytte mellom Rapporter og Resultat"
+      },
+      {
+        "type": "p",
+        "text": "Rapporter og Resultat lenker til hverandre. Når perioden i Rapporter er denne måneden eller nøyaktig én hel måned, får andre rad med felt et felt for Nettoresultat, merket Pågår · hele månedens utgifter trekkes fra mens måneden pågår. Trykk på det feltet for å se månedens oppstilling fra bruttofortjeneste til nettoresultat. For alle andre perioder trykker du på Se månedlig resultat på siste linje i Fra salgsinntekt til bruttofortjeneste."
+      },
+      {
+        "type": "p",
+        "text": "Den andre veien åpner Se rapporten for oktober, under månedens tittel i Resultat, Rapporter på den måneden (egendefinert periode 1.–31. oktober). For måneden som pågår, åpner den Denne måneden."
       },
       {
         "type": "note",
-        "text": "Nettoresultat er driftsresultat før inntektsskatt, regnet ut fra det DingPOS har registrert – ikke en skattemelding. Hvis produkter ble solgt uten kostpris, viser måneden likevel et nettoresultat, merket «Utelater kostprisen for N produkter». Trykk på det for å se hvilke det gjelder. Resultat finnes på alle planer. Med ansattkontoer krever det tillatelsen Resultat og utgifter, som ledere og ansatte trenger godkjenning for som standard, fordi det viser kostpriser og lønn."
+        "text": "Nettoresultat er driftsresultat før inntektsskatt, regnet ut fra det DingPOS har registrert – ikke en skattemelding. Hvis produkter ble solgt uten kostpris, viser måneden likevel et nettoresultat, merket «Utelater kostprisen for N produkter», og du kan trykke på det for å se hvilke det gjelder."
+      },
+      {
+        "type": "note",
+        "text": "Resultat finnes på alle planer. Med ansattkontoer krever det tillatelsen Resultat og utgifter, som ledere og ansatte trenger godkjenning for som standard, fordi det viser kostpriser og lønn."
       }
     ],
     "related": [
@@ -1490,48 +1782,585 @@ export const articles = [
       "lønn",
       "strøm og vann",
       "faste utgifter",
-      "driftskostnader",
+      "engangsutgifter",
+      "alle utgifter",
       "fordele utgift",
-      "engangsutgift"
+      "driftskostnader",
+      "resultat"
     ],
     "content": [
       {
         "type": "p",
-        "text": "I Resultat trykker du på Legg til utgift og velger en fast utgift eller en engangsutgift. En utgift regnes i måneden den hører til, ikke måneden du betalte den, og nettoresultatet for hver måned følger med."
+        "text": "I Resultat trykker du på Legg til utgift og velger Legg til fast utgift eller Legg til engangsutgift for å registrere husleie, lønn, strøm og vann og andre driftskostnader. Hver utgift regnes i måneden den hører til, ikke måneden du betalte den, og nettoresultatet for hver måned oppdateres tilsvarende. Faste utgifter gjentas hver måned med valgfrie beløpsendringer, mens engangsutgifter regnes i én måned eller fordeles over flere."
+      },
+      {
+        "type": "h2",
+        "text": "Faste utgifter"
       },
       {
         "type": "p",
-        "text": "En fast utgift er noe du betaler hver måned, som husleie, strøm og vann eller lønn:"
+        "text": "En fast utgift er en gjentakende kostnad du betaler hver måned, som husleie, strøm og vann eller lønn."
       },
       {
-        "type": "list",
+        "type": "steps",
         "items": [
+          "Åpne Resultat.",
+          "Trykk på Legg til utgift.",
+          "Velg Legg til fast utgift.",
           "Skriv inn navnet, det månedlige beløpet og måneden utgiften starter. Velg en tidligere måned for å legge inn bakover i tid.",
-          "Når beløpet endres, trykker du på Endre beløp, velger måneden og velger Fra denne måneden (for eksempel en husleieøkning) eller Bare denne måneden (for eksempel månedens strømregning). Hver endring står i en liste, og du kan åpne en for å redigere eller fjerne den.",
-          "Når du slutter å betale, setter du Siste måned som regnes: den måneden og månedene før den regnes fortsatt."
+          "Trykk på ✓ for å lagre."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "expense-form",
+        "alt": "Skjemaet for en fast utgift med navn, månedlig beløp, startmåned og beløpsendringer"
+      },
+      {
+        "type": "p",
+        "text": "Når beløpet endres, åpner du utgiften og trykker på Endre beløp. Velg måneden endringen starter, og velg deretter Fra denne måneden for en varig endring som en husleieøkning, eller Bare denne måneden for en forskjell i én måned, som månedens strømregning. Hver endring står i en liste i skjemaet, og du kan åpne en for å redigere eller fjerne den."
+      },
+      {
+        "type": "p",
+        "text": "Når du slutter å betale en fast utgift, setter du Siste måned som regnes. Den måneden og månedene før den regnes fortsatt i Resultat, mens senere måneder ikke lenger tar den med."
+      },
+      {
+        "type": "h2",
+        "text": "Planlagte endringer i Alle utgifter"
+      },
+      {
+        "type": "p",
+        "text": "I Alle utgifter viser hver rad med en fast utgift det som er planlagt framover. Raden kombinerer startmåneden med neste planlagte beløpsendring og siste måned som regnes. For eksempel kan en rad lyde Siden januar 2026 · $420/mnd. fra desember 2026 · Regnes til og med mars 2027."
+      },
+      {
+        "type": "p",
+        "text": "Beløpet til høyre er fortsatt dagens månedlige beløp, ikke den kommende satsen. En endring satt til Bare denne måneden vises ikke på raden."
+      },
+      {
+        "type": "h2",
+        "text": "Engangsutgifter"
+      },
+      {
+        "type": "p",
+        "text": "En engangsutgift er en kostnad du betaler én gang, som innredning, utstyr, forhåndsbetalt forsikring eller en enkelt regning."
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Resultat.",
+          "Trykk på Legg til utgift.",
+          "Velg Legg til engangsutgift.",
+          "Skriv inn beløp og dato.",
+          "Sett Måned som regnes for én måned, eller slå på Fordel over flere måneder.",
+          "Trykk på ✓ for å lagre."
         ]
       },
       {
         "type": "p",
-        "text": "En engangsutgift betales én gang:"
+        "text": "Uten fordeling kan du likevel velge Måned som regnes, slik at kostnaden regnes i måneden den hører til. For eksempel kan en regning for oktober som kommer i november, regnes i oktober, og den virkelige datoen beholdes."
       },
       {
-        "type": "list",
-        "items": [
-          "For innredning, utstyr eller forhåndsbetalt forsikring slår du på Fordel over flere måneder og velger 2 til 120 måneder og Første måned som regnes. Skjemaet viser en forhåndsvisning av hvor mye som regnes hver måned, og hvilke måneder det dekker.",
-          "Uten fordeling kan du likevel velge måneden som regnes: en regning for oktober som kommer i november, kan regnes i oktober, og den virkelige datoen beholdes.",
-          "Hvis en fordeling avsluttes tidlig (for eksempel en forsikring som sies opp), bruker du Avslutt fordeling tidlig: det som er igjen, regnes i måneden du velger."
-        ]
+        "type": "p",
+        "text": "For innredning, utstyr eller forhåndsbetalt forsikring slår du på Fordel over flere måneder, velger 2 til 120 måneder og velger Første måned som regnes. Skjemaet viser en forhåndsvisning av hvor mye som regnes hver måned, og hvilke måneder det dekker."
+      },
+      {
+        "type": "p",
+        "text": "Hvis en fordeling avsluttes tidlig, for eksempel når en forsikring sies opp, åpner du utgiften og bruker Avslutt fordeling tidlig. Det som er igjen, regnes i måneden du velger."
+      },
+      {
+        "type": "h2",
+        "text": "Inngående avgift på utgifter"
+      },
+      {
+        "type": "p",
+        "text": "Når Krev fradrag for inngående avgift er slått på, kan du registrere et fakturanummer og avgiften du kan kreve fradrag for på en engangsutgift, og du kan registrere hver faktura for en fast utgift under Fakturaer med Registrer en faktura. Beløpet som regnes i Resultat, er fortsatt det butikken bærer, og den tilhørende artikkelen om inngående avgift forklarer hvordan fradragsberettiget avgift fungerer."
       },
       {
         "type": "note",
-        "text": "Skriv inn det butikken faktisk bærer, uten avgift du kan få tilbake. Varer du skal selge og råvarene du lager dem av går via Innkjøp, fordi de regnes med i kostpris når de selges. Rekvisita med sporet lager registrerer du med Juster lager når du bruker dem, med årsaken Butikkrekvisita, ikke som en utgift. Depositum du betaler og får tilbake, lånets hovedstol og penger eieren tar ut er ikke utgifter. Endringer lagres samlet når du trykker på ✓, og en endring som berører en ferdig måned, forteller deg først hvilke måneders nettoresultat som endres."
+        "text": "Skriv inn det butikken bærer, uten avgift du kan få tilbake. Varer du skal selge og råvarene du lager dem av går via Innkjøp i stedet, fordi de regnes med i kostpris når de selges. Rekvisita med sporet lager registrerer du med Juster lager når du bruker dem, med årsaken Butikkrekvisita, ikke som en utgift. Depositum du betaler og får tilbake, lånets hovedstol og penger eieren tar ut er ikke utgifter. Endringer lagres samlet når du trykker på ✓, og en endring som berører en ferdig måned, forteller deg først hvilke måneders nettoresultat som endres."
       }
     ],
     "related": [
       "profit-loss",
       "purchase-orders",
+      "input-tax",
       "roadmap-monthly-settlement"
+    ]
+  },
+  {
+    "slug": "export-tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Hvordan eksporterer jeg avgiftsrapporten til regnskapsføreren min?",
+    "keywords": [
+      "eksporter avgiftsrapport",
+      "avgiftsrapport",
+      "eksporter",
+      "Excel-arbeidsbok",
+      "CSV",
+      "PDF-rapport",
+      "avgiftsoppsummering",
+      "detaljer om inngående avgift",
+      "regnskapsfører"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Åpne Avgiftsrapport, trykk på Eksporter øverst til høyre og velg CSV, Excel-arbeidsbok (XLSX) eller PDF-rapport. Filen åpnes i en forhåndsvisning i fullskjerm, der du kan trykke på delingsknappen for å lagre den eller sende den til regnskapsføreren din. Alle formater har de samme tallene som vises på skjermen."
+      },
+      {
+        "type": "h2",
+        "text": "Slik eksporterer du"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Rapporter og velg perioden, for eksempel en egendefinert periode fra 1. november til 31. desember for en tomåneders innrapporteringsperiode, eller en kvartalsperiode.",
+          "Trykk på feltet Avgift for å åpne Avgiftsrapport. Eksporten dekker nøyaktig den perioden.",
+          "Trykk på Eksporter øverst til høyre i Avgiftsrapport. En meny viser formatene, og det du eksporterte sist på denne iPaden, er merket av.",
+          "Velg et format, for eksempel Excel-arbeidsbok (XLSX), for å åpne en forhåndsvisning i fullskjerm. CSV-filer vises som en tabell, og i Excel-arbeidsboken kan du bytte mellom arkene, for eksempel for å se Summary først.",
+          "Trykk på delingsknappen øverst til høyre i forhåndsvisningen for å lagre filen eller sende den til regnskapsføreren din. Når du lukker forhåndsvisningen, kommer du tilbake til Avgiftsrapport."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "tax-export",
+        "alt": "Avgiftsrapport med menyen Eksporter åpen og en liste over filformatene"
+      },
+      {
+        "type": "p",
+        "text": "Hvis en eksport mislykkes, viser appen Kunne ikke eksportere filen og Prøv å eksportere på nytt. Ingenting skrives. Eksporter på nytt."
+      },
+      {
+        "type": "h2",
+        "text": "Eksportformater"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Avgiftsoppsummering (CSV): én linje per rad i rapporten (hver avgift og sats, nullsats og uten avgift), med salg, returer og netto, før avgift og avgift.",
+          "Alle dokumenter (CSV): én linje per dokument under hver avgift, med dato og klokkeslett, kvitteringsnummer, dokumenttype (salg, retur eller reverseringen av en annullering), kundenavn, beløp og betalingsmåter. En annullering legger til en reverseringslinje på annulleringsdatoen.",
+          "Dagsoppsummering (CSV): oppsummeringen per dag, deretter en andre tabell med betalinger per dag og betalingsmåte.",
+          "Detaljer om inngående avgift (CSV): vises bare når rapporten har et kort for inngående avgift. Én linje per linje for inngående avgift for hver innkjøpsordre og utgift, med leverandør, leverandørens avgiftsnummer og fakturanummer.",
+          "Excel-arbeidsbok (XLSX): arkene Summary, Documents og Daily tilsvarer de tre CSV-filene for salg, pluss Purchases når rapporten viser inngående avgift. Beløp er tallceller, og hver kolonne tilpasses innholdet slik at ingenting åpnes avkuttet.",
+          "PDF-rapport: en A4-rapport på appens språk med butikknavn, periode, avgiftsmodus, valuta og rapportens deler. Butikker i Australia, New Zealand, Singapore og Storbritannia får Felt i skjemaet først, og kort for inngående avgift følger når de vises. I forhåndsvisningen kan du signere eller tegne på med Markering for å dele den merkede filen. Eksporterer du samme periode på nytt, skrives en ren kopi."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Formatering for regnskapsprogrammer"
+      },
+      {
+        "type": "p",
+        "text": "CSV-filer er UTF-8 og kommaseparerte, med faste engelske kolonnenavn uansett appspråk, slik at regnskapsprogrammer kan lese dem. Beløp bruker valutaens desimaler og minustegn, uten symbol eller tusenskilletegn (for eksempel 80.97, -40.00, eller 1000 for en yen-butikk). Datoer ser ut som 2026-11-03."
+      },
+      {
+        "type": "p",
+        "text": "Tekstceller som begynner med =, +, - eller @ (for eksempel en kunde som heter =1+1) får en ledende ' slik at regneark viser tekst i stedet for å kjøre en formel. Beløp får aldri den."
+      },
+      {
+        "type": "p",
+        "text": "Filnavn inneholder perioden, for eksempel tax-report-summary_2026-11-01_2026-11-30.csv, tax-report_2026-11-01_2026-11-30.xlsx og tax-report_2026-11-01_2026-11-30.pdf, slik at filer fra ulike perioder aldri overskriver hverandre."
+      },
+      {
+        "type": "h2",
+        "text": "Tillatelser og personvern"
+      },
+      {
+        "type": "p",
+        "text": "Alle planer kan eksportere, også Lite. Ansatte trenger tillatelsen Rapporter, på samme måte som for Avgiftsrapport."
+      },
+      {
+        "type": "p",
+        "text": "Filer med inngående avgift ber først om godkjenningene kortene deres krever: Kostpris og fortjeneste for innkjøpsordrer og Resultat og utgifter for utgifter. Dette gjelder Detaljer om inngående avgift (CSV), pluss Excel-arbeidsbok (XLSX) og PDF-rapport når kort for inngående avgift vises. Avbryter du, skrives ingenting. De tre CSV-filene for salg spør aldri."
+      },
+      {
+        "type": "note",
+        "text": "Alle dokumenter (CSV) inneholder kundenavn, og filer med inngående avgift inneholder leverandørnavn og avgiftsnumre. Del dem bare med personer som skal se dem."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "input-tax",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "input-tax",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Hvordan registrerer jeg inngående avgift (mva. eller GST på innkjøp)?",
+    "keywords": [
+      "inngående avgift",
+      "fradrag for inngående avgift",
+      "fradrag for mva",
+      "mva",
+      "VAT",
+      "GST",
+      "innkjøpsordrer",
+      "utgifter",
+      "leverandørens avgiftsnummer",
+      "avgiftsrapport"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Slå på Krev fradrag for inngående avgift i Innstillinger → Butikkinfo for å registrere fradragsberettiget avgift fra leverandørfakturaer på innkjøpsordrer og utgifter. Begge skjemaene får da en seksjon for inngående avgift, der du skriver av avgiften du kan kreve fradrag for fra hver faktura. Avgiftsrapporten viser den i to kort, Inngående avgift på innkjøpsordrer og Inngående avgift på utgifter."
+      },
+      {
+        "type": "h2",
+        "text": "Slå på Krev fradrag for inngående avgift"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Innstillinger → Butikkinfo og finn kortet Mva.",
+          "Under Ta avgift slår du på Krev fradrag for inngående avgift."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-toggle",
+        "alt": "Kortet Mva. i Butikkinfo med Krev fradrag for inngående avgift slått på og hintet under"
+      },
+      {
+        "type": "p",
+        "text": "Krev fradrag for inngående avgift vises bare når butikken har minst én avgift, og er av for nye butikker og etter oppdatering. Når du bytter den, lagres det med en gang og loggføres under Avgiftsinnstillinger i Aktivitetslogg. Med den på oppgir du innkjøpspriser og produktkostnader uten avgiften du kan kreve fradrag for, mens avgift du ikke kan kreve fradrag for, blir værende i kostprisen."
+      },
+      {
+        "type": "note",
+        "text": "Alle planer har bryteren Krev fradrag for inngående avgift, mens Innkjøp krever Standard eller høyere. Når du slår den av, skjules feltene på nye poster. Eksisterende poster beholder sin inngående avgift og sitt skyldige beløp, og tidligere avgiftsrapporter forblir uendret."
+      },
+      {
+        "type": "h2",
+        "text": "Innkjøpsordrer"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Innkjøp og trykk på Nytt innkjøp.",
+          "Skriv inn enhetspriser uten avgiften du kan kreve fradrag for, og bla forbi ekstrakostnader til Inngående avgift.",
+          "Sjekk Fakturadato, som er ordredatoen som standard, og legg eventuelt til Fakturanummer og Leverandørens avgiftsnummer.",
+          "Velg en avgift fra butikken under Sats, eller velg Annen sats… for å skrive inn opptil 3 desimaler, for eksempel 9,975 %.",
+          "Sjekk Før avgift, som starter på ordretotalen før avgift, og skriv av Fradragsberettiget avgift fra fakturaen.",
+          "Trykk på Legg til en sats for flere satser."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "input-tax-po",
+        "alt": "Innkjøpsordre med seksjonen Inngående avgift, med fakturafelt, én satslinje og totaler"
+      },
+      {
+        "type": "p",
+        "text": "Fradragsberettiget avgift starter tom. DingPOS beregner den aldri ut fra satsen og godtar avrunding fra fakturaen. For eksempel gir mel 10 × $300 pluss $100 i frakt på faktura AB-12345678 datert 30. juni 2026, med én 5 %-linje med Før avgift $3,100 og Fradragsberettiget avgift $155, Totalt før avgift $3,100, Inngående avgift $155 og Skyldig beløp $3,255, som vises i listen, ordredetaljene og Å betale. Hvis leverandørens avgiftsnummer er registrert på en leverandør, fylles det ut på nye ordrer; lagrede ordrer beholder sitt eget."
+      },
+      {
+        "type": "p",
+        "text": "Hvis en faktura kommer sent, åpner du den mottatte ordren og trykker på Registrer inngående avgift på kortet Inngående avgift, eller på Rediger for å endre den. Bare Skyldig beløp endres, mens lager, produktkostnad og status som betalt eller ubetalt forblir uendret. Annullerte ordrer beholder Inngående avgift som skrivebeskyttet, og ordrer som ble lagret før oppdateringen, fylles ikke ut i ettertid."
+      },
+      {
+        "type": "h2",
+        "text": "Utgifter"
+      },
+      {
+        "type": "p",
+        "text": "I Resultat → Engangsutgifter får skjemaet Fakturanummer og linjer for inngående avgift under beløpet. La beløpet stå før fradragsberettiget avgift, og skriv bare av den fradragsberettigede avgiften. På en kontorrekvisita-faktura på $1,100 med $100 fradragsberettiget skriver du inn $1,000 og en 10 %-linje med $1,000 og $100. Med avgift viser $1,100, og Resultat regner $1,000. Den inngående avgiften regnes samlet på utgiftsdatoen og følger aldri Måned som regnes eller en fordeling."
+      },
+      {
+        "type": "p",
+        "text": "I Resultat → Faste utgifter åpner du en lagret utgift som husleie eller strøm og vann og trykker på Registrer en faktura under Fakturaer etter hvert som fakturaene kommer, med fakturadato, valgfritt fakturanummer og minst én satslinje. Hvis husleien er $30,000 i måneden og fakturaene for juli og august hver har en 5 %-linje med $30,000 og $1,500, inneholder rapporten for juli–september $3,000 i inngående avgift, mens Resultat fortsatt regner $30,000 hver måned."
+      },
+      {
+        "type": "p",
+        "text": "Når du lagrer en endring i inngående avgift i en tidligere måned, spør appen Vil du lagre endringen? og advarer om at månedens avgiftsrapport endres hvis du allerede har levert den. Endringer i inneværende måned og utkast lagres uten spørsmål."
+      },
+      {
+        "type": "note",
+        "text": "DingPOS beregner ikke import-VAT, reverse charge eller delvis fradrag. Skriv av den fradragsberettigede avgiften fra fakturaen, og legg avgift du ikke kan kreve fradrag for i beløpet før avgift."
+      },
+      {
+        "type": "h2",
+        "text": "Avgiftsrapport"
+      },
+      {
+        "type": "p",
+        "text": "To kort står etter salgskortene: Inngående avgift på innkjøpsordrer og Inngående avgift på utgifter. Hvert kort har én rad per sats, en rad Ingen inngående avgift og totaler for Før avgift, Fradragsberettiget avgift og Med avgift. Totalene inkluderer innkjøp uten inngående avgift, men enkelte avgiftsoppgaver teller bare rader med inngående avgift."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Innkjøpsordrer regnes på Fakturadato, eller ordredatoen hvis den er tom.",
+          "Annullerte innkjøpsordrer regnes som et negativt beløp på annulleringsdatoen.",
+          "Engangsutgifter regnes samlet på utgiftsdatoen.",
+          "Fakturaer for faste utgifter regnes på fakturadatoen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Inngående avgift på innkjøpsordrer krever Kostpris og fortjeneste, og Inngående avgift på utgifter krever Resultat og utgifter. Ansatte uten en av tillatelsene ser Be en leder om godkjenning under korttittelen. Feltet Avgift viser fortsatt bare avgift tatt inn på salg, aldri minus inngående avgift, fordi Japans forenklede metode og UK Flat Rate Scheme fungerer annerledes. Butikker i Australia, New Zealand, Singapore og Storbritannia ser også disse beløpene i Felt i skjemaet."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "tax-return-boxes",
+      "purchase-orders",
+      "record-expenses"
+    ]
+  },
+  {
+    "slug": "tax-report",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Hvor finner jeg avgiftsrapporten, og hvordan leser jeg den?",
+    "keywords": [
+      "avgiftsrapport",
+      "mva",
+      "VAT",
+      "GST",
+      "salgsavgift",
+      "rapporter",
+      "avgift",
+      "salg og avgift per sats",
+      "etter betalingsmåte"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Åpne Rapporter og trykk på feltet Avgift for å se Avgiftsrapport, som viser salg og avgift per sats for perioden Rapporter viser. Kopier tallene inn i en avgiftsoppgave (VAT, GST eller salgsavgift), eller send dem til en regnskapsfører. Senere avgiftsendringer endrer aldri tallene som er lagret på dokumentene."
+      },
+      {
+        "type": "h2",
+        "text": "Åpne avgiftsrapporten"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Rapporter og velg perioden, for eksempel Denne måneden eller en egendefinert periode.",
+          "Finn feltet Avgift i andre rad, etter Rabatter totalt.",
+          "Trykk på feltet Avgift eller Avgiftsrapport ›."
+        ]
+      },
+      {
+        "type": "shot",
+        "name": "dashboard-tiles",
+        "alt": "Rapporter med Denne måneden valgt, med feltet Avgift og nederste linje Avgiftsrapport ›"
+      },
+      {
+        "type": "p",
+        "text": "Dette feltet er den eneste veien inn. Undertittelen nevner avgiftene som er tatt inn i perioden, med størst beløp først: to med navn, tre eller flere som for eksempel 3 avgifter, inkl. PST 7 %. Overskriften viser perioden fra Rapporter (Denne måneden · 1.–30. nov.), uten periodevelger og uten snarvei til forrige måned, siden innrapporteringsperioder varierer (Taiwan to måneder, Australia et kvartal, Japan ett år)."
+      },
+      {
+        "type": "p",
+        "text": "Butikker uten avgift og uten salg med avgift i perioden ser ikke feltet Avgift, og perioder uten dokumenter viser tomtilstanden i Rapporter. Slettede avgifter beholder feltet for perioder som har salg med dem."
+      },
+      {
+        "type": "note",
+        "text": "Alle planer, også Lite og prøveperioden, har feltet, rapporten og alle eksporter. Ansatte trenger tillatelsen Rapporter. Roller som trenger godkjenning, ser plassholderen for godkjenning til en leder godkjenner."
+      },
+      {
+        "type": "h2",
+        "text": "Slik leser du rapporten"
+      },
+      {
+        "type": "p",
+        "text": "Butikker i Australia, New Zealand, Singapore og Storbritannia ser Felt i skjemaet først."
+      },
+      {
+        "type": "p",
+        "text": "Salg og avgift per sats har én rad per sats: høyest først, deretter nullsats 0 %, og Uten avgift (produkter uten avgift) sist. Kolonnene er Salg, Returer og annulleringer og Netto, hver med Før avgift og Avgift. Rader med nullsats og Uten avgift har ingen avgiftslinje. Hver avgift i butikken får en rad, selv uten salg. Et nytt navn beholder én rad, mens en endret sats legger til en ny."
+      },
+      {
+        "type": "p",
+        "text": "Totalt viser Salg før avgift, Avgift og Salg inkl. avgift. Med to eller flere avgifter står det en merknad om at ett salg kan ha flere avgifter, så salgstallene per rad ikke kan legges sammen. Salg før avgift teller hvert salg én gang. For et britisk kvartal kan VAT 20 % vise Før avgift £1,000 og Avgift £200, Nullsats 0 % £300 og Uten avgift £50: Totalt gir Salg før avgift £1,350, Avgift £200 og Salg inkl. avgift £1,550."
+      },
+      {
+        "type": "shot",
+        "name": "tax-report",
+        "alt": "Avgiftsrapport med radene i Salg og avgift per sats og Totalt under"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Etter betalingsmåte viser betalinger på disse dokumentene ved periodens slutt, ubetalte beløp som Kundefordringer, og kontantavrunding på en linje Inkl. kontantavrunding … inne i kontantraden.",
+          "Ikke regnet som salg vises bare for tapt depositum og viser Tapt depositum med en undertittel om å sjekke innrapporteringen med en regnskapsfører. Det legges ikke til salg eller avgift.",
+          "Butikker som har Krev fradrag for inngående avgift på, eller har registrert inngående avgift i perioden, ser også Inngående avgift på innkjøpsordrer og Inngående avgift på utgifter."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Hvilken dag hvert dokument regnes på"
+      },
+      {
+        "type": "p",
+        "text": "Trykk på ⓘ ved siden av Salg og avgift per sats:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "En annullering regnes i perioden den ble annullert, som et negativt beløp, slik at en periode som allerede er innrapportert, aldri endres. Rapporter trekker den i stedet fra salgsperioden.",
+          "En retur regnes på sin egen dato. Ved et bytte regnes de nye varene som salg og de returnerte varene som returer.",
+          "En forhåndsbestilling regnes på hentedagen, et salg på konto på salgsdagen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Et salg fra 30. oktober som annulleres 2. november, blir stående i Salg for oktober og vises som et negativt beløp i Returer og annulleringer for november. Å gjøre opp et salg på konto senere flytter det ikke."
+      },
+      {
+        "type": "h2",
+        "text": "Avgift tatt inn og totaler i Rapporter"
+      },
+      {
+        "type": "p",
+        "text": "Feltet Avgift er lik Avgift under Totalt i Avgiftsrapport. Det avviker fra raden Avgift i Fra salgsinntekt til bruttofortjeneste i Rapporter bare ved annulleringer på tvers av perioder, fordi Rapporter tar et annullert salg ut av den opprinnelige perioden."
+      },
+      {
+        "type": "note",
+        "text": "Avgiftsrapport viser avgift tatt inn på salg, aldri avgift å betale (utgående minus inngående avgift), fordi ikke alle land beregner det slik, som Japans forenklede metode eller UK Flat Rate Scheme."
+      }
+    ],
+    "related": [
+      "tax-return-boxes",
+      "input-tax",
+      "export-tax-report",
+      "report-periods"
+    ]
+  },
+  {
+    "slug": "tax-return-boxes",
+    "category": "reports",
+    "since": "3.6",
+    "question": "Hvilke tall skal i feltene i BAS-, GST- eller VAT-skjemaet mitt?",
+    "keywords": [
+      "felt i skjemaet",
+      "avgiftsrapport",
+      "rapporter",
+      "BAS",
+      "Simpler BAS",
+      "GST101A",
+      "GST F5",
+      "VAT Return",
+      "fradrag for inngående avgift"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "For butikker i Australia, New Zealand, Singapore eller Storbritannia åpner Avgiftsrapport med Felt i skjemaet, som viser hvert felt og beløpet fra samme rapport. Den dekker Australia BAS · Simpler BAS, New Zealand GST101A, Singapore GST F5 og Storbritannia VAT Return på alle planer."
+      },
+      {
+        "type": "h2",
+        "text": "Åpne Felt i skjemaet"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Åpne Rapporter.",
+          "Trykk på feltet Avgift for å åpne Avgiftsrapport."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Felt i skjemaet er det første kortet, over Salg og avgift per sats, og undertittelen nevner oppgaven. Alle beløp kommer fra samme rapport, med cent, og ingenting beregnes på nytt. PDF-rapporten som eksporteres, åpner med det samme kortet. Butikker som ble satt opp før appen registrerte land, regnes etter valuta (AUD, NZD, SGD eller GBP). Andre butikker har ikke kortet Felt i skjemaet."
+      },
+      {
+        "type": "shot",
+        "name": "return-boxes",
+        "alt": "Kortet Felt i skjemaet øverst i Avgiftsrapport med felt 1, 4, 6 og 7 i den britiske VAT Return"
+      },
+      {
+        "type": "h2",
+        "text": "Australia BAS · Simpler BAS"
+      },
+      {
+        "type": "list",
+        "items": [
+          "G1 Total sales: Salg med GST, inkludert GST-frie salg og salg uten avgift; svar Ja på «Does the amount shown at G1 include GST?»",
+          "1A GST on sales: Avgift på salg",
+          "1B GST on purchases: Fradragsberettiget avgift på innkjøpsordrer og utgifter"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "ATO krever hele dollar: utelat centene på BAS, og rund aldri opp."
+      },
+      {
+        "type": "h2",
+        "text": "New Zealand GST101A"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Felt 5 Total sales and income: Salg med GST, inkludert salg med nullsats, men uten salg uten avgift",
+          "Felt 6 Zero-rated supplies: Salg med nullsats",
+          "Felt 11 Total purchases and expenses: Innkjøpsordrer og utgifter med GST, inkl. GST; innkjøp uten inngående avgift eller med nullsats er utelatt"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "myIR beregner felt 8 og felt 12 som 3/23, noe som kan avvike fra avgiften i rapporten med noen få cent."
+      },
+      {
+        "type": "h2",
+        "text": "Singapore GST F5"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Felt 1 Total value of standard-rated supplies: Avgiftspliktige salg før avgift",
+          "Felt 2 Total value of zero-rated supplies: Salg med nullsats; bare eksport og internasjonale tjenester kan ha nullsats",
+          "Felt 5 Total value of taxable purchases: Innkjøpsordrer og utgifter med GST eller nullsats, før avgift; innkjøp uten inngående avgift er utelatt",
+          "Felt 6 Output tax due: Avgift på salg",
+          "Felt 7 Input tax and refunds claimed: Fradragsberettiget avgift på innkjøpsordrer og utgifter"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Storbritannia VAT Return"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Felt 1 VAT due on sales and other outputs: Avgift på salg",
+          "Felt 4 VAT reclaimed on purchases and other inputs: Fradragsberettiget avgift på innkjøpsordrer og utgifter",
+          "Felt 6 Total value of sales and all other outputs excluding any VAT: Salg før avgift, inkludert salg med nullsats, fritatte salg og salg uten avgift",
+          "Felt 7 Total value of purchases and all other inputs excluding any VAT: Innkjøpsordrer og utgifter før avgift, inkludert innkjøp uten inngående avgift; trekk fra eventuell lønn og næringseiendomsskatt (business rates) du har registrert"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Gjelder vanlig VAT-regnskap. Med Flat Rate Scheme beregnes felt 1 og felt 6 annerledes. I Storbritannia forfaller VAT på et depositum når du mottar det, mens DingPOS regner en forhåndsbestilling på hentedagen."
+      },
+      {
+        "type": "p",
+        "text": "Eksempel på et britisk kvartal: £1,000 i salg før avgift med VAT 20 % (avgift £200), £300 med nullsats, £50 uten avgift, innkjøpsordrer på £400 pluss £80 VAT og utgifter på £250 uten inngående avgift gir felt 1 £200, felt 4 £80, felt 6 £1,350 og felt 7 £650."
+      },
+      {
+        "type": "h2",
+        "text": "Tomme felt og tilgang for ansatte"
+      },
+      {
+        "type": "p",
+        "text": "Felt som skattemyndighetene beregner selv, og beløp som skyldes, er utelatt (britiske felt 3 og 5, Singapore felt 3, fritatte salg). I New Zealand og Singapore er salg uten avgift ikke med i noe felt. Sjekk med regnskapsføreren din om de skulle ha hatt avgift."
+      },
+      {
+        "type": "p",
+        "text": "Felt for inngående avgift (AU 1B, NZ 11, SG 5 og 7, UK 4 og 7) krever Krev fradrag for inngående avgift, ellers viser de — og Ingen inngående avgift registrert, aldri 0. Britisk felt 7 krever både Inngående avgift på innkjøpsordrer og Inngående avgift på utgifter. Bare innkjøpsordrer fyller felt 4 og lar felt 7 stå som —."
+      },
+      {
+        "type": "p",
+        "text": "Ansatte uten tillatelsen Resultat og utgifter eller Kostpris og fortjeneste ser ikke felt som legger sammen begge kortene, før en leder godkjenner via Be en leder om godkjenning."
+      },
+      {
+        "type": "note",
+        "text": "Beregnet etter salgs- og fakturadatoer. DingPOS sporer ikke betalingsdatoer. Hvis du innrapporterer etter kontantprinsippet eller betalingstidspunkt, må du justere disse tallene."
+      }
+    ],
+    "related": [
+      "tax-report",
+      "input-tax",
+      "export-tax-report"
     ]
   },
   {
@@ -1626,11 +2455,11 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Gå til Innstillinger → Lojalitetsprogram og sett opp to regler: opptjen Y poeng per X brukt, og løs inn N poeng mot M i rabatt (med en valgfri grense for innløsning per ordre). Du kan også gi nye medlemmer velkomstbonus automatisk."
+        "text": "Gå til Innstillinger → Lojalitetsprogram og sett opp to regler: opptjen Y poeng per X brukt, og løs inn N poeng mot M i rabatt (med en valgfri grense for innløsning per ordre). Du kan også gi nye medlemmer velkomstbonus automatisk. Nye butikker starter med poeng slått av: slå på Aktiver lojalitetsprogram og fyll inn en regel. Er bryteren på uten at noen regel er satt, vises advarselen «Ingen regel for opptjening eller innløsning er satt ennå, så salg verken gir eller løser inn poeng.»"
       },
       {
         "type": "p",
-        "text": "Legg medlemmet til på salget, i handlekurven eller på kasseskjermen, så opptjenes poengene automatisk. Skriv inn hvor mange poeng du vil løse inn. Hvis du annullerer en ordre, trekkes poengene som ble opptjent på ordren tilbake, og eventuelle innløste poeng tilbakeføres."
+        "text": "Knytt medlemmet til salget, i handlekurven eller på kasseskjermen, så opptjenes poengene automatisk. Skriv inn hvor mange poeng du vil løse inn. Skjermen etter fullført salg viser opptjente poeng og ny saldo, for eksempel «+22 poeng · 122 poeng totalt». Ved et salg på konto eller en forhåndsbestilling som ikke er betalt fullt ut, legges poengene til først når pengene kommer inn, og du ser «legges til ved oppgjør» eller «legges til ved betaling ved henting». Hvis du annullerer en ordre, trekkes poengene som ble opptjent på ordren tilbake, og eventuelle innløste poeng tilbakeføres."
       },
       {
         "type": "p",
@@ -2013,7 +2842,7 @@ export const articles = [
         "type": "list",
         "items": [
           "Handlinger (manuell lagerjustering, manuell poengjustering, produktadministrasjon, gjennomføring av et kjøp med rabatt over rabattgrensen): én godkjenning gjelder den ene handlingen.",
-          "Visninger (kostpris og fortjeneste, Oversikt, Resultat og utgifter, Innstillinger, sikkerhetskopi og gjenoppretting): en godkjenning gir tilgang inntil den aktive ansatte byttes eller appen går i bakgrunnen.",
+          "Visninger (kostpris og fortjeneste, Rapporter, Resultat og utgifter, Innstillinger, sikkerhetskopi og gjenoppretting): en godkjenning gir tilgang inntil den aktive ansatte byttes eller appen går i bakgrunnen.",
           "Rabattgrensen gjelder manuelle rabatter og kontrolleres én gang i kassen. Automatiske kampanjer og innløsning av poeng teller ikke med."
         ]
       },
@@ -2091,7 +2920,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og abonnementsplanen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Avanserte rapporter krever ikke det. Fra og med v3.4 er de inkludert i alle abonnementsplaner."
+        "text": "Tegner du et abonnement i prøveperioden, avsluttes prøveperioden med en gang, og abonnementsplanen du kjøpte gjelder fra da av. Etter prøveperioden er Pro-funksjoner som ansatte og aktivitetsloggen bare tilgjengelige med et Pro-abonnement. Det trenger du ikke for Rapporter: alle abonnementsplaner inkluderer alt der."
       },
       {
         "type": "p",
@@ -2151,13 +2980,13 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Alle tre abonnementsplanene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (avanserte rapporter og månedlig resultat inkludert fra og med v3.4) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
+        "text": "Alle tre abonnementsplanene har full kasse, produkter, ordrer (med annulleringer, returer og bytter), rapporter (hele Rapporter-fanen og månedlig Resultat fra og med v3.4, avgiftsrapporten og eksport av den fra og med v3.6) og sikkerhetskopi i skyen. Forskjellen ligger i verktøyene for å drive butikken:"
       },
       {
         "type": "list",
         "items": [
           "Lite: for deg som driver en markedsstand alene og trenger kasse og produkter.",
-          "Standard: legger til kampanjer, poeng og medlemsnivåer, lagerstyring, innkjøp, salg på konto, forhåndsbestillinger og gebyrsatser for betalinger.",
+          "Standard: legger til kampanjer, rabattforvalg, poeng og medlemsnivåer, lagerstyring, innkjøp, salg på konto, forhåndsbestillinger og gebyrsatser for betalinger.",
           "Pro: legger til ansatte og tillatelser, godkjenning fra leder, aktivitetslogg og gjenopprettingslogg, for butikker med ansatte."
         ]
       },
@@ -2369,12 +3198,13 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Gaver og tilleggsvarer endrer aldri handlekurven av seg selv. Når vilkårene er oppfylt, vises et forslagsbanner på kasseskjermen, og handlekurven endres først når kassereren trykker på Velg gave eller Velg tilleggsvare. Det er med vilje, fordi gaver gjelder fysisk lager: noen må bekrefte at varen finnes, og at kunden vil ha den."
+        "text": "Gaver og tilleggsvarer endrer aldri handlekurven av seg selv. Når vilkårene er oppfylt, vises et forslagsbanner på kasseskjermen, og handlekurven endres først når kassereren trykker på gave- eller +-knappen i banneret (Velg gave eller Velg tilleggsvare). Det er med vilje, fordi gaver gjelder fysisk lager: noen må bekrefte at varen finnes, og at kunden vil ha den."
       },
       {
         "type": "list",
         "items": [
-          "Etter Avslå dukker det samme forslaget ikke opp igjen for denne handlekurven. En ny eller tømt handlekurv gir forslaget på nytt.",
+          "Etter ✕ (Avslå) i banneret dukker det samme forslaget ikke opp igjen for denne handlekurven. En ny eller tømt handlekurv gir forslaget på nytt.",
+          "Hvis handlekurven ikke lenger oppfyller vilkårene (for eksempel at varen som utløste en gave, fjernes), fjernes gaven eller tilleggsvaren automatisk, og en melding øverst gir beskjed. Det teller ikke som en bruk (siden v3.6).",
           "Fra og med v3.4 hindrer ikke tilbud som fortsatt venter, at du går til kassen: en gul linje under betalingsknappen, for eksempel «1 ventende tilbud blir ikke brukt», viser hvor mange tilbud som utelates (trykk på linjen for å se hvilke), og ordren gjennomføres uten dem. For at kassen skal vente som før, slår du på Ta stilling til tilbud før kassen under Innstillinger → Enhetsinnstillinger. Dette gjelder bare denne iPaden.",
           "Gave- og tilleggsvarelinjer kan ikke få ytterligere rabatt fra andre rabattkampanjer, og de teller ikke med mot terskelen i andre kampanjer."
         ]
@@ -2569,7 +3399,7 @@ export const articles = [
     "content": [
       {
         "type": "p",
-        "text": "Fra og med v3.4 viser Resultat nettoresultatet for hver måned etter kostpris, gebyrer og utgifter – se «Hvordan ser jeg hvor mye jeg faktisk tjente hver måned?» Det finnes ingen oppgjørsrapport du kan eksportere eller skrive ut ennå, men alt du trenger til avstemmingen finnes allerede i appen:"
+        "text": "Fra og med v3.4 viser Resultat nettoresultatet for hver måned etter kostpris, gebyrer og utgifter – se «Hvordan ser jeg hvor mye jeg faktisk tjente hver måned?» Fra og med v3.6 kan du eksportere en periode (for eksempel Denne måneden) fra avgiftsrapporten som CSV, Excel-arbeidsbok eller PDF-rapport til regnskapsføreren, med salg, avgift, beløpet som er mottatt per betalingsmåte, og kundefordringer. Resultat og de andre rapportene kan ikke eksporteres ennå, men alt du trenger til avstemmingen finnes allerede i appen:"
       },
       {
         "type": "list",
@@ -2581,7 +3411,7 @@ export const articles = [
       },
       {
         "type": "p",
-        "text": "Trenger du en månedlig oppgjørsrapport som du kan eksportere eller skrive ut, send oss en melding om hvilke felt du trenger. Vi prioriterer utviklingen etter hvor mange som ber om det."
+        "text": "Trenger du en månedlig oppgjørsrapport som du kan eksportere eller skrive ut, ut over det avgiftsrapporten dekker, send oss en melding om hvilke felt du trenger. Vi prioriterer utviklingen etter hvor mange som ber om det."
       }
     ],
     "related": [
