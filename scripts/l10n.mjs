@@ -33,6 +33,7 @@
  *   npm run l10n -- <app> new <code>
  *   npm run l10n -- <app> sync <code> [--mode review] [--since <ref>] [--ids <id,…>] [--app-repo <path>]
  *   npm run l10n -- <app> apply <code> [--dry-run] [<out file> …]
+ *   npm run -s l10n -- <app> jobs <code> … [--max-chars <n>]   translator jobs as workflow args (.pi/workflows/l10n-translate.js)
  *   npm run l10n -- <app> progress show|path|next|report <code>|get <code>|set <code> key=value …
  *   <app> is dingpos, sotto or babbby
  *
@@ -129,6 +130,7 @@ const USAGE = `usage:
   npm run l10n -- <app> new <code>
   npm run l10n -- <app> sync <code> [--mode review] [--since <ref>] [--ids <id,…>] [--app-repo <path>]
   npm run l10n -- <app> apply <code> [--dry-run] [<out file> …]
+  npm run -s l10n -- <app> jobs <code> … [--max-chars <n>]
   npm run l10n -- <app> progress show|path|next|report <code>|get <code>|set <code> key=value …
 <app>: ${Object.keys(APPS).join(" | ")}`;
 
@@ -674,6 +676,42 @@ export async function sync(paths, code, { mode = "translate", since = null, ids 
   return { total: wanted.length, segments: index };
 }
 
+// ── jobs ─────────────────────────────────────────────────────
+
+/** Default en characters per translator child; a 30k-character job peaked near 90k tokens of context. */
+export const JOB_MAX_CHARS = 32000;
+
+/**
+ * Groups the synced packets of each language into translator jobs: one child
+ * reads the contract and glossaries once and translates every packet of its
+ * job, smallest first. A packet larger than `maxChars` is a job on its own.
+ * One child per packet re-paid that fixed reading for every packet (measured
+ * 2026-11-27: about 2.5× the cost per accepted packet).
+ */
+export function jobs(paths, codes, { maxChars = JOB_MAX_CHARS } = {}) {
+  const out = [];
+  for (const code of codes) {
+    translatedLanguage(paths, code);
+    const index = paths.logs(code, "packets", "index.json");
+    if (!existsSync(index)) throw new UsageError(`${code} has no packets — run \`${command(paths, "sync", code)}\` first`);
+    const sized = JSON.parse(readFileSync(index, "utf8")).segments.map(({ segment }) => {
+      const packet = JSON.parse(readFileSync(paths.logs(code, "packets", `${segment}.json`), "utf8"));
+      return { segment, size: JSON.stringify(packet.units.map((unit) => unit.en)).length };
+    });
+    sized.sort((a, b) => a.size - b.size || a.segment.localeCompare(b.segment));
+    let job = null;
+    for (const { segment, size } of sized) {
+      if (!job || job.size + size > maxChars) {
+        job = { code, segments: [], size: 0 };
+        out.push(job);
+      }
+      job.segments.push(segment);
+      job.size += size;
+    }
+  }
+  return out.map(({ code, segments }) => [code, segments]);
+}
+
 // ── apply ────────────────────────────────────────────────────
 
 /**
@@ -957,6 +995,13 @@ async function main(argv) {
     const { total, segments } = await sync(paths, args[0], options);
     for (const s of segments) console.log(`  ${s.segment}: ${s.count} unit(s)${s.appMatch ? `, ${s.appMatch} appMatch` : ""}`);
     console.log(`${appName} ${args[0]}: ${total} unit(s) to ${options.mode} in ${segments.length} segment(s) → ${rel(paths, paths.logs(args[0], "packets"))}/`);
+    return 0;
+  }
+  if (verb === "jobs" && args[0]) {
+    const max = flag(args, "--max-chars");
+    const maxChars = max === null ? JOB_MAX_CHARS : Number(max);
+    if (!Number.isInteger(maxChars) || maxChars <= 0) throw new UsageError("--max-chars must be a positive integer");
+    console.log(JSON.stringify({ app: appName, jobs: jobs(paths, args, { maxChars }) }));
     return 0;
   }
   if (verb === "apply" && args[0]) {

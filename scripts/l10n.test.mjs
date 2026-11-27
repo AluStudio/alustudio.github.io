@@ -5,7 +5,7 @@ import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync, ut
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { APPS, apply, changedSince, check, enHash, enUnits, newLanguage, progress, readEn, readManifest, readRegistry, sitePaths, sync, textOf } from "./l10n.mjs";
+import { APPS, apply, changedSince, check, enHash, enUnits, jobs, newLanguage, progress, readEn, readManifest, readRegistry, sitePaths, sync, textOf } from "./l10n.mjs";
 
 const DINGPOS = APPS.dingpos;
 
@@ -201,6 +201,23 @@ test("sync: packets carry the app's translation of identical en strings and the 
   assert.deepEqual(setUp.appTerms, [{ en: "Settings", value: "設定", role: "title", key: "settings.title" }]);
   assert.deepEqual(readPacket(paths, "faq-backup").appTerms.map((t) => t.value), ["今すぐバックアップ"]);
   assert.equal(site.appTerms, undefined);
+});
+
+test("jobs: one job per language, smallest packet first, split where the next packet would pass the cap", async () => {
+  const { paths, appRepo } = fixture();
+  newLanguage(paths, "ja");
+  const { segments } = await sync(paths, "ja", { appRepo });
+  const size = (segment) => JSON.stringify(readPacket(paths, segment).units.map((u) => u.en)).length;
+  const bySize = segments.map((s) => s.segment).sort((a, b) => size(a) - size(b) || a.localeCompare(b));
+
+  assert.deepEqual(jobs(paths, ["ja"]), [["ja", bySize]]);
+  // A cap below the largest packet: every packet that would overflow starts a new job; none is dropped.
+  const tight = jobs(paths, ["ja"], { maxChars: size(bySize.at(-1)) });
+  assert.ok(tight.length > 1);
+  assert.deepEqual(tight.flatMap(([, list]) => list), bySize);
+  assert.ok(tight.every(([code, list]) => code === "ja" && (list.length === 1 || list.reduce((n, s) => n + size(s), 0) <= size(bySize.at(-1)))));
+
+  assert.throws(() => jobs(paths, ["es-419"]), /es-419 has no packets — run `npm run l10n -- dingpos sync es-419` first/);
 });
 
 test("apply: writes the strings, the pack with every structure field from en, and the manifest", async () => {

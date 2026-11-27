@@ -35,7 +35,7 @@ Checks first, branch last, so a preflight failure leaves nothing behind.
 ## 4. Translate — stage=translate
 
 1. `npm run l10n -- dingpos sync $1` writes `.logs/l10n/dingpos/$1/packets/<segment>.json` and `index.json` (15 segments: 4 UI, 11 FAQ).
-2. Translate every segment in parallel with one call: `subagent { workflow: "parallel", args: { tasks: [ { agent: "l10n-translator", task: "Translate .logs/l10n/dingpos/$1/packets/<segment>.json for $1 (task shape 2)." }, … one per segment … ] } }`. Wait for it.
+2. Translate with one workflow: `npm run -s l10n -- dingpos jobs $1` prints the jobs (one translator child per ~32k en characters, not one per segment); pass that JSON as `args` to `subagent { workflow: "./.pi/workflows/l10n-translate.js", args: <the JSON>, async: true, options: { globalConcurrencyLimit: 6 } }` and wait for its completion. Why it is shaped this way: `docs/specs/seo-aeo.md` §翻譯語言.
 3. `npm run l10n -- dingpos apply $1`. A rejected line goes back to the translator for that segment with the rejection text; re-apply until `rejected 0`.
 4. Collect every `enIssues` and `appMatchDeviations` entry from `.logs/l10n/dingpos/$1/out/*.json` into the report.
 5. Commit: `feat(dingpos): translate the site into $1`. `progress set $1 translatedAt=<ISO time>`.
@@ -44,7 +44,7 @@ Checks first, branch last, so a preflight failure leaves nothing behind.
 
 The first review is the full pass over every unit; a re-review checks only what the last fix changed. Never re-review a whole segment after a fix: a fresh full pass finds new wording to change every time and never converges.
 
-1. Full review: `npm run l10n -- dingpos sync $1 --mode review`, then one parallel call with `l10n-reviewer` per segment: "Review .logs/l10n/dingpos/$1/packets/<segment>.json for $1." Save each reply verbatim to `.logs/l10n/dingpos/$1/review/round-0/<segment>.md` (write tool).
+1. Full review: `npm run l10n -- dingpos sync $1 --mode review`, then `l10n-reviewer` children covering several segments each (about four segments, or ~32k en characters, per child): "Review for $1 (DingPOS website). Segments, one review section each (own heading, findings table, Reviewed units line, VERDICT): - <segment>: packet .logs/l10n/dingpos/$1/packets/<segment>.json …". Save each segment's section verbatim to `.logs/l10n/dingpos/$1/review/round-0/<segment>.md` (write tool).
 2. A reply missing the `Reviewed units:` line, or naming fewer units than the packet, is not a review: re-run that segment once, then BLOCKED.
 3. Every `en` and `app` finding goes into the report under "en source findings" / "app wording findings"; every re-review `note` row goes under "review notes" — never fixed here, and none of them blocks.
 4. If every segment says `VERDICT: CLEAN`, go to step 6. Otherwise fix round n = 1, 2:
@@ -59,7 +59,7 @@ The first review is the full pass over every unit; a re-review checks only what 
 Every earlier step is committed, so the tree is clean here; keep that order — a rebase refuses to run over uncommitted changes, and `--write-sitemap` validates every shipped language before it writes.
 
 1. `git status --porcelain` is empty, then `git fetch origin && git rebase origin/main`. A conflict in `dingpos/l10n/languages.json` or `sitemap.xml` happens only when resuming a `held` branch that already shipped: take main's file (`git show origin/main:<file> > <file> && git add <file>`), `git rebase --continue`, and steps 3–6 below rebuild both. Any other conflict → `git rebase --abort`, BLOCKED.
-2. `CATCHUP=$(git rev-parse HEAD)`, then `npm run l10n -- dingpos sync $1`. If main changed en since you translated, it packs the stale or missing units: translate them (step 4.2–4.3 on those packets) and apply until `rejected 0`. Then review what changed with fresh packets — `npm run l10n -- dingpos sync $1 --mode review --since $CATCHUP`, one reviewer call per packet, at most one fix round — and commit `feat(l10n): sync $1 with main`. Zero units → nothing to do.
+2. `CATCHUP=$(git rev-parse HEAD)`, then `npm run l10n -- dingpos sync $1`. If main changed en since you translated, it packs the stale or missing units: translate them (step 4.2–4.3: `jobs` reads the fresh packets) and apply until `rejected 0`. Then review what changed with fresh packets — `npm run l10n -- dingpos sync $1 --mode review --since $CATCHUP`, one reviewer call per packet, at most one fix round — and commit `feat(l10n): sync $1 with main`. Zero units → nothing to do.
 3. In `dingpos/l10n/languages.json`, set `"shipped": true` on the `$1` entry (that one value, nothing else).
 4. `node dingpos/scripts/copy-spa-pages.js --write-sitemap`; `grep -c '/dingpos/<pathPrefix>/' sitemap.xml` is 64 (`pathPrefix` from the registry, e.g. `es` for es-419).
 5. `npm run l10n -- dingpos check` prints no problem.

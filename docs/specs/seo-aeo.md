@@ -10,6 +10,7 @@ read_when:
   - Weighing SEO skill advice against this site's decisions
   - Changing DingPOS or Sotto en / zh-Hant copy, or anything about the generated zh-Hans
   - Adding, shipping, or re-translating a DingPOS or Sotto translated language (ja, th, …), or changing scripts/l10n.mjs
+  - Dispatching translator or reviewer subagents for any app, or running any fan-out session in this repo
 ---
 
 # SEO + AEO
@@ -83,13 +84,15 @@ DingPOS、Sotto 與 Babbby registry 裡 `kind: translated` 的語言（DingPOS 2
 - 審查：第一輪 `l10n-reviewer` 完整審過每個 segment；之後每輪只重審上一輪修改的單位（`sync --mode review --since <ref>`，加上 `--ids` 帶入 translator 保留不改的 finding），最多兩輪修正。重審只看上一輪指名或修改的欄位，查意思、app 用詞、glossary；語感與搜尋詞偏好只能記成不擋關的 `note`（寫進報告的 review notes），translator 對 reviewer 的建議整句照套或整句保留並說明理由，不取一半。這是因為兩輪重審曾讓 reviewer 重挑自己上一輪寫的字（et、hu、ms）。還有 `translation` 或 `glossary` finding 沒收斂就不上線，交給 owner 裁決。
 - 上線：語言一加進 registry 就跑該 app 的 `node <app>/scripts/sync-scene-strings.mjs`，產生它的 scene 字串（script 對 registry 的每種語言都寫 pack，不看 `shipped`）。語言審查通過後，把 registry 的 `shipped` 改成 true，執行 `node <app>/scripts/copy-spa-pages.js --write-sitemap` 改寫 `sitemap.xml` 的該 app 區塊：這支 script 先檢查每種已上線語言的 scene pack，缺了就失敗、不寫 sitemap，所以 sync 必須在它之前。再跑 build 與 prerender。每種語言各自上線，不等其他語言。Sotto 網站的語言不超過 app 的語言（scene 字串逐字取自 app），新語言等 app 先上。Babbby 的七種翻譯語言依 owner 決定先於 app 上線（網站上線時，App Store 上的 2.2 只有英文與繁中）；首頁改版加上 scene 時，2.3 已帶著九種語言上架，之後 Babbby 也照 Sotto 的規則，新語言等 app 先上。
 - Privacy 與 Terms 照常翻譯，不加「以英文版為準」，兩個網站都一樣。
+- 派工的形狀：translator 一個語言一個 child，依序翻完該語言的 packet（en 超過 32,000 字元才拆成幾個 child），thinking 用 medium，輸出只寫一次、被 dry run 擋下的單位用 edit 修。reviewer 同樣一個語言一個 child，每個 segment 各自一節。原因：一個 packet 一個 child 時，每個 child 都重付一次讀合約與 glossary 的成本（app glossary 約 12k tokens），大 packet 還會先在 thinking 裡把整份翻譯打成草稿再寫一遍；以 de 與 th 各 20 篇實測，改成現在的形狀後，每個通過審查的 packet 成本約為原本的 0.4 倍，review finding 沒有變多（2026-11-27）。
+- 跑 fan-out 的 session（翻譯、審查、修正輪）只派工、只讀結論：從新的 session 開始，帶一份短 brief（目標、輸入、結果寫到哪、怎麼驗收）；檢查輸出、核對 finding、修小錯交給 worker subagent；機械式的多處修改寫成 replacement manifest，由一支 script 套用並核對每筆的預期命中數；Ralph loop 在它自己的 session 跑。原因：每個 call 都重送整個 context，2026-11-26 那次 fan-out 的 orchestrator context 中位數 205k tokens，347 個檢查用的 bash call 每個約 $0.09，在約 50k 的新 session 裡大約是四分之一。
 - `npm test` 執行 `npm run l10n -- check`，檢查每個 app 每種已上線的翻譯語言：缺少或多出的單位、過期的單位，以及和 `apply` 重新產生的結果不同的檔案（手改過，或 en 的 related、since、戒圍表改了還沒套用），都會讓它失敗，所以英文改了、翻譯還沒補上時無法部署。還沒有 manifest 的語言（從沒跑過 `apply`）只回報缺少的單位，不比對產生的檔案。
 
 改 en 文案的流程（在上面的簡中流程之後做）：
 
 1. 改 en 與 zh-Hant，跑完簡中的流程。`npm test` 會列出每種已上線翻譯語言過期或缺少的單位，每一行開頭是 app 與語言（`sotto ja: …`）。
 2. 每種被列出的語言：`npm run l10n -- <app> sync <code>`，只把過期與缺少的單位寫成 `.logs/l10n/<app>/<code>/packets/<segment>.json`；過期的單位帶著現在的譯文與翻譯時的 en（`previousEn`，從 git 歷史找回）。需要本機的 app repo。
-3. 每個 packet 交給 translator：`subagent { agent: "l10n-translator", task: "Translate .logs/l10n/<app>/<code>/packets/<segment>.json for <code>." }`，它會先用 `npm run -s l10n -- <app> apply <code> --dry-run <output>` 驗證自己的輸出。
+3. 翻譯：`npm run -s l10n -- <app> jobs <code> … > .logs/l10n/<app>/jobs.json` 依上面的派工形狀把 packet 分組，再把這份 JSON 當 args 交給 `subagent { workflow: "./.pi/workflows/l10n-translate.js", args: <jobs.json>, async: true, options: { globalConcurrencyLimit: 6 } }`。每個 translator 先用 `npm run -s l10n -- <app> apply <code> --dry-run <output>` 驗證自己的輸出；失敗的 child（多半是 429）由 workflow 等整批跑完後依序重跑一次；回傳只有每個 child 的 reply line，細節在 `.logs/l10n/<app>/<code>/out/`。一次 workflow 最多 64 個 child，超過就把語言分批。
 4. `npm run l10n -- <app> apply <code>`，直到 `rejected 0`。一篇新文章或一整段新文案要再審：`npm run l10n -- <app> sync <code> --mode review --since <改之前的 commit>`，交給 `l10n-reviewer`；幾個短字串可以不審。
 5. 只改了 related、since、戒圍表這類結構時不用重翻，`npm run l10n -- <app> apply <code>` 就會把它寫進該語言的 pack。
 6. `npm test`，把產生的檔案、manifest 跟 en 的修改一起 commit。
