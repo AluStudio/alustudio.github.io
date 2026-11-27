@@ -124,3 +124,8 @@
 - Choice: DEC-012 的例外延伸到 Phase 5 完成前：build 另外允許 `shot-sizes.js does not record for <code>`（該語言的截圖等 T015 build 完才有），`npm test` 允許 #56「every shipped translated language … is current with en」（en 已改、翻譯語言要到 T023–T025 的 `l10n sync/apply` 才追上）。T022 只看 zh-Hans 的測試（過期檢查）通過。T029 的 full gate 不留任何例外。
 - Alternatives: 先做完 T015 與 l10n 才跑 zh-Hans（截圖要再跑約 3 小時，zh-Hans 審查卻與截圖無關）。
 - Satisfies: REQ-010
+
+### DEC-014 進階報表拆成 compare-periods 與 report-periods
+- Choice: owner 在 H001 指出「進階報表」已經不是 app 裡的概念（v3.4 起所有方案都有完整的「報表」頁；app 介面沒有這個詞），FAQ 不再特別強調。`advanced-reports` 退役：銷售比較、期間比較、漲跌，以及比較時的熱力圖與回購率變化，改寫成新文章 `compare-periods`（「怎麼跟上週、上個月或去年比較銷售？」，since 3.0，沿用原截圖）；星期 × 時段、滯銷品、分類佔比、回購率、目前狀況與員工權限併進 `report-periods`；方案歷史（v3.4 前只有 Pro）與 Lite 的「目前狀況」說明拿掉；free-trial 與 plans-compare 不再寫「進階報表」。32 種語言的 `/dingpos/<prefix>support/advanced-reports/` 在 `src/worker.js` 301 到同語言的 `compare-periods`。截圖檔名維持 `advanced-reports`：只是內部檔名，改名要重新 build 32 種語言的截圖，讀者看不到。
+- Alternatives: 全部併進 report-periods（文章變成約兩倍長，標題蓋不住比較）；保留 slug 只改寫內容（網址仍是 advanced-reports）。owner 選擇拆開。
+- Satisfies: AC-010
